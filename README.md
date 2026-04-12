@@ -1,2 +1,2 @@
 # warwiki
-A wiki for functional urology and genitourinary and pelvic reconstruction.
+A wiki for functional urology, genitourinary reconstruction, and pelvic health.
