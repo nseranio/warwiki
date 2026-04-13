@@ -49,7 +49,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/warwiki-social-card.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
