@@ -54,9 +54,11 @@ const config: Config = {
     },
     navbar: {
       title: 'WARWIKI',
+      hideOnScroll: true,
       logo: {
-        alt: 'WARWIKI Logo',
+        alt: 'WARWIKI',
         src: 'img/logo.svg',
+        style: {display: 'none'},
       },
       items: [
         {
