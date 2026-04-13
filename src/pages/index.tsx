@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="The digital atlas of Genitourinary Reconstruction, Pelvic Health & Functional Urology">
+      description="The functional reconstructive urology wiki.">
       <HomepageHeader />
     </Layout>
   );

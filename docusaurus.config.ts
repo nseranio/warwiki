@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'WARWIKI',
-  tagline: 'The digital atlas of Genitourinary Reconstruction, Pelvic Health & Functional Urology',
+  tagline: 'The functional reconstructive urology wiki.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -118,36 +118,8 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Sections',
-          items: [
-            {label: 'Foundations', to: '/docs/foundations'},
-            {label: 'Evaluation & Workup', to: '/docs/evaluation'},
-            {label: 'Clinical Conditions', to: '/docs/clinical-conditions'},
-            {label: 'Surgical Techniques', to: '/docs/surgical-techniques'},
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {label: 'Special Populations', to: '/docs/special-populations'},
-            {label: 'Journal Club', to: '/docs/journal-club'},
-            {label: 'Roots of Reconstruction', to: '/docs/roots'},
-            {label: 'Resources', to: '/docs/resources'},
-          ],
-        },
-        {
-          title: 'Project',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/nseranio/warwiki',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} WARWIKI. Built with Docusaurus.`,
+      links: [],
+      copyright: `© ${new Date().getFullYear()} WARWIKI · The functional reconstructive urology wiki.`,
     },
     prism: {
       theme: prismThemes.github,
