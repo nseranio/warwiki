@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'WARWIKI',
   tagline: 'The functional reconstructive urology wiki.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -58,8 +58,9 @@ const config: Config = {
       hideOnScroll: true,
       logo: {
         alt: 'WARWIKI',
-        src: 'img/logo.svg',
-        style: {display: 'none'},
+        src: 'img/warwiki-logo.svg',
+        width: 32,
+        height: 32,
       },
       items: [
         {
