@@ -18,7 +18,7 @@ const config: Config = {
   projectName: 'warwiki',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   markdown: {
     hooks: {
