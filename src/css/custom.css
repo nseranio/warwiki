@@ -872,3 +872,115 @@ article {
     gap: 0.4rem;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   17. BOOK CARDS (Textbooks page)
+═══════════════════════════════════════════════════════════ */
+
+/* Category section block */
+.book-section {
+  margin: 2.5rem 0 1rem;
+}
+
+.book-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid var(--warwiki-border);
+}
+
+.book-section-header h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  color: var(--warwiki-text);
+}
+
+/* Card grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual book card */
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--warwiki-white);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: var(--warwiki-shadow-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  gap: 0.6rem;
+}
+
+.book-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--warwiki-shadow-md);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .book-card {
+  background-color: #0D1521;
+  border-color: var(--warwiki-border);
+}
+
+[data-theme='dark'] .book-card:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+/* Book spine accent — color set per category via modifier classes */
+.book-card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  background-color: var(--book-accent, var(--ifm-color-primary));
+}
+
+.book-card--reconstruction { --book-accent: #7C3AED; }
+.book-card--urps           { --book-accent: #0D9373; }
+.book-card--general        { --book-accent: #185FA5; }
+.book-card--urodynamics    { --book-accent: #0369A1; }
+.book-card--gender         { --book-accent: #C2410C; }
+.book-card--prosthetics    { --book-accent: #B45309; }
+.book-card--pediatric      { --book-accent: #047857; }
+
+/* Card body */
+.book-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--warwiki-text);
+}
+
+.book-authors {
+  font-size: 0.8rem;
+  color: var(--warwiki-text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.book-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
