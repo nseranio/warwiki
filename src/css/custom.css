@@ -1509,3 +1509,199 @@ article {
     padding: 0 0.75rem 0.65rem;
   }
 }
+
+/* ============================================================
+   Section 21 — Technique Database (.td-*)
+   ============================================================ */
+
+.td-wrapper {
+  margin: 1.25rem 0 2rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--warwiki-surface, #fff);
+}
+
+.td-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--warwiki-bg);
+  border-bottom: 1px solid var(--warwiki-border);
+  flex-wrap: wrap;
+}
+
+.td-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface, #fff);
+  color: var(--warwiki-text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.td-search:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.12);
+}
+
+.td-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.td-select {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface, #fff);
+  color: var(--warwiki-text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.td-select:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.td-count {
+  font-size: 0.78rem;
+  color: var(--warwiki-text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+}
+
+.td-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.td-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.845rem;
+  margin: 0;
+}
+
+.td-table thead th {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--warwiki-text-muted);
+  background: var(--warwiki-bg);
+  border-bottom: 2px solid var(--warwiki-border);
+  white-space: nowrap;
+}
+
+.td-table tbody tr {
+  border-bottom: 1px solid var(--warwiki-border);
+  transition: background 0.1s;
+}
+
+.td-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.td-table tbody tr:hover {
+  background: rgba(24, 95, 165, 0.04);
+}
+
+.td-table td {
+  padding: 0.55rem 0.9rem;
+  vertical-align: top;
+  color: var(--warwiki-text);
+  line-height: 1.45;
+}
+
+.td-name-cell {
+  min-width: 180px;
+}
+
+.td-name-link {
+  font-weight: 600;
+  color: var(--ifm-color-primary) !important;
+  text-decoration: none;
+}
+
+.td-name-link:hover {
+  text-decoration: underline;
+}
+
+.td-name-text {
+  font-weight: 600;
+  color: var(--warwiki-text);
+}
+
+.td-aka {
+  font-size: 0.72rem;
+  color: var(--warwiki-text-muted);
+  margin-top: 0.15em;
+}
+
+.td-eponym {
+  color: var(--warwiki-text-muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  min-width: 110px;
+}
+
+.td-notes {
+  font-size: 0.82rem;
+  color: var(--warwiki-text-muted);
+  min-width: 220px;
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.td-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--warwiki-text-muted);
+  font-style: italic;
+}
+
+[data-theme='dark'] .td-wrapper {
+  background: #0D1521;
+}
+
+[data-theme='dark'] .td-search,
+[data-theme='dark'] .td-select {
+  background: #111827;
+  color: var(--warwiki-text);
+}
+
+[data-theme='dark'] .td-table tbody tr:hover {
+  background: rgba(24, 95, 165, 0.08);
+}
+
+@media (max-width: 768px) {
+  .td-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .td-filters {
+    flex-direction: column;
+  }
+  .td-select {
+    width: 100%;
+  }
+  .td-count {
+    margin-left: 0;
+    text-align: right;
+  }
+}
