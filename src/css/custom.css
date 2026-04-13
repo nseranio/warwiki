@@ -276,6 +276,44 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--ifm-color-primary-darkest);
 }
 
+/* Mobile: make all markdown tables horizontally scrollable */
+.markdown table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+
+.markdown table td,
+.markdown table th {
+  white-space: normal;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  /* Tighten table cell padding on small screens */
+  .markdown table td,
+  .markdown table thead th {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.82rem;
+  }
+
+  /* Reduce article heading sizes for readability */
+  .markdown h1 { font-size: 1.6rem; }
+  .markdown h2 { font-size: 1.25rem; }
+  .markdown h3 { font-size: 1.05rem; }
+
+  /* Tighten prose line width to avoid sprawling text on small tablets */
+  .theme-doc-markdown {
+    max-width: 100%;
+  }
+
+  /* Callout boxes: reduce padding on mobile */
+  .callout {
+    padding: 0.75rem 0.9rem;
+  }
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    5. NAVBAR
@@ -1226,5 +1264,228 @@ article {
   }
   .cst-count {
     text-align: right;
+  }
+}
+
+/* ============================================================
+   Section 20 — Journal Table (.jt-*)
+   ============================================================ */
+
+.jt-wrapper {
+  margin: 1.25rem 0 2rem;
+}
+
+.jt-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  background: var(--warwiki-bg);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+}
+
+.jt-search {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface);
+  color: var(--warwiki-text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+.jt-search:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.12);
+}
+
+.jt-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.jt-select {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface);
+  color: var(--warwiki-text);
+  cursor: pointer;
+  outline: none;
+}
+
+.jt-select:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.jt-count {
+  font-size: 0.78rem;
+  color: var(--warwiki-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.jt-list {
+  border: 1px solid var(--warwiki-border);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.jt-card {
+  border-bottom: 1px solid var(--warwiki-border);
+  background: var(--warwiki-surface);
+  transition: background 0.1s;
+}
+
+.jt-card:last-child {
+  border-bottom: none;
+}
+
+.jt-card:hover {
+  background: var(--warwiki-bg);
+}
+
+.jt-card-header {
+  padding: 0.85rem 1rem;
+}
+
+.jt-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.jt-topic-tag {
+  font-size: 0.68rem;
+  color: var(--warwiki-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.jt-card-meta {
+  font-size: 0.78rem;
+  color: var(--warwiki-text-muted);
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.jt-sep {
+  opacity: 0.4;
+}
+
+.jt-authors {
+  font-weight: 500;
+  color: var(--warwiki-text);
+}
+
+.jt-journal {
+  font-style: italic;
+}
+
+.jt-year {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.jt-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--warwiki-text);
+}
+
+.jt-card-title a {
+  color: var(--warwiki-text);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.jt-card-title a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.jt-card-footer {
+  padding: 0 1rem 0.75rem;
+}
+
+.jt-abstract-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.75rem;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  font-family: var(--ifm-font-family-base);
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.jt-abstract-toggle:hover {
+  opacity: 0.75;
+}
+
+.jt-abstract-text {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--warwiki-text-muted);
+}
+
+.jt-empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--warwiki-text-muted);
+  font-style: italic;
+  background: var(--warwiki-surface);
+  border: 1px solid var(--warwiki-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+[data-theme='dark'] .jt-card {
+  background: #0D1521;
+}
+
+[data-theme='dark'] .jt-card:hover {
+  background: #111827;
+}
+
+[data-theme='dark'] .jt-search,
+[data-theme='dark'] .jt-select {
+  background: #111827;
+  color: var(--warwiki-text);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .jt-filters {
+    flex-direction: column;
+  }
+  .jt-select {
+    min-width: unset;
+    width: 100%;
+  }
+  .jt-card-header {
+    padding: 0.75rem;
+  }
+  .jt-card-footer {
+    padding: 0 0.75rem 0.65rem;
   }
 }
