@@ -59,8 +59,7 @@ const config: Config = {
       logo: {
         alt: 'WARWIKI',
         src: 'img/warwiki-logo.svg',
-        width: 32,
-        height: 32,
+        style: {display: 'none'},
       },
       items: [
         {
