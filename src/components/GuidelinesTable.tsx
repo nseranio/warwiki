@@ -19,7 +19,7 @@ const ORG_COLORS: Record<string, string> = {
   ICS:    '#0e7490',
   ACOG:   '#7c3aed',
   WPATH:  '#b45309',
-  ACS:    '#64748b',
+  ACS:    '#b91c1c',
   ISAKOS: '#374151',
 };
 
