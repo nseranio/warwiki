@@ -5,8 +5,6 @@ export interface Technique {
   eponym?: string;
   aka?: string;
   location: string;
-  graft: string;
-  complexity: 'Basic' | 'Intermediate' | 'Advanced' | 'Highly Complex';
   notes: string;
   slug?: string;
 }
@@ -18,22 +16,6 @@ const LOCATION_COLORS: Record<string, string> = {
   'Fossa Navicularis / Meatal':  '#047857',
   'Posterior / PFUI':            '#b91c1c',
   'Any':                         '#374151',
-};
-
-const GRAFT_COLORS: Record<string, string> = {
-  'OMG/BMG':    '#0D9373',
-  'Skin Flap':  '#b45309',
-  'Gracilis':   '#6d28d9',
-  'Combined':   '#0369a1',
-  'None':       '#6b7280',
-  'Endoscopic': '#374151',
-};
-
-const COMPLEXITY_COLORS: Record<string, string> = {
-  'Basic':          '#16a34a',
-  'Intermediate':   '#0369a1',
-  'Advanced':       '#7c3aed',
-  'Highly Complex': '#b91c1c',
 };
 
 function SubtleBadge({ label, color }: { label: string; color: string }) {
@@ -55,19 +37,9 @@ function SubtleBadge({ label, color }: { label: string; color: string }) {
   );
 }
 
-function ComplexityBadge({ complexity }: { complexity: string }) {
-  const color = COMPLEXITY_COLORS[complexity] ?? '#6b7280';
-  return <SubtleBadge label={complexity} color={color} />;
-}
-
 function LocationBadge({ location }: { location: string }) {
   const color = LOCATION_COLORS[location] ?? '#6b7280';
   return <SubtleBadge label={location} color={color} />;
-}
-
-function GraftBadge({ graft }: { graft: string }) {
-  const color = GRAFT_COLORS[graft] ?? '#6b7280';
-  return <SubtleBadge label={graft} color={color} />;
 }
 
 interface TechniqueDatabaseProps {
@@ -77,28 +49,16 @@ interface TechniqueDatabaseProps {
 export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
   const [search, setSearch] = useState('');
   const [locationFilter, setLocationFilter] = useState('All');
-  const [graftFilter, setGraftFilter] = useState('All');
-  const [complexityFilter, setComplexityFilter] = useState('All');
 
   const allLocations = useMemo(
     () => ['All', ...Array.from(new Set(data.map(d => d.location))).sort()],
     [data]
-  );
-  const allGrafts = useMemo(
-    () => ['All', ...Array.from(new Set(data.map(d => d.graft))).sort()],
-    [data]
-  );
-  const allComplexities = useMemo(
-    () => ['All', 'Basic', 'Intermediate', 'Advanced', 'Highly Complex'],
-    []
   );
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return data.filter(d => {
       if (locationFilter !== 'All' && d.location !== locationFilter) return false;
-      if (graftFilter !== 'All' && d.graft !== graftFilter) return false;
-      if (complexityFilter !== 'All' && d.complexity !== complexityFilter) return false;
       if (q) {
         return (
           d.name.toLowerCase().includes(q) ||
@@ -109,7 +69,7 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
       }
       return true;
     });
-  }, [data, search, locationFilter, graftFilter, complexityFilter]);
+  }, [data, search, locationFilter]);
 
   return (
     <div className="td-wrapper">
@@ -133,26 +93,6 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
               <option key={l} value={l}>{l === 'All' ? 'All Locations' : l}</option>
             ))}
           </select>
-          <select
-            value={graftFilter}
-            onChange={e => setGraftFilter(e.target.value)}
-            className="td-select"
-            aria-label="Filter by graft/flap type"
-          >
-            {allGrafts.map(g => (
-              <option key={g} value={g}>{g === 'All' ? 'All Graft Types' : g}</option>
-            ))}
-          </select>
-          <select
-            value={complexityFilter}
-            onChange={e => setComplexityFilter(e.target.value)}
-            className="td-select"
-            aria-label="Filter by complexity"
-          >
-            {allComplexities.map(c => (
-              <option key={c} value={c}>{c === 'All' ? 'All Complexity' : c}</option>
-            ))}
-          </select>
         </div>
         <div className="td-count">{filtered.length} of {data.length} techniques</div>
       </div>
@@ -167,8 +107,6 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
                 <th>Technique</th>
                 <th>Eponym / Origin</th>
                 <th>Location</th>
-                <th>Graft / Flap</th>
-                <th>Complexity</th>
                 <th>Notes</th>
               </tr>
             </thead>
@@ -187,8 +125,6 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
                   </td>
                   <td className="td-eponym">{t.eponym ?? '—'}</td>
                   <td><LocationBadge location={t.location} /></td>
-                  <td><GraftBadge graft={t.graft} /></td>
-                  <td><ComplexityBadge complexity={t.complexity} /></td>
                   <td className="td-notes">{t.notes}</td>
                 </tr>
               ))}

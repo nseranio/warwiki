@@ -1705,3 +1705,510 @@ article {
     text-align: right;
   }
 }
+
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   SURGICAL LINEAGE — Compact dynasty bar (shared)
+═══════════════════════════════════════════════════════════ */
+
+.sl-dynasty-bar {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px; flex-wrap: wrap;
+}
+.sl-dynasty-label {
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--warwiki-text-subtle);
+  text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;
+}
+.sl-dynasty-tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+.sl-dynasty-tab {
+  padding: 3px 12px; border-radius: 20px;
+  border: 1px solid var(--warwiki-border-strong);
+  background: transparent; color: var(--warwiki-text-muted);
+  font-size: 0.75rem; font-weight: 600; cursor: pointer;
+  transition: all 0.15s; font-family: var(--ifm-font-family-base);
+}
+.sl-dynasty-tab:hover { background: var(--warwiki-bg-subtle); }
+.sl-dynasty-tab--active { color: #fff !important; }
+
+.sl-tree-hint {
+  font-size: 0.72rem; color: var(--warwiki-text-subtle);
+  text-align: center; margin-top: 12px; margin-bottom: 0;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SURGICAL LINEAGE — Vertical text tree
+═══════════════════════════════════════════════════════════ */
+
+.vt-wrapper { margin: 1.5rem 0; }
+
+.vt-tree {
+  background: var(--warwiki-bg);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 12px;
+  padding: 20px 20px 20px 16px;
+  font-family: var(--ifm-font-family-base);
+}
+[data-theme='dark'] .vt-tree {
+  background: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.vt-node { display: flex; flex-direction: column; }
+
+/* Each name row */
+.vt-row {
+  display: flex; align-items: center;
+  min-height: 32px; gap: 0;
+}
+
+/* Fixed-width indent spacer per depth level */
+.vt-indent {
+  width: 24px; flex-shrink: 0;
+  /* vertical continuation line for non-last siblings handled via children wrapper */
+}
+
+/* L-shaped elbow connector */
+.vt-elbow {
+  width: 20px; height: 32px;
+  flex-shrink: 0;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  border-radius: 0 0 0 4px;
+  margin-bottom: -0px;
+  align-self: flex-end;
+  margin-right: 6px;
+  opacity: 0.5;
+}
+
+/* Children wrapper — draws the vertical continuation line */
+.vt-children {
+  display: flex; flex-direction: column;
+  /* no extra padding — depth handled by vt-indent blocks */
+}
+
+/* Name link */
+.vt-name {
+  font-size: 0.88rem; font-weight: 500;
+  color: var(--warwiki-text);
+  text-decoration: none; line-height: 1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.12s, color 0.12s;
+  display: flex; align-items: center; gap: 6px;
+  white-space: nowrap;
+}
+.vt-name:hover {
+  background: var(--warwiki-bg-subtle);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+[data-theme='dark'] .vt-name:hover { background: var(--ifm-color-emphasis-200); }
+
+.vt-name--root {
+  font-size: 1rem; font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.vt-flag { font-size: 0.9rem; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   SURGICAL LINEAGE — Directory (photo + text list)
+═══════════════════════════════════════════════════════════ */
+
+.sd-wrapper { margin: 1.5rem 0; }
+
+.sd-controls {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  align-items: center; margin-bottom: 16px;
+}
+.sd-search {
+  flex: 1; min-width: 220px;
+  padding: 7px 13px; border-radius: 8px;
+  border: 1px solid var(--warwiki-border-strong);
+  background: var(--warwiki-white);
+  color: var(--warwiki-text);
+  font-size: 0.88rem; font-family: var(--ifm-font-family-base);
+}
+[data-theme='dark'] .sd-search {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-font-color-base);
+}
+.sd-search:focus {
+  outline: none; border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(24,95,165,0.15);
+}
+.sd-count { font-size: 0.75rem; color: var(--warwiki-text-subtle); margin-left: auto; }
+
+/* List */
+.sd-list {
+  list-style: none; padding: 0; margin: 0;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 10px; overflow: hidden;
+}
+[data-theme='dark'] .sd-list { border-color: var(--ifm-color-emphasis-300); }
+
+.sd-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--warwiki-border);
+  transition: background 0.12s;
+}
+[data-theme='dark'] .sd-row { border-color: var(--ifm-color-emphasis-200); }
+.sd-row:last-child { border-bottom: none; }
+.sd-row:hover { background: var(--warwiki-bg-subtle); }
+[data-theme='dark'] .sd-row:hover { background: var(--ifm-color-emphasis-100); }
+
+/* Avatar */
+.sd-row-avatar-link { flex-shrink: 0; text-decoration: none; }
+.sd-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%; overflow: hidden;
+  border: 2px solid var(--warwiki-border);
+  flex-shrink: 0;
+}
+.sd-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.sd-avatar-initials {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%;
+  font-weight: 700; font-size: 0.8rem; color: #fff;
+  background: var(--warwiki-text-muted);
+}
+
+/* Text body */
+.sd-row-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+
+.sd-row-name {
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--ifm-color-primary);
+  text-decoration: none; line-height: 1.3;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sd-row-name:hover { text-decoration: underline; }
+
+.sd-row-meta {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 4px; font-size: 0.76rem; color: var(--warwiki-text-muted);
+}
+.sd-meta-flag { font-size: 0.85rem; }
+.sd-meta-sep { color: var(--warwiki-border-strong); user-select: none; }
+.sd-meta-mentor { color: var(--warwiki-text-muted); }
+.sd-meta-mentor a { color: inherit; font-weight: 600; text-decoration: none; }
+.sd-meta-mentor a:hover { text-decoration: underline; }
+.sd-meta-trainees { color: #0D9373; font-weight: 600; }
+.sd-meta-dates { color: var(--warwiki-text-subtle); font-style: italic; }
+
+.sd-empty {
+  text-align: center; padding: 40px;
+  color: var(--warwiki-text-subtle); font-size: 0.9rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SURGEON PROFILE PAGE
+═══════════════════════════════════════════════════════════ */
+
+.sp-wrapper { max-width: 780px; }
+
+.sp-hero {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 24px; border-radius: 14px;
+  background: var(--warwiki-bg); border: 1px solid var(--warwiki-border);
+  margin-bottom: 20px;
+}
+[data-theme='dark'] .sp-hero {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+.sp-photo {
+  width: 110px; height: 110px; flex-shrink: 0;
+  border-radius: 50%; overflow: hidden; border: 3px solid var(--warwiki-border);
+}
+.sp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.sp-initials {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%;
+  font-size: 1.6rem; font-weight: 800; color: #fff;
+  background: var(--warwiki-text-muted);
+}
+.sp-hero-info { flex: 1; min-width: 0; }
+.sp-name { font-size: 1.5rem; font-weight: 800; margin: 0 0 8px; color: var(--warwiki-text); }
+.sp-hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.sp-hero-meta-item { font-size: 0.83rem; color: var(--warwiki-text-muted); }
+.sp-dates { font-style: italic; }
+
+.sp-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.sp-link {
+  display: inline-block; padding: 4px 12px; border-radius: 20px;
+  font-size: 0.77rem; font-weight: 600; text-decoration: none;
+  transition: opacity 0.12s; border: 1px solid transparent;
+}
+.sp-link--web { background: #EBF3FB; color: #185FA5; border-color: #185FA540; }
+.sp-link--yt  { background: #FEE2E2; color: #dc2626; border-color: #dc262640; }
+.sp-link--tw  { background: #F0F0F0; color: #374151; border-color: #37415140; }
+.sp-link--ig  { background: #FDF4FF; color: #7c3aed; border-color: #7c3aed40; }
+.sp-link--bio { background: var(--warwiki-bg-subtle); color: var(--warwiki-text-muted); border-color: var(--warwiki-border); }
+.sp-link:hover { opacity: 0.8; }
+
+.sp-lineage {
+  display: flex; flex-wrap: wrap; gap: 1px;
+  border: 1px solid var(--warwiki-border); border-radius: 10px;
+  overflow: hidden; margin-bottom: 24px;
+}
+[data-theme='dark'] .sp-lineage { border-color: var(--ifm-color-emphasis-300); }
+.sp-lineage-item {
+  flex: 1; min-width: 180px; padding: 14px 18px;
+  background: var(--warwiki-white);
+  border-right: 1px solid var(--warwiki-border);
+}
+[data-theme='dark'] .sp-lineage-item {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+.sp-lineage-item:last-child { border-right: none; }
+.sp-lineage-item--trainees { flex: 2; }
+.sp-lineage-label {
+  font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--warwiki-text-subtle); margin-bottom: 5px;
+}
+.sp-lineage-name { font-size: 0.9rem; font-weight: 600; color: var(--warwiki-text); }
+.sp-lineage-name a { color: var(--ifm-color-primary); text-decoration: none; }
+.sp-lineage-name a:hover { text-decoration: underline; }
+.sp-lineage-trainees { display: flex; flex-wrap: wrap; gap: 5px; }
+.sp-trainee-chip {
+  font-size: 0.75rem; padding: 3px 10px;
+  background: var(--warwiki-bg-subtle); border: 1px solid var(--warwiki-border);
+  border-radius: 12px; color: var(--warwiki-text); text-decoration: none;
+  transition: background 0.12s;
+}
+.sp-trainee-chip:hover {
+  background: var(--ifm-color-primary); color: #fff;
+  border-color: var(--ifm-color-primary);
+}
+
+.sp-sections { display: flex; flex-direction: column; }
+.sp-section { padding: 20px 0; border-top: 1px solid var(--warwiki-border); }
+.sp-section h2 { font-size: 1rem; font-weight: 700; margin: 0 0 10px; }
+.sp-coming-soon { font-size: 0.85rem; color: var(--warwiki-text-subtle); font-style: italic; margin: 0; }
+.sp-pubs { padding-left: 20px; font-size: 0.88rem; line-height: 1.7; }
+.sp-instruments { padding-left: 20px; font-size: 0.88rem; line-height: 1.8; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sd-controls { flex-direction: column; align-items: stretch; }
+  .sd-count { margin-left: 0; text-align: right; }
+
+  .sp-hero { flex-direction: column; align-items: center; text-align: center; }
+  .sp-hero-meta { justify-content: center; }
+  .sp-links { justify-content: center; }
+  .sp-lineage-item { min-width: 100%; border-right: none; border-bottom: 1px solid var(--warwiki-border); }
+  .sp-lineage-item:last-child { border-bottom: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CURRICULUM VIEWER  (.cv-*)
+═══════════════════════════════════════════════════════════ */
+
+/* ── Toggle bar ──────────────────────────────────────────── */
+.cv-wrapper { max-width: 860px; margin: 0 auto; }
+
+.cv-toggle-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.cv-toggle-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 18px;
+  border: 2px solid var(--warwiki-border-strong);
+  border-radius: 10px;
+  background: var(--warwiki-bg-subtle);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  text-align: left;
+  min-width: 160px;
+}
+
+.cv-toggle-btn:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.cv-toggle-btn--active {
+  color: #fff !important;
+}
+
+.cv-toggle-label {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+}
+
+.cv-toggle-full {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.85;
+  line-height: 1.3;
+  display: block;
+  margin-top: 3px;
+}
+
+.cv-toggle-btn:not(.cv-toggle-btn--active) .cv-toggle-label {
+  color: var(--warwiki-text);
+}
+
+.cv-toggle-btn:not(.cv-toggle-btn--active) .cv-toggle-full {
+  color: var(--warwiki-text-muted);
+}
+
+/* ── Pane header ─────────────────────────────────────────── */
+.cv-pane-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cv-pane-meta { display: flex; flex-direction: column; gap: 2px; }
+
+.cv-pane-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cv-pane-fullname {
+  font-size: 0.82rem;
+  color: var(--warwiki-text-muted);
+}
+
+.cv-expand-all {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border: 1px solid var(--warwiki-border-strong);
+  border-radius: 6px;
+  background: var(--warwiki-bg-subtle);
+  color: var(--warwiki-text-muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.cv-expand-all:hover {
+  background: var(--warwiki-border);
+  color: var(--warwiki-text);
+}
+
+/* ── Sections ────────────────────────────────────────────── */
+.cv-sections {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cv-section {
+  border-bottom: 1px solid var(--warwiki-border);
+}
+
+.cv-section:last-child { border-bottom: none; }
+
+.cv-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+
+.cv-section-header:hover { background: var(--warwiki-bg-subtle); }
+
+.cv-section--open > .cv-section-header {
+  background: var(--warwiki-bg-subtle);
+}
+
+.cv-section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cv-section-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--warwiki-text);
+  flex: 1;
+  line-height: 1.4;
+}
+
+.cv-section-chevron {
+  font-size: 0.6rem;
+  color: var(--warwiki-text-subtle);
+  flex-shrink: 0;
+}
+
+/* ── Section body ────────────────────────────────────────── */
+.cv-section-body {
+  padding: 14px 16px 18px 58px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--warwiki-border);
+  background: var(--warwiki-white);
+}
+
+.cv-item-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cv-item-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cv-item-list li {
+  font-size: 0.88rem;
+  color: var(--warwiki-text);
+  line-height: 1.55;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .cv-toggle-btn { min-width: 0; flex: 1; }
+  .cv-section-body { padding-left: 16px; }
+  .cv-pane-header { flex-direction: column; align-items: flex-start; }
+}
+}
