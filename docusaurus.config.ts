@@ -61,9 +61,51 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'wikiSidebar',
+          sidebarId: 'foundationsSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Foundations',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'evaluationSidebar',
+          position: 'left',
+          label: 'Evaluation & Workup',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'clinicalSidebar',
+          position: 'left',
+          label: 'Clinical Conditions',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'surgicalSidebar',
+          position: 'left',
+          label: 'Surgical Techniques',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'populationsSidebar',
+          position: 'left',
+          label: 'Special Populations',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'journalSidebar',
+          position: 'left',
+          label: 'Journal Club',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'rootsSidebar',
+          position: 'left',
+          label: 'Roots',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'resourcesSidebar',
+          position: 'left',
+          label: 'Resources',
         },
         {
           href: 'https://github.com/nseranio/warwiki',
