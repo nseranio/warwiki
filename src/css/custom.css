@@ -837,7 +837,80 @@ article {
 
 
 /* ═══════════════════════════════════════════════════════════
-   15. CATEGORY INDEX / GENERATED INDEX PAGES
+   15. SECTION INDEX LISTS (replaces DocCardList)
+═══════════════════════════════════════════════════════════ */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.toc-list li {
+  border-bottom: 1px solid var(--warwiki-border);
+  padding: 0.75rem 1rem 0.75rem 0;
+}
+
+.toc-list li:nth-child(odd) {
+  padding-right: 2rem;
+  border-right: 1px solid var(--warwiki-border);
+}
+
+.toc-list li:nth-child(even) {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+/* last row: no bottom border */
+.toc-list li:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.toc-list li a {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.toc-list li a:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.toc-list .toc-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ifm-font-color-secondary);
+  margin-top: 0.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .toc-list {
+    grid-template-columns: 1fr;
+  }
+  .toc-list li:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+  }
+  .toc-list li:nth-child(even) {
+    padding-left: 0;
+  }
+  .toc-list li:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--warwiki-border);
+  }
+  .toc-list li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   16. CATEGORY INDEX / GENERATED INDEX PAGES
 ═══════════════════════════════════════════════════════════ */
 .DocCard {
   border: 1px solid var(--warwiki-border);
