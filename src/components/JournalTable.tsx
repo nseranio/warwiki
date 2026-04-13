@@ -1,6 +1,37 @@
 import React, { useState, useMemo } from 'react';
 import { journals, JournalArticle } from '@site/src/data/journals';
 
+/**
+ * Detects trial acronyms in a title string and wraps them in a highlight span.
+ * Matches: all-caps words 2+ chars (ROBUST, OPEN, TURNS, SAVE-U, OPTIMAL, etc.)
+ * Also matches hyphenated caps (SAVE-U, COUGH-1).
+ * Skips common non-trial abbreviations that clutter the display.
+ */
+const SKIP_WORDS = new Set(['RCT', 'BMG', 'AUA', 'FDA', 'NHS', 'MRI', 'UTI', 'OR', 'CI', 'HR', 'SD', 'vs', 'IPSS']);
+
+function TitleWithAcronyms({ title }: { title: string }) {
+  // Match all-caps tokens (including hyphenated like SAVE-U) of length >= 2
+  const parts = title.split(/(\b[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*\b)/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const isAcronym =
+          /^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$/.test(part) &&
+          part.length >= 2 &&
+          !SKIP_WORDS.has(part);
+        if (isAcronym) {
+          return (
+            <mark key={i} className="jt-acronym">
+              {part}
+            </mark>
+          );
+        }
+        return <React.Fragment key={i}>{part}</React.Fragment>;
+      })}
+    </>
+  );
+}
+
 const DESIGN_COLORS: Record<string, string> = {
   RCT:         '#16a34a',
   Review:      '#0369a1',
@@ -85,10 +116,10 @@ function ArticleCard({ article }: { article: JournalArticle }) {
         <div className="jt-card-title">
           {article.link ? (
             <a href={article.link} target="_blank" rel="noopener noreferrer">
-              {article.title}
+              <TitleWithAcronyms title={article.title} />
             </a>
           ) : (
-            article.title
+            <TitleWithAcronyms title={article.title} />
           )}
         </div>
       </div>

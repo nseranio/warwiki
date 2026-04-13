@@ -1448,6 +1448,26 @@ article {
   color: var(--warwiki-text-muted);
 }
 
+/* Trial acronym highlight — ROBUST, OPEN, TURNS, SAVE-U etc. */
+.jt-acronym {
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  padding: 0;
+  /* Subtle underline to distinguish from normal text */
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--ifm-color-primary);
+  text-underline-offset: 2px;
+}
+
+[data-theme='dark'] .jt-acronym {
+  color: #60a5fa;
+  text-decoration-color: #60a5fa;
+}
+
 .jt-empty {
   padding: 3rem 1rem;
   text-align: center;
