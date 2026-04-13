@@ -1076,3 +1076,155 @@ article {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Section 19 — Code Search Table (.cst-*)
+   ============================================================ */
+
+.cst-wrapper {
+  margin: 1.25rem 0 2rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--warwiki-surface);
+}
+
+.cst-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--warwiki-bg);
+  border-bottom: 1px solid var(--warwiki-border);
+  flex-wrap: wrap;
+}
+
+.cst-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface);
+  color: var(--warwiki-text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cst-search:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.12);
+}
+
+.cst-filter {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--ifm-font-family-base);
+  background: var(--warwiki-surface);
+  color: var(--warwiki-text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cst-filter:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.cst-count {
+  font-size: 0.78rem;
+  color: var(--warwiki-text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.cst-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cst-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.845rem;
+  margin: 0;
+}
+
+.cst-table thead th {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--warwiki-text-muted);
+  background: var(--warwiki-bg);
+  border-bottom: 2px solid var(--warwiki-border);
+  white-space: nowrap;
+}
+
+.cst-table tbody tr {
+  border-bottom: 1px solid var(--warwiki-border);
+  transition: background 0.1s;
+}
+
+.cst-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.cst-table tbody tr:hover {
+  background: rgba(24, 95, 165, 0.04);
+}
+
+.cst-table td {
+  padding: 0.55rem 0.9rem;
+  vertical-align: top;
+  color: var(--warwiki-text);
+  line-height: 1.45;
+}
+
+.cst-mono {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  white-space: nowrap;
+}
+
+.cst-empty {
+  text-align: center;
+  padding: 2rem 1rem !important;
+  color: var(--warwiki-text-muted);
+  font-style: italic;
+}
+
+[data-theme='dark'] .cst-wrapper {
+  background: #0D1521;
+}
+
+[data-theme='dark'] .cst-search,
+[data-theme='dark'] .cst-filter {
+  background: #111827;
+  color: var(--warwiki-text);
+}
+
+[data-theme='dark'] .cst-table tbody tr:hover {
+  background: rgba(24, 95, 165, 0.08);
+}
+
+@media (max-width: 640px) {
+  .cst-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cst-filter {
+    width: 100%;
+  }
+  .cst-count {
+    text-align: right;
+  }
+}
