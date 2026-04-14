@@ -5,6 +5,8 @@
 
 export interface Surgeon {
   id: string;
+  /** Subfolder-relative path used for linking, e.g. "h-r/jack-mcaninch" */
+  path: string;
   name: string;
   photo?: string;
   country?: string;
@@ -30,6 +32,7 @@ export const SURGEONS: Surgeon[] = [
   // ── Turner-Warwick School ──────────────────────────────
   {
     id: 'richard-turner-warwick',
+    path: 's-z/richard-turner-warwick',
     name: 'Richard Turner-Warwick',
     photo: 'https://www.baus.org.uk/_userfiles/pages/images/museum/urologists/RTWBoatRace.jpg',
     country: 'England',
@@ -53,6 +56,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'sanjay-kulkarni',
+    path: 'h-r/sanjay-kulkarni',
     name: 'Sanjay Kulkarni',
     photo: 'https://baileyandlove.tandf.co.uk/wp-content/uploads/2024/12/Sanjay-Balwant-Kulkarni.jpg',
     country: 'India',
@@ -62,6 +66,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'leonard-zinman',
+    path: 's-z/leonard-zinman',
     name: 'Leonard N. Zinman',
     photo: 'https://urologichistory.museum/Images/collections/scope-of-urology/Summer%202021/Leonard-Zinman.png',
     mentorId: 'richard-turner-warwick',
@@ -69,6 +74,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'christopher-chapple',
+    path: 'a-g/christopher-chapple',
     name: 'Christopher R. Chapple',
     photo: 'https://www.ics.org/gfx/ContactPhoto/200/000014641.png',
     country: 'England',
@@ -78,6 +84,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'pankaj-joshi',
+    path: 'h-r/pankaj-joshi',
     name: 'Pankaj Joshi',
     photo: 'https://pbs.twimg.com/profile_images/1186092162435276800/cBvhvGvc_400x400.jpg',
     country: 'India',
@@ -89,6 +96,7 @@ export const SURGEONS: Surgeon[] = [
   // ── McAninch School ─────────────────────────────────────
   {
     id: 'jack-mcaninch',
+    path: 'h-r/jack-mcaninch',
     name: 'Jack W. McAninch',
     photo: 'http://jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg',
     country: 'United States',
@@ -102,6 +110,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'allen-morey',
+    path: 'h-r/allen-morey',
     name: 'Allen F. Morey',
     photo: 'https://thcds.com/media/3136/dr-allen-morey.jpg',
     country: 'United States',
@@ -111,6 +120,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'hunter-wessells',
+    path: 's-z/hunter-wessells',
     name: 'Hunter Wessells',
     photo: 'https://urology.uw.edu/sites/default/files/2022-09/Wessells_Hunter_sq.jpeg',
     mentorId: 'jack-mcaninch',
@@ -118,6 +128,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'jeremy-meyers',
+    path: 'h-r/jeremy-meyers',
     name: 'Jeremy Meyers',
     photo: 'https://medicine.utah.edu/sites/g/files/zrelqx351/files/styles/portrait_laptop/public/media/images/2022/myers-chief.jpeg',
     mentorId: 'jack-mcaninch',
@@ -125,6 +136,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'benjamin-breyer',
+    path: 'a-g/benjamin-breyer',
     name: 'Benjamin N. Breyer',
     photo: 'https://cdn-images.kyruus.com/providermatch/ucsf/photos/orig/breyer-benjamin-1316160211.jpg',
     mentorId: 'jack-mcaninch',
@@ -132,6 +144,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'sean-elliott',
+    path: 'a-g/sean-elliott',
     name: 'Sean P. Elliott',
     photo: 'https://www.nbrg.org/perch/resources/elliott-w800.jpg',
     mentorId: 'jack-mcaninch',
@@ -139,6 +152,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'jill-buckley',
+    path: 'a-g/jill-buckley',
     name: 'Jill C. Buckley',
     photo: 'http://www.turnsresearch.org/perch/resources/jillbuckley-w800.jpg',
     country: 'United States',
@@ -148,6 +162,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'michael-metro',
+    path: 'h-r/michael-metro',
     name: 'Michael Metro',
     photo: 'https://img-vitals.lb.wbmdstatic.com/lhd/provider/810750_db52e8e8-e492-400f-abbd-2b869cd10dc0.jpg',
     country: 'United States',
@@ -157,18 +172,21 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'steve-brandes',
+    path: 'a-g/steve-brandes',
     name: 'Steve Brandes',
     mentorId: 'jack-mcaninch',
     traineeIds: [],
   },
   {
     id: 'bryan-voelzke',
+    path: 's-z/bryan-voelzke',
     name: 'Bryan B. Voelzke',
     mentorId: 'jack-mcaninch',
     traineeIds: [],
   },
   {
     id: 'bradley-erickson',
+    path: 'a-g/bradley-erickson',
     name: 'Bradley A. Erickson',
     photo: 'https://urology.ucsf.edu/sites/default/files/styles/sa_square_540/public/2025-07/Bradley%20A.%20Erickson%2C%20MD%2C%20MS.jpeg.webp',
     mentorId: 'jack-mcaninch',
@@ -176,6 +194,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'keith-rourke',
+    path: 'h-r/keith-rourke',
     name: 'Keith F. Rourke',
     country: 'Canada',
     countryFlag: '🇨🇦',
@@ -184,6 +203,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'noel-armenakas',
+    path: 'a-g/noel-armenakas',
     name: 'Noel A. Armenakas',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -192,6 +212,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'reynaldo-gomez',
+    path: 'a-g/reynaldo-gomez',
     name: 'Reynaldo Gomez',
     mentorId: 'jack-mcaninch',
     traineeIds: [],
@@ -199,6 +220,7 @@ export const SURGEONS: Surgeon[] = [
   // Morey trainees
   {
     id: 'steve-hudak',
+    path: 'h-r/steve-hudak',
     name: 'Steve Hudak',
     photo: 'https://d38sso7f6qz01j.cloudfront.net/images/Steven-Hudak-432x432.width-400.jpg',
     country: 'United States',
@@ -208,6 +230,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'jay-simhan',
+    path: 's-z/jay-simhan',
     name: 'Jay Simhan',
     photo: 'https://www.foxchase.org/sites/default/files/styles/person_photo/public/photo/Jay-Simhan-860x640.jpg',
     mentorId: 'allen-morey',
@@ -215,6 +238,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'lee-zhao',
+    path: 's-z/lee-zhao',
     name: 'Lee Zhao',
     photo: 'https://nyulangone.org/images/doctors/z/zhao/1679729297/lee-c-zhao-square.jpg',
     mentorId: 'allen-morey',
@@ -222,12 +246,14 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'maia-vandyke',
+    path: 's-z/maia-vandyke',
     name: 'Maia VanDyke',
     mentorId: 'allen-morey',
     traineeIds: [],
   },
   {
     id: 'michael-davenport',
+    path: 'a-g/michael-davenport',
     name: 'Michael Davenport',
     mentorId: 'allen-morey',
     traineeIds: [],
@@ -235,6 +261,7 @@ export const SURGEONS: Surgeon[] = [
   // Wessells trainees
   {
     id: 'judith-hagedorn',
+    path: 'h-r/judith-hagedorn',
     name: 'Judith Hagedorn',
     photo: 'https://www.fredhutch.org/content/dam/www/provider-photos/h/judith-hagedorn/provider-judith-hagedorn-profile-2x.jpg',
     mentorId: 'hunter-wessells',
@@ -242,6 +269,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'alex-vanni',
+    path: 's-z/alex-vanni',
     name: 'Alex J. Vanni',
     photo: 'https://pbs.twimg.com/profile_images/1052006135798976512/tLjCglpl_400x400.jpg',
     mentorId: 'hunter-wessells',
@@ -249,6 +277,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'joshua-broghammer',
+    path: 'a-g/joshua-broghammer',
     name: 'Joshua A. Broghammer',
     photo: 'https://turnsresearch.org/perch/resources/broghammer-w800.jpg',
     mentorId: 'hunter-wessells',
@@ -256,6 +285,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'thomas-smith-iii',
+    path: 's-z/thomas-smith-iii',
     name: 'Thomas G. Smith III',
     photo: 'https://faculty.mdanderson.org/content/dam/mdanderson/images/fis/thomas_smithiii.jpg',
     mentorId: 'hunter-wessells',
@@ -263,6 +293,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'bradley-figler',
+    path: 'a-g/bradley-figler',
     name: 'Bradley Figler',
     photo: 'https://www.transhealthcare.org/wp-content/uploads/dr-brad-figler.jpg',
     country: 'United States',
@@ -273,6 +304,7 @@ export const SURGEONS: Surgeon[] = [
   // Zhao trainee
   {
     id: 'min-jun',
+    path: 'h-r/min-jun',
     name: 'Min Jun',
     photo: 'https://www.transhealthcare.org/wp-content/uploads/dr-min-jun-2.jpg',
     mentorId: 'lee-zhao',
@@ -282,12 +314,14 @@ export const SURGEONS: Surgeon[] = [
   // ── Webster School ──────────────────────────────────────
   {
     id: 'george-webster',
+    path: 's-z/george-webster',
     name: 'George D. Webster',
     photo: 'https://scholars.duke.edu/profile-images/full/0108871.jpg',
     traineeIds: ['brian-flynn', 'andrew-peterson', 'jack-walter', 'henry-ruiz'],
   },
   {
     id: 'brian-flynn',
+    path: 'a-g/brian-flynn',
     name: 'Brian Flynn',
     photo: 'https://som.cuanschutz.edu/FIMS/Content/faculty/3122/CU-Doctors-3122.jpg',
     country: 'United States',
@@ -297,6 +331,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'andrew-peterson',
+    path: 'h-r/andrew-peterson',
     name: 'Andrew C. Peterson',
     photo: 'https://www.dukehealth.org/sites/default/files/styles/doctor_profile/public/physician/andrew-c-peterson-md.jpg',
     mentorId: 'george-webster',
@@ -304,12 +339,14 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'jack-walter',
+    path: 's-z/jack-walter',
     name: 'Jack Walter',
     mentorId: 'george-webster',
     traineeIds: [],
   },
   {
     id: 'henry-ruiz',
+    path: 'h-r/henry-ruiz',
     name: 'Henry E. Ruiz',
     mentorId: 'george-webster',
     traineeIds: [],
@@ -317,6 +354,7 @@ export const SURGEONS: Surgeon[] = [
   // Flynn trainees
   {
     id: 'dmitriy-nikolavsky',
+    path: 'h-r/dmitriy-nikolavsky',
     name: 'Dmitriy Nikolavsky',
     photo: 'https://www.upstate.edu/urology/images/rwd/transgender-nikolavsky.jpg',
     mentorId: 'brian-flynn',
@@ -324,6 +362,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'humberto-villarreal',
+    path: 's-z/humberto-villarreal',
     name: 'Humberto Villarreal',
     photo: 'https://pbs.twimg.com/profile_images/1640549546513289216/kGpy8t6Z_400x400.jpg',
     mentorId: 'brian-flynn',
@@ -333,11 +372,13 @@ export const SURGEONS: Surgeon[] = [
   // ── Santucci School ─────────────────────────────────────
   {
     id: 'richard-santucci',
+    path: 's-z/richard-santucci',
     name: 'Richard Santucci',
     traineeIds: ['curtis-crane'],
   },
   {
     id: 'curtis-crane',
+    path: 'a-g/curtis-crane',
     name: 'Curtis Crane',
     mentorId: 'richard-santucci',
     traineeIds: [],
@@ -346,24 +387,28 @@ export const SURGEONS: Surgeon[] = [
   // ── Independent Figures ─────────────────────────────────
   {
     id: 'gerald-jordan',
+    path: 'h-r/gerald-jordan',
     name: 'Gerald H. Jordan',
     photo: 'http://jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg',
     traineeIds: [],
   },
   {
     id: 'charles-devine',
+    path: 'a-g/charles-devine',
     name: 'Charles J. Devine Jr.',
     photo: 'https://societygurs.org/wp-content/uploads/2019/10/Devine.jpg',
     traineeIds: [],
   },
   {
     id: 'kurt-mccammon',
+    path: 'h-r/kurt-mccammon',
     name: 'Kurt A. McCammon',
     photo: 'http://jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg',
     traineeIds: [],
   },
   {
     id: 'guido-barbagli',
+    path: 'a-g/guido-barbagli',
     name: 'Guido Barbagli',
     photo: 'http://www.uretra.it/wp-content/gallery/cv-guido-barbagli/cv-barbagli-GuidoBarbagli.jpg',
     bioUrl: 'http://www.uretra.it/cv-guido-barbagli-medici/?lang=en',
@@ -371,12 +416,14 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'anthony-mundy',
+    path: 'h-r/anthony-mundy',
     name: 'Anthony R. Mundy',
     photo: 'https://www.cromwellhospital.com/wp-content/uploads/2023/04/Prof-Anthony-Mundy-scaled-e1683802581164-1824x2048.jpg',
     traineeIds: [],
   },
   {
     id: 'maurice-garcia',
+    path: 'a-g/maurice-garcia',
     name: 'Maurice Garcia',
     photo: 'https://www.transhealthcare.org/wp-content/uploads/dr-maurice-garcia.jpg',
     country: 'United States',
@@ -385,12 +432,14 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'joel-gelman',
+    path: 'a-g/joel-gelman',
     name: 'Joel Gelman',
     photo: 'https://centerforreconstructiveurology.org/wp-content/uploads/2023/03/joel-gelman.jpg',
     traineeIds: [],
   },
   {
     id: 'ryan-terlecki',
+    path: 's-z/ryan-terlecki',
     name: 'Ryan Terlecki',
     photo: 'https://wp02-media.cdn.ihealthspot.com/wp-content/uploads/sites/382/2019/02/Terlecki-web.png',
     country: 'United States',
@@ -399,6 +448,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'akio-horiguchi',
+    path: 'h-r/akio-horiguchi',
     name: 'Akio Horiguchi',
     photo: 'https://cise2025.org/wp-content/uploads/2024/11/PROF.-Akio-Horiguchi-MD.png',
     country: 'Japan',
@@ -407,6 +457,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'paul-perito',
+    path: 'h-r/paul-perito',
     name: 'Paul Perito',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -414,16 +465,19 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'f-brantley-scott',
+    path: 's-z/f-brantley-scott',
     name: 'F. Brantley Scott',
     traineeIds: [],
   },
   {
     id: 'ramon-virasoro',
+    path: 's-z/ramon-virasoro',
     name: 'Ramon Virasoro',
     traineeIds: [],
   },
   {
     id: 'chris-gonzalez',
+    path: 'a-g/chris-gonzalez',
     name: 'Chris Gonzalez',
     photo: 'https://grandroundsinurology.com/wp-content/uploads/2021/05/Gonzalez_M_400x400-300x300.jpg',
     country: 'United States',
@@ -432,27 +486,32 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'ziho-lee',
+    path: 'h-r/ziho-lee',
     name: 'Ziho Lee',
     photo: 'https://deptcommon.fsm.northwestern.edu/profile-images/51913.jpeg',
     traineeIds: [],
   },
   {
     id: 'brian-inouye',
+    path: 'h-r/brian-inouye',
     name: 'Brian Inouye',
     traineeIds: [],
   },
   {
     id: 'krishnan-venkatesan',
+    path: 's-z/krishnan-venkatesan',
     name: 'Krishnan Venkatesan',
     traineeIds: [],
   },
   {
     id: 'nathan-shaw',
+    path: 's-z/nathan-shaw',
     name: 'Nathan Shaw',
     traineeIds: [],
   },
   {
     id: 'daniel-eun',
+    path: 'a-g/daniel-eun',
     name: 'Daniel Eun',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -460,6 +519,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'kunlin-yang',
+    path: 's-z/kunlin-yang',
     name: 'Kunlin Yang',
     country: 'China',
     countryFlag: '🇨🇳',

@@ -85,7 +85,7 @@ export default function SurgeonProfile({ id, children }: { id: string; children?
         {mentor && (
           <div className="sp-lineage-item sp-lineage-item--mentor">
             <div className="sp-lineage-label">Mentored by</div>
-            <a href={`${PAGE_BASE}${mentor.id}`} className="sp-lineage-name">{mentor.name}</a>
+            <a href={`${PAGE_BASE}${mentor.path}`} className="sp-lineage-name">{mentor.name}</a>
           </div>
         )}
         {!mentor && (
@@ -99,7 +99,7 @@ export default function SurgeonProfile({ id, children }: { id: string; children?
             <div className="sp-lineage-label">Trainees ({trainees.length})</div>
             <div className="sp-lineage-trainees">
               {trainees.map(t => (
-                <a key={t.id} href={`${PAGE_BASE}${t.id}`} className="sp-trainee-chip">
+                <a key={t.id} href={`${PAGE_BASE}${t.path}`} className="sp-trainee-chip">
                   {t.countryFlag} {t.name}
                 </a>
               ))}
