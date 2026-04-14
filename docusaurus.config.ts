@@ -39,6 +39,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/nseranio/warwiki/tree/main/',
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {
