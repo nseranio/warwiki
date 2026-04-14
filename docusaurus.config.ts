@@ -63,16 +63,20 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'foundationsSidebar',
+          label: 'Reference',
           position: 'left',
-          label: 'Foundations',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'evaluationSidebar',
-          position: 'left',
-          label: 'Evaluation & Workup',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'foundationsSidebar',
+              label: 'Foundations',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'evaluationSidebar',
+              label: 'Evaluation & Workup',
+            },
+          ],
         },
         {
           type: 'docSidebar',
@@ -93,22 +97,25 @@ const config: Config = {
           label: 'Special Populations',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'journalSidebar',
+          label: 'Library',
           position: 'left',
-          label: 'Journal Club',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'rootsSidebar',
-          position: 'left',
-          label: 'Roots',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'resourcesSidebar',
-          position: 'left',
-          label: 'Resources',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'journalSidebar',
+              label: 'Journal Club',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'rootsSidebar',
+              label: 'Roots of Reconstruction',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'resourcesSidebar',
+              label: 'Resources',
+            },
+          ],
         },
         {
           href: 'https://github.com/nseranio/warwiki',
