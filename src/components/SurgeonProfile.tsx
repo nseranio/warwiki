@@ -7,7 +7,7 @@ function ComingSoon() {
   return <p className="sp-coming-soon">Content coming soon.</p>;
 }
 
-export default function SurgeonProfile({ id }: { id: string }) {
+export default function SurgeonProfile({ id, children }: { id: string; children?: React.ReactNode }) {
   const [imgError, setImgError] = useState(false);
   const surgeon = SURGEONS_BY_ID.get(id);
 
@@ -113,7 +113,7 @@ export default function SurgeonProfile({ id }: { id: string }) {
 
         <section className="sp-section">
           <h2>Biography</h2>
-          <ComingSoon />
+          {children ?? <ComingSoon />}
         </section>
 
         <section className="sp-section">
