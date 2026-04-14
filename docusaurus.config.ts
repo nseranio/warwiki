@@ -84,7 +84,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'surgicalSidebar',
           position: 'left',
-          label: 'Surgical Techniques',
+          label: 'Treatment Atlas',
         },
         {
           type: 'docSidebar',
