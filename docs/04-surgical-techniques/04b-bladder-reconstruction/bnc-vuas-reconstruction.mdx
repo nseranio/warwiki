@@ -1,0 +1,120 @@
+---
+title: BNC / VUAS Reconstruction
+sidebar_position: 3
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# BNC / VUAS Reconstruction
+
+Bladder neck contracture (BNC) and vesicourethral anastomotic stricture (VUAS) represent a challenging subset of reconstructive problems arising most commonly after radical prostatectomy, radiation therapy, or prior bladder neck surgery. The obliterated or severely stenotic outlet requires a tailored approach based on stricture length, prior treatment history, presence of incontinence, and surgeon expertise. Options range from simple endoscopic incision with steroid injection to complex combined abdominoperineal reconstruction.
+
+> Success rates should be interpreted cautiously — definitions of success vary (patent lumen, continence, freedom from reintervention), follow-up intervals differ, and most data come from small case series.
+
+---
+
+export const bncTechniques = [
+  {
+    name: "Transurethral Incision with Injection of Triamcinolone",
+    approach: "Endoscopic",
+    successRate: "~65%",
+    notes: "Cold-knife or electrocautery incision (typically at 12 o'clock) combined with intralesional triamcinolone injection. First-line treatment for BNC/VUAS; may require repeated sessions. Best results for thin-membrane contractures.",
+  },
+  {
+    name: "T-plasty",
+    approach: "Endoscopic",
+    successRate: "",
+    notes: "Endoscopic transverse incision of the contracture combined with a longitudinal cut, creating a T-pattern to interrupt the fibrotic ring. Allows wider lumen without open surgery.",
+  },
+  {
+    name: "Dorsal BMG",
+    approach: "Endoscopic / Robotic",
+    successRate: "",
+    notes: "Buccal mucosa graft applied dorsally to the bladder neck / vesicourethral junction under direct vision or robotic assistance. Provides well-vascularized mucosal augmentation for short-segment obliteration.",
+  },
+  {
+    name: "Subtrigonal Inlay",
+    approach: "Robotic",
+    successRate: "",
+    notes: "Robotic-assisted subtrigonal graft placement at the bladder neck level. Graft inlaid beneath the trigone to augment a stenotic outlet; combines oncologic access with reconstructive precision.",
+  },
+  {
+    name: "Y-V Plasty",
+    approach: "Abdominal",
+    successRate: "~75%",
+    notes: "Cystotomy with Y-incision at the bladder neck advanced and closed in V-configuration to widen the outlet. Applicable robotically or open; widely used for moderate BNC with adequate proximal tissue. Reported success ~75% at intermediate follow-up.",
+  },
+  {
+    name: "Tanagho Flap",
+    approach: "Abdominal",
+    successRate: "",
+    notes: "Anterior bladder wall flap tubularized to reconstruct or lengthen the bladder neck outlet. Originally described for neurogenic outlet incompetence; adapted for post-prostatectomy reconstruction.",
+  },
+  {
+    name: "Young-Dees-Leadbetter",
+    approach: "Abdominal",
+    successRate: "",
+    notes: "Bladder neck tubularization using trigonal muscle strips. Classic technique for pediatric neurogenic bladder incompetence; applied in adults for severe post-prostatectomy or radiation BNC when continence reconstruction is also required.",
+  },
+  {
+    name: "Kropp Procedure",
+    approach: "Abdominal",
+    successRate: "",
+    notes: "Posterior bladder wall tube created as a continent catheterizable channel to replace bladder neck outlet. Primarily a pediatric technique (myelomeningocele, bladder exstrophy); adapted in adults with obliterated outlet and neurogenic dysfunction.",
+  },
+  {
+    name: "Pippi-Salle Procedure",
+    approach: "Abdominal",
+    successRate: "",
+    notes: "Anterior bladder wall flap folded to create a tube that augments bladder neck resistance. Pediatric neurogenic bladder operation; included for completeness in the reconstructive armamentarium.",
+  },
+  {
+    name: "Transperineal Reanastomosis",
+    approach: "Perineal",
+    successRate: "",
+    notes: "Perineal approach to excise the strictured vesicourethral anastomosis and create a tension-free reanastomosis. Mirrors the perineal approach to PFUI repair; avoids abdominal entry and is preferred when prior abdominal surgery precludes transabdominal access.",
+  },
+  {
+    name: "Combined Abdominoperineal Approach",
+    approach: "Combined",
+    successRate: "",
+    notes: "Simultaneous abdominal and perineal exposure for complex, long-segment, or recurrent VUAS. Provides maximal access for complete excision of fibrotic segment, reanastomosis, and simultaneous cystoplasty or flap interposition when needed.",
+  },
+];
+
+export const bncColumns = [
+  {
+    key: 'name',
+    header: 'Technique',
+  },
+  {
+    key: 'approach',
+    header: 'Approach',
+    badge: true,
+    badgeColors: {
+      'Endoscopic':            '#047857',
+      'Endoscopic / Robotic':  '#0f766e',
+      'Robotic':               '#0369a1',
+      'Abdominal':             '#1d4ed8',
+      'Perineal':              '#7c3aed',
+      'Combined':              '#b45309',
+    },
+  },
+  {
+    key: 'successRate',
+    header: 'Success Rate',
+    fallback: '—',
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={bncTechniques}
+  columns={bncColumns}
+  filterKey="approach"
+  filterLabel="Approach"
+  entityLabel="techniques"
+/>

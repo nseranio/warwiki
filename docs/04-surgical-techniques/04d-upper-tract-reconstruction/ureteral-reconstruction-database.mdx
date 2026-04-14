@@ -1,0 +1,153 @@
+---
+title: Ureteral Reconstruction Database
+sidebar_position: 6
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Ureteral Reconstruction
+
+The ureter is a vulnerable structure — long, narrow, retroperitoneal, and highly dependent on a fragile segmental blood supply. Reconstructive strategy is determined by the level and length of the injury or stricture, its etiology (iatrogenic, radiation, oncologic, inflammatory), and the functional reserve of the ipsilateral kidney. Short, well-vascularized defects tolerate direct anastomosis; longer or ischemic segments require tissue interposition or renal mobilization strategies. The table below organizes techniques by ureteral segment and approach.
+
+---
+
+export const ureteralTechniques = [
+  {
+    name: "Pyeloplasty",
+    approach: "Robotic / Open",
+    indication: "UPJ Obstruction",
+    segment: "Proximal",
+    notes: "Dismembered (Anderson-Hynes) pyeloplasty is the gold standard for UPJ obstruction. Spatulated anastomosis realigns the dependent pelvis and relieves extrinsic crossing vessel compression. Robotic approach now standard.",
+  },
+  {
+    name: "Ureterocalicostomy",
+    approach: "Robotic / Open",
+    indication: "Failed Pyeloplasty, Intrarenal Pelvis",
+    segment: "Proximal",
+    notes: "Direct anastomosis of ureter to a lower pole calyx after partial nephrectomy of lower pole parenchyma. Reserved for failed pyeloplasty or intrarenal pelvis where a new ureteropelvic junction cannot be fashioned.",
+  },
+  {
+    name: "Ureteroureterostomy",
+    approach: "Robotic",
+    indication: "Iatrogenic Injury, Stricture, Trauma",
+    segment: "Middle",
+    notes: "End-to-end spatulated anastomosis after excision of diseased ureteral segment. Best for short defects (&lt;2–3 cm) in middle third. Requires tension-free mobilization. Robotic approach facilitates intracorporeal suturing.",
+  },
+  {
+    name: "Augmented Anastomotic Ureteroureterostomy",
+    approach: "Robotic / Open",
+    indication: "Moderate Stricture",
+    segment: "Middle",
+    notes: "Ureteroureterostomy augmented with an onlay patch graft (appendix, BMG) to avoid tension over a slightly longer gap. Bridges the gap between simple UU and full substitution procedures.",
+  },
+  {
+    name: "Trans Ureteroureterostomy (TUU)",
+    approach: "Robotic / Open",
+    indication: "Proximal / Mid Stricture, Iatrogenic Injury",
+    segment: "Proximal / Middle",
+    notes: "Injured ureter crossed to the contralateral side and anastomosed end-to-side to the native ureter. Avoids ipsilateral reconstruction in a hostile field; preserves the damaged ureter's kidney drainage. Contraindicated if contralateral ureter is at risk.",
+  },
+  {
+    name: "Non-Transecting Reimplantation",
+    approach: "Robotic / Open",
+    indication: "Distal Stricture, Iatrogenic Injury",
+    segment: "Distal",
+    notes: "Ureteral reimplantation without full transection of the ureter, preserving the adventitia and periureteral blood supply on one side. Reduces devascularization risk in marginal cases.",
+  },
+  {
+    name: "Distal Ureterectomy with Reimplantation",
+    approach: "Robotic / Open",
+    indication: "Distal Stricture, Tumor, Iatrogenic Injury",
+    segment: "Distal",
+    notes: "Excision of distal ureteral segment with direct neocystostomy, with or without psoas hitch. Gold standard for isolated distal ureteral injuries. May be combined with anti-reflux tunnel.",
+  },
+  {
+    name: "Boari Flap with Psoas Hitch",
+    approach: "Open",
+    indication: "Iatrogenic Injury, Stricture, Tumor",
+    segment: "Distal",
+    notes: "Bladder flap tubularized to bridge a distal ureteral defect (Boari), combined with cephalad fixation of the bladder to the psoas tendon (psoas hitch) to reduce anastomotic tension. Classic for long distal defects of 6–10 cm.",
+  },
+  {
+    name: "BMG Onlay",
+    approach: "Robotic / Open",
+    indication: "Short Stricture",
+    segment: "Any",
+    notes: "Buccal mucosa graft onlay to a longitudinal ureterotomy over a stent. Emerging technique borrowing from urethral reconstruction; avoids circumferential anastomosis and devascularization. Early series promising for short-segment strictures.",
+  },
+  {
+    name: "Appendiceal Onlay / Interposition",
+    approach: "Robotic / Open",
+    indication: "Mid-Ureteral Stricture",
+    segment: "Middle / Distal",
+    notes: "Appendix opened and used as an onlay flap or tubular interposition graft for mid-ureteral defects on the right side. Retains its mesenteric blood supply; tissue characteristics favorable for urothelial regeneration.",
+  },
+  {
+    name: "Ileal Onlay / Interposition",
+    approach: "Robotic / Open",
+    indication: "Moderate-Length Stricture",
+    segment: "Middle / Distal",
+    notes: "Detubularized or tubular ileal segment used to bridge a moderate ureteral defect when appendix is unavailable or defect is bilateral. Anti-peristaltic orientation preferred to reduce mucus production and reflux.",
+  },
+  {
+    name: "Ileal Ureter Substitution",
+    approach: "Robotic",
+    indication: "Radiation Damage, Stricture, Tumor",
+    segment: "Complete",
+    notes: "Full isoperistaltic ileal segment replacing the entire ureter from renal pelvis to bladder. Indicated for pan-ureteral loss from radiation necrosis, extensive ischemic injury, or prior failed reconstructions. Requires adequate renal function and intact bladder capacity.",
+  },
+  {
+    name: "Renal Autotransplantation",
+    approach: "Open",
+    indication: "Complex Multi-Level Loss, Failed Prior Reconstruction",
+    segment: "Complete",
+    notes: "Kidney explanted and reimplanted to the iliac fossa with vascular anastomosis to iliac vessels and direct ureterovesical anastomosis. Last-resort technique for multi-level ureteral loss or complex hilar/proximal disease; effectively eliminates the ureter.",
+  },
+];
+
+export const ureteralColumns = [
+  {
+    key: 'name',
+    header: 'Technique',
+  },
+  {
+    key: 'segment',
+    header: 'Segment',
+    badge: true,
+    badgeColors: {
+      'Proximal':          '#047857',
+      'Proximal / Middle': '#0f766e',
+      'Middle':            '#1d4ed8',
+      'Middle / Distal':   '#6d28d9',
+      'Distal':            '#b45309',
+      'Any':               '#374151',
+      'Complete':          '#b91c1c',
+    },
+  },
+  {
+    key: 'approach',
+    header: 'Approach',
+    badge: true,
+    badgeColors: {
+      'Robotic':           '#0369a1',
+      'Open':              '#92400e',
+      'Robotic / Open':    '#374151',
+    },
+  },
+  {
+    key: 'indication',
+    header: 'Indication',
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={ureteralTechniques}
+  columns={ureteralColumns}
+  filterKey="segment"
+  filterLabel="Segment"
+  entityLabel="techniques"
+/>

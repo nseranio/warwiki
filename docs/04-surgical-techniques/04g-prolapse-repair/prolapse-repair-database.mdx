@@ -1,0 +1,202 @@
+---
+title: Prolapse Repair Database
+sidebar_position: 5
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Prolapse Repair
+
+Pelvic organ prolapse (POP) repair encompasses a wide range of native tissue, mesh-augmented, and obliterative procedures targeting the anterior, posterior, and apical compartments. Surgical planning must account for compartment-specific anatomy (DeLancey Levels I–III), patient goals including uterine preservation and sexual activity, prior surgery, and mesh history. The table below catalogs the major surgical and non-surgical techniques by compartment and approach.
+
+> See the [Pelvic Organ Prolapse](/docs/clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse) article for pathophysiology, risk stratification, and trial data (OPTIMAL, PEOPLE).
+
+---
+
+export const prolapseProcs = [
+  {
+    name: "Prolapse Pessaries",
+    compartment: "All",
+    approach: "Non-surgical",
+    notes: "First-line non-surgical management for all prolapse stages and compartments. Ring, dish, Gellhorn, cube, and Gehrung types address different anatomical patterns. Requires ongoing fitting, follow-up, and patient ability to manage insertion/removal.",
+  },
+  {
+    name: "Anterior Midline Colporrhaphy",
+    compartment: "Anterior",
+    approach: "Vaginal",
+    notes: "Central defect repair via midline plication of pubocervical fascia beneath the bladder. Addresses central cystocele. High recurrence at 5 years for isolated central repair; often combined with apical support.",
+  },
+  {
+    name: "Kelly Plication",
+    compartment: "Anterior",
+    approach: "Vaginal",
+    notes: "Historical anterior colporrhaphy with urethrovesical angle plication for concurrent SUI. Largely supplanted by suburethral slings; retained for context as a combined continence-prolapse repair.",
+  },
+  {
+    name: "Vaginal Paravaginal Repair",
+    compartment: "Anterior",
+    approach: "Vaginal",
+    notes: "Reattachment of lateral vaginal wall to the arcus tendineus fascia pelvis (ATFP) via vaginal approach. Targets lateral paravaginal defect cystocele; technically demanding with limited long-term data.",
+  },
+  {
+    name: "Transvaginal Paravaginal Anterior Repair (Lattice Technique)",
+    compartment: "Anterior",
+    approach: "Vaginal",
+    notes: "Fascial patch or lattice repair of paravaginal defect via vaginal approach. Uses autologous or allograft tissue in a grid pattern to reinforce the lateral attachment; alternative to abdominal paravaginal repair.",
+  },
+  {
+    name: "Michigan Four Wall",
+    compartment: "Anterior",
+    approach: "Vaginal",
+    notes: "Four-wall vault support combined with sacrospinous fixation. Emphasizes apical anchoring during anterior colporrhaphy to prevent vault descent contributing to anterior recurrence.",
+  },
+  {
+    name: "Posterior Midline Colporrhaphy",
+    compartment: "Posterior",
+    approach: "Vaginal",
+    notes: "Central plication of rectovaginal fascia to address posterior wall prolapse (rectocele). High anatomic success; functional results variable with risk of dyspareunia from over-correction.",
+  },
+  {
+    name: "Perineorrhaphy",
+    compartment: "Posterior",
+    approach: "Vaginal",
+    notes: "Repair and reconstruction of the perineal body, reapproximating the bulbocavernosus and transverse perineal muscles. Addresses distal rectocele and perineal laxity; frequently combined with posterior colporrhaphy.",
+  },
+  {
+    name: "Sacrospinous Ligament Fixation (SSLF)",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Vaginal apex sutured to the right sacrospinous ligament via posterior colpotomy and rectovaginal dissection. Native tissue apical repair; high apical success but associated with anterior recurrence due to posterior axis shift.",
+  },
+  {
+    name: "Uterosacral Ligament Suspension (USLS)",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Vaginal apex suspended bilaterally to the uterosacral ligaments at the level of the ischial spines. OPTIMAL trial: equivalent to SSLF at 2 years (63.1% vs 64.5%). Risk of ureteral kinking; cystoscopy mandatory.",
+  },
+  {
+    name: "Vaginal McCall's Culdoplasty",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "High posterior culdoplasty at the time of vaginal hysterectomy — uterosacral ligaments and posterior peritoneum plicated to suspend the vaginal apex and obliterate the cul-de-sac. Standard adjunct to vaginal hysterectomy.",
+  },
+  {
+    name: "Sacrospinous Hysteropexy",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Uterus suspended to the sacrospinous ligament preserving the uterus. Increasingly preferred alternative to hysterectomy for uterine prolapse in patients desiring uterine preservation. Similar outcomes to VH+SSLF in short-term data.",
+  },
+  {
+    name: "Manchester-Fothergill Procedure",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Anterior colporrhaphy with cervical amputation and cardinal ligament plication for apical support while preserving the uterus. Uterus-conserving procedure for uterine prolapse when patient desires fertility or uterine retention.",
+  },
+  {
+    name: "Iliococcygeus Fascia Suspension",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Vaginal apex sutured bilaterally to the iliococcygeus fascia just below the ischial spine. Alternative native tissue apical repair when sacrospinous or uterosacral fixation is not feasible; avoids the sacrospinous neurovascular bundle.",
+  },
+  {
+    name: "Vaginal Hysterectomy",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Removal of the uterus via vaginal approach with concurrent apical repair (McCall's culdoplasty, SSLF, or USLS). Standard surgical treatment for symptomatic uterine prolapse when uterine preservation is not desired.",
+  },
+  {
+    name: "Sacrocolpopexy",
+    compartment: "Apical",
+    approach: "Robotic",
+    notes: "Polypropylene mesh attached from anterior and posterior vaginal walls to the sacral promontory (S1). CARE trial gold standard; 5-year objective success ~78%. Avoids posterior vaginal axis shift. Robotic approach now standard.",
+  },
+  {
+    name: "Pectopexy",
+    compartment: "Apical",
+    approach: "Abdominal",
+    notes: "Mesh-based apical suspension to the pectineal (Cooper's) ligament bilaterally. Avoids sacral dissection and risk of presacral hemorrhage. European technique gaining adoption; comparable apical outcomes to sacrocolpopexy in prospective data.",
+  },
+  {
+    name: "Abdominal McCall's Culdoplasty",
+    compartment: "Apical",
+    approach: "Abdominal",
+    notes: "McCall-type culdoplasty performed abdominally at the time of abdominal hysterectomy. Obliterates the cul-de-sac with high uterosacral plication to prevent future enterocele formation.",
+  },
+  {
+    name: "Moschcowitz Procedure",
+    compartment: "Apical",
+    approach: "Abdominal",
+    notes: "Concentric purse-string sutures obliterating the pouch of Douglas to prevent or repair enterocele. Performed abdominally; frequently combined with sacrocolpopexy or abdominal hysterectomy.",
+  },
+  {
+    name: "Halban Culdoplasty",
+    compartment: "Apical",
+    approach: "Abdominal",
+    notes: "Sagittal sutures (anterior-posterior) obliterating the cul-de-sac peritoneum to prevent enterocele. Abdominal approach; alternative to Moschcowitz for enterocele prevention at hysterectomy.",
+  },
+  {
+    name: "Raz Transvaginal Enterocele Repair",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "High transvaginal ligation and excision of the enterocele sac with plication of the uterosacral-cardinal complex. Targets enterocele sac excision with concurrent high apical support.",
+  },
+  {
+    name: "CRISP Technique",
+    compartment: "Apical",
+    approach: "Vaginal",
+    notes: "Continuous running suture peritoneal closure incorporating uterosacral plication for vault suspension. Technical variation of native tissue apical repair emphasizing simplicity and reproducibility.",
+  },
+  {
+    name: "Le Fort Colpocleisis",
+    compartment: "All",
+    approach: "Vaginal",
+    notes: "Partial colpocleisis — anterior and posterior vaginal epithelium denuded and approximated with lateral channels preserved for cervical drainage. Highly effective obliterative procedure for elderly, medically fragile patients not desiring intercourse. 90%+ anatomic success.",
+  },
+  {
+    name: "Colpocleisis",
+    compartment: "All",
+    approach: "Vaginal",
+    notes: "Total vaginal obliteration for severe prolapse in patients who have completed sexual activity. Shorter operative time and lower morbidity than reconstructive alternatives; definitive treatment with high satisfaction in appropriately selected patients.",
+  },
+];
+
+export const prolapseColumns = [
+  {
+    key: 'name',
+    header: 'Procedure',
+  },
+  {
+    key: 'compartment',
+    header: 'Compartment',
+    badge: true,
+    badgeColors: {
+      'Anterior':  '#1d4ed8',
+      'Posterior': '#047857',
+      'Apical':    '#7c3aed',
+      'All':       '#374151',
+    },
+  },
+  {
+    key: 'approach',
+    header: 'Approach',
+    badge: true,
+    badgeColors: {
+      'Vaginal':      '#be185d',
+      'Robotic':      '#0369a1',
+      'Abdominal':    '#b45309',
+      'Non-surgical': '#6b7280',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={prolapseProcs}
+  columns={prolapseColumns}
+  filterKey="compartment"
+  filterLabel="Compartment"
+  entityLabel="procedures"
+/>
