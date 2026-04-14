@@ -129,7 +129,11 @@ export default function GenericDatabase({
                     if (j === 0) {
                       return (
                         <td key={col.key} className="td-name-cell">
-                          <span className="td-name-text">{val}</span>
+                          {row.slug ? (
+                            <a href={row.slug} className="td-name-link">{val}</a>
+                          ) : (
+                            <span className="td-name-text">{val}</span>
+                          )}
                         </td>
                       );
                     }
