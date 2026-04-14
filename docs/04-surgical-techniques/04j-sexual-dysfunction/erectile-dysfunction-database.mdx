@@ -1,0 +1,91 @@
+---
+title: Erectile Dysfunction
+sidebar_position: 2
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Erectile Dysfunction
+
+Erectile dysfunction (ED) affects an estimated 30 million men in the United States and is a common sequela of radical prostatectomy, pelvic radiation, vascular disease, diabetes, and neurological injury. Management follows a stepwise approach — from least to most invasive — with treatment selection guided by severity, etiology, patient and partner preference, and comorbid conditions. All options below are reversible except the penile implant.
+
+---
+
+export const edTreatments = [
+  {
+    name: "PDE5 Inhibitors",
+    category: "Oral Pharmacotherapy",
+    invasiveness: "Non-invasive",
+    notes: "First-line therapy for most patients with ED. Sildenafil, tadalafil, vardenafil, and avanafil enhance nitric oxide–mediated smooth muscle relaxation; require intact neurogenic stimulation. Tadalafil 5 mg daily is used for penile rehabilitation post-prostatectomy.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors",
+  },
+  {
+    name: "Vacuum Erection Device (VED)",
+    category: "Mechanical",
+    invasiveness: "Non-invasive",
+    notes: "Negative pressure draws blood into the corpora; a constriction ring maintains erection. Effective in 60–90% of patients. No systemic side effects; useful for penile rehabilitation post-prostatectomy and in patients who cannot tolerate PDE5 inhibitors.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved",
+  },
+  {
+    name: "Intraurethral Alprostadil (MUSE)",
+    category: "Intraurethral",
+    invasiveness: "Minimally Invasive",
+    notes: "Medicated urethral system for erection (MUSE) delivers alprostadil (PGE1) pellet transurethrally. Absorbed via corpus spongiosum; efficacy ~40–65%. Useful when systemic absorption of PDE5 inhibitors is contraindicated or insufficient.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/muse-intraurethral",
+  },
+  {
+    name: "Intracavernosal Injections (ICI)",
+    category: "Injectable",
+    invasiveness: "Minimally Invasive",
+    notes: "Direct injection of vasoactive agents (alprostadil alone or Trimix — papaverine/phentolamine/alprostadil) into the corpus cavernosum. Efficacy 70–90%; independent of neurogenic stimulation. Gold standard pharmacotherapy for post-prostatectomy ED when oral agents fail.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections",
+  },
+  {
+    name: "Penile Implant",
+    category: "Surgical",
+    invasiveness: "Surgical Implant",
+    notes: "Inflatable penile prosthesis (IPP) or malleable rod implanted into the corpora cavernosa. Definitive treatment; highest satisfaction rates of any ED therapy (92–98%). Indicated after failure of or inability to use non-surgical options. Precludes future spontaneous erections.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants",
+  },
+];
+
+export const edColumns = [
+  {
+    key: 'name',
+    header: 'Treatment',
+  },
+  {
+    key: 'category',
+    header: 'Category',
+    badge: true,
+    badgeColors: {
+      'Oral Pharmacotherapy': '#047857',
+      'Mechanical':           '#0369a1',
+      'Intraurethral':        '#b45309',
+      'Injectable':           '#7c3aed',
+      'Surgical':             '#b91c1c',
+    },
+  },
+  {
+    key: 'invasiveness',
+    header: 'Invasiveness',
+    badge: true,
+    badgeColors: {
+      'Non-invasive':       '#6b7280',
+      'Minimally Invasive': '#0f766e',
+      'Surgical Implant':   '#7c3aed',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={edTreatments}
+  columns={edColumns}
+  filterKey="category"
+  filterLabel="Category"
+  entityLabel="treatments"
+/>
