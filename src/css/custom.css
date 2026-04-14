@@ -347,8 +347,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-color-primary-lighter);
 }
 
-/* Nav items */
-.navbar__item.navbar__link {
+/* Nav items — direct links AND dropdown triggers */
+.navbar__item.navbar__link,
+.navbar__item .navbar__link {
   font-size: 0.815rem;
   font-weight: 500;
   letter-spacing: 0.005em;
@@ -358,25 +359,40 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.navbar__item.navbar__link:hover {
+.navbar__item.navbar__link:hover,
+.navbar__item .navbar__link:hover {
   color: var(--ifm-color-primary);
   background-color: var(--warwiki-note-bg);
 }
 
-.navbar__item.navbar__link--active {
+.navbar__item.navbar__link--active,
+.navbar__item .navbar__link--active {
   color: var(--ifm-color-primary);
   font-weight: 600;
   background-color: var(--warwiki-note-bg);
 }
 
-[data-theme='dark'] .navbar__item.navbar__link {
+[data-theme='dark'] .navbar__item.navbar__link,
+[data-theme='dark'] .navbar__item .navbar__link {
   color: var(--warwiki-text-muted);
 }
 
 [data-theme='dark'] .navbar__item.navbar__link:hover,
-[data-theme='dark'] .navbar__item.navbar__link--active {
+[data-theme='dark'] .navbar__item.navbar__link--active,
+[data-theme='dark'] .navbar__item .navbar__link:hover,
+[data-theme='dark'] .navbar__item .navbar__link--active {
   color: var(--ifm-color-primary-lighter);
   background-color: var(--warwiki-note-bg);
+}
+
+/* Remove default dropdown caret styling that can affect weight/color */
+.navbar__item.dropdown .navbar__link::after {
+  border-color: var(--warwiki-text-muted) transparent transparent;
+  opacity: 0.7;
+}
+
+[data-theme='dark'] .navbar__item.dropdown .navbar__link::after {
+  border-color: var(--warwiki-text-muted) transparent transparent;
 }
 
 /* GitHub link — right side */

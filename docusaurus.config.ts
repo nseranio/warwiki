@@ -63,20 +63,16 @@ const config: Config = {
       },
       items: [
         {
-          label: 'Reference',
+          type: 'docSidebar',
+          sidebarId: 'foundationsSidebar',
           position: 'left',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'foundationsSidebar',
-              label: 'Foundations',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'evaluationSidebar',
-              label: 'Evaluation & Workup',
-            },
-          ],
+          label: 'Foundations',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'evaluationSidebar',
+          position: 'left',
+          label: 'Evaluation',
         },
         {
           type: 'docSidebar',
