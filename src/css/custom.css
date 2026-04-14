@@ -925,6 +925,54 @@ article {
   line-height: 1.4;
 }
 
+/* Non-linked section title (no landing page) */
+.toc-list .toc-section {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--warwiki-text);
+  cursor: default;
+}
+
+/* Sub-page chips row */
+.toc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+}
+
+.toc-chips a {
+  display: inline-block;
+  font-size: 0.71rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  background: var(--warwiki-bg-subtle);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 3px;
+  padding: 0.18rem 0.55rem;
+  text-decoration: none;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+  white-space: nowrap;
+}
+
+.toc-chips a:hover {
+  background: var(--warwiki-note-bg);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .toc-chips a {
+  background: rgba(24, 95, 165, 0.08);
+  border-color: #2a3a4a;
+  color: #3691E2;
+}
+
+[data-theme='dark'] .toc-chips a:hover {
+  background: rgba(24, 95, 165, 0.18);
+  border-color: #3691E2;
+}
+
 @media (max-width: 768px) {
   .toc-list {
     grid-template-columns: 1fr;
