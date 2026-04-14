@@ -115,6 +115,11 @@ const config: Config = {
           ],
         },
         {
+          to: '/about',
+          label: 'About',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/nseranio/warwiki',
           label: 'GitHub',
           position: 'right',

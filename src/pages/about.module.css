@@ -1,0 +1,161 @@
+/* ── About Page Layout ──────────────────────────────────────── */
+
+.aboutPage {
+  min-height: 100vh;
+}
+
+.hero {
+  background: var(--ifm-color-primary);
+  padding: 4rem 2rem 3.5rem;
+  text-align: center;
+}
+
+[data-theme='dark'] .hero {
+  background: #0F3A67;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin: 0 0 0.6rem;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── Main content container ────────────────────────────────── */
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--warwiki-border);
+}
+
+[data-theme='dark'] .section h2 {
+  color: #3691E2;
+  border-bottom-color: var(--warwiki-border, #2a3a4a);
+}
+
+.section p,
+.section li {
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--warwiki-text-muted, #4B5767);
+}
+
+[data-theme='dark'] .section p,
+[data-theme='dark'] .section li {
+  color: var(--ifm-color-content-secondary, #a0aec0);
+}
+
+.section strong {
+  color: var(--warwiki-text, #111827);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .section strong {
+  color: var(--ifm-color-content, #e2e8f0);
+}
+
+.section ul {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0 0;
+}
+
+.section li {
+  margin-bottom: 0.35rem;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+
+.divider {
+  border-top: 1px solid var(--warwiki-border, #DDE3ED);
+  margin-bottom: 3rem;
+}
+
+[data-theme='dark'] .divider {
+  border-top-color: #2a3a4a;
+}
+
+/* ── Team section ──────────────────────────────────────────── */
+
+.teamSection {
+  margin-bottom: 3rem;
+}
+
+.teamSection h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--warwiki-border);
+}
+
+[data-theme='dark'] .teamSection h2 {
+  color: #3691E2;
+  border-bottom-color: #2a3a4a;
+}
+
+.teamCard {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  background: var(--warwiki-bg, #F7F9FC);
+  border: 1px solid var(--warwiki-border, #DDE3ED);
+  border-radius: 6px;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .teamCard {
+  background: rgba(24, 95, 165, 0.06);
+  border-color: #2a3a4a;
+  border-left-color: #3691E2;
+}
+
+.teamName {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--warwiki-text, #111827);
+}
+
+[data-theme='dark'] .teamName {
+  color: var(--ifm-color-content, #e2e8f0);
+}
+
+.teamRole {
+  font-size: 0.875rem;
+  color: var(--warwiki-text-subtle, #8494A8);
+  font-weight: 400;
+}
+
+[data-theme='dark'] .teamRole {
+  color: var(--ifm-color-content-secondary, #718096);
+}
