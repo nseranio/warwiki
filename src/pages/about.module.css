@@ -142,8 +142,8 @@
 }
 
 .teamPhoto {
-  width: 144px;
-  height: 144px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -153,6 +153,11 @@
 
 [data-theme='dark'] .teamPhoto {
   border-color: #3a4a5a;
+}
+
+/* Pull Nick's crop down so the face fills the circle */
+.teamPhotoNick {
+  object-position: center 22%;
 }
 
 .teamInfo {
