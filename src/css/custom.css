@@ -970,6 +970,42 @@ article {
   margin-top: 0.55rem;
 }
 
+/* Lightweight inline text links — used as a quieter alternative to toc-chips */
+.toc-links {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--warwiki-text-subtle, #8494A8);
+}
+
+.toc-links a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.toc-links a:not(:last-child)::after {
+  content: '·';
+  color: var(--warwiki-text-subtle, #8494A8);
+  margin: 0 0.55em;
+  border-bottom-color: transparent;
+  pointer-events: none;
+}
+
+.toc-links a:hover {
+  color: var(--ifm-color-primary-dark);
+  border-bottom-color: currentColor;
+}
+
+[data-theme='dark'] .toc-links a {
+  color: #3691E2;
+}
+[data-theme='dark'] .toc-links a:hover {
+  color: #5BA7EA;
+}
+
 .toc-chips a {
   display: inline-block;
   font-size: 0.71rem;
