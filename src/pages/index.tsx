@@ -7,6 +7,17 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+function openSearch() {
+  const btn = document.querySelector<HTMLButtonElement>('.navbar .DocSearch-Button');
+  if (btn) {
+    btn.click();
+  } else {
+    document.dispatchEvent(
+      new KeyboardEvent('keydown', {key: 'k', metaKey: true, ctrlKey: true, bubbles: true}),
+    );
+  }
+}
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -23,6 +34,31 @@ function HomepageHeader() {
             ENTER
           </Link>
         </div>
+        <button
+          type="button"
+          className={styles.heroSearch}
+          onClick={openSearch}
+          aria-label="Open search">
+          <svg
+            className={styles.heroSearchIcon}
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <span className={styles.heroSearchPlaceholder}>Where should we start?</span>
+          <span className={styles.heroSearchKeys}>
+            <kbd>⌘</kbd>
+            <kbd>K</kbd>
+          </span>
+        </button>
       </div>
     </header>
   );

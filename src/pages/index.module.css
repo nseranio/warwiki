@@ -27,3 +27,83 @@
   align-items: center;
   justify-content: center;
 }
+
+.heroSearch {
+  margin: 2rem auto 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 560px;
+  padding: 0 1.25rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: var(--warwiki-text-muted, #4B5767);
+  cursor: text;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  font: inherit;
+}
+
+.heroSearch:hover,
+.heroSearch:focus-visible {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.heroSearchIcon {
+  flex-shrink: 0;
+  color: var(--ifm-color-primary, #185FA5);
+}
+
+.heroSearchPlaceholder {
+  flex: 1;
+  text-align: left;
+  font-size: 1.05rem;
+  color: var(--warwiki-text-muted, #4B5767);
+}
+
+.heroSearchKeys {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.heroSearchKeys kbd {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #EEF2F8;
+  border: 1px solid #DDE3ED;
+  color: var(--warwiki-text, #111827);
+  font-family: inherit;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .heroSearch {
+  background: rgba(20, 28, 40, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #C2CBD9;
+}
+
+[data-theme='dark'] .heroSearchPlaceholder {
+  color: #C2CBD9;
+}
+
+[data-theme='dark'] .heroSearchKeys kbd {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #E6EAF2;
+}
+
+@media screen and (max-width: 480px) {
+  .heroSearch {
+    height: 52px;
+    padding: 0 1rem;
+  }
+  .heroSearchPlaceholder {
+    font-size: 0.95rem;
+  }
+}
