@@ -125,6 +125,10 @@ const config: Config = {
           ],
         },
         {
+          type: 'search',
+          position: 'right',
+        },
+        {
           to: '/about',
           label: 'About',
           position: 'right',
