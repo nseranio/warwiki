@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "preview",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3001", "."],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start", "--", "--port", "3001", "--no-open"],
       "port": 3001
     }
   ]

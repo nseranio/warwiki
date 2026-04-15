@@ -21,6 +21,16 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'ignore',
 
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '001C5E5159BD0E6A',
+      },
+    },
+  ],
+
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
@@ -135,6 +145,13 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      appId: 'GYFUZH5C10',
+      apiKey: 'cff8e1468c9ff78226494ff86aef7e09',
+      indexName: 'WARWIKI',
+      contextualSearch: true,
+      searchPagePath: 'search',
     },
   } satisfies Preset.ThemeConfig,
 };
