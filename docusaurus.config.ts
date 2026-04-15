@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'WARWIKI',
-  tagline: 'The functional reconstructive urology wiki.',
+  tagline: 'Reconstruction, codified.',
   favicon: 'img/favicon.svg',
 
   future: {
@@ -144,7 +144,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [],
-      copyright: `© ${new Date().getFullYear()} WARWIKI · The functional reconstructive urology wiki.`,
+      copyright: `© ${new Date().getFullYear()} WARWIKI`,
     },
     prism: {
       theme: prismThemes.github,

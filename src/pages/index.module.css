@@ -32,6 +32,18 @@
   margin-bottom: 0.5rem;
 }
 
+.heroBanner :global(.hero__subtitle) {
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+@media screen and (max-width: 480px) {
+  .heroBanner :global(.hero__subtitle) {
+    font-size: 1.25rem;
+  }
+}
+
 .heroTitleLink {
   color: inherit;
   text-decoration: none;
