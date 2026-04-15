@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { DYNASTIES, SURGEONS_BY_ID, buildTree, type TreeNode, type Surgeon } from '../data/surgeons';
+import React, { useState, useMemo, useEffect } from 'react';
+import { DYNASTIES, SURGEONS_BY_ID, buildTree, dynastiesBySubspecialty, type TreeNode, type Surgeon, type Subspecialty } from '../data/surgeons';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
 
@@ -56,9 +56,31 @@ function TreeNodeComp({
 }
 
 // ── Main component ────────────────────────────────────────
-export default function SurgeonTree() {
-  const [activeDynasty, setActiveDynasty] = useState(DYNASTIES[0].id);
-  const dynasty = DYNASTIES.find(d => d.id === activeDynasty)!;
+export default function SurgeonTree({ subspecialty }: { subspecialty?: Subspecialty } = {}) {
+  const dynasties = useMemo(
+    () => (subspecialty ? dynastiesBySubspecialty(subspecialty) : DYNASTIES),
+    [subspecialty],
+  );
+  const [activeDynasty, setActiveDynasty] = useState(dynasties[0]?.id ?? '');
+
+  // Reset selection when the available dynasties change (e.g., subspecialty toggle)
+  useEffect(() => {
+    if (dynasties.length && !dynasties.some(d => d.id === activeDynasty)) {
+      setActiveDynasty(dynasties[0].id);
+    }
+  }, [dynasties, activeDynasty]);
+
+  if (dynasties.length === 0) {
+    return (
+      <div className="vt-wrapper">
+        <div className="vt-empty">
+          No surgical lineages have been added for this subspecialty yet. Check back soon.
+        </div>
+      </div>
+    );
+  }
+
+  const dynasty = dynasties.find(d => d.id === activeDynasty) ?? dynasties[0];
   const tree = buildTree(dynasty.rootId);
 
   return (
@@ -67,11 +89,11 @@ export default function SurgeonTree() {
       <div className="sl-dynasty-bar">
         <span className="sl-dynasty-label">School:</span>
         <div className="sl-dynasty-tabs">
-          {DYNASTIES.map(d => (
+          {dynasties.map(d => (
             <button
               key={d.id}
-              className={`sl-dynasty-tab${activeDynasty === d.id ? ' sl-dynasty-tab--active' : ''}`}
-              style={activeDynasty === d.id ? { background: d.color, borderColor: d.color } : undefined}
+              className={`sl-dynasty-tab${dynasty.id === d.id ? ' sl-dynasty-tab--active' : ''}`}
+              style={dynasty.id === d.id ? { background: d.color, borderColor: d.color } : undefined}
               onClick={() => setActiveDynasty(d.id)}
             >
               {d.label}

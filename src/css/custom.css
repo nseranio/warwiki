@@ -1915,6 +1915,109 @@ article {
 
 
 /* ═══════════════════════════════════════════════════════════
+   SURGEONS EXPLORER — Subspecialty tabs
+═══════════════════════════════════════════════════════════ */
+
+.se-wrapper { display: flex; flex-direction: column; gap: 2rem; }
+
+.se-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.se-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 10px;
+  background: var(--warwiki-white, #FFFFFF);
+  color: var(--warwiki-text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.se-tab:hover { border-color: var(--ifm-color-primary); color: var(--warwiki-text); }
+
+.se-tab--active {
+  border-width: 2px;
+  padding: calc(0.85rem - 1px) calc(1.1rem - 1px);
+  background: var(--warwiki-bg-subtle);
+  color: var(--warwiki-text);
+}
+
+.se-tab-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.se-tab-desc {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--warwiki-text-muted);
+}
+
+.se-tab-count {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--warwiki-bg-subtle);
+  border: 1px solid var(--warwiki-border);
+  color: var(--warwiki-text-muted);
+}
+
+.se-tab--active .se-tab-count {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #FFFFFF;
+}
+
+.se-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.75rem;
+  color: var(--warwiki-text);
+}
+
+[data-theme='dark'] .se-tab {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: #2a3a4a;
+}
+[data-theme='dark'] .se-tab--active {
+  background: rgba(24, 95, 165, 0.12);
+}
+
+@media (max-width: 560px) {
+  .se-tabs { grid-template-columns: 1fr; }
+}
+
+/* Empty-state copy inside the Tree/Directory when a subspecialty has no data yet */
+.vt-empty {
+  padding: 1.5rem;
+  border: 1px dashed var(--warwiki-border);
+  border-radius: 8px;
+  color: var(--warwiki-text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Hide the auto-generated Surgeons category in the sidebar — all profiles
+   are reachable through the Directory on the Surgeons & Lineage page. */
+.sidebar-hidden-category { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════
    SURGICAL LINEAGE — Compact dynasty bar (shared)
 ═══════════════════════════════════════════════════════════ */
 

@@ -3,11 +3,15 @@
 //  Source: Notion export + manual curation
 // ─────────────────────────────────────────────────────────
 
+export type Subspecialty = 'GURS' | 'URPS';
+
 export interface Surgeon {
   id: string;
   /** Subfolder-relative path used for linking, e.g. "h-r/jack-mcaninch" */
   path: string;
   name: string;
+  /** Reconstructive subspecialty. Defaults to 'GURS' when absent. */
+  subspecialty?: Subspecialty;
   photo?: string;
   country?: string;
   countryFlag?: string;
@@ -541,13 +545,35 @@ export interface Dynasty {
   label: string;
   rootId: string;
   color: string;
+  subspecialty?: Subspecialty;
 }
 
 export const DYNASTIES: Dynasty[] = [
-  { id: 'mcaninch',       label: 'McAninch School',       rootId: 'jack-mcaninch',             color: '#185FA5' },
-  { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',    color: '#0D9373' },
-  { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',            color: '#7c3aed' },
-  { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',          color: '#b45309' },
+  { id: 'mcaninch',       label: 'McAninch School',        rootId: 'jack-mcaninch',           color: '#185FA5', subspecialty: 'GURS' },
+  { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',  color: '#0D9373', subspecialty: 'GURS' },
+  { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
+  { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
+  // URPS dynasties — seed with known founding figures as user populates src/data/surgeons.ts
+];
+
+/** Subspecialty of a surgeon, defaulting to 'GURS' for legacy records that don't set it. */
+export function getSubspecialty(s: Surgeon): Subspecialty {
+  return s.subspecialty ?? 'GURS';
+}
+
+/** Filter surgeons by subspecialty (treating missing field as GURS). */
+export function surgeonsBySubspecialty(sub: Subspecialty): Surgeon[] {
+  return SURGEONS.filter(s => getSubspecialty(s) === sub);
+}
+
+/** Filter dynasties by subspecialty (treating missing field as GURS). */
+export function dynastiesBySubspecialty(sub: Subspecialty): Dynasty[] {
+  return DYNASTIES.filter(d => (d.subspecialty ?? 'GURS') === sub);
+}
+
+export const SUBSPECIALTIES: { id: Subspecialty; label: string; fullName: string; color: string }[] = [
+  { id: 'GURS', label: 'GURS', fullName: 'Genitourinary Reconstructive Surgery',          color: '#185FA5' },
+  { id: 'URPS', label: 'URPS', fullName: 'Urogynecology & Reconstructive Pelvic Surgery', color: '#0D9373' },
 ];
 
 /** Build a recursive tree node from a surgeon ID */

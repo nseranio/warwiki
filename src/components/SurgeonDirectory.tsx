@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { SURGEONS, SURGEONS_BY_ID, getInitials, type Surgeon } from '../data/surgeons';
+import { SURGEONS, SURGEONS_BY_ID, getInitials, getSubspecialty, surgeonsBySubspecialty, type Surgeon, type Subspecialty } from '../data/surgeons';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
 
@@ -16,12 +16,17 @@ function Avatar({ surgeon }: { surgeon: Surgeon }) {
   );
 }
 
-export default function SurgeonDirectory() {
+export default function SurgeonDirectory({ subspecialty }: { subspecialty?: Subspecialty } = {}) {
   const [search, setSearch] = useState('');
+
+  const pool = useMemo(
+    () => (subspecialty ? surgeonsBySubspecialty(subspecialty) : SURGEONS),
+    [subspecialty],
+  );
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return SURGEONS.filter(s => {
+    return pool.filter(s => {
       if (!q) return true;
       const mentor = s.mentorId ? SURGEONS_BY_ID.get(s.mentorId) : undefined;
       return (
@@ -30,7 +35,7 @@ export default function SurgeonDirectory() {
         (mentor?.name.toLowerCase().includes(q) ?? false)
       );
     }).sort((a, b) => a.name.localeCompare(b.name));
-  }, [search]);
+  }, [search, pool]);
 
   return (
     <div className="sd-wrapper">
@@ -43,10 +48,14 @@ export default function SurgeonDirectory() {
           className="sd-search"
           aria-label="Search surgeons"
         />
-        <div className="sd-count">{filtered.length} of {SURGEONS.length} surgeons</div>
+        <div className="sd-count">{filtered.length} of {pool.length} surgeons</div>
       </div>
 
-      {filtered.length === 0 ? (
+      {pool.length === 0 ? (
+        <div className="sd-empty">
+          No surgeons have been added for this subspecialty yet. Check back soon.
+        </div>
+      ) : filtered.length === 0 ? (
         <div className="sd-empty">No surgeons match your search.</div>
       ) : (
         <ul className="sd-list">
