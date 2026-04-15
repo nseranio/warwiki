@@ -572,6 +572,17 @@ export const SURGEONS: Surgeon[] = [
     country: 'United States',
     countryFlag: '🇺🇸',
     title: 'MD',
+    mentorId: 'craig-comiter',
+  },
+  {
+    id: 'seth-cohen',
+    subspecialty: 'URPS',
+    path: 'a-g/seth-cohen',
+    name: 'Seth D. Cohen',
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    title: 'MD',
+    mentorId: 'shlomo-raz',
   },
   {
     id: 'craig-comiter',
@@ -582,6 +593,7 @@ export const SURGEONS: Surgeon[] = [
     countryFlag: '🇺🇸',
     institution: 'Stanford University',
     title: 'MD',
+    traineeIds: ['claire-burton'],
   },
   {
     id: 'roger-dmochowski',
@@ -602,6 +614,18 @@ export const SURGEONS: Surgeon[] = [
     countryFlag: '🇺🇸',
     institution: 'Stanford University',
     title: 'MD MPH',
+    mentorId: 'victor-nitti',
+  },
+  {
+    id: 'david-ginsberg',
+    subspecialty: 'URPS',
+    path: 'a-g/david-ginsberg',
+    name: 'David A. Ginsberg',
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    institution: 'USC Keck School of Medicine',
+    title: 'MD',
+    traineeIds: ['temitope-rude'],
   },
   {
     id: 'howard-goldman',
@@ -652,6 +676,7 @@ export const SURGEONS: Surgeon[] = [
     countryFlag: '🇺🇸',
     institution: 'UCLA',
     title: 'MD',
+    traineeIds: ['ekene-enemchukwu'],
   },
   {
     id: 'holly-richter',
@@ -681,6 +706,18 @@ export const SURGEONS: Surgeon[] = [
     country: 'United States',
     countryFlag: '🇺🇸',
     title: 'MD',
+    mentorId: 'david-ginsberg',
+  },
+  {
+    id: 'shlomo-raz',
+    subspecialty: 'URPS',
+    path: 's-z/shlomo-raz',
+    name: 'Shlomo Raz',
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    institution: 'UCLA',
+    title: 'MD',
+    traineeIds: ['seth-cohen'],
   },
   {
     id: 'sandip-vasavada',
@@ -726,7 +763,11 @@ export const DYNASTIES: Dynasty[] = [
   { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',  color: '#0D9373', subspecialty: 'GURS' },
   { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
   { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
-  // URPS dynasties — seed with known founding figures as user populates src/data/surgeons.ts
+  // URPS dynasties — grow these as mentor/trainee links are confirmed
+  { id: 'raz',            label: 'Raz School',             rootId: 'shlomo-raz',              color: '#9333EA', subspecialty: 'URPS' },
+  { id: 'nitti',           label: 'Nitti School',            rootId: 'victor-nitti',             color: '#0EA5E9', subspecialty: 'URPS' },
+  { id: 'comiter',         label: 'Comiter School',          rootId: 'craig-comiter',            color: '#DC2626', subspecialty: 'URPS' },
+  { id: 'ginsberg',        label: 'Ginsberg School',         rootId: 'david-ginsberg',           color: '#059669', subspecialty: 'URPS' },
 ];
 
 /** Subspecialty of a surgeon, defaulting to 'GURS' for legacy records that don't set it. */
