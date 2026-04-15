@@ -2017,6 +2017,123 @@ article {
    are reachable through the Directory on the Surgeons & Lineage page. */
 .sidebar-hidden-category { display: none !important; }
 
+/* ═══════════════════════════════════════════════════════════
+   VIDEO CARDS — playlist-style grid of lazy-loaded YouTube videos
+═══════════════════════════════════════════════════════════ */
+
+.vc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.vc-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 10px;
+  background: var(--warwiki-white, #FFFFFF);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.vc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(24, 95, 165, 0.14);
+  border-color: var(--ifm-color-primary);
+}
+
+.vc-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.vc-thumb-btn {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.vc-thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.vc-thumb-btn:hover .vc-thumb-img,
+.vc-thumb-btn:focus-visible .vc-thumb-img {
+  transform: scale(1.04);
+  filter: brightness(0.85);
+}
+
+.vc-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.vc-thumb-btn:hover .vc-play-icon,
+.vc-thumb-btn:focus-visible .vc-play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.vc-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.vc-body {
+  padding: 0.75rem 0.9rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vc-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--warwiki-text);
+  line-height: 1.35;
+}
+
+.vc-subtitle {
+  font-size: 0.78rem;
+  color: var(--warwiki-text-muted);
+  line-height: 1.4;
+}
+
+[data-theme='dark'] .vc-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: #2a3a4a;
+}
+[data-theme='dark'] .vc-card:hover {
+  border-color: var(--ifm-color-primary-light);
+}
+[data-theme='dark'] .vc-title { color: #E6EAF2; }
+
 /* Responsive 16:9 YouTube / video iframe wrapper used in article bodies */
 .video-embed {
   position: relative;

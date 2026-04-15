@@ -3,6 +3,8 @@ title: The Kidneys
 sidebar_position: 1
 ---
 
+import VideoCards from '@site/src/components/VideoCards';
+
 # The Kidneys
 
 The kidneys are paired retroperitoneal organs that together receive roughly 20% of cardiac output and produce ~180 L of glomerular ultrafiltrate per day, of which ~1.5 L is excreted as urine.<sup>[[5]](#ref5)[[10]](#ref10)</sup> For the reconstructive urologist, the kidney matters as a **surgical territory** (the fascial compartments, vascular pedicle, and collecting system that dictate access and reconstruction), a **functional reserve** (the ability to lose parenchyma to obstruction, infarction, or resection without decompensation), and a **pressure-sensitive end-organ** whose performance depends on unobstructed outflow and perfusion pressure. This article focuses on the gross, vascular, and collecting-system anatomy most relevant to operative planning, and on the physiology needed to interpret obstruction, ischemia, and loss of nephron mass — not a full nephrology text.
@@ -116,32 +118,11 @@ Three hormonal roles matter operatively:
 
 ## Videos
 
-<div className="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/JVOycQzgHN0"
-    title="Kidney anatomy — video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  />
-</div>
-
-<div className="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/-0XwzgGX0LE"
-    title="Nephron anatomy and function — video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  />
-</div>
-
-<div className="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/fkkc_HVAVlo"
-    title="Renal physiology — video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  />
-</div>
+<VideoCards videos={[
+  { id: 'JVOycQzgHN0', title: 'Kidney anatomy', subtitle: 'Gross and vascular overview' },
+  { id: '-0XwzgGX0LE', title: 'The nephron', subtitle: 'Segmental structure and function' },
+  { id: 'fkkc_HVAVlo', title: 'Renal physiology', subtitle: 'Filtration, concentration, and regulation' },
+]} />
 
 ---
 
