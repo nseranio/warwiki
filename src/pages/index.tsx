@@ -22,6 +22,13 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className={styles.blobs} aria-hidden="true">
+        <span className={clsx(styles.blob, styles.blobA)} />
+        <span className={clsx(styles.blob, styles.blobB)} />
+        <span className={clsx(styles.blob, styles.blobC)} />
+        <span className={clsx(styles.blob, styles.blobD)} />
+      </div>
+      <div className={styles.noise} aria-hidden="true" />
       <div className={clsx('container', styles.heroInner)}>
         <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
           <Link to="/docs/foundations" className={styles.heroTitleLink}>
