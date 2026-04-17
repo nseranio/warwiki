@@ -5,32 +5,346 @@ sidebar_position: 1
 
 # Risk Calculators
 
-Validated surgical risk calculators integrate patient demographics, comorbidities, functional status, and procedure type to estimate the probability of postoperative complications, mortality, and resource utilization. These tools support preoperative informed consent, guide optimization timing, stratify patients for monitoring intensity, and inform shared decision-making about operative vs non-operative management.
+Validated risk calculators convert the mess of a preoperative evaluation into a number — a patient-specific probability of MACE, VTE, pulmonary failure, or overall morbidity. For the reconstructive urologist the point of these tools is not to choose between operating and not operating (clinical judgment does that), but to **inform consent, guide optimization timing, stratify postoperative monitoring, and document the risk-benefit conversation**. This article catalogs the general calculators every surgeon should know — RCRI, NSQIP, Caprini, ARISCAT, Apfel, Surgical Apgar, Clinical Frailty Scale — and the reconstructive-urology-specific tools for urethroplasty (U-Score, LSE), for general urologic NSQIP morbidity, and the limitations of cystectomy-specific calculators.
 
-## ACS NSQIP Surgical Risk Calculator
+See also: [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk), [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty), [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy) (Caprini applied), [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting) (Apfel applied).
 
-*Coming soon.*
+---
 
-## Revised Cardiac Risk Index (RCRI)
+## General Risk Calculators
 
-*Coming soon.*
+### Revised Cardiac Risk Index (RCRI)
 
-## Apfel Score (PONV)
+The workhorse bedside cardiac-risk tool. Six variables, one point each:<sup>[[3]](#ref3)[[4]](#ref4)</sup>
 
-*Coming soon.*
+1. High-risk surgery (intraperitoneal, intrathoracic, suprainguinal vascular)
+2. Ischemic heart disease
+3. Congestive heart failure
+4. Cerebrovascular disease
+5. Insulin-dependent diabetes
+6. Preoperative creatinine &gt;2.0 mg/dL
 
-## Caprini Score (VTE)
+**30-day MACE (MI / cardiac arrest / death):**<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)</sup>
 
-*Coming soon.*
+| RCRI score | MACE risk |
+|---|---|
+| 0 | ~0.4–0.5% |
+| 1 | ~1% |
+| 2 | ~2.4% |
+| ≥3 | ~5.4–10% |
 
-## Clinical Frailty Scale / FRAIL Index
+**Limitations:** modest discrimination (AUC 0.75); poorer performance in vascular surgery (AUC 0.64). Still the most widely cited quick-bedside cardiac-risk score.
 
-*Coming soon.*
+### Gupta NSQIP MICA Calculator
 
-## GU-Specific Tools
+Predicts **myocardial infarction or cardiac arrest (MICA)** within 30 days using 5 variables:<sup>[[4]](#ref4)</sup>
 
-*Coming soon.*
+- Age
+- ASA class
+- Functional status
+- Serum creatinine
+- **Procedure type** (21 surgical categories, including urology)
+
+**Advantage over RCRI:** superior discrimination and procedure-specific risk adjustment — important in urology where cystectomy and open nephrectomy carry distinctly different MACE profiles.
+
+### ACS NSQIP Universal Surgical Risk Calculator
+
+The most comprehensive general tool — 21 preoperative variables + CPT-specific risk — predicts 8–10 outcomes:<sup>[[5]](#ref5)[[6]](#ref6)</sup>
+
+- Mortality
+- Any complication
+- Serious complication
+- Pneumonia
+- Cardiac complication
+- SSI
+- UTI
+- VTE
+- Renal failure
+- Discharge to nursing facility
+
+**Performance:** c-statistic 0.944 for mortality, 0.816 for morbidity.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
+
+**Urologic validation:** confirmed useful in urology multidisciplinary meetings for surgical candidacy decisions and preoperative counseling.<sup>[[7]](#ref7)</sup>
+
+In practice this is the calculator to print out and include with the consent discussion before any major reconstructive case — radical cystectomy, open nephrectomy, major urethroplasty, complex ureteral reconstruction.
+
+---
+
+### Caprini Score — VTE Risk
+
+The most widely used VTE risk assessment tool in surgery. Approximately 40 weighted items (age, BMI, cancer, prior VTE, thrombophilia, recent trauma, immobility, estrogen use, etc.).
+
+| Caprini score | Risk | Prophylaxis recommendation |
+|---|---|---|
+| 0–1 | Very low (~0.5%) | Early ambulation only |
+| 2 | Low (~1.5%) | Mechanical prophylaxis |
+| 3–4 | Moderate (~3%) | Mechanical + chemical |
+| ≥5 | High (~6%) | Mechanical + chemical; consider extended |
+| ≥9 | Very high | Extended chemoprophylaxis; closer surveillance |
+
+Applied Caprini + management decisions are covered in [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy).
+
+---
+
+### ARISCAT — Pulmonary Complication Risk
+
+Predicts postoperative pulmonary complications (respiratory failure, pneumonia, atelectasis, pleural effusion, pneumothorax, bronchospasm, aspiration).
+
+Seven variables:
+
+- Age
+- Preoperative SpO₂
+- Respiratory infection in the last month
+- Preoperative anemia
+- Surgical incision (peripheral / upper abdominal / intrathoracic)
+- Duration of surgery
+- Emergency procedure
+
+**Risk bands:**
+
+- **Low:** &lt;26 points (~1.6% pulmonary complications)
+- **Intermediate:** 26–44 points (~13%)
+- **High:** ≥45 points (~42%)
+
+Useful preoperatively for patients with COPD, asthma, or recent respiratory infection undergoing major abdominal urologic surgery (cystectomy, open nephrectomy).
+
+---
+
+### Apfel Score — PONV Risk
+
+Four risk factors (1 point each):
+
+- **Female sex**
+- **Non-smoker**
+- **History of PONV or motion sickness**
+- **Postoperative opioid use anticipated**
+
+| Apfel score | 24-h PONV risk | Prophylaxis |
+|---|---|---|
+| 0 | 10% | None |
+| 1 | 20% | Consider monotherapy |
+| 2 | 40% | Dual prophylaxis |
+| 3 | 60% | Triple prophylaxis |
+| 4 | 80% | Triple + TIVA + regional anesthesia |
+
+Applied dosing and drug combinations are in [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting).
+
+---
+
+### Surgical Apgar Score (SAS)
+
+A **postoperative** (not preoperative) score, calculated at the end of surgery from 3 intraoperative variables:<sup>[[8]](#ref8)[[10]](#ref10)</sup>
+
+| Variable | 0 pts | 1 pt | 2 pts | 3 pts | 4 pts |
+|---|---|---|---|---|---|
+| **EBL (mL)** | &gt;1000 | 601–1000 | 101–600 | ≤100 | — |
+| **Lowest MAP (mmHg)** | &lt;40 | 40–54 | 55–69 | ≥70 | — |
+| **Lowest HR (bpm)** | &gt;85 | 76–85 | 66–75 | 56–65 | ≤55 |
+
+**Score range:** 0–10 (higher is better).
+
+**Clinical utility:**<sup>[[8]](#ref8)[[9]](#ref9)[[11]](#ref11)</sup>
+
+- **SAS ≤4:** 49% major complication rate; higher mortality, septic shock, respiratory failure
+- **SAS 7–10:** low-risk (~5% major complications)
+- Independent predictor of ICU admission
+- Improves cardiac risk re-estimation when combined with RCRI (2023 Daza *Ann Surg*)
+
+Useful in the PACU to decide whether a patient needs step-down or ICU after a difficult cystectomy or nephrectomy.
+
+---
+
+### Clinical Frailty Scale (CFS) and Frailty Tools
+
+Frailty affects **25–40% of older surgical patients** and is associated with **2–5-fold increased complications, mortality, and new disability**.<sup>[[15]](#ref15)</sup>
+
+**Clinical Frailty Scale (CFS)** — the most feasible and accurate:<sup>[[12]](#ref12)[[13]](#ref13)</sup>
+
+- 9-point scale based on clinical judgment
+- Strongest association with mortality (OR 4.89) and non-home discharge (OR 6.31)
+- Minimal time, no performance testing required
+- **Recommended by the 2025 ASA Practice Advisory** for older inpatient surgery.<sup>[[15]](#ref15)</sup>
+
+Other validated frailty tools:
+
+| Tool | Components |
+|---|---|
+| **Fried Phenotype** | Weight loss, exhaustion, low activity, slow gait, weak grip |
+| **Edmonton Frail Scale** | 11 domains (cognition, mood, function, etc.) |
+| **FRAIL Questionnaire** | 5 self-reported items |
+| **Risk Analysis Index (RAI)** | Electronic-health-record–based |
+
+Applied frailty assessment and prehabilitation strategies are in [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty).
+
+---
+
+## Summary — General Risk Calculators
+
+| Calculator | Primary outcome | Variables | Best use |
+|---|---|---|---|
+| **RCRI** | 30-d MACE | 6 | Quick bedside cardiac screening |
+| **Gupta MICA** | MI / cardiac arrest | 5 + procedure | Procedure-specific cardiac risk |
+| **ACS NSQIP Universal** | 8–10 outcomes | 21 + CPT | Comprehensive risk, informed consent |
+| **Caprini** | VTE | ~40 | VTE prophylaxis decisions |
+| **ARISCAT** | Pulmonary complications | 7 | Pulmonary risk stratification |
+| **Apfel** | PONV | 4 | Antiemetic prophylaxis |
+| **Surgical Apgar** | Complications / mortality | 3 (intraop) | PACU / ICU disposition |
+| **Clinical Frailty Scale** | Mortality, disability | Clinical judgment | Older adults, prehabilitation |
+
+---
+
+## Reconstructive Urology–Specific Calculators
+
+### Urethroplasty — U-Score
+
+The **Urethral Stricture Score (U-Score)** — a validated scoring system for anterior urethroplasty combining four components:<sup>[[19]](#ref19)</sup>
+
+| Component | Points |
+|---|---|
+| Length | 1–3 (by stricture length) |
+| Number | 1–2 (single vs multiple) |
+| Location | 1–2 (bulbar vs penile) |
+| Etiology | 1–2 (idiopathic vs traumatic/iatrogenic) |
+| **Total** | **4–9 points** |
+
+**Clinical utility:** higher U-Score predicts higher surgical complexity. Does not reliably predict recurrence in external validation.<sup>[[19]](#ref19)[[20]](#ref20)</sup>
+
+### Urethroplasty — LSE Classification
+
+The **LSE (Length, Site, Etiology)** system, developed as an improvement over the U-Score:<sup>[[20]](#ref20)</sup>
+
+- **L — Length:** in centimeters
+- **S — Site:** fossa navicularis, penile, bulbar, or multiple
+- **E — Etiology:** idiopathic, iatrogenic, inflammatory, traumatic, lichen sclerosus
+
+**Advantages over U-Score:**<sup>[[20]](#ref20)</sup>
+
+- Stronger correlation with surgical complexity
+- **Predicts recurrence** — HR 1.2 per point; **LSE score ≥7 is associated with ~2.7× recurrence risk**
+- Better clinical-decision utility in preoperative planning
+
+For the urethroplasty service, LSE is the current best tool for quantifying preoperative stricture complexity.
+
+### Urethroplasty — NSQIP Complication Prediction Model
+
+A model developed from NSQIP data specific to urethroplasty:<sup>[[22]](#ref22)</sup>
+
+**Variables:** operative time, age, ASA, preoperative WBC, hematocrit, creatinine, platelets.
+
+**Performance:** AUC 0.73 (95% CI 0.58–0.87).
+
+**Overall 30-day complication rate** in urethroplasty: **8.6%**.
+
+**Predictors of complications:**<sup>[[22]](#ref22)</sup>
+
+- Diabetes
+- Preoperative blood transfusion
+- Preoperative sepsis
+- Lower preoperative hematocrit
+- Lower preoperative albumin
+- Longer operative time
+
+### General Urologic NSQIP Morbidity Data
+
+The ACS-NSQIP universal calculator has been applied across urologic procedures, yielding procedure-specific morbidity benchmarks:<sup>[[21]](#ref21)</sup>
+
+| Operation | Any complication | Mortality |
+|---|---|---|
+| **Radical cystectomy** | **56%** | 3.2% |
+| Open nephrectomy | 21% | — |
+| Radical prostatectomy | 19% | — |
+| TURBT | 11% | — |
+| TURP | 10% | — |
+
+**Key complication predictors in urology (NSQIP):**<sup>[[21]](#ref21)</sup>
+
+- Older age
+- ASA class
+- Dependent functional status
+- Acute kidney injury (OR 2.70)
+- Preoperative transfusion ≥5 units (OR 4.44)
+
+### Radical Cystectomy — Risk Calculators (and Their Limits)
+
+Several calculators have been evaluated for cystectomy-specific risk; **none have achieved high accuracy.**<sup>[[23]](#ref23)</sup>
+
+| Calculator | Outcome | AUC | Limitations |
+|---|---|---|---|
+| NSQIP Universal | 30-day morbidity/mortality | 0.5–0.6 (poor) | Not cystectomy-specific |
+| LACE Index | 90-day mortality | 0.7 (good) | Requires hospitalization data |
+| Isbarn / Aziz nomograms | 90-day mortality | 0.7 (good) | Requires tumor histology and metastatic status |
+| Frailty / sarcopenia indices | Morbidity / mortality | 0.5–0.7 (poor–fair) | Definitions vary |
+| Surgical Apgar Score | 30-day morbidity/mortality | Variable | Postoperative only |
+
+**Current gap:** there is no comprehensive, accurate, preoperative, cystectomy-specific risk calculator — an active area of research.<sup>[[23]](#ref23)</sup> In practice: use the Universal NSQIP calculator for general risk, Gupta MICA for cardiac risk, Caprini for VTE, CFS for frailty, and clinical judgment to integrate them.
+
+---
+
+## Summary — Reconstructive Urology Calculators
+
+| Calculator | Application | Key variables | Performance |
+|---|---|---|---|
+| **U-Score** | Anterior urethroplasty complexity | Length, number, location, etiology | Predicts complexity |
+| **LSE classification** | Anterior urethroplasty complexity + recurrence | Length, site, etiology | HR 1.2/point; ≥7 → ~2.7× recurrence |
+| **NSQIP urethroplasty model** | 30-day complications | OR time, age, ASA, labs | AUC 0.73 |
+| **ACS NSQIP Universal** | Any urologic procedure | 21 + CPT | Validated in urology MDM |
+| **Gupta MICA** | Cardiac risk (includes urology) | 5 + procedure | Urology-specific adjustment |
+| **Cystectomy-specific calculators** | Cystectomy morbidity/mortality | Variable | All AUC ≤0.7 — limited accuracy |
+
+---
+
+## Key Takeaways for the Reconstructive Urologist
+
+1. **Every major elective reconstruction** — run the patient through **ACS NSQIP Universal** for comprehensive risk + **Gupta MICA** for cardiac risk + **Caprini** for VTE.
+2. **Older adults** — add the **Clinical Frailty Scale** (recommended by 2025 ASA).
+3. **Urethroplasty** — use the **LSE classification** for preoperative complexity stratification and recurrence counseling. U-Score is simpler but weaker on recurrence.
+4. **Radical cystectomy** — no single accurate calculator exists. Use NSQIP Universal + MICA + Caprini + CFS as a bundle, and lean on clinical judgment for integrated risk.
+5. **PACU disposition** — the **Surgical Apgar Score** is the one to calculate before leaving the OR, especially after a bloody or unstable case.
+6. **Apfel before extubation** — three or more factors means triple antiemetic prophylaxis and consideration of TIVA.
+7. **Documentation** — calculated risks belong in the consent note; "discussed 1.3% estimated risk of major cardiac event" is a more defensible note than "patient accepts surgical risk."
+
+---
 
 ## References
 
-*Coming soon.*
+<a id="ref1"></a>1. Duceppe E, Parlow J, MacDonald P, et al. "Canadian Cardiovascular Society Guidelines on Perioperative Cardiac Risk Assessment and Management for Patients Who Undergo Noncardiac Surgery." *Can J Cardiol.* 2017;33(1):17–32. doi:[10.1016/j.cjca.2016.09.008](https://doi.org/10.1016/j.cjca.2016.09.008)
+
+<a id="ref2"></a>2. Davis C, Tait G, Carroll J, Wijeysundera DN, Beattie WS. "The Revised Cardiac Risk Index in the New Millennium — 9,519 Consecutive Elective Surgical Patients." *Can J Anaesth.* 2013;60(9):855–63. doi:[10.1007/s12630-013-9988-5](https://doi.org/10.1007/s12630-013-9988-5)
+
+<a id="ref3"></a>3. Thompson A, Fleischmann KE, Smilowitz NR, et al. "2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery." *J Am Coll Cardiol.* 2024;84(19):1869–1969. doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)
+
+<a id="ref4"></a>4. Patel AY, Eagle KA, Vaishnava P. "Cardiac Risk of Noncardiac Surgery." *J Am Coll Cardiol.* 2015;66(19):2140–2148. doi:[10.1016/j.jacc.2015.09.026](https://doi.org/10.1016/j.jacc.2015.09.026)
+
+<a id="ref5"></a>5. Bilimoria KY, Liu Y, Paruch JL, et al. "Development and Evaluation of the Universal ACS NSQIP Surgical Risk Calculator: A Decision Aid and Informed Consent Tool for Patients and Surgeons." *J Am Coll Surg.* 2013;217(5):833–42.e1–3. doi:[10.1016/j.jamcollsurg.2013.07.385](https://doi.org/10.1016/j.jamcollsurg.2013.07.385)
+
+<a id="ref6"></a>6. Cohen ME, Liu Y, Hall BL, Ko CY. "ACS NSQIP Risk Calculator Performance Across Multiple Domains of Operative Risk and Risk-Associated Features." *Ann Surg.* 2025. doi:[10.1097/SLA.0000000000006753](https://doi.org/10.1097/SLA.0000000000006753)
+
+<a id="ref7"></a>7. Wu H, Guduguntla A, Gyomber D, Niall O, Satasivam P. "NSQIP Surgical Risk Calculator: A Useful Adjunct for the Urology Multidisciplinary Meeting." *ANZ J Surg.* 2025;95(1-2):117–123. doi:[10.1111/ans.19357](https://doi.org/10.1111/ans.19357)
+
+<a id="ref8"></a>8. Lin YC, Chen YC, Yang CH, Su NY. "Surgical Apgar Score Is Strongly Associated With Postoperative ICU Admission." *Sci Rep.* 2021;11(1):115. doi:[10.1038/s41598-020-80393-z](https://doi.org/10.1038/s41598-020-80393-z)
+
+<a id="ref9"></a>9. Tracy BM, Srinivas S, Baselice H, Gelbard RB, Coleman JR. "Surgical Apgar Scores Predict Complications After Emergency General Surgery Laparotomy." *J Trauma Acute Care Surg.* 2024;96(3):429–433. doi:[10.1097/TA.0000000000004189](https://doi.org/10.1097/TA.0000000000004189)
+
+<a id="ref10"></a>10. Regenbogen SE, Ehrenfeld JM, Lipsitz SR, et al. "Utility of the Surgical Apgar Score — Validation in 4,119 Patients." *Arch Surg.* 2009;144(1):30–6. doi:[10.1001/archsurg.2008.504](https://doi.org/10.1001/archsurg.2008.504)
+
+<a id="ref11"></a>11. Daza JF, Bartoszko J, Van Klei W, et al. "Improved Re-Estimation of Perioperative Cardiac Risk Using the Surgical Apgar Score — A Retrospective Cohort Study." *Ann Surg.* 2023;278(1):65–71. doi:[10.1097/SLA.0000000000005509](https://doi.org/10.1097/SLA.0000000000005509)
+
+<a id="ref12"></a>12. McIsaac DI, MacDonald DB, Aucoin SD. "Frailty for Perioperative Clinicians: A Narrative Review." *Anesth Analg.* 2020;130(6):1450–1460. doi:[10.1213/ANE.0000000000004602](https://doi.org/10.1213/ANE.0000000000004602)
+
+<a id="ref13"></a>13. Aucoin SD, Hao M, Sohi R, et al. "Accuracy and Feasibility of Clinically Applied Frailty Instruments Before Surgery — A Systematic Review and Meta-Analysis." *Anesthesiology.* 2020;133(1):78–95. doi:[10.1097/ALN.0000000000003257](https://doi.org/10.1097/ALN.0000000000003257)
+
+<a id="ref14"></a>14. McIsaac DI, Harris EP, Hladkowicz E, et al. "Prospective Comparison of Preoperative Predictive Performance Between 3 Leading Frailty Instruments." *Anesth Analg.* 2020;131(1):263–272. doi:[10.1213/ANE.0000000000004475](https://doi.org/10.1213/ANE.0000000000004475)
+
+<a id="ref15"></a>15. Sieber F, McIsaac DI, Deiner S, et al. "2025 American Society of Anesthesiologists Practice Advisory for Perioperative Care of Older Adults Scheduled for Inpatient Surgery." *Anesthesiology.* 2025;142(1):22–51. doi:[10.1097/ALN.0000000000005172](https://doi.org/10.1097/ALN.0000000000005172)
+
+<a id="ref16"></a>16. Smilowitz NR, Berger JS. "Perioperative Cardiovascular Risk Assessment and Management for Noncardiac Surgery: A Review." *JAMA.* 2020;324(3):279–290. doi:[10.1001/jama.2020.7840](https://doi.org/10.1001/jama.2020.7840)
+
+<a id="ref19"></a>19. Alwaal A, Sanford TH, Harris CR, et al. "Urethral Stricture Score Is Associated With Anterior Urethroplasty Complexity and Outcome." *J Urol.* 2016;195(6):1817–21. doi:[10.1016/j.juro.2015.12.100](https://doi.org/10.1016/j.juro.2015.12.100)
+
+<a id="ref20"></a>20. Kurtzman JT, Kosber R, Kerr P, Brandes SB. "Evaluating Tools for Characterizing Anterior Urethral Stricture Disease: A Comparison of the LSE System and the Urethral Stricture Score." *J Urol.* 2022;208(5):1083–1089. doi:[10.1097/JU.0000000000002880](https://doi.org/10.1097/JU.0000000000002880)
+
+<a id="ref21"></a>21. Patel HD, Ball MW, Cohen JE, et al. "Morbidity of Urologic Surgical Procedures — An Analysis of Rates, Risk Factors, and Outcomes." *Urology.* 2015;85(3):552–9. doi:[10.1016/j.urology.2014.11.034](https://doi.org/10.1016/j.urology.2014.11.034)
+
+<a id="ref22"></a>22. Armstrong BN, Renson A, Zhao LC, Bjurlin MA. "Development of Novel Prognostic Models for Predicting Complications of Urethroplasty." *World J Urol.* 2019;37(3):553–559. doi:[10.1007/s00345-018-2413-5](https://doi.org/10.1007/s00345-018-2413-5)
+
+<a id="ref23"></a>23. Razdan S, Sljivich M, Pfail J, et al. "Predicting Morbidity and Mortality After Radical Cystectomy Using Risk Calculators — A Comprehensive Review of the Literature." *Urol Oncol.* 2021;39(2):109–120. doi:[10.1016/j.urolonc.2020.09.032](https://doi.org/10.1016/j.urolonc.2020.09.032)
