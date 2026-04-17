@@ -122,6 +122,11 @@ const config: Config = {
               sidebarId: 'resourcesSidebar',
               label: 'Resources',
             },
+            {
+              type: 'docSidebar',
+              sidebarId: 'hiddenCurriculumSidebar',
+              label: 'Hidden Curriculum',
+            },
           ],
         },
         {
