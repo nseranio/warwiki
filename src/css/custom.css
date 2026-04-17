@@ -2763,3 +2763,21 @@ article {
   .cv-section-body { padding-left: 16px; }
   .cv-pane-header { flex-direction: column; align-items: flex-start; }
 }
+
+/* ── Dark mode ──────────────────────────────────────────── */
+/* --warwiki-white stays literal white even in dark mode; components that use
+   it as a background need explicit dark overrides. Without this, the expanded
+   curriculum body rendered with a white background while the text used the
+   dark-mode --warwiki-text (light gray), producing unreadable light-on-white. */
+[data-theme='dark'] .cv-section-body {
+  background: var(--warwiki-bg);
+  border-top-color: var(--warwiki-border);
+}
+[data-theme='dark'] .cv-item-list li {
+  color: var(--warwiki-text);
+}
+[data-theme='dark'] .cv-item-title {
+  /* accent color is applied inline via style prop and already contrasts against
+     the dark background; leaving this rule as a placeholder in case of future
+     color adjustment. */
+}
