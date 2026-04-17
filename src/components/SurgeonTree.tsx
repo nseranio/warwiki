@@ -29,7 +29,7 @@ function TreeNodeComp({
           <div className="vt-elbow" style={{ borderColor: dynastyColor + '80' }} />
         )}
         <a
-          href={`${PAGE_BASE}${s.id}`}
+          href={`${PAGE_BASE}${s.path}`}
           className={`vt-name${depth === 0 ? ' vt-name--root' : ''}`}
           style={depth === 0 ? { color: dynastyColor } : undefined}
         >

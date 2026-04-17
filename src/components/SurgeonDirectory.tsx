@@ -64,11 +64,11 @@ export default function SurgeonDirectory({ subspecialty }: { subspecialty?: Subs
             const traineeCount = s.traineeIds?.length ?? 0;
             return (
               <li key={s.id} className="sd-row">
-                <a href={`${PAGE_BASE}${s.id}`} className="sd-row-avatar-link">
+                <a href={`${PAGE_BASE}${s.path}`} className="sd-row-avatar-link">
                   <Avatar surgeon={s} />
                 </a>
                 <div className="sd-row-body">
-                  <a href={`${PAGE_BASE}${s.id}`} className="sd-row-name">{s.name}</a>
+                  <a href={`${PAGE_BASE}${s.path}`} className="sd-row-name">{s.name}</a>
                   <div className="sd-row-meta">
                     {s.countryFlag && <span className="sd-meta-flag">{s.countryFlag}</span>}
                     {s.country && <span className="sd-meta-country">{s.country}</span>}
@@ -76,7 +76,7 @@ export default function SurgeonDirectory({ subspecialty }: { subspecialty?: Subs
                       <>
                         <span className="sd-meta-sep">·</span>
                         <span className="sd-meta-mentor">
-                          Trained by <a href={`${PAGE_BASE}${mentor.id}`}>{mentor.name}</a>
+                          Trained by <a href={`${PAGE_BASE}${mentor.path}`}>{mentor.name}</a>
                         </span>
                       </>
                     )}
