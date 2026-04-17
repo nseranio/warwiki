@@ -5,24 +5,284 @@ sidebar_position: 3
 
 # Frailty
 
-Frailty is a state of decreased physiologic reserve and increased vulnerability to stressors, distinct from chronological age and comorbidity burden. In surgical patients, frailty predicts postoperative complications, prolonged hospitalization, discharge to skilled nursing facilities, and mortality. Assessment with validated tools (Fried Frailty Phenotype, Clinical Frailty Scale, FRAIL questionnaire) identifies patients who may benefit from prehabilitation programs before elective GU reconstructive surgery.
+Frailty is a state of **diminished physiologic reserve and increased vulnerability to stressors**, distinct from chronologic age and comorbidity burden. It affects **21% of community-dwelling adults over 65 (another 48% prefrail)** and **25–40% of older surgical patients** — a higher prevalence than age-matched community samples.<sup>[[1]](#ref1)[[4]](#ref4)</sup> For the reconstructive urologist the consequences are direct: among older surgical patients, frailty independently predicts **2–5-fold increased complications, mortality, and new disability**, and a **4-fold risk of postoperative delirium**.<sup>[[4]](#ref4)[[14]](#ref14)[[15]](#ref15)[[16]](#ref16)</sup> The 2025 ASA Practice Advisory and 2024 AHA/ACC perioperative guideline now both recommend preoperative frailty screening in all older patients — it is no longer optional.
+
+See also: [Risk Calculators](/docs/foundations/perioperative-care/preoperative-assessment/risk-calculators), [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk), [Nutrition](/docs/foundations/perioperative-care/postoperative-management/nutrition), [ERAS](/docs/foundations/perioperative-care/perioperative-protocols/eras).
+
+---
+
+## Two Definitions of Frailty
+
+Two validated constructs identify partially-overlapping but distinct populations:<sup>[[1]](#ref1)</sup>
+
+### Fried Frailty Phenotype — a Clinical Syndrome
+
+Five features of altered metabolism and abnormal stress response, in typical order of appearance:
+
+1. **Exhaustion** (first manifestation)
+2. **Weakness** (low grip strength)
+3. **Slowness** (slow gait speed)
+4. **Physical inactivity**
+5. **Weight loss** (last manifestation)
+
+| Score | Category |
+|---|---|
+| 0 | Robust |
+| 1–2 | Prefrail |
+| **3–5** | **Frail** |
+
+All five present = critical transition with **sharply rising mortality and diminishing reversibility**.<sup>[[1]](#ref1)[[6]](#ref6)</sup>
+
+### Deficit-Accumulation (Frailty Index)
+
+Counts age-related deficits (diagnoses, cognitive / physical impairment, disability, nutrition, abnormal labs — minimum 30 items) as a **proportion of total deficits assessed**.
+
+- **Frailty Index &gt;0.25** = frail
+- **Frailty Index &gt;0.70** = effectively incompatible with long-term survival (&lt;1% of older adults)
+
+### Gait Speed — the Single Best Quick Screen
+
+**Gait speed &lt;0.8 m/s** has **99% sensitivity** for the Fried frailty phenotype. Measuring gait speed across a 4-meter hallway in clinic takes under a minute and is the single most sensitive screening step if you only have time for one test.<sup>[[1]](#ref1)</sup>
+
+---
+
+## Prevalence and Risk Factors
+
+| Population | Frail | Prefrail |
+|---|---|---|
+| Community, 50–59 y | 11% | — |
+| Community, 90+ y | 51% | — |
+| Community, 65+ y | ~21% | ~48% |
+| Older surgical patients | **25–40%** | — |
+
+**Higher risk:**<sup>[[2]](#ref2)[[3]](#ref3)[[4]](#ref4)</sup>
+
+- Acute-care hospital patients, nursing home residents
+- Low- or middle-income countries
+- Socially vulnerable populations
+- Less education, lower income, poorer self-rated health
+- African American patients
+- **Women more often diagnosed; men diagnosed with frailty have higher mortality**
+
+---
 
 ## Assessment Tools
 
-*Coming soon.*
+| Tool | Type | Time | Use-case strength |
+|---|---|---|---|
+| **Clinical Frailty Scale (CFS)** | 9-point clinical-judgment scale | &lt;3 min | **Most feasible; 2025 ASA-recommended** for older inpatient surgery |
+| **FRAIL Scale** | Self-report (Fatigue, Resistance, Ambulation, Illnesses, Loss of weight) | 3–5 min | **Optimal community-setting screen** (FRAIL ≥2, Youden 0.65) |
+| **Fried Phenotype** | 5-criterion clinical syndrome | 10 min | Research gold standard; requires grip strength + gait speed |
+| **Frailty Index (Rockwood)** | Deficit accumulation, ≥30 items | Variable | Electronic / research; broadest capture |
+| **Edmonton Frail Scale** | 8 domains + timed get-up-and-go + clock test | 10–15 min | Multidomain; captures cognition/mood |
+| **Short Physical Performance Battery (SPPB)** | Balance + gait + 5× sit-to-stand | 5–10 min | Objective physical; research-friendly |
+| **Electronic Frailty Index (eFI)** | EHR-derived automated | None | Automated; useful at scale |
+| **Risk Analysis Index (RAI)** | EHR-derived | None | Validated in surgical cohorts<sup>[[17]](#ref17)</sup> |
+| **Hospital Frailty Risk Score** | Administrative data | None | Validated at the hospital-system level |
 
-## Prehabilitation
+**Practical tip:** for a urology clinic seeing older patients, **the CFS is the best all-purpose tool** — it requires minimal time, no equipment, and is endorsed by the 2025 ASA practice advisory. For research or MDM settings, add an objective physical measure (gait speed or SPPB).
 
-*Coming soon.*
+---
 
-## Anesthetic and Surgical Implications
+## Perioperative Implications
 
-*Coming soon.*
+### Frailty is the Strongest Single Nonmodifiable Predictor of Poor Surgical Outcomes
 
-## Shared Decision-Making in Frail Patients
+Compared with non-frail elders, frail surgical patients have:<sup>[[4]](#ref4)[[14]](#ref14)[[15]](#ref15)[[16]](#ref16)[[18]](#ref18)</sup>
 
-*Coming soon.*
+- **2–5× complications**
+- **2–5× mortality**
+- **2–5× nonhome discharge**
+- **2–5× new disability**
+- **&gt;4× postoperative delirium** (frailty is one of the single strongest predictors)
+- **&gt;5× loss of independence**
+
+Meta-analysis of 56 studies (1.1 million older noncardiac-surgery patients):<sup>[[16]](#ref16)</sup>
+
+- **30-day mortality RR 3.71** (95% CI 2.89–4.77)
+- **30-day complication RR 2.39** (95% CI 2.02–2.83)
+
+The George 2021 *JAMA Surg* study stratified 30-day mortality across 9 noncardiac surgical specialties by **frailty (RAI) × operative stress (OSS)** — mortality rose from under 1% in nonfrail / low-OSS combinations to &gt;25% in frail / high-OSS combinations, with urology falling squarely in the included specialties.<sup>[[18]](#ref18)</sup>
+
+### What Guidelines Now Say
+
+**2024 AHA/ACC Perioperative Guideline:** screen for frailty in all patients **≥65 years** and in younger patients with features of frailty (Class IIa).<sup>[[16]](#ref16)</sup>
+
+**2025 ASA Practice Advisory for Older Adults Undergoing Inpatient Surgery:** preoperatively identify frailty to enable optimization of deficits in physical, cognitive, nutritional, and mental-health domains.<sup>[[4]](#ref4)</sup>
+
+### Perioperative Pathway for the Frail Patient<sup>[[15]](#ref15)</sup>
+
+1. **Assess** with a multidimensional instrument (CFS is the practical default).
+2. **Document** and **communicate** individualized risk in the consent note.
+3. **Shared decision-making** — discuss functional status, goals, and trade-offs; palliative alternatives when appropriate.
+4. **Multidisciplinary care** — geriatrics, anesthesia, social work, physical therapy, nutrition.
+5. **Prehabilitation** when elective surgery allows timeline (see below).
+6. **Analgesia avoiding polypharmacy** — emphasize regional and acetaminophen; caution with gabapentinoids and opioids.
+7. **Delirium prevention bundle** — orientation, early mobilization, avoid benzodiazepines, minimize opioids, correct electrolytes.
+8. **Postoperative monitoring in an appropriate setting** — step-down or prolonged PACU observation, not floor, for high-frailty patients after major reconstruction.
+9. **Discharge planning from admission** — home support, follow-up, rehabilitation.
+10. **Medication review** — deprescribe potentially-harmful agents before and after surgery.
+
+---
+
+## Evidence-Based Interventions
+
+### Community-Dwelling Older Adults<sup>[[1]](#ref1)</sup>
+
+- **Exercise** (aerobic + resistance, 30–60 min, 1–4× weekly) ± **oral nutritional supplementation** — positively affects the Fried phenotype, enhances mobility and strength, improves ADLs, reduces falls. **Yoga and tai chi** also effective.
+- **Comprehensive geriatric assessment (CGA)** — reduces unplanned hospitalization.
+- **Medication optimization** — reduces mortality and functional decline.
+- **Vitamin D, omega-3, sex hormones, growth hormone** — little effect on frailty outcomes.
+
+### Hospitalized Older Patients<sup>[[1]](#ref1)</sup>
+
+- **Exercise + nutrition supplementation** — ameliorates Fried phenotype and deficit-accumulation frailty; improves mobility and ADLs. Neither alone as effective.
+- **CGA** — reduces nursing home admission, falls, postoperative delirium, death; improves mobility after hip fracture.
+- **Medication optimization** — reduces ED visits.
+
+### Nursing Home Residents<sup>[[1]](#ref1)</sup>
+
+- **Medication optimization** — reduces falls, death, hospitalization.
+- **Exercise and yoga** — improve mobility and balance.
+
+### What the Evidence Specifically Favors
+
+Network meta-analysis of exercise modalities for frailty:<sup>[[11]](#ref11)</sup>
+
+- **Resistance training** — best individual modality (SMD 0.58)
+- Mind-body exercise (SMD 0.57)
+- Mixed physical training (SMD 0.47)
+- Aerobic training (SMD 0.36)
+
+Multicomponent exercise + nutrition combinations consistently outperform single interventions (RR 0.62–0.69 for frailty reduction).<sup>[[12]](#ref12)</sup>
+
+---
+
+## Prehabilitation for GU Reconstruction
+
+**Radical cystectomy** has the most robust urologic prehabilitation evidence. A typical prehabilitation program 4–6 weeks before surgery includes:
+
+- **Exercise** — supervised aerobic + resistance, ≥3 sessions/week
+- **Nutrition** — protein target 1.2–1.5 g/kg/day; immunonutrition 5–7 days preop (see [Nutrition](/docs/foundations/perioperative-care/postoperative-management/nutrition))
+- **Smoking and alcohol cessation** — minimum 4 weeks
+- **Anemia correction** — IV iron if indicated
+- **Glycemic optimization** — A1c target &lt;8%
+- **Psychological preparation** and goal-setting
+
+**Cystectomy-specific RCTs (Jensen 2016 and others)** have shown improved postoperative functional recovery and reduced complications with structured prehabilitation. The effect is most pronounced in frail and prefrail patients.
+
+For other reconstructive operations (open radical prostatectomy, nephrectomy, major urethroplasty in a deconditioned patient), the principles transfer — prehabilitation duration should scale with preoperative frailty and the surgical stress score.
+
+---
+
+## Clinical Management Framework by Frailty Degree
+
+Staged approach from the 2024 NEJM Kim/Rockwood review:<sup>[[1]](#ref1)</sup>
+
+| State | Emphasis |
+|---|---|
+| **Fit (CFS 1–3)** | Build physiologic reserve — exercise, diet quality, standard disease management |
+| **Prefrail (CFS 4)** | Preserve reserve, early intervention, optimize medications |
+| **Mild–moderate frailty (CFS 5–6)** | Comprehensive geriatric assessment, rehabilitation, medication optimization, avoid avoidable stressors |
+| **Severe frailty (CFS 7)** | Goals-of-care discussion; palliative care frequently more appropriate than aggressive intervention |
+| **Terminal frailty (CFS 8–9)** | Comfort and dignity; surgical intervention generally not appropriate |
+
+**Critical point from the review:** frailty assessment is intended to **guide individualized person-centered care, not to serve as justification for withholding treatment**. A frail patient may still be the right candidate for reconstruction — the point is to know what you're dealing with and plan accordingly.
+
+---
+
+## Dynamic Nature of Frailty
+
+Frailty is **reversible, particularly in earlier stages**.<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)</sup> People can transition between frailty states. Prefrail individuals have better chance of improvement than those already frail. Women and patients in better socioeconomic conditions have higher likelihood of improvement; dementia and active cancer reduce the chance.
+
+**Practical implication:** a patient classified frail on first clinic visit is not immutably frail. A meaningful prehabilitation window (4–8 weeks) combined with nutrition and medication optimization can shift a patient from frail to prefrail and materially change surgical risk.
+
+---
+
+## Frailty, Sarcopenia, and Cachexia
+
+Overlapping but distinct entities that matter in the older urologic patient:<sup>[[19]](#ref19)[[20]](#ref20)[[21]](#ref21)</sup>
+
+| Entity | Definition | Relation to the others |
+|---|---|---|
+| **Sarcopenia** | Progressive loss of skeletal muscle **mass + function** | The biological substrate of physical frailty |
+| **Physical frailty** | Fried phenotype (weakness, slowness, exhaustion, weight loss, low activity) | Clinical syndrome that includes sarcopenia |
+| **Frailty (broad)** | Multisystem decline + vulnerability to stressors | Encompasses physical frailty + cognitive / psychosocial deficits |
+| **Cachexia** | Severe weight loss + muscle wasting from cancer, HIV, end-stage organ failure | Distinct pathophysiology (excess catabolism, inflammation, endocrine changes) |
+
+**Key diagnostic pearl:** reduced muscle mass **with normal strength** suggests **malnutrition**; reduced muscle mass **with impaired function** is **sarcopenia**.<sup>[[19]](#ref19)</sup>
+
+In hospitalized older patients, **sarcopenia and frailty should be assessed together** — sarcopenia independently raises frailty risk ~2-fold in Chinese community studies.<sup>[[22]](#ref22)</sup>
+
+---
+
+## GU-Reconstruction–Specific Considerations
+
+- **Radical cystectomy** — benchmark high-stress operation; prehabilitation evidence strongest; frailty drives 30-day mortality and nonhome discharge; dual screening (CFS + SPPB or gait speed) is reasonable.
+- **Open radical prostatectomy / open nephrectomy** — moderate-stress in frail patients; consider MIS alternatives when possible.
+- **Elective urethroplasty in the elderly** — evaluate gait speed and CFS; defer elective repair if clearly frail with modifiable deficits (nutrition, anemia, deconditioning).
+- **Prosthetic urology (AUS, IPP, sling) in frail patients** — assess cognitive capacity for device management; frailty predicts revision and explant.
+- **Emergency urologic surgery in the frail patient** — the "frailty and emergency surgery" literature supports structured multidisciplinary assessment and post-discharge planning from admission.<sup>[[15]](#ref15)</sup>
+- **Shared decision-making** — frailty is the appropriate context to discuss whether aggressive reconstruction is the patient's goal, or whether a less invasive alternative (indwelling catheter, simpler diversion, surveillance) better fits overall health trajectory.
+
+---
+
+## Key Recommendations
+
+1. **Screen every patient ≥65** with the Clinical Frailty Scale or FRAIL questionnaire.
+2. **Gait speed &lt;0.8 m/s** = 99% sensitive for Fried frailty — use if only one test is possible.
+3. **CFS ≥5** should trigger multidisciplinary geriatric / anesthesia involvement.
+4. **Prehabilitation** (exercise + nutrition + medication review) for 4–8 weeks before major elective reconstruction in frail and prefrail patients — particularly cystectomy.
+5. **Resistance training** is the single best exercise modality.
+6. **Deprescribe** potentially-harmful medications before and after surgery.
+7. **Delirium prevention bundle** — orientation, early mobilization, avoid benzodiazepines, minimize opioids.
+8. **Do not use frailty as grounds for withholding treatment** — use it to individualize it.
+9. **Reassess annually** — frailty is dynamic; trajectory matters more than a single snapshot.
+
+---
 
 ## References
 
-*Coming soon.*
+<a id="ref1"></a>1. Kim DH, Rockwood K. "Frailty in Older Adults." *N Engl J Med.* 2024;391(6):538–548. doi:[10.1056/NEJMra2301292](https://doi.org/10.1056/NEJMra2301292)
+
+<a id="ref2"></a>2. Allison R, Assadzandi S, Adelman M. "Frailty: Evaluation and Management." *Am Fam Physician.* 2021;103(4):219–226.
+
+<a id="ref3"></a>3. Treacy D, Hassett L, Schurr K, et al. "Mobility Training for Increasing Mobility and Functioning in Older People With Frailty." *Cochrane Database Syst Rev.* 2022;6:CD010494. doi:[10.1002/14651858.CD010494.pub2](https://doi.org/10.1002/14651858.CD010494.pub2)
+
+<a id="ref4"></a>4. Sieber F, McIsaac DI, Deiner S, et al. "2025 American Society of Anesthesiologists Practice Advisory for Perioperative Care of Older Adults Scheduled for Inpatient Surgery." *Anesthesiology.* 2025;142(1):22–51. doi:[10.1097/ALN.0000000000005172](https://doi.org/10.1097/ALN.0000000000005172)
+
+<a id="ref5"></a>5. Hoogendijk EO, Afilalo J, Ensrud KE, et al. "Frailty: Implications for Clinical Practice and Public Health." *Lancet.* 2019;394(10206):1365–1375. doi:[10.1016/S0140-6736(19)31786-6](https://doi.org/10.1016/S0140-6736(19)31786-6)
+
+<a id="ref6"></a>6. Clegg A, Young J, Iliffe S, Rikkert MO, Rockwood K. "Frailty in Elderly People." *Lancet.* 2013;381(9868):752–62. doi:[10.1016/S0140-6736(12)62167-9](https://doi.org/10.1016/S0140-6736(12)62167-9)
+
+<a id="ref7"></a>7. Chen B, Wang M, He Q, et al. "Impact of Frailty, Mild Cognitive Impairment and Cognitive Frailty on Adverse Health Outcomes Among Community-Dwelling Older Adults — A Systematic Review and Meta-Analysis." *Front Med.* 2022;9:1009794. doi:[10.3389/fmed.2022.1009794](https://doi.org/10.3389/fmed.2022.1009794)
+
+<a id="ref8"></a>8. Jang J, Jung H, Shin J, Kim DH. "Assessment of Frailty Index at 66 Years of Age and Association With Age-Related Diseases, Disability, and Death Over 10 Years in Korea." *JAMA Netw Open.* 2023;6(3):e2248995. doi:[10.1001/jamanetworkopen.2022.48995](https://doi.org/10.1001/jamanetworkopen.2022.48995)
+
+<a id="ref9"></a>9. Osadnik CR, Brighton LJ, Burtin C, et al. "European Respiratory Society Statement on Frailty in Adults With Chronic Lung Disease." *Eur Respir J.* 2023;62(2):2300442. doi:[10.1183/13993003.00442-2023](https://doi.org/10.1183/13993003.00442-2023)
+
+<a id="ref10"></a>10. Vo NT, Tu YK, Lin KC, Chiu HY, Huang HC. "Diagnostic Accuracy of the FRAIL Scale, Groningen Frailty Indicator, Tilburg Frailty Indicator, and PRISMA-7 for Frailty Screening Among Older Adults in Community Settings — A Systematic Review and Network Meta-Analysis." *Gerontologist.* 2024;64(6):gnae008. doi:[10.1093/geront/gnae008](https://doi.org/10.1093/geront/gnae008)
+
+<a id="ref11"></a>11. Sun X, Liu W, Gao Y, et al. "Comparative Effectiveness of Non-Pharmacological Interventions for Frailty — A Systematic Review and Network Meta-Analysis." *Age Ageing.* 2023;52(2):afad004. doi:[10.1093/ageing/afad004](https://doi.org/10.1093/ageing/afad004)
+
+<a id="ref12"></a>12. Macdonald SH, Travers J, Shé ÉN, et al. "Primary Care Interventions to Address Physical Frailty Among Community-Dwelling Adults Aged 60 Years or Older — A Meta-Analysis." *PLoS One.* 2020;15(2):e0228821. doi:[10.1371/journal.pone.0228821](https://doi.org/10.1371/journal.pone.0228821)
+
+<a id="ref13"></a>13. Dent E, Martin FC, Bergman H, et al. "Management of Frailty: Opportunities, Challenges, and Future Directions." *Lancet.* 2019;394(10206):1376–1386. doi:[10.1016/S0140-6736(19)31785-4](https://doi.org/10.1016/S0140-6736(19)31785-4)
+
+<a id="ref14"></a>14. McIsaac DI, MacDonald DB, Aucoin SD. "Frailty for Perioperative Clinicians: A Narrative Review." *Anesth Analg.* 2020;130(6):1450–1460. doi:[10.1213/ANE.0000000000004602](https://doi.org/10.1213/ANE.0000000000004602)
+
+<a id="ref15"></a>15. Gottesman D, McIsaac DI. "Frailty and Emergency Surgery: Identification and Evidence-Based Care for Vulnerable Older Adults." *Anaesthesia.* 2022;77(12):1430–1438. doi:[10.1111/anae.15860](https://doi.org/10.1111/anae.15860)
+
+<a id="ref16"></a>16. Thompson A, Fleischmann KE, Smilowitz NR, et al. "2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery." *J Am Coll Cardiol.* 2024;84(19):1869–1969. doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)
+
+<a id="ref17"></a>17. Khanna AK, Motamedi V, Bouldin B, et al. "Automated Electronic Frailty Index–Identified Frailty Status and Associated Postsurgical Adverse Events." *JAMA Netw Open.* 2023;6(11):e2341915. doi:[10.1001/jamanetworkopen.2023.41915](https://doi.org/10.1001/jamanetworkopen.2023.41915)
+
+<a id="ref18"></a>18. George EL, Hall DE, Youk A, et al. "Association Between Patient Frailty and Postoperative Mortality Across Multiple Noncardiac Surgical Specialties." *JAMA Surg.* 2021;156(1):e205152. doi:[10.1001/jamasurg.2020.5152](https://doi.org/10.1001/jamasurg.2020.5152)
+
+<a id="ref19"></a>19. Cruz-Jentoft AJ, Sayer AA. "Sarcopenia." *Lancet.* 2019;393(10191):2636–2646. doi:[10.1016/S0140-6736(19)31138-9](https://doi.org/10.1016/S0140-6736(19)31138-9)
+
+<a id="ref20"></a>20. Muñoz-Redondo E, Morgado-Pérez A, Pérez-Sáez MJ, et al. "New Perspectives on Frailty in Light of the GLIM, GLIS, and WHO Intrinsic Capacity Concepts — A Narrative Review." *Maturitas.* 2023;177:107799. doi:[10.1016/j.maturitas.2023.107799](https://doi.org/10.1016/j.maturitas.2023.107799)
+
+<a id="ref21"></a>21. Sato R, Vatic M, Peixoto da Fonseca GW, Anker SD, von Haehling S. "Biological Basis and Treatment of Frailty and Sarcopenia." *Cardiovasc Res.* 2024;120(9):982–998. doi:[10.1093/cvr/cvae073](https://doi.org/10.1093/cvr/cvae073)
+
+<a id="ref22"></a>22. Xu W, Cai J, Liu Y, et al. "Sarcopenia and Frailty Among Older Chinese Adults — Findings From the CHARLS Study." *PLoS One.* 2024;19(11):e0312879. doi:[10.1371/journal.pone.0312879](https://doi.org/10.1371/journal.pone.0312879)
