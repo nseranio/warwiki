@@ -316,17 +316,87 @@ export const SURGEONS: Surgeon[] = [
   },
 
   // ── Webster School ──────────────────────────────────────
+  // Duke Reconstructive Urology Fellowship. Webster directly mentored 32
+  // consecutive fellows 1983–2013; Andrew C. Peterson has directed the
+  // fellowship since 2013 (combined program since 2016).
   {
     id: 'george-webster',
     path: 's-z/george-webster',
     name: 'George D. Webster',
     photo: 'https://scholars.duke.edu/profile-images/full/0108871.jpg',
-    traineeIds: ['brian-flynn', 'andrew-peterson', 'jack-walter', 'henry-ruiz'],
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    institution: 'Duke University Medical Center',
+    title: 'Professor Emeritus of Urology',
+    bioUrl: 'https://scholars.duke.edu/person/george.webster',
+    traineeIds: [
+      // 1983–2013, in chronological order of fellowship year
+      'steve-silhelnik',      // 1983–1984
+      'bernard-goldwasser',   // 1984–1985
+      'william-bonney',       // 1986–1987
+      'niall-galloway',       // 1987–1988
+      'jacob-ramon',          // 1988–1989
+      'christopher-chapple',  // 1988–1989 (also T-W trainee; primary mentorId retained as T-W)
+      'karl-kreder',          // 1989–1990
+      'joseph-khoury',        // 1990–1991
+      'susan-timmons',        // 1990–1991
+      'scott-macdiarmid',     // 1991–1992
+      'stephen-mark',         // 1992–1993
+      'steve-waxman',         // 1993–1994
+      'david-couillard',      // 1994–1995
+      'lesley-carr',          // 1995–1996
+      'james-wright',         // 1996–1997
+      'christophe-iselin',    // 1997–1998
+      'henry-ruiz',           // 1998–1999
+      'michael-guralnick',    // 1999–2000
+      'elizabeth-miller',     // 2000–2001
+      'khai-lee-toh',         // 2000–2001
+      'brian-flynn',          // 2001–2002
+      'andrew-peterson',      // 2002–2003 (later fellowship director from 2013)
+      'jennifer-tash',        // 2003–2004
+      'neil-sherman',         // 2004–2005
+      'elizabeth-anoia',      // 2005–2006
+      'neil-grafstein',       // 2006–2007
+      'jack-walter',          // 2007–2008
+      'daniel-rapoport',      // 2008–2009
+      'kristy-borawski',      // 2009–2010
+      'aaron-lentz',          // 2010–2011
+      'joshua-lohri',         // 2011–2012
+      'danielle-stackhouse',  // 2012–2013
+    ],
   },
+
+  // Webster fellows (chronological) ─────────────────────────
+  { id: 'steve-silhelnik',    path: 's-z/steve-silhelnik',    name: 'Steve Silhelnik',           mentorId: 'george-webster', traineeIds: [] },
+  { id: 'bernard-goldwasser', path: 'a-g/bernard-goldwasser', name: 'Bernard Z. Goldwasser',     mentorId: 'george-webster', traineeIds: [] },
+  { id: 'william-bonney',     path: 'a-g/william-bonney',     name: 'William Bonney',            mentorId: 'george-webster', traineeIds: [] },
+  { id: 'niall-galloway',     path: 'a-g/niall-galloway',     name: 'Niall T.M. Galloway',       mentorId: 'george-webster', traineeIds: [] },
+  { id: 'jacob-ramon',        path: 'h-r/jacob-ramon',        name: 'Jacob Ramon',               mentorId: 'george-webster', traineeIds: [] },
+  // christopher-chapple is kept under Turner-Warwick (primary mentor); also listed in Webster's traineeIds
+  { id: 'karl-kreder',        path: 'h-r/karl-kreder',        name: 'Karl J. Kreder',            mentorId: 'george-webster', traineeIds: [] },
+  { id: 'joseph-khoury',      path: 'h-r/joseph-khoury',      name: 'Joseph M. Khoury',          mentorId: 'george-webster', traineeIds: [] },
+  { id: 'susan-timmons',      path: 's-z/susan-timmons',      name: 'Susan L. Timmons',          mentorId: 'george-webster', traineeIds: [] },
+  { id: 'scott-macdiarmid',   path: 'h-r/scott-macdiarmid',   name: 'Scott A. MacDiarmid',       mentorId: 'george-webster', traineeIds: [] },
+  { id: 'stephen-mark',       path: 'h-r/stephen-mark',       name: 'Stephen Mark',              mentorId: 'george-webster', traineeIds: [] },
+  { id: 'steve-waxman',       path: 's-z/steve-waxman',       name: 'Steve Waxman',              mentorId: 'george-webster', traineeIds: [] },
+  { id: 'david-couillard',    path: 'a-g/david-couillard',    name: 'David R. Couillard',        mentorId: 'george-webster', traineeIds: [] },
+  { id: 'lesley-carr',        path: 'a-g/lesley-carr',        name: 'Lesley K. Carr',            mentorId: 'george-webster', traineeIds: [] },
+  { id: 'james-wright',       path: 's-z/james-wright',       name: 'E. James Wright',           mentorId: 'george-webster', traineeIds: [] },
+  { id: 'christophe-iselin',  path: 'h-r/christophe-iselin',  name: 'Christophe E. Iselin',      mentorId: 'george-webster', traineeIds: [] },
+  {
+    id: 'henry-ruiz',
+    path: 'h-r/henry-ruiz',
+    name: 'Henry E. Ruiz',
+    mentorId: 'george-webster',
+    traineeIds: [],
+  },
+  { id: 'michael-guralnick',  path: 'a-g/michael-guralnick',  name: 'Michael L. Guralnick',      mentorId: 'george-webster', traineeIds: [] },
+  { id: 'elizabeth-miller',   path: 'h-r/elizabeth-miller',   name: 'Elizabeth A. Miller',       mentorId: 'george-webster', traineeIds: [] },
+  { id: 'khai-lee-toh',       path: 's-z/khai-lee-toh',       name: 'Khai Lee Toh',              mentorId: 'george-webster', traineeIds: [] },
   {
     id: 'brian-flynn',
     path: 'a-g/brian-flynn',
-    name: 'Brian Flynn',
+    name: 'Brian J. Flynn',
     photo: 'https://som.cuanschutz.edu/FIMS/Content/faculty/3122/CU-Doctors-3122.jpg',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -338,24 +408,53 @@ export const SURGEONS: Surgeon[] = [
     path: 'h-r/andrew-peterson',
     name: 'Andrew C. Peterson',
     photo: 'https://www.dukehealth.org/sites/default/files/styles/doctor_profile/public/physician/andrew-c-peterson-md.jpg',
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    institution: 'Duke University Medical Center',
+    title: 'Fellowship Director — Duke Reconstructive Urology / GU Cancer Survivorship',
     mentorId: 'george-webster',
-    traineeIds: [],
+    traineeIds: [
+      // Peterson as fellowship director, 2013–present
+      'crystal-dover',          // 2013–2014
+      'michael-belsante',       // 2014–2015
+      'uwais-zaid',             // 2015–2016
+      'ramiro-madden-fuentes',  // 2016–2017
+      'arman-kahokehr',         // 2017–2018
+      'urszula-kowalick',       // 2018–2019
+      'william-boysen',         // 2019–2020
+      'brian-inouye',           // 2020–2021
+      'kevin-krughoff',         // 2021–2022
+    ],
   },
+  { id: 'jennifer-tash',      path: 's-z/jennifer-tash',      name: 'Jennifer A. Tash',          mentorId: 'george-webster', traineeIds: [] },
+  { id: 'neil-sherman',       path: 's-z/neil-sherman',       name: 'Neil D. Sherman',           mentorId: 'george-webster', traineeIds: [] },
+  { id: 'elizabeth-anoia',    path: 'a-g/elizabeth-anoia',    name: 'Elizabeth J. Anoia',        mentorId: 'george-webster', traineeIds: [] },
+  { id: 'neil-grafstein',     path: 'a-g/neil-grafstein',     name: 'Neil H. Grafstein',         mentorId: 'george-webster', traineeIds: [] },
   {
     id: 'jack-walter',
     path: 's-z/jack-walter',
-    name: 'Jack Walter',
+    name: 'Jack R. Walter',
     mentorId: 'george-webster',
     traineeIds: [],
   },
-  {
-    id: 'henry-ruiz',
-    path: 'h-r/henry-ruiz',
-    name: 'Henry E. Ruiz',
-    mentorId: 'george-webster',
-    traineeIds: [],
-  },
-  // Flynn trainees
+  { id: 'daniel-rapoport',    path: 'h-r/daniel-rapoport',    name: 'Daniel Rapoport',           mentorId: 'george-webster', traineeIds: [] },
+  { id: 'kristy-borawski',    path: 'a-g/kristy-borawski',    name: 'Kristy Borawski',           mentorId: 'george-webster', traineeIds: [] },
+  { id: 'aaron-lentz',        path: 'h-r/aaron-lentz',        name: 'Aaron Lentz',               mentorId: 'george-webster', traineeIds: [] },
+  { id: 'joshua-lohri',       path: 'h-r/joshua-lohri',       name: 'Joshua Lohri',              mentorId: 'george-webster', traineeIds: [] },
+  { id: 'danielle-stackhouse',path: 's-z/danielle-stackhouse',name: 'Danielle Stackhouse',       mentorId: 'george-webster', traineeIds: [] },
+
+  // Peterson fellows (2013–present) ─────────────────────────
+  { id: 'crystal-dover',         path: 'a-g/crystal-dover',         name: 'Crystal Dover',              mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'michael-belsante',      path: 'a-g/michael-belsante',      name: 'Michael Belsante',           mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'uwais-zaid',            path: 's-z/uwais-zaid',            name: 'Uwais B. Zaid',              mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'ramiro-madden-fuentes', path: 'h-r/ramiro-madden-fuentes', name: 'Ramiro J. Madden-Fuentes',   mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'arman-kahokehr',        path: 'h-r/arman-kahokehr',        name: 'Arman A. Kahokehr',          mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'urszula-kowalick',      path: 'h-r/urszula-kowalick',      name: 'Urszula Kowalick',           mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'william-boysen',        path: 'a-g/william-boysen',        name: 'William Boysen',             mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'brian-inouye',          path: 'h-r/brian-inouye',          name: 'Brian Inouye',               mentorId: 'andrew-peterson', traineeIds: [] },
+  { id: 'kevin-krughoff',        path: 'h-r/kevin-krughoff',        name: 'Kevin Krughoff',             mentorId: 'andrew-peterson', traineeIds: [] },
+
+  // Flynn trainees (from his later Colorado practice) ───────
   {
     id: 'dmitriy-nikolavsky',
     path: 'h-r/dmitriy-nikolavsky',
