@@ -891,7 +891,7 @@ export const DYNASTIES: Dynasty[] = [
   { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',  color: '#0D9373', subspecialty: 'GURS' },
   { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
   { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
-  { id: 'jordan',         label: 'Jordan School (EVMS)',   rootId: 'gerald-jordan',           color: '#0284c7', subspecialty: 'GURS' },
+  { id: 'jordan',         label: 'Devine-Jordan School (EVMS)', rootId: 'charles-devine',     color: '#0284c7', subspecialty: 'GURS' },
   // URPS dynasties — grow these as mentor/trainee links are confirmed
   { id: 'raz',            label: 'Raz School',             rootId: 'shlomo-raz',              color: '#9333EA', subspecialty: 'URPS' },
   { id: 'nitti',           label: 'Nitti School',            rootId: 'victor-nitti',             color: '#0EA5E9', subspecialty: 'URPS' },
