@@ -426,6 +426,16 @@ Examples of what to keep vs cut:
 - No consumer health disclaimers.
 - Tables preferred over prose lists for comparative data.
 
+### Site scope — what belongs on WARWIKI
+
+**In-scope:** reconstructive urology (GURS), urogynecology & reconstructive pelvic surgery (URPS), and functional urology — urethroplasty, ureteral reconstruction, reimplant, pyeloplasty, bladder augmentation, Mitrofanoff, VVF / UVF / RUF / USF repair, incontinence surgery, AUS / IPP, Peyronie's, ED surgery, phalloplasty / vaginoplasty / GAS, hypospadias, prolapse surgery, perineal reconstruction after trauma / Fournier's / radiation, neurogenic bladder, functional voiding disorders.
+
+**Out-of-scope (do not use as primary examples or applications):** endourology (PCNL, ureteroscopy for stones) and urologic oncology (radical cystectomy for cancer, radical nephrectomy for cancer, radical prostatectomy for cancer).
+
+**Gray zone — acceptable only as the reconstructive consequence:** post-radiation reconstruction, urinary diversion framed as reconstructive (not cancer staging), reconstruction after extirpative oncology, urethral stricture after prostatectomy or radiation, RUFs after prostate cancer treatment.
+
+When framing a new article, ask: is the reader here to learn reconstructive / functional / urogynecologic practice? If the article's principal value is teaching cancer surgery or stone management, **it does not belong on WARWIKI**. See `feedback_site_scope.md` for the full rule.
+
 ---
 
 ## Deployment
