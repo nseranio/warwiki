@@ -114,18 +114,13 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
-              sidebarId: 'rootsSidebar',
-              label: 'Roots of Reconstruction',
-            },
-            {
-              type: 'docSidebar',
               sidebarId: 'resourcesSidebar',
               label: 'Resources',
             },
             {
               type: 'docSidebar',
-              sidebarId: 'hiddenCurriculumSidebar',
-              label: 'Hidden Curriculum',
+              sidebarId: 'rootsSidebar',
+              label: 'Roots of Reconstruction',
             },
           ],
         },
