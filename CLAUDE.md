@@ -27,7 +27,8 @@ warwiki/
 │   ├── 05-special-populations/    # → /docs/special-populations
 │   ├── 06-journal-club/           # → /docs/journal-club
 │   ├── 07-roots/                  # → /docs/roots (history + surgeon profiles)
-│   └── 08-resources/              # → /docs/resources
+│   ├── 08-resources/              # → /docs/resources
+│   └── 09-hidden-curriculum/      # → /docs/hidden-curriculum (business / finance / billing)
 ├── src/
 │   ├── css/custom.css             # ALL custom styling — single source of truth
 │   ├── components/
@@ -451,7 +452,8 @@ Examples of what to keep vs cut:
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
 | Roots | `07-roots/` | **Surgeons & Lineage** page uses `<SurgeonsExplorer />` with GURS/URPS tabs; surgeons/ category hidden from sidebar |
-| Resources | `08-resources/` | Textbooks, podcasts, websites, videos, billing, patient resources |
+| Resources | `08-resources/` | Textbooks, podcasts, websites, videos, patient resources (billing moved to Hidden Curriculum) |
+| **Hidden Curriculum** | `09-hidden-curriculum/` | **NEW** — Business / finance / operations / billing. In Library navbar dropdown. See Hidden Curriculum section below |
 
 ### Foundations — anatomy-physiology status
 
@@ -460,6 +462,49 @@ All articles in `docs/01-foundations/anatomy-physiology/` have been populated (n
 - **Urinary tract:** The Kidneys, The Ureters, The Bladder, Male Urethra, Female Urethra
 - **Genitalia:** The Penis, The Prostate & Seminal Vesicles, The Testicles & Scrotum, The Vulva, The Vagina, The Cervix, The Uterus, The Adnexa
 - **Pelvis & Support:** Bony Pelvic Anatomy, Retropubic (The Retropubic Space), Abdominal Wall, Pelvic Vascular Anatomy, Pelvic Neuroanatomy, Bowel Anatomy, GU Embryology, Perineum, Anal Anatomy (The Anal Canal), Presacral Anatomy (The Presacral Space)
+- **Lower Extremity:** The Leg & Thigh (gracilis anatomy + PTNS ankle anatomy — NEW)
+- **Oral Cavity:** The Oral Cavity (buccal / lingual / labial mucosa for urethroplasty — NEW)
+
+### Foundations — Surgical Principles status
+
+Populated: wound-healing, reconstructive-ladder, plastic-surgery-principles, principles-gu-reconstruction, radiation-tissue-effects, flaps-gu-reconstruction, grafts-gu-reconstruction, **incisions-closure**, **bowel-anastomosis**, **sutures**, **needles**.
+
+**Flap subdirectory** — `flaps/` hosts 11 stub pages (hidden category) reachable only via links from the main Flaps article:
+- **Fully built out:** gracilis, vram, peritoneal, vastus-lateralis, omental
+- **Stubs ready for expansion:** penile-preputial, radial-forearm, anterolateral-thigh, scip, blandy, martius
+
+**Graft subdirectory** — `grafts/` hosts 10 stub pages (hidden category) reachable only via links from the main Grafts article:
+- buccal-mucosa, lingual-mucosa, labial-mucosa, intestinal-segments, penile-preputial-skin, saphenous-vein, posterior-auricular, stsg, ftsg, bladder-mucosa
+
+### Foundations — Perioperative Care restructured (Temporal + Protocols framework)
+
+Old folders `preoperative/`, `anesthesia-pain/`, `postoperative/` were reorganized into:
+
+```
+perioperative-care/
+├── preoperative-assessment/    # risk-calculators, cardiovascular-risk, frailty, diabetes, steroids, immunosuppression
+├── intraoperative-care/        # anesthesia (new), analgesia, nerve-blocks, nausea-vomiting, positioning-nerve-injury
+├── postoperative-management/   # constipation, electrolyte-abnormalities, nutrition (renamed from tpn-ppn), pulmonary-embolism
+└── perioperative-protocols/    # eras, antithrombotic-therapy (crosscutting protocols)
+```
+
+All 16 articles are populated. URL paths changed from the old flat structure — internal cross-links were updated; external inbound links to `/docs/foundations/perioperative-care/{preoperative,anesthesia-pain,postoperative}/*` will 404.
+
+### Foundations — Tools / Robotics subsection (NEW)
+
+`docs/01-foundations/tools/robotics/` — three-article subsection:
+- **platforms.mdx** — da Vinci (Si/Xi/X/SP/5), Hugo RAS, Versius, Senhance, Avatera, Hinotori, REVO-I, KangDuo, MicroHand S, Toumai, Dexter — manufacturer profiles + feature axes
+- **reconstructive-applications.mdx** — by anatomic region (upper tract, bladder, urethra, andrologic microsurgery)
+- **single-port.mdx** — SP incision atlas (periumbilical, mini-Pfannenstiel, midline suprapubic, LAA, SARA) + approaches (transvesical, LAA, SARA, transperitoneal, retroperitoneal, extraperitoneal)
+
+### Hidden Curriculum (NEW section 09)
+
+`docs/09-hidden-curriculum/` — operational-literacy layer for the reconstructive urologist. In Library navbar dropdown alongside Journal Club / Roots / Resources. Sidebar ID: `hiddenCurriculumSidebar`.
+
+- **index.mdx** — section landing
+- **overview.mdx** — "Clinical Operator Mindset": three-domain knowledge stack (finance, health systems/policy, operations), metrics vocabulary, knowledge-gap literature evidence
+- **healthcare-finance.mdx** — revenue cycle, RVU decomposition, professional vs facility fees, payer mix, fixed vs variable cost, FFS / bundled / value-based / capitation, hospital administrator functions
+- **billing-coding.mdx** — moved from Resources (`/docs/resources/billing-coding` → `/docs/hidden-curriculum/billing-coding`); CodeSearchTable preserved
 
 ---
 
@@ -495,6 +540,70 @@ All articles in `docs/01-foundations/anatomy-physiology/` have been populated (n
 - **Evaluation section** — `history-symptom-assessment.mdx` deleted; Imaging and Ancillary Testing sidebar positions swapped (Imaging now above Ancillary).
 - **Image set** — public-domain / CC-licensed anatomy images downloaded into `static/img/anatomy/` and embedded in the anatomy articles. No caption-only figure blocks — either real image or nothing.
 
+### Session of 2026-04-16 — Foundations expansion wave
+
+- **New top-level section 09 Hidden Curriculum** — see section above. Billing & Coding moved from Resources.
+- **Perioperative Care restructured** into Temporal + Protocols framework (preoperative-assessment / intraoperative-care / postoperative-management / perioperative-protocols). All 16 articles populated.
+- **Surgical Principles fully built out** — incisions-closure, bowel-anastomosis, sutures, needles added; flap and graft subdirectories created with individual clickable pages.
+- **Robotics subsection** added under Tools — 3 articles (platforms, reconstructive-applications, single-port).
+- **Anatomy subsections added** — Lower Extremity (leg-thigh) and Oral Cavity.
+- **Broken links fixed** — 3 pre-existing broken links (to deleted 05b-oncologic-radiation section, to nonexistent /docs/foundations/biomaterials) repointed to valid targets.
+- **Navbar updated** — Hidden Curriculum added to Library dropdown; Docusaurus build clean.
+
 ---
 
-*Last updated: April 2026*
+## Image Wishlist — High-Value Additions
+
+Today's additions were text-only. The following new pages would benefit from images when appropriate public-domain / CC assets are available. Listed by priority:
+
+### Highest priority — directly improves comprehension
+
+1. **`flaps/gracilis.mdx`** — diagram of the gracilis muscle + medial circumflex femoral artery pedicle anatomy. Gray's Anatomy plate exists for the adductor compartment.
+2. **`flaps/vram.mdx`** — diagram of rectus abdominis + DIEA pedicle + arcuate line. Gray's or open-source anatomy illustration.
+3. **`flaps/omental.mdx`** — diagram of the gastroepiploic arcade (right and left) along the greater curvature.
+4. **`flaps/vastus-lateralis.mdx`** — diagram of LCFA descending branch and perforator distribution.
+5. **`anatomy-physiology/lower-extremity/leg-thigh.mdx`** — anatomy article has zero images; should match the image-per-article convention of the other anatomy articles. Gray's plates for gracilis and medial ankle cross-section (for PTNS anatomy) are public domain.
+6. **`anatomy-physiology/oral-cavity/oral-cavity.mdx`** — anatomy article has zero images; Gray's plate of buccal mucosa and oral cavity cross-section.
+7. **`surgical-principles/incisions-closure.mdx`** — diagram showing the incision atlas (midline, Pfannenstiel, Gibson, flank, Chevron, Makuuchi, thoracoabdominal, dorsal lumbotomy, perineal) as anatomic overlays.
+
+### Medium priority — supporting visualization
+
+8. **`surgical-principles/bowel-anastomosis.mdx`** — diagrams of end-to-end, end-to-side, and functional end-to-end (GIA-stapled) configurations; ICG fluorescence example.
+9. **`surgical-principles/sutures.mdx`** — table already scaffolds comparisons; a suture-size / needle-type diagram would help.
+10. **`surgical-principles/needles.mdx`** — cross-section diagrams of cutting vs reverse-cutting vs taper vs blunt-taper vs taper-cut tips.
+11. **`tools/robotics/single-port.mdx`** — incision-site map on an abdominal/pelvic silhouette.
+12. **`tools/robotics/platforms.mdx`** — the platforms table could be enhanced with logos/photos if CC-licensed (Intuitive / Medtronic / CMR / Asensus press images may be available).
+
+### Lower priority — could benefit but text is sufficient
+
+- Perioperative Care articles (ERAS, antithrombotic, cardiovascular risk, diabetes, frailty) — the tables convey most of the value; flow diagrams of decision trees (e.g., 2024 AHA/ACC stepwise, ERAS pathway, RCRI) would be elegant if appropriate Creative Commons versions exist.
+- Hidden Curriculum articles — healthcare-finance might benefit from a revenue-cycle schematic.
+
+### Source-finding conventions (from earlier sessions)
+
+- **Gray's Anatomy** plates are public domain; Wikimedia Commons hosts them with the `Gray####` convention.
+- **OpenStax Anatomy & Physiology** plates are CC BY 4.0 and suitable for direct use.
+- **Blausen Medical** plates are CC BY 3.0; limited number available on Wikimedia.
+- Use `curl -sL "https://commons.wikimedia.org/wiki/Special:FilePath/FILENAME.png"` to download Wikimedia Commons files reliably (direct URLs sometimes serve error HTML instead).
+- Store in `static/img/anatomy/` and reference as `/img/anatomy/filename.ext` with an italicized caption underneath.
+- **Never** create caption-only figure blocks — either embed a real image or omit the figure.
+
+---
+
+## Maintenance Caveats — 2026-04-16
+
+- **Broken links fixed:** `radiation-tissue-effects.mdx` (now points to `clinical-conditions/03d-bladder-disorders/radiation-cystitis` and the `03b`/`03e` stricture articles instead of deleted `05b-oncologic-radiation`). `reconstructive-ladder.mdx` (now points to `tools/biomaterials` instead of `/docs/foundations/biomaterials`). **Build is 100% broken-link-free.**
+- **URL change log** for external-link auditing:
+  - `/docs/resources/billing-coding` → `/docs/hidden-curriculum/billing-coding`
+  - `/docs/foundations/perioperative-care/preoperative/*` → `/docs/foundations/perioperative-care/preoperative-assessment/*`
+  - `/docs/foundations/perioperative-care/anesthesia-pain/*` → `/docs/foundations/perioperative-care/intraoperative-care/*`
+  - `/docs/foundations/perioperative-care/postoperative/positioning-nerve-injury` → `/docs/foundations/perioperative-care/intraoperative-care/positioning-nerve-injury`
+  - `/docs/foundations/perioperative-care/postoperative/{constipation,electrolyte-abnormalities,pulmonary-embolism,tpn-ppn}` → `/docs/foundations/perioperative-care/postoperative-management/{constipation,electrolyte-abnormalities,pulmonary-embolism,nutrition}`
+  - `/docs/foundations/perioperative-care/postoperative/{eras,antithrombotic-therapy}` → `/docs/foundations/perioperative-care/perioperative-protocols/{eras,antithrombotic-therapy}`
+  - `/docs/foundations/perioperative-care/postoperative/tpn-ppn` → `/docs/foundations/perioperative-care/postoperative-management/nutrition`
+- **Docusaurus URL-collapse quirk** — when a file is named the same as its parent directory (e.g., `oral-cavity/oral-cavity.mdx`), Docusaurus collapses the URL to `/docs/foundations/anatomy-physiology/oral-cavity` (not `.../oral-cavity/oral-cavity`). Use the collapsed path in cross-links.
+- **Hidden-category pattern** — `{"className": "sidebar-hidden-category"}` in `_category_.json` hides a subdirectory from the sidebar while keeping its pages linkable. Used for: `surgeons/`, `flaps/`, `grafts/`. The category `position: 99` with hidden className is the standard idiom.
+
+---
+
+*Last updated: 2026-04-16*
