@@ -460,6 +460,23 @@ h1, h2, h3, h4, h5, h6 {
   height: 18px;
 }
 
+/* Mobile navbar — prevent GitHub icon and search-button overlap.
+   The Docusaurus mobile DocSearch button renders at the right edge and on
+   narrow viewports was rendering directly under the GitHub icon, making the
+   search button unclickable. Hide GitHub on mobile (search is the priority)
+   and ensure the right-side navbar items have breathing room. */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    gap: 0.5rem;
+  }
+  .DocSearch-Button {
+    margin: 0;
+  }
+  .header-github-link {
+    display: none;
+  }
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    6. SIDEBAR
