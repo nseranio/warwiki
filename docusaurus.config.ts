@@ -120,7 +120,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'rootsSidebar',
-              label: 'Roots of Reconstruction',
+              label: 'History & Lineage',
             },
           ],
         },
