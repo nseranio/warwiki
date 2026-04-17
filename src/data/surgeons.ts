@@ -74,7 +74,7 @@ export const SURGEONS: Surgeon[] = [
     name: 'Leonard N. Zinman',
     photo: 'https://urologichistory.museum/Images/collections/scope-of-urology/Summer%202021/Leonard-Zinman.png',
     mentorId: 'richard-turner-warwick',
-    traineeIds: [],
+    traineeIds: ['alex-vanni'],
   },
   {
     id: 'christopher-chapple',
@@ -128,7 +128,7 @@ export const SURGEONS: Surgeon[] = [
     name: 'Hunter Wessells',
     photo: 'https://urology.uw.edu/sites/default/files/2022-09/Wessells_Hunter_sq.jpeg',
     mentorId: 'jack-mcaninch',
-    traineeIds: ['judith-hagedorn', 'alex-vanni', 'joshua-broghammer', 'thomas-smith-iii', 'bradley-figler'],
+    traineeIds: ['judith-hagedorn', 'joshua-broghammer', 'thomas-smith-iii', 'bradley-figler'],
   },
   {
     id: 'jeremy-meyers',
@@ -277,7 +277,7 @@ export const SURGEONS: Surgeon[] = [
     path: 's-z/alex-vanni',
     name: 'Alex J. Vanni',
     photo: 'https://pbs.twimg.com/profile_images/1052006135798976512/tLjCglpl_400x400.jpg',
-    mentorId: 'hunter-wessells',
+    mentorId: 'leonard-zinman',
     traineeIds: [],
   },
   {
