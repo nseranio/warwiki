@@ -46,7 +46,7 @@ export const SURGEONS: Surgeon[] = [
     institution: 'The Middlesex Hospital, London',
     title: 'CBE FRCS FRCP FRCOG',
     bioUrl: 'https://en.wikipedia.org/wiki/Richard_Turner-Warwick',
-    traineeIds: ['sanjay-kulkarni', 'leonard-zinman', 'christopher-chapple'],
+    traineeIds: ['sanjay-kulkarni', 'leonard-zinman', 'christopher-chapple', 'george-webster'],
     keyPubs: [
       'Turner-Warwick R, Wynne EJC, Handley-Ashken M. "The use of the omental pedicle graft in the repair and reconstruction of the urinary tract." Br J Surg. 1967;54(10):849–853. PMID 6047268',
       'Turner-Warwick R. "The repair of urethral strictures in the region of the membranous urethra." J Urol. 1968;100(3):303–314.',
@@ -108,7 +108,7 @@ export const SURGEONS: Surgeon[] = [
     traineeIds: [
       'allen-morey', 'hunter-wessells', 'jeremy-meyers', 'benjamin-breyer',
       'sean-elliott', 'jill-buckley', 'michael-metro', 'steve-brandes',
-      'bryan-voelzke', 'bradley-erickson', 'keith-rourke',
+      'bryan-voelzke', 'bradley-erickson',
       'noel-armenakas', 'reynaldo-gomez',
     ],
   },
@@ -202,7 +202,8 @@ export const SURGEONS: Surgeon[] = [
     name: 'Keith F. Rourke',
     country: 'Canada',
     countryFlag: '🇨🇦',
-    mentorId: 'jack-mcaninch',
+    institution: 'University of Alberta',
+    mentorId: 'gerald-jordan',
     traineeIds: [],
   },
   {
@@ -329,6 +330,7 @@ export const SURGEONS: Surgeon[] = [
     institution: 'Duke University Medical Center',
     title: 'Professor Emeritus of Urology',
     bioUrl: 'https://scholars.duke.edu/person/george.webster',
+    mentorId: 'richard-turner-warwick',
     traineeIds: [
       // 1983–2013, in chronological order of fellowship year
       'steve-silhelnik',      // 1983–1984
@@ -487,26 +489,41 @@ export const SURGEONS: Surgeon[] = [
     traineeIds: [],
   },
 
-  // ── Independent Figures ─────────────────────────────────
-  {
-    id: 'gerald-jordan',
-    path: 'h-r/gerald-jordan',
-    name: 'Gerald H. Jordan',
-    photo: 'http://jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg',
-    traineeIds: [],
-  },
+  // ── Jordan School (Eastern Virginia Medical School) ─────
+  // Charles J. Devine Jr. founded the EVMS reconstructive tradition; Gerald Jordan
+  // was his protégé and successor and in turn trained the next generation,
+  // including Kurt McCammon (current EVMS director), Joel Gelman (UCI),
+  // Ramon Virasoro, Keith Rourke (Alberta), and Jessica DeLong.
   {
     id: 'charles-devine',
     path: 'a-g/charles-devine',
     name: 'Charles J. Devine Jr.',
     photo: 'https://societygurs.org/wp-content/uploads/2019/10/Devine.jpg',
-    traineeIds: [],
+    institution: 'Eastern Virginia Medical School',
+    traineeIds: ['gerald-jordan'],
+  },
+  {
+    id: 'gerald-jordan',
+    path: 'h-r/gerald-jordan',
+    name: 'Gerald H. Jordan',
+    photo: 'http://jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg',
+    institution: 'Eastern Virginia Medical School',
+    mentorId: 'charles-devine',
+    traineeIds: [
+      'kurt-mccammon',
+      'joel-gelman',
+      'ramon-virasoro',
+      'keith-rourke',
+      'jessica-delong',
+    ],
   },
   {
     id: 'kurt-mccammon',
     path: 'h-r/kurt-mccammon',
     name: 'Kurt A. McCammon',
     photo: 'http://jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg',
+    institution: 'Eastern Virginia Medical School',
+    mentorId: 'gerald-jordan',
     traineeIds: [],
   },
   {
@@ -538,6 +555,8 @@ export const SURGEONS: Surgeon[] = [
     path: 'a-g/joel-gelman',
     name: 'Joel Gelman',
     photo: 'https://centerforreconstructiveurology.org/wp-content/uploads/2023/03/joel-gelman.jpg',
+    institution: 'UC Irvine, Center for Reconstructive Urology',
+    mentorId: 'gerald-jordan',
     traineeIds: [],
   },
   {
@@ -576,6 +595,16 @@ export const SURGEONS: Surgeon[] = [
     id: 'ramon-virasoro',
     path: 's-z/ramon-virasoro',
     name: 'Ramon Virasoro',
+    mentorId: 'gerald-jordan',
+    traineeIds: [],
+  },
+  {
+    id: 'jessica-delong',
+    path: 'a-g/jessica-delong',
+    name: 'Jessica M. DeLong',
+    country: 'United States',
+    countryFlag: '🇺🇸',
+    mentorId: 'gerald-jordan',
     traineeIds: [],
   },
   {
@@ -862,6 +891,7 @@ export const DYNASTIES: Dynasty[] = [
   { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',  color: '#0D9373', subspecialty: 'GURS' },
   { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
   { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
+  { id: 'jordan',         label: 'Jordan School (EVMS)',   rootId: 'gerald-jordan',           color: '#0284c7', subspecialty: 'GURS' },
   // URPS dynasties — grow these as mentor/trainee links are confirmed
   { id: 'raz',            label: 'Raz School',             rootId: 'shlomo-raz',              color: '#9333EA', subspecialty: 'URPS' },
   { id: 'nitti',           label: 'Nitti School',            rootId: 'victor-nitti',             color: '#0EA5E9', subspecialty: 'URPS' },
