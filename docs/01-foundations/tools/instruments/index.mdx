@@ -1,0 +1,85 @@
+---
+title: Instruments
+sidebar_position: 0
+hide_title: true
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Surgical Instruments
+
+A searchable reference to the instruments found on a functional-urology and genitourinary-reconstruction tray. Common instruments get short entries; the instruments that define reconstructive practice — **Turner-Warwick Ryder, Heaney driver, Haygrove sound, Lone Star retractor, perineal Bookwalter, Ravini lighted speculum, Raz-Pereyra trocar, the gorget** — get expanded pages with design rationale, history, and specific use cases.
+
+export const instruments = [
+  { name: "Turner-Warwick Ryder", category: "Needle Holders", namedAfter: "Richard Turner-Warwick", use: "Deep posterior urethroplasty; VUA reconstruction; elongated shank modification of Ryder", slug: "/docs/foundations/tools/instruments/needle-holders/turner-warwick-ryder" },
+  { name: "Ryder", category: "Needle Holders", namedAfter: "—", use: "Fine-needle anastomotic work; precision reconstructive suturing", slug: "/docs/foundations/tools/instruments/needle-holders/ryder" },
+  { name: "Heaney Needle Driver", category: "Needle Holders", namedAfter: "Noble Sproat Heaney", use: "Deep pelvic suture placement; perineal urethroplasty; VVF repair; apical prolapse", slug: "/docs/foundations/tools/instruments/needle-holders/heaney" },
+  { name: "Castroviejo", category: "Needle Holders", namedAfter: "Ramón Castroviejo", use: "Microsurgical vasovasostomy, vasoepididymostomy; 8-0 to 10-0 suture", slug: "/docs/foundations/tools/instruments/needle-holders/castroviejo" },
+  { name: "Olsen-Hegar", category: "Needle Holders", namedAfter: "—", use: "Combined needle holder + scissors; solo-surgeon running closure", slug: "/docs/foundations/tools/instruments/needle-holders/olsen-hegar" },
+  { name: "Adson", category: "Tissue Forceps", namedAfter: "Alfred Washington Adson", use: "Skin and subcutaneous handling; fine-toothed closure forceps", slug: "/docs/foundations/tools/instruments/forceps/adson" },
+  { name: "DeBakey", category: "Tissue Forceps", namedAfter: "Michael DeBakey", use: "Atraumatic handling of bladder, bowel, and deep pelvic tissue", slug: "/docs/foundations/tools/instruments/forceps/debakey" },
+  { name: "Bonney", category: "Tissue Forceps", namedAfter: "Victor Bonney", use: "Heavy toothed forceps; fascia, vaginal cuff, dense pelvic tissue", slug: "/docs/foundations/tools/instruments/forceps/bonney" },
+  { name: "Russian", category: "Tissue Forceps", namedAfter: "—", use: "Star-burst tip; thick mobile tissue (muscle, fascia)", slug: "/docs/foundations/tools/instruments/forceps/russian" },
+  { name: "Singley", category: "Tissue Forceps", namedAfter: "—", use: "Atraumatic bowel and ureter handling; urinary diversion trays", slug: "/docs/foundations/tools/instruments/forceps/singley" },
+  { name: "Wangensteen", category: "Tissue Forceps", namedAfter: "Owen Wangensteen", use: "Long fine-tipped; precision deep-pelvic dissection", slug: "/docs/foundations/tools/instruments/forceps/wangensteen" },
+  { name: "Allis", category: "Clamps", namedAfter: "Oscar Huntington Allis", use: "Toothed tissue clamp; skin, fascia, tissue-edge grasp", slug: "/docs/foundations/tools/instruments/clamps/allis" },
+  { name: "Babcock", category: "Clamps", namedAfter: "William Wayne Babcock", use: "Atraumatic fenestrated clamp; bowel, ureter, hollow viscera", slug: "/docs/foundations/tools/instruments/clamps/babcock" },
+  { name: "Kocher", category: "Clamps", namedAfter: "Emil Theodor Kocher", use: "Heavy fully-toothed clamp; fascia, discarded tissue", slug: "/docs/foundations/tools/instruments/clamps/kocher" },
+  { name: "Electrosurgical Pencil", category: "Cautery & Bipolar", namedAfter: "—", use: "Standard monopolar handpiece; fascial incision, hemostasis", slug: "/docs/foundations/tools/instruments/cautery/electrosurgical-pencil" },
+  { name: "Colorado Tip", category: "Cautery & Bipolar", namedAfter: "—", use: "Ultra-fine needle-tip monopolar; precise cutting, minimal lateral spread", slug: "/docs/foundations/tools/instruments/cautery/colorado-tip" },
+  { name: "Gerald Bipolar Forceps", category: "Cautery & Bipolar", namedAfter: "—", use: "Fine-tipped bipolar; precision hemostasis in delicate fields", slug: "/docs/foundations/tools/instruments/cautery/gerald-bipolar" },
+  { name: "Malis Mirror-Finish Bipolar", category: "Cautery & Bipolar", namedAfter: "Leonard Malis", use: "Polished bipolar; prevents tissue sticking and char buildup", slug: "/docs/foundations/tools/instruments/cautery/malis-bipolar" },
+  { name: "Adson-Beckman Retractor", category: "Retractors", namedAfter: "—", use: "Self-retaining wound retractor; scrotal, inguinal, superficial perineal", slug: "/docs/foundations/tools/instruments/retractors/adson-beckman" },
+  { name: "Lone Star Retractor System", category: "Retractors", namedAfter: "—", use: "Disposable elastic-stay ring; urethroplasty, perineal, vaginal, hypospadias", slug: "/docs/foundations/tools/instruments/retractors/lone-star" },
+  { name: "Perineal Bookwalter (Jordan)", category: "Retractors", namedAfter: "Gerald H. Jordan", use: "Ring retractor with perineal blades; posterior urethroplasty exposure", slug: "/docs/foundations/tools/instruments/retractors/perineal-bookwalter" },
+  { name: "Heaney Retractor", category: "Retractors", namedAfter: "Noble Sproat Heaney", use: "Right-angled vaginal retractor; anterior/posterior vaginal wall", slug: "/docs/foundations/tools/instruments/retractors/heaney-retractor" },
+  { name: "Breisky Retractor", category: "Retractors", namedAfter: "August Breisky", use: "Long narrow right-angled vaginal retractor; deep apical exposure", slug: "/docs/foundations/tools/instruments/retractors/breisky" },
+  { name: "Weighted Speculum", category: "Retractors", namedAfter: "—", use: "Self-retaining posterior vaginal wall retractor; gravity-held", slug: "/docs/foundations/tools/instruments/retractors/weighted-speculum" },
+  { name: "Mouth Retractors (BMG)", category: "Retractors", namedAfter: "—", use: "Denhardt, Molt, Jennings, Minnesota, and cheek retractors for buccal mucosa graft harvest", slug: "/docs/foundations/tools/instruments/retractors/mouth-retractors" },
+  { name: "Nasal Speculum", category: "Retractors", namedAfter: "—", use: "Repurposed for deep narrow-field exposure in urethroplasty and dorsal-vein dissection", slug: "/docs/foundations/tools/instruments/retractors/nasal-speculum" },
+  { name: "Otis Bougie-à-Boule", category: "Sounds & Bougies", namedAfter: "Fessenden Nott Otis", use: "Ball-tip urethral sound for calibration and stricture localization", slug: "/docs/foundations/tools/instruments/sounds-bougies/otis-bougie" },
+  { name: "Van Buren Sound", category: "Sounds & Bougies", namedAfter: "William Holme Van Buren", use: "Curved-tip tapered urethral sound; dilation and calibration", slug: "/docs/foundations/tools/instruments/sounds-bougies/van-buren" },
+  { name: "Guyon Sound", category: "Sounds & Bougies", namedAfter: "Jean Casimir Félix Guyon", use: "Curved malleable urethral sound set; atraumatic dilation", slug: "/docs/foundations/tools/instruments/sounds-bougies/guyon" },
+  { name: "Haygrove Sound", category: "Sounds & Bougies", namedAfter: "—", use: "Semicircular sound for posterior urethroplasty; suprapubic to membranous path", slug: "/docs/foundations/tools/instruments/sounds-bougies/haygrove" },
+  { name: "Gelman Urethral Sound", category: "Sounds & Bougies", namedAfter: "—", use: "Contemporary reconstructive urethral sound; graduated sizes", slug: "/docs/foundations/tools/instruments/sounds-bougies/gelman" },
+  { name: "Gorget (Gourget)", category: "Sounds & Bougies", namedAfter: "—", use: "Historical lithotomy instrument; today repurposed for narrow deep urethroplasty exposure (like nasal speculum)", slug: "/docs/foundations/tools/instruments/sounds-bougies/gorget" },
+  { name: "Ravini Lighted Speculum", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Self-retaining lighted urethral speculum; female urethroplasty", slug: "/docs/foundations/tools/instruments/urethral-specialty/ravini" },
+  { name: "Raz-Pereyra Trocar", category: "Urethral & Pelvic Specialty", namedAfter: "Shlomo Raz / Armand Pereyra", use: "Ligature-carrying trocar for pubovaginal fascial sling placement", slug: "/docs/foundations/tools/instruments/urethral-specialty/raz-pereyra" },
+  { name: "Yankauer Suction", category: "Suction", namedAfter: "Sidney Yankauer", use: "Rigid oral / field suction; default for open-wound general suction", slug: "/docs/foundations/tools/instruments/suction/yankauer" },
+  { name: "Poole (Pool) Suction", category: "Suction", namedAfter: "—", use: "Multi-hole perforated abdominal suction; large-volume evacuation", slug: "/docs/foundations/tools/instruments/suction/poole" },
+  { name: "Frazier Suction", category: "Suction", namedAfter: "Charles Frazier", use: "Fine tapered suction with thumb-vent; delicate reconstructive fields", slug: "/docs/foundations/tools/instruments/suction/frazier" },
+  { name: "Dermatome", category: "Graft Harvest", namedAfter: "—", use: "Powered or manual skin-harvesting instrument; calibrated STSG", slug: "/docs/foundations/tools/instruments/graft-harvest/dermatome" },
+];
+
+export const instrumentColumns = [
+  { key: "name", header: "Instrument" },
+  { key: "category", header: "Category", badge: true, badgeColors: {
+    "Needle Holders": "#185FA5",
+    "Tissue Forceps": "#7E57C2",
+    "Clamps": "#C62828",
+    "Cautery & Bipolar": "#E65100",
+    "Retractors": "#2E7D32",
+    "Sounds & Bougies": "#00838F",
+    "Urethral & Pelvic Specialty": "#AD1457",
+    "Suction": "#6A1B9A",
+    "Graft Harvest": "#558B2F",
+  } },
+  { key: "namedAfter", header: "Named After" },
+  { key: "use", header: "Key Use" },
+];
+
+<GenericDatabase
+  data={instruments}
+  columns={instrumentColumns}
+  filterKey="category"
+  filterLabel="Category"
+  entityLabel="instruments"
+/>
+
+---
+
+## Historical Notes
+
+Many of these instruments carry the names of defining figures in reconstructive urology and pelvic surgery — [Richard Turner-Warwick](/docs/roots/surgeons/s-z/richard-turner-warwick), Noble Sproat Heaney, [Gerald H. Jordan](/docs/roots/surgeons/h-r/gerald-jordan), Shlomo Raz, Armand Pereyra, Jean Casimir Félix Guyon, Fessenden Nott Otis, Oscar Huntington Allis, William Wayne Babcock, Emil Theodor Kocher, Owen Wangensteen, August Breisky, Michael DeBakey, Ramón Castroviejo, and Leonard Malis. Their contributions live on in the daily work of the reconstructive tray.
+
+See also: [Needles](/docs/foundations/surgical-principles/needles), [Sutures](/docs/foundations/surgical-principles/sutures), [Surgical Ergonomics](/docs/foundations/surgical-principles/surgical-ergonomics), [Robotics](/docs/foundations/tools/robotics).
