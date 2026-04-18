@@ -1,0 +1,82 @@
+---
+title: Biomaterials
+sidebar_position: 0
+hide_title: true
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Biomaterials
+
+A searchable reference to the biomaterials, grafts, prosthetics, and synthetic adjuncts encountered in functional urology and genitourinary reconstruction — both the materials we implant and the ones patients bring into the clinic after implantation or injection elsewhere.
+
+export const biomaterials = [
+  { name: "Polypropylene Mesh", category: "Synthetic Meshes", examples: "Prolene, Advantage Fit, Gynemesh PS", use: "Midurethral slings, prolapse repair — Type 1 macroporous monofilament is standard", slug: "/docs/foundations/tools/biomaterials/synthetic-meshes/polypropylene" },
+  { name: "Absorbable Synthetic Mesh", category: "Synthetic Meshes", examples: "Vicryl (polyglactin), Vypro (mixed)", use: "Historical / limited role; no clear advantage over native tissue at 2 years", slug: "/docs/foundations/tools/biomaterials/synthetic-meshes/absorbable-mesh" },
+  { name: "Coated / Hybrid Mesh", category: "Synthetic Meshes", examples: "Polypropylene + collagen coating variants", use: "Theoretical reduction in inflammation and erosion — evidence mixed", slug: "/docs/foundations/tools/biomaterials/synthetic-meshes/coated-hybrid-mesh" },
+  { name: "Bulkamid (PAHG)", category: "Urethral Bulking Agents", examples: "Polyacrylamide hydrogel", use: "SUI — 42–70% long-term success; favorable safety profile; no erosions/migration reported", slug: "/docs/foundations/tools/biomaterials/bulking-agents/bulkamid" },
+  { name: "Macroplastique (PDMS)", category: "Urethral Bulking Agents", examples: "Polydimethylsiloxane microparticles", use: "SUI — 21–80% long-term efficacy; broad evidence base", slug: "/docs/foundations/tools/biomaterials/bulking-agents/macroplastique" },
+  { name: "Coaptite", category: "Urethral Bulking Agents", examples: "Calcium hydroxyapatite", use: "SUI — 60–75% efficacy; higher temporary urinary retention (34%)", slug: "/docs/foundations/tools/biomaterials/bulking-agents/coaptite" },
+  { name: "Durasphere", category: "Urethral Bulking Agents", examples: "Carbon-coated zirconium beads", use: "SUI — associated with lymph-node migration and de novo urgency (25%)", slug: "/docs/foundations/tools/biomaterials/bulking-agents/durasphere" },
+  { name: "Urolastic (PDMS-U)", category: "Urethral Bulking Agents", examples: "In-situ polymerizing silicone", use: "SUI — erosion rates up to 24.6% limit use", slug: "/docs/foundations/tools/biomaterials/bulking-agents/urolastic" },
+  { name: "Deflux", category: "Urethral Bulking Agents", examples: "Dextranomer/hyaluronic acid", use: "Primarily VUR endoscopic injection — pediatric urology", slug: "/docs/foundations/tools/biomaterials/bulking-agents/deflux" },
+  { name: "Historical Bulking Agents", category: "Urethral Bulking Agents", examples: "Collagen (Contigen), Teflon, autologous fat, chondrocytes", use: "Largely withdrawn or superseded — safety and efficacy concerns", slug: "/docs/foundations/tools/biomaterials/bulking-agents/historical-agents" },
+  { name: "Porcine Acellular Collagen Matrix", category: "Biological Grafts", examples: "Pelvicol, InteXen LP", use: "Prolapse repair — no clear advantage over native tissue", slug: "/docs/foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen" },
+  { name: "Porcine Small Intestinal Submucosa", category: "Biological Grafts", examples: "Surgisis, Stratasis", use: "Historical prolapse and incontinence applications; most products withdrawn", slug: "/docs/foundations/tools/biomaterials/biological-grafts/porcine-sis" },
+  { name: "Bovine Dermal Graft", category: "Biological Grafts", examples: "Permacol", use: "Prolapse and complex reconstruction — limited current use", slug: "/docs/foundations/tools/biomaterials/biological-grafts/bovine-dermal" },
+  { name: "Autologous Rectus Fascia", category: "Autologous Tissue", examples: "Pubovaginal sling workhorse", use: "Gold-standard fascial sling; complex SUI; mesh-sling salvage", slug: "/docs/foundations/tools/biomaterials/autologous-tissue/rectus-fascia" },
+  { name: "Autologous Fascia Lata", category: "Autologous Tissue", examples: "Thigh fascia harvest", use: "Alternative fascial sling source; longer strip available", slug: "/docs/foundations/tools/biomaterials/autologous-tissue/fascia-lata" },
+  { name: "Bowel Segments (GI)", category: "Autologous Tissue", examples: "Ileum, colon, appendix", use: "Urinary diversion, augmentation cystoplasty, Mitrofanoff, neobladder — the reconstructive workhorse", slug: "/docs/foundations/tools/biomaterials/autologous-tissue/bowel-segments" },
+  { name: "Inflatable Penile Prosthesis", category: "Prosthetics", examples: "AMS 700 CX/LGX, Coloplast Titan", use: "ED unresponsive to medical therapy; silicone cylinders + reservoir + pump", slug: "/docs/foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis" },
+  { name: "Malleable Penile Prosthesis", category: "Prosthetics", examples: "AMS Spectra, Coloplast Genesis", use: "Simpler non-inflatable device; lower dexterity requirement", slug: "/docs/foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis" },
+  { name: "Artificial Urinary Sphincter", category: "Prosthetics", examples: "AMS 800 (gold standard)", use: "Male SUI after prostatectomy — cuff + pressure-regulating balloon + pump", slug: "/docs/foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter" },
+  { name: "Decellularized ECM", category: "Tissue Engineering", examples: "Xenogenic acellular matrices (bladder, small intestine)", use: "Scaffold for tissue engineering — investigational bladder, urethra, ureter", slug: "/docs/foundations/tools/biomaterials/tissue-engineering/decellularized-ecm" },
+  { name: "Synthetic Polymer Scaffolds", category: "Tissue Engineering", examples: "PLA, PBSu, PLA/PBSu blends, PLGA", use: "Biodegradable scaffolds for urethral tissue engineering", slug: "/docs/foundations/tools/biomaterials/tissue-engineering/synthetic-polymer-scaffolds" },
+  { name: "Composite Scaffolds", category: "Tissue Engineering", examples: "Natural + synthetic blends, 3D bioprinted constructs", use: "Next-generation tissue engineering; stem-cell seeded constructs", slug: "/docs/foundations/tools/biomaterials/tissue-engineering/composite-scaffolds" },
+  { name: "SpaceOAR Hydrogel", category: "Adjunct & Specialty", examples: "PEG hydrogel rectal spacer", use: "Injected between prostate and rectum before prostate radiotherapy", slug: "/docs/foundations/tools/biomaterials/adjunct-specialty/spaceoar" },
+  { name: "UroLift (Prostatic Urethral Lift)", category: "Adjunct & Specialty", examples: "Nitinol/stainless steel implants", use: "BPH/BOO — mechanical lateral prostatic lobe retraction", slug: "/docs/foundations/tools/biomaterials/adjunct-specialty/urolift" },
+  { name: "Himplant", category: "Adjunct & Specialty", examples: "Silicone penile shaft implant", use: "Cosmetic penile augmentation — complications land in reconstructive clinic", slug: "/docs/foundations/tools/biomaterials/adjunct-specialty/himplant" },
+  { name: "Penile Pearls", category: "Foreign Bodies (Non-Medical)", examples: "Non-medical implanted beads", use: "Cultural / prison-tattoo practice — infection, erosion, urethral injury", slug: "/docs/foundations/tools/biomaterials/foreign-bodies/penile-pearls" },
+  { name: "Free Silicone Injection", category: "Foreign Bodies (Non-Medical)", examples: "Non-medical injected liquid silicone", use: "Illegal cosmetic injection — chronic granulomas, migration, systemic disease", slug: "/docs/foundations/tools/biomaterials/foreign-bodies/free-silicone" },
+];
+
+export const biomaterialColumns = [
+  { key: "name", header: "Material" },
+  { key: "category", header: "Category", badge: true, badgeColors: {
+    "Synthetic Meshes": "#185FA5",
+    "Urethral Bulking Agents": "#00838F",
+    "Biological Grafts": "#558B2F",
+    "Autologous Tissue": "#2E7D32",
+    "Prosthetics": "#AD1457",
+    "Tissue Engineering": "#7E57C2",
+    "Adjunct & Specialty": "#6A1B9A",
+    "Foreign Bodies (Non-Medical)": "#C62828",
+  } },
+  { key: "examples", header: "Examples / Brands" },
+  { key: "use", header: "Use / Key Note" },
+];
+
+<GenericDatabase
+  data={biomaterials}
+  columns={biomaterialColumns}
+  filterKey="category"
+  filterLabel="Category"
+  entityLabel="biomaterials"
+/>
+
+---
+
+## Organizing Framework
+
+Biomaterials in reconstructive urology span six functional categories — with two additional categories included because they enter the clinic even though they are not reconstructive biomaterials *per se*:
+
+1. **Synthetic meshes** — permanent polypropylene dominates; absorbable and hybrid variants exist
+2. **Urethral bulking agents** — injectable soft-tissue fillers for SUI
+3. **Biological grafts** — xenogenic decellularized collagen matrices (largely fading from prolapse practice)
+4. **Autologous tissue** — the patient's own fascia and bowel; the enduring gold standards
+5. **Prosthetics** — implanted devices (IPP, AUS, malleable prosthesis)
+6. **Tissue engineering scaffolds** — investigational constructs for bladder, urethra, ureter
+7. **Adjunct / specialty** — devices encountered in GU practice that don't fit elsewhere (SpaceOAR, UroLift, Himplant)
+8. **Non-medical foreign bodies** — penile pearls and free silicone, which reconstructive urologists see as complications rather than implanted materials
+
+See also: [Grafts in GU Reconstruction](/docs/foundations/surgical-principles/grafts-gu-reconstruction), [Flaps in GU Reconstruction](/docs/foundations/surgical-principles/flaps-gu-reconstruction), [Reconstructive Ladder](/docs/foundations/surgical-principles/reconstructive-ladder).
