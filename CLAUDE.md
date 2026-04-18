@@ -26,9 +26,8 @@ warwiki/
 │   ├── 04-surgical-techniques/    # → /docs/surgical-techniques
 │   ├── 05-special-populations/    # → /docs/special-populations
 │   ├── 06-journal-club/           # → /docs/journal-club
-│   ├── 07-roots/                  # → /docs/roots (history + surgeon profiles)
-│   ├── 08-resources/              # → /docs/resources
-│   └── 09-hidden-curriculum/      # → /docs/hidden-curriculum (business / finance / billing)
+│   ├── 07-roots/                  # → /docs/roots (history + surgeon profiles) — section label: "History & Lineage"
+│   └── 08-resources/              # → /docs/resources (includes hidden-curriculum/ subfolder)
 ├── src/
 │   ├── css/custom.css             # ALL custom styling — single source of truth
 │   ├── components/
@@ -274,9 +273,11 @@ SUBSPECIALTIES                    // label/color/fullName table for UI
 - **`SurgeonTree`** — lineage tree by dynasty. Accepts optional `subspecialty` prop; renders an empty-state message if the chosen subspecialty has no dynasties.
 - **`SurgeonsExplorer`** — wraps tree + directory with a top-level GURS / URPS tab switcher. Used on the Surgeons & Lineage page.
 
-### The Surgeons & Lineage page
+### The Surgical Genealogy page
 
-`docs/07-roots/surgical-lineage.mdx` (sidebar label: **"Surgeons & Lineage"**) hosts `<SurgeonsExplorer defaultSubspecialty="GURS" />`. The auto-generated "Surgeons" sidebar category (58+ names) is **hidden** via `className: "sidebar-hidden-category"` on `docs/07-roots/surgeons/_category_.json` — all profiles are reached through the Directory on this page.
+`docs/07-roots/surgical-lineage.mdx` (sidebar label: **"Surgical Genealogy"**) hosts `<SurgeonsExplorer defaultSubspecialty="GURS" />`. The auto-generated "Surgeons" sidebar category (58+ names) is **hidden** via `className: "sidebar-hidden-category"` on `docs/07-roots/surgeons/_category_.json` — all profiles are reached through the Directory on this page.
+
+**Critical:** `SurgeonDirectory` and `SurgeonTree` must link using `s.path` (e.g. `h-r/jack-mcaninch`), **not** `s.id` — the alpha-group subfolder is required. Using `s.id` produces 404s.
 
 Surgeon pages live at `docs/07-roots/surgeons/{alpha-group}/{surgeon-name}.mdx` (alpha groups: `a-g/`, `h-r/`, `s-z/`).
 
@@ -360,10 +361,12 @@ Dark mode overrides use `[data-theme='dark']` selectors. Always add dark mode va
 
 Navbar order:
 1. Foundations, Evaluation, Clinical Conditions, Treatment Atlas, Special Populations (left, docSidebar types)
-2. Library dropdown → Journal Club, Roots of Reconstruction, Resources
+2. Library dropdown → **Journal Club**, **Resources**, **History & Lineage** (in that order)
 3. **Search** (Algolia DocSearch)
 4. About → `/about`
 5. GitHub icon (SVG mark, no text) → `className: 'header-github-link'`
+
+Hidden Curriculum is **no longer a top-level dropdown item** — it lives as a subfolder under Resources (`08-resources/hidden-curriculum/`, served by `resourcesSidebar`). The `hiddenCurriculumSidebar` in `sidebars.ts` was removed.
 
 The GitHub icon is pure CSS using a `::before` pseudo-element with an SVG `data:` URI.
 
@@ -461,9 +464,8 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 | Treatment Atlas | `04-surgical-techniques/` | 10 subsections; 04c (urinary diversion) has no index.mdx |
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
-| Roots | `07-roots/` | **Surgeons & Lineage** page uses `<SurgeonsExplorer />` with GURS/URPS tabs; surgeons/ category hidden from sidebar |
-| Resources | `08-resources/` | Textbooks, podcasts, websites, videos, patient resources (billing moved to Hidden Curriculum) |
-| **Hidden Curriculum** | `09-hidden-curriculum/` | **NEW** — Business / finance / operations / billing. In Library navbar dropdown. See Hidden Curriculum section below |
+| History & Lineage | `07-roots/` | Renamed from "Roots of Reconstruction". **Surgical Genealogy** page uses `<SurgeonsExplorer />` with GURS/URPS tabs; surgeons/ category hidden from sidebar |
+| Resources | `08-resources/` | Textbooks, podcasts, websites, videos, patient resources + **Hidden Curriculum subfolder** |
 
 ### Foundations — anatomy-physiology status
 
@@ -484,7 +486,8 @@ Populated: wound-healing, reconstructive-ladder, plastic-surgery-principles, pri
 - **Stubs ready for expansion:** penile-preputial, radial-forearm, anterolateral-thigh, scip, blandy, martius
 
 **Graft subdirectory** — `grafts/` hosts 10 stub pages (hidden category) reachable only via links from the main Grafts article:
-- buccal-mucosa, lingual-mucosa, labial-mucosa, intestinal-segments, penile-preputial-skin, saphenous-vein, posterior-auricular, stsg, ftsg, bladder-mucosa
+- **buccal-mucosa** ← **fully built out** (biological properties, harvest technique, GU applications, named placement techniques table, donor site morbidity, outcomes, comparison with alternatives — 22 citations)
+- lingual-mucosa, labial-mucosa, intestinal-segments, penile-preputial-skin, saphenous-vein, posterior-auricular, stsg, ftsg, bladder-mucosa (stubs)
 
 ### Foundations — Perioperative Care restructured (Temporal + Protocols framework)
 
@@ -507,14 +510,14 @@ All 16 articles are populated. URL paths changed from the old flat structure —
 - **reconstructive-applications.mdx** — by anatomic region (upper tract, bladder, urethra, andrologic microsurgery)
 - **single-port.mdx** — SP incision atlas (periumbilical, mini-Pfannenstiel, midline suprapubic, LAA, SARA) + approaches (transvesical, LAA, SARA, transperitoneal, retroperitoneal, extraperitoneal)
 
-### Hidden Curriculum (NEW section 09)
+### Hidden Curriculum (now under Resources)
 
-`docs/09-hidden-curriculum/` — operational-literacy layer for the reconstructive urologist. In Library navbar dropdown alongside Journal Club / Roots / Resources. Sidebar ID: `hiddenCurriculumSidebar`.
+`docs/08-resources/hidden-curriculum/` — operational-literacy layer for the reconstructive urologist. **No longer a top-level navbar item** — accessible via Library → Resources → Hidden Curriculum. Served by `resourcesSidebar`. URLs changed from `/docs/hidden-curriculum/*` → `/docs/resources/hidden-curriculum/*`.
 
-- **index.mdx** — section landing
-- **overview.mdx** — "Clinical Operator Mindset": three-domain knowledge stack (finance, health systems/policy, operations), metrics vocabulary, knowledge-gap literature evidence
-- **healthcare-finance.mdx** — revenue cycle, RVU decomposition, professional vs facility fees, payer mix, fixed vs variable cost, FFS / bundled / value-based / capitation, hospital administrator functions
-- **billing-coding.mdx** — moved from Resources (`/docs/resources/billing-coding` → `/docs/hidden-curriculum/billing-coding`); CodeSearchTable preserved
+- **index.mdx** — section landing (slug: `/resources/hidden-curriculum`)
+- **overview.mdx** — "Clinical Operator Mindset"
+- **healthcare-finance.mdx** — revenue cycle, RVU decomposition, payment models
+- **billing-coding.mdx** — CPT/ICD-10/modifier reference for GU reconstruction
 
 ---
 
@@ -530,7 +533,7 @@ All 16 articles are populated. URL paths changed from the old flat structure —
 | `docusaurus.config.ts` | Site config, navbar, Algolia block, tagline, `headTags` |
 | `vercel.json` | `cleanUrls: true` + `trailingSlash: false` |
 | `docs/01-foundations/index.mdx` | toc-list + `.toc-links` pattern + `<CurriculumViewer />` |
-| `docs/07-roots/surgical-lineage.mdx` | `<SurgeonsExplorer />` host |
+| `docs/07-roots/surgical-lineage.mdx` | `<SurgeonsExplorer />` host — page title/sidebar label: **"Surgical Genealogy"** |
 | `docs/07-roots/surgeons/_category_.json` | Has `className: sidebar-hidden-category` |
 
 ---
@@ -549,6 +552,17 @@ All 16 articles are populated. URL paths changed from the old flat structure —
 - **Foundations page** — standalone curriculum page deleted; `<CurriculumViewer />` now embedded in the Foundations index page.
 - **Evaluation section** — `history-symptom-assessment.mdx` deleted; Imaging and Ancillary Testing sidebar positions swapped (Imaging now above Ancillary).
 - **Image set** — public-domain / CC-licensed anatomy images downloaded into `static/img/anatomy/` and embedded in the anatomy articles. No caption-only figure blocks — either real image or nothing.
+
+### Session of 2026-04-17
+
+- **Surgeon profile links fixed** — `SurgeonDirectory` and `SurgeonTree` were using `s.id` instead of `s.path`, causing 404s on all profile links. Fixed to use `s.path` (includes alpha-group subfolder).
+- **Library dropdown reordered** — Journal Club → Resources → History & Lineage.
+- **"Roots of Reconstruction" renamed to "History & Lineage"** — `_category_.json`, `index.mdx` title, and navbar label all updated.
+- **"Surgical Lineage" renamed to "Surgical Genealogy"** — `surgical-lineage.mdx` title and sidebar label updated.
+- **Hidden Curriculum moved into Resources** — `09-hidden-curriculum/` deleted; files moved to `08-resources/hidden-curriculum/`; `hiddenCurriculumSidebar` removed from `sidebars.ts`; all internal links updated; Resources index updated.
+- **Surgeon biographies recovered** — McAninch, Jordan, Devine, Zinman bios (commit `579eb75`) were on an unmerged worktree branch; cherry-picked onto main.
+- **Buccal Mucosa Graft article fully built out** — 22 citations; biological properties, harvest technique, donor site management (closure vs nonclosure RCT), GU applications, named placement techniques table (Barbagli/Asopa/Kulkarni/Palminteri), morbidity tables, outcomes by stricture type and lichen sclerosus, comparative data vs lingual mucosa and penile skin grafts.
+- **`bypassPermissions` set globally** — `~/.claude/settings.json` updated; takes effect on next session start.
 
 ### Session of 2026-04-16 — Foundations expansion wave
 
@@ -604,7 +618,11 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 - **Broken links fixed:** `radiation-tissue-effects.mdx` (now points to `clinical-conditions/03d-bladder-disorders/radiation-cystitis` and the `03b`/`03e` stricture articles instead of deleted `05b-oncologic-radiation`). `reconstructive-ladder.mdx` (now points to `tools/biomaterials` instead of `/docs/foundations/biomaterials`). **Build is 100% broken-link-free.**
 - **URL change log** for external-link auditing:
-  - `/docs/resources/billing-coding` → `/docs/hidden-curriculum/billing-coding`
+  - `/docs/hidden-curriculum` → `/docs/resources/hidden-curriculum`
+  - `/docs/hidden-curriculum/overview` → `/docs/resources/hidden-curriculum/overview`
+  - `/docs/hidden-curriculum/healthcare-finance` → `/docs/resources/hidden-curriculum/healthcare-finance`
+  - `/docs/hidden-curriculum/billing-coding` → `/docs/resources/hidden-curriculum/billing-coding`
+  - `/docs/resources/billing-coding` → `/docs/resources/hidden-curriculum/billing-coding`
   - `/docs/foundations/perioperative-care/preoperative/*` → `/docs/foundations/perioperative-care/preoperative-assessment/*`
   - `/docs/foundations/perioperative-care/anesthesia-pain/*` → `/docs/foundations/perioperative-care/intraoperative-care/*`
   - `/docs/foundations/perioperative-care/postoperative/positioning-nerve-injury` → `/docs/foundations/perioperative-care/intraoperative-care/positioning-nerve-injury`
@@ -616,4 +634,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 ---
 
-*Last updated: 2026-04-16*
+*Last updated: 2026-04-17*
