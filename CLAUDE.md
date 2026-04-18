@@ -263,7 +263,7 @@ SUBSPECIALTIES                    // label/color/fullName table for UI
 
 ### Current inventory
 - **~58 GURS surgeons** (pre-existing) + **~20 URPS surgeons** (seeded this session) = ~80 records.
-- **GURS dynasties:** McAninch, Turner-Warwick, Webster, Santucci.
+- **GURS dynasties:** McAninch, Turner-Warwick, Webster, Santucci, **Devine-Jordan School (EVMS)**.
 - **URPS dynasties:** Raz, Nitti, Comiter, Ginsberg (each with confirmed mentor–trainee links: Cohen←Raz, Enemchukwu←Nitti, Burton←Comiter, Rude←Ginsberg).
 
 ### Components
@@ -479,7 +479,7 @@ All articles in `docs/01-foundations/anatomy-physiology/` have been populated (n
 
 ### Foundations — Surgical Principles status
 
-Populated: wound-healing, reconstructive-ladder, plastic-surgery-principles, principles-gu-reconstruction, radiation-tissue-effects, flaps-gu-reconstruction, grafts-gu-reconstruction, **incisions-closure**, **bowel-anastomosis**, **sutures**, **needles**.
+Populated: wound-healing, reconstructive-ladder, plastic-surgery-principles, principles-gu-reconstruction, radiation-tissue-effects, flaps-gu-reconstruction, grafts-gu-reconstruction, **incisions-closure**, **bowel-anastomosis**, **sutures**, **needles**, **surgical-ergonomics**.
 
 **Flap subdirectory** — `flaps/` hosts 11 stub pages (hidden category) reachable only via links from the main Flaps article:
 - **Fully built out:** gracilis, vram, peritoneal, vastus-lateralis, omental
