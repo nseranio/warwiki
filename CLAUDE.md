@@ -510,6 +510,26 @@ All 16 articles are populated. URL paths changed from the old flat structure —
 - **reconstructive-applications.mdx** — by anatomic region (upper tract, bladder, urethra, andrologic microsurgery)
 - **single-port.mdx** — SP incision atlas (periumbilical, mini-Pfannenstiel, midline suprapubic, LAA, SARA) + approaches (transvesical, LAA, SARA, transperitoneal, retroperitoneal, extraperitoneal)
 
+### Special Populations — Trauma &amp; Emergencies: new Intraoperative Consultation subsection
+
+`docs/05-special-populations/05a-trauma-emergencies/intraoperative-consultation/` — the urologist's operational guide to iatrogenic urinary-tract injury during non-urologic surgery. The `index.mdx` is the main comprehensive article (when to get the call, diagnostic maneuvers, organ-by-organ repair, damage-control pathway, prevention, timing outcomes, documentation). 8 references including 2023 WSES IUTI guideline, 2025 ACS Best Practices, Kato/Skokan algorithm, Sylla taTME urethral-injury study.
+
+**Nested under it:** `procedures-causing-gu-injury/` — reference subsection describing the non-urologic operations that generate GU injuries, framed for the reconstructive surgeon. First article is **Cesarean Section** (30 citations — Joel-Cohen vs Pfannenstiel, bladder flap dissection, hysterotomy, uterine closure / niche, vesicouterine fistula / Youssef syndrome, placenta accreta spectrum). Planned additions: hysterectomy, radical hysterectomy, colpopexy, anti-incontinence surgery, colorectal (LAR / APR / taTME), inguinal/pelvic hernia, pelvic trauma.
+
+Structure:
+
+```
+05-special-populations/05a-trauma-emergencies/
+├── (existing flat articles: bladder-trauma, ureteral-trauma, renal-trauma, pfui, ...)
+└── intraoperative-consultation/
+    ├── _category_.json (position 9, link to index)
+    ├── index.mdx                      ← the main article
+    └── procedures-causing-gu-injury/
+        ├── _category_.json (position 99)
+        ├── index.mdx                  ← subsection landing
+        └── cesarean-section.mdx       ← first article (30 refs)
+```
+
 ### Hidden Curriculum (now under Resources)
 
 `docs/08-resources/hidden-curriculum/` — operational-literacy layer for the reconstructive urologist. **No longer a top-level navbar item** — accessible via Library → Resources → Hidden Curriculum. Served by `resourcesSidebar`. URLs changed from `/docs/hidden-curriculum/*` → `/docs/resources/hidden-curriculum/*`.
@@ -552,6 +572,13 @@ All 16 articles are populated. URL paths changed from the old flat structure —
 - **Foundations page** — standalone curriculum page deleted; `<CurriculumViewer />` now embedded in the Foundations index page.
 - **Evaluation section** — `history-symptom-assessment.mdx` deleted; Imaging and Ancillary Testing sidebar positions swapped (Imaging now above Ancillary).
 - **Image set** — public-domain / CC-licensed anatomy images downloaded into `static/img/anatomy/` and embedded in the anatomy articles. No caption-only figure blocks — either real image or nothing.
+
+### Session of 2026-04-18
+
+- **New "Intraoperative Consultation" subsection** added under `05-special-populations/05a-trauma-emergencies/`. Main article is an operational guide to the urologist's role as called-in consultant for iatrogenic GU injury during non-urologic surgery — when to come, diagnostic maneuvers, organ-by-organ repair principles, damage-control ("drain now, fix later"), Skokan algorithm, prevention, timing outcomes, documentation. 8 references (2023 WSES IUTI guideline, 2025 ACS Best Practices, Kato/Skokan chapter, Sylla taTME study).
+- **"Procedures Causing GU Injury" subsection** nested inside Intraoperative Consultation. First article is **Cesarean Section** (30 citations, framed for reconstructive urologist / urogynecologist — technique, parametrial anatomy, bladder and ureteral injury mechanisms, Youssef-syndrome VUF, uterine niche / isthmocele, placenta accreta spectrum).
+- Cesarean-section was initially created under Foundations, then moved here. Conceptual framing: consult scenario (intraoperative-consultation) → source operation (procedures-causing-gu-injury) as a reading path.
+- **Palacios-Jaraquemada 2026 AJOG** cesarean anatomy paper (doi:10.1016/j.ajog.2025.08.012) is cited but not figure-reproduced; figures are copyrighted and require permissions.
 
 ### Session of 2026-04-17
 
@@ -634,4 +661,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 ---
 
-*Last updated: 2026-04-17*
+*Last updated: 2026-04-18*
