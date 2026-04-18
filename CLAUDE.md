@@ -579,6 +579,18 @@ Structure:
 - **"Procedures Causing GU Injury" subsection** nested inside Intraoperative Consultation. First article is **Cesarean Section** (30 citations, framed for reconstructive urologist / urogynecologist — technique, parametrial anatomy, bladder and ureteral injury mechanisms, Youssef-syndrome VUF, uterine niche / isthmocele, placenta accreta spectrum).
 - Cesarean-section was initially created under Foundations, then moved here. Conceptual framing: consult scenario (intraoperative-consultation) → source operation (procedures-causing-gu-injury) as a reading path.
 - **Palacios-Jaraquemada 2026 AJOG** cesarean anatomy paper (doi:10.1016/j.ajog.2025.08.012) is cited but not figure-reproduced; figures are copyrighted and require permissions.
+- **Fistulas section fully revamped** — reorganized `03f-fistulas/` from a flat 5-article structure into three gender buckets: `in-both-genders/` (7 articles), `in-females/` (5 articles), `in-males/` (5 articles). New landing page `03f-fistulas/index.mdx` preserves the cross-cutting complex-fistula framework (staging, tissue interposition, multi-compartment, radiation, key operative principles — content rescued from the deleted `cutaneous-complex.mdx`).
+- Existing 4 articles moved: vesicovaginal, ureterovaginal, rectovaginal → `in-females/`; rectourethral → `in-males/`. Deleted `cutaneous-complex.mdx`.
+- 13 new stubs created (one seeded from UCF content, twelve pure stubs with opening paragraph + skeleton sections + "*Stub — to be built out.*" placeholders matching the flap-stub pattern):
+  - in-both-genders: pyeloenteric, nephropleural, ureterocolonic, colovesical-small-bowel, vesicocutaneous, post-kidney-transplant, vascular-urinary
+  - in-females: vesicouterine (Youssef syndrome, cross-linked to cesarean-section), obstetric
+  - in-males: rectovesical, urethropubic, urethrocutaneous (seeded with UCF content), urethroperineal
+- **URL change log** for external-link auditing:
+  - `/docs/clinical-conditions/03f-fistulas/vesicovaginal` → `.../in-females/vesicovaginal`
+  - `/docs/clinical-conditions/03f-fistulas/ureterovaginal` → `.../in-females/ureterovaginal`
+  - `/docs/clinical-conditions/03f-fistulas/rectovaginal` → `.../in-females/rectovaginal`
+  - `/docs/clinical-conditions/03f-fistulas/rectourethral` → `.../in-males/rectourethral`
+  - `/docs/clinical-conditions/03f-fistulas/cutaneous-complex` → DELETED (content in landing page + `.../in-males/urethrocutaneous`)
 
 ### Session of 2026-04-17
 
