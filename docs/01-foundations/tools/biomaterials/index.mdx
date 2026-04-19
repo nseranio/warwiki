@@ -30,6 +30,12 @@ export const biomaterials = [
   { name: "Inflatable Penile Prosthesis", category: "Prosthetics", examples: "AMS 700 CX/LGX, Coloplast Titan", use: "ED unresponsive to medical therapy; silicone cylinders + reservoir + pump", slug: "/docs/foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis" },
   { name: "Malleable Penile Prosthesis", category: "Prosthetics", examples: "AMS Spectra, Coloplast Genesis", use: "Simpler non-inflatable device; lower dexterity requirement", slug: "/docs/foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis" },
   { name: "Artificial Urinary Sphincter", category: "Prosthetics", examples: "AMS 800 (gold standard)", use: "Male SUI after prostatectomy — cuff + pressure-regulating balloon + pump", slug: "/docs/foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter" },
+  { name: "Medtronic InterStim (SNM)", category: "Neuromodulation Devices", examples: "InterStim II, InterStim Micro, InterStim X", use: "Sacral neuromodulation for UUI, retention, urgency-frequency, fecal incontinence — IPG + S3 tined lead", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/medtronic-interstim" },
+  { name: "Axonics SNM System", category: "Neuromodulation Devices", examples: "r-SNM, F15, R20", use: "Sacral neuromodulation; rechargeable or recharge-free options; 15–20+ year battery life", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/axonics-snm" },
+  { name: "PTNS Systems (Office)", category: "Neuromodulation Devices", examples: "Urgent PC (Laborie), NURO (Medtronic)", use: "Office percutaneous tibial nerve stimulation — 30-min weekly sessions for OAB / UUI", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/ptns-systems" },
+  { name: "eCoin (ITNS)", category: "Neuromodulation Devices", examples: "Valencia Technologies / Boston Scientific", use: "Nickel-sized self-contained implantable tibial stimulator; FDA 2022 for refractory UUI", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/ecoin" },
+  { name: "Revi System (ITNS)", category: "Neuromodulation Devices", examples: "BlueWind Medical", use: "Battery-free subfascial tibial implant + wearable external power; FDA 2023 for UUI", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/revi-system" },
+  { name: "Altaviva (ITNS)", category: "Neuromodulation Devices", examples: "Medtronic", use: "Self-contained tibial nerve implant; FDA 2025; placed under LA without sedation/imaging", slug: "/docs/foundations/tools/biomaterials/neuromodulation-devices/altaviva" },
   { name: "Double-J Ureteral Stent", category: "Ureteral Stents", examples: "Percuflex, Polaris, Universa, BioSoft", use: "Workhorse internal upper-tract drainage after stone, UPJ, ureteral, or transplant surgery", slug: "/docs/foundations/tools/biomaterials/ureteral-stents/double-j-stent" },
   { name: "Nephrostomy Tube (PCN)", category: "Ureteral Stents", examples: "Percutaneous 8–24 Fr pigtail", use: "External renal drainage — urosepsis with obstruction, failed retrograde, PCNL tract", slug: "/docs/foundations/tools/biomaterials/ureteral-stents/nephrostomy-tube" },
   { name: "Nephroureteral Stent", category: "Ureteral Stents", examples: "Internal-external (NUS)", use: "Single catheter with combined external and internal drainage; transition between modes", slug: "/docs/foundations/tools/biomaterials/ureteral-stents/nephroureteral-stent" },
@@ -61,6 +67,7 @@ export const biomaterialColumns = [
     "Biological Grafts": "#558B2F",
     "Autologous Tissue": "#2E7D32",
     "Prosthetics": "#AD1457",
+    "Neuromodulation Devices": "#1A237E",
     "Ureteral Stents": "#1565C0",
     "Urinary Catheters": "#E65100",
     "Surgical Drains": "#5D4037",
@@ -84,7 +91,7 @@ export const biomaterialColumns = [
 
 ## Organizing Framework
 
-Biomaterials in reconstructive urology span nine functional categories — plus two additional categories included because they enter the clinic even though they are not reconstructive biomaterials *per se*:
+Biomaterials in reconstructive urology span ten functional categories — plus two additional categories included because they enter the clinic even though they are not reconstructive biomaterials *per se*:
 
 **Permanent implanted materials:**
 
@@ -92,18 +99,19 @@ Biomaterials in reconstructive urology span nine functional categories — plus 
 2. **Urethral bulking agents** — injectable soft-tissue fillers for SUI
 3. **Biological grafts** — xenogenic decellularized collagen matrices (largely fading from prolapse practice)
 4. **Autologous tissue** — the patient's own fascia and bowel; the enduring gold standards
-5. **Prosthetics** — implanted devices (IPP, AUS, malleable prosthesis)
+5. **Prosthetics** — implanted mechanical devices (IPP, AUS, malleable prosthesis)
+6. **Neuromodulation devices** — sacral neuromodulation (InterStim, Axonics) and tibial nerve stimulation (PTNS systems; implantable eCoin, Revi, Altaviva)
 
 **Temporary / indwelling devices:**
 
-6. **Ureteral stents &amp; upper-tract drainage** — double-J stents, nephrostomy, nephroureteral, and long-term metal stents
-7. **Urinary catheters** — Foley, Council tip, coudé, suprapubic, self-retaining, intermittent
-8. **Surgical drains** — Jackson-Pratt, Blake, Penrose
+7. **Ureteral stents &amp; upper-tract drainage** — double-J stents, nephrostomy, nephroureteral, and long-term metal stents
+8. **Urinary catheters** — Foley, Council tip, coudé, suprapubic, self-retaining, intermittent
+9. **Surgical drains** — Jackson-Pratt, Blake, Penrose
 
 **Investigational and adjunct:**
 
-9. **Tissue engineering scaffolds** — investigational constructs for bladder, urethra, ureter
-10. **Adjunct / specialty** — devices encountered in GU practice that don't fit elsewhere (SpaceOAR, UroLift, Himplant)
-11. **Non-medical foreign bodies** — penile pearls and free silicone, which reconstructive urologists see as complications rather than implanted materials
+10. **Tissue engineering scaffolds** — investigational constructs for bladder, urethra, ureter
+11. **Adjunct / specialty** — devices encountered in GU practice that don't fit elsewhere (SpaceOAR, UroLift, Himplant)
+12. **Non-medical foreign bodies** — penile pearls and free silicone, which reconstructive urologists see as complications rather than implanted materials
 
 See also: [Grafts in GU Reconstruction](/docs/foundations/surgical-principles/grafts-gu-reconstruction), [Flaps in GU Reconstruction](/docs/foundations/surgical-principles/flaps-gu-reconstruction), [Reconstructive Ladder](/docs/foundations/surgical-principles/reconstructive-ladder).
