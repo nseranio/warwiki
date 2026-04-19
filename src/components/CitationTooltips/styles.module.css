@@ -1,0 +1,62 @@
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 0.6rem 0.8rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--warwiki-text, #111827);
+  background: white;
+  border: 1px solid var(--warwiki-border-strong, #C2CBD9);
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12), 0 1px 2px rgba(15, 23, 42, 0.08);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Small pointer on top edge when tooltip is below the citation */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-left: 1px solid var(--warwiki-border-strong, #C2CBD9);
+  border-top: 1px solid var(--warwiki-border-strong, #C2CBD9);
+  transform: rotate(45deg);
+}
+
+/* Pointer on bottom edge when tooltip flips above */
+.tooltip.above::before {
+  top: auto;
+  bottom: -6px;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid var(--warwiki-border-strong, #C2CBD9);
+  border-bottom: 1px solid var(--warwiki-border-strong, #C2CBD9);
+}
+
+[data-theme='dark'] .tooltip {
+  color: #E5E7EB;
+  background: #111827;
+  border-color: #2A3442;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] .tooltip::before {
+  background: #111827;
+  border-color: #2A3442;
+}

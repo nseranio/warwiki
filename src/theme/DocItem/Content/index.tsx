@@ -3,6 +3,7 @@ import Content from '@theme-original/DocItem/Content';
 import type ContentType from '@theme/DocItem/Content';
 import type { WrapperProps } from '@docusaurus/types';
 import ArticleListener from '@site/src/components/ArticleListener';
+import CitationTooltips from '@site/src/components/CitationTooltips';
 
 type Props = WrapperProps<typeof ContentType>;
 
@@ -11,6 +12,7 @@ export default function ContentWrapper(props: Props): JSX.Element {
     <>
       <ArticleListener />
       <Content {...props} />
+      <CitationTooltips />
     </>
   );
 }
