@@ -1,0 +1,155 @@
+.listener {
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.playButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary, #185FA5);
+  background: transparent;
+  border: 1px solid var(--warwiki-border, #DDE3ED);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.playButton:hover {
+  background: rgba(24, 95, 165, 0.05);
+  border-color: var(--ifm-color-primary, #185FA5);
+}
+
+.playButton svg {
+  flex-shrink: 0;
+}
+
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(24, 95, 165, 0.04);
+  border: 1px solid var(--warwiki-border, #DDE3ED);
+  border-radius: 6px;
+  font-size: 0.78rem;
+}
+
+.controlButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  color: var(--ifm-color-primary, #185FA5);
+  background: transparent;
+  border: 1px solid var(--warwiki-border, #DDE3ED);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.controlButton:hover {
+  background: rgba(24, 95, 165, 0.08);
+}
+
+.status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--warwiki-text-muted, #4B5767);
+  padding: 0 0.3rem;
+}
+
+.rateSelector {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 0.4rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--warwiki-border, #DDE3ED);
+}
+
+.rateButton {
+  padding: 0.15rem 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--warwiki-text-muted, #4B5767);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-family: inherit;
+}
+
+.rateButton:hover {
+  color: var(--ifm-color-primary, #185FA5);
+  background: rgba(24, 95, 165, 0.06);
+}
+
+.rateActive {
+  color: var(--ifm-color-primary, #185FA5);
+  background: rgba(24, 95, 165, 0.1);
+  border-color: rgba(24, 95, 165, 0.2);
+}
+
+[data-theme='dark'] .playButton {
+  color: #3691E2;
+  border-color: #2A3442;
+}
+
+[data-theme='dark'] .playButton:hover {
+  background: rgba(54, 145, 226, 0.08);
+  border-color: #3691E2;
+}
+
+[data-theme='dark'] .controls {
+  background: rgba(54, 145, 226, 0.06);
+  border-color: #2A3442;
+}
+
+[data-theme='dark'] .controlButton {
+  color: #3691E2;
+  border-color: #2A3442;
+}
+
+[data-theme='dark'] .status {
+  color: #8494A8;
+}
+
+[data-theme='dark'] .rateSelector {
+  border-left-color: #2A3442;
+}
+
+[data-theme='dark'] .rateButton {
+  color: #8494A8;
+}
+
+[data-theme='dark'] .rateActive {
+  color: #3691E2;
+  background: rgba(54, 145, 226, 0.1);
+  border-color: rgba(54, 145, 226, 0.25);
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-wrap: wrap;
+  }
+  .rateSelector {
+    margin-left: 0;
+    margin-top: 0.25rem;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--warwiki-border, #DDE3ED);
+    padding-top: 0.3rem;
+    width: 100%;
+  }
+}
