@@ -3,6 +3,432 @@ title: Podcasts
 sidebar_position: 3
 ---
 
-# Podcasts
+import PodcastLibrary, { PodcastFeedList } from '@site/src/components/PodcastLibrary';
 
-*Content in development.*
+# Podcast Library
+
+A curated, actively maintained directory of podcasts relevant to functional urology and genitourinary reconstruction. Episodes are grouped by topic and ordered roughly from foundational to specialized within each group.
+
+:::tip How to use
+Search across every episode above, or click a topic chip to jump to that section. Each card links out to the source feed — clicking opens the episode in a new tab.
+:::
+
+export const topics = [
+  { id: 'core', title: 'Core GURS — Introduction to Reconstructive Urology' },
+  { id: 'urethroplasty', title: 'Urethral Stricture & Urethroplasty' },
+  { id: 'diversion', title: 'Urinary Diversion, Cystectomy & Neurogenic Bladder' },
+  { id: 'trauma', title: 'Genitourinary Trauma' },
+  { id: 'aus', title: 'Prosthetics — AUS & Male Incontinence' },
+  { id: 'penile', title: 'Prosthetics — Penile Prosthesis, Peyronie\u2019s & Priapism' },
+  { id: 'gas', title: 'Gender-Affirming Genitourinary Surgery' },
+  { id: 'fpmrs', title: 'Female Pelvic Medicine & Reconstructive Surgery (URPS)' },
+  { id: 'prolapse', title: 'Pelvic Organ Prolapse' },
+  { id: 'pain', title: 'Pelvic Pain, Menopause & GSM, Sexual Medicine' },
+];
+
+export const feeds = [
+  {
+    id: 'backtable-uro',
+    name: 'BackTable Urology',
+    url: 'https://www.backtable.com/shows/urology',
+    color: '#2E7D32',
+    description: 'Case-based, practice-forward podcast covering the breadth of urology with frequent reconstructive episodes.',
+  },
+  {
+    id: 'backtable-obgyn',
+    name: 'BackTable OBGYN',
+    url: 'https://www.backtable.com/shows/obgyn',
+    color: '#00838F',
+    description: 'Sister feed covering urogynecology, prolapse, and pelvic-floor disorders.',
+  },
+  {
+    id: 'sufu',
+    name: 'SUFU Podcast',
+    url: 'https://sufuorg.com/education/podcasts.aspx',
+    color: '#AD1457',
+    description: 'The official URPS / FPMRS podcast — OAB, SUI, prolapse, neurogenic bladder, fellowship spotlights.',
+  },
+  {
+    id: 'aua-university',
+    name: 'AUAUniversity Podcast',
+    url: 'https://auau.auanet.org/podcast',
+    color: '#1565C0',
+    description: 'AUA educational podcast covering guideline updates and annual-meeting highlights.',
+  },
+  {
+    id: 'auanews',
+    name: 'AUANews Inside Tract',
+    url: 'https://www.auanet.org/meetings-and-education/podcast',
+    color: '#6A1B9A',
+    description: 'AUA news feed with interviews and subspecialty roundups.',
+  },
+  {
+    id: 'urology-times',
+    name: 'Urology Times Pearls & Perspectives',
+    url: 'https://audioboom.com/channels/5027208',
+    color: '#E65100',
+    description: 'Short interviews with subspecialty leaders on new guidelines and practice patterns.',
+  },
+  {
+    id: 'urology-care',
+    name: 'Urology Care Podcast',
+    url: 'https://www.urologyhealth.org/healthy-living/urology-care-podcast',
+    color: '#5D4037',
+    description: 'Patient-facing UCF podcast — useful for counseling and patient education handouts.',
+  },
+];
+
+export const episodes = [
+  // ---- Core GURS ----
+  {
+    topic: 'core',
+    title: 'The Genesis of Genitourinary Reconstructive Surgery',
+    feed: 'backtable-uro',
+    ep: '158',
+    url: 'https://www.backtable.com/shows/urology/podcasts/158/the-genesis-of-genitourinary-reconstruction-surgery-gurs',
+    takeaway: 'Origin story of the subspecialty and the founding of the GURS society.',
+  },
+  {
+    topic: 'core',
+    title: 'Reconstructive Urology: Techniques, Training & Career Pathways',
+    feed: 'backtable-uro',
+    ep: '270',
+    url: 'https://www.backtable.com/shows/urology/podcasts/270/reconstructive-urology-techniques-training-career-pathways',
+    takeaway: 'Fellowship landscape, case mix, and how to build a reconstructive practice.',
+  },
+  {
+    topic: 'core',
+    title: 'Legends in Urology: Urethral Reconstruction & More',
+    feed: 'backtable-uro',
+    ep: '122',
+    url: 'https://www.backtable.com/shows/urology/podcasts/122/legends-in-urology-urethral-reconstruction-more',
+    takeaway: 'Historical perspective from senior reconstructive surgeons.',
+  },
+  {
+    topic: 'core',
+    title: 'Robotic Reconstructive Urology',
+    feed: 'backtable-uro',
+    ep: '102',
+    url: 'https://www.backtable.com/shows/urology/podcasts/102/robotic-reconstructive-urology',
+    takeaway: 'Bladder neck reconstruction and the transition from oncologic to reconstructive robotics.',
+  },
+  {
+    topic: 'core',
+    title: 'Robotics in Reconstructive Urology',
+    feed: 'backtable-uro',
+    ep: '260',
+    url: 'https://www.backtable.com/shows/urology/podcasts/260/robotics-in-reconstructive-urology',
+    takeaway: 'Updated take on robotic ureteral and lower-tract reconstruction.',
+  },
+  {
+    topic: 'core',
+    title: 'Global Surgery in Urology: Addressing Reconstructive Needs Worldwide',
+    feed: 'backtable-uro',
+    ep: '281',
+    url: 'https://www.backtable.com/shows/urology/podcasts/281/global-surgery-in-urology-addressing-reconstructive-needs-worldwide',
+    takeaway: 'Access, fistula care, and reconstructive capacity-building in LMICs.',
+  },
+  {
+    topic: 'core',
+    title: 'AUA2025 Key Takeaways: Lower Urinary Tract Reconstruction',
+    feed: 'aua-university',
+    guest: 'George Koch & Kurt McCammon',
+    url: 'https://auau.auanet.org/podcast',
+    takeaway: 'Summary of the biggest LUT reconstruction sessions from AUA2025.',
+  },
+
+  // ---- Urethroplasty ----
+  {
+    topic: 'urethroplasty',
+    title: 'Insights into Urethroplasty & Reconstructive Care',
+    feed: 'backtable-uro',
+    ep: '289',
+    guest: 'Ben Breyer',
+    url: 'https://www.backtable.com/shows/urology/podcasts/289/insights-into-urethroplasty-reconstructive-care',
+    takeaway: 'The shift from transecting to non-transecting urethroplasty; managing radiated strictures.',
+  },
+  {
+    topic: 'urethroplasty',
+    title: 'Antibiotic Stewardship in Reconstructive Urology',
+    feed: 'backtable-uro',
+    ep: '286',
+    guest: 'Joshua Sterling',
+    url: 'https://www.backtable.com/shows/urology/podcasts/286/antibiotic-stewardship-in-reconstructive-urology',
+    takeaway: 'Prophylaxis, the urinary microbiome, and management of chronic catheter patients.',
+  },
+
+  // ---- Diversion / Neurogenic ----
+  {
+    topic: 'diversion',
+    title: 'The Terrible Urological 5: Time for Cystectomy & Urinary Diversion',
+    feed: 'backtable-uro',
+    ep: '161',
+    guest: 'Drew Peterson & Suzette Sutherland',
+    url: 'https://www.backtable.com/shows/urology/podcasts/161/the-terrible-urological-5-time-for-cystectomy-urinary-diversion',
+    takeaway: 'Decision-making across ileal conduit, neobladder, and continent diversion.',
+  },
+  {
+    topic: 'diversion',
+    title: 'Panel: Complex Abdominal Reconstruction (Continent Channels, Ureteral Strictures, Stoma Complications)',
+    feed: 'sufu',
+    guest: 'Khavari, Westney & Stoffel',
+    url: 'https://sufuorg.com/education/podcasts.aspx',
+    takeaway: 'Catheterizable channels, diversion complications, and stoma management.',
+  },
+
+  // ---- Trauma ----
+  {
+    topic: 'trauma',
+    title: 'How to Manage Genitourinary Injuries: ACS Best Practices Explained',
+    feed: 'backtable-uro',
+    ep: '295',
+    guest: 'Niels Johnson',
+    url: 'https://www.backtable.com/shows/urology/podcasts/295/how-to-manage-genitourinary-injuries-acs-best-practices-explained',
+    takeaway: 'The 2025 ACS best-practice guidelines for GU trauma — what changed, why it matters.',
+  },
+  {
+    topic: 'trauma',
+    title: 'Fournier\u2019s Gangrene Management: Timing, Transfers, Best Practices',
+    feed: 'backtable-uro',
+    ep: '272',
+    url: 'https://www.backtable.com/shows/urology/podcasts/272/fourniers-gangrene-management-timing-transfers-best-practices',
+    takeaway: 'Debridement timing, transfer criteria, and multidisciplinary coordination.',
+  },
+  {
+    topic: 'trauma',
+    title: 'Pediatric Genitourinary Trauma',
+    feed: 'backtable-uro',
+    year: '2026',
+    guest: 'Travis Pagliara, Arthi Hannallah & Niccolo Passoni',
+    url: 'https://www.backtable.com/shows/urology',
+    takeaway: 'Pediatric renal, bladder, urethral, and genital injuries.',
+  },
+
+  // ---- AUS / Male Incontinence ----
+  {
+    topic: 'aus',
+    title: 'Evaluation & Management of Post-Prostatectomy Incontinence',
+    feed: 'backtable-uro',
+    ep: '11',
+    guest: 'Steve Hudak',
+    url: 'https://www.backtable.com/shows/urology/podcasts/11/evaluation-management-of-post-prostatectomy-incontinence',
+    takeaway: 'Workup, sling vs AUS decision-making, and the role of pelvic floor therapy.',
+  },
+  {
+    topic: 'aus',
+    title: 'Pelvic Floor Physical Therapy for Early Incontinence Recovery After Prostatectomy',
+    feed: 'backtable-uro',
+    ep: '60',
+    url: 'https://www.backtable.com/shows/urology/podcasts/60/pelvic-floor-physical-therapy-for-early-incontinence-recovery-after-prostatectomy',
+    takeaway: 'Prehab and early-phase pelvic floor PT for post-prostatectomy SUI.',
+  },
+  {
+    topic: 'aus',
+    title: 'AUS Topic Page (curated clips & articles)',
+    feed: 'backtable-uro',
+    url: 'https://www.backtable.com/shows/urology/topics/procedure/artifical-urinary-sphincter-aus-surgery',
+    takeaway: 'Curated collection of AUS-focused episodes and supporting articles.',
+  },
+
+  // ---- Penile Prosthesis / Peyronie's ----
+  {
+    topic: 'penile',
+    title: 'Complex Penile Implants',
+    feed: 'backtable-uro',
+    ep: '23',
+    guest: 'Jonathan Clavell',
+    url: 'https://www.backtable.com/shows/urology/podcasts/23/complex-penile-implants',
+    takeaway: 'AMS 700 vs Coloplast Titan; priapism, Peyronie\u2019s, revisions, and infection management.',
+  },
+  {
+    topic: 'penile',
+    title: 'Peyronie\u2019s Disease Challenges and Solutions',
+    feed: 'backtable-uro',
+    ep: '72',
+    guest: 'Jonathan Clavell',
+    url: 'https://www.backtable.com/shows/urology/podcasts/72/peyronies-disease-challenges-solutions',
+    takeaway: 'Staged evaluation, Xiaflex candidacy, PIEG grafting, implant-at-curvature decisions.',
+  },
+
+  // ---- GAS ----
+  {
+    topic: 'gas',
+    title: 'Genital Gender Affirmation Surgery',
+    feed: 'backtable-uro',
+    ep: '75',
+    guest: 'Richard Santucci',
+    url: 'https://www.backtable.com/shows/urology/podcasts/75/genital-gender-affirmation-surgery',
+    takeaway: 'Vaginoplasty, vulvoplasty, metoidioplasty, phalloplasty, and urethral complication management.',
+  },
+  {
+    topic: 'gas',
+    title: 'Integrating Gender Affirming Care Into Urology',
+    feed: 'backtable-uro',
+    ep: '284',
+    guest: 'Eric Walton & George Koch',
+    url: 'https://www.backtable.com/shows/urology/podcasts/284/integrating-gender-affirming-care-into-urology',
+    takeaway: 'Fellowship pathways, program-building, and multidisciplinary models.',
+  },
+  {
+    topic: 'gas',
+    title: 'Guide to Vaginal Rejuvenation: Myths, Realities, Medical Insights',
+    feed: 'backtable-uro',
+    ep: '285',
+    url: 'https://www.backtable.com/shows/urology/podcasts/285/guide-to-vaginal-rejuvenation-myths-realities-medical-insights',
+    takeaway: 'Adjacent content on vaginal reconstruction and patient counseling.',
+  },
+
+  // ---- FPMRS / URPS ----
+  {
+    topic: 'fpmrs',
+    title: 'SUFU Podcast (full feed)',
+    feed: 'sufu',
+    guest: 'Hosted by Rena Malik, Una Lee, Seth Cohen',
+    url: 'https://sufuorg.com/education/podcasts.aspx',
+    takeaway: 'The official URPS podcast — biweekly on OAB, SUI, prolapse, neurogenic bladder, fellowship spotlights.',
+  },
+  {
+    topic: 'fpmrs',
+    title: 'Male LUTS: Bladder vs Outlet Framework (SUFU-sponsored)',
+    feed: 'backtable-uro',
+    guest: 'Benjamin Brucker, Craig Comiter & Chris Tenggardjaja',
+    url: 'https://www.backtable.com/shows/urology',
+    takeaway: 'Case-based workup, urodynamics, and stepwise management.',
+  },
+  {
+    topic: 'fpmrs',
+    title: 'Overactive Bladder Management Updates & Guidelines',
+    feed: 'backtable-uro',
+    ep: '296',
+    url: 'https://www.backtable.com/shows/urology/podcasts/296/overactive-bladder-management-updates-guidelines',
+    takeaway: 'Contemporary OAB algorithm, third-line options, and updated guideline language.',
+  },
+  {
+    topic: 'fpmrs',
+    title: 'Stress Urinary Incontinence in Women',
+    feed: 'aua-university',
+    url: 'https://auau.auanet.org/podcast',
+    takeaway: 'AUAUniversity deep-dive on workup and surgical decision-making for female SUI.',
+  },
+  {
+    topic: 'fpmrs',
+    title: 'AUA2025 Key Takeaways: Female Urology Highlights',
+    feed: 'aua-university',
+    url: 'https://auau.auanet.org/podcast',
+    takeaway: 'The female-urology session summary from AUA2025.',
+  },
+  {
+    topic: 'fpmrs',
+    title: 'AUA/CUA/SUFU Guidelines: Recurrent Uncomplicated UTI in Women (2025)',
+    feed: 'aua-university',
+    guest: 'Lenore Ackerman & Melissa Kaufman',
+    url: 'https://auau.auanet.org/podcast',
+    takeaway: 'Walk-through of the updated rUTI guideline.',
+  },
+
+  // ---- Prolapse ----
+  {
+    topic: 'prolapse',
+    title: 'Pelvic Organ Prolapse: Surgical Decision Making',
+    feed: 'aua-university',
+    url: 'https://auau.auanet.org/podcast',
+    takeaway: 'Indications, compartment-based thinking, and mesh vs native tissue.',
+  },
+  {
+    topic: 'prolapse',
+    title: 'Pelvic Organ Prolapse: Evaluation & Repair',
+    feed: 'backtable-obgyn',
+    url: 'https://www.backtable.com/shows/obgyn',
+    takeaway: 'Clinical evaluation workflow and surgical options overview.',
+  },
+  {
+    topic: 'prolapse',
+    title: 'Mesh vs Native Tissue Repair in Prolapse',
+    feed: 'backtable-obgyn',
+    url: 'https://www.backtable.com/shows/obgyn',
+    takeaway: 'Evidence comparison and contemporary practice patterns.',
+  },
+  {
+    topic: 'prolapse',
+    title: 'Multidisciplinary Approaches to Pelvic Floor Disorders',
+    feed: 'backtable-obgyn',
+    ep: '107',
+    url: 'https://www.backtable.com/shows/obgyn/podcasts/107/multidisciplinary-approaches-to-pelvic-floor-disorders',
+    takeaway: 'Team-based pelvic floor care across urology, urogyn, colorectal, and PT.',
+  },
+  {
+    topic: 'prolapse',
+    title: 'Treating Urogynecologic Frailty: Perioperative Strategies for Surgeons',
+    feed: 'backtable-obgyn',
+    ep: '108',
+    url: 'https://www.backtable.com/shows/obgyn/podcasts/108/treating-urogynecologic-frailty-perioperative-strategies-for-surgeons',
+    takeaway: 'Frailty assessment and perioperative optimization in urogyn surgery.',
+  },
+  {
+    topic: 'prolapse',
+    title: 'Pelvic Organ Prolapse Explained (patient-facing)',
+    feed: 'urology-care',
+    url: 'https://www.urologyhealth.org/healthy-living/urology-care-podcast',
+    takeaway: 'Patient-level explanation — useful for counseling and patient-handout prep.',
+  },
+
+  // ---- Pelvic Pain / GSM / Sexual Medicine ----
+  {
+    topic: 'pain',
+    title: 'Male Chronic Pelvic Pain (2025 AUA Guidelines)',
+    feed: 'backtable-uro',
+    guest: 'Susan MacDonald & George Koch',
+    url: 'https://www.backtable.com/shows/urology',
+    takeaway: 'The first-ever AUA male chronic pelvic pain guideline.',
+  },
+  {
+    topic: 'pain',
+    title: 'Evaluating Hormone Therapy in Menopause Management',
+    feed: 'backtable-uro',
+    ep: '251',
+    url: 'https://www.backtable.com/shows/urology/podcasts/251/evaluating-hormone-therapy-in-menopause-management',
+    takeaway: 'Contemporary HRT framework relevant to GSM and GU symptoms.',
+  },
+  {
+    topic: 'pain',
+    title: 'Pearls & Perspectives: GSM and Pelvic Pain',
+    feed: 'urology-times',
+    guest: 'Rachel Rubin',
+    url: 'https://audioboom.com/channels/5027208',
+    takeaway: 'New AUA/SUFU/AUGS/Menopause Society/ISSWSH guideline on GSM.',
+  },
+  {
+    topic: 'pain',
+    title: 'Pearls & Perspectives: Reconstruction Beyond the OR',
+    feed: 'urology-times',
+    guest: 'Ryan Terlecki',
+    url: 'https://audioboom.com/channels/5027208',
+    takeaway: 'Buried penis, wellness interventions, and holistic reconstructive models.',
+  },
+  {
+    topic: 'pain',
+    title: 'Pearls & Perspectives: Male Chronic Pelvic Pain',
+    feed: 'urology-times',
+    guest: 'Susan MacDonald',
+    url: 'https://audioboom.com/channels/5027208',
+    takeaway: 'Deeper dive into the guideline, PFPT-first approach, chronic scrotal pain.',
+  },
+];
+
+<PodcastLibrary episodes={episodes} topics={topics} feeds={feeds} />
+
+---
+
+## Full Feeds Worth Subscribing To
+
+When a specific episode isn't what you're after, subscribe to the whole feed and let new relevant episodes arrive automatically.
+
+<PodcastFeedList feeds={feeds} />
+
+---
+
+## Contributing
+
+Suggest new episodes by editing `docs/08-resources/podcasts.mdx` — each entry needs title, feed id, URL, topic id, and a one-line takeaway. Topic and feed IDs are defined at the top of the file.
+
+*Last updated: April 2026.*
