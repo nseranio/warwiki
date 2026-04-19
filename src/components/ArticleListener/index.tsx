@@ -41,6 +41,85 @@ async function sha256(text: string): Promise<string> {
     .join('');
 }
 
+// Section metadata — maps each chapter label to its chunk index range.
+interface SectionMeta {
+  title: string;
+  startChunkIndex: number;
+  endChunkIndex: number; // inclusive
+}
+
+// H2 titles whose section should be excluded from audio (references, further reading).
+const EXCLUDED_SECTION_REGEX = /^(references?|bibliography|further reading|citations?)(?:[\s#]|$)/i;
+
+// Walk the rendered article DOM and produce ordered sections, each with a
+// human-readable title and its text. The first (pre-H2) block becomes
+// "Introduction". Excluded sections (References) are dropped entirely.
+function extractSections(): Array<{ title: string; text: string }> {
+  const content = document.querySelector('article .markdown') as HTMLElement | null;
+  if (!content) return [];
+
+  const clone = content.cloneNode(true) as HTMLElement;
+  clone
+    .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button, .hash-link')
+    .forEach((n) => n.remove());
+  clone.querySelectorAll('td, th').forEach((cell) => {
+    cell.textContent = (cell.textContent || '') + '. ';
+  });
+
+  const sections: Array<{ title: string; text: string }> = [];
+  let currentTitle = 'Introduction';
+  let currentBuf: string[] = [];
+  let skipping = false;
+
+  const flush = () => {
+    if (skipping) return;
+    const text = currentBuf.join(' ').replace(/\s+/g, ' ').trim();
+    if (text) sections.push({ title: currentTitle, text });
+  };
+
+  for (const node of Array.from(clone.children)) {
+    const el = node as HTMLElement;
+    if (el.tagName === 'H2') {
+      flush();
+      const title = (el.textContent || '').trim();
+      if (EXCLUDED_SECTION_REGEX.test(title)) {
+        skipping = true;
+        currentTitle = title;
+        currentBuf = [];
+        continue;
+      }
+      skipping = false;
+      currentTitle = title || 'Section';
+      currentBuf = [];
+      continue;
+    }
+    if (skipping) continue;
+    const text = (el.textContent || '').trim();
+    if (text) currentBuf.push(text);
+  }
+  flush();
+
+  return sections;
+}
+
+// Given an ordered list of sections, produce a flat chunk array plus the
+// section-to-chunk-index mapping for chapter navigation.
+function buildChunkPlan(sections: Array<{ title: string; text: string }>): {
+  chunks: string[];
+  meta: SectionMeta[];
+} {
+  const chunks: string[] = [];
+  const meta: SectionMeta[] = [];
+  for (const s of sections) {
+    const start = chunks.length;
+    const sub = chunkText(s.text);
+    if (!sub.length) continue;
+    chunks.push(...sub);
+    meta.push({ title: s.title, startChunkIndex: start, endChunkIndex: chunks.length - 1 });
+  }
+  return { chunks, meta };
+}
+
 // Split at sentence boundaries, keeping each chunk ≤ maxLen
 function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
   const sentences = text.match(/[^.!?]+[.!?]+|\s*[^.!?]+$/g) || [text];
@@ -149,13 +228,17 @@ export default function ArticleListener(): JSX.Element | null {
   const [model, setModel] = useState<Model>('tts-1');
   const [usingFallback, setUsingFallback] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [showChapters, setShowChapters] = useState(false);
   const [chunkProgress, setChunkProgress] = useState<{ current: number; total: number } | null>(null);
+  const [sections, setSections] = useState<SectionMeta[]>([]);
+  const [currentSection, setCurrentSection] = useState<number>(0);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const chunkPromisesRef = useRef<Promise<Blob>[]>([]);
   const chunkUrlsRef = useRef<Map<number, string>>(new Map());
   const currentIndexRef = useRef<number>(0);
   const cancelledRef = useRef<boolean>(false);
+  const sectionMetaRef = useRef<SectionMeta[]>([]);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -192,17 +275,12 @@ export default function ArticleListener(): JSX.Element | null {
     };
   }, []);
 
-  const extractText = useCallback((): string => {
-    const content = document.querySelector('article .markdown') as HTMLElement | null;
-    if (!content) return '';
-    const clone = content.cloneNode(true) as HTMLElement;
-    clone
-      .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button')
-      .forEach((n) => n.remove());
-    clone.querySelectorAll('td, th').forEach((cell) => {
-      cell.textContent = (cell.textContent || '') + '. ';
-    });
-    return (clone.textContent || '').replace(/\s+/g, ' ').trim();
+  // Walk the article DOM, produce sections + a flat chunk plan.
+  const planArticle = useCallback((): { chunks: string[]; meta: SectionMeta[]; rawText: string } => {
+    const s = extractSections();
+    const { chunks, meta } = buildChunkPlan(s);
+    const rawText = s.map((x) => x.text).join(' ');
+    return { chunks, meta, rawText };
   }, []);
 
   const disposeQueue = useCallback(() => {
@@ -233,6 +311,13 @@ export default function ArticleListener(): JSX.Element | null {
       }
 
       setChunkProgress({ current: i + 1, total: chunkPromisesRef.current.length });
+
+      // Update current-section highlight based on this chunk's section membership.
+      const meta = sectionMetaRef.current;
+      if (meta.length) {
+        const idx = meta.findIndex((m) => i >= m.startChunkIndex && i <= m.endChunkIndex);
+        if (idx >= 0) setCurrentSection(idx);
+      }
 
       // If this chunk's audio isn't ready yet, show loading while we wait
       if (!chunkUrlsRef.current.has(i)) setState('loading');
@@ -284,15 +369,18 @@ export default function ArticleListener(): JSX.Element | null {
   );
 
   const startCloudPlayback = useCallback(
-    (text: string) => {
+    (plan: { chunks: string[]; meta: SectionMeta[]; rawText: string }, startIndex = 0) => {
       cancelledRef.current = false;
       setErrorMsg('');
       setUsingFallback(false);
 
-      const chunks = chunkText(text);
+      const { chunks, meta, rawText } = plan;
       if (!chunks.length) return;
 
       disposeQueue();
+      sectionMetaRef.current = meta;
+      setSections(meta);
+
       // Fire all fetches in parallel up front. Each becomes available as it resolves.
       chunkPromisesRef.current = chunks.map((c) =>
         fetchChunkAudio(c, voice, model).catch((err) => {
@@ -303,13 +391,16 @@ export default function ArticleListener(): JSX.Element | null {
 
       // Start playing chunk 0 as soon as its promise resolves.
       // If all fetches fail, fall back to speechSynthesis.
-      chunkPromisesRef.current[0].catch(() => {
+      // Only the first-chunk promise can trigger the fallback. Later chunks
+      // can still recover via error-bar surfacing inside playIndex.
+      const fallbackChunkIndex = startIndex;
+      chunkPromisesRef.current[fallbackChunkIndex].catch(() => {
         if (cancelledRef.current) return;
         if (typeof window !== 'undefined' && window.speechSynthesis) {
           setUsingFallback(true);
           setState('playing');
           setChunkProgress(null);
-          speakFallback(text, rate, () => {
+          speakFallback(rawText, rate, () => {
             setState('idle');
             setUsingFallback(false);
           });
@@ -319,7 +410,8 @@ export default function ArticleListener(): JSX.Element | null {
         }
       });
 
-      playIndex(0);
+      currentIndexRef.current = startIndex;
+      playIndex(startIndex);
     },
     [voice, model, rate, playIndex, disposeQueue],
   );
@@ -354,10 +446,32 @@ export default function ArticleListener(): JSX.Element | null {
     setState('loading');
     setChunkProgress(null);
 
-    const text = extractText();
-    if (!text) return;
-    startCloudPlayback(text);
-  }, [state, usingFallback, extractText, startCloudPlayback]);
+    const plan = planArticle();
+    if (!plan.chunks.length) return;
+    startCloudPlayback(plan, 0);
+  }, [state, usingFallback, planArticle, startCloudPlayback]);
+
+  const jumpToSection = useCallback(
+    (sectionIdx: number) => {
+      const plan = planArticle();
+      const target = plan.meta[sectionIdx];
+      if (!target) return;
+      setShowChapters(false);
+      setState('loading');
+      setChunkProgress(null);
+      // Re-prime the Audio element while we're still in the click-gesture window.
+      if (!audioRef.current) audioRef.current = new Audio();
+      try {
+        audioRef.current.src = SILENT_MP3;
+        const p = audioRef.current.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      } catch {
+        /* */
+      }
+      startCloudPlayback(plan, target.startChunkIndex);
+    },
+    [planArticle, startCloudPlayback],
+  );
 
   const handlePause = useCallback(() => {
     if (usingFallback) {
@@ -479,6 +593,20 @@ export default function ArticleListener(): JSX.Element | null {
               </button>
             ))}
           </div>
+          {sections.length > 1 && !usingFallback && (
+            <button
+              type="button"
+              onClick={() => setShowChapters((c) => !c)}
+              className={`${styles.controlButton} ${showChapters ? styles.active : ''}`}
+              aria-label="Chapters"
+              aria-expanded={showChapters}
+              title="Jump to section"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z" />
+              </svg>
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setShowSettings((s) => !s)}
@@ -505,6 +633,23 @@ export default function ArticleListener(): JSX.Element | null {
           >
             Dismiss
           </button>
+        </div>
+      )}
+      {isActive && showChapters && sections.length > 1 && !usingFallback && (
+        <div className={styles.chaptersPanel} role="list" aria-label="Chapter list">
+          {sections.map((s, i) => (
+            <button
+              key={`${i}-${s.title}`}
+              type="button"
+              role="listitem"
+              onClick={() => jumpToSection(i)}
+              className={`${styles.chapterButton} ${i === currentSection ? styles.chapterActive : ''}`}
+              aria-current={i === currentSection ? 'true' : undefined}
+            >
+              <span className={styles.chapterNumber}>{i + 1}</span>
+              <span className={styles.chapterTitle}>{s.title}</span>
+            </button>
+          ))}
         </div>
       )}
       {isActive && showSettings && (
