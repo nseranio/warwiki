@@ -122,6 +122,12 @@ async function fetchChunkAudio(text: string, voice: Voice, model: Model): Promis
   return blob;
 }
 
+// Tiny silent MP3 used to "unlock" an Audio element during a user gesture,
+// working around Chrome/Safari autoplay restrictions that otherwise reject
+// a .play() call made after an awaited fetch.
+const SILENT_MP3 =
+  'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA//uQwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAABIADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA//////////////////////////////////////////////////////////////////8AAAAATGF2YzU4LjEzNAAAAAAAAAAAAAAAACQCgAAAAAAAAAEg4wPBn8AAAAAAAAAAAAAAAAAAAAAA//sQxAADwAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxCQDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxEYDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxGgDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxIoDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxKwDwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxM4DwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQxPADwAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+
 // Browser-native fallback
 function speakFallback(text: string, rate: number, onEnd: () => void): void {
   const synth = window.speechSynthesis;
@@ -143,10 +149,12 @@ export default function ArticleListener(): JSX.Element | null {
   const [model, setModel] = useState<Model>('tts-1');
   const [usingFallback, setUsingFallback] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [chunkProgress, setChunkProgress] = useState<{ current: number; total: number } | null>(null);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const queueRef = useRef<string[]>([]);
-  const queueIndexRef = useRef<number>(0);
+  const chunkPromisesRef = useRef<Promise<Blob>[]>([]);
+  const chunkUrlsRef = useRef<Map<number, string>>(new Map());
+  const currentIndexRef = useRef<number>(0);
   const cancelledRef = useRef<boolean>(false);
 
   useEffect(() => {
@@ -177,8 +185,9 @@ export default function ArticleListener(): JSX.Element | null {
         audioRef.current.pause();
         audioRef.current.src = '';
       }
-      queueRef.current.forEach((url) => URL.revokeObjectURL(url));
-      queueRef.current = [];
+      chunkUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+      chunkUrlsRef.current.clear();
+      chunkPromisesRef.current = [];
       if (window.speechSynthesis) window.speechSynthesis.cancel();
     };
   }, []);
@@ -197,25 +206,62 @@ export default function ArticleListener(): JSX.Element | null {
   }, []);
 
   const disposeQueue = useCallback(() => {
-    queueRef.current.forEach((url) => URL.revokeObjectURL(url));
-    queueRef.current = [];
-    queueIndexRef.current = 0;
+    chunkUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+    chunkUrlsRef.current.clear();
+    chunkPromisesRef.current = [];
+    currentIndexRef.current = 0;
+  }, []);
+
+  // Await chunk i's promise, create an object URL, cache it, return the URL.
+  const getChunkUrl = useCallback(async (i: number): Promise<string> => {
+    const existing = chunkUrlsRef.current.get(i);
+    if (existing) return existing;
+    const blob = await chunkPromisesRef.current[i];
+    const url = URL.createObjectURL(blob);
+    chunkUrlsRef.current.set(i, url);
+    return url;
   }, []);
 
   const playIndex = useCallback(
-    (i: number) => {
+    async (i: number) => {
       if (cancelledRef.current) return;
-      if (i >= queueRef.current.length) {
+      if (i >= chunkPromisesRef.current.length) {
         setState('idle');
+        setChunkProgress(null);
         disposeQueue();
         return;
       }
+
+      setChunkProgress({ current: i + 1, total: chunkPromisesRef.current.length });
+
+      // If this chunk's audio isn't ready yet, show loading while we wait
+      if (!chunkUrlsRef.current.has(i)) setState('loading');
+
+      let url: string;
+      try {
+        url = await getChunkUrl(i);
+      } catch (err: any) {
+        // Handled centrally in startCloudPlayback's fallback path on chunk 0.
+        // On chunks >0 (mid-article failure), surface as error.
+        if (cancelledRef.current) return;
+        if (i === 0) {
+          // startCloudPlayback's .catch handler owns fallback for chunk 0 —
+          // silently bail here so we don't double-set error state.
+          return;
+        }
+        setState('error');
+        setErrorMsg(err?.message || 'Audio chunk failed');
+        disposeQueue();
+        return;
+      }
+      if (cancelledRef.current) return;
+
       if (!audioRef.current) audioRef.current = new Audio();
       const audio = audioRef.current;
-      audio.src = queueRef.current[i];
+      audio.src = url;
       audio.playbackRate = rate;
       audio.onended = () => {
-        queueIndexRef.current = i + 1;
+        currentIndexRef.current = i + 1;
         playIndex(i + 1);
       };
       audio.onerror = () => {
@@ -223,46 +269,57 @@ export default function ArticleListener(): JSX.Element | null {
         setErrorMsg('Audio playback failed');
         disposeQueue();
       };
+      setState('playing');
       audio.play().catch((err) => {
+        // If autoplay is rejected, surface a friendly error and stop.
         setState('error');
-        setErrorMsg(err?.message || 'Audio play failed');
+        setErrorMsg(
+          err?.message?.includes('user') || err?.name === 'NotAllowedError'
+            ? 'Browser blocked autoplay — click Listen again.'
+            : err?.message || 'Audio play failed',
+        );
       });
     },
-    [rate, disposeQueue],
+    [rate, disposeQueue, getChunkUrl],
   );
 
   const startCloudPlayback = useCallback(
-    async (text: string) => {
+    (text: string) => {
       cancelledRef.current = false;
-      setState('loading');
       setErrorMsg('');
       setUsingFallback(false);
 
       const chunks = chunkText(text);
+      if (!chunks.length) return;
 
-      try {
-        const blobs = await Promise.all(chunks.map((c) => fetchChunkAudio(c, voice, model)));
+      disposeQueue();
+      // Fire all fetches in parallel up front. Each becomes available as it resolves.
+      chunkPromisesRef.current = chunks.map((c) =>
+        fetchChunkAudio(c, voice, model).catch((err) => {
+          throw err;
+        }),
+      );
+      currentIndexRef.current = 0;
+
+      // Start playing chunk 0 as soon as its promise resolves.
+      // If all fetches fail, fall back to speechSynthesis.
+      chunkPromisesRef.current[0].catch(() => {
         if (cancelledRef.current) return;
-
-        disposeQueue();
-        queueRef.current = blobs.map((b) => URL.createObjectURL(b));
-        queueIndexRef.current = 0;
-
-        setState('playing');
-        playIndex(0);
-      } catch (err: any) {
         if (typeof window !== 'undefined' && window.speechSynthesis) {
           setUsingFallback(true);
           setState('playing');
+          setChunkProgress(null);
           speakFallback(text, rate, () => {
             setState('idle');
             setUsingFallback(false);
           });
         } else {
           setState('error');
-          setErrorMsg(err?.message || 'TTS unavailable');
+          setErrorMsg('TTS unavailable');
         }
-      }
+      });
+
+      playIndex(0);
     },
     [voice, model, rate, playIndex, disposeQueue],
   );
@@ -277,6 +334,26 @@ export default function ArticleListener(): JSX.Element | null {
       setState('playing');
       return;
     }
+
+    // Synchronously unlock the Audio element while still inside the user
+    // gesture. Priming with a silent data URL prevents the NotAllowedError
+    // when we later assign the real src after an awaited fetch.
+    if (!audioRef.current) audioRef.current = new Audio();
+    try {
+      audioRef.current.src = SILENT_MP3;
+      const playPromise = audioRef.current.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+          /* swallow autoplay errors on the silent primer */
+        });
+      }
+    } catch {
+      /* noop — element priming failed but we'll still try the real play */
+    }
+
+    setState('loading');
+    setChunkProgress(null);
+
     const text = extractText();
     if (!text) return;
     startCloudPlayback(text);
@@ -376,7 +453,17 @@ export default function ArticleListener(): JSX.Element | null {
             </svg>
           </button>
           <span className={styles.status}>
-            {isLoading ? 'Loading…' : isPaused ? 'Paused' : usingFallback ? 'Playing (fallback)' : 'Playing'}
+            {isLoading
+              ? chunkProgress
+                ? `Loading ${chunkProgress.current}/${chunkProgress.total}…`
+                : 'Loading…'
+              : isPaused
+                ? 'Paused'
+                : usingFallback
+                  ? 'Playing (fallback)'
+                  : chunkProgress && chunkProgress.total > 1
+                    ? `Playing ${chunkProgress.current}/${chunkProgress.total}`
+                    : 'Playing'}
           </span>
           <div className={styles.rateSelector} role="group" aria-label="Playback speed">
             {[1.0, 1.25, 1.5, 1.75].map((r) => (
