@@ -1,198 +1,347 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './styles.module.css';
 
-const STORAGE_KEY = 'warwiki-tts-voice-name';
+/**
+ * ArticleListener — cloud TTS (OpenAI) with browser-TTS fallback.
+ *
+ * Behavior:
+ *   1. On play, extract the article text and chunk it into ≤3500-char pieces
+ *      at sentence boundaries.
+ *   2. Fetch each chunk's audio from /api/tts in parallel, cached via the
+ *      browser Cache API keyed by SHA-256(model|voice|text).
+ *   3. Play chunks sequentially via an HTMLAudioElement; advance on 'ended'.
+ *   4. On any API failure or missing API key, fall back to native
+ *      speechSynthesis so the feature still works without cloud backing.
+ */
 
-// macOS novelty / musical voices — exclude from the picker
-const NOVELTY_VOICE_REGEX =
-  /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Junior|Organ|Pipe Organ|Ralph|Superstar|Trinoids|Whisper|Wobble|Zarvox)\b/i;
+const VOICE_STORAGE_KEY = 'warwiki-tts-voice';
+const MODEL_STORAGE_KEY = 'warwiki-tts-model';
+const CACHE_NAME = 'warwiki-tts-v1';
+const MAX_CHUNK_CHARS = 3500;
+const API_ENDPOINT = '/api/tts';
 
-/** Score a voice — higher is better. Used to pick a smart default. */
-function scoreVoice(v: SpeechSynthesisVoice): number {
-  let score = 0;
-  const name = v.name;
-  const lang = v.lang || '';
+type Voice = 'alloy' | 'echo' | 'fable' | 'onyx' | 'nova' | 'shimmer';
+type Model = 'tts-1' | 'tts-1-hd';
 
-  // Strongly prefer English
-  if (lang.startsWith('en-')) score += 100;
-  else if (lang.startsWith('en')) score += 80;
-  else score -= 1000; // non-English disqualified
+const VOICES: { id: Voice; label: string; description: string }[] = [
+  { id: 'nova', label: 'Nova', description: 'Professional female — default' },
+  { id: 'shimmer', label: 'Shimmer', description: 'Soft female' },
+  { id: 'alloy', label: 'Alloy', description: 'Neutral' },
+  { id: 'echo', label: 'Echo', description: 'Male, measured' },
+  { id: 'fable', label: 'Fable', description: 'British male' },
+  { id: 'onyx', label: 'Onyx', description: 'Deep male' },
+];
 
-  if (lang === 'en-US') score += 5;
-
-  // Neural / natural voices are the big quality jump
-  if (/neural/i.test(name)) score += 60;
-  if (/natural/i.test(name)) score += 55;
-  if (/online/i.test(name)) score += 40; // Microsoft Online (Natural) voices
-
-  // Apple tiered voices
-  if (/\(Premium\)/i.test(name)) score += 50;
-  if (/\(Enhanced\)/i.test(name)) score += 40;
-
-  // Chrome's Google voices
-  if (/^Google /i.test(name)) score += 30;
-
-  // Known-good OS default voices
-  if (/Samantha/i.test(name)) score += 15;
-  if (/Alex/i.test(name)) score += 15;
-  if (/Karen|Daniel|Moira|Tessa/i.test(name)) score += 10;
-  if (/Ava|Allison|Susan|Tom|Nicky/i.test(name)) score += 10;
-
-  if (NOVELTY_VOICE_REGEX.test(name)) score -= 500;
-
-  if (v.localService) score += 2;
-
-  return score;
+// SHA-256 hex digest (SubtleCrypto — browser-only)
+async function sha256(text: string): Promise<string> {
+  const buf = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
 }
 
-/** Filter to voices the user might actually want to listen to. */
-function isListenableVoice(v: SpeechSynthesisVoice): boolean {
-  const lang = v.lang || '';
-  if (!lang.startsWith('en')) return false;
-  if (NOVELTY_VOICE_REGEX.test(v.name)) return false;
-  return true;
+// Split at sentence boundaries, keeping each chunk ≤ maxLen
+function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
+  const sentences = text.match(/[^.!?]+[.!?]+|\s*[^.!?]+$/g) || [text];
+  const chunks: string[] = [];
+  let current = '';
+
+  for (const raw of sentences) {
+    const sentence = raw.trim();
+    if (!sentence) continue;
+
+    if (sentence.length > maxLen) {
+      if (current) {
+        chunks.push(current.trim());
+        current = '';
+      }
+      let remaining = sentence;
+      while (remaining.length > maxLen) {
+        const cut = remaining.lastIndexOf(' ', maxLen);
+        const split = cut > 0 ? cut : maxLen;
+        chunks.push(remaining.slice(0, split).trim());
+        remaining = remaining.slice(split);
+      }
+      current = remaining;
+      continue;
+    }
+
+    if (current.length + sentence.length + 1 > maxLen) {
+      chunks.push(current.trim());
+      current = sentence;
+    } else {
+      current = current ? current + ' ' + sentence : sentence;
+    }
+  }
+
+  if (current.trim()) chunks.push(current.trim());
+  return chunks;
+}
+
+// Fetch one chunk's audio as a Blob, with Cache API read-through
+async function fetchChunkAudio(text: string, voice: Voice, model: Model): Promise<Blob> {
+  const hash = await sha256(`${model}|${voice}|${text}`);
+  const cacheKey = `/tts-audio/${hash}.mp3`;
+
+  if ('caches' in window) {
+    try {
+      const cache = await caches.open(CACHE_NAME);
+      const hit = await cache.match(cacheKey);
+      if (hit) return await hit.blob();
+    } catch {
+      /* cache unavailable — fall through */
+    }
+  }
+
+  const response = await fetch(API_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, voice, model }),
+  });
+
+  if (!response.ok) {
+    const payload = await response.json().catch(() => ({ error: `HTTP ${response.status}` }));
+    throw new Error(payload.error || `TTS request failed (${response.status})`);
+  }
+
+  const blob = await response.blob();
+
+  if ('caches' in window) {
+    try {
+      const cache = await caches.open(CACHE_NAME);
+      await cache.put(
+        cacheKey,
+        new Response(blob, { headers: { 'Content-Type': 'audio/mpeg' } }),
+      );
+    } catch {
+      /* ignore cache write failure */
+    }
+  }
+
+  return blob;
+}
+
+// Browser-native fallback
+function speakFallback(text: string, rate: number, onEnd: () => void): void {
+  const synth = window.speechSynthesis;
+  synth.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.rate = rate;
+  utt.pitch = 1.0;
+  utt.onend = onEnd;
+  utt.onerror = onEnd;
+  synth.speak(utt);
 }
 
 export default function ArticleListener(): JSX.Element | null {
   const [supported, setSupported] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [state, setState] = useState<'idle' | 'loading' | 'playing' | 'paused' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string>('');
   const [rate, setRate] = useState(1.0);
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoiceName, setSelectedVoiceName] = useState<string>('');
+  const [voice, setVoice] = useState<Voice>('nova');
+  const [model, setModel] = useState<Model>('tts-1');
+  const [usingFallback, setUsingFallback] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  // Feature detection + voice loading + persisted-voice restore
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const queueRef = useRef<string[]>([]);
+  const queueIndexRef = useRef<number>(0);
+  const cancelledRef = useRef<boolean>(false);
+
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.speechSynthesis) {
+    if (typeof window === 'undefined') {
       setSupported(false);
       return;
     }
 
-    const loadVoices = () => {
-      const all = window.speechSynthesis.getVoices();
-      if (!all.length) return;
+    const hasAudio = typeof Audio !== 'undefined';
+    const hasSpeech = !!window.speechSynthesis;
+    if (!hasAudio && !hasSpeech) {
+      setSupported(false);
+      return;
+    }
 
-      const listenable = all.filter(isListenableVoice).sort((a, b) => scoreVoice(b) - scoreVoice(a));
-      setVoices(listenable);
-
-      const stored = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
-      if (stored && listenable.some((v) => v.name === stored)) {
-        setSelectedVoiceName(stored);
-      } else if (listenable.length) {
-        setSelectedVoiceName(listenable[0].name);
-      }
-    };
-
-    loadVoices();
-    window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
+    try {
+      const storedVoice = localStorage.getItem(VOICE_STORAGE_KEY);
+      if (storedVoice && VOICES.some((v) => v.id === storedVoice)) setVoice(storedVoice as Voice);
+      const storedModel = localStorage.getItem(MODEL_STORAGE_KEY);
+      if (storedModel === 'tts-1' || storedModel === 'tts-1-hd') setModel(storedModel);
+    } catch {
+      /* localStorage unavailable */
+    }
 
     return () => {
-      window.speechSynthesis.removeEventListener('voiceschanged', loadVoices);
-      window.speechSynthesis.cancel();
+      cancelledRef.current = true;
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = '';
+      }
+      queueRef.current.forEach((url) => URL.revokeObjectURL(url));
+      queueRef.current = [];
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
     };
   }, []);
-
-  const currentVoice = voices.find((v) => v.name === selectedVoiceName) ?? null;
 
   const extractText = useCallback((): string => {
     const content = document.querySelector('article .markdown') as HTMLElement | null;
     if (!content) return '';
-
     const clone = content.cloneNode(true) as HTMLElement;
-    clone.querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button').forEach((n) => n.remove());
+    clone
+      .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button')
+      .forEach((n) => n.remove());
     clone.querySelectorAll('td, th').forEach((cell) => {
       cell.textContent = (cell.textContent || '') + '. ';
     });
-
     return (clone.textContent || '').replace(/\s+/g, ' ').trim();
   }, []);
 
-  const speak = useCallback(
-    (text: string, rateOverride?: number, voiceOverride?: SpeechSynthesisVoice | null) => {
-      const synth = window.speechSynthesis;
-      synth.cancel();
+  const disposeQueue = useCallback(() => {
+    queueRef.current.forEach((url) => URL.revokeObjectURL(url));
+    queueRef.current = [];
+    queueIndexRef.current = 0;
+  }, []);
 
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = rateOverride ?? rate;
-      utterance.pitch = 1.0;
-      const voice = voiceOverride !== undefined ? voiceOverride : currentVoice;
-      if (voice) utterance.voice = voice;
-
-      utterance.onend = () => {
-        setIsPlaying(false);
-        setIsPaused(false);
+  const playIndex = useCallback(
+    (i: number) => {
+      if (cancelledRef.current) return;
+      if (i >= queueRef.current.length) {
+        setState('idle');
+        disposeQueue();
+        return;
+      }
+      if (!audioRef.current) audioRef.current = new Audio();
+      const audio = audioRef.current;
+      audio.src = queueRef.current[i];
+      audio.playbackRate = rate;
+      audio.onended = () => {
+        queueIndexRef.current = i + 1;
+        playIndex(i + 1);
       };
-      utterance.onerror = () => {
-        setIsPlaying(false);
-        setIsPaused(false);
+      audio.onerror = () => {
+        setState('error');
+        setErrorMsg('Audio playback failed');
+        disposeQueue();
       };
-
-      utteranceRef.current = utterance;
-      synth.speak(utterance);
-      setIsPlaying(true);
-      setIsPaused(false);
+      audio.play().catch((err) => {
+        setState('error');
+        setErrorMsg(err?.message || 'Audio play failed');
+      });
     },
-    [rate, currentVoice],
+    [rate, disposeQueue],
+  );
+
+  const startCloudPlayback = useCallback(
+    async (text: string) => {
+      cancelledRef.current = false;
+      setState('loading');
+      setErrorMsg('');
+      setUsingFallback(false);
+
+      const chunks = chunkText(text);
+
+      try {
+        const blobs = await Promise.all(chunks.map((c) => fetchChunkAudio(c, voice, model)));
+        if (cancelledRef.current) return;
+
+        disposeQueue();
+        queueRef.current = blobs.map((b) => URL.createObjectURL(b));
+        queueIndexRef.current = 0;
+
+        setState('playing');
+        playIndex(0);
+      } catch (err: any) {
+        if (typeof window !== 'undefined' && window.speechSynthesis) {
+          setUsingFallback(true);
+          setState('playing');
+          speakFallback(text, rate, () => {
+            setState('idle');
+            setUsingFallback(false);
+          });
+        } else {
+          setState('error');
+          setErrorMsg(err?.message || 'TTS unavailable');
+        }
+      }
+    },
+    [voice, model, rate, playIndex, disposeQueue],
   );
 
   const handlePlay = useCallback(() => {
-    if (isPaused) {
-      window.speechSynthesis.resume();
-      setIsPaused(false);
+    if (state === 'paused') {
+      if (usingFallback) {
+        window.speechSynthesis.resume();
+      } else if (audioRef.current) {
+        audioRef.current.play();
+      }
+      setState('playing');
       return;
     }
     const text = extractText();
     if (!text) return;
-    speak(text);
-  }, [isPaused, extractText, speak]);
+    startCloudPlayback(text);
+  }, [state, usingFallback, extractText, startCloudPlayback]);
 
   const handlePause = useCallback(() => {
-    window.speechSynthesis.pause();
-    setIsPaused(true);
-  }, []);
+    if (usingFallback) {
+      window.speechSynthesis.pause();
+    } else if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    setState('paused');
+  }, [usingFallback]);
 
   const handleStop = useCallback(() => {
-    window.speechSynthesis.cancel();
-    setIsPlaying(false);
-    setIsPaused(false);
+    cancelledRef.current = true;
+    if (usingFallback) {
+      window.speechSynthesis.cancel();
+    } else if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.src = '';
+    }
+    disposeQueue();
+    setState('idle');
+    setUsingFallback(false);
     setShowSettings(false);
-  }, []);
+  }, [usingFallback, disposeQueue]);
 
   const handleRateChange = useCallback(
     (newRate: number) => {
       setRate(newRate);
-      if (isPlaying) {
-        const text = extractText();
-        if (text) speak(text, newRate);
-      }
+      if (audioRef.current && !usingFallback) audioRef.current.playbackRate = newRate;
     },
-    [isPlaying, extractText, speak],
+    [usingFallback],
   );
 
-  const handleVoiceChange = useCallback(
-    (voiceName: string) => {
-      setSelectedVoiceName(voiceName);
-      try {
-        localStorage.setItem(STORAGE_KEY, voiceName);
-      } catch {
-        /* localStorage unavailable — fail silently */
-      }
-      const newVoice = voices.find((v) => v.name === voiceName) ?? null;
-      if (isPlaying) {
-        const text = extractText();
-        if (text) speak(text, undefined, newVoice);
-      }
-    },
-    [voices, isPlaying, extractText, speak],
-  );
+  const handleVoiceChange = useCallback((newVoice: Voice) => {
+    setVoice(newVoice);
+    try {
+      localStorage.setItem(VOICE_STORAGE_KEY, newVoice);
+    } catch {
+      /* */
+    }
+  }, []);
+
+  const handleModelChange = useCallback((newModel: Model) => {
+    setModel(newModel);
+    try {
+      localStorage.setItem(MODEL_STORAGE_KEY, newModel);
+    } catch {
+      /* */
+    }
+  }, []);
 
   if (!supported) return null;
 
+  const isLoading = state === 'loading';
+  const isPlaying = state === 'playing';
+  const isPaused = state === 'paused';
+  const isActive = isLoading || isPlaying || isPaused;
+  const isError = state === 'error';
+
   return (
     <div className={styles.listener} aria-label="Article listener">
-      {!isPlaying ? (
+      {!isActive && !isError ? (
         <button
           type="button"
           onClick={handlePlay}
@@ -206,7 +355,9 @@ export default function ArticleListener(): JSX.Element | null {
         </button>
       ) : (
         <div className={styles.controls}>
-          {isPaused ? (
+          {isLoading ? (
+            <span className={styles.spinner} aria-label="Loading audio" />
+          ) : isPaused ? (
             <button type="button" onClick={handlePlay} className={styles.controlButton} aria-label="Resume">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
@@ -224,7 +375,9 @@ export default function ArticleListener(): JSX.Element | null {
               <path d="M6 6h12v12H6z" />
             </svg>
           </button>
-          <span className={styles.status}>{isPaused ? 'Paused' : 'Playing'}</span>
+          <span className={styles.status}>
+            {isLoading ? 'Loading…' : isPaused ? 'Paused' : usingFallback ? 'Playing (fallback)' : 'Playing'}
+          </span>
           <div className={styles.rateSelector} role="group" aria-label="Playback speed">
             {[1.0, 1.25, 1.5, 1.75].map((r) => (
               <button
@@ -239,44 +392,73 @@ export default function ArticleListener(): JSX.Element | null {
               </button>
             ))}
           </div>
-          {voices.length > 1 && (
-            <button
-              type="button"
-              onClick={() => setShowSettings((s) => !s)}
-              className={`${styles.controlButton} ${showSettings ? styles.active : ''}`}
-              aria-label="Voice settings"
-              aria-expanded={showSettings}
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
-              </svg>
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => setShowSettings((s) => !s)}
+            className={`${styles.controlButton} ${showSettings ? styles.active : ''}`}
+            aria-label="Voice settings"
+            aria-expanded={showSettings}
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+            </svg>
+          </button>
         </div>
       )}
-      {isPlaying && showSettings && voices.length > 1 && (
-        <div className={styles.settingsPanel}>
-          <label htmlFor="warwiki-voice-picker" className={styles.settingsLabel}>
-            Voice
-          </label>
-          <select
-            id="warwiki-voice-picker"
-            className={styles.voiceSelect}
-            value={selectedVoiceName}
-            onChange={(e) => handleVoiceChange(e.target.value)}
+      {isError && (
+        <div className={styles.errorBar} role="alert">
+          <span>{errorMsg || 'TTS error'}</span>
+          <button
+            type="button"
+            onClick={() => {
+              setState('idle');
+              setErrorMsg('');
+            }}
+            className={styles.controlButton}
           >
-            {voices.map((v) => (
-              <option key={v.name} value={v.name}>
-                {v.name} — {v.lang}
-                {v.localService ? '' : ' (online)'}
-              </option>
-            ))}
-          </select>
+            Dismiss
+          </button>
+        </div>
+      )}
+      {isActive && showSettings && (
+        <div className={styles.settingsPanel}>
+          <div>
+            <label htmlFor="warwiki-tts-voice" className={styles.settingsLabel}>
+              Voice
+            </label>
+            <select
+              id="warwiki-tts-voice"
+              className={styles.voiceSelect}
+              value={voice}
+              onChange={(e) => handleVoiceChange(e.target.value as Voice)}
+              disabled={usingFallback}
+            >
+              {VOICES.map((v) => (
+                <option key={v.id} value={v.id}>
+                  {v.label} — {v.description}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="warwiki-tts-model" className={styles.settingsLabel}>
+              Quality
+            </label>
+            <select
+              id="warwiki-tts-model"
+              className={styles.voiceSelect}
+              value={model}
+              onChange={(e) => handleModelChange(e.target.value as Model)}
+              disabled={usingFallback}
+            >
+              <option value="tts-1">Standard (tts-1)</option>
+              <option value="tts-1-hd">High Definition (tts-1-hd)</option>
+            </select>
+          </div>
           <p className={styles.settingsHint}>
-            For better voice quality, install premium voices via your OS: on macOS go to System Settings →
-            Accessibility → Spoken Content → System Voice → Manage Voices, and download a voice labeled
-            (Premium) or (Enhanced). On Windows 11, install Microsoft Natural voices via Settings →
-            Accessibility → Narrator → Add natural voices.
+            {usingFallback
+              ? "Using your browser's built-in voice (cloud TTS unavailable). Voice and quality settings don't apply in fallback mode."
+              : 'Changes take effect on the next play. Audio is cached per article + voice; the same combination replays instantly.'}
           </p>
         </div>
       )}

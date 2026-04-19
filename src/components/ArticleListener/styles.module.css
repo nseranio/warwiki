@@ -10,6 +10,44 @@
   background: rgba(24, 95, 165, 0.12) !important;
 }
 
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(24, 95, 165, 0.2);
+  border-top-color: var(--ifm-color-primary, #185FA5);
+  border-radius: 50%;
+  animation: warwiki-tts-spin 0.7s linear infinite;
+  margin: 0 0.35rem 0 0.2rem;
+}
+
+@keyframes warwiki-tts-spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.82rem;
+  color: #C62828;
+  background: rgba(198, 40, 40, 0.06);
+  border: 1px solid rgba(198, 40, 40, 0.3);
+  border-radius: 6px;
+}
+
+[data-theme='dark'] .errorBar {
+  color: #EF9A9A;
+  background: rgba(198, 40, 40, 0.1);
+  border-color: rgba(239, 154, 154, 0.3);
+}
+
+[data-theme='dark'] .spinner {
+  border-color: rgba(54, 145, 226, 0.2);
+  border-top-color: #3691E2;
+}
+
 .settingsPanel {
   display: flex;
   flex-direction: column;
