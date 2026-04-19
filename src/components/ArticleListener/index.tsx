@@ -60,7 +60,7 @@ function extractSections(): Array<{ title: string; text: string }> {
 
   const clone = content.cloneNode(true) as HTMLElement;
   clone
-    .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button, .hash-link')
+    .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button, .hash-link, sup')
     .forEach((n) => n.remove());
   clone.querySelectorAll('td, th').forEach((cell) => {
     cell.textContent = (cell.textContent || '') + '. ';
@@ -71,9 +71,18 @@ function extractSections(): Array<{ title: string; text: string }> {
   let currentBuf: string[] = [];
   let skipping = false;
 
+  // Strip inline citation markers like [1], [12], [1,2], [1–3] so the TTS
+  // doesn't read numbers mid-sentence. <sup> removal above catches the
+  // rendered superscript citations; this regex covers any bracketed
+  // numerics that slip through (footnotes in prose, raw markdown artifacts).
+  const stripInlineCitations = (t: string): string =>
+    t
+      .replace(/\s*\[\d+(?:\s*[,–\-]\s*\d+)*\]/g, '')
+      .replace(/\s+([.,;:!?])/g, '$1');
+
   const flush = () => {
     if (skipping) return;
-    const text = currentBuf.join(' ').replace(/\s+/g, ' ').trim();
+    const text = stripInlineCitations(currentBuf.join(' ').replace(/\s+/g, ' ')).trim();
     if (text) sections.push({ title: currentTitle, text });
   };
 
