@@ -1896,7 +1896,7 @@ article {
   margin: 0;
 }
 
-.td-table thead th {
+.td-wrapper .td-table thead th {
   padding: 0.6rem 0.9rem;
   text-align: left;
   font-size: 0.75rem;
@@ -1907,6 +1907,11 @@ article {
   background: var(--warwiki-bg);
   border-bottom: 2px solid var(--warwiki-border);
   white-space: nowrap;
+}
+
+[data-theme='dark'] .td-wrapper .td-table thead th {
+  color: var(--warwiki-text-muted);
+  background: #111827;
 }
 
 .td-table tbody tr {
