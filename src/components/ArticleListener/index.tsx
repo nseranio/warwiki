@@ -1,79 +1,124 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './styles.module.css';
 
-/**
- * ArticleListener — text-to-speech for the current article.
- * Uses the browser's native Web Speech API (SpeechSynthesis).
- * Graceful: renders nothing if the browser lacks speechSynthesis support.
- */
+const STORAGE_KEY = 'warwiki-tts-voice-name';
+
+// macOS novelty / musical voices — exclude from the picker
+const NOVELTY_VOICE_REGEX =
+  /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Junior|Organ|Pipe Organ|Ralph|Superstar|Trinoids|Whisper|Wobble|Zarvox)\b/i;
+
+/** Score a voice — higher is better. Used to pick a smart default. */
+function scoreVoice(v: SpeechSynthesisVoice): number {
+  let score = 0;
+  const name = v.name;
+  const lang = v.lang || '';
+
+  // Strongly prefer English
+  if (lang.startsWith('en-')) score += 100;
+  else if (lang.startsWith('en')) score += 80;
+  else score -= 1000; // non-English disqualified
+
+  if (lang === 'en-US') score += 5;
+
+  // Neural / natural voices are the big quality jump
+  if (/neural/i.test(name)) score += 60;
+  if (/natural/i.test(name)) score += 55;
+  if (/online/i.test(name)) score += 40; // Microsoft Online (Natural) voices
+
+  // Apple tiered voices
+  if (/\(Premium\)/i.test(name)) score += 50;
+  if (/\(Enhanced\)/i.test(name)) score += 40;
+
+  // Chrome's Google voices
+  if (/^Google /i.test(name)) score += 30;
+
+  // Known-good OS default voices
+  if (/Samantha/i.test(name)) score += 15;
+  if (/Alex/i.test(name)) score += 15;
+  if (/Karen|Daniel|Moira|Tessa/i.test(name)) score += 10;
+  if (/Ava|Allison|Susan|Tom|Nicky/i.test(name)) score += 10;
+
+  if (NOVELTY_VOICE_REGEX.test(name)) score -= 500;
+
+  if (v.localService) score += 2;
+
+  return score;
+}
+
+/** Filter to voices the user might actually want to listen to. */
+function isListenableVoice(v: SpeechSynthesisVoice): boolean {
+  const lang = v.lang || '';
+  if (!lang.startsWith('en')) return false;
+  if (NOVELTY_VOICE_REGEX.test(v.name)) return false;
+  return true;
+}
+
 export default function ArticleListener(): JSX.Element | null {
   const [supported, setSupported] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [rate, setRate] = useState(1.0);
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [selectedVoiceName, setSelectedVoiceName] = useState<string>('');
+  const [showSettings, setShowSettings] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-  const preferredVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
 
-  // Feature detection + voice selection
+  // Feature detection + voice loading + persisted-voice restore
   useEffect(() => {
     if (typeof window === 'undefined' || !window.speechSynthesis) {
       setSupported(false);
       return;
     }
 
-    const pickVoice = () => {
-      const voices = window.speechSynthesis.getVoices();
-      if (!voices.length) return;
+    const loadVoices = () => {
+      const all = window.speechSynthesis.getVoices();
+      if (!all.length) return;
 
-      // Preference order: Natural / Enhanced / Premium voices; then common OS defaults; then any en-US
-      const preferred =
-        voices.find((v) => v.lang.startsWith('en') && /natural|enhanced|premium|online/i.test(v.name)) ||
-        voices.find((v) => v.lang.startsWith('en') && /Samantha|Alex|Karen|Daniel/i.test(v.name)) ||
-        voices.find((v) => v.lang === 'en-US') ||
-        voices.find((v) => v.lang.startsWith('en'));
+      const listenable = all.filter(isListenableVoice).sort((a, b) => scoreVoice(b) - scoreVoice(a));
+      setVoices(listenable);
 
-      preferredVoiceRef.current = preferred ?? null;
+      const stored = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+      if (stored && listenable.some((v) => v.name === stored)) {
+        setSelectedVoiceName(stored);
+      } else if (listenable.length) {
+        setSelectedVoiceName(listenable[0].name);
+      }
     };
 
-    pickVoice();
-    window.speechSynthesis.addEventListener('voiceschanged', pickVoice);
+    loadVoices();
+    window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
 
     return () => {
-      window.speechSynthesis.removeEventListener('voiceschanged', pickVoice);
-      // Cancel any in-flight speech when navigating away
+      window.speechSynthesis.removeEventListener('voiceschanged', loadVoices);
       window.speechSynthesis.cancel();
     };
   }, []);
 
-  // Extract the article's readable text from the DOM
+  const currentVoice = voices.find((v) => v.name === selectedVoiceName) ?? null;
+
   const extractText = useCallback((): string => {
-    // Docusaurus renders the article markdown under <article>...<div class="markdown">...
     const content = document.querySelector('article .markdown') as HTMLElement | null;
     if (!content) return '';
 
     const clone = content.cloneNode(true) as HTMLElement;
-
-    // Strip non-speech elements
     clone.querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button').forEach((n) => n.remove());
-
-    // Replace table cells with spoken separators so it reads more naturally
     clone.querySelectorAll('td, th').forEach((cell) => {
       cell.textContent = (cell.textContent || '') + '. ';
     });
 
-    // Collapse repeated whitespace
     return (clone.textContent || '').replace(/\s+/g, ' ').trim();
   }, []);
 
   const speak = useCallback(
-    (text: string, rateOverride?: number) => {
+    (text: string, rateOverride?: number, voiceOverride?: SpeechSynthesisVoice | null) => {
       const synth = window.speechSynthesis;
       synth.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = rateOverride ?? rate;
       utterance.pitch = 1.0;
-      if (preferredVoiceRef.current) utterance.voice = preferredVoiceRef.current;
+      const voice = voiceOverride !== undefined ? voiceOverride : currentVoice;
+      if (voice) utterance.voice = voice;
 
       utterance.onend = () => {
         setIsPlaying(false);
@@ -89,7 +134,7 @@ export default function ArticleListener(): JSX.Element | null {
       setIsPlaying(true);
       setIsPaused(false);
     },
-    [rate],
+    [rate, currentVoice],
   );
 
   const handlePlay = useCallback(() => {
@@ -112,18 +157,35 @@ export default function ArticleListener(): JSX.Element | null {
     window.speechSynthesis.cancel();
     setIsPlaying(false);
     setIsPaused(false);
+    setShowSettings(false);
   }, []);
 
   const handleRateChange = useCallback(
     (newRate: number) => {
       setRate(newRate);
-      // If already playing, restart from current position at new rate
       if (isPlaying) {
         const text = extractText();
         if (text) speak(text, newRate);
       }
     },
     [isPlaying, extractText, speak],
+  );
+
+  const handleVoiceChange = useCallback(
+    (voiceName: string) => {
+      setSelectedVoiceName(voiceName);
+      try {
+        localStorage.setItem(STORAGE_KEY, voiceName);
+      } catch {
+        /* localStorage unavailable — fail silently */
+      }
+      const newVoice = voices.find((v) => v.name === voiceName) ?? null;
+      if (isPlaying) {
+        const text = extractText();
+        if (text) speak(text, undefined, newVoice);
+      }
+    },
+    [voices, isPlaying, extractText, speak],
   );
 
   if (!supported) return null;
@@ -177,6 +239,45 @@ export default function ArticleListener(): JSX.Element | null {
               </button>
             ))}
           </div>
+          {voices.length > 1 && (
+            <button
+              type="button"
+              onClick={() => setShowSettings((s) => !s)}
+              className={`${styles.controlButton} ${showSettings ? styles.active : ''}`}
+              aria-label="Voice settings"
+              aria-expanded={showSettings}
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+              </svg>
+            </button>
+          )}
+        </div>
+      )}
+      {isPlaying && showSettings && voices.length > 1 && (
+        <div className={styles.settingsPanel}>
+          <label htmlFor="warwiki-voice-picker" className={styles.settingsLabel}>
+            Voice
+          </label>
+          <select
+            id="warwiki-voice-picker"
+            className={styles.voiceSelect}
+            value={selectedVoiceName}
+            onChange={(e) => handleVoiceChange(e.target.value)}
+          >
+            {voices.map((v) => (
+              <option key={v.name} value={v.name}>
+                {v.name} — {v.lang}
+                {v.localService ? '' : ' (online)'}
+              </option>
+            ))}
+          </select>
+          <p className={styles.settingsHint}>
+            For better voice quality, install premium voices via your OS: on macOS go to System Settings →
+            Accessibility → Spoken Content → System Voice → Manage Voices, and download a voice labeled
+            (Premium) or (Enhanced). On Windows 11, install Microsoft Natural voices via Settings →
+            Accessibility → Narrator → Add natural voices.
+          </p>
         </div>
       )}
     </div>
