@@ -573,6 +573,67 @@ Structure:
 - **Evaluation section** — `history-symptom-assessment.mdx` deleted; Imaging and Ancillary Testing sidebar positions swapped (Imaging now above Ancillary).
 - **Image set** — public-domain / CC-licensed anatomy images downloaded into `static/img/anatomy/` and embedded in the anatomy articles. No caption-only figure blocks — either real image or nothing.
 
+### Session of 2026-04-19 — Massive content + platform pass
+
+Very long session. Major themes: fistula build-out, tools/biomaterials refactored into searchable databases, new Surgical Skills + Gear subsections, TTS + citation tooltips platform features.
+
+**Content additions:**
+- **Rectovesical Fistula article** fully built out (27 citations) with RVF-vs-RUF anatomic distinction (bladder neck as landmark), Mundy-Andrich and Sotelo-group complexity classifications, four surgical approaches including Sotelo-group robotic step-by-step technique, five interposition options, outcomes tables by etiology, pubovesical fistula as related entity.
+- **Urethropubic Fistula article** fully built out (16 citations) framed as UPF spectrum (urethropubic + pubovesical + urosymphyseal + pubosymphyseal), etiologic pathway (radiation → BNC → endoscopic BOO treatment → UPF), UPF-as-osteomyelitis framing (88-97% histologic prevalence), four-element operation (fistula excision + pubectomy + interposition + urinary reconstruction-or-diversion), robot-assisted cystectomy with holmium laser debridement.
+- **Procedures Causing GU Injury / Cesarean Section** article (30 citations) — built earlier in session, landed in this commit tree.
+- **Intraoperative Consultation subsection** (8 references) under Trauma & Emergencies — consult workflow, diagnostic maneuvers, organ-specific repair, damage-control, Skokan algorithm. Procedures-Causing-GU-Injury nested inside.
+
+**Instruments section — refactored into searchable database:**
+- Old single `instruments.mdx` page replaced with `instruments/` subdirectory.
+- **38 individual instrument pages** across 9 subcategories (needle holders, forceps, clamps, cautery, retractors, sounds & bougies, urethral & pelvic specialty, suction, graft harvest).
+- **Instruments landing** uses existing `GenericDatabase` component with search + category filter + color-coded badges.
+- Notable instruments with expanded pages: Turner-Warwick Ryder, Heaney, Lone Star, perineal Bookwalter (Jordan), Haygrove, Ravini, Raz-Pereyra, Gorget (Gourget — full history article).
+- **Later additions to instruments:**
+  - Bone Instruments subcategory (position 10, brown badge) — rongeur, pituitary rongeur, periosteal elevator, air drill, osteotome+mallet — for pubectomy in UPF / PFUI.
+  - TUITMR devices (JNW UrTrac, RD180, Ti-Knot) for endoscopic urethroplasty.
+  - SSLF device expansion: Capio, Anchorsure (PEEK anchor, Neomedic/JUNE), Saffron (Coloplast), i-Stitch (A.M.I.), Endostitch (Medtronic), Miya Hook, Deschamps — 7 total in Urethral & Pelvic Specialty (now 12 pages in that subcategory).
+  - Dermatome expansion: overview + 6 variants (Zimmer Air, Padgett, Humby, Goulian, Drum/Padgett-Hood, Skin Mesher).
+
+**Biomaterials section — refactored into searchable database:**
+- Old single `biomaterials.mdx` page replaced with `biomaterials/` subdirectory.
+- **12 subcategories, ~46 individual pages** covering permanent implanted materials, temporary/indwelling devices, investigational scaffolds, adjunct/specialty, and non-medical foreign bodies.
+- **Landing** uses `GenericDatabase` with category filter + 12 color-coded badges + framework text explaining the three conceptual groupings.
+- New subcategories added in this session:
+  - **Ureteral Stents & Upper Tract Drainage** (4) — Double-J, nephrostomy, nephroureteral, metal/long-term
+  - **Urinary Catheters** (6) — Foley, Council tip, Coudé, suprapubic, self-retaining (Malecot/de Pezzer), intermittent
+  - **Surgical Drains** (3) — Jackson-Pratt, Blake, Penrose
+  - **Neuromodulation Devices** (6) — Medtronic InterStim (II/Micro/X), Axonics SNM (r-SNM/F15/R20), PTNS Systems (Urgent PC, NURO), eCoin, Revi, Altaviva
+- Adjunct & Specialty gained **Glean Urodynamics System** (first wireless catheter-free ambulatory UDS, Bright Uro, FDA 2025).
+
+**New Foundations subsection — Surgical Skills** (position 4, Perioperative Care bumped to 5, Tools to 6):
+- **4 sub-categories, 29 technique pages**: knot tying (7 — two-handed square, one-handed, instrument tie, surgeon's knot, slip knot, Aberdeen, laparoscopic), suturing patterns (12 — including Connell/Lembert/Cushing/Halsted bowel stitches), ligatures (5 — free tie, suture ligature, transfixion, clip, energy sealing), special techniques (5 — Heaney stitch, quilting, ski needle, Van Velthoven running VUA, barbed suture closure).
+- Each stub follows the pattern: opening paragraph + technique summary + key reconstructive-urology uses + pearls + cross-links + "*Stub — to be built out.*" placeholder for full walkthrough.
+
+**New Tools subsection — Gear** (position 6):
+- Single comprehensive page covering optical aids (loupes, headlights, microscope — Designs for Vision, Orascoptic, Zeiss guidance), radiation protection (lead aprons including composite/lead-free options, thyroid shield, leaded glasses, dosimetry, ALARA), ergonomics (shoes, compression stockings, anti-fatigue mats, saddle stools), PPE (AAMI gown levels, double gloves, laser-grade masks), adjunct gear (smoke evacuators, cooling vests, voice communicators). Brand guidance + price ranges throughout.
+
+**Fistulas section — fully revamped by gender + new landing:**
+- Reorganized from flat 5-article structure into three gender buckets (in-both-genders, in-females, in-males).
+- New `03f-fistulas/index.mdx` landing with section-stack grid + cross-cutting "Complex Fistula Principles" framework rescued from deleted `cutaneous-complex.mdx`.
+- **13 new stubs created**, 4 existing articles moved into gender subfolders.
+
+**Platform features — TTS audio + citation tooltips:**
+- **ArticleListener** component iterated through three major revisions:
+  1. Browser-native speechSynthesis baseline
+  2. Cloud TTS via OpenAI through a new `/api/tts` Vercel serverless function (6 voices, 2 quality tiers, client Cache API keyed by SHA-256(model|voice|text), automatic fallback to browser TTS on any failure). `openai` npm dependency added; `OPENAI_API_KEY` must be set in Vercel env vars; fallback path activates until it is.
+  3. Progressive playback — parallel chunk fetching, play chunk 0 immediately while chunks 2+ load in background. Silent-MP3 priming in the click handler to prevent autoplay rejection after the awaited fetch.
+  4. Section-based chunking — walk article DOM, partition by H2 boundaries, excluded "References" H2 entirely. Chapter picker in the player lets the user jump to any section. Inline `<sup>[N]</sup>` citations and raw `[N]` patterns stripped from TTS text.
+- **CitationTooltips** component — hovering any `<sup>[N]</sup>` citation shows the full reference text in a styled tooltip (auto-flip above if no room below, horizontal clamp at viewport edges, re-scans on SPA path change).
+- Both components swizzled into `src/theme/DocItem/Content/index.tsx` so they run on every doc article automatically.
+- **TTS-SETUP.md** at project root documents OpenAI key setup, cost math (~$26 one-time to pre-cache all articles at tts-1, pennies ongoing), and the future Vercel KV server-side caching path.
+
+**Resources / Podcasts** — rebuilt from stub into `PodcastLibrary` component:
+- ~40 curated episodes across 10 topics (Core GURS, Urethroplasty, Diversion, Trauma, AUS/Male-Inc, Penile/Peyronie's, GAS, FPMRS, Prolapse, Pain/GSM).
+- Search box + topic quick-jump chips with per-topic counts + rich cards with **left-edge color bars matched to producing feed** (7 feeds color-coded).
+- `PodcastFeedList` companion renders the "Full Feeds Worth Subscribing To" grid at bottom.
+
+**CSS bug fix** — database table headers were white-on-gray (unreadable) in light mode because Docusaurus's default `.markdown table thead th` rule had higher specificity. Fixed by raising the DB-header rule to `.td-wrapper .td-table thead th` + explicit dark-mode override.
+
 ### Session of 2026-04-18
 
 - **New "Intraoperative Consultation" subsection** added under `05-special-populations/05a-trauma-emergencies/`. Main article is an operational guide to the urologist's role as called-in consultant for iatrogenic GU injury during non-urologic surgery — when to come, diagnostic maneuvers, organ-by-organ repair principles, damage-control ("drain now, fix later"), Skokan algorithm, prevention, timing outcomes, documentation. 8 references (2023 WSES IUTI guideline, 2025 ACS Best Practices, Kato/Skokan chapter, Sylla taTME study).
@@ -673,4 +734,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 ---
 
-*Last updated: 2026-04-18*
+*Last updated: 2026-04-19*
