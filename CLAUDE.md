@@ -503,9 +503,9 @@ perioperative-care/
 
 All 16 articles are populated. URL paths changed from the old flat structure — internal cross-links were updated; external inbound links to `/docs/foundations/perioperative-care/{preoperative,anesthesia-pain,postoperative}/*` will 404.
 
-### Foundations — Tools / Robotics subsection (NEW)
+### Foundations — Tools / Technology / Robotics subsection (path updated 2026-04-21)
 
-`docs/01-foundations/tools/robotics/` — three-article subsection:
+`docs/01-foundations/tools/technology/robotics/` — three-article subsection (moved under the new Technology container in 2026-04-21 restructure):
 - **platforms.mdx** — da Vinci (Si/Xi/X/SP/5), Hugo RAS, Versius, Senhance, Avatera, Hinotori, REVO-I, KangDuo, MicroHand S, Toumai, Dexter — manufacturer profiles + feature axes
 - **reconstructive-applications.mdx** — by anatomic region (upper tract, bladder, urethra, andrologic microsurgery)
 - **single-port.mdx** — SP incision atlas (periumbilical, mini-Pfannenstiel, midline suprapubic, LAA, SARA) + approaches (transvesical, LAA, SARA, transperitoneal, retroperitoneal, extraperitoneal)
@@ -734,4 +734,140 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 ---
 
-*Last updated: 2026-04-19*
+### Session of 2026-04-20 to 2026-04-21 — Massive content expansion + structural refinements
+
+The largest multi-day expansion session to date. Major themes: penile-implant / Peyronie's deep-dive, intraoperative-adjuncts library, pharmacology database conversion, antibiotics build-out, energy devices, site audit, and a Tools restructure.
+
+**Penile Implants subsection — built out from overview to 8 articles (~60 refs total):**
+
+```
+surgical-techniques/04j-sexual-dysfunction/penile-implants/
+├── index.mdx                   ← overview (updated with section-stack to all 7 deep-dives)
+├── infection.mdx               ← 29 refs; IPP infection evolution + 2026 Irrisept pivot
+├── preoperative-evaluation.mdx ← 11 refs; CURSED framework
+├── intraoperative-setup.mdx    ← 12 refs; Eid no-touch protocol
+├── surgical-approaches.mdx     ← 6 refs; PS/IP/SC/TS
+├── reservoir-placement.mdx     ← 6 refs; SoR vs HSM ectopic vs 2-piece
+├── implant-models.mdx          ← 9 refs; AMS/Titan/Rigicon/Ambicor/Tactra/ZSI
+├── revision-scenarios.mdx      ← 9 refs; fibrosis, crossover, SST, salvage
+└── complications.mdx           ← 7 refs; erosion, glans ischemia, aneurysm
+```
+
+**Peyronie's Disease — converted to subsection with 5 surgical deep-dives (~50 refs total):**
+
+```
+surgical-techniques/04j-sexual-dysfunction/peyronies-disease/
+├── index.mdx                           ← overview + section-stack
+├── tunica-plication.mdx                ← 15 refs; Nesbit/16-dot/8-dot/Yachia/TAP/Dugi-Morey/Kiel Knots/Essed-Schröder/MPP
+├── plaque-incision-grafting.mdx        ← 10 refs; Hatzichristodoulou sealing; BMG meta; grafts; PEG + plication
+├── prosthesis-with-straightening.mdx   ← 12 refs; adjunctive ladder (Hammad 2025); PICS technique
+├── manual-modeling.mdx                 ← 8 refs; Wilson 1994; Lucas optimal; Moncada home modeling
+└── scratch-technique.mdx               ← 8 refs; Antonini + vacuum therapy; Shaeer punch
+```
+
+**Trauma & Emergencies additions:**
+
+- `priapism.mdx` (18 refs) — all 3 subtypes, TWIST, AUA/SMSNA 2021 algorithm, tunneling + PSD, early prosthesis for &gt;36h; SCD-specific management
+- `testicular-torsion.mdx` (20 refs) — TWIST score (AUC 0.924), salvage rates, 5 fixation techniques (dartos pouch / Jaboulay / Lent eversion / Kozminski / sutured), TVF salvage (Figueroa, Kutikov compartment-pressure data)
+
+**Evaluation section:**
+
+- NEW `assessment-tools.mdx` (22 refs) — comprehensive validated-instruments reference: SHIM/IIEF, full POP-Q, pad tests (1-hr / 24-hr / 7-day), MSIGS, bladder diaries, IPSS, PFDI-20/PFIQ-7, PISQ-IR, USS-PROM, Urethral Stricture Score, NIH-CPSI, ICIQ family, EQ-5D
+
+**Surgical-skills expansion:**
+
+- `knot-tying/self-locking-knots.mdx` — rewritten with full biomechanics terminology (half-knot vs half-hitch, symmetric/asymmetric, loop security values), Aberdeen (Ultimate configuration), Forwarder, Middler/loop-lock, **Loop Knot** (starting knot), **Nice Knot** (doubled-suture sliding), **Modified Nice Knot**, **Cow Hitch** (stiffest tested for UHMWPE)
+- `knot-tying/laparoscopic-knot.mdx` — **deleted** per user request; repoint links to self-locking-knots
+- `suturing/parker-kerr-stitch.mdx` — NEW; classical over-the-clamp baseball + Lembert two-layer stump closure
+- `suturing/barbed-sutures.mdx` — NEW (26 refs); porcupine-quill history, V-Loc vs Quill, full GU applications (RARP VUA, PN renorrhaphy, pyeloplasty, vaginal cuff, cesarean, sacrocolpopexy), Sassun 2026 SBO-myth data
+- Existing stubs expanded: Aberdeen (Stott Ultimate + Gillen config), surgeon's knot (security data), two-handed square knot (Taysi optimal config)
+- Thor Sundt MMCTS tutorial 1852 linked as external video under suturing index
+
+**Flaps expansion — 5 new pages + geometric plasty framework:**
+
+- `flaps/y-v-plasty.mdx` — BNC workhorse; 90-100% success refractory BNC; ICG/Firefly role
+- `flaps/medial-thigh.mdx` — most common Fournier's regional flap; 1.6% flap loss
+- `flaps/labia-majora-fasciocutaneous.mdx` — distinct from Martius (tissue replacement not interposition); Gupta 2022 VVF + vaginal-wall deficit
+- `flaps/pmtp-propeller.mdx` — posteromedial thigh perforator propeller; 180° rotation; DEPAP/SCIP/EPAP variants framework
+- `flaps/singapore-pudendal-thigh.mdx` — bilateral for neovagina
+- Main `flaps-gu-reconstruction.mdx` expanded with **Geometric Plasty Techniques** section, Flap Index table (17 flaps), Flap Selection Principles by Indication; later trimmed to pure index (per-flap detail lives on dedicated pages)
+- Penile-preputial flap fully built out with McAninch-Morey onlay-vs-tube (13% vs 58% recurrence)
+
+**Intraoperative Adjuncts — NEW tools subsection (22 files, 2,032 lines):**
+
+```
+tools/intraoperative-adjuncts/
+├── index.mdx (which-adjunct-when framework)
+├── visualization-agents/   (index + ICG + methylene blue + indigo carmine + sodium fluorescein + pudexacianinium ASP-5354)
+├── hemostatic-agents/      (index + Surgicel + Arista + Gelfoam/Surgiflo + FloSeal + topical thrombin)
+└── tissue-sealants/        (index + fibrin sealants Tisseel/Evicel/Artiss + TachoSil + cyanoacrylates + PEG sealants)
+```
+
+**Pharmacology — converted from stub to 13-category searchable database:**
+
+```
+tools/pharmacology/
+├── index.mdx                         ← GenericDatabase component; ~62 drug-class rows with search + category filter
+├── storage-oab/                      ← FULLY BUILT: anticholinergics (23 refs), β3-agonists (22 refs), desmopressin
+├── voiding-outlet/                   ← alpha-blockers + 5-ARIs FULLY BUILT; 4 other stubs (α-agonists, cholinergic,
+│                                        skeletal muscle relaxants, dantrolene)
+├── bladder-pain-ic-bps/              ← 2 stubs (oral, intravesical)
+├── neuropathic-pelvic-pain/          ← 7 stubs (gabapentinoids, TCAs, SNRIs, NSAIDs, topical, local anesth,
+│                                        antispasmodics)
+├── neuromodulation-adjuncts/         ← 1 stub (botulinum toxin)
+├── infection-prophylaxis/            ← UTI treatment + periop antibiotic FULLY BUILT (28 refs combined);
+│                                        4 stubs (UTI suppressive, non-antibiotic, antifungals, biofilm)
+├── sexual-medicine-andrology/        ← 7 stubs (PDE5i, ICI, MUSE, TRT, androgen adjuncts, Peyronie's, priapism)
+├── hormonal-therapies/               ← 5 stubs (vaginal estrogen, DHEA, ospemifene, preop priming, GAHT)
+├── dermatologic-topical-urethral/    ← 6 stubs (clobetasol, TCI, intralesional steroids, antifibrotics, DCB, PRP)
+├── intraoperative-adjuncts/          ← 7 stubs (cross-link to tools/intraoperative-adjuncts materials library)
+├── perioperative-eras/               ← 5 stubs (VTE prophylaxis, AC reversal, bowel prep, ileus, steroids)
+├── urinary-diversion-specific/       ← 3 stubs (acidifiers, B12, mucus)
+└── legacy-low-evidence/              ← 4 stubs (parasympathomimetics, imipramine, phenazopyridine, phytotherapy)
+```
+
+Every stub follows the WARWIKI drug-class template: Overview / Mechanism / Agents / Indications / Dosing (with warning admonition) / Contraindications / Perioperative / Evidence / Pearls / Related Articles / References.
+
+**Tools restructure (2026-04-21) — Technology as new subsection:**
+
+- Created `tools/technology/` as container for robotics + energy devices
+- Moved `tools/robotics/` → `tools/technology/robotics/`
+- Moved `tools/energy-devices.mdx` → `tools/technology/energy-devices.mdx`
+- Deleted stub `tools/technology.mdx` (replaced by directory index)
+- **NEW** `tools/index.mdx` — section-stack landing consistent with other top-level section landings (replaces the generated-index stub)
+- **NEW** `tools/technology/index.mdx` — section-stack to Robotics + Energy Devices
+
+**New Tools structure:**
+
+1. Instruments (1)
+2. **Technology** (2) — Robotics + Energy Devices
+3. Biomaterials (3)
+4. Pharmacology (4)
+5. Intraoperative Adjuncts (5)
+6. Gear (6)
+
+- Removed stale `slug: /foundations/tools/robotics` override from the Robotics index (now follows directory URL)
+- Fixed all cross-links across 15+ files pointing to old `/tools/robotics/*` and `/tools/energy-devices` paths
+
+**Energy Devices** (~430 lines, 39 refs) — new comprehensive article (outside cancer scope): electrosurgery (monopolar vs bipolar, waveforms), Bipolar vs Monopolar TURP (Cochrane 59 RCTs), lasers (Ho:YAG / TFL / GreenLight / ThuVAP), Harmonic scalpel, LigaSure, Aquablation, morcellation, electrosurgical safety principles.
+
+**Antibiotics expansion (in Pharmacology):**
+
+- `uti-treatment-antibiotics.mdx` — 21 refs; stratified framework (uncomplicated cystitis / pyelonephritis / cUTI / urosepsis / ESBL / DTR Pseudomonas / CRE by β-lactamase / acute + chronic prostatitis / CAUTI / ASB); 2025 IDSA cUTI guideline; 2024 IDSA AMR guidance; high-dose oral β-lactam step-down
+- `perioperative-antibiotic-prophylaxis.mdx` — 7 refs; AUA BPS 2020 framework + PUMP-era reshaping (Barham 2023 vanc+gent 2.7× IPP infection; Abou Chawareb 2025 antifungal 92% reduction); device-specific protocols; MRSA decolonization
+
+**Site audit (2026-04-21):**
+
+- Build is clean — no broken links, no broken admonitions (no `::::note` or similar), no `undefined` artifacts, no `Figure X`/`Table X` orphans, no `KID-1` NCCN refs, no empty `[](…)`
+- **Foundations landing fix** — 3 of 5 section entries were rendered as non-clickable `<span>` (Anatomy & Physiology, Surgical Principles, Tools). Added `link: {type: "generated-index"}` to each _category_.json and converted `<span>` → `<a>` in foundations/index.mdx — all 5 section titles now clickable and lead to working category landings (updated again 2026-04-21 so Tools has a real section-stack index rather than generated-index)
+
+**Component patterns reinforced this session:**
+
+- `GenericDatabase` from `@site/src/components/GenericDatabase` — column-configurable searchable table with optional category filter + color-coded badges. Pattern now used by: instruments, biomaterials, **pharmacology** (new), and potentially future subsections.
+- **Section-stack landing pattern** (`<ul className="section-stack">` with title, desc, and chips) — used consistently for portal/hub landing pages (foundations, clinical-conditions, surgical-techniques, special-populations, tools, tools/technology, etc.)
+
+**Docusaurus gotcha reinforced:** Filename leading numeric prefix is stripped from URL (e.g., `5-alpha-reductase-inhibitors.mdx` → URL `/alpha-reductase-inhibitors`). Same behavior as directory-prefix stripping. Factor into cross-links.
+
+---
+
+*Last updated: 2026-04-21*
