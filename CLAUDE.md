@@ -461,7 +461,7 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 | Foundations | `01-foundations/` | Landing page has toc-list + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted |
 | Evaluation | `02-evaluation/` | physical-exam and imaging have index.mdx; **history-symptom-assessment was deleted**; Imaging now sits above Ancillary Testing in sidebar + index |
 | Clinical Conditions | `03-clinical-conditions/` | 8 subsections (03a–03h); all have `_category_.json` with `link.type: doc` |
-| Treatment Atlas | `04-surgical-techniques/` | 10 subsections; 04c (urinary diversion) has no index.mdx |
+| Treatment Atlas | `04-surgical-techniques/` | 9 subsections; **04h-prosthetics DELETED**; 04f renamed "Incontinence" with 3 sub-databases (Female SUI, Male SUI, OAB & UUI); 04c (urinary diversion) has no index.mdx |
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
 | History & Lineage | `07-roots/` | Renamed from "Roots of Reconstruction". **Surgical Genealogy** page uses `<SurgeonsExplorer />` with GURS/URPS tabs; surgeons/ category hidden from sidebar |
@@ -625,6 +625,7 @@ Very long session. Major themes: fistula build-out, tools/biomaterials refactore
   4. Section-based chunking — walk article DOM, partition by H2 boundaries, excluded "References" H2 entirely. Chapter picker in the player lets the user jump to any section. Inline `<sup>[N]</sup>` citations and raw `[N]` patterns stripped from TTS text.
 - **CitationTooltips** component — hovering any `<sup>[N]</sup>` citation shows the full reference text in a styled tooltip (auto-flip above if no room below, horizontal clamp at viewport edges, re-scans on SPA path change).
 - Both components swizzled into `src/theme/DocItem/Content/index.tsx` so they run on every doc article automatically.
+- **TTS visibility rule:** ArticleListener is suppressed on any page with `hide_title: true` in frontmatter (all section landings and sub-section index pages use this). Implemented via `useDoc()` from `@docusaurus/plugin-content-docs/client` — **not** `@docusaurus/theme-common/internal` (that package does not export `useDoc` in v3.10). True article pages never set `hide_title`, so they always get the player. No hardcoded path list needed.
 - **TTS-SETUP.md** at project root documents OpenAI key setup, cost math (~$26 one-time to pre-cache all articles at tts-1, pennies ongoing), and the future Vercel KV server-side caching path.
 
 **Resources / Podcasts** — rebuilt from stub into `PodcastLibrary` component:
@@ -867,6 +868,33 @@ Every stub follows the WARWIKI drug-class template: Overview / Mechanism / Agent
 - **Section-stack landing pattern** (`<ul className="section-stack">` with title, desc, and chips) — used consistently for portal/hub landing pages (foundations, clinical-conditions, surgical-techniques, special-populations, tools, tools/technology, etc.)
 
 **Docusaurus gotcha reinforced:** Filename leading numeric prefix is stripped from URL (e.g., `5-alpha-reductase-inhibitors.mdx` → URL `/alpha-reductase-inhibitors`). Same behavior as directory-prefix stripping. Factor into cross-links.
+
+---
+
+### Session of 2026-04-21 (continued) — Treatment Atlas restructure + platform fixes
+
+**GenericDatabase dropdown fix:**
+- `filterLabel="Category"` was rendering as "All Categorys". Fixed by: (1) smart pluralization in `GenericDatabase.tsx` (skip appending `s` if label already ends in `s`), (2) updating all database pages to pass `filterLabel="Categories"`. Affects instruments, biomaterials, pharmacology, incontinence, ED, male stress incontinence databases.
+
+**Treatment Atlas — Incontinence section rebuilt:**
+- **`04h-prosthetics/` deleted entirely** (5 files: index, infection-salvage, IPP, revision-explant, `_category_.json`).
+- **`04f-incontinence-procedures/` renamed** → sidebar label "Incontinence"; new `index.mdx` section landing with 3 subcategory cards.
+- **Three subcategories created**, each with a `GenericDatabase`-powered searchable database:
+  - `female-sui/female-stress-incontinence-database.mdx` — 10 treatments (PFPT, pessary, duloxetine, bulking agents, retropubic MUS, TOT, mini-sling, autologous fascial sling, Burch, AUS)
+  - `male-sui/male-stress-incontinence-database.mdx` — 5 treatments (moved from flat level)
+  - `oab-uui/oab-uui-database.mdx` — 10 treatments (behavioral, PFPT, anticholinergics, beta-3, combination, Botox, SNM, PTNS, eCoin/Revi, bladder augmentation)
+- **All 9 individual procedure pages** (AUS, slings, neuromodulation, Botox, penile clamp, etc.) moved into `procedures/` hidden subfolder (`className: sidebar-hidden-category`, `position: 99`) — same pattern as `flaps/`, `grafts/`. Sidebar now shows only 3 subcategories.
+- **Shared master PFPT page** — `pelvic-floor-pt-male.mdx` replaced with `pelvic-floor-pt.mdx` covering male SUI, female SUI, and OAB/UUI. All three databases link to this single page.
+- **Invasiveness column dropped** from all three incontinence databases for mobile optimization — tables now show Treatment / Category / Notes only.
+
+**URL changes (for external-link auditing):**
+- `/docs/surgical-techniques/04h-prosthetics` → **DELETED**
+- `/docs/surgical-techniques/04f-incontinence-procedures/[page]` → `/docs/surgical-techniques/04f-incontinence-procedures/procedures/[page]` (all individual procedure pages)
+- `/docs/surgical-techniques/04f-incontinence-procedures/pelvic-floor-pt-male` → `/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt`
+- `/docs/surgical-techniques/04f-incontinence-procedures/male-stress-incontinence-database` → `/docs/surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database`
+
+**TTS visibility fix:**
+- Replaced hardcoded 8-path `LANDING_PATHS` set with `useDoc().frontMatter.hide_title` check. Any page with `hide_title: true` suppresses ArticleListener. All section landings and sub-section index pages already use this convention — no per-page maintenance needed.
 
 ---
 
