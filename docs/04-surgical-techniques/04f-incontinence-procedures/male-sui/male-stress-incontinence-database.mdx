@@ -15,35 +15,30 @@ export const maleSuiProcs = [
   {
     name: "Pelvic Floor Physical Therapy",
     category: "Conservative",
-    invasiveness: "Non-invasive",
     notes: "First-line management for mild post-prostatectomy incontinence. Pelvic floor muscle training with a specialized physiotherapist; most effective when started early post-operatively. Evidence supports improvement in continence rates and time to recovery.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt",
   },
   {
     name: "Penile Clamp",
     category: "Conservative",
-    invasiveness: "Non-invasive",
     notes: "External compression device applied to the penile shaft to occlude the urethra and prevent leakage. Temporizing measure for mild-to-moderate SUI; not suitable for long-term use due to risk of urethral erosion, pressure necrosis, and skin breakdown.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp",
   },
   {
     name: "Male Urethral Sling",
     category: "Surgical",
-    invasiveness: "Minimally Invasive",
     notes: "Retropubic or transobturator mesh sling provides passive urethral coaptation. Best suited for mild-to-moderate SUI (1–3 PPD) without prior radiation or urethral compromise. AdVance and AdVance XP slings are the most widely used designs.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings",
   },
   {
     name: "Adjustable Continence Devices",
     category: "Surgical",
-    invasiveness: "Minimally Invasive",
     notes: "Adjustable periurethral balloons (e.g., ProACT) allow postoperative titration of urethral resistance without device replacement. Suitable for moderate SUI; adjustability is advantageous after radiation where progressive fibrosis alters urethral compliance.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices",
   },
   {
     name: "Artificial Urinary Sphincter (AUS)",
     category: "Surgical",
-    invasiveness: "Surgical Implant",
     notes: "AMS 800 is the gold standard for moderate-to-severe male SUI. Hydraulic cuff occludes the bulbar urethra; patient-activated pump cycles device for voiding. 5-year continence (0–1 PPD) ~70–85%; revision rate ~20–30% at 10 years.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter",
   },
@@ -61,16 +56,6 @@ export const maleSuiColumns = [
     badgeColors: {
       'Conservative': '#047857',
       'Surgical':     '#1d4ed8',
-    },
-  },
-  {
-    key: 'invasiveness',
-    header: 'Invasiveness',
-    badge: true,
-    badgeColors: {
-      'Non-invasive':       '#6b7280',
-      'Minimally Invasive': '#0369a1',
-      'Surgical Implant':   '#7c3aed',
     },
   },
   {
