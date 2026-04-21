@@ -91,7 +91,7 @@ export default function GenericDatabase({
             >
               {filterOptions.map(opt => (
                 <option key={opt} value={opt}>
-                  {opt === 'All' ? `All ${filterLabel}s` : opt}
+                  {opt === 'All' ? `All ${filterLabel.endsWith('s') ? filterLabel : filterLabel + 's'}` : opt}
                 </option>
               ))}
             </select>
