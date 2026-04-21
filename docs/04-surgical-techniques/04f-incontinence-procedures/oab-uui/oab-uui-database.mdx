@@ -1,0 +1,128 @@
+---
+title: OAB & Urgency Urinary Incontinence
+sidebar_position: 1
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# OAB & Urgency Urinary Incontinence
+
+Overactive bladder (OAB) and urgency urinary incontinence (UUI) are managed along a stepwise pathway: behavioral and lifestyle modifications first, then pharmacotherapy, then office-based procedures, then implantable neuromodulation, with bladder augmentation reserved for refractory neurogenic or idiopathic disease. Reconstructive urologists are typically involved at the procedural and surgical end of this pathway.
+
+---
+
+export const oabUuiProcs = [
+  {
+    name: "Behavioral Therapy",
+    category: "Behavioral",
+    invasiveness: "Non-invasive",
+    notes: "Bladder training (progressive voiding intervals), urgency suppression techniques, timed voiding, fluid and dietary modification (caffeine, alcohol, acidic foods), and bowel management. First-line for all OAB/UUI. Effective in isolation or combined with pharmacotherapy; best delivered with a specialized continence nurse or physiotherapist.",
+    slug: null,
+  },
+  {
+    name: "Pelvic Floor Physical Therapy",
+    category: "Behavioral",
+    invasiveness: "Non-invasive",
+    notes: "Urge suppression strategies combined with pelvic floor muscle training. Particularly effective for OAB-wet (UUI). Reduces urgency episodes, leakage frequency, and pad usage; comparable to pharmacotherapy in RCTs. Recommended as concurrent first-line alongside or before medications.",
+    slug: null,
+  },
+  {
+    name: "Anticholinergics",
+    category: "Pharmacological",
+    invasiveness: "Oral",
+    notes: "Competitive muscarinic receptor antagonists (oxybutynin, tolterodine, solifenacin, darifenacin, fesoterodine, trospium). Reduce detrusor overactivity and urgency episode frequency. First-line pharmacotherapy. Dry mouth and constipation are the primary tolerability barriers; extended-release formulations and M3-selective agents (solifenacin, darifenacin) have better tolerability profiles. Avoid in cognitive impairment — CNS-penetrant agents (tertiary amines) increase dementia risk.",
+    slug: null,
+  },
+  {
+    name: "Beta-3 Agonists (Mirabegron / Vibegron)",
+    category: "Pharmacological",
+    invasiveness: "Oral",
+    notes: "Selective beta-3 adrenoceptor agonists promote bladder relaxation during filling without inhibiting voiding. Mirabegron (Myrbetriq) and vibegron (Vibativ) are FDA-approved for OAB. Comparable efficacy to anticholinergics with superior tolerability — no dry mouth, no cognitive effect. Mirabegron raises blood pressure at therapeutic doses; vibegron does not. Preferred in elderly patients or those intolerant of anticholinergics.",
+    slug: null,
+  },
+  {
+    name: "Combination Anticholinergic + Beta-3",
+    category: "Pharmacological",
+    invasiveness: "Oral",
+    notes: "Solifenacin + mirabegron combination (Vibegron 75 mg + solifenacin 5 mg, studied in EMPOWUR trial) superior to either agent alone for reducing urgency incontinence episodes. Indicated for patients with inadequate response to monotherapy. Approved as Vibegron/Solifenacin combination (Vesirinone, pending US approval); off-label combination use is common.",
+    slug: null,
+  },
+  {
+    name: "Intradetrusor OnabotulinumtoxinA (Botox 100U)",
+    category: "Procedural",
+    invasiveness: "Outpatient Procedure",
+    notes: "Cystoscopic injection of 100 U onabotulinumtoxinA into the detrusor (20 sites, sparing trigone). FDA-approved for OAB and neurogenic detrusor overactivity (NDO). Reduction in urgency incontinence episodes ~50–60%; complete resolution in ~30%. Effect duration 6–12 months; repeat injections required. Risk of urinary retention (~6% in OAB, higher in NDO) and UTI. Patients should be counseled on and capable of intermittent catheterization.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/intradetrusor-botox",
+  },
+  {
+    name: "Sacral Neuromodulation (SNM)",
+    category: "Procedural",
+    invasiveness: "Surgical Implant",
+    notes: "Electrical stimulation of the S3 sacral nerve root via a tined lead and implantable pulse generator (InterStim II/Micro/X — Medtronic; Axonics r-SNM/F15/R20). FDA-approved for OAB, UUI, urgency-frequency, and non-obstructive urinary retention. Staged trial (percutaneous nerve evaluation or staged implant) required before permanent implant. Durable 50–80% improvement sustained &gt;5 years. MRI-conditional with current-generation devices.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/neuromodulation",
+  },
+  {
+    name: "Percutaneous Tibial Nerve Stimulation (PTNS)",
+    category: "Procedural",
+    invasiveness: "Outpatient Procedure",
+    notes: "Retrograde stimulation of the sacral plexus via a needle electrode at the medial ankle (Urgent PC, NURO). 12-week weekly office treatment protocol; maintenance sessions required every 3–4 weeks. FDA-cleared for OAB. Comparable efficacy to anticholinergics in ORBIT and SUmiT trials; no systemic side effects. Wearable and implantable PTNS devices (eCoin, Revi) emerging as home-use alternatives.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/neuromodulation",
+  },
+  {
+    name: "Transcutaneous Electrical Nerve Stimulation (eCoin / Revi)",
+    category: "Procedural",
+    invasiveness: "Minimally Invasive",
+    notes: "eCoin (Valencia Technologies) is a titanium disc implanted subdermally near the posterior tibial nerve, activated by an external wearable. Revi (BlueWind Medical) is a wireless implanted tibial nerve stimulator. Both eliminate need for in-office visits. Emerging alternatives to in-office PTNS for maintenance therapy; FDA de novo clearance for eCoin (2023).",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/neuromodulation",
+  },
+  {
+    name: "Bladder Augmentation (Enterocystoplasty)",
+    category: "Surgical",
+    invasiveness: "Open / Robotic",
+    notes: "Detubularized bowel segment (ileum most common) incorporated into the bivalved bladder to increase compliance and capacity. Reserved for refractory neurogenic detrusor overactivity (NDO) — typically spinal cord injury, spina bifida, radiation-induced contracted bladder — after failure of all pharmacologic and neuromodulation options. Requires lifelong CIC; risks include mucus production, UTI, metabolic acidosis, and rare malignant transformation after &gt;10 years.",
+    slug: null,
+  },
+];
+
+export const oabUuiColumns = [
+  {
+    key: 'name',
+    header: 'Treatment',
+  },
+  {
+    key: 'category',
+    header: 'Category',
+    badge: true,
+    badgeColors: {
+      'Behavioral':      '#047857',
+      'Pharmacological': '#b45309',
+      'Procedural':      '#0369a1',
+      'Surgical':        '#1d4ed8',
+    },
+  },
+  {
+    key: 'invasiveness',
+    header: 'Invasiveness',
+    badge: true,
+    badgeColors: {
+      'Non-invasive':         '#6b7280',
+      'Oral':                 '#b45309',
+      'Outpatient Procedure': '#0369a1',
+      'Minimally Invasive':   '#0ea5e9',
+      'Surgical Implant':     '#7c3aed',
+      'Open / Robotic':       '#9f1239',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={oabUuiProcs}
+  columns={oabUuiColumns}
+  filterKey="category"
+  filterLabel="Categories"
+  entityLabel="treatments"
+/>
