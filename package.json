@@ -12,7 +12,12 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint:scope": "node scripts/check-scope.js",
+    "lint:citations": "node scripts/check-citations.js",
+    "lint:orphans": "node scripts/check-orphans.js",
+    "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans",
+    "status": "node scripts/gen-status.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.0",

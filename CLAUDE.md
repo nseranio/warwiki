@@ -1,6 +1,31 @@
 # WARWIKI — Claude Session Reference
 
-This file is for Claude to read at the start of every session. It captures the project architecture, conventions, component patterns, and everything needed to continue work seamlessly.
+This file is for Claude to read at the start of every session. It captures the project architecture, conventions, and component patterns. Session history is in `CHANGELOG.md`; the stub backlog is in `docs/_STATUS.md`.
+
+---
+
+## Rules for agents — read before writing
+
+Before writing or modifying an article:
+
+1. **Scope.** Primary topics must fit reconstructive / functional urology / urogynecology. **Out of scope** as primary topics: endourology (PCNL, URS for stones) and primary urologic oncology (cancer cystectomy / nephrectomy / prostatectomy). Body mentions as *reconstructive context* are fine (post-PCNL stricture, post-cystectomy reconstruction, RUF after prostatectomy). See `feedback_site_scope.md`.
+2. **Voice.** Frame every article around surgical/operative relevance for the reconstructive surgeon — not general medicine. Cut subspecialty depth that belongs elsewhere (nephrology tubular transport, IBD pathophysiology, HPV molecular biology, etc.). See `feedback_article_voice.md`.
+3. **Citations.** Real, DOI-linked references only. Default pattern: inline `<sup>[[N]](#refN)</sup>`, reference list with `<a id="refN"></a>N. …` anchors. GAS articles use footnote-style (`[^N]`). Do not fabricate citations.
+
+Before committing:
+
+4. **Run `npm run lint`** — scope + citations + orphans all must pass.
+5. **If you added or filled stubs**, run `npm run status` to refresh `docs/_STATUS.md`.
+6. **If you added an article**, run `npx docusaurus build --locale en` to catch broken links and MDX errors.
+
+Common pitfalls:
+
+- **Unescaped `<` in prose breaks MDX** — use `&lt;35 kg/m²` (any `<` followed by a letter or digit starts a JSX tag).
+- **`useDoc()` imports from `@docusaurus/plugin-content-docs/client`** — NOT `theme-common/internal` (that doesn't export `useDoc` in v3.10).
+- **Filename numeric prefix strips to URL** — `5-alpha-reductase-inhibitors.mdx` serves at `/alpha-reductase-inhibitors`. Factor into cross-links.
+- **Same-name file/dir collapses URL** — `oral-cavity/oral-cavity.mdx` serves at `/docs/.../oral-cavity` (not `.../oral-cavity/oral-cavity`).
+- **Landing pages use `hide_title: true`** — this auto-suppresses the TTS ArticleListener.
+- **Hidden category pattern:** `{"className": "sidebar-hidden-category"}` hides a subdir from sidebar while keeping its pages linkable (used for `flaps/`, `grafts/`, `surgeons/`, `procedures/`).
 
 ---
 
@@ -155,35 +180,51 @@ The Foundations index `docs/01-foundations/index.mdx` now contains:
 
 ## Section Index Pages (`index.mdx`)
 
-Every section has an `index.mdx` with frontmatter slug, `hide_title: true`, and a `<ul className="toc-list">` grid.
+Every section has an `index.mdx` with frontmatter `slug`, `hide_title: true`, and a list-grid of entries.
 
-### toc-list Pattern
+Two patterns are in use, and the choice is **locked by page level**:
+
+### 1. Top-level landings — `section-stack` (LOCKED)
+
+The 8 top-level section landings (Foundations, Evaluation, Clinical Conditions, Treatment Atlas, Special Populations, Journal Club, History & Lineage, Resources) all use `section-stack`. Do not convert these to `toc-list` — that pattern was tried and reverted.
+
+```mdx
+<ul className="section-stack">
+  <li>
+    <a href="/docs/section/subsection" className="section-stack-title section-stack-link">Subsection Title</a>
+    <span className="section-stack-desc">One-line description of what's inside.</span>
+  </li>
+</ul>
+```
+
+### 2. Sub-section indexes — `toc-list` + `toc-chips` (optional)
+
+Deeper landings (e.g. `docs/04-surgical-techniques/04f-incontinence-procedures/index.mdx`) may use `toc-list` with optional `toc-chips` quick-links when the section has many children and chips help with scanning.
 
 ```mdx
 <ul className="toc-list">
   <li>
-    <a href="/docs/section/page"><strong>Section Title</strong></a>
-    <span className="toc-desc">Short description of what's inside</span>
+    <a href="/docs/.../page"><strong>Subsection Title</strong></a>
+    <span className="toc-desc">Description</span>
     <div className="toc-chips">
-      <a href="/docs/section/subsection/page1">Label 1</a>
+      <a href="/docs/.../child">Child</a>
     </div>
   </li>
 </ul>
 ```
 
-**Rules:**
-- Section with an `index.mdx` → use `<a>` linked title
-- Section without landing page → use `<span className="toc-section">` (grey, non-clickable)
-- For multi-page sections, add **either** `<div className="toc-chips">` (button-like pills) **or** `<span className="toc-links">` (minimal inline text links separated by `·`) with anchor children.
-  - Use `.toc-chips` when the sub-items are prominent entry points.
-  - Use `.toc-links` when the index page is copy-heavy and you want a quieter list (e.g., Foundations index).
-- On mobile the grid collapses to single column.
+**Rules (both patterns):**
+- Section with an `index.mdx` → linked `<a>` title. Section without landing → `<span className="toc-section">` (grey, non-clickable).
+- On mobile both grids collapse to single column.
 
 ### CSS Classes Reference
 
 | Class | Purpose |
 |---|---|
-| `.toc-list` | 2-column CSS grid for section index |
+| `.section-stack` | Stacked list used on top-level section landings |
+| `.section-stack-title` / `.section-stack-link` | Bold linked entry title |
+| `.section-stack-desc` | Muted description line |
+| `.toc-list` | 2-column CSS grid for sub-section indexes |
 | `.toc-desc` | Muted description text below section title |
 | `.toc-section` | Non-clickable grey bold title (no landing page) |
 | `.toc-chips` | Flex row of pill links to sub-pages |
@@ -558,122 +599,9 @@ Structure:
 
 ---
 
-## Recent History
+## Session History
 
-- **Anatomy-and-physiology articles fully rewritten** for the GU-reconstructionist voice (all 22 articles in `docs/01-foundations/anatomy-physiology/`). The "The X" title convention was established during this pass. Article-voice memory (`feedback_article_voice.md`) captures the rule.
-- **New components:** `SurgeonsExplorer` (GURS/URPS tabs), `VideoCards` (lazy YouTube thumbnail grid).
-- **Surgeon data model extended** with `subspecialty` field + helpers; URPS surgeons seeded (~20) with 4 URPS dynasties (Raz, Nitti, Comiter, Ginsberg) and four confirmed mentor→trainee links.
-- **Sidebar "Surgeons" auto-category hidden** — profiles now only reachable via the Directory on Surgeons & Lineage.
-- **Algolia DocSearch** integrated; search box between Library and About; site-verification meta tag injected.
-- **Homepage redesigned** — light gradient hero, WARWIKI-as-link, large search pill, no ENTER button. Tagline changed to *Reconstruction, codified.* Footer simplified to `© YEAR WARWIKI`.
-- **Vercel fix** — `cleanUrls: true` / `trailingSlash: false` added; previously caused 404s on all extensionless URLs.
-- **Favicon** replaced with solid vector W so it renders consistently without web-font access.
-- **Social card** regenerated to match new aesthetic + new tagline.
-- **Foundations page** — standalone curriculum page deleted; `<CurriculumViewer />` now embedded in the Foundations index page.
-- **Evaluation section** — `history-symptom-assessment.mdx` deleted; Imaging and Ancillary Testing sidebar positions swapped (Imaging now above Ancillary).
-- **Image set** — public-domain / CC-licensed anatomy images downloaded into `static/img/anatomy/` and embedded in the anatomy articles. No caption-only figure blocks — either real image or nothing.
-
-### Session of 2026-04-19 — Massive content + platform pass
-
-Very long session. Major themes: fistula build-out, tools/biomaterials refactored into searchable databases, new Surgical Skills + Gear subsections, TTS + citation tooltips platform features.
-
-**Content additions:**
-- **Rectovesical Fistula article** fully built out (27 citations) with RVF-vs-RUF anatomic distinction (bladder neck as landmark), Mundy-Andrich and Sotelo-group complexity classifications, four surgical approaches including Sotelo-group robotic step-by-step technique, five interposition options, outcomes tables by etiology, pubovesical fistula as related entity.
-- **Urethropubic Fistula article** fully built out (16 citations) framed as UPF spectrum (urethropubic + pubovesical + urosymphyseal + pubosymphyseal), etiologic pathway (radiation → BNC → endoscopic BOO treatment → UPF), UPF-as-osteomyelitis framing (88-97% histologic prevalence), four-element operation (fistula excision + pubectomy + interposition + urinary reconstruction-or-diversion), robot-assisted cystectomy with holmium laser debridement.
-- **Procedures Causing GU Injury / Cesarean Section** article (30 citations) — built earlier in session, landed in this commit tree.
-- **Intraoperative Consultation subsection** (8 references) under Trauma & Emergencies — consult workflow, diagnostic maneuvers, organ-specific repair, damage-control, Skokan algorithm. Procedures-Causing-GU-Injury nested inside.
-
-**Instruments section — refactored into searchable database:**
-- Old single `instruments.mdx` page replaced with `instruments/` subdirectory.
-- **38 individual instrument pages** across 9 subcategories (needle holders, forceps, clamps, cautery, retractors, sounds & bougies, urethral & pelvic specialty, suction, graft harvest).
-- **Instruments landing** uses existing `GenericDatabase` component with search + category filter + color-coded badges.
-- Notable instruments with expanded pages: Turner-Warwick Ryder, Heaney, Lone Star, perineal Bookwalter (Jordan), Haygrove, Ravini, Raz-Pereyra, Gorget (Gourget — full history article).
-- **Later additions to instruments:**
-  - Bone Instruments subcategory (position 10, brown badge) — rongeur, pituitary rongeur, periosteal elevator, air drill, osteotome+mallet — for pubectomy in UPF / PFUI.
-  - TUITMR devices (JNW UrTrac, RD180, Ti-Knot) for endoscopic urethroplasty.
-  - SSLF device expansion: Capio, Anchorsure (PEEK anchor, Neomedic/JUNE), Saffron (Coloplast), i-Stitch (A.M.I.), Endostitch (Medtronic), Miya Hook, Deschamps — 7 total in Urethral & Pelvic Specialty (now 12 pages in that subcategory).
-  - Dermatome expansion: overview + 6 variants (Zimmer Air, Padgett, Humby, Goulian, Drum/Padgett-Hood, Skin Mesher).
-
-**Biomaterials section — refactored into searchable database:**
-- Old single `biomaterials.mdx` page replaced with `biomaterials/` subdirectory.
-- **12 subcategories, ~46 individual pages** covering permanent implanted materials, temporary/indwelling devices, investigational scaffolds, adjunct/specialty, and non-medical foreign bodies.
-- **Landing** uses `GenericDatabase` with category filter + 12 color-coded badges + framework text explaining the three conceptual groupings.
-- New subcategories added in this session:
-  - **Ureteral Stents & Upper Tract Drainage** (4) — Double-J, nephrostomy, nephroureteral, metal/long-term
-  - **Urinary Catheters** (6) — Foley, Council tip, Coudé, suprapubic, self-retaining (Malecot/de Pezzer), intermittent
-  - **Surgical Drains** (3) — Jackson-Pratt, Blake, Penrose
-  - **Neuromodulation Devices** (6) — Medtronic InterStim (II/Micro/X), Axonics SNM (r-SNM/F15/R20), PTNS Systems (Urgent PC, NURO), eCoin, Revi, Altaviva
-- Adjunct & Specialty gained **Glean Urodynamics System** (first wireless catheter-free ambulatory UDS, Bright Uro, FDA 2025).
-
-**New Foundations subsection — Surgical Skills** (position 4, Perioperative Care bumped to 5, Tools to 6):
-- **4 sub-categories, 29 technique pages**: knot tying (7 — two-handed square, one-handed, instrument tie, surgeon's knot, slip knot, Aberdeen, laparoscopic), suturing patterns (12 — including Connell/Lembert/Cushing/Halsted bowel stitches), ligatures (5 — free tie, suture ligature, transfixion, clip, energy sealing), special techniques (5 — Heaney stitch, quilting, ski needle, Van Velthoven running VUA, barbed suture closure).
-- Each stub follows the pattern: opening paragraph + technique summary + key reconstructive-urology uses + pearls + cross-links + "*Stub — to be built out.*" placeholder for full walkthrough.
-
-**New Tools subsection — Gear** (position 6):
-- Single comprehensive page covering optical aids (loupes, headlights, microscope — Designs for Vision, Orascoptic, Zeiss guidance), radiation protection (lead aprons including composite/lead-free options, thyroid shield, leaded glasses, dosimetry, ALARA), ergonomics (shoes, compression stockings, anti-fatigue mats, saddle stools), PPE (AAMI gown levels, double gloves, laser-grade masks), adjunct gear (smoke evacuators, cooling vests, voice communicators). Brand guidance + price ranges throughout.
-
-**Fistulas section — fully revamped by gender + new landing:**
-- Reorganized from flat 5-article structure into three gender buckets (in-both-genders, in-females, in-males).
-- New `03f-fistulas/index.mdx` landing with section-stack grid + cross-cutting "Complex Fistula Principles" framework rescued from deleted `cutaneous-complex.mdx`.
-- **13 new stubs created**, 4 existing articles moved into gender subfolders.
-
-**Platform features — TTS audio + citation tooltips:**
-- **ArticleListener** component iterated through three major revisions:
-  1. Browser-native speechSynthesis baseline
-  2. Cloud TTS via OpenAI through a new `/api/tts` Vercel serverless function (6 voices, 2 quality tiers, client Cache API keyed by SHA-256(model|voice|text), automatic fallback to browser TTS on any failure). `openai` npm dependency added; `OPENAI_API_KEY` must be set in Vercel env vars; fallback path activates until it is.
-  3. Progressive playback — parallel chunk fetching, play chunk 0 immediately while chunks 2+ load in background. Silent-MP3 priming in the click handler to prevent autoplay rejection after the awaited fetch.
-  4. Section-based chunking — walk article DOM, partition by H2 boundaries, excluded "References" H2 entirely. Chapter picker in the player lets the user jump to any section. Inline `<sup>[N]</sup>` citations and raw `[N]` patterns stripped from TTS text.
-- **CitationTooltips** component — hovering any `<sup>[N]</sup>` citation shows the full reference text in a styled tooltip (auto-flip above if no room below, horizontal clamp at viewport edges, re-scans on SPA path change).
-- Both components swizzled into `src/theme/DocItem/Content/index.tsx` so they run on every doc article automatically.
-- **TTS visibility rule:** ArticleListener is suppressed on any page with `hide_title: true` in frontmatter (all section landings and sub-section index pages use this). Implemented via `useDoc()` from `@docusaurus/plugin-content-docs/client` — **not** `@docusaurus/theme-common/internal` (that package does not export `useDoc` in v3.10). True article pages never set `hide_title`, so they always get the player. No hardcoded path list needed.
-- **TTS-SETUP.md** at project root documents OpenAI key setup, cost math (~$26 one-time to pre-cache all articles at tts-1, pennies ongoing), and the future Vercel KV server-side caching path.
-
-**Resources / Podcasts** — rebuilt from stub into `PodcastLibrary` component:
-- ~40 curated episodes across 10 topics (Core GURS, Urethroplasty, Diversion, Trauma, AUS/Male-Inc, Penile/Peyronie's, GAS, FPMRS, Prolapse, Pain/GSM).
-- Search box + topic quick-jump chips with per-topic counts + rich cards with **left-edge color bars matched to producing feed** (7 feeds color-coded).
-- `PodcastFeedList` companion renders the "Full Feeds Worth Subscribing To" grid at bottom.
-
-**CSS bug fix** — database table headers were white-on-gray (unreadable) in light mode because Docusaurus's default `.markdown table thead th` rule had higher specificity. Fixed by raising the DB-header rule to `.td-wrapper .td-table thead th` + explicit dark-mode override.
-
-### Session of 2026-04-18
-
-- **New "Intraoperative Consultation" subsection** added under `05-special-populations/05a-trauma-emergencies/`. Main article is an operational guide to the urologist's role as called-in consultant for iatrogenic GU injury during non-urologic surgery — when to come, diagnostic maneuvers, organ-by-organ repair principles, damage-control ("drain now, fix later"), Skokan algorithm, prevention, timing outcomes, documentation. 8 references (2023 WSES IUTI guideline, 2025 ACS Best Practices, Kato/Skokan chapter, Sylla taTME study).
-- **"Procedures Causing GU Injury" subsection** nested inside Intraoperative Consultation. First article is **Cesarean Section** (30 citations, framed for reconstructive urologist / urogynecologist — technique, parametrial anatomy, bladder and ureteral injury mechanisms, Youssef-syndrome VUF, uterine niche / isthmocele, placenta accreta spectrum).
-- Cesarean-section was initially created under Foundations, then moved here. Conceptual framing: consult scenario (intraoperative-consultation) → source operation (procedures-causing-gu-injury) as a reading path.
-- **Palacios-Jaraquemada 2026 AJOG** cesarean anatomy paper (doi:10.1016/j.ajog.2025.08.012) is cited but not figure-reproduced; figures are copyrighted and require permissions.
-- **Fistulas section fully revamped** — reorganized `03f-fistulas/` from a flat 5-article structure into three gender buckets: `in-both-genders/` (7 articles), `in-females/` (5 articles), `in-males/` (5 articles). New landing page `03f-fistulas/index.mdx` preserves the cross-cutting complex-fistula framework (staging, tissue interposition, multi-compartment, radiation, key operative principles — content rescued from the deleted `cutaneous-complex.mdx`).
-- Existing 4 articles moved: vesicovaginal, ureterovaginal, rectovaginal → `in-females/`; rectourethral → `in-males/`. Deleted `cutaneous-complex.mdx`.
-- 13 new stubs created (one seeded from UCF content, twelve pure stubs with opening paragraph + skeleton sections + "*Stub — to be built out.*" placeholders matching the flap-stub pattern):
-  - in-both-genders: pyeloenteric, nephropleural, ureterocolonic, colovesical-small-bowel, vesicocutaneous, post-kidney-transplant, vascular-urinary
-  - in-females: vesicouterine (Youssef syndrome, cross-linked to cesarean-section), obstetric
-  - in-males: rectovesical, urethropubic, urethrocutaneous (seeded with UCF content), urethroperineal
-- **URL change log** for external-link auditing:
-  - `/docs/clinical-conditions/03f-fistulas/vesicovaginal` → `.../in-females/vesicovaginal`
-  - `/docs/clinical-conditions/03f-fistulas/ureterovaginal` → `.../in-females/ureterovaginal`
-  - `/docs/clinical-conditions/03f-fistulas/rectovaginal` → `.../in-females/rectovaginal`
-  - `/docs/clinical-conditions/03f-fistulas/rectourethral` → `.../in-males/rectourethral`
-  - `/docs/clinical-conditions/03f-fistulas/cutaneous-complex` → DELETED (content in landing page + `.../in-males/urethrocutaneous`)
-
-### Session of 2026-04-17
-
-- **Surgeon profile links fixed** — `SurgeonDirectory` and `SurgeonTree` were using `s.id` instead of `s.path`, causing 404s on all profile links. Fixed to use `s.path` (includes alpha-group subfolder).
-- **Library dropdown reordered** — Journal Club → Resources → History & Lineage.
-- **"Roots of Reconstruction" renamed to "History & Lineage"** — `_category_.json`, `index.mdx` title, and navbar label all updated.
-- **"Surgical Lineage" renamed to "Surgical Genealogy"** — `surgical-lineage.mdx` title and sidebar label updated.
-- **Hidden Curriculum moved into Resources** — `09-hidden-curriculum/` deleted; files moved to `08-resources/hidden-curriculum/`; `hiddenCurriculumSidebar` removed from `sidebars.ts`; all internal links updated; Resources index updated.
-- **Surgeon biographies recovered** — McAninch, Jordan, Devine, Zinman bios (commit `579eb75`) were on an unmerged worktree branch; cherry-picked onto main.
-- **Buccal Mucosa Graft article fully built out** — 22 citations; biological properties, harvest technique, donor site management (closure vs nonclosure RCT), GU applications, named placement techniques table (Barbagli/Asopa/Kulkarni/Palminteri), morbidity tables, outcomes by stricture type and lichen sclerosus, comparative data vs lingual mucosa and penile skin grafts.
-- **`bypassPermissions` set globally** — `~/.claude/settings.json` updated; takes effect on next session start.
-
-### Session of 2026-04-16 — Foundations expansion wave
-
-- **New top-level section 09 Hidden Curriculum** — see section above. Billing & Coding moved from Resources.
-- **Perioperative Care restructured** into Temporal + Protocols framework (preoperative-assessment / intraoperative-care / postoperative-management / perioperative-protocols). All 16 articles populated.
-- **Surgical Principles fully built out** — incisions-closure, bowel-anastomosis, sutures, needles added; flap and graft subdirectories created with individual clickable pages.
-- **Robotics subsection** added under Tools — 3 articles (platforms, reconstructive-applications, single-port).
-- **Anatomy subsections added** — Lower Extremity (leg-thigh) and Oral Cavity.
-- **Broken links fixed** — 3 pre-existing broken links (to deleted 05b-oncologic-radiation section, to nonexistent /docs/foundations/biomaterials) repointed to valid targets.
-- **Navbar updated** — Hidden Curriculum added to Library dropdown; Docusaurus build clean.
+Substantive content and platform changes are logged in `CHANGELOG.md`. For commit-level detail, run `git log --oneline`.
 
 ---
 
@@ -715,187 +643,5 @@ Today's additions were text-only. The following new pages would benefit from ima
 
 ---
 
-## Maintenance Caveats — 2026-04-16
-
-- **Broken links fixed:** `radiation-tissue-effects.mdx` (now points to `clinical-conditions/03d-bladder-disorders/radiation-cystitis` and the `03b`/`03e` stricture articles instead of deleted `05b-oncologic-radiation`). `reconstructive-ladder.mdx` (now points to `tools/biomaterials` instead of `/docs/foundations/biomaterials`). **Build is 100% broken-link-free.**
-- **URL change log** for external-link auditing:
-  - `/docs/hidden-curriculum` → `/docs/resources/hidden-curriculum`
-  - `/docs/hidden-curriculum/overview` → `/docs/resources/hidden-curriculum/overview`
-  - `/docs/hidden-curriculum/healthcare-finance` → `/docs/resources/hidden-curriculum/healthcare-finance`
-  - `/docs/hidden-curriculum/billing-coding` → `/docs/resources/hidden-curriculum/billing-coding`
-  - `/docs/resources/billing-coding` → `/docs/resources/hidden-curriculum/billing-coding`
-  - `/docs/foundations/perioperative-care/preoperative/*` → `/docs/foundations/perioperative-care/preoperative-assessment/*`
-  - `/docs/foundations/perioperative-care/anesthesia-pain/*` → `/docs/foundations/perioperative-care/intraoperative-care/*`
-  - `/docs/foundations/perioperative-care/postoperative/positioning-nerve-injury` → `/docs/foundations/perioperative-care/intraoperative-care/positioning-nerve-injury`
-  - `/docs/foundations/perioperative-care/postoperative/{constipation,electrolyte-abnormalities,pulmonary-embolism,tpn-ppn}` → `/docs/foundations/perioperative-care/postoperative-management/{constipation,electrolyte-abnormalities,pulmonary-embolism,nutrition}`
-  - `/docs/foundations/perioperative-care/postoperative/{eras,antithrombotic-therapy}` → `/docs/foundations/perioperative-care/perioperative-protocols/{eras,antithrombotic-therapy}`
-  - `/docs/foundations/perioperative-care/postoperative/tpn-ppn` → `/docs/foundations/perioperative-care/postoperative-management/nutrition`
-- **Docusaurus URL-collapse quirk** — when a file is named the same as its parent directory (e.g., `oral-cavity/oral-cavity.mdx`), Docusaurus collapses the URL to `/docs/foundations/anatomy-physiology/oral-cavity` (not `.../oral-cavity/oral-cavity`). Use the collapsed path in cross-links.
-- **Hidden-category pattern** — `{"className": "sidebar-hidden-category"}` in `_category_.json` hides a subdirectory from the sidebar while keeping its pages linkable. Used for: `surgeons/`, `flaps/`, `grafts/`. The category `position: 99` with hidden className is the standard idiom.
-
----
-
-### Session of 2026-04-20 to 2026-04-21 — Massive content expansion + structural refinements
-
-The largest multi-day expansion session to date. Major themes: penile-implant / Peyronie's deep-dive, intraoperative-adjuncts library, pharmacology database conversion, antibiotics build-out, energy devices, site audit, and a Tools restructure.
-
-**Penile Implants subsection — built out from overview to 8 articles (~60 refs total):**
-
-```
-surgical-techniques/04j-sexual-dysfunction/penile-implants/
-├── index.mdx                   ← overview (updated with section-stack to all 7 deep-dives)
-├── infection.mdx               ← 29 refs; IPP infection evolution + 2026 Irrisept pivot
-├── preoperative-evaluation.mdx ← 11 refs; CURSED framework
-├── intraoperative-setup.mdx    ← 12 refs; Eid no-touch protocol
-├── surgical-approaches.mdx     ← 6 refs; PS/IP/SC/TS
-├── reservoir-placement.mdx     ← 6 refs; SoR vs HSM ectopic vs 2-piece
-├── implant-models.mdx          ← 9 refs; AMS/Titan/Rigicon/Ambicor/Tactra/ZSI
-├── revision-scenarios.mdx      ← 9 refs; fibrosis, crossover, SST, salvage
-└── complications.mdx           ← 7 refs; erosion, glans ischemia, aneurysm
-```
-
-**Peyronie's Disease — converted to subsection with 5 surgical deep-dives (~50 refs total):**
-
-```
-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/
-├── index.mdx                           ← overview + section-stack
-├── tunica-plication.mdx                ← 15 refs; Nesbit/16-dot/8-dot/Yachia/TAP/Dugi-Morey/Kiel Knots/Essed-Schröder/MPP
-├── plaque-incision-grafting.mdx        ← 10 refs; Hatzichristodoulou sealing; BMG meta; grafts; PEG + plication
-├── prosthesis-with-straightening.mdx   ← 12 refs; adjunctive ladder (Hammad 2025); PICS technique
-├── manual-modeling.mdx                 ← 8 refs; Wilson 1994; Lucas optimal; Moncada home modeling
-└── scratch-technique.mdx               ← 8 refs; Antonini + vacuum therapy; Shaeer punch
-```
-
-**Trauma & Emergencies additions:**
-
-- `priapism.mdx` (18 refs) — all 3 subtypes, TWIST, AUA/SMSNA 2021 algorithm, tunneling + PSD, early prosthesis for &gt;36h; SCD-specific management
-- `testicular-torsion.mdx` (20 refs) — TWIST score (AUC 0.924), salvage rates, 5 fixation techniques (dartos pouch / Jaboulay / Lent eversion / Kozminski / sutured), TVF salvage (Figueroa, Kutikov compartment-pressure data)
-
-**Evaluation section:**
-
-- NEW `assessment-tools.mdx` (22 refs) — comprehensive validated-instruments reference: SHIM/IIEF, full POP-Q, pad tests (1-hr / 24-hr / 7-day), MSIGS, bladder diaries, IPSS, PFDI-20/PFIQ-7, PISQ-IR, USS-PROM, Urethral Stricture Score, NIH-CPSI, ICIQ family, EQ-5D
-
-**Surgical-skills expansion:**
-
-- `knot-tying/self-locking-knots.mdx` — rewritten with full biomechanics terminology (half-knot vs half-hitch, symmetric/asymmetric, loop security values), Aberdeen (Ultimate configuration), Forwarder, Middler/loop-lock, **Loop Knot** (starting knot), **Nice Knot** (doubled-suture sliding), **Modified Nice Knot**, **Cow Hitch** (stiffest tested for UHMWPE)
-- `knot-tying/laparoscopic-knot.mdx` — **deleted** per user request; repoint links to self-locking-knots
-- `suturing/parker-kerr-stitch.mdx` — NEW; classical over-the-clamp baseball + Lembert two-layer stump closure
-- `suturing/barbed-sutures.mdx` — NEW (26 refs); porcupine-quill history, V-Loc vs Quill, full GU applications (RARP VUA, PN renorrhaphy, pyeloplasty, vaginal cuff, cesarean, sacrocolpopexy), Sassun 2026 SBO-myth data
-- Existing stubs expanded: Aberdeen (Stott Ultimate + Gillen config), surgeon's knot (security data), two-handed square knot (Taysi optimal config)
-- Thor Sundt MMCTS tutorial 1852 linked as external video under suturing index
-
-**Flaps expansion — 5 new pages + geometric plasty framework:**
-
-- `flaps/y-v-plasty.mdx` — BNC workhorse; 90-100% success refractory BNC; ICG/Firefly role
-- `flaps/medial-thigh.mdx` — most common Fournier's regional flap; 1.6% flap loss
-- `flaps/labia-majora-fasciocutaneous.mdx` — distinct from Martius (tissue replacement not interposition); Gupta 2022 VVF + vaginal-wall deficit
-- `flaps/pmtp-propeller.mdx` — posteromedial thigh perforator propeller; 180° rotation; DEPAP/SCIP/EPAP variants framework
-- `flaps/singapore-pudendal-thigh.mdx` — bilateral for neovagina
-- Main `flaps-gu-reconstruction.mdx` expanded with **Geometric Plasty Techniques** section, Flap Index table (17 flaps), Flap Selection Principles by Indication; later trimmed to pure index (per-flap detail lives on dedicated pages)
-- Penile-preputial flap fully built out with McAninch-Morey onlay-vs-tube (13% vs 58% recurrence)
-
-**Intraoperative Adjuncts — NEW tools subsection (22 files, 2,032 lines):**
-
-```
-tools/intraoperative-adjuncts/
-├── index.mdx (which-adjunct-when framework)
-├── visualization-agents/   (index + ICG + methylene blue + indigo carmine + sodium fluorescein + pudexacianinium ASP-5354)
-├── hemostatic-agents/      (index + Surgicel + Arista + Gelfoam/Surgiflo + FloSeal + topical thrombin)
-└── tissue-sealants/        (index + fibrin sealants Tisseel/Evicel/Artiss + TachoSil + cyanoacrylates + PEG sealants)
-```
-
-**Pharmacology — converted from stub to 13-category searchable database:**
-
-```
-tools/pharmacology/
-├── index.mdx                         ← GenericDatabase component; ~62 drug-class rows with search + category filter
-├── storage-oab/                      ← FULLY BUILT: anticholinergics (23 refs), β3-agonists (22 refs), desmopressin
-├── voiding-outlet/                   ← alpha-blockers + 5-ARIs FULLY BUILT; 4 other stubs (α-agonists, cholinergic,
-│                                        skeletal muscle relaxants, dantrolene)
-├── bladder-pain-ic-bps/              ← 2 stubs (oral, intravesical)
-├── neuropathic-pelvic-pain/          ← 7 stubs (gabapentinoids, TCAs, SNRIs, NSAIDs, topical, local anesth,
-│                                        antispasmodics)
-├── neuromodulation-adjuncts/         ← 1 stub (botulinum toxin)
-├── infection-prophylaxis/            ← UTI treatment + periop antibiotic FULLY BUILT (28 refs combined);
-│                                        4 stubs (UTI suppressive, non-antibiotic, antifungals, biofilm)
-├── sexual-medicine-andrology/        ← 7 stubs (PDE5i, ICI, MUSE, TRT, androgen adjuncts, Peyronie's, priapism)
-├── hormonal-therapies/               ← 5 stubs (vaginal estrogen, DHEA, ospemifene, preop priming, GAHT)
-├── dermatologic-topical-urethral/    ← 6 stubs (clobetasol, TCI, intralesional steroids, antifibrotics, DCB, PRP)
-├── intraoperative-adjuncts/          ← 7 stubs (cross-link to tools/intraoperative-adjuncts materials library)
-├── perioperative-eras/               ← 5 stubs (VTE prophylaxis, AC reversal, bowel prep, ileus, steroids)
-├── urinary-diversion-specific/       ← 3 stubs (acidifiers, B12, mucus)
-└── legacy-low-evidence/              ← 4 stubs (parasympathomimetics, imipramine, phenazopyridine, phytotherapy)
-```
-
-Every stub follows the WARWIKI drug-class template: Overview / Mechanism / Agents / Indications / Dosing (with warning admonition) / Contraindications / Perioperative / Evidence / Pearls / Related Articles / References.
-
-**Tools restructure (2026-04-21) — Technology as new subsection:**
-
-- Created `tools/technology/` as container for robotics + energy devices
-- Moved `tools/robotics/` → `tools/technology/robotics/`
-- Moved `tools/energy-devices.mdx` → `tools/technology/energy-devices.mdx`
-- Deleted stub `tools/technology.mdx` (replaced by directory index)
-- **NEW** `tools/index.mdx` — section-stack landing consistent with other top-level section landings (replaces the generated-index stub)
-- **NEW** `tools/technology/index.mdx` — section-stack to Robotics + Energy Devices
-
-**New Tools structure:**
-
-1. Instruments (1)
-2. **Technology** (2) — Robotics + Energy Devices
-3. Biomaterials (3)
-4. Pharmacology (4)
-5. Intraoperative Adjuncts (5)
-6. Gear (6)
-
-- Removed stale `slug: /foundations/tools/robotics` override from the Robotics index (now follows directory URL)
-- Fixed all cross-links across 15+ files pointing to old `/tools/robotics/*` and `/tools/energy-devices` paths
-
-**Energy Devices** (~430 lines, 39 refs) — new comprehensive article (outside cancer scope): electrosurgery (monopolar vs bipolar, waveforms), Bipolar vs Monopolar TURP (Cochrane 59 RCTs), lasers (Ho:YAG / TFL / GreenLight / ThuVAP), Harmonic scalpel, LigaSure, Aquablation, morcellation, electrosurgical safety principles.
-
-**Antibiotics expansion (in Pharmacology):**
-
-- `uti-treatment-antibiotics.mdx` — 21 refs; stratified framework (uncomplicated cystitis / pyelonephritis / cUTI / urosepsis / ESBL / DTR Pseudomonas / CRE by β-lactamase / acute + chronic prostatitis / CAUTI / ASB); 2025 IDSA cUTI guideline; 2024 IDSA AMR guidance; high-dose oral β-lactam step-down
-- `perioperative-antibiotic-prophylaxis.mdx` — 7 refs; AUA BPS 2020 framework + PUMP-era reshaping (Barham 2023 vanc+gent 2.7× IPP infection; Abou Chawareb 2025 antifungal 92% reduction); device-specific protocols; MRSA decolonization
-
-**Site audit (2026-04-21):**
-
-- Build is clean — no broken links, no broken admonitions (no `::::note` or similar), no `undefined` artifacts, no `Figure X`/`Table X` orphans, no `KID-1` NCCN refs, no empty `[](…)`
-- **Foundations landing fix** — 3 of 5 section entries were rendered as non-clickable `<span>` (Anatomy & Physiology, Surgical Principles, Tools). Added `link: {type: "generated-index"}` to each _category_.json and converted `<span>` → `<a>` in foundations/index.mdx — all 5 section titles now clickable and lead to working category landings (updated again 2026-04-21 so Tools has a real section-stack index rather than generated-index)
-
-**Component patterns reinforced this session:**
-
-- `GenericDatabase` from `@site/src/components/GenericDatabase` — column-configurable searchable table with optional category filter + color-coded badges. Pattern now used by: instruments, biomaterials, **pharmacology** (new), and potentially future subsections.
-- **Section-stack landing pattern** (`<ul className="section-stack">` with title, desc, and chips) — used consistently for portal/hub landing pages (foundations, clinical-conditions, surgical-techniques, special-populations, tools, tools/technology, etc.)
-
-**Docusaurus gotcha reinforced:** Filename leading numeric prefix is stripped from URL (e.g., `5-alpha-reductase-inhibitors.mdx` → URL `/alpha-reductase-inhibitors`). Same behavior as directory-prefix stripping. Factor into cross-links.
-
----
-
-### Session of 2026-04-21 (continued) — Treatment Atlas restructure + platform fixes
-
-**GenericDatabase dropdown fix:**
-- `filterLabel="Category"` was rendering as "All Categorys". Fixed by: (1) smart pluralization in `GenericDatabase.tsx` (skip appending `s` if label already ends in `s`), (2) updating all database pages to pass `filterLabel="Categories"`. Affects instruments, biomaterials, pharmacology, incontinence, ED, male stress incontinence databases.
-
-**Treatment Atlas — Incontinence section rebuilt:**
-- **`04h-prosthetics/` deleted entirely** (5 files: index, infection-salvage, IPP, revision-explant, `_category_.json`).
-- **`04f-incontinence-procedures/` renamed** → sidebar label "Incontinence"; new `index.mdx` section landing with 3 subcategory cards.
-- **Three subcategories created**, each with a `GenericDatabase`-powered searchable database:
-  - `female-sui/female-stress-incontinence-database.mdx` — 10 treatments (PFPT, pessary, duloxetine, bulking agents, retropubic MUS, TOT, mini-sling, autologous fascial sling, Burch, AUS)
-  - `male-sui/male-stress-incontinence-database.mdx` — 5 treatments (moved from flat level)
-  - `oab-uui/oab-uui-database.mdx` — 10 treatments (behavioral, PFPT, anticholinergics, beta-3, combination, Botox, SNM, PTNS, eCoin/Revi, bladder augmentation)
-- **All 9 individual procedure pages** (AUS, slings, neuromodulation, Botox, penile clamp, etc.) moved into `procedures/` hidden subfolder (`className: sidebar-hidden-category`, `position: 99`) — same pattern as `flaps/`, `grafts/`. Sidebar now shows only 3 subcategories.
-- **Shared master PFPT page** — `pelvic-floor-pt-male.mdx` replaced with `pelvic-floor-pt.mdx` covering male SUI, female SUI, and OAB/UUI. All three databases link to this single page.
-- **Invasiveness column dropped** from all three incontinence databases for mobile optimization — tables now show Treatment / Category / Notes only.
-
-**URL changes (for external-link auditing):**
-- `/docs/surgical-techniques/04h-prosthetics` → **DELETED**
-- `/docs/surgical-techniques/04f-incontinence-procedures/[page]` → `/docs/surgical-techniques/04f-incontinence-procedures/procedures/[page]` (all individual procedure pages)
-- `/docs/surgical-techniques/04f-incontinence-procedures/pelvic-floor-pt-male` → `/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt`
-- `/docs/surgical-techniques/04f-incontinence-procedures/male-stress-incontinence-database` → `/docs/surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database`
-
-**TTS visibility fix:**
-- Replaced hardcoded 8-path `LANDING_PATHS` set with `useDoc().frontMatter.hide_title` check. Any page with `hide_title: true` suppresses ArticleListener. All section landings and sub-section index pages already use this convention — no per-page maintenance needed.
-
----
 
 *Last updated: 2026-04-21*
