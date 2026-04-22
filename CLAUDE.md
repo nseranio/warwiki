@@ -500,7 +500,7 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 | Section | Path | Notes |
 |---|---|---|
 | Foundations | `01-foundations/` | Landing page has toc-list + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted |
-| Evaluation | `02-evaluation/` | physical-exam and imaging have index.mdx; **history-symptom-assessment was deleted**; Imaging now sits above Ancillary Testing in sidebar + index |
+| Evaluation | `02-evaluation/` | Three children: **History & Physical** (bundles assessment-tools + male/female exams), Imaging, Ancillary Testing. `physical-exam/` subdirectory was flattened into `history-physical/` (2026-04-21). |
 | Clinical Conditions | `03-clinical-conditions/` | 8 subsections (03a–03h); all have `_category_.json` with `link.type: doc` |
 | Treatment Atlas | `04-surgical-techniques/` | 9 subsections; **04h-prosthetics DELETED**; 04f renamed "Incontinence" with 3 sub-databases (Female SUI, Male SUI, OAB & UUI); 04c (urinary diversion) has no index.mdx |
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
@@ -529,6 +529,16 @@ Populated: wound-healing, reconstructive-ladder, plastic-surgery-principles, pri
 **Graft subdirectory** — `grafts/` hosts 10 stub pages (hidden category) reachable only via links from the main Grafts article:
 - **buccal-mucosa** ← **fully built out** (biological properties, harvest technique, GU applications, named placement techniques table, donor site morbidity, outcomes, comparison with alternatives — 22 citations)
 - lingual-mucosa, labial-mucosa, intestinal-segments, penile-preputial-skin, saphenous-vein, posterior-auricular, stsg, ftsg, bladder-mucosa (stubs)
+
+### Foundations — Surgical Skills status (restructured 2026-04-21)
+
+Collapsed from 4 subsections (knot-tying, suturing patterns, ligatures, special-techniques) to a **single flat landing with a table** focused exclusively on GURS/URPS-signature techniques. Generic knot tying, generic suturing patterns, and ligature types were deleted — those are covered in any surgery textbook.
+
+**10 techniques retained (all at the flat root):**
+- **Bowel stitches:** connell, cushing, lembert, halsted, parker-kerr
+- **Signature GU/pelvic:** heaney, quilting (fully built — 40 refs), ski-needle, van-velthoven-vua, barbed-sutures
+
+The landing also hosts a **Learning Resources** section with 3 structured curricula (UCSF Surgical Skills Center, UCSF ATOSS, BBASS) and 4 curated video playlists (Behind The Knife Boot Camp, The Clean Scalpel, Basic Surgical Skills, WARWIKI Surgical Technique).
 
 ### Foundations — Perioperative Care restructured (Temporal + Protocols framework)
 
@@ -596,6 +606,13 @@ Structure:
 | `docs/01-foundations/index.mdx` | toc-list + `.toc-links` pattern + `<CurriculumViewer />` |
 | `docs/07-roots/surgical-lineage.mdx` | `<SurgeonsExplorer />` host — page title/sidebar label: **"Surgical Genealogy"** |
 | `docs/07-roots/surgeons/_category_.json` | Has `className: sidebar-hidden-category` |
+| `scripts/check-scope.js` | Flags out-of-scope titles against forbidden terms list. `npm run lint:scope`. |
+| `scripts/check-citations.js` | Verifies `<sup>[[N]](#refN)</sup>` and `[^N]` integrity. `npm run lint:citations`. |
+| `scripts/check-orphans.js` | Flags hidden-category pages with no inbound links (exempts dynamic-linked dirs). `npm run lint:orphans`. |
+| `scripts/gen-status.js` | Regenerates `docs/_STATUS.md` stub tracker. `npm run status`. |
+| `scripts/fix-citations.js` | One-shot renumber/compact citation anchors; used for the 2026-04-21 cleanup pass. |
+| `docs/_STATUS.md` | Stub tracker with hand-edited priority/notes; auto-refreshed, priorities preserved. |
+| `CHANGELOG.md` | Rolling session-history log (formerly in CLAUDE.md). |
 
 ---
 
@@ -644,4 +661,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-21*
+*Last updated: 2026-04-22*
