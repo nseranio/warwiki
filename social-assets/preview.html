@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WARWIKI social assets — preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #185FA5;
+      --primary-light: #1B6CBD;
+      --primary-lightest: #3691E2;
+      --bg: #F7F9FC;
+      --bg-subtle: #EEF2F8;
+      --border: #DDE3ED;
+      --text: #111827;
+      --text-muted: #4B5767;
+      --text-subtle: #8494A8;
+      --safe: #0D9373;
+      --avoid: #DC2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2.5rem 2rem 6rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1400px; margin: 0 auto; }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin: 0 0 0.5rem;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-lightest) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p { color: var(--text-muted); margin: 0; font-size: 1.05rem; }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 3rem 0 1.25rem;
+      color: var(--text);
+    }
+    h2 .subtle {
+      color: var(--text-subtle);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-left: 0.6rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Avatars row ---- */
+    .avatars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .avatar-item { text-align: center; }
+    .avatar-item .label {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .avatar-item .label strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+    /* Crop each avatar to circle — real feed rendering */
+    .avatar-circle {
+      border-radius: 50%;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 2px 8px rgba(17, 24, 39, 0.08);
+    }
+    .avatar-circle img { display: block; width: 100%; height: 100%; }
+    .a-yt  { width: 200px; height: 200px; }
+    .a-tw  { width: 128px; height: 128px; }
+    .a-ig  { width: 96px;  height: 96px; }
+    .a-tt  { width: 80px;  height: 80px; }
+    .a-40  { width: 40px;  height: 40px; }
+
+    /* Variants grid */
+    .variants {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.75rem;
+    }
+    .variant-item { text-align: center; }
+    .variant-circle {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 0.6rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 2px 8px rgba(17, 24, 39, 0.08);
+    }
+    .variant-circle img { display: block; width: 100%; height: 100%; }
+    .variant-40 {
+      margin-bottom: 0.7rem;
+      display: flex;
+      justify-content: center;
+    }
+    .variant-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+    .variant-label strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    /* 40×40 legibility check */
+    .legibility {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background: var(--bg-subtle);
+      border-radius: 8px;
+      margin-top: 1.5rem;
+    }
+    .legibility .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: white;
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .legibility p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+
+    /* ---- Banners ---- */
+    .banner-item { margin-bottom: 1rem; }
+    .banner-stage {
+      position: relative;
+      display: block;
+      background: var(--bg-subtle);
+      border-radius: 6px;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .banner-stage img { display: block; width: 100%; height: auto; }
+
+    /* Overlay for safe-area guides — toggled by checkbox */
+    .guides-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+    }
+    .guides-toggle input { cursor: pointer; }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: none;
+    }
+    .stage.guides-on .overlay { display: block; }
+    .overlay-box {
+      position: absolute;
+      border: 2px dashed;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.15rem 0.4rem;
+      color: white;
+    }
+    .overlay-box.safe     { border-color: var(--safe); background: rgba(13, 147, 115, 0.08); }
+    .overlay-box.safe .lbl    { background: var(--safe); }
+    .overlay-box.avoid    { border-color: var(--avoid); background: rgba(220, 38, 38, 0.10); }
+    .overlay-box.avoid .lbl   { background: var(--avoid); }
+    .overlay-box .lbl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.15rem 0.4rem;
+      border-bottom-right-radius: 3px;
+    }
+    .stage-meta {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .stage-meta code {
+      background: var(--bg-subtle);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+    }
+
+    /* YouTube banner safe-area: 1546x423 centered on 2560x1440 */
+    /* In percent: x = (2560-1546)/2 / 2560 = 19.80%, y = (1440-423)/2 / 1440 = 35.31%
+                   w = 1546/2560 = 60.39%, h = 423/1440 = 29.38% */
+    .yt-safe {
+      left: 19.80%;
+      top: 35.31%;
+      width: 60.39%;
+      height: 29.38%;
+    }
+
+    /* Twitter banner overlays: 1500x500
+       Avatar overlay approx bottom-left ~200x200 (px) → 13.33% x 40%
+       Follow button overlays do not exist on the X banner itself but
+       the profile-image covers the center-bottom (not left-bottom on new X).
+       Centered avatar overlay: ~200px diameter, positioned so its bottom
+       sits ~50px below the banner on desktop. We mark its intrusion zone
+       at the bottom-center. */
+    .tw-avatar-zone {
+      /* Real X avatar: 200px diameter, centered horizontally in the profile
+         content column (usually starts ~75px from left on desktop), bottom
+         ~45px below the banner → the top ~55% of the avatar is over the
+         banner. Mark a 200×100 zone at bottom-center-left. */
+      left: 5%;
+      bottom: 0;
+      width: 13.33%;
+      height: 20%;
+    }
+    .tw-follow-zone {
+      /* Right edge — the profile CTA column (~250px wide on desktop) */
+      right: 0;
+      top: 0;
+      width: 13.33%;
+      height: 100%;
+    }
+
+    /* ---- Colors + tokens block ---- */
+    .tokens {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+    .swatch {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: white;
+    }
+    .swatch .chip { height: 64px; }
+    .swatch .meta { padding: 0.55rem 0.75rem; font-size: 0.8rem; }
+    .swatch .name { font-weight: 600; color: var(--text); }
+    .swatch .hex { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+    .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+    .dim { color: var(--text-subtle); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>WARWIKI — social asset preview</h1>
+      <p>Review crop, legibility, and safe-area compliance before committing.</p>
+    </header>
+
+    <h2>Avatar variants <span class="subtle">pick one — cropped to circle as feeds display them</span></h2>
+    <div class="card">
+      <div class="variants">
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-solid.png" alt="A"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-solid-40.png" alt="A @ 40"></div></div>
+          <div class="variant-label"><strong>A · Solid primary</strong>Favicon baseline. `#185FA5`</div>
+        </div>
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-deep-navy.png" alt="B"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-deep-navy-40.png" alt="B @ 40"></div></div>
+          <div class="variant-label"><strong>B · Deep navy</strong>Matches warwiki-logo.svg. `#0F3A67`</div>
+        </div>
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-glow.png" alt="C"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-glow-40.png" alt="C @ 40"></div></div>
+          <div class="variant-label"><strong>C · Radial glow</strong>Hero-echo; lighter upper-left</div>
+        </div>
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-diagonal.png" alt="D"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-diagonal-40.png" alt="D @ 40"></div></div>
+          <div class="variant-label"><strong>D · Diagonal gradient</strong>Dark → light, top-left to bottom-right</div>
+        </div>
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-wordmark-gradient.png" alt="E"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-wordmark-gradient-40.png" alt="E @ 40"></div></div>
+          <div class="variant-label"><strong>E · Wordmark gradient</strong>L→R; echoes the banner wordmark</div>
+        </div>
+        <div class="variant-item">
+          <div class="variant-circle"><img src="png/avatar-inverted.png" alt="F"></div>
+          <div class="variant-40"><div class="avatar-circle a-40"><img src="png/avatar-inverted-40.png" alt="F @ 40"></div></div>
+          <div class="variant-label"><strong>F · Inverted</strong>White bg, gradient W. Dark-mode-feed-safe</div>
+        </div>
+      </div>
+
+      <p class="stage-meta" style="margin-top:1.5rem"><strong>Small circle under each = 40×40 legibility check</strong> (feed reply / comment-thread render).<br>
+      To pick and re-export platform PNGs:<br>
+      <code class="mono">WARWIKI_AVATAR=&lt;variant&gt; node social-assets/generate.js</code><br>
+      Valid values: <code class="mono">solid</code>, <code class="mono">deep-navy</code>, <code class="mono">glow</code>, <code class="mono">diagonal</code>, <code class="mono">wordmark-gradient</code>, <code class="mono">inverted</code></p>
+    </div>
+
+    <h2>Platform exports <span class="subtle">current chosen variant — re-run generator to switch</span></h2>
+    <div class="card">
+      <div class="avatars">
+        <div class="avatar-item">
+          <div class="avatar-circle a-yt"><img src="png/avatar-youtube.png" alt="YouTube avatar"></div>
+          <div class="label"><strong>YouTube</strong>800×800 source</div>
+        </div>
+        <div class="avatar-item">
+          <div class="avatar-circle a-tw"><img src="png/avatar-twitter.png" alt="Twitter avatar"></div>
+          <div class="label"><strong>Twitter / X</strong>400×400 source</div>
+        </div>
+        <div class="avatar-item">
+          <div class="avatar-circle a-ig"><img src="png/avatar-instagram.png" alt="Instagram avatar"></div>
+          <div class="label"><strong>Instagram</strong>320×320 source</div>
+        </div>
+        <div class="avatar-item">
+          <div class="avatar-circle a-tt"><img src="png/avatar-tiktok.png" alt="TikTok avatar"></div>
+          <div class="label"><strong>TikTok</strong>200×200 source</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>YouTube banner <span class="subtle">2560×1440 · all-devices safe area 1546×423</span></h2>
+    <div class="card">
+      <label class="guides-toggle"><input type="checkbox" class="toggle" data-target="#stage-yt"> Show safe-area overlay</label>
+      <div class="stage guides-on" id="stage-yt">
+        <div class="banner-stage">
+          <img src="png/banner-youtube.png" alt="YouTube banner">
+          <div class="overlay">
+            <div class="overlay-box safe yt-safe"><span class="lbl">Safe area — 1546×423</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="stage-meta">Green dashed box = the region guaranteed to be visible on every device (mobile / tablet / desktop / TV). Outside it is decorative gradient only. <code>svg/banner-youtube.svg</code> · <code>png/banner-youtube.png</code></p>
+    </div>
+
+    <h2>Twitter / X banner <span class="subtle">1500×500 · avoid bottom-left avatar overlay + right-side CTA column</span></h2>
+    <div class="card">
+      <label class="guides-toggle"><input type="checkbox" class="toggle" data-target="#stage-tw" checked> Show safe-area overlay</label>
+      <div class="stage guides-on" id="stage-tw">
+        <div class="banner-stage">
+          <img src="png/banner-twitter.png" alt="Twitter banner">
+          <div class="overlay">
+            <div class="overlay-box avoid tw-avatar-zone"><span class="lbl">Avatar overlay zone</span></div>
+            <div class="overlay-box avoid tw-follow-zone"><span class="lbl">Profile CTA column</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="stage-meta">Red boxes = zones where UI elements overlay the banner on desktop. Logo block is centered and positioned clear of both. <code>svg/banner-twitter.svg</code> · <code>png/banner-twitter.png</code></p>
+    </div>
+
+    <h2>Design-token check <span class="subtle">pulled from <code class="mono">src/css/custom.css</code></span></h2>
+    <div class="card">
+      <div class="tokens">
+        <div class="swatch">
+          <div class="chip" style="background:#185FA5"></div>
+          <div class="meta"><div class="name">primary</div><div class="hex">#185FA5</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#1B6CBD"></div>
+          <div class="meta"><div class="name">primary-light</div><div class="hex">#1B6CBD</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#3691E2"></div>
+          <div class="meta"><div class="name">primary-lightest</div><div class="hex">#3691E2</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#4B5767"></div>
+          <div class="meta"><div class="name">text-muted</div><div class="hex">#4B5767</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:linear-gradient(180deg,#FFFFFF 0%,#F2F7FD 60%,#E8F1FB 100%)"></div>
+          <div class="meta"><div class="name">hero gradient</div><div class="hex">#FFF → #E8F1FB</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:linear-gradient(90deg,#185FA5 0%,#1B6CBD 50%,#3691E2 100%)"></div>
+          <div class="meta"><div class="name">wordmark gradient</div><div class="hex">L→R</div></div>
+        </div>
+      </div>
+      <p class="stage-meta" style="margin-top:1.25rem"><strong>Typography:</strong> Inter <span class="dim">(Google Fonts v20)</span> — wordmark Inter&nbsp;800 letter-spacing&nbsp;-6.5 @ 260pt YouTube / -3.5 @ 140pt Twitter; tagline Inter&nbsp;500 letter-spacing&nbsp;0.7 @ 46pt YouTube / 0.4 @ 28pt Twitter. <strong>Text is converted to SVG paths</strong> — SVGs are font-independent.</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle').forEach((cb) => {
+      cb.addEventListener('change', () => {
+        const stage = document.querySelector(cb.dataset.target);
+        stage.classList.toggle('guides-on', cb.checked);
+      });
+    });
+  </script>
+</body>
+</html>
