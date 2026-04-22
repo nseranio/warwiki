@@ -2,19 +2,14 @@
 
 Copy-paste ready. One shared identity across platforms. Same voice as the site (academic, specialist, confident; no emoji, no exclamation points).
 
-**Handle priority for reservation:**
-1. `@warwiki` (first choice, if available)
-2. `@warwikidotorg` (fallback)
-3. `@warwiki_md` (alternate)
-
-Reserve the same handle on all four platforms before posting anywhere so cross-links work.
+**Handle chosen:** `@warwikihq` — reserved on Instagram and Twitter/X (2026-04-22). Reserve the same handle on YouTube and TikTok before posting anywhere so cross-links work.
 
 ---
 
 ## YouTube
 
 **Channel name:** `WARWIKI`
-**Handle:** `@warwiki` (set via Settings → Channel → Basic info)
+**Handle:** `@warwikihq` (set via Settings → Channel → Basic info)
 **Tagline (visible below channel name):** `Reconstruction, codified.`
 **Links:**
 - `warwiki.org` (primary, shown as "Website")
@@ -54,7 +49,7 @@ All content at warwiki.org is open-access and free. If a topic matters to you an
 ## Twitter / X
 
 **Name (the bold line, searchable):** `WARWIKI — Reconstructive Urology`
-**Handle:** `@warwiki` (or fallback)
+**Handle:** `@warwikihq` (or fallback)
 **Location:** `warwiki.org`
 **Website:** `https://warwiki.org`
 **Header:** `social-assets/png/banner-twitter.png`
@@ -89,7 +84,7 @@ warwiki.org
 ## Instagram
 
 **Name (the bold line, searchable — 30 char limit):** `WARWIKI` or `WARWIKI Reconstructive Urology` (30 char — verify in editor)
-**Handle:** `@warwiki`
+**Handle:** `@warwikihq`
 **Category:** `Education` (or `Medical Service` if preferred)
 **Website:** `https://warwiki.org` (single link field; or use a Linktree-style page — see below)
 
@@ -118,7 +113,7 @@ If you do add a Linktree later, four entries:
 ## TikTok
 
 **Name (display):** `WARWIKI`
-**Handle:** `@warwiki`
+**Handle:** `@warwikihq`
 **Category:** `Education`
 
 **Bio (78 chars — fits 80):**
@@ -156,7 +151,7 @@ Functional urology + genitourinary reconstruction. The specialist reference.
 
 Before launching:
 
-- [ ] Reserve `@warwiki` on all four platforms (same handle everywhere)
+- [ ] Reserve `@warwikihq` on all four platforms (same handle everywhere)
 - [ ] Upload platform avatars from `social-assets/png/avatar-*.png`
 - [ ] Upload banners on YouTube (2560×1440) and Twitter (1500×500)
 - [ ] Set display name, bio, and website link per the copy above

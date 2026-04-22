@@ -3,6 +3,14 @@
  * and scoped locally.
  */
 
+/* Wrapper that stretches hero + social footer across full viewport
+   so no white gap sits between the hero and the site footer. */
+.homepageRoot {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--ifm-navbar-height, 60px));
+}
+
 .heroBanner {
   padding: 6rem 1.5rem 5rem;
   text-align: center;
@@ -160,4 +168,87 @@
 @media screen and (max-width: 480px) {
   .heroSearch { height: 54px; padding: 0 1rem; }
   .heroSearchPlaceholder { font-size: 0.95rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Social footer (homepage only)
+   Fills the viewport below the hero with the brand colour and
+   surfaces the four social links in YouTube → Instagram →
+   TikTok → Twitter order.
+   ═══════════════════════════════════════════════════════════ */
+
+.socialFooter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 85% 85%, rgba(54, 145, 226, 0.18), transparent 60%),
+    radial-gradient(ellipse at 15% 20%, rgba(15, 58, 103, 0.22), transparent 55%),
+    linear-gradient(180deg, #185FA5 0%, #134C86 100%);
+  color: #FFFFFF;
+}
+
+[data-theme='dark'] .socialFooter {
+  background:
+    radial-gradient(ellipse at 85% 85%, rgba(54, 145, 226, 0.22), transparent 60%),
+    radial-gradient(ellipse at 15% 20%, rgba(15, 58, 103, 0.35), transparent 55%),
+    linear-gradient(180deg, #134C86 0%, #0F3A67 100%);
+}
+
+.socialInner {
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.socialLabel {
+  margin: 0 0 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialIconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.socialIconLink:hover,
+.socialIconLink:focus-visible {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.socialIconLink svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .socialFooter { padding: 3rem 1.25rem; }
+  .socialIcons { gap: 1.25rem; }
+  .socialIconLink { width: 48px; height: 48px; }
+  .socialIconLink svg { width: 24px; height: 24px; }
 }
