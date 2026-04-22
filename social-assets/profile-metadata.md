@@ -2,7 +2,7 @@
 
 Copy-paste ready. One shared identity across platforms. Same voice as the site (academic, specialist, confident; no emoji, no exclamation points).
 
-**Handle chosen:** `@warwikihq` — reserved on Instagram and Twitter/X (2026-04-22). Reserve the same handle on YouTube and TikTok before posting anywhere so cross-links work.
+**Handle chosen:** `@warwikihq` — reserved on Instagram, Twitter/X, and YouTube. TikTok uses `@warwiki7` temporarily (TikTok enforces a 30-day waiting period between handle changes; plan to migrate to `@warwikihq` when eligible).
 
 ---
 
