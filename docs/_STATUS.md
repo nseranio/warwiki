@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 107 stubs — P1: 0, P2: 107, P3: 0.
+**Totals:** 104 stubs — P1: 0, P2: 104, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -41,7 +41,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03a-storage-incontinence/fecal-incontinence.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03b-voiding-outlet/dysfunctional-voiding.mdx` | 2 |  |
@@ -54,7 +53,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03c-pelvic-support/defecatory-dysfunction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-bladder-disorders/neuro-urology/autonomic-dysreflexia.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03d-bladder-disorders/painful-bladder-syndrome-ic.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-bladder-disorders/radiation-cystitis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/renovascular-conditions.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx` | 2 |  |
@@ -76,7 +74,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema-hidradenitis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/gsm.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/pudendal-neuralgia.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04b-bladder-reconstruction/bladder-augmentation.mdx` | 2 |  |
