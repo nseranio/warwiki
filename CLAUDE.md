@@ -8,6 +8,11 @@ This file is for Claude to read at the start of every session. It captures the p
 
 The latest work has been committed and pushed to `origin/main`. Recent article-fill and structure commits include:
 
+- `524d99a` — moved and filled **Lichen Sclerosus** at `docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx`; old voiding/outlet LS stub was deleted
+- `55fc13a` — filled `docs/03-clinical-conditions/03b-voiding-outlet/urethral-prolapse.mdx`
+- `a08d087` — renamed/fill-displayed **Urethral Diverticulum** at existing route `docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx`
+- `6db85aa` — filled `docs/03-clinical-conditions/03a-storage-incontinence/nocturia.mdx`
+- `d8c111e` — filled `docs/03-clinical-conditions/03b-voiding-outlet/dysfunctional-voiding.mdx`; added stubs for PBNO and urethral prolapse; renamed sidebar labels for male/female urethral stricture and mixed urinary incontinence
 - `6fdaa99` — filled `docs/03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx`
 - `d86bebd` — replaced `03d-bladder-disorders/` with `03d-nlutd/`, deleted the radiation cystitis stub, and cleaned sidebar titles so disease pages do not repeat `NLUTD —`
 - `b08730d` — filled the BPH article at the existing route `docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx`
@@ -17,8 +22,13 @@ Current clinical-conditions structure notes:
 
 - **BPH** intentionally keeps the legacy file/route `03b-voiding-outlet/bladder-outlet-obstruction.mdx` to preserve existing links.
 - **BNC** lives at `03b-voiding-outlet/bladder-neck-stenosis.mdx`; **VUAS** lives at `03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx`.
+- **Male urethral stricture** displays at the legacy route `03b-voiding-outlet/urethral-stricture.mdx`; **Female urethral stricture** is sidebar-positioned immediately below it at `03b-voiding-outlet/female-urethral-stricture.mdx`.
+- **Urethral Diverticulum** intentionally keeps the plural legacy file/route `03b-voiding-outlet/urethral-diverticula.mdx` to preserve existing links.
+- **Primary Bladder Neck Obstruction** lives at `03b-voiding-outlet/primary-bladder-neck-obstruction.mdx`; **Dysfunctional Voiding** lives at `03b-voiding-outlet/dysfunctional-voiding.mdx`; **Urethral Prolapse** lives at `03b-voiding-outlet/urethral-prolapse.mdx`.
+- **Nocturia** lives under Storage & Incontinence at `03a-storage-incontinence/nocturia.mdx`, immediately before Fecal Incontinence in the sidebar.
+- **Lichen Sclerosus** now belongs under Genital & Scrotal Disorders at `03g-genital-scrotal/lichen-sclerosus.mdx`, not Voiding & Outlet.
 - **NLUTD** now lives under `docs/03-clinical-conditions/03d-nlutd/`; the old `03d-bladder-disorders/` path was removed.
-- `docs/_STATUS.md` was regenerated after the last filled stub; current total is **98 stubs**.
+- `docs/_STATUS.md` was regenerated after the last filled stub; current total is **95 stubs**.
 
 Before starting new work, run `git status --short` and expect a clean tree unless the user has made changes.
 
