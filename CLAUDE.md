@@ -6,29 +6,35 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ## Current handoff snapshot — April 2026
 
-The latest work has been committed and pushed to `origin/main`. Recent article-fill and structure commits include:
+The latest work has been committed and pushed to `origin/main`. Most recent structural and editorial commits (newest first):
 
-- `524d99a` — moved and filled **Lichen Sclerosus** at `docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx`; old voiding/outlet LS stub was deleted
-- `55fc13a` — filled `docs/03-clinical-conditions/03b-voiding-outlet/urethral-prolapse.mdx`
-- `a08d087` — renamed/fill-displayed **Urethral Diverticulum** at existing route `docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx`
-- `6db85aa` — filled `docs/03-clinical-conditions/03a-storage-incontinence/nocturia.mdx`
-- `d8c111e` — filled `docs/03-clinical-conditions/03b-voiding-outlet/dysfunctional-voiding.mdx`; added stubs for PBNO and urethral prolapse; renamed sidebar labels for male/female urethral stricture and mixed urinary incontinence
-- `6fdaa99` — filled `docs/03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx`
-- `d86bebd` — replaced `03d-bladder-disorders/` with `03d-nlutd/`, deleted the radiation cystitis stub, and cleaned sidebar titles so disease pages do not repeat `NLUTD —`
-- `b08730d` — filled the BPH article at the existing route `docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx`
-- `7d63a1c` — split BNC and VUAS into separate pages, with BNC before VUAS in the sidebar
+- `1a4b958` — **Chronic Constipation ↔ Defecatory Dysfunction** de-duplicated. CC owns the Rome IV / AGA-ACG pharmacologic algorithm (fiber → osmotics → stimulants → secretagogues → prokinetics) and surgical discussion for STC. DD owns the Rome IV functional-defecation-disorder framing, HRM types I–IV, ARM + BET + defecography workflow, biofeedback-as-cornerstone, botulinum toxin, and structural-surgery detail. Each article points to the other instead of duplicating.
+- `886a470` — **POP compartment articles** (anterior, apical, posterior) stripped of cross-compartment redundancy. DeLancey levels, POP-Q staging, pessary management, PFMT, FDA mesh regulatory history, concomitant anti-incontinence decision table, and generic complications are **canonical only in `pelvic-organ-prolapse.mdx`**. Each compartment article keeps only compartment-specific definitions, anatomy/pathophys, symptoms, exam maneuvers, procedures, and outcomes. ~270 lines removed across the three.
+- `163f1a3` — **New subsection `03i-defecatory-disorders/`** created. Fecal Incontinence moved from `03a-storage-incontinence/` and Chronic Constipation moved from `03c-pelvic-support/`. New fully built **Defecatory Dysfunction** article (~17 refs) replaces the old stub. Subsection `index.mdx` explains the overlap framework (Rome IV, phenotype table, why reconstructive pelvic surgeons care). Clinical-conditions landing updated. Inbound link from `uti-treatment-antibiotics.mdx` was repointed.
+- `67755d3`, `a54b810`, `c6c319c` — filled posterior prolapse, apical prolapse, and hypospadias articles.
+- `524d99a` — moved and filled **Lichen Sclerosus** at `docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx`; old voiding/outlet LS stub deleted.
+- `55fc13a` — filled Urethral Prolapse.
+- `a08d087` — renamed/filled **Urethral Diverticulum** at legacy route.
+- `6db85aa` — filled Nocturia.
+- `d8c111e` — filled Dysfunctional Voiding; added stubs for PBNO and urethral prolapse; renamed sidebar labels.
+- `6fdaa99` — filled Underactive Bladder.
+- `d86bebd` — replaced `03d-bladder-disorders/` with `03d-nlutd/`; deleted radiation-cystitis stub; cleaned sidebar titles so disease pages do not repeat `NLUTD —`.
+- `b08730d` — filled BPH at legacy route `bladder-outlet-obstruction.mdx`.
+- `7d63a1c` — split BNC and VUAS into separate pages, BNC before VUAS in sidebar.
 
-Current clinical-conditions structure notes:
+### Current clinical-conditions structure notes
 
+- **Subsections 03a–03i:** Storage & Incontinence, Voiding & Outlet, Pelvic Support, NLUTD, Upper Tract, Fistulas, Genital & Scrotal, Pelvic Pain, **Defecatory Disorders (new)**.
+- **03i Defecatory Disorders** hosts Defecatory Dysfunction (the Rome IV FDD article), Chronic Constipation (moved from 03c), Fecal Incontinence (moved from 03a), and a subsection `index.mdx` explaining how the three overlap.
+- **03c Pelvic Support** — parent POP Overview article is the canonical source for DeLancey, POP-Q, pessary, PFMT, and transvaginal-mesh history. Compartment articles (anterior, apical, posterior) only carry compartment-specific content.
 - **BPH** intentionally keeps the legacy file/route `03b-voiding-outlet/bladder-outlet-obstruction.mdx` to preserve existing links.
-- **BNC** lives at `03b-voiding-outlet/bladder-neck-stenosis.mdx`; **VUAS** lives at `03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx`.
-- **Male urethral stricture** displays at the legacy route `03b-voiding-outlet/urethral-stricture.mdx`; **Female urethral stricture** is sidebar-positioned immediately below it at `03b-voiding-outlet/female-urethral-stricture.mdx`.
+- **BNC** at `03b-voiding-outlet/bladder-neck-stenosis.mdx`; **VUAS** at `03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx`.
+- **Male urethral stricture** at legacy `03b-voiding-outlet/urethral-stricture.mdx`; **Female urethral stricture** sidebar-positioned immediately below at `03b-voiding-outlet/female-urethral-stricture.mdx`.
 - **Urethral Diverticulum** intentionally keeps the plural legacy file/route `03b-voiding-outlet/urethral-diverticula.mdx` to preserve existing links.
-- **Primary Bladder Neck Obstruction** lives at `03b-voiding-outlet/primary-bladder-neck-obstruction.mdx`; **Dysfunctional Voiding** lives at `03b-voiding-outlet/dysfunctional-voiding.mdx`; **Urethral Prolapse** lives at `03b-voiding-outlet/urethral-prolapse.mdx`.
-- **Nocturia** lives under Storage & Incontinence at `03a-storage-incontinence/nocturia.mdx`, immediately before Fecal Incontinence in the sidebar.
-- **Lichen Sclerosus** now belongs under Genital & Scrotal Disorders at `03g-genital-scrotal/lichen-sclerosus.mdx`, not Voiding & Outlet.
-- **NLUTD** now lives under `docs/03-clinical-conditions/03d-nlutd/`; the old `03d-bladder-disorders/` path was removed.
-- `docs/_STATUS.md` was regenerated after the last filled stub; current total is **95 stubs**.
+- **PBNO**, **Dysfunctional Voiding**, **Urethral Prolapse** live in 03b-voiding-outlet.
+- **Lichen Sclerosus** lives in `03g-genital-scrotal/lichen-sclerosus.mdx`, not Voiding & Outlet.
+- **NLUTD** at `docs/03-clinical-conditions/03d-nlutd/`; old `03d-bladder-disorders/` path removed.
+- `docs/_STATUS.md` was regenerated after the latest moves; stub total **90**.
 
 Before starting new work, run `git status --short` and expect a clean tree unless the user has made changes.
 
@@ -531,7 +537,7 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 |---|---|---|
 | Foundations | `01-foundations/` | Landing page has toc-list + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted |
 | Evaluation | `02-evaluation/` | Three children: **History & Physical** (bundles assessment-tools + male/female exams), Imaging, Ancillary Testing. `physical-exam/` subdirectory was flattened into `history-physical/` (2026-04-21). |
-| Clinical Conditions | `03-clinical-conditions/` | 8 subsections (03a–03h); all have `_category_.json` with `link.type: doc` |
+| Clinical Conditions | `03-clinical-conditions/` | **9 subsections (03a–03i)**; 03i **Defecatory Disorders** added 2026-04 (hosts Defecatory Dysfunction, Chronic Constipation moved from 03c, Fecal Incontinence moved from 03a) |
 | Treatment Atlas | `04-surgical-techniques/` | 9 subsections; **04h-prosthetics DELETED**; 04f renamed "Incontinence" with 3 sub-databases (Female SUI, Male SUI, OAB & UUI); 04c (urinary diversion) has no index.mdx |
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
@@ -691,4 +697,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-22*
+*Last updated: 2026-04-23*
