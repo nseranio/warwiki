@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 90 stubs — P1: 0, P2: 90, P3: 0.
+**Totals:** 88 stubs — P1: 0, P2: 88, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -41,8 +41,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/renovascular-conditions.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/colovesical-small-bowel.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/nephropleural.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/post-kidney-transplant.mdx` | 2 |  |
