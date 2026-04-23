@@ -536,7 +536,7 @@ Collapsed from 4 subsections (knot-tying, suturing patterns, ligatures, special-
 
 **10 techniques retained (all at the flat root):**
 - **Bowel stitches:** connell, cushing, lembert, halsted, parker-kerr
-- **Signature GU/pelvic:** heaney, quilting (fully built — 40 refs), ski-needle, van-velthoven-vua, barbed-sutures
+- **Signature GU/pelvic:** heaney, quilting (fully built — 40 refs), ski-needle, van-velthoven-vua. Barbed sutures now live in `surgical-principles/sutures.mdx` as a material / knotless-closure subsection.
 
 The landing also hosts a **Learning Resources** section with 3 structured curricula (UCSF Surgical Skills Center, UCSF ATOSS, BBASS) and 4 curated video playlists (Behind The Knife Boot Camp, The Clean Scalpel, Basic Surgical Skills, WARWIKI Surgical Technique).
 
