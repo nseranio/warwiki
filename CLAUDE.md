@@ -4,6 +4,26 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
+## Current handoff snapshot — April 2026
+
+The latest work has been committed and pushed to `origin/main`. Recent article-fill and structure commits include:
+
+- `6fdaa99` — filled `docs/03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx`
+- `d86bebd` — replaced `03d-bladder-disorders/` with `03d-nlutd/`, deleted the radiation cystitis stub, and cleaned sidebar titles so disease pages do not repeat `NLUTD —`
+- `b08730d` — filled the BPH article at the existing route `docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx`
+- `7d63a1c` — split BNC and VUAS into separate pages, with BNC before VUAS in the sidebar
+
+Current clinical-conditions structure notes:
+
+- **BPH** intentionally keeps the legacy file/route `03b-voiding-outlet/bladder-outlet-obstruction.mdx` to preserve existing links.
+- **BNC** lives at `03b-voiding-outlet/bladder-neck-stenosis.mdx`; **VUAS** lives at `03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx`.
+- **NLUTD** now lives under `docs/03-clinical-conditions/03d-nlutd/`; the old `03d-bladder-disorders/` path was removed.
+- `docs/_STATUS.md` was regenerated after the last filled stub; current total is **98 stubs**.
+
+Before starting new work, run `git status --short` and expect a clean tree unless the user has made changes.
+
+---
+
 ## Rules for agents — read before writing
 
 Before writing or modifying an article:
