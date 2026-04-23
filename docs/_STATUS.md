@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 100 stubs — P1: 0, P2: 100, P3: 0.
+**Totals:** 99 stubs — P1: 0, P2: 99, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -48,8 +48,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03c-pelvic-support/apical-prolapse.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03c-pelvic-support/defecatory-dysfunction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03d-bladder-disorders/neuro-urology/autonomic-dysreflexia.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03d-bladder-disorders/radiation-cystitis.mdx` | 2 |  |
+| `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/renovascular-conditions.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx` | 2 |  |
