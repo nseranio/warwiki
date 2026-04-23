@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 88 stubs — P1: 0, P2: 88, P3: 0.
+**Totals:** 89 stubs — P1: 0, P2: 89, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -40,7 +40,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/02-evaluation/ancillary-tests/endoscopy.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03e-upper-tract/renovascular-conditions.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/colovesical-small-bowel.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/nephropleural.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/post-kidney-transplant.mdx` | 2 |  |
@@ -54,9 +53,9 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/male-infertility.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema-hidradenitis.mdx` | 2 |  |
+| `docs/03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/gsm.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/pudendal-neuralgia.mdx` | 2 |  |
@@ -83,16 +82,18 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04i-endoscopic-procedures/index.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04i-endoscopic-procedures/ureteroscopy-reconstruction.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
-| `docs/05-special-populations/05d-mens-health/bph-luts.mdx` | 2 |  |
-| `docs/05-special-populations/05d-mens-health/cancer-survivorship-sexual-med.mdx` | 2 |  |
-| `docs/05-special-populations/05d-mens-health/erectile-dysfunction-medical.mdx` | 2 |  |
 | `docs/05-special-populations/05d-mens-health/hypogonadism-testosterone.mdx` | 2 |  |
-| `docs/05-special-populations/05d-mens-health/male-infertility.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/congenital-anomalies.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/gsm.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/mullerian-anomalies.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/obstetric-injury.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/transitional-urology.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/breast.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/cervical.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/endometrial.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/index.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/hpv-vaccination.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/index.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/preventative-care/osteoporosis-screening.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/recurrent-uti.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/sti.mdx` | 2 |  |
 | `docs/05-special-populations/index.mdx` | 2 |  |
 | `docs/06-journal-club/index.mdx` | 2 |  |
 | `docs/07-roots/history/index.mdx` | 2 |  |
