@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 102 stubs — P1: 0, P2: 102, P3: 0.
+**Totals:** 101 stubs — P1: 0, P2: 101, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -39,7 +39,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/02-evaluation/ancillary-tests/anorectal-testing.mdx` | 2 |  |
 | `docs/02-evaluation/ancillary-tests/endoscopy.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03a-storage-incontinence/fecal-incontinence.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03b-voiding-outlet/dysfunctional-voiding.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03b-voiding-outlet/hypospadias-epispadias.mdx` | 2 |  |
