@@ -1,0 +1,112 @@
+---
+title: Urinary Diversion
+sidebar_position: 0
+hide_title: true
+slug: /surgical-techniques/04c-urinary-diversion
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Urinary Diversion
+
+Urinary diversion encompasses the reconstructive options used when the native bladder is removed, bypassed, or no longer suitable for storage and emptying. At a practical level, the major families are **ileal conduit**, **orthotopic neobladder**, **continent cutaneous diversion**, and **cutaneous ureterostomy** — each trading operative complexity, continence goals, metabolic burden, and long-term maintenance in different ways.
+
+---
+
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04c-urinary-diversion/urinary-diversion-principles" className="section-stack-title section-stack-link">Principles of Urinary Diversion</a>
+    <span className="section-stack-desc">Detubularization, spherical reservoir design, bowel-segment physiology, ureteroenteric anastomosis, continence mechanisms, patient selection, metabolic surveillance, and lifelong follow-up.</span>
+  </li>
+</ul>
+
+---
+
+export const diversionData = [
+  {
+    name: "Ileal Conduit",
+    family: "Incontinent",
+    notes: "The most common urinary diversion. Short ileal segment anastomosed to the ureters and matured as a cutaneous urostomy; lowest operative complexity and no need for self-catheterization, but requires a permanent external appliance.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit",
+  },
+  {
+    name: "Cutaneous Ureterostomy",
+    family: "Incontinent",
+    notes: "Direct ureter-to-skin diversion that avoids bowel anastomosis and minimizes operative time. Best suited to elderly, frail, or highly comorbid patients when surgical simplicity outweighs long-term stoma and stenosis concerns.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy",
+  },
+  {
+    name: "Hautmann Neobladder",
+    family: "Continent Orthotopic",
+    notes: "W-shaped detubularized ileal reservoir anastomosed to the native urethra. Allows voiding per urethra through the intact sphincter mechanism in carefully selected patients.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/hautmann-neobladder",
+  },
+  {
+    name: "Modified Studer Pouch",
+    family: "Continent Orthotopic",
+    notes: "Widely used orthotopic neobladder built from detubularized ileum with a long isoperistaltic afferent limb for ureteral implantation and upper-tract protection.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/modified-studer-pouch",
+  },
+  {
+    name: "T-Pouch Modification",
+    family: "Continent Orthotopic",
+    notes: "Orthotopic neobladder variant using T-limb reservoir geometry to optimize pouch shape and ureteroenteric configuration within the neobladder family.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/t-pouch-modification",
+  },
+  {
+    name: "Indiana Pouch",
+    family: "Continent Cutaneous",
+    notes: "The most established continent cutaneous diversion in North America. Uses detubularized right colon with a catheterizable, continent outlet that is emptied intermittently through an abdominal stoma.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch",
+  },
+  {
+    name: "Right Colon Pouch",
+    family: "Continent Cutaneous",
+    notes: "Detubularized right-colon reservoir with a catheterizable continence mechanism. Shares the same low-pressure storage logic as the Indiana pouch and is useful when colonic tissue is preferred.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/right-colon-pouch",
+  },
+  {
+    name: "Double T-Pouch",
+    family: "Continent Cutaneous",
+    notes: "Catheterizable continent reservoir using a double-T ileal configuration for patients who want continence without an orthotopic urethral outlet.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch",
+  },
+  {
+    name: "Colostomy Shuffle",
+    family: "Complex / Salvage",
+    notes: "Complex bowel rerouting maneuver used in select exenterative or combined urinary-fecal reconstruction scenarios when standard diversion pathways are not feasible.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/colostomy-shuffle",
+  },
+];
+
+export const diversionColumns = [
+  {
+    key: 'name',
+    header: 'Diversion',
+  },
+  {
+    key: 'family',
+    header: 'Family',
+    badge: true,
+    badgeColors: {
+      'Incontinent': '#b91c1c',
+      'Continent Orthotopic': '#047857',
+      'Continent Cutaneous': '#1d4ed8',
+      'Complex / Salvage': '#6b7280',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={diversionData}
+  columns={diversionColumns}
+  filterKey="family"
+  filterLabel="Family"
+  entityLabel="diversions"
+/>
