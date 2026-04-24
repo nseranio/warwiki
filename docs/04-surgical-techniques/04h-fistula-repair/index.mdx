@@ -1,0 +1,257 @@
+---
+title: Fistula Repair
+sidebar_position: 0
+hide_title: true
+slug: /surgical-techniques/04h-fistula-repair
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Fistula Repair
+
+Genitourinary fistula repair is organized by the two tracts involved (bladder-vagina, ureter-vagina, urethra-vagina, vesicouterine, rectovaginal, rectourethral, urethrocutaneous, urethroperineal) and by the surgical approach that accesses them best. The recurring decisions are **route (transvaginal vs. transabdominal vs. transperineal vs. transanal vs. combined), timing (immediate vs. early vs. delayed), interposition flap need (none vs. Martius vs. gracilis vs. omentum), and whether a protective diversion is required**. The database below is toggled by patient anatomy because the technique sets are almost entirely distinct.
+
+---
+
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04h-fistula-repair/fistula-repair-principles" className="section-stack-title section-stack-link">Principles of Fistula Repair</a>
+    <span className="section-stack-desc">Tract anatomy and approach selection, timing-of-repair, tension-free multilayer closure, non-overlapping suture lines, interposition flap indications (Martius / gracilis / omentum), concomitant diversion and stenting, radiation-bed considerations, and the legitimacy of permanent dual diversion in catastrophic pelvises.</span>
+  </li>
+</ul>
+
+---
+
+export const femaleFistulaTechniques = [
+  {
+    name: "Transvaginal Latzko Repair",
+    domain: "VVF",
+    notes: "Simple, high-supratrigonal VVF closed by partial colpocleisis — excision of a vaginal cuff around the fistula with layered closure. Low-morbidity first-line option for small post-hysterectomy VVFs.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+  },
+  {
+    name: "Transvaginal VVF Repair with Martius Flap",
+    domain: "VVF",
+    notes: "Transvaginal closure with interposed Martius labial fat-pad flap for recurrent, radiated, or complex VVFs where tissue bulk and vascularity drive the decision.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+  },
+  {
+    name: "Abdominal / Robotic O'Conor VVF Repair",
+    domain: "VVF",
+    notes: "Transabdominal bivalve of the bladder through the fistula, excision, and layered closure with omental interposition. Preferred for high, posterior, or complex fistulas, concomitant ureteral reimplant, or failed transvaginal repair.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+  },
+  {
+    name: "Uterine-Sparing Robotic O'Conor (VUF)",
+    domain: "VUF",
+    notes: "Modified O'Conor for vesicouterine fistula (Youssef syndrome) preserving the uterus in patients who desire fertility. Intracorporeal access to the vesicouterine pouch with hysterotomy-side closure.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
+  },
+  {
+    name: "Hysterectomy with Bladder Repair (VUF)",
+    domain: "VUF",
+    notes: "Definitive VUF repair for patients not desiring uterine preservation — hysterectomy plus multilayer bladder closure with omental interposition.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
+  },
+  {
+    name: "Ureteral Stent (UVF)",
+    domain: "UVF",
+    notes: "First-line management for early, recognized ureterovaginal fistulas per AUA algorithm — 95% resolution if stented within 2 weeks, falling sharply beyond 6 weeks.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/ureterovaginal",
+  },
+  {
+    name: "Ureteroneocystostomy with Psoas Hitch (UVF)",
+    domain: "UVF",
+    notes: "Distal ureteral reimplantation with or without Boari flap for ureterovaginal fistulas that fail or are not amenable to stenting. Robotic approach with 100% success and 1-day length of stay (Kidd series).",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteral-reimplantation",
+  },
+  {
+    name: "Transvaginal RVF Repair",
+    domain: "RVF",
+    notes: "Transvaginal excision and multilayer closure of rectovaginal fistula. Low rectovaginal fistulas that are non-irradiated and uninflamed.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
+  },
+  {
+    name: "Transperineal RVF Repair with Gracilis Interposition",
+    domain: "RVF",
+    notes: "Transperineal repair with gracilis interposition flap for complex, radiated, or recurrent RVFs. Swindon series 91% primary and 95% radiation success.",
+    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+  },
+  {
+    name: "Martius Flap Interposition (RVF)",
+    domain: "RVF",
+    notes: "Transperineal or transvaginal Martius labial fat-pad flap as an alternative to gracilis for select mid-low RVFs with favorable tissue planes.",
+    slug: "/docs/foundations/surgical-principles/flaps/martius",
+  },
+  {
+    name: "Delayed Coloanal Reconstruction (GRECCAR)",
+    domain: "RVF",
+    notes: "Staged coloanal pull-through for radiation-induced RVF failing primary repairs. GRECCAR delayed-coloanal data support the approach.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
+  },
+  {
+    name: "Obstetric Fistula — Waaldijk / Goh",
+    domain: "Obstetric",
+    notes: "Classification-driven repair of obstructed-labour-injury-complex fistulas per Goh and Waaldijk frameworks. Fistula Foundation 87% success across 24,568 repairs.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
+  },
+  {
+    name: "Panzi Repair (Complex Obstetric)",
+    domain: "Obstetric",
+    notes: "Complex obstetric-fistula technique for extensive circumferential injury, with Capes head-to-head data favoring Goh over Panzi in most defects.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
+  },
+  {
+    name: "POFRI Procedure (FIGO 2025)",
+    domain: "Obstetric",
+    notes: "Post-obstetric fistula residual incontinence surgery per FIGO 2025 expert opinion for patients with closed fistulas but persistent SUI.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
+  },
+  {
+    name: "Urethrovaginal Fistula Repair",
+    domain: "Urethrovaginal",
+    notes: "Transvaginal multilayer closure with optional Martius interposition for urethrovaginal fistulas, often coexisting with urethral diverticulum or urethroplasty complication.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+  },
+];
+
+export const maleFistulaTechniques = [
+  {
+    name: "Transperineal Gracilis Interposition (RUF)",
+    domain: "RUF",
+    notes: "Lahey transperineal approach with gracilis interposition flap — the workhorse for irradiated RUFs. Vanni / Kaufman / Harris series 84–100% closure.",
+    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+  },
+  {
+    name: "York-Mason Posterior Sagittal Transrectal Repair (RUF)",
+    domain: "RUF",
+    notes: "Prone posterior sagittal transrectal approach for non-irradiated RUF — van der Graaf 2025 post-RARP series, McKibben Wexner data, Dafnis 15-year durability.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
+  },
+  {
+    name: "Transanal Minimally Invasive Repair (MITAR / TAMIS)",
+    domain: "RUF",
+    notes: "MITAR and TAMIS platforms for low, non-irradiated RUFs with favorable access. Lower morbidity alternative to York-Mason in selected cases.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
+  },
+  {
+    name: "Robotic Transabdominal RUF Repair",
+    domain: "RUF",
+    notes: "Robotic transabdominal approach for high RUF or concomitant bladder or ureteric involvement. Omental interposition where reachable.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
+  },
+  {
+    name: "Concurrent Urethroplasty with RUF Repair",
+    domain: "RUF",
+    notes: "Urethroplasty performed at the same setting as fistula closure when a coexisting stricture would otherwise cause urine leakage across the repair (Khouri data).",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
+  },
+  {
+    name: "Permanent Dual Diversion (Catastrophic RUF)",
+    domain: "RUF",
+    notes: "Urinary and fecal diversion as a definitive endpoint for irradiated, failed, multi-operated RUFs — Martins series supports this as legitimate primary option, not a failure.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
+  },
+  {
+    name: "Rectovesical Fistula Repair",
+    domain: "Rectovesical",
+    notes: "Transabdominal approach for post-prostatectomy rectovesical fistulas above the anastomosis, with omental interposition.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectovesical",
+  },
+  {
+    name: "UCF — Two-Layer Dartos / TVF Closure (Primary Distal)",
+    domain: "UCF",
+    notes: "Double dartos or TVF closure for primary distal urethrocutaneous fistula after hypospadias repair. Fahmy algorithm favors two-layer repair for distal primary UCF.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
+  },
+  {
+    name: "UCF — Tunica Vaginalis / Scrotal Flap (Proximal / Redo)",
+    domain: "UCF",
+    notes: "Tunica vaginalis or scrotal flap interposition for proximal, redo, or post-fistula-repair UCFs. Choudhury 2023 meta supports waterproofing with TVF/scrotal at 94–95% vs 73% simple closure.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
+  },
+  {
+    name: "UCF — Staged Diversion (Neurogenic)",
+    domain: "UCF",
+    notes: "Urinary diversion for refractory UCF in neurogenic patients — Raup series 81% diversion rate for neurogenic-bladder UCF.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
+  },
+  {
+    name: "UPF — Gracilis Interposition Repair",
+    domain: "UPF",
+    notes: "Transperineal gracilis interposition for acquired urethroperineal fistula. Guo series 91% success with gracilis-interposition repair.",
+    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+  },
+  {
+    name: "UPF — Definitive Perineal Urethrostomy",
+    domain: "UPF",
+    notes: "Primary perineal urethrostomy as definitive endpoint for complex UPF — Klemm 2024 long-term PROs frame this as a legitimate primary option (95% success, Fuchs data).",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethroperineal",
+  },
+  {
+    name: "CUPF Repair (Cheng Differential)",
+    domain: "UPF",
+    notes: "Congenital urethroperineal fistula — Cheng diagnostic differentiator prevents misdiagnosis as urethral duplication or H-type RUF; repair is tract excision with layered closure.",
+    slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethroperineal",
+  },
+];
+
+## Technique Database
+
+<Tabs defaultValue="female" values={[
+  { label: 'Female Fistula Repair', value: 'female' },
+  { label: 'Male Fistula Repair', value: 'male' },
+]}>
+  <TabItem value="female">
+    <GenericDatabase
+      data={femaleFistulaTechniques}
+      columns={[
+        { key: 'name', header: 'Technique' },
+        {
+          key: 'domain',
+          header: 'Fistula Type',
+          badge: true,
+          badgeColors: {
+            'VVF': '#1d4ed8',
+            'VUF': '#7c3aed',
+            'UVF': '#0891b2',
+            'RVF': '#b45309',
+            'Obstetric': '#be185d',
+            'Urethrovaginal': '#047857',
+          },
+        },
+        { key: 'notes', header: 'Notes' },
+      ]}
+      filterKey="domain"
+      filterLabel="Fistula Type"
+      entityLabel="techniques"
+    />
+  </TabItem>
+  <TabItem value="male">
+    <GenericDatabase
+      data={maleFistulaTechniques}
+      columns={[
+        { key: 'name', header: 'Technique' },
+        {
+          key: 'domain',
+          header: 'Fistula Type',
+          badge: true,
+          badgeColors: {
+            'RUF': '#b91c1c',
+            'Rectovesical': '#7c3aed',
+            'UCF': '#047857',
+            'UPF': '#b45309',
+          },
+        },
+        { key: 'notes', header: 'Notes' },
+      ]}
+      filterKey="domain"
+      filterLabel="Fistula Type"
+      entityLabel="techniques"
+    />
+  </TabItem>
+</Tabs>

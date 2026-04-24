@@ -1,0 +1,240 @@
+---
+title: Tissue Transfer
+sidebar_position: 0
+hide_title: true
+slug: /surgical-techniques/04i-tissue-transfer
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Tissue Transfer (GU Applications)
+
+Tissue transfer is the cross-cutting toolkit that every reconstructive operation borrows from: free grafts, pedicled flaps, and free tissue transfer adapted to genitourinary defects. This atlas is a filterable index of flap and graft options by GU recipient site and indication; clicking an entry goes to the authoritative page in Foundations, where the donor anatomy, harvest, and general-surgical technique live as single-source-of-truth.
+
+:::info[How this section relates to Foundations]
+The **named-technique articles** (gracilis, VRAM, radial forearm, buccal mucosa, STSG, etc.) live under [Foundations — Flaps in GU Reconstruction](/docs/foundations/surgical-principles/flaps-gu-reconstruction) and [Foundations — Grafts in GU Reconstruction](/docs/foundations/surgical-principles/grafts-gu-reconstruction). This atlas page is a pointer-database organized by GU recipient site and indication so you can look up "what flap covers a radiated perineum" or "what graft replaces a panurethral stricture" without first deciding whether you want a flap or a graft.
+:::
+
+---
+
+export const tissueTransferTechniques = [
+  // Flaps — Perineum / Fistula / Pelvic Salvage
+  {
+    name: "Gracilis Muscle Flap",
+    category: "Flap",
+    recipient: "Perineum / Pelvis",
+    indication: "RUF / RVF / UPF / complex fistula interposition, perineal dead-space obliteration",
+    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+  },
+  {
+    name: "Omental Flap",
+    category: "Flap",
+    recipient: "Abdomen / Pelvis",
+    indication: "VVF / high fistula interposition, pelvic dead-space obliteration, irradiated beds",
+    slug: "/docs/foundations/surgical-principles/flaps/omental",
+  },
+  {
+    name: "VRAM Flap",
+    category: "Flap",
+    recipient: "Perineum / Pelvis / Vaginal",
+    indication: "Perineal reconstruction after APR / pelvic exenteration, neovagina creation",
+    slug: "/docs/foundations/surgical-principles/flaps/vram",
+  },
+  {
+    name: "Vastus Lateralis Flap",
+    category: "Flap",
+    recipient: "Perineum / Groin",
+    indication: "Large groin / perineal defects, Fournier's reconstruction when gracilis is unavailable",
+    slug: "/docs/foundations/surgical-principles/flaps/vastus-lateralis",
+  },
+  {
+    name: "Peritoneal Flap",
+    category: "Flap",
+    recipient: "Pelvis / Bladder / Ureter",
+    indication: "Robotic vesicovaginal and ureterovaginal fistula interposition, ureteral coverage",
+    slug: "/docs/foundations/surgical-principles/flaps/peritoneal",
+  },
+  // Flaps — Urethra / Penis / Perineum female
+  {
+    name: "Martius Labial Fat-Pad Flap",
+    category: "Flap",
+    recipient: "Vagina / Perineum",
+    indication: "Transvaginal VVF / urethrovaginal / RVF interposition, urethral diverticulum coverage",
+    slug: "/docs/foundations/surgical-principles/flaps/martius",
+  },
+  {
+    name: "Labia Majora Fasciocutaneous Flap",
+    category: "Flap",
+    recipient: "Vulva / Vagina / Perineum",
+    indication: "Vulvar reconstruction after oncologic resection, vaginal defects, perineal coverage",
+    slug: "/docs/foundations/surgical-principles/flaps/labia-majora-fasciocutaneous",
+  },
+  {
+    name: "Singapore Pudendal-Thigh Flap",
+    category: "Flap",
+    recipient: "Vagina / Perineum",
+    indication: "Neovaginal lining and perineal coverage, Mayer-Rokitansky and post-exenteration reconstruction",
+    slug: "/docs/foundations/surgical-principles/flaps/singapore-pudendal-thigh",
+  },
+  {
+    name: "Penile-Preputial Flap",
+    category: "Flap",
+    recipient: "Urethra / Penis",
+    indication: "Penile-urethral stricture onlay, hypospadias reconstruction",
+    slug: "/docs/foundations/surgical-principles/flaps/penile-preputial",
+  },
+  {
+    name: "Blandy Scrotal Flap",
+    category: "Flap",
+    recipient: "Perineum / Urethra",
+    indication: "Perineal urethrostomy maturation, scrotal coverage",
+    slug: "/docs/foundations/surgical-principles/flaps/blandy",
+  },
+  {
+    name: "Radial Forearm Free Flap",
+    category: "Flap",
+    recipient: "Neophallus / Urethra",
+    indication: "Phalloplasty — RFF with tube-in-tube urethra",
+    slug: "/docs/foundations/surgical-principles/flaps/radial-forearm",
+  },
+  {
+    name: "Anterolateral Thigh (ALT) Flap",
+    category: "Flap",
+    recipient: "Neophallus / Perineum",
+    indication: "Phalloplasty ALT option, perineal / groin reconstruction",
+    slug: "/docs/foundations/surgical-principles/flaps/anterolateral-thigh",
+  },
+  {
+    name: "SCIP Flap",
+    category: "Flap",
+    recipient: "Neophallus / Perineum",
+    indication: "Superficial circumflex iliac perforator flap — lower-morbidity phalloplasty alternative",
+    slug: "/docs/foundations/surgical-principles/flaps/scip",
+  },
+  {
+    name: "Medial Thigh Flap",
+    category: "Flap",
+    recipient: "Scrotum / Perineum",
+    indication: "Scrotal reconstruction, Fournier's coverage",
+    slug: "/docs/foundations/surgical-principles/flaps/medial-thigh",
+  },
+  {
+    name: "PMTP Propeller Flap",
+    category: "Flap",
+    recipient: "Perineum / Groin",
+    indication: "Perforator-based propeller flap for perineal / groin defects",
+    slug: "/docs/foundations/surgical-principles/flaps/pmtp-propeller",
+  },
+  {
+    name: "Y-V Plasty",
+    category: "Flap",
+    recipient: "Meatus / Skin",
+    indication: "Meatal advancement, scar revision, tension-releasing closure",
+    slug: "/docs/foundations/surgical-principles/flaps/y-v-plasty",
+  },
+  // Grafts — mucosa
+  {
+    name: "Buccal Mucosa Graft",
+    category: "Graft",
+    recipient: "Urethra / Ureter",
+    indication: "Urethroplasty (ventral, dorsal, inlay), ureteroplasty onlay, graft-augmented bladder-neck reconstruction",
+    slug: "/docs/foundations/surgical-principles/grafts/buccal-mucosa",
+  },
+  {
+    name: "Lingual Mucosa Graft",
+    category: "Graft",
+    recipient: "Urethra",
+    indication: "Urethroplasty when buccal is not preferred (dental disease, prior harvest) or for longer panurethral segments",
+    slug: "/docs/foundations/surgical-principles/grafts/lingual-mucosa",
+  },
+  {
+    name: "Labial Mucosa Graft",
+    category: "Graft",
+    recipient: "Urethra",
+    indication: "Alternative oral mucosa source when buccal is unavailable",
+    slug: "/docs/foundations/surgical-principles/grafts/labial-mucosa",
+  },
+  // Grafts — skin
+  {
+    name: "Split-Thickness Skin Graft (STSG)",
+    category: "Graft",
+    recipient: "Penis / Scrotum / Perineum",
+    indication: "Buried-penis shaft resurfacing, post-Fournier's coverage, phalloplasty donor-site",
+    slug: "/docs/foundations/surgical-principles/grafts/stsg",
+  },
+  {
+    name: "Full-Thickness Skin Graft (FTSG)",
+    category: "Graft",
+    recipient: "Penis / Glans",
+    indication: "Glans resurfacing, small penile shaft defects, meatal reconstruction",
+    slug: "/docs/foundations/surgical-principles/grafts/ftsg",
+  },
+  {
+    name: "Penile-Preputial Skin Graft",
+    category: "Graft",
+    recipient: "Urethra / Penis",
+    indication: "Pediatric hypospadias, adult penile-urethral reconstruction when prepuce is available",
+    slug: "/docs/foundations/surgical-principles/grafts/penile-preputial-skin",
+  },
+  {
+    name: "Posterior Auricular Graft",
+    category: "Graft",
+    recipient: "Urethra",
+    indication: "Select panurethral or salvage urethroplasty graft source",
+    slug: "/docs/foundations/surgical-principles/grafts/posterior-auricular",
+  },
+  // Grafts — specialty
+  {
+    name: "Intestinal Segments",
+    category: "Graft",
+    recipient: "Ureter / Bladder",
+    indication: "Ileal ureter substitution, bladder augmentation, urinary diversion reservoir",
+    slug: "/docs/foundations/surgical-principles/grafts/intestinal-segments",
+  },
+  {
+    name: "Bladder Mucosa Graft",
+    category: "Graft",
+    recipient: "Urethra",
+    indication: "Salvage urethroplasty graft source when oral mucosa is unavailable",
+    slug: "/docs/foundations/surgical-principles/grafts/bladder-mucosa",
+  },
+  {
+    name: "Saphenous Vein Graft",
+    category: "Graft",
+    recipient: "Corpora / Vascular",
+    indication: "Penile corporal vein grafting, vascular reconstruction",
+    slug: "/docs/foundations/surgical-principles/grafts/saphenous-vein",
+  },
+];
+
+<GenericDatabase
+  data={tissueTransferTechniques}
+  columns={[
+    { key: 'name', header: 'Technique' },
+    {
+      key: 'category',
+      header: 'Type',
+      badge: true,
+      badgeColors: {
+        'Flap': '#1d4ed8',
+        'Graft': '#047857',
+      },
+    },
+    { key: 'recipient', header: 'GU Recipient Site' },
+    { key: 'indication', header: 'Indication' },
+  ]}
+  filterKey="category"
+  filterLabel="Type"
+  entityLabel="techniques"
+/>
+
+---
+
+## See also
+
+- [Flaps in GU Reconstruction](/docs/foundations/surgical-principles/flaps-gu-reconstruction) — general flap principles, named-flap atlas, harvest, pedicle anatomy, donor-site morbidity.
+- [Grafts in GU Reconstruction](/docs/foundations/surgical-principles/grafts-gu-reconstruction) — general graft principles, graft-bed biology, mucosal / skin / specialty grafts.
+- [Plastic Surgery Principles](/docs/foundations/surgical-principles/plastic-surgery-principles) — reconstructive ladder.
+- [Principles of GU Reconstruction](/docs/foundations/surgical-principles/principles-gu-reconstruction) — the GU-specific reconstruction framework.
+- [Radiation Tissue Effects](/docs/foundations/surgical-principles/radiation-tissue-effects) — hostile-bed decision-making.
+- [Wound Healing Adjuncts](/docs/foundations/surgical-principles/wound-healing-adjuncts) — NPWT, Prevena, ADM, amniotic membrane.
