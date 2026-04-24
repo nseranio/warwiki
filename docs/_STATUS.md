@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 67 stubs — P1: 0, P2: 67, P3: 0.
+**Totals:** 66 stubs — P1: 0, P2: 66, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -60,7 +60,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
-| `docs/05-special-populations/05d-mens-health/hypogonadism-testosterone.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/gsm.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/breast.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/cervical.mdx` | 2 |  |
