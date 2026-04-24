@@ -4,37 +4,67 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 2026
+## Current handoff snapshot — April 2026 (post-fistula + pharmacology session)
 
-The latest work has been committed and pushed to `origin/main`. Most recent structural and editorial commits (newest first):
+The latest work has been committed and pushed to `origin/main`. Stub total **79** (down from 90 last snapshot). Major changes since the previous handoff:
 
-- `1a4b958` — **Chronic Constipation ↔ Defecatory Dysfunction** de-duplicated. CC owns the Rome IV / AGA-ACG pharmacologic algorithm (fiber → osmotics → stimulants → secretagogues → prokinetics) and surgical discussion for STC. DD owns the Rome IV functional-defecation-disorder framing, HRM types I–IV, ARM + BET + defecography workflow, biofeedback-as-cornerstone, botulinum toxin, and structural-surgery detail. Each article points to the other instead of duplicating.
-- `886a470` — **POP compartment articles** (anterior, apical, posterior) stripped of cross-compartment redundancy. DeLancey levels, POP-Q staging, pessary management, PFMT, FDA mesh regulatory history, concomitant anti-incontinence decision table, and generic complications are **canonical only in `pelvic-organ-prolapse.mdx`**. Each compartment article keeps only compartment-specific definitions, anatomy/pathophys, symptoms, exam maneuvers, procedures, and outcomes. ~270 lines removed across the three.
-- `163f1a3` — **New subsection `03i-defecatory-disorders/`** created. Fecal Incontinence moved from `03a-storage-incontinence/` and Chronic Constipation moved from `03c-pelvic-support/`. New fully built **Defecatory Dysfunction** article (~17 refs) replaces the old stub. Subsection `index.mdx` explains the overlap framework (Rome IV, phenotype table, why reconstructive pelvic surgeons care). Clinical-conditions landing updated. Inbound link from `uti-treatment-antibiotics.mdx` was repointed.
-- `67755d3`, `a54b810`, `c6c319c` — filled posterior prolapse, apical prolapse, and hypospadias articles.
-- `524d99a` — moved and filled **Lichen Sclerosus** at `docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx`; old voiding/outlet LS stub deleted.
-- `55fc13a` — filled Urethral Prolapse.
-- `a08d087` — renamed/filled **Urethral Diverticulum** at legacy route.
-- `6db85aa` — filled Nocturia.
-- `d8c111e` — filled Dysfunctional Voiding; added stubs for PBNO and urethral prolapse; renamed sidebar labels.
-- `6fdaa99` — filled Underactive Bladder.
-- `d86bebd` — replaced `03d-bladder-disorders/` with `03d-nlutd/`; deleted radiation-cystitis stub; cleaned sidebar titles so disease pages do not repeat `NLUTD —`.
-- `b08730d` — filled BPH at legacy route `bladder-outlet-obstruction.mdx`.
-- `7d63a1c` — split BNC and VUAS into separate pages, BNC before VUAS in sidebar.
+### Fistulas (03f) — every primary article rebuilt to depth
 
-### Current clinical-conditions structure notes
+- `aa96ac1` **VVF** — rebuilt with 19 refs; Goh + Waaldijk + simple/complex; double-dye + 10–12% concurrent ureteral injury; timing-of-repair (immediate vs early vs delayed vs long-radiation delay); transvaginal Latzko / classic flap vs robotic O'Conor; interposition table with Browning's negative Martius data in obstetric VVF.
+- `4b69bb6` **VUF** — 27 refs, anchored on Bonavina 2024 systematic review; Youssef syndrome; Józwik I-III; one-way-valve diagnostic challenge → uterine-side contrast (HSG, intrauterine CEUS); GnRH-agonist hormonal management exploiting endometrial-like tract lining; uterine-sparing robotic O'Conor; fertility outcomes.
+- `747c8cd` **UVF** — 21 refs; AUA-stent-first algorithm with Bahuguna time-dependent stenting (95% &lt; 2 wk → 20% &gt; 6 wk); Dallas immediate-vs-delayed recognition (0.7% vs 3.4%); three anatomic danger zones; Kidd robotic ureteroneocystostomy 100%/1-day-LOS data. Cross-links to Ureteral Stricture for distal-reconstruction technique.
+- `845f3fc` **RVF** — 17 refs around the **ASCRS 2022 stepwise algorithm** (Recommendations 12–18); Pastier head-to-head Martius-vs-gracilis; Swindon Martius meta (91% primary, 95% radiation); GRECCAR delayed-coloanal data; Söderqvist outcome differential (traumatic 92% vs inflammatory 46% final healing).
+- `90b3db1` **Obstetric Fistula** — 33 refs; obstructed-labour-injury-complex pathogenesis; Waaldijk/Goh/Panzi (Capes head-to-head favors Goh); Mourad multinational 1,185-repair series + adjuncts; Fistula Foundation 87% across 24,568 repairs; full POFRI section per FIGO 2025 expert opinion; COFFEE CBT psychosocial intervention; Three Delays prevention model.
+- `9b781c7` **RUF** — 40 refs; treatment-specific incidence; Muñoz etiologic + Mundy/Andrich complexity; Lahey transperineal-gracilis algorithm (Vanni/Kaufman/Harris 84–100%); York-Mason for non-irradiated (van der Graaf 2025 RARP series, McKibben Wexner data, Dafnis 15-yr); MITAR/TAMIS/robotic options; the irradiated 17%-vs-87% interposition data; Khouri concurrent-urethroplasty data; Wagner 2026 long-term PROMs; Martins permanent-dual-diversion legitimacy. **Three video resources linked at the end.**
+- `90d5d90` **UCF** — 34 refs; Khosravi 2026 meta risk factors; Horton-Devine-Graham classification; Choudhury 2023 waterproofing meta (TVF/scrotal 94–95% vs simple closure 73%); Fahmy algorithm (double dartos for primary distal; TVF for proximal/redo/fistula-repair); Myers/McAninch failed-childhood-hypospadias adult section; Raup neurogenic-bladder 81% diversion data; Sen catheterless adult repair.
+- `bfaf0e5` **UPF** — 37 refs; **CUPF** with the Cheng diagnostic-discriminator table preventing misdiagnosis as urethral duplication or H-type RUF; acquired UPF with etiology-specific management (Fournier's, PFUI ± urethrorectal, post-urethroplasty, LS, neurogenic); Guo 91% gracilis-interposition; Klemm 2024 long-term PROs framing **definitive perineal urethrostomy as a legitimate primary option** (use rose 4.3% → 38.7% with 95% success per Fuchs).
 
-- **Subsections 03a–03i:** Storage & Incontinence, Voiding & Outlet, Pelvic Support, NLUTD, Upper Tract, Fistulas, Genital & Scrotal, Pelvic Pain, **Defecatory Disorders (new)**.
-- **03i Defecatory Disorders** hosts Defecatory Dysfunction (the Rome IV FDD article), Chronic Constipation (moved from 03c), Fecal Incontinence (moved from 03a), and a subsection `index.mdx` explaining how the three overlap.
-- **03c Pelvic Support** — parent POP Overview article is the canonical source for DeLancey, POP-Q, pessary, PFMT, and transvaginal-mesh history. Compartment articles (anterior, apical, posterior) only carry compartment-specific content.
-- **BPH** intentionally keeps the legacy file/route `03b-voiding-outlet/bladder-outlet-obstruction.mdx` to preserve existing links.
-- **BNC** at `03b-voiding-outlet/bladder-neck-stenosis.mdx`; **VUAS** at `03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx`.
-- **Male urethral stricture** at legacy `03b-voiding-outlet/urethral-stricture.mdx`; **Female urethral stricture** sidebar-positioned immediately below at `03b-voiding-outlet/female-urethral-stricture.mdx`.
-- **Urethral Diverticulum** intentionally keeps the plural legacy file/route `03b-voiding-outlet/urethral-diverticula.mdx` to preserve existing links.
-- **PBNO**, **Dysfunctional Voiding**, **Urethral Prolapse** live in 03b-voiding-outlet.
-- **Lichen Sclerosus** lives in `03g-genital-scrotal/lichen-sclerosus.mdx`, not Voiding & Outlet.
-- **NLUTD** at `docs/03-clinical-conditions/03d-nlutd/`; old `03d-bladder-disorders/` path removed.
-- `docs/_STATUS.md` was regenerated after the latest moves; stub total **90**.
+### Section restructures
+
+- `9ea266c`, `279d996` **Upper Tract (03e):** UPJ Obstruction (19 refs) and Ureteral Stricture (33 refs) filled; **renovascular-conditions stub deleted**.
+- `279d996` **Fistulas sidebar reorder:** Females (1) → Males (2) → Both Genders (3); index sections rebuilt in the same order.
+- `279d996` **Genital & Scrotal (03g):** removed `male-infertility.mdx`; added Vaginal Cysts & Masses stub.
+- `279d996` **Men's Health (05d):** pruned to **only `hypogonadism-testosterone.mdx`** (deleted bph-luts, cancer-survivorship-sexual-med, erectile-dysfunction-medical, male-infertility).
+- `279d996` **Women's Health (05e):** pruned to **GSM** + new top-level stubs (Sexual Dysfunction, Recurrent UTI, STIs); **new Preventative Care subsection** with Cancer Screening (cervical/breast/endometrial), HPV Vaccination, and Osteoporosis Screening.
+- `273fc7e` **Pelvic Pain (03h):** deleted `pudendal-neuralgia.mdx` and `myofascial-pelvic-pain.mdx`, consolidated into a comprehensive **Chronic Pelvic Pain** article (36 refs) following the ACOG 2020 biopsychosocial framework.
+- `5fe39aa` **Pelvic Pain GSM stub deleted**; canonical GSM lives at `/docs/special-populations/05e-womens-health/gsm`. Inbound links repointed (POP, urethral prolapse, chronic-pelvic-pain).
+- `0891f08` **Pharmacology promoted to its own top-level Foundations subsection** at position **6** (just above [Tools](docs/01-foundations/tools/index.mdx) at position 7). Directory moved from `tools/pharmacology/` → `pharmacology/`. All inbound URLs and category-link IDs repointed.
+
+### Other clinical articles built this session
+
+- `aa96ac1` etc. — **Vesicovaginal**, **Vesicouterine**, **Ureterovaginal**, **Rectovaginal**, **Obstetric**, **Rectourethral**, **Urethrocutaneous**, **Urethroperineal** Fistulas (all listed above).
+- `9e072d0` **Peyronie's disease** — 50 refs; AUA/EAU/CUA/ISSM Guideline-of-Guidelines framework; Levine surgical algorithm; CCH, RestoreX PTT, IPP with Hammad multicenter adjuncts data; PROPPER depression-reduction.
+- `ec288c3` **Buried penis** — 34 refs; AABP vs congenital BP; obesity-LS-stricture vicious cycle; Mirastschijski / Hesse / Pariser-Santucci classifications; Pekala 7% SCC + 35% premalignant; Daly 2025 LS+stricture cohort; modern operation (escutcheonectomy + STSG + panniculectomy + scrotoplasty); Chestnut BMI-driven risk data.
+- `0121580` **Vaginal cysts and masses** — 45 refs; Müllerian most common (34–44%); Gartner-cyst cystocele-mimic; AMFB-vs-aggressive-angiomyxoma 30–40% recurrence; VAIN management; primary vaginal cancer per NCCN 2026; location-based diagnostic differential.
+
+### Pharmacology buildout (all new in this session)
+
+The Pharmacology subsection now has substantially deeper drug-class articles. All written in the WARWIKI reconstructive-surgeon voice with full FDA-label safety data and consistent cross-linking among classes:
+
+- `4d6d937` **Desmopressin** — 22 refs; nocturia / NP, pediatric enuresis (the only FDA-approved urologic indication), neurogenic LUTD, perioperative hemostasis (mild hemA / vWD I), CDI; comprehensive hyponatremia section per FDA boxed warning.
+- `ad638b3` **Cholinergic agonists** — 14 refs; bethanechol per FDA label with the absolute outlet-obstruction contraindication; cholinesterase inhibitors as not-in-US-practice; CIC outperforms.
+- `8f6b8e0` **Skeletal muscle relaxants** — 22 refs; **focused on systemic SMRs (baclofen, dantrolene, diazepam, cyclobenzaprine)**; defers BoNT-A and α-blockers to their own articles; vaginal-diazepam adjunct-only framing.
+- `5a78523` **Intravesical IC/BPS agents** — 23 refs; DMSO per Rimso-50 label + 2025 Li meta; cocktail recipes (DMSO classic, heparin-lidocaine, BTH); HA / CS / HA+CS GAG-replenishment with Cervigni equivalent-to-DMSO RCT; defers BoNT-A to neuromodulation-adjuncts article.
+- `25e5237` **Gabapentinoids** — 38 refs; all 7 urologic uses; Pontari pregabalin RCT; Agarwal NNT 2.9 favoring gabapentin in CP/CPPS; **GaPP2 negative for women's CPP**; perioperative meta and Rosen URS RCT showing **no benefit / increased pain** → not recommended; dedicated underrecognized-AE section (Hamed 41% sexual dysfunction).
+- `393b5e9` **TCAs** — 39 refs; 8 urologic uses; van Ophoven and Foster 2010 RCTs in IC/BPS with the ≥ 50 mg/day efficacy threshold; imipramine for childhood enuresis (only FDA-approved urologic TCA indication); low-dose doxepin for sleep-fragmentation nocturia; urinary retention as the most common urologic ADR (OR 3.30).
+- `514e980` **SNRIs** — 46 refs; Onuf's-nucleus mechanism explaining storage-phase sphincter facilitation; **duloxetine EU-approved (not US) for SUI**; PPUI as bridge therapy with the Filocamo "U-turn" caveat; OAB Steers RCT and central-pathway Wróbel preclinical; Zhang doxazosin + duloxetine vs sertraline in CP/CPPS; Trinchieri OR 3.30 voiding-disorder signal; Asnis tamsulosin-rescue strategy.
+- (current commit) **NSAIDs & analgesics** — 46 refs; renal-colic first-line; SKOPE RCT; NOPIOIDS protocol (cystectomy / nephrectomy / RP — 80.9% → 2.2% discharge opioid rate); ORIOLES 77% unused; AUA expert-panel maximum-tablet table; phenazopyridine FDA + TRPM8 mechanism; nephrotoxicity section for the urologic patient; the NSAID-ED confounding-by-indication conclusion.
+
+### Current clinical-conditions structure notes (updated)
+
+- **Subsections 03a–03i:** Storage & Incontinence, Voiding & Outlet, Pelvic Support, NLUTD, Upper Tract, Fistulas, Genital & Scrotal, Pelvic Pain, Defecatory Disorders.
+- **03e Upper Tract** — UPJ Obstruction, Ureteral Stricture (renovascular-conditions stub deleted).
+- **03f Fistulas** — Females (sidebar position 1) → Males (2) → Both Genders (3); every primary article filled to depth.
+- **03g Genital & Scrotal** — male-infertility removed (canonical in Men's Health); Vaginal Cysts & Masses added.
+- **03h Pelvic Pain** — IC/PBS, Chronic Pelvic Pain (consolidates pudendal-neuralgia and myofascial-pelvic-pain content); GSM lives in 05e Women's Health, not here.
+- **05d Men's Health** — only Hypogonadism & Testosterone.
+- **05e Women's Health** — GSM, Sexual Dysfunction, Recurrent UTI, STIs, Preventative Care subsection (Cancer Screening with cervical/breast/endometrial; HPV Vaccination; Osteoporosis Screening).
+
+### Current Foundations structure notes (updated)
+
+- **01-foundations** subsections in sidebar order: Anatomy & Physiology (2) → Surgical Principles (3) → Surgical Skills (4) → Perioperative Care (5) → **Pharmacology (6)** → **Tools (7)**.
+- **Pharmacology** is now its own top-level subsection at `docs/01-foundations/pharmacology/` (moved from `docs/01-foundations/tools/pharmacology/` in `0891f08`). All category-link IDs and inbound URLs were repointed in the same commit.
+- **Tools** intro paragraph and section list **no longer include pharmacology** — Tools now covers instruments, technology, biomaterials, intraoperative adjuncts, and gear.
 
 Before starting new work, run `git status --short` and expect a clean tree unless the user has made changes.
 
@@ -535,11 +565,11 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 
 | Section | Path | Notes |
 |---|---|---|
-| Foundations | `01-foundations/` | Landing page has toc-list + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted |
+| Foundations | `01-foundations/` | Landing page has section-stack + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted. Six top-level subsections: Anatomy & Physiology (2), Surgical Principles (3), Surgical Skills (4), Perioperative Care (5), **Pharmacology (6 — promoted from `tools/pharmacology/` in `0891f08`)**, Tools (7) |
 | Evaluation | `02-evaluation/` | Three children: **History & Physical** (bundles assessment-tools + male/female exams), Imaging, Ancillary Testing. `physical-exam/` subdirectory was flattened into `history-physical/` (2026-04-21). |
-| Clinical Conditions | `03-clinical-conditions/` | **9 subsections (03a–03i)**; 03i **Defecatory Disorders** added 2026-04 (hosts Defecatory Dysfunction, Chronic Constipation moved from 03c, Fecal Incontinence moved from 03a) |
+| Clinical Conditions | `03-clinical-conditions/` | **9 subsections (03a–03i)**. 03e Upper Tract: renovascular-conditions deleted; UPJO and Ureteral Stricture filled. 03f Fistulas: sidebar reordered Females → Males → Both Genders; every primary article filled. 03g Genital & Scrotal: male-infertility removed; Vaginal Cysts & Masses added. 03h Pelvic Pain: pudendal-neuralgia, myofascial-pelvic-pain, and GSM removed; Chronic Pelvic Pain consolidates the first two. 03i Defecatory Disorders (added 2026-04). |
 | Treatment Atlas | `04-surgical-techniques/` | 9 subsections; **04h-prosthetics DELETED**; 04f renamed "Incontinence" with 3 sub-databases (Female SUI, Male SUI, OAB & UUI); 04c (urinary diversion) has no index.mdx |
-| Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED |
+| Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED. 05d Men's Health pruned to Hypogonadism & Testosterone only. 05e Women's Health pruned to GSM + new Sexual Dysfunction / Recurrent UTI / STIs + new Preventative Care subsection (Cancer Screening — cervical/breast/endometrial — plus HPV Vaccination and Osteoporosis Screening). |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
 | History & Lineage | `07-roots/` | Renamed from "Roots of Reconstruction". **Surgical Genealogy** page uses `<SurgeonsExplorer />` with GURS/URPS tabs; surgeons/ category hidden from sidebar |
 | Resources | `08-resources/` | Textbooks, podcasts, websites, videos, patient resources + **Hidden Curriculum subfolder** |
@@ -697,4 +727,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-04-26*
