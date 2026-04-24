@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 82 stubs — P1: 0, P2: 82, P3: 0.
+**Totals:** 80 stubs — P1: 0, P2: 80, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -50,8 +50,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema-hidradenitis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03h-pelvic-pain/gsm.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03h-pelvic-pain/pudendal-neuralgia.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04b-bladder-reconstruction/bladder-augmentation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04b-bladder-reconstruction/index.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx` | 2 |  |
