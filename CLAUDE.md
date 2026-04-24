@@ -4,9 +4,68 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 24, 2026 (surgical-principles reorg + library overhaul)
+## Current handoff snapshot — April 25, 2026 (treatment atlas overhaul + condition / instrument expansion)
 
-The latest work has been committed and pushed to `origin/main`. Major changes in this session (commits `2ea103f` → `fd3a771`):
+The latest work has been committed and pushed to `origin/main`. Major additions in this session (commits `034780b` → most recent at this snapshot):
+
+### Treatment Atlas — major reorganization
+
+- **04d Upper Tract Reconstruction** now uses the landing-page-as-database pattern with **Endoscopic / Minimally Invasive** as a new domain. New articles: [endoureterotomy.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/minimally-invasive/endoureterotomy.mdx) and [optilume-ureter.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/minimally-invasive/optilume-ureter.mdx) (referencing the **ENDURE-1** trial NCT07020520 evaluating Optilume DCB in the ureter). The standalone `ureteral-reconstruction-database.mdx` was deleted; the section now follows the principles-above-database pattern.
+- **04e Tissue Transfer (deleted)** and **04i Endoscopic Procedures (deleted)** — obsolete stubs removed. DVIU was relocated into [04a-urethral-reconstruction/minimally-invasive/dviu.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx) alongside Optilume DCB and Urethral Dilation; the urethral-reconstruction-database DVIU slug was repointed.
+- **04e Genital Reconstruction (new)** — new atlas section at position 5. Landing-page database with domains: Adult-Acquired Buried Penis, Peyronie's Correction (cross-links to existing 04j), Gender-Affirming (Masculinizing / Feminizing / Non-Binary / Revision — cross-links to 05c), Post-Traumatic / Oncologic, Staged / Salvage Reconstruction, and **Penile Augmentation** (new teal-badge domain). New articles: [genital-reconstruction-principles.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles.mdx) (16-principle deep-dive with 46 refs), [buried-penis-repair.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/buried-penis-repair.mdx), [penile-skin-reconstruction.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction.mdx), [glans-reconstruction.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/glans-reconstruction.mdx), [scrotal-reconstruction.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction.mdx) (now a 25-ref comprehensive article — Fournier's, MLL / VLNT lymphedema, GAS scrotoplasty, aesthetic, testicular thigh pouches), and [cecil-culp-procedure.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/cecil-culp-procedure.mdx) (Cecil-Culp two-stage marsupialization, 24 refs).
+- **04h Fistula Repair (new)** — gender-toggled tabbed database (Female default / Male) at position 8. Female: VVF / VUF / UVF / RVF / Obstetric / Urethrovaginal. Male: RUF / Rectovesical / UCF / UPF. Plus [fistula-repair-principles.mdx](docs/04-surgical-techniques/04h-fistula-repair/fistula-repair-principles.mdx). Database entries link to existing clinical-conditions articles.
+- **04i Tissue Transfer (new pointer-database)** — replaces the deleted stub. Pure cross-cutting index of flaps and grafts by GU recipient site and indication, all linking back to `foundations/surgical-principles/flaps/*` and `grafts/*`. **Sits at the bottom of the atlas (sidebar position 11)** — the cross-cutting toolkit, not a primary domain.
+- **Treatment Atlas landing reordered** to 10 sections: Urethral, Bladder, Diversion, Upper Tract, Genital Reconstruction, Incontinence, Prolapse, Fistula Repair, Sexual Dysfunction, Tissue Transfer.
+
+### Foundations expansions
+
+- [exposure.mdx](docs/01-foundations/surgical-principles/exposure.mdx) — new Operative Exposure article at sidebar_position 9 (before Incisions & Closure). Vaginal / perineal / abdominal exposure by target, positioning, incisions, Kocher / Cattell-Braasch / Mattox visceral rotations, transmesenteric approaches, zone-based retroperitoneal trauma algorithm. 21 refs.
+- [vascular-damage-control.mdx](docs/01-foundations/surgical-principles/vascular-damage-control.mdx) — new article at sidebar_position 9.5. Three-phase DCS paradigm + DCR, vaginal / perineal packing, the pelvic-hemorrhage algorithm (binder → PPP → angioembolization → IIAL), REBOA zones with UK-REBOA safety context, proximal aortic control, vessel-specific damage control with TIVS, OB / GYN abdomino-pelvic packing. 35 refs.
+- [staplers/index.mdx](docs/01-foundations/tools/instruments/staplers/index.mdx) — new comprehensive Staplers article in instruments. GIA / TA / Endo-GIA Vascular / robotic platforms; renal-hilum en-bloc stapling (Lai 595-pt meta), radical cystectomy pedicles, bowel reanastomosis (Saxena 2025 RARC robotic ileo-ileal, Ghanaat GIA-60 vs 80), neobladder construction (Mastroianni 2025 RCT showing hand-sewn superior for continence + lower stones), the absorbable-vs-titanium stone-formation problem (Dangman 27%, Arif 4.8% vs 30% RCT), bladder-cuff / pyeloplasty / Boari / catheterizable-channel applications, FDA MAUDE complication data. 34 refs. Added to the instruments database with new Staplers category (4 entries).
+- [bowel-anastomosis.mdx](docs/01-foundations/surgical-principles/bowel-anastomosis.mdx) — expanded the side-to-side / functional end-to-end section with vascular-vs-tissue cartridge rule, Ghanaat 2018 GIA-60-vs-80 equivalence, Saxena 2025 RARC outcomes, Chan 2000 stapler-malfunction data, and a cross-link to the Staplers article. Three new refs (24-26).
+- [surgical-ergonomics.mdx](docs/01-foundations/surgical-principles/surgical-ergonomics.mdx) — replaced the one-line microbreak bullet with a full **Targeted Stretching Micro Breaks (TSMB)** subsection (Park 2017 Ann Surg landmark + Mayo protocol + ASGE 2023 + Kjærgaard 2025 meta), new **Exercise-based Prevention** subsection (Giagio 2019 RCT, Vijay 2025 resistance training, Rathee 2025 strengthening + TSMB), and Education subsection augmented with Gleave 2025 residency data. 7 new refs (19-25).
+- [quilting-stitch.mdx](docs/01-foundations/surgical-skills/quilting-stitch.mdx) — added the Schardein 2020 *Urol Video J* "sewing machine" reference (handheld battery-powered suturing for rapid BMG quilting in deep / narrow fields) as a new Suture-Placement technical pearl bullet. New ref41.
+
+### Evaluation expansions
+
+- [endoscopy.mdx](docs/02-evaluation/ancillary-tests/endoscopy.mdx) — filled the stub at evaluation/ancillary-tests with a comprehensive cystoscopy + ureteroscopy article. 12 clinical roles: intraoperative injury detection in pelvic surgery, urethroplasty surveillance, augmentation cystoplasty malignancy screening (with the surveillance-vs-symptom-driven controversy), BNC / VUAS cystoscopic platform, ureteral stricture evaluation and endoscopic treatment, ureteroenteric anastomotic strictures (antegrade / retrograde / combined), stone management in reconstructed tracts, iatrogenic stricture prevention, catheterizable-channel evaluation, post-phalloplasty neourethral complications. 44 refs.
+- [cystography.mdx](docs/02-evaluation/imaging/cystography.mdx) — new dedicated article at sidebar_position 2.5 (after RUG & VCUG). CT cystography, fluoroscopic cystography, VCUG for VUR, RNC, ceVUS; trauma indications with EAST risk-stratified follow-up; non-trauma uses (VUR, colovesical fistula, augmented bladder perforation, recurrent UTI); pitfalls and quick-reference summary. 25 refs.
+
+### Trauma & Emergencies expansions
+
+- [acute-urinary-retention.mdx](docs/05-special-populations/05a-trauma-emergencies/acute-urinary-retention.mdx) — new article at sidebar_position 11. Definition / epidemiology / etiology, rapid-vs-gradual decompression (Mayo Nyman 1997 — no RCT supports clamping), difficult-catheterization escalation algorithm (coudé → guidewire → flexible cystoscopy → fluoroscopy → SPC), Miller 2024 coudé protocol (3.0% → 0.2% traumatic-catheterization), POD recognition / management, alpha-blocker pre-TWOC evidence (Cochrane, EAU meta), Fowler's syndrome, special populations. 31 refs.
+- [on-table-ivp.mdx](docs/05-special-populations/05a-trauma-emergencies/on-table-ivp.mdx) — new article at sidebar_position 12. ACS 2025 / WSES-AAST 2019 guidelines, the 2 mL/kg / 10-min single-shot protocol, Morey 1999 SFGH landmark (32% obviated exploration), false-negative limitations (37–75% renal, up to 60% ureteral), decision algorithm during trauma laparotomy, alternatives. 16 refs.
+
+### Clinical Conditions expansions
+
+- [small-penis-syndrome.mdx](docs/03-clinical-conditions/03g-genital-scrotal/small-penis-syndrome.mdx) — new SPS / PDD condition at sidebar_position 5. Veale 2015 nomograms, micropenis vs SPS / PDD, BDD overlap (11–14%), psychological assessment as critical first step, full procedural ladder (PTT / VEDs → HA / PLA / fat fillers → suspensory ligament release → dermal-graft wrapping → Penuma / Himplant), illicit-injectables danger (78–91% surgical-correction rate), SMSNA 2024 position statements, management algorithm. 36 refs. The new Penile Augmentation domain in the genital-reconstruction database (3 entries: Penile Fillers, Suspensory Ligament Release, Penuma / Himplant) all link here.
+
+### Special Populations — Women's Health expansions
+
+- [opportunistic-adnexal-surgery.mdx](docs/05-special-populations/05e-womens-health/preventative-care/opportunistic-adnexal-surgery.mdx) — new at preventative-care position 4. Tubal hypothesis / STIC pathology, 42–80% risk-reduction evidence (Tang meta, Falconer, Duus 16,822, Kahn 2023), guideline matrix (ACOG 774, ESGO JAMA 2026, NCCN, FIGO, AGO intergroup), SEE-FIM technique with QOS completeness data, perioperative safety, ovarian-function impact, missed-opportunity literature (Moufarrij 23.7%, Tischer 60% prior abdominopelvic), cholecystectomy / 6-procedure cost-effectiveness, BRCA delayed-oophorectomy framework. 27 refs.
+- [recurrent-uti.mdx](docs/05-special-populations/05e-womens-health/recurrent-uti.mdx) — filled the stub. 12 sections anchored on the 2025 AUA / CUA / SUFU paradigm shift. IBC / QIR pathway (Hannan, Rosen 18%, Sharma organoid), risk stratification, ACR-aligned selective imaging (Pat 2022), full non-antibiotic toolkit (Raz-Stamm 1993 → Chen 58% meta → Tan-Kim 51.9% real-world for vaginal estrogen; ALTAR / ImpresU / Hodgkinson formaldehyde-resistance for methenamine; cranberry; MERIT D-mannose negative RCT; OM-89 / MV140), antibiotic prophylaxis regimens, ELIMINATE phage trial, FMT, intravesical GAG, paradigm shifts. 34 refs.
+- [cancer-screening/cervical.mdx](docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/cervical.mdx) — filled the stub. Primary HPV testing as preferred method, USPSTF vs ACS by-age comparison table, May 2024 / May 2025 self-collection FDA approvals (Teal Wand at-home), ASCCP risk-based management framework with the &lt;4 / 4–24 / 25–59 / ≥60% CIN3+ thresholds, special populations, screening gaps and disparities. 10 refs.
+
+### Removals / consolidations
+
+- **05-special-populations / 05d Men's Health & Andrology** — entirely deleted. The only article was hypogonadism-testosterone, fully covered by the pharmacology testosterone-replacement hub. Three pharmacology cross-links (androgen-adjuncts, testosterone-replacement) repointed.
+
+### Pattern guidance reaffirmed in this session
+
+- **Treatment-atlas landing-page pattern** — the landing IS the searchable database with a short principles block above. Used now in 04b (bladder), 04c (urinary diversion), 04d (upper tract), 04e (genital reconstruction), 04h (fistula repair).
+- **Pointer-database pattern** — for cross-cutting toolkits (04i Tissue Transfer), the database links out to authoritative pages elsewhere (foundations) rather than duplicating named-technique content.
+- **Bleed-through reference filtering** — assistant-generated content typically arrives with refs from unrelated articles (urinary-diversion refs in genital-reconstruction content, aspirin/pregnancy refs in cervical-cancer content, etc.). Always filter to refs actually cited in body, then renumber sequentially.
+- **MDX `<` artifacts** — assistant-generated content has consistent `<` swallow patterns ("p[N]" instead of "p<0.001).[N]", "<48 hours" missing entirely, etc.). Always sweep and fix with `&lt;` escaping.
+
+---
+
+## Previous handoff snapshot — April 24, 2026 (surgical-principles reorg + library overhaul)
+
+The previous session focused on the surgical-principles reorganization, library overhaul, perioperative-pharmacology pair pages, and the bladder / urethral / urinary-diversion treatment-atlas landing-page pattern. Preserved below for historical context.
+
+### Liposomal bupivacaine built out
+
+- [liposomal-bupivacaine.mdx](docs/01-foundations/pharmacology/intraoperative-adjuncts/liposomal-bupivacaine.mdx) — 16 refs; anchored on Ilfeld 2021 *Anesthesiology* 76-RCT review (only 11% clinically relevant benefit over standard bupivacaine); **CLEVELAND 2025 RCT** (LB TAP = plain bupivacaine TAP = saline placebo TAP); Ji 2021 14× financial-COI signal; urology-specific data (Chu 2021 LB-vs-epidural confounding vs Schmidt 2021 LB-vs-standard-bupivacaine no difference); preparation-rule warning admonition (lidocaine admixture, 96-h no-additional-LA rule).
 
 ### Liposomal bupivacaine built out
 
