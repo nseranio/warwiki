@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 84 stubs — P1: 0, P2: 84, P3: 0.
+**Totals:** 83 stubs — P1: 0, P2: 83, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -47,7 +47,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/ureterocolonic.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vascular-urinary.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vesicocutaneous.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema-hidradenitis.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx` | 2 |  |
