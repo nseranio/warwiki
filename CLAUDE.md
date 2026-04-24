@@ -8,6 +8,34 @@ This file is for Claude to read at the start of every session. It captures the p
 
 The latest work has been committed and pushed to `origin/main`. Stub total **79**. Major changes since the previous handoff:
 
+### Perioperative-pharmacology pair session (April 24, 2026) — not yet committed
+
+Built out six drug-class hubs in `pharmacology/perioperative-eras/` and `pharmacology/urinary-diversion-specific/` as **companion articles to existing perioperative-care workflow pages**. Pattern:
+
+- **Pharmacology hub** = drug-class pharmacology (agents, doses, FDA labels, per-indication evidence, safety ceilings)
+- **Perioperative-care workflow** = bedside decisions, protocols, Caprini-in-urology, bridging, etc.
+
+Each hub opens with an explicit "this article is the drug-class hub; for workflow, see [perioperative-care article]" paragraph, and includes a **cross-reference table** near the end listing what sits on the workflow page to avoid duplication.
+
+Built out:
+
+- **Phenazopyridine** (`legacy-low-evidence/phenazopyridine.mdx`) — 5 refs; TRPM8 mechanism (Luyts 2023), 2-day rule, G6PD + methemoglobinemia + methylene-blue antidote paradox cross-link.
+- **Imipramine** (`legacy-low-evidence/imipramine.mdx`) — 21 refs; only FDA-approved TCA for urology (childhood enuresis), five-mechanism table including vasopressin-independent antidiuretic effect; Kornholt 2019 negative SUI RCT; positioned vs TCAs hub.
+- **Phytotherapy** (`legacy-low-evidence/phytotherapy.mdx`) — 24 refs; four-agent framework (saw palmetto / β-sitosterol / pumpkin seed / Pygeum); CAMUS negative vs Vela-Navarrete hexanic-Permixon positive; three counseling scenarios.
+- **Parasympathomimetics** (`legacy-low-evidence/parasympathomimetics.mdx`) — 23 refs; legacy/specialty companion to existing cholinergic-agonists hub (Bethanechol Supersensitivity Test history, Riedl 2000 electromotive test, 2025 pyridostigmine RCTs, Japan's distigmine).
+- **Mucus management** (`urinary-diversion-specific/mucus-management.mdx`) — 24 refs; saline as mainstay, NAC in-vitro-vs-clinical mismatch (N'Dow 2001 RCT negative), octreotide 75% reduction data, urea rescue, explicit de-prescribe for ranitidine/aspirin.
+- **Vitamin B12 supplementation** (`urinary-diversion-specific/vitamin-b12-supplementation.mdx`) — 22 refs; anatomic-risk-by-segment table (Kock 80% Schilling+ vs ileal neobladder 0%), NCCN v1.2026 annual monitoring, oral B12 1–2 mg/day via passive diffusion as emerging standard, andrology cross-reference (Rastegar Panah testosterone).
+- **Urinary acidifiers &amp; alkalinizers** (`urinary-diversion-specific/urinary-acidifiers.mdx`) — 33 refs; Müller 2020 continence-acidosis paradox (45 → 87%), KDIGO HCO₃⁻ &lt; 18 trigger, NH₄Cl loading test vs F+F test, ascorbic-acid "does not reliably acidify urine" + Ferraro 2016 male stone-risk 43% HR.
+- **Corticosteroids** (`pharmacology/perioperative-eras/corticosteroids.mdx`) — 29 refs; six-domain framework (PONV/ERAS, mCRPC steroid switch, transplant rejection, contrast premed, IC/BPS Hunner, MET deflazacort). Explicitly cross-links to existing [Perioperative steroids](docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx) for stress dosing / adrenal crisis / wound healing.
+- **Post-op bowel &amp; ileus management** (`pharmacology/perioperative-eras/postop-bowel-ileus-management.mdx`) — 27 refs; alvimopan (Lee 2014 + Hanna 2021 ERAS-integrated), neostigmine-for-ACPO protocol, explicit de-prescribe-docusate, reconstructive-scope framing (diversion / augment / catheterizable channels). Companion to existing [Postoperative constipation &amp; ileus](docs/01-foundations/perioperative-care/postoperative-management/constipation.mdx).
+- **Bowel preparation** (`pharmacology/perioperative-eras/bowel-preparation.mdx`) — 33 refs; five-study paradigm-shift table for no-MBP-before-ileal-conduit, Simhal 2025 NSQIP diversion-type-dependent OABP signal (ileal conduit vs continent diversion), sodium phosphate APhN boxed-warning danger admonition, Nichols neomycin + erythromycin / metronidazole, Calaway 2019 C. diff screening.
+- **Anticoagulation reversal** (`pharmacology/perioperative-eras/anticoagulation-reversal.mdx`) — 26 refs; **andexanet alfa US withdrawal** anchored as headline news → 4F-PCC now primary for FXa inhibitor reversal. Idarucizumab gold standard for dabigatran (RE-VERSE AD). Vitamin K must be co-administered with PCC for warfarin. Protamine boxed warning + NPH/fish/vasectomy screening. Ciraparantag emerging. **Note:** [Antithrombotic therapy](docs/01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx) still lists andexanet — needs updating to reflect withdrawal.
+- **VTE prophylaxis** (`pharmacology/perioperative-eras/vte-prophylaxis.mdx`) — 23 refs; Caprini ≥ 7 threshold, Westerman 2022 apixaban compliance/safety data (70% of SUO members now use apixaban for extended prophylaxis), NCCN procedure-specific inpatient + 4-week extended prophylaxis, apixaban-after-bowel-resection absorption caveat, neuraxial-anesthesia timing.
+
+**Organizational recommendation (from this session):** keep the pharmacology-hub-vs-perioperative-workflow split; it answers two different reader questions ("which agent and dose?" vs "what do I do at the bedside?"). Apply three disciplines to every pair: (1) cross-reference box at top of both pages; (2) single source of truth per fact (agent dose = pharmacology; procedure-specific decision = perioperative); (3) when a drug's status changes (e.g., andexanet withdrawal), immediately flag the sister page for update. Four perioperative-care workflow articles still need matching cross-reference boxes pointing up to their pharmacology hubs — quick cleanup job for a future session.
+
+**Other housekeeping:** WARWIKI contact email updated in [about.mdx:91](src/pages/about.mdx:91) from `nseranio@gmail.com` → `warwikihq@gmail.com`.
+
 ### Pharmacology deep-dive session (April 23, 2026) — not yet committed
 
 Twenty-plus pharmacology articles built out or augmented across six subsection sweeps (neuropathic-pelvic-pain, neuromodulation-adjuncts, infection-prophylaxis, sexual-medicine-andrology, hormonal-therapies, dermatologic-topical-urethral) **plus a major organizational migration** consolidating intraoperative-adjuncts from `tools/` into `pharmacology/`. All lint (`npm run lint`) and production builds (`npx docusaurus build --locale en`) pass cleanly. Pending commit as of this snapshot.
