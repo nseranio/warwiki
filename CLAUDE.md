@@ -63,6 +63,24 @@ Before the References section of the three perioperative-care workflow articles,
 - Sidebar cleanup: the `bnc-vuas/` and `outlet-continence/` folders are now hidden via `className: "sidebar-hidden-category"` in their `_category_.json` files. Their individual technique pages remain reachable through explicit visible links from [bnc-vuas-reconstruction.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/bnc-vuas-reconstruction.mdx) and [catheterizable-channels.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/catheterizable-channels.mdx), so `npm run lint:orphans` passes.
 - URL cleanup for consistency: the hidden technique pages no longer use flattened custom slugs. They now live at file-aligned nested paths under `/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/...` and `/docs/surgical-techniques/04b-bladder-reconstruction/outlet-continence/...`, and the landing/database links were repointed accordingly.
 
+### April 24 follow-up — treatment-atlas landing-page pattern extended
+
+- **Bladder Reconstruction** now follows a **principles-above-database** pattern. [04b-bladder-reconstruction/index.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/index.mdx) has three visible principles links above the searchable database:
+  [augmentation-principles.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/augmentation-principles.mdx),
+  [bladder-neck-reconstruction-principles.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction-principles.mdx),
+  and [catheterizable-channels.mdx](docs/04-surgical-techniques/04b-bladder-reconstruction/catheterizable-channels.mdx), which was rewritten from a mixed overview into **Principles of Continent Catheterizable Channels**. The landing database was cleaned up to remove `Combined Abdominoperineal Approach`, and `bladder-augmentation.mdx` plus `bnc-vuas-reconstruction.mdx` were hidden from the sidebar via `sidebar_class_name: sidebar-hidden-item` while remaining directly linkable.
+- **Urethral Reconstruction** now mirrors this pattern. [04a-urethral-reconstruction/index.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/index.mdx) has a visible principles block above a **tabbed database** using `@theme/Tabs` / `TabItem`, with **Male Urethral Reconstruction as the default tab** and Female as the second tab. New article:
+  [urethral-reconstruction-principles.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles.mdx). The female dataset also now includes **Urethral Prolapse Repair**, currently linking to the clinical-conditions article at `/docs/clinical-conditions/03b-voiding-outlet/urethral-prolapse`.
+- **Urinary Diversion** was reorganized into the same structure. The old standalone [urinary-diversion-database.mdx](docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-database.mdx) was deleted and replaced by [04c-urinary-diversion/index.mdx](docs/04-surgical-techniques/04c-urinary-diversion/index.mdx) as the section landing page. A new principles article,
+  [urinary-diversion-principles.mdx](docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx),
+  sits above the searchable diversion database. The diversion families on the landing are now grouped as **Incontinent**, **Continent Orthotopic**, **Continent Cutaneous**, and **Complex / Salvage**, and the database now explicitly includes **Cutaneous Ureterostomy** with a new stub page at [cutaneous-ureterostomy.mdx](docs/04-surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy.mdx).
+- **Pattern guidance for future atlas sections:** the current preferred structure for treatment-atlas domains is:
+  1. a section landing page that is itself the searchable database,
+  2. a short **General Principles** block above that database linking to one or more cross-cutting principles articles,
+  3. individual named-technique pages linked from the database,
+  4. hide redundant overview pages from the sidebar when the landing page already serves that role.
+- **Build status:** the new bladder / urethral / urinary-diversion landing-page work all passes `npm run build`. The only outstanding warnings remain the unrelated pre-existing pharmacology broken links (`imipramine`, `parasympathomimetics`, `phenazopyridine`, `phytotherapy`, `corticosteroids`).
+
 ### Organizational pattern guidance
 
 The perioperative-pharmacology pair pattern (5 topic pairs) is the reference model for future cross-cutting topics:
