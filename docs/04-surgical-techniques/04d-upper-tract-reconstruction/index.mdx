@@ -1,0 +1,137 @@
+---
+title: Upper Tract Reconstruction
+sidebar_position: 0
+hide_title: true
+slug: /surgical-techniques/04d-upper-tract-reconstruction
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Upper Tract Reconstruction
+
+Upper tract reconstruction is the set of operations used to restore unobstructed drainage from the renal pelvis to the bladder while preserving renal function. In practice, the key variables are **location, defect length, ischemic burden, etiology, and the salvageability of the ipsilateral renal unit**. Short healthy defects tolerate direct repair; long or hostile segments require grafts, bowel, contralateral drainage, or renal relocation.
+
+---
+
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04d-upper-tract-reconstruction/upper-tract-reconstruction-principles" className="section-stack-title section-stack-link">Principles of Upper Tract Reconstruction</a>
+    <span className="section-stack-desc">Anatomic staging, renal functional assessment, preservation of ureteral blood supply, tension-free spatulated repair, location-based technique selection, graft support, and escalation from pyeloplasty or ureteroureterostomy to substitution and salvage.</span>
+  </li>
+</ul>
+
+---
+
+export const upperTractTechniques = [
+  {
+    name: "Pyeloplasty",
+    domain: "UPJ / Proximal",
+    notes: "Gold-standard reconstruction for ureteropelvic junction obstruction. Anderson-Hynes dismembered pyeloplasty remains the default because it excises the diseased junction, permits dependent funnel-shaped reconfiguration, and handles crossing vessels cleanly.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/pyeloplasty",
+  },
+  {
+    name: "Ureterocalicostomy",
+    domain: "UPJ / Proximal",
+    notes: "Salvage proximal reconstruction for failed pyeloplasty, dense UPJ fibrosis, or an intrarenal pelvis when a durable new UPJ cannot be fashioned.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureterocalicostomy",
+  },
+  {
+    name: "Ureteroureterostomy",
+    domain: "Segmental Primary Repair",
+    notes: "Best for short, well-vascularized proximal or mid-ureteral defects after complete excision back to healthy tissue. Succeeds only when the repair is truly tension-free.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteroureterostomy",
+  },
+  {
+    name: "Augmented Anastomotic Ureteroureterostomy",
+    domain: "Segmental Primary Repair",
+    notes: "Bridges the gap between simple ureteroureterostomy and full substitution by combining partial reanastomosis with graft augmentation when the defect is just too long for direct repair.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/augmented-anastomotic-uu",
+  },
+  {
+    name: "BMG Onlay",
+    domain: "Graft / Onlay Reconstruction",
+    notes: "Workhorse graft option for longer proximal or mid-ureteral strictures when circumferential replacement would be excessive. Uses the same graft-bed logic as urethral reconstruction and is usually wrapped with omentum.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/bmg-onlay-ureter",
+  },
+  {
+    name: "Appendiceal Onlay / Interposition",
+    domain: "Graft / Onlay Reconstruction",
+    notes: "Useful right-sided tissue-preserving option when appendix length, caliber, and mesentery are favorable. Can function as either an onlay or a short interposition segment.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/appendiceal-ileal-onlay",
+  },
+  {
+    name: "Ureteral Reimplantation",
+    domain: "Distal Reimplantation",
+    notes: "Default distal reconstruction when the ureter reaches the bladder without tension. Appropriate for benign distal strictures, iatrogenic injury, and distal ureterectomy defects.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteral-reimplantation",
+  },
+  {
+    name: "Non-Transecting Reimplantation",
+    domain: "Distal Reimplantation",
+    notes: "Distal reimplant variant that preserves a strip of periureteral adventitia and blood supply when full transection seems unnecessarily ischemic.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/non-transecting-reimplant",
+  },
+  {
+    name: "Distal Ureterectomy with Reimplantation",
+    domain: "Distal Reimplantation",
+    notes: "Direct excision-and-reimplant solution for diseased distal ureter when healthy proximal ureter can reach the bladder or be assisted with limited mobilization.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/distal-ureterectomy-reimplant",
+  },
+  {
+    name: "Boari Flap with Psoas Hitch",
+    domain: "Distal Reimplantation",
+    notes: "Escalation step for longer mid-to-distal defects when direct reimplantation is too short. Mobilizes the bladder to meet the ureter rather than sacrificing upper-tract tissue.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch",
+  },
+  {
+    name: "Trans Ureteroureterostomy (TUU)",
+    domain: "Substitution / Salvage",
+    notes: "Second-line option when ipsilateral tissue planes are hostile but the contralateral ureter is healthy and safely reachable without tension.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/trans-ureteroureterostomy",
+  },
+  {
+    name: "Ileal Ureter Substitution",
+    domain: "Substitution / Salvage",
+    notes: "Standard bowel substitute for long-segment or pan-ureteral loss when native-tissue options are exhausted and renal function merits salvage.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ileal-ureter",
+  },
+  {
+    name: "Renal Autotransplantation",
+    domain: "Substitution / Salvage",
+    notes: "Last major salvage step for complex proximal or multi-segment disease when other reconstructions are not feasible or would be more morbid.",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/renal-autotransplantation",
+  },
+];
+
+export const upperTractColumns = [
+  {
+    key: 'name',
+    header: 'Technique',
+  },
+  {
+    key: 'domain',
+    header: 'Domain',
+    badge: true,
+    badgeColors: {
+      'UPJ / Proximal': '#047857',
+      'Segmental Primary Repair': '#1d4ed8',
+      'Graft / Onlay Reconstruction': '#7c3aed',
+      'Distal Reimplantation': '#b45309',
+      'Substitution / Salvage': '#b91c1c',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={upperTractTechniques}
+  columns={upperTractColumns}
+  filterKey="domain"
+  filterLabel="Domain"
+  entityLabel="techniques"
+/>
