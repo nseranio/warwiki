@@ -11,21 +11,6 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 Reconstructive surgery of the lower urinary reservoir and outlet: augmentation for the hostile low-capacity bladder, salvage of bladder-neck contracture and vesicourethral stenosis, and outlet / continence procedures used when the bladder can be saved but the outlet cannot be trusted.
 
-<ul className="section-stack">
-  <li>
-    <a href="/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation" className="section-stack-title section-stack-link">Augmentation Cystoplasty</a>
-    <span className="section-stack-desc">Detubularized enterocystoplasty, alternative augmentation strategies, outcomes, complications, and lifelong surveillance.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas-reconstruction" className="section-stack-title section-stack-link">BNC / VUAS Reconstruction Database</a>
-    <span className="section-stack-desc">Technique database for bladder neck contracture and vesicourethral anastomotic stenosis, from endoscopic incision to complex redo reconstruction.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels" className="section-stack-title section-stack-link">Continent Catheterizable Channels</a>
-    <span className="section-stack-desc">Mitrofanoff appendicovesicostomy, Monti-family channels, tubularized bladder flap, outcomes, revisions, and lifelong surveillance.</span>
-  </li>
-</ul>
-
 ---
 
 export const bladderTechniques = [
@@ -33,6 +18,24 @@ export const bladderTechniques = [
     name: "Augmentation Cystoplasty",
     domain: "Capacity / Reservoir",
     notes: "Gold-standard reservoir salvage for refractory low-capacity or poorly compliant bladder. Usually detubularized ileocystoplasty; improves capacity, compliance, continence, and upper-tract safety when conservative therapy fails.",
+    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
+  },
+  {
+    name: "Ileocystoplasty",
+    domain: "Capacity / Reservoir",
+    notes: "Standard detubularized ileal augmentation and the modern default bowel-based reservoir expansion. Listed separately here because many series and operative discussions use the segment-specific name rather than the broader augmentation label.",
+    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
+  },
+  {
+    name: "Ileocecal Cystoplasty",
+    domain: "Capacity / Reservoir",
+    notes: "Ileocecal augmentation variant used when ureteral reach or implantation geometry favors the cecal segment. Included because some databases list it separately from generic enterocystoplasty.",
+    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
+  },
+  {
+    name: "Sigmoid Cystoplasty",
+    domain: "Capacity / Reservoir",
+    notes: "Colonic augmentation alternative when sigmoid is preferred over ileum. Can be useful when prior surgery or mesenteric reach makes small bowel less attractive.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
   },
   {
@@ -54,10 +57,21 @@ export const bladderTechniques = [
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
   },
   {
+    name: "Ileovesicostomy",
+    domain: "Capacity / Reservoir",
+    notes: "Incontinent low-pressure bladder outlet created with ileum for patients whose native reservoir can be preserved but who cannot safely manage a continent channel or urethral emptying regimen.",
+  },
+  {
     name: "Transurethral Incision with Injection of Triamcinolone",
     domain: "Outlet / Stenosis",
     notes: "First-line endoscopic salvage for thin bladder-neck contracture or vesicourethral anastomotic stenosis. Often requires repeat treatment.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone",
+  },
+  {
+    name: "T-Plasty",
+    domain: "Outlet / Stenosis",
+    notes: "Endoscopic T-pattern incision of the contracture ring to widen the bladder neck more broadly than a single radial cut. Useful for selected recurrent BNC before committing to open salvage.",
+    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc",
   },
   {
     name: "Y-V Plasty",
@@ -96,13 +110,13 @@ export const bladderTechniques = [
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/combined-abdominoperineal",
   },
   {
-    name: "Appendicovesicostomy (Mitrofanoff)",
+    name: "Appendicovesicostomy (Mitrofanoff Procedure)",
     domain: "Catheterizable Channels",
     notes: "Gold-standard continent catheterizable channel when appendix is available; lowest long-term revision burden among common channel types.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels",
   },
   {
-    name: "Monti Channel",
+    name: "Yang-Monti (Monti) Channel",
     domain: "Catheterizable Channels",
     notes: "Retubularized short ileal segment used when appendix is absent or already committed elsewhere; highly continent but more revision-prone long term.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels",
@@ -118,6 +132,11 @@ export const bladderTechniques = [
     domain: "Catheterizable Channels",
     notes: "Bowel-free catheterizable channel option when native bladder capacity is generous enough to spare bladder tissue for channel creation.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels",
+  },
+  {
+    name: "Continent Vesicostomy",
+    domain: "Catheterizable Channels",
+    notes: "Bowel-free continent cutaneous vesicostomy fashioned from native bladder tissue in selected neurogenic or congenital reconstructions when a simple catheterizable stoma is preferable to bowel-based channels.",
   },
   {
     name: "Young-Dees-Leadbetter",
@@ -136,6 +155,11 @@ export const bladderTechniques = [
     domain: "Outlet / Continence",
     notes: "Anterior bladder wall flap folded into a continence mechanism; a pediatric neurogenic-bladder reconstruction kept here for completeness.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/outlet-continence/pippi-salle",
+  },
+  {
+    name: "Bladder Neck Closure",
+    domain: "Outlet / Continence",
+    notes: "Salvage outlet-abandonment strategy for a devastated or irreparably incontinent bladder neck, often paired with a catheterizable channel and, in men, sometimes combined with prostatectomy or urethral abandonment.",
   },
 ];
 
