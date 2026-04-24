@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 76 stubs — P1: 0, P2: 76, P3: 0.
+**Totals:** 67 stubs — P1: 0, P2: 67, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -53,21 +53,12 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04e-tissue-transfer/buccal-mucosa-grafting.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04e-tissue-transfer/flap-reconstruction.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04e-tissue-transfer/index.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04e-tissue-transfer/skin-grafting.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/index.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04i-endoscopic-procedures/cystoscopic-injection.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04i-endoscopic-procedures/dviu.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04i-endoscopic-procedures/hydrodistension.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04i-endoscopic-procedures/index.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04i-endoscopic-procedures/ureteroscopy-reconstruction.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
 | `docs/05-special-populations/05d-mens-health/hypogonadism-testosterone.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/gsm.mdx` | 2 |  |
