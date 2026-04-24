@@ -4,9 +4,67 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 2026 (pharmacology-heavy sessions)
+## Current handoff snapshot — April 24, 2026 (surgical-principles reorg + library overhaul)
 
-The latest work has been committed and pushed to `origin/main`. Stub total **79**. Major changes since the previous handoff:
+The latest work has been committed and pushed to `origin/main`. Major changes in this session (commits `2ea103f` → `fd3a771`):
+
+### Liposomal bupivacaine built out
+
+- [liposomal-bupivacaine.mdx](docs/01-foundations/pharmacology/intraoperative-adjuncts/liposomal-bupivacaine.mdx) — 16 refs; anchored on Ilfeld 2021 *Anesthesiology* 76-RCT review (only 11% clinically relevant benefit over standard bupivacaine); **CLEVELAND 2025 RCT** (LB TAP = plain bupivacaine TAP = saline placebo TAP); Ji 2021 14× financial-COI signal; urology-specific data (Chu 2021 LB-vs-epidural confounding vs Schmidt 2021 LB-vs-standard-bupivacaine no difference); preparation-rule warning admonition (lidocaine admixture, 96-h no-additional-LA rule).
+
+### SEXI — new named-technique page
+
+- [sexi-stance-exchange.mdx](docs/01-foundations/surgical-skills/sexi-stance-exchange.mdx) — single ICVTS 2005 ref (Hosseinpour / Hilton / Nashef); five SEXI maneuvers (Tissue Anchor, Tak, Saatvedt Swing, Large Flip, Pirouette) with cross-links to every existing surgical-skills technique. Added to the [surgical-skills index](docs/01-foundations/surgical-skills/index.mdx) techniques table at sidebar_position 5.
+
+### GU Anastomotic Technique — new cross-cutting reference
+
+- [gu-anastomotic-technique.mdx](docs/01-foundations/surgical-principles/gu-anastomotic-technique.mdx) built out from scratch then expanded — now **57 refs**; per-site step-by-step + evidence review: VUA (Van Velthoven steps + Meeks continuous-tension + Simone SKSR; Gallo 2-vs-4-vs-6-suture RCT; **Dadashian 2026 EASE RCT** with the top-5 microskills that predict watertightness and 100% tailored-feedback watertight rate; Perera porcine biomechanics; Ficarra urethral-fixation); Bricker vs Wallace full step-by-step + Al-Nader 2024 propensity-matched bilateral-stricture insight + Liu 2014 algorithm; **Pyeloplasty** (Anderson-Hynes; Gu-Luo 2024 1-mm-bite-depth data; Kim 2022 continuous-vs-interrupted meta; Nayyar ureter-first); **Bladder closure** (Duffy 2019 double-layer leak-pressure; Yalcin 2018 rabbit barbed-stone danger admonition); ureteral repair by location + Lich-Gregoir 10-step; urethroplasty graft fixation (Barbagli fibrin glue + ventral onlay + Sterling 2023 transurethral ventral inlay); PDS-in-urine surprise + Kerstein 2013 human-urine counterpoint.
+
+### Barbed Sutures — new dedicated article
+
+- [barbed-sutures.mdx](docs/01-foundations/surgical-principles/barbed-sutures.mdx) — 29 refs + 2 added (Gupta 2016, Cakici 2018); full product biomechanics (V-Loc 90/180 vs Quill vs Stratafix vs MONOFIX); the upper-tract pyeloplasty controversy (**Liatsikos 2013 83% Quill failure**, **Radford 2018 40% pediatric V-Loc failure** with plaque-like inflammatory histology, Sorokin counter-evidence, Anand 2022 meta with 6× non-significant redo trend); VUA success story (Zorn + Williams overtightening + Sammon + Li + Bai); **Stratafix renorrhaphy danger admonition** (Gupta 2016 82% vs V-Loc 24% failure at 3 wk with Lapra-Ty/Hem-o-lok); **Cakici 2018** bidirectional VUA RCT (76% vs 40% immediate continence); renorrhaphy WIT data (Bertolo SR, Olweny, Erdem, Liu PADUA, Hu RCT); Yalcin rabbit bladder-stone animal-model warning; Clapp 2020 MAUDE SBO review; clinical-decision framework. Sutures.mdx has a brief summary + info-callout pointing here.
+
+### Surgical Principles — reorganized visually into three groups
+
+Custom index.mdx replaces the `generated-index` with three `section-stack` groups (zero URL changes; sidebar_position renumbered):
+
+- **Plastic Surgery Principles (1–5):** plastic-surgery-principles, reconstructive-ladder, wound-healing, flaps-gu-reconstruction, grafts-gu-reconstruction
+- **General Surgical Technique (10–15):** incisions-closure, needles, sutures, barbed-sutures, bowel-anastomosis, surgical-ergonomics
+- **GU-Specific Reconstruction Principles (20–22):** principles-gu-reconstruction, gu-anastomotic-technique, radiation-tissue-effects
+
+`_category_.json` switched from `type: "generated-index"` → `type: "doc"` pointing at index. Build passes, pre-existing broken-link warnings (pharmacology → neuromodulation-adjuncts/desmopressin etc.) are unrelated and tracked as a separate cleanup item.
+
+### Perioperative-care workflow pages — cross-reference boxes added
+
+Before the References section of the three perioperative-care workflow articles, added "Pharmacology Hub Companion(s)" tables pointing up to their pharmacology-hub companions to prevent duplication drift:
+
+- [steroids.mdx](docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx) → [pharmacology/corticosteroids](docs/01-foundations/pharmacology/perioperative-eras/corticosteroids.mdx)
+- [constipation.mdx](docs/01-foundations/perioperative-care/postoperative-management/constipation.mdx) → [bowel-preparation](docs/01-foundations/pharmacology/perioperative-eras/bowel-preparation.mdx) + [postop-bowel-ileus-management](docs/01-foundations/pharmacology/perioperative-eras/postop-bowel-ileus-management.mdx)
+- [antithrombotic-therapy.mdx](docs/01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx) → [vte-prophylaxis](docs/01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx) + [anticoagulation-reversal](docs/01-foundations/pharmacology/perioperative-eras/anticoagulation-reversal.mdx). Also updated the FXa inhibitor reversal line and reversal-plan checklist bullet to reflect **andexanet alfa's US market withdrawal** (4F-PCC is now first-line).
+
+### Library / Resources overhauled
+
+- **Navbar dropdown order:** Library → Resources (first), Journal Club, History & Lineage
+- **Resources index order** (and sidebar_position renumbering): Videos & Surgical Atlases → Podcasts → Patient Resources → Textbooks → Websites & Online Tools → Hidden Curriculum
+- **Websites page:** Equipment & Supplies moved to top; **Clinical Calculators & Tools** and **Anatomy & Reference** sections deleted; **theplasticsfella.com** added to Plastic Surgery & Microsurgery
+- **Videos page** extensively reorganized. New section order: WARWIKI (single card linking to `/@warwikihq/playlists` with brand-blue accent border + 90+-playlists emphasized) → GU Reconstruction Channels → Urogyn & Pelvic Floor → Pediatric Urology → General Urology Channels → Adjacent Specialties (Colorectal & General Surgery) → Video Journals → Surgical Video Platforms & Databases. **Society & CME section deleted** (AUA University, Grand Rounds, SIUT moved into General Urology). Bollens and Gómez-Sancha moved from GU Recon to General Urology. VoidWell and Green Journal moved into Urogyn. Major additions: 18 general-urology channels (AINU, Wisc, UNC, UCSF Skills Lab, Case, Empire, NM, CHU Rennes, Pansadoro, Eun, Jiang, Dr Rad, Residents, 60 Minutes, Urofact, Urology Book, COVID), 3 adjacent-specialty (Behind The Knife, SAGES, Mark Soliman), 10 video-platform databases (Giblib, JOMI, VuMedi, WebSurg, SP Marathon, SurgQuest, Experts in Surgery, NARUS, SRS Sundays, SRS Webinars), 3 new GU Recon (GURS official, Virasoro, Sarychev), 2 Urogyn (Louisville Urogyn, Obstetric Fistula Masterclass), 2 pediatric (Urología Infantil, Bayne), and Kramer + Christine moved from general to GURS.
+- **Podcasts page:** Urology Audio Guidelines feed added to `feeds` array (AUA-guideline audio summaries).
+
+### Organizational pattern guidance
+
+The perioperative-pharmacology pair pattern (5 topic pairs) is the reference model for future cross-cutting topics:
+
+- **Pharmacology hub** = drug-class pharmacology (agents, doses, FDA labels, evidence, safety ceilings)
+- **Perioperative-care workflow** = bedside decisions, protocols, procedure-specific decision-making
+- **Cross-reference box at the top or bottom of both pages** naming the companion
+- **Single source of truth per fact** — agent dose in pharmacology; procedure-specific decision in perioperative-care
+- **Flag the sister page** when a drug's status changes (e.g., andexanet withdrawal)
+
+---
+
+## Previous handoff snapshot — April 2026 (pharmacology-heavy sessions)
+
+The previous snapshot covered the large pharmacology buildout. Preserved below for historical context:
 
 ### Perioperative-pharmacology pair session (April 24, 2026) — not yet committed
 
