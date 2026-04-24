@@ -5,6 +5,8 @@ slug: /surgical-techniques/urethral-reconstruction
 ---
 
 import TechniqueDatabase from '@site/src/components/TechniqueDatabase';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Urethral Reconstruction
 
@@ -14,7 +16,16 @@ Urethral reconstruction encompasses a broad spectrum of surgical procedures used
 
 ---
 
-## Male Urethral Reconstruction
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles" className="section-stack-title section-stack-link">Principles of Urethral Reconstruction</a>
+    <span className="section-stack-desc">Stricture staging, scar excision, tension-free anastomosis, graft-bed vascularity, oral mucosa selection, vessel-sparing techniques, staged repair, and early referral for definitive reconstruction.</span>
+  </li>
+</ul>
+
+---
 
 export const maleTechniques = [
   {
@@ -350,12 +361,6 @@ export const maleTechniques = [
   },
 ];
 
-<TechniqueDatabase data={maleTechniques} />
-
----
-
-## Female Urethral Reconstruction
-
 export const femaleTechniques = [
   {
     name: "Female Urethral Dilation",
@@ -393,4 +398,16 @@ export const femaleTechniques = [
   },
 ];
 
-<TechniqueDatabase data={femaleTechniques} />
+## Technique Database
+
+<Tabs defaultValue="male" values={[
+  { label: 'Male Urethral Reconstruction', value: 'male' },
+  { label: 'Female Urethral Reconstruction', value: 'female' },
+]}>
+  <TabItem value="male">
+    <TechniqueDatabase data={maleTechniques} />
+  </TabItem>
+  <TabItem value="female">
+    <TechniqueDatabase data={femaleTechniques} />
+  </TabItem>
+</Tabs>
