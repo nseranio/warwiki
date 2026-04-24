@@ -9,6 +9,18 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 | Path | Priority | Notes |
 |---|---|---|
+| `docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/hormonal-therapies/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/infection-prophylaxis/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/intraoperative-adjuncts/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/legacy-low-evidence/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/neuromodulation-adjuncts/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/perioperative-eras/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/sexual-medicine-andrology/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx` | 2 |  |
+| `docs/01-foundations/pharmacology/voiding-outlet/index.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/flaps/anterolateral-thigh.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/flaps/blandy.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/flaps/martius.mdx` | 2 |  |
@@ -24,18 +36,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/01-foundations/surgical-principles/grafts/saphenous-vein.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/grafts/stsg.mdx` | 2 |  |
 | `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/bladder-pain-ic-bps/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/dermatologic-topical-urethral/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/hormonal-therapies/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/infection-prophylaxis/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/intraoperative-adjuncts/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/legacy-low-evidence/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/neuromodulation-adjuncts/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/neuropathic-pelvic-pain/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/perioperative-eras/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/sexual-medicine-andrology/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/urinary-diversion-specific/index.mdx` | 2 |  |
-| `docs/01-foundations/tools/pharmacology/voiding-outlet/index.mdx` | 2 |  |
 | `docs/02-evaluation/ancillary-tests/anorectal-testing.mdx` | 2 |  |
 | `docs/02-evaluation/ancillary-tests/endoscopy.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
