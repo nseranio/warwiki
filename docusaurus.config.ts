@@ -109,13 +109,13 @@ const config: Config = {
           items: [
             {
               type: 'docSidebar',
-              sidebarId: 'journalSidebar',
-              label: 'Journal Club',
+              sidebarId: 'resourcesSidebar',
+              label: 'Resources',
             },
             {
               type: 'docSidebar',
-              sidebarId: 'resourcesSidebar',
-              label: 'Resources',
+              sidebarId: 'journalSidebar',
+              label: 'Journal Club',
             },
             {
               type: 'docSidebar',
