@@ -4,7 +4,50 @@ This file is for Codex to read at the start of every session. It captures the pr
 
 ---
 
-## Current handoff snapshot — April 24, 2026 (surgical-principles reorg + library overhaul)
+## Current handoff snapshot — April 25, 2026 (upper-tract technique fill + validation hardening)
+
+The upper-tract technique fill is continuing on `origin/main`. Baseline pushed commits before the current Boari / ileal batch: `4442b99` (pyeloplasty) and `d2b59d1` (ureteral reimplantation).
+
+### Validation / audit hardening now in place
+
+- Commit `3e63e54` **Tighten site validation and fix link hygiene** fixed the remaining pharmacology broken links and made production broken links fail hard (`onBrokenLinks: "throw"` in `docusaurus.config.ts`).
+- Added [check-internal-links.js](scripts/check-internal-links.js) and [check-reference-density.js](scripts/check-reference-density.js); `npm run lint` now runs scope, citations, orphans, internal links, and reference-density advisory.
+- Added [anatomy-physiology/index.mdx](docs/01-foundations/anatomy-physiology/index.mdx) and tightened React return types. `npm install` was run after confirmation; no package-lock churn was introduced.
+- Current verification pattern used for the filled technique pages: `npm run lint`, `npm run typecheck`, `npm run build`, and `git diff --check`.
+
+### Upper Tract Reconstruction — pyeloplasty filled
+
+- Commit `4442b99` **Build out pyeloplasty technique page** converted [pyeloplasty.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx) from a stub into a 44-reference operative technique hub.
+- Scope: operative indications, preoperative planning, Anderson-Hynes dismembered pyeloplasty steps, nondismembered techniques (Fenger, Foley Y-V, Culp-DeWeerd, Scardino-Prince, dismembered V-flap), open/laparoscopic/robotic approach comparison, transperitoneal vs retroperitoneal access, infant RALP, stenting strategies, vascular hitch, endopyelotomy, failed-pyeloplasty salvage, complications, follow-up, and operative pearls.
+- Editorial split: the page intentionally avoids duplicating [UPJ Obstruction](docs/03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx), [MAG3 renal scintigraphy](docs/02-evaluation/imaging/mag3-renal-scintigraphy.mdx), and [GU Anastomotic Technique](docs/01-foundations/surgical-principles/gu-anastomotic-technique.mdx); it cross-links to them instead.
+- Pasted-source artifacts cleaned: smashed tables rebuilt, `undefined` figure text removed, incomplete MAG3 / p-value / contraindication fragments repaired, and source "Would you like..." prompt text omitted.
+
+### Upper Tract Reconstruction — ureteral reimplantation filled
+
+- Commit `d2b59d1` **Build out ureteral reimplantation technique page** converted [ureteral-reimplantation.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx) from a stub into a 37-reference technique hub.
+- Scope: pediatric VUR / primary obstructive megaureter indications, adult distal ureteral reconstruction indications, core reimplant principles, technique-selection table, Cohen / Politano-Leadbetter / Glenn-Anderson intravesical approaches, Lich-Gregoir extravesical technique, adult direct reimplant / psoas hitch / Boari flap / TUU ladder, robotic and pneumovesicoscopic approaches, endoscopic injection context, POM tapering and side-to-side ureterovesicostomy, complications, follow-up, and operative pearls.
+- Editorial split: this is the main reimplantation hub. It cross-links to [GU Anastomotic Technique](docs/01-foundations/surgical-principles/gu-anastomotic-technique.mdx), [Ureteral Stricture](docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx), and the narrower [Boari Flap & Psoas Hitch](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx) stub for future expansion.
+
+### Upper Tract Reconstruction — Boari flap / psoas hitch filled
+
+- [boari-flap-psoas-hitch.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx) converted from a stub into a 20-reference dedicated bladder-mobilization technique page.
+- Scope: indications / contraindications, reconstruction ladder from direct reimplant → psoas hitch → Boari flap → nephropexy / bowel / autotransplant, psoas hitch step sequence and technical rules, Boari flap design and step sequence, downward nephropexy, robotic approach, complications, when bladder-based reconstruction is insufficient, and operative pearls.
+- Editorial split: the page is the dedicated adjunct page under the broader ureteral reimplantation hub. It cross-links back to [ureteral-reimplantation.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx) and forward to ileal ureter / salvage concepts.
+
+### Upper Tract Reconstruction — ileal ureter filled
+
+- [ileal-ureter.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx) converted from a stub into a 24-reference salvage bowel-interposition technique page.
+- Scope: indications, contraindications and caution zones, preoperative planning, standard ileal ureter technique, Yang-Monti reconfigured ileal ureter, ileal onlay / combined Boari / downward nephropexy modifications, antireflux strategy, open and robotic outcomes, complications, alternatives, lifelong surveillance, and operative pearls.
+- Editorial split: this is the "last-resort bowel interposition" page, deliberately cross-linking out to [Bowel Anatomy](docs/01-foundations/anatomy-physiology/pelvis-support/bowel-anatomy.mdx), [Mucus Management](docs/01-foundations/pharmacology/urinary-diversion-specific/mucus-management.mdx), [Vitamin B12 Supplementation](docs/01-foundations/pharmacology/urinary-diversion-specific/vitamin-b12-supplementation.mdx), and [Urinary Acidifiers & Alkalinizers](docs/01-foundations/pharmacology/urinary-diversion-specific/urinary-acidifiers.mdx) to prevent metabolic-surveillance drift.
+
+### Near-term continuation targets
+
+- Still-stubbed adjacent 04d pages now made more obvious by the filled hubs: [distal-ureterectomy-reimplant.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/distal-ureterectomy-reimplant.mdx), [non-transecting-reimplant.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/non-transecting-reimplant.mdx), [ureterocalicostomy.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/ureterocalicostomy.mdx), [bmg-onlay-ureter.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/bmg-onlay-ureter.mdx), and [appendiceal-ileal-onlay.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/appendiceal-ileal-onlay.mdx).
+- `npm audit` still reports dependency vulnerabilities; no automated fix was applied because the available force path may be breaking.
+
+---
+
+## Previous handoff snapshot — April 24, 2026 (surgical-principles reorg + library overhaul)
 
 The latest work has been committed and pushed to `origin/main`. Major changes in this session (commits `2ea103f` → `fd3a771`):
 
