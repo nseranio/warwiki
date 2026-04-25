@@ -4,7 +4,16 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 25, 2026 (upper-tract technique fill + validation hardening)
+## Current handoff snapshot — April 26, 2026 (male urethral slings filled)
+
+- [male-urethral-slings.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx) converted from a stub into a 37-reference dedicated technique page. Anchored on the **MASTER RCT** (Abrams 2021 *Eur Urol* + Constable 2022 *HTA*) for sling-vs-AUS noninferiority, with all secondary outcomes favoring AUS; the 6th ICI severity-tiered framework as the central decision matrix (mild → sling acceptable; moderate → AUS preferred; severe → AUS).
+- Scope: epidemiology / PPI context, fixed-vs-adjustable classification, mechanism-of-action table (relocation vs compression) anchored on Kahokehr 2018 dynamic MRI; AdVance / AdVance XP technique + outcomes (Bauer 2009/2017, Cornu 2009, Rehder 2012, Collado 2019, Chua 2019, Papachristos 2018) with declining-cure-over-time data; Virtue quadratic sling (Comiter 2012/2014 fixation, Roumeguère 2022 3-yr, Ferro 2017); historical bone-anchored InVance; ATOMS adjustable system (Seweryn 2012, Hoda 2013, Doiron 2019, Redmond 2021, Bajaj 2024, Téllez 2024); adjustable retropubic slings (Argus / REMEEX, Chiu 2022); predictors-of-failure table with Ghaffar 2023 radiation meta-analysis as the strongest signal; complications-by-sling-type comparison; concomitant-with-IPP framing (Ammirati 2026); step-by-step AdVance XP technique with the Soljanik 2012 absorbable-suture failure-OR caveat.
+- Editorial split: cross-links to [AUS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) for moderate-to-severe SUI as the canonical companion. Ileal-ureter bleed-through references (originally numbered 8–12, 20–22, 41–44 in the source dump) were filtered out and the ref list renumbered sequentially.
+- Verification: `npm run lint` passes (only pre-existing reference-density advisories); `npx docusaurus build --locale en` completes cleanly.
+
+---
+
+## Previous handoff snapshot — April 25, 2026 (upper-tract technique fill + validation hardening)
 
 The upper-tract technique fill is continuing on `origin/main`. Baseline pushed commits before the current Boari / ileal batch: `4442b99` (pyeloplasty) and `d2b59d1` (ureteral reimplantation).
 
