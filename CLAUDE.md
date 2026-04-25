@@ -4,7 +4,48 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 26, 2026 (male urethral slings filled)
+## Current handoff snapshot — April 26, 2026 (incontinence canonicalization + behavioral / bulking fill)
+
+Current incontinence-procedure canonicalization batch includes the previously uncommitted SNM / PTNS / PFPT work plus the behavioral therapy and urethral bulking fill.
+
+### Sacral neuromodulation / tibial neuromodulation split
+
+- Added [sacral-neuromodulation.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx) as a dedicated, filled SNM technique page.
+- Scope: indications (UUI, urgency-frequency, non-obstructive urinary retention, fecal incontinence), off-label / emerging indications, multifocal mechanism of action, device families and MRI considerations, preoperative evaluation, PNE vs staged tined-lead trial, S3 lead placement technique and correct motor/sensory responses, stage-2 implantation, programming / rescue programming, urinary and fecal outcomes, ROSETTA SNM-vs-onabotulinumtoxinA framing, complications, revision patterns, MRI / pregnancy / neurogenic-LUTD special considerations, and key takeaways.
+- Added [percutaneous-tibial-nerve-stimulation.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx) as the canonical PTNS / TTNS / implantable tibial stimulation target.
+- Converted [neuromodulation.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx) from a stub into a small routing hub pointing to SNM and PTNS separately.
+- Updated [oab-uui-database.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx): SNM now links to `sacral-neuromodulation`; PTNS and implantable tibial stimulation now link to `percutaneous-tibial-nerve-stimulation`.
+- Updated related condition links in [urgency-incontinence-oab.mdx](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx), [mixed-incontinence.mdx](docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx), and [fecal-incontinence.mdx](docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx) away from the generic neuromodulation page.
+
+### Intradetrusor onabotulinumtoxinA naming cleanup
+
+- In the OAB/UUI database, renamed `Intradetrusor OnabotulinumtoxinA (Botox 100U)` to **Intradetrusor OnabotulinumtoxinA** while preserving the canonical slug [intradetrusor-botox.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx).
+- Updated [intradetrusor-botox.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx) title / H1 from "Intradetrusor Botox" to **Intradetrusor OnabotulinumtoxinA**.
+
+### Pelvic floor physical therapy canonical page
+
+- Expanded [pelvic-floor-pt.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx) from a short stub into a 28-reference canonical PFPT / PFMT page.
+- Scope: phenotype-based framing (hypotonic strengthening vs hypertonic down-training/manual therapy vs dyssynergic coordination), core modalities, female SUI, OAB/UUI, POP, post-prostatectomy incontinence, IC/BPS and chronic pelvic pain, vulvodynia / vaginismus / dyspareunia, fecal incontinence / defecatory disorders, pregnancy and postpartum, evidence snapshot, referral / safety, and clinic pearls.
+- Important editorial rule: **do not equate PFPT with Kegels.** Kegel-type strengthening is inappropriate for hypertonic pelvic pain phenotypes; IC/BPS with pelvic-floor tenderness should route toward manual therapy / down-training and explicitly avoid strengthening-first programs.
+- Updated PFPT entries in [female-stress-incontinence-database.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx), [male-stress-incontinence-database.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx), and [oab-uui-database.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx) so all point to the same canonical page with condition-specific notes.
+- Added / tightened PFPT links in [sexual-dysfunction.mdx](docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx), [gsm.mdx](docs/05-special-populations/05e-womens-health/gsm.mdx), [geriatric-urology.mdx](docs/05-special-populations/05f-lifelong-care/geriatric-urology.mdx), and [defecatory-disorders/index.mdx](docs/03-clinical-conditions/03i-defecatory-disorders/index.mdx).
+
+### Behavioral therapy for OAB / UUI
+
+- Added [behavioral-therapy-oab-uui.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-oab-uui.mdx) as the canonical behavioral page for OAB / UUI.
+- Scope: 2024 AUA/SUFU clinical-principle positioning, bladder training / bladder drill protocol, urge suppression script, timed voiding, fluid / caffeine / diet / constipation / weight-loss interventions, CBT-informed strategies, containment / skin-care counseling for UUI, Burgio behavioral-vs-oxybutynin evidence, Balk network meta-analysis, Cochrane bladder-training and conservative-intervention reviews, combined behavioral + drug trials in women and men, and delivery models by phenotype.
+- Updated [oab-uui-database.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx) so Behavioral Therapy now links to the new page; anticholinergic and beta-3 rows now link to their pharmacology hubs. Corrected vibegron branding and combination-therapy wording.
+- Updated [urgency-incontinence-oab.mdx](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx) to point to the dedicated behavioral page.
+
+### Urethral bulking agents
+
+- Filled [urethral-bulking-agents.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx) from stub into a 19-reference procedural counseling page.
+- Scope: indications / patient selection, mechanism and injection workflow, currently available and historical agents (Bulkamid / PAHG, Macroplastique, Coaptite, Durasphere, Urolastic, Contigen), AUA/SUFU 2023 positioning, Bulkamid pivotal and 7-year data, bulking-vs-surgery evidence, recurrent SUI after failed sling, complications, limited male post-prostatectomy role, regenerative injection directions, and counseling script.
+- Cross-linked the page with [SNRIs](docs/01-foundations/pharmacology/neuropathic-pelvic-pain/snris.mdx) and [Vaginal & Topical Estrogen](docs/01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx). Fixed the female SUI database typo `PAHW` → `PAHG`.
+
+---
+
+## Previous handoff snapshot — April 26, 2026 (male urethral slings filled)
 
 - [male-urethral-slings.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx) converted from a stub into a 37-reference dedicated technique page. Anchored on the **MASTER RCT** (Abrams 2021 *Eur Urol* + Constable 2022 *HTA*) for sling-vs-AUS noninferiority, with all secondary outcomes favoring AUS; the 6th ICI severity-tiered framework as the central decision matrix (mild → sling acceptable; moderate → AUS preferred; severe → AUS).
 - Scope: epidemiology / PPI context, fixed-vs-adjustable classification, mechanism-of-action table (relocation vs compression) anchored on Kahokehr 2018 dynamic MRI; AdVance / AdVance XP technique + outcomes (Bauer 2009/2017, Cornu 2009, Rehder 2012, Collado 2019, Chua 2019, Papachristos 2018) with declining-cure-over-time data; Virtue quadratic sling (Comiter 2012/2014 fixation, Roumeguère 2022 3-yr, Ferro 2017); historical bone-anchored InVance; ATOMS adjustable system (Seweryn 2012, Hoda 2013, Doiron 2019, Redmond 2021, Bajaj 2024, Téllez 2024); adjustable retropubic slings (Argus / REMEEX, Chiu 2022); predictors-of-failure table with Ghaffar 2023 radiation meta-analysis as the strongest signal; complications-by-sling-type comparison; concomitant-with-IPP framing (Ammirati 2026); step-by-step AdVance XP technique with the Soljanik 2012 absorbable-suture failure-OR caveat.
