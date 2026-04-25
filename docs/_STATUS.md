@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 56 stubs — P1: 0, P2: 56, P3: 0.
+**Totals:** 57 stubs — P1: 0, P2: 57, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -35,7 +35,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/01-foundations/surgical-principles/grafts/saphenous-vein.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/grafts/stsg.mdx` | 2 |  |
 | `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
-| `docs/02-evaluation/ancillary-tests/anorectal-testing.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/colovesical-small-bowel.mdx` | 2 |  |
@@ -46,7 +45,8 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vascular-urinary.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vesicocutaneous.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema-hidradenitis.mdx` | 2 |  |
+| `docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx` | 2 |  |
+| `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/renal-autotransplantation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx` | 2 |  |
@@ -61,6 +61,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/osteoporosis-screening.mdx` | 2 |  |
+| `docs/05-special-populations/05f-lifelong-care/geriatric-urology.mdx` | 2 |  |
 | `docs/05-special-populations/index.mdx` | 2 |  |
 | `docs/06-journal-club/index.mdx` | 2 |  |
 | `docs/07-roots/history/index.mdx` | 2 |  |
