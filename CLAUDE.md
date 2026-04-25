@@ -4,7 +4,54 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 25, 2026 (Women's Health content sweep)
+## Current handoff snapshot — April 24, 2026 (site audit + landings + transitional / geriatric urology)
+
+The latest work has been committed and pushed to `origin/main`. This session was an audit-driven cleanup pass plus three substantive content additions.
+
+### Audit-driven cleanup
+
+- **All 5 broken-link warnings fixed.** Build now reports zero broken links for the first time. Stale paths from the Pharmacology promotion-from-Tools migration repointed in [imipramine.mdx](docs/01-foundations/pharmacology/legacy-low-evidence/imipramine.mdx), [parasympathomimetics.mdx](docs/01-foundations/pharmacology/legacy-low-evidence/parasympathomimetics.mdx), [phenazopyridine.mdx](docs/01-foundations/pharmacology/legacy-low-evidence/phenazopyridine.mdx), [phytotherapy.mdx](docs/01-foundations/pharmacology/legacy-low-evidence/phytotherapy.mdx), and [perioperative-eras/corticosteroids.mdx](docs/01-foundations/pharmacology/perioperative-eras/corticosteroids.mdx). Patterns repointed: `neuromodulation-adjuncts/{desmopressin,antimuscarinics,beta-3-agonists}` → `storage-oab/{desmopressin,anticholinergics,beta3-agonists}`; `clinical-conditions/voiding-outlet/...` → `clinical-conditions/03b-voiding-outlet/...`; `clinical-conditions/pelvic-pain/ic-bps` → `clinical-conditions/03h-pelvic-pain/ic-pbs`; `pharmacology/5-alpha-reductase-inhibitors` → `pharmacology/voiding-outlet/alpha-reductase-inhibitors` (filename-numeric-prefix strip rule); `pharmacology/storage-oab/intravesical-ic-bps-agents` → `pharmacology/bladder-pain-ic-bps/intravesical-agents`.
+- **04c (Urinary Diversion) and 04j (Sexual Dysfunction) `_category_.json`** — added `link: { type: doc, id: ... }` so both category titles are clickable to their landing pages instead of being non-clickable dropdowns. Brings them in line with the other treatment-atlas sections.
+
+### Surgical Skills reorg (Plan B from the audit)
+
+The Surgical Skills index had 10 mixed techniques — half generic bowel-anastomotic stitches that belong in any general-surgery textbook, half truly signature GU/urogyn techniques. Reorganized so Skills is now strictly named-eponym GU operative techniques.
+
+- **Renamed category** `Surgical Skills` → `Named Operative Techniques` in [_category_.json](docs/01-foundations/surgical-skills/_category_.json) and the index header.
+- **Tightened the index table** to 6 truly signature techniques: Heaney, Quilting, Ski needle, Van Velthoven VUA, **Parker-Kerr** (kept — it's the classic two-layer over-the-clamp stump closure for urinary diversion), and SEXI. See [surgical-skills/index.mdx](docs/01-foundations/surgical-skills/index.mdx).
+- **Hid the 4 generic bowel stitches** from the sidebar via `sidebar_class_name: sidebar-hidden-item` on each frontmatter: Connell, Cushing, Lembert, Halsted. Pages remain reachable.
+- **Added a new "Bowel Anastomotic Stitches" subsection** to [bowel-anastomosis.mdx](docs/01-foundations/surgical-principles/bowel-anastomosis.mdx) with a table linking to all four hidden stitch pages plus a pointer to Parker-Kerr. **Note:** Docusaurus 3 + MDX 3 do **not** support the `### Heading {#explicit-anchor}` syntax — using it in surgical-principles/bowel-anastomosis.mdx caused an acorn parse failure. Auto-generated heading anchors work; do not add `{#...}` syntax to MDX 3 files.
+
+### New: Transitional Urology + Geriatric Urology (new 05f Lifelong Care subsection)
+
+Created a new `docs/05-special-populations/05f-lifelong-care/` subsection with a section-stack landing covering both age-bookend overlays of the reconstructive practice. The Special Populations top-level landing was updated to include the new subsection alongside Trauma / GAS / Women's Health.
+
+- **[transitional-urology.mdx](docs/05-special-populations/05f-lifelong-care/transitional-urology.mdx)** — 47 refs anchored on Akdağcık 2025 (World J Urol global SR), Peycelon 2021, Wood Eur Urol 2019, ICCS 2017 position statement, SBA 2023 transition guidelines, AAP / AAFP / ACP "Got Transition" 2023, and the AUA Working Group on Genitourinary Congenitalism 2015. Sections: definition (transition vs. transfer), universal goals, when-to-start (age 12–14), TRAQ / TRAQ-SB / Good2Go / RTQ readiness assessment tools, structured-program outcomes (Blubaum 2023 96.2% transition success vs. 36.8% without). Condition-specific subsections for spina bifida / NLUTD (CIC, renal surveillance, latex allergy, shunt management); PUV (15–23% ESRD with 28.5% lifetime risk, valve-bladder syndrome 38%, multidisciplinary clinic Rickard 2025 12% vs. 27% CKD progression); BEEC (~83% diurnal continence, male oligoasthenoteratozoospermia ~71%, 22–32% paternity rates with sperm banking); hypospadias (53% suboptimal AYA outcomes, 39% reoperation, 47% adult stricture, 83% two-stage BMG re-op success); DSD (lifelong hormone replacement, gonadal-tumor surveillance). Augmentation cystoplasty surveillance: 0–5.5% malignancy with 19–20-yr latency, AUA / SUFU annual surveillance, controversy on routine cystoscopy, urine FISH and molecular profiling. Care models, barriers table, 7-point key-recommendations summary.
+- **[geriatric-urology.mdx](docs/05-special-populations/05f-lifelong-care/geriatric-urology.mdx)** — 42 refs anchored on Rashid Clin Geriatr Med 2025, ASPIRe substudy (Erekson AJOG 2026), SUFU White Paper on anticholinergics-and-dementia, ACP / ACOG / AGS Beers Criteria. Frailty screening (TUG, CFS-9 — Amin AUC 0.86–0.91, Mini-Cog, Robinson Frailty Index, Life-Space Assessment) is the central preoperative gate. ASPIRe finding: prefrail / frail patients have no immediate-complication increase but **2.1× treatment-failure hazard** at follow-up. Anticholinergic burden / dementia: Malcher 2022 OR 1.48 with &gt;365 DDDs, oxybutynin / solifenacin highest risk, trospium spared (no BBB crossing); Kotochinsky 2025 meta n = 3.66 M (RR 1.20 vs. no Rx, 1.28 vs. mirabegron); SUFU recommends earlier progression to BoNT / neuromodulation. β3-agonists (mirabegron / vibegron) preferred — Lozano-Ortega network meta in ≥65 yr: equivalent efficacy, dry-mouth at placebo levels. Surgical selection: colpocleisis as ACOG-recommended first-line for comorbid patients (Drain 2020 equivalent complications + shorter LOS, Yildiz 2026 94.8% anatomic success / 6.8% regret); native-tissue repair the most common (43.7% of POP repairs ≥75 yr); sacrocolpopexy reserved for durability when warranted. Stepp 25.8% perioperative complication rate driven by op time + CAD + PVD (not age alone). ERAS RCT (Huang 2025) 65 vs. 74 hr LOS. GSM cross-references women's-health framework, with geriatric-specific underutilization data (Gallo 2025 only 2.2–4.2% of eligible Medicare beneficiaries). FI section (ACOG PB 210, SNM ~63% short-term / ~54% long-term).
+
+### Other clinical-conditions split
+
+- [scrotal-lymphedema.mdx](docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema.mdx) and [hidradenitis-suppurativa.mdx](docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx) — combined `scrotal-lymphedema-hidradenitis.mdx` stub split into two articles framed for the reconstructive urologist with cross-links to scrotal-reconstruction and buried-penis (HS-driven escutcheon disease). Both currently stubs awaiting fill.
+
+### Pattern guidance reaffirmed
+
+- **`_category_.json` `link` field** is what makes a category title clickable to its landing page. Categories without `link` fields fall back to a non-clickable dropdown — this is the primary reason for "some sidebars feel finished, others don't" perception. Audit recommended this fix everywhere there's an index.mdx without a corresponding `link` field. Currently 04c and 04j are aligned; ~75 deeper subsections still lack `link` fields but most don't have index.mdx either.
+- **`sidebar_class_name: sidebar-hidden-item`** in frontmatter hides an individual page from sidebar (vs. `className: sidebar-hidden-category` in `_category_.json`, which hides an entire category). Used here to keep Connell/Cushing/Lembert/Halsted reachable from bowel-anastomosis.mdx without cluttering the Skills sidebar.
+- **Treatment Atlas pattern maturity:** 04b and 04g now fully match the principles+database+hidden-compartments pattern; 04a, 04c, 04d, 04e, 04f, 04h, 04i, 04j show mixed adoption (some have database in index but compartments still visible; some have index without database). Future cleanup pass would standardize.
+
+### Curriculum-coverage gaps still outstanding
+
+From the audit comparing `src/data/curriculum.ts` against the docs tree:
+
+- **URPS V — Urethral Diverticulum (female)** — article exists at [03b-voiding-outlet/urethral-diverticula.mdx](docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx); content depth not verified.
+- **URPS VII — Hematuria evaluation** — missing entirely. Should live under 02-evaluation or 03-clinical-conditions.
+- **URPS IX — Müllerian anomalies / vaginal agenesis / McIndoe / Davydov** — missing; pairs cleanly with the existing GAS feminizing-procedures article.
+- **GURS III — Hidradenitis Suppurativa** — stub created this session, awaiting fill.
+- **URPS I — Successful aging framework** — partial coverage in geriatric-urology; standalone framework article not written.
+
+---
+
+## Previous handoff snapshot — April 25, 2026 (Women's Health content sweep)
 
 The latest work has been committed and pushed to `origin/main`. Four Women's Health articles filled in this session:
 
