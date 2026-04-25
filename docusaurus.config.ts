@@ -18,7 +18,7 @@ const config: Config = {
   projectName: 'warwiki',
   trailingSlash: false,
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenAnchors: 'ignore',
 
   headTags: [

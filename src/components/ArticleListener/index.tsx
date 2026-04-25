@@ -228,7 +228,7 @@ function speakFallback(text: string, rate: number, onEnd: () => void): void {
   synth.speak(utt);
 }
 
-export default function ArticleListener(): JSX.Element | null {
+export default function ArticleListener(): React.ReactElement | null {
   const [supported, setSupported] = useState(true);
   const [state, setState] = useState<'idle' | 'loading' | 'playing' | 'paused' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');

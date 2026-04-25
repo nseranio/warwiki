@@ -16,7 +16,9 @@
     "lint:scope": "node scripts/check-scope.js",
     "lint:citations": "node scripts/check-citations.js",
     "lint:orphans": "node scripts/check-orphans.js",
-    "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans",
+    "lint:links": "node scripts/check-internal-links.js",
+    "lint:density": "node scripts/check-reference-density.js",
+    "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans && npm run lint:links && npm run lint:density",
     "status": "node scripts/gen-status.js"
   },
   "dependencies": {

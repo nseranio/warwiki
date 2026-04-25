@@ -8,7 +8,7 @@ import CitationTooltips from '@site/src/components/CitationTooltips';
 
 type Props = WrapperProps<typeof ContentType>;
 
-export default function ContentWrapper(props: Props): JSX.Element {
+export default function ContentWrapper(props: Props): React.ReactElement {
   const { frontMatter } = useDoc();
   // Hide TTS on any page that sets hide_title: true — all section landings,
   // sub-section landings, and database index pages use this convention.

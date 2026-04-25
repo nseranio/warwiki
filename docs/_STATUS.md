@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 57 stubs — P1: 0, P2: 57, P3: 0.
+**Totals:** 56 stubs — P1: 0, P2: 56, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -61,7 +61,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/osteoporosis-screening.mdx` | 2 |  |
-| `docs/05-special-populations/05f-lifelong-care/geriatric-urology.mdx` | 2 |  |
 | `docs/05-special-populations/index.mdx` | 2 |  |
 | `docs/06-journal-club/index.mdx` | 2 |  |
 | `docs/07-roots/history/index.mdx` | 2 |  |

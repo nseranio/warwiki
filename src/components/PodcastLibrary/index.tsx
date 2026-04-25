@@ -38,7 +38,7 @@ function slugify(s: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export default function PodcastLibrary({ episodes, topics, feeds }: Props): JSX.Element {
+export default function PodcastLibrary({ episodes, topics, feeds }: Props): React.ReactElement {
   const [search, setSearch] = useState('');
 
   const feedById = useMemo(() => {
@@ -189,7 +189,7 @@ export default function PodcastLibrary({ episodes, topics, feeds }: Props): JSX.
  * Compact feed directory — rendered as a separate component for the
  * "Full feeds to subscribe to" bottom block.
  */
-export function PodcastFeedList({ feeds }: { feeds: Feed[] }): JSX.Element {
+export function PodcastFeedList({ feeds }: { feeds: Feed[] }): React.ReactElement {
   return (
     <ul className={styles.feedList}>
       {feeds.map((f) => (
