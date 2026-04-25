@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 66 stubs — P1: 0, P2: 66, P3: 0.
+**Totals:** 57 stubs — P1: 0, P2: 57, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -36,7 +36,6 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/01-foundations/surgical-principles/grafts/stsg.mdx` | 2 |  |
 | `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
 | `docs/02-evaluation/ancillary-tests/anorectal-testing.mdx` | 2 |  |
-| `docs/02-evaluation/ancillary-tests/endoscopy.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03f-fistulas/in-both-genders/colovesical-small-bowel.mdx` | 2 |  |
@@ -60,16 +59,8 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/gsm.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/breast.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/cervical.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/endometrial.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/cancer-screening/index.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/hpv-vaccination.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/index.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/preventative-care/osteoporosis-screening.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/recurrent-uti.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx` | 2 |  |
+| `docs/05-special-populations/05e-womens-health/osteoporosis-screening.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/sti.mdx` | 2 |  |
 | `docs/05-special-populations/index.mdx` | 2 |  |
 | `docs/06-journal-club/index.mdx` | 2 |  |
