@@ -28,6 +28,11 @@ const DYNAMIC_LINK_PREFIXES = [
   'docs/07-roots/surgeons/',
   // Incontinence procedure pages — rendered by GenericDatabase from female/male/oab database pages
   'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/',
+  // Prolapse repair technique pages — rendered by GenericDatabase from the prolapse landing
+  'docs/04-surgical-techniques/04g-prolapse-repair/anterior/',
+  'docs/04-surgical-techniques/04g-prolapse-repair/apical/',
+  'docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/',
+  'docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/',
 ];
 
 function walk(dir, files = []) {

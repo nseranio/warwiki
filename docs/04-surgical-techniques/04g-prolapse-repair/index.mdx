@@ -1,15 +1,28 @@
 ---
-title: Prolapse Repair Database
-sidebar_position: 5
+title: Prolapse Repair
+sidebar_position: 0
+hide_title: true
+slug: /surgical-techniques/04g-prolapse-repair
 ---
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # Prolapse Repair
 
-Pelvic organ prolapse (POP) repair encompasses a wide range of native tissue, mesh-augmented, and obliterative procedures targeting the anterior, posterior, and apical compartments. Surgical planning must account for compartment-specific anatomy (DeLancey Levels I–III), patient goals including uterine preservation and sexual activity, prior surgery, and mesh history. The table below catalogs the major surgical and non-surgical techniques by compartment and approach.
+Pelvic organ prolapse (POP) repair encompasses native-tissue, mesh-augmented, and obliterative procedures targeting the anterior, posterior, and apical compartments. Surgical planning must account for compartment-specific anatomy (DeLancey Levels I–III), patient goals including uterine preservation and sexual activity, prior surgery, and mesh history.
 
 > See [POP Overview](/docs/clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse) for pathophysiology, risk stratification, and trial data (OPTIMAL, PEOPLE).
+
+---
+
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04g-prolapse-repair/prolapse-repair-principles" className="section-stack-title section-stack-link">Principles of Prolapse Repair</a>
+    <span className="section-stack-desc">ACOG PB 214 framework, SUPeR trial 2024 (sacrocolpopexy 28% / TVM 29% / native tissue 43% composite failure at 36 months), the 2026 Cochrane anterior-compartment update, hysteropexy-vs-hysterectomy meta-analyses (Ruffolo 2025; Brennand 2025), concomitant continence procedure trade-offs (CARE / OPUS / 2026 Cochrane), and a 10-row summary of core principles.</span>
+  </li>
+</ul>
 
 ---
 
@@ -118,6 +131,13 @@ export const prolapseProcs = [
     approach: "Vaginal",
     notes: "Removal of the uterus via vaginal approach with concurrent apical repair (McCall's culdoplasty, SSLF, or USLS). Standard surgical treatment for symptomatic uterine prolapse when uterine preservation is not desired.",
     slug: "/docs/surgical-techniques/04g-prolapse-repair/vaginal-hysterectomy",
+  },
+  {
+    name: "Supracervical Hysterectomy at Sacrocolpopexy",
+    compartment: "Apical",
+    approach: "Robotic",
+    notes: "Subtotal hysterectomy preserving the cervix as the mesh anchor at concomitant sacrocolpopexy. Mesh exposure ~0.5% (supracervical) vs ~4.7% (total) — Linder 2018 Mayo n=814. Standard preference among contemporary urogynecologists when hysterectomy is performed at sacrocolpopexy.",
+    slug: "/docs/surgical-techniques/04g-prolapse-repair/supracervical-hysterectomy",
   },
   {
     name: "Sacrocolpopexy",
