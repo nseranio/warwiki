@@ -5,35 +5,10 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 28 stubs — P1: 0, P2: 28, P3: 0.
+**Totals:** 3 stubs — P1: 0, P2: 3, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
-| `docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/hormonal-therapies/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/infection-prophylaxis/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/legacy-low-evidence/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/neuromodulation-adjuncts/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/perioperative-eras/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/sexual-medicine-andrology/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx` | 2 |  |
-| `docs/01-foundations/pharmacology/voiding-outlet/index.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/grafts/intestinal-segments.mdx` | 2 |  |
 | `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
-| `docs/02-evaluation/index.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/renal-autotransplantation.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/index.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx` | 2 |  |
-| `docs/05-special-populations/index.mdx` | 2 |  |
-| `docs/06-journal-club/index.mdx` | 2 |  |
-| `docs/07-roots/history/index.mdx` | 2 |  |
-| `docs/07-roots/index.mdx` | 2 |  |

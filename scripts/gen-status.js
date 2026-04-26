@@ -111,6 +111,7 @@ function main() {
   const stubs = new Map();
 
   for (const file of files) {
+    if (file === STATUS_FILE) continue;
     const content = fs.readFileSync(file, 'utf8');
     const isStub = detectStub(content);
     if (!isStub) continue;
