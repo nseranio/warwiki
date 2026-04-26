@@ -4,7 +4,80 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 27, 2026 (foundations cleanup — GU-principles deletion + Named Stitches restructure)
+## Current handoff snapshot — April 28, 2026 (homepage counter + About refresh + landings + ED / AD fills + bladder-flap)
+
+Multi-thread session: shipping infrastructure (homepage stats counter), polish (About banner restyle to match homepage), large content fills (pharmacology subsection landings + section indexes + ED + autonomic dysreflexia), and a new GU-flap family page (bladder flap).
+
+### Homepage live counter
+
+- New [scripts/gen-stats.js](scripts/gen-stats.js) walks `docs/`, counts substantive MDX articles (excludes stubs and pure landings) and reference anchors (`<a id="refN">` + GAS-style `[^N]:` footnote definitions), and writes [src/data/stats.json](src/data/stats.json).
+- Wired into npm as `npm run stats` (manual), `prestart` (regenerates on dev start), and `prebuild` (regenerates on production build).
+- Homepage [src/pages/index.tsx](src/pages/index.tsx) imports the JSON and renders the counter below the search pill. Initial implementation used 1.05 rem / weight 700; user requested bolder, so updated to **1.5 rem / weight 800 numbers + 1.1 rem / weight 600 labels** with a centered dot separator (see [index.module.css](src/pages/index.module.css) `.heroStats`).
+- Current display: **618 articles · 6,099 references**.
+
+### About page banner refresh
+
+- The About hero banner was a solid blue background with white WARWIKI text and the old "The functional reconstructive urology wiki." tagline.
+- Restyled to match the homepage aesthetic: light gradient background, brand-blue gradient WARWIKI title, italic muted-grey subtitle, brand-aligned typography. New tagline: **"A specialist reference for functional reconstructive urology & urogynecology."**
+- The homepage's "Reconstruction, codified." brand tagline was kept unchanged.
+
+### Pharmacology subsection landings filled (11 pages)
+
+Each follows the storage-oab template — frontmatter, brief framework intro paragraph, section-stack list of agent-class pages with 1-2 sentence descriptions:
+
+- [voiding-outlet/index.mdx](docs/01-foundations/pharmacology/voiding-outlet/index.mdx)
+- [bladder-pain-ic-bps/index.mdx](docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx)
+- [neuropathic-pelvic-pain/index.mdx](docs/01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx)
+- [neuromodulation-adjuncts/index.mdx](docs/01-foundations/pharmacology/neuromodulation-adjuncts/index.mdx)
+- [infection-prophylaxis/index.mdx](docs/01-foundations/pharmacology/infection-prophylaxis/index.mdx)
+- [sexual-medicine-andrology/index.mdx](docs/01-foundations/pharmacology/sexual-medicine-andrology/index.mdx)
+- [hormonal-therapies/index.mdx](docs/01-foundations/pharmacology/hormonal-therapies/index.mdx)
+- [dermatologic-topical-urethral/index.mdx](docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx)
+- [perioperative-eras/index.mdx](docs/01-foundations/pharmacology/perioperative-eras/index.mdx)
+- [urinary-diversion-specific/index.mdx](docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx)
+- [legacy-low-evidence/index.mdx](docs/01-foundations/pharmacology/legacy-low-evidence/index.mdx)
+
+### Top-level section indexes thickened (8 pages)
+
+Each had a section-stack list but was thin enough to be flagged by the stub tracker. Added substantive 2-paragraph intros explaining scope, frameworks, and how the section relates to the rest of WARWIKI:
+
+- [02-evaluation/index.mdx](docs/02-evaluation/index.mdx)
+- [04f-incontinence-procedures/index.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/index.mdx)
+- [04j-sexual-dysfunction/index.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx)
+- [05-special-populations/index.mdx](docs/05-special-populations/index.mdx)
+- [06-journal-club/index.mdx](docs/06-journal-club/index.mdx)
+- [07-roots/index.mdx](docs/07-roots/index.mdx)
+- [07-roots/history/index.mdx](docs/07-roots/history/index.mdx)
+- [05e-womens-health/cancer-screening/index.mdx](docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx)
+
+### New flap-family page — Bladder Flap
+
+- New [bladder-flap.mdx](docs/01-foundations/surgical-principles/flaps/bladder-flap.mdx) — the foundations-level family / framework page covering psoas hitch (Riedmiller 1984 96.7%, Manassero 2012 91.6%), Boari flap (Corse 2023 robotic 90%, Mauck 2011 83/88%, Dell'Oglio 2021 robotic), Boari + psoas hitch combined, **Hardesty 2024 women's-bladder-dysfunction signal (27.6% new-onset LUTS)**, spiral bladder muscle flap (Li 2014), laparoscopic bladder muscle flap (Bai 2021 90% n = 10), rotational bladder flap for complex VVF (Ezzat 2009 88% n = 35; Chen 2016 + peritoneal interposition 94% n = 18; Sharifiaghdas 2012 90% n = 10), and bladder-wall flaps for female urethral / BNC reconstruction (Patidar 2021 82% socially dry).
+- 18 references; comparative-defect-length table; complications section; ACS 2025 Best Practices Guidelines positioning.
+- Cross-links to the operative deep-dive at [Boari Flap & Psoas Hitch](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx) and to [Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx).
+- Added a new row to the Flap Index on [flaps-gu-reconstruction.mdx](docs/01-foundations/surgical-principles/flaps-gu-reconstruction.mdx) between PMTP propeller and Y-V plasty.
+
+### Erectile dysfunction filled
+
+- [erectile-dysfunction.mdx](docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx) built from `*Content in development.*` stub.
+- 21 references; framed for the reconstructive-urology audience with cross-links to the [Sexual Dysfunction Treatment Atlas](docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx) and the [PDE5 / ICI / MUSE / testosterone pharmacology hubs](docs/01-foundations/pharmacology/sexual-medicine-andrology).
+- Anchored on Shamloul *Lancet* 2013, AUA 2018 ED Guideline (Burnett), ICSM 2015 (Hatzimouratidis), Mostafaei 2021 cardiovascular umbrella review (RR 1.45 CVD / 1.55 MI), Princeton III consensus, IIEF-5 severity table, Endocrine Society 2018 testosterone guideline, TRAVERSE 2023 / Bhasin & Snyder 2025 *NEJM*.
+- Special-populations table for post-RP, post-radiation, diabetes, SCI / MS (with **explicit cross-link to the new autonomic dysreflexia article**), CVD, young post-traumatic candidates, and Peyronie's overlap.
+
+### Autonomic dysreflexia filled (from-scratch)
+
+- [autonomic-dysreflexia.mdx](docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx) built from `*Content in development.*` stub.
+- 14 references; framed as a **urologic disease** (75–85% of triggers are bladder-derived). Krassioukov 2012 ASIA / ISCoS standards; Consortium for Spinal Cord Medicine 2002 acute management algorithm; Helkowski 2003 prevalence; Eldahan-Rabchevsky 2018 pathophysiology review; Linsenmeyer 1996 silent AD signal; Steinberger 1990 nifedipine 30 mg pre-electroejaculation protocol.
+- Sections: definition / epidemiology, splanchnic-T5–L2 pathophysiology, recognition triad, trigger table (urinary > bowel > cutaneous), four-step acute algorithm (sit up → bladder first → bowel → pharmacology), urologic-procedure-prevention table (CIC / cystoscopy / urodynamics / intradetrusor BoNT-A / SNM / augmentation), special populations (pregnancy, pediatric, "boosting" doping), differential, complications, and a 7-point key-takeaways summary.
+- Critical caveat included: **patients on chronic PDE5 inhibitors cannot receive nitroglycerin** — use a non-nitrate alternative.
+
+### Stats and lint
+
+`npm run lint` passes clean (scope, citations, orphans, internal links). `npm run stats` regenerates [src/data/stats.json](src/data/stats.json) at every dev / build invocation. Article count **617 → 618** (the bladder-flap and existing ED / AD pages were already counted; their fills primarily added references). Reference count **6,046 → 6,099** (+ 53 across this session).
+
+---
+
+## Previous handoff snapshot — April 27, 2026 (foundations cleanup — GU-principles deletion + Named Stitches restructure)
 
 Late-day cleanup pass on the `01-foundations/surgical-principles/` and `surgical-skills/` folders, following the earlier flap-and-graft buildout (preserved below).
 
