@@ -180,45 +180,44 @@
    ═══════════════════════════════════════════════════════════ */
 
 .heroStats {
-  margin: 1.5rem auto 0;
-  font-size: 1.1rem;
-  color: var(--warwiki-text, #111827);
+  margin: 1.75rem auto 0;
+  font-size: 0.95rem;
+  color: var(--warwiki-text-muted, #4B5767);
   letter-spacing: 0.01em;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
+  opacity: 0.7;
 }
 
 .heroStatsNumber {
-  font-weight: 800;
+  font-weight: 600;
   font-variant-numeric: tabular-nums;
   color: var(--ifm-color-primary, #185FA5);
-  font-size: 1.5rem;
-  letter-spacing: -0.01em;
+  font-size: inherit;
+  letter-spacing: 0;
 }
 
 .heroStatsLabel {
-  font-weight: 600;
-  color: var(--warwiki-text, #111827);
+  font-weight: 400;
+  color: inherit;
 }
 
 .heroStatsDot {
-  margin: 0 0.5rem;
+  margin: 0 0.4rem;
   color: var(--warwiki-text-subtle, #8494A8);
   font-weight: 400;
   user-select: none;
 }
 
-[data-theme='dark'] .heroStats { color: #E6EAF2; }
+[data-theme='dark'] .heroStats { color: rgba(241, 245, 251, 0.65); }
 [data-theme='dark'] .heroStatsNumber { color: #6FA9E0; }
-[data-theme='dark'] .heroStatsLabel { color: #E6EAF2; }
 [data-theme='dark'] .heroStatsDot { color: #6B7686; }
 
 @media screen and (max-width: 480px) {
-  .heroStats { font-size: 0.95rem; gap: 0.3rem; }
-  .heroStatsNumber { font-size: 1.25rem; }
+  .heroStats { font-size: 0.85rem; gap: 0.3rem; }
 }
 
 /* ═══════════════════════════════════════════════════════════
