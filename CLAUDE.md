@@ -4,7 +4,19 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 26, 2026 (fistula buildout + flap-foundations sweep + osteoporosis screening)
+## Current handoff snapshot — April 26, 2026 (scrotal lymphedema + hidradenitis suppurativa fill)
+
+### 03g-genital-scrotal fill (latest)
+
+Two clinical-conditions articles converted from stub to depth:
+
+- [scrotal-lymphedema.mdx](docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema.mdx) — 24-reference article. Primary (congenital, 92% of pediatric cases, 24% familial) vs secondary (filariasis / cancer treatment / MLL-obesity / Crohn's ano-genital granulomatosis / HS / radiation) classification. Pathophysiology cascade (stasis → inflammation → fibrosis → lymphangiectasia; filariasis vicious cycle). Clinical presentation (72–80% combined penoscrotal, 76% concurrent lower-extremity lymphedema in pediatric series). Complications: cellulitis OR 6.8, stage III vs II doubling (61.7% vs 31.8%), Stewart–Treves angiosarcoma risk. Diagnosis table (lymphoscintigraphy, MR lymphangiography, ICG, biopsy, filarial antigen). Management: CDT first-line; surgical ladder table — Charles excision, LVA, VLNT, CHASCIP (Ciudad 2025); Guiotto 2019 SR anchor (9% microsurgical vs 54.2% excisional complication rates); Torio-Padron 2015 integrated CDT + surgery concept; median GBI +41 (Abdelfattah 2023). No recurrence at 34–49 months in combined excisional + lymphatic reconstruction series.
+
+- [hidradenitis-suppurativa.mdx](docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx) — 22-reference article framed for the reconstructive urologist/urogynecologist. Epidemiology (1% prevalence, 3:1 female, 10-year diagnostic delay), Hurley staging table (I–III), genitoperineal anatomy of involvement. Urologic complications table: urethrocutaneous fistula, urethral stricture, phimosis, genital lymphedema, adalimumab GU infection risk (IRR 2.22; Wafae 2025 JAMA Dermatol). Urogynecologic considerations: vulvoperineal misdiagnosis patterns, 67% sexual dysfunction rate (Matusiak 2020), PCOS &gt;3× risk, perimenstrual flares, pregnancy medication selection. Malignant transformation table: SCC arising in chronic HS (gluteal 47.5%, perianal 18.9%, genital 13.9%), ~25-year latency, 54% metastasis rate, 59% mortality, up to 4.6% in severe groin/perianal disease; **danger admonition: biopsy any refractory lesion**. Surgical management: wide excision + 1 cm margins; Fuchs 2026 two-stage excision → NPWT → STSG (&gt;90% graft take, no recurrence at ~19 months). Medical management table: adalimumab, secukinumab (SUNSHINE/SUNRISE RCT, Kimball 2023), bimekizumab; JAK inhibitors under investigation.
+
+---
+
+## Previous handoff snapshot — April 26, 2026 (fistula buildout + flap-foundations sweep + osteoporosis screening)
 
 ### Osteoporosis Screening fill (latest)
 
