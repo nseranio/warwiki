@@ -4,7 +4,55 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 26, 2026 (scrotal lymphedema + hidradenitis suppurativa fill)
+## Current handoff snapshot — April 26, 2026 (RAT + Botox + Müllerian + PDUS + GAS refresh + 03g rename)
+
+This session knocked out the most actionable stubs and curriculum gaps from the audit, refreshed the entire GAS family, and reorganized the genital section.
+
+### Stub fills
+
+- [renal-autotransplantation.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/renal-autotransplantation.mdx) — 9-line stub → 23-ref article framing RAT as the upper-tract salvage tier. Indications (renovascular, ureteral stricture / trauma 79% modern indication, LPHS pain-resolution 65–76%, RCC, UTUC, nutcracker, stones), three-phase technique (nephrectomy → ex vivo bench → ipsilateral iliac fossa autotransplant), Kaouk single-port robotic SP series, outcomes table (90–97% long-term graft function, 9.7–10.7% failure, 0–1.3% mortality), complications, multidisciplinary framework. Cross-links to ileal ureter, Boari/psoas hitch, UU, ureteral stricture.
+- [intradetrusor-botox.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx) — 8-line stub → 37-ref article positioned as the procedural counterpart to the [botulinum-toxin pharmacology hub](docs/01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin.mdx). Dual efferent / afferent mechanism, dosing table (OAB 100 U, NDO 200 U adults + pediatric ≥ 5), pivotal NDO 2011 (Ginsberg / Cruz) and OAB 2013 (Nitti) RCTs, injection technique, retreatment cadence, third-line comparison vs SNM and PTNS (Roman 2025 / Lo 2020 / Chughtai 2020 cost data $2,896 vs $15,343), off-label IC/BPS and DSD, antithrombotic safety (El Issaoui / Mensah), Brin 2023 29-yr pregnancy registry.
+
+### Curriculum-gap fills
+
+- [mullerian-anomalies.mdx](docs/03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies.mdx) — closes URPS curriculum gap IX. 37-ref article on ASRM MAC2021 classification, MRKH (1:5,000, Type I/II + MURCS, 53% associated anomalies, HNF1B / LHX1 / WNT4 / PAX2 genetics), ACOG dilation-first management (Frank vs coital, 90–96% success), and McIndoe / Davydov / Vecchietti / sigmoid colpoplasty head-to-head with Martens 2024 SR/meta and Yinuo 2025 peritoneal-vs-sigmoid comparative study. ISUTx 2024 registry (91 transplants, 44 live births, 30.3% LBR per ET) and Kölle neovagina-method-vs-future-UTx framing.
+- [penile-doppler-ultrasound.mdx](docs/02-evaluation/imaging/penile-doppler-ultrasound.mdx) — new article under **Evaluation › Imaging** at sidebar_position 4.5. 41-ref deep-dive: PDUS technique with ICI vasoactive protocols (alprostadil / Trimix / papaverine), normative PSV / EDV / RI / acceleration time / cavernosal artery diameter thresholds, Pagano sampling-location problem (PSV ~53 cm/s at crura vs ~22 cm/s at mid-shaft), diagnostic categories for arteriogenic / venogenic / mixed / psychogenic ED, Chen 2019 venous-leak diagnostic accuracy (sens 91.7%, spec 70.6%), PDUS in Peyronie disease (Masterson questionnaire-vs-Doppler discordance), priapism subtypes with the STIFF protocol, penile fracture per AUA Urotrauma 2020, and the four-phase DICC technique (EIP, FTM, pressure decay, cavernosography) with the Mulhall normal-cavernosogram-despite-abnormal-FTM caveat.
+
+### GAS refresh — all 5 pages
+
+Full rewrite of the gender-affirming surgery family in the established footnote-citation style:
+
+- [overview.mdx](docs/05-special-populations/05c-gender-affirming/overview.mdx) — 10 refs; NSQIP-anchored complication framework, Pletta 2025 access-barrier data (94% encounter at least one barrier), Park 40-yr follow-up.
+- [feminizing-procedures.mdx](docs/05-special-populations/05c-gender-affirming/feminizing-procedures.mdx) — 32 refs; breast augmentation (Coon 2020, Liu 2024 SR/meta), penile-inversion vs peritoneal pull-through vs sigmoid technique split, Haley 2025 prospective QoL data, FFS by facial third with Morrison QoL data, Wendler glottoplasty vs feminization laryngoplasty effect sizes, perioperative-estrogen continuation per WPATH SOC 8.
+- [masculinizing-procedures.mdx](docs/05-special-populations/05c-gender-affirming/masculinizing-procedures.mdx) — 39 refs; DIFNG vs PAT vs PNT trade-off, Bordas 813-pt metoidioplasty series, RFFF vs ALT vs MLD vs pedicled abdominal flap-table with Wang 2026 complication-by-flap data, Big Ben method 27% urologic complication rate, Fraiman 2024 penile-prosthesis meta and Levy 2025 ZSI cohort, HBSO route + bone-health framing, Robinson 2023 testosterone-continuation evidence, Ren 2024 / Thornton 2024 0.8% transmasculine regret data.
+- [revision-salvage-gas.mdx](docs/05-special-populations/05c-gender-affirming/revision-salvage-gas.mdx) — 38 refs; vulvar revision categories, robotic peritoneal-flap and sigmoid revision for stenosis, rectoneovaginal-fistula management algorithm, urethral complications driving 73% phalloplasty revision burden, colpectomy reduces fistula 48%→21%, Keller 2024 algorithmic framework for salvage-vs-redo, Rochlin 2022 secondary FFS data.
+- [non-binary-nullification.mdx](docs/05-special-populations/05c-gender-affirming/non-binary-nullification.mdx) — 23 refs; nonbinary chest-surgery preferences with Esmonde primer, Stelmar / van der Sluis / Aaen shallow-depth vulvoplasty, Ascha 2024 individually-customized procedures (genital nullification, phallus-preserving vaginoplasty), shaft-only phalloplasty with vaginal preservation (Chen, Moorefield), isolated gonadectomy, WPATH SOC 8 broadened nonbinary language and insurance-concordance gaps.
+
+### 03g restructure
+
+- **Renamed `03g` from "Genital & Scrotal Disorders" → "Disorders of Genitalia"** in [_category_.json](docs/03-clinical-conditions/03g-genital-scrotal/_category_.json) and the [03-clinical-conditions landing](docs/03-clinical-conditions/index.mdx). The folder slug `03g-genital-scrotal/` and individual file slugs were preserved to avoid breaking the dozens of inbound cross-links.
+- **Moved Müllerian Anomalies & Vaginal Agenesis from Women's Health → 03g Disorders of Genitalia** via `git mv`. The "Congenital & Reconstructive Gynecology" subsection was removed from the Women's Health landing and replaced with a one-line pointer paragraph; the GAS overview cross-link was repointed.
+
+### Editorial cleanups (consistent across all pasted content this session)
+
+- Bracketed `[N]` inline citations converted to either `<sup>[[N]](#refN)</sup>` or `[^N]` footnote style depending on the file's existing convention (GAS uses footnotes; everything else uses anchored sup).
+- Bleed-through references stripped before renumbering (renal-autotransplant refs in PDUS / botox content; SCI / autonomic-dysreflexia refs in Müllerian; uncited book chapters dropped).
+- Mashed tables (no whitespace between cells) rebuilt as proper markdown — affected dosing tables, eligibility/timing summaries, flap-comparison tables, normal-values tables, advanced-imaging tables, surgical-technique comparison tables.
+- Recovered swallowed `<` artifacts throughout — every `(p[N]` / `(p0.001)` / threshold like `EDV [13]` reconstructed with explicit comparators (`p &lt; 0.001`, `&lt; 5 cm/s`, etc.).
+- Stripped all OpenEvidence rare-disease promo links (`https://www.openevidence.com/rare-disease/...`) — kept the medical terms inline as plain text.
+- Removed all `Figure N / undefined` placeholder blocks (gender-affirming surgery options figure, embryology figure, ischemic-vs-non-ischemic priapism Doppler figure, DICC setup figure, received-vs-desired surgeries figure).
+- Stripped trailing chatbot follow-up questions ("Would you like to explore...?") from every pasted block.
+- "DaVinci" → "da Vinci" per WARWIKI convention.
+- Added cross-links to existing canonical pages (radial-forearm / ALT / peritoneal flaps, buccal mucosa graft, pelvic floor PT, GAH pharmacology hub, single-port robotics, Z-plasty, ileal ureter, Boari/psoas hitch, etc.) rather than duplicating content.
+
+### Homepage counter
+
+- Stats counter softened in [src/pages/index.module.css](src/pages/index.module.css): back to body-text size (0.95rem from 1.5rem), weight 600 from 800, label weight 400 from 600 with muted color, 0.7 opacity on the whole element so the counter sits behind the search pill rather than competing with it.
+- [scripts/gen-stats.js](scripts/gen-stats.js) now emits `articlesRounded` (floor to nearest 50) alongside `referencesRounded` (floor to nearest 100); homepage displays as **600+ articles · 6,300+ references** with `+` suffixes for honest understatement.
+
+---
+
+## Previous handoff snapshot — April 26, 2026 (scrotal lymphedema + hidradenitis suppurativa fill)
 
 ### 03g-genital-scrotal fill (latest)
 
@@ -534,10 +582,10 @@ The Pharmacology subsection now has substantially deeper drug-class articles. Al
 
 ### Current clinical-conditions structure notes (updated)
 
-- **Subsections 03a–03i:** Storage & Incontinence, Voiding & Outlet, Pelvic Support, NLUTD, Upper Tract, Fistulas, Genital & Scrotal, Pelvic Pain, Defecatory Disorders.
+- **Subsections 03a–03i:** Storage & Incontinence, Voiding & Outlet, Pelvic Support, NLUTD, Upper Tract, Fistulas, Disorders of Genitalia, Pelvic Pain, Defecatory Disorders.
 - **03e Upper Tract** — UPJ Obstruction, Ureteral Stricture (renovascular-conditions stub deleted).
 - **03f Fistulas** — Females (sidebar position 1) → Males (2) → Both Genders (3); every primary article filled to depth.
-- **03g Genital & Scrotal** — male-infertility removed (canonical in Men's Health); Vaginal Cysts & Masses added.
+- **03g Disorders of Genitalia** (renamed from "Genital & Scrotal Disorders" in this session) — male-infertility removed (canonical in Men's Health); Vaginal Cysts & Masses added; Müllerian Anomalies & Vaginal Agenesis moved here from Women's Health.
 - **03h Pelvic Pain** — IC/PBS, Chronic Pelvic Pain (consolidates pudendal-neuralgia and myofascial-pelvic-pain content); GSM lives in 05e Women's Health, not here.
 - **05d Men's Health** — only Hypogonadism & Testosterone.
 - **05e Women's Health** — GSM, Sexual Dysfunction, Recurrent UTI, STIs, Preventative Care subsection (Cancer Screening with cervical/breast/endometrial; HPV Vaccination; Osteoporosis Screening).
@@ -1049,7 +1097,7 @@ When framing a new article, ask: is the reader here to learn reconstructive / fu
 |---|---|---|
 | Foundations | `01-foundations/` | Landing page has section-stack + **embedded `<CurriculumViewer />`**; standalone `/curriculum` was deleted. Six top-level subsections: Anatomy & Physiology (2), Surgical Principles (3), Surgical Skills (4), Perioperative Care (5), **Pharmacology (6 — promoted from `tools/pharmacology/` in `0891f08`)**, Tools (7) |
 | Evaluation | `02-evaluation/` | Three children: **History & Physical** (bundles assessment-tools + male/female exams), Imaging, Ancillary Testing. `physical-exam/` subdirectory was flattened into `history-physical/` (2026-04-21). |
-| Clinical Conditions | `03-clinical-conditions/` | **9 subsections (03a–03i)**. 03e Upper Tract: renovascular-conditions deleted; UPJO and Ureteral Stricture filled. 03f Fistulas: sidebar reordered Females → Males → Both Genders; every primary article filled. 03g Genital & Scrotal: male-infertility removed; Vaginal Cysts & Masses added. 03h Pelvic Pain: pudendal-neuralgia, myofascial-pelvic-pain, and GSM removed; Chronic Pelvic Pain consolidates the first two. 03i Defecatory Disorders (added 2026-04). |
+| Clinical Conditions | `03-clinical-conditions/` | **9 subsections (03a–03i)**. 03e Upper Tract: renovascular-conditions deleted; UPJO and Ureteral Stricture filled. 03f Fistulas: sidebar reordered Females → Males → Both Genders; every primary article filled. 03g Disorders of Genitalia (renamed from "Genital & Scrotal Disorders"): male-infertility removed; Vaginal Cysts & Masses added; Müllerian Anomalies & Vaginal Agenesis moved here from Women's Health. 03h Pelvic Pain: pudendal-neuralgia, myofascial-pelvic-pain, and GSM removed; Chronic Pelvic Pain consolidates the first two. 03i Defecatory Disorders (added 2026-04). |
 | Treatment Atlas | `04-surgical-techniques/` | 9 subsections; **04h-prosthetics DELETED**; **04b Bladder Reconstruction now uses the landing page itself as the searchable database** (domains: Capacity / Reservoir, Outlet / Stenosis, Catheterizable Channels, Outlet / Continence), with visible pages for Augmentation Cystoplasty, BNC / VUAS Reconstruction, and Continent Catheterizable Channels and hidden nested technique folders for `bnc-vuas/` and `outlet-continence/`; 04f renamed "Incontinence" with 3 sub-databases (Female SUI, Male SUI, OAB & UUI); 04c (urinary diversion) has no index.mdx |
 | Special Populations | `05-special-populations/` | 4 subsections (05a, 05c, 05d, 05e); 05b (oncologic) was DELETED. 05d Men's Health pruned to Hypogonadism & Testosterone only. 05e Women's Health pruned to GSM + new Sexual Dysfunction / Recurrent UTI / STIs + new Preventative Care subsection (Cancer Screening — cervical/breast/endometrial — plus HPV Vaccination and Osteoporosis Screening). |
 | Journal Club | `06-journal-club/` | journal-database.mdx, guidelines-white-papers.mdx |
