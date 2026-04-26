@@ -5,7 +5,7 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 56 stubs — P1: 0, P2: 56, P3: 0.
+**Totals:** 28 stubs — P1: 0, P2: 28, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
@@ -20,47 +20,19 @@ Priorities and notes are hand-edited and preserved across regenerations.
 | `docs/01-foundations/pharmacology/sexual-medicine-andrology/index.mdx` | 2 |  |
 | `docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx` | 2 |  |
 | `docs/01-foundations/pharmacology/voiding-outlet/index.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/flaps/anterolateral-thigh.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/flaps/blandy.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/flaps/martius.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/flaps/radial-forearm.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/flaps/scip.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/bladder-mucosa.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/ftsg.mdx` | 2 |  |
 | `docs/01-foundations/surgical-principles/grafts/intestinal-segments.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/labial-mucosa.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/lingual-mucosa.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/penile-preputial-skin.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/posterior-auricular.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/saphenous-vein.mdx` | 2 |  |
-| `docs/01-foundations/surgical-principles/grafts/stsg.mdx` | 2 |  |
 | `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
 | `docs/02-evaluation/index.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/colovesical-small-bowel.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/nephropleural.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/post-kidney-transplant.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/pyeloenteric.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/ureterocolonic.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vascular-urinary.mdx` | 2 |  |
-| `docs/03-clinical-conditions/03f-fistulas/in-both-genders/vesicocutaneous.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx` | 2 |  |
 | `docs/03-clinical-conditions/03g-genital-scrotal/scrotal-lymphedema.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/renal-autotransplantation.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/index.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx` | 2 |  |
 | `docs/04-surgical-techniques/04j-sexual-dysfunction/index.mdx` | 2 |  |
 | `docs/05-special-populations/05e-womens-health/cancer-screening/index.mdx` | 2 |  |
-| `docs/05-special-populations/05e-womens-health/osteoporosis-screening.mdx` | 2 |  |
 | `docs/05-special-populations/index.mdx` | 2 |  |
 | `docs/06-journal-club/index.mdx` | 2 |  |
 | `docs/07-roots/history/index.mdx` | 2 |  |

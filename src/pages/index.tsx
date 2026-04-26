@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
+import stats from '@site/src/data/stats.json';
+
 import styles from './index.module.css';
 
 function openSearch() {
@@ -54,6 +56,13 @@ function HomepageHeader() {
             <kbd>K</kbd>
           </span>
         </button>
+        <p className={styles.heroStats}>
+          <span className={styles.heroStatsNumber}>{stats.articles.toLocaleString()}</span>{' '}
+          <span className={styles.heroStatsLabel}>articles</span>
+          <span className={styles.heroStatsDot} aria-hidden="true">·</span>
+          <span className={styles.heroStatsNumber}>{stats.references.toLocaleString()}</span>{' '}
+          <span className={styles.heroStatsLabel}>references</span>
+        </p>
       </div>
     </header>
   );

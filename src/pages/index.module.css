@@ -176,6 +176,50 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
+   Live stats counter (below search pill)
+   ═══════════════════════════════════════════════════════════ */
+
+.heroStats {
+  margin: 1.25rem auto 0;
+  font-size: 0.95rem;
+  color: var(--warwiki-text-muted, #4B5767);
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.heroStatsNumber {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-color-primary, #185FA5);
+  font-size: 1.05rem;
+}
+
+.heroStatsLabel {
+  font-weight: 400;
+  color: var(--warwiki-text-muted, #4B5767);
+}
+
+.heroStatsDot {
+  margin: 0 0.25rem;
+  color: var(--warwiki-text-subtle, #8494A8);
+  user-select: none;
+}
+
+[data-theme='dark'] .heroStats { color: #C2CBD9; }
+[data-theme='dark'] .heroStatsNumber { color: #6FA9E0; }
+[data-theme='dark'] .heroStatsLabel { color: #C2CBD9; }
+[data-theme='dark'] .heroStatsDot { color: #6B7686; }
+
+@media screen and (max-width: 480px) {
+  .heroStats { font-size: 0.85rem; gap: 0.25rem; }
+  .heroStatsNumber { font-size: 0.95rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
    Social footer (homepage only)
    Fills the viewport below the hero with the brand colour and
    surfaces the four social links in YouTube → Instagram →
