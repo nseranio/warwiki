@@ -57,10 +57,10 @@ function HomepageHeader() {
           </span>
         </button>
         <p className={styles.heroStats}>
-          <span className={styles.heroStatsNumber}>{stats.articles.toLocaleString()}</span>{' '}
+          <span className={styles.heroStatsNumber}>{stats.articlesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>articles</span>
           <span className={styles.heroStatsDot} aria-hidden="true">·</span>
-          <span className={styles.heroStatsNumber}>{stats.references.toLocaleString()}</span>{' '}
+          <span className={styles.heroStatsNumber}>{stats.referencesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>references</span>
         </p>
       </div>

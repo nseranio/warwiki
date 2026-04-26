@@ -73,12 +73,16 @@ function main() {
     references += countRefAnchors(content);
   }
 
-  // Round references down to nearest 100 for a cleaner display number;
-  // we'll display with a "+" so the headline understates and stays honest.
+  // Round both counters down for a cleaner display; the homepage shows
+  // these with a "+" so the headline understates and stays honest.
+  // Articles round to nearest 50 (more granular as the site grows from
+  // a few hundred), references to nearest 100.
+  const articlesRounded = Math.floor(articles / 50) * 50;
   const referencesRounded = Math.floor(references / 100) * 100;
 
   const stats = {
     articles,
+    articlesRounded,
     references,
     referencesRounded,
     generatedAt: new Date().toISOString(),
