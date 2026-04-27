@@ -7,6 +7,7 @@ export interface Technique {
   location: string;
   notes: string;
   slug?: string;
+  category?: string;
 }
 
 const LOCATION_COLORS: Record<string, string> = {
@@ -16,7 +17,20 @@ const LOCATION_COLORS: Record<string, string> = {
   'Fossa Navicularis / Meatal':  '#047857',
   'Posterior / PFUI':            '#b91c1c',
   'Any':                         '#374151',
+  'Bulbomembranous':             '#0f766e',
 };
+
+// Order in which categories should appear when grouping is on
+const CATEGORY_ORDER: string[] = [
+  '1. Anastomotic (no substitute tissue)',
+  '2. Substitution — Free Grafts',
+  '3. Substitution — Pedicled Flaps',
+  '4. Combined (Graft + Flap)',
+  '5. Staged Urethroplasty',
+  '6. Posterior Urethroplasty (PFUI)',
+  '7. Distal / Meatal / Perineal Urethrostomy',
+  '8. Minimally Invasive / Emerging',
+];
 
 function SubtleBadge({ label, color }: { label: string; color: string }) {
   return (
@@ -49,27 +63,63 @@ interface TechniqueDatabaseProps {
 export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
   const [search, setSearch] = useState('');
   const [locationFilter, setLocationFilter] = useState('All');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+
+  const hasCategories = useMemo(
+    () => data.some(d => !!d.category),
+    [data]
+  );
 
   const allLocations = useMemo(
     () => ['All', ...Array.from(new Set(data.map(d => d.location))).sort()],
     [data]
   );
 
+  const allCategories = useMemo(() => {
+    if (!hasCategories) return ['All'];
+    const present = new Set(data.map(d => d.category).filter(Boolean) as string[]);
+    const ordered = CATEGORY_ORDER.filter(c => present.has(c));
+    const extras = Array.from(present).filter(c => !CATEGORY_ORDER.includes(c)).sort();
+    return ['All', ...ordered, ...extras];
+  }, [data, hasCategories]);
+
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return data.filter(d => {
       if (locationFilter !== 'All' && d.location !== locationFilter) return false;
+      if (categoryFilter !== 'All' && d.category !== categoryFilter) return false;
       if (q) {
         return (
           d.name.toLowerCase().includes(q) ||
           (d.eponym?.toLowerCase().includes(q) ?? false) ||
           (d.aka?.toLowerCase().includes(q) ?? false) ||
+          (d.category?.toLowerCase().includes(q) ?? false) ||
           d.notes.toLowerCase().includes(q)
         );
       }
       return true;
     });
-  }, [data, search, locationFilter]);
+  }, [data, search, locationFilter, categoryFilter]);
+
+  // Group filtered rows by category, preserving CATEGORY_ORDER then any extras
+  const grouped = useMemo(() => {
+    if (!hasCategories) return null;
+    const map = new Map<string, Technique[]>();
+    for (const t of filtered) {
+      const key = t.category ?? 'Uncategorized';
+      const arr = map.get(key) ?? [];
+      arr.push(t);
+      map.set(key, arr);
+    }
+    const ordered: { category: string; rows: Technique[] }[] = [];
+    for (const c of CATEGORY_ORDER) {
+      if (map.has(c)) ordered.push({ category: c, rows: map.get(c)! });
+    }
+    for (const [c, rows] of map.entries()) {
+      if (!CATEGORY_ORDER.includes(c)) ordered.push({ category: c, rows });
+    }
+    return ordered;
+  }, [filtered, hasCategories]);
 
   return (
     <div className="td-wrapper">
@@ -83,6 +133,19 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
           aria-label="Search techniques"
         />
         <div className="td-filters">
+          {hasCategories && (
+            <select
+              value={categoryFilter}
+              onChange={e => setCategoryFilter(e.target.value)}
+              className="td-select"
+              aria-label="Filter by category"
+              style={{ marginRight: '0.5rem' }}
+            >
+              {allCategories.map(c => (
+                <option key={c} value={c}>{c === 'All' ? 'All Categories' : c}</option>
+              ))}
+            </select>
+          )}
           <select
             value={locationFilter}
             onChange={e => setLocationFilter(e.target.value)}
@@ -111,23 +174,58 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((t, i) => (
-                <tr key={i}>
-                  <td className="td-name-cell">
-                    {t.slug ? (
-                      <a href={t.slug} className="td-name-link">{t.name}</a>
-                    ) : (
-                      <span className="td-name-text">{t.name}</span>
-                    )}
-                    {t.aka && (
-                      <div className="td-aka">{t.aka}</div>
-                    )}
-                  </td>
-                  <td className="td-eponym">{t.eponym ?? '—'}</td>
-                  <td><LocationBadge location={t.location} /></td>
-                  <td className="td-notes">{t.notes}</td>
-                </tr>
-              ))}
+              {hasCategories && grouped ? (
+                grouped.flatMap(({ category, rows }) => [
+                  <tr key={`hdr-${category}`} className="td-category-header">
+                    <td colSpan={4} style={{
+                      backgroundColor: 'var(--warwiki-bg-subtle, #EEF2F8)',
+                      fontWeight: 700,
+                      fontSize: '0.85rem',
+                      letterSpacing: '0.02em',
+                      color: 'var(--ifm-color-primary, #185FA5)',
+                      padding: '0.6rem 0.75rem',
+                      borderTop: '2px solid var(--warwiki-border, #DDE3ED)',
+                    }}>
+                      {category}
+                    </td>
+                  </tr>,
+                  ...rows.map((t, i) => (
+                    <tr key={`${category}-${i}`}>
+                      <td className="td-name-cell">
+                        {t.slug ? (
+                          <a href={t.slug} className="td-name-link">{t.name}</a>
+                        ) : (
+                          <span className="td-name-text">{t.name}</span>
+                        )}
+                        {t.aka && (
+                          <div className="td-aka">{t.aka}</div>
+                        )}
+                      </td>
+                      <td className="td-eponym">{t.eponym ?? '—'}</td>
+                      <td><LocationBadge location={t.location} /></td>
+                      <td className="td-notes">{t.notes}</td>
+                    </tr>
+                  )),
+                ])
+              ) : (
+                filtered.map((t, i) => (
+                  <tr key={i}>
+                    <td className="td-name-cell">
+                      {t.slug ? (
+                        <a href={t.slug} className="td-name-link">{t.name}</a>
+                      ) : (
+                        <span className="td-name-text">{t.name}</span>
+                      )}
+                      {t.aka && (
+                        <div className="td-aka">{t.aka}</div>
+                      )}
+                    </td>
+                    <td className="td-eponym">{t.eponym ?? '—'}</td>
+                    <td><LocationBadge location={t.location} /></td>
+                    <td className="td-notes">{t.notes}</td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         )}
