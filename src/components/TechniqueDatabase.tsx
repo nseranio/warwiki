@@ -20,8 +20,11 @@ const LOCATION_COLORS: Record<string, string> = {
   'Bulbomembranous':             '#0f766e',
 };
 
-// Order in which categories should appear when grouping is on
+// Order in which categories should appear when grouping is on.
+// Both male- and female-urethroplasty category strings live here; each tab
+// only shows the categories present in its own data set.
 const CATEGORY_ORDER: string[] = [
+  // Male urethroplasty
   '1. Anastomotic (no substitute tissue)',
   '2. Substitution — Free Grafts',
   '3. Substitution — Pedicled Flaps',
@@ -30,6 +33,15 @@ const CATEGORY_ORDER: string[] = [
   '6. Posterior Urethroplasty (PFUI)',
   '7. Distal / Meatal / Perineal Urethrostomy',
   '8. Minimally Invasive / Emerging',
+  // Female urethroplasty
+  'F1. Endoscopic / Minimally Invasive',
+  'F2. Distal Urethrectomy + Meatal Advancement',
+  'F3. Flap Urethroplasty',
+  'F4. Free Graft Urethroplasty',
+  'F5. Combined / Hybrid Techniques',
+  'F6. Urethral Loss / Obliteration Repair',
+  'F7. Emerging / Investigational',
+  'F8. Other Female Reconstructive Procedures',
 ];
 
 function SubtleBadge({ label, color }: { label: string; color: string }) {
