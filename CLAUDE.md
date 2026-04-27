@@ -4,7 +4,26 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 26, 2026 (RAT + Botox + Müllerian + PDUS + GAS refresh + 03g rename)
+## Current handoff snapshot — April 26, 2026 (ntBU + Jordan VS-EPA fill)
+
+Two anastomotic urethroplasty technique pages built out from stub in `04a-urethral-reconstruction/anastomotic/`. Session rule: **commit and push after every change**.
+
+### Technique fills
+
+- [non-transecting-bulbar.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/non-transecting-bulbar.mdx) — stub → 17-ref article. Opening paragraph establishes ntBU as achieving 90–98% stricture-free rates equivalent to transecting EPA while significantly reducing penile complications (RR 0.47) and likely erectile dysfunction. Sections: historical development (Jordan 2007 concept; Andrich/Mundy 2012 formal series); indications (≤3 cm bulbar and posterior strictures); step-by-step dorsal approach (180° rotation, mucosectomy, spatulated anastomosis, spongioplasty) and ventral approach (Morán / Bogdanov: Heineke–Mikulicz closure without circumferential mobilization); augmented non-transecting variants table (ANTA / MANTA / ntAAU with Welk, Marks, and Baudry outcome data); outcomes section with stricture-free rates, sexual function comparative data (Chapman 2019 4.3% vs. 14.3%, Scandinavian RCT penile shortening), and perioperative comparison table; predictors; practice trends (Berg 2024 GURS survey).
+
+- [jordan-vessel-sparing-epa.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/jordan-vessel-sparing-epa.mdx) — stub → 17-ref article. Frame: the 2007 Jordan/Eltahawy/Virasoro paradigm shift showing spongiosal transection is unnecessary for mucosal excision. Anatomical rationale (internal pudendal → bulbar → urethral artery chain; Chiou 1998 and Kishore 2005 Doppler data showing urethral arteries are NOT reliably at 3/9 o'clock — supports whole-shell preservation over selective identification); 7-step technique (mobilization, 180° rotation, dorsal urethrotomy, mucosectomy, spatulated anastomosis, spongioplasty, 9–14 day catheter); outcomes table with original Jordan 10-pt series and Virasoro 2015 68-pt multi-institutional validation (95.6% success); Verla/Lumen 117-pt series (93.4% bulbar, 88.5% posterior); Chapman 2019 comparative data; limitations (dense spongiofibrosis conversion risk, no direct RCT vs. tEPA); evolution/legacy section tracing Andrich/Mundy → ANTA → MsANTA → MANTA → ventral approach, closed with Cotter 2019 +430% adoption increase.
+
+### Editorial cleanups applied (same conventions as prior sessions)
+
+- UTF-8 mojibake fixed throughout (–, °, ≤, ≥, é, á, →, etc.)
+- Empty figure placeholders and comparison table shells removed
+- Trailing chatbot follow-up questions stripped
+- `&lt;` escaping applied to all `<` before letters/digits in prose
+
+---
+
+## Previous handoff snapshot — April 26, 2026 (RAT + Botox + Müllerian + PDUS + GAS refresh + 03g rename)
 
 This session knocked out the most actionable stubs and curriculum gaps from the audit, refreshed the entire GAS family, and reorganized the genital section.
 
