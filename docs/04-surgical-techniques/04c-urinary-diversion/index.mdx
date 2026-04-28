@@ -24,6 +24,43 @@ Urinary diversion encompasses the reconstructive options used when the native bl
 
 ---
 
+## Master Decision Framework
+
+The AUA / ASCO / ASTRO / SUO MIBC guideline states that **all three principal options — ileal conduit, continent cutaneous diversion, and orthotopic neobladder — should be discussed** with every patient undergoing radical cystectomy. The decision is structured around two sequential gates: **(1) is the patient a candidate for continent diversion** (adequate renal function, hepatic function, bowel integrity, cognition, and dexterity)? **(2) If yes, is the urethra usable** (negative urethral margin, intact sphincter, no recurrent stricture)? An orthotopic neobladder is preferred when the urethra is usable; a continent cutaneous pouch (e.g., Indiana) is the alternative when the urethra is not. Otherwise the standard is an ileal conduit, with cutaneous ureterostomy reserved for the most frail / comorbid patient where bowel manipulation is undesirable.
+
+| Clinical Scenario | Recommended Diversion | Why |
+|---|---|---|
+| **Young / motivated, intact urethra, negative urethral margin, good performance status** | [Orthotopic neobladder](/docs/surgical-techniques/04c-urinary-diversion/modified-studer-pouch) (Studer / Hautmann / T-pouch / VIP / Camey II) | Highest body image, voiding per urethra, best long-term QoL when prerequisites met |
+| **Continent diversion candidate but urethra unusable** (positive urethral margin, sphincter dysfunction, recurrent stricture) | [Continent cutaneous pouch](/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch) (Indiana, Mainz I, Kock, Penn / Florida) | Continence preserved without external appliance; obligate self-catheterization q4–6 h |
+| **Advanced age / ASA ≥ 3 / CCI ≥ 3 / poor functional status / limited caregiver support** | [Ileal conduit (Bricker)](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Lowest operative complexity, fastest return to baseline, lowest late-complication rate |
+| **Frailest patient where bowel manipulation should be avoided** | [Cutaneous ureterostomy](/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy) | Avoids enteric anastomosis entirely; rising use in elderly cohort (2 → 22% over 2 decades) |
+| **Significant renal insufficiency (CKD, chronic obstruction)** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Continent diversion's metabolic-acidosis burden is poorly tolerated with reduced eGFR |
+| **Severe hepatic dysfunction** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Ammonia load with continent reservoirs is hazardous; conduit drainage minimizes reabsorption |
+| **Compromised intestinal function** (IBD, short bowel, prior pelvic-radiation bowel injury) | [Cutaneous ureterostomy](/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy) | Avoids further bowel use; continent options usually contraindicated |
+| **Cognitive impairment or inability to perform self-catheterization** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Continent cutaneous pouch requires obligate CIC; neobladder may also need CIC if retention develops (10–40%) |
+| **Failed continent diversion / devastated reservoir** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) (conversion) | Standard salvage when continent reconstruction is unsalvageable |
+
+### Three-Option Comparison
+
+| Feature | [Ileal Conduit (Bricker)](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | [Continent Cutaneous Pouch](/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch) | [Orthotopic Neobladder](/docs/surgical-techniques/04c-urinary-diversion/modified-studer-pouch) |
+|---|---|---|---|
+| **Category** | Incontinent | Continent | Continent |
+| **Bowel segment** | 15–20 cm ileum | Detubularized colon ± ileum | Detubularized ileum (default) |
+| **Stoma** | Yes (external appliance) | Yes (catheterizable, flush; no appliance) | No (anastomosed to native urethra) |
+| **Voiding mechanism** | Continuous drainage to bag | Intermittent self-catheterization q4–6 h | Valsalva / abdominal straining + intact sphincter |
+| **Daytime continence** | N/A | ~96% | ~87–92% |
+| **Nighttime continence** | N/A | ~73% | ~67% |
+| **OR time / complexity** | Lowest | Highest | High |
+| **Frequency of use (2024 cohort)** | ~56% (most common) | 5% (least) | Declining (41% → 19% over two decades) |
+| **Body image / QoL** | Lowest | Intermediate | Highest |
+| **Key absolute contraindications** | Few (relative: short bowel, severe IBD) | Renal / hepatic insufficiency, impaired bowel, cannot self-catheterize | Positive urethral margin, sphincter dysfunction, renal / hepatic insufficiency, cognitive impairment |
+| **Long-term complications** | Stomal stenosis / hernia, ureteroenteric stricture, metabolic acidosis, UTIs | Pouch stones, catheterization difficulty, metabolic acidosis, B12 deficiency | Urinary retention (10–40% need CIC), nocturnal enuresis, metabolic acidosis, B12 deficiency |
+| **Lifelong monitoring** | Annual B12, renal function, metabolic panel, stomal assessment | Same + pouch imaging, catheterization assessment | Same + post-void residual checks, urethral surveillance |
+
+A 6,469-patient multicenter analysis (Pellegrino 2025) showed ileal conduit use stable at ~56%, neobladder use declining 41% → 19%, and ureterostomy rising 2% → 22% — reflecting an increasingly older / more comorbid cystectomy population. Across all diversions, **90-day complication rates approach two-thirds of patients**; metabolic acidosis, vitamin B12 deficiency (annual monitoring), ureteroenteric strictures, and recurrent UTIs are universal long-term sequelae.
+
+---
+
 export const diversionData = [
   {
     name: "Ileal Conduit",
@@ -56,9 +93,29 @@ export const diversionData = [
     slug: "/docs/surgical-techniques/04c-urinary-diversion/t-pouch-modification",
   },
   {
+    name: "Camey II Neobladder",
+    family: "Continent Orthotopic",
+    notes: "Detubularized U-shaped ileal reservoir; foundational orthotopic technique. Camey I (non-detubularized) is largely abandoned in favor of Camey II / detubularized variants because of urodynamic advantages.",
+  },
+  {
+    name: "VIP (Vesica Ileale Padovana) Neobladder",
+    family: "Continent Orthotopic",
+    notes: "Italian-school orthotopic ileal neobladder with a Y-shaped detubularized configuration; preserves a small afferent limb for ureteric implantation. Long-term capacity, compliance, and continence comparable to Studer.",
+  },
+  {
+    name: "Le Bag (Light & Engelmann)",
+    family: "Continent Orthotopic",
+    notes: "Ileocolonic orthotopic neobladder using detubularized cecum + ascending colon + ileum. Higher capacity than ileum-only constructs; somewhat higher mucus burden.",
+  },
+  {
+    name: "Mansoura Neobladder",
+    family: "Continent Orthotopic",
+    notes: "Detubularized ileal orthotopic neobladder with a unique W-configuration described from the Mansoura group; emphasizes serous-lined extramural ureteric implantation.",
+  },
+  {
     name: "Indiana Pouch",
     family: "Continent Cutaneous",
-    notes: "The most established continent cutaneous diversion in North America. Uses detubularized right colon with a catheterizable, continent outlet that is emptied intermittently through an abdominal stoma.",
+    notes: "The most established continent cutaneous diversion in North America. Detubularized right colon as the reservoir + plicated ileal segment as the catheterizable channel; ileocecal valve provides natural anti-reflux.",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch",
   },
   {
@@ -68,10 +125,40 @@ export const diversionData = [
     slug: "/docs/surgical-techniques/04c-urinary-diversion/right-colon-pouch",
   },
   {
+    name: "Kock Pouch",
+    family: "Continent Cutaneous",
+    notes: "Foundational ileal continent cutaneous reservoir with a stapled / sutured intussusception nipple valve as the continence mechanism. Largely supplanted by ileocecal-valve-based pouches (Indiana, Mainz I) due to nipple-valve revision burden, but historically important.",
+  },
+  {
+    name: "Mainz Pouch I",
+    family: "Continent Cutaneous",
+    notes: "Detubularized ileocecal pouch (cecum + ascending colon + 2 ileal segments) with an in-situ appendix or Monti channel as the catheterizable outlet. European counterpart to Indiana.",
+  },
+  {
+    name: "Florida Pouch",
+    family: "Continent Cutaneous",
+    notes: "Right-colon continent cutaneous reservoir with detubularization and tapered terminal ileum as the catheterizable outlet, using the ileocecal valve for continence. Conceptually adjacent to Indiana and Mainz I.",
+  },
+  {
+    name: "Penn Pouch",
+    family: "Continent Cutaneous",
+    notes: "Continent cutaneous reservoir using ileocecal segment with appendix as the catheterizable outlet (a Mitrofanoff-style continence mechanism). One of the early appendix-based variants.",
+  },
+  {
     name: "Double T-Pouch",
     family: "Continent Cutaneous",
     notes: "Catheterizable continent reservoir using a double-T ileal configuration for patients who want continence without an orthotopic urethral outlet.",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch",
+  },
+  {
+    name: "Ureterosigmoidostomy",
+    family: "Continent Heterotopic",
+    notes: "Direct ureter-to-sigmoid anastomosis; the rectum stores urine and the anal sphincter provides continence. Largely abandoned in modern practice because of metabolic acidosis, recurrent pyelonephritis, and a substantial late colonic-adenocarcinoma risk at the anastomosis. Of historical importance and still used selectively in low-resource settings.",
+  },
+  {
+    name: "Mainz Pouch II (Sigma-Rectum Pouch)",
+    family: "Continent Heterotopic",
+    notes: "Modified ureterosigmoidostomy in which a detubularized sigmoid segment serves as a low-pressure reservoir, retaining anal continence while reducing the metabolic and pyelonephritis burden of classical ureterosigmoidostomy. The carcinogenic risk at the anastomosis is reduced but not eliminated; lifelong colonoscopic surveillance is required.",
   },
   {
     name: "Colostomy Shuffle",
@@ -94,6 +181,7 @@ export const diversionColumns = [
       'Incontinent': '#b91c1c',
       'Continent Orthotopic': '#047857',
       'Continent Cutaneous': '#1d4ed8',
+      'Continent Heterotopic': '#7c3aed',
       'Complex / Salvage': '#6b7280',
     },
   },
