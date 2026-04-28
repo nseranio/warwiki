@@ -1,16 +1,44 @@
 ---
-title: BNC / VUAS Reconstruction
-sidebar_position: 3
-sidebar_class_name: sidebar-hidden-item
+title: Bladder Neck Reconstruction
+sidebar_position: 1
+slug: /surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction
 ---
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
 
-# BNC / VUAS Reconstruction
+# Bladder Neck Reconstruction
 
-Bladder neck contracture (BNC) and vesicourethral anastomotic stricture (VUAS) represent a challenging subset of reconstructive problems arising most commonly after radical prostatectomy, radiation therapy, or prior bladder neck surgery. The obliterated or severely stenotic outlet requires a tailored approach based on stricture length, prior treatment history, presence of incontinence, and surgeon expertise. Options range from simple endoscopic incision with steroid injection to complex combined abdominoperineal reconstruction.
+This page covers reconstruction of the **bladder neck and vesicourethral anastomosis** — the salvage of bladder neck contracture (BNC) and vesicourethral anastomotic stenosis (VUAS) after radical prostatectomy, endoscopic prostate surgery, or radiation, plus the continence-creating outlet procedures (Young-Dees-Leadbetter, Kropp, Pippi-Salle, bladder-neck closure) used when the outlet is irreparably incompetent. For reservoir-side reconstruction (augmentation cystoplasty, catheterizable channels, ileovesicostomy), see [Bladder Reconstruction](/docs/surgical-techniques/04b-bladder-reconstruction).
 
 > Success rates should be interpreted cautiously — definitions of success vary (patent lumen, continence, freedom from reintervention), follow-up intervals differ, and most data come from small case series.
+
+---
+
+## General Principles
+
+<ul className="section-stack">
+  <li>
+    <a href="/docs/surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction-principles" className="section-stack-title section-stack-link">Principles of Bladder Neck Reconstruction</a>
+    <span className="section-stack-desc">Outlet resistance, lengthening-narrowing-tightening, flap-valve design, reservoir prerequisites, tissue quality, CIC planning, and salvage closure.</span>
+  </li>
+</ul>
+
+---
+
+## Master Decision Framework — BNC / VUAS
+
+The matrix below summarizes the primary decision points for bladder-neck contracture and vesicourethral anastomotic stenosis, anchoring on the AUA / TURNS-era pattern of escalating from endoscopic incision through robotic reconstruction to perineal BMG.
+
+| Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
+|---|---|---|---|
+| **First-time BNC after endoscopic prostate surgery** | [BNI (cold knife or holmium laser)](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± steroid injection | Repeat BNI (justified per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) |
+| **First-time VUAS after RP (no radiation)** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) (holmium preferred) or dilation | Repeat endoscopic treatment ± mitomycin C; consider [DCB](/docs/surgical-techniques/drug-coated-balloon) | Robotic reconstruction (scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap)); perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) |
+| **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± mitomycin C (expect shorter interval to recurrence) | Repeat endoscopic ± [DCB](/docs/surgical-techniques/drug-coated-balloon) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) (perineal; 0% de novo SUI); robotic reconstruction |
+| **Recurrent BNC (≥ 2 failed endoscopic treatments)** | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic [subtrigonal BMG inlay](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/subtrigonal-inlay); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
+| **Recurrent VUAS (≥ 2 failed endoscopic treatments)** | Robotic reconstruction (TURNS approach) or perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic transvesical BN reconstruction (Lee / Eun 2025) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
+| **Obliterative VUAS (no lumen)** | Robotic scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap) ± [transperineal urethral advancement](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/transperineal-reanastomosis) | — | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
+| **BNC / VUAS + concurrent severe SUI** | Treat BNC / VUAS first → confirm patency → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic reconstruction + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
+| **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube or [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | — |
 
 ---
 
@@ -108,6 +136,12 @@ export const bncTechniques = [
     successRate: "",
     notes: "Simultaneous abdominal and perineal exposure for complex, long-segment, or recurrent VUAS. Provides maximal access for complete excision of fibrotic segment, reanastomosis, and simultaneous cystoplasty or flap interposition when needed.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/combined-abdominoperineal",
+  },
+  {
+    name: "Bladder Neck Closure",
+    approach: "Abdominal",
+    successRate: "",
+    notes: "Salvage outlet-abandonment for a devastated or irreparably incontinent bladder neck. Almost always paired with a continent catheterizable channel; in men sometimes combined with prostatectomy or urethral abandonment. Definitive solution when reconstruction is no longer feasible.",
   },
 ];
 

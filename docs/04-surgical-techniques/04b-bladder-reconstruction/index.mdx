@@ -6,12 +6,10 @@ slug: /surgical-techniques/04b-bladder-reconstruction
 ---
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Bladder Reconstruction
 
-Reconstructive surgery of the lower urinary reservoir and outlet: augmentation for the hostile low-capacity bladder, salvage of bladder-neck contracture and vesicourethral stenosis, and outlet / continence procedures used when the bladder can be saved but the outlet cannot be trusted.
+Reconstructive surgery of the lower urinary reservoir: **augmentation cystoplasty** for the hostile low-capacity bladder, **continent catheterizable channels** for patients who cannot empty per urethram, and **ileovesicostomy** as an incontinent low-pressure outlet. For salvage of bladder-neck contracture and vesicourethral anastomotic stenosis (BNC / VUAS) and for continence-creating outlet procedures (Young-Dees-Leadbetter, Kropp, Pippi-Salle, BN closure), see the dedicated **[Bladder Neck Reconstruction](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction)** page.
 
 ---
 
@@ -23,10 +21,6 @@ Reconstructive surgery of the lower urinary reservoir and outlet: augmentation f
     <span className="section-stack-desc">Reservoir physics, safe storage pressure, Laplace's law, detubularization, bladder bivalving, bowel-segment selection, and the design logic behind modern augmentation.</span>
   </li>
   <li>
-    <a href="/docs/surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction-principles" className="section-stack-title section-stack-link">Principles of Bladder Neck Reconstruction</a>
-    <span className="section-stack-desc">Outlet resistance, lengthening-narrowing-tightening, flap-valve design, reservoir prerequisites, tissue quality, CIC planning, and salvage closure.</span>
-  </li>
-  <li>
     <a href="/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels" className="section-stack-title section-stack-link">Principles of Continent Catheterizable Channels</a>
     <span className="section-stack-desc">Mitrofanoff flap-valve design, tunnel length, implantation methods, conduit hierarchy, stomal construction, and long-term maintenance.</span>
   </li>
@@ -34,34 +28,9 @@ Reconstructive surgery of the lower urinary reservoir and outlet: augmentation f
 
 ---
 
-## Master Decision Framework — Choosing a Reconstruction
+## Master Decision Framework — Augmentation & Catheterizable Channels
 
-The matrices below summarize the primary decision points across the bladder-reconstruction landscape. The **BNC / VUAS** framework anchors on the AUA / TURNS-era pattern of escalating from endoscopic incision through robotic reconstruction to perineal BMG; the **Augmentation & Catheterizable Channel** framework — added in a later edit — will cover reservoir-salvage and continent-stoma decisions.
-
-<Tabs defaultValue="bnc-vuas" values={[
-  { label: 'BNC / VUAS', value: 'bnc-vuas' },
-  { label: 'Augmentation & Catheterizable Channels', value: 'augment-channels' },
-]}>
-  <TabItem value="bnc-vuas">
-
-| Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
-|---|---|---|---|
-| **First-time BNC after endoscopic prostate surgery** | [BNI (cold knife or holmium laser)](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± steroid injection | Repeat BNI (justified per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) |
-| **First-time VUAS after RP (no radiation)** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) (holmium preferred) or dilation | Repeat endoscopic treatment ± mitomycin C; consider [DCB](/docs/surgical-techniques/drug-coated-balloon) | Robotic reconstruction (scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap)); perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) |
-| **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± mitomycin C (expect shorter interval to recurrence) | Repeat endoscopic ± [DCB](/docs/surgical-techniques/drug-coated-balloon) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) (perineal; 0% de novo SUI); robotic reconstruction |
-| **Recurrent BNC (≥ 2 failed endoscopic treatments)** | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic [subtrigonal BMG inlay](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/subtrigonal-inlay); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **Recurrent VUAS (≥ 2 failed endoscopic treatments)** | Robotic reconstruction (TURNS approach) or perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic transvesical BN reconstruction (Lee / Eun 2025) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
-| **Obliterative VUAS (no lumen)** | Robotic scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap) ± [transperineal urethral advancement](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/transperineal-reanastomosis) | — | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
-| **BNC / VUAS + concurrent severe SUI** | Treat BNC / VUAS first → confirm patency → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic reconstruction + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube or [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | — |
-
-  </TabItem>
-  <TabItem value="augment-channels">
-
-The Augmentation & Catheterizable Channels framework is forthcoming — the BNC / VUAS table is published first. For the conceptual underpinning, see [Principles of Bladder Augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles) and [Principles of Continent Catheterizable Channels](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels).
-
-  </TabItem>
-</Tabs>
+A decision matrix for reservoir salvage and continent-stoma planning is forthcoming. For the conceptual underpinning meanwhile, see [Principles of Bladder Augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles) and [Principles of Continent Catheterizable Channels](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels). For the BNC / VUAS framework, see [Bladder Neck Reconstruction](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-neck-reconstruction).
 
 ---
 
@@ -114,48 +83,6 @@ export const bladderTechniques = [
     notes: "Incontinent low-pressure bladder outlet created with ileum for patients whose native reservoir can be preserved but who cannot safely manage a continent channel or urethral emptying regimen.",
   },
   {
-    name: "Transurethral Incision with Injection of Triamcinolone",
-    domain: "Outlet / Stenosis",
-    notes: "First-line endoscopic salvage for thin bladder-neck contracture or vesicourethral anastomotic stenosis. Often requires repeat treatment.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone",
-  },
-  {
-    name: "T-Plasty",
-    domain: "Outlet / Stenosis",
-    notes: "Endoscopic T-pattern incision of the contracture ring to widen the bladder neck more broadly than a single radial cut. Useful for selected recurrent BNC before committing to open salvage.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc",
-  },
-  {
-    name: "Y-V Plasty",
-    domain: "Outlet / Stenosis",
-    notes: "Flap-based widening of the bladder neck or proximal anastomosis for recurrent moderate BNC/VUAS when there is usable proximal tissue.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty",
-  },
-  {
-    name: "Tanagho Flap",
-    domain: "Outlet / Stenosis",
-    notes: "Anterior bladder wall flap used to reconstruct or lengthen the outlet. Historical neurogenic continence operation with selective modern salvage use.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap",
-  },
-  {
-    name: "Dorsal BMG for BNC/VUAS",
-    domain: "Outlet / Stenosis",
-    notes: "Buccal graft augmentation for short-segment obliteration when simple incision is unlikely to suffice but full redo reanastomosis may be avoidable.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc",
-  },
-  {
-    name: "Subtrigonal Inlay",
-    domain: "Outlet / Stenosis",
-    notes: "Robotic graft-inlay strategy beneath the trigone for selected stenotic bladder-neck or vesicourethral segments.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/subtrigonal-inlay",
-  },
-  {
-    name: "Transperineal Reanastomosis",
-    domain: "Outlet / Stenosis",
-    notes: "PFUI-style redo excision and reanastomosis for recurrent or obliterated VUAS, especially when abdominal access is hostile or unnecessary.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/transperineal-reanastomosis",
-  },
-  {
     name: "Appendicovesicostomy (Mitrofanoff Procedure)",
     domain: "Catheterizable Channels",
     notes: "Gold-standard continent catheterizable channel when appendix is available; lowest long-term revision burden among common channel types.",
@@ -184,29 +111,6 @@ export const bladderTechniques = [
     domain: "Catheterizable Channels",
     notes: "Bowel-free continent cutaneous vesicostomy fashioned from native bladder tissue in selected neurogenic or congenital reconstructions when a simple catheterizable stoma is preferable to bowel-based channels.",
   },
-  {
-    name: "Young-Dees-Leadbetter",
-    domain: "Outlet / Continence",
-    notes: "Classic trigonal bladder-neck tubularization for neurogenic or congenital outlet incompetence; often part of larger pediatric-style bladder reconstruction.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/outlet-continence/young-dees-leadbetter",
-  },
-  {
-    name: "Kropp Procedure",
-    domain: "Outlet / Continence",
-    notes: "Posterior bladder wall tube used as a continent catheterizable outlet substitute when the native bladder neck is unsalvageable.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/outlet-continence/kropp-procedure",
-  },
-  {
-    name: "Pippi-Salle Procedure",
-    domain: "Outlet / Continence",
-    notes: "Anterior bladder wall flap folded into a continence mechanism; a pediatric neurogenic-bladder reconstruction kept here for completeness.",
-    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/outlet-continence/pippi-salle",
-  },
-  {
-    name: "Bladder Neck Closure",
-    domain: "Outlet / Continence",
-    notes: "Salvage outlet-abandonment strategy for a devastated or irreparably incontinent bladder neck, often paired with a catheterizable channel and, in men, sometimes combined with prostatectomy or urethral abandonment.",
-  },
 ];
 
 export const bladderColumns = [
@@ -220,9 +124,7 @@ export const bladderColumns = [
     badge: true,
     badgeColors: {
       'Capacity / Reservoir': '#047857',
-      'Outlet / Stenosis': '#1d4ed8',
       'Catheterizable Channels': '#b45309',
-      'Outlet / Continence': '#7c3aed',
     },
   },
   {
