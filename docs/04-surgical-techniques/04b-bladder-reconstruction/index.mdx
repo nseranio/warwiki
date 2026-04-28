@@ -6,6 +6,8 @@ slug: /surgical-techniques/04b-bladder-reconstruction
 ---
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Bladder Reconstruction
 
@@ -29,6 +31,37 @@ Reconstructive surgery of the lower urinary reservoir and outlet: augmentation f
     <span className="section-stack-desc">Mitrofanoff flap-valve design, tunnel length, implantation methods, conduit hierarchy, stomal construction, and long-term maintenance.</span>
   </li>
 </ul>
+
+---
+
+## Master Decision Framework — Choosing a Reconstruction
+
+The matrices below summarize the primary decision points across the bladder-reconstruction landscape. The **BNC / VUAS** framework anchors on the AUA / TURNS-era pattern of escalating from endoscopic incision through robotic reconstruction to perineal BMG; the **Augmentation & Catheterizable Channel** framework — added in a later edit — will cover reservoir-salvage and continent-stoma decisions.
+
+<Tabs defaultValue="bnc-vuas" values={[
+  { label: 'BNC / VUAS', value: 'bnc-vuas' },
+  { label: 'Augmentation & Catheterizable Channels', value: 'augment-channels' },
+]}>
+  <TabItem value="bnc-vuas">
+
+| Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
+|---|---|---|---|
+| **First-time BNC after endoscopic prostate surgery** | [BNI (cold knife or holmium laser)](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± steroid injection | Repeat BNI (justified per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) |
+| **First-time VUAS after RP (no radiation)** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) (holmium preferred) or dilation | Repeat endoscopic treatment ± mitomycin C; consider [DCB](/docs/surgical-techniques/drug-coated-balloon) | Robotic reconstruction (scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap)); perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) |
+| **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tuit-triamcinolone) ± mitomycin C (expect shorter interval to recurrence) | Repeat endoscopic ± [DCB](/docs/surgical-techniques/drug-coated-balloon) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) (perineal; 0% de novo SUI); robotic reconstruction |
+| **Recurrent BNC (≥ 2 failed endoscopic treatments)** | Open / robotic [Y-V plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/t-plasty-bnc) | [Dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic [subtrigonal BMG inlay](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/subtrigonal-inlay); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
+| **Recurrent VUAS (≥ 2 failed endoscopic treatments)** | Robotic reconstruction (TURNS approach) or perineal [dorsal onlay BMG](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/dorsal-bmg-bnc) | Robotic transvesical BN reconstruction (Lee / Eun 2025) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
+| **Obliterative VUAS (no lumen)** | Robotic scar excision + re-anastomosis or [bladder flap](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/tanagho-flap) ± [transperineal urethral advancement](/docs/surgical-techniques/04b-bladder-reconstruction/bnc-vuas/transperineal-reanastomosis) | — | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
+| **BNC / VUAS + concurrent severe SUI** | Treat BNC / VUAS first → confirm patency → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic reconstruction + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
+| **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube or [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | — |
+
+  </TabItem>
+  <TabItem value="augment-channels">
+
+The Augmentation & Catheterizable Channels framework is forthcoming — the BNC / VUAS table is published first. For the conceptual underpinning, see [Principles of Bladder Augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles) and [Principles of Continent Catheterizable Channels](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels).
+
+  </TabItem>
+</Tabs>
 
 ---
 
