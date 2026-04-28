@@ -70,9 +70,10 @@ function LocationBadge({ location }: { location: string }) {
 
 interface TechniqueDatabaseProps {
   data: Technique[];
+  hideLocation?: boolean;
 }
 
-export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
+export default function TechniqueDatabase({ data, hideLocation = false }: TechniqueDatabaseProps) {
   const [search, setSearch] = useState('');
   const [locationFilter, setLocationFilter] = useState('All');
   const [categoryFilter, setCategoryFilter] = useState('All');
@@ -158,16 +159,18 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
               ))}
             </select>
           )}
-          <select
-            value={locationFilter}
-            onChange={e => setLocationFilter(e.target.value)}
-            className="td-select"
-            aria-label="Filter by location"
-          >
-            {allLocations.map(l => (
-              <option key={l} value={l}>{l === 'All' ? 'All Locations' : l}</option>
-            ))}
-          </select>
+          {!hideLocation && (
+            <select
+              value={locationFilter}
+              onChange={e => setLocationFilter(e.target.value)}
+              className="td-select"
+              aria-label="Filter by location"
+            >
+              {allLocations.map(l => (
+                <option key={l} value={l}>{l === 'All' ? 'All Locations' : l}</option>
+              ))}
+            </select>
+          )}
         </div>
         <div className="td-count">{filtered.length} of {data.length} techniques</div>
       </div>
@@ -181,7 +184,7 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
               <tr>
                 <th>Technique</th>
                 <th>Eponym / Origin</th>
-                <th>Location</th>
+                {!hideLocation && <th>Location</th>}
                 <th>Notes</th>
               </tr>
             </thead>
@@ -189,7 +192,7 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
               {hasCategories && grouped ? (
                 grouped.flatMap(({ category, rows }) => [
                   <tr key={`hdr-${category}`} className="td-category-header">
-                    <td colSpan={4} style={{
+                    <td colSpan={hideLocation ? 3 : 4} style={{
                       backgroundColor: 'var(--warwiki-bg-subtle, #EEF2F8)',
                       fontWeight: 700,
                       fontSize: '0.85rem',
@@ -214,7 +217,7 @@ export default function TechniqueDatabase({ data }: TechniqueDatabaseProps) {
                         )}
                       </td>
                       <td className="td-eponym">{t.eponym ?? '—'}</td>
-                      <td><LocationBadge location={t.location} /></td>
+                      {!hideLocation && <td><LocationBadge location={t.location} /></td>}
                       <td className="td-notes">{t.notes}</td>
                     </tr>
                   )),
