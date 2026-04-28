@@ -4,7 +4,112 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 26, 2026 (ntBU + Jordan VS-EPA fill)
+## Current handoff snapshot — April 27, 2026 (massive 04a urethral reconstruction buildout + 8-category reorg)
+
+This was a sustained, single-day buildout of the male urethral reconstruction section. Twenty-plus stubbed technique pages were converted to comprehensive deep dives, two consolidations were executed (PFUI canonicalized in trauma; Cecil-Culp absorbs scrotal-dropback), the four non-transecting AAU variants were given dedicated pages, the searchable technique database was reorganized into a conceptual 8-category framework (male) and F1–F8 framework (female), and the `TechniqueDatabase` component was enhanced to support category grouping. **Session rule: commit and push after every change.**
+
+### Anastomotic urethroplasty buildouts (all in `04a-urethral-reconstruction/anastomotic/`)
+
+- [excision-primary-anastomosis.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx) — 14-ref EPA deep dive with Eltahawy / Jordan 98.8%, SIU/ICUD pooled 93.8%, Horiguchi 97.1%, Siegel repeat-EPA 94/95/94%, Jasionowska SR. Then expanded with full **EPAPP (VanDyke 2021)** section: concept, full step-by-step operative technique with the **ventral corporal plication** detail (non-absorbable braided 2-0 Ethibond, inverted-mattress geometry, 15–20 mm spans, paired sutures one per corporal body in tandem until the urethral ends approximate, unilateral sutures for residual asymmetry only), 10-pt outcome series (8/10 asymptomatic at 9.7 mo), and patient-counseling points. Distinction from Peyronie's plication explicitly drawn (Peyronie's = convex tunical side; EPAPP = ventral, gap-bridging).
+- [augmented-anastomotic.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/augmented-anastomotic.mdx) — 17-ref AAU article anchored on **Redmond / Rourke 2020 HR 4.8** transecting-AAU-vs-pure-dorsal-onlay recurrence signal. Floor / roof strip configurations, Augmented Russell / El-Kassaby variant, full ANTA / MsANTA / MANTA / ntAAU non-transecting evolution.
+- [muscle-sparing-urethroplasty.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/muscle-sparing-urethroplasty.mdx) — 16-ref article on the **Barbagli 2008** muscle/nerve-sparing technique (between BS and ischiocavernosus access) and **Kulkarni one-sided dorsolateral** for long-segment / panurethral. Conflicting bulbospongiosus-sparing evidence (Elkady RCT positive; Fredrick/Vanni and Farias/Martins negative; **Theisen 728-pt cohort** challenging the BS-muscle-damage theory entirely). Furr dorsal-vs-anastomotic PVD/tethering pattern.
+- [core-through-urethrotomy.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/core-through-urethrotomy.mdx) — 16-ref article on the Gupta/Gill 1986 endoscopic technique for obliterative posterior urethral strictures. Cold knife / Nd:YAG / Ho:YAG / thulium energy comparison; Koraitim 145-pt landmark; **Ravichandran RCT via Cochrane** 64% vs 24% reintervention at 2 yr; the **Koraitim genuine-stricture-vs-distraction-defect** framework that determines candidacy.
+
+### Non-transecting variants — 4 new dedicated pages
+
+Per user request, ANTA, MsANTA, MANTA, and ntAAU each got a dedicated page. The four pages were placed in `anastomotic/` (semantically correct; `manta.mdx` and `joshi-step-msanta.mdx` git-mv'd from `staged-complex/`).
+
+- [anta.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/anta.mdx) — **Augmented Non-Transected Anastomotic** (Welk / Kodama 2012) — first non-transecting AAU; mucosectomy through preserved spongiosum + mucosal anastomosis + dorsal onlay BMG; 93% in 21-pt cohort with smaller graft (4.5 vs 5.0 cm, p = 0.047).
+- [joshi-step-msanta.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/joshi-step-msanta.mdx) — **Mucosal-Sparing Augmented Non-Transected Anastomotic** (Joshi / Bandini / Kulkarni 2022) — most tissue-sparing variant; **both spongiosum AND mucosa preserved** (mucosa incised but not resected); preserves communicant vessels.
+- [manta.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/manta.mdx) — **Mucomucosal Anastomotic Non-Transecting Augmentation** (Marks / Dahlem / Janisch 2023, Hamburg) — ventral approach, dorsal mucomucosal anastomosis at obliterative core (≤1.5 cm) + ventral onlay BMG; 93% functional success in 54-pt series at 41 mo; IIEF-EF preserved; 26% redo / 30% penobulbar.
+- [ntaau.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/ntaau.mdx) — **Non-Transecting Augmented Anastomotic** (Baudry / Schirmann / Guillot-Tantay 2025) — most recent variant; obliterative bulbar &gt;2 cm; 90.5% anatomical / 83.3% functional success at 18 mo; IIEF-5 preserved (median 22).
+
+**Important corrections** — the prior MANTA and MsANTA stubs both incorrectly described the techniques as "muscle-sparing" (a confusion with the bulbospongiosus-muscle-sparing technique). MANTA is **Mucomucosal Anastomotic Non-Transecting Augmentation**; MsANTA is **Mucosal-Sparing Augmented Non-Transected Anastomotic** — neither is about preserving the bulbospongiosus muscle.
+
+### Non-transecting family connection / redundancy slim
+
+After the 4 variant pages were built, redundant Chapman 2019 / Oszczudlowski 2023 / Scandinavian-RCT recitations were trimmed from each variant page; foundational evidence is now housed canonically in the [non-transecting-bulbar.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/non-transecting-bulbar.mdx) umbrella article. Variant pages retain only the variant-specific signal (Redmond / Rourke 2020 HR 4.8 for ANTA / MANTA / ntAAU) and link back to the umbrella for the broader framework.
+
+**Database attribution fix** — the "Vessel-sparing EPA (ntEPA)" aka was incorrectly placed under the Andrich/Mundy 2012 ntBU entry; moved to the Jordan/Eltahawy/Virasoro 2007 entry where it belongs. Andrich/Mundy ntBU now carries "Non-transecting anastomotic urethroplasty" as the aka and is positioned as the umbrella article.
+
+### Graft urethroplasty buildouts
+
+- [dorsal-onlay-omg.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/dorsal-onlay-omg.mdx) — 25-ref Barbagli 1996 deep dive. Kulkarni one-sided dorsolateral, Asopa dorsal inlay, why-buccal-mucosa biology, Berg 2024 GURS 66/34 dorsal-vs-ventral preference, Redmond / Rourke 2020 dorsal-onlay-superior-to-augmented-anastomotic data, Hassan 2025 dorsal-vs-ventral meta (RR 1.00 success / RR 0.24 transient ED favoring ventral), Sterling 2024 post-prostatectomy / radiation outcomes, Soave 2018 closure-vs-nonclosure RCT, Hoare 2021 GURS perioperative-practice survey, Patil 2021 pediatric.
+- [ventral-onlay-omg.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/ventral-onlay-omg.mdx) — 15 refs. Barbagli 2013 214-pt landmark with preoperative Qmax as the only significant predictor (OR 1.35); spongioplasty + Cordon pseudospongioplasty (80% vs 84% equivalence); Vasudeva 2015 RCT; Mousa 2025 proximal-bulbar in sexually active men favoring ventral; Hassan 2025 meta; **Mousa 2024 post-TURP bulbomembranous**; Berdondini 2024 female ventral onlay 98%; Gelman / Siegel combined dorsal+ventral 94%; the avoid-ventral-in-penile-urethra admonition.
+- [asopa-dorsal-inlay-omg.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/asopa-dorsal-inlay-omg.mdx) — 11 refs. Asopa 2001 inlay-vs-onlay distinction; Aldaqadossi 2014 RCT (128 vs 205 min OR time, 105 vs 228 mL EBL vs Barbagli, equivalent success); Pisapati 2009 87% / 11% fistula; Zumstein 2020 125-pt penile 70%; Mangera 2011 SR; **Wan 2023 LS comparison Asopa-vs-Kulkarni** favoring Asopa for RFS and meatal stenosis; Palminteri two-sided role; head-to-head Asopa-vs-Barbagli table.
+- [sliding-t-dorsal-inlay.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/sliding-t-dorsal-inlay.mdx) — 14 refs on the **Hoare / Rourke 2021** single-stage glans-sparing fossa navicularis BMG technique (92.4% success in 27 pts, 70.4% LS, 96.3% satisfaction, 7.4% Clavien ≥2). 11-row comparison table of fossa navicularis approaches. **Calvo / Rourke 2024** LS HR 4.46 long-term-recurrence caveat. Corrected the prior stub which mistakenly described sliding-T as a local-tissue T-shaped glans flap; the actual technique is a BMG inlay.
+- [transmeatal-omg-ventral-inlay.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/transmeatal-omg-ventral-inlay.mdx) — 10-ref **Nikolavsky** transmeatal ventral inlay deep dive. Sterling 2023 single-center 44-pt 95% at 36 mo + **Daneshvar 2020** 12-institution validation (n = 68, 95% at 17 mo). Full 4-step pull-through technique with triangular BMG delivered via 6-0 PDS suture pulled through ventral penile skin; quilting on ventral spongiosum; same-day discharge / 1-week catheter. **Tolbert 2025 TraMUS** extension to penile strictures.
+- [enterourethroplasty.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/enterourethroplasty.mdx) — 24-ref article covering Mundy/Andrich full-thickness sigmoid, Xu colonic mucosal grafts (2009 36-pt 85.7% at 53.6 mo), modern minimally-invasive rectal-mucosa-graft evolution (Palmer TEM, **Granieri 2019 TURNS 13-pt 85%**, Howard/Zhao R-TAMIS, Ozgur single-port endorobotic), appendiceal interposition, Bales/Gottlieb jejunal free flap, Castellan 2012 **10.3% gastric-segment malignancy signal** that retired stomach from lower-tract reconstruction.
+- [liquid-minced-buccal.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/liquid-minced-buccal.mdx) — 24-ref article. **Nikolavsky 2016** LBMG proof-of-concept (rabbit DVIU + minced BMG in fibrin glue, 100% Phase 2 engraftment); **Scott 2020** validation (8/12 vs 0/13 controls, p = 0.0005). TEOMG section on **Ram-Liebig 2017 MukoCell multicenter** (58.2% at 24 mo, experience-dependent), **Karapanos 2023** comparing TEOMG vs native BMG. Why-it-works section on the **Griffin 2025 GAS6-AXL** scarless-healing pathway. Future directions: extracellular vesicles, organoids.
+
+### Flap urethroplasty buildouts
+
+- [mcaninch-circular-flap.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/mcaninch-circular-flap.mdx) — 20 refs. McAninch 1993 origin, Buck's-fascia pedicle anatomy, McAninch / Morey 1998 87%-onlay-vs-42%-tubularized signal, **Whitson 2008 124-pt 84%/79% at 5/10 yr** with multivariate predictors (smoking HR 4.0, hypospadias HR 4.4, length 7-10 cm HR 7.0). Zhao 2026 modified-circular dorsally-split. **Three flap-vs-BMG RCTs** (Dubey, Hussein, Tyagi PeeBuSt, Alrefaey 2025). Karapanos 2024 preserved-spongiosum + dorsal BMG + Orandi flap combination. Bandini 2025 PSGU spiral-graft alternative.
+- [orandi-flap.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/orandi-flap.mdx) — 20-ref Amin Orandi 1968 founding pedicled-flap technique. Dartos pedicle anatomy, classic 6-step ventral-onlay, **Barbagli / Kulkarni 2019 dorsal modification** (12 pts, 60-min OR, 0% fistula, 0% diverticulum). **Bhandari 2001** sacculation 29% (VO) vs 0% (DO), p = 0.01. **Greenwell / Mundy 1999** "gold standard for penile patch urethroplasty" claim. Karapanos 2024 combination, predictors-of-failure table, Mathur dyskeratosis-population indication. Corrected prior misattribution (Ahmad → Amin; 1970 → 1968 *Br J Urol*).
+- [quartey-flap.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx) — 27 refs. Quartey 1983 transverse preputial island flap. SEPA anatomy (La Falce 2006). Bhandari 2001 dorsal-vs-ventral; Tijani 2009 100%-DO-vs-40%-tubularized in West African circumcised men; Srivastava 2012 60-pt TPIF DOF subset; Mathur 2014. Karapanos / Anadani / Erickson / Iselin combination evidence. Wang / Chen TPIF hypospadias literature (320-pt 15-yr, staged 102-pt). Bandini 2025 / Kulkarni 2023 PSGU as modern free-graft evolution.
+- [turner-warwick-flap.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/turner-warwick-flap.mdx) — **renamed** from "Longitudinal Ventral Penile Flap" (a misattribution — that's the Orandi 1968 technique) to **"Two-Stage Scrotal Inlay Urethroplasty"** at slug `turner-warwick-scrotal-inlay`. 18-ref deep dive: Reid 1975 60-pt ~90%, Stage 1 marsupialization → Stage 2 tubularization technique, Olsson/Krane 1978 single-vs-multistage, Johanson-vs-Turner-Warwick contrast, scrotal-inlay limitations. Includes explicit Turner-Warwick-vs-Orandi distinction table to prevent the very misattribution that was on the previous page.
+- [pedicled-prepucial-tube.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/pedicled-prepucial-tube.mdx) — 27 refs. Quartey 1983 (adult-stricture origin) + Duckett 1980 (pediatric hypospadias TPIF). Full step-by-step tubularization on dartos pedicle. Central onlay-vs-tubularization message: tubularized repairs have 2-4× higher failure (40–58% vs 11–15%). Adult-stricture outcomes table anchored by Greenwell/Mundy 1999 verdict; hypospadias-literature outcomes table (Wang 2019 320-pt, Wiener 1997 12.2% vs 0% diverticula p = 0.016, Hayashi 2001 7.7% with two-layer + spongiosum wrap). **Cinman / McAninch 2012** acquired-diverticula long-term-consequence data.
+- [single-stage-prepucial-flap.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/flap/single-stage-prepucial-flap.mdx) — 29-ref umbrella covering all single-stage pedicled-preputial-flap configurations. **Srivastava 2012 144-pt single-institution series** anchor (DOF 90%/85%, TF 75%/85%, circumpenile DOF 93.3% in circumcised). Mathur 2014 predictors-of-failure (diabetes RR 5.21, smoking RR 4.19). Three RCTs comparing penile skin vs BMG (Dubey, Tyagi PeeBuSt, Alrefaey). **ICG-guided flap-perfusion innovation** — Paraboschi 2023 first ICG-guided preputial island flap; Zhang 2024 cutoffs ≥60% graft / ≥40% flap.
+
+### PFUI consolidation + MRI expansion
+
+- [pfui.mdx](docs/05-special-populations/05a-trauma-emergencies/pfui.mdx) is now the **canonical 37-reference PFUI page** spanning the full lifecycle (acute trauma → MRI workup → SPT-vs-PER → delayed reconstruction). Major MRI expansion: full MRI-vs-urethrography comparison table; **Pubourethral Stump Angle** validated by Horiguchi 2025 (n = 184, OR 0.95/degree, prior-TUR OR 2.77, AUC 0.782); Narumi 1993 cavernous-avulsion + lateral-prostatic-displacement → 95% permanent-impotence prediction; Koraitim 2013 ED multivariate predictors (diastasis OR 15.9, lateral displacement OR 6.9, gap OR 2.0); Koraitim/Reda 2007 86%/89% accuracy data; comparison table of Horiguchi PUA / Koraitim Gapometry / Yepes PUS / Scherñuk 2026 prediction systems. **MRI-integrated surgical decision algorithm** mapping MRI findings → predicted Webster step. Detailed Webster step-by-step. **Sa / Xu 2021 1,637-pt progressive transperineal series** (92.4% success, 1.6% de novo ED). Pratap 2006 abdominoperineal technique. Xu 2010 + Guo 2017 URF management with gracilis interposition. Zhang/Zhao 2023 105-pt robotic + Liu/Zhao single-port. Pediatric (Zhang 2006, Wang 2020). The treatment-atlas page [posterior-urethroplasty-pfui.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/posterior-urethroplasty-pfui.mdx) is now a brief redirect-style stub pointing to the canonical trauma article.
+
+### Cecil-Culp / scrotal-dropback consolidation
+
+- [scrotal-dropback.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/scrotal-dropback.mdx) is now a redirect-style stub.
+- [cecil-culp-procedure.mdx](docs/04-surgical-techniques/04e-genital-reconstruction/cecil-culp-procedure.mdx) acknowledges the scrotal-dropback / scrotal-inlay alias in the header, with new Pierce 1979 + Kinnaird 2019 Turner-Warwick scrotal-drop-back references covering related lineages.
+- Urethral-reconstruction database entry renamed to "Cecil-Culp Procedure (Scrotal Dropback)" and points to the canonical genital-reconstruction page.
+
+### Gracilis BMG urethroplasty consolidation
+
+- [gracilis.mdx](docs/01-foundations/surgical-principles/flaps/gracilis.mdx) expanded with 7 new refs (now 62 total): full **Vanni / Zinman technique** details and **Rozanski 2020 30-pt 20-year update** (76.7% success, 60% radiation, 23.3% AUS rate); rewrote **Prelaminated BMG section** with explicit Stage 1 / Stage 2 description (replacing stale ref17 mismatch with proper Nikolavsky 2015 + Zinman 2002 refs); **Beckenstein 1996** muscle-flap-alone urethral regeneration; expanded RUF table with **Vanni 2010** (100% non-radiated / 84% radiated, 97% bowel undiverted), **Park 2022** comparative gracilis-vs-no-flap (92% vs 50%, p = 0.009), **Garoufalia 2023** 658-pt meta (79.4% weighted, 16.7% recurrence).
+- Standalone [prelaminated-bmg-gracilis.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/prelaminated-bmg-gracilis.mdx) is now a brief redirect to the canonical gracilis-flap section.
+
+### Sidebar reorganization
+
+- **Principles of Urethral Reconstruction** now sits above Anastomotic Urethroplasty in the urethral-reconstruction sidebar. Cascaded category positions: anastomotic 1→2, graft 2→3, flap 3→4, staged-complex 4→5, female 5→6, meatal-perineal 6→7, minimally-invasive 7→8.
+
+### TechniqueDatabase — 8-category framework
+
+The searchable technique database on the urethral-reconstruction landing page now groups techniques by conceptual category. The component was enhanced ([TechniqueDatabase.tsx](src/components/TechniqueDatabase.tsx)) to support an optional `category` field; when present, rows are grouped under ordered section headers and a **category filter dropdown** is added to controls. Search, location filter, and the "X of Y techniques" count work across all groups.
+
+**Male techniques (51 total) — 8 categories:**
+
+1. **Anastomotic (no substitute tissue)** — EPA, ntEPA / non-transecting bulbar, Jordan VS-EPA, AAU, ANTA, MsANTA / Joshi Step, MANTA, ntAAU, muscle-sparing
+2. **Substitution — Free Grafts** — dorsal/ventral/inlay BMG, Kulkarni dorsolateral, sliding-T, glanuloplasty, penile/preputial graft, PSGU, lingual mucosa, TEOMG, enterourethroplasty
+3. **Substitution — Pedicled Flaps** — Orandi, Quartey, McAninch, single-stage preputial DOF, preputial tube, propeller, Singapore, lotus petal, Y-V glans
+4. **Combined (Graft + Flap)** — Erickson dorsal BMG + ventral flap, Karapanos dorsal BMG + ventral Orandi, Vanni / Zinman ventral BMG + gracilis, prelaminated BMG-gracilis
+5. **Staged Urethroplasty** — Johanson, Kulkarni 2-stage, Turner-Warwick scrotal inlay, Cecil-Culp scrotal dropback
+6. **Posterior Urethroplasty (PFUI)** — Webster perineal, abdominoperineal transpubic, robotic, core-through, BNR
+7. **Distal / Meatal / Perineal Urethrostomy** — meatotomy, fasciocutaneous ventral penile transverse island, penile skin fossa, Blandy PU, 7-flap PU
+8. **Minimally Invasive / Emerging** — DVIU, Optilume DCB, transmeatal OMG ventral inlay (Nikolavsky), endoscopic suturing-device, liquid/minced BMG, ICG perfusion
+
+**Female techniques (27 total) — F1–F8 categories:**
+
+- **F1.** Endoscopic / Minimally Invasive — dilation, DVIU
+- **F2.** Distal Urethrectomy + Meatal Advancement
+- **F3.** Flap Urethroplasty — Blandy U-flap, Romero-Maroto lateral-based vaginal wall flap, Önol AVW mucosal inlay, dorsal vaginal flap, labia minora, Martius interposition, bladder wall flap (Patidar)
+- **F4.** Free Graft Urethroplasty — dorsal onlay BMG, ventral onlay BMG (Berdondini 2024), **ventral inlay BMG (Mandal 2025 RCT)**, **dorsal labial mucosal graft (Jena 2025, 204-pt 93.5%)**, vaginal free graft, lingual mucosa, circular BMG
+- **F5.** Combined / Hybrid — BMG + Martius, vaginal flap + BMG, staged BMG
+- **F6.** Urethral Loss / Obliteration — primary end-to-end, vaginal wall tubularization, tubularized bladder flap
+- **F7.** Emerging / Investigational — tissue-engineered grafts / bioscaffolds
+- **F8.** Other Female Reconstructive Procedures — diverticulum repair, prolapse repair, female BNR
+
+`CATEGORY_ORDER` in `TechniqueDatabase.tsx` includes both male (1–8) and female (F1–F8) strings; each tab automatically renders only the categories present in its own data array.
+
+### Editorial conventions reinforced this session
+
+- **Bleed-through references** must be filtered before publication. Assistant-generated content frequently arrives with refs from unrelated articles. Always check that every cited ref is actually used in body and renumber sequentially.
+- **Trailing chatbot follow-up questions** ("Would you like to explore...") must be stripped.
+- **"Figure N / undefined" placeholder blocks** must be removed per WARWIKI convention.
+- **Swallowed `<` artifacts** ("p [N]" / "&lt;X cm" / "p ≤ 0.001") must be reconstructed with explicit comparators.
+- **Mashed tables** (no whitespace between cells) must be rebuilt as proper markdown.
+- **Eponym attribution** matters — corrected several bad attributions: Pedicled Preputial Tube was wrongly attributed to Hodgson 1970 (correct: Quartey 1983 / Duckett 1980); Orandi was wrongly attributed to "Ahmad Orandi 1970" (correct: Amin Orandi 1968 *Br J Urol*); Turner-Warwick "Longitudinal Ventral Penile Flap" was a misnomer (the longitudinal ventral penile flap is Orandi 1968; Turner-Warwick's actual eponymous technique is the two-stage scrotal inlay urethroplasty); MANTA / MsANTA prior stubs both erroneously described them as "muscle-sparing" (MANTA = Mucomucosal Anastomotic Non-Transecting Augmentation; MsANTA = Mucosal-Sparing Augmented Non-Transected Anastomotic — neither preserves the bulbospongiosus muscle).
+
+---
+
+## Previous handoff snapshot — April 26, 2026 (ntBU + Jordan VS-EPA fill)
 
 Two anastomotic urethroplasty technique pages built out from stub in `04a-urethral-reconstruction/anastomotic/`. Session rule: **commit and push after every change**.
 
@@ -1276,4 +1381,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-04-27*
