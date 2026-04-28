@@ -7,70 +7,170 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # OAB & Urgency Urinary Incontinence
 
-Overactive bladder (OAB) and urgency urinary incontinence (UUI) are managed along a stepwise pathway: behavioral and lifestyle modifications first, then pharmacotherapy, then office-based procedures, then implantable neuromodulation, with bladder augmentation reserved for refractory neurogenic or idiopathic disease. Reconstructive urologists are typically involved at the procedural and surgical end of this pathway.
+Overactive bladder (OAB) and urgency urinary incontinence (UUI) are managed across a **menu of treatment categories** rather than a strict stepwise ladder — a paradigm shift codified in the **AUA / SUFU 2024 guideline** on idiopathic OAB, which explicitly **eliminated mandatory step therapy** in favor of shared decision-making. Reconstructive urologists are typically involved at the procedural and surgical end of this pathway.
+
+---
+
+## Master Decision Framework
+
+The 2024 AUA / SUFU guideline organizes OAB treatments into six categorical menus from which clinicians and patients select through shared decision-making: **behavioral therapies** (offered to all — Clinical Principle), **non-invasive therapies** (may be offered to all — Clinical Principle), **pharmacologic therapies** (β-3 agonist typically preferred over antimuscarinic given cognitive-risk profile), **minimally invasive therapies** (SNM, PTNS / iTNM, intradetrusor onabotulinumtoxinA — Moderate Recommendation, Grade A; **may be offered without prior trials of behavioral or pharmacologic management**), **invasive therapies** (augmentation cystoplasty, urinary diversion — Expert Opinion, severely impacted patients only), and **indwelling catheters** as a last resort. **OAB is a clinical diagnosis** — minimum evaluation is history with validated questionnaire (OAB-q, ICIQ-OAB), 3-day voiding diary, urinalysis, exam, and PVR; urodynamics are not required for initial management.
+
+### Treatment Selection by Clinical Scenario
+
+| Clinical Scenario | First-Line Choice | Alternative(s) | Key Considerations |
+|---|---|---|---|
+| **Mild OAB, prefers non-pharmacologic** | [Behavioral therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-oab-uui) + [PFMT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt) ± TTNS | Bladder training alone | Adherence-dependent; safest profile |
+| **OAB / UUI, first-line pharmacotherapy** | [β-3 agonist (vibegron or mirabegron)](/docs/foundations/pharmacology/storage-oab/beta3-agonists) | [Antimuscarinic](/docs/foundations/pharmacology/storage-oab/anticholinergics) | β-3 preferred — no anticholinergic cognitive burden. Vibegron 100 mg most efficacious for frequency in NMA (Huang 2025) |
+| **Inadequate response to β-3 monotherapy** | Add antimuscarinic (mirabegron 50 + solifenacin 5 — SYNERGY II, BESIDE) | Switch to antimuscarinic | Combination superior to either monotherapy; monitor anticholinergic burden |
+| **Elderly (≥ 65 yr) or cognitive concerns** | [β-3 agonist](/docs/foundations/pharmacology/storage-oab/beta3-agonists) preferred | If antimuscarinic needed: **trospium** (does not cross BBB) or **fesoterodine** (only agent not associated with dementia in Sheyn 2025 cohort of 941,402 patients) | **Avoid oxybutynin / tolterodine** — highest cumulative dose-dependent dementia risk (Malcher 2022 aOR 1.48 at &gt; 365 DDDs) |
+| **Patient prefers to avoid daily medication** | [Intradetrusor onabotulinumtoxinA 100 U](/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox) **or** [SNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation) **or** [iTNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) | [PTNS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) | All three minimally-invasive options now offerable as **first-line** per 2024 guideline |
+| **Refractory to pharmacotherapy** | [BTX 100 U](/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox) **or** [SNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation) **or** [iTNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) | [PTNS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) (if office-based maintenance feasible) | All three Grade A. BTX most efficacious for UUI cure; SNM most durable; iTNM eliminates office visits |
+| **Refractory to BTX and neuromodulation** | [Augmentation cystoplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation) | — | Last surgical resort; requires CIC; lifelong surveillance |
+| **Intractable incontinence, all options exhausted** | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or indwelling catheter | — | High morbidity; consider patient goals and comorbidities |
+| **Male with OAB + BPH** | [Vibegron](/docs/foundations/pharmacology/storage-oab/beta3-agonists) (FDA-approved in this population) ± alpha-blocker | [Mirabegron](/docs/foundations/pharmacology/storage-oab/beta3-agonists) | Vibegron specifically studied in men on BPH pharmacotherapy |
+
+### Minimally-Invasive Sub-Comparison
+
+When pharmacotherapy fails or is declined, the choice among BTX, SNM, iTNM, and PTNS involves distinct trade-offs:
+
+| Feature | [Intradetrusor BTX 100 U](/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox) | [Sacral Neuromodulation (SNM)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation) | [Implantable TNS (iTNM)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) | [PTNS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation) |
+|---|---|---|---|---|
+| **UUI responder rate** | Highest; greatest UIE reduction in NMA (Drake 2017) | 71.8%; 67–82% success at 5 yr (Siegel 2018) | 71.3%; 79.4% OAB responder (Amundsen 2025) | 68% pooled (Wang 2020 meta) |
+| **Duration** | ~6–9 mo per injection | Continuous (5–15 yr battery) | Continuous (rechargeable) | Ongoing maintenance sessions |
+| **Reversibility** | Wears off | Device removal | Device removal | Fully reversible |
+| **Trial phase needed** | No | **Yes** (PNE / staged implant) | **No** | No |
+| **Key risks** | UTI; **urinary retention 5.4% — requires CIC capability** | Implant-site pain (15%); lead migration; revision 3% / removal 9% | Similar to SNM | Minimal |
+| **Office burden** | Repeat injections q6–9 mo | Low after implant | Low (home-based) | **High** — weekly + maintenance |
+| **MRI compatibility** | N/A | Newer devices MRI-conditional | MRI-conditional | N/A |
+
+### Antimuscarinic Cognitive-Risk Hierarchy
+
+Anticholinergic OAB therapy is associated with cumulative-dose-dependent dementia risk (Malcher 2022 aOR 1.07 at 1–90 DDDs → 1.29 at 91–365 → **1.48 at &gt; 365 DDDs**). The AUA / SUFU 2024 guideline recommends **discussing dementia risk with all patients prescribed antimuscarinics**.
+
+| Cognitive Risk | Agents | Notes |
+|---|---|---|
+| **Lowest (preferred in elderly)** | **Trospium** (quaternary amine, does not cross BBB); **Fesoterodine** | Trospium showed no dementia signal in Malcher 2022; fesoterodine was the **only agent not associated with dementia in any age / sex group** in Sheyn 2025 cohort (n = 941,402) |
+| **Moderate** | Darifenacin (M3-selective; theoretical CNS-sparing); Tolterodine ER | Darifenacin showed no cognitive decline in 3 studies |
+| **Conflicting** | Solifenacin | Most efficacious antimuscarinic in NMA (10 mg) but elevated dementia risk in some cohorts |
+| **Highest** | **Oxybutynin** (avoid in elderly; topical / gel formulations attenuate but do not eliminate risk) | Cognitive decline in 5 / 8 studies; strongest dose-dependent dementia signal |
+
+### Stepwise Escalation (Optional / When Patient Defaults to Traditional Approach)
+
+The 2024 guideline eliminates mandatory step therapy, but many patients still prefer a graduated approach:
+
+1. **Behavioral therapies** — bladder training, fluid / caffeine / alcohol modification, urgency suppression, weight loss
+2. **Non-invasive therapies** — [PFMT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt) ± biofeedback, TTNS, transvaginal electrical stimulation
+3. **Pharmacotherapy** — [β-3 agonist](/docs/foundations/pharmacology/storage-oab/beta3-agonists) → [antimuscarinic](/docs/foundations/pharmacology/storage-oab/anticholinergics) → combination
+4. **Minimally invasive** — [BTX 100 U](/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox), [SNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation), [iTNM](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation), or [PTNS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation)
+5. **[Augmentation cystoplasty](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation)**
+6. **[Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion)** or indwelling catheter
 
 ---
 
 export const oabUuiProcs = [
+  // ===== BEHAVIORAL =====
   {
-    name: "Behavioral Therapy",
+    name: "Behavioral Therapy (Bladder Training + Urgency Suppression)",
     category: "Behavioral",
-    notes: "Bladder training (progressive voiding intervals), urgency suppression techniques, timed voiding, fluid and dietary modification (caffeine, alcohol, acidic foods), and bowel management. First-line for all OAB/UUI. Effective in isolation or combined with pharmacotherapy; best delivered with a specialized continence nurse or physiotherapist.",
+    notes: "Bladder training with progressive voiding intervals, urgency suppression techniques (Knack, deep-breathing, distraction), timed voiding, and bowel management. Typical course 8–12 weeks. **Should be offered to all patients** (AUA / SUFU 2024 Clinical Principle); strongest behavioral evidence base.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-oab-uui",
   },
   {
-    name: "Pelvic Floor Physical Therapy",
+    name: "Fluid Management & Dietary Modifications",
     category: "Behavioral",
-    notes: "Canonical PFPT program for OAB/UUI: urge suppression, bladder training, relaxation of overactive pelvic floor when present, and coordination training. Use strengthening only when the phenotype is hypotonic; down-training/manual work may be needed when urgency is driven by guarding or pain.",
+    notes: "Reduction of total fluid intake; avoidance of bladder irritants (caffeine, alcohol, carbonated beverages, artificial sweeteners). Low-risk and low-cost adjuncts that complement all other therapies.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-oab-uui",
+  },
+  {
+    name: "Weight Loss",
+    category: "Behavioral",
+    notes: "Moderate weight loss (5–10% body weight) improves OAB symptoms in overweight / obese patients (consistent with the SUI literature). Should be offered when BMI ≥ 25.",
+  },
+
+  // ===== NON-INVASIVE =====
+  {
+    name: "Pelvic Floor Muscle Training (PFMT)",
+    category: "Non-Invasive",
+    notes: "Supervised PFMT with or without biofeedback. High- to moderate-certainty evidence shows PFMT improves UUI symptoms and QoL. Use strengthening when phenotype is hypotonic; **down-training / manual therapy when urgency is driven by overactive pelvic floor or guarding** — do not equate PFMT with Kegels in those patients.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt",
   },
   {
-    name: "Anticholinergics",
+    name: "Transcutaneous Tibial Nerve Stimulation (TTNS)",
+    category: "Non-Invasive",
+    notes: "Surface-electrode tibial-nerve stimulation performed at home (no needle). Meta-analysis: significant reduction in frequency (MD −3.18 episodes / day vs sham / control) and nocturia. Particularly effective for **dry OAB** (urgency / frequency without incontinence). May be offered to all (AUA / SUFU 2024 Clinical Principle).",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
+  },
+  {
+    name: "Transvaginal Electrical Stimulation",
+    category: "Non-Invasive",
+    notes: "Intravaginal probe delivering electrical stimulation to the pelvic floor. Moderate-certainty evidence — ES + PFMT + drugs improves QoL more than drugs alone (Todhunter-Brown 2022 Cochrane overview).",
+  },
+
+  // ===== PHARMACOLOGICAL =====
+  {
+    name: "Beta-3 Agonists (Vibegron / Mirabegron)",
     category: "Pharmacological",
-    notes: "Competitive muscarinic receptor antagonists (oxybutynin, tolterodine, solifenacin, darifenacin, fesoterodine, trospium). Reduce detrusor overactivity and urgency episode frequency. First-line pharmacotherapy. Dry mouth and constipation are the primary tolerability barriers; extended-release formulations and M3-selective agents (solifenacin, darifenacin) have better tolerability profiles. Avoid in cognitive impairment — CNS-penetrant agents (tertiary amines) increase dementia risk.",
+    notes: "**Preferred first-line pharmacotherapy** per AUA / SUFU 2024 (no anticholinergic cognitive burden). Vibegron 75 mg outperformed mirabegron and antimuscarinics in NMA (Huang 2025); 100 mg showed greatest reduction in micturition frequency (SMD −0.87). Mirabegron can raise systolic BP 3–10 mmHg; vibegron has minimal BP signal. Vibegron is FDA-approved in men on BPH pharmacotherapy.",
+    slug: "/docs/foundations/pharmacology/storage-oab/beta3-agonists",
+  },
+  {
+    name: "Antimuscarinics",
+    category: "Pharmacological",
+    notes: "Competitive muscarinic antagonists (oxybutynin, tolterodine, solifenacin, fesoterodine, darifenacin, trospium). Comparable efficacy across class (~2–4 fewer voids / day) but differ markedly in cognitive risk. **Cumulative-dose-dependent dementia risk** (Malcher 2022: aOR 1.48 at &gt; 365 DDDs). **Trospium** (does not cross BBB) and **fesoterodine** (Sheyn 2025: only agent without dementia signal) preferred in elderly; **avoid oxybutynin** when possible.",
     slug: "/docs/foundations/pharmacology/storage-oab/anticholinergics",
   },
   {
-    name: "Beta-3 Agonists (Mirabegron / Vibegron)",
+    name: "Combination β-3 + Antimuscarinic",
     category: "Pharmacological",
-    notes: "Selective beta-3 adrenoceptor agonists promote bladder relaxation during filling without inhibiting voiding. Mirabegron (Myrbetriq) and vibegron (Gemtesa) are FDA-approved for OAB. Comparable efficacy to anticholinergics with superior tolerability — no dry mouth and no anticholinergic cognitive burden. Mirabegron can raise blood pressure; vibegron has minimal blood-pressure signal. Preferred in elderly patients or those intolerant of anticholinergics.",
+    notes: "Most studied: **mirabegron 50 mg + solifenacin 5 mg**. SYNERGY II (n = 1,794, 12 mo) — combination superior to either monotherapy for incontinence and frequency with similar tolerability. BESIDE — adding mirabegron 50 to solifenacin 5 was superior to solifenacin 5 and noninferior to solifenacin 10 for incontinence.",
     slug: "/docs/foundations/pharmacology/storage-oab/beta3-agonists",
   },
+
+  // ===== MINIMALLY INVASIVE =====
   {
-    name: "Combination Anticholinergic + Beta-3",
-    category: "Pharmacological",
-    notes: "Combination therapy pairs a beta-3 agonist with an antimuscarinic, most commonly mirabegron + solifenacin in the BESIDE / SYNERGY evidence base. It can improve urgency and UUI when monotherapy is inadequate, but constipation, dry mouth, retention risk, cost, and PVR monitoring still matter.",
-    slug: "/docs/foundations/pharmacology/storage-oab/beta3-agonists",
-  },
-  {
-    name: "Intradetrusor OnabotulinumtoxinA",
-    category: "Procedural",
-    notes: "Cystoscopic injection of 100 U onabotulinumtoxinA into the detrusor (20 sites, sparing trigone). FDA-approved for OAB and neurogenic detrusor overactivity (NDO). Reduction in urgency incontinence episodes ~50–60%; complete resolution in ~30%. Effect duration 6–12 months; repeat injections required. Risk of urinary retention (~6% in OAB, higher in NDO) and UTI. Patients should be counseled on and capable of intermittent catheterization.",
+    name: "Intradetrusor OnabotulinumtoxinA (100 U)",
+    category: "Minimally Invasive",
+    notes: "Cystoscopic injection at 20 sites, sparing the trigone. Drake 2017 NMA: **greatest reductions in UIE, urgency, and frequency** vs all oral pharmacotherapies. Hsieh 2025 RCT: equivalent efficacy to mirabegron + solifenacin combination at 12 wk with significantly fewer systemic AEs. Effect lasts ~6–9 mo. **Urinary retention 5.4% (idiopathic OAB) — patients must be CIC-capable** before injection; check baseline PVR.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox",
   },
   {
     name: "Sacral Neuromodulation (SNM)",
-    category: "Procedural",
-    notes: "Electrical stimulation of the S3 sacral nerve root via a tined lead and implantable pulse generator (InterStim II/Micro/X — Medtronic; Axonics r-SNM/F15/R20). FDA-approved for OAB, UUI, urgency-frequency, and non-obstructive urinary retention. Staged trial (percutaneous nerve evaluation or staged implant) required before permanent implant. Durable 50–80% improvement sustained &gt;5 years. MRI-conditional with current-generation devices.",
+    category: "Minimally Invasive",
+    notes: "S3 sacral-nerve stimulation via tined lead + IPG (InterStim II / Micro / X — Medtronic; Axonics r-SNM / F15 / R20). Two-stage procedure (PNE / staged implant → permanent implant). Siegel 2018: **5-year therapeutic success 67–82%**; mean −2.0 leaks / day (UUI), −5.4 voids / day (urgency-frequency). Higher success than antimuscarinics (61% vs 42%, p = 0.02). Comparable to BTX with lower UTI but lower satisfaction. Adverse events: stimulation change 22%, implant-site pain 15%, revision ~3%, removal ~9%.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation",
   },
   {
-    name: "Percutaneous Tibial Nerve Stimulation (PTNS)",
-    category: "Procedural",
-    notes: "Retrograde stimulation of the sacral plexus via a needle electrode at the medial ankle (Urgent PC, NURO). 12-week weekly office treatment protocol; maintenance sessions required every 3–4 weeks. FDA-cleared for OAB. Comparable efficacy to anticholinergics in ORBIT and SUmiT trials; no systemic side effects. Wearable and implantable PTNS devices (eCoin, Revi) emerging as home-use alternatives.",
-    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
-  },
-  {
     name: "Implantable Tibial Nerve Stimulation (eCoin / Revi)",
-    category: "Procedural",
-    notes: "eCoin (Valencia Technologies) is a titanium disc implanted subdermally near the posterior tibial nerve, activated by an external wearable. Revi (BlueWind Medical) is a wireless implanted tibial nerve stimulator. Both eliminate need for in-office visits. Emerging alternatives to in-office PTNS for maintenance therapy; FDA de novo clearance for eCoin (2023).",
+    category: "Minimally Invasive",
+    notes: "eCoin (Valencia Technologies; FDA de novo 2023) — titanium disc implanted subdermally near the posterior tibial nerve, activated by external wearable. Revi (BlueWind Medical) — wireless implanted tibial-nerve stimulator. Amundsen 2025 meta: **comparable to SNM** (UUI responder 71.3% vs 71.8%; OAB responder 79.4% vs 73.9%) with similar AE rates and **no trial-stimulation phase required**.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
   },
   {
-    name: "Bladder Augmentation (Enterocystoplasty)",
-    category: "Surgical",
-    notes: "Detubularized bowel segment (ileum most common) incorporated into the bivalved bladder to increase compliance and capacity. Reserved for refractory neurogenic detrusor overactivity (NDO) — typically spinal cord injury, spina bifida, radiation-induced contracted bladder — after failure of all pharmacologic and neuromodulation options. Requires lifelong CIC; risks include mucus production, UTI, metabolic acidosis, and rare malignant transformation after &gt;10 years.",
-    slug: null,
+    name: "Percutaneous Tibial Nerve Stimulation (PTNS)",
+    category: "Minimally Invasive",
+    notes: "Office-based fine-gauge needle electrode near the posterior tibial nerve; 30-min sessions weekly × 12 wk + monthly maintenance. Wang 2020 meta of 28 studies (n = 2,461): **68% pooled success**, with significant reductions in frequency (−2.48 / day), nocturia (−1.57), urgency (−2.20), incontinence (−1.37). Limitation: ongoing office-visit burden; insurance often covers limited lifetime visits.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
+  },
+
+  // ===== INVASIVE SURGICAL =====
+  {
+    name: "Augmentation Cystoplasty (Enterocystoplasty)",
+    category: "Invasive Surgical",
+    notes: "Detubularized bowel segment (ileum most common) anastomosed to bivalved bladder. Reserved for **severely impacted patients refractory to all other therapies** per AUA / SUFU 2024. Mean capacity 166 → 572 mL; max detrusor pressure 53 → 14 cmH₂O. Patient satisfaction: 69% cured / 20% improved. Most patients require lifelong CIC. Long-term complications: chronic UTIs, bladder / renal stones, metabolic acidosis, mucus, perforation risk, malignancy after &gt; 10 yr.",
+    slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
+  },
+  {
+    name: "Urinary Diversion",
+    category: "Invasive Surgical",
+    notes: "Ileal conduit (incontinent) or continent cutaneous diversion. Most invasive option; reserved for intractable incontinence with non-functional bladder. Stomal complications occur in ~42% of continent diversions.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion",
+  },
+
+  // ===== INDWELLING CATHETER =====
+  {
+    name: "Indwelling Catheter (Urethral or Suprapubic)",
+    category: "Indwelling Catheter",
+    notes: "Not a treatment for OAB per se but a management strategy for patients who have exhausted all options or are too frail for surgery. Associated with chronic UTI, stone formation, and urethral erosion. Last resort per AUA / SUFU 2024.",
   },
 ];
 
@@ -84,10 +184,12 @@ export const oabUuiColumns = [
     header: 'Category',
     badge: true,
     badgeColors: {
-      'Behavioral':      '#047857',
-      'Pharmacological': '#b45309',
-      'Procedural':      '#0369a1',
-      'Surgical':        '#1d4ed8',
+      'Behavioral':           '#047857',
+      'Non-Invasive':         '#0f766e',
+      'Pharmacological':      '#b45309',
+      'Minimally Invasive':   '#0369a1',
+      'Invasive Surgical':    '#1d4ed8',
+      'Indwelling Catheter':  '#b91c1c',
     },
   },
   {
