@@ -25,6 +25,29 @@ Urethral reconstruction encompasses a broad spectrum of surgical procedures used
 
 ---
 
+## Master Decision Framework — Choosing a Male Urethroplasty
+
+The technique library below is organized by category. The matrix that follows summarizes the primary decision points for choosing a technique; the AUA 2023 guideline anchors three of its most consequential rules — **oral mucosa is the first-choice graft**, **avoid genital skin in lichen sclerosus**, and **perineal urethrostomy is a legitimate long-term option** for high-risk patients.
+
+| Clinical Scenario | First-Line Technique | Alternative(s) | Avoid |
+|---|---|---|---|
+| **Short bulbar stricture (≤2 cm)** | [Non-transecting EPA / VS-EPA](/docs/surgical-techniques/04a-urethral-reconstruction/jordan-vessel-sparing-epa) | [tEPA](/docs/surgical-techniques/04a-urethral-reconstruction/excision-primary-anastomosis); [dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg) | — |
+| **Long bulbar stricture (2–5 cm)** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg) (Barbagli or [Kulkarni one-sided](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage)) | [Ventral onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/ventral-onlay-omg) (proximal bulbar); [Asopa dorsal inlay](/docs/surgical-techniques/04a-urethral-reconstruction/asopa-dorsal-inlay-omg) | [AAU](/docs/surgical-techniques/04a-urethral-reconstruction/augmented-anastomotic) (HR 4.8 for recurrence vs dorsal onlay) |
+| **Penile stricture (non-LS)** | [Asopa dorsal inlay](/docs/surgical-techniques/04a-urethral-reconstruction/asopa-dorsal-inlay-omg) or [Kulkarni dorsolateral onlay](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage) | Dorsal Orandi flap; staged BMG | Ventral onlay (sacculation risk) |
+| **Penile stricture (LS)** | [Staged BMG urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-two-stage) | One-stage dorsal inlay BMG (mild LS, viable plate) | All genital skin grafts/flaps |
+| **Panurethral stricture** | [Kulkarni one-sided dorsolateral BMG](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage) | Preputial spiral graft (PSGU); combined BMG + flap; [perineal urethrostomy](/docs/surgical-techniques/04a-urethral-reconstruction/blandy-perineal-urethrostomy) | — |
+| **Fossa navicularis / meatal** | [Transmeatal ventral inlay BMG (Nikolavsky)](/docs/surgical-techniques/04a-urethral-reconstruction/transmeatal-omg-ventral-inlay) | [Sliding-T dorsal inlay (Rourke)](/docs/surgical-techniques/04a-urethral-reconstruction/sliding-t-dorsal-inlay); [meatotomy / meatoplasty](/docs/surgical-techniques/04a-urethral-reconstruction/meatotomy) | — |
+| **Obliterative bulbar (no lumen)** | Palminteri two-sided BMG (dorsal + ventral) | [ntAAU](/docs/surgical-techniques/04a-urethral-reconstruction/ntaau); staged urethroplasty | — |
+| **Scarred bed / failed prior graft** | Pedicled flap ([Orandi](/docs/surgical-techniques/04a-urethral-reconstruction/orandi-flap), [McAninch](/docs/surgical-techniques/04a-urethral-reconstruction/mcaninch-circular-flap), [Quartey](/docs/surgical-techniques/04a-urethral-reconstruction/quartey-flap)) ± dorsal BMG | [Gracilis + ventral BMG](/docs/foundations/surgical-principles/flaps/gracilis) (radiation / salvage) | Free graft alone (poor bed) |
+| **Depleted oral mucosa** | Preputial flap; rectal mucosal graft (TEM / R-TAMIS); colonic mucosal graft (see [Enterourethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/enterourethroplasty)) | — | Penile skin graft |
+| **Oral dyskeratosis (gutkha / betel nut)** | Preputial skin flap (dorsal onlay) | Penile skin graft | BMG (unsuitable oral mucosa) |
+| **PFUI (posterior)** | Perineal anastomotic urethroplasty (see [PFUI](/docs/special-populations/05a-trauma-emergencies/pfui)) | Transpubic abdominoperineal (if perineal insufficient) | Repeated endoscopic procedures |
+| **Older / comorbid; panurethral; patient preference** | Definitive [perineal urethrostomy](/docs/surgical-techniques/04a-urethral-reconstruction/blandy-perineal-urethrostomy) | — | Complex reconstruction if patient declines |
+
+The library spans **&gt;30 distinct techniques across 8 categories**, evolving from the early staged approaches (Johanson 1953, Turner-Warwick 1960s) through the pedicled-flap era (Orandi 1968, Quartey 1983, McAninch 1993) to the BMG-dominant era (Barbagli 1996, Kulkarni 2009, Nikolavsky 2016) and an emerging minimally-invasive frontier (transmeatal, endoscopic, robotic, tissue-engineered).
+
+---
+
 export const maleTechniques = [
   // ===== 1. ANASTOMOTIC (no substitute tissue) =====
   {
@@ -163,6 +186,7 @@ export const maleTechniques = [
     location: "Penile",
     category: "2. Substitution — Free Grafts",
     notes: "Free non-pedicled penile/preputial skin graft. Tyagi 2021 DLIPG 87% at 48 mo; comparable to BMG in 3 RCTs.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/penile-skin-free-graft",
   },
   {
     name: "Preputial Spiral Graft Urethroplasty (PSGU)",
@@ -170,6 +194,7 @@ export const maleTechniques = [
     location: "Panurethral",
     category: "2. Substitution — Free Grafts",
     notes: "Spiral preputial harvest yields up to 20 cm. 90.4% success at 16 months in 114-pt multicenter series for panurethral disease.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/preputial-spiral-graft",
   },
   {
     name: "Lingual Mucosal Graft (LMG)",
@@ -185,6 +210,7 @@ export const maleTechniques = [
     location: "Any",
     category: "2. Substitution — Free Grafts",
     notes: "0.5 cm biopsy expanded over 3 weeks to a full-sized graft. 58–84% success; less oral morbidity. CE-marked in EU.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/tissue-engineered-oral-mucosa",
   },
   {
     name: "Enterourethroplasty",
@@ -280,6 +306,7 @@ export const maleTechniques = [
     location: "Penile",
     category: "4. Combined (Graft + Flap)",
     notes: "Single-stage segmental urethral replacement for long-segment strictures with damaged plate. 64% primary / 79% secondary success at 2.5 yr.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/erickson-dorsal-bmg-ventral-flap",
   },
   {
     name: "Dorsal BMG + Ventral Orandi Flap",
@@ -287,6 +314,7 @@ export const maleTechniques = [
     location: "Penile",
     category: "4. Combined (Graft + Flap)",
     notes: "Native plate and corpus spongiosum preserved; triangular cross-section neourethra. 91.7% at 38 months for narrow penile strictures.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/karapanos-dorsal-bmg-ventral-orandi",
   },
   {
     name: "Ventral BMG + Gracilis Muscle Flap",
@@ -356,6 +384,7 @@ export const maleTechniques = [
     location: "Posterior / PFUI",
     category: "6. Posterior Urethroplasty (PFUI)",
     notes: "Robotic transabdominal ± open transperineal approach. Predominantly post-radiation VUA stenosis (28.6% require AUS).",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/robotic-posterior-urethroplasty",
   },
   {
     name: "Core-Through Urethrotomy",
@@ -464,6 +493,7 @@ export const maleTechniques = [
     location: "Any",
     category: "8. Minimally Invasive / Emerging",
     notes: "Indocyanine green near-infrared fluorescence angiography for intraoperative perfusion assessment. Cutoffs: ≥60% graft beds, ≥40% flaps.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/icg-perfusion-assessment",
   },
 ];
 
@@ -482,6 +512,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F1. Endoscopic / Minimally Invasive",
     notes: "Endoscopic incision of female stricture. Poor long-term outcomes similar to dilation.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu",
   },
 
   // ===== F2. DISTAL URETHRECTOMY + MEATAL ADVANCEMENT =====
@@ -490,6 +521,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F2. Distal Urethrectomy + Meatal Advancement",
     notes: "Excision of strictured distal segment; proximal healthy urethral mucosa advanced and sutured to vestibular skin. For short distal / meatal strictures; no graft / flap needed.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/distal-urethrectomy-advancement",
   },
 
   // ===== F3. FLAP URETHROPLASTY (pedicled, vascularized tissue) =====
@@ -509,6 +541,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F3. Flap Urethroplasty",
     notes: "Lateral-based ventral vaginal flap. Preserves orthotopic meatal position; avoids stream deflection of Blandy. 100% success at mean 80.7 mo in original series.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/lateral-based-anterior-vaginal-wall-flap",
   },
   {
     name: "Anterior Vaginal Wall Mucosal Inlay",
@@ -516,18 +549,21 @@ export const femaleTechniques = [
     location: "Any",
     category: "F3. Flap Urethroplasty",
     notes: "Anterior vaginal wall mucosa incised, mobilized, and inlaid into the opened strictured urethra. 100% objective cure at median 24 mo (10/17 patients in series).",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/onol-vaginal-mucosal-inlay",
   },
   {
     name: "Dorsal Vaginal Flap Urethroplasty",
     location: "Any",
     category: "F3. Flap Urethroplasty",
     notes: "Vaginal flap placed dorsally (12 o'clock) after urethra is dissected off the pubic symphysis. Provides dorsal augmentation while maintaining vascular pedicle.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-vaginal-flap",
   },
   {
     name: "Labia Minora Pedicled Flap",
     location: "Any",
     category: "F3. Flap Urethroplasty",
     notes: "Hairless, wet, elastic labial tissue used as pedicled flap. Particularly useful when vaginal tissue is compromised (atrophy, lichen sclerosus).",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/labia-minora-flap",
   },
   {
     name: "Martius Fat Pad Flap (Interposition)",
@@ -543,6 +579,7 @@ export const femaleTechniques = [
     location: "Posterior / PFUI",
     category: "F3. Flap Urethroplasty",
     notes: "Anterior or posterior bladder wall flap tubularized or onlaid for complex urethral defects with urethral loss / bladder neck involvement. 82% continence in 22-pt series.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty",
   },
 
   // ===== F4. FREE GRAFT URETHROPLASTY =====
@@ -568,6 +605,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F4. Free Graft Urethroplasty",
     notes: "Graft inlaid into ventral urethrotomy without urethral mobilization. 89–95%; first RCT showed equivalence to dorsal onlay with shorter OR (30 vs 44.5 min) and less blood loss.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-inlay-bmg",
   },
   {
     name: "Dorsal Onlay Labial Mucosal Graft",
@@ -575,6 +613,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F4. Free Graft Urethroplasty",
     notes: "Labia minora mucosa as free graft. 204-pt single-surgeon series with 93.5% success at 2 yr; avoids oral donor-site morbidity.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa",
   },
   {
     name: "Vaginal Free Graft Urethroplasty",
@@ -582,18 +621,21 @@ export const femaleTechniques = [
     location: "Any",
     category: "F4. Free Graft Urethroplasty",
     notes: "Free vaginal-wall graft (when pedicled flap not feasible). ~80% success; limited by lichen sclerosus or vaginal atrophy.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-free-graft",
   },
   {
     name: "Lingual Mucosal Graft (Female)",
     location: "Any",
     category: "F4. Free Graft Urethroplasty",
     notes: "Ventral tongue mucosa; alternative oral source when buccal sites unavailable.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/lingual-mucosal-graft-female",
   },
   {
     name: "Circular (Circumferential) BMG",
     location: "Any",
     category: "F4. Free Graft Urethroplasty",
     notes: "Tubularized BMG for severe distal female strictures with full circumferential disease. Limited data; salvage technique.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/circular-bmg-female",
   },
 
   // ===== F5. COMBINED / HYBRID TECHNIQUES =====
@@ -602,18 +644,21 @@ export const femaleTechniques = [
     location: "Any",
     category: "F5. Combined / Hybrid Techniques",
     notes: "Ventral onlay BMG reinforced with Martius interposition. Useful after synthetic sling erosion or with compromised periurethral tissue.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/bmg-martius-combined",
   },
   {
     name: "Vaginal Flap + BMG",
     location: "Any",
     category: "F5. Combined / Hybrid Techniques",
     notes: "Local pedicled flap combined with free graft when neither alone provides sufficient tissue.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-flap-bmg-combined",
   },
   {
     name: "Staged BMG Urethroplasty (Female)",
     location: "Any",
     category: "F5. Combined / Hybrid Techniques",
     notes: "Severe urethral loss / obliteration: Stage 1 graft inlay → Stage 2 tubularization after maturation.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/staged-bmg-female",
   },
 
   // ===== F6. URETHRAL LOSS / OBLITERATION REPAIR =====
@@ -622,18 +667,21 @@ export const femaleTechniques = [
     location: "Any",
     category: "F6. Urethral Loss / Obliteration Repair",
     notes: "Direct tension-free anastomosis when the gap is short. Distinct from stricture repair — addresses urethral loss / discontinuity.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/primary-end-to-end-female",
   },
   {
     name: "Vaginal Wall Tubularization Urethroplasty",
     location: "Any",
     category: "F6. Urethral Loss / Obliteration Repair",
     notes: "Tubularization of vaginal tissue to reconstruct a neourethra after complete urethral loss.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-wall-tubularization",
   },
   {
     name: "Bladder Flap Urethroplasty (Tubularized)",
     location: "Posterior / PFUI",
     category: "F6. Urethral Loss / Obliteration Repair",
     notes: "Anterior or posterior bladder wall flap tubularized to bridge the defect when bladder neck is involved.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/bladder-flap-tubularized",
   },
 
   // ===== F7. EMERGING / INVESTIGATIONAL =====
@@ -642,6 +690,7 @@ export const femaleTechniques = [
     location: "Any",
     category: "F7. Emerging / Investigational",
     notes: "Acellular matrix scaffolds (SIS, bladder acellular matrix) and cell-seeded constructs. Onlay use clinically feasible; tubularized constructs require cell seeding.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/tissue-engineered-female",
   },
 
   // ===== F8. OTHER FEMALE RECONSTRUCTIVE PROCEDURES =====
