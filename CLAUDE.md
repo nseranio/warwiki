@@ -4,7 +4,68 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 30, 2026 (new 04k Gender-Affirming Surgery atlas section with tabbed Masculinizing / Feminizing / Non-Binary-Nullification MDF + Database)
+## Current handoff snapshot — May 1, 2026 (Treatment Atlas MDF rollout COMPLETE — 04e three-tab Genital Reconstruction + new 04l Cosmetic Genital Surgery section)
+
+This session **completed the Treatment Atlas Master Decision Framework rollout** — every primary atlas landing now has a uniform MDF + searchable Database structure. Two structural changes finished the rollout: the **04e Genital Reconstruction** landing was rebuilt as three tabs (Penile default + Scrotal + Vulvar), and a brand-new top-level section **04l Cosmetic Genital Surgery** was created at sidebar position 13 with tabbed Male (default) + Female cosmetic decision frameworks. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
+
+### 04e Genital Reconstruction — three-tab Penile / Scrotal / Vulvar
+
+The 04e atlas landing was first rebuilt with a tabbed Penile + Scrotal pattern (commit `7c52e89`), then the Scrotal MDF + Database were filled out (commit `3dc13a4`), then a third tab **Vulvar Reconstruction** was added (commit `4f1f184`). Header was broadened from "external male genitalia" → "external genitalia (penile / scrotal / vulvar)" and the section-stack pointer in the parent atlas landing updated.
+
+**Penile tab (default)** — 6-step MDF + 23-row database across 8 domains. Anchored on Kristinsson 2021 review, Alwaal 2015 UCSF n=54 STSG, Mendel 2023 / McLaughlin 2024 bipedicled scrotal, Tsukuura 2025 sensate EPAP, Liguori 2020 Integra, Crane 2026 Matriderm 92.1%, Mirastschijski / Schlaepfer / Flynn PAS, Brouwer 2023 EAU-ASCO, Pang 2026 glansectomy SR (91.1% preserved EF / 75.6% standing voiding), Baumgarten 2018 n=1,188 (5-yr LRFS 73.6%), Elst 2025 BJU (local recurrence does NOT affect CSS), Fakin 2017 siliconoma 4.37/5, Yamamoto 2022 SCIP-LFT, Tausch 2016 PAS, Gül 2026 STSG-vs-FTSG no-difference, Jeng 2026 escutcheon-derived FTSG. Glans-specific decision matrix added (7 scenarios — PeIN resurfacing, total glansectomy + neoglans, WLE + graft, lichen sclerosus, traumatic glans loss, total penile loss).
+
+**Scrotal tab** — 7-step MDF + 24-row database across 9 domains. Anchored on Schifano 2022 SR scrotal reconstruction, Hayon 2021 orchidopexy + STSG framework, Alammar 2026 Fournier's flap SR (n=625, 1.6% flap-loss), Sahai 2021 30-yr island groin (n=29), Mopuri 2016 modified pudendal-thigh, Lee 2012 gracilis + IPAP (100% survival), Singh 2016 gracilis-perineum (obesity OR 7.5 / smoking OR 9.3), Abdelfattah 2023 SCIP complete-functional-lymphatic transfer (n=26 / 100% flap survival), Wisenbaugh 2018 MLL (mean +5.2 kg post-op weight gain / QoL 1.3 → 7.7), McDermott 2024 *JAMA Surg* NSTI review, Hayon 2020 modern testicular prosthesis, Atwater 2025 Rigicon Testi10 (KM 99.8% at 54 mo), Thomas 2021 aesthetic-scrotoplasty SR + algorithm. Database categories: Primary Closure / Skin Graft / Pedicled Flap / Lymphatic Flap / Testicular Thigh Pouch (temporary + definitive) / NPWT Adjunct / Testicular Prosthesis / Aesthetic / Combined-Salvage (incl. total penis-scrotum-LAW VCA).
+
+**Vulvar tab** — 8-step MDF + 30-row database across 7 domains. Atlas-page intentionally focused on **non-GAS vulvar reconstruction** (oncologic, EMPD, VIN, lichen sclerosus, FGM/C, trauma, vulvar HS, GSM-related fat-grafting). Anchored on Höckel-Dornhöfer 2008 *Lancet Oncol*, Pavlov 2021 review, Kwong 2025 *BJOG* prospective vulval-flap series (sexual activity 9.3% → 24.4%; continence 48.1% → 80.4%; 88.9% reported reconstruction helped diagnostic acceptance), Ricotta 2025 *IJGC* Toulouse Algorithm, Han 2023 *Ann Plast Surg* simplified algorithm, NCCN Vulvar 2026, Lavoué 2013 EJSO skinning vulvectomy + STSG (occult cancer 31%), Lauber 2021 EJOGRB perineoplasty for LS, O'Dey 2024 *PRS* FGM anatomical reconstruction (n=119), O'Dey 2024 *JPRAS* aOAP for LS (n=61), Almadori 2024 *BJOG* FGM scoping review, ACOG PB 224, Salgarello 2005, Fin 2019, Confalonieri 2017 V-Y vs LPF, Negosanti 2015 *IJGC* perforator-flap algorithm, Huang 2015, Commenge 2025 genito-crural island perforator (n=27/46), Gentileschi 2017 pedicled ALT, O'Brien 2021 split ALT total vulvectomy, Zhang 2015 advanced/recurrent vulvar n=36, Eseme 2022 *Cancers* VRAM-vs-gracilis meta, Stein 2019 direct n=88, Caretto 2023 *Front Oncol* secondary algorithm, Galbraith 2023, Botter 2021 clitoral reconstruction, Meremikwu 2026 *IJGO* SR (meta-OR 79.67 for pain reduction), Mañero 2018 vaginal-graft clitoral reconstruction, Casabona 2023 PRP+fat for LS, Boero 2015 fat grafting for LS, Almadori 2025 fat grafting for FGM/C, Menkes 2021 microfat / nanofat for GSM, Pérez-López 2017 LS review, Rangatchew 2017 LS surgical (38% relapse). Database categories: Primary Closure / Graft (3) / Local Random / Fasciocutaneous (8) / Regional Pedicled (6) / Free Tissue Transfer (2) / FGM/C Reconstruction (4) / Regenerative / Fat Grafting (3) / Lichen Sclerosus — Surgical (3).
+
+Bibliography end-state: **99 sequential, DOI-linked references** in `04e-genital-reconstruction/index.mdx`, all cited.
+
+### New 04l Cosmetic Genital Surgery section (commit `[next]`)
+
+Created a new top-level Treatment Atlas section at **sidebar position 13** (end of atlas) with `_category_.json` label "Cosmetic Genital Surgery" and tabbed Male (default) + Female cosmetic decision frameworks. The atlas page is **explicitly elective / aesthetic** and clearly distinguishes itself from reconstructive (04e), gender-affirming (04k), and clinical-conditions SPS/PDD content. Top-of-page admonition cites the **SMSNA 2024 position statement** (evidence low, most procedures investigational), the **ACOG 2020 Committee Opinion** (FGCS not medically indicated; safety / effectiveness not established), the **FIGO 2025 Statement** (ethically inappropriate to recommend / perform / refer FGCS in women without structural / functional abnormalities), and the **FDA 2018 safety communication** warning against energy-based devices for "vaginal rejuvenation."
+
+**Male tab MDF (8 steps)** — Mandatory psychological screening (BDDQ-AS / BDD-YBOCS / MGSIS) → objective measurement (Veale nomograms; SPL anchors) → first-line non-invasive (PTT / VED / cryolipolysis) → invasive-procedure selection by clinical goal (12-row matrix: girth → length → apparent shortening → combined → penoscrotal webbing → scrotal laxity → refractory dissatisfaction) → procedure-specific sub-comparisons (HA vs Penuma vs autologous fat for girth; PTT vs suprapubic lipectomy vs SLD for length) → concurrent procedures → postop management → SMSNA 2024 evidence-hierarchy summary table.
+
+**Male database** — 19 procedures across 6 domains: Non-Invasive (3) / Injectable Girth (4 — HA, PLA, autologous fat, "DO NOT USE" non-autologous injectables explicitly carved out) / Surgical Lengthening (5 — SLD ± V-Y, suprapubic lipectomy, V-Y plasty, penoscrotal-web Z-plasty, sliding/slicing techniques) / Surgical Girth (3 — Penuma, HST, dermal fat / AlloDerm) / Scrotal Aesthetic (3 — reduction scrotoplasty, penoscrotal-web correction, "scrotox") / Combined / Complex (2 — SLD+V-Y+fat, suprapubic lipectomy + IPP).
+
+**Female tab MDF (7 steps)** — Mandatory pre-procedural assessment (counseling on normal anatomic variation, distinguish functional vs cosmetic, BDD screening, psychological-distress assessment, ACOG / FIGO informed consent) → identify clinical goal (10-row matrix) → technique selection by category (labiaplasty trim vs wedge vs de-epi with Zahedi 2023 algorithm; vaginal laxity surgical vs energy-based with Pereira 2024 SR — "RCTs do not confirm efficacy" anchor) → combined procedures → special branch — clitoral hoodoplasty (Liu 2022 classification, n=789, 95.7% satisfaction) → postop management → complications.
+
+**Female database** — 22 procedures across 8 domains: Labiaplasty (5) / Clitoral Hoodoplasty (3) / Labia Majora (2) / Mons Pubis (2) / Vaginal Canal (2) / Energy-Based Devices (3) / Hymenoplasty / G-Spot (2) / Regenerative (2 incl. "Genital Beautification" combined packages). Surgical-vaginoplasty row explicitly includes the ACOG-2020 caveat that "rebranding posterior colporrhaphy as cosmetic vaginal rejuvenation is misleading."
+
+**Anchors for female tab**: Escandón 2022 *PRS* labiaplasty meta (94–99% satisfaction), Géczi 2024 *Aesthet Surg J* comprehensive labiaplasty meta, Sorice-Virk 2020 *PRS* prospective n=62 (mean 6.5 of 11 symptoms preop → 93.5% symptom-free postop), Sharp 2016 *PRS* (preoperative distress predicts lower satisfaction; p=0.001), Goodman 2010 multicenter n=258 (91.6% satisfaction), Liu 2022 hood classification n=789 (95.7% satisfaction; revision 1.9%), Eserdağ 2021 inverted-Y, Xia 2021 three-step composite, Hersant 2018 labia majora aug n=21, Cihantimur 2013 / 2021 / Toplu 2021 genital-beautification packages, Alter 2012 pubic contouring, Fang 2023 *JPRAS* bilateral wall tightening (vaginal pressure 2.3 → 21.4 mmHg), Islek 2025 *Medicine* US (levator-hiatal area 29.14 → 23.51 cm²), Pereira 2024 *J Sex Med* SR (RCTs negative for VLQ), Slongo 2025 RCT, Wattanakrai 2022 RF + PEMF RCT, Lahlali 2021 hymenoplasty Moroccan center n=529, Menkes 2021 microfat / nanofat for GSM.
+
+**Bibliography**: 60 DOI-linked sequential references for the cosmetic landing (independent of the 04e bibliography to keep the file self-contained).
+
+### Treatment-atlas-completion summary
+
+After this session, **every primary atlas landing has the locked tabbed-MDF + tabbed-database pattern**:
+
+| Section | Tabs | MDF + DB |
+|---|---|---|
+| 04a Urethral Reconstruction | Male / Female | ✓ |
+| 04ab Bladder Neck Reconstruction | BNC / VUAS | ✓ |
+| 04b Bladder Augmentation & Catheterizable Channels | (single) | ✓ |
+| 04c Urinary Diversion | (single) | ✓ |
+| 04d Upper Tract Reconstruction | (single) | ✓ |
+| **04e Genital Reconstruction** | **Penile / Scrotal / Vulvar (3)** | ✓ |
+| 04f Incontinence | Female SUI / Male SUI / OAB-UUI | ✓ |
+| 04g Prolapse Repair | (single) | ✓ |
+| 04h Fistula Repair | Female / Male | ✓ |
+| 04i Tissue Transfer | (pointer-database) | ✓ |
+| 04j Male Sexual Dysfunction | ED / Peyronie's | ✓ |
+| 04k Gender-Affirming Surgery | Masculinizing / Feminizing / Non-Binary (3) | ✓ |
+| **04l Cosmetic Genital Surgery (NEW)** | **Male / Female (2)** | ✓ |
+
+### Editorial conventions reaffirmed this session
+
+- **Three-tab pattern** is now in production at 04e (Penile / Scrotal / Vulvar) and 04k (Masculinizing / Feminizing / Non-Binary). The locked structure: same `defaultValue` and `values` arrays for both MDF and Database tab-pairs so users see the same default tab in both blocks. Always include a **list-followed-by-non-list-paragraph** before the `</TabItem>` boundary to avoid MDX's "Expected closing tag … after end of listItem" error (`mdast-util-mdx-jsx end-tag-mismatch`).
+- **Atlas page scope discipline**: cosmetic content does not duplicate clinical-conditions SPS/PDD coverage; vulvar atlas does not duplicate 04k feminizing GAS; female cosmetic atlas explicitly carves "rebranded colporrhaphy" claims with the ACOG warning. Each atlas landing should host **operative decision support and a procedure database**; clinical-conditions, pharmacology, and foundations articles host the deeper content.
+- **Bibliography hygiene**: each new atlas landing builds its own self-contained bibliography rather than sharing across atlas files. When a paper is genuinely shared across two atlas pages (e.g., Yamamoto 2022 SCIP-LFT used in both 04e Penile and Scrotal), it lives once per file and is cited locally — no cross-file ref import.
+- **Cosmetic-surgery editorial framing**: cosmetic atlas pages must lead with the relevant society positions (SMSNA 2024 / ACOG 2020 / FIGO 2025 / FDA 2018) before any procedural detail. The `> ` admonition at the top is the locked place for this.
+
+---
+
+## Previous handoff snapshot — April 30, 2026 (new 04k Gender-Affirming Surgery atlas section with tabbed Masculinizing / Feminizing / Non-Binary-Nullification MDF + Database)
 
 This session created a new top-level Treatment Atlas section, **04k Gender-Affirming Surgery**, at sidebar position 10 (between Fistula Repair at 9 and Male Sexual Dysfunction at 11). The landing follows the locked tabbed pattern (used by 04a, 04ab, 04h, 04j) and is **focused exclusively on the genitourinary / reconstructive-urologic component** of GAS — top-surgery / breast / FFS / voice content lives only on `05c-gender-affirming/*` clinical-conditions pages and is not duplicated on the atlas. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues to be **commit and push after every change**.
 
@@ -1603,4 +1664,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-30*
+*Last updated: 2026-05-01*
