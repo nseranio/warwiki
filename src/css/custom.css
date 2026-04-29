@@ -497,14 +497,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
 }
 
-/* Category labels */
+/* Category labels — unified with regular menu links so collapsible
+   category titles look identical to non-collapsible ones across every
+   sidebar. Avoids the visual mismatch when some sections have hidden
+   children (which still register as collapsible) and others have no
+   children at all (which render as plain links). */
 .menu__list-item-collapsible .menu__link {
-  font-weight: 600;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--warwiki-text-subtle);
-  padding: 0.45rem 0.75rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--warwiki-text-muted);
+  padding: 0.35rem 0.75rem;
+  line-height: 1.4;
 }
 
 .menu__list-item-collapsible .menu__link:hover {
@@ -2119,24 +2124,14 @@ article {
 .sidebar-hidden-category { display: none !important; }
 .sidebar-hidden-item { display: none !important; }
 
-/* Treatment Atlas — uniform section-title styling regardless of whether
-   the section has hidden children (collapsible-with-link rendering) or
-   no children at all (regular menu-link rendering). Without this rule,
-   atlas sections with hidden children get the uppercase / smaller
-   collapsible-category style while sections with no children render
-   as normal-case regular menu links — visually inconsistent. We force
-   all atlas section titles to use the regular menu-link style. */
-.menu__list-item-collapsible .menu__link[href^="/docs/surgical-techniques/04"] {
-  font-weight: 400;
-  font-size: 0.875rem;
-  text-transform: none;
-  letter-spacing: normal;
-  color: var(--warwiki-text-muted);
-  padding: 0.35rem 0.75rem;
-}
-.menu__list-item-collapsible .menu__link[href^="/docs/surgical-techniques/04"]:hover {
-  color: var(--ifm-color-primary);
-  background-color: var(--warwiki-note-bg);
+/* Treatment Atlas — every section's children are deliberately hidden
+   (the landing page is the searchable database). Hide the expand
+   caret on these section titles so the user does not see a chevron
+   that, when clicked, expands to nothing. The caret is rendered as
+   a `::after` pseudo-element on links carrying `.menu__link--sublist-caret`. */
+.menu__link--sublist-caret[href^="/docs/surgical-techniques/04"]::after,
+.menu__list-item-collapsible:has(.menu__link[href^="/docs/surgical-techniques/04"]) .menu__caret {
+  display: none !important;
 }
 
 /* ═══════════════════════════════════════════════════════════
