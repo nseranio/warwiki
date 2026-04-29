@@ -497,31 +497,26 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
 }
 
-/* Category labels — unified with regular menu links so collapsible
-   category titles look identical to non-collapsible ones across every
-   sidebar. Avoids the visual mismatch when some sections have hidden
-   children (which still register as collapsible) and others have no
-   children at all (which render as plain links). */
-.menu__list-item-collapsible .menu__link {
-  font-weight: 400;
-  font-size: 0.875rem;
-  text-transform: none;
-  letter-spacing: normal;
-  color: var(--warwiki-text-muted);
-  padding: 0.35rem 0.75rem;
-  line-height: 1.4;
+/* Top-level category labels — prominent, uppercase, subtle color.
+   This is the deliberate visual hierarchy: level-1 entries stand out
+   as section titles, level-2+ entries render as subordinate doc links. */
+.menu__list-item-collapsible .menu__link,
+.theme-doc-sidebar-item-link-level-1 > .menu__link {
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--warwiki-text-subtle);
+  padding: 0.45rem 0.75rem;
 }
 
-.menu__list-item-collapsible .menu__link:hover {
+.menu__list-item-collapsible .menu__link:hover,
+.theme-doc-sidebar-item-link-level-1 > .menu__link:hover {
   color: var(--ifm-color-primary);
   background-color: var(--warwiki-note-bg);
 }
 
-/* Sidebar page links — explicit font-weight 400 so plain doc links
-   match collapsible-category titles (Infima's default `.menu__link`
-   is 600, which made non-collapsible atlas sections such as 04k GAS
-   / 04l Cosmetic / 04i Tissue Transfer appear bold while their
-   collapsible siblings rendered at 400). */
+/* Sidebar page links (level 2+ — subordinate doc-link style) */
 .menu__link {
   border-radius: var(--warwiki-radius-sm);
   color: var(--warwiki-text-muted);
