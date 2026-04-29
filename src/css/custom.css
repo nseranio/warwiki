@@ -517,11 +517,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--warwiki-note-bg);
 }
 
-/* Sidebar page links */
+/* Sidebar page links — explicit font-weight 400 so plain doc links
+   match collapsible-category titles (Infima's default `.menu__link`
+   is 600, which made non-collapsible atlas sections such as 04k GAS
+   / 04l Cosmetic / 04i Tissue Transfer appear bold while their
+   collapsible siblings rendered at 400). */
 .menu__link {
   border-radius: var(--warwiki-radius-sm);
   color: var(--warwiki-text-muted);
   font-size: 0.875rem;
+  font-weight: 400;
   padding: 0.35rem 0.75rem;
   transition: background-color 0.12s ease, color 0.12s ease;
   line-height: 1.4;

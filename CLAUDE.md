@@ -4,7 +4,97 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 1, 2026 (Treatment Atlas MDF rollout COMPLETE — 04e three-tab Genital Reconstruction + new 04l Cosmetic Genital Surgery section)
+## Current handoff snapshot — May 2, 2026 (Treatment Atlas sidebar cleanup — uniform "landing IS the database" pattern, prevalence-ordered, site-wide font consistency)
+
+This session was a sidebar / styling cleanup pass plus a clinical-prevalence reordering of the Treatment Atlas. No new article content. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
+
+### Treatment Atlas sidebar — uniform "landing IS the database" pattern (commit `9ab85a1`)
+
+**Problem.** The atlas sidebar showed visible inconsistencies. Older sections (04a, 04ab, 04b, 04c, 04d, 04e, 04f, 04g, 04h, 04j) had 3–10 visible child entries that expanded under the section title; newer single-doc sections (04i Tissue Transfer, 04k Gender-Affirming Surgery, 04l Cosmetic Genital Surgery) had zero children and appeared as flat clickable items; the top-level orphan `drug-coated-balloon.mdx` rendered as a sibling to the section folders instead of nested under any section.
+
+**Fix.** Apply the existing WARWIKI "landing IS the database" pattern to **every** atlas section. Each section now renders as a single clickable section title; clicking takes the user to the landing page where the MDF + searchable Database handle in-section navigation. Individual technique pages remain reachable via the database slug links and direct URLs.
+
+- **48 files modified** in a single sweep.
+- **9 sub-folder categories in 04a** (`anastomotic`, `combined`, `female`, `flap`, `graft`, `meatal-perineal`, `minimally-invasive`, `posterior`, `staged-complex`) — added `"className": "sidebar-hidden-category"` to each `_category_.json`.
+- **4 sub-folder categories in 04d** (`anastomosis-repair`, `interposition-graft`, `minimally-invasive`, `reimplantation`).
+- **3 sub-folder categories in 04f** (`female-sui`, `male-sui`, `oab-uui`). Note: the `procedures/` subfolder under 04f was already hidden from earlier work.
+- **2 sub-folder categories in 04j** (`penile-implants`, `peyronies-disease`).
+- **~28 section-root MDX files** — added `sidebar_class_name: sidebar-hidden-item` to frontmatter (principles articles, urinary-diversion technique pages, genital-reconstruction technique pages, sexual-dysfunction technique pages, etc.).
+- **`drug-coated-balloon.mdx` at the top level** — hidden from the sidebar; remains accessible via direct URL and inbound database links from 04ab BNC and 04a urethral.
+
+The sweep was applied with a Python script that walked each atlas section folder, marked subfolder `_category_.json` files with the hidden-category class, and injected `sidebar_class_name: sidebar-hidden-item` into frontmatter for every section-root MDX other than `index.mdx`.
+
+### Clinical-prevalence reordering of atlas sections (commit `6b986e3`)
+
+User request: "can these be ordered with some sort of rationale either alphabetical or prevalence of the issue?" The chosen rationale is **clinical prevalence in reconstructive-urology / urogynecology practice**, with **Tissue Transfer last** (the cross-cutting toolkit, not a primary domain) per explicit user request.
+
+| Position | Section | Rationale |
+|---|---|---|
+| 1 | Urethral Reconstruction | Most-common GURS indication — strictures, hypospadias, post-trauma |
+| 2 | Incontinence | Very common — male sling / AUS, female SUI, OAB |
+| 3 | Prolapse Repair | Very common urogyn primary domain |
+| 4 | Bladder Neck Reconstruction | Common after prostate surgery (TURP / RP) |
+| 5 | Bladder Augmentation & Catheterizable Channels | NLUTD, exstrophy, refractory OAB |
+| 6 | Urinary Diversion | Post-cystectomy, refractory |
+| 7 | Upper Tract Reconstruction | UPJO, ureteral stricture |
+| 8 | Fistula Repair | Less common but high-impact |
+| 9 | Genital Reconstruction | Post-trauma, AABP, oncologic, FGM/C |
+| 10 | Male Sexual Dysfunction | ED, Peyronie's |
+| 11 | Gender-Affirming Surgery | Specialized |
+| 12 | Cosmetic Genital Surgery | Elective |
+| 13 | Tissue Transfer | Cross-cutting toolkit — last per user |
+
+Implemented by updating the `position` field in each section's `_category_.json`.
+
+### Site-wide sidebar typography unification (commits `6b986e3`, `74db211`, `[next]`)
+
+User flagged that fonts looked different across the atlas — and ultimately wanted **site-wide** consistency: "And not just for this page but i just want the fonts and everything to be consistent across the site."
+
+**Three layered CSS bugs were uncovered and fixed in sequence:**
+
+1. **Collapsible category titles vs regular menu links.** WARWIKI's existing `.menu__list-item-collapsible .menu__link` rule (custom.css:501) styled category titles as **uppercase, 0.78rem, font-weight 600, letter-spacing 0.06em, --warwiki-text-subtle** — a deliberate visual hierarchy. But sections with hidden children kept the collapsible styling while sections with no children at all rendered as plain doc links (normal case, 0.875rem). The atlas after the prior cleanup had a mix of both, so titles looked visually inconsistent.
+
+   **Fix:** rewrite the collapsible-category rule to match regular `.menu__link` styling (font-weight 400, 0.875rem, normal case, normal letter-spacing, --warwiki-text-muted, 0.35rem padding). This applies SITE-WIDE — every sidebar (Foundations, Evaluation, Clinical Conditions, Treatment Atlas, Special Populations, Journal Club, History & Lineage, Resources) now renders collapsible category titles identically to non-collapsible doc links.
+
+2. **Empty expand caret on atlas sections.** Every atlas section deliberately hides its children via `.sidebar-hidden-category` / `.sidebar-hidden-item` (`display: none !important`). Docusaurus still rendered the chevron expand-caret on each section title because internally the category is "expandable." Clicking the caret expanded to nothing — a misleading affordance.
+
+   **Fix:** scoped CSS hides the `.menu__link--sublist-caret::after` pseudo-element and the `.menu__caret` button on links whose `href` starts with `/docs/surgical-techniques/04`. The `:has()` selector handles the wrapper-level caret button. Other sidebars keep their carets because they have real visible children.
+
+3. **Plain-doc-link bold inheritance.** Even after fixes 1 and 2, the three single-doc sections (04i Tissue Transfer, 04k Gender-Affirming Surgery, 04l Cosmetic Genital Surgery) appeared bold in the atlas list, while everything else was regular weight. Reason: those three render as plain `.menu__link` (no `.menu__list-item-collapsible` wrapper because they have no children at all). The prior fix only retargeted `.menu__list-item-collapsible .menu__link`. Plain `.menu__link` was inheriting Infima's default font-weight 600.
+
+   **Fix:** add an explicit `font-weight: 400` to the `.menu__link` rule in custom.css. This synchronizes plain doc links with the collapsible-category title style. After this fix, every sidebar entry across the site renders at the same weight, size, color, case, and padding.
+
+### Atlas sidebar — final state
+
+```
+Treatment Atlas
+├── Urethral Reconstruction
+├── Incontinence
+├── Prolapse Repair
+├── Bladder Neck Reconstruction
+├── Bladder Augmentation & Catheterizable Channels
+├── Urinary Diversion
+├── Upper Tract Reconstruction
+├── Fistula Repair
+├── Genital Reconstruction
+├── Male Sexual Dysfunction
+├── Gender-Affirming Surgery
+├── Cosmetic Genital Surgery
+└── Tissue Transfer
+```
+
+13 entries, all styled identically, no expand carets, no hidden-category clutter. Click any entry to land on the section's MDF + Database.
+
+### Editorial conventions reaffirmed this session
+
+- **"Landing IS the database" applied uniformly.** The pattern (used historically in 04b's `bnc-vuas/` + `outlet-continence/`, plus Foundations `flaps/` + `grafts/` + `surgeons/`) is now the locked default for the entire Treatment Atlas. Each section landing hosts the searchable Database with slug links to every individual technique page; sub-folders live under the section but are hidden from the sidebar. Direct URLs continue to resolve.
+- **Sidebar uniformity is enforced via CSS + structure.** Three rules in `src/css/custom.css` together enforce uniform sidebar appearance: (a) `.menu__link` and `.menu__list-item-collapsible .menu__link` both use the same 400-weight / 0.875rem / normal-case styling; (b) `.sidebar-hidden-category` / `.sidebar-hidden-item` use `display: none !important`; (c) atlas-specific `[href^="/docs/surgical-techniques/04"]` rules hide the empty expand caret. Future atlas sections should inherit this automatically.
+- **Atlas-section ordering rule.** Use clinical-prevalence ordering with cross-cutting toolkits (e.g., Tissue Transfer) last. The position numbers in each section's `_category_.json` are the source of truth — `sidebars.ts` uses `type: 'autogenerated'` so position values drive sidebar order.
+- **Atlas-section structural rule.** Every new atlas section follows the locked tabbed pattern: tabbed MDF + tabbed searchable Database (when the decision space splits cleanly into two or three cohorts) OR single MDF + single Database (when it doesn't). Section landing has `hide_title: true` and `slug: /surgical-techniques/<prefix>-<slug>`. The `_category_.json` has `link: { type: doc, id: surgical-techniques/<prefix>-<slug>/index }` and a `position` field.
+
+---
+
+## Previous handoff snapshot — May 1, 2026 (Treatment Atlas MDF rollout COMPLETE — 04e three-tab Genital Reconstruction + new 04l Cosmetic Genital Surgery section)
 
 This session **completed the Treatment Atlas Master Decision Framework rollout** — every primary atlas landing now has a uniform MDF + searchable Database structure. Two structural changes finished the rollout: the **04e Genital Reconstruction** landing was rebuilt as three tabs (Penile default + Scrotal + Vulvar), and a brand-new top-level section **04l Cosmetic Genital Surgery** was created at sidebar position 13 with tabbed Male (default) + Female cosmetic decision frameworks. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
 
@@ -1664,4 +1754,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-05-01*
+*Last updated: 2026-05-02*
