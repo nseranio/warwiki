@@ -5,59 +5,74 @@ hide_title: true
 slug: /surgical-techniques/04j-sexual-dysfunction
 ---
 
-# Erectile Dysfunction
+import GenericDatabase from '@site/src/components/GenericDatabase';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-This section covers the operative half of the male sexual-dysfunction toolkit. The landing defaults to **erectile dysfunction (ED)** — the stepwise framework from lifestyle modification through PDE5 inhibitors, intracavernosal injection, vacuum erection device, intraurethral alprostadil, low-intensity shockwave / regenerative therapy, and penile prosthesis implantation, including infection salvage. **Peyronie's disease** lives in its own subsection because the reconstructive question (straighten, lengthen, or prosthetically support the penis) is anatomically distinct from the medical-management question that drives ED treatment selection.
+# Male Sexual Dysfunction
 
-The medical-therapy hubs (PDE5 inhibitors, ICI agents, MUSE, testosterone replacement, androgen adjuncts, Peyronie's plaque-modifying agents, priapism management) live in [Pharmacology — Sexual Medicine & Andrology](/docs/foundations/pharmacology/sexual-medicine-andrology). Penile-revascularization technique lives at [Foundations — Saphenous Vein Graft](/docs/foundations/surgical-principles/grafts/saphenous-vein).
+This section covers the operative half of male sexual-dysfunction practice. The landing defaults to **erectile dysfunction (ED)** — the stepwise framework from lifestyle modification through PDE5 inhibitors, intracavernosal injection, vacuum erection device, intraurethral alprostadil, regenerative therapy, and penile-prosthesis implantation, including infection salvage. The second tab covers **Peyronie's disease (PD)**: phase determination, intralesional and mechanical therapies, and the surgical algorithm (plication vs. plaque incision/grafting vs. prosthesis with adjunctive straightening).
+
+For the **clinical-condition workups** — pathophysiology, risk factors, full diagnostic evaluation, and natural history — see the dedicated articles in Clinical Conditions:
 
 <ul className="section-stack">
   <li>
-    <a href="/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease" className="section-stack-title section-stack-link">Peyronie's Disease</a>
-    <span className="section-stack-desc">Disease phases, pathophysiology, evaluation (ICI test, Doppler), non-surgical therapies (CCH/Xiaflex, interferon, traction), surgical algorithm (plication vs. grafting vs. prosthesis + modeling)</span>
+    <a href="/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction" className="section-stack-title section-stack-link">Erectile Dysfunction (Clinical Conditions)</a>
+    <span className="section-stack-desc">Epidemiology, NO-cGMP physiology, vasculogenic / neurogenic / endocrine / drug-induced / psychogenic classification, ED as a cardiovascular risk marker, IIEF-5 / SHIM, full evaluation pathway.</span>
   </li>
   <li>
-    <a href="/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants" className="section-stack-title section-stack-link">Penile Implants</a>
-    <span className="section-stack-desc">Preop evaluation (CURSED), intraop setup (no-touch), approaches (PS/IP/SC), reservoir placement (SoR/HSM), models database, infection, revision, complications</span>
+    <a href="/docs/clinical-conditions/03g-genital-scrotal/peyronies-disease" className="section-stack-title section-stack-link">Peyronie's Disease (Clinical Conditions)</a>
+    <span className="section-stack-desc">Tunical microtrauma → fibrosis cascade, acute vs stable phases, natural history, PDQ / SHIM workup, intracavernosal-injection test for objective curvature measurement, comparative outcomes across non-surgical and surgical options.</span>
+  </li>
+  <li>
+    <a href="/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants" className="section-stack-title section-stack-link">Penile Implants Subsection</a>
+    <span className="section-stack-desc">Preoperative evaluation (CURSED), intraoperative setup (no-touch), approaches (PS / IP / SC), reservoir placement (SoR / HSM), models database, infection management, revision scenarios, complications.</span>
   </li>
 </ul>
+
+The medical-therapy hubs (PDE5 inhibitors, ICI agents, MUSE, testosterone replacement, androgen adjuncts, Peyronie's plaque-modifying agents, priapism management) live in [Pharmacology — Sexual Medicine & Andrology](/docs/foundations/pharmacology/sexual-medicine-andrology). Penile-revascularization graft technique lives at [Foundations — Saphenous Vein Graft](/docs/foundations/surgical-principles/grafts/saphenous-vein).
 
 ---
 
 ## Master Decision Framework
 
-ED management follows a **stepwise, patient-centered algorithm** endorsed by the **AUA 2018 Erectile Dysfunction Guideline** and the **EAU 2025 Male Sexual & Reproductive Health Update**, progressing from least to most invasive with treatment selection guided by severity, etiology, comorbidities, and patient/partner preference.<sup>[[1]](#ref1)[[10]](#ref10)</sup> The EAU 2025 update emphasizes **personalized treatment** — patients should be fully counseled on every available modality and choose based on invasiveness, tolerability, effectiveness, and personal expectations.<sup>[[10]](#ref10)</sup> **Combination therapy** is superior to monotherapy across multiple PDE5i-based combinations and should be attempted before advancing to prosthesis.<sup>[[18]](#ref18)</sup> For prosthesis infection, **immediate Mulcahy salvage preserves penile length** (mean 0.6 cm loss vs 3.7 cm with delayed reimplantation).<sup>[[32]](#ref32)[[35]](#ref35)</sup>
+<Tabs defaultValue="ed" values={[
+  { label: 'Erectile Dysfunction', value: 'ed' },
+  { label: "Peyronie's Disease", value: 'peyronie' },
+]}>
+  <TabItem value="ed">
 
-ED is a clinical diagnosis. Minimum evaluation: complete sexual / medical / psychosocial history, validated questionnaires (SHIM/IIEF-5, EHS), focused physical examination, and selective laboratory testing including a **morning serum total testosterone in every man with ED** (Moderate Recommendation; Grade C).<sup>[[1]](#ref1)</sup> ED is an **independent risk marker for cardiovascular disease** — over two-thirds of men with coronary artery disease report ED before any coronary symptoms — so cardiovascular risk stratification (Princeton III) is part of every initial encounter.<sup>[[1]](#ref1)[[2]](#ref2)[[4]](#ref4)</sup>
+ED management follows a **stepwise, patient-centered algorithm** endorsed by the **AUA 2018 Erectile Dysfunction Guideline** and the **EAU 2025 Male Sexual & Reproductive Health Update**, progressing from least to most invasive with treatment selection guided by severity, etiology, comorbidities, and patient/partner preference.<sup>[[1]](#ref1)[[2]](#ref2)</sup> The EAU 2025 update emphasizes **personalized treatment** — patients should be fully counseled on every available modality and choose based on invasiveness, tolerability, effectiveness, and personal expectations.<sup>[[2]](#ref2)</sup> **Combination therapy** is superior to monotherapy across multiple PDE5i-based combinations and should be optimized before advancing to prosthesis.<sup>[[4]](#ref4)</sup> For prosthesis infection, **immediate Mulcahy salvage preserves penile length** (mean 0.6 cm loss vs 3.7 cm with delayed reimplantation).<sup>[[18]](#ref18)[[19]](#ref19)</sup>
 
 ### Treatment Selection by Clinical Scenario
 
 | Clinical Scenario | First-Line | Alternative(s) | Avoid |
 |---|---|---|---|
-| **Newly diagnosed ED, no contraindications** | Lifestyle modification + [PDE5 inhibitor](/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors) (sildenafil, tadalafil, vardenafil, or avanafil), titrated to maximum dose with ≥6 properly executed attempts | Daily tadalafil 2.5–5 mg if concurrent BPH/LUTS or preference for spontaneity | Skipping cardiovascular risk assessment; declaring failure before maximum-dose trial |
+| **Newly diagnosed ED, no contraindications** | Lifestyle modification + [PDE5 inhibitor](/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors), titrated to maximum dose with ≥6 properly executed attempts | Daily tadalafil 2.5–5 mg if concurrent BPH/LUTS or preference for spontaneity | Skipping cardiovascular risk assessment; declaring failure before maximum-dose trial |
 | **Confirmed hypogonadism (morning total T &lt;300 ng/dL) + ED** | PDE5i + [testosterone replacement](/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement) | PDE5i monotherapy (often suboptimal in hypogonadal men) | Testosterone monotherapy without PDE5i |
-| **PDE5i non-responder after ≥6 max-dose attempts** | Combination therapy: switch PDE5i agent → PDE5i + [VED](/docs/surgical-techniques/04j-sexual-dysfunction/ved) → daily tadalafil → PDE5i + intraurethral alprostadil | [Intracavernosal injection (ICI)](/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections) | Premature progression to prosthesis without optimization |
+| **PDE5i non-responder after ≥6 max-dose attempts** | Combination therapy: switch agent → PDE5i + [VED](/docs/surgical-techniques/04j-sexual-dysfunction/ved) → daily tadalafil → PDE5i + intraurethral alprostadil | [Intracavernosal injection (ICI)](/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections) | Premature progression to prosthesis without optimization |
 | **PDE5i failure / intolerance, prefers pharmacotherapy** | [ICI](/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections) (alprostadil → bimix → trimix), in-office training and home dose titration | [MUSE](/docs/surgical-techniques/04j-sexual-dysfunction/muse-intraurethral) (intraurethral alprostadil) | Self-titration without supervised first dose (priapism risk) |
 | **Prefers non-pharmacologic option** | [Vacuum erection device](/docs/surgical-techniques/04j-sexual-dysfunction/ved) | MUSE | Restrictive ring &gt;30 minutes (ischemia risk) |
 | **Concurrent nitrate use (any formulation)** | VED, ICI (alprostadil monotherapy) | MUSE | **All PDE5 inhibitors (absolute contraindication)** |
 | **Post-radical prostatectomy ED (early, &lt;12–24 months)** | Penile rehabilitation: PDE5i ± VED ± ICI | Daily tadalafil | "Watch and wait" without rehabilitation |
+| **Mild–moderate vasculogenic ED, partial PDE5i response, prefers regenerative adjunct** | [Li-ESWT](/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt) + PDE5i | PRP (investigational) | Stem-cell therapy (investigational; outside guideline) |
 | **Refractory to optimized conservative + medical therapy, or patient preference** | [3-piece IPP](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/implant-models) (AMS 700 series or Coloplast Titan) | 2-piece IPP (prior pelvic surgery, reservoir contraindication); malleable (limited dexterity, neophallus, salvage, cost-constrained) | Continued failed pharmacotherapy without device counseling |
 | **Peyronie's disease + ED unresponsive to medical therapy** | [IPP with adjunctive straightening](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening) (Wilson manual modeling → tunical plication → plaque incision/grafting as needed) | (See [Peyronie's algorithm](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease)) | IPP alone without addressing curvature |
 | **Severe corporal fibrosis (post-priapism, post-explant)** | Malleable prosthesis at high-volume center | Staged dilation → 3-piece IPP | Standard 3-piece in densely fibrosed corpora without dilation strategy |
 | **Acute prosthesis infection** | **Immediate Mulcahy salvage** (washout + same-session reimplant — IPP or malleable) | [Extracapsular reimplantation](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/infection) (mature capsule) | **Delayed reimplantation** (mean 3.7 cm corporal length loss vs 0.6 cm with immediate salvage) |
-| **Young man with traumatic arterial injury (no atherosclerosis)** | Penile arterial revascularization at high-volume center | ICI / PDE5i bridge during workup | Revascularization for atherosclerotic ED (poor outcomes) |
+| **Young man with traumatic arterial injury (no atherosclerosis)** | Penile arterial revascularization at high-volume center using [saphenous vein graft](/docs/foundations/surgical-principles/grafts/saphenous-vein) | ICI / PDE5i bridge during workup | Revascularization for atherosclerotic ED (poor outcomes) |
 
 ### Stepwise Treatment Ladder
 
 | Step | Tier | Expected Efficacy | When to Advance |
 |---|---|---|---|
-| **0** | Lifestyle modification + risk-factor optimization (weight loss, exercise, smoking cessation, medication review, treat hypogonadism) | IIEF improvement of 3–5 points with structured programs<sup>[[1]](#ref1)</sup> | Insufficient response after adequate trial, or patient desires faster improvement |
-| **1** | **PDE5 inhibitor** monotherapy at maximum tolerated dose | **60–70%** successful intercourse<sup>[[16]](#ref16)[[17]](#ref17)</sup> | Failure after dose titration + counseling on proper use |
-| **1B** | **Combination therapy** — PDE5i + testosterone (if hypogonadal), PDE5i + VED, PDE5i agent switch, daily tadalafil | Superior to monotherapy across IIEF in JAMA Network Open meta of 59 RCTs<sup>[[18]](#ref18)</sup> | Failure of optimized combination |
-| **2A** | **Intracavernosal injection** (alprostadil, bimix, or trimix) | Up to **70%** with alprostadil; up to **90%** with trimix<sup>[[20]](#ref20)[[21]](#ref21)</sup> | Failure, intolerance, &gt;50% dropout, or patient preference for definitive solution |
-| **2B** | **Intraurethral alprostadil (MUSE)** or **vacuum erection device** | MUSE 43–69%; VED 60–80%<sup>[[15]](#ref15)[[16]](#ref16)</sup> | Insufficient response or dissatisfaction |
-| **2.5** | **Regenerative therapy** — Li-ESWT (best evidence), PRP (emerging) — as adjunct or in PDE5i partial responders | Li-ESWT mean IIEF +2.0 (95% CI 0.99–3.00, p &lt; 0.001) in meta of 14 studies<sup>[[23]](#ref23)</sup>; investigational, not yet guideline-recommended as standalone<sup>[[15]](#ref15)[[22]](#ref22)</sup> | Insufficient response → Step 3 |
-| **3** | **Penile prosthesis implantation** (3-piece IPP preferred) | **70–90%** patient and partner satisfaction — among the highest of any prosthetic device in medicine<sup>[[28]](#ref28)[[29]](#ref29)</sup> | Definitive endpoint; irreversible |
+| **0** | Lifestyle modification + risk-factor optimization (weight loss, exercise, smoking cessation, medication review, treat hypogonadism) | IIEF improvement of 3–5 points with structured programs<sup>[[1]](#ref1)</sup> | Insufficient response, or patient desires faster improvement |
+| **1** | **PDE5 inhibitor** monotherapy at maximum tolerated dose | **60–70%** successful intercourse<sup>[[3]](#ref3)</sup> | Failure after dose titration + counseling |
+| **1B** | **Combination therapy** — PDE5i + testosterone (if hypogonadal), PDE5i + VED, agent switch, daily tadalafil | Superior to monotherapy across IIEF in *JAMA Netw Open* meta of 59 RCTs<sup>[[4]](#ref4)</sup> | Failure of optimized combination |
+| **2A** | **Intracavernosal injection** (alprostadil, bimix, or trimix) | Up to **70%** with alprostadil; up to **90%** with trimix<sup>[[3]](#ref3)[[8]](#ref8)</sup> | Failure, intolerance, &gt;50% dropout, or patient preference for definitive solution |
+| **2B** | **Intraurethral alprostadil (MUSE)** or **vacuum erection device** | MUSE 43–69%; VED 60–80%<sup>[[3]](#ref3)</sup> | Insufficient response or dissatisfaction |
+| **2.5** | **Regenerative therapy** — [Li-ESWT](/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt) (best evidence), PRP (emerging) | Li-ESWT mean IIEF +2.0 (95% CI 0.99–3.00, p &lt; 0.001) in meta of 14 studies<sup>[[6]](#ref6)</sup>; investigational, not yet guideline-recommended as standalone<sup>[[5]](#ref5)[[7]](#ref7)</sup> | Insufficient response → Step 3 |
+| **3** | **Penile prosthesis implantation** (3-piece IPP preferred) | **70–90%** patient and partner satisfaction<sup>[[13]](#ref13)[[14]](#ref14)</sup> | Definitive endpoint; irreversible |
 
 ### IPP Device-Selection Sub-Comparison
 
@@ -65,237 +80,551 @@ ED is a clinical diagnosis. Minimum evaluation: complete sexual / medical / psyc
 |---|---|---|---|
 | **Components** | Two cylinders + scrotal pump + retropubic (or ectopic) reservoir | Two cylinders + combined pump-reservoir in scrotum | Two bendable rods |
 | **Naturalness** | Most natural erection / flaccidity — gold standard | Intermediate rigidity; limited fluid volume | Always semi-rigid — concealment difficult |
-| **Mechanical survival** | &gt;90% at 5 years with modern devices<sup>[[28]](#ref28)[[30]](#ref30)</sup> | &gt;90% at 5 years | Highest — no hydraulic components |
+| **Mechanical survival** | &gt;90% at 5 years with modern devices<sup>[[14]](#ref14)[[15]](#ref15)</sup> | &gt;90% at 5 years | Highest — no hydraulic components |
 | **Surgical complexity** | Most complex (reservoir placement) | Avoids retropubic reservoir | Simplest |
 | **Cost** | Highest | Intermediate | Lowest |
-| **Ideal candidate** | Standard candidate with adequate dexterity and no reservoir contraindication | Prior pelvic / abdominal surgery making reservoir placement risky | Limited dexterity; neophallus; cost constraints; salvage after infection |
+| **Ideal candidate** | Standard candidate with adequate dexterity, no reservoir contraindication | Prior pelvic / abdominal surgery making reservoir placement risky | Limited dexterity; neophallus; cost constraints; salvage after infection |
 
-### Prosthesis Infection Salvage — Length Preservation Hierarchy
+### Prosthesis Infection Salvage — Length-Preservation Hierarchy
 
 | Strategy | Technique | Infection-Free Rate | Length Impact |
 |---|---|---|---|
-| **Immediate IPP salvage (Mulcahy)** | 7-solution antiseptic / antibiotic washout + same-session IPP reimplantation<sup>[[32]](#ref32)[[33]](#ref33)</sup> | **82%** long-term | Mean **0.6 cm** loss<sup>[[35]](#ref35)</sup> |
-| **Immediate malleable salvage** | Mulcahy washout + malleable prosthesis; later elective conversion to IPP at ~6.7 months in ~31%<sup>[[36]](#ref36)</sup> | **93%** in single-center series; **70.5%** in 2026 VA national n = 76 (45.5% reinfection in diabetics)<sup>[[37]](#ref37)</sup> | Preserves length |
-| **Extracapsular salvage** | Explant infected device, wash capsule, implant in extracapsular sinusoidal space<sup>[[34]](#ref34)</sup> | **94.4%** (n = 18) | Bypasses contaminated capsule |
-| **Delayed reimplantation** | Explant, wait 3–6 months, reimplant | Standard | **Mean 3.7 cm corporeal length loss**, irreversible<sup>[[35]](#ref35)</sup> |
+| **Immediate IPP salvage (Mulcahy)** | 7-solution antiseptic / antibiotic washout + same-session IPP reimplantation<sup>[[18]](#ref18)[[16]](#ref16)</sup> | **82%** long-term | Mean **0.6 cm** loss<sup>[[19]](#ref19)</sup> |
+| **Immediate malleable salvage** | Mulcahy washout + malleable prosthesis; later elective conversion to IPP at ~6.7 mo in ~31%<sup>[[17]](#ref17)</sup> | **93%** single-center; **70.5%** in 2026 VA national n = 76 (45.5% reinfection in diabetics)<sup>[[20]](#ref20)</sup> | Preserves length |
+| **Extracapsular salvage** | Explant infected device, wash capsule, reimplant in extracapsular sinusoidal space<sup>[[21]](#ref21)</sup> | **94.4%** (n = 18) | Bypasses contaminated capsule |
+| **Delayed reimplantation** | Explant, wait 3–6 months, reimplant | Standard | **Mean 3.7 cm corporeal length loss**, irreversible<sup>[[19]](#ref19)</sup> |
 
-The Lopategui 2018 finding is the operational anchor: **delayed reimplantation costs ~3.7 cm of corporeal length, regardless of time-to-reimplant interval, while immediate salvage costs ~0.6 cm**. When the patient is medically suitable, salvage should be offered at presentation rather than deferred.<sup>[[35]](#ref35)</sup>
+The Lopategui 2018 finding is the operational anchor: **delayed reimplantation costs ~3.7 cm of corporeal length, regardless of time-to-reimplant interval, while immediate salvage costs ~0.6 cm**. Salvage should be offered at presentation whenever the patient is medically suitable.<sup>[[19]](#ref19)</sup>
 
----
+  </TabItem>
+  <TabItem value="peyronie">
 
-## Epidemiology
+PD management hinges on **accurate phase determination** — non-surgical therapy in the acute phase, surgery reserved for stable disease — with treatment selection further driven by **erectile-function status**, **curvature severity**, **deformity complexity**, and **length concerns**. The contemporary anchors are the **AUA 2015 Peyronie's Disease Guideline**, the **EAU 2025 Male Sexual & Reproductive Health Update**, and the **2026 BJU Guideline-of-Guidelines synthesis**.<sup>[[22]](#ref22)[[2]](#ref2)[[23]](#ref23)</sup> Among non-surgical options, **CCH (Xiaflex) is the only FDA-approved intralesional therapy** (~35% curvature improvement, with incremental benefit through all 4 cycles).<sup>[[25]](#ref25)[[26]](#ref26)[[27]](#ref27)</sup> The **RestoreX traction device** is the only PTT modality with **RCT evidence** of curvature, length, and EF improvement at practical daily-use times (30–90 min/day).<sup>[[28]](#ref28)[[29]](#ref29)</sup> Surgical correction remains the **most rapid and reliable** approach: plication achieves ≥90% straightening even for severe deformities at minimal de novo-ED risk; plaque incision/excision + grafting (PEG) provides superior length outcomes at the cost of higher complexity and de novo ED.<sup>[[30]](#ref30)[[31]](#ref31)[[32]](#ref32)</sup> For PD with refractory ED, **IPP with adjunctive straightening** addresses both problems with &gt;80% satisfaction.<sup>[[33]](#ref33)[[34]](#ref34)</sup>
 
-ED is defined as the **persistent inability to attain and maintain an erection sufficient to permit satisfactory sexual performance**. It affects an estimated **52% of men aged 40–70** at all severities, with prevalence rising sharply from ~12% at 40 to ~50% at 70.<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)[[4]](#ref4)</sup> ED reduces quality of life for the patient and partner and is an **independent risk marker for cardiovascular disease** — more than two-thirds of patients with coronary artery disease report ED symptoms before any coronary syndrome.<sup>[[2]](#ref2)[[4]](#ref4)</sup>
+### Step 1 — Determine Disease Phase
 
----
-
-## Pathophysiology and Etiologic Classification
-
-Normal erection requires coordinated function of **psychogenic, endocrine, vascular, and neurogenic systems**. Nitric oxide (NO) released from parasympathetic non-adrenergic non-cholinergic neurons and corporal endothelium activates guanylyl cyclase, raising cGMP, which relaxes cavernosal smooth muscle. Sinusoidal expansion increases arterial inflow and compresses subtunical venules against the tunica albuginea (the corporal veno-occlusive mechanism), producing rigidity. ED arises from disruption at any node in this pathway.<sup>[[4]](#ref4)[[5]](#ref5)[[6]](#ref6)</sup>
-
-| Etiology | Mechanism | Common Causes | Prevalence Among ED Patients |
-|---|---|---|---|
-| **Vasculogenic** | Impaired arterial inflow (atherosclerosis) and/or veno-occlusive failure | Atherosclerosis, hypertension, hyperlipidemia, diabetes, smoking, metabolic syndrome | Most common — ~70% of organic ED<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Neurogenic** | Disrupted central or peripheral neural pathways | Spinal cord injury, multiple sclerosis, Parkinson's disease, radical pelvic surgery (especially radical prostatectomy), diabetic neuropathy | 10–19%<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Endocrine / hormonal** | Testosterone deficiency, hyperprolactinemia, thyroid dysfunction | Hypogonadism (morning total T &lt;300 ng/dL), pituitary adenoma, diabetes mellitus | Hypogonadism in 5–35%<sup>[[1]](#ref1)[[3]](#ref3)</sup> |
-| **Psychogenic** | Performance anxiety, depression, relationship conflict, stress | Primary psychogenic or secondary to organic ED | 10–25% as primary; mixed in the majority<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Drug-induced** | Medication side effect | Antihypertensives (β-blockers, thiazides), SSRIs/SNRIs, antiandrogens, opioids, alcohol, recreational drugs | Up to 25%<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Mixed** | Combination of organic + psychogenic | Most common clinical presentation | Majority of cases<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-
----
-
-## Comprehensive Evaluation
-
-The **AUA 2018 Guideline** establishes the evaluation framework, refined by the **2018 Process of Care Model** and the **EAU 2025 Update**.<sup>[[1]](#ref1)[[9]](#ref9)[[10]](#ref10)</sup>
-
-### Step 1 — Core evaluation (every patient)
-
-Per AUA, every man with ED warrants a thorough medical, sexual, and psychosocial history, focused physical examination, and selective laboratory testing (Clinical Principle).<sup>[[1]](#ref1)</sup>
-
-- **Sexual history** — onset (gradual vs sudden), severity, situational vs global, attain vs maintain, presence of nocturnal / morning / masturbatory erections (preserved nocturnal erections favor a psychogenic component), prior erectogenic-therapy use, partner factors.<sup>[[1]](#ref1)</sup>
-- **Medical history** — cardiovascular risk factors (hypertension, diabetes, hyperlipidemia, smoking, obesity), prior pelvic surgery / radiation, neurological disease, medications (β-blockers, thiazides, SSRIs, antiandrogens), substance use, mood disorders.<sup>[[1]](#ref1)[[4]](#ref4)[[7]](#ref7)</sup>
-- **Validated questionnaires** — **Sexual Health Inventory for Men (SHIM / IIEF-5)** and **Erection Hardness Score (EHS)** for severity, longitudinal tracking, and treatment-response measurement (Expert Opinion).<sup>[[1]](#ref1)</sup>
-- **Physical examination** — vitals, genital exam (penile skin, urethral meatus, palpation for Peyronie's plaque from pubic bone to coronal sulcus), testicular size and consistency, secondary sexual characteristics, focused cardiovascular and neurological examination.<sup>[[1]](#ref1)</sup>
-- **Laboratory testing** — **morning serum total testosterone in every man with ED** (Moderate Recommendation; Grade C); confirm low values with repeat measurement, free / bioavailable testosterone, LH, prolactin. Add fasting glucose / HbA1c, fasting lipid panel; PSA when age- and clinically appropriate.<sup>[[1]](#ref1)[[10]](#ref10)[[11]](#ref11)</sup>
-
-### Step 2 — Specialized testing (select patients)
-
-| Test | What It Measures | Normal Values | Indications |
-|---|---|---|---|
-| **Penile Duplex Doppler Ultrasound (PDUS)** | Arterial inflow (PSV) and veno-occlusive function (EDV) after intracavernosal injection | PSV &gt;30 cm/s (normal arterial); EDV &lt;5 cm/s (normal venous) | Young men considering vascular surgery; Peyronie's-disease assessment; medicolegal cases; PDE5i non-responders to inform prognosis<sup>[[1]](#ref1)[[2]](#ref2)[[12]](#ref12)[[13]](#ref13)</sup> |
-| **Nocturnal penile tumescence (NPT)** | Erections during REM sleep | ≥3 episodes/night, ≥60% rigidity, ≥10 min duration | Differentiate organic vs psychogenic ED; medicolegal evaluation<sup>[[3]](#ref3)</sup> |
-| **Intracavernosal injection test** | Erectile response to vasoactive agent | Full rigid erection within 10 min | Vascular-integrity screen; in-office training for ICI therapy<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Dynamic infusion cavernosometry / cavernosography (DICC)** | Corporal veno-occlusive function | Maintenance flow &lt;5 mL/min; pressure drop &lt;45 mmHg/30 sec | Young men with suspected congenital venous leak; pre-vascular-surgery workup<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Selective internal pudendal angiography** | Penile arterial anatomy | Patent pudendal and penile arteries | Young men with traumatic arterial injury being considered for revascularization<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-
-A key Memorial Sloan Kettering operating principle: PDUS accuracy is **entirely predicated on achieving complete cavernosal smooth-muscle relaxation**. A redosing protocol (titrate up to maximum dose of vasoactive agent) optimizes reliability; without full relaxation, false-positive arterial-insufficiency and venous-leak diagnoses are common.<sup>[[12]](#ref12)</sup>
-
-### Step 3 — Cardiovascular risk stratification
-
-ED is a **risk marker for underlying CVD** and patients should be counseled accordingly (Clinical Principle).<sup>[[1]](#ref1)[[4]](#ref4)</sup> The **Princeton III Consensus** stratifies patients into low-, intermediate-, and high-cardiac-risk categories before initiating sexual activity or pharmacotherapy:
-
-- **Low risk** — asymptomatic, &lt;3 major CVD risk factors, controlled hypertension, mild stable angina, post-revascularization without ischemia, mild valvular disease, or NYHA Class I heart failure → can proceed with sexual activity and ED treatment.
-- **Intermediate risk** — ≥3 CVD risk factors, moderate stable angina, recent MI (2–8 weeks ago without intervention), NYHA Class II heart failure, or non-cardiac atherosclerotic disease → defer sexual activity and ED treatment until cardiology evaluation.
-- **High risk** — unstable or refractory angina, uncontrolled hypertension, NYHA Class III–IV heart failure, recent MI (&lt;2 weeks), high-risk arrhythmias, hypertrophic obstructive cardiomyopathy, or moderate-to-severe valvular disease → cardiology stabilization before any sexual activity or ED pharmacotherapy.<sup>[[2]](#ref2)[[4]](#ref4)</sup>
-
-### Step 4 — Psychosexual assessment
-
-Referral to a **mental health professional** should be considered to promote treatment adherence, reduce performance anxiety, and integrate treatments into a sexual relationship (Moderate Recommendation; Grade C). Psychological factors may be primary drivers or secondary contributors and are present to some degree in the majority of patients.<sup>[[1]](#ref1)</sup>
-
----
-
-## Treatment Algorithm
-
-### Tier 0 — Lifestyle modification and risk-factor optimization
-
-Per AUA, men with ED who have comorbidities known to negatively affect erectile function should be counseled that **lifestyle modifications, including diet and increased physical activity, improve overall health and may improve erectile function** (Moderate Recommendation; Grade C).<sup>[[1]](#ref1)</sup>
-
-| Intervention | Evidence | Expected Benefit |
+| Finding | Phase | Action |
 |---|---|---|
-| **Weight loss** | RCTs of intensive lifestyle change show IIEF improvement in obese men with ED<sup>[[1]](#ref1)[[2]](#ref2)</sup> | Modest EF improvement; concurrent CVD risk reduction |
-| **Aerobic exercise** | Meta-analyses show IIEF improvement of 3–5 points<sup>[[1]](#ref1)[[2]](#ref2)</sup> | Comparable to PDE5i in mild ED; augments pharmacotherapy |
-| **Smoking cessation** | ED prevalence ~2× higher in smokers; cessation improves endothelial function<sup>[[1]](#ref1)[[2]](#ref2)</sup> | Gradual improvement over months |
-| **Alcohol moderation** | Heavy use impairs EF; moderate use neutral<sup>[[1]](#ref1)</sup> | Variable |
-| **Medication review** | Switch β-blockers, thiazides, SSRIs to alternatives where possible<sup>[[1]](#ref1)[[3]](#ref3)</sup> | May resolve drug-induced ED |
-| **Treat underlying conditions** | Optimize HbA1c, blood pressure, lipid panel<sup>[[1]](#ref1)[[2]](#ref2)</sup> | Reduces progression; augments treatment response |
+| Penile pain present, curvature changing/worsening, symptom duration ≤18 months | **Acute (active)** | Non-surgical therapy only; **surgery contraindicated** |
+| No pain, curvature stable ≥3 months | **Chronic (stable)** | Candidate for surgical correction if deformity prevents coitus |
 
-### Tier 1 — First-line pharmacotherapy: PDE5 inhibitors
+Stability is defined clinically as: (1) no curvature change for 3–6 months, (2) absence of pain on erection, and (3) time-from-onset beyond 12 months — all three should be present before offering surgery.<sup>[[22]](#ref22)</sup>
 
-Per AUA, men with ED should be informed about **FDA-approved oral PDE5 inhibitors** unless contraindicated (Strong Recommendation; Grade B); instructions should be provided to maximize efficacy (Strong Recommendation; Grade C); and the dose should be titrated for optimal efficacy (Strong Recommendation; Grade B).<sup>[[1]](#ref1)</sup>
+### Step 2 — Acute-Phase Treatment
 
-| Agent | Typical Dose | Onset | Duration | Unique Features |
-|---|---|---|---|---|
-| **Sildenafil (Viagra)** | 25–100 mg | 30–60 min | 4–6 hr | Most clinical experience; take on empty stomach (food delays absorption)<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Tadalafil (Cialis)** | 10–20 mg on-demand; 2.5–5 mg daily | 30–60 min | Up to 36 hr | Daily dosing option; FDA-approved for BPH/LUTS; food-independent; longest duration<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Vardenafil (Levitra)** | 5–20 mg | 30–60 min | 4–6 hr | ODT formulation available (no water needed)<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Avanafil (Stendra)** | 50–200 mg | 15–30 min | 6–12 hr | Fastest onset; most PDE5-selective; fewest visual side effects; can be taken with food<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-
-**Overall efficacy: 60–70%** — including diabetic, hypertensive, and SCI populations. Level 1 evidence shows **no significant differences in efficacy, safety, or tolerability** among the four agents.<sup>[[16]](#ref16)[[17]](#ref17)[[2]](#ref2)</sup>
-
-**Contraindications.** Concurrent nitrate use (absolute — risk of severe hypotension); inadequate cardiac reserve for sexual activity. Caution with α-blockers (orthostatic hypotension).<sup>[[1]](#ref1)[[11]](#ref11)</sup>
-
-**Counseling points to maximize efficacy.**
-
-1. Adequate sexual stimulation is required — PDE5i do not cause spontaneous erections.
-2. Sildenafil and vardenafil are taken on an empty stomach.
-3. Allow adequate onset time (30–60 min for most; 15 min for avanafil).
-4. Trial of **≥6 attempts at maximum tolerated dose** before declaring failure.
-5. Switch between PDE5i agents before declaring class failure.
-6. Daily tadalafil 2.5–5 mg may benefit men who prefer spontaneity or have concurrent BPH/LUTS.<sup>[[1]](#ref1)[[17]](#ref17)</sup>
-
-**Non-responders.** 30–35% of patients fail PDE5i; **30–50% of these are salvageable** with detailed counseling on proper use and physician follow-up to confirm an adequate clinical trial.<sup>[[17]](#ref17)</sup>
-
-### Tier 1B — Combination therapy for PDE5i suboptimal responders
-
-A **JAMA Network Open systematic review and meta-analysis** of 59 RCTs and 8,000+ patients showed combination therapies were superior to monotherapy across multiple regimens.<sup>[[18]](#ref18)</sup>
-
-| Combination | Evidence | Clinical Utility |
-|---|---|---|
-| **PDE5i + testosterone** | Superior to PDE5i alone in hypogonadal men; TRT may restore PDE5i responsiveness<sup>[[18]](#ref18)[[19]](#ref19)</sup> | First combination to try in men with confirmed hypogonadism (morning total T &lt;300 ng/dL) |
-| **PDE5i + VED** | Additive effect — VED provides mechanical engorgement; PDE5i enhances vascular response<sup>[[18]](#ref18)</sup> | Useful in post-prostatectomy rehabilitation |
-| **PDE5i + Li-ESWT** | Emerging evidence of synergistic benefit<sup>[[18]](#ref18)[[3]](#ref3)</sup> | May improve PDE5i responsiveness in mild–moderate vasculogenic ED |
-| **PDE5i + intraurethral alprostadil** | Dual cGMP + cAMP pathway activation<sup>[[18]](#ref18)</sup> | Salvage in PDE5i non-responders |
-| **PDE5i + psychosexual therapy** | Addresses both organic and psychogenic components<sup>[[1]](#ref1)[[18]](#ref18)</sup> | Recommended whenever psychological factors contribute |
-
-### Tier 2 — Second-line therapies
-
-#### 2A. Intracavernosal injection (ICI) therapy
-
-The most effective non-surgical treatment. Per ICSM 2015, ICI with alprostadil is effective and well-tolerated and should be offered as **second-line therapy** (Level 1 evidence; Grade A for efficacy; Grade C for positioning).<sup>[[16]](#ref16)[[3]](#ref3)</sup>
-
-| Agent | Composition | Efficacy | Key Adverse Effects |
+| Clinical Scenario | First-Line | Alternative(s) | Avoid |
 |---|---|---|---|
-| **Alprostadil (Caverject)** | PGE1 | Up to 70% | Penile pain (37%); prolonged erection (4%); priapism (0.4%); penile fibrosis (3%)<sup>[[1]](#ref1)[[2]](#ref2)[[21]](#ref21)</sup> |
-| **Trimix** | Alprostadil + papaverine + phentolamine | Up to 90% | Lower pain than alprostadil alone; combined-agent priapism risk higher (OR 1.84 vs single agent)<sup>[[20]](#ref20)[[3]](#ref3)</sup> |
-| **Bimix** | Papaverine + phentolamine | 60–80% | No penile pain; higher priapism risk than alprostadil alone<sup>[[3]](#ref3)</sup> |
+| **Acute PD, curvature 30–90°, intact EF** | Intralesional [CCH (Xiaflex)](/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents) + modeling (up to 4 cycles / 8 injections) | [Penile traction therapy (RestoreX)](/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy) as monotherapy | Surgery (contraindicated in active phase) |
+| **Acute PD, prefers maximum non-surgical effect** | **CCH + RestoreX combination** (49% curvature reduction vs 31% CCH alone; +1.9 cm length; 6.9× more likely to achieve ≥20° improvement)<sup>[[28]](#ref28)</sup> | CCH alone or RestoreX alone | Vitamin E, tamoxifen (AUA: should NOT be offered) |
+| **Acute PD, intralesional alternative to CCH** | [Interferon α-2b](/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents) (~12–14° curvature improvement) | [Verapamil](/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents) — AUA/ISSM see potential role; EAU recommends against | Corticosteroids; IL-hyaluronic acid (insufficient evidence) |
+| **Acute PD, oral therapy preferred** | **No oral monotherapy has robust evidence**; consider pentoxifylline (off-label) or coenzyme Q10 — modest/uncertain benefit | Tadalafil daily (mechanism-based; Spirito 2024 disease-modifying signal) | **Vitamin E and tamoxifen — AUA: should NOT be offered** (Strong, Grade B) |
+| **Acute PD, pain predominant** | [Li-ESWT](/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt) for **pain only** (no curvature benefit); penile traction; tadalafil | NSAIDs / pain-directed pharmacotherapy | **ESWT for curvature reduction** (Cochrane: no curvature benefit; AUA: should NOT be used for curvature/plaque reduction) |
 
-Per the FDA Caverject label, the initial alprostadil dose is **2.5 mcg for vasculogenic / psychogenic / mixed etiology** and **1.25 mcg for pure neurogenic etiology**, titrated upward — no more than 3 injections per week with ≥24 hours between, and doses &gt;60 mcg are not recommended.<sup>[[21]](#ref21)</sup>
+### Step 3 — Stable-Phase Surgical Decision Algorithm
 
-**Dropout exceeds 50%** — primarily inconvenience, needle anxiety, and partner reluctance — making in-office training and structured patient education essential.<sup>[[3]](#ref3)</sup>
+The critical branch point is **erectile-function status**. The matrix below operationalizes the AUA / EAU / ISSM / CUA guideline consensus.<sup>[[22]](#ref22)[[2]](#ref2)[[23]](#ref23)</sup>
 
-#### 2B. Intraurethral alprostadil (MUSE)
+| Clinical Scenario | First-Line | Alternative(s) | Avoid |
+|---|---|---|---|
+| **Adequate EF + curvature ≤60° + simple deformity + adequate length** | [Tunical plication](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication) (Nesbit, 16-dot, 8-dot, parallel rows) — ≥90% straightening, minimal de novo ED<sup>[[30]](#ref30)[[35]](#ref35)</sup> | PEG (length-preserving but higher de novo ED risk) | Plication in patient unwilling to accept perceived shortening |
+| **Adequate EF + curvature ≤60° + complex deformity (biplanar, hinge)** | **Tunical plication (expanded indication)** — 91% straightening even for severe / complex deformities at long-term follow-up (Reddy 2018)<sup>[[31]](#ref31)</sup> | PEG | "Hinge effect = automatic graft" — long-term data show plication works |
+| **Adequate EF + curvature &gt;60° or hourglass / indentation deformity** | [PEG (plaque incision/excision + grafting)](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting) — 80–98.6% straightening, +0.9 to +1.99 cm length<sup>[[32]](#ref32)[[36]](#ref36)</sup> | Plication with patient counseled on additional shortening | PEG in patient unable to tolerate 5–15.7% de novo ED risk |
+| **Adequate EF + severe shortening as primary concern** | **PEG** — only surgical option that provides length gain | Plication only if shortening is acceptable | Plication when length preservation is the explicit goal |
+| **ED refractory to PDE5i/ICI + any curvature** | [IPP with adjunctive straightening](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening) — addresses both problems; &gt;80% satisfaction; depression decreases (PROPPER 19.3% → 10.5%)<sup>[[33]](#ref33)[[34]](#ref34)</sup> | (No alternative with both EF and curvature reliably addressed) | IPP alone without curvature management |
+| **Residual curvature &gt;15–20° after IPP inflation** | **Stepwise adjunct ladder**: [manual modeling](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling) (Wilson; ~75% of cases; median 26° correction) → tunical plication (~5%; median 40°) → plaque incision/grafting (~2%; median 55°)<sup>[[34]](#ref34)</sup> | [Scratch technique + postoperative VED](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/scratch-technique) (Antonini 2018; residual 17–21° → 8–9°)<sup>[[37]](#ref37)</sup> | Skipping adjunctive straightening when residual curvature is functionally significant |
+| **PD without ED but prefers prosthesis (emerging indication)** | IPP in selected men — Moncada 2025 reports 87.9% satisfaction; mechanical failure was actually lower in non-ED group<sup>[[38]](#ref38)</sup> | Plication or PEG (standard non-ED algorithm) | Routine IPP in PD without ED — emerging indication; warrants further research |
+| **Recalcitrant complex PD with ED + severe shortening** | IPP + multiple corporeal incisions + collagen-fleece grafting (mean +2.5 cm length; 94.9% satisfaction with straightness; 89.7% would recommend) | Standard IPP + manual modeling | Acceptance of major shortening as inevitable |
 
-Alprostadil 125–1000 mcg pellet inserted into the urethra via applicator. Success rates **43–69%** — lower than ICI but less invasive. Side effects: penile pain, urethral burning, hypotension, syncope (rare), priapism (rare).<sup>[[16]](#ref16)[[3]](#ref3)</sup>
+### Step 4 — Plication vs Grafting Sub-Comparison
 
-#### 2C. Vacuum erection device (VED)
-
-Negative pressure draws blood into the penis; a constriction ring at the base maintains the erection. Effective in **60–80%**, no systemic side effects. Limitations: cold / numb sensation, impaired ejaculation, petechiae, partner dissatisfaction with appearance. Particularly useful in post-prostatectomy rehabilitation and for patients preferring non-pharmacologic options.<sup>[[2]](#ref2)[[15]](#ref15)</sup>
-
-### Tier 2.5 — Emerging / regenerative therapies
-
-**Low-intensity extracorporeal shockwave therapy (Li-ESWT).** A **2025 Cochrane systematic review** and the **2025 EAU update** both recognize growing evidence but note that high-quality long-term data are still lacking.<sup>[[15]](#ref15)[[22]](#ref22)</sup> A meta-analysis of 14 studies (n = 833) showed Li-ESWT significantly improved IIEF (mean difference 2.00, 95% CI 0.99–3.00, p &lt; 0.001).<sup>[[23]](#ref23)</sup> A Bayesian network meta-analysis of regenerative therapies estimated SMD vs control of **0.84 (95% CrI 0.49–1.2)**, with higher-energy protocols (0.15 mJ/mm²) producing larger effect (SMD 1.1).<sup>[[24]](#ref24)</sup>
-
-**Platelet-rich plasma (PRP).** A meta-analysis of 12 controlled trials (n = 991) showed PRP improved IIEF vs placebo (SMD 0.59, 95% CI 0.34–0.84) with higher rates of minimal clinically important difference (RR 1.94). The EAU 2025 update concludes that **more conclusive evidence is needed** before routine clinical use.<sup>[[22]](#ref22)[[25]](#ref25)[[26]](#ref26)</sup>
-
-**Stem-cell therapy.** The least mature of the regenerative therapies — network-meta SMD vs control 0.92 (95% CrI −0.49 to 2.3, not statistically significant). **Investigational only**.<sup>[[24]](#ref24)[[27]](#ref27)</sup>
-
-### Tier 3 — Penile prosthesis implantation
-
-Per AUA, men with ED should be informed about **penile prosthesis implantation**, including benefits and risks (Strong Recommendation; Grade C). Prosthesis surgery should not be performed in the presence of systemic, cutaneous, or urinary tract infection.<sup>[[1]](#ref1)</sup>
-
-**Outcomes.**
-
-- **Satisfaction 70–90%** for both patient and partner — among the highest of any prosthetic device in medicine.<sup>[[3]](#ref3)[[29]](#ref29)[[30]](#ref30)</sup>
-- **Mechanical survival &gt;90% at 5 years** with modern devices. A tertiary-center series reported 88.4% functional at median 26 months (94.4% primary vs 57.1% secondary).<sup>[[30]](#ref30)[[31]](#ref31)</sup>
-- **Infection rate 2–4%** — reduced by antibiotic-impregnated (InhibiZone) and hydrophilic (Titan) coatings.<sup>[[3]](#ref3)[[29]](#ref29)</sup>
-- Prosthesis implantation does not interfere with urination, ejaculation, sensation, or orgasm.<sup>[[29]](#ref29)</sup>
-
-**Special populations.**
-
-| Population | Key Considerations |
-|---|---|
-| **Post-radical prostatectomy** | Most common indication; altered pelvic anatomy; consider ectopic reservoir placement; concurrent AUS may be placed for dual ED + SUI; corporal fibrosis uncommon unless &gt;2 yr post-RP<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Peyronie's disease** | IPP addresses ED + curvature; adjunctive ladder = manual modeling → tunical plication → plaque incision/grafting; PROPPER &gt;80% satisfaction at 1–2 yr; depression decreased 19.3% → 10.5%<sup>[[2]](#ref2)[[3]](#ref3)</sup> |
-| **Diabetes mellitus** | Infection risk 2–3× baseline; antibiotic / hydrophilic coatings reduce risk; optimize HbA1c preoperatively<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Corporal fibrosis** (post-priapism, post-explant) | Most technically demanding; may require cavernotomy, cylinder downsizing, or staged procedures; high-volume surgeon essential<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Neophallus** (post-phalloplasty) | No tunica albuginea; higher infection, erosion, and mechanical-failure rates; specialized expertise required; rear-tip extender often needed<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
-| **Spinal cord injury** | Higher erosion risk due to absent sensation; malleable may be preferred; meticulous sizing<sup>[[1]](#ref1)</sup> |
-
-For the operative deep-dive, see [Penile Implants](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants) (preoperative evaluation, intraoperative setup, surgical approaches, reservoir placement, models database, infection management, revision scenarios, complications).
-
-### Tier 4 — Penile vascular surgery (highly selected patients)
-
-| Procedure | Indication | Outcomes |
+| Factor | Favors Plication | Favors PEG |
 |---|---|---|
-| **Penile arterial revascularization** | **Traumatic** penile arterial injury in men &lt;40 yr with documented arterial occlusion on angiography; **no atherosclerotic disease** | Potentially curative — 60–70% long-term success in properly selected patients<sup>[[2]](#ref2)[[3]](#ref3)</sup> |
-| **Venous ligation surgery** | Congenital venous leak in young men (rarely performed) | Poor long-term outcomes in most patients; **not recommended for acquired veno-occlusive dysfunction**<sup>[[2]](#ref2)[[3]](#ref3)</sup> |
+| **Curvature severity** | Any (even ≥60° at long-term follow-up) | Traditionally &gt;60–70%; meaningful overlap |
+| **Deformity complexity** | Simple, biplanar | Hourglass, severe focal indentation |
+| **Penile length concern** | Adequate length, accepts modest shortening | Length preservation / gain is priority |
+| **Operative complexity** | Simpler, shorter OR time, can be done without degloving | More complex, graft harvest required |
+| **De novo ED risk tolerance** | Minimal (0–5%) | Accepts 5–15.7% risk |
+| **Surgeon experience** | Widely reproducible | Requires grafting expertise |
+| **Yafi 2018 head-to-head**<sup>[[36]](#ref36)</sup> | Plication +92.2% curvature correction; −1.0 cm length; +4.9 IIEF-5 | PEG +94.9% curvature correction; +0.9 cm length; +2.2 IIEF-5 |
+
+### Step 5 — Graft-Material Selection (When PEG Is Chosen)
+
+| Graft | Type | Curvature Success | De Novo ED | Length Change | Best Evidence |
+|---|---|---|---|---|---|
+| **Buccal mucosa graft** | Autologous | **98.6%** | **1.7%** | +1.99 cm (affected side) | Badr 2026 SR/meta of 17 studies — highest success, lowest de novo ED, lowest shortening<sup>[[39]](#ref39)</sup> |
+| **Collagen fleece (TachoSil)** | Xenograft | 91–94% at long-term | 15.7% worsened EF | +1.1 cm | Hatzichristodoulou 2021 — 319 pts, 47-mo follow-up, suture-free sealing, 79-min OR, 87.8% satisfaction<sup>[[40]](#ref40)</sup> |
+| **Tunica vaginalis** | Autologous | ~90% at 24 mo | Rare | Significant gain | Same operative field; readily available |
+| **Small intestinal submucosa (SIS)** | Xenograft | &gt;80% | 5–15% | Variable | Off-the-shelf; no donor-site morbidity |
+| **Pericardium (bovine / human cadaveric)** | Xeno- / allograft | &gt;80% | 5–15% | Variable | Off-the-shelf; good handling |
+| **Saphenous vein** | Autologous | &gt;80% | 5–20% | Variable | Historical gold standard |
+| **Dermis** | Auto- / allograft | &gt;80% | Variable | Variable | Less commonly used today |
+
+  </TabItem>
+</Tabs>
 
 ---
 
-## ED in Special Clinical Contexts
+## Treatment Database
 
-### Post-radical prostatectomy ED
+<Tabs defaultValue="ed" values={[
+  { label: 'Erectile Dysfunction', value: 'ed' },
+  { label: "Peyronie's Disease", value: 'peyronie' },
+]}>
+  <TabItem value="ed">
 
-ED after radical prostatectomy reflects **cavernous-nerve injury** at surgery. Even with bilateral nerve-sparing technique, recovery of spontaneous erections may take 12–24 months. Penile-rehabilitation protocols (early PDE5i ± VED ± ICI) aim to preserve corporal smooth muscle and prevent fibrosis during this window, though the rehabilitation evidence base remains limited.<sup>[[15]](#ref15)[[38]](#ref38)[[4]](#ref4)</sup>
+export const edTechniques = [
+  // ===== TIER 0 — LIFESTYLE / PSYCHOLOGICAL =====
+  {
+    name: "Lifestyle Modification & Risk-Factor Optimization",
+    tier: "Lifestyle / Behavioral",
+    invasiveness: "Non-invasive",
+    notes: "Weight loss, aerobic exercise, smoking cessation, alcohol moderation, medication review, glycemic / blood-pressure / lipid optimization. IIEF improvement of 3–5 points with structured programs; comparable to PDE5i in mild ED. Per AUA 2018 (Moderate; Grade C).",
+    slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction",
+  },
+  {
+    name: "Psychosexual Therapy",
+    tier: "Lifestyle / Behavioral",
+    invasiveness: "Non-invasive",
+    notes: "Individual or couples-based therapy; particularly valuable for primary psychogenic ED, performance anxiety, and as adjunct to organic-ED treatments. Per AUA 2018 (Moderate; Grade C).",
+    slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction",
+  },
 
-### Diabetic ED
+  // ===== TIER 1 — ORAL PHARMACOTHERAPY =====
+  {
+    name: "PDE5 Inhibitors (Sildenafil, Tadalafil, Vardenafil, Avanafil)",
+    tier: "Oral Pharmacotherapy",
+    invasiveness: "Non-invasive",
+    notes: "First-line for nearly all ED. 60–70% successful intercourse at maximum tolerated dose; no efficacy difference among the four agents (Level 1 evidence). Daily tadalafil 2.5–5 mg dual-indicated for BPH/LUTS. Absolute contraindication: concurrent nitrate use.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors",
+  },
+  {
+    name: "Testosterone Replacement (in confirmed hypogonadism)",
+    tier: "Oral Pharmacotherapy",
+    invasiveness: "Non-invasive",
+    notes: "For morning total T <300 ng/dL on two measurements with concordant symptoms. Improves IIEF; combination with PDE5i superior to either alone. TRAVERSE 2023 cardiovascular non-inferiority data. Endocrine Society 2018 framework.",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement",
+  },
 
-Diabetes drives ED through **multiple converging pathways** — macro- and microvascular disease, autonomic and peripheral neuropathy, hypogonadism, and local factors (Peyronie's, balanitis). PDE5i efficacy is lower (50–60% vs 60–70% overall). Optimization of HbA1c, treatment of hypogonadism, and combination therapy improve outcomes.<sup>[[39]](#ref39)[[4]](#ref4)</sup>
+  // ===== TIER 2 — MECHANICAL / INTRAURETHRAL / INJECTABLE =====
+  {
+    name: "Vacuum Erection Device (VED)",
+    tier: "Mechanical",
+    invasiveness: "Non-invasive",
+    notes: "Negative-pressure draws blood into corpora; constriction ring at base maintains erection. 60–80% effective. Useful for post-RP rehabilitation, PDE5i contraindication, partner-acceptable in many couples. Restrictive ring should not exceed 30 min (ischemia risk).",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved",
+  },
+  {
+    name: "Intraurethral Alprostadil (MUSE)",
+    tier: "Intraurethral",
+    invasiveness: "Minimally Invasive",
+    notes: "PGE1 pellet (125–1000 mcg) inserted via applicator. Success 43–69% — less than ICI but less invasive. Side effects: penile/urethral pain, hypotension, syncope (rare). Useful when PDE5i absorption is contraindicated or insufficient.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/muse-intraurethral",
+  },
+  {
+    name: "Intracavernosal Injection — Alprostadil (Caverject)",
+    tier: "Injectable",
+    invasiveness: "Minimally Invasive",
+    notes: "Up to 70% efficacy. FDA initial dose 2.5 mcg vasculogenic/psychogenic/mixed; 1.25 mcg pure neurogenic; titrated upward; ≤3 injections/week, ≥24 hr apart, dose ≤60 mcg. AEs: penile pain (37%), prolonged erection (4%), priapism (0.4%), penile fibrosis (3%).",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections",
+  },
+  {
+    name: "Intracavernosal Injection — Bimix / Trimix",
+    tier: "Injectable",
+    invasiveness: "Minimally Invasive",
+    notes: "Bimix (papaverine + phentolamine) 60–80%; Trimix (alprostadil + papaverine + phentolamine) up to 90%. Trimix has lower pain than alprostadil alone; combined-agent priapism risk OR 1.84 vs single agent (Lima 2025 meta). Compounded; off-label in US.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections",
+  },
 
-### Neurogenic ED (spinal cord injury, multiple sclerosis)
+  // ===== TIER 2.5 — REGENERATIVE / EMERGING =====
+  {
+    name: "Low-Intensity Shockwave Therapy (Li-ESWT)",
+    tier: "Regenerative / Emerging",
+    invasiveness: "Non-invasive",
+    notes: "Best evidence among regenerative options. Mean IIEF +2.0 (95% CI 0.99–3.00) in Lu 2017 meta; SMD 0.84 in Hinojosa 2024 Bayesian network meta. Cochrane 2025 and EAU 2025 acknowledge growing evidence but not yet recommended as standalone. Useful as PDE5i adjunct in mild–moderate vasculogenic ED.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt",
+  },
+  {
+    name: "Platelet-Rich Plasma (PRP)",
+    tier: "Regenerative / Emerging",
+    invasiveness: "Minimally Invasive",
+    notes: "Intracavernosal injection of autologous PRP. Panunzio 2024 meta of 12 controlled trials: SMD 0.59 vs placebo. EAU 2025: more conclusive evidence needed before routine use. Investigational.",
+    slug: "/docs/foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma",
+  },
+  {
+    name: "Stem Cell Therapy",
+    tier: "Regenerative / Emerging",
+    invasiveness: "Minimally Invasive",
+    notes: "Adipose-derived or bone-marrow-derived stem cells injected intracavernosally. Network meta SMD 0.92 (95% CrI −0.49 to 2.3, not significant). Investigational only — outside guideline practice.",
+  },
 
-ICI with alprostadil achieves **80–93%** success in neurogenic ED. PDE5i are effective in many men with incomplete lesions. Initial ICI dose is **lower (1.25 mcg alprostadil)** because of heightened sensitivity and higher priapism risk; VED is also effective and well-tolerated.<sup>[[40]](#ref40)[[21]](#ref21)</sup>
+  // ===== TIER 3 — PROSTHESIS =====
+  {
+    name: "3-Piece Inflatable Penile Prosthesis (IPP)",
+    tier: "Surgical Prosthesis",
+    invasiveness: "Surgical Implant",
+    notes: "AMS 700 series (CX, LGX, CXR) and Coloplast Titan (OTR, Touch). Two cylinders + scrotal pump + retropubic (or ectopic) reservoir. Most natural erection/flaccidity; gold standard. 70–90% satisfaction; >90% mechanical survival at 5 yr; 2–4% infection.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/implant-models",
+  },
+  {
+    name: "2-Piece Inflatable Penile Prosthesis",
+    tier: "Surgical Prosthesis",
+    invasiveness: "Surgical Implant",
+    notes: "Two cylinders + combined pump-reservoir in scrotum. Avoids retropubic reservoir — useful in prior pelvic / abdominal surgery making reservoir placement risky. Less rigidity than 3-piece; limited fluid volume.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/implant-models",
+  },
+  {
+    name: "Malleable (Semi-Rigid) Prosthesis",
+    tier: "Surgical Prosthesis",
+    invasiveness: "Surgical Implant",
+    notes: "Two bendable rods. Simplest to implant; longest durability; lowest cost; no mechanical failure. Concealment difficult (always semi-rigid). Best for limited dexterity, neophallus, salvage after infection, cost-constrained settings.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/implant-models",
+  },
+  {
+    name: "Mulcahy Salvage (Immediate Reimplantation)",
+    tier: "Surgical Prosthesis",
+    invasiveness: "Surgical Implant",
+    notes: "7-solution antiseptic/antibiotic washout + same-session reimplantation. 82% IPP infection-free; 93% with malleable salvage in single-center. Lopategui 2018 anchor: 0.6 cm length loss vs 3.7 cm with delayed reimplantation. Should be offered whenever patient is medically suitable.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/infection",
+  },
 
----
+  // ===== TIER 4 — VASCULAR (HIGHLY SELECTED) =====
+  {
+    name: "Penile Arterial Revascularization",
+    tier: "Vascular Surgery",
+    invasiveness: "Surgical Open",
+    notes: "For young men (<40 yr) with traumatic penile arterial injury and documented arterial occlusion on angiography — NO atherosclerotic disease. 60–70% long-term success in properly selected patients. Saphenous-vein conduit anastomosis to dorsal penile artery / cavernosal artery branch.",
+    slug: "/docs/foundations/surgical-principles/grafts/saphenous-vein",
+  },
+  {
+    name: "Venous Ligation Surgery",
+    tier: "Vascular Surgery",
+    invasiveness: "Surgical Open",
+    notes: "For congenital venous leak in young men. Rarely performed in modern practice — poor long-term outcomes in most patients; NOT recommended for acquired veno-occlusive dysfunction.",
+  },
+];
 
-## Key Takeaways
+export const edColumns = [
+  {
+    key: 'name',
+    header: 'Treatment',
+  },
+  {
+    key: 'tier',
+    header: 'Tier',
+    badge: true,
+    badgeColors: {
+      'Lifestyle / Behavioral':       '#6b7280',
+      'Oral Pharmacotherapy':         '#047857',
+      'Mechanical':                   '#0369a1',
+      'Intraurethral':                '#b45309',
+      'Injectable':                   '#7c3aed',
+      'Regenerative / Emerging':      '#0f766e',
+      'Surgical Prosthesis':          '#b91c1c',
+      'Vascular Surgery':             '#374151',
+    },
+  },
+  {
+    key: 'invasiveness',
+    header: 'Invasiveness',
+    badge: true,
+    badgeColors: {
+      'Non-invasive':       '#6b7280',
+      'Minimally Invasive': '#0f766e',
+      'Surgical Implant':   '#7c3aed',
+      'Surgical Open':      '#b91c1c',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
 
-ED management follows a **stepwise algorithm** endorsed by the AUA 2018 and EAU 2025 guidelines, progressing from lifestyle modification through PDE5 inhibitors (60–70% efficacy), intracavernosal injection (up to 90% with trimix), and ultimately penile prosthesis implantation (70–90% satisfaction).<sup>[[1]](#ref1)[[16]](#ref16)[[2]](#ref2)[[29]](#ref29)</sup> The **EAU 2025 update** emphasizes personalized treatment with full counseling on every available modality.<sup>[[10]](#ref10)</sup> **Combination therapy** is superior to monotherapy and should be optimized before advancing to prosthesis.<sup>[[18]](#ref18)</sup> Among regenerative therapies, **Li-ESWT has the strongest evidence** but still lacks high-quality long-term data and guideline endorsement as standalone therapy.<sup>[[15]](#ref15)[[22]](#ref22)[[23]](#ref23)[[24]](#ref24)</sup> For prosthesis infection, **immediate Mulcahy salvage preserves penile length** (0.6 cm loss vs 3.7 cm with delayed reimplantation) and should be offered whenever the patient is medically suitable.<sup>[[35]](#ref35)[[33]](#ref33)</sup> Cardiovascular risk stratification belongs in every ED encounter — the symptom may be the **first manifestation of systemic vascular disease**.
+<GenericDatabase
+  data={edTechniques}
+  columns={edColumns}
+  filterKey="tier"
+  filterLabel="Tier"
+  entityLabel="treatments"
+/>
+
+  </TabItem>
+  <TabItem value="peyronie">
+
+export const pdTechniques = [
+  // ===== ORAL — LIMITED EVIDENCE =====
+  {
+    name: "Pentoxifylline (off-label)",
+    tier: "Oral — Limited Evidence",
+    invasiveness: "Non-invasive",
+    notes: "Methylxanthine; antioxidant / anti-fibrotic / anti-inflammatory mechanism. Some clinical signal in acute phase but only 1 RCT; Cochrane excluded for data integrity. Not formally recommended by AUA; some clinicians use off-label.",
+    slug: "/docs/clinical-conditions/03g-genital-scrotal/peyronies-disease",
+  },
+  {
+    name: "Coenzyme Q10",
+    tier: "Oral — Limited Evidence",
+    invasiveness: "Non-invasive",
+    notes: "Antioxidant. Single RCT showed modest benefit; low-quality evidence. May be offered with explicit limited-data counseling.",
+    slug: "/docs/clinical-conditions/03g-genital-scrotal/peyronies-disease",
+  },
+  {
+    name: "Daily Tadalafil (mechanism-based, off-label for PD)",
+    tier: "Oral — Limited Evidence",
+    invasiveness: "Non-invasive",
+    notes: "Spirito 2024 disease-modifying signal for tunical fibrosis. Acceptable adjunct in acute phase or co-treatment for concurrent ED.",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors",
+  },
+  {
+    name: "Vitamin E — DO NOT OFFER",
+    tier: "Oral — Not Recommended",
+    invasiveness: "Non-invasive",
+    notes: "AUA 2015 (Strong; Grade B): vitamin E should NOT be offered. No benefit over placebo in RCTs.",
+  },
+  {
+    name: "Tamoxifen — DO NOT OFFER",
+    tier: "Oral — Not Recommended",
+    invasiveness: "Non-invasive",
+    notes: "AUA 2015 (Strong; Grade B): tamoxifen should NOT be offered. No benefit over placebo.",
+  },
+  {
+    name: "Potaba (potassium para-aminobenzoate)",
+    tier: "Oral — Not Recommended",
+    invasiveness: "Non-invasive",
+    notes: "Cochrane: 'limited efficacy.' High pill burden, GI side effects, cost. May be offered but not preferred.",
+  },
+
+  // ===== INTRALESIONAL — FDA-APPROVED + SECOND-LINE =====
+  {
+    name: "Collagenase Clostridium Histolyticum (CCH / Xiaflex)",
+    tier: "Intralesional — FDA-Approved",
+    invasiveness: "Minimally Invasive",
+    notes: "ONLY FDA-approved non-surgical PD therapy. Up to 4 cycles × 2 injections + clinician + home modeling. Mean ~17° curvature reduction (~35% improvement); 68.7% achieve ≥20% improvement. Ziegelmann 2023 IMPRESS pooled: incremental benefit through all 4 cycles. AE: corporal rupture ~0.5–0.7%. Indication: stable PD, plaque, curvature 30–90°.",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
+  },
+  {
+    name: "Interferon α-2b",
+    tier: "Intralesional — Second-Line",
+    invasiveness: "Minimally Invasive",
+    notes: "Antifibrotic — decreases collagen production, increases collagenase activity. ~12–14° curvature improvement; pain reduction. AUA / EAU / ISSM: may be offered. Flu-like AEs common. Typically 5 million units bi-weekly × 6 doses.",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
+  },
+  {
+    name: "Verapamil (intralesional)",
+    tier: "Intralesional — Second-Line",
+    invasiveness: "Minimally Invasive",
+    notes: "Calcium-channel blocker; some uncontrolled-series evidence for plaque softening and pain. Conflicting RCT data. AUA / ISSM: see potential role. EAU 2025: recommends against. Controversial.",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
+  },
+  {
+    name: "Hyaluronic Acid / BoNT / Nicardipine / Steroids (intralesional)",
+    tier: "Intralesional — Investigational",
+    invasiveness: "Minimally Invasive",
+    notes: "Limited evidence. Not standard of care. Not recommended outside research protocols.",
+  },
+
+  // ===== MECHANICAL / DEVICE =====
+  {
+    name: "Penile Traction Therapy — RestoreX",
+    tier: "Mechanical / Device",
+    invasiveness: "Non-invasive",
+    notes: "Only PTT device with RCT-level evidence. Ziegelmann 2019 RCT: −11.7° curvature, +1.5 cm length, EF improvement, 30–90 min/day. Joseph 2020 follow-up: 95% length gains (mean 2.0–2.2 cm), 61% curvature improvements at 6 mo.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
+  },
+  {
+    name: "Penile Traction Therapy — Older Devices (Penimaster PRO, Andropenis)",
+    tier: "Mechanical / Device",
+    invasiveness: "Non-invasive",
+    notes: "Longitudinal traction; require 3–8 hr/day with adherence as the major barrier. Small uncontrolled studies; Cochrane high-uncertainty. Less practical than RestoreX.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
+  },
+  {
+    name: "Vacuum Erection Device (no constriction ring) — for PD",
+    tier: "Mechanical / Device",
+    invasiveness: "Non-invasive",
+    notes: "Repeated negative-pressure stretching. Some benefit for length; less evidence for curvature than dedicated traction. Useful as adjunct in acute phase or post-IPP scratch protocol.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved",
+  },
+  {
+    name: "Extracorporeal Shockwave Therapy (ESWT) — for pain only",
+    tier: "Mechanical / Device",
+    invasiveness: "Non-invasive",
+    notes: "AUA 2015: should NOT be used for curvature/plaque reduction. Cochrane: no evidence for curvature benefit. May be offered for acute-phase pain when pain is the dominant symptom.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt",
+  },
+  {
+    name: "CCH + RestoreX Combination",
+    tier: "Combination Non-Surgical",
+    invasiveness: "Minimally Invasive",
+    notes: "Most evidence-based non-surgical combination. Alom 2019: 49% curvature improvement (vs 31% CCH alone), +1.9 cm length, 6.9× more likely to achieve ≥20° improvement. Contemporary first-line non-surgical regimen.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
+  },
+
+  // ===== SURGICAL — PLICATION =====
+  {
+    name: "Tunical Plication — Nesbit",
+    tier: "Surgical — Plication",
+    invasiveness: "Surgical Open",
+    notes: "Transverse elliptical wedge excision of tunica on convex side; closed primarily. ≥90% straightening; 0.5–2.0 cm shortening; 0–13% de novo ED.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
+  },
+  {
+    name: "Tunical Plication — Yachia",
+    tier: "Surgical — Plication",
+    invasiveness: "Surgical Open",
+    notes: "Longitudinal incision with transverse closure on convex side (Heineke-Mikulicz principle). Equivalent outcomes to Nesbit with technical simplification.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
+  },
+  {
+    name: "Tunical Plication — 16-Dot (Gholami-Lue) / Iterative 8-Dot",
+    tier: "Surgical — Plication",
+    invasiveness: "Surgical Open",
+    notes: "Multiple small plication sutures, no excision. Demzik 2022 iterative 8-dot (n=66, 55% complex deformities): 97% intraop success, 91% straight at follow-up, 6% minor complications, no revisions. Reddy 2018: long-term outcomes equivalent for severe (≥60°) and milder cases — supports broad indication.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
+  },
+  {
+    name: "Tunical Albuginea Plication (TAP / Lue technique)",
+    tier: "Surgical — Plication",
+    invasiveness: "Surgical Open",
+    notes: "Imbrication with permanent braided sutures. Can be performed via minimally invasive ventral incision (~64% of cases) without circumcising incision or degloving.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
+  },
+
+  // ===== SURGICAL — GRAFTING =====
+  {
+    name: "Plaque Incision/Excision + Buccal Mucosa Graft",
+    tier: "Surgical — Grafting (PEG)",
+    invasiveness: "Surgical Open",
+    notes: "Highest-success graft material. Badr 2026 meta of 17 studies: 98.6% success, 92.1% satisfaction, 1.7% de novo ED, 1.1% shortening, +1.99 cm affected side. Requires oral harvest.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
+  },
+  {
+    name: "Plaque Incision/Excision + Collagen Fleece (TachoSil)",
+    tier: "Surgical — Grafting (PEG)",
+    invasiveness: "Surgical Open",
+    notes: "Hatzichristodoulou suture-free sealing technique. 319 pts at 47 mo: 91.2% complete straightness, +1.1 cm length, 94% glans-sensation return, 87.8% satisfaction. 79-min OR time. 15.7% worsened EF — the highest of major graft options.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
+  },
+  {
+    name: "Plaque Incision/Excision + Tunica Vaginalis Graft",
+    tier: "Surgical — Grafting (PEG)",
+    invasiveness: "Surgical Open",
+    notes: "Same operative field; readily available. ~90% success at 24 mo; rare de novo ED; significant length gain.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
+  },
+  {
+    name: "Plaque Incision/Excision + SIS / Pericardium / Dermis / Saphenous Vein",
+    tier: "Surgical — Grafting (PEG)",
+    invasiveness: "Surgical Open",
+    notes: "Off-the-shelf or autologous alternatives. >80% success across series; 5–15% de novo ED depending on material. Saphenous vein is the historical gold standard.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
+  },
+
+  // ===== SURGICAL — PROSTHESIS + ADJUNCT =====
+  {
+    name: "Inflatable Penile Prosthesis with Adjunctive Straightening",
+    tier: "Surgical — Prosthesis",
+    invasiveness: "Surgical Implant",
+    notes: "Indication: PD + ED refractory to medical therapy (and emerging indication: PD without ED in selected patients — Moncada 2025). Stepwise adjunct: modeling → plication → grafting. >80% satisfaction (PROPPER). Hammad 2025 multicenter: 82.4% required adjuncts beyond IPP alone.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
+  },
+  {
+    name: "Manual Modeling — Wilson Technique",
+    tier: "Surgical — Prosthesis Adjunct",
+    invasiveness: "Surgical Implant",
+    notes: "First-line adjunct during IPP; used in ~75% of cases. Forceful reverse-direction bending against inflated cylinders. Median 26° correction (Hammad 2025). 90-second intervals; glanular pressure.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling",
+  },
+  {
+    name: "Concurrent Tunical Plication (over IPP cylinders)",
+    tier: "Surgical — Prosthesis Adjunct",
+    invasiveness: "Surgical Implant",
+    notes: "Used when modeling insufficient (~5% of cases). Median 40° correction.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
+  },
+  {
+    name: "Plaque Incision/Grafting (over IPP cylinders)",
+    tier: "Surgical — Prosthesis Adjunct",
+    invasiveness: "Surgical Implant",
+    notes: "Used when plication insufficient (~2% of cases) — most severe / calcified plaques. Median 55° correction (highest among adjuncts).",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
+  },
+  {
+    name: "Scratch Technique + Postoperative VED",
+    tier: "Surgical — Prosthesis Adjunct",
+    invasiveness: "Surgical Implant",
+    notes: "Endocavernosal plaque disruption through corporotomy; avoids degloving / NVB mobilization. Antonini 2018: residual 17–21° → 8–9° at 24 wk with VED protocol. Shaeer punch variant: 85% OR-time reduction vs excision-grafting.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/scratch-technique",
+  },
+  {
+    name: "IPP + Multiple Corporeal Incisions + Collagen-Fleece Grafting",
+    tier: "Surgical — Prosthesis Adjunct",
+    invasiveness: "Surgical Implant",
+    notes: "Fernández-Pascual 2019 — for complex PD with severe shortening. Mean +2.5 cm lengthening; 94.9% satisfaction with straightness; 89.7% would recommend.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
+  },
+];
+
+export const pdColumns = [
+  {
+    key: 'name',
+    header: 'Treatment',
+  },
+  {
+    key: 'tier',
+    header: 'Tier',
+    badge: true,
+    badgeColors: {
+      'Oral — Limited Evidence':         '#6b7280',
+      'Oral — Not Recommended':          '#374151',
+      'Intralesional — FDA-Approved':    '#047857',
+      'Intralesional — Second-Line':     '#0f766e',
+      'Intralesional — Investigational': '#0369a1',
+      'Mechanical / Device':             '#b45309',
+      'Combination Non-Surgical':        '#7c3aed',
+      'Surgical — Plication':            '#1d4ed8',
+      'Surgical — Grafting (PEG)':       '#be185d',
+      'Surgical — Prosthesis':           '#b91c1c',
+      'Surgical — Prosthesis Adjunct':   '#9f1239',
+    },
+  },
+  {
+    key: 'invasiveness',
+    header: 'Invasiveness',
+    badge: true,
+    badgeColors: {
+      'Non-invasive':       '#6b7280',
+      'Minimally Invasive': '#0f766e',
+      'Surgical Open':      '#b91c1c',
+      'Surgical Implant':   '#7c3aed',
+    },
+  },
+  {
+    key: 'notes',
+    header: 'Notes',
+  },
+];
+
+<GenericDatabase
+  data={pdTechniques}
+  columns={pdColumns}
+  filterKey="tier"
+  filterLabel="Tier"
+  entityLabel="treatments"
+/>
+
+  </TabItem>
+</Tabs>
 
 ---
 
 ## See Also
 
-- [Peyronie's Disease](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease)
-- [Penile Implants — overview](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants)
-- [PDE5 Inhibitors (technique page)](/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors)
-- [Intracavernosal Injections (technique page)](/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections)
-- [MUSE — Intraurethral Alprostadil](/docs/surgical-techniques/04j-sexual-dysfunction/muse-intraurethral)
-- [Vacuum Erection Device](/docs/surgical-techniques/04j-sexual-dysfunction/ved)
+- [Erectile Dysfunction (Clinical Conditions)](/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction) — pathophysiology, evaluation, full clinical workup
+- [Peyronie's Disease (Clinical Conditions)](/docs/clinical-conditions/03g-genital-scrotal/peyronies-disease) — disease phases, natural history, comparative outcomes
+- [Penile Implants subsection](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants)
+- [Peyronie's Disease subsection](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease)
 - [Pharmacology — Sexual Medicine & Andrology](/docs/foundations/pharmacology/sexual-medicine-andrology)
-- [Pharmacology — PDE5 Inhibitors hub](/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors)
-- [Pharmacology — Intracavernosal Injection Agents hub](/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents)
-- [Pharmacology — Testosterone Replacement hub](/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement)
+- [Pharmacology — Peyronie's Disease Agents hub](/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents)
 
 ---
 
@@ -303,80 +632,80 @@ ED management follows a **stepwise algorithm** endorsed by the AUA 2018 and EAU 
 
 <a id="ref1"></a>1. Burnett AL, Nehra A, Breau RH, et al. Erectile dysfunction: AUA guideline. *J Urol.* 2018;200(3):633–641. doi:[10.1016/j.juro.2018.05.004](https://doi.org/10.1016/j.juro.2018.05.004)
 
-<a id="ref2"></a>2. McMahon CG. Current diagnosis and management of erectile dysfunction. *Med J Aust.* 2019;210(10):469–476. doi:[10.5694/mja2.50167](https://doi.org/10.5694/mja2.50167)
+<a id="ref2"></a>2. Salonia A, Capogrosso P, Boeri L, et al. European Association of Urology guidelines on male sexual and reproductive health: 2025 update on male hypogonadism, erectile dysfunction, premature ejaculation, and Peyronie's disease. *Eur Urol.* 2025;88(1):76–102. doi:[10.1016/j.eururo.2025.04.010](https://doi.org/10.1016/j.eururo.2025.04.010)
 
-<a id="ref3"></a>3. Shamloul R, Ghanem H. Erectile dysfunction. *Lancet.* 2013;381(9861):153–165. doi:[10.1016/S0140-6736(12)60520-0](https://doi.org/10.1016/S0140-6736(12)60520-0)
+<a id="ref3"></a>3. Hatzimouratidis K, Salonia A, Adaikan G, et al. Pharmacotherapy for erectile dysfunction: recommendations from the Fourth International Consultation for Sexual Medicine (ICSM 2015). *J Sex Med.* 2016;13(4):465–488. doi:[10.1016/j.jsxm.2016.01.016](https://doi.org/10.1016/j.jsxm.2016.01.016)
 
-<a id="ref4"></a>4. McVary KT. Erectile dysfunction. *N Engl J Med.* 2007;357(24):2472–2481. doi:[10.1056/NEJMcp067261](https://doi.org/10.1056/NEJMcp067261)
+<a id="ref4"></a>4. Mykoniatis I, Pyrgidis N, Sokolakis I, et al. Assessment of combination therapies vs monotherapy for erectile dysfunction: a systematic review and meta-analysis. *JAMA Netw Open.* 2021;4(2):e2036337. doi:[10.1001/jamanetworkopen.2020.36337](https://doi.org/10.1001/jamanetworkopen.2020.36337)
 
-<a id="ref5"></a>5. MacDonald SM, Burnett AL. Physiology of erection and pathophysiology of erectile dysfunction. *Urol Clin North Am.* 2021;48(4):513–525. doi:[10.1016/j.ucl.2021.06.009](https://doi.org/10.1016/j.ucl.2021.06.009)
+<a id="ref5"></a>5. Ergun O, Kim K, Kim MH, et al. Low-intensity shockwave therapy for erectile dysfunction. *Cochrane Database Syst Rev.* 2025;7:CD013166. doi:[10.1002/14651858.CD013166.pub3](https://doi.org/10.1002/14651858.CD013166.pub3)
 
-<a id="ref6"></a>6. Matsui H, Sopko NA, Hannan JL, Bivalacqua TJ. Pathophysiology of erectile dysfunction. *Curr Drug Targets.* 2015;16(5):411–419. doi:[10.2174/138945011605150504114041](https://doi.org/10.2174/138945011605150504114041)
+<a id="ref6"></a>6. Lu Z, Lin G, Reed-Maldonado A, et al. Low-intensity extracorporeal shock wave treatment improves erectile function: a systematic review and meta-analysis. *Eur Urol.* 2017;71(2):223–233. doi:[10.1016/j.eururo.2016.05.050](https://doi.org/10.1016/j.eururo.2016.05.050)
 
-<a id="ref7"></a>7. Rew KT, Heidelbaugh JJ. Erectile dysfunction. *Am Fam Physician.* 2016;94(10):820–827.
+<a id="ref7"></a>7. Capogrosso P, Albersen M, Burnett AL, et al. Erectile dysfunction: update on clinical management. *Eur Urol.* 2025:S0302-2838(25)00282-9. doi:[10.1016/j.eururo.2025.05.004](https://doi.org/10.1016/j.eururo.2025.05.004)
 
-<a id="ref8"></a>8. Melman A, Gingell JC. The epidemiology and pathophysiology of erectile dysfunction. *J Urol.* 1999;161(1):5–11.
+<a id="ref8"></a>8. Lima AS, Villela BC, Pustilnik HN, et al. Comparison of adverse effects of combined and isolated substances in intracavernosal injection: a systematic review and meta-analysis. *J Sex Med.* 2025:qdaf172. doi:[10.1093/jsxmed/qdaf172](https://doi.org/10.1093/jsxmed/qdaf172)
 
-<a id="ref9"></a>9. Mulhall JP, Giraldi A, Hackett G, et al. The 2018 revision to the Process of Care Model for evaluation of erectile dysfunction. *J Sex Med.* 2018;15(9):1280–1292. doi:[10.1016/j.jsxm.2018.06.005](https://doi.org/10.1016/j.jsxm.2018.06.005)
+<a id="ref9"></a>9. Hinojosa-Gonzalez DE, Saffati G, Orozco Rendon D, et al. Regenerative therapies for erectile dysfunction: a systematic review, Bayesian network meta-analysis, and meta-regression. *J Sex Med.* 2024;21(12):1152–1158. doi:[10.1093/jsxmed/qdae131](https://doi.org/10.1093/jsxmed/qdae131)
 
-<a id="ref10"></a>10. Salonia A, Capogrosso P, Boeri L, et al. European Association of Urology guidelines on male sexual and reproductive health: 2025 update on male hypogonadism, erectile dysfunction, premature ejaculation, and Peyronie's disease. *Eur Urol.* 2025;88(1):76–102. doi:[10.1016/j.eururo.2025.04.010](https://doi.org/10.1016/j.eururo.2025.04.010)
+<a id="ref10"></a>10. Panunzio A, Labate C, Zacheo F, et al. Platelet-rich plasma intracavernosal injections for the treatment of primary organic erectile dysfunction: a systematic review and meta-analysis of contemporary controlled studies. *Int J Impot Res.* 2024;36(6):562–571. doi:[10.1038/s41443-023-00798-y](https://doi.org/10.1038/s41443-023-00798-y)
 
-<a id="ref11"></a>11. Practice Committee of the American Society for Reproductive Medicine. Diagnostic evaluation of sexual dysfunction in the male partner in the setting of infertility: a committee opinion. *Fertil Steril.* 2023;120(5):967–972. doi:[10.1016/j.fertnstert.2023.07.001](https://doi.org/10.1016/j.fertnstert.2023.07.001)
+<a id="ref11"></a>11. Caverject (alprostadil) prescribing information. US Food and Drug Administration. Updated 2024-05-13.
 
-<a id="ref12"></a>12. Flores JM, West M, Mulhall JP. Efficient use of penile Doppler ultrasound for investigating men with erectile dysfunction. *J Sex Med.* 2024;21(8):734–739. doi:[10.1093/jsxmed/qdae070](https://doi.org/10.1093/jsxmed/qdae070)
+<a id="ref12"></a>12. Lee M, Sharifi R. Non-invasive management options for erectile dysfunction when a phosphodiesterase type 5 inhibitor fails. *Drugs Aging.* 2018;35(3):175–187. doi:[10.1007/s40266-018-0528-4](https://doi.org/10.1007/s40266-018-0528-4)
 
-<a id="ref13"></a>13. Varela CG, Yeguas LAM, Rodríguez IC, Vila MDD. Penile Doppler ultrasound for erectile dysfunction: technique and interpretation. *AJR Am J Roentgenol.* 2020;214(5):1112–1121. doi:[10.2214/AJR.19.22141](https://doi.org/10.2214/AJR.19.22141)
+<a id="ref13"></a>13. Goodstein T, Jenkins LC. A narrative review on malleable and inflatable penile implants: choosing the right implant for the right patient. *Int J Impot Res.* 2023;35(7):623–628. doi:[10.1038/s41443-023-00765-7](https://doi.org/10.1038/s41443-023-00765-7)
 
-<a id="ref14"></a>14. Sikka SC, Hellstrom WJ, Brock G, Morales AM. Standardization of vascular assessment of erectile dysfunction: standard operating procedures for duplex ultrasound. *J Sex Med.* 2013;10(1):120–129. doi:[10.1111/j.1743-6109.2012.02825.x](https://doi.org/10.1111/j.1743-6109.2012.02825.x)
+<a id="ref14"></a>14. Levine LA, Becher EF, Bella AJ, et al. Penile prosthesis surgery: current recommendations from the International Consultation on Sexual Medicine. *J Sex Med.* 2016;13(4):489–518. doi:[10.1016/j.jsxm.2016.01.017](https://doi.org/10.1016/j.jsxm.2016.01.017)
 
-<a id="ref15"></a>15. Ergun O, Kim K, Kim MH, et al. Low-intensity shockwave therapy for erectile dysfunction. *Cochrane Database Syst Rev.* 2025;7:CD013166. doi:[10.1002/14651858.CD013166.pub3](https://doi.org/10.1002/14651858.CD013166.pub3)
+<a id="ref15"></a>15. Ancha N, Eldin M, Woodle T, et al. Current devices, outcomes, and pain management considerations in penile implant surgery: an updated review of the literature. *Asian J Androl.* 2024;26(4):335–343. doi:[10.4103/aja202386](https://doi.org/10.4103/aja202386)
 
-<a id="ref16"></a>16. Hatzimouratidis K, Salonia A, Adaikan G, et al. Pharmacotherapy for erectile dysfunction: recommendations from the Fourth International Consultation for Sexual Medicine (ICSM 2015). *J Sex Med.* 2016;13(4):465–488. doi:[10.1016/j.jsxm.2016.01.016](https://doi.org/10.1016/j.jsxm.2016.01.016)
+<a id="ref16"></a>16. Mahdi M, Campos LR, Yafi FA. Immediate salvage procedure for infected penile prostheses: a review of the advances in surgical technique and antimicrobial strategies. *Int J Impot Res.* 2025. doi:[10.1038/s41443-025-01133-3](https://doi.org/10.1038/s41443-025-01133-3)
 
-<a id="ref17"></a>17. Lee M, Sharifi R. Non-invasive management options for erectile dysfunction when a phosphodiesterase type 5 inhibitor fails. *Drugs Aging.* 2018;35(3):175–187. doi:[10.1007/s40266-018-0528-4](https://doi.org/10.1007/s40266-018-0528-4)
+<a id="ref17"></a>17. Gross MS, Phillips EA, Balen A, et al. The malleable implant salvage technique: infection outcomes after Mulcahy salvage procedure and replacement of infected inflatable penile prosthesis with malleable prosthesis. *J Urol.* 2016;195(3):694–697. doi:[10.1016/j.juro.2015.08.091](https://doi.org/10.1016/j.juro.2015.08.091)
 
-<a id="ref18"></a>18. Mykoniatis I, Pyrgidis N, Sokolakis I, et al. Assessment of combination therapies vs monotherapy for erectile dysfunction: a systematic review and meta-analysis. *JAMA Netw Open.* 2021;4(2):e2036337. doi:[10.1001/jamanetworkopen.2020.36337](https://doi.org/10.1001/jamanetworkopen.2020.36337)
+<a id="ref18"></a>18. Swanton AR, Gross MS, Munarriz RM, Mulcahy JJ. Penile prosthesis salvage: a historical look at the Mulcahy technique and a review of the latest literature. *Int J Impot Res.* 2023;35(2):90–94. doi:[10.1038/s41443-021-00515-7](https://doi.org/10.1038/s41443-021-00515-7)
 
-<a id="ref19"></a>19. Lee H, Hwang EC, Oh CK, et al. Testosterone replacement in men with sexual dysfunction. *Cochrane Database Syst Rev.* 2024;1:CD013071. doi:[10.1002/14651858.CD013071.pub2](https://doi.org/10.1002/14651858.CD013071.pub2)
+<a id="ref19"></a>19. Lopategui DM, Balise RR, Bouzoubaa LA, Wilson SK, Kava BR. The impact of immediate salvage surgery on corporeal length preservation in patients presenting with penile implant infections. *J Urol.* 2018;200(1):171–177. doi:[10.1016/j.juro.2018.01.082](https://doi.org/10.1016/j.juro.2018.01.082)
 
-<a id="ref20"></a>20. Lima AS, Villela BC, Pustilnik HN, et al. Comparison of adverse effects of combined and isolated substances in intracavernosal injection: a systematic review and meta-analysis. *J Sex Med.* 2025:qdaf172. doi:[10.1093/jsxmed/qdaf172](https://doi.org/10.1093/jsxmed/qdaf172)
+<a id="ref20"></a>20. Angulo-Llanos L, Sandler MD, Howell NB, Williams A, Masterson III TA. Outcomes of salvage procedures with malleable implants for penile prosthesis infections in the Veterans Affairs national medical system: a real-world, multi-surgeon retrospective analysis over a decade. *J Sex Med.* 2026;23(3):qdag042. doi:[10.1093/jsxmed/qdag042](https://doi.org/10.1093/jsxmed/qdag042)
 
-<a id="ref21"></a>21. Caverject (alprostadil) prescribing information. US Food and Drug Administration. Updated 2024-05-13.
+<a id="ref21"></a>21. Shaeer O, Shaeer K, Soliman AbdelRahman IF. Salvage and extracapsular implantation for penile prosthesis infection or extrusion. *J Sex Med.* 2019;16(5):755–759. doi:[10.1016/j.jsxm.2019.02.005](https://doi.org/10.1016/j.jsxm.2019.02.005)
 
-<a id="ref22"></a>22. Capogrosso P, Albersen M, Burnett AL, et al. Erectile dysfunction: update on clinical management. *Eur Urol.* 2025:S0302-2838(25)00282-9. doi:[10.1016/j.eururo.2025.05.004](https://doi.org/10.1016/j.eururo.2025.05.004)
+<a id="ref22"></a>22. Nehra A, Alterowitz R, Culkin DJ, et al. Peyronie's disease: AUA guideline. *J Urol.* 2015;194(3):745–753. doi:[10.1016/j.juro.2015.05.098](https://doi.org/10.1016/j.juro.2015.05.098)
 
-<a id="ref23"></a>23. Lu Z, Lin G, Reed-Maldonado A, et al. Low-intensity extracorporeal shock wave treatment improves erectile function: a systematic review and meta-analysis. *Eur Urol.* 2017;71(2):223–233. doi:[10.1016/j.eururo.2016.05.050](https://doi.org/10.1016/j.eururo.2016.05.050)
+<a id="ref23"></a>23. Chierigo F, Fallara G, Tozzi M, et al. Guideline of guidelines: Peyronie's disease. *BJU Int.* 2026;137(5):770–782. doi:[10.1111/bju.70201](https://doi.org/10.1111/bju.70201)
 
-<a id="ref24"></a>24. Hinojosa-Gonzalez DE, Saffati G, Orozco Rendon D, et al. Regenerative therapies for erectile dysfunction: a systematic review, Bayesian network meta-analysis, and meta-regression. *J Sex Med.* 2024;21(12):1152–1158. doi:[10.1093/jsxmed/qdae131](https://doi.org/10.1093/jsxmed/qdae131)
+<a id="ref24"></a>24. Rosenberg JE, Ergun O, Hwang EC, et al. Non-surgical therapies for Peyronie's disease. *Cochrane Database Syst Rev.* 2023;7:CD012206. doi:[10.1002/14651858.CD012206.pub2](https://doi.org/10.1002/14651858.CD012206.pub2)
 
-<a id="ref25"></a>25. Panunzio A, Labate C, Zacheo F, et al. Platelet-rich plasma intracavernosal injections for the treatment of primary organic erectile dysfunction: a systematic review and meta-analysis of contemporary controlled studies. *Int J Impot Res.* 2024;36(6):562–571. doi:[10.1038/s41443-023-00798-y](https://doi.org/10.1038/s41443-023-00798-y)
+<a id="ref25"></a>25. Hellstrom WJG, Tue Nguyen HM, Alzweri L, et al. Intralesional collagenase clostridium histolyticum causes meaningful improvement in men with Peyronie's disease: results of a multi-institutional analysis. *J Urol.* 2019;201(4):777–782. doi:[10.1097/JU.0000000000000032](https://doi.org/10.1097/JU.0000000000000032)
 
-<a id="ref26"></a>26. Du S, Sun S, Guo F, Liu H. Efficacy of platelet-rich plasma in the treatment of erectile dysfunction: a meta-analysis of controlled and single-arm trials. *PLoS One.* 2024;19(11):e0313074. doi:[10.1371/journal.pone.0313074](https://doi.org/10.1371/journal.pone.0313074)
+<a id="ref26"></a>26. Ziegelmann M, Hu Y, Xiang Q, et al. Incremental treatment response by cycle with collagenase clostridium histolyticum for Peyronie's disease: a pooled analysis of two phase 3 trials. *Urology.* 2023;175:126–131. doi:[10.1016/j.urology.2023.02.019](https://doi.org/10.1016/j.urology.2023.02.019)
 
-<a id="ref27"></a>27. Towe M, Peta A, Saltzman RG, et al. The use of combination regenerative therapies for erectile dysfunction: rationale and current status. *Int J Impot Res.* 2022;34(8):735–738. doi:[10.1038/s41443-021-00456-1](https://doi.org/10.1038/s41443-021-00456-1)
+<a id="ref27"></a>27. Zhang F, Xiong Y, Wang W, et al. The efficacy and safety of intralesional injection of collagenase for Peyronie's disease: a meta-analysis of published prospective studies. *Front Pharmacol.* 2022;13:973394. doi:[10.3389/fphar.2022.973394](https://doi.org/10.3389/fphar.2022.973394)
 
-<a id="ref28"></a>28. Goodstein T, Jenkins LC. A narrative review on malleable and inflatable penile implants: choosing the right implant for the right patient. *Int J Impot Res.* 2023;35(7):623–628. doi:[10.1038/s41443-023-00765-7](https://doi.org/10.1038/s41443-023-00765-7)
+<a id="ref28"></a>28. Alom M, Sharma KL, Toussi A, Kohler T, Trost L. Efficacy of combined collagenase clostridium histolyticum and RestoreX penile traction therapy in men with Peyronie's disease. *J Sex Med.* 2019;16(6):891–900. doi:[10.1016/j.jsxm.2019.03.007](https://doi.org/10.1016/j.jsxm.2019.03.007)
 
-<a id="ref29"></a>29. Levine LA, Becher EF, Bella AJ, et al. Penile prosthesis surgery: current recommendations from the International Consultation on Sexual Medicine. *J Sex Med.* 2016;13(4):489–518. doi:[10.1016/j.jsxm.2016.01.017](https://doi.org/10.1016/j.jsxm.2016.01.017)
+<a id="ref29"></a>29. Ziegelmann M, Savage J, Toussi A, et al. Outcomes of a novel penile traction device in men with Peyronie's disease: a randomized, single-blind, controlled trial. *J Urol.* 2019;202(3):599–610. doi:[10.1097/JU.0000000000000245](https://doi.org/10.1097/JU.0000000000000245)
 
-<a id="ref30"></a>30. Ancha N, Eldin M, Woodle T, et al. Current devices, outcomes, and pain management considerations in penile implant surgery: an updated review of the literature. *Asian J Androl.* 2024;26(4):335–343. doi:[10.4103/aja202386](https://doi.org/10.4103/aja202386)
+<a id="ref30"></a>30. Demzik A, Ehlers M, Brems J, Figler BD. Penile plication for Peyronie's disease: the iterative 8-dot technique. *Urology.* 2022;164:e307. doi:[10.1016/j.urology.2022.03.005](https://doi.org/10.1016/j.urology.2022.03.005)
 
-<a id="ref31"></a>31. Ralla B, Goranova I, Börnstein N, et al. Complications, functional and quality of life outcomes following primary and secondary implantation of penile prosthesis at a tertiary referral center. *Int J Impot Res.* 2018;30(2):49–53. doi:[10.1038/s41443-017-0005-3](https://doi.org/10.1038/s41443-017-0005-3)
+<a id="ref31"></a>31. Reddy RS, McKibben MJ, Fuchs JS, et al. Plication for severe Peyronie's deformities has similar long-term outcomes to milder cases. *J Sex Med.* 2018;15(10):1498–1505. doi:[10.1016/j.jsxm.2018.08.006](https://doi.org/10.1016/j.jsxm.2018.08.006)
 
-<a id="ref32"></a>32. Mahdi M, Campos LR, Yafi FA. Immediate salvage procedure for infected penile prostheses: a review of the advances in surgical technique and antimicrobial strategies. *Int J Impot Res.* 2025. doi:[10.1038/s41443-025-01133-3](https://doi.org/10.1038/s41443-025-01133-3)
+<a id="ref32"></a>32. Natsos A, Tatanis V, Kontogiannis S, et al. Grafts in Peyronie's surgery without the use of prostheses: a systematic review and meta-analysis. *Asian J Androl.* 2024;26(3):250–259. doi:[10.4103/aja202358](https://doi.org/10.4103/aja202358)
 
-<a id="ref33"></a>33. Swanton AR, Gross MS, Munarriz RM, Mulcahy JJ. Penile prosthesis salvage: a historical look at the Mulcahy technique and a review of the latest literature. *Int J Impot Res.* 2023;35(2):90–94. doi:[10.1038/s41443-021-00515-7](https://doi.org/10.1038/s41443-021-00515-7)
+<a id="ref33"></a>33. Khera M, Bella A, Karpman E, et al. Penile prosthesis implantation in patients with Peyronie's disease: results of the PROPPER study demonstrates a decrease in patient-reported depression. *J Sex Med.* 2018;15(5):786–788. doi:[10.1016/j.jsxm.2018.02.024](https://doi.org/10.1016/j.jsxm.2018.02.024)
 
-<a id="ref34"></a>34. Shaeer O, Shaeer K, Soliman AbdelRahman IF. Salvage and extracapsular implantation for penile prosthesis infection or extrusion. *J Sex Med.* 2019;16(5):755–759. doi:[10.1016/j.jsxm.2019.02.005](https://doi.org/10.1016/j.jsxm.2019.02.005)
+<a id="ref34"></a>34. Hammad MAM, Barham DW, Simhan J, et al. A multicenter evaluation of penile curvature correction in men with Peyronie's disease undergoing inflatable penile prosthesis placement. *J Sex Med.* 2025;22(2):349–355. doi:[10.1093/jsxmed/qdae192](https://doi.org/10.1093/jsxmed/qdae192)
 
-<a id="ref35"></a>35. Lopategui DM, Balise RR, Bouzoubaa LA, Wilson SK, Kava BR. The impact of immediate salvage surgery on corporeal length preservation in patients presenting with penile implant infections. *J Urol.* 2018;200(1):171–177. doi:[10.1016/j.juro.2018.01.082](https://doi.org/10.1016/j.juro.2018.01.082)
+<a id="ref35"></a>35. Hudak SJ, Morey AF, Adibi M, Bagrodia A. Favorable patient reported outcomes after penile plication for wide array of Peyronie disease abnormalities. *J Urol.* 2013;189(3):1019–1024. doi:[10.1016/j.juro.2012.09.085](https://doi.org/10.1016/j.juro.2012.09.085)
 
-<a id="ref36"></a>36. Gross MS, Phillips EA, Balen A, et al. The malleable implant salvage technique: infection outcomes after Mulcahy salvage procedure and replacement of infected inflatable penile prosthesis with malleable prosthesis. *J Urol.* 2016;195(3):694–697. doi:[10.1016/j.juro.2015.08.091](https://doi.org/10.1016/j.juro.2015.08.091)
+<a id="ref36"></a>36. Yafi FA, Diao L, DeLay KJ, et al. Multi-institutional prospective analysis of intralesional injection of collagenase clostridium histolyticum, tunical plication, and partial plaque excision and grafting for the management of Peyronie's disease. *Urology.* 2018;120:138–142. doi:[10.1016/j.urology.2018.06.049](https://doi.org/10.1016/j.urology.2018.06.049)
 
-<a id="ref37"></a>37. Angulo-Llanos L, Sandler MD, Howell NB, Williams A, Masterson III TA. Outcomes of salvage procedures with malleable implants for penile prosthesis infections in the Veterans Affairs national medical system: a real-world, multi-surgeon retrospective analysis over a decade. *J Sex Med.* 2026;23(3):qdag042. doi:[10.1093/jsxmed/qdag042](https://doi.org/10.1093/jsxmed/qdag042)
+<a id="ref37"></a>37. Antonini G, De Berardinis E, Del Giudice F, et al. Inflatable penile prosthesis placement, scratch technique and postoperative vacuum therapy as a combined approach to definitive treatment of Peyronie's disease. *J Urol.* 2018;200(3):642–647. doi:[10.1016/j.juro.2018.04.060](https://doi.org/10.1016/j.juro.2018.04.060)
 
-<a id="ref38"></a>38. Wang CM, Wu BR, Xiang P, Xiao J, Hu XC. Management of male erectile dysfunction: from the past to the future. *Front Endocrinol.* 2023;14:1148834. doi:[10.3389/fendo.2023.1148834](https://doi.org/10.3389/fendo.2023.1148834)
+<a id="ref38"></a>38. Moncada I, Krishnappa P, Zaccaro C, et al. Penile prosthesis implantation is safe and effective in Peyronie's disease patients with and without erectile dysfunction. *Int J Impot Res.* 2025;37(1):61–65. doi:[10.1038/s41443-024-00938-y](https://doi.org/10.1038/s41443-024-00938-y)
 
-<a id="ref39"></a>39. Idris I, Bilous R, Donnelly R. Sexual problems in diabetes. In: *Handbook of Diabetes*, 5th ed. Wiley-Blackwell; 2017: chapter 22.
+<a id="ref39"></a>39. Badr H, Bettocchi C, Alsalem A, et al. Surgical treatment of Peyronie's disease by plaque incision and buccal mucosa graft: a systematic review and meta-analysis. *Asian J Androl.* 2026:00129336-990000000-00391. doi:[10.4103/aja202543](https://doi.org/10.4103/aja202543)
 
-<a id="ref40"></a>40. Hentzen C, Musco S, Amarenco G, Del Popolo G, Panicker JN. Approach and management to patients with neurological disorders reporting sexual dysfunction. *Lancet Neurol.* 2022;21(6):551–562. doi:[10.1016/S1474-4422(22)00036-9](https://doi.org/10.1016/S1474-4422(22)00036-9)
+<a id="ref40"></a>40. Hatzichristodoulou G, Fiechtner S, Pyrgidis N, et al. Suture-free sealing of tunical defect with collagen fleece after partial plaque excision in 319 consecutive patients with Peyronie's disease: the sealing technique. *J Urol.* 2021;206(5):1276–1282. doi:[10.1097/JU.0000000000001933](https://doi.org/10.1097/JU.0000000000001933)
