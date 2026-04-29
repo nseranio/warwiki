@@ -4,7 +4,89 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 29, 2026 (04j Sexual Dysfunction → "Male Sexual Dysfunction" + tabbed ED/Peyronie's Master Decision Framework + tabbed Treatment Database)
+## Current handoff snapshot — April 30, 2026 (new 04k Gender-Affirming Surgery atlas section with tabbed Masculinizing / Feminizing / Non-Binary-Nullification MDF + Database)
+
+This session created a new top-level Treatment Atlas section, **04k Gender-Affirming Surgery**, at sidebar position 10 (between Fistula Repair at 9 and Male Sexual Dysfunction at 11). The landing follows the locked tabbed pattern (used by 04a, 04ab, 04h, 04j) and is **focused exclusively on the genitourinary / reconstructive-urologic component** of GAS — top-surgery / breast / FFS / voice content lives only on `05c-gender-affirming/*` clinical-conditions pages and is not duplicated on the atlas. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues to be **commit and push after every change**.
+
+### Section creation + tabbed pattern (commits `1f2d3e1`, `6c376b8`, `36fc7a4`)
+
+- **`docs/04-surgical-techniques/04k-gender-affirming-surgery/`** — new directory with `_category_.json` (label "Gender-Affirming Surgery", position 10) and `index.mdx` as the tabbed landing.
+- **Treatment-atlas parent landing** (`docs/04-surgical-techniques/index.mdx`) updated with a one-line section-stack entry for the new section.
+- **Three tabs** on both the Master Decision Framework and the Treatment Database:
+  1. **Masculinizing Surgery** (default tab)
+  2. **Feminizing Surgery**
+  3. **Non-Binary / Nullification**
+
+Both tab pairs use identical `defaultValue` and `values` arrays so users see the same default tab in MDF and database.
+
+### Masculinizing tab MDF (Steps 1–6)
+
+Anchored on **WPATH SOC v8 (2022)**, **ACOG 2021**, **Endocrine Society 2017 (Hembree)**, **Bordas 2021 *Front Endocrinol* 813-pt metoidioplasty series**, **Wang 2026 *Microsurgery* flap-vs-flap complication-rate analysis**, **Berli 2025 *Plast Reconstr Surg* "Big Ben Method"** two-stage UL phalloplasty (27% urologic complication / 96% standing micturition), **Veerman 2020** and **Waterschoot 2021** complication-rate publications (UL OR 15.5; smoking OR 6.54 for fistula), **Pigot 2019 / Levy 2026** consensus on penile-implant timing.
+
+- Step 1 — Goal-directed pathway selection (6-row matrix; metoidioplasty vs phalloplasty by patient priority)
+- Step 2 — Phalloplasty flap selection (6-row matrix: RFFF / pedicled ALT / pedicled abdominal / Big Ben two-stage / fibula osteocutaneous / no-microsurgery options)
+- Step 3 — Urethral lengthening decision (4-row matrix; smoking-cessation requirement is explicit)
+- Step 4 — Vaginectomy timing & technique (5-row matrix: Hougen 2020 transperineal vs Ho 2025 fulguration vs Gomes da Costa 2016 laparoscopic-assisted)
+- Step 5 — 4-stage staged-sequencing table (HBSO → vaginectomy + scrotoplasty + meta/phalloplasty → testicular implants ≥6 mo → erectile prosthesis 9–12 mo)
+- Step 6 — Long-term urologic surveillance with red flags
+
+**Top-surgery removal**: Stage 1 row no longer mentions chest surgery; Mancini 2021 ref dropped because the only thing being cited from it was the chest-combo data. HBSO row reframed around laparoscopic-route + vaginal-route caveat + oophorectomy decision.
+
+### Feminizing tab MDF (Steps 1–8) — GU/reconstructive-urology focus only
+
+Anchored on **van der Sluis 2023 *Best Pract Res Clin Obstet Gynaecol*** review, **Hehemann/Walsh 2019** orchiectomy-as-bridge, **Stelmar 2023** shallow-depth (32% chose shallow over full-depth), **Opsomer 2021 Ghent 15-year n=384** (97.2% penetrative-intercourse capable; 1.6% rectal perforation; 37.1% late revision), **Fakin 2021 single-stage-vs-two-stage** (single-stage stable depth vs >30% loss in two-stage), **Castanon 2022** laparoscopy peritoneal pull-through (n = 52, depth 14.7 cm, ~96% satisfaction), **Lee 2025 *Neurourol Urodyn*** (no LUT-function degradation at 12 mo), **Shamamian 2025** dilation-difficulty predictors (primary peritoneal graft OR 3.20), **De Rosa 2024** vaginal-stenosis SR (PIV 5.70% vs sigmoid 0.20%), **Blasdel 2024 *Plast Reconstr Surg*** "blind spots" patient-vs-surgeon-reporting, **AFFIRM (Huber 2021)** validated patient-reported instrument.
+
+- Step 1 — Eligibility & readiness (WPATH / Endocrine Society)
+- Step 2 — Goal-directed GU pathway selection (orchiectomy / vulvoplasty / full-depth vaginoplasty 7-row patient-priority matrix)
+- Step 3 — Vaginoplasty technique selection (7-row scenario matrix)
+- Step 4 — Peritoneal vs PIV vs sigmoid sub-comparison (10 features × 3 techniques)
+- Step 5 — Component-procedure decisions (Fascelli 2024 anatomy-guided clitoroplasty preputial vs urethral-flap; Sigurjónsson 2017 long-term sensory durability; Blasdel 2024 patient-vs-surgeon reporting "blind spots" with AFFIRM 68.9% misdirected stream; labiaplasty)
+- Step 6 — Preoperative preparation (electrolysis 6–12 mo, smoking, BMI, PFPT, dilation counseling, estradiol management)
+- Step 7 — Postoperative dilation protocol (Gomez 2026 longitudinal PRO: 6.6 d/wk, 2.4×/d, ~38 min)
+- Step 8 — Long-term urologic surveillance (AFFIRM-domain follow-up, vaginal prostate exam, hygiene)
+
+**Removed entirely from atlas Feminizing tab**: breast augmentation, FFS (3 rows), chondrolaryngoplasty, voice therapy / glottoplasty / laryngoplasty (3 rows), non-binary chest surgery. All still live in `05c-gender-affirming/feminizing-procedures` for clinical reference.
+
+### Non-Binary / Nullification tab MDF (Steps 1–4)
+
+Anchored on **Ascha 2024 *J Sex Med*** individually-customized procedures (n = 16), **Claeys 2025 *BJU Int*** SR of variant GGAS (23 case series), **Skorochod 2023** *J Plast Reconstr Aesthet Surg* nonbinary patient-centered care, **Pletta 2025 *JAMA Netw Open*** (30.8% non-binary in chest-surgery cohort; 17.8% non-binary AMAB / 33.9% non-binary AFAB had received ≥1 GAS), **Kennis 2022** (similar GAS desire between binary and non-binary, p = 0.411), **Klemm 2024 *J Urol*** PU long-term (84–95% retreatment-free at median 55–61 mo, 86% satisfied), **Joshi 2024 *Urology*** algorithmic midline PU, **Chen-Berli 2021 *Plast Reconstr Surg*** OHSU shaft-only with vulvoscrotoplasty, **Moorefield 2024 *Plast Reconstr Surg*** Y-to-V advancement variant, **Bouman 2023** nonbinary identities, **Myers 2011 *Urology*** dorsal-plate-preservation PU.
+
+- Step 1 — Identify the patient's genital goals (6-question framework)
+- Step 2 — Match goals to procedure (9-row matrix: genital nullification / phallus-preserving vaginoplasty / vagina-preserving phalloplasty-or-metoidioplasty / standalone gonadectomy)
+- Step 3 — UL decision in vagina-preserving procedures (4-row matrix; vagina + UL → higher complication rate than UL + vaginectomy per Claeys 2025 SR)
+- Step 4 — Counseling considerations unique to non-binary patients (irreversibility of nullification, fertility, evidence base = case series only, insurance written around binary endpoints, gynecologic + urologic surveillance, psychosexual adjustment)
+
+### Treatment Database (3 tabs)
+
+| Tab | Domains | Rows |
+|---|---|---|
+| **Masculinizing** | Phallic Construction (8) / Urethral Reconstruction (5) / Vaginectomy (3) / Scrotoplasty (2) / Testicular Implants (1) / Erectile Prosthesis (3) / Hysterectomy-BSO (1) | **23** |
+| **Feminizing** (GU only) | Gonadectomy (1) / Vulvoplasty (1) / Vaginoplasty (6) / Component Procedures (4) / Revision-Salvage (6) | **18** |
+| **Non-Binary / Nullification** | Genital Nullification (2 — AMAB, AFAB) / Phallus-Preserving (1) / Vagina-Preserving (3 — Chen-Berli OHSU, Moorefield Y-to-V, vagina-preserving meta) / Standalone Gonadectomy (2) / Component-PU (1) / Component-Vulvoplasty (1) | **10** |
+
+### Two new technique stubs ride alongside (in 04j, not 04k)
+
+The April 29 commit had already created `/04j-sexual-dysfunction/li-eswt.mdx` and `/penile-traction-therapy.mdx` as ED-and-PD adjuncts; no new stubs were needed for the GAS section because all decision-database rows link to existing 05c-gender-affirming pages, foundations flap/graft articles (RFFF, ALT, peritoneal, SCIP, BMG), the 04j penile-implants subsection, or pharmacology hubs.
+
+### Bibliography cleanup pass
+
+The session ended with a clean-up of the GAS-section bibliography:
+
+- **Dropped 10 orphan refs** that were either placeholders (Castanon-2024-without-DOI, Haley 2025) or no longer cited after the chest-surgery strip and the feminizing-tab refocus (Mancini 2021 chest+HBSO combined, Dy 2021 peritoneal-flap revision, Robinson 2022 intra-abdominal, Coon 2020 breast aug, Liu 2024 SR breast aug, Kocjancic, Ascha 2018 ALT-vs-RFFF, Netshiongolwe, van de Grift).
+- **Added inline `<sup>[[N]](#refN)</sup>` cites** at all name-only mentions for: Hougen 2020, Ho 2025, Gomes da Costa 2016, Pigot 2020 stepwise scrotoplasty, Sun 2023 IPP infrapubic, Pigot ZSI 2020, Fascelli 2024 clitoroplasty anatomy-guided, Motiwala 2026 PFPT review, Gaither 2018 BMI cohort, Myers 2011 PU dorsal-plate, Bouman 2023 nonbinary identities, Robinson 2022 intra-abdominal, Jacoby 2019 Davydov, Ratanalert 2025 full-length peritoneal.
+- **Renumbered remaining refs sequentially** via Python script — bibliography now has **56 refs, all cited**.
+
+### Editorial conventions reaffirmed this session
+
+- **Tabbed-MDF + tabbed-database with three or more cohorts is a valid extension** of the locked two-tab pattern. The same `<Tabs defaultValue="masc">` block with the same `values` array is reused for both MDF and Database tab pairs so users see the same default in both blocks.
+- **Atlas page is GU/reconstructive-urology only.** When an atlas section's traditional scope sprawls into non-GU territory (top surgery, FFS, voice surgery, breast augmentation), keep that material on the corresponding `05-special-populations/05c-*` clinical-conditions page and explicitly direct readers there from the atlas section-stack pointer. Do **not** duplicate clinical content on the atlas page.
+- **Bibliography hygiene**: when a series of edits leaves orphan refs, do a final pass using a Python renumbering script with `TMP_` markers to avoid collisions during in-place sed renaming. Anchor pattern: `<a id="refN"></a>N. ...` and citation pattern: `[[N]](#refN)`.
+- **JS-string database notes**: `<sup>[[N]](#refN)</sup>` markers do **not** render inside `export const ... = [{notes: "..."}]` strings — those go through React as plain text. Place all citations in the markdown body (MDF tables, prose) instead. Keep database notes plain.
+- **Editorial cleanup applied to source dump**: filtered all bleed-through refs (RVF / fistula / hidradenitis / Crohn's / pelvic-fistulae / breast-augmentation / FFS), dropped two trailing chatbot prompts, escaped every `<` in body prose.
+
+---
+
+## Previous handoff snapshot — April 29, 2026 (04j Sexual Dysfunction → "Male Sexual Dysfunction" + tabbed ED/Peyronie's Master Decision Framework + tabbed Treatment Database)
 
 This session rebuilt **04j Sexual Dysfunction** end-to-end. Section label was renamed to **Male Sexual Dysfunction**, the landing now defaults to ED with a **tabbed Master Decision Framework** (ED tab default + Peyronie's tab) and a **tabbed Treatment Database**, and detailed clinical content (epidemiology, pathophysiology, full evaluation, special-population narratives) was deliberately removed from the atlas landing because it is already covered in the corresponding `03g-genital-scrotal/erectile-dysfunction.mdx` and `peyronies-disease.mdx` clinical-conditions articles. **Session rule continues to be commit and push after every change.** Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`.
 
@@ -1521,4 +1603,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-29*
+*Last updated: 2026-04-30*
