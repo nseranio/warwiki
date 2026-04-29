@@ -4,7 +4,69 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — April 28, 2026 (Master Decision Frameworks across the Treatment Atlas + Bladder Neck Reconstruction promoted to its own section + 28 urethral stubs + 4 redirects)
+## Current handoff snapshot — April 29, 2026 (04j Sexual Dysfunction → "Male Sexual Dysfunction" + tabbed ED/Peyronie's Master Decision Framework + tabbed Treatment Database)
+
+This session rebuilt **04j Sexual Dysfunction** end-to-end. Section label was renamed to **Male Sexual Dysfunction**, the landing now defaults to ED with a **tabbed Master Decision Framework** (ED tab default + Peyronie's tab) and a **tabbed Treatment Database**, and detailed clinical content (epidemiology, pathophysiology, full evaluation, special-population narratives) was deliberately removed from the atlas landing because it is already covered in the corresponding `03g-genital-scrotal/erectile-dysfunction.mdx` and `peyronies-disease.mdx` clinical-conditions articles. **Session rule continues to be commit and push after every change.** Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`.
+
+### Section rename + landing structural rebuild (commits `6396fa6`, `a9e7da3`)
+
+- **`04j-sexual-dysfunction/_category_.json`** label changed from "Sexual Dysfunction" → **"Male Sexual Dysfunction"**. Treatment-atlas parent landing pointer in `04-surgical-techniques/index.mdx` updated to match.
+- **Landing now defaults to ED**. The thin three-pointer hub was replaced with a tabbed structure mirroring 04a urethral, 04ab BNC, and 04h fistula:
+  - **Master Decision Framework** with `<Tabs>` — ED tab default, Peyronie's tab second.
+  - **Treatment Database** in a second `<Tabs>` block with the same two tabs.
+- **Old `erectile-dysfunction-database.mdx` was deleted** — its content was absorbed into the new landing. A Vercel redirect was added (`/docs/surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction-database` → landing). Two inbound links repointed: `02-evaluation/history-physical/assessment-tools.mdx` and `peyronies-disease/index.mdx` See Also block.
+
+### ED tab — Master Decision Framework
+
+Anchored on **AUA 2018 ED Guideline (Burnett)**, **EAU 2025 Male Sexual & Reproductive Health Update (Salonia)**, **ICSM 2015 (Hatzimouratidis)**, **Mykoniatis 2021 *JAMA Netw Open*** combination meta of 59 RCTs / 8,000+ patients, and **Lopategui 2018** length-preservation data (mean 0.6 cm loss with immediate Mulcahy salvage vs 3.7 cm with delayed reimplantation).
+
+- **12-row Treatment Selection by Clinical Scenario matrix** spanning newly diagnosed → hypogonadism → PDE5i non-responder → nitrate user → post-RP → regenerative-adjunct candidate → refractory → PD+ED → corporal fibrosis → prosthesis infection → traumatic vascular ED.
+- **7-tier stepwise treatment ladder** (Tier 0 lifestyle → Tier 3 IPP), each row with expected efficacy and explicit advancement criteria.
+- **IPP device-selection sub-comparison** (3-piece vs 2-piece vs malleable) — components, naturalness, mechanical survival, surgical complexity, ideal candidate.
+- **Mulcahy salvage hierarchy** (4 rows): immediate IPP salvage 82% / 0.6 cm; immediate malleable salvage 93% single-center / **70.5% in 2026 VA national n=76 (Angulo-Llanos)** with 45.5% reinfection in diabetics; extracapsular reimplantation 94.4%; delayed reimplantation with mean 3.7 cm length loss as the operational anchor.
+
+### Peyronie's tab — Master Decision Framework
+
+Anchored on **AUA 2015 PD Guideline (Nehra)**, **EAU 2025**, **2026 BJU Guideline-of-Guidelines (Chierigo)**, **Cochrane 2023 PD non-surgical (Rosenberg)**, **IMPRESS pooled-cycle data (Ziegelmann 2023)**, **Alom 2019 CCH+RestoreX** (49% vs 31% curvature improvement), **Ziegelmann 2019 RestoreX RCT**, **Demzik 2022 8-dot plication**, **Reddy 2018 plication-severe-PD long-term**, **Yafi 2018 multi-institutional CCH/plication/PEG head-to-head**, **Badr 2026 BMG SR/meta** (98.6% success / 1.7% de novo ED / 1.1% shortening), **Hatzichristodoulou 2021 collagen-fleece sealing technique**, **Hammad 2025 multicenter IPP** (82.4% required adjunct beyond IPP alone), **Khera PROPPER**, **Moncada 2025 IPP-without-ED** (87.9% satisfaction / lower mechanical-failure than ED group), **Antonini 2018 scratch+VED**.
+
+- **Step 1** — phase determination table (acute vs stable; stability defined as no curvature change ≥3–6 months + absent pain + onset >12 mo).
+- **Step 2** — acute-phase treatment matrix (5 rows; CCH+RestoreX as the most evidence-based combination; explicit "AUA: should NOT be offered" rows for vitamin E, tamoxifen).
+- **Step 3** — stable-phase surgical decision algorithm (8 rows) with the EF-status branch as the primary axis.
+- **Step 4** — plication-vs-grafting sub-comparison (7 factors + the Yafi 2018 head-to-head numbers row).
+- **Step 5** — graft-material selection table (BMG / collagen fleece / tunica vaginalis / SIS / pericardium / saphenous vein / dermis) anchored on Badr 2026 BMG-as-best-success.
+
+### Treatment Database — ED tab
+
+**17 rows across 8 tier categories**: Lifestyle/Behavioral (2), Oral Pharmacotherapy (2), Mechanical (1), Intraurethral (1), Injectable (2), Regenerative/Emerging (3), Surgical Prosthesis (4), Vascular Surgery (2). Tier-only badge column (the Invasiveness column was added then removed at user request — the Tier column already conveys invasiveness implicitly). Slugs link out to existing technique pages (PDE5i, ICI, MUSE, VED, Penile Implants), pharmacology hubs (testosterone replacement, peyronies-disease-agents, PRP), and the new Li-ESWT stub. Stem-cell row has no slug (intentional — no destination page).
+
+### Treatment Database — Peyronie's tab
+
+**28 rows across 11 tier categories**: Oral — Limited Evidence (3), Oral — Not Recommended (3, including the explicit vitamin E / tamoxifen "DO NOT OFFER" rows per AUA 2015), Intralesional — FDA-Approved (1, CCH/Xiaflex), Intralesional — Second-Line (2, IFN α-2b / verapamil), Intralesional — Investigational (1), Mechanical/Device (4 including ESWT-for-pain-only with the AUA "should NOT be used for curvature" caveat), Combination Non-Surgical (1, CCH+RestoreX), Surgical — Plication (4 named variants: Nesbit / Yachia / 16-dot/8-dot / TAP), Surgical — Grafting/PEG (4 graft-material rows), Surgical — Prosthesis (1), Surgical — Prosthesis Adjunct (5: manual modeling / concurrent plication / plaque incision over cylinders / scratch+VED / IPP+multiple corporeal incisions+collagen fleece). All slugs point at existing peyronies-disease/ subsection pages or pharmacology hubs.
+
+### New technique stubs created this session
+
+- **[`li-eswt.mdx`](docs/04-surgical-techniques/04j-sexual-dysfunction/li-eswt.mdx)** — 8 refs. Mechanism (VEGF / eNOS / EPC recruitment), ED evidence (Lu 2017 meta IIEF +2.0; Hinojosa-Gonzalez 2024 Bayesian SMD 0.84; Cochrane 2025 + Capogrosso 2025 EAU "not yet recommended as standalone"), patient selection, typical protocol (0.05–0.25 mJ/mm², 1500–3000 pulses, 6–12 sessions), Peyronie's-specific note that **AUA 2015 explicitly says ESWT should NOT be used for curvature/plaque** — pain-only role.
+- **[`penile-traction-therapy.mdx`](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy.mdx)** — 6 refs. Device comparison table (RestoreX 30–90 min/day vs Penimaster PRO / Andropenis 3–8 hr/day), Ziegelmann 2019 *J Urol* RCT (n=110: −11.7° curvature, +1.5 cm length, EF improvement), Joseph 2020 follow-up (95% length gains at 6 mo; 61% curvature improvements), **Alom 2019 CCH+RestoreX** combination (49% vs 31% curvature improvement; +1.9 cm; 6.9× more likely to achieve ≥20° improvement) as the most evidence-based non-surgical regimen, Levine 2011 pre-IPP length-restoration pilot.
+
+### Redundancy management
+
+- **Dropped from atlas landing (already in `03g-genital-scrotal/erectile-dysfunction.mdx`)**: epidemiology paragraph, pathophysiology + etiology classification table, Step 1–4 evaluation walkthrough (history, PE, labs, Princeton III narrative, psychosexual), Tier 0 lifestyle table, Tier 1 PDE5i agent details, Tier 1B combination table, Tier 2 ICI agent details, Tier 2.5 regenerative narrative, Tier 3 IPP outcomes/special populations, Tier 4 vascular surgery narrative, post-RP / diabetic / neurogenic special-clinical-contexts sections, Key Takeaways.
+- **Dropped from atlas landing (already in `peyronies-disease/index.mdx`)**: disease-phases prose, pathophysiology cascade, evaluation deep-dive, non-surgical narrative beyond the matrices, comparative-outcomes-after-surgery prose, full guideline-consensus discussion.
+- **Kept on atlas landing (operational decision support)**: Master Decision Framework matrices for both conditions, IPP device sub-comparison, Mulcahy salvage hierarchy, plication-vs-grafting and graft-material sub-tables for PD, both Treatment Databases.
+- The landing's section-stack now points readers to the clinical-conditions articles for full pathophysiology / natural history / evaluation, to the Penile Implants subsection for operative-deep-dive, and to the Pharmacology Sexual Medicine & Andrology hub for medical-therapy detail.
+
+### Editorial conventions reaffirmed this session
+
+- **Tabbed-MDF + tabbed-database pattern** is now the locked structure for any treatment-atlas landing whose decision space splits cleanly into two cohorts (Male / Female; BNC / VUAS; ED / Peyronie's; Female-fistula / Male-fistula). The same `defaultValue` and `values` array should be reused for the MDF and database tab pairs so users see the same default tab in both blocks.
+- **Database column `Invasiveness` is redundant when the `Tier` column already encodes invasiveness** (Lifestyle / Oral / Mechanical / Intraurethral / Injectable / Regenerative / Surgical Prosthesis / Vascular Surgery — each tier already implies invasiveness level). User explicitly requested removal of the Invasiveness column from both ED and PD databases on this landing — apply this to future databases where the Tier column already conveys the same information.
+- **Bleed-through reference filtering**: assistant-generated PD content arrived with refs to RVF / fistula / hidradenitis / Crohn's / pelvic-fistulae — all filtered before publication. Only refs actually cited in the body matrices were retained, then renumbered sequentially.
+- **`<` escaping in body prose**: `<300 ng/dL`, `<3 risk factors`, `<5 mL/min`, `<5 cm/s`, `<45 mmHg/30 sec`, `<2`, `<12–24 months`, etc., all escaped to `&lt;` in markdown body. Inside `export const` JS string literals (e.g., database `notes` properties), `<300 ng/dL` and similar are safe because MDX does not parse JSX inside JS strings — but the body prose, table headers, and admonition contents must escape.
+- **Trailing chatbot follow-up question** ("Would you like to explore the specific technical details and comparative outcomes…") stripped per WARWIKI convention.
+- **`Figure N / undefined` placeholder blocks** stripped (two placeholders in the source — molecular-mechanism figure, diabetic-ED treatment-options figure).
+
+---
+
+## Previous handoff snapshot — April 28, 2026 (Master Decision Frameworks across the Treatment Atlas + Bladder Neck Reconstruction promoted to its own section + 28 urethral stubs + 4 redirects)
 
 This was a single-day rebuild of the **Treatment Atlas landing pages** around a uniform **Master Decision Framework + searchable database** pattern, plus a major reorganization that promoted **Bladder Neck Reconstruction** to its own top-level section and renamed the old 04b folder to **Bladder Augmentation & Catheterizable Channels**. Every framework anchors on contemporary literature with explicit page-link integration into the corresponding technique pages. The session rule continues to be **commit and push after every change** — every action below was pushed to `origin/main` immediately. New worktree branch is `claude/competent-hamilton-8d8ffc`; pushes use `git push origin HEAD:main`.
 
@@ -1459,4 +1521,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-04-28*
+*Last updated: 2026-04-29*
