@@ -19,6 +19,10 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  // Kept at 'ignore' because WARWIKI's citation pattern uses raw <a id="refN"></a>
+  // HTML anchors (7,597 references site-wide). Docusaurus's broken-anchor checker
+  // only recognises heading-derived IDs and emits 400+ false positives that would
+  // mask real broken anchors. Replace with a custom check script when feasible.
   onBrokenAnchors: 'ignore',
 
   headTags: [
@@ -50,6 +54,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/nseranio/warwiki/tree/main/',
           showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: false,
         theme: {
@@ -61,6 +66,19 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/warwiki-social-card.png',
+    metadata: [
+      {
+        name: 'description',
+        content:
+          'WARWIKI — a reference for functional urology and genitourinary reconstruction. Reconstruction, codified.',
+      },
+      {name: 'og:description', content: 'A reference for functional urology and genitourinary reconstruction.'},
+      {name: 'og:type', content: 'website'},
+      {name: 'og:site_name', content: 'WARWIKI'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: 'WARWIKI — Reconstruction, codified.'},
+      {name: 'twitter:description', content: 'A reference for functional urology and genitourinary reconstruction.'},
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -143,8 +161,33 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [],
-      copyright: `© ${new Date().getFullYear()} WARWIKI`,
+      links: [
+        {
+          title: 'WARWIKI',
+          items: [
+            {label: 'About', to: '/about'},
+            {label: 'Foundations', to: '/docs/foundations'},
+            {label: 'Treatment Atlas', to: '/docs/surgical-techniques'},
+          ],
+        },
+        {
+          title: 'Library',
+          items: [
+            {label: 'Journal Club', to: '/docs/journal-club'},
+            {label: 'Resources', to: '/docs/resources'},
+            {label: 'History & Lineage', to: '/docs/roots'},
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            {label: 'GitHub', href: 'https://github.com/nseranio/warwiki'},
+            {label: 'Report an issue', href: 'https://github.com/nseranio/warwiki/issues/new'},
+            {label: 'Contact', href: 'mailto:warwikihq@gmail.com'},
+          ],
+        },
+      ],
+      copyright: `© ${new Date().getFullYear()} WARWIKI · Editorially independent reference for functional urology and genitourinary reconstruction.`,
     },
     prism: {
       theme: prismThemes.github,
