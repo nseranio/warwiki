@@ -74,22 +74,132 @@ export const instruments = [
   { name: "Endo-GIA Vascular", category: "Staplers", namedAfter: "—", use: "Renal hilum ligation (en-bloc or individual vessels) and radical-cystectomy pedicle control; 2.0–2.5 mm staple heights for vascular tissue", slug: "/docs/foundations/tools/instruments/staplers" },
   { name: "TA / Endo-TA Stapler", category: "Staplers", namedAfter: "—", use: "Linear tissue closure without cutting — zero deaths / reoperations in MAUDE review; two-step safety for vascular control", slug: "/docs/foundations/tools/instruments/staplers" },
   { name: "Robotic Stapler", category: "Staplers", namedAfter: "—", use: "Articulating wristed stapling (SureForm / Signia) for intracorporeal ileal-conduit and neobladder construction during RARC", slug: "/docs/foundations/tools/instruments/staplers" },
+
+  // Scissors
+  { name: "Mayo Scissors", category: "Scissors", namedAfter: "Mayo brothers", use: "Heavy curved or straight scissors for cutting fascia, suture, and dense tissue; standard tray staple" },
+  { name: "Metzenbaum Scissors", category: "Scissors", namedAfter: "Myron Firth Metzenbaum", use: "Fine curved scissors for blunt and sharp dissection of delicate tissue planes; the workhorse pelvic dissector" },
+  { name: "Iris Scissors", category: "Scissors", namedAfter: "—", use: "Short fine-tipped scissors for delicate dissection (originally ophthalmic; widely adopted for pediatric and reconstructive urology)" },
+  { name: "Potts Scissors", category: "Scissors", namedAfter: "Willis J. Potts", use: "Angled fine scissors for opening urethra, ureter, and vessels precisely without crushing the wall" },
+  { name: "Suture Scissors", category: "Scissors", namedAfter: "—", use: "Short blunt-blade scissors dedicated to suture cutting; spares the Mayo for tissue work" },
+
+  // Needle Holders — additional
+  { name: "Mayo-Hegar", category: "Needle Holders", namedAfter: "Charles Mayo / Alfred Hegar", use: "General-purpose ratcheted needle holder with broad cross-hatched jaws; standard for 0 to 4-0 suture" },
+
+  // Tissue Forceps — additional
+  { name: "Lahey Tissue Forceps", category: "Tissue Forceps", namedAfter: "Frank Lahey", use: "Long curved forceps for thyroid pedicles and deep fascia; occasional use in pelvic reconstruction" },
+  { name: "Sponge-Holding Forceps (Rampley / Foerster)", category: "Tissue Forceps", namedAfter: "Hugh Rampley / Friedrich Foerster", use: "Long ringed forceps for vaginal preparation, packing placement, and sponge-stick blunt dissection" },
+
+  // Clamps / Hemostats — additional
+  { name: "Kelly Clamp", category: "Clamps", namedAfter: "Howard Atwood Kelly", use: "Curved hemostat with transverse-only serration in distal jaw; bulk hemostasis and pedicle control" },
+  { name: "Mosquito (Halsted) Clamp", category: "Clamps", namedAfter: "William Halsted", use: "Fine-tipped curved hemostat for delicate vessel control; pelvic and reconstructive trays" },
+  { name: "Mixter Right-Angle Clamp", category: "Clamps", namedAfter: "Samuel Jason Mixter", use: "Right-angle dissecting clamp for tunneling around vessels and pedicles in the deep pelvis" },
+  { name: "Schnidt (Tonsil) Clamp", category: "Clamps", namedAfter: "—", use: "Long curved hemostatic clamp for deep pelvic dissection; alternate name for Adson tonsil clamp" },
+  { name: "Heaney Clamp", category: "Clamps", namedAfter: "Noble Sproat Heaney", use: "Heavy curved double-toothed clamp for uterine and vaginal pedicles during vaginal hysterectomy and POP repair" },
+  { name: "Masterson Pedicle Clamp", category: "Clamps", namedAfter: "—", use: "Heavy curved hysterectomy pedicle clamp; alternative to Heaney" },
+  { name: "Backhaus Towel Clip", category: "Clamps", namedAfter: "Kurt Backhaus", use: "Sharp-tipped clamp for towel and drape securement; occasional use as Allis substitute" },
+
+  // Retractors — additional
+  { name: "Sims Retractor", category: "Retractors", namedAfter: "James Marion Sims", use: "Single-blade right-angle vaginal wall retractor; foundational vaginal-surgery exposure tool" },
+  { name: "Deaver Retractor", category: "Retractors", namedAfter: "John Blair Deaver", use: "Curved blade for deep abdominal-pelvic retraction; family of sizes for narrow to broad exposure" },
+  { name: "Richardson Retractor", category: "Retractors", namedAfter: "Edward Peirson Richardson", use: "L-shaped abdominal wall retractor; standard wound retraction during open reconstruction" },
+  { name: "Army-Navy Retractor", category: "Retractors", namedAfter: "—", use: "Double-ended right-angle retractor; superficial wound exposure; mainstay general retractor" },
+  { name: "Langenbeck Retractor", category: "Retractors", namedAfter: "Bernhard von Langenbeck", use: "Narrow long-handled retractor for deep narrow corridors" },
+  { name: "Senn Retractor", category: "Retractors", namedAfter: "Nicholas Senn", use: "Double-ended skin and superficial retractor (rake on one end, flat blade on the other)" },
+  { name: "Volkmann (Rake) Retractor", category: "Retractors", namedAfter: "Richard von Volkmann", use: "Multi-pronged rake retractor for skin and superficial fascia" },
+  { name: "Malleable (Ribbon) Retractor", category: "Retractors", namedAfter: "—", use: "Bendable ribbon retractor for protecting bowel and shaping deep pelvic exposure" },
+  { name: "Skin Hooks", category: "Retractors", namedAfter: "—", use: "Single or double sharp hooks for fine traction in perineal, urethral, and hypospadias repair" },
+  { name: "Auvard Weighted Speculum", category: "Retractors", namedAfter: "Pierre Auvard", use: "Self-retaining gravity-held posterior vaginal wall retractor; vaginal hysterectomy and POP repair" },
+  { name: "Breisky-Navratil Retractor", category: "Retractors", namedAfter: "—", use: "Wider-bladed Breisky variant; lateral vaginal wall exposure during apical/vault surgery" },
+  { name: "Heiss Retractor", category: "Retractors", namedAfter: "—", use: "Narrow-bladed deep vaginal retractor; vault and lateral wall exposure" },
+  { name: "Weitlaner Retractor", category: "Retractors", namedAfter: "Franz Weitlaner", use: "Self-retaining superficial wound retractor with sharp prongs; perineal and groin incisions" },
+  { name: "Balfour Retractor", category: "Retractors", namedAfter: "Donald Church Balfour", use: "Self-retaining abdominal retractor with optional bladder blade for pelvic exposure" },
+  { name: "Bookwalter Retractor", category: "Retractors", namedAfter: "John Bookwalter", use: "Modular ring-based abdominal/pelvic retractor system; complex open reconstruction" },
+  { name: "O'Connor-O'Sullivan Retractor", category: "Retractors", namedAfter: "Daniel O'Connor / Sullivan", use: "Self-retaining pelvic retractor designed for gynecologic and pelvic surgery" },
+  { name: "Turner-Warwick Retractor", category: "Retractors", namedAfter: "Richard Turner-Warwick", use: "Self-retaining retropubic retractor; posterior urethroplasty and bladder neck exposure" },
+  { name: "Denis Browne Ring Retractor", category: "Retractors", namedAfter: "Denis Browne", use: "Self-retaining ring retractor for perineal and urethral surgery (pediatric origin, also used in adult hypospadias)" },
+  { name: "Graves Speculum", category: "Retractors", namedAfter: "William P. Graves", use: "Bivalve vaginal speculum; standard exam and surgical exposure" },
+  { name: "Pederson Speculum", category: "Retractors", namedAfter: "—", use: "Narrow bivalve speculum for atrophic or unparous vaginas" },
+
+  // Sounds, Bougies & Dilators — additional
+  { name: "Hegar Dilators", category: "Sounds & Bougies", namedAfter: "Alfred Hegar", use: "Graduated cervical/urethral dilator set; calibrated dilation for tight orifices and channels" },
+  { name: "Goodwin Sound", category: "Sounds & Bougies", namedAfter: "Willard Goodwin", use: "Curved urethral sound for calibration and gentle dilation" },
+  { name: "Filiform & Followers", category: "Sounds & Bougies", namedAfter: "—", use: "Tiny lead followers threaded through tight strictures, advanced over a pilot filiform" },
+  { name: "Otis Urethrotome", category: "Sounds & Bougies", namedAfter: "Fessenden Nott Otis", use: "Cold-knife urethrotome for blind urethral incision; historical / occasional use" },
+  { name: "Sachse Urethrotome", category: "Sounds & Bougies", namedAfter: "—", use: "Endoscope-mounted cold knife for direct-vision internal urethrotomy (DVIU)" },
+  { name: "Balloon Dilator (Urethral / Ureteral)", category: "Sounds & Bougies", namedAfter: "—", use: "Pneumatic balloon for stricture dilation (Cook, Boston Scientific, Optilume)" },
+
+  // Urethral & Pelvic Specialty — additional
+  { name: "Stamey Needle", category: "Urethral & Pelvic Specialty", namedAfter: "Thomas Stamey", use: "Long ligature-passing needle for needle suspension procedures (historical bladder-neck suspension)" },
+  { name: "Crawford Fascial Stripper", category: "Urethral & Pelvic Specialty", namedAfter: "Edmund Sterling Crawford", use: "Cylindrical stripper for harvesting rectus fascia and fascia lata strips for autologous slings" },
+  { name: "TVT / TOT Tunneler", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Curved trocar for retropubic (TVT) or transobturator (TOT) midurethral sling passage" },
+  { name: "Gore Suture Passer", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Suture-carrying passer for McCall culdoplasty and uterosacral ligament suspension" },
+  { name: "Sacrocolpopexy Tacker", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Mesh-fixation device (helical or barbed tack) for sacral promontory mesh anchoring" },
+  { name: "Single-Tooth Tenaculum", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Sharp single-tooth grasper for cervical traction during MUS, hysterectomy, and fistula repair" },
+  { name: "Jacobs Tenaculum", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Multi-tooth tenaculum for cervix and vaginal cuff handling" },
+  { name: "Bozeman Uterine Dressing Forceps", category: "Urethral & Pelvic Specialty", namedAfter: "Nathan Bozeman", use: "Long angled curved forceps for vaginal packing and dressing placement" },
+  { name: "Rumi Uterine Manipulator", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Articulating uterine manipulator with KOH cup for laparoscopic-assisted vaginal hysterectomy and sacrocolpopexy" },
+  { name: "Koh Colpotomizer", category: "Urethral & Pelvic Specialty", namedAfter: "Charles Koh", use: "Vaginal cuff delineator for total laparoscopic hysterectomy and TLH-converted sacrocolpopexy" },
+
+  // Catheters & Drains
+  { name: "Foley Catheter", category: "Catheters & Drains", namedAfter: "Frederic Foley", use: "Standard balloon-retention urethral catheter; 2-way and 3-way; sizes 8 Fr to 30 Fr" },
+  { name: "Coudé-Tip Catheter", category: "Catheters & Drains", namedAfter: "—", use: "Curved-tip Foley for navigating past prostate or bladder neck" },
+  { name: "Council-Tip Catheter", category: "Catheters & Drains", namedAfter: "—", use: "Open-ended Foley for over-the-wire catheter placement after difficult urethral access" },
+  { name: "Suprapubic Catheter (Stamey / Bonanno)", category: "Catheters & Drains", namedAfter: "Thomas Stamey / Sebastian Bonanno", use: "Trocar-introduced suprapubic bladder drainage; bedside or operative placement" },
+  { name: "Three-Way Irrigation Catheter", category: "Catheters & Drains", namedAfter: "—", use: "Continuous bladder irrigation after TURP / TURB or post-operative clot retention" },
+  { name: "Double-J / JJ Ureteral Stent", category: "Catheters & Drains", namedAfter: "—", use: "Internal ureteral stent (UPJ to bladder); protects anastomosis after pyeloplasty, reimplant, urinary diversion" },
+  { name: "Open-Ended Ureteral Catheter (Whistle-Tip)", category: "Catheters & Drains", namedAfter: "—", use: "Ureteral access for retrograde pyelography and intraoperative ureteral identification" },
+  { name: "Nephrostomy Tube", category: "Catheters & Drains", namedAfter: "—", use: "Percutaneous renal drainage; salvage for obstruction, anastomotic leak, fistula management" },
+  { name: "Penrose Drain", category: "Catheters & Drains", namedAfter: "Charles Penrose", use: "Soft latex passive drain; tissue retraction and dependent drainage" },
+  { name: "Vessel Loops", category: "Catheters & Drains", namedAfter: "—", use: "Soft silicone loops for atraumatic vessel and ureter retraction during reconstruction" },
+
+  // Endoscopy
+  { name: "Cystoscope (Rigid)", category: "Endoscopy", namedAfter: "—", use: "Rigid cystoscope (12°, 30°, 70° lenses) for diagnostic and operative bladder endoscopy" },
+  { name: "Cystoscope (Flexible)", category: "Endoscopy", namedAfter: "—", use: "Flexible cystoscope for office and intraoperative bladder/urethra evaluation" },
+  { name: "Ureteroscope (Semi-Rigid)", category: "Endoscopy", namedAfter: "—", use: "Semi-rigid ureteroscope for distal and mid-ureteral access" },
+  { name: "Ureteroscope (Flexible)", category: "Endoscopy", namedAfter: "—", use: "Flexible (digital or fiber) ureteroscope for upper-tract access" },
+  { name: "Resectoscope", category: "Endoscopy", namedAfter: "—", use: "Working endoscope with sliding active electrode (loop, button) for TURP / TURB / bladder neck incision" },
+  { name: "Cold-Cup Biopsy Forceps", category: "Endoscopy", namedAfter: "—", use: "Endoscopic cup-jaw forceps for bladder, ureteral, and prostatic tissue sampling" },
+  { name: "Bugbee Electrode", category: "Endoscopy", namedAfter: "Sherman Bugbee", use: "Endoscopic ball electrode for fulguration of small bladder lesions and bleeding points" },
+  { name: "Collins Knife", category: "Endoscopy", namedAfter: "Vincent Paul Collins", use: "Endoscopic hook-knife for bladder neck incision and Otis-style urethrotomy" },
+
+  // Laparoscopic & Robotic
+  { name: "Maryland Bipolar Forceps (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Articulating bipolar dissector — workhorse robotic dissection forceps" },
+  { name: "Monopolar Curved Scissors (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Articulating monopolar scissors with hot-shears function" },
+  { name: "ProGrasp Forceps (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Toothed atraumatic robotic grasper for bowel and tissue retraction" },
+  { name: "Cadiere Forceps (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "Bernard Cadière", use: "Atraumatic fenestrated robotic grasper" },
+  { name: "Tip-Up Fenestrated Grasper (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Fenestrated grasper that hyperflexes tip-up for retraction" },
+  { name: "Large Needle Driver (da Vinci)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Standard wristed needle driver for intracorporeal suturing" },
+  { name: "Hem-o-lok Clip Applier", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Polymer ligation clip applier for renal hilum, vessels, and ureter" },
+  { name: "Laparoscopic Needle Holder", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Manual non-articulating needle holder for laparoscopic suturing" },
+  { name: "Specimen Retrieval Bag (Endo Catch)", category: "Laparoscopic & Robotic", namedAfter: "—", use: "Deployable bag for intact specimen extraction without contamination" },
+
+  // Miscellaneous
+  { name: "Toomey Syringe (60 mL)", category: "Miscellaneous", namedAfter: "Sherman Toomey", use: "Wide-bore catheter-tip syringe for bladder irrigation, fill, and clot evacuation" },
+  { name: "Ellik Evacuator", category: "Miscellaneous", namedAfter: "Milo Ellik", use: "Vacuum evacuator for bladder chip and clot retrieval after TURP / TURB" },
+  { name: "Randall Stone Forceps", category: "Miscellaneous", namedAfter: "Alexander Randall", use: "Curved forceps for open stone retrieval (renal pelvis, bladder)" },
+  { name: "Probe & Grooved Director", category: "Miscellaneous", namedAfter: "—", use: "Malleable probe for fistula tract exploration and protection during incision" },
+  { name: "Bladder Scanner", category: "Miscellaneous", namedAfter: "—", use: "Portable ultrasound device for bedside post-void residual measurement" },
 ];
 
 export const instrumentColumns = [
   { key: "name", header: "Instrument" },
   { key: "category", header: "Category", badge: true, badgeColors: {
     "Needle Holders": "#185FA5",
+    "Scissors": "#00695C",
     "Tissue Forceps": "#7E57C2",
     "Clamps": "#C62828",
     "Cautery & Bipolar": "#E65100",
     "Retractors": "#2E7D32",
     "Sounds & Bougies": "#00838F",
     "Urethral & Pelvic Specialty": "#AD1457",
+    "Catheters & Drains": "#BF360C",
+    "Endoscopy": "#4527A0",
+    "Laparoscopic & Robotic": "#1A237E",
     "Suction": "#6A1B9A",
     "Graft Harvest": "#558B2F",
     "Bone Instruments": "#6D4C41",
     "Staplers": "#455A64",
+    "Miscellaneous": "#424242",
   } },
   { key: "namedAfter", header: "Named After" },
   { key: "use", header: "Key Use" },
