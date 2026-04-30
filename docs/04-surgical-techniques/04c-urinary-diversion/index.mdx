@@ -9,7 +9,7 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # Urinary Diversion
 
-Urinary diversion encompasses the reconstructive options used when the native bladder is removed, bypassed, or no longer suitable for storage and emptying. At a practical level, the major families are **ileal conduit**, **orthotopic neobladder**, **continent cutaneous diversion**, and **cutaneous ureterostomy** — each trading operative complexity, continence goals, metabolic burden, and long-term maintenance in different ways.
+Urinary diversion encompasses the reconstructive options used when the native bladder is removed, bypassed, or no longer suitable for storage and emptying. At a practical level, the major families are **ileal conduit**, **colon conduit**, **orthotopic neobladder**, **continent cutaneous diversion**, and **cutaneous ureterostomy** — each trading operative complexity, continence goals, metabolic burden, and long-term maintenance in different ways.
 
 ---
 
@@ -34,6 +34,8 @@ The AUA / ASCO / ASTRO / SUO MIBC guideline states that **all three principal op
 | **Continent diversion candidate but urethra unusable** (positive urethral margin, sphincter dysfunction, recurrent stricture) | [Continent cutaneous pouch](/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch) (Indiana, Mainz I, Kock, Penn / Florida) | Continence preserved without external appliance; obligate self-catheterization q4–6 h |
 | **Advanced age / ASA ≥ 3 / CCI ≥ 3 / poor functional status / limited caregiver support** | [Ileal conduit (Bricker)](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Lowest operative complexity, fastest return to baseline, lowest late-complication rate |
 | **Frailest patient where bowel manipulation should be avoided** | [Cutaneous ureterostomy](/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy) | Avoids enteric anastomosis entirely; rising use in elderly cohort (2 → 22% over 2 decades) |
+| **Prior pelvic radiation** with otherwise reasonable physiology | [Colon conduit](/docs/surgical-techniques/04c-urinary-diversion/colon-conduit) (transverse colon preferred) | Transverse colon lies above pelvic radiation field; ileum and sigmoid in the field carry higher anastomotic and stricture risk |
+| **Concurrent colostomy** at pelvic exenteration, or **short bowel** where ileum must be preserved | [Colon conduit](/docs/surgical-techniques/04c-urinary-diversion/colon-conduit) (sigmoid / descending) | "Colostomy switch" eliminates the need for any bowel anastomosis; preserves remaining small-bowel length |
 | **Significant renal insufficiency (CKD, chronic obstruction)** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Continent diversion's metabolic-acidosis burden is poorly tolerated with reduced eGFR |
 | **Severe hepatic dysfunction** | [Ileal conduit](/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit) | Ammonia load with continent reservoirs is hazardous; conduit drainage minimizes reabsorption |
 | **Compromised intestinal function** (IBD, short bowel, prior pelvic-radiation bowel injury) | [Cutaneous ureterostomy](/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy) | Avoids further bowel use; continent options usually contraindicated |
@@ -73,6 +75,12 @@ export const diversionData = [
     family: "Incontinent",
     notes: "Direct ureter-to-skin diversion that avoids bowel anastomosis and minimizes operative time. Best suited to elderly, frail, or highly comorbid patients when surgical simplicity outweighs long-term stoma and stenosis concerns.",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy",
+  },
+  {
+    name: "Colon Conduit",
+    family: "Incontinent",
+    notes: "Isolated transverse, sigmoid, or descending colon segment matured as a cutaneous urostomy. Principal alternative to ileal conduit when small bowel is unsuitable — most often after pelvic radiation (transverse colon spared above the field), in short bowel, or when a colostomy is already planned (\"colostomy switch\" avoids any bowel anastomosis). Thicker colonic wall facilitates non-refluxing ureteral implantation but carries an 8–10% ureterocolonic stricture risk.",
+    slug: "/docs/surgical-techniques/04c-urinary-diversion/colon-conduit",
   },
   {
     name: "Hautmann Neobladder",
