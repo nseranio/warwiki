@@ -2124,13 +2124,20 @@ article {
 .sidebar-hidden-category { display: none !important; }
 .sidebar-hidden-item { display: none !important; }
 
-/* Treatment Atlas — every section's children are deliberately hidden
-   (the landing page is the searchable database). Hide the expand
-   caret on these section titles so the user does not see a chevron
-   that, when clicked, expands to nothing. The caret is rendered as
-   a `::after` pseudo-element on links carrying `.menu__link--sublist-caret`. */
-.menu__link--sublist-caret[href^="/docs/surgical-techniques/04"]::after,
-.menu__list-item-collapsible:has(.menu__link[href^="/docs/surgical-techniques/04"]) .menu__caret {
+/* Treatment Atlas — for the four sections where the landing IS the
+   searchable database (no visible sub-pages), hide the expand caret
+   so users don't see a chevron that expands to nothing.
+
+   All other atlas sections now have visible cohort sub-pages, so
+   their carets should remain visible and functional. */
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04b-bladder-reconstruction"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04c-urinary-diversion"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04d-upper-tract-reconstruction"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04g-prolapse-repair"]) .menu__caret,
+.menu__link--sublist-caret[href="/docs/surgical-techniques/04b-bladder-reconstruction"]::after,
+.menu__link--sublist-caret[href="/docs/surgical-techniques/04c-urinary-diversion"]::after,
+.menu__link--sublist-caret[href="/docs/surgical-techniques/04d-upper-tract-reconstruction"]::after,
+.menu__link--sublist-caret[href="/docs/surgical-techniques/04g-prolapse-repair"]::after {
   display: none !important;
 }
 
