@@ -4,6 +4,55 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
+## Current Codex addendum — April 30, 2026 (Special Populations / Prolapse / Female urethral-mass placement pass)
+
+This Codex pass added three new scaffold / overview pages and pushed each change to `origin/main`. Session rule remains: **commit and push after every change.** Latest commits from this pass:
+
+- `2940b6a` — **Add cancer survivorship special population scaffold**
+- `d511257` — **Add augmented prolapse repair mesh guide**
+- `88a915a` — **Add female urethral masses overview**
+
+### Cancer survivorship scaffold (commit `2940b6a`)
+
+- Added [Cancer Survivorship](docs/05-special-populations/05d-cancer-survivorship/index.mdx) under **Special Populations** with `_category_.json` position `3`, between Gender-Affirming Surgery and Women's Health.
+- Purpose: a jumping-off scaffold for future prostate, bladder, testicular, penile, gynecologic, rectal / anal, and pelvic-exenteration survivorship expansion.
+- Scope: reconstructive-urology / urogynecology overlay rather than oncology treatment page. Covers burden of dysfunction after prostatectomy / radiotherapy / gynecologic cancer surgery, urethral stricture / VUAS / devastated outlet, radiation cystitis, urinary diversion, secondary malignancy in reconstructed tracts, pelvic-floor survivorship, exenteration reconstruction, sexual health, chronic pelvic pain, and survivorship-care model.
+- Added cross-links to Radiation & Tissue Effects, Urethral Reconstruction, Bladder Neck Reconstruction, Urinary Diversion, Fistula Repair, Incontinence, Genital Reconstruction, and GSM.
+- Updated [Special Populations index](docs/05-special-populations/index.mdx) to include the new section.
+
+### Mesh / graft-augmented prolapse repair page (commit `d511257`)
+
+- Added [Mesh & Graft-Augmented Prolapse Repair](docs/04-surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs.mdx) under **04g Prolapse Repair**.
+- Placement rationale: belongs in the Treatment Atlas prolapse section, beside Principles of Prolapse Repair, because it is an operative decision / counseling page for augmented vaginal POP repairs rather than a general pelvic-support condition page.
+- Scope: material types, efficacy by compartment, PROSPECT / FDA 522 / PROSPERE / Menefee RCT anchors, mesh exposure / pain / de novo SUI / bladder injury / repeat surgery, FDA regulatory timeline, ACOG / AUGS positioning, mesh-complication management, sacrocolpopexy-vs-TVM counseling, long-term outcomes, and future biomimetic graft directions.
+- Updated [Prolapse Repair landing](docs/04-surgical-techniques/04g-prolapse-repair/index.mdx) with a visible General Principles link and added the page slug to the "Transvaginal Mesh (Apical-Only Kits)" database row.
+- Editorial split: the new page explicitly distinguishes transvaginal POP mesh from midurethral slings and abdominal mesh used in sacrocolpopexy.
+
+### Female urethral / periurethral masses overview (commit `88a915a`)
+
+- Added [Female Urethral & Periurethral Masses](docs/03-clinical-conditions/03b-voiding-outlet/female-urethral-masses.mdx) under **Clinical Conditions → Voiding & Outlet Disorders**, at `sidebar_position: 5.8`, next to Urethral Diverticulum and Urethral Prolapse.
+- Placement rationale: this is primarily a diagnostic differential / clinical-condition overview, not a technique page. The existing [Urethral Diverticulum](docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx) remains the deeper surgical-condition page.
+- Scope: urethral diverticulum, Skene gland cyst / abscess, urethral caruncle, urethral mucosal prolapse, Gartner / Müllerian / inclusion cysts, urethral leiomyoma, condyloma, primary female urethral carcinoma, and diverticular carcinoma.
+- Added workup framework: anatomy-first exam, MRI as preferred modality for complex periurethral masses / diverticulectomy planning, ultrasound alternative, cystourethroscopy, biopsy thresholds, red flags, and mandatory pathology for excised diverticula.
+- Cross-linked from [Urethral Diverticulum](docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx), [Vaginal Cysts & Masses](docs/03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx), and [Clinical Conditions index](docs/03-clinical-conditions/index.mdx).
+
+### Verification status from this pass
+
+- For each new page, local citation integrity was checked separately and passed:
+  - Cancer Survivorship: 37 refs, all cited.
+  - Mesh & Graft-Augmented Prolapse Repair: 22 refs, all cited.
+  - Female Urethral & Periurethral Masses: 40 refs, all cited.
+- `npm run build`, `npm run typecheck`, `npm run lint:links`, and `git diff --check` passed after each relevant change.
+- Full `npm run lint` / `npm run lint:citations` remains blocked by unrelated pre-existing citation issues introduced before this pass:
+  - `docs/02-evaluation/laboratory-studies/hormonal-assessment.mdx`
+  - `docs/02-evaluation/laboratory-studies/preoperative-labs.mdx`
+  - `docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx`
+  - `docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx`
+- `npm run lint:orphans` also remains blocked by unrelated hidden Treatment Atlas pages from the upstream fast-forward.
+- `src/data/stats.json` was regenerated by `npm run build` and included in the relevant commits.
+
+---
+
 ## Current handoff snapshot — May 2, 2026 (Treatment Atlas sidebar cleanup — uniform "landing IS the database" pattern, prevalence-ordered, site-wide font consistency)
 
 This session was a sidebar / styling cleanup pass plus a clinical-prevalence reordering of the Treatment Atlas. No new article content. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
