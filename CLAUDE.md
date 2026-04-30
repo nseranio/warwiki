@@ -4,7 +4,67 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 4, 2026 (colon conduit + Turner-Warwick + instrument image campaign + 70-row catalog audit + Lone Star augmentation)
+## Current handoff snapshot — May 5, 2026 (Hypospadias relocation + pre-launch audit)
+
+This session moved Hypospadias & Epispadias into Lifelong Urologic Care (with a master-decision-framework augmentation) and ran a structured pre-launch audit against the public-launch readiness criteria. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`.
+
+### Hypospadias & Epispadias — moved to Lifelong Urologic Care ([commit a9c185a](https://github.com/nseranio/warwiki/commit/a9c185a))
+
+- Moved [hypospadias-epispadias.mdx](docs/05-special-populations/05f-lifelong-care/hypospadias-epispadias.mdx) from `03-clinical-conditions/03b-voiding-outlet/` to `05-special-populations/05f-lifelong-care/`. New URL: `/docs/special-populations/05f-lifelong-care/hypospadias-epispadias`. Sidebar position 3 (after Transitional Urology and Geriatric Urology). Rationale: condition principally manifests in adult reconstructive practice as the AYA-to-adult transition burden of childhood-repair sequelae plus unrepaired adult presentations — exactly what Lifelong Urologic Care covers.
+- Vercel redirect from old URL added at top of [vercel.json](vercel.json) redirects array.
+- Inbound link in [transitional-urology.mdx](docs/05-special-populations/05f-lifelong-care/transitional-urology.mdx) repointed; "hypospadias" removed from the voiding & outlet description in [clinical-conditions/index.mdx](docs/03-clinical-conditions/index.mdx).
+- Added new **"Master Decision Framework for Adult Repair"** section inside Hypospadias-in-Adults, organized around the four anatomical / clinical variables (meatal location, chordee severity, primary vs reoperative status, tissue quality):
+  - **Distal** — TIP / Snodgrass default (7% distal complications, 12.7% in n = 620 adult series); Mathieu (lowest meatal-stenosis rate); MAGPI (limited adult applicability).
+  - **Proximal** — extended TIP ± dorsal inlay or onlay flap for mild chordee; **Bracka two-stage** as the dominant paradigm for moderate-severe chordee (with explicit Stage 1 / Stage 2 description); tunneled BMG tube graft (Fine 2015) as alternative single-stage.
+  - **Reoperative ("hypospadias cripple")** — 90% two-stage BMG / 83% success at 9.5-year median (Morrison); 16% fistula / 4% redo (Aldamanhori); one-stage distal urethroplasty for isolated defects; perineal urethrostomy as definitive option (13.8% adoption in Horiguchi).
+  - **Graft material** — GURS 99% BMG preference (Berg 2024); Manasherova 20% BMG vs 31% preputial-skin Bracka complications; Alrefaey 2025 RCT 93.2% penile-skin vs 97.9% BMG in extensive strictures.
+  - Prognostic-factors table (rebuilt clean), Verla 82% → 57% 10-year failure-free survival, 5-bullet summary algorithm.
+- 9 new DOI-linked references (refs 39-47): Diamond 2017 *Lancet*, Sahin 2022, Long 2017, Bhat 2007, Fine 2015, Myers / McAninch 2012, Berg 2024, Manasherova 2020, Alrefaey 2025.
+
+### Pre-launch audit — full sweep
+
+Phase-1 build + integrity + config audit. Build: `npm run clear && npm run build` passes clean (zero warnings, zero errors). All four lint scripts (`lint:links`, `lint:scope`, `lint:citations`, `lint:orphans`) executed.
+
+**Critical findings (5 — launch blockers):**
+
+1. **No `description:` frontmatter on any of 791 doc files.** Meta descriptions, Open Graph, and Twitter cards all fall back to global defaults — every page shares the same social-share preview, and Algolia search snippets are auto-extracted from random first paragraphs. *Fix:* add `description:` to at least the 8 top-level + 12 atlas-section + 4 lifelong-care landings before launch; bulk-script the rest post-launch.
+2. **[`src/pages/markdown-page.mdx`](src/pages/markdown-page.mdx) Docusaurus boilerplate present** — ships in production at `/markdown-page`, listed in [`build/sitemap.xml`](build/sitemap.xml), indexed by Algolia. *Fix:* `git rm src/pages/markdown-page.mdx`.
+3. **[`docusaurus.config.ts`](docusaurus.config.ts) — `onBrokenAnchors: 'ignore'`**. Anchor links to non-existent `#headings` silently 404 inside long articles (TOC jumps, footnote anchors). *Fix:* upgrade to `'warn'` or `'throw'`.
+4. **Citation lint: 4 files with orphan `<a id="refN">` anchors that have no body citation** — [`hormonal-assessment.mdx`](docs/02-evaluation/laboratory-studies/hormonal-assessment.mdx), [`preoperative-labs.mdx`](docs/02-evaluation/laboratory-studies/preoperative-labs.mdx), [`renal-function-metabolic-surveillance.mdx`](docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx), [`female-cosmetic.mdx`](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx) — pre-existing per multiple handoff snapshots, never resolved (~25 orphan anchors total).
+5. **[`docusaurus.config.ts`](docusaurus.config.ts) — empty `footer.links: []` and no global `og:image` / `og:description`**. Every social share renders identically. *Fix:* add default `og:image` (use existing [`static/img/warwiki-social-card.png`](static/img/warwiki-social-card.png)), default `og:description`, and a minimal footer with About / GitHub / Contact / Last build.
+
+**Quality-of-life findings:**
+
+- **[`scripts/check-orphans.js`](scripts/check-orphans.js)** flags 88 false-positive orphans because the script scans markdown `[text](url)` links but does not parse `slug:` references inside `<TechniqueDatabase>` / `<GenericDatabase>` JSX-array data. Pages reached via the database tables on landing pages all show as orphans.
+- **~60 procedure pages** in [`docs/04-surgical-techniques/`](docs/04-surgical-techniques) lack the canonical procedure-page heading template (Indications / Contraindications / Preoperative Considerations / Technique / Complications / Postoperative Care / References). Many are intentionally narrative or principles articles, but a `scripts/check-procedure-template.js` script that exempts `*-principles.mdx` + `index.mdx` would surface the real gaps.
+- **Docusaurus 3.10.0 → 3.10.1** minor update available.
+- **Algolia DocSearch** keys present in config; live-index validation deferred to launch-day manual check (search "ileal conduit", "urethroplasty", "vesicovaginal fistula", "Bracka", "TIP Snodgrass" and confirm canonical pages return).
+- **No contributor attribution.** *Enhancement:* enable `showLastUpdateAuthor: true` (paired with existing `showLastUpdateTime: true`) so git commit author appears at page bottom.
+- **External-link reachability** is not currently tested. For 7,597 references, ~5-15% DOI rot per year is normal. Add a quarterly `lint:external-links` script (HEAD-only, throttled).
+
+**Gap opportunities (post-launch roadmap):**
+
+- **Versioning support** — no `@docusaurus/plugin-content-docs` versioning configured. Useful for preserving prior-version snapshots as guidelines update (AUA / EAU / NCCN annual cycles).
+- **Antibiotic / dosing quick-reference component** — `<DosingTable>` with searchable drug → indication → dose → route filter.
+- **Surgical atlas embed system** — `<ProcedureAtlas>` component (numbered figure block + caption + cross-link).
+- **Interactive decision algorithms** — clickable yes/no walkers for the existing Master Decision Frameworks.
+- **Glossary / synonyms index** — site-wide `/glossary` page with redirects from common abbreviations and synonyms.
+- **`last_reviewed:` frontmatter field** + custom theme component to surface "Clinically reviewed: YYYY-MM" (separate from git-commit timestamp).
+- **`static/robots.txt`** — currently absent from build output. Trivial fix (`User-agent: * / Allow: / / Sitemap: https://warwiki.org/sitemap.xml`).
+- **"Cite this article" widget** — APA / Vancouver / BibTeX generator per page.
+
+**Site-level observations (not blockers):**
+
+- **AUA guideline citation distribution:** 2023 (23 instances), 2018 (12), 2015 (9), 2022 (7), 2020 (2). The spread reflects actual AUA guideline release dates (e.g., Peyronie's 2015 with 2024 amendment, TRT 2018 with 2024 amendment) — not staleness.
+- **Sitemap:** [`build/sitemap.xml`](build/sitemap.xml) generates correctly (125 KB, all docs listed).
+- **Static images:** 17 MB total in [`static/img/`](static/img); largest are OpenStax / Gray's anatomy plates and instrument photos. Adequate.
+- **Edit URL** points to `https://github.com/nseranio/warwiki/tree/main/` (correct branch, not master).
+- **Naming consistency:** "ileal conduit" used 27× vs "Bricker" 2× — predominantly using "ileal conduit", consistent.
+- **Launch date in audit prompt read "May 11, 2025"** — past relative to project's working calendar; flagged as likely typo for 2026.
+
+---
+
+## Previous handoff snapshot — May 4, 2026 (colon conduit + Turner-Warwick + instrument image campaign + 70-row catalog audit + Lone Star augmentation)
 
 This session was an **instruments-focused** pass plus one new urinary-diversion technique page. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
 
@@ -2050,4 +2110,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-05-04*
+*Last updated: 2026-05-05*
