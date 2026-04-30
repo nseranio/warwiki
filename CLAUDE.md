@@ -4,6 +4,40 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
+## Current Codex addendum — April 30, 2026 (BPH / Male LUTS atlas section + prostate enucleation hub)
+
+This Codex pass started a new **Treatment Atlas → BPH & Male LUTS** section and then expanded the HoLEP row into a broader prostate-enucleation detail page. These changes are currently local unless separately committed by the active agent.
+
+### BPH & Male LUTS atlas landing
+
+- Added [BPH & Male LUTS](docs/04-surgical-techniques/04m-bph-male-luts/index.mdx) as a new treatment-atlas section at `/docs/surgical-techniques/bph-male-luts`.
+- Placement rationale: BPH / male LUTS is common enough to be a primary atlas domain. It is ordered immediately after Incontinence via `_category_.json` position `2.5`, matching the atlas landing placement.
+- Scope: treatment-selection hub rather than duplicate disease page. It cross-links to the existing [Benign Prostatic Hyperplasia](docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx) condition page and pharmacology hubs for alpha blockers, 5-ARIs, PDE5 inhibitors, anticholinergics, and beta3 agonists.
+- Decision framework: symptom phenotype, core evaluation, early-procedure triggers, escalation by bother/risk/anatomy, and procedure trade-off selection.
+- Searchable database rows now include TURP, TUIP, HoLEP, thulium / bipolar enucleation, GreenLight PVP, Aquablation, simple prostatectomy, UroLift / PUL, Rezum, iTIND, Optilume BPH, PAE, and catheter pathways.
+- Added BPH to the parent [Treatment Atlas](docs/04-surgical-techniques/index.mdx) landing and added a backlink from the clinical BPH page.
+
+### Prostate Enucleation / HoLEP detail page
+
+- Added [Prostate Enucleation / HoLEP](docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx) as a hidden atlas detail page at `/docs/surgical-techniques/bph-male-luts/prostate-enucleation-holep`.
+- Placement rationale: use **general anatomic endoscopic enucleation** as the concept, with HoLEP as the reference platform, so thulium laser, thulium fiber, bipolar TUEP, and future platform variants do not become duplicate pages.
+- Scope: where enucleation fits in the BPH treatment ladder; equipment and Ho:YAG physics; low- vs high-power settings; pulse modulation (MOSES, Virtual Basket / Magneto); classic three-lobe, two-lobe, en-bloc, early-apical-release, top-down, and mucosal-preservation techniques; morcellation safety; outcomes vs TURP and simple prostatectomy; anticoagulation; complications; sexual function; incidental prostate cancer; learning curve; operative pearls.
+- The HoLEP and thulium / bipolar enucleation rows in the BPH database both link to this page.
+- Evidence anchors include AUA 2023 amendment, EAU 2026 male LUTS guideline, Gilling / Tan technique papers, low-power vs high-power HoLEP evidence, ESUT laser and AEEP consensus papers, morcellation recommendations, long-term HoLEP series, HoLEP-vs-TURP and HoLEP-vs-RASP comparisons, anticoagulation studies, continence predictors, sexual-function studies, incidental-prostate-cancer series, and learning-curve papers.
+
+### Verification status from this pass
+
+- `npm run lint:links` passed after the BPH / HoLEP changes.
+- `git diff --check` passed.
+- `npm run lint:citations` remains blocked by unrelated pre-existing citation issues in:
+  - `docs/02-evaluation/laboratory-studies/hormonal-assessment.mdx`
+  - `docs/02-evaluation/laboratory-studies/preoperative-labs.mdx`
+  - `docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx`
+  - `docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx`
+- The new BPH / enucleation files are not among the citation-lint failures.
+
+---
+
 ## Current Codex addendum — April 30, 2026 (PNE placement + priapism operative taxonomy)
 
 This Codex pass added one SNM trial-technique page and reorganized detailed priapism shunt content so emergency algorithms stay fast while operative technique detail lives in the Treatment Atlas. Session rule remains: **commit and push after every change.** Latest commits from this pass:
