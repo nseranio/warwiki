@@ -4,6 +4,103 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
+## Current handoff snapshot — May 3, 2026 (sidebar visual hierarchy + atlas cohort split + decision-framework rename + new Laboratory Studies subsection)
+
+This was a structural / navigation polish session followed by a content-build pass for laboratory studies. Branch: `claude/unruffled-jepsen-ee3f4f`; pushes via `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
+
+### Sidebar visual hierarchy restored ([`48be23c`](https://github.com/nseranio/warwiki/commit/48be23c))
+
+The May 2 cleanup over-flattened sidebar styling — top-level section titles (Treatment Atlas children, Foundations subsections) lost their prominence and looked the same as plain doc links. Restored the deliberate hierarchy in `src/css/custom.css`:
+
+- **Level-1 / level-2 categories** (collapsible OR plain top-level links) → **uppercase, weight 600, 0.78rem, subtle color** (the original visual hierarchy)
+- **Level-2+ doc links** → normal-case, weight 400, 0.875rem, muted color
+- Selector pattern: `.menu__list-item-collapsible .menu__link, .theme-doc-sidebar-item-link-level-1 > .menu__link` so plain top-level atlas sections (04i Tissue Transfer, 04k GAS, 04l Cosmetic — single-doc sections) render identically to their collapsible-category siblings.
+
+**Editorial rule reaffirmed:** items at the same level look the same, items at different levels look different. Earlier "flatten everything to plain link" approach was the wrong fix.
+
+### Treatment-atlas cohort split — every tabbed section now has per-cohort sub-pages ([`7499656`](https://github.com/nseranio/warwiki/commit/7499656), [`5ad0ef1`](https://github.com/nseranio/warwiki/commit/5ad0ef1))
+
+Per user request for cleaner mobile UX, the seven multi-cohort treatment-atlas sections that previously rendered their MDF + Database as two stacked `<Tabs>` blocks on a single landing page were split into per-cohort sub-pages. The 04f Incontinence pattern (Female SUI / Male SUI / OAB & UUI) is now applied uniformly:
+
+| Section | Sub-pages created |
+|---|---|
+| 04a Urethral Reconstruction | `male-urethroplasty`, `female-urethroplasty` |
+| 04ab Bladder Neck Reconstruction | `bnc`, `vuas` |
+| 04e Genital Reconstruction | `penile`, `scrotal`, `vulvar` (existing technique-deep articles preserved) |
+| 04h Fistula Repair | `female-fistula`, `male-fistula` |
+| 04j Sexual Dysfunction | `erectile-dysfunction`, `peyronies` |
+| 04k GAS | `masculinizing-surgery`, `feminizing-surgery`, `non-binary-nullification` |
+| 04l Cosmetic Genital Surgery | `male-cosmetic`, `female-cosmetic` (society-position admonition preserved on each) |
+
+17 new cohort sub-pages; 7 landings rewritten as choosers. Each sub-page has a self-contained renumbered bibliography with refs cited in the body of that cohort. The 04l society-position admonition (SMSNA 2024 / ACOG 2020 / FIGO 2025 / FDA 2018) is repeated on the landing AND each sub-page per the editorial framing rule.
+
+The 04e cohort sub-pages are named `penile.mdx`, `scrotal.mdx`, `vulvar.mdx` (slugs `/penile`, `/scrotal`, `/vulvar`). The existing `scrotal-reconstruction.mdx` technique deep-dive is preserved; the cohort `scrotal.mdx` cross-links to it at the top.
+
+**Pattern guidance:** cohort sub-pages render at level-2 in the sidebar (no `sidebar_class_name`); existing principles articles remain hidden (`sidebar_class_name: sidebar-hidden-item`) but linked from the chooser landing. Each section's `_category_.json` keeps `link: { type: doc, id: ...index }` so the section title stays clickable to the chooser.
+
+### Atlas sidebar consistency — carets show only where they expand ([`93fc337`](https://github.com/nseranio/warwiki/commit/93fc337))
+
+After the cohort split, the broad May 2 caret-hide rule (`href^="/docs/surgical-techniques/04"`) was wrong: it hid carets on sections that NOW have visible cohort sub-pages, AND missed sections with custom slugs (Urethral, Incontinence which use `/urethral-reconstruction` and `/incontinence` without the `04` prefix) producing visible-but-non-functional carets. Replaced with explicit URL list for the four "landing-IS-database" sections:
+
+```css
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04b-bladder-reconstruction"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04c-urinary-diversion"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04d-upper-tract-reconstruction"]) .menu__caret,
+.menu__list-item-collapsible:has(.menu__link[href="/docs/surgical-techniques/04g-prolapse-repair"]) .menu__caret,
+```
+
+Bonus: unhid the three 04f Incontinence subcategories (Female SUI / Male SUI / OAB & UUI) so its caret expands to show the cohort sub-pages — they were inheriting a `sidebar-hidden-category` className that no longer made sense after the broader pattern shift.
+
+**Final atlas-sidebar state:**
+- 8 sections show working carets that expand to cohort sub-pages: Urethral, Incontinence, BNC, Fistula, Genital Recon, Male Sexual Dysfunction, GAS, Cosmetic
+- 4 "landing-is-database" sections hide their empty carets: Bladder Aug & Catheterizable Channels, Urinary Diversion, Upper Tract, Prolapse Repair
+- 1 single-doc entry renders as a plain link: Tissue Transfer
+
+### Decision Framework rename ([`dc0138f`](https://github.com/nseranio/warwiki/commit/dc0138f))
+
+Two consistency cleanups applied across 38 files in the Treatment Atlas:
+
+1. **"Master Decision Framework" → "Decision Framework"** everywhere (heading, body prose, section-stack descriptions). The "Master" prefix was redundant.
+2. **Stripped "Step N — " prefix from H3 framework headings.** The previous numbering implied a strict sequential workflow that didn't match the content — many of the "steps" are parallel considerations or decision branches rather than ordered procedural steps. Headings now use just the descriptive title; the markdown structure carries the hierarchy without overpromising sequence.
+
+**Editorial rule:** when a framework is genuinely sequential (e.g., 04l cosmetic male framework — psychological screening before objective measurement before procedure selection), order is preserved by placement and prose. When parallel (most decision frameworks have 5–8 considerations that cluster rather than sequence), drop the "Step N" prefix entirely.
+
+### Anatomy & Physiology landing fix ([`45f3d40`](https://github.com/nseranio/warwiki/commit/45f3d40))
+
+The A&P category was the only Foundations sub-section using `link: { type: "generated-index" }` while every sibling (Pharmacology, Tools, Surgical Principles, Perioperative Care) uses `link: { type: "doc" }`. The generated-index variant produced the duplicate breadcrumb ("Anatomy & Physiology > Anatomy & Physiology") and routed the category-title click to a Docusaurus auto-generated page instead of the real `index.mdx`. Switched to `type: doc` pointing at the real index — clean single-segment breadcrumb.
+
+### New Evaluation subsection — Laboratory Studies ([`c2031fa`](https://github.com/nseranio/warwiki/commit/c2031fa), [`934addb`](https://github.com/nseranio/warwiki/commit/934addb), [`5289137`](https://github.com/nseranio/warwiki/commit/5289137))
+
+Added a new **Laboratory Studies** subsection at `docs/02-evaluation/laboratory-studies/` between History & Physical (position 1) and Imaging (position 3). Four pages, all framed for the reconstructive urologist / urogynecologist:
+
+| Page | Sidebar | Refs | Anchors |
+|---|---|---|---|
+| **Urine Studies** | 1 | 39 | IDSA/ASM 2024 microbiology guideline · AUA/SUFU 2025 microhematuria · 2019 IDSA ASB · AUA Best Practice prophylaxis · Magistro 2021 / Qu 2020 diversion-colonization · Meares-Stamey 4-glass / 2-glass · Chen 2016 post-cystectomy cytology (sens 82% / spec 97% / NPV 98%) · Fernández 2012 FISH NPV-oriented utility · Ferraro 2025 24-hour-urine 4.8% utilization gap · Lui 2022 PHPT screening |
+| **Renal Function & Metabolic Surveillance** | 2 | 27 | KDIGO 2024 · AUA/SUFU NLUTD 2021 · NCCN Bladder 2026 · Nishikawa 2014 169-pt 106-mo (HTN + pyelonephritis as predictors, not diversion type) · Cheng 2015 augmentation 10-yr · jejunal conduit syndrome (Golimbu 1975, Bonnheim 1984, Klein 1986) · Kim 2016 acidosis risk factors (DM OR 5.68) · Sagalowsky 2002 cobalamin profiles (MMA / homocysteine) · Pfitzenmaier 2003 Mainz I (37% on alkali) · McDougal 1989 sulfate Ca/Mg · Richard 2019 fracture HR 1.48 · Kawakita 1996 pyridinium · ammoniagenic encephalopathy |
+| **Hormonal Assessment** | 3 | 17 | AUA Testosterone Deficiency 2018 · AUA/SUO Prostate Screening 2023 · NCCN Prostate Early Detection · TRAVERSE 2023 · Marks 2006 5-ARI VA data · Sarkar 2019 5-ARI outcomes · Hall 2025 BJU SR PSA in gender-diverse · Nik-Ahd 2023 trans women aggressive disease |
+| **Preoperative Labs** | 4 | 18 | Feely AAFP de-implementation · Heidelbaugh TRT · NCCN Bladder · Lightner AUA antimicrobial BPS · ASA preanesthesia · ADA 2026 (HbA1c &lt;8%) · AHA/ACC 2024 perioperative (Class 2a) · Endocrine Society 2022 hyperglycemia · SGLT2 3–4 day preop hold · Samsel 2025 urogyn 634-pt (no labs changed mgmt) · ACOG PB 214 |
+
+The four pages cluster the labs by clinical context rather than alphabetically:
+- **Urine Studies** — workhorse: urinalysis / culture / cytology / Meares-Stamey / 24-hour urine / EQUC / NGS, with reconstruction-specific interpretation in diversions / augmented bladders / CIC
+- **Renal Function & Metabolic Surveillance** — the highest-yield reconstruction-specific cluster: Cr/eGFR per KDIGO 2024, BMP for the three post-diversion derangements, B12 (MMA / homocysteine reframing), bone-density panel
+- **Hormonal Assessment** — testosterone + reflexes, hematocrit on TRT, PSA with the 5-ARI doubling rule + GAH-estrogen suppression to 0.02 ng/mL caveats
+- **Preoperative Labs** — what to order vs. skip, anchored on the AAFP/ACP de-implementation literature
+
+**Editorial decisions:**
+- Skipped dedicated pages for: LFTs (post-cystectomy oncologic surveillance, out of WARWIKI scope), urine cytology / tumor markers (already covered in Urine Studies), CBC / coagulation / glucose (folded into Preoperative Labs), semen analysis (lives separately under male-fertility eval if/when built).
+- The PSA-on-GAH-estrogen and PSA-on-5-ARI interpretation caveats are the WARWIKI value-add for Hormonal Assessment — these are what general endocrinology/urology references don't cover and what reconstructive practice actually needs.
+- The Samsel 2025 Int Urogynecol J 634-pt urogyn-surgery study is the single strongest evidence anchor for the "skip routine preop labs" framing — pelvic-floor literature gives more direct support than the older AAFP/ACP general-medicine guidance.
+
+### Editorial conventions reaffirmed this session
+
+- **Custom-slug atlas sections.** Two atlas sections use custom slugs that don't carry the `04*` prefix in the URL — Urethral Reconstruction (`/surgical-techniques/urethral-reconstruction`) and Incontinence (`/surgical-techniques/incontinence`). Any CSS rule keyed on `[href^="/docs/surgical-techniques/04"]` will miss them. Use explicit URL lists or `[href^="/docs/surgical-techniques/"]` with finer-grained `:not()` filtering.
+- **Cohort-split atlas pattern (locked).** Multi-cohort sections render as: chooser landing (`hide_title: true`, intro + section-stack to principles + section-stack to cohorts) → visible cohort sub-pages at level-2 → existing technique articles either hidden (`sidebar_class_name: sidebar-hidden-item`) or visible at level-3, depending on whether they're operative deep-dives or section overviews.
+- **Heading hierarchy convention.** "Decision Framework" (no "Master"), with descriptive H3 headings (no "Step N — " prefix). When sequence genuinely matters, an ordered list inside the section conveys it; the heading itself doesn't try to.
+- **Lab-studies clustering rule.** Cluster labs by clinical use-case (urine / renal+metabolic / hormonal / preop), not alphabetically, not by chemistry-class. The clustering should match how the labs are actually ordered in practice — testosterone + LH + prolactin go together because they're a panel, not because they share a chemistry pathway.
+- **Reconstruction-specific value-add rule.** Each lab page should foreground the interpretation caveats that *general medicine references don't cover but reconstructive practice actually needs* — bowel reabsorption of creatinine in conduits, jejunal conduit hyperkalemia, PSA suppression on 5-ARI / GAH estrogen, post-cystectomy cytology NPV, the "skip routine preop labs in healthy ASA 1-2 patients" Samsel data. Cut general-medicine depth that lives in nephrology / endocrinology / pathology textbooks.
+
+---
+
 ## Current Codex addendum — April 30, 2026 (BPH / Male LUTS atlas section + prostate enucleation hub)
 
 This Codex pass started a new **Treatment Atlas → BPH & Male LUTS** section and then expanded the HoLEP row into a broader prostate-enucleation detail page. These changes are currently local unless separately committed by the active agent.
