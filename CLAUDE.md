@@ -4,6 +4,32 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
+## Current Codex addendum — April 30, 2026 (Ureteroenteric anastomotic stricture repair atlas page)
+
+This pass added a new hidden technique page for ureteroenteric anastomotic stricture (UAS) repair under **Treatment Atlas → Upper Tract Reconstruction → Reimplantation**, and added a new **Post-Diversion Reconstruction** domain (violet badge) to the upper tract searchable database. Commit: `c387f3e` (rebased to `6656899`).
+
+### Ureteroenteric Anastomotic Stricture Repair (commit `6656899`)
+
+- Added [Ureteroenteric Anastomotic Stricture Repair](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteroenteric-anastomotic-revision.mdx) as a hidden detail page at `/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteroenteric-anastomotic-revision`.
+- **Placement rationale:** UAS repair is functionally a ureteral reimplantation into a bowel segment, so it lives in the `reimplantation/` subfolder beside ureteral-reimplantation, Boari flap / psoas hitch, and non-transecting reimplant. The distinct clinical context (post-cystectomy, bowel target, high ischemic burden, malignancy exclusion requirement) warranted its own dedicated page rather than folding it into ureteral-reimplantation.
+- **Scope:** epidemiology (cumulative 12%/16%/19% at 1/3/5 years, left-side predominance 46–68%); risk factors (BMI, prior chemo/radiation, UTI, urine leak, preoperative hydronephrosis, NRI, ASA; paradoxical stenting-increases-stricture OR 2.27; shorter distal ureter protects); preoperative workup (CT urography / MAG3 / retrograde pyelogram / antegrade nephrostogram; mandatory biopsy to exclude malignancy; 4-week nephrostomy rest); endoscopic approaches (balloon dilation 54% long-term patency via Lu 2019 meta; Ho:YAG endoureterotomy 50–80% per Singal 1997; laser incision + triamcinolone injection 83% at 30-month median per Katims 2021; Lovaco intraluminal invagination 80% at 51-month median; cold-knife antegrade 74% per Poulakis 2001); 27-year comparative data Laven 2003 (27% endoscopic vs 69% open patency at 60 months); open surgical revision 80–91% (Laven / Bearrick); retroperitoneal low lombotomy for right-sided isolated UAS (Kalemci 2021); robotic repair — ICG-guided stricture localization, Sarychev/Klein technique with continuous 4-0 Stratafix over DJ stent, Nesbit for unilateral / Wallace for bilateral, 80% vs 90% success vs open (p = 0.42) with 37% vs 71% complications (p = 0.026) per Ajami 2025 multicenter; Boari-like bowel advancement flap in ~15% of robotic and ~27% of open cases (Bearrick / Ghodoussipour); ileal bypass for pan-ureteral loss (Li 2026); BMG ureteroplasty for long strictures (Bello 2025); anastomotic prevention table (interrupted vs running HR 1.9 per Large 2013; Bricker vs Wallace per Krafft 2022 and Kouba 2007; refluxing 3× lower stricture rate vs Le Duc antireflux per Hautmann 2017); postoperative surveillance protocol; decision algorithm (endoscopic for ≤ 2 cm / poor surgical candidate → robotic preferred for surgical candidates → open if robotic unavailable → retroperitoneal for right-sided).
+- **Database update:** added new `Post-Diversion Reconstruction` domain (violet `#6d28d9` badge) to the upper tract `badgeColors` map; one new row linked to the detail page.
+- **28 DOI-linked references**, all cited. `npm run lint:links` passed (791 files, no broken links). `npm run typecheck` and `npm run build` both clean (712 articles, 7,568 references).
+
+### Verification status from this pass
+
+- `npm run lint:links` passed after the UAS changes.
+- `npm run typecheck` passed.
+- `npm run build` passed. Stats regenerated: 712 articles, 7,568 references.
+- `git diff --check` passed.
+- Full `npm run lint:citations` remains blocked by pre-existing citation issues (unchanged from prior passes):
+  - `docs/02-evaluation/laboratory-studies/hormonal-assessment.mdx`
+  - `docs/02-evaluation/laboratory-studies/preoperative-labs.mdx`
+  - `docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx`
+  - `docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx`
+
+---
+
 ## Current handoff snapshot — May 5, 2026 (Hypospadias relocation + pre-launch audit)
 
 This session moved Hypospadias & Epispadias into Lifelong Urologic Care (with a master-decision-framework augmentation) and ran a structured pre-launch audit against the public-launch readiness criteria. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`.
@@ -244,6 +270,7 @@ This Codex pass started a new **Treatment Atlas → BPH & Male LUTS** section an
 - Scope: treatment-selection hub rather than duplicate disease page. It cross-links to the existing [Benign Prostatic Hyperplasia](docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx) condition page and pharmacology hubs for alpha blockers, 5-ARIs, PDE5 inhibitors, anticholinergics, and beta3 agonists.
 - Decision framework: symptom phenotype, core evaluation, early-procedure triggers, escalation by bother/risk/anatomy, and procedure trade-off selection.
 - Searchable database rows now include TURP, TUIP, HoLEP, thulium / bipolar enucleation, GreenLight PVP, Aquablation, simple prostatectomy, UroLift / PUL, Rezum, iTIND, Optilume BPH, PAE, and catheter pathways.
+- Landing-page cleanup: General Principles intentionally links only to the clinical BPH condition page and Energy Devices for BPH; UroLift and Prostate Enucleation / HoLEP are left in the searchable technique database rather than repeated in the principles block.
 - Added BPH to the parent [Treatment Atlas](docs/04-surgical-techniques/index.mdx) landing and added a backlink from the clinical BPH page.
 
 ### Prostate Enucleation / HoLEP detail page
