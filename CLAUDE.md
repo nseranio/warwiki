@@ -33,6 +33,11 @@ Two-pass mechanical conversion + multi-batch editorial pass:
 **Editorial pass** ([commits e4de05b](https://github.com/nseranio/warwiki/commit/e4de05b), [4d702f2](https://github.com/nseranio/warwiki/commit/4d702f2), [c16d144](https://github.com/nseranio/warwiki/commit/c16d144), [018d6e9](https://github.com/nseranio/warwiki/commit/018d6e9)):
 - AUS demo (24/24 refs cited) → 23 stub-style technique pages (47 cites added) → 4 substantive files (penile-implants 19 refs, mag3 14 refs, sui-female remaining cites, ureteroenteric-anastomotic-revision 1 ref) → final 2 history-physical files (male-urogenital-exam 12 refs, female-pelvic-examination 8 refs).
 
+**Reference-spacing fix** ([commit e0c371a](https://github.com/nseranio/warwiki/commit/e0c371a)):
+- User flagged that the sui-female (and ~26 other) reference lists rendered as one wall-of-text paragraph instead of separate bibliography entries.
+- Root cause: [`scripts/normalize-citations.js`](scripts/normalize-citations.js) preserved each source file's line layout when adding anchors. Files where references were on consecutive lines (no blank separators) collapsed into a single paragraph in markdown.
+- New [`scripts/space-references.js`](scripts/space-references.js) inserts a blank line between every consecutive `<a id="refN">` line so each reference renders as its own paragraph. 27 files fixed.
+
 ### Final citation state
 
 ```
