@@ -30,7 +30,55 @@ This pass added a new hidden technique page for ureteroenteric anastomotic stric
 
 ---
 
-## Current handoff snapshot — May 5, 2026 (Hypospadias relocation + pre-launch audit)
+## Current handoff snapshot — May 6, 2026 (Pre-launch blockers cleared)
+
+This session resolved all five critical launch blockers identified in the May 5 pre-launch audit. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`. Commit: [`75e4eac`](https://github.com/nseranio/warwiki/commit/75e4eac).
+
+### What landed
+
+- **Deleted [`src/pages/markdown-page.mdx`](src/pages)** — the Docusaurus init boilerplate "You don't need React to write simple standalone pages" that had been shipping at `/markdown-page` in the production sitemap and indexed by Algolia.
+- **Added `description:` frontmatter to 26 priority landing pages** — the 8 top-level section landings (Foundations, Evaluation, Clinical Conditions, Treatment Atlas, Special Populations, Journal Club, History & Lineage, Resources), the 14 Treatment Atlas section landings (04, 04a, 04ab, 04b, 04c, 04d, 04e, 04f, 04g, 04h, 04i, 04j, 04k, 04l, 04m), and the 4 Lifelong Urologic Care articles (index, transitional-urology, geriatric-urology, hypospadias-epispadias). Per-page meta descriptions, OG snippets, and Algolia search results now have curated content instead of first-paragraph fallback. Bulk-applied via [`scripts/add-descriptions.js`](scripts/add-descriptions.js) — idempotent, can re-run safely as new landings are added.
+- **Footer links + global metadata in [`docusaurus.config.ts`](docusaurus.config.ts).** Footer now has three columns:
+  - **WARWIKI** → About, Foundations, Treatment Atlas
+  - **Library** → Journal Club, Resources, History & Lineage
+  - **Project** → GitHub, Report an issue, Contact (mailto:warwikihq@gmail.com)
+  Copyright extended with editorial-independence framing. New `themeConfig.metadata` array seeds default `description`, `og:type`, `og:site_name`, and full Twitter card (`summary_large_image`, title, description). Default `og:image` already pointed at [`/img/warwiki-social-card.png`](static/img/warwiki-social-card.png).
+- **Citation orphans cleared in 4 files.** Ran [`scripts/fix-citations.js`](scripts/fix-citations.js) on [`hormonal-assessment.mdx`](docs/02-evaluation/laboratory-studies/hormonal-assessment.mdx), [`preoperative-labs.mdx`](docs/02-evaluation/laboratory-studies/preoperative-labs.mdx), [`renal-function-metabolic-surveillance.mdx`](docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx), [`female-cosmetic.mdx`](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx). Removed orphan `<a id="refN">` entries that had no body citation; renumbered remaining refs to a contiguous 1..K sequence. **Citation lint now passes 791/791 files clean** — long-standing Codex-addendum-flagged blockers are gone.
+- **`onBrokenAnchors` policy left at `'ignore'` with explanatory comment.** Initial upgrade to `'warn'` surfaced **409 false positives** because Docusaurus's anchor checker doesn't recognise WARWIKI's `<a id="refN"></a>` citation pattern (used 7,599 times site-wide); the noise would mask any real broken anchor. Future enhancement: a custom `lint:anchors` script that scans for the WARWIKI citation pattern.
+
+### Bonus QoL fixes shipped in the same commit
+
+- **`showLastUpdateAuthor: true`** added to `docs` preset (paired with the existing `showLastUpdateTime`). Git commit author now surfaces at the bottom of every doc page — closes the contributor-attribution audit gap.
+- **[`static/robots.txt`](static/robots.txt) created** — `Allow: /` with `Sitemap: https://warwiki.org/sitemap.xml`. Closes the SEO crawl-policy gap surfaced by Phase 1 of the audit.
+- **[`scripts/add-descriptions.js`](scripts/add-descriptions.js) committed as a reusable script.** Idempotent: skips files that already have `description:`. Extend the `ENTRIES` array as new landings are added.
+
+### Final lint / build state
+
+- `npm run clear && npm run build` — clean (zero warnings, zero errors)
+- `npm run lint:links` — 791 files, no broken `/docs/` links
+- `npm run lint:scope` — 791 files, no out-of-scope titles
+- `npm run lint:citations` — 791 files, no issues *(the 4 long-standing orphan-anchor failures from the laboratory-studies + female-cosmetic pages are now resolved)*
+- `npm run lint:orphans` — 88 false positives remain *(known JSX-array slug-detection limitation; pages reachable via `<TechniqueDatabase>` / `<GenericDatabase>` `slug:` properties aren't seen by the markdown-link AST)*
+- 713 articles, 7,599 references *(rebased to incorporate concurrent UAS-repair atlas additions from `6656899`/`2b999c0`)*
+
+### Outstanding (non-blockers, post-launch roadmap)
+
+- ~765 doc pages still lack `description:` (only the 26 priority landings got descriptions). Bulk-extend the `ENTRIES` array in [`scripts/add-descriptions.js`](scripts/add-descriptions.js) — straightforward post-launch.
+- ~60 procedure pages may lack the canonical 7-section template (Indications / Contraindications / Preoperative / Technique / Complications / Postoperative / References). Add a `scripts/check-procedure-template.js` that exempts `*-principles.mdx` + `index.mdx`.
+- 88 orphan-check false positives — extend AST in [`scripts/check-orphans.js`](scripts/check-orphans.js) to parse JSX `slug:` properties.
+- Algolia live-index spot-check — manual launch-day task: search "ileal conduit", "urethroplasty", "vesicovaginal fistula", "Bracka", "TIP Snodgrass" and confirm canonical pages return.
+- Docusaurus `3.10.0 → 3.10.1` minor update available.
+
+### Editorial conventions reaffirmed
+
+- **`onBrokenAnchors` cannot be tightened** until the WARWIKI citation pattern (raw `<a id="refN"></a>` HTML anchors) is matched by a custom checker. Docusaurus's built-in checker only recognises heading-derived IDs and Docusaurus-managed IDs, not inline HTML `id` attributes.
+- **`description:` frontmatter convention** for landings: 100–160 char active-voice surgeon-oriented summary. The seed set in [`scripts/add-descriptions.js`](scripts/add-descriptions.js) is the reference.
+- **Footer + metadata block in [`docusaurus.config.ts`](docusaurus.config.ts)** is now the locked structure — three-column footer (WARWIKI / Library / Project), `themeConfig.metadata` array for OG + Twitter, `image: 'img/warwiki-social-card.png'` for default social card.
+- **Rebase before push when concurrent commits land on `main`.** This session encountered a `src/data/stats.json` conflict from concurrent UAS-repair work (6656899); resolved by re-running `node scripts/gen-stats.js` and rebase-continue. Pattern: stats.json is auto-regenerated, so on conflict regenerate rather than manually merge.
+
+---
+
+## Previous handoff snapshot — May 5, 2026 (Hypospadias relocation + pre-launch audit)
 
 This session moved Hypospadias & Epispadias into Lifelong Urologic Care (with a master-decision-framework augmentation) and ran a structured pre-launch audit against the public-launch readiness criteria. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`.
 
@@ -2137,4 +2185,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-05-05*
+*Last updated: 2026-05-06*
