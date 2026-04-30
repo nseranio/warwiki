@@ -4,7 +4,66 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current Codex addendum — April 30, 2026 (Ureteroenteric anastomotic stricture repair atlas page)
+## Current handoff snapshot — April 30, 2026 (Citation-format normalization complete + pre-launch fixes)
+
+> **Date correction.** The handoff snapshots immediately below labelled "May 4 / May 5 / May 6" were all written on **April 30, 2026** (today). They were mistakenly future-dated. Treat the May labels as the same-day work-stream stages, not separate calendar days. All labelled commits are from today.
+
+This single-day session ran a **multi-arc pre-launch pass** culminating in zero citation-orphan anchors across the entire site.
+
+### Arc 1 — Pre-launch audit blockers cleared ([commit 75e4eac](https://github.com/nseranio/warwiki/commit/75e4eac))
+
+- Deleted `src/pages/markdown-page.mdx` Docusaurus boilerplate.
+- Added `description:` frontmatter to **26 priority landings** (8 top-level + 14 atlas sections + 4 lifelong-care articles) via [`scripts/add-descriptions.js`](scripts/add-descriptions.js) (idempotent — re-runnable as new landings appear).
+- Footer + global metadata in [`docusaurus.config.ts`](docusaurus.config.ts): three-column footer (WARWIKI / Library / Project) + `themeConfig.metadata` array seeding `og:type`, `og:site_name`, full Twitter card, default description. Default `og:image` already pointed at [`/img/warwiki-social-card.png`](static/img/warwiki-social-card.png).
+- `showLastUpdateAuthor: true` enabled (paired with the existing `showLastUpdateTime`); git commit author surfaces at page bottom.
+- [`static/robots.txt`](static/robots.txt) added.
+- `onBrokenAnchors` left at `'ignore'` with explanatory comment — Docusaurus's checker doesn't recognise WARWIKI's `<a id="refN"></a>` citation pattern (used 7,599+ times); upgrading to `'warn'` surfaced 409 false positives that would mask any real broken anchor.
+
+### Arc 2 — Citation format normalization
+
+User directive: *"Make sure all pages have the latest citation format, meaning inline citations that link to the reference at the bottom of the page."*
+
+Two-pass mechanical conversion + multi-batch editorial pass:
+
+**Mechanical pass** ([commit b8d4ec6](https://github.com/nseranio/warwiki/commit/b8d4ec6)):
+- New [`scripts/normalize-citations.js`](scripts/normalize-citations.js) — inserts `<a id="refN"></a>` anchors on every numbered reference in pages whose `## References` section was plain numbered without anchors; converts standalone `[N]` body brackets to `<sup>[[N]](#refN)</sup>`. Skips already-normalized files, footnote-style files, and stub bibliographies.
+- New [`scripts/link-inline-citations.js`](scripts/link-inline-citations.js) — best-effort insertion of inline cites where body has explicit "Surname et al" mentions matching a ref's first-author surname. Conservative: ambiguous matches require year disambiguator or are skipped.
+- 30 files normalized, 6 files received auto-detected inline cites (8 cites total).
+
+**Editorial pass** ([commits e4de05b](https://github.com/nseranio/warwiki/commit/e4de05b), [4d702f2](https://github.com/nseranio/warwiki/commit/4d702f2), [c16d144](https://github.com/nseranio/warwiki/commit/c16d144), [018d6e9](https://github.com/nseranio/warwiki/commit/018d6e9)):
+- AUS demo (24/24 refs cited) → 23 stub-style technique pages (47 cites added) → 4 substantive files (penile-implants 19 refs, mag3 14 refs, sui-female remaining cites, ureteroenteric-anastomotic-revision 1 ref) → final 2 history-physical files (male-urogenital-exam 12 refs, female-pelvic-examination 8 refs).
+
+### Final citation state
+
+```
+✓ Citation check: 792 files, no issues.
+```
+
+| State | Count |
+|---|---:|
+| Files with `<sup>[[N]](#refN)</sup>` standard inline + anchored refs | **452** |
+| Files with `[^N]` footnote style (GAS articles — accepted alt) | 6 |
+| Files with no references (stubs / landings / databases) | 334 |
+| Orphan anchors | **0** |
+
+### Editorial conventions captured / reaffirmed
+
+- **WARWIKI inline cite format is locked at `<sup>[[N]](#refN)</sup>` + `<a id="refN"></a>N. ...`** for the 452 standard pages, and `[^N]` footnote-style for the 6 GAS pages. Both produce inline → bottom-anchor link UX.
+- **Onboarding pattern for chatbot-augmented bibliographies** (now scripted): run [`scripts/normalize-citations.js`](scripts/normalize-citations.js) first to add anchor IDs, then [`scripts/link-inline-citations.js`](scripts/link-inline-citations.js) to catch explicit author-year mentions, then editorial pass for any remaining body claims.
+- **`onBrokenAnchors` cannot be tightened** until a custom checker recognises the WARWIKI `<a id>` pattern. Future enhancement: a `scripts/check-anchors.js` that scans for the WARWIKI citation pattern.
+- **`description:` frontmatter** is now present on the 26 highest-traffic landings. Bulk-extend the `ENTRIES` array in [`scripts/add-descriptions.js`](scripts/add-descriptions.js) as new pages are written.
+- **Lint / build state** is the cleanest it has been pre-launch: build passes with zero warnings; links, scope, and citation lints all clean across 792 files; the only remaining lint signal is the 88 known-false-positive orphans from the JSX-array slug-detection limitation in [`scripts/check-orphans.js`](scripts/check-orphans.js).
+
+### Outstanding (non-blockers)
+
+- ~765 doc pages still lack `description:` (only the 26 priority landings got them). Bulk-extend [`scripts/add-descriptions.js`](scripts/add-descriptions.js) as needed.
+- 88 orphan-check false positives — extend AST in [`scripts/check-orphans.js`](scripts/check-orphans.js) to parse JSX `slug:` properties.
+- Algolia live-index spot-check — manual launch-day task.
+- Docusaurus `3.10.0 → 3.10.1` minor update available.
+
+---
+
+## Previous Codex addendum — April 30, 2026 (Ureteroenteric anastomotic stricture repair atlas page)
 
 This pass added a new hidden technique page for ureteroenteric anastomotic stricture (UAS) repair under **Treatment Atlas → Upper Tract Reconstruction → Reimplantation**, and added a new **Post-Diversion Reconstruction** domain (violet badge) to the upper tract searchable database. Commit: `c387f3e` (rebased to `6656899`).
 
@@ -30,7 +89,7 @@ This pass added a new hidden technique page for ureteroenteric anastomotic stric
 
 ---
 
-## Current handoff snapshot — May 6, 2026 (Pre-launch blockers cleared)
+## Previous handoff snapshot — labelled May 6, 2026 / actually April 30 (Pre-launch blockers cleared)
 
 This session resolved all five critical launch blockers identified in the May 5 pre-launch audit. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`. Commit: [`75e4eac`](https://github.com/nseranio/warwiki/commit/75e4eac).
 
@@ -78,7 +137,7 @@ This session resolved all five critical launch blockers identified in the May 5 
 
 ---
 
-## Previous handoff snapshot — May 5, 2026 (Hypospadias relocation + pre-launch audit)
+## Previous handoff snapshot — labelled May 5, 2026 / actually April 30 (Hypospadias relocation + pre-launch audit)
 
 This session moved Hypospadias & Epispadias into Lifelong Urologic Care (with a master-decision-framework augmentation) and ran a structured pre-launch audit against the public-launch readiness criteria. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`.
 
@@ -138,7 +197,7 @@ Phase-1 build + integrity + config audit. Build: `npm run clear && npm run build
 
 ---
 
-## Previous handoff snapshot — May 4, 2026 (colon conduit + Turner-Warwick + instrument image campaign + 70-row catalog audit + Lone Star augmentation)
+## Previous handoff snapshot — labelled May 4, 2026 / actually April 30 (colon conduit + Turner-Warwick + instrument image campaign + 70-row catalog audit + Lone Star augmentation)
 
 This session was an **instruments-focused** pass plus one new urinary-diversion technique page. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
 
@@ -307,7 +366,7 @@ The four pages cluster the labs by clinical context rather than alphabetically:
 
 ---
 
-## Current Codex addendum — April 30, 2026 (BPH / Male LUTS atlas section + prostate enucleation hub)
+## Previous Codex addendum — April 30, 2026 (BPH / Male LUTS atlas section + prostate enucleation hub)
 
 This Codex pass started a new **Treatment Atlas → BPH & Male LUTS** section and then expanded the HoLEP row into a broader prostate-enucleation detail page. These changes are currently local unless separately committed by the active agent.
 
@@ -342,7 +401,7 @@ This Codex pass started a new **Treatment Atlas → BPH & Male LUTS** section an
 
 ---
 
-## Current Codex addendum — April 30, 2026 (PNE placement + priapism operative taxonomy)
+## Previous Codex addendum — April 30, 2026 (PNE placement + priapism operative taxonomy)
 
 This Codex pass added one SNM trial-technique page and reorganized detailed priapism shunt content so emergency algorithms stay fast while operative technique detail lives in the Treatment Atlas. Session rule remains: **commit and push after every change.** Latest commits from this pass:
 
@@ -386,7 +445,7 @@ This Codex pass added one SNM trial-technique page and reorganized detailed pria
 
 ---
 
-## Current Codex addendum — April 30, 2026 (Special Populations / Prolapse / Female urethral-mass placement pass)
+## Previous Codex addendum — April 30, 2026 (Special Populations / Prolapse / Female urethral-mass placement pass)
 
 This Codex pass added three new scaffold / overview pages and pushed each change to `origin/main`. Session rule remains: **commit and push after every change.** Latest commits from this pass:
 
@@ -435,7 +494,7 @@ This Codex pass added three new scaffold / overview pages and pushed each change
 
 ---
 
-## Current handoff snapshot — May 2, 2026 (Treatment Atlas sidebar cleanup — uniform "landing IS the database" pattern, prevalence-ordered, site-wide font consistency)
+## Previous handoff snapshot — May 2, 2026 (Treatment Atlas sidebar cleanup — uniform "landing IS the database" pattern, prevalence-ordered, site-wide font consistency)
 
 This session was a sidebar / styling cleanup pass plus a clinical-prevalence reordering of the Treatment Atlas. No new article content. Branch: `claude/competent-herschel-c1c94b`; pushes `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
 
@@ -1155,7 +1214,7 @@ The upper-tract technique fill is continuing on `origin/main`. Baseline pushed c
 
 ---
 
-## Current handoff snapshot — April 24, 2026 (site audit + landings + transitional / geriatric urology)
+## Previous handoff snapshot — April 24, 2026 (site audit + landings + transitional / geriatric urology)
 
 The latest work has been committed and pushed to `origin/main`. This session was an audit-driven cleanup pass plus three substantive content additions.
 
@@ -2185,4 +2244,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-05-06*
+*Last updated: 2026-04-30*
