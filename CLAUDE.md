@@ -4,7 +4,79 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 3, 2026 (sidebar visual hierarchy + atlas cohort split + decision-framework rename + new Laboratory Studies subsection)
+## Current handoff snapshot — May 4, 2026 (colon conduit + Turner-Warwick + instrument image campaign + 70-row catalog audit + Lone Star augmentation)
+
+This session was an **instruments-focused** pass plus one new urinary-diversion technique page. Branch: `claude/bold-ride-a9af27`; pushes via `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
+
+### New: Colon conduit urinary diversion ([commit e8919f6](https://github.com/nseranio/warwiki/commit/e8919f6))
+
+- Added [colon-conduit.mdx](docs/04-surgical-techniques/04c-urinary-diversion/colon-conduit.mdx) at `/docs/surgical-techniques/04c-urinary-diversion/colon-conduit`. 19 DOI-linked refs anchored on **Hebert 2026 multi-institutional CCUD series** (n = 179: 28.5% 30-day Clavien ≥ III, 4.5% 90-day mortality, albumin ≥ 3.2 g/dL HR 0.18 protective), Hagemans 2020 ileus comparison vs ileal conduit (7% vs 21% post-op ileus, p = 0.024, eliminates ileo-ileal anastomotic leakage), Shimko Mayo 1,057-pt long-term-complication breakdown, Dagen 8–10% non-refluxing ureterocolonic-stricture rate.
+- Section coverage: indications (radiation, concurrent colostomy, short bowel, hostile abdomen, IBD, neurogenic / exstrophy), colonic-segment selection (transverse colon default for radiation; sigmoid / descending for colostomy switch), surgical technique with refluxing-vs-non-refluxing ureterocolic anastomosis, **"colostomy switch" configuration** that eliminates any bowel anastomosis, perioperative outcomes table, comparison vs ileal conduit, metabolic complications (hyperchloremic acidosis 34.1%, hypokalemia 39%, hyperchloremia 24.4%, calcium / magnesium wasting, less B12 burden than ileal), long-term Mayo complication table, contraindications, advantages.
+- Wired into the [urinary-diversion database](docs/04-surgical-techniques/04c-urinary-diversion/index.mdx) in the Incontinent family. **Two new rows in the Decision Framework** for prior pelvic radiation (transverse colon preferred) and concurrent colostomy / short bowel (sigmoid / descending with colostomy switch). Intro prose updated to list colon conduit alongside the other major diversion families.
+
+### Turner-Warwick Ryder needle holder — augmented ([commit 4558e74](https://github.com/nseranio/warwiki/commit/4558e74))
+
+- [turner-warwick-ryder.mdx](docs/01-foundations/tools/instruments/needle-holders/turner-warwick-ryder.mdx) augmented from a brief stub into a full design / use article: 18–23 cm length range, **tungsten carbide jaw inserts identified by gold finger rings**, smooth vs fine cross-hatched jaw surface, narrow box lock; clean comparison table vs Mayo-Hegar / Castroviejo / Olsen-Hegar; clinical-applications block (posterior urethroplasty, VUA, ureteroenteric anastomoses for ileal + colon conduit, fistula, pediatric urology); practical-considerations block (suture 4-0 to 6-0, SH / RB-1 / UR-6 needle compatibility, carbide-insert care, sterilize unlocked).
+- 5 DOI / PMID-linked references (Reid 1975 Urology landmark Turner-Warwick urethroplasty series; Abidin 1989 / 1990 needle-holder bonded-jaw papers; Edlich 1990 / 1993 needle-holder selection science).
+- Corrected the source's "1925–2017" date for Sir Richard Turner-Warwick to **1925–2020** (Wikipedia confirms his death 1 May 2020).
+
+### Instrument image campaign ([commit 63515c6](https://github.com/nseranio/warwiki/commit/63515c6), [commit d3dc290](https://github.com/nseranio/warwiki/commit/d3dc290))
+
+- Created `static/img/instruments/` and downloaded **5 license-verified Wikimedia Commons photos** (CC0 except Castroviejo / Mayo-Hegar which are CC BY-SA 3.0 with attribution): `allis-clamp.jpg`, `babcock.jpg`, `kocher-clamp.jpg`, `castroviejo.jpg`, `mayo-hegar.jpg`.
+- All photos optimized via `sips`: max width 1200 px, JPEG quality 85, all files ≤ 340 KB.
+- Wired four photos into [allis.mdx](docs/01-foundations/tools/instruments/clamps/allis.mdx), [babcock.mdx](docs/01-foundations/tools/instruments/clamps/babcock.mdx), [kocher.mdx](docs/01-foundations/tools/instruments/clamps/kocher.mdx), [castroviejo.mdx](docs/01-foundations/tools/instruments/needle-holders/castroviejo.mdx) using JSX `<img>` tags with proper alt text + italic caption + Wikimedia source link + license attribution.
+- The Mayo-Hegar photo (`mayo-hegar.jpg`, CC BY-SA 3.0 / Rschiedon) is on disk but unwired — pending either a Mayo-Hegar parent page or an instruments-index image gallery.
+- **SVG schematics deleted.** Initial pass produced two SVG line drawings for Turner-Warwick Ryder and Heaney needle driver as substitutes for unavailable photos. User feedback: *"the SVGs are terrible delete them."* Both SVGs deleted and page wirings reverted in commit `d3dc290`. **Conclusion: skip SVG schematics for instrument pages** — either find a free photo, leave an HTML-comment placeholder for the user's own product photo, or omit the figure entirely.
+
+### Image-rendering policy: `.instrument-photo` class
+
+- Added a single CSS rule to [src/css/custom.css](src/css/custom.css):
+
+```css
+.instrument-photo {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto 0.5rem;
+  height: auto;
+}
+```
+
+- Instrument pages now use `<img src="..." alt="..." className="instrument-photo" />` (JSX, not markdown) followed by an italic caption line. **70% column width, centered.** This is the locked rendering pattern for instrument pages — apply to every new instrument photo. Anatomy articles continue to use plain markdown image embedding (full column width) since their figures are designed to fill the column.
+
+### Instruments catalog audit — ~70 new database rows + 5 new categories ([commit d3dc290](https://github.com/nseranio/warwiki/commit/d3dc290))
+
+User-supplied a comprehensive list of reconstructive-urology / urogynecology instruments. Audit added **~70 rows** to the [instruments index database](docs/01-foundations/tools/instruments/index.mdx) plus **five new categories** with their own badge colors:
+
+| New Category | Color | Members |
+|---|---|---|
+| **Scissors** | `#00695C` (dark teal) | Mayo, Metzenbaum, Iris, Potts, suture scissors |
+| **Catheters & Drains** | `#BF360C` (deep red-orange) | Foley + Coudé / Council, suprapubic Stamey / Bonanno, three-way irrigation, Double-J / JJ stent, whistle-tip ureteral catheter, nephrostomy tube, Penrose drain, vessel loops |
+| **Endoscopy** | `#4527A0` (deep purple) | Cystoscope (rigid + flex), ureteroscope (semi-rigid + flex), resectoscope, cold-cup biopsy forceps, Bugbee electrode, Collins knife |
+| **Laparoscopic & Robotic** | `#1A237E` (navy) | da Vinci Maryland bipolar, monopolar curved scissors, ProGrasp, Cadiere, Tip-Up fenestrated grasper, large needle driver; Hem-o-lok clip applier; laparoscopic needle holder; Endo Catch retrieval bag |
+| **Miscellaneous** | `#424242` (dark gray) | Toomey 60-mL syringe, Ellik evacuator, Randall stone forceps, probe & grooved director, bladder scanner |
+
+Notable fills into existing categories: Mayo-Hegar (Needle Holders); Lahey forceps + sponge stick (Tissue Forceps); Kelly / Halsted mosquito / Mixter right-angle / Schnidt tonsil / Heaney clamp / Masterson / Backhaus towel clip (Clamps); Sims / Deaver / Richardson / Army-Navy / Langenbeck / Senn / Volkmann / malleable / skin hooks / Auvard / Breisky-Navratil / Heiss / Weitlaner / Balfour / Bookwalter / O'Connor-O'Sullivan / Turner-Warwick retractor / Denis Browne / Graves speculum / Pederson speculum (Retractors); Hegar dilators, Goodwin sound, filiform & followers, Otis + Sachse urethrotomes, balloon dilator (Sounds & Bougies); Stamey needle, Crawford fascial stripper, TVT / TOT tunneler, Gore suture passer, sacrocolpopexy tacker, single-tooth + Jacobs tenaculum, Bozeman uterine dressing forceps, Rumi uterine manipulator, Koh colpotomizer (Urethral & Pelvic Specialty).
+
+**GenericDatabase pattern reaffirmed:** rows without a `slug` field render as plain text (the component falls back when slug is absent). This means database rows can be added without creating stub pages — useful for reference-only inclusion. Stub pages can be added incrementally as priorities surface.
+
+### Lone Star retractor augmented ([commit 4e502bf](https://github.com/nseranio/warwiki/commit/4e502bf))
+
+- [lone-star.mdx](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) augmented from a brief stub into a full article. Sections: design (14.1 × 14.1 cm square frame, slotted perimeter, sharp / blunt / skin hooks, light / medium / heavy stay tensions, optional base plate); mechanism block; preserved "Why It Became the Reconstructive Workhorse" framing with three concrete advantages (infinite adjustability, atraumatic elastic tension, intraoperative repositioning); four reconstructive-practice key-use clusters (urethral reconstruction, genital and external, vaginal and pelvic floor, prosthetic and continence); practical pearls block (full-thickness hook bites, blunt hooks for friable tissue, tissue-matched tension, urethroplasty stay sequencing, combined-with-Bookwalter for deep exposure); limitations (puncture marks, hook pull-through in irradiated / atrophic tissue, depth, disposable cost); manufacturer note (originally Lone Star Medical Products, now CooperSurgical).
+- **Per user instruction "leave things that don't apply to reconstructive urology or urogynecology"**, deliberately filtered OUT of the source content: colorectal / anorectal use cases (TAMIS, hemorrhoidectomy, J-pouch mucosectomy, coloanal anastomosis), neurosurgery applications (CEA, craniotomy, STA harvest), general / plastic / pediatric / ENT use, and the colorectal-cancer-recurrence case report (Tranchart 2008). Trailing "Would you like to explore..." question and OpenEvidence rare-disease link also stripped per WARWIKI conventions.
+- **References dropped entirely** because all 6 source refs were out-of-scope (4 neurosurgery, 1 J-pouch, 1 colorectal-cancer recurrence). Page follows the existing reference-free convention used by Allis, Babcock, Kocher, Castroviejo, Heaney instrument pages — when the available evidence base is genuinely outside reconstructive urology / urogynecology, force-fitting it would mislead the reader.
+
+### Editorial conventions reaffirmed this session
+
+- **Image-rendering policy for instruments.** Use `<img className="instrument-photo" />` (JSX, not markdown) with an italic caption line below. CSS in `custom.css` constrains to 70% column width, centered. This is the locked pattern.
+- **Skip SVG schematics for instruments.** First attempt (Turner-Warwick + Heaney) was rejected. Either find a free Wikimedia / Wellcome / PMC photo, or leave an HTML-comment placeholder for the user's own product photograph.
+- **Wikimedia license verification before download.** Always WebFetch the Wikimedia file page before `curl`ing the file. Note attribution requirements (CC BY-SA 3.0 needs uploader credit + license link in caption; CC0 needs none). Optimize via `sips -Z 1200 file.jpg` and `sips -s formatOptions 85 file.jpg` to keep files under ~350 KB.
+- **GenericDatabase rows with no slug render as plain text.** Use this pattern when adding many catalog entries for reference completeness without committing to writing a stub page for each.
+- **Aggressive scope-filtering when augmenting instrument pages with chatbot-source content.** Lone Star precedent: when the source content sprawls across colorectal / neurosurgery / ENT / general surgery, cut everything that isn't reconstructive urology or urogynecology — even when this leaves the page reference-free. Forcing in out-of-scope citations to maintain a reference-list convention misleads the reader. Existing instrument-page convention is reference-free; preserve that pattern when applicable.
+- **Source-cleanup checklist** (now standard for all chatbot-augmented content): strip trailing "Would you like to explore..." questions; strip "Figure N / undefined" placeholders; rebuild mashed comparison tables (no whitespace between cells) into proper markdown; convert `[N]` bracket citations to `<sup>[[N]](#refN)</sup>`; add DOI / PubMed links to the reference list with `<a id="refN"></a>` anchors; filter bleed-through references (refs from unrelated articles); strip OpenEvidence rare-disease promo links; verify any biographical dates against Wikipedia (this session caught Turner-Warwick's death year corrected from 2017 → 2020).
+
+---
+
+## Previous handoff snapshot — May 3, 2026 (sidebar visual hierarchy + atlas cohort split + decision-framework rename + new Laboratory Studies subsection)
 
 This was a structural / navigation polish session followed by a content-build pass for laboratory studies. Branch: `claude/unruffled-jepsen-ee3f4f`; pushes via `git push origin HEAD:main`. Session rule continues: **commit and push after every change.**
 
@@ -1978,4 +2050,4 @@ Today's additions were text-only. The following new pages would benefit from ima
 ---
 
 
-*Last updated: 2026-05-02*
+*Last updated: 2026-05-04*
