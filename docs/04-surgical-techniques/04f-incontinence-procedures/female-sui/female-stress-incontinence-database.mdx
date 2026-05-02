@@ -22,11 +22,11 @@ Minimum evaluation per ACOG / AUGS: history, urinalysis, exam with cough stress 
 | Clinical Scenario | First-Line Surgical Option | Alternative(s) | Avoid |
 |---|---|---|---|
 | **Uncomplicated SUI with urethral hypermobility** | [Retropubic MUS (TVT)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling) | [Transobturator MUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling); [Single-incision mini-sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling) | — |
-| **Patient prefers to avoid synthetic mesh** | [Autologous fascial pubovaginal sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions) | Burch colposuspension; urethral bulking | Mesh-based MUS |
+| **Patient prefers to avoid synthetic mesh** | [Autologous fascial pubovaginal sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions) | [Burch colposuspension](/docs/surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension); urethral bulking | Mesh-based MUS |
 | **Patient prefers minimally-invasive option / declines anesthesia** | [Urethral bulking (Bulkamid)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents) — office-based | [Single-incision mini-sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling) under local | — |
 | **Elderly / frail patient with multiple comorbidities** | [Urethral bulking (Bulkamid)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents) | [Continence pessary](/docs/surgical-techniques/04f-incontinence-procedures/procedures/continence-pessary) | High-morbidity surgery |
 | **SUI without urethral hypermobility (ISD, fixed urethra)** | [Autologous fascial PVS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions) | [Urethral bulking](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents) | TMUS (less effective in ISD) |
-| **Concomitant pelvic organ prolapse (open / laparoscopic SCP)** | MUS + prolapse repair, **or** Burch at time of sacrocolpopexy | Autologous PVS at time of vaginal repair | — |
+| **Concomitant pelvic organ prolapse (open / laparoscopic SCP)** | MUS + prolapse repair, **or** [Burch at time of sacrocolpopexy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension) | Autologous PVS at time of vaginal repair | — |
 | **Recurrent SUI after prior sling** | Re-evaluate (urodynamics + ISD assessment) → repeat bulking, repeat sling, [autologous PVS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions), or [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | — | Reflexive repeat MUS without workup |
 | **Severe ISD after failed prior surgery** | [Female AUS (AMS-800)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | Obstructing autologous PVS | Standard MUS (likely to fail) |
 | **Devastated outlet, all options exhausted** | Bladder-neck closure + [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | Continued failed reconstruction |
@@ -54,7 +54,7 @@ When a midurethral sling is selected, three approaches differ in profile:
 3. **[Urethral bulking (Bulkamid)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents)** — office-based, repeatable; preferred for elderly / frail / mesh-averse
 4. **Midurethral sling** ([RMUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling) / [TMUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling) / [SIS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling)) — gold-standard surgical
 5. **[Autologous fascial PVS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions)** — when mesh declined / contraindicated, ISD-predominant, or concomitant urethral reconstruction
-6. **Burch colposuspension** — typically at time of concomitant abdominal / laparoscopic pelvic surgery
+6. **[Burch colposuspension](/docs/surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension)** — typically at time of concomitant abdominal / laparoscopic pelvic surgery
 7. **Repeat sling or bulking** — for recurrent SUI after workup
 8. **[Artificial Urinary Sphincter (AUS)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter)** — severe ISD after failed surgery (80% continence per Peyronnet 2019 meta of 964 women; revision ~15%, explantation ~13%)
 9. **Bladder-neck closure / urinary diversion** — last resort
@@ -145,8 +145,8 @@ export const femaleSuiProcs = [
   {
     name: "Burch Colposuspension",
     category: "Surgical",
-    notes: "Vaginal wall suspension to Cooper's ligament via open retropubic or laparoscopic approach. Historical gold standard; now typically reserved for patients undergoing concomitant abdominal/laparoscopic pelvic surgery. Cure rates 85–90% at 1 year, declining to 70% at 10 years; risk of de novo urgency and enterocele.",
-    slug: null,
+    notes: "Anterior vaginal wall suspension to Cooper's ligament via open retropubic or laparoscopic approach. Mesh-free; pooled cure 74% (vs 82% MUS); 5-yr 82% / 10-yr 55–69%; PGI-I 84% at 13 yr equivalent to retropubic MUS. CARE trial: reduces post-SCP SUI 44% → 24%. Higher voiding dysfunction (~10%) and posterior-compartment prolapse (3× MUS). Best for mesh-averse, limited vaginal access, or concomitant SCP.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension",
   },
   {
     name: "Artificial Urinary Sphincter (AUS)",
