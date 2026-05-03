@@ -88,9 +88,19 @@ All database rows now point to canonical per-device pages with device-specific e
 - **Filter chatbot-source artifacts**: strip "Would you like to explore..." trailing prompts; strip out-of-context "Figure N" placeholders (especially TAVR / VAD / coronary-stent figures that bled through into Argus / ProACT / containment-device source dumps); reconstruct swallowed `<` artifacts; rebuild mashed tables; renumber refs sequentially; cross-check that every cited ref is actually used.
 - **Non-FDA-approved-in-US devices** (ATOMS, REMEEX) — flag explicitly in Current Positioning section with a note about regional availability.
 
+### Arc 9 — Simple Prostatectomy dedicated page + RASP technique deep dives + 360° mucosal flap
+
+[simple-prostatectomy.mdx](docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx) — new dedicated 49-DOI-linked-ref BPH page covering open (Freyer / Millin), laparoscopic, and robotic-assisted (transvesical / Millin / Madigan; multiport and SP) variants.
+
+Sections: indications, open Freyer-vs-Millin head-to-head (Dall'Oglio 2006 RCT EBL 640 vs 362 mL), modern minimally invasive overview, **per-variant step-by-step technique deep dives** (transvesical multiport with "W"-port config + trigonization closure; transcapsular Millin mirroring radical-RP setup; **Madigan urethra-sparing** with Simone 2019 ICG + near-infrared fluorescence + Porpiglia 2021 81% antegrade ejaculation; **single-port transvesical** with intravesical docking + 360° reconstruction + Ramos 2024 95.8% same-day discharge; novel approaches — De Concilio 2018 trans-Douglas, Poncel 2023 470 g intrafascial, Piro 2023 Hugo platform), RASP-technique 4-column comparison table, **comparative outcomes** (Pandolfo 2023 SR/meta of 6,659; Pyrgidis 2025 German nationwide n = 46,234; Benarroche 2022 single-center), **expanded RASP-vs-HoLEP** with Benzouak 2025 SR/meta full parameter table + Grosso 2024 propensity + Palacios 2023 SP-vs-HoLEP + Glucksman 2026 + Hinojosa-Gonzalez 2026 Bayesian NMA (HoLEP wins on perioperative efficiency, RASP wins on transient SUI 5–8% vs 20–30% and antegrade ejaculation 55% vs 7%, RASP shorter learning curve), **RASP-vs-Aquablation** (Gangwish 2025 + WATER II Bhojani 2023 5-yr 96.3% freedom from retreatment; size ceiling 150 mL vs RASP 470 g), **dedicated 360° Circumferential Mucosal Flap Reconstruction section** (Cacciamani 2018 step-by-step with 9 o'clock first suture + counter-clockwise V-Loc closure to 12 o'clock; Coelho 2012 modified VUA with 3-step posterior plication + van Velthoven anastomosis + anterior closure; SP-RASP application with Abou Zeinab 2022 J Endourol catheter 7→3 d; 360°-vs-trigonization comparison table; Cockrell/Lee bladder-edge-to-apical-margin variant; Okorie 2010 open parallel without CBI; technical pearls). BPH database row updated with slug + Madigan urethra-sparing distinction in the sexual-function column.
+
+### Arc 10 — BNC operative-technique video
+
+`<VideoCards />` operative-technique video added to [bladder-neck-closure.mdx](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure.mdx) just before References.
+
 ### Lint state
 
-`npm run lint:links` clean across 805 files. Citation lint clean for all new pages this session. Build not re-run end-to-end given file-creation volume; recommended next session.
+`npm run lint:links` clean across 806 files. Citation lint clean for all new pages this session. Build not re-run end-to-end given file-creation volume; recommended next session.
 
 ---
 
