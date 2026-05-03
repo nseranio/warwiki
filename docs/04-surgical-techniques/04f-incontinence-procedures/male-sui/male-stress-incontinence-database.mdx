@@ -29,7 +29,7 @@ The **AUS (AMS-800) remains the gold standard** for moderate-to-severe SUI (AUSC
 | **Recurrent SUI after failed fixed sling** | [ATOMS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices) (Queissert 2021: 76.1% social continence at 42.5 mo after failed AdVance) | [AUS (AMS-800)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | Repeat fixed sling |
 | **Recurrent SUI after failed AUS** | AUS revision / replacement; salvage with **tandem cuff** | Larger-cuff revision (urethral atrophy is the most common nonmechanical failure — 56.5% of revisions; Bentellis 2021) | — |
 | **Concomitant SUI + erectile dysfunction** | Simultaneous [AUS + penile prosthesis](/docs/surgical-techniques/04j-sexual-dysfunction) (synchronous or staged) | [Sling + penile prosthesis](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | — |
-| **Mixed incontinence (SUI + urgency / OAB)** | Optimize OAB component first ([antimuscarinic / beta-3 agonist](/docs/foundations/pharmacology/storage-oab/anticholinergics)) → reassess SUI | If pure SUI persists after OAB control → standard surgical pathway | — |
+| **Mixed incontinence (SUI + urgency / OAB)** | Optimize OAB component first via the [OAB / UUI pathway](/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database) (anticholinergic / β-3 / botulinum toxin / SNM) → reassess SUI | If pure SUI persists after OAB control → standard surgical pathway | — |
 | **Devastated outlet, all options exhausted** | [Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) + [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | Continued failed reconstruction |
 
 ### Sling / Adjustable Device Sub-Comparison
@@ -55,14 +55,15 @@ The **AUS (AMS-800) remains the gold standard** for moderate-to-severe SUI (AUSC
 ### Stepwise Escalation Ladder
 
 1. **Conservative therapy** — [PFMT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt) ± biofeedback ± [electrical stimulation](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation); lifestyle modifications; minimum 6–12 months
-2. **Containment** — [penile clamp](/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp), [condom catheter](/docs/surgical-techniques/04f-incontinence-procedures/procedures/condom-catheters), pads, body-worn urinal (combination strategy preferred)
-3. **Pharmacotherapy** — only for mixed incontinence (OAB component) or as off-label adjunct (duloxetine)
-4. **[Urethral bulking](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents)** — niche role, mild SUI in poor surgical candidates
-5. **Fixed male sling** ([AdVance / AdVance XP](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings)) — mild-to-moderate SUI without radiation
-6. **Adjustable balloons** ([ProACT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices)) or **adjustable sling** ([ATOMS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices), Argus, REMEEX) — alternative to fixed sling or as second-line after failed fixed sling
-7. **[AUS (AMS-800)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter)** — moderate-to-severe SUI, irradiated patients, or after failed sling
-8. **AUS revision / tandem cuff** — for failed AUS (urethral atrophy or mechanical failure)
-9. **[Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) / urinary diversion** — last resort
+2. **Containment** — [penile clamp](/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp), [condom catheter](/docs/surgical-techniques/04f-incontinence-procedures/procedures/condom-catheters), pads (combination strategy preferred)
+3. **[Urethral bulking](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents)** — niche role, mild SUI in poor surgical candidates
+4. **Fixed male sling** ([AdVance / AdVance XP](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings)) — mild-to-moderate SUI without radiation
+5. **Adjustable balloons** ([ProACT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices)) or **adjustable sling** ([ATOMS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices), Argus, REMEEX) — alternative to fixed sling or as second-line after failed fixed sling
+6. **[AUS (AMS-800)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter)** — moderate-to-severe SUI, irradiated patients, or after failed sling
+7. **AUS revision / tandem cuff** — for failed AUS (urethral atrophy or mechanical failure)
+8. **[Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) / urinary diversion** — last resort
+
+For **mixed incontinence with an OAB / urgency component**, optimize the OAB pathway first (see [OAB & UUI database](/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database) — anticholinergics / β-3 / botulinum toxin / SNM) and then reassess SUI severity. Pharmacotherapy is **not effective for pure male SUI** and is not part of this ladder.
 
 ---
 
@@ -87,9 +88,16 @@ export const maleSuiProcs = [
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation",
   },
   {
-    name: "Lifestyle Modifications",
+    name: "Behavioral & Lifestyle Modifications",
     category: "Conservative",
-    notes: "Fluid management, caffeine reduction, weight management, smoking cessation. Recommended adjuncts by all guidelines.",
+    notes: "Fluid management, caffeine reduction, smoking cessation, constipation control, timed voiding. Universal adjuncts to PFMT. See the [behavioral therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence) page for the full framework.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence",
+  },
+  {
+    name: "Weight Loss",
+    category: "Conservative",
+    notes: "Subak 2009 PRIDE NEJM and bariatric data show clinically meaningful UI reduction with ≥ 5% weight loss; benefit plateaus &gt; 10%. Offer to every patient with BMI ≥ 25. The shared [weight-loss canonical page](/docs/surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence) covers SUI + OAB/UUI evidence.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence",
   },
   {
     name: "Penile Clamp (External Compression Device)",
@@ -107,25 +115,6 @@ export const maleSuiProcs = [
     name: "Absorbent Pads",
     category: "Conservative",
     notes: "Easiest to use; most comfortable when dry but most likely to leak when wet. Dominant aid in real-world PPI use (97% per Menzel 2026), partly reflecting an awareness gap — 86% of men were unaware of clamp or condom-catheter alternatives. Best for everyday and overnight wear in combination with a clamp or sheath for activities.",
-  },
-  {
-    name: "Body-Worn Urinal (BWU)",
-    category: "Conservative",
-    notes: "Alternative containment device for men with a significantly retracted penis where a condom catheter cannot be retained. Generally rated worse than sheath; poor for seated activities (Macaulay 2015).",
-  },
-
-  // ===== PHARMACOLOGICAL =====
-  {
-    name: "Duloxetine",
-    category: "Pharmacological",
-    notes: "Off-label SNRI with modest efficacy in male SUI. Not widely recommended due to limited efficacy data and side-effect burden (nausea, fatigue).",
-    slug: "/docs/foundations/pharmacology/neuropathic-pelvic-pain/snris",
-  },
-  {
-    name: "Antimuscarinics / Beta-3 Agonists (Mixed Incontinence Only)",
-    category: "Pharmacological",
-    notes: "Indicated only when concomitant **OAB / urgency component** contributes to mixed incontinence. Not effective for pure SUI. Optimize OAB component first, then reassess SUI severity.",
-    slug: "/docs/foundations/pharmacology/storage-oab/anticholinergics",
   },
 
   // ===== MINIMALLY INVASIVE =====
@@ -190,23 +179,6 @@ export const maleSuiProcs = [
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter",
   },
 
-  // ===== EMERGING / INVESTIGATIONAL =====
-  {
-    name: "Stem Cell Injection Therapy",
-    category: "Emerging / Investigational",
-    notes: "Autologous adipose- or muscle-derived stem cells injected periurethrally to regenerate the sphincter. Small clinical studies only; success rates appear comparable to bulking agents. Investigational.",
-  },
-  {
-    name: "Electroacupuncture",
-    category: "Emerging / Investigational",
-    notes: "Niu 2025 (JAMA Netw Open) RCT for early post-prostatectomy UI leveraging sacral-nerve-stimulation principles. Emerging evidence; not yet guideline-endorsed.",
-  },
-  {
-    name: "Extracorporeal Magnetic Innervation (ExMI)",
-    category: "Emerging / Investigational",
-    notes: "Pelvic-floor stimulation via external magnetic flux without intracavitary probes. Limited efficacy data.",
-  },
-
   // ===== SALVAGE =====
   {
     name: "Bladder-Neck Closure + Catheterizable Channel",
@@ -233,12 +205,10 @@ export const maleSuiColumns = [
     badge: true,
     badgeColors: {
       'Conservative':                 '#047857',
-      'Pharmacological':              '#b45309',
       'Minimally Invasive':           '#0369a1',
       'Surgical — Fixed Sling':       '#1d4ed8',
       'Surgical — Adjustable Sling':  '#7c3aed',
       'Surgical — Sphincter':         '#0f766e',
-      'Emerging / Investigational':   '#6b7280',
       'Salvage':                      '#b91c1c',
     },
   },
