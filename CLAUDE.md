@@ -4,7 +4,97 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 1–2, 2026 (Female-urethroplasty fill-out marathon: combined DVIU/dilation, Blandy / lateral-based / Önol inlay / dorsal-onlay / ventral-onlay / ventral-inlay / dorsal-inlay / distal-urethrectomy / urethral-diverticulectomy / continence-pessary / Burch colposuspension expansions; male DB pruning; DCB female-data section)
+## Current handoff snapshot — May 2–3, 2026 (Male SUI containment + adjustable-device + sling restructure; canonical Bladder Neck Closure; biofeedback consolidation; Rezūm BPH page)
+
+This session ran a sustained Male SUI / PPI cleanup arc that culminated in a per-device restructure of the male sling and adjustable-continence-device family, plus a canonical Bladder Neck Closure article and a Rezūm dedicated page. Branch: `claude/unruffled-shamir-287c58`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved.**
+
+### Arc 1 — Canonical Bladder Neck Closure + biofeedback consolidation
+
+- **New canonical [bladder-neck-closure.mdx](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure.mdx)** under outlet-continence (alongside Young-Dees-Leadbetter, Kropp, Pippi-Salle). 26 DOI-linked refs anchored on Spahn 2010, Kavanagh 2012, Shpall 2004, Hensle 1995, Willis 2015 (TV vs RP), Chancellor 1994 (functional urethral closure with PVS = obstructing-PVS continuum), AUA/SUFU NLUTD 2021, AUA/SUFU Female SUI 2023, Grimsby 2016 (without-augmentation outcomes), Benz 2018 HAD interposition. Inbound link wiring across female SUI database, male SUI database, BNC contracture page, BNR landing, BNR principles section 9, bladder-augmentation outlet rows, autologous PVS continuum section. Frames the obstructing-PVS-to-formal-BNC continuum (AUA/SUFU 2023), retropubic / transvaginal / combined approaches, tissue interposition (omentum / rectus / HAD / intestinal patch), concomitant augmentation + catheterizable channel.
+- **Biofeedback folded into canonical PFPT.** Female SUI standalone "Biofeedback-Assisted PFMT" row deleted; PFMT row renamed "PFMT ± Biofeedback" with explicit framing. Canonical [pelvic-floor-pt.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx) gained a new **"Biofeedback: When It Helps and When It Doesn't"** section with 6-row indication-by-evidence table covering female SUI/UUI/mixed (no benefit per OPAL + 2025 Cochrane), urgency UI/OAB (Burgio 2002 verbal-feedback equivalent; Leonardo 2022 OAB null), early PPI (RR 1.78), persistent PPI (Goode 2011 JAMA null), fecal incontinence (76% vs 41% — ACG/ASCRS endorsed), dyssynergic defecation (anorectal BFB first-line). 9 new refs (Qaseem 2014 ACP, Hagen 2020 OPAL BMJ, Hsu 2016 IJNS PPI meta, Novais 2025 Clinics PPI EMG meta, Sciarra 2021 IJCP PPI meta, Burgio 2002 JAMA UUI, Leonardo 2022 OAB meta, Wald 2021 ACG anorectal, Bordeianou 2023 ASCRS FI). Male SUI BFT row preserved — different evidence base (early-PPI time-dependent benefit).
+
+### Arc 2 — Containment-device family
+
+- **[Penile Clamp](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp.mdx) built out from stub** — 7 refs anchored on Anderson 2015 Cochrane PPI conservative review, Macaulay 2015 BJU 4-arm device trial (Cunningham lowest pad-test loss + most preferred but greatest blood-flow reduction; ~ ⅔ adopt pad+clamp combination), Gotoh 2023 BMC Res Notes MORE RCT (−0.83 vs −0.16 pads/day p = 0.0071), Levy 2017 NU finite-element modeling (cuff/knurled designs higher tissue stresses), Lee 2021 NU qualitative analysis of 719 Amazon reviews, Barnard 2015 NU Dribblestop, Silva 2014 Cochrane. Strict patient-selection admonition; honest positioning as containment / temporizing tier (not substitute for AUS or sling).
+- **[Condom Catheters](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/condom-catheters.mdx) — new sibling page** (kept separate from penile clamps per editorial reasoning: different mechanism, indication profile, complication profile, evidence base). 17 refs anchored on Saint 2006 JAGS RCT (n = 75: adverse outcomes 70 vs 131/1,000 pt-d vs indwelling Foley; HR 4.84 for bacteriuria/UTI/death in non-demented men), Chartier-Kastler 2011 BJU (69% prefer urisheaths over pads), Macaulay 2015 BJU 4-arm device trial, Meddings 2015 Ann Arbor RAND/UCLA criteria, AUA/SUFU NLUTD 2021, Saint 1999 patient/nurse preference, Ouslander 1987 nursing-home infection rates, Özkan 2015 strangulation case, Lopez 2024 IDCNA management review, Menzel 2026 86%-awareness-gap data. **Identical "Containment-Device Comparison" table mirrored on both pages**.
+- Male SUI database row "Containment Products / Condom Catheter" split into **3 distinct rows** (Condom Catheter, Absorbent Pads, Body-Worn Urinal) reflecting the Macaulay 4-arm framework.
+
+### Arc 3 — Male SUI database trim
+
+Per user directive (clearing low-value rows; folding lifestyle into canonical pages):
+
+- **Lifestyle row split** → "Behavioral & Lifestyle Modifications" → links to [behavioral-therapy-incontinence.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx); **"Weight Loss"** → links to [weight-loss-incontinence.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence.mdx). Both pages already cover SUI + OAB/UUI in shared articles.
+- **Body-Worn Urinal row removed** (already covered in condom-catheter page comparison; redundant for a niche containment device).
+- **Pharmacological category eliminated entirely** — Duloxetine + Antimuscarinics/β-3 rows removed. Pure male SUI is not a pharmacotherapy target. Mixed-incontinence handling now points readers to the OAB/UUI pathway via a one-liner under the ladder.
+- **Emerging/Investigational category eliminated entirely** — Stem Cell Injection, Electroacupuncture, ExMI rows removed. None have guideline-level support.
+- Absorbent Pads kept as no-slug row — Menzel 2026 awareness gap and combination strategy already in row notes.
+- Cascade cleanup: badge color map trimmed; ladder renumbered to 8 steps; Mixed-Incontinence decision row repointed to OAB/UUI database pathway.
+
+### Arc 4 — Adjustable Continence Devices umbrella with deep ProACT (interim)
+
+Built out [adjustable-continence-devices.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx) from stub with anchor sections for ProACT / ATOMS / Argus / REMEEX. Deep ProACT section (13 DOI-linked refs): FDA-approved 2015; bilateral silicone balloons + scrotal port; outcomes table (Larson 2019 SR/meta n = 1,264 60% dry; Tricard 2023 update 53% strict; Nash 2019 FDA pivotal; Finazzi Agrò 2019; Nestler 2019 long-term); severity-stratified outcomes; complications (Fernandez 2025 SR of 1,607 pts); negative predictors (radiation as strongest signal); Munier 2020 salvage data. **NOTE: this content was later moved to per-device pages — see Arc 7 below.**
+
+### Arc 5 — AdVance / AdVance XP and Virtue refresh (interim)
+
+Substantial enrichment of AdVance and Virtue sections in male-urethral-slings.mdx. AdVance: Hüsch 2018 head-to-head retention signal (XP p = 0.042); Bauer 2017 pad-weight, Ye 2018 multicenter, Grabbert 2019 48-mo to outcomes table; Bauer 2010 complications + MacAskill 2021 chronic-pain (only 2.3% > 3 mo); Cornu 2011 prior-stricture predictor; Collado Serra 2013 0.4% per gram quantification; Grabbert 2019 WJU adjustable-vs-AUS data. Virtue: Comiter 2012 incremental RLPP buildup (33.4 → 68.8 cm H₂O), expanded outcomes table, **McCall 2016 Mayo long-term contrarian** (n = 31, 55-mo, 68% failure, 22% explant, 20% AUS — authors abandoned the device), long-term controversy synthesis, Comiter 2015 Nat Rev Urol cross-link. 10 new refs (38–47). **NOTE: also moved to per-device pages later — see Arc 7.**
+
+### Arc 6 — ATOMS, Argus, REMEEX deep dives (interim)
+
+Substantial deep dives in male-urethral-slings.mdx for ATOMS (16 new refs 48–63), Argus (split from joint Argus/REMEEX section, 8 new refs 64–71), and REMEEX (renamed Male Readjustable Sling, 6 new refs 72–77). ATOMS got mechanism-clarification (ventral compression vs AdVance repositioning), three device generations (IP / SP / SSP), Esquinas 2019 SR/meta, long-term Iberian + Italian durability data, comparative meta data, salvage roles. Argus split + Loertzer 2020 Classic-vs-T comparison + Dalpiaz 2011 contrarian data + learning-curve data. REMEEX outcome table + definitive Angulo 2021 ATOMS-vs-REMEEX SR/meta. **NOTE: also moved to per-device pages — see Arc 7.**
+
+### Arc 7 — Per-device sling restructure (the main structural change)
+
+User question: "Should each product have its own page? Should the database be more organized by type of therapy?" → **Yes, agreed; restructure executed.**
+
+**Six new canonical per-device pages** under `04f-incontinence-procedures/procedures/`:
+
+| Page | Refs | Content moved from |
+|---|---|---|
+| [advance-sling.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/advance-sling.mdx) | 26 | male-urethral-slings.mdx |
+| [virtue-sling.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/virtue-sling.mdx) | 8 | male-urethral-slings.mdx |
+| [atoms-sling.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling.mdx) | 28 | male-urethral-slings.mdx + adjustable-continence-devices.mdx |
+| [argus-sling.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/argus-sling.mdx) | 9 | male-urethral-slings.mdx |
+| [remeex-mrs.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/remeex-mrs.mdx) | 7 | male-urethral-slings.mdx |
+| [proact-balloons.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons.mdx) | 13 | adjustable-continence-devices.mdx |
+
+[male-urethral-slings.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx) **rewritten as a chooser/comparison hub** — per-device deep-dives table, mechanism comparison table, decision matrix, comparative-meta snapshot, MASTER trial section as cross-cutting reference, predictors-of-failure framework common to all implants, salvage pathways. 18 cross-cutting refs only.
+
+[adjustable-continence-devices.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx) **converted to a slim 4-row pointer table** directing readers to the canonical per-device pages.
+
+**Male SUI database restructured to mechanism-of-action categories**:
+
+| Old | New |
+|---|---|
+| Conservative | Conservative *(unchanged)* |
+| Minimally Invasive | **Periurethral Bulking** |
+| Surgical — Fixed Sling | **Compressive Sling — Fixed** (AdVance, Virtue) |
+| Surgical — Adjustable Sling | **Compressive Sling — Adjustable** (ATOMS, Argus, REMEEX) |
+| *(was bundled with Adjustable Sling)* | **Periurethral Balloon** *(NEW)* — ProACT moved out since it is a balloon, not a sling |
+| Surgical — Sphincter | **Sphincter** |
+| Salvage | Salvage *(unchanged)* |
+
+All database rows now point to canonical per-device pages with device-specific evidence summaries in Notes column. Decision-framework, sub-comparison, and ladder all repointed.
+
+### Arc 8 — Rezūm dedicated page
+
+[rezum-water-vapor-therapy.mdx](docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx) — new dedicated 19-ref BPH MIST page anchored on McVary 2021 *J Urol* final 5-yr pivotal RCT (48% IPSS reduction, 4.4% surgical retreatment), Kaltsas 2025 narrative review, Cochrane (Franco 2021, Kang 2020), Elterman 2022 Canadian registry, Burns 2026 local-anesthesia analysis, McVary 2016 pivotal, Roehrborn 2017 2-yr durability, Babar 2023 multiethnic mild-LUTS, Lewer 2025 prostate-size effect, Nguyen 2024 ablative review, Ines 2021 broad-volume real-world, Siena 2021 Italian multicenter, McVary 2018 3-yr, Chin 2022 Rezūm-vs-UroLift head-to-head, Franco 2026 EAU functional/sexual SR, Cornu 2023 EAU NMA. Sections: mechanism, procedure, patient selection, efficacy table, safety, sexual function preservation, comparison with PUL/PAE/TURP, durability, advantages/limitations. BPH database row updated with slug + 5-yr pivotal data + ATOMS-vs-UroLift comparable medium-term framing + Boston Scientific manufacturer note.
+
+### Editorial conventions reaffirmed this session
+
+- **Per-device split of umbrella articles is the right pattern when an umbrella exceeds ~ 300 lines and the underlying products differ on mechanism, indication, complication profile, and evidence base.** Surgeons think by product, not by category; database rows want canonical URL targets; duplication-and-drift across umbrella + summary is unsustainable. Apply the same pattern preemptively when adjacent articles (e.g., AUS variants, IPP devices) reach a similar threshold.
+- **Database categories should map to mechanism of action, not to invasiveness gradient.** Invasiveness is already implied by category position in the ladder. The Periurethral Balloon vs Compressive Sling distinction matters more for decision-making than the previous "Surgical — Adjustable Sling" lumping.
+- **Containment devices stay separate (clamp + condom catheter) with mirrored comparison tables.** The same applies to other sibling-product families where mechanism / indication / complication-profile differ — this is the locked WARWIKI pattern (cf. previously: penile clamp + condom catheter; gracilis + VRAM; AUS + sling).
+- **Biofeedback is an adjunctive teaching tool, not a distinct modality.** The 2025 Cochrane SR + OPAL trial show no clinically meaningful added benefit over PFMT alone for female UI. Listing it as a separate database row implies parity it does not have. Fold it into PFPT and create a dedicated indication-by-evidence section on the canonical PFPT page.
+- **Filter chatbot-source artifacts**: strip "Would you like to explore..." trailing prompts; strip out-of-context "Figure N" placeholders (especially TAVR / VAD / coronary-stent figures that bled through into Argus / ProACT / containment-device source dumps); reconstruct swallowed `<` artifacts; rebuild mashed tables; renumber refs sequentially; cross-check that every cited ref is actually used.
+- **Non-FDA-approved-in-US devices** (ATOMS, REMEEX) — flag explicitly in Current Positioning section with a note about regional availability.
+
+### Lint state
+
+`npm run lint:links` clean across 805 files. Citation lint clean for all new pages this session. Build not re-run end-to-end given file-creation volume; recommended next session.
+
+---
+
+## Previous handoff snapshot — May 1–2, 2026 (Female-urethroplasty fill-out marathon: combined DVIU/dilation, Blandy / lateral-based / Önol inlay / dorsal-onlay / ventral-onlay / ventral-inlay / dorsal-inlay / distal-urethrectomy / urethral-diverticulectomy / continence-pessary / Burch colposuspension expansions; male DB pruning; DCB female-data section)
 
 This session was a sustained female-urethroplasty content fill plus selective male-database pruning. Branch: `claude/pedantic-solomon-fec328`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved.**
 
