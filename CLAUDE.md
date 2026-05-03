@@ -98,9 +98,13 @@ Sections: indications, open Freyer-vs-Millin head-to-head (Dall'Oglio 2006 RCT E
 
 `<VideoCards />` operative-technique video added to [bladder-neck-closure.mdx](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure.mdx) just before References.
 
+### Arc 11 — Prostate Artery Embolization (PAE) dedicated page
+
+[prostate-artery-embolization.mdx](docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx) — new dedicated 21-DOI-linked-ref BPH MIST page. Anchored on AUA 2023 Conditional Recommendation Grade C (Sandhu 2024), Cochrane 2022 (Jung) showing PAE likely increases retreatment vs TURP RR 3.80, Carnevale 2020 10-year experience (n = 317; IPSS −16; recurrence 23% at 72 mo), Bhatia 2025 single-center 1,075-pt series (sustained IPSS through 48–60 mo; 16% second prostatic intervention), Picel 2019 Radiographics review, Rostambeigi 2025 Delphi consensus (14 international experts; 6 procedural domains), Carnevale 2014 PErFecTED two-step technique, Loffroy 2026 NBCA glue (n = 186; IPSS 20.1 → 10), Guerra 2026 EVOH with novel PEPS score (penetration depth predicts outcome), Abt 2021 RCT 2-yr (21% PAE → TURP crossover), PARTEM trial Sapoval 2023 (PAE > combo medical for IPSS −10.0 vs −5.7 + IIEF-15 +8.2 vs −2.8), McWilliams 2019 SIR multisociety consensus, Schmidt 2025 PROEMBO trial, Powell 2021 voiding-vs-storage domain analysis. Sections: mechanism, preprocedural evaluation, technique (access, anatomy, embolization, embolic-agent table, PErFecTED, emerging adjuncts), procedural parameters, clinical efficacy, durability and retreatment, TURP comparison, PARTEM medical-therapy comparison, complications (major rare; postembolization syndrome; non-target embolization), SIR multisociety guidance, predictors of success, ideal patient profile, advantages and limitations. BPH database row updated with full slug + headline data (AUA-Grade-C, PErFecTED, Carnevale 10-yr, Abt-RCT 21% retreatment, ideal-patient framing, sexual-function preservation per PARTEM IIEF-15 +8.2).
+
 ### Lint state
 
-`npm run lint:links` clean across 806 files. Citation lint clean for all new pages this session. Build not re-run end-to-end given file-creation volume; recommended next session.
+`npm run lint:links` clean across 807 files. Citation lint clean for all new pages this session. Build not re-run end-to-end given file-creation volume; recommended next session.
 
 ---
 
