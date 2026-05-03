@@ -55,7 +55,7 @@ The **AUS (AMS-800) remains the gold standard** for moderate-to-severe SUI (AUSC
 ### Stepwise Escalation Ladder
 
 1. **Conservative therapy** — [PFMT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt) ± biofeedback ± [electrical stimulation](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation); lifestyle modifications; minimum 6–12 months
-2. **Containment** — [penile clamp](/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp), pads, condom catheter as bridge
+2. **Containment** — [penile clamp](/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp), [condom catheter](/docs/surgical-techniques/04f-incontinence-procedures/procedures/condom-catheters), pads, body-worn urinal (combination strategy preferred)
 3. **Pharmacotherapy** — only for mixed incontinence (OAB component) or as off-label adjunct (duloxetine)
 4. **[Urethral bulking](/docs/surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents)** — niche role, mild SUI in poor surgical candidates
 5. **Fixed male sling** ([AdVance / AdVance XP](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings)) — mild-to-moderate SUI without radiation
@@ -98,9 +98,20 @@ export const maleSuiProcs = [
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/penile-clamp",
   },
   {
-    name: "Containment Products / Condom Catheter",
+    name: "Condom Catheter (External Sheath)",
     category: "Conservative",
-    notes: "Pads, external collection devices, and condom (Texas) catheters as a bridge during recovery (typically 6–12 months post-prostatectomy) or for patients who decline / are unfit for surgery.",
+    notes: "Penile sheath / urisheath that passively collects spontaneously voided urine. Saint 2006 JAGS RCT — adverse outcomes 70 vs 131 / 1,000 pt-d vs indwelling Foley (adjusted p=0.04); ~5× lower bacteriuria/UTI/death in non-demented men (HR 4.84). Chartier-Kastler 2011: 69% prefer urisheaths over pads (p=0.002). Best for extended activities, overnight, hospital fall-prevention, and as CIC alternative in selected SCI reflex-voiders. Contraindicated if PVR > 300 mL, obstruction, latex/adhesive allergy, retracted penis, or compromised skin. Bacteriuria ~12%/month; rare strangulation if improperly sized.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/condom-catheters",
+  },
+  {
+    name: "Absorbent Pads",
+    category: "Conservative",
+    notes: "Easiest to use; most comfortable when dry but most likely to leak when wet. Dominant aid in real-world PPI use (97% per Menzel 2026), partly reflecting an awareness gap — 86% of men were unaware of clamp or condom-catheter alternatives. Best for everyday and overnight wear in combination with a clamp or sheath for activities.",
+  },
+  {
+    name: "Body-Worn Urinal (BWU)",
+    category: "Conservative",
+    notes: "Alternative containment device for men with a significantly retracted penis where a condom catheter cannot be retained. Generally rated worse than sheath; poor for seated activities (Macaulay 2015).",
   },
 
   // ===== PHARMACOLOGICAL =====
