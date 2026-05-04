@@ -38,9 +38,7 @@ The female cosmetic-genital-surgery plan operates under explicit cautions from p
 | **Labia majora atrophy / deflation** | Fat grafting to labia majora | Low (case series) |
 | **Labia majora excess (post-massive weight loss)** | Labia majora reduction (excision) | Very Low (case reports) |
 | **Mons pubis ptosis / excess** | Monsplasty (excision ± liposuction ± fat grafting) | Very Low (case series) |
-| **Vaginal laxity (postpartum)** | Surgical vaginoplasty / perineoplasty | Low (retrospective; 1 ultrasonographic study) |
-| **Vaginal laxity (non-surgical preference)** | Energy-based devices (laser / RF) | **RCTs do not confirm efficacy**; observational studies only |
-| **Vulvovaginal atrophy (GSM)** | Microfat / nanofat grafting OR energy-based devices | Low–Moderate |
+| **Vulvovaginal atrophy (GSM)** | Microfat / nanofat grafting; or energy-based devices via the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page | Low–Moderate |
 | **Hymen restoration** | Hymenoplasty | Very Low (single retrospective series) |
 | **G-spot enhancement** | G-spot amplification (HA injection) | Virtually none — safety / effectiveness not established |
 
@@ -58,16 +56,9 @@ The female cosmetic-genital-surgery plan operates under explicit cautions from p
 | **Surgeon experience needed** | Lower | Higher | Moderate |
 | **Decision rule (Zahedi 2023 algorithm)** | Patient desires removal of darkened / irregular edge → Trim | Patient wants preserved natural edge / color transition → Wedge | Mild hypertrophy with desire to preserve volume → De-epithelialization |
 
-#### Vaginal Laxity: Surgical vs Energy-Based
+#### Energy-Based Devices for GSM / "Rejuvenation"
 
-| Factor | Surgical Vaginoplasty | Energy-Based Devices (Laser / RF) |
-|---|---|---|
-| **Efficacy evidence** | Moderate (objective ultrasonographic data — Islek 2025 hiatal-area reduction p &lt; 0.05) | Observational studies positive; **RCTs negative** for VLQ improvement (Pereira 2024 SR) |
-| **Durability** | Long-term (structural repair) | Uncertain; may require maintenance sessions |
-| **Invasiveness** | Moderate (OR, anesthesia) | Minimal (office-based, no anesthesia) |
-| **FDA status** | Standard surgical procedure | **NOT FDA-cleared for cosmetic / rejuvenation indications** |
-| **Complications** | Bleeding, infection, dyspareunia, over-tightening | Burns, scarring, chronic pain (rare but reported) |
-| **ACOG / FIGO position** | Technique identical to colporrhaphy; "rebranding" is misleading | FDA warned against; ACOG echoes the warning |
+Energy-based devices (fractional CO₂, Er:YAG, RF ± PEMF) are not FDA-cleared for cosmetic vaginal "rejuvenation" or for GSM (FDA 2018 Safety Communication). The **Li 2021 *JAMA* sham-controlled RCT** showed no significant benefit of fractional CO₂ over sham at 12 months — the highest-quality evidence available. Numerous uncontrolled observational series report benefit; the discrepancy implies a substantial placebo effect. ACOG 2020 and ESSM 2020 conclude evidence is insufficient. Cost is high ($1,800–9,000 per CO₂ course) and not insurance-covered. For full cross-indication evidence (GSM / SUI / lichen sclerosus / vaginal laxity / breast-cancer survivors) see the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page.
 
 ### Combined Procedures
 
@@ -75,7 +66,6 @@ Multiple procedures are frequently performed simultaneously to achieve a harmoni
 
 - **Labiaplasty + clitoral hoodoplasty** — most common combination; prevents residual hood sagging after isolated labiaplasty (Liu 2022; Eserdağ 2021 inverted-Y; Xia 2021 three-step composite).
 - **Labiaplasty + labia majora augmentation** — addresses the labia majora–to–minora ratio; allows more conservative labial reduction (Hersant 2018 n = 21).
-- **Labiaplasty + vaginoplasty / perineoplasty** — for patients with both external and internal concerns.
 - **"Genital beautification" packages** — labia minora reduction + labia majora augmentation + mons liposuction ± laser brightening ± vaginal tightening (Cihantimur 2013; Toplu 2021; Cihantimur 2021 360 fat transfer n = 97).
 
 ### Special Decision Branch — Clitoral Hoodoplasty
@@ -189,48 +179,39 @@ export const femaleCosmeticTechniques = [
   {
     name: "Monsplasty (Mons Pubis Reduction / Lift)",
     domain: "Mons Pubis",
-    notes: "Alter 2012 *PRS*. Indications: mons ptosis ± fat excess (post-massive weight loss, obesity, aging). Liposuction alone for isolated fat excess; surgical excision (skin + fat) with pubic lift for skin laxity; often combined with abdominoplasty.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
+    notes: "El-Khatib 2011 ptosis grading (1–3); Hamdi 2023 *JPRAS* recommends as standard component of abdominoplasty for Grade 2+. Three approaches: liposuction alone (good elasticity), excisional monsplasty, dermal-fascial suspension (tacking to rectus fascia or SFS per Kitzinger 2014). Bloom 2012 / Bykowski 2017 post-bariatric outcomes — significant improvements in body image, sexual function (48–52%, p=0.009), hygiene, visualization (26%→100%), urinary symptoms (UDI-6 p=0.03; incontinence 22.6%→12.9%). Low morbidity. Alter 2012 *PRS* combined with mons pexy in MWL.",
+    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/monsplasty",
   },
   {
     name: "Fat Grafting to Mons Pubis (Volume Restoration)",
     domain: "Mons Pubis",
-    notes: "Toplu 2021 *Aesthet Plast Surg* + Cihantimur 2021 360 fat transfer. For volume restoration in atrophic mons. Combined with labiaplasty / labia majora augmentation in \"genital beautification\" packages.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
+    notes: "Volume-restoration counterpart to monsplasty. Indications: age-related atrophy, post-MWL over-correction, GSM (Menkes 2021 microfat+nanofat n=50; VHI/FSD improved; stable 18 mo), post-surgical concavity, post-PIV gender-affirming (Patel 2021), aesthetic. Lai 2023 MAFT n=20: FSFI 43.8→68.6 (p&lt;0.001) plus histologic neocollagenesis + neoangiogenesis + ER expression. Cihantimur 2021 360: FGSIS 17.7→22.2 at 12 mo (p=0.013). Seleem 2023 normative volumes (mons ~200 mL normal BMI). Dong 2024 NMA: ADSC-assisted highest survival (SUCRA 82%). ~16% require touch-up. GRAFT registry overall complication 2.86%.",
+    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/fat-grafting-mons",
   },
 
-  // ===== VAGINAL CANAL =====
-  {
-    name: "Surgical Vaginoplasty / \"Vaginal Tightening\"",
-    domain: "Vaginal Canal",
-    notes: "Technique essentially identical to **posterior colporrhaphy ± perineoplasty** — excision of redundant vaginal mucosa + levator-ani plication + perineal body reconstruction. Goodman 2010 multicenter n=258: 91.6% satisfaction; significant subjective sexual-function enhancement (p=0.0078). Fang 2023 *JPRAS* bilateral wall tightening n=22: vaginal pressure 2.3 → 21.4 mmHg; FSFI 20.1 → 26.0 (p<0.001). Islek 2025 *Medicine* US n=36: levator-hiatal area 29.14 → 23.51 cm² (p<0.05). **ACOG 2020: \"rebranding\" colporrhaphy as cosmetic is misleading.**",
-    slug: "/docs/surgical-techniques/04g-prolapse-repair/posterior-colporrhaphy",
-  },
-  {
-    name: "Perineoplasty (cosmetic)",
-    domain: "Vaginal Canal",
-    notes: "Reconstruction of the perineal body, often combined with vaginoplasty. For perineal laxity / deficiency after obstetric trauma; widened introitus. Limited standalone data.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
-  },
+  // Vaginal Canal entries removed per ACOG 2020 — "rebranding" colporrhaphy / perineoplasty
+  // as cosmetic is misleading; surgical vaginoplasty and perineoplasty are reconstructive
+  // procedures and live in [04g Prolapse Repair](/docs/surgical-techniques/04g-prolapse-repair),
+  // not in the cosmetic atlas.
 
   // ===== ENERGY-BASED =====
   {
     name: "Fractional CO₂ Laser",
     domain: "Energy-Based Devices",
-    notes: "Microablative-zone creation in vaginal mucosa → re-epithelialization, neovascularization, collagen remodeling. Observational FSFI improvement (MD 6.83, 95% CI 5.01–8.65). Slongo 2025 RCT n=48: significant dryness improvement (p<0.05). **Pereira 2024 SR: RCTs do NOT confirm efficacy for vaginal laxity / sexual function**. **NOT FDA-cleared** for cosmetic indications.",
-    slug: "/docs/clinical-conditions/03g-genital-scrotal/small-penis-syndrome",
+    notes: "Marketed for vaginal laxity / GSM / cosmetic 'rejuvenation'. Microablative thermal zones → neocollagenesis, neoangiogenesis, epithelial thickening. **Li 2021 *JAMA* sham-controlled RCT n=85**: NO significant benefit over sham at 12 mo (the highest-quality evidence). Numerous uncontrolled observational series report benefit (Filippini 2022 meta n=1,152; Alexiades 2021 VHI 93.2% improved at 6 mo) but the RCT-vs-observational discrepancy implies a substantial placebo effect. **FDA 2018 Safety Communication**: NOT cleared / approved for vaginal rejuvenation; Ahluwalia 2019 MAUDE 45 adverse events. ACOG 2020 + ESSM 2020: insufficient evidence. Cost ~$1,800–9,000 / course (3 sessions). Cross-indication coverage on the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy",
   },
   {
     name: "Erbium:YAG Laser",
     domain: "Energy-Based Devices",
-    notes: "Non-ablative thermal effect; similar mechanism to CO₂ but without surface ablation. Comparable to CO₂ in head-to-head RCT; no significant differences between modalities. Same FDA / efficacy caveats as CO₂.",
-    slug: "/docs/clinical-conditions/03g-genital-scrotal/small-penis-syndrome",
+    notes: "Non-ablative thermal effect; similar mechanism to CO₂ but without surface ablation. Lukanović 2026 meta: Er:YAG MD −1.42 strongest signal among energy-based devices, but still below 5-point MID. Same FDA-2018 caveat as CO₂. Cross-indication coverage on the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy",
   },
   {
     name: "Radiofrequency (RF) Devices ± Pulsed Electromagnetic Field (PEMF)",
     domain: "Energy-Based Devices",
-    notes: "Volumetric heating → collagen contraction + neocollagenesis. Wattanakrai 2022 *Lasers Med Sci* RF + PEMF vs sham n=32: VLQ scores significantly improved (p<0.05). However, Pereira 2024 *J Sex Med* meta of RCTs: VLQ did NOT improve vs sham (MD 1.01, 95% CI -0.38 to 2.40); sexual function improved in observational but **not in RCTs**.",
-    slug: "/docs/clinical-conditions/03g-genital-scrotal/small-penis-syndrome",
+    notes: "Volumetric heating → collagen contraction + neocollagenesis. Wattanakrai 2022 RF + PEMF vs sham n=32: VLQ improved (p&lt;0.05). However, Pereira 2024 *J Sex Med* meta of RCTs: VLQ did NOT improve vs sham (MD 1.01, 95% CI −0.38 to 2.40); sexual function improved in observational but NOT in RCTs. FDA 2018 caveat. Cross-indication coverage on the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page.",
+    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy",
   },
 
   // ===== HYMENOPLASTY / G-SPOT =====
@@ -276,7 +257,6 @@ export const femaleCosmeticColumns = [
       'Clitoral Hoodoplasty':   '#7c3aed',
       'Labia Majora':           '#0f766e',
       'Mons Pubis':             '#0891b2',
-      'Vaginal Canal':          '#1d4ed8',
       'Energy-Based Devices':   '#b45309',
       'Hymenoplasty / G-Spot':  '#374151',
       'Regenerative':           '#047857',
