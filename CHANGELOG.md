@@ -40,6 +40,7 @@ For commit-level detail run `git log --oneline`.
 
 - New page [hymenoplasty.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty.mdx) (11 refs). Lahlali 2021 Moroccan n=529 + Eserdağ 2021 + Wei 2015 + Dogan 2024 temporary-vs-permanent comparative. Explicit legal-context call-out (UK ban) + ACOG 795/780 + Bawany 2017 Islamic ethico-legal perspectives. Distinguished from FGM/C.
 - **Female-cosmetic database compression (LOCKED).** Notes column dropped entirely; "Genital Beautification Combined Packages" row deleted; row names trimmed to bare procedure names. Database is now 2 columns (Procedure + Domain), mirroring the May-4 male-cosmetic compression. The pattern is now applied consistently across both cosmetic atlases.
+- New page [g-spot-amplification.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/g-spot-amplification.mdx) (11 refs). Puppo & Gruenwald 2012 anatomic-existence-debate as the central caveat; ACOG 2020 + FIGO 2025 not-medically-indicated; Clarke 2026 anterior-vaginal-wall PRP-vs-saline RCT (closest proxy — 69.2% vs 34.6% at 6 mo); adjacent vaginal-augmentation literature (Yi 2026 / Lai 2023 MAFT / Menkes 2021 / Bensmail 2025 / CIVIT Leylek 2025). Cosmetic-vs-therapeutic counseling distinction. Database row repointed from null slug to canonical page.
 
 ---
 
