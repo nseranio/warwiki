@@ -4,7 +4,73 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 3, 2026 (cosmetic male per-device completion: Penuma / Himplant + HST + Dermal Fat Grafts / AlloDerm + Reduction Scrotoplasty + Penoscrotal-Web Correction; site-wide Scrotox removal)
+## Current handoff snapshot — May 3, 2026 (cosmetic male per-device-page complete: Cryolipolysis + Non-Autologous Injectables + V-Y Plasty + Autologous Fat Injection; Sliding/Slicing relocated to Peyronie's; Combined-procedure rows removed from cosmetic database)
+
+Final cosmetic-male per-device completion micro-session — every individual procedure in the male-cosmetic database now has a dedicated atlas page. Branch: `claude/flamboyant-maxwell-5d847b`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved** (commits 9dc299e → b022e5e → 6818122 → 9475309 → 78e94e9 → autologous-fat).
+
+### Five new dedicated cosmetic-male atlas pages this micro-session
+
+| Page | Refs | Headline anchors |
+|---|---|---|
+| [cryolipolysis.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/cryolipolysis.mdx) | 30 | Azab 2021 *Andrologia* n=46 (the only suprapubic-cryolipolysis study; SPL 12.10 → 12.88 cm / +0.78 cm at 3 sessions, ~33% suprapubic-fat-thickness reduction); Mineroff 2023 narrative review of suprapubic-adiposity modalities; Ravindran 2025 SR/meta of 30 studies / 3,158 participants (BMI -1.80, AC -3.56 cm, 80.4% satisfaction); **PAH (Paradoxical Adipose Hyperplasia) — male-predominant 0.05–0.67%** (Nikolis 2021 multicenter 8,658 cycles; Cox 2022 academic-center 0.67% per patient) called out as the salient counseling point for the suprapubic-cryolipolysis patient; Atiyeh 2020 commercial-bias critique. **Off-label for the suprapubic region** explicitly flagged. **Stripped misleading OpenEvidence rare-disease promo link** that mistakenly linked PAH = Paradoxical Adipose Hyperplasia to *Pulmonary Arterial Hypertension* page — wrong condition entirely. |
+| [non-autologous-injectables.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/non-autologous-injectables.mdx) | 31 | Top-of-page danger admonition: "Do not offer or perform these injections." Pang 2024 IJIR SR (68 studies; 47.7% paraffin/mineral oil + 15.8% silicone; 77.9% present with pain/swelling/deformity); Svensøy 2018 *World J Urol* n=680 (75% surgical excision); Suleiman 2024 Kazakhstan (88.9% Vaseline; 72.2% necrosis); Murányi 2022 *J Urol* bipedicle scrotal flap n=49 (90% success); Kang 2026 NPWT + Matriderm + STSG; Casavantes 2016 PMMA Metacrill n=752 with critical-appraisal (single-practitioner; 27.8% questionnaire-completion; irreversibility; capsular contracture; not FDA-approved for penile use); Oertel 1977 founding sclerosing-lipogranuloma description; Manny 2011 Super Extenze; Lauria 2026 paraffinoma + persistent-dissatisfaction framing. Twelve-section structure with histopathology ("Swiss cheese"), six surgical-management techniques, and full comparison vs HA / PLA. |
+| [reduction-scrotoplasty.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty.mdx) (built earlier in this branch) | 24 (after Scrotox removal) | Thomas & Navia 2021 + Schifano 2022 SRs; Miranda-Sousa 2007 ventral phalloplasty + IPP series; Gupta 2019 n=103 (diabetes OR 6.1 + V-Y plasty OR 4.9 dehiscence). Section VII rebuilt from "Scrotox + Energy-Based Devices" to **"Energy-Based Devices"** only after the site-wide Scrotox deletion. |
+| [penoscrotal-web-correction.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penoscrotal-web-correction.mdx) (built earlier in this branch) | 23 | Seven distinct surgical techniques with comparative-outcomes table — Z-plasty (Álvarez Vega 2025 n=100, 98% primary healing), V-Y plasty (Gupta 2019 OR 4.9 dehiscence caveat), Caso & Carrion 2008 ventral-phalloplasty "check mark" incision, Bagnara 2024 V-I reconfiguration, Chen 2012 transverse excision, Borsellino 2007 scrotal-raphe approach (0% recurrence), Xu 2015 concealed-penis penoscrotal-angle reconstruction. Miranda-Sousa 2007 IPP-adjunctive landmark (84% increased length perception). |
+| [v-y-plasty-male.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-y-plasty-male.mdx) | 19 | Deskoulidi 2023 *PRS* distally-based fat flaps n=75; Shaeer 2006 V-Y half-skin half-fat + T-closure; **Mertziotis 2013 *Asian J Androl* comparative study** V-Y (n=35) vs circumcision approach (n=47): equivalent length / girth gains but **51% hypertrophic-scar rate vs 0%** with significantly better satisfaction in circumcision group (p=0.007); Knoll 1996 modified V-Y + tissue debulking + prosthesis n=11 (3.5–6.5 cm functional length); Wang 2025 diamond-shaped variant; Karimian 2026 trans-scrotal alternative; Tausch 2016 buried-penis classification (88% success); Alter 1997 reconstruction-of-deformities seminal series. |
+| [autologous-fat-injection.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/autologous-fat-injection.mdx) | 23 | Kang 2012 n=52 (38.5 mL injected; +2.28 cm girth; 1.92% nodular fat with refined multi-layer technique); **Wessells 1996 UCSF referral-center landmark complication series** (70% nodules / 50% reoperation / 33% sexual dysfunction); Alter 1997 "fat disappearance + lumps + nodules + shaft deformities" as the cardinal triad; Trockman 1994 first case report; Salem 2019 girth-supersizing-with-IPP n=30 confirmed fat loss at 6 months; Furr 2018 referral-center 11-pt; **enrichment strategies** — Wu 2021 PRP meta, Jefri 2026 SVF meta (+17.20% retention), Laloze 2018 CAL meta (64% vs 44% but 8.4% vs 1.5% complications) — none specifically studied for penile application; Vyas 2020 + Romero-Otero 2021 + Manfredi 2022 evidence-quality framing. Eleven sections including the central problem of unpredictable fat resorption (20–80%), comprehensive complications (8 categories), reconstruction-of-deformities, and the comparison table vs HA / dermal-fat-graft / Penuma. |
+
+### Sliding & Slicing relocated to Peyronie's section (commit 6818122)
+
+[sliding-slicing-techniques.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/sliding-slicing-techniques.mdx) — 7-ref Peyronie's-section deep-dive at sidebar position 6 covering **Rolle 2012 sliding** (corporal-glans-NVB-urethral disassembly + dual dorsal-ventral patch graft + IPP), **Egydio 2018 MUST** (multiple parallel transverse slits + single sheet graft), **Perovic 1998 / 2003 disassembly antecedent**, and **Egydio 2004 geometrical-principle relaxing incision**. Honest framing on single-center case-series evidence + glans-ischemia as the defining safety concern + SMSNA 2024 investigational positioning.
+
+These techniques were **removed from the cosmetic atlas** because their contemporary evidence base, society positioning, and patient population are PD-driven, not cosmetic. Decision-matrix length-enhancement "alternatives" cell rewritten with explicit "PD-specific, not cosmetic" framing + cross-link to the new Peyronie's-section page. Database row + SMSNA evidence-hierarchy table entry both deleted from the cosmetic atlas. Small-penis-syndrome cross-references repointed.
+
+### Combined-procedure rows removed from cosmetic database (commit 9475309)
+
+Per user instruction: "i only want the individual procedures." Database "Combined / Complex" category (badge color + 2 rows: Combined SLD+V-Y+Fat, Suprapubic Lipectomy+IPP) deleted entirely. Decision-matrix "Combined length + girth" row removed. "Concurrent Procedures" subsection deleted (4 bullets). Three orphan refs (18 Deskoulidi, 19 Littara, 20 Loh-Doyle) removed since they were cited only in the deleted Concurrent Procedures section — the same data is preserved on the canonical SLD / suprapubic-lipectomy / fat-injection per-device pages.
+
+### Cumulative cosmetic-male database state — 11 dedicated per-device pages
+
+After this micro-session, every row in the male-cosmetic database has a dedicated per-device atlas page:
+
+1. [HA filler](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hyaluronic-acid-filler.mdx)
+2. [PLA filler](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/polylactic-acid-filler.mdx)
+3. [SLD](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/suspensory-ligament-division.mdx)
+4. [Suprapubic Lipectomy](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/suprapubic-lipectomy.mdx)
+5. [Penuma & Himplant](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penuma.mdx) (unified — Himplant = contemporary rebrand)
+6. [Hardrock Sandwich Technique](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hardrock-sandwich-technique.mdx)
+7. [Dermal Fat Grafts & AlloDerm Wraps](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/dermal-fat-grafts-alloderm-wraps.mdx)
+8. [Reduction Scrotoplasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty.mdx)
+9. [Penoscrotal-Web Correction](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penoscrotal-web-correction.mdx)
+10. [Cryolipolysis](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/cryolipolysis.mdx)
+11. [Non-Autologous Injectables — DO NOT USE](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/non-autologous-injectables.mdx)
+12. [V-Y Advancement Plasty (Male)](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-y-plasty-male.mdx)
+13. [Autologous Fat Injection](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/autologous-fat-injection.mdx)
+
+Foundations [himplant.mdx](docs/01-foundations/tools/biomaterials/adjunct-specialty/himplant.mdx) rewritten as a brief biomaterials-view profile that explicitly clarifies Himplant = Penuma rebrand and routes the reader to the canonical atlas page for the full evidence base.
+
+### Site-wide Scrotox removal (commit 60e144e)
+
+Scrotox (cosmetic dartos botulinum-toxin injection) deleted from the site entirely per user instruction — section, refs (Khambati 2014 / Dockray 2020 / Breikaa 2014), See Also link, database row, decision-matrix mention, clinical-summary mention. Final scan: 0 remaining Scrotox mentions site-wide.
+
+### Editorial conventions reaffirmed across this micro-session
+
+- **Per-device unification rule mirroring the AEEP precedent.** Penuma + Himplant unified despite the marketing distinction because the mechanism, indication, complication profile, and evidence base are identical (the AEEP precedent applies: HoLEP / ThuLEP / ThuFLEP / BipolEP all live on one canonical page because the underlying anatomical operation is the same and only the energy source differs).
+- **"Individual procedures only" database rule (user-locked May 3).** Combined-procedure rows are excluded from cosmetic-male database. Each per-device page may discuss combined / concurrent applications in its body, but the database stays at one row per individual technique. Adjacent decision-matrix and SMSNA-evidence-hierarchy tables also drop combined-procedure rows.
+- **Aggressive entity removal — kill every trace.** When an entity is removed from the site (Scrotox; combined-procedure rows; sliding/slicing from cosmetic), delete the section, refs, See Also link, database row, decision-matrix mention, and clinical-summary mention. Final `grep -rln -i "<entity>"` returns zero (or only intentional cross-pointer references) before commit.
+- **Reference-renumbering after deletion.** When refs are deleted, use the two-pass placeholder Python script to renumber sequentially. Citation lint flags gaps.
+- **PAH disambiguation.** When source content has acronyms with multiple meanings (PAH = Paradoxical Adipose Hyperplasia in cryolipolysis context vs Pulmonary Arterial Hypertension in cardiology), strip OpenEvidence rare-disease promo links that the chatbot inserts — they are frequently mismatched to the wrong condition. The cryolipolysis source had the chatbot link PAH to a pulmonary-hypertension page, which would have been a clinically dangerous error.
+- **Existing-content correction discipline.** Caught and corrected a misdescription on the SLD page (HST as "SLD + V-Y + fat injection composite" — actually bovine pericardium + autologous plasma gel + SLD + testicular prosthesis). Always cross-check that adjacent pages describing a composite technique match the canonical source.
+- **Concise database notes when the per-device page exists.** Database row notes were expanded with multi-data-point evidence anchors but the descriptive depth lives on the per-device page. Rows act as decision-support triage.
+- **Honest evidence framing for cosmetic procedures.** Every cosmetic-male page includes an explicit evidence-quality / SMSNA 2024 investigational-positioning section and a psychological-screening counseling reminder. The site explicitly does NOT recommend non-autologous injectables — the page exists for the reconstructive surgeon who encounters complications.
+
+### Lint state
+
+`npm run lint:links` clean across 827 files at every commit point. Citation lint clean for all touched files.
+
+---
+
+## Previous handoff snapshot — May 3, 2026 (cosmetic male per-device completion: Penuma / Himplant + HST + Dermal Fat Grafts / AlloDerm + Reduction Scrotoplasty + Penoscrotal-Web Correction; site-wide Scrotox removal)
 
 Continuation of the per-device per-row completion arc. Branch: `claude/flamboyant-maxwell-5d847b`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved** (six commits this micro-session: 904f7a5 → ea0b3e5 → Scrotox removal).
 
