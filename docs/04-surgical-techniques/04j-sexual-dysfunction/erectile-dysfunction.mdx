@@ -33,7 +33,7 @@ ED management follows a **stepwise, patient-centered algorithm** endorsed by the
 | **Peyronie's disease + ED unresponsive to medical therapy** | [IPP with adjunctive straightening](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening) (Wilson manual modeling → tunical plication → plaque incision/grafting as needed) | (See [Peyronie's algorithm](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies)) | IPP alone without addressing curvature |
 | **Severe corporal fibrosis (post-priapism, post-explant)** | Malleable prosthesis at high-volume center | Staged dilation → 3-piece IPP | Standard 3-piece in densely fibrosed corpora without dilation strategy |
 | **Acute prosthesis infection** | **Immediate Mulcahy salvage** (washout + same-session reimplant — IPP or malleable) | [Extracapsular reimplantation](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/infection) (mature capsule) | **Delayed reimplantation** (mean 3.7 cm corporal length loss vs 0.6 cm with immediate salvage) |
-| **Young man with traumatic arterial injury (no atherosclerosis)** | Penile arterial revascularization at high-volume center using [saphenous vein graft](/docs/foundations/surgical-principles/grafts/saphenous-vein) | ICI / PDE5i bridge during workup | Revascularization for atherosclerotic ED (poor outcomes) |
+| **Young man with traumatic arterial injury (no atherosclerosis)** | [Penile arterial revascularization](/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization) at high-volume center (IEA → dorsal penile artery, Michal II) | ICI / PDE5i bridge during workup | Revascularization for atherosclerotic ED (poor outcomes) |
 
 ### Stepwise Treatment Ladder
 
@@ -96,13 +96,13 @@ export const edTechniques = [
     tier: "Oral Pharmacotherapy",
     invasiveness: "Non-invasive",
     notes: "First-line for nearly all ED. 60–70% successful intercourse at maximum tolerated dose; no efficacy difference among the four agents (Level 1 evidence). Daily tadalafil 2.5–5 mg dual-indicated for BPH/LUTS. Absolute contraindication: concurrent nitrate use.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors",
   },
   {
-    name: "Testosterone Replacement (in confirmed hypogonadism)",
+    name: "Testosterone Replacement Therapy",
     tier: "Oral Pharmacotherapy",
     invasiveness: "Non-invasive",
-    notes: "For morning total T <300 ng/dL on two measurements with concordant symptoms. Improves IIEF; combination with PDE5i superior to either alone. TRAVERSE 2023 cardiovascular non-inferiority data. Endocrine Society 2018 framework.",
+    notes: "Testosterone replacement therapy.",
     slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement",
   },
 
@@ -119,21 +119,14 @@ export const edTechniques = [
     tier: "Intraurethral",
     invasiveness: "Minimally Invasive",
     notes: "PGE1 pellet (125–1000 mcg) inserted via applicator. Success 43–69% — less than ICI but less invasive. Side effects: penile/urethral pain, hypotension, syncope (rare). Useful when PDE5i absorption is contraindicated or insufficient.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/muse-intraurethral",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil",
   },
   {
-    name: "Intracavernosal Injection — Alprostadil (Caverject)",
+    name: "Intracavernosal Injection (Alprostadil / Bimix / Trimix / Invicorp)",
     tier: "Injectable",
     invasiveness: "Minimally Invasive",
-    notes: "Up to 70% efficacy. FDA initial dose 2.5 mcg vasculogenic/psychogenic/mixed; 1.25 mcg pure neurogenic; titrated upward; ≤3 injections/week, ≥24 hr apart, dose ≤60 mcg. AEs: penile pain (37%), prolonged erection (4%), priapism (0.4%), penile fibrosis (3%).",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections",
-  },
-  {
-    name: "Intracavernosal Injection — Bimix / Trimix",
-    tier: "Injectable",
-    invasiveness: "Minimally Invasive",
-    notes: "Bimix (papaverine + phentolamine) 60–80%; Trimix (alprostadil + papaverine + phentolamine) up to 90%. Trimix has lower pain than alprostadil alone; combined-agent priapism risk OR 1.84 vs single agent (Lima 2025 meta). Compounded; off-label in US.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections",
+    notes: "Alprostadil (Caverject) up to 70% efficacy. Bimix (papaverine + phentolamine) 60–80%; Trimix (alprostadil + papaverine + phentolamine) up to 90% — Trimix has lower pain than alprostadil alone. Combined-agent priapism risk OR 1.84 vs single agent (Lima 2025 meta). Compounded multi-agent regimens off-label in US. AEs: penile pain (37%), prolonged erection (4%), priapism (0.4%), penile fibrosis (3%).",
+    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents",
   },
 
   // ===== TIER 2.5 — REGENERATIVE / EMERGING =====
@@ -193,8 +186,8 @@ export const edTechniques = [
     name: "Penile Arterial Revascularization",
     tier: "Vascular Surgery",
     invasiveness: "Surgical Open",
-    notes: "For young men (<40 yr) with traumatic penile arterial injury and documented arterial occlusion on angiography — NO atherosclerotic disease. 60–70% long-term success in properly selected patients. Saphenous-vein conduit anastomosis to dorsal penile artery / cavernosal artery branch.",
-    slug: "/docs/foundations/surgical-principles/grafts/saphenous-vein",
+    notes: "Microsurgical bypass for **pure arteriogenic ED** (post-traumatic focal arterial occlusion). First described by Michal 1973. **Inferior epigastric artery (IEA) → dorsal penile artery** (Michal II) is the contemporary standard donor — not saphenous vein. Strict selection: age &lt; 55, &lt; 2 risk factors, no atherosclerosis, intact veno-occlusive function on DICC, focal lesion on SIPA. 54–67% long-term success in properly selected; 82% in PFUI cohort (Zuckerman 2012). AUA 2018 Conditional / Grade C.",
+    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization",
   },
   {
     name: "Venous Ligation Surgery",
