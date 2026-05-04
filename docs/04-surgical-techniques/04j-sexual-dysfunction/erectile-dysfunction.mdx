@@ -74,108 +74,30 @@ The Lopategui 2018 finding is the operational anchor: **delayed reimplantation c
 ## Treatment Database
 
 export const edTechniques = [
-  // ===== TIER 0 — LIFESTYLE / PSYCHOLOGICAL =====
-  {
-    name: "Lifestyle Modification & Risk-Factor Optimization",
-    tier: "Lifestyle / Behavioral",
-    invasiveness: "Non-invasive",
-    notes: "Weight loss, aerobic exercise, smoking cessation, alcohol moderation, medication review, glycemic / blood-pressure / lipid optimization. IIEF improvement of 3–5 points with structured programs; comparable to PDE5i in mild ED. Per AUA 2018 (Moderate; Grade C).",
-    slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction",
-  },
-  {
-    name: "Psychosexual Therapy",
-    tier: "Lifestyle / Behavioral",
-    invasiveness: "Non-invasive",
-    notes: "Sensate focus + CBT + MBI + PLISSIT + sex education + couples therapy. Particularly valuable for primary psychogenic ED, performance anxiety, and as adjunct to organic-ED treatments — Cochrane 2007: group therapy + sildenafil > sildenafil alone (RR 0.46). AUA 2018 Moderate (Grade C).",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy",
-  },
+  // Lifestyle / Behavioral
+  { name: "Lifestyle Modification",                                   tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction" },
+  { name: "Psychosexual Therapy",                                     tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy" },
 
-  // ===== TIER 1 — ORAL PHARMACOTHERAPY =====
-  {
-    name: "PDE5 Inhibitors (Sildenafil, Tadalafil, Vardenafil, Avanafil)",
-    tier: "Oral Pharmacotherapy",
-    invasiveness: "Non-invasive",
-    notes: "First-line for nearly all ED. 60–70% successful intercourse at maximum tolerated dose; no efficacy difference among the four agents (Level 1 evidence). Daily tadalafil 2.5–5 mg dual-indicated for BPH/LUTS. Absolute contraindication: concurrent nitrate use.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors",
-  },
-  {
-    name: "Testosterone Replacement Therapy",
-    tier: "Oral Pharmacotherapy",
-    invasiveness: "Non-invasive",
-    notes: "Testosterone replacement therapy.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement",
-  },
+  // Oral Pharmacotherapy
+  { name: "PDE5 Inhibitors",                                          tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors" },
+  { name: "Testosterone Replacement Therapy",                         tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement" },
 
-  // ===== TIER 2 — MECHANICAL / INTRAURETHRAL / INJECTABLE =====
-  {
-    name: "Vacuum Erection Device (VED)",
-    tier: "Mechanical",
-    invasiveness: "Non-invasive",
-    notes: "Negative-pressure draws blood into corpora; constriction ring at base maintains erection. 60–80% effective. Useful for post-RP rehabilitation, PDE5i contraindication, partner-acceptable in many couples. Restrictive ring should not exceed 30 min (ischemia risk).",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved",
-  },
-  {
-    name: "Intraurethral Alprostadil (MUSE)",
-    tier: "Intraurethral",
-    invasiveness: "Minimally Invasive",
-    notes: "PGE1 pellet (125–1000 mcg) inserted via applicator. Success 43–69% — less than ICI but less invasive. Side effects: penile/urethral pain, hypotension, syncope (rare). Useful when PDE5i absorption is contraindicated or insufficient.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil",
-  },
-  {
-    name: "Intracavernosal Injection (Alprostadil / Bimix / Trimix / Invicorp)",
-    tier: "Injectable",
-    invasiveness: "Minimally Invasive",
-    notes: "Alprostadil (Caverject) up to 70% efficacy. Bimix (papaverine + phentolamine) 60–80%; Trimix (alprostadil + papaverine + phentolamine) up to 90% — Trimix has lower pain than alprostadil alone. Combined-agent priapism risk OR 1.84 vs single agent (Lima 2025 meta). Compounded multi-agent regimens off-label in US. AEs: penile pain (37%), prolonged erection (4%), priapism (0.4%), penile fibrosis (3%).",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents",
-  },
+  // Mechanical / Intraurethral / Injectable
+  { name: "Vacuum Erection Device (VED)",                             tier: "Mechanical",               invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved" },
+  { name: "Intraurethral Alprostadil (MUSE)",                         tier: "Intraurethral",            invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil" },
+  { name: "Intracavernosal Injection",                                tier: "Injectable",               invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents" },
 
-  // ===== TIER 2.5 — REGENERATIVE / EMERGING =====
-  {
-    name: "Low-Intensity Shockwave Therapy (Li-ESWT)",
-    tier: "Regenerative / Emerging",
-    invasiveness: "Non-invasive",
-    notes: "Best evidence among regenerative options. Mean IIEF +2.0 (95% CI 0.99–3.00) in Lu 2017 meta; SMD 0.84 in Hinojosa 2024 Bayesian network meta. Cochrane 2025 and EAU 2025 acknowledge growing evidence but not yet recommended as standalone. Useful as PDE5i adjunct in mild–moderate vasculogenic ED.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt",
-  },
-  {
-    name: "Platelet-Rich Plasma (PRP)",
-    tier: "Regenerative / Emerging",
-    invasiveness: "Minimally Invasive",
-    notes: "Intracavernosal injection of autologous PRP. Panunzio 2024 meta of 12 controlled trials: SMD 0.59 vs placebo. EAU 2025: more conclusive evidence needed before routine use. Investigational.",
-    slug: "/docs/foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma",
-  },
-  {
-    name: "Stem Cell Therapy",
-    tier: "Regenerative / Emerging",
-    invasiveness: "Minimally Invasive",
-    notes: "**Investigational** per AUA 2018 (Conditional; Grade C); no FDA-approved product. Predominantly intracavernosal injection of autologous ADSCs / BMSCs / BM concentrate. Hinojosa-Gonzalez 2024 NMA: SMD 0.92 (95% CrI −0.49 to 2.3) — large effect but non-significant due to wide CrI / few RCTs. Phase-I evidence: Haahr 2018 post-RP (53% intercourse-capable); Bieri 2020 Caverstem n=140 (IIEF-5 +2 to +9); Ji 2025 placenta-MSC + LI-ESWT in diabetic ED (70% EHS &gt;2). Should only be pursued within approved clinical trials — commercial-clinic SCT is discouraged.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed",
-  },
+  // Regenerative / Emerging
+  { name: "Low-Intensity Shockwave Therapy (Li-ESWT)",                tier: "Regenerative / Emerging",  invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt" },
+  { name: "Platelet-Rich Plasma (PRP)",                               tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma" },
+  { name: "Stem Cell Therapy",                                        tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed" },
 
-  // ===== TIER 3 — PROSTHESIS =====
-  {
-    name: "Penile Implant (Prosthesis)",
-    tier: "Surgical Prosthesis",
-    invasiveness: "Surgical Implant",
-    notes: "Definitive treatment for medical-therapy-refractory ED. Includes 3-piece IPP (AMS 700 / Coloplast Titan; gold standard, most natural), 2-piece IPP (avoids retropubic reservoir), and malleable / semi-rigid rods (simplest, highest durability, best for limited dexterity / neophallus / cost-constrained settings). 70–90% satisfaction; >90% 5-yr mechanical survival; 2–4% infection. Mulcahy salvage protocol for infection (0.6 cm vs 3.7 cm length loss vs delayed reimplant; Lopategui 2018). Full subsection covers preoperative evaluation, intraoperative setup, surgical approaches, reservoir placement, complications, infection management, and revision scenarios.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants",
-  },
+  // Surgical Prosthesis
+  { name: "Penile Implant",                                           tier: "Surgical Prosthesis",      invasiveness: "Surgical Implant",     slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants" },
 
-  // ===== TIER 4 — VASCULAR (HIGHLY SELECTED) =====
-  {
-    name: "Penile Arterial Revascularization",
-    tier: "Vascular Surgery",
-    invasiveness: "Surgical Open",
-    notes: "Microsurgical bypass for **pure arteriogenic ED** (post-traumatic focal arterial occlusion). First described by Michal 1973. **Inferior epigastric artery (IEA) → dorsal penile artery** (Michal II) is the contemporary standard donor — not saphenous vein. Strict selection: age &lt; 55, &lt; 2 risk factors, no atherosclerosis, intact veno-occlusive function on DICC, focal lesion on SIPA. 54–67% long-term success in properly selected; 82% in PFUI cohort (Zuckerman 2012). AUA 2018 Conditional / Grade C.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization",
-  },
-  {
-    name: "Venous Ligation Surgery (± Embolization)",
-    tier: "Vascular Surgery",
-    invasiveness: "Surgical Open",
-    notes: "For corporeal veno-occlusive dysfunction (CVOD) — primary venous leak in young men. **AUA 2018: NOT recommended** (Moderate; Grade C) — high initial response (60–90%) but long-term sustained potency only 24–50%; 20–43% penile shortening; high recurrence from collateral / crural-vein leak. Contemporary direction: **embolization-first** (Hoppe 2026 n=175; 59.4% IIEF improvement) or **combined ligation + embolization** (Allaire 2025 n=171; 80.7% improvement at 23 mo).",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/venous-ligation",
-  },
+  // Vascular Surgery
+  { name: "Penile Arterial Revascularization",                        tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization" },
+  { name: "Venous Ligation Surgery (± Embolization)",                 tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/venous-ligation" },
 ];
 
 export const edColumns = [
@@ -199,8 +121,8 @@ export const edColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'invasiveness',
+    header: 'Invasiveness',
   },
 ];
 
