@@ -4,7 +4,48 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 3, 2026 (cosmetic male per-device-page complete: Cryolipolysis + Non-Autologous Injectables + V-Y Plasty + Autologous Fat Injection; Sliding/Slicing relocated to Peyronie's; Combined-procedure rows removed from cosmetic database)
+## Current handoff snapshot — May 4, 2026 (cosmetic male database compression: notes column dropped + row names trimmed to bare procedure names)
+
+User-locked simplification of the male-cosmetic database after the per-device pages reached completion. Branch: `claude/flamboyant-maxwell-5d847b`; pushes via `git push origin HEAD:main`.
+
+### Changes
+
+- **Notes column dropped entirely** from the male-cosmetic database. The Notes-column-drop 3-part rule applies cleanly here: every row has a dedicated full-depth per-device page; the Domain badge already triages the row category; the prior notes content (RCT names, n values, percentages, evidence anchors) was duplicated from the per-device pages and would drift out of sync. Database now has just **Procedure** + **Domain** columns.
+- **Row names trimmed to bare procedure names** — no descriptive trailing text, no "for X" qualifiers, no "(only FDA-cleared cosmetic device)" framing. Examples of the locked pattern:
+  - `"Penile Traction Therapy (RestoreX preferred; Penimaster PRO; Andropenis)"` → `"Penile Traction Therapy"`
+  - `"Vacuum Erection Device (VED) — for length preservation"` → `"Vacuum Erection Device (VED)"` (parenthetical acronym kept; "— for length preservation" stripped)
+  - `"Hyaluronic Acid (HA) Filler — Penile Girth"` → `"Hyaluronic Acid (HA) Filler"`
+  - `"Suspensory-Ligament Division (SLD) ± V-Y Plasty"` → `"Suspensory-Ligament Division (SLD)"`
+  - `"Suprapubic Lipectomy / Liposuction"` → `"Suprapubic Lipectomy"`
+  - `"Penuma® / Himplant — Subcutaneous Silicone Sleeve (Only FDA-Cleared Cosmetic Device)"` → `"Penuma / Himplant"`
+  - `"Reduction Scrotoplasty (Scrotal Lift / Tuck)"` → `"Reduction Scrotoplasty"`
+  - `"Penoscrotal-Web Correction (Ventral Phalloplasty)"` → `"Penoscrotal-Web Correction"`
+  - `"Cryolipolysis (Suprapubic Fat Reduction)"` → `"Cryolipolysis"`
+  - `"Non-Autologous Injectables (silicone / paraffin / Vaseline / PMMA) — DO NOT USE"` → `"Non-Autologous Injectables"` (the DO-NOT-USE framing lives prominently on the per-device page top admonition)
+  - `"Dermal Fat Grafts / AlloDerm (ADM) Wraps"` → `"Dermal Fat Grafts / AlloDerm Wraps"`
+
+### Editorial convention reaffirmed (LOCKED)
+
+**Database row-naming rule.** Row names should be **just the procedure name** with optional acronym in parentheses. **Do not add** what the procedure is for, what makes it unique, FDA-status framing, or any descriptive trailing extension. The per-device page handles those framings. The row is a navigational tap-target. This is now the locked WARWIKI convention for surgical-atlas database rows when every row has a per-device page.
+
+Examples of the bare-name pattern:
+
+- ✅ `Vacuum Erection Device (VED)`
+- ❌ `Vacuum Erection Device (VED) — for length preservation`
+- ✅ `Penuma / Himplant`
+- ❌ `Penuma® / Himplant — Subcutaneous Silicone Sleeve (Only FDA-Cleared Cosmetic Device)`
+- ✅ `Cryolipolysis`
+- ❌ `Cryolipolysis (Suprapubic Fat Reduction)`
+
+This **supersedes** the prior May 3 framing that classified 04l cosmetic as "likely-keep" for notes — the user explicitly directed dropping notes for cosmetic-male after the per-device pages reached completion. **The Notes-column drop 3-part rule should be applied in the same direction to other sections where every row now has a per-device page** (BPH was the prior example; cosmetic-male is the new one).
+
+### Lint state
+
+`npm run lint:links` clean across 831 files.
+
+---
+
+## Previous handoff snapshot — May 3, 2026 (cosmetic male per-device-page complete: Cryolipolysis + Non-Autologous Injectables + V-Y Plasty + Autologous Fat Injection; Sliding/Slicing relocated to Peyronie's; Combined-procedure rows removed from cosmetic database)
 
 Final cosmetic-male per-device completion micro-session — every individual procedure in the male-cosmetic database now has a dedicated atlas page. Branch: `claude/flamboyant-maxwell-5d847b`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved** (commits 9dc299e → b022e5e → 6818122 → 9475309 → 78e94e9 → autologous-fat).
 
