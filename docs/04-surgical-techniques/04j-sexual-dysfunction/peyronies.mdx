@@ -80,216 +80,50 @@ The critical branch point is **erectile-function status**. The matrix below oper
 ## Treatment Database
 
 export const pdTechniques = [
-  // ===== ORAL — LIMITED EVIDENCE =====
-  {
-    name: "Pentoxifylline (off-label)",
-    tier: "Oral — Limited Evidence",
-    invasiveness: "Non-invasive",
-    notes: "Methylxanthine + non-specific PDE inhibitor — TGF-β1 antagonism, cAMP elevation, Smad6 induction (Shindel/Lin 2010). 400 mg PO TID. **Smith 2011 calcified-plaque cohort n=71: 91.9% improvement / stabilization vs 44.4% controls (p<0.001) — strongest niche signal**. Abern 2012 combination (verapamil + L-arginine + PTX ± PTT) ~50% achieved ≥10° curvature improvement. Cochrane 2023 excluded for data-integrity. AUA 2015: 'other treatments' — neutral, not in the do-NOT-offer list.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
-  },
-  {
-    name: "Coenzyme Q10",
-    tier: "Oral — Limited Evidence",
-    invasiveness: "Non-invasive",
-    notes: "Antioxidant + anti-fibrotic via TGF-β1/Smad and Nrf2 pathways (preclinical). Safarinejad 2010 RCT n=186 at 300 mg/d × 24 wk reported large IIEF-5 + curvature benefits — but **Cochrane 2023 excluded the trial for data-integrity concerns**; no independent replication. AUA 2015 'other treatments' (neutral). Use should be considered unproven; OTC supplement; reasonable adjunct with explicit limited-evidence counseling.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
-  },
-  {
-    name: "Daily Tadalafil (mechanism-based, off-label for PD)",
-    tier: "Oral — Limited Evidence",
-    invasiveness: "Non-invasive",
-    notes: "Spirito 2024 disease-modifying signal for tunical fibrosis. Acceptable adjunct in acute phase or co-treatment for concurrent ED.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors",
-  },
-  {
-    name: "Vitamin E — DO NOT OFFER",
-    tier: "Oral — Not Recommended",
-    invasiveness: "Non-invasive",
-    notes: "AUA 2015 (Strong; Grade B): vitamin E should NOT be offered. No benefit over placebo in RCTs.",
-  },
-  {
-    name: "Tamoxifen — DO NOT OFFER",
-    tier: "Oral — Not Recommended",
-    invasiveness: "Non-invasive",
-    notes: "AUA 2015 (Strong; Grade B): tamoxifen should NOT be offered. No benefit over placebo.",
-  },
-  {
-    name: "Potaba (potassium para-aminobenzoate)",
-    tier: "Oral — Not Recommended",
-    invasiveness: "Non-invasive",
-    notes: "Cochrane: 'limited efficacy.' High pill burden, GI side effects, cost. May be offered but not preferred.",
-  },
+  // Oral — Limited Evidence
+  { name: "Pentoxifylline",                                        tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Coenzyme Q10",                                          tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Daily Tadalafil",                                       tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors" },
 
-  // ===== INTRALESIONAL — FDA-APPROVED + SECOND-LINE =====
-  {
-    name: "Collagenase Clostridium Histolyticum (CCH / Xiaflex)",
-    tier: "Intralesional — FDA-Approved",
-    invasiveness: "Minimally Invasive",
-    notes: "ONLY FDA-approved non-surgical PD therapy. Up to 4 cycles × 2 injections + clinician + home modeling. Mean ~17° curvature reduction (~35% improvement); 68.7% achieve ≥20% improvement. Ziegelmann 2023 IMPRESS pooled: incremental benefit through all 4 cycles. AE: corporal rupture ~0.5–0.7%. Indication: stable PD, plaque, curvature 30–90°.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
-  },
-  {
-    name: "Interferon α-2b",
-    tier: "Intralesional — Second-Line",
-    invasiveness: "Minimally Invasive",
-    notes: "Antifibrotic — decreases collagen production, increases collagenase activity. ~12–14° curvature improvement; pain reduction. AUA / EAU / ISSM: may be offered. Flu-like AEs common. Typically 5 million units bi-weekly × 6 doses.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
-  },
-  {
-    name: "Verapamil (intralesional)",
-    tier: "Intralesional — Second-Line",
-    invasiveness: "Minimally Invasive",
-    notes: "Calcium-channel blocker; some uncontrolled-series evidence for plaque softening and pain. Conflicting RCT data. AUA / ISSM: see potential role. EAU 2025: recommends against. Controversial.",
-    slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents",
-  },
-  {
-    name: "Hyaluronic Acid / BoNT / Nicardipine / Steroids (intralesional)",
-    tier: "Intralesional — Investigational",
-    invasiveness: "Minimally Invasive",
-    notes: "Limited evidence. Not standard of care. Not recommended outside research protocols.",
-  },
+  // Oral — Not Recommended (AUA do-NOT-offer)
+  { name: "Vitamin E",                                             tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Tamoxifen",                                             tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Potaba (potassium para-aminobenzoate)",                 tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
 
-  // ===== MECHANICAL / DEVICE =====
-  {
-    name: "Penile Traction Therapy — RestoreX",
-    tier: "Mechanical / Device",
-    invasiveness: "Non-invasive",
-    notes: "Only PTT device with RCT-level evidence. Ziegelmann 2019 RCT: −11.7° curvature, +1.5 cm length, EF improvement, 30–90 min/day. Joseph 2020 follow-up: 95% length gains (mean 2.0–2.2 cm), 61% curvature improvements at 6 mo.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
-  },
-  {
-    name: "Penile Traction Therapy — Older Devices (Penimaster PRO, Andropenis)",
-    tier: "Mechanical / Device",
-    invasiveness: "Non-invasive",
-    notes: "Longitudinal traction; require 3–8 hr/day with adherence as the major barrier. Small uncontrolled studies; Cochrane high-uncertainty. Less practical than RestoreX.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
-  },
-  {
-    name: "Vacuum Erection Device (no constriction ring) — for PD",
-    tier: "Mechanical / Device",
-    invasiveness: "Non-invasive",
-    notes: "Repeated negative-pressure stretching. Some benefit for length; less evidence for curvature than dedicated traction. Useful as adjunct in acute phase or post-IPP scratch protocol.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved",
-  },
-  {
-    name: "Extracorporeal Shockwave Therapy (ESWT) — for pain only",
-    tier: "Mechanical / Device",
-    invasiveness: "Non-invasive",
-    notes: "AUA 2015: should NOT be used for curvature/plaque reduction. Cochrane: no evidence for curvature benefit. May be offered for acute-phase pain when pain is the dominant symptom.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt",
-  },
-  {
-    name: "CCH + RestoreX Combination",
-    tier: "Combination Non-Surgical",
-    invasiveness: "Minimally Invasive",
-    notes: "Most evidence-based non-surgical combination. Alom 2019: 49% curvature improvement (vs 31% CCH alone), +1.9 cm length, 6.9× more likely to achieve ≥20° improvement. Contemporary first-line non-surgical regimen.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy",
-  },
+  // Intralesional
+  { name: "Collagenase Clostridium Histolyticum (CCH / Xiaflex)",  tier: "Intralesional — FDA-Approved",    invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Interferon α-2b",                                       tier: "Intralesional — Second-Line",     invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Verapamil (intralesional)",                             tier: "Intralesional — Second-Line",     invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  { name: "Hyaluronic Acid / BoNT / Nicardipine / Steroids",       tier: "Intralesional — Investigational", invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
 
-  // ===== SURGICAL — PLICATION =====
-  {
-    name: "Tunical Plication — Nesbit",
-    tier: "Surgical — Plication",
-    invasiveness: "Surgical Open",
-    notes: "Transverse elliptical wedge excision of tunica on convex side; closed primarily. ≥90% straightening; 0.5–2.0 cm shortening; 0–13% de novo ED.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
-  },
-  {
-    name: "Tunical Plication — Yachia",
-    tier: "Surgical — Plication",
-    invasiveness: "Surgical Open",
-    notes: "Longitudinal incision with transverse closure on convex side (Heineke-Mikulicz principle). Equivalent outcomes to Nesbit with technical simplification.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
-  },
-  {
-    name: "Tunical Plication — 16-Dot (Gholami-Lue) / Iterative 8-Dot",
-    tier: "Surgical — Plication",
-    invasiveness: "Surgical Open",
-    notes: "Multiple small plication sutures, no excision. Demzik 2022 iterative 8-dot (n=66, 55% complex deformities): 97% intraop success, 91% straight at follow-up, 6% minor complications, no revisions. Reddy 2018: long-term outcomes equivalent for severe (≥60°) and milder cases — supports broad indication.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
-  },
-  {
-    name: "Tunical Albuginea Plication (TAP / Lue technique)",
-    tier: "Surgical — Plication",
-    invasiveness: "Surgical Open",
-    notes: "Imbrication with permanent braided sutures. Can be performed via minimally invasive ventral incision (~64% of cases) without circumcising incision or degloving.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication",
-  },
+  // Mechanical / Device
+  { name: "Penile Traction Therapy (RestoreX)",                    tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy" },
+  { name: "Penile Traction Therapy (Penimaster PRO / Andropenis)", tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy" },
+  { name: "Vacuum Erection Device (no constriction ring)",         tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved" },
+  { name: "Extracorporeal Shockwave Therapy (ESWT, pain-only)",    tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt" },
 
-  // ===== SURGICAL — GRAFTING =====
-  {
-    name: "Plaque Incision/Excision + Buccal Mucosa Graft",
-    tier: "Surgical — Grafting (PEG)",
-    invasiveness: "Surgical Open",
-    notes: "Highest-success graft material. Badr 2026 meta of 17 studies: 98.6% success, 92.1% satisfaction, 1.7% de novo ED, 1.1% shortening, +1.99 cm affected side. Requires oral harvest.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
-  },
-  {
-    name: "Plaque Incision/Excision + Collagen Fleece (TachoSil)",
-    tier: "Surgical — Grafting (PEG)",
-    invasiveness: "Surgical Open",
-    notes: "Hatzichristodoulou suture-free sealing technique. 319 pts at 47 mo: 91.2% complete straightness, +1.1 cm length, 94% glans-sensation return, 87.8% satisfaction. 79-min OR time. 15.7% worsened EF — the highest of major graft options.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
-  },
-  {
-    name: "Plaque Incision/Excision + Tunica Vaginalis Graft",
-    tier: "Surgical — Grafting (PEG)",
-    invasiveness: "Surgical Open",
-    notes: "Same operative field; readily available. ~90% success at 24 mo; rare de novo ED; significant length gain.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
-  },
-  {
-    name: "Plaque Incision/Excision + SIS / Pericardium / Dermis / Saphenous Vein",
-    tier: "Surgical — Grafting (PEG)",
-    invasiveness: "Surgical Open",
-    notes: "Off-the-shelf or autologous alternatives. >80% success across series; 5–15% de novo ED depending on material. Saphenous vein is the historical gold standard.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting",
-  },
+  // Combination Non-Surgical
+  { name: "CCH + RestoreX",                                        tier: "Combination Non-Surgical",        invasiveness: "Minimally Invasive", slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy" },
 
-  // ===== SURGICAL — PROSTHESIS + ADJUNCT =====
-  {
-    name: "Inflatable Penile Prosthesis with Adjunctive Straightening",
-    tier: "Surgical — Prosthesis",
-    invasiveness: "Surgical Implant",
-    notes: "Indication: PD + ED refractory to medical therapy (and emerging indication: PD without ED in selected patients — Moncada 2025). Stepwise adjunct: modeling → plication → grafting. >80% satisfaction (PROPPER). Hammad 2025 multicenter: 82.4% required adjuncts beyond IPP alone.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
-  },
-  {
-    name: "Manual Modeling — Wilson Technique",
-    tier: "Surgical — Prosthesis Adjunct",
-    invasiveness: "Surgical Implant",
-    notes: "First-line adjunct during IPP; used in ~75% of cases. Forceful reverse-direction bending against inflated cylinders. Median 26° correction (Hammad 2025). 90-second intervals; glanular pressure.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling",
-  },
-  {
-    name: "Concurrent Tunical Plication (over IPP cylinders)",
-    tier: "Surgical — Prosthesis Adjunct",
-    invasiveness: "Surgical Implant",
-    notes: "Used when modeling insufficient (~5% of cases). Median 40° correction.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
-  },
-  {
-    name: "Plaque Incision/Grafting (over IPP cylinders)",
-    tier: "Surgical — Prosthesis Adjunct",
-    invasiveness: "Surgical Implant",
-    notes: "Used when plication insufficient (~2% of cases) — most severe / calcified plaques. Median 55° correction (highest among adjuncts).",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
-  },
-  {
-    name: "Scratch Technique + Postoperative VED",
-    tier: "Surgical — Prosthesis Adjunct",
-    invasiveness: "Surgical Implant",
-    notes: "Endocavernosal plaque disruption through corporotomy; avoids degloving / NVB mobilization. Antonini 2018: residual 17–21° → 8–9° at 24 wk with VED protocol. Shaeer punch variant: 85% OR-time reduction vs excision-grafting.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/scratch-technique",
-  },
-  {
-    name: "IPP + Multiple Corporeal Incisions + Collagen-Fleece Grafting",
-    tier: "Surgical — Prosthesis Adjunct",
-    invasiveness: "Surgical Implant",
-    notes: "Fernández-Pascual 2019 — for complex PD with severe shortening. Mean +2.5 cm lengthening; 94.9% satisfaction with straightness; 89.7% would recommend.",
-    slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening",
-  },
+  // Surgical — Plication
+  { name: "Tunical Plication — Nesbit",                            tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
+  { name: "Tunical Plication — Yachia",                            tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
+  { name: "Tunical Plication — 16-Dot / 8-Dot",                    tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
+  { name: "Tunical Albuginea Plication (TAP)",                     tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
+
+  // Surgical — Grafting (PEG)
+  { name: "PEG + Buccal Mucosa Graft",                             tier: "Surgical — Grafting (PEG)",       invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting" },
+  { name: "PEG + Collagen Fleece (TachoSil)",                      tier: "Surgical — Grafting (PEG)",       invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting" },
+  { name: "PEG + Tunica Vaginalis Graft",                          tier: "Surgical — Grafting (PEG)",       invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting" },
+  { name: "PEG + SIS / Pericardium / Dermis / Saphenous Vein",     tier: "Surgical — Grafting (PEG)",       invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting" },
+
+  // Surgical — Prosthesis + Adjunct
+  { name: "IPP with Adjunctive Straightening",                     tier: "Surgical — Prosthesis",           invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
+  { name: "Manual Modeling (Wilson Technique)",                    tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling" },
+  { name: "Concurrent Tunical Plication (over IPP)",               tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
+  { name: "Plaque Incision / Grafting (over IPP)",                 tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
+  { name: "Scratch Technique + Postoperative VED",                 tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/scratch-technique" },
+  { name: "IPP + Multiple Corporeal Incisions + Collagen Fleece",  tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
 ];
 
 export const pdColumns = [
@@ -316,8 +150,8 @@ export const pdColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'invasiveness',
+    header: 'Invasiveness',
   },
 ];
 
