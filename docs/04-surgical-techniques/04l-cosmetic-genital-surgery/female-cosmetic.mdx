@@ -109,126 +109,42 @@ Frequently performed concurrently with labiaplasty. Liu 2022 *Aesthet Plast Surg
 ## Treatment Database
 
 export const femaleCosmeticTechniques = [
-  // ===== LABIAPLASTY =====
-  {
-    name: "Trim (Edge / Linear) Resection Labiaplasty",
-    domain: "Labiaplasty",
-    notes: "Direct excision of protruding labial edge along its length. Removes darkened / irregular edge (often the patient's stated goal). Applicable to all morphologies including diffuse protrusion. Acceptable in smokers / cocaine users (vs wedge contraindicated). Pooled satisfaction 94–99% (Escandón 2022 meta); RCT (Minikowski 2025) shows equivalence to wedge on FGSIS / BDD-symptom reduction; Zahedi 2023 trim-vs-wedge algorithm.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty",
-  },
-  {
-    name: "Wedge Resection Labiaplasty",
-    domain: "Labiaplasty",
-    notes: "Alter 1998 / 2008 extended hockey-stick. Full-thickness V-shaped central excision; preserves natural labial edge + color transition. Allows simultaneous lateral clitoral-hood reduction. Géczi 2024 + Escandón 2022 metas: 94–99% satisfaction; dehiscence 3–8% (higher than trim). Köle 2024 multicentric n=2,594: wedge complication 3.0% vs trim 0.5%. Sinnott 2020 dehiscence risk factors: single-layer closure (p=0.050), concurrent mons liposuction (p=0.011), active smoking. **Relative contraindication in smokers / cocaine users**. Shi 2026 modified-wedge composite n=738: 99.2% aesthetic / 96.2% overall satisfaction.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty",
-  },
-  {
-    name: "De-Epithelialization Labiaplasty",
-    domain: "Labiaplasty",
-    notes: "Choi-Kim 2000 origin. Removes only epithelial layer; preserves submucosa + edge + neurovascular supply. **Highest pooled satisfaction 97% (95% CI 85–99%)** and lowest dehiscence rate (Géczi 2024 + Escandón 2022 metas). Cao 2012 central + posterior modification n=167 (one minor dehiscence). Jiang 2021 medial de-epi + lateral edge resection n=~50 (94.1%, FSFI > wedge). Wang 2025 mucosal advancement + de-epi n=25 (100%). Limited reduction capacity — not for severe hypertrophy.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty",
-  },
-  {
-    name: "Laser-Assisted Labiaplasty",
-    domain: "Labiaplasty",
-    notes: "Surgical tool, not a separate technique — CO₂ (10,600 nm; 10–30 W) substitutes for scalpel during any resection pattern. Géczi 2024 meta: significantly less bleeding, swelling, hematoma vs scalpel. Escandón 2022 meta: **highest pooled dehiscence (5%, 95% CI 2–8%)** from lateral thermal-coagulation zone (100–500 µm). Pardo 2006 n=55: 100% satisfaction; 7% minor dehiscence. **Distinct from FDA-warned non-surgical 'vaginal rejuvenation'** — laser-as-surgical-cutting-tool is not the FDA target.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/laser-assisted-labiaplasty",
-  },
-  {
-    name: "Combined Wedge-Edge Resection (Modified Trim + Wedge)",
-    domain: "Labiaplasty",
-    notes: "Cao 2015 *Aesthet Plast Surg* hybrid (n=49 of 524-labia series; 42.9% unilateral; mean OR 56 min; minor dehiscence 4.1%; 100% satisfaction). For **bi-dimensional hypertrophy** (horizontal + vertical excess), **asymmetric / unilateral** cases, and patients wanting dark-edge removal **plus** central volume reduction. Composite extensions: Zhou 2022 trilobal n=136 (91.5% cosmetic / 95.9% functional / 2.2% revision) and Xia 2021 three-step n=136 (95.5%; sex life improved 70.9%) extend the same combined logic to the lateral hood. Wedge-component dehiscence risk persists in smokers.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/combined-wedge-edge-labiaplasty",
-  },
+  // Labiaplasty
+  { name: "Trim Labiaplasty",                                         domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty" },
+  { name: "Wedge Labiaplasty",                                        domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty" },
+  { name: "De-Epithelialization Labiaplasty",                         domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty" },
+  { name: "Laser-Assisted Labiaplasty",                               domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/laser-assisted-labiaplasty" },
+  { name: "Combined Wedge-Edge Resection",                            domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/combined-wedge-edge-labiaplasty" },
 
-  // ===== CLITORAL HOODOPLASTY =====
-  {
-    name: "Inverted-Y Plasty Clitoral Hoodoplasty",
-    domain: "Clitoral Hoodoplasty",
-    notes: "Eserdağ 2021 *J Minim Invasive Gynecol* n=63: 96.9% satisfaction at 2 mo; no major complications. Inverted-Y geometry (longitudinal stem + diverging arms toward mons) addresses combined vertical + horizontal hood redundancy and produces a lifting effect not achievable with simple longitudinal strip. Median OR 34 min hoodoplasty alone; 45 min combined with curvilinear labiaplasty. Single-surgeon Level IV evidence; 2-mo follow-up.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/inverted-y-clitoral-hoodoplasty",
-  },
-  {
-    name: "Bilateral Triangular / Inverted-V Resection (Liu Classification)",
-    domain: "Clitoral Hoodoplasty",
-    notes: "Liu 2022 *Aesthet Plast Surg* zone-based classification (Zone C central / Zone L lateral; 5 types). **Largest hoodoplasty cohort published**: n=1,135 classified, n=789 treated. Bilateral triangular resection for **wide central hood** (horizontal redundancy); inverted horizontal V-shaped resection for **long central hood** (vertical redundancy). Outcomes: 95.7% satisfaction at 6 mo; complications 4.3%; revision 1.9%; **no paresthesia**. Anatomy-driven framework that complements the Xia CLC classification (Zone L / fused-CLC subtyping).",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/liu-classification-hoodoplasty",
-  },
-  {
-    name: "Three-Step / Two-Part Composite Excision (Lateral Hood + Labia Minora)",
-    domain: "Clitoral Hoodoplasty",
-    notes: "Combined lateral hood + labia minora hypertrophy in a single sequenced operation. **Xia 2021 *PRS* three-step** n=136: hood parallel to labia majora → labial wedge → junction triangle (95.5% satisfaction; complications 4.4%; revision 3.7%; sex life improved 70.9%). **Duan 2026 *Aesthet Plast Surg* two-part** n=68: simpler 2-step variant omitting the junction triangle (92.6% satisfaction; complications 7.4%; revision 1.5%; GAS p&lt;0.05). Wedge-component dehiscence risk persists in smokers. Not for fused-CLC variant (Xia 2022 Type 3 needs the dedicated 4-step technique).",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/three-step-two-part-composite",
-  },
+  // Clitoral Hoodoplasty
+  { name: "Inverted-Y Plasty Clitoral Hoodoplasty",                   domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/inverted-y-clitoral-hoodoplasty" },
+  { name: "Bilateral Triangular / Inverted-V Resection (Liu)",        domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/liu-classification-hoodoplasty" },
+  { name: "Three-Step / Two-Part Composite Excision",                 domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/three-step-two-part-composite" },
 
-  // ===== LABIA MAJORA =====
-  {
-    name: "Labia Majora Augmentation (Autologous Fat Grafting)",
-    domain: "Labia Majora",
-    notes: "Jabbour 2017 *Aesthet Surg J* SR (most-evidenced augmentation method; 4 studies / 183 pts pooled). Hersant 2018 n=21 (combined with conservative minora reduction; 81% satisfied; 1 minor dehiscence). Cihantimur 2021 *Aesthet Plast Surg* 360 SVF-enriched n=97: FGSIS 17.7 → 22.2 at 12 mo (p&lt;0.05). Menkes 2021 microfat (majora) + nanofat (vagina) for **GSM**: VHI / FSD significantly improved; stable at 18 mo. Lai 2023 MAFT n=20: FSFI 43.8 → 68.6; histologic neocollagenesis + neoangiogenesis + ER expression. Patel 2021 post-PIV n=6 (gender-affirming).",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation",
-  },
-  {
-    name: "Labia Majora Reduction (Majoraplasty)",
-    domain: "Labia Majora",
-    notes: "Saheb-Al-Zamani 2022 *Clin Plast Surg* technique review (principal synthesis). Three approaches: direct skin excision (crescent / fusiform / medial), liposuction alone, or combined fat-excision + skin excision. Bucknor 2018 n=451 labiaplasty cases — concomitant majoraplasty in 7.3%; overall complication 3.8%. Alter 2009 / 2012 post-bariatric combined approach with concurrent mons pexy. Lapalorcia 2013 HIV-related lipodystrophy (tailor-tacking technique). Siliprandi 2026 vulvar-aging classification: tailored majoraplasty achieves 91.4% satisfaction; complication 7.8%. **No RCTs**; Level IV–V evidence.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction",
-  },
+  // Labia Majora
+  { name: "Labia Majora Augmentation (Autologous Fat Grafting)",      domain: "Labia Majora",         slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation" },
+  { name: "Labia Majora Reduction (Majoraplasty)",                    domain: "Labia Majora",         slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction" },
 
-  // ===== MONS PUBIS =====
-  {
-    name: "Monsplasty (Mons Pubis Reduction / Lift)",
-    domain: "Mons Pubis",
-    notes: "El-Khatib 2011 ptosis grading (1–3); Hamdi 2023 *JPRAS* recommends as standard component of abdominoplasty for Grade 2+. Three approaches: liposuction alone (good elasticity), excisional monsplasty, dermal-fascial suspension (tacking to rectus fascia or SFS per Kitzinger 2014). Bloom 2012 / Bykowski 2017 post-bariatric outcomes — significant improvements in body image, sexual function (48–52%, p=0.009), hygiene, visualization (26%→100%), urinary symptoms (UDI-6 p=0.03; incontinence 22.6%→12.9%). Low morbidity. Alter 2012 *PRS* combined with mons pexy in MWL.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/monsplasty",
-  },
-  {
-    name: "Fat Grafting to Mons Pubis (Volume Restoration)",
-    domain: "Mons Pubis",
-    notes: "Volume-restoration counterpart to monsplasty. Indications: age-related atrophy, post-MWL over-correction, GSM (Menkes 2021 microfat+nanofat n=50; VHI/FSD improved; stable 18 mo), post-surgical concavity, post-PIV gender-affirming (Patel 2021), aesthetic. Lai 2023 MAFT n=20: FSFI 43.8→68.6 (p&lt;0.001) plus histologic neocollagenesis + neoangiogenesis + ER expression. Cihantimur 2021 360: FGSIS 17.7→22.2 at 12 mo (p=0.013). Seleem 2023 normative volumes (mons ~200 mL normal BMI). Dong 2024 NMA: ADSC-assisted highest survival (SUCRA 82%). ~16% require touch-up. GRAFT registry overall complication 2.86%.",
-    slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/fat-grafting-mons",
-  },
+  // Mons Pubis
+  { name: "Monsplasty",                                               domain: "Mons Pubis",           slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/monsplasty" },
+  { name: "Fat Grafting to Mons Pubis",                               domain: "Mons Pubis",           slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/fat-grafting-mons" },
+
+  // Energy-Based Devices — single pointer to canonical Vaginal Laser Therapy page
+  { name: "Vaginal Laser Therapy (Fractional CO₂ / Er:YAG / RF)",     domain: "Energy-Based Devices", slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy" },
+
+  // Hymenoplasty / G-Spot
+  { name: "Hymenoplasty",                                             domain: "Hymenoplasty / G-Spot", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty" },
+  { name: "G-Spot Amplification",                                     domain: "Hymenoplasty / G-Spot", slug: null },
+
+  // Regenerative
+  { name: "Microfat + Nanofat Grafting (GSM / Vulvar Atrophy)",       domain: "Regenerative",         slug: null },
 
   // Vaginal Canal entries removed per ACOG 2020 — "rebranding" colporrhaphy / perineoplasty
   // as cosmetic is misleading; surgical vaginoplasty and perineoplasty are reconstructive
-  // procedures and live in [04g Prolapse Repair](/docs/surgical-techniques/04g-prolapse-repair),
-  // not in the cosmetic atlas.
-
-  // ===== ENERGY-BASED =====
-  {
-    name: "Vaginal Laser Therapy (Fractional CO₂ / Er:YAG / RF)",
-    domain: "Energy-Based Devices",
-    notes: "Single pointer to the canonical [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) page covering fractional CO₂, non-ablative Er:YAG, and RF devices across GSM / SUI / lichen sclerosus / vaginal laxity / breast-cancer survivors. **FDA 2018 Safety Communication**: no energy-based device is FDA-cleared / approved for vaginal rejuvenation, GSM, SUI, or sexual function. **Li 2021 *JAMA* sham-controlled RCT** (CO₂; n=85): no benefit vs sham at 12 mo. Cochrane 2025 / Lukanović 2026 SUI metas: modest signal below MID. **Phillips 2025 + O'Reilly 2024 Er:YAG SUI RCTs positive; Lee 2025 AJOG (n=144) negative — largest and most rigorous**. Pereira 2024 vaginal-laxity SR: RCTs do NOT confirm efficacy. Gambacciani 2020 113,000-pt Er:YAG safety dataset: no serious AEs. ACOG 2020 + ESSM 2020 + AUA/SUFU 2023: insufficient evidence; research-protocol use only.",
-    slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy",
-  },
-
-  // ===== HYMENOPLASTY / G-SPOT =====
-  {
-    name: "Hymenoplasty (Hymenorrhaphy / Hymenal-Flap / Vaginal-Flap)",
-    domain: "Hymenoplasty / G-Spot",
-    notes: "Cultural / social indication. Lahlali 2021 *Aesthet Surg J* n=529 Moroccan center: hymenorrhaphy (42%) — no failures (all bled with intercourse within 15 d); hymenal-flap (39%); vaginal-flap (19%) — 1 failure in 99. Significant ethical controversy. Not specifically addressed by ACOG but falls under \"not medically indicated.\"",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
-  },
-  {
-    name: "G-Spot Amplification (HA / Autologous Fat Injection)",
-    domain: "Hymenoplasty / G-Spot",
-    notes: "Anterior-vaginal-wall HA filler / fat injection at putative G-spot. **Virtually no peer-reviewed evidence**; expert-opinion / case-report only. Anatomic existence of the G-spot as a discrete structure remains debated. ACOG 2020: safety + effectiveness not established.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
-  },
-
-  // ===== REGENERATIVE / FAT GRAFTING =====
-  {
-    name: "Microfat + Nanofat Grafting (GSM / Vulvar Atrophy)",
-    domain: "Regenerative",
-    notes: "Microfat → labia majora; nanofat → vaginal mucosa (trophic / regenerative). Menkes 2021 *Aesthet Surg J* n=50: VHI + FSD significantly improved at 1 + 3 mo (p<0.05). Emerging regenerative-medicine option distinct from structural reconstruction.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
-  },
-  {
-    name: "\"Genital Beautification\" Combined Packages",
-    domain: "Regenerative",
-    notes: "Cihantimur 2013 + Toplu 2021 + Cihantimur 2021. Labia minora reduction + labia majora augmentation + mons liposuction ± laser brightening ± vaginal tightening. Toplu 2021 n=37: 94.5% satisfied with appearance; 80% satisfied with functional results. Cihantimur 2013 n=124: 95.2% satisfaction. **Combined procedures increase complication risk**.",
-    slug: "/docs/surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles",
-  },
+  // procedures and live in 04g Prolapse Repair, not the cosmetic atlas.
+  // "Genital Beautification" combined-packages row removed per editorial decision —
+  // the components live in their per-device pages; the combined-package framing
+  // adds no decision-support value beyond what the per-device pages already cover.
 ];
 
 export const femaleCosmeticColumns = [
@@ -249,10 +165,6 @@ export const femaleCosmeticColumns = [
       'Hymenoplasty / G-Spot':  '#374151',
       'Regenerative':           '#047857',
     },
-  },
-  {
-    key: 'notes',
-    header: 'Notes',
   },
 ];
 

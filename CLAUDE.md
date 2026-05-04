@@ -75,7 +75,12 @@ Explicit framing of the **registry-vs-MAUDE discrepancy** (113K with no serious 
 
 ### Lint state
 
-`npm run lint:links` clean across 844 files; `npm run lint:citations` clean for all newly created and edited pages.
+`npm run lint:links` clean across 845 files; `npm run lint:citations` clean for all newly created and edited pages.
+
+### Late-session additions (same day)
+
+- New per-device page **[hymenoplasty.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty.mdx)** (11 refs). Anchor: **Lahlali 2021** *Aesthet Surg J* Moroccan single-center n=529 (hymenorrhaphy 100% bleeding success when intercourse within 15 d; hymenal-flap 39%; vaginal-flap 19% with 1/99 failure). **Eserdağ 2021** vestibulo-introital tightening n=145 (99.3% sat); **Wei 2015** STSI n=125 (92.2% sat); **Dogan 2024** temporary-vs-permanent comparative n=246 (temporary higher bleeding satisfaction but higher pain VAS). Explicit **legal-context** call-out (some jurisdictions banned, e.g. UK); ACOG 795 + ACOG 780 + Bawany 2017 Islamic ethico-legal perspectives. Distinguished from FGM/C.
+- **Female-cosmetic database compression (LOCKED, supersedes prior session note).** Notes column dropped entirely; "Genital Beautification Combined Packages" row deleted; all row names compressed to bare procedure names (e.g. "Trim (Edge / Linear) Resection Labiaplasty" → "Trim Labiaplasty"; "Three-Step / Two-Part Composite Excision (Lateral Hood + Labia Minora)" → "Three-Step / Two-Part Composite Excision"). Database now **2 columns (Procedure + Domain)**, mirroring the May-4 male-cosmetic compression. The earlier note that "the male-cosmetic 3-part Notes-column-drop rule does not yet apply" is **superseded** — user explicitly directed dropping notes now even with two slug-less placeholder rows remaining (G-Spot Amplification, Microfat + Nanofat Grafting). The bare-name + 2-column pattern is now applied consistently across both male and female cosmetic atlases.
 
 ---
 

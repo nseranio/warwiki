@@ -36,6 +36,11 @@ For commit-level detail run `git log --oneline`.
 
 **Lint state:** `npm run lint:links` clean across 844 files; `npm run lint:citations` clean for all new and edited pages.
 
+**Late-session additions (same day):**
+
+- New page [hymenoplasty.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty.mdx) (11 refs). Lahlali 2021 Moroccan n=529 + Eserdağ 2021 + Wei 2015 + Dogan 2024 temporary-vs-permanent comparative. Explicit legal-context call-out (UK ban) + ACOG 795/780 + Bawany 2017 Islamic ethico-legal perspectives. Distinguished from FGM/C.
+- **Female-cosmetic database compression (LOCKED).** Notes column dropped entirely; "Genital Beautification Combined Packages" row deleted; row names trimmed to bare procedure names. Database is now 2 columns (Procedure + Domain), mirroring the May-4 male-cosmetic compression. The pattern is now applied consistently across both cosmetic atlases.
+
 ---
 
 ## 2026-04-22 — Lint harness + Surgical Skills collapse + IC/BPS build-out
