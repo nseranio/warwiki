@@ -4,7 +4,53 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 3, 2026 (BPH MIST per-device completion incl. Aquablation / GreenLight PVP / UroLift PUL / Optilume BPH / iTIND + AEEP unification + Foundations catheter / drain family rebuild)
+## Current handoff snapshot — May 3, 2026 (cosmetic male per-device completion: Penuma / Himplant + HST + Dermal Fat Grafts / AlloDerm + Reduction Scrotoplasty + Penoscrotal-Web Correction; site-wide Scrotox removal)
+
+Continuation of the per-device per-row completion arc. Branch: `claude/flamboyant-maxwell-5d847b`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved** (six commits this micro-session: 904f7a5 → ea0b3e5 → Scrotox removal).
+
+### Five new dedicated cosmetic-male atlas pages
+
+| Page | Refs | Headline anchors |
+|---|---|---|
+| [penuma.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penuma.mdx) | 12 | **Penuma + Himplant unified as same device family** (Himplant = contemporary rebrand / next-gen iteration); Wilson 2022 (FDA 510(k) update + concealed-scrotal approach + rehab-after-removal); Elist 2018 single-surgeon n=400 2–6-yr (midshaft 8.5 → 13.4 cm = +56.7%; 3% removal); Siegal 2023 multicenter n=49 (flaccid 8.1 → 12.3 cm = +52%); Elist 2020 retractile-penis indication; Trost 2024 SMSNA position; Furr 2018 referral-center signal; Ramazan 2026 narrative review (removal up to 10%); Darrow 2021 *JAMA* 510(k) regulatory pathway; comparison vs HA / PLA / dermal grafts. |
+| [hardrock-sandwich-technique.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/hardrock-sandwich-technique.mdx) | 11 | Sertkaya 2025 *Int J Impot Res* n=456 (largest single-center series in penile-augmentation literature; girth +43.13% / +4.51 cm; length +20.78% / +2.17 cm at POD 1; satisfaction 83.4%; **0% sexual dysfunction**; complications: seroma 6.1% / infection 2.7% / dehiscence 2.3% / hematoma 1.4% / skin necrosis 0.2%). Bovine-pericardium evidence: Zucchi 2013 Hydrix corporoplasty, Otero 2017 lyophilized PD series 80.5% straightening, Choi 2021 H-shaped RCT 70° → 5°, Kadioglu 2007, Leungwattanakij 2003 rat tunical-substitution. Plasma-gel mechanism via Israeli 2022 PRP review. **Corrected the SLD-page misdescription** of HST as "SLD + V-Y + fat injection composite" — actually bovine pericardial graft + autologous plasma gel + SLD + testicular prosthesis. |
+| [dermal-fat-grafts-alloderm-wraps.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/dermal-fat-grafts-alloderm-wraps.mdx) | 25 | Eight-part deep-dive — autologous dermal fat grafts (Xu 2016 +1.67 cm flaccid girth, Spyropoulos 2005); comparator fat injection (Kang 2012, Deskoulidi 2023); ADM wraps with critical analysis of **Alei 2012 favorable single-center series (n=69 +3.1 cm flaccid / +2.4 cm erect)** vs **Solomon 2013 n=47 42% infection / graft exposure** vs **Xu 2019 n=78 60.3% erectile discomfort / 9% required ADM removal — authors' verdict: "not an ideal or safe method for PGE"**; ADM as infrapubic-space filler post-SLD (Zhang 2019); comparator PLGA tissue engineering (Perovic 2006/2010 / Djordjevic 2018 — strongest scientific rationale, neotissue formation confirmed histologically, ~4.8% complication rate); comparator saphenous-vein albugineal augmentation (Austoni 2002, Yang 2009 — erect girth only, ED risk); full comparison table cross-linked to Penuma and HST; comprehensive complications overview (Manfredi 2022 ~53% surgical-graft reoperation signal); referral-center series Furr 2018 / Wessells 1996 / Alter 1997; critical appraisal Vardi 2008 / SMSNA 2024. |
+| [reduction-scrotoplasty.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty.mdx) | 24 (after Scrotox removal) | Thomas & Navia 2021 SR + algorithm (only published management algorithm — vertical midline scrotal-skin resection for scrotomegaly + Z-plasty at penoscrotal junction for webbing); Schifano 2022 SR; Miranda-Sousa 2007 ventral phalloplasty + IPP series (n=43; **84% increased length perception** vs 84% historical controls who complained of shortening; 98% overall satisfaction); **Gupta 2019 n=103 only study specifically examining scrotoplasty complications — 14.6% wound dehiscence with diabetes OR 6.1 and V-Y plasty technique OR 4.9 as independent risk factors**; Bagnara 2024 V-I penoscrotal reconfiguration n=21 (0% complications); Abdelwahab 2025 RCT n=61. |
+| [penoscrotal-web-correction.mdx](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penoscrotal-web-correction.mdx) | 23 | Seven distinct surgical techniques with comparative-outcomes table — Z-plasty (Álvarez Vega 2025 n=100, 98% primary healing), V-Y plasty (with Gupta 2019 OR 4.9 dehiscence caveat), Caso & Carrion 2008 ventral-phalloplasty "check mark" incision, Bagnara 2024 V-I reconfiguration, Chen 2012 transverse excision, Borsellino 2007 scrotal-raphe approach (0% recurrence), Xu 2015 concealed-penis penoscrotal-angle reconstruction +2.1 cm flaccid length. IPP-adjunctive section anchored on Miranda-Sousa 2007 + Aboul Fotouh El Gharably 2022 RCT + Abdelwahab 2025 RCT + Mokhless 2010. Psychological-impact section (Zampieri 2022 / Hustad 2022 n=3,503 / Herndon 2003). El-Koutby grading (only published classification). |
+
+The cosmetic-male database now has **9 dedicated per-device pages**: HA filler, PLA filler, SLD, suprapubic lipectomy, **Penuma/Himplant**, **HST**, **Dermal Fat Grafts/AlloDerm Wraps**, **Reduction Scrotoplasty**, **Penoscrotal-Web Correction**. All slugs repointed from the prior small-penis-syndrome-pointer pattern.
+
+### Foundations Himplant rewritten as biomaterials disambiguation pointer
+
+[himplant.mdx](docs/01-foundations/tools/biomaterials/adjunct-specialty/himplant.mdx) (foundations/biomaterials) was rewritten from a stub into a brief biomaterials-view profile that explicitly clarifies **Himplant = Penuma rebrand** and routes the reader to the canonical atlas page for the full evidence base. Existing inbound links from urolift, free-silicone, and IPP biomaterials pages were preserved.
+
+### Site-wide Scrotox removal (per user instruction)
+
+Scrotox (cosmetic dartos botulinum-toxin injection) was deleted from the site entirely:
+
+- **Removed Section VII.A** ("Botulinum toxin injection (Scrotox)") from the reduction-scrotoplasty page; renamed Section VII heading from "Non-Surgical Alternatives — Scrotox and Energy-Based Devices" → "Non-Surgical Alternatives — Energy-Based Devices."
+- Dropped 3 Scrotox-only refs (Khambati 2014 chronic-scrotal-pain pilot; Dockray 2020 chronic-scrotal-pain RCT; Breikaa 2014 rat testicular-toxicity); refs 20–27 renumbered to 17–24 via the placeholder script.
+- Removed Botulinum Toxin pharmacology hub from the See Also block on the reduction-scrotoplasty page.
+- Removed the standalone "**Scrotox** (Scrotal Botulinum Toxin Injection)" row from the male-cosmetic database.
+- Decision-matrix "Scrotal laxity / aesthetic concerns" alternatives column changed from `"Scrotox" (botulinum toxin into dartos) — anecdotal / no peer-reviewed evidence` → `Energy-based devices (RF / laser) — no published scrotal-skin clinical evidence`.
+- Clinical-summary sentence updated from "Non-surgical alternatives (botulinum toxin, energy-based devices)" → "Non-surgical alternatives (energy-based devices)."
+- Final scan: 0 remaining Scrotox mentions site-wide. Lint clean across 822 files.
+
+### Editorial conventions reaffirmed this micro-session
+
+- **Per-device pattern locked for cosmetic male**: products differing on mechanism / indication / complication-profile / evidence-base get their own dedicated page. Penuma + Himplant **unified** under one page despite the marketing distinction because the mechanism, indication, complication profile, and evidence base are identical (the unification rule mirrors the AEEP precedent for HoLEP / ThuLEP / ThuFLEP / BipolEP).
+- **Existing-content correction discipline.** When building HST, caught and corrected an inaccurate description on the SLD page that had labeled HST as "SLD + V-Y + fat injection composite" (actually bovine pericardium + autologous plasma gel + SLD + testicular prosthesis). Always cross-check that adjacent pages describing a composite technique match the canonical source.
+- **Concise database notes when the per-device page exists.** Database row notes were expanded with multi-data-point evidence anchors (Alei favorable / Solomon 42% infection / Xu 60% erectile discomfort signal in dermal-fat row; girth + length + sexual-dysfunction + 3 complication endpoints in HST row) — but the descriptive depth still lives on the per-device page. Rows act as decision-support triage.
+- **Aggressive removal — when an entity is removed from the site, kill every trace.** Section, refs, See Also link, database row, decision-matrix mention, clinical-summary mention. Final `grep -rln -i "scrotox"` returns zero before commit. Do not leave half-stub pointers or "see for more" links to the removed entity.
+- **Reference-renumbering after deletion.** When refs are deleted, use the two-pass placeholder Python script to renumber sequentially. Never leave gaps — citation lint flags them.
+
+### Lint state
+
+`npm run lint:links` clean across 822 files at every commit point. Citation lint clean for all touched files.
+
+---
+
+## Previous handoff snapshot — May 3, 2026 (BPH MIST per-device completion incl. Aquablation / GreenLight PVP / UroLift PUL / Optilume BPH / iTIND + AEEP unification + Foundations catheter / drain family rebuild)
 
 Long single-day session covering the **complete per-device build-out of the BPH section** — every major MIST plus the major resective / extirpative options now have dedicated atlas pages, with HoLEP / ThuLEP / ThuFLEP / BipolEP **unified** into one canonical AEEP page. Plus a parallel **Foundations urinary-catheter and surgical-drain family rebuild**. Branch: `claude/epic-knuth-5b3096`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved.**
 
