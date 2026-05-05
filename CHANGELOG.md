@@ -6,6 +6,35 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-05 — ED + Peyronie's atlas / pharmacology buildout (5 new 04j pages + Peyronie's pharmacology hub from 25 → 76 refs + database compression)
+
+**Five new canonical 04j pages:**
+
+- [psychosexual-therapy.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx) (17 refs) — cross-cutting canonical for sensate focus / CBT / MBI / PLISSIT / sex education / couples therapy. Cochrane 2007 + Frühauf 2013 meta + Qiangzhao 2026 NMA. Linked from ED database, Peyronie's, women's-health sexual-dysfunction, SPS / PDD.
+- [penile-arterial-revascularization.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization.mdx) (23 refs) — Michal 1973 origin + Dabaja 2014 + Manning 1998 + Cookson 1993 + Kawanishi 2004 + Kayıgil 2012 + Zuckerman 2012 PFUI cohort + Schönhofen 2021 / Mohan 2025 endovascular. **IEA → dorsal penile artery (Michal II)** is the contemporary standard donor; saphenous vein is NOT (corrected the prior database row).
+- [stem-cell-therapy-ed.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed.mdx) (19 refs) — AUA 2018 investigational; Hinojosa-Gonzalez 2024 NMA; Phase-I evidence (Haahr 2018 / Bieri 2020 / Ji 2025).
+- [venous-ligation.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/venous-ligation.mdx) (17 refs) — AUA 2018 NOT recommended; modern direction is embolization-first or combined (Allaire 2021/2025; Hoppe 2026 multicenter registry).
+
+**Peyronie's pharmacology hub** [peyronies-disease-agents.mdx](docs/01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx) grew from ~ 25 refs to **76 refs**:
+
+- Pentoxifylline section (refs 26–32) — Smith 2011 calcified-plaque 91.9% as strongest niche signal.
+- CoQ10 section (refs 33–40) — Safarinejad 2010 RCT with explicit data-integrity admonition.
+- Vitamin E section (refs 41–48) — AUA Statement #6 Grade B; Miller 2005 high-dose mortality signal.
+- Tamoxifen section (refs 49–60) — AUA Statement #6 Grade C; Ilg 2019 PDE5i synergy preclinical only; ~ 20% AE-discontinuation rate in men.
+- Potaba section (refs 61–68) — Weidner 2005 RCT; strongest signal is curvature-progression PREVENTION.
+- Xiaflex / CCH expansion (refs 69–76) — Lipshultz 2015 subgroup; Masterson 2020 + Cocci 2018 + Cahill & Trost 2025 predictors; Goldstein 2020 calcification subgroup; Yafi 2018 head-to-head vs surgery; Wymer 2019 cost-effectiveness; Sukumar 2020 NY State practice-impact.
+
+**Database compression — atlas-wide pattern now LOCKED across 4 atlases (male-cosmetic, female-cosmetic, ED, Peyronie's):**
+
+- ED database: 4 prosthesis rows collapsed into one "Penile Implant"; ICI rows merged; PDE5 / MUSE / TRT repointed to pharmacology hubs; Notes column dropped; bare-name rule applied. 13 rows total.
+- Peyronie's database: Notes column dropped; bare-name rule applied. 28 rows total. Vitamin E / Tamoxifen / Potaba / investigational-IL rows repointed to canonical pharmacology hub.
+
+Three-column atlas format (Treatment + Tier badge + Invasiveness) is now the locked structure when every row has a canonical destination.
+
+**Lint state:** `npm run lint:links` clean across 851 files; `npm run lint:citations` clean.
+
+---
+
 ## 2026-05-04 — Female cosmetic per-device buildout (10 new pages) + canonical-laser augmentation + atlas cleanup
 
 **Ten new dedicated pages under [`04l-cosmetic-genital-surgery/`](docs/04-surgical-techniques/04l-cosmetic-genital-surgery):**

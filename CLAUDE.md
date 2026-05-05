@@ -4,7 +4,75 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 4, 2026 (female cosmetic per-device buildout: 10 new pages + canonical-laser augmentation + atlas cleanup)
+## Current handoff snapshot — May 5, 2026 (ED + Peyronie's atlas / pharmacology buildout: 5 new pages + 3 pharmacology expansions + database compression)
+
+Sustained Male Sexual Dysfunction (04j) cleanup arc — applied the locked database-compression pattern (Notes-column drop + bare-name rule) to the ED and Peyronie's atlas databases, built five new canonical 04j pages, and substantially expanded the canonical Peyronie's pharmacology hub. Branch: `claude/cool-pascal-906142`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved.**
+
+### Five new 04j canonical pages
+
+| Page | Refs | Anchors |
+|---|---|---|
+| [psychosexual-therapy.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx) | 17 | Cross-cutting canonical for sensate focus / CBT / MBI / PLISSIT / sex education / couples therapy. **Cochrane 2007** (group + sildenafil > sildenafil alone, RR 0.46), **Frühauf 2013 meta** (d=0.58 / d=0.47), **AUA/SMSNA 2022 PE**, **ACOG PB 213**, **Davis 2024 NEJM**, **Qiangzhao 2026 J Sex Med NMA** of 45 studies / 4,726 women (PLISSIT 1st for FSFI; MBI 1st for FSDS). Linked from ED database, Peyronie's, women's-health sexual-dysfunction, SPS / PDD. |
+| [penile-arterial-revascularization.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization.mdx) | 23 | **Michal 1973 origin** + Dabaja 2014 (50% misdiagnosis — selection is dominant) + Manning 1998 + Cookson 1993 + Kawanishi 2004 + Kayıgil 2012 + **Zuckerman 2012 PFUI 82%** + Schönhofen 2021 / Mohan 2025 endovascular. Selection criteria locked: age &lt; 55, &lt; 2 risk factors, no atherosclerosis, intact veno-occlusive function on DICC, focal lesion on SIPA. **IEA → dorsal penile artery (Michal II)** is the contemporary standard donor; **saphenous vein is NOT** standard (corrected the prior database row note). AUA 2018 Conditional / Grade C. |
+| [stem-cell-therapy-ed.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed.mdx) | 19 | **AUA 2018 investigational** admonition (Conditional / Grade C; clinical-trial-only; commercial-clinic warning per Israeli 2022). Cell-source table (ADSCs / BMSCs / CBMSCs / placenta-MSC / SHED-CM acellular). **Hinojosa-Gonzalez 2024 NMA** SMD 0.92 [−0.49, 2.3] not significant; PRP and LI-ESWT both significant. Phase-I anchors (Haahr 2018 53% post-RP; Bieri 2020 Caverstem n=140; **Ji 2025 placenta-MSC + LI-ESWT diabetic ED 70% EHS &gt; 2**). |
+| [venous-ligation.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/venous-ligation.mdx) | 17 | **AUA 2018 explicitly NOT recommended** (Moderate / Grade C). Wespes 1985/1992, Freedman 1993 (24% sustained), Hwang 1994, **Stief 1994 SPACE-as-predictor** (68% vs 8%), Kim & McVary 1995, Cayan 2008. **Modern direction**: **embolization-first or combined ligation + embolization** — Allaire 2021/2025 (n=171; 80.7% improvement at 23 mo); Hoppe 2026 multicenter venous-leak embolization registry n=175 (59.4% IIEF; 1.7% non-target PE). PiVET-ED 2022 sham RCT in progress. |
+| (existing CCH content; expanded with new sections) | — | Lipshultz 2015 subgroup; Masterson 2020 + Cocci 2018 + Cahill & Trost 2025 predictors; Goldstein 2020 calcification subgroup; Zucker 2024 risk factors detail; **Yafi 2018 head-to-head** (CCH 23.3°/34.4% vs surgery 72°/92%); **Wymer 2019** cost-effectiveness ($883 traction / $11,419 surgery / $33,628 CCH; CCH cost-effective in only 3% of simulations); **Sukumar 2020** NY State practice-impact data |
+
+### Three substantial Peyronie's pharmacology hub expansions
+
+[peyronies-disease-agents.mdx](docs/01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx) grew from ~ 25 refs to **76 refs** with five sustained subsection expansions:
+
+- **Pentoxifylline** (refs 26–32): mechanism table (Shindel 2010 Part 1 TGF-β1 / Lin 2010 Part 2 Smad6 + AAT1 / Valente 2003 cAMP elevation + 80–95% rat-model plaque reduction); **Smith 2011 calcified-plaque cohort n=71 (91.9% improvement vs 44.4% — strongest niche signal)**; Abern 2012 combination; Paulis 2022 case reports; Cochrane 2023 exclusion; AUA 2015 neutral framing.
+- **Coenzyme Q10** (refs 33–40): mechanism table (Yi 2026 silicotic; Choi 2009 Nrf2; Mohamed 2019; Hossain 2025); **Safarinejad 2010 RCT** anchor with **explicit data-integrity admonition** (Cochrane 2023 excluded; no independent replication); Favilla 2014 + Paulis 2022 combinations.
+- **Vitamin E** (refs 41–48): AUA Statement #6 (Grade B do-NOT-offer); **Safarinejad 2007 RCT** negative; high-dose safety signals (**Miller 2005 meta n=135,967 increased mortality**; SELECT prostate cancer; HOPE heart failure; EFSA 2024 UL 300 mg/d).
+- **Tamoxifen** (refs 49–60): AUA Statement #6 Grade C; mechanism table (**Carthy 2015 ERK1/2 / FRA2; Ilg 2019 phenotypic-screen synergy with PDE5i**; Dellê 2012 ECM; Matsushita 2023 Smad7); **Ilg 2020 36-h "point of no return"** (prevents but does not reverse); Teloken 1999 RCT negative; **Ilg 2019 vardenafil + tamoxifen synergy in vitro + rat (preclinical only)**; AE table (sexual dysfunction 22–29%; VTE; **20% discontinuation in men**).
+- **Potaba (POTABA / KPAB)** (refs 61–68): mechanism table (Priestley 1979 GAG-secretion inhibition; no direct effect on collagen synthesis); **Weidner 2005** *Eur Urol* RCT n=103 (74.3% vs 50.0% overall response, p=0.016; **strongest signal is curvature progression PREVENTION**, not reversal); Cochrane 2023 included (not data-integrity-excluded) but rated low / very low certainty; **27% pill-burden dropout**; Roy 2008 acute-hepatitis case report.
+- **Xiaflex / CCH** subgroup + predictors + cost-effectiveness expansion (refs 69–76): **Lipshultz 2015 subgroup** showing calcification + IIEF 6–16 do not respond; **Masterson 2020** four predictors review; **Cocci 2018 nomogram** (c-index 0.93); **Cahill & Trost 2025** n=826 single-center series with **RestoreX-traction adjunctive signal**; Goldstein 2020 calcification subgroup; **Yafi 2018 head-to-head** (CCH 23.3°/34.4% vs surgery 72°/92%); **Wymer 2019** Markov cost-effectiveness (CCH cost-effective in **only 3%** of simulations); Sukumar 2020 NY State practice-impact analysis.
+
+### Database compression — atlas-wide pattern now LOCKED
+
+Applied the previously locked male-cosmetic / female-cosmetic Notes-column-drop pattern to **both ED and Peyronie's databases**. Pattern applied so far across **four atlases**: 04l male-cosmetic, 04l female-cosmetic, 04j ED, 04j Peyronie's.
+
+**ED database** ([erectile-dysfunction.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx)):
+
+- **Four prosthesis rows collapsed into one** "Penile Implant" row pointing to the canonical penile-implants subsection landing.
+- Two ICI rows merged into one "Intracavernosal Injection" row.
+- **PDE5 / MUSE / Testosterone / ICI** rows repointed to canonical pharmacology hubs (instead of the 29-line 04j stubs).
+- **Notes column dropped** entirely; per-row notes data stripped from all 13 rows.
+- Row names trimmed to bare procedure names ("PDE5 Inhibitors (Sildenafil, Tadalafil…)" → "PDE5 Inhibitors"; "Penile Implant (Prosthesis)" → "Penile Implant").
+- Three columns retained: Treatment + Tier badge + Invasiveness (Invasiveness adds decision-support triage beyond the Tier badge).
+
+**Peyronie's database** ([peyronies.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies.mdx)):
+
+- **Notes column dropped**; per-row notes data stripped from all 28 rows.
+- Row names trimmed: "Vitamin E — DO NOT OFFER" → "Vitamin E" (do-NOT-offer framing lives in the Tier badge); "Plaque Incision/Excision + Buccal Mucosa Graft" → "PEG + Buccal Mucosa Graft"; etc.
+- Vitamin E / Tamoxifen / Potaba / investigational-IL rows previously had no slug — all repointed to the canonical pharmacology hub.
+
+### Editorial conventions reaffirmed / locked this session
+
+- **Notes-column-drop is now the locked default for atlas databases** when every row has a canonical destination page (per-device subsection or pharmacology hub). Apply the male-cosmetic 3-part rule to any future atlas database touching that threshold.
+- **Three-column atlas format** = Treatment + Tier badge + Invasiveness (where invasiveness adds triage beyond the tier badge). The tier badge is the primary visual filter; invasiveness is the secondary at-a-glance signal.
+- **Database row notes belong on the canonical destination page**, not duplicated in the database.
+- **"Do not offer" framing lives in the Tier badge color**, not in the row name. Bare procedure names + tier badge convey the recommendation more cleanly than ALL-CAPS row labels.
+- **Multi-row collapse rule for atlas databases.** When several rows point to the same canonical subsection (e.g. 3-piece IPP / 2-piece IPP / malleable / Mulcahy salvage all point to /penile-implants/), collapse to a single row. The depth of distinction belongs in the subsection.
+- **Pharmacology hub vs 04j-stub split.** The 04j directory contains thin stubs (29 lines each) for some agents (PDE5i / MUSE / ICI). Atlas database rows for medical-therapy agents should point to the canonical pharmacology hub (hundreds of lines, full FDA-label-anchored content), not the 04j stub. Apply this rule when auditing other atlas databases.
+- **MDX `<` escape in DOI URLs.** Some DOIs contain literal `<` characters (e.g. the Anelli 1994 *Cancer* DOI `10.1002/1097-0142(19940701)74:1<74::AID-…`). These break MDX JSX parsing. Replace with PMID or escape entities.
+- **Citation-anchor renumbering after section additions** uses the python `<` placeholder pattern (replace with TMP token, then collapse). Visible numbers and anchor IDs must match — a mismatch will not break lint:links but will break inline navigation.
+- **Per-technique anchor hierarchy locked** for each ED- and PD-treatment row pointing to the canonical Peyronie's pharmacology hub:
+  - PTX → Smith 2011 calcified-plaque + Shindel/Lin 2010 mechanism + Cochrane 2023 exclusion + AUA 2015 neutral framing
+  - CoQ10 → Safarinejad 2010 (with **explicit data-integrity admonition**) + preclinical Nrf2/Smad mechanism
+  - Vitamin E → AUA Statement #6 Grade B + Safarinejad 2007 negative RCT + Miller 2005 mortality signal
+  - Tamoxifen → AUA Statement #6 Grade C + Teloken 1999 negative RCT + Ilg 2019 PDE5i synergy (preclinical only)
+  - Potaba → Weidner 2005 RCT + 27% pill-burden dropout + acute-hepatitis warning
+  - CCH/Xiaflex → IMPRESS I/II + Yafi 2018 head-to-head vs surgery + Wymer 2019 cost-effectiveness + calcification-as-dominant-negative-predictor
+
+### Lint state
+
+`npm run lint:links` clean across 851 files; `npm run lint:citations` clean for all newly created and edited pages.
+
+---
+
+## Previous handoff snapshot — May 4, 2026 (female cosmetic per-device buildout: 10 new pages + canonical-laser augmentation + atlas cleanup)
 
 Female-cosmetic atlas brought to per-device parity with male-cosmetic for the labiaplasty / hoodoplasty / labia majora / mons technique tiers. Vaginal-canal procedures removed from cosmetic atlas; energy-based devices collapsed to a single pointer row. Branch: `claude/cool-pascal-906142`; pushes via `git push origin HEAD:main`.
 
