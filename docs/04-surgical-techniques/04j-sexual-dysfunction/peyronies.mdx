@@ -80,21 +80,11 @@ The critical branch point is **erectile-function status**. The matrix below oper
 ## Treatment Database
 
 export const pdTechniques = [
-  // Oral — Limited Evidence
-  { name: "Pentoxifylline",                                        tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Coenzyme Q10",                                          tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Daily Tadalafil",                                       tier: "Oral — Limited Evidence",         invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors" },
+  // Oral agents (PTX, CoQ10, daily tadalafil, Potaba; AUA do-NOT-offer: vitamin E, tamoxifen, procarbazine, omega-3, vitamin E + L-carnitine)
+  { name: "Oral Agents",                                           tier: "Oral",                            invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents#oral-agents" },
 
-  // Oral — Not Recommended (AUA do-NOT-offer)
-  { name: "Vitamin E",                                             tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Tamoxifen",                                             tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Potaba (potassium para-aminobenzoate)",                 tier: "Oral — Not Recommended",          invasiveness: "Non-invasive",       slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-
-  // Intralesional
-  { name: "Collagenase Clostridium Histolyticum (CCH / Xiaflex)",  tier: "Intralesional — FDA-Approved",    invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Interferon α-2b",                                       tier: "Intralesional — Second-Line",     invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Verapamil (intralesional)",                             tier: "Intralesional — Second-Line",     invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
-  { name: "Hyaluronic Acid / BoNT / Nicardipine / Steroids",       tier: "Intralesional — Investigational", invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents" },
+  // Intralesional agents (CCH/Xiaflex FDA-approved; IFN α-2b; verapamil; HA / BoNT / nicardipine / steroids)
+  { name: "Intralesional Agents",                                  tier: "Intralesional",                   invasiveness: "Minimally Invasive", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents#intralesional-agents" },
 
   // Mechanical / Device
   { name: "Penile Traction Therapy",                               tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy" },
@@ -102,22 +92,13 @@ export const pdTechniques = [
   { name: "Extracorporeal Shockwave Therapy (ESWT, pain-only)",    tier: "Mechanical / Device",             invasiveness: "Non-invasive",       slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt" },
 
   // Surgical — Plication
-  { name: "Tunical Plication — Nesbit",                            tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
-  { name: "Tunical Plication — Yachia",                            tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
-  { name: "Tunical Plication — 16-Dot / 8-Dot",                    tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
-  { name: "Tunical Albuginea Plication (TAP)",                     tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
-  { name: "Penoscrotal Plication (Morey)",                         tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
+  { name: "Tunical Plication",                                     tier: "Surgical — Plication",            invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication" },
 
   // Surgical — Grafting (PEG)
   { name: "Plaque Incision / Excision and Grafting (PEG)",         tier: "Surgical — Grafting (PEG)",       invasiveness: "Surgical Open",      slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting" },
 
-  // Surgical — Prosthesis + Adjunct
+  // Surgical — Prosthesis
   { name: "IPP with Adjunctive Straightening",                     tier: "Surgical — Prosthesis",           invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
-  { name: "Manual Modeling (Wilson Technique)",                    tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling" },
-  { name: "Concurrent Tunical Plication (over IPP)",               tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
-  { name: "Plaque Incision / Grafting (over IPP)",                 tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
-  { name: "Scratch Technique + Postoperative VED",                 tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/scratch-technique" },
-  { name: "IPP + Multiple Corporeal Incisions + Collagen Fleece",  tier: "Surgical — Prosthesis Adjunct",   invasiveness: "Surgical Implant",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening" },
 ];
 
 export const pdColumns = [
@@ -130,16 +111,12 @@ export const pdColumns = [
     header: 'Tier',
     badge: true,
     badgeColors: {
-      'Oral — Limited Evidence':         '#6b7280',
-      'Oral — Not Recommended':          '#374151',
-      'Intralesional — FDA-Approved':    '#047857',
-      'Intralesional — Second-Line':     '#0f766e',
-      'Intralesional — Investigational': '#0369a1',
+      'Oral':                            '#374151',
+      'Intralesional':                   '#047857',
       'Mechanical / Device':             '#b45309',
       'Surgical — Plication':            '#1d4ed8',
       'Surgical — Grafting (PEG)':       '#be185d',
       'Surgical — Prosthesis':           '#b91c1c',
-      'Surgical — Prosthesis Adjunct':   '#9f1239',
     },
   },
 ];
