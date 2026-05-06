@@ -16,10 +16,10 @@ Female urethral reconstruction addresses stricture, diverticulum, prolapse, post
 
 | Clinical Scenario | First-Line Technique | Alternative(s) | Avoid |
 |---|---|---|---|
-| **Distal / meatal stricture (short, isolated)** | [Distal urethrectomy + advancement meatoplasty](/docs/surgical-techniques/04a-urethral-reconstruction/distal-urethrectomy-advancement) | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) or [labial mucosal graft](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa) | Repeated dilation |
-| **Mid-urethral stricture, healthy vaginal tissue** | [Vaginal wall flap (ventral onlay or inlay)](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) ± [Martius reinforcement](/docs/foundations/surgical-principles/flaps/martius) | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty); [dorsal labial mucosal graft](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa) | — |
-| **Mid-urethral stricture, atrophic vagina** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | [Dorsal labial mucosal graft](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa) | Vaginal flap / graft (atrophic tissue) |
-| **Pan-urethral or long-segment stricture** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (extensive grafting of entire urethra) | [Dorsal labial mucosal graft](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa) | Dilation (49% success; worsens fibrosis) |
+| **Distal / meatal stricture (short, isolated)** | [Distal urethrectomy + advancement meatoplasty](/docs/surgical-techniques/04a-urethral-reconstruction/distal-urethrectomy-advancement) | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (BMG, labial, or lingual mucosa) | Repeated dilation |
+| **Mid-urethral stricture, healthy vaginal tissue** | [Vaginal wall flap (ventral onlay or inlay)](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) ± [Martius reinforcement](/docs/foundations/surgical-principles/flaps/martius) | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | — |
+| **Mid-urethral stricture, atrophic vagina** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (BMG default; labial / lingual alternates) | — | Vaginal flap / graft (atrophic tissue) |
+| **Pan-urethral or long-segment stricture** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) — extensive grafting of entire urethra | — | Dilation (49% success; worsens fibrosis) |
 | **LS-related stricture** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | — | Vaginal / labial tissue (LS involvement risk) |
 | **Prior MUS erosion / scarred periurethral bed** | [Ventral BMG + Martius flap](/docs/surgical-techniques/04a-urethral-reconstruction/bmg-martius-combined) | [Dorsal BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | Vaginal flap (scarred bed) |
 | **Complete urethral loss / obliteration** | [Vaginal-wall tubularization](/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-wall-tubularization) + pubovaginal sling | [Bladder wall flap (Tanagho or Nayyar)](/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty) | — |
@@ -101,11 +101,11 @@ export const femaleTechniques = [
 
   // ===== F4. FREE GRAFT URETHROPLASTY =====
   {
-    name: "Female Dorsal Onlay BMG Urethroplasty",
-    eponym: "Sharma 2010 · Berdondini · Katiyar",
+    name: "Female Dorsal Onlay Urethroplasty",
+    eponym: "Sharma · Berdondini · Katiyar · Jena (labial)",
     location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Transvaginal dorsal BMG onlay (12 o'clock); urethra dissected off anterior vaginal wall. 88–93.5% success across multiple series.",
+    notes: "Transvaginal dorsal graft onlay (12 o'clock) with the urethra dissected off the anterior vaginal wall. Donor-source agnostic — buccal mucosa is the most-used default; labial mucosa (Jena 2025 n=204; 93.5% at 2 yr — largest single-surgeon series) is the leading alternative; lingual and vaginal-free graft are reported alternates. 87–95% success across modern series.",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty",
   },
   {
@@ -131,29 +131,6 @@ export const femaleTechniques = [
     category: "Free Graft Urethroplasty",
     notes: "Transurethral or suprameatal dorsal inlay with minimal urethral mobilization; nasal speculum + suture-passing device. 92–100%; same-day discharge; 0% SUI / 0% complications in Jefferson n=21.",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-inlay-bmg",
-  },
-  {
-    name: "Dorsal Onlay Labial Mucosal Graft",
-    eponym: "Jena 2025",
-    location: "Any",
-    category: "Free Graft Urethroplasty",
-    notes: "Labia minora mucosa as free graft. 204-pt single-surgeon series with 93.5% success at 2 yr; avoids oral donor-site morbidity.",
-    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-labial-mucosa",
-  },
-  {
-    name: "Vaginal Free Graft Urethroplasty",
-    eponym: "Borchert 2022",
-    location: "Any",
-    category: "Free Graft Urethroplasty",
-    notes: "Free vaginal-wall graft (when pedicled flap not feasible). ~80% success; limited by lichen sclerosus or vaginal atrophy.",
-    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-free-graft",
-  },
-  {
-    name: "Lingual Mucosal Graft (Female)",
-    location: "Any",
-    category: "Free Graft Urethroplasty",
-    notes: "Ventral tongue mucosa; alternative oral source when buccal sites unavailable.",
-    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/lingual-mucosal-graft-female",
   },
   {
     name: "Circular (Circumferential) BMG",
