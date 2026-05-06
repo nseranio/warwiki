@@ -72,19 +72,19 @@ export const oabUuiProcs = [
   {
     name: "Behavioral Therapy (Bladder Training + Urgency Suppression)",
     category: "Behavioral",
-    notes: "Bladder training with progressive voiding intervals, urgency suppression techniques (Knack, deep-breathing, distraction), timed voiding, and bowel management. Typical course 8–12 weeks. **Should be offered to all patients** (AUA / SUFU 2024 Clinical Principle); strongest behavioral evidence base.",
+    bestFor: "First-line for every OAB / UUI patient — should be offered to all (AUA / SUFU 2024).",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence",
   },
   {
     name: "Fluid Management & Dietary Modifications",
     category: "Behavioral",
-    notes: "Reduction of total fluid intake; avoidance of bladder irritants (caffeine, alcohol, carbonated beverages, artificial sweeteners). Low-risk and low-cost adjuncts that complement all other therapies.",
+    bestFor: "Universal adjunct — caffeine / alcohol / carbonation / artificial sweeteners.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence",
   },
   {
     name: "Weight Loss",
     category: "Behavioral",
-    notes: "5–10% body-weight loss improves UUI / OAB, though magnitude is smaller and more variable than for SUI (PRIDE 2009: SUI 58% vs UUI 42% reduction at 6 mo). Bariatric (LABS-2): both SUI and UUI improved at 1 yr. Offer when BMI ≥25.",
+    bestFor: "BMI ≥ 25 — modest UUI benefit (smaller effect than SUI).",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence",
   },
 
@@ -92,19 +92,19 @@ export const oabUuiProcs = [
   {
     name: "Pelvic Floor Muscle Training (PFMT)",
     category: "Non-Invasive",
-    notes: "Supervised PFMT with or without biofeedback. High- to moderate-certainty evidence shows PFMT improves UUI symptoms and QoL. Use strengthening when phenotype is hypotonic; **down-training / manual therapy when urgency is driven by overactive pelvic floor or guarding** — do not equate PFMT with Kegels in those patients.",
+    bestFor: "Hypotonic phenotype — strengthening; hypertonic — down-training. Do not equate with Kegels for guarded floors.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt",
   },
   {
     name: "Transcutaneous Tibial Nerve Stimulation (TTNS)",
     category: "Non-Invasive",
-    notes: "Surface-electrode tibial-nerve stimulation performed at home (no needle). Meta-analysis: significant reduction in frequency (MD −3.18 episodes / day vs sham / control) and nocturia. Particularly effective for **dry OAB** (urgency / frequency without incontinence). May be offered to all (AUA / SUFU 2024 Clinical Principle).",
+    bestFor: "Dry OAB (urgency / frequency without incontinence); home-based therapy.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
   },
   {
     name: "Pelvic Floor Electrical Stimulation",
     category: "Non-Invasive",
-    notes: "Intravaginal / transcutaneous / extracorporeal-magnetic ES. Cochrane 2016 — probably better than no treatment for OAB; insufficient evidence vs antimuscarinics. Leonardo 2022 meta — low-frequency pelvic ES improves QoL (MD +7.41), reduces incontinence episodes (MD −1.33), increases cure / improvement (RR 1.46) vs PFMT or bladder training alone.",
+    bestFor: "Patients who cannot voluntarily contract the pelvic floor; adjunct to PFMT.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation",
   },
 
@@ -112,19 +112,19 @@ export const oabUuiProcs = [
   {
     name: "Beta-3 Agonists (Vibegron / Mirabegron)",
     category: "Pharmacological",
-    notes: "**Preferred first-line pharmacotherapy** per AUA / SUFU 2024 (no anticholinergic cognitive burden). Vibegron 75 mg outperformed mirabegron and antimuscarinics in NMA (Huang 2025); 100 mg showed greatest reduction in micturition frequency (SMD −0.87). Mirabegron can raise systolic BP 3–10 mmHg; vibegron has minimal BP signal. Vibegron is FDA-approved in men on BPH pharmacotherapy.",
+    bestFor: "Preferred first-line pharmacotherapy — especially elderly (no anticholinergic cognitive burden).",
     slug: "/docs/foundations/pharmacology/storage-oab/beta3-agonists",
   },
   {
     name: "Antimuscarinics",
     category: "Pharmacological",
-    notes: "Competitive muscarinic antagonists (oxybutynin, tolterodine, solifenacin, fesoterodine, darifenacin, trospium). Comparable efficacy across class (~2–4 fewer voids / day) but differ markedly in cognitive risk. **Cumulative-dose-dependent dementia risk** (Malcher 2022: aOR 1.48 at &gt; 365 DDDs). **Trospium** (does not cross BBB) and **fesoterodine** (Sheyn 2025: only agent without dementia signal) preferred in elderly; **avoid oxybutynin** when possible.",
+    bestFor: "Younger patients without dementia risk; trospium / fesoterodine in elderly. Avoid oxybutynin.",
     slug: "/docs/foundations/pharmacology/storage-oab/anticholinergics",
   },
   {
     name: "Combination β-3 + Antimuscarinic",
     category: "Pharmacological",
-    notes: "Most studied: **mirabegron 50 mg + solifenacin 5 mg**. SYNERGY II (n = 1,794, 12 mo) — combination superior to either monotherapy for incontinence and frequency with similar tolerability. BESIDE — adding mirabegron 50 to solifenacin 5 was superior to solifenacin 5 and noninferior to solifenacin 10 for incontinence.",
+    bestFor: "Inadequate response to monotherapy; mirabegron 50 + solifenacin 5 most studied.",
     slug: "/docs/foundations/pharmacology/storage-oab/beta3-agonists",
   },
 
@@ -132,25 +132,25 @@ export const oabUuiProcs = [
   {
     name: "Intradetrusor OnabotulinumtoxinA (100 U)",
     category: "Minimally Invasive",
-    notes: "Cystoscopic injection at 20 sites, sparing the trigone. Drake 2017 NMA: **greatest reductions in UIE, urgency, and frequency** vs all oral pharmacotherapies. Hsieh 2025 RCT: equivalent efficacy to mirabegron + solifenacin combination at 12 wk with significantly fewer systemic AEs. Effect lasts ~6–9 mo. **Urinary retention 5.4% (idiopathic OAB) — patients must be CIC-capable** before injection; check baseline PVR.",
+    bestFor: "Refractory OAB / UUI in CIC-capable patients; greatest reduction in UIE.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox",
   },
   {
     name: "Sacral Neuromodulation (SNM)",
     category: "Minimally Invasive",
-    notes: "S3 sacral-nerve stimulation via tined lead + IPG (InterStim II / Micro / X — Medtronic; Axonics r-SNM / F15 / R20). Two-stage pathway: **PNE or staged tined-lead trial → permanent implant**. Siegel 2018: **5-year therapeutic success 67–82%**; mean −2.0 leaks / day (UUI), −5.4 voids / day (urgency-frequency). Higher success than antimuscarinics (61% vs 42%, p = 0.02). Comparable to BTX with lower UTI but lower satisfaction. Adverse events: stimulation change 22%, implant-site pain 15%, revision ~3%, removal ~9%.",
+    bestFor: "Refractory OAB / UUI; non-obstructive retention; trial phase to predict response.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation",
   },
   {
     name: "Implantable Tibial Nerve Stimulation (eCoin / Revi)",
     category: "Minimally Invasive",
-    notes: "eCoin (Valencia Technologies; FDA de novo 2023) — fully implanted, primary battery-powered, suprafascial coin-shaped device with automatic low-duty-cycle stimulation; pivotal extension 78% UUI responder / 22% dry at 96 wk. Revi (BlueWind Medical) — leadless, battery-free subfascial implant powered by external ankle wearable; OASIS 3-yr 79% UUI responder, 95% satisfaction, no device/procedure-related SAEs. Amundsen 2025 meta: **comparable to SNM** (UUI responder 71.3% vs 71.8%; OAB responder 79.4% vs 73.9%) with similar AE rates and **no trial-stimulation phase required**.",
+    bestFor: "Refractory OAB / UUI; SNM-comparable efficacy without a trial phase or sacral implant.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation",
   },
   {
     name: "Percutaneous Tibial Nerve Stimulation (PTNS)",
     category: "Minimally Invasive",
-    notes: "Office-based fine-gauge needle electrode near the posterior tibial nerve; 30-min sessions weekly × 12 wk + monthly maintenance. Wang 2020 meta of 28 studies (n = 2,461): **68% pooled success**, with significant reductions in frequency (−2.48 / day), nocturia (−1.57), urgency (−2.20), incontinence (−1.37). Limitation: ongoing office-visit burden; insurance often covers limited lifetime visits.",
+    bestFor: "Refractory OAB; patients accepting weekly office visits and ongoing maintenance.",
     slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation",
   },
 
@@ -158,13 +158,13 @@ export const oabUuiProcs = [
   {
     name: "Augmentation Cystoplasty (Enterocystoplasty)",
     category: "Invasive Surgical",
-    notes: "Detubularized bowel segment (ileum most common) anastomosed to bivalved bladder. Reserved for **severely impacted patients refractory to all other therapies** per AUA / SUFU 2024. Mean capacity 166 → 572 mL; max detrusor pressure 53 → 14 cmH₂O. Patient satisfaction: 69% cured / 20% improved. Most patients require lifelong CIC. Long-term complications: chronic UTIs, bladder / renal stones, metabolic acidosis, mucus, perforation risk, malignancy after &gt; 10 yr.",
+    bestFor: "Severely impacted patient refractory to all third-line therapies; CIC-tolerant.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation",
   },
   {
     name: "Urinary Diversion",
     category: "Invasive Surgical",
-    notes: "Ileal conduit (incontinent) or continent cutaneous diversion. Most invasive option; reserved for intractable incontinence with non-functional bladder. Stomal complications occur in ~42% of continent diversions.",
+    bestFor: "Last-resort surgical option for intractable incontinence with non-functional bladder.",
     slug: "/docs/surgical-techniques/04c-urinary-diversion",
   },
 
@@ -172,7 +172,7 @@ export const oabUuiProcs = [
   {
     name: "Indwelling Catheter (Urethral or Suprapubic)",
     category: "Indwelling Catheter",
-    notes: "Not a treatment for OAB per se but a management strategy for patients who have exhausted all options or are too frail for surgery. Associated with chronic UTI, stone formation, and urethral erosion. Last resort per AUA / SUFU 2024.",
+    bestFor: "Last resort — patients who have exhausted all options or are too frail for surgery.",
   },
 ];
 
@@ -195,8 +195,8 @@ export const oabUuiColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 
