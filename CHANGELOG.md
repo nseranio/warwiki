@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-06 — Native tissue apical prolapse atlas fill: SSLF + USLS
+
+- Built out `docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx` from a stub into a full SSLF atlas article. Scope: ACOG / AUGS guideline framing; Amreich / Richter / Morley-DeLancey history; sacrospinous ligament and coccygeus-SSL anatomy; right posterior vaginal approach; suture-passing devices; double-vs-loop suture evidence; OPTIMAL 2- and 5-year outcomes; SSLF vs USLS, sacrocolpopexy, and sacrospinous hysteropexy; complications including buttock pain and pudendal entrapment; anterior compartment recurrence mechanism; operative pearls; 21 references.
+- Built out `docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx` from a stub into a full USLS atlas article. Scope: ACOG / AUGS guideline framing; USL anatomy and ureter-distance table; intraperitoneal Shull-type technique; extraperitoneal, laparoscopic / robotic, and vNOTES variants; McCall culdoplasty comparison; OPTIMAL, 10-year high-USLS, and laparoscopic meta-analysis outcomes; USLS vs SSLF, sacrocolpopexy, and vaginal mesh hysteropexy; ureteral obstruction prevention; prognostic factors; operative pearls; 34 references.
+- Cleaned pasted-source artifacts during conversion: removed `undefined` figure placeholders, prompt-tail text, smashed comparison tables, malformed p-value fragments, and duplicate guideline blocks. Converted source references to the site anchor pattern and kept cross-links to the apical prolapse hub, SSLF / USLS sibling pages, sacrospinous hysteropexy, and sacrocolpopexy.
+- Updated `CLAUDE.md` into the current compact handoff for the apical prolapse batch; `src/data/stats.json` was regenerated after rebasing on the latest `origin/main`.
+- Verification before rebase: focused citation-anchor checks passed for both pages; `npm run lint:links` passed across 852 files; `npm run status` passed with 5 stubs; `npm run typecheck` passed; `npm run build` passed; `git diff --check` passed. Full `npm run lint` still stops on pre-existing unrelated citation issues in older 04a / 04f / 04l files, not these pages.
+
+---
+
 ## 2026-05-05 — Prolapse atlas buildout + Notes → Best for column rollout
 
 Long single-day arc on branch `claude/wizardly-hofstadter-daeb68`. Two parallel work streams: **04g Prolapse Repair stub-fill marathon** (8 pages built from stub) and **column-structure rollout** ("Best for / indication" replacing Notes) across four key 04f databases.
