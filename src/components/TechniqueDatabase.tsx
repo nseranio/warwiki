@@ -4,10 +4,11 @@ export interface Technique {
   name: string;
   eponym?: string;
   aka?: string;
-  location: string;
-  notes: string;
+  location?: string;
+  notes?: string;
   slug?: string;
   category?: string;
+  indication?: string;
 }
 
 const LOCATION_COLORS: Record<string, string> = {
@@ -70,9 +71,16 @@ function LocationBadge({ location }: { location: string }) {
 interface TechniqueDatabaseProps {
   data: Technique[];
   hideLocation?: boolean;
+  hideEponym?: boolean;
+  hideNotes?: boolean;
 }
 
-export default function TechniqueDatabase({ data, hideLocation = false }: TechniqueDatabaseProps) {
+export default function TechniqueDatabase({
+  data,
+  hideLocation = false,
+  hideEponym = false,
+  hideNotes = false,
+}: TechniqueDatabaseProps) {
   const [search, setSearch] = useState('');
   const [locationFilter, setLocationFilter] = useState('All');
   const [categoryFilter, setCategoryFilter] = useState('All');
@@ -82,8 +90,13 @@ export default function TechniqueDatabase({ data, hideLocation = false }: Techni
     [data]
   );
 
+  const hasIndication = useMemo(
+    () => data.some(d => !!d.indication),
+    [data]
+  );
+
   const allLocations = useMemo(
-    () => ['All', ...Array.from(new Set(data.map(d => d.location))).sort()],
+    () => ['All', ...Array.from(new Set(data.map(d => d.location).filter(Boolean) as string[])).sort()],
     [data]
   );
 
@@ -106,7 +119,8 @@ export default function TechniqueDatabase({ data, hideLocation = false }: Techni
           (d.eponym?.toLowerCase().includes(q) ?? false) ||
           (d.aka?.toLowerCase().includes(q) ?? false) ||
           (d.category?.toLowerCase().includes(q) ?? false) ||
-          d.notes.toLowerCase().includes(q)
+          (d.indication?.toLowerCase().includes(q) ?? false) ||
+          (d.notes?.toLowerCase().includes(q) ?? false)
         );
       }
       return true;
@@ -182,45 +196,50 @@ export default function TechniqueDatabase({ data, hideLocation = false }: Techni
             <thead>
               <tr>
                 <th>Technique</th>
-                <th>Eponym / Origin</th>
+                {!hideEponym && <th>Eponym / Origin</th>}
                 {!hideLocation && <th>Location</th>}
-                <th>Notes</th>
+                {hasIndication && <th>Best For</th>}
+                {!hideNotes && <th>Notes</th>}
               </tr>
             </thead>
             <tbody>
               {hasCategories && grouped ? (
-                grouped.flatMap(({ category, rows }) => [
-                  <tr key={`hdr-${category}`} className="td-category-header">
-                    <td colSpan={hideLocation ? 3 : 4} style={{
-                      backgroundColor: 'var(--warwiki-bg-subtle, #EEF2F8)',
-                      fontWeight: 700,
-                      fontSize: '0.85rem',
-                      letterSpacing: '0.02em',
-                      color: 'var(--ifm-color-primary, #185FA5)',
-                      padding: '0.6rem 0.75rem',
-                      borderTop: '2px solid var(--warwiki-border, #DDE3ED)',
-                    }}>
-                      {category}
-                    </td>
-                  </tr>,
-                  ...rows.map((t, i) => (
-                    <tr key={`${category}-${i}`}>
-                      <td className="td-name-cell">
-                        {t.slug ? (
-                          <a href={t.slug} className="td-name-link">{t.name}</a>
-                        ) : (
-                          <span className="td-name-text">{t.name}</span>
-                        )}
-                        {t.aka && (
-                          <div className="td-aka">{t.aka}</div>
-                        )}
+                grouped.flatMap(({ category, rows }) => {
+                  const span = 1 + (!hideEponym ? 1 : 0) + (!hideLocation ? 1 : 0) + (hasIndication ? 1 : 0) + (!hideNotes ? 1 : 0);
+                  return [
+                    <tr key={`hdr-${category}`} className="td-category-header">
+                      <td colSpan={span} style={{
+                        backgroundColor: 'var(--warwiki-bg-subtle, #EEF2F8)',
+                        fontWeight: 700,
+                        fontSize: '0.85rem',
+                        letterSpacing: '0.02em',
+                        color: 'var(--ifm-color-primary, #185FA5)',
+                        padding: '0.6rem 0.75rem',
+                        borderTop: '2px solid var(--warwiki-border, #DDE3ED)',
+                      }}>
+                        {category}
                       </td>
-                      <td className="td-eponym">{t.eponym ?? '—'}</td>
-                      {!hideLocation && <td><LocationBadge location={t.location} /></td>}
-                      <td className="td-notes">{t.notes}</td>
-                    </tr>
-                  )),
-                ])
+                    </tr>,
+                    ...rows.map((t, i) => (
+                      <tr key={`${category}-${i}`}>
+                        <td className="td-name-cell">
+                          {t.slug ? (
+                            <a href={t.slug} className="td-name-link">{t.name}</a>
+                          ) : (
+                            <span className="td-name-text">{t.name}</span>
+                          )}
+                          {t.aka && (
+                            <div className="td-aka">{t.aka}</div>
+                          )}
+                        </td>
+                        {!hideEponym && <td className="td-eponym">{t.eponym ?? '—'}</td>}
+                        {!hideLocation && <td>{t.location ? <LocationBadge location={t.location} /> : '—'}</td>}
+                        {hasIndication && <td className="td-indication">{t.indication ?? '—'}</td>}
+                        {!hideNotes && <td className="td-notes">{t.notes ?? '—'}</td>}
+                      </tr>
+                    )),
+                  ];
+                })
               ) : (
                 filtered.map((t, i) => (
                   <tr key={i}>
@@ -234,9 +253,10 @@ export default function TechniqueDatabase({ data, hideLocation = false }: Techni
                         <div className="td-aka">{t.aka}</div>
                       )}
                     </td>
-                    <td className="td-eponym">{t.eponym ?? '—'}</td>
-                    <td><LocationBadge location={t.location} /></td>
-                    <td className="td-notes">{t.notes}</td>
+                    {!hideEponym && <td className="td-eponym">{t.eponym ?? '—'}</td>}
+                    {!hideLocation && <td>{t.location ? <LocationBadge location={t.location} /> : '—'}</td>}
+                    {hasIndication && <td className="td-indication">{t.indication ?? '—'}</td>}
+                    {!hideNotes && <td className="td-notes">{t.notes ?? '—'}</td>}
                   </tr>
                 ))
               )}

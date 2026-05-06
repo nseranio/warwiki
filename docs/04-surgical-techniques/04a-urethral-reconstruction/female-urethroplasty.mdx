@@ -30,167 +30,135 @@ Female urethral reconstruction addresses stricture, diverticulum, prolapse, post
 ---
 
 export const femaleTechniques = [
-  // ===== F1. ENDOSCOPIC / MINIMALLY INVASIVE =====
+  // Endoscopic / Minimally Invasive
   {
     name: "Female DVIU and Urethral Dilation",
-    aka: "Endoscopic management of female urethral stricture",
-    location: "Any",
     category: "Endoscopic / Minimally Invasive",
-    notes: "Sequential calibrated dilation or cold-knife DVIU. Pooled 41–49% success at 32–43 mo; efficacy decreases with each repeat. AUA 2023 recommends urethroplasty after one or two failed endoscopic attempts. Female DCB evidence is anecdotal (2 case reports + 1 12-pt abstract).",
+    indication: "First-line endoscopic; ≤2 attempts before urethroplasty",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu-dilation",
   },
 
-  // ===== F2. DISTAL URETHRECTOMY + MEATAL ADVANCEMENT =====
+  // Distal Urethrectomy + Meatal Advancement
   {
     name: "Distal Urethrectomy with Advancement Meatoplasty",
-    location: "Any",
     category: "Distal Urethrectomy + Meatal Advancement",
-    notes: "Excision of strictured distal segment; proximal healthy urethral mucosa advanced and sutured to vestibular skin. For short distal / meatal strictures; no graft / flap needed.",
+    indication: "Short distal / meatal stricture",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/distal-urethrectomy-advancement",
   },
 
-  // ===== F3. FLAP URETHROPLASTY (pedicled, vascularized tissue) =====
+  // Flap Urethroplasty
   {
     name: "Blandy U-Flap Vaginal Flap Urethroplasty",
-    aka: "Schwender vaginal flap",
-    eponym: "Blandy / Schwender 2006",
-    location: "Any",
     category: "Flap Urethroplasty",
-    notes: "U-shaped anterior vaginal wall flap rotated ventrally. Classic technique; tendency toward retrusive meatus and inward stream.",
+    indication: "Mid-urethral stricture, healthy vagina",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty",
   },
   {
     name: "Lateral-Based Anterior Vaginal Wall Flap",
-    aka: "Orandi-inspired ventral flap",
-    eponym: "Romero-Maroto 2018",
-    location: "Any",
     category: "Flap Urethroplasty",
-    notes: "Lateral-based ventral vaginal flap. Preserves orthotopic meatal position; avoids stream deflection of Blandy. 100% success at mean 80.7 mo in original series.",
+    indication: "Mid / distal stricture; preserves orthotopic meatus",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/lateral-based-anterior-vaginal-wall-flap",
   },
   {
-    name: "Anterior Vaginal Wall Mucosal Inlay",
-    eponym: "Önol 2011",
-    location: "Any",
+    name: "Anterior Vaginal Wall Mucosal Inlay (Önol)",
     category: "Flap Urethroplasty",
-    notes: "Anterior vaginal wall mucosa incised, mobilized, and inlaid into the opened strictured urethra. 100% objective cure at median 24 mo (10/17 patients in series).",
+    indication: "Mid-urethral stricture; vaginal-sparing inlay",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/onol-vaginal-mucosal-inlay",
   },
   {
     name: "Dorsal Vaginal Flap Urethroplasty",
-    location: "Any",
     category: "Flap Urethroplasty",
-    notes: "Vaginal flap placed dorsally (12 o'clock) after urethra is dissected off the pubic symphysis. Provides dorsal augmentation while maintaining vascular pedicle.",
+    indication: "Dorsal augmentation when oral mucosa unavailable",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-vaginal-flap",
   },
   {
     name: "Labia Minora Pedicled Flap",
-    location: "Any",
     category: "Flap Urethroplasty",
-    notes: "Hairless, wet, elastic labial tissue used as pedicled flap. Particularly useful when vaginal tissue is compromised (atrophy, lichen sclerosus).",
+    indication: "Compromised vaginal tissue (atrophy, LS)",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/labia-minora-flap",
   },
   {
     name: "Bladder Wall Flap Urethroplasty",
-    eponym: "Tanagho · Nayyar · Pippi Salle · Patidar",
-    location: "Posterior / PFUI",
     category: "Flap Urethroplasty",
-    notes: "Anterior or posterior bladder-wall flap, tubularized or onlaid, for complete urethral loss, obliterative bladder-neck contracture, and complex urethrovaginal-fistula reconstruction. Covers Tanagho, Nayyar U-shaped, Pippi Salle lengthening, Mitsui flipped tube, Elkins advancement, and Patidar (n=22; 82% socially dry).",
+    indication: "Total urethral loss / obliterative bladder-neck contracture",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty",
   },
 
-  // ===== F4. FREE GRAFT URETHROPLASTY =====
+  // Free Graft Urethroplasty
   {
     name: "Female Dorsal Onlay Urethroplasty",
-    eponym: "Sharma · Berdondini · Katiyar · Jena (labial)",
-    location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Transvaginal dorsal graft onlay (12 o'clock) with the urethra dissected off the anterior vaginal wall. Donor-source agnostic — buccal mucosa is the most-used default; labial mucosa (Jena 2025 n=204; 93.5% at 2 yr — largest single-surgeon series) is the leading alternative; lingual and vaginal-free graft are reported alternates. 87–95% success across modern series.",
+    indication: "Default for most female strictures (BMG / labial / lingual / vaginal)",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty",
   },
   {
     name: "Female Ventral Onlay BMG Urethroplasty",
-    eponym: "Berdondini 2024",
-    location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Anterior vaginal-wall approach with ventral urethrotomy; periurethral fascia closed over graft. 92–98% success; less blood loss; sphincter-sparing.",
+    indication: "Mid-urethral stricture; meatus preservation; vaginal-sparing",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-onlay-urethroplasty",
   },
   {
     name: "Female Ventral Inlay BMG Urethroplasty",
-    eponym: "Mandal RCT 2025 · Gaur 2024",
-    location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Graft inlaid into ventral urethrotomy without urethral mobilization. 89–95%; first RCT showed equivalence to dorsal onlay with shorter OR (30 vs 44.5 min) and less blood loss.",
+    indication: "Vaginal-sparing; shortest OR; same-day discharge possible",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-inlay-bmg",
   },
   {
     name: "Female Dorsal Inlay BMG Urethroplasty",
-    eponym: "Tsivian-Sidi 2006 · Linder 2022 · Jefferson 2025",
-    location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Transurethral or suprameatal dorsal inlay with minimal urethral mobilization; nasal speculum + suture-passing device. 92–100%; same-day discharge; 0% SUI / 0% complications in Jefferson n=21.",
+    indication: "Distal / fossa-navicularis stricture; transurethral approach",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-inlay-bmg",
   },
   {
     name: "Circular (Circumferential) BMG",
-    location: "Any",
     category: "Free Graft Urethroplasty",
-    notes: "Tubularized BMG for severe distal female strictures with full circumferential disease. Limited data; salvage technique.",
+    indication: "Severe distal circumferential stricture (salvage)",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/circular-bmg-female",
   },
 
-  // ===== F5. COMBINED / HYBRID TECHNIQUES =====
+  // Combined / Hybrid Techniques
   {
     name: "Combined Vaginal Flap + BMG",
-    eponym: "AUA 2023 · Berdondini · Önol · Blaivas · Mukhopadhyay",
-    location: "Any",
     category: "Combined / Hybrid Techniques",
-    notes: "Reconstructive principle (not a single technique) for complex strictures where one tissue source is insufficient. Five named configurations: BMG with vaginal-fascia-flap reinforcement (Berdondini 98%); Martius-reinforced ventral BMG for sling erosion (Önol); sequential VFU → BMG salvage (Blaivas); segmental flap + graft for pan-urethral disease; combined dorsal BMG + ventral vaginal flap for two-surface obliterative disease (Jefferson). AUA 2023 endorses 'a combination of these techniques.'",
+    indication: "Complex stricture; one tissue source insufficient",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-flap-bmg-combined",
   },
   {
     name: "Staged BMG Urethroplasty (Female)",
-    location: "Any",
     category: "Combined / Hybrid Techniques",
-    notes: "Severe urethral loss / obliteration: Stage 1 graft inlay → Stage 2 tubularization after maturation.",
+    indication: "Salvage for obliterative disease (rarely needed)",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/staged-bmg-female",
   },
 
-  // ===== F6. URETHRAL LOSS / OBLITERATION REPAIR =====
+  // Urethral Loss / Obliteration Repair
   {
     name: "Primary End-to-End Anastomosis (Female)",
-    location: "Any",
     category: "Urethral Loss / Obliteration Repair",
-    notes: "Direct tension-free anastomosis when the gap is short. Distinct from stricture repair — addresses urethral loss / discontinuity.",
+    indication: "Acute female PFUI; short obliterative defect",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/primary-end-to-end-female",
   },
   {
     name: "Vaginal Wall Tubularization Urethroplasty",
-    location: "Any",
     category: "Urethral Loss / Obliteration Repair",
-    notes: "Tubularization of vaginal tissue to reconstruct a neourethra after complete urethral loss.",
+    indication: "Total / near-total urethral loss",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-wall-tubularization",
   },
 
-  // ===== OTHER FEMALE RECONSTRUCTIVE PROCEDURES =====
+  // Other Female Reconstructive Procedures
   {
     name: "Urethral Diverticulum Repair",
-    eponym: "Young HH, 1938",
-    location: "Any",
     category: "Other Female Reconstructive Procedures",
-    notes: "Transvaginal excision of diverticular sac with multilayer closure and Martius flap interposition.",
+    indication: "Symptomatic urethral diverticulum",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/urethral-diverticulum-repair",
   },
   {
     name: "Urethral Prolapse Repair",
-    location: "Any",
     category: "Other Female Reconstructive Procedures",
-    notes: "Conservative (topical estrogen + sitz baths) is first-line for mild prolapse; reduction under GA is a useful intermediate step in pediatric cases (Holbrook); four-quadrant excisional technique (Shurtleff/Pfeuti) is the standard surgical approach for thrombosed, necrotic, refractory, or severely symptomatic prolapse.",
+    indication: "Refractory / thrombosed urethral prolapse",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/urethral-prolapse-repair",
   },
 ];
 
 ## Technique Database
 
-<TechniqueDatabase data={femaleTechniques} hideLocation />
+<TechniqueDatabase data={femaleTechniques} hideLocation hideEponym hideNotes />
