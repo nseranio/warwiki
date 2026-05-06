@@ -4,7 +4,25 @@ This file is for Claude to read at the start of every session. It captures the p
 
 ---
 
-## Current handoff snapshot — May 5, 2026 (ED + Peyronie's atlas / pharmacology buildout: 5 new pages + 3 pharmacology expansions + database compression)
+## Current handoff snapshot — May 5, 2026 (urinary diversion + female urethroplasty restructure: 10 new 04c pages + 9 female 04a builds + free-graft / BMG-Martius / tissue-engineered consolidations + database overhaul)
+
+Two parallel arcs in a single long session: **completing the urinary-diversion per-device atlas** (10 new / rebuilt pages: Le Bag, Mansoura, Kock, Mainz I, Florida, Penn, Double T, Mainz II, Colon Shuffle [renamed from Colostomy Shuffle]) and **overhauling the female urethroplasty atlas + database** (9 page builds; merging free grafts by placement [8 → 5 rows]; merging BMG+Martius into ventral onlay; merging bladder-flap-tubularized into bladder-wall-flap; consolidating tissue-engineered into a foundations grafts page; dropping F1–F8 prefixes [and male 1–8 for symmetry]; dropping eponym + notes columns; adding a single concise "Best For" indication column). Branch `claude/angry-jackson-f34f11`. **Commit-and-push-after-every-change cadence preserved.**
+
+**For the full session detail (anchor papers, page-by-page summaries, editorial conventions reaffirmed), see [CHANGELOG.md](CHANGELOG.md#2026-05-05--urinary-diversion--female-urethroplasty-restructure-10-new-04c-pages-9-female-04a-builds--free-graftbmg-martiustissue-engineered-consolidations--database-overhaul).** The prior May 5 session (ED + Peyronie's atlas / pharmacology buildout — 5 new 04j pages + Peyronie's pharmacology hub from 25 → 76 refs + database compression) is archived as the **Previous handoff snapshot** below and in CHANGELOG.md.
+
+### Editorial conventions locked / reaffirmed this session
+
+- **Per-device pattern locked for urinary diversion** — every row in the diversion database now has a dedicated atlas page (`landing-IS-the-database` pattern). Notes-column-drop 3-part rule applied successfully.
+- **Per-device pattern locked for female urethroplasty** — every row has a dedicated atlas page; eponym + notes dropped in favor of a single "Best For" indication column.
+- **Free-graft organization by placement, not donor source** — when multiple donor sources (BMG, labial, lingual, vaginal) share the same operative technique, they belong in **one canonical page** with donor-source as a Graft Materials subsection. Don't split per-donor.
+- **Atlas-vs-clinical-conditions split** — when a clinical-conditions page already covers the disease, the atlas page focuses narrowly on **treatment** (indications, technique, outcomes, complications) and cross-links explicitly to the clinical page for pathophysiology / presentation / diagnosis (urethral-prolapse-repair atlas page is the locked example).
+- **Tissue engineering + bioscaffolds is sex-agnostic** — when a topic is essentially preclinical and applies across both sexes (one female-specific report, all else male), consolidate to a foundations grafts page rather than maintaining male and female atlas duplicates.
+- **TechniqueDatabase component flexibility** — `hideEponym` / `hideNotes` props allow each tab (male / female) to choose its own column structure. The `indication?` field renders a "Best For" column when any row carries it.
+- **Landing-page rename rule** — when a procedure is renamed (Colostomy Shuffle → Colon Shuffle), `git mv` the file, update slug to canonical form, add Vercel redirect, and `grep -rln "<old-slug>"` to verify no remaining references.
+
+---
+
+## Previous handoff snapshot — May 5, 2026 (ED + Peyronie's atlas / pharmacology buildout: 5 new pages + 3 pharmacology expansions + database compression)
 
 Sustained Male Sexual Dysfunction (04j) cleanup arc — applied the locked database-compression pattern (Notes-column drop + bare-name rule) to the ED and Peyronie's atlas databases, built five new canonical 04j pages, and substantially expanded the canonical Peyronie's pharmacology hub. Branch: `claude/cool-pascal-906142`; pushes via `git push origin HEAD:main`. **Commit-and-push-after-every-change cadence preserved.**
 
