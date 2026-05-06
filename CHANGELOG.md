@@ -6,6 +6,59 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-05 — Prolapse atlas buildout + Notes → Best for column rollout
+
+Long single-day arc on branch `claude/wizardly-hofstadter-daeb68`. Two parallel work streams: **04g Prolapse Repair stub-fill marathon** (8 pages built from stub) and **column-structure rollout** ("Best for / indication" replacing Notes) across four key 04f databases.
+
+### Arc 1 — PTNS / iTNM / AUS revision deep-dives
+
+- **[PTNS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx) rebuilt** — 21 DOI-linked refs covering mechanism (C-fiber recruitment, saphenous co-activation), technique parameters (20 Hz / 200 μs / 0.5–9 mA / 30 min × 12 wk), SUmiT pivotal RCT (54.5% vs 20.9%, p &lt; 0.001), Wang 2020 meta (68% pooled), 5-row comparison vs sham / antimuscarinics / SNM / BoNT / PFMT, fecal-incontinence section anchored on negative CONFIDeNT and NOTABLE sham-controlled RCTs, contraindications, TTNS section.
+- **New [iTNM dedicated page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx)** — 17 DOI-linked refs. eCoin (Valencia) — fully implanted, primary-battery, suprafascial, automatic low-duty-cycle stimulation (pivotal extension 78% UUI / 22% dry at 96 wk). Revi (BlueWind) — leadless battery-free subfascial implant powered by external ankle wearable (OASIS 3-yr 79% / 95% satisfaction, no device-related SAEs). TITAN 2 Medtronic 12-mo. Amundsen 2025 SNM-vs-iTNM meta (71.3% vs 71.8% — no trial phase required). Protect PNS pIPG. OAB-UUI database iTNM links repointed from PTNS slug to new page; database notes expanded with per-device evidence anchors.
+- **[AUS revision arc expanded](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx)** — 7-strategy revision matrix (downsizing / repositioning / tandem / transcorporal / PRB modification / SIS wrap / complete vs partial replacement); preoperative-evaluation algorithm; staged erosion-salvage with **Rozanski 2014 in-situ-urethroplasty** (38% vs 85% stricture, p = 0.047, OR 4.2 for stricture if reapproximation without urethroplasty); 4-step sequential salvage paradigm ending in PUL or diversion. 18 new DOI-linked refs (Cousin, Linder mechanical, Findlay, Kaiho 2024 review, Simhan 3.5-cm cuff, Eswara revision techniques, DiMarco tandem cuff, Magera tandem-transcorporal, Guralnick transcorporal, Moser transcorporeal-after-radiation, Averbeck 6th ICI, Trost SIS wrap, Rozanski 2014, Linder 2014 reimplantation, Lai 2012 complex revision, Raj 2005 secondary AUS, Van Dyke 2021 PUL, Maurer 2019 distal-double-cuff vs transcorporal).
+
+### Arc 2 — Notes → Best for / indication column rollout
+
+User-locked column convention applied across the highest-yield 04f databases (audited case-by-case per the Notes-column 3-part rule — drop or replace when every row has a per-device page and other columns already triage). Each row's evidence-heavy Notes content compressed to a single-phrase indication / best-for cue; per-device pages retain the depth.
+
+| Database | Rows converted | Pattern |
+|---|---|---|
+| [Female SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx) | 17 | GenericDatabase: rename `notes` → `bestFor`, header → "Best for / indication" |
+| [Male SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx) | 20 | Same |
+| [OAB-UUI database](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx) | 16 | Same |
+| [04a Male urethroplasty database](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx) | 38 | TechniqueDatabase has built-in `indication` field that renders as "Best For" column; passed `hideNotes` to suppress evidence dumps |
+
+Female urethroplasty was already in this format. **Deferred** with documented reasoning — 04h fistula databases (female + male) and 04e genital recon (penile / scrotal / vulvar): Notes there carry technique-specific clinical context tied to fistula type / reconstruction scenario, not duplicated decision support; compression would lose useful context.
+
+### Arc 3 — 04g Prolapse Repair stub-fill marathon
+
+Eight prolapse-atlas stubs converted to full deep-dives:
+
+| Page | Refs | Headline anchors |
+|---|---|---|
+| [Prolapse pessaries](docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/prolapse-pessaries.mdx) | 12 | ACOG PB 214; IUGA 2025 chapter; Cochrane Bugge 2020; **van der Vaart 2022 *JAMA* surgery-vs-pessary RCT — noninferiority NOT met** (76.3% vs 81.5%; 24–49% discontinue at 12–24 mo); TOPSY self-management RCT; Sansone 2022 PRO meta. Tables for support-vs-space-filling pessary types, fitting by stage, symptom-improvement breakdown, follow-up cadence, and special populations. |
+| [Lifestyle modifications for POP (new page)](docs/04-surgical-techniques/04g-prolapse-repair/lifestyle-modifications.mdx) | 9 | ACOG PB 214; **PEOPLE meta (Fitz 2023)** with the four key ORs (obesity 1.44, constipation 1.77, heavy lifting 1.86, chronic cough 1.52); Hadizadeh 2026 bariatric meta (32 prospective studies / 5,299 pts); IUC 2025 lifestyle chapter; POPPY + PREVPROL PFMT RCTs; "the Knack" instead of blanket exercise avoidance; modifiable-risk-factor summary table. Database row repointed. |
+| [Anterior colporrhaphy](docs/04-surgical-techniques/04g-prolapse-repair/anterior/anterior-colporrhaphy.mdx) | 19 | Christmann-Schmid 2026 Cochrane (vs biological graft RR 1.53; vs TVM RR 3.21); ACOG PB 214; **Altman 2011 *NEJM*** mesh-vs-AC RCT; **Eilber 2013 Medicare 10-yr — concomitant apical 11.6% vs isolated AC 20.2% reoperation**; DAC technique (Graefe 2023); Šumak 98.5% satisfaction despite anatomic recurrence; Wei OPUS prophylactic-MUS trial. |
+| [Kelly plication](docs/04-surgical-techniques/04g-prolapse-repair/anterior/kelly-plication.mdx) | 13 | **Glazener 2017 Cochrane** (anterior repair vs Burch — RR 2.29 failure / **RR 8.87 reoperation**); Imamura 2019 *BMJ* NMA; **Bergman 1995 5-yr RCT** (Kelly **37%** vs Burch **82%**); Park-Miller 1988; Beck 1991 25-yr / 519-case series. Framed as historical with explicit guideline positioning. |
+| [Paravaginal repair](docs/04-surgical-techniques/04g-prolapse-repair/anterior/vaginal-paravaginal-repair.mdx) (merged) | 30 | **Two pages merged into one approach-agnostic article** at new slug `/paravaginal-repair` (transvaginal / open abdominal / laparoscopic / robotic + lattice variant). Richardson 1981 landmark; Cochrane Yeung 2024 + Maher 2016; Menefee 2011 / Minassian 2014 / Cai 2025 RCTs vs AC; **Colombo 1996 RCT — Burch 100% vs paravaginal 61%** for SUI; **Rude 2021 lattice technique** dedicated subsection (n = 109, 11% recurrence at 12 mo, 19% transient retention) + Huang 2022 modified cross-stitch + Kalis 2020 trans-obturator. **`posterior-enterocele/lattice-technique.mdx` deleted**; Vercel redirects added for both old slugs; database collapsed 2 rows → 1. |
+| [Michigan four-wall SSLF](docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx) | 8 | Kearney-DeLancey 2003 (apex at hysterectomy scar in only 9%); **Larson 2013 — 90% satisfaction at 8 yr in 453 pts** (57% had prior failed surgery; 86% support at or above hymen); Paraiso 1996 (37% anterior recurrence as the central problem); **Teilmann-Jørgensen 2026 Danish nationwide cohort — SSLF reoperation 30.7%, aHR 42.7 vs SCP**; OPTIMAL 2018; Menefee 2024 *JAMA Surg* apical-suspension RCT. Database row updated. |
+| [Posterior colporrhaphy](docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/posterior-colporrhaphy.mdx) | 20 | **Mowat 2018 Cochrane — transvaginal RR 4.12 better than transanal**; Grimes 2019 SR; **ACOG PB 214 no-levatorplasty rule**; Paraiso 2006 RCT (colporrhaphy 86% vs graft 54%); Abramov 2005 midline-vs-site-specific (86% vs 67%); **Nüssler 2022 Swedish registry n = 32,086** (11% / 15% reoperation at 5 / 10 yr); FIGO 2020; ACG 2021; PC-vs-STARR (Gluck 2023); PC-vs-LVMR (Abdelnaby 2021). |
+| [Perineorrhaphy](docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/perineorrhaphy.mdx) | 24 | **Kanter 2015 SGS survey** ("commonly performed yet poorly understood"); **DeLancey perineal-complex-triad 2024 + 3D MRI 2025** (urogenital hiatus 68% larger in POP); Mothes 2023 (29.5% GH reduction sustained); **Sutkin 2020 OPTIMAL secondary analysis — concomitant posterior repair did NOT improve surgical success**; **Handa 2019 — HR 9.0 for GH ≥ 3.5 cm**; **Cervantes 2026 — perineoplasty urinary retention 30.2% vs 19.1%**; Shakhaliev 2024 ongoing RCT (NCT05422209). |
+
+### Editorial conventions reaffirmed
+
+- **"Best for / indication" column rollout pattern** — applied case-by-case via the Notes-column 3-part rule. GenericDatabase: rename `notes` → `bestFor`, header → "Best for / indication". TechniqueDatabase: use built-in `indication` field with `hideNotes`. Don't blanket-roll to fistula / genital recon — Notes there carry technique-specific clinical context, not duplicated decision support.
+- **Page merge discipline** — when two stub pages describe overlapping techniques (vaginal-paravaginal-repair + lattice-technique), merge into a single approach-agnostic article with the dominant variant as a dedicated subsection. `git rm` the redundant file, add Vercel redirect, repoint inbound links via `grep -rln "<old-slug>"`, collapse database rows to one.
+- **Lattice / cross-stitch placement decision** — Rude 2021 lattice technique is conceptually a hybrid central+lateral repair (combines AC midline plication + paravaginal lateral fixation). Single-surgeon / 109-pt / 12-month evidence base doesn't yet warrant a standalone deep-dive. Best home: dedicated subsection within the paravaginal-repair page, alongside Huang 2022 modified cross-stitch and Kalis 2020 trans-obturator variants.
+- **POP atlas deep-dive pattern** (locked) — every prolapse-atlas page has: (1) anatomic / mechanistic framing, (2) indication thresholds (POP-Q stage, GH size), (3) step-by-step technique, (4) variations table, (5) outcomes / functional outcomes / complications, (6) head-to-head vs adjacent procedures, (7) guideline summary, (8) See Also.
+- **Honest "evidence does not support" framing** — for procedures where guideline / RCT data are mixed or negative (perineorrhaphy not proven to prevent recurrence, Kelly plication inferior to Burch, paravaginal not noninferior to AC, mesh ordered off market, lattice unproven long-term), frame the page around what the evidence does and does not show. Don't oversell.
+- **OPTIMAL secondary analysis (Sutkin 2020)** is the foundational reference for the perineorrhaphy / posterior-repair-on-apical-suspension question — concomitant posterior repair did NOT improve surgical success at the apex.
+
+### Lint state
+
+`npm run lint:links` clean across 867 files at every commit point.
+
+---
+
 ## 2026-05-05 — Urinary diversion + female urethroplasty restructure (10 new 04c pages, 9 female 04a builds + free-graft/BMG-Martius/tissue-engineered consolidations + database overhaul)
 
 Two parallel arcs in a single long session: completing the **urinary-diversion per-device atlas** and overhauling the **female urethroplasty atlas + database**. Branch `claude/angry-jackson-f34f11`. **Commit-and-push-after-every-change cadence preserved.**
