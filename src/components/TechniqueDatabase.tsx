@@ -40,7 +40,6 @@ const CATEGORY_ORDER: string[] = [
   'Free Graft Urethroplasty',
   'Combined / Hybrid Techniques',
   'Urethral Loss / Obliteration Repair',
-  'Emerging / Investigational',
   'Other Female Reconstructive Procedures',
 ];
 
