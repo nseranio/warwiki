@@ -49,7 +49,7 @@ POP is a clinical diagnosis. Minimum eval: POP-Q exam (Level C), symptom assessm
 | **Primary uterine prolapse, does not desire uterine preservation** | [Vaginal hysterectomy](/docs/surgical-techniques/04g-prolapse-repair/vaginal-hysterectomy) + apical suspension ([USLS](/docs/surgical-techniques/04g-prolapse-repair/uterosacral-ligament-suspension) or [SSLF](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-ligament-fixation)) | [McCall's culdoplasty](/docs/surgical-techniques/04g-prolapse-repair/vaginal-mccall-culdoplasty) at hysterectomy | Hysterectomy alone (apical suspension required, Level B) |
 | **Post-hysterectomy vault prolapse, stage II** | Vaginal NTR ([USLS](/docs/surgical-techniques/04g-prolapse-repair/uterosacral-ligament-suspension) or [SSLF](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-ligament-fixation)) | [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) (if surgeon experienced) | Mesh augmentation rarely needed at stage II (recurrence ~6% NTR vs 5% SCP) |
 | **Post-hysterectomy vault prolapse, stage III–IV** | [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) (laparoscopic / robotic) preferred | Vaginal NTR | NTR alone — USLS recurrence 25.7% vs SCP 7.8% at stage III (Lavelle 2018) |
-| **Anterior compartment prolapse (primary)** | [Anterior colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/anterior-colporrhaphy) ± apical suspension | [Vaginal paravaginal repair](/docs/surgical-techniques/04g-prolapse-repair/vaginal-paravaginal-repair) | Isolated anterior repair without apical support |
+| **Anterior compartment prolapse (primary)** | [Anterior colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/anterior-colporrhaphy) ± apical suspension | [Paravaginal repair](/docs/surgical-techniques/04g-prolapse-repair/paravaginal-repair) | Isolated anterior repair without apical support |
 | **Posterior compartment prolapse** | [Posterior colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/posterior-colporrhaphy) (midline plication) | Site-specific repair | **Mesh / biologic grafts in posterior repair (Level A — does NOT improve outcomes)**; levator plication (dyspareunia risk) |
 | **Recurrent anterior / apical prolapse after NTR** | [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) | Apical-only TVM (where permitted; experienced surgeons only) | Repeat NTR alone in stage III–IV recurrence |
 | **Elderly / frail, multiple comorbidities, no desire for vaginal intercourse** | [Le Fort colpocleisis](/docs/surgical-techniques/04g-prolapse-repair/le-fort-colpocleisis) or [total colpocleisis](/docs/surgical-techniques/04g-prolapse-repair/colpocleisis-total) | — | Long reconstructive procedures in this population |
@@ -128,18 +128,11 @@ export const prolapseProcs = [
     slug: "/docs/surgical-techniques/04g-prolapse-repair/kelly-plication",
   },
   {
-    name: "Vaginal Paravaginal Repair",
+    name: "Paravaginal Repair (transvaginal / abdominal / laparoscopic / robotic)",
     compartment: "Anterior",
-    approach: "Vaginal",
-    notes: "Reattachment of lateral vaginal wall to the arcus tendineus fascia pelvis (ATFP) via vaginal approach. Targets lateral paravaginal defect cystocele; technically demanding with limited long-term data.",
-    slug: "/docs/surgical-techniques/04g-prolapse-repair/vaginal-paravaginal-repair",
-  },
-  {
-    name: "Transvaginal Paravaginal Anterior Repair (Lattice Technique)",
-    compartment: "Anterior",
-    approach: "Vaginal",
-    notes: "Fascial patch or lattice repair of paravaginal defect via vaginal approach. Uses autologous or allograft tissue in a grid pattern to reinforce the lateral attachment; alternative to abdominal paravaginal repair.",
-    slug: "/docs/surgical-techniques/04g-prolapse-repair/lattice-technique",
+    approach: "Vaginal / Abdominal / MIS",
+    notes: "Reattachment of lateral vaginal wall to the arcus tendineus fascia pelvis (ATFP), correcting the lateral defect that accounts for 60–80% of anterior compartment prolapse (Richardson 1976/1981). Includes the lattice / fascial-patch transvaginal variant. Most commonly performed abdominally or robotically with concomitant sacrocolpopexy. Inferior to Burch for SUI (Colombo 1996 RCT).",
+    slug: "/docs/surgical-techniques/04g-prolapse-repair/paravaginal-repair",
   },
   {
     name: "Michigan Four Wall",
