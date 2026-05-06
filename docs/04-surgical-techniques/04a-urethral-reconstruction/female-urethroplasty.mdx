@@ -21,10 +21,10 @@ Female urethral reconstruction addresses stricture, diverticulum, prolapse, post
 | **Mid-urethral stricture, atrophic vagina** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (BMG default; labial / lingual alternates) | — | Vaginal flap / graft (atrophic tissue) |
 | **Pan-urethral or long-segment stricture** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) — extensive grafting of entire urethra | — | Dilation (49% success; worsens fibrosis) |
 | **LS-related stricture** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | — | Vaginal / labial tissue (LS involvement risk) |
-| **Prior MUS erosion / scarred periurethral bed** | [Ventral BMG + Martius flap](/docs/surgical-techniques/04a-urethral-reconstruction/bmg-martius-combined) | [Dorsal BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | Vaginal flap (scarred bed) |
+| **Prior MUS erosion / scarred periurethral bed** | [Ventral onlay BMG with Martius reinforcement](/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-onlay-urethroplasty) | [Dorsal BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | Vaginal flap (scarred bed) |
 | **Complete urethral loss / obliteration** | [Vaginal-wall tubularization](/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-wall-tubularization) + pubovaginal sling | [Bladder wall flap (Tanagho or Nayyar)](/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty) | — |
 | **Bladder neck obliteration (post-PFUI)** | [Bladder flap urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty) (anterior or posterior) | Nayyar novel anterior bladder tube | Repeated endoscopic procedures |
-| **Failed prior urethroplasty** | [BMG (dorsal or ventral) + Martius flap](/docs/surgical-techniques/04a-urethral-reconstruction/bmg-martius-combined) | [Vaginal flap](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) (if tissue healthy); alternative graft source | Further dilation |
+| **Failed prior urethroplasty** | [Combined vaginal flap + BMG](/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-flap-bmg-combined) (with Martius reinforcement when tissue is compromised) | [Vaginal flap](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) (if tissue healthy); alternative graft source | Further dilation |
 | **First presentation, mild symptoms** | Trial of [dilation or DVIU](/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu-dilation) (once) → if fails, proceed to urethroplasty | CIC ± intraurethral steroids (LS) | Repeated dilations (diminishing returns) |
 
 ---
@@ -142,17 +142,11 @@ export const femaleTechniques = [
 
   // ===== F5. COMBINED / HYBRID TECHNIQUES =====
   {
-    name: "BMG + Martius Fat Pad Flap",
+    name: "Combined Vaginal Flap + BMG",
+    eponym: "AUA 2023 · Berdondini · Önol · Blaivas · Mukhopadhyay",
     location: "Any",
     category: "Combined / Hybrid Techniques",
-    notes: "Ventral onlay BMG reinforced with Martius interposition. Useful after synthetic sling erosion or with compromised periurethral tissue.",
-    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/bmg-martius-combined",
-  },
-  {
-    name: "Vaginal Flap + BMG",
-    location: "Any",
-    category: "Combined / Hybrid Techniques",
-    notes: "Local pedicled flap combined with free graft when neither alone provides sufficient tissue.",
+    notes: "Reconstructive principle (not a single technique) for complex strictures where one tissue source is insufficient. Five named configurations: BMG with vaginal-fascia-flap reinforcement (Berdondini 98%); Martius-reinforced ventral BMG for sling erosion (Önol); sequential VFU → BMG salvage (Blaivas); segmental flap + graft for pan-urethral disease; combined dorsal BMG + ventral vaginal flap for two-surface obliterative disease (Jefferson). AUA 2023 endorses 'a combination of these techniques.'",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-flap-bmg-combined",
   },
   {
