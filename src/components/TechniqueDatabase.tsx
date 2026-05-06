@@ -25,23 +25,23 @@ const LOCATION_COLORS: Record<string, string> = {
 // only shows the categories present in its own data set.
 const CATEGORY_ORDER: string[] = [
   // Male urethroplasty
-  '1. Anastomotic (no substitute tissue)',
-  '2. Substitution — Free Grafts',
-  '3. Substitution — Pedicled Flaps',
-  '4. Combined (Graft + Flap)',
-  '5. Staged Urethroplasty',
-  '6. Posterior Urethroplasty (PFUI)',
-  '7. Distal / Meatal / Perineal Urethrostomy',
-  '8. Minimally Invasive / Emerging',
+  'Anastomotic',
+  'Free Grafts',
+  'Pedicled Flaps',
+  'Combined (Graft + Flap)',
+  'Staged',
+  'Posterior (PFUI)',
+  'Distal / Meatal / Perineal',
+  'Minimally Invasive / Emerging',
   // Female urethroplasty
-  'F1. Endoscopic / Minimally Invasive',
-  'F2. Distal Urethrectomy + Meatal Advancement',
-  'F3. Flap Urethroplasty',
-  'F4. Free Graft Urethroplasty',
-  'F5. Combined / Hybrid Techniques',
-  'F6. Urethral Loss / Obliteration Repair',
-  'F7. Emerging / Investigational',
-  'F8. Other Female Reconstructive Procedures',
+  'Endoscopic / Minimally Invasive',
+  'Distal Urethrectomy + Meatal Advancement',
+  'Flap Urethroplasty',
+  'Free Graft Urethroplasty',
+  'Combined / Hybrid Techniques',
+  'Urethral Loss / Obliteration Repair',
+  'Emerging / Investigational',
+  'Other Female Reconstructive Procedures',
 ];
 
 function SubtleBadge({ label, color }: { label: string; color: string }) {
