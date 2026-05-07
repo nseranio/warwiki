@@ -19,7 +19,7 @@ Reconstruction of the bladder neck after **endoscopic prostate surgery** (TURP, 
 
 | Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
 |---|---|---|---|
-| **First-time post-TURP / endoscopic-BPH BNC** | [TUIBNC](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (Collins / cold knife at 3 & 9 o'clock) or BN resection ± steroid injection | Repeat endoscopic ± mitomycin C, triamcinolone, or betamethasone (Wu 2024); endoscopic Y-V (Abramowitz 2021) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc) |
+| **First-time post-TURP / endoscopic-BPH BNC** | [TUIBNC](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (Collins / cold knife at 3 & 9 o'clock) or BN resection | Repeat endoscopic ± mitomycin C; [TUITMR](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment) (Abramowitz 2021) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc) |
 | **Highly recurrent BNC (≥ 2 endoscopic failures, non-radiated)** | Open or laparoscopic [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty) (Shamout 2022; Zang 2022) | [Open retropubic reanastomosis](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transperineal-reanastomosis) (Pfalzgraf 2011); [robotic subtrigonal BMG inlay](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay) (Avallone 2019) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **BNC + concurrent severe SUI** | Stabilize patency endoscopically or surgically → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) (Brede 2014; ~91% satisfaction) | Reconstruction + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **Orthotopic neobladder BNC** | Endoscopic incision + 1-month CIC (58% vs 32% success with vs without; Pariser 2015) | Repeat endoscopic ± steroid injection | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
@@ -56,24 +56,12 @@ export const bncTechniques = [
 
   // ===== ENDOSCOPIC — ADJUNCT / NOVEL =====
   {
-    name: "TUIT + Triamcinolone Injection",
-    tier: "Endoscopic — Adjunct / Novel",
-    successRate: "92.9% (recurrent BNC)",
-    notes: "Cold-knife incision + intra- and post-operative triamcinolone every 4 weeks × 3. Zhang 2021 — 92.9% success in highly recurrent post-TURP BNC at median 2.8-yr follow-up.",
-    slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc",
-  },
-  {
-    name: "TUIBN + Betamethasone Injection",
-    tier: "Endoscopic — Adjunct / Novel",
-    successRate: "~65%",
-    notes: "Local multisite betamethasone injection at TUIBN. Wu 2024 — 65% success with 35% recurrence at median 1.8 mo.",
-  },
-  {
-    name: "Endoscopic Y-V (Transverse Mucosal Realignment)",
+    name: "Transurethral Incision with Transverse Mucosal Realignment (TUITMR)",
     aka: "Abramowitz endoscopic Y-V",
     tier: "Endoscopic — Adjunct / Novel",
     successRate: "89% (1×) / 100% (2×)",
     notes: "Transurethral incision + transverse mucosal realignment using a laparoscopic suturing device through the urethra. Abramowitz 2021 — 89%/100% success after 1 / 2 procedures, no de novo incontinence. Promising bridge between endoscopic and reconstructive tiers.",
+    slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment",
   },
 
   // ===== RECONSTRUCTION — ROBOTIC =====
