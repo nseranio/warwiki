@@ -6,6 +6,46 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-07 — Prolapse atlas pilot + BNC build-outs
+
+Heavy single-session arc on `main`. Three workstreams: prolapse pilot rollout (column shortening + pagination chain), prolapse procedure build-outs, and BNC endoscopic-treatment trio.
+
+### Prolapse pilot — layout and pagination
+
+- Database column shortening: header trimmed to **"Best For"**, every cell rewritten to a 15–25 word indication phrase, **Approach column removed**. The trailing column now sits much narrower.
+- **Pagination chained in database row order** via `pagination_prev` / `pagination_next` frontmatter on every prolapse atlas page. Clicking Next at the bottom of any procedure page steps through the database in order, ignoring the apical / anterior / posterior-enterocele / obliterative-pessary subdir grouping. Order: Pessaries → Lifestyle → Anterior Colporrhaphy → Kelly → Paravaginal → Michigan Four-Wall → Posterior Colporrhaphy → Perineorrhaphy → SSLF → USLS → McCall → SS Hysteropexy → Manchester → ICG → VH → Supracervical Hysterectomy → Sacrocolpopexy → Sacrohysteropexy → Pectopexy → LLS → TVM → Moschcowitz → Halban → Colpocleisis. Pilot scoped to 04g for now; replicable across other treatment-atlas sections once validated.
+
+### Prolapse merges and deletions
+
+- **McCall vaginal + abdominal merged** into a single canonical [McCall Culdoplasty](docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/vaginal-mccall-culdoplasty.mdx) (slug `/mccall-culdoplasty`). Same anatomic operation, two routes, identical principles. Inbound links and database row collapsed.
+- **Le Fort + Total Colpocleisis merged** into [Colpocleisis (Le Fort and Total)](docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx) (slug `/colpocleisis`). Le Fort stub deleted; database collapsed to a single row; cross-links updated in apical-prolapse, geriatric-urology, and the prolapse decision matrix.
+- **Deleted**: CRISP technique, Raz transvaginal enterocele repair (both stubs without built-out content); pagination chain rewired to skip them.
+
+### Prolapse procedure build-outs
+
+- **Sacrospinous hysteropexy** — full atlas page covering technique (suture placement ≥ 2 cm medial to ischial spine), SAVE-U 5-yr 87% composite success vs 76% VH+USLS, SUPeR mesh-augmented arm, Enklaar 2023 RCT vs Manchester (77% vs 87%), gluteal-pain S3–S4 mechanism, anterior-recurrence mode, ACOG PB 214 framing.
+- **Manchester-Fothergill** — Donald 1888 / Fothergill 1908 history, AUGS/IUGA 2020 definition, technique (cervical amputation + cardinal/USL plication, Sturmdorf reconstruction), Enklaar 2023 RCT superiority (87.3% vs 77%, 0% reoperation), BSUG database confirmation, cervical stenosis ~1%, completed-childbearing requirement, cost data (−€1,458 vs hysteropexy), cervical-elongation indication.
+- **Iliococcygeus fascia suspension** — Inmon 1963 / Meeks 1994 history, prespinous suture-placement anatomy (1–2 cm anterior / medial to ischial spine), Serati 5-yr (84%) and 10-yr (74%) cure data, Maher 2001 vs SSLF matched comparison, Suh 2018 hysteropexy failure data (48% advanced uterine prolapse), Milani 2014 vs SCP.
+- **Vaginal hysterectomy** — ACOG CO 701 framing (preferred MIS route), feasibility (no absolute contraindications), step-by-step technique with anterior cul-de-sac entry adjuncts, intraoperative aids (vasopressin −130 mL, sealing devices), morcellation in 11%, opportunistic salpingectomy guidance, comparative outcomes vs abdominal and laparoscopic (NSQIP 2026, Danish Database 2020), bladder-injury risk factors (prior CS OR 4.01, uterus ≥ 500 g OR 2.88), perioperative care.
+- **Sacrocolpopexy** — Type-1 lightweight polypropylene mesh, open vs lap vs robotic comparison, robotic step-by-step (Giannini standardized suturing pattern with 0% mesh exposure, peritoneal tunneling), suture-attachment options (PDS / barbed / anchors), single- vs multi-port comparison, learning curve (efficiency 20–30 cases, proficiency ~78), mesh-exposure data (3.5% MIS, 10.5% CARE 7-yr), concomitant supracervical hysterectomy preference (mesh erosion 3.8% total vs 0.36% supracervical), Burch / sling for de novo SUI (44% → 24% with Burch), expedited recovery evidence.
+- **New page — Sacrohysteropexy** — uterine-preserving SCP variant; technique with broad-ligament avascular plane, mesh configurations, LAVA RCT non-inferiority vs sacrospinous hysteropexy, 7-yr Izett-Kay vs VH+USLS, mesh exposure 0.4%, pregnancy outcomes, suture-only mesh-free alternative. Slotted into pagination chain between sacrocolpopexy and pectopexy.
+- **Pectopexy** — Banerjee-Noé technique (Cooper's-ligament fixation), mesh configurations (T, inverted T, DynaMesh, Y), mesh-free variants (LNMCP cerclage, Salman's modification), LESS and robotic variants, learning curve (~12 cases), 10-yr durability data (Noé 2026 n = 832, 94.9% apical re-fixation), comparison vs sacrocolpopexy (34 min shorter, less bowel dysfunction).
+- **Moschcowitz procedure** — 1912 history, abdominal technique with concentric purse-strings, ureteral safety landmark, Cruikshank 1999 RCT showing McCall superiority for enterocele prophylaxis (94% vs 70%), Halban orientation distinction, contemporary role as sacrocolpopexy adjunct.
+- **Halban culdoplasty** — sagittal-suture technique with critical Moschcowitz distinction, Halban vs Moschcowitz vs McCall comparison table, lower-ureteral-risk rationale, lack of apical support, current niche role.
+- **New page — Laparoscopic Lateral Suspension (LLS)** — Dubuisson technique with retroperitoneal mesh tunneling, mesh-erosion risk factors (Type 3 mesh OR 13.0, smoking OR 10.4, posterior mesh 5×), comparison vs sacrocolpopexy (43 min shorter, comparable outcomes), modifications (LLS-ULFS, robotic), 92.9% apical anatomical success. Slot into pagination chain between pectopexy and TVM. Embedded YouTube surgical demonstration.
+
+### BNC atlas (04ab) — endoscopic treatment trio
+
+- Replaced malformed `tuit-triamcinolone.mdx` stub with new comprehensive [Transurethral Incision of BNC (TUIBNC)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-bnc.mdx) page. Coverage: Nealon / Ramirez bilateral 3 & 9 o'clock standardized technique, comparative outcomes (Nealon 82% / 94%, Ramirez, Rosenbaum, Abramowitz, Quarta), failure risk factors (≥ 2 prior procedures, smoking, radiation), SUI counseling and AUS placement timing, and full **Mitomycin-C vs corticosteroid adjunct comparison** with the Pang 2021 meta-analysis, the TURNS 7% serious-AE safety flag (cystectomy), Zhang 2021 / Sun 2022 repeat-triamcinolone protocols, and Nealon counterpoint that incision technique alone may drive most success.
+- New page — [Transurethral Bladder Neck Resection (TURBN)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-bladder-neck-resection.mdx). AUA 2023 equivalence to incision, technique with anatomic safety boundaries (sphincter / orifices), Rosenbaum 2021 head-to-head data confirming no outcome difference vs incision, Zhang 2021 92.9% in highly recurrent BNC with repeat triamcinolone, Pfalzgraf 2017 practice-pattern heterogeneity, escalation pathway.
+- New page — [Balloon Dilation for BNC](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/balloon-dilation-bnc.mdx). Standalone Ramchandani 1994 (59% / 0% incontinence), preparatory step before incision / resection (Nealon protocol; Sun 2023 day-surgery columnar balloon + holmium laser), drug-coated balloon evidence (Berg 2025 60% recurrence reduction, HR 0.40), comparison table across approaches, complication framing.
+
+### Verification
+
+`npm run lint:links` passed across 877 files; `npm run typecheck` passed; `npm run build` passed; stub count stable; stats regenerated.
+
+---
+
 ## 2026-05-06 — Native tissue apical prolapse atlas fill: SSLF + USLS
 
 - Built out `docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx` from a stub into a full SSLF atlas article. Scope: ACOG / AUGS guideline framing; Amreich / Richter / Morley-DeLancey history; sacrospinous ligament and coccygeus-SSL anatomy; right posterior vaginal approach; suture-passing devices; double-vs-loop suture evidence; OPTIMAL 2- and 5-year outcomes; SSLF vs USLS, sacrocolpopexy, and sacrospinous hysteropexy; complications including buttock pain and pudendal entrapment; anterior compartment recurrence mechanism; operative pearls; 21 references.
