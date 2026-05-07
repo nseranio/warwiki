@@ -52,7 +52,7 @@ POP is a clinical diagnosis. Minimum eval: POP-Q exam (Level C), symptom assessm
 | **Anterior compartment prolapse (primary)** | [Anterior colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/anterior-colporrhaphy) ± apical suspension | [Paravaginal repair](/docs/surgical-techniques/04g-prolapse-repair/paravaginal-repair) | Isolated anterior repair without apical support |
 | **Posterior compartment prolapse** | [Posterior colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/posterior-colporrhaphy) (midline plication) | Site-specific repair | **Mesh / biologic grafts in posterior repair (Level A — does NOT improve outcomes)**; levator plication (dyspareunia risk) |
 | **Recurrent anterior / apical prolapse after NTR** | [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) | Apical-only TVM (where permitted; experienced surgeons only) | Repeat NTR alone in stage III–IV recurrence |
-| **Elderly / frail, multiple comorbidities, no desire for vaginal intercourse** | [Le Fort colpocleisis](/docs/surgical-techniques/04g-prolapse-repair/le-fort-colpocleisis) or [total colpocleisis](/docs/surgical-techniques/04g-prolapse-repair/colpocleisis-total) | — | Long reconstructive procedures in this population |
+| **Elderly / frail, multiple comorbidities, no desire for vaginal intercourse** | [Colpocleisis (Le Fort or total)](/docs/surgical-techniques/04g-prolapse-repair/colpocleisis) | — | Long reconstructive procedures in this population |
 | **Young / sexually active, advanced prolapse, durability prioritized** | [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) (with or without [hysteropexy](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-hysteropexy)) | NTR + apical hysteropexy | Colpocleisis (precludes intercourse) |
 | **Concomitant occult SUI** | Add anti-incontinence procedure: Burch at SCP; [MUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling) at vaginal repair | Staged approach | Ignoring occult SUI — high de novo SUI risk after prolapse correction |
 | **Symptomatic, not yet failed conservative** | [Pessary](/docs/surgical-techniques/04g-prolapse-repair/prolapse-pessaries) trial + [PFMT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt) | Lifestyle modifications | Surgery before non-surgical trial |
@@ -87,7 +87,7 @@ POP is a clinical diagnosis. Minimum eval: POP-Q exam (Level C), symptom assessm
 1. Vaginal NTR ([USLS](/docs/surgical-techniques/04g-prolapse-repair/uterosacral-ligament-suspension) or [SSLF](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-ligament-fixation)) — for stage II, primary prolapse
 2. Hysteropexy ([sacrospinous](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-hysteropexy), [Manchester](/docs/surgical-techniques/04g-prolapse-repair/manchester-fothergill), or sacral) — if uterine preservation desired
 3. [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy) — for stage III–IV, recurrent prolapse, or when durability is prioritized
-4. [Colpocleisis](/docs/surgical-techniques/04g-prolapse-repair/colpocleisis-total) / [Le Fort](/docs/surgical-techniques/04g-prolapse-repair/le-fort-colpocleisis) — for elderly / frail patients not desiring vaginal function
+4. [Colpocleisis (Le Fort or total)](/docs/surgical-techniques/04g-prolapse-repair/colpocleisis) — for elderly / frail patients not desiring vaginal function
 
 ---
 
@@ -222,7 +222,8 @@ export const prolapseProcs = [
     name: "Sacrohysteropexy / Sacrocervicopexy",
     compartment: "Apical",
     approach: "Robotic",
-    bestFor: "Uterine-preserving SCP variant — cervix to sacral promontory. Comparable recurrence to vaginal hysterectomy (Cochrane 2023).",
+    bestFor: "Uterine-preserving SCP variant — cervix to sacral promontory. Mesh exposure ~0.4% (lower than SCP after total hysterectomy). LAVA non-inferior to sacrospinous hysteropexy.",
+    slug: "/docs/surgical-techniques/04g-prolapse-repair/sacrohysteropexy",
   },
   {
     name: "Laparoscopic Lateral Suspension (LLS)",
@@ -273,18 +274,11 @@ export const prolapseProcs = [
     slug: "/docs/surgical-techniques/04g-prolapse-repair/crisp-technique",
   },
   {
-    name: "Le Fort Colpocleisis",
+    name: "Colpocleisis (Le Fort and Total)",
     compartment: "All",
     approach: "Vaginal",
-    bestFor: "Partial colpocleisis with lateral cervical drainage channels; elderly / frail, no intercourse desired. 90%+ anatomic success.",
-    slug: "/docs/surgical-techniques/04g-prolapse-repair/le-fort-colpocleisis",
-  },
-  {
-    name: "Colpocleisis",
-    compartment: "All",
-    approach: "Vaginal",
-    bestFor: "Total vaginal obliteration for severe POP, completed sexual activity. Definitive, low-morbidity for medically fragile.",
-    slug: "/docs/surgical-techniques/04g-prolapse-repair/colpocleisis-total",
+    bestFor: "Obliterative repair for advanced POP in elderly / frail patients not desiring intercourse. Le Fort preserves uterus with lateral channels; total for post-hysterectomy. Most durable POP repair (~98% success); regret 0–14%.",
+    slug: "/docs/surgical-techniques/04g-prolapse-repair/colpocleisis",
   },
 ];
 
