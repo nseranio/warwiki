@@ -19,8 +19,8 @@ Reconstruction of the vesicourethral anastomosis after **radical prostatectomy �
 
 | Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
 |---|---|---|---|
-| **First-time VUAS after RP (non-radiated)** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (holmium laser preferred) or dilation | Repeat endoscopic ± mitomycin C (conflicting data per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) (Berg 2025; HR 0.40 for recurrence) | Robotic reconstruction ([primary re-anastomosis](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis), [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty), or [transvesical](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches); ~75–91% patency) |
-| **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) ± mitomycin C (expect shorter recurrence interval; Hacker 2022, Rozanski 2021) | Repeat endoscopic ± [DCB](/docs/surgical-techniques/drug-coated-balloon) | [Perineal dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc) (Sterling 2024; no de novo SUI, 86.6% satisfaction); robotic reconstruction |
+| **First-time VUAS after RP (non-radiated)** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (holmium laser preferred) or [balloon dilation](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/balloon-dilation-bnc) (drug-coated balloon a current first-line option; Berg 2025 HR 0.40 for recurrence) | Repeat endoscopic; [endourethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty); [TUITMR](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment) | Robotic reconstruction ([primary re-anastomosis](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis), [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty), or [transvesical](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches); ~75–91% patency) |
+| **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) or [drug-coated balloon dilation](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/balloon-dilation-bnc) (expect shorter recurrence interval; Hacker 2022, Rozanski 2021) | Repeat endoscopic; [endourethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty) | [Perineal dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc) (Sterling 2024; no de novo SUI, 86.6% satisfaction); robotic reconstruction |
 | **Recurrent VUAS (≥ 2 endoscopic failures)** | [Robotic transvesical reconstruction (RTV-BNR)](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches) (Lee / Eun 2025 — 91% patency, no de novo SUI) | [Perineal D-BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc); endourethroplasty (Doležel 2024) | [Continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **Obliterative VUAS (~47% of reconstruction candidates)** | Robotic scar excision + mucosa-to-mucosa re-anastomosis ± [transperineal urethral advancement](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transperineal-reanastomosis) (Rodriguez 2024); [bladder flap](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap) | Open retropubic reanastomosis (~70–100% patency, ~10% de novo SUI; Pfalzgraf 2011) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
 | **VUAS + concurrent severe SUI** | Achieve stable patent outlet first → tissue maturation 3–6 mo → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic / retropubic reconstruction (avoid perineal — 83–100% de novo SUI) + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
@@ -70,19 +70,6 @@ export const vuasTechniques = [
     successRate: "89% (1×) / 100% (2×)",
     bestFor: "Recurrent VUAS where mucosal coverage of the incision is desired without open reconstruction; useful in radiated patients.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment",
-  },
-  {
-    name: "DVIU + Mitomycin C (MMC)",
-    tier: "Endoscopic — Adjunct / Novel",
-    successRate: "65–86% (1×); up to 90% multi-institutional",
-    bestFor: "Recurrent VUAS after failed first-line endoscopic treatment when adjunctive antifibrotic agent is desired (off-label; not AUA-endorsed routine).",
-  },
-  {
-    name: "Drug-Coated Balloon (Optilume)",
-    tier: "Endoscopic — Adjunct / Novel",
-    successRate: "~85–90% short-term",
-    bestFor: "Recurrent VUAS where antifibrotic local paclitaxel delivery is desired; emerging alternative to standard endoscopic dilation.",
-    slug: "/docs/surgical-techniques/drug-coated-balloon",
   },
 
   // ===== RECONSTRUCTION — ROBOTIC =====
@@ -157,11 +144,12 @@ export const vuasTechniques = [
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc",
   },
   {
-    name: "Perineal BMG / Endourethroplasty",
-    aka: "Doležel approach",
+    name: "Endourethroplasty",
+    aka: "Doležel EUP / Ungerer-Warner endoscopic BMG / Abramowitz mucosal realignment",
     tier: "Reconstruction — Graft-Based",
-    successRate: "65% (perineal) / 73% (endo) at 3 yr",
-    bestFor: "PUS/VUAS where graft augmentation is preferred and endoscopic salvage with auxiliary DVIU is acceptable.",
+    successRate: "73–89% across techniques",
+    bestFor: "Short posterior stenoses where a fully endoscopic graft or mucosal-realignment approach is preferred over open or robotic reconstruction.",
+    slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty",
   },
 
   // ===== SALVAGE / DIVERSION =====
