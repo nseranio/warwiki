@@ -19,9 +19,9 @@ Reconstruction of the vesicourethral anastomosis after **radical prostatectomy �
 
 | Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
 |---|---|---|---|
-| **First-time VUAS after RP (non-radiated)** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (holmium laser preferred) or dilation | Repeat endoscopic ± mitomycin C (conflicting data per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) (Berg 2025; HR 0.40 for recurrence) | Robotic reconstruction (TURNS / RBNR; Shakir 2022, Kirshenbaum 2018; ~75% patency, ~82% continence) |
+| **First-time VUAS after RP (non-radiated)** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (holmium laser preferred) or dilation | Repeat endoscopic ± mitomycin C (conflicting data per AUA); consider [DCB (Optilume)](/docs/surgical-techniques/drug-coated-balloon) (Berg 2025; HR 0.40 for recurrence) | Robotic reconstruction ([primary re-anastomosis](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis), [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty), or [transvesical](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches); ~75–91% patency) |
 | **First-time VUAS after RP + radiation** | [Endoscopic incision](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) ± mitomycin C (expect shorter recurrence interval; Hacker 2022, Rozanski 2021) | Repeat endoscopic ± [DCB](/docs/surgical-techniques/drug-coated-balloon) | [Perineal dorsal onlay BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc) (Sterling 2024; no de novo SUI, 86.6% satisfaction); robotic reconstruction |
-| **Recurrent VUAS (≥ 2 endoscopic failures)** | Robotic reconstruction (RBNR / RTV-BNR; Lee / Eun 2025 — 91% patency, no de novo SUI) | [Perineal D-BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc); endourethroplasty (Doležel 2024) | [Continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
+| **Recurrent VUAS (≥ 2 endoscopic failures)** | [Robotic transvesical reconstruction (RTV-BNR)](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches) (Lee / Eun 2025 — 91% patency, no de novo SUI) | [Perineal D-BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc); endourethroplasty (Doležel 2024) | [Continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **Obliterative VUAS (~47% of reconstruction candidates)** | Robotic scar excision + mucosa-to-mucosa re-anastomosis ± [transperineal urethral advancement](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transperineal-reanastomosis) (Rodriguez 2024); [bladder flap](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap) | Open retropubic reanastomosis (~70–100% patency, ~10% de novo SUI; Pfalzgraf 2011) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
 | **VUAS + concurrent severe SUI** | Achieve stable patent outlet first → tissue maturation 3–6 mo → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic / retropubic reconstruction (avoid perineal — 83–100% de novo SUI) + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube | [Salvage prostatectomy + BN closure + cath stoma + augmentation](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy) (MD Anderson; 83% continence); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) ± [simple cystectomy](/docs/surgical-techniques/04c-urinary-diversion/simple-cystectomy) | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
@@ -94,13 +94,6 @@ export const vuasTechniques = [
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty",
   },
   {
-    name: "Robotic Bladder Neck Reconstruction (RBNR)",
-    aka: "TURNS RBNR",
-    tier: "Reconstruction — Robotic",
-    successRate: "75% patency / 82% continence",
-    bestFor: "Recalcitrant VUAS, including radiated patients, when retropubic robotic excision + primary anastomosis is feasible.",
-  },
-  {
     name: "Robotic Transvesical BN Reconstruction (RTV-BNR)",
     aka: "Lee / Eun 2025",
     tier: "Reconstruction — Robotic",
@@ -122,18 +115,6 @@ export const vuasTechniques = [
     bestFor: "Refractory VUAS where mucosal augmentation is preferred over excision/anastomosis.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay",
   },
-  {
-    name: "Extraperitoneal Robotic Reconstruction",
-    tier: "Reconstruction — Robotic",
-    successRate: "—",
-    bestFor: "VUAS reconstruction when intraperitoneal access is hostile or undesirable.",
-  },
-  {
-    name: "Robotic Transperineal Urethral Advancement",
-    tier: "Reconstruction — Robotic",
-    successRate: "—",
-    bestFor: "Complex VUAS with insufficient healthy urethral length for tension-free reanastomosis; preserves orthotopic voiding.",
-  },
 
   // ===== RECONSTRUCTION — OPEN =====
   {
@@ -152,10 +133,10 @@ export const vuasTechniques = [
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap",
   },
   {
-    name: "Combined Abdominoperineal Approach",
+    name: "Combined Abdominoperineal Approach (Transperineal Advancement / Pull-Through)",
     tier: "Reconstruction — Open",
-    successRate: "—",
-    bestFor: "Complex long-segment or recurrent VUAS requiring complete fibrotic excision plus simultaneous cystoplasty or flap interposition.",
+    successRate: "83–96.5% (open) / 75–83% (combined robotic)",
+    bestFor: "Long or obliterative defects requiring extensive distal urethral mobilization to reach the proximal stump; complex VUAS where insufficient healthy urethral length precludes a tension-free abdominal-only anastomosis.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/combined-abdominoperineal",
   },
   {
