@@ -24,7 +24,7 @@ Reconstruction of the vesicourethral anastomosis after **radical prostatectomy �
 | **Recurrent VUAS (≥ 2 endoscopic failures)** | Robotic reconstruction (RBNR / RTV-BNR; Lee / Eun 2025 — 91% patency, no de novo SUI) | [Perineal D-BMG urethroplasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc); endourethroplasty (Doležel 2024) | [Continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
 | **Obliterative VUAS (~47% of reconstruction candidates)** | Robotic scar excision + mucosa-to-mucosa re-anastomosis ± [transperineal urethral advancement](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transperineal-reanastomosis) (Rodriguez 2024); [bladder flap](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap) | Open retropubic reanastomosis (~70–100% patency, ~10% de novo SUI; Pfalzgraf 2011) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) or [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
 | **VUAS + concurrent severe SUI** | Achieve stable patent outlet first → tissue maturation 3–6 mo → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | Robotic / retropubic reconstruction (avoid perineal — 83–100% de novo SUI) + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) ± cystectomy | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
+| **Devastated posterior urethra (multiple failed reconstructions)** | Permanent suprapubic tube | [Salvage prostatectomy + BN closure + cath stoma + augmentation](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy) (MD Anderson; 83% continence); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) ± [simple cystectomy](/docs/surgical-techniques/04c-urinary-diversion/simple-cystectomy) | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) |
 
 **Key BNC-vs-VUAS distinguishing principles.** VUAS sits adjacent to the external sphincter, making continence preservation the dominant concern at every tier. Repeat endoscopic treatment is justified (91% cumulative success) — unlike anterior urethral strictures. Radiation history is the strongest modifier of treatment success, and the robotic platform has emerged as the preferred reconstructive approach when continence preservation matters. Dorsal onlay buccal mucosal graft (D-BMGU) is uniquely valuable in the post-prostatectomy + radiation subgroup because it avoids urethral transection.
 
@@ -142,6 +142,13 @@ export const vuasTechniques = [
     successRate: "—",
     notes: "Simultaneous abdominal + perineal exposure for complex, long-segment, or recurrent VUAS. Maximal access for complete fibrotic excision, reanastomosis, and simultaneous cystoplasty or flap interposition.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/combined-abdominoperineal",
+  },
+  {
+    name: "Salvage Prostatectomy (Reconstructive)",
+    tier: "Reconstruction — Open",
+    successRate: "73–83% continence (BN closure variant)",
+    notes: "For necrotic post-radiation / post-HIFU / post-cryo prostate with devastated outlet, prostatic abscess, or urorectal fistula. Standard VUA fails 35.5% (UB-ECM scaffold reduces leak to 6.7%). MD Anderson BN-closure + augmentation + cath stoma achieves 83% continence. Used as a reconstructive component, not as a primary oncologic operation here.",
+    slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy",
   },
 
   // ===== RECONSTRUCTION — GRAFT-BASED =====
