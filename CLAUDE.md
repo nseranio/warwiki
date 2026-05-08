@@ -4,20 +4,32 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-07
+## Current Handoff - 2026-05-08
 
-Heavy prolapse-atlas + BNC build-out session. All work pushed to `main` via `git push origin HEAD:main`. Build steady at 854 articles / 10,991 references.
+Heavy 04ab BNC/VUAS consolidation + 04b bladder-reconstruction build-out session. All work pushed to `main` via `git push origin HEAD:main`. Build clean across ~890+ files.
 
 Highlights of this session:
 
-- **Prolapse pilot (04g)** — column shortened (header "Best For", cells trimmed to 15–25 word indications), Approach column removed, and **pagination chained in database row order** via `pagination_prev` / `pagination_next` frontmatter on every atlas page. Clicking Next at the bottom of any prolapse procedure page steps through the database in order, skipping subdir grouping.
-- **Prolapse merges and deletions**: McCall vaginal + abdominal merged into single [McCall Culdoplasty](docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/vaginal-mccall-culdoplasty.mdx); Le Fort + Total Colpocleisis merged into [Colpocleisis (Le Fort and Total)](docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx) (slug `/colpocleisis`). CRISP technique and Raz transvaginal enterocele repair deleted.
-- **Prolapse build-outs**: sacrospinous hysteropexy, Manchester-Fothergill, iliococcygeus fascia suspension, vaginal hysterectomy, sacrocolpopexy (incl. robotic technique deep dive), pectopexy, Moschcowitz, Halban; new dedicated atlas pages for sacrohysteropexy and Laparoscopic Lateral Suspension (LLS, with embedded YouTube demo).
-- **BNC atlas (04ab)**: replaced malformed tuit-triamcinolone stub with new comprehensive [TUIBNC](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-bnc.mdx) page (Nealon protocol + MMC vs corticosteroid adjunct comparison + TURNS safety flag); new [Transurethral Bladder Neck Resection (TURBN)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-bladder-neck-resection.mdx) and [Balloon Dilation for BNC](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/balloon-dilation-bnc.mdx) pages.
+- **04ab BNC/VUAS database consolidation** — collapsed redundant rows: holmium / cold-knife / DVIU into one TUIBNC row; deleted DVIU+MMC and DCB rows (DCB now under balloon dilation); deleted RBNR, Extraperitoneal Robotic, and Robotic Transperineal Urethral Advancement (subsumed by Primary Re-Anastomosis and Combined Abdominoperineal). Removed Young-Dees-Leadbetter, Kropp, and Pippi-Salle outlet procedures and their pages. Both DBs use `bestFor` column (header "Best for / indication") — short indication strings instead of long-form notes.
+- **New 04ab atlas pages** — [TUITMR](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment.mdx), [Y-V Plasty (Robotic + Open)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty.mdx), [T-Plasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc.mdx), [Subtrigonal Inlay (BMG family)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay.mdx), [Tanagho Flap](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap.mdx), [Transvesical Approaches](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches.mdx) (RTV-BNR + TvRARP), [Primary Re-Anastomosis](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis.mdx), [Combined Abdominoperineal / Pull-Through](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/combined-abdominoperineal.mdx), [Robotic Bladder Flap Posterior Urethroplasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/robotic-bladder-flap-urethroplasty.mdx), [Salvage Prostatectomy (reconstructive)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy.mdx) — moved from VUAS to BNC, [BMG Endourethroplasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty.mdx), focused [Dorsal Onlay BMG for VUAS/BNC](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx) (Shahrour technique only; 2 operative videos).
+- **VUAS Lee 2025 algorithm** — caliber + EUS-involvement decision tree (Naser-Tavakolian & Lee, *Transl Androl Urol* 2025;14(8):2405–2418, doi:[10.21037/tau-24-503](https://doi.org/10.21037/tau-24-503)) keys non-transecting flap (≥10 Fr no EUS), excision + primary anastomosis vs anterior bladder flap (\<10 Fr no EUS), or urethral pull-through (any caliber past EUS).
+- **04b bladder-reconstruction build-out** — eight new dedicated atlas pages with full content + database slugs updated:
+  [Ileocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ileocystoplasty.mdx),
+  [Ileocecocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ileocecal-cystoplasty.mdx),
+  [Sigmoid Cystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/sigmoid-cystoplasty.mdx),
+  [Autoaugmentation](docs/04-surgical-techniques/04b-bladder-reconstruction/autoaugmentation.mdx),
+  [Ureterocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ureterocystoplasty.mdx),
+  [Gastrocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/gastrocystoplasty.mdx),
+  [SCLU](docs/04-surgical-techniques/04b-bladder-reconstruction/seromuscular-colocystoplasty.mdx),
+  [Ileovesicostomy](docs/04-surgical-techniques/04b-bladder-reconstruction/ileovesicostomy.mdx),
+  [Appendicovesicostomy / Mitrofanoff](docs/04-surgical-techniques/04b-bladder-reconstruction/appendicovesicostomy.mdx).
+- **04c urinary diversion** — new [Simple Cystectomy (Benign Disease)](docs/04-surgical-techniques/04c-urinary-diversion/simple-cystectomy.mdx) page added to the Complex / Salvage family.
+- **04b** — new [Supratrigonal Cystectomy + Augmentation](docs/04-surgical-techniques/04b-bladder-reconstruction/supratrigonal-cystectomy.mdx) page; both linked from the IC/BPS clinical page.
+- **Cross-database link audit** — added slugs to duplicate rows referring to suprapubic catheter, balloon dilation, indwelling catheter, Foley/Coudé/Council/Penrose so all duplicate rows now point at their dedicated pages.
+- **Instruments** — new [Ski / J-Hook Needle](docs/01-foundations/tools/instruments/urethral-specialty/ski-needle-j-hook.mdx) page (operative video at 3:07); cross-linked from the [Dorsal Onlay BMG](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx) technique step.
+- **Peyronie's-at-implant** — added the **Balzano** *Can J Urol* 2022 curvature-direction algorithm and the **Brock 2006** intracorporeal-incision lineage to the [IPP-with-adjunctive-straightening](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx) page; expanded TEP detail.
 
-Verification: `npm run lint:links` passes across 877 files; `npm run typecheck` passes; `npm run build` passes; stats regenerated.
-
-Known unrelated lint noise: global `npm run lint` still stops in `lint:citations` on pre-existing unrelated citation issues in older 04a / 04f / 04l files.
+Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
 
 Previous prolapse-atlas, GAS phalloplasty, and older session history are archived in `CHANGELOG.md`; keep this file as the compact working handbook.
 

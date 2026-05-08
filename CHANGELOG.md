@@ -6,6 +6,19 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-08 — 04ab BNC/VUAS consolidation + 04b bladder-reconstruction build-out
+
+- **04ab database consolidation:** collapsed three first-line VUAS endoscopic-incision rows (holmium / cold-knife / DVIU) into one TUIBNC row; deleted DVIU+MMC and DCB rows (DCB now under balloon dilation); deleted RBNR, Extraperitoneal Robotic, and Robotic Transperineal Urethral Advancement rows (subsumed by Primary Re-Anastomosis and Combined Abdominoperineal pages). Both BNC and VUAS databases switched from a long-form "Notes" column to a `bestFor` column ("Best for / indication") with concise indication strings. Removed Young-Dees-Leadbetter, Kropp, and Pippi-Salle outlet procedures and their pages.
+- **New 04ab atlas pages:** TUITMR, Y-V Plasty (robotic + open), T-Plasty, Subtrigonal Inlay (BMG family), Tanagho Flap, Transvesical Approaches (RTV-BNR + TvRARP + Avallone subtrigonal), Primary Re-Anastomosis (open retropubic + open transperineal + robotic retropubic + robotic transvesical), Combined Abdominoperineal / Pull-Through (open + combined-robotic), Robotic Bladder Flap Posterior Urethroplasty (Zhao 2022), Salvage Prostatectomy reconstructive (moved from VUAS to BNC), BMG Endourethroplasty, focused Dorsal Onlay BMG for BNC/VUAS (Shahrour, with two operative videos).
+- **VUAS algorithm:** added Lee 2025 robotic VUAS reconstruction algorithm (caliber + EUS involvement) attributed to Naser-Tavakolian and Lee, *Transl Androl Urol* 2025;14(8):2405–2418, doi:10.21037/tau-24-503.
+- **04b bladder-reconstruction build-out:** dedicated pages for Ileocystoplasty, Ileocecocystoplasty (Mainz Pouch I + CCIC + hand-assist laparoscopic), Sigmoid Cystoplasty (Goodwin cup-patch + Hayashi 13.1-yr data + SCLU note), Autoaugmentation (Cartwright-Snow + Perovic rectus-backing + Lima nonsecretory + balloon-conformer + MacNeily-vs-Hansen durability debate), Ureterocystoplasty (Bellinger + Husmann selection + Gosalbez TUU + Kajbafzadeh teapot + Landau equivalence to ileum), Gastrocystoplasty (HDS, hypochloremic alkalosis, malignancy, current consensus against routine use), SCLU (Buson experimental + Gonzalez ALPP / intact-mucosa / no-CCC prerequisites + AUS synergy + hourglass mitigation), Ileovesicostomy (Schwartz/McGuire bladder-chimney + Leng dramatic complication reduction + 54% reoperation + Casale continent variant), Appendicovesicostomy / Mitrofanoff (gold-standard CCC + VQZ/VQ/VR/Kurzrock tip-preservation + adult-vs-pediatric outcomes + bladder-exstrophy 93% continence + split-appendix Mitrofanoff+MACE).
+- **04c urinary diversion:** new Simple Cystectomy (benign disease) page under Complex / Salvage; new Supratrigonal Cystectomy page under 04b; both linked from IC/BPS.
+- **Cross-database link audit:** added slugs to duplicate rows referring to suprapubic catheter, balloon dilation, indwelling catheter, Foley/Coudé/Council/Penrose so duplicates point at dedicated pages.
+- **Instruments:** new Ski / J-Hook Needle page (operative video at 3:07); cross-linked from Dorsal Onlay BMG technique step.
+- **Peyronie's-at-implant:** added Balzano *Can J Urol* 2022 curvature-direction algorithm and Brock 2006 intracorporeal-incision lineage to the IPP-with-adjunctive-straightening page; expanded TEP detail.
+
+---
+
 ## 2026-05-07 — Prolapse atlas pilot + BNC build-outs
 
 Heavy single-session arc on `main`. Three workstreams: prolapse pilot rollout (column shortening + pagination chain), prolapse procedure build-outs, and BNC endoscopic-treatment trio.
