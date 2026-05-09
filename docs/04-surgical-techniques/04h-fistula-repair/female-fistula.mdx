@@ -60,7 +60,7 @@ In developed countries, female GU fistulas are predominantly **iatrogenic** — 
 | Clinical Scenario | Recommended Intervention | Key Considerations |
 |---|---|---|
 | **Acute obstetric RVF** | Nonoperative management 3–6 mo (sitz baths, fiber, wound care) | 52–66% heal without surgery |
-| **Simple low RVF, intact sphincter** | [Endorectal advancement flap (ERAF)](/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal) | ASCRS 2022 procedure of choice; 41–78% success; stoma not routinely needed |
+| **Simple low RVF, intact sphincter** | [Endorectal advancement flap (ERAF)](/docs/surgical-techniques/04h-fistula-repair/female/eraf) | ASCRS 2022 procedure of choice; 41–78% success; stoma not routinely needed |
 | **Low RVF + sphincter defect** | ERAF + sphincteroplasty ± levatorplasty; **or** episioproctotomy | Sphincteroplasty improves healing to 80%; episioproctotomy 78–100% |
 | **Recurrent / complex RVF** | [Martius flap](/docs/foundations/surgical-principles/flaps/martius) (first-line interposition) | 65–94% success; shorter LOS than gracilis; stoma often unnecessary (Pastier 2024) |
 | **RVF after Martius failure** | [Gracilis muscle interposition](/docs/foundations/surgical-principles/flaps/gracilis) | Pooled 64% success; longer LOS; SSI 32%; reserve as salvage |
@@ -168,16 +168,10 @@ export const femaleFistulaTechniques = [
 
   // ===== RVF — LOCAL / PERINEAL SURGERY =====
   {
-    name: "Endorectal Advancement Flap (ERAF)",
+    name: "Endorectal Advancement Flap (ERAF) ± Sphincteroplasty",
     domain: "RVF",
-    bestFor: "Simple low RVF with intact sphincter — ASCRS 2022 procedure of choice.",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
-  },
-  {
-    name: "ERAF + Sphincteroplasty",
-    domain: "RVF",
-    bestFor: "Low RVF with concurrent sphincter defect — ERAF + overlapping anal sphincteroplasty ± levatorplasty.",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
+    bestFor: "Low / mid RVF with healed rectal mucosa — ASCRS 2022 procedure of choice (Grade 1C); add overlapping sphincteroplasty ± levatorplasty when an anterior sphincter defect is present (raises healing from 41% to &gt;80%).",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/female/eraf",
   },
   {
     name: "Episioproctotomy",
