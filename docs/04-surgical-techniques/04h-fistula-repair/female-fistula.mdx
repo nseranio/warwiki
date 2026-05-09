@@ -32,7 +32,7 @@ In developed countries, female GU fistulas are predominantly **iatrogenic** — 
 
 | Fistula | Conservative Option | Selection Criteria | Expected Success |
 |---|---|---|---|
-| **VVF** | Foley catheter drainage 2–6 wk | Small (&lt; 5 mm), fresh, simple, non-irradiated | Minority; uncertain |
+| **VVF** | [Conservative management](/docs/surgical-techniques/04h-fistula-repair/female/conservative-vvf-management) — continuous Foley × 4–8 wk + anticholinergics ± vaginal estrogen | Small (&lt; 5 mm), fresh, simple, non-irradiated, iatrogenic etiology | Up to 92.9% in highly selected; minority in unselected |
 | **VVF** | [Endoscopic management](/docs/surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair) (Bugbee fulguration, Ho:YAG laser, tissue adhesives, transvesicoscopic / V-NOTES / lap or robotic) + 2–3 wk Foley | ≤ 3.5 mm fulguration; ≤4 mm laser; \<1 cm tissue adhesives; larger lesions via lap / robotic / V-NOTES | **73–100%** by approach |
 | **UretVF** | **Ureteral stent × 6 wk** (AUA Urotrauma 2020 — first-line) | Stent-passable lesion; retrograde or antegrade access | **64–100%** |
 | **VUF** | Foley drainage ± hormonal suppression (GnRH-a) | Small (&lt; 5 mm), early diagnosis | Limited data; case reports |
@@ -75,9 +75,10 @@ For **universal surgical principles** (tension-free / watertight closure, tissue
 export const femaleFistulaTechniques = [
   // ===== VVF — CONSERVATIVE / ENDOSCOPIC =====
   {
-    name: "Foley Catheter Drainage (VVF)",
+    name: "Conservative Management (VVF)",
     domain: "VVF",
-    notes: "Conservative management for **small (&lt; 5 mm), fresh, simple, non-irradiated** VVF. Continuous Foley × 2–6 weeks may permit spontaneous closure in a minority of carefully selected cases. Often combined with antibiotics and topical estrogen.",
+    notes: "Continuous Foley drainage × 4–8 weeks for **small (&lt;5 mm), fresh, simple, non-irradiated** VVF identified early after iatrogenic injury. Up to 92.9% success in highly selected post-benign-gynecologic-surgery cases (selection bias); 0% in unselected larger fistulas. Adjuncts: anticholinergics, topical estrogen, nutritional optimization. Abandon and proceed to surgery if no improvement at 6–8 weeks or fistula &gt;1–2 cm.",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/female/conservative-vvf-management",
   },
   {
     name: "Endoscopic VVF Management",
