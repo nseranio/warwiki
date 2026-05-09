@@ -5,8 +5,6 @@ hide_title: true
 slug: /surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic
 ---
 
-import GenericDatabase from '@site/src/components/GenericDatabase';
-
 # Female Cosmetic Genital Surgery (FGCS)
 
 This page covers the **elective / aesthetic** end of female genital surgery — labiaplasty, clitoral hoodoplasty, labia majora augmentation, monsplasty, surgical vaginoplasty / energy-based devices, hymenoplasty, and regenerative / fat-grafting techniques. Reconstructive operations for trauma, oncologic resection, lichen sclerosus, FGM/C, or congenital anomaly live at [04e Genital Reconstruction](/docs/surgical-techniques/04e-genital-reconstruction); gender-affirming pathway surgery lives at [04k Gender-Affirming Surgery](/docs/surgical-techniques/04k-gender-affirming-surgery).
@@ -108,73 +106,24 @@ Frequently performed concurrently with labiaplasty. Liu 2022 *Aesthet Plast Surg
 
 ## Treatment Database
 
-export const femaleCosmeticTechniques = [
-  // Labiaplasty
-  { name: "Trim Labiaplasty",                                         domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty" },
-  { name: "Wedge Labiaplasty",                                        domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty" },
-  { name: "De-Epithelialization Labiaplasty",                         domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty" },
-  { name: "Laser-Assisted Labiaplasty",                               domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/laser-assisted-labiaplasty" },
-  { name: "Combined Wedge-Edge Resection",                            domain: "Labiaplasty",          slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/combined-wedge-edge-labiaplasty" },
-
-  // Clitoral Hoodoplasty
-  { name: "Inverted-Y Plasty Clitoral Hoodoplasty",                   domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/inverted-y-clitoral-hoodoplasty" },
-  { name: "Bilateral Triangular / Inverted-V Resection (Liu)",        domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/liu-classification-hoodoplasty" },
-  { name: "Three-Step / Two-Part Composite Excision",                 domain: "Clitoral Hoodoplasty", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/three-step-two-part-composite" },
-
-  // Labia Majora
-  { name: "Labia Majora Augmentation (Autologous Fat Grafting)",      domain: "Labia Majora",         slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation" },
-  { name: "Labia Majora Reduction (Majoraplasty)",                    domain: "Labia Majora",         slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction" },
-
-  // Mons Pubis
-  { name: "Monsplasty",                                               domain: "Mons Pubis",           slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/monsplasty" },
-  { name: "Fat Grafting to Mons Pubis",                               domain: "Mons Pubis",           slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/fat-grafting-mons" },
-
-  // Energy-Based Devices — single pointer to canonical Vaginal Laser Therapy page
-  { name: "Vaginal Laser Therapy (Fractional CO₂ / Er:YAG / RF)",     domain: "Energy-Based Devices", slug: "/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy" },
-
-  // Hymenoplasty / G-Spot
-  { name: "Hymenoplasty",                                             domain: "Hymenoplasty / G-Spot", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty" },
-  { name: "G-Spot Amplification",                                     domain: "Hymenoplasty / G-Spot", slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/g-spot-amplification" },
-
-  // Regenerative
-  { name: "Microfat + Nanofat Grafting",                              domain: "Regenerative",         slug: "/docs/surgical-techniques/04l-cosmetic-genital-surgery/microfat-nanofat-grafting" },
-
-  // Vaginal Canal entries removed per ACOG 2020 — "rebranding" colporrhaphy / perineoplasty
-  // as cosmetic is misleading; surgical vaginoplasty and perineoplasty are reconstructive
-  // procedures and live in 04g Prolapse Repair, not the cosmetic atlas.
-  // "Genital Beautification" combined-packages row removed per editorial decision —
-  // the components live in their per-device pages; the combined-package framing
-  // adds no decision-support value beyond what the per-device pages already cover.
-];
-
-export const femaleCosmeticColumns = [
-  {
-    key: 'name',
-    header: 'Procedure',
-  },
-  {
-    key: 'domain',
-    header: 'Domain',
-    badge: true,
-    badgeColors: {
-      'Labiaplasty':            '#be185d',
-      'Clitoral Hoodoplasty':   '#7c3aed',
-      'Labia Majora':           '#0f766e',
-      'Mons Pubis':             '#0891b2',
-      'Energy-Based Devices':   '#b45309',
-      'Hymenoplasty / G-Spot':  '#374151',
-      'Regenerative':           '#047857',
-    },
-  },
-];
-
-<GenericDatabase
-  data={femaleCosmeticTechniques}
-  columns={femaleCosmeticColumns}
-  filterKey="domain"
-  filterLabel="Domain"
-  entityLabel="procedures"
-/>
+| Procedure | Domain | Best for / indication |
+|---|---|---|
+| [Trim Labiaplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty) | Labiaplasty | Irregular or darkened labial edge; all morphologies; smokers |
+| [Wedge Labiaplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty) | Labiaplasty | Central labial protrusion with desire to preserve natural edge / color transition |
+| [De-Epithelialization Labiaplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty) | Labiaplasty | Mild hypertrophy with desire to preserve volume; lowest dehiscence rate |
+| [Laser-Assisted Labiaplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/laser-assisted-labiaplasty) | Labiaplasty | Surgeon-preference variant; outcome data not superior to scalpel |
+| [Combined Wedge-Edge Resection](/docs/surgical-techniques/04l-cosmetic-genital-surgery/combined-wedge-edge-labiaplasty) | Labiaplasty | Mixed central protrusion + irregular edge requiring both edge cleanup and central reduction |
+| [Inverted-Y Plasty Clitoral Hoodoplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/inverted-y-clitoral-hoodoplasty) | Clitoral Hoodoplasty | Vertical and/or horizontal central hood redundancy (Eserdağ technique) |
+| [Bilateral Triangular / Inverted-V Resection (Liu)](/docs/surgical-techniques/04l-cosmetic-genital-surgery/liu-classification-hoodoplasty) | Clitoral Hoodoplasty | Hood reduction tailored to Liu 2022 zone classification (horizontal vs vertical redundancy) |
+| [Three-Step / Two-Part Composite Excision](/docs/surgical-techniques/04l-cosmetic-genital-surgery/three-step-two-part-composite) | Clitoral Hoodoplasty | Composite lateral hood + labia minora redundancy in a single excision |
+| [Labia Majora Augmentation (Autologous Fat Grafting)](/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation) | Labia Majora | Labia majora atrophy or deflation; restores volume and balances minora-to-majora ratio |
+| [Labia Majora Reduction (Majoraplasty)](/docs/surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction) | Labia Majora | Labia majora excess (often after massive weight loss) |
+| [Monsplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/monsplasty) | Mons Pubis | Mons pubis ptosis or excess; typically combined with abdominoplasty or post-MWL |
+| [Fat Grafting to Mons Pubis](/docs/surgical-techniques/04l-cosmetic-genital-surgery/fat-grafting-mons) | Mons Pubis | Mons pubis deflation; volume restoration without skin excision |
+| [Vaginal Laser Therapy (Fractional CO₂ / Er:YAG / RF)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy) | Energy-Based Devices | GSM and "vaginal rejuvenation" indications — not FDA-cleared; sham-controlled RCT data negative |
+| [Hymenoplasty](/docs/surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty) | Hymenoplasty / G-Spot | Hymen restoration for cultural, religious, or personal reasons |
+| [G-Spot Amplification](/docs/surgical-techniques/04l-cosmetic-genital-surgery/g-spot-amplification) | Hymenoplasty / G-Spot | HA injection for purported "G-spot" enhancement; safety/efficacy not established |
+| [Microfat + Nanofat Grafting](/docs/surgical-techniques/04l-cosmetic-genital-surgery/microfat-nanofat-grafting) | Regenerative | Vulvovaginal atrophy and skin-quality restoration; regenerative adjunct |
 
 ---
 
