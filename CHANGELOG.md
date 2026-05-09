@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-09 — Style cleanup after site audit
+
+### Style / hygiene
+
+- **Removed disabled Docusaurus sample blog content.** Deleted the stock demo blog posts, sample author/tag files, and plushie image. The blog plugin was already disabled in `docusaurus.config.ts`, so this removes dormant template content without changing site navigation.
+- **Cleaned editorial placeholders.** Removed image-placeholder comments from [Lone Star Retractor System](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) and [Turner-Warwick Ryder Needle Holder](docs/01-foundations/tools/instruments/needle-holders/turner-warwick-ryder.mdx); rewrote the conversational draft note in [Gelman Urethral Sound](docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx); changed the pharmacology index wording from "placeholder page" to "template page."
+- **Neutralized strange / overemphatic wording.** Replaced nonessential uses of "dramatic," "extraordinary," and "breakthrough" with more clinical phrasing across anatomy, trauma, fistula, catheter, urinary diversion, bladder reconstruction, urethral flap, BNC/VUAS, incontinence, penile prosthesis, cosmetic genital surgery, and history pages. Legitimate medical terms and article/reference titles were preserved.
+
+Verification: `npm run typecheck` passes; `npm run build` passes; `npm run lint:links` passes; `git diff --check` passes. Full `npm run lint` remains blocked by pre-existing citation/orphan findings from the audit.
+
+---
+
 ## 2026-05-09 (later) — 04h Both-Genders Fistula treatment-atlas section + female redundancy cleanup
 
 ### 04h fistula repair

@@ -4,7 +4,19 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-09 (later)
+## Current Handoff - 2026-05-09 (style cleanup)
+
+Site-wide style cleanup after audit. Build clean.
+
+Highlights:
+
+- **Removed disabled Docusaurus sample blog** — deleted the stock demo blog posts, sample author/tag metadata, and plushie image. `docusaurus.config.ts` already has `blog: false`, so this removes dormant template content only.
+- **Cleaned leftover editorial placeholders** — removed image-placeholder comments from [Lone Star Retractor System](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) and [Turner-Warwick Ryder Needle Holder](docs/01-foundations/tools/instruments/needle-holders/turner-warwick-ryder.mdx); rewrote the conversational "on your tray" note in [Gelman Urethral Sound](docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx); changed pharmacology index wording from "placeholder page" to "template page."
+- **Tone pass for strange language** — replaced nonessential "dramatic," "extraordinary," and "breakthrough" wording with neutral clinical phrasing across anatomy, trauma, fistula, catheter, urinary diversion, bladder reconstruction, urethral flap, BNC/VUAS, incontinence, penile prosthesis, cosmetic genital surgery, and history pages. Legitimate medical terms / article titles were left intact (e.g., breakthrough reactions, breakthrough UTI, breakthrough / rescue PONV, and reference titles).
+
+Verification: `npm run typecheck`, `npm run build`, `npm run lint:links`, and `git diff --check` all pass. Full `npm run lint` still remains blocked by pre-existing citation/orphan issues from the audit, not by this style cleanup.
+
+## Previous Handoff - 2026-05-09 (later)
 
 Both-genders fistula treatment-atlas section added; female-fistula redundancy cleanup. Build clean.
 
