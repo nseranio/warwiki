@@ -68,96 +68,115 @@ export const diversionData = [
   {
     name: "Ileal Conduit",
     family: "Incontinent",
+    bestFor: "Default standard for most cystectomy patients; lowest operative complexity",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit",
   },
   {
     name: "Cutaneous Ureterostomy",
     family: "Incontinent",
+    bestFor: "Frailest patients in whom bowel manipulation should be avoided",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy",
   },
   {
     name: "Colon Conduit",
     family: "Incontinent",
+    bestFor: "Prior pelvic radiation (transverse colon above field) or concurrent colostomy at exenteration",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/colon-conduit",
   },
   {
     name: "Hautmann Neobladder",
     family: "Continent Orthotopic",
+    bestFor: "High-capacity W-shaped ileal neobladder when maximum reservoir volume is desired",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/hautmann-neobladder",
   },
   {
     name: "Modified Studer Pouch",
     family: "Continent Orthotopic",
+    bestFor: "Workhorse orthotopic neobladder; afferent isoperistaltic limb provides antireflux",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/modified-studer-pouch",
   },
   {
     name: "T-Pouch Modification",
     family: "Continent Orthotopic",
+    bestFor: "Antireflux serous-lined extramural tunnel without intussusception",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/t-pouch-modification",
   },
   {
     name: "Camey II Neobladder",
     family: "Continent Orthotopic",
+    bestFor: "Detubularized U-shaped ileal neobladder anastomosed end-on to native urethra",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/camey-ii-neobladder",
   },
   {
     name: "VIP (Vesica Ileale Padovana) Neobladder",
     family: "Continent Orthotopic",
+    bestFor: "Spherical ileal neobladder with antireflux ureteral implantation",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/vip-neobladder",
   },
   {
     name: "Le Bag (Light & Engelmann)",
     family: "Continent Orthotopic",
+    bestFor: "Ileocolonic neobladder leveraging cecal capacity",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/le-bag",
   },
   {
     name: "Mansoura Neobladder",
     family: "Continent Orthotopic",
+    bestFor: "Spherical ileal neobladder with serous-lined extramural ureteral tunnels",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/mansoura-neobladder",
   },
   {
     name: "Indiana Pouch",
     family: "Continent Cutaneous",
+    bestFor: "Continent diversion candidate when urethra is unusable; durable plicated-ileocecal-valve continence",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/indiana-pouch",
   },
   {
     name: "Kock Pouch",
     family: "Continent Cutaneous",
+    bestFor: "Stand-alone ileal continent reservoir with intussuscepted nipple-valve continence (historical lineage)",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/kock-pouch",
   },
   {
     name: "Mainz Pouch I",
     family: "Continent Cutaneous",
+    bestFor: "Ileocecal reservoir with appendix-stoma continent diversion",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/mainz-pouch-i",
   },
   {
     name: "Florida Pouch",
     family: "Continent Cutaneous",
+    bestFor: "Ileocecal continent diversion with tapered-ileum efferent limb",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/florida-pouch",
   },
   {
     name: "Double T-Pouch",
     family: "Continent Cutaneous",
+    bestFor: "Continent cutaneous diversion with serous-lined extramural antireflux mechanism",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch",
   },
   {
     name: "Ureterosigmoidostomy",
     family: "Continent Heterotopic",
+    bestFor: "Diversion using the intact rectum as continent reservoir (historical; secondary-malignancy risk)",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/ureterosigmoidostomy",
   },
   {
     name: "Mainz Pouch II (Sigma-Rectum Pouch)",
     family: "Continent Heterotopic",
+    bestFor: "Detubularized rectosigmoid reservoir; continence via anal sphincter",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/mainz-pouch-ii",
   },
   {
     name: "Colon Shuffle",
     family: "Complex / Salvage",
+    bestFor: "Salvage diversion using a previously-uninvolved colonic segment after failure or radiation injury",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/colon-shuffle",
   },
   {
     name: "Simple Cystectomy (Benign Disease)",
     family: "Complex / Salvage",
+    bestFor: "Devastated bladder from benign disease (radiation, fistula, IC/BPS, neurogenic) requiring removal without oncologic margin",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/simple-cystectomy",
   },
 ];
@@ -178,6 +197,10 @@ export const diversionColumns = [
       'Continent Heterotopic': '#7c3aed',
       'Complex / Salvage': '#6b7280',
     },
+  },
+  {
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 
