@@ -6,6 +6,66 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-09 — Resources cleanup + 04b/04c/04d/04h fistula and channel build-out + robotics
+
+### Resources
+
+- **Cleanup.** Filler removed from resources index, podcasts, patient resources, textbooks, websites, hidden-curriculum index/overview (deleted RVU-anecdote, "no MBA" stance, the "If you can't quote your numbers, you can't lead" section). Reordered websites so Professional Societies appears first. Textbooks: every card converted to a clickable link surfacing the Springer / PDF source.
+- **Site-wide admonition eradication.** Stripped every `:::tip / :::note / :::warning / :::info / :::caution` block across **123 files**; titles preserved as bolded inline lead.
+- **Billing & Coding restructure.** Tabs (CPT / ICD-10 / Modifiers / External Resources). ~120 new codes covering upper-tract reconstruction, bladder reconstruction & diversion, BNC/VUAS, vaginal recon & GAS, hypospadias / penile reconstruction, BPH, mesh / IPP / congenital / gender-incongruence / trauma / recurrent UTI codes.
+
+### Cosmetic / Podcasts
+
+- 04l female cosmetic database → static markdown table with a "Best for / indication" column.
+- Podcasts "Contributing" section deleted.
+
+### 04b — Continent catheterizable channels
+
+- Yang-Monti Channel (incl. Double Monti, Casale spiral, Tapered, sigmoid / gastric variants).
+- Tubularized Bladder Flap (Casale/Rink, Peard intussusception, Yachia rectus-strands, Stief-Becker Lich-Gregoir, Klauber-Cendron, Casella-Ost hybrid).
+- Hemi-Kock Continent Stoma (mesentery stripping; Marlex-collar / metal-staple legacy → absorbable-Polysorb era; Herschorn 2022 n=109; valve-failure salvage).
+- Indiana Augmentation Cystoplasty (IAC) — Khavari/Boone n=34, 100% continence at 31 mo; Redshaw cecocystoplasty vs tunneled-channel comparison (13% vs 50% secondary procedures).
+- Cutaneous Vesicostomy (Blocksom + Lapides + permanent vesicostomy + bladder-neck-closure-with-continent-vesicostomy "last resort"; Benchekroun hydraulic-valve historical entry).
+- 04b CCC principles page cross-linked to the new Parastomal Hernia page.
+
+### 04c — Urinary diversion
+
+- 04c diversion DB gained a "Best for / indication" column.
+- New canonical Parastomal Hernia After Urinary Diversion page — conflicting prophylactic-mesh RCTs (Liedberg / PUBMIC / MSKCC), Tanaka oblique-passage technique (no mesh; PSH 19.6% → 3.5%), Sugarbaker / keyhole / sandwich / 3-D mesh repair, Maskal 2024 RCT (no significant difference at 2 yr), MIS-vs-open data, robotic-specific outcomes (Xu, Dewulf), continent-cutaneous-diversion PSH (Helal, Stout). Indexed from 04c and 04b.
+
+### 04d — Upper-tract reconstruction
+
+- Balloon Dilation (pooled 89%/54% data; length / vascular / multi-stricture failure predictors).
+- Yang-Monti Ileal Ureter (Ali-El-Dein 2021 n=36; eGFR \<40 contraindication; double / triple Monti; onlay variant).
+- Reconfigured Colon Ureteral Substitute (Pope/Koch 1996 → Lazica 2012 long-term; retroperitoneal access; safe in renal insufficiency / post-radiation).
+- Pyelovesicostomy (Kennelly 1973 → Kim 2020 robotic; transplant + pelvic-ectopic-kidney indications; SPBG salvage).
+- Simple (Benign) Nephrectomy (BAUS "benign nephrectomy" reframing; XGP / TB / ADPKD per KDIGO 2025; why benign is harder than radical).
+- Transvaginal Ureteral Reimplantation (single-port robotic vNOTES; Kaouk SP, Hebert single-port, Laydner cadaver retroperitoneal NOTES, Crivellaro SARA).
+- Existing UAS revision page un-hidden and expanded with hybrid Bricker/Wallace (Can 2024), Allium metallic stent (Gao 2021), expanded ICG-prevention section (63% decision-change rate, 61% perfusion discordance). 04c diversion principles cross-links to it.
+- 04d DB `notes` column → `bestFor`. Deleted Lingual Mucosal Graft and solo Psoas Hitch rows.
+
+### Foundations / robotics
+
+- New vNOTES & Robotic vNOTES page covering platforms (da Vinci SP, Hominis), technique, indications, ACOG / RCOG guidance.
+
+### 04h — Female fistula repair (full VVF atlas build-out)
+
+Every row in the female-fistula database that previously slugged to the clinical-conditions page was renamed and repointed to a dedicated atlas page:
+
+- Conservative VVF Management (replaces "Foley Catheter Drainage" — Bodner-Adler selection-bias caveat; Barone 2015 RCT 7-day non-inferiority).
+- Endoscopic VVF Management (Bugbee fulguration, Ho:YAG laser, tissue adhesives, transurethral NOTES, transvesicoscopic, V-NOTES, lap / robotic / LESS).
+- Transvaginal Latzko Repair (Latzko 1942 principle; Luo & Shen 100% in n=108 apical; Cardenas-Trowers separate fascial closure; Pushkar radiation-induced 48% primary / 80% cumulative).
+- Transvaginal Sims-Simon Multilayered Closure (Sims 1845–49 / Simon 1860s–70s; Mörgeli & Tunn 2021 100% in 47 with median OR 40 min; Shaker RCT — no significant difference for trim vs no-trim).
+- Martius Flap for VVF — VVF-specific page distinct from the foundations Martius. Rothenberger 2025 cadaveric mapping (right labium / lateral approach safer); Kapriniotis 2024 individualization; Lee 2013 long-term donor-site morbidity.
+- O'Conor (Transabdominal Transvesical) VVF Repair — Nesrallah 100% (n=29); modified O'Conor (Dalela) 100% (n=26); Tavares 2026 robotic SR n=206 = 97% / 2.9% recurrence; transvesical-vs-extravesical equivalence.
+- Extravesical Transabdominal VVF Repair — Miklos & Moore 1999 / 15-yr 98% without flap; statistically equivalent to transvesical (RR 0.98, 95% CI 0.94–1.02); modifications (LESS, rainbow-shaped peritoneal flap Yang 2025, Dayan-Schwartz 12-step, early extravesical Giusti).
+- Robotic VVF Repair (platform overview) — ERUS 2020 consensus, Dayan-Schwartz 12-step extravesical (incl. post-oncologic chemo+immunotherapy patient), Sundaram-Hemal / Bora / Nóbrega / Occhino-Linder stepwise techniques, V-Loc barbed-suture practice, "one-stop" concurrent procedures (Boari, Burch, ureteral reimplant), complex/recurrent VVF data (Chandna n=33 = 93.9%).
+- Vaginal Fistula — Interposition Flap Options umbrella catalog: Martius, peritoneal, full-thickness labial, genito-gluteal fold, vaginal-flap transfer, omental, rainbow peritoneal, sigmoid epiploicae, gracilis, VRAM, Singapore (pudendal-thigh), TachoSil, SIS, PRP / PRF, amniotic, buccal. Flap-vs-no-flap controversy, flap-selection algorithm by clinical scenario, comparative summary.
+
+Verification: `npm run lint:links` passes (~915 files); `npm run typecheck` passes; `npm run build` passes.
+
+---
+
 ## 2026-05-08 — 04ab BNC/VUAS consolidation + 04b bladder-reconstruction build-out
 
 - **04ab database consolidation:** collapsed three first-line VUAS endoscopic-incision rows (holmium / cold-knife / DVIU) into one TUIBNC row; deleted DVIU+MMC and DCB rows (DCB now under balloon dilation); deleted RBNR, Extraperitoneal Robotic, and Robotic Transperineal Urethral Advancement rows (subsumed by Primary Re-Anastomosis and Combined Abdominoperineal pages). Both BNC and VUAS databases switched from a long-form "Notes" column to a `bestFor` column ("Best for / indication") with concise indication strings. Removed Young-Dees-Leadbetter, Kropp, and Pippi-Salle outlet procedures and their pages.

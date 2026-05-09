@@ -4,7 +4,47 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-08
+## Current Handoff - 2026-05-09
+
+Long fistula / catheterizable-channel / upper-tract / robotics build-out session. All work pushed to `main`. Build clean across ~915 files.
+
+Highlights of this session:
+
+- **Resources cleanup** — drop filler intros from resources index, podcasts, patient resources, textbooks, websites, hidden curriculum (deleted RVU-anecdote / "no MBA" / "If you can't quote your numbers, you can't lead" lines). Reorder websites so Professional Societies appears first. Textbooks: every card is a clickable link to a Google search surfacing the Springer / PDF source. Site-wide eradication of `:::tip / :::note / :::warning / :::info / :::caution` admonitions across **123 files** (titles preserved as bolded inline lead). Billing & Coding restructured into Tabs (CPT / ICD-10 / Modifiers / External Resources) with ~120 new codes covering upper-tract reconstruction, bladder reconstruction & diversion, BNC/VUAS, vaginal recon & GAS, hypospadias / penile recon, BPH, mesh / IPP / congenital / gender-incongruence / trauma / rUTI codes.
+- **Female cosmetic database** → static markdown table with a "Best for / indication" column. **Podcasts** "Contributing" section deleted.
+- **04b bladder reconstruction — full catheterizable-channel build-out**:
+  [Yang-Monti Channel](docs/04-surgical-techniques/04b-bladder-reconstruction/yang-monti.mdx) (incl. Double Monti, Casale spiral, Tapered, sigmoid/gastric variants),
+  [Tubularized Bladder Flap](docs/04-surgical-techniques/04b-bladder-reconstruction/tubularized-bladder-flap.mdx),
+  [Hemi-Kock Continent Stoma](docs/04-surgical-techniques/04b-bladder-reconstruction/hemi-kock.mdx),
+  [Indiana Augmentation Cystoplasty (IAC)](docs/04-surgical-techniques/04b-bladder-reconstruction/indiana-augmentation-cystoplasty.mdx),
+  [Cutaneous Vesicostomy (Blocksom / Lapides + Benchekroun history)](docs/04-surgical-techniques/04b-bladder-reconstruction/cutaneous-vesicostomy.mdx).
+- **04c urinary diversion** — new [Parastomal Hernia After Urinary Diversion](docs/04-surgical-techniques/04c-urinary-diversion/parastomal-hernia.mdx) (canonical home; cross-linked from 04b CCC principles section 9). 04c diversion DB gained a "Best for / indication" column.
+- **04d upper-tract reconstruction — major build-out**:
+  [Balloon Dilation](docs/04-surgical-techniques/04d-upper-tract-reconstruction/balloon-dilation.mdx),
+  [Yang-Monti Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/yang-monti-ileal-ureter.mdx),
+  [Reconfigured Colon Ureteral Substitute](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reconfigured-colon.mdx),
+  [Pyelovesicostomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/pyelovesicostomy.mdx),
+  [Simple (Benign) Nephrectomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/simple-nephrectomy.mdx),
+  [Transvaginal Ureteral Reimplantation (single-port robotic vNOTES)](docs/04-surgical-techniques/04d-upper-tract-reconstruction/transvaginal-ureteral-reimplant.mdx).
+  Existing UAS revision page un-hidden and expanded with hybrid Bricker/Wallace, Allium stent, and ICG-prevention discordance data; cross-linked from 04c diversion principles.
+  Database `notes` column → `bestFor`. Deleted Lingual Mucosal Graft and solo Psoas Hitch rows.
+- **Foundations / robotics** — new [vNOTES & Robotic vNOTES](docs/01-foundations/tools/technology/robotics/vnotes.mdx) page covering platforms, technique, indications, ACOG/RCOG guidance.
+- **04h fistula repair — full VVF atlas build-out** (all renamed and repointed from clinical-conditions slug to dedicated atlas pages):
+  [Conservative VVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/conservative-vvf-management.mdx) (replaces the old "Foley Catheter Drainage" row),
+  [Endoscopic VVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair.mdx) (cystoscopic Bugbee, Ho:YAG laser, tissue adhesives, NOTES, transvesicoscopic, V-NOTES, lap/robotic/LESS),
+  [Transvaginal Latzko Repair](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-latzko.mdx),
+  [Transvaginal Sims-Simon Multilayered Closure](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon.mdx),
+  [Martius Flap for VVF](docs/04-surgical-techniques/04h-fistula-repair/female/martius-flap-vvf.mdx),
+  [O'Conor (Transabdominal Transvesical) VVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx),
+  [Extravesical Transabdominal VVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx),
+  [Robotic VVF Repair (platform overview)](docs/04-surgical-techniques/04h-fistula-repair/female/robotic-vvf-repair.mdx),
+  and the unifying [Vaginal Fistula — Interposition Flap Options](docs/04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps.mdx) catalog (Martius / peritoneal / full-thickness labial / genito-gluteal fold / vaginal-flap transfer / omental / rainbow peritoneal / sigmoid epiploicae / gracilis / VRAM / Singapore / TachoSil / SIS / PRP / amniotic / buccal). Female-fistula DB rows repointed; intro repair-strategy table cross-links updated.
+
+Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
+
+Previous Heavy 04ab BNC/VUAS + 04b bladder-reconstruction build-out highlights are archived in `CHANGELOG.md`; keep this file as the compact working handbook.
+
+## Previous Handoff - 2026-05-08
 
 Heavy 04ab BNC/VUAS consolidation + 04b bladder-reconstruction build-out session. All work pushed to `main` via `git push origin HEAD:main`. Build clean across ~890+ files.
 
