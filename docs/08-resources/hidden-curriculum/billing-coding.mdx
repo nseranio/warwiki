@@ -3,19 +3,16 @@ title: Billing, Coding & Reimbursement
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import CodeSearchTable from '@site/src/components/CodeSearchTable';
 
 # Billing, Coding & Reimbursement
 
-Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing modifiers relevant to functional urology, GU reconstruction, and female pelvic medicine. Use the search bar to find codes quickly, or filter by type.
+Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing modifiers relevant to functional urology, GU reconstruction, and female pelvic medicine. Code descriptions and wRVU values are for educational reference; verify current values against the AMA CPT database and CMS Physician Fee Schedule before billing.
 
-:::note Disclaimer
-Code descriptions and wRVU values are for educational reference only and reflect CMS data at time of publication. Verify current values with your institution's coding team or AMA CPT database before billing.
-:::
-
----
-
-## CPT Procedure Codes
+<Tabs groupId="codes" queryString>
+<TabItem value="cpt" label="CPT Procedure Codes" default>
 
 <CodeSearchTable
   categoryLabel="Type"
@@ -28,42 +25,61 @@ Code descriptions and wRVU values are for educational reference only and reflect
   ]}
   data={[
     /* ── Artificial Urinary Sphincter ── */
-    { code: '53445', description: 'Insertion of artificial urinary sphincter (bladder neck or urethra), all components', category: 'AUS', wrvus: '13.00' },
-    { code: '53447', description: 'Removal and replacement of artificial urinary sphincter (bladder neck or urethra), all components', category: 'AUS', wrvus: '14.28' },
-    { code: '53446', description: 'Removal of artificial urinary sphincter (bladder neck or urethra), all components', category: 'AUS', wrvus: '11.02' },
-    { code: '53448', description: 'Removal and replacement of artificial urinary sphincter (bladder neck or urethra), all components, infected field', category: 'AUS', wrvus: '23.44' },
-    { code: '53449', description: 'Repair of artificial urinary sphincter (bladder neck or urethra): cuff, pump, or reservoir', category: 'AUS', wrvus: '10.56' },
     { code: '53444', description: 'Insertion of tandem cuff (second cuff) artificial urinary sphincter', category: 'AUS', wrvus: '14.19' },
+    { code: '53445', description: 'Insertion of artificial urinary sphincter (bladder neck or urethra), all components', category: 'AUS', wrvus: '13.00' },
+    { code: '53446', description: 'Removal of artificial urinary sphincter (bladder neck or urethra), all components', category: 'AUS', wrvus: '11.02' },
+    { code: '53447', description: 'Removal and replacement of artificial urinary sphincter, all components', category: 'AUS', wrvus: '14.28' },
+    { code: '53448', description: 'Removal and replacement of artificial urinary sphincter, all components, infected field', category: 'AUS', wrvus: '23.44' },
+    { code: '53449', description: 'Repair of artificial urinary sphincter: cuff, pump, or reservoir', category: 'AUS', wrvus: '10.56' },
     /* ── Penile Prosthesis ── */
     { code: '54400', description: 'Insertion of penile prosthesis; non-inflatable (malleable)', category: 'Penile Prosthesis', wrvus: '8.50' },
     { code: '54405', description: 'Insertion of multi-component, inflatable penile prosthesis (3-piece IPP)', category: 'Penile Prosthesis', wrvus: '14.52' },
     { code: '54406', description: 'Removal of all components of inflatable penile prosthesis without replacement', category: 'Penile Prosthesis', wrvus: '9.15' },
     { code: '54408', description: 'Repair of component(s) of multi-component inflatable penile prosthesis', category: 'Penile Prosthesis', wrvus: '13.91' },
-    { code: '54410', description: 'Removal and replacement of all components of multi-component inflatable penile prosthesis (non-infected)', category: 'Penile Prosthesis', wrvus: '15.18' },
-    { code: '54411', description: 'Removal and replacement of all components of multi-component inflatable penile prosthesis (infected field)', category: 'Penile Prosthesis', wrvus: '18.35' },
+    { code: '54410', description: 'Removal and replacement of all components of multi-component IPP (non-infected)', category: 'Penile Prosthesis', wrvus: '15.18' },
+    { code: '54411', description: 'Removal and replacement of all components of multi-component IPP (infected field)', category: 'Penile Prosthesis', wrvus: '18.35' },
     { code: '54415', description: 'Removal of non-inflatable (malleable) penile prosthesis without replacement', category: 'Penile Prosthesis', wrvus: '8.88' },
     { code: '54416', description: 'Removal and replacement of non-inflatable (malleable) penile prosthesis', category: 'Penile Prosthesis', wrvus: '12.08' },
     { code: '54417', description: 'Removal and replacement of non-inflatable (malleable) penile prosthesis (infected field)', category: 'Penile Prosthesis', wrvus: '16.10' },
-    /* ── Peyronie's Disease ── */
-    { code: '54200', description: "Injection procedure for Peyronie's disease (e.g., collagenase)", category: "Peyronie's", wrvus: '1.11' },
-    { code: '54205', description: "Injection procedure for Peyronie's disease with surgical exposure of plaque", category: "Peyronie's", wrvus: '8.97' },
+    /* ── Peyronie's / Penile Reconstruction ── */
     { code: '54110', description: "Incision of penile plaque (Peyronie's disease)", category: "Peyronie's", wrvus: '10.92' },
-    { code: '54111', description: "Incision of penile plaque (Peyronie's disease); with grafting 5 cm or less in length", category: "Peyronie's", wrvus: '14.42' },
-    { code: '54112', description: "Incision of penile plaque (Peyronie's disease); with graft greater than 5 cm in length", category: "Peyronie's", wrvus: '16.98' },
+    { code: '54111', description: "Incision of penile plaque (Peyronie's); with grafting 5 cm or less", category: "Peyronie's", wrvus: '14.42' },
+    { code: '54112', description: "Incision of penile plaque (Peyronie's); with graft greater than 5 cm", category: "Peyronie's", wrvus: '16.98' },
+    { code: '54200', description: "Injection procedure for Peyronie's disease (e.g., collagenase)", category: "Peyronie's", wrvus: '1.11' },
+    { code: '54205', description: "Injection procedure for Peyronie's with surgical exposure of plaque", category: "Peyronie's", wrvus: '8.97' },
+    { code: '54360', description: 'Plastic operation on penis to correct angulation', category: "Peyronie's", wrvus: '11.44' },
     /* ── Urethroplasty ── */
     { code: '53400', description: 'Urethroplasty; first stage, for fistula, diverticulum, or stricture (e.g., Johanson)', category: 'Urethroplasty', wrvus: '14.30' },
     { code: '53405', description: 'Urethroplasty; second stage (formation of urethra), including urinary diversion', category: 'Urethroplasty', wrvus: '16.40' },
     { code: '53410', description: 'Urethroplasty, 1-stage reconstruction of male anterior urethra', category: 'Urethroplasty', wrvus: '20.10' },
-    { code: '53415', description: 'Urethroplasty, transpubic or perineal, 1-stage, for reconstruction or repair of prostatic or membranous urethra', category: 'Urethroplasty', wrvus: '24.20' },
+    { code: '53415', description: 'Urethroplasty, transpubic or perineal, 1-stage, prostatic or membranous urethra', category: 'Urethroplasty', wrvus: '24.20' },
     { code: '53420', description: 'Urethroplasty, 2-stage reconstruction or repair of prostatic or membranous urethra; first stage', category: 'Urethroplasty', wrvus: '18.50' },
-    { code: '53425', description: 'Urethroplasty, 2-stage reconstruction or repair of prostatic or membranous urethra; second stage', category: 'Urethroplasty', wrvus: '19.80' },
+    { code: '53425', description: 'Urethroplasty, 2-stage; second stage', category: 'Urethroplasty', wrvus: '19.80' },
     { code: '53430', description: 'Urethroplasty, reconstruction of female urethra', category: 'Urethroplasty', wrvus: '15.60' },
-    /* ── Sling / Incontinence Surgery ── */
-    { code: '57288', description: 'Sling operation for stress incontinence (e.g., fascia or synthetic)', category: 'Sling / SUI', wrvus: '12.00' },
+    { code: '53431', description: 'Urethroplasty with tubularization of posterior urethra and/or lower bladder for incontinence (e.g., Tenago)', category: 'Urethroplasty', wrvus: '17.50' },
+    { code: '53450', description: 'Urethromeatoplasty, with mucosal advancement', category: 'Urethroplasty', wrvus: '7.13' },
+    { code: '53460', description: 'Urethromeatoplasty, with partial excision of distal urethral segment (Richardson)', category: 'Urethroplasty', wrvus: '6.86' },
+    { code: '53520', description: 'Closure of urethrostomy or urethrocutaneous fistula, male', category: 'Urethroplasty', wrvus: '9.21' },
+    /* ── Bladder Neck (BNC / VUAS) ── */
+    { code: '52275', description: 'Cystourethroscopy with internal urethrotomy (DVIU)', category: 'Bladder Neck', wrvus: '4.42' },
+    { code: '52276', description: 'Cystourethroscopy with direct vision internal urethrotomy', category: 'Bladder Neck', wrvus: '4.95' },
+    { code: '52277', description: 'Cystourethroscopy with resection of external sphincter (sphincterotomy)', category: 'Bladder Neck', wrvus: '7.20' },
+    { code: '52450', description: 'Transurethral incision of prostate (TUIP) — applicable to bladder-neck contracture', category: 'Bladder Neck', wrvus: '8.84' },
+    { code: '52640', description: 'Transurethral resection or incision of postoperative bladder neck contracture (TUIBNC)', category: 'Bladder Neck', wrvus: '4.51' },
+    { code: '53860', description: 'Transurethral radiofrequency micro-remodeling of female bladder neck and urethra (SUI)', category: 'Bladder Neck', wrvus: '3.06' },
+    /* ── Sling / Female SUI ── */
+    { code: '51840', description: 'Anterior vesicourethropexy (e.g., Marshall-Marchetti-Krantz), simple', category: 'Sling / SUI', wrvus: '11.50' },
+    { code: '51841', description: 'Anterior vesicourethropexy; complicated (e.g., secondary repair)', category: 'Sling / SUI', wrvus: '14.80' },
+    { code: '51845', description: 'Abdomino-vaginal vesical neck suspension (e.g., Stamey, Raz, modified Pereyra)', category: 'Sling / SUI', wrvus: '10.90' },
+    { code: '51990', description: 'Laparoscopic urethral suspension for stress incontinence', category: 'Sling / SUI', wrvus: '11.20' },
     { code: '51992', description: 'Laparoscopic sling operation for stress incontinence (e.g., fascia or synthetic)', category: 'Sling / SUI', wrvus: '11.20' },
-    { code: '51840', description: 'Anterior vesicourethropexy or urethropexy (e.g., Marshall-Marchetti-Krantz), simple', category: 'Sling / SUI', wrvus: '11.50' },
-    { code: '51841', description: 'Anterior vesicourethropexy or urethropexy; complicated (e.g., secondary repair)', category: 'Sling / SUI', wrvus: '14.80' },
-    { code: '51845', description: 'Abdomino-vaginal vesical neck suspension with or without endoscopic control (e.g., Stamey, Raz, modified Pereyra)', category: 'Sling / SUI', wrvus: '10.90' },
+    { code: '53442', description: 'Removal or revision of sling for male urinary incontinence', category: 'Sling / SUI', wrvus: '11.50' },
+    { code: '57288', description: 'Sling operation for stress incontinence (e.g., fascia or synthetic)', category: 'Sling / SUI', wrvus: '12.00' },
+    /* ── Urethral Bulking / Diverticulum ── */
+    { code: '51715', description: 'Endoscopic injection of implant material into submucosal tissues of urethra/bladder neck (urethral bulking)', category: 'Urethra Other', wrvus: '4.80' },
+    { code: '53230', description: 'Excision of urethral diverticulum (separate procedure); female', category: 'Urethra Other', wrvus: '12.30' },
+    { code: '53235', description: 'Excision of urethral diverticulum; male', category: 'Urethra Other', wrvus: '15.40' },
+    { code: '53240', description: 'Marsupialization of urethral diverticulum, male or female', category: 'Urethra Other', wrvus: '8.40' },
     /* ── Fistula Repair ── */
     { code: '51900', description: 'Closure of vesicovaginal fistula, abdominal approach', category: 'Fistula Repair', wrvus: '22.50' },
     { code: '51920', description: 'Closure of vesicourethral fistula', category: 'Fistula Repair', wrvus: '18.40' },
@@ -72,93 +88,208 @@ Code descriptions and wRVU values are for educational reference only and reflect
     { code: '57305', description: 'Closure of rectovaginal fistula with synchronous colostomy', category: 'Fistula Repair', wrvus: '22.30' },
     { code: '57307', description: 'Closure of rectovaginal fistula with abdominal approach and/or revision of colostomy', category: 'Fistula Repair', wrvus: '25.80' },
     { code: '57308', description: 'Closure of rectovaginal fistula; transperineal approach with perineal body reconstruction', category: 'Fistula Repair', wrvus: '18.20' },
+    { code: '57310', description: 'Closure of urethrovaginal fistula', category: 'Fistula Repair', wrvus: '12.84' },
+    { code: '57311', description: 'Closure of urethrovaginal fistula; with bulbocavernosus transplant', category: 'Fistula Repair', wrvus: '14.94' },
+    { code: '57320', description: 'Closure of vesicovaginal fistula; vaginal approach', category: 'Fistula Repair', wrvus: '15.18' },
+    { code: '57330', description: 'Closure of vesicovaginal fistula; transvesical and vaginal approach', category: 'Fistula Repair', wrvus: '19.85' },
+    { code: '45800', description: 'Closure of rectovesical fistula (rectourethral)', category: 'Fistula Repair', wrvus: '24.30' },
+    { code: '45805', description: 'Closure of rectovesical fistula with colostomy', category: 'Fistula Repair', wrvus: '28.40' },
     /* ── Urodynamics ── */
     { code: '51725', description: 'Simple cystometrography (e.g., spinal manometer)', category: 'Urodynamics', wrvus: '1.40' },
-    { code: '51726', description: 'Complex cystometrography (with or without voiding pressure studies, urethral calibration and/or urethral pressure profile studies)', category: 'Urodynamics', wrvus: '2.30' },
-    { code: '51728', description: 'Complex cystometrography with voiding pressure studies (micturition urethral pressure profile)', category: 'Urodynamics', wrvus: '2.80' },
+    { code: '51726', description: 'Complex cystometrography (with or without voiding pressure or urethral pressure profile)', category: 'Urodynamics', wrvus: '2.30' },
+    { code: '51727', description: 'Complex cystometrography with urethral pressure profile', category: 'Urodynamics', wrvus: '2.55' },
+    { code: '51728', description: 'Complex cystometrography with voiding pressure studies', category: 'Urodynamics', wrvus: '2.80' },
     { code: '51729', description: 'Complex cystometrography with voiding pressure studies and urethral pressure profile', category: 'Urodynamics', wrvus: '3.10' },
+    { code: '51736', description: 'Simple uroflowmetry (e.g., stop-watch flow rate, mechanical uroflow)', category: 'Urodynamics', wrvus: '0.17' },
+    { code: '51741', description: 'Complex uroflowmetry (e.g., calibrated electronic equipment)', category: 'Urodynamics', wrvus: '0.20' },
     { code: '51784', description: 'Electromyography studies of anal or urethral sphincter, other than needle', category: 'Urodynamics', wrvus: '1.50' },
     { code: '51785', description: 'Needle electromyography studies of anal or urethral sphincter, any technique', category: 'Urodynamics', wrvus: '2.00' },
-    { code: '51798', description: 'Measurement of post-voiding residual urine and/or bladder capacity by ultrasound', category: 'Urodynamics', wrvus: '0.55' },
+    { code: '51792', description: 'Stimulus evoked response (e.g., bulbocavernosus reflex latency)', category: 'Urodynamics', wrvus: '1.30' },
+    { code: '51797', description: 'Voiding pressure studies, intra-abdominal (rectal, gastric, intraperitoneal)', category: 'Urodynamics', wrvus: '0.75' },
+    { code: '51798', description: 'Measurement of post-void residual urine and/or bladder capacity by ultrasound', category: 'Urodynamics', wrvus: '0.55' },
     /* ── Hysterectomy — Abdominal ── */
-    { code: '58150', description: 'Total abdominal hysterectomy (corpus and cervix), with or without removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '14.18' },
+    { code: '58150', description: 'Total abdominal hysterectomy (corpus and cervix), with/without removal of tube(s)/ovary(s)', category: 'Hysterectomy', wrvus: '14.18' },
     { code: '58152', description: 'Total abdominal hysterectomy with colpo-urethropexy', category: 'Hysterectomy', wrvus: '17.40' },
-    { code: '58180', description: 'Supracervical abdominal hysterectomy (subtotal), with or without removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '13.80' },
+    { code: '58180', description: 'Supracervical abdominal hysterectomy (subtotal)', category: 'Hysterectomy', wrvus: '13.80' },
     { code: '58200', description: 'Total abdominal hysterectomy including partial vaginectomy; with para-aortic and pelvic lymph node sampling', category: 'Hysterectomy', wrvus: '28.60' },
     /* ── Hysterectomy — Vaginal ── */
     { code: '58260', description: 'Vaginal hysterectomy, for uterus 250 g or less', category: 'Hysterectomy', wrvus: '13.50' },
-    { code: '58262', description: 'Vaginal hysterectomy, for uterus 250 g or less; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '14.60' },
-    { code: '58263', description: 'Vaginal hysterectomy, for uterus 250 g or less; with removal of tube(s) and/or ovary(s), with repair of enterocele', category: 'Hysterectomy', wrvus: '16.20' },
-    { code: '58267', description: 'Vaginal hysterectomy, for uterus 250 g or less; with colporrhaphy (anterior and/or posterior)', category: 'Hysterectomy', wrvus: '16.80' },
-    { code: '58270', description: 'Vaginal hysterectomy, for uterus 250 g or less; with repair of enterocele', category: 'Hysterectomy', wrvus: '15.40' },
-    { code: '58290', description: 'Vaginal hysterectomy, for uterus greater than 250 g', category: 'Hysterectomy', wrvus: '16.00' },
-    { code: '58291', description: 'Vaginal hysterectomy, for uterus greater than 250 g; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '17.10' },
-    { code: '58292', description: 'Vaginal hysterectomy, for uterus greater than 250 g; with removal of tube(s) and/or ovary(s), with repair of enterocele', category: 'Hysterectomy', wrvus: '18.60' },
-    { code: '58293', description: 'Vaginal hysterectomy, for uterus greater than 250 g; with colporrhaphy (anterior and/or posterior)', category: 'Hysterectomy', wrvus: '19.20' },
-    { code: '58294', description: 'Vaginal hysterectomy, for uterus greater than 250 g; with repair of enterocele', category: 'Hysterectomy', wrvus: '17.80' },
+    { code: '58262', description: 'Vaginal hysterectomy, ≤250 g; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '14.60' },
+    { code: '58263', description: 'Vaginal hysterectomy, ≤250 g; with adnexectomy and enterocele repair', category: 'Hysterectomy', wrvus: '16.20' },
+    { code: '58267', description: 'Vaginal hysterectomy, ≤250 g; with anterior and/or posterior colporrhaphy', category: 'Hysterectomy', wrvus: '16.80' },
+    { code: '58270', description: 'Vaginal hysterectomy, ≤250 g; with repair of enterocele', category: 'Hysterectomy', wrvus: '15.40' },
+    { code: '58290', description: 'Vaginal hysterectomy, >250 g', category: 'Hysterectomy', wrvus: '16.00' },
+    { code: '58291', description: 'Vaginal hysterectomy, >250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '17.10' },
+    { code: '58292', description: 'Vaginal hysterectomy, >250 g; with adnexectomy and enterocele repair', category: 'Hysterectomy', wrvus: '18.60' },
+    { code: '58293', description: 'Vaginal hysterectomy, >250 g; with colporrhaphy', category: 'Hysterectomy', wrvus: '19.20' },
+    { code: '58294', description: 'Vaginal hysterectomy, >250 g; with repair of enterocele', category: 'Hysterectomy', wrvus: '17.80' },
     /* ── Hysterectomy — Laparoscopic ── */
-    { code: '58541', description: 'Laparoscopic supracervical hysterectomy, for uterus 250 g or less', category: 'Hysterectomy', wrvus: '14.20' },
-    { code: '58542', description: 'Laparoscopic supracervical hysterectomy, for uterus 250 g or less; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '15.30' },
-    { code: '58543', description: 'Laparoscopic supracervical hysterectomy, for uterus greater than 250 g', category: 'Hysterectomy', wrvus: '17.10' },
-    { code: '58544', description: 'Laparoscopic supracervical hysterectomy, for uterus greater than 250 g; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '18.20' },
-    { code: '58550', description: 'Laparoscopic-assisted vaginal hysterectomy (LAVH), for uterus 250 g or less', category: 'Hysterectomy', wrvus: '14.80' },
-    { code: '58552', description: 'LAVH, for uterus 250 g or less; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '15.90' },
-    { code: '58553', description: 'LAVH, for uterus greater than 250 g', category: 'Hysterectomy', wrvus: '17.50' },
-    { code: '58554', description: 'LAVH, for uterus greater than 250 g; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '18.60' },
-    { code: '58570', description: 'Laparoscopic total hysterectomy, for uterus 250 g or less', category: 'Hysterectomy', wrvus: '15.40' },
-    { code: '58571', description: 'Laparoscopic total hysterectomy, for uterus 250 g or less; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '16.50' },
-    { code: '58572', description: 'Laparoscopic total hysterectomy, for uterus greater than 250 g', category: 'Hysterectomy', wrvus: '18.20' },
-    { code: '58573', description: 'Laparoscopic total hysterectomy, for uterus greater than 250 g; with removal of tube(s) and/or ovary(s)', category: 'Hysterectomy', wrvus: '19.30' },
-    /* ── Prolapse Repair — Anterior/Posterior Compartment ── */
-    { code: '57240', description: 'Anterior colporrhaphy, repair of cystocele with or without repair of urethrocele, including cystoscopy when performed', category: 'Prolapse Repair', wrvus: '9.80' },
+    { code: '58541', description: 'Laparoscopic supracervical hysterectomy, ≤250 g', category: 'Hysterectomy', wrvus: '14.20' },
+    { code: '58542', description: 'Laparoscopic supracervical hysterectomy, ≤250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '15.30' },
+    { code: '58543', description: 'Laparoscopic supracervical hysterectomy, >250 g', category: 'Hysterectomy', wrvus: '17.10' },
+    { code: '58544', description: 'Laparoscopic supracervical hysterectomy, >250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '18.20' },
+    { code: '58550', description: 'Laparoscopic-assisted vaginal hysterectomy (LAVH), ≤250 g', category: 'Hysterectomy', wrvus: '14.80' },
+    { code: '58552', description: 'LAVH, ≤250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '15.90' },
+    { code: '58553', description: 'LAVH, >250 g', category: 'Hysterectomy', wrvus: '17.50' },
+    { code: '58554', description: 'LAVH, >250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '18.60' },
+    { code: '58570', description: 'Laparoscopic total hysterectomy, ≤250 g', category: 'Hysterectomy', wrvus: '15.40' },
+    { code: '58571', description: 'Laparoscopic total hysterectomy, ≤250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '16.50' },
+    { code: '58572', description: 'Laparoscopic total hysterectomy, >250 g', category: 'Hysterectomy', wrvus: '18.20' },
+    { code: '58573', description: 'Laparoscopic total hysterectomy, >250 g; with adnexectomy', category: 'Hysterectomy', wrvus: '19.30' },
+    /* ── Prolapse Repair ── */
+    { code: '56810', description: 'Perineoplasty, repair of perineum, nonobstetrical', category: 'Prolapse Repair', wrvus: '7.40' },
+    { code: '57106', description: 'Vaginectomy, partial removal of vaginal wall', category: 'Prolapse Repair', wrvus: '11.84' },
+    { code: '57110', description: 'Vaginectomy, complete removal of vaginal wall', category: 'Prolapse Repair', wrvus: '15.39' },
+    { code: '57120', description: 'Colpocleisis (Le Fort type)', category: 'Prolapse Repair', wrvus: '9.94' },
+    { code: '57200', description: 'Colporrhaphy, suture of injury of vagina (nonobstetrical)', category: 'Prolapse Repair', wrvus: '6.80' },
+    { code: '57210', description: 'Colporrhaphy, with extension to perineum', category: 'Prolapse Repair', wrvus: '8.20' },
+    { code: '57220', description: 'Plastic operation on urethral sphincter, vaginal approach (Kelly plication)', category: 'Prolapse Repair', wrvus: '7.60' },
+    { code: '57230', description: 'Plastic repair of urethrocele', category: 'Prolapse Repair', wrvus: '8.10' },
+    { code: '57240', description: 'Anterior colporrhaphy, repair of cystocele with or without urethrocele, includes cystoscopy', category: 'Prolapse Repair', wrvus: '9.80' },
     { code: '57250', description: 'Posterior colporrhaphy, repair of rectocele with or without perineorrhaphy', category: 'Prolapse Repair', wrvus: '8.60' },
     { code: '57260', description: 'Combined anteroposterior colporrhaphy', category: 'Prolapse Repair', wrvus: '12.40' },
     { code: '57265', description: 'Combined anteroposterior colporrhaphy with enterocele repair', category: 'Prolapse Repair', wrvus: '14.20' },
+    { code: '57267', description: 'Insertion of mesh or other prosthesis for repair of pelvic floor defect, each site (add-on)', category: 'Prolapse Repair', wrvus: '4.20' },
     { code: '57268', description: 'Repair of enterocele, vaginal approach (separate procedure)', category: 'Prolapse Repair', wrvus: '8.90' },
     { code: '57270', description: 'Repair of enterocele, abdominal approach (separate procedure)', category: 'Prolapse Repair', wrvus: '10.60' },
-    /* ── Prolapse Repair — Apical/Vault Suspension ── */
     { code: '57280', description: 'Colpopexy, abdominal approach (open sacrocolpopexy)', category: 'Prolapse Repair', wrvus: '17.80' },
-    { code: '57282', description: 'Colpopexy, vaginal extraperitoneal approach (sacrospinous, iliococcygeal)', category: 'Prolapse Repair', wrvus: '12.60' },
-    { code: '57283', description: 'Colpopexy, vaginal intraperitoneal approach (uterosacral, levator myorrhaphy)', category: 'Prolapse Repair', wrvus: '13.40' },
-    { code: '57425', description: 'Laparoscopic colpopexy (sacrocolpopexy)', category: 'Prolapse Repair', wrvus: '19.60' },
-    /* ── Prolapse Repair — Paravaginal / Mesh ── */
+    { code: '57282', description: 'Colpopexy, vaginal extraperitoneal (sacrospinous, iliococcygeal)', category: 'Prolapse Repair', wrvus: '12.60' },
+    { code: '57283', description: 'Colpopexy, vaginal intraperitoneal (uterosacral, levator myorrhaphy)', category: 'Prolapse Repair', wrvus: '13.40' },
     { code: '57284', description: 'Paravaginal defect repair; open abdominal approach', category: 'Prolapse Repair', wrvus: '14.20' },
     { code: '57285', description: 'Paravaginal defect repair; vaginal approach', category: 'Prolapse Repair', wrvus: '11.80' },
     { code: '57423', description: 'Paravaginal defect repair; laparoscopic approach', category: 'Prolapse Repair', wrvus: '16.40' },
-    { code: '57267', description: 'Insertion of mesh or other prosthesis for repair of pelvic floor defect, each site (anterior compartment, add-on)', category: 'Prolapse Repair', wrvus: '4.20' },
-    /* ── Prolapse Repair — Perineorrhaphy / Vaginal ── */
-    { code: '56810', description: 'Perineoplasty, repair of perineum, nonobstetrical', category: 'Prolapse Repair', wrvus: '7.40' },
-    { code: '57200', description: 'Colporrhaphy, suture of injury of vagina (nonobstetrical)', category: 'Prolapse Repair', wrvus: '6.80' },
-    { code: '57210', description: 'Colporrhaphy, suture of injury of vagina (nonobstetrical); with extension to perineum', category: 'Prolapse Repair', wrvus: '8.20' },
-    { code: '57220', description: 'Plastic operation on urethral sphincter, vaginal approach (e.g., Kelly urethral plication)', category: 'Prolapse Repair', wrvus: '7.60' },
-    { code: '57230', description: 'Plastic repair of urethrocele', category: 'Prolapse Repair', wrvus: '8.10' },
+    { code: '57425', description: 'Laparoscopic colpopexy (sacrocolpopexy)', category: 'Prolapse Repair', wrvus: '19.60' },
+    /* ── Vaginal / Genital Reconstruction (URPS / GAS) ── */
+    { code: '57291', description: 'Construction of artificial vagina; without graft', category: 'Vaginal Recon / GAS', wrvus: '14.69' },
+    { code: '57292', description: 'Construction of artificial vagina; with graft', category: 'Vaginal Recon / GAS', wrvus: '17.92' },
+    { code: '57295', description: 'Revision (including removal) of prosthetic vaginal graft; vaginal approach', category: 'Vaginal Recon / GAS', wrvus: '11.50' },
+    { code: '57296', description: 'Revision of prosthetic vaginal graft; abdominal approach', category: 'Vaginal Recon / GAS', wrvus: '17.70' },
+    { code: '55970', description: 'Intersex surgery; male to female', category: 'Vaginal Recon / GAS', wrvus: '40.00' },
+    { code: '55980', description: 'Intersex surgery; female to male', category: 'Vaginal Recon / GAS', wrvus: '47.50' },
+    /* ── Genital / Penile Reconstruction ── */
+    { code: '54300', description: 'Plastic operation of penis for straightening of chordee (e.g., hypospadias)', category: 'Genital Recon', wrvus: '11.34' },
+    { code: '54304', description: 'Plastic operation on penis for correction of chordee or first stage of fistula repair', category: 'Genital Recon', wrvus: '12.61' },
+    { code: '54308', description: 'Urethroplasty for second-stage hypospadias repair; ≤3 cm', category: 'Genital Recon', wrvus: '15.34' },
+    { code: '54312', description: 'Urethroplasty for second-stage hypospadias repair; >3 cm', category: 'Genital Recon', wrvus: '17.43' },
+    { code: '54316', description: 'Urethroplasty with free skin graft from area other than genitalia', category: 'Genital Recon', wrvus: '20.62' },
+    { code: '54318', description: 'Urethroplasty for third stage hypospadias repair to release penis from scrotum', category: 'Genital Recon', wrvus: '13.78' },
+    { code: '54322', description: 'One-stage distal hypospadias repair (e.g., MAGPI, V-flap)', category: 'Genital Recon', wrvus: '12.44' },
+    { code: '54324', description: 'One-stage distal hypospadias repair with extensive dissection', category: 'Genital Recon', wrvus: '13.36' },
+    { code: '54326', description: 'One-stage distal hypospadias repair with urethroplasty by local skin flaps', category: 'Genital Recon', wrvus: '14.20' },
+    { code: '54328', description: 'One-stage distal hypospadias repair with extensive skin flaps and urethroplasty', category: 'Genital Recon', wrvus: '15.05' },
+    { code: '54332', description: 'One-stage proximal penile or penoscrotal hypospadias repair', category: 'Genital Recon', wrvus: '17.36' },
+    { code: '54336', description: 'One-stage perineal hypospadias repair', category: 'Genital Recon', wrvus: '21.30' },
+    { code: '54340', description: 'Repair of hypospadias complication (fistula, stricture, diverticulum); simple', category: 'Genital Recon', wrvus: '8.40' },
+    { code: '54344', description: 'Repair of hypospadias complication; with mobilization and skin flaps', category: 'Genital Recon', wrvus: '13.76' },
+    { code: '54348', description: 'Repair of hypospadias complication; with extensive dissection and urethroplasty', category: 'Genital Recon', wrvus: '17.65' },
+    { code: '54352', description: 'Repair of hypospadias cripple requiring extensive dissection and urethroplasty with flap or free graft', category: 'Genital Recon', wrvus: '23.35' },
+    { code: '54380', description: 'Plastic operation on penis for epispadias distal to external sphincter', category: 'Genital Recon', wrvus: '14.50' },
+    { code: '54385', description: 'Plastic operation on penis for epispadias distal to external sphincter; with incontinence', category: 'Genital Recon', wrvus: '20.00' },
+    { code: '54390', description: 'Plastic operation on penis for epispadias with exstrophy of bladder', category: 'Genital Recon', wrvus: '28.55' },
+    { code: '54420', description: 'Corpora cavernosa-saphenous vein shunt (priapism)', category: 'Genital Recon', wrvus: '11.50' },
+    { code: '54430', description: 'Corpora cavernosa-corpus spongiosum shunt (priapism)', category: 'Genital Recon', wrvus: '10.00' },
+    { code: '54435', description: 'Corpora cavernosa irrigation/aspiration for priapism', category: 'Genital Recon', wrvus: '3.51' },
+    { code: '54437', description: 'Repair of traumatic corporeal tear(s) (penile fracture)', category: 'Genital Recon', wrvus: '12.45' },
+    { code: '54438', description: 'Replantation, penis, complete amputation including urethral repair', category: 'Genital Recon', wrvus: '32.60' },
+    { code: '54440', description: 'Plastic operation of penis for injury', category: 'Genital Recon', wrvus: '14.41' },
+    { code: '54520', description: 'Orchiectomy, simple (including subcapsular)', category: 'Genital Recon', wrvus: '5.96' },
+    { code: '54690', description: 'Laparoscopy, surgical; orchiectomy', category: 'Genital Recon', wrvus: '11.97' },
+    { code: '55175', description: 'Scrotoplasty; simple', category: 'Genital Recon', wrvus: '6.51' },
+    { code: '55180', description: 'Scrotoplasty; complicated', category: 'Genital Recon', wrvus: '12.50' },
+    /* ── Buccal Mucosa Graft Harvest ── */
+    { code: '40818', description: 'Excision of mucosa of vestibule of mouth as donor tissue (oral mucosa graft harvest)', category: 'Graft Harvest', wrvus: '4.10' },
+    { code: '40819', description: 'Excision of frenum, labial or buccal', category: 'Graft Harvest', wrvus: '2.45' },
+    /* ── Bladder Reconstruction / Urinary Diversion ── */
+    { code: '50845', description: 'Replacement of all or part of ureter by intestine segment, including anastomosis', category: 'Bladder Recon / Diversion', wrvus: '32.30' },
+    { code: '51550', description: 'Cystectomy, partial; simple', category: 'Bladder Recon / Diversion', wrvus: '17.49' },
+    { code: '51555', description: 'Cystectomy, partial, complicated (e.g., post-radiation, previous surgery)', category: 'Bladder Recon / Diversion', wrvus: '23.45' },
+    { code: '51565', description: 'Cystectomy, partial, with reimplantation of ureter(s) into bladder', category: 'Bladder Recon / Diversion', wrvus: '23.79' },
+    { code: '51570', description: 'Cystectomy, complete (simple cystectomy, benign disease)', category: 'Bladder Recon / Diversion', wrvus: '26.62' },
+    { code: '51575', description: 'Cystectomy, complete, with bilateral pelvic lymphadenectomy', category: 'Bladder Recon / Diversion', wrvus: '34.07' },
+    { code: '51580', description: 'Cystectomy, complete, with ureterosigmoidostomy or ureterocutaneous transplantations', category: 'Bladder Recon / Diversion', wrvus: '32.71' },
+    { code: '51585', description: 'Cystectomy, complete, with ureterosigmoidostomy and bilateral pelvic lymphadenectomy', category: 'Bladder Recon / Diversion', wrvus: '36.38' },
+    { code: '51590', description: 'Cystectomy, complete, with ureteroileal conduit or sigmoid bladder, including bowel anastomosis', category: 'Bladder Recon / Diversion', wrvus: '34.07' },
+    { code: '51595', description: 'Cystectomy, complete, with ureteroileal conduit and bilateral pelvic lymphadenectomy', category: 'Bladder Recon / Diversion', wrvus: '37.74' },
+    { code: '51596', description: 'Cystectomy, complete, with continent diversion to native or substitute bladder', category: 'Bladder Recon / Diversion', wrvus: '40.35' },
+    { code: '51960', description: 'Enterocystoplasty, including bowel anastomosis (ileocystoplasty / sigmoid cystoplasty)', category: 'Bladder Recon / Diversion', wrvus: '32.43' },
+    { code: '50820', description: 'Ureteroileal conduit (ileal loop diversion); including bowel anastomosis', category: 'Bladder Recon / Diversion', wrvus: '30.00' },
+    { code: '50825', description: 'Continent diversion to abdominal wall (Kock pouch, Indiana pouch, etc.)', category: 'Bladder Recon / Diversion', wrvus: '35.20' },
+    { code: '50830', description: 'Urinary undiversion (e.g., taking down ileal conduit, ureterosigmoidostomy)', category: 'Bladder Recon / Diversion', wrvus: '34.00' },
+    { code: '50840', description: 'Replacement of all or part of ureter by intestine segment, including anastomosis', category: 'Bladder Recon / Diversion', wrvus: '32.00' },
+    { code: '50860', description: 'Ureterostomy, transplantation of ureter to skin', category: 'Bladder Recon / Diversion', wrvus: '17.10' },
+    { code: '50951', description: 'Cystostomy with creation of catheterizable continent stoma (Mitrofanoff/Monti channel)', category: 'Bladder Recon / Diversion', wrvus: '24.50' },
+    { code: '51980', description: 'Cutaneous vesicostomy', category: 'Bladder Recon / Diversion', wrvus: '13.07' },
+    /* ── Upper Tract Reconstruction ── */
+    { code: '50400', description: 'Pyeloplasty, plastic operation on renal pelvis with or without ureter; simple', category: 'Upper Tract Recon', wrvus: '17.50' },
+    { code: '50405', description: 'Pyeloplasty; complicated (congenital kidney abnormality, secondary, calycoplasty)', category: 'Upper Tract Recon', wrvus: '21.27' },
+    { code: '50544', description: 'Laparoscopic pyeloplasty', category: 'Upper Tract Recon', wrvus: '21.86' },
+    { code: '50760', description: 'Ureteroureterostomy', category: 'Upper Tract Recon', wrvus: '20.83' },
+    { code: '50770', description: 'Transureteroureterostomy', category: 'Upper Tract Recon', wrvus: '23.55' },
+    { code: '50780', description: 'Ureteroneocystostomy; anastomosis of single ureter to bladder', category: 'Upper Tract Recon', wrvus: '20.66' },
+    { code: '50782', description: 'Ureteroneocystostomy; anastomosis of duplicated ureter to bladder', category: 'Upper Tract Recon', wrvus: '21.18' },
+    { code: '50783', description: 'Ureteroneocystostomy; with extensive ureteral tailoring', category: 'Upper Tract Recon', wrvus: '23.97' },
+    { code: '50785', description: 'Ureteroneocystostomy; with vesico-psoas hitch or bladder flap', category: 'Upper Tract Recon', wrvus: '25.07' },
+    { code: '50800', description: 'Ureteroenterostomy, direct anastomosis of ureter to intestine', category: 'Upper Tract Recon', wrvus: '17.39' },
+    { code: '50810', description: 'Ureterosigmoidostomy with creation of sigmoid bladder and anastomosis (Mainz II)', category: 'Upper Tract Recon', wrvus: '25.00' },
+    { code: '50815', description: 'Ureterocolonic conduit, including bowel anastomosis', category: 'Upper Tract Recon', wrvus: '30.00' },
+    { code: '50650', description: 'Ureterectomy, with bladder cuff (separate procedure)', category: 'Upper Tract Recon', wrvus: '17.85' },
+    { code: '50722', description: 'Ureterolysis for ovarian or iliac vein syndrome', category: 'Upper Tract Recon', wrvus: '17.85' },
+    { code: '50725', description: 'Ureterolysis with reduction of vena cava (retrocaval ureter)', category: 'Upper Tract Recon', wrvus: '21.71' },
+    { code: '50727', description: 'Revision of urinary-cutaneous anastomosis (any type urostomy)', category: 'Upper Tract Recon', wrvus: '12.82' },
+    { code: '50728', description: 'Revision of urinary-cutaneous anastomosis with repair of fascial defect and hernia', category: 'Upper Tract Recon', wrvus: '17.13' },
+    { code: '52341', description: 'Cystourethroscopy with treatment of ureteral stricture (balloon, laser, electrocautery, incision)', category: 'Upper Tract Recon', wrvus: '5.51' },
+    { code: '52342', description: 'Cystourethroscopy with treatment of ureteropelvic junction stricture', category: 'Upper Tract Recon', wrvus: '6.38' },
+    { code: '52343', description: 'Cystourethroscopy with treatment of intra-renal stricture', category: 'Upper Tract Recon', wrvus: '6.50' },
+    { code: '52346', description: 'Cystourethroscopy with treatment of UPJ stricture (Acucise endopyelotomy)', category: 'Upper Tract Recon', wrvus: '7.40' },
     /* ── Sacral Neuromodulation (InterStim) ── */
-    { code: '64561', description: 'Percutaneous implantation of neurostimulator electrode array; sacral nerve (transforaminal placement)', category: 'Sacral Neuromodulation', wrvus: '8.20' },
-    { code: '64581', description: 'Open implantation of neurostimulator electrode array; sacral nerve (transforaminal placement)', category: 'Sacral Neuromodulation', wrvus: '10.40' },
+    { code: '64561', description: 'Percutaneous implantation of neurostimulator electrode array; sacral nerve (transforaminal)', category: 'Sacral Neuromodulation', wrvus: '8.20' },
+    { code: '64581', description: 'Open implantation of neurostimulator electrode array; sacral nerve (transforaminal)', category: 'Sacral Neuromodulation', wrvus: '10.40' },
     { code: '64585', description: 'Revision or removal of peripheral neurostimulator electrode array', category: 'Sacral Neuromodulation', wrvus: '5.60' },
     { code: '64590', description: 'Insertion or replacement of peripheral or gastric neurostimulator pulse generator or receiver', category: 'Sacral Neuromodulation', wrvus: '5.10' },
     { code: '64595', description: 'Revision or removal of peripheral or gastric neurostimulator pulse generator or receiver', category: 'Sacral Neuromodulation', wrvus: '3.80' },
-    { code: '95972', description: 'Electronic analysis of implanted neurostimulator pulse generator system (complex programming)', category: 'Sacral Neuromodulation', wrvus: '1.92' },
-    /* ── OAB / Chemodenervation / PTNS ── */
-    { code: '52287', description: 'Cystoscopy with injection(s) for chemodenervation of the bladder (e.g., onabotulinumtoxinA)', category: 'OAB / Botox / PTNS', wrvus: '5.60' },
+    { code: '95970', description: 'Electronic analysis of implanted neurostimulator (simple programming)', category: 'Sacral Neuromodulation', wrvus: '0.45' },
+    { code: '95972', description: 'Electronic analysis of implanted neurostimulator (complex programming)', category: 'Sacral Neuromodulation', wrvus: '1.92' },
+    /* ── OAB / Botox / PTNS ── */
+    { code: '52287', description: 'Cystoscopy with injection(s) for chemodenervation of the bladder (onabotulinumtoxinA)', category: 'OAB / Botox / PTNS', wrvus: '5.60' },
     { code: '64566', description: 'Posterior tibial neurostimulation, percutaneous needle electrode, single treatment session (PTNS)', category: 'OAB / Botox / PTNS', wrvus: '1.60' },
-    { code: '51715', description: 'Endoscopic injection of implant material into the submucosal tissues of the urethra and/or bladder neck (urethral bulking)', category: 'OAB / Botox / PTNS', wrvus: '4.80' },
-    /* ── Cystoscopy ── */
+    /* ── Cystoscopy / Catheterization ── */
     { code: '52000', description: 'Cystourethroscopy (separate procedure)', category: 'Cystoscopy', wrvus: '2.28' },
     { code: '52001', description: 'Cystourethroscopy with irrigation and evacuation of multiple obstructing clots', category: 'Cystoscopy', wrvus: '3.40' },
-    { code: '52005', description: 'Cystourethroscopy with ureteral catheterization, with or without irrigation, instillation, or ureteropyelography', category: 'Cystoscopy', wrvus: '3.80' },
+    { code: '52005', description: 'Cystourethroscopy with ureteral catheterization, with or without irrigation/instillation/ureteropyelography', category: 'Cystoscopy', wrvus: '3.80' },
     { code: '52204', description: 'Cystourethroscopy with biopsy(s)', category: 'Cystoscopy', wrvus: '3.60' },
-    { code: '52214', description: 'Cystourethroscopy with fulguration (including cryosurgery or laser surgery) of trigone, bladder neck, prostatic fossa, urethra, or periurethral glands', category: 'Cystoscopy', wrvus: '4.20' },
-    { code: '52224', description: 'Cystourethroscopy with fulguration or treatment of minor bladder lesion(s) less than 0.5 cm', category: 'Cystoscopy', wrvus: '4.10' },
+    { code: '52214', description: 'Cystourethroscopy with fulguration of trigone, bladder neck, prostatic fossa, urethra, periurethral glands', category: 'Cystoscopy', wrvus: '4.20' },
+    { code: '52224', description: 'Cystourethroscopy with fulguration or treatment of minor bladder lesion(s) <0.5 cm', category: 'Cystoscopy', wrvus: '4.10' },
     { code: '52240', description: 'Cystourethroscopy with fulguration or treatment of large bladder tumor(s)', category: 'Cystoscopy', wrvus: '6.80' },
-    { code: '52310', description: 'Cystourethroscopy with removal of foreign body, calculus, or ureteral stent from urethra or bladder (simple)', category: 'Cystoscopy', wrvus: '3.20' },
+    { code: '52310', description: 'Cystourethroscopy with removal of foreign body, calculus, or ureteral stent (simple)', category: 'Cystoscopy', wrvus: '3.20' },
     { code: '52315', description: 'Cystourethroscopy with removal of foreign body, calculus, or ureteral stent; complicated', category: 'Cystoscopy', wrvus: '4.60' },
+    { code: '51702', description: 'Insertion of temporary indwelling bladder catheter; simple (e.g., Foley)', category: 'Cystoscopy', wrvus: '0.50' },
+    { code: '51703', description: 'Insertion of temporary indwelling bladder catheter; complicated (altered anatomy, fractured catheter)', category: 'Cystoscopy', wrvus: '1.51' },
+    { code: '51045', description: 'Cystotomy with insertion of ureteral catheter or stent', category: 'Cystoscopy', wrvus: '11.00' },
+    { code: '51100', description: 'Aspiration of bladder; by needle', category: 'Cystoscopy', wrvus: '0.61' },
+    { code: '51102', description: 'Aspiration of bladder; with insertion of suprapubic catheter', category: 'Cystoscopy', wrvus: '2.06' },
+    /* ── BPH / Male LUTS ── */
+    { code: '52441', description: 'Cystourethroscopy with insertion of permanent adjustable transprostatic implant (UroLift); single', category: 'BPH', wrvus: '4.50' },
+    { code: '52442', description: 'Cystourethroscopy with insertion of permanent adjustable transprostatic implant; each additional', category: 'BPH', wrvus: '1.13' },
+    { code: '53854', description: 'Transurethral destruction of prostate tissue; by radiofrequency-generated water vapor (Rezūm)', category: 'BPH', wrvus: '4.00' },
+    { code: '52601', description: 'TURP, complete (includes vasectomy, meatotomy, internal urethrotomy, urethral calibration)', category: 'BPH', wrvus: '13.07' },
+    { code: '52630', description: 'TURP, residual or regrowth of obstructive tissue', category: 'BPH', wrvus: '7.66' },
+    { code: '52647', description: 'Laser coagulation of prostate', category: 'BPH', wrvus: '11.00' },
+    { code: '52648', description: 'Laser vaporization of prostate (HoLEP/PVP)', category: 'BPH', wrvus: '13.00' },
+    { code: '52649', description: 'Laser enucleation of prostate (HoLEP)', category: 'BPH', wrvus: '15.99' },
+    { code: '53850', description: 'Transurethral microwave thermotherapy of prostate (TUMT)', category: 'BPH', wrvus: '5.20' },
+    { code: '53852', description: 'Transurethral needle ablation of prostate (TUNA)', category: 'BPH', wrvus: '5.20' },
+    /* ── Trauma / Genital ── */
+    { code: '54600', description: 'Reduction of torsion of testis, surgical, with or without fixation of contralateral testis', category: 'Trauma / Genital', wrvus: '8.60' },
+    { code: '54620', description: 'Fixation of contralateral testis (separate procedure)', category: 'Trauma / Genital', wrvus: '5.30' },
+    { code: '54670', description: 'Suture or repair of testicular injury', category: 'Trauma / Genital', wrvus: '8.06' },
+    { code: '11004', description: 'Debridement of skin/subq/muscle/fascia for necrotizing soft tissue infection; external genitalia and perineum', category: 'Trauma / Genital', wrvus: '8.16' },
+    { code: '11005', description: 'Debridement of NSTI; abdominal wall', category: 'Trauma / Genital', wrvus: '12.00' },
+    { code: '11006', description: 'Debridement of NSTI; external genitalia, perineum and abdominal wall', category: 'Trauma / Genital', wrvus: '15.00' },
   ]}
 />
 
----
-
-## ICD-10 Diagnosis Codes
+</TabItem>
+<TabItem value="icd" label="ICD-10 Diagnosis Codes">
 
 <CodeSearchTable
   categoryLabel="Condition"
@@ -170,32 +301,39 @@ Code descriptions and wRVU values are for educational reference only and reflect
     { key: 'category',   label: 'Condition',   width: '175px' },
   ]}
   data={[
-    /* ── Stress Urinary Incontinence ── */
-    { code: 'N39.3',    description: 'Stress incontinence (male) (female)', notes: '', category: 'Stress Incontinence' },
-    { code: 'N39.41',   description: 'Urge incontinence', notes: '', category: 'Stress Incontinence' },
-    { code: 'N39.46',   description: 'Mixed incontinence', notes: 'Stress + urge components', category: 'Stress Incontinence' },
+    /* ── Incontinence ── */
+    { code: 'N39.3',    description: 'Stress incontinence (male) (female)', notes: '', category: 'Incontinence' },
+    { code: 'N39.41',   description: 'Urge incontinence', notes: '', category: 'Incontinence' },
+    { code: 'N39.42',   description: 'Incontinence without sensory awareness', notes: '', category: 'Incontinence' },
+    { code: 'N39.43',   description: 'Post-void dribbling', notes: '', category: 'Incontinence' },
+    { code: 'N39.44',   description: 'Nocturnal enuresis', notes: '', category: 'Incontinence' },
+    { code: 'N39.45',   description: 'Continuous leakage', notes: 'May indicate fistula', category: 'Incontinence' },
+    { code: 'N39.46',   description: 'Mixed incontinence', notes: 'Stress + urge components', category: 'Incontinence' },
+    { code: 'N39.490',  description: 'Overflow incontinence', notes: '', category: 'Incontinence' },
+    { code: 'N39.491',  description: 'Coital incontinence', notes: '', category: 'Incontinence' },
+    { code: 'N39.492',  description: 'Postural (urinary) incontinence', notes: '', category: 'Incontinence' },
+    { code: 'N39.498',  description: 'Other specified urinary incontinence', notes: '', category: 'Incontinence' },
+    { code: 'R32',      description: 'Unspecified urinary incontinence', notes: '', category: 'Incontinence' },
     /* ── AUS / Urinary Device Complications ── */
-    { code: 'T83.1',    description: 'Mechanical complication of other urinary devices and implants', notes: '', category: 'AUS Complications' },
-    { code: 'T83.11',   description: 'Breakdown (mechanical) of other urinary devices and implants', notes: '', category: 'AUS Complications' },
-    { code: 'T83.111',  description: 'Breakdown (mechanical) of implanted urinary sphincter', notes: '', category: 'AUS Complications' },
-    { code: 'T83.111A', description: 'Breakdown (mechanical) of implanted urinary sphincter, initial encounter', notes: 'Use for active treatment', category: 'AUS Complications' },
-    { code: 'T83.12',   description: 'Displacement of other urinary devices and implants', notes: '', category: 'AUS Complications' },
-    { code: 'T83.121',  description: 'Displacement of implanted urinary sphincter', notes: '', category: 'AUS Complications' },
-    { code: 'T83.19',   description: 'Other mechanical complication of other urinary devices and implants', notes: '', category: 'AUS Complications' },
-    { code: 'T83.191',  description: 'Other mechanical complication of implanted urinary sphincter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.111A', description: 'Breakdown (mechanical) of implanted urinary sphincter, initial encounter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.118A', description: 'Breakdown of other urinary devices and implants, initial encounter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.121A', description: 'Displacement of implanted urinary sphincter, initial encounter', notes: '', category: 'AUS Complications' },
     { code: 'T83.191A', description: 'Other mechanical complication of implanted urinary sphincter, initial encounter', notes: '', category: 'AUS Complications' },
-    { code: 'T83.5',    description: 'Infection and inflammatory reaction due to prosthetic device, implant and graft in urinary system', notes: '', category: 'AUS Complications' },
-    { code: 'T83.591',  description: 'Infection and inflammatory reaction due to implanted urinary sphincter', notes: '', category: 'AUS Complications' },
     { code: 'T83.591A', description: 'Infection and inflammatory reaction due to implanted urinary sphincter, initial encounter', notes: '', category: 'AUS Complications' },
-    { code: 'T83.598',  description: 'Infection and inflammatory reaction due to other prosthetic device, implant and graft in urinary system', notes: '', category: 'AUS Complications' },
-    { code: 'T83.598A', description: 'Infection and inflammatory reaction due to other prosthetic device, implant and graft in urinary system, initial encounter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.598A', description: 'Infection due to other prosthetic device/implant in urinary system, initial encounter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.71XA', description: 'Erosion of implanted mesh into organ or tissue (urinary), initial encounter', notes: '', category: 'AUS Complications' },
+    { code: 'T83.81XA', description: 'Embolism due to genitourinary prosthetic device, initial encounter', notes: '', category: 'AUS Complications' },
+    /* ── Penile Prosthesis Complications ── */
+    { code: 'T83.490A', description: 'Other mechanical complication of implanted penile prosthesis, initial encounter', notes: '', category: 'IPP Complications' },
+    { code: 'T83.491A', description: 'Breakdown of implanted penile prosthesis, initial encounter', notes: '', category: 'IPP Complications' },
+    { code: 'T83.492A', description: 'Displacement of implanted penile prosthesis, initial encounter', notes: '', category: 'IPP Complications' },
+    { code: 'T83.61XA', description: 'Infection and inflammatory reaction due to implanted penile prosthesis, initial encounter', notes: '', category: 'IPP Complications' },
     /* ── Erectile Dysfunction ── */
     { code: 'N52.01',   description: 'Erectile dysfunction due to arterial insufficiency', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.02',   description: 'Corporo-venous occlusive erectile dysfunction', notes: '', category: 'Erectile Dysfunction' },
-    { code: 'N52.03',   description: 'Combined arterial insufficiency and corporo-venous occlusive erectile dysfunction', notes: '', category: 'Erectile Dysfunction' },
+    { code: 'N52.03',   description: 'Combined arterial insufficiency and corporo-venous occlusive ED', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.1',    description: 'Erectile dysfunction due to diseases classified elsewhere', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.2',    description: 'Drug-induced erectile dysfunction', notes: '', category: 'Erectile Dysfunction' },
-    { code: 'N52.3',    description: 'Postprocedural erectile dysfunction', notes: 'Use specific subcodes when possible', category: 'Erectile Dysfunction' },
     { code: 'N52.31',   description: 'Erectile dysfunction following radical prostatectomy', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.32',   description: 'Erectile dysfunction following radical cystectomy', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.33',   description: 'Erectile dysfunction following urethral surgery', notes: '', category: 'Erectile Dysfunction' },
@@ -206,48 +344,72 @@ Code descriptions and wRVU values are for educational reference only and reflect
     { code: 'N52.39',   description: 'Other and unspecified postprocedural erectile dysfunction', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.8',    description: 'Other male erectile dysfunction', notes: '', category: 'Erectile Dysfunction' },
     { code: 'N52.9',    description: 'Male erectile dysfunction, unspecified', notes: '', category: 'Erectile Dysfunction' },
-    /* ── Peyronie's Disease ── */
-    { code: 'N48.6',    description: "Induratio penis plastica (Peyronie's disease)", notes: '', category: "Peyronie's Disease" },
+    /* ── Peyronie's & Penile ── */
+    { code: 'N48.6',    description: "Induratio penis plastica (Peyronie's disease)", notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.0',    description: 'Leukoplakia of penis (includes lichen sclerosus of penis)', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.1',    description: 'Balanoposthitis', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.2',    description: 'Other inflammatory disorders of penis', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.81',   description: 'Thrombosis of superficial vein of penis', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.82',   description: 'Acquired buried penis', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.83',   description: 'Sclerosing lymphangitis of penis', notes: '', category: "Peyronie's / Penile" },
+    { code: 'N48.89',   description: 'Other specified disorders of penis', notes: '', category: "Peyronie's / Penile" },
     /* ── Priapism ── */
     { code: 'N48.30',   description: 'Priapism, unspecified', notes: '', category: 'Priapism' },
     { code: 'N48.31',   description: 'Priapism due to trauma', notes: '', category: 'Priapism' },
     { code: 'N48.32',   description: 'Priapism due to disease classified elsewhere', notes: '', category: 'Priapism' },
     { code: 'N48.33',   description: 'Priapism, drug-induced', notes: '', category: 'Priapism' },
     { code: 'N48.39',   description: 'Other priapism', notes: 'Ischemic, not elsewhere classified', category: 'Priapism' },
-    { code: 'N48.89',   description: 'Other specified disorders of penis', notes: '', category: 'Priapism' },
     /* ── Urethral Stricture ── */
     { code: 'N35.010',  description: 'Post-traumatic urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.011',  description: 'Post-traumatic bulbous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.012',  description: 'Post-traumatic membranous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.013',  description: 'Post-traumatic anterior urethral stricture', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.014',  description: 'Post-traumatic urethral stricture, female', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.016',  description: 'Post-traumatic urethral stricture, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
     { code: 'N35.111',  description: 'Postinfective urethral stricture NEC, male, meatal', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.112',  description: 'Postinfective bulbous urethral stricture NEC', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.113',  description: 'Postinfective anterior bulbous urethral stricture NEC', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.114',  description: 'Postinfective urethral stricture NEC, female', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.116',  description: 'Postinfective urethral stricture NEC, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
+    { code: 'N35.119',  description: 'Postinfective urethral stricture NEC, male, unspecified site', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.12',   description: 'Postinfective urethral stricture NEC, female', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.810',  description: 'Other urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.811',  description: 'Other urethral bulbous stricture, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.812',  description: 'Other urethral membranous stricture', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.813',  description: 'Other anterior bulbous urethral stricture, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.814',  description: 'Other anterior urethral stricture, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.816',  description: 'Other urethral stricture, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
+    { code: 'N35.819',  description: 'Other urethral stricture, male, unspecified site', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.82',   description: 'Other urethral stricture, female', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.9',    description: 'Urethral stricture, unspecified', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.110',  description: 'Postprocedural urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.111',  description: 'Postprocedural bulbous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.112',  description: 'Postprocedural membranous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.113',  description: 'Postprocedural anterior bulbous urethral stricture', notes: '', category: 'Urethral Stricture' },
+    { code: 'N99.114',  description: 'Postprocedural anterior urethral stricture, male', notes: '', category: 'Urethral Stricture' },
+    { code: 'N99.115',  description: 'Postprocedural urethral stricture, male, unspecified', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.116',  description: 'Postprocedural urethral stricture, male, overlapping sites', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.12',   description: 'Postprocedural urethral stricture, female', notes: '', category: 'Urethral Stricture' },
+    /* ── Bladder Neck Contracture / VUAS ── */
+    { code: 'N32.0',    description: 'Bladder-neck obstruction (bladder neck contracture)', notes: 'Use for primary BNC, post-TURP BNC', category: 'BNC / VUAS' },
+    { code: 'N99.89',   description: 'Other postprocedural complications of GU system', notes: 'Use for VUAS when no specific code applies', category: 'BNC / VUAS' },
     /* ── Fistula ── */
     { code: 'N82.0',    description: 'Vesicovaginal fistula', notes: '', category: 'Fistula' },
     { code: 'N82.1',    description: 'Other female urinary-genital tract fistulae', notes: 'Includes ureterovaginal, urethrovaginal', category: 'Fistula' },
+    { code: 'N82.2',    description: 'Fistula of vagina to small intestine', notes: '', category: 'Fistula' },
     { code: 'N82.3',    description: 'Fistula of vagina to large intestine (rectovaginal fistula)', notes: '', category: 'Fistula' },
     { code: 'N82.4',    description: 'Other female intestinal-genital tract fistulae', notes: '', category: 'Fistula' },
+    { code: 'N82.5',    description: 'Female genital tract-skin fistulae', notes: '', category: 'Fistula' },
+    { code: 'N82.8',    description: 'Other female genital tract fistulae', notes: '', category: 'Fistula' },
+    { code: 'N82.9',    description: 'Female genital tract fistula, unspecified', notes: '', category: 'Fistula' },
     { code: 'N36.0',    description: 'Urethral fistula', notes: '', category: 'Fistula' },
-    { code: 'N32.1',    description: 'Vesicointestinal fistula', notes: 'Includes vesicoenteric, vesicosigmoid', category: 'Fistula' },
+    { code: 'N32.1',    description: 'Vesicointestinal fistula', notes: 'Vesicoenteric, vesicosigmoid, rectourethral male', category: 'Fistula' },
     { code: 'N32.2',    description: 'Vesical fistula, not elsewhere classified', notes: '', category: 'Fistula' },
+    { code: 'K63.2',    description: 'Fistula of intestine', notes: 'Use with N36.0 for male rectourethral fistula', category: 'Fistula' },
     /* ── Neurogenic Bladder ── */
-    { code: 'N31.0',    description: 'Uninhibited neuropathic bladder, not elsewhere classified', notes: '', category: 'Neurogenic Bladder' },
-    { code: 'N31.1',    description: 'Reflex neuropathic bladder, not elsewhere classified', notes: '', category: 'Neurogenic Bladder' },
-    { code: 'N31.2',    description: 'Flaccid neuropathic bladder, not elsewhere classified', notes: '', category: 'Neurogenic Bladder' },
+    { code: 'N31.0',    description: 'Uninhibited neuropathic bladder, NEC', notes: '', category: 'Neurogenic Bladder' },
+    { code: 'N31.1',    description: 'Reflex neuropathic bladder, NEC', notes: '', category: 'Neurogenic Bladder' },
+    { code: 'N31.2',    description: 'Flaccid neuropathic bladder, NEC', notes: '', category: 'Neurogenic Bladder' },
     { code: 'N31.8',    description: 'Other neuromuscular dysfunction of bladder', notes: '', category: 'Neurogenic Bladder' },
     { code: 'N31.9',    description: 'Neuromuscular dysfunction of bladder, unspecified', notes: '', category: 'Neurogenic Bladder' },
     /* ── Pelvic Organ Prolapse ── */
@@ -261,24 +423,34 @@ Code descriptions and wRVU values are for educational reference only and reflect
     { code: 'N81.5',    description: 'Vaginal enterocele', notes: '', category: 'Prolapse' },
     { code: 'N81.6',    description: 'Rectocele', notes: '', category: 'Prolapse' },
     { code: 'N81.81',   description: 'Perineocele', notes: '', category: 'Prolapse' },
+    { code: 'N81.82',   description: 'Incompetence/disruption of pelvic floor muscles', notes: '', category: 'Prolapse' },
+    { code: 'N81.84',   description: 'Cervical stump prolapse', notes: 'Post-supracervical hysterectomy', category: 'Prolapse' },
+    { code: 'N81.85',   description: 'Cervicovaginal fistula', notes: '', category: 'Prolapse' },
     { code: 'N81.89',   description: 'Other female genital prolapse', notes: '', category: 'Prolapse' },
-    /* ── Overactive Bladder / LUTS ── */
-    { code: 'N32.81',   description: 'Overactive bladder', notes: 'Primary diagnosis for OAB', category: 'OAB / LUTS' },
-    { code: 'R39.15',   description: 'Urgency of urination', notes: 'Use with OAB when urgency is predominant symptom', category: 'OAB / LUTS' },
+    { code: 'N99.3',    description: 'Prolapse of vaginal vault after hysterectomy', notes: '', category: 'Prolapse' },
+    /* ── Mesh Complications ── */
+    { code: 'T83.711A', description: 'Erosion of implanted mesh into vagina, initial encounter', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.712A', description: 'Erosion of implanted mesh to surrounding organ or tissue', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.713A', description: 'Erosion of implanted urethral bulking agent', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.718A', description: 'Erosion of other implanted mesh into organ or tissue', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.721A', description: 'Exposure of implanted mesh into vagina, initial encounter', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.722A', description: 'Exposure of implanted mesh into surrounding organ/tissue', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.723A', description: 'Exposure of implanted urethral bulking agent', notes: '', category: 'Mesh Complications' },
+    { code: 'T83.728A', description: 'Exposure of other implanted mesh into organ or tissue', notes: '', category: 'Mesh Complications' },
+    /* ── OAB / LUTS ── */
+    { code: 'N32.81',   description: 'Overactive bladder', notes: 'Primary OAB diagnosis', category: 'OAB / LUTS' },
+    { code: 'N32.89',   description: 'Other specified disorders of bladder', notes: 'Bladder pain syndrome', category: 'OAB / LUTS' },
+    { code: 'R39.15',   description: 'Urgency of urination', notes: '', category: 'OAB / LUTS' },
     { code: 'R35.0',    description: 'Frequency of micturition', notes: '', category: 'OAB / LUTS' },
     { code: 'R35.1',    description: 'Nocturia', notes: '', category: 'OAB / LUTS' },
     { code: 'R35.89',   description: 'Other polyuria', notes: '', category: 'OAB / LUTS' },
-    { code: 'N39.41',   description: 'Urge incontinence', notes: '', category: 'OAB / LUTS' },
-    { code: 'N39.43',   description: 'Post-void dribbling', notes: '', category: 'OAB / LUTS' },
-    { code: 'N39.44',   description: 'Nocturnal enuresis', notes: '', category: 'OAB / LUTS' },
-    { code: 'N39.45',   description: 'Continuous leakage', notes: 'May indicate fistula', category: 'OAB / LUTS' },
-    { code: 'N39.490',  description: 'Overflow incontinence', notes: '', category: 'OAB / LUTS' },
-    { code: 'N39.498',  description: 'Other specified urinary incontinence', notes: '', category: 'OAB / LUTS' },
     /* ── Voiding Dysfunction / Retention ── */
     { code: 'R33.0',    description: 'Drug-induced urinary retention', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R33.8',    description: 'Other retention of urine', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R33.9',    description: 'Retention of urine, unspecified', notes: '', category: 'Voiding Dysfunction' },
+    { code: 'R39.11',   description: 'Hesitancy of micturition', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R39.12',   description: 'Poor urinary stream', notes: '', category: 'Voiding Dysfunction' },
+    { code: 'R39.13',   description: 'Splitting of urinary stream', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R39.14',   description: 'Feeling of incomplete bladder emptying', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R39.16',   description: 'Straining on urination', notes: '', category: 'Voiding Dysfunction' },
     { code: 'R39.198',  description: 'Other difficulties with micturition', notes: '', category: 'Voiding Dysfunction' },
@@ -288,35 +460,128 @@ Code descriptions and wRVU values are for educational reference only and reflect
     { code: 'N30.11',   description: 'Interstitial cystitis (chronic) with hematuria', notes: '', category: 'Interstitial Cystitis' },
     { code: 'N30.30',   description: 'Trigonitis without hematuria', notes: '', category: 'Interstitial Cystitis' },
     { code: 'N30.31',   description: 'Trigonitis with hematuria', notes: '', category: 'Interstitial Cystitis' },
-    { code: 'R30.9',    description: 'Painful micturition, unspecified (dysuria)', notes: '', category: 'Interstitial Cystitis' },
     { code: 'R30.0',    description: 'Dysuria', notes: '', category: 'Interstitial Cystitis' },
-    { code: 'N32.89',   description: 'Other specified disorders of bladder', notes: 'Use for bladder pain syndrome', category: 'Interstitial Cystitis' },
+    { code: 'R30.9',    description: 'Painful micturition, unspecified', notes: '', category: 'Interstitial Cystitis' },
     /* ── Hematuria ── */
     { code: 'R31.0',    description: 'Gross hematuria', notes: '', category: 'Hematuria' },
     { code: 'R31.1',    description: 'Benign essential microscopic hematuria', notes: '', category: 'Hematuria' },
     { code: 'R31.21',   description: 'Asymptomatic microscopic hematuria', notes: '', category: 'Hematuria' },
     { code: 'R31.29',   description: 'Other microscopic hematuria', notes: '', category: 'Hematuria' },
-    /* ── Uterine / Cervical Prolapse (additional) ── */
-    { code: 'N81.84',   description: 'Cervical stump prolapse', notes: 'Post-supracervical hysterectomy', category: 'Prolapse' },
-    { code: 'N81.85',   description: 'Cervicovaginal fistula', notes: '', category: 'Prolapse' },
-    { code: 'N99.3',    description: 'Prolapse of vaginal vault after hysterectomy', notes: 'Post-hysterectomy vault prolapse', category: 'Prolapse' },
-    { code: 'N85.2',    description: 'Hypertrophy of uterus', notes: 'May accompany prolapse', category: 'Prolapse' },
-    /* ── Rectal / Anorectal ── */
+    /* ── Anorectal ── */
     { code: 'K62.3',    description: 'Rectal prolapse', notes: '', category: 'Anorectal' },
     { code: 'K62.89',   description: 'Other specified diseases of rectum', notes: '', category: 'Anorectal' },
-    { code: 'K64.0',    description: 'First degree hemorrhoids', notes: '', category: 'Anorectal' },
-    { code: 'R15.0',    description: 'Incomplete defecation', notes: 'Obstructed defecation syndrome', category: 'Anorectal' },
+    { code: 'R15.0',    description: 'Incomplete defecation', notes: 'Obstructed defecation', category: 'Anorectal' },
     { code: 'R15.1',    description: 'Fecal smearing', notes: '', category: 'Anorectal' },
     { code: 'R15.2',    description: 'Fecal urgency', notes: '', category: 'Anorectal' },
     { code: 'R15.9',    description: 'Full incontinence of feces', notes: '', category: 'Anorectal' },
+    /* ── Upper Tract / Ureter ── */
+    { code: 'N13.0',    description: 'Hydronephrosis with ureteropelvic junction obstruction', notes: 'Primary UPJO', category: 'Upper Tract' },
+    { code: 'N13.1',    description: 'Hydronephrosis with ureteral stricture, NEC', notes: '', category: 'Upper Tract' },
+    { code: 'N13.2',    description: 'Hydronephrosis with renal and ureteral calculous obstruction', notes: '', category: 'Upper Tract' },
+    { code: 'N13.30',   description: 'Unspecified hydronephrosis', notes: '', category: 'Upper Tract' },
+    { code: 'N13.39',   description: 'Other hydronephrosis', notes: '', category: 'Upper Tract' },
+    { code: 'N13.4',    description: 'Hydroureter', notes: '', category: 'Upper Tract' },
+    { code: 'N13.5',    description: 'Crossing vessel and stricture of ureter without hydronephrosis', notes: '', category: 'Upper Tract' },
+    { code: 'N13.6',    description: 'Pyonephrosis', notes: '', category: 'Upper Tract' },
+    { code: 'N13.70',   description: 'Vesicoureteral-reflux, unspecified', notes: '', category: 'Upper Tract' },
+    { code: 'N13.71',   description: 'Vesicoureteral-reflux without reflux nephropathy', notes: '', category: 'Upper Tract' },
+    { code: 'N13.721',  description: 'VUR with reflux nephropathy without hydroureter, unilateral', notes: '', category: 'Upper Tract' },
+    { code: 'N13.722',  description: 'VUR with reflux nephropathy without hydroureter, bilateral', notes: '', category: 'Upper Tract' },
+    { code: 'N13.731',  description: 'VUR with reflux nephropathy with hydroureter, unilateral', notes: '', category: 'Upper Tract' },
+    { code: 'N13.732',  description: 'VUR with reflux nephropathy with hydroureter, bilateral', notes: '', category: 'Upper Tract' },
+    { code: 'N28.81',   description: 'Hypertrophy of kidney', notes: '', category: 'Upper Tract' },
+    { code: 'N28.82',   description: 'Megaloureter', notes: '', category: 'Upper Tract' },
+    { code: 'N28.86',   description: 'Ureteritis cystica', notes: '', category: 'Upper Tract' },
+    { code: 'N28.89',   description: 'Other specified disorders of kidney and ureter', notes: 'Use for retroperitoneal-fibrosis ureteric obstruction', category: 'Upper Tract' },
+    /* ── Congenital / Pediatric ── */
+    { code: 'Q54.0',    description: 'Hypospadias, balanic (glanular)', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.1',    description: 'Hypospadias, penile', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.2',    description: 'Hypospadias, penoscrotal', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.3',    description: 'Hypospadias, perineal', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.4',    description: 'Congenital chordee', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.8',    description: 'Other hypospadias', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q54.9',    description: 'Hypospadias, unspecified', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.0',    description: 'Epispadias', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.10',   description: 'Bladder exstrophy, unspecified', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.11',   description: 'Supravesical fissure of urinary bladder', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.12',   description: 'Cloacal exstrophy of urinary bladder', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.19',   description: 'Other exstrophy of urinary bladder', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.2',    description: 'Congenital posterior urethral valves', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.31',   description: 'Congenital bladder neck obstruction', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.32',   description: 'Congenital stricture of urethra', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.5',    description: 'Congenital absence of bladder and urethra', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.6',    description: 'Congenital diverticulum of bladder', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.71',   description: 'Congenital prolapse of urethra', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.74',   description: 'Double urethra', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q64.75',   description: 'Double urinary meatus', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q43.7',    description: 'Persistent cloaca', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q56.0',    description: 'Hermaphroditism, NEC', notes: 'DSD spectrum', category: 'Congenital / Pediatric' },
+    { code: 'Q56.1',    description: 'Male pseudohermaphroditism, NEC', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q56.2',    description: 'Female pseudohermaphroditism, NEC', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q56.3',    description: 'Pseudohermaphroditism, unspecified', notes: '', category: 'Congenital / Pediatric' },
+    { code: 'Q56.4',    description: 'Indeterminate sex, unspecified', notes: '', category: 'Congenital / Pediatric' },
+    /* ── Gender Incongruence / GAS ── */
+    { code: 'F64.0',    description: 'Transsexualism', notes: '', category: 'Gender / GAS' },
+    { code: 'F64.1',    description: 'Dual role transvestism', notes: '', category: 'Gender / GAS' },
+    { code: 'F64.2',    description: 'Gender identity disorder of childhood', notes: '', category: 'Gender / GAS' },
+    { code: 'F64.8',    description: 'Other gender identity disorders', notes: '', category: 'Gender / GAS' },
+    { code: 'F64.9',    description: 'Gender identity disorder, unspecified', notes: '', category: 'Gender / GAS' },
+    { code: 'Z87.890',  description: 'Personal history of sex reassignment', notes: '', category: 'Gender / GAS' },
+    /* ── Vaginal / Female Genital ── */
+    { code: 'N89.5',    description: 'Stricture and atresia of vagina', notes: 'Vaginal stenosis', category: 'Female Genital' },
+    { code: 'N89.6',    description: 'Tight hymenal ring', notes: '', category: 'Female Genital' },
+    { code: 'N89.8',    description: 'Other specified noninflammatory disorders of vagina', notes: '', category: 'Female Genital' },
+    { code: 'N90.4',    description: 'Leukoplakia of vulva', notes: '', category: 'Female Genital' },
+    { code: 'N90.5',    description: 'Atrophy of vulva', notes: '', category: 'Female Genital' },
+    { code: 'N90.60',   description: 'Unspecified hypertrophy of vulva', notes: '', category: 'Female Genital' },
+    { code: 'N90.61',   description: 'Childhood asymmetric labium majus enlargement', notes: '', category: 'Female Genital' },
+    { code: 'N90.69',   description: 'Other specified hypertrophy of vulva', notes: 'Labial hypertrophy', category: 'Female Genital' },
+    { code: 'N94.10',   description: 'Unspecified dyspareunia', notes: '', category: 'Female Genital' },
+    { code: 'N94.11',   description: 'Superficial (introital) dyspareunia', notes: '', category: 'Female Genital' },
+    { code: 'N94.12',   description: 'Deep dyspareunia', notes: '', category: 'Female Genital' },
+    { code: 'N94.818',  description: 'Other vulvodynia', notes: '', category: 'Female Genital' },
+    { code: 'N95.2',    description: 'Postmenopausal atrophic vaginitis (GSM)', notes: '', category: 'Female Genital' },
+    /* ── Skin / Lichen / Buried Penis ── */
+    { code: 'L90.0',    description: 'Lichen sclerosus et atrophicus', notes: 'Penile/genital LS', category: 'Skin / LS' },
+    { code: 'L73.2',    description: 'Hidradenitis suppurativa', notes: '', category: 'Skin / LS' },
+    /* ── BPH / Prostate ── */
+    { code: 'N40.0',    description: 'Benign prostatic hyperplasia without LUTS', notes: '', category: 'BPH / Prostate' },
+    { code: 'N40.1',    description: 'Benign prostatic hyperplasia with LUTS', notes: '', category: 'BPH / Prostate' },
+    { code: 'N40.2',    description: 'Nodular prostate without LUTS', notes: '', category: 'BPH / Prostate' },
+    { code: 'N40.3',    description: 'Nodular prostate with LUTS', notes: '', category: 'BPH / Prostate' },
+    { code: 'N42.81',   description: 'Prostatodynia syndrome', notes: '', category: 'BPH / Prostate' },
+    { code: 'N42.82',   description: 'Prostatosis syndrome', notes: '', category: 'BPH / Prostate' },
+    { code: 'N42.83',   description: 'Cyst of prostate', notes: '', category: 'BPH / Prostate' },
+    /* ── Trauma / Genital ── */
+    { code: 'S37.20XA', description: 'Unspecified injury of bladder, initial encounter', notes: '', category: 'Trauma' },
+    { code: 'S37.30XA', description: 'Unspecified injury of urethra, initial encounter', notes: '', category: 'Trauma' },
+    { code: 'S37.32XA', description: 'Laceration of urethra, initial encounter', notes: '', category: 'Trauma' },
+    { code: 'S39.840A', description: 'Fracture of corpus cavernosum penis, initial encounter', notes: '', category: 'Trauma' },
+    { code: 'S31.30XA', description: 'Unspecified open wound of penis, initial encounter', notes: '', category: 'Trauma' },
+    { code: 'N49.3',    description: 'Fournier gangrene', notes: '', category: 'Trauma' },
+    /* ── Bladder Cancer / Augmentation Indications ── */
+    { code: 'C67.9',    description: 'Malignant neoplasm of bladder, unspecified', notes: 'Use when cystectomy is for cancer', category: 'Bladder Recon Indication' },
+    { code: 'D09.0',    description: 'Carcinoma in situ of bladder', notes: '', category: 'Bladder Recon Indication' },
+    { code: 'N32.83',   description: 'Detrusor hypertrophy', notes: '', category: 'Bladder Recon Indication' },
+    /* ── Sexual Dysfunction (Female) ── */
+    { code: 'F52.22',   description: 'Female sexual arousal disorder', notes: '', category: 'Sexual Dysfunction' },
+    { code: 'F52.31',   description: 'Female orgasmic disorder', notes: '', category: 'Sexual Dysfunction' },
+    { code: 'F52.6',    description: 'Dyspareunia not due to a substance or known physiological condition', notes: '', category: 'Sexual Dysfunction' },
+    { code: 'N94.819',  description: 'Vulvodynia, unspecified', notes: '', category: 'Sexual Dysfunction' },
+    /* ── UTI / Recurrent UTI ── */
+    { code: 'N39.0',    description: 'Urinary tract infection, site not specified', notes: '', category: 'UTI' },
+    { code: 'N30.00',   description: 'Acute cystitis without hematuria', notes: '', category: 'UTI' },
+    { code: 'N30.01',   description: 'Acute cystitis with hematuria', notes: '', category: 'UTI' },
+    { code: 'N30.20',   description: 'Other chronic cystitis without hematuria', notes: '', category: 'UTI' },
+    { code: 'N30.21',   description: 'Other chronic cystitis with hematuria', notes: '', category: 'UTI' },
+    { code: 'Z87.440',  description: 'Personal history of urinary (tract) infections', notes: 'Recurrent UTI history', category: 'UTI' },
   ]}
 />
 
----
+</TabItem>
+<TabItem value="modifiers" label="Modifiers">
 
-## Billing Modifiers
-
-Modifiers are appended to CPT codes to indicate special circumstances. This is a fixed reference set applicable across all procedure types.
+Modifiers are appended to CPT codes to indicate special circumstances.
 
 | Modifier | Name | When to Use |
 |---|---|---|
@@ -330,19 +595,21 @@ Modifiers are appended to CPT codes to indicate special circumstances. This is a
 | **62** | Co-Surgeon | Two primary surgeons performing distinct portions; each reports same CPT + 62 |
 | **66** | Surgical Team | Highly complex surgery requiring multiple specialties simultaneously |
 | **74** | Discontinued Outpatient / ASC Procedure | Procedure aborted after anesthesia started in outpatient or ASC setting |
-| **76** | Repeat Procedure — Same Physician | Same CPT, same patient, same day (e.g., STSG at multiple sites) |
+| **76** | Repeat Procedure — Same Physician | Same CPT, same patient, same day |
+| **77** | Repeat Procedure — Different Physician | Same CPT, same patient, same day, different surgeon |
 | **78** | Unplanned Return to OR | Related procedure during post-op global period |
 | **79** | Unrelated Procedure in Post-op Period | Unrelated to primary procedure's post-op global |
 | **80** | Assistant Surgeon | Primary surgeon bills CPT alone; assistant bills CPT + 80 |
 | **82** | Assistant Surgeon (No Qualified Resident) | Must justify. Primary uses CPT only; assistant uses CPT + 82 |
+| **AS** | PA / NP / CNS Assistant at Surgery | Reports the assist when performed by a non-physician |
 | **XE** | Separate Encounter | Service distinct because it occurred during a separate encounter |
 | **XS** | Separate Structure | Service distinct because performed on a separate organ or structure |
 | **XP** | Separate Practitioner | Service distinct because performed by a different practitioner |
 | **XU** | Unusual Non-Overlapping Service | Service does not overlap usual components of the main service |
+| **LT / RT** | Left / Right Side | Designate side for unilateral procedures on paired organs |
 
----
-
-## External Coding Resources
+</TabItem>
+<TabItem value="external" label="External Coding Resources">
 
 | Resource | Description | Link |
 |---|---|---|
@@ -353,3 +620,6 @@ Modifiers are appended to CPT codes to indicate special circumstances. This is a
 | NCCI Edits | CMS National Correct Coding Initiative bundling edits | [cms.gov/ncci](https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits) |
 | AUA Coding Guides | AUA coding and reimbursement resources for urologists | [auanet.org](https://www.auanet.org/guidelines-and-quality/quality-and-measurement/coding) |
 | AUGS Coding Resources | Urogynecology-specific coding guidance | [augs.org](https://www.augs.org/practice-resources/coding/) |
+
+</TabItem>
+</Tabs>
