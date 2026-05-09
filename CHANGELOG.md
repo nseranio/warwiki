@@ -6,6 +6,17 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-09 (later) — 04h Both-Genders Fistula treatment-atlas section + female redundancy cleanup
+
+### 04h fistula repair
+
+- **New "Both-Genders Fistula Repair" section.** Dedicated treatment-atlas section paralleling Female and Male — landing page [`both-genders-fistula.mdx`](docs/04-surgical-techniques/04h-fistula-repair/both-genders-fistula.mdx) with decision-framework table + GenericDatabase (27 techniques across 7 fistula types), plus seven dedicated technique pages under hidden `both-genders/` category: [Pyeloenteric](docs/04-surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric.mdx), [Nephropleural](docs/04-surgical-techniques/04h-fistula-repair/both-genders/nephropleural.mdx), [Ureterocolonic](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureterocolonic.mdx), [Colovesical/Enterovesical](docs/04-surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical.mdx), [Vesicocutaneous](docs/04-surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous.mdx), [Post-Kidney-Transplant](docs/04-surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant.mdx), [Ureteroarterial](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial.mdx). 04h `index.mdx` updated to surface the new section under Decision Framework & Treatment Database.
+- **Female fistula redundancy cleanup.** Deleted `female/robotic-vvf-repair.mdx` (a "platform overview" that duplicated the dedicated [O'Conor](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx) and [Extravesical](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx) robotic atlas pages). Database row in [`female-fistula.mdx`](docs/04-surgical-techniques/04h-fistula-repair/female-fistula.mdx) and "See Also" link in [`vaginal-fistula-flaps.mdx`](docs/04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps.mdx) removed.
+
+Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
+
+---
+
 ## 2026-05-09 — Resources cleanup + 04b/04c/04d/04h fistula and channel build-out + robotics
 
 ### Resources

@@ -4,7 +4,18 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-09
+## Current Handoff - 2026-05-09 (later)
+
+Both-genders fistula treatment-atlas section added; female-fistula redundancy cleanup. Build clean.
+
+Highlights:
+
+- **04h Both-Genders Fistula Repair** — new treatment-atlas section paralleling Female and Male: landing page [`both-genders-fistula.mdx`](docs/04-surgical-techniques/04h-fistula-repair/both-genders-fistula.mdx) (decision-framework table + 27-technique GenericDatabase across 7 fistula types) and seven dedicated technique pages under hidden `both-genders/` category — [Pyeloenteric](docs/04-surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric.mdx), [Nephropleural](docs/04-surgical-techniques/04h-fistula-repair/both-genders/nephropleural.mdx), [Ureterocolonic](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureterocolonic.mdx), [Colovesical/Enterovesical](docs/04-surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical.mdx), [Vesicocutaneous](docs/04-surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous.mdx), [Post-Kidney-Transplant](docs/04-surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant.mdx), [Ureteroarterial](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial.mdx). 04h index updated.
+- **Female-fistula redundancy cleanup** — deleted `female/robotic-vvf-repair.mdx` (overview that duplicated the dedicated O'Conor and Extravesical robotic pages); database row + cross-link removed.
+
+Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all clean.
+
+## Previous Handoff - 2026-05-09
 
 Long fistula / catheterizable-channel / upper-tract / robotics build-out session. All work pushed to `main`. Build clean across ~915 files.
 

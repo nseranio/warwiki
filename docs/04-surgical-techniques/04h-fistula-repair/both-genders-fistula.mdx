@@ -1,0 +1,226 @@
+---
+title: Both-Genders Fistula Repair
+sidebar_position: 4
+hide_title: true
+slug: /surgical-techniques/04h-fistula-repair/both-genders-fistula
+---
+
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+# Both-Genders Fistula Repair
+
+Genitourinary fistulas that occur in both sexes — **upper-tract uroenteric**, **enterovesical**, **vesicocutaneous**, **post-transplant ureteral**, and **vascular-urinary** — share a small set of recurring decisions: whether the fistula will close with **diversion alone** (proximal urinary decompression ± fecal diversion), whether **endovascular or endoscopic** salvage is feasible, and when **definitive segmental resection ± interposition flap** is required. The dominant variables are the **etiology** (iatrogenic, inflammatory, malignant, radiation, post-transplant ischemia), the **functionality of the upstream organ** (kidney, bladder, bowel), and the **patient's fitness for major reconstruction**.
+
+---
+
+## Decision Framework
+
+| Fistula | First-Line | Definitive | Salvage / Adjunct |
+|---|---|---|---|
+| **Pyeloenteric** | Percutaneous nephrostomy ± stent (70% closure)<sup>[[1]](#ref1)</sup> | Nephrectomy + bowel repair when kidney non-functional | Endoscopic clipping / fulguration |
+| **Nephropleural** (post-PCNL ~3.3%) | Urinary diversion (PCN / JJ) + chest-tube drainage; small-bore 8–12F adequate | Most resolve &lt; 3 mo conservatively | VATS decortication; intrapleural t-PA |
+| **Ureterocolonic** | Resect diseased bowel + primary anastomosis; ureter usually preserved | Same | Anti-TNF first in Crohn's (ACG 2025) |
+| **Colovesical / Enterovesical** | One-stage sigmoidectomy + anastomosis; **Foley alone for bladder in 68%** (Ferguson 2008) | MIS sigmoidectomy preferred | OTS clip 50% durable when unfit |
+| **Vesicocutaneous** | Foley drainage; VAC for granulation control | Fistulectomy + partial cystectomy + vascularized flap (rectus femoris / omentum) | Endoscopic suture cystorrhaphy |
+| **Post-transplant** | Antegrade PCN ± JJ — definitive in **62%** at &gt; 72 h | Re-do UNC, ureteroureterostomy, [Boari + psoas hitch](/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch); omental wrap | Native-to-graft UU (1.5% vs 4.1% leak) |
+| **Ureteroarterial** | **Endovascular stent-graft** (preferred) | Open bypass / ligation if infected, failed endo, or pre-existing graft | Provocative arteriography for occult cases |
+
+---
+
+export const bothGendersFistulaTechniques = [
+  {
+    name: "Percutaneous Nephrostomy ± Antegrade Stent (Pyeloenteric)",
+    domain: "Pyeloenteric",
+    bestFor: "Post-procedural / small upper-tract fistula; nephron-sparing",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric",
+  },
+  {
+    name: "Endoscopic Clipping / Endoloop Ligation (Pyeloenteric)",
+    domain: "Pyeloenteric",
+    bestFor: "Patients unfit for surgery; isolated small tract",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric",
+  },
+  {
+    name: "Percutaneous Fulguration of Fistulous Tract",
+    domain: "Pyeloenteric",
+    bestFor: "Mature, narrow tract amenable to ablation",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric",
+  },
+  {
+    name: "Nephrectomy + Bowel Repair (Pyeloenteric)",
+    domain: "Pyeloenteric",
+    bestFor: "Non-functioning / chronically infected kidney with duodenal or colonic communication",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric",
+  },
+  {
+    name: "Conservative Drainage (Nephropleural)",
+    domain: "Nephropleural",
+    bestFor: "Post-supracostal-PCNL urinothorax; first-line in nearly all cases",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/nephropleural",
+  },
+  {
+    name: "Small-Bore Pleural Catheter (8–12F)",
+    domain: "Nephropleural",
+    bestFor: "Pleural decompression; comparable to chest tube with shorter LOS",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/nephropleural",
+  },
+  {
+    name: "VATS Decortication",
+    domain: "Nephropleural",
+    bestFor: "Refractory / loculated effusion failing tube drainage",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/nephropleural",
+  },
+  {
+    name: "Intrapleural Fibrinolytic (t-PA)",
+    domain: "Nephropleural",
+    bestFor: "Loculated collection resistant to drainage",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/nephropleural",
+  },
+  {
+    name: "Bowel Resection + Primary Anastomosis (Ureterocolonic)",
+    domain: "Ureterocolonic",
+    bestFor: "Diverticular / Crohn's / malignant ureterocolonic fistula; ureter usually preserved",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/ureterocolonic",
+  },
+  {
+    name: "Anti-TNF Therapy (Crohn's Ureterocolonic)",
+    domain: "Ureterocolonic",
+    bestFor: "Initial therapy in fistulizing Crohn's per ACG 2025; combine with ciprofloxacin × 12 wk",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/ureterocolonic",
+  },
+  {
+    name: "One-Stage Sigmoidectomy + Foley Drainage (CVF / EVF)",
+    domain: "Colovesical / Enterovesical",
+    bestFor: "Diverticular CVF without abscess; **68% need Foley alone for bladder** (Ferguson 2008)",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical",
+  },
+  {
+    name: "Robotic / Laparoscopic Sigmoidectomy (CVF)",
+    domain: "Colovesical / Enterovesical",
+    bestFor: "Fit patients; shorter LOS, equivalent recurrence",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical",
+  },
+  {
+    name: "Staged Resection (Complicated CVF)",
+    domain: "Colovesical / Enterovesical",
+    bestFor: "Abscess, obstruction, or emergent presentation",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical",
+  },
+  {
+    name: "OTS Clip (Endoscopic CVF / Colovaginal)",
+    domain: "Colovesical / Enterovesical",
+    bestFor: "Poor surgical candidate; ~50% durable closure",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical",
+  },
+  {
+    name: "Crohn's EVF — Bowel Resection + 2-Layer Bladder Closure",
+    domain: "Colovesical / Enterovesical",
+    bestFor: "Recurrent UTI / pyelonephritis; ~90% require surgery",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical",
+  },
+  {
+    name: "Foley Drainage (Vesicocutaneous)",
+    domain: "Vesicocutaneous",
+    bestFor: "Small fistula; spontaneous closure attempt",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous",
+  },
+  {
+    name: "Vacuum-Assisted Closure (VCF)",
+    domain: "Vesicocutaneous",
+    bestFor: "Skin contamination control; bridge to definitive repair or definitive in selected cases",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous",
+  },
+  {
+    name: "Fistulectomy + Partial Cystectomy + Vascularized Flap",
+    domain: "Vesicocutaneous",
+    bestFor: "Persistent / large defects; rectus femoris musculocutaneous or omental interposition",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous",
+  },
+  {
+    name: "Endoscopic Transurethral Suture Cystorrhaphy",
+    domain: "Vesicocutaneous",
+    bestFor: "Selected small VCF; minimally invasive alternative",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous",
+  },
+  {
+    name: "Antegrade PCN ± JJ Stent (Post-Transplant)",
+    domain: "Post-Transplant",
+    bestFor: "Late-presenting (&gt; 72 h) fistulae; definitive in ~62%",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant",
+  },
+  {
+    name: "Re-do Ureteroneocystostomy (Post-Transplant)",
+    domain: "Post-Transplant",
+    bestFor: "Adequate distal-ureter length; standard surgical option",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant",
+  },
+  {
+    name: "Native-to-Graft Ureteroureterostomy",
+    domain: "Post-Transplant",
+    bestFor: "Distal graft-ureter ischemia; reduces leak rate (1.5% vs 4.1%)",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant",
+  },
+  {
+    name: "Boari Flap + Psoas Hitch (Post-Transplant)",
+    domain: "Post-Transplant",
+    bestFor: "Long graft-ureter defects when reimplant insufficient",
+    slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch",
+  },
+  {
+    name: "Pedicled Omental Wrap (Recurrent Transplant Fistula)",
+    domain: "Post-Transplant",
+    bestFor: "Adjunct for recurrent fistula or hostile field",
+    slug: "/docs/foundations/surgical-principles/flaps/omental",
+  },
+  {
+    name: "Endovascular Stent-Graft (Ureteroarterial)",
+    domain: "Ureteroarterial",
+    bestFor: "Hemodynamically unstable / comorbid; preferred initial treatment",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial",
+  },
+  {
+    name: "Open Bypass / Ligation / Graft Interposition (UAF)",
+    domain: "Ureteroarterial",
+    bestFor: "Pre-existing graft, infection, abscess, or failed endovascular",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial",
+  },
+  {
+    name: "Provocative Arteriography (Diagnostic-Therapeutic)",
+    domain: "Ureteroarterial",
+    bestFor: "Occult bleeding; CT and standard angiography non-diagnostic",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial",
+  },
+];
+
+## Treatment Database
+
+<GenericDatabase
+  data={bothGendersFistulaTechniques}
+  columns={[
+    { key: 'name', header: 'Technique' },
+    {
+      key: 'domain',
+      header: 'Fistula Type',
+      badge: true,
+      badgeColors: {
+        'Pyeloenteric': '#7c3aed',
+        'Nephropleural': '#0891b2',
+        'Ureterocolonic': '#b45309',
+        'Colovesical / Enterovesical': '#1d4ed8',
+        'Vesicocutaneous': '#047857',
+        'Post-Transplant': '#be185d',
+        'Ureteroarterial': '#b91c1c',
+      },
+    },
+    { key: 'bestFor', header: 'Best for / indication' },
+  ]}
+  filterKey="domain"
+  filterLabel="Fistula Type"
+  entityLabel="techniques"
+/>
+
+---
+
+## References
+
+<a id="ref1"></a>1. Maillet PJ, Pelle-Francoz D, Leriche A, Leclercq R, Demiaux C. Fistulas of the upper urinary tract: percutaneous management. *J Urol.* 1987;138(6):1382–5. doi:[10.1016/s0022-5347(17)43648-2](https://doi.org/10.1016/s0022-5347(17)43648-2)
