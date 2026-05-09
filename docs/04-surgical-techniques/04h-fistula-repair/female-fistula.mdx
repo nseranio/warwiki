@@ -77,13 +77,13 @@ export const femaleFistulaTechniques = [
   {
     name: "Conservative Management (VVF)",
     domain: "VVF",
-    notes: "Continuous Foley drainage × 4–8 weeks for **small (&lt;5 mm), fresh, simple, non-irradiated** VVF identified early after iatrogenic injury. Up to 92.9% success in highly selected post-benign-gynecologic-surgery cases (selection bias); 0% in unselected larger fistulas. Adjuncts: anticholinergics, topical estrogen, nutritional optimization. Abandon and proceed to surgery if no improvement at 6–8 weeks or fistula &gt;1–2 cm.",
+    bestFor: "Small (&lt;5 mm), fresh, simple, non-irradiated iatrogenic VVF identified early — Foley × 4–8 wk ± anticholinergics / vaginal estrogen.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/conservative-vvf-management",
   },
   {
     name: "Endoscopic VVF Management",
     domain: "VVF",
-    notes: "Spectrum of endoscopy-guided techniques: cystoscopic Bugbee fulguration (73–80% for ≤3.5 mm), Ho:YAG laser welding (87.5% for ≤4 mm), tissue-adhesive injection (fibrin glue / cyanoacrylate / PRP — 75–92% for small fistulas), transurethral NOTES suture, transvesicoscopic repair (89% combined-route success), V-NOTES for apical VVF (88.2%), and laparoscopic / robotic / LESS approaches (80–100%, comparable to open).",
+    bestFor: "Small VVF amenable to fulguration (≤3.5 mm), Ho:YAG laser (≤4 mm), tissue adhesives (&lt;1 cm), or transvesicoscopic / V-NOTES / lap-robotic in larger lesions.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair",
   },
 
@@ -91,101 +91,61 @@ export const femaleFistulaTechniques = [
   {
     name: "Transvaginal Latzko Repair",
     domain: "VVF",
-    notes: "**Partial colpocleisis** — vaginal epithelium denuded around the fistula without excising the tract; multi-layer imbrication of surrounding fibromuscular tissue. **82–100% success** in non-irradiated post-hysterectomy VVF; **48% primary / 80% cumulative** in radiation-induced VVF. Repeatable; ± Martius adjunct.",
+    bestFor: "Apical post-hysterectomy VVF with adequate vaginal depth — partial colpocleisis preserving tract; repeatable.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-latzko",
   },
   {
     name: "Transvaginal Sims-Simon Multi-Layered Closure",
     domain: "VVF",
-    notes: "Wide vesicovaginal mobilization + separate layered closure of bladder and vaginal wall — preserves vaginal length, broadly applicable to mid-vaginal / trigonal / apical fistulae. Modified Sims-Simon: **100% success in 47 consecutive cases without interposition, median OR 40 min** (Mörgeli & Tunn 2021). Edge-trimming debated (Shaker RCT — no significant difference).",
+    bestFor: "Mid-vaginal / trigonal / apical VVF where vaginal length must be preserved — workhorse layered vaginal repair without interposition.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon",
-  },
-  {
-    name: "Transvaginal VVF Repair with Martius Flap",
-    domain: "VVF",
-    notes: "Transvaginal closure with interposed Martius labial fat-pad flap for recurrent, radiated, or complex VVFs where tissue bulk and vascularity drive the decision. Kapriniotis 2024 review: routine use **probably unnecessary for simple non-irradiated fistulas** (&gt; 90% closure without flap) but valuable in 80–97% of complex / recurrent / radiation-induced / urethral-involving cases. Lee 2013 long-term donor-site morbidity data: 81% normal sensation, 14% numbness, 7% labial distortion at mean 7 yr.",
-    slug: "/docs/surgical-techniques/04h-fistula-repair/female/martius-flap-vvf",
   },
 
   // ===== VVF — TRANSABDOMINAL =====
   {
     name: "Open / Robotic O'Conor VVF Repair",
     domain: "VVF",
-    notes: "Transabdominal **sagittal bladder bivalving** through the fistula with intravesical visualization of both ureteral orifices, fistula-tract excision, separate vaginal- and bladder-wall closure, and omental interposition. Nesrallah 1999: **100%** in 29 supratrigonal repairs (incl. 9 prior failures). Modified O'Conor (Dalela): shorter cystotomy, rotation flaps — 100% in 26. EAU 2020 robotic consensus recommends robotic O'Conor for supratrigonal non-obstetric VVF; Tavares 2026 SR (n = 206): 97% success, 2.9% recurrence.",
+    bestFor: "Supratrigonal, high, or peri-orifice VVF requiring intravesical exposure of ureteral orifices ± reimplantation; preferred MIS approach for non-obstetric supratrigonal VVF.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair",
-  },
-  {
-    name: "Laparoscopic VVF Repair",
-    domain: "VVF",
-    notes: "Laparoscopic transvesical or extravesical approach. Singh 2026 25-yr single-center experience: **96.6% first-repair success** with laparoscopic — comparable to open (94.0%) and transvaginal (94.2%).",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
   },
   {
     name: "Extravesical Transabdominal VVF Repair",
     domain: "VVF",
-    notes: "Transperitoneal vesicovaginal-space dissection **without cystotomy** — minimizes bladder tissue loss. Miklos & Moore 15-yr (n = 44, lap): **98% success without flap**, EBL 39 mL, LOS 1.1 d. Statistically equivalent to transvesical (98.0% vs 95.9%; RR 0.98, 95% CI 0.94–1.02). Best for supratrigonal post-hysterectomy fistulae without need for ureteral reimplantation.",
+    bestFor: "Supratrigonal post-hysterectomy VVF without need for ureteral reimplantation — minimizes bladder tissue loss (no cystotomy).",
     slug: "/docs/surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair",
   },
+
   // ===== VVF — TISSUE INTERPOSITION =====
   {
     name: "Vaginal-Fistula Interposition Flap Options (umbrella)",
     domain: "VVF",
-    notes: "Comprehensive flap-vs-no-flap framework + every interposition option (Martius, peritoneal, full-thickness labial, genito-gluteal fold, vaginal-flap transfer, omental, rainbow-shaped peritoneal, sigmoid epiploicae, gracilis, VRAM, Singapore, TachoSil, SIS, PRP/PRF, amniotic, buccal). Flap-selection algorithm by clinical scenario.",
+    bestFor: "Recurrent, radiated, or complex fistulas where vascularized interposition is needed — full flap-vs-no-flap framework + every flap option (Martius, peritoneal, omental, gracilis, VRAM, Singapore, TachoSil, SIS, PRP, amniotic, buccal, etc.).",
     slug: "/docs/surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps",
-  },
-  {
-    name: "Omental Flap Interposition (VVF)",
-    domain: "VVF",
-    notes: "Pedicled omental flap — most common abdominal interposition. Used for large fistulas, radiation, and complex transabdominal repairs. Minor risks: postoperative pain, ileus.",
-    slug: "/docs/foundations/surgical-principles/flaps/omental",
-  },
-  {
-    name: "Gracilis Muscle Flap (VVF)",
-    domain: "VVF",
-    notes: "[Gracilis transposition](/docs/foundations/surgical-principles/flaps/gracilis) for VVFs with significant tissue loss or radiation. Donor-site morbidity; technically demanding. More commonly used for RVF and RUF in male patients.",
-    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
-  },
-  {
-    name: "Peritoneal Flap Interposition",
-    domain: "VVF",
-    notes: "[Peritoneal flap](/docs/foundations/surgical-principles/flaps/peritoneal) as an alternative to omentum during transabdominal / laparoscopic / robotic repair. Less robust blood supply but readily available without additional dissection.",
-    slug: "/docs/foundations/surgical-principles/flaps/peritoneal",
-  },
-  {
-    name: "Rectus Abdominis Flap (Radiation VVF)",
-    domain: "VVF",
-    notes: "Pedicled rectus abdominis flap based on the deep inferior epigastric vessels. Provides non-irradiated, well-vascularized tissue for radiation-induced recurrent VVF. **100% success in small series at 5–8 yr follow-up.**",
-    slug: "/docs/foundations/surgical-principles/flaps/vram",
-  },
-  {
-    name: "Small Intestinal Graft (Salvage Radiation VVF)",
-    domain: "VVF",
-    notes: "Salvage technique for recurrent radiation VVF after multiple failed repairs. Complex; last resort before urinary diversion (Vaso 2015 case report).",
   },
 
   // ===== VUF =====
   {
     name: "Foley Drainage ± Hormonal Suppression (VUF)",
     domain: "VUF",
-    notes: "Conservative management for **small (&lt; 5 mm), early-diagnosis** VUF. Continuous Foley drainage; some series add GnRH-agonist hormonal suppression to halt menstrual flow during healing. Limited evidence; case reports.",
+    bestFor: "Small (&lt;5 mm), early-diagnosis VUF — continuous Foley ± GnRH-agonist menstrual suppression.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
   },
   {
     name: "Uterine-Sparing Robotic O'Conor (VUF)",
     domain: "VUF",
-    notes: "Modified O'Conor for vesicouterine fistula (Youssef syndrome) preserving the uterus when fertility is desired. Intracorporeal access to the vesicouterine pouch with hysterotomy-side closure. Bonavina 2024 SR (n = 284): **100% success on first attempt** across all surgical approaches.",
+    bestFor: "Youssef syndrome with desired fertility — uterine-sparing transabdominal repair.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
   },
   {
     name: "Hysterectomy with Bladder Repair (VUF)",
     domain: "VUF",
-    notes: "Definitive VUF repair for patients not desiring uterine preservation — hysterectomy + multilayer bladder closure with omental interposition. Hysterectomy is **not routinely necessary** — uterine-sparing repair feasible with 23 reported live births post-repair (Bonavina 2024).",
+    bestFor: "VUF in patients not desiring uterine preservation — hysterectomy + multilayer bladder closure with omental interposition.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
   },
   {
     name: "Transvaginal VUF Repair",
     domain: "VUF",
-    notes: "Layered transvaginal repair in prone jackknife position. Feasible and effective in experienced urogynecologists' hands; 2–3.5 yr durability reported.",
+    bestFor: "Accessible VUF in experienced urogynecologists' hands — prone jackknife layered transvaginal closure.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicouterine",
   },
 
@@ -193,31 +153,31 @@ export const femaleFistulaTechniques = [
   {
     name: "Ureteral Stent (UretVF) — First-Line",
     domain: "UretVF",
-    notes: "**AUA Urotrauma 2020 first-line** for ureterovaginal fistula. Retrograde JJ stent attempted first; if retrograde fails, antegrade percutaneous nephrostomy + antegrade stent. Stent × 6 wk; **64–100% success**. Rabani 2021 — retrograde stent successful in 6/8 (75%) post-cesarean UretVF; all resolved at 3 mo with no stricture.",
+    bestFor: "Stent-passable UretVF — AUA Urotrauma 2020 first-line; retrograde JJ stent × 6 wk, antegrade if retrograde fails.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/ureterovaginal",
   },
   {
     name: "Ureteroneocystostomy ± Psoas Hitch (UretVF)",
     domain: "UretVF",
-    notes: "Definitive [reimplantation](/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteral-reimplantation) when stent fails. Open / laparoscopic / robotic; extravesical (Lich-Gregoir) most common for MIS. Linder 2018 robotic series: **100% success at 29.3 mo**. Kidd 2021 multi-institutional: 100% success, 1-day LOS.",
+    bestFor: "Stent failure or distal ureteral defect — definitive extravesical (Lich-Gregoir) reimplantation, open / lap / robotic.",
     slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteral-reimplantation",
   },
   {
     name: "Boari Flap (UretVF)",
     domain: "UretVF",
-    notes: "[Boari tubularized bladder flap](/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch) for distal ureteral defects too long for direct reimplantation + psoas hitch. Bridges defects up to 8–12 cm. Avoid in radiated bladder.",
+    bestFor: "Distal ureteral defects up to 8–12 cm too long for direct reimplantation + psoas hitch; avoid in radiated bladder.",
     slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch",
   },
   {
     name: "Ureteroureterostomy (UretVF)",
     domain: "UretVF",
-    notes: "End-to-end ureteral anastomosis for mid-ureteral UretVF with adequate proximal and distal length. Performed in 17% of robotic UretVF repairs (Kidd 2021).",
+    bestFor: "Mid-ureteral UretVF with adequate proximal and distal length — end-to-end ureteral anastomosis.",
     slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/ureteroureterostomy",
   },
   {
     name: "Transureteroureterostomy (UretVF)",
     domain: "UretVF",
-    notes: "Anastomosis of injured ureter to contralateral healthy ureter. Reserved for cases where ipsilateral reconstruction is not feasible. Avoid if contralateral disease, stones, or urothelial carcinoma.",
+    bestFor: "Salvage when ipsilateral reconstruction not feasible; avoid with contralateral disease, stones, or urothelial carcinoma.",
     slug: "/docs/surgical-techniques/04d-upper-tract-reconstruction/trans-ureteroureterostomy",
   },
 
@@ -225,122 +185,96 @@ export const femaleFistulaTechniques = [
   {
     name: "Transvaginal Layered UVF Repair",
     domain: "Urethrovaginal",
-    notes: "Excision of fistula tract + multi-layer tension-free closure of urethra + separate vaginal-wall closure. Preferred approach. **90–100% primary success**; up to **52% develop post-repair SUI** due to sphincteric damage — counsel patients re: staged anti-incontinence procedure (synthetic / autologous sling cures 59% / improves 32%).",
+    bestFor: "Most UVF — preferred approach; counsel re: staged anti-incontinence procedure for post-repair SUI (up to 52%).",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/urethrovaginal",
-  },
-  {
-    name: "Latzko + Martius Flap (UVF)",
-    domain: "Urethrovaginal",
-    notes: "Latzko technique with [Martius bulbocavernosus flap](/docs/foundations/surgical-principles/flaps/martius) interposition for mid-urethral fistulas where periurethral tissue is scarce. Provides well-vascularized tissue to reinforce the repair (Zilberlicht 2016).",
-    slug: "/docs/foundations/surgical-principles/flaps/martius",
-  },
-  {
-    name: "Labial Pedicle Flap Urethroplasty (Complex UVF)",
-    domain: "Urethrovaginal",
-    notes: "Labial skin flap reconstruction of the urethra + simultaneous fistula closure for complex UVF associated with urethral stricture. Xu 2013 series (n = 44): **93% anatomical / 91% functional success**.",
-    slug: "/docs/foundations/surgical-principles/flaps/labia-majora-fasciocutaneous",
   },
 
   // ===== RVF — CONSERVATIVE =====
   {
     name: "Nonoperative Management (Obstetric RVF)",
     domain: "RVF",
-    notes: "Sitz baths, fiber, wound care, antibiotics for infection, stool-bulking × 3–6 months. **52–66% healing** for obstetric RVF (ASCRS 2022 Recommendation 12 Grade 2C). May also be considered for other benign minimally symptomatic fistulas.",
+    bestFor: "Acute obstetric RVF and other benign minimally symptomatic fistulas — sitz baths, fiber, wound care × 3–6 mo.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "Draining Seton (RVF)",
     domain: "RVF",
-    notes: "Facilitates resolution of acute inflammation / infection; useful for narrow fistulas, small vaginal openings, or multiple tracts. Long-term symptomatic relief for poor surgical candidates (ASCRS 2022 Recommendation 13 Grade 1C).",
+    bestFor: "Active inflammation / infection, narrow fistulas, small vaginal openings, multiple tracts, or poor surgical candidates.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "Medical Therapy for Crohn's RVF",
     domain: "RVF",
-    notes: "[Infliximab](/docs/foundations/pharmacology/legacy-low-evidence) ± immunomodulator + antibiotics + seton for drainage. **ACG 2025 Strong Recommendation, Moderate Evidence**. ACCENT II trial — efficacy for RVF closure maintenance. Surgical repair only after endoscopic mucosal healing of the rectosigmoid is confirmed.",
+    bestFor: "Crohn's-related RVF — anti-TNF + immunomodulator + seton; surgical repair only after endoscopic mucosal healing.",
   },
 
   // ===== RVF — LOCAL / PERINEAL SURGERY =====
   {
     name: "Endorectal Advancement Flap (ERAF)",
     domain: "RVF",
-    notes: "**ASCRS 2022 procedure of choice** (Recommendation 14 Grade 1C). Full-thickness or partial-thickness rectal flap advanced over the fistula opening. **41–78% success** depending on etiology / technique. Failure factors: sphincter abnormalities, Crohn's, prior radiation, recurrent fistula.",
+    bestFor: "Simple low RVF with intact sphincter — ASCRS 2022 procedure of choice.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "ERAF + Sphincteroplasty",
     domain: "RVF",
-    notes: "ERAF combined with overlapping anal sphincteroplasty ± levatorplasty when sphincter defect is present. **Improves healing to 80%** vs ERAF alone (41%).",
+    bestFor: "Low RVF with concurrent sphincter defect — ERAF + overlapping anal sphincteroplasty ± levatorplasty.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "Episioproctotomy",
     domain: "RVF",
-    notes: "Transperineal division of anterior anal sphincter complex + rectovaginal septum, then layered repair. **78–100% healing**; postoperative fecal incontinence rare (~8%). ASCRS 2022 Recommendation 15 Grade 1C — for **obstetric or cryptoglandular RVF with sphincter defects**.",
+    bestFor: "Obstetric or cryptoglandular RVF with sphincter defects — transperineal division + layered repair.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "Transvaginal RVF Repair",
     domain: "RVF",
-    notes: "Vaginal advancement flap or layered closure from the vaginal side. Used in 17% of procedures in large series; preferred by some urogynecologists. Best for low, non-irradiated, uninflamed RVF.",
+    bestFor: "Low, non-irradiated, uninflamed RVF — vaginal-side advancement flap or layered closure.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
-  },
-
-  // ===== RVF — TISSUE INTERPOSITION =====
-  {
-    name: "Martius Flap Interposition (RVF)",
-    domain: "RVF",
-    notes: "**First-line interposition** per ASCRS 2022 Recommendation 16. **65–94% per-procedure / 69% per-patient success at 23 mo** (Pastier 2024 — equivalent to gracilis with shorter LOS, similar morbidity, **option to avoid stoma** in 27% with no impact on outcome). Smoking is the only negative predictor.",
-    slug: "/docs/foundations/surgical-principles/flaps/martius",
-  },
-  {
-    name: "Gracilis Muscle Interposition (RVF — Salvage)",
-    domain: "RVF",
-    notes: "Reserve as **salvage after Martius failure** (Pastier 2024). Pooled 64% success (range 33–100%); 59% in reoperative series. Longer LOS, higher complication rate (28–47%), 32% donor-site SSI; stoma formation associated with improved outcomes.",
-    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
   },
 
   // ===== RVF — TRANSABDOMINAL =====
   {
     name: "Fecal Diversion Alone (RVF)",
     domain: "RVF",
-    notes: "Diverting loop ileostomy or colostomy. **37% heal with diversion alone** in anastomotic RVF series. Used when active inflammation or sepsis precludes definitive repair, or as a temporizing measure.",
+    bestFor: "Active inflammation / sepsis precluding definitive repair, or temporizing measure in anastomotic RVF.",
   },
   {
     name: "Repeat Coloanal Anastomosis / Pull-Through (GRECCAR)",
     domain: "RVF",
-    notes: "Transabdominal redo coloanal anastomosis ± delayed colonic pull-through for **anastomotic RVF post-colorectal surgery** (ASCRS 2022 Recommendation 17 Grade 1C). Major procedures (gracilis, coloanal, APR) — independently associated with success (OR 6.4; Corte 2015).",
+    bestFor: "Anastomotic RVF post-colorectal surgery — transabdominal redo coloanal ± delayed pull-through.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/rectovaginal",
   },
   {
     name: "Abdominoperineal Resection (APR — RVF)",
     domain: "RVF",
-    notes: "Last resort for intractable RVF disease — typically radiation-induced or refractory Crohn's. Permanent colostomy. Reserve for failed all-other-options scenarios.",
+    bestFor: "Last resort for intractable radiation-induced or refractory Crohn's RVF after all other options fail.",
   },
 
   // ===== OBSTETRIC =====
   {
     name: "Obstetric VVF Repair (Goh / Waaldijk Classification)",
     domain: "Obstetric",
-    notes: "Classification-driven transvaginal repair of obstructed-labour-injury-complex fistulas. **Goh classification preferred** (uses fixed external-meatus reference; superior prognostic accuracy vs Waaldijk; predicts post-closure incontinence). Fistula Foundation **87% success across 24,568 repairs**; Mourad 2026 16-yr multinational (n = 1,185, 12 countries) — 82% closure; primary 85% / simple 91%.",
+    bestFor: "Obstructed-labor injury complex — classification-driven transvaginal repair (Goh preferred for prognostic accuracy).",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
   },
   {
     name: "Panzi Score (Complex Obstetric Severity)",
     domain: "Obstetric",
-    notes: "Composite 0–3 score (Mukwege 2018) derived from Goh + Waaldijk: circumferential defect + proximity to urethra + size. **Each 1-point increase → 1.65× failure odds** (p &lt; 0.001). Parsimonious operative-decision aid for circumferential / extensive injury.",
+    bestFor: "Circumferential / extensive obstetric injury — operative-decision aid; each 1-point ↑ raises failure odds 1.65×.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
   },
   {
     name: "POFRI Procedure (FIGO 2025)",
     domain: "Obstetric",
-    notes: "**Post-Obstetric-Fistula Residual-Incontinence (POFRI)** procedure per FIGO 2025 expert opinion. For patients with closed fistulas but **persistent SUI (16–55%)** after successful closure. Most have stress-predominant urodynamics (67% SUI, 47% urge, 47% mixed; Nardos 2022).",
+    bestFor: "Persistent SUI (16–55%) after successful obstetric-fistula closure (FIGO 2025 expert opinion).",
     slug: "/docs/clinical-conditions/03f-fistulas/in-females/obstetric",
   },
   {
     name: "Adjuncts (PRP / SIS / Buccal Graft)",
     domain: "Obstetric",
-    notes: "Adjunctive therapies for complex circumferential or recurrent obstetric fistulas: platelet-rich plasma, small intestinal submucosa, and buccal mucosal grafts. Emerging data; reserve for cases with extensive tissue loss after multiple failed repairs.",
+    bestFor: "Complex circumferential or recurrent obstetric fistulas with extensive tissue loss after multiple failed repairs.",
   },
 ];
 
@@ -363,7 +297,7 @@ export const femaleFistulaTechniques = [
         'Urethrovaginal': '#047857',
       },
     },
-    { key: 'notes', header: 'Notes' },
+    { key: 'bestFor', header: 'Best for / indication' },
   ]}
   filterKey="domain"
   filterLabel="Fistula Type"
