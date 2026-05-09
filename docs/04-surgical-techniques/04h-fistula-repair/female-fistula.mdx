@@ -42,8 +42,8 @@ In developed countries, female GU fistulas are predominantly **iatrogenic** — 
 
 | Clinical Scenario | Recommended Approach | Technique | Success Rate |
 |---|---|---|---|
-| **Simple post-hysterectomy VVF, non-irradiated** | Transvaginal (preferred) | [Latzko partial colpocleisis](/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-latzko) or [Sims-Simon multi-layered](/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal); ± [Martius flap](/docs/foundations/surgical-principles/flaps/martius) | 89–100% |
-| **VVF near ureteral orifices, high, or inaccessible** | Transabdominal | [O'Conor transvesical](/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal) (open / laparoscopic / robotic) ± omental interposition | 91–100% |
+| **Simple post-hysterectomy VVF, non-irradiated** | Transvaginal (preferred) | [Latzko partial colpocleisis](/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-latzko) or [Sims-Simon multi-layered](/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon); ± [Martius flap](/docs/surgical-techniques/04h-fistula-repair/female/martius-flap-vvf) | 89–100% |
+| **VVF near ureteral orifices, high, or inaccessible** | Transabdominal | [O'Conor transvesical](/docs/surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair) (open / laparoscopic / robotic) ± omental interposition | 91–100% |
 | **Radiation-induced VVF (RVVF)** | Individualized | Vaginal + Martius; or abdominal + omental / [rectus abdominis](/docs/foundations/surgical-principles/flaps/vram) flap; **70% may require [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion)** | 20–48% primary; 80% cumulative |
 | **Recurrent VVF after failed repair** | Repeat vaginal acceptable; consider abdominal if vaginal failed | Add tissue interposition if not used initially | 72–83% secondary |
 | **Trigonal VVF** | Transabdominal preferred | Transvesical with ureteral reimplantation if needed | ~68% |
@@ -97,22 +97,22 @@ export const femaleFistulaTechniques = [
   {
     name: "Transvaginal Sims-Simon Multi-Layered Closure",
     domain: "VVF",
-    notes: "Circumferential incision of vaginal epithelium around the fistula, wide vesicovaginal mobilization, layered bladder closure (mucosa ± muscularis / detrusor), then vaginal-wall closure. Edge-excision (freshening) remains debated. Modified Sims-Simon: **100% success in 47 consecutive cases without interposition, median OR 40 min** (recent series).",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+    notes: "Wide vesicovaginal mobilization + separate layered closure of bladder and vaginal wall — preserves vaginal length, broadly applicable to mid-vaginal / trigonal / apical fistulae. Modified Sims-Simon: **100% success in 47 consecutive cases without interposition, median OR 40 min** (Mörgeli & Tunn 2021). Edge-trimming debated (Shaker RCT — no significant difference).",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon",
   },
   {
     name: "Transvaginal VVF Repair with Martius Flap",
     domain: "VVF",
-    notes: "Transvaginal closure with interposed [Martius labial fat-pad flap](/docs/foundations/surgical-principles/flaps/martius) for recurrent, radiated, or complex VVFs where tissue bulk and vascularity drive the decision. Kapriniotis 2024 review: routine use **probably unnecessary for simple non-irradiated fistulas** (&gt; 90% closure without flap) but valuable in 80–97% of complex cases.",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+    notes: "Transvaginal closure with interposed Martius labial fat-pad flap for recurrent, radiated, or complex VVFs where tissue bulk and vascularity drive the decision. Kapriniotis 2024 review: routine use **probably unnecessary for simple non-irradiated fistulas** (&gt; 90% closure without flap) but valuable in 80–97% of complex / recurrent / radiation-induced / urethral-involving cases. Lee 2013 long-term donor-site morbidity data: 81% normal sensation, 14% numbness, 7% labial distortion at mean 7 yr.",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/female/martius-flap-vvf",
   },
 
   // ===== VVF — TRANSABDOMINAL =====
   {
     name: "Open / Robotic O'Conor VVF Repair",
     domain: "VVF",
-    notes: "Transabdominal bivalve of the bladder through the fistula, excision of fistula tract, and layered closure with omental interposition. **EAU Robotic Urology Section consensus** recommends robotic O'Conor for supratrigonal, non-obstetric VVF (Randazzo 2020). Robotic series: **91–100% success** at median console 187 min, EBL 50 mL, LOS 1 day.",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-females/vesicovaginal",
+    notes: "Transabdominal **sagittal bladder bivalving** through the fistula with intravesical visualization of both ureteral orifices, fistula-tract excision, separate vaginal- and bladder-wall closure, and omental interposition. Nesrallah 1999: **100%** in 29 supratrigonal repairs (incl. 9 prior failures). Modified O'Conor (Dalela): shorter cystotomy, rotation flaps — 100% in 26. EAU 2020 robotic consensus recommends robotic O'Conor for supratrigonal non-obstetric VVF; Tavares 2026 SR (n = 206): 97% success, 2.9% recurrence.",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair",
   },
   {
     name: "Laparoscopic VVF Repair",
