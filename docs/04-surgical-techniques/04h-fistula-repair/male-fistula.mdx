@@ -84,196 +84,194 @@ For universal surgical principles (tension-free / watertight closure, tissue-int
 ---
 
 export const maleFistulaTechniques = [
-  // ===== RUF — CONSERVATIVE =====
+  // ===== RUF =====
   {
     name: "Conservative Management",
     domain: "Rectourethral Fistula",
-    notes: "Symptom-guided non-operative trial (urinary drainage ± fecal ± dual diversion) for **3–6 months**. **Fecaluria is the critical decision point**: absent → urethral catheter alone may achieve closure (Thomas 2010 100% in 3, Keller 2015 27% without diversion); present → diverting colostomy + catheter mandatory (33–47% spontaneous closure across Thomas, Keller, al-Ali). Spontaneous closure of complex / radiated RUF is essentially unknown (Venkatesan 2013); HBOT failed as standalone for radiated RUF. Best prevention: intraoperative recognition + 2-layer repair ± omental interposition (Roberts 87.5–100%).",
+    bestFor: "Symptom-guided trial × 3–6 mo — urethral catheter alone if no fecaluria (Thomas 100%, Keller 27%); diverting colostomy + catheter if fecaluria (33–47% spontaneous closure). Best prevention: intraoperative recognition + 2-layer repair ± omental (Roberts 87.5–100%).",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/conservative-ruf-management",
   },
-
-  // ===== RUF — SURGICAL =====
   {
-    name: "Transperineal Gracilis Interposition",
+    name: "Transperineal Approach to RUF",
     domain: "Rectourethral Fistula",
-    notes: "**Workhorse / gold standard for RUF** at high-volume centers. Multidisciplinary perineal repair: tract excision, separate rectal + urethral closures, pedicled gracilis tunneled between suture lines on its medial circumflex femoral pedicle. Closure ~100% non-radiated / ~84% radiated; recurrence 8% with gracilis vs 50% without (Park 2022, P = 0.009); ~31% of radiated patients ultimately require permanent fecal diversion. Concurrent BMG urethroplasty feasible (Khouri 2024 — 87%).",
-    slug: "/docs/surgical-techniques/04h-fistula-repair/male/transperineal-gracilis-ruf",
+    bestFor: "Gold standard (~66% of all RUF repairs) — gracilis interposition recurrence 8% vs 50% without (Park 2022); concurrent posterior urethroplasty (anastomotic or BMG onlay) achieves 87% closure / 0% stricture recurrence (Khouri 2024); ~100% non-radiated / ~84% radiated; 31% radiated need permanent fecal diversion.",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/male/transperineal-ruf-repair",
   },
   {
     name: "York-Mason Repair",
     domain: "Rectourethral Fistula",
-    notes: "Prone-jackknife posterior transsphincteric approach with full sphincter division and meticulous layer-by-layer reconstruction. Primary closure **80–100%** in non-radiated RUF (~92% Hadley 40-yr, 100% van der Graaf 2025 post-RARP first surgery, 100% Dal Moro 20-yr); **0% fecal incontinence and 0% anal stenosis** consistently. Best for small / non-radiated / first-time repair; failures concentrated in radiated and ≥ 2 prior repairs (50%). Modifications add tissue interposition: gluteal-fat graft (McKibben 94%) or dartos flap (Dafnis 2024, 100% at 70 mo).",
+    bestFor: "Small, non-radiated, first-time RUF — prone-jackknife posterior transsphincteric approach. 80–100% non-radiated closure with 0% fecal incontinence and 0% anal stenosis; failures concentrate in radiated and ≥2 prior repairs.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/york-mason",
   },
   {
     name: "Endorectal Advancement Flap",
     domain: "Rectourethral Fistula",
-    notes: "Transanal advancement of a broad-based rectal-wall flap to cover the closed rectal side of a small (&lt;1.5 cm), non-irradiated, iatrogenic RUF — sphincter-preserving and the simplest surgical option. Primary closure 67–80%, final 83–100% with repeat flap allowed; al-Ali transsphincteric variant reached 100% in posttraumatic RUF. Inferior to gracilis (recurrence 8% vs 50% with vs without interposition); not for radiated, large, or complex fistulae.",
+    bestFor: "Small (&lt;1.5 cm), non-irradiated, iatrogenic RUF — simplest sphincter-preserving option. Primary 67–80% / final 83–100%; not for radiated, large, or complex fistulas.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/eraf-ruf",
   },
   {
-    name: "Transanal Minimally Invasive Repair (MITAR / TAMIS / TEM)",
+    name: "Transanal Minimally Invasive Repair",
     domain: "Rectourethral Fistula",
-    notes: "Incisionless, sphincter-preserving transanal repair via Parks' retractor + lap instruments (MITAR), GelPOINT + lap (TAMIS), GelPOINT + da Vinci (R-TAMIS), or rigid TEM/TEO. **MITAR (Nicita 2017, n = 12): 100%** in small non-radiated RUF, no colostomy required, LOS 1.5 d. **TEM/TEO for RUF (Serra-Aracil 2018): only 25%** — biologic mesh interposition harmful (100% recurrence); not recommended as primary approach.",
+    bestFor: "Small non-radiated RUF via MITAR (Nicita 100%), TAMIS, R-TAMIS, or TEM/TEO. TEM/TEO for RUF only 25% (Serra-Aracil); biologic mesh harmful (100% recurrence).",
     slug: "/docs/surgical-techniques/04h-fistula-repair/transanal-minimally-invasive-repair",
   },
   {
-    name: "Robotic Transabdominal Repair (RUF / RVF)",
+    name: "Robotic Transabdominal Repair",
     domain: "Rectourethral Fistula",
-    notes: "Robotic transabdominal approach for **complex RUF / RVF** — uniquely allows simultaneous **salvage prostatectomy** (for energy-ablation RUF with residual prostate), **VUAS revision** (Sayegh 2023), and **omental flap interposition** in one operation. Medina 2022 (largest, n = 15): **100% closure**; Sayegh 2023 (RVF + VUAS, n = 4): 100%. Best for energy-ablation RUF, RUF + VUAS, rectovesical fistulas, and recurrent / cavitated fistulas. Long OR (264–370 min) and 60% (mostly low-grade) complication rate; ~ 12.5% of all RUF repairs.",
+    bestFor: "Complex RUF with residual prostate (salvage prostatectomy), concomitant VUAS, rectovesical anatomy, or recurrent / cavitated fistulas — Medina 2022 100%; ~12.5% of RUF repairs.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/robotic-transabdominal-ruf-rvf",
   },
   {
-    name: "Concurrent Urethroplasty with RUF Repair",
+    name: "Turnbull–Cutait Pull-Through",
     domain: "Rectourethral Fistula",
-    notes: "Urethroplasty performed at the same setting as fistula closure when a coexisting stricture would otherwise cause urine leakage across the repair (Khouri data).",
+    bestFor: "Severe rectal injury, radiation-damaged rectum, or failed prior RUF repair — proctectomy + delayed coloanal pull-through. Martín-Pérez 2021 — transanal MIS proctectomy + Turnbull-Cutait reconstruction reported for iatrogenic RUF.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
   },
   {
-    name: "Turnbull–Cutait Pull-Through Coloanal Anastomosis",
+    name: "Permanent Dual Diversion",
     domain: "Rectourethral Fistula",
-    notes: "Two-stage proctectomy with delayed coloanal pull-through for severe rectal injury, radiation-damaged rectum, or failed prior RUF repair. Eliminates the diseased rectal segment when local repair is not feasible; transanal minimally invasive proctectomy with staged Turnbull–Cutait reconstruction has been reported for iatrogenic RUF.",
-    slug: "/docs/clinical-conditions/03f-fistulas/in-males/rectourethral",
-  },
-  {
-    name: "Permanent Dual Diversion (Catastrophic RUF)",
-    domain: "Rectourethral Fistula",
-    notes: "Permanent colostomy + permanent urinary diversion as a definitive endpoint for radiation / energy-ablation-induced or multi-operated RUF where reconstruction is futile. Linder 2013 — radiated patients 86% require permanent colostomy and 93% permanent urinary diversion (vs 0% / 6% non-radiated); Martins 2021 — 50% vs 0% (P &lt; 0.001). Martins positions this as a **legitimate primary option, not a failure**.",
+    bestFor: "Radiation / ablation-induced or multiply operated RUF where reconstruction is futile. Linder 2013: 86% need permanent colostomy / 93% permanent urinary diversion in radiated; Martins 2021 — legitimate primary option, not a failure.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/conservative-ruf-management",
   },
   {
+    name: "Fecal Diversion",
+    domain: "Rectourethral Fistula",
+    bestFor: "Adjunct or definitive intervention. Non-radiated RUF: 91–97% reversal; radiated RUF: 83–86% need permanent colostomy. Both loop ileostomy and loop colostomy equally effective (ASCRS Strong 1B).",
+    slug: "/docs/surgical-techniques/04h-fistula-repair/fecal-diversion",
+  },
+
+  // ===== RVF =====
+  {
     name: "Rectovesical Fistula Repair",
     domain: "Rectovesical Fistula",
-    notes: "Robotic transabdominal repair — same operation as transabdominal RUF (deep pelvic dissection, fistula excision, 2-layer cystotomy closure, omental flap interposition) but the bladder rather than the urethra is closed. The higher anatomic location favors an abdominal approach.",
+    bestFor: "Robotic transabdominal repair — same operation as transabdominal RUF with cystotomy closure substituted for urethral anastomosis. Higher anatomic location favors abdominal approach.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/male/robotic-transabdominal-ruf-rvf",
   },
 
   // ===== EVF / CVF =====
   {
-    name: "One-Stage Sigmoidectomy + Primary Anastomosis (CVF)",
+    name: "One-Stage Sigmoidectomy + Primary Anastomosis",
     domain: "Enterovesical / Colovesical Fistula",
-    notes: "**Procedure of choice** for benign EVF / CVF (diverticulitis, Crohn's) without abscess or obstruction. Bladder defect typically heals with **Foley catheter alone** — formal repair usually unnecessary (Ferguson 2008: 68% Foley-only with equivalent outcomes). Froiio 2022 meta: Clavien ≥ 3 7.4%, mortality 1.5%, **recurrence 0.5%**.",
+    bestFor: "Procedure of choice for benign EVF / CVF (diverticulitis, Crohn's) without abscess. Bladder typically heals with Foley alone (Ferguson 68%); Froiio 2022 meta: recurrence 0.5%.",
   },
   {
-    name: "Robotic / Laparoscopic Sigmoidectomy (CVF)",
+    name: "Robotic / Laparoscopic Sigmoidectomy",
     domain: "Enterovesical / Colovesical Fistula",
-    notes: "Minimally-invasive sigmoidectomy with primary anastomosis — increasingly preferred. Sassun 2025 robotic series (n = 89): **1% conversion / 1% recurrence at 16.5 mo**. Volkert 2025 propensity-matched: equivalent complications, shorter LOS vs open.",
+    bestFor: "Fit patients with benign CVF — increasingly preferred. Sassun 2025 robotic (n = 89): 1% conversion / 1% recurrence; Volkert 2025 propensity-matched: equivalent complications, shorter LOS.",
   },
   {
-    name: "Staged Resection (Complicated CVF)",
+    name: "Staged Resection",
     domain: "Enterovesical / Colovesical Fistula",
-    notes: "Diversion → resection → anastomosis for CVF complicated by abscess, obstruction, or advanced malignancy. Multi-stage approach.",
+    bestFor: "Complicated CVF with abscess, obstruction, or advanced malignancy — diversion → resection → anastomosis.",
   },
   {
-    name: "Crohn's-Related Enterovesical Fistula",
+    name: "Crohn's-Related EVF",
     domain: "Enterovesical / Colovesical Fistula",
-    notes: "Resection of affected bowel + primary 2-layer bladder closure ± omental patch. **90% require surgery** (Solem 2002, Gruner 2002 — n = 70); 96% durable remission. Rectum is the origin in 8% of Crohn's urinary fistulas (Solem). Cystectomy / nephrectomy not needed.",
+    bestFor: "Crohn's urinary fistula — bowel resection + 2-layer bladder closure ± omental patch. ~90% need surgery (Solem); 96% durable remission; cystectomy / nephrectomy not needed.",
   },
   {
-    name: "CVF Medical Management (Antibiotics)",
+    name: "CVF Medical Management",
     domain: "Enterovesical / Colovesical Fistula",
-    notes: "For patients unfit for surgery. Preferable to diverting colostomy alone (which does not resolve the fistula). Moss 1990: all 8 patients managed medically were free of fistula complications until death from other causes.",
+    bestFor: "Patients unfit for surgery — preferable to diverting colostomy alone. Moss 1990: 8/8 free of fistula complications until death from other causes.",
   },
 
   // ===== USF / PPF =====
   {
-    name: "Pubic Symphysis Debridement + Rectus Abdominis Flap (Organ-Sparing USF)",
+    name: "Pubic-Symphysis Debridement + Rectus Flap",
     domain: "Urosymphyseal / Puboprostatic Fistula",
-    notes: "Pubic-symphysis debridement + fistula closure + [rectus abdominis interposition flap](/docs/foundations/surgical-principles/flaps/vram) — organ-sparing reconstruction for USF / PPF with limited bone involvement. Kaufman 2016: **100% closure at 27 mo** (n = 4); avoids cystectomy.",
+    bestFor: "Organ-sparing USF / PPF with limited bone involvement — debridement + fistula closure + rectus abdominis interposition. Kaufman 100% closure at 27 mo; avoids cystectomy.",
     slug: "/docs/foundations/surgical-principles/flaps/vram",
   },
   {
-    name: "Pubectomy + Urinary Reconstruction (Extensive Osteomyelitis)",
+    name: "Pubectomy + Urinary Reconstruction",
     domain: "Urosymphyseal / Puboprostatic Fistula",
-    notes: "Fistula decompression + bone resection + urinary reconstruction (continent or incontinent diversion). Andrews 2021: **pain resolution 96%**, ECOG PS 3 → 0; major complications 32%. Bone cultures essential — 80% positive with 95.5% urine-vs-bone discordance.",
+    bestFor: "USF / PPF with extensive osteomyelitis — fistula decompression + bone resection + continent or incontinent diversion. Andrews 2021: pain resolution 96%, major complications 32%.",
   },
   {
-    name: "Cystectomy + Ileal Conduit (USF Definitive)",
+    name: "Cystectomy + Ileal Conduit",
     domain: "Urosymphyseal / Puboprostatic Fistula",
-    notes: "Required in **53–83%** of USF / PPF patients (Bugeja 2016, Walach 2024). Definitive for non-functioning bladder or extensive tissue destruction. Resolves pain and infection but mandates lifelong stoma care.",
+    bestFor: "Definitive for non-functioning bladder or extensive tissue destruction — required in 53–83% of USF / PPF (Bugeja, Walach).",
     slug: "/docs/surgical-techniques/04c-urinary-diversion/ileal-conduit",
   },
 
   // ===== RADIATION-INDUCED ANTERIOR URINARY FISTULA =====
   {
-    name: "TURNS Radiation Anterior Urinary Fistula Workflow",
+    name: "TURNS Anterior-Fistula Workflow",
     domain: "Radiation Anterior Urinary Fistula",
-    notes: "Distinct entity — fistulation from urinary tract anteriorly to **pubic symphysis (61%) / thigh (38%) / perineal skin** after pelvic RT for prostate cancer. Osterberg 2017 TURNS multicenter (n = 31): 19/31 cystectomy, 12/31 fistula repair (most with rectus abdominis interposition); **84% pain resolution at 6 mo**, 1 recurrence.",
+    bestFor: "Post-RT fistulation anteriorly to pubic symphysis / thigh / perineal skin — Osterberg 2017 TURNS (n = 31): 19/31 cystectomy, 12/31 fistula repair with rectus interposition; 84% pain resolution at 6 mo.",
   },
+
+  // ===== UCF =====
   {
-    name: "Simple Closure + De-Epithelialized Skin Advancement Flap",
+    name: "Simple Closure + Skin Advancement Flap",
     domain: "Urethrocutaneous Fistula",
-    notes: "Standard outpatient repair for simple distal UCF. Two-layer closure with de-epithelialized flap for coverage — **93–96% success** (Santangelo 2003); often performed under local anesthesia; catheterization may not be necessary (Sen 2007).",
+    bestFor: "Simple distal UCF — two-layer closure with de-epithelialized flap; 93–96% success (Santangelo); often under local; catheterization may not be needed.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
   },
   {
-    name: "Two-Layer Dartos / TVF Closure (Primary Distal)",
+    name: "Two-Layer Dartos / TVF Closure",
     domain: "Urethrocutaneous Fistula",
-    notes: "Double dartos or TVF closure for primary distal UCF after hypospadias repair. Fahmy algorithm favors two-layer repair for distal primary UCF.",
+    bestFor: "Primary distal UCF after hypospadias repair — Fahmy algorithm favors two-layer closure.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
   },
   {
-    name: "Tunica Vaginalis / Scrotal Flap (Proximal / Redo)",
+    name: "Tunica Vaginalis / Scrotal Flap",
     domain: "Urethrocutaneous Fistula",
-    notes: "Tunica vaginalis or scrotal flap interposition for proximal, redo, or post-fistula-repair UCFs. Choudhury 2023 meta — waterproofing with TVF / scrotal at 94–95% vs 73% simple closure.",
+    bestFor: "Proximal, redo, or post-fistula-repair UCF — waterproofing with TVF / scrotal flap 94–95% vs 73% simple closure (Choudhury 2023 meta).",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
   },
   {
-    name: "PATIO Repair (Preserve And Turn Inside Out)",
+    name: "PATIO Repair",
     domain: "Urethrocutaneous Fistula",
-    notes: "Fistula tract is dissected out but **preserved and inverted into the urethral lumen**, creating a flap valve. **100% success in 5 repairs** including recurrent fistulas after failed conventional closure (Malone 2009). Day-case without catheterization.",
+    bestFor: "Recurrent UCF after failed conventional closure — preserve and turn inside out the tract into the urethral lumen. Malone 100% (5/5); day-case without catheter.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
   },
   {
-    name: "Multilayer Closure with Longitudinal Relaxing Incision",
+    name: "Multilayer + Relaxing Incision",
     domain: "Urethrocutaneous Fistula",
-    notes: "Reduces skin-tension at the closure site to improve healing. Chen 2020: **100% in 46 fistulas / 34 patients**.",
+    bestFor: "Skin-tension reduction at closure — Chen 2020 100% in 46 fistulas / 34 patients.",
   },
   {
-    name: "Rectus Fascia Graft Interposition (Metoidioplasty UCF)",
+    name: "Rectus Fascia Graft Interposition",
     domain: "Urethrocutaneous Fistula",
-    notes: "Autologous rectus fascia graft placed between urethral and skin closures to separate suture lines after metoidioplasty. Johnsen 2018: **0% recurrence at 7 mo** in 3 patients with mean 3 prior failed repairs.",
+    bestFor: "Metoidioplasty UCF with multiple prior failed repairs — Johnsen 2018 0% recurrence at 7 mo (3 patients with mean 3 prior failed).",
   },
   {
-    name: "De-Epithelialized Scrotal Flap (Penoscrotal UCF)",
+    name: "De-Epithelialized Scrotal Flap",
     domain: "Urethrocutaneous Fistula",
-    notes: "Particularly useful for penoscrotal fistulas. Lee 1990: **0% recurrence in 8 patients**; can be performed without urinary diversion.",
+    bestFor: "Penoscrotal UCF — Lee 1990 0% recurrence in 8 patients without urinary diversion.",
   },
   {
-    name: "Two-Stage BMG Urethroplasty (Failed Hypospadias UCF)",
+    name: "Two-Stage BMG Urethroplasty",
     domain: "Urethrocutaneous Fistula",
-    notes: "**Procedure of choice for adults with complex UCF after failed childhood hypospadias repair.** Myers 2012 / Morrison 2018: initial success ~50%, **76% overall success after additional procedures**. [BMG](/docs/foundations/surgical-principles/grafts/buccal-mucosa) significantly outperforms skin grafts.",
+    bestFor: "Adults with complex UCF after failed childhood hypospadias repair — Myers / Morrison 76% overall success; BMG outperforms skin grafts.",
     slug: "/docs/foundations/surgical-principles/grafts/buccal-mucosa",
   },
   {
     name: "Staged Diversion (Neurogenic)",
     domain: "Urethrocutaneous Fistula",
-    notes: "Urinary diversion for refractory UCF in neurogenic patients — Raup series 81% diversion rate for neurogenic-bladder UCF.",
+    bestFor: "Refractory UCF in neurogenic patients — Raup 81% diversion rate for neurogenic-bladder UCF.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethrocutaneous",
   },
+
+  // ===== UPF =====
   {
-    name: "Gracilis Interposition Repair (UPF)",
+    name: "Gracilis Interposition Repair",
     domain: "Urethroperineal Fistula",
-    notes: "Transperineal gracilis interposition for acquired urethroperineal fistula. Guo series 91% success with gracilis-interposition repair.",
+    bestFor: "Acquired urethroperineal fistula — transperineal gracilis interposition; Guo 91% success.",
     slug: "/docs/foundations/surgical-principles/flaps/gracilis",
   },
   {
     name: "Definitive Perineal Urethrostomy",
     domain: "Urethroperineal Fistula",
-    notes: "Primary perineal urethrostomy as definitive endpoint for complex UPF — Klemm 2024 long-term PROs frame this as a legitimate primary option (95% success, Fuchs data).",
+    bestFor: "Complex UPF as definitive endpoint — Klemm 2024 PROs frame as legitimate primary option (Fuchs 95%).",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethroperineal",
   },
   {
-    name: "CUPF Repair (Cheng Differential)",
+    name: "CUPF Repair",
     domain: "Urethroperineal Fistula",
-    notes: "Congenital urethroperineal fistula — Cheng diagnostic differentiator prevents misdiagnosis as urethral duplication or H-type RUF; repair is tract excision with layered closure.",
+    bestFor: "Congenital urethroperineal fistula — Cheng differentiator prevents misdiagnosis as urethral duplication or H-type RUF; tract excision + layered closure.",
     slug: "/docs/clinical-conditions/03f-fistulas/in-males/urethroperineal",
-  },
-  {
-    name: "Fecal Diversion",
-    domain: "Rectourethral Fistula",
-    notes: "Loop ileostomy or loop colostomy as adjunct or definitive intervention. Pre-repair diversion in most RUF cases (Beddy 30/50). Non-radiated RUF: 91–97% reversal; **radiated RUF: 83–86% require permanent colostomy and 93–100% require permanent urinary diversion**. Both diversion types are equally effective (ASCRS Strong, 1B); ileostomy has less prolapse but more dehydration / readmissions.",
-    slug: "/docs/surgical-techniques/04h-fistula-repair/fecal-diversion",
   },
 ];
 
@@ -297,7 +295,7 @@ export const maleFistulaTechniques = [
         'Radiation Anterior Urinary Fistula': '#be185d',
       },
     },
-    { key: 'notes', header: 'Notes' },
+    { key: 'bestFor', header: 'Best for / indication' },
   ]}
   filterKey="domain"
   filterLabel="Fistula Type"
