@@ -4,7 +4,22 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-09 (style cleanup)
+## Current Handoff - 2026-05-09 (third pass — fistula-atlas overhaul + HBOT)
+
+Major 04h fistula-repair restructuring + new foundations HBOT page. Build clean across 936 files.
+
+Highlights:
+
+- **Female fistula DB consolidated** — `notes` → `bestFor` column with concise indication strings; UVF / VUF / UretVF rows collapsed to one-row-per-type linking to clinical-page Management anchors or new dedicated atlas pages. Obstetric domain rows deleted (same ladder as VVF — kept clinical-conditions obstetric page).
+- **New RVF atlas pages** — [ERAF ± Sphincteroplasty](docs/04-surgical-techniques/04h-fistula-repair/female/eraf.mdx), [Episioproctotomy](docs/04-surgical-techniques/04h-fistula-repair/female/episioproctotomy.mdx), [Nonoperative RVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/nonoperative-rvf-management.mdx), [Transabdominal RVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/transabdominal-rvf-repair.mdx) with full APR section, [Anal Sphincteroplasty](docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx), [Urethrovaginal Fistula Repair](docs/04-surgical-techniques/04h-fistula-repair/female/urethrovaginal-fistula-repair.mdx).
+- **New RUF atlas pages** — [Transperineal Gracilis](docs/04-surgical-techniques/04h-fistula-repair/male/transperineal-gracilis-ruf.mdx), [ERAF for RUF](docs/04-surgical-techniques/04h-fistula-repair/male/eraf-ruf.mdx) (kept separate from RVF ERAF — different anatomic position, etiology, comparator), [York-Mason](docs/04-surgical-techniques/04h-fistula-repair/male/york-mason.mdx), [Conservative Management of RUF](docs/04-surgical-techniques/04h-fistula-repair/male/conservative-ruf-management.mdx), [Robotic Transabdominal RUF/RVF Repair](docs/04-surgical-techniques/04h-fistula-repair/male/robotic-transabdominal-ruf-rvf.mdx) shared between RUF and RVF (same operation, urinary closure differs).
+- **Cross-cutting shared pages** — [Transanal MIS Repair](docs/04-surgical-techniques/04h-fistula-repair/transanal-minimally-invasive-repair.mdx) at the 04h root with R-TAMIS operative video, comparative MITAR/TEM/TAMIS table; [Fecal Diversion](docs/04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx) referenced from all three fistula DBs.
+- **Both-genders DB collapsed** from 26 rows to 8 (one row per fistula type + Fecal Diversion).
+- **New foundations HBOT page** — [Hyperbaric Oxygen Therapy](docs/01-foundations/surgical-principles/hyperbaric-oxygen-therapy.mdx): RICH-ART Level 1 evidence, ten applications (radiation cystitis, Fournier's, fistula adjunct, hypospadias graft conditioning, radiation vaginal injury, IC/BPS, ED, radiation proctitis, preoperative tissue conditioning, mesh complications); adverse-effect profile and cost analysis. Wound-healing-adjuncts tightened to summary + cross-link.
+
+Full session detail in `CHANGELOG.md`. Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all pass.
+
+## Previous Handoff - 2026-05-09 (style cleanup)
 
 Site-wide style cleanup after audit. Build clean.
 

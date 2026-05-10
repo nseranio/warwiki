@@ -6,6 +6,48 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-09 (third pass) — 04h fistula repair atlas overhaul + foundations HBOT
+
+Major restructuring session: collapsed redundant DB rows, built dedicated atlas pages for the major RUF / RVF techniques, consolidated cross-cutting topics, and added a comprehensive HBOT page in foundations.
+
+### Female fistula DB consolidation
+
+- **VVF / VUF / UretVF / UVF rows simplified.** Renamed `notes` → `bestFor` column ("Best for / indication") with concise indication strings. Beefed up Management section on [Ureterovaginal Fistula clinical page](docs/03-clinical-conditions/03f-fistulas/in-females/ureterovaginal.mdx) (Approach Selection table + Postoperative care subsection) and collapsed five UretVF rows to one row pointing at `#management`. Collapsed four VUF rows to a single "Vesicouterine Fistula Repair" row pointing at the existing comprehensive clinical page. Collapsed UVF row name to "Urethrovaginal Fistula Repair," with new dedicated [UVF Repair atlas page](docs/04-surgical-techniques/04h-fistula-repair/female/urethrovaginal-fistula-repair.mdx) covering eight surgical techniques.
+
+### RVF — new dedicated atlas pages
+
+- **[ERAF ± Sphincteroplasty](docs/04-surgical-techniques/04h-fistula-repair/female/eraf.mdx)** — full ASCRS framework, technique with optional de Parades muscular plication, when / how to add overlapping sphincteroplasty (Khanduja 1999 100% stool/flatus elimination, 70% perfect continence), Sonoda / Jones / de Parades / Corte / Li 2025 outcomes. Two ERAF rows merged.
+- **[Episioproctotomy](docs/04-surgical-techniques/04h-fistula-repair/female/episioproctotomy.mdx)** — definition (conversion to fourth-degree laceration + layered repair), 10-step technique, Hull 2007/2011 + El-Gazzaz + Rahman outcomes (78–100%, 50%→8% incontinence reduction, 92% near-perfect continence, superior fecal/sexual function vs ERAF), cloaca subgroup 100%.
+- **[Nonoperative RVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/nonoperative-rvf-management.mdx)** — ASCRS 2022 + AGA + ACG 2025 framework: conservative wound care (52–66% obstetric closure), draining seton, Crohn's medical therapy (infliximab ACCENT II, ada/usteki/vedo, immunomodulators, calcineurin as last resort, seton + biologic 46% vs 13%), fecal diversion, fibrin glue / plug not recommended, vaginal-estrogen and microbiome adjuncts. Four RVF rows merged.
+- **[Transabdominal RVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/transabdominal-rvf-repair.mdx)** — five techniques (resection + coloanal anastomosis, DCAA / Turnbull-Cutait, sleeve excision, lap omentoplasty, APR), Corte 2015 multivariate predictors (major procedure OR 6.4, diverting stoma OR 3.5, early surgery OR 2.3), full APR section (indications, technique with myocutaneous-flap closure for irradiated fields, 30–38% perineal-wound rate post-XRT, Zhong 2017 QoL, AGA shared-decision-making, Zelga radiation, Sapci Crohn's). Two transabdominal rows merged.
+- **[Anal Sphincteroplasty](docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx)** — placed in fistula section per request; full overlapping technique, end-to-end vs overlap evidence, short → very-long-term continence trajectory (85% → 10–14% at 5 yr → near baseline at 18 yr), sphincteroplasty-vs-SNM data (Emile 2025; 7-fold US volume drop 2009–2015).
+- **Obstetric domain rows deleted** from the female fistula DB (same operative ladder as VVF — kept clinical-conditions obstetric page).
+
+### Male fistula DB — dedicated RUF atlas pages
+
+- **[Transperineal Gracilis for RUF](docs/04-surgical-techniques/04h-fistula-repair/male/transperineal-gracilis-ruf.mdx)** — gold-standard: rationale (Park 2022 8% vs 50% recurrence), 7-step technique, Sbizzera / Vanni / Ghoniem / Wexner / Guo / Park outcomes, Garoufalia 2023 meta-analysis 79.4%, radiation impact (~100% non-radiated → ~84% radiated, 31% permanent diversion), satisfaction 9/10, Khouri 2024 87% concurrent posterior urethroplasty.
+- **[ERAF for RUF](docs/04-surgical-techniques/04h-fistula-repair/male/eraf-ruf.mdx)** — kept separate from RVF ERAF page (different anatomic position, etiology, sphincter-vs-urethral comparator): high-pressure-side principle, transanal step-by-step, al-Ali 1997 posterior transsphincteric variant (100%, 11/11), Garofalo / Joshi / Dreznik / Keller outcomes, head-to-head vs gracilis.
+- **[York-Mason Repair](docs/04-surgical-techniques/04h-fistula-repair/male/york-mason.mdx)** — Mason 1970 history, Utah 40-yr Middleton/Renschler/Hadley experience, 8-step technique with color-coded sphincter-layer marking sutures, three modifications (gluteal fat graft McKibben 94%, dartos flap Dafnis 2024 100% at 70 mo, modified Montsouris), aggregate **0% fecal incontinence and 0% anal stenosis** despite deliberate sphincter division.
+- **[Conservative Management of RUF](docs/04-surgical-techniques/04h-fistula-repair/male/conservative-ruf-management.mdx)** — Thomas 2010 fecaluria-driven algorithm, Keller 2015 algorithm, Roberts 87.5–100% prevention via intraoperative recognition + 2-layer repair + omental, fibrin sealant / fulguration / HBOT adjuncts (Marguet 0/4 standalone failure for radiated RUF), Venkatesan long-term-without-repair, permanent dual diversion as definitive management (Linder 86%/93%, Martins "legitimate primary option, not a failure"). Two conservative rows merged.
+- **[Robotic Transabdominal RUF / RVF Repair](docs/04-surgical-techniques/04h-fistula-repair/male/robotic-transabdominal-ruf-rvf.mdx)** — shared atlas covering both fistula types (same operation, urinary closure differs): salvage prostatectomy section, four interposition options including Hwang 2023 perivesical fat, three technical variants, Medina 2022 / Sayegh 2023 / Gözen / Sotelo / Mundy & Andrich outcomes. Both DB rows repointed.
+
+### Cross-cutting shared pages
+
+- **[Transanal Minimally Invasive Repair (RVF / RUF)](docs/04-surgical-techniques/04h-fistula-repair/transanal-minimally-invasive-repair.mdx)** — shared 04h-root page covering MITAR / TAMIS / R-TAMIS / TEM / TEO with the comparative table that's the value (MITAR 100% RUF, TEM 92% RVF, TEO/TEM 25% RUF Serra-Aracil cautionary note). Embedded R-TAMIS RUF operative video paralleling Hebert 2021. Female and male DB rows repointed.
+- **[Fecal Diversion](docs/04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx)** — shared atlas covering RVF / RUF / entero-urinary / Fournier's / refractory FI; loop ileostomy vs colostomy vs end colostomy vs Flexi-Seal trade-offs (Arndt 2026 OR 3.15 readmission, dehydration 60% vs 11%). New row added to female / male / both-genders DBs.
+
+### Both-Genders DB collapse
+
+- Collapsed the 26-row both-genders DB to **8 type-level rows** (Pyeloenteric, Nephropleural, Ureterocolonic, Colovesical/Enterovesical, Vesicocutaneous, Post-Kidney-Transplant, Ureteroarterial + Fecal Diversion). Each row's `bestFor` summarizes the full first-line / definitive / salvage ladder and links to the dedicated treatment article.
+
+### Foundations — new HBOT atlas page
+
+- **[Hyperbaric Oxygen Therapy](docs/01-foundations/surgical-principles/hyperbaric-oxygen-therapy.mdx)** — comprehensive foundations atlas covering mechanism (Henry/Dalton/Fick, Marx 8–9× neoangiogenesis, HIF-1 stabilization), standard protocols, and ten applications: radiation hemorrhagic cystitis (RICH-ART Level 1, 5-yr follow-up — 55% complete remission, 37% lower healthcare cost, 53% lower mortality), Fournier's gangrene (Toppen 2024 78% mortality reduction), complex fistula repair (Hammad 2026 — recurrence 5.9% vs 26.5% after stoma reversal), hypospadias reoperations (Bush & Snodgrass — graft failure 6% vs 28%), radiation-induced vaginal injury (Möring 2025 79% responders), IC/BPS (van Ophoven), ED (Hadanny positive non-surgical / Chiles negative post-RP RCT), radiation proctitis (ASCRS 1B; HOT2 negative), preoperative tissue conditioning (Boet 2020 SR), mesh complications. Adverse-effect table, contraindications, cancer-safety data, cost analysis, evidence-hierarchy summary, key takeaways. Wound-healing-adjuncts page tightened with summary + cross-link.
+
+Verification: `npm run lint:links` passes (936 files); `npm run typecheck` passes; `npm run build` passes.
+
+---
+
 ## 2026-05-09 — Style cleanup after site audit
 
 ### Style / hygiene
