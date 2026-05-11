@@ -4,7 +4,23 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-10 — 04e penile-reconstruction overhaul + site-wide best-for standardization
+## Current Handoff - 2026-05-11 — 04e scrotal-reconstruction + genital-lymphedema overhaul
+
+Comprehensive scrotal-reconstruction atlas build-out, scrotal-DB restructuring, broadening of the lymphedema clinical-conditions section from scrotal to genital scope, expansion of five foundations flap pages, and a new GUVCA atlas mirrored across the scrotal and penile DBs. **28 commits**. Build clean across **988 files**.
+
+Highlights:
+
+- **New 04e atlas pages** — [Scrotal Primary Closure](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-primary-closure.mdx), [Scrotal Skin Grafting (STSG / FTSG)](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-stsg.mdx), [Testicular Thigh Pouch](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-thigh-pouch.mdx) (Okwudili / Staniorski / Hiawatha / Berli), [Testicular Prosthesis](docs/04-surgical-techniques/04e-genital-reconstruction/testicular-prosthesis.mdx), [Scrotal Flap Reconstruction](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-flaps.mdx), [Genitourinary VCA](docs/04-surgical-techniques/04e-genital-reconstruction/genitourinary-vca.mdx), [Modified Charles Procedure](docs/04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx), [Debulking Scrotoplasty](docs/04-surgical-techniques/04e-genital-reconstruction/debulking-scrotoplasty.mdx), [Excision + Flap (GL)](docs/04-surgical-techniques/04e-genital-reconstruction/excision-flap-reconstruction-lymphedema.mdx), [Complex Decongestive Therapy](docs/04-surgical-techniques/04e-genital-reconstruction/complex-decongestive-therapy.mdx), [LVA](docs/04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis.mdx), [VLNT](docs/04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer.mdx).
+- **New 04l atlas pages** — [V-I Penoscrotal Reconfiguration (Bagnara)](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-i-penoscrotal-reconfiguration.mdx), [Xu Longitudinal Penoplasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/xu-longitudinal-penoplasty.mdx), [Reduction Scrotoplasty + Z-Plasty Combined](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty-zplasty-combined.mdx), [Scrotal BoNT/A "Scrotox"](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/scrotal-botox.mdx).
+- **New 03g clinical-conditions pages** — renamed scrotal-lymphedema → [Genital Lymphedema](docs/03-clinical-conditions/03g-genital-scrotal/genital-lymphedema.mdx) (broadened scope), [Giant Penoscrotal Lymphedema](docs/03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema.mdx) (end-stage ISL III deep-dive with Ehrl / 3R / CHASCIP / VLNT framework).
+- **Expanded existing 04l pages** — [Reduction Scrotoplasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty.mdx) (vertical-midline operative protocol + Rezaee NSQIP table + CPT coding), [Penoscrotal-Web Z-Plasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penoscrotal-web-correction.mdx) (geometry table, variations, flap-necrosis factors), [V-Y Advancement Plasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-y-plasty-male.mdx) broadened to three-context framework (penopubic SLD, penoscrotal webbing, scrotal reconstruction).
+- **Expanded foundations flap pages** — [EPAP](docs/01-foundations/surgical-principles/flaps/epap.mdx), [Posterior Thigh](docs/01-foundations/surgical-principles/flaps/posterior-thigh.mdx), [IGAP / Gluteal-Fold](docs/01-foundations/surgical-principles/flaps/igap-gluteal-fold.mdx), [MCFAP](docs/01-foundations/surgical-principles/flaps/mcfap.mdx), [Island Groin](docs/01-foundations/surgical-principles/flaps/island-groin.mdx) — all five indexed in [flaps-gu-reconstruction.mdx](docs/01-foundations/surgical-principles/flaps-gu-reconstruction.mdx).
+- **Scrotal DB restructuring** — STSG / FTSG collapsed to one row; thigh-pouch collapsed to one row covering all three paradigms; **four aesthetic procedures moved to male cosmetic DB**; eight flap rows collapsed to a single "Scrotal Flap Reconstruction" row; NPWT row dropped; four testicular-prosthesis rows collapsed to one; **new Lymphedema Surgery domain with 10 rows** (CDT, LVA, VLNT, modified Charles, SCIP-LFT/3R, CHASCIP, Abdelfattah, LYST, SAPL, BLOOM); Ehrl giant-penoscrotal-lymphedema and VCA rows re-pointed to their new dedicated pages.
+- **Penile DB** — Genitourinary VCA row added under Staged / Salvage so both treatment databases surface the GUVCA option.
+
+Full session detail in `CHANGELOG.md`. Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all pass.
+
+## Previous Handoff - 2026-05-10 — 04e penile-reconstruction overhaul + site-wide best-for standardization
 
 Major 04e penile-reconstruction atlas build-out (~ 25 new dedicated atlas pages), full hub-and-spoke fistula-page expansion for the remaining 04h both-genders types, and a site-wide DB best-for / indication column standardization. Build clean across 967 files.
 
@@ -402,4 +418,4 @@ Keep only the live handoff and durable conventions here. For historical detail:
 - `git log --oneline` has commit-level history.
 - `docs/_STATUS.md` has the active stub backlog.
 
-Last compacted: 2026-05-10.
+Last compacted: 2026-05-11.

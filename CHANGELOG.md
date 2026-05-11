@@ -6,6 +6,84 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-11 — 04e scrotal-reconstruction + genital-lymphedema overhaul
+
+Comprehensive build-out of the scrotal-reconstruction atlas, full restructuring of the scrotal-reconstruction DB, broadening of the lymphedema clinical-conditions section from scrotal to genital scope, expansion of five foundations flap pages, addition of a male-cosmetic Scrotox row, and a new GUVCA atlas page mirrored across the scrotal and penile DBs. **28 commits**. Build clean across **988 files**.
+
+### New 04e atlas pages
+
+- **[Scrotal Primary Closure](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-primary-closure.mdx)** — anatomy, indications, layered closure, ten mobilization maneuvers (septum / dartos / gubernaculum / cord + orchidopexy / component separation / delayed primary closure / rapid intraop expansion / two-stage V-Y / superthin groin / thigh-pouch bridge), defect-size selection, outcomes vs STSG and flaps (cosmesis, spermatogenesis per Demir animal model, sexual function per Czymek, convalescence).
+- **[Scrotal Skin Grafting (STSG / FTSG)](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-stsg.mdx)** — STSG vs FTSG selection, donor sites, recipient-bed hierarchy (tunica vaginalis vs dartos vs tunica albuginea), stepwise technique with orchidopexy, Konofaos two-stage wrap-around, NPWT bed-prep and −80 mmHg fixation (Cao RCT, Lee meta-analysis).
+- **[Testicular Thigh Pouch](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-thigh-pouch.mdx)** — Okwudili temporary bridge with manual return, Staniorski definitive + fasciocutaneous flap, Mandel Hiawatha pseudocapsule neoscrotum, Berli salvage flap, technical pearls, spermatogenesis / thermoregulation physiology.
+- **[Testicular Prosthesis](docs/04-surgical-techniques/04e-genital-reconstruction/testicular-prosthesis.mdx)** — 1941 Vitallium → 2002 Torosa → Rigicon Testi10™ (99.8% KM at 54 mo) history, saline vs silicone-gel head-to-head, indications including GAS neoscrotal augmentation, the 91% offer-rate counseling gap, Musi 2020 simultaneous-at-orchiectomy safety, Osemlak suprascrotal pediatric advantage, Besombes fixation evidence, emerging hormone-eluting / tissue-engineered designs.
+- **[Scrotal Flap Reconstruction](docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-flaps.mdx)** — consolidated 13-flap comparison linking each row to its foundations deep-dive; selection by clinical scenario (Fournier's per Alammar 2026, EMPD per Kim algorithm, HS, penile-shaft EPAP, lymphedema SCIP-LFT and VLNT).
+- **[Genitourinary VCA](docs/surgical-techniques/04e-genital-reconstruction/genitourinary-vca.mdx)** — penile + total-penis-scrotum-lower-abdominal-wall VCA: 5-case global series, Johns Hopkins extended composite with bone-marrow-based immunomodulation → tacrolimus monotherapy at 3 yr, Baltimore Criteria 2023, Tuffaha perfusion-territory anatomy, Ruiz anterior-pubic-osteotomy model, Knoedler 2026 rejection SR, Sopko cavernous-physiology evidence, Caplan ethical framework, Cristofari trans-masculine GUVCA feasibility, VCA-vs-RFFF comparison.
+- **[Modified Charles Procedure](docs/04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx)** — Sir Havelock Charles 1912 origin, FTSG-from-specimen vs STSG (Miller 1980 amputation warning), NPWT delayed-grafting modification (van der Walt ~100% take), CHAHOVA Charles + Homan's + VLNT, full urologic application with Singh / Modolin / Salako / Wisenbaugh / Torio-Padron data, four evolving combined excisional-physiologic alternatives.
+- **[Debulking Scrotoplasty](docs/04-surgical-techniques/04e-genital-reconstruction/debulking-scrotoplasty.mdx)** — most common GL excisional approach (46.4% of GL surgeries, 10% complications per Guiotto SR), Torio-Padron integrated CDP model (6% revision), the &lt; 50%-diseased-skin threshold, etiology-stratified recurrence (50% MLL, 2% filarial, 9% giant scrotal), Wisenbaugh 1.3 → 7.7 QoL with weight-loss-plan requirement.
+- **[Excision + Flap Reconstruction (GL)](docs/04-surgical-techniques/04e-genital-reconstruction/excision-flap-reconstruction-lymphedema.mdx)** — second-most-common (39.1%) but highest-complication (54.2%) GL surgery. Full flap catalog organized into local/perineal (Halperin perirectal-lymphatic-preserving, Yormuk U-shaped, Mendel bilateral scrotal for penile coverage), regional pedicled (pudendal-thigh, ALT with Guiotto composite + fascia lata, gracilis with Kayikçioğlu short variant, MCFAP, TFL lymphatic-absorption, IPAP propeller), and lymphatic flaps (SCIP-LFT, 3R).
+- **[Complex Decongestive Therapy (CDT)](docs/04-surgical-techniques/04e-genital-reconstruction/complex-decongestive-therapy.mdx)** — 2024 ACS Lymphedema Summit consensus, four core pillars, two-phase model, Torio-Padron integrated perioperative concept (6% complication rate with no flaps/grafts needed), Lu MRL-guided treatment algorithm, adjuncts (IPC per Forner-Cordero non-inferiority RCT, NPCDs per 2026 AVF/AVLS position statement).
+- **[Lymphaticovenous Anastomosis (LVA)](docs/04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis.mdx)** — Hara ultrasound + Yoshimatsu milestone-swirl Stage-III expansion, NECST classification, Rodriguez-Yamamoto 6-step technique, EEA / ESA / SEA configurations with Kwon SEA superiority, genital-specific techniques (Mukenge spermatic-cord LVA, Yamamoto multi-site LVA, Hara & Mihara GAL algorithm), Boccardo 5-yr patency data, Kang 2026 hemodynamic critique, **prophylactic LYMPHA** (Boccardo 15-yr 2.5% vs 45% LE incidence, Hinson 69% risk reduction meta-analysis) with explicit urologic translation to PLND.
+- **[Vascularized Lymph Node Transfer (VLNT)](docs/04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer.mdx)** — four mechanisms (Maruccia neolymphangiogenesis, HEV-mediated pump, immune restoration, hyaluronidase fibrosis reduction), six donor-site comparison, four genital-specific techniques (Ehrl free lateral-thoracic curative algorithm with 0% recurrence at 49 mo, Phan submental, SCIP-LFT/3R, Abdelfattah pedicled VLNT + LVA), reverse lymphatic mapping (Pons ICG, Broyles SPECT/CT), Hamdi 60%→18% seroma learning curve.
+
+### New 04l (male cosmetic) atlas pages
+
+- **[V-I Penoscrotal Reconfiguration (Bagnara)](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-i-penoscrotal-reconfiguration.mdx)** — El-Koutby grading, flap-free V-incision + dartos-band release + I-closure protocol, Bagnara 2024 n=21 outcomes (0% complications, 0% redo, 81% Likert 4/5).
+- **[Xu Longitudinal Penoplasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/xu-longitudinal-penoplasty.mdx)** — four-step protocol (degloving / longitudinal incision / tunica-to-dartos fixation / closure), Alter principle and cross-technique parallels (Casale, Yang, Borsellino), longitudinal-vs-Z-plasty trade-offs, Xu n=41 outcomes.
+- **[Reduction Scrotoplasty + Z-Plasty (Combined)](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty-zplasty-combined.mdx)** — third Thomas & Navia pathway for coexistent laxity + webbing; integrated incision design with T-junction vascular-safety considerations; application variants (scrotal MLL in obesity per Machol, concurrent IPP per Miranda-Sousa).
+- **[Scrotal BoNT/A Injection ("Scrotox")](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/scrotal-botox.mdx)** — off-label aesthetic dartos relaxation with Gibson 2002 pharmacology (α-1 noradrenergic, myosin-phosphatase-mediated thermosensitivity), four genital BoNT/A applications, Mehdizadeh 2026 off-label-aesthetic SR (94% satisfaction), Breikaa rat-fertility safety signal with required counseling.
+
+### New 03g clinical-conditions pages
+
+- **[Genital Lymphedema](docs/clinical-conditions/03g-genital-scrotal/genital-lymphedema.mdx)** — renamed from `scrotal-lymphedema.mdx` and broadened in scope. Epidemiology (filariasis, prostate / gynecologic / pediatric / OIL-MLL), full primary vs secondary etiology including Crohn's ano-genital granulomatosis, pathophysiology, ISL / GLS / Ehrl / Lu-MRL staging, full conservative management (CDT, PCDs, ketoprofen with Tian LTB₄ mechanism, immunomodulators, antifilarials, PATCH-trial penicillin prophylaxis), weight management with BLOOM, all excisional approaches, and the full physiologic-reconstruction spectrum (LVA / VLNT / Yamamoto 3R / Abdelfattah / Ciudad CHASCIP / Yoshimatsu LYST), with a synthesized stage-by-stage algorithm.
+- **[Giant Penoscrotal Lymphedema](docs/clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema.mdx)** — end-stage ISL III deep-dive: epidemiology, etiology, pathophysiology (Th1/Th17 filarial, Wolbachia, dartos hyperplasia in obesity MLL), histopathology with Stewart-Treves risk, five classification systems, clinical presentation with extreme resected-weight cases (up to 61 kg / 134 lbs), differential emphasizing sarcoma exclusion, imaging (US per ACR, ICG with Klein 2026 posterior-scrotum-drainage finding, MRL per Lu algorithm), full surgical spectrum, and the four physiologic-reconstruction pillars synthesized into an expertise-driven algorithm.
+
+### Expanded existing 04l pages
+
+- [Reduction Scrotoplasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/reduction-scrotoplasty.mdx) — vertical-midline stepwise operative protocol, Bal local-anesthesia evidence (100% success / 92% would repeat), Rezaee 2022 NSQIP risk-factor table (n=12,917, 4.1% 30-day event rate), CPT 55175/55180 coding.
+- [Penoscrotal-Web Correction (Z-plasty)](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/penoscrotal-web-correction.mdx) — Z-plasty geometry table (Roggendorf 1982 angle/lengthening/reorientation), stepwise operative protocol, variations including Chen & Song five-flap, Qiu 2019 flap-necrosis risk factors, CPT 55180.
+- [V-Y Advancement Plasty](docs/04-surgical-techniques/04l-cosmetic-genital-surgery/v-y-plasty-male.mdx) — broadened from male-cosmetic-only to **three-context** framework (dorsal penopubic SLD, ventral penoscrotal webbing, scrotal reconstruction); added Andrades 2005 geometric foundation, Rapp 2005 tissue-expanded V-Y scrotoplasty, Kim 2014 reverse Y-V for paraffin lipogranuloma.
+
+### Expanded foundations flap pages
+
+- [EPAP flap](docs/01-foundations/surgical-principles/flaps/epap.mdx) — full external-pudendal-artery anatomy (SEPA / DEPA / inferior EPA, Carrera three-territory model, Jin perineal perforators), three EPAP innovations over traditional scrotal flaps, the broader EPA family (STEPA cadaveric, SEPAP per Kim 2023, DEPAP per Kim 2025, Mayer 1991, Lee 2020 KDPIF keystone), penile-resurfacing comparison vs STSG / ALT / SCIP.
+- [Posterior thigh flap](docs/01-foundations/surgical-principles/flaps/posterior-thigh.mdx) — Hurwitz / Achauer / Rubin / Windhofer / Friedman-Reece chronology, dual IGA-descending-branch + PFA-perforator anatomy with Pan-Taylor angiosomes, PFCN innervation, Friedman-Reece full outcome table (96.3% survival), Hurwitz bilateral-deepithelialized dead-space obliteration, six modifications (Ordenana WPGTPF, Chrelias G-PPF, Myers bilateral V-Y, Komuro U-shape, Li free third-perforator, Fukunaga venous-supercharged freestyle).
+- [IGAP / SGAP / gluteal-fold flap](docs/01-foundations/surgical-principles/flaps/igap-gluteal-fold.mdx) — four-part disambiguation of SGAP (above piriformis) / IGAP (below piriformis) / gluteal-fold-and-infragluteal-perforator (direct cutaneous descending IGA, preserving the descending branch for future flaps) / gluteal turnover flap; Tuinder sc-GAP and Rad LSGAP variants; Gould n=194 IGAP 0% loss; Benedict IGAP-vs-VRAM equivalence; Johal V-IGAP 70% return to sexual activity; **BIOPEX-2 RCT** showing reduced presacral abscess (22% → 9%, p=0.02) for gluteal turnover flap.
+- [MCFAP flap](docs/01-foundations/surgical-principles/flaps/mcfap.mdx) — nomenclature disambiguation (MCFAP vs gracilis perforator vs upper-medial-thigh freestyle vs TMG/TUG), full MCFA + gracilis-pedicle anatomy (Tomaszewski 4,351-limb meta-analysis, Peek 43-cadaver perforator data with the constant intramuscular anastomosis extending the flap to 27 cm), three operative variants, six clinical applications, MCFAP-vs-TMG-vs-PAP head-to-head with Borrelli SR (PAP 0.6% vs TUG 5.0% vascular complications), combined/chimeric configurations (Ciudad TUGPAP, Sharp PAP+bilateral gracilis, Weinstein bilobed gracilis).
+- [Island groin flap (SCIA-axial)](docs/01-foundations/surgical-principles/flaps/island-groin.mdx) — McGregor & Jackson 1972 axial-pattern introduction → Daniel & Taylor 1973 first-ever microsurgical free transfer → Koshima 2004 SCIP refinement → Goh & Hong 2015 "thinnest available" 210-flap series; full SCIA anatomy with Yoshimatsu deep-branch / transverse-branch landmark; Sahai & Singh 30-yr scrotal protocol; composite / chimeric configurations (osteocutaneous, Chao C-C/M-C/O-C, Yamamoto quadruple-component, SCIP+SIEA/DIEP); Scaglioni 2023 SCIP+LVA novel lymph-flow-through technique.
+
+### New foundations flap stubs
+
+Added five **stub pages** for flaps referenced in the scrotal-reconstruction literature but missing from the foundations catalog (later expanded above): [island-groin](docs/01-foundations/surgical-principles/flaps/island-groin.mdx), [MCFAP](docs/01-foundations/surgical-principles/flaps/mcfap.mdx), [IGAP / gluteal-fold](docs/01-foundations/surgical-principles/flaps/igap-gluteal-fold.mdx), [posterior thigh](docs/01-foundations/surgical-principles/flaps/posterior-thigh.mdx), [EPAP](docs/01-foundations/surgical-principles/flaps/epap.mdx). All five indexed in [flaps-gu-reconstruction.mdx](docs/01-foundations/surgical-principles/flaps-gu-reconstruction.mdx).
+
+### Scrotal-reconstruction DB restructuring
+
+The scrotal-reconstruction DB was substantially restructured:
+
+- **Renamed column** "Indications" → "Best for / indications" on scrotal-primary-closure page (alignment with site-wide standardization).
+- **Skin grafting** — two rows (STSG, FTSG) collapsed to a single "Scrotal Skin Grafting (STSG / FTSG)" row.
+- **Thigh pouch** — two rows (temporary, definitive) collapsed to a single row covering all three paradigms (Okwudili, Staniorski, Hiawatha).
+- **Aesthetic procedures** — all four aesthetic rows (reduction scrotoplasty, penoscrotal-web Z-plasty, Bagnara V-I, Borsellino raphe) **moved from scrotal DB to male cosmetic DB**; Aesthetic badge color removed from scrotal DB.
+- **Duplicate Penoscrotal-Web Z-Plasty** dropped from Surgical Lengthening (canonical Scrotal Aesthetic version retained).
+- **Flap reconstruction** — eight flap rows (6 Pedicled Flap + 2 Lymphatic Flap) collapsed to a single "Scrotal Flap Reconstruction (all flap families)" row under a unified Flap Reconstruction domain.
+- **NPWT row** removed (the technique is covered in the scrotal-reconstruction hub and foundations wound-healing-adjuncts page).
+- **Testicular prosthesis** — four rows (saline, silicone, intravaginal at orchiectomy, pediatric) collapsed to a single row.
+- **New Lymphedema Surgery domain** added with **10 rows**: CDT, LVA, VLNT, modified Charles, SCIP-LFT/3R, CHASCIP, Abdelfattah complete functional lymphatic-system transfer, LYST, SAPL, BLOOM.
+- **Combined / Salvage** — Ehrl giant penoscrotal lymphedema row renamed and re-pointed to the new giant-penoscrotal-lymphedema page; VCA row re-pointed to the new genitourinary-vca page.
+
+### Penile DB additions
+
+- Added Genitourinary VCA row under Staged / Salvage so both treatment databases surface the GUVCA option.
+
+### Male cosmetic DB additions
+
+- Bagnara V-I, Borsellino raphe, Reduction Scrotoplasty + Z-Plasty (combined), Scrotal BoNT/A ("Scrotox"), Xu longitudinal-incision-with-penoscrotal-angle-reconstruction rows added under Scrotal Aesthetic.
+
+### Verification
+
+`npm run lint:links` clean across **988 files**; `npm run build` clean; `npm run typecheck` clean.
+
+---
+
 ## 2026-05-10 — 04e penile-reconstruction atlas overhaul + site-wide best-for standardization
 
 Major 04e build-out (~ 25 new dedicated atlas pages), completing the hub-and-spoke fistula expansion for the remaining 04h both-genders types, and standardizing the `bestFor` / "Best for / indication" column across 11 additional treatment databases. Build clean across **967 files** (`npm run lint:links`, `npm run typecheck`, `npm run build` all pass).
