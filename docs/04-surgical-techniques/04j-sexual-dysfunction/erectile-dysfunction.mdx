@@ -75,29 +75,29 @@ The Lopategui 2018 finding is the operational anchor: **delayed reimplantation c
 
 export const edTechniques = [
   // Lifestyle / Behavioral
-  { name: "Lifestyle Modification",                                   tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction" },
-  { name: "Psychosexual Therapy",                                     tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy" },
+  { name: "Lifestyle Modification",                                   tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         bestFor: "Universal first step — exercise, weight, sleep, smoking cessation.",     slug: "/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction" },
+  { name: "Psychosexual Therapy",                                     tier: "Lifestyle / Behavioral",   invasiveness: "Non-invasive",         bestFor: "Predominantly psychogenic ED or performance anxiety.",                   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy" },
 
   // Oral Pharmacotherapy
-  { name: "PDE5 Inhibitors",                                          tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors" },
-  { name: "Testosterone Replacement Therapy",                         tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement" },
+  { name: "PDE5 Inhibitors",                                          tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         bestFor: "First-line pharmacotherapy across most etiologies.",                     slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors" },
+  { name: "Testosterone Replacement Therapy",                         tier: "Oral Pharmacotherapy",     invasiveness: "Non-invasive",         bestFor: "Symptomatic hypogonadism with low testosterone on repeat morning labs.", slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement" },
 
   // Mechanical / Intraurethral / Injectable
-  { name: "Vacuum Erection Device (VED)",                             tier: "Mechanical",               invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved" },
-  { name: "Intraurethral Alprostadil (MUSE)",                         tier: "Intraurethral",            invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil" },
-  { name: "Intracavernosal Injection",                                tier: "Injectable",               invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents" },
+  { name: "Vacuum Erection Device (VED)",                             tier: "Mechanical",               invasiveness: "Non-invasive",         bestFor: "PDE5-failure or post-prostatectomy rehab.",                              slug: "/docs/surgical-techniques/04j-sexual-dysfunction/ved" },
+  { name: "Intraurethral Alprostadil (MUSE)",                         tier: "Intraurethral",            invasiveness: "Minimally Invasive",   bestFor: "PDE5-failure when patient declines injection.",                          slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil" },
+  { name: "Intracavernosal Injection",                                tier: "Injectable",               invasiveness: "Minimally Invasive",   bestFor: "Reliable on-demand second-line therapy after PDE5 failure.",             slug: "/docs/foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents" },
 
   // Regenerative / Emerging
-  { name: "Low-Intensity Shockwave Therapy (Li-ESWT)",                tier: "Regenerative / Emerging",  invasiveness: "Non-invasive",         slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt" },
-  { name: "Platelet-Rich Plasma (PRP)",                               tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   slug: "/docs/foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma" },
-  { name: "Stem Cell Therapy",                                        tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   slug: "/docs/surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed" },
+  { name: "Low-Intensity Shockwave Therapy (Li-ESWT)",                tier: "Regenerative / Emerging",  invasiveness: "Non-invasive",         bestFor: "Mild-to-moderate vasculogenic ED; investigational.",                     slug: "/docs/surgical-techniques/04j-sexual-dysfunction/li-eswt" },
+  { name: "Platelet-Rich Plasma (PRP)",                               tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   bestFor: "Investigational regenerative adjunct; counsel on limited evidence.",     slug: "/docs/foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma" },
+  { name: "Stem Cell Therapy",                                        tier: "Regenerative / Emerging",  invasiveness: "Minimally Invasive",   bestFor: "Investigational — trial settings only.",                                 slug: "/docs/surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed" },
 
   // Surgical Prosthesis
-  { name: "Penile Implant",                                           tier: "Surgical Prosthesis",      invasiveness: "Surgical Implant",     slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants" },
+  { name: "Penile Implant",                                           tier: "Surgical Prosthesis",      invasiveness: "Surgical Implant",     bestFor: "Definitive therapy after non-surgical options fail or are declined.",     slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants" },
 
   // Vascular Surgery
-  { name: "Penile Arterial Revascularization",                        tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization" },
-  { name: "Venous Ligation Surgery (± Embolization)",                 tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/venous-ligation" },
+  { name: "Penile Arterial Revascularization",                        tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization", bestFor: "Young patients with isolated post-traumatic arteriogenic ED." },
+  { name: "Venous Ligation Surgery (± Embolization)",                 tier: "Vascular Surgery",         invasiveness: "Surgical Open",        slug: "/docs/surgical-techniques/04j-sexual-dysfunction/venous-ligation", bestFor: "Selected congenital / focal venous leak; modest durability." },
 ];
 
 export const edColumns = [
@@ -123,6 +123,10 @@ export const edColumns = [
   {
     key: 'invasiveness',
     header: 'Invasiveness',
+  },
+  {
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 
