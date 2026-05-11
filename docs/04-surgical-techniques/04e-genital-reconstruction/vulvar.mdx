@@ -149,22 +149,64 @@ export const vulvarTechniques = [
     slug: "/docs/foundations/surgical-principles/flaps/v-y-advancement",
   },
   {
-    name: "Lotus Petal Flap (LPF / Pudendal-Thigh / Singapore)",
+    name: "Lotus Petal Flap (LPF)",
     domain: "Local Random / Fasciocutaneous",
-    bestFor: "Primary vulvar malignancy reconstruction — sensate, color-matched, hidden donor scar.",
+    bestFor: "Moderate lateral / posterior vulvar defects — terminal branches of internal pudendal artery from the labiocrural fold; sensate, color-matched, hidden donor scar. Tunneled variant superior to V-Y for primary vulvar malignancies (Confalonieri 2017).",
     slug: "/docs/foundations/surgical-principles/flaps/lotus-petal",
+  },
+  {
+    name: "Pudendal-Thigh (Singapore) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Lateral / hemivulvectomy defects — superficial external pudendal artery from medial-thigh / groin crease. Also workhorse for vaginal-canal lining after radical excision.",
+    slug: "/docs/foundations/surgical-principles/flaps/singapore-pudendal-thigh",
+  },
+  {
+    name: "Gluteal-Fold (Sulcus / Infragluteal) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Posterior vulvar / perineal defects — fasciocutaneous island flap from the gluteal fold on direct cutaneous branches of the IGA descending branch (or internal pudendal a.) with PFCN-mediated sensation; spares the IGA descending branch for future flaps.",
+    slug: "/docs/foundations/surgical-principles/flaps/igap-gluteal-fold",
   },
   {
     name: "Genito-Crural Island Perforator Flap",
     domain: "Local Random / Fasciocutaneous",
-    bestFor: "Simple, reliable, rapid-recovery option at tertiary cancer centers.",
+    bestFor: "Simple, reliable, rapid-recovery option at tertiary cancer centers — Commenge 2025: 78% complete healing.",
     slug: "/docs/foundations/surgical-principles/flaps/lotus-petal",
   },
   {
     name: "Internal Pudendal Artery Perforator (IPAP) Flap",
     domain: "Local Random / Fasciocutaneous",
-    bestFor: "First-line for defects medial to the vulvo-thigh junctional crease.",
+    bestFor: "First-line for defects medial to the vulvo-thigh junctional crease — 66% of cases in Han 2023 algorithm; wound complications 12.9% vs 37.5% for thigh-based perforators (p = 0.04).",
     slug: "/docs/foundations/surgical-principles/flaps/scip",
+  },
+  {
+    name: "External Pudendal Artery Perforator (EPAP) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Anterolateral vulvar defects — sensate, thin, pigmented external pudendal a. perforator; wider rotation arc than conventional labial flaps.",
+    slug: "/docs/foundations/surgical-principles/flaps/epap",
+  },
+  {
+    name: "Medial Circumflex Femoral Artery Perforator (MCFAP) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Medial-thigh perforator alternative to gracilis MC — muscle-sparing; modest bulk; lateral vulvar defects extending into the medial thigh.",
+    slug: "/docs/foundations/surgical-principles/flaps/mcfap",
+  },
+  {
+    name: "Profunda Artery Perforator (PAP / DFAP) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Lateral vulvar defects extending beyond the vulvo-crural fold — profunda femoris (deep femoral) perforators; muscle-sparing posterior / posteromedial thigh skin paddle.",
+    slug: "/docs/foundations/surgical-principles/flaps/posterior-thigh",
+  },
+  {
+    name: "Inferior Gluteal Artery Perforator (IGAP) Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Posterior / perineal vulvar defects — perforators below piriformis, ~177 cm² territory, ~13.4 cm pedicle; complication rates comparable to VRAM (Benedict 2023: 57% vs 49% minor, p = 0.426).",
+    slug: "/docs/foundations/surgical-principles/flaps/igap-gluteal-fold",
+  },
+  {
+    name: "Vertical Posteromedial Thigh (vPMT / PMTP) Propeller Flap",
+    domain: "Local Random / Fasciocutaneous",
+    bestFor: "Extensive perianal-genital vulvar defects — propeller perforator flap from posteromedial thigh on profunda perforators; flaps up to 9 × 35 cm; 100% survival, all donor sites closed primarily (Wishart 2021).",
+    slug: "/docs/foundations/surgical-principles/flaps/pmtp-propeller",
   },
   {
     name: "Anterior- or Posterior-Based Labial Flap",
@@ -189,19 +231,31 @@ export const vulvarTechniques = [
   {
     name: "Gracilis Myocutaneous Flap (Standard or Short-Gracilis Variant)",
     domain: "Regional Pedicled",
-    bestFor: "Pelvic dead-space obliteration with lower donor morbidity than VRAM.",
+    bestFor: "Pelvic dead-space obliteration with lower donor morbidity than VRAM — Eseme 2022 meta: gracilis donor complications 16% vs VRAM 57.6%; similar flap-necrosis rates.",
+    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+  },
+  {
+    name: "Transverse Upper Gracilis (TUG) Flap",
+    domain: "Regional Pedicled",
+    bestFor: "Transverse-design gracilis variant for lateral vulvar defects extending beyond the vulvo-crural fold.",
     slug: "/docs/foundations/surgical-principles/flaps/gracilis",
   },
   {
     name: "Vertical Rectus Abdominis Myocutaneous (VRAM) Flap",
     domain: "Regional Pedicled",
-    bestFor: "Anteriorly extended defects and combined vulvovaginal reconstruction after exenteration.",
+    bestFor: "Anteriorly extended defects and combined vulvovaginal reconstruction after exenteration — pelvic dead-space obliteration; higher donor-site morbidity than gracilis.",
+    slug: "/docs/foundations/surgical-principles/flaps/vram",
+  },
+  {
+    name: "Transverse Rectus Abdominis Myocutaneous (TRAM) Flap",
+    domain: "Regional Pedicled",
+    bestFor: "Very large vulvar defects extending both anteriorly and posteriorly — transverse-design rectus variant.",
     slug: "/docs/foundations/surgical-principles/flaps/vram",
   },
   {
     name: "Pedicled DIEP Flap (Deep Inferior Epigastric Perforator)",
     domain: "Regional Pedicled",
-    bestFor: "Type II vulvar + vaginal resection defects; spares rectus muscle vs VRAM.",
+    bestFor: "Type II vulvar + vaginal resection defects; spares rectus muscle vs VRAM; valuable in secondary reconstruction when local flaps are unavailable.",
     slug: "/docs/foundations/surgical-principles/flaps/vram",
   },
   {
@@ -211,10 +265,16 @@ export const vulvarTechniques = [
     slug: "/docs/foundations/surgical-principles/flaps/anterolateral-thigh",
   },
   {
-    name: "Gluteal-Thigh Flap",
+    name: "Gluteal-Thigh (Posterior-Thigh / Friedman-Reece) Flap",
     domain: "Regional Pedicled",
-    bestFor: "Posterior-orientation defects including perianal / gluteal extension.",
-    slug: "/docs/foundations/surgical-principles/flaps/gracilis",
+    bestFor: "Posteriorly extended vulvar defects with perianal / gluteal extension — Tock 2019: highest reoperation rate (69%) and longest LOS (24 d) among compared vulvar flaps, but workhorse for irradiated / oncologically complex defects (Friedman-Reece 96.3% survival).",
+    slug: "/docs/foundations/surgical-principles/flaps/posterior-thigh",
+  },
+  {
+    name: "Sigmoid Colon Flap (Vaginal Reconstruction)",
+    domain: "Regional Pedicled",
+    bestFor: "Circumferential vaginal-canal defects after exenteration — self-lubricating bowel-based neovaginal canal.",
+    slug: "/docs/foundations/surgical-principles/grafts/intestinal-segments",
   },
 
   // ===== FREE FLAPS =====
