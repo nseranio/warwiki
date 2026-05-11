@@ -4,7 +4,20 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-09 (third pass — fistula-atlas overhaul + HBOT)
+## Current Handoff - 2026-05-10 — 04e penile-reconstruction overhaul + site-wide best-for standardization
+
+Major 04e penile-reconstruction atlas build-out (~ 25 new dedicated atlas pages), full hub-and-spoke fistula-page expansion for the remaining 04h both-genders types, and a site-wide DB best-for / indication column standardization. Build clean across 967 files.
+
+Highlights:
+
+- **04h hub-and-spoke fistula expansion** — [Vesicocutaneous](docs/04-surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous.mdx), [Post-Kidney-Transplant](docs/04-surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant.mdx), and [Ureteroarterial](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial.mdx) atlas pages expanded with redundancy-avoidance opening paragraphs deferring etiology / presentation / diagnosis to the clinical-conditions pages while focusing the atlas on stepwise repair, surgical options, and outcomes. Both-genders DB `bestFor` collapsed to one-line indications.
+- **04e penile-reconstruction major build-out** — buried penis repair fully written from stub; new dedicated pages for [Panniculectomy](docs/04-surgical-techniques/04e-genital-reconstruction/panniculectomy.mdx), [Escutcheonectomy](docs/04-surgical-techniques/04e-genital-reconstruction/escutcheonectomy.mdx), [Penile Skin Grafting](docs/04-surgical-techniques/04e-genital-reconstruction/penile-skin-grafting.mdx), [Primary Closure ± Z-Plasty](docs/04-surgical-techniques/04e-genital-reconstruction/penile-primary-closure.mdx); all seven scrotal-flap shaft techniques ([Fakin bipedicled](docs/04-surgical-techniques/04e-genital-reconstruction/bipedicled-anterior-scrotal-flap.mdx), [Murányi tunnel](docs/04-surgical-techniques/04e-genital-reconstruction/muranyi-scrotal-tunnel-flap.mdx), [Yao butterfly](docs/04-surgical-techniques/04e-genital-reconstruction/yao-butterfly-scrotal-flap.mdx), [Pribaz / McLaughlin staged](docs/04-surgical-techniques/04e-genital-reconstruction/staged-scrotal-flap.mdx), [VSSF](docs/04-surgical-techniques/04e-genital-reconstruction/ventral-slit-scrotal-flap.mdx), [Zhao total-anterior](docs/04-surgical-techniques/04e-genital-reconstruction/total-anterior-scrotal-flap.mdx), [Gao reverse-flow](docs/04-surgical-techniques/04e-genital-reconstruction/reverse-anterior-scrotal-flap.mdx), [Tsukuura sensate EPAP](docs/04-surgical-techniques/04e-genital-reconstruction/epap-hemi-scrotal-flap.mdx)); consolidated [Tissue Substitutes](docs/04-surgical-techniques/04e-genital-reconstruction/penile-tissue-substitutes.mdx); [Glans Resurfacing](docs/04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing.mdx) with integrated OMG section; [Glansectomy + STSG](docs/04-surgical-techniques/04e-genital-reconstruction/glansectomy-stsg.mdx); [Glanuloplasty With Flaps (umbrella)](docs/04-surgical-techniques/04e-genital-reconstruction/glanuloplasty-flaps.mdx) plus four split technique pages ([Belinky / Chavarriaga IUF](docs/04-surgical-techniques/04e-genital-reconstruction/inverted-urethral-flap.mdx), [Gulino eversion](docs/04-surgical-techniques/04e-genital-reconstruction/gulino-everted-urethral-flap.mdx), [Mazza / Cheliz scrotal](docs/04-surgical-techniques/04e-genital-reconstruction/mazza-scrotal-flap-glanuloplasty.mdx), [Shaeer rectus myofascial](docs/04-surgical-techniques/04e-genital-reconstruction/shaeer-rectus-myofascial-neoglans.mdx)); and [Microsurgical Penile / Glans Replantation](docs/04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx) with cross-link section added to [Genitoscrotal Trauma](docs/special-populations/05a-trauma-emergencies/genital-scrotal-trauma.mdx). New "Trauma / Replantation" domain badge added to the penile DB.
+- **04e penile DB consolidation** — collapsed adjacent-tissue / overlapping graft / dermal-template / tissue-expansion rows into the new dedicated pages; removed redundant rows (Wide Local Excision shaft tumor, Meatoplasty / Meatotomy Adjunct, Staged Skin Replacement after LS); renamed the umbrella buried-penis row to "Buried Penis Repair (overview)".
+- **Site-wide DB best-for column standardization** — added concise one-line `bestFor` indication strings across **11 additional treatment databases**: 04b bladder-reconstruction (18), 04i tissue-transfer (header rename), 04e penile (23) / vulvar (30) / scrotal (24), 04k feminizing (17), masculinizing (23), non-binary / nullification (10), 04l male-cosmetic (16), 04j ED (13), 04j priapism (10 — Role column repurposed). Excluded BPH/LUTS (technique-vs-flow comparison) and foundations tool / biomaterial / pharmacology indices (taxonomic catalogs).
+
+Full session detail in `CHANGELOG.md`. Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all pass across 967 files.
+
+## Previous Handoff - 2026-05-09 (third pass — fistula-atlas overhaul + HBOT)
 
 Major 04h fistula-repair restructuring + new foundations HBOT page. Build clean across 936 files.
 
@@ -19,30 +32,11 @@ Highlights:
 
 Full session detail in `CHANGELOG.md`. Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all pass.
 
-## Previous Handoff - 2026-05-09 (style cleanup)
+Older handoffs (2026-05-09 style cleanup, 2026-05-09 later, 2026-05-09, 2026-05-08, and earlier) are archived in `CHANGELOG.md` to keep this file compact.
 
-Site-wide style cleanup after audit. Build clean.
+<!-- Older detailed handoffs preserved in CHANGELOG.md; uncomment if needed for quick reference -->
 
-Highlights:
-
-- **Removed disabled Docusaurus sample blog** — deleted the stock demo blog posts, sample author/tag metadata, and plushie image. `docusaurus.config.ts` already has `blog: false`, so this removes dormant template content only.
-- **Cleaned leftover editorial placeholders** — removed image-placeholder comments from [Lone Star Retractor System](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) and [Turner-Warwick Ryder Needle Holder](docs/01-foundations/tools/instruments/needle-holders/turner-warwick-ryder.mdx); rewrote the conversational "on your tray" note in [Gelman Urethral Sound](docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx); changed pharmacology index wording from "placeholder page" to "template page."
-- **Tone pass for strange language** — replaced nonessential "dramatic," "extraordinary," and "breakthrough" wording with neutral clinical phrasing across anatomy, trauma, fistula, catheter, urinary diversion, bladder reconstruction, urethral flap, BNC/VUAS, incontinence, penile prosthesis, cosmetic genital surgery, and history pages. Legitimate medical terms / article titles were left intact (e.g., breakthrough reactions, breakthrough UTI, breakthrough / rescue PONV, and reference titles).
-
-Verification: `npm run typecheck`, `npm run build`, `npm run lint:links`, and `git diff --check` all pass. Full `npm run lint` still remains blocked by pre-existing citation/orphan issues from the audit, not by this style cleanup.
-
-## Previous Handoff - 2026-05-09 (later)
-
-Both-genders fistula treatment-atlas section added; female-fistula redundancy cleanup. Build clean.
-
-Highlights:
-
-- **04h Both-Genders Fistula Repair** — new treatment-atlas section paralleling Female and Male: landing page [`both-genders-fistula.mdx`](docs/04-surgical-techniques/04h-fistula-repair/both-genders-fistula.mdx) (decision-framework table + 27-technique GenericDatabase across 7 fistula types) and seven dedicated technique pages under hidden `both-genders/` category — [Pyeloenteric](docs/04-surgical-techniques/04h-fistula-repair/both-genders/pyeloenteric.mdx), [Nephropleural](docs/04-surgical-techniques/04h-fistula-repair/both-genders/nephropleural.mdx), [Ureterocolonic](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureterocolonic.mdx), [Colovesical/Enterovesical](docs/04-surgical-techniques/04h-fistula-repair/both-genders/colovesical-enterovesical.mdx), [Vesicocutaneous](docs/04-surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous.mdx), [Post-Kidney-Transplant](docs/04-surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant.mdx), [Ureteroarterial](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial.mdx). 04h index updated.
-- **Female-fistula redundancy cleanup** — deleted `female/robotic-vvf-repair.mdx` (overview that duplicated the dedicated O'Conor and Extravesical robotic pages); database row + cross-link removed.
-
-Verification: `npm run lint:links`, `npm run typecheck`, `npm run build` all clean.
-
-## Previous Handoff - 2026-05-09
+<!-- ## Previous Handoff - 2026-05-09
 
 Long fistula / catheterizable-channel / upper-tract / robotics build-out session. All work pushed to `main`. Build clean across ~915 files.
 
@@ -109,7 +103,7 @@ Highlights of this session:
 
 Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
 
-Previous prolapse-atlas, GAS phalloplasty, and older session history are archived in `CHANGELOG.md`; keep this file as the compact working handbook.
+Previous prolapse-atlas, GAS phalloplasty, and older session history are archived in `CHANGELOG.md`; keep this file as the compact working handbook. -->
 
 ---
 
@@ -408,4 +402,4 @@ Keep only the live handoff and durable conventions here. For historical detail:
 - `git log --oneline` has commit-level history.
 - `docs/_STATUS.md` has the active stub backlog.
 
-Last compacted: 2026-05-07.
+Last compacted: 2026-05-10.

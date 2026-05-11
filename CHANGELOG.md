@@ -6,6 +6,97 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-10 — 04e penile-reconstruction atlas overhaul + site-wide best-for standardization
+
+Major 04e build-out (~ 25 new dedicated atlas pages), completing the hub-and-spoke fistula expansion for the remaining 04h both-genders types, and standardizing the `bestFor` / "Best for / indication" column across 11 additional treatment databases. Build clean across **967 files** (`npm run lint:links`, `npm run typecheck`, `npm run build` all pass).
+
+### 04h both-genders fistula hub-and-spoke expansion
+
+- **[Vesicocutaneous Fistula Repair](docs/04-surgical-techniques/04h-fistula-repair/both-genders/vesicocutaneous.mdx)** — three-stage framework (conservative catheter / VAC / transurethral cystorrhaphy / percutaneous catheter management → fistulectomy + multilayer closure → tissue interposition with omental, VRAM, rectus femoris, gracilis, perivesical fat, latissimus + serratus free flap), pelvic-fracture EBR special considerations, radiation-induced (Zhang 75% vs 10.8% irradiated failure), neurogenic-bladder (Raup 81% diversion), Watanabe sunitinib withdrawal closure.
+- **[Post-Kidney-Transplant Urinary Fistula Repair](docs/04-surgical-techniques/04h-fistula-repair/both-genders/post-kidney-transplant.mdx)** — three-stage framework (acute stabilization → PCN ± antegrade stent with the **Goldstein 87% vs 13% failure-rate datum** / 8 Fr ureteral catheter / Foley alone → definitive surgery), full technique catalog (re-UNC, native UU / PU with robotic data, Boari flap ± psoas hitch with Boonjindasup / Kroczak / Pike data, direct pyelovesicostomy, pyelo-pyelostomy salvage, pedicled omental wrap for recurrent fistulae, ileal conduit, transplant nephrectomy), outcomes-summary table, special considerations (nephrostomy-first, immunosuppression management, sepsis damage control, conduit ladder).
+- **[Ureteroarterial Fistula Repair](docs/04-surgical-techniques/04h-fistula-repair/both-genders/ureteroarterial.mdx)** — three-stage framework (stabilization with stent-in-situ tamponade → endovascular covered stent-graft ± IIA exclusion ± coil embolization → open arterial ligation + extra-anatomic bypass for contamination / infection / failed endo / pre-existing graft), hybrid approach, post-repair urologic management (PCN, stent removal, ligation, nephrectomy), special considerations (ileal conduit 14.3% graft infection, prior aortoiliac, metallic stent risk, long-term surveillance), outcomes-comparison table.
+- **Both-genders DB** — all eight rows collapsed to single-line indication strings (pyeloenteric, nephropleural, ureterocolonic, colovesical / enterovesical, vesicocutaneous, post-transplant, ureteroarterial, fecal diversion).
+
+### 04e penile reconstruction — major atlas build-out
+
+#### Integrated workflow
+
+- **[Buried Penis Repair](docs/04-surgical-techniques/04e-genital-reconstruction/buried-penis-repair.mdx)** — fully written from stub. PAS-axis-driven decision framework, six repair components (penile liberation + degloving, escutcheonectomy, skin resurfacing options, scrotoplasty, panniculectomy, staged Kulkarni urethroplasty for concurrent stricture), escutcheon-harvested STSG and FTSG techniques (Strother / Kovell, Monn / Mellon), bolster fixation (standard, Rook eggcrate-foam, fibrin sealant), STSG-vs-FTSG comparative outcomes (Gül 2026), outpatient vs inpatient pathways, full outcomes table, complications, preoperative optimization (BMI 12.7×, MFI 6.4×), brief pediatric section.
+
+#### New dedicated component atlas pages
+
+- **[Panniculectomy](docs/04-surgical-techniques/04e-genital-reconstruction/panniculectomy.mdx)** — four urologic indications (AABP PAS-A2, kidney transplant facilitation, SUI improvement, urostomy revision), three incision patterns (traditional transverse, fleur-de-lis, Figler modified trapezoid), operative steps, ciNPT wound management, complications, BMI / frailty / pannus-weight risk factors, LRT-PAN two-team choreography (Ngaage), CPT 15830 coding.
+- **[Escutcheonectomy](docs/04-surgical-techniques/04e-genital-reconstruction/escutcheonectomy.mdx)** — anatomy vs panniculectomy distinction, PAS axis P driver, transverse curvilinear / modified-trapezoid incision, **anchoring fixation to rectus fascia / pubic periosteum**, dual role as STSG / FTSG donor, Baumgarten 2019 IPP-concurrent application, "why isolated escutcheonectomy fails" framing.
+- **[Penile Skin Grafting](docs/04-surgical-techniques/04e-genital-reconstruction/penile-skin-grafting.mdx)** — cross-cutting workhorse covering STSG vs FTSG, donor-site options (thigh / escutcheon / pannus), harvest, mesh-vs-sheet, **on-stretch / pharmacologic-erection application** (Iblher PGE1 + tadalafil), four bolster techniques (traditional / Rook eggcrate-foam / NPWT with Lee 2025 + 8.3% take meta-analysis / TODGA / fibrin), indication catalog (AABP, Fournier's, lymphedema, glansectomy, HS, foreign-body granuloma, trauma), contracture management, outcomes from Plamadeala n = 204 + 3 cm length gain.
+- **[Primary Closure ± Z-Plasty](docs/04-surgical-techniques/04e-genital-reconstruction/penile-primary-closure.mdx)** — on-stretch rationale, indications (Santucci Stage 1, concealed penis, penoscrotal webbing, chordee, hypospadias revision), Tausch decision algorithm (primary → Byar's → STSG), Alter / Ehrlich subdermis-to-tunica-albuginea anchoring as the dominant durability predictor, Z-plasty variants (penoscrotal, lateral, serial, double-opposing, Mokhless lengthening), Álvarez Vega 2025 100-patient outcomes (98% primary healing).
+
+#### Scrotal-flap shaft techniques (each as its own dedicated page)
+
+- **[Bipedicled Anterior Scrotal Flap (Fakin)](docs/04-surgical-techniques/04e-genital-reconstruction/bipedicled-anterior-scrotal-flap.mdx)** — n = 43 siliconoma cohort, 100% flap survival, 4.37 / 5 satisfaction.
+- **[Modified Bipedicle Scrotal Tunnel Flap (Murányi)](docs/04-surgical-techniques/04e-genital-reconstruction/muranyi-scrotal-tunnel-flap.mdx)** — n = 49, two defining innovations (subcutaneous tunnel pull-through + inverted-V ventral closure replacing the necrosis-prone T-junction), Clavien-Dindo breakdown.
+- **[Modified Bilateral Butterfly Scrotal Flap (Yao)](docs/04-surgical-techniques/04e-genital-reconstruction/yao-butterfly-scrotal-flap.mdx)** — only series with documented significant penile-length gain (n = 7, p < 0.05); dual independent anterior-scrotal-artery pedicles; end-to-end ventral midline avoids T-junction.
+- **[Staged Bipedicled Scrotal Flap (Pribaz / McLaughlin)](docs/04-surgical-techniques/04e-genital-reconstruction/staged-scrotal-flap.mdx)** — two-stage burial-then-unburial; defining indication is contaminated / actively infected wound; Lumbiganon 83.3% complication-free two-stage vs 43.5% single-stage; Zucchi variant n = 10 median VAS 97 / 100.
+- **[Ventral Slit Scrotal Flap (VSSF, Westerman / Tausch)](docs/04-surgical-techniques/04e-genital-reconstruction/ventral-slit-scrotal-flap.mdx)** — only AABP technique with 100% same-day discharge and 0% perioperative complications; Pariser Category I; **20% recurrence vs 3.9% in escutcheonectomy + STSG** counsels patients on the trade-off.
+- **[Total Anterior Scrotal Flap (Zhao)](docs/04-surgical-techniques/04e-genital-reconstruction/total-anterior-scrotal-flap.mdx)** — only scrotal-flap technique integrating suspensory-ligament division with maximal-area coverage; triple-territory (bilateral anterior + central posterior) vascular supply; **100% deep and superficial sensation recovery** at mean 2.3-y follow-up.
+- **[Reverse Bilateral Anterior Scrotal Artery Flap (Gao)](docs/04-surgical-techniques/04e-genital-reconstruction/reverse-anterior-scrotal-flap.mdx)** — only published reverse-flow scrotal flap; defining narrow indication is compromised proximal scrotal-root pedicle; Tanaka / Tajima all-or-nothing venous outflow; Torii venous-drainage mechanisms; Dhar delay-phenomenon choke-vessel conversion; single 10-y complication-free case.
+- **[Sensate EPAP Hemi-Scrotal Flap (Tsukuura)](docs/04-surgical-techniques/04e-genital-reconstruction/epap-hemi-scrotal-flap.mdx)** — first true perforator-flap principles applied to scrotal penile reconstruction (perforator isolation + named anterior-scrotal-nerve preservation); single-hemiscrotum harvest with septum preservation; eliminates dyspareunia / stretching of fasciocutaneous-pedicle designs.
+
+#### Tissue substitutes consolidation
+
+- **[Penile Grafting With Tissue Substitutes](docs/04-surgical-techniques/04e-genital-reconstruction/penile-tissue-substitutes.mdx)** — single page consolidating Integra (Liguori, Jaskille, Ludolph, Valdatta, Payne), Matriderm (**Crane 2026 n = 36, 92.1% take — largest substrate evidence**; Kang Flex + NPWT), AlloDerm / Epiflex / porcine pericardium, tissue expanders (Harris, Kajbafzadeh, Mir-Hanna, Mathews), NPWT meta-analytic + Iblher penile data, Falcone RAFFF forearm donor-site comparative table, emerging substrates (amniotic, SIS-ECM, fish skin, ovine forestomach), comprehensive comparison + decision algorithm. Four redundant DB rows consolidated.
+
+#### Glans / penile cancer
+
+- **[Glans Resurfacing](docs/04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing.mdx)** — fully built from stub. Three variants (TGR / PGR / CSGR); NCCN / EAU-ASCO 2023 strong recommendation; 20% occult-invasion-detection rationale; full 11-step technique with **TODGA vs quilting**; Elst 2025 multicenter n = 550 → 5-y CSS 99% despite 29% local recurrence; Falcone comparative IIEF-15 −6% vs WLE −23% vs glansectomy −24%; OMG section folded in (Albaghdady fenestrated, Pandey multi-indication, Beamer buccal belt, Favre dorsal onlay; Barbagli donor-site morbidity; OMG vs STSG comparison; LS-specific Kulkarni rationale; emerging tissue-engineered / EV / organoid directions).
+- **[Glansectomy With STSG](docs/04-surgical-techniques/04e-genital-reconstruction/glansectomy-stsg.mdx)** — invasive cT1–T2 SCC confined to glans; standard-vs-salvage plane (over vs under Buck's, corporal-apex transection); FSE accuracy (Yunis 95.4%); Parnham n = 177, Tang n = 410, Pang 2026 SR n = 327 outcome tables; Roussel-vs-Elst debate on local-recurrence impact on survival; comparative IIEF-15 24% decline vs glans resurfacing 6%.
+- **[Glanuloplasty With Flaps (umbrella)](docs/04-surgical-techniques/04e-genital-reconstruction/glanuloplasty-flaps.mdx)** + four split technique pages:
+  - **[Inverted Urethral Flap (Belinky / Chavarriaga)](docs/04-surgical-techniques/04e-genital-reconstruction/inverted-urethral-flap.mdx)** — Chavarriaga n = 74, 6-y OS 86.5% / RFS 90.5%, IIEF-5 17.3, ICIQ-MLUTS 1.7, EQ-5D-3L 84.6%; 0% meatal stenosis vs 8.1% STSG; AJCC 8th-edition staging note; NCCN-vs-EAU-ASCO surveillance comparison.
+  - **[Gulino Everted Urethral Flap](docs/04-surgical-techniques/04e-genital-reconstruction/gulino-everted-urethral-flap.mdx)** — n = 14; **100% thermal + tactile sensation** (best documented of any neoglans technique); eversion-vs-inversion distinction producing 0% vs 10% ventral curvature.
+  - **[Scrotal Flap Glanuloplasty (Mazza / Cheliz)](docs/04-surgical-techniques/04e-genital-reconstruction/mazza-scrotal-flap-glanuloplasty.mdx)** — n = 34, mean 73.2 mo (longest follow-up of any neoglans series); **0% retraction** but 20.5% potency and 17.6% depilation; Gil-Vernet depilation protocol; modern single-stage / sensate alternatives.
+  - **[Rectus Abdominis Myofascial Neoglans (Shaeer)](docs/04-surgical-techniques/04e-genital-reconstruction/shaeer-rectus-myofascial-neoglans.mdx)** — only neoglans technique using muscle / fascia rather than epithelial tissue; DIEA pedicle; corona built from muscle bulk by tucking; phalloplasty-tip / prosthesis-support context.
+
+#### Trauma / replantation
+
+- **[Microsurgical Penile / Glans Replantation](docs/04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx)** — ACS 2025 Best Practices (two-bag preservation, 8 h glans / 16 h complete-penis viability, urgent microsurgical transfer); Wang / Luo 9-step protocol with optional IEPA repair (Lohasammakul) to prevent shaft skin necrosis; microscopic glans replantation (Jin JoVE); microsurgical-vs-macroscopic outcomes; Ching bipedicled-scrotal-flap salvage; leech (Banihani / Mousa / Mineo) and HBO (Landström / Zhong) adjuncts; van der Merwe penile allotransplant alternative. New **"Trauma / Replantation"** domain badge added to the 04e penile DB; "Penile / Glans Amputation" cross-link section added to [Genitoscrotal Trauma](docs/special-populations/05a-trauma-emergencies/genital-scrotal-trauma.mdx).
+
+#### 04e penile DB consolidation
+
+- Renamed the umbrella buried-penis row → **"Buried Penis Repair (overview)"**
+- Deleted "Escutcheon-Derived FTSG for AABP + LS" (covered in escutcheonectomy + skin-grafting pages)
+- Deleted standalone "STSG — Penile Shaft" and "FTSG — Penile Shaft" rows (superseded by unified Penile Skin Grafting row)
+- Consolidated four tissue-substitute rows into single Penile Grafting With Tissue Substitutes row
+- Consolidated two Bipedicled Anterior Scrotal Flap rows (general + siliconoma indication) into single Fakin row
+- Deleted Wide Local Excision shaft tumor, Meatoplasty / Meatotomy Adjunct, Staged Skin Replacement after LS, Adjacent-Tissue Transfer / Advancement Flaps rows
+- Removed orphaned "Tissue Expansion" badge color
+
+### Site-wide DB best-for column standardization
+
+Added concise one-line `bestFor` / "Best for / indication" indication strings across **11 additional treatment databases** (continuing the pattern established in the 04h fistula DBs):
+
+| DB | Rows | Notes |
+|---|---|---|
+| 04b bladder-reconstruction | 18 | `notes` → `bestFor` |
+| 04i tissue-transfer | (header rename) | existing Indication column |
+| 04e penile | 23 | `notes` → `bestFor` |
+| 04e vulvar | 30 | `notes` → `bestFor` |
+| 04e scrotal | 24 | `notes` → `bestFor` |
+| 04k feminizing GAS | 17 | `notes` → `bestFor` |
+| 04k masculinizing GAS | 23 | `notes` → `bestFor` |
+| 04k non-binary / nullification | 10 | `notes` → `bestFor` |
+| 04l male-cosmetic | 16 | Rows lacked indication column; added |
+| 04j ED | 13 | Indication column added alongside existing Tier / Invasiveness |
+| 04j priapism | 10 | Role column repurposed as Best for / indication |
+
+**Excluded by design** (per project rule that taxonomic catalogs do not need an indication column): 04m BPH / LUTS (technique-vs-flow comparison), foundations tool / instruments, foundations tool / biomaterials, and foundations / pharmacology indices.
+
+### Verification
+
+`npm run lint:links` — 967 files, 0 broken `/docs/` links.
+`npm run typecheck` — passes.
+`npm run build` — passes.
+
+---
+
 ## 2026-05-09 (third pass) — 04h fistula repair atlas overhaul + foundations HBOT
 
 Major restructuring session: collapsed redundant DB rows, built dedicated atlas pages for the major RUF / RVF techniques, consolidated cross-cutting topics, and added a comprehensive HBOT page in foundations.
