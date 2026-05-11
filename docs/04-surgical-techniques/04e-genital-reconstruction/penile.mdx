@@ -109,13 +109,13 @@ export const penileTechniques = [
   {
     name: "Buried Penis Repair (escutcheonectomy + STSG ± panniculectomy + scrotoplasty)",
     domain: "Adult-Acquired Buried Penis",
-    notes: "Most common indication. Schlaepfer 2023 PAS classification (P/A/S) drives operative plan. Tausch 2016 stratification: escutcheonectomy 55%, scrotoplasty/scrotectomy 48%, panniculectomy 7%. Best paired with weight loss. Mirastschijski 2018 Type 1–3 alternative typing.",
+    bestFor: "Standard AABP repair guided by Schlaepfer PAS / Mirastschijski typing.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/buried-penis-repair",
   },
   {
     name: "Escutcheon-Derived Full-Thickness Skin Graft (FTSG) for AABP + LS",
     domain: "Adult-Acquired Buried Penis",
-    notes: "Jeng 2026 *Urology* n=32 escutcheon FTSG for AABP with concurrent lichen sclerosus. Overall complication 56%; surgical failure / reoperation 13%. Diabetes is the dominant graft-loss risk factor. Useful when escutcheon tissue is being resected anyway during escutcheonectomy.",
+    bestFor: "AABP with concurrent lichen sclerosus when escutcheon is being resected anyway.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/buried-penis-repair",
   },
 
@@ -123,19 +123,19 @@ export const penileTechniques = [
   {
     name: "Split-Thickness Skin Graft (STSG) — Penile Shaft",
     domain: "Shaft Skin — Graft",
-    notes: "First-line for large circumferential defects. Alwaal 2015 UCSF n=54: graft take >90% across Fournier's / lymphedema / buried penis / siliconoma / HS / tumor; preserved erection, normal voiding, good cosmesis. Thigh donor (typical thickness 0.012–0.018\"); unmeshed preferred for cosmesis. Gül 2026: no significant difference between STSG and FTSG for AABP.",
+    bestFor: "First-line for large circumferential shaft defects with a clean wound bed.",
     slug: "/docs/foundations/surgical-principles/grafts/stsg",
   },
   {
     name: "Full-Thickness Skin Graft (FTSG) — Penile Shaft",
     domain: "Shaft Skin — Graft",
-    notes: "Greater elasticity, less contracture, better color match than STSG. Donor sites: groin / hip-crease (most common); escutcheon tissue (resected during AABP). Hair-bearing risk depending on donor. Pediatric circumcision-injury preference (Harris 2023 — 10/12 pts). Higher metabolic demand → lower take rate in compromised wound beds.",
+    bestFor: "Moderate defects when elasticity and color match matter; pediatric circumcision injury.",
     slug: "/docs/foundations/surgical-principles/grafts/ftsg",
   },
   {
     name: "Primary Closure ± Z-Plasty (penis on stretch)",
     domain: "Shaft Skin — Graft",
-    notes: "Small defects (<30% circumference). Penis must be on stretch during closure to prevent acquired curvature on tumescence. Z-plasty releases linear scar contracture and redistributes tension vectors.",
+    bestFor: "Small defects (< 30% circumference); Z-plasty releases linear contracture.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
 
@@ -143,31 +143,31 @@ export const penileTechniques = [
   {
     name: "Bipedicled Anterior Scrotal Flap",
     domain: "Shaft Skin — Flap",
-    notes: "Most widely described flap for penile shaft resurfacing. McLaughlin 2024 PRS bipedicle (n=8 satisfactory, 2 minor complications). Mendel 2023 Urology n=22: median EHS 3.5/4; global satisfaction 8/10; 31.8% dehiscence, 13.6% infection, 27.3% late skin retraction; 27.3% required late revision. Pigmented sensate tissue closely matches native penile skin.",
+    bestFor: "Large defect with exposed corpora or when graft cosmesis is inadequate.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Bipedicled Anterior Scrotal Flap — Siliconoma Indication",
     domain: "Shaft Skin — Flap",
-    notes: "Fakin 2017 J Urol n=43 (silicone-injection siliconoma): satisfaction 4.37/5; all patients reported postoperative erection and intercourse ability; minor complications only (partial necrosis 9%, hematoma 12%, wound disruption 19%). Preferred for siliconoma over STSG (which scars unfavorably).",
+    bestFor: "Preferred over STSG after silicone-injection siliconoma resection.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Modified Bilateral Scrotal Flap (\"Butterfly\")",
     domain: "Shaft Skin — Flap",
-    notes: "Yao 2022 *J Vis Exp* n=7. Bilateral flaps from each side of scrotal midline, pedicled on anterior scrotal artery, rotated to cover shaft defect in single stage. Significant penile-length increase (flaccid + erect) reported. 2 minor flap necroses managed with wound care.",
+    bestFor: "Single-stage circumferential coverage with reported length-gain benefit.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Sensate External Pudendal Artery Perforator (EPAP) Hemi-Scrotal Flap",
     domain: "Shaft Skin — Flap",
-    notes: "Tsukuura 2025 *Microsurgery*. Hemi-scrotal flap on isolated EPA perforator with anterior-scrotal-nerve preservation (sensate). Wider rotation arc, tension-free inset, preserved contralateral EPA, inconspicuous donor scar. Good color match + sensation at 7 mo; no short-term complications.",
+    bestFor: "When sensate, well-vascularized hemi-scrotal coverage is needed with contralateral preservation.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Adjacent-Tissue Transfer / Advancement Flaps",
     domain: "Shaft Skin — Flap",
-    notes: "Used in complex AABP with severe abdominal lipodystrophy when scrotal tissue is insufficient (Tausch 2016 PAS classification framework). Penoscrotal-skin anchoring to proximal shaft (phalloplasty) when uncovered penile skin is viable.",
+    bestFor: "Complex AABP with severe lipodystrophy and insufficient scrotal donor tissue.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
 
@@ -175,19 +175,19 @@ export const penileTechniques = [
   {
     name: "Integra (ADM) + NPWT + Delayed STSG",
     domain: "Tissue Substitute",
-    notes: "Two-stage. Stage 1: ADM + NPWT for neodermis regeneration (~3 weeks). Stage 2: unmeshed STSG over integrated neodermis. Liguori 2020 *Int J Impot Res* n=6 (lymphedema / skin deficiency): complete take at 7 d; sufficient elasticity for normal erection mechanics at 6 mo; no major complications. Alternative to free-tissue transfer.",
+    bestFor: "Contaminated / compromised beds — two-stage staged reconstruction.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Matriderm + STSG (Single-Stage)",
     domain: "Tissue Substitute",
-    notes: "Crane 2026 *J Plast Reconstr Aesthet Surg* n=36 / 38 operations. Successful graft uptake **92.1%**; good-to-excellent cosmesis 74.4%; functional improvement 97%; psychological improvement 75%. Single-stage advantage over Integra two-stage approach.",
+    bestFor: "Single-stage alternative to Integra when a dermal scaffold is needed.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
   {
     name: "Dermal Template + VAC + STSG (Fournier's / HS framework)",
     domain: "Tissue Substitute",
-    notes: "Ludolph 2016 *Int Wound J*. Combined dermal-template + negative-pressure-wound-therapy + STSG for severe defects after Fournier's gangrene or hidradenitis suppurativa. Useful when contamination history precludes single-stage repair.",
+    bestFor: "Severe defects after Fournier's or hidradenitis suppurativa.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
 
@@ -195,7 +195,7 @@ export const penileTechniques = [
   {
     name: "Tissue Expansion (TE)",
     domain: "Tissue Expansion",
-    notes: "Subcutaneous expanders in residual penile shaft skin generate additional local tissue. Preferred for primary reconstruction when sufficient residual skin exists (avoids donor-site morbidity). Harris 2020 exstrophy-epispadias n=50: TE used in 27 pts; primary success 70%; overall success 96%. Harris 2023 hypospadias n=24: 87.5% overall success; 37.5% expander extrusion.",
+    bestFor: "Pediatric / congenital cases with sufficient residual penile skin.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
 
@@ -203,19 +203,19 @@ export const penileTechniques = [
   {
     name: "ALT Free Flap — Massive Genital / Perineal Defect",
     domain: "Free Tissue Transfer",
-    notes: "Reserved for massive defects after Fournier's gangrene or oncologic resection where pedicled options are insufficient. Alammar 2026 *Burns* SR Fournier's flap reconstruction. See Foundations — ALT Flap for harvest detail.",
+    bestFor: "Massive Fournier's or oncologic defect beyond pedicled-flap capacity.",
     slug: "/docs/foundations/surgical-principles/flaps/anterolateral-thigh",
   },
   {
     name: "SCIP Lymphatic Flap (SCIP-LFT) — Genital Elephantiasis",
     domain: "Free Tissue Transfer",
-    notes: "Yamamoto 2022 *J Plast Reconstr Aesthet Surg*. Combines tissue coverage with lymphatic reconstruction to prevent recurrence after radical reduction of male genital elephantiasis. No lymphedema recurrence at mean 22.7 mo.",
+    bestFor: "Genital elephantiasis — combined coverage + lymphatic reconstruction.",
     slug: "/docs/foundations/surgical-principles/flaps/scip",
   },
   {
     name: "Radial Forearm Free Flap (RFFF) — Total Penile Reconstruction",
     domain: "Free Tissue Transfer",
-    notes: "Best option for total penile reconstruction (neophallus) in non-GAS contexts (post-traumatic total loss, oncologic amputation). Highest function / sensation / cosmesis among free-flap options. Disfiguring forearm scar. See Foundations — RFFF for harvest detail.",
+    bestFor: "Total penile loss in non-GAS contexts — best function / sensation among options.",
     slug: "/docs/foundations/surgical-principles/flaps/radial-forearm",
   },
 
@@ -223,25 +223,25 @@ export const penileTechniques = [
   {
     name: "Glans Resurfacing (STSG / FTSG over denuded glans)",
     domain: "Glans / Cancer Reconstruction",
-    notes: "For PeIN / Ta carcinoma in situ or distal LS. Superficial excision of glans epithelium followed by skin graft. Local recurrence 0–10%; 90% of LS patients report complete pain/pruritus resolution.",
+    bestFor: "PeIN / Ta superficial glans disease or distal lichen sclerosus.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/glans-reconstruction",
   },
   {
     name: "Total Glansectomy + Neoglans Reconstruction",
     domain: "Glans / Cancer Reconstruction",
-    notes: "For invasive distal glans disease (T1–T2 limited to glans). STSG or FTSG applied to exposed cavernosal bed. Pang 2026 *Int J Impot Res* SR: partial graft loss 6.1%; meatal stenosis 8.1%; preserved erectile function **91.1%**; sexually active 62.5%; standing voiding 75.6%; glans sensation maintained 83.7%; appearance satisfaction 86.3%.",
+    bestFor: "Invasive T1–T2 disease limited to the glans.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/glans-reconstruction",
   },
   {
     name: "Wide Local Excision + STSG / FTSG (shaft tumor)",
     domain: "Glans / Cancer Reconstruction",
-    notes: "Brouwer 2023 EAU-ASCO: 5–10 mm margins are sufficient (traditional 2-cm margin no longer required). Baumgarten 2018 multicenter n=1,188: 5-yr local-recurrence-free survival **73.6%**; margin status is the only significant predictor on multivariate analysis. Elst 2025 BJU: local recurrence after organ-sparing surgery does NOT affect cancer-specific survival (5-yr CSS 99%).",
+    bestFor: "Limited distal-shaft tumor with 5–10 mm margins per EAU-ASCO 2023.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/glans-reconstruction",
   },
   {
     name: "Meatoplasty / Meatotomy Adjunct",
     domain: "Glans / Cancer Reconstruction",
-    notes: "Meatal stenosis 8.1% post-glansectomy (Pang 2026). Stepwise: dilation → meatotomy → formal meatoplasty (BMG inlay or Y-V) for refractory cases.",
+    bestFor: "Meatal stenosis after glansectomy or distal-meatal disease.",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/distal-meatal-perineal/y-v-meatoplasty",
   },
 
@@ -249,13 +249,13 @@ export const penileTechniques = [
   {
     name: "Cecil-Culp Procedure (Scrotal Dropback)",
     domain: "Staged / Salvage",
-    notes: "Two-stage penile-in-scrotum marsupialization. Modern niche uses: recurrent UCF after failed hypospadias repair (Ehle 100% success), penile trauma with extensive skin loss, salvage when BMG is not viable.",
+    bestFor: "Recurrent UCF after failed hypospadias or extensive penile-skin loss when BMG unavailable.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/cecil-culp-procedure",
   },
   {
     name: "Staged Skin Replacement after Lichen Sclerosus",
     domain: "Staged / Salvage",
-    notes: "Refractory pan-penile lichen sclerosus often requires staged excision + STSG + delayed urethroplasty. Concurrent BMG urethroplasty deferred until skin has matured 3–6 mo. High reoperation rate; surveillance for distal-meatal disease.",
+    bestFor: "Refractory pan-penile LS — staged excision + STSG + delayed urethroplasty.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/penile-skin-reconstruction",
   },
 ];
@@ -281,8 +281,8 @@ export const penileColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 

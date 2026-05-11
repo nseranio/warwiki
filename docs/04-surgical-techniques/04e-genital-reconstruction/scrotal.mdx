@@ -100,7 +100,7 @@ export const scrotalTechniques = [
   {
     name: "Primary Closure (≤50% scrotal skin loss)",
     domain: "Primary Closure",
-    notes: "First-line for moderate defects. Maneuvers: scrotal-septum division, dartos-fascia mobilization off tunica vaginalis, gubernaculum division, spermatic-cord mobilization with superior testis repositioning at penoscrotal junction. Up to 50% of scrotum is resectable with primary closure due to native elasticity. Schifano 2022 SR; Wisenbaugh 2018 MLL n=51 — all defects closed primarily after debulking; 4% hematoma, 2% dehiscence.",
+    bestFor: "≤ 50% scrotal loss — exploit native dartos elasticity.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -108,13 +108,13 @@ export const scrotalTechniques = [
   {
     name: "Split-Thickness Skin Graft (STSG) on Tunica Vaginalis",
     domain: "Skin Graft",
-    notes: "Most-commonly recommended for >50% defects with adequate granulating bed. Meshed 2:1, depth 0.046 cm (0.018\"). Apply to tunica vaginalis of cord — NOT dartos fascia, NOT tunica albuginea. Allow 1–2 weeks for granulation. Bolster ×5–7 d. Hayon 2021 n=10 (no chronic pain at 8 mo). NPWT pre-/post-graft (Ye 2015) achieves 98% take.",
+    bestFor: "> 50% defect with clean granulating bed — graft on tunica vaginalis.",
     slug: "/docs/foundations/surgical-principles/grafts/stsg",
   },
   {
     name: "Full-Thickness Skin Graft (FTSG) — scrotum (selected)",
     domain: "Skin Graft",
-    notes: "Less common than STSG for scrotal defects. Higher metabolic demand requires well-vascularized bed. May provide better elasticity / cosmesis but limited donor-tissue availability. Reserve for selected indications.",
+    bestFor: "Selected small defects when better cosmesis is needed and bed is robust.",
     slug: "/docs/foundations/surgical-principles/grafts/ftsg",
   },
 
@@ -122,37 +122,37 @@ export const scrotalTechniques = [
   {
     name: "Modified Pudendal-Thigh Flap (Posterior Labial / Scrotal Branch IPA)",
     domain: "Pedicled Flap",
-    notes: "Mopuri 2016 *J Plast Reconstr Aesthet Surg* n=5. Fasciocutaneous flap based on posterior labial / scrotal branches of internal pudendal artery. Reliable, robust, sensate; natural-color match; minimal donor-site morbidity. Excellent for testicular cushion + protective sensation.",
+    bestFor: "Sensate hemiscrotal coverage with natural color match.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Island Groin Flap (Superficial Circumflex Iliac Artery)",
     domain: "Pedicled Flap",
-    notes: "Sahai 2021 *J Plast Reconstr Aesthet Surg* — 30-year experience n=29. Single-stage, performed under spinal anesthesia. Good aesthetic results in all patients; >50% defects with single groin flap. For total scrotal loss, combine with bilateral superior-medial pedicle thigh flaps.",
+    bestFor: "Single-stage > 50% scrotal coverage; combine with thigh flaps for total loss.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Gracilis Myofasciocutaneous Flap (± IPAP)",
     domain: "Pedicled Flap",
-    notes: "Lee 2012 *Urology* gracilis + internal-pudendal-artery-perforator (IPAP) flap n=7: 100% flap survival; defects up to 30 × 15 cm covered. Hsu 2007 unilateral gracilis advancement for scrotal + perineal defects. Provides bulk for dead-space obliteration. Singh 2016 n=large: donor 12.5–14%, recipient 22–40% complications; obesity OR 7.5, smoking OR 9.3.",
+    bestFor: "Large defect with exposed cord / corpora needing muscle bulk for dead space.",
     slug: "/docs/foundations/surgical-principles/flaps/gracilis",
   },
   {
     name: "ALT Flap (Pedicled or Free) — Fournier's Reconstruction",
     domain: "Pedicled Flap",
-    notes: "Among the most commonly utilized flaps for Fournier's-gangrene reconstruction (alongside medial-thigh and pudendal-thigh). Alammar 2026 *Burns* SR n=625 flaps: overall flap-loss rate **only 1.6%**. See Foundations — ALT Flap for harvest detail.",
+    bestFor: "Workhorse for post-Fournier's defects (1.6% flap loss in pooled data).",
     slug: "/docs/foundations/surgical-principles/flaps/anterolateral-thigh",
   },
   {
     name: "VRAM Flap — Massive Pelvic / Perineal / Scrotal Defect",
     domain: "Pedicled Flap",
-    notes: "For combined pelvic / perineal / scrotal defects after exenteration or massive Fournier's. Provides large skin paddle + reliable myocutaneous bulk. See Foundations — VRAM Flap for harvest detail.",
+    bestFor: "Combined pelvic / perineal / scrotal defect after exenteration or massive Fournier's.",
     slug: "/docs/foundations/surgical-principles/flaps/vram",
   },
   {
     name: "Bilateral Superior-Medial Pedicle Thigh Flaps (for Total Scrotal Loss)",
     domain: "Pedicled Flap",
-    notes: "Combined with island groin flap for total scrotal-loss reconstruction (Sahai 2021 30-yr experience). Provides bilateral hemiscrotal contour from medial-thigh donor.",
+    bestFor: "Total scrotal loss — paired with groin flap for bilateral hemiscrotal contour.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -160,13 +160,13 @@ export const scrotalTechniques = [
   {
     name: "SCIP Lymphatic Flap (SCIP-LFT) — Genital Lymphedema",
     domain: "Lymphatic Flap",
-    notes: "Abdelfattah 2023 *Urology* n=26 advanced male genital lymphedema, mean 44.9-mo follow-up: 100% flap survival; cellulitis dramatically reduced. Provides complete functional lymphatic system to prevent recurrence vs excision-alone. Yamamoto 2022 elephantiasis precedent — no recurrence at 22.7 mo.",
+    bestFor: "Advanced genital lymphedema — restores lymphatic transport to prevent recurrence.",
     slug: "/docs/foundations/surgical-principles/flaps/scip",
   },
   {
     name: "Vascularized Lymph-Node Transfer (VLNT) into Scrotum",
     domain: "Lymphatic Flap",
-    notes: "Microsurgical option for refractory genital lymphedema. Improves lymphatic transport when paired with excisional debulking. Guiotto 2019 SR favors microsurgical reconstruction over excisional procedures alone for long-term outcomes.",
+    bestFor: "Refractory genital lymphedema as adjunct to excisional debulking.",
     slug: "/docs/clinical-conditions/03g-genital-scrotal/scrotal-lymphedema",
   },
 
@@ -174,13 +174,13 @@ export const scrotalTechniques = [
   {
     name: "Temporary Testicular Thigh Pouch (Bridge to Definitive Reconstruction)",
     domain: "Testicular Thigh Pouch",
-    notes: "Okwudili 2016 *Ann Plast Surg* n=12 Fournier's. Testes in anteromedial-thigh subcutaneous pockets; residual scrotal wound closed primarily. Testes massaged back into residual scrotal pouch over 3–8 mo (natural tissue expansion). All pouches expanded sufficiently; testicular volume 19.0 ± 3.2 cm³ maintained; no mortality. Avoids need for specialized reconstruction.",
+    bestFor: "Post-Fournier's bridge — natural scrotal expansion over 3–8 mo.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Definitive Testicular Thigh Pouch + Fasciocutaneous Perineal Closure",
     domain: "Testicular Thigh Pouch",
-    notes: "Staniorski 2023 *Urology* n=20. Permanent thigh-pouch + fasciocutaneous perineal flap closure. 100% perineal closure; 15% complications (1 wound infection, 2 bleeding); only 1 patient reported pouch pain; **0% desired elective scrotoplasty** at median 9-mo follow-up. Caveats: unnatural appearance, impaired self-exam, pain with sitting if testes posterior — position **anteriorly**.",
+    bestFor: "Total scrotal loss when patient declines further reconstruction; anterior positioning to avoid sitting pain.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -188,7 +188,7 @@ export const scrotalTechniques = [
   {
     name: "Negative-Pressure Wound Therapy (NPWT) — Scrotal Adjunct",
     domain: "NPWT Adjunct",
-    notes: "Critical adjunct in staged scrotal reconstruction (post-Fournier's). Pre-graft: promotes granulation over exposed structures. Post-graft: secures STSG (98% take; Ye 2015). McDermott 2024 *JAMA Surg* NSTI review: NPWT associated with lower mortality but no LOS / debridement / complication-rate difference vs conventional dressings. Caution in exclusively anaerobic NSTIs (may be less effective).",
+    bestFor: "Adjunct for granulation and STSG fixation in staged Fournier's reconstruction.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -196,25 +196,25 @@ export const scrotalTechniques = [
   {
     name: "Testicular Prosthesis — Saline (Rigicon Testi10™)",
     domain: "Testicular Prosthesis",
-    notes: "Atwater 2025 *Int J Impot Res*: Kaplan-Meier survival from revision **99.8% at 54 mo** (adolescents and adults). Turek 2004 multicenter pivotal data. Modern saline-filled option.",
+    bestFor: "Modern saline-filled option with low revision rate.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Testicular Prosthesis — Silicone-Based",
     domain: "Testicular Prosthesis",
-    notes: "Araújo 2024 *Asian J Androl*: 96.1% satisfaction; 25.5% report prosthesis as \"too firm.\" Hayon 2020 narrative-review framework for selection / counseling / surgical technique. Standard offering across most centers.",
+    bestFor: "Standard silicone offering; high satisfaction, sometimes perceived as too firm.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Intravaginal Prosthesis at Orchiectomy (Combined Procedure)",
     domain: "Testicular Prosthesis",
-    notes: "Bush 2012 *J Urol*: combined orchiectomy + immediate intravaginal prosthesis exchange for unsalvageable adolescent testicular torsion. Orthotopic positioning + extra barrier layer. Feasible and safe in select acute settings.",
+    bestFor: "Acute unsalvageable testicular torsion — orthotopic placement at orchiectomy.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Pediatric Testicular Prosthesis Implantation",
     domain: "Testicular Prosthesis",
-    notes: "Osemlak 2018 *Medicine*: best results when implanted between **1–3 years of life** OR within 1 year of orchiectomy. Supra-scrotal access has the lowest complication rate (p = 0.01).",
+    bestFor: "Best timing 1–3 yr of life or within 1 yr of orchiectomy via supra-scrotal access.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -222,25 +222,25 @@ export const scrotalTechniques = [
   {
     name: "Reduction Scrotoplasty (Scrotal Lift / Tuck)",
     domain: "Aesthetic",
-    notes: "Thomas 2021 *Aesthet Plast Surg* SR + algorithm. Vertical midline scrotal-skin resection for excessive laxity (scrotal bag hanging >1–2 cm below penile tip — discomfort during ambulation, sports, intercourse). Limited evidence beyond case reports. Zaccaro 2022 historical context for emerging male-aesthetic-genital category.",
+    bestFor: "Bothersome scrotal laxity hanging > 1–2 cm below penile tip.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Penoscrotal-Web Z-Plasty",
     domain: "Aesthetic",
-    notes: "Z-plasty at penoscrotal junction for persistent webbing — 98% primary healing; stable corrections with minimal scarring. Álvarez Vega 2025 pediatric Z-plasty 98% primary healing 97% stable at ≥1 yr. Can combine with penile-prosthesis implantation.",
+    bestFor: "Persistent penoscrotal webbing — Z-plasty release at the junction.",
     slug: "/docs/foundations/surgical-principles/flaps/z-plasty",
   },
   {
     name: "V-I Penoscrotal Reconfiguration (Bagnara)",
     domain: "Aesthetic",
-    notes: "Bagnara 2024 *Int J Urol* n=21: no complications; parent-satisfaction 4/5 in 81%. Novel pediatric webbed-penis correction without flaps or grafts.",
+    bestFor: "Pediatric congenital webbed penis without flaps or grafts.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
   {
     name: "Scrotal-Raphe Approach for Concealed Penis (Borsellino)",
     domain: "Aesthetic",
-    notes: "Borsellino 2007 *Urology*: scrotal-raphe incision avoids flaps / grafts. Recurrence 5.3% (buried penis), **0%** (webbed penis). Pediatric-friendly approach.",
+    bestFor: "Pediatric buried / webbed penis — single-incision raphe approach.",
     slug: "/docs/surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction",
   },
 
@@ -248,13 +248,13 @@ export const scrotalTechniques = [
   {
     name: "Giant Penoscrotal Lymphedema Treatment Algorithm (Ehrl)",
     domain: "Combined / Salvage",
-    notes: "Ehrl 2023 *J Clin Med* curative-treatment algorithm for giant penoscrotal lymphedema. Combines radical excision + reconstruction of penile + scrotal envelopes. Salako 2018 Sub-Saharan giant-lymphedema reconstruction series.",
+    bestFor: "Giant penoscrotal lymphedema requiring combined penile + scrotal envelope reconstruction.",
     slug: "/docs/clinical-conditions/03g-genital-scrotal/scrotal-lymphedema",
   },
   {
     name: "Total Penis-Scrotum-Lower-Abdominal-Wall Vascularized Composite Allotransplantation (VCA)",
     domain: "Combined / Salvage",
-    notes: "Most extreme end of the reconstructive spectrum. Reserved for total genitourinary loss in highly selected patients at experimental high-volume centers. Lifelong immunosuppression; transplant-rejection surveillance; ethics-board oversight.",
+    bestFor: "Total genitourinary loss in highly selected patients at experimental centers.",
     slug: "/docs/special-populations/05c-gender-affirming/masculinizing-procedures",
   },
 ];
@@ -281,8 +281,8 @@ export const scrotalColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 
