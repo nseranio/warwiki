@@ -137,7 +137,7 @@ export const femTechniques = [
   {
     name: "Bilateral Simple Orchiectomy",
     domain: "Gonadectomy",
-    notes: "Scrotal midline-raphe approach (gender-affirming); inguinal reserved for oncologic indications. **Scrotal skin must be preserved if future vaginoplasty is planned** — prior orchiectomy 3× odds of needing extragenital graft at PIV (Sineath 2022). Saltman 2023 NSQIP: complication 3.7% (no different from cisgender nononcologic, p=0.6). Outpatient; SCAB-only feasible (Issa 2004: 77% painless). Eliminates endogenous testosterone, allows antiandrogen withdrawal.",
+    bestFor: "Stand-alone gonadectomy or bridge to vaginoplasty — preserve scrotal skin if future canal planned.",
     slug: "/docs/surgical-techniques/04k-gender-affirming-surgery/simple-orchiectomy",
   },
 
@@ -145,7 +145,7 @@ export const femTechniques = [
   {
     name: "Vulvoplasty — Zero-Depth / Shallow-Depth",
     domain: "Vulvoplasty",
-    notes: "External feminine appearance without canal creation; shallow-depth variants (Stelmar 2023 / van der Sluis 2020 / Aaen). 32% chose shallow over full-depth (Stelmar). Outcomes: 93% satisfaction; 86% would do it again; 27% reoperation, 82% of which is for urinary spraying. Indications: no penetrative-sex desire (59%), aversion to lifelong dilation, prior pelvic radiation, lower-risk preference.",
+    bestFor: "Patients not seeking penetrative-vaginal function or wanting to avoid lifelong dilation.",
     slug: "/docs/special-populations/05c-gender-affirming/non-binary-nullification",
   },
 
@@ -153,37 +153,37 @@ export const femTechniques = [
   {
     name: "Penile Inversion Vaginoplasty (PIV) — Single-Stage",
     domain: "Vaginoplasty",
-    notes: "**Gold standard** for default candidates. Eight-step Ghent technique. Scrotal skin graft for depth augmentation needed in 85.7% (Opsomer 2021 n=384, 15-yr). Outcomes: 97.2% penetrative-intercourse capable; 83.4% orgasm; 37.1% late revision; 1.6% rectal perforation. **Single-stage preferred** (Fakin 2021): wound dehiscence 4.8% vs 33.9%, reoperation 6.4% vs 56.5%, stable depth at 3.5 yr vs >30% loss in two-stage.",
+    bestFor: "Gold standard for default candidates with adequate penile + scrotal donor tissue.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Penile Inversion Vaginoplasty (PIV) — Two-Stage (historical / select)",
     domain: "Vaginoplasty",
-    notes: "Historical alternative. Fakin 2021 3.5-yr comparison: significantly more complications and >30% depth loss vs single-stage. Selected use only — most centers now perform single-stage.",
+    bestFor: "Historical alternative; rare selected use only — most centers now perform single-stage.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Robotic / Laparoscopic Peritoneal Pull-Through Vaginoplasty",
     domain: "Vaginoplasty",
-    notes: "Castanon 2022 n=52 (laparoscopy-assisted): depth 14.7±0.5 cm, width 3.4±0.4 cm, ~96% satisfaction, complications 13.5% all conservatively managed. Self-lubricating peritoneal lining. Lee 2025 *Neurourol Urodyn*: no LUT-function degradation at 12 mo. **Caveat:** Shamamian 2025 — primary peritoneal graft OR 3.20 for dilation difficulty (p=0.019).",
+    bestFor: "Insufficient penile / scrotal donor tissue or need for greater depth.",
     slug: "/docs/foundations/surgical-principles/flaps/peritoneal",
   },
   {
     name: "Robotic Davydov Peritoneal-Flap Augmentation of PIV",
     domain: "Vaginoplasty",
-    notes: "Jacoby 2019 *J Urol*: Davydov peritoneal flap pulled through to join with inverted penile skin — adds **+5 cm canal depth** vs PIV alone. Indicated when penile/scrotal donor tissue is borderline.",
+    bestFor: "Borderline donor tissue — adds ~5 cm canal depth to PIV.",
     slug: "/docs/foundations/surgical-principles/flaps/peritoneal",
   },
   {
     name: "Sigmoid (Intestinal) Vaginoplasty",
     domain: "Vaginoplasty",
-    notes: "15–20 cm sigmoid bowel segment. **Vaginal-stenosis rate 0.20%** vs 5.70% for PIV (De Rosa 2024 SR) — lowest of the three techniques. Self-lubricating mucinous epithelium. Best for **failed primary vaginoplasty** or maximal-lubrication priority. Disadvantages: laparotomy/laparoscopy + bowel anastomosis; diversion-colitis-like inflammation; mucus burden; rare neoplasia signal.",
+    bestFor: "Failed primary vaginoplasty or when maximal natural lubrication is the priority.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Ileal Vaginoplasty (less common)",
     domain: "Vaginoplasty",
-    notes: "Alternative bowel segment when sigmoid is contraindicated (e.g., diverticular disease, prior surgery). Less mucus production than sigmoid; smaller lumen. Used selectively in revision settings.",
+    bestFor: "Alternative bowel segment when sigmoid is contraindicated.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
 
@@ -191,25 +191,25 @@ export const femTechniques = [
   {
     name: "Clitoroplasty — Preputial-Skin Flap (dorsal NVB pedicle)",
     domain: "Component Procedures",
-    notes: "Fascelli 2024 anatomy-guided framework. Preferred when uncircumcised or >2 cm inner preputial skin. Dorsal neurovascular pedicle on glans-penis flap. Sensory outcomes: 86–87.8% report orgasm post-op (Sigurjónsson 2017 long-term sensitivity).",
+    bestFor: "Uncircumcised patients with adequate inner preputial skin.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Clitoroplasty — Urethral-Flap Variant",
     domain: "Component Procedures",
-    notes: "Fascelli 2024: anatomy-guided alternative when limited preputial skin (circumcised or insufficient inner-prepuce). Same dorsal-NVB-pedicle principle; equivalent sensory outcomes when NVB is preserved. Neoclitoral necrosis 4.8% in two-stage techniques (Fakin 2021).",
+    bestFor: "Circumcised patients or limited preputial skin.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Urethroplasty — Urethral Shortening + Feminizing Repositioning",
     domain: "Component Procedures",
-    notes: "Repositions meatus inferiorly with downward-directed stream goal. **Patient-vs-surgeon-reported gap (Blasdel 2024 \"blind spots\"):** misdirected stream surgeon 9.5–33% vs patient 33–55% (AFFIRM 68.9%); voiding dysfunction 5.6–33% vs 47–66%; meatal stenosis 5–16.3% vs up to 40%. Counsel patients on the magnitude of the patient-reporting gap.",
+    bestFor: "Standard component of vaginoplasty / vulvoplasty; counsel on patient-reported voiding-symptom rates.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
   {
     name: "Labiaplasty",
     domain: "Component Procedures",
-    notes: "Final step of vulvar reconstruction. Labia majora from scrotal skin; labia minora from preputial / urethral tissue. Performed concurrently with vaginoplasty or vulvoplasty rather than staged.",
+    bestFor: "Final step of vulvar reconstruction — concurrent with vaginoplasty / vulvoplasty.",
     slug: "/docs/special-populations/05c-gender-affirming/feminizing-procedures",
   },
 
@@ -217,37 +217,37 @@ export const femTechniques = [
   {
     name: "Neovaginal Stenosis Management — Stepwise",
     domain: "Revision / Salvage",
-    notes: "Tier 1: structured dilation regimen + PFPT. Tier 2: in-office or operative release. Tier 3: peritoneal augmentation or sigmoid revision. De Rosa 2024 SR: PIV stenosis 5.70% vs sigmoid 0.20%; introital stenosis ~3–5% across techniques.",
+    bestFor: "Stepwise — dilation + PFPT → operative release → peritoneal or sigmoid revision.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
   {
     name: "Vaginoplasty Revision — Robotic Peritoneal-Flap Augmentation",
     domain: "Revision / Salvage",
-    notes: "For stenosis or insufficient depth after primary PIV. Avoids reliance on already-used penile/scrotal donor tissue. Keller 2024 algorithmic framework.",
+    bestFor: "Stenosis or inadequate depth after PIV when donor tissue is depleted.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
   {
     name: "Sigmoid Revision Vaginoplasty",
     domain: "Revision / Salvage",
-    notes: "When peritoneal-flap revision is unavailable or maximal lubrication is required. Adds bowel-anastomosis morbidity but provides the lowest stenosis-recurrence rate.",
+    bestFor: "Refractory stenosis or maximal-lubrication priority in revision setting.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
   {
     name: "Rectoneovaginal Fistula Repair",
     domain: "Revision / Salvage",
-    notes: "Diversion + tissue interposition (gracilis or Martius). Direct primary repair is high-failure. Pastier 2024 RVF data: Martius vs gracilis 69% vs 69% at long-term follow-up.",
+    bestFor: "Rectoneovaginal fistula — diversion + Martius or gracilis interposition.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
   {
     name: "Meatal-Stenosis Revision",
     domain: "Revision / Salvage",
-    notes: "Common urethroplasty complication (5–16.3% surgeon-reported, up to 40% patient-reported). Management: meatotomy ± local flap; refractory cases may require formal urethroplasty.",
+    bestFor: "Meatal stenosis after urethroplasty — meatotomy ± flap, formal urethroplasty if refractory.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
   {
     name: "Granulation-Tissue Debridement",
     domain: "Revision / Salvage",
-    notes: "26% incidence after PIV (Massie 2018 PRS). In-office silver-nitrate cautery or operative debridement; commonly self-limited with adequate dilation.",
+    bestFor: "Post-PIV granulation tissue — silver-nitrate cautery or operative debridement.",
     slug: "/docs/special-populations/05c-gender-affirming/revision-salvage-gas",
   },
 
@@ -271,8 +271,8 @@ export const femColumns = [
     },
   },
   {
-    key: 'notes',
-    header: 'Notes',
+    key: 'bestFor',
+    header: 'Best for / indication',
   },
 ];
 
