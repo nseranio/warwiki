@@ -6,6 +6,53 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-11 (priapism atlas) — Full rewrite of priapism shunts & decompression page
+
+Comprehensive page-level rewrite of `docs/04-surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression.mdx` across **seven commits** pushed to both `claude/kind-wiles-84dcfe` and `main`. Replaced the GenericDatabase block with a 10-row markdown summary table, removed the now-unused `GenericDatabase` import, and expanded every named technique from a one-row stub into a full surgeon-oriented subsection. Reference list grew from **17 → 47** entries.
+
+### Distal corporoglanular shunts (Winter / Ebbehoj / T-Shunt / Al-Ghorab)
+
+- **Winter** — feature table; Nixon's 92%-of-reoperated-patients-had-Winter signal; **Snake-incompatible** framing because core is too small to accept a Hegar dilator.
+- **Ebbehoj** — 1974 origin as a No. 11 blade modification of the Winter; positioning between Winter and Al-Ghorab; urethral-injury caveat if directed too ventrally.
+- **T-Shunt (Lue)** — full **Brant–Lue 9-step technique** (lateral glans entry at 2 / 10 o'clock, No. 10 blade, 90° rotation, Foley protection, optional corporal biopsy); outcomes-by-duration table (< 24 h ~ 100%, 24–48 h ~ 60–75%, > 48 h ~ 30% with **100% necrotic smooth muscle on biopsy**); four named efficacy series — Brant/Lue 2009 92%, Zacharakis 2014 100% if < 48 h, Ortaç 2019 84.2% ED, Unal/Burnett 2024 **92.3% Snake vs 53.6% no-Snake** (p < 0.001).
+- **Al-Ghorab** — 1973 origin; "largest tunical window, direct vision, lowest reoperation rate"; step-by-step including **Shiraishi–Matsuyama blunt-cavernosotomy salvage** (Pean forceps for 5–7 day priapism refractory to T-shunt/Snake; 2/2 immediate resolution); four-shunt comparison table; five efficacy series.
+
+### Burnett Snake Maneuver
+
+- Full Burnett–Pierorazio 9-step technique anchored on why Winter and Ebbehoj windows are too small to accept a 7–8 mm Hegar dilator while T-shunt and Al-Ghorab are compatible.
+- Shunt-compatibility matrix; five-row efficacy table culminating in Unal/Burnett 2024 comparative (**92.3% vs 53.6%** resolution, **recurrence 4.2% vs 26.6%**, EF at follow-up 42.8% vs 50% NS).
+- Complication profile from the Segal series (1/10 wound infection, 1/10 urethral injury with subsequent urethrocutaneous fistula); Shiraishi–Matsuyama salvage call-back.
+- VanDyke practice-pattern signal — corporoglanular tunneling remains favored first-line (71.2%) and more widely performed (89.9% vs 62.8% PSD).
+
+### Penoscrotal Decompression (PSD)
+
+- Rationale vs immediate MPP — Fuchs documented **37.5% revision rate** for immediate MPP after failed distal shunting with **50% distal extrusion / 25% impending lateral extrusion**; PSD's glans-sparing approach was designed to break this loop.
+- Original Fuchs 2018 penoscrotal incision vs **Basile 2025 proximal-shaft modification**.
+- Four-row evidence table: **Fuchs 2018** 6/6 resolution with 0% revision vs MPP 37.5%; **Baumgarten 2020** mean 71 h duration, 48% with prior failed shunting, **bilateral PSD 0% recurrence vs unilateral 20%**, 60% spontaneous EF, median IIEF-5 drop 3.5; **Basile 2025** longest follow-up — 96% immediate detumescence, 92% pain relief, 69% overall success (73% bilateral), 86% satisfactory EF (± PP); **VanDyke 2023/2024 surgeon survey** — 47.3% rated PSD "Very/Extremely Effective" vs 18.7% for corporoglanular tunneling (p < 0.001).
+- Comparison table across distal shunts / Snake / PSD / immediate MPP; prosthesis-preservation framing.
+
+### Proximal and Venous Shunts
+
+- **Quackels** — 1964 origin; lithotomy + perineal corporospongiosal-anastomosis step-by-step; Quackels-vs-Grayhack head-to-head; five efficacy series (Cosgrove 1974 → EAU 2024 abandonment recommendation); Quackels-specific complications anchored to **Manjunath 2015** (simultaneous urethrocutaneous + urethrocavernous fistula after proximal corporospongiosal shunt requiring suprapubic diversion), **Robbins 1984** (late urethrocavernous fistula 3 mo post-shunt), and **Kulmala 1995** (19.2% permanent open shunt on cavernosography; **100% impotence reversal by shunt closure**).
+- **Grayhack** — Grayhack/McCullough/O'Conor/Trippel 1964 cavernovenous concept; full saphenous-graft step-by-step; eight-row efficacy table (Cosgrove → **Resnick 1975 pediatric Grayhack** → **Moloney 1975 with the 3-mo graft-ligation rule** → Richard 1979 87.5%/62.5% → Nixon → Kulmala 19.2% → Zheng → EAU 2024); Grayhack-vs-Quackels head-to-head emphasizing higher persistent-shunt + PE risk vs lower urethral-injury risk; modern cavernovenous variants — Barry 1976, **Chiou 2009** DDV + saphenous-vein graft (100% resolution / 69% EF in n = 16 with 10 prior failed shunts; Doppler-confirmed shunt patency in 100% and restored cavernosal arterial flow in 92%), Kilinc 2009 temporary cavernosal-cephalic angiocath-and-serum-set bedside construct (86.7%).
+- **Barry / Caverno-Dorsal Vein** — promoted from one-row mention to full subsection. Penile venous-anatomy primer (superficial DV / deep dorsal vein as principal flaccid-state drainage / cavernosal-crural). Original 1976 Barry technique. Four modifications: **Micoogullari 2021 planned 2-month closure** with 0.01% adrenaline irrigation × 5 protocol (the direct procedural answer to the Kulmala/Moloney permanent-open-shunt physiology); Chiou DDV+SVG hybrid; Kilinc temporary cephalic-vein; Soydaş 2025 algorithm. Four-row efficacy table — Barry 2/2, Chiou 100%/69%, Micoogullari 100%/80%, Kilinc 86.7%/77%. Nuanced positioning that the Barry-shunt-specific data **exceed** pooled proximal-shunt outcomes (EAU 5.7–100% / 11.1–77.2%) while acknowledging absence from AUA/SMSNA 2022 and EAU 2024 recommendations.
+
+### Early Malleable Penile Prosthesis (renamed from "Early Penile Prosthesis Transition")
+
+- Pathophysiological rationale with the 48-h irreversibility threshold and the four simultaneous functions of acute MPP (mechanical detumescence, length preservation, proactive ED treatment, avoidance of the dense-fibrosis surgery problem).
+- **MRI-guided patient selection** anchored to **Ralph 2010 BJU Int** (100% sensitivity of T2-weighted gadolinium-enhanced penile MRI for nonviable smooth muscle vs corporal-biopsy reference) and the **ISSM survey gap** (< 40% currently use MRI / biopsy).
+- Guideline positioning (EAU 2024 / AUA-SMSNA 2022 > 36 h / Pang 2025 / Calopedos 2025); malleable-vs-IPP head-to-head table; full step-by-step including **Salem 2010 sling-suture distal-erosion prophylaxis** (0% distal erosion in 11/12 patients with prior failed shunting at median 15-mo follow-up).
+- **Seven-row evidence table**: **Ralph 2009 UCLH landmark** (n = 50, 100% resolution / 84% intercourse / 96% satisfaction / **0% penile shortening**); **Zacharakis 2014 UCLH early-vs-delayed** (96% vs 60% satisfaction; **80% of delayed implantations required a second corporotomy and downsized cylinders**); **Barham 2023 multicenter IPP** (0% complication rate when placed ≤ 6 mo vs **40.5% when placed > 6 mo**); **Tausch 2015 cost-effectiveness** (mean preop **US $83,818** in repeated interventions; all discharged ≤ 24 h after MPP); Salem 2010; **Dighero 2025 long-term QoLSPP** (n = 39 at median 9-yr follow-up; **100% would not regret the prosthesis**); **Butaney 2019 ISSM survey** (70.9% more comfortable with MPP than shunt, yet ~ 80% still favor shunts first-line — the practice gap Calopedos 2025 explicitly challenges).
+- Elective **MPP → IPP exchange** at 6–12 mo; Clavijo 2017 IPP-into-fibrotic-corpora tips; special-population notes (SCD, prior failed shunting); algorithmic biases table; head-to-head prosthesis-vs-shunt table.
+
+### References added (refs 18–47)
+
+Mireku-Boateng 2001, Yassin 2023, Ortaç 2019, Shiraishi-Matsuyama 2013, Schifano 2025, Quackels 1964, Cosgrove-LaRocque 1974, Tabibi 2010, Zheng 2013, Manjunath 2015, Robbins 1984, Kulmala 1995, Grayhack 1964, Resnick-Grayhack 1975, Moloney 1975, Richard 1979, Barry 1976, Chiou 2009, Kilinc 2009, Calopedos 2025, Ralph 2009 EUR Urol, Zacharakis 2014, Ralph 2010 MRI, Butaney 2019 ISSM, Tausch 2015, Salem 2010, Barham 2023, Dighero 2025, Clavijo 2017, Cocci 2025 PPI complications SR, von Stempel 2024 imaging review.
+
+Verification: `npm run lint:links` clean across 1,034 files; `npm run lint:citations` clean for this page; `npm run build` succeeds. Seven commits pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
+
+---
+
 ## 2026-05-11 (LS surgical ladder) — Regenerative VLS / GSM expansion + four new LS / FGM/C atlas pages + DB audit
 
 LS-surgical-ladder build-out spanning the full conservative → maximal spectrum, thorough regenerative VLS + GSM expansion of the existing microfat / nanofat grafting page, new FGM/C clinical-condition page under 03g, and a vulvar-DB audit + cleanup pass. **10 commits**. Build clean across **1,010 files**.
