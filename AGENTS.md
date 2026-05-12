@@ -166,7 +166,7 @@ Built out:
 
 **Organizational recommendation (from this session):** keep the pharmacology-hub-vs-perioperative-workflow split; it answers two different reader questions ("which agent and dose?" vs "what do I do at the bedside?"). Apply three disciplines to every pair: (1) cross-reference box at top of both pages; (2) single source of truth per fact (agent dose = pharmacology; procedure-specific decision = perioperative); (3) when a drug's status changes (e.g., andexanet withdrawal), immediately flag the sister page for update. Four perioperative-care workflow articles still need matching cross-reference boxes pointing up to their pharmacology hubs — quick cleanup job for a future session.
 
-**Other housekeeping:** WARWIKI contact email updated in [about.mdx:91](src/pages/about.mdx:91) from `nseranio@gmail.com` → `warwikihq@gmail.com`.
+**Other housekeeping:** WARWIKI contact email standardized to `warwikihq@gmail.com` across the site.
 
 ### Pharmacology deep-dive session (April 23, 2026) — not yet committed
 
@@ -729,7 +729,7 @@ Team members:
 1. **Nicolas Seranio, MD** — Editor in Chief (`nick-seranio.jpg`)
 2. **Humberto Villarreal, MD** — Senior Advisor (`humberto-villarreal.jpg`)
 
-The "contact" link in About uses a mailto obfuscation — link text says "WARWIKI" but resolves to `nseranio@gmail.com`.
+The "contact" link in About uses a mailto obfuscation — link text says "WARWIKI" but resolves to `warwikihq@gmail.com`.
 
 The Turner-Warwick reference links to his surgeon profile at `/docs/roots/surgeons/s-z/richard-turner-warwick`.
 
