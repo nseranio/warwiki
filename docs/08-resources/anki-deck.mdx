@@ -1,0 +1,75 @@
+---
+title: Anki Deck
+sidebar_position: 6
+---
+
+# WARWIKI Anki Cards v1.0
+
+A curated Anki spaced-repetition deck distilled from the site for residents, fellows, and surgeons preparing for board exams or fellowship-level rounds. **128 cards** across 25 topic tags spanning foundations, evaluation, clinical conditions, surgical techniques, and guidelines.
+
+<div style={{margin: '1.5rem 0', padding: '1rem 1.25rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid var(--ifm-color-primary)', borderRadius: '4px'}}>
+
+**Download:** [warwiki-anki-v1.csv](/anki/warwiki-anki-v1.csv) (tab-separated, ~25 KB)
+
+</div>
+
+## What's in v1.0
+
+| Domain | Cards | Examples |
+| --- | --- | --- |
+| Foundations — Anatomy | 8 | Bulbar urethra anatomy, ovarian vein asymmetry, deep uterine vein |
+| Foundations — Skills | 8 | Knot tying, suture lubrication, Heaney stitch, throws by material |
+| Foundations — Pharmacology | 5 | OAB pharmacotherapy, AUS prophylaxis, GSM first-line |
+| Evaluation — Imaging | 3 | RUG for stricture, PDUS criteria, PCS TVUS thresholds |
+| Evaluation — Radiation | 5 | ICRP eye-lens limit, FLASH reference levels, PCNL dose, pulsed half-dose, position effects |
+| Evaluation — Urodynamics | 3 | DSD, video-UDS indications, MUCP/VLPP thresholds for ISD |
+| Clinical — Pelvic Pain | 9 | PeVD SVP classification, BPS/IC, post-coital pain, escape points, Hunner |
+| Clinical — Radiation | 6 | Post-RT stricture rates, AUS in irradiated, urethroplasty outcomes |
+| Clinical — Other | 6 | Hinman, urethral diverticulum, NLUTD, McGuire LPP, dysreflexia |
+| Surgical — Urethra | 6 | EPA success, BMG in radiated, PFUI Koraitim pathway |
+| Surgical — Reconstruction | 6 | Radiation bed flap-vs-graft, Singapore flap, Yang-Monti |
+| Surgical — Fistulas | 7 | Tissue interposition, RVF, VUF, ureterovaginal, transabdominal |
+| Surgical — Incontinence | 10 | AUS cuff size, transcorporal, double-cuff, SNM vs Botox, Bulkamid |
+| Surgical — Gender-Affirming | 6 | PIV vaginoplasty, intestinal vaginoplasty, RFFF phalloplasty |
+| Surgical — Other | 11 | BNC ladder, cystectomy post-RT, IPP vs malleable, HBOT, BPH ladder |
+| Trauma & Emergencies | 6 | AAST renal grades, PFUI, priapism BG, Fournier LRINEC, penile fracture |
+| Guidelines | 9 | AUA IC/BPS, USD, BPH, rUTI; CDC SSI; WPATH SOC8; SVS varicose; EAU priapism |
+| History — Eponyms | 4 | Heaney, Mitrofanoff, Sushruta, Boari |
+
+## How to import
+
+1. **Download** the [CSV file](/anki/warwiki-anki-v1.csv).
+2. Open Anki on desktop (the importer is more reliable than mobile clients).
+3. **File → Import…** and select `warwiki-anki-v1.csv`.
+4. The file's header instructs Anki to use tab as the field separator and column 3 as tags, and to place cards in a deck named **WARWIKI Anki Cards v1.0**. Confirm these settings in the import dialog if Anki prompts.
+5. Anki creates the deck and applies the hierarchical tags (`WARWIKI::Foundations::Anatomy`, etc.) so you can filter by topic or build custom study sub-decks.
+
+## How to study
+
+- **All cards by default** — start with the full deck and let the scheduler triage by interval.
+- **By topic** — in Anki, browse cards by tag and create a filtered deck for a single domain (e.g., `tag:WARWIKI::Surgical::Incontinence`).
+- **Pre-rounds prep** — filter by `Surgical::*` for operative-day review; `Trauma::*` for ED call.
+- **Board / fellowship review** — `Guidelines::*` plus the relevant clinical domain.
+
+## What this is, and isn't
+
+**Is:** a high-yield starter deck of clinical pearls, eponyms, key thresholds, and guideline anchors that map directly to the WARWIKI articles. Cards are written in surgeon-facing voice and emphasize decision points and operative-relevant numbers. Every card is anchored in content elsewhere on the site — use the site as the long-form context, the deck as the active-recall layer.
+
+**Isn't:** an exhaustive board-review course or a substitute for primary literature. Many topics that warrant Anki coverage are not yet captured here (urodynamic interpretation pearls, pediatric urology transition, full BNC procedural detail, GAS revision algorithms, peri-prosthetic infection workup). Those will land in **v1.1** and later releases.
+
+## Contributing
+
+Spotted an error or want to add cards? Email **warwikihq@gmail.com** or open an issue on the [GitHub repository](https://github.com/nseranio/warwiki/issues). Card additions should:
+
+- Map to existing site content (or trigger a new page if the topic isn't yet covered).
+- Use the same tag taxonomy (`WARWIKI::<Section>::<Subtopic>`).
+- Be tab-separated three-column TSV: `Front<TAB>Back<TAB>Tags`.
+- Use specific, decision-relevant content over rote facts where possible.
+
+## Versioning
+
+| Version | Date | Notes |
+| --- | --- | --- |
+| **v1.0** | 2026-05-12 | Launch deck — 128 cards across 25 tag categories |
+
+Future versions will be additive (new cards, refined wording) and will be posted at the same URL as the working file; older snapshot files (e.g., `warwiki-anki-v1.csv`) will be preserved for reproducibility.
