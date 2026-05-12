@@ -10,6 +10,10 @@ For commit-level detail run `git log --oneline`.
 
 Twelve commits to `main` covering site polish, inclusive-language remediation, structural consistency, and three new clinical pages. Build clean across ~1,038 files.
 
+### Anki deck — added and reverted
+
+Built a 2,038-card Anki spaced-repetition deck (commit `267a77f`) covering the four in-scope sections — foundations, evaluation, clinical conditions, special populations — explicitly excluding the treatment atlas and library per the owner's direction. Three parallel agents extracted cards from each section into TSV temp files; a defensive dedup merge produced the final CSV at `static/anki/warwiki-anki-v1.csv` with a resource page at `docs/08-resources/anki-deck.mdx`. Cards followed a uniform shape (Front ≤ 200 chars, Back ≤ 350, hierarchical tag `WARWIKI::Section::Subsection::Topic`). The owner reviewed and chose to remove it (commit `6052c0a`); content lives in git history for a future iteration. The taxonomy and parallel-agent generation pattern are documented in CLAUDE.md for the next attempt.
+
 ### Site polish
 
 - Replaced the underbuilt Surgical Genealogy page (`docs/07-roots/surgical-lineage.mdx`) with a concise two-sentence "in development" placeholder + call for collaborators routed to `warwikihq@gmail.com`. Tightened the `07-roots/index.mdx` description.

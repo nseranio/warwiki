@@ -8,6 +8,8 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 Launch-day pass touching site polish, inclusive language, navigation consistency, and a handful of new content additions. Twelve commits to `main`, all building clean across ~1,038 files.
 
+**Anki deck experiment (added then reverted).** Built a 2,038-card Anki deck (commit `267a77f`) covering foundations, evaluation, clinical conditions, and special populations — three parallel agents extracted cards from the relevant sections within strict length and quality constraints, scoped to exclude the treatment atlas and library per the owner's direction. The deck file was at `static/anki/warwiki-anki-v1.csv` with a resource page at `docs/08-resources/anki-deck.mdx`. The owner reviewed and chose to remove it (commit `6052c0a`) — the content is preserved in git history if a future iteration is wanted. The supporting taxonomy (`WARWIKI::Section::Subsection::Topic`) and the parallel-agent generation pattern (Foundations / Evaluation+SpecialPops / Clinical with TSV temp files and a defensive dedup merge) are documented here for the next attempt.
+
 **Polish / launch prep**
 
 - Replaced the underbuilt Surgical Genealogy page at `docs/07-roots/surgical-lineage.mdx` with a concise two-sentence "in development" placeholder + call for collaborators (contact `warwikihq@gmail.com`); kept the History sub-page link from the parent landing. Tightened the 07-roots landing description so it no longer over-promises a searchable directory + tree that does not yet exist.
