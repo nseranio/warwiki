@@ -49,7 +49,11 @@ Comprehensive page-level rewrite of `docs/04-surgical-techniques/04j-sexual-dysf
 
 Mireku-Boateng 2001, Yassin 2023, Ortaç 2019, Shiraishi-Matsuyama 2013, Schifano 2025, Quackels 1964, Cosgrove-LaRocque 1974, Tabibi 2010, Zheng 2013, Manjunath 2015, Robbins 1984, Kulmala 1995, Grayhack 1964, Resnick-Grayhack 1975, Moloney 1975, Richard 1979, Barry 1976, Chiou 2009, Kilinc 2009, Calopedos 2025, Ralph 2009 EUR Urol, Zacharakis 2014, Ralph 2010 MRI, Butaney 2019 ISSM, Tausch 2015, Salem 2010, Barham 2023, Dighero 2025, Clavijo 2017, Cocci 2025 PPI complications SR, von Stempel 2024 imaging review.
 
-Verification: `npm run lint:links` clean across 1,034 files; `npm run lint:citations` clean for this page; `npm run build` succeeds. Seven commits pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
+Verification: `npm run lint:links` clean across 1,034 files; `npm run lint:citations` clean for this page; `npm run build` succeeds. Seven content commits + one docs commit pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
+
+### Follow-up navigation fix (commit `c70f97c`)
+
+Converted bare procedure names to anchor links after a "techniques are not clickable" report. All 10 rows of the Procedure Summary Table at the bottom of the priapism atlas page now link to the corresponding on-page subsection anchors (Winter, Ebbehoj, T-Shunt, Al-Ghorab, Snake, PSD, Quackels, Grayhack, Barry, Early MPP). The shunt tables on the emergency-condition priapism page in `docs/05-special-populations/05a-trauma-emergencies/priapism.mdx` now cross-link each Winter / Ebbehoj / T-shunt / Al-Ghorab / Quackels / Grayhack / Snake / PSD row to the matching atlas-page anchor; a missing Barry-shunt bullet was added to the proximal-shunt list. Lint + build clean; pushed to `main`.
 
 ---
 

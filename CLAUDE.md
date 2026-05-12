@@ -21,7 +21,9 @@ Section-by-section changes:
 
 References extended through ref 47 across the seven commits — added Mireku-Boateng 2001, Ortaç 2019, Shiraishi-Matsuyama 2013, Schifano 2025, Quackels 1964, Cosgrove-LaRocque 1974, Tabibi 2010, Zheng 2013, Manjunath 2015, Robbins 1984, Kulmala 1995, Grayhack 1964, Resnick-Grayhack 1975, Moloney 1975, Richard 1979, Barry 1976, Chiou 2009, Kilinc 2009, Calopedos 2025, Ralph 2009, Zacharakis 2014, Ralph 2010 MRI, Butaney 2019 ISSM, Tausch 2015, Salem 2010, Barham 2023, Dighero 2025, Clavijo 2017, Cocci 2025 PPI complications SR, von Stempel 2024 imaging review.
 
-Verification: `npm run lint:links`, `npm run lint:citations`, `npm run build` all pass. Seven commits pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
+Verification: `npm run lint:links`, `npm run lint:citations`, `npm run build` all pass. Seven content commits + one docs commit pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
+
+Follow-up navigation fix (commit `c70f97c`) — converted bare procedure names to anchor links in two places after a "techniques are not clickable" report: (1) all 10 rows of the Procedure Summary Table at the bottom of the priapism atlas page now link to on-page anchors (Winter, Ebbehoj, T-Shunt, Al-Ghorab, Snake, PSD, Quackels, Grayhack, Barry, Early MPP); (2) the shunt tables on the emergency-condition priapism page in `05a-trauma-emergencies/priapism.mdx` now cross-link each row to the corresponding atlas anchor, and a missing Barry-shunt bullet was added to the proximal-shunt list.
 
 ## Previous Handoff - 2026-05-11 (LS surgical ladder) — Regenerative VLS / GSM expansion + four new LS / FGM/C atlas pages + DB audit
 
