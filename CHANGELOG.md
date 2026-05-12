@@ -14,6 +14,29 @@ Twelve commits to `main` covering site polish, inclusive-language remediation, s
 
 Built a 2,038-card Anki spaced-repetition deck (commit `267a77f`) covering the four in-scope sections — foundations, evaluation, clinical conditions, special populations — explicitly excluding the treatment atlas and library per the owner's direction. Three parallel agents extracted cards from each section into TSV temp files; a defensive dedup merge produced the final CSV at `static/anki/warwiki-anki-v1.csv` with a resource page at `docs/08-resources/anki-deck.mdx`. Cards followed a uniform shape (Front ≤ 200 chars, Back ≤ 350, hierarchical tag `WARWIKI::Section::Subsection::Topic`). The owner reviewed and chose to remove it (commit `6052c0a`); content lives in git history for a future iteration. The taxonomy and parallel-agent generation pattern are documented in CLAUDE.md for the next attempt.
 
+### AUS revision / salvage expansion (commit `ac88819`)
+
+Major expansion of the Revision and Salvage Techniques section on the [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) page.
+
+**New conceptual subsection** — "The Hourglass Debate: Capsulotomy and the Atrophy Question":
+
+- Bugeja / Mundy / UCLH 2016 demonstration that the hourglass deformity at the cuff site resolves on capsulectomy and is largely an artifact of the constrictive fibrous pseudocapsule; concurrent manometry of explanted PRBs showed pressure loss in all cases, supporting **PRB material failure**, not true atrophy, as the dominant NOMECA mechanism. 12/14 (85.7%) success with same-size cuff + same-pressure PRB replacement.
+- Terlecki / Wilson 2022 "Wilson's Workshop 11" paradigm: (1) capsulotomy / capsulectomy at cuff site; (2) measure urethra after capsule release; (3) replace with same-size cuff; (4) complete device replacement (cuff + PRB + pump).
+- Capsulotomy also relevant around the PRB (Khouri 2020 PRB herniation 3.2% as correctable cause of malfunction) and the scrotal pump.
+- Bentellis 2021 "larger cuff size as only independent revision predictor" framing.
+
+**Expanded outcomes per technique:**
+
+- Cuff downsizing — Krughoff 2023 (97% subjective improvement, −2.2 pads/day, 70.6% in-place at 1.8 yr); Saffarian 2003 original-atrophy data; 3.5 cm cuff impact (22.2% → 4.7% revision rate).
+- Cuff repositioning — Couillard / Stone 1995 proximal (5/6 improved at > 1 yr); benefit depends on appropriate re-sizing.
+- Tandem cuff — DiMarco / Elliott 4.3 → 1.6 pads/day; O'Connor 2008 single-vs-double no continence difference but 12 vs 7 reoperations; Manka / Wright cadaver model showed tandem cuff did not improve LPP vs single (p = 0.44) — benefit may reflect more-proximal placement rather than dual-cuff mechanism; Yafi AMS PIF database (selection bias); Ahyai 2016 high-vs-low-risk (5.7× higher late explantation in double-cuff).
+- Transcorporal cuff — Domínguez Gutiérrez 2025 SR / meta-analysis (revision OR 2.99, infection OR 0.33, erosion OR 0.35); Wiedemann 2013 functional outcomes; Ortiz 2020 erosion heat-map (18.3% TC vs 6.1% standard); Mock 2015 urethral risk factors (≥ 2 risk factors drop 35-mo erosion-free survival from 100% to 64%); Moser 2018 TC after prior erosion (irradiated patients remain high-risk).
+- New: Tandem transcorporal cuff (Magera / Elliott pad data).
+- New: Distal double cuff vs transcorporal head-to-head (Maurer 2019 prospective; DC→TC sequential salvage strategy).
+- PRB modification — Khouri PRB herniation; Loh-Doyle predictors; caution against routine upsizing in atrophic tissue.
+
+Updated Key Principles of Revision and Salvage to surface the capsulotomy + same-size replacement default, the cadaver-model qualifier on tandem cuff benefit, and the DC → TC sequential salvage paradigm. **16 new references (40–55).**
+
 ### Site polish
 
 - Replaced the underbuilt Surgical Genealogy page (`docs/07-roots/surgical-lineage.mdx`) with a concise two-sentence "in development" placeholder + call for collaborators routed to `warwikihq@gmail.com`. Tightened the `07-roots/index.mdx` description.
