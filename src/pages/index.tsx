@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import {useEffect, useState, type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -8,6 +8,29 @@ import Heading from '@theme/Heading';
 import stats from '@site/src/data/stats.json';
 
 import styles from './index.module.css';
+
+const SEARCH_PLACEHOLDERS = [
+  'Where should we start?',
+  "What's the chief complaint?",
+  'Mobilize, spatulate, search.',
+  'Tension-free results ahead.',
+  'Restore continuity.',
+  'Anastomose to an answer.',
+  'Bridge the gap.',
+  'Choose your approach.',
+  "What's holding you up?",
+  'Reconstruct your question here.',
+  'Continence in three sentences or fewer.',
+  "What's the fistula du jour?",
+  'Pressure-flow into the literature.',
+  'Two-stage your search.',
+  'Diversion welcome.',
+  'Stricture-free search guaranteed.',
+  'Detrusor your curiosity here.',
+  'Spatulate widely.',
+  'Tension-free, watertight, multilayered answers.',
+  "What's leaking your attention?",
+];
 
 function openSearch() {
   const btn = document.querySelector<HTMLButtonElement>('.navbar .DocSearch-Button');
@@ -22,6 +45,13 @@ function openSearch() {
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  // SSR renders the first placeholder; client picks a random one after mount
+  // to avoid hydration mismatch.
+  const [placeholder, setPlaceholder] = useState(SEARCH_PLACEHOLDERS[0]);
+  useEffect(() => {
+    const idx = Math.floor(Math.random() * SEARCH_PLACEHOLDERS.length);
+    setPlaceholder(SEARCH_PLACEHOLDERS[idx]);
+  }, []);
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className={clsx('container', styles.heroInner)}>
@@ -50,7 +80,7 @@ function HomepageHeader() {
             <circle cx="11" cy="11" r="7" />
             <path d="m21 21-4.3-4.3" />
           </svg>
-          <span className={styles.heroSearchPlaceholder}>Where should we start?</span>
+          <span className={styles.heroSearchPlaceholder}>{placeholder}</span>
           <span className={styles.heroSearchKeys}>
             <kbd>⌘</kbd>
             <kbd>K</kbd>
