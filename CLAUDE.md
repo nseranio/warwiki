@@ -4,7 +4,52 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-11 (priapism atlas) — Full rewrite of priapism shunts & decompression page
+## Current Handoff - 2026-05-12 — Launch-day cleanup pass
+
+Launch-day pass touching site polish, inclusive language, navigation consistency, and a handful of new content additions. Twelve commits to `main`, all building clean across ~1,038 files.
+
+**Polish / launch prep**
+
+- Replaced the underbuilt Surgical Genealogy page at `docs/07-roots/surgical-lineage.mdx` with a concise two-sentence "in development" placeholder + call for collaborators (contact `warwikihq@gmail.com`); kept the History sub-page link from the parent landing. Tightened the 07-roots landing description so it no longer over-promises a searchable directory + tree that does not yet exist.
+- Standardized the public contact email to **warwikihq@gmail.com** across the repo; scrubbed `nseranio@gmail.com` from all tracked files (was lingering in AGENTS.md historical notes); saved a feedback memory so future sessions default to the project mailbox.
+- Removed per-page last-update author name (`showLastUpdateAuthor: false` in `docusaurus.config.ts`); last-update timestamp preserved.
+- Audited site for stale content; ran `scripts/fix-citations.js` to clean 75 files with citation-anchor gaps / orphans across foundations flaps (igap, epap, posterior-thigh, mcfap, island-groin), 04ab BNC/VUAS (8 procedures), 04b bladder-reconstruction (9), 04c urinary-diversion, 04d upper-tract, 04e genital-reconstruction (22), 04g prolapse (8), 04h fistula-repair (10), and 04l cosmetic (2). Added missing `hide_title: true` to the 04a urethral-reconstruction index landing.
+
+**Sex/gender language sweep**
+
+- Renamed the heteronormative `both-genders` folder to `all-patients` across the fistula taxonomy — both `04h-fistula-repair/both-genders/` → `all-patients/` and `03f-fistulas/in-both-genders/` → `all-patients/`, plus the `04h/both-genders-fistula.mdx` landing → `all-patients-fistula.mdx`. Updated `_category_.json` labels, all inbound links, the JS export name in the landing's `GenericDatabase` array, and added three permanent vercel.json redirects covering the old URL families.
+- Display prose updates: "Both-Genders Fistula Repair" → "Fistula Repair (All Patients)"; "Fistulas in Both Genders" → "Fistulas (All Patients)"; "in both sexes" → "across sexes"; "across both sexes" → "across all patients". One "nontranssexual patients" cohort descriptor → "patients undergoing phalloplasty for non-gender-affirming indications"; one "male-to-female gender-reassignment surgery" → "vaginoplasty (gender-affirming surgery)".
+- Added a header note to `docs/08-resources/hidden-curriculum/billing-coding.mdx` acknowledging that several ICD-10 code descriptions (F64.0 Transsexualism; Q56.0–Q56.4 Hermaphroditism / Pseudohermaphroditism; Z87.890 Personal history of sex reassignment) use outdated stigmatizing language but are preserved verbatim because billing accuracy requires matching the official descriptor, and pointing clinicians to current preferred terminology (DSD, gender dysphoria / gender incongruence, gender-affirming surgery) for clinical documentation. Saved a feedback memory codifying this practice.
+
+**New clinical content**
+
+- New [Pelvic Venous Disorders](docs/03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders.mdx) page under chronic-pelvic-pain. Full PeVD / PCS picture: normal anatomy with embryologic basis for left/right asymmetry; the deep uterine vein as a surgical landmark splitting the lateral uterine aspect into vascular and nervous zones (relevant to radical hysterectomy and uterine transplantation); US Uterus Transplant Consortium superior/inferior uterine vein nomenclature; reflux-vs-obstruction pathophysiology including nutcracker and May-Thurner; hormonal contribution; clinical presentation with post-coital pain as the pathognomonic feature; the four pelvic escape points and the bottom-up paradigm; SVP classification with zones 1–4; imaging hierarchy (TVUS, venography, CT/MRI, IVUS); endovascular management as mainstay (Hansrani 2023 RCT, durability data, Daniels SR); the 2026 Emory POTS / orthostatic-intolerance association (83% PeVD prevalence; 44% complete resolution after iliac stenting). 36 deduplicated references with DOI links. Cross-linked from the existing PCS subsection of `chronic-pelvic-pain.mdx`.
+- New [Glove Wetting for Knot Tying](docs/01-foundations/surgical-skills/glove-wetting.mdx) page in `surgical-skills/`. Friction-reduction rationale; bench evidence that wet conditions reduce knot slippage (Pietschmann, Savage, Coleridge, Muffly); glove perforation literature (Enz 2023 25–37%, Martinez 2013 thicker-vs-thinner gloves, Battersby 2016 double-gloving knot-quality tradeoff); Enz 2026 global gloving consensus + WSES 2020; practical-pearls table; RU-specific moments where the pearl matters (anastomotic urethroplasty, VUA after RP, sling/prosthesis ties, robotic intracorporeal knots). Renamed the `surgical-skills/_category_.json` label from "Named Stitches" to "Surgical Skills" so the directory accommodates non-stitch operative pearls.
+- New [Suture Lubrication](docs/01-foundations/surgical-skills/suture-lubrication.mdx) page covering the surgical tradition of running sutures through bacitracin ointment, petroleum jelly, or mineral oil. Frames against modern evidence: petroleum-based agents reduce knot failure load (Muffly 116.7 vs 123.8 N, p = 0.002) via the Johanns 2023 friction-elastoplasticity framework; bacitracin adds an anaphylaxis pathway (SHEA/IDSA 2022 contraindication of bacitracin irrigation) and an allergic-contact-dermatitis cost (Smack 1996 JAMA RCT n = 922); Adkins 2022 in vitro antimicrobial signal balanced against the CDC 2017 recommendation that triclosan-coated sutures are the engineered alternative for the antimicrobial goal. Bottom line: saline for lubrication, triclosan-coated sutures for antimicrobial coverage.
+- New [Radiation Safety](docs/02-evaluation/imaging/radiation-safety.mdx) page in evaluation. Occupational fluoroscopy safety for the reconstructive urologist: ICRP/NCRP dose limits (eye lens 20 mSv/yr is the rate-limiting organ); FLASH UK reference levels by procedure (PCNL 24.1 Gy·cm² as the high-dose outlier); ALARA principles operationalized through shielding (apron, thyroid collar, leaded eyewear, ceiling-mounted, under-table — reducing trunk dose 95%, genital 99%, leg 97%), distance (inverse-square law — 3× distance = 9× scatter reduction), and equipment optimization (pulsed half-dose ~30% reduction, last-image hold, collimation); procedure-specific pearls including RUG/VCUG, URS/stent, PCNL, urethroplasty workup; pregnancy considerations. Patient-side radiation injury (cystitis, urethral stricture in irradiated bed, AUS durability) continues to live in `surgical-principles/radiation-tissue-effects.mdx`, with a cross-link added in both directions.
+
+**Taxonomy decision codified**
+
+For "where do disparate technique pearls live?" — answer: **named techniques / maneuvers / operative pearls** go in `01-foundations/surgical-skills/`; **physical instruments** in `01-foundations/tools/instruments/`; **broader principles** in `01-foundations/surgical-principles/`. The Heaney stitch, Parker-Kerr stitch, quilting stitch, glove wetting, and suture lubrication are all in surgical-skills; ski needle / J-hook is in tools/instruments; sutures, needles, and wound healing are in surgical-principles.
+
+**Landing-page / sidebar ordering pass**
+
+Audited every `index.mdx` against the sidebar order implied by `sidebar_position` and `_category_.json` `position` fields. Fixed real mismatches (left intentional curation choices alone):
+
+- `06-journal-club/index.mdx` — swapped to put Guidelines & White Papers before Journal Database (matches sidebar pos 2 vs 5).
+- `05-special-populations/05a-trauma-emergencies/index.mdx` — reordered both sub-groups to match explicit `sidebar_position` numbers (gu-injury-overview → trauma-assessment in the initial approach; PFUI → bladder → ureteral → renal → penile → scrotal in the organ-specific group).
+- `01-foundations/surgical-principles/index.mdx` — added missing Hyperbaric Oxygen Therapy entry.
+- `04-surgical-techniques` — realigned all 13 `_category_.json` positions so the sidebar matches the landing's deliberate clinical narrative (urethral → BNC → bladder → diversion → upper-tract → genital → incontinence → BPH → prolapse → fistula → GAS → male SD → cosmetic). Previously sidebar positions had drifted to a scattered order that disagreed with the landing.
+
+**Treatment Atlas `bestFor` tightening**
+
+The `bestFor` indication column in 379 atlas `GenericDatabase` rows had grown into mini-paragraphs in several sections — citations, n-values, percentages, technique enumerations, and stepwise algorithms had accumulated, with the worst row 594 chars and 57 rows over 200 chars. Rewrote **~137 strings across 15 atlas files** so every atlas row is now ≤ 120 chars. Stripped citation residue, series numbers, percentages, stepwise algorithms, and trial names while preserving the load-bearing clinical scenario / qualifier that distinguishes each row from its siblings. Final stats: max 594 → 120, mean 132 → 84, p90 243 → 105, rows > 120 chars 113+ → 0. Atlas tables now render as a tight scannable index.
+
+Files touched: `04ab-bladder-neck-reconstruction/bnc.mdx`, `04c-urinary-diversion/index.mdx`, `04d-upper-tract-reconstruction/index.mdx`, `04e-genital-reconstruction/penile.mdx` + `scrotal.mdx` + `vulvar.mdx`, `04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx`, `04g-prolapse-repair/index.mdx`, `04h-fistula-repair/all-patients-fistula.mdx` + `female-fistula.mdx` + `male-fistula.mdx`, `04k-gender-affirming-surgery/feminizing-surgery.mdx` + `masculinizing-surgery.mdx` + `non-binary-nullification.mdx`, `04l-cosmetic-genital-surgery/male-cosmetic.mdx`.
+
+---
+
+## Previous Handoff - 2026-05-11 (priapism atlas) — Full rewrite of priapism shunts & decompression page
 
 Comprehensive page-level rewrite of `docs/04-surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression.mdx` across **seven commits** pushed to both `claude/kind-wiles-84dcfe` and `main`. Replaced the GenericDatabase with a markdown summary table and expanded every named technique from a one-row stub into a full surgeon-oriented subsection. Reference list grew from 17 → **47**.
 
