@@ -4,7 +4,32 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-12 — Launch-day cleanup pass
+## Current Handoff - 2026-05-12 (later) — Launch-asset session (external; no repo changes)
+
+Working session focused on launch marketing materials. **No repo commits.** All deliverables saved to `~/Downloads/`; source HTML in `/tmp/`. Recorded here so the next session knows what exists and what was tried.
+
+**Pottred font experiment (tried and reverted).** Owner shared a decorative chunky TTF (`~/Downloads/pottred/Pottred.ttf`) to try on the hero wordmark. Wired via `@font-face` in `src/css/custom.css` and `font-family: 'Pottred', ...` on `.heroTitleLink`. Overflowed the viewport at the existing `clamp(3rem, 8vw, 5.75rem)` size and the `-0.025em` letter-spacing crowded the already-tight glyphs. Owner reverted. Repo returned to clean — no font file, no `@font-face`, no override.
+
+**Launch assets generated (in `~/Downloads/`):**
+
+- `warwiki-homepage.png` — 2880×1620 headless-Chrome screenshot of the live homepage for the trailer.
+- `warwiki-end-card.png` — 3840×2160 horizontal trailer end card. Source `/tmp/warwiki-end.html`.
+- `warwiki-end-card-vertical.png` — 2160×3840 (9:16) vertical end card. Source `/tmp/warwiki-end-vertical.html`.
+- `warwiki-infographic-instagram.png` — 2160×2700 (1080×1350 @ 2×) IG single-slide post. Header "An open-access platform for functional reconstructive urology & urogynecology"; five feature blocks (Comprehensive / Evidence-first / Curated playlists / Listenable / In your pocket); footer `warwiki.org`. Source `/tmp/warwiki-infographic.html`.
+- `warwiki-infographic-twitter.png` — 1600×900 two-column variant for Twitter/X. Source `/tmp/warwiki-infographic-twitter.html`.
+
+**Conventions confirmed for any future launch copy:**
+
+- Tone: **concise, not boastful.** Drop "proud to announce" framing and superlatives. Saved as a feedback memory.
+- Sex/gender language: continues to apply — no "both genders," ICD-10 descriptors only verbatim where billing requires it.
+- Trailer aspect ratio: post **vertical (9:16) even on Twitter** — mobile feed dominates and gives vertical ~3× the in-feed real estate.
+- Trailer hosting: upload **natively to Twitter** rather than linking YouTube; external links are algorithmically deprioritized.
+
+Full session detail (post-by-post captions for the two trailers, quote-tweet variants, slide drafts) lives in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-12 — Launch-day cleanup pass
 
 Launch-day pass touching site polish, inclusive language, navigation consistency, and a handful of new content additions. Twelve commits to `main`, all building clean across ~1,038 files.
 

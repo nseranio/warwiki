@@ -6,6 +6,34 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-12 (later) — Launch-asset session (external; no repo changes)
+
+Working session focused on launch marketing materials. No commits to the repo — all deliverables saved to `~/Downloads/`. Recorded here so the next session knows what exists and what was tried.
+
+**Pottred font experiment (reverted).** Owner shared a chunky decorative TTF (`~/Downloads/pottred/Pottred.ttf`) to try on the homepage hero wordmark. Wired via `@font-face` in `src/css/custom.css` and `font-family: 'Pottred', ...` on `.heroTitleLink` in `src/pages/index.module.css`, with the file copied to `static/fonts/`. Rendered fine but overflowed the viewport at the existing `clamp(3rem, 8vw, 5.75rem)` size, and the existing `-0.025em` letter-spacing crowded Pottred's already-tight glyphs. Owner chose to revert. All three changes (font file, `@font-face` rule, `font-family` override) removed from both this worktree and the main repo; repo tree returned to clean.
+
+**Launch assets (external, in `~/Downloads/`):**
+
+- `warwiki-homepage.png` — 2880×1620 headless-Chrome screenshot of the live homepage at desktop width for trailer use.
+- `warwiki-end-card.png` — 3840×2160 (1920×1080 @ 2×) trailer end card: WARWIKI gradient title + "Reconstruction, codified." + `warwiki.org` on the homepage gradient. Source HTML at `/tmp/warwiki-end.html`.
+- `warwiki-end-card-vertical.png` — 2160×3840 (1080×1920 @ 2×) 9:16 version of the end card for Reels/TikTok/Shorts. Source at `/tmp/warwiki-end-vertical.html`.
+- `warwiki-infographic-instagram.png` — 2160×2700 (1080×1350 @ 2×) single-slide IG carousel post. Header "An open-access platform for functional reconstructive urology & urogynecology"; five feature blocks (Comprehensive · Evidence-first · Curated playlists · Listenable · In your pocket) with icons in the brand-blue rounded tile style; footer `warwiki.org` / "Reconstruction, codified." Source at `/tmp/warwiki-infographic.html`.
+- `warwiki-infographic-twitter.png` — 1600×900 (16:9) two-column variant of the same infographic for Twitter/X. Source at `/tmp/warwiki-infographic-twitter.html`.
+
+**Caption / post copy drafted** in conversation (not saved to disk):
+
+- IG carousel slide-by-slide rewrite (10 slides → distilled to the four-quality "Comprehensive / Evidence-first / Curated playlists / Listenable / In your pocket" infographic that ended up being the single-slide deliverable).
+- Trailer post captions for two trailers (vintage clips + modern clips) in two strategies (paired post vs separate posts), plus platform-specific notes for Twitter/Instagram/TikTok/YouTube Shorts.
+- Quote-tweet copy options for the announcement (sincere/restrained/mission-first/direct/community variants).
+
+**Platform decisions confirmed in the conversation:**
+
+- Trailer aspect ratio: post **vertical (9:16) even on Twitter** — mobile feed is ~80% of views and gives vertical clips ~3× the real estate of 16:9.
+- Trailer hosting: upload **natively to Twitter** rather than linking YouTube. External-link posts are deprioritized; YouTube can host the discoverability copy separately.
+- Tone preference for all launch copy: concise, not boastful — drop "proud to announce" framing and superlatives.
+
+---
+
 ## 2026-05-12 — Launch-day pass: polish, inclusive language, navigation consistency, new content
 
 Twelve commits to `main` covering site polish, inclusive-language remediation, structural consistency, and three new clinical pages. Build clean across ~1,038 files.
