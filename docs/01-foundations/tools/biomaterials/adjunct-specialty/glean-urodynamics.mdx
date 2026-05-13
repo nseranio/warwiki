@@ -5,45 +5,150 @@ sidebar_position: 4
 
 # Glean™ Urodynamics System
 
-The **Glean™ Urodynamics System** (Bright Uro) is the **first wireless, catheter-free ambulatory urodynamics platform** — FDA 510(k) cleared in **2025**. A small flexible sensor is inserted transurethrally into the bladder, where it coils to self-retain, transmits bladder-pressure data via **Bluetooth** to a patient-worn receiver, and is retrieved after hours-to-days of ambulatory recording via a thin retention string.
+The **Glean™ Urodynamics System** (Glean Medical) is a **novel, wireless, catheter-free ambulatory urodynamics device** that measures intravesical bladder pressure during **physiological (anterograde) bladder filling** without transurethral catheters or retrograde saline filling — a fundamental departure from conventional urodynamics.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
-## Design
+## Problem the System Addresses
 
-- **Silicone sensor tube** housing a miniature pressure transducer
-- **Self-coiling bladder retention** — the tube curls into a coil once deployed inside the bladder (similar principle to a pigtail catheter coil)
-- **Bluetooth transmitter** — continuous wireless data streaming to a patient-worn receiver
-- **Retrieval string** — thin tether exits the urethra, taped to the perineum / thigh
-- **Retrieval** — patient (or clinician) pulls the string; the sensor uncoils and exits the urethra in &lt;6 seconds
+Conventional urodynamics has well-recognized limitations:<sup>[[3]](#ref3)[[4]](#ref4)</sup>
 
-## What It Solves
+- Requires **transurethral and rectal catheters** — uncomfortable, embarrassing, painful.
+- Uses **rapid retrograde saline filling** — nonphysiological.
+- Results **often poorly correlate with patient symptoms** because the artificial setting fails to reproduce real-world bladder behavior.
+- The urethral catheter itself **impedes voiding**, especially in neurogenic bladder — Gross 2026 showed standard UDS catheters significantly increased PVR vs catheter-free monitoring.<sup>[[5]](#ref5)</sup>
+- Single short clinic window, potentially missing intermittent pathology.
 
-Traditional **catheter-based office urodynamics** (UDS) carries well-known limitations:
+Ambulatory urodynamic monitoring (AUM) addresses some of these issues with physiologic anterograde filling, but **traditional AUM still uses catheters**.<sup>[[3]](#ref3)</sup>
 
-- **Catheter-in-urethra distorts outlet dynamics** — the very thing the test is trying to measure
-- **Artificial clinic environment** — patient not in natural voiding conditions; performance anxiety
-- **Forced bladder filling** — not physiologic; misses the low-compliance / urgency patterns that emerge during natural filling
-- **Single time-point** — one session cannot capture diurnal variation
-- **Patient discomfort and embarrassment** — reduces willingness to undergo repeat or follow-up studies
+## Device Design
 
-The Glean addresses each: **no catheter in the urethra during recording, natural ambulatory conditions, physiologic filling, multi-hour-to-overnight monitoring, minimal patient discomfort.**
+The Glean system has an **intravesical bladder sensor** (Urodynamics Monitor, UM) and an **external wireless receiver**.<sup>[[1]](#ref1)[[5]](#ref5)</sup>
+
+The intravesical sensor is a **ring (C-shaped / toroidal)** medical-grade silicone device, ~**45 mm outer diameter, 5.1 mm (15.3 Fr) cross-section**, containing:<sup>[[5]](#ref5)</sup>
+
+- Pressure sensor.
+- Lithium-ion battery.
+- Flexible circuit board.
+- Wireless antenna.
+- Medical-grade silicone oil filling the housing for pressure transduction.
+- Retrieval suture for transurethral extraction.
+
+The **ring shape prevents expulsion during voiding** while staying small enough for transurethral insertion and comfortable enough to not impede LUT function.<sup>[[1]](#ref1)[[5]](#ref5)</sup>
+
+## How It Works
+
+1. **Transurethral insertion** — median **33.6 sec** (range 12–256 sec).<sup>[[1]](#ref1)</sup>
+2. **Ambulatory monitoring** — continuous wireless pressure data while the patient drinks fluids and goes about normal activities (physiologic anterograde filling).
+3. **Voiding** — patients void normally with the sensor in place; **100% (32/32)** of MUSE participants voided successfully with the sensor indwelling.<sup>[[1]](#ref1)</sup>
+4. **Removal** — transurethral via the retrieval suture; median **5.7 sec** (range 0.8–22 sec).<sup>[[1]](#ref1)</sup>
+
+## Clinical Evidence
+
+### MUSE Trial — Pivotal Feasibility Study
+
+Prospective single-arm multicenter interventional trial; n = 38 adults with LUTD:<sup>[[1]](#ref1)</sup>
+
+| Parameter | Result |
+|---|---|
+| Sensor insertion success | **97.0% (32/33)** |
+| Median insertion time | 33.6 sec |
+| Median removal time | 5.7 sec |
+| Patients able to void with sensor | **100%** |
+| Vesical pressure recording | Successful in all |
+| Total AEs | 14 in 12 participants |
+| Device-related AEs | 7 in 7 participants |
+| **Serious AEs** | **0** |
+| Patient / clinician feedback | Positive; easy to use |
+
+### Bench-Top Comparative Performance
+
+Hamson 2026 — 30 Glean sensors vs 30 air-charged catheters (Laborie Goby) in a human bladder model with stepped, sinusoidal, and ramping pressure simulations:<sup>[[2]](#ref2)</sup>
+
+| Metric | Glean | Laborie Goby | p |
+|---|---|---|---|
+| Rise time | **0.104 sec** | 0.172 sec | 0.001 |
+| Fall time | **0.111 sec** | 0.264 sec | 0.001 |
+| Bandwidth | **4.978 Hz** (near 5 Hz max) | 2.250 Hz | 0.001 |
+| Maximum error | **6.882** | 21.549 | 0.001 |
+| Linearity | Superior | Good | 0.001 |
+
+Glean **significantly outperformed conventional air-charged catheters** across all dynamic-response, bandwidth, and accuracy metrics.<sup>[[2]](#ref2)</sup>
+
+### Neurogenic Bladder Validation (Gross 2026)
+
+In women with MS-related neurogenic bladder, standard UDS catheters significantly impaired emptying (elevated PVR), whereas the wireless catheter-free device enabled more physiologic voiding patterns with **lower PVRs**.<sup>[[5]](#ref5)</sup> Critical signal because neurogenic-bladder patients often **cannot void around a urethral catheter**, making conventional UDS results potentially misleading.
+
+## Developmental Lineage — UroMonitor
+
+The Glean evolved from the **UroMonitor** — the first catheter-free wireless ambulatory bladder pressure monitor tested in humans. Frainey 2023 first-in-human (n = 11 women with OAB):<sup>[[6]](#ref6)</sup>
+
+- Captured **98% (85/87)** of voiding and non-voiding urodynamic events vs simultaneous conventional UDS.
+- All subjects voided with only the UroMonitor in place with low PVR.
+- Median ambulatory pain score **0** (range 0–2) on a 0–5 scale.
+- No post-procedural infections; no significant changes to capacity, sensation, or flow.
+
+## Glean vs Conventional UDS
+
+| Feature | Glean | Conventional UDS |
+|---|---|---|
+| Catheter required | **None** | Urethral + rectal |
+| Bladder filling | **Physiologic** anterograde | Non-physiologic retrograde saline |
+| Setting | **Ambulatory** (free movement) | Clinic-based, restricted positioning |
+| Voiding | 100% normal with sensor | Impaired by catheter |
+| Pressure accuracy | **Superior** (lower max error, faster response) | Standard |
+| Patient comfort | Positive | Often embarrassing / painful |
+| Symptom reproduction | More physiologic conditions | Often fails to reproduce |
+| Monitoring window | Extended ambulatory | Short clinic-based |
+
+References: <sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)[[4]](#ref4)[[5]](#ref5)</sup>
 
 ## Clinical Use Cases
 
-- **Refractory OAB / UUI** — capture urgency episodes in the patient's daily environment
-- **Neurogenic bladder** — particularly in patients in whom clinic UDS is technically difficult or produces equivocal data
-- **Post-prostatectomy / post-radiation incontinence** — characterize the pattern in real-life conditions
-- **Pre-operative evaluation** before complex reconstruction
-- **Symptom-signal correlation** — pair ambulatory urodynamic pressures with patient-kept voiding diary
+- **Refractory OAB / UUI** — capture urgency episodes in the patient's daily environment.
+- **Neurogenic bladder** — where clinic UDS is technically difficult or produces equivocal data.
+- **Post-prostatectomy / post-radiation incontinence** — real-life conditions.
+- **Pre-operative evaluation** before complex reconstruction.
+- **Symptom-signal correlation** — pair ambulatory pressure with voiding diary.
 
-## Where It's Deployed
+## Limitations &amp; Unknowns
 
-**Cleveland Clinic** was the first site to use the Glean commercially in June 2025. Adoption is expanding through academic urology and urogynecology programs with dedicated urodynamics practices.
+- **Measures vesical pressure only** — no abdominal-pressure measurement (no rectal catheter), so **detrusor pressure cannot be directly calculated** (P_det = P_ves − P_abd). Cannot directly distinguish detrusor contraction from abdominal straining.<sup>[[1]](#ref1)[[3]](#ref3)</sup>
+- **No continuous volume measurement** — needed for compliance calculations.<sup>[[3]](#ref3)</sup>
+- **Early-stage evidence** — one feasibility trial (n = 38) and one bench comparison. Larger comparative trials with clinical-outcome endpoints needed.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
+- **Regulatory status** — MUSE was conducted under an investigational protocol; specific FDA clearance / approval for commercial use is not fully detailed in the published literature.<sup>[[1]](#ref1)</sup>
+- **Patient population** — most evidence is in women; male data are limited (urethral anatomy differs).
+- **No long-term monitoring data** — extended (hours to days) feasibility and safety with the Glean specifically have not been fully characterized.
 
-## Limitations
+## Broader Wireless-Bladder-Monitoring Landscape
 
-- **New technology** — real-world comparison data against conventional UDS still accumulating
-- **Insurance coverage** — variable at this early stage
-- **Patient self-retrieval** — the retrieval-string mechanism requires patient cooperation
-- **Cost** — disposable sensor component adds per-study cost
+Glean is part of a wave of **telemetric ambulatory urodynamic monitoring (TAUM)** devices.<sup>[[3]](#ref3)</sup>
 
-See also: [Intermittent Catheter](/docs/foundations/tools/biomaterials/urinary-catheters/intermittent-catheter), [Urodynamics](/docs/evaluation/ancillary-tests/urodynamics) (traditional UDS reference).
+- **UroMonitor** — Glean predecessor; 98% event detection in first-in-human.<sup>[[6]](#ref6)</sup>
+- **UroMOCA** — implantable (12 × 18 × 6 mm) with pressure + impedance-based volume sensing + wireless recharge; tested in animals up to 28 days.<sup>[[7]](#ref7)</sup>
+- **WiCa (Wille capsule)** — C-shaped intravesical capsule for multi-day monitoring; in vitro testing.<sup>[[8]](#ref8)</sup>
+- **Bladder Pill** — wireless intravesical device, inductive coupling; tested in minipigs.<sup>[[9]](#ref9)</sup>
+
+The Glean is **the most clinically advanced of these devices** — largest human feasibility dataset and the only bench-top comparison against a commercially available conventional UDS system.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
+
+See also: [Intermittent Catheter](/docs/foundations/tools/biomaterials/urinary-catheters/intermittent-catheter), [Urodynamics](/docs/evaluation/ancillary-tests/urodynamics).
+
+---
+
+## References
+
+<a id="ref1"></a>1. Kim J, Xavier K, Cannon-Smith T, et al. The Feasibility and Safety of the Glean Urodynamics System: The Modern Urodynamics System Efficacy Study. *Journal of Endourology.* 2025;39(6):625-634. doi:[10.1089/end.2025.0270](https://doi.org/10.1089/end.2025.0270)
+
+<a id="ref2"></a>2. Hamson M, Maahs T, Poulsen A, et al. Comparative Pressure Measurement Performance of the Glean Urodynamics System — A Novel Wireless and Catheter-Free Urodynamics Device. *Journal of Endourology.* 2026. doi:[10.1177/08927790261430997](https://doi.org/10.1177/08927790261430997)
+
+<a id="ref3"></a>3. Abelson B, Majerus S, Sun D, et al. Ambulatory Urodynamic Monitoring: State of the Art and Future Directions. *Nature Reviews Urology.* 2019;16(5):291-301. doi:[10.1038/s41585-019-0175-5](https://doi.org/10.1038/s41585-019-0175-5)
+
+<a id="ref4"></a>4. Clement KD, Burden H, Warren K, et al. Invasive Urodynamic Studies for the Management of Lower Urinary Tract Symptoms (LUTS) in Men With Voiding Dysfunction. *Cochrane Database of Systematic Reviews.* 2015;(4):CD011179. doi:[10.1002/14651858.CD011179.pub2](https://doi.org/10.1002/14651858.CD011179.pub2)
+
+<a id="ref5"></a>5. Gross MD, Frainey BT, Lyon ME, et al. Validation of a Wireless Catheter-Free Ambulatory Urodynamics Device in Women With Neurogenic Bladder. *Neurourology and Urodynamics.* 2026;45(1):96-104. doi:[10.1002/nau.70172](https://doi.org/10.1002/nau.70172)
+
+<a id="ref6"></a>6. Frainey BT, Majerus SJA, Derisavifard S, et al. First in Human Subjects Testing of the UroMonitor: A Catheter-Free Wireless Ambulatory Bladder Pressure Monitor. *The Journal of Urology.* 2023;210(1):186-195. doi:[10.1097/JU.0000000000003451](https://doi.org/10.1097/JU.0000000000003451)
+
+<a id="ref7"></a>7. Majerus SJA, Hanzlicek B, Hacohen Y, et al. Wireless and Catheter-Free Bladder Pressure and Volume Sensor. *IEEE Sensors Journal.* 2024;24(6):7308-7316. doi:[10.1109/jsen.2023.3267749](https://doi.org/10.1109/jsen.2023.3267749)
+
+<a id="ref8"></a>8. Wille S, Schumacher P, Paas J, et al. Catheterless Long-Term Ambulatory Urodynamic Measurement Using a Novel Three-Device System. *PLoS One.* 2014;9(5):e96280. doi:[10.1371/journal.pone.0096280](https://doi.org/10.1371/journal.pone.0096280)
+
+<a id="ref9"></a>9. Soebadi MA, Bakula M, Hakim L, Puers R, De Ridder D. Wireless Intravesical Device for Real-Time Bladder Pressure Measurement: Study of Consecutive Voiding in Awake Minipigs. *PLoS One.* 2019;14(12):e0225821. doi:[10.1371/journal.pone.0225821](https://doi.org/10.1371/journal.pone.0225821)
