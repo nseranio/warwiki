@@ -4,7 +4,50 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-12 (biomaterials) — Full biomaterials-section rewrite
+## Current Handoff - 2026-05-14 — Database-gap pass: new biomaterials, pharmacology, and instrument pages
+
+Cross-site audit for branded products, agents, and instruments that appear in clinical articles but lack dedicated entries in the relevant database. **17 commits across 14 pages, all fast-forwarded to `main`.** Lints clean throughout (~1,053 files).
+
+**New biomaterials pages:**
+
+- [tutoplast-allografts](docs/01-foundations/tools/biomaterials/biological-grafts/tutoplast-allografts.mdx) — created with 19 refs, then **substantially expanded to 39 refs** with new sections for Complex IPP Corporoplasty (Palese & Burnett 2001, Farrell 2019), Sacrocolpopexy (Loffeld 2009, Cochrane Maher 2016), the McBride 2005 direct Suspend-Tutoplast vs autograft data (41.7% USI recurrence vs 0%, p = 0.007), Howden 2006 (3–4× cadaveric failure), and the Levine/Estrada-Kovac-Taylor-Hellstrom Peyronie's series.
+- [human-acellular-dermal-matrix](docs/01-foundations/tools/biomaterials/biological-grafts/human-acellular-dermal-matrix.mdx) — AlloDerm family umbrella (18 refs) including FlexHD / Belladerm / Repriza / AlloMax / AxisDermis / Epiflex / DermaMatrix; Solomon 2013 (42% infection / exposure) and Xu 2019 (60% erectile discomfort) cosmetic-girth caveats.
+- [proact-balloons](docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx) — device-level page (10 refs) for the paired silicone-balloon system with titanium scrotal port; bilateral focal compression at bladder neck, distinct from all sling devices.
+- [male-continence-implants](docs/01-foundations/tools/biomaterials/prosthetics/male-continence-implants.mdx) — sling-family device page (8 refs) covering AdVance / AdVance XP / Virtue / ATOMS / Argus / Remeex / legacy InVance.
+- Four MIST BPH device stubs under [adjunct-specialty](docs/01-foundations/tools/biomaterials/adjunct-specialty/): [rezum](docs/01-foundations/tools/biomaterials/adjunct-specialty/rezum.mdx), [itind](docs/01-foundations/tools/biomaterials/adjunct-specialty/itind.mdx), [aquablation](docs/01-foundations/tools/biomaterials/adjunct-specialty/aquablation.mdx), [optilume-bph](docs/01-foundations/tools/biomaterials/adjunct-specialty/optilume-bph.mdx) (3 refs each).
+
+**New pharmacology pages:**
+
+- [botulinum-toxin](docs/01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx) — onabotulinumtoxinA Botox (14 refs); the missing canonical foundations entry referenced across NLUTD pages, OAB DB, and the intradetrusor-botox procedure page.
+- [hpv-topical-agents](docs/01-foundations/pharmacology/dermatologic-topical-urethral/hpv-topical-agents.mdx) — imiquimod, sinecatechins (Veregen EGCG), podophyllotoxin / podophyllin, TCA, off-label topical 5-FU, intralesional interferon (9 refs); CDC 2021 STI guidelines and Cochrane SR; pregnancy / immunosuppressed / intraurethral algorithms; 9-valent HPV vaccination as prevention.
+
+**Forceps and needle-holder rewrites** (user-supplied source material integrated into each):
+
+- [russian](docs/01-foundations/tools/instruments/forceps/russian.mdx) — corrected the prior "multiple small teeth" framing (concentric **serrations**, not teeth); full comparison table; 5 refs.
+- [gerald](docs/01-foundations/tools/instruments/forceps/gerald.mdx) — **new page** (Gerald was missing). Smooth, fine-serrated, and 1×2 toothed variants; Marucci 2000 grip–trauma trade-off; Smooth-vs-Toothed selection by tissue layer (vas mucosa vs muscularis, tunica, BMG, dartos, fine genital skin); 8 refs.
+- [bonney](docs/01-foundations/tools/instruments/forceps/bonney.mdx) — Marucci / Rodrigues 2012 tractive-force data (fascia 11.4 N vs fallopian tube 1.25 N); STITCH small-bites RCT (49% → 34% incisional hernia at 13 yr); EHS/AHS 2022 closure guidelines; 10 refs.
+- [debakey](docs/01-foundations/tools/instruments/forceps/debakey.mdx) — serration-pattern anatomy, friction-vs-penetration mechanism, endothelial-integrity rationale (Mansfield 1978, Zeebregts 2003), biomechanical-evidence table (Marucci, Cheng FEA, Heijnsdijk 37 N pinch / 3 N slip, Bos rounded-edge, Darçin clamp-injury); DeBakey instrument family (Satinsky, Bahnson, Cooley, bulldog clamps); 12 refs.
+- [ryder](docs/01-foundations/tools/instruments/needle-holders/ryder.mdx) — smooth-vs-TC-insert jaw variants (Abidin 1989/1990); Edlich 1990 clamping-moment-and-bending; Ryder-vs-Castroviejo and Ryder-vs-Mayo-Hegar distinctions; Seki 1988 grip-technique data; Durand 2022 force-sensing (experts &lt; 2 N vs trainees 8 N); 11 refs.
+- [heaney](docs/01-foundations/tools/instruments/needle-holders/heaney.mdx) — four-point biomechanical rationale for jaw curvature; Basager 2024 small-hand musculoskeletal data + Berguer 1999 ergonomics; Pickett 2023 Cochrane vaginal-hysterectomy preference; Heaney instrument family (clamp, retractor, pedicle stitch) anchored on Balgobin 2019 simulation curriculum (pass rates 3.3–46.7%); 11 refs.
+
+**Index updates:**
+
+- Registered all new biomaterial entries in the [biomaterials landing-page database](docs/01-foundations/tools/biomaterials/index.mdx).
+- Added Gerald to the [instruments landing-page database](docs/01-foundations/tools/instruments/index.mdx); refined the Russian row (concentric serrations, not star-burst teeth).
+- Updated the [storage-oab](docs/01-foundations/pharmacology/storage-oab/index.mdx) and [dermatologic-topical-urethral](docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx) pharmacology indices for the new pages.
+- Corrected the pre-existing "Bovine Dermal Graft / Permacol" row in the biomaterials landing — Permacol is porcine; row updated to Peri-Guard / Veritas / Xenform.
+
+**Conventions reinforced:**
+
+- For named-device biomaterial pages with an existing procedure page (ProACT, ATOMS, Argus, AdVance, Virtue, Remeex, Rezūm, iTind, Aquablation, Optilume BPH), the **device page** covers components / materials / mechanism / device-level comparison / regulatory status / failure modes, with explicit cross-links to the procedure page for technique / outcomes / clinical positioning. Mirrors the IPP / AUS / PTNS pattern.
+- When user-supplied source material contains a reference list, **deduplicate against the existing page** before integrating (Tutoplast initially had Hellstrom 2000 as both ref 1 and ref 17 — fixed in a follow-up).
+- **Renumbering refs after deduplication**: do a single complete-rewrite rather than chained sed passes — sequential `N → N-1` replacements cascade when ranges overlap (one earlier attempt collapsed refs 18–40 → 17 across the file). Lesson saved.
+
+Full session detail in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-12 (biomaterials) — Full biomaterials-section rewrite
 
 Comprehensive, evidence-based expansion of the entire `01-foundations/tools/biomaterials/` directory. **~40 commits across ~30 device/material pages, all fast-forwarded to `main`.** Lints clean throughout (~1,042 files). Each rewrite followed the same pattern: comprehensive historical context, mechanism, design specifications / device-by-device comparison, indication-specific outcomes tables, contraindications, complications, comparative-effectiveness data vs alternatives, and a clinical bottom line with consistent house-style citations (`<sup>[[N]](#refN)</sup>` + DOI-linked anchors, all references contiguous).
 
