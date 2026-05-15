@@ -42,13 +42,15 @@ Comprehensive evidence-based expansion of the entire `01-foundations/tools/instr
 - [Heaney clamp](docs/01-foundations/tools/instruments/clamps/heaney.mdx) — stepwise Heaney vaginal-hysterectomy technique; ACOG 2017 vaginal-hysterectomy-as-preferred guidance; Pergialiotis 2014 / Jeppson 2017 vessel-sealer-vs-clamp meta-analysis.
 - [Masterson](docs/01-foundations/tools/instruments/clamps/masterson.mdx) — straight long-jawed abdominal-hysterectomy counterpart to the Heaney. Samaan 2014 ureter "water under the bridge" anatomy.
 
-### Scissors — new subdirectory `scissors/` (6 pages)
+### Scissors — new subdirectory `scissors/` (8 pages)
 
 - [Mayo](docs/01-foundations/tools/instruments/scissors/mayo.mdx), [Metzenbaum](docs/01-foundations/tools/instruments/scissors/metzenbaum.mdx) — Pepper 2026 Anglo-American common-core data; role-segregation principle (straight Mayo for non-tissue, curved Mayo for tissue, Metzenbaum for fine planes).
 - [Potts](docs/01-foundations/tools/instruments/scissors/potts.mdx) — angled 25 / 45 / 60° for vessel / ureter / urethra spatulation.
 - [Iris Scissors](docs/01-foundations/tools/instruments/scissors/iris.mdx) — paired with iris forceps for the fine-skin tray.
 - [Tenotomy](docs/01-foundations/tools/instruments/scissors/tenotomy.mdx) (Stevens / Westcott / Castroviejo).
 - [Jorgensen](docs/01-foundations/tools/instruments/scissors/jorgensen.mdx) — heavy long curved blunt-tip scissor at the high-force end (Metzenbaum → Mayo → Jorgensen).
+- [Scalpel Handles](docs/01-foundations/tools/instruments/scissors/scalpel-handles.mdx) — handle numbering (#3 / #3L / #4 / #4L / #7 / #9), pencil-vs-palmar grip, Bard-Parker historical context. Watt 2010 / DeGirolamo 2013 sharps-injury data. 12 refs.
+- [Scalpel Blades](docs/01-foundations/tools/instruments/scissors/scalpel-blades.mdx) — blade numbering (#10 / #11 / #15 / #15c / #20). **Awadalla 2016 objective-sharpness data** (force-to-cut in N: razor 0.395 / dermablade 0.46 / plastic #15 0.541 / #15c 0.575 / #10 0.647 / standard #15 0.664). **Cold-steel vs energy-device wound-healing comparison** (Sowa 1985 — epithelial migration POD 1 vs POD 7; Sinha 2003 — re-epithelialization POD 7 vs POD 28; Kakarala 2010 — oncologic margin clarity advantage over monopolar electrosurgery). **Mathilde Schott 1890 patent** (US431153) for the detachable blade — recovered by Elson 2023 *Am Surg* historical paper. 13 refs.
 
 ### Cautery (3 pages)
 
