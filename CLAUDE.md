@@ -4,7 +4,49 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-14 — Database-gap pass: new biomaterials, pharmacology, and instrument pages
+## Current Handoff - 2026-05-15 — Full instruments-section rewrite
+
+Comprehensive, evidence-based expansion of the entire `01-foundations/tools/instruments/` directory. **43 commits across ~55 instrument pages** plus the landing-page database. Lints clean throughout (~1,095 files). All fast-forwarded to `main`. Each rewrite followed the same pattern: design and mechanism, RU/urogyn-specific operative uses, comparison table vs adjacent instruments, technique pearls, safety profile, named historical context, and citations.
+
+**Tissue forceps** (8 pages):
+- [adson](docs/01-foundations/tools/instruments/forceps/adson.mdx), [olsen-hegar](docs/01-foundations/tools/instruments/needle-holders/olsen-hegar.mdx), [singley](docs/01-foundations/tools/instruments/forceps/singley.mdx) (corrected from "long angled tips" → fenestrated thumb forceps), [wangensteen](docs/01-foundations/tools/instruments/forceps/wangensteen.mdx) (3×3 tooth pattern), [iris](docs/01-foundations/tools/instruments/forceps/iris.mdx), [lahey](docs/01-foundations/tools/instruments/forceps/lahey.mdx), [ring-forceps](docs/01-foundations/tools/instruments/forceps/ring-forceps.mdx) (Foerster / Rampley), [kittner](docs/01-foundations/tools/instruments/forceps/kittner.mdx) (peanut dissector).
+
+**Needle holders** (2 pages):
+- [olsen-hegar](docs/01-foundations/tools/instruments/needle-holders/olsen-hegar.mdx) (above), [mayo-hegar](docs/01-foundations/tools/instruments/needle-holders/mayo-hegar.mdx) (anchored on Seki 1988 Grip-1-vs-Grip-2 data; corrected attribution to Alfred Hegar, not Ernst).
+
+**Clamps** (14 pages):
+- [allis](docs/01-foundations/tools/instruments/clamps/allis.mdx) (Andrews 2023 6.3% vs 55.3% bleeding RCT), [babcock](docs/01-foundations/tools/instruments/clamps/babcock.mdx), [kocher](docs/01-foundations/tools/instruments/clamps/kocher.mdx), [kelly](docs/01-foundations/tools/instruments/clamps/kelly.mdx) (Kellyclasia liver-transection context), [pean](docs/01-foundations/tools/instruments/clamps/pean.mdx), [crile](docs/01-foundations/tools/instruments/clamps/crile.mdx), [halsted-mosquito](docs/01-foundations/tools/instruments/clamps/halsted-mosquito.mdx), [jacobson](docs/01-foundations/tools/instruments/clamps/jacobson.mdx) (father of microsurgery), [schnidt](docs/01-foundations/tools/instruments/clamps/schnidt.mdx), [rochester-pean](docs/01-foundations/tools/instruments/clamps/rochester-pean.mdx), [mixter](docs/01-foundations/tools/instruments/clamps/mixter.mdx) (Broglia 1994 retropubic-prostatectomy modification), [gemini](docs/01-foundations/tools/instruments/clamps/gemini.mdx), [heaney clamp](docs/01-foundations/tools/instruments/clamps/heaney.mdx), [masterson](docs/01-foundations/tools/instruments/clamps/masterson.mdx) (abdominal-hysterectomy counterpart to Heaney).
+
+**Scissors** — new subdirectory `scissors/` (6 pages):
+- [mayo](docs/01-foundations/tools/instruments/scissors/mayo.mdx), [metzenbaum](docs/01-foundations/tools/instruments/scissors/metzenbaum.mdx), [potts](docs/01-foundations/tools/instruments/scissors/potts.mdx), [iris](docs/01-foundations/tools/instruments/scissors/iris.mdx), [tenotomy](docs/01-foundations/tools/instruments/scissors/tenotomy.mdx) (Stevens / Westcott / Castroviejo), [jorgensen](docs/01-foundations/tools/instruments/scissors/jorgensen.mdx). New `_category_.json` registered at position 12.
+
+**Cautery** (3 pages):
+- [electrosurgical-pencil](docs/01-foundations/tools/instruments/cautery/electrosurgical-pencil.mdx) — full Bovie/Cushing 1926 history, ESU physics, modes/waveforms, four techniques, monopolar vs bipolar, capacitive coupling, CIED safety, Charoenkwan 2017 Cochrane.
+- [bovie-tip](docs/01-foundations/tools/instruments/cautery/bovie-tip.mdx) — new page replacing the deleted Colorado-Tip page; consolidates all electrode tips (standard blade / needle (Colorado) / extended / ball / loop / bent / laparoscopic hook).
+- [gerald-bipolar](docs/01-foundations/tools/instruments/cautery/gerald-bipolar.mdx) — broad-flat platform tip correction.
+- **Deleted**: `malis-bipolar.mdx` (consolidated into the Gerald Bipolar mirror-finish reference).
+
+**Retractors** (22 pages):
+- [adson-beckman](docs/01-foundations/tools/instruments/retractors/adson-beckman.mdx), [lone-star](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) (expanded with Tranchart 2008 tumor-seeding signal at hook sites), [sims](docs/01-foundations/tools/instruments/retractors/sims.mdx) (with the ethics-and-legacy section on Sims's exploitation of enslaved Black women — Anarcha, Betsey, Lucy — and the 2018 Central Park statue removal), [senn](docs/01-foundations/tools/instruments/retractors/senn.mdx) (Senn-Miller default), [langenbeck](docs/01-foundations/tools/instruments/retractors/langenbeck.mdx) (Bernhard von Langenbeck), [s-retractor](docs/01-foundations/tools/instruments/retractors/s-retractor.mdx), [deaver](docs/01-foundations/tools/instruments/retractors/deaver.mdx) (with the Kvist-Poulsen 11.6% femoral-neuropathy data), [richardson](docs/01-foundations/tools/instruments/retractors/richardson.mdx) (corrected attribution to Maurice Howe Richardson, not Edward Peirson), [army-navy](docs/01-foundations/tools/instruments/retractors/army-navy.mdx) (Rankin 2014 3D-printing innovation + Air Force Retractor), [volkmann](docs/01-foundations/tools/instruments/retractors/volkmann.mdx), [malleable](docs/01-foundations/tools/instruments/retractors/malleable.mdx) (Rodrigues 2006 14-year-retained-instrument case), [weighted-speculum](docs/01-foundations/tools/instruments/retractors/weighted-speculum.mdx) (rewritten as full Auvard page with Vilos 2003 thermal-burn safety section), [skin-hooks](docs/01-foundations/tools/instruments/retractors/skin-hooks.mdx) (Talebi-Liasi 2023 sharps-injury data), [breisky](docs/01-foundations/tools/instruments/retractors/breisky.mdx) (rewritten as Breisky-Navratil), [weitlaner](docs/01-foundations/tools/instruments/retractors/weitlaner.mdx), [balfour](docs/01-foundations/tools/instruments/retractors/balfour.mdx), [omni-tract](docs/01-foundations/tools/instruments/retractors/omni-tract.mdx) (Mehrara 2003 pediatric-Omni microsurgery data), [thompson](docs/01-foundations/tools/instruments/retractors/thompson.mdx) (obesity-bar architecture), [denis-browne](docs/01-foundations/tools/instruments/retractors/denis-browne.mdx) (architectural ancestor of Lone Star / Alexis), [graves](docs/01-foundations/tools/instruments/retractors/graves.mdx) (William P. Graves, not Robert Graves), [bookwalter](docs/01-foundations/tools/instruments/retractors/bookwalter.mdx) (Noldus 2002 > 4,000-case safety review), [perineal-bookwalter](docs/01-foundations/tools/instruments/retractors/perineal-bookwalter.mdx) (expanded to Jordan + Brooke two-modification family), [turner-warwick](docs/01-foundations/tools/instruments/retractors/turner-warwick.mdx) (corrected from "retropubic" → perineal ring retractor).
+- **Deleted**: `malis-bipolar.mdx` (consolidated, above) and rows from the index: Heiss, O'Connor-O'Sullivan, Suture Scissors, additional duplicates.
+
+**Urethral & Pelvic Specialty** (3 pages):
+- [crawford-stripper](docs/01-foundations/tools/instruments/urethral-specialty/crawford-stripper.mdx) — corrected attribution from "Edmund Sterling Crawford" → J. Stewart Crawford (Canadian oculoplastic surgeon).
+- [stamey-needle](docs/01-foundations/tools/instruments/urethral-specialty/stamey-needle.mdx) — full Pereyra → Stamey → Raz → TVT lineage with long-term-decline outcomes.
+- [uterine-manipulator](docs/01-foundations/tools/instruments/urethral-specialty/uterine-manipulator.mdx) — replaced the Rumi row with a general page covering the family (RUMI / Koh / VCare / Hohl / Clermont-Ferrand / Colpo-Probe / myoma screw / Boztosun). Pan 2025 cadaveric ureteral-displacement data (1.4 → 6.2 cm) anchors the urogyn rationale.
+
+**Conventions reinforced** for instrument pages:
+- **House-style structure**: bold-lead one-paragraph summary → Design → RU/urogyn Uses (organized by anatomic / procedural use case) → Comparison table vs adjacent instruments → Technique pearls → Safety profile → Historical Context → cross-links → References.
+- **Historical-attribution corrections** when warranted (Crawford, Richardson, Hegar, Graves) — flag the prior index error, give the correct attribution, anchor the correction to a citation.
+- **Index promotion pattern**: instrument moves from the "additional" list (no slug) to a primary slugged entry once a dedicated page exists; the additional-list duplicate is removed in the same commit.
+- **Scope-framing rule**: instruments that originated in non-RU specialties (Lahey thyroid forceps, Stamey-needle endometrial-cancer manipulator debate, Volkmann's contracture, Sir Denis Browne's pediatric general-surgery legacy) are framed for the WARWIKI scope by leading with the RU/urogyn use cases and noting the cross-disciplinary context briefly. Out-of-scope cancer-surgery topics (e.g., uterine-manipulator endometrial-cancer debate) are explicitly framed as such and de-emphasized.
+- **Subdirectory creation**: new `scissors/` subdirectory created with `_category_.json` at sidebar position 12; existing `forceps/`, `clamps/`, `needle-holders/`, `retractors/`, `cautery/`, `urethral-specialty/` subdirectories received the bulk of the new pages.
+
+Full session detail in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-14 — Database-gap pass: new biomaterials, pharmacology, and instrument pages
 
 Cross-site audit for branded products, agents, and instruments that appear in clinical articles but lack dedicated entries in the relevant database. **17 commits across 14 pages, all fast-forwarded to `main`.** Lints clean throughout (~1,053 files).
 

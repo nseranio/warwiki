@@ -6,6 +6,106 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-15 — Full instruments-section rewrite
+
+Comprehensive evidence-based expansion of the entire `01-foundations/tools/instruments/` directory. **43 commits across ~55 instrument pages** plus the landing-page database. Lints clean throughout (~1,095 files). All fast-forwarded to `main`.
+
+### Tissue forceps (8 pages)
+
+- [Adson](docs/01-foundations/tools/instruments/forceps/adson.mdx) — 4 variants (1×2 toothed / smooth-serrated / Adson-Brown 7×7 / double-ended); toothed-vs-smooth trade-off.
+- [Olsen-Hegar](docs/01-foundations/tools/instruments/needle-holders/olsen-hegar.mdx) — combination needle holder + scissor.
+- [Singley](docs/01-foundations/tools/instruments/forceps/singley.mdx) — **corrected** the prior "long angled tips with serrations" framing; defining feature is the fenestrated oval tip on a spring-action thumb forceps.
+- [Wangensteen](docs/01-foundations/tools/instruments/forceps/wangensteen.mdx) — **corrected** the prior "long fine-tipped" framing; defining feature is the 3×3 interlocking-tooth pattern.
+- [Iris](docs/01-foundations/tools/instruments/forceps/iris.mdx) — ~ 10 cm fine thumb forceps; iris-vs-Adson distinction; hypospadias / glansplasty / labiaplasty default.
+- [Lahey](docs/01-foundations/tools/instruments/forceps/lahey.mdx) — 2×2 / 3×3 interlocking-tooth traction-grasping forceps; Frank Lahey RLN historical context.
+- [Ring (Sponge / Foerster / Rampley) Forceps](docs/01-foundations/tools/instruments/forceps/ring-forceps.mdx) — ring-jaw ratcheted forceps; prep, packing, sponge-stick dissection, Kittner handle, atraumatic cervical grasp.
+- [Kittner (Peanut) Dissector](docs/01-foundations/tools/instruments/forceps/kittner.mdx) — peanut sponge for atraumatic plane development.
+
+### Needle holders (2 pages)
+
+- [Olsen-Hegar](docs/01-foundations/tools/instruments/needle-holders/olsen-hegar.mdx) (above).
+- [Mayo-Hegar](docs/01-foundations/tools/instruments/needle-holders/mayo-hegar.mdx) — workhorse ring-handled ratcheted needle holder. Seki 1988 Grip-1-vs-Grip-2 accuracy data (1.4 vs 2.0 mm). **Corrected** historical attribution to Alfred Hegar (not Ernst). Abidin 1990 TC-insert mechanics.
+
+### Clamps (14 pages)
+
+- [Allis](docs/01-foundations/tools/instruments/clamps/allis.mdx) — Andrews 2023 RCT 6.3% vs 55.3% post-removal bleeding vs single-tooth tenaculum.
+- [Babcock](docs/01-foundations/tools/instruments/clamps/babcock.mdx), [Kocher](docs/01-foundations/tools/instruments/clamps/kocher.mdx) — atraumatic-vs-traumatic spectrum (Babcock → Allis → Kocher).
+- [Kelly](docs/01-foundations/tools/instruments/clamps/kelly.mdx) — distal-half-only serrations; Kellyclasia liver-transection context. Johns Hopkins "Big Four" historical context.
+- [Péan](docs/01-foundations/tools/instruments/clamps/pean.mdx) — Péan-vs-Kelly serration-length distinction; Jules-Émile Péan as founder of modern hemostatic surgery + 1893 first shoulder arthroplasty.
+- [Crile](docs/01-foundations/tools/instruments/clamps/crile.mdx) — George Washington Crile: radical neck dissection 1905–06, first direct human blood transfusion 1906, anoci-association, G-suit forerunner, Cleveland Clinic principal founder.
+- [Halsted Mosquito](docs/01-foundations/tools/instruments/clamps/halsted-mosquito.mdx) — Halsted "Big Four"; radical mastectomy 1894; rubber surgical gloves 1889; Halstedian principles.
+- [Jacobson](docs/01-foundations/tools/instruments/clamps/jacobson.mdx) — Julius H. Jacobson II as father of microsurgery (first to apply the operating microscope to vascular surgery).
+- [Schnidt (Tonsil)](docs/01-foundations/tools/instruments/clamps/schnidt.mdx) — long curved deep-pelvic hemostat.
+- [Rochester-Péan](docs/01-foundations/tools/instruments/clamps/rochester-pean.mdx) — long Mayo-Clinic-refined Péan variant.
+- [Mixter (Right Angle)](docs/01-foundations/tools/instruments/clamps/mixter.mdx) — Broglia 1994 modification engineered for radical retropubic prostatectomy + cystectomy DVC encirclement.
+- [Gemini](docs/01-foundations/tools/instruments/clamps/gemini.mdx) — ultra-fine right-angle. Eponym note: catalog designation, not surgeon eponym.
+- [Heaney clamp](docs/01-foundations/tools/instruments/clamps/heaney.mdx) — stepwise Heaney vaginal-hysterectomy technique; ACOG 2017 vaginal-hysterectomy-as-preferred guidance; Pergialiotis 2014 / Jeppson 2017 vessel-sealer-vs-clamp meta-analysis.
+- [Masterson](docs/01-foundations/tools/instruments/clamps/masterson.mdx) — straight long-jawed abdominal-hysterectomy counterpart to the Heaney. Samaan 2014 ureter "water under the bridge" anatomy.
+
+### Scissors — new subdirectory `scissors/` (6 pages)
+
+- [Mayo](docs/01-foundations/tools/instruments/scissors/mayo.mdx), [Metzenbaum](docs/01-foundations/tools/instruments/scissors/metzenbaum.mdx) — Pepper 2026 Anglo-American common-core data; role-segregation principle (straight Mayo for non-tissue, curved Mayo for tissue, Metzenbaum for fine planes).
+- [Potts](docs/01-foundations/tools/instruments/scissors/potts.mdx) — angled 25 / 45 / 60° for vessel / ureter / urethra spatulation.
+- [Iris Scissors](docs/01-foundations/tools/instruments/scissors/iris.mdx) — paired with iris forceps for the fine-skin tray.
+- [Tenotomy](docs/01-foundations/tools/instruments/scissors/tenotomy.mdx) (Stevens / Westcott / Castroviejo).
+- [Jorgensen](docs/01-foundations/tools/instruments/scissors/jorgensen.mdx) — heavy long curved blunt-tip scissor at the high-force end (Metzenbaum → Mayo → Jorgensen).
+
+### Cautery (3 pages)
+
+- [Electrosurgical Pencil](docs/01-foundations/tools/instruments/cautery/electrosurgical-pencil.mdx) — full Bovie/Cushing 1926 history; ESU physics; peak-power table (30 W set = 90/228/1154 W cut/blend/coag); FDA 20-yr data (178 deaths / 3,553 injuries); CIED management; capacitive-coupling mitigation; Charoenkwan 2017 Cochrane.
+- [Bovie Tips](docs/01-foundations/tools/instruments/cautery/bovie-tip.mdx) — **new page replacing the deleted Colorado Tip**. Consolidates standard blade / needle (Colorado) / extended / ball / loop / bent / laparoscopic-hook. Papay 1998 needle-vs-cold-scalpel alopecia.
+- [Gerald Bipolar](docs/01-foundations/tools/instruments/cautery/gerald-bipolar.mdx) — **corrected** the prior "fine-tipped" framing; defining feature is the broad flat 1–2 mm platform tip. Mikami 2004 gold-plated-tip data.
+- **Deleted**: `malis-bipolar.mdx` (consolidated into the Gerald Bipolar mirror-finish reference; Malis credited in the historical-context paragraph as the 1960s neurosurgical bipolar pioneer).
+
+### Retractors (22 pages)
+
+- [Adson-Beckman](docs/01-foundations/tools/instruments/retractors/adson-beckman.mdx), [Lone Star](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) — expanded with **Tranchart 2008** cutaneous perianal recurrence at hook sites in J-pouch coloanal anastomosis for rectal cancer, framed for the RU/urogyn surgeon as a tissue-seeding caveat.
+- [Sims](docs/01-foundations/tools/instruments/retractors/sims.mdx) — with the **explicit ethics-and-legacy section** acknowledging Sims's technique development on enslaved Black women (Anarcha, Betsey, Lucy) without anesthesia and the 2018 Central Park statue removal.
+- [Senn](docs/01-foundations/tools/instruments/retractors/senn.mdx) — Senn-Miller blunt-prong default; Nicholas Senn historical context.
+- [Langenbeck](docs/01-foundations/tools/instruments/retractors/langenbeck.mdx) — Bernhard von Langenbeck (Halle chief of surgery, early German Lister-antisepsis adopter, von Langenbeck palatoplasty 1861, Hueter-Volkmann law, "Richard Leander" children's literature).
+- [S Retractor](docs/01-foundations/tools/instruments/retractors/s-retractor.mdx) — bridges the Richardson-to-Deaver gap.
+- [Deaver](docs/01-foundations/tools/instruments/retractors/deaver.mdx) — Kvist-Poulsen 1982 11.6% femoral neuropathy with deep lateral self-retaining blades.
+- [Richardson](docs/01-foundations/tools/instruments/retractors/richardson.mdx) — **corrected** historical attribution to **Maurice Howe Richardson** (MGH; collaborator with Reginald Heber Fitz on early appendectomy), not Edward Peirson Richardson.
+- [Army-Navy](docs/01-foundations/tools/instruments/retractors/army-navy.mdx) — non-eponymous (US Army/Navy Medical Corps standardization). Rankin 2014 PLA 3D-printed retractor at ~ $0.46 / unit + 13.6 kg tangential force; Chambers 2020 Air Force Retractor for expeditionary medicine.
+- [Volkmann (Rake)](docs/01-foundations/tools/instruments/retractors/volkmann.mdx) — 1–6-prong variants; Volkmann's ischemic contracture 1869 / Hueter-Volkmann law historical context.
+- [Malleable (Ribbon)](docs/01-foundations/tools/instruments/retractors/malleable.mdx) — shape-adaptable visceral retractor + shield. **Rodrigues 2006 retained-instrument case** (33 × 5 cm ribbon retained 14 years; copper radiopaque on plain film).
+- [Weighted Speculum](docs/01-foundations/tools/instruments/retractors/weighted-speculum.mdx) — **rewritten as the full Auvard Weighted Speculum page**. **Vilos 2003 thermal-burn safety** section (ball > 45 °C for > 30 min after autoclaving; ≥ 1 L saline cools to < 40 °C in 1 min).
+- [Skin Hooks](docs/01-foundations/tools/instruments/retractors/skin-hooks.mdx) — Joseph / Guthrie / Gillies / double-prong / Walton / retractable variants. **No-crush mechanism** as the defining advantage over forceps. Clark 2019 (85.1% utilization), Talebi-Liasi 2023 (56.7% past-year sharps-injury rate), LoPiccolo 2012 (no exposures with blunt hooks).
+- [Breisky-Navratil](docs/01-foundations/tools/instruments/retractors/breisky.mdx) — **rewritten** with August Breisky + Josef Navratil joint attribution. Vitale 2018 sacrospinous-fixation context.
+- [Weitlaner](docs/01-foundations/tools/instruments/retractors/weitlaner.mdx) — hinged scissor-style self-retaining.
+- [Balfour](docs/01-foundations/tools/instruments/retractors/balfour.mdx) — Donald Church Balfour 1912 Mayo Clinic three-point retraction.
+- [Omni-Tract](docs/01-foundations/tools/instruments/retractors/omni-tract.mdx) — articulating-arm alternative to ring-based Bookwalter. Mehrara 2003 pediatric-Omni for microsurgical recipient-vessel work.
+- [Thompson](docs/01-foundations/tools/instruments/retractors/thompson.mdx) — obesity bar + sidebar architecture; independently releasable per-arm joints. Chang 2010 Modified Makuuchi + Thompson.
+- [Denis Browne](docs/01-foundations/tools/instruments/retractors/denis-browne.mdx) — Sir Denis Browne (Great Ormond Street; father of modern UK pediatric surgery). Architectural ancestor of the Lone Star / Alexis.
+- [Graves Speculum](docs/01-foundations/tools/instruments/retractors/graves.mdx) — bivalve duckbill office workhorse. **Historical attribution corrected** to William P. Graves (Boston gynecologist), not Robert James Graves of Graves' disease (Irish internist; Feliciano 2023). ACOG 2020 size-selection guidance.
+- [Bookwalter](docs/01-foundations/tools/instruments/retractors/bookwalter.mdx) — table-fixed self-retaining ring retractor. Noldus 2002 > 4,000-case safety review (4 bowel injuries — all delayed POD 2–7; 1 femoral neuropathy).
+- [Perineal Bookwalter](docs/01-foundations/tools/instruments/retractors/perineal-bookwalter.mdx) — **expanded** to a two-modification family page covering both **Jordan** (perineal urethroplasty) and **Brooke** (perineal prostatectomy) blade modifications.
+- [Turner-Warwick](docs/01-foundations/tools/instruments/retractors/turner-warwick.mdx) — **corrected** the prior "retropubic" description; this is the self-retaining ring-based **perineal** retractor purpose-built by Richard Turner-Warwick.
+
+**Index cleanup**: deleted **Heiss**, **O'Connor-O'Sullivan**, **Suture Scissors**, and multiple additional-list duplicates (Mosquito-Halsted, Schnidt, Mixter, Sponge-Holding, Kelly, Auvard, Mayo-Hegar) after promoting their primary slugged entries. Replaced **Rumi Uterine Manipulator** and **Koh Colpotomizer** rows with a single consolidated [Uterine Manipulators](docs/01-foundations/tools/instruments/urethral-specialty/uterine-manipulator.mdx) entry.
+
+### Urethral & Pelvic Specialty (3 pages)
+
+- [Crawford Fascial Stripper](docs/01-foundations/tools/instruments/urethral-specialty/crawford-stripper.mdx) — **historical-attribution corrected** from "Edmund Sterling Crawford" (vascular surgeon, different person) to **J. Stewart Crawford** (Canadian oculoplastic surgeon, 1956 frontalis sling). Framed for the urogyn surgeon: autologous fascia-lata pubovaginal sling (PVS) for SUI / ISD / recurrent SUI / mesh-avoidant patients, salvage sling after mesh erosion, fascia-lata interposition for VVF / RVF / RUF, pediatric BNR, urethroplasty buttress, mesh-free sacrocolpopexy. Johnson 2024 + Delu 2024 urogynecologic donor-site data; Bleyen 2009 pediatric outcomes.
+- [Stamey Needle](docs/01-foundations/tools/instruments/urethral-specialty/stamey-needle.mdx) — full **Pereyra → Stamey → Raz → Burch → TVT** lineage. Long-term-decline outcomes (Kondo 71.5% at 14 yr; Nigam 28% at 9 yr with all repeat needle ops failing; Clemens 44% at 15 yr). Glazener 2017 Cochrane showing needle suspension inferior to Burch (71% vs 84% cure). Type III ISD as contraindication.
+- [Uterine Manipulators](docs/01-foundations/tools/instruments/urethral-specialty/uterine-manipulator.mdx) — general family page (RUMI + Koh / VCare / Hohl / Clermont-Ferrand / Colpo-Probe / myoma screw / Boztosun). Pan 2025 cadaveric ureteral-displacement (1.4 → 6.2 cm). Husslein 2017 RCT (Hohl vs Colpo-Probe). Melnyk 2025 carbon-footprint / cost analysis (reusable saves $16–43k over 300 uses). Endometrial-cancer manipulator-safety debate framed as out-of-scope but mentioned for multidisciplinary awareness.
+
+### Stub-fill resolution
+
+Mid-session, **15 stale uncommitted doc-page edits** from a prior unmerged 2026-05-11 launch-stub-sweep session were salvaged and applied on top of current main (immunosuppression, intestinal-segments, gelman sound, drug-coated-balloon, adjustable-continence-devices, neuromodulation, lotus-petal-flap, ventral-onlay-glanuloplasty, laminated-gracilis-flap, transperineal-reanastomosis, glans-reconstruction, penile-skin-reconstruction, pde5-inhibitors, intracavernosal-injections, muse-intraurethral). Stale CLAUDE.md / CHANGELOG.md / _STATUS.md / stats.json from the same uncommitted set were discarded as superseded. Fixed one `/04h-fistula-repair/both-genders/` → `/all-patients/` broken link to match the 2026-05-12 rename.
+
+### Conventions reinforced for instrument pages
+
+- **House-style structure**: bold-lead one-paragraph summary → Design → RU/urogyn Uses (organized by anatomic / procedural use case) → Comparison table vs adjacent instruments → Technique pearls → Safety profile → Historical Context → cross-links → References.
+- **Historical-attribution corrections** when warranted (Crawford, Richardson, Hegar, Graves, Turner-Warwick) — flag the prior index error, give the correct attribution, anchor to a citation.
+- **Index promotion pattern**: instrument moves from the "additional" list (no slug) to a primary slugged entry once a dedicated page exists; the additional-list duplicate is removed in the same commit.
+- **Scope-framing rule**: instruments that originated in non-RU specialties are framed for WARWIKI scope by leading with the RU/urogyn use cases and noting cross-disciplinary context briefly. Out-of-scope cancer-surgery topics are explicitly framed as such.
+- **Subdirectory creation**: new `scissors/` subdirectory created with `_category_.json` at sidebar position 12.
+
+Verification: `npm run lint:citations`, `npm run lint:links` clean across **1,095 files**. 43 commits, all fast-forwarded to `main`.
+
+---
+
 ## 2026-05-14 — Database-gap pass: new biomaterials, pharmacology, and instrument pages
 
 Cross-site audit for branded products, agents, and instruments mentioned in clinical articles but missing dedicated entries in the relevant database. Resulted in **6 new substantive pages, 4 MIST-BPH device stubs, 4 forceps / needle-holder expansions, and 1 Tutoplast major-expansion follow-up.** All commits fast-forwarded to `main`. Lints clean throughout (~1,053 files).
