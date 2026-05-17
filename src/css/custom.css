@@ -237,6 +237,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--warwiki-shadow-sm);
 }
 
+/* Tighten top spacing when a table directly follows a lead-in paragraph */
+.markdown p + table,
+.markdown p + div > table:first-child {
+  margin-top: 0.4rem;
+}
+
 .markdown table thead tr {
   background-color: var(--ifm-color-primary);
   color: #fff;
