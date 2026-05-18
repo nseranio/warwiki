@@ -67,6 +67,20 @@ function findHiddenCategoryDirs(dir, hidden = []) {
 //   docs/01-foundations/anatomy-physiology/oral-cavity/oral-cavity.mdx → /docs/foundations/anatomy-physiology/oral-cavity
 //   docs/07-roots/index.mdx → /docs/roots
 function fileToUrl(file) {
+  // Honor frontmatter `slug:` override when present — it changes the served URL.
+  try {
+    const head = fs.readFileSync(file, 'utf8').slice(0, 2000);
+    const fm = head.match(/^---\n([\s\S]*?)\n---/);
+    if (fm) {
+      const slugLine = fm[1].match(/^slug:\s*(.+)$/m);
+      if (slugLine) {
+        let s = slugLine[1].trim().replace(/^["']|["']$/g, '');
+        if (s.startsWith('/docs/')) return s.replace(/\/$/, '') || '/docs';
+        if (s.startsWith('/')) return ('/docs' + s).replace(/\/$/, '');
+      }
+    }
+  } catch (_) { /* fall through */ }
+
   let rel = path.relative(DOCS_DIR, file).replace(/\.mdx?$/, '');
   const parts = rel.split(path.sep).map((p, i) => (i === 0 ? p.replace(/^\d+-/, '') : p));
   // filename === parent dirname → collapse (Docusaurus quirk)
@@ -90,6 +104,15 @@ function collectLinks(content) {
   // JSX href attributes: href="..."
   const hre = /href=["']([^"']+)["']/g;
   while ((m = hre.exec(content)) !== null) {
+    let t = m[1].trim().split('#')[0].split('?')[0];
+    if (!t.startsWith('/docs/')) continue;
+    if (t.length > 1 && t.endsWith('/')) t = t.slice(0, -1);
+    urls.add(t);
+  }
+  // GenericDatabase / data-array slug entries: slug: "/docs/..."
+  // Rendered as anchor links at runtime, so they count as inbound paths.
+  const sre = /\bslug\s*:\s*["']([^"']+)["']/g;
+  while ((m = sre.exec(content)) !== null) {
     let t = m[1].trim().split('#')[0].split('?')[0];
     if (!t.startsWith('/docs/')) continue;
     if (t.length > 1 && t.endsWith('/')) t = t.slice(0, -1);
