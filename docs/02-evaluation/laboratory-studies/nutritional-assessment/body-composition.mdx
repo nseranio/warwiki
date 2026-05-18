@@ -5,41 +5,254 @@ sidebar_position: 15
 
 # Body Composition Assessment
 
-Quantitative muscle-mass measurement is the **muscle-mass phenotypic criterion** of GLIM and the basis for diagnosing **sarcopenia**. Sarcopenia is a strong, independent predictor of postoperative complications in the surgical literature — distinct from BMI, which can mask sarcopenia in the obese ("sarcopenic obesity").
+Body composition assessment encompasses a range of techniques that quantify the relative proportions of **fat mass, lean / muscle mass, bone mineral content, and body water** — providing clinically actionable information that BMI alone cannot capture.<sup>[[1]](#ref1)[[2]](#ref2)</sup> These methods are now embedded in major diagnostic frameworks including the **GLIM malnutrition criteria** and the **EWGSOP2 sarcopenia definition**, and are central to preoperative risk stratification for major reconstructive surgery.<sup>[[3]](#ref3)[[4]](#ref4)[[5]](#ref5)</sup>
 
-## Modalities (GLIM-preferred order)
+For the reconstructive urologist and urogynecologist, body composition matters because **sarcopenia is a strong, independent predictor of postoperative complications, mortality, and prolonged length of stay** — and it is **frequently masked by BMI** ("sarcopenic obesity"). The two highest-yield reconstructive applications: **(1) opportunistic CT-derived L3 skeletal muscle index** on existing oncologic staging scans (pre-cystectomy, pre-RPLND, pre-exenteration) and **(2) BIA-derived phase angle** as a rapid bedside prognostic marker before any major elective reconstruction.
 
-| Method | Strength | Limitation |
-|---|---|---|
-| **CT-based skeletal muscle index (SMI) at L3** | Gold standard; often **already available** from staging scans in oncologic patients (bladder cancer pre-cystectomy, renal cell carcinoma, prostate cancer) | Requires CT; software for quantification not universal |
-| **Bioelectrical impedance analysis (BIA)** | Portable, inexpensive, widely available; reasonable in outpatient clinic | Hydration-dependent; less accurate in obese or fluid-overloaded patients |
-| **Dual-energy X-ray absorptiometry (DXA)** | Accurate; widely validated | Less routine preoperatively; radiation; not portable |
-| **Anthropometrics + trained physical exam** | Always available; GLIM-endorsed when imaging unavailable | Lower accuracy; operator-dependent |
+---
 
-## CT-SMI Cutoffs (commonly cited)
+## Why Body Composition Matters Beyond BMI
 
-- **Men: SMI < 52.4 cm²/m²**
-- **Women: SMI < 38.5 cm²/m²**
-- Population-specific thresholds (Prado, Martin, EWGSOP2) — anchor to your local reference
+BMI (kg/m²) remains the most widely used adiposity screen, but its **pooled sensitivity is only ~ 50%** for excess body fat — half of individuals with excess adiposity are missed.<sup>[[1]](#ref1)</sup> BMI cannot distinguish fat from lean mass, does not reflect fat distribution (visceral vs subcutaneous), and performs poorly in certain populations — Asian individuals have greater adiposity at lower BMIs; Black individuals may be misclassified due to higher lean mass.<sup>[[1]](#ref1)</sup> BMI also fails to detect body-composition shifts after exercise interventions, where fat loss may be offset by muscle gain.<sup>[[6]](#ref6)</sup> The **2025 AACE consensus** recommends confirming excess adiposity with **waist circumference and waist-to-height ratio** when BMI is borderline or when populations at risk of misclassification are involved.<sup>[[7]](#ref7)</sup>
 
-## In Reconstruction
+## Compartment Models
 
-- **Pre-cystectomy CT staging** routinely captures L3 — quantify SMI when the radiology workflow supports it.
-- Pre-free-flap workup — sarcopenia in head-and-neck flap patients predicts failure.
-- Pre-major-reconstruction in oncologic populations (cystectomy, exenteration, RPLND).
+Body composition methods are organized around compartment models of increasing complexity:<sup>[[8]](#ref8)[[9]](#ref9)[[10]](#ref10)</sup>
 
-## To Be Expanded
+- **2-compartment (2C) model** — Divides body into **fat mass (FM)** and **fat-free mass (FFM)**. Methods include hydrodensitometry (underwater weighing), air displacement plethysmography (ADP / BodPod), and BIA. Assumes fixed FFM density (1.100 g/cm³) and hydration (73.2%), which may not hold in athletes, elderly, or ill patients.<sup>[[8]](#ref8)[[9]](#ref9)[[11]](#ref11)</sup>
+- **3-compartment (3C) model** — Separates FM, total body water (TBW), and fat-free dry mass. Corrects for the largest source of error in 2C models (TBW variability), reducing body-fat estimation error from ~ 2.2% to ~ 0.2%.<sup>[[9]](#ref9)[[11]](#ref11)</sup>
+- **4-compartment (4C) model** — The **criterion reference standard**. Separates FM, TBW, bone mineral content, and protein / residual mass. A simplified 4C model using DXA + BIA can be completed in ~ 10 minutes with high accuracy (R² = 0.96 for % fat).<sup>[[12]](#ref12)[[8]](#ref8)[[10]](#ref10)</sup>
 
-- CT-SMI measurement workflow and free / commercial software
-- BIA technique and clinic protocols
-- Sarcopenia thresholds in detail
-- "Sarcopenic obesity" — the high-BMI patient with low muscle mass who looks healthy and isn't
-- Reconstructive-specific outcome data
+---
+
+## Assessment Methods
+
+| Method | Measures | Advantages | Limitations |
+|---|---|---|---|
+| **Anthropometry** (BMI, WC, WHR, skinfolds) | Total adiposity estimate, central obesity | Inexpensive, portable, no equipment | Cannot distinguish visceral from subcutaneous fat; skinfolds have high inter-observer variability |
+| **Bioelectrical impedance analysis (BIA)** | FM, FFM, TBW, **phase angle** | Portable, low cost, rapid, noninvasive, bedside use | Affected by hydration, fever, edema; population / device-specific equations needed |
+| **DXA** | FM, lean mass, bone mineral content (regional + whole-body) | Gold standard for lean mass in sarcopenia; low radiation; regional analysis | Cost, limited availability; may over/under-estimate at BMI extremes; cannot assess intramuscular fat |
+| **ADP (BodPod)** | Body density → % fat (2C model) | Quick, reliable, no radiation | May underestimate body fat by 2–3%; accuracy reduced in obesity |
+| **CT (single-slice or volumetric)** | Skeletal muscle area / index, VAT, SAT, muscle density (HU), ectopic fat | **Gold standard for visceral fat and muscle quality; opportunistic use of existing scans** | Radiation exposure; no universal sarcopenia cutoffs |
+| **MRI** | Total / regional adipose tissue, muscle volume, ectopic fat (liver, muscle) | Gold standard for body composition; no radiation; excellent soft-tissue contrast | Expensive, time-consuming (~ 30 min whole-body), not optimized for severe obesity |
+| **Ultrasound** | Muscle thickness, subcutaneous fat, visceral fat | Portable, no radiation, emerging clinical tool | Operator-dependent; cannot assess total volume |
+
+---
+
+## Bioelectrical Impedance Analysis (BIA) — In Detail
+
+BIA passes a small alternating electrical current through the body and measures **impedance** (opposition to current flow), with two components: **resistance (R)** and **reactance (Xc)**.<sup>[[1]](#ref1)[[13]](#ref13)</sup> Fat-free mass (~ 73% water and electrolytes) is a good conductor; fat is anhydrous and a poor conductor. From impedance, TBW is estimated and body composition is calculated using population-specific prediction equations.<sup>[[1]](#ref1)[[14]](#ref14)</sup>
+
+Key BIA variants:<sup>[[1]](#ref1)[[13]](#ref13)[[15]](#ref15)</sup>
+
+- **Single-frequency BIA (SF-BIA)** — Measures at 50 kHz; estimates total body impedance.
+- **Multi-frequency BIA (MF-BIA)** — Multiple frequencies; differentiates intracellular from extracellular water.
+- **Bioimpedance spectroscopy (BIS)** — Wide frequency spectrum; Cole-model fit to separately estimate ECW and ICW.
+- **Segmental BIA** — Measures impedance in individual segments (arms, legs, trunk) for regional lean mass.
+
+The **ASPEN clinical guidelines** note that while BIA correlates well with gold-standard techniques in clinical populations, **large limits of agreement** at the individual level necessitate cautious interpretation. Accuracy is significantly affected by **hydration status, fever, medications, and fluid / electrolyte disturbances** — common in hospitalized patients.<sup>[[13]](#ref13)</sup>
+
+---
+
+## Phase Angle — An Emerging Prognostic Biomarker
+
+**Phase angle (PhA)**, calculated as the arctangent of reactance / resistance, is a raw BIA parameter that reflects **cell membrane integrity, cellular hydration, and body cell mass** without requiring prediction equations.<sup>[[16]](#ref16)[[17]](#ref17)[[18]](#ref18)</sup> It has emerged as a powerful prognostic marker across multiple clinical settings:
+
+- **Critical illness** — Low PhA is associated with **82% higher mortality risk** (RR 1.82, 95% CI 1.46–2.26) and longer ICU stays.<sup>[[16]](#ref16)</sup>
+- **Sarcopenia** — PhA is consistently lower in sarcopenic individuals; cutoffs of **4.05°–5.05°** have been proposed for sarcopenia detection.<sup>[[17]](#ref17)</sup>
+- **Cirrhosis** — PhA ≤ 4.6° independently predicts hospitalization, falls, and mortality.<sup>[[19]](#ref19)</sup>
+- **Heart failure** — Low PhA correlates with hospitalization risk and is used clinically to stratify acute decompensation in emergency-department settings.<sup>[[20]](#ref20)</sup>
+- **Older adults** — Low PhA predicts incident disability, with nearly **5-fold** difference in disability rates between low and normal PhA groups.<sup>[[21]](#ref21)</sup>
+- **Cardiovascular surgery** — Preoperative PhA tertiles independently stratify long-term postoperative mortality after cardiovascular surgery.<sup>[[22]](#ref22)</sup>
+
+---
+
+## CT-Based Body Composition — Opportunistic Assessment
+
+CT-derived body composition has become a major research and emerging clinical tool, particularly in **oncology**. A single axial CT slice at the **L3 vertebral level** correlates with whole-body skeletal muscle volume and allows calculation of the **skeletal muscle index (SMI, cm²/m²)** and **skeletal muscle density (SMD, in Hounsfield units)**.<sup>[[23]](#ref23)[[24]](#ref24)[[25]](#ref25)</sup>
+
+**Commonly cited CT-SMI cutoffs:**
+
+- **Men:** SMI &lt; 52.4 cm²/m²
+- **Women:** SMI &lt; 38.5 cm²/m²
+- Population-specific thresholds (Prado, Martin, EWGSOP2) — anchor to your local reference.
+
+A meta-analysis of 38 studies (7,843 patients) demonstrated low SMI at cancer diagnosis is associated with **44% worse overall survival** (HR 1.44, 95% CI 1.32–1.56) and **93% worse cancer-specific survival** (HR 1.93).<sup>[[26]](#ref26)</sup> CT-based sarcopenia assessment is particularly valuable for detecting **"hidden" sarcopenia** — in one pancreatic cancer cohort, **79.7% of patients with normal BMI had CT-defined sarcopenia**, and even **50% of overweight patients were sarcopenic**.<sup>[[27]](#ref27)</sup>
+
+The **2026 ACR Appropriateness Criteria** for sarcopenia diagnosis endorse opportunistic CT analysis of existing clinical scans, noting that AI-enabled automated segmentation tools are increasingly enabling this transition from research to clinical practice. CT is **not recommended as a stand-alone indication for sarcopenia screening** — rather, **secondary analysis of scans obtained for other indications is appropriate**.<sup>[[5]](#ref5)</sup>
+
+When L3 is not available (e.g., chest CT for lung-cancer staging), alternative vertebral levels (T10, T12, T4) have been validated with reasonable correlation to L3 measurements.<sup>[[23]](#ref23)[[28]](#ref28)[[29]](#ref29)</sup>
+
+---
+
+## Visceral Adipose Tissue (VAT) Assessment
+
+Distinguishing **VAT** from subcutaneous adipose tissue (SAT) is clinically important because excess VAT is independently associated with a more atherogenic / diabetogenic metabolic profile, even after controlling for total adiposity.<sup>[[1]](#ref1)</sup> CT and MRI are reference methods for VAT quantification, with single-slice acquisitions at L4-L5 most commonly used (slices 5–10 cm above L4-L5 may correlate better with total VAT volume).<sup>[[1]](#ref1)</sup> In UK Biobank (n = 4,558), DXA-derived VAT correlated excellently with 3D MRI volume (R = 0.94), while BIA showed only modest correlation (R = 0.49).<sup>[[30]](#ref30)</sup>
+
+---
+
+## Clinical Applications by Condition
+
+### Sarcopenia (EWGSOP2)
+
+Stepwise approach: **screen with grip strength → confirm with muscle-mass measurement (DXA preferred, BIA acceptable) → assess severity with physical performance tests**. DXA-derived appendicular lean mass (ALM) adjusted for height² or BMI is the standard metric.<sup>[[4]](#ref4)[[31]](#ref31)</sup> The **ACR 2026** guidelines recommend DXA as the primary imaging modality for initial sarcopenia diagnosis, with CT or MRI as alternatives when already available.<sup>[[5]](#ref5)</sup>
+
+### Malnutrition (GLIM)
+
+GLIM criteria require ≥ 1 phenotypic criterion (including **reduced muscle mass** assessed by validated body composition methods) plus ≥ 1 etiologic criterion. When technical devices are unavailable, **calf circumference** (cutoffs ~ 31 cm in older adults) is GLIM-endorsed as a surrogate.<sup>[[3]](#ref3)[[32]](#ref32)</sup>
+
+### Obesity
+
+The Obesity Society and AACE recommend combining BMI with **waist circumference** (&gt; 102 cm in men, &gt; 88 cm in women) and waist-to-height ratio for improved risk stratification. For individuals with borderline BMI but high WHR or WC, additional body-composition assessment is warranted.<sup>[[33]](#ref33)[[7]](#ref7)</sup>
+
+### Cancer
+
+Opportunistic CT-based body composition analysis is increasingly used for preoperative risk stratification, treatment toxicity prediction, and prognostication. Low SMI and low SMD are independently associated with worse survival across multiple tumor types.<sup>[[24]](#ref24)[[26]](#ref26)[[34]](#ref34)</sup>
+
+---
+
+## Standardization Challenges
+
+A 2026 expert consensus highlights ongoing challenges:<sup>[[2]](#ref2)</sup>
+
+- Inconsistent terminology across studies and devices.
+- Lack of universal cutoffs for sarcopenia, myosteatosis, and excess adiposity.
+- Device- and population-specific BIA equations limit cross-study comparisons.
+- Need for harmonized measurement protocols for longitudinal monitoring.
+- Standardized pre-assessment conditions (fasting, hydration, exercise) are critical — food and fluid intake can introduce errors of up to **5% body fat** in models incorporating TBW.<sup>[[35]](#ref35)</sup>
+
+---
+
+## Reconstructive Relevance
+
+### 1. Opportunistic CT-Derived L3 Skeletal Muscle Index — The Highest-Yield Reconstructive Application
+
+Many reconstructive urology / urogynecology patients arrive with CT scans already in their record:
+
+- **Pre-cystectomy staging CT** (cross-sectional bladder cancer workup) — L3 routinely captured.
+- **Pre-RPLND staging CT** (testicular cancer workup).
+- **Pre-exenteration imaging** (pelvic cancer survivorship).
+- **Trauma CT** for pelvic-fracture-associated urethral injury workup.
+- **Surveillance CT urography** for upper-tract or post-cystectomy follow-up.
+
+**Quantify L3 SMI on the existing scan rather than ordering new imaging.** A patient with **low SMI** (men &lt; 52.4 cm²/m²; women &lt; 38.5 cm²/m²) is at materially higher risk of postoperative complications, prolonged LOS, and mortality after radical cystectomy + diversion, complex prolapse reconstruction, exenteration, or major gender-affirming reconstruction. AI-enabled segmentation tools (automated L3 analysis at PACS workstations) are increasingly available and remove the workflow barrier.
+
+**"Hidden sarcopenia" is the high-yield diagnosis** — 79.7% of normal-BMI cancer patients and 50% of overweight cancer patients had CT-defined sarcopenia in one cohort. **Sarcopenic obesity** is the most under-recognized risk profile: the patient who "looks healthy" with normal-to-elevated BMI but has profoundly low muscle mass and worse outcomes than would be predicted from BMI alone.
+
+### 2. BIA-Derived Phase Angle as Rapid Bedside Preop Biomarker
+
+For any patient facing major elective reconstruction, **clinic-based BIA takes ~ 5 minutes**, costs little, and produces an outcome-validated **phase angle** without requiring prediction equations:
+
+- **PhA &lt; 4.5°–5°** (population-dependent) — high mortality risk; consider deferring elective reconstruction for prehabilitation.
+- **PhA in lowest tertile** preoperatively → independently predicts long-term postop mortality after cardiovascular surgery; extrapolates reasonably to other major surgery.
+- **Trend PhA** through prehabilitation as an objective marker of nutritional + muscle-status recovery before re-listing for surgery.
+
+This is the most actionable bedside body-composition tool currently available in routine reconstructive practice.
+
+### 3. GLIM Malnutrition Diagnosis in the Reconstructive Workup
+
+When considering elective reconstruction in any patient with weight loss, low BMI, low intake, or chronic illness:
+
+- **Use body composition** (CT-SMI, DXA, BIA appendicular lean mass) to satisfy the GLIM **reduced muscle mass** phenotypic criterion.
+- **Calf circumference** is the GLIM-endorsed bedside surrogate when imaging is unavailable.
+- Combine with inflammation status ([CRP](/docs/evaluation/laboratory-studies/nutritional-assessment/c-reactive-protein)) and intake / loss history for full GLIM diagnosis.
+
+### 4. Post-Diversion / Post-Augmentation Bone-Health Surveillance
+
+Chronic metabolic acidosis from bowel-augmented bladder / urinary diversion drives accelerated osteopenia. **DXA scanning** is standard surveillance per the diversion bone-health bundle; cross-reference [Vitamin D](/docs/evaluation/laboratory-studies/nutritional-assessment/vitamin-d) and [Renal Function & Metabolic Surveillance](/docs/evaluation/laboratory-studies/renal-function-metabolic-surveillance).
+
+### 5. Sarcopenic Obesity — Specifically Pre-Complex-Prolapse, Pre-GAS, Pre-BMG Surgery
+
+The high-BMI patient with normal anthropometric reassurance but low muscle mass is at distinctively higher operative risk than BMI alone would predict. **Add waist circumference + waist-to-height ratio** to the routine preoperative workup for any patient with BMI &gt; 30 facing complex pelvic-floor reconstruction, gender-affirming surgery (phalloplasty / vaginoplasty), or BMG-based urethroplasty (where graft healing depends on host nutritional state). Consider BIA phase angle as the rapid bedside adjunct.
+
+### 6. Frailty Integration
+
+Body composition is one input to broader frailty assessment. Cross-reference [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty) — sarcopenia + slow gait + weak grip + weight loss is the four-fold criterion that should defer or substantially modify elective reconstruction planning in the older patient.
 
 ---
 
 ## See Also
 
 - [Nutritional Assessment overview](/docs/evaluation/laboratory-studies/nutritional-assessment)
-- [Handgrip Strength](/docs/evaluation/laboratory-studies/nutritional-assessment/handgrip-strength)
+- [Handgrip Strength](/docs/evaluation/laboratory-studies/nutritional-assessment/handgrip-strength) — first-line sarcopenia screen per EWGSOP2
+- [Screening Tools (NRS-2002, MUST, MNA-SF, GLIM)](/docs/evaluation/laboratory-studies/nutritional-assessment/screening-tools)
+- [Serum Albumin](/docs/evaluation/laboratory-studies/nutritional-assessment/serum-albumin)
+- [C-Reactive Protein](/docs/evaluation/laboratory-studies/nutritional-assessment/c-reactive-protein) — GLIM etiologic criterion
 - [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty)
+- [Vitamin D](/docs/evaluation/laboratory-studies/nutritional-assessment/vitamin-d) — bone-health surveillance integration
+- [Renal Function & Metabolic Surveillance](/docs/evaluation/laboratory-studies/renal-function-metabolic-surveillance) — post-diversion DXA workflow
+- [Perioperative Nutrition](/docs/foundations/perioperative-care/postoperative-management/nutrition)
+
+---
+
+## References
+
+<a id="ref1"></a>1. Cornier MA, Després JP, Davis N, et al. "Assessing Adiposity: A Scientific Statement From the American Heart Association." *Circulation.* 2011;124(18):1996–2019. doi:[10.1161/CIR.0b013e318233bc6a](https://doi.org/10.1161/CIR.0b013e318233bc6a)
+
+<a id="ref2"></a>2. Prado CM, Gonzalez MC, Norman K, et al. "Methodological Standards for Body Composition Assessment — an Expert-Endorsed Guide for Research and Clinical Applications: Bioimpedance, DXA, CT, and Ultrasound Methods." *The American Journal of Clinical Nutrition.* 2026;123(5):101283. doi:[10.1016/j.ajcnut.2026.101283](https://doi.org/10.1016/j.ajcnut.2026.101283)
+
+<a id="ref3"></a>3. Cederholm T, Bosaeus I. "Malnutrition in Adults." *The New England Journal of Medicine.* 2024;391(2):155–165. doi:[10.1056/NEJMra2212159](https://doi.org/10.1056/NEJMra2212159)
+
+<a id="ref4"></a>4. Cruz-Jentoft AJ, Sayer AA. "Sarcopenia." *Lancet.* 2019;393(10191):2636–2646. doi:[10.1016/S0140-6736(19)31138-9](https://doi.org/10.1016/S0140-6736(19)31138-9)
+
+<a id="ref5"></a>5. Expert Panel on Musculoskeletal Imaging, Boutin RD, Lenchik L, et al. "ACR Appropriateness Criteria® Diagnosis and Monitoring of Sarcopenia." *Journal of the American College of Radiology.* 2026. doi:[10.1016/j.jacr.2026.02.007](https://doi.org/10.1016/j.jacr.2026.02.007)
+
+<a id="ref6"></a>6. Bianchettin RG, Lavie CJ, Lopez-Jimenez F. "Challenges in Cardiovascular Evaluation and Management of Obese Patients: JACC State-of-the-Art Review." *Journal of the American College of Cardiology.* 2023;81(5):490–504. doi:[10.1016/j.jacc.2022.11.031](https://doi.org/10.1016/j.jacc.2022.11.031)
+
+<a id="ref7"></a>7. Zahid S, Yao Z, Blumenthal RS, Blaha MJ. "Translating New Obesity Definitions Into Clinical Practice." *JAMA.* 2025. doi:[10.1001/jama.2025.24909](https://doi.org/10.1001/jama.2025.24909)
+
+<a id="ref8"></a>8. Silva TR, Poínhos R, Sardinha LB, Teixeira VH, Silva AM. "Rapid Four-Compartment Models in Athletes Using Alternative Solutions for Body Volume and Water." *Scandinavian Journal of Medicine & Science in Sports.* 2025;35(5):e70062. doi:[10.1111/sms.70062](https://doi.org/10.1111/sms.70062)
+
+<a id="ref9"></a>9. Withers RT, Laforgia J, Heymsfield SB. "Critical Appraisal of the Estimation of Body Composition via Two-, Three-, and Four-Compartment Models." *American Journal of Human Biology.* 1999;11(2):175–185.
+
+<a id="ref10"></a>10. Müller MJ, Braun W, Pourhassan M, Geisler C, Bosy-Westphal A. "Application of Standards and Models in Body Composition Analysis." *The Proceedings of the Nutrition Society.* 2016;75(2):181–187. doi:[10.1017/S0029665115004206](https://doi.org/10.1017/S0029665115004206)
+
+<a id="ref11"></a>11. Withers RT, LaForgia J, Pillans RK, et al. "Comparisons of Two-, Three-, and Four-Compartment Models of Body Composition Analysis in Men and Women." *Journal of Applied Physiology.* 1998;85(1):238–245. doi:[10.1152/jappl.1998.85.1.238](https://doi.org/10.1152/jappl.1998.85.1.238)
+
+<a id="ref12"></a>12. Ng BK, Liu YE, Wang W, et al. "Validation of Rapid 4-Component Body Composition Assessment With the Use of Dual-Energy X-Ray Absorptiometry and Bioelectrical Impedance Analysis." *The American Journal of Clinical Nutrition.* 2018;108(4):708–715. doi:[10.1093/ajcn/nqy158](https://doi.org/10.1093/ajcn/nqy158)
+
+<a id="ref13"></a>13. Sheean P, Gonzalez MC, Prado CM, et al. "ASPEN Clinical Guidelines: The Validity of Body Composition Assessment in Clinical Populations." *JPEN. Journal of Parenteral and Enteral Nutrition.* 2020;44(1):12–43. doi:[10.1002/jpen.1669](https://doi.org/10.1002/jpen.1669)
+
+<a id="ref14"></a>14. Sergi G, De Rui M, Stubbs B, Veronese N, Manzato E. "Measurement of Lean Body Mass Using Bioelectrical Impedance Analysis: A Consideration of the Pros and Cons." *Aging Clinical and Experimental Research.* 2017;29(4):591–597. doi:[10.1007/s40520-016-0622-6](https://doi.org/10.1007/s40520-016-0622-6)
+
+<a id="ref15"></a>15. Silva AM, Campa F, Stagi S, et al. "The Bioelectrical Impedance Analysis (BIA) International Database: Aims, Scope, and Call for Data." *European Journal of Clinical Nutrition.* 2023;77(12):1143–1150. doi:[10.1038/s41430-023-01310-x](https://doi.org/10.1038/s41430-023-01310-x)
+
+<a id="ref16"></a>16. Lima J, Eckert I, Gonzalez MC, Silva FM. "Prognostic Value of Phase Angle and Bioelectrical Impedance Vector in Critically Ill Patients: A Systematic Review and Meta-Analysis." *Clinical Nutrition.* 2022;41(12):2801–2816. doi:[10.1016/j.clnu.2022.10.010](https://doi.org/10.1016/j.clnu.2022.10.010)
+
+<a id="ref17"></a>17. Di Vincenzo O, Marra M, Di Gregorio A, Pasanisi F, Scalfi L. "Bioelectrical Impedance Analysis (BIA) — Derived Phase Angle in Sarcopenia: A Systematic Review." *Clinical Nutrition.* 2021;40(5):3052–3061. doi:[10.1016/j.clnu.2020.10.048](https://doi.org/10.1016/j.clnu.2020.10.048)
+
+<a id="ref18"></a>18. Norman K, Herpich C, Müller-Werdan U. "Role of Phase Angle in Older Adults With Focus on the Geriatric Syndromes Sarcopenia and Frailty." *Reviews in Endocrine & Metabolic Disorders.* 2023;24(3):429–437. doi:[10.1007/s11154-022-09772-3](https://doi.org/10.1007/s11154-022-09772-3)
+
+<a id="ref19"></a>19. Román E, Poca M, Amorós-Figueras G, et al. "Phase Angle by Electrical Bioimpedance Is a Predictive Factor of Hospitalisation, Falls and Mortality in Patients With Cirrhosis." *Scientific Reports.* 2021;11(1):20415. doi:[10.1038/s41598-021-99199-8](https://doi.org/10.1038/s41598-021-99199-8)
+
+<a id="ref20"></a>20. Bernal-Ceballos F, Castillo-Martínez L, Reyes-Paz Y, Villanueva-Juárez JL, Hernández-Gilsoul T. "Clinical Application of Phase Angle and BIVA Z-Score Analyses in Patients Admitted to an Emergency Department With Acute Heart Failure." *Journal of Visualized Experiments.* 2023;(196). doi:[10.3791/65660](https://doi.org/10.3791/65660)
+
+<a id="ref21"></a>21. Uemura K, Doi T, Tsutsumimoto K, et al. "Predictivity of bioimpedance phase angle for incident disability in older adults." *Journal of Cachexia, Sarcopenia and Muscle.* 2020;11(1):46–54. doi:[10.1002/jcsm.12492](https://doi.org/10.1002/jcsm.12492)
+
+<a id="ref22"></a>22. Shibata K, Kameshima M, Adachi T, et al. "Association between preoperative phase angle and all-cause mortality after cardiovascular surgery: A retrospective cohort study." *Journal of Cachexia, Sarcopenia and Muscle.* 2024;15(4):1558–1567. doi:[10.1002/jcsm.13514](https://doi.org/10.1002/jcsm.13514)
+
+<a id="ref23"></a>23. Vangelov B, Bauer J, Kotevski D, Smee RI. "The Use of Alternate Vertebral Levels to L3 in CT Scans for Skeletal Muscle Mass Evaluation and Sarcopenia Assessment in Patients With Cancer: A Systematic Review." *The British Journal of Nutrition.* 2022;127(5):722–735. doi:[10.1017/S0007114521001446](https://doi.org/10.1017/S0007114521001446)
+
+<a id="ref24"></a>24. Bates DDB, Pickhardt PJ. "CT-Derived Body Composition Assessment as a Prognostic Tool in Oncologic Patients: From Opportunistic Research to Artificial Intelligence-Based Clinical Implementation." *AJR.* 2022;219(4):671–680. doi:[10.2214/AJR.22.27749](https://doi.org/10.2214/AJR.22.27749)
+
+<a id="ref25"></a>25. McGovern J, Dolan RD, Horgan PG, Laird BJ, McMillan DC. "Computed tomography-defined low skeletal muscle index and density in cancer patients: observations from a systematic review." *Journal of Cachexia, Sarcopenia and Muscle.* 2021;12(6):1408–1417. doi:[10.1002/jcsm.12831](https://doi.org/10.1002/jcsm.12831)
+
+<a id="ref26"></a>26. Shachar SS, Williams GR, Muss HB, Nishijima TF. "Prognostic Value of Sarcopenia in Adults With Solid Tumours: A Meta-Analysis and Systematic Review." *European Journal of Cancer.* 2016;57:58–67. doi:[10.1016/j.ejca.2015.12.030](https://doi.org/10.1016/j.ejca.2015.12.030)
+
+<a id="ref27"></a>27. Khristenko E, Sinitsyn V, Rieden T, et al. "CT-based Screening of Sarcopenia and Its Role in Cachexia Syndrome in Pancreatic Cancer." *PLoS One.* 2024;19(1):e0291185. doi:[10.1371/journal.pone.0291185](https://doi.org/10.1371/journal.pone.0291185)
+
+<a id="ref28"></a>28. Montero-Benitez MZ, Carmona-Llanos A, Fernández-Jiménez R, et al. "AI-Assistance Body Composition CT at T12 and T4 in Lung Cancer: Diagnosing Sarcopenia, and Its Correlation With Morphofunctional Assessment Techniques." *Cancers.* 2025;17(19):3255. doi:[10.3390/cancers17193255](https://doi.org/10.3390/cancers17193255)
+
+<a id="ref29"></a>29. Kaltenhauser S, Niessen C, Zeman F, et al. "Diagnosis of Sarcopenia on Thoracic CT and Its Association With Postoperative Survival After Anatomic Lung Cancer Resection." *Scientific Reports.* 2023;13(1):18450. doi:[10.1038/s41598-023-45583-5](https://doi.org/10.1038/s41598-023-45583-5)
+
+<a id="ref30"></a>30. Chan B, Yu Y, Huang F, Vardhanabhuti V. "Towards Visceral Fat Estimation at Population Scale: Correlation of Visceral Adipose Tissue Assessment Using Three-Dimensional Cross-Sectional Imaging With BIA, DXA, and Single-Slice CT." *Frontiers in Endocrinology.* 2023;14:1211696. doi:[10.3389/fendo.2023.1211696](https://doi.org/10.3389/fendo.2023.1211696)
+
+<a id="ref31"></a>31. Guglielmi G, Ponti F, Agostini M, et al. "The Role of DXA in Sarcopenia." *Aging Clinical and Experimental Research.* 2016;28(6):1047–1060. doi:[10.1007/s40520-016-0589-3](https://doi.org/10.1007/s40520-016-0589-3)
+
+<a id="ref32"></a>32. Dent E, Wright ORL, Woo J, Hoogendijk EO. "Malnutrition in Older Adults." *Lancet.* 2023;401(10380):951–966. doi:[10.1016/S0140-6736(22)02612-5](https://doi.org/10.1016/S0140-6736(22)02612-5)
+
+<a id="ref33"></a>33. Apovian CM, Aronne L, Barenbaum SR. "Clinical Management of Obesity — Third Edition." The Obesity Society, 2025.
+
+<a id="ref34"></a>34. Giri S, Feliciano E, Harmon C, et al. "Using CT-based body composition metrics and frailty index in predicting survival among older adults with cancer." *Journal of Clinical Oncology.* 2022;40(Suppl 16):12057. doi:[10.1200/JCO.2022.40.16_suppl.12057](https://doi.org/10.1200/JCO.2022.40.16_suppl.12057)
+
+<a id="ref35"></a>35. Kerr A, Slater GJ, Byrne N. "Impact of Food and Fluid Intake on Technical and Biological Measurement Error in Body Composition Assessment Methods in Athletes." *The British Journal of Nutrition.* 2017;117(4):591–601. doi:[10.1017/S0007114517000551](https://doi.org/10.1017/S0007114517000551)
