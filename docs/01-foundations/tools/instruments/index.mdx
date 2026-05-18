@@ -8,7 +8,7 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # Surgical Instruments
 
-A searchable reference to the instruments found on a functional-urology and genitourinary-reconstruction tray. Common instruments get short entries; the instruments that define reconstructive practice — **Turner-Warwick Ryder, Heaney driver, Haygrove sound, Lone Star retractor, perineal Bookwalter, Ravini lighted speculum, Raz-Pereyra trocar, the gorget** — get expanded pages with design rationale, history, and specific use cases.
+A searchable reference to the instruments found on a functional-urology and genitourinary-reconstruction tray. Common instruments get short entries; the instruments that define reconstructive practice — **Turner-Warwick Ryder, Heaney driver, Lone Star retractor, perineal Bookwalter, Ravini lighted speculum, Raz-Pereyra trocar, the gorget** — get expanded pages with design rationale, history, and specific use cases.
 
 export const instruments = [
   { name: "Turner-Warwick Ryder", category: "Needle Holders", namedAfter: "Richard Turner-Warwick", use: "Deep posterior urethroplasty; VUA reconstruction; elongated shank modification of Ryder", slug: "/docs/foundations/tools/instruments/needle-holders/turner-warwick-ryder" },
@@ -52,9 +52,6 @@ export const instruments = [
   { name: "Nasal Speculum", category: "Retractors", namedAfter: "—", use: "Repurposed for deep narrow-field exposure in urethroplasty and dorsal-vein dissection", slug: "/docs/foundations/tools/instruments/retractors/nasal-speculum" },
   { name: "Otis Bougie-à-Boule", category: "Sounds & Bougies", namedAfter: "Fessenden Nott Otis", use: "Ball-tip urethral sound for calibration and stricture localization", slug: "/docs/foundations/tools/instruments/sounds-bougies/otis-bougie" },
   { name: "Van Buren Sound", category: "Sounds & Bougies", namedAfter: "William Holme Van Buren", use: "Curved-tip tapered urethral sound; dilation and calibration", slug: "/docs/foundations/tools/instruments/sounds-bougies/van-buren" },
-  { name: "Guyon Sound", category: "Sounds & Bougies", namedAfter: "Jean Casimir Félix Guyon", use: "Curved malleable urethral sound set; atraumatic dilation", slug: "/docs/foundations/tools/instruments/sounds-bougies/guyon" },
-  { name: "Haygrove Sound", category: "Sounds & Bougies", namedAfter: "—", use: "Semicircular sound for posterior urethroplasty; suprapubic to membranous path", slug: "/docs/foundations/tools/instruments/sounds-bougies/haygrove" },
-  { name: "Gelman Urethral Sound", category: "Sounds & Bougies", namedAfter: "—", use: "Contemporary reconstructive urethral sound; graduated sizes", slug: "/docs/foundations/tools/instruments/sounds-bougies/gelman" },
   { name: "Gorget (Gourget)", category: "Sounds & Bougies", namedAfter: "—", use: "Historical lithotomy instrument; today repurposed for narrow deep urethroplasty exposure (like nasal speculum)", slug: "/docs/foundations/tools/instruments/sounds-bougies/gorget" },
   { name: "Ravini Lighted Speculum", category: "Urethral & Pelvic Specialty", namedAfter: "—", use: "Self-retaining lighted urethral speculum; female urethroplasty", slug: "/docs/foundations/tools/instruments/urethral-specialty/ravini" },
   { name: "Raz-Pereyra Trocar", category: "Urethral & Pelvic Specialty", namedAfter: "Shlomo Raz / Armand Pereyra", use: "Ligature-carrying trocar for pubovaginal fascial sling placement", slug: "/docs/foundations/tools/instruments/urethral-specialty/raz-pereyra" },
@@ -197,7 +194,6 @@ export const instruments = [
   // Miscellaneous
   { name: "Toomey Syringe (60 mL)", category: "Miscellaneous", namedAfter: "Sherman Toomey", use: "Wide-bore catheter-tip syringe for bladder irrigation, fill, and clot evacuation" },
   { name: "Ellik Evacuator", category: "Miscellaneous", namedAfter: "Milo Ellik", use: "Vacuum evacuator for bladder chip and clot retrieval after TURP / TURB" },
-  { name: "Randall Stone Forceps", category: "Miscellaneous", namedAfter: "Alexander Randall", use: "Curved forceps for open stone retrieval (renal pelvis, bladder)" },
   { name: "Probe & Grooved Director", category: "Miscellaneous", namedAfter: "—", use: "Malleable bulb-tip probe + grooved director pair; fistula / sinus / diverticulum tract exploration and groove-guided protected incision", slug: "/docs/foundations/tools/instruments/urethral-specialty/probe-grooved-director" },
   { name: "Bladder Scanner", category: "Miscellaneous", namedAfter: "—", use: "Portable 3D-ultrasound PVR device; CAUTI-reduction algorithms (Palese OR 0.27), Chrouser 2024 ≥ 500 mL catheterization threshold; reduced accuracy in obesity / ascites / post-augmentation", slug: "/docs/foundations/tools/instruments/urethral-specialty/bladder-scanner" },
   { name: "Laparotomy Pads", category: "Miscellaneous", namedAfter: "—", use: "Radiopaque + RFD-tagged 18×18 / 4×18 cotton sponges; visceral retraction, damage-control / accreta packing (Stone 1983, Brown 2025), QBL gravimetry; Inaba 2016 RFD 100% sensitivity", slug: "/docs/foundations/tools/instruments/urethral-specialty/laparotomy-pads" },
@@ -225,7 +221,6 @@ export const instrumentColumns = [
     "Miscellaneous": "#424242",
   } },
   { key: "namedAfter", header: "Named After" },
-  { key: "use", header: "Key Use" },
 ];
 
 <GenericDatabase
@@ -240,6 +235,6 @@ export const instrumentColumns = [
 
 ## Historical Notes
 
-Many of these instruments carry the names of defining figures in reconstructive urology and pelvic surgery — [Richard Turner-Warwick](/docs/roots/surgeons/s-z/richard-turner-warwick), Noble Sproat Heaney, [Gerald H. Jordan](/docs/roots/surgeons/h-r/gerald-jordan), Shlomo Raz, Armand Pereyra, Jean Casimir Félix Guyon, Fessenden Nott Otis, Oscar Huntington Allis, William Wayne Babcock, Emil Theodor Kocher, Owen Wangensteen, August Breisky, Michael DeBakey, Ramón Castroviejo, and Leonard Malis. Their contributions live on in the daily work of the reconstructive tray.
+Many of these instruments carry the names of defining figures in reconstructive urology and pelvic surgery — [Richard Turner-Warwick](/docs/roots/surgeons/s-z/richard-turner-warwick), Noble Sproat Heaney, [Gerald H. Jordan](/docs/roots/surgeons/h-r/gerald-jordan), Shlomo Raz, Armand Pereyra, Fessenden Nott Otis, Oscar Huntington Allis, William Wayne Babcock, Emil Theodor Kocher, Owen Wangensteen, August Breisky, Michael DeBakey, Ramón Castroviejo, and Leonard Malis. Their contributions live on in the daily work of the reconstructive tray.
 
 See also: [Needles](/docs/foundations/surgical-principles/needles), [Sutures](/docs/foundations/surgical-principles/sutures), [Surgical Ergonomics](/docs/foundations/surgical-principles/surgical-ergonomics), [Robotics](/docs/foundations/tools/technology/robotics).

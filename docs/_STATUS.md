@@ -5,12 +5,8 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 5 stubs — P1: 0, P2: 5, P3: 0.
+**Totals:** 1 stubs — P1: 0, P2: 1, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
-| `docs/01-foundations/surgical-principles/grafts/intestinal-segments.mdx` | 2 |  |
-| `docs/01-foundations/tools/instruments/sounds-bougies/gelman.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/drug-coated-balloon.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx` | 2 |  |
-| `docs/04-surgical-techniques/04f-incontinence-procedures/procedures/neuromodulation.mdx` | 2 |  |
+| `docs/07-roots/surgical-lineage.mdx` | 2 |  |
