@@ -4,7 +4,42 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-18 (extended) — Algolia overhaul + instruments rebuild wave + build fix
+## Current Handoff - 2026-05-18 (nutrition fill + RPF) — All 15 nutritional-assessment stubs filled + new RPF / Ureterolysis pair
+
+17 commits, all fast-forwarded to `main`. Lints + build clean across **1,168 files**.
+
+**Nutritional-assessment section completed** — all 15 stub pages under [docs/02-evaluation/laboratory-studies/nutritional-assessment/](docs/02-evaluation/laboratory-studies/nutritional-assessment/) filled out from ~30-line skeletons to full 150–250-line evidence-based articles with WARWIKI house-style citations. Each page has a dedicated **Reconstructive Relevance** section anchoring the lab / tool to specific reconstructive urology / urogynecology scenarios:
+
+- [serum-albumin](docs/02-evaluation/laboratory-studies/nutritional-assessment/serum-albumin.mdx) + [prealbumin](docs/02-evaluation/laboratory-studies/nutritional-assessment/prealbumin.mdx) — ASPEN 2021 paradigm shift (markers of inflammation + nutrition risk, NOT malnutrition); Alfertshofer 200k-pt cohort, GLP-1 RA signal preserved.
+- [transferrin](docs/02-evaluation/laboratory-studies/nutritional-assessment/transferrin.mdx) — Iron metabolism + ASPEN limitations + preop PBM framing (TSAT < 20% + ferritin < 100 ng/mL threshold for IV iron before cystectomy / diversion / phalloplasty).
+- [c-reactive-protein](docs/02-evaluation/laboratory-studies/nutritional-assessment/c-reactive-protein.mdx) — Battistelli 2014 POD3 30-fold rise envelope (transferable to cystectomy / GAS / phalloplasty postop leak / abscess / SSI surveillance), 2025 ACC universal hsCRP rec, GLIM etiologic anchor.
+- [vitamin-d](docs/02-evaluation/laboratory-studies/nutritional-assessment/vitamin-d.mdx) — 2024 Endocrine Society paradigm shift (no longer endorses specific thresholds; against routine screening); 5-scenario reconstructive framing (bowel-augmented bone disease, post-menopausal urogyn, GAS, post-bariatric, adult congenital / spina bifida).
+- [iron-ferritin](docs/02-evaluation/laboratory-studies/nutritional-assessment/iron-ferritin.mdx) — Threshold table across WHO / AGA / IBD / HF / CKD / hemochromatosis; hyperferritinemic syndromes; **PBM operational tiers** for major elective reconstruction.
+- [vitamin-b12](docs/02-evaluation/laboratory-studies/nutritional-assessment/vitamin-b12.mdx) — **THE defining reconstructive scenario** — ileal-bowel reconstruction (conduit, neobladder, augmentation, Indiana / Mainz, ileal-ureter); 3–5 yr hepatic buffer → classic delayed presentation a decade post-cystectomy; full surveillance schedule per AUA / SUFU.
+- [folate](docs/02-evaluation/laboratory-studies/nutritional-assessment/folate.mdx) — NTD prevention (USPSTF A-rec) anchored on adult congenital / spina bifida transitional urology; preconception counseling is the reconstructive surgeon's job; B12-masking trap in ileal-bowel diversion patients.
+- [zinc](docs/02-evaluation/laboratory-studies/nutritional-assessment/zinc.mdx) — Wound healing (topical zinc-oxide paste / Unna boot in pelvic-perineal wound care, Kjaer multinutrient bundle); **THE copper-myelopathy trap** (long-term zinc / denture-cream users walk in with new neurogenic bladder mimicking B12 SCD).
+- [vitamin-a](docs/02-evaluation/laboratory-studies/nutritional-assessment/vitamin-a.mdx) — **THE chronic-corticosteroid pearl** (Hunt 1969 → 25,000 IU/day × 7–10 days perioperatively reverses steroid wound suppression in IBD / transplant / vasculitis patients facing reconstruction); cirrhotic paradox.
+- [thiamine](docs/02-evaluation/laboratory-studies/nutritional-assessment/thiamine.mdx) — **Universal rule**: thiamine BEFORE glucose in any post-bariatric / AUD / hyperemetic / long-NPO patient with altered mental status; refeeding-syndrome integration (post-cystectomy ileus, ECF, radiation enteritis, post-exenteration).
+- [copper](docs/02-evaluation/laboratory-studies/nutritional-assessment/copper.mdx) — Mirror of zinc page; copper-deficiency myeloneuropathy + new neurogenic bladder; **THE MDS-mimic trap** (always check copper before MDS workup in post-bariatric or zinc / denture-cream patient with cytopenias; 93% cytopenia resolution with replacement per Gabreyes 2013); D-penicillamine wound-healing caveat in Wilson disease.
+- [body-composition](docs/02-evaluation/laboratory-studies/nutritional-assessment/body-composition.mdx) — **THE opportunistic CT L3-SMI on existing scans** (pre-cystectomy / RPLND / exenteration / trauma / surveillance), AI-enabled segmentation tools; sarcopenic-obesity trap (Khristenko 2024 79.7% normal-BMI cancer patients sarcopenic); BIA phase angle as 5-min bedside preop biomarker.
+- [handgrip-strength](docs/02-evaluation/laboratory-studies/nutritional-assessment/handgrip-strength.mdx) — **THE most actionable bedside preop tool** ($200–400 Jamar, 60 sec, mortality OR 7.28 for low values in GI tumor surgery); EWGSOP2 / AWGS / SDOC triple-cutoff framework; serial-tracking prehabilitation argument.
+- [screening-tools](docs/02-evaluation/laboratory-studies/nutritional-assessment/screening-tools.mdx) — MUST as surgical default (Petra 2025 n=1,649 best validated for major abdominal surgery); MNA-SF for older urogyn / cystectomy; mNUTRIC for ICU; PG-SGA for oncology reconstruction; GLIM two-step framework with full phenotypic × etiologic criteria.
+
+**Source-content cleanup convention reinforced** — across all 15 pages, applied systematic cleanup of: truncated values (e.g., "BMI [N]" missing thresholds), mangled comparison tables (no delimiters), `undefined` figure captions, external openevidence lay-source links (against WARWIKI policy), trailing "Would you like to explore..." prompts, and **stray copy-paste refs** bleeding through from earlier source pages. Renumbered all body citations and reference lists sequentially per WARWIKI convention. This pattern is the standard recovery workflow for chatbot-assisted page drafts.
+
+**New: Retroperitoneal Fibrosis (RPF) clinical condition + Ureterolysis surgical technique pair** — covers a reconstructive-urology gap:
+
+- New [retroperitoneal-fibrosis.mdx](docs/03-clinical-conditions/03e-upper-tract/retroperitoneal-fibrosis.mdx) (Upper Tract Disorders, sidebar position 3 after UPJ obstruction + ureteral stricture). Idiopathic vs IgG4-related vs secondary classification; immunopathogenesis; 60–80% ureteral obstruction at presentation; CT / MRI / FDG-PET (medial-vs-lateral ureteral deviation as malignancy discriminator); Vaglio 2011 RCT prednisone > tamoxifen; combination immunosuppressant 98.9% vs 85.1% response; rituximab 88% radiologic improvement (Wallwork 2018); FDG-PET positive at EOT HR 3.47 relapse; 38–50% lifetime relapse rate. 22 refs.
+- New [ureterolysis.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/ureterolysis.mdx) (Upper Tract Reconstruction, position 18). Stent / PCN first-line (comparable 21/18% complications; Santiago 2021 69% conservative resolution at median 16 mo; 15% ultimately need ureterolysis at median 2.2 yr). Three-approach comparison table (open 87.5–96% / 12% Clavien III–IV vs lap 91–93.8% / shorter LOS vs robotic ~100% small series / 33 mL EBL). **O'Brien 2017 timing data** (+25% GFR stent-failure group vs −10% nephrostomy-dependent group — defining "don't delay" data point). Inflammatory AAA section (5–10% of AAA, SVS retroperitoneal-approach OSR or EVAR; hydronephrosis resolution 69% open vs 38% EVAR). 19 refs.
+- Wired ureterolysis into [upper-tract-reconstruction index database](docs/04-surgical-techniques/04d-upper-tract-reconstruction/index.mdx) (Substitution / Salvage row); cross-linked from [ureteral-stricture.mdx](docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx) etiology table (closes hub-spoke loop for the inflammatory / infiltrative ureteral-stricture etiology category).
+
+**Convention reinforced — split medical-content from surgical-content** when a clinical condition has a substantial dedicated reconstructive technique. Antipattern: cramming full ureterolysis details into the RPF condition page. Pattern: condition page describes disease + medical therapy, technique page describes operations + decision framework, both cross-linked. Same split already used for urethral stricture ↔ urethroplasty family.
+
+Full session detail in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-18 (extended) — Algolia overhaul + instruments rebuild wave + build fix
 
 ~30 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across **1,166 files**.
 
