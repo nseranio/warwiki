@@ -6,6 +6,67 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-18 — Nutrition deep-dive, LSE classification, ICUD page, four new retractor pages, orphan-lint overhaul, title-disambiguation convention
+
+Large session — **14 commits, all fast-forwarded to `main`**. Lints / typecheck / build clean across ~1,162 files.
+
+**New dedicated atlas pages**:
+
+- [Intracorporeal Urinary Diversion (ICUD)](docs/04-surgical-techniques/04c-urinary-diversion/intracorporeal-urinary-diversion.mdx) — relocated Principle 12 into its own page with full robotic step-by-step (ileal conduit + orthotopic neobladder), Bricker vs Wallace, ICUD-vs-ECUD outcomes (IRCC, Katayama 2021, Zhang 2020, Mastroianni 2024 RCT, Rich 2025, Teoh 2021, Mazzone 2021), and learning curve. Removed Principle 12 + refs 30–38 from [urinary-diversion-principles](docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx); replaced with a one-line pointer. 25 refs.
+- [Intraoperative Bowel Handling & Injury Management](docs/01-foundations/surgical-principles/bowel-handling-injury-management.mdx) — new foundations page (sibling to Bowel Anastomosis). Prevention table (ASRM gentle-handling, laparoscopy halves adhesions per Krielen 2020 SCAR, intestinal isolation bag Adelson 1991, atraumatic graspers, sharp-vs-blunt adhesiolysis with ten Broek 2013 10.5% enterotomy / 8% mortality data, bipolar over monopolar, powder-free gloves, Seprafilm caveat). Iatrogenic-injury algorithm (small-bowel primary repair WSES 1B, colon paradigm shift to liberal primary repair / anastomosis per Fitzgerald 2025 EAST and Mitchao 2022, thermal-injury resect-don't-repair rule with Bishoff 1999 69%-missed signal, missed-injury warning signs, damage-control 48–72 h relook, EAF prevention / ChimneyVAC). Reconstructive-urology / urogyn implications block. 27 refs.
+
+**New instrument pages** (all + index rows on [tools/instruments/index.mdx](docs/01-foundations/tools/instruments/index.mdx)):
+
+- [Collins retractor](docs/01-foundations/tools/instruments/retractors/collins.mdx) — Balfour-family wound-edge self-retainer for transverse (Pfannenstiel) incisions; Charité Alexis-vs-Collins SSI RCT (8% vs 1% non-obese; benefit lost at BMI ≥ 40 per Scolari Childress 2016 and Waring 2018 meta); femoral-neuropathy safety; WHO + SHEA/IDSA framing. 14 refs.
+- [Gelpi retractor](docs/01-foundations/tools/instruments/retractors/gelpi.mdx) — single-sharp-prong scissor-style self-retainer; Weitlaner sibling for firm-tissue (fascia / muscle) retraction. Scrotal / inguinal / perineal / gracilis-harvest / microsurgical RU framing. Datta 2004 paraspinal perfusion 60-min periodic-relaxation rule. 3 refs.
+- [O-Ring / Plastic Sheath Wound Retractor](docs/01-foundations/tools/instruments/retractors/o-ring-wound-protector.mdx) (Alexis, Mobius, O Trac) — dual-ring polyurethane-sheath device covering design, 4 SSI-reduction mechanisms (barrier, atraumatic retraction, humidity, no femoral-nerve risk), insertion technique, RU/urogyn applications, JAMA Surg 2024 Korean RCT (46.8% RRR), ASCRS 2024 strong recommendation, WSES 2020 Grade 1B dual-vs-single-ring, BMI-dependent cesarean signal, off-label uses (TORS, transoral thyroidectomy, VP-shunt, specimen extraction, giant ovarian cyst). Added a **cost-effectiveness section** (Chomsky-Higgins 2019 dominant in colorectal: +230 QALYs / $2.2M savings per 1,000; ROSSINI 2014 single-ring not-cost-effective signal; Lawson 2019 hernia exposure-per-incision-length 12.25 vs 6.17 cm²; reconciliation table). 21 refs total.
+- [Viscera Retainer (FISH / Glassman)](docs/01-foundations/tools/instruments/retractors/viscera-retainer.mdx) — flexible shield placed under fascial edges at laparotomy closure to protect bowel from needle puncture. FISH plastic / Glassman metal variants, the malleable / lap-pad improvised alternatives, the defining "withdraw before last suture" limitation with mitigations, and the Kaymakcalan 2017 biodegradable CC-DHA in-situ alternative. **Evidence-gap section**: no clinical trials show outcome reduction; framed against 1.9% AHSQC enterotomy incidence (Krpata 2018), 12.8% with adhesiolysis (ten Broek 2012), 19–20% in reoperative abdominal (Van Der Krabben 2000); WSES 2023 ECLAPTE blunt-vs-sharp no-recommendation. 6 refs.
+
+**New evaluation subsection — [Nutritional Assessment](docs/02-evaluation/laboratory-studies/nutritional-assessment/index.mdx)**:
+
+Comprehensive landing under Evaluation → Laboratory Studies with the ACS NSQIP / Strong-for-Surgery framework, full lab table (visceral proteins + CRP + micronutrient panel), screening-tool comparison (MUST / NRS-2002 / MNA-SF), GLIM phenotypic + etiologic diagnostic criteria, physical / functional / body-composition workup, and a practical bottom-line recipe. 11 refs.
+
+Plus **15 per-test stub pages** (real fillable skeletons with key cutoffs, reconstructive-specific framing, and explicit "To Be Expanded" sections): serum-albumin, prealbumin, transferrin, c-reactive-protein, vitamin-d, iron-ferritin, vitamin-b12, folate, zinc, vitamin-a, thiamine, copper, screening-tools, handgrip-strength, body-composition. Wired into the Laboratory Studies landing and cross-linked from the perioperative nutrition page.
+
+**Foundations Perioperative Nutrition expansion** ([nutrition.mdx](docs/01-foundations/perioperative-care/postoperative-management/nutrition.mdx)) — three new sections, 28 new refs (32–59):
+
+- **Nutrition and Wound Healing — The Reconstructive Evidence**: 200k-pt albumin analysis (Alfertshofer 2026 — 36.5% vs 10.4% complications at ≤ 3.3 g/dL), Bruno 2026 abdominoplasty protein RCT (dehiscence 6% vs 17%, seroma 9% vs 18%, healing −4 days), Herzog 2024 H&N flap 3.4× failure, Panayi 2024 frailty + hypoalbuminemia NSQIP n = 34,571, Saeg 2021 micronutrient-by-wound-type table, Kjaer 2020 multinutrient collagen-synthesis RCT.
+- **Expanded urology immunonutrition block**: Khaleel 2021 RC IMN (infection 25% vs 45%), Hamilton-Reeves 2018 pilot RCT (Th1/Th2 shift, IL-6 −43%), Amer 2025 RCT (LOS 7.8 vs 10.6 d; flatus 40 vs 65 h), Cochrane Burden 2019, INCyst trial protocol Derré 2024. New **Urogynecologic ERAS Nutrition** subsection (AUGS-IUGA 2022 + ACOG 750 + ASCRS-SAGES carb-loading).
+- **GLP-1 Receptor Agonists in Perioperative Care** (full new section): candidacy expansion (Sidhu 2025 DIEP n = 5,618), conflicting wound-healing signal with mechanistic reconciliation via protein deficit (Lee 2025, Koenig 2026, Aschen 2025), Friedman 2025 lower albumin / prealbumin signal, preclinical pro-healing paradox (Ghebrehiwet-Kuflom 2025), ADA 2026 personalized aspiration-risk framework, **OCULUS RCT** (holding doesn't empty the stomach), Mehta 2025 protein-timing protocol, practical surgeon checklist.
+
+Cross-link added from [wound-healing.mdx](docs/01-foundations/surgical-principles/wound-healing.mdx) Malnutrition row.
+
+**Urethral-stricture classification rebuild** ([urethral-stricture.mdx](docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx)) — corrected "Severity" → **Segment** in LSE, added the full Erickson 2020 LSE classification (L1–3 / S1–3 / E1–6, interrater reliability 0.79), the 2025 LSE staging system (I–V with substages, Urethroplasty Triad Score, head-to-head superiority over LSE-score and U-score), and a comparison table with the U-Score / ULTRA / cystoscopy / Gombe systems anchored on the John 2021 SR. Kurtzman 2022 head-to-head LSE vs U-Score. 6 new refs.
+
+**Lichen sclerosus reconstructive build-out** ([lichen-sclerosus.mdx](docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx)) — replaced the brief "use oral mucosa" paragraph with a comprehensive reconstructive block: Calvo 2024 long-term outcomes, AUA 2023 surgical principles (genital skin contraindicated, oral mucosa mandatory, SCC biopsy, no endoscopic Tx for penile strictures), **Kurtzman 2021 one-stage BMG meta-analysis** (n = 625; 10% / 18% at 24 mo recurrence; penile-invagination superiority p = 0.004), Esperto 2022 SR (88% vs 60% single vs staged), Wan 2023 Kulkarni vs Asopa in LS, two-stage BMG data (Patel 2016, Palminteri 2022 12-mo interval rule, Levine 2007, Figler 2018, Verla 2019), **perineal urethrostomy** evidence (Patel 93% vs 75%; Fuchs 94.8% vs 78.5% / 78.2%; Klemm 2024 84% at 55 mo; Zhao 2025 meta no difference vs urethroplasty), LS decision-framework table, cross-links to Kulkarni / Asopa / Johanson / Blandy technique pages and the LSE-staging anchor. 14 new refs (37–50, with duplicate Chung 2020 collapsed and 39–50 renumbered to 38–49).
+
+**"Shorter ureters, fewer strictures"** — Das 2024 (*Urology* n = 204; OR 0.73, 95% CI 0.58–0.92; median resection 2.3 cm vs 1.65 cm in non-stricturing vs stricturing) added to [ileal-conduit](docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx) Ureteroileal-anastomosis section as the perfusion-driven counter-intuitive principle, with the conflicting Richards 2015 multifactorial signal and the four core technical principles (spatulation, periureteral preservation, tension-free mucosa-to-mucosa, single-J stents). Cross-callout added to [urinary-diversion-principles](docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx) Principle 5 (Achilles heel).
+
+**Orphan-lint overhaul + cross-link cleanup**:
+
+- Fixed [scripts/check-orphans.js](scripts/check-orphans.js) on two dimensions: (1) honor frontmatter `slug:` overrides when deriving served URLs (most 04a urethroplasty atlas pages flatten via slug); (2) count GenericDatabase / data-array `slug:` entries as valid inbound paths. Result: **95 false-positive orphans → 4 real orphans → 0 after cleanup**.
+- Real orphans fixed: added Lotus Petal + Singapore (pudendal-thigh / IPAP) flap rows to the male-urethroplasty Pedicled Flaps DB; added Laminated Gracilis Flap to the Combined (Graft + Flap) DB; cross-linked Tissue-Engineered Grafts & Bioscaffolds from the grafts-gu-reconstruction hub.
+- Wired Peyronies [prosthesis-with-straightening.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx) inline at first mention to deep-dive companions (scratch-technique, manual-modeling, sliding-slicing-techniques) — the pattern the user raised re: hidden pages findable only by search.
+
+**Title-disambiguation convention applied** — 22 files updated with parenthetical suffix:
+
+- Identical-title pairs: AUS → **(Device)** / **(Procedure)**; Erectile Dysfunction → **(Condition)** / **(Procedures)**; Testicular Reimplantation → **(Condition)** / **(Procedure)**; Botulinum Toxin → **(Neuromodulation Adjunct)** / **(OAB / Storage)**; PDE5 Inhibitors → **(Pharmacology)** / **(Procedures)**; Non-Binary / Nullification → **(Procedures)** / **(Special Population)**.
+- BPH device/procedure pairs standardized to (Device) / (Procedure): ProACT, iTind, Optilume BPH, Aquablation.
+- Same-eponym instrument pairs got instrument type: Iris **Forceps**, Heaney **Clamp** (siblings already had "Scissors" and "Needle Driver").
+- Fistula pairs (5) left alone — verb-based "...Repair" suffix already disambiguates. drug-coated-balloon legacy pair and overview.mdx section-disambiguated pages also left alone. Convention saved to user memory.
+
+**CSS** — table top-margin tightened ([custom.css](src/css/custom.css:240)) when a table directly follows a paragraph: ~ 44 px gap → ~ 20 px (only the `<p>` bottom margin). Triggered by user-reported "extra gap above tables" on the new ICUD page.
+
+**Algolia search** (no repo commit, dashboard-only) — diagnosed two-part issue: (1) PageRank originally backward (boosting landings over canonical deep pages), (2) GenericDatabase row descriptions / TOC blurbs polluting `content`. Recommended Algolia-Crawler-Editor recordExtractor with reversed pageRank tiers (deep pages 50, landings 30, hubs 55), exclusion of references / `.section-stack` / `.toc-list` / tables / `.GenericDatabase` wrappers, `lvl0` anchored to breadcrumb, and `desc(weight.pageRank)` as first custom-ranking attribute. Owner applied dashboard-side and confirmed improvement; reference-strip drop triggered Algolia SafeReindex 30% threshold which owner raised to 70% for the one-time republish.
+
+**Conventions reinforced**:
+
+- **Disambiguate duplicate page titles with parenthetical suffix** when (and only when) titles actually collide across sections; URLs unchanged.
+- **Hidden pages must be reachable** via inline prose cross-link from the consolidated parent — search-only access is not acceptable for deep-dive content (user-stated philosophy: "if there is more info on a topic it should be easily found on the website and not hidden").
+- **GenericDatabase slugs count as inbound links** for orphan-lint purposes — taught the lint script accordingly.
+
+---
+
 ## 2026-05-16 — Instruments build-out: endoscopy + robotic subdirectories, sounds-bougies completion, urinary-diversion principles
 
 Continued the comprehensive instruments-section expansion from 2026-05-15. **~50 commits across ~40 new / expanded instrument pages and one urinary-diversion principles update.** Created two new instrument subdirectories (`endoscopy/`, `robotic/`), completed the sounds-bougies family, expanded the urethral-specialty subdir, and applied the same consolidation pattern (used earlier for needle drivers and vessel sealers) to demonstrate redundancy-control. Lints clean throughout (~1,140 files). All fast-forwarded to `main` per the new push-main-cadence feedback.

@@ -4,7 +4,56 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-16 — Instruments build-out: endoscopy + robotic subdirectories, sounds-bougies completion, urinary-diversion principles
+## Current Handoff - 2026-05-18 — Nutrition deep-dive, LSE classification, ICUD page, four new retractor pages, orphan-lint overhaul, title-disambiguation convention
+
+Large session — **14 commits, all fast-forwarded to `main`**. Lints / typecheck / build clean across ~1,162 files.
+
+**New dedicated atlas pages**:
+
+- [Intracorporeal Urinary Diversion (ICUD)](docs/04-surgical-techniques/04c-urinary-diversion/intracorporeal-urinary-diversion.mdx) — relocated Principle 12 of urinary-diversion-principles into its own page; full robotic step-by-step for ileal conduit + orthotopic neobladder, Bricker vs Wallace, ICUD-vs-ECUD outcomes (IRCC, Katayama 2021, Zhang 2020, Mastroianni 2024 RCT), learning curve. 25 refs.
+- [Intraoperative Bowel Handling & Injury Management](docs/01-foundations/surgical-principles/bowel-handling-injury-management.mdx) — new foundations page covering prevention (sharp adhesiolysis, atraumatic graspers, bipolar over monopolar, intestinal isolation bag, Seprafilm caveat, viscera retainer) and iatrogenic-injury management (small-bowel primary repair WSES 1B; colon paradigm shift to liberal primary repair / anastomosis per Fitzgerald 2025 EAST and Mitchao 2022; thermal-injury resect-don't-repair rule with Bishoff 1999 69%-missed signal; damage-control 48–72 h relook; EAF prevention / ChimneyVAC). 27 refs.
+
+**Four new retractor pages** (all + index rows): [Collins](docs/01-foundations/tools/instruments/retractors/collins.mdx) (Charité Alexis-vs-Collins SSI RCT 1% vs 8% non-obese; BMI ≥ 40 benefit lost), [Gelpi](docs/01-foundations/tools/instruments/retractors/gelpi.mdx) (single-sharp-prong Weitlaner sibling; Datta 2004 60-min paraspinal-perfusion rule), [O-Ring / Plastic Sheath Wound Retractor](docs/01-foundations/tools/instruments/retractors/o-ring-wound-protector.mdx) (Alexis / Mobius / O Trac; JAMA Surg 2024 46.8% SSI RRR; ASCRS 2024 strong; WSES Grade 1B dual-vs-single; **cost-effectiveness section** with Chomsky-Higgins 2019 dominant in colorectal vs ROSSINI 2014 single-ring not-cost-effective signal), and [Viscera Retainer (FISH / Glassman)](docs/01-foundations/tools/instruments/retractors/viscera-retainer.mdx) (with evidence-gap section: no RCT shows outcome reduction; framed against 1.9% AHSQC / 12.8% adhesiolysis / 19–20% reoperative enterotomy incidence).
+
+**Nutrition build-out**:
+
+- **Expanded [Perioperative Nutrition](docs/01-foundations/perioperative-care/postoperative-management/nutrition.mdx)** with three new sections (28 new refs, 32–59):
+  - **Nutrition and Wound Healing — The Reconstructive Evidence** — Alfertshofer 2026 200k-pt albumin analysis, Bruno 2026 abdominoplasty protein RCT (dehiscence 6% vs 17%), Herzog 2024 H&N flap 3.4× failure, Panayi 2024 frailty + hypoalbuminemia NSQIP, Saeg 2021 micronutrient table, Kjaer 2020 multinutrient collagen-synthesis RCT.
+  - **Expanded urology immunonutrition** — Khaleel 2021, Hamilton-Reeves 2018 pilot RCT, Amer 2025 RCT (LOS 7.8 vs 10.6 d), Cochrane Burden 2019, INCyst trial protocol; new **Urogynecologic ERAS Nutrition** subsection (AUGS-IUGA 2022 + ACOG 750).
+  - **GLP-1 Receptor Agonists in Perioperative Care** — candidacy expansion (Sidhu 2025 DIEP n = 5,618), mixed wound-healing signal reconciled via protein deficit (Lee 2025, Koenig 2026, Aschen 2025); ADA 2026 personalized aspiration framework; **OCULUS RCT** counter-evidence (holding doesn't empty stomach); Mehta 2025 protein-timing protocol.
+- **New evaluation subsection — [Nutritional Assessment](docs/02-evaluation/laboratory-studies/nutritional-assessment/index.mdx)** under Evaluation → Laboratory Studies. Comprehensive landing (ACS framework, full lab table, MUST / NRS-2002 / MNA-SF / GLIM, body-composition workup; 11 refs) plus **15 per-test stub pages** ready to fill out: serum-albumin, prealbumin, transferrin, c-reactive-protein, vitamin-d, iron-ferritin, vitamin-b12, folate, zinc, vitamin-a, thiamine, copper, screening-tools, handgrip-strength, body-composition.
+
+**Urethral stricture / LS rebuild**:
+
+- **[urethral-stricture.mdx](docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx) Classification section** — corrected "Severity" → **Segment** in LSE; added full Erickson 2020 classification, the 2025 LSE staging system (I–V with substages, Urethroplasty Triad Score), and a comparison table with U-Score / ULTRA / cystoscopy / Gombe systems (John 2021 SR). 6 new refs.
+- **[lichen-sclerosus.mdx](docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx) LS Urethral Stricture section** — replaced brief paragraph with comprehensive reconstructive block: AUA 2023 principles, Kurtzman 2021 one-stage BMG meta-analysis (10%/18% recurrence, penile-invagination superiority p = 0.004), Kulkarni vs Asopa head-to-head (Wan 2023), two-stage BMG data with Palminteri 2022 12-mo interval rule, full perineal urethrostomy evidence (Patel, Fuchs, Klemm, Zhao 2025 meta), LS decision-framework table, cross-links to all named technique pages and the LSE-staging anchor. 14 new refs (37–50, with duplicate Chung 2020 collapsed and 39–50 renumbered to 38–49).
+
+**"Shorter ureters, fewer strictures"** — Das 2024 (OR 0.73, 95% CI 0.58–0.92; median resection 2.3 cm vs 1.65 cm) added to [ileal-conduit](docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx) as the perfusion-driven counter-intuitive principle; cross-callout in Principle 5 (Achilles heel) of urinary-diversion-principles.
+
+**Orphan-lint overhaul** — fixed [scripts/check-orphans.js](scripts/check-orphans.js) on two dimensions: (1) honor frontmatter `slug:` overrides; (2) count GenericDatabase / data-array `slug:` entries as valid inbound paths. Result: **95 false-positive orphans → 4 real → 0 after cleanup**. Real orphans fixed by adding DB rows (Lotus Petal, Singapore, Laminated Gracilis to male-urethroplasty; Tissue-Engineered Grafts cross-linked from grafts hub). Wired Peyronies [prosthesis-with-straightening.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx) inline at first mention to scratch-technique / manual-modeling / sliding-slicing-techniques deep-dive companions — addresses the user-raised pattern re: hidden deep-dive pages findable only by search.
+
+**Title-disambiguation convention** — 22 files updated with parenthetical suffix when titles actually collide across sections (URLs unchanged):
+
+- Identical-title pairs: **AUS** → (Device) / (Procedure); **Erectile Dysfunction** → (Condition) / (Procedures); **Testicular Reimplantation** → (Condition) / (Procedure); **Botulinum Toxin** → (Neuromodulation Adjunct) / (OAB / Storage); **PDE5 Inhibitors** → (Pharmacology) / (Procedures); **Non-Binary / Nullification** → (Procedures) / (Special Population).
+- BPH device/procedure pairs standardized to (Device) / (Procedure): ProACT, iTind, Optilume BPH, Aquablation.
+- Same-eponym instrument pairs got instrument type: Iris **Forceps**, Heaney **Clamp** (siblings already had "Scissors" / "Needle Driver").
+- Fistula "...Repair" pairs and overview.mdx section-disambiguated pages left alone. Convention saved to user memory for future sessions.
+
+**CSS** — table top-margin tightened ([custom.css](src/css/custom.css:240)) when a table directly follows a `<p>`: ~ 44 px → ~ 20 px.
+
+**Algolia search** (dashboard-only, no repo commit) — diagnosed PageRank-backward + GenericDatabase-content-pollution; recommended Crawler-Editor recordExtractor with reversed pageRank tiers, exclusion of references / `.section-stack` / `.toc-list` / tables / `.GenericDatabase`, breadcrumb-anchored `lvl0`, and `desc(weight.pageRank)` as first custom-ranking attribute. Owner applied and confirmed improvement; reference-strip drop required raising SafeReindex threshold 30% → 70% for the one-time republish.
+
+**Conventions reinforced**:
+
+- **Disambiguate duplicate page titles with parenthetical suffix** when (and only when) titles actually collide; URLs unchanged.
+- **Hidden pages must be reachable via inline prose cross-link** from the consolidated parent — search-only access is unacceptable for deep-dive content.
+- **GenericDatabase slugs count as inbound links** for orphan-lint purposes.
+
+Full session detail in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-16 — Instruments build-out: endoscopy + robotic subdirectories, sounds-bougies completion, urinary-diversion principles
 
 Continued the comprehensive instruments build from 2026-05-15. **~50 commits across ~40 new / expanded instrument pages and one urinary-diversion-principles update**, all fast-forwarded to `main`. Lints clean throughout (~1,140 files).
 
@@ -43,282 +92,9 @@ The 2026-05-16 build-out above (endoscopy + robotic subdirectories, sounds-bougi
 
 ---
 
-## Previous Handoff - 2026-05-14 — Database-gap pass: new biomaterials, pharmacology, and instrument pages
+## Older Handoffs
 
-Cross-site audit for branded products, agents, and instruments that appear in clinical articles but lack dedicated entries in the relevant database. **17 commits across 14 pages, all fast-forwarded to `main`.** Lints clean throughout (~1,053 files).
-
-**New biomaterials pages:**
-
-- [tutoplast-allografts](docs/01-foundations/tools/biomaterials/biological-grafts/tutoplast-allografts.mdx) — created with 19 refs, then **substantially expanded to 39 refs** with new sections for Complex IPP Corporoplasty (Palese & Burnett 2001, Farrell 2019), Sacrocolpopexy (Loffeld 2009, Cochrane Maher 2016), the McBride 2005 direct Suspend-Tutoplast vs autograft data (41.7% USI recurrence vs 0%, p = 0.007), Howden 2006 (3–4× cadaveric failure), and the Levine/Estrada-Kovac-Taylor-Hellstrom Peyronie's series.
-- [human-acellular-dermal-matrix](docs/01-foundations/tools/biomaterials/biological-grafts/human-acellular-dermal-matrix.mdx) — AlloDerm family umbrella (18 refs) including FlexHD / Belladerm / Repriza / AlloMax / AxisDermis / Epiflex / DermaMatrix; Solomon 2013 (42% infection / exposure) and Xu 2019 (60% erectile discomfort) cosmetic-girth caveats.
-- [proact-balloons](docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx) — device-level page (10 refs) for the paired silicone-balloon system with titanium scrotal port; bilateral focal compression at bladder neck, distinct from all sling devices.
-- [male-continence-implants](docs/01-foundations/tools/biomaterials/prosthetics/male-continence-implants.mdx) — sling-family device page (8 refs) covering AdVance / AdVance XP / Virtue / ATOMS / Argus / Remeex / legacy InVance.
-- Four MIST BPH device stubs under [adjunct-specialty](docs/01-foundations/tools/biomaterials/adjunct-specialty/): [rezum](docs/01-foundations/tools/biomaterials/adjunct-specialty/rezum.mdx), [itind](docs/01-foundations/tools/biomaterials/adjunct-specialty/itind.mdx), [aquablation](docs/01-foundations/tools/biomaterials/adjunct-specialty/aquablation.mdx), [optilume-bph](docs/01-foundations/tools/biomaterials/adjunct-specialty/optilume-bph.mdx) (3 refs each).
-
-**New pharmacology pages:**
-
-- [botulinum-toxin](docs/01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx) — onabotulinumtoxinA Botox (14 refs); the missing canonical foundations entry referenced across NLUTD pages, OAB DB, and the intradetrusor-botox procedure page.
-- [hpv-topical-agents](docs/01-foundations/pharmacology/dermatologic-topical-urethral/hpv-topical-agents.mdx) — imiquimod, sinecatechins (Veregen EGCG), podophyllotoxin / podophyllin, TCA, off-label topical 5-FU, intralesional interferon (9 refs); CDC 2021 STI guidelines and Cochrane SR; pregnancy / immunosuppressed / intraurethral algorithms; 9-valent HPV vaccination as prevention.
-
-**Forceps and needle-holder rewrites** (user-supplied source material integrated into each):
-
-- [russian](docs/01-foundations/tools/instruments/forceps/russian.mdx) — corrected the prior "multiple small teeth" framing (concentric **serrations**, not teeth); full comparison table; 5 refs.
-- [gerald](docs/01-foundations/tools/instruments/forceps/gerald.mdx) — **new page** (Gerald was missing). Smooth, fine-serrated, and 1×2 toothed variants; Marucci 2000 grip–trauma trade-off; Smooth-vs-Toothed selection by tissue layer (vas mucosa vs muscularis, tunica, BMG, dartos, fine genital skin); 8 refs.
-- [bonney](docs/01-foundations/tools/instruments/forceps/bonney.mdx) — Marucci / Rodrigues 2012 tractive-force data (fascia 11.4 N vs fallopian tube 1.25 N); STITCH small-bites RCT (49% → 34% incisional hernia at 13 yr); EHS/AHS 2022 closure guidelines; 10 refs.
-- [debakey](docs/01-foundations/tools/instruments/forceps/debakey.mdx) — serration-pattern anatomy, friction-vs-penetration mechanism, endothelial-integrity rationale (Mansfield 1978, Zeebregts 2003), biomechanical-evidence table (Marucci, Cheng FEA, Heijnsdijk 37 N pinch / 3 N slip, Bos rounded-edge, Darçin clamp-injury); DeBakey instrument family (Satinsky, Bahnson, Cooley, bulldog clamps); 12 refs.
-- [ryder](docs/01-foundations/tools/instruments/needle-holders/ryder.mdx) — smooth-vs-TC-insert jaw variants (Abidin 1989/1990); Edlich 1990 clamping-moment-and-bending; Ryder-vs-Castroviejo and Ryder-vs-Mayo-Hegar distinctions; Seki 1988 grip-technique data; Durand 2022 force-sensing (experts &lt; 2 N vs trainees 8 N); 11 refs.
-- [heaney](docs/01-foundations/tools/instruments/needle-holders/heaney.mdx) — four-point biomechanical rationale for jaw curvature; Basager 2024 small-hand musculoskeletal data + Berguer 1999 ergonomics; Pickett 2023 Cochrane vaginal-hysterectomy preference; Heaney instrument family (clamp, retractor, pedicle stitch) anchored on Balgobin 2019 simulation curriculum (pass rates 3.3–46.7%); 11 refs.
-
-**Index updates:**
-
-- Registered all new biomaterial entries in the [biomaterials landing-page database](docs/01-foundations/tools/biomaterials/index.mdx).
-- Added Gerald to the [instruments landing-page database](docs/01-foundations/tools/instruments/index.mdx); refined the Russian row (concentric serrations, not star-burst teeth).
-- Updated the [storage-oab](docs/01-foundations/pharmacology/storage-oab/index.mdx) and [dermatologic-topical-urethral](docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx) pharmacology indices for the new pages.
-- Corrected the pre-existing "Bovine Dermal Graft / Permacol" row in the biomaterials landing — Permacol is porcine; row updated to Peri-Guard / Veritas / Xenform.
-
-**Conventions reinforced:**
-
-- For named-device biomaterial pages with an existing procedure page (ProACT, ATOMS, Argus, AdVance, Virtue, Remeex, Rezūm, iTind, Aquablation, Optilume BPH), the **device page** covers components / materials / mechanism / device-level comparison / regulatory status / failure modes, with explicit cross-links to the procedure page for technique / outcomes / clinical positioning. Mirrors the IPP / AUS / PTNS pattern.
-- When user-supplied source material contains a reference list, **deduplicate against the existing page** before integrating (Tutoplast initially had Hellstrom 2000 as both ref 1 and ref 17 — fixed in a follow-up).
-- **Renumbering refs after deduplication**: do a single complete-rewrite rather than chained sed passes — sequential `N → N-1` replacements cascade when ranges overlap (one earlier attempt collapsed refs 18–40 → 17 across the file). Lesson saved.
-
-Full session detail in `CHANGELOG.md` under the same date.
-
----
-
-## Previous Handoff - 2026-05-12 (biomaterials) — Full biomaterials-section rewrite
-
-Comprehensive, evidence-based expansion of the entire `01-foundations/tools/biomaterials/` directory. **~40 commits across ~30 device/material pages, all fast-forwarded to `main`.** Lints clean throughout (~1,042 files). Each rewrite followed the same pattern: comprehensive historical context, mechanism, design specifications / device-by-device comparison, indication-specific outcomes tables, contraindications, complications, comparative-effectiveness data vs alternatives, and a clinical bottom line with consistent house-style citations (`<sup>[[N]](#refN)</sup>` + DOI-linked anchors, all references contiguous).
-
-**Pages substantially expanded** (alphabetical by file):
-
-- **bulking agents**: [bulkamid](docs/01-foundations/tools/biomaterials/bulking-agents/bulkamid.mdx) (24 refs, Helsinki TVT-vs-PAHG 5-yr NEJM Evidence, AUA/SUFU 96-mo persistence), [macroplastique](docs/01-foundations/tools/biomaterials/bulking-agents/macroplastique.mdx) (28 refs, ROSE 5-yr, Ghoniem RCT, AUS-vs-PDMS RCT, pediatric VUR), [coaptite](docs/01-foundations/tools/biomaterials/bulking-agents/coaptite.mdx) (12 refs, 40–46% 3-mo volume loss signal, 34% transient retention), [durasphere](docs/01-foundations/tools/biomaterials/bulking-agents/durasphere.mdx) (17 refs, Chrouser 21% at 36 mo, Pannek lymph-node migration), [urolastic](docs/01-foundations/tools/biomaterials/bulking-agents/urolastic.mdx) (12 refs, 24.6% erosion, 18% excision, failed learning curve), [deflux](docs/01-foundations/tools/biomaterials/bulking-agents/deflux.mdx) (35 refs, Swedish Reflux Trial, delayed obstruction 8 yr out, Solesta FI).
-- **Historical bulking agents (split out into dedicated pages)**: [teflon](docs/01-foundations/tools/biomaterials/bulking-agents/teflon.mdx) (32 refs, Politano 1964 → STING → Malizia migration), [contigen](docs/01-foundations/tools/biomaterials/bulking-agents/contigen.mdx) (37 refs, first FDA 1993 → gold-standard comparator → 2011 discontinuation), [autologous-fat](docs/01-foundations/tools/biomaterials/bulking-agents/autologous-fat.mdx) (21 refs, Lee 2001 RCT fatal embolism), [autologous-chondrocytes](docs/01-foundations/tools/biomaterials/bulking-agents/autologous-chondrocytes.mdx) (13 refs, Atala/Diamond program, 37% mound calcification at 9 yr). [historical-agents](docs/01-foundations/tools/biomaterials/bulking-agents/historical-agents.mdx) trimmed to a hub.
-- **Biological grafts**: [porcine-acellular-collagen](docs/01-foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen.mdx) (26 refs, umbrella for SIS/UBM/dermis), [porcine-sis](docs/01-foundations/tools/biomaterials/biological-grafts/porcine-sis.mdx) (47 refs, Palminteri 2024 propensity-matched, Peyronie's strongest indication), [bovine-dermal](docs/01-foundations/tools/biomaterials/biological-grafts/bovine-dermal.mdx) (broadened to bovine-derived family — pericardium + dermis; 25 refs, Lipetskaia 36-mo Xenform noninferiority).
-- **Autologous tissue**: [rectus-fascia](docs/01-foundations/tools/biomaterials/autologous-tissue/rectus-fascia.mdx) (29 refs, multi-application from PVS to pediatric bladder neck to fistula repair, Cardenas-Trowers safety zone), [fascia-lata](docs/01-foundations/tools/biomaterials/autologous-tissue/fascia-lata.mdx) (25 refs, urology-only per user instruction), [bowel-segments](docs/01-foundations/tools/biomaterials/autologous-tissue/bowel-segments.mdx) (54 refs, segment-by-segment with the Hautmann 35-yr neobladder, gastrocystoplasty 10.3% malignancy, jejunal-conduit syndrome avoidance, secondary-malignancy surveillance schedule).
-- **Synthetic meshes**: [polypropylene](docs/01-foundations/tools/biomaterials/synthetic-meshes/polypropylene.mdx) (23 refs), [absorbable-mesh](docs/01-foundations/tools/biomaterials/synthetic-meshes/absorbable-mesh.mdx) (17 refs, RU/urogyn-focused), [coated-hybrid-mesh](docs/01-foundations/tools/biomaterials/synthetic-meshes/coated-hybrid-mesh.mdx) (22 refs; redundancy with absorbable-mesh resolved by moving partially-absorbable POP evidence here).
-- **Prosthetics**: [inflatable-penile-prosthesis](docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx) (57 refs, Cocci 92,777-patient SR, ARTISAN-SNM device-survival curve, MIST salvage), [malleable-penile-prosthesis](docs/01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx) (28 refs, six-device table, Rigi10 99.2% 3-yr, MIST 93% infection-free), [artificial-urinary-sphincter](docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx) (43 refs, **scoped to the device** with cross-link to the AUS procedure page for the Hourglass/capsulotomy/tandem/TC revision strategies covered in the prior session).
-- **Neuromodulation**: [medtronic-interstim](docs/01-foundations/tools/biomaterials/neuromodulation-devices/medtronic-interstim.mdx) (50 refs, three-generation table with battery-life and MRI evolution, InSite 5-yr, ROSETTA, rechargeable real-world signal), [axonics-snm](docs/01-foundations/tools/biomaterials/neuromodulation-devices/axonics-snm.mdx) (15 refs, ARTISAN-SNM 2-yr, BSCI 2024 acquisition, F15/R20 successors), [revi-system](docs/01-foundations/tools/biomaterials/neuromodulation-devices/revi-system.mdx) (16 refs, OASIS 78/82/79/79% stability across 6 mo–3 yr, first FDA clearance for non-refractory UUI), [ecoin](docs/01-foundations/tools/biomaterials/neuromodulation-devices/ecoin.mdx) (7 refs, pivotal + 2-yr extension), [ptns-systems](docs/01-foundations/tools/biomaterials/neuromodulation-devices/ptns-systems.mdx) (tightened to device-only index, with prominent cross-link to the canonical [PTNS procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx)).
-- **Ureteral stents**: [double-j-stent](docs/01-foundations/tools/biomaterials/ureteral-stents/double-j-stent.mdx) (60 refs, history → Hinojosa Bayesian pharmacotherapy meta → stent-on-string → Mendez-Probst triclosan → forgotten-stent), [nephrostomy-tube](docs/01-foundations/tools/biomaterials/ureteral-stents/nephrostomy-tube.mdx) (20 refs, SIR quality thresholds, antegrade-vs-retrograde 98.4% vs 47.4%), [nephroureteral-stent](docs/01-foundations/tools/biomaterials/ureteral-stents/nephroureteral-stent.mdx) (15 refs, capping trial, Spradling hemorrhagic-cystitis use case), [metal-long-term-stents](docs/01-foundations/tools/biomaterials/ureteral-stents/metal-long-term-stents.mdx) (35 refs, Resonance/Memokath/Allium/Uventa/Detour with Kim 2016 Uventa OR 20.4 for ≥ 24-mo placement).
-- **Adjunct specialty**: [glean-urodynamics](docs/01-foundations/tools/biomaterials/adjunct-specialty/glean-urodynamics.mdx) (9 refs, MUSE feasibility, Hamson bench-top vs Laborie, UroMonitor lineage).
-
-**Altaviva ambiguity flagged.** User pasted content describing Altaviva as a Boston Scientific non-rechargeable SNM with full-body MRI; current WARWIKI page describes it as Medtronic's implantable tibial neuromodulator (TITAN 2 device, FDA-cleared Sept 2025). After confirmation, the current page was kept — pasted content treated as hallucination.
-
-**Conventions established / reinforced** for biomaterials pages:
-
-- **Device pages** (eg AUS, IPP, MPP, InterStim, Axonics, PTNS) should focus on **the device itself** (history, design, components, outcomes, alternatives) with **explicit cross-links** to the procedure pages in `04-surgical-techniques/` for surgical technique, revision strategies, and special-populations operative detail. This is the IPP / AUS / PTNS pattern.
-- **Reference cleanup**: when extensive user-supplied content has mid-list reference fabrications (penile-prosthesis citations on a stent page, etc), filter to citations actually used in the body and renumber contiguously. Contiguous-ref-numbering is enforced by `npm run lint:citations`.
-- **Hub pages** (like historical-agents) can be slimmed to a navigational index once dedicated sub-pages exist.
-
-Full session detail in `CHANGELOG.md` under the same date.
-
----
-
-## Previous Handoff - 2026-05-12 (later) — Launch-asset session (external; no repo changes)
-
-Working session focused on launch marketing materials. **No repo commits.** All deliverables saved to `~/Downloads/`; source HTML in `/tmp/`. Recorded here so the next session knows what exists and what was tried.
-
-**Pottred font experiment (tried and reverted).** Owner shared a decorative chunky TTF (`~/Downloads/pottred/Pottred.ttf`) to try on the hero wordmark. Wired via `@font-face` in `src/css/custom.css` and `font-family: 'Pottred', ...` on `.heroTitleLink`. Overflowed the viewport at the existing `clamp(3rem, 8vw, 5.75rem)` size and the `-0.025em` letter-spacing crowded the already-tight glyphs. Owner reverted. Repo returned to clean — no font file, no `@font-face`, no override.
-
-**Launch assets generated (in `~/Downloads/`):**
-
-- `warwiki-homepage.png` — 2880×1620 headless-Chrome screenshot of the live homepage for the trailer.
-- `warwiki-end-card.png` — 3840×2160 horizontal trailer end card. Source `/tmp/warwiki-end.html`.
-- `warwiki-end-card-vertical.png` — 2160×3840 (9:16) vertical end card. Source `/tmp/warwiki-end-vertical.html`.
-- `warwiki-infographic-instagram.png` — 2160×2700 (1080×1350 @ 2×) IG single-slide post. Header "An open-access platform for functional reconstructive urology & urogynecology"; five feature blocks (Comprehensive / Evidence-first / Curated playlists / Listenable / In your pocket); footer `warwiki.org`. Source `/tmp/warwiki-infographic.html`.
-- `warwiki-infographic-twitter.png` — 1600×900 two-column variant for Twitter/X. Source `/tmp/warwiki-infographic-twitter.html`.
-
-**Conventions confirmed for any future launch copy:**
-
-- Tone: **concise, not boastful.** Drop "proud to announce" framing and superlatives. Saved as a feedback memory.
-- Sex/gender language: continues to apply — no "both genders," ICD-10 descriptors only verbatim where billing requires it.
-- Trailer aspect ratio: post **vertical (9:16) even on Twitter** — mobile feed dominates and gives vertical ~3× the in-feed real estate.
-- Trailer hosting: upload **natively to Twitter** rather than linking YouTube; external links are algorithmically deprioritized.
-
-Full session detail (post-by-post captions for the two trailers, quote-tweet variants, slide drafts) lives in `CHANGELOG.md` under the same date.
-
----
-
-## Previous Handoff - 2026-05-12 — Launch-day cleanup pass
-
-Launch-day pass touching site polish, inclusive language, navigation consistency, and a handful of new content additions. Twelve commits to `main`, all building clean across ~1,038 files.
-
-**Anki deck experiment (added then reverted).** Built a 2,038-card Anki deck (commit `267a77f`) covering foundations, evaluation, clinical conditions, and special populations — three parallel agents extracted cards from the relevant sections within strict length and quality constraints, scoped to exclude the treatment atlas and library per the owner's direction. The deck file was at `static/anki/warwiki-anki-v1.csv` with a resource page at `docs/08-resources/anki-deck.mdx`. The owner reviewed and chose to remove it (commit `6052c0a`) — the content is preserved in git history if a future iteration is wanted. The supporting taxonomy (`WARWIKI::Section::Subsection::Topic`) and the parallel-agent generation pattern (Foundations / Evaluation+SpecialPops / Clinical with TSV temp files and a defensive dedup merge) are documented here for the next attempt.
-
-**AUS revision/salvage expansion (commit `ac88819`).** Major expansion of the Revision and Salvage Techniques section on [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx). New conceptual subsection **"The Hourglass Debate — Capsulotomy and the Atrophy Question"** anchored on Bugeja/Mundy 2016 (hourglass deformity resolves on capsulectomy; PRB pressure loss is the dominant NOMECA driver; 85.7% same-size cuff replacement success) and Terlecki/Wilson 2022 "Wilson's Workshop 11" paradigm (capsulotomy → measure-after-release → same-size cuff → complete device replacement). Expanded outcomes per technique: Krughoff 2023 downsizing; Couillard 1995 proximal repositioning; O'Connor 2008 + Manka/Wright cadaver + Yafi PIF + Ahyai 2016 on tandem cuff (with the cadaver caveat that "tandem benefit" may reflect proximal placement, not the dual-cuff mechanism); Domínguez Gutiérrez 2025 SR (TC revision OR 2.99 but infection OR 0.33, erosion OR 0.35); Wiedemann / Ortiz heat-map / Mock urethral-risk-factors / Moser TC-after-erosion data; new Tandem-Transcorporal subsection (Magera/Elliott) and Distal-Double-Cuff-vs-TC head-to-head (Maurer 2019); Khouri PRB herniation 3.2%; Loh-Doyle PRB-exchange predictors. Updated Key Principles to surface capsulotomy + same-size replacement as the default and the DC→TC sequential salvage paradigm. **16 new references (40–55).** The companion `surgical-skills/` directory (Heaney stitch, Parker-Kerr, quilting, glove wetting, suture lubrication) remains hidden from the sidebar — reached only via cross-links from procedure pages; discoverability decision deferred.
-
-**Polish / launch prep**
-
-- Replaced the underbuilt Surgical Genealogy page at `docs/07-roots/surgical-lineage.mdx` with a concise two-sentence "in development" placeholder + call for collaborators (contact `warwikihq@gmail.com`); kept the History sub-page link from the parent landing. Tightened the 07-roots landing description so it no longer over-promises a searchable directory + tree that does not yet exist.
-- Standardized the public contact email to **warwikihq@gmail.com** across the repo; scrubbed `nseranio@gmail.com` from all tracked files (was lingering in AGENTS.md historical notes); saved a feedback memory so future sessions default to the project mailbox.
-- Removed per-page last-update author name (`showLastUpdateAuthor: false` in `docusaurus.config.ts`); last-update timestamp preserved.
-- Audited site for stale content; ran `scripts/fix-citations.js` to clean 75 files with citation-anchor gaps / orphans across foundations flaps (igap, epap, posterior-thigh, mcfap, island-groin), 04ab BNC/VUAS (8 procedures), 04b bladder-reconstruction (9), 04c urinary-diversion, 04d upper-tract, 04e genital-reconstruction (22), 04g prolapse (8), 04h fistula-repair (10), and 04l cosmetic (2). Added missing `hide_title: true` to the 04a urethral-reconstruction index landing.
-
-**Sex/gender language sweep**
-
-- Renamed the heteronormative `both-genders` folder to `all-patients` across the fistula taxonomy — both `04h-fistula-repair/both-genders/` → `all-patients/` and `03f-fistulas/in-both-genders/` → `all-patients/`, plus the `04h/both-genders-fistula.mdx` landing → `all-patients-fistula.mdx`. Updated `_category_.json` labels, all inbound links, the JS export name in the landing's `GenericDatabase` array, and added three permanent vercel.json redirects covering the old URL families.
-- Display prose updates: "Both-Genders Fistula Repair" → "Fistula Repair (All Patients)"; "Fistulas in Both Genders" → "Fistulas (All Patients)"; "in both sexes" → "across sexes"; "across both sexes" → "across all patients". One "nontranssexual patients" cohort descriptor → "patients undergoing phalloplasty for non-gender-affirming indications"; one "male-to-female gender-reassignment surgery" → "vaginoplasty (gender-affirming surgery)".
-- Added a header note to `docs/08-resources/hidden-curriculum/billing-coding.mdx` acknowledging that several ICD-10 code descriptions (F64.0 Transsexualism; Q56.0–Q56.4 Hermaphroditism / Pseudohermaphroditism; Z87.890 Personal history of sex reassignment) use outdated stigmatizing language but are preserved verbatim because billing accuracy requires matching the official descriptor, and pointing clinicians to current preferred terminology (DSD, gender dysphoria / gender incongruence, gender-affirming surgery) for clinical documentation. Saved a feedback memory codifying this practice.
-
-**New clinical content**
-
-- New [Pelvic Venous Disorders](docs/03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders.mdx) page under chronic-pelvic-pain. Full PeVD / PCS picture: normal anatomy with embryologic basis for left/right asymmetry; the deep uterine vein as a surgical landmark splitting the lateral uterine aspect into vascular and nervous zones (relevant to radical hysterectomy and uterine transplantation); US Uterus Transplant Consortium superior/inferior uterine vein nomenclature; reflux-vs-obstruction pathophysiology including nutcracker and May-Thurner; hormonal contribution; clinical presentation with post-coital pain as the pathognomonic feature; the four pelvic escape points and the bottom-up paradigm; SVP classification with zones 1–4; imaging hierarchy (TVUS, venography, CT/MRI, IVUS); endovascular management as mainstay (Hansrani 2023 RCT, durability data, Daniels SR); the 2026 Emory POTS / orthostatic-intolerance association (83% PeVD prevalence; 44% complete resolution after iliac stenting). 36 deduplicated references with DOI links. Cross-linked from the existing PCS subsection of `chronic-pelvic-pain.mdx`.
-- New [Glove Wetting for Knot Tying](docs/01-foundations/surgical-skills/glove-wetting.mdx) page in `surgical-skills/`. Friction-reduction rationale; bench evidence that wet conditions reduce knot slippage (Pietschmann, Savage, Coleridge, Muffly); glove perforation literature (Enz 2023 25–37%, Martinez 2013 thicker-vs-thinner gloves, Battersby 2016 double-gloving knot-quality tradeoff); Enz 2026 global gloving consensus + WSES 2020; practical-pearls table; RU-specific moments where the pearl matters (anastomotic urethroplasty, VUA after RP, sling/prosthesis ties, robotic intracorporeal knots). Renamed the `surgical-skills/_category_.json` label from "Named Stitches" to "Surgical Skills" so the directory accommodates non-stitch operative pearls.
-- New [Suture Lubrication](docs/01-foundations/surgical-skills/suture-lubrication.mdx) page covering the surgical tradition of running sutures through bacitracin ointment, petroleum jelly, or mineral oil. Frames against modern evidence: petroleum-based agents reduce knot failure load (Muffly 116.7 vs 123.8 N, p = 0.002) via the Johanns 2023 friction-elastoplasticity framework; bacitracin adds an anaphylaxis pathway (SHEA/IDSA 2022 contraindication of bacitracin irrigation) and an allergic-contact-dermatitis cost (Smack 1996 JAMA RCT n = 922); Adkins 2022 in vitro antimicrobial signal balanced against the CDC 2017 recommendation that triclosan-coated sutures are the engineered alternative for the antimicrobial goal. Bottom line: saline for lubrication, triclosan-coated sutures for antimicrobial coverage.
-- New [Radiation Safety](docs/02-evaluation/imaging/radiation-safety.mdx) page in evaluation. Occupational fluoroscopy safety for the reconstructive urologist: ICRP/NCRP dose limits (eye lens 20 mSv/yr is the rate-limiting organ); FLASH UK reference levels by procedure (PCNL 24.1 Gy·cm² as the high-dose outlier); ALARA principles operationalized through shielding (apron, thyroid collar, leaded eyewear, ceiling-mounted, under-table — reducing trunk dose 95%, genital 99%, leg 97%), distance (inverse-square law — 3× distance = 9× scatter reduction), and equipment optimization (pulsed half-dose ~30% reduction, last-image hold, collimation); procedure-specific pearls including RUG/VCUG, URS/stent, PCNL, urethroplasty workup; pregnancy considerations. Patient-side radiation injury (cystitis, urethral stricture in irradiated bed, AUS durability) continues to live in `surgical-principles/radiation-tissue-effects.mdx`, with a cross-link added in both directions.
-
-**Taxonomy decision codified**
-
-For "where do disparate technique pearls live?" — answer: **named techniques / maneuvers / operative pearls** go in `01-foundations/surgical-skills/`; **physical instruments** in `01-foundations/tools/instruments/`; **broader principles** in `01-foundations/surgical-principles/`. The Heaney stitch, Parker-Kerr stitch, quilting stitch, glove wetting, and suture lubrication are all in surgical-skills; ski needle / J-hook is in tools/instruments; sutures, needles, and wound healing are in surgical-principles.
-
-**Landing-page / sidebar ordering pass**
-
-Audited every `index.mdx` against the sidebar order implied by `sidebar_position` and `_category_.json` `position` fields. Fixed real mismatches (left intentional curation choices alone):
-
-- `06-journal-club/index.mdx` — swapped to put Guidelines & White Papers before Journal Database (matches sidebar pos 2 vs 5).
-- `05-special-populations/05a-trauma-emergencies/index.mdx` — reordered both sub-groups to match explicit `sidebar_position` numbers (gu-injury-overview → trauma-assessment in the initial approach; PFUI → bladder → ureteral → renal → penile → scrotal in the organ-specific group).
-- `01-foundations/surgical-principles/index.mdx` — added missing Hyperbaric Oxygen Therapy entry.
-- `04-surgical-techniques` — realigned all 13 `_category_.json` positions so the sidebar matches the landing's deliberate clinical narrative (urethral → BNC → bladder → diversion → upper-tract → genital → incontinence → BPH → prolapse → fistula → GAS → male SD → cosmetic). Previously sidebar positions had drifted to a scattered order that disagreed with the landing.
-
-**Treatment Atlas `bestFor` tightening**
-
-The `bestFor` indication column in 379 atlas `GenericDatabase` rows had grown into mini-paragraphs in several sections — citations, n-values, percentages, technique enumerations, and stepwise algorithms had accumulated, with the worst row 594 chars and 57 rows over 200 chars. Rewrote **~137 strings across 15 atlas files** so every atlas row is now ≤ 120 chars. Stripped citation residue, series numbers, percentages, stepwise algorithms, and trial names while preserving the load-bearing clinical scenario / qualifier that distinguishes each row from its siblings. Final stats: max 594 → 120, mean 132 → 84, p90 243 → 105, rows > 120 chars 113+ → 0. Atlas tables now render as a tight scannable index.
-
-Files touched: `04ab-bladder-neck-reconstruction/bnc.mdx`, `04c-urinary-diversion/index.mdx`, `04d-upper-tract-reconstruction/index.mdx`, `04e-genital-reconstruction/penile.mdx` + `scrotal.mdx` + `vulvar.mdx`, `04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx`, `04g-prolapse-repair/index.mdx`, `04h-fistula-repair/all-patients-fistula.mdx` + `female-fistula.mdx` + `male-fistula.mdx`, `04k-gender-affirming-surgery/feminizing-surgery.mdx` + `masculinizing-surgery.mdx` + `non-binary-nullification.mdx`, `04l-cosmetic-genital-surgery/male-cosmetic.mdx`.
-
----
-
-## Previous Handoff - 2026-05-11 (priapism atlas) — Full rewrite of priapism shunts & decompression page
-
-Comprehensive page-level rewrite of `docs/04-surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression.mdx` across **seven commits** pushed to both `claude/kind-wiles-84dcfe` and `main`. Replaced the GenericDatabase with a markdown summary table and expanded every named technique from a one-row stub into a full surgeon-oriented subsection. Reference list grew from 17 → **47**.
-
-Section-by-section changes:
-
-- **Winter / Ebbehoj / T-shunt** — feature tables; Nixon 92%-of-Winter-failures signal; Ebbehoj No. 11 blade vs Winter Tru-Cut framing; **Brant–Lue 9-step T-shunt technique**; outcomes-by-duration table (<24h ~100% → >48h ~30% with 100% necrotic smooth muscle); four T-shunt efficacy series (Brant 92%, Zacharakis 100% if <48h, Ortaç 84.2% ED, Unal/Burnett 92.3% vs 53.6%); converted database to 10-row markdown table.
-- **Al-Ghorab** — 1973 origin; "largest tunical window, direct vision, lowest reoperation rate"; step-by-step including Shiraishi–Matsuyama blunt-cavernosotomy salvage (Pean forceps for 5–7 day priapism); four-shunt comparison table; five efficacy series.
-- **Burnett Snake maneuver** — full Burnett–Pierorazio 9-step technique; shunt-compatibility matrix (Winter / Ebbehoj incompatible, T-shunt / Al-Ghorab compatible); five-row efficacy table culminating in the Unal/Burnett 2024 comparative (92.3% vs 53.6%; recurrence 4.2% vs 26.6%); complication profile; Shiraishi–Matsuyama salvage callout.
-- **Penoscrotal Decompression (PSD)** — rationale vs immediate MPP (Fuchs: 37.5% revision / 50% distal extrusion / 25% impending lateral extrusion); Fuchs penoscrotal vs Basile proximal-shaft modification; four-row evidence table (Fuchs 100% / 0% revision; Baumgarten **0% bilateral recurrence**; Basile 96% detumescence / 69% success / 86% satisfactory EF; VanDyke surgeon survey 47.3% vs 18.7%); four-way comparison table; prosthesis-preservation framing.
-- **Quackels** — 1964 origin; lithotomy + perineal corporospongiosal-anastomosis step-by-step; Quackels-vs-Grayhack head-to-head; five efficacy series (Cosgrove 1974 → EAU 2024); Quackels-specific complications anchored to **Manjunath 2015** (combined urethrocutaneous + urethrocavernous fistula → suprapubic diversion), **Robbins 1984** (late urethrocavernous fistula), and **Kulmala 1995** (19.2% permanent open shunt; **100% impotence reversal on shunt closure**).
-- **Grayhack** — 1964 cavernovenous concept; saphenous-graft step-by-step; eight-row efficacy table (Cosgrove → Resnick pediatric → Moloney with 3-mo-graft-ligation rule → Richard 87.5%/62.5% → Nixon → Kulmala 19.2% → Zheng → EAU 2024 abandonment); Grayhack-vs-Quackels head-to-head emphasizing higher persistent-shunt and PE risk vs lower urethral-injury risk; modern cavernovenous variants — Barry 1976, **Chiou 2009** (DDV + saphenous graft; 100% / 69% in n=16 with 10 prior failed shunts), Kilinc 2009 (temporary cephalic-vein bedside).
-- **Barry / Caverno-Dorsal Vein** — full subsection; penile venous-anatomy primer; original 1976 Barry technique; four modifications (**Micoogullari 2021 planned 2-mo closure** with adrenaline-irrigation × 5 protocol; Chiou 2009 DDV+SVG hybrid; Kilinc 2009 temporary cephalic; Soydaş 2025 algorithm); four-row efficacy table; complication framing anchored to Kulmala permanent-open-shunt physiology and the Micoogullari planned-closure solution; nuanced positioning that recognizes Barry data **exceed pooled proximal-shunt outcomes** while acknowledging absence from AUA/SMSNA 2022 and EAU 2024 recommendations.
-- **Early Malleable Penile Prosthesis (renamed from "Early Penile Prosthesis Transition")** — pathophysiological rationale with the 48-h irreversibility threshold; **MRI-guided patient selection** (Ralph 2010 100% sensitivity; ISSM <40% utilization gap); guideline positioning (EAU 2024 / AUA-SMSNA 2022 / Pang 2025 / Calopedos 2025); malleable-vs-IPP table; step-by-step including **Salem sling-suture distal-erosion prophylaxis** (0% erosion in 11/12 prior-failed-shunt patients); seven-row evidence table — Ralph 2009 UCLH landmark (100% / 96% / **0% shortening**), Zacharakis 2014 early-vs-delayed (96% vs 60%; **80% of delayed required second corporotomy + downsized cylinders**), Barham 2023 multicenter IPP (**0% early vs 40.5% delayed**), Tausch 2015 cost ($83,818 preop), Salem 2010, Dighero 2025 long-term QoL (100% no-regret), Butaney 2019 ISSM survey (70.9% more comfortable with MPP than shunt, yet ~80% still favor shunts first-line — practice gap); elective **MPP → IPP exchange** at 6–12 mo; Clavijo 2017 IPP-into-fibrotic-corpora tips; SCD and prior-failed-shunt special populations; algorithmic biases table.
-
-References extended through ref 47 across the seven commits — added Mireku-Boateng 2001, Ortaç 2019, Shiraishi-Matsuyama 2013, Schifano 2025, Quackels 1964, Cosgrove-LaRocque 1974, Tabibi 2010, Zheng 2013, Manjunath 2015, Robbins 1984, Kulmala 1995, Grayhack 1964, Resnick-Grayhack 1975, Moloney 1975, Richard 1979, Barry 1976, Chiou 2009, Kilinc 2009, Calopedos 2025, Ralph 2009, Zacharakis 2014, Ralph 2010 MRI, Butaney 2019 ISSM, Tausch 2015, Salem 2010, Barham 2023, Dighero 2025, Clavijo 2017, Cocci 2025 PPI complications SR, von Stempel 2024 imaging review.
-
-Verification: `npm run lint:links`, `npm run lint:citations`, `npm run build` all pass. Seven content commits + one docs commit pushed to both `claude/kind-wiles-84dcfe` and `main` as fast-forward.
-
-Follow-up navigation fix (commit `c70f97c`) — converted bare procedure names to anchor links in two places after a "techniques are not clickable" report: (1) all 10 rows of the Procedure Summary Table at the bottom of the priapism atlas page now link to on-page anchors (Winter, Ebbehoj, T-Shunt, Al-Ghorab, Snake, PSD, Quackels, Grayhack, Barry, Early MPP); (2) the shunt tables on the emergency-condition priapism page in `05a-trauma-emergencies/priapism.mdx` now cross-link each row to the corresponding atlas anchor, and a missing Barry-shunt bullet was added to the proximal-shunt list.
-
-## Previous Handoff - 2026-05-11 (LS surgical ladder) — Regenerative VLS / GSM expansion + four new LS / FGM/C atlas pages + DB audit
-
-Comprehensive LS-surgical-ladder build-out (four new dedicated atlas pages spanning the conservative → maximal spectrum), a thorough regenerative VLS + GSM expansion of the existing microfat/nanofat grafting page, a new FGM/C clinical-condition page, vulvar-DB audit + cleanup, and 10 commits pushed to `main`. Build clean across **1,010 files**.
-
-Highlights:
-
-- **Microfat / nanofat grafting page (04l)** — three substantial expansions:
-  - **VLS section**: three-pillar ADSC mechanism table (anti-fibrotic / immunomodulatory / pro-angiogenic) anchored to Lichen-SVF histologic p-values; full evidence table across 5 series ~166 patients (Boero 2015 n = 36, Tedesco 2020 RCT, Gutierrez-Ontalvilla 2022 RCT, Casabona 2023 n = 72, Lichen-SVF 2025); comparison table vs PRP monotherapy / Nd:YAG-Er:YAG laser / perineoplasty / aOAP flap; positioning subsection noting ACOG 2020 / German S3 2026 keep TCS first-line and frame fat grafting as complementary, not curative.
-  - **PRP + fat-grafting synergy subsection**: ≥ 4× VEGF amplification when MSCs co-cultured with PRP; platelet → ADSC mitochondrial transfer for ROS reduction in inflamed VLS bed; i-PRF direct fibroreduction via TGF-β / SMAD3 inhibition; Tedesco early-stage therapeutic window.
-  - **GSM section**: comparison table vs vaginal estrogen / DHEA / ospemifene / CO₂ laser anchored to the **2025 AUA / SUFU / AUGS guideline** (low-dose vaginal estrogen first-choice); the postmenopausal **estrogen paradox** (low E2 favors retention 79% vs 35% in OVX mice, but postmenopausal ASCs are transcriptomically distinct with ~2,299 DEGs and altered immunoregulation); GSM in **breast cancer survivors** with the 2024 *Lancet* / NCCN Survivorship framing and Chen 2025 PRP-BCS pilot as proof of concept; **FDA regulatory positioning** of microfat / MFAT (minimally manipulated) vs enzymatic SVF (351 HCT/P) vs mechanical SVF / nanofat (gray area). References extended through ref 48.
-
-- **New FGM/C clinical condition page (03g)** — [Female Genital Mutilation / Cutting (FGM/C)](docs/03-clinical-conditions/03g-genital-scrotal/female-genital-mutilation-cutting.mdx) at sidebar 1.7. WHO classification with the anatomic note that the clitoral body and crura are preserved beneath the scar (substrate for Foldès); epidemiology (pooled 36.9% prevalence; Somalia 99.2%; > 500k US women / girls at risk); complications table organized by reconstructive-urology / urogyn relevance (urethral stricture / meatal obstruction, introital stenosis, hematocolpos, dyspareunia OR 2.47, obstructed labor OR 2.04, PTSD ~ 55%); AAP 2020 framework + defibulation timing / anesthesia; legal framework with the 2020 STOP FGM Act re-criminalization correcting the post-*Nagarwala* status; 2025 WHO integrated-systems framing. Cross-linked to the existing Foldès / aOAP / Mañero / fat-grafting atlas pages.
-
-- **LS surgical ladder — four new / expanded atlas pages**:
-  - **[Perineoplasty + De-Adhesion](docs/04-surgical-techniques/04e-genital-reconstruction/perineoplasty-de-adhesion.mdx)** (new) — seven depth-organized component subsections from simplest to most complex: Fenton's median perineotomy (Heineke-Mikulicz analogue); CO₂ laser adhesiolysis with **Breech 2000 Surgicel re-adhesion prophylaxis** in adolescents; **posterior vestibuloplasty with vaginal mucosal advancement** as the workhorse (Rouzier 90% / Lauber 90% satisfaction); clitoral de-hooding with dorsal-nerve caution; investigational anterior vestibuloplasty with free full-thickness vaginal mucosal graft (Burger); local skin-flap advancement (cross-link to dedicated page); aOAP cross-link. New "Choosing the appropriate technique" decision table mapping eight clinical scenarios to recommended technique.
-  - **[aOAP Flap](docs/04-surgical-techniques/04e-genital-reconstruction/aoap-flap.mdx)** (expanded) — replaced the brief LSA stub with patient-selection criteria; three-component operative steps explicitly distinguishing skinning vulvectomy (epidermis + superficial dermis only) from simple or radical vulvectomy; outcomes table for O'Dey n = 61 (87% bilateral aOAP, p < 0.001 at 1 yr); LS-specific complication framing (TCS-induced tissue fragility; 180-patient combined denominator with 1 total flap loss and 21–33% minor wound complication ceiling); durability caveat (50% historical LS-vulvectomy recurrence; Rangatchew 38% severe relapse at 8.4 yr); new perioperative-management and **skinning vulvectomy — historical context** sections (VIN origin, STSG era, O'Dey innovation replacing graft with vascularized fasciocutaneous flap). References extended through ref 13.
-  - **[Local Skin Flaps for LS Sequelae (Long-Term Outcomes)](docs/04-surgical-techniques/04e-genital-reconstruction/local-flaps-ls-sequelae.mdx)** (new) — anchored on **Rangatchew 2017 mean 8.4 yr follow-up** (the only decade-scale LS surgical series; 88% any relapse but 50% minor / 38% severe / 12% no-relapse stratification; 75% benefit / 74% satisfied at 8 yr) and **Brauer 2016 qualitative-couple study** (68% decreased sexual pain; 4 of 5 non-improvers had partner-communication failure → supports preoperative sexological couple-based consultation). LS-specific psychosexual-burden context (Jabłonowska, Sadownik). Flap-menu breakdown: sliding designs (Y-V, V-Y workhorse, pubolabial V-Y amplified) for the contracture-dominant LS deformity, pivoting designs (rhomboid, lotus-petal, gluteal-fold) for tissue deficit. Complication-profile table (Reid, Burke, Kwong, Commenge). Comparison across the full LS surgical ladder showing the time-dependent erosion of benefit Rangatchew uniquely captures. Six counseling points including indefinite topical clobetasol (0% vs 4.7% SCC in adherent vs non-adherent cohorts).
-  - **[Defibulation (Type III FGM/C)](docs/04-surgical-techniques/04e-genital-reconstruction/defibulation.mdx)** (new) — historical context (traditional non-surgical opening by husband / birth attendant replaced by medicalized defibulation). Indications (universal AAP 2020 for all Type III; menstrual obstruction / hematocolpos; painful neuromas; dyspareunia; recurrent UTI; pregnancy; gynecologic-exam access). Tiered timing table including first-stage-of-labor and at-crowning rows for late presenters plus the survivor-vs-clinician preference asymmetry (Jones FGM Sister qualitative). Anesthesia by patient population (young children GA in all cases; non-pregnant regional or GA; pregnant spinal preferred) with AAP-vs-WHO local-anesthesia divergence (flashback risk). Outcomes with full 95% CIs (Okusanya 2026 meta n = 3,166: emergency CD OR 0.16 [0.06–0.42], lacerations OR 0.48 [0.29–0.79]). Berg 2017 SR 50–100% satisfaction. **Re-infibulation prohibition** subsection. Counseling / psychosocial section covering Johansen's qualitative work on male-perceived virility / pleasure as a deterrent to medicalized defibulation.
-
-- **Vulvar DB audit** — slug-and-content audit of the [Vulvar Reconstruction database](docs/04-surgical-techniques/04e-genital-reconstruction/vulvar.mdx) found four issues, all corrected:
-  - **Merged** the two LS fat-grafting rows ("Autologous Fat Grafting for VLS" + "Combined PRP + Fat Grafting for VLS") into a single concise row **"Fat Grafting (± PRP / SVF) for Vulvar LS"** with concrete evidence (~166 patients across 5 series; histologic ↓ hyalinization / ↓ CD3+ T-cells / ↑ microvascular density).
-  - **Added** new Defibulation row under FGM/C Reconstruction pointing to the new defibulation page.
-  - **Repointed** all three regenerative fat-grafting slugs from the catch-all `genital-reconstruction-principles` / PRP pharmacology slugs to the canonical `microfat-nanofat-grafting` page.
-  - **Tightened** the VLS and GSM `bestFor` strings to concrete evidence (Menkes / Casarotti 36-mo durability, AUA 2025 guideline positioning for GSM; 166-patient denominator for VLS).
-  - Three LS-surgical DB rows (Perineoplasty / De-Adhesion, Skinning Vulvectomy + aOAP, Local Skin Flaps for LS Sequelae) repointed from the principles page to their new dedicated pages.
-
-All 38 vulvar-DB anchors verified against the live rendered HTML (the IGAP / gluteal-fold Part 2 / Part 3 anchors with double-hyphens were the suspected breakage; both match exactly).
-
-Full session detail in `CHANGELOG.md`. Verification: `npm run lint:links`, `npm run lint:citations`, `npm run typecheck`, `npm run build` all pass across 1,010 files. **10 commits** pushed to `main` as fast-forward.
-
-## Previous Handoff - 2026-05-11 (later) — Lymphedema named-technique atlas + vulvar-recon consolidation + new foundations flap pages
-
-Six lymphedema named-technique atlas pages (3R/SCIP-LFT, CHASCIP, Abdelfattah, LYST, SAPL, BLOOM), vulvar-reconstruction overhaul under the hybrid "foundations is canonical, atlas only for region-specific named techniques" policy (10 redundant atlas pages collapsed back to foundations), four new foundations flap pages (IPAP / TFL / DIEP / TRAM), four FGM/C-specific atlas pages, misrouting audit fixes. 31 commits across 1,006 files. Full detail in `CHANGELOG.md`.
-
-## Previous Handoff - 2026-05-11 — 04e scrotal-reconstruction + genital-lymphedema overhaul
-
-Comprehensive scrotal-reconstruction atlas build-out (12 new 04e pages + 4 new 04l pages), scrotal-DB restructuring (new Lymphedema Surgery domain with 10 rows), broadening of the lymphedema clinical-conditions section from scrotal to genital scope, expansion of five foundations flap pages (EPAP / Posterior Thigh / IGAP-Gluteal-Fold / MCFAP / Island Groin), and a new GUVCA atlas mirrored across both treatment databases. 28 commits across 988 files. Full detail in `CHANGELOG.md`.
-
-Older handoffs (2026-05-10 penile-reconstruction + best-for, 2026-05-09 fistula-atlas + HBOT, 2026-05-09 style cleanup, 2026-05-09 later, 2026-05-09, 2026-05-08, and earlier) are archived in `CHANGELOG.md` to keep this file compact.
-
-<!-- Older detailed handoffs preserved in CHANGELOG.md; uncomment if needed for quick reference -->
-
-<!-- ## Previous Handoff - 2026-05-09
-
-Long fistula / catheterizable-channel / upper-tract / robotics build-out session. All work pushed to `main`. Build clean across ~915 files.
-
-Highlights of this session:
-
-- **Resources cleanup** — drop filler intros from resources index, podcasts, patient resources, textbooks, websites, hidden curriculum (deleted RVU-anecdote / "no MBA" / "If you can't quote your numbers, you can't lead" lines). Reorder websites so Professional Societies appears first. Textbooks: every card is a clickable link to a Google search surfacing the Springer / PDF source. Site-wide eradication of `:::tip / :::note / :::warning / :::info / :::caution` admonitions across **123 files** (titles preserved as bolded inline lead). Billing & Coding restructured into Tabs (CPT / ICD-10 / Modifiers / External Resources) with ~120 new codes covering upper-tract reconstruction, bladder reconstruction & diversion, BNC/VUAS, vaginal recon & GAS, hypospadias / penile recon, BPH, mesh / IPP / congenital / gender-incongruence / trauma / rUTI codes.
-- **Female cosmetic database** → static markdown table with a "Best for / indication" column. **Podcasts** "Contributing" section deleted.
-- **04b bladder reconstruction — full catheterizable-channel build-out**:
-  [Yang-Monti Channel](docs/04-surgical-techniques/04b-bladder-reconstruction/yang-monti.mdx) (incl. Double Monti, Casale spiral, Tapered, sigmoid/gastric variants),
-  [Tubularized Bladder Flap](docs/04-surgical-techniques/04b-bladder-reconstruction/tubularized-bladder-flap.mdx),
-  [Hemi-Kock Continent Stoma](docs/04-surgical-techniques/04b-bladder-reconstruction/hemi-kock.mdx),
-  [Indiana Augmentation Cystoplasty (IAC)](docs/04-surgical-techniques/04b-bladder-reconstruction/indiana-augmentation-cystoplasty.mdx),
-  [Cutaneous Vesicostomy (Blocksom / Lapides + Benchekroun history)](docs/04-surgical-techniques/04b-bladder-reconstruction/cutaneous-vesicostomy.mdx).
-- **04c urinary diversion** — new [Parastomal Hernia After Urinary Diversion](docs/04-surgical-techniques/04c-urinary-diversion/parastomal-hernia.mdx) (canonical home; cross-linked from 04b CCC principles section 9). 04c diversion DB gained a "Best for / indication" column.
-- **04d upper-tract reconstruction — major build-out**:
-  [Balloon Dilation](docs/04-surgical-techniques/04d-upper-tract-reconstruction/balloon-dilation.mdx),
-  [Yang-Monti Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/yang-monti-ileal-ureter.mdx),
-  [Reconfigured Colon Ureteral Substitute](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reconfigured-colon.mdx),
-  [Pyelovesicostomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/pyelovesicostomy.mdx),
-  [Simple (Benign) Nephrectomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/simple-nephrectomy.mdx),
-  [Transvaginal Ureteral Reimplantation (single-port robotic vNOTES)](docs/04-surgical-techniques/04d-upper-tract-reconstruction/transvaginal-ureteral-reimplant.mdx).
-  Existing UAS revision page un-hidden and expanded with hybrid Bricker/Wallace, Allium stent, and ICG-prevention discordance data; cross-linked from 04c diversion principles.
-  Database `notes` column → `bestFor`. Deleted Lingual Mucosal Graft and solo Psoas Hitch rows.
-- **Foundations / robotics** — new [vNOTES & Robotic vNOTES](docs/01-foundations/tools/technology/robotics/vnotes.mdx) page covering platforms, technique, indications, ACOG/RCOG guidance.
-- **04h fistula repair — full VVF atlas build-out** (all renamed and repointed from clinical-conditions slug to dedicated atlas pages):
-  [Conservative VVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/conservative-vvf-management.mdx) (replaces the old "Foley Catheter Drainage" row),
-  [Endoscopic VVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair.mdx) (cystoscopic Bugbee, Ho:YAG laser, tissue adhesives, NOTES, transvesicoscopic, V-NOTES, lap/robotic/LESS),
-  [Transvaginal Latzko Repair](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-latzko.mdx),
-  [Transvaginal Sims-Simon Multilayered Closure](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon.mdx),
-  [Martius Flap for VVF](docs/04-surgical-techniques/04h-fistula-repair/female/martius-flap-vvf.mdx),
-  [O'Conor (Transabdominal Transvesical) VVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx),
-  [Extravesical Transabdominal VVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx),
-  [Robotic VVF Repair (platform overview)](docs/04-surgical-techniques/04h-fistula-repair/female/robotic-vvf-repair.mdx),
-  and the unifying [Vaginal Fistula — Interposition Flap Options](docs/04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps.mdx) catalog. Now also covers a dedicated **Native Vaginal-Wall Flaps** section (Shoukry rectangular reinforcement, Wang lateral transfer, Tang annular single-layer, Sayegh vaginal-cuff for robotic, Latzko-as-vaginal-flap), the **Labia Majora Fasciocutaneous flap** (vaginal-wall-deficit cases), the **Full-Thickness Martius graft with skin paddle** (large obstetric fistulae), and a full **Vaginal Advancement Flap (VAF) for RVF** section (VAF vs RAF — Ruffolo SR Crohn's data; Nosti +pedicled-flap zero-failure result; Li 2025 RAF; ASCRS 2022 guidance). Plus omental / rainbow peritoneal / sigmoid epiploicae / gracilis / VRAM / Singapore / TachoSil / SIS / PRP / amniotic / buccal. Female-fistula DB rows repointed; intro repair-strategy table cross-links updated.
-
-Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
-
-Previous Heavy 04ab BNC/VUAS + 04b bladder-reconstruction build-out highlights are archived in `CHANGELOG.md`; keep this file as the compact working handbook.
-
-## Previous Handoff - 2026-05-08
-
-Heavy 04ab BNC/VUAS consolidation + 04b bladder-reconstruction build-out session. All work pushed to `main` via `git push origin HEAD:main`. Build clean across ~890+ files.
-
-Highlights of this session:
-
-- **04ab BNC/VUAS database consolidation** — collapsed redundant rows: holmium / cold-knife / DVIU into one TUIBNC row; deleted DVIU+MMC and DCB rows (DCB now under balloon dilation); deleted RBNR, Extraperitoneal Robotic, and Robotic Transperineal Urethral Advancement (subsumed by Primary Re-Anastomosis and Combined Abdominoperineal). Removed Young-Dees-Leadbetter, Kropp, and Pippi-Salle outlet procedures and their pages. Both DBs use `bestFor` column (header "Best for / indication") — short indication strings instead of long-form notes.
-- **New 04ab atlas pages** — [TUITMR](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment.mdx), [Y-V Plasty (Robotic + Open)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty.mdx), [T-Plasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc.mdx), [Subtrigonal Inlay (BMG family)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay.mdx), [Tanagho Flap](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap.mdx), [Transvesical Approaches](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches.mdx) (RTV-BNR + TvRARP), [Primary Re-Anastomosis](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis.mdx), [Combined Abdominoperineal / Pull-Through](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/combined-abdominoperineal.mdx), [Robotic Bladder Flap Posterior Urethroplasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/robotic-bladder-flap-urethroplasty.mdx), [Salvage Prostatectomy (reconstructive)](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy.mdx) — moved from VUAS to BNC, [BMG Endourethroplasty](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty.mdx), focused [Dorsal Onlay BMG for VUAS/BNC](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx) (Shahrour technique only; 2 operative videos).
-- **VUAS Lee 2025 algorithm** — caliber + EUS-involvement decision tree (Naser-Tavakolian & Lee, *Transl Androl Urol* 2025;14(8):2405–2418, doi:[10.21037/tau-24-503](https://doi.org/10.21037/tau-24-503)) keys non-transecting flap (≥10 Fr no EUS), excision + primary anastomosis vs anterior bladder flap (\<10 Fr no EUS), or urethral pull-through (any caliber past EUS).
-- **04b bladder-reconstruction build-out** — eight new dedicated atlas pages with full content + database slugs updated:
-  [Ileocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ileocystoplasty.mdx),
-  [Ileocecocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ileocecal-cystoplasty.mdx),
-  [Sigmoid Cystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/sigmoid-cystoplasty.mdx),
-  [Autoaugmentation](docs/04-surgical-techniques/04b-bladder-reconstruction/autoaugmentation.mdx),
-  [Ureterocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/ureterocystoplasty.mdx),
-  [Gastrocystoplasty](docs/04-surgical-techniques/04b-bladder-reconstruction/gastrocystoplasty.mdx),
-  [SCLU](docs/04-surgical-techniques/04b-bladder-reconstruction/seromuscular-colocystoplasty.mdx),
-  [Ileovesicostomy](docs/04-surgical-techniques/04b-bladder-reconstruction/ileovesicostomy.mdx),
-  [Appendicovesicostomy / Mitrofanoff](docs/04-surgical-techniques/04b-bladder-reconstruction/appendicovesicostomy.mdx).
-- **04c urinary diversion** — new [Simple Cystectomy (Benign Disease)](docs/04-surgical-techniques/04c-urinary-diversion/simple-cystectomy.mdx) page added to the Complex / Salvage family.
-- **04b** — new [Supratrigonal Cystectomy + Augmentation](docs/04-surgical-techniques/04b-bladder-reconstruction/supratrigonal-cystectomy.mdx) page; both linked from the IC/BPS clinical page.
-- **Cross-database link audit** — added slugs to duplicate rows referring to suprapubic catheter, balloon dilation, indwelling catheter, Foley/Coudé/Council/Penrose so all duplicate rows now point at their dedicated pages.
-- **Instruments** — new [Ski / J-Hook Needle](docs/01-foundations/tools/instruments/urethral-specialty/ski-needle-j-hook.mdx) page (operative video at 3:07); cross-linked from the [Dorsal Onlay BMG](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx) technique step.
-- **Peyronie's-at-implant** — added the **Balzano** *Can J Urol* 2022 curvature-direction algorithm and the **Brock 2006** intracorporeal-incision lineage to the [IPP-with-adjunctive-straightening](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx) page; expanded TEP detail.
-
-Verification: `npm run lint:links` passes; `npm run typecheck` passes; `npm run build` passes.
-
-Previous prolapse-atlas, GAS phalloplasty, and older session history are archived in `CHANGELOG.md`; keep this file as the compact working handbook. -->
+All session detail from 2026-05-14 and earlier is archived in [CHANGELOG.md](CHANGELOG.md). For commit-level history, see `git log --oneline`.
 
 ---
 
@@ -617,4 +393,4 @@ Keep only the live handoff and durable conventions here. For historical detail:
 - `git log --oneline` has commit-level history.
 - `docs/_STATUS.md` has the active stub backlog.
 
-Last compacted: 2026-05-11.
+Last compacted: 2026-05-18.
