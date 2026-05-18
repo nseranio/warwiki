@@ -199,6 +199,9 @@ const config: Config = {
       indexName: 'WARWIKI',
       contextualSearch: true,
       searchPagePath: 'search',
+      searchParameters: {
+        hitsPerPage: 20,
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
