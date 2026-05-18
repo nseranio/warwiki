@@ -4,7 +4,31 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-18 — Nutrition deep-dive, LSE classification, ICUD page, four new retractor pages, orphan-lint overhaul, title-disambiguation convention
+## Current Handoff - 2026-05-18 (extended) — Algolia overhaul + instruments rebuild wave + build fix
+
+~30 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across **1,166 files**.
+
+**Algolia search rebuilt (dashboard-only)**: full Crawler Editor overhaul — reference-list stripping (`<a id="refN">`, GAS footnotes, inline `<sup>` citations), nav/database/scaffolding strip, section-tier pageRank (Tier 1 = 80 for all clinical content, Tier 2 = 55 for roots/resources, default 40), landing penalty for sub-landings, `unordered(hierarchy.lvl1)` first in `searchableAttributes`, `desc(weight.pageRank)` first in `customRanking`, `exclusionPatterns` for homepage / /about / /docs/journal-club. New `algolia-synonyms.json` at repo root with ~90 multi-way groups (BMG, AUS, IPP, DVIU, VVF, BNC, VUAS, OAB, SUI, NLUTD, GAS, RARC, ileal conduit/Bricker, Y-V pyeloplasty, GLP-1 brand names, etc.) — uploaded via dashboard. `docusaurus.config.ts` bumped DocSearch `hitsPerPage` from 5 → 20. Full Crawler Editor config preserved in memory file `reference_algolia_crawler_config.md` for future rebuild.
+
+**Instruments rebuild wave** — 7 new pages + ~14 expanded pages with full sourced evidence:
+
+- **New**: [LigaSure](docs/01-foundations/tools/instruments/cautery/ligasure.mdx), [Lowsley Retractor](docs/01-foundations/tools/instruments/urethral-specialty/lowsley-retractor.mdx), [Ellik Evacuator](docs/01-foundations/tools/instruments/suction/ellik-evacuator.mdx), [Toomey Syringe](docs/01-foundations/tools/instruments/suction/toomey-syringe.mdx), [Gelman Visualizing Sound (CS7001)](docs/01-foundations/tools/instruments/sounds-bougies/gelman-visualizing-sound.mdx), [Haygrove Sound (restored)](docs/01-foundations/tools/instruments/sounds-bougies/haygrove.mdx), [Gelman RUG Adapter](docs/01-foundations/tools/instruments/urethral-specialty/gelman-rug-adapter.mdx).
+- **Expanded SSLF device family**: Capio, Anchorsure, Saffron, i-Stitch (Manning 2014 vascular signal + Chene 2024/2025 NanoScope visual-guidance), Endostitch (corrected attribution to Schlesinger 1997 from fabricated 'Lantzsch'), Miya Hook (corrected to Frank S. Miyazaki 1987; Lo 2026 strongest pull-out 69.2 N vs 44.0 N Anchorsure), Deschamps (Amiri 2024 highest-blood-transfusion signal + Veronikis VLC subsection).
+- **Expanded suction**: Yankauer (anesthesia/airway content removed per user scope), Frazier (3–12 Fr size-by-procedure routing).
+- **Expanded graft-harvest family**: Dermatome Overview, Zimmer Air (Egro 2020 71.6% market + 0.1%/yr laceration risk), Padgett (Models B/PI/S + Hattori 2020 free-flap de-epithelialization), Humby (corrected to George Humby 1934, Tehrani 2006 medicolegal survey, Cohen 2020 pomelo simulator), Goulian/Weck (Dicran Goulian attribution, Jeffery 2007 shelving), Padgett-Hood drum (reframed around Kuo 2003 reused-graft niche — uniquely capable via adhesive drum on excised tissue), Skin Mesher (Henderson 2012 nominal-vs-actual expansion, over-vs-cross-meshing rule, Meek comparison).
+- **Staplers (GIA) Hub** augmented with Kracht 1993 hemicolectomy RCT (stapled leak 2.8% vs handsewn 8.3%) + new safety section: Emile 2025 stapling-failures SR, Reddy 2023 MAUDE 24-yr mortality (676 deaths), Wexner Quadruple Intraoperative Assessment protocol.
+
+**Index trimming**: deleted Specimen Retrieval Bag (Endo Catch), Laparoscopic Needle Holder, Gore Suture Passer rows. Earlier deleted Guyon / Haygrove / Gelman stub sound pages (Haygrove later restored as sourced page). Removed "Key Use" column from instruments database.
+
+**Build fix (recovery)**: malformed `<sup>` closing tag in [mouth-retractors.mdx:91](docs/01-foundations/tools/instruments/retractors/mouth-retractors.mdx) (`</sup>` typed as `]`) broke `npm run build` and the Vercel deploy across multiple recent pushes. Diagnosed by running `npm run build` locally; fixed in this push. Build now clean.
+
+**Convention reinforced — always run `npm run build` after MDX-with-raw-HTML edits** before declaring a push complete. The standard `npm run lint` catches citation pairing and broken `/docs/` links but does NOT validate JSX/HTML tag closure inside `<sup>` or other raw HTML — only the full Docusaurus build catches that class of error. Saved to user memory.
+
+Full session detail in `CHANGELOG.md` under the same date.
+
+---
+
+## Previous Handoff - 2026-05-18 — Nutrition deep-dive, LSE classification, ICUD page, four new retractor pages, orphan-lint overhaul, title-disambiguation convention
 
 Large session — **14 commits, all fast-forwarded to `main`**. Lints / typecheck / build clean across ~1,162 files.
 

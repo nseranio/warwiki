@@ -6,6 +6,51 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-18 (extended) — Algolia search overhaul + 25+ instruments page rebuild + build fix
+
+Major instruments-section rebuild plus complete Algolia search overhaul. ~30 commits, all fast-forwarded to `main`.
+
+**Algolia search rebuilt** (dashboard-only, not in repo):
+- Crawler Editor recordExtractor strips reference lists (`<a id="refN">`, GAS footnotes, inline `<sup>` citations) and nav scaffolding (`.section-stack`, `.toc-list`, `.toc-chips`, `.GenericDatabase`, tables, breadcrumbs)
+- Section-tier pageRank: Tier 1 = 80 for clinical-conditions / surgical-techniques / foundations / evaluation / special-populations; Tier 2 = 55 for roots / resources; default 40
+- Landing penalty (−3 / −5) so deep article pages outrank section landings within the same tier
+- `searchableAttributes` reordered with `unordered(hierarchy.lvl1)` first → page title beats body match
+- `customRanking` first entry `desc(weight.pageRank)`
+- `exclusionPatterns` for homepage, /about, /docs/journal-club
+- SafeReindex threshold bumped to 70% for the one-time republish (drop back to 30 after)
+- New `algolia-synonyms.json` at repo root with ~90 multi-way synonym groups (BMG, AUS, IPP, DVIU, VVF/RVF/RUF, BNC, VUAS, OAB/SUI/UUI, NLUTD/NDO/DSD, LS/BXO, GAS, RARC/ORC, Mitrofanoff/Monti, ileal conduit/Bricker, Y-V pyeloplasty, GLP-1 brand names, etc.)
+- Memory file `reference_algolia_crawler_config.md` saved for full rebuild
+
+**docusaurus.config.ts**: bumped Algolia DocSearch `hitsPerPage` from default 5 → 20.
+
+**New instrument pages**:
+- [LigaSure](docs/01-foundations/tools/instruments/cautery/ligasure.mdx) — open/lap electrothermal bipolar vessel sealer (Landman 2003 burst pressures, ~7 mm vessel ceiling)
+- [Lowsley Retractor](docs/01-foundations/tools/instruments/urethral-specialty/lowsley-retractor.mdx) — Lowsley-assisted SPT in NLUTD/hostile abdomen (Edokpolo 2011), vesicourethral-anastomotic tension reduction at lap/robotic prostatectomy (Garrett 2006)
+- [Ellik Evacuator](docs/01-foundations/tools/instruments/suction/ellik-evacuator.mdx) — bladder chip/clot evacuation with Goel 2011 wall-suction salvage, enzymatic / H2O2 adjuncts
+- [Toomey Syringe](docs/01-foundations/tools/instruments/suction/toomey-syringe.mdx) — CATCH-22 protocol (Clarebrough 2018); corrected eponym to David Toomey
+- [Gelman Visualizing Sound (CS7001)](docs/01-foundations/tools/instruments/sounds-bougies/gelman-visualizing-sound.mdx) — hollow Joel Gelman sound for direct-vision proximal-lumen ID in posterior anastomotic urethroplasty
+- [Haygrove Sound (restored)](docs/01-foundations/tools/instruments/sounds-bougies/haygrove.mdx) — earlier deleted, restored as sourced page; Haygrove-vs-Gelman decision table
+- [Gelman RUG Adapter](docs/01-foundations/tools/instruments/urethral-specialty/gelman-rug-adapter.mdx) — CS Surgical 1997 cone-shaped meatal-occlusion device; Foley balloon dilates 24 Fr fossa to 50 Fr circumference
+
+**Expanded pages** (full sourced rebuilds):
+- [Ravini Speculum](docs/01-foundations/tools/instruments/urethral-specialty/ravini.mdx), [Raz-Pereyra](docs/01-foundations/tools/instruments/urethral-specialty/raz-pereyra.mdx), [Mouth Retractors BMG](docs/01-foundations/tools/instruments/retractors/mouth-retractors.mdx)
+- SSLF device family: [Capio](docs/01-foundations/tools/instruments/urethral-specialty/capio-device.mdx), [Anchorsure](docs/01-foundations/tools/instruments/urethral-specialty/anchorsure.mdx), [Saffron](docs/01-foundations/tools/instruments/urethral-specialty/saffron-fixation-system.mdx), [i-Stitch](docs/01-foundations/tools/instruments/urethral-specialty/i-stitch.mdx) (Manning 2014 vascular signal + Chene 2024/2025 NanoScope), [Endostitch](docs/01-foundations/tools/instruments/urethral-specialty/endostitch.mdx) (corrected attribution to Schlesinger 1997 from fabricated 'Lantzsch'), [Miya Hook](docs/01-foundations/tools/instruments/urethral-specialty/miya-hook.mdx) (corrected to Frank S. Miyazaki 1987; Lo 2026 strongest pull-out 69.2 vs 44.0 N Anchorsure), [Deschamps](docs/01-foundations/tools/instruments/urethral-specialty/deschamps-ligature-carrier.mdx) (Amiri 2024 highest-blood-transfusion signal + Veronikis VLC subsection)
+- Suction family: [Yankauer](docs/01-foundations/tools/instruments/suction/yankauer.mdx) (rebalanced to remove anesthesia/airway content per scope), [Frazier](docs/01-foundations/tools/instruments/suction/frazier.mdx) (3–12 Fr size-by-procedure routing)
+- Graft-harvest family: [Dermatome Overview](docs/01-foundations/tools/instruments/graft-harvest/dermatome.mdx), [Zimmer Air](docs/01-foundations/tools/instruments/graft-harvest/zimmer-air-dermatome.mdx) (Egro 2020 71.6% market + 0.1%/yr laceration risk), [Padgett](docs/01-foundations/tools/instruments/graft-harvest/padgett-dermatome.mdx) (Models B/PI/S, Hattori 2020 free-flap de-epithelialization), [Humby](docs/01-foundations/tools/instruments/graft-harvest/humby-dermatome.mdx) (corrected to George Humby 1934, Tehrani 2006 medicolegal data, Cohen 2020 pomelo simulator), [Goulian/Weck](docs/01-foundations/tools/instruments/graft-harvest/goulian-dermatome.mdx) (Dicran Goulian attribution, Jeffery 2007 shelving), [Padgett-Hood Drum](docs/01-foundations/tools/instruments/graft-harvest/drum-dermatome.mdx) (reframed around contemporary niches — Kuo 2003 reused-graft technique uniquely capable via adhesive drum), [Skin Mesher](docs/01-foundations/tools/instruments/graft-harvest/mesher.mdx) (Henderson 2012 nominal-vs-actual expansion, over-vs-cross-meshing rule, Meek comparison)
+- [Staplers (GIA) Hub](docs/01-foundations/tools/instruments/staplers/index.mdx) — added Kracht 1993 hemicolectomy RCT (stapled leak 2.8% vs handsewn 8.3%), Emile 2025 stapling-failures SR, Reddy 2023 MAUDE 24-yr mortality (676 deaths), Wexner Quadruple Intraoperative Assessment protocol
+
+**Index trimming**: deleted Specimen Retrieval Bag (Endo Catch), Laparoscopic Needle Holder, Gore Suture Passer rows (out of scope). Earlier in session deleted Guyon / Haygrove / Gelman stub sound pages (Haygrove later restored as a sourced page). Removed "Key Use" column from instruments index database.
+
+**Title-disambiguation memory + Algolia synonyms** uploaded by user via dashboard.
+
+**Build fix (recovery commit)**: malformed `<sup>` closing tag in [mouth-retractors.mdx:91](docs/01-foundations/tools/instruments/retractors/mouth-retractors.mdx) (`</sup>` was typed as `]`) broke `npm run build` and the Vercel deploy across multiple recent pushes. Diagnosed by running `npm run build` locally; fixed in this push. Build now passes cleanly.
+
+**Convention reinforced — run `npm run build` before declaring a push complete** when MDX contains raw HTML (sup, custom tags). Lint catches citation pairing and broken internal links but does NOT validate JSX/HTML tag closure inside `<sup>`. This convention saved to user memory.
+
+Lint + typecheck + build all clean. Total files: 1,166.
+
+---
+
 ## 2026-05-18 — Nutrition deep-dive, LSE classification, ICUD page, four new retractor pages, orphan-lint overhaul, title-disambiguation convention
 
 Large session — **14 commits, all fast-forwarded to `main`**. Lints / typecheck / build clean across ~1,162 files.
