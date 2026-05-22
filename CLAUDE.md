@@ -4,7 +4,29 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-18 (nutrition fill + RPF) — All 15 nutritional-assessment stubs filled + new RPF / Ureterolysis pair
+## Current Handoff - 2026-05-22 — Pharmacology trim, video embeds, nonantibiotic-UTI + pyeloplasty expansions, three new aseptic-technique pages
+
+24 commits, all fast-forwarded to `main`. Lints + build clean across **1,172 files**.
+
+**Pharmacology landing trimmed** — [pharmacology/index.mdx](docs/01-foundations/pharmacology/index.mdx) now ends at the `<GenericDatabase />` block (deleted the "Organizing Framework" / "Out of Scope" / "Development Status" prose). All 62 database rows had the **Clinical Use / Note column trimmed to ~8–12 words** each.
+
+**Video embeds** — added `## Videos` (VideoCards, before `## References`) to 8 pages: parastomal-hernia, primary-endoscopic-realignment, blandy-perineal-urethrostomy, retropubic-midurethral-sling, Blandy flap, female-urethral-stricture, female-dorsal-onlay-urethroplasty, glans-resurfacing.
+
+**Nasal speculum stub filled** — [nasal-speculum.mdx](docs/01-foundations/tools/instruments/retractors/nasal-speculum.mdx): Cottle/Vienna/Killian design table, transurethral midurethral-sling mesh-erosion section, posterior/redo-urethroplasty deep-perineal-corridor role.
+
+**New pharmacology page** — [Vaginal Moisturizers & Lubricants](docs/01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx) (Hormonal Therapies); nonhormonal first-line GSM therapy, kept as one combined page.
+
+**Consolidated-page expansions** — three `##` sections of [non-antibiotic-uti-prevention.mdx](docs/01-foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention.mdx) (cranberry, D-mannose, methenamine) and three nondismembered subsections of [pyeloplasty.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx) (Foley Y-V, Fenger, Culp-DeWeerd/Scardino-Prince) expanded in place; BMG pyeloplasty cross-wired between pyeloplasty.mdx and bmg-onlay-ureter.mdx.
+
+**Three new aseptic-technique foundations pages** — [Laparoscopic Access](docs/01-foundations/surgical-principles/laparoscopic-access.mdx) (Surgical Principles), [Draping & Skin Antisepsis](docs/01-foundations/perioperative-care/intraoperative-care/draping-skin-antisepsis.mdx) and [Surgical Gloving](docs/01-foundations/perioperative-care/intraoperative-care/surgical-gloving.mdx) (Intraoperative Care).
+
+**Convention reinforced** — when a topic already lives as a `##` section of a comprehensive consolidated page, expand it in place rather than spawning a per-agent / per-technique page. Also: verify a "new" reference against the existing reference list before appending (a duplicate Amón Sesmero 2016 citation slipped in and was caught/fixed mid-session).
+
+Full session detail in `CHANGELOG.md` under 2026-05-22.
+
+---
+
+## Previous Handoff - 2026-05-18 (nutrition fill + RPF) — All 15 nutritional-assessment stubs filled + new RPF / Ureterolysis pair
 
 17 commits, all fast-forwarded to `main`. Lints + build clean across **1,168 files**.
 
