@@ -624,12 +624,6 @@ export const SURGEONS: Surgeon[] = [
     traineeIds: [],
   },
   {
-    id: 'brian-inouye',
-    path: 'h-r/brian-inouye',
-    name: 'Brian Inouye',
-    traineeIds: [],
-  },
-  {
     id: 'krishnan-venkatesan',
     path: 's-z/krishnan-venkatesan',
     name: 'Krishnan Venkatesan',
