@@ -5,13 +5,31 @@ import type { QuizQuestion } from './types';
  * WARWIKI page. To add a question: append to this array with a unique `id`,
  * accurate `subspecialty`, and a `source.href` that resolves on the site.
  *
- * Subspecialty tagging convention:
- *   - GURS:     male urethroplasty, upper-tract reconstruction, urinary
- *               diversion, GAS, hypospadias, Peyronie's, AUS/IPP
- *   - URPS:     female SUI / OAB, prolapse, fistula, female urethroplasty,
- *               urogynecologic reconstruction
- *   - combined: foundations (anatomy, pharmacology, instruments, perioperative),
- *               NLUTD, complications, ERAS, anything common to both fellowships
+ * Subspecialty tagging rule of thumb — be able to *prove* the tag:
+ *
+ *   - GURS:     content a URPS-only fellow would not be expected to own —
+ *               male urethroplasty, upper-tract reconstruction, urinary
+ *               diversion after cystectomy, ileal conduit / neobladder /
+ *               continent cutaneous / Indiana / Mainz, ileal ureter,
+ *               GAS phalloplasty / vaginoplasty, hypospadias, Peyronie's,
+ *               AUS, IPP, post-RP RUF, RPF / ureterolysis.
+ *
+ *   - URPS:    content a GURS-only fellow would not be expected to own —
+ *               female SUI device-specific surgery (midurethral slings),
+ *               apical prolapse / SSLF / sacrocolpopexy, female OAB
+ *               neuromodulation device specifics, vesicovaginal /
+ *               rectovaginal / urethrovaginal fistula, female urethral
+ *               diverticulum, urogynecologic ERAS specifics, AUGS / IUGA
+ *               consensus content, female mesh-complication management.
+ *
+ *   - combined: anything both fellowships routinely encounter —
+ *               anatomy, pharmacology, intraoperative adjuncts,
+ *               perioperative care / ERAS principles, bowel handling and
+ *               iatrogenic injury, ICG fluorescence angiography, neurogenic
+ *               LUTD (NLUTD), nutrition assessment, prehab, complication
+ *               grading, instruments, surgical principles. When in doubt,
+ *               default to combined — a confident classification is
+ *               required to claim GURS or URPS.
  */
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   // ─── GURS ──────────────────────────────────────────────────────────
@@ -54,25 +72,6 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     tags: ['diversion', 'neobladder', 'B12'],
   },
   {
-    id: 'gurs-icg-leak-reduction',
-    subspecialty: 'GURS',
-    prompt: 'Approximately what reduction in anastomotic leak rate is reported with ICG fluorescence angiography in meta-analyses of colorectal anastomoses?',
-    choices: [
-      { letter: 'A', text: '5–10%' },
-      { letter: 'B', text: '15–20%' },
-      { letter: 'C', text: '31–69%' },
-      { letter: 'D', text: '>90%' },
-    ],
-    answer: 'C',
-    explanation:
-      'Meta-analyses report a 31–69% reduction in anastomotic leak with ICG-FA, largest effect in left-sided and rectal resections. Clinical assessment alone in experienced hands can still achieve leak rates as low as 1.6%.',
-    source: {
-      label: 'Bowel Anastomosis — ICG Fluorescence Angiography',
-      href: '/docs/foundations/surgical-principles/bowel-anastomosis#perfusion-assessment--icg-fluorescence-angiography',
-    },
-    tags: ['anastomosis', 'ICG'],
-  },
-  {
     id: 'gurs-jejunum-conduit-syndrome',
     subspecialty: 'GURS',
     prompt: 'A patient with a jejunal conduit presents with metabolic derangement. What is the expected electrolyte / acid-base picture?',
@@ -92,6 +91,25 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     tags: ['diversion', 'metabolic'],
   },
   {
+    id: 'gurs-vitamin-b12-monitoring',
+    subspecialty: 'GURS',
+    prompt: 'When does B12 deficiency typically manifest after ileal-based urinary diversion or bladder augmentation?',
+    choices: [
+      { letter: 'A', text: '6–12 months postoperatively' },
+      { letter: 'B', text: '2–3 years postoperatively' },
+      { letter: 'C', text: '3–5 years (and frequently a decade or more) postoperatively' },
+      { letter: 'D', text: 'Immediately postoperatively' },
+    ],
+    answer: 'C',
+    explanation:
+      '3–5 year hepatic B12 reserve produces the classic delayed presentation a decade post-cystectomy. Surveillance per AUA / SUFU: annual B12 monitoring; replace via IM or high-dose oral when low.',
+    source: {
+      label: 'Vitamin B12 (Nutritional Assessment)',
+      href: '/docs/evaluation/laboratory-studies/nutritional-assessment/vitamin-b12',
+    },
+    tags: ['diversion', 'B12', 'surveillance'],
+  },
+  {
     id: 'gurs-lse-staging',
     subspecialty: 'GURS',
     prompt: 'In the 2025 LSE staging system for urethral stricture, what does the "S" stand for?',
@@ -103,12 +121,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
     answer: 'B',
     explanation:
-      'LSE = Location, Segment, Etiology. "Segment" replaces the older "Severity" in the 2025 staging system, which spans I–V with substages and incorporates the Urethroplasty Triad Score.',
+      'LSE = Location, Segment, Etiology. "Segment" replaces the older "Severity" in the 2025 staging system, which spans I–V with substages and incorporates the Urethroplasty Triad Score. LSE was developed for male urethral stricture; female urethral stricture uses different classification systems.',
     source: {
       label: 'Urethral Stricture — Classification',
       href: '/docs/clinical-conditions/voiding-outlet/urethral-stricture',
     },
-    tags: ['urethroplasty', 'staging'],
+    tags: ['urethroplasty', 'staging', 'male'],
   },
 
   // ─── URPS ──────────────────────────────────────────────────────────
@@ -129,12 +147,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       label: 'Miya Hook (Urethral & Pelvic Specialty Instruments)',
       href: '/docs/foundations/tools/instruments/urethral-specialty/miya-hook',
     },
-    tags: ['prolapse', 'SSLF'],
+    tags: ['prolapse', 'SSLF', 'apical'],
   },
   {
     id: 'urps-tot-vs-tvt-thigh-pain',
     subspecialty: 'URPS',
-    prompt: 'In meta-analyses of midurethral slings, which approach has the highest reported rate of groin / thigh pain?',
+    prompt: 'In meta-analyses of female midurethral slings, which approach has the highest reported rate of groin / thigh pain?',
     choices: [
       { letter: 'A', text: 'Retropubic (TVT)' },
       { letter: 'B', text: 'Transobturator (TOT/TVT-O)' },
@@ -148,7 +166,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       label: 'Midurethral Sling Trocars',
       href: '/docs/foundations/tools/instruments/urethral-specialty/midurethral-sling-trocars',
     },
-    tags: ['SUI', 'sling'],
+    tags: ['SUI', 'sling', 'female'],
   },
   {
     id: 'urps-augs-iuga-nutrition',
@@ -172,6 +190,25 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
 
   // ─── Combined ─────────────────────────────────────────────────────
   {
+    id: 'combined-icg-leak-reduction',
+    subspecialty: 'combined',
+    prompt: 'Approximately what reduction in anastomotic leak rate is reported with ICG fluorescence angiography in meta-analyses of colorectal anastomoses?',
+    choices: [
+      { letter: 'A', text: '5–10%' },
+      { letter: 'B', text: '15–20%' },
+      { letter: 'C', text: '31–69%' },
+      { letter: 'D', text: '>90%' },
+    ],
+    answer: 'C',
+    explanation:
+      'Meta-analyses report a 31–69% reduction in anastomotic leak with ICG-FA, largest effect in left-sided and rectal resections. Clinical assessment alone in experienced hands can still achieve leak rates as low as 1.6%. ICG-FA is increasingly used across reconstructive urology and urogynecology — wherever bowel, ureter, or flap perfusion needs to be objectively assessed.',
+    source: {
+      label: 'Bowel Anastomosis — ICG Fluorescence Angiography',
+      href: '/docs/foundations/surgical-principles/bowel-anastomosis#perfusion-assessment--icg-fluorescence-angiography',
+    },
+    tags: ['anastomosis', 'ICG', 'perfusion'],
+  },
+  {
     id: 'combined-adhesiolysis-enterotomy',
     subspecialty: 'combined',
     prompt: 'What is the reported rate of bowel injury during adhesiolysis on entry into a previously operated abdomen?',
@@ -193,7 +230,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     id: 'combined-alvimopan-impact',
     subspecialty: 'combined',
-    prompt: 'Which single perioperative drug has the largest documented effect on postoperative ileus in cystectomy/diversion patients?',
+    prompt: 'Which single perioperative drug has the largest documented effect on postoperative ileus in major abdominal-pelvic reconstructive surgery?',
     choices: [
       { letter: 'A', text: 'Metoclopramide' },
       { letter: 'B', text: 'Alvimopan (Entereg)' },
@@ -202,7 +239,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
     answer: 'B',
     explanation:
-      'Alvimopan is the highest-impact single agent for POI prevention after radical cystectomy and bowel-using diversion — peripherally restricted μ-opioid antagonist, accelerates GI recovery and shortens LOS in dedicated RCTs.',
+      'Alvimopan is the highest-impact single agent for POI prevention. Peripherally restricted μ-opioid antagonist; accelerates GI recovery and shortens LOS in dedicated RCTs across cystectomy/diversion and other major abdominal-pelvic reconstruction. FDA indication is bowel resection with primary anastomosis.',
     source: {
       label: 'Post-op Bowel & Ileus Management — Alvimopan',
       href: '/docs/foundations/pharmacology/perioperative-eras/postop-bowel-ileus-management#1-alvimopan-entereg--the-highest-impact-single-agent',
@@ -221,30 +258,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
     answer: 'C',
     explanation:
-      'OR 7.28 for postoperative mortality in GI tumor surgery patients with low handgrip strength. A $200–400 Jamar dynamometer, 60 seconds, EWGSOP2 / AWGS / SDOC triple-cutoff framework — arguably the most actionable bedside preop tool.',
+      'OR 7.28 for postoperative mortality in GI tumor surgery patients with low handgrip strength. A $200–400 Jamar dynamometer, 60 seconds, EWGSOP2 / AWGS / SDOC triple-cutoff framework — arguably the most actionable bedside preop tool, applicable across both GURS and URPS major-case prehabilitation.',
     source: {
       label: 'Handgrip Strength (Nutritional Assessment)',
       href: '/docs/evaluation/laboratory-studies/nutritional-assessment/handgrip-strength',
     },
-    tags: ['preop', 'nutrition'],
-  },
-  {
-    id: 'combined-vitamin-b12-monitoring',
-    subspecialty: 'combined',
-    prompt: 'When does B12 deficiency typically manifest after ileal-based urinary diversion or bladder augmentation?',
-    choices: [
-      { letter: 'A', text: '6–12 months postoperatively' },
-      { letter: 'B', text: '2–3 years postoperatively' },
-      { letter: 'C', text: '3–5 years (and frequently a decade or more) postoperatively' },
-      { letter: 'D', text: 'Immediately postoperatively' },
-    ],
-    answer: 'C',
-    explanation:
-      '3–5 year hepatic B12 reserve produces the classic delayed presentation a decade post-cystectomy. Surveillance per AUA / SUFU: annual B12 monitoring; replace via IM or high-dose oral when low.',
-    source: {
-      label: 'Vitamin B12 (Nutritional Assessment)',
-      href: '/docs/evaluation/laboratory-studies/nutritional-assessment/vitamin-b12',
-    },
-    tags: ['diversion', 'B12', 'surveillance'],
+    tags: ['preop', 'nutrition', 'prehab'],
   },
 ];
