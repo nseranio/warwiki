@@ -318,6 +318,119 @@ h1, h2, h3, h4, h5, h6 {
   .callout {
     padding: 0.75rem 0.9rem;
   }
+
+  /* Sticky first column on horizontally-scrolling tables — keeps the row
+     label visible while the user scans right across comparison columns.
+     Only applied at <=768px because at full width the scroll behavior is
+     unnecessary. */
+  .markdown table tbody td:first-child,
+  .markdown table thead th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: var(--ifm-background-color);
+    box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.08);
+  }
+  .markdown table thead th:first-child {
+    background-color: var(--ifm-color-primary);
+  }
+  .markdown table tbody tr:nth-child(even) td:first-child {
+    background-color: var(--warwiki-bg-subtle);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4b. RESPONSIVE TABLE (opt-in card layout for critical comparisons)
+═══════════════════════════════════════════════════════════ */
+.responsive-table-wrapper {
+  margin: 1.5rem 0;
+}
+
+.responsive-table-caption {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.4rem;
+  font-style: italic;
+}
+
+.responsive-table-desktop {
+  border-collapse: collapse;
+  border: 1px solid var(--warwiki-border);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  font-size: 0.92rem;
+  width: 100%;
+  box-shadow: var(--warwiki-shadow-sm);
+}
+
+.responsive-table-desktop thead tr {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.responsive-table-desktop thead th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  border: none;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+
+.responsive-table-desktop tbody tr {
+  border-top: 1px solid var(--warwiki-border);
+}
+
+.responsive-table-desktop tbody tr:nth-child(even) {
+  background-color: var(--warwiki-bg-subtle);
+}
+
+.responsive-table-desktop td {
+  padding: 0.65rem 1rem;
+  border: none;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.responsive-table-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .responsive-table-desktop {
+    display: none;
+  }
+  .responsive-table-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .responsive-table-card {
+    border: 1px solid var(--warwiki-border);
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    background: var(--ifm-background-color);
+    box-shadow: var(--warwiki-shadow-sm);
+  }
+  .responsive-table-card-field + .responsive-table-card-field {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+    border-top: 1px dashed var(--warwiki-border);
+  }
+  .responsive-table-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ifm-color-primary);
+    margin-bottom: 0.2rem;
+  }
+  .responsive-table-card-value {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
 }
 
 
