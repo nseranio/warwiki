@@ -1,0 +1,58 @@
+name: External link check
+
+on:
+  schedule:
+    # Nightly at 09:00 UTC (early morning Pacific)
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  sample-external-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sample 200 external links and HEAD them
+        id: check
+        run: node scripts/check-external-links.js --sample 200 --json > external-link-report.json
+        continue-on-error: true
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: external-link-report
+          path: external-link-report.json
+          retention-days: 30
+
+      - name: Open issue on broken links
+        if: steps.check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('external-link-report.json', 'utf8'));
+            if (!report.broken || report.broken.length === 0) return;
+            const body = [
+              '# Nightly external-link sample failed',
+              '',
+              `Sampled **${report.sampled}** of ${report.total} external links. **${report.broken.length}** failed.`,
+              '',
+              '| Status | URL | First seen in |',
+              '|---|---|---|',
+              ...report.broken.slice(0, 50).map(b => `| ${b.status} | ${b.url} | ${b.file} |`),
+              '',
+              report.broken.length > 50 ? `_(${report.broken.length - 50} more in artifact)_` : '',
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `External link rot: ${report.broken.length} broken links (${new Date().toISOString().slice(0,10)})`,
+              body,
+              labels: ['link-rot', 'automated'],
+            });
