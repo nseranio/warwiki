@@ -4,7 +4,43 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-22 — Pharmacology trim, video embeds, nonantibiotic-UTI + pyeloplasty expansions, three new aseptic-technique pages
+## Current Handoff - 2026-05-23 — Platform infra wave (CI / tests / CONTRIBUTING / scripts) + quiz + decision tree + responsive table + freshness + bowel-anastomosis expansion + stoma-site-marking
+
+8 commits, all fast-forwarded to `main`. Lints + typecheck + build + 8/8 Vitest tests clean across **1,173 files**.
+
+**First WARWIKI CI pipeline** — [.github/workflows/ci.yml](.github/workflows/ci.yml) runs lint + typecheck + Vitest + build on every PR and main push, with freshness as a non-blocking trailer. Nightly [external-link cron](.github/workflows/external-links.yml) samples 200 URLs/day with deterministic-by-day seed, uploads JSON artifact, auto-opens a GitHub issue on broken-link signal. New scripts: [check-freshness.js](scripts/check-freshness.js) (advisory over `lastReviewed:` frontmatter; >18mo warn / >30mo stale), [check-external-links.js](scripts/check-external-links.js) (DOI uses GET, 429/403 soft-fail), [measure-build.js](scripts/measure-build.js) (append-only `build-perf.log` baseline), [migrate-stable-ref-ids.js](scripts/migrate-stable-ref-ids.js) (dry-run-by-default tool that adds `ref-author-year-journal` anchors next to numbered ones — insulates inbound tooltip / search links from future renumbering).
+
+**Test surface added.** [vitest.config.ts](vitest.config.ts) + [playwright.config.ts](playwright.config.ts) + stubs for `@docusaurus/Link` / `useDocusaurusContext` so component unit tests don't need the router. 8 smoke tests across GenericDatabase / JournalTable / SurgeonsExplorer all passing. Playwright sitemap-sweep spec walks every built URL asserting <400 + visible main + no console errors. New devDeps: vitest, @testing-library/{react,jest-dom}, jsdom, @vitejs/plugin-react, @playwright/test. The SurgeonsExplorer test surfaced a real bug — duplicate `brian-inouye` ID in [src/data/surgeons.ts](src/data/surgeons.ts), fixed by removing the orphan record (kept the Peterson-fellows entry with `mentorId: 'andrew-peterson'`).
+
+**[CONTRIBUTING.md](CONTRIBUTING.md) authored.** Codifies scope, voice, citation pattern, MDX gotchas, the consolidation rule (80%+ shared content), atlas / database / hidden-page rules, the new `lastReviewed` / `reviewer` / `subspecialty` / `key_point` frontmatter convention, test workflow, and a quarterly off-GitHub backup recommendation (git bundle + second remote mirror) — bus-factor insurance for a single-author wiki.
+
+**Quiz at [/quiz](src/pages/quiz.tsx)** — spaced-repetition (SM-2-lite: Wrong / Hard / Good / Easy → interval scheduling) over 12 starter questions tagged GURS / URPS / combined with source-page back-links. localStorage-only state, no auth. Linked under "Videos & Surgical Atlases" in [Resources](docs/08-resources/index.mdx). User-requested subspecialty audit applied the **"prove it" rule** (only claim GURS or URPS when the content is something the other fellowship would not be expected to own; default to combined). Two reclassifications: icg-leak-reduction (GURS → combined, since ICG-FA is used by both), vitamin-b12-monitoring (combined → GURS, since the surveillance schedule is anchored to ileal-based diversion). Final distribution: 5 GURS / 3 URPS / 4 combined. Tagging docblock in [questions.ts](src/data/quiz/questions.ts) codifies the convention with positive examples for each bucket.
+
+**Decision tree component** — [DecisionTree.tsx](src/components/DecisionTree.tsx) + worked example for reoperative-bowel-segment selection in [reoperative-bowel.ts](src/data/decisionTrees/reoperative-bowel.ts). Radio-driven, deterministic, every leaf citation-linked back to its source page. Drop `<DecisionTree tree={reoperativeBowelTree} />` into any MDX.
+
+**Responsive table component** — [ResponsiveTable.tsx](src/components/ResponsiveTable.tsx) opt-in (desktop = styled table, ≤640px = one card per row with column header as label) + new sticky-first-column CSS at ≤768px on the standard markdown tables.
+
+**Freshness badge component** — [FreshnessBadge.tsx](src/components/FreshnessBadge.tsx); opt-in MDX import that renders fresh / current / stale-soon / stale chip from `lastReviewed:` frontmatter. Renders nothing on legacy pages so degradation is silent.
+
+**Bowel-anastomosis page expanded** — [bowel-anastomosis.mdx](docs/01-foundations/surgical-principles/bowel-anastomosis.mdx). Inverting-vs-everting corrected (Slieker cites a 5-fold leak signal with everting in colorectal RCT; prior wording understated this); Specifications rebuilt as an evidence table with Greenall RCT (5mm vs 10mm bite no difference) and Yao 2016 rat-model intersuture data; new Burch 2000 reference (ref27, 3-0 polypropylene as evidence-supported nonabsorbable monofilament alternative); new "Ideal Single-Layer Continuous Anastomosis" summary table. **First page to use the new `lastReviewed` / `reviewer` / `subspecialty` / `key_point` frontmatter** — sets the precedent. Marked `subspecialty: combined`.
+
+**New page: [Stoma Site Marking](docs/01-foundations/surgical-principles/stoma-site-marking.mdx)** (Surgical Principles, sidebar 14.5 between bowel-anastomosis and surgical-ergonomics). ASCRS / WOCN / AUA position-statement evidence: WOC-nurse preoperative marking reduces stoma + peristomal complications (OR 0.47, parastomal hernia OR 0.25), improves self-care (OR 0.34). Davis 2022 ASCRS guideline + Kim 2021 SR/meta-analysis (n=2109) + Burgess-Stocks 2022 WOCN Bill of Rights validation. Sections cover the marking rationale, WOC-nurse-vs-surgeon accuracy data (surgeons place median 2cm off, too low; seniority does not help), the site-selection checklist (RLQ, rectus, supine/sitting/standing, 5cm peristomal skin), special populations (obese upper-abdominal alternative; preop wheelchair test for NLUTD per 5th ICI; prior abdominal surgery), construction linkages (Taneja-Godoy intracorporeal preparation), preoperative education (LOS 8 vs 10 d). 10 refs. Cross-linked from [ileal-conduit.mdx](docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx) (Key Steps + See Also) and [cutaneous-ureterostomy.mdx](docs/04-surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy.mdx) (Stomal Stenosis). Source cleanup: dropped the Cleveland Clinic Figure 15 (no embed rights, `undefined` caption), the Lightner & Holubar chapter (not cited inline anywhere), reconstructed a truncated `p [1]` statistic, stripped the "Would you like to explore..." trailing prompt. Marked `subspecialty: GURS` — URPS fellows don't manage urostomies.
+
+**Bowel-pages cross-link mesh closed.** [bowel-anastomosis](docs/01-foundations/surgical-principles/bowel-anastomosis.mdx) / [bowel-handling-injury-management](docs/01-foundations/surgical-principles/bowel-handling-injury-management.mdx) / [reoperative-bowel-harvest](docs/01-foundations/surgical-principles/reoperative-bowel-harvest.mdx) / [bowel-segments](docs/01-foundations/tools/biomaterials/autologous-tissue/bowel-segments.mdx) now all bidirectionally cross-link. Fixed a broken `grafts/intestinal-segments` link in reoperative-bowel-harvest (real bug — page never existed at that path).
+
+**Conventions established / reinforced:**
+
+- **`lastReviewed` / `reviewer` / `subspecialty` / `key_point` frontmatter** is the canonical freshness + quiz + provenance metadata. Demonstrated on bowel-anastomosis + stoma-site-marking; freshness lint now reports 2 fresh / 1103 unreviewed.
+- **Subspecialty "prove it" standard** — claim GURS or URPS only when the content is something the other fellowship would not be expected to own; default to combined when uncertain. Codified in the [questions.ts](src/data/quiz/questions.ts) tagging docblock with positive examples per bucket.
+- **Stable parallel ref anchors** — when adding a new reference, also drop `<a id="ref-author-year-journal"></a>` next to the numbered anchor. Demonstrated on Burch 2000, Davis 2022, Kim 2021. Run `node scripts/migrate-stable-ref-ids.js --write <subdir>` to retrofit existing pages per-subdirectory.
+- **CI is the source of truth** — every push runs lint + Vitest + typecheck + build. If it goes red, fix it, don't bypass.
+- **Push-main cadence preserved** — 8 commits this session, each fast-forwarded and pushed to `origin/main` in the same step.
+
+Full session detail in `CHANGELOG.md` under 2026-05-23.
+
+---
+
+## Previous Handoff - 2026-05-22 — Pharmacology trim, video embeds, nonantibiotic-UTI + pyeloplasty expansions, three new aseptic-technique pages
 
 24 commits, all fast-forwarded to `main`. Lints + build clean across **1,172 files**.
 
