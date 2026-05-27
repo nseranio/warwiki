@@ -6,6 +6,95 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-26 — Female AUS expansion + new Urethrolysis page + new Urethrectomy page + rectal-injury management + CI permissions fix + 2 SUFU video link cards + IUGA channel
+
+**9 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across 1,174 files.** Two new procedure pages (Urethrolysis, Urethrectomy), one major section added to an existing foundations page (rectal-injury management on bowel-handling-injury-management), one major section added to an existing procedure page (Female AUS bladder-neck placement on the AUS procedure page), CI permissions fix for the external-links cron, plus three small video-resource additions.
+
+### CI permissions fix (commit d93e00f)
+
+The nightly external-links cron at [.github/workflows/external-links.yml](.github/workflows/external-links.yml) was failing on the auto-issue step with `HttpError: Resource not accessible by integration`. Root cause: default `GITHUB_TOKEN` is read-only on issues in newer repo defaults; `github.rest.issues.create` needs `issues: write`. Added an explicit `permissions:` block to the workflow (contents: read, issues: write). The Node 20 deprecation warning in the same run is informational and not actionable yet — no newer majors of `actions/checkout`, `actions/setup-node`, `actions/upload-artifact`, or `actions/github-script` are available; GitHub will force Node 24 in June 2026.
+
+### Female AUS — Bladder Neck Placement section (commit e7fbff2)
+
+[artificial-urinary-sphincter.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) previously carried one marginal sentence on female AUS under Special Populations. Replaced with a full dedicated section covering:
+
+- **Indications** — AUA/SUFU 2023 salvage framing (failed prior anti-incontinence surgery, severe ISD, neurogenic SUI). Expert consensus recommends referral after maximum two prior surgical procedures; pelvic radiotherapy is a relative contraindication.
+- **Three surgical approaches** — open retropubic (vaginal route abandoned; consensus favors retropubic without opening the vagina, Grade B), laparoscopic (Bracchitta 2019 n=74, 78% complete continence / 19% improvement at 45 mo), and robot-assisted with anterior vs posterior variants. Dubois 2025 multicenter open-vs-robotic comparison (n=135) reported robotic with lower intraop complications (12.7% vs 27.4%), lower postop complications (15.5% vs 46.8%), higher full continence (83.3% vs 62.3%), and lower explantation (1.4% vs 27.4%).
+- **Device specifications in women** — cuff size median 7.0 cm (range 6.5–8 cm, substantially larger than male bulbar 3.5–6 cm; 5.5–9 cm in neurogenic series), 61–70 cmH₂O PRB the default, 71–80 cmH₂O at surgeon discretion, PRB fill 22–27 mL, labia majora pump, activation at 4–6 weeks.
+- **Outcomes** — Peyronnet 2019 meta of 964 women, 80% complete continence (95% CI 72–87) at 22 mo. Full complications table (mechanical failure 2–47%, vaginal/urethral erosion 0–27%, infection 0–46%, revision 6–44%, explantation 2–44%). Phé 2017 neurological cohort: 20-yr explantation-free survival >74% with ~50% requiring at least one revision by 5 yr.
+
+13 new refs (56–68) appended with stable parallel `ref-author-year-journal` anchors. Source cleanup: dropped "Would you like to explore" trailing prompt, dropped `undefined` Figure 2 caption, rebuilt the mashed `ComplicationRate (Range)References` table with proper delimiters.
+
+### Urethrolysis — new procedure page + step-by-step technique (commits 3df5d65 + ff8aa89)
+
+New [urethrolysis.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethrolysis.mdx) at sidebar position 17. Salvage operation for iatrogenic BOO after anti-incontinence surgery — incidence 2.5–24% after anti-incontinence procedures, 50–75% of obstructed patients ultimately require surgical correction.
+
+**Initial page (commit 3df5d65)** covered:
+- Gleich/Goldman 2025 NUU terminology proposal (reserve "urethrolysis" for extensive dissection vs "sling incision/excision" for simpler procedures).
+- Indications and diagnosis table (history, uroflow, PVR, multichannel UDS limits in women, cystoscopy); ACOG CO 694 6-week threshold for considering sling release after MUS.
+- Approach comparison table — simple sling incision (70–90% success, ~20% recurrent SUI), transvaginal urethrolysis (73–85%), retropubic urethrolysis (78–86%), suprameatal (65–67%), lap/robotic feasibility.
+- Outcomes — 60–90% BOO resolution, 20–40% recurrent SUI, higher PVR as failure predictor.
+- Decision pearls (MUS → sling incision first; post-Burch → formal urethrolysis; Martius interposition for redo / heavy scarring / urethrotomy).
+- 10 refs (Gleich 2025, Carr/Webster 1997, ACOG CO 694 2017, Petrou 1999, Moore/Goldman 2013, Cross/Cespedes 1998, Erdemoglu 2021, Orasanu 2014, Oliver/Raz 2018, Nitti/Raz 1994) with stable parallel anchors. Cross-links wired from [retropubic-midurethral-sling.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx) voiding-dysfunction row, [mesh-complications.mdx](docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx) voiding-dysfunction section, and [underactive-bladder.mdx](docs/03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx) sling-incision pearl.
+
+**Step-by-step technique expansion (commit ff8aa89)** — new `## Operative Technique by Approach` major section with five detailed H3 blocks:
+
+1. **Simple sling incision** — right-angle clamp + sharp transection workflow; cystoscope sheath as palpation aid when the sling is hard to locate; fascial-sling 2-week scar-in window where retropubic suture release alone is inadequate.
+2. **Formal transvaginal urethrolysis** — periurethral dissection, endopelvic fascia perforation with heavy Mayo, sharp suture removal with right-angle clamp under finger guidance, manual-pressure hemostasis on the inferior pubis.
+3. **Suprameatal urethrolysis** — semilunar 1 cm supra-meatal incision, perineal membrane perforation, index-finger sweep into retropubic space, endopelvic fascia preservation. Petrou 13/20 in urinary retention voided well.
+4. **Open retropubic** — Pfannenstiel, Retzius dissection, index-finger plane as completion landmark, peritoneal/omental flap interposition. Anger 78% vs 43% post-Burch comparison.
+5. **Martius fat-pad flap interposition** — sagittal labial incision, tunneled transfer, anchoring sutures in superficial detrusor. Carey 2003 87% resolution / 13% SUI; Oliver-Raz salvage emphasis.
+
+New Postoperative Management table with five catheter-duration scenarios (sling-incision void trial; suprameatal+Martius 5 d; cystorrhaphy 1–2 wk; visualized injury 2 wk; inaccessible injury 2–3 wk + cystourethrogram).
+
+2 new refs (Waterloos 2019 BiomedRes, Carey 2003 Urology). Deliberately NOT added to the female SUI database — urethrolysis treats a complication of SUI surgery rather than SUI itself; database row would mislead. Cross-links from the sling pages handle discoverability.
+
+### Bowel injury — Rectum section (commit 0e7f057)
+
+[bowel-handling-injury-management.mdx](docs/01-foundations/surgical-principles/bowel-handling-injury-management.mdx) previously covered small bowel and colon. Added a focused `### Rectum` subsection between Colon and Thermal:
+
+- **Anatomy-first decision** — intraperitoneal upper-third managed as colon; extraperitoneal middle/lower-third still mostly diverted. Brown 2018 AAST multi-institutional (n=785): proximal diversion NOT associated with improved outcomes for intraperitoneal injuries (abdominal complications 22% with diversion vs 10% without, p=0.003). Junior 2026 international survey: ~81% of surgeons avoid routine colostomy for stable intraperitoneal injuries. EAST 2016 PMG (Bosarge) conditionally recommends proximal diversion for penetrating extraperitoneal injuries despite small evidence base (26 nondivert vs 532 divert).
+- **AAST Rectum grading table** I (observe) → V (resect+divert) with per-grade default management.
+- **Two-layer repair technique** — inner running absorbable (3-0/4-0 polyglactin) for mucosa-submucosa, outer interrupted seromuscular imbricating layer, optional third reinforcing layer; transverse closure when feasible; debridement of devitalized edges; TAMIS/TEM for low extraperitoneal injuries; **omental flap interposition between rectal repair and adjacent reconstruction** (urethrovesical anastomosis, vaginal cuff, AUS cuff) as the standard of care after RALP / RARC / RVF.
+- **Abandoned adjuncts** — presacral drainage and distal rectal washout. AAST multi-institutional: presacral drain OR 2.6 (p=0.02), distal washout OR 3.4 (p=0.008) for abdominal complications. EAST and WSES against routine use.
+- **Damage-control rules** — defer definitive repair; bowel discontinuity or diverting stoma; delayed primary anastomosis at 48–72 h relook; leak 16.7% damage-control vs 3.2% otherwise.
+- **Decision pearls** — Yee/Ornstein 2008 RALP rectal-injury technique as the standard urology reference; prior pelvic radiation → divert without hesitation.
+
+Also added a matching bullet to the Reconstructive-Urology / Urogyn Implications section pointing back to the new Rectum subsection.
+
+10 new refs (28–37). Source cleanup: deduplicated 4 refs already in the page (Smyth WSES bowel injury, Tang meta, Coccolini source control, Manley loop ostomy); dropped two truncated obstetric-laceration refs (Arnold 2021, Tunney 2023) as out of GU-reconstruction scope; rebuilt the truncated Grade II row; dropped "Would you like to explore" trailing prompt.
+
+### Urethrectomy — new page in Urethral Reconstruction atlas (commit 83a7a6e)
+
+New [urethrectomy.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/urethrectomy.mdx) at sidebar position 30. Framed for reconstructive urologists as "masters of the urethra" who are routinely called to perform or assist with urethrectomy at radical cystectomy — the decision shapes orthotopic neobladder candidacy and, in proximal urethral carcinoma, phallic preservation. Primary urologic oncology is out of WARWIKI scope, but urethrectomy is the textbook reconstructive-consequence example.
+
+- **Indications** — AUA/ASCO/SUO 2024 MIBC guideline (high-grade apical urethral margin, women not undergoing neobladder); classic Ahlering/Skinner 1984 indications; NCCN 2026 primary-urethral-carcinoma treatment table (T2 pendulous → distal urethrectomy or partial penectomy; T2 bulbar → urethrectomy ± cystoprostatectomy; T2 female proximal → urethrectomy + cystectomy; T3/T4 → chemoRT preferred).
+- **Male technique** — prepubic workhorse (Joniau 2007 single-center 20-yr n=180, adds ~17 min); Hiebl 1999 urethral-stripping modification (18 Fr catheter + sutured distally + stripped free, 20–30 min); perineal "inside-out" technique; en bloc transpubic with March 2023 phallus-preservation arterial anatomy (superficial penile arteries from external pudendal as remnant blood supply); laparoscopic (Castillo 2007 5-port + perineal extraction); robotic side-docking (Chan 2015) + Zennami 2024 urethra-preserving technique (0/134 urethral recurrences).
+- **Elshal 2011 prepubic-vs-perineal comparative outcomes table** — OR time 174 vs 209 min (p=0.003), LOS 14.5 vs 17.6 d (p=0.047), Clavien G4–5 9.5% vs 28% (p=0.033).
+- **Female technique** — anterior exenteration framing; Hinata 2012 histology (vaginal-wall smooth muscle contributes to urethral wall; middle urethra tightly attached to vaginal smooth muscle with abundant veins at the interface; antegrade dissection EBL ~965 mL); Colleselli 1998 sphincter morphology (rhabdosphincter fibers in middle/caudal thirds); Parsons 2003 rectus abdominis myocutaneous flap vaginoplasty after anterior exenteration.
+- **Risk-stratified oncologic outcomes** — Laukhtina 2022 multicenter (n=887): no overall benefit, high-risk subgroup HR 0.58 for progression (p=0.04); Hakozaki 2021 propensity-matched: 5-yr OS benefit in multiple-tumors / concomitant CIS (p=0.021); Mennes 2025 BJU propensity-matched n=332: 10-yr OS 47.3% vs 27.5% (p=0.002). Urethral recurrence after cystectomy without urethrectomy 4–18% with uniformly poor prognosis.
+- **Reconstructive Implications section** — neobladder candidacy is committed before the diversion step; frozen-section apical margin is the intraoperative tool; phallus preservation as reconstructive contribution; rectus-flap vaginoplasty as reconstructive contribution to female anterior exenteration.
+
+22 refs with stable parallel anchors. Source cleanup on the user's two-part draft: merged 4 overlapping refs (Holzbeierlein, NCCN, Joniau, Laukhtina appeared in both halves); dropped the Kawa Omar book chapter (weak citation metadata); dropped two "Would you like to explore" trailing prompts; dropped truncated NCCN PCU-2 placeholder + "Figure 19 ... undefined"; rebuilt the mashed complications table with proper delimiters.
+
+Cross-links wired from [urinary-diversion-principles.mdx](docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx) (Principle 6 Continence — the "neobladder candidacy is committed before diversion" point) and [ileal-conduit.mdx](docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx) See Also. Deliberately NOT added to the female/male urethroplasty databases — urethrectomy is destructive, not reconstructive, would mislead users browsing for stricture options.
+
+### Three video-resource link additions
+
+- **IUGA Vimeo channel** (commit ab7ca22) — added `https://vimeo.com/iuga` as a `web-card--urps` after AUGS in the Urogynecology & Pelvic Floor Channels section of [surgical-video-atlases.mdx](docs/08-resources/surgical-video-atlases.mdx).
+- **SUFU operative video — transurethral dorsal BMG urethroplasty** (commit 531737a) — added a new `## Videos` section to [female-dorsal-inlay-bmg.mdx](docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-dorsal-inlay-bmg.mdx) linking to the SUFU Surgical Video Library entry for the Linder/Jefferson technique. Direct Vimeo embed declined because the video has `domain_status_code: 403` on Vimeo's oEmbed (Vimeo PRO domain-restriction to sufuorg.com); external link card opens in a new tab.
+- **SUFU 2026 vaginal-manipulator comparison video** (commit 7038486) — added a new `## Videos` section to [uterine-manipulator.mdx](docs/01-foundations/tools/instruments/urethral-specialty/uterine-manipulator.mdx) linking to the SUFU Surgical Video Library entry on "MIS Sacrocolpopexy: A Comparison of Vaginal Manipulators". Same domain-restriction pattern.
+
+### Conventions reinforced
+
+- **SUFU Surgical Video Library entries should use external link cards, not iframe embeds.** SUFU videos are Vimeo-hosted with domain-level privacy restricting embed to sufuorg.com. Vimeo oEmbed returns `domain_status_code: 403` — a quick way to detect this before wasting effort on an iframe that will fail. Saved as a feedback memory.
+- **Section frontmatter** — `subspecialty: combined` is the right default when both URPS and GURS may participate (Urethrectomy, Urethrolysis, Female AUS — all GURS-leaning but URPS-relevant in multidisciplinary settings). `subspecialty: GURS` reserved for clearly fellowship-exclusive content. The "prove it" standard from 2026-05-23 holds.
+- **Out-of-scope topics with strong reconstructive consequences are in-scope when framed correctly.** Urethrectomy is a urologic oncology procedure but is framed as the determinant of diversion candidacy + the locus of phallic preservation; this is the canonical "gray zone" pattern from CLAUDE.md's scope rules.
+- **Destructive procedures do not belong in reconstructive databases.** Urethrectomy added to the Urethral Reconstruction atlas via sidebar position only, not as a row in the male/female urethroplasty treatment databases — the databases are for *restorative* options; adding ablative procedures would mislead readers browsing for stricture options. Same logic applied to Urethrolysis (treats a complication of SUI surgery; not a SUI treatment) which was also kept out of the female SUI database.
+- **Always check existing reference list for duplicates before appending new ones.** The user-supplied bowel-rectal draft included 4 refs already on the page (Smyth WSES, Tang meta, Coccolini source control, Manley loop ostomy); the urethrectomy two-part draft included 4 overlapping refs (Holzbeierlein, NCCN, Joniau, Laukhtina). Caught and merged in both.
+
+---
+
 ## 2026-05-23 — Platform infrastructure wave + quiz / decision tree / responsive table / freshness components + bowel-anastomosis expansion + new Stoma Site Marking page
 
 **8 commits, all fast-forwarded to `main`. Lints + typecheck + build + 8/8 Vitest tests clean across 1,173 files.** A mixed platform + content session — the platform half added WARWIKI's first CI, test surface, contributor docs, and four pieces of authoring infrastructure (freshness lint, stable ref IDs, external-link rot, build-perf baseline); the content half integrated user-supplied Slieker 2013 detail into bowel-anastomosis, authored a new Stoma Site Marking foundations page from the ASCRS / WOCN / AUA evidence base, and seeded the new `lastReviewed:` frontmatter convention on the first two pages.
