@@ -122,6 +122,11 @@ const config: Config = {
           label: 'Special Populations',
         },
         {
+          to: '/video-library',
+          label: 'Video Library',
+          position: 'left',
+        },
+        {
           label: 'Library',
           position: 'left',
           items: [
@@ -173,6 +178,7 @@ const config: Config = {
         {
           title: 'Library',
           items: [
+            {label: 'Video Library', to: '/video-library'},
             {label: 'Journal Club', to: '/docs/journal-club'},
             {label: 'Resources', to: '/docs/resources'},
             {label: 'History & Lineage', to: '/docs/roots'},

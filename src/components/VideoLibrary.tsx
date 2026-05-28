@@ -1,14 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { VIDEOS, type VideoEntry, type VideoSubspecialty } from '@site/src/data/videos';
+import { VIDEOS, type VideoEntry } from '@site/src/data/videos';
 
 const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-
-const SUBSPECIALTY_TABS: Array<{ id: VideoSubspecialty; label: string; help: string }> = [
-  { id: 'combined', label: 'All', help: 'All videos across GURS, URPS, and shared foundations' },
-  { id: 'GURS', label: 'GURS', help: 'Genitourinary reconstruction (urethroplasty, ureteral, diversion, GAS)' },
-  { id: 'URPS', label: 'URPS', help: 'Urogynecology / female pelvic medicine & reconstructive surgery' },
-];
 
 function PlayIcon() {
   return (
@@ -62,15 +56,16 @@ function VideoCard({ v }: { v: VideoEntry }) {
           <span className="vl-meta-dot">·</span>
           <span className="vl-meta-playlist">{v.playlist}</span>
         </div>
-        <div className="vl-chip-row">
-          <span className={`vl-chip vl-chip--${v.subspecialty}`}>{v.subspecialty}</span>
-          {v.topic && <span className="vl-chip vl-chip--topic">{v.topic}</span>}
-          {v.articleSlug && (
-            <a className="vl-chip vl-chip--link" href={v.articleSlug}>
-              Open article →
-            </a>
-          )}
-        </div>
+        {(v.topic || v.articleSlug) && (
+          <div className="vl-chip-row">
+            {v.topic && <span className="vl-chip vl-chip--topic">{v.topic}</span>}
+            {v.articleSlug && (
+              <a className="vl-chip vl-chip--link" href={v.articleSlug}>
+                Open article →
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -78,7 +73,6 @@ function VideoCard({ v }: { v: VideoEntry }) {
 
 export default function VideoLibrary() {
   const [search, setSearch] = useState('');
-  const [subspec, setSubspec] = useState<VideoSubspecialty>('combined');
   const [channel, setChannel] = useState('All');
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
@@ -87,28 +81,17 @@ export default function VideoLibrary() {
     () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
     [],
   );
-  // Topic options are scoped to the active subspecialty tab so the dropdown
-  // only ever shows topics that actually have results under the current view.
-  const topics = useMemo(() => {
-    const scoped = VIDEOS.filter(
-      v => subspec === 'combined' || v.subspecialty === subspec || v.subspecialty === 'combined',
-    );
-    return ['All', ...Array.from(new Set(scoped.map(v => v.topic).filter(Boolean))).sort()];
-  }, [subspec]);
-  // Playlists likewise narrow to the active subspecialty + topic.
+  const topics = useMemo(
+    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.topic).filter(Boolean))).sort()],
+    [],
+  );
+  // Playlist options narrow to the active topic so the dropdown only ever
+  // shows playlists that actually have results under the current view.
   const playlists = useMemo(() => {
-    const scoped = VIDEOS.filter(v => {
-      if (subspec !== 'combined' && v.subspecialty !== subspec && v.subspecialty !== 'combined') return false;
-      if (topic !== 'All' && v.topic !== topic) return false;
-      return true;
-    });
+    const scoped = VIDEOS.filter(v => topic === 'All' || v.topic === topic);
     return ['All', ...Array.from(new Set(scoped.map(v => v.playlist))).sort()];
-  }, [subspec, topic]);
+  }, [topic]);
 
-  // If the current topic isn't valid for the new subspecialty, reset it.
-  useEffect(() => {
-    if (topic !== 'All' && !topics.includes(topic)) setTopic('All');
-  }, [topics, topic]);
   useEffect(() => {
     if (playlist !== 'All' && !playlists.includes(playlist)) setPlaylist('All');
   }, [playlists, playlist]);
@@ -116,10 +99,6 @@ export default function VideoLibrary() {
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return VIDEOS.filter(v => {
-      // 'combined' tab is the show-all default (matches /quiz convention);
-      // GURS/URPS tabs include combined-tagged content so foundations videos
-      // remain visible alongside subspecialty-specific picks.
-      if (subspec !== 'combined' && v.subspecialty !== subspec && v.subspecialty !== 'combined') return false;
       if (channel !== 'All' && v.channel !== channel) return false;
       if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
@@ -129,7 +108,6 @@ export default function VideoLibrary() {
           v.channel,
           v.playlist,
           v.topic,
-          v.subspecialty,
           ...(v.tags ?? []),
         ]
           .join(' ')
@@ -138,7 +116,7 @@ export default function VideoLibrary() {
       }
       return true;
     });
-  }, [search, subspec, channel, topic, playlist]);
+  }, [search, channel, topic, playlist]);
 
   return (
     <div className="vl-wrapper">
@@ -151,20 +129,6 @@ export default function VideoLibrary() {
           className="td-search vl-search"
           aria-label="Search videos"
         />
-        <div className="vl-tabs" role="tablist" aria-label="Subspecialty">
-          {SUBSPECIALTY_TABS.map(t => (
-            <button
-              key={t.id}
-              role="tab"
-              aria-selected={subspec === t.id}
-              className={`vl-tab${subspec === t.id ? ' vl-tab--active' : ''}`}
-              onClick={() => setSubspec(t.id)}
-              title={t.help}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
         <div className="vl-selects">
           {channels.length > 2 && (
             <select

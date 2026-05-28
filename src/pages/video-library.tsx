@@ -16,8 +16,8 @@ export default function VideoLibraryPage() {
           <a href="https://www.youtube.com/@warwikihq/playlists" target="_blank" rel="noopener noreferrer">
             WARWIKI YouTube channel
           </a>{' '}
-          and partner channels (GURS, TURNS, AUGS, society video libraries). Filter by subspecialty,
-          topic, or playlist; click any thumbnail to play inline.
+          and partner channels (GURS, TURNS, AUGS, society video libraries). Filter by topic or
+          playlist, or search any title; click any thumbnail to play inline.
         </p>
 
         <VideoLibrary />
