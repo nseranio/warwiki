@@ -5,7 +5,6 @@ const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
 
 type SortMode = 'playlist' | 'recent' | 'longest' | 'shortest' | 'alpha';
-type ViewMode = 'grid' | 'grouped';
 
 const SORT_OPTIONS: Array<{ id: SortMode; label: string }> = [
   { id: 'playlist', label: 'Playlist order' },
@@ -96,7 +95,6 @@ export default function VideoLibrary() {
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
   const [sort, setSort] = useState<SortMode>('playlist');
-  const [view, setView] = useState<ViewMode>('grid');
 
   const channels = useMemo(
     () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
@@ -161,12 +159,11 @@ export default function VideoLibrary() {
     return sorted;
   }, [search, channel, topic, playlist, sort]);
 
-  // For grouped view: bucket the filtered+sorted result by topic. Groups are
-  // emitted in the order they first appear in `filtered`, so the active sort
-  // mode determines group order too (e.g., under "Recently uploaded" the
-  // topic that has the newest video appears first).
+  // Bucket the filtered+sorted result by topic. Groups are emitted in the
+  // order they first appear in `filtered`, so the active sort mode determines
+  // group order too (e.g., under "Recently uploaded" the topic that has the
+  // newest video appears first).
   const grouped = useMemo(() => {
-    if (view !== 'grouped') return null;
     const map = new Map<string, VideoEntry[]>();
     for (const v of filtered) {
       const key = v.topic || 'Other';
@@ -175,7 +172,7 @@ export default function VideoLibrary() {
       else map.set(key, [v]);
     }
     return Array.from(map.entries());
-  }, [view, filtered]);
+  }, [filtered]);
 
   return (
     <div className="vl-wrapper">
@@ -240,28 +237,6 @@ export default function VideoLibrary() {
             ))}
           </select>
         </div>
-        <div className="vl-view-toggle" role="tablist" aria-label="View mode">
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === 'grid'}
-            className={`vl-view-btn${view === 'grid' ? ' vl-view-btn--active' : ''}`}
-            onClick={() => setView('grid')}
-            title="Flat grid"
-          >
-            Grid
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={view === 'grouped'}
-            className={`vl-view-btn${view === 'grouped' ? ' vl-view-btn--active' : ''}`}
-            onClick={() => setView('grouped')}
-            title="Grouped by topic"
-          >
-            Grouped
-          </button>
-        </div>
         <div className="td-count vl-count">
           {filtered.length} of {VIDEOS.length} videos
         </div>
@@ -269,7 +244,7 @@ export default function VideoLibrary() {
 
       {filtered.length === 0 ? (
         <div className="td-empty">No videos match your filters.</div>
-      ) : view === 'grouped' && grouped ? (
+      ) : (
         <div className="vl-grouped">
           {grouped.map(([topicName, items]) => (
             <section key={topicName} className="vl-group">
@@ -283,12 +258,6 @@ export default function VideoLibrary() {
                 ))}
               </div>
             </section>
-          ))}
-        </div>
-      ) : (
-        <div className="vc-grid vl-grid">
-          {filtered.map((v, i) => (
-            <VideoCard key={`${v.id}-${i}`} v={v} />
           ))}
         </div>
       )}

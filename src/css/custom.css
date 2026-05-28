@@ -2544,54 +2544,6 @@ a.book-card:visited {
   text-decoration: none;
 }
 
-/* View-mode segmented toggle (Grid / Grouped) */
-.vl-view-toggle {
-  display: inline-flex;
-  gap: 0;
-  border: 1px solid var(--warwiki-border);
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--warwiki-white, #FFFFFF);
-}
-
-[data-theme='dark'] .vl-view-toggle {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: #2a3a4a;
-}
-
-.vl-view-btn {
-  padding: 0.4rem 0.85rem;
-  font-size: 0.82rem;
-  font-weight: 500;
-  background: transparent;
-  color: var(--ifm-color-emphasis-700);
-  border: 0;
-  cursor: pointer;
-  transition: background 0.12s ease, color 0.12s ease;
-}
-
-.vl-view-btn + .vl-view-btn {
-  border-left: 1px solid var(--warwiki-border);
-}
-
-[data-theme='dark'] .vl-view-btn + .vl-view-btn {
-  border-left-color: #2a3a4a;
-}
-
-.vl-view-btn:hover {
-  color: var(--ifm-color-primary);
-}
-
-.vl-view-btn--active {
-  background: var(--ifm-color-primary);
-  color: #fff;
-  font-weight: 700;
-}
-
-.vl-view-btn--active:hover {
-  color: #fff;
-}
-
 /* Grouped view — collapsible-style topic sections */
 .vl-grouped {
   display: flex;
