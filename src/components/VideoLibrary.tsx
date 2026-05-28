@@ -1,0 +1,187 @@
+import React, { useMemo, useState } from 'react';
+import { VIDEOS, type VideoEntry, type VideoSubspecialty } from '@site/src/data/videos';
+
+const IFRAME_ALLOW =
+  'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+
+const SUBSPECIALTY_TABS: Array<{ id: VideoSubspecialty; label: string; help: string }> = [
+  { id: 'combined', label: 'All', help: 'All videos across GURS, URPS, and shared foundations' },
+  { id: 'GURS', label: 'GURS', help: 'Genitourinary reconstruction (urethroplasty, ureteral, diversion, GAS)' },
+  { id: 'URPS', label: 'URPS', help: 'Urogynecology / female pelvic medicine & reconstructive surgery' },
+];
+
+function PlayIcon() {
+  return (
+    <span className="vc-play-icon" aria-hidden="true">
+      <svg viewBox="0 0 68 48" width="56" height="40">
+        <path
+          d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+          fill="#E02020"
+        />
+        <path d="M 45,24 27,14 27,34" fill="#FFFFFF" />
+      </svg>
+    </span>
+  );
+}
+
+function VideoCard({ v }: { v: VideoEntry }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div className="vc-card vl-card">
+      <div className="vc-media">
+        {playing ? (
+          <iframe
+            className="vc-iframe"
+            src={`https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0`}
+            title={v.title}
+            allow={IFRAME_ALLOW}
+            allowFullScreen
+          />
+        ) : (
+          <button
+            type="button"
+            className="vc-thumb-btn"
+            onClick={() => setPlaying(true)}
+            aria-label={`Play: ${v.title}`}
+          >
+            <img
+              src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+              alt=""
+              loading="lazy"
+              className="vc-thumb-img"
+            />
+            <PlayIcon />
+            {v.duration && <span className="vl-duration">{v.duration}</span>}
+          </button>
+        )}
+      </div>
+      <div className="vc-body vl-body">
+        <div className="vc-title">{v.title}</div>
+        <div className="vl-meta">
+          <span className="vl-meta-channel">{v.channel}</span>
+          <span className="vl-meta-dot">·</span>
+          <span className="vl-meta-playlist">{v.playlist}</span>
+        </div>
+        <div className="vl-chip-row">
+          <span className={`vl-chip vl-chip--${v.subspecialty}`}>{v.subspecialty}</span>
+          {v.articleSlug && (
+            <a className="vl-chip vl-chip--link" href={v.articleSlug}>
+              Open article →
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function VideoLibrary() {
+  const [search, setSearch] = useState('');
+  const [subspec, setSubspec] = useState<VideoSubspecialty>('combined');
+  const [channel, setChannel] = useState('All');
+  const [playlist, setPlaylist] = useState('All');
+
+  const channels = useMemo(
+    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
+    [],
+  );
+  const playlists = useMemo(
+    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.playlist))).sort()],
+    [],
+  );
+
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase().trim();
+    return VIDEOS.filter(v => {
+      // 'combined' tab is the show-all default (matches /quiz convention);
+      // GURS/URPS tabs include combined-tagged content so foundations videos
+      // remain visible alongside subspecialty-specific picks.
+      if (subspec !== 'combined' && v.subspecialty !== subspec && v.subspecialty !== 'combined') return false;
+      if (channel !== 'All' && v.channel !== channel) return false;
+      if (playlist !== 'All' && v.playlist !== playlist) return false;
+      if (q) {
+        const haystack = [
+          v.title,
+          v.channel,
+          v.playlist,
+          v.subspecialty,
+          ...(v.tags ?? []),
+        ]
+          .join(' ')
+          .toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+  }, [search, subspec, channel, playlist]);
+
+  return (
+    <div className="vl-wrapper">
+      <div className="vl-controls">
+        <input
+          type="search"
+          placeholder="Search videos by title, tag, or playlist…"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="td-search vl-search"
+          aria-label="Search videos"
+        />
+        <div className="vl-tabs" role="tablist" aria-label="Subspecialty">
+          {SUBSPECIALTY_TABS.map(t => (
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={subspec === t.id}
+              className={`vl-tab${subspec === t.id ? ' vl-tab--active' : ''}`}
+              onClick={() => setSubspec(t.id)}
+              title={t.help}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        <div className="vl-selects">
+          {channels.length > 2 && (
+            <select
+              value={channel}
+              onChange={e => setChannel(e.target.value)}
+              className="td-select"
+              aria-label="Filter by channel"
+            >
+              {channels.map(c => (
+                <option key={c} value={c}>
+                  {c === 'All' ? 'All channels' : c}
+                </option>
+              ))}
+            </select>
+          )}
+          <select
+            value={playlist}
+            onChange={e => setPlaylist(e.target.value)}
+            className="td-select"
+            aria-label="Filter by playlist"
+          >
+            {playlists.map(p => (
+              <option key={p} value={p}>
+                {p === 'All' ? 'All playlists' : p}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="td-count vl-count">
+          {filtered.length} of {VIDEOS.length} videos
+        </div>
+      </div>
+
+      {filtered.length === 0 ? (
+        <div className="td-empty">No videos match your filters.</div>
+      ) : (
+        <div className="vc-grid vl-grid">
+          {filtered.map((v, i) => (
+            <VideoCard key={`${v.id}-${i}`} v={v} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

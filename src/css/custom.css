@@ -2384,6 +2384,165 @@ a.book-card:visited {
 }
 [data-theme='dark'] .vc-title { color: #E6EAF2; }
 
+/* -------------------------------------------------------------------------
+   Video Library (.vl-*) — used by /video-library standalone page
+   ------------------------------------------------------------------------- */
+
+.vl-wrapper {
+  margin: 1.5rem 0;
+}
+
+.vl-controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--warwiki-bg-soft, #F7F9FC);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 8px;
+}
+
+@media (min-width: 720px) {
+  .vl-controls {
+    grid-template-columns: minmax(220px, 1fr) auto auto auto;
+  }
+}
+
+[data-theme='dark'] .vl-controls {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: #2a3a4a;
+}
+
+.vl-search {
+  width: 100%;
+}
+
+.vl-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.vl-tab {
+  padding: 0.42rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--ifm-color-emphasis-800);
+  border: 1px solid var(--warwiki-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.vl-tab:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.vl-tab--active {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.vl-tab--active:hover {
+  color: #fff;
+}
+
+.vl-selects {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.vl-count {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-600);
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.vl-grid {
+  /* Slightly wider min width than the article-body vc-grid. */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.vl-card {
+  position: relative;
+}
+
+.vl-duration {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  padding: 1px 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-feature-settings: "tnum";
+  color: #fff;
+  background: rgba(0, 0, 0, 0.78);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.vl-body {
+  gap: 6px;
+}
+
+.vl-meta {
+  font-size: 0.74rem;
+  color: var(--warwiki-text-muted);
+  line-height: 1.35;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.vl-meta-channel { font-weight: 600; }
+.vl-meta-dot { opacity: 0.6; }
+
+.vl-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.vl-chip {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.16em 0.55em;
+  border-radius: 4px;
+  border: 1px solid;
+  background: transparent;
+}
+
+.vl-chip--GURS     { color: #7C3AED; border-color: #7C3AED55; background: #7C3AED14; }
+.vl-chip--URPS     { color: #0D9373; border-color: #0D937355; background: #0D937314; }
+.vl-chip--combined { color: #185FA5; border-color: #185FA555; background: #185FA514; }
+
+.vl-chip--link {
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary-lightest, #185FA555);
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.vl-chip--link:hover {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Responsive 16:9 YouTube / video iframe wrapper used in article bodies */
 .video-embed {
   position: relative;
