@@ -4,6 +4,25 @@ import { VIDEOS, type VideoEntry } from '@site/src/data/videos';
 const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
 
+type SortMode = 'playlist' | 'recent' | 'longest' | 'shortest' | 'alpha';
+type ViewMode = 'grid' | 'grouped';
+
+const SORT_OPTIONS: Array<{ id: SortMode; label: string }> = [
+  { id: 'playlist', label: 'Playlist order' },
+  { id: 'recent', label: 'Recently uploaded' },
+  { id: 'longest', label: 'Longest first' },
+  { id: 'shortest', label: 'Shortest first' },
+  { id: 'alpha', label: 'Alphabetical' },
+];
+
+function durationToSeconds(d: string | undefined): number {
+  if (!d) return 0;
+  const parts = d.split(':').map(Number);
+  if (parts.length === 2) return parts[0] * 60 + parts[1];
+  if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+  return 0;
+}
+
 function PlayIcon() {
   return (
     <span className="vc-play-icon" aria-hidden="true">
@@ -76,6 +95,8 @@ export default function VideoLibrary() {
   const [channel, setChannel] = useState('All');
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
+  const [sort, setSort] = useState<SortMode>('playlist');
+  const [view, setView] = useState<ViewMode>('grid');
 
   const channels = useMemo(
     () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
@@ -98,7 +119,7 @@ export default function VideoLibrary() {
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return VIDEOS.filter(v => {
+    const result = VIDEOS.filter(v => {
       if (channel !== 'All' && v.channel !== channel) return false;
       if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
@@ -116,7 +137,45 @@ export default function VideoLibrary() {
       }
       return true;
     });
-  }, [search, channel, topic, playlist]);
+
+    // Sort. 'playlist' keeps the registry's natural order (already sorted by
+    // topic → playlist → title in the generator).
+    if (sort === 'playlist') return result;
+
+    const sorted = result.slice();
+    if (sort === 'recent') {
+      sorted.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+    } else if (sort === 'longest') {
+      sorted.sort((a, b) => durationToSeconds(b.duration) - durationToSeconds(a.duration));
+    } else if (sort === 'shortest') {
+      sorted.sort((a, b) => {
+        const da = durationToSeconds(a.duration);
+        const db = durationToSeconds(b.duration);
+        // Treat 0-duration (unknown) as "very long" so it sinks to the bottom
+        // under shortest-first rather than dominating the head.
+        return (da || Infinity) - (db || Infinity);
+      });
+    } else if (sort === 'alpha') {
+      sorted.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    return sorted;
+  }, [search, channel, topic, playlist, sort]);
+
+  // For grouped view: bucket the filtered+sorted result by topic. Groups are
+  // emitted in the order they first appear in `filtered`, so the active sort
+  // mode determines group order too (e.g., under "Recently uploaded" the
+  // topic that has the newest video appears first).
+  const grouped = useMemo(() => {
+    if (view !== 'grouped') return null;
+    const map = new Map<string, VideoEntry[]>();
+    for (const v of filtered) {
+      const key = v.topic || 'Other';
+      const arr = map.get(key);
+      if (arr) arr.push(v);
+      else map.set(key, [v]);
+    }
+    return Array.from(map.entries());
+  }, [view, filtered]);
 
   return (
     <div className="vl-wrapper">
@@ -168,6 +227,40 @@ export default function VideoLibrary() {
               </option>
             ))}
           </select>
+          <select
+            value={sort}
+            onChange={e => setSort(e.target.value as SortMode)}
+            className="td-select"
+            aria-label="Sort videos"
+          >
+            {SORT_OPTIONS.map(o => (
+              <option key={o.id} value={o.id}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="vl-view-toggle" role="tablist" aria-label="View mode">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === 'grid'}
+            className={`vl-view-btn${view === 'grid' ? ' vl-view-btn--active' : ''}`}
+            onClick={() => setView('grid')}
+            title="Flat grid"
+          >
+            Grid
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === 'grouped'}
+            className={`vl-view-btn${view === 'grouped' ? ' vl-view-btn--active' : ''}`}
+            onClick={() => setView('grouped')}
+            title="Grouped by topic"
+          >
+            Grouped
+          </button>
         </div>
         <div className="td-count vl-count">
           {filtered.length} of {VIDEOS.length} videos
@@ -176,6 +269,22 @@ export default function VideoLibrary() {
 
       {filtered.length === 0 ? (
         <div className="td-empty">No videos match your filters.</div>
+      ) : view === 'grouped' && grouped ? (
+        <div className="vl-grouped">
+          {grouped.map(([topicName, items]) => (
+            <section key={topicName} className="vl-group">
+              <h2 className="vl-group-heading">
+                {topicName}
+                <span className="vl-group-count">{items.length}</span>
+              </h2>
+              <div className="vc-grid vl-grid">
+                {items.map((v, i) => (
+                  <VideoCard key={`${v.id}-${i}`} v={v} />
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
       ) : (
         <div className="vc-grid vl-grid">
           {filtered.map((v, i) => (
