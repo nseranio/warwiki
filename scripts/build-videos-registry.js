@@ -79,6 +79,60 @@ function classify(playlistTitle) {
   return 'combined';
 }
 
+/**
+ * Topic classifier — consolidates the ~120 playlist prefixes into a clean
+ * facet set of ~17 buckets. First match wins, so order patterns from most
+ * specific to most general.
+ */
+const TOPIC_RULES = [
+  [/^Trauma/i, 'Trauma & Emergencies'],
+  [/^Urethrectomy/i, 'Urethrectomy'],
+  // Permissive prefix catches both "Urethroplasty" and the misspelled
+  // "Urethroplasy" present in one playlist title.
+  [/^Urethroplas/i, 'Urethroplasty'],
+  [/Hypospadias/i, 'Urethroplasty'],
+  [/Hyposadias/i, 'Urethroplasty'],
+  [/^Urethral Mass/i, 'Urethral Mass'],
+  [/^Genital Reconstruction/i, 'Genital Reconstruction'],
+  [/^Buried Penis/i, 'Genital Reconstruction'],
+  [/^Penile Implant/i, 'Penile Prosthesis'],
+  [/^Testicular Prosthesis/i, 'Penile Prosthesis'],
+  [/^Peyronie/i, "Peyronie's Disease"],
+  [/^Female SUI/i, 'Female SUI'],
+  [/^Female: Bladder Outlet/i, 'Female SUI'],
+  [/^Male SUI/i, 'Male SUI'],
+  [/^OAB/i, 'OAB / UUI'],
+  [/Mesh Compilation/i, 'Mesh Complications'],
+  [/^Prolapse/i, 'Prolapse'],
+  [/^Pelvic Pain/i, 'Pelvic Pain'],
+  // Parastomal hernia is a urinary-diversion complication — group with it.
+  [/^Parastomal/i, 'Urinary Diversion'],
+  [/^Urinary Diversion/i, 'Urinary Diversion'],
+  [/^Upper Tract/i, 'Upper Tract Reconstruction'],
+  [/^Lower Tract/i, 'Bladder Reconstruction'],
+  [/^Bladder Neck Closure/i, 'Bladder Reconstruction'],
+  [/^GAS/i, 'Gender-Affirming Surgery'],
+  [/^BPH/i, 'BPH'],
+  [/^Fistula/i, 'Fistula'],
+  [/^Neurourology/i, 'Neurourology'],
+  [/^Women's Health/i, "Women's Health"],
+  [/^Vaginal Wall Masses/i, 'Vaginal Masses'],
+  [/^Grafts/i, 'Grafts & Flaps'],
+  [/^Flaps/i, 'Grafts & Flaps'],
+  [/^Plastic Surgery Principles/i, 'Surgical Technique'],
+  [/^Technique:/i, 'Surgical Technique'],
+  [/^Radiation/i, 'Radiation Therapy'],
+  [/^Hidden Curriculum/i, 'Hidden Curriculum'],
+  [/^Evaluation/i, 'Evaluation'],
+];
+
+function classifyTopic(playlistTitle) {
+  for (const [r, topic] of TOPIC_RULES) {
+    if (r.test(playlistTitle)) return topic;
+  }
+  return 'Other';
+}
+
 function tsString(s) {
   return JSON.stringify(s);
 }
@@ -90,6 +144,7 @@ function tsEntry(v) {
     `title: ${tsString(v.title)}`,
     `channel: ${tsString(v.channel)}`,
     `playlist: ${tsString(v.playlist)}`,
+    `topic: ${tsString(v.topic)}`,
     `subspecialty: ${tsString(v.subspecialty)}`,
   ];
   if (v.duration) fields.push(`duration: ${tsString(v.duration)}`);
@@ -108,8 +163,10 @@ function main() {
   const entries = [];
   const breakdown = { GURS: 0, URPS: 0, combined: 0 };
 
+  const topicBreakdown = {};
   for (const pl of playlists) {
     const subspecialty = classify(pl.title);
+    const topic = classifyTopic(pl.title);
     for (const item of pl.items) {
       if (seen.has(item.videoId)) continue;
       seen.add(item.videoId);
@@ -121,21 +178,24 @@ function main() {
         title: item.title,
         channel: channelTitle,
         playlist: pl.title,
+        topic,
         subspecialty,
         duration: item.duration ?? undefined,
         year,
       });
       breakdown[subspecialty]++;
+      topicBreakdown[topic] = (topicBreakdown[topic] ?? 0) + 1;
     }
   }
 
   // Sort by subspecialty (combined first, then GURS, then URPS) then by
-  // playlist then by title — gives a stable, reviewable diff.
+  // topic then playlist then title — gives a stable, reviewable diff.
   const order = { combined: 0, GURS: 1, URPS: 2 };
   entries.sort((a, b) => {
     if (order[a.subspecialty] !== order[b.subspecialty]) {
       return order[a.subspecialty] - order[b.subspecialty];
     }
+    if (a.topic !== b.topic) return a.topic.localeCompare(b.topic);
     if (a.playlist !== b.playlist) return a.playlist.localeCompare(b.playlist);
     return a.title.localeCompare(b.title);
   });
@@ -179,6 +239,12 @@ export interface VideoEntry {
    * Mirrors WARWIKI's own YouTube playlist taxonomy.
    */
   playlist: string;
+  /**
+   * Coarse topic facet (e.g., "Urethroplasty", "Prolapse", "Upper Tract
+   * Reconstruction") derived from the playlist prefix. Used as the third
+   * filter axis in the Video Library alongside subspecialty and playlist.
+   */
+  topic: string;
   subspecialty: VideoSubspecialty;
   /**
    * Optional: slug of the related WARWIKI article so a card can deep-link

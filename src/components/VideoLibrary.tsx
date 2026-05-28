@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { VIDEOS, type VideoEntry, type VideoSubspecialty } from '@site/src/data/videos';
 
 const IFRAME_ALLOW =
@@ -64,6 +64,7 @@ function VideoCard({ v }: { v: VideoEntry }) {
         </div>
         <div className="vl-chip-row">
           <span className={`vl-chip vl-chip--${v.subspecialty}`}>{v.subspecialty}</span>
+          {v.topic && <span className="vl-chip vl-chip--topic">{v.topic}</span>}
           {v.articleSlug && (
             <a className="vl-chip vl-chip--link" href={v.articleSlug}>
               Open article →
@@ -79,16 +80,38 @@ export default function VideoLibrary() {
   const [search, setSearch] = useState('');
   const [subspec, setSubspec] = useState<VideoSubspecialty>('combined');
   const [channel, setChannel] = useState('All');
+  const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
 
   const channels = useMemo(
     () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
     [],
   );
-  const playlists = useMemo(
-    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.playlist))).sort()],
-    [],
-  );
+  // Topic options are scoped to the active subspecialty tab so the dropdown
+  // only ever shows topics that actually have results under the current view.
+  const topics = useMemo(() => {
+    const scoped = VIDEOS.filter(
+      v => subspec === 'combined' || v.subspecialty === subspec || v.subspecialty === 'combined',
+    );
+    return ['All', ...Array.from(new Set(scoped.map(v => v.topic).filter(Boolean))).sort()];
+  }, [subspec]);
+  // Playlists likewise narrow to the active subspecialty + topic.
+  const playlists = useMemo(() => {
+    const scoped = VIDEOS.filter(v => {
+      if (subspec !== 'combined' && v.subspecialty !== subspec && v.subspecialty !== 'combined') return false;
+      if (topic !== 'All' && v.topic !== topic) return false;
+      return true;
+    });
+    return ['All', ...Array.from(new Set(scoped.map(v => v.playlist))).sort()];
+  }, [subspec, topic]);
+
+  // If the current topic isn't valid for the new subspecialty, reset it.
+  useEffect(() => {
+    if (topic !== 'All' && !topics.includes(topic)) setTopic('All');
+  }, [topics, topic]);
+  useEffect(() => {
+    if (playlist !== 'All' && !playlists.includes(playlist)) setPlaylist('All');
+  }, [playlists, playlist]);
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
@@ -98,12 +121,14 @@ export default function VideoLibrary() {
       // remain visible alongside subspecialty-specific picks.
       if (subspec !== 'combined' && v.subspecialty !== subspec && v.subspecialty !== 'combined') return false;
       if (channel !== 'All' && v.channel !== channel) return false;
+      if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
       if (q) {
         const haystack = [
           v.title,
           v.channel,
           v.playlist,
+          v.topic,
           v.subspecialty,
           ...(v.tags ?? []),
         ]
@@ -113,7 +138,7 @@ export default function VideoLibrary() {
       }
       return true;
     });
-  }, [search, subspec, channel, playlist]);
+  }, [search, subspec, channel, topic, playlist]);
 
   return (
     <div className="vl-wrapper">
@@ -155,6 +180,18 @@ export default function VideoLibrary() {
               ))}
             </select>
           )}
+          <select
+            value={topic}
+            onChange={e => setTopic(e.target.value)}
+            className="td-select"
+            aria-label="Filter by topic"
+          >
+            {topics.map(t => (
+              <option key={t} value={t}>
+                {t === 'All' ? 'All topics' : t}
+              </option>
+            ))}
+          </select>
           <select
             value={playlist}
             onChange={e => setPlaylist(e.target.value)}

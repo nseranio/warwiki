@@ -17,7 +17,7 @@ export default function VideoLibraryPage() {
             WARWIKI YouTube channel
           </a>{' '}
           and partner channels (GURS, TURNS, AUGS, society video libraries). Filter by subspecialty,
-          channel, or playlist; click any thumbnail to play inline.
+          topic, or playlist; click any thumbnail to play inline.
         </p>
 
         <VideoLibrary />
