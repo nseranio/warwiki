@@ -127,25 +127,10 @@ const config: Config = {
           position: 'left',
         },
         {
-          label: 'Library',
+          type: 'docSidebar',
+          sidebarId: 'resourcesSidebar',
           position: 'left',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'resourcesSidebar',
-              label: 'Resources',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'journalSidebar',
-              label: 'Journal Club',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'rootsSidebar',
-              label: 'History & Lineage',
-            },
-          ],
+          label: 'Resources',
         },
         {
           type: 'search',
@@ -176,12 +161,12 @@ const config: Config = {
           ],
         },
         {
-          title: 'Library',
+          title: 'Resources',
           items: [
             {label: 'Video Library', to: '/video-library'},
-            {label: 'Journal Club', to: '/docs/journal-club'},
             {label: 'Resources', to: '/docs/resources'},
             {label: 'History & Lineage', to: '/docs/roots'},
+            {label: 'Journal Club', to: '/docs/journal-club'},
           ],
         },
         {
