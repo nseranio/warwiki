@@ -4,7 +4,42 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-26 — Female AUS expansion + new Urethrolysis page + new Urethrectomy page + rectal-injury management + CI permissions fix + SUFU/IUGA video resources
+## Current Handoff - 2026-05-27 — Video Library at /video-library — 1,323 WARWIKI YouTube videos indexed, faceted, grouped-by-topic, promoted to top-level navbar
+
+10 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across **1,175 files**.
+
+**The headline:** the entire WARWIKI YouTube channel (122 playlists, 1,323 unique videos) is now a searchable, filterable, grouped-by-topic library at [/video-library](src/pages/video-library.tsx), reachable as a top-level navbar item. End-to-end pipeline (`npm run videos:sync`) re-pulls from YouTube and regenerates the typed registry whenever playlists change.
+
+**Pipeline:**
+
+- **[scripts/fetch-youtube-playlists.js](scripts/fetch-youtube-playlists.js)** — resolves `@warwikihq` via `channels.list?forHandle`, paginates `playlists.list` then `playlistItems.list` per playlist, batch-fetches durations via `videos.list?part=contentDetails` (50 IDs/call). Writes intermediate `src/data/videos.generated.json` (gitignored). **Retry-with-backoff on 403/429/5xx** to ride out Google's edge-cache propagation drift after key-restriction changes — first run hit "Requests from referer `<empty>` are blocked" inconsistently across edge nodes; retry resolves it.
+- **[scripts/build-videos-registry.js](scripts/build-videos-registry.js)** — applies keyword-based **subspecialty** classification (URPS / GURS / combined; URPS rules first so "Urethral Mass: Diverticulectomy" doesn't mis-match the broad Urethroplasty rule) and **topic** classification (28 buckets derived from playlist-title prefix). Emits typed `src/data/videos.ts` with the array **chunked into 250-entry constants** concatenated into the public `VIDEOS: VideoEntry[]` — TS 6.0 otherwise produces a TS2590 "union too complex to represent" at this cardinality even with explicit annotation.
+- **[.env](.env.example)** (gitignored — plain `.env` was missing from `.gitignore` prior to this session; only `.env.local`/etc. were listed) carries `YT_API_KEY`; `.env.example` is committed with a placeholder.
+- **npm scripts**: `videos:fetch`, `videos:build`, `videos:sync` (chains both).
+
+**Component:** [VideoLibrary.tsx](src/components/VideoLibrary.tsx) renders search box + topic dropdown + playlist dropdown (re-scoped dynamically to the active topic) + sort dropdown (Playlist order / Recently uploaded / Longest / Shortest / Alphabetical) + result count, then a **grouped-by-topic layout** with section headings and count chips. Group order follows the active sort. Click any thumbnail to play inline. Topic chip rendered on each card; optional `articleSlug` back-link surfaces as an "Open article →" chip when populated (none populated yet — `articleSlug` curation is the obvious next increment).
+
+**Topic breakdown** (28 buckets, top picks): 287 Urethroplasty, 203 Upper Tract Reconstruction, 169 Prolapse, 68 Penile Prosthesis, 67 Bladder Reconstruction, 51 OAB/UUI, 46 BPH, 44 Male SUI, 40 Urinary Diversion, 39 Grafts & Flaps, 39 Surgical Technique, 36 Female SUI, 35 Peyronie's Disease, 29 Trauma & Emergencies, 26 Evaluation, 23 Women's Health, 22 Neurourology, 20 Fistula, 16 Gender-Affirming Surgery, 14 Genital Reconstruction, 13 Urethral Mass, 9 Hidden Curriculum, 7 Vaginal Masses, 5 each Radiation Therapy / Urethrectomy / Mesh Complications, 3 Pelvic Pain, 2 Other. Subspecialty split (kept in data even though no UI exposes it now): 234 combined / 789 GURS / 300 URPS.
+
+**Navbar restructure** — [docusaurus.config.ts](docusaurus.config.ts) flattened. The old "Library" dropdown is gone; Video Library is now a top-level left-nav item, and **Resources** is a single flat left-nav link. Journal Club is **hidden from the navbar** (page still exists, reachable via direct URL + footer). History & Lineage moved into the [Resources landing](docs/08-resources/index.mdx) (after Hidden Curriculum). Final navbar: **Foundations · Evaluation · Clinical Conditions · Treatment Atlas · Special Populations · Video Library · Resources** (left) + Search · About · GitHub (right).
+
+**Resources landing reorder** — Podcasts renamed → **Podcast Library** (frontmatter title aligned with the page's existing H1). New order: Videos & Surgical Atlases → Podcast Library → Patient Resources → Textbooks → Quiz → Websites & Online Tools → Hidden Curriculum → History & Lineage. **Video Library is NOT listed on the Resources landing** — top-level nav item replaces the duplicate tile.
+
+**Lee Zhao card update** — [surgical-video-atlases.mdx](docs/08-resources/surgical-video-atlases.mdx) Lee Zhao YouTube card now points to his new searchable library at [video.leezhaomd.org](https://video.leezhaomd.org); card renamed "Lee C. Zhao MD" → "Lee C. Zhao MD — Video Library". The `:::tip` callout about "catalog of sources vs catalog of videos" was removed (redundant signage now that Video Library is in the main nav).
+
+**Conventions established:**
+
+- **API keys pasted into chat are compromised** — they're in scrollback, logs, and any downstream transcript. Rotate-then-restrict (HTTP-referrer for browser keys; IP / "none + secrecy" for server keys) is the only safe path. `.env` must be gitignored *before* the key gets near the repo.
+- **Auto-generated TS files at >1k literal entries need chunking.** Explicit `: T[]` annotation is not enough — TS 6.0 still widens element literals and produces TS2590. Pattern: emit `const CHUNK_0: T[] = [...]; const CHUNK_1: T[] = [...]; export const X: T[] = [...CHUNK_0, ...CHUNK_1];`. Documented in [build-videos-registry.js](scripts/build-videos-registry.js).
+- **Hide-from-navbar ≠ delete.** Journal Club is reachable from footer + URL; surface it back when the journal database is ready to grow. Same pattern available for any future content the navbar shouldn't crowd.
+- **Grouped-by-topic is the right default for large libraries.** A 1,323-card flat grid is hard to scan; topic-grouped reads like a textbook TOC and matches how reconstructive surgeons mentally index by procedure. Tried as an opt-in toggle first, then flipped to grouped-only after user feedback.
+- **Subspecialty data outlives subspecialty UI.** GURS / URPS / All tabs were removed but the `subspecialty` field stayed in the registry. Future views can re-expose it without re-running the pipeline.
+
+Full session detail in `CHANGELOG.md` under 2026-05-27.
+
+---
+
+## Previous Handoff - 2026-05-26 — Female AUS expansion + new Urethrolysis page + new Urethrectomy page + rectal-injury management + CI permissions fix + SUFU/IUGA video resources
 
 9 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across **1,174 files**.
 

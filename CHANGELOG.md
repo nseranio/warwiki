@@ -6,6 +6,82 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-27 — Video Library — searchable, faceted index of 1,323 WARWIKI YouTube videos as a new top-level navbar item
+
+**10 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across 1,175 files.** New `/video-library` standalone page; YouTube Data API pipeline that pulls every video on the WARWIKI channel and emits a typed registry; topic facet derived from playlist names; default grouped-by-topic layout with sort dropdown; promoted from Resources subsection to top-level nav; Library dropdown flattened into a single Resources link.
+
+### Video Library scaffold (commit 65ffac7)
+
+New standalone page at [`src/pages/video-library.tsx`](src/pages/video-library.tsx) (mirrors the `/quiz` pattern). Backed by typed [`src/data/videos.ts`](src/data/videos.ts) with a `VideoEntry` interface — `id` (YouTube ID), `title`, `channel`, `playlist`, `subspecialty`, optional `articleSlug` back-link into wiki pages, optional `topic`, `duration`, `year`, `tags`, `curated`. New [`src/components/VideoLibrary.tsx`](src/components/VideoLibrary.tsx) renders search box + faceted dropdowns + click-to-play thumbnail grid. New `.vl-*` CSS block in [custom.css](src/css/custom.css) — reuses `.vc-grid` / `.td-search` / `.td-select` to stay visually consistent with VideoCards and GenericDatabase. Seeded with 9 placeholder entries to validate the schema. Linked from [Resources landing](docs/08-resources/index.mdx) and the [Videos & Surgical Atlases page](docs/08-resources/surgical-video-atlases.mdx).
+
+### YouTube Data API extraction pipeline (commit 1d05793)
+
+Replaced the 8 Rick-Astley placeholders with the full WARWIKI catalog via two scripts and an `npm run videos:sync` end-to-end command:
+
+- **[scripts/fetch-youtube-playlists.js](scripts/fetch-youtube-playlists.js)** — resolves `@warwikihq` → channel ID via `channels.list?forHandle`, paginates `playlists.list` (50/page) for the channel, then paginates `playlistItems.list` per playlist, then batch-fetches `videos.list?part=contentDetails` for ISO-8601 durations (50 IDs/call). Emits an intermediate `src/data/videos.generated.json` cache (gitignored). Quota cost per run ≈ 200 units (well under the 10k/day default). **Retry-with-exponential-backoff on 403/429/5xx** to ride out Google's edge-cache propagation drift on key-restriction changes — first run hit 403 partway through ("Requests from referer `<empty>` are blocked"); diagnosed as inconsistent cached restrictions across edge nodes after the user loosened the key; retry logic resolves it cleanly.
+- **[scripts/build-videos-registry.js](scripts/build-videos-registry.js)** — reads the JSON cache, applies keyword-based subspecialty classification on playlist title (URPS / GURS / combined; URPS patterns checked first so e.g. "Urethral Mass: Diverticulectomy" doesn't mis-match the broad Urethroplasty rule), then emits typed `src/data/videos.ts`. **Output is chunked into 250-entry constants concatenated into the public `VIDEOS: VideoEntry[]`** — TypeScript otherwise produces a union type too complex to represent (TS2590) at this cardinality (TS 6.0.2). Header marks the file AUTO-GENERATED with the `npm run videos:sync` command.
+- **[.env](#)** (gitignored — added to .gitignore in this commit; the pasted YT_API_KEY was flagged for rotation since it appeared in chat logs) + **[.env.example](.env.example)** committed with a placeholder + link to the Cloud Console setup.
+
+Result: **1,323 unique videos across 122 playlists** auto-tagged 234 combined / 789 GURS / 300 URPS. Real thumbnails, real titles, real durations, real years.
+
+### Topic facet (commit a6815cd)
+
+Added a `topic` field to `VideoEntry` and a `classifyTopic()` function in [build-videos-registry.js](scripts/build-videos-registry.js) that maps each playlist-title prefix to one of **28 clean topic buckets**. Top buckets: 287 Urethroplasty, 203 Upper Tract Reconstruction, 169 Prolapse, 68 Penile Prosthesis, 67 Bladder Reconstruction, 51 OAB/UUI, 46 BPH, 44 Male SUI, 40 Urinary Diversion, 39 Grafts & Flaps, 39 Surgical Technique, 36 Female SUI, 35 Peyronie's Disease, 29 Trauma & Emergencies, 26 Evaluation, 23 Women's Health, 22 Neurourology, 20 Fistula, 16 Gender-Affirming Surgery, 14 Genital Reconstruction, 13 Urethral Mass, 9 Hidden Curriculum, 7 Vaginal Masses, 5 Radiation Therapy, 5 Urethrectomy, 5 Mesh Complications, 3 Pelvic Pain, 2 Other.
+
+Rule ordering catches edge cases: permissive `/^Urethroplas/i` covers both "Urethroplasty" and the misspelled "Urethroplasy" present in one playlist; "Parastomal Hernia Repair" routes to Urinary Diversion (a diversion complication); "Penile Implant: \*" + "Testicular Prosthesis" both → Penile Prosthesis; "Peyronie's: \*" → Peyronie's Disease; "Technique: \*" + "Plastic Surgery Principles" → Surgical Technique.
+
+Exposed in the UI as a third facet alongside subspecialty and playlist. Topic chip rendered on each card. Topic + playlist dropdowns dynamically re-scope to the active subspecialty so no dead options ever appear (e.g., picking Urethroplasty narrows the playlist dropdown to its 18 specific playlists).
+
+### Navbar promotion + subspecialty UI removal (commit fb3d661)
+
+Per user-flagged UX simplification: deleted the GURS / URPS / All subspecialty tabs and the per-card subspecialty chip. Search + topic + playlist were doing all the discriminating work anyway. The `subspecialty` field stays in the registry for any future view that wants it.
+
+Promoted `/video-library` from a Resources subsection to a **top-level navbar item between Special Populations and the Library dropdown** in [docusaurus.config.ts](docusaurus.config.ts). Asset is too valuable (1,323 videos) to live three clicks deep. Footer "Library" group also lists it above Journal Club.
+
+### Lee Zhao card update + tip removal (commit f844261)
+
+His new searchable video library at **[video.leezhaomd.org](https://video.leezhaomd.org)** supersedes the YouTube channel as the canonical resource. Updated his [surgical-video-atlases.mdx](docs/08-resources/surgical-video-atlases.mdx) card to point there, renamed from "Lee C. Zhao MD" → "Lee C. Zhao MD — Video Library". Also dropped the `:::tip` callout about "catalog of sources vs catalog of videos" — redundant signage now that Video Library is in the main nav.
+
+### Navbar restructure: Library dropdown → flat Resources (commit 523d25c)
+
+Now that Video Library is a top-level nav item, the Library dropdown was just three loose links. Replaced with a single **Resources** left-nav link → `/docs/resources`. **Journal Club is hidden from the navbar but the page remains** (reachable via direct URL + footer link). **History & Lineage** moved into the [Resources landing](docs/08-resources/index.mdx) after Hidden Curriculum. Footer column header renamed "Library" → "Resources".
+
+Final navbar: **Foundations · Evaluation · Clinical Conditions · Treatment Atlas · Special Populations · Video Library · Resources** (left) + Search · About · GitHub (right).
+
+### Resources landing reorder + Podcasts rename (commit 956f1ca)
+
+Podcasts page renamed to **"Podcast Library"** (frontmatter title aligned with the page's existing H1). On the Resources landing: Podcast Library moved to sit directly under Videos & Surgical Atlases (parallels the Video Library ↔ Atlases pairing); Quiz moved down to sit under Textbooks. Final order: Videos & Surgical Atlases → Podcast Library → Patient Resources → Textbooks → Quiz → Websites & Online Tools → Hidden Curriculum → History & Lineage.
+
+### Grouped-by-topic + sort dropdown (commits 1d26004 + 949c55d)
+
+Initially added as a Grid / Grouped view toggle with a sort dropdown — five sort modes (Playlist order default / Recently uploaded / Longest first / Shortest first / Alphabetical), and a Grouped view that buckets cards under topic headings with a count chip per section. Group order follows the active sort mode (under "Recently uploaded" the topic with the newest upload appears first).
+
+After user feedback ("the grouped version should just be the default"), **removed the toggle entirely** and made **grouped-by-topic the only view**. The `.vl-view-*` CSS block was deleted along with it. Sort dropdown remains — it now reorders both groups (by first item's sort key) and items within each group.
+
+Also dropped the "About this library" `<details>` block from the page — unnecessary now that the page is in the main nav and the controls are self-explanatory.
+
+### Video Library entry removed from Resources landing (commit cb92370)
+
+Per user feedback ("video library does not need to live in the resources section"). Top-level navbar item replaces the need for a duplicate Resources tile.
+
+### Conventions reinforced
+
+- **API keys pasted into chat are compromised by definition** — they're in terminal scrollback, session logs, and any transcript downstream. Rotate-then-restrict (HTTP referrer for browser keys; IP / "none + secrecy" for server keys) is the only safe path. `.env` must be gitignored *before* the key gets near the repo.
+- **Permissive `.env` gitignore** — plain `.env` was missing from [.gitignore](.gitignore) prior to this session; only `.env.local` / `.env.development.local` / etc. were listed. Added `.env` explicitly.
+- **TypeScript TS2590 cardinality** — at ~1,300+ literal entries with an explicit `: VideoEntry[]` annotation, TS 6.0 still produces "union type too complex to represent" when widening element literals. Workaround: chunk the array (250-entry constants concatenated into the public export). Same pattern will fit any future large auto-generated registry.
+- **Grouped-by-topic is the right default for large libraries.** A flat 1,323-card grid is hard to scan; topic-grouped reads like a textbook TOC and matches how reconstructive surgeons mentally index by procedure. Sort still applies *within* groups; a "playlist order" default keeps each group in the channel's curated sequence.
+- **Hide-from-navbar ≠ delete.** Journal Club's page wasn't removed — only its nav-dropdown entry. Direct URL + footer link preserve access. Easy to re-surface whenever the journal database is ready to grow.
+- **Subspecialty data outlives subspecialty UI.** Removing the GURS / URPS / All tabs didn't touch the `subspecialty` field in `videos.ts` — keeps optionality open for a future filtered view (e.g., a quiz-mode subspecialty filter or a per-subspecialty deep-link) without re-running the pipeline.
+
+### Things to circle back on
+
+- **Curated `articleSlug` back-links.** Zero `articleSlug` values are populated today. Hand-curating playlist-name → wiki-article-slug mapping (e.g., "Urethroplasty: Kulkarni" → `/docs/.../kulkarni-orandi`) would let the **Open article →** chip actually appear on cards. Realistic path: a `scripts/build-article-slug-map.ts` keyed by playlist title with ~120 entries, applied during `videos:build`.
+- **Topic auto-tagging audit.** 28 topics is good shape, but some bucketings are heuristic — "Penile Implant" mapped to **combined** subspecialty (not classified by any GURS pattern); "OAB: Botox" mapped URPS; "Urethrectomy" stayed GURS despite being oncologic-adjacent. Worth a one-pass review before promoting to a public-facing resource.
+- **Rotate `YT_API_KEY`.** Original key was pasted in chat and remains in conversation logs. New key should be IP-restricted (Cloud Run / dev box IP) for server-side use; the browser-side key (referrer-restricted) is a separate credential.
+- **Decompacting auto-generated `videos.ts` diffs.** When the channel grows new playlists, the regenerated file diff is dense (chunked literal arrays). One option: emit each chunk to its own file (`videos-chunk-0.ts`, ...) so diffs stay per-chunk; videos.ts re-exports the union.
+
+---
+
 ## 2026-05-26 — Female AUS expansion + new Urethrolysis page + new Urethrectomy page + rectal-injury management + CI permissions fix + 2 SUFU video link cards + IUGA channel
 
 **9 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across 1,174 files.** Two new procedure pages (Urethrolysis, Urethrectomy), one major section added to an existing foundations page (rectal-injury management on bowel-handling-injury-management), one major section added to an existing procedure page (Female AUS bladder-neck placement on the AUS procedure page), CI permissions fix for the external-links cron, plus three small video-resource additions.
