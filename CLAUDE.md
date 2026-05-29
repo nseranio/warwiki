@@ -4,7 +4,24 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-27 — Video Library at /video-library — 1,323 WARWIKI YouTube videos indexed, faceted, grouped-by-topic, promoted to top-level navbar
+## Current Handoff - 2026-05-29 — Video-resource cards on six pages + Video Library re-sync (1,323 → 1,522 videos)
+
+3 commits, all fast-forwarded to `main`. Lints + typecheck + build clean.
+
+**Video cards on six pages.** Added `## Videos` blocks (VideoCards, immediately before `## References`) sourced from AUA University Core Videos + one obstetric-fistula masterclass: [rigid-cystoscope](docs/01-foundations/tools/instruments/endoscopy/rigid-cystoscope.mdx) (Rigid Cystoscopy 2024), [lowsley-retractor](docs/01-foundations/tools/instruments/urethral-specialty/lowsley-retractor.mdx) (SPT via Lowsley 2024), [frailty](docs/01-foundations/perioperative-care/preoperative-assessment/frailty.mdx) (Geriatric Assessment with SPPB 2025 — placed on the frailty page, not the special-populations geriatric-urology page, because the video is about the SPPB tool the page tabulates), [flexible-cystoscope](docs/01-foundations/tools/instruments/endoscopy/flexible-cystoscope.mdx) (Flexible Cystoscopy ×2, 2025), [mag3-renal-scintigraphy](docs/02-evaluation/imaging/mag3-renal-scintigraphy.mdx) (Pediatric MAG3 2025), [lone-star](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) (Lone Star in Fistula Surgery). **Title/subtitle resolved via YouTube oEmbed** (`https://www.youtube.com/oembed?url=…&format=json`) so cards carry accurate names + source attribution — the standard way to caption a single embed without guessing.
+
+**Video Library re-synced.** User significantly restructured the YouTube playlists; re-ran `npm run videos:sync`. Registry went **122 → 137 playlists, 1,323 → 1,522 unique videos** (1,608 total items, dedup to 1,522). Subspecialty **251 combined / 963 GURS / 308 URPS**. Topic buckets still 28; biggest mover is **Fistula 20 → 110**. New top picks: 298 Urethroplasty, 264 Upper Tract Reconstruction, 177 Prolapse, 110 Fistula, 71 Bladder Reconstruction, 68 Penile Prosthesis. Chunked output now **7 × 250-entry constants** (was 6) — TS2590 guard holds, typecheck clean. `videos.generated.json` stays gitignored; only `videos.ts` committed.
+
+**Conventions reinforced:**
+
+- **Re-sync is a two-command, repo-safe operation.** `npm run videos:sync` (fetch → build) is idempotent; only `src/data/videos.ts` + `stats.json` change in git. Run `npm run typecheck` + `npm run build` after — the chunk count rises with the catalog and the TS2590 guard must be re-verified.
+- **Caption single video embeds from oEmbed, not from memory.** The oEmbed JSON gives the canonical title + author for any YouTube ID; clean it into a short title + subtitle rather than pasting the raw "Core Videos (2025): …" string.
+
+Full session detail in `CHANGELOG.md` under 2026-05-29.
+
+---
+
+## Previous Handoff - 2026-05-27 — Video Library at /video-library — 1,323 WARWIKI YouTube videos indexed, faceted, grouped-by-topic, promoted to top-level navbar
 
 10 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across **1,175 files**.
 

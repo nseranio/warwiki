@@ -6,6 +6,29 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-29 — Video-resource cards on six pages + Video Library re-sync (1,323 → 1,522 videos)
+
+**3 commits, all fast-forwarded to `main`. Lints + typecheck + build clean.**
+
+### AUA Core Curriculum video cards (commits 807f133, 5822e9c)
+
+Added `## Videos` blocks (VideoCards, immediately before `## References`) to six instrument / evaluation / perioperative pages, sourced from AUA University Core Videos and one obstetric-fistula masterclass:
+
+- [rigid-cystoscope.mdx](docs/01-foundations/tools/instruments/endoscopy/rigid-cystoscope.mdx) — Rigid Cystoscopy (2024)
+- [lowsley-retractor.mdx](docs/01-foundations/tools/instruments/urethral-specialty/lowsley-retractor.mdx) — SPT Placement via the Lowsley Retractor (2024)
+- [frailty.mdx](docs/01-foundations/perioperative-care/preoperative-assessment/frailty.mdx) — Geriatric Assessment with the Short Physical Performance Battery (2025); placed on the frailty page rather than the special-populations geriatric-urology page because the video is specifically about the SPPB tool the page already tabulates
+- [flexible-cystoscope.mdx](docs/01-foundations/tools/instruments/endoscopy/flexible-cystoscope.mdx) — Flexible Cystoscopy ×2 (Procedural Techniques + Step-by-Step Guide, 2025)
+- [mag3-renal-scintigraphy.mdx](docs/02-evaluation/imaging/mag3-renal-scintigraphy.mdx) — Pediatric MAG3 Renal Scan (2025)
+- [lone-star.mdx](docs/01-foundations/tools/instruments/retractors/lone-star.mdx) — Lone Star Retractor in Fistula Surgery (Masterclass in Obstetric Fistula)
+
+Video titles/subtitles resolved via the YouTube oEmbed endpoint (`https://www.youtube.com/oembed?url=…&format=json`) so the cards carry accurate names and source attribution.
+
+### Video Library re-sync (commit 21cd21f)
+
+User significantly restructured the WARWIKI YouTube playlists; re-ran `npm run videos:sync` (fetch → build). Registry regenerated from **122 → 137 playlists** and **1,323 → 1,522 unique videos** (1,608 total playlist items; dedup to 1,522). Subspecialty split **251 combined / 963 GURS / 308 URPS** (was 234/789/300). Topic buckets unchanged at 28; new top picks: 298 Urethroplasty, 264 Upper Tract Reconstruction, 177 Prolapse, **110 Fistula** (was 20 — the largest mover), 71 Bladder Reconstruction, 68 Penile Prosthesis, 55 Surgical Technique, 51 OAB/UUI, 47 Urinary Diversion. Chunked output now spans **7 × 250-entry constants** (was 6); TS2590 guard holds — typecheck clean. `src/data/videos.generated.json` remains gitignored; only `src/data/videos.ts` is committed.
+
+---
+
 ## 2026-05-27 — Video Library — searchable, faceted index of 1,323 WARWIKI YouTube videos as a new top-level navbar item
 
 **10 commits, all fast-forwarded to `main`. Lints + typecheck + build clean across 1,175 files.** New `/video-library` standalone page; YouTube Data API pipeline that pulls every video on the WARWIKI channel and emits a typed registry; topic facet derived from playlist names; default grouped-by-topic layout with sort dropdown; promoted from Resources subsection to top-level nav; Library dropdown flattened into a single Resources link.
