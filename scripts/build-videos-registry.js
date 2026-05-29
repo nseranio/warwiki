@@ -149,6 +149,7 @@ function tsEntry(v) {
   ];
   if (v.duration) fields.push(`duration: ${tsString(v.duration)}`);
   if (v.year) fields.push(`year: ${v.year}`);
+  if (v.views != null) fields.push(`views: ${v.views}`);
   return `  { ${fields.join(', ')} },`;
 }
 
@@ -182,6 +183,7 @@ function main() {
         subspecialty,
         duration: item.duration ?? undefined,
         year,
+        views: item.views ?? undefined,
       });
       breakdown[subspecialty]++;
       topicBreakdown[topic] = (topicBreakdown[topic] ?? 0) + 1;
@@ -257,6 +259,8 @@ export interface VideoEntry {
   duration?: string;
   /** Year uploaded (or year procedure performed if known). */
   year?: number;
+  /** Lifetime YouTube view count at last sync — used to rank video selection. */
+  views?: number;
   /** Whether the video has been curator-reviewed (gate for B's auto-injector). */
   curated?: boolean;
 }

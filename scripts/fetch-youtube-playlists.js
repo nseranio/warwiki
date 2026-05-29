@@ -16,16 +16,16 @@
  * Output JSON shape:
  *   {
  *     channelId, channelTitle, fetchedAt,
- *     playlists: [{ id, title, itemCount, items: [{ id, title, publishedAt, duration, position }] }]
+ *     playlists: [{ id, title, itemCount, items: [{ id, title, publishedAt, duration, views, position }] }]
  *   }
  *
  * Notes:
  *   - Uses YouTube Data API v3. Quota cost per run ≈ 1 + N + (P * pages).
  *     For the WARWIKI channel (~90 playlists, ~1500 videos) expect ~200 units —
  *     well under the 10,000/day default quota.
- *   - We fetch contentDetails on each video (one extra batched call per 50
- *     videos) to capture ISO-8601 duration; this is what populates the
- *     `MM:SS` corner badge in the Video Library.
+ *   - We fetch contentDetails + statistics on each video (one batched call per
+ *     50 videos) to capture ISO-8601 duration (the `MM:SS` corner badge) and
+ *     viewCount (used to rank which video to surface on a wiki page).
  */
 
 const fs = require('node:fs');
@@ -146,17 +146,24 @@ async function listPlaylistItems(playlistId) {
   return items;
 }
 
-// videos.list accepts up to 50 IDs at a time for batched contentDetails lookup.
-async function fetchVideoDurations(videoIds) {
+// videos.list accepts up to 50 IDs at a time for a batched lookup. We pull
+// contentDetails (ISO-8601 duration for the corner badge) and statistics
+// (viewCount, used to rank which video to surface on a wiki page) together.
+async function fetchVideoMeta(videoIds) {
   const out = new Map();
   for (let i = 0; i < videoIds.length; i += 50) {
     const batch = videoIds.slice(i, i + 50);
     const data = await api('videos', {
-      part: 'contentDetails',
+      part: 'contentDetails,statistics',
       id: batch.join(','),
     });
     for (const v of data.items ?? []) {
-      out.set(v.id, v.contentDetails.duration);
+      out.set(v.id, {
+        duration: v.contentDetails?.duration ?? null,
+        // viewCount is a string in the API; coerce to number, default 0 for
+        // videos with stats hidden by the uploader.
+        views: v.statistics?.viewCount != null ? Number(v.statistics.viewCount) : 0,
+      });
     }
   }
   return out;
@@ -194,14 +201,16 @@ async function main() {
     process.stdout.write(`  ${pl.title} — ${items.length} items\n`);
   }
 
-  // Batch-fetch durations across all videos.
+  // Batch-fetch duration + view count across all videos.
   const allVideoIds = playlists.flatMap(p => p.items.map(i => i.videoId));
   const uniqueIds = Array.from(new Set(allVideoIds));
-  console.log(`Fetching durations for ${uniqueIds.length} unique videos…`);
-  const durations = await fetchVideoDurations(uniqueIds);
+  console.log(`Fetching duration + views for ${uniqueIds.length} unique videos…`);
+  const meta = await fetchVideoMeta(uniqueIds);
   for (const pl of playlists) {
     for (const item of pl.items) {
-      item.duration = iso8601ToMmss(durations.get(item.videoId));
+      const m = meta.get(item.videoId);
+      item.duration = iso8601ToMmss(m?.duration);
+      item.views = m?.views ?? 0;
     }
   }
 
