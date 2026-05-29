@@ -7,8 +7,8 @@
  * to refresh from the YouTube channel.
  *
  * Source channel: WARWIKI
- * Fetched at:     2026-05-29T21:33:04.642Z
- * Entries:        1522 (combined 251 / GURS 963 / URPS 308)
+ * Fetched at:     2026-05-29T23:14:19.396Z
+ * Entries:        1528 (combined 264 / GURS 956 / URPS 308)
  *
  * Tagging rule of thumb (mirrors the quiz convention):
  *   - GURS:     content the URPS fellowship would not be expected to own
@@ -64,6 +64,19 @@ export interface VideoEntry {
 // inferred element-tuple small enough per chunk while the public VIDEOS
 // constant remains a flat `VideoEntry[]`.
 const CHUNK_0: VideoEntry[] = [
+  { id: "eSmZO4DJ_4Q", title: "Abdominoperineal Posterior Robotic Urethroplasty with Buccal Graft", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "12:34", year: 2025 },
+  { id: "xI411dJauM4", title: "Abdominoperineal posterior urethroplasty after pediatric PFUI", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "05:14", year: 2024 },
+  { id: "fDsHYbTeEvk", title: "Enterourethroplasty", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "08:01", year: 2021 },
+  { id: "0ele5roq2tM", title: "Robotic abdominoperineal urethroplasty after prostatectomy", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "05:27", year: 2024 },
+  { id: "dcp3fjijGjw", title: "Robotic Posterior Urethroplasty with Buccal Graft", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "05:12", year: 2023 },
+  { id: "WNulO30O5WM", title: "Vesicourethral Anastomotic Stricture Reconstruction Using a Combined Perineal and Abdomino Approach", channel: "WARWIKI", playlist: "Lower Tract: Abdominoperineal", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "08:06", year: 2025 },
+  { id: "ui-6o5oUut0", title: "Bladder Neck Contracture Following Radical Prostatectomy", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "44:48", year: 2022 },
+  { id: "RdSfCGMsYBo", title: "Endoscopic Urethroplasty: Treating Bladder Neck & Vesicourethral Anastomotic Stenosis", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "06:42", year: 2025 },
+  { id: "EzHh6hbJb0c", title: "GU Recon Lecture Series: Posterior Urethral Stenosis after Prostate Ca Therapy by Dr. Brian Flynn", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "71:08", year: 2020 },
+  { id: "zMObGZonORY", title: "How to Start Tackling Bladder Neck Reconstruction NARUS 2021 Lecture", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "15:07", year: 2023 },
+  { id: "SjBNof9AYBQ", title: "Managing the Post Radiation Bladder Neck and Proximal Urethral Stricture Challenges", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "18:24", year: 2025 },
+  { id: "fjyKbgdZdh8", title: "Post-Radiation Urethral Strictures, Bladder Neck Contractures, and Rectourethral Fistula:", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "15:05", year: 2022 },
+  { id: "HJ7lvphRH5M", title: "Surgical Management of Refractory Bladder Neck Contracture after BPH Surgery", channel: "WARWIKI", playlist: "Lower Tract: Lectures", topic: "Bladder Reconstruction", subspecialty: "combined", duration: "19:56", year: 2018 },
   { id: "KAegjEmZwLs", title: "Glean™ Modern Urodynamics with Scott A. MacDiarmid, MD, FRCPSC", channel: "WARWIKI", playlist: "Evaluation: Ambulatory Urodynamics", topic: "Evaluation", subspecialty: "combined", duration: "28:59", year: 2025 },
   { id: "ljPQRTDmYF8", title: "Glean™ Urodynamics System: Introducing a New Era of Ambulatory Urodynamics with Dr. Jason Kim", channel: "WARWIKI", playlist: "Evaluation: Ambulatory Urodynamics", topic: "Evaluation", subspecialty: "combined", duration: "14:53", year: 2025 },
   { id: "dfnPt0YQfrQ", title: "How to performe a pelvic floor examination", channel: "WARWIKI", playlist: "Evaluation: GU Physical Exam", topic: "Evaluation", subspecialty: "combined", duration: "13:29", year: 2025 },
@@ -301,6 +314,9 @@ const CHUNK_0: VideoEntry[] = [
   { id: "Fdq0Va1LER8", title: "LoneStar for Fistula surgery", channel: "WARWIKI", playlist: "Technique: Vaginal Surgery", topic: "Surgical Technique", subspecialty: "combined", duration: "07:31", year: 2025 },
   { id: "xMo6f6ewqW0", title: "How I Do It: \"Artery First Approach\" Germany", channel: "WARWIKI", playlist: "Technique: Visceral Rotation", topic: "Surgical Technique", subspecialty: "combined", duration: "04:35", year: 2016 },
   { id: "KVuMiAuw5zc", title: "Left Visceral Rotation (Alan B. Lumsden, MD)", channel: "WARWIKI", playlist: "Technique: Visceral Rotation", topic: "Surgical Technique", subspecialty: "combined", duration: "07:30", year: 2018 },
+];
+
+const CHUNK_1: VideoEntry[] = [
   { id: "yPmgyY_YnxQ", title: "Mattox maneuver", channel: "WARWIKI", playlist: "Technique: Visceral Rotation", topic: "Surgical Technique", subspecialty: "combined", duration: "04:21", year: 2021 },
   { id: "rP0Ay8fuOYw", title: "Multiple organ harvest   1  Both side visceral rotation", channel: "WARWIKI", playlist: "Technique: Visceral Rotation", topic: "Surgical Technique", subspecialty: "combined", duration: "10:55", year: 2019 },
   { id: "DPxiDYzJwcY", title: "Right Visceral Rotation (Alan B. Lumsden, MD)", channel: "WARWIKI", playlist: "Technique: Visceral Rotation", topic: "Surgical Technique", subspecialty: "combined", duration: "05:32", year: 2017 },
@@ -314,9 +330,6 @@ const CHUNK_0: VideoEntry[] = [
   { id: "XceqoM9ZjjA", title: "Bartholin's Gland Excision | Surgical Demonstration | Tips & Tricks | With Dr Pranadeep Reddy", channel: "WARWIKI", playlist: "Vaginal Wall Masses", topic: "Vaginal Masses", subspecialty: "combined", duration: "12:11", year: 2024 },
   { id: "DRDnfCgxuwE", title: "Cisto de bartholin volumoso /  Bulky bartholin cyst", channel: "WARWIKI", playlist: "Vaginal Wall Masses", topic: "Vaginal Masses", subspecialty: "combined", duration: "14:52", year: 2019 },
   { id: "_wl6cGRy_Is", title: "Posterior Vaginal Wall Cyst Excision by Dr. Avijit Basak", channel: "WARWIKI", playlist: "Vaginal Wall Masses", topic: "Vaginal Masses", subspecialty: "combined", duration: "17:47", year: 2018 },
-];
-
-const CHUNK_1: VideoEntry[] = [
   { id: "g3mL2cbL_LY", title: "Vaginal cyst | Every mass per vagina is not prolapse | Vaginal cyst enucleation | Dr Deeksha Pandey", channel: "WARWIKI", playlist: "Vaginal Wall Masses", topic: "Vaginal Masses", subspecialty: "combined", duration: "16:29", year: 2022 },
   { id: "XA05k6BYmjw", title: "Bladder Neck Closure in Women -- Transvaginal AND Transabdominal Approaches Explained", channel: "WARWIKI", playlist: "Bladder Neck Closure", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:51", year: 2024 },
   { id: "_vU-o_8b1V8", title: "4.29.2020 PedsUroFLO Lecture - Reconstruction in Neurogenic Bladder", channel: "WARWIKI", playlist: "Lower Tract: Bladder Augmentation", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "66:51", year: 2021 },
@@ -347,24 +360,21 @@ const CHUNK_1: VideoEntry[] = [
   { id: "VNio_FJO5Is", title: "Bladder Diverticulectomy | Step by Step Procedure |Urology |", channel: "WARWIKI", playlist: "Lower Tract: Bladder Diverticulectomy", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "14:57", year: 2019 },
   { id: "2O8pClLlh-w", title: "Robotic Diverticulectomy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Diverticulectomy", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "06:05", year: 2018 },
   { id: "tK3BGasQ6UA", title: "Robotic diverticulectomy various nuances", channel: "WARWIKI", playlist: "Lower Tract: Bladder Diverticulectomy", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:56", year: 2025 },
-  { id: "ui-6o5oUut0", title: "Bladder Neck Contracture Following Radical Prostatectomy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "44:48", year: 2022 },
+  { id: "EFlRR5iomro", title: "Core Videos (2023): Robotic Bladder Neck Reconstruction: Transvesical Approach", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:45", year: 2026 },
+  { id: "z4J_CA0-HtY", title: "Core Videos (2023): Robotic-Assisted Y-V Plasty of the Bladder Neck", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "06:24", year: 2026 },
   { id: "LUh2KWb9eBU", title: "Flynn Technique for Bladder Neck Reconstruction: Robotic Subtrigonal Buccal Graft Inlay", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:00", year: 2018 },
   { id: "W4Z_RKVBu_o", title: "Full Length Robotic Posterior Urethral Stenosis Excision after Microwave Therapy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "82:37", year: 2025 },
-  { id: "EzHh6hbJb0c", title: "GU Recon Lecture Series: Posterior Urethral Stenosis after Prostate Ca Therapy by Dr. Brian Flynn", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "71:08", year: 2020 },
-  { id: "zMObGZonORY", title: "How to Start Tackling Bladder Neck Reconstruction NARUS 2021 Lecture", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "15:07", year: 2023 },
-  { id: "SjBNof9AYBQ", title: "Managing the Post Radiation Bladder Neck and Proximal Urethral Stricture Challenges", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "18:24", year: 2025 },
   { id: "rDWOB7FQD4M", title: "Multiport Robotic Diverticulectomy and Y-V plasty bladder neck reconstruction", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "03:20", year: 2025 },
-  { id: "fjyKbgdZdh8", title: "Post-Radiation Urethral Strictures, Bladder Neck Contractures, and Rectourethral Fistula:", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "15:05", year: 2022 },
   { id: "qEme42Jip8M", title: "Robotic bladder flap posterior urethroplasty", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:47", year: 2023 },
   { id: "J4DPx_1dR7M", title: "Robotic Bladder Neck Reconstruction  - Ketan K. Badani, MD", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "07:19", year: 2019 },
   { id: "azn_dcF4zE4", title: "Robotic repair of bladder neck disruption after radical prostatectomy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "03:31", year: 2024 },
   { id: "V-cVdrbQmAo", title: "Robotic Urethroplasty after Prostate Cancer Complications 2020", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "14:52", year: 2025 },
+  { id: "r79UZwzFsUE", title: "Robotic Vesicourethral Anastomotic Stricture Repair", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "02:19", year: 2023 },
   { id: "JDcAWhfmYxY", title: "Robotic YV plasty  for Bladder neck contracture after radical prostatectomy and salvage radiotherapy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "08:18", year: 2025 },
   { id: "lxXsVwE0m50", title: "Robotic YV Plasty for Vesicourethral Anastomotic Stenosis Following Radical Prostatectomy", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "06:58", year: 2025 },
-  { id: "HJ7lvphRH5M", title: "Surgical Management of Refractory Bladder Neck Contracture after BPH Surgery", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "19:56", year: 2018 },
+  { id: "_MmubuDqQPw", title: "Robotic-assisted Y-V plasty bladder neck reconstruction", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "03:16", year: 2025 },
   { id: "JayIi-TkJ2Y", title: "V4", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "05:00", year: 2023 },
   { id: "yRIk9Uv63i8", title: "YV Plasty for Bladder Neck Contracture with reconstruction of posterior bladder neck", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "01:55", year: 2024 },
-  { id: "8sdAfd56IRM", title: "YV plasty for neobladder to urethra anastomotic stricture", channel: "WARWIKI", playlist: "Lower Tract: Bladder Neck Reconsruction", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "04:44", year: 2024 },
   { id: "R-x1EJwpcrk", title: "Appendicovesicostomy (Mitrofanoff)", channel: "WARWIKI", playlist: "Lower Tract: Catheterizable Channels", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "05:38", year: 2018 },
   { id: "6UmXRzl4Wh4", title: "Augment and Catheterizable Channels Tips and Tricks", channel: "WARWIKI", playlist: "Lower Tract: Catheterizable Channels", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "10:37", year: 2023 },
   { id: "Htew542mjKQ", title: "Bladder Augmentation (Ileocystoplasty) With Mitrofanoff Procedure For Neurogenic Bladder", channel: "WARWIKI", playlist: "Lower Tract: Catheterizable Channels", topic: "Bladder Reconstruction", subspecialty: "GURS", duration: "03:05", year: 2025 },
@@ -557,6 +567,9 @@ const CHUNK_1: VideoEntry[] = [
   { id: "R5qmlxbk18k", title: "AUA2019 V05-01 Complete demonstration of the radial artery forearm phalloplasty formation", channel: "WARWIKI", playlist: "GAS: Phalloplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "07:55", year: 2019 },
   { id: "xE-Pi-1T0sE", title: "Phalloplasty and associated Procedures | Gladys Y. Ng, MD, MPH | J. Brian Boyd, MD | UCLA", channel: "WARWIKI", playlist: "GAS: Phalloplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "48:01", year: 2021 },
   { id: "aVXgL-l_YJ4", title: "Consultation Prep: Vaginoplasty with Dr. Crane", channel: "WARWIKI", playlist: "GAS: Vaginiplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "11:16", year: 2020 },
+];
+
+const CHUNK_2: VideoEntry[] = [
   { id: "lwEu_iwNCq0", title: "Gender Affirming Surgery: Considerations for Vaginoplasty | Gladys Ng, MD | UCLAMDChat", channel: "WARWIKI", playlist: "GAS: Vaginiplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "28:28", year: 2018 },
   { id: "rEvbqNF1nHo", title: "GU Recon Lecture Series: Vaginoplasty by Dr. Polina Reyblat", channel: "WARWIKI", playlist: "GAS: Vaginiplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "46:23", year: 2020 },
   { id: "U9_zi0NyxVY", title: "IVUmed VVP: Vaginoplasty", channel: "WARWIKI", playlist: "GAS: Vaginiplasty", topic: "Gender-Affirming Surgery", subspecialty: "GURS", duration: "125:58", year: 2022 },
@@ -567,9 +580,6 @@ const CHUNK_1: VideoEntry[] = [
   { id: "7hy-jc0Of3Y", title: "Es’Crutial’Ectomy: Adult Buried Penis Repair is That Important", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "32:27", year: 2022 },
   { id: "RCRWJyZfIOE", title: "Limited Panniculectomy for Adult Buried Penis Repair", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "06:30", year: 2021 },
   { id: "fCI05qIQQcc", title: "Outpatient Panniculectomy and Skin graft for Adult Buried Penis", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "07:00", year: 2021 },
-];
-
-const CHUNK_2: VideoEntry[] = [
   { id: "w9u-6p58xrY", title: "Surgery for Hidden Penis/Buried Penis in Kolkata, India | Dr. Souvik Adhikari MCh, Plastic Surgeon", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "13:37", year: 2021 },
   { id: "EAONJqJFEsc", title: "Surgical repair of buried penis. Prof Liguori Prof Trombetta Department of Urology - Trieste - Italy", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "05:34", year: 2021 },
   { id: "ZPcxeu3lGrU", title: "Surgical treatment of post circumcision trapped penis in a patient with lichen sclerosus project", channel: "WARWIKI", playlist: "Buried Penis Repair", topic: "Genital Reconstruction", subspecialty: "GURS", duration: "10:44", year: 2023 },
@@ -776,6 +786,7 @@ const CHUNK_2: VideoEntry[] = [
   { id: "9el9rD9kTpk", title: "Boari flep uzun üreter onarımı-Extended Boari Flap for Long Ureteral Defects (Dr.F. Fatih ONOL)", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "08:00", year: 2015 },
   { id: "1pmGsn5EFHQ", title: "Boari_flap_Kotov.mp4", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "06:35", year: 2013 },
   { id: "R7YDHTQj0dI", title: "Common Sheath Ureteral Reimplantation and Excision of Ureterocele", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "08:20", year: 2020 },
+  { id: "hxurz6euhgk", title: "Core Videos (2024): Lich-Gregoir Ureteroneocystostomy", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "05:32", year: 2026 },
   { id: "K0ihkM0PL0o", title: "Left tapered Ureteral Reimplant - Dr.  Pippi Salle", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "20:29", year: 2013 },
   { id: "bBVPzoFqx2Q", title: "Psoas hitch and Boari flap for coplete replacement of ureter by Dr,Wadah Ceifo", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "04:12", year: 2013 },
   { id: "FQrk4MYaDRo", title: "UNC VIDEOS  Boari-Technique Complete-Version", channel: "WARWIKI", playlist: "Upper Tract: Open Ureteral Reconstruction", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "34:43", year: 2017 },
@@ -809,6 +820,9 @@ const CHUNK_2: VideoEntry[] = [
   { id: "wXJzctBNqf8", title: "Laparoscopic Right Redo Pyeloplasty (Pelvic Flap Technique) | Surgical Video", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "19:18", year: 2025 },
   { id: "F1qi9phmlig", title: "Left Robot Dismembered Pyeloplasty", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "33:41", year: 2023 },
   { id: "AxV-LNNvVV4", title: "Pediatric Robotic Pyeloplasty", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "09:48", year: 2009 },
+];
+
+const CHUNK_3: VideoEntry[] = [
   { id: "-MyPDWkVge8", title: "Pieloplastia Robótica en Caso Complejo de Estenosis de la UPJ | Técnica de Fenger (Heineke–Mikulicz)", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "06:59", year: 2025 },
   { id: "8WVgnxFLpAM", title: "Pure single-site robot-assisted pyeloplasty with the da Vinci SP surgical system: Initial experience", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "08:38", year: 2019 },
   { id: "OJT7gKU7jjU", title: "Pyeloplasty (Short version) - The Prostate Clinic", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "04:47", year: 2014 },
@@ -820,9 +834,6 @@ const CHUNK_2: VideoEntry[] = [
   { id: "a80BeGdzoC4", title: "Robot Assisted Laparoscopic Pyeloplasty in an Unusual Kidney", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "05:22", year: 2020 },
   { id: "uuOSABe4JS8", title: "Robot-assisted left dismembered pyeloplasty", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "09:31", year: 2021 },
   { id: "kjuppbZXXbo", title: "Robotic Assisted Laparoscopic Dismembered Pyeloplasty (Left)", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "56:05", year: 2022 },
-];
-
-const CHUNK_3: VideoEntry[] = [
   { id: "9-SvLqMsnBU", title: "Robotic Dismembered Spiral Flap Pyeloplasty", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "07:15", year: 2016 },
   { id: "xGnJQVpE4CM", title: "Robotic Dismembered Tubularized Flap Pyeloplasty for Ureteropelvic Junction Obstruction", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "05:01", year: 2021 },
   { id: "SyNCwWgJ7gQ", title: "Robotic Infant Pyeloplasty (SSi Mantra)", channel: "WARWIKI", playlist: "Upper Tract: Robotic Pyeloplasty", topic: "Upper Tract Reconstruction", subspecialty: "GURS", duration: "11:35", year: 2024 },
@@ -946,11 +957,6 @@ const CHUNK_3: VideoEntry[] = [
   { id: "w4_UNTTJtsw", title: "Prophylactic Prepubic Urethrectomy During Radical Cystoprostatectomy", channel: "WARWIKI", playlist: "Urethrectomy", topic: "Urethrectomy", subspecialty: "GURS", duration: "14:20", year: 2011 },
   { id: "89muWmsF8Uc", title: "UNC VIDEOS Urethrectomy & Conversion to Bricker Conduit for Urethral Tumor", channel: "WARWIKI", playlist: "Urethrectomy", topic: "Urethrectomy", subspecialty: "GURS", duration: "04:11", year: 2017 },
   { id: "L0A1YwaVOAk", title: "Video  Male Total Urethrectomy   Campbell Walsh Urology   Videos", channel: "WARWIKI", playlist: "Urethrectomy", topic: "Urethrectomy", subspecialty: "GURS", duration: "07:43", year: 2023 },
-  { id: "eSmZO4DJ_4Q", title: "Abdominoperineal Posterior Robotic Urethroplasty with Buccal Graft", channel: "WARWIKI", playlist: "Urethroplasty: Abdominoperineal", topic: "Urethroplasty", subspecialty: "GURS", duration: "12:34", year: 2025 },
-  { id: "xI411dJauM4", title: "Abdominoperineal posterior urethroplasty after pediatric PFUI", channel: "WARWIKI", playlist: "Urethroplasty: Abdominoperineal", topic: "Urethroplasty", subspecialty: "GURS", duration: "05:14", year: 2024 },
-  { id: "fDsHYbTeEvk", title: "Enterourethroplasty", channel: "WARWIKI", playlist: "Urethroplasty: Abdominoperineal", topic: "Urethroplasty", subspecialty: "GURS", duration: "08:01", year: 2021 },
-  { id: "0ele5roq2tM", title: "Robotic abdominoperineal urethroplasty after prostatectomy", channel: "WARWIKI", playlist: "Urethroplasty: Abdominoperineal", topic: "Urethroplasty", subspecialty: "GURS", duration: "05:27", year: 2024 },
-  { id: "dcp3fjijGjw", title: "Robotic Posterior Urethroplasty with Buccal Graft", channel: "WARWIKI", playlist: "Urethroplasty: Abdominoperineal", topic: "Urethroplasty", subspecialty: "GURS", duration: "05:12", year: 2023 },
   { id: "3i3bHtz98hw", title: "Augmentation Urethroplasty (Dorsal Onlay BMG) | AINU Surgical Videos", channel: "WARWIKI", playlist: "Urethroplasty: Bulbar", topic: "Urethroplasty", subspecialty: "GURS", duration: "36:08", year: 2025 },
   { id: "o_NvVmgOkc0", title: "BMG Urethroplasty by Dr Daniela Andrich during PENRECON 22(unedited) @Bodylinehospitals", channel: "WARWIKI", playlist: "Urethroplasty: Bulbar", topic: "Urethroplasty", subspecialty: "GURS", duration: "254:45", year: 2024 },
   { id: "cPhYwQhLYFI", title: "Bulbospongiosus Conserving Dorsal Oral mucosal graft urethroplasty", channel: "WARWIKI", playlist: "Urethroplasty: Bulbar", topic: "Urethroplasty", subspecialty: "GURS", duration: "12:14", year: 2023 },
@@ -977,7 +983,6 @@ const CHUNK_3: VideoEntry[] = [
   { id: "2LFKeXfRtj4", title: "Double faced, Dorsal Inlay & Ventral Onlay Buccal Mucosa Urethroplasty for Bulbar Urethral Stricture", channel: "WARWIKI", playlist: "Urethroplasty: Double Face", topic: "Urethroplasty", subspecialty: "GURS", duration: "07:31", year: 2016 },
   { id: "93ICiVkF0mE", title: "SBK Double Face BMG for near obliterative bulbar urethral stricture", channel: "WARWIKI", playlist: "Urethroplasty: Double Face", topic: "Urethroplasty", subspecialty: "GURS", duration: "04:40", year: 2017 },
   { id: "W8kuaDD5lH8", title: "Detailed approach to TUITMR", channel: "WARWIKI", playlist: "Urethroplasty: Endoscopic", topic: "Urethroplasty", subspecialty: "GURS", duration: "23:06", year: 2022 },
-  { id: "RdSfCGMsYBo", title: "Endoscopic Urethroplasty: Treating Bladder Neck & Vesicourethral Anastomotic Stenosis", channel: "WARWIKI", playlist: "Urethroplasty: Endoscopic", topic: "Urethroplasty", subspecialty: "GURS", duration: "06:42", year: 2025 },
   { id: "1UGrKjQ6cM8", title: "TAMIS - technical tips on using LSI device PART 2 (for surgeons and surgical techs)", channel: "WARWIKI", playlist: "Urethroplasty: Endoscopic", topic: "Urethroplasty", subspecialty: "GURS", duration: "10:32", year: 2014 },
   { id: "rYqf9ecAHvs", title: "TAMIS:  Technical details of how to use the LSI Device (for surgical techs & CR Surgeons)", channel: "WARWIKI", playlist: "Urethroplasty: Endoscopic", topic: "Urethroplasty", subspecialty: "GURS", duration: "14:59", year: 2014 },
   { id: "sAqsyUy_Zr8", title: "TUITMR for GURS 2022", channel: "WARWIKI", playlist: "Urethroplasty: Endoscopic", topic: "Urethroplasty", subspecialty: "GURS", duration: "09:18", year: 2022 },
@@ -1068,14 +1073,14 @@ const CHUNK_3: VideoEntry[] = [
   { id: "m7TrdZFg-rM", title: "Buccal Mucosal Graft (BMG) Urethroplasty", channel: "WARWIKI", playlist: "Urethroplasty: Kulkarni", topic: "Urethroplasty", subspecialty: "GURS", duration: "10:58", year: 2020 },
   { id: "_iMacUkwL8c", title: "Kulkarni urethroplasty - dorsolateral approach to a proximal urethral stricture", channel: "WARWIKI", playlist: "Urethroplasty: Kulkarni", topic: "Urethroplasty", subspecialty: "GURS", duration: "04:01", year: 2023 },
   { id: "dj2oISjgNzU", title: "V04-01: Preputial Spiral Graft Urethroplasty for Panurethral Stricture", channel: "WARWIKI", playlist: "Urethroplasty: Kulkarni", topic: "Urethroplasty", subspecialty: "GURS", duration: "07:28", year: 2026 },
+];
+
+const CHUNK_4: VideoEntry[] = [
   { id: "rwY1Opkn4cU", title: "#498 PREDICTING FACTORS FOR SUCCESSFUL URETHROPLASTY; A SINGLE CENTRE STUDY", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "04:34", year: 2019 },
   { id: "OXci1cij5qU", title: "4.5.2021 Urology COViD Didactics - Management of Failed Urethroplasty", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "31:54", year: 2021 },
   { id: "DK4ysO43MYE", title: "4.7.2020 Urology COViD Didactics - AUA Urethral Stricture Guidelines", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "59:34", year: 2020 },
   { id: "a8oI5sZ1Yi0", title: "4.9.2020 Urology COViD Didactics - Pelvic Fracture Urethral Injury", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "50:36", year: 2021 },
   { id: "6L5Eqg8qXNw", title: "Anterior Urethroplasty: A Primer for Part Time Plubmers with Dr. Ryan P. Terlecki", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "11:48", year: 2025 },
-];
-
-const CHUNK_4: VideoEntry[] = [
   { id: "YGjN9tZSo7A", title: "AUA Urethral Stricture Guideline Review", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "18:26", year: 2022 },
   { id: "pXpBgQmUDRI", title: "Augmentation (BMG) Urethroplasty Dorsal versus Ventral approach", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "59:11", year: 2021 },
   { id: "1L15NnnGH6k", title: "Aula uretroplastia posterior e pan-estenose com Pankaj Joshi, Pune - India", channel: "WARWIKI", playlist: "Urethroplasty: Lectures", topic: "Urethroplasty", subspecialty: "GURS", duration: "100:39", year: 2021 },
@@ -1290,6 +1295,7 @@ const CHUNK_4: VideoEntry[] = [
   { id: "drJVq71jp70", title: "Robotic Surgery for Ureteroileal Stricture | Ureter Reimplantation After Urinary Diversion", channel: "WARWIKI", playlist: "Urinary Diversion: Revision", topic: "Urinary Diversion", subspecialty: "GURS", duration: "05:57", year: 2025 },
   { id: "KWjWc5NUIUI", title: "Robotic Ureteral Reimplantation into Ileal Conduit Urinary Diversion", channel: "WARWIKI", playlist: "Urinary Diversion: Revision", topic: "Urinary Diversion", subspecialty: "GURS", duration: "06:43", year: 2018 },
   { id: "E80ExM3H5h8", title: "Ureteroenteric stricture repaired with flap from ileal conduit", channel: "WARWIKI", playlist: "Urinary Diversion: Revision", topic: "Urinary Diversion", subspecialty: "GURS", duration: "01:25", year: 2023 },
+  { id: "8sdAfd56IRM", title: "YV plasty for neobladder to urethra anastomotic stricture", channel: "WARWIKI", playlist: "Urinary Diversion: Revision", topic: "Urinary Diversion", subspecialty: "GURS", duration: "04:44", year: 2024 },
   { id: "7O1tUxz-Z84", title: "V03-03: Adjustable Continence Therapy for Stress Urinary Incontinence: A Minimally Invasive Solution", channel: "WARWIKI", playlist: "Female SUI: Adjustable Continence Therapy", topic: "Female SUI", subspecialty: "URPS", duration: "07:58", year: 2026 },
   { id: "Wy9xwFa46_U", title: "#518 New technique of robot-assisted implantation of artificial urinary sphincter by posterior a...", channel: "WARWIKI", playlist: "Female SUI: AUS", topic: "Female SUI", subspecialty: "URPS", duration: "05:16", year: 2020 },
   { id: "x9Ce7qyLFWk", title: "preperitoneal robotic female artificial urinary sphincter implantation", channel: "WARWIKI", playlist: "Female SUI: AUS", topic: "Female SUI", subspecialty: "URPS", duration: "07:12", year: 2024 },
@@ -1320,15 +1326,15 @@ const CHUNK_4: VideoEntry[] = [
   { id: "uky9uDsy9PI", title: "Transvaginal Sling Excision (Graphic)", channel: "WARWIKI", playlist: "Female SUI: Sling excision & Urethrolysis", topic: "Female SUI", subspecialty: "URPS", duration: "07:00", year: 2016 },
   { id: "UunR7Qy27bk", title: "TVT Sonrası Üretra Tıkanıklığı - Prof. Dr. Levent Emir", channel: "WARWIKI", playlist: "Female SUI: Sling excision & Urethrolysis", topic: "Female SUI", subspecialty: "URPS", duration: "08:10", year: 2020 },
   { id: "4N1F4P4tLO4", title: "Urethrolysis and Martius flap", channel: "WARWIKI", playlist: "Female SUI: Sling excision & Urethrolysis", topic: "Female SUI", subspecialty: "URPS", duration: "07:37", year: 2019 },
+];
+
+const CHUNK_5: VideoEntry[] = [
   { id: "Wj9PtI7Pqcc", title: "Urethrolysis and Martius flap for failed sling and fixed urethra", channel: "WARWIKI", playlist: "Female SUI: Sling excision & Urethrolysis", topic: "Female SUI", subspecialty: "URPS", duration: "08:34", year: 2018 },
   { id: "bNECPGtfIQ8", title: "Urethrolysis complication", channel: "WARWIKI", playlist: "Female SUI: Sling excision & Urethrolysis", topic: "Female SUI", subspecialty: "URPS", duration: "02:48", year: 2017 },
   { id: "Jb3cC2y4aeM", title: "#686 OUTCOMES OF BOTULINUM TOXIN A IN THE TREATMENT OF PRIMARY BLADDER NECK OBSTRUCTION", channel: "WARWIKI", playlist: "Female: Bladder Outlet Obstruction", topic: "Female SUI", subspecialty: "URPS", duration: "06:31", year: 2019 },
   { id: "3viYzNqt7ts", title: "Female Bladder Outlet Obstruction", channel: "WARWIKI", playlist: "Female: Bladder Outlet Obstruction", topic: "Female SUI", subspecialty: "URPS", duration: "43:59", year: 2022 },
   { id: "OkmPYXb3FSo", title: "GU Recon Lecture Series: Female Bladder Outlet Obstruction by Dr. Jessica DeLong", channel: "WARWIKI", playlist: "Female: Bladder Outlet Obstruction", topic: "Female SUI", subspecialty: "URPS", duration: "60:24", year: 2020 },
   { id: "6Ybt5BDcHYw", title: "Primary Bladder Neck Obstruction", channel: "WARWIKI", playlist: "Female: Bladder Outlet Obstruction", topic: "Female SUI", subspecialty: "URPS", duration: "08:01", year: 2025 },
-];
-
-const CHUNK_5: VideoEntry[] = [
   { id: "obg7H_GUjPE", title: "Urethrolysis and Martius flap for urinary stress incontinence with fixed urethra", channel: "WARWIKI", playlist: "Female: Bladder Outlet Obstruction", topic: "Female SUI", subspecialty: "URPS", duration: "07:03", year: 2018 },
   { id: "Q53zGSo3yQQ", title: "ERN eUROGEN Webinar 62: How to remove mesh", channel: "WARWIKI", playlist: "Mesh Compilations", topic: "Mesh Complications", subspecialty: "URPS", duration: "51:12", year: 2023 },
   { id: "h04pY2zl-aw", title: "Robotic full removal of TOT sling", channel: "WARWIKI", playlist: "Mesh Compilations", topic: "Mesh Complications", subspecialty: "URPS", duration: "09:20", year: 2024 },
@@ -1573,15 +1579,15 @@ const CHUNK_5: VideoEntry[] = [
   { id: "mYql13bETNE", title: "Surgical Management of Urethral Diverticulum", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "06:33", year: 2025 },
   { id: "8LYl96Ro_Kw", title: "Urethral Diverticulectomy by Dr. Christopher Hollowell", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "15:34", year: 2023 },
   { id: "q7wW_5ppZtY", title: "Urethral Diverticulum", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "07:01", year: 2020 },
+];
+
+const CHUNK_6: VideoEntry[] = [
   { id: "XMm7JeHmp5k", title: "Urethral Diverticulum", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "08:34", year: 2017 },
   { id: "yikIpOPg2wc", title: "Urethral Diverticulum | Surgical Demonstration | Dr Deeksha Pandey with Dr Pranadeep Dr Sirisha", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "18:27", year: 2024 },
   { id: "lEo4Iu8f3D0", title: "Urethral Diverticulum with Martius Flap Interposition and Pelvic Floor Ultrasound.", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Diverticulectomy", topic: "Urethral Mass", subspecialty: "URPS", duration: "06:39", year: 2020 },
   { id: "vFEgHDxYMzU", title: "Thrombosed postpartum urethral prolapse", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Prolapse Excision", topic: "Urethral Mass", subspecialty: "URPS", duration: "05:52", year: 2017 },
   { id: "_EcP3W6rHlA", title: "urethral mucosal prolapse excision", channel: "WARWIKI", playlist: "Urethral Mass: Urethral Prolapse Excision", topic: "Urethral Mass", subspecialty: "URPS", duration: "06:23", year: 2019 },
   { id: "POBLZ63TQz4", title: "Cervical Cancer Screening Updates | Women's Health", channel: "WARWIKI", playlist: "Women's Health: Cervical Cancer Screening", topic: "Women's Health", subspecialty: "URPS", duration: "47:35", year: 2024 },
-];
-
-const CHUNK_6: VideoEntry[] = [
   { id: "GXTQNkdZOMo", title: "Sexual Dysfunction Disorders in Women | Women's Health", channel: "WARWIKI", playlist: "Women's Health: Female Sexual Dysfunction", topic: "Women's Health", subspecialty: "URPS", duration: "74:31", year: 2024 },
   { id: "RkmRqnwky7o", title: "4.19.2021 Urology COViD Didactics - The Genitourinary Syndrome of Menopause", channel: "WARWIKI", playlist: "Women's Health: Genitourinary Syndrome of Menopause", topic: "Women's Health", subspecialty: "URPS", duration: "32:49", year: 2021 },
   { id: "hFCM6RHSwVs", title: "FREE Webinar for Clinicians: Treating Genitourinary Syndrome of Menopause (GSM)", channel: "WARWIKI", playlist: "Women's Health: Genitourinary Syndrome of Menopause", topic: "Women's Health", subspecialty: "URPS", duration: "65:45", year: 2024 },
