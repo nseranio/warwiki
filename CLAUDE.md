@@ -4,7 +4,21 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-30 (later) — New Surgical Scrub & Hand Antisepsis page
+## Current Handoff - 2026-05-30 (later 2) — Landmark Trials expanded 21 → 42
+
+2 commits, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
+
+Grew the [Journal Club Landmark Trials database](src/data/trials.ts) from 21 → 42, adding three new domains: **Sexual Medicine** (Sildenafil pivotal, IMPRESS, RestoreX), **Surgical / Perioperative** (STITCH, Darouiche, ChEETAh), **Fecal Incontinence** (CAPABLe). Also filled SUI (Ward-Hilton, SIMS, ATLAS), OAB (Ginsberg-NDO, InSite, EMPOWUR), POP (Altman TVM), Male SUI (MASTER, InhibiZone), and BPH device trials (L.I.F.T., Rezūm, WATER, PINNACLE, CombAT).
+
+**Every trial's facts + DOI were verified by literature search — none from memory.** Scope guard held: no stone/endourology or primary-cancer trials; BPH entries are the device/procedure trials, not pure medical therapy. New domains were added by appending to `DOMAIN_ORDER` in [LandmarkTrials.tsx](src/components/LandmarkTrials.tsx); the filter updates from the data. Registry/cohort (non-RCT) entries carry a `caveat` flag (InhibiZone, AUS-COT).
+
+Final domain spread (42): Stress 7 · Mixed 1 · OAB 7 · Fecal 1 · POP 8 · Urethral Stricture 3 · Male SUI/Prosthetics 3 · Sexual Medicine 3 · BPH 6 · Surgical/Perioperative 3.
+
+Full session detail in `CHANGELOG.md` under 2026-05-30 (later 2).
+
+---
+
+## Previous Handoff - 2026-05-30 (later) — New Surgical Scrub & Hand Antisepsis page
 
 1 commit, fast-forwarded to `main`. Lint + build clean.
 

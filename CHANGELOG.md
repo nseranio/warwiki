@@ -6,6 +6,37 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-30 (later 2) — Landmark Trials expanded 21 → 42
+
+**2 commits, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.** Grew the [Journal Club Landmark Trials database](src/data/trials.ts) from 21 to 42 trials, adding three new domains (Sexual Medicine, Surgical / Perioperative, Fecal Incontinence). Every trial's facts and DOI were verified by literature search this session — no figures from memory. Per the user's "more the merrier" with the standing "no stone / no cancer" scope guard.
+
+### Round 1 — +9 trials (commit ecaedc0)
+
+- **Sexual Medicine (new domain):** Sildenafil pivotal (Goldstein, NEJM 1998 — 69% vs 22% successful intercourse), IMPRESS I & II (collagenase for Peyronie's, J Urol 2013 — 34% vs 18% curvature), RestoreX RCT (penile traction, J Urol 2019).
+- **Male SUI:** MASTER (sling vs AUS, Eur Urol 2021 — sling noninferior on continence, AUS better on secondary outcomes).
+- **OAB / Urgency:** Ginsberg NDO phase-3 (onabotA 200 U for neurogenic detrusor overactivity, J Urol 2012).
+- **BPH:** CombAT (dutasteride + tamsulosin, Eur Urol 2010).
+- **Surgical / Perioperative (new domain):** STITCH (small-bites closure, Lancet 2015 — hernia 13% vs 21%), Darouiche (CHG-alcohol vs povidone skin prep, NEJM 2010 — SSI 9.5% vs 16.1%), ChEETAh (glove + instrument change, Lancet 2022 — SSI 16.0% vs 18.9%). These tie directly to the wound-closure, skin-antisepsis, and gloving foundations pages.
+
+### Round 2 — +12 trials (commit d1836ac)
+
+- **Stress Incontinence:** Ward-Hilton (TVT vs colposuspension, BMJ 2002 — the sling-establishing trial), SIMS (mini-sling vs MUS, NEJM 2022), ATLAS (pessary vs behavioral, Obstet Gynecol 2010).
+- **OAB / Urgency:** InSite (sacral neuromodulation vs medical therapy, Neurourol Urodyn 2015 — 61% vs 42%), EMPOWUR (vibegron, J Urol 2020).
+- **Fecal Incontinence (new domain):** CAPABLe (biofeedback / loperamide, Lancet Gastroenterol Hepatol 2019 — no clear winner).
+- **Pelvic Organ Prolapse:** Altman Nordic TVM (transvaginal mesh vs colporrhaphy, NEJM 2011 — more durable but mesh-specific harms; kits later FDA-withdrawn).
+- **BPH / Male LUTS:** L.I.F.T. (UroLift, J Urol 2013), Rezūm (water vapor, J Urol 2016), WATER (Aquablation vs TURP, J Urol 2018), PINNACLE (Optilume BPH drug-coated balloon, J Urol 2023). All ejaculation-sparing device trials — the reconstructively-relevant slice of BPH.
+
+**Final distribution (42):** Stress Incontinence 7 · Mixed 1 · OAB/Urgency 7 · Fecal Incontinence 1 · Pelvic Organ Prolapse 8 · Urethral Stricture 3 · Male SUI/Prosthetics 3 · Sexual Medicine 3 · BPH/Male LUTS 6 · Surgical/Perioperative 3.
+
+**Conventions reinforced:**
+
+- **Verify, don't recall.** Every trial's N, effect size, journal, year, and DOI was confirmed by literature search before writing — facts are sourced to the primary papers, not produced from memory.
+- **Scope guard held:** no stone/endourology or primary-cancer-oncology trials. BPH entries are deliberately the *device/procedure* trials (UroLift, Rezūm, Aquablation, Optilume, MTOPS, CombAT), which fit the functional/reconstructive lens better than pure medical-therapy studies.
+- **Registry/cohort entries are labeled.** Non-RCT but practice-defining studies (InhibiZone, AUS-COT) carry a `caveat` field flagging the distinction so the table doesn't overstate evidence level.
+- **Two new domains added by appending to `DOMAIN_ORDER`** in [LandmarkTrials.tsx](src/components/LandmarkTrials.tsx) — domain filter and ordering update automatically from the data.
+
+---
+
 ## 2026-05-30 (later) — New Surgical Scrub & Hand Antisepsis page
 
 **1 commit, fast-forwarded to `main`. Lint + build clean.** Added [surgical-hand-antisepsis.mdx](docs/01-foundations/perioperative-care/intraoperative-care/surgical-hand-antisepsis.mdx) in the Intraoperative Care aseptic-technique cluster (`sidebar_position: 6.5`, between Draping & Skin Antisepsis and Surgical Gloving — the real scrub → glove workflow order). Covers both accepted techniques (water-based CHG/povidone scrub: 2-min minimum, 5-min first / 3-min subsequent, nail pick not brush, CHG > povidone on CFU; waterless ABHR: 4–6 mL, stay wet, three-aliquot technique, 90-sec floor, less skin damage), shared principles (no brushes, remove artificial nails, soap-and-water when soiled or for *C. difficile*, 15-sec non-surgical minimum), and the rub-vs-scrub equivalence bottom line (Feng 2020 meta — 7 trials / 764 HCWs, no CFU difference; WHO 2016; Tanner Cochrane 2016). 7 refs, framed for long GU/prosthetic cases. Cross-linked bidirectionally with Gloving and Draping (distinguishes surgeon-side hand antisepsis from patient-side skin antisepsis). NEJM "Waterless Scrub Technique" figure intentionally omitted — copyrighted, no usable embed (house rule against caption-only figure blocks); the NEJM technique ref is cited inline instead.
