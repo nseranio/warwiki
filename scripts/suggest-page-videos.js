@@ -36,6 +36,15 @@ function opt(name, fallback) {
 const TOP = parseInt(opt('top', '5'), 10);
 const MIN = parseInt(opt('min', '4'), 10); // relevance floor to be a candidate
 const JSON_OUT = opt('json', null);
+// --lectures restricts candidates to lecture/didactic content (a "*: Lectures"
+// playlist or a lecture-style title) — used for condition pages, which read
+// better with an overview talk than a step-by-step technique clip.
+const LECTURES_ONLY = argv.includes('--lectures');
+const LECTURE_TITLE_RE =
+  /\b(lecture|overview|didactic|grand rounds|webinar|principles|evaluation and management|management of|approach to|update|state of the art|masterclass|how i|tips and tricks|review)\b/i;
+function isLecture(v) {
+  return /lectures?\b/i.test(v.playlist) || LECTURE_TITLE_RE.test(v.title);
+}
 const explicitFiles = argv.filter(a => a.endsWith('.mdx'));
 const DIRS = explicitFiles.length
   ? []
@@ -176,7 +185,8 @@ function main() {
     const pageTokens = Array.from(
       new Set([...tokenize(meta.title), ...tokenize(meta.h1), ...tokenize(meta.slug)]),
     );
-    const scored = vids
+    const pool = LECTURES_ONLY ? vids.filter(isLecture) : vids;
+    const scored = pool
       .map(v => ({ v, rel: relevance(pageTokens, v) }))
       .filter(x => x.rel >= MIN)
       .sort((a, b) => b.rel - a.rel || b.v.blend - a.v.blend)
