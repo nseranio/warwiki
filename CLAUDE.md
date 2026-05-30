@@ -4,7 +4,27 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-29 (later) — Condition→atlas link audit + view-count pipeline + video matcher + ~108-page video rollout
+## Current Handoff - 2026-05-30 — Journal Club rebuilt as a Landmark Trials database
+
+3 commits, all fast-forwarded to `main`. Typecheck + lint + build clean; Vitest 6/6.
+
+**New direction for Journal Club:** it's now a curated **must-know trials** database — click a trial, learn the home-run facts fast — not a broad literature index.
+
+- **[src/data/trials.ts](src/data/trials.ts)** — 21 landmark trials across 7 domains (SUI, Mixed UI, OAB/Urgency, POP, Urethral Stricture, Male SUI/Prosthetics, BPH). Each is a "home-run snippet": `bottomLine` first, then population/comparison/primaryOutcome/result/guidelineImpact/caveat + `doi`. **Add a trial = append one typed object.**
+- **[src/components/LandmarkTrials.tsx](src/components/LandmarkTrials.tsx)** — searchable, domain-filterable table; **rows expand in place** to a key-facts panel (no per-trial pages). `.lt-*` CSS in custom.css.
+- **Replaced entirely:** retired the old 80-article Journal Database + Guidelines & White Papers pages and deleted the now-unused `JournalTable.tsx`/test/`journals.ts`. [journal-club/index.mdx](docs/06-journal-club/index.mdx) is trials-only.
+- **Surfaced at the top of the [Resources landing](docs/08-resources/index.mdx)** (kept off the top navbar).
+
+**Conventions:**
+
+- **Landmark Trials curation bar** — a trial earns a slot only if a fellowship-trained reconstructive surgeon / urogynecologist would know it on sight (set a standard, settled a debate, changed the workup). Codified in the `trials.ts` docblock.
+- **Process note (cost lesson):** stacking many speculative parallel tool calls before facts land caused several edits to apply against stale/garbled file reads and silently fail (wrong anchors), plus a bundled commit that needed an undo. Cleaner pattern here: read → edit → verify in small sequential batches, and gate on `EnterPlanMode`/answers before fanning out.
+
+Full session detail in `CHANGELOG.md` under 2026-05-30.
+
+---
+
+## Previous Handoff - 2026-05-29 (later) — Condition→atlas link audit + view-count pipeline + video matcher + ~108-page video rollout
 
 6 commits, all fast-forwarded to `main`. Lint + typecheck + build clean (1,175 files).
 

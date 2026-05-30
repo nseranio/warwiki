@@ -6,6 +6,31 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-30 — Journal Club rebuilt as a Landmark Trials database
+
+**3 commits, all fast-forwarded to `main`. Typecheck + lint + build clean; Vitest 6/6.** Per a new direction, the Journal Club section was redirected from a broad literature index into a curated, must-know **trials** database — click a trial, learn the home-run facts fast.
+
+### New data + component (commit 217e82e)
+
+- **[src/data/trials.ts](src/data/trials.ts)** — 21 high-yield trials across 7 domains (Stress Incontinence, Mixed UI, OAB/Urgency, Pelvic Organ Prolapse, Urethral Stricture, Male SUI/Prosthetics, BPH). Each entry is a "home-run snippet": `bottomLine` first, then `population` / `comparison` / `primaryOutcome` / `result` / optional `guidelineImpact` + `caveat`, plus `doi`. Trials: SISTEr, TOMUS, VALUE, OPUS, OPTIMAL, CARE, PROSPECT, Apical Suspension (2024 JAMA Surg), SUPeR, SAVE-U, SAM (Manchester), ABC, ROSETTA, SUmiT, OrBIT, ESTEEM, OPEN, Scandinavian Urethroplasty, ROBUST, AUS-COT, MTOPS. Beyond the user's seed list I added ROSETTA, SUmiT, OrBIT, SAM/Manchester, OPUS, MTOPS, AUS-COT as field-defining studies.
+- **[src/components/LandmarkTrials.tsx](src/components/LandmarkTrials.tsx)** — searchable, domain-filterable table; **each row expands in place** to the key-facts panel (no per-trial pages). Domain-ordered, "N of 21 trials" count, deep-links to the paper via DOI.
+- **`.lt-*` CSS** block in [custom.css](src/css/custom.css) — expandable rows, bottom-line callout, fact grid, dark-mode variants, mobile single-column.
+
+### Replace entirely (commit 217e82e)
+
+The old searchable 80-article **Journal Database** and the **Guidelines & White Papers** pages were retired; the trials table is now the whole section. [journal-club/index.mdx](docs/06-journal-club/index.mdx) is trials-only. Repointed the one real inbound link (pelvic-organ-prolapse See Also) to `/docs/journal-club`. Surfaced **Journal Club — Landmark Trials** at the top of the [Resources landing](docs/08-resources/index.mdx) (kept off the top navbar).
+
+### Cleanup (commit a56d3b8)
+
+Deleted the now-unreferenced `JournalTable.tsx`, its test, and `journals.ts` (the 80-article source). Vitest drops 8→6 tests, all passing.
+
+**Conventions reinforced:**
+
+- **Curation bar for Landmark Trials** — a trial earns a slot only if a fellowship-trained reconstructive surgeon or urogynecologist would know it on sight (set a standard, settled a debate, or changed the workup). Codified in the `trials.ts` docblock.
+- **Centralize trial data, render uniformly.** All content lives in `trials.ts`; the component is the single renderer — add a trial by appending one typed object.
+
+---
+
 ## 2026-05-29 (later) — Condition→atlas link audit + view-count pipeline + matcher tool + ~108-page video rollout
 
 **6 commits, all fast-forwarded to `main`. Lint + typecheck + build clean (1,175 files).** A two-front initiative: (1) make every clinical-condition page hop cleanly to its management pages in the Treatment Atlas, and (2) scale up video embedding across the clinical core, ranked by views + recency.
