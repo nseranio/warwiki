@@ -11,6 +11,7 @@ const DOMAIN_ORDER = [
   'Stress Incontinence',
   'Mixed Incontinence',
   'OAB / Urgency Incontinence',
+  'Fecal Incontinence',
   'Pelvic Organ Prolapse',
   'Urethral Stricture',
   'Male SUI / Prosthetics',
