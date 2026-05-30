@@ -4,7 +4,17 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-30 — Journal Club rebuilt as a Landmark Trials database
+## Current Handoff - 2026-05-30 (later) — New Surgical Scrub & Hand Antisepsis page
+
+1 commit, fast-forwarded to `main`. Lint + build clean.
+
+Added [surgical-hand-antisepsis.mdx](docs/01-foundations/perioperative-care/intraoperative-care/surgical-hand-antisepsis.mdx) (Intraoperative Care, `sidebar_position: 6.5` — between Draping & Skin Antisepsis and Surgical Gloving, matching scrub → glove order). Both accepted techniques (water-based CHG/povidone scrub; waterless ABHR) with the rub-vs-scrub equivalence evidence (Feng 2020 meta, WHO 2016, Tanner Cochrane 2016), framed for long GU/prosthetic cases. Cross-linked with Gloving + Draping; distinguishes surgeon-side hand antisepsis from patient-side skin antisepsis. Copyrighted NEJM figure omitted (house rule), ref cited inline.
+
+Full session detail in `CHANGELOG.md` under 2026-05-30 (later).
+
+---
+
+## Previous Handoff - 2026-05-30 — Journal Club rebuilt as a Landmark Trials database
 
 3 commits, all fast-forwarded to `main`. Typecheck + lint + build clean; Vitest 6/6.
 

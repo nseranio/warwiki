@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-30 (later) — New Surgical Scrub & Hand Antisepsis page
+
+**1 commit, fast-forwarded to `main`. Lint + build clean.** Added [surgical-hand-antisepsis.mdx](docs/01-foundations/perioperative-care/intraoperative-care/surgical-hand-antisepsis.mdx) in the Intraoperative Care aseptic-technique cluster (`sidebar_position: 6.5`, between Draping & Skin Antisepsis and Surgical Gloving — the real scrub → glove workflow order). Covers both accepted techniques (water-based CHG/povidone scrub: 2-min minimum, 5-min first / 3-min subsequent, nail pick not brush, CHG > povidone on CFU; waterless ABHR: 4–6 mL, stay wet, three-aliquot technique, 90-sec floor, less skin damage), shared principles (no brushes, remove artificial nails, soap-and-water when soiled or for *C. difficile*, 15-sec non-surgical minimum), and the rub-vs-scrub equivalence bottom line (Feng 2020 meta — 7 trials / 764 HCWs, no CFU difference; WHO 2016; Tanner Cochrane 2016). 7 refs, framed for long GU/prosthetic cases. Cross-linked bidirectionally with Gloving and Draping (distinguishes surgeon-side hand antisepsis from patient-side skin antisepsis). NEJM "Waterless Scrub Technique" figure intentionally omitted — copyrighted, no usable embed (house rule against caption-only figure blocks); the NEJM technique ref is cited inline instead.
+
+---
+
 ## 2026-05-30 — Journal Club rebuilt as a Landmark Trials database
 
 **3 commits, all fast-forwarded to `main`. Typecheck + lint + build clean; Vitest 6/6.** Per a new direction, the Journal Club section was redirected from a broad literature index into a curated, must-know **trials** database — click a trial, learn the home-run facts fast.
