@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-30 (later 4) — Journal Club surfaced in the navbar
+
+**1 commit, fast-forwarded to `main`. Build clean; navbar verified in-browser.** Added **Journal Club** to the left navbar between **Video Library** and **Resources**. It had been hidden from the navbar when the old 80-article journal database was retired (handoff 2026-05-27 codified "Hide-from-navbar ≠ delete… surface it back when the journal database is ready to grow"). That condition is now met — Journal Club has been rebuilt into the 52-trial Landmark Trials database (21 → 42 → 52), so it earns the slot.
+
+- Wired as a plain `to: '/docs/journal-club'` link (matching Video Library), not a `docSidebar` — the section is a single `index.mdx`, so a one-item sidebar would be noise.
+- Final left navbar: **Foundations · Evaluation · Clinical Conditions · Treatment Atlas · Special Populations · Video Library · Journal Club · Resources**. The three reference-style tools now sit together at the end of the nav.
+- Journal Club remains in the footer (Resources column) as well, matching how Video Library and Resources appear in both places.
+
+---
+
 ## 2026-05-30 (later 3) — Landmark Trials expanded 42 → 52 (exhaustive site sweep)
 
 **1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.** A deliberate "what are we missing across the whole site" pass: mined the **recovered old 80-article `journals.ts`** (pulled from git history) plus **named trials cited in article prose** for studies not yet in the database. Added 10, each fact + DOI verified by literature search. Two new domains: **Urinary Diversion**, **Infection / Prophylaxis**.

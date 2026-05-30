@@ -4,7 +4,19 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-30 (later 3) — Landmark Trials expanded 42 → 52 (exhaustive site sweep)
+## Current Handoff - 2026-05-30 (later 4) — Journal Club surfaced in the navbar
+
+1 commit, fast-forwarded to `main`. Build clean; navbar verified in-browser.
+
+Added **Journal Club** to the left navbar between **Video Library** and **Resources**. It was hidden from the navbar when the old 80-article journal database was retired; the documented condition for surfacing it back ("when the journal database is ready to grow") is now met — it's the 52-trial Landmark Trials database. Wired as a plain `to: '/docs/journal-club'` link in [docusaurus.config.ts](docusaurus.config.ts) (single-page section, so no `docSidebar`). Still in the footer too.
+
+Final left navbar: **Foundations · Evaluation · Clinical Conditions · Treatment Atlas · Special Populations · Video Library · Journal Club · Resources**.
+
+Full session detail in `CHANGELOG.md` under 2026-05-30 (later 4).
+
+---
+
+## Previous Handoff - 2026-05-30 (later 3) — Landmark Trials expanded 42 → 52 (exhaustive site sweep)
 
 1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
 
