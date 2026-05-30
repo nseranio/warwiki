@@ -14,9 +14,11 @@ const DOMAIN_ORDER = [
   'Fecal Incontinence',
   'Pelvic Organ Prolapse',
   'Urethral Stricture',
+  'Urinary Diversion',
   'Male SUI / Prosthetics',
   'Sexual Medicine',
   'BPH / Male LUTS',
+  'Infection / Prophylaxis',
   'Surgical / Perioperative',
 ];
 
