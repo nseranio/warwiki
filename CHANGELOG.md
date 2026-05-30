@@ -6,6 +6,28 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-30 (later 3) — Landmark Trials expanded 42 → 52 (exhaustive site sweep)
+
+**1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.** A deliberate "what are we missing across the whole site" pass: mined the **recovered old 80-article `journals.ts`** (pulled from git history) plus **named trials cited in article prose** for studies not yet in the database. Added 10, each fact + DOI verified by literature search. Two new domains: **Urinary Diversion**, **Infection / Prophylaxis**.
+
+- **Urethral Stricture:** BMG Harvest Closure meta-analysis (Güler, Arab J Urol 2022) — the buccal-graft closure-vs-non-closure question; non-closure at least as good.
+- **OAB / Urgency:** Nitti (onabotA **100 U** for idiopathic OAB, J Urol 2013 — dose-distinct companion to the neurogenic 200 U Ginsberg trial), ARTISAN-SNM (rechargeable Axonics SNM, J Urol 2020), OASIS/Revi (implantable tibial neuromodulation, J Urol 2024).
+- **Pelvic Organ Prolapse:** IMPROVE (perioperative vaginal estrogen — negative trial, JAMA 2023), PESSRI (ring vs Gellhorn pessary, AJOG 2007).
+- **Urinary Diversion (new domain):** USC-STAR (Studer vs T-pouch neobladder, J Urol 2015 — antireflux T-pouch added morbidity without renal benefit). Framed as a diversion-reconstruction trial, not a cancer trial.
+- **Infection / Prophylaxis (new domain):** ALTAR (methenamine hippurate vs antibiotic prophylaxis for recurrent UTI, BMJ 2022).
+- **BPH / Male LUTS:** COURAGE (vibegron add-on for persistent OAB in BPH, J Urol 2024).
+- **Surgical / Perioperative:** WHO Surgical Safety Checklist (Haynes, NEJM 2009 — death 1.5%→0.8%, complications 11%→7%).
+
+**Final distribution (52):** OAB/Urgency 10 · Pelvic Organ Prolapse 10 · Stress Incontinence 7 · BPH/Male LUTS 7 · Surgical/Perioperative 4 · Urethral Stricture 4 · Male SUI/Prosthetics 3 · Sexual Medicine 3 · Mixed 1 · Fecal Incontinence 1 · Urinary Diversion 1 · Infection/Prophylaxis 1.
+
+**Conventions reinforced:**
+
+- **Mine the site before going external.** The deleted `journals.ts` and inline article citations were the richest candidate source — recover from git history rather than rebuild from memory.
+- **Watch dose/version collisions.** Nitti (OAB 100 U) vs Ginsberg (NDO 200 U) are separate must-knows; the distinction is stated in each `bottomLine` so the two Botox entries don't read as duplicates.
+- **Deliberately excluded non-landmark items** surfaced by the sweep: stricture staging / PRO-validation papers (LSE, USS-PRO, Stricture-fecta), single-institution TURNS cohorts, and "urethral/ureteral rest" retrospective series — good citations, not practice-defining RCTs/registries. A future "key cohorts" tier could surface them if wanted.
+
+---
+
 ## 2026-05-30 (later 2) — Landmark Trials expanded 21 → 42
 
 **2 commits, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.** Grew the [Journal Club Landmark Trials database](src/data/trials.ts) from 21 to 42 trials, adding three new domains (Sexual Medicine, Surgical / Perioperative, Fecal Incontinence). Every trial's facts and DOI were verified by literature search this session — no figures from memory. Per the user's "more the merrier" with the standing "no stone / no cancer" scope guard.

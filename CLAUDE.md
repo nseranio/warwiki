@@ -4,7 +4,21 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-30 (later 2) — Landmark Trials expanded 21 → 42
+## Current Handoff - 2026-05-30 (later 3) — Landmark Trials expanded 42 → 52 (exhaustive site sweep)
+
+1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
+
+Grew the [Landmark Trials database](src/data/trials.ts) 42 → 52 via a "what's missing across the whole site" pass — mined the **recovered old `journals.ts`** (from git history) + named trials cited in article prose. Two new domains: **Urinary Diversion** (USC-STAR), **Infection / Prophylaxis** (ALTAR). Also added the **BMG harvest closure meta-analysis** (the buccal-graft closure question), Nitti (idiopathic-OAB Botox 100 U — distinct from neurogenic 200 U), ARTISAN-SNM, OASIS/Revi, IMPROVE, PESSRI, COURAGE, and the WHO Surgical Safety Checklist. Every fact + DOI verified by lit search.
+
+Final spread (52): OAB 10 · POP 10 · Stress 7 · BPH 7 · Surgical/Perioperative 4 · Urethral Stricture 4 · Male SUI/Prosthetics 3 · Sexual Medicine 3 · Mixed 1 · Fecal 1 · Urinary Diversion 1 · Infection/Prophylaxis 1.
+
+**Add a trial = append one typed object to `trials.ts`; new domains = append to `DOMAIN_ORDER` in [LandmarkTrials.tsx](src/components/LandmarkTrials.tsx).** Deliberately excluded staging/PRO-validation papers and single-institution cohorts (not landmark RCTs); a "key cohorts" tier could surface them later if wanted. The well of genuine must-know trials is now close to dry.
+
+Full session detail in `CHANGELOG.md` under 2026-05-30 (later 3).
+
+---
+
+## Previous Handoff - 2026-05-30 (later 2) — Landmark Trials expanded 21 → 42
 
 2 commits, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
 
