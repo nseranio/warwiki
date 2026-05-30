@@ -127,6 +127,11 @@ const config: Config = {
           position: 'left',
         },
         {
+          to: '/docs/journal-club',
+          label: 'Journal Club',
+          position: 'left',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'resourcesSidebar',
           position: 'left',
