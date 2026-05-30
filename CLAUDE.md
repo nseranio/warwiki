@@ -4,7 +4,29 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-29 — Video-resource cards on six pages + Video Library re-sync (1,323 → 1,522 videos)
+## Current Handoff - 2026-05-29 (later) — Condition→atlas link audit + view-count pipeline + video matcher + ~108-page video rollout
+
+6 commits, all fast-forwarded to `main`. Lint + typecheck + build clean (1,175 files).
+
+**Condition → Treatment-Atlas links, full audit.** Standardized all 68 clinical-condition pages to the [urgency-incontinence-oab](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx) model — an early inline pointer to the relevant atlas database/landing + a `## See Also` block of atlas management links before `## References`. 56 pages updated (one subagent per subsection, every link target verified, lint:links clean). Left unlinked on purpose: dysfunctional-voiding and pelvic-venous-disorders (no genuine surgical-atlas target — don't force a weak link).
+
+**Video pipeline now captures view counts.** [fetch-youtube-playlists.js](scripts/fetch-youtube-playlists.js) requests `part=contentDetails,statistics`; [build-videos-registry.js](scripts/build-videos-registry.js) adds `views` to `VideoEntry`. Re-synced — 1,528 entries carry view counts. Enables the "prefer high-view + recent" selection rule.
+
+**New matcher: [scripts/suggest-page-videos.js](scripts/suggest-page-videos.js).** Ranks per-page candidate videos by keyword relevance (page title/H1/slug vs playlist + video title) tie-broken on a **0.6·log-views + 0.4·recency** blend; prints a report (optionally `--json`), edits nothing. The selection aid for video rollout.
+
+**~108-page video rollout across the clinical core.** Nine subagents (per atlas subsection + one for conditions), each fed the matcher's candidates, picked 1-2 genuinely on-topic videos per page, cleaned titles via oEmbed, inserted the standard `## Videos` block. Skipped weak matches aggressively. 141 clinical-core pages now have videos.
+
+**Conventions established:**
+
+- **Video-add workflow = re-sync → `node scripts/suggest-page-videos.js` → curate per page.** The matcher is a starting point, never authoritative; its precision is intentionally loose (it offered BPH→"Female Bladder Outlet Obstruction"). Always confirm the pick is actually about the page's procedure and clean the card title via oEmbed. Quality over coverage — a wrong video is worse than none.
+- **Condition pages link to management, never duplicate it.** Early inline pointer + `## See Also`; skip the link when no genuine atlas target exists.
+- **Bulk JSX edits via parallel subagents must build centrally.** Subagents skip the build (concurrent builds race `build/`); the orchestrator runs one `npm run build` afterward (the run-build-after-MDX-HTML rule).
+
+Full session detail in `CHANGELOG.md` under 2026-05-29 (later).
+
+---
+
+## Previous Handoff - 2026-05-29 — Video-resource cards on six pages + Video Library re-sync (1,323 → 1,522 videos)
 
 3 commits, all fast-forwarded to `main`. Lints + typecheck + build clean.
 

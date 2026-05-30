@@ -6,6 +6,34 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-05-29 (later) — Condition→atlas link audit + view-count pipeline + matcher tool + ~108-page video rollout
+
+**6 commits, all fast-forwarded to `main`. Lint + typecheck + build clean (1,175 files).** A two-front initiative: (1) make every clinical-condition page hop cleanly to its management pages in the Treatment Atlas, and (2) scale up video embedding across the clinical core, ranked by views + recency.
+
+### Condition → Treatment-Atlas cross-link audit (commit f8295e5)
+
+Full audit/standardize of all 68 clinical-condition pages to the [urgency-incontinence-oab](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx) model: an **early inline pointer** to the relevant atlas database/landing + a **`## See Also` block** of atlas management links immediately before `## References`. 56 pages updated across all 9 subsections (parallelized one subagent per subsection; every link target verified to exist; lint:links clean). The central [neurogenic-bladder](docs/03-clinical-conditions/03d-nlutd/neurogenic-bladder.mdx) page got its Management table wired to botox / SNM / augmentation / catheterizable-channels / bladder-neck-closure / diversion atlas pages. Deliberately left without atlas links (no genuine surgical-atlas target): dysfunctional-voiding (conservative; page cautions against outlet surgery) and pelvic-venous-disorders (IR-managed).
+
+### Video pipeline now captures view counts (commit 2a34fd7)
+
+[fetch-youtube-playlists.js](scripts/fetch-youtube-playlists.js) now requests `part=contentDetails,statistics` and carries per-video `viewCount`; [build-videos-registry.js](scripts/build-videos-registry.js) adds `views` to `VideoEntry`. `publishedAt` was already captured per item. Re-synced: 1,528 entries now carry view counts. This is the data the "prefer higher-view, recently-uploaded" selection rule needs.
+
+### suggest-page-videos.js matcher (commit 64fae68)
+
+New review tool [scripts/suggest-page-videos.js](scripts/suggest-page-videos.js): for each page, ranks candidate Video Library videos by keyword relevance (page title/H1/slug vs playlist + video title, with a small acronym-expansion map and a relevance floor), tie-broken on a **0.6·log-views + 0.4·recency** blend. Prints a per-page report and optional JSON. It does NOT edit pages — it's the selection aid. Over the clinical core it surfaced 237 pages with on-topic candidates and no `## Videos` yet (and flagged 236 with no matching playlist). Precision is imperfect by design (e.g. it offered BPH→"Female Bladder Outlet Obstruction"), so picks always get human/agent judgment.
+
+### ~108-page video rollout across the clinical core (commit f9aec90)
+
+Nine subagents (split by atlas subsection + one for conditions), each fed the matcher's per-page candidates, selected the 1-2 genuinely on-topic videos per page (prefer high-view + recent), cleaned titles/attribution via YouTube **oEmbed**, and inserted the standard `## Videos` block. **Quality over coverage was the explicit rule** — agents skipped a large fraction where no candidate truly fit (wrong flap, conservative-vs-surgical mismatch, female-page-with-male-video, marketing clips), and dropped a few IDs whose oEmbed returned 401/unavailable (embedding disabled). Net: ~108 clinical-core pages gained video cards; 141 clinical-core pages now have a `## Videos` section. 1,022 insertions; build + lint clean; no malformed IDs, no missing imports, no duplicate sections.
+
+### Conventions established
+
+- **The video-add workflow is now: re-sync → `node scripts/suggest-page-videos.js` → curate per page.** The matcher is a starting point, never authoritative — always confirm the pick is actually about the page's procedure and clean the card title via oEmbed.
+- **Condition pages link to management; they don't duplicate it.** Early inline pointer + `## See Also` is the standard; skip the link when no genuine atlas target exists rather than forcing a weak one.
+- **Bulk JSX edits via subagents must build centrally.** Subagents don't run the full build (concurrent builds race the `build/` dir); the orchestrator runs one `npm run build` after, per the run-build-after-MDX-HTML rule.
+
+---
+
 ## 2026-05-29 — Video-resource cards on six pages + Video Library re-sync (1,323 → 1,522 videos)
 
 **3 commits, all fast-forwarded to `main`. Lints + typecheck + build clean.**
