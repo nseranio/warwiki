@@ -14,7 +14,9 @@ const DOMAIN_ORDER = [
   'Pelvic Organ Prolapse',
   'Urethral Stricture',
   'Male SUI / Prosthetics',
+  'Sexual Medicine',
   'BPH / Male LUTS',
+  'Surgical / Perioperative',
 ];
 
 function doiHref(doi?: string) {
