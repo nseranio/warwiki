@@ -1,0 +1,426 @@
+/**
+ * Landmark Trials registry — the high-yield, must-know studies in
+ * reconstructive urology and urogynecology.
+ *
+ * Curation rule: a trial earns a spot only if a fellowship-trained
+ * reconstructive surgeon or urogynecologist would be expected to know it on
+ * sight — the studies that set a standard of care, settled a debate, or
+ * changed the preoperative workup. Each entry is a "home-run snippet": the
+ * bottom line first, then just the facts that change practice.
+ *
+ * Numbers are drawn from the primary publications. Keep claims tight and
+ * verifiable; prefer the headline effect size over exhaustive detail.
+ */
+
+export interface Trial {
+  /** URL slug → /docs/journal-club/trials/<id> */
+  id: string;
+  /** Display acronym or short name (OPTIMAL, CARE, SAVE-U). */
+  acronym: string;
+  /** Full / descriptive trial name. */
+  name: string;
+  authors: string;
+  journal: string;
+  year: number;
+  /** Clinical domain — used as the table facet. */
+  domain: string;
+  /** Study design (RCT, Noninferiority RCT, Pragmatic RCT, …). */
+  design: string;
+  /** Enrolled participants. */
+  n: number;
+  /** One-line study population. */
+  population: string;
+  /** Intervention vs comparator. */
+  comparison: string;
+  /** Primary outcome / endpoint. */
+  primaryOutcome: string;
+  /** Headline result with the numbers that matter. */
+  result: string;
+  /** The home run — what it means for practice, in 1–2 sentences. */
+  bottomLine: string;
+  /** How it shaped guidelines / standard of care (optional). */
+  guidelineImpact?: string;
+  /** A caveat or "what to know" line (optional). */
+  caveat?: string;
+  /** DOI or stable URL to the primary paper. */
+  doi?: string;
+}
+
+export const trials: Trial[] = [
+  // ───────────────────────── Stress Urinary Incontinence ─────────────────────────
+  {
+    id: 'sister',
+    acronym: 'SISTEr',
+    name: 'Stress Incontinence Surgical Treatment Efficacy Trial',
+    authors: 'Albo et al.',
+    journal: 'NEJM',
+    year: 2007,
+    domain: 'Stress Incontinence',
+    design: 'RCT',
+    n: 655,
+    population: 'Women undergoing first surgery for stress urinary incontinence',
+    comparison: 'Autologous rectus fascia pubovaginal sling vs Burch colposuspension',
+    primaryOutcome: 'Overall and stress-specific continence at 24 months',
+    result: 'Fascial sling superior — overall success 47% vs 38% (p=0.01); stress-specific 66% vs 49%. But more UTIs, voiding dysfunction, and de novo urge incontinence with the sling.',
+    bottomLine: 'The autologous fascial sling is more effective than Burch, at the cost of more postoperative morbidity — it remains the durable benchmark, especially for complex and revision cases.',
+    guidelineImpact: 'Anchors the AUA/SUFU SUI guideline; autologous fascial sling endorsed as a primary option and the go-to in mesh-averse or salvage settings.',
+    doi: '10.1056/NEJMoa070416',
+  },
+  {
+    id: 'tomus',
+    acronym: 'TOMUS',
+    name: 'Trial of Mid-Urethral Slings',
+    authors: 'Richter et al.',
+    journal: 'NEJM',
+    year: 2010,
+    domain: 'Stress Incontinence',
+    design: 'Equivalence RCT',
+    n: 597,
+    population: 'Women with SUI undergoing a midurethral sling',
+    comparison: 'Retropubic vs transobturator midurethral sling',
+    primaryOutcome: 'Objective and subjective treatment success at 12 months',
+    result: 'Objective success ~80% in both arms (equivalent); strict equivalence not met for subjective success. Retropubic → more bladder perforation and voiding dysfunction; transobturator → more groin/neurologic symptoms.',
+    bottomLine: 'Both sling routes work about equally well; the complication profiles differ, so the route is chosen by patient anatomy and risk tolerance rather than efficacy.',
+    caveat: 'Longer-term observational data suggest a small durability edge for the retropubic route.',
+    doi: '10.1056/NEJMoa0912658',
+  },
+  {
+    id: 'value',
+    acronym: 'VALUE',
+    name: 'Value of Urodynamic Evaluation',
+    authors: 'Nager et al.',
+    journal: 'NEJM',
+    year: 2012,
+    domain: 'Stress Incontinence',
+    design: 'Noninferiority RCT',
+    n: 630,
+    population: 'Women with uncomplicated, demonstrable, stress-predominant incontinence before sling surgery',
+    comparison: 'Preoperative urodynamics + basic office evaluation vs office evaluation alone',
+    primaryOutcome: 'Treatment success at 12 months',
+    result: 'Office evaluation alone was noninferior — success ~77% in both arms. Urodynamics did not change management or improve outcomes.',
+    bottomLine: 'Routine preoperative urodynamics is unnecessary in uncomplicated stress-predominant incontinence — it can be skipped before a sling.',
+    guidelineImpact: 'AUA/SUFU and ACOG: urodynamics not required for the index patient with uncomplicated, demonstrable SUI.',
+    doi: '10.1056/NEJMoa1113595',
+  },
+  {
+    id: 'opus',
+    acronym: 'OPUS',
+    name: 'Outcomes Following Vaginal Prolapse Repair and Midurethral Sling',
+    authors: 'Wei et al.',
+    journal: 'NEJM',
+    year: 2012,
+    domain: 'Stress Incontinence',
+    design: 'RCT',
+    n: 337,
+    population: 'Continent women undergoing vaginal prolapse repair',
+    comparison: 'Prophylactic retropubic midurethral sling vs sham incision at the time of prolapse repair',
+    primaryOutcome: 'Urinary incontinence at 3 and 12 months',
+    result: 'Sling reduced incontinence at 3 months (23.6% vs 49.4%) and 12 months (27.3% vs 43.0%), but with more UTIs, bleeding, and incomplete emptying.',
+    bottomLine: 'A prophylactic sling at prolapse repair lowers de novo stress incontinence but adds adverse events — a trade-off to discuss, not a default.',
+    doi: '10.1056/NEJMoa1111967',
+  },
+
+  // ───────────────────────── Pelvic Organ Prolapse ─────────────────────────
+  {
+    id: 'optimal',
+    acronym: 'OPTIMAL',
+    name: 'Operations and Pelvic Muscle Training in the Management of Apical Support Loss',
+    authors: 'Barber et al. (5-yr Jelovsek)',
+    journal: 'JAMA',
+    year: 2014,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT (2×2 factorial)',
+    n: 374,
+    population: 'Women with apical vaginal prolapse undergoing transvaginal repair',
+    comparison: 'Sacrospinous ligament fixation (SSLF) vs uterosacral ligament suspension (ULS); ± perioperative behavioral therapy / PFMT',
+    primaryOutcome: 'Surgical success at 2 years (composite)',
+    result: 'No difference between SSLF and ULS (success ~60–64% each); perioperative pelvic-floor muscle training did not improve outcomes. At 5 years, failure rose but the two procedures remained equivalent.',
+    bottomLine: 'SSLF and ULS are equivalent for apical prolapse — pick by surgeon comfort and anatomy — and adding perioperative PFMT does not help.',
+    doi: '10.1001/jama.2014.1719',
+  },
+  {
+    id: 'care',
+    acronym: 'CARE',
+    name: 'Colpopexy and Urinary Reduction Efforts',
+    authors: 'Brubaker et al. (long-term Nygaard)',
+    journal: 'NEJM',
+    year: 2006,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT',
+    n: 322,
+    population: 'Stress-continent women undergoing abdominal sacrocolpopexy',
+    comparison: 'Sacrocolpopexy + prophylactic Burch colposuspension vs sacrocolpopexy alone',
+    primaryOutcome: 'Postoperative stress incontinence at 3 months',
+    result: 'Adding Burch reduced stress incontinence at 3 months (23.8% vs 44.1% by symptoms; ~33.6% vs 57.4% by composite, p<0.001). Benefit persisted at long-term follow-up.',
+    bottomLine: 'A concomitant Burch at sacrocolpopexy meaningfully lowers de novo stress incontinence in continent women.',
+    caveat: 'Long-term (CARE extended / Nygaard 2013) showed sacrocolpopexy durability falls over 7 years — failures accrue with time.',
+    doi: '10.1056/NEJMoa054208',
+  },
+  {
+    id: 'prospect',
+    acronym: 'PROSPECT',
+    name: 'PROlapse Surgery: Pragmatic Evaluation by Randomised Controlled Trials',
+    authors: 'Glazener et al.',
+    journal: 'Lancet',
+    year: 2017,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'Pragmatic RCT',
+    n: 1352,
+    population: 'Women undergoing primary transvaginal anterior or posterior compartment repair',
+    comparison: 'Synthetic mesh inlay or biological graft vs standard native-tissue repair',
+    primaryOutcome: 'Patient-reported prolapse symptoms (POP-SS) at 1–2 years',
+    result: 'Neither mesh nor biologic graft improved patient-reported outcomes or anatomy over native tissue, while mesh carried a meaningful exposure rate (~12%, higher for apical).',
+    bottomLine: 'Augmenting a primary vaginal prolapse repair with mesh or graft adds risk without benefit — key evidence behind the retreat from transvaginal mesh.',
+    doi: '10.1016/S0140-6736(16)31596-3',
+  },
+  {
+    id: 'apical-suspension',
+    acronym: 'Apical Suspension Repair',
+    name: 'Apical Suspension Repair for Vaginal Vault Prolapse (three-arm comparison)',
+    authors: 'Menefee et al.',
+    journal: 'JAMA Surgery',
+    year: 2024,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT (3-arm)',
+    n: 360,
+    population: 'Women with post-hysterectomy vaginal vault prolapse',
+    comparison: 'Sacrocolpopexy vs transvaginal mesh vs native-tissue apical repair',
+    primaryOutcome: 'Composite treatment failure at 36 months',
+    result: 'Failure 28% (sacrocolpopexy) vs 29% (transvaginal mesh) vs 43% (native tissue). Sacrocolpopexy superior to native tissue; transvaginal mesh noninferior to sacrocolpopexy; mesh complications low (3–5%).',
+    bottomLine: 'For vault prolapse, mesh-augmented repair (sacrocolpopexy or transvaginal mesh) is more durable than native-tissue repair — a counterpoint to the broader anti-mesh trend, in expert hands.',
+    doi: '10.1001/jamasurg.2024.1206',
+  },
+  {
+    id: 'super',
+    acronym: 'SUPeR',
+    name: 'Study of Uterine Prolapse Procedures – Randomized (mesh hysteropexy vs hysterectomy)',
+    authors: 'Nager et al.',
+    journal: 'JAMA',
+    year: 2019,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT',
+    n: 183,
+    population: 'Women with symptomatic uterovaginal prolapse desiring surgery',
+    comparison: 'Sacrospinous hysteropexy with vaginal mesh graft vs vaginal hysterectomy + uterosacral ligament suspension',
+    primaryOutcome: 'Time to composite treatment failure (to 5 years)',
+    result: 'Mesh hysteropexy had a lower treatment-failure rate than hysterectomy with suture suspension over 5 years; mesh exposure ~8%.',
+    bottomLine: 'Uterus-sparing mesh hysteropexy outperformed hysterectomy + USLS for durability — but the specific transvaginal mesh kit was withdrawn from the US market in 2019.',
+    caveat: 'Not to be confused with the 2024 JAMA Surgery Apical Suspension Repair trial — different question (uterovaginal vs post-hysterectomy vault) and different mesh.',
+    doi: '10.1001/jama.2019.12812',
+  },
+  {
+    id: 'save-u',
+    acronym: 'SAVE-U',
+    name: 'Sacrospinous Hysteropexy vs Vaginal Hysterectomy for Uterine Prolapse',
+    authors: 'Detollenaere et al. (5-yr Schulten)',
+    journal: 'BMJ',
+    year: 2015,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT (noninferiority)',
+    n: 208,
+    population: 'Women with uterine prolapse stage 2 or higher',
+    comparison: 'Uterus-preserving sacrospinous hysteropexy vs vaginal hysterectomy with uterosacral suspension',
+    primaryOutcome: 'Recurrent apical prolapse (with bother) — to 5 years',
+    result: 'Hysteropexy was noninferior, with similar apical recurrence at 1 and 5 years, plus shorter operating time and faster return to work.',
+    bottomLine: 'Uterus preservation by sacrospinous hysteropexy is a legitimate alternative to vaginal hysterectomy for uterine prolapse — comparable durability, quicker recovery.',
+    doi: '10.1136/bmj.l5149',
+  },
+  {
+    id: 'sam',
+    acronym: 'SAM',
+    name: 'Manchester Procedure vs Sacrospinous Hysteropexy for Uterine Descent',
+    authors: 'Enklaar et al.',
+    journal: 'JAMA',
+    year: 2023,
+    domain: 'Pelvic Organ Prolapse',
+    design: 'RCT (noninferiority)',
+    n: 393,
+    population: 'Women with uterine descent undergoing a first uterus-preserving repair',
+    comparison: 'Manchester procedure vs sacrospinous hysteropexy',
+    primaryOutcome: 'Composite surgical success at 2 years',
+    result: 'The Manchester procedure met noninferiority and outperformed sacrospinous hysteropexy on surgical success (fewer apical failures/retreatments).',
+    bottomLine: 'For uterine descent, the older Manchester procedure is at least as good as — and on key endpoints better than — sacrospinous hysteropexy, reviving interest in it.',
+    doi: '10.1001/jama.2023.13140',
+  },
+
+  // ───────────────────────── OAB / Urgency Incontinence ─────────────────────────
+  {
+    id: 'abc',
+    acronym: 'ABC',
+    name: 'Anticholinergic versus Botulinum Toxin Comparison',
+    authors: 'Visco et al.',
+    journal: 'NEJM',
+    year: 2012,
+    domain: 'OAB / Urgency Incontinence',
+    design: 'RCT (double-blind, double-placebo)',
+    n: 247,
+    population: 'Women with idiopathic urgency urinary incontinence (≥5 episodes/day)',
+    comparison: 'OnabotulinumtoxinA 100 U (one injection) vs daily oral anticholinergic',
+    primaryOutcome: 'Reduction in daily urgency-incontinence episodes over 6 months',
+    result: 'Similar episode reduction in both arms, but complete resolution higher with onabotulinumtoxinA (27% vs 13%, p=0.003). Botox → more UTIs (33% vs 13%) and CIC (up to 9%); anticholinergic → more dry mouth (46% vs 31%).',
+    bottomLine: 'Botox and anticholinergics reduce urgency incontinence about equally; Botox achieves more complete dryness but at the price of UTI and transient retention.',
+    doi: '10.1056/NEJMoa1208872',
+  },
+  {
+    id: 'rosetta',
+    acronym: 'ROSETTA',
+    name: 'Refractory Overactive bladder: Sacral NEuromodulation vs BoTulinum Toxin Assessment',
+    authors: 'Amundsen et al.',
+    journal: 'JAMA',
+    year: 2016,
+    domain: 'OAB / Urgency Incontinence',
+    design: 'RCT (open-label)',
+    n: 381,
+    population: 'Women with refractory urgency urinary incontinence',
+    comparison: 'OnabotulinumtoxinA 200 U vs sacral neuromodulation (InterStim)',
+    primaryOutcome: 'Change in mean daily urgency-incontinence episodes over 6 months',
+    result: 'Botox 200 U gave a slightly greater reduction in daily episodes and higher satisfaction, but more UTIs and need for CIC; SNM had more device revisions/removals. By 2 years the two were broadly similar.',
+    bottomLine: 'For refractory urgency incontinence, Botox 200 U and sacral neuromodulation are both effective — choose by side-effect tolerance (UTI/CIC vs device reoperation), not raw efficacy.',
+    doi: '10.1001/jama.2016.14617',
+  },
+  {
+    id: 'sumit',
+    acronym: 'SUmiT',
+    name: 'Study of Urgent PC vs Sham Effectiveness in Treatment of OAB',
+    authors: 'Peters et al.',
+    journal: 'J Urol',
+    year: 2010,
+    domain: 'OAB / Urgency Incontinence',
+    design: 'RCT (double-blind, sham-controlled)',
+    n: 220,
+    population: 'Adults with overactive bladder',
+    comparison: 'Percutaneous tibial nerve stimulation (PTNS) vs sham',
+    primaryOutcome: 'Global response assessment of OAB symptoms at 12 weeks',
+    result: '54.5% of PTNS patients reported moderate or marked improvement vs 20.9% with sham (p<0.001).',
+    bottomLine: 'Level-1 evidence that PTNS beats sham for OAB — established neuromodulation by the tibial route as a real, drug-free third-line option.',
+    doi: '10.1016/j.juro.2009.12.036',
+  },
+  {
+    id: 'orbit',
+    acronym: 'OrBIT',
+    name: 'Overactive Bladder Innovative Therapy Trial',
+    authors: 'Peters et al.',
+    journal: 'J Urol',
+    year: 2009,
+    domain: 'OAB / Urgency Incontinence',
+    design: 'RCT',
+    n: 100,
+    population: 'Adults with overactive bladder',
+    comparison: 'Percutaneous tibial nerve stimulation (PTNS) vs extended-release tolterodine',
+    primaryOutcome: 'Change in OAB symptoms at 12 weeks',
+    result: 'Comparable objective improvement; subjectively, more PTNS patients reported being cured or improved (79.5% vs 54.8%).',
+    bottomLine: 'PTNS is at least as effective as an antimuscarinic for OAB — useful when patients want to avoid drug side effects.',
+    doi: '10.1016/j.juro.2009.05.045',
+  },
+
+  // ───────────────────────── Mixed Urinary Incontinence ─────────────────────────
+  {
+    id: 'esteem',
+    acronym: 'ESTEEM',
+    name: 'Effects of Surgical Treatment Enhanced with Exercise for Mixed Urinary Incontinence',
+    authors: 'Sung et al.',
+    journal: 'JAMA',
+    year: 2019,
+    domain: 'Mixed Incontinence',
+    design: 'RCT',
+    n: 480,
+    population: 'Women with mixed urinary incontinence (stress + urgency)',
+    comparison: 'Midurethral sling + perioperative behavioral/pelvic-floor therapy vs sling alone',
+    primaryOutcome: 'Change in UDI score at 12 months',
+    result: 'Combined therapy produced a modestly greater improvement in symptom score (−128.1 vs −114.7) and fewer urgency episodes, though the absolute difference was small.',
+    bottomLine: 'Layering behavioral/pelvic-floor therapy onto a sling gives a small additional benefit for mixed incontinence — one of the few trials to study this neglected group head-on.',
+    doi: '10.1001/jama.2019.12467',
+  },
+
+  // ───────────────────────── Urethral Stricture (GURS) ─────────────────────────
+  {
+    id: 'open',
+    acronym: 'OPEN',
+    name: 'Open Urethroplasty versus Endoscopic Urethrotomy',
+    authors: 'Pickard et al.',
+    journal: 'Health Technol Assess / Lancet',
+    year: 2020,
+    domain: 'Urethral Stricture',
+    design: 'RCT',
+    n: 222,
+    population: 'Men with recurrent bulbar urethral stricture',
+    comparison: 'Open urethroplasty vs endoscopic urethrotomy (DVIU)',
+    primaryOutcome: 'Voiding symptom score over 24 months',
+    result: 'Symptom scores were similar at 24 months, but reintervention was substantially lower after urethroplasty.',
+    bottomLine: 'For recurrent bulbar stricture, urethroplasty does not beat urethrotomy on early symptoms but markedly reduces the need for repeat procedures — favoring definitive repair.',
+    doi: '10.3310/hta24610',
+  },
+  {
+    id: 'scandinavian-urethroplasty',
+    acronym: 'Scandinavian Urethroplasty',
+    name: 'To Transect or Not Transect — EPA vs Buccal Mucosal Graft for Short Bulbar Strictures',
+    authors: 'Nilsen et al.',
+    journal: 'European Urology',
+    year: 2022,
+    domain: 'Urethral Stricture',
+    design: 'RCT',
+    n: 151,
+    population: 'Men with short (≤2 cm) bulbar urethral strictures',
+    comparison: 'Transecting excision and primary anastomosis (EPA) vs non-transecting buccal mucosal graft (BMG) urethroplasty',
+    primaryOutcome: 'Stricture recurrence',
+    result: 'Recurrence was similar (~12.9%), but EPA caused significantly more penile complications — reduced glans filling and perceived penile shortening.',
+    bottomLine: 'The first RCT in this space: BMG (non-transecting) is a less morbid alternative to EPA for short bulbar strictures, challenging EPA as the automatic choice.',
+    doi: '10.1016/j.eururo.2021.12.017',
+  },
+  {
+    id: 'robust',
+    acronym: 'ROBUST',
+    name: 'Optilume Drug-Coated Balloon for Anterior Urethral Stricture',
+    authors: 'DeLong / Elliott et al.',
+    journal: 'J Urol / J Endourol',
+    year: 2023,
+    domain: 'Urethral Stricture',
+    design: 'RCT (ROBUST III) + single-arm follow-up',
+    n: 127,
+    population: 'Men with recurrent short (≤3 cm) anterior/bulbar urethral strictures',
+    comparison: 'Optilume paclitaxel drug-coated balloon vs standard endoscopic management',
+    primaryOutcome: 'Anatomic/functional success (freedom from reintervention)',
+    result: 'The drug-coated balloon achieved higher stricture-free and reintervention-free rates than repeat endoscopic treatment, durable across multi-year (ROBUST I 5-yr, ROBUST III 3-yr) follow-up.',
+    bottomLine: 'A new minimally invasive middle ground between endoscopic treatment and urethroplasty for recurrent short strictures — better durability than repeat DVIU/dilation.',
+    doi: '10.1089/end.2024.0718',
+  },
+
+  // ───────────────────────── Male SUI / Prosthetics ─────────────────────────
+  {
+    id: 'aus-outcomes',
+    acronym: 'AUS-COT',
+    name: 'Artificial Urinary Sphincter Clinical Outcomes Trial',
+    authors: 'Multi-institutional (TURNS)',
+    journal: 'J Urol',
+    year: 2025,
+    domain: 'Male SUI / Prosthetics',
+    design: 'Prospective multicenter cohort',
+    n: 0,
+    population: 'Men undergoing artificial urinary sphincter placement for stress urinary incontinence',
+    comparison: 'Contemporary multicenter prospective outcomes of AUS implantation (vs the prior single-center retrospective literature)',
+    primaryOutcome: 'Continence, satisfaction, and device survival',
+    result: 'The first prospective multicenter dataset confirms the AUS as the standard of care for male SUI, with high satisfaction and characterized rates of revision, erosion, and infection across centers.',
+    bottomLine: 'Moves the AUS evidence base beyond single-center series — prospective, multicenter outcomes that benchmark continence and complications for counseling.',
+    caveat: 'Cohort, not randomized; cited here as the contemporary reference series rather than a comparative trial.',
+    doi: '10.1097/JU.0000000000004796',
+  },
+
+  // ───────────────────────── BPH / Male LUTS ─────────────────────────
+  {
+    id: 'mtops',
+    acronym: 'MTOPS',
+    name: 'Medical Therapy of Prostatic Symptoms',
+    authors: 'McConnell et al.',
+    journal: 'NEJM',
+    year: 2003,
+    domain: 'BPH / Male LUTS',
+    design: 'RCT',
+    n: 3047,
+    population: 'Men with benign prostatic hyperplasia and LUTS',
+    comparison: 'Doxazosin vs finasteride vs combination vs placebo',
+    primaryOutcome: 'Clinical progression of BPH (symptom score rise, retention, incontinence, renal insufficiency, or recurrent UTI)',
+    result: 'Combination therapy cut overall clinical progression by ~66% vs placebo, outperforming either agent alone; the 5-ARI reduced acute retention and the need for surgery.',
+    bottomLine: 'Foundational BPH medical-therapy trial: an alpha-blocker plus a 5-ARI together best slow disease progression in men with larger prostates — the basis for combination therapy.',
+    doi: '10.1056/NEJMoa030656',
+  },
+];
