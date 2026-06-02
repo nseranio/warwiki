@@ -4,7 +4,26 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-01 — Pectopexy mesh-config expansion + 2 videos + Video Library re-sync (1528 → 1531)
+## Current Handoff - 2026-06-02 — Transitional Urology build-out: 5 new condition pages (PUV, BEEC, Prune Belly, DSD, ARM)
+
+5 commits, all fast-forwarded to `main`. Lint + typecheck + build clean throughout; every page verified in-browser.
+
+Grew [Transitional Urology](docs/05-special-populations/05f-lifelong-care/transitional-urology.mdx) (under Lifelong Urologic Care) from a single hub into a **hub + six dedicated condition pages**. New, fully-cited adult/lifelong-care pages framed for the reconstructive & functional urologist: **[Posterior Urethral Valves](docs/05-special-populations/05f-lifelong-care/posterior-urethral-valves.mdx)** (37 refs), **[Bladder Exstrophy-Epispadias Complex](docs/05-special-populations/05f-lifelong-care/bladder-exstrophy-epispadias.mdx)** (44), **[Prune Belly Syndrome](docs/05-special-populations/05f-lifelong-care/prune-belly-syndrome.mdx)** (35), **[Differences of Sex Development](docs/05-special-populations/05f-lifelong-care/differences-of-sex-development.mdx)** (29), **[Anorectal Malformations](docs/05-special-populations/05f-lifelong-care/anorectal-malformations.mdx)** (34). All content was supplied as source dumps and merged/deduped/cleaned (dropped "Would you like…" prompts, `undefined`/copyrighted figures, truncated stats; reconciled refs).
+
+**Two conventions to carry forward (user-requested this session):**
+
+- **Pointer-blockquote for hub → dedicated-page links.** Every condition with a page leads its hub subsection with a `> See the dedicated [X] page … the summary below is the transition-clinic orientation.` blockquote; hub copy stays a short orientation. Applied to Neurogenic Bladder, Hypospadias, BEEC, DSD, + new PBS/ARM subsections. Do this for any future hub that summarizes a paged topic.
+- **Cross-link, don't duplicate (hard rule on DSD + ARM).** Reoperative hypospadias technique → [Hypospadias & Epispadias]; NLUTD ladder → [Neurogenic Bladder]; catheterizable-channel/augmentation operative detail → those atlas pages; generic transition machinery → the hub. New condition pages point to these rather than reproducing them.
+
+**Sidebar regroup** (the "odd" navbar): condition pages now cluster after the hub, Geriatric Urology moved last. Order: **Transitional Urology · Hypospadias & Epispadias · Posterior Urethral Valves · Bladder Exstrophy-Epispadias Complex · Prune Belly Syndrome · Differences of Sex Development · Anorectal Malformations · Geriatric Urology**.
+
+The section now covers every condition the hub names. **Remaining gap:** no condition is left unpaged. Reference-dump hygiene reinforced — caught a duplicate Peña 1998 in ARM (repointed to NASPGHAN) and a missing ref1 in DSD; atlas landing links use the stripped slug `/docs/surgical-techniques/urethral-reconstruction` (a `04a-…` folder-path link was caught by `lint:links` + build).
+
+Full session detail in `CHANGELOG.md` under 2026-06-02.
+
+---
+
+## Previous Handoff - 2026-06-01 — Pectopexy mesh-config expansion + 2 videos + Video Library re-sync (1528 → 1531)
 
 1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
 
