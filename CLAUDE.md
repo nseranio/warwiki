@@ -4,7 +4,28 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-02 (later) — "Drain and Retain" prosthetic-reservoir maneuver added to IPP revision + AUS pages
+## Current Handoff - 2026-06-02 (later 2) — Corporal-fibrosis build-out: expanded fibrosis section + 2 new instrument pages (Wilson scissors, Cavernotomes) + VJSM video card
+
+4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean throughout.
+
+A prosthetics-instruments arc, all anchored on **corporal fibrosis in penile-prosthesis surgery**:
+
+- **Expanded the Corporal Scarring / Fibrosis section** of [penile-implants/revision-scenarios.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios.mdx) from a stub into a full treatment: etiology percentages, preoperative VED protocol, stepwise intraoperative escalation (Hegar → cavernotomes → counter incisions → Montague-Angermeier corporeal excavation → grafting), narrow-base cylinder selection + Wilson staged-upsizing, unilateral-cylinder salvage, and an at-a-glance technique table. **15 new refs (12–26).**
+- **New instrument page — [Wilson Backward-Cutting Scissors](docs/01-foundations/tools/instruments/scissors/wilson-backward-cutting.mdx)** (Scissors, pos 6.5). Freeman-Kaye / Gourney pattern; **outer blade edges sharpened so they cut when spread open in scar** — used to carve the initial corporal channel to seat a cavernotome. Verbatim-verified from the Fernandez Crespo 2024 narrative review. Index row added; woven into the fibrosis ladder (new ref 27 there).
+- **New instrument page — [Cavernotomes](docs/01-foundations/tools/instruments/sounds-bougies/cavernotomes.mdx)** (Sounds & Bougies, pos 15), **consolidated single page** (not one-per-design): Carrión-Rossello (historical) + Mooreville-Wilson/Uramix (6–13 mm, 1 mm oscillating cuts) designs, technique, Mooreville 1999 + Krughoff 2022 outcomes, blind sub-tunical perforation complications, direct-vision adjuncts (Shaeer US-guided + corporoscopic, Montague-Angermeier), tissue-sparing meta-analysis. 13 refs. Index row + cross-links from the fibrosis ladder and the Wilson scissors page.
+- **VJSM video card** on the cavernotomes page (Karapanos mesh-augmentation salvage for tunical perforation). It's a **domain-restricted ISSM Vimeo** (oEmbed `domain_status_code: 403`), so an **external `web-card--video` link**, not an iframe — the SUFU pattern.
+
+**Decisions / conventions reinforced:**
+
+- **Video Library stays YouTube-only** (it's the @warwikihq channel mirror). Outside videos go as **page-level external link cards**, never into the Library registry. The embed test is the oEmbed `domain_status_code` — **200 → inline `<iframe>`; 403 → external `web-card` link** (YouTube → `<VideoCards>`). See [[feedback_sufu_video_embeds]].
+- **Consolidate near-identical instrument variants onto one page** with sections (Cavernotomes = Carrión-Rossello + Mooreville-Wilson) rather than thin per-variant pages — same rule as needle-drivers / vessel-sealers.
+- **Verify, don't trust, an unfamiliar stat or DOI from a source dump** — softened a garbled "OR 95.92" in the tissue-sparing meta to a qualitative claim; pulled the Wilson-scissors instrument naming verbatim from the source PDF.
+
+Full session detail in `CHANGELOG.md` under 2026-06-02 (later 2).
+
+---
+
+## Previous Handoff - 2026-06-02 (later) — "Drain and Retain" prosthetic-reservoir maneuver added to IPP revision + AUS pages
 
 1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
 
