@@ -4,7 +4,21 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-05-30 (later 4) — Journal Club surfaced in the navbar
+## Current Handoff - 2026-06-01 — Pectopexy mesh-config expansion + 2 videos + Video Library re-sync (1528 → 1531)
+
+1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.
+
+Expanded the [pectopexy](docs/04-surgical-techniques/04g-prolapse-repair/apical/pectopexy.mdx) **Mesh configurations** section from a user-supplied source dump: old 3-column table → 6-column reference (config · dimensions · material · vaginal/cervical fixation · lateral fixation · best-for) covering the Noé 3×15 cm PVDF strip, 8×15 cm T-shaped, inverted-T, and Y-shaped mesh, plus material-choice / preparation-delivery prose and a cross-anchor to the existing Biomechanical fixation note. **6 new refs (19–24)** — most of the supplied citations were already in the list under other numbers; reconciled before appending. Added a `## Videos` block (da Vinci Xi Pectopexy `ysjLsBss99c`; Pectopexy for Urogenital Prolapse `WFBAeUsC95E`), titles via oEmbed.
+
+Re-synced the Video Library (`npm run videos:sync`): **137 → 139 playlists, 1528 → 1531 unique videos** (combined 264 / GURS 958 / URPS 309). `WFBAeUsC95E` is on the @warwikihq channel so it entered the registry; the da Vinci clip is page-embed-only. **Chunk count held at 7** (TS2590 guard re-verified); only `videos.ts` + `stats.json` changed.
+
+**Reinforced:** reconcile a reference dump against the existing list before appending (saves renumbering + duplicates); external page-embed ≠ Video Library entry (only @warwikihq-channel videos enter the registry). **Open item:** intro credits "Banerjee and Noé in 2011" vs the table crediting Noé alone — both exist in the literature, left for a harmonization decision.
+
+Full session detail in `CHANGELOG.md` under 2026-06-01.
+
+---
+
+## Previous Handoff - 2026-05-30 (later 4) — Journal Club surfaced in the navbar
 
 1 commit, fast-forwarded to `main`. Build clean; navbar verified in-browser.
 

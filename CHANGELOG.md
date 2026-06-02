@@ -6,6 +6,26 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-01 — Pectopexy mesh-configuration expansion + 2 videos + Video Library re-sync (1528 → 1531)
+
+**1 commit, fast-forwarded to `main`. Typecheck + lint + build clean; verified in-browser.** Expanded the [pectopexy](docs/04-surgical-techniques/04g-prolapse-repair/apical/pectopexy.mdx) Mesh configurations section from user-supplied source content, added two operative videos, then re-synced the Video Library.
+
+- **Mesh configurations rebuilt.** Old 3-column table → 6-column reference (configuration · dimensions · material · vaginal/cervical fixation · lateral fixation · best-for), covering the standard **Noé 3 × 15 cm PVDF strip** (DynaMesh PRP), **8 × 15 cm T-shaped** cut, **inverted-T**, and **Y-shaped** mesh. Added prose on material choice (Type-1 polypropylene 46.7% vs PVDF "memory effect"; anterior-vs-posterior cervical placement equivalence per Biyik 2026), preparation/delivery (rolled through 10-mm trocar, smooth edge trimming, stay-suture at the Y-bifurcation, Chen transvaginal single-port Y-mesh series n=93), and a cross-anchor to the existing Biomechanical fixation note rather than duplicating it.
+- **6 new references (19–24):** Noé 2021 JCM, Szymczak 2019 *Neurourol Urodyn* (distinct from the existing Szymczak 2022 *J Clin Med*), Kavallaris 2020, Biyik 2026, Chen 2018, Li 2021. The user's other cited papers were already in the reference list (Jongjakapun, Sauerwald, Pirtea, Chang, Zhang, Lyu, Yang) — reconciled against existing refs before appending, no duplicates.
+- **Source cleanup:** dropped the trailing "Would you like to explore…" prompt; folded the dump into the existing house structure instead of bolting on a parallel section.
+- **`## Videos` block** added before References: *da Vinci Xi Pectopexy* (Dr. A. Keck, `ysjLsBss99c`) and *Pectopexy for Urogenital Prolapse* (N. Moulay, `WFBAeUsC95E`). Titles/subtitles resolved via YouTube oEmbed. Added the `VideoCards` import.
+- **Video Library re-synced** (`npm run videos:sync`): **137 → 139 playlists, 1528 → 1531 unique videos** (combined 264 / GURS 958 / URPS 309). `WFBAeUsC95E` is on the @warwikihq channel and is now in the registry; the da Vinci clip is not on the channel, so it lives only as a page embed. **Chunk count held at 7** — TS2590 guard re-verified. Only `videos.ts` + `stats.json` changed in git.
+
+**Conventions reinforced:**
+
+- **Reconcile a reference dump against the existing reference list before appending** — most of the supplied refs were already present under different numbers; only 6 were genuinely new. Saved a renumbering mess and duplicate citations.
+- **Caption single video embeds from oEmbed, not from memory** (re-applied) — both card titles came from the oEmbed JSON.
+- **External page-embed ≠ Video Library entry.** A video only enters the registry if it lives on the @warwikihq channel; embedding it on a page via `VideoCards` is independent of the channel sync.
+
+**Minor open item flagged to user:** the intro credits "Banerjee and Noé in 2011" while the standard config table credits Noé alone — both attributions exist in the literature; left untouched pending a harmonization decision.
+
+---
+
 ## 2026-05-30 (later 4) — Journal Club surfaced in the navbar
 
 **1 commit, fast-forwarded to `main`. Build clean; navbar verified in-browser.** Added **Journal Club** to the left navbar between **Video Library** and **Resources**. It had been hidden from the navbar when the old 80-article journal database was retired (handoff 2026-05-27 codified "Hide-from-navbar ≠ delete… surface it back when the journal database is ready to grow"). That condition is now met — Journal Club has been rebuilt into the 52-trial Landmark Trials database (21 → 42 → 52), so it earns the slot.
