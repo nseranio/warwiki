@@ -6,6 +6,23 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-02 (later) — "Drain and Retain" prosthetic-reservoir maneuver added to IPP revision + AUS pages
+
+**1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.** Incorporated the **"drain and retain"** maneuver — emptying and intentionally leaving an adherent prosthetic reservoir/balloon in situ rather than explanting it — from a user-supplied source dump.
+
+- **Primary home — [penile-implants/revision-scenarios.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios.mdx).** New `### Drain and Retain` subsection under *Reservoir Complications* (which already named "retained reservoir after prior infection explantation"): technique (aspirate → tubing on traction → transect proximally → new reservoir HSM/contralateral), rationale (avoids retropubic dissection off a reservoir adherent to bladder/iliac vessels/obturator nerve/bowel), safety data (Cefalu 2013 n=55, infection 1.8% vs 1.5% virgin p=0.88; Pereira 2026 n=233 across 7 centers, no retained-reservoir complications at 12.6 mo), and caveats (contraindicated when explanting for infection; long-term unknown). **3 new refs (9–11).**
+- **Cross-linked brief note — [artificial-urinary-sphincter.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) §7 (PRB Modification).** Same maneuver applies to the AUS pressure-regulating balloon; summarized + linked back to the IPP page rather than duplicated. **2 new refs (69–70)** (Cefalu, Pereira) reused with this page's numbering.
+
+**Source-cleanup / accuracy notes:**
+
+- Dropped the "Would you like to explore…" trailing prompt; converted `[1][2]` brackets to the `<sup>[[N]](#refN)</sup>` pattern.
+- **Verified the Pereira DOI** rather than trusting the dump — a sibling article in *J Sex Med* 23(3) (`qdag034`) confirmed the `qdag` prefix, so the supplied `qdag024` was correct (briefly mis-"corrected" to `qdaf024`, then reverted). Reinforces: verify, don't assume, an unfamiliar DOI suffix.
+- **Added a real safety counterpoint the dump only gestured at.** The draft's vague "controversial / theoretical risk" was made concrete with **Loloi et al. 2022 (*CUAJ* 16(7):E403–E405)** — two drained-and-retained reservoirs (one IPP, one AUS — the latter the first such AUS report) presenting later as **small bowel obstruction**, risk greatest with intraperitoneal position. Drove the practical pearl: confirm an extraperitoneal position and counsel the patient about delayed presentation.
+
+**Convention reinforced — spanning-topic placement:** a technique that applies to two device families gets one full treatment on the most natural page (IPP revision) + a short cross-linked note on the other (AUS PRB section), never duplicated. Same pattern as urethrectomy/urethrolysis cross-linking.
+
+---
+
 ## 2026-06-02 — Transitional Urology build-out: 5 new condition pages (PUV, BEEC, Prune Belly, DSD, ARM)
 
 **5 commits, all fast-forwarded to `main`. Lint + typecheck + build clean throughout; every page verified in-browser.** Built out the [Transitional Urology](docs/05-special-populations/05f-lifelong-care/transitional-urology.mdx) section of Lifelong Urologic Care from one hub page into a hub + six dedicated condition pages. Each condition the hub names now has its own adult/lifelong-care page, framed for the reconstructive & functional urologist, with the hub carrying a transition-clinic summary that points to the deep-dive. All page content was supplied as source dumps and merged/deduplicated/cleaned per house rules (dropped "Would you like…" prompts, `undefined` figure-caption blocks, copyrighted figures, and truncated stats; reconciled reference lists; verified facts + DOIs).

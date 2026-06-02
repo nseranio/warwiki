@@ -4,7 +4,19 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-02 — Transitional Urology build-out: 5 new condition pages (PUV, BEEC, Prune Belly, DSD, ARM)
+## Current Handoff - 2026-06-02 (later) — "Drain and Retain" prosthetic-reservoir maneuver added to IPP revision + AUS pages
+
+1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
+
+Incorporated the **"drain and retain"** maneuver (empty + intentionally leave an adherent prosthetic reservoir/balloon in situ instead of explanting it) from a user source dump. **Full treatment** on [penile-implants/revision-scenarios.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios.mdx) — new `### Drain and Retain` under *Reservoir Complications* (technique, rationale, Cefalu 2013 + Pereira 2026 safety data, infection contraindication, Loloi 2022 SBO caveat; 3 new refs 9–11). **Brief cross-linked note** in [artificial-urinary-sphincter.mdx](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) §7 PRB Modification (same maneuver for the AUS balloon; 2 new refs 69–70), pointing back to the IPP page rather than duplicating.
+
+Notable: **verified the Pereira DOI** instead of trusting the dump (sibling `qdag034` in the same *J Sex Med* issue confirmed the supplied `qdag024`); **added Loloi 2022** (*CUAJ*) as a real safety counterpoint (retained reservoirs → small bowel obstruction, esp. intraperitoneal) to replace the draft's vague "controversial" hand-wave — pearl: confirm extraperitoneal position + counsel re: delayed presentation. **Spanning-topic placement convention reinforced:** one full page + one short cross-linked note, never duplicated (same pattern as urethrectomy/urethrolysis).
+
+Full session detail in `CHANGELOG.md` under 2026-06-02 (later).
+
+---
+
+## Previous Handoff - 2026-06-02 — Transitional Urology build-out: 5 new condition pages (PUV, BEEC, Prune Belly, DSD, ARM)
 
 5 commits, all fast-forwarded to `main`. Lint + typecheck + build clean throughout; every page verified in-browser.
 
