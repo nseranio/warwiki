@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-04 (later) — Kulkarni page: Incisions & Access section (penoscrotal inversion + Mini-Kulkarni)
+
+**1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.** User asked to broaden the [Kulkarni One-Stage page](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/kulkarni-one-stage.mdx) beyond the perineal-invagination access to cover the other incision options, anchored on two named papers.
+
+- New **"Incisions and Access Options"** section framing the one-sided dorsal-onlay principle as deliverable through four incisions chosen by **stricture location**, with an at-a-glance table: **circumcoronal degloving** (the traditional penile approach, with its degloving morbidity), **perineal + penile invagination** (standard Kulkarni), **penoscrotal + penile inversion** (Warner 2016 — no penile incision, single-stage, supine; 4/5 = 80% in 5 patients; plus Mathur's midline-penoscrotal tunica-albuginea onlay, 94.9% in 79 as a versatility example), and the glans-sparing **"Mini-Kulkarni"** (distal-third penile-shaft incision over the prepuce, lateral urethral rotation, dorsal BMG) for isolated fossa-navicularis / meatal strictures.
+- **Both named papers verified by lit search before citing** (their DOIs weren't in the user's dump): Warner *Investig Clin Urol* 2016;57(2):135-140 and Oliveira *Research Square* preprint 2025 (rs.3.rs-6805479/v1). The **Mini-Kulkarni is flagged in a blockquote caveat as a 2025 preprint** (n = 6, 6-mo follow-up, not yet peer-reviewed) — emerging glans-sparing option, not a standard — with cross-links to better-validated distal techniques ([Asopa dorsal inlay], [meatotomy]). **Deliberately omitted Kanematsu 2025** from the draft: its verified abstract describes a *ventral* double-sided Heinecke-Mikulicz approach, not the "transperineal penile invagination" the dump claimed, so citing it for invagination access would have misattributed it.
+- 4 new refs (12-15: Warner, Oliveira, Mathur, Verla 2019). Forward pointer added from technique step 1 to the new section.
+
+**Convention reinforced:** when a source dump names a paper but supplies no DOI — or supplies a DOI for a *different* claim than the paper actually supports — verify against the literature before citing, and **drop the citation if the paper doesn't support the specific claim** (the Kanematsu invagination mismatch). Preprints are citable but must be labeled as such with their small-n / short-follow-up limits stated.
+
+---
+
 ## 2026-06-04 — Anatomy & Physiology reorganized (4 groups) + Perineal-urethrostomy restructure (Midline / Augmented / Blandy fix)
 
 **4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean; verified in-browser.** Two workstreams.

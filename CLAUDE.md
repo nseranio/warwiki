@@ -4,9 +4,11 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-04 — Anatomy & Physiology reorganized (4 groups) + Perineal-urethrostomy restructure (Midline / Augmented / Blandy fix)
+## Current Handoff - 2026-06-04 — Anatomy reorg (4 groups) + Perineal-urethrostomy restructure + Kulkarni incisions
 
-4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean; verified in-browser.
+**Latest (2026-06-04 later):** Added an **"Incisions and Access Options"** section to the [Kulkarni One-Stage page](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/kulkarni-one-stage.mdx) — the one-sided dorsal-onlay principle delivered through four incisions by stricture location: circumcoronal degloving, perineal + penile invagination (standard), **penoscrotal + penile inversion** (Warner 2016), and the glans-sparing **"Mini-Kulkarni"** for fossa-navicularis/meatal strictures (Oliveira 2025 — flagged as a preprint, n=6). Both named papers verified by lit search before citing; **Kanematsu 2025 dropped** because its verified abstract (ventral HM) didn't match the dump's invagination claim. 4 new refs. Detail in `CHANGELOG.md` under 2026-06-04 (later).
+
+The rest of this handoff covers the earlier 2026-06-04 work (4 commits): Anatomy reorg + PU restructure. Lint (scope/citations/orphans/links) clean; typecheck + build clean; verified in-browser.
 
 **Anatomy & Physiology reorganized into 4 reconstructive-lens groups** (commit `fdb0e45`) — replaced the "Pelvis, Support & Other" junk drawer + the two singleton categories (Lower Extremity, Oral Cavity), and housed the orphan `skin.mdx`. New groups (target → surgical field → donor): **Urinary Tract** (+ GU embryology) · **Genitalia & Reproductive** (unchanged) · **Pelvic Floor, Spaces & Neurovascular** (relabeled from `pelvis-support`; 7 pages stay put) · **Donor & Harvest Sites** (new `donor-sites/`: oral cavity, skin, leg & thigh, bowel, abdominal wall). The 6 moved pages each carry a **`slug:` override pinning their old URL** → zero link breakage, no redirects (link checker honors `slug:`). User-chosen scheme via AskUserQuestion; "clean-URL + redirect" pass offered as optional future work.
 
