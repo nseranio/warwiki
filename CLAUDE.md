@@ -4,7 +4,26 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-03 — New Skin anatomy page + flap-design science folded into the flaps index
+## Current Handoff - 2026-06-04 — Anatomy & Physiology reorganized (4 groups) + Perineal-urethrostomy restructure (Midline / Augmented / Blandy fix)
+
+4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean; verified in-browser.
+
+**Anatomy & Physiology reorganized into 4 reconstructive-lens groups** (commit `fdb0e45`) — replaced the "Pelvis, Support & Other" junk drawer + the two singleton categories (Lower Extremity, Oral Cavity), and housed the orphan `skin.mdx`. New groups (target → surgical field → donor): **Urinary Tract** (+ GU embryology) · **Genitalia & Reproductive** (unchanged) · **Pelvic Floor, Spaces & Neurovascular** (relabeled from `pelvis-support`; 7 pages stay put) · **Donor & Harvest Sites** (new `donor-sites/`: oral cavity, skin, leg & thigh, bowel, abdominal wall). The 6 moved pages each carry a **`slug:` override pinning their old URL** → zero link breakage, no redirects (link checker honors `slug:`). User-chosen scheme via AskUserQuestion; "clean-URL + redirect" pass offered as optional future work.
+
+**Perineal-urethrostomy restructure** (commits `018e200`, `6ab25d9`):
+
+- **7-flap page → [Midline Perineal Urethrostomy](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/midline-perineal-urethrostomy.mdx)** — `git mv` to a clean filename, **slug kept stable** (9 inbound links + DB row intact). Leads with the universal midline incision + intraoperative loop-vs-7-flap decision; removed the on-page BMG-augmented section (→ own page).
+- **New [Augmented Perineal Urethrostomy](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/augmented-perineal-urethrostomy.mdx)** — approach-agnostic (dorsal onlay BMG via midline OR inverted-U/Blandy), so it stands alone. Built from removed content + 2 user dumps (technique, indications, DeLong 80% w/ case-mix caveat, LS evidence, PU-technique comparison table, Kamat revision). 14 refs. Added to atlas DB; short pointers from midline + Blandy.
+- **Fixed the Blandy flap geometry** (was reversed + self-contradictory). Correct (verified vs Cleveland Clinic + plasticsurgerykey): **apex points anteriorly toward the scrotum, flap posteriorly based (pedicle toward anus), apex parachuted to the proximal urethrotomy** (~3 cm anterior, ~3:1 base-to-length).
+- Link labels updated across johanson/propeller/meatotomy (repointed a dead `#bmg-augmented…` fragment) + AFAB/AMAB nullification pages. Added the **Sean Elliott MD PU video** (`3dKggq-K0cc`, oEmbed title) to the midline page.
+
+**Conventions reinforced:** repurposing a page = rename file but **keep the explicit `slug:`** (URL stability); a spanning, approach-agnostic technique earns **its own page**, not a section under one approach; **`lint:links` strips URL fragments** so deleted-section deep-links must be fixed by hand; **verify a challenged anatomical claim against the operative literature** before editing.
+
+Full session detail in `CHANGELOG.md` under 2026-06-04.
+
+---
+
+## Previous Handoff - 2026-06-03 — New Skin anatomy page + flap-design science folded into the flaps index
 
 2 commits, both fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
 

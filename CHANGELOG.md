@@ -6,6 +6,40 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-04 — Anatomy & Physiology reorganized (4 groups) + Perineal-urethrostomy restructure (Midline / Augmented / Blandy fix)
+
+**4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean; verified in-browser.** Two workstreams.
+
+### Anatomy & Physiology reorganized into 4 reconstructive-lens groups (commit `fdb0e45`)
+
+Replaced the **"Pelvis, Support & Other"** junk drawer and the two singleton categories (Lower Extremity, Oral Cavity) — and gave the orphan `skin.mdx` a home — with four role-based groups, framed as **target → surgical field → donor**:
+
+- **Urinary Tract** — renal, ureter, bladder, male/female urethra, **+ GU embryology** (folded in).
+- **Genitalia & Reproductive** — unchanged (8 pages).
+- **Pelvic Floor, Spaces & Neurovascular** — relabeled from `pelvis-support`; bony pelvis, perineum, anal, presacral, retropubic, pelvic neuro/vascular (the 7 pages that stayed put — no move, no slug).
+- **Donor & Harvest Sites** — new `donor-sites/` folder: oral cavity, skin, leg & thigh, bowel, abdominal wall.
+
+The six moved pages each carry a **`slug:` override pinning their original public URL**, so all ~28 inbound links still resolve and no redirects were needed (the link checker honors `slug:` via `fileToUrl`). Empty `oral-cavity/` and `lower-extremity/` folders removed; index `section-stack` rewritten. **Cosmetic tradeoff:** a moved page's folder no longer matches its URL (e.g., `donor-sites/bowel-anatomy.mdx` still serves at `/pelvis-support/bowel-anatomy`) — the price of zero link churn. (User-decided scheme via AskUserQuestion; "clean-URL + redirect" pass offered as optional future work.)
+
+### Perineal-urethrostomy restructure (commits `018e200`, `6ab25d9`)
+
+User's read: the "7-flap" page was really about *going midline and then your options*, and augmented PU is approach-agnostic. Three changes:
+
+- **Reframed the 7-flap page → [Midline Perineal Urethrostomy](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/midline-perineal-urethrostomy.mdx)** (`git mv` seven-flap → midline-perineal-urethrostomy.mdx, **slug kept stable** so the 9 inbound links + DB row don't break). New intro + "Why Midline, and the Two Options" section lead with the universal midline incision and the intraoperative **loop-vs-7-flap** decision; the 7-flap stays the centerpiece flap but is now one of two options. Removed the on-page BMG-augmented section (→ own page) and dropped its 3 now-unused refs.
+- **New standalone page — [Augmented Perineal Urethrostomy](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/augmented-perineal-urethrostomy.mdx)** (slug `.../augmented-perineal-urethrostomy`, sidebar 43). Augmented PU is **approach-agnostic** — a dorsal onlay BMG added through either a midline OR an inverted-U/Blandy incision — so it no longer lives under the midline page. Built from the removed on-page content + two user source dumps: indications, step-by-step dorsal-BMG technique, rationale, outcomes (DeLong 80% with the case-mix caveat vs standard PU 94.8–95.1%), selection logic, the LS evidence pivot (Patel 93% PU vs BMG; Kurtzman meta 10%→18%), a PU-technique comparison table, and revision (Kamat). 14 refs. Dropped the dump's bled-in irrelevant figures/refs (female-urethra/metoidioplasty). Added to the male-urethroplasty atlas DB; short pointers from the midline + Blandy pages.
+- **Fixed the Blandy flap geometry** (it was reversed *and* internally inconsistent — "posteriorly based" but "base directed anteriorly"). Correct, per Cleveland Clinic + plasticsurgerykey operative descriptions: the **rounded apex points anteriorly toward the scrotum**, the flap is **posteriorly based** (pedicle toward the anus, off the bulbocavernosus), and the **apex is parachuted to the proximal urethrotomy** (~3 cm anterior marking, ~3:1 base-to-length). Fixed the incision, elevation, and anastomosis steps.
+
+DB: row "7-Flap Perineal Urethrostomy" → "Midline Perineal Urethrostomy"; new "Augmented Perineal Urethrostomy" row. Link labels updated across johanson-two-stage, propeller-flap, meatotomy (repointed the **dead `#bmg-augmented…` fragment** to the new page — `lint:links` strips fragments so it wouldn't have caught this), and the AFAB/AMAB nullification pages. Added the **Sean Elliott MD "Perineal Urethrostomy" video** (`3dKggq-K0cc`, title via oEmbed) to the midline page.
+
+**Conventions reinforced:**
+
+- **Repurposing a page = rename the file for clarity but keep the explicit `slug:`** so inbound links and DB rows stay intact (same URL-stability play as the anatomy reorg). The 7-flap → midline rename used this.
+- **A spanning, approach-agnostic technique earns its own page**, not a section under one approach (augmented PU spans midline + Blandy) — same rule as the "one full page + short pointers" pattern.
+- **`lint:links` strips URL fragments** — it validates the route, not the `#anchor`. When you delete a section that other pages deep-link to, the fragment link silently lands at page-top; fix those by hand (caught the meatotomy `#bmg-augmented…` link).
+- **Verify an anatomical claim against the operative literature when challenged** — the Blandy apex/base orientation was confirmed against two independent sources before editing, not trusted either way.
+
+---
+
 ## 2026-06-03 — New Skin anatomy page + flap-design science folded into the flaps index
 
 **2 commits, both fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.** User supplied two large source dumps — comprehensive skin anatomy/flap-design science, and random-pattern-flap best practices — and asked to "update the skin anatomy page and incorporate this knowledge of flaps and flap design." No skin anatomy page existed; per the user's placement choice (AskUserQuestion), the work split into a **new Anatomy & Physiology page for the skin** and a **fold of the flap-design science into the existing flaps index**.
