@@ -4,7 +4,27 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-02 (later 2) — Corporal-fibrosis build-out: expanded fibrosis section + 2 new instrument pages (Wilson scissors, Cavernotomes) + VJSM video card
+## Current Handoff - 2026-06-03 — New Skin anatomy page + flap-design science folded into the flaps index
+
+2 commits, both fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
+
+User supplied two large source dumps (skin anatomy / flap-design science + random-pattern-flap best practices) and asked to "update the skin anatomy page." No such page existed; per the user's placement choice (AskUserQuestion), the work split into a **new anatomy page** + a **fold into the flaps index**:
+
+- **New page — [Skin](docs/01-foundations/anatomy-physiology/skin.mdx)** (Anatomy & Physiology, `sidebar_position: 6`, top-level → `/docs/foundations/anatomy-physiology/skin`). Reconstructively framed. **Layers** (epidermis/dermis/hypodermis + donor-site thickness table tied to thin-vs-bulky flap selection; the de-epithelialize-don't-excise-dermis rule), **cutaneous vascular anatomy** (subdermal/subcutaneous/fascial plexuses, two-level perforators, direct/indirect linking vessels, Nakajima five types), **biomechanics** (RSTLs, anisotropy, ~21.6 MPa / ~83.3 MPa), **neurovascular relationships** (neurovascular + venoadipofascial flap basis → sensate genital cover). 19 refs, stable anchors; added to the anatomy index `section-stack`.
+- **Expanded — [Flaps in GU Reconstruction](docs/01-foundations/surgical-principles/flaps-gu-reconstruction.mdx)**: Nakajima note in the classification overview; new **Vascular Basis of Flap Design — Angiosome and Perforasome** section (Taylor capture-one-territory rule; Saint-Cyr perforasome axis/linking-vessel rules; imaging-driven flexible plan → GU propeller/perforator flaps); new **Random Pattern Flap Design Principles** section framed on the library's own local random flaps (L:W ratios, arbor geometry, RSTL orientation, undermining-to-3×, the >250 g tension threshold, preserve-the-plexus, delay phenomenon, pharmacologic adjuncts) + summary table. 20 new refs (11–30); bidirectional cross-links with the Skin page.
+
+**Conventions reinforced:**
+
+- **Where new content lands is a real decision — ask when the user's mental model doesn't match the repo.** The user said "the skin anatomy page"; it didn't exist. AskUserQuestion settled placement (new anatomy page + fold flap-design into the flaps index) before any writing.
+- **`{#custom-id}` heading anchors break the MDX build.** A `## Heading {#id}` explicit-ID heading made MDX/acorn fail with *"Could not parse expression with acorn"* (the `{…}` is read as a JS expression; aggravated by an `&` in the heading). For a stable cross-page section target, use an explicit `<a id="…"></a>` HTML anchor above the heading instead, and prefer "and" over "&" in anchored headings. `npm run lint` misses this — only `npm run build` catches it (same class as the `<sup>`-closure rule).
+- **De-dupe references before they ship.** The skin draft would have cited Nakajima 1986 under two numbers; merged to one and renumbered to keep citation numbering gap-free (lint enforces no gaps).
+- **Drop `undefined`-caption figure placeholders** from source dumps (no embed rights; house no-caption-only-figure rule) — two were dropped here.
+
+Full session detail in `CHANGELOG.md` under 2026-06-03.
+
+---
+
+## Previous Handoff - 2026-06-02 (later 2) — Corporal-fibrosis build-out: expanded fibrosis section + 2 new instrument pages (Wilson scissors, Cavernotomes) + VJSM video card
 
 4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean throughout.
 
