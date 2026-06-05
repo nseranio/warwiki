@@ -4,9 +4,9 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-05 (later) — Urogyn hemostasis/technique build-out (locking stitch · hydrodissection · SPC · VH vessel sealing · TXA · vasoconstrictors-stub cleanup)
+## Current Handoff - 2026-06-05 (later) — Urogyn hemostasis/technique build-out (locking stitch · hydrodissection · SPC · VH vessel sealing · TXA · vasoconstrictors-stub cleanup · Video Library re-sync)
 
-6 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
+7 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
 
 A run of source-dump incorporations across operative-skills/urogyn:
 
@@ -16,6 +16,7 @@ A run of source-dump incorporations across operative-skills/urogyn:
 - **Expanded vessel sealing on [Vaginal Hysterectomy](docs/04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx)** (`d1e42d5`) — new "Vessel Sealing vs Suture Ligation" section (clamp-cut-ligate vs LigaSure/BiClamp/Harmonic; Kroft meta, Bonavina 2024 network meta, ACOG/Jeppson; difficult-case advantage; suture still needed for cuff + apical).
 - **Built out [Tranexamic Acid](docs/01-foundations/pharmacology/intraoperative-adjuncts/tranexamic-acid.mdx)** (`bf34757`) from stub → mechanism + urinary-tract-fibrinolysis rationale, evidence across urologic surgery (POISE-3 subanalysis headline; prostate/cystectomy/PCNL as evidence base, not primary topics), hematuria, dosing, safety led by the **upper-tract-bleeding contraindication**. Cross-linked into the hydrodissection/VH hemostasis cluster.
 - **Deleted the redundant Vasoconstrictors stub** (`858720d`) — empty page absorbed by Hydrodissection; removed DB row + index entry, added a vercel redirect, rescued the "avoid epinephrine in end-artery fields (penis/digits/IPP)" pearl onto the Hydrodissection epinephrine subsection. 1185 → 1184 pages.
+- **Re-synced the Video Library** (`93a63c8`) — `npm run videos:sync`: **139 → 140 playlists, 1,531 → 1,535 unique videos** (combined 266 / GURS 959 / URPS 310). Chunk count held at 7 (TS2590 guard re-verified); only `videos.ts` (+ stats timestamp) changed.
 
 **Conventions:** dedicated-skill-page (locking stitch) vs expand-in-place (the others) per whether the topic is reusable-standalone or a section of an existing page; always drop the dump's irrelevant copy-paste figures/refs; verify dump-named papers lacking DOIs. Detail in `CHANGELOG.md` under 2026-06-05 (later).
 
