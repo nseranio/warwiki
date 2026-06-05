@@ -4,7 +4,17 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-04 — Anatomy reorg (4 groups) + Perineal-urethrostomy restructure + Kulkarni incisions
+## Current Handoff - 2026-06-05 — New page: Obstetric Perineal & Vaginal Lacerations (urogyn-framed)
+
+1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
+
+Filled a gap: there was no page on the **acute** obstetric laceration (elective perineorrhaphy, anal sphincteroplasty, and episioproctotomy already existed). New **[Obstetric Perineal & Vaginal Lacerations](docs/03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx)** (clinical-conditions → 03c Pelvic Support Disorders, `sidebar_position: 4`; auto-listed, no DB to touch). Covers it end-to-end for the urogynecologist: anatomy at risk, classification (1st–4th + OASIS 3a/3b/3c), overstretch mechanism + levator-avulsion→prolapse, risk-factor table, prevention (intrapartum + antenatal), the **acute immediate repair** (deep-to-superficial 2nd-degree technique, continuous>interrupted suture, postop care), a dedicated **"crown stitch"** subsection, and a closing **"Urogynecologist's Role"** with an acute-repair-vs-elective-perineorrhaphy table + sequelae cross-links (prolapse / FI / dyspareunia / RVF).
+
+Notable: **crown stitch framed honestly** as a teaching term (not an ACOG/Cochrane/AAFP entity) with the tension trade-off; **corrected** the dump's garbled OASIS "3a = 50% EAS" to the standard **3a = &lt;50% EAS thickness**. 15 refs with stable parallel anchors. Detail in `CHANGELOG.md` under 2026-06-05.
+
+---
+
+## Previous Handoff - 2026-06-04 — Anatomy reorg (4 groups) + Perineal-urethrostomy restructure + Kulkarni incisions
 
 **Latest (2026-06-04 later):** Added an **"Incisions and Access Options"** section to the [Kulkarni One-Stage page](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/kulkarni-one-stage.mdx) — the one-sided dorsal-onlay principle delivered through four incisions by stricture location: circumcoronal degloving, perineal + penile invagination (standard), **penoscrotal + penile inversion** (Warner 2016), and the glans-sparing **"Mini-Kulkarni"** for fossa-navicularis/meatal strictures (Oliveira 2025 — flagged as a preprint, n=6). Both named papers verified by lit search before citing; **Kanematsu 2025 dropped** because its verified abstract (ventral HM) didn't match the dump's invagination claim. 4 new refs. Detail in `CHANGELOG.md` under 2026-06-04 (later).
 

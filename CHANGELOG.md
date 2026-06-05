@@ -6,6 +6,19 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-05 — New page: Obstetric Perineal & Vaginal Lacerations (urogyn-framed)
+
+**1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.** User asked to cover vaginal/perineal injury during childbirth, its acute management, and the urogynecologist's role. No page on the **acute** obstetric laceration existed (elective [perineorrhaphy](docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/perineorrhaphy.mdx), [anal sphincteroplasty](docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx), and [episioproctotomy](docs/04-surgical-techniques/04h-fistula-repair/female/episioproctotomy.mdx) already did) — so this fills that gap.
+
+- **New [Obstetric Perineal & Vaginal Lacerations](docs/03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx)** (clinical-conditions → 03c Pelvic Support Disorders, `sidebar_position: 4`; auto-listed, no DB/index to update). Sections: anatomy at risk (perineal body, EAS/IAS with the IAS-80%-resting-pressure point, levator), classification (1st–4th + OASIS 3a/3b/3c), overstretch mechanism + biomechanics (>3× stretch, perineal-body stretch ratio 1.95) and **levator-avulsion → prolapse** (19% primips, OR 7.3), risk-factor table (forceps 5.50, vacuum 3.98, midline episiotomy 3.82; midline-episiotomy-plus-forceps OR 5.65/10.55), prevention (intrapartum + antenatal with NNTs), the **acute immediate repair** (systematic exam, second-degree deep-to-superficial 3-stage technique, continuous-over-interrupted suture evidence, postop care), a dedicated **"crown stitch"** subsection, and a closing **"Urogynecologist's Role"** with an **acute-repair vs elective-perineorrhaphy comparison table** + downstream-sequelae cross-links (prolapse / FI / dyspareunia / RVF).
+- **Crown stitch handled honestly** per the source's own caveat: framed as a **teaching term, not an ACOG/Cochrane/AAFP entity** — the fourchette/perineal-body transition stitch — with the tension trade-off (too tight → constricting ridge/dyspareunia; too loose → splayed fourchette) and the explicit tie-back to the elective perineorrhaphy checkpoint.
+- **Corrected a garbled source stat:** the dump's OASIS "3a: 50% of EAS torn" → the standard Sultan/RCOG **3a = less than 50% of EAS thickness** (3b > 50%, 3c + IAS). Kept the rest of the OASIS subclassification standard-accurate.
+- 15 refs (ACOG 198/214, Cochrane Kettle + Dwan 2024, DeLancey 2024 AJOG, Schmidt-Fenner, Arnold AAFP, biomechanics/risk-factor/perineorrhaphy-survey papers) with stable parallel anchors.
+
+**Convention reinforced:** keep an honest **"not a standardized term"** framing when a user asks about a colloquial/teaching eponym (the crown stitch) rather than inventing guideline status for it; and correct obviously garbled classification stats from a dump against the standard scheme.
+
+---
+
 ## 2026-06-04 (later) — Kulkarni page: Incisions & Access section (penoscrotal inversion + Mini-Kulkarni)
 
 **1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.** User asked to broaden the [Kulkarni One-Stage page](docs/04-surgical-techniques/04a-urethral-reconstruction/graft/kulkarni-one-stage.mdx) beyond the perineal-invagination access to cover the other incision options, anchored on two named papers.
