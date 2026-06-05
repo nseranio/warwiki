@@ -4,7 +4,22 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-05 — New page: Obstetric Perineal & Vaginal Lacerations (urogyn-framed)
+## Current Handoff - 2026-06-05 (later) — Urogyn suture/technique build-out (locking stitch · hydrodissection · SPC · VH vessel sealing)
+
+4 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
+
+A run of source-dump incorporations across operative-skills/urogyn:
+
+- **New [Locking Stitch](docs/01-foundations/surgical-skills/locking-stitch.mdx)** (`ad12db5`) — running-locked suture; lock for hemostasis on vascular mucosa (vaginal/cervical), not on muscle/skin; Cochrane/ACOG favor continuous non-locking overall. Cross-linked from the obstetric-lacerations page (satisfies hidden-category orphan rule).
+- **Built out [Hydrodissection](docs/01-foundations/pharmacology/intraoperative-adjuncts/hydrodissection-agents.mdx)** (`2c55cac`) from stub → full technique + agents (saline/epinephrine/vasopressin/ornipressin head-to-head, vasopressin CV safety, plane-debate RCT). Retitled "Hydrodissection Agents" → "Hydrodissection" (URL unchanged); pharmacology DB row updated.
+- **Expanded [Suprapubic Catheter](docs/01-foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter.mdx) placement** (`14a0ff8`) — guidance modalities, full hydrodissection-to-displace-bowel technique (cross-linked to the hydrodissection page), trocar-vs-Seldinger table (Roberts 2020) + bowel-injury 2.4%→0.09% (Hall 2019), first-exchange timing/technique.
+- **Expanded vessel sealing on [Vaginal Hysterectomy](docs/04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx)** (`d1e42d5`) — new "Vessel Sealing vs Suture Ligation" section (clamp-cut-ligate vs LigaSure/BiClamp/Harmonic; Kroft meta, Bonavina 2024 network meta, ACOG/Jeppson; difficult-case advantage; suture still needed for cuff + apical).
+
+**Conventions:** dedicated-skill-page (locking stitch) vs expand-in-place (the others) per whether the topic is reusable-standalone or a section of an existing page; always drop the dump's irrelevant copy-paste figures/refs; verify dump-named papers lacking DOIs. Detail in `CHANGELOG.md` under 2026-06-05 (later).
+
+---
+
+## Previous Handoff - 2026-06-05 — New page: Obstetric Perineal & Vaginal Lacerations (urogyn-framed)
 
 1 commit, fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
 
