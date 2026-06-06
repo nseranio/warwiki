@@ -4,7 +4,37 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-05 (later) — Urogyn hemostasis/technique build-out (locking stitch · hydrodissection · SPC · VH vessel sealing · TXA · vasoconstrictors-stub cleanup · Video Library re-sync)
+## Current Handoff - 2026-06-06 — Visual overhaul: 11 original SVG schematics (diagrams-as-code) + cohesion cleanup
+
+12 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding. (Visual program is **ongoing** — the bench below is still being worked.)
+
+Addressed the site's biggest gap — **images**. An audit found only **16 of 1,184 pages** carried any image, with **zero** across all of surgical-techniques (450 pp), clinical-conditions (73), and evaluation (38, including the imaging pages). The rest of the site was already healthy (lint/typecheck/build clean; no content cruft — the 18 "TODO" hits were the surgeon name "Ha**tzichris­todo**ulou").
+
+**Cohesion cleanup (2 commits):**
+- `de11bdb` — removed dead Docusaurus starter cruft: the never-rendered `HomepageFeatures` component + its three `undraw_docusaurus_*.svg` + unused `docusaurus.png` / `docusaurus-social-card.jpg` (config uses the `warwiki-*` assets).
+- `b377934` — standardized the generic cross-reference heading onto a single `## See Also` (339 → 441 pages): folded `## See also` / `## Cross-references` / `## Related Articles`/`Topics`/`Reading`. **Left the 15 typed sections intact** (`## Related Instruments`/`Catheters`/`Agents`/…, narrative `## Cross-Reference — What's Covered on…`).
+
+**11 original SVG schematics (10 commits)** — copyright-free, each authored as a re-runnable generator in **`scripts/diagrams/`** (diagrams-as-code), embedded with the house caption pattern, build-validated. Three reusable **engines** emerged:
+- **Plot**: cystometrogram (`9cf127e`) + pressure-flow nomogram + uroflowmetry (`fc91732`) → [Urodynamics](docs/02-evaluation/ancillary-tests/urodynamics.mdx).
+- **Classification ladder**: OASIS grades (`cc71c8e`) → [Obstetric Perineal Injury](docs/03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx); AAST renal I–V (`aabafb5`) → [Renal Trauma](docs/05-special-populations/05a-trauma-emergencies/renal-trauma.mdx).
+- **Geometry panels**: perineal incisions (`115cad8`) → [Male Urethroplasty Incisions](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty-incisions-approaches.mdx); Z-plasty (`fb947ed`) → [Z-Plasty](docs/01-foundations/surgical-principles/flaps/z-plasty.mdx); hypospadias positions (`026c2f5`) → [Hypospadias & Epispadias](docs/05-special-populations/05f-lifelong-care/hypospadias-epispadias.mdx).
+- **Anatomical cross-sections** (also reuse the above primitives): POP-Q six points (`dbc36e7`) → [Pelvic Organ Prolapse](docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx); urethral spongiofibrosis (`03b2fcc`) → [Urethral Stricture](docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx); bladder rupture EPB vs IPB (`195eadd`) → [Bladder Trauma](docs/05-special-populations/05a-trauma-emergencies/bladder-trauma.mdx).
+
+Evaluation / clinical-conditions / surgical-techniques each got their **first** schematics; **~27** image-bearing pages now (was 16).
+
+**Conventions established (durable — carry forward):**
+- **Diagrams-as-code.** Original schematics = generator scripts `scripts/diagrams/*.js` → `static/img/diagrams/*.svg`. House style: white rounded "figure card", brand-blue `#185FA5` primary / slate axes / brick-red diagnostic channel, **white-haloed labels** (`paint-order="stroke"`) so text reads over any line, leader-line callouts parked in whitespace, severity green→amber→red. Edit = re-run the script.
+- **Render-verify loop is mandatory** per figure: `node scripts/diagrams/x.js` → headless-Chrome `--screenshot` → **Read the PNG** → fix → embed → `npm run build` → commit+push. Caught a param-swap (path strings printed as text) and a raw-`<` XML break.
+- **Escape `<`/`>`/`&` in SVG text** (`&lt;`, `&#8804;`) — a raw `<` breaks the SVG XML exactly like MDX.
+- **Embed pattern**: `![alt](/img/diagrams/x.svg)` immediately followed by an italic caption ending **(Original WARWIKI schematic)**.
+- **stats.json churn**: `prebuild` rewrites the `generatedAt` timestamp — `git checkout -- src/data/stats.json` before committing.
+- **Process that worked**: built one approved proof-of-concept (cystometrogram) first, refined for label-overlap (halos + relocated callouts), THEN scaled. Also: **14 already-vetted PD plates sit unused** in `static/img/anatomy/` (perineum/bladder/kidney/female-pelvis) — a zero-risk embed win still on the table.
+
+**Bench (remaining, each reuses an engine):** penile transverse cross-section · Blandy/propeller flap geometry · Wallace vs Bricker ureteroenteric anastomosis · RUG/VCUG positioning · perineum layered sagittal anatomy · pudendal nerve course · bladder-augmentation cup-patch. Detail in `CHANGELOG.md` under 2026-06-06.
+
+---
+
+## Previous Handoff - 2026-06-05 (later) — Urogyn hemostasis/technique build-out (locking stitch · hydrodissection · SPC · VH vessel sealing · TXA · vasoconstrictors-stub cleanup · Video Library re-sync)
 
 7 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean.
 

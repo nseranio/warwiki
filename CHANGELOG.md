@@ -6,6 +6,43 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-06 — Visual overhaul: 11 original SVG schematics (diagrams-as-code) + cohesion cleanup
+
+**12 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding.** Tackled the site's biggest gap — images — after a sweep found only **16 of 1,184 pages** carried any image, with **zero** across all of surgical-techniques, clinical-conditions, and evaluation (including the imaging pages that are literally about reading images).
+
+**Audit that kicked it off.** Lint/typecheck/build already clean; no content cruft (the 18 "TODO" grep hits were the surgeon name "Ha­tzichris­todo­ulou"; the "undefined" hits were legitimate prose like "optimal dosing remains undefined"). Real issues were visual + cosmetic: the homepage never imports `HomepageFeatures` (dead starter cruft); three heading names for one concept ("See Also" 339 / "Cross-references" 54 / "Related" 38); 14 already-vetted public-domain plates sitting embedded nowhere. Checked and **cleared** a duplicate-`sidebar_position` worry (a per-folder sweep found none). User chose to start with cohesion cleanup, then approved the SVG-diagram approach via a proof-of-concept, then said "let it rip."
+
+**Cohesion cleanup (2 commits):**
+- `de11bdb` — removed dead Docusaurus starter cruft: the never-rendered `HomepageFeatures` component, its three `undraw_docusaurus_*.svg` illustrations, and the unused `docusaurus.png` / `docusaurus-social-card.jpg`. None referenced anywhere (the social card / favicon / logo all point at `warwiki-*` assets).
+- `b377934` — standardized the generic cross-reference heading onto `## See Also` (339 → 441 pages): folded lowercase `## See also` (20), `## Cross-references` (54), `## Related Articles` (24), `## Related Topics` (3), `## Related Reading` (1). **Preserved the 15 typed sections** that carry real information (`## Related Instruments`/`Catheters`/`Agents`/`Devices`/`Trocars…`/`Propeller Flaps…`/`Techniques: Pippi Salle…`/`Entity — Pubovesical Fistula`/`Device — Veronikis…`, and the narrative `## Cross-Reference — What's Covered on…` pointers). The only inbound anchor link targets `#see-also` (unaffected by the rename).
+
+**11 original SVG schematics (10 commits)** — all copyright-free, authored as re-runnable generator scripts in `scripts/diagrams/`, embedded with the house caption pattern ending **(Original WARWIKI schematic)**, build-validated:
+
+1. **Cystometrogram** (`9cf127e`) — the proof-of-concept; multichannel filling CMG teaching the Pves−Pabd=Pdet subtraction (cough artifact rejected; phasic detrusor-overactivity wave on Pdet) + FSF/FDV/SDV milestones. → Urodynamics. Established + got user sign-off on the house style.
+2. **POP-Q six points** (`dbc36e7`) — stylized sagittal vaginal canal with Aa/Ba/C/D/Ap/Bp relative to the hymen=0 plane, gh/pb/tvl landmarks, a "reading the points" key, and a stage ruler relating leading-edge position to stage. → Pelvic Organ Prolapse.
+3. **OASIS depth ladder** (`cc71c8e`) — perineal tissue planes by depth + a severity bar per grade (1/2/3a/3b/3c/4) showing how deep each tear reaches, making the EAS-thickness (3a/3b) and IAS (3c) split legible. → Obstetric Perineal Injury.
+4. **Perineal incisions** (`115cad8`) — midline-vertical / inverted-U / lambda drawn on the perineal field, colour-coded by wound-complication rate, midline flagged "preferred." → Male Urethroplasty Incisions.
+5–6. **Pressure-flow nomogram + uroflowmetry** (`fc91732`) — ICS/Abrams-Griffiths obstructed/equivocal/unobstructed zones bounded by BOOI 40/20 with example points; normal smooth-bell vs obstructed low-plateau flow curves. → Urodynamics.
+7. **Z-plasty geometry** (`fb947ed`) — the 60° central limb + two transposing triangular flaps + an angle→lengthening reference (30°/25% … 90°/120%, 60° highlighted). → Z-Plasty.
+8. **Hypospadias meatal positions** (`026c2f5`) — lateral penis/scrotum/perineum with 8 numbered ventral positions grouped anterior/middle/posterior (~70/10/20%), aligned to the page's 3-group table. → Hypospadias & Epispadias.
+9. **AAST renal grades I–V** (`aabafb5`) — five stylized kidney panels (contusion/subcapsular → shallow lac + perirenal hematoma → deep lac → into collecting system with extravasation → shattered/hilar avulsion) with Gerota's fascia + collecting system drawn. → Renal Trauma.
+10. **Urethral cross-section** (`03b2fcc`) — normal open epithelium-lined lumen within the vascular corpus spongiosum vs a spongiofibrosis ring compressing the lumen to a pinhole (Devine depth note). → Urethral Stricture.
+11. **Bladder rupture** (`195eadd`) — two coronal bladder panels: extraperitoneal (base tear below the peritoneal reflection; perivesical leak; catheter drainage) vs intraperitoneal (dome blow-out; urinary ascites among bowel; operative repair). → Bladder Trauma.
+
+**Three reusable "engines"** are the template for the bench: **plot** (axes/grid/curves/zones), **classification ladder** (stacked layers + severity bars), **geometry panels** (shape comparison on a field).
+
+**Conventions established / reinforced:**
+- **Diagrams-as-code.** Original schematics live as `scripts/diagrams/*.js` generators emitting `static/img/diagrams/*.svg`. House style: white rounded "figure card", brand-blue `#185FA5` primary / slate `#334155` axes / brick-red `#C0392B` diagnostic channel, **white-haloed labels** via `paint-order="stroke"` + white stroke so text stays legible over any line, leader-line callouts parked in whitespace, severity green→amber→red. To tweak a figure, edit the script and re-run.
+- **Render-verify loop is mandatory** per figure: `node scripts/diagrams/x.js` → headless-Chrome `--headless --screenshot` to PNG → **Read the PNG** to eyeball it → fix → embed in the page → `npm run build` → commit + push. This caught two bugs the build alone would not have flagged well: a function param-swap (SVG path strings rendered as visible text) and a raw `<` in label text breaking the SVG XML.
+- **Escape `<`/`>`/`&` inside SVG text** (`&lt;`, `&#8804;`, `&amp;`) — a raw `<` is a malformed start-tag, the same hazard as in MDX prose.
+- **Embed pattern**: `![alt](/img/diagrams/x.svg)` immediately followed by an italic caption that explains the figure and ends with **(Original WARWIKI schematic)**.
+- **stats.json timestamp churn**: `npm run build`'s `prebuild` rewrites `src/data/stats.json`'s `generatedAt`; `git checkout -- src/data/stats.json` before each commit to keep diffs to real changes.
+- **Process**: build ONE proof-of-concept first and get sign-off on the style (the cystometrogram was refined for label-overlap — white halos + callouts relocated into headroom — before scaling). Verify in-page in light **and** dark mode (the white figure card reads as an intentional plate in dark mode, like the existing raster anatomy images).
+
+**Still on the bench (remaining high-value candidates, each reuses an engine):** penile transverse cross-section (corpora/spongiosum/tunica) · Blandy & propeller flap geometry · Wallace vs Bricker ureteroenteric anastomosis · RUG/VCUG positioning + stricture silhouette · perineum layered sagittal anatomy · pudendal-nerve course/Alcock's canal · bladder-augmentation cup-patch. Also pending: embedding the 14 already-vetted public-domain anatomy plates onto their matching anatomy pages (zero-risk win).
+
+---
+
 ## 2026-06-05 (later) — Urogyn hemostasis/technique build-out: locking stitch, hydrodissection, SPC, VH vessel sealing, TXA, Vasoconstrictors-stub cleanup, + Video Library re-sync
 
 **7 commits, all fast-forwarded to `main`. Lint (scope/citations/orphans/links) clean; typecheck + build clean throughout.** A run of user source-dump incorporations across the urogyn/operative-skills space, each verified and cleaned before merge — the hemostasis trio (hydrodissection, VH vessel sealing, TXA) form a small **perioperative-hemostasis cluster** that now cross-links, capped by deleting the redundant Vasoconstrictors stub it absorbed.
