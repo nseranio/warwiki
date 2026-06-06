@@ -6,9 +6,9 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
-## 2026-06-06 — Visual overhaul: 11 original SVG schematics (diagrams-as-code) + cohesion cleanup
+## 2026-06-06 — Visual overhaul: 13 original SVG schematics (diagrams-as-code) + cohesion cleanup
 
-**12 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding.** Tackled the site's biggest gap — images — after a sweep found only **16 of 1,184 pages** carried any image, with **zero** across all of surgical-techniques, clinical-conditions, and evaluation (including the imaging pages that are literally about reading images).
+**16 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding.** Tackled the site's biggest gap — images — after a sweep found only **16 of 1,184 pages** carried any image, with **zero** across all of surgical-techniques, clinical-conditions, and evaluation (including the imaging pages that are literally about reading images).
 
 **Audit that kicked it off.** Lint/typecheck/build already clean; no content cruft (the 18 "TODO" grep hits were the surgeon name "Ha­tzichris­todo­ulou"; the "undefined" hits were legitimate prose like "optimal dosing remains undefined"). Real issues were visual + cosmetic: the homepage never imports `HomepageFeatures` (dead starter cruft); three heading names for one concept ("See Also" 339 / "Cross-references" 54 / "Related" 38); 14 already-vetted public-domain plates sitting embedded nowhere. Checked and **cleared** a duplicate-`sidebar_position` worry (a per-folder sweep found none). User chose to start with cohesion cleanup, then approved the SVG-diagram approach via a proof-of-concept, then said "let it rip."
 
@@ -16,7 +16,7 @@ For commit-level detail run `git log --oneline`.
 - `de11bdb` — removed dead Docusaurus starter cruft: the never-rendered `HomepageFeatures` component, its three `undraw_docusaurus_*.svg` illustrations, and the unused `docusaurus.png` / `docusaurus-social-card.jpg`. None referenced anywhere (the social card / favicon / logo all point at `warwiki-*` assets).
 - `b377934` — standardized the generic cross-reference heading onto `## See Also` (339 → 441 pages): folded lowercase `## See also` (20), `## Cross-references` (54), `## Related Articles` (24), `## Related Topics` (3), `## Related Reading` (1). **Preserved the 15 typed sections** that carry real information (`## Related Instruments`/`Catheters`/`Agents`/`Devices`/`Trocars…`/`Propeller Flaps…`/`Techniques: Pippi Salle…`/`Entity — Pubovesical Fistula`/`Device — Veronikis…`, and the narrative `## Cross-Reference — What's Covered on…` pointers). The only inbound anchor link targets `#see-also` (unaffected by the rename).
 
-**11 original SVG schematics (10 commits)** — all copyright-free, authored as re-runnable generator scripts in `scripts/diagrams/`, embedded with the house caption pattern ending **(Original WARWIKI schematic)**, build-validated:
+**13 original SVG schematics (12 commits)** — all copyright-free, authored as re-runnable generator scripts in `scripts/diagrams/`, embedded with the house caption pattern ending **(Original WARWIKI schematic)**, build-validated:
 
 1. **Cystometrogram** (`9cf127e`) — the proof-of-concept; multichannel filling CMG teaching the Pves−Pabd=Pdet subtraction (cough artifact rejected; phasic detrusor-overactivity wave on Pdet) + FSF/FDV/SDV milestones. → Urodynamics. Established + got user sign-off on the house style.
 2. **POP-Q six points** (`dbc36e7`) — stylized sagittal vaginal canal with Aa/Ba/C/D/Ap/Bp relative to the hymen=0 plane, gh/pb/tvl landmarks, a "reading the points" key, and a stage ruler relating leading-edge position to stage. → Pelvic Organ Prolapse.
@@ -28,6 +28,8 @@ For commit-level detail run `git log --oneline`.
 9. **AAST renal grades I–V** (`aabafb5`) — five stylized kidney panels (contusion/subcapsular → shallow lac + perirenal hematoma → deep lac → into collecting system with extravasation → shattered/hilar avulsion) with Gerota's fascia + collecting system drawn. → Renal Trauma.
 10. **Urethral cross-section** (`03b2fcc`) — normal open epithelium-lined lumen within the vascular corpus spongiosum vs a spongiofibrosis ring compressing the lumen to a pinhole (Devine depth note). → Urethral Stricture.
 11. **Bladder rupture** (`195eadd`) — two coronal bladder panels: extraperitoneal (base tear below the peritoneal reflection; perivesical leak; catheter drainage) vs intraperitoneal (dome blow-out; urinary ascites among bowel; operative repair). → Bladder Trauma.
+12. **Penile transverse cross-section** (`bfb2ec9`) — paired corpora cavernosa (tunica, deep cavernosal arteries, intercavernosal septum), ventral corpus spongiosum with urethra, the dorsal neurovascular bundle (deep dorsal vein / dorsal arteries / dorsal nerves), Buck's fascia and skin. → Penis anatomy (the page's first image).
+13. **Ureteroenteric anastomosis** (`615557a`) — Bricker (each ureter sewn separately end-to-side to the closed proximal ileum) vs Wallace (ureters spatulated and joined into a single plate sewn to the open conduit end), with the stricture-rate trade-off. → Ileal Conduit.
 
 **Three reusable "engines"** are the template for the bench: **plot** (axes/grid/curves/zones), **classification ladder** (stacked layers + severity bars), **geometry panels** (shape comparison on a field).
 
@@ -39,7 +41,7 @@ For commit-level detail run `git log --oneline`.
 - **stats.json timestamp churn**: `npm run build`'s `prebuild` rewrites `src/data/stats.json`'s `generatedAt`; `git checkout -- src/data/stats.json` before each commit to keep diffs to real changes.
 - **Process**: build ONE proof-of-concept first and get sign-off on the style (the cystometrogram was refined for label-overlap — white halos + callouts relocated into headroom — before scaling). Verify in-page in light **and** dark mode (the white figure card reads as an intentional plate in dark mode, like the existing raster anatomy images).
 
-**Still on the bench (remaining high-value candidates, each reuses an engine):** penile transverse cross-section (corpora/spongiosum/tunica) · Blandy & propeller flap geometry · Wallace vs Bricker ureteroenteric anastomosis · RUG/VCUG positioning + stricture silhouette · perineum layered sagittal anatomy · pudendal-nerve course/Alcock's canal · bladder-augmentation cup-patch. Also pending: embedding the 14 already-vetted public-domain anatomy plates onto their matching anatomy pages (zero-risk win).
+**Still on the bench (remaining high-value candidates, each reuses an engine):** Blandy & propeller flap geometry · RUG/VCUG positioning + stricture silhouette · perineum layered sagittal anatomy · pudendal-nerve course/Alcock's canal · bladder-augmentation cup-patch. Also pending: embedding the 14 already-vetted public-domain anatomy plates onto their matching anatomy pages (zero-risk win).
 
 ---
 
