@@ -6,9 +6,9 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
-## 2026-06-07 — Visual overhaul continued: +18 original SVG schematics (diagrams 17–34)
+## 2026-06-07 — Visual overhaul continued: +21 original SVG schematics (diagrams 17–37)
 
-**18 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 34**; image-bearing pages **~27 → ~41**.
+**21 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 37**; image-bearing pages **~27 → ~44**.
 
 **Both bench items shipped:**
 - **Blandy U-flap** (`blandy-u-flap.js`, #18) — U-shaped anterior-vaginal-wall flap on a proximal pedicle, ventral (6 o'clock) urethrotomy, inlay over a Foley + ventral-onlay cross-section. → [Female Vaginal Flap Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-vaginal-flap-urethroplasty.mdx).
@@ -33,6 +33,9 @@ For commit-level detail run `git log --oneline`.
 - **Three-piece IPP** (`ipp-components.js`, #30) — cylinders + pump + reservoir, cross-section, inflate/deflate. → [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx).
 - **DeLancey hammock hypothesis** (`continence-hammock.js`, #32) — normal vs lax suburethral support and why a cough leaks. → [Stress Urinary Incontinence (Female)](docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx).
 - **Sacrospinous ligament fixation** (`sslf.js`, #34) — apex-to-SSL suspension with the 1.5–2 cm-medial safe zone vs the pudendal/sciatic danger zone. → [SSLF](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx).
+- **Uterosacral ligament suspension** (`usls.js`, #35) — bird's-eye vault-to-USL suspension with the ureter-danger (~1–2 cm lateral) and mandatory-cystoscopy teaching points; companion to SSLF. → [USLS](docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx).
+- **Studer orthotopic neobladder** (`studer-neobladder.js`, #36) — detubularized ileal sphere + afferent (Studer) limb + urethral anastomosis, with a why-detubularize (Laplace, low-pressure) inset. → [Modified Studer Pouch](docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx).
+- **Transureteroureterostomy** (`tuu.js`, #37) — donor ureter crossed above the IMA/aortic bifurcation to an end-to-side anastomosis with the recipient; "the recipient ureter is the gatekeeper" caution. → [Transureteroureterostomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/trans-ureteroureterostomy.mdx).
 
 **Conventions reinforced (carry forward):** the per-figure loop held — `node scripts/diagrams/x.js` → headless-Chrome `--screenshot` → **Read the PNG** → fix → embed → `npm run build` → `git checkout -- src/data/stats.json` → commit+push. The single recurring defect was **bottom-legend / caption lines overrunning the card width** (caught on the render every time) — keep legend lines short or drop a clause; the right column of a 3-zone figure collides with leader-label text unless subs are trimmed. Device schematics (AUS/IPP) reuse one "components + cycle-callout + cross-section inset" layout; channel schematics (Yang-Monti/appendicovesicostomy) reuse the "flap-valve cross-section" inset. Still **not** drawing radiograph/CT/MRI/US appearances (the no-fake-radiograph rule).
 
