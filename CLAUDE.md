@@ -4,7 +4,25 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-07 — Visual overhaul continued: +28 original SVG schematics (diagrams 17–44) + new Heineke-Mikulicz page
+## Current Handoff - 2026-06-07 (later) — Visual overhaul continued: +10 more original SVG schematics (diagrams 45–54)
+
+10 schematic commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding. Direct continuation of the same-day diagrams-as-code work — picked the highest-value pages that still had no figure. **Diagram total 44 → 54; image-bearing pages ~51 → ~60** (two figures each serve two pages).
+
+**10 more, each on a high-value page that had no schematic** (two reused across a second page):
+- **Upper tract:** Anderson-Hynes dismembered pyeloplasty (`anderson-hynes.js`, 3-panel obstructed → dismember/spatulate → dependent-funnel anastomosis) → [Pyeloplasty](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx); ileal ureter harvest + isoperistaltic interposition (`ileal-ureter.js`) → [Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx); BMG ureteroplasty non-transecting onlay + omental-wrap cross-section (`bmg-ureteroplasty.js`) → [BMG Ureteroplasty](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/bmg-onlay-ureter.mdx).
+- **Diversion:** Hautmann W-neobladder (fold → sphere) (`hautmann-neobladder.js`) → [Hautmann](docs/04-surgical-techniques/04c-urinary-diversion/hautmann-neobladder.mdx); Kock pouch twin nipple valves + one-way-valve inset (`kock-pouch.js`) → [Kock Pouch](docs/04-surgical-techniques/04c-urinary-diversion/kock-pouch.mdx).
+- **BPH (1 figure, 2 pages):** anatomical enucleation plane — axial (adenoma/surgical-capsule) + sagittal landmarks (`prostate-enucleation.js`) → [HoLEP](docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx) + [Simple Prostatectomy](docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx).
+- **Functional / prosthetics:** priapism shunt family on one organ + distal-window inset (`priapism-shunts.js`) → [Priapism Shunts](docs/04-surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression.mdx); tunica plication mechanics Nesbit/16-dot/Yachia (`tunica-plication.js`) → [Tunica Plication](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication.mdx).
+- **Urogyn:** paravaginal defect/repair axial — ATFP ("white line") suspension (`paravaginal-repair.js`) → [Paravaginal Repair](docs/04-surgical-techniques/04g-prolapse-repair/anterior/vaginal-paravaginal-repair.mdx).
+- **Fistula (1 figure, 2 pages):** transabdominal VVF — extravesical vs O'Conor bivalving (`vvf-abdominal.js`) → [Extravesical VVF](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx) + [O'Conor VVF](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx).
+
+**Conventions reinforced / new:** same per-figure loop (`node scripts/diagrams/x.js` → headless-Chrome `--screenshot` → **Read the PNG** → fix → embed with blank-line-before-caption ending **(Original WARWIKI schematic)** → `npm run build` → `git checkout -- src/data/stats.json` → commit+push). **One figure can serve two paired pages** that share a principle (prostate-enucleation on HoLEP + simple-prostatectomy; vvf-abdominal on extravesical + O'Conor) — embed with **page-specific captions** and run `npm run lint:links` when a caption cross-links. **New device color: violet `#7C3AED` for indwelling stents** (Anderson-Hynes, BMG ureteroplasty) so a stent doesn't read as "gain green." Reusable layouts that emerged: **"harvest + in-situ"** two-panel for bowel-segment ops (ileal ureter); **"mechanism inset"** (Kock nipple valve; priapism distal-window comparison row); **axial defect-vs-repair** for support anatomy (paravaginal). **No-fake-radiograph rule still holds** ([[feedback_no_fake_radiograph_schematics]]).
+
+**Bench (remaining):** **GAS** (penile-inversion vaginoplasty / phalloplasty / metoidioplasty / intestinal vaginoplasty / masculinizing scrotoplasty — high value but complex to render cleanly); glans resurfacing; vulvar reconstruction; Mainz Pouch I / II; Quartey & other distal-flap urethroplasties; pelvic-floor levator-ani-from-below anatomy. The flagship upper-tract / diversion / BPH-enucleation / Peyronie-plication / anterior-prolapse / abdominal-fistula techniques are now illustrated. Detail in `CHANGELOG.md` under 2026-06-07 (later).
+
+---
+
+## Previous Handoff - 2026-06-07 (earlier) — Visual overhaul continued: +28 original SVG schematics (diagrams 17–44) + new Heineke-Mikulicz page
 
 28 schematic commits + 1 new content page, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding. Direct continuation of the 2026-06-06 diagrams-as-code work — cleared the bench and kept going. **Diagram total 16 → 44; image-bearing pages ~27 → ~51.**
 

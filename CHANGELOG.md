@@ -6,6 +6,34 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-07 (later) — Visual overhaul continued: +10 more original SVG schematics (diagrams 45–54)
+
+**10 schematic commits, all fast-forwarded to `main`. Lint (figures + links)/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Continuation of the same-day diagrams-as-code work; targeted the highest-value pages that still had no figure. Same house style and per-figure loop. Diagram total **44 → 54**; image-bearing pages **~51 → ~60** (two figures each serve two paired pages).
+
+New generators in `scripts/diagrams/` → embeds:
+
+- **`anderson-hynes.js`** — Anderson-Hynes dismembered pyeloplasty, 3 panels: obstructed UPJ with lower-pole crossing vessel → dismember/excise + lateral spatulation + pelvic trim → dependent-funnel anastomosis with apical stitch, double-J stent, ureter transposed anterior to the vessel. → [pyeloplasty.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx) (Anderson-Hynes section).
+- **`ileal-ureter.js`** — 2 panels: harvest a 15–25 cm ileal segment on its mesentery + restore continuity (ileoileostomy) → interpose isoperistaltically between renal pelvis (ileopyelostomy) and bladder (refluxing ileovesical). → [ileal-ureter.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx).
+- **`bmg-ureteroplasty.js`** — non-transecting longitudinal ureterotomy → buccal onlay graft over a double-J stent → omental/fat-wrap cross-section (free graft needs a vascular bed). → [bmg-onlay-ureter.mdx](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/bmg-onlay-ureter.mdx).
+- **`hautmann-neobladder.js`** — detubularized 60–70 cm ileum folded into a four-limb **W** → closed into a low-pressure sphere (Laplace) with ureters reimplanted proximally and urethra at the most dependent point; visually distinct from the existing Studer figure. → [hautmann-neobladder.mdx](docs/04-surgical-techniques/04c-urinary-diversion/hautmann-neobladder.mdx).
+- **`kock-pouch.js`** — continent cutaneous reservoir with afferent (antireflux) + efferent (continence) intussuscepted **nipple valves** and a catheterizable stoma, plus an inset of how an intussuscepted nipple acts as a one-way valve under pouch pressure. → [kock-pouch.mdx](docs/04-surgical-techniques/04c-urinary-diversion/kock-pouch.mdx).
+- **`prostate-enucleation.js`** (1 figure, **2 pages**) — axial cross-section of the adenoma shelled off the surgical capsule along the enucleation plane (perforators confirm depth) + sagittal verumontanum/bladder-neck/apex landmarks. → [prostate-enucleation-holep.mdx](docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx) + [simple-prostatectomy.mdx](docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx) (page-specific captions: morcellation vs intact delivery).
+- **`priapism-shunts.js`** — the shunt family on one longitudinal penile schematic: distal corporoglanular shunt + Burnett snake maneuver (first-line), proximal Quackels + Grayhack (historical), plus an inset comparing the four distal windows (Winter/Ebbehoj/T-shunt/Al-Ghorab) by size. → [priapism-shunts-decompression.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression.mdx).
+- **`tunica-plication.js`** — plication mechanics for Peyronie's: Nesbit (excise wedge + close) vs 16-dot (infold, no excision) vs Yachia (longitudinal incision, transverse close), all shortening the convex side; complements the strategy-level `peyronie-correction` figure on the index. → [tunica-plication.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication.mdx).
+- **`paravaginal-repair.js`** — axial lateral-support view: anterior vaginal wall suspended from the arcus tendineus ("white line"); paravaginal defect = detachment → lateral cystocele; repair = re-suspension to ATFP with sutures. → [vaginal-paravaginal-repair.mdx](docs/04-surgical-techniques/04g-prolapse-repair/anterior/vaginal-paravaginal-repair.mdx).
+- **`vvf-abdominal.js`** (1 figure, **2 pages**) — transabdominal VVF: extravesical (bladder closed, dissect the vesicovaginal space from outside) vs O'Conor (sagittal bivalving of the bladder to the fistula); both close bladder + vagina as separate layers with omental interposition. → [extravesical-vvf-repair.mdx](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx) + [oconor-vvf-repair.mdx](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx).
+
+**Conventions reinforced / new:**
+
+- **One figure can serve two paired pages** that share a principle (prostate-enucleation, vvf-abdominal) — embed with **page-specific captions**; run `npm run lint:links` when a caption cross-links to the sibling page.
+- **New device color: violet `#7C3AED` for indwelling stents** (double-J in Anderson-Hynes + BMG ureteroplasty) so a stent does not read as "gain green" in the house palette.
+- Reusable layouts: **"harvest + in-situ"** two-panel for bowel-segment operations (ileal ureter); **"mechanism inset"** (Kock nipple valve, priapism distal-window row); **axial defect-vs-repair** for support anatomy (paravaginal).
+- No-fake-radiograph rule still holds; all 10 are anatomy/geometry/mechanism schematics.
+
+**Bench (remaining):** GAS (penile-inversion vaginoplasty / phalloplasty / metoidioplasty / intestinal vaginoplasty / masculinizing scrotoplasty — high value but complex); glans resurfacing; vulvar reconstruction; Mainz Pouch I / II; Quartey & other distal-flap urethroplasties; pelvic-floor levator-ani-from-below anatomy.
+
+---
+
 ## 2026-06-07 — Visual overhaul continued: +28 original SVG schematics (diagrams 17–44) + new Heineke-Mikulicz page
 
 **28 schematic commits + 1 new content page, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 44**; image-bearing pages **~27 → ~51**.
