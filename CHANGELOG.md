@@ -6,6 +6,38 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-07 — Visual overhaul continued: +18 original SVG schematics (diagrams 17–34)
+
+**18 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 34**; image-bearing pages **~27 → ~41**.
+
+**Both bench items shipped:**
+- **Blandy U-flap** (`blandy-u-flap.js`, #18) — U-shaped anterior-vaginal-wall flap on a proximal pedicle, ventral (6 o'clock) urethrotomy, inlay over a Foley + ventral-onlay cross-section. → [Female Vaginal Flap Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-vaginal-flap-urethroplasty.mdx).
+- **Perineum layered architecture** (`perineal-layers.js`, #23) — coronal slice: skin → Colles' fascia → superficial pouch → perineal membrane → deep pouch → levator ani, each tagged with its surgical plane (kept *coronal* rather than the noted "sagittal" because the pouches stack legibly that way). → [The Perineum](docs/01-foundations/anatomy-physiology/pelvis-support/perineum.mdx).
+
+**Reconstruction geometry / technique figures:**
+- **Heineke-Mikulicz principle** (`heineke-mikulicz.js`, #17) — incise long / close transverse; widens caliber without transection. → [Non-Transecting Bulbar Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/non-transecting-bulbar.mdx).
+- **Psoas hitch vs Boari flap** (`boari-psoas.js`, #19) — bladder-based gap-bridging with reach brackets (~5–8 vs ~10–15 cm). → [Boari Flap & Psoas Hitch](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx).
+- **Antireflux reimplantation tunnels** (`reimplant-techniques.js`, #20) — Cohen cross-trigonal vs Politano-Leadbetter vs Lich-Gregoir, with a flap-valve cross-section inset. → [Ureteral Reimplantation](docs/04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx).
+- **TIP / Snodgrass** (`tip-snodgrass.js`, #21) — dorsal-midline plate incision enabling tubularization + a "why incise" cross-section ladder. → [Hypospadias & Epispadias](docs/05-special-populations/05f-lifelong-care/hypospadias-epispadias.mdx).
+- **BMG graft placement** (`graft-placement.js`, #22) — dorsal onlay (Barbagli) vs ventral onlay vs dorsal inlay (Asopa) beds in cross-section. → [Principles of Urethral Reconstruction](docs/04-surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles.mdx).
+- **Yang-Monti channel** (`yang-monti.js`, #26) — transverse re-tubularization (circumference → new length). → [Yang-Monti Channel](docs/04-surgical-techniques/04b-bladder-reconstruction/yang-monti.mdx).
+- **Martius flap** (`martius-flap.js`, #28) — labial fat-pad harvest, dual pedicle, tunneled interposition; posterior-pedicle-for-anterior-target rule. → [Martius Flap](docs/01-foundations/surgical-principles/flaps/martius.mdx).
+- **Appendicovesicostomy (Mitrofanoff)** (`appendicovesicostomy.js`, #33) — appendix flap-valve channel to a catheterizable stoma + flap-valve cross-section. → [Appendicovesicostomy](docs/04-surgical-techniques/04b-bladder-reconstruction/appendicovesicostomy.mdx).
+- **PFUI Webster maneuvers** (`pfui-webster-steps.js`, #31) — 4-step escalation ladder (mobilize / split corpora / inferior pubectomy / supracrural reroute) closing a distraction defect. → [Abdominoperineal Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/posterior/abdominoperineal-urethroplasty.mdx).
+
+**Urogyn / device figures:**
+- **Midurethral sling trajectories** (`sling-trajectories.js`, #24) — retropubic vs transobturator vs single-incision on an AP pelvis, one hammock. → [Female Slings & Suspensions](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx).
+- **Sacrocolpopexy Y-mesh** (`sacrocolpopexy.js`, #25) — sagittal vault-to-promontory mesh. → [Sacrocolpopexy](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx).
+- **Sacral neuromodulation** (`sacral-neuromodulation.js`, #27) — tined lead in the S3 foramen + the S3-response confirmation callout. → [Sacral Neuromodulation](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx).
+- **AUS three components** (`aus-components.js`, #29) — cuff + scrotal pump + PRB with the fill/void cycle. → [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx).
+- **Three-piece IPP** (`ipp-components.js`, #30) — cylinders + pump + reservoir, cross-section, inflate/deflate. → [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx).
+- **DeLancey hammock hypothesis** (`continence-hammock.js`, #32) — normal vs lax suburethral support and why a cough leaks. → [Stress Urinary Incontinence (Female)](docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx).
+- **Sacrospinous ligament fixation** (`sslf.js`, #34) — apex-to-SSL suspension with the 1.5–2 cm-medial safe zone vs the pudendal/sciatic danger zone. → [SSLF](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx).
+
+**Conventions reinforced (carry forward):** the per-figure loop held — `node scripts/diagrams/x.js` → headless-Chrome `--screenshot` → **Read the PNG** → fix → embed → `npm run build` → `git checkout -- src/data/stats.json` → commit+push. The single recurring defect was **bottom-legend / caption lines overrunning the card width** (caught on the render every time) — keep legend lines short or drop a clause; the right column of a 3-zone figure collides with leader-label text unless subs are trimmed. Device schematics (AUS/IPP) reuse one "components + cycle-callout + cross-section inset" layout; channel schematics (Yang-Monti/appendicovesicostomy) reuse the "flap-valve cross-section" inset. Still **not** drawing radiograph/CT/MRI/US appearances (the no-fake-radiograph rule).
+
+---
+
 ## 2026-06-06 — Visual overhaul: 16 original SVG schematics (diagrams-as-code) + 6 public-domain plates + cohesion cleanup
 
 **25 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding.** Tackled the site's biggest gap — images — after a sweep found only **16 of 1,184 pages** carried any image, with **zero** across all of surgical-techniques, clinical-conditions, and evaluation (including the imaging pages that are literally about reading images).
