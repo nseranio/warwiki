@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   lig: '#E0D4B4', ligEdge: '#B0995F', vag: '#F3DBDC', vagEdge: '#CF9DA3', ureter: '#B91C1C',
   suture: '#185FA5', safe: '#15803D', spine: '#94A3B8' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 432;
+const W = 820, H = 390;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,10 +82,6 @@ push(txt(572, 160, 9.5, 500, C.muted, 'start', 'confirm ureteral jets after sutu
 push(txt(572, 174, 9.5, 500, C.muted, 'start', 'placement; ureteral kinking is the', false));
 push(txt(572, 188, 9.5, 500, C.muted, 'start', 'signature USLS complication.', false));
 
-// ---- key ----
-push(`<line x1="40" y1="384" x2="780" y2="384" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 403, 11, 600, C.ink, 'start', 'Native-tissue apical repair anchoring the vault into the strong intermediate uterosacral ligament &#8212; a more midline vaginal axis than SSLF.', false));
-push(txt(40, 421, 10.5, 500, C.muted, 'start', 'Equally effective to SSLF (OPTIMAL trial). Place sutures medial/cephalad on the ligament and release any that obstruct a ureter; high USLS is intraperitoneal.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Uterosacral ligament suspension shown in a bird's-eye pelvic view with the sacrum posterior at top and the bladder anterior at bottom. The vaginal vault is suspended by sutures to the intermediate portion of each uterosacral ligament at the ischial-spine level and drawn back toward the sacrum. The ureters run about 1 to 2 centimeters lateral to the ligaments, the signature danger, so intraoperative cystoscopy is mandatory to confirm ureteral jets after suture placement; ureteral kinking is the characteristic complication. Key: a native-tissue apical repair equally effective to sacrospinous ligament fixation in the OPTIMAL trial, restoring a near-midline vaginal axis, placing sutures medial and cephalad on the ligament and releasing any suture that obstructs a ureter.">
 ${el.join('\n')}

@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', eas: '#E7B6AC',
   ias: '#D9CCE3', iasEdge: '#9B7FB8', lumen: '#FBF3EF', lumenEdge: '#94A3B8', scar: '#64748B',
   suture: '#185FA5', body: '#ECE4D4', bodyEdge: '#B6A98C', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 416;
+const W = 820, H = 368;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -89,10 +89,6 @@ push(txt(ix, iy + 74, 8.5, 500, C.muted, 'middle', 'ends double-breasted &#8594;
 push(txt(ix, iy + 86, 8.5, 500, C.muted, 'middle', 'more bulk + circumference'));
 push(txt(ix, iy + 100, 8.5, 500, C.muted, 'middle', 'than end-to-end apposition'));
 
-// ============ key ============
-push(`<line x1="40" y1="362" x2="780" y2="362" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 381, 11, 600, C.ink, 'start', 'For symptomatic EAS defects (obstetric OASIS or trauma). Mobilize the scarred ends fully and keep the scar on the muscle for suture purchase.', false));
-push(txt(40, 399, 10.5, 500, C.muted, 'start', 'Overlapping and end-to-end give similar long-term continence (Cochrane); continence often deteriorates over years &#8212; counsel accordingly.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Overlapping anal sphincteroplasty in perineal view with anterior at top. Panel 1: the external anal sphincter ring is disrupted by an anterior defect, its two ends retracted with scar between them, around an intact internal anal sphincter and anal lumen, below the perineal body. Panel 2: the ends are mobilized and overlapped vest-over-pants, secured with two rows of horizontal mattress sutures, restoring a continuous ring with extra anterior bulk. A detail inset shows the double-breasted overlap with mattress sutures passing through both muscle layers, giving more bulk and circumference than an end-to-end apposition. Key: used for symptomatic external-sphincter defects after obstetric injury or trauma; mobilize the scarred ends fully and keep the scar on the muscle for suture purchase; overlapping and end-to-end repairs give similar long-term continence per Cochrane, and continence often deteriorates over years.">
 <defs>

@@ -20,7 +20,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', blad: '#F2F6FA'
   trig: '#E2ECF5', trigEdge: '#9DB6CE', tunnel: '#DCE7F1', tunnelEdge: '#7FA3C4', ureter: '#185FA5',
   detr: '#E7D9CB', detrEdge: '#B99873', muc: '#C6485B', suture: '#B45309', x: '#B91C1C', neck: '#64748B' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 432;
+const W = 880, H = 392;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -121,10 +121,6 @@ push(txt(ix, iy - 26, 8.5, 700, C.detrEdge, 'middle', 'detrusor'));
 push(txt(ix, iy + 34, 8.5, 700, C.muc, 'middle', 'mucosa'));
 push(txt(ix, iy + 46, 8, 500, C.muted, 'middle', 'flap-valve', false));
 
-// ============ key ============
-push(`<line x1="40" y1="386" x2="840" y2="386" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 406, 11, 600, C.ink, 'start', 'Intravesical (Cohen / Politano) opens the bladder; extravesical (Lich-Gregoir) does not &#8212; less spasm, hematuria, and catheter time.', false));
-push(txt(40, 423, 10.5, 500, C.muted, 'start', 'Cohen complicates future retrograde access to the orifice; Politano risks kinking at the new hiatus; bilateral extravesical can transiently impair emptying.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three antireflux ureteral reimplantation techniques shown on the bladder trigone. Cohen cross-trigonal: an intravesical submucosal tunnel carries the ureter across the trigone to a neo-orifice on the contralateral wall. Politano-Leadbetter: a new superolateral hiatus is created and the ureter tunnels down to a trigonal neo-orifice while the old hiatus is closed. Lich-Gregoir: an extravesical detrusor trough is closed over the ureter at the native orifice, with a cross-section inset showing the detrusor-over-mucosa flap valve. All target a 4 to 5 to 1 tunnel-length to ureter-diameter ratio. Key compares intravesical versus extravesical morbidity and each technique's main penalty.">
 ${el.join('\n')}

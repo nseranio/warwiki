@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', kidney: '#F3DBD
   donor: '#185FA5', recip: '#0F766E', vessel: '#C2728A', blad: '#E2ECF5', bladEdge: '#4F6F92',
   anast: '#B45309', warn: '#B91C1C', ok: '#15803D' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 444;
+const W = 820, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -76,10 +76,6 @@ push(txt(anx - 12, any + 2, 9, 700, C.anast, 'end', 'anastomosis'));
 push(txt(cx + 30, 196, 9, 700, C.ok, 'middle', 'gentle curve'));
 push(txt(cx + 30, 207, 8, 500, C.muted, 'middle', 'no tension, no kink'));
 
-// ---- key ----
-push(`<line x1="40" y1="392" x2="780" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 411, 11, 600, C.ink, 'start', "Salvage when a long distal defect can't reach the bladder and bladder repair is exhausted. Cross cephalad to the IMA via the sigmoid mesentery.", false));
-push(txt(40, 429, 10.5, 500, C.warn, 'start', 'Contraindicated when disease threatens the recipient ureter (stones, reflux, urothelial cancer, radiation, RPF) &#8212; never risk the one good ureter.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Transureteroureterostomy in anterior view. The donor ureter from the affected side is mobilized and brought across the midline, cephalad to the inferior mesenteric artery and aortic bifurcation through a window in the sigmoid mesentery, in a gentle tension-free curve to an end-to-side anastomosis with the healthy recipient ureter, which continues intact to the bladder; the diseased distal donor ureter is excluded. Key: a salvage option when a long distal ureteral defect cannot reach the bladder and bladder-based repair is exhausted; contraindicated when disease threatens the recipient ureter such as stones, reflux, urothelial cancer, prior pelvic radiation, or retroperitoneal fibrosis, because the one good ureter must never be risked.">
 ${el.join('\n')}

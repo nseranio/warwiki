@@ -15,7 +15,7 @@ const path = require('path');
 const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', cut: '#334155', flap: '#DCE7F1', flapEdge: '#7FA3C4',
   suture: '#185FA5', axis: '#94A3B8', gain: '#15803D', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 380;
+const W = 820, H = 322;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -69,10 +69,6 @@ push(`<path d="M ${bx + 78} ${cy} L ${bx + 86} ${cy} M ${bx + 82} ${cy} L ${bx +
 push(txt(bx + 92, cy + x / 2 + 4, 11.5, 700, C.gain, 'start', '+ x'));
 push(txt(bx, cy + 116, 13, 700, C.ink, 'middle', 'V closure', false));
 
-// ---- key + uses ----------------------------------------------------------
-push(`<line x1="40" y1="316" x2="780" y2="316" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 338, 11, 600, C.ink, 'start', 'Y → V lengthens along the stem axis by the advancement distance x — the angles don’t matter.', false));
-push(txt(40, 357, 10.5, 500, C.muted, 'start', 'Never undermined (the flap slides on its base), so its blood supply is preserved.   Uses: BNC / VUAS · Foley pyeloplasty · meatoplasty.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Y-V plasty geometry: a Y-shaped incision with a triangular flap (panel A) whose flap advances distally along the stem so the wound closes as a V and the tissue lengthens by the advancement distance x (panel B), with a key noting it lengthens without undermining and is used for bladder-neck contracture, VUAS, Foley pyeloplasty, and meatoplasty.">
 <defs>

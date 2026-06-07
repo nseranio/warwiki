@@ -17,7 +17,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', uret: '#185FA5'
   ham: '#C29B52', hamFill: '#EBDCB8', vag: '#F3DBDC', vagEdge: '#CF9DA3', lev: '#E7B6AC', levEdge: '#C0705E',
   cough: '#0F766E', leak: '#B91C1C', ok: '#15803D', tear: '#B91C1C' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 416;
+const W = 860, H = 344;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -84,11 +84,6 @@ push(txt(ax - 128, 248, 8.5, 600, C.levEdge, 'middle', 'levator ani'));
 push(txt(ax - 128, 260, 8, 500, C.muted, 'middle', '/ arcus tendineus'));
 push(txt(ax, 230, 8.5, 600, C.vagEdge, 'middle', 'vagina'));
 
-// ============ key ============
-push(`<line x1="40" y1="338" x2="820" y2="338" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 358, 11, 600, C.ink, 'start', 'The hammock = anterior vaginal wall + endopelvic fascia, anchored to the arcus tendineus and levator ani &#8212; a stable backboard, not a tighter urethra.', false));
-push(txt(40, 376, 10.5, 500, C.muted, 'start', 'This is why a midurethral sling works: it restores the suburethral backboard so rising abdominal pressure compresses the urethra against it.', false));
-push(txt(40, 396, 10.5, 500, C.muted, 'start', 'Loss of lateral (paravaginal) support &#8594; urethral hypermobility on cough &#8594; stress incontinence. Intrinsic sphincter deficiency is a separate mechanism.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="DeLancey hammock hypothesis of stress continence shown in axial section at the midurethra. Left panel, normal: the urethra rests on a taut supportive layer (anterior vaginal wall plus endopelvic fascia) anchored on both sides to the levator ani and arcus tendineus; a cough raises abdominal pressure and compresses the urethra against this stable backboard so the lumen closes and the patient stays continent. Right panel, stress incontinence: a lateral attachment is detached so the hammock sags, the urethra descends and rotates, and a cough no longer compresses it, so the lumen stays open and urine leaks. Key: continence depends on a stable suburethral backboard rather than a tighter urethra, which is why a midurethral sling restores the backboard; intrinsic sphincter deficiency is a separate mechanism.">
 <defs>

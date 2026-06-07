@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', skin: '#F4E6DA'
   bowel: '#F3DBD2', bowelEdge: '#CC9079', lumen: '#FBEFE9', ureter: '#185FA5', cath: '#0F766E',
   valve: '#B45309', seam: '#185FA5', step: '#15803D' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 840, H = 430;
+const W = 840, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,10 +82,6 @@ items.forEach(([h, d], i) => {
   push(txt(bxr + 32, y + 13, 9, 500, C.muted, 'start', d));
 });
 
-// ---- key ----
-push(`<line x1="40" y1="392" x2="800" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 411, 11, 600, C.ink, 'start', "For continent diversion when an orthotopic neobladder isn't an option (positive urethral margin, sphincter damage, radiation) and the patient wants no bag.", false));
-push(txt(40, 428, 10.5, 500, C.muted, 'start', 'Continence ~89% at 3 yr; lifelong B12 + acidosis surveillance after ileocecal resection; stomal stenosis and stones are the common late issues.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Indiana pouch continent cutaneous urinary diversion. A low-pressure reservoir is built from detubularized right colon (cecum and ascending colon). The terminal ileum is tapered to about 14 French and brought to a catheterizable umbilical stoma; continence is supplied by the ileocecal valve plus plication of the ileal limb plus low reservoir pressure. The ureters are reimplanted into the pouch. The patient self-catheterizes the stoma every 4 to 6 hours and wears no external bag, in contrast to an orthotopic neobladder that is voided per urethra. Key: chosen for continent diversion when the patient is not an orthotopic-neobladder candidate due to positive urethral margin, sphincter damage, or prior pelvic radiation; continence is about 89 percent at 3 years; lifelong vitamin B12 and metabolic-acidosis surveillance is needed after ileocecal resection, and stomal stenosis and pouch stones are common late issues.">
 ${el.join('\n')}

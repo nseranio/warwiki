@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   crus: '#F3DBDC', crusEdge: '#CF9DA3', apex: '#E7D2A6', apexEdge: '#C29B52', uret: '#185FA5',
   gap: '#B91C1C', gain: '#15803D', arrow: '#0F766E', warn: '#B45309' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 900, H = 432;
+const W = 900, H = 356;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -86,11 +86,6 @@ push(txt(150, apexY - 16, 8.5, 600, C.apexEdge, 'middle', 'prostatic apex'));
 push(txt(96, crusY + 2, 8.5, 600, C.crusEdge, 'middle', 'crura'));
 push(txt(150, bulbBase + 14, 8.5, 600, C.uret, 'middle', 'bulbar urethra'));
 
-// ---- key ----
-push(`<line x1="40" y1="350" x2="860" y2="350" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 372, 11, 600, C.ink, 'start', 'Climb the ladder only as far as a tension-free, mucosa-to-mucosa anastomosis requires; partial inferior pubectomy is preferred (total pubectomy is abandoned).', false));
-push(txt(40, 392, 10.5, 500, C.warn, 'start', 'Supracrural rerouting (step 4) underperforms: Kizer 2007 found ~75% restenosis vs ~80% success with the abdominoperineal repair &#8212; prefer it over rerouting.', false));
-push(txt(40, 412, 10.5, 500, C.muted, 'start', 'A high / above-the-inferior-pubic-margin proximal stump on MRI strongly predicts needing pubectomy or an abdominoperineal repair.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Webster progressive perineal maneuvers for a posterior urethral distraction defect, shown as four escalating steps that shorten the route from the mobilized bulbar urethra to the prostatic apex. Step 1, mobilize the bulbar urethra distally. Step 2, split the corpora by separating the crura in the midline. Step 3, inferior pubectomy, wedge-resecting the lower pubis to create a subpubic tunnel. Step 4, supracrural rerouting around a penile crus, which closes the gap but underperforms. Key: climb the ladder only as far as a tension-free mucosa-to-mucosa anastomosis requires; partial inferior pubectomy is preferred over abandoned total pubectomy; supracrural rerouting has about 75 percent restenosis in Kizer 2007 versus about 80 percent success with the abdominoperineal approach; a high proximal stump above the inferior pubic margin on MRI predicts needing pubectomy or an abdominoperineal repair.">
 <defs>

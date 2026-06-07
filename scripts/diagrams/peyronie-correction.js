@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', skin: '#F4E6DA'
   plaque: '#B91C1C', suture: '#B45309', graft: '#185FA5', graftFill: '#DCE7F1', axis: '#94A3B8',
   ok: '#15803D', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 424;
+const W = 860, H = 378;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,9 +82,6 @@ push(txt(cx2, 338, 12, 700, C.ink, 'middle', '3. Incision + graft', false));
 push(txt(cx2, 354, 9, 500, C.muted, 'middle', 'straight, length preserved', false));
 
 // ============ decision strip ============
-push(`<line x1="40" y1="372" x2="820" y2="372" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 391, 11, 600, C.ink, 'start', 'Choose by curve, length, and rigidity: plication for &#8804; ~60° with good length + erections; incision/graft for &gt; ~60°, hourglass, or short penis with good rigidity.', false));
-push(txt(40, 409, 10.5, 500, C.muted, 'start', 'Plication trades length for simplicity (shortening is universal); grafting preserves length but raises de-novo-ED risk. Add a penile prosthesis when erections are inadequate.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Peyronie's disease curvature correction in three panels. Panel 1, the deformity: the penis curves toward the plaque, which lies on the concave or short side, opposite the convex or long side. Panel 2, plication or Nesbit: sutures shorten the convex long side to match, straightening the penis but making it slightly shorter. Panel 3, incision plus graft: the plaque on the concave side is incised and the defect bridged with a graft, lengthening the short side and straightening the penis while preserving length. Decision: plication for curves up to about 60 degrees with good length and erections; incision or grafting for curves over about 60 degrees, hourglass deformity, or a short penis with good rigidity. Plication trades length for simplicity, grafting preserves length but raises de-novo erectile-dysfunction risk, and a penile prosthesis is added when erectile function is inadequate.">
 ${el.join('\n')}

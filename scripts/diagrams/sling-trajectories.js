@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   uret: '#64748B', lumen: '#FFFFFF', sling: '#185FA5',
   rp: '#B91C1C', to: '#0F766E', si: '#B45309', vag: '#F3DBDC', vagEdge: '#CF9DA3' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 470;
+const W = 860, H = 408;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -96,10 +96,6 @@ push(txt(lx + 30, ly + 97, 9.5, 500, C.muted, 'start', 'injury, more groin/thigh
 row(ly + 124, C.si, 'Single-incision (SIMS)', 'anchored in obturator');
 push(txt(lx + 30, ly + 147, 9.5, 500, C.muted, 'start', 'internus; no exit, least pain'));
 
-// ---- key ----
-push(`<line x1="40" y1="402" x2="820" y2="402" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 422, 11, 600, C.ink, 'start', 'All three place a tension-free polypropylene tape at the midurethra; they differ only in how the arms are passed and anchored.', false));
-push(txt(40, 440, 10.5, 500, C.muted, 'start', 'Retropubic and transobturator have comparable cure; modern SIMS (e.g., Altis) are non-inferior in trials. Cystoscopy is mandatory after the retropubic pass.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anterior-pelvis view comparing three midurethral-sling trajectories around the pubic symphysis and obturator foramina. All place a tension-free tape as a hammock under the midurethra. The retropubic (TVT) route passes behind the pubis to a suprapubic exit, carrying bladder-perforation and vascular risk so cystoscopy is mandatory. The transobturator (TOT) route passes through the obturator foramen to a groin exit, with less bladder injury but more groin and thigh pain. The single-incision (SIMS) route is anchored in the obturator internus with no skin exit and the least pain. Key notes comparable cure rates and non-inferior modern single-incision slings.">
 ${el.join('\n')}

@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', wall: '#F4EEF0'
   flap: '#DCE7F1', flapEdge: '#7FA3C4', cut: '#334155', suture: '#185FA5', lumen: '#E2ECF5',
   stric: '#B91C1C', cath: '#0F766E', arrow: '#0F766E', native: '#94A3B8' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 840, H = 410;
+const W = 840, H = 360;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -97,10 +97,6 @@ push(`<circle cx="${ix}" cy="${iy + 6}" r="9" fill="none" stroke="${C.cath}" str
 push(txt(ix, iy - 18, 9.5, 700, C.native, 'middle', 'native dorsal plate'));
 push(txt(ix, iy + 40, 9.5, 700, C.suture, 'middle', 'vaginal flap (ventral)'));
 
-// ============ key ============
-push(`<line x1="40" y1="354" x2="800" y2="354" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 375, 11, 600, C.ink, 'start', 'Pedicled (not a free graft): the flap keeps its submucosal vascular plexus, avoiding buccal-graft donor morbidity. Best for distal / mid strictures.', false));
-push(txt(40, 394, 10.5, 500, C.muted, 'start', 'Contraindicated in lichen sclerosus or vaginal atrophy. Lateral-based variants (Romero-Maroto, Simonato) reduce the midline U-flap&#8217;s retrusive meatus.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Blandy U-flap female vaginal-flap urethroplasty: panel 1 shows a U-shaped anterior-vaginal-wall flap with a proximal pedicle outlined over a strictured urethra with a planned ventral 6 o'clock urethrotomy; panel 2 shows the flap inlaid as a ventral onlay over a 16 to 18 French Foley catheter, sutured to the opened native urethral plate; a cross-section inset shows the native dorsal plate above and the vaginal-flap ventral onlay below around the catheter lumen. Key notes it is a pedicled flap that preserves its vascular plexus, is best for distal and mid-urethral strictures, is contraindicated in lichen sclerosus, and that lateral-based variants reduce the retrusive-meatus problem.">
 <defs>

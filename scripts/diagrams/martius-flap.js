@@ -17,7 +17,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', skin: '#F4E6DA'
   minora: '#EAD7DC', minoraEdge: '#CBA7B2', fat: '#F3E2A0', fatEdge: '#C6A53A', vag: '#F3DBDC', vagEdge: '#CF9DA3',
   ped: '#B91C1C', cut: '#334155', suture: '#185FA5', tunnel: '#0F766E', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 830, H = 430;
+const W = 830, H = 382;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -86,10 +86,6 @@ push(`<line x1="${bx}" y1="${bcy - 34}" x2="${bx}" y2="${bcy - 2}" stroke="${C.s
 push(txt(bx, bcy - 46, 8.5, 700, C.fatEdge, 'middle', 'flap over repair'));
 push(txt(bx, 350, 12.5, 700, C.ink, 'middle', '2. Interpose over repair', false));
 
-// ============ key ============
-push(`<line x1="40" y1="376" x2="790" y2="376" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 396, 11, 600, C.ink, 'start', 'Pedicle rule: keep the POSTERIOR pedicle for anterior / urethral targets (VVF, diverticulum); keep the ANTERIOR pedicle for posterior targets (RVF).', false));
-push(txt(40, 414, 10.5, 500, C.muted, 'start', 'A vascularized non-overlapping suture-line buttress that fills dead space. Right labium is the default (greater vascular density); skin is preserved, no drain needed.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Martius labial fat-pad flap shown on a frontal vulva in two steps. Step 1, harvest: a vertical incision over the right labium majus exposes the fibrofatty pad, which has a dual blood supply — an anterior pedicle from the external pudendal artery and a posterior pedicle from the internal pudendal artery. Step 2, interposition: the flap is raised on one pedicle, tunneled subcutaneously to the midline, and laid over the repair as a vascularized buttress. Key: keep the posterior pedicle for anterior or urethral targets such as vesicovaginal fistula, urethral diverticulum, and female urethroplasty; keep the anterior pedicle for posterior targets such as rectovaginal fistula. The right labium is the default for its greater vascular density; the skin is preserved and no drain is needed.">
 <defs>

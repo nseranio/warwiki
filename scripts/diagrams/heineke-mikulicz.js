@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', wall: '#475569'
   lumen: '#E2ECF5', lumenEdge: '#7FA3C4', cut: '#334155', suture: '#185FA5', stric: '#B91C1C',
   arrow: '#0F766E', gain: '#15803D' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 372;
+const W = 820, H = 322;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -89,10 +89,6 @@ push(txt(bx1 + 26, cy - 8, 11, 700, C.gain, 'start', 'wider'));
 push(txt(bx1 + 26, cy + 8, 11, 700, C.gain, 'start', 'caliber'));
 push(txt(bxm, cy + 92, 13, 700, C.ink, 'middle', '2. Close transversely', false));
 
-// ---- key -----------------------------------------------------------------
-push(`<line x1="40" y1="316" x2="780" y2="316" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 337, 11, 600, C.ink, 'start', 'Best for short (&#8804; ~1 cm) narrowings: no tissue is removed and the lumen is never transected, so the spongiosal blood supply is preserved.', false));
-push(txt(40, 356, 10.5, 500, C.muted, 'start', 'Trades a little length for caliber. Uses: non-transecting bulbar urethroplasty (stricturoplasty) · Fenger pyeloplasty · transverse ureterotomy closure.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Heineke-Mikulicz principle: a longitudinal incision is made across a short luminal narrowing (panel 1) and then closed transversely at 90 degrees (panel 2), widening the caliber at the former stricture while slightly shortening the segment; key notes it preserves blood supply because no tissue is removed and the lumen is not transected, used for non-transecting bulbar urethroplasty, Fenger pyeloplasty, and transverse ureterotomy closure.">
 <defs>

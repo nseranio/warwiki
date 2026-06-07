@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   coop: '#E0D4B4', coopEdge: '#B0995F', blad: '#E2ECF5', bladEdge: '#4F6F92', uret: '#64748B',
   vag: '#F3DBDC', vagEdge: '#CF9DA3', suture: '#185FA5', lift: '#15803D', mmk: '#B45309' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 416;
+const W = 820, H = 352;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,10 +82,6 @@ push(txt(606, 172, 9, 500, C.muted, 'start', 'anchors to the symphysis'));
 push(txt(606, 186, 9, 500, C.muted, 'start', 'periosteum &#8594; osteitis-pubis'));
 push(txt(606, 198, 9, 500, C.muted, 'start', 'risk (Burch avoids this).'));
 
-// ---- key ----
-push(`<line x1="40" y1="346" x2="780" y2="346" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 366, 11, 600, C.ink, 'start', 'Mesh-free retropubic urethropexy; durable cure ≈ MUS at 13 yr (Karmakar 2021). Tie sutures snug, not over-corrected, to avoid voiding dysfunction.', false));
-push(txt(40, 384, 10.5, 500, C.muted, 'start', 'Best modern role: with abdominal/laparoscopic sacrocolpopexy (CARE), mesh-averse patients, or limited vaginal access. Higher posterior-prolapse rate than MUS.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Burch colposuspension shown in a retropubic space-of-Retzius view. The back of the pubic symphysis is at top with the superior pubic rami sweeping laterally, each carrying Cooper's iliopectineal ligament. The bladder, bladder neck, and urethra lie in the midline. Two non-absorbable sutures per side pass through the anterior vaginal wall lateral to the bladder neck (paravaginal tissue) and are tied up to Cooper's ligament, elevating the bladder neck. A note contrasts the Marshall-Marchetti-Krantz procedure, which anchors to the pubic symphysis periosteum and risks osteitis pubis, which Burch avoids. Key: a mesh-free retropubic urethropexy with durable cure comparable to retropubic midurethral sling at 13 years, sutures tied snug and not over-corrected to avoid voiding dysfunction, best used at the time of sacrocolpopexy or in mesh-averse patients, with a higher posterior-prolapse rate than the midurethral sling, and cystoscopy is performed.">
 <defs>

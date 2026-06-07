@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', blad: '#E2ECF5'
   flap: '#DCE7F1', flapEdge: '#7FA3C4', muscle: '#E7D9CB', muscleEdge: '#B99873', ureter: '#185FA5',
   cut: '#334155', suture: '#185FA5', tunnel: '#0F766E', gain: '#15803D', stitch: '#B45309' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 446;
+const W = 860, H = 430;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -102,9 +102,6 @@ push(txt(bCx + 130, (150 + bBy - 76) / 2 + 7, 9, 600, C.gain, 'middle', 'cm', fa
 push(txt(bCx, 392, 13, 700, C.ink, 'middle', 'Boari flap', false));
 push(txt(bCx, 408, 10, 500, C.muted, 'middle', 'base &#8805; ~4 cm  &#183;  &#8804; 3:1 length-to-base', false));
 
-// ============ key ============
-push(`<line x1="40" y1="424" x2="820" y2="424" stroke="${C.border}" stroke-width="0"/>`);
-push(txt(W / 2, 438, 10.5, 500, C.muted, 'middle', 'Often combined (Boari + psoas hitch); add downward nephropexy to reach the upper ureter. Always spatulate the ureter and tubularize over a stent without twisting.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Psoas hitch versus Boari flap for bridging a distal ureteral gap. Left panel: a psoas hitch fixes the bladder cephalad to the psoas with hitch sutures and a spatulated submucosal-tunnel ureteroneocystostomy, reaching about 5 to 8 centimeters. Right panel: a Boari flap tubularizes a bladder-wall flap into a ureteral substitute rising to meet the ureter at its apex, reaching about 10 to 15 centimeters, with a base at least 4 centimeters wide and a length-to-base ratio under 3 to 1. Key: often combined, add downward nephropexy for upper-ureteral reach, spatulate the ureter and tubularize over a stent.">
 ${el.join('\n')}

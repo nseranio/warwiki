@@ -19,7 +19,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0',
   memb: '#E0D4B4', membEdge: '#B0995F', lumen: '#FFFFFF', lumenEdge: '#475569',
   blue: '#185FA5', lev: '#E7B6AC', levEdge: '#C0705E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 470;
+const W = 880, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -101,10 +101,6 @@ leg(spc + 8, 'Superficial perineal pouch', 'bulb + crura + muscles — bulbar ur
 leg((CF0 + CF1) / 2, "Colles' fascia", "Fournier's spread plane; → dartos / Scarpa", C.blue, 326);
 leg((SK0 + SK1) / 2, 'Skin', 'perineal incision', C.muted, 360);
 
-// ============ key ============
-push(`<line x1="40" y1="392" x2="840" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 412, 11, 600, C.ink, 'start', 'The perineal membrane is the hinge of perineal surgery: roof of the superficial pouch, floor of the deep pouch, and the transcorporal-AUS landmark.', false));
-push(txt(40, 430, 10.5, 500, C.muted, 'start', "Colles' fascia continues into scrotal/labial dartos and abdominal Scarpa's fascia — the Fournier's-gangrene route. Posterior structures lie out of this coronal plane.", false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Coronal section of the urogenital perineum showing its layered architecture between the two ischiopubic rami. From top to bottom: levator ani (pelvic floor) with a midline hiatus; the deep perineal pouch containing the membranous urethra ringed by the rhabdosphincter (the pelvic-fracture urethroplasty plane); the fibrous perineal membrane (roof of the superficial pouch, floor of the deep pouch, and AUS transcorporal landmark); the superficial perineal pouch containing the midline bulb and two lateral crura with their bulbospongiosus and ischiocavernosus muscles (the plane of bulbar urethroplasty and AUS); Colles' fascia (the Fournier's-gangrene spread plane, continuous with dartos and Scarpa's fascia); and skin. A legend tags each layer with its surgical plane.">
 ${el.join('\n')}

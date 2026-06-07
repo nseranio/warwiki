@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bladLumen: '#E2
   bladEdge: '#C0705E', vagLumen: '#F3DBDC', vagWall: '#E6A6B0', vagEdge: '#CF7F8D', fistula: '#B91C1C',
   s1: '#185FA5', s2: '#0F766E', flap: '#F3E2A0', flapEdge: '#C6A53A', arrow: '#0F766E', ok: '#15803D' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 412;
+const W = 820, H = 326;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -83,11 +83,6 @@ push(txt(bxc, 74, 9.5, 700, C.bladEdge, 'middle', 'BLADDER lumen'));
 push(txt(bxc, vgY1 + 18, 9.5, 700, C.vagEdge, 'middle', 'VAGINA lumen'));
 push(txt(bxc, 286, 12.5, 700, C.ink, 'middle', '2. Layered, offset closure', false));
 
-// ============ key ============
-push(`<line x1="40" y1="320" x2="780" y2="320" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 340, 11, 600, C.ink, 'start', 'Mobilize ≥1-2 cm beyond the defect for a tension-free repair; close the bladder and vagina as independent layers with the suture lines NOT stacked.', false));
-push(txt(40, 358, 10.5, 500, C.muted, 'start', 'Watertight first layer (knots intravesical) + an imbricating second layer. Offsetting the seams avoids a through-and-through weak point and re-fistulization.', false));
-push(txt(40, 376, 10.5, 500, C.muted, 'start', 'A vascularized interposition (Martius / peritoneal / omental flap) is added for recurrent, radiated, or large fistulae &#8212; not mandatory for a simple primary repair.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Vesicovaginal fistula repair shown in cross-section through the vesicovaginal septum. Left panel: a fistula tract connects the bladder lumen above to the vagina lumen below through gaps in both the bladder and vaginal walls, with edges freshened. Right panel: after wide mobilization, the bladder and vaginal walls are closed as independent layers with a watertight first layer and an imbricating second layer, and the bladder and vaginal suture lines are deliberately offset so they do not stack; an optional vascularized interposition flap lies between the layers. Key: mobilize at least 1 to 2 centimeters beyond the defect for a tension-free repair, offset the seams to avoid a through-and-through weak point and re-fistulization, and add a Martius, peritoneal, or omental interposition for recurrent, radiated, or large fistulae though it is not mandatory for a simple primary repair.">
 <defs>

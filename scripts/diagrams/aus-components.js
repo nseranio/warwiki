@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   blad: '#E2ECF5', bladEdge: '#4F6F92', uret: '#94A3B8', dev: '#185FA5', fluid: '#CFE0F0',
   tube: '#185FA5', arrow: '#0F766E', step: '#15803D' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 432;
+const W = 860, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -86,10 +86,6 @@ steps.forEach(([h, d], i) => {
   push(txt(rx + 40, y + 22, 9, 500, C.muted, 'start', words.slice(mid).join(' ')));
 });
 
-// ---- key ----
-push(`<line x1="40" y1="392" x2="820" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 411, 11, 600, C.ink, 'start', 'Leave the device deactivated for ~6 weeks before activation. Counsel that any future catheterization or cystoscopy requires deactivating the cuff first.', false));
-push(txt(40, 428, 10.5, 500, C.muted, 'start', 'Bladder-neck cuff is the female / pediatric / redo site. Urethral atrophy and erosion are the signature late failures; tandem or transcorporal cuff are salvage options.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Artificial urinary sphincter AMS 800 in sagittal view with its three fluid-connected components: a cuff occluding the bulbar urethra, a pressure-regulating balloon in the retropubic space set to 61 to 70 centimeters of water, and a control pump in the scrotum. A how-it-cycles panel: at rest the cuff is fluid-filled and the urethra is closed for continence; to void the patient squeezes the pump, moving fluid from the cuff to the balloon so the cuff opens; the balloon then auto-refills the cuff over one to three minutes to re-close it. Key: leave deactivated about 6 weeks before activation, always deactivate the cuff before any catheterization or cystoscopy, use a bladder-neck cuff for female, pediatric, or redo cases, and recognize urethral atrophy and erosion as the signature late failures.">
 ${el.join('\n')}

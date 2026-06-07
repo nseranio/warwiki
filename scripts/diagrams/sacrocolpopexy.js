@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   blad: '#E2ECF5', bladEdge: '#4F6F92', vag: '#F3DBDC', vagEdge: '#CF9DA3', rect: '#E8DFD2', rectEdge: '#B99873',
   mesh: '#185FA5', meshFill: '#DCE7F1', suture: '#B45309', arrow: '#0F766E', uret: '#64748B' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 466;
+const W = 860, H = 404;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,10 +82,6 @@ push(txt(330, 348, 9.5, 700, C.mesh, 'middle', 'posterior arm'));
 push(txt(456, 150, 9.5, 700, C.mesh, 'middle', 'sacral stem'));
 push(txt(456, 163, 8.5, 500, C.muted, 'middle', '(no tension)'));
 
-// ---- key ----
-push(`<line x1="40" y1="398" x2="820" y2="398" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 418, 11, 600, C.ink, 'start', 'Gold-standard apical repair: the Y-mesh restores the natural vaginal axis and is the most durable POP repair, with the lowest recurrence vs native-tissue.', false));
-push(txt(40, 436, 10.5, 500, C.muted, 'start', 'Suture the stem to the anterior longitudinal ligament below the promontory &#8212; avoid the left common iliac vein and middle sacral vessels. Keep the mesh bridging, not taut.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sagittal pelvis showing sacrocolpopexy. A Y-shaped mesh has an anterior arm sutured along the anterior vaginal wall and a posterior arm along the posterior vaginal wall; the two arms join at the vault into a single stem that runs back and up to the sacral promontory, where it is fixed to the anterior longitudinal ligament just below S1. The bladder lies anterior, the rectum posterior. Key: gold-standard durable apical repair restoring the natural vaginal axis; suture to the anterior longitudinal ligament avoiding the left common iliac vein and middle sacral vessels; keep the mesh bridging not taut and re-peritonealize it.">
 <defs>

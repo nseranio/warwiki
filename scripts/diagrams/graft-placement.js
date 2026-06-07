@@ -17,7 +17,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', corpora: '#E7D9
   spong: '#F3DEDF', spongEdge: '#CF9DA3', lumen: '#FFFFFF', lumenEdge: '#64748B', graft: '#185FA5',
   graftFill: '#DCE7F1', suture: '#B45309', open: '#94A3B8' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 384;
+const W = 880, H = 340;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -97,10 +97,6 @@ push(txt(o1 + 72, cy - 62, 8.5, 600, C.corporaEdge, 'start', 'corpora'));
 push(`<line x1="${o1 + 40}" y1="${cy + 24}" x2="${o1 + 66}" y2="${cy + 32}" stroke="${C.spongEdge}" stroke-width="0.9"/>`);
 push(txt(o1 + 68, cy + 34, 8.5, 600, C.spongEdge, 'start', 'spongiosum'));
 
-// ============ key ============
-push(`<line x1="40" y1="334" x2="840" y2="334" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 354, 11, 600, C.ink, 'start', 'No side always wins. Dorsal is currently preferred for bulbar strictures (~66% vs 34%); ventral suits a robust spongiosum.', false));
-push(txt(40, 372, 10.5, 500, C.muted, 'start', 'Whichever side: quilt the graft to its bed to eliminate shear, hematoma, and dead space &#8212; graft take depends on imbibition, inosculation, and neovascularization.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal-mucosa graft placement configurations shown in cross-section of the bulbar urethra, with dorsal toward the corpora cavernosa and ventral toward the skin. Dorsal onlay (Barbagli): the graft lines the dorsal wall of the lumen and is quilted to the tunica albuginea of the corpora. Ventral onlay: the graft lines the ventral wall and is supported by the corpus spongiosum closed over it. Dorsal inlay (Asopa): the urethra is opened ventrally and the graft is inlaid into the dorsal plate. Key: no side always wins, dorsal is currently preferred for bulbar strictures about 66 to 34 percent, and the graft must be quilted to well-vascularized support to avoid shear, hematoma, and dead space.">
 ${el.join('\n')}

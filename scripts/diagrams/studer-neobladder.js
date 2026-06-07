@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bowel: '#F3DBD2
   lumen: '#FBEFE9', ureter: '#185FA5', urethra: '#64748B', seam: '#185FA5', press: '#B91C1C',
   ok: '#15803D', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 430;
+const W = 860, H = 390;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -75,10 +75,6 @@ push(txt(ix + 140, iy + 122, 8.5, 500, C.muted, 'start', '&#8594; low pressure (
 push(txt(ix + 6, iy + 156, 9, 500, C.muted, 'start', 'Low storage pressure protects the kidneys'));
 push(txt(ix + 6, iy + 168, 9, 500, C.muted, 'start', 'and is what makes daytime continence possible.'));
 
-// ---- key ----
-push(`<line x1="40" y1="384" x2="820" y2="384" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 403, 11, 600, C.ink, 'start', 'Continent orthotopic diversion to the native urethra: needs a competent rhabdosphincter and a tumor-free urethral margin. Emptied by Valsalva + CIC.', false));
-push(txt(40, 421, 10.5, 500, C.muted, 'start', 'The afferent limb gives a low-grade antireflux effect; lifelong B12 + metabolic-acidosis surveillance after ileal resection. Nocturnal enuresis is common early.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Studer orthotopic ileal neobladder. The distal ileum is detubularized and cross-folded into a spherical low-pressure reservoir, which is anastomosed to the urethra at its most dependent point; the proximal ileum stays intact as an isoperistaltic afferent Studer limb that receives both ureters. An inset explains why detubularization matters: an intact tube generates peristaltic pressure spikes, but opening and folding it into a large-radius sphere breaks the contraction waves and lowers pressure by the law of Laplace, which protects the kidneys and enables daytime continence. Key: continent orthotopic diversion to the native urethra needs a competent rhabdosphincter and a tumor-free urethral margin, is emptied by Valsalva plus scheduled clean intermittent catheterization, the afferent limb gives a low-grade antireflux effect, and lifelong vitamin B12 and metabolic-acidosis surveillance is required after ileal resection with common early nocturnal enuresis.">
 <defs>

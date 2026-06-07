@@ -15,7 +15,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', skin: '#F4EEEA'
   plate: '#E2ECF5', plateEdge: '#7FA3C4', cut: '#334155', incise: '#B91C1C', suture: '#185FA5',
   cath: '#0F766E', corpora: '#E7D9CB', corporaEdge: '#B99873', raw: '#C6485B', arrow: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 446;
+const W = 880, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -107,10 +107,6 @@ push(txt(c3 + cw + 16, yc + 8, 8.5, 500, C.muted, 'start', 're-epithelializes'))
 push(`<line x1="${c3 - 44}" y1="${ya + 14}" x2="${c3 - 44}" y2="${yb - 26}" stroke="${C.arrow}" stroke-width="1.6" marker-end="url(#at)"/>`);
 push(`<line x1="${c3 - 44}" y1="${yb + 14}" x2="${c3 - 44}" y2="${yc - 50}" stroke="${C.arrow}" stroke-width="1.6" marker-end="url(#at)"/>`);
 
-// ============ key ============
-push(`<line x1="40" y1="392" x2="840" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 412, 11, 600, C.ink, 'start', 'Default single-stage distal repair. Correct chordee first. Lowest urethrocutaneous-fistula rate vs Mathieu; main risk is meatal stenosis.', false));
-push(txt(40, 429, 10.5, 500, C.muted, 'start', 'Adult series (n = 620): ~12.7% overall complications; distal repairs ~7%. For thin/narrow plates an onlay (Mathieu) or dorsal inlay graft is preferred.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tubularized incised plate (TIP / Snodgrass) hypospadias repair. Step 1, ventral view: the urethral plate from the ectopic meatus to the glans tip is outlined by two parallel incisions and a single deep dorsal-midline relaxing incision. Step 2: the plate is tubularized over a catheter with a two-layer midline closure and dartos cover, creating a neourethra with a new slit meatus at the glans tip. A cross-section ladder shows why the plate is incised: a narrow flat plate is too tight to roll; the midline incision splays it wider; it then tubularizes over a catheter, the raw dorsal strip re-epithelializing. Key: default single-stage distal repair, correct chordee first, lowest fistula rate versus Mathieu, main risk meatal stenosis.">
 <defs>

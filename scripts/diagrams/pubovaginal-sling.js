@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   blad: '#E2ECF5', bladEdge: '#4F6F92', uret: '#64748B', fascia: '#E0D4B4', fasciaEdge: '#B0995F',
   sling: '#185FA5', mus: '#94A3B8', suture: '#B45309', cough: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 420;
+const W = 820, H = 366;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -82,10 +82,6 @@ push(`<line x1="${ix + 18}" y1="${iy + 74}" x2="${ix + 42}" y2="${iy + 74}" stro
 push(txt(ix + 50, iy + 77, 9, 700, C.mus, 'start', 'MUS &#8212; midurethra'));
 push(txt(ix + 50, iy + 89, 8, 500, C.muted, 'start', 'synthetic, supportive'));
 
-// ---- key ----
-push(`<line x1="40" y1="360" x2="780" y2="360" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 380, 11, 600, C.ink, 'start', 'AUA/SUFU-preferred for ISD, a fixed urethra, mesh-averse patients, prior radiation, and concurrent urethral reconstruction (diverticulum / fistula).', false));
-push(txt(40, 398, 10.5, 500, C.muted, 'start', 'Combined vaginal + abdominal approach; set tension just snug, not obstructive. Mesh-free and durable, with more early retention / urgency than MUS.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Autologous fascial pubovaginal sling in sagittal view. A strip of the patient's own fascia, from the rectus abdominis or fascia lata, is placed as a hammock beneath the bladder neck; its two arms pass retropubically behind the pubic symphysis and are tied over the anterior rectus fascia, where the graft was harvested and the defect closed. A cough compresses the urethra against the pubis. An inset compares where slings sit: the pubovaginal sling is autologous and compressive at the bladder neck, while the synthetic midurethral sling is supportive at the midurethra. Key: AUA/SUFU prefers the pubovaginal sling for intrinsic sphincter deficiency, a fixed urethra, mesh-averse patients, prior radiation, and concurrent urethral reconstruction; it uses a combined vaginal and abdominal approach with tension set just snug, is durable and mesh-free, but has higher early retention and de novo urgency than the midurethral sling.">
 <defs>

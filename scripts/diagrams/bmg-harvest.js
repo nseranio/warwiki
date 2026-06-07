@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', muc: '#F2C9CE',
   tooth: '#F6F1E7', toothEdge: '#D6CBB2', gum: '#E59AA4', duct: '#B91C1C', graft: '#185FA5',
   graftFill: '#DCE7F1', warn: '#B91C1C', ok: '#15803D', margin: '#0F766E' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 820, H = 420;
+const W = 820, H = 366;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -60,10 +60,6 @@ push(txt(gx, gy + 14, 9, 500, C.muted, 'middle', 'up to ~2.5 cm wide &#215; need
 push(`<path d="M ${gx - 118} ${gy + 46} l 0 14 M ${gx - 118} ${gy + 53} l -34 0" fill="none" stroke="${C.margin}" stroke-width="1.2"/>`);
 push(txt(gx - 160, gy + 57, 8.5, 600, C.margin, 'end', '~1 cm margin'));
 
-// ---- key ----
-push(`<line x1="40" y1="360" x2="780" y2="360" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 380, 11, 600, C.ink, 'start', "Non-keratinized epithelium + thin lamina propria → excellent take. Mark with the cheek tented, infiltrate, and harvest at partial thickness.", false));
-push(txt(40, 398, 10.5, 500, C.muted, 'start', "Spare Stensen’s duct, the commissure, and the lip; open vs closed donor gives similar pain. Use bilateral cheeks (± lingual/labial) for long grafts.", false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal mucosa graft harvest shown as an intraoral view of the cheek, framed by the upper and lower teeth and gingiva with the oral commissure anteriorly. Stensen's parotid duct papilla sits high on the cheek opposite the second maxillary molar, with a dashed line marking the stay-below boundary. The graft is outlined as an ellipse in the central cheek below the duct line and clear of the commissure, up to about 2.5 centimeters wide by the needed length, with roughly 1 centimeter margins from the gingiva. Key: non-keratinized epithelium with thin lamina propria gives excellent graft take; mark with the cheek tented, infiltrate, and harvest at partial thickness; spare Stensen's duct, the commissure, and the lip; open versus closed donor closure gives similar pain; use bilateral cheeks or add lingual or labial mucosa for long or panurethral grafts.">
 ${el.join('\n')}

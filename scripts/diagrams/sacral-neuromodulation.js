@@ -15,7 +15,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   foramen: '#FBF5EF', foramenEdge: '#C4B79A', lead: '#334155', elec: '#185FA5', s3: '#B91C1C',
   ipg: '#CBD5E1', ipgEdge: '#64748B', resp: '#15803D', wire: '#475569' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 440;
+const W = 860, H = 398;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -90,10 +90,6 @@ items.forEach(([h, d], i) => {
 });
 push(txt(rx + 16, ry + 170, 9, 500, C.muted, 'start', 'S2 = clamp/heel rotation; S4 = bellows only, no toe.', false));
 
-// ---- key ----
-push(`<line x1="40" y1="392" x2="820" y2="392" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 412, 11, 600, C.ink, 'start', 'Two-stage (tined lead, then IPG) or PNE. Indications: refractory urgency-frequency, urge incontinence, non-obstructive retention, and fecal incontinence.', false));
-push(txt(40, 430, 10.5, 500, C.muted, 'start', 'Progress to the implant only after a ≥50% symptom improvement on the test phase. Newer IPGs are rechargeable and MRI-conditional.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacral neuromodulation shown on a posterior sacrum with the S1 through S4 foramina. A tined quadripolar lead is placed through the S3 foramen, with four electrode contacts straddling the foramen and tines anchoring it, tunneled to an implantable pulse generator in the upper buttock. A callout lists the S3 responses that confirm correct placement on test stimulation: the bellows (inward levator and perineal contraction), plantar flexion of the great toe, and a pulling sensation in the rectum, perineum, or genitals; S2 gives clamp and heel rotation, S4 gives bellows without toe movement. Key: two-stage or PNE testing for refractory urgency-frequency, urge incontinence, non-obstructive retention, and fecal incontinence, progressing to implant only after at least 50 percent symptom improvement.">
 ${el.join('\n')}

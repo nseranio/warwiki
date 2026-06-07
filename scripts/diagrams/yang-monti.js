@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bowel: '#F3DBD2
   lumen: '#E2ECF5', mes: '#E7D9CB', mesEdge: '#B99873', cath: '#0F766E', suture: '#185FA5',
   arrow: '#0F766E', gain: '#15803D', axis: '#94A3B8' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 392;
+const W = 880, H = 344;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -84,10 +84,6 @@ push(txt((cx0 + cx1) / 2, cy + 132, 12, 700, C.ink, 'middle', '3. Re-tubularize'
 // double-monti note
 push(txt((cx0 + cx1) / 2, cy + 64, 9, 500, C.muted, 'middle', 'double (spiral) Monti &#8594; ~10&#8211;12 cm', false));
 
-// ============ key ============
-push(`<line x1="40" y1="338" x2="840" y2="338" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 357, 11, 600, C.ink, 'start', 'Builds a catheterizable channel when the appendix is absent/unusable (Mitrofanoff alternative). One short segment spares bowel length and the ileocecal valve.', false));
-push(txt(40, 375, 10.5, 500, C.muted, 'start', 'Implant with a reliable flap-valve continence mechanism; the bowel-loop end is prone to stomal stenosis. Site the stoma (umbilicus or RLQ) tension-free.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Yang-Monti catheterizable channel construction in three steps. Step 1: a short 2 to 2.5 centimeter ileal segment on its mesentery. Step 2: the segment is opened (detubularized) into a flat sheet and re-rolled the perpendicular way, so the bowel circumference becomes the new tube length. Step 3: re-tubularized over a 12 to 14 French catheter into a long narrow channel about 5 to 6 centimeters, or about 10 to 12 centimeters as a double spiral Monti. Key: a Mitrofanoff alternative when the appendix is unusable, sparing bowel and the ileocecal valve, implanted with a flap-valve continence mechanism, with the bowel-loop end prone to stomal stenosis.">
 <defs>

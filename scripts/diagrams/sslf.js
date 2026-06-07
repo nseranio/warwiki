@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4'
   lig: '#E0D4B4', ligEdge: '#B0995F', musc: '#E7B6AC', muscEdge: '#C0705E', nerve: '#CA8A04',
   pud: '#B91C1C', vag: '#F3DBDC', vagEdge: '#CF9DA3', suture: '#185FA5', safe: '#15803D', danger: '#B91C1C' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 424;
+const W = 860, H = 382;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
@@ -75,10 +75,6 @@ push(`<path d="M 372 324 C 404 296, 432 270, ${sx + 2} ${sy + 6}" fill="none" st
 push(txt(420, 300, 9, 700, C.suture, 'start', 'suspension'));
 push(txt(420, 312, 9, 700, C.suture, 'start', 'sutures'));
 
-// ---- key ----
-push(`<line x1="40" y1="376" x2="820" y2="376" stroke="${C.border}" stroke-width="1"/>`);
-push(txt(40, 395, 11, 600, C.ink, 'start', 'Native-tissue apical repair, usually right-sided and unilateral. Place sutures 1.5-2 cm medial to the ischial spine, into (not around) the ligament.', false));
-push(txt(40, 413, 10.5, 500, C.muted, 'start', 'Too lateral risks the pudendal bundle and sciatic nerve &#8594; gluteal/buttock pain. Drives the apex posteriorly, raising later anterior-wall (cystocele) recurrence vs sacrocolpopexy.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacrospinous ligament fixation shown on a posterior view of the right pelvic sidewall. The sacrospinous ligament with its overlying coccygeus muscle runs from the ischial spine to the sacrum and coccyx. The pudendal nerve and vessels loop behind the ischial spine and the sciatic nerve passes above it, marking a danger zone at the spine. Suspension sutures from the vaginal apex are placed into the ligament 1.5 to 2 centimeters, about two fingerbreadths, medial to the ischial spine, in the safe zone. Key: a native-tissue apical repair usually done right-sided and unilateral; placing sutures too lateral risks the pudendal bundle and sciatic nerve causing gluteal pain; the repair pulls the apex posteriorly, raising later anterior-compartment recurrence compared with sacrocolpopexy.">
 ${el.join('\n')}
