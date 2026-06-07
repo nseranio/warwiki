@@ -16,7 +16,7 @@ const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', blad: '#E2ECF5'
   flap: '#DCE7F1', flapEdge: '#7FA3C4', muscle: '#E7D9CB', muscleEdge: '#B99873', ureter: '#185FA5',
   cut: '#334155', suture: '#185FA5', tunnel: '#0F766E', gain: '#15803D', stitch: '#B45309' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 860, H = 430;
+const W = 860, H = 425;
 const f = n => Number(n.toFixed(1));
 const el = [];
 const push = s => el.push(s);
