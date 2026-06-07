@@ -6,9 +6,9 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
-## 2026-06-07 — Visual overhaul continued: +22 original SVG schematics (diagrams 17–38)
+## 2026-06-07 — Visual overhaul continued: +24 original SVG schematics (diagrams 17–40)
 
-**22 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 38**; image-bearing pages **~27 → ~45**.
+**24 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Direct continuation of the 2026-06-06 diagrams-as-code work — picked up the bench items and kept going. Same house style (white figure card, brand-blue `#185FA5` primary, white-haloed labels, leader callouts, bottom legend, `(Original WARWIKI schematic)` caption, `role="img"` + `aria-label`). Generators in `scripts/diagrams/`. Diagram total **16 → 40**; image-bearing pages **~27 → ~47**.
 
 **Both bench items shipped:**
 - **Blandy U-flap** (`blandy-u-flap.js`, #18) — U-shaped anterior-vaginal-wall flap on a proximal pedicle, ventral (6 o'clock) urethrotomy, inlay over a Foley + ventral-onlay cross-section. → [Female Vaginal Flap Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-vaginal-flap-urethroplasty.mdx).
@@ -37,6 +37,8 @@ For commit-level detail run `git log --oneline`.
 - **Studer orthotopic neobladder** (`studer-neobladder.js`, #36) — detubularized ileal sphere + afferent (Studer) limb + urethral anastomosis, with a why-detubularize (Laplace, low-pressure) inset. → [Modified Studer Pouch](docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx).
 - **Transureteroureterostomy** (`tuu.js`, #37) — donor ureter crossed above the IMA/aortic bifurcation to an end-to-side anastomosis with the recipient; "the recipient ureter is the gatekeeper" caution. → [Transureteroureterostomy](docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/trans-ureteroureterostomy.mdx).
 - **Buccal mucosa graft harvest** (`bmg-harvest.js`, #38) — intraoral cheek view: ovoid graft below Stensen's duct (opposite the 2nd maxillary molar), off the commissure, with margins; the workhorse substitution graft. → [Buccal Mucosa Graft](docs/01-foundations/surgical-principles/grafts/buccal-mucosa.mdx).
+- **VVF layered closure** (`vvf-layered-closure.js`, #39) — cross-section: tension-free multilayer fistula closure with the bladder/vaginal suture lines offset (non-overlapping) + optional interposition. → [Transvaginal Sims-Simon Closure](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon.mdx).
+- **Autologous pubovaginal sling** (`pubovaginal-sling.js`, #40) — sagittal: bladder-neck fascial sling, arms tied over the rectus fascia, with a PVS-vs-MUS level inset. → [Autologous Fascial PVS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/autologous-pubovaginal-sling.mdx).
 
 **Conventions reinforced (carry forward):** the per-figure loop held — `node scripts/diagrams/x.js` → headless-Chrome `--screenshot` → **Read the PNG** → fix → embed → `npm run build` → `git checkout -- src/data/stats.json` → commit+push. The single recurring defect was **bottom-legend / caption lines overrunning the card width** (caught on the render every time) — keep legend lines short or drop a clause; the right column of a 3-zone figure collides with leader-label text unless subs are trimmed. Device schematics (AUS/IPP) reuse one "components + cycle-callout + cross-section inset" layout; channel schematics (Yang-Monti/appendicovesicostomy) reuse the "flap-valve cross-section" inset. Still **not** drawing radiograph/CT/MRI/US appearances (the no-fake-radiograph rule).
 
