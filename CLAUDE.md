@@ -4,7 +4,7 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-06 — Visual overhaul: 11 original SVG schematics (diagrams-as-code) + cohesion cleanup
+## Current Handoff - 2026-06-06 — Visual overhaul: 16 original SVG schematics + 6 public-domain plates (diagrams-as-code) + cohesion cleanup
 
 25 commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure verified by a headless-Chrome render before embedding.
 
