@@ -4,7 +4,27 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-07 (later) — Visual overhaul continued: +10 more original SVG schematics (diagrams 45–54)
+## Current Handoff - 2026-06-08 — Quilting schematic (diagram 55) + first Instagram teaching carousel
+
+Two threads: one repo change, and a new **off-repo** workstream (Instagram educational carousels).
+
+**Repo — diagram 55 (committed `c7c171f`):** quilting-stitch cross-section — *without* quilting a hematoma lifts the free graft off its bed → starves; *with* quilting it's tacked flat → takes (imbibition → inosculation → neovascularization). Generator `scripts/diagrams/quilting-stitch.js` → `static/img/diagrams/quilting-stitch.svg`, embedded on [Quilting Stitch](docs/01-foundations/surgical-skills/quilting-stitch.mdx) (page had no figure). **Diagram total 54 → 55.**
+
+**New workstream — Instagram carousels** (the user is starting an educational IG series; "Quilting" is post #1). **Assets live OUTSIDE the repo at `~/Desktop/WARWIKI-social/quilting/`** — the user opted out of committing social assets, and the SVG/ffmpeg generators were one-offs in `/tmp` (ephemeral, not saved). Full process + conventions in memory [[project_instagram_content_workflow]]. Final 4-slide deck: **(1)** intro — faded surgeon photo @ 35% + "What is Quilting?" + centered sensitive-content warning pill; **(2)** animation `.mp4` (cycling captions, 8.6 s); **(3)** techniques — the user's 3-panel intra-op photo with the old **red** title bar/pills **covered in white and crisp vector blue boxes/text redrawn** over the untouched photos; **(4)** "Bottom line" — 3 graft-take stages + 3 quilting bullets. Caption written; CTA → `https://www.warwiki.org/docs/foundations/surgical-skills/quilting-stitch`.
+
+**Instagram-content conventions (durable):**
+- **MP4, not GIF** (IG rejects GIFs in feed/carousels). Slides = **1080×1350 (4:5)**; template = WARWIKI wordmark + rule top, `warwiki.org` bottom-right (the "Reconstruction, codified." tagline was dropped per user).
+- **Pipeline:** SVG generator → headless-Chrome `--screenshot` → PNG; animation = per-frame SVGs → Chrome PNG → `ffmpeg` H.264 yuv420p. **Render frames in the FOREGROUND** (a backgrounded render hung) and use basename in xargs (`sed 's#.*/##;s#\.svg##'`) or the screenshot/`file://` paths double up.
+- **To edit a user's photo it must be on disk** — pasted chat images aren't reachable; have them drop it in the Desktop folder.
+- **Don't recolor a compressed JPEG's UI** (looked low-quality) — cover the old graphics with white and **redraw crisp vector** boxes/text over the original photos.
+- **Sensitive content:** graphic genital-surgery photos are IG-flag-risky — add a warning + prefer Stories; flag unlicensed stock (the slide-1 surgeon photo is an **Adobe Stock preview** → license before public use). [[feedback_launch_copy_tone]] (grounded caption voice) still applies.
+- Animated > all-static text here (user rejected static); keep captions cycling but slow (~2 s/line) via a `scaledT = t*(BASE/DUR)` time-scale.
+
+Detail in `CHANGELOG.md` under 2026-06-08.
+
+---
+
+## Previous Handoff - 2026-06-07 (later) — Visual overhaul continued: +10 more original SVG schematics (diagrams 45–54)
 
 10 schematic commits, all fast-forwarded to `main`. Lint/typecheck/build clean throughout; every figure rendered headless and Read before embedding. Direct continuation of the same-day diagrams-as-code work — picked the highest-value pages that still had no figure. **Diagram total 44 → 54; image-bearing pages ~51 → ~60** (two figures each serve two pages).
 

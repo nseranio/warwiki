@@ -6,6 +6,31 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-08 — Quilting schematic (diagram 55) + first Instagram teaching carousel
+
+**One repo commit + a new off-repo social workstream.** Lint/build were clean for the repo change.
+
+**Repo — diagram 55 (`c7c171f`):** original 2-panel quilting-stitch cross-section on [quilting-stitch.mdx](docs/01-foundations/surgical-skills/quilting-stitch.mdx) (page had no figure). *Without* quilting a hematoma/seroma lifts a free graft off its bed and it starves; *with* quilting it's tacked flat to the vascularized bed and takes (imbibition 0–48 h → inosculation 48–72 h → neovascularization d4–7). Generator `scripts/diagrams/quilting-stitch.js`. Diagram total **54 → 55**; this same schematic also seeded the Instagram animation below.
+
+**Instagram educational carousel — post #1 "Quilting"** (start of an IG series for the user's account). All deliverables live **outside the repo** in `~/Desktop/WARWIKI-social/quilting/` (user opted out of committing social assets); the SVG + ffmpeg generators were one-off scripts in `/tmp` (not persisted). Final 4-slide carousel (1080×1350, 4:5):
+
+1. **Intro** — "What is Quilting?" over a faded surgeon photo (~35% opacity) + a centered amber **sensitive-content warning** pill.
+2. **Animation** (`.mp4`, H.264, 8.6 s) — left graft arches over a growing hematoma → starves; right graft tacked flat by quilting sutures → takes; cycling captions + a `scaledT` time-scale for pacing.
+3. **Techniques** — the user's own 3-panel intra-op photo (continuous / interrupted / reverse quilting). The original **red** title bar + pills were **covered with white and redrawn as crisp vector blue boxes/text** over the untouched, full-quality photos (a flat JPEG hue-recolor looked poor), then framed onto a portrait card.
+4. **Bottom line** — the 3 graft-take stages + 3 bullets on what quilting buys you.
+
+Caption drafted in the grounded WARWIKI voice; CTA → `https://www.warwiki.org/docs/foundations/surgical-skills/quilting-stitch`.
+
+**Conventions established (Instagram content)** — see memory `project_instagram_content_workflow.md`:
+
+- **MP4, not GIF** for IG feed/carousels. Slides 1080×1350; template = WARWIKI wordmark + rule top, `warwiki.org` bottom-right (no tagline).
+- Build = SVG generator → headless-Chrome `--screenshot` → PNG; animation = per-frame SVG → PNG → `ffmpeg` (yuv420p). **Render frames in the foreground** (a backgrounded render hung) and use basename in the xargs (`sed 's#.*/##;s#\.svg##'`) or paths double up.
+- Pasted chat images aren't on disk — to process a user's photo, have them save it to the folder first.
+- Don't recolor a compressed JPEG's UI; cover with white + redraw vector.
+- Graphic genital-surgery photos are IG-flag-risky (warn + prefer Stories); the slide-1 surgeon photo is an unlicensed Adobe Stock preview — license before public posting.
+
+---
+
 ## 2026-06-07 (later) — Visual overhaul continued: +10 more original SVG schematics (diagrams 45–54)
 
 **10 schematic commits, all fast-forwarded to `main`. Lint (figures + links)/typecheck/build clean throughout; every figure rendered headless and Read before embedding.** Continuation of the same-day diagrams-as-code work; targeted the highest-value pages that still had no figure. Same house style and per-figure loop. Diagram total **44 → 54**; image-bearing pages **~51 → ~60** (two figures each serve two paired pages).
