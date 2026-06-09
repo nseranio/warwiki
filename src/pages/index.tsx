@@ -96,15 +96,6 @@ const SOCIAL_LINKS: SocialLink[] = [
     ),
   },
   {
-    href: 'https://tiktok.com/@warwiki7',
-    label: 'TikTok',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12.5 2h3.3c.2 2 1.1 3.7 2.6 4.8 1 .8 2.3 1.2 3.6 1.2v3.6c-1.7 0-3.4-.5-4.9-1.4v6.7a6.7 6.7 0 1 1-6.7-6.7c.4 0 .8 0 1.2.1v3.7a3 3 0 1 0 2.1 2.9V2z" />
-      </svg>
-    ),
-  },
-  {
     href: 'https://twitter.com/warwikihq',
     label: 'Twitter / X',
     icon: (
