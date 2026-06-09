@@ -6,6 +6,29 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-09 — IPP & AUS device-operation detail (inflate / deflate / deactivate) + Atlas-of-Pelvic-Surgery link + TikTok removal
+
+4 commits, all fast-forwarded to `main`. Lint + build clean throughout.
+
+**IPP & AUS — "how to operate the device" (2 commits).** User asked to document exactly how to operate the inflatable penile prosthesis and artificial urinary sphincter — how to inflate, deflate, deactivate, reactivate. Detail was placed on the **two primary clinical pages** (cross-link, don't duplicate); the two biomaterials **device** pages each got a one-line pointer so the steps are reachable from all four pages.
+
+- **First commit (`a1173b7`) — core operation detail.**
+  - **IPP** → new **"## Device Operation — Inflation and Deflation"** section on [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx) (the hub had no operation section). Inflation = locate/steady the scrotal pump, **6–15 squeezes** (reservoir → cylinders), build rigidity progressively. Deflation differs by pump: **AMS 700** = press-and-hold the deflation button while squeezing the shaft (MS "momentary squeeze" variant = brief press); **Coloplast Titan OTR** = squeeze the opposing touch-pads **once**, then compress the cylinders (OTR needs fewer teaching sessions, mean 1.19 vs 1.87 Genesis). `:::warning` callout on **OTR pseudo-malfunction** (~7.8%; the inflate/deflate valve disc sticks in the deflate position → bulb feels hard → fixed by very firm pressure on the bulb). Post-activation cycling/rehab (Henry rehab protocol). Explicit note: **the IPP has no "deactivation" lock** — unlike the AUS it is simply left deflated between uses (preempts the user's "how to deactivate," which is an AUS concept). +3 refs (20 Shaw 2011, 21 Garber 2014, 22 Henry 2015). Stable cross-link anchor `<a id="device-operation"></a>` (the em-dash heading won't auto-slug cleanly; `{#id}` breaks MDX).
+  - **AUS** → expanded the brief **"## System Operation"** on the [AUS procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) into voiding cycle + **deactivation/reactivation** + a **catheterization-safety** subsection. Catheterization protocol: always deactivate first; ≤14 Fr; shortest duration; **>48 h or 7 d → suprapubic** (image-guided); condom-catheter/pad-weights for the obtunded; urology consult + MedicAlert. +2 refs (71 Fishman 1989, 72 Gaspar 2026), reusing the on-page 2015 Consensus (ref57).
+  - Pointers added on both **device** pages ([AUS device](docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx) Mechanism → `#system-operation`; [IPP device](docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx) components → `#device-operation`). Source-dump cleanup applied (dropped "Would you like…" prompts + two `undefined`-caption figure placeholders; converted `[N]` to `<sup>` anchors; reconciled numbering).
+- **Second commit (`f3de9eb`) — expanded activation/deactivation specifics** (user invited any detail beyond their dump, citing refs already on the pages to avoid fabrication).
+  - **AUS:** pump anatomy (soft lower bulb + firm upper block housing the refill resistor and the deactivation button); the **palpable dimple** at the engaged button that confirms locked-open; the safety-critical **deflated ≠ deactivated** point (a cuff only pumped down auto-refills in minutes — the device stays open *only* while the button is engaged; emptying without deactivating lets it re-pressurize around a catheter); the system is left **locked open with the cuff empty** (not merely deflated) at the close of surgery; activation maneuver — milk the pump into the dependent scrotum, single firm squeeze to release the button (momentarily uncomfortable), and **don't forcibly squeeze while deactivated** (can inadvertently reactivate). Cited to refs already on the page (1 James & McCammon, 57 Biardeau Consensus, 71 Fishman, 72 Gaspar) — no new AUS refs.
+  - **IPP:** AMS deflation "hold a few seconds" nuance; deflation framed as **the harder skill to teach** (reinforced at follow-up); **auto-inflation / lockout valve** as the IPP analog of an unwanted change of state. +1 ref (23 Pastuszak 2015 — already ref7 on the IPP device page, so verified-real before reuse).
+
+**Minor (2 commits).**
+- **`a52edca`** — added **[Atlas of Pelvic Surgery](https://atlasofpelvicsurgery.org/home.html)** (the free Wheeless & Roenneburg illustrated pelvic-surgery atlas; spans bladder/ureter/urethra, fistula, prolapse) to [websites-online-tools.mdx](docs/08-resources/websites-online-tools.mdx) → **GU Reconstruction Education**, beside the only other illustrated operative atlas on the page (Uretra.it). Chosen over the video-only "Videos & Surgical Atlases" page since it is a line-drawing atlas, not video.
+- **`eba0e89`** — removed **TikTok** from the homepage "Follow WARWIKI" social footer in [index.tsx](src/pages/index.tsx) (now YouTube · Instagram · Twitter/X); updated the matching order comment in [index.module.css](src/pages/index.module.css).
+- Confirmed (no change needed) that **Experts in Surgery**, **SurgQuest**, and **VuMedi** were already present in the resources (surgical-video-atlases.mdx).
+
+**Conventions reinforced:** one authoritative home per concept + cross-link (operation detail on the primary clinical page; device pages point to it); prefer reusing on-page references for added detail to eliminate new-citation risk, and verify any genuinely new ref is real first; frame content to the user's mental model but correct it where the device reality differs (IPP has no deactivation lock; for the AUS, "deflated" ≠ "deactivated").
+
+---
+
 ## 2026-06-08 — Quilting schematic (diagram 55) + first Instagram teaching carousel
 
 **One repo commit + a new off-repo social workstream.** Lint/build were clean for the repo change.

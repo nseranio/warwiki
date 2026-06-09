@@ -4,7 +4,27 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-08 — Quilting schematic (diagram 55) + first Instagram teaching carousel
+## Current Handoff - 2026-06-09 — IPP & AUS device-operation detail (inflate / deflate / deactivate) + 2 minor resource/homepage edits
+
+4 commits, all fast-forwarded to `main`. Lint + build clean throughout.
+
+**Main work — how to operate the prosthetic devices (2 commits, `a1173b7` + `f3de9eb`).** User asked to document exactly how to operate the IPP and AUS — inflate, deflate, deactivate/reactivate. Detail lives on the **two primary clinical pages** (cross-link, don't duplicate); the two biomaterials **device** pages get one-line pointers so the steps are reachable from all four.
+
+- **IPP** → new **"## Device Operation — Inflation and Deflation"** section on [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx) (it had no operation section). Inflation (6–15 squeezes); deflation by pump — **AMS 700 press-and-hold the deflation button (a few sec)** / MS momentary-squeeze vs **Coloplast OTR one-touch**; the **OTR pseudo-malfunction** bedside fix (~7.8%; firm bulb pressure resets the stuck valve disc); deflation = the harder skill to teach; **auto-inflation / lockout valve** as the IPP analog of an unwanted state change; post-activation cycling/rehab; and an explicit note that **the IPP has no "deactivation" lock** (preempts the user's "how to deactivate" — that's an AUS concept). +4 refs (20–23: Shaw 2011, Garber 2014, Henry 2015, Pastuszak 2015). Explicit `<a id="device-operation"></a>` anchor (em-dash heading won't auto-slug cleanly).
+- **AUS** → expanded **"## System Operation"** on the [AUS procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx): voiding cycle; **deactivation/reactivation maneuver** (pump = soft bulb + firm block housing the resistor & deactivation button; press the button while the cuff is empty → a **palpable dimple** confirms locked-open; a firm sharp squeeze pops it back); the safety-critical **deflated ≠ deactivated** point (a pumped-down cuff auto-refills in minutes — only the button keeps it open); locked-open-with-empty-cuff at the close of surgery; activation maneuver (milk the pump down, don't squeeze while deactivated); and a **catheterization-in-an-AUS-patient protocol** (always deactivate first; ≤14 Fr; >48 h or 7 d → suprapubic; condom-catheter/pad-weights for the obtunded; urology consult + MedicAlert). +2 refs (71 Fishman 1989, 72 Gaspar 2026), reusing the on-page 2015 Consensus (ref57) + James & McCammon review (ref1).
+
+**Minor (2 commits):** added **[Atlas of Pelvic Surgery](https://atlasofpelvicsurgery.org/home.html)** (free Wheeless & Roenneburg illustrated atlas) to [websites-online-tools.mdx](docs/08-resources/websites-online-tools.mdx) → GU Reconstruction Education, beside the other illustrated atlas (Uretra.it) (`a52edca`); removed **TikTok** from the homepage "Follow WARWIKI" footer in [index.tsx](src/pages/index.tsx) (now YouTube · Instagram · Twitter/X) + updated the CSS order comment (`eba0e89`). Also confirmed (no change) Experts in Surgery / SurgQuest / VuMedi were already in resources.
+
+**Conventions reinforced:**
+- **One authoritative home per concept; cross-link, don't duplicate.** Device-operation detail lives on the primary clinical page (IPP index / AUS procedure); the biomaterials device pages carry a one-line pointer to the `#device-operation` / `#system-operation` anchor.
+- **Prefer reusing refs already on the page** for added detail (the AUS expansion is cited to refs 1/57/71/72 already present) — zero new-citation fabrication risk. When a new ref is needed, verify it's real first (Pastuszak 2015 was already ref7 on the IPP *device* page → safe to reuse on the index).
+- **Frame to the user's mental model:** the user said "how to deactivate" for both devices, but only the AUS has a deactivation lock — called that out explicitly on the IPP page rather than inventing an IPP deactivation.
+
+Detail in `CHANGELOG.md` under 2026-06-09.
+
+---
+
+## Previous Handoff - 2026-06-08 — Quilting schematic (diagram 55) + first Instagram teaching carousel
 
 Two threads: one repo change, and a new **off-repo** workstream (Instagram educational carousels).
 
