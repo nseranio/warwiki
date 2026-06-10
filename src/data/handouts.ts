@@ -931,15 +931,6 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
   },
   {
-    slug: 'surgery-what-to-expect',
-    title: 'Surgery: What to Expect',
-    category: 'Procedures & Surgery',
-    subcategory: 'Before & After Surgery',
-    pages: 2,
-    description:
-      'A general guide to preparing for and recovering from urologic or pelvic surgery — pre-op steps, anesthesia, the day of surgery, recovery, and when to call. Use alongside your procedure-specific handout.',
-  },
-  {
     slug: 'surgical-considerations-before-pop-repair',
     title: 'Choices Before Prolapse Repair Surgery',
     category: 'Procedures & Surgery',
