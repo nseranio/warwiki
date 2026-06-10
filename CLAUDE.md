@@ -4,7 +4,19 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-10 (later 3) — Patient-handout library 58 → 78: new Medications category + men's-health / BPH build-out
+## Current Handoff - 2026-06-10 (later 4) — Handout gallery: finer Conditions taxonomy + Women/Men audience facet
+
+1 commit, fast-forwarded to `main`. Typecheck + build + lint clean; verified in preview (78 cards, 0 console errors, facet counts correct). Pure data + component change — no new handouts, no re-render. Readies the gallery for the translation pass.
+
+**Part A — split the densest subgroup.** Conditions & Symptoms' 9-card **"Bladder & Urinary"** subgroup split into three patient-recognizable themes (edit `HANDOUT_SUBCATEGORY_ORDER` + the 9 entries' `subcategory`): **Leakage & Overactive Bladder** (OAB, SUI ×2) · **Bladder Pain, Infection & Blood in Urine** (IC/BPS, UTIs, asymptomatic bacteriuria, microscopic hematuria) · **Prostate & Urinary Flow** (Nocturia, BPH). Deliberately **did not go finer elsewhere** — the other ~23 subgroups already sit at 1–5 cards; finer splits just produce lone one-card headers (and the component suppresses a single-subgroup header by design).
+
+**Part B — audience facet (Women / Men / All).** New optional `audience` field on `PatientHandout` (`'all' | 'female' | 'male'`, type `HandoutAudience`, defaults `'all'`), a `HANDOUT_AUDIENCES` list + `handoutAudience()` / `handoutMatchesAudience()` helpers in [handouts.ts](src/data/handouts.ts); a third dropdown in [PatientHandouts.tsx](src/components/PatientHandouts.tsx) between category and language. **Inclusive semantics** (correct for patient navigation): *Women* = female + universal (**53**), *Men* = male + universal (**61**), *All* = everything (**78**). Tagged **17 female / 25 male / 36 universal**. Judgment calls (one-line `audience:` edits to flip): Alpha Blockers + AUS left `all`; urethroplasty `all` but perineal urethrostomy / Optilume / TUITMR `male`; Nocturia grouped with BPH under flow.
+
+**Conventions / pitfalls.** Go more granular only where a subgroup is genuinely dense (≥~8 cards) — single-card subheaders read as noise. Add a sex-specific facet only when a sheet is anatomy-locked; default `all`. **Translation note:** the 3 new subcategory strings + "Women"/"Men" labels are user-facing English (join the title/description strings to localize); `audience` *values* are stable keys. **Scripting pitfall:** bulk edits keyed on `subcategory: '…'` must accept **both quote styles** — the "Men's Genital & Reconstructive" entries are double-quoted (apostrophe), so a single-quote-only regex skipped them and mis-stacked tags onto the next entry (caught by `tsc` TS1117).
+
+---
+
+## Previous Handoff - 2026-06-10 (later 3) — Patient-handout library 58 → 78: new Medications category + men's-health / BPH build-out
 
 3 commits, all fast-forwarded to `main`. Typecheck + build clean; gallery verified in preview at each step (78 cards, 0 broken images, 0 console errors). Same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline; all new masters link the shared `_handout.css`. **Gallery 58 → 78 handouts; categories 5 → 6.**
 

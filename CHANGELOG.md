@@ -6,6 +6,20 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 (later 4) — Handout gallery: finer Conditions taxonomy + Women/Men audience facet
+
+1 commit, fast-forwarded to `main`. Typecheck + build + lint clean; verified in preview (78 cards, 0 console errors, facet counts correct). Pure data + component change (no new handouts, no re-render) — readies the gallery for the translation pass.
+
+**Part A — split the one dense subgroup.** Conditions & Symptoms' 9-card **"Bladder & Urinary"** subgroup split into three patient-recognizable themes in `HANDOUT_SUBCATEGORY_ORDER` + the 9 entries' `subcategory`: **Leakage & Overactive Bladder** (OAB, SUI ×2) · **Bladder Pain, Infection & Blood in Urine** (IC/BPS, UTIs, asymptomatic bacteriuria, microscopic hematuria) · **Prostate & Urinary Flow** (Nocturia, BPH). Deliberately did **not** go finer elsewhere — the other ~23 subgroups already sit at 1–5 cards, and the component suppresses a single-subgroup header, so splitting them would just produce lone one-card headers.
+
+**Part B — audience facet (Women / Men / All).** New optional `audience` field on `PatientHandout` (`'all' | 'female' | 'male'`, type `HandoutAudience`, defaults `'all'`), a `HANDOUT_AUDIENCES` display list, and `handoutAudience()` / `handoutMatchesAudience()` helpers in [handouts.ts](src/data/handouts.ts). [PatientHandouts.tsx](src/components/PatientHandouts.tsx) gets a third dropdown between category and language. **Inclusive semantics** (correct for patient navigation): *Women* shows female + universal sheets (**53**), *Men* shows male + universal (**61**), *All* shows everything (**78**) — so a woman filtering "Women" still sees UTIs, cystoscopy, etc. Tagged **17 female / 25 male / 36 universal** across the 78.
+
+**Audience judgment calls (one-line `audience:` edits to flip):** kept **Alpha Blockers** and **AUS** as `all` (genuinely cross-sex); **urethroplasty** `all` but **perineal urethrostomy / Optilume / TUITMR** tagged `male` (male-anatomy operations); **Nocturia** grouped with BPH under "Prostate & Urinary Flow" (sex-neutral but clusters with flow, and avoids a lone 1-card BPH header). **Translation note:** the 3 new subcategory strings + the "Women"/"Men" labels are user-facing English; the `audience` *values* are stable keys.
+
+**Process pitfall (fixed mid-session).** The bulk audience-tagging script used a single-quote `subcategory: '…'` regex; the three "Men's Genital & Reconstructive" entries use **double-quoted** subcategories (apostrophe in "Men's"), so the non-greedy match skipped past them and piled 3 tags onto the next entry (RUG). Caught by `tsc` (TS1117 duplicate property); fixed by widening the regex to accept either quote style. **Lesson: when scripting edits keyed on a string field, account for both quote styles Prettier may have applied.**
+
+---
+
 ## 2026-06-10 (later 3) — Patient handouts 58 → 78: new Medications category + men's-health / BPH build-out
 
 3 commits, all fast-forwarded to `main`. Typecheck + build clean; gallery verified in preview (78 cards, 0 broken images, 0 console errors). Same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline; new masters link the shared `_handout.css`. **Gallery 58 → 78; categories 5 → 6.**
