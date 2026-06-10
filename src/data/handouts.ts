@@ -187,6 +187,69 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
   },
   {
+    slug: 'pelvic-organ-prolapse',
+    title: 'Pelvic Organ Prolapse',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Pelvic Floor & Prolapse',
+    pages: 2,
+    description:
+      'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
+  },
+  {
+    slug: 'musculoskeletal-pelvic-pain',
+    title: 'Musculoskeletal Pelvic Pain',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Pelvic Floor & Prolapse',
+    pages: 2,
+    description:
+      'Pelvic pain coming from tight, overactive muscles and nerves rather than the bladder or organs — real and treatable even when scans are normal, with pelvic-floor physical therapy as the cornerstone.',
+  },
+  {
+    slug: 'accidental-bowel-leakage',
+    title: 'Accidental Bowel Leakage (Fecal Incontinence)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bowel & Anorectal',
+    pages: 2,
+    description:
+      'Losing control of gas or stool — common and treatable. What causes it and the step-by-step options from firming the stool and biofeedback to nerve stimulation or sphincter repair.',
+  },
+  {
+    slug: 'constipation',
+    title: 'Constipation',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bowel & Anorectal',
+    pages: 2,
+    description:
+      'Why constipation matters for pelvic health (straining worsens prolapse and leakage) and how to fix it — fiber, fluids, toileting habits, gentle laxatives, and pelvic-floor therapy for outlet-type constipation.',
+  },
+  {
+    slug: 'female-sexual-dysfunction',
+    title: 'Female Sexual Dysfunction',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    description:
+      'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
+  },
+  {
+    slug: 'urethral-diverticulum',
+    title: 'Urethral Diverticulum',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    description:
+      'A small pocket off the urethra that collects urine — the classic "3 Ds" (dribbling, burning, pain with sex) and recurrent infections, how MRI maps it, and surgical removal (diverticulectomy) when it is bothersome.',
+  },
+  {
+    slug: 'fistulas-genitourinary-rectovaginal',
+    title: 'Fistulas: Genitourinary and Rectovaginal',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    description:
+      'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
+  },
+  {
     slug: 'retrograde-urethrogram',
     title: 'Retrograde Urethrogram (RUG)',
     category: 'Tests & Imaging',
