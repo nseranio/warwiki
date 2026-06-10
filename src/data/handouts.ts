@@ -97,4 +97,20 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
   },
+  {
+    slug: 'penile-plication',
+    title: 'Penile Plication',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'plaque-incision-grafting',
+    title: 'Plaque Incision and Grafting',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
+  },
 ];
