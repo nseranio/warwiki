@@ -1541,6 +1541,129 @@ a.book-card:visited {
 .web-card--plastics     { --web-accent: #6D28D9; }
 .web-card--equipment    { --web-accent: #374151; }
 
+/* ============================================================
+   Patient Handouts gallery (.ph-*) + Patient Resources CTA
+   ============================================================ */
+.ph-wrap { margin: 1.25rem 0 0.5rem; }
+.ph-group { margin: 0 0 2rem; }
+.ph-group-title {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+.ph-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--ifm-color-primary);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  line-height: 1.5;
+}
+.ph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+.ph-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+  color: inherit;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.ph-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(15, 58, 103, 0.16);
+  border-color: var(--ifm-color-primary);
+  color: inherit;
+}
+.ph-thumb {
+  aspect-ratio: 816 / 1056;
+  background: #eef2f7;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  overflow: hidden;
+}
+.ph-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.ph-body {
+  padding: 0.85rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ph-cat {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.3rem;
+}
+.ph-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+.ph-desc {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-700);
+  flex: 1;
+}
+.ph-dl {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+.ph-dl::before { content: "\2193  "; }
+
+/* WARWIKI handouts call-to-action on the Patient Resources page */
+.ph-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: relative;
+  border: 1px solid var(--ifm-color-primary);
+  background: linear-gradient(135deg, rgba(24, 95, 165, 0.08), rgba(24, 95, 165, 0.02));
+  border-radius: 14px;
+  padding: 1rem 3rem 1rem 1.15rem;
+  text-decoration: none !important;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  margin: 0.4rem 0 0.2rem;
+}
+.ph-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 58, 103, 0.15);
+  color: inherit;
+}
+.ph-cta-main { font-weight: 700; font-size: 1.02rem; color: var(--ifm-color-primary); }
+.ph-cta-sub { font-size: 0.85rem; color: var(--ifm-color-emphasis-700); }
+.ph-cta-arrow {
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--ifm-color-primary);
+}
+
 @media (max-width: 768px) {
   .web-grid {
     grid-template-columns: 1fr;
