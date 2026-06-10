@@ -42,6 +42,46 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'An X-ray of the bladder and urethra during filling and urinating — written to work whether or not the patient already has a catheter or suprapubic tube.',
   },
   {
+    slug: 'cystoscopy',
+    title: 'Cystoscopy',
+    category: 'Tests & Imaging',
+    pages: 2,
+    description:
+      'A look inside the bladder and urethra with a thin camera — flexible (awake, in the office) or rigid (asleep, in the operating room): how to prepare and what to expect during and after.',
+  },
+  {
+    slug: 'cystogram',
+    title: 'Cystogram',
+    category: 'Tests & Imaging',
+    pages: 2,
+    description:
+      'An X-ray of the bladder filled with contrast dye to check that a repair has healed or to look for a leak, fistula, or reflux — written to work whether or not the patient already has a catheter or suprapubic tube.',
+  },
+  {
+    slug: 'urodynamics',
+    title: 'Urodynamics',
+    category: 'Tests & Imaging',
+    pages: 2,
+    description:
+      'A group of tests that measure how the bladder fills and empties using small catheters — what the test is, how to prepare, and what to expect during and after.',
+  },
+  {
+    slug: 'ambulatory-urodynamics',
+    title: 'Ambulatory Urodynamics (Catheter-Free)',
+    category: 'Tests & Imaging',
+    pages: 2,
+    description:
+      'A newer, catheter-free bladder test: a small wireless sensor records bladder pressure during normal daily activity for more lifelike readings — how it works and what to expect.',
+  },
+  {
+    slug: 'ureteral-evaluation-under-anesthesia',
+    title: 'Ureteral Evaluation Under Anesthesia',
+    category: 'Tests & Imaging',
+    pages: 2,
+    description:
+      'A detailed exam to map a narrowing of the ureter while asleep — any combination of ureteroscopy, retrograde and antegrade pyelogram, and cystography — to plan the right repair.',
+  },
+  {
     slug: 'suprapubic-catheter-placement',
     title: 'Suprapubic Catheter Placement',
     category: 'Procedures & Surgery',
@@ -120,5 +160,37 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'pyeloplasty',
+    title: 'Pyeloplasty',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'Surgery to fix a blockage where the kidney drains into the ureter (UPJ obstruction) — usually keyhole (robotic/laparoscopic): how it works, preparing, the internal stent, and recovery.',
+  },
+  {
+    slug: 'optilume-urethral-stricture',
+    title: 'Optilume Drug-Coated Balloon (Urethral Stricture)',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'endoscopic-urethroplasty',
+    title: 'Endoscopic Urethroplasty (TUITMR)',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'ureteral-reconstruction',
+    title: 'Ureteral Reconstruction',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
   },
 ];
