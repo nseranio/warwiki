@@ -4,7 +4,33 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-10 (later) — 9 more patient handouts (21 total) + a multilingual language switcher (English + 9, translate-later)
+## Current Handoff - 2026-06-10 (later 2) — Patient-handout library scaled to 58 (full AUGS urogyn set) + gallery search/filter, 5-bucket taxonomy, sex-split SUI, ICI, reworded label
+
+Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in the browser preview at each stage (58 cards, 0 broken images, 0 console errors). Continues the same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline. **Gallery 21 → 58 handouts.**
+
+**New content (this session).**
+- **Urinary diversion (4, `decb19d`):** Comparing-Your-Options overview (with a side-by-side table) + Ileal Conduit · Orthotopic Neobladder · Continent Cutaneous (Indiana Pouch). Split into individual sheets (user choice) because daily life after each differs entirely; shared before/during content kept consistent.
+- **Full AUGS "Voices for PFD" topic set as WARWIKI originals (`aeb0ef1`, `8ac36aa`, `1820ce5`)** — skipped Cystoscopy + Urodynamics (already built). Conditions & Symptoms (13): OAB · IC/BPS · UTIs · Asymptomatic Bacteriuria (don't-treat) · Microscopic Hematuria (risk-based) · POP · Musculoskeletal Pelvic Pain · Accidental Bowel Leakage · Constipation · Female Sexual Dysfunction · Urethral Diverticulum · Fistulas + the **sex-split SUI** below. Conservative & Self-Care (5): Pelvic-Floor Exercises & Bladder Training · Vaginal Estrogen · Pessaries · ISC · **Intracavernosal Injections (ICI)**. Office Procedures (4): Bladder Botox · Urethral Bulking · PTNS · Sacral Neuromodulation. Procedures & Surgery (urogyn, 10): Mid-Urethral Sling · Colpocleisis · Sacrocolpopexy · Vaginal Hysterectomy for POP · Vaginal Prolapse Repair (Mesh/Graft) · Vaginal Suspension · 3rd/4th-Degree Perineal Tears · Cosmetic Gynecology · Surgery: What to Expect · Choices Before Prolapse Repair.
+- **SUI split by sex (user request):** *Stress Urinary Incontinence (Female)* (pessary/bulking/mid-urethral sling) and *(Male)* (post-prostatectomy → pelvic floor → male sling/AUS); unified SUI sheet removed. Other topics left unsplit — already anatomy-specific or sex-neutral in management.
+- **ICI added (user request)** under a new Conservative "Erectile Dysfunction" subgroup; priapism (>4 h) emergency warning.
+
+**New "condition" flavor.** Education sheets (not pre-procedure) use: intro → About This Condition → What Causes It (page 1) · qbox → How It's Diagnosed → How It's Treated (step ladder) → Living With It / warn / Three Things (page 2). Surgery/procedure sheets keep the prep→during→after flavor.
+
+**Platform/UX changes.**
+- **Label reworded `Patient Instructions` → `Patient Information`** across every master (sed sweep + full re-render), since most are educational (`20e82c2`).
+- **Gallery search + category filter** (`c78efa2`) — `.ph-search` + `.ph-filter`; matches title/description/category/subcategory; live "N of M" count + empty state.
+- **Language control is now a DROPDOWN, not a tab bar** (`0097d4f`) — the 10-tab bar wrapped to 4–5 rows on mobile. Same 10 languages; not-yet-translated options are `disabled` "(coming soon)".
+- **5-bucket taxonomy** (`aeb0ef1`): **Conditions & Symptoms · Tests & Imaging · Conservative & Self-Care · Office Procedures · Procedures & Surgery**, each with subcategories (`subcategory` field + `HANDOUT_SUBCATEGORY_ORDER`). The component **omits a subcategory header when a category has a single subgroup**.
+- **Thumbnails are JPEG** (q82 @700px; `sips` — no pngquant/cwebp/webp on this Mac) with the card crop `.ph-thumb{aspect-ratio:3/2}` + `object-position:top` to drop dead white space; ~55% lighter (`0097d4f`).
+- **Shared `_handout.css`** (off-repo) linked by all newer masters — slim files; title-size modifiers `t-lg/t-md/t-sm/t-xs`, plus `.opt`/`table.cmp` for comparison sheets.
+
+**Durable conventions reinforced.** Honest mesh framing (transvaginal-mesh FDA history) on sling/prolapse-graft/sacrocolpopexy sheets; non-promotional "vaginal rejuvenation" framing (FDA warning) on cosmetic gynecology; inclusive sex/gender language; **split a topic by sex only when treatments truly diverge (SUI), otherwise keep one sheet**. Overflow gate before every render (inject `window.load` script → `<pre id>` per `.page` `pageOvf`/`colsOvf` → `--dump-dom` → grep the generated `<pre>`).
+
+**Open next step:** the actual **translations** (infrastructure ready; `<slug>.<code>.pdf` + `<slug>.<code>.jpg`, then add the code to that handout's `languages` array). Full workflow in memory `project_patient_handouts_workflow.md`; detail in `CHANGELOG.md` under 2026-06-10 (later 2).
+
+---
+
+## Previous Handoff - 2026-06-10 (later) — 9 more patient handouts (21 total) + a multilingual language switcher (English + 9, translate-later)
 
 2 commits, both fast-forwarded to `main`. Typecheck + build clean; switcher verified in the browser preview (no console errors). Direct continuation of the same-day handouts workstream — same off-repo HTML → headless-Chrome pipeline.
 

@@ -6,6 +6,30 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 (later 2) — Patient-handout library scaled to 58 (full AUGS urogyn set) + search/filter, 5-bucket taxonomy, sex-split SUI, ICI, reworded label
+
+Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in the browser preview at each stage (58 cards, 0 broken images, 0 console errors). Same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline. **Gallery 21 → 58 handouts.**
+
+**Urinary diversion (4, `decb19d`).** Comparing-Your-Options overview (side-by-side comparison table) + Ileal Conduit · Orthotopic Neobladder · Continent Cutaneous (Indiana Pouch). Individual sheets (user choice) because daily life after each differs entirely (bag vs. urethral voiding vs. catheterizable stoma); shared before/during content kept consistent. New "Urinary Diversion" subcategory.
+
+**Mobile + scannability pass (`0097d4f`).** Language control switched from a 10-tab bar (which wrapped to 4–5 rows on phones) to a **dropdown**; **subcategory grouping** (cards group category → subcategory); **thumbnails PNG → JPEG q82 @700px** (6.3 MB → 2.8 MB) with the card crop changed to `aspect-ratio:3/2` + `object-position:top` to remove dead white space.
+
+**Search + category filter (`c78efa2`).** `.ph-search` + `.ph-filter` (matches title/description/category/subcategory); live "N of M" count + empty state; full-width search over category + language dropdowns; selects stack on mobile.
+
+**5-bucket taxonomy + first urogyn condition batch (`aeb0ef1`).** Reorganized into **Conditions & Symptoms · Tests & Imaging · Conservative & Self-Care · Office Procedures · Procedures & Surgery**, each with subcategories (`subcategory` field + `HANDOUT_SUBCATEGORY_ORDER`); component omits a subcategory header when a category has a single subgroup. New **"condition" flavor** (About → What Causes It → How It's Diagnosed → How It's Treated → Living With It). Batch 1 (Bladder & Urinary): OAB · SUI · IC/BPS · UTIs · Asymptomatic Bacteriuria · Microscopic Hematuria. New off-repo **shared `_handout.css`** linked by all newer masters (slim files; `t-lg/t-md/t-sm/t-xs` title sizes, `.opt`/`table.cmp`).
+
+**Conditions & Symptoms completed (`8ac36aa`).** +7: Pelvic Organ Prolapse · Musculoskeletal Pelvic Pain · Accidental Bowel Leakage · Constipation · Female Sexual Dysfunction · Urethral Diverticulum · Fistulas (GU & rectovaginal).
+
+**Label reworded (`20e82c2`).** `Patient Instructions` → `Patient Information` across every master (sed sweep + full re-render of all sheets) — most are educational, not instructions. No content/data change.
+
+**Final content wave (`1820ce5`).** **SUI split by sex** — *Stress Urinary Incontinence (Female)* (pessary/bulking/mid-urethral sling) and *(Male)* (post-prostatectomy → pelvic floor → male sling/AUS); unified sheet removed. **ICI** (intracavernosal injections for ED; priapism emergency warning) under a new Conservative "Erectile Dysfunction" subgroup. **Conservative & Self-Care (5):** Pelvic-Floor Exercises & Bladder Training · Vaginal Estrogen · Pessaries · ISC · ICI. **Office Procedures (4):** Bladder Botox · Urethral Bulking · PTNS · Sacral Neuromodulation. **Procedures & Surgery (urogyn, 10):** Mid-Urethral Sling · Colpocleisis · Sacrocolpopexy · Vaginal Hysterectomy for POP · Vaginal Prolapse Repair (Mesh/Graft) · Vaginal Suspension · 3rd/4th-Degree Perineal Tears · Cosmetic Gynecology · Surgery: What to Expect · Choices Before Prolapse Repair.
+
+**Final category spread (58):** Conditions & Symptoms 14 · Tests & Imaging 7 · Conservative & Self-Care 5 · Office Procedures 4 · Procedures & Surgery 28. Skipped Cystoscopy + Urodynamic Testing (AUGS list) — already built.
+
+**Conventions reinforced.** Split a topic by sex only when treatments truly diverge (SUI); otherwise one sheet. Honest mesh framing (transvaginal-mesh FDA history) on sling / prolapse-graft / sacrocolpopexy; non-promotional "vaginal rejuvenation" framing (FDA warning) on cosmetic gynecology; "don't treat" counseling on asymptomatic bacteriuria; risk-based workup on microscopic hematuria. Inclusive sex/gender language. Overflow gate before every render. **Open next step: the actual translations** (infrastructure ready). Workflow + naming in memory `project_patient_handouts_workflow.md`.
+
+---
+
 ## 2026-06-10 (later) — 9 more patient handouts (21 total) + a multilingual language switcher (English + 9, translate-later)
 
 2 commits, both fast-forwarded to `main`. Typecheck + build clean; switcher verified in the browser preview (no console errors). Direct continuation of the same-day handouts workstream.
