@@ -81,4 +81,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
   },
+  {
+    slug: 'male-urethral-sling',
+    title: 'Male Urethral Sling',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
+  },
 ];
