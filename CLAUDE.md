@@ -4,7 +4,25 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-10 (later 2) — Patient-handout library scaled to 58 (full AUGS urogyn set) + gallery search/filter, 5-bucket taxonomy, sex-split SUI, ICI, reworded label
+## Current Handoff - 2026-06-10 (later 3) — Patient-handout library 58 → 78: new Medications category + men's-health / BPH build-out
+
+3 commits, all fast-forwarded to `main`. Typecheck + build clean; gallery verified in preview at each step (78 cards, 0 broken images, 0 console errors). Same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline; all new masters link the shared `_handout.css`. **Gallery 58 → 78 handouts; categories 5 → 6.**
+
+**New "Medications" category** (`6a53631`, `c238507`) — a **6th top-level bucket** (between Conservative & Self-Care and Office Procedures), new "medication" flavor (what it is / how it works → how to take it / key safety / side effects). Subgroups + sheets: **Overactive Bladder Medicines** (Anticholinergics · Beta-3 Agonists) · **Prostate & Urinary Flow Medicines** (Alpha Blockers · 5-Alpha-Reductase Inhibitors) · **Erectile Dysfunction Medicines** (PDE5 Inhibitors) · **Testosterone Therapy** (Testosterone Replacement Therapy). Critical safety points emphasized: PDE5i + nitrates / priapism; alpha-blocker IFIS (cataract surgery) + retrograde ejaculation; 5-ARI halves PSA + pregnancy handling; anticholinergic cognitive caution in older adults; mirabegron blood pressure; TRT lowers fertility + needs monitoring.
+
+**Men's-health + reconstructive build-out** (`796c071`, `c238507`).
+- **Conditions:** Nocturia (Bladder & Urinary); **Enlarged Prostate (BPH)** (Bladder & Urinary); **Erectile Dysfunction** and **Peyronie's Disease** umbrella sheets (Sexual Health & Other) sitting above their existing treatment handouts.
+- **New "Men's Genital & Reconstructive" subgroup** (Conditions): Acquired Buried Penis & Repair · Rectourethral Fistula (men) · Pubosymphyseal Fistula — condition+repair sheets framed honestly as reconstructive consequences (mostly of prostate cancer treatment), staged-repair / diversion explained, serious-but-hopeful tone.
+- **Conservative:** Vaginal Lubricants & Moisturizers (Vaginal Health & Devices). The Conservative "Erectile Dysfunction" subgroup was **renamed "ED & Penile Therapies"** to hold ICI + **Vacuum Erection Device** (30-min ring rule) + **Penile Traction Therapy** (Peyronie's).
+- **New "Prostate (BPH) Procedures" subgroup** (Procedures & Surgery): **TURP** · **HoLEP** (any size) · **Aquablation** (heat-free waterjet, ejaculation-sparing) · **Simple Prostatectomy** (very large glands; clearly distinguished from the radical cancer operation). Retrograde-ejaculation counseling on each.
+
+**Conventions reinforced.** A "medication"/"product" flavor for drug-class and device sheets; honest framing on dual-use and safety (TRT fertility; simple ≠ radical prostatectomy; Aquablation newer/less long-term data; non-promotional throughout). Split by sex only when treatments diverge. New top-level categories are just `HANDOUT_CATEGORY_ORDER` + `HANDOUT_SUBCATEGORY_ORDER` entries; renaming a subgroup = edit the order string **and** the matching `subcategory` on affected entries (done for ICI). Overflow gate before every render.
+
+**Final category spread (78):** Conditions & Symptoms 21 · Tests & Imaging 7 · Conservative & Self-Care 8 · Medications 6 · Office Procedures 4 · Procedures & Surgery 32. **Open next step: translations** (infrastructure ready; `<slug>.<code>.pdf` + `<slug>.<code>.jpg`, then add the code to that handout's `languages` array). Workflow in memory `project_patient_handouts_workflow.md`; detail in `CHANGELOG.md` under 2026-06-10 (later 3).
+
+---
+
+## Previous Handoff - 2026-06-10 (later 2) — Patient-handout library scaled to 58 (full AUGS urogyn set) + gallery search/filter, 5-bucket taxonomy, sex-split SUI, ICI, reworded label
 
 Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in the browser preview at each stage (58 cards, 0 broken images, 0 console errors). Continues the same off-repo HTML → headless-Chrome → PDF + JPEG-thumbnail pipeline. **Gallery 21 → 58 handouts.**
 
