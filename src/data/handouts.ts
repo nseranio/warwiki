@@ -89,7 +89,10 @@ export function handoutThumbPath(slug: string, code: string): string {
 }
 
 export const HANDOUT_CATEGORY_ORDER: string[] = [
+  'Conditions & Symptoms',
   'Tests & Imaging',
+  'Conservative & Self-Care',
+  'Office Procedures',
   'Procedures & Surgery',
 ];
 
@@ -97,22 +100,92 @@ export const HANDOUT_CATEGORY_ORDER: string[] = [
  * Subcategories within the top-level categories, in display order. Cards are
  * grouped category → subcategory → grid so patients can scan to the area that
  * matches their condition. Only subcategories with at least one handout render.
+ * (When a category has just one subgroup, the component omits its header.)
  */
 export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
+  // Conditions & Symptoms
+  'Bladder & Urinary',
+  'Pelvic Floor & Prolapse',
+  'Bowel & Anorectal',
+  'Sexual Health & Other',
   // Tests & Imaging
   'Bladder & Urethra Imaging',
   'Scope & Bladder-Function Tests',
   'Kidney & Ureter Tests',
+  // Conservative & Self-Care
+  'Bladder & Pelvic-Floor Training',
+  'Vaginal Health, Devices & Catheters',
+  // Office Procedures
+  'Injections (Botox & Bulking)',
+  'Nerve Stimulation for OAB',
   // Procedures & Surgery
-  'Urethral Narrowing & Stricture',
   'Urinary Leakage (Incontinence)',
-  'Erections & Penile Conditions',
+  'Prolapse Surgery',
+  'Pelvic Floor & Perineal Repair',
+  'Urethral Narrowing & Stricture',
   'Kidney & Ureter Reconstruction',
   'Urinary Diversion',
+  'Erections & Penile Conditions',
   'Catheters & Grafts',
+  'Cosmetic & Other',
+  'Before & After Surgery',
 ];
 
 export const PATIENT_HANDOUTS: PatientHandout[] = [
+  {
+    slug: 'overactive-bladder',
+    title: 'Overactive Bladder (OAB)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
+  },
+  {
+    slug: 'stress-urinary-incontinence',
+    title: 'Stress Urinary Incontinence (SUI)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — what causes it and the options from pelvic-floor exercises to a support device, bulking injection, or sling.',
+  },
+  {
+    slug: 'interstitial-cystitis-bps',
+    title: 'Interstitial Cystitis / Bladder Pain Syndrome',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
+  },
+  {
+    slug: 'urinary-tract-infections',
+    title: 'Urinary Tract Infections (UTIs)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'What a bladder vs. kidney infection is, how UTIs are treated, when antibiotics are (and are not) needed, and how to prevent repeats — including vaginal estrogen after menopause.',
+  },
+  {
+    slug: 'asymptomatic-bacteriuria',
+    title: 'Asymptomatic Bacteriuria',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Bacteria found in the urine when you feel completely fine — why this usually should NOT be treated with antibiotics, the few exceptions (pregnancy, before some procedures), and what symptoms to watch for.',
+  },
+  {
+    slug: 'asymptomatic-microscopic-hematuria',
+    title: 'Asymptomatic Microscopic Hematuria',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
+  },
   {
     slug: 'retrograde-urethrogram',
     title: 'Retrograde Urethrogram (RUG)',

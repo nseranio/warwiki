@@ -163,7 +163,9 @@ export default function PatientHandouts(): React.ReactElement {
             </h2>
             {subgroups.map(({subcategory, items}) => (
               <div className="ph-subgroup" key={subcategory}>
-                <h3 className="ph-subtitle">{subcategory}</h3>
+                {subgroups.length > 1 && (
+                  <h3 className="ph-subtitle">{subcategory}</h3>
+                )}
                 <div className="ph-grid">
                   {items.map((h) => renderCard(h, category))}
                 </div>
