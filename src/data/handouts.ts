@@ -57,4 +57,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
   },
+  {
+    slug: 'artificial-urinary-sphincter',
+    title: 'Artificial Urinary Sphincter (AUS)',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
+  },
 ];
