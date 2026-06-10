@@ -6,6 +6,36 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 (later) — 9 more patient handouts (21 total) + a multilingual language switcher (English + 9, translate-later)
+
+2 commits, both fast-forwarded to `main`. Typecheck + build clean; switcher verified in the browser preview (no console errors). Direct continuation of the same-day handouts workstream.
+
+**9 new handouts** (`1b1cb60`), same off-repo HTML → headless-Chrome PDF + page-1 thumbnail pipeline, each grounded in the matching WARWIKI clinical page, every page verified `pageOvf=0 / colsOvf=0` (no footer bleed). Handout total **12 → 21**.
+
+*Tests & Imaging (5)*
+- **Cystoscopy** — flexible-awake-in-office vs rigid-asleep-in-OR, both framed.
+- **Cystogram** — bladder X-ray with contrast; **flexible** across new catheter / existing urethral catheter / SPT (dye through the existing tube).
+- **Urodynamics** — flow + filling + pressure-flow (+ video); two-catheter explanation; "pressure more than pain."
+- **Ambulatory Urodynamics (Catheter-Free)** — the Glean-concept wireless intravesical sensor; natural filling, normal voiding, seconds to place/remove; flagged as newer tech.
+- **Ureteral Evaluation Under Anesthesia** — maps a ureteral stricture asleep via **any combination** of diagnostic ureteroscopy + retrograde pyelogram + antegrade pyelogram + cystography; stent/nephrostomy may be placed/exchanged.
+
+*Procedures & Surgery (4)*
+- **Pyeloplasty** — UPJ-obstruction repair (keyhole/robotic default); double-J stent ~4–6 wk; crossing-vessel mention.
+- **Optilume Drug-Coated Balloon (Urethral Stricture)** — the **urethral DCB (ROBUST), not Optilume BPH** (user-confirmed); balloon + paclitaxel; "not urethroplasty-equivalent"; condom/fathering counseling.
+- **Endoscopic Urethroplasty (TUITMR)** — no-incision bladder-neck/VUAS repair: cut the scar through a scope + suture healthy lining across it; low de-novo-leakage selling point; ~4-month scope check.
+- **Ureteral Reconstruction** — **one flexible sheet** across primary repair (rejoin ends / reimplant) → cheek graft → bowel segment, over a stent; bowel-recovery + mucus caveats.
+
+**Multilingual language switcher** (`f2e3b5d`) — *build-switcher-first, translate-later* per the user. A global language tab bar on the gallery offers **English + Spanish · Mandarin (简体中文) · Vietnamese · Korean · Tagalog · Arabic (rtl) · Russian · French · Japanese**. **English is the base/fallback.**
+
+- [src/data/handouts.ts](src/data/handouts.ts): new `HANDOUT_LANGUAGES`, `DEFAULT_LANGUAGE`, `handoutHasLanguage()`, and `handoutPdfPath`/`handoutThumbPath`. A `PatientHandout` gains optional `languages?: string[]` (codes with localized assets ready; English implied).
+- **Asset naming:** English keeps `<slug>.pdf` / `<slug>.png`; other languages use a **`<slug>.<code>.pdf`** + **`<slug>.<code>.png`** suffix.
+- [src/components/PatientHandouts.tsx](src/components/PatientHandouts.tsx) rewritten with `useState` lang; untranslated tabs render disabled (`.ph-lang--soon`, " · soon"); selecting one falls back to the English asset and shows a per-card `.ph-soon` "… coming soon — showing English" note. CSS `.ph-langbar` / `.ph-lang` / `.ph-soon` in [custom.css](src/css/custom.css) (theme-var based, dark-mode safe). Verified: clicking Español → English fallback on all 21 cards, no console errors.
+- **To go live in a language for a handout:** render `<slug>.<code>.pdf` + thumbnail (set the master's `<html lang>` and `dir="rtl"` for Arabic), commit both, append the code to that handout's `languages` array — the tab activates automatically.
+
+**Decisions/conventions reinforced.** Optilume "which device" is a real fork — confirmed **urethral-stricture DCB**, not BPH (the two share the paclitaxel platform but are distinct indications). One spanning sheet beats split-by-variant when the patient experience is ~80% common (ureteral reconstruction; ureteral evaluation's "any combination"). The overflow check (inject a `window.load` script appending `<pre id>` with per-`.page` `pageOvf`/`colsOvf`, `--dump-dom`, grep the generated `<pre>` — not the literal script source) is the gate before rendering. **Translations themselves are not yet produced** — switcher infrastructure is ready for either AI-produced or professionally-vetted drops. Full workflow in memory `project_patient_handouts_workflow.md`.
+
+---
+
 ## 2026-06-10 — Patient-instruction handouts: 12 plain-language PDFs + a dedicated gallery + Resources-landing reorg
 
 16 commits, all fast-forwarded to `main`. Typecheck + lint + build clean throughout. New **off-repo→hosted** workstream: plain-language, printable **patient handouts** to give patients *before* a test or procedure, modeled on the AUGS "Voices for PFD" 2-page fact sheet the user supplied (and the colpocleisis sample).
