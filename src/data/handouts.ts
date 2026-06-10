@@ -92,6 +92,7 @@ export const HANDOUT_CATEGORY_ORDER: string[] = [
   'Conditions & Symptoms',
   'Tests & Imaging',
   'Conservative & Self-Care',
+  'Medications',
   'Office Procedures',
   'Procedures & Surgery',
 ];
@@ -117,6 +118,10 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Vaginal Health & Devices',
   'Self-Catheterization',
   'Erectile Dysfunction',
+  // Medications
+  'Overactive Bladder Medicines',
+  'Prostate & Urinary Flow Medicines',
+  'Erectile Dysfunction Medicines',
   // Office Procedures
   'Injections (Botox & Bulking)',
   'Nerve Stimulation for OAB',
@@ -531,6 +536,53 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
+  },
+
+  // ---- Medications ----
+  {
+    slug: 'anticholinergics',
+    title: 'Anticholinergics (for Overactive Bladder)',
+    category: 'Medications',
+    subcategory: 'Overactive Bladder Medicines',
+    pages: 2,
+    description:
+      'Pills that calm an overactive bladder (oxybutynin, solifenacin, tolterodine, others) — how they work, how to take them, the dry-mouth/constipation effects, and the cognitive caution in older adults.',
+  },
+  {
+    slug: 'beta-3-agonists',
+    title: 'Beta-3 Agonists (for Overactive Bladder)',
+    category: 'Medications',
+    subcategory: 'Overactive Bladder Medicines',
+    pages: 2,
+    description:
+      'Newer overactive-bladder pills (mirabegron, vibegron) that relax the bladder with far less dry mouth than anticholinergics — how they work, who they suit, and the blood-pressure point with mirabegron.',
+  },
+  {
+    slug: 'alpha-blockers',
+    title: 'Alpha Blockers (for Prostate / Urinary Flow)',
+    category: 'Medications',
+    subcategory: 'Prostate & Urinary Flow Medicines',
+    pages: 2,
+    description:
+      'The usual first medicine for an enlarged prostate (tamsulosin, alfuzosin, silodosin, others) — fast relief of urine-flow symptoms, dizziness and retrograde-ejaculation effects, and the cataract-surgery (IFIS) warning.',
+  },
+  {
+    slug: '5-alpha-reductase-inhibitors',
+    title: '5-Alpha-Reductase Inhibitors',
+    category: 'Medications',
+    subcategory: 'Prostate & Urinary Flow Medicines',
+    pages: 2,
+    description:
+      'Pills that gradually shrink an enlarged prostate (finasteride, dutasteride) over 3–6 months, lowering retention and surgery risk — plus the key point that they halve the PSA test and the pregnancy-handling caution.',
+  },
+  {
+    slug: 'pde5-inhibitors',
+    title: 'PDE5 Inhibitors (ED & Prostate Pills)',
+    category: 'Medications',
+    subcategory: 'Erectile Dysfunction Medicines',
+    pages: 2,
+    description:
+      'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
   },
 
   // ---- Office Procedures ----
