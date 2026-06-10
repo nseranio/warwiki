@@ -65,4 +65,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
   },
+  {
+    slug: 'inflatable-penile-prosthesis',
+    title: 'Inflatable Penile Prosthesis (IPP)',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
+  },
 ];
