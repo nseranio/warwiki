@@ -109,6 +109,7 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Pelvic Floor & Prolapse',
   'Bowel & Anorectal',
   'Sexual Health & Other',
+  "Men's Genital & Reconstructive",
   // Tests & Imaging
   'Bladder & Urethra Imaging',
   'Scope & Bladder-Function Tests',
@@ -203,6 +204,15 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
   },
   {
+    slug: 'nocturia',
+    title: 'Nocturia',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
+  },
+  {
     slug: 'pelvic-organ-prolapse',
     title: 'Pelvic Organ Prolapse',
     category: 'Conditions & Symptoms',
@@ -264,6 +274,51 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
+  },
+  {
+    slug: 'erectile-dysfunction',
+    title: 'Erectile Dysfunction (ED)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    description:
+      'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
+  },
+  {
+    slug: 'peyronies-disease',
+    title: "Peyronie's Disease",
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    description:
+      'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
+  },
+  {
+    slug: 'acquired-buried-penis',
+    title: 'Acquired Buried Penis & Repair',
+    category: 'Conditions & Symptoms',
+    subcategory: "Men's Genital & Reconstructive",
+    pages: 2,
+    description:
+      'When the penis becomes hidden beneath belly/scrotal skin and fat in adults — the causes (weight, scarring, lichen sclerosus, lymphedema) and the reconstructive repair (release, skin graft, fat-pad removal).',
+  },
+  {
+    slug: 'rectourethral-fistula',
+    title: 'Rectourethral Fistula (in Men)',
+    category: 'Conditions & Symptoms',
+    subcategory: "Men's Genital & Reconstructive",
+    pages: 2,
+    description:
+      'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
+  },
+  {
+    slug: 'pubosymphyseal-fistula',
+    title: 'Pubosymphyseal Fistula',
+    category: 'Conditions & Symptoms',
+    subcategory: "Men's Genital & Reconstructive",
+    pages: 2,
+    description:
+      'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
   },
   {
     slug: 'retrograde-urethrogram',
@@ -518,6 +573,15 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
+  },
+  {
+    slug: 'vaginal-lubricants-moisturizers',
+    title: 'Vaginal Lubricants & Moisturizers',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Vaginal Health & Devices',
+    pages: 2,
+    description:
+      'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
   },
   {
     slug: 'intermittent-self-catheterization',
