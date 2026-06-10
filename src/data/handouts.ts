@@ -55,6 +55,6 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     pages: 2,
     description:
-      'The cheek-graft part of a urethral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
+      'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
   },
 ];
