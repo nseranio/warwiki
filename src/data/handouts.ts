@@ -113,4 +113,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
   },
+  {
+    slug: 'perineal-urethrostomy',
+    title: 'Perineal Urethrostomy',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
+  },
 ];
