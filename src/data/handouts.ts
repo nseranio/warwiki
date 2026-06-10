@@ -118,11 +118,12 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Bladder & Pelvic-Floor Training',
   'Vaginal Health & Devices',
   'Self-Catheterization',
-  'Erectile Dysfunction',
+  'ED & Penile Therapies',
   // Medications
   'Overactive Bladder Medicines',
   'Prostate & Urinary Flow Medicines',
   'Erectile Dysfunction Medicines',
+  'Testosterone Therapy',
   // Office Procedures
   'Injections (Botox & Bulking)',
   'Nerve Stimulation for OAB',
@@ -131,6 +132,7 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Prolapse Surgery',
   'Pelvic Floor & Perineal Repair',
   'Urethral Narrowing & Stricture',
+  'Prostate (BPH) Procedures',
   'Kidney & Ureter Reconstruction',
   'Urinary Diversion',
   'Erections & Penile Conditions',
@@ -211,6 +213,15 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
+  },
+  {
+    slug: 'benign-prostatic-hyperplasia',
+    title: 'Enlarged Prostate (BPH)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
   },
   {
     slug: 'pelvic-organ-prolapse',
@@ -596,10 +607,28 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'intracavernosal-injections',
     title: 'Intracavernosal Injections (ICI) for ED',
     category: 'Conservative & Self-Care',
-    subcategory: 'Erectile Dysfunction',
+    subcategory: 'ED & Penile Therapies',
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
+  },
+  {
+    slug: 'vacuum-erection-device',
+    title: 'Vacuum Erection Device (VED)',
+    category: 'Conservative & Self-Care',
+    subcategory: 'ED & Penile Therapies',
+    pages: 2,
+    description:
+      'A non-drug "penis pump" that draws blood in to create an erection, held by a base ring — for ED and penile rehabilitation after prostate surgery; how to use it and the 30-minute ring rule.',
+  },
+  {
+    slug: 'penile-traction-therapy',
+    title: 'Penile Traction Therapy',
+    category: 'Conservative & Self-Care',
+    subcategory: 'ED & Penile Therapies',
+    pages: 2,
+    description:
+      'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
   },
 
   // ---- Medications ----
@@ -648,6 +677,15 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
   },
+  {
+    slug: 'testosterone-replacement-therapy',
+    title: 'Testosterone Replacement Therapy (Men)',
+    category: 'Medications',
+    subcategory: 'Testosterone Therapy',
+    pages: 2,
+    description:
+      'Treatment for confirmed low testosterone with symptoms (gel, injection, patch, or pellets) — who it is for, the forms, required monitoring (blood count, prostate), and that it lowers fertility.',
+  },
 
   // ---- Office Procedures ----
   {
@@ -685,6 +723,44 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
+  },
+
+  // ---- Procedures & Surgery: Prostate (BPH) ----
+  {
+    slug: 'turp',
+    title: 'TURP (Transurethral Resection of the Prostate)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prostate (BPH) Procedures',
+    pages: 2,
+    description:
+      'The long-standing standard surgery for an enlarged prostate — the obstructing inner tissue is removed through a scope (no incision); strong, durable flow improvement, with dry (retrograde) ejaculation the common after-effect.',
+  },
+  {
+    slug: 'holep',
+    title: 'HoLEP (Holmium Laser Enucleation)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prostate (BPH) Procedures',
+    pages: 2,
+    description:
+      'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'aquablation',
+    title: 'Aquablation (Waterjet Prostate Surgery)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prostate (BPH) Procedures',
+    pages: 2,
+    description:
+      'A heat-free, ultrasound-guided waterjet that precisely removes obstructing prostate tissue through the urethra — flow results like TURP with a better chance of preserving ejaculation; how it works and recovery.',
+  },
+  {
+    slug: 'simple-prostatectomy',
+    title: 'Simple Prostatectomy',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prostate (BPH) Procedures',
+    pages: 2,
+    description:
+      'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
   },
 
   // ---- Procedures & Surgery (urogyn) ----
