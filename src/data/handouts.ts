@@ -17,6 +17,70 @@ export interface PatientHandout {
   category: string;
   description: string;
   pages: number;
+  /**
+   * Language codes that have a translated PDF + thumbnail available.
+   * English ('en') is always implied. Add a code here once the localized
+   * assets exist (see handoutPdfPath / handoutThumbPath for the file naming).
+   */
+  languages?: string[];
+}
+
+/**
+ * A language offered in the handout gallery's language switcher.
+ * `label` is the language's own (native) name; `englishLabel` is shown small
+ * beneath it. `dir: 'rtl'` flags right-to-left scripts (Arabic).
+ */
+export interface HandoutLanguage {
+  code: string;
+  label: string;
+  englishLabel: string;
+  dir?: 'rtl';
+}
+
+/** English is always the base/fallback language. */
+export const DEFAULT_LANGUAGE = 'en';
+
+/**
+ * Languages the switcher offers, in display order. English is first.
+ * A tab activates for a given handout only when that handout lists the code in
+ * its `languages` array AND the localized assets are committed; otherwise the
+ * card falls back to English with a "translation coming soon" note.
+ */
+export const HANDOUT_LANGUAGES: HandoutLanguage[] = [
+  {code: 'en', label: 'English', englishLabel: 'English'},
+  {code: 'es', label: 'Español', englishLabel: 'Spanish'},
+  {code: 'zh', label: '简体中文', englishLabel: 'Mandarin'},
+  {code: 'vi', label: 'Tiếng Việt', englishLabel: 'Vietnamese'},
+  {code: 'ko', label: '한국어', englishLabel: 'Korean'},
+  {code: 'tl', label: 'Tagalog', englishLabel: 'Tagalog'},
+  {code: 'ar', label: 'العربية', englishLabel: 'Arabic', dir: 'rtl'},
+  {code: 'ru', label: 'Русский', englishLabel: 'Russian'},
+  {code: 'fr', label: 'Français', englishLabel: 'French'},
+  {code: 'ja', label: '日本語', englishLabel: 'Japanese'},
+];
+
+/** True if the handout has localized assets for the given language code. */
+export function handoutHasLanguage(h: PatientHandout, code: string): boolean {
+  if (code === DEFAULT_LANGUAGE) return true;
+  return (h.languages ?? []).includes(code);
+}
+
+/**
+ * Path to a handout PDF for a language. English keeps the base name
+ * (`/handouts/<slug>.pdf`); other languages use a code suffix
+ * (`/handouts/<slug>.<code>.pdf`).
+ */
+export function handoutPdfPath(slug: string, code: string): string {
+  return code === DEFAULT_LANGUAGE
+    ? `/handouts/${slug}.pdf`
+    : `/handouts/${slug}.${code}.pdf`;
+}
+
+/** Page-1 thumbnail path for a language (mirrors handoutPdfPath naming). */
+export function handoutThumbPath(slug: string, code: string): string {
+  return code === DEFAULT_LANGUAGE
+    ? `/img/handouts/${slug}.png`
+    : `/img/handouts/${slug}.${code}.png`;
 }
 
 export const HANDOUT_CATEGORY_ORDER: string[] = [
