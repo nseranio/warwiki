@@ -10,6 +10,12 @@
  * append one entry here. Cards render grouped by category in
  * HANDOUT_CATEGORY_ORDER; rendered by src/components/PatientHandouts.tsx.
  */
+/**
+ * Patient anatomy / sex a handout applies to. Drives the gallery's audience
+ * facet. 'all' is the default for sex-neutral sheets.
+ */
+export type HandoutAudience = 'all' | 'female' | 'male';
+
 export interface PatientHandout {
   /** filename stem — resolves to /handouts/<slug>.pdf and /img/handouts/<slug>.png */
   slug: string;
@@ -17,6 +23,13 @@ export interface PatientHandout {
   category: string;
   /** Finer grouping within the category (see HANDOUT_SUBCATEGORY_ORDER). */
   subcategory: string;
+  /**
+   * Patient anatomy / sex the handout is relevant to, for the gallery's
+   * audience facet. Omit (defaults to 'all') for sex-neutral sheets; set
+   * 'female' or 'male' only when the condition or procedure is anatomy-locked.
+   * The 'Women' filter shows {female, all}; 'Men' shows {male, all}.
+   */
+  audience?: HandoutAudience;
   description: string;
   pages: number;
   /**
@@ -60,6 +73,35 @@ export const HANDOUT_LANGUAGES: HandoutLanguage[] = [
   {code: 'fr', label: 'Français', englishLabel: 'French'},
   {code: 'ja', label: '日本語', englishLabel: 'Japanese'},
 ];
+
+/**
+ * Audience facets offered by the gallery, in display order. The first ('all')
+ * applies no filter; 'female' / 'male' show their sex-specific sheets plus the
+ * sex-neutral ('all') ones.
+ */
+export const HANDOUT_AUDIENCES: {value: HandoutAudience; label: string}[] = [
+  {value: 'all', label: 'All audiences'},
+  {value: 'female', label: 'Women'},
+  {value: 'male', label: 'Men'},
+];
+
+/** A handout's audience, defaulting to 'all' when unset. */
+export function handoutAudience(h: PatientHandout): HandoutAudience {
+  return h.audience ?? 'all';
+}
+
+/**
+ * True if the handout should show under the selected audience facet. 'all'
+ * matches everything; 'female'/'male' match their own sheets plus sex-neutral.
+ */
+export function handoutMatchesAudience(
+  h: PatientHandout,
+  facet: HandoutAudience,
+): boolean {
+  if (facet === 'all') return true;
+  const a = handoutAudience(h);
+  return a === facet || a === 'all';
+}
 
 /** True if the handout has localized assets for the given language code. */
 export function handoutHasLanguage(h: PatientHandout, code: string): boolean {
@@ -105,7 +147,9 @@ export const HANDOUT_CATEGORY_ORDER: string[] = [
  */
 export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   // Conditions & Symptoms
-  'Bladder & Urinary',
+  'Leakage & Overactive Bladder',
+  'Bladder Pain, Infection & Blood in Urine',
+  'Prostate & Urinary Flow',
   'Pelvic Floor & Prolapse',
   'Bowel & Anorectal',
   'Sexual Health & Other',
@@ -146,7 +190,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'overactive-bladder',
     title: 'Overactive Bladder (OAB)',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Leakage & Overactive Bladder',
     pages: 2,
     description:
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
@@ -155,7 +199,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'stress-urinary-incontinence-female',
     title: 'Stress Urinary Incontinence (Female)',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Leakage & Overactive Bladder',
+    audience: 'female',
     pages: 2,
     description:
       'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — the female-specific options from pelvic-floor exercises to a pessary, bulking injection, or mid-urethral sling.',
@@ -164,7 +209,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'stress-urinary-incontinence-male',
     title: 'Stress Urinary Incontinence (Male)',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Leakage & Overactive Bladder',
+    audience: 'male',
     pages: 2,
     description:
       'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, artificial urinary sphincter).',
@@ -173,7 +219,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'interstitial-cystitis-bps',
     title: 'Interstitial Cystitis / Bladder Pain Syndrome',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Bladder Pain, Infection & Blood in Urine',
     pages: 2,
     description:
       'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
@@ -182,7 +228,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'urinary-tract-infections',
     title: 'Urinary Tract Infections (UTIs)',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Bladder Pain, Infection & Blood in Urine',
     pages: 2,
     description:
       'What a bladder vs. kidney infection is, how UTIs are treated, when antibiotics are (and are not) needed, and how to prevent repeats — including vaginal estrogen after menopause.',
@@ -191,7 +237,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'asymptomatic-bacteriuria',
     title: 'Asymptomatic Bacteriuria',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Bladder Pain, Infection & Blood in Urine',
     pages: 2,
     description:
       'Bacteria found in the urine when you feel completely fine — why this usually should NOT be treated with antibiotics, the few exceptions (pregnancy, before some procedures), and what symptoms to watch for.',
@@ -200,7 +246,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'asymptomatic-microscopic-hematuria',
     title: 'Asymptomatic Microscopic Hematuria',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Bladder Pain, Infection & Blood in Urine',
     pages: 2,
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
@@ -209,7 +255,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'nocturia',
     title: 'Nocturia',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Prostate & Urinary Flow',
     pages: 2,
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
@@ -218,7 +264,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'benign-prostatic-hyperplasia',
     title: 'Enlarged Prostate (BPH)',
     category: 'Conditions & Symptoms',
-    subcategory: 'Bladder & Urinary',
+    subcategory: 'Prostate & Urinary Flow',
+    audience: 'male',
     pages: 2,
     description:
       'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
@@ -228,6 +275,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pelvic Organ Prolapse',
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
+    audience: 'female',
     pages: 2,
     description:
       'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
@@ -264,6 +312,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Female Sexual Dysfunction',
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
+    audience: 'female',
     pages: 2,
     description:
       'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
@@ -273,6 +322,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethral Diverticulum',
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
+    audience: 'female',
     pages: 2,
     description:
       'A small pocket off the urethra that collects urine — the classic "3 Ds" (dribbling, burning, pain with sex) and recurrent infections, how MRI maps it, and surgical removal (diverticulectomy) when it is bothersome.',
@@ -282,6 +332,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Fistulas: Genitourinary and Rectovaginal',
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
+    audience: 'female',
     pages: 2,
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
@@ -291,6 +342,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Erectile Dysfunction (ED)',
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
+    audience: 'male',
     pages: 2,
     description:
       'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
@@ -300,6 +352,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: "Peyronie's Disease",
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
+    audience: 'male',
     pages: 2,
     description:
       'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
@@ -309,6 +362,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Acquired Buried Penis & Repair',
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
+    audience: 'male',
     pages: 2,
     description:
       'When the penis becomes hidden beneath belly/scrotal skin and fat in adults — the causes (weight, scarring, lichen sclerosus, lymphedema) and the reconstructive repair (release, skin graft, fat-pad removal).',
@@ -318,6 +372,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Rectourethral Fistula (in Men)',
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
+    audience: 'male',
     pages: 2,
     description:
       'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
@@ -327,6 +382,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pubosymphyseal Fistula',
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
+    audience: 'male',
     pages: 2,
     description:
       'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
@@ -426,6 +482,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Inflatable Penile Prosthesis (IPP)',
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
+    audience: 'male',
     pages: 2,
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
@@ -435,6 +492,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Malleable Penile Implant',
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
+    audience: 'male',
     pages: 2,
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
@@ -444,6 +502,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Male Urethral Sling',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
+    audience: 'male',
     pages: 2,
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
@@ -462,6 +521,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Penile Plication',
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
+    audience: 'male',
     pages: 2,
     description:
       'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
@@ -471,6 +531,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Plaque Incision and Grafting',
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
+    audience: 'male',
     pages: 2,
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
@@ -480,6 +541,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Perineal Urethrostomy',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
+    audience: 'male',
     pages: 2,
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
@@ -498,6 +560,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Optilume Drug-Coated Balloon (Urethral Stricture)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
+    audience: 'male',
     pages: 2,
     description:
       'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
@@ -507,6 +570,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Endoscopic Urethroplasty (TUITMR)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
+    audience: 'male',
     pages: 2,
     description:
       'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
@@ -572,6 +636,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Estrogen Therapy',
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
+    audience: 'female',
     pages: 2,
     description:
       'Low-dose, local estrogen (cream, tablet, or ring) for menopause-related dryness, painful sex, and urinary symptoms — how it works, how to use it, its safety, and why little is absorbed into the body.',
@@ -581,6 +646,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Pessaries',
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
+    audience: 'female',
     pages: 2,
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
@@ -590,6 +656,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Lubricants & Moisturizers',
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
+    audience: 'female',
     pages: 2,
     description:
       'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
@@ -608,6 +675,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Intracavernosal Injections (ICI) for ED',
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
+    audience: 'male',
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
@@ -617,6 +685,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vacuum Erection Device (VED)',
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
+    audience: 'male',
     pages: 2,
     description:
       'A non-drug "penis pump" that draws blood in to create an erection, held by a base ring — for ED and penile rehabilitation after prostate surgery; how to use it and the 30-minute ring rule.',
@@ -626,6 +695,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Penile Traction Therapy',
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
+    audience: 'male',
     pages: 2,
     description:
       'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
@@ -664,6 +734,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: '5-Alpha-Reductase Inhibitors',
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
+    audience: 'male',
     pages: 2,
     description:
       'Pills that gradually shrink an enlarged prostate (finasteride, dutasteride) over 3–6 months, lowering retention and surgery risk — plus the key point that they halve the PSA test and the pregnancy-handling caution.',
@@ -673,6 +744,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'PDE5 Inhibitors (ED & Prostate Pills)',
     category: 'Medications',
     subcategory: 'Erectile Dysfunction Medicines',
+    audience: 'male',
     pages: 2,
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
@@ -682,6 +754,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Testosterone Replacement Therapy (Men)',
     category: 'Medications',
     subcategory: 'Testosterone Therapy',
+    audience: 'male',
     pages: 2,
     description:
       'Treatment for confirmed low testosterone with symptoms (gel, injection, patch, or pellets) — who it is for, the forms, required monitoring (blood count, prostate), and that it lowers fertility.',
@@ -731,6 +804,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'TURP (Transurethral Resection of the Prostate)',
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
+    audience: 'male',
     pages: 2,
     description:
       'The long-standing standard surgery for an enlarged prostate — the obstructing inner tissue is removed through a scope (no incision); strong, durable flow improvement, with dry (retrograde) ejaculation the common after-effect.',
@@ -740,6 +814,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'HoLEP (Holmium Laser Enucleation)',
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
+    audience: 'male',
     pages: 2,
     description:
       'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
@@ -749,6 +824,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Aquablation (Waterjet Prostate Surgery)',
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
+    audience: 'male',
     pages: 2,
     description:
       'A heat-free, ultrasound-guided waterjet that precisely removes obstructing prostate tissue through the urethra — flow results like TURP with a better chance of preserving ejaculation; how it works and recovery.',
@@ -758,6 +834,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Simple Prostatectomy',
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
+    audience: 'male',
     pages: 2,
     description:
       'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
@@ -769,6 +846,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Mid-Urethral Sling (for SUI)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
+    audience: 'female',
     pages: 2,
     description:
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
@@ -778,6 +856,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Colpocleisis (Vaginal Closure Surgery)',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
@@ -787,6 +866,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Sacrocolpopexy',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
@@ -796,6 +876,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Hysterectomy (for Prolapse)',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
@@ -805,6 +886,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Prolapse Repair Using Mesh / Graft',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
@@ -814,6 +896,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Vaginal Suspension Surgery',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
@@ -823,6 +906,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Third- and Fourth-Degree Perineal Tears',
     category: 'Procedures & Surgery',
     subcategory: 'Pelvic Floor & Perineal Repair',
+    audience: 'female',
     pages: 2,
     description:
       'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
@@ -832,6 +916,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cosmetic Gynecology',
     category: 'Procedures & Surgery',
     subcategory: 'Cosmetic & Other',
+    audience: 'female',
     pages: 2,
     description:
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
@@ -850,6 +935,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Choices Before Prolapse Repair Surgery',
     category: 'Procedures & Surgery',
     subcategory: 'Before & After Surgery',
+    audience: 'female',
     pages: 2,
     description:
       'The key decisions before pelvic organ prolapse surgery — repair vs. closure, vaginal vs. abdominal route, keeping the uterus, support material, and treating hidden leakage — plus questions to ask.',

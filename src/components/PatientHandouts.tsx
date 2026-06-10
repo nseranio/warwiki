@@ -4,11 +4,14 @@ import {
   HANDOUT_CATEGORY_ORDER,
   HANDOUT_SUBCATEGORY_ORDER,
   HANDOUT_LANGUAGES,
+  HANDOUT_AUDIENCES,
   DEFAULT_LANGUAGE,
   handoutHasLanguage,
+  handoutMatchesAudience,
   handoutPdfPath,
   handoutThumbPath,
 } from '@site/src/data/handouts';
+import type {HandoutAudience} from '@site/src/data/handouts';
 
 /**
  * Gallery of WARWIKI Original Patient Handouts.
@@ -25,6 +28,7 @@ export default function PatientHandouts(): React.ReactElement {
   const [lang, setLang] = useState(DEFAULT_LANGUAGE);
   const [query, setQuery] = useState('');
   const [cat, setCat] = useState('all');
+  const [audience, setAudience] = useState<HandoutAudience>('all');
 
   // A language is selectable once at least one handout offers it.
   const liveCount = (code: string) =>
@@ -43,12 +47,13 @@ export default function PatientHandouts(): React.ReactElement {
     () =>
       PATIENT_HANDOUTS.filter((h) => {
         if (cat !== 'all' && h.category !== cat) return false;
+        if (!handoutMatchesAudience(h, audience)) return false;
         if (!q) return true;
         return `${h.title} ${h.description} ${h.category} ${h.subcategory}`
           .toLowerCase()
           .includes(q);
       }),
-    [q, cat],
+    [q, cat, audience],
   );
 
   const groups = HANDOUT_CATEGORY_ORDER.map((category) => {
@@ -60,7 +65,7 @@ export default function PatientHandouts(): React.ReactElement {
     return {category, count: inCat.length, subgroups};
   }).filter((g) => g.count > 0);
 
-  const filtered = q !== '' || cat !== 'all';
+  const filtered = q !== '' || cat !== 'all' || audience !== 'all';
 
   const renderCard = (h: (typeof PATIENT_HANDOUTS)[number], category: string) => {
     const has = handoutHasLanguage(h, lang);
@@ -117,6 +122,20 @@ export default function PatientHandouts(): React.ReactElement {
             {categories.map((c) => (
               <option key={c} value={c}>
                 {c}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="ph-selectwrap">
+          <select
+            className="ph-filter"
+            value={audience}
+            onChange={(e) => setAudience(e.target.value as HandoutAudience)}
+            aria-label="Filter by audience"
+          >
+            {HANDOUT_AUDIENCES.map((a) => (
+              <option key={a.value} value={a.value}>
+                {a.label}
               </option>
             ))}
           </select>
