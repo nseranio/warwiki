@@ -89,4 +89,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
   },
+  {
+    slug: 'urethroplasty',
+    title: 'Urethroplasty (Urethral Repair)',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
+  },
 ];
