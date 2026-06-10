@@ -73,4 +73,12 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
   },
+  {
+    slug: 'malleable-penile-implant',
+    title: 'Malleable Penile Implant',
+    category: 'Procedures & Surgery',
+    pages: 2,
+    description:
+      'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
+  },
 ];
