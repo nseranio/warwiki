@@ -114,7 +114,9 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Kidney & Ureter Tests',
   // Conservative & Self-Care
   'Bladder & Pelvic-Floor Training',
-  'Vaginal Health, Devices & Catheters',
+  'Vaginal Health & Devices',
+  'Self-Catheterization',
+  'Erectile Dysfunction',
   // Office Procedures
   'Injections (Botox & Bulking)',
   'Nerve Stimulation for OAB',
@@ -142,13 +144,22 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
   },
   {
-    slug: 'stress-urinary-incontinence',
-    title: 'Stress Urinary Incontinence (SUI)',
+    slug: 'stress-urinary-incontinence-female',
+    title: 'Stress Urinary Incontinence (Female)',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder & Urinary',
     pages: 2,
     description:
-      'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — what causes it and the options from pelvic-floor exercises to a support device, bulking injection, or sling.',
+      'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — the female-specific options from pelvic-floor exercises to a pessary, bulking injection, or mid-urethral sling.',
+  },
+  {
+    slug: 'stress-urinary-incontinence-male',
+    title: 'Stress Urinary Incontinence (Male)',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Bladder & Urinary',
+    pages: 2,
+    description:
+      'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, artificial urinary sphincter).',
   },
   {
     slug: 'interstitial-cystitis-bps',
@@ -473,5 +484,182 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
+  },
+
+  // ---- Conservative & Self-Care ----
+  {
+    slug: 'pelvic-floor-exercises-bladder-training',
+    title: 'Pelvic-Floor Exercises & Bladder Training',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Bladder & Pelvic-Floor Training',
+    pages: 2,
+    description:
+      'Safe, free, proven first-line care for leaks and urgency — how to find and exercise the right muscles, a simple daily routine, and bladder training to wait longer between trips.',
+  },
+  {
+    slug: 'vaginal-estrogen-therapy',
+    title: 'Vaginal Estrogen Therapy',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Vaginal Health & Devices',
+    pages: 2,
+    description:
+      'Low-dose, local estrogen (cream, tablet, or ring) for menopause-related dryness, painful sex, and urinary symptoms — how it works, how to use it, its safety, and why little is absorbed into the body.',
+  },
+  {
+    slug: 'vaginal-pessaries',
+    title: 'Vaginal Pessaries',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Vaginal Health & Devices',
+    pages: 2,
+    description:
+      'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
+  },
+  {
+    slug: 'intermittent-self-catheterization',
+    title: 'Intermittent Self-Catheterization (ISC)',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Self-Catheterization',
+    pages: 2,
+    description:
+      'Emptying the bladder yourself with a thin catheter a few times a day when it will not empty on its own — why it protects the kidneys, the clean-technique steps, and how it beats a permanent catheter.',
+  },
+  {
+    slug: 'intracavernosal-injections',
+    title: 'Intracavernosal Injections (ICI) for ED',
+    category: 'Conservative & Self-Care',
+    subcategory: 'Erectile Dysfunction',
+    pages: 2,
+    description:
+      'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
+  },
+
+  // ---- Office Procedures ----
+  {
+    slug: 'bladder-botox',
+    title: 'Bladder Botox (for Bladder Control)',
+    category: 'Office Procedures',
+    subcategory: 'Injections (Botox & Bulking)',
+    pages: 2,
+    description:
+      'Injections that relax an overactive bladder muscle to ease urgency, frequency, and urge leakage when other treatments fall short — a quick office procedure; the main trade-off is possible temporary self-catheterization.',
+  },
+  {
+    slug: 'urethral-bulking',
+    title: 'Urethral Bulking',
+    category: 'Office Procedures',
+    subcategory: 'Injections (Botox & Bulking)',
+    pages: 2,
+    description:
+      'A quick, no-incision office injection that helps the urethra seal to reduce stress urine leakage — less durable than a sling but low-risk and repeatable; how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'percutaneous-tibial-nerve-stimulation',
+    title: 'Percutaneous Tibial Nerve Stimulation (PTNS)',
+    category: 'Office Procedures',
+    subcategory: 'Nerve Stimulation for OAB',
+    pages: 2,
+    description:
+      'A drug-free office treatment for overactive bladder using gentle nerve stimulation at the ankle — painless ~30-minute sessions, typically weekly for 12 weeks then maintenance.',
+  },
+  {
+    slug: 'sacral-neuromodulation',
+    title: 'Sacral Neuromodulation',
+    category: 'Office Procedures',
+    subcategory: 'Nerve Stimulation for OAB',
+    pages: 2,
+    description:
+      'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
+  },
+
+  // ---- Procedures & Surgery (urogyn) ----
+  {
+    slug: 'mid-urethral-sling',
+    title: 'Mid-Urethral Sling (for SUI)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Leakage (Incontinence)',
+    pages: 2,
+    description:
+      'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
+  },
+  {
+    slug: 'colpocleisis',
+    title: 'Colpocleisis (Vaginal Closure Surgery)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prolapse Surgery',
+    pages: 2,
+    description:
+      'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
+  },
+  {
+    slug: 'sacrocolpopexy',
+    title: 'Sacrocolpopexy',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prolapse Surgery',
+    pages: 2,
+    description:
+      'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
+  },
+  {
+    slug: 'vaginal-hysterectomy-prolapse',
+    title: 'Vaginal Hysterectomy (for Prolapse)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prolapse Surgery',
+    pages: 2,
+    description:
+      'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
+  },
+  {
+    slug: 'vaginal-prolapse-repair-graft',
+    title: 'Vaginal Prolapse Repair Using Mesh / Graft',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prolapse Surgery',
+    pages: 2,
+    description:
+      'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
+  },
+  {
+    slug: 'vaginal-suspension',
+    title: 'Vaginal Suspension Surgery',
+    category: 'Procedures & Surgery',
+    subcategory: 'Prolapse Surgery',
+    pages: 2,
+    description:
+      'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
+  },
+  {
+    slug: 'perineal-tears-3rd-4th-degree',
+    title: 'Third- and Fourth-Degree Perineal Tears',
+    category: 'Procedures & Surgery',
+    subcategory: 'Pelvic Floor & Perineal Repair',
+    pages: 2,
+    description:
+      'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
+  },
+  {
+    slug: 'cosmetic-gynecology',
+    title: 'Cosmetic Gynecology',
+    category: 'Procedures & Surgery',
+    subcategory: 'Cosmetic & Other',
+    pages: 2,
+    description:
+      'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
+  },
+  {
+    slug: 'surgery-what-to-expect',
+    title: 'Surgery: What to Expect',
+    category: 'Procedures & Surgery',
+    subcategory: 'Before & After Surgery',
+    pages: 2,
+    description:
+      'A general guide to preparing for and recovering from urologic or pelvic surgery — pre-op steps, anesthesia, the day of surgery, recovery, and when to call. Use alongside your procedure-specific handout.',
+  },
+  {
+    slug: 'surgical-considerations-before-pop-repair',
+    title: 'Choices Before Prolapse Repair Surgery',
+    category: 'Procedures & Surgery',
+    subcategory: 'Before & After Surgery',
+    pages: 2,
+    description:
+      'The key decisions before pelvic organ prolapse surgery — repair vs. closure, vaginal vs. abdominal route, keeping the uterus, support material, and treating hidden leakage — plus questions to ask.',
   },
 ];
