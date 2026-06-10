@@ -797,6 +797,15 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
   },
+  {
+    slug: 'implantable-tibial-nerve-stimulation',
+    title: 'Implantable Tibial Nerve Stimulation (ITNS)',
+    category: 'Office Procedures',
+    subcategory: 'Nerve Stimulation for OAB',
+    pages: 2,
+    description:
+      'A small device implanted near the ankle that calms an overactive bladder — the at-home version of PTNS, with no weekly office visits. How the short outpatient implant works, the two device types (automatic vs. ankle-band powered), and what to expect.',
+  },
 
   // ---- Procedures & Surgery: Prostate (BPH) ----
   {
