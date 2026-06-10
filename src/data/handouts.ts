@@ -108,6 +108,7 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Urinary Leakage (Incontinence)',
   'Erections & Penile Conditions',
   'Kidney & Ureter Reconstruction',
+  'Urinary Diversion',
   'Catheters & Grafts',
 ];
 
@@ -300,5 +301,41 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     pages: 2,
     description:
       'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
+  },
+  {
+    slug: 'urinary-diversion-overview',
+    title: 'Urinary Diversion — Comparing Your Options',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Diversion',
+    pages: 2,
+    description:
+      'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
+  },
+  {
+    slug: 'ileal-conduit',
+    title: 'Ileal Conduit',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Diversion',
+    pages: 2,
+    description:
+      'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
+  },
+  {
+    slug: 'orthotopic-neobladder',
+    title: 'Orthotopic Neobladder',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Diversion',
+    pages: 2,
+    description:
+      'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
+  },
+  {
+    slug: 'continent-cutaneous-diversion',
+    title: 'Continent Cutaneous Diversion (Indiana Pouch)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Diversion',
+    pages: 2,
+    description:
+      'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
   },
 ];
