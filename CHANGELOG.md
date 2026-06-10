@@ -6,6 +6,41 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 — Patient-instruction handouts: 12 plain-language PDFs + a dedicated gallery + Resources-landing reorg
+
+16 commits, all fast-forwarded to `main`. Typecheck + lint + build clean throughout. New **off-repo→hosted** workstream: plain-language, printable **patient handouts** to give patients *before* a test or procedure, modeled on the AUGS "Voices for PFD" 2-page fact sheet the user supplied (and the colpocleisis sample).
+
+**The 12 handouts** (each a 2-page Letter PDF; clinical framing grounded in the matching WARWIKI page):
+
+*Tests & Imaging*
+- **Retrograde Urethrogram (RUG)** (`42ba3c8`) — X-ray that maps the urethra with contrast; written for the male-anatomy test.
+- **Voiding Cystourethrogram (VCUG)** (`a756f8d`, flexibility `a59f935`) — bladder/urethra X-ray during filling + voiding; written for all patients, and made **flexible** for patients who already have a urethral catheter or SPT (dye through the existing tube; nothing new placed).
+
+*Procedures & Surgery*
+- **Suprapubic Catheter Placement** (`c925041`, anesthesia `2a3052c`) — catheter through the lower belly; full-bladder/blood-thinner/prior-surgery prep; anesthesia presented as a **range** (local±sedation OR general/spinal).
+- **Buccal Mucosa (Cheek) Graft** (`0291e5a`, ureter+recovery `95b1fd6`) — the donor-site (mouth) side of a **urethral *or ureteral*** repair; two-stage recovery made explicit (improve 1–2 wk, fully heal a month+).
+- **Artificial Urinary Sphincter (AUS)** (`76dcb09`) — implant for stress incontinence; the 3 critical points: OFF ~6 weeks (leaking is normal), activation visit, and the **medical-alert/catheter rule**.
+- **Inflatable Penile Prosthesis (IPP)** (`ff3e907`) — implant for ED; the two essentials (permanent choice; does NOT change urination/sensation/orgasm/ejaculation) + activation/cycling. No catheter/medical-alert rule (urethra not involved).
+- **Malleable (Semi-Rigid) Penile Implant** (`28e5069`) — bendable rods, no pump; concealment trade-off; simplest/most durable.
+- **Male Urethral Sling** (`7920afc`) — mesh under the urethra; nothing to operate; best for mild–moderate leakage; AUS preferred for severe/post-radiation (and can be placed later).
+- **Urethroplasty (Urethral Repair)** (`c46ecde`, catheter-range fix `091a470`) — **one flexible sheet** rather than split-by-location (penile/perineal incision, graft/no-graft handled with conditional language); catheter **~1–4 weeks** (a week up to a month, per the repair) + healing urethrogram.
+- **Penile Plication** + **Plaque Incision & Grafting** (`0f02a3c`) — **two separate** Peyronie's sheets because they split on the key trade-off: plication shortens but is simplest/lowest-ED-risk; grafting preserves length but carries higher new-ED risk (so reserved for strong erections) and early glans numbness.
+- **Perineal Urethrostomy** (`091a470`) — new permanent opening for urine in the perineum (you urinate sitting down) when the urethra is too damaged to repair; penis stays (sensation/orgasm preserved); the opening can narrow over time.
+
+**Architecture (durable).** Master HTML lives **off-repo** at `~/Desktop/WARWIKI-handouts/` (one self-contained HTML per handout). Pipeline: HTML → headless Chrome → PDF (`--print-to-pdf`) + page-1 thumbnail (`--screenshot --window-size=856,1106`, then `sips -c 2112 1632` crop + `sips --resampleWidth 800`). Rendered **PDF committed to `static/handouts/<slug>.pdf`** (served `/handouts/<slug>.pdf`), thumbnail to `static/img/handouts/<slug>.png`. Gallery is **data-driven**: [src/data/handouts.ts](src/data/handouts.ts) → [src/components/PatientHandouts.tsx](src/components/PatientHandouts.tsx) → [docs/08-resources/patient-handouts.mdx](docs/08-resources/patient-handouts.mdx) (route `/docs/resources/patient-handouts`). CSS `.ph-*` / `.ph-cta` in [custom.css](src/css/custom.css) (theme-var based → dark-mode safe). **Add a handout = render PDF + thumbnail, append one entry to `handouts.ts`.** Component return type must be `React.ReactElement` (this tsconfig has no global `JSX` namespace). The internal-link checker only validates `/docs/` links, so `/handouts/*.pdf` + `/img/handouts/*.png` are lint-safe.
+
+**Handout style (durable, user-confirmed).** Plain layperson voice (~6–8th-grade); WARWIKI blue `#185FA5`; header = plain **"WARWIKI"** text only (no logo badge, no tagline); **no illustration, no appointment fill-in box.** Diagnostic-test flow: intro → About → Is It Safe? → How to Get Ready (Before) → What Happens (numbered steps) → After (red "call your team" warn box) → "Learn the Terms" glossary → "Three Things to Remember"; a **"WILL IT HURT?"** Q-box leads page 2 (procedure/surgery sheets adapt). **Frame flexibly across real-world variation** (catheter present vs not; anesthesia range; urethra-or-ureter; one urethroplasty sheet across approaches) — the user asked for this repeatedly; split into separate sheets only when the options diverge on a real trade-off (Peyronie's plication vs grafting).
+
+**Footer bleed-through bug + fix (`58e200c`).** The handout layout used `.cols{flex:1}` (fill the page) + bottom-anchored `.foot{margin-top:auto}`; on dense page-2 layouts the columns overflowed *downward onto the footer* (the disclaimer "bled through" the takeaways/warn boxes), and the naive page-`scrollHeight` check missed it (the `.page` clips at 11in). Diagnosed: page 1 of all fine; page 2 of 5 had hidden overflow (VCUG +75, IPP +72, SPC +68, BMG +55, AUS +26). **Fixed by removing `flex:1; min-height:0` from `.cols`** (content sizes naturally; footer via `margin-top:auto`; overflow now visible at page level) + trimming the over-full page-2 content. New verification rule: in headless Chrome (`--dump-dom` + injected script), require for every `.page` `pageOvf = scrollHeight−clientHeight ≤ 0` **and** `colsOvf = cols.scrollHeight−cols.clientHeight == 0`; page height is set by the **taller** column, so trim the taller one (usually the right: After/warn/takeaways) — trimming the shorter column does nothing.
+
+**Resources-landing reorg (`42ba3c8`, `64cb305`).** On [Resources](docs/08-resources/index.mdx), the `section-stack` now leads with **Patient Resources**, and **Journal Club was removed** from the landing (still reachable via navbar, footer, and the pelvic-organ-prolapse cross-link). On [Patient Resources](docs/08-resources/patient-resources.mdx), the top **"WARWIKI Original Patient Handouts"** section is a compact `.ph-cta` link to the gallery (no longer inline cards), followed by **"Society & Foundation Resources"** (moved up), whose **AUGS card now points to the Voices for PFD fact-sheets** page (`https://www.voicesforpfd.org/resources/fact-sheets-and-downloads/`).
+
+**Also (`49b7d1e`).** Anchored the floating-pubis **AUS schematic** (`scripts/diagrams/aus-components.js`): the PRB now sits retropubic behind the pubic symphysis, the bulbar urethra passes under the subpubic arch, bladder postero-superior, pump in the scrotum. (And the AUS "System Operation" placement question — biomaterials Device page vs Procedure page — was discussed; recommended keeping it on the procedure page, consistent with the IPP precedent; no change made.)
+
+**Conventions reinforced:** off-repo deliverables + hosted artifact (like the IG workflow); data-driven collections as a growing gallery; flexible/conditional patient-facing framing over assume-one-path; verify rendered-PDF page fit numerically (colsOvf/pageOvf) before committing; one authoritative home per concept + cross-link (urethroplasty sheet points to the cheek-graft sheet; its follow-up "urethrogram" is the RUG/VCUG sheet). Full workflow in memory `project_patient_handouts_workflow.md`.
+
+---
+
 ## 2026-06-09 — IPP & AUS device-operation detail (inflate / deflate / deactivate) + Atlas-of-Pelvic-Surgery link + TikTok removal
 
 4 commits, all fast-forwarded to `main`. Lint + build clean throughout.

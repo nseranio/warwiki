@@ -4,7 +4,36 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-09 — IPP & AUS device-operation detail (inflate / deflate / deactivate) + 2 minor resource/homepage edits
+## Current Handoff - 2026-06-10 — Patient-instruction handouts: 12 plain-language PDFs + a dedicated gallery + Resources-landing reorg
+
+16 commits, all fast-forwarded to `main`. Typecheck + lint + build clean throughout. A new **off-repo→hosted** workstream: plain-language, printable **patient handouts** to give patients *before* a test or procedure, modeled on the AUGS "Voices for PFD" 2-page fact sheet the user supplied.
+
+**The 12 handouts** (live at [/docs/resources/patient-handouts](docs/08-resources/patient-handouts.mdx)):
+- **Tests & Imaging:** Retrograde Urethrogram (RUG) · Voiding Cystourethrogram (VCUG)
+- **Procedures & Surgery:** Suprapubic Catheter Placement · Buccal Mucosa (Cheek) Graft · Artificial Urinary Sphincter (AUS) · Inflatable Penile Prosthesis (IPP) · Malleable Penile Implant · Male Urethral Sling · Urethroplasty · Penile Plication · Plaque Incision & Grafting · Perineal Urethrostomy
+
+**Architecture (durable).**
+- **Master HTML lives OFF-repo** at `~/Desktop/WARWIKI-handouts/` (one self-contained HTML per handout — inline CSS, system font stack). Mirrors the off-repo `~/Desktop/WARWIKI-social/` IG precedent.
+- **Pipeline:** HTML → headless Chrome. PDF = `"…/Google Chrome" --headless --no-pdf-header-footer --print-to-pdf`; page-1 **thumbnail** = `--screenshot --window-size=856,1106` then `sips -c 2112 1632` (crop the page clean of the gray canvas) + `sips --resampleWidth 800`. The rendered **PDF is committed to `static/handouts/<slug>.pdf`** (served at `/handouts/<slug>.pdf`) and the thumbnail to `static/img/handouts/<slug>.png`.
+- **Gallery is data-driven:** [src/data/handouts.ts](src/data/handouts.ts) (one typed entry per handout: slug/title/category/description/pages) → [src/components/PatientHandouts.tsx](src/components/PatientHandouts.tsx) (thumbnail card grid grouped by `HANDOUT_CATEGORY_ORDER`) → [docs/08-resources/patient-handouts.mdx](docs/08-resources/patient-handouts.mdx). CSS `.ph-*` / `.ph-cta` in [custom.css](src/css/custom.css), built on `--ifm-*` theme vars (dark-mode safe). **Add a handout = render PDF + thumbnail, append one entry to `handouts.ts`.** Component return type must be **`React.ReactElement`** (this tsconfig has no global `JSX` namespace; `JSX.Element` fails `tsc`). The internal-link checker only validates `/docs/` links, so `/handouts/*.pdf` + `/img/handouts/*.png` are lint-safe — confirm with `npm run typecheck` + `npm run build`.
+
+**Handout style (durable, user-confirmed).**
+- Plain layperson voice (~6–8th-grade), grounded in the matching WARWIKI clinical page; WARWIKI blue `#185FA5`; **2-page Letter**.
+- Header = plain **"WARWIKI"** text only (no logo badge, no tagline). **No illustration. No appointment fill-in box.**
+- Diagnostic-test section flow: intro → About → Is It Safe? → How to Get Ready (Before) → What Happens (numbered steps) → After (with a red "call your team" warn box) → "Learn the Terms" glossary → "Three Things to Remember"; a **"WILL IT HURT?"** Q-box leads page 2. Procedure/surgery sheets adapt ("What to Know," etc.).
+- **Frame flexibly across real-world variation** (the user asked for this repeatedly): VCUG works with/without an existing urethral catheter or SPT; SPC/AUS/IPP/plication present anesthesia as a *range* (local±sedation OR general/spinal); BMG is for a urethral *or ureteral* repair; urethroplasty flexes across penile/perineal incision and graft/no-graft (**one sheet, not split-by-location** — the patient experience is ~80% common). For Peyronie's, plication vs grafting got **separate** sheets because they split on a key trade-off (shorten + low-ED vs length-preserve + higher-ED).
+
+**Footer bleed-through bug + fix (`58e200c`) — carry forward.** The layout used `.cols{flex:1}` (fill the page) + bottom-anchored `.foot{margin-top:auto}`; on dense page-2 layouts the columns overflowed *downward onto the footer* (the disclaimer "bled through" the boxes), and a naive page-`scrollHeight` check missed it. **Fixed by removing `flex:1; min-height:0` from `.cols`.** After any edit, verify in headless Chrome (`--dump-dom` + an injected script) that for every `.page`: `pageOvf = scrollHeight−clientHeight ≤ 0` **and** `colsOvf = cols.scrollHeight−cols.clientHeight == 0` (colsOvf>0 ⇒ footer overlap). Page height is set by the **taller** column — trim the taller (usually the right column: After/warning/takeaways).
+
+**Resources-landing reorg (`42ba3c8`, `64cb305`).** On [Resources](docs/08-resources/index.mdx) the `section-stack` now leads with **Patient Resources** and **Journal Club was removed** from the landing (still reachable via navbar, footer, and the pelvic-organ-prolapse cross-link). On [Patient Resources](docs/08-resources/patient-resources.mdx), the top **"WARWIKI Original Patient Handouts"** section is now a compact `.ph-cta` link to the gallery (no longer inline cards), followed by **"Society & Foundation Resources"** (moved up), whose **AUGS card now points to the Voices for PFD fact-sheets** page (`voicesforpfd.org/resources/fact-sheets-and-downloads` — the same source as the user's colpocleisis sample).
+
+**Also (`49b7d1e`, earlier this session).** Anchored the floating-pubis **AUS schematic** ([aus-components.js](scripts/diagrams/aus-components.js)) — the PRB now sits retropubic behind the pubic symphysis and the bulbar urethra passes under the subpubic arch. The AUS **"System Operation" placement** question (biomaterials Device page vs Procedure page) was discussed; recommended **keeping it on the procedure page** (consistent with the IPP precedent — operation detail on the clinical hub, pointer from the device page) — no change made.
+
+Full workflow + conventions saved in memory `project_patient_handouts_workflow.md`. Detail in `CHANGELOG.md` under 2026-06-10.
+
+---
+
+## Previous Handoff - 2026-06-09 — IPP & AUS device-operation detail (inflate / deflate / deactivate) + 2 minor resource/homepage edits
 
 4 commits, all fast-forwarded to `main`. Lint + build clean throughout.
 
