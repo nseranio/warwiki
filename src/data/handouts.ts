@@ -61,16 +61,20 @@ export const DEFAULT_LANGUAGE = 'en';
  * its `languages` array AND the localized assets are committed; otherwise the
  * card falls back to English with a "translation coming soon" note.
  */
+// Order: English (base) first, then the fully/partly translated languages, then
+// the not-yet-started ones. Keeping the filled-out languages near the top means
+// users don't scroll past empty options to reach a live translation. Move a
+// language up as it gets populated.
 export const HANDOUT_LANGUAGES: HandoutLanguage[] = [
   {code: 'en', label: 'English', englishLabel: 'English'},
   {code: 'es', label: 'Español', englishLabel: 'Spanish'},
   {code: 'zh', label: '简体中文', englishLabel: 'Mandarin'},
   {code: 'vi', label: 'Tiếng Việt', englishLabel: 'Vietnamese'},
+  {code: 'fr', label: 'Français', englishLabel: 'French'},
   {code: 'ko', label: '한국어', englishLabel: 'Korean'},
   {code: 'tl', label: 'Tagalog', englishLabel: 'Tagalog'},
   {code: 'ar', label: 'العربية', englishLabel: 'Arabic', dir: 'rtl'},
   {code: 'ru', label: 'Русский', englishLabel: 'Russian'},
-  {code: 'fr', label: 'Français', englishLabel: 'French'},
   {code: 'it', label: 'Italiano', englishLabel: 'Italian'},
   {code: 'ja', label: '日本語', englishLabel: 'Japanese'},
 ];
