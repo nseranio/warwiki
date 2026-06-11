@@ -182,7 +182,6 @@ export const HANDOUT_SUBCATEGORY_ORDER: string[] = [
   'Erections & Penile Conditions',
   'Catheters & Grafts',
   'Cosmetic & Other',
-  'Before & After Surgery',
 ];
 
 export const PATIENT_HANDOUTS: PatientHandout[] = [
@@ -954,7 +953,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     slug: 'surgical-considerations-before-pop-repair',
     title: 'Choices Before Prolapse Repair Surgery',
     category: 'Procedures & Surgery',
-    subcategory: 'Before & After Surgery',
+    subcategory: 'Prolapse Surgery',
     audience: 'female',
     pages: 2,
     description:
