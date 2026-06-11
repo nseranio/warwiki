@@ -71,6 +71,7 @@ export const HANDOUT_LANGUAGES: HandoutLanguage[] = [
   {code: 'ar', label: 'العربية', englishLabel: 'Arabic', dir: 'rtl'},
   {code: 'ru', label: 'Русский', englishLabel: 'Russian'},
   {code: 'fr', label: 'Français', englishLabel: 'French'},
+  {code: 'it', label: 'Italiano', englishLabel: 'Italian'},
   {code: 'ja', label: '日本語', englishLabel: 'Japanese'},
 ];
 
