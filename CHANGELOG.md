@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-11 (later) — Handouts: full French localization (80/80 `fr`, Français) + language-switcher reorder
+
+9 commits, all fast-forwarded to `main`. Typecheck + build clean. **French now live on all 80 handouts — the library is es + zh + vi + fr complete (four languages + English base).**
+
+Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_FR_TRANSLATOR_GUIDE.md` (formal **vouvoiement**, French medical glossary + punctuation spacing, "BE CONCISE"), 8 batches × 10 Sonnet agents → `<slug>.fr.html` (`<html lang="fr">`), `render-fr.sh` → `.fr.pdf`/`.fr.jpg`, overflow gate, wired with `scripts/add-lang.js fr <slugs…>`, build, commit per batch. No font work — French is Latin/accents (renders via Inter, like es/vi); verified é/è/ê/ç/œ in the PDF before scaling.
+
+**French is the longest language so far** — ~22 of 80 sheets overflowed page 2 (vs vi's 5), several by 90–165px, all on the dense surgical/flexible sheets (AUS, IPP, BMG, urethroplasty, the diversions, the fistulas, VCUG, etc.). All hand-trimmed with the same playbook: tighten the full-width qbox (cuts page height directly), drop the After bullet that duplicates the qbox's swelling line, and drop the takeaway's trailing "appelez/call your team" clause (already covered by the warn box). No clinical content cut. A couple settled at ≤4px (harmless sub-pixel rounding, colsOvf=0).
+
+**Language-switcher reorder.** The user noted French was "buried" at position 9 behind 4 empty languages. Reordered `HANDOUT_LANGUAGES` so the translated/in-progress languages (es, zh, vi, fr) sit right under English, ahead of the not-yet-started ones (ko, tl, ar, ru, it, ja). Convention: move a language up as it gets populated.
+
 ## 2026-06-11 — Handouts: full Vietnamese localization (80/80 `vi`, Tiếng Việt)
 
 8 commits, all fast-forwarded to `main`. Typecheck + build clean. **Vietnamese now live on all 80 handouts — the library is trilingual (en + es + zh + vi… four languages 100% complete counting English base).**

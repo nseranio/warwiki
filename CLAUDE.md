@@ -4,7 +4,17 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-11 (later) — Handouts: FULL Vietnamese localization (80/80 `vi`)
+## Current Handoff - 2026-06-11 (later 2) — Handouts: FULL French localization (80/80 `fr`) + switcher reorder
+
+9 commits, fast-forwarded to `main`. Typecheck + build clean. **French (Français) now live on all 80 handouts — library is es + zh + vi + fr complete (+ English base).** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_FR_TRANSLATOR_GUIDE.md` (formal **vous**, French medical glossary), 8 batches × 10 Sonnet agents → `<slug>.fr.html`, `render-fr.sh` → assets, gate, `node scripts/add-lang.js fr <slugs…>`, build, commit per batch. **No font work** — French is Latin/accents (Inter covers it). **French is the longest language yet** — ~22/80 sheets overflowed page 2 (several 90–165px), all dense surgical/flexible sheets; hand-trimmed with the standard playbook (tighten the full-width qbox; drop the After bullet duplicating the qbox swelling line; drop the takeaway's trailing "appelez…" clause already in the warn box). ≤4px residuals are harmless rounding (colsOvf=0).
+
+**Language-switcher reorder.** User flagged French was "buried" at position 9 behind empty languages → reordered `HANDOUT_LANGUAGES` so filled/in-progress languages (es, zh, vi, fr) sit right under English, ahead of the empty ones. **Convention: move a language up as it gets populated.**
+
+**Next: Korean (`ko`).** Same loop. Korean is Hangul → **needs the CJK embedded-font treatment like zh/ja** (the system `.ttc` fonts don't reach `--print-to-pdf`); reuse the Noto approach — but Noto Sans SC covers Han only, **Korean needs Noto Sans KR** (download the KR variable TTF, instance Reg/Bold, subset to the used glyphs, add `@font-face`, render with `--virtual-time-budget`). Remaining after ko: tl, ar (RTL), ru, it, ja (CJK font). Detail in `CHANGELOG.md` under 2026-06-11 (later). Prior Vietnamese handoff follows.
+
+---
+
+## Previous Handoff - 2026-06-11 (later) — Handouts: FULL Vietnamese localization (80/80 `vi`)
 
 8 commits, fast-forwarded to `main`. Typecheck + build clean. **Vietnamese (Tiếng Việt) now live on all 80 handouts — library is now es + zh + vi complete (plus English base).** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_VI_TRANSLATOR_GUIDE.md`, 8 batches × 10 Sonnet agents → `<slug>.vi.html` (`<html lang="vi">`), `render-vi.sh` → `.vi.pdf`/`.vi.jpg`, overflow gate, wired with the **generalized `scripts/add-lang.js`** (`node scripts/add-lang.js vi <slugs…>` — reuse for every future language). **No font work** — Vietnamese is Latin/diacritics, Inter covers it (like Spanish), so `render-vi.sh` is plain `--headless=new`, no embedded font/`--virtual-time-budget` (that's only for CJK: zh/ja). 5 sheets overflowed page 2 by 5–65px and were hand-trimmed (drop a takeaway sentence that duplicates the warn box, or tighten the qbox). **Workflow note:** save the handoff + CHANGELOG after EACH completed language (user request, 2026-06-11) — see [[feedback_save_after_each_language]].
 
