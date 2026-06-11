@@ -413,6 +413,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Retrograde Urethrogram (RUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
+    languages: ['es'],
     pages: 2,
     description:
       'An X-ray that maps the urethra using a contrast dye — what the test is, how to prepare, and what to expect during and after.',
@@ -422,6 +423,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Voiding Cystourethrogram (VCUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
+    languages: ['es'],
     pages: 2,
     description:
       'An X-ray of the bladder and urethra during filling and urinating — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -431,6 +433,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystoscopy',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
+    languages: ['es'],
     pages: 2,
     description:
       'A look inside the bladder and urethra with a thin camera — flexible (awake, in the office) or rigid (asleep, in the operating room): how to prepare and what to expect during and after.',
@@ -480,6 +483,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Suprapubic Catheter Placement',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
+    languages: ['es'],
     pages: 2,
     description:
       'Placing a catheter that drains the bladder through the lower belly — preparation, the procedure (local, sedation, or general anesthesia), and aftercare.',
@@ -489,6 +493,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Buccal Mucosa (Cheek) Graft',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
+    languages: ['es'],
     pages: 2,
     description:
       'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
@@ -498,6 +503,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Artificial Urinary Sphincter (AUS)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
+    languages: ['es'],
     pages: 2,
     description:
       'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
@@ -508,6 +514,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
@@ -518,6 +525,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
@@ -528,6 +536,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
@@ -537,6 +546,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethroplasty (Urethral Repair)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
+    languages: ['es'],
     pages: 2,
     description:
       'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
