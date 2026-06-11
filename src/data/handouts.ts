@@ -253,7 +253,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Asymptomatic Microscopic Hematuria',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
@@ -274,7 +274,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
@@ -315,7 +315,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Constipation',
     category: 'Conditions & Symptoms',
     subcategory: 'Bowel & Anorectal',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Why constipation matters for pelvic health (straining worsens prolapse and leakage) and how to fix it — fiber, fluids, toileting habits, gentle laxatives, and pelvic-floor therapy for outlet-type constipation.',
@@ -443,7 +443,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystogram',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'An X-ray of the bladder filled with contrast dye to check that a repair has healed or to look for a leak, fistula, or reflux — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -493,7 +493,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Buccal Mucosa (Cheek) Graft',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
@@ -661,7 +661,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Continent Cutaneous Diversion (Indiana Pouch)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
@@ -771,7 +771,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Beta-3 Agonists (for Overactive Bladder)',
     category: 'Medications',
     subcategory: 'Overactive Bladder Medicines',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Newer overactive-bladder pills (mirabegron, vibegron) that relax the bladder with far less dry mouth than anticholinergics — how they work, who they suit, and the blood-pressure point with mirabegron.',
@@ -826,7 +826,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Bladder Botox (for Bladder Control)',
     category: 'Office Procedures',
     subcategory: 'Injections (Botox & Bulking)',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Injections that relax an overactive bladder muscle to ease urgency, frequency, and urge leakage when other treatments fall short — a quick office procedure; the main trade-off is possible temporary self-catheterization.',
@@ -958,7 +958,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
@@ -1024,7 +1024,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Cosmetic & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
