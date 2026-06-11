@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-11 — Handouts: full Vietnamese localization (80/80 `vi`, Tiếng Việt)
+
+8 commits, all fast-forwarded to `main`. Typecheck + build clean. **Vietnamese now live on all 80 handouts — the library is trilingual (en + es + zh + vi… four languages 100% complete counting English base).**
+
+Same parallel-workflow as Mandarin ([[project_patient_handouts_workflow]]): shared off-repo guide `_VI_TRANSLATOR_GUIDE.md` (section-label + medical glossary, "BE CONCISE"), **8 batches × 10 parallel Sonnet agents** writing `<slug>.vi.html` (`<html lang="vi">`), main loop rendering `.vi.pdf` + `.vi.jpg` via `render-vi.sh`, overflow gate, wiring via the generalized **[scripts/add-lang.js](scripts/add-lang.js)** (`node scripts/add-lang.js vi <slugs…>`), build, commit per batch.
+
+**No font work needed** — Vietnamese is Latin-script (diacritics); Inter/system covers it exactly like Spanish, so `render-vi.sh` is plain `--headless=new` (no embedded font, no `--virtual-time-budget`). Verified diacritics render in the PDF (ế/ữ/ằ/ị) before scaling. **5 sheets overflowed page 2** by 5–65px (Vietnamese runs a bit longer than English) and were hand-trimmed (AUS, perineal-urethrostomy, urethroplasty, suprapubic-catheter, VCUG) — the usual move: drop a takeaway's trailing sentence that duplicates the warn box, or tighten the full-width qbox. No clinical content cut.
+
 ## 2026-06-10 (later 6) — Handouts: full Mandarin localization (80/80 `zh`, 简体中文)
 
 8 commits, all fast-forwarded to `main`. Typecheck + build clean throughout; every sheet gate-clean. **Mandarin now live on all 80 handouts — second fully-translated language after Spanish; languages list unchanged at 11.**

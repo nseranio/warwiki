@@ -4,7 +4,15 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-11 — Handouts: FULL Mandarin localization (80/80 `zh`) + blank-PDF CJK-font fix
+## Current Handoff - 2026-06-11 (later) — Handouts: FULL Vietnamese localization (80/80 `vi`)
+
+8 commits, fast-forwarded to `main`. Typecheck + build clean. **Vietnamese (Tiếng Việt) now live on all 80 handouts — library is now es + zh + vi complete (plus English base).** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_VI_TRANSLATOR_GUIDE.md`, 8 batches × 10 Sonnet agents → `<slug>.vi.html` (`<html lang="vi">`), `render-vi.sh` → `.vi.pdf`/`.vi.jpg`, overflow gate, wired with the **generalized `scripts/add-lang.js`** (`node scripts/add-lang.js vi <slugs…>` — reuse for every future language). **No font work** — Vietnamese is Latin/diacritics, Inter covers it (like Spanish), so `render-vi.sh` is plain `--headless=new`, no embedded font/`--virtual-time-budget` (that's only for CJK: zh/ja). 5 sheets overflowed page 2 by 5–65px and were hand-trimmed (drop a takeaway sentence that duplicates the warn box, or tighten the qbox). **Workflow note:** save the handoff + CHANGELOG after EACH completed language (user request, 2026-06-11) — see [[feedback_save_after_each_language]].
+
+**Open / next:** user flagged that the **Resources sidebar + navbar don't match the Resources landing page** — being looked at next. Remaining handout languages (same loop, ~80 sheets each): ko, tl, ar (needs `dir="rtl"` + glossary pass), ru, fr, it, ja (ja needs the CJK embedded-font treatment, same as zh). Detail in `CHANGELOG.md` under 2026-06-11. Prior Mandarin handoff follows.
+
+---
+
+## Previous Handoff - 2026-06-11 — Handouts: FULL Mandarin localization (80/80 `zh`) + blank-PDF CJK-font fix
 
 9 commits, all fast-forwarded to `main`. Typecheck + build clean. **Mandarin (简体中文) now live on all 80 handouts — second fully-translated language after Spanish; languages list stays 11.**
 
