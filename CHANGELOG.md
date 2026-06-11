@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-11 (later 2) — Handouts: full Korean localization (80/80 `ko`, 한국어)
+
+3 commits (translation done as one big render pass), fast-forwarded to `main`. Typecheck + build clean; every sheet gate-clean. **Korean now live on all 80 handouts — five languages 100% complete (es, zh, vi, fr, ko) + English base.**
+
+Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_KO_TRANSLATOR_GUIDE.md` (polite 합니다체, Korean medical glossary, "BE CONCISE"), **8 batches × 10 Sonnet agents** → `<slug>.ko.html` (`<html lang="ko">`). **Korean is Hangul → needed the CJK embedded-font treatment** like zh (the macOS system fonts don't reach `--print-to-pdf`). Because the subset must cover the actual glyphs, the flow differed from the Latin languages: **translate all 80 first, then build the font, then render all 80** (rather than render-per-batch). Downloaded Noto Sans KR (variable TTF, google/fonts), instanced static Reg(400)+Bold(700), `pyftsubset` to the **874 glyphs used** (~145 KB/face), added two `@font-face` rules to `_handout.css` (`'Noto Sans KR'` after `'Noto Sans SC'` in the stack — SC covers Han only, Hangul falls through to KR) and injected the same rules into the **25 inline-CSS masters**. New **`render-ko.sh`** (`--headless=new --virtual-time-budget=20000`). **Zero overflow across all 80** (Korean is compact like Chinese) — no hand-trimming. PDFs ~150–210 KB, on par with English.
+
+Korean was already positioned 6th in the switcher (right after fr) from the earlier fill-level reorder, so no further reorder needed. **Next: Tagalog (`tl`)** — Latin script (no font work), then ar (RTL), ru, it, ja (ja needs the CJK font treatment like zh/ko).
+
 ## 2026-06-11 (later) — Handouts: full French localization (80/80 `fr`, Français) + language-switcher reorder
 
 9 commits, all fast-forwarded to `main`. Typecheck + build clean. **French now live on all 80 handouts — the library is es + zh + vi + fr complete (four languages + English base).**

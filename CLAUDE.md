@@ -4,7 +4,15 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-11 (later 2) — Handouts: FULL French localization (80/80 `fr`) + switcher reorder
+## Current Handoff - 2026-06-11 (later 3) — Handouts: FULL Korean localization (80/80 `ko`, 한국어)
+
+Typecheck + build clean; every sheet gate-clean. **Korean now live on all 80 handouts — five languages 100% done (es, zh, vi, fr, ko) + English base.** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_KO_TRANSLATOR_GUIDE.md` (polite 합니다체), 8 batches × 10 Sonnet agents → `<slug>.ko.html`. **Korean is Hangul → needs the CJK embedded-font treatment like zh** (system fonts unavailable to `--print-to-pdf`). Flow for CJK differs from Latin langs: **translate all 80 first → build the subset font → render all 80** (the subset must cover the actual glyphs, so you can't render per-batch). Downloaded Noto Sans **KR** (google/fonts variable), instanced Reg+Bold, `pyftsubset` to the 874 used glyphs (~145 KB/face), `@font-face` added to `_handout.css` (`'Noto Sans KR'` after `'Noto Sans SC'` — SC is Han-only, Hangul falls through to KR) + injected into the 25 inline-CSS masters. New `render-ko.sh` (`--headless=new --virtual-time-budget=20000`). **Zero overflow** (Korean compact like Chinese) — no trimming. ko was already 6th in the switcher (after fr) from the fill-level reorder.
+
+**Next: Tagalog (`tl`)** — Latin script, no font work (like es/vi/fr). Then **ar** (RTL — set `dir="rtl"`, needs a layout/glossary pass), **ru**, **it**, **ja** (Japanese needs the CJK font treatment like zh/ko — but Noto Sans **JP**; the build covers Kanji+Kana). Detail in `CHANGELOG.md` under 2026-06-11 (later 2). Prior French handoff follows.
+
+---
+
+## Previous Handoff - 2026-06-11 (later 2) — Handouts: FULL French localization (80/80 `fr`) + switcher reorder
 
 9 commits, fast-forwarded to `main`. Typecheck + build clean. **French (Français) now live on all 80 handouts — library is es + zh + vi + fr complete (+ English base).** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_FR_TRANSLATOR_GUIDE.md` (formal **vous**, French medical glossary), 8 batches × 10 Sonnet agents → `<slug>.fr.html`, `render-fr.sh` → assets, gate, `node scripts/add-lang.js fr <slugs…>`, build, commit per batch. **No font work** — French is Latin/accents (Inter covers it). **French is the longest language yet** — ~22/80 sheets overflowed page 2 (several 90–165px), all dense surgical/flexible sheets; hand-trimmed with the standard playbook (tighten the full-width qbox; drop the After bullet duplicating the qbox swelling line; drop the takeaway's trailing "appelez…" clause already in the warn box). ≤4px residuals are harmless rounding (colsOvf=0).
 
