@@ -4,7 +4,19 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-10 (later 5) — Handouts: ITNS/ACT/ProACT adds, taxonomy/UX cleanup, listener off, Italian + FULL Spanish localization (80/80)
+## Current Handoff - 2026-06-11 — Handouts: FULL Mandarin localization (80/80 `zh`) + blank-PDF CJK-font fix
+
+9 commits, all fast-forwarded to `main`. Typecheck + build clean. **Mandarin (简体中文) now live on all 80 handouts — second fully-translated language after Spanish; languages list stays 11.**
+
+**Translation.** Ran the proven whole-language workflow ([[project_patient_handouts_workflow]]). Wrote a shared off-repo translator guide (`~/Desktop/WARWIKI-handouts/_ZH_TRANSLATOR_GUIDE.md`: structure-preservation rules, consistent section-label + medical glossary, "BE CONCISE") so each agent prompt stays short. **8 batches × 10 parallel Sonnet translator agents** (one handout each) read `<slug>.html` → wrote `<slug>.zh.html` (`<html lang="zh-Hans">`, structure copied exactly, acronyms kept with the Chinese term on first use). Main loop rendered `.zh.pdf` + `.zh.jpg` (`render-zh.sh`), ran the overflow gate, wired `languages: [..., 'zh']` via the new **[scripts/add-zh-lang.js](scripts/add-zh-lang.js)** (idempotent, by-slug — reuse for `vi`/`ko`/… by changing the code), built, committed per batch. **Zero overflow on all 80** (Chinese is more compact than English — no hand-trimming, unlike Spanish's ~14–27%). Skipped the retired `surgery-what-to-expect` master.
+
+**Blank-PDF bug + fix (CRITICAL — carry into any future CJK language, e.g. `ja`).** First pass shipped PDFs with **every Chinese glyph missing** (only Latin "OAB"/"WARWIKI"/digits + the colored layout survived → mostly blank); thumbnails were fine, which masked it. Cause: headless Chrome **`--print-to-pdf` cannot load the macOS system `.ttc` CJK fonts** — the screenshot path rasterizes them, the print compositor drops them. `--headless=new` alone didn't help; naming the system fonts made it worse. **Fix = embed a CJK font as a document web font:** Noto Sans SC (variable TTF from google/fonts) → `fontTools.varLib.instancer` to static Regular(400)+Bold(700) → `pyftsubset` to the **1,501 glyphs used** (~416 KB/face) → two `@font-face` rules, `'Noto Sans SC'` placed **before** generic `sans-serif` so Latin keeps the Inter look. **Two gotchas:** (1) render with **`--virtual-time-budget=20000`** so the web font loads before print fires (else `font-display:block` prints the still-invisible fallback → blank); (2) **25 older masters use inline `<style>` not `_handout.css`** (RUG, urethroplasty, cystoscopy, diversion/upper-tract set, …) — the shared `@font-face` never reached them, so the rule was injected directly. All 80 PDFs re-rendered; each now embeds a CJK subset (~160–210 KB, on par with English) and shows full Chinese. Fonts live off-repo in `~/Desktop/WARWIKI-handouts/fonts/`; only rendered PDFs/JPGs are committed. `render-zh.sh` updated to `--headless=new --virtual-time-budget=20000`.
+
+Detail in `CHANGELOG.md` under 2026-06-10 (later 6). Prior Spanish-completion handoff follows.
+
+---
+
+## Previous Handoff - 2026-06-10 (later 5) — Handouts: ITNS/ACT/ProACT adds, taxonomy/UX cleanup, listener off, Italian + FULL Spanish localization (80/80)
 
 Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in preview at each stage (0 console errors). **Gallery 78 → 80; languages 10 → 11; Spanish now live on all 80 handouts.**
 
