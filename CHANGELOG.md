@@ -6,6 +6,22 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 (later 6) — Handouts: full Mandarin localization (80/80 `zh`, 简体中文)
+
+8 commits, all fast-forwarded to `main`. Typecheck + build clean throughout; every sheet gate-clean. **Mandarin now live on all 80 handouts — second fully-translated language after Spanish; languages list unchanged at 11.**
+
+Ran the proven whole-language workflow ([[project_patient_handouts_workflow]]) for Simplified Chinese. Wrote a shared translator guide off-repo (`~/Desktop/WARWIKI-handouts/_ZH_TRANSLATOR_GUIDE.md`: structure-preservation rules, consistent section-label + medical glossary, "BE CONCISE") so each agent prompt stays short. **Eight batches of 10 parallel Sonnet translator agents** (one handout each) read `<slug>.html` → wrote `<slug>.zh.html` (`<html lang="zh-Hans">`, structure copied exactly, acronyms kept with Chinese term on first use, full-width punctuation). Main loop rendered `<slug>.zh.pdf` + `<slug>.zh.jpg` via the same Chrome pipeline (`render-zh.sh`), ran the overflow gate, wired `languages: [..., 'zh']`, built, committed per batch.
+
+**Zero overflow across all 80** — unlike Spanish (~14–27% needed hand-trimming), **Chinese is more compact than English**, so every sheet passed `pageOvf=0 / colsOvf=0` on the first render with no trimming. Skipped the retired `surgery-what-to-expect` master (not in the gallery). Honest-framing points preserved in translation (PDE5i+nitrates, priapism >4 h emergency, simple ≠ radical prostatectomy, TRT fertility, transvaginal-mesh FDA history, cosmetic "rejuvenation" FDA warning, asymptomatic bacteriuria don't-treat).
+
+**New helper:** [scripts/add-zh-lang.js](scripts/add-zh-lang.js) adds a language code to specific handout entries' `languages` arrays by slug (idempotent) — reusable for the next language (`vi`, `ko`, …); just adapt the code.
+
+**Durable lesson reinforced:** the **zsh no-word-split** pitfall bit once (a `$B` var of space-joined slugs reached `cp`/the script as a single argument) — render/copy/wire loops must use a **literal word list**, not an unquoted variable. On-disk `<slug>.zh.html` files remain the checkpoint.
+
+**Blank-PDF bug + fix (carry forward — critical for any CJK language, incl. future `ja`).** The first pass shipped PDFs with **every Chinese glyph missing** (only the Latin "OAB"/"WARWIKI"/digits + the colored layout survived → the sheets looked mostly blank); the JPEG thumbnails were fine, which masked it. Cause: headless Chrome `--print-to-pdf` **cannot load the macOS system `.ttc` CJK fonts** (PingFang/Hiragino/Heiti) — the screenshot path rasterizes them with the system font, but the print/PDF compositor drops them. `--headless=new` alone did **not** help; explicitly naming the system fonts made it *worse* (all text vanished). **Fix = embed a real CJK font as a document web font.** Downloaded Noto Sans SC (variable TTF, google/fonts), used `fontTools.varLib.instancer` to make static **Regular (wght=400) + Bold (700)** instances, `pyftsubset` to the **1,501 glyphs** actually used across all 80 sheets (~416 KB/face), and added two `@font-face` rules (placed `'Noto Sans SC'` **before** the generic `sans-serif` in the body stack so Latin keeps the Inter look). **Two gotchas:** (1) render with **`--virtual-time-budget=20000`** so the web font finishes loading before the print fires — without it `font-display:block` captures the still-invisible fallback and the page prints blank; (2) **25 older masters use inline `<style>` instead of linking `_handout.css`** (RUG, urethroplasty, cystoscopy, the diversion/upper-tract set, …) — the shared-CSS `@font-face` never reached them, so each needed the rule injected directly. After the fix all 80 PDFs embed a CJK subset (~160–210 KB, on par with the English PDFs) and render the full Chinese. `render-zh.sh` updated to `--headless=new --virtual-time-budget=20000` for both PDF and thumbnail. Fonts live off-repo in `~/Desktop/WARWIKI-handouts/fonts/`; only the rendered PDFs/JPGs are committed. Saved to [[project_patient_handouts_workflow]].
+
+---
+
 ## 2026-06-10 (later 5) — Handout gallery: ITNS/ACT/ProACT, ProACT on male-SUI, taxonomy cleanup, listener off, Italian + full Spanish localization (80/80)
 
 Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in preview at each stage (0 console errors). A long session spanning content adds, taxonomy/UX cleanup, and the first full handout translation (Spanish). **Gallery 78 → 80; languages 10 → 11; Spanish now live on all 80.**
