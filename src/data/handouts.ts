@@ -557,6 +557,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
@@ -567,6 +568,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
@@ -577,6 +579,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
@@ -586,6 +589,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pyeloplasty',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
+    languages: ['es'],
     pages: 2,
     description:
       'Surgery to fix a blockage where the kidney drains into the ureter (UPJ obstruction) — usually keyhole (robotic/laparoscopic): how it works, preparing, the internal stent, and recovery.',
@@ -596,6 +600,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
@@ -606,6 +611,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
@@ -615,6 +621,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Reconstruction',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
+    languages: ['es'],
     pages: 2,
     description:
       'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
@@ -624,6 +631,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urinary Diversion — Comparing Your Options',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
+    languages: ['es'],
     pages: 2,
     description:
       'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
@@ -633,6 +641,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ileal Conduit',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
+    languages: ['es'],
     pages: 2,
     description:
       'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
@@ -642,6 +651,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Orthotopic Neobladder',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
+    languages: ['es'],
     pages: 2,
     description:
       'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
@@ -651,6 +661,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Continent Cutaneous Diversion (Indiana Pouch)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
+    languages: ['es'],
     pages: 2,
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
@@ -662,6 +673,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pelvic-Floor Exercises & Bladder Training',
     category: 'Conservative & Self-Care',
     subcategory: 'Bladder & Pelvic-Floor Training',
+    languages: ['es'],
     pages: 2,
     description:
       'Safe, free, proven first-line care for leaks and urgency — how to find and exercise the right muscles, a simple daily routine, and bladder training to wait longer between trips.',
@@ -672,6 +684,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Low-dose, local estrogen (cream, tablet, or ring) for menopause-related dryness, painful sex, and urinary symptoms — how it works, how to use it, its safety, and why little is absorbed into the body.',
@@ -682,6 +695,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
@@ -692,6 +706,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
@@ -701,6 +716,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Intermittent Self-Catheterization (ISC)',
     category: 'Conservative & Self-Care',
     subcategory: 'Self-Catheterization',
+    languages: ['es'],
     pages: 2,
     description:
       'Emptying the bladder yourself with a thin catheter a few times a day when it will not empty on its own — why it protects the kidneys, the clean-technique steps, and how it beats a permanent catheter.',
@@ -711,6 +727,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
@@ -721,6 +738,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A non-drug "penis pump" that draws blood in to create an erection, held by a base ring — for ED and penile rehabilitation after prostate surgery; how to use it and the 30-minute ring rule.',
@@ -731,6 +749,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
@@ -742,6 +761,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Anticholinergics (for Overactive Bladder)',
     category: 'Medications',
     subcategory: 'Overactive Bladder Medicines',
+    languages: ['es'],
     pages: 2,
     description:
       'Pills that calm an overactive bladder (oxybutynin, solifenacin, tolterodine, others) — how they work, how to take them, the dry-mouth/constipation effects, and the cognitive caution in older adults.',
@@ -751,6 +771,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Beta-3 Agonists (for Overactive Bladder)',
     category: 'Medications',
     subcategory: 'Overactive Bladder Medicines',
+    languages: ['es'],
     pages: 2,
     description:
       'Newer overactive-bladder pills (mirabegron, vibegron) that relax the bladder with far less dry mouth than anticholinergics — how they work, who they suit, and the blood-pressure point with mirabegron.',
@@ -760,6 +781,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Alpha Blockers (for Prostate / Urinary Flow)',
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
+    languages: ['es'],
     pages: 2,
     description:
       'The usual first medicine for an enlarged prostate (tamsulosin, alfuzosin, silodosin, others) — fast relief of urine-flow symptoms, dizziness and retrograde-ejaculation effects, and the cataract-surgery (IFIS) warning.',
@@ -770,6 +792,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Pills that gradually shrink an enlarged prostate (finasteride, dutasteride) over 3–6 months, lowering retention and surgery risk — plus the key point that they halve the PSA test and the pregnancy-handling caution.',
@@ -780,6 +803,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Erectile Dysfunction Medicines',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
@@ -790,6 +814,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Testosterone Therapy',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Treatment for confirmed low testosterone with symptoms (gel, injection, patch, or pellets) — who it is for, the forms, required monitoring (blood count, prostate), and that it lowers fertility.',
@@ -801,6 +826,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Bladder Botox (for Bladder Control)',
     category: 'Office Procedures',
     subcategory: 'Injections (Botox & Bulking)',
+    languages: ['es'],
     pages: 2,
     description:
       'Injections that relax an overactive bladder muscle to ease urgency, frequency, and urge leakage when other treatments fall short — a quick office procedure; the main trade-off is possible temporary self-catheterization.',
@@ -810,6 +836,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethral Bulking',
     category: 'Office Procedures',
     subcategory: 'Injections (Botox & Bulking)',
+    languages: ['es'],
     pages: 2,
     description:
       'A quick, no-incision office injection that helps the urethra seal to reduce stress urine leakage — less durable than a sling but low-risk and repeatable; how it works, preparing, and recovery.',
@@ -819,6 +846,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Percutaneous Tibial Nerve Stimulation (PTNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
+    languages: ['es'],
     pages: 2,
     description:
       'A drug-free office treatment for overactive bladder using gentle nerve stimulation at the ankle — painless ~30-minute sessions, typically weekly for 12 weeks then maintenance.',
@@ -828,6 +856,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Sacral Neuromodulation',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
+    languages: ['es'],
     pages: 2,
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
@@ -837,6 +866,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Implantable Tibial Nerve Stimulation (ITNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
+    languages: ['es'],
     pages: 2,
     description:
       'A small device implanted near the ankle that calms an overactive bladder — the at-home version of PTNS, with no weekly office visits. How the short outpatient implant works, the two device types (automatic vs. ankle-band powered), and what to expect.',
@@ -849,6 +879,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'The long-standing standard surgery for an enlarged prostate — the obstructing inner tissue is removed through a scope (no incision); strong, durable flow improvement, with dry (retrograde) ejaculation the common after-effect.',
@@ -859,6 +890,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
@@ -869,6 +901,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A heat-free, ultrasound-guided waterjet that precisely removes obstructing prostate tissue through the urethra — flow results like TURP with a better chance of preserving ejaculation; how it works and recovery.',
@@ -879,6 +912,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
@@ -891,6 +925,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
@@ -901,6 +936,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Two adjustable silicone balloons placed beside the urethra to reduce leakage after prostate surgery — minimally invasive, reversible, and fine-tuned in the office through a scrotal port. Best for mild-to-moderate, non-radiated stress incontinence.',
@@ -911,6 +947,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Two adjustable silicone balloons placed beside the urethra for female stress incontinence — minimally invasive, reversible, and fine-tuned in the office through a labial port. Often considered for recurrent leakage or a weak sphincter; availability varies by country.',
@@ -921,6 +958,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
@@ -931,6 +969,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
@@ -963,6 +1002,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
@@ -973,6 +1013,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Pelvic Floor & Perineal Repair',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
@@ -983,6 +1024,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Cosmetic & Other',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
@@ -993,6 +1035,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'The key decisions before pelvic organ prolapse surgery — repair vs. closure, vaginal vs. abdominal route, keeping the uterus, support material, and treating hidden leakage — plus questions to ask.',
