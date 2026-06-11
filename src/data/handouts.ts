@@ -212,7 +212,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'male',
     pages: 2,
     description:
-      'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, artificial urinary sphincter).',
+      'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, ProACT adjustable balloons, artificial urinary sphincter).',
   },
   {
     slug: 'interstitial-cystitis-bps',
