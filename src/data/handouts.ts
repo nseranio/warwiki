@@ -341,7 +341,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A small pocket off the urethra that collects urine — the classic "3 Ds" (dribbling, burning, pain with sex) and recurrent infections, how MRI maps it, and surgical removal (diverticulectomy) when it is bothersome.',
@@ -477,7 +477,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Evaluation Under Anesthesia',
     category: 'Tests & Imaging',
     subcategory: 'Kidney & Ureter Tests',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A detailed exam to map a narrowing of the ureter while asleep — any combination of ureteroscopy, retrograde and antegrade pyelogram, and cystography — to plan the right repair.',
@@ -487,7 +487,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Suprapubic Catheter Placement',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Placing a catheter that drains the bladder through the lower belly — preparation, the procedure (local, sedation, or general anesthesia), and aftercare.',
@@ -550,7 +550,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethroplasty (Urethral Repair)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
@@ -625,7 +625,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Reconstruction',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
@@ -635,7 +635,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urinary Diversion — Comparing Your Options',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
@@ -818,7 +818,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Testosterone Therapy',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Treatment for confirmed low testosterone with symptoms (gel, injection, patch, or pellets) — who it is for, the forms, required monitoring (blood count, prostate), and that it lowers fertility.',
@@ -840,7 +840,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethral Bulking',
     category: 'Office Procedures',
     subcategory: 'Injections (Botox & Bulking)',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'A quick, no-incision office injection that helps the urethra seal to reduce stress urine leakage — less durable than a sling but low-risk and repeatable; how it works, preparing, and recovery.',
@@ -883,7 +883,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'The long-standing standard surgery for an enlarged prostate — the obstructing inner tissue is removed through a scope (no incision); strong, durable flow improvement, with dry (retrograde) ejaculation the common after-effect.',
@@ -1039,7 +1039,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'The key decisions before pelvic organ prolapse surgery — repair vs. closure, vaginal vs. abdominal route, keeping the uterus, support material, and treating hidden leakage — plus questions to ask.',
