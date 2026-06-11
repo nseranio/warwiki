@@ -202,6 +202,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — the female-specific options from pelvic-floor exercises to a pessary, bulking injection, or mid-urethral sling.',
@@ -230,6 +231,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urinary Tract Infections (UTIs)',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
+    languages: ['es'],
     pages: 2,
     description:
       'What a bladder vs. kidney infection is, how UTIs are treated, when antibiotics are (and are not) needed, and how to prevent repeats — including vaginal estrogen after menopause.',
