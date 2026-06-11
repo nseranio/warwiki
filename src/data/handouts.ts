@@ -861,6 +861,26 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
   },
   {
+    slug: 'proact-adjustable-balloons',
+    title: 'ProACT Adjustable Balloons (Male)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Leakage (Incontinence)',
+    audience: 'male',
+    pages: 2,
+    description:
+      'Two adjustable silicone balloons placed beside the urethra to reduce leakage after prostate surgery — minimally invasive, reversible, and fine-tuned in the office through a scrotal port. Best for mild-to-moderate, non-radiated stress incontinence.',
+  },
+  {
+    slug: 'act-adjustable-balloons',
+    title: 'ACT Adjustable Balloons (Female)',
+    category: 'Procedures & Surgery',
+    subcategory: 'Urinary Leakage (Incontinence)',
+    audience: 'female',
+    pages: 2,
+    description:
+      'Two adjustable silicone balloons placed beside the urethra for female stress incontinence — minimally invasive, reversible, and fine-tuned in the office through a labial port. Often considered for recurrent leakage or a weak sphincter; availability varies by country.',
+  },
+  {
     slug: 'colpocleisis',
     title: 'Colpocleisis (Vaginal Closure Surgery)',
     category: 'Procedures & Surgery',
