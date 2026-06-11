@@ -213,6 +213,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, ProACT adjustable balloons, artificial urinary sphincter).',
@@ -222,6 +223,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Interstitial Cystitis / Bladder Pain Syndrome',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
+    languages: ['es'],
     pages: 2,
     description:
       'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
@@ -241,6 +243,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Asymptomatic Bacteriuria',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
+    languages: ['es'],
     pages: 2,
     description:
       'Bacteria found in the urine when you feel completely fine — why this usually should NOT be treated with antibiotics, the few exceptions (pregnancy, before some procedures), and what symptoms to watch for.',
@@ -250,6 +253,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Asymptomatic Microscopic Hematuria',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
+    languages: ['es'],
     pages: 2,
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
@@ -259,6 +263,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Nocturia',
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
+    languages: ['es'],
     pages: 2,
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
@@ -269,6 +274,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
@@ -279,6 +285,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
@@ -288,6 +295,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Musculoskeletal Pelvic Pain',
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
+    languages: ['es'],
     pages: 2,
     description:
       'Pelvic pain coming from tight, overactive muscles and nerves rather than the bladder or organs — real and treatable even when scans are normal, with pelvic-floor physical therapy as the cornerstone.',
@@ -297,6 +305,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Accidental Bowel Leakage (Fecal Incontinence)',
     category: 'Conditions & Symptoms',
     subcategory: 'Bowel & Anorectal',
+    languages: ['es'],
     pages: 2,
     description:
       'Losing control of gas or stool — common and treatable. What causes it and the step-by-step options from firming the stool and biofeedback to nerve stimulation or sphincter repair.',
@@ -306,6 +315,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Constipation',
     category: 'Conditions & Symptoms',
     subcategory: 'Bowel & Anorectal',
+    languages: ['es'],
     pages: 2,
     description:
       'Why constipation matters for pelvic health (straining worsens prolapse and leakage) and how to fix it — fiber, fluids, toileting habits, gentle laxatives, and pelvic-floor therapy for outlet-type constipation.',
@@ -316,6 +326,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
@@ -326,6 +337,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'A small pocket off the urethra that collects urine — the classic "3 Ds" (dribbling, burning, pain with sex) and recurrent infections, how MRI maps it, and surgical removal (diverticulectomy) when it is bothersome.',
@@ -336,6 +348,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
@@ -346,6 +359,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
@@ -356,6 +370,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
@@ -366,6 +381,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'When the penis becomes hidden beneath belly/scrotal skin and fat in adults — the causes (weight, scarring, lichen sclerosus, lymphedema) and the reconstructive repair (release, skin graft, fat-pad removal).',
@@ -376,6 +392,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
@@ -386,6 +403,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
+    languages: ['es'],
     pages: 2,
     description:
       'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
@@ -422,6 +440,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystogram',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
+    languages: ['es'],
     pages: 2,
     description:
       'An X-ray of the bladder filled with contrast dye to check that a repair has healed or to look for a leak, fistula, or reflux — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -431,6 +450,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urodynamics',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
+    languages: ['es'],
     pages: 2,
     description:
       'A group of tests that measure how the bladder fills and empties using small catheters — what the test is, how to prepare, and what to expect during and after.',
@@ -440,6 +460,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ambulatory Urodynamics (Catheter-Free)',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
+    languages: ['es'],
     pages: 2,
     description:
       'A newer, catheter-free bladder test: a small wireless sensor records bladder pressure during normal daily activity for more lifelike readings — how it works and what to expect.',
@@ -449,6 +470,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Evaluation Under Anesthesia',
     category: 'Tests & Imaging',
     subcategory: 'Kidney & Ureter Tests',
+    languages: ['es'],
     pages: 2,
     description:
       'A detailed exam to map a narrowing of the ureter while asleep — any combination of ureteroscopy, retrograde and antegrade pyelogram, and cystography — to plan the right repair.',
@@ -909,6 +931,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
@@ -919,6 +942,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
+    languages: ['es'],
     pages: 2,
     description:
       'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
