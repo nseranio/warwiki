@@ -206,7 +206,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — the female-specific options from pelvic-floor exercises to a pessary, bulking injection, or mid-urethral sling.',
@@ -217,7 +217,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, ProACT adjustable balloons, artificial urinary sphincter).',
@@ -396,7 +396,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
@@ -407,7 +407,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
@@ -417,7 +417,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Retrograde Urethrogram (RUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'An X-ray that maps the urethra using a contrast dye — what the test is, how to prepare, and what to expect during and after.',
@@ -593,7 +593,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pyeloplasty',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Surgery to fix a blockage where the kidney drains into the ureter (UPJ obstruction) — usually keyhole (robotic/laparoscopic): how it works, preparing, the internal stent, and recovery.',
@@ -860,7 +860,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Sacral Neuromodulation',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
@@ -916,7 +916,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
@@ -940,7 +940,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'Two adjustable silicone balloons placed beside the urethra to reduce leakage after prostate surgery — minimally invasive, reversible, and fine-tuned in the office through a scrotal port. Best for mild-to-moderate, non-radiated stress incontinence.',
@@ -973,7 +973,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi'],
+    languages: ['es', 'zh', 'vi', 'fr'],
     pages: 2,
     description:
       'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
