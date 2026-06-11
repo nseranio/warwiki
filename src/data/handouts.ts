@@ -191,6 +191,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Overactive Bladder (OAB)',
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
+    languages: ['es'],
     pages: 2,
     description:
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
