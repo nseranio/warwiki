@@ -285,7 +285,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
     audience: 'female',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
@@ -370,7 +370,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
@@ -557,7 +557,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
@@ -568,7 +568,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
@@ -579,7 +579,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
@@ -673,7 +673,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pelvic-Floor Exercises & Bladder Training',
     category: 'Conservative & Self-Care',
     subcategory: 'Bladder & Pelvic-Floor Training',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Safe, free, proven first-line care for leaks and urgency — how to find and exercise the right muscles, a simple daily routine, and bladder training to wait longer between trips.',
@@ -749,7 +749,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
@@ -803,7 +803,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Erectile Dysfunction Medicines',
     audience: 'male',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
@@ -846,7 +846,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Percutaneous Tibial Nerve Stimulation (PTNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'A drug-free office treatment for overactive bladder using gentle nerve stimulation at the ankle — painless ~30-minute sessions, typically weekly for 12 weeks then maintenance.',
@@ -1013,7 +1013,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Pelvic Floor & Perineal Repair',
     audience: 'female',
-    languages: ['es', 'zh'],
+    languages: ['es', 'zh', 'vi'],
     pages: 2,
     description:
       'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
