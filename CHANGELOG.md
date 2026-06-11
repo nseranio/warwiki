@@ -6,6 +6,34 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-10 (later 5) — Handout gallery: ITNS/ACT/ProACT, ProACT on male-SUI, taxonomy cleanup, listener off, Italian + full Spanish localization (80/80)
+
+Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in preview at each stage (0 console errors). A long session spanning content adds, taxonomy/UX cleanup, and the first full handout translation (Spanish). **Gallery 78 → 80; languages 10 → 11; Spanish now live on all 80.**
+
+**Content adds / edits.**
+- **New Implantable Tibial Nerve Stimulation (ITNS)** handout — Office Procedures › Nerve Stimulation for OAB, beside PTNS + SNM. One flexible sheet across both device classes (eCoin auto-battery / Revi ankle-wearable), grounded in the iTNM clinical page. `audience: all`.
+- **New ACT (female) + ProACT (male) adjustable-balloon** handouts — separate sheets (anatomy/access/availability diverge), Procedures & Surgery › Urinary Leakage. ProACT FDA-framed; ACT framed "availability varies by country" rather than a hard regulatory claim. Audience-tagged male/female. Grounded in the ProACT clinical page + den Hoedt & Blok 2024 ProACT/ACT review.
+- **ProACT added as an option on the male-SUI handout** — into the treatment ladder (between male sling and AUS), glossary, the "will it get better" Q-box, and the gallery card description.
+- **Removed "Surgery: What to Expect"**; its sibling subgroup "Before & After Surgery" then held a single card, so **folded "Choices Before Prolapse Repair Surgery" into Prolapse Surgery** and dropped the empty subgroup from `HANDOUT_SUBCATEGORY_ORDER`.
+
+**UX / platform.**
+- **TTS "Listen to article" removed** from the gallery page via `hide_title: true` (the visible `# WARWIKI Patient Handouts` H1 comes from the markdown body, so it stays). The listener is gated on `frontMatter.hide_title` in [DocItem/Content](src/theme/DocItem/Content/index.tsx).
+- **Italian added** to `HANDOUT_LANGUAGES` (after French).
+
+**Full Spanish localization — all 80 handouts (es).** New optional asset pipeline exercised end-to-end. 3 hand-translated to prove the loop, then **three parallel translator workflows** (one agent per handout, ~10 concurrent) reading each `<slug>.html` and writing `<slug>.es.html` against a **shared glossary** for term consistency (formal "usted", ~6–8th-grade neutral Latin-American Spanish). Main loop then rendered each → `<slug>.es.pdf` + `<slug>.es.jpg`, ran the overflow gate, wired `languages: ['es']`, built, and committed in batches. **16 dense sheets overflowed page 2** (Spanish runs ~15% longer) and were hand-trimmed — tightening wording + shortening verbose warn-box headers, **no clinical content cut**. A brevity instruction added to the translator prompt after the first round cut overflow from ~27% to ~14% of sheets. Final: 80/80 es, all assets present, every sheet gate-clean, 0 console errors.
+
+**Durable lessons (this session).**
+- **Workflow recovery:** background workflows die when the session is interrupted, and long runs can hit the **session usage limit**; the **on-disk `.es.html` files are the durable checkpoint**, so always recompute the missing set and re-run only those (don't trust the workflow's own completion notification — add an independent background monitor that exits when the expected file count is reached).
+- **Workflow `args` arrives as a string** in the script — parse with `typeof args === 'string' ? JSON.parse(args) : args`.
+- **zsh does not word-split** unquoted `$var` or `$(...)` — render loops over a slug list must use a literal word list or `while IFS= read -r s; do … done < file`.
+- **Overflow-trim playbook:** page height = the taller column; trim that one (usually the right: post-op bullets + warn + "Tres cosas"). The full-width qbox cuts page height directly. A persistent **+1px pageOvf is a sub-pixel rounding artifact** (content visually complete, `colsOvf=0`) — accept it.
+- Translator agents may write the file but get rate-limited on the **return**, so the file exists though the run reports it failed/null — reconcile against disk, not the result list.
+- Auth: if `git push` fails with "Invalid username or token", run **`gh auth setup-git`** (gh was logged in; git just wasn't using it).
+
+**Next languages:** same loop per language (relaunch workflow + glossary → render → gate → wire). ~80 sheets each. **Arabic needs `dir="rtl"`** in the master + a glossary pass. Workflow in memory `project_patient_handouts_workflow.md`; detail here.
+
+---
+
 ## 2026-06-10 (later 4) — Handout gallery: finer Conditions taxonomy + Women/Men audience facet
 
 1 commit, fast-forwarded to `main`. Typecheck + build + lint clean; verified in preview (78 cards, 0 console errors, facet counts correct). Pure data + component change (no new handouts, no re-render) — readies the gallery for the translation pass.

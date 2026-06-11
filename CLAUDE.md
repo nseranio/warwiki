@@ -4,7 +4,30 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-10 (later 4) — Handout gallery: finer Conditions taxonomy + Women/Men audience facet
+## Current Handoff - 2026-06-10 (later 5) — Handouts: ITNS/ACT/ProACT adds, taxonomy/UX cleanup, listener off, Italian + FULL Spanish localization (80/80)
+
+Many commits, all fast-forwarded to `main`. Typecheck + build clean throughout; gallery verified in preview at each stage (0 console errors). **Gallery 78 → 80; languages 10 → 11; Spanish now live on all 80 handouts.**
+
+**Content.** New **ITNS** handout (Office Procedures › Nerve Stimulation for OAB; one flexible sheet across eCoin/Revi). New **ACT (female)** + **ProACT (male)** adjustable-balloon sheets (separate, sex-split; ProACT FDA-framed, ACT "availability varies by country"). **ProACT added as an option on the male-SUI handout** (treatment ladder + glossary + Q-box + card description). **Removed "Surgery: What to Expect"**; folded its orphaned sibling **"Choices Before Prolapse Repair Surgery" into Prolapse Surgery** and dropped the empty "Before & After Surgery" subgroup.
+
+**UX.** **TTS "Listen to article" removed** from the gallery via `hide_title: true` (the `# WARWIKI Patient Handouts` H1 is markdown-body, so it stays). **Italian** added to `HANDOUT_LANGUAGES`.
+
+**Full Spanish localization (all 80, `es`).** 3 hand-done to prove the loop, then **three parallel translator workflows** (one agent per handout, shared glossary, formal "usted", ~6–8th-grade neutral LatAm Spanish) writing `<slug>.es.html`; main loop rendered `<slug>.es.pdf` + `<slug>.es.jpg`, ran the overflow gate, wired `languages: ['es']`, built, committed in batches. **16 dense sheets overflowed page 2** (Spanish ~15% longer) and were **hand-trimmed (no clinical content cut)**; a brevity instruction added to the prompt cut overflow ~27% → ~14%. 80/80 es, all assets present, every sheet gate-clean.
+
+**Durable lessons (carry forward).**
+- **Workflow recovery:** background workflows die on session interrupt and long runs can hit the **session usage limit**; the **on-disk `.es.html` files are the checkpoint** — recompute the missing set and re-run only those. Don't trust the workflow's own completion notification; add an **independent background monitor** that exits at the expected file count.
+- **Workflow `args` arrives as a string** → `typeof args === 'string' ? JSON.parse(args) : args`.
+- **zsh does not word-split** unquoted `$var`/`$(...)` — render loops use a literal word list or `while IFS= read -r s; … < file`.
+- **Overflow-trim playbook:** page height = the taller column (usually the right: post-op bullets + warn + "Tres cosas"); the full-width qbox cuts height directly; a stuck **+1px pageOvf is a sub-pixel rounding artifact** (`colsOvf=0`, page visually complete) — accept it.
+- Translator agents may write the file but get rate-limited on the **return** (file exists though reported null) — reconcile against disk.
+- `git push` "Invalid username or token" → **`gh auth setup-git`**.
+- **Next languages:** same loop per language (~80 sheets each). **Arabic needs `dir="rtl"`** in the master + glossary pass. Asset naming `<slug>.<code>.pdf` / `.jpg`; add the code to each handout's `languages` array.
+
+Full detail in `CHANGELOG.md` under 2026-06-10 (later 5). Prior 2026-06-10 (later 4) handoff (audience facet + finer taxonomy) follows.
+
+---
+
+## Previous Handoff - 2026-06-10 (later 4) — Handout gallery: finer Conditions taxonomy + Women/Men audience facet
 
 1 commit, fast-forwarded to `main`. Typecheck + build + lint clean; verified in preview (78 cards, 0 console errors, facet counts correct). Pure data + component change — no new handouts, no re-render. Readies the gallery for the translation pass.
 
