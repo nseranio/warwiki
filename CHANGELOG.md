@@ -6,6 +6,21 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-12 (later 2) — Handouts: Cantonese (`yue`) infrastructure + per-batch font path PROVEN (no translations yet)
+
+Set up the Cantonese localization pipeline and **resolved the open per-batch-vs-pre-subset question** flagged in the prior handoff — under a tight budget with likely interruption, so this is infra + the decisive font test only, **no sheets translated yet**.
+
+- **`yue` added to `HANDOUT_LANGUAGES`** in `src/data/handouts.ts` (label `粵語`, englishLabel `Cantonese`), positioned 10th, after `ru` and before the coming-soon `it`/`ja`. Typecheck clean. Until handouts carry `yue` in their `languages` array the switcher shows it as a coming-soon tab (existing behavior).
+- **Font: Noto Sans HK, full face, embedded (NOT subset).** Downloaded the google/fonts variable TTF → `fontTools varLib.instancer` to static Reg(400)+Bold(700) → `fonts/NotoHK-Reg.ttf` / `NotoHK-Bold.ttf` (~7 MB/face, off-repo). Two `@font-face` rules added to off-repo `_handout.css`.
+- **Font-ordering subtlety (important):** Noto Sans HK uses **Traditional** glyph forms, so it must NOT precede Noto Sans SC in the shared body stack — that would render Simplified `zh` (which links the same `_handout.css`) with Traditional forms. Solution: a **`[lang]`-scoped override** — `html[lang="yue"] body, html[lang="zh-HK"] body, html[lang="zh-Hant-HK"] body { font-family:'Noto Sans HK', … }` — puts HK first for Cantonese sheets only. `yue` masters set `<html lang="yue">`, LTR (no `dir`).
+- **`render-yue.sh`** written (clone of `render-ar.sh`, LTR): `--headless=new --virtual-time-budget=20000` so the embedded face loads before print; produces `.yue.pdf` + `.yue.jpg`, then runs the overflow gate (`/tmp/inject.html` scaffold → `id="MX"` dump).
+- **`_YUE_TRANSLATOR_GUIDE.md`** written: emphasizes **true written Cantonese** (書面粵語 — 係/嘅/喺/咗/唔/睇/啲/同, address as 你), **Traditional characters**, `<html lang="yue">`, structure-preservation, label map + glossary, BE CONCISE.
+- **PER-BATCH PATH PROVEN.** Probe sheet (a linked master set to `lang="yue"` with Cantonese-specific chars 嘅咗喺啲唔係睇 injected) rendered via `render-yue.sh`: the PDF embeds `+NotoSansHK` with **2 FontFile2 subset entries** (Reg+Bold) at only **62 KB** total, gate clean (pageOvf=0/colsOvf=0). So **Chrome `--print-to-pdf` auto-subsets the full 7 MB HK face into each PDF** — exactly like Arabic. **Cantonese uses the fast per-batch loop: NO `pyftsubset`, NO translate-all-first constraint.**
+
+**NEXT:** run the standard per-batch loop (8 batches × 10 Sonnet agents → `<slug>.yue.html` using `_YUE_TRANSLATOR_GUIDE.md` → `./render-yue.sh <slug>` → copy `.yue.pdf`/`.yue.jpg` to `static/handouts/` + `static/img/handouts/` → `node scripts/add-lang.js yue <slugs…>` → typecheck/build → commit per batch). Cantonese is compact (like zh) → expect little/no overflow trimming. **Open wrinkle to watch:** the 25 inline-`<style>` masters don't link `_handout.css`, so the `[lang]`-scoped HK override + `@font-face` won't reach their `.yue.html` automatically — for those, the agent must either link `_handout.css` or inline the HK `@font-face` + font-family. (Curiously `urethroplasty.ar.html` carries neither an `@font-face` nor `_handout.css` link yet is "live" — verify how the inline-master Arabic sheets actually embed their font before the inline-master Cantonese batch, and replicate that.) After Cantonese: Hindi (`hi`), then delete `it`/`ja`.
+
+---
+
 ## 2026-06-12 (later) — Handouts: FULL Russian (ru) localization (80/80 `ru`, Русский)
 
 8 batch commits + 1 infra, all fast-forwarded to `main`. Typecheck + build clean. **Russian now live on all 80 handouts — eight languages 100% complete (es, zh, vi, fr, ko, tl, ar, ru) + English base.** Same parallel workflow: off-repo `_RU_TRANSLATOR_GUIDE.md` (formal **вы**-register, concise, Russian medical glossary), 8 batches × 10 Sonnet agents → `<slug>.ru.html` (`<html lang="ru">`), `render-ru.sh` → assets, gate, `node scripts/add-lang.js ru …`, build, commit per batch. **No font work** — Cyrillic is covered by Inter (like es/vi/fr/tl), so `render-ru.sh` is plain `--headless=new` (no embedded font / virtual-time-budget). `ru` already sat 9th in `HANDOUT_LANGUAGES`.

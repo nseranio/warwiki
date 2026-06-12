@@ -4,7 +4,22 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-12 (later) — Handouts: FULL Russian (`ru`) localization (80/80, Русский)
+## Current Handoff - 2026-06-12 (later 2) — Handouts: Cantonese (`yue`) infra + per-batch font path PROVEN (0/80 translated)
+
+1 repo commit (the `yue` HANDOUT_LANGUAGES entry). Typecheck + build clean. **Infrastructure only — no Cantonese sheets translated yet** (set up under tight budget, expecting interruption). The big win: **the open per-batch-vs-pre-subset question is resolved — Cantonese uses the FAST per-batch loop.**
+
+**Done this session:**
+- `yue` (`粵語` / Cantonese) added to `HANDOUT_LANGUAGES` (10th, after `ru`, before coming-soon `it`/`ja`).
+- **Noto Sans HK** downloaded + instanced to static Reg/Bold (`fonts/NotoHK-Reg.ttf`/`NotoHK-Bold.ttf`, ~7 MB/face, off-repo, **full face, NOT subset**); two `@font-face` rules added to off-repo `_handout.css`.
+- **Font-ordering fix:** HK uses **Traditional** glyph forms → must NOT precede Noto Sans SC in the shared stack (would corrupt Simplified `zh`, which shares `_handout.css`). Added a **`[lang]`-scoped override**: `html[lang="yue"] body, html[lang="zh-HK"] body, html[lang="zh-Hant-HK"] body { font-family:'Noto Sans HK', … }`. `yue` masters set `<html lang="yue">`, LTR.
+- `render-yue.sh` (clone of `render-ar.sh`, LTR, `--virtual-time-budget=20000`) + `_YUE_TRANSLATOR_GUIDE.md` (true written Cantonese 書面粵語: 係/嘅/喺/咗/唔/睇/啲, Traditional chars, 你 register, label map + glossary).
+- **PER-BATCH PROVEN:** probe sheet (`lang="yue"` + 嘅咗喺啲唔係睇) rendered → PDF embeds `+NotoSansHK` (2 FontFile2 subsets, Reg+Bold) at only **62 KB**, gate clean. Chrome `--print-to-pdf` auto-subsets the full HK face into each PDF (like Arabic) → **NO `pyftsubset`, NO translate-all-first.**
+
+**NEXT (resume here):** run the standard per-batch loop — 8 batches × 10 Sonnet agents → `<slug>.yue.html` (guide: `_YUE_TRANSLATOR_GUIDE.md`) → `./render-yue.sh <slug>` (gate pageOvf=0/colsOvf=0) → `cp` `.yue.pdf`→`static/handouts/`, `.yue.jpg`→`static/img/handouts/` → `node scripts/add-lang.js yue <slugs…>` → `npm run typecheck && npm run build` → `git checkout -- src/data/stats.json` → commit + push main per batch. Cantonese is compact (like zh) → little/no overflow trimming. **Open wrinkle:** the 25 inline-`<style>` masters don't link `_handout.css`, so the HK `@font-face` + `[lang]` override won't auto-reach their `.yue.html` — for those, the agent must link `_handout.css` OR inline the HK `@font-face` + HK-first font-family. (Note: `urethroplasty.ar.html` has neither an `@font-face` nor a `_handout.css` link yet is "live" — verify how inline-master Arabic actually embeds its font and replicate before the inline-master Cantonese batch.) After Cantonese: Hindi (`hi`), then delete `it`/`ja` last. Roadmap in memory [[project_handout_language_roadmap]].
+
+---
+
+## Previous Handoff - 2026-06-12 (later) — Handouts: FULL Russian (`ru`) localization (80/80, Русский)
 
 9 commits (1 infra + 8 batches), all fast-forwarded to `main`. Typecheck + build clean. **Russian now live on all 80 handouts — eight languages 100% complete (es, zh, vi, fr, ko, tl, ar, ru) + English base.** Same parallel workflow: off-repo `_RU_TRANSLATOR_GUIDE.md` (formal **вы**, concise), 8 batches × 10 Sonnet agents → `<slug>.ru.html`, `render-ru.sh`, gate, `add-lang.js ru …`, build, commit per batch. **No font work** — Cyrillic covered by Inter (like es/vi/fr/tl); `render-ru.sh` is plain `--headless=new`. `ru` already sat 9th in `HANDOUT_LANGUAGES`. **Russian is verbose (heaviest-trimming with fr/tl)** — ~16/80 dense sheets overflowed page 2 by 40–189px (IPP, male-sling, urethroplasty, suprapubic, neobladder the worst); hand-trimmed each with the standard playbook (drop full-width qbox swelling/catheter sentence dup'd in the first After bullet; merge two adjacent same-window After bullets; drop the takeaway's trailing "звоните…" already in the warn box; tighten long bullets). ≤20px residuals are rounding (colsOvf=0).
 
