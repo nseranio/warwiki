@@ -375,7 +375,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
@@ -397,7 +397,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
@@ -408,7 +408,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
@@ -754,7 +754,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
@@ -851,7 +851,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Percutaneous Tibial Nerve Stimulation (PTNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A drug-free office treatment for overactive bladder using gentle nerve stimulation at the ankle — painless ~30-minute sessions, typically weekly for 12 weeks then maintenance.',
@@ -861,7 +861,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Sacral Neuromodulation',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
@@ -917,7 +917,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
@@ -941,7 +941,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Two adjustable silicone balloons placed beside the urethra to reduce leakage after prostate surgery — minimally invasive, reversible, and fine-tuned in the office through a scrotal port. Best for mild-to-moderate, non-radiated stress incontinence.',
@@ -974,7 +974,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
@@ -1018,7 +1018,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Pelvic Floor & Perineal Repair',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
