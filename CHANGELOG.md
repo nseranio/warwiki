@@ -6,9 +6,9 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
-## 2026-06-12 — Handouts: Arabic (ar) localization started — RTL pipeline built + 31/80 live (العربية)
+## 2026-06-12 — Handouts: FULL Arabic (ar) localization (80/80 `ar`, العربية) — first RTL language
 
-3 batch commits + 1 infra commit, all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on 31 of 80 handouts (pilot + batches 1–3); the RTL pipeline is fully built and validated.** Stopped mid-language at a clean 31/80 boundary when the parallel translator agents hit the session usage limit (batch 4 wrote nothing — verified no stray files; repo is consistent at 31 `.ar.html` / 31 PDFs / 31 JPGs / 31 entries).
+8 batch commits + 1 infra commit, all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on all 80 handouts — seven languages 100% complete (es, zh, vi, fr, ko, tl, ar) + English base.** (Run in two sittings: 31/80 hit the session usage limit at batch 4, resumed next day for batches 4–8.) Every sheet gate-clean, zero overflow (Arabic is compact like CJK).
 
 **Arabic is the first RTL + first embedded-font-non-CJK language.** New pieces:
 - **Font:** downloaded Noto Sans Arabic (variable TTF, google/fonts), `instancer` → static Regular(400)+Bold(700) (~194 KB/face, off-repo in `fonts/`). **Key finding: NO `pyftsubset` step needed.** Unlike CJK (17 MB source), the full Arabic face is small, and Chrome's `--print-to-pdf` path **auto-subsets the embedded web font into each PDF** (verified: each PDF embeds `HBAAAA+NotoSansArabic-Regular` via FontFile2, ~190–410 KB). So each sheet is self-contained → Arabic uses the **fast per-batch Latin-style loop, NOT the translate-all-first CJK loop.**
@@ -20,7 +20,7 @@ For commit-level detail run `git log --oneline`.
 
 **Zero overflow on all 31** — Arabic is compact (like CJK/Korean), every sheet gate-clean with no hand-trimming. Pilot (`5-alpha-reductase-inhibitors`) + dense AUS sheet visually verified (RTL mirrors cleanly, glyphs shape/join correctly, PDF not blank).
 
-**Next: finish ar (49 sheets remain — batches 4–8).** The remaining 49 slugs are the `comm`-diff of `handouts.ts` slugs vs existing `*.ar.html`. Same loop: 10 Sonnet agents → `.ar.html` → `render-ar.sh` (gate) → copy PDFs/JPGs to `static/` → `node scripts/add-lang.js ar <slugs…>` → typecheck+build → commit/push per batch. After ar: **ru** (Cyrillic — Inter covers it, no font work), **it** (Latin), **ja** (CJK — Noto Sans **JP**, same treatment as zh/ko).
+**Next (user roadmap 2026-06-12, supersedes the old list): Russian (`ru`) → Cantonese → Hindi (`hi`); then delete the other coming-soon langs (it, ja) LAST.** See [[project_handout_language_roadmap]]. `ru` = Cyrillic, Inter covers it, no font work (Latin-style per-batch loop). Cantonese = Traditional Han + Cantonese chars, needs a CJK embedded font (Noto Sans HK/TC), translate-all-first + subset like zh/ko. Hindi = Devanagari, needs embedded Noto Sans Devanagari (same diagnostic as Arabic), LTR.
 
 ## 2026-06-11 (later 3) — Handouts: full Tagalog/Filipino localization (80/80 `tl`)
 

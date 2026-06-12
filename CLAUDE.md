@@ -4,18 +4,21 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-12 — Handouts: Arabic (`ar`) localization STARTED — RTL pipeline built + 31/80 live (العربية)
+## Current Handoff - 2026-06-12 — Handouts: FULL Arabic (`ar`) localization (80/80, العربية) — first RTL language
 
-4 commits (1 infra + 3 batches), all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on 31 of 80 handouts (pilot + batches 1–3) — the RTL pipeline is fully built and validated.** Stopped mid-language at a clean 31/80 boundary when the parallel translator agents hit the **session usage limit** (batch 4 wrote nothing; verified no stray files — repo consistent at 31 `.ar.html` / 31 PDFs / 31 JPGs / 31 entries, git clean).
+9 commits (1 infra + 8 batches), all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on all 80 handouts — seven languages 100% complete (es, zh, vi, fr, ko, tl, ar) + English base.** Every sheet gate-clean, zero overflow (Arabic compact like CJK). Pilot + dense AUS sheet visually verified (RTL mirrors cleanly, glyphs shape/join, PDF not blank).
 
-**Arabic is the first RTL language + first embedded-font-non-CJK.** Durable findings, full detail in `CHANGELOG.md` under 2026-06-12:
+**NEW language roadmap (user, 2026-06-12 — supersedes the old es…ja list):** next is **Russian (`ru`) → Cantonese → Hindi (`hi`)**, then **delete the other coming-soon langs (Italian `it`, Japanese `ja`) LAST** (build first, delete last — don't waste tokens deleting early). Saved in memory [[project_handout_language_roadmap]].
+- **ru** (do first): Cyrillic — Inter covers it, **no font work**, fast Latin-style per-batch loop (like es/vi/fr/tl). `ru` already sits 9th in `HANDOUT_LANGUAGES`. Need `_RU_TRANSLATOR_GUIDE.md` + `render-ru.sh` (plain `--headless=new`, no virtual-time-budget) + run `node scripts/add-lang.js ru …`.
+- **Cantonese** (next): written Cantonese = Traditional Han + Cantonese-specific chars → needs a CJK embedded font (Noto Sans **HK** or **TC**), **translate-all-first → subset → render-all** like zh/ko. NOT yet in `HANDOUT_LANGUAGES` — add a `{code, label, englishLabel}` entry (pick a code, e.g. `yue`).
+- **Hindi** (`hi`, last): Devanagari → needs embedded **Noto Sans Devanagari** (same diagnostic as Arabic: instance Reg/Bold, add `@font-face`, render with `--virtual-time-budget`; no pre-subset needed if the face is small), **LTR** so no RTL work. Add to `HANDOUT_LANGUAGES`.
+
+**Arabic pipeline reference (first RTL + first embedded-font-non-CJK).** Durable findings, full detail in `CHANGELOG.md` under 2026-06-12:
 - **NO `pyftsubset` needed.** Noto Sans Arabic (variable → instanced Reg/Bold, ~194 KB/face, off-repo `fonts/`) is small enough to embed whole; **Chrome `--print-to-pdf` auto-subsets the web font into each PDF** (verified `HBAAAA+NotoSansArabic-Regular` FontFile2). Each sheet is self-contained → Arabic uses the **fast per-batch loop, NOT the translate-all-first CJK loop.**
 - **RTL:** masters set `<html lang="ar" dir="rtl">` (html tag only). Added a `[dir="rtl"]` block to `_handout.css` mirroring every physical prop (padding-left→right, border-left→right on .opt/.qbox/.warn, table text-align→right, `ol.steps li::before` left→right) and **resetting `letter-spacing:normal`** (negative letter-spacing breaks Arabic joining). `.brand` forced `direction:ltr` to keep the WARWIKI wordmark Latin. Flex rows (.cols/.band/.foot) auto-reverse — header + 2-col mirror for free.
 - **BiDi:** wrap a digit+Latin token like `5-ARI` in `<bdi>` (else it flips to `ARI-5` at a right-aligned line start). Pure-Latin acronyms (BPH/PSA/AUS) and digit+Arabic (`3–6 أشهر`) need none.
 - **`render-ar.sh`** = `render-ko.sh` clone (`--headless=new --virtual-time-budget=20000` so the font loads before print → no blank PDF). **`_AR_TRANSLATOR_GUIDE.md`** off-repo (formal MSA, concise, Western digits, `<bdi>` rule, Arabic label map + glossary). `ar` already sat 8th in `HANDOUT_LANGUAGES` with `dir:'rtl'` — no switcher change.
-- **Zero overflow on all 31** (Arabic compact like CJK) — every sheet gate-clean, no trimming. Pilot + dense AUS sheet visually verified (RTL mirrors cleanly, glyphs shape/join, PDF not blank).
-
-**Next: FINISH ar — 49 sheets remain (batches 4–8).** Remaining slugs = `comm -23` of `handouts.ts` slugs vs existing `*.ar.html` basenames. Same loop per batch of 10: Sonnet agents → `.ar.html` → `./render-ar.sh <slug>` (gate must read pageOvf=0/colsOvf=0) → `cp` PDFs to `static/handouts/` + JPGs to `static/img/handouts/` → `node scripts/add-lang.js ar <slugs…>` → `npm run typecheck && npm run build` → `git checkout -- src/data/stats.json` → commit + push main. **Pitfall:** zsh doesn't word-split unquoted vars — drive render/copy loops with `while IFS= read -r s; … < file`, not `for s in $VAR`. After ar: **ru** (Cyrillic, Inter covers it, no font), **it** (Latin), **ja** (CJK — Noto Sans **JP**, zh/ko treatment).
+- **`render-ar.sh`** mirrors `render-ko.sh` (`--virtual-time-budget=20000` so the font loads before print). Batch loop: 10 Sonnet agents → `.ar.html` → `./render-ar.sh <slug>` (gate must read pageOvf=0/colsOvf=0) → `cp` PDFs to `static/handouts/` + JPGs to `static/img/handouts/` → `node scripts/add-lang.js ar <slugs…>` → `npm run typecheck && npm run build` → `git checkout -- src/data/stats.json` → commit + push main. **Pitfall:** zsh doesn't word-split unquoted vars — drive render/copy loops with `while IFS= read -r s; … < file`, not `for s in $VAR`.
 
 ---
 
