@@ -438,7 +438,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystoscopy',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A look inside the bladder and urethra with a thin camera — flexible (awake, in the office) or rigid (asleep, in the operating room): how to prepare and what to expect during and after.',
@@ -519,7 +519,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
@@ -530,7 +530,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
@@ -541,7 +541,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
@@ -562,7 +562,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
@@ -584,7 +584,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
@@ -605,7 +605,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
@@ -616,7 +616,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
@@ -646,7 +646,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ileal Conduit',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
@@ -656,7 +656,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Orthotopic Neobladder',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
