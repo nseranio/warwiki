@@ -6,9 +6,19 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
-## 2026-06-12 (later 2) — Handouts: Cantonese (`yue`) infrastructure + per-batch font path PROVEN (no translations yet)
+## 2026-06-12 (later 2) — Handouts: FULL Cantonese (`yue`) localization (80/80, 粵語)
 
-Set up the Cantonese localization pipeline and **resolved the open per-batch-vs-pre-subset question** flagged in the prior handoff — under a tight budget with likely interruption, so this is infra + the decisive font test only, **no sheets translated yet**.
+9 commits (1 infra + 8 batches), all fast-forwarded to `main`. Typecheck + build clean. **Cantonese now live on all 80 handouts — ninth fully-translated language (es, zh, vi, fr, ko, tl, ar, ru, yue) + English base.** Off-repo `_YUE_TRANSLATOR_GUIDE.md` (true written Cantonese 書面粵語 — 係/嘅/喺/咗/唔/睇/啲, Traditional chars, 你 register, label map + glossary), 8 batches × 10 Sonnet agents → `<slug>.yue.html`, `render-yue.sh`, overflow gate, `node scripts/add-lang.js yue …`, build, commit per batch. **Zero overflow on all 80** (Cantonese compact like zh — no hand-trimming). `yue` is 10th in `HANDOUT_LANGUAGES`.
+
+**Font findings (durable — carry into Hindi):** written Cantonese = Traditional Han + Cantonese-specific chars (嘅/咗/喺/啲) that Noto Sans SC lacks → embed **Noto Sans HK, full face (NOT subset)**: google/fonts variable → `fontTools varLib.instancer` Reg/Bold (~7 MB/face, off-repo `fonts/NotoHK-*.ttf`). **Per-batch path proven like Arabic** — Chrome `--print-to-pdf` auto-subsets the embedded HK face into each PDF (`+NotoSansHK` FontFile2, ~130–160 KB/sheet), so NO `pyftsubset`, NO translate-all-first.
+- **Font-ordering:** HK uses Traditional glyph forms → must not precede Noto Sans SC in the shared body stack (would corrupt Simplified zh). Added a `[lang]`-scoped override in `_handout.css` (`html[lang="yue"] body, html[lang="zh-HK"] body, html[lang="zh-Hant-HK"] body { font-family:'Noto Sans HK', … }`). `yue` masters set `<html lang="yue">`, LTR.
+- **Inline-master font injection:** 56 linked masters get HK via `_handout.css`; the 25 inline-`<style>` masters get the two HK `@font-face` rules + `'Noto Sans HK'` prepended to the body `font-family:'Inter'…` injected by a one-shot Python pass before rendering. Verified inline PDFs embed NotoSansHK, gate-clean. (Flags a latent risk that the inline-master Arabic `.ar.pdf` may lack an embedded font — audit separately.)
+
+**NEXT:** Hindi (`hi`, Devanagari → Noto Sans Devanagari, LTR, same loop), then delete coming-soon `it`/`ja` last.
+
+The original infra-only writeup (per-batch font test, before translations ran) follows below the first paragraph of this entry's history; the work was completed in the same session.
+
+### Infra setup (same session, before the batches)
 
 - **`yue` added to `HANDOUT_LANGUAGES`** in `src/data/handouts.ts` (label `粵語`, englishLabel `Cantonese`), positioned 10th, after `ru` and before the coming-soon `it`/`ja`. Typecheck clean. Until handouts carry `yue` in their `languages` array the switcher shows it as a coming-soon tab (existing behavior).
 - **Font: Noto Sans HK, full face, embedded (NOT subset).** Downloaded the google/fonts variable TTF → `fontTools varLib.instancer` to static Reg(400)+Bold(700) → `fonts/NotoHK-Reg.ttf` / `NotoHK-Bold.ttf` (~7 MB/face, off-repo). Two `@font-face` rules added to off-repo `_handout.css`.
