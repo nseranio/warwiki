@@ -76,6 +76,7 @@ export const HANDOUT_LANGUAGES: HandoutLanguage[] = [
   {code: 'ar', label: 'العربية', englishLabel: 'Arabic', dir: 'rtl'},
   {code: 'ru', label: 'Русский', englishLabel: 'Russian'},
   {code: 'yue', label: '粵語', englishLabel: 'Cantonese'},
+  {code: 'hi', label: 'हिन्दी', englishLabel: 'Hindi'},
   {code: 'it', label: 'Italiano', englishLabel: 'Italian'},
   {code: 'ja', label: '日本語', englishLabel: 'Japanese'},
 ];
@@ -248,7 +249,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Asymptomatic Bacteriuria',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Bacteria found in the urine when you feel completely fine — why this usually should NOT be treated with antibiotics, the few exceptions (pregnancy, before some procedures), and what symptoms to watch for.',
@@ -258,7 +259,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Asymptomatic Microscopic Hematuria',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
@@ -279,7 +280,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
@@ -310,7 +311,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Accidental Bowel Leakage (Fecal Incontinence)',
     category: 'Conditions & Symptoms',
     subcategory: 'Bowel & Anorectal',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Losing control of gas or stool — common and treatable. What causes it and the step-by-step options from firming the stool and biofeedback to nerve stimulation or sphincter repair.',
@@ -386,7 +387,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'When the penis becomes hidden beneath belly/scrotal skin and fat in adults — the causes (weight, scarring, lichen sclerosus, lymphedema) and the reconstructive repair (release, skin graft, fat-pad removal).',
@@ -766,7 +767,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Anticholinergics (for Overactive Bladder)',
     category: 'Medications',
     subcategory: 'Overactive Bladder Medicines',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Pills that calm an overactive bladder (oxybutynin, solifenacin, tolterodine, others) — how they work, how to take them, the dry-mouth/constipation effects, and the cognitive caution in older adults.',
@@ -786,7 +787,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Alpha Blockers (for Prostate / Urinary Flow)',
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'The usual first medicine for an enlarged prostate (tamsulosin, alfuzosin, silodosin, others) — fast relief of urine-flow symptoms, dizziness and retrograde-ejaculation effects, and the cataract-surgery (IFIS) warning.',
@@ -797,7 +798,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Pills that gradually shrink an enlarged prostate (finasteride, dutasteride) over 3–6 months, lowering retention and surgery risk — plus the key point that they halve the PSA test and the pregnancy-handling caution.',
@@ -906,7 +907,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A heat-free, ultrasound-guided waterjet that precisely removes obstructing prostate tissue through the urethra — flow results like TURP with a better chance of preserving ejaculation; how it works and recovery.',
@@ -952,7 +953,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Two adjustable silicone balloons placed beside the urethra for female stress incontinence — minimally invasive, reversible, and fine-tuned in the office through a labial port. Often considered for recurrent leakage or a weak sphincter; availability varies by country.',
