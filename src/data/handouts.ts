@@ -195,7 +195,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Overactive Bladder (OAB)',
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
@@ -227,7 +227,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Interstitial Cystitis / Bladder Pain Syndrome',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
@@ -267,7 +267,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Nocturia',
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
@@ -299,7 +299,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Musculoskeletal Pelvic Pain',
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'Pelvic pain coming from tight, overactive muscles and nerves rather than the bladder or organs — real and treatable even when scans are normal, with pelvic-floor physical therapy as the cornerstone.',
@@ -529,7 +529,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
@@ -540,7 +540,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
@@ -604,7 +604,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
@@ -655,7 +655,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Orthotopic Neobladder',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
@@ -731,7 +731,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
@@ -929,7 +929,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
     pages: 2,
     description:
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
