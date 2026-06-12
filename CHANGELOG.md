@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-12 (later) — Handouts: FULL Russian (ru) localization (80/80 `ru`, Русский)
+
+8 batch commits + 1 infra, all fast-forwarded to `main`. Typecheck + build clean. **Russian now live on all 80 handouts — eight languages 100% complete (es, zh, vi, fr, ko, tl, ar, ru) + English base.** Same parallel workflow: off-repo `_RU_TRANSLATOR_GUIDE.md` (formal **вы**-register, concise, Russian medical glossary), 8 batches × 10 Sonnet agents → `<slug>.ru.html` (`<html lang="ru">`), `render-ru.sh` → assets, gate, `node scripts/add-lang.js ru …`, build, commit per batch. **No font work** — Cyrillic is covered by Inter (like es/vi/fr/tl), so `render-ru.sh` is plain `--headless=new` (no embedded font / virtual-time-budget). `ru` already sat 9th in `HANDOUT_LANGUAGES`.
+
+**Russian is verbose — the heaviest-trimming language yet** (alongside French/Tagalog). ~16 of 80 sheets overflowed page 2 (the dense surgical/device sheets by 40–189px: IPP +161, male-urethral-sling +165, urethroplasty +159, suprapubic-catheter +126, neobladder +117). Hand-trimmed each with the standard playbook — drop the full-width qbox's swelling/catheter sentence (duplicated in the first After bullet), merge the two adjacent After bullets that both cover the same recovery window, drop the takeaway's trailing "звоните при температуре…" clause already spelled out in the warn box, and tighten long bullets. No clinical content cut; ≤20px residuals are fixed-element rounding (colsOvf=0). The new language roadmap ([[project_handout_language_roadmap]]) sets the next targets.
+
+**Next: Cantonese → Hindi (`hi`), then delete the other coming-soon langs (it, ja) LAST.** Cantonese = Traditional Han + Cantonese-specific chars → needs a CJK embedded font (Noto Sans HK/TC), translate-all-first → subset → render-all like zh/ko; NOT yet in `HANDOUT_LANGUAGES` (add an entry, e.g. code `yue`). Hindi = Devanagari → embedded Noto Sans Devanagari (Arabic-style diagnostic), LTR.
+
 ## 2026-06-12 — Handouts: FULL Arabic (ar) localization (80/80 `ar`, العربية) — first RTL language
 
 8 batch commits + 1 infra commit, all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on all 80 handouts — seven languages 100% complete (es, zh, vi, fr, ko, tl, ar) + English base.** (Run in two sittings: 31/80 hit the session usage limit at batch 4, resumed next day for batches 4–8.) Every sheet gate-clean, zero overflow (Arabic is compact like CJK).
