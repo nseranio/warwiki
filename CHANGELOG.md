@@ -6,6 +6,22 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-12 — Handouts: Arabic (ar) localization started — RTL pipeline built + 31/80 live (العربية)
+
+3 batch commits + 1 infra commit, all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on 31 of 80 handouts (pilot + batches 1–3); the RTL pipeline is fully built and validated.** Stopped mid-language at a clean 31/80 boundary when the parallel translator agents hit the session usage limit (batch 4 wrote nothing — verified no stray files; repo is consistent at 31 `.ar.html` / 31 PDFs / 31 JPGs / 31 entries).
+
+**Arabic is the first RTL + first embedded-font-non-CJK language.** New pieces:
+- **Font:** downloaded Noto Sans Arabic (variable TTF, google/fonts), `instancer` → static Regular(400)+Bold(700) (~194 KB/face, off-repo in `fonts/`). **Key finding: NO `pyftsubset` step needed.** Unlike CJK (17 MB source), the full Arabic face is small, and Chrome's `--print-to-pdf` path **auto-subsets the embedded web font into each PDF** (verified: each PDF embeds `HBAAAA+NotoSansArabic-Regular` via FontFile2, ~190–410 KB). So each sheet is self-contained → Arabic uses the **fast per-batch Latin-style loop, NOT the translate-all-first CJK loop.**
+- **RTL layout:** masters set `<html lang="ar" dir="rtl">` (only the html tag; no inner `dir`). Added a `[dir="rtl"]` override block to `_handout.css` that mirrors every physical property the base layout uses — `padding-left`→`padding-right` (ul, ol.steps, .warn ul, .box.take ol), `border-left`→`border-right` (.opt, .qbox, .warn), `text-align:left`→`right` (table.cmp), `ol.steps li::before{left:0}`→`{right:0}` — and **resets `letter-spacing:normal`** on Arabic-bearing headings (negative letter-spacing breaks Arabic glyph joining). The `.brand` WARWIKI wordmark is forced `direction:ltr` to stay Latin. Flex rows (`.cols`, `.band`, `.foot`) auto-reverse in RTL, so the two-column layout and header band mirror correctly with no extra rules.
+- **BiDi gotcha:** a token mixing a Western digit with Latin letters/hyphen (e.g. `5-ARI`) gets visually reordered to `ARI-5` at a right-aligned line start. Fix = wrap ONLY such tokens in `<bdi>`. Pure-Latin acronyms (BPH, PSA, AUS) and digit+Arabic (`3–6 أشهر`) need none. Documented in the guide.
+- **`render-ar.sh`** mirrors `render-ko.sh` (needs `--headless=new --virtual-time-budget=20000` so the embedded font loads before print fires, else `font-display:block` prints invisible fallback → blank — the CJK lesson).
+- **`_AR_TRANSLATOR_GUIDE.md`** (off-repo): formal Modern Standard Arabic (الفصحى), be concise, Western digits, keep WARWIKI/warwiki.org/drug names in Latin, acronym-on-first-use, the `<bdi>` rule, plus Arabic section-label map + ~70-term medical glossary.
+- `ar` was already 8th in `HANDOUT_LANGUAGES` (after `tl`) with `dir: 'rtl'` predefined — no switcher reorder.
+
+**Zero overflow on all 31** — Arabic is compact (like CJK/Korean), every sheet gate-clean with no hand-trimming. Pilot (`5-alpha-reductase-inhibitors`) + dense AUS sheet visually verified (RTL mirrors cleanly, glyphs shape/join correctly, PDF not blank).
+
+**Next: finish ar (49 sheets remain — batches 4–8).** The remaining 49 slugs are the `comm`-diff of `handouts.ts` slugs vs existing `*.ar.html`. Same loop: 10 Sonnet agents → `.ar.html` → `render-ar.sh` (gate) → copy PDFs/JPGs to `static/` → `node scripts/add-lang.js ar <slugs…>` → typecheck+build → commit/push per batch. After ar: **ru** (Cyrillic — Inter covers it, no font work), **it** (Latin), **ja** (CJK — Noto Sans **JP**, same treatment as zh/ko).
+
 ## 2026-06-11 (later 3) — Handouts: full Tagalog/Filipino localization (80/80 `tl`)
 
 8 commits, all fast-forwarded to `main`. Typecheck + build clean. **Tagalog now live on all 80 handouts — six languages 100% complete (es, zh, vi, fr, ko, tl) + English base.**

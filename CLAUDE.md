@@ -4,11 +4,24 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-11 (later 4) — Handouts: FULL Tagalog/Filipino localization (80/80 `tl`)
+## Current Handoff - 2026-06-12 — Handouts: Arabic (`ar`) localization STARTED — RTL pipeline built + 31/80 live (العربية)
+
+4 commits (1 infra + 3 batches), all fast-forwarded to `main`. Typecheck + build clean. **Arabic now live on 31 of 80 handouts (pilot + batches 1–3) — the RTL pipeline is fully built and validated.** Stopped mid-language at a clean 31/80 boundary when the parallel translator agents hit the **session usage limit** (batch 4 wrote nothing; verified no stray files — repo consistent at 31 `.ar.html` / 31 PDFs / 31 JPGs / 31 entries, git clean).
+
+**Arabic is the first RTL language + first embedded-font-non-CJK.** Durable findings, full detail in `CHANGELOG.md` under 2026-06-12:
+- **NO `pyftsubset` needed.** Noto Sans Arabic (variable → instanced Reg/Bold, ~194 KB/face, off-repo `fonts/`) is small enough to embed whole; **Chrome `--print-to-pdf` auto-subsets the web font into each PDF** (verified `HBAAAA+NotoSansArabic-Regular` FontFile2). Each sheet is self-contained → Arabic uses the **fast per-batch loop, NOT the translate-all-first CJK loop.**
+- **RTL:** masters set `<html lang="ar" dir="rtl">` (html tag only). Added a `[dir="rtl"]` block to `_handout.css` mirroring every physical prop (padding-left→right, border-left→right on .opt/.qbox/.warn, table text-align→right, `ol.steps li::before` left→right) and **resetting `letter-spacing:normal`** (negative letter-spacing breaks Arabic joining). `.brand` forced `direction:ltr` to keep the WARWIKI wordmark Latin. Flex rows (.cols/.band/.foot) auto-reverse — header + 2-col mirror for free.
+- **BiDi:** wrap a digit+Latin token like `5-ARI` in `<bdi>` (else it flips to `ARI-5` at a right-aligned line start). Pure-Latin acronyms (BPH/PSA/AUS) and digit+Arabic (`3–6 أشهر`) need none.
+- **`render-ar.sh`** = `render-ko.sh` clone (`--headless=new --virtual-time-budget=20000` so the font loads before print → no blank PDF). **`_AR_TRANSLATOR_GUIDE.md`** off-repo (formal MSA, concise, Western digits, `<bdi>` rule, Arabic label map + glossary). `ar` already sat 8th in `HANDOUT_LANGUAGES` with `dir:'rtl'` — no switcher change.
+- **Zero overflow on all 31** (Arabic compact like CJK) — every sheet gate-clean, no trimming. Pilot + dense AUS sheet visually verified (RTL mirrors cleanly, glyphs shape/join, PDF not blank).
+
+**Next: FINISH ar — 49 sheets remain (batches 4–8).** Remaining slugs = `comm -23` of `handouts.ts` slugs vs existing `*.ar.html` basenames. Same loop per batch of 10: Sonnet agents → `.ar.html` → `./render-ar.sh <slug>` (gate must read pageOvf=0/colsOvf=0) → `cp` PDFs to `static/handouts/` + JPGs to `static/img/handouts/` → `node scripts/add-lang.js ar <slugs…>` → `npm run typecheck && npm run build` → `git checkout -- src/data/stats.json` → commit + push main. **Pitfall:** zsh doesn't word-split unquoted vars — drive render/copy loops with `while IFS= read -r s; … < file`, not `for s in $VAR`. After ar: **ru** (Cyrillic, Inter covers it, no font), **it** (Latin), **ja** (CJK — Noto Sans **JP**, zh/ko treatment).
+
+---
+
+## Previous Handoff - 2026-06-11 (later 4) — Handouts: FULL Tagalog/Filipino localization (80/80 `tl`)
 
 8 commits, fast-forwarded to `main`. Typecheck + build clean. **Tagalog now live on all 80 handouts — six languages 100% done (es, zh, vi, fr, ko, tl) + English base.** Same parallel workflow ([[project_patient_handouts_workflow]]): off-repo `_TL_TRANSLATOR_GUIDE.md` (clear Filipino, **keep common English medical terms** — Taglish is how patients actually speak), 8 batches × 10 Sonnet agents → `<slug>.tl.html`, `render-tl.sh` → assets, gate, `node scripts/add-lang.js tl <slugs…>`, build, commit per batch. No font work (Latin). **Tagalog is the most verbose language yet** — ~20/80 dense sheets overflowed page 2 (by 90–206px); hand-trimmed with the standard playbook (tighten qbox; drop the After bullet duplicating the qbox swelling line; drop the takeaway's trailing "Tumawag…" already in the warn box; combine short adjacent bullets). ≤20px residuals are fixed-element rounding (colsOvf=0, page complete — verify by rasterizing). **Caught 2 translator typos**: "makipagtalik" (sex) → "makipagtalo" (argue) on the Peyronie's sheets; grep all sheets for such errors. tl already sat 7th in the switcher (after ko).
-
-**Next: Arabic (`ar`)** — RTL: set `dir="rtl"` on `<html>` (and check the layout mirrors cleanly), needs a glossary pass; Latin-free so no Noto-CJK issue but **Arabic shaping may need an embedded Noto Sans Arabic** if the system font doesn't reach `--print-to-pdf` (test one sheet first, same diagnostic as zh/ko). Then **ru** (Cyrillic — Inter covers it, no font work), **it** (Latin), **ja** (CJK — Noto Sans **JP**, same treatment as zh/ko). Detail in `CHANGELOG.md` under 2026-06-11 (later 3). Prior Korean handoff follows.
 
 ---
 
