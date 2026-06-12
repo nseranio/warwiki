@@ -449,7 +449,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystogram',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'An X-ray of the bladder filled with contrast dye to check that a repair has healed or to look for a leak, fistula, or reflux — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -469,7 +469,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ambulatory Urodynamics (Catheter-Free)',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A newer, catheter-free bladder test: a small wireless sensor records bladder pressure during normal daily activity for more lifelike readings — how it works and what to expect.',
@@ -499,7 +499,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Buccal Mucosa (Cheek) Graft',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
@@ -509,7 +509,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Artificial Urinary Sphincter (AUS)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
@@ -667,7 +667,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Continent Cutaneous Diversion (Indiana Pouch)',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
@@ -701,7 +701,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
@@ -712,7 +712,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
@@ -986,7 +986,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
@@ -997,7 +997,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
@@ -1008,7 +1008,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
