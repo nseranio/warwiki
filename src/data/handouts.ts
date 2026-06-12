@@ -196,7 +196,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Overactive Bladder (OAB)',
     category: 'Conditions & Symptoms',
     subcategory: 'Leakage & Overactive Bladder',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
@@ -228,7 +228,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Interstitial Cystitis / Bladder Pain Syndrome',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
@@ -268,7 +268,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Nocturia',
     category: 'Conditions & Symptoms',
     subcategory: 'Prostate & Urinary Flow',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
@@ -290,7 +290,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
@@ -300,7 +300,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Musculoskeletal Pelvic Pain',
     category: 'Conditions & Symptoms',
     subcategory: 'Pelvic Floor & Prolapse',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Pelvic pain coming from tight, overactive muscles and nerves rather than the bladder or organs — real and treatable even when scans are normal, with pelvic-floor physical therapy as the cornerstone.',
@@ -678,7 +678,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pelvic-Floor Exercises & Bladder Training',
     category: 'Conservative & Self-Care',
     subcategory: 'Bladder & Pelvic-Floor Training',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Safe, free, proven first-line care for leaks and urgency — how to find and exercise the right muscles, a simple daily routine, and bladder training to wait longer between trips.',
@@ -721,7 +721,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Intermittent Self-Catheterization (ISC)',
     category: 'Conservative & Self-Care',
     subcategory: 'Self-Catheterization',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Emptying the bladder yourself with a thin catheter a few times a day when it will not empty on its own — why it protects the kidneys, the clean-technique steps, and how it beats a permanent catheter.',
@@ -732,7 +732,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
@@ -808,7 +808,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Medications',
     subcategory: 'Erectile Dysfunction Medicines',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
@@ -930,7 +930,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Leakage (Incontinence)',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
