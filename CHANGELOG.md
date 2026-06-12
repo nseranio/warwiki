@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-11 (later 3) — Handouts: full Tagalog/Filipino localization (80/80 `tl`)
+
+8 commits, all fast-forwarded to `main`. Typecheck + build clean. **Tagalog now live on all 80 handouts — six languages 100% complete (es, zh, vi, fr, ko, tl) + English base.**
+
+Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_TL_TRANSLATOR_GUIDE.md` (clear Filipino, **keep widely-used English medical terms** as patients/clinicians actually speak — Taglish), 8 batches × 10 Sonnet agents → `<slug>.tl.html` (`<html lang="tl">`), `render-tl.sh` → assets, gate, `node scripts/add-lang.js tl <slugs…>`, build, commit per batch. No font work — Latin script (Inter covers it).
+
+**Tagalog is verbose — the heaviest-trimming language so far** (~20 of 80 sheets overflowed page 2, the dense surgical sheets by 90–206px). Hand-trimmed with the standard playbook: tighten the full-width qbox (cuts page height directly), drop the After bullet that duplicates the qbox's swelling line, drop the takeaway's trailing "Tumawag…" clause (already in the warn box), and combine adjacent short bullets into one. No clinical content cut. A handful settled at ≤20px (fixed-element rounding, colsOvf=0, page visually complete — verified by rasterizing). **Caught + fixed two translator typos** where "makipagtalik" (sex) was rendered "makipagtalo" (argue) on the Peyronie's surgery sheets — grepped all 80 to confirm none remained. Tagalog already sat 7th in the switcher (after ko) from the fill-level order, so no reorder.
+
 ## 2026-06-11 (later 2) — Handouts: full Korean localization (80/80 `ko`, 한국어)
 
 3 commits (translation done as one big render pass), fast-forwarded to `main`. Typecheck + build clean; every sheet gate-clean. **Korean now live on all 80 handouts — five languages 100% complete (es, zh, vi, fr, ko) + English base.**

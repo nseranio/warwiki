@@ -4,7 +4,15 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-11 (later 3) — Handouts: FULL Korean localization (80/80 `ko`, 한국어)
+## Current Handoff - 2026-06-11 (later 4) — Handouts: FULL Tagalog/Filipino localization (80/80 `tl`)
+
+8 commits, fast-forwarded to `main`. Typecheck + build clean. **Tagalog now live on all 80 handouts — six languages 100% done (es, zh, vi, fr, ko, tl) + English base.** Same parallel workflow ([[project_patient_handouts_workflow]]): off-repo `_TL_TRANSLATOR_GUIDE.md` (clear Filipino, **keep common English medical terms** — Taglish is how patients actually speak), 8 batches × 10 Sonnet agents → `<slug>.tl.html`, `render-tl.sh` → assets, gate, `node scripts/add-lang.js tl <slugs…>`, build, commit per batch. No font work (Latin). **Tagalog is the most verbose language yet** — ~20/80 dense sheets overflowed page 2 (by 90–206px); hand-trimmed with the standard playbook (tighten qbox; drop the After bullet duplicating the qbox swelling line; drop the takeaway's trailing "Tumawag…" already in the warn box; combine short adjacent bullets). ≤20px residuals are fixed-element rounding (colsOvf=0, page complete — verify by rasterizing). **Caught 2 translator typos**: "makipagtalik" (sex) → "makipagtalo" (argue) on the Peyronie's sheets; grep all sheets for such errors. tl already sat 7th in the switcher (after ko).
+
+**Next: Arabic (`ar`)** — RTL: set `dir="rtl"` on `<html>` (and check the layout mirrors cleanly), needs a glossary pass; Latin-free so no Noto-CJK issue but **Arabic shaping may need an embedded Noto Sans Arabic** if the system font doesn't reach `--print-to-pdf` (test one sheet first, same diagnostic as zh/ko). Then **ru** (Cyrillic — Inter covers it, no font work), **it** (Latin), **ja** (CJK — Noto Sans **JP**, same treatment as zh/ko). Detail in `CHANGELOG.md` under 2026-06-11 (later 3). Prior Korean handoff follows.
+
+---
+
+## Previous Handoff - 2026-06-11 (later 3) — Handouts: FULL Korean localization (80/80 `ko`, 한국어)
 
 Typecheck + build clean; every sheet gate-clean. **Korean now live on all 80 handouts — five languages 100% done (es, zh, vi, fr, ko) + English base.** Same parallel workflow ([[project_patient_handouts_workflow]]): shared off-repo `_KO_TRANSLATOR_GUIDE.md` (polite 합니다체), 8 batches × 10 Sonnet agents → `<slug>.ko.html`. **Korean is Hangul → needs the CJK embedded-font treatment like zh** (system fonts unavailable to `--print-to-pdf`). Flow for CJK differs from Latin langs: **translate all 80 first → build the subset font → render all 80** (the subset must cover the actual glyphs, so you can't render per-batch). Downloaded Noto Sans **KR** (google/fonts variable), instanced Reg+Bold, `pyftsubset` to the 874 used glyphs (~145 KB/face), `@font-face` added to `_handout.css` (`'Noto Sans KR'` after `'Noto Sans SC'` — SC is Han-only, Hangul falls through to KR) + injected into the 25 inline-CSS masters. New `render-ko.sh` (`--headless=new --virtual-time-budget=20000`). **Zero overflow** (Korean compact like Chinese) — no trimming. ko was already 6th in the switcher (after fr) from the fill-level reorder.
 
