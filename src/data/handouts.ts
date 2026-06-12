@@ -237,7 +237,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urinary Tract Infections (UTIs)',
     category: 'Conditions & Symptoms',
     subcategory: 'Bladder Pain, Infection & Blood in Urine',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'What a bladder vs. kidney infection is, how UTIs are treated, when antibiotics are (and are not) needed, and how to prevent repeats — including vaginal estrogen after menopause.',
@@ -427,7 +427,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Voiding Cystourethrogram (VCUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'An X-ray of the bladder and urethra during filling and urinating — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -457,7 +457,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urodynamics',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A group of tests that measure how the bladder fills and empties using small catheters — what the test is, how to prepare, and what to expect during and after.',
@@ -688,7 +688,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Low-dose, local estrogen (cream, tablet, or ring) for menopause-related dryness, painful sex, and urinary symptoms — how it works, how to use it, its safety, and why little is absorbed into the body.',
@@ -699,7 +699,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
@@ -710,7 +710,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'Vaginal Health & Devices',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
@@ -742,7 +742,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conservative & Self-Care',
     subcategory: 'ED & Penile Therapies',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A non-drug "penis pump" that draws blood in to create an erection, held by a base ring — for ED and penile rehabilitation after prostate surgery; how to use it and the 30-minute ring rule.',
@@ -984,7 +984,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
@@ -995,7 +995,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
@@ -1006,7 +1006,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
