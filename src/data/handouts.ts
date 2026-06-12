@@ -320,7 +320,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Constipation',
     category: 'Conditions & Symptoms',
     subcategory: 'Bowel & Anorectal',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Why constipation matters for pelvic health (straining worsens prolapse and leakage) and how to fix it — fiber, fluids, toileting habits, gentle laxatives, and pelvic-floor therapy for outlet-type constipation.',
@@ -331,7 +331,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
@@ -353,7 +353,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
@@ -364,7 +364,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
@@ -776,7 +776,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Beta-3 Agonists (for Overactive Bladder)',
     category: 'Medications',
     subcategory: 'Overactive Bladder Medicines',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Newer overactive-bladder pills (mirabegron, vibegron) that relax the bladder with far less dry mouth than anticholinergics — how they work, who they suit, and the blood-pressure point with mirabegron.',
@@ -831,7 +831,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Bladder Botox (for Bladder Control)',
     category: 'Office Procedures',
     subcategory: 'Injections (Botox & Bulking)',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Injections that relax an overactive bladder muscle to ease urgency, frequency, and urge leakage when other treatments fall short — a quick office procedure; the main trade-off is possible temporary self-catheterization.',
@@ -871,7 +871,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Implantable Tibial Nerve Stimulation (ITNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A small device implanted near the ankle that calms an overactive bladder — the at-home version of PTNS, with no weekly office visits. How the short outpatient implant works, the two device types (automatic vs. ankle-band powered), and what to expect.',
@@ -895,7 +895,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
@@ -963,7 +963,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
@@ -1029,7 +1029,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Cosmetic & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
     pages: 2,
     description:
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
