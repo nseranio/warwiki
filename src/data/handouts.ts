@@ -330,7 +330,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
@@ -352,7 +352,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'female',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
@@ -363,7 +363,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Conditions & Symptoms',
     subcategory: 'Sexual Health & Other',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
@@ -437,7 +437,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Cystoscopy',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A look inside the bladder and urethra with a thin camera — flexible (awake, in the office) or rigid (asleep, in the operating room): how to prepare and what to expect during and after.',
@@ -518,7 +518,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
@@ -615,7 +615,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
@@ -645,7 +645,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ileal Conduit',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
@@ -720,7 +720,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Intermittent Self-Catheterization (ISC)',
     category: 'Conservative & Self-Care',
     subcategory: 'Self-Catheterization',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Emptying the bladder yourself with a thin catheter a few times a day when it will not empty on its own — why it protects the kidneys, the clean-technique steps, and how it beats a permanent catheter.',
@@ -870,7 +870,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Implantable Tibial Nerve Stimulation (ITNS)',
     category: 'Office Procedures',
     subcategory: 'Nerve Stimulation for OAB',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'A small device implanted near the ankle that calms an overactive bladder — the at-home version of PTNS, with no weekly office visits. How the short outpatient implant works, the two device types (automatic vs. ankle-band powered), and what to expect.',
@@ -894,7 +894,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Prostate (BPH) Procedures',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl'],
     pages: 2,
     description:
       'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
