@@ -419,7 +419,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Retrograde Urethrogram (RUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'An X-ray that maps the urethra using a contrast dye — what the test is, how to prepare, and what to expect during and after.',
@@ -429,7 +429,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Voiding Cystourethrogram (VCUG)',
     category: 'Tests & Imaging',
     subcategory: 'Bladder & Urethra Imaging',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'An X-ray of the bladder and urethra during filling and urinating — written to work whether or not the patient already has a catheter or suprapubic tube.',
@@ -459,7 +459,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urodynamics',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A group of tests that measure how the bladder fills and empties using small catheters — what the test is, how to prepare, and what to expect during and after.',
@@ -479,7 +479,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Evaluation Under Anesthesia',
     category: 'Tests & Imaging',
     subcategory: 'Kidney & Ureter Tests',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A detailed exam to map a narrowing of the ureter while asleep — any combination of ureteroscopy, retrograde and antegrade pyelogram, and cystography — to plan the right repair.',
@@ -489,7 +489,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Suprapubic Catheter Placement',
     category: 'Procedures & Surgery',
     subcategory: 'Catheters & Grafts',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Placing a catheter that drains the bladder through the lower belly — preparation, the procedure (local, sedation, or general anesthesia), and aftercare.',
@@ -552,7 +552,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urethroplasty (Urethral Repair)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
@@ -574,7 +574,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     category: 'Procedures & Surgery',
     subcategory: 'Erections & Penile Conditions',
     audience: 'male',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
@@ -595,7 +595,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Pyeloplasty',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Surgery to fix a blockage where the kidney drains into the ureter (UPJ obstruction) — usually keyhole (robotic/laparoscopic): how it works, preparing, the internal stent, and recovery.',
@@ -627,7 +627,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Ureteral Reconstruction',
     category: 'Procedures & Surgery',
     subcategory: 'Kidney & Ureter Reconstruction',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
@@ -637,7 +637,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     title: 'Urinary Diversion — Comparing Your Options',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
-    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue'],
+    languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
       'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
