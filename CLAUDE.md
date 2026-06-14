@@ -4,7 +4,18 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-12 (later 2) — Handouts: FULL Cantonese (`yue`) localization (80/80, 粵語)
+## Current Handoff - 2026-06-13 — Handouts: FULL Hindi (`hi`) localization (80/80, हिन्दी)
+
+8 commits (batch 1 carried the infra), all fast-forwarded to `main`. Typecheck + build clean. **Hindi now live on all 80 handouts — TEN languages 100% complete (es, zh, vi, fr, ko, tl, ar, ru, yue, hi) + English base.** Same per-batch workflow: off-repo `_HI_TRANSLATOR_GUIDE.md` (plain Hindi, **आप** register, Devanagari, keep common English medical loanwords in Latin, Western digits), 8 batches × 10 Sonnet agents → `<slug>.hi.html`, `render-hi.sh`, gate, `add-lang.js hi …`, build, commit per batch. **Zero overflow on all 80** (no hand-trimming). `hi` sits 11th in `HANDOUT_LANGUAGES`, after `yue`.
+
+**Font:** Devanagari → embedded **Noto Sans Devanagari**, instanced Reg/Bold (`fonts/NotoDeva-Reg.ttf`/`NotoDeva-Bold.ttf`, ~220 KB/face — small like Arabic). **Per-batch path confirmed** (Chrome `--print-to-pdf` auto-subsets the embedded face into each `.hi.pdf`; `+NotoSansDevanagari` FontFile2, no `pyftsubset`). **No `[lang]`-scoping needed** (unlike Cantonese) — Devanagari codepoints don't collide with anything in the stack, so `'Noto Sans Devanagari'` just appends after `'Noto Sans Arabic'` in the shared body `font-family`. LTR (`<html lang="hi">`, `render-hi.sh` clones `render-yue.sh`). **Inline-master injection** (the 25 inline-`<style>` masters): same one-shot Python pass before render — insert the two Deva `@font-face` rules after `<style>` + append `'Noto Sans Devanagari'` to the body `font-family:'Inter'…`. Verified inline PDFs embed the font, gate-clean.
+- **Session-limit recovery worked as designed:** batch 7 agents hit the daily session limit mid-run; 6/10 `.hi.html` were already on disk (the checkpoint). On resume, reconciled against disk (`tail -c </html>` completeness check) and re-ran only the 4 missing — no rework.
+
+**NEXT (final roadmap step): delete the coming-soon languages `it` (Italian) + `ja` (Japanese)** from `HANDOUT_LANGUAGES` in `src/data/handouts.ts` — all wanted languages are now built (the roadmap's "build first, delete last" is satisfied). No handout lists `it`/`ja`, so removal is just dropping those two lines + typecheck/build. Roadmap in memory [[project_handout_language_roadmap]]. **Also still open:** the flagged inline-master **Arabic** font audit (the 25 inline `.ar.pdf` may lack an embedded NotoArabic font — same gap fixed for yue/hi; chip `task_3c1bea43`).
+
+---
+
+## Previous Handoff - 2026-06-12 (later 2) — Handouts: FULL Cantonese (`yue`) localization (80/80, 粵語)
 
 9 commits (1 infra + 8 batches), all fast-forwarded to `main`. Typecheck + build clean. **Cantonese now live on all 80 handouts — NINE languages 100% complete (es, zh, vi, fr, ko, tl, ar, ru, yue) + English base.** Same parallel per-batch workflow: off-repo `_YUE_TRANSLATOR_GUIDE.md` (true written Cantonese 書面粵語 — 係/嘅/喺/咗/唔/睇/啲, Traditional chars, 你 register), 8 batches × 10 Sonnet agents → `<slug>.yue.html`, `render-yue.sh`, gate, `add-lang.js yue …`, build, commit per batch. **Zero overflow on all 80** (Cantonese is compact like zh — no hand-trimming). `yue` sits 10th in `HANDOUT_LANGUAGES`, after `ru`.
 

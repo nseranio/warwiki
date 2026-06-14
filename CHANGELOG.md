@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-13 — Handouts: FULL Hindi (`hi`) localization (80/80, हिन्दी)
+
+8 commits, all fast-forwarded to `main`. Typecheck + build clean. **Hindi now live on all 80 handouts — tenth fully-translated language (es, zh, vi, fr, ko, tl, ar, ru, yue, hi) + English base.** Off-repo `_HI_TRANSLATOR_GUIDE.md` (plain Hindi, आप register, Devanagari, keep common English medical loanwords in Latin, Western digits, label map + glossary), 8 batches × 10 Sonnet agents → `<slug>.hi.html`, `render-hi.sh`, overflow gate, `node scripts/add-lang.js hi …`, build, commit per batch. **Zero overflow on all 80** — no hand-trimming. `hi` is 11th in `HANDOUT_LANGUAGES`.
+
+**Font:** Devanagari → embedded **Noto Sans Devanagari**, `fontTools varLib.instancer` to Reg/Bold (~220 KB/face, off-repo `fonts/NotoDeva-*.ttf`). Per-batch path confirmed (Chrome auto-subsets `+NotoSansDevanagari` FontFile2 into each PDF; no `pyftsubset`). **No `[lang]`-scoping needed** — Devanagari codepoints don't collide, so it appends after Arabic in the shared body `font-family`. LTR. The 25 inline-`<style>` masters get the Deva `@font-face` + font-family injected by a one-shot Python pass before render (same as yue); verified embedded + gate-clean.
+
+**Recovery note:** batch 7 hit the daily session limit mid-run; 6/10 files were already on disk, so on resume only the 4 missing were re-translated (reconciled against disk via a `</html>` completeness check) — the on-disk `.hi.html` files are the checkpoint, as documented.
+
+**NEXT:** final roadmap step — delete coming-soon `it`/`ja` from `HANDOUT_LANGUAGES`. Plus the still-open inline-master Arabic font audit.
+
+---
+
 ## 2026-06-12 (later 2) — Handouts: FULL Cantonese (`yue`) localization (80/80, 粵語)
 
 9 commits (1 infra + 8 batches), all fast-forwarded to `main`. Typecheck + build clean. **Cantonese now live on all 80 handouts — ninth fully-translated language (es, zh, vi, fr, ko, tl, ar, ru, yue) + English base.** Off-repo `_YUE_TRANSLATOR_GUIDE.md` (true written Cantonese 書面粵語 — 係/嘅/喺/咗/唔/睇/啲, Traditional chars, 你 register, label map + glossary), 8 batches × 10 Sonnet agents → `<slug>.yue.html`, `render-yue.sh`, overflow gate, `node scripts/add-lang.js yue …`, build, commit per batch. **Zero overflow on all 80** (Cantonese compact like zh — no hand-trimming). `yue` is 10th in `HANDOUT_LANGUAGES`.
