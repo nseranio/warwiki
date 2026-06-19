@@ -20,7 +20,7 @@ Committed work should include the June 16 social handoff plus the site video upd
 
 - [Michigan Four-Wall SSLF](docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx) now embeds the peer-reviewed PMC supplementary operative video from Larson 2013 via the new direct-MP4-capable `VideoCards` path.
 - [Glean Urodynamics System](docs/01-foundations/tools/biomaterials/adjunct-specialty/glean-urodynamics.mdx) now embeds the two WARWIKI / YouTube Glean videos from the `Evaluation: Ambulatory Urodynamics` playlist.
-- [Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx) had its old single video removed and now links to the Grand Rounds in Urology Ziho Lee robotic ileal ureter talk plus embeds `j4nAm9rOxKg` (`Core Videos (2024): Single Position Robotic-Assisted Laparoscopic Right Ileal Ureter Interposition`).
+- [Ileal Ureter](docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx) had its old single video removed and now links to the Grand Rounds in Urology Ziho Lee robotic ileal ureter talk, links to the ScienceDirect open-access surgical film "Ileal Ureter Creation for Long-Segment Ureteral Injury," and embeds `j4nAm9rOxKg` (`Core Videos (2024): Single Position Robotic-Assisted Laparoscopic Right Ileal Ureter Interposition`).
 
 ### Notes
 
