@@ -2536,8 +2536,27 @@ a.book-card:visited {
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 
+.vc-thumb-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: left;
+  background:
+    linear-gradient(135deg, rgba(24, 95, 165, 0.9), rgba(13, 147, 115, 0.82)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 10px);
+  transition: filter 0.25s ease;
+}
+
 .vc-thumb-btn:hover .vc-thumb-img,
-.vc-thumb-btn:focus-visible .vc-thumb-img {
+.vc-thumb-btn:focus-visible .vc-thumb-img,
+.vc-thumb-btn:hover .vc-thumb-placeholder,
+.vc-thumb-btn:focus-visible .vc-thumb-placeholder {
   transform: scale(1.04);
   filter: brightness(0.85);
 }
@@ -2585,6 +2604,13 @@ a.book-card:visited {
   font-size: 0.78rem;
   color: var(--warwiki-text-muted);
   line-height: 1.4;
+}
+
+.vc-source-link {
+  width: fit-content;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 [data-theme='dark'] .vc-card {

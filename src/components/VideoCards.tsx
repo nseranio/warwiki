@@ -5,6 +5,9 @@ export interface VideoCard {
   title: string;
   /** Optional short caption rendered below the title. */
   subtitle?: string;
+  /** Direct MP4 or other source URL for non-YouTube videos. */
+  sourceUrl?: string;
+  sourceType?: 'youtube' | 'mp4';
 }
 
 interface Props {
@@ -34,11 +37,13 @@ export default function VideoCards({ videos }: Props) {
   return (
     <div className="vc-grid">
       {videos.map(v => {
+        const sourceType = v.sourceType ?? (v.sourceUrl ? 'mp4' : 'youtube');
+        const isYouTube = sourceType === 'youtube';
         const isPlaying = playing === v.id;
         return (
           <div key={v.id} className="vc-card">
             <div className="vc-media">
-              {isPlaying ? (
+              {isPlaying && isYouTube ? (
                 <iframe
                   className="vc-iframe"
                   src={`https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0`}
@@ -46,6 +51,8 @@ export default function VideoCards({ videos }: Props) {
                   allow={IFRAME_ALLOW}
                   allowFullScreen
                 />
+              ) : isPlaying && v.sourceUrl ? (
+                <video className="vc-iframe" src={v.sourceUrl} title={v.title} controls autoPlay />
               ) : (
                 <button
                   type="button"
@@ -53,12 +60,16 @@ export default function VideoCards({ videos }: Props) {
                   onClick={() => setPlaying(v.id)}
                   aria-label={`Play: ${v.title}`}
                 >
-                  <img
-                    src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
-                    alt=""
-                    loading="lazy"
-                    className="vc-thumb-img"
-                  />
+                  {isYouTube ? (
+                    <img
+                      src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`}
+                      alt=""
+                      loading="lazy"
+                      className="vc-thumb-img"
+                    />
+                  ) : (
+                    <span className="vc-thumb-placeholder">Peer-reviewed operative video</span>
+                  )}
                   <PlayIcon />
                 </button>
               )}
@@ -66,6 +77,11 @@ export default function VideoCards({ videos }: Props) {
             <div className="vc-body">
               <div className="vc-title">{v.title}</div>
               {v.subtitle && <div className="vc-subtitle">{v.subtitle}</div>}
+              {!isYouTube && v.sourceUrl && (
+                <a className="vc-source-link" href={v.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  Open source video
+                </a>
+              )}
             </div>
           </div>
         );
