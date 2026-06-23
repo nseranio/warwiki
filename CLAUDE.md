@@ -4,7 +4,23 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-23 — PUL salvage urethral-reconstruction page
+## Current Handoff - 2026-06-23 — Video-library refresh + robotic VRAM embed
+
+Refreshed the WARWIKI YouTube video registry and added the new robotic VRAM video to the VRAM flap foundations page.
+
+### Scope
+
+- Ran `npm run videos:sync`; [videos.ts](src/data/videos.ts) now reflects **141 playlists / 1,546 unique videos**.
+- New playlist now present in the registry: **Flaps: VRAM**.
+- Added `VideoCards` to [Vertical Rectus Abdominis Myocutaneous (VRAM) Flap](docs/01-foundations/surgical-principles/flaps/vram.mdx), embedding `iTyLEpmkHQg` from the new VRAM playlist.
+
+### Verification
+
+- Run before commit: `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+---
+
+## Previous Handoff - 2026-06-23 — PUL salvage urethral-reconstruction page
 
 Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx) as a named salvage technique in the urethral reconstruction atlas.
 

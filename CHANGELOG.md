@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-23 — Video library refreshed; VRAM robotic video embedded
+
+Refreshed the WARWIKI YouTube video registry with `npm run videos:sync`. [videos.ts](src/data/videos.ts) now reflects **141 playlists / 1,546 unique videos**, including the new **Flaps: VRAM** playlist.
+
+Added the robotic muscle-only VRAM operative video (`iTyLEpmkHQg`) to [Vertical Rectus Abdominis Myocutaneous (VRAM) Flap](docs/01-foundations/surgical-principles/flaps/vram.mdx) using the shared `VideoCards` component.
+
+**Verification:** `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-23 — Perineal permanent urethral ligation (PUL) added to treatment atlas
 
 Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx) as a named salvage technique in the urethral reconstruction treatment atlas. The page frames PUL as an irreversible perineal procedure for male end-stage urethra and refractory SUI, usually after recurrent AUS cuff erosion, committing the patient to chronic suprapubic tube drainage while avoiding formal bladder-neck closure or urinary diversion in selected patients.
