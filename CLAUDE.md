@@ -4,7 +4,30 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-19 — Video-library refresh + targeted technique videos
+## Current Handoff - 2026-06-23 — PUL salvage urethral-reconstruction page
+
+Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx) as a named salvage technique in the urethral reconstruction atlas.
+
+### Scope
+
+- New page frames PUL as an irreversible perineal operation for male end-stage urethra and refractory SUI, most often after recurrent AUS cuff erosion, committing the patient to chronic SPT drainage.
+- Page covers indications, poor-fit scenarios, how PUL sits between repeat AUS salvage and bladder-neck closure / urinary diversion, step sequence, postoperative SPT management, outcomes, complications, and operative pearls.
+- References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, and Volz 2021.
+
+### Wiring
+
+- Added PUL to the [Male Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx) technique database under `Distal / Meatal / Perineal`.
+- Added PUL to the [Male SUI](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx) salvage decision framework, escalation ladder, and searchable treatment database.
+- Linked PUL from the [Artificial Urinary Sphincter procedure](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) existing salvage mention.
+- Added a short "Male end-stage urethra: where PUL fits" note to [Bladder Neck Closure](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure.mdx), with PUL positioned one rung below BNC / diversion when chronic SPT drainage is acceptable.
+
+### Verification
+
+- Run before commit: `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+---
+
+## Previous Handoff - 2026-06-19 — Video-library refresh + targeted technique videos
 
 Committed work should include the June 16 social handoff plus the site video updates from June 19. Verification used for the video work: `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
 

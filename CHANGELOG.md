@@ -6,6 +6,22 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-23 — Perineal permanent urethral ligation (PUL) added to treatment atlas
+
+Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx) as a named salvage technique in the urethral reconstruction treatment atlas. The page frames PUL as an irreversible perineal procedure for male end-stage urethra and refractory SUI, usually after recurrent AUS cuff erosion, committing the patient to chronic suprapubic tube drainage while avoiding formal bladder-neck closure or urinary diversion in selected patients.
+
+**Content scope.** The new page covers indications and poor-fit scenarios, the decision point between repeat AUS salvage, PUL, bladder-neck closure, and diversion, step-by-step technique, postoperative SPT management, outcomes, complications, and operative pearls. References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, and Volz 2021.
+
+**Cross-linking / atlas wiring.**
+- [Male Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx) now lists PUL in the searchable technique database under `Distal / Meatal / Perineal`.
+- [Male Stress Urinary Incontinence](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx) now includes PUL in the salvage decision framework, escalation ladder, and searchable treatment database.
+- [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) now links its existing PUL salvage mention to the new page.
+- [Bladder Neck Closure](docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure.mdx) now includes a short male end-stage urethra note positioning PUL as a narrower perineal / SPT-based alternative one rung below BNC / diversion.
+
+**Verification:** `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-19 — Video library refresh + targeted technique-video embeds
 
 Refreshed the WARWIKI video registry and added targeted video resources to three technique/device pages.

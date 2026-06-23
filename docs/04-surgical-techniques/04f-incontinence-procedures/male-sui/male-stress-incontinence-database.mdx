@@ -30,7 +30,8 @@ The **AUS (AMS-800) remains the gold standard** for moderate-to-severe SUI (AUSC
 | **Recurrent SUI after failed AUS** | AUS revision / replacement; salvage with **tandem cuff** | Larger-cuff revision (urethral atrophy is the most common nonmechanical failure — 56.5% of revisions; Bentellis 2021) | — |
 | **Concomitant SUI + erectile dysfunction** | Simultaneous [AUS + penile prosthesis](/docs/surgical-techniques/04j-sexual-dysfunction) (synchronous or staged) | [Sling + penile prosthesis](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) | — |
 | **Mixed incontinence (SUI + urgency / OAB)** | Optimize OAB component first via the [OAB / UUI pathway](/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database) (anticholinergic / β-3 / botulinum toxin / SNM) → reassess SUI | If pure SUI persists after OAB control → standard surgical pathway | — |
-| **Devastated outlet, all options exhausted** | [Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) + [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | Continued failed reconstruction |
+| **End-stage urethra after recurrent AUS erosion, accepts chronic SPT** | [Perineal permanent urethral ligation (PUL)](/docs/surgical-techniques/04a-urethral-reconstruction/permanent-urethral-ligation) | [Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) + [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | Repeat cuff placement in a non-salvageable urethra |
+| **Devastated outlet, bladder or SPT pathway also unacceptable** | [Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) + [continent catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) | Continued failed reconstruction |
 
 ### Sling / Adjustable Device Sub-Comparison
 
@@ -61,7 +62,8 @@ The **AUS (AMS-800) remains the gold standard** for moderate-to-severe SUI (AUSC
 5. **Periurethral balloons** ([ProACT](/docs/surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons)) or **adjustable sling** ([ATOMS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling), [Argus](/docs/surgical-techniques/04f-incontinence-procedures/procedures/argus-sling), [REMEEX](/docs/surgical-techniques/04f-incontinence-procedures/procedures/remeex-mrs)) — alternative to fixed sling or as second-line after failed fixed sling
 6. **[AUS (AMS-800)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter)** — moderate-to-severe SUI, irradiated patients, or after failed sling
 7. **AUS revision / tandem cuff** — for failed AUS (urethral atrophy or mechanical failure)
-8. **[Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) / urinary diversion** — last resort
+8. **[Perineal permanent urethral ligation (PUL)](/docs/surgical-techniques/04a-urethral-reconstruction/permanent-urethral-ligation)** — end-stage urethra after failed / eroded AUS when chronic SPT drainage is acceptable
+9. **[Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) / urinary diversion** — last resort when PUL is unsuitable or the bladder / drainage plan also requires reconstruction
 
 For **mixed incontinence with an OAB / urgency component**, optimize the OAB pathway first (see [OAB & UUI database](/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database) — anticholinergics / β-3 / botulinum toxin / SNM) and then reassess SUI severity. Pharmacotherapy is **not effective for pure male SUI** and is not part of this ladder.
 
@@ -183,9 +185,15 @@ export const maleSuiProcs = [
 
   // ===== SALVAGE =====
   {
+    name: "Perineal Permanent Urethral Ligation (PUL)",
+    category: "Salvage",
+    bestFor: "End-stage urethra with severe refractory SUI after recurrent AUS erosion; chronic SPT acceptable.",
+    slug: "/docs/surgical-techniques/04a-urethral-reconstruction/permanent-urethral-ligation",
+  },
+  {
     name: "Bladder-Neck Closure + Catheterizable Channel",
     category: "Salvage",
-    bestFor: "Devastated outlet after failed AUS / sling; CIC-tolerant.",
+    bestFor: "Devastated outlet after failed AUS / sling; CIC-tolerant or PUL unsuitable.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure",
   },
   {
