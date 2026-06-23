@@ -12,7 +12,8 @@ Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/0
 
 - New page frames PUL as an irreversible perineal operation for male end-stage urethra and refractory SUI, most often after recurrent AUS cuff erosion, committing the patient to chronic SPT drainage.
 - Page covers indications, poor-fit scenarios, how PUL sits between repeat AUS salvage and bladder-neck closure / urinary diversion, step sequence, postoperative SPT management, outcomes, complications, and operative pearls.
-- References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, and Volz 2021.
+- References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, Volz 2021, the Higuchi 2012 AUA abstract, and Anderson / Higuchi / Flynn 2015.
+- Follow-up source addition: the Higuchi 2012 AUA abstract is incorporated as the earliest adult transperineal-closure signal, including spongiosal / bulbospongiosus stump coverage and the key radiation-failure caution.
 
 ### Wiring
 

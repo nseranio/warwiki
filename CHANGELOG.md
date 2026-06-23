@@ -10,7 +10,9 @@ For commit-level detail run `git log --oneline`.
 
 Added [Perineal Permanent Urethral Ligation (PUL)](docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx) as a named salvage technique in the urethral reconstruction treatment atlas. The page frames PUL as an irreversible perineal procedure for male end-stage urethra and refractory SUI, usually after recurrent AUS cuff erosion, committing the patient to chronic suprapubic tube drainage while avoiding formal bladder-neck closure or urinary diversion in selected patients.
 
-**Content scope.** The new page covers indications and poor-fit scenarios, the decision point between repeat AUS salvage, PUL, bladder-neck closure, and diversion, step-by-step technique, postoperative SPT management, outcomes, complications, and operative pearls. References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, and Volz 2021.
+**Content scope.** The new page covers indications and poor-fit scenarios, the decision point between repeat AUS salvage, PUL, bladder-neck closure, and diversion, step-by-step technique, postoperative SPT management, outcomes, complications, and operative pearls. References include VanDyke 2017, Van Dyke 2021, Arnold 2022, Meeks 2009, Volz 2021, the Higuchi 2012 AUA abstract, and Anderson / Higuchi / Flynn 2015.
+
+**Follow-up source addition.** Added the Higuchi 2012 AUA abstract to the PUL technique and outcomes sections as the earliest adult transperineal-closure signal: six men with refractory incontinence after SPT placement or urinary diversion, five dry after one operation, with the failure in a previously radiated prostate-cancer patient.
 
 **Cross-linking / atlas wiring.**
 - [Male Urethroplasty](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx) now lists PUL in the searchable technique database under `Distal / Meatal / Perineal`.
