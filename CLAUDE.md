@@ -12,7 +12,8 @@ Refreshed the WARWIKI YouTube video registry and added the new robotic VRAM vide
 
 - Ran `npm run videos:sync`; [videos.ts](src/data/videos.ts) now reflects **141 playlists / 1,546 unique videos**.
 - New playlist now present in the registry: **Flaps: VRAM**.
-- Added `VideoCards` to [Vertical Rectus Abdominis Myocutaneous (VRAM) Flap](docs/01-foundations/surgical-principles/flaps/vram.mdx), embedding `iTyLEpmkHQg` from the new VRAM playlist.
+- Added `VideoCards` to [Vertical Rectus Abdominis Myocutaneous (VRAM) Flap](docs/01-foundations/surgical-principles/flaps/vram.mdx), embedding `iTyLEpmkHQg` from the new VRAM playlist; follow-up moved the video block to the standard pre-References position.
+- Added `kAaeHM-o1Oc` ("AMS 800 Artificial Urinary Sphincter Deactivate / Activate Animation") to the [Artificial Urinary Sphincter procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) video section, also immediately before References.
 
 ### Verification
 

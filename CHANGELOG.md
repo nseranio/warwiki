@@ -12,6 +12,8 @@ Refreshed the WARWIKI YouTube video registry with `npm run videos:sync`. [videos
 
 Added the robotic muscle-only VRAM operative video (`iTyLEpmkHQg`) to [Vertical Rectus Abdominis Myocutaneous (VRAM) Flap](docs/01-foundations/surgical-principles/flaps/vram.mdx) using the shared `VideoCards` component.
 
+Follow-up cleanup: moved the VRAM video block down to the standard pre-References position, and added the AMS 800 activation / deactivation animation (`kAaeHM-o1Oc`) to the [Artificial Urinary Sphincter procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) video section.
+
 **Verification:** `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check` passed.
 
 ---
