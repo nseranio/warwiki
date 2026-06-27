@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-27 — AUS device videos moved to device page
+
+Added a pre-References `VideoCards` section to [Artificial Urinary Sphincter (Device)](docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx). The device page now embeds `gEKlXP0SkOM` ("AUS (artificial urinary sphincter): How It Works") plus the AMS 800 activation / deactivation animation (`kAaeHM-o1Oc`).
+
+Moved the activation / deactivation animation off the [Artificial Urinary Sphincter procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx), leaving the procedure page video section focused on operative placement videos.
+
+**Verification:** `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-23 — Video library refreshed; VRAM robotic video embedded
 
 Refreshed the WARWIKI YouTube video registry with `npm run videos:sync`. [videos.ts](src/data/videos.ts) now reflects **141 playlists / 1,546 unique videos**, including the new **Flaps: VRAM** playlist.

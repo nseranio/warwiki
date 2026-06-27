@@ -4,7 +4,23 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-23 — Video-library refresh + robotic VRAM embed
+## Current Handoff - 2026-06-27 — AUS device-page video cleanup
+
+Moved AUS device-mechanics videos to the device page and kept the surgical procedure page focused on operative videos.
+
+### Scope
+
+- Added `VideoCards` to [Artificial Urinary Sphincter (Device)](docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx), immediately before References.
+- Embedded `gEKlXP0SkOM` ("AUS (artificial urinary sphincter): How It Works") and `kAaeHM-o1Oc` ("AMS 800 Artificial Urinary Sphincter Deactivate / Activate Animation") on the device page.
+- Removed the activation / deactivation animation from the [Artificial Urinary Sphincter procedure page](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx), leaving operative-placement videos there.
+
+### Verification
+
+- Run before commit: `npm run typecheck`, `npm run lint`, `npm run build`, and `git diff --check`.
+
+---
+
+## Previous Handoff - 2026-06-23 — Video-library refresh + robotic VRAM embed
 
 Refreshed the WARWIKI YouTube video registry and added the new robotic VRAM video to the VRAM flap foundations page.
 
