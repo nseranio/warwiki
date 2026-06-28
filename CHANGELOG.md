@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-28 — Podcast library BackTable refresh
+
+Added three new BackTable episodes to [Podcast Library](docs/08-resources/podcasts.mdx): BackTable Urology #309 on robotic reconstructive urology, BackTable Urology #304 on office protocols for incontinence / OAB procedures, and BackTable Women's Health #121 on urogynecology surgical trends and training insights. Updated the podcast library timestamp to June 2026.
+
+**Verification:** `npm run lint`, `npm run typecheck`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-28 — Urodynamics normal reference values surfaced
 
 Added a high-visibility **Normal Reference Values (Quick Lookup)** section near the top of [Urodynamics](docs/02-evaluation/ancillary-tests/urodynamics.mdx). The section now gives clean tables for uroflowmetry / PVR, filling cystometry, pressure-flow values, and quality-control resting pressures, with caveats that normal values are broad reference ranges rather than standalone diagnostic cutoffs.
