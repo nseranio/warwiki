@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-27 — Vesicovaginal fistula evidence update
+
+Updated the VVF content set to reflect contemporary evidence on timing, tract excision, interposition flaps, and emerging adjuncts.
+
+- [Vesicovaginal Fistula](docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx) now frames timing by tissue readiness rather than an automatic 3–6 month delay, adds a dedicated tract-excision section, softens routine-flap language, adds complexity-stratified outcomes, and incorporates BMG / PRP / SIS / bioglue adjuncts with current references.
+- The treatment atlas and technique pages were synced: [Female Fistula Repair](docs/04-surgical-techniques/04h-fistula-repair/female-fistula.mdx), [Conservative VVF Management](docs/04-surgical-techniques/04h-fistula-repair/female/conservative-vvf-management.mdx), [Latzko](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-latzko.mdx), [Sims-Simon](docs/04-surgical-techniques/04h-fistula-repair/female/transvaginal-sims-simon.mdx), [O'Conor](docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx), [Extravesical VVF Repair](docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx), [Fistula Repair Principles](docs/04-surgical-techniques/04h-fistula-repair/fistula-repair-principles.mdx), and [Vaginal Fistula Flaps](docs/04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps.mdx) now use the same selective excision / selective interposition framework.
+- [Fistulas](docs/03-clinical-conditions/03f-fistulas/index.mdx) now describes tissue interposition as a complexity-driven planning step rather than a blanket rule.
+
+**Verification:** `npm run lint`, `npm run typecheck`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-27 — AUS device videos moved to device page
 
 Added a pre-References `VideoCards` section to [Artificial Urinary Sphincter (Device)](docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx). The device page now embeds `gEKlXP0SkOM` ("AUS (artificial urinary sphincter): How It Works") plus the AMS 800 activation / deactivation animation (`kAaeHM-o1Oc`).
