@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-06-28 — Urodynamics normal reference values surfaced
+
+Added a high-visibility **Normal Reference Values (Quick Lookup)** section near the top of [Urodynamics](docs/02-evaluation/ancillary-tests/urodynamics.mdx). The section now gives clean tables for uroflowmetry / PVR, filling cystometry, pressure-flow values, and quality-control resting pressures, with caveats that normal values are broad reference ranges rather than standalone diagnostic cutoffs.
+
+[Evaluation & Workup](docs/02-evaluation/index.mdx) now calls out "urodynamics with normal reference values" from the section landing page. `src/data/stats.json` was regenerated after adding the new references.
+
+**Verification:** `npm run lint`, `npm run typecheck`, `npm run build`, and `git diff --check` passed.
+
+---
+
 ## 2026-06-27 — Vesicovaginal fistula evidence update
 
 Updated the VVF content set to reflect contemporary evidence on timing, tract excision, interposition flaps, and emerging adjuncts.
