@@ -1,14 +1,32 @@
 {
   "receivedAt": "2026-09-11",
-  "methodology": "User-supplied OpenEvidence results are leads, not independent evidence. DOI presence identifies possible existing coverage; it does not verify the summarized claim or establish a completed source check. Record decisions and source URLs before adding clinical claims.",
+  "methodology": "User-supplied OpenEvidence results are leads, not independent evidence. DOI presence identifies possible existing coverage; it does not verify the summarized claim or establish a completed source check. Record decisions and source URLs before adding clinical claims. Review-recorded-see-scope can mean presence only or deferred review; consult the copied decision rather than counting it as completed verification.",
   "references": [
     {
       "id": 1,
       "suppliedCitation": "Midurethral Sling vs OnabotulinumtoxinA in Females With Urinary Incontinence: The MUSA Randomized Clinical Trial. Harvie HS, Menefee SA, Richter HE, et al. JAMA. 2025;333(21):1887-1896. doi:10.1001/jama.2025.4682.",
       "doi": "10.1001/jama.2025.4682",
-      "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "existingPages": [
+        "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx",
+        "docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx"
+      ],
+      "disposition": "incorporated-source-checked",
+      "notes": [
+        "Original JAMA MUSA trial read:150 randomized,137 primary analysis; failed Botox superiority at6months is not proof of equivalence. Added brief treatment-selection implications with exact outcomes."
+      ],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            1
+          ],
+          "status": "added",
+          "notes": "2025 MUSA primary trial verified. Short mixed-incontinence pointer added to root-owned Botox procedure summary. Failed superiority is not equivalence; no unsupported general ranking.",
+          "sources": [
+            "https://jamanetwork.com/journals/jama/fullarticle/2833562"
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -17,16 +35,38 @@
       "existingPages": [
         "docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            2,
+            3
+          ],
+          "status": "present",
+          "notes": "FUTURE Lancet trial already summarized in OAB; HTA companion not separately verified."
+        }
+      ]
     },
     {
       "id": 3,
       "suppliedCitation": "Invasive Urodynamic Investigations in the Management of Women With Refractory Overactive Bladder Symptoms: FUTURE, a Superiority RCT and Economic Evaluation. Abdel-Fattah M, Chapple C, Breeman S, et al. Health Technology Assessment (Winchester, England). 2025;29(27):1-139. doi:10.3310/UKYW4923.",
       "doi": "10.3310/UKYW4923",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            2,
+            3
+          ],
+          "status": "present",
+          "notes": "FUTURE Lancet trial already summarized in OAB; HTA companion not separately verified."
+        }
+      ]
     },
     {
       "id": 4,
@@ -34,7 +74,8 @@
       "doi": "10.1002/nau.70072",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 5,
@@ -45,7 +86,8 @@
         "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 6,
@@ -56,7 +98,8 @@
         "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 7,
@@ -68,15 +111,26 @@
         "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 8,
       "suppliedCitation": "Clinically Meaningful Improvements With Vibegron in Men With Overactive Bladder and Benign Prostatic Hyperplasia: A Responder Analysis of the Phase 3 COURAGE Trial. Peters KM, Owens-Grillo J, Thomas E, et al. Urology. 2025;:S0090-4295(25)00829-5. doi:10.1016/j.urology.2025.08.051.",
       "doi": "10.1016/j.urology.2025.08.051",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "8"
+          ],
+          "status": "deferred",
+          "reason": "COURAGE responder analysis lead: check against already represented main-trial findings before deciding whether it changes practice."
+        }
+      ]
     },
     {
       "id": 9,
@@ -86,7 +140,8 @@
         "docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 10,
@@ -97,7 +152,8 @@
         "docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 11,
@@ -105,39 +161,99 @@
       "doi": "10.3390/toxins17050211",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 12,
       "suppliedCitation": "European Academy of Neurology (EAN)/European Federation of Autonomic Societies (EFAS)/International Neuro\u2010Urology Society (INUS) Guidelines for Practising Neurologists on the Assessment and Treatment of Neurogenic Urinary and Sexual Symptoms (NEUROGED Guidelines). Panicker JN, Fanciulli A, Skoric MK, et al. European Journal of Neurology. 2025;32(4):e70119. doi:10.1111/ene.70119.",
       "doi": "10.1111/ene.70119",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            12
+          ],
+          "status": "deferred",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/40208234/",
+            "https://onlinelibrary.wiley.com/doi/10.1111/ene.70205"
+          ],
+          "notes": "NEUROGED identity and correction verified; correction is funding statement only. Full recommendation integration remains pending."
+        }
+      ]
     },
     {
       "id": 13,
       "suppliedCitation": "\u03923-Adrenoceptor Agonists for Neurogenic Lower Urinary Tract Dysfunction: Evidence and Clinical Rationale for First-Line Therapy. Fishberg SE, Matta R. Neurourology and Urodynamics. 2025;. doi:10.1002/nau.70175.",
       "doi": "10.1002/nau.70175",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 14,
       "suppliedCitation": "Comparison of the Efficacy of Vibegron and Fesoterodine for Neurogenic Detrusor Overactivity in Individuals With Spinal Cord Lesion: A Single\u2010Center Prospective Randomized Crossover Trial. Takahashi R, Imada K, Maki T. Neurourology and Urodynamics. 2025;44(8):1545-1552. doi:10.1002/nau.70136.",
       "doi": "10.1002/nau.70136",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 15,
       "suppliedCitation": "Should We Consider Sacral Nerve Stimulation as a Treatment for Neurogenic Lower Urinary Tract Dysfunction? ICI\u2010RS 2025. Drake MJ, de Rijk M, Stefania Musco, et al. Neurourology and Urodynamics. 2025;. doi:10.1002/nau.70181.",
       "doi": "10.1002/nau.70181",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 16,
@@ -146,24 +262,69 @@
       "existingPages": [
         "docs/01-foundations/pharmacology/legacy-low-evidence/parasympathomimetics.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 17,
       "suppliedCitation": "Is It Possible to Regenerate the Underactive Detrusor? Part 2. Electrical Stimulation Therapies, Treatment of Bladder Outlet Obstruction, Constipation, and Pelvic Floor Disorders \u2010 ICI\u2010RS 2024. Sinha S, Gajewski JB, Tarcan T, et al. Neurourology and Urodynamics. 2025;44(3):585-591. doi:10.1002/nau.25594.",
       "doi": "10.1002/nau.25594",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 18,
       "suppliedCitation": "Efficacy and Safety of Intravesical Electrical Stimulation for Underactive Bladder: A Meta-Analysis and Systematic Review. Yu H, Duan Z, Sun J, et al. Neuromodulation : Journal of the International Neuromodulation Society. 2025;:S1094-7159(25)01107-9. doi:10.1016/j.neurom.2025.10.059.",
       "doi": "10.1016/j.neurom.2025.10.059",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "status": "deferred",
+          "notes": "Do not adopt survey claims of universal beta-3-first therapy or SNM/Botox equivalence. Current page preserves AUA SCI/spina-bifida SNM restriction; exact recent study review remains pending."
+        }
+      ]
     },
     {
       "id": 19,
@@ -186,7 +347,8 @@
         "docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 20,
@@ -196,7 +358,8 @@
         "docs/01-foundations/tools/biomaterials/bulking-agents/bulkamid.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 21,
@@ -207,7 +370,8 @@
         "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 22,
@@ -215,7 +379,8 @@
       "doi": "10.1016/j.ejogrb.2025.01.040",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 23,
@@ -223,7 +388,8 @@
       "doi": "10.1007/s00345-026-06184-9",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 24,
@@ -235,7 +401,8 @@
         "docs/04-surgical-techniques/04m-bph-male-luts/index.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 25,
@@ -245,7 +412,8 @@
         "docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 26,
@@ -255,7 +423,8 @@
         "docs/04-surgical-techniques/04m-bph-male-luts/aquablation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 27,
@@ -265,7 +434,8 @@
         "docs/04-surgical-techniques/04m-bph-male-luts/aquablation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 28,
@@ -276,7 +446,8 @@
         "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 29,
@@ -290,8 +461,22 @@
         "docs/01-foundations/tools/instruments/sounds-bougies/sachse-urethrotome.mdx",
         "docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            29
+          ],
+          "status": "present",
+          "notes": "EAU 2026 official online chapters checked and added where necessary. Summary DOI already appears in DVIU. Journal summary itself not independently read; official guideline supports corrected recommendations.",
+          "files": [
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx",
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 30,
@@ -302,8 +487,20 @@
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx",
         "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            30,
+            31
+          ],
+          "status": "deferred",
+          "notes": "ROBUST long-term results are represented in the EAU guideline source family. Neither supplied original was independently read in this bounded operative pass. Dedicated DCB evidence hub belongs to companion clinical scope; do not infer urethroplasty equivalence.",
+          "files": []
+        }
+      ]
     },
     {
       "id": 31,
@@ -314,8 +511,20 @@
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx",
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            30,
+            31
+          ],
+          "status": "deferred",
+          "notes": "ROBUST long-term results are represented in the EAU guideline source family. Neither supplied original was independently read in this bounded operative pass. Dedicated DCB evidence hub belongs to companion clinical scope; do not infer urethroplasty equivalence.",
+          "files": []
+        }
+      ]
     },
     {
       "id": 32,
@@ -327,8 +536,20 @@
         "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/endourethroplasty.mdx",
         "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/balloon-dilation-bnc.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            32,
+            33
+          ],
+          "status": "deferred",
+          "notes": "Posterior/membranous off-label DCB observational series are not major practice-changing evidence. Do not broaden routine indications from these cohorts.",
+          "files": []
+        }
+      ]
     },
     {
       "id": 33,
@@ -337,8 +558,20 @@
       "existingPages": [
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            32,
+            33
+          ],
+          "status": "deferred",
+          "notes": "Posterior/membranous off-label DCB observational series are not major practice-changing evidence. Do not broaden routine indications from these cohorts.",
+          "files": []
+        }
+      ]
     },
     {
       "id": 34,
@@ -348,8 +581,19 @@
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx",
         "docs/01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            34
+          ],
+          "status": "deferred",
+          "notes": "FIRST-CARE is a protocol, not trial results. No first-line outcome claim added.",
+          "files": []
+        }
+      ]
     },
     {
       "id": 35,
@@ -367,8 +611,24 @@
         "docs/04-surgical-techniques/04a-urethral-reconstruction/combined/vanni-zinman-ventral-bmg-gracilis.mdx",
         "docs/04-surgical-techniques/04a-urethral-reconstruction/combined/erickson-dorsal-bmg-ventral-flap.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            35
+          ],
+          "status": "present",
+          "notes": "Already present; primary abstract now checked (PMID40484913): eight studies655, no detected patency difference RR1.00, transient-ED signal favoring ventral RR0.24, very imprecise permanent-ED estimate. AAU page now states this does not test the anastomotic component or establish equal permanent-ED risk.",
+          "files": [
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles.mdx",
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/graft/ventral-onlay-omg.mdx",
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/graft/dorsal-onlay-omg.mdx",
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/augmented-anastomotic.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 36,
@@ -376,7 +636,8 @@
       "doi": "10.1016/j.urology.2026.07.018",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 37,
@@ -390,7 +651,8 @@
         "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 38,
@@ -398,7 +660,8 @@
       "doi": "10.1016/j.urology.2025.09.037",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 39,
@@ -406,7 +669,8 @@
       "doi": "10.1002/nau.70341",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 40,
@@ -416,15 +680,26 @@
         "docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 41,
       "suppliedCitation": "Consensus Statements on the Definition of Surgical Success Following Obstetric Urinary Pelvic Floor Fistula Repair: An IUGA-ICS Proposal. Maljaars LP, Corcos J, Ghoniem G, et al. International Urogynecology Journal. 2026;37(5):1193-1205. doi:10.1007/s00192-025-06413-6.",
       "doi": "10.1007/s00192-025-06413-6",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            41
+          ],
+          "status": "deferred",
+          "notes": "IUGA/ICS fistula success consensus needs original-source review and exact definition, not automatic worldwide incurable label."
+        }
+      ]
     },
     {
       "id": 42,
@@ -433,8 +708,18 @@
       "existingPages": [
         "docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            42
+          ],
+          "status": "present",
+          "notes": "FIGO 2025 DOI present in obstetric fistula bibliography; that page is not yet full-text reviewed in this audit."
+        }
+      ]
     },
     {
       "id": 43,
@@ -446,7 +731,8 @@
         "docs/04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 44,
@@ -457,7 +743,8 @@
         "docs/04-surgical-techniques/04h-fistula-repair/female/urethrovaginal-fistula-repair.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 45,
@@ -472,7 +759,8 @@
         "docs/04-surgical-techniques/04h-fistula-repair/female/conservative-vvf-management.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 46,
@@ -483,7 +771,8 @@
         "docs/04-surgical-techniques/04h-fistula-repair/female/transabdominal-rvf-repair.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 47,
@@ -497,32 +786,87 @@
         "docs/03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx",
         "docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            47
+          ],
+          "status": "present",
+          "notes": "Global IC/BPS consensus DOI present in IC and chronic-pelvic-pain pages; full source/page review pending."
+        }
+      ]
     },
     {
       "id": 48,
       "suppliedCitation": "How Can We Make Progress in the Management of Bladder Pain Syndrome? ICI\u2010RS 2025. Malde S, Sinha S, Dmochowski R, et al. Neurourology and Urodynamics. 2025;. doi:10.1002/nau.70195.",
       "doi": "10.1002/nau.70195",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        }
+      ]
     },
     {
       "id": 49,
       "suppliedCitation": "Pathophysiology and potential multimodal therapeutic strategies for IC/BPS. Jhang JF, Yu WR, Jiang YH, Kuo HC. Nature Reviews. Urology. 2025;22(10):672-686. doi:10.1038/s41585-025-01044-4.",
       "doi": "10.1038/s41585-025-01044-4",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        }
+      ]
     },
     {
       "id": 50,
       "suppliedCitation": "Towards precision medicine in clinical trials for the treatment of urologic chronic pelvic pain syndrome: lessons from the MAPP Research Network. Stephens Shields AJ, Clemens JQ, Pontari MA, et al. Nature Reviews. Urology. 2025;22(9):632-642. doi:10.1038/s41585-025-01030-w.",
       "doi": "10.1038/s41585-025-01030-w",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        }
+      ]
     },
     {
       "id": 51,
@@ -532,16 +876,66 @@
         "docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx",
         "docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        },
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "51"
+          ],
+          "status": "present",
+          "doi": "10.1016/j.preteyeres.2025.101400",
+          "reason": "Hall2025 PPS maculopathy review already appears as oral IC/BPS reference7. No duplicate news item added; FDA label and CUA2025 guidance are the prescribing anchors."
+        }
+      ]
     },
     {
       "id": 52,
       "suppliedCitation": "Association Between Pentosan Polysulfate and Subsequent Maculopathy: Insights From a Nationwide Population-Based Study in Korea. Kim MS, Choi YJ, Ji E, et al. Ophthalmology. 2025;132(1):108-114. doi:10.1016/j.ophtha.2024.07.027.",
       "doi": "10.1016/j.ophtha.2024.07.027",
-      "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "existingPages": [
+        "docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx"
+      ],
+      "disposition": "incorporated-source-checked",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        },
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "52"
+          ],
+          "status": "added",
+          "doi": "10.1016/j.ophtha.2024.07.027",
+          "reason": "Primary Korean cohort abstract verified:103553 users/205792 nonusers, adjusted HR1.34 CI1.31\u20131.38. Added as observational safety corroboration, explicitly not absolute risk or randomized causal evidence."
+        }
+      ]
     },
     {
       "id": 53,
@@ -550,8 +944,23 @@
       "existingPages": [
         "docs/03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "status": "deferred",
+          "notes": "IC/PPS and pelvic-pain leads await primary-source review. Reject no claim merely from survey; especially do not treat Botox as the sole strong-evidence IC therapy."
+        }
+      ]
     },
     {
       "id": 54,
@@ -560,40 +969,102 @@
       "existingPages": [
         "docs/03-clinical-conditions/03i-defecatory-disorders/defecatory-dysfunction.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            54
+          ],
+          "status": "present",
+          "notes": "Rome V anorectal DOI is already in defecatory-dysfunction bibliography; diagnostic criteria not yet checked."
+        }
+      ]
     },
     {
       "id": 55,
       "suppliedCitation": "Development of the Rome v Diagnostic Questionnaires. Palsson OS, Lacy BE, Benninga MA, et al. Gastroenterology. 2026;170(6):1408-1416. doi:10.1053/j.gastro.2026.01.041.",
       "doi": "10.1053/j.gastro.2026.01.041",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "deferred",
+          "notes": "Rome V questionnaire, PF consortium, TNT and SUBSoNIC await review; do not equate distinct stimulation modalities or call a failed superiority trial proof of no benefit."
+        }
+      ]
     },
     {
       "id": 56,
       "suppliedCitation": "Incorporating Pelvic Floor Physical Therapy in the Treatment of Obstructed Defecation Syndrome and Posterior Compartment Pelvic Organ and Rectal Prolapse: Proceedings of the Consensus Meeting of the Pelvic Floor Consortium of the American Society of Colon and Rectal Surgeons, the International Continence Society, the International Urogynecological Association, the American Urogynecologic Society, and the American Physical Therapy Association. Traugott AL, Barten J, Bordeianou L, et al. Diseases of the Colon and Rectum. 2026;69(3):346-359. doi:10.1097/DCR.0000000000003993.",
       "doi": "10.1097/DCR.0000000000003993",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "deferred",
+          "notes": "Rome V questionnaire, PF consortium, TNT and SUBSoNIC await review; do not equate distinct stimulation modalities or call a failed superiority trial proof of no benefit."
+        }
+      ]
     },
     {
       "id": 57,
       "suppliedCitation": "Randomized Sham-Controlled Trial of Translumbosacral Neuromodulation Therapy for Fecal Incontinence. Rao SSC, Yan Y, Hamdy S, et al. Gastroenterology. 2026;:S0016-5085(26)06828-9. doi:10.1053/j.gastro.2026.04.027.",
       "doi": "10.1053/j.gastro.2026.04.027",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "deferred",
+          "notes": "Rome V questionnaire, PF consortium, TNT and SUBSoNIC await review; do not equate distinct stimulation modalities or call a failed superiority trial proof of no benefit."
+        }
+      ]
     },
     {
       "id": 58,
       "suppliedCitation": "Clinical Efficacy of Subsensory Sacral Neuromodulation in Adults With Faecal Incontinence: The SUBSoNIC Crossover Randomised Controlled Trial and Cohort Follow-Up Study. Vollebregt PF, Goh YL, Bagul A, et al. Colorectal Disease : The Official Journal of the Association of Coloproctology of Great Britain and Ireland. 2025;27(11):e70308. doi:10.1111/codi.70308.",
       "doi": "10.1111/codi.70308",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/clinical-conditions.json",
+          "referenceIds": [
+            55,
+            56,
+            57,
+            58
+          ],
+          "status": "deferred",
+          "notes": "Rome V questionnaire, PF consortium, TNT and SUBSoNIC await review; do not equate distinct stimulation modalities or call a failed superiority trial proof of no benefit."
+        }
+      ]
     },
     {
       "id": 59,
@@ -603,7 +1074,8 @@
         "docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 60,
@@ -611,7 +1083,8 @@
       "doi": "10.1016/j.urolonc.2026.05.017",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 61,
@@ -621,7 +1094,8 @@
         "docs/04-surgical-techniques/04c-urinary-diversion/intracorporeal-urinary-diversion.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 62,
@@ -631,7 +1105,8 @@
         "docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 63,
@@ -639,7 +1114,8 @@
       "doi": "10.1002/nau.70196",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 64,
@@ -650,7 +1126,8 @@
         "docs/04-surgical-techniques/04b-bladder-reconstruction/bladder-augmentation.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 65,
@@ -658,7 +1135,8 @@
       "doi": "10.1002/nau.70347",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 66,
@@ -671,8 +1149,22 @@
         "docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/augmented-anastomotic-uu.mdx",
         "docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/bmg-onlay-ureter.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            66
+          ],
+          "status": "present",
+          "notes": "Chao 163-patient BMG ureter cohort already cited in dedicated page and principles. Dedicated article full text and original source remain unread in this pass; follow-up source validation deferred at user-requested pause.",
+          "files": [
+            "docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/bmg-onlay-ureter.mdx",
+            "docs/04-surgical-techniques/04d-upper-tract-reconstruction/upper-tract-reconstruction-principles.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 67,
@@ -682,8 +1174,21 @@
         "docs/01-foundations/tools/biomaterials/autologous-tissue/bowel-segments.mdx",
         "docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            67
+          ],
+          "status": "present",
+          "notes": "Ji 2026 already included; primary record checked and outcome denominator corrected: 33/36 evaluable success, 48 operated, 9/48 major complications. Observational selected cohort, not comparative superiority.",
+          "files": [
+            "docs/04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/ileal-ureter.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 68,
@@ -691,7 +1196,8 @@
       "doi": "10.1177/08927790261473191",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 69,
@@ -699,7 +1205,8 @@
       "doi": "10.1007/s00345-026-06416-y",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 70,
@@ -707,7 +1214,8 @@
       "doi": "10.1007/s00345-025-06181-4",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 71,
@@ -715,7 +1223,8 @@
       "doi": "10.1016/j.jpedsurg.2026.163428",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 72,
@@ -725,7 +1234,8 @@
         "docs/04-surgical-techniques/04b-bladder-reconstruction/tubularized-bladder-flap.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 73,
@@ -736,7 +1246,8 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/zero-depth-vulvoplasty.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 74,
@@ -744,7 +1255,8 @@
       "doi": "10.1016/j.eclinm.2025.103325",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 75,
@@ -752,7 +1264,8 @@
       "doi": "10.1016/j.eclinm.2026.103907",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 76,
@@ -760,7 +1273,8 @@
       "doi": "10.1097/SLA.0000000000006621",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 77,
@@ -772,7 +1286,8 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/genital-nullification-amab.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 78,
@@ -783,7 +1298,8 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/genital-nullification-amab.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 79,
@@ -798,7 +1314,8 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/pars-fixa-urethral-construction.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 80,
@@ -810,7 +1327,8 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/shaft-only-phalloplasty.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 81,
@@ -824,15 +1342,30 @@
         "docs/04-surgical-techniques/04k-gender-affirming-surgery/rfff-phalloplasty.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 82,
       "suppliedCitation": "Best Practices Guidelines Management of Gentiunrinary Injuries. Niels Johnsen, Hunter Wessells, Krystal Archer-Arroyo, et al. American College of Surgeons (2025).",
       "doi": null,
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            82
+          ],
+          "status": "present",
+          "notes": "ACS 2025 guidance already cited in female EPA and several unread male/upper-tract pages. Original ACS full guideline not independently read here. Female early repair corrected using current EAU trauma guidance; male delayed reconstruction cannot be imported wholesale to women.",
+          "files": [
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/female/primary-end-to-end-female.mdx",
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/posterior/primary-endoscopic-realignment.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 83,
@@ -843,7 +1376,8 @@
         "docs/01-foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 84,
@@ -853,7 +1387,8 @@
         "docs/04-surgical-techniques/04j-sexual-dysfunction/li-eswt.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 85,
@@ -865,23 +1400,46 @@
         "docs/04-surgical-techniques/04j-sexual-dysfunction/li-eswt.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 86,
       "suppliedCitation": "Efficacy and Safety of Intracavernosal incobotulinumtoxinA (Xeomin) as Add-on Therapy to Sildenafil for the Treatment of Erectile Dysfunction Insufficiently Responsive to Phosphodiesterase Type 5 Inhibitors. Giuliano F, Denormandie AC, Madec FX, et al. The Journal of Sexual Medicine. 2025;22(11):1994-2001. doi:10.1093/jsxmed/qdaf225.",
       "doi": "10.1093/jsxmed/qdaf225",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "86",
+            "87"
+          ],
+          "status": "deferred",
+          "reason": "Negative ICI Botox / ED PRP leads need primary trial and guideline review; no clinical recommendation added."
+        }
+      ]
     },
     {
       "id": 87,
       "suppliedCitation": "Current Advances in Platelet-Rich Plasma Therapy for Erectile Dysfunction: A Meta-Analysis of Randomized Controlled Trials. Jacob D, Hay J, Rahemtoola MS, et al. The Journal of Sexual Medicine. 2025;:qdaf325. doi:10.1093/jsxmed/qdaf325.",
       "doi": "10.1093/jsxmed/qdaf325",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "86",
+            "87"
+          ],
+          "status": "deferred",
+          "reason": "Negative ICI Botox / ED PRP leads need primary trial and guideline review; no clinical recommendation added."
+        }
+      ]
     },
     {
       "id": 88,
@@ -896,7 +1454,8 @@
         "docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/complications.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 89,
@@ -910,15 +1469,26 @@
         "docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 90,
       "suppliedCitation": "Combination therapy for acute Peyronie\u2019 s disease: a success story of translation from bench to bedside. Ralph DJ, Cellek S. Nature Reviews. Urology. 2026;:10.1038/s41585-026-01171-6. doi:10.1038/s41585-026-01171-6.",
       "doi": "10.1038/s41585-026-01171-6",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "90"
+          ],
+          "status": "deferred",
+          "reason": "Peyronie hyaluronic-acid approval/practice-translation claim not accepted without country-specific regulatory and primary-study verification."
+        }
+      ]
     },
     {
       "id": 91,
@@ -928,7 +1498,8 @@
         "docs/04-surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 92,
@@ -936,7 +1507,8 @@
       "doi": "10.1007/s00266-025-04946-1",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 93,
@@ -960,7 +1532,8 @@
         "docs/04-surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 94,
@@ -968,7 +1541,8 @@
       "doi": "10.1097/TA.0000000000004509",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 95,
@@ -976,7 +1550,8 @@
       "doi": "10.1007/s00068-025-02847-1",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 96,
@@ -986,8 +1561,21 @@
         "docs/05-special-populations/05a-trauma-emergencies/pfui.mdx",
         "docs/04-surgical-techniques/04a-urethral-reconstruction/posterior/primary-endoscopic-realignment.mdx"
       ],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/urethral-upper-tract.json",
+          "referenceIds": [
+            96
+          ],
+          "status": "present",
+          "notes": "Owen 2025 meta-analysis already cited in primary-endoscopic-realignment page; page and original remain unread. Comparative no-difference claims are not clinically validated by this bibliographic match.",
+          "files": [
+            "docs/04-surgical-techniques/04a-urethral-reconstruction/posterior/primary-endoscopic-realignment.mdx"
+          ]
+        }
+      ]
     },
     {
       "id": 97,
@@ -995,7 +1583,8 @@
       "doi": "10.1007/s00345-025-06129-8",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 98,
@@ -1003,7 +1592,8 @@
       "doi": "10.3390/jcm14155343",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 99,
@@ -1011,7 +1601,8 @@
       "doi": "10.1038/s41598-026-47007-6",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 100,
@@ -1019,7 +1610,8 @@
       "doi": "10.1007/s00345-025-05899-5",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 101,
@@ -1027,15 +1619,27 @@
       "doi": "10.1016/S1470-2045(25)00091-9",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 102,
       "suppliedCitation": "Testosterone Treatment in Prostate Cancer Survivors With Hypogonadism: A Randomized Clinical Trial. Bhasin S, Burnett AL, Gagliano-Juc\u00e1 T, et al. JAMA Internal Medicine. 2026;186(7):805-814. doi:10.1001/jamainternmed.2026.1343.",
       "doi": "10.1001/jamainternmed.2026.1343",
       "existingPages": [],
-      "disposition": "pending-source-check",
-      "notes": []
+      "disposition": "review-recorded-see-scope",
+      "notes": [],
+      "reviewDecisions": [
+        {
+          "report": "../full-site-review/pharmacology.json",
+          "oeIds": [
+            "102"
+          ],
+          "doi": "10.1001/jamainternmed.2026.1343",
+          "status": "deferred",
+          "reason": "Not independently retrieved or verified before flight checkpoint; do not claim new RCT findings."
+        }
+      ]
     },
     {
       "id": 103,
@@ -1043,7 +1647,8 @@
       "doi": "10.1056/NEJMoa2511885",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 104,
@@ -1051,7 +1656,8 @@
       "doi": null,
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 105,
@@ -1061,7 +1667,8 @@
         "docs/05-special-populations/05d-cancer-survivorship/index.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 106,
@@ -1072,7 +1679,8 @@
         "docs/05-special-populations/05d-cancer-survivorship/index.mdx"
       ],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 107,
@@ -1080,7 +1688,8 @@
       "doi": null,
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 108,
@@ -1088,7 +1697,8 @@
       "doi": null,
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 109,
@@ -1096,7 +1706,8 @@
       "doi": "10.1016/j.ijrobp.2024.09.011",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     },
     {
       "id": 110,
@@ -1104,7 +1715,9 @@
       "doi": "10.1001/jamanetworkopen.2025.42147",
       "existingPages": [],
       "disposition": "pending-source-check",
-      "notes": []
+      "notes": [],
+      "reviewDecisions": []
     }
-  ]
+  ],
+  "reconciledAt": "2026-09-11"
 }

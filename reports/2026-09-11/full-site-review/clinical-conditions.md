@@ -1,12 +1,14 @@
 # Clinical conditions: incomplete review checkpoint
 
-33 of 73 MDX full texts read; 25 updated, 7 checked within narrow scopes, 41 unresolved (including the read but uncorrected UPJ page). Paused at the user’s travel checkpoint. No whole-domain clinical sign-off.
+40 of 73 MDX full texts read; 33 updated, 7 checked within narrow scopes, 33 unresolved and unread. No whole-domain clinical sign-off.
 
-Resume with UPJ obstruction, then ureteral stricture, fistulas, genital/scrotal conditions, pelvic pain and defecatory disorders. Verify the relevant OpenEvidence leads recorded in the JSON; presence of a citation is not verification.
+The latest bounded batch covers UPJ obstruction, ureteral stricture, nephropleural, pyeloenteric, ureterocolonic, vascular-urinary and post-transplant fistulas, plus the fistulas landing page. A short MUSA pointer was added to the previously reviewed MUI page.
 
-Every entry records source-checked scope and limits. A full-text read does not validate every numerical claim, citation, drug label or figure.
+Resume at `docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx` for OE items 41/42, then remaining fistulas, genital/scrotal conditions, pelvic pain and defecatory disorders. Presence of a citation is not source verification.
 
-- **Mixed Urinary Incontinence — updated**: ESTEEM small statistical difference did not meet its35-point clinical-importance threshold. Revised historical mandatory sequencing. Epidemiologic percentages and every smaller supporting study have not been independently reverified.
+Every entry records source-checked scope and limits. A full-text read does not validate every numerical claim, citation, drug label or figure. Exact hashes in the JSON describe the reviewed file versions.
+
+- **Mixed Urinary Incontinence — updated**: ESTEEM small statistical difference did not meet its35-point clinical-importance threshold. Revised historical mandatory sequencing. Epidemiologic percentages and every smaller supporting study have not been independently reverified. Added a short MUSA pointer after original trial verification (OE item 1).
 
 - **Nocturia — updated**: Replaced cautions with explicit label contraindications, added one-month sodium check and1h-before/8h-after fluid restriction; corrected mandatory return-to-sleep definition and removed unrelated drug-paper citation from CPAP. Other observational prevalence/CPAP effect claims have not all been revalidated.
 
@@ -68,7 +70,22 @@ Every entry records source-checked scope and limits. A full-text read does not v
 
 - **Retroperitoneal Fibrosis (RPF) — updated**: Added two missing major trial updates with population and uncertainty limits. Corrected only-RCT and maintenance-versus-induction interpretation. Broad PET-superiority statements, preferred biopsy route, all cohort percentages and the duplicated older review remain unresolved for deeper source verification.
 
-- **UPJ Obstruction — unresolved**: Priority continuation: prolonged renogram half-time is presented as diagnostic by itself; absolute crossing-vessel/transposition mandates, universal function improvement and fixed infant robot size/age thresholds need source checking. No edit made to this page. Do not treat this full-text screen as validated clinical guidance.
+- **UPJ Obstruction — updated**: Corrected T½-alone diagnosis, percentage-point decline versus a universal adult threshold, mandatory vessel transposition, fixed infant thresholds and guaranteed functional recovery. Full MDX read. Remaining historical epidemiology, MR contrast/pregnancy wording, UTD/SFU claims, redo approach comparisons and all older series percentages were not independently validated.
+
+- **Ureteral Stricture — updated**: Corrected 142-patient cohort attribution, absence of demonstrated preventive stent benefit, free-graft terminology, mandatory adult antireflux and incorrect short-ileum acidosis risk. Full MDX read. Unresolved: blanket metallic-stent durability, broad robotic supremacy/autotransplant versus ileal recovery claims, length thresholds and every reconstruction series. Renal/metabolic companion ownership notified to root.
+
+- **Nephropleural Fistula — updated**: Removed pathognomonic creatinine-ratio claim and exudate inversion. Verified Lallas authors/title and repaired unrelated DOI to 10.1016/j.urology.2004.03.031; its four cases resolved by three months, not a universal days-to-weeks deadline. Full MDX read. Individual imaging sensitivity, procedural drainage/removal schedules and other historical bibliography details remain incompletely verified.
+
+- **Urinary Fistula After Kidney Transplant — updated**: Cochrane UTI effect is uncertain, not established increase; corrected 2026 meta-analysis year and preserved EAU prophylactic stenting recommendation despite observational null result. Removed most-ureteral-fistulas-need-surgery and stenosis cohort percentage misapplied to leak reconstruction; distinguished UU from pyeloureterostomy. Full MDX read. No full verification of historical diagnostic sensitivities, anastomotic success rates, viral associations, omental-series outcomes or comparative graft survival.
+
+- **Pyeloenteric Fistula — updated**: Added 2025 review of 25 cases from 24 reports and removed largest-review/current universal surgical-success implication. Narrowed nephrectomy selection and nonspecific per-rectum debris claim. Full MDX read. Modern evidence remains case reports; no comparative efficacy established. Individual endoscopic case details, general conservative failure rates and all older references not independently verified.
+
+- **Ureterocolonic Fistula — updated**: Removed generalization of a handful of diverticular cases, prostate-radiotherapy all-fistula incidence and 50-patient mixed dehiscence/fistula outcomes. Avoided automatic nephroureterectomy or assumption bowel resection alone fixes ureteral injury. Full MDX read. Remaining rare case reports, CT-colonography role, individual reconstruction outcomes and broad radiation prognosis are not fully source-validated.
+
+- **Vascular-Urinary Fistula — updated**: Corrected dangerous automatic provocative angiography, false 100% sensitivity, graft infection 14–50% conflation and routine screening after uneventful biopsy. Replaced initial six-month wait with individualized follow-up and correctly attributed cohort protocol; persistence alone does not mandate TAE. Full MDX read. All embolization success/parenchymal-loss rates, small-series congenital AVF prevalence, open-versus-endovascular selection details and other older cohorts remain unverified; removed unrelated glomerulonephritis reference.
+
+- **Fistulas — updated**: Removed universal 3–6-month delay, unsupported preset HBO course and absolute back-pressure language; aligned vascular summary with actual AUF/renal AVF page. EAU source applies principally to female urinary fistulas, not independent validation of every linked male/enteric/vascular pathway. Full MDX read; subtype-specific evidence remains assigned to individual pages.
 
 - **Clinical Conditions — checked**: Full text read. Clinical domain overview is descriptive; internal route validation is separate from clinical evidence verification.
 
+Validation: citation lint (1,187 files), internal /docs/ link check (1,187 files), exact recorded hashes and `git diff --check` passed. The combined production build and deployment verification remain root responsibilities.

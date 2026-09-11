@@ -78,23 +78,41 @@ function hashStr(s) {
   }
   return h >>> 0;
 }
-async function check([url, file]) {
-  const isDoi = url.includes('doi.org/') || url.includes('doi:');
-  const method = isDoi ? 'GET' : 'HEAD';
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+async function check([url, file], { fetchImpl = fetch, timeoutMs = TIMEOUT_MS } = {}) {
+  async function request(method) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await fetchImpl(url, {
+        method,
+        redirect: 'follow',
+        signal: controller.signal,
+        headers: { 'user-agent': 'warwiki-linkcheck/1.0 (+https://warwiki.org)' },
+      });
+      // Read status only; a linked manual can be tens of megabytes.
+      if (res.body) await res.body.cancel();
+      return { status: res.status, ok: res.ok };
+    } finally {
+      clearTimeout(timer);
+    }
+  }
   try {
-    const res = await fetch(url, {
-      method,
-      redirect: 'follow',
-      signal: controller.signal,
-      headers: { 'user-agent': 'warwiki-linkcheck/1.0 (+https://warwiki.org)' },
-    });
-    clearTimeout(timer);
-    return { url, file, status: res.status, ok: res.ok, soft: res.status === 429 || res.status === 403 };
+    const isDoi = /(^|\.)doi\.org$/i.test(new URL(url).hostname);
+    let method = isDoi ? 'GET' : 'HEAD';
+    let result = await request(method);
+    // Some publisher/CDN endpoints return 404 or unsupported for HEAD while
+    // the actual GET succeeds. Confirm these before reporting a broken link.
+    let headStatus;
+    if (method === 'HEAD' && [404, 405, 501].includes(result.status)) {
+      headStatus = result.status;
+      method = 'GET';
+      result = await request(method);
+    }
+    return { url, file, ...result, method, ...(headStatus ? { headStatus } : {}),
+      soft: result.status === 429 || result.status === 403 };
   } catch (err) {
-    clearTimeout(timer);
-    return { url, file, status: 0, ok: false, soft: false, error: err.name === 'AbortError' ? 'timeout' : err.message };
+    return { url, file, status: 0, ok: false, soft: false,
+      error: err.name === 'AbortError' ? 'timeout' : err.message };
   }
 }
 
@@ -161,4 +179,4 @@ if (require.main === module) main().catch(error => {
   console.error(error.message);
   process.exitCode = 1;
 });
-module.exports = { extractUrls };
+module.exports = { extractUrls, check };

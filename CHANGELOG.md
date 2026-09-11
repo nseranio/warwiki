@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Resumed evidence corrections and whole-site browser safeguards
+
+Corrected40 documentation pages after the flight checkpoint. This includes the MUSA2025 trial (added without interpreting failed superiority as equivalence), Botox adult/pediatric label regimens and ROSETTA denominators, FDA/AUA ProACT selection and indirect sling comparisons, renal/metabolic/B12 surveillance, IC/BPS AUA/CUA2025 guidance and PPS retinal risk, product-specific sealant composition/handling, anastomotic urethroplasty anatomy/outcome interpretation and the2026 Scandinavian follow-up, plus UPJ/ureteral/fistula evidence. Targeted companion corrections align cystectomy selection, study comparisons and references. Exact sources, corrected statements and unresolved claims are recorded in the [page ledger](reports/2026-09-11/full-site-review/README.md).
+
+Cumulative resumed audit:121 of1,186 documentation pages have a full source-text read recorded against current content;113 pages have scoped updates. This is not a complete clinical review of the entire corpus. Forty OpenEvidence items have a recorded decision, including presence-only or deferred checks; those decisions are not all completed primary-source reviews. The reference-identity cache contains6,355 records and remains partial.
+
+Added a homepage main landmark, limited Vercel analytics to the public production origin, strengthened whole-sitemap browser error capture, and added interactive search result/no-result coverage. External-link checks now confirm suspicious HEAD responses with GET while cancelling response bodies, preventing false broken-link results from large working PDFs. Saved checkpoint/OpenEvidence/Epic authoring-only edits skip deployments.
+
+**Validation so far:** source lint and typecheck,32 component tests,50 maintenance tests, production build (139.40MB), and compiled link/asset checks pass. Independent reviews of introduced corrections found no remaining blocker after correcting the Farias2025 alternating-allocation study label. Final whole-sitemap browser and live-publication results are tracked in [the resumed release record](reports/2026-09-11/resumed-release.md).
+
+---
+
 ## 2026-09-11 — Quarterly evidence cadence and checkpoint validation
 
 Changed literature collection and the existing Codex evidence-review automation from monthly to every three months, in March, June, September and December. The next planned cycle is December 2026. Technical external-link checks remain monthly. The existing automation ID is preserved, and the reusable OpenEvidence prompt remains at the repository root.

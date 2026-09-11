@@ -11,6 +11,7 @@ for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacolog
  if not p.exists():continue
  report=json.loads(p.read_text())
  for rec in report.get('pages',[]):records.setdefault(rec['file'],[]).append({**rec,'recordFile':name})
+ for rec in report.get('companionCorrections',[]):records.setdefault(rec['file'],[]).append({**rec,'status':'updated','recordFile':name})
 pages=[]
 for page in inventory['articles']:
  file=page['file'];sha=hashlib.sha256((ROOT/file).read_bytes()).hexdigest()

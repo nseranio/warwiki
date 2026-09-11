@@ -135,10 +135,10 @@ export default function Home(): ReactNode {
     <Layout
       title={siteConfig.title}
       description="The functional reconstructive urology wiki.">
-      <div className={styles.homepageRoot}>
+      <main className={styles.homepageRoot}>
         <HomepageHeader />
         <HomepageSocialFooter />
-      </div>
+      </main>
     </Layout>
   );
 }

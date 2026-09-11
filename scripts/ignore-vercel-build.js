@@ -12,7 +12,7 @@ try {
   // Only known authoring-only paths can skip a build. New/unknown paths,
   // article content, media, APIs, dependencies and config always build.
   const authoringOnly = name => /^(reports\/|social-assets\/)/.test(name)
-    || /^(AGENTS\.md|CLAUDE\.md|CHANGELOG\.md|README\.md)$/.test(name);
+    || /^(AGENTS\.md|CLAUDE\.md|CHANGELOG\.md|README\.md|RESUME-HERE\.md|OPEN-EVIDENCE-PROMPT\.md|EPIC-ROADMAP\.md)$/.test(name);
   if (changed.length > 0 && changed.every(authoringOnly)) {
     console.log(`Skip: all ${changed.length} changes are authoring-only reports or notes.`);
     process.exit(0);

@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-09-11",
-  "methodology": "Full article text read; targeted prescribing-label corrections independently verified. Remaining historical efficacy estimates and physiology were screened but not all independently verified. No clinician sign-off.",
+  "methodology": "Full-text reading is recorded explicitly; source verification is scoped to listed corrections. Targeted companion edits are not counted as full reads. No clinician sign-off or exhaustive verification of every legacy citation.",
   "pages": [
     {
       "file": "docs/01-foundations/pharmacology/storage-oab/desmopressin.mdx",
@@ -58,21 +58,22 @@
       "title": "Female Sexual Dysfunction",
       "status": "updated",
       "scope": "Full source text read; targeted corrections listed below.",
-      "sourceSha256": "dbd843d819a11f271ed5c5d8e4d7bb12e8ba0aac9f4a03cfa7687266598d6296",
+      "sourceSha256": "a037f59b359955eb128963596f28e2bda88611c733aa7d39c4a76813c413781b",
       "sources": [
         "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394",
         "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9accbcc9-78ee-4f84-9b7e-704f2ab1c413",
-        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ada639d4-bac0-2ad0-e053-2a95a90afce7"
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ada639d4-bac0-2ad0-e053-2a95a90afce7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1d0c1b5-2f39-4bad-a6a4-0066e3ad5dcf"
       ],
       "changes": [
         "Aligned Addyi eligibility with December2025 expansion to women under65; corrected alcohol timing and moderateCYP3A4 contraindication.",
         "Dated ACOG2019 recommendation summary rather than silently treating its old eligibility as current labeling.",
         "Corrected ospemifene and prasterone indications; removed aromatase-inhibitor safety assertion.",
-        "Removed 2026 treatment-rank assertions supported only by mismatched older references."
+        "Removed 2026 treatment-rank assertions supported only by mismatched older references.",
+        "Added known cardiovascular disease to bremelanotide contraindications; made ospemifene breast-cancer warning explicit."
       ],
       "unresolved": [
-        "Historical epidemiology and efficacy numbers not all independently verified.",
-        "Bremelanotide overview still needs alignment with independently checked pharmacology companion."
+        "Historical epidemiology and efficacy numbers not all independently verified."
       ],
       "fullTextRead": true,
       "clinicalVerificationComplete": false
@@ -98,6 +99,208 @@
       ],
       "fullTextRead": false,
       "clinicalVerificationComplete": false
+    },
+    {
+      "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx",
+      "title": "Intradetrusor Botox",
+      "status": "updated",
+      "scope": "Full source text read; targeted corrections only.",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected pediatric NDO weight-based dose, 20-site/10mL preparation, adult400U cumulative limit and label citation.",
+        "Corrected NDO trial populations and subgroup CIC denominators; pooled OAB adverse event windows; injection depth, PVR and antimicrobial instructions.",
+        "Replaced heterogeneous comparison/ranking with direct ROSETTA200U trial, its dose caveat and exploratory resolution denominator.",
+        "Added missing MUSA2025 trial from OE1:150randomized/137primary analysis; nonsignificant superiority test is not equivalence.",
+        "Corrected pregnancy database denominator and removed unsupported mechanism/antithrombotic absolutes."
+      ],
+      "sources": [
+        "https://www.rxabbvie.com/pdf/botox_pi.pdf",
+        "https://scholars.mssm.edu/en/publications/phase-3-efficacy-and-tolerability-study-of-onabotulinumtoxina-for-2",
+        "https://sigarra.up.pt/spup/en/PUB_GERAL.PUB_VIEW?pi_pub_base_id=446344",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5399419/",
+        "https://jamanetwork.com/journals/jama/fullarticle/2833562",
+        "https://pubmed.ncbi.nlm.nih.gov/37137724/"
+      ],
+      "unresolved": [
+        "Remaining historical meta-analysis effect sizes, male-specific response and off-label cohorts not independently verified in full."
+      ],
+      "sourceSha256": "2eca74054a5a49b11e14a24e1e3715f006d0438269d147b5934c6f0e457f7b6b"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx",
+      "title": "ProACT device",
+      "status": "updated",
+      "scope": "Full source text read; targeted corrections only.",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Rebuilt device hub around FDA indication, current Coloplast/Uromedica listing and exact FDA-posted IFU with version caveat.",
+        "Removed wrong AMS800 hardware reference and unrelated abobotulinum DOI; removed unsupported Laborie acquisition, device comparison and timeline claims.",
+        "Corrected isotonic fill instructions,8mL limit,23-gauge adjustment and model-specific MR conditions; restored PVR/radiation/other contraindications.",
+        "Distinguished2025 adverse-event shares from patient risks; moved duplicated outcomes to procedure companion."
+      ],
+      "sources": [
+        "https://iu.coloplast.us/products/proact/",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130018D.pdf",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P130018",
+        "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/IPT%20Unabridged%20Final%206-18-24.pdf",
+        "https://tau.amegroups.org/article/view/138725/html"
+      ],
+      "unresolved": [
+        "FDA-posted IFU is originalRevA; current device-package IFU must govern specific implantation/MRI. Coloplast linked PDF is a safety summary, not a full current IFU."
+      ],
+      "sourceSha256": "d8e461bfa288ed66895087a1790adc167352af76e1b8933c410bcf545beb6953"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons.mdx",
+      "title": "ProACT procedure",
+      "status": "updated",
+      "scope": "Full source text read; targeted corrections only.",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected observational ATOMS comparison described as definitive head-to-head and all-endpoint superiority.",
+        "Corrected0-1pad social-continence terminology, AE denominator and causal device-survival comparison.",
+        "Aligned FDA indication and AUA2024 non-radiated mild-severe selection; distinguished imaging techniques from approved IFU guidance."
+      ],
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0225762",
+        "https://tau.amegroups.org/article/view/138725/html",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130018D.pdf",
+        "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/IPT%20Unabridged%20Final%206-18-24.pdf"
+      ],
+      "unresolved": [
+        "Remaining historical single-cohort outcomes/complications, especially salvage and severity strata, still need independent source checks."
+      ],
+      "sourceSha256": "a822416519df2812398d89ef821b95f3dc6dc4c9dbfd02facabd0ec6d255e2d9"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling.mdx",
+      "title": "ATOMS sling",
+      "status": "updated",
+      "scope": "Targeted comparison correction only.",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected ProACT and REMEEX comparison paragraphs:indirect observational evidence, not superiority across every endpoint; complications were nonsignificant."
+      ],
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0225762",
+        "https://link.springer.com/article/10.1007/s00345-020-03300-1"
+      ],
+      "unresolved": [
+        "Targeted comparator paragraphs only; no full-page review."
+      ],
+      "sourceSha256": "b4dd6697913233e3a27d68e977b0861c15eff5c0ef2e50caff2a94b4b8077533"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/remeex-mrs.mdx",
+      "title": "REMEEX male sling",
+      "status": "updated",
+      "scope": "Targeted comparison correction only.",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected definitive head-to-head/all-endpoint superiority assertions and overconfident universal device-order positioning."
+      ],
+      "sources": [
+        "https://link.springer.com/article/10.1007/s00345-020-03300-1"
+      ],
+      "unresolved": [
+        "Targeted comparison/positioning only; legacy technique, risk comparisons, device access and case-series estimates remain unverified."
+      ],
+      "sourceSha256": "bc5b47b37fcdb28698f136631211a7a2cbad18d75daa175b1568b75d31634c84"
+    },
+    {
+      "file": "docs/02-evaluation/laboratory-studies/renal-function-metabolic-surveillance.mdx",
+      "title": "Renal function and metabolic surveillance",
+      "status": "updated",
+      "scope": "Full source text read; targeted corrections only.",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Removed wrong surgeon-musculoskeletal-survey DOI; added actual gastric-reconstruction cohort with3/29malignancy context.",
+        "Replaced unverified NCCN schedule claims with directly checked AUA/NICE/EAU population-specific follow-up; removed universal B12q3-6monthyear1 attribution.",
+        "Removed repeated automatic bicarbonate22threshold/prevented-fracture guarantees, rigid eGFR40cutoff and default DXAevery2-3years; corrected CKD-MBD marker distinction.",
+        "Added AKI/CKD/obstruction to hyperkalemia differential; clarified B12MMA renal confounding and loading vsmaintenance supplementation.",
+        "Corrected Kim2016GFR50threshold and absent segment-length predictor; made ammonia workup/drainage/symptomatic-infection distinction explicit.",
+        "Repaired Stein potassium/bone study citation (wrong electroneurostimulation DOI) and described its 27-patient observational cohort without an untreated comparison.",
+        "Removed an unsupported 5.2% renal-decline estimate attached to a prostate-tumor-volume DOI; replaced it with the checked AUA follow-up recommendation."
+      ],
+      "sources": [
+        "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "https://www.nice.org.uk/guidance/ng2/chapter/Recommendations",
+        "https://www.auanet.org/documents/Guidelines/PDF/NLUTD.pdf",
+        "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+        "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+        "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+        "https://kdigo.org/wp-content/uploads/2017/02/KDIGO_CKD_MBD_Guideline_r6.pdf",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158220",
+        "https://www.auajournals.org/doi/10.1016/j.juro.2011.12.105",
+        "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/614181",
+        "https://agsjournals.onlinelibrary.wiley.com/doi/full/10.1111/j.1532-5415.2011.03377.x",
+        "https://pubmed.ncbi.nlm.nih.gov/9883214/"
+      ],
+      "unresolved": [
+        "Historical Lockhart, augmentation, fracture/BMD and other remaining cohort claims require continued verification.",
+        "NCCN2026version-specific source not verified; no fixed NCCN intervals retained."
+      ],
+      "sourceSha256": "c225f0c56a4a179e88b56e3522d351989fcef95a76dc5d3b0b8e94384255619d"
+    },
+    {
+      "file": "docs/02-evaluation/laboratory-studies/preoperative-labs.mdx",
+      "title": "Preoperative laboratory studies",
+      "status": "updated",
+      "scope": "Targeted correction to the Kim metabolic-acidosis reference only.",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Replaced unrelated stone-pain DOI with the actual 2016 PLOS ONE neobladder metabolic-acidosis study; checked diabetes OR5.68 at one year."
+      ],
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158220"
+      ],
+      "unresolved": [
+        "No full-page clinical review recorded; other recommendations and references remain to be reviewed."
+      ],
+      "sourceSha256": "7b2d26ab09f23d0e59edb17b1e570a81e226593bc8d50ab89471c7511424c3f3"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04b-bladder-reconstruction/supratrigonal-cystectomy.mdx",
+      "title": "supratrigonal-cystectomy",
+      "status": "updated",
+      "scope": "Targeted IC/BPS surgical-guideline companion correction only.",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected Hunner-only surgical-selection inference; emphasized bladder-centric/end-stage small fibrotic selection and persistence of extravesical pain."
+      ],
+      "sources": [
+        "https://www.auanet.org/documents/guidelines/pdf/icbps%20guideline.pdf"
+      ],
+      "unresolved": [
+        "Other operative details and historical outcomes were not reviewed in this targeted companion pass."
+      ],
+      "sourceSha256": "b6dfcf6d77e7c24ec38938af6b841823f814d07f92ab91cb7eff44824f59c229"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04c-urinary-diversion/simple-cystectomy.mdx",
+      "title": "simple-cystectomy",
+      "status": "updated",
+      "scope": "Targeted IC/BPS surgical-guideline companion correction only.",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false,
+      "changes": [
+        "Corrected reversed AUA wording: urinary diversion with or without cystectomy, not cystectomy with or without diversion."
+      ],
+      "sources": [
+        "https://www.auanet.org/documents/guidelines/pdf/icbps%20guideline.pdf"
+      ],
+      "unresolved": [
+        "Other operative details and historical outcomes were not reviewed in this targeted companion pass."
+      ],
+      "sourceSha256": "833fd68eaaefd9def6aa5baddc6f0c25f505cbbda02525695c3147618e6607d2"
     }
   ]
 }

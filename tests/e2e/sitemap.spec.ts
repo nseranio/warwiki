@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
+import {collectBrowserErrors} from './browser-errors';
 
 /**
  * Sitemap sweep.
  *
  * Reads the built sitemap at `build/sitemap.xml`, optionally samples a
  * subset (set WARWIKI_E2E_SAMPLE=N), and asserts each URL returns a
- * page with no uncaught console errors and a real <h1>.
+ * page with usable content and no browser or HTTP resource errors.
  *
  * Run sequence:
  *   npm run build
@@ -45,29 +46,38 @@ const urls = pickUrls();
 test.describe('Sitemap sweep', () => {
   for (const url of urls) {
     test(`loads cleanly: ${url}`, async ({ page }) => {
-      const consoleErrors: string[] = [];
-      page.on('console', msg => {
-        if (msg.type() === 'error') consoleErrors.push(msg.text());
-      });
+      const errors = collectBrowserErrors(page);
+      try {
+        const res = await page.goto(url, {waitUntil: 'load'});
+        expect(res?.status(), `HTTP status for ${url}`).toBeLessThan(400);
+        await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
+        if (['localhost', '127.0.0.1', '[::1]'].includes(new URL(url).hostname)) {
+          await expect(page.locator('script[src*="/_vercel/insights/"]')).toHaveCount(0);
+        }
 
-      const res = await page.goto(url, { waitUntil: 'domcontentloaded' });
-      expect(res?.status(), `HTTP status for ${url}`).toBeLessThan(400);
+        if (new URL(url).pathname.replace(/\/+$/, '') === '/search') {
+          // Upstream renders <main> only when it has results. An empty query
+          // page is valid; verify its actual entry point instead of a landmark.
+          await expect(page.getByRole('heading', {level: 1})).toBeVisible();
+          const input = page.getByRole('searchbox', {name: 'Search', exact: true});
+          await expect(input).toBeVisible();
+          await expect(input).toBeEnabled();
+          await expect(input).toHaveValue('');
+        } else {
+          const main = page.getByRole('main');
+          await expect(main).toBeVisible();
+          await expect(main).toContainText(/\S/);
+        }
 
-      // Every Docusaurus page should render an h1 (except hide_title pages
-      // which still emit the title in their <article>; we just check for
-      // *some* main content).
-      const main = page.locator('main');
-      await expect(main).toBeVisible();
-
-      // Filter out known-benign Docusaurus warnings if any creep in over
-      // time. For now: any console error fails the test.
-      const realErrors = consoleErrors.filter(
-        e =>
-          !/Download the React DevTools/.test(e) &&
-          !/google-analytics/i.test(e) &&
-          !/algolia/i.test(e)
-      );
-      expect(realErrors, `console errors on ${url}`).toEqual([]);
+        expect(errors, `browser errors on ${url}`).toEqual([]);
+      } finally {
+        if (errors.length) {
+          await test.info().attach('browser-errors', {
+            body: errors.join('\n'),
+            contentType: 'text/plain',
+          });
+        }
+      }
     });
   }
 });

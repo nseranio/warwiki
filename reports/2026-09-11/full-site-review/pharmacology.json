@@ -1,50 +1,82 @@
 {
   "reviewedAt": "2026-09-11",
-  "methodology": "Page-by-page pharmacology review in progress. Status updated means entire page text was read and specific listed claims corrected against primary labels/guidelines/trial abstracts. It does not mean every dose, citation, mechanism or clinical recommendation was independently validated. Unresolved means inventory only unless scope says otherwise. The desmopressin article is excluded because the root agent owns its review. Hashes describe saved article contents, not clinical certification.",
+  "methodology": "Page-by-page pharmacology review in progress. Status updated means the whole page text was read and specific listed claims corrected against primary labels, guidelines, full study text or abstracts. It does not mean every dose, citation, mechanism or clinical recommendation was independently validated. fullTextRead explicitly records reading coverage, while clinicalVerificationComplete remains false for every page. Unresolved pages may be unread or read with unresolved content, as recorded individually. Desmopressin is excluded because the root agent owns its review. SHA256 hashes identify saved text, not clinical certification.",
   "pages": [
     {
       "file": "docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx",
       "title": "Bladder Pain & IC/BPS",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "Corrected false joint AUA/CUA/SUFU attribution and mandatory treatment ladder; summarized AUA2022 removal of numbered tiers and CUA2025 PPS/intravesical positions.",
+        "Removed false boxed-warning/annual-screening rule and unqualified best-drug/equivalent-agent claims from navigation cards."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf",
+        "https://doi.org/10.5489/cuaj.9182",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0ba651e-3d8a-11df-8fbe-119855d89593"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Landing-page treatment claims checked against linked guidance; individual-drug efficacy, dosing and safety live in companions. No blanket clinical sign-off."
       ],
-      "sourceSha256": "f6da21f6be8a9ac25ec9eb17cf23d56da77c5c6e13a216dd28ed2201a9496717",
-      "fullTextRead": false,
+      "sourceSha256": "90e9b909af5ca0fe000d688c6e5b8e2083737c39dcf8ac39a5196ad7dec772b3",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/bladder-pain-ic-bps/intravesical-agents.mdx",
       "title": "Intravesical Agents",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "AUA2022 non-tiered positioning and CUA2025 lack of a preferred cocktail; corrected uniform treatment ranking and Hunner steroid-instilling versus lesion-injection distinction.",
+        "Rimso-50 50% w/w formulation, 50mL/15-minute/every-two-week label regimen; removed generic cocktail cookbook and unverified universal self-instillation schedule.",
+        "Moss2023 full-text protocol and denominator: 83 randomized, 70 completers; paired ICSI responder comparison 63% vs43%, p0.15. Exact two study mixtures and 15-minute dwell, not a preferred prescribing protocol.",
+        "Cochrane2020 certainty, Cervigni2017 open-label comparative limits, Corona online2025/issue2026 BPS versus recurrent-UTI endpoint distinction; investigational TRG100 mixed-population and SELP mouse-model context."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf",
+        "https://doi.org/10.5489/cuaj.9182",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=58b25d79-78f2-4953-b0c6-61658dc4ef0d&type=display",
+        "https://onlinelibrary.wiley.com/doi/10.1002/nau.25142",
+        "https://onlinelibrary.wiley.com/doi/10.1002/nau.23091",
+        "https://www.cochrane.org/evidence/CD013325_treatments-people-bladder-pain-syndrome",
+        "https://pubmed.ncbi.nlm.nih.gov/41139434/",
+        "https://pubmed.ncbi.nlm.nih.gov/31276948/",
+        "https://doi.org/10.1016/j.urology.2023.05.016"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Not every legacy mechanism, numerical effect estimate, alternative-agent dose or newer small-trial citation has been independently checked. Study recipes are evidence descriptions; clinical use requires local pharmacy validation."
       ],
-      "sourceSha256": "ff94821ddaf029209567d526b61f58641f210b4b45c56e3497394fbc67c7f1a7",
-      "fullTextRead": false,
+      "sourceSha256": "494f7e94878d66845f82a2d532ac2163867cebdbe812b15be18ecf22f4c92d79",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx",
       "title": "Oral IC/BPS Agents",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "AUA2022 oral options and cyclosporine positioning; CUA2025 conditional recommendation against PPS and insufficient cyclosporine evidence.",
+        "ELMIRON label dosing, 3-/6-month reassessment, maculopathy warning (not boxed), retinal monitoring and individualized perioperative timing.",
+        "Corrected Foster2010 primary outcome versus exploratory dose subgroup and Cochrane2020 certainty claims; removed automatic cyclosporine efficacy rank/universal trough. Historical CUA2016 hydroxyzine/cyclosporine dose examples explicitly identified.",
+        "OE51 already cited; OE52 large Korean retrospective cohort added as safety association, not absolute risk or causal trial proof."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf",
+        "https://doi.org/10.5489/cuaj.9182",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0ba651e-3d8a-11df-8fbe-119855d89593",
+        "https://pubmed.ncbi.nlm.nih.gov/20303115/",
+        "https://www.cochrane.org/evidence/CD013325_treatments-people-bladder-pain-syndrome",
+        "https://pubmed.ncbi.nlm.nih.gov/39089371/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5065402/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Remaining detailed mechanisms, older individual study values and all product-specific interaction/contraindication statements have not been exhaustively revalidated; edited scope is limited."
       ],
-      "sourceSha256": "6a6bc627e9deeb216de90f683b08d7561b6a2c7342257335f020ea12a28724f6",
-      "fullTextRead": false,
+      "sourceSha256": "6ee1969f755cba40a18fa3aaeb8836fc9c5effe3220fbd88c8350a3496114c1b",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
@@ -559,79 +591,112 @@
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/cyanoacrylates.mdx",
       "title": "Cyanoacrylates (Dermabond, Histoacryl)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Entire page text read; targeted checks only, not full clinical validation.",
-        "Full text read; primary label and comparative-outcome verification pending."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "Dermabond Advanced product-specific skin/mucosa/moisture restrictions, one continuous coat, at least60-second apposition, drying/heat/allergy cautions and transient shower-wetting guidance.",
+        "Removed universal penile/vulvar/perineal application, immediate-waterproof guarantee, routine two-coat application and blanket adhesive-strip inferiority."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.usamedicalsurgical.com/content/Dermabond%20Files/Dermabond%20Advanced%20Instructions%20for%20Use.pdf",
+        "https://www.jnjmedtech.com/system/files/pdf/Dermabond-Advanced-Skin-Reactions-105831-230109.pdf"
+      ],
       "notes": [
-        "Priority: immediate waterproof/same-day shower claim; mucosal and high-moisture use restrictions; generic coats/application instructions and unsupported superiority to strips. No changes made."
+        "Whole page read; Advanced instructions do not validate every other n-butyl/octyl brand or specialized mucosal application. Regional approvals and older clinical descriptions remain incompletely checked."
       ],
-      "sourceSha256": "a8f892f2abac972e1d8f002ec9438c972bec19db2a446e7119e492bb105d3f0a",
+      "sourceSha256": "e88fa2214cd830667944d8c33ee4d134360687324e2f31b1c6417f8c797b6e43",
       "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/fibrin-sealants.mdx",
       "title": "Fibrin Sealants (Tisseel, Evicel, Artiss)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "Tisseel surgical hemostasis/specific colostomy-reversal sealing versus Artiss burn-graft/facial-rhytidectomy adhesion; Artiss is not indicated for hemostasis.",
+        "Tisseel/Artiss label application, aprotinin/anaphylaxis, intravascular-use and fatal gas-embolism precautions; EASYSPRAY is not for enclosed cavities.",
+        "Removed mandatory glue-under-TachoSil, proven GU leak/inosculation, routine kit-opening, generic preparation/shelf-life and zero-infection guarantee claims; IPP bundle has historical controls/multiple changes."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b3f69e25-1b87-4507-81fa-582ea084673d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92fc93e1-9695-4705-90c5-4452a80bb074",
+        "https://www.nature.com/articles/s41443-025-01174-8"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Other listed product labels, precise historical cure-time claims and local availability are not exhaustively checked; Raplixa marked historical rather than assumed stocked."
       ],
-      "sourceSha256": "00f94328db4441c5ee5195e299f16e9c0ff98a674fd4f45a4d88a907e8da5dbe",
-      "fullTextRead": false,
+      "sourceSha256": "845617e2143c45b2e1f73680a9835edcc133a575ffc46061c3d0b8637db6780f",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/index.mdx",
       "title": "Tissue Sealants & Adhesives",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Entire page text read; targeted checks only, not full clinical validation.",
-        "Full text read; clinical product-indication and recommendation claims require primary IFU verification."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "Landing-page composition and selection consistency checked against five companion pages; removed universal role/cure/resorption and first-line GU benefit assumptions."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0c324332-290f-413f-820c-8c9a971a2766",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=92371a00-4bbd-4815-86dd-bae1505d0c2f",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b3f69e25-1b87-4507-81fa-582ea084673d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92fc93e1-9695-4705-90c5-4452a80bb074",
+        "https://advancedsurgery.baxter.com/sites/g/files/ebysai3391/files/2023-06/COSEAL%20Preparation%20Guide.pdf",
+        "https://www.usamedicalsurgical.com/content/Dermabond%20Files/Dermabond%20Advanced%20Instructions%20for%20Use.pdf"
+      ],
       "notes": [
-        "Next batch: unreferenced first-line GU-sealing table, graft-interface glue/inosculation claim, and TachoSil versus Evarrest carrier composition. No changes made."
+        "Navigation/selection overview only; product labels and procedure-specific evidence remain in companion pages."
       ],
-      "sourceSha256": "d1612b8b6dafbb08ee1a1c959d72e8feb3cee879b6f75d163bf5a150de14c6ba",
+      "sourceSha256": "db39df1d51c25405a0fe89c09046549bbc2217cf6bbbb1c6740efbc9681c2b51",
       "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/peg-sealants.mdx",
       "title": "PEG-Based Sealants (CoSeal)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Entire page text read; targeted checks only, not full clinical validation.",
-        "Full text read; product-specific FDA indications/composition/clearance not yet verified."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "CoSeal mechanical adjunctive hemostasis, fourfold24-hour swelling and object-attachment restrictions; removed incorrect no-hemostatic-role/first-line GU claims.",
+        "Separated Progel human serum albumin from Progel Platinum recombinant albumin; removed all-synthetic/blood-free assumption and religion-based automatic acceptance."
       ],
-      "sources": [],
+      "sources": [
+        "https://advancedsurgery.baxter.com/sites/g/files/ebysai3391/files/2023-06/COSEAL%20Preparation%20Guide.pdf",
+        "https://www.bd.com/en-us/products-and-solutions/products/product-families/progel-pleural-air-leak-sealant",
+        "https://go.bd.com/Progel-Thank-You.html",
+        "https://www.bd.com/en-menat/products-and-solutions/products/product-families/progel-platinum-surgical-sealant"
+      ],
       "notes": [
-        "Priority: CoSeal adjunctive hemostatic indication versus not-hemostatic claim; DuraSeal/Progel composition distinctions; swelling and unsupported GU standard-of-care assertions. No changes made."
+        "Full text read and rewritten within selected labels; DuraSeal formulation-specific instructions and full regional market inventory were not reviewed. No GU efficacy certification."
       ],
-      "sourceSha256": "41f3d914d07c64809fcd8984af4a9e2c90a1a7d5f70bed09c490f2845a3b3706",
+      "sourceSha256": "909de86c3bf6a73535dba0c5357d41504dcc6884d4476bca587fc0515eed0aaf",
       "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/tachosil.mdx",
-      "title": "TachoSil / Evarrest (Collagen-Fibrinogen Patches)",
-      "status": "unresolved",
+      "title": "TachoSil / Evarrest (Fibrin Sealant Patches)",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page text read; only the listed claims below were source-checked, not every clinical claim.",
+        "TachoSil equine collagen versus Evarrest ORC/polyglactin910 carriers, US hemostatic indications, strengths, product-specific wet/dry handling and2025 TachoSil dislodgement update.",
+        "Hatzichristodoulou319/367 long-term cohort/15.7% erectile worsening, PICS37 retrospective complications, Farrell2019 mixed-patch retrospective IPP study rather than renal randomized trial.",
+        "Removed universal urinary leak, graft inosculation, material equivalence and fixed absorption/handling claims."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0c324332-290f-413f-820c-8c9a971a2766",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=92371a00-4bbd-4815-86dd-bae1505d0c2f",
+        "https://doi.org/10.1097/JU.0000000000001933",
+        "https://pubmed.ncbi.nlm.nih.gov/36763916/",
+        "https://pubmed.ncbi.nlm.nih.gov/30914333/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Study designs and selected outcomes verified from primary abstracts; full clinical comparison of all GU sealant uses remains incomplete."
       ],
-      "sourceSha256": "f2d1813d2e273972a4478240b6b2491abddb7c92cac6e5bd345c2a61e95448f7",
-      "fullTextRead": false,
+      "sourceSha256": "f5dddf2d43c8c8d1b1bac58145fb1356bac2edafebeff459b4af2166791db583",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false
     },
     {
@@ -1508,7 +1573,7 @@
     "items": [
       {
         "oeIds": [
-          "SPIRIT/testosterone-PCa lead"
+          "102"
         ],
         "doi": "10.1001/jamainternmed.2026.1343",
         "status": "deferred",
@@ -1523,11 +1588,19 @@
       },
       {
         "oeIds": [
-          "51",
+          "51"
+        ],
+        "status": "present",
+        "doi": "10.1016/j.preteyeres.2025.101400",
+        "reason": "Hall2025 PPS maculopathy review already appears as oral IC/BPS reference7. No duplicate news item added; FDA label and CUA2025 guidance are the prescribing anchors."
+      },
+      {
+        "oeIds": [
           "52"
         ],
-        "status": "deferred",
-        "reason": "PPS maculopathy safety update prioritized for next pass; pages not source-reviewed in this batch."
+        "status": "added",
+        "doi": "10.1016/j.ophtha.2024.07.027",
+        "reason": "Primary Korean cohort abstract verified:103553 users/205792 nonusers, adjusted HR1.34 CI1.31\u20131.38. Added as observational safety corroboration, explicitly not absolute risk or randomized causal evidence."
       },
       {
         "oeIds": [
@@ -1546,5 +1619,49 @@
       }
     ]
   },
-  "fullTextReadCount": 25
+  "fullTextReadCount": 30,
+  "companionCorrections": [
+    {
+      "file": "docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx",
+      "scope": "Only Farrell2019 graft-choice block: retrospective33,18mixed patches/15pericardium; no TachoSil-specific randomized equivalence.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/30914333/"
+      ],
+      "sourceSha256": "5d54a4bbdb7b6443244a5c277ff3c69a1ad3fb3e94233716ae5661fb8cf1c235",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false
+    },
+    {
+      "file": "docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting.mdx",
+      "scope": "Only sealant identity/comparison blocks: Evarrest ORC+PG910 versus TachoSil equine collagen; Farrell mixed-patch IPP results cannot establish all-graft equivalence. Also corrected cohort follow-up:319/367 (86.9%) and erectile-function worsening50/319 (15.7%), separating this from Clavien grade1 complications.",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0c324332-290f-413f-820c-8c9a971a2766",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=92371a00-4bbd-4815-86dd-bae1505d0c2f",
+        "https://pubmed.ncbi.nlm.nih.gov/30914333/",
+        "https://www.auajournals.org/doi/10.1097/JU.0000000000001933"
+      ],
+      "sourceSha256": "224b61c616f50e37bcf976fbb385d8c7f0d95595d33559569dc6283b06f941c0",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false
+    },
+    {
+      "file": "docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx",
+      "scope": "Targeted pharmacotherapy and summary blocks only: confirmed existing non-tiered AUA framing; removed numerical sequence; added CUA2025 PPS/intravesical/cyclosporine positions; aligned PPS retinal monitoring, DMSO label regimen and Moss2023 comparator/denominator. Other diagnosis, phenotype, procedural/surgical, epidemiologic and mechanism content was not fully read or source-verified in this companion pass. Final companion alignment removes the incorrect Hunner-only major-surgery restriction; AUA permits carefully selected bladder-centric or end-stage small fibrotic disease after other feasible treatments fail.",
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf",
+        "https://doi.org/10.5489/cuaj.9182",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0ba651e-3d8a-11df-8fbe-119855d89593",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=58b25d79-78f2-4953-b0c6-61658dc4ef0d&type=display",
+        "https://onlinelibrary.wiley.com/doi/10.1002/nau.25142"
+      ],
+      "sourceSha256": "9cce2e37c388c12a7dd7e0eb45e6a2621c5e6be9c7858f1d889fde758870d39c",
+      "fullTextRead": false,
+      "clinicalVerificationComplete": false
+    }
+  ],
+  "validation": {
+    "citationIntegrity": "Passed:1187 repository documents, no citation anchor/numbering issues. This is structural citation checking, not source-content validation.",
+    "whitespace": "git diff --check passed after companion alignment.",
+    "integratedValidation": "Pending root build/type/lint and publication validation."
+  }
 }
