@@ -20,6 +20,8 @@ The [site review and practice roadmap](reports/2026-09-11/site-review.md) ranks 
 
 **Verification:** production build (including asset exclusion, with no SVG size warnings), lint, typecheck, 13 unit tests, maintenance-tool tests, 200 MB size budget and `git diff --check` passed. Representative desktop/phone browser checks covered Resources, paused handouts, full-library video search/progressive loading and evidence-status labels. Remote deployment and scheduled-workflow outcomes are recorded separately after publication.
 
+**Publication:** `a7768dd4` was pushed to `origin/main`; Vercel deployment completed and remote CI passed. Live checks verified the paused handout page, September evidence note and `/quiz` redirect. GitHub rejected the separate workflow changes because the existing OAuth sign-in lacks `workflow` scope. Those three files are preserved in local branch `codex/monthly-workflows`, commit `5ede68bb`, pending user authorization. The local monthly Codex automation is active; the GitHub schedules are not yet published/activated.
+
 ---
 
 ## 2026-09-11 - Session handoff saved

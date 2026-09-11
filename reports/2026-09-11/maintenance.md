@@ -2,6 +2,8 @@
 
 ## Monthly operation
 
+**Publication status, September 11:** clinical/performance release `a7768dd4` is live on WARWIKI and its remote CI passed. The local Codex automation is active. The three GitHub workflow changes are tested and saved in commit `5ede68bb` on local branch `codex/monthly-workflows`, but **not published**: GitHub rejected workflow edits because the existing CLI sign-in lacks `workflow` permission. User authorization to start that permission flow is pending. After authorization, apply that commit to current `main`, push, enable the external-link workflow, manually dispatch both monthly jobs and verify their artifacts. Do not re-enable the old nightly external-link workflow before replacing it. Local `main` matches the published code so the unpushed workflow commit will not block future clinical updates.
+
 Two complementary jobs are configured:
 
 1. **GitHub, first day of each month:** `Monthly literature watch` runs a free Europe PMC metadata search and produces a downloadable `literature-inbox` artifact, retained for 90 days. It uses seven topic searches, a 100-day overlap, pagination, duplicate detection, and correction/retraction screening. It uses no paid AI API and makes no Vercel deployment. `External link check` separately samples 200 URLs monthly and saves a report.
@@ -28,7 +30,7 @@ The initial search of June 28–September 11 produced 1,212 deduplicated records
 
 Run `npm run lint`, `npm run typecheck`, `npm test`, `npm run test:maintenance`, `npm run build`, `npm run audit:size`, and `git diff --check`. Inspect changed pages and diagrams in a browser. The lint checks structure and references, not clinical truth.
 
-CI enforces a 200 MB deployment-output budget. Deliberately restoring handouts also requires revisiting that limit. The external-link extractor preserves balanced parentheses in DOI URLs; its focused tests run with the rest of the maintenance suite.
+The pending CI update enforces a 200 MB deployment-output budget; the local budget check already passes. Deliberately restoring handouts also requires revisiting that limit. The external-link extractor preserves balanced parentheses in DOI URLs; its focused tests run with the rest of the maintenance suite.
 
 Before pushing, review the diff and stage only task changes. Preserve unrelated files. Push completed changes to `main` / `origin/main`, then verify GitHub and Vercel outcomes. A successful push is not evidence of a successful deployment. Do not push a report-only timestamp change as a public release.
 

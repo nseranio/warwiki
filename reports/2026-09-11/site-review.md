@@ -1,6 +1,6 @@
 # WARWIKI: site-wide review and priorities
 
-September 11, 2026. Baseline: substantive content/media work through June 28; the September handoff save was not a new clinical review.
+September 11, 2026. Baseline: substantive content/media work through June 28; the September handoff save was not a new clinical review. Clinical/performance release `a7768dd4` is live and remote CI passed. The local monthly Codex automation is active; publication of the GitHub schedules awaits workflow permission, as detailed in `maintenance.md`.
 
 ## Overall judgment
 
@@ -83,7 +83,7 @@ Personal operative examples and patient-specific material should be kept in a pr
 
 ## Supporting reports
 
-Final local verification passed: production build (including handout exclusion, without the earlier SVG warnings), typecheck, 13 unit tests, maintenance tests, source lint and whitespace checks. Browser checks confirmed paused handouts, absent quiz/archive resource links, video expansion from 24 to 48, full-library VRAM search, and clear evidence labeling at desktop and 390-pixel phone width. This is a representative interface check, not an exhaustive browser test of every page. CI now enforces a 200 MB output budget; deliberate handout restoration requires revisiting that budget.
+Final local verification passed: production build (including handout exclusion, without the earlier SVG warnings), typecheck, 13 unit tests, seven maintenance tests, source lint and whitespace checks. Browser checks confirmed paused handouts, absent quiz/archive resource links, video expansion from 24 to 48, full-library VRAM search, and clear evidence labeling at desktop and 390-pixel phone width. This is a representative interface check, not an exhaustive browser test of every page. The pending CI change adds a 200 MB output budget, which already passes locally; deliberate handout restoration requires revisiting that budget.
 
 - `reconstructive-literature.md` — reconstruction/outlet/sexual-medicine evidence and corrections.
 - `functional-urogynecology-literature.md` — functional and urogynecologic evidence and corrections.
