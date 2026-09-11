@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-11",
+  "clinicalContentCommit": "90a9e8f1eaefd8e69042ef5aad11763368ed26c7",
+  "finalSiteCommit": "b8b60a0e1d710bb76e5260beff337d9c0505565e",
+  "scope": "Chromium desktop checks against local production builds. This validates rendering, selected interactions and observed browser errors; it is not a clinical review or an exhaustive test of every interaction, browser or external link.",
+  "fullSweep": {
+    "sitemapUrlsVisited": 1190,
+    "additionalInteractionTests": 3,
+    "passed": 1183,
+    "failed": 10,
+    "durationMinutes": 9.1,
+    "failures": {
+      "remotePortraits": 9,
+      "searchTestFixture": 1
+    },
+    "explanation": "The sweep found nine remote portrait failures. Its search test started with a relative URL fixture that was subsequently corrected to an absolute URL. The failed fixture did not establish a production search defect. All failed cases were covered by the final retest."
+  },
+  "repairs": [
+    "Removed exactly nine failed photo URLs; retained the existing initials fallback and all biography/lineage data.",
+    "Corrected the search test fixture URL and verified query, result navigation and no-result behavior."
+  ],
+  "finalRetest": {
+    "siteCommit": "b8b60a0e1d710bb76e5260beff337d9c0505565e",
+    "historyUrlsVisited": 120,
+    "interactionTests": 3,
+    "passed": 123,
+    "failed": 0,
+    "durationMinutes": 1.2,
+    "interactions": [
+      "Search query, rendered result and no-result state",
+      "Clinical abbreviation expansion in search",
+      "Compiled figure enlargement and keyboard-focus return"
+    ]
+  },
+  "visualChecks": [
+    "Desktop and phone homepage inspected after removal of Clinic and addition of the main landmark.",
+    "MUSA trial section inspected in the compiled clinical page.",
+    "Akio Horiguchi profile inspected in the final build: initials fallback renders without a broken image."
+  ],
+  "finalBuild": {
+    "sizeMB": 139.30,
+    "files": 2569,
+    "htmlDocuments": 1191,
+    "localLinksAndAssetsChecked": 101589,
+    "dataLinkLiteralsChecked": 731,
+    "renderedLinksResult": "passed",
+    "sourceLint": "passed",
+    "typecheck": "passed",
+    "componentTestsPassed": 32,
+    "maintenanceTestsPassed": 50
+  },
+  "result": "No unresolved errors observed in the full sitemap sweep plus the final affected-page and interaction retest. This is a combined verification record, not a claim that one uninterrupted final 1193-test run passed."
+}

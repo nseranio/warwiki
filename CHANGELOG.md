@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Resumed batch published and verified
+
+Published `b8b60a0e` (including `90a9e8f1`): 40 clinical-page corrections, broader quarterly discovery and browser/link safeguards. GitHub CI 34645036653 passed; Vercel deployment `dpl_5iD48Bji8GPZMSVMoqDruYmL45qy` is READY with the production aliases.
+
+The final isolated build is 139.30 MB. The whole-sitemap browser sweep visited 1,190 URLs; all identified failures were repaired, and the final 120 History pages plus three interaction tests passed (123/123). External-link workflow 34645055611 passed its 200-link sample: 111 successful, 89 soft responses, zero confirmed broken links. Source checks, 32 component tests, 50 maintenance tests and all compiled local links/assets passed. See [release evidence and limits](reports/2026-09-11/resumed-release.md).
+
+The cumulative clinical audit records 121 full reads and 113 scoped updates across 1,186 documentation pages and remains incomplete. The [continuation file](RESUME-HERE.md) records exact next pages and verified evidence gaps. Epic remains paused; evidence maintenance runs quarterly, next in December 2026.
+
+---
+
 ## 2026-09-11 — Broader quarterly discovery and portrait repairs
 
 Expanded scheduled literature discovery from seven to fourteen focused groups. Added pelvic pain, bowel dysfunction, GU trauma, cancer survivorship, lifelong care, genital/gender reconstruction and bladder-neck/underactivity searches; extended ED, testosterone, fistula and relevant survivor terms. The original group IDs, 100-day overlap, 60-candidate editorial shortlist and separate guideline/regulatory review remain. All nine new or changed queries were checked live for June 3–September 11, 2026: 53–804 hits per query, below the collector's 3,000-record safety limit. These were query/count checks, not review of every result.

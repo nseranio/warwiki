@@ -2,7 +2,7 @@
 
 **Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
 
-**Current resumed audit, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md) for exact publication status, checks and next unread pages. Quarterly maintenance is published in `5afd0f89`; the whole-site clinical audit and110-item OpenEvidence reconciliation remain in progress. Earlier snapshots below are historical.
+**Current resumed audit, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md) for publication evidence, validation and exact next pages. Quarterly maintenance is in `5afd0f89`; the resumed correction batch is in `90a9e8f1` and `b8b60a0e`. The whole-site clinical audit and 110-item OpenEvidence reconciliation remain in progress. Earlier snapshots below are historical.
 
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 
@@ -11,11 +11,11 @@ Read this at the start of a session. Keep it small: this file is the working han
 **Latest site direction:** remove Clinic quick access and the `/clinic` page; simplify public evidence information to the existing last-updated display. Audit every page for errors and source currency, recording a page-by-page log. Prioritize major guidelines, large trials, Cochrane reviews and high-yield practice changes over isolated small studies. The Clinic feature and public evidence banner have been removed; the full page-by-page clinical review remains in progress. Previous Clinic descriptions record the earlier implementation and must not be treated as instructions to retain it. Keep accurate source provenance internally without implying clinician sign-off.
 
 
-**Follow-up implementation:** see [implementation-followup.md](reports/2026-09-11/implementation-followup.md) for Clinic access, seven-pathway evidence tables, all 55 figure dispositions, imaging/renal corrections, Node 24 and production build safeguards. GitHub and Vercel sign-ins are complete, and the user now permits browser/UI interaction. Monthly workflows are published on `main` through `76cadfd4`. Authorized cleanup deleted 41 obsolete deployments; live/rollback releases and all alias records were preserved. Five deployments remain in the inventory; see [deployment-cleanup.md](reports/2026-09-11/deployment-cleanup.md). Epic remains paused.
+**Implementation and hosting:** GitHub and Vercel sign-ins are complete; browser/UI interaction is authorized. Earlier cleanup deleted 41 obsolete deployments while preserving live/rollback releases and aliases. Use [the resumed release record](reports/2026-09-11/resumed-release.md) for the latest inventory and checks, and [deployment-cleanup.md](reports/2026-09-11/deployment-cleanup.md) for the deletion record. The earlier [implementation report](reports/2026-09-11/implementation-followup.md) records the figure, imaging, Node 24 and build improvements; its Clinic description is superseded by the user's removal request. Epic remains paused.
 
 ---
 
-## Current Handoff — 2026-09-11 — September evidence and maintenance refresh
+## Previous Handoff — 2026-09-11 — Initial September evidence and maintenance refresh
 
 See the [site-wide review](reports/2026-09-11/site-review.md), [maintenance runbook](reports/2026-09-11/maintenance.md), and newest [CHANGELOG.md](CHANGELOG.md) entry. The initial 29-article refresh is followed by Clinic access, seven-pathway structured evidence, all 55 figure dispositions, imaging/renal corrections and build safeguards; see [implementation-followup.md](reports/2026-09-11/implementation-followup.md). This is not a full clinical review of the corpus. The two dated literature reports record source access, corrections and unresolved claims.
 
