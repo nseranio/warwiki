@@ -86,8 +86,6 @@ push(txt(bxc, 286, 12.5, 700, C.ink, 'middle', '2. Layered, offset closure', fal
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Layered vesicovaginal fistula closure" aria-describedby="diagram-description">
-<title>Layered vesicovaginal fistula closure</title>
-<desc id="diagram-description">Vesicovaginal fistula repair shown in cross-section through the vesicovaginal septum. Left panel: a fistula tract connects the bladder lumen above to the vagina lumen below through gaps in both the bladder and vaginal walls, with edges freshened. Right panel: after wide mobilization, the bladder and vaginal walls are closed as independent layers with a watertight first layer and an imbricating second layer, and the bladder and vaginal suture lines are deliberately offset so they do not stack; an optional vascularized interposition flap lies between the layers. Key: mobilize at least 1 to 2 centimeters beyond the defect for a tension-free repair, offset the seams to avoid a through-and-through weak point and re-fistulization, and add a Martius, peritoneal, or omental interposition for recurrent, radiated, or large fistulae though it is not mandatory for a simple primary repair.</desc>
 <defs>
 <marker id="vv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -96,5 +94,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'vvf-layered-closure.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'vvf-layered-closure'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

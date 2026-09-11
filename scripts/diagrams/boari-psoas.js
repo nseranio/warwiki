@@ -27,7 +27,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Psoas hitch vs Boari flap &#8212; bridging a distal-ureteral gap', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'move bladder before stretching ureter &#8212; both end in a spatulated, antireflux ureteroneocystostomy', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Mobilize bladder for tension-free repair; antireflux construction is individualized', false));
 
 // divider between panels
 push(`<line x1="${W / 2}" y1="78" x2="${W / 2}" y2="372" stroke="${C.border}" stroke-width="1" stroke-dasharray="2 5"/>`);
@@ -103,11 +103,11 @@ push(txt(bCx, 392, 13, 700, C.ink, 'middle', 'Boari flap', false));
 push(txt(bCx, 408, 10, 500, C.muted, 'middle', 'base &#8805; ~4 cm  &#183;  &#8804; 3:1 length-to-base', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Psoas hitch versus Boari flap for bridging a distal ureteral gap. Left panel: a psoas hitch fixes the bladder cephalad to the psoas with hitch sutures and a spatulated submucosal-tunnel ureteroneocystostomy, reaching about 5 to 8 centimeters. Right panel: a Boari flap tubularizes a bladder-wall flap into a ureteral substitute rising to meet the ureter at its apex, reaching about 10 to 15 centimeters, with a base at least 4 centimeters wide and a length-to-base ratio under 3 to 1. Key: often combined, add downward nephropexy for upper-ureteral reach, spatulate the ureter and tubularize over a stent.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Psoas hitch and Boari flap">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'boari-psoas.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'boari-psoas'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

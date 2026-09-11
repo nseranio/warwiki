@@ -1,0 +1,345 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@docusaurus/core": {
+      "name": "@docusaurus/core",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@docusaurus/mdx-loader"
+      ],
+      "effects": [
+        "@docusaurus/plugin-css-cascade-layers",
+        "@docusaurus/plugin-debug",
+        "@docusaurus/plugin-google-analytics",
+        "@docusaurus/plugin-google-gtag",
+        "@docusaurus/plugin-google-tag-manager",
+        "@docusaurus/plugin-sitemap",
+        "@docusaurus/plugin-svgr",
+        "@docusaurus/preset-classic",
+        "@docusaurus/theme-search-algolia"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/core"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/mdx-loader": {
+      "name": "@docusaurus/mdx-loader",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "image-size"
+      ],
+      "effects": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages",
+        "@docusaurus/theme-classic",
+        "@docusaurus/theme-common"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/mdx-loader"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/plugin-content-blog": {
+      "name": "@docusaurus/plugin-content-blog",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/mdx-loader",
+        "@docusaurus/theme-common"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-blog"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-content-docs": {
+      "name": "@docusaurus/plugin-content-docs",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/mdx-loader",
+        "@docusaurus/theme-common"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-docs"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-content-pages": {
+      "name": "@docusaurus/plugin-content-pages",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/mdx-loader"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-pages"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-css-cascade-layers": {
+      "name": "@docusaurus/plugin-css-cascade-layers",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [
+        "@docusaurus/preset-classic"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-css-cascade-layers"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/plugin-debug": {
+      "name": "@docusaurus/plugin-debug",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-debug"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-analytics": {
+      "name": "@docusaurus/plugin-google-analytics",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-analytics"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-gtag": {
+      "name": "@docusaurus/plugin-google-gtag",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-gtag"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-tag-manager": {
+      "name": "@docusaurus/plugin-google-tag-manager",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [
+        "@docusaurus/preset-classic"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-tag-manager"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/plugin-sitemap": {
+      "name": "@docusaurus/plugin-sitemap",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-sitemap"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-svgr": {
+      "name": "@docusaurus/plugin-svgr",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [
+        "@docusaurus/preset-classic"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-svgr"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/preset-classic": {
+      "name": "@docusaurus/preset-classic",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages",
+        "@docusaurus/plugin-css-cascade-layers",
+        "@docusaurus/plugin-debug",
+        "@docusaurus/plugin-google-analytics",
+        "@docusaurus/plugin-google-gtag",
+        "@docusaurus/plugin-google-tag-manager",
+        "@docusaurus/plugin-sitemap",
+        "@docusaurus/plugin-svgr",
+        "@docusaurus/theme-classic",
+        "@docusaurus/theme-common",
+        "@docusaurus/theme-search-algolia"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/preset-classic"
+      ],
+      "fixAvailable": false
+    },
+    "@docusaurus/theme-classic": {
+      "name": "@docusaurus/theme-classic",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/mdx-loader",
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages",
+        "@docusaurus/theme-common"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/theme-classic"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/theme-common": {
+      "name": "@docusaurus/theme-common",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/mdx-loader"
+      ],
+      "effects": [
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/theme-common"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/theme-search-algolia": {
+      "name": "@docusaurus/theme-search-algolia",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/theme-common"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/theme-search-algolia"
+      ],
+      "fixAvailable": true
+    },
+    "image-size": {
+      "name": "image-size",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1138808,
+          "name": "image-size",
+          "dependency": "image-size",
+          "title": "image-size: ICNS parser allows denial of service through an infinite loop",
+          "url": "https://github.com/advisories/GHSA-w3rx-r6r6-pgpr",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=2.0.2"
+        },
+        {
+          "source": 1138809,
+          "name": "image-size",
+          "dependency": "image-size",
+          "title": "image-size: JXL and HEIF parsers allow denial of service through infinite loops",
+          "url": "https://github.com/advisories/GHSA-5p2g-fcmc-qvqq",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=2.0.2"
+        }
+      ],
+      "effects": [
+        "@docusaurus/mdx-loader"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/image-size"
+      ],
+      "fixAvailable": false
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 17,
+      "critical": 0,
+      "total": 17
+    },
+    "dependencies": {
+      "prod": 1296,
+      "dev": 154,
+      "optional": 130,
+      "peer": 8,
+      "peerOptional": 0,
+      "total": 1528
+    }
+  }
+}

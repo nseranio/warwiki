@@ -50,7 +50,7 @@ conduit(ax, false);
 for (const [jx, jy] of [[ax - hw + 2, 218], [ax + hw - 2, 244]]) { push(`<circle cx="${jx}" cy="${jy}" r="7" fill="none" stroke="${C.join}" stroke-width="2"/>`); }
 push(txt(ax, 372, 14, 700, C.ink, 'middle', 'Bricker', false));
 push(txt(ax, 391, 10.8, 500, C.muted, 'middle', 'each ureter sewn separately (end-to-side)', false));
-push(txt(ax, 408, 11, 700, '#166534', 'middle', 'stricture ~3.7%', false));
+push(txt(ax, 408, 11, 700, '#166534', 'middle', 'separate ureteral anastomoses', false));
 
 // ---- Wallace (right) -----------------------------------------------------
 const bx = 600;
@@ -63,7 +63,7 @@ conduit(bx, true);
 push(`<ellipse cx="${bx}" cy="${ty}" rx="${hw}" ry="6" fill="none" stroke="${C.join}" stroke-width="2"/>`);
 push(txt(bx, 372, 14, 700, C.ink, 'middle', 'Wallace', false));
 push(txt(bx, 391, 10.8, 500, C.muted, 'middle', 'ureters spatulated + joined, sewn as one plate', false));
-push(txt(bx, 408, 11, 700, '#991B1B', 'middle', 'stricture ~0% &#183; but bilateral if it occurs', false));
+push(txt(bx, 408, 11, 700, '#991B1B', 'middle', 'shared outlet may affect both kidneys', false));
 
 // ---- shared structure labels (on Bricker) -------------------------------
 lead(ax - 92, 110, 150, 130); push(txt(146, 134, 10.5, 600, C.ink, 'end', 'ureters'));
@@ -74,11 +74,11 @@ lead(ax, by + 8, ax - 70, 360); push(txt(ax - 74, 364, 10.5, 600, C.ink, 'end', 
 lead(bx, ty, bx + 66, 198); push(txt(bx + 70, 202, 10.5, 600, C.join, 'start', 'single conjoined'));
 push(txt(bx + 70, 216, 10.5, 600, C.join, 'start', 'anastomosis'));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Two panels of ureteroenteric anastomosis to an ileal conduit. Bricker: each ureter is anastomosed separately end-to-side to the closed proximal ileum. Wallace: the two ureters are spatulated and joined into a single plate sewn to the open proximal ileal end.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Bricker and Wallace anastomoses">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'ureteroenteric-anastomosis.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'ureteroenteric-anastomosis'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

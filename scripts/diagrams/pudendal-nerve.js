@@ -89,11 +89,11 @@ push(txt(476, 169, 9.8, 500, C.muted, 'start', 'landmark &#8212; NVB just latera
 lead(498, 296, 560, 200, C.risk); push(txt(566, 192, 11, 700, C.risk, 'start', "Alcock's canal"));
 push(txt(566, 206, 9.8, 500, C.muted, 'start', 'entrapment &#8594; pudendal neuralgia', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Posterolateral schematic of the pudendal nerve course: S2-S4 roots converge and exit the greater sciatic foramen below piriformis, hook around the ischial spine and sacrospinous ligament, re-enter the lesser sciatic foramen into Alcock's canal on the obturator internus, then divide into the inferior rectal, perineal, and dorsal nerves. The ischial spine (sacrospinous-fixation suture zone and pudendal-block landmark) and Alcock's canal (entrapment) are flagged as risk zones.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Pudendal nerve course">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'pudendal-nerve.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'pudendal-nerve'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

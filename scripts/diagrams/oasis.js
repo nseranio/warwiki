@@ -79,7 +79,7 @@ bars.forEach((b, i) => {
   push(txt(x + bw / 2, 134, 12, 700, '#FFFFFF', 'middle', b.deg, false));
 });
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Depth ladder of perineal laceration grades: tissue planes stacked by depth (perineal skin/mucosa, perineal muscles, external anal sphincter, internal anal sphincter, anorectal epithelium) with a severity bar for each grade (1, 2, 3a, 3b, 3c, 4) showing how deep the tear extends.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Obstetric perineal injury grades">
 <defs>
 <marker id="dn" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L5,9 L10,0" fill="none" stroke="${C.muted}" stroke-width="1.6"/></marker>
 </defs>
@@ -88,5 +88,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'oasis-grades.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'oasis-grades'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

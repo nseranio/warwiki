@@ -2,7 +2,7 @@
 /**
  * WARWIKI original schematic — multichannel filling cystometrogram.
  *
- * Diagrams-as-code: this script emits a self-contained, copyright-free SVG in
+ * Diagrams-as-code: this script emits a self-contained, original SVG in
  * the WARWIKI house style (white figure card, brand-blue primary, muted axes,
  * white-haloed labels, leader-line callouts). Edit the channel models /
  * annotations below and re-run `node scripts/diagrams/cystometrogram.js`.
@@ -67,7 +67,7 @@ function leader(d, color, marker) {
 
 // ---- card + titles -------------------------------------------------------
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
-push(txt(PL, 40, 16, 700, C.ink, 'start', 'Multichannel filling cystometrogram', false));
+push(txt(PL, 40, 16, 700, C.ink, 'start', 'Illustrative multichannel filling cystometrogram', false));
 push(txt(PL, 59, 12.5, 600, C.muted, 'start', 'Pves &#8722; Pabd = Pdet', false));
 
 // ---- gridlines + axes ----------------------------------------------------
@@ -108,7 +108,7 @@ push(txt(PR + 8, yOf(pdet(VEND)) + 5, 13, 700, C.det, 'start', 'Pdet'));
 push(leader(`M ${f(xOf(120))} 148 L ${f(xOf(120))} ${f(yOf(pves(120)) - 5)}`, C.muted, 'arrowMut'));
 push(txt(150, 112, 12, 700, C.ink, 'start', 'Cough'));
 push(txt(150, 127, 10.5, 400, C.muted, 'start', 'Pves &amp; Pabd rise together &#8212;'));
-push(txt(150, 140, 10.5, 400, C.muted, 'start', 'Pdet stays flat (artifact rejected)'));
+push(txt(150, 140, 10.5, 400, C.muted, 'start', 'Pdet has no matched cough spike'));
 
 // ---- callout: detrusor overactivity --------------------------------------
 const doApexX = xOf(384), doApexY = yOf(pdet(384));
@@ -117,7 +117,7 @@ push(txt(470, 112, 12, 700, C.det, 'start', 'Detrusor overactivity'));
 push(txt(470, 127, 10.5, 400, C.muted, 'start', 'involuntary phasic Pdet rise &#177; urgency'));
 
 // ---- assemble ------------------------------------------------------------
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Schematic multichannel filling cystometrogram showing Pves, Pabd and Pdet channels, sensory milestones, a cough artifact rejected by pressure subtraction, and a phasic detrusor-overactivity wave on Pdet.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Illustrative filling cystometrogram">
 <defs>
 <marker id="arrowMut" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.muted}"/></marker>
 <marker id="arrowDet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.det}"/></marker>
@@ -128,5 +128,5 @@ ${el.join('\n')}
 
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'cystometrogram.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'cystometrogram'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -85,8 +85,6 @@ push(txt(606, 198, 9, 500, C.muted, 'start', 'risk (Burch avoids this).'));
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Burch colposuspension" aria-describedby="diagram-description">
-<title>Burch colposuspension</title>
-<desc id="diagram-description">Burch colposuspension shown in a retropubic space-of-Retzius view. The back of the pubic symphysis is at top with the superior pubic rami sweeping laterally, each carrying Cooper's iliopectineal ligament. The bladder, bladder neck, and urethra lie in the midline. Two non-absorbable sutures per side pass through the anterior vaginal wall lateral to the bladder neck (paravaginal tissue) and are tied up to Cooper's ligament, elevating the bladder neck. A note contrasts the Marshall-Marchetti-Krantz procedure, which anchors to the pubic symphysis periosteum and risks osteitis pubis, which Burch avoids. Key: a mesh-free retropubic urethropexy with durable cure comparable to retropubic midurethral sling at 13 years, sutures tied snug and not over-corrected to avoid voiding dysfunction, best used at the time of sacrocolpopexy or in mesh-averse patients, with a higher posterior-prolapse rate than the midurethral sling, and cystoscopy is performed.</desc>
 <defs>
 <marker id="bu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.lift}"/></marker>
 </defs>
@@ -95,5 +93,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'burch.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'burch'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

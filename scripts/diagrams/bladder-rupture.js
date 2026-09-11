@@ -70,14 +70,14 @@ function foot(cx, title, pct, chipColor, chipBg, chipTxt) {
   push(`<rect x="${cx - 86}" y="${cy + 108}" width="172" height="24" rx="12" fill="${chipBg}" stroke="${chipColor}" stroke-width="1.2"/>`);
   push(txt(cx, cy + 124, 11, 700, chipColor, 'middle', chipTxt, false));
 }
-foot(ax, 'Extraperitoneal', '~63%', '#166534', '#DCFCE7', 'usually catheter drainage');
-foot(bx, 'Intraperitoneal', '~32%', '#991B1B', '#FEE2E2', 'always operative repair');
+foot(ax, 'Extraperitoneal', '', '#166534', '#DCFCE7', 'Uncomplicated: catheter drainage');
+foot(bx, 'Intraperitoneal', '', '#991B1B', '#FEE2E2', 'Traumatic rupture: operative repair');
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Two coronal bladder panels. Extraperitoneal rupture: a tear at the bladder base leaks urine into the perivesical space below the peritoneal reflection, usually managed by catheter drainage. Intraperitoneal rupture: a dome tear spills urine into the peritoneal cavity among bowel loops as urinary ascites, requiring operative repair.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Bladder rupture compartments">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'bladder-rupture.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'bladder-rupture'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

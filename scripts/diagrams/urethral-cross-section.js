@@ -45,7 +45,7 @@ function section(cx, cy, stricture) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 40, 16, 700, C.ink, 'start', 'Urethral cross-section &#8212; normal vs spongiofibrosis', false));
-push(txt(40, 59, 12.5, 500, C.muted, 'start', 'a stricture is scar within the corpus spongiosum that encases and compresses the lumen', false));
+push(txt(40, 59, 12.5, 500, C.muted, 'start', 'a stricture is scar within the anterior urethral wall; spongiofibrosis may narrow the lumen', false));
 
 const ax = 232, bx = 580, cy = 212;
 section(ax, cy, false);
@@ -58,17 +58,17 @@ push(txt(bx, 320, 13, 700, '#991B1B', 'middle', 'Stricture (spongiofibrosis)'));
 // normal labels
 lead(ax, cy, ax - 78, cy - 64); push(txt(ax - 80, cy - 66, 11, 600, C.ink, 'end', 'urethral lumen'));
 lead(ax + 14, cy - 8, ax + 92, cy - 52); push(txt(ax + 96, cy - 54, 11, 600, C.ink, 'start', 'epithelium'));
-lead(ax + 44, cy + 30, ax + 96, cy + 58); push(txt(ax + 96, cy + 62, 11, 600, C.ink, 'start', 'corpus spongiosum'));
-lead(ax, cy - 64, ax - 70, cy + 6); push(txt(ax - 74, cy + 10, 11, 600, C.ink, 'end', 'tunica'));
+lead(ax + 44, cy + 30, ax + 92, cy + 50); push(txt(ax + 98, cy + 54, 11, 600, C.ink, 'start', 'spongiosum'));
+lead(ax - 64, cy, ax - 70, cy + 6); push(txt(ax - 74, cy + 10, 11, 600, C.ink, 'end', 'tunica'));
 
 // stricture labels
 lead(bx + 21, cy - 21, bx + 86, cy - 54); push(txt(bx + 90, cy - 56, 11, 600, '#991B1B', 'start', 'spongiofibrosis'));
-lead(bx, cy, bx - 70, cy + 50); push(txt(bx - 74, cy + 54, 11, 600, C.ink, 'end', 'pinhole lumen'));
+lead(bx, cy, bx + 78, cy + 40); push(txt(bx + 82, cy + 44, 11, 600, C.ink, 'start', 'narrowed lumen'));
 
 // devine note
-push(txt(W / 2, 384, 11.5, 500, C.muted, 'middle', 'the depth of spongiofibrosis (Devine classification) determines severity and favors open reconstruction over endoscopic repair', false));
+push(txt(W / 2, 384, 11.5, 500, C.muted, 'middle', 'Conceptual anterior section: treatment also depends on site, length, cause, tissue quality and prior treatment', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Two transverse urethral cross-sections. Normal: an open stellate lumen lined by epithelium within the vascular corpus spongiosum and tunica. Stricture: a ring of spongiofibrosis scar encases and compresses the lumen to a pinhole.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anterior urethral spongiofibrosis">
 <defs>
 <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#6B7280" stroke-width="1" opacity="0.45"/></pattern>
 </defs>
@@ -77,5 +77,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'urethral-cross-section.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'urethral-cross-section'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

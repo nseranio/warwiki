@@ -111,7 +111,7 @@ push(txt(bx - 34, 250, 9, 700, C.tool, 'end', 'enucleate'));
 push(txt(bx - 34, 262, 8.5, 500, C.muted, 'end', 'apex &#8594; neck'));
 push(txt(bx, 392, 12, 700, C.ink, 'middle', 'Sagittal &#8212; landmarks', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anatomical enucleation of the prostate in two panels. The axial cross-section shows the transition-zone adenoma as two lateral lobes plus a posterior median lobe compressing the central urethra, all enclosed by the fibrous surgical capsule; a dashed enucleation plane runs between adenoma and capsule, with perforating vessels crossing it and an instrument developing the plane, the capsule left behind. The sagittal panel shows the bladder, bladder neck, prostate, prostatic urethra with the verumontanum as the distal safety landmark, the external sphincter below the apex, and a retrograde arrow enucleating from apex toward the bladder neck.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anatomical prostate enucleation">
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.tool}"/></marker>
 </defs>
@@ -120,5 +120,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'prostate-enucleation.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'prostate-enucleation'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

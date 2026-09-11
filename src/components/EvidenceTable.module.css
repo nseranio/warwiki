@@ -1,0 +1,22 @@
+.evidence { margin: 1.5rem 0 2rem; }
+.scope { color: var(--ifm-color-emphasis-700); font-size: .92rem; }
+.scroll { overflow-x: auto; border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }
+.scroll:focus-visible { outline: 3px solid var(--ifm-color-primary); outline-offset: 3px; }
+.evidence table { display: table; width: 100%; min-width: 690px; margin: 0; font-size: .9rem; border-collapse: collapse; }
+.evidence caption { padding: .8rem 1rem; text-align: left; font-weight: 700; color: var(--ifm-font-color-base); }
+.evidence th, .evidence td { vertical-align: top; text-align: left; padding: .85rem; }
+.evidence tbody th { width: 28%; font-weight: 400; }
+.evidence tbody td { width: 36%; }
+.evidence tbody th > a { font-weight: 700; }
+.evidence p { margin: 0 0 .55rem; }
+.evidence ul { padding-left: 1.1rem; margin-bottom: 0; }
+.evidence li + li { margin-top: .5rem; }
+.evidence details { margin-top: .75rem; font-size: .85rem; }
+.evidence summary { cursor: pointer; font-weight: 600; }
+.evidence dl { margin: .7rem 0 0; }
+.evidence dt { margin-top: .6rem; font-weight: 600; }
+.evidence dd { margin: 0; overflow-wrap: anywhere; }
+.endpoint { margin-top: .9rem; }
+.uncertainty { color: var(--ifm-color-emphasis-800); }
+.notice { margin-top: .8rem !important; border-left: 3px solid var(--ifm-color-warning-dark); padding-left: .6rem; }
+@media print { .scroll { overflow: visible; border: 0; } .evidence table { min-width: 0; font-size: 8pt; } .evidence details { display: block; } }

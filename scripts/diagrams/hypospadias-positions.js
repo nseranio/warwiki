@@ -26,7 +26,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 40, 16, 700, C.ink, 'start', 'Hypospadias &#8212; classification by meatal position', false));
-push(txt(40, 59, 12.5, 500, C.muted, 'start', 'graded by the final meatal location after chordee release (a distal-appearing meatus may prove more proximal)', false));
+push(txt(40, 59, 12.5, 500, C.muted, 'start', 'Meatal location is descriptive; curvature and urethral-plate quality also determine severity', false));
 
 // ---- stylized lateral anatomy -------------------------------------------
 push(`<path d="M 168 126 L 320 122 Q 384 120 386 154 Q 384 188 320 184 L 168 190 Z" fill="${C.skin}" stroke="${C.skinEdge}" stroke-width="1.8"/>`);
@@ -59,15 +59,15 @@ function group(color, title, pct, items) {
   for (const it of items) { push(txt(lx + 22, ly, 11.5, 500, C.axis, 'start', it, false)); ly += 18; }
   ly += 8;
 }
-group(C.ant, 'Anterior (distal)', '~70%', ['1  Glanular', '2  Coronal', '3  Subcoronal']);
-group(C.mid, 'Middle', '~10%', ['4  Midshaft / penile']);
-group(C.post, 'Posterior (proximal)', '~20%', ['5  Proximal penile', '6  Penoscrotal', '7  Scrotal', '8  Perineal']);
+group(C.ant, 'Anterior (distal)', 'distal', ['1  Glanular', '2  Coronal', '3  Subcoronal']);
+group(C.mid, 'Middle', 'shaft', ['4  Midshaft / penile']);
+group(C.post, 'Posterior (proximal)', 'proximal', ['5  Proximal penile', '6  Penoscrotal', '7  Scrotal', '8  Perineal']);
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Stylized lateral view of the penis, scrotum and perineum with eight numbered hypospadias meatal positions along the ventral aspect, colour-coded into anterior, middle and posterior groups, with a grouped legend listing the positions and approximate frequencies.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Hypospadias meatal positions">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'hypospadias-positions.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'hypospadias-positions'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

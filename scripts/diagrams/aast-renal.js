@@ -62,7 +62,7 @@ function injury(g, cx, cy) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 38, 16, 700, C.ink, 'start', 'AAST renal injury scale (2018)', false));
-push(txt(40, 57, 12.5, 500, C.muted, 'start', 'severity rises with laceration depth, then with collecting-system and vascular involvement', false));
+push(txt(40, 57, 12.5, 500, C.muted, 'start', 'Representative injury patterns; consult the full 2018 scale for vascular and bleeding criteria', false));
 
 const panels = [
   { g: 1, lbl: 'I', c: '#16A34A', d1: 'contusion /', d2: 'subcapsular hematoma' },
@@ -100,11 +100,11 @@ legend(454, 'lac', 'laceration');
 legend(562, 'urine', 'urine leak');
 legend(668, 'gerota', "Gerota&#8217;s fascia");
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Five stylized kidney panels showing AAST renal injury grades I-V with a legend. Each kidney has a blue collecting system and dashed Gerota's fascia. Grade I: subcapsular hematoma. Grade II: shallow laceration plus perirenal hematoma. Grade III: deep laceration sparing the collecting system. Grade IV: laceration into the collecting system with amber urinary extravasation. Grade V: shattered kidney with hilar avulsion, devascularized.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="AAST renal injury patterns">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'aast-renal.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'aast-renal'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -122,11 +122,11 @@ push(txt(ix, iy + 34, 8.5, 700, C.muc, 'middle', 'mucosa'));
 push(txt(ix, iy + 46, 8, 500, C.muted, 'middle', 'flap-valve', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three antireflux ureteral reimplantation techniques shown on the bladder trigone. Cohen cross-trigonal: an intravesical submucosal tunnel carries the ureter across the trigone to a neo-orifice on the contralateral wall. Politano-Leadbetter: a new superolateral hiatus is created and the ureter tunnels down to a trigonal neo-orifice while the old hiatus is closed. Lich-Gregoir: an extravesical detrusor trough is closed over the ureter at the native orifice, with a cross-section inset showing the detrusor-over-mucosa flap valve. All target a 4 to 5 to 1 tunnel-length to ureter-diameter ratio. Key compares intravesical versus extravesical morbidity and each technique's main penalty.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Antireflux reimplantation concepts">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'reimplant-techniques.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'reimplant-techniques'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

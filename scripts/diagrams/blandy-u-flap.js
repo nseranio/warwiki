@@ -98,7 +98,7 @@ push(txt(ix, iy - 18, 9.5, 700, C.native, 'middle', 'native dorsal plate'));
 push(txt(ix, iy + 40, 9.5, 700, C.suture, 'middle', 'vaginal flap (ventral)'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Blandy U-flap female vaginal-flap urethroplasty: panel 1 shows a U-shaped anterior-vaginal-wall flap with a proximal pedicle outlined over a strictured urethra with a planned ventral 6 o'clock urethrotomy; panel 2 shows the flap inlaid as a ventral onlay over a 16 to 18 French Foley catheter, sutured to the opened native urethral plate; a cross-section inset shows the native dorsal plate above and the vaginal-flap ventral onlay below around the catheter lumen. Key notes it is a pedicled flap that preserves its vascular plexus, is best for distal and mid-urethral strictures, is contraindicated in lichen sclerosus, and that lateral-based variants reduce the retrusive-meatus problem.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Blandy vaginal flap urethroplasty">
 <defs>
 <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -107,5 +107,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'blandy-u-flap.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'blandy-u-flap'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

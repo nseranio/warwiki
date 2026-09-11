@@ -77,7 +77,7 @@ push(`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.lumen}" stroke="${C.bowel
 });
 push(txt(cx, cy + 4, 10.5, 700, C.bowelEdge, 'middle', 'low-pressure'));
 push(txt(cx, cy + 18, 10.5, 700, C.bowelEdge, 'middle', 'sphere'));
-push(txt(cx, cy + 32, 8.5, 500, C.muted, 'middle', 'Laplace: P = 2T/r'));
+push(txt(cx, cy + 32, 8.5, 500, C.muted, 'middle', 'ideal sphere: P = 2T/r'));
 // ureters reimplanted at the top (posterior)
 tube(`M ${cx - 30} 92 C ${cx - 26} 116 ${cx - 22} 128 ${cx - 18} ${cy - r + 6}`, 9, '#DCE8F4', C.ureter);
 tube(`M ${cx + 30} 92 C ${cx + 26} 116 ${cx + 22} 128 ${cx + 18} ${cy - r + 6}`, 9, '#DCE8F4', C.ureter);
@@ -94,7 +94,7 @@ push(txt(cx, cy + r + 64, 9.5, 700, C.urethra, 'middle', 'urethra'));
 push(txt(cx, cy + r + 76, 8.5, 500, C.muted, 'middle', 'most dependent point'));
 push(txt(cx, 388, 12.5, 700, C.ink, 'middle', '2. Close into a sphere', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Hautmann W-configuration ileal neobladder in two panels. Panel 1: 60 to 70 cm of distal ileum is opened along the antimesenteric border and folded into a four-limb W, the adjacent limb edges joined by suture seams to form the posterior plate. Panel 2: the plate is closed anteriorly into a near-spherical low-pressure reservoir (Laplace P equals 2T over r), with the ureters reimplanted at the top by a Le Duc-Camey trough or chimney and the urethra anastomosed at the most dependent point for voiding per urethra.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Hautmann W neobladder">
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -103,5 +103,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'hautmann-neobladder.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'hautmann-neobladder'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

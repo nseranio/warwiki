@@ -9,6 +9,7 @@
  * Output: static/img/diagrams/z-plasty.svg
  */
 const fs = require('fs');
+const {zPlastyGain} = require('./lib/quantitative');
 const path = require('path');
 
 const C = { ink: '#1E293B', axis: '#334155', muted: '#64748B', border: '#E2E8F0', scar: '#185FA5', flapA: '#DCE7F1', flapB: '#FCE9CD', limb: '#475569', arrow: '#0F766E' };
@@ -29,7 +30,7 @@ push(txt(40, 59, 12.5, 500, C.muted, 'start', 'two triangular flaps swap across 
 // ---- geometry ------------------------------------------------------------
 const a = 92, cx = 240, cy = 236;
 const B = [cx, cy - a / 2], Cc = [cx, cy + a / 2];
-const A = [cx - 0.866 * a, cy - a], D = [cx + 0.866 * a, cy + a];
+const A = [cx - Math.sin(Math.PI / 3) * a, cy], D = [cx + Math.sin(Math.PI / 3) * a, cy];
 const P = p => `${f(p[0])},${f(p[1])}`;
 
 // original contracture axis (dashed, vertical through central limb)
@@ -64,8 +65,8 @@ push(txt(cx, cy + a + 56, 11.5, 600, C.arrow, 'middle', 'central axis lengthens'
 const rx = 470, ry = 110;
 push(`<rect x="${rx}" y="${ry}" width="252" height="206" rx="10" fill="#F8FAFC" stroke="#EAEDF1" stroke-width="1.2"/>`);
 push(txt(rx + 20, ry + 28, 12.5, 700, C.ink, 'start', 'Limb angle &#8594; lengthening', false));
-push(txt(rx + 20, ry + 44, 10.5, 500, C.muted, 'start', 'theoretical gain along the central axis', false));
-const rows = [['30&#176;', '25%'], ['45&#176;', '50%'], ['60&#176;', '75%'], ['75&#176;', '100%'], ['90&#176;', '120%']];
+push(txt(rx + 20, ry + 44, 10.5, 500, C.muted, 'start', 'calculated equal-limb geometric gain', false));
+const rows = [30,45,60,75,90].map(angle => [`${angle}&#176;`, `~${Math.round(zPlastyGain(angle))}%`]);
 rows.forEach((r, i) => {
   const y = ry + 70 + i * 24;
   const hot = r[0].startsWith('60');
@@ -73,9 +74,9 @@ rows.forEach((r, i) => {
   push(txt(rx + 26, y, 12, hot ? 700 : 500, hot ? '#166534' : C.axis, 'start', r[0], false));
   push(txt(rx + 120, y, 12, hot ? 700 : 500, hot ? '#166534' : C.axis, 'start', r[1], false));
 });
-push(txt(rx + 20, ry + 196, 10, 500, C.muted, 'start', '60&#176; is the workhorse (50&#8211;70% clinically)', false));
+push(txt(rx + 20, ry + 196, 10, 500, C.muted, 'start', 'Actual gain depends on tissue mobility', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Z-plasty geometry: a central limb along the scar with two 60-degree triangular flaps that transpose across it, rotating the scar 90 degrees and lengthening the central axis, with a reference table of limb angle versus theoretical lengthening.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Z-plasty transposition geometry">
 <defs>
 <marker id="az" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -84,5 +85,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'z-plasty.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'z-plasty'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -1,108 +1,42 @@
 #!/usr/bin/env node
-/**
- * WARWIKI original schematic — BMG graft-placement configurations (cross-section).
- *
- * Where the free oral-mucosa graft sits relative to the bulbar urethra decides
- * its bed: dorsal onlay (Barbagli) quilts to the tunica albuginea of the corpora;
- * ventral onlay rests on the corpus spongiosum; dorsal inlay (Asopa) reaches the
- * dorsal plate through ventral access. The rule: the graft must lie on
- * well-vascularized support, fixed without shear or dead space.
- *
- * Output: static/img/diagrams/graft-placement.svg
- */
+/** Original WARWIKI conceptual graft–bed interfaces. Regenerate; do not edit SVG. */
 const fs = require('fs');
 const path = require('path');
-
-const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', corpora: '#E7D9CB', corporaEdge: '#B99873',
-  spong: '#F3DEDF', spongEdge: '#CF9DA3', lumen: '#FFFFFF', lumenEdge: '#64748B', graft: '#185FA5',
-  graftFill: '#DCE7F1', suture: '#B45309', open: '#94A3B8' };
-const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const W = 880, H = 317;
-const f = n => Number(n.toFixed(1));
+const W = 900, H = 360;
+const ink = '#1E293B', muted = '#475569', graft = '#185FA5';
 const el = [];
-const push = s => el.push(s);
-function txt(x, y, size, weight, fill, anchor, s, halo = true) {
-  const h = halo ? ` paint-order="stroke" stroke="#FFFFFF" stroke-width="3.1" stroke-linejoin="round"` : '';
-  return `<text x="${f(x)}" y="${f(y)}" text-anchor="${anchor}" font-family="${FONT}" font-size="${size}" font-weight="${weight}" fill="${fill}"${h}>${s}</text>`;
+const text = (x,y,s,size=12,weight=500) => el.push(`<text x="${x}" y="${y}" text-anchor="middle" font-family="Arial, sans-serif" font-size="${size}" font-weight="${weight}" fill="${ink}">${s}</text>`);
+el.push(`<rect x="1" y="1" width="898" height="358" rx="14" fill="white" stroke="#E2E8F0"/>`);
+text(450,32,'Buccal graft placement: show contact with the supporting bed',17,700);
+text(450,54,'Simplified graft–bed interfaces; dorsal is up in every panel. Not a complete operative cross-section.',12);
+for (const [i,cx] of [160,450,740].entries()) {
+  // Enlarged interface: adjacent graft and bed deliberately have no intervening gap.
+  el.push(`<ellipse cx="${cx}" cy="157" rx="66" ry="30" fill="#E7D9CB" stroke="#B99873"/>`);
+  el.push(`<ellipse cx="${cx}" cy="212" rx="67" ry="57" fill="#F3DEDF" stroke="#CF9DA3"/>`);
+  if (i !== 1) {
+    el.push(`<path d="M${cx-34},191 H${cx+34} V218 A34,27 0 0 1 ${cx-34},218 Z" fill="white" stroke="${muted}"/>`);
+    el.push(`<rect x="${cx-37}" y="178" width="74" height="10" fill="#E7D9CB" stroke="#B99873"/>`);
+    el.push(`<path d="M${cx-35},189 H${cx+35}" stroke="${graft}" stroke-width="6"/>`);
+    for (const dx of [-22,0,22]) el.push(`<path d="M${cx+dx-3},183 L${cx+dx+3},194" stroke="#92400E" stroke-width="1.8"/>`);
+    text(cx,118,'Tunical supporting bed',12,700);
+    if (i === 2) {
+      el.push(`<path d="M${cx},245 V270" stroke="${muted}" stroke-dasharray="4 3" stroke-width="2"/>`);
+      text(cx+56,275,'ventral access',10);
+    }
+  } else {
+    el.push(`<path d="M${cx-34},230 H${cx+34} V205 A34,27 0 0 0 ${cx-34},205 Z" fill="white" stroke="${muted}"/>`);
+    el.push(`<path d="M${cx-35},232 H${cx+35}" stroke="${graft}" stroke-width="6"/>`);
+    el.push(`<path d="M${cx-37},236 Q${cx},270 ${cx+37},236" fill="#F3DEDF" stroke="#CF9DA3"/>`);
+    for (const dx of [-22,0,22]) el.push(`<path d="M${cx+dx-3},228 L${cx+dx+3},240" stroke="#92400E" stroke-width="1.8"/>`);
+    text(cx,118,'Spongiosum supports ventral graft',12,700);
+  }
+  text(cx,215,'lumen',11);
+  text(cx,301,['Dorsal onlay (Barbagli)','Ventral onlay','Dorsal inlay (Asopa)'][i],14,700);
+  text(cx,323,['Dorsal opening; graft on tunical bed','Graft covered by spongioplasty','Ventral access; dorsal graft bed'][i],11);
 }
-
-push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
-push(txt(40, 36, 16, 700, C.ink, 'start', 'BMG graft placement &#8212; where the graft sits decides its bed', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'cross-section of the bulbar urethra (dorsal = toward corpora) &#8212; the graft must lie on well-vascularized support', false));
-
-const cy = 188; // cross-section center y
-// base anatomy (corpora cavernosa dorsal, corpus spongiosum ventral with lumen)
-function base(cx) {
-  // corpora cavernosa (dorsal, top)
-  push(`<circle cx="${cx - 20}" cy="${cy - 56}" r="20" fill="${C.corpora}" stroke="${C.corporaEdge}" stroke-width="1.4"/>`);
-  push(`<circle cx="${cx + 20}" cy="${cy - 56}" r="20" fill="${C.corpora}" stroke="${C.corporaEdge}" stroke-width="1.4"/>`);
-  // corpus spongiosum (ventral, around the urethra)
-  push(`<circle cx="${cx}" cy="${cy}" r="44" fill="${C.spong}" stroke="${C.spongEdge}" stroke-width="1.8"/>`);
-}
-function lumen(cx) {
-  push(`<circle cx="${cx}" cy="${cy}" r="11" fill="${C.lumen}" stroke="${C.lumenEdge}" stroke-width="1.4"/>`);
-}
-// graft arc at given angle span (deg, 0=right, -90=top/dorsal, 90=bottom/ventral), radius r
-function graftArc(cx, r, a0, a1) {
-  const p = a => [cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)];
-  const s = p(a0), e = p(a1);
-  push(`<path d="M ${f(s[0])} ${f(s[1])} A ${r} ${r} 0 0 1 ${f(e[0])} ${f(e[1])}" fill="none" stroke="${C.graft}" stroke-width="6" stroke-linecap="round"/>`);
-}
-
-// orientation marker (panel 1)
-const o1 = 160;
-push(txt(o1 - 84, cy - 54, 9.5, 700, C.muted, 'middle', 'dorsal'));
-push(`<line x1="${o1 - 84}" y1="${cy - 46}" x2="${o1 - 84}" y2="${cy + 46}" stroke="${C.muted}" stroke-width="0.8" stroke-dasharray="2 3"/>`);
-push(txt(o1 - 84, cy + 62, 9.5, 700, C.muted, 'middle', 'ventral'));
-
-// ============ PANEL 1: dorsal onlay (Barbagli) ============
-base(o1);
-// graft on dorsal wall of lumen, quilted up to tunica/corpora
-graftArc(o1, 11, 200, 340); // top arc of lumen (dorsal)
-// quilting sutures from graft to tunica between corpora
-for (const dx of [-7, 0, 7]) push(`<line x1="${o1 + dx}" y1="${cy - 12}" x2="${o1 + dx}" y2="${cy - 34}" stroke="${C.suture}" stroke-width="1.3"/>`);
-lumen(o1);
-push(txt(o1, cy + 78, 12.5, 700, C.ink, 'middle', 'Dorsal onlay', false));
-push(txt(o1, cy + 94, 9.5, 500, C.muted, 'middle', 'Barbagli', false));
-push(txt(o1, cy + 112, 9.5, 600, C.graft, 'middle', 'bed: tunica albuginea'));
-
-// ============ PANEL 2: ventral onlay ============
-const o2 = 440;
-base(o2);
-// graft on ventral wall of lumen, supported by spongiosum (spongioplasty over)
-graftArc(o2, 11, 20, 160); // bottom arc of lumen (ventral)
-for (const dx of [-7, 0, 7]) push(`<line x1="${o2 + dx}" y1="${cy + 12}" x2="${o2 + dx}" y2="${cy + 30}" stroke="${C.suture}" stroke-width="1.3"/>`);
-lumen(o2);
-push(txt(o2, cy + 78, 12.5, 700, C.ink, 'middle', 'Ventral onlay', false));
-push(txt(o2, cy + 94, 9.5, 500, C.muted, 'middle', 'spongioplasty over graft', false));
-push(txt(o2, cy + 112, 9.5, 600, C.graft, 'middle', 'bed: corpus spongiosum'));
-
-// ============ PANEL 3: dorsal inlay (Asopa) ============
-const o3 = 720;
-base(o3);
-// ventral access: a slit opening in the ventral spongiosum
-push(`<path d="M ${o3 - 10} ${cy + 44} L ${o3} ${cy + 12} L ${o3 + 10} ${cy + 44}" fill="${C.lumen}" stroke="${C.open}" stroke-width="1.6" stroke-dasharray="3 3"/>`);
-// graft inlaid into the dorsal plate (patch let into the dorsal lumen wall)
-push(`<path d="M ${o3 - 11} ${cy - 4} A 11 11 0 0 1 ${o3 + 11} ${cy - 4}" fill="${C.graftFill}" stroke="${C.graft}" stroke-width="4"/>`);
-lumen(o3);
-push(`<line x1="${o3 + 30}" y1="${cy + 34}" x2="${o3 + 12}" y2="${cy + 20}" stroke="${C.open}" stroke-width="1.2"/>`);
-push(txt(o3 + 34, cy + 38, 9, 600, C.open, 'start', 'ventral access'));
-push(txt(o3, cy + 78, 12.5, 700, C.ink, 'middle', 'Dorsal inlay', false));
-push(txt(o3, cy + 94, 9.5, 500, C.muted, 'middle', 'Asopa', false));
-push(txt(o3, cy + 112, 9.5, 600, C.graft, 'middle', 'ventral access, dorsal bed'));
-
-// shared anatomy labels (panel 1)
-push(`<line x1="${o1 + 44}" y1="${cy - 56}" x2="${o1 + 70}" y2="${cy - 64}" stroke="${C.corporaEdge}" stroke-width="0.9"/>`);
-push(txt(o1 + 72, cy - 62, 8.5, 600, C.corporaEdge, 'start', 'corpora'));
-push(`<line x1="${o1 + 40}" y1="${cy + 24}" x2="${o1 + 66}" y2="${cy + 32}" stroke="${C.spongEdge}" stroke-width="0.9"/>`);
-push(txt(o1 + 68, cy + 34, 8.5, 600, C.spongEdge, 'start', 'spongiosum'));
-
-
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal-mucosa graft placement configurations shown in cross-section of the bulbar urethra, with dorsal toward the corpora cavernosa and ventral toward the skin. Dorsal onlay (Barbagli): the graft lines the dorsal wall of the lumen and is quilted to the tunica albuginea of the corpora. Ventral onlay: the graft lines the ventral wall and is supported by the corpus spongiosum closed over it. Dorsal inlay (Asopa): the urethra is opened ventrally and the graft is inlaid into the dorsal plate. Key: no side always wins, dorsal is currently preferred for bulbar strictures about 66 to 34 percent, and the graft must be quilted to well-vascularized support to avoid shear, hematoma, and dead space.">
-${el.join('\n')}
-</svg>
-`;
+text(450,347,'Blue = graft; short brown lines = fixation. Bed contact supports take; no universal preferred side.',11);
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal graft placement interfaces">\n${el.join('\n')}\n</svg>\n`;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'graft-placement.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
-console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'graft-placement'));
+console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out));

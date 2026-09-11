@@ -1,70 +1,58 @@
 #!/usr/bin/env node
-/**
- * Advisory reference-density report.
- *
- * This intentionally exits 0. It is meant to keep thin, low-reference pages
- * visible without blocking small routing or hygiene patches.
- */
-
-const fs = require('fs');
-const path = require('path');
-
-const REPO_ROOT = path.resolve(__dirname, '..');
-const DOCS_DIR = path.join(REPO_ROOT, 'docs');
-const STATUS_FILE = path.join(DOCS_DIR, '_STATUS.md');
-
-function walk(dir, files = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, files);
-    else if (entry.name.endsWith('.mdx') || entry.name.endsWith('.md')) files.push(full);
-  }
-  return files;
+/** Advisory only: highlight substantial articles with sparse or unlinked references. */
+const fs = require('node:fs');
+const path = require('node:path');
+const { citationUnits } = require('./audit-references');
+const ROOT = path.resolve(__dirname, '..');
+function walk(dir) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+    const file = path.join(dir, entry.name);
+    return entry.isDirectory() ? walk(file) : /\.mdx?$/.test(file) ? [file] : [];
+  });
 }
-
-function loadStubs() {
-  if (!fs.existsSync(STATUS_FILE)) return new Set();
-  const status = fs.readFileSync(STATUS_FILE, 'utf8');
-  return new Set([...status.matchAll(/`(docs\/[^`]+)`/g)].map((m) => m[1]));
+function assessArticle(raw, file) {
+  if (!/^docs\/0[1-5]-/.test(file)) return null;
+  if (/\/(?:index|(?:.*-)?database)\.mdx?$/.test(file) || /\/_/.test(file) || file.includes('/07-roots/surgeons/')) return null;
+  const frontmatter = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] || '';
+  const title = frontmatter.match(/^title:\s*(.+)$/m)?.[1] || '';
+  if (/hide_title:\s*true/.test(frontmatter) || /\b(?:database|directory|library|index)\b/i.test(title)) return null;
+  if (/\*Stub\s*—\s*to be built out|\*Coming soon\./i.test(raw)) return null;
+  const body = raw.replace(/^---[\s\S]*?---\s*/, '');
+  const prose = body.split(/^#{1,3}[^\n]*\bReferences\b[^\n]*$/m)[0];
+  const words = (prose.match(/[\p{L}\p{N}][\p{L}\p{N}'-]*/gu) || []).length;
+  const units = citationUnits(body).filter(unit => unit.bibliography);
+  const refs = new Set(units.filter(unit => unit.anchor).map(unit => unit.anchor)).size;
+  const unlinkedBibliographyEntries = units.filter(unit => !unit.anchor).length;
+  // No upper word limit: long articles with unlinked bibliographies used to
+  // disappear from this advisory despite having the largest review burden.
+  if (words < 500 || refs > 5) return null;
+  return { file, words, refs, unlinkedBibliographyEntries,
+    reason: unlinkedBibliographyEntries && !refs ? 'unlinked bibliography' : 'few structured references' };
 }
-
-function wordCount(text) {
-  return (text.match(/[A-Za-z0-9][A-Za-z0-9'-]*/g) || []).length;
+function report(root = ROOT) {
+  const statusFile = path.join(root, 'docs/_STATUS.md');
+  const status = fs.existsSync(statusFile) ? fs.readFileSync(statusFile, 'utf8') : '';
+  const stubs = new Set([...status.matchAll(/`(docs\/[^`]+)`/g)].map(m => m[1]));
+  return walk(path.join(root, 'docs')).flatMap(file => {
+    const rel = path.relative(root, file);
+    if (stubs.has(rel)) return [];
+    const result = assessArticle(fs.readFileSync(file, 'utf8'), rel);
+    return result ? [result] : [];
+  }).sort((a, b) => a.refs - b.refs || b.words - a.words || a.file.localeCompare(b.file));
 }
-
-function main() {
-  const stubs = loadStubs();
-  const candidates = [];
-
-  for (const file of walk(DOCS_DIR)) {
-    const rel = path.relative(REPO_ROOT, file);
-    if (rel === 'docs/_STATUS.md') continue;
-    if (stubs.has(rel)) continue;
-    if (/\/index\.mdx?$/.test(rel)) continue;
-    if (/\/database\.mdx?$/.test(rel)) continue;
-    if (rel.includes('/07-roots/surgeons/')) continue;
-
-    const raw = fs.readFileSync(file, 'utf8');
-    const body = raw.replace(/^---[\s\S]*?---\s*/m, '');
-    const words = wordCount(body);
-    const refs = (body.match(/<a id=["']ref\d+["']><\/a>/g) || []).length;
-
-    if (words >= 500 && words <= 1500 && refs <= 5) {
-      candidates.push({ rel, words, refs });
-    }
+if (require.main === module) {
+  const candidates = report();
+  const args = process.argv.slice(2);
+  const index = args.indexOf('--out');
+  if (index !== -1) {
+    const out = args[index + 1];
+    if (!out || out.startsWith('--')) throw new Error('--out requires a path');
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, JSON.stringify({ advisory: true, candidates }, null, 2) + '\n');
   }
-
-  candidates.sort((a, b) => a.refs - b.refs || a.words - b.words);
-
-  if (candidates.length === 0) {
-    console.log('✓ Reference-density advisory: no thin low-reference article pages found.');
-    return;
-  }
-
-  console.log(`ℹ Reference-density advisory: ${candidates.length} filled-ish pages may need more evidence.`);
-  for (const c of candidates.slice(0, 25)) {
-    console.log(`  ${c.rel} (${c.words} words, ${c.refs} refs)`);
-  }
+  console.log(candidates.length
+    ? `ℹ Reference-density advisory: ${candidates.length} substantial articles need a structure/evidence review (not a clinical quality score).`
+    : '✓ Reference-density advisory: no substantial low-reference articles found.');
+  for (const item of candidates.slice(0, 25)) console.log(`  ${item.file} (${item.words} source words; ${item.refs} structured refs; ${item.unlinkedBibliographyEntries} unlinked entries; ${item.reason})`);
 }
-
-main();
+module.exports = { assessArticle, report };

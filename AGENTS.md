@@ -2,6 +2,11 @@
 
 This file is for Codex to read at the start of every session. It captures the project architecture, conventions, and component patterns. Session history is in `CHANGELOG.md`; the stub backlog is in `docs/_STATUS.md`.
 
+**Current user preference:** Epic work is explicitly paused. Its retrievable plan is [EPIC-ROADMAP.md](EPIC-ROADMAP.md). Do not start templates or schedule Epic work until the user asks to resume. Site reliability, content and deployment improvements remain authorized. The user authorized removing obsolete Vercel deployments while retaining the live release and a known-good rollback; verify the actual deployment/alias inventory first.
+
+
+**Follow-up implementation:** see [implementation-followup.md](reports/2026-09-11/implementation-followup.md) for Clinic access, seven-pathway evidence tables, all 55 figure dispositions, imaging/renal corrections, Node 24 and production build safeguards. GitHub workflow commits `5ede68bb` + `682dda8f` remain local pending scope sign-in. Vercel credentials expired; silent refresh failed; no deployments deleted. The user requested background-only work while watching a show: no foreground browser or screen capture until ready. Historical snapshot details below describe the initial release, not the full follow-up.
+
 ---
 
 ## Current handoff snapshot — September 11, 2026 (evidence and maintenance refresh)

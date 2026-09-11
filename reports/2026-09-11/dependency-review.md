@@ -1,5 +1,7 @@
 # Dependency review
 
+> Follow-up: the authorized coordinated upgrade is complete. See [upgrade results](dependency-upgrade-results.md) and the after-audit snapshot. The triage below records the pre-upgrade state.
+
 September 11, 2026. Read-only triage of the current lockfile and the npm audit captured during this session. No dependency, lockfile or installed-package changes were made. This is a bounded assessment of the four packages labeled critical and all five direct packages reported vulnerable, not a penetration test or proof that every other finding is unreachable.
 
 ## Result and exposure

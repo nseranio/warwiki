@@ -113,7 +113,7 @@ push(txt(706, 298, 8.5, 500, C.muted, 'middle', '(refluxing)'));
 leader(672, 296, 632, 308);
 push(txt(620, 400, 12.5, 700, C.ink, 'middle', '2. Interpose isoperistaltically', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Ileal ureter replacement in two panels. Panel 1: a 15 to 25 cm ileal segment is isolated from the small bowel on its mesenteric pedicle, shown hanging below as a urinary segment, while bowel continuity is restored above by an ileoileostomy bridging the gap. Panel 2: the segment is interposed isoperistaltically, with its oral end sewn to the renal pelvis as an ileopyelostomy and its aboral end implanted into the bladder as a refluxing ileovesical anastomosis, peristalsis carrying urine antegrade from kidney to bladder.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Ileal ureter substitution">
 <defs>
 <marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.flow}"/></marker>
 </defs>
@@ -122,5 +122,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'ileal-ureter.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'ileal-ureter'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -6,7 +6,7 @@ September 11, 2026. Baseline: substantive content/media work through June 28; th
 
 WARWIKI already has the useful structure of a specialist reference: foundations, evaluation, clinical conditions, named techniques, special populations, and supporting media. Keep Docusaurus and the static delivery model. The highest-value next investment is **trustworthy, fast clinical retrieval**, especially for the seven practice problems below. More article volume and more elaborate graphics are lower priorities than identifying which recommendation is current, which source supports it, and what applies to the patient in front of the clinician.
 
-This review combines a whole-corpus structural inventory, source-level engineering review, live homepage/search inspection, targeted clinical verification, and a five-diagram visual/source sample. It is **not** a line-by-line clinical sign-off of all 1,186 documentation pages. That distinction matters because the review found actual guideline interpretation and diagram errors that passed the existing lint suite.
+This review combines a whole-corpus structural inventory, source-level engineering review, live homepage/search inspection, targeted clinical verification, and an initial five-diagram visual/source sample followed by a complete visual/source-coverage pass across all 55 original SVGs. It is **not** a line-by-line clinical sign-off of all 1,186 documentation pages. That distinction matters because the review found actual guideline interpretation and diagram errors that passed the existing lint suite.
 
 ## What was measured across the whole site
 
@@ -43,7 +43,9 @@ The exact, regenerable page inventory is `content-inventory.json` (`npm run audi
 - Removed the quiz, reduced the prominence of History & Lineage, paused public handouts, and removed their PDFs/previews from deployment output while preserving source files.
 - Reduced initial video rendering from 1,546 cards to 24; search still covers all videos. Prevented unnecessary report-only/preview deployments and switched default reading audio to device speech.
 
-## Ranked next improvements
+## Initial recommendations and implementation status
+
+The table below preserves the initial priorities. The engineering, evidence-table, clinic-access, imaging, renal/stone and figure work has since been implemented; see [implementation-followup.md](implementation-followup.md) for the actual scope and validation. The remaining clinical work is clinician sign-off and continued review of the wider corpus, not another duplicate article or a claim that every sentence was verified.
 
 | Priority | Work | Why it matters / completion criterion |
 |---|---|---|
@@ -65,30 +67,22 @@ The exact, regenerable page inventory is `content-inventory.json` (`npm run audi
 
 Do not migrate frameworks, add an AI chatbot over unverified content, publish an automatic recommendation from every new abstract, or generate decorative anatomical images for the sake of coverage. These would add work or apparent authority before resolving the actual reliability gaps. The existing SVG/React/static-site approach is capable of high-quality outputs with better data and clinical review.
 
-## Practice-building sequence through October 15
+## Epic: saved for later
 
-Keep the user's **general new-patient shell + separate HPI and assessment/plan modules**. Use the analogous **operative shell + procedure-specific technique modules**. This is an appropriate design, provided inserting the same data twice and carrying irrelevant sections forward are avoided. These are design recommendations, not an Epic build already delivered.
-
-| Stage | Deliverable |
-|---|---|
-| September 11–20 | Finish core evidence sign-off and collect representative **de-identified** existing phrases/operative examples plus the local Epic SmartLink/SmartList catalog. |
-| September 21–30 | Create the new/return visit shells and HPI/A&P modules for female incontinence, POP, male incontinence, BPH, male stricture, ED, and female recurrent UTI. Establish a consistent private naming/version scheme. |
-| October 1–7 | Add the most frequent office/operative reports; map chart facts to verified local Epic fields and decision branches to explicit selections. Keep postoperative orders and documentation distinct. |
-| October 8–14 | Validate in the institution's test/training environment using normal, missing-data, atypical and multi-problem cases. Review rendered notes for stale auto-text, contradictions and excessive length. |
-| October 15 onward | Start with the small verified stack. Measure time to finish a note, edits after insertion and recurring omissions; extend to the next common WARWIKI topics after real use. |
-
-Autopopulate reliable chart facts with their relevant dates. Use explicit selections for patient-reported symptoms, examination findings, counseling, consent, treatment decisions, and what actually occurred in the operating room. Exact Epic field names/IDs must be verified locally. SmartPhrase insertion does not by itself place orders or validate a clinical event. The source library should retain evidence details, while the final patient note should contain only relevant encounter documentation. Epic's own analysis of note composition illustrates why indiscriminate auto-text can produce longer notes without proportional benefit. [Epic Research](https://media.epic.com/epicresearch/wordpressmedia/pdfs/two-years-after-coding-changes-sought-to-decrease-documentation-notes-remain-bloated.pdf)
-
-Personal operative examples and patient-specific material should be kept in a private workspace outside this public repository. No Epic templates or patient records were created or uploaded in this update.
+Epic work is **paused at the user's request**. The former date-driven schedule is withdrawn. The standalone [EPIC-ROADMAP.md](../../EPIC-ROADMAP.md) preserves the chosen modular clinic/operative structure, seven starting problems, local autopopulation validation and a clear resume prompt. No templates or patient records were created or uploaded.
 
 ## Supporting reports
 
-Final local verification passed: production build (including handout exclusion, without the earlier SVG warnings), typecheck, 13 unit tests, seven maintenance tests, source lint and whitespace checks. Browser checks confirmed paused handouts, absent quiz/archive resource links, video expansion from 24 to 48, full-library VRAM search, and clear evidence labeling at desktop and 390-pixel phone width. This is a representative interface check, not an exhaustive browser test of every page. The pending CI change adds a 200 MB output budget, which already passes locally; deliberate handout restoration requires revisiting that budget.
+Initial-release local verification passed: production build (including handout exclusion, without the earlier SVG warnings), typecheck, 13 unit tests, seven maintenance tests, source lint and whitespace checks. Browser checks confirmed paused handouts, absent quiz/archive resource links, video expansion from 24 to 48, full-library VRAM search, and clear evidence labeling at desktop and 390-pixel phone width. This is a representative interface check, not an exhaustive browser test of every page. The follow-up production build now directly enforces a 200 MB output budget; deliberate handout restoration requires revisiting that budget.
 
 - `reconstructive-literature.md` — reconstruction/outlet/sexual-medicine evidence and corrections.
 - `functional-urogynecology-literature.md` — functional and urogynecologic evidence and corrections.
 - `hosting-performance.md` — measured output, the actual deployment-storage limit, and retention/hosting choices.
-- `diagrams-quality.md` — diagram sample, verified fixes and remaining clinical review needs.
+- `diagrams-quality.md` — all 55 diagram dispositions, verified fixes and remaining clinician approval needs.
 - `dependency-review.md` — package-audit findings and deployment/development exposure distinctions.
 - `maintenance.md` — what runs automatically, what it verifies, and operational limitations.
 - `content-inventory.json` and `literature-inbox/` — reproducible inventory and raw screening metadata.
+
+- `implementation-followup.md` — implemented follow-up scope, validation and remaining account sign-in steps.
+- `core-clinic-evidence-foundation.md` — seven clinical pathways and structured comparisons.
+- `reference-media-maintenance.md` — reference identity, duplicate-topic and media queues.

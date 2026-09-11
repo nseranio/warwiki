@@ -94,7 +94,7 @@ function arrow(x1, x2, y, label) {
 // ===== frame + title =======================================================
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Anderson-Hynes dismembered pyeloplasty', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'excise the diseased junction, spatulate the ureter, and rebuild a dependent funnel anterior to the crossing vessel', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Dismember, spatulate and reanastomose; transpose relative to a crossing vessel when indicated', false));
 
 const AX = 150, BX = 410, CX = 668;
 
@@ -162,7 +162,7 @@ push(txt(AX, 372, 12.5, 700, C.ink, 'middle', '1. Obstructed UPJ', false));
 push(txt(BX, 372, 12.5, 700, C.ink, 'middle', '2. Dismember &#38; spatulate', false));
 push(txt(CX, 372, 12.5, 700, C.ink, 'middle', '3. Dependent-funnel anastomosis', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anderson-Hynes dismembered pyeloplasty in three panels. Panel 1: an obstructed ureteropelvic junction with a dilated renal pelvis, a pinched UPJ, and a lower-pole crossing vessel compressing it. Panel 2: the diseased UPJ segment is excised, the redundant pelvis trimmed along a dashed line, and the ureter spatulated along its lateral wall. Panel 3: a dependent funnel anastomosis is sewn from the spatulated ureter to the most dependent corner of the trimmed pelvis with an apical stitch, drained by a double-J stent, with the ureter transposed anterior to the crossing vessel.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anderson-Hynes pyeloplasty">
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -171,5 +171,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'anderson-hynes.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'anderson-hynes'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

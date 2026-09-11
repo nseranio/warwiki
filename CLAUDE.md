@@ -2,6 +2,11 @@
 
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 
+**Epic is paused:** use [EPIC-ROADMAP.md](EPIC-ROADMAP.md) when the user is ready. Do not start templates automatically because of the practice start date. The current authorized work is the remaining site improvements and removal of obsolete Vercel deployments after verifying the live/rollback releases and aliases.
+
+
+**Follow-up implementation:** see [implementation-followup.md](reports/2026-09-11/implementation-followup.md) for Clinic access, seven-pathway evidence tables, all 55 figure dispositions, imaging/renal corrections, Node 24 and production build safeguards. GitHub workflow commits `5ede68bb` + `682dda8f` remain local pending scope sign-in. Vercel credentials expired; silent refresh failed; no deployments deleted. The user requested background-only work while watching a show: no foreground browser or screen capture until ready. Historical snapshot details below describe the initial release, not the full follow-up.
+
 ---
 
 ## Current Handoff — 2026-09-11 — September evidence and maintenance refresh

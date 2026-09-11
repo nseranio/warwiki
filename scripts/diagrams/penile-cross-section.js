@@ -70,11 +70,11 @@ lead(cx, cy + 62, cx - 30, 418); push(txt(cx - 36, 422, 11.5, 600, C.ink, 'end',
 lead(cx, cy - 12, 120, 214); push(txt(116, 218, 11, 600, C.ink, 'end', 'intercavernosal'));
 push(txt(116, 232, 11, 600, C.ink, 'end', 'septum'));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Transverse mid-shaft penile cross-section with dorsal up: paired corpora cavernosa with tunica albuginea, deep cavernosal arteries and intercavernosal septum; ventral corpus spongiosum carrying the urethra; the dorsal neurovascular bundle of deep dorsal vein, dorsal arteries and dorsal nerves; Buck's fascia and skin.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Penile mid-shaft section">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'penile-cross-section.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'penile-cross-section'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

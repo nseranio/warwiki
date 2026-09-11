@@ -87,7 +87,7 @@ push(txt(bx, bcy - 46, 8.5, 700, C.fatEdge, 'middle', 'flap over repair'));
 push(txt(bx, 350, 12.5, 700, C.ink, 'middle', '2. Interpose over repair', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Martius labial fat-pad flap shown on a frontal vulva in two steps. Step 1, harvest: a vertical incision over the right labium majus exposes the fibrofatty pad, which has a dual blood supply — an anterior pedicle from the external pudendal artery and a posterior pedicle from the internal pudendal artery. Step 2, interposition: the flap is raised on one pedicle, tunneled subcutaneously to the midline, and laid over the repair as a vascularized buttress. Key: keep the posterior pedicle for anterior or urethral targets such as vesicovaginal fistula, urethral diverticulum, and female urethroplasty; keep the anterior pedicle for posterior targets such as rectovaginal fistula. The right labium is the default for its greater vascular density; the skin is preserved and no drain is needed.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Martius labial fat-pad flap">
 <defs>
 <marker id="mf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -96,5 +96,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'martius-flap.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'martius-flap'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -75,7 +75,7 @@ push(`<path d="M 378 366 C 330 322, 286 254, 270 228" fill="none" stroke="${C.tu
 // labels with leaders (right of anatomy)
 function tag(x, y, s, sub) { push(txt(x, y, 9.5, 700, C.dev, 'start', s)); if (sub) push(txt(x, y + 12, 8.5, 500, C.muted, 'start', sub)); }
 push(`<line x1="283" y1="210" x2="470" y2="196" stroke="${C.border}" stroke-width="1"/>`);
-tag(474, 194, 'Pressure-reg. balloon', 'retropubic &#183; 61-70 cmH&#8322;O');
+tag(474, 194, 'Pressure-reg. balloon', 'pressure range per device IFU');
 push(`<line x1="378" y1="312" x2="470" y2="250" stroke="${C.border}" stroke-width="1"/>`);
 tag(474, 248, 'Cuff', 'occludes bulbar urethra');
 push(`<line x1="398" y1="392" x2="470" y2="304" stroke="${C.border}" stroke-width="1"/>`);
@@ -88,7 +88,7 @@ push(txt(rx + 16, ry + 24, 12.5, 700, '#166534', 'start', 'How it cycles', false
 const steps = [
   ['1. At rest', 'cuff is fluid-filled &#8594; urethra closed &#8594; continent'],
   ['2. To void', 'squeeze the pump &#8594; fluid moves cuff &#8594; PRB &#8594; cuff opens'],
-  ['3. Auto-refill', 'PRB pushes fluid back over 1-3 min &#8594; cuff re-closes'],
+  ['3. Auto-refill', 'Fluid returns gradually; cuff re-closes'],
 ];
 steps.forEach(([h, d], i) => {
   const y = ry + 58 + i * 58;
@@ -104,13 +104,11 @@ steps.forEach(([h, d], i) => {
 
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Artificial urinary sphincter components" aria-describedby="diagram-description">
-<title>Artificial urinary sphincter components</title>
-<desc id="diagram-description">Artificial urinary sphincter AMS 800 on a male pelvic sagittal with its three fluid-connected components: a cuff occluding the bulbar urethra, a pressure-regulating balloon in the retropubic space of Retzius behind the pubic symphysis and in front of the bladder set to 61 to 70 centimeters of water, and a control pump in the scrotum. The bulbar urethra passes beneath the subpubic arch. A how-it-cycles panel: at rest the cuff is fluid-filled and the urethra is closed for continence; to void the patient squeezes the pump, moving fluid from the cuff to the balloon so the cuff opens; the balloon then auto-refills the cuff over one to three minutes to re-close it. Key: leave deactivated about 6 weeks before activation, always deactivate the cuff before any catheterization or cystoscopy, use a bladder-neck cuff for female, pediatric, or redo cases, and recognize urethral atrophy and erosion as the signature late failures.</desc>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="AMS 800 components and fluid cycle" aria-describedby="diagram-description">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'aus-components.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'aus-components'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

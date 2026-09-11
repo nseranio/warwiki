@@ -101,7 +101,7 @@ function strip(cx, y) {
   push(txt(cx, y + 72, 9, 500, C.muted, 'middle', 'Heineke-Mikulicz'));
 }
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tunica plication mechanics for Peyronie's disease, shown as close-ups of the tunica albuginea on the convex long side opposite the plaque. A small orienting glyph shows the curved corpus with the plaque on the concave side and the maneuvers applied to the convex side. Nesbit: an elliptical wedge of tunica is excised and the defect closed with sutures, shortening the convex side. 16-dot plication: plicating sutures infold and pleat the tunica without removing tissue. Yachia: a longitudinal incision in the tunica is closed transversely by the Heineke-Mikulicz principle. Green arrows in each panel show shortening of the convex side.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tunical shortening techniques">
 <defs>
 <marker id="sh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.short}"/></marker>
 </defs>
@@ -110,5 +110,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'tunica-plication.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'tunica-plication'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

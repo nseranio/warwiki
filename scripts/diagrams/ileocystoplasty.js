@@ -68,7 +68,7 @@ push(txt(cx3 + 58, cy, 10, 600, C.suture, 'start', 'anastomosis'));
 push(txt(cx3, cy + 84, 13, 700, C.ink, 'middle', '3. Augment', false));
 push(txt(cx3, cy + 100, 10, 500, C.muted, 'middle', 'sew the cup onto the bivalved bladder', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three-step clam ileocystoplasty: detubularize the ileal segment along its antimesenteric border into a flat plate; reconfigure it into a U-shaped cup; and sew the cup onto the bivalved native bladder at an equatorial anastomosis to form a high-capacity low-pressure reservoir.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Clam ileocystoplasty">
 <defs>
 <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -77,5 +77,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'ileocystoplasty.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'ileocystoplasty'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

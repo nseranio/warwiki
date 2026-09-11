@@ -76,10 +76,10 @@ push(`<line x1="${ix - 7}" y1="${iy - 10}" x2="${ix + 7}" y2="${iy - 10}" stroke
 for (const dx of [-22, 0, 22]) push(`<line x1="${ix + dx}" y1="${iy - 50}" x2="${ix + dx}" y2="${iy - 24}" stroke="${C.bladEdge}" stroke-width="1.6" marker-end="url(#av)"/>`);
 push(txt(ix + 10, iy + 40, 9, 500, C.muted, 'middle', 'a full bladder presses the', false));
 push(txt(ix + 10, iy + 52, 9, 500, C.muted, 'middle', 'channel flat against the wall', false));
-push(txt(ix + 10, iy + 70, 9, 500, C.muted, 'middle', '&#8594; stays dry between caths', false));
+push(txt(ix + 10, iy + 70, 9, 500, C.muted, 'middle', 'supports continence between CIC', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Appendicovesicostomy or Mitrofanoff continent catheterizable channel. The appendix, kept on its mesoappendix blood supply, runs from a catheterizable skin stoma at the umbilicus or right lower quadrant down to the bladder, where it is reimplanted through a submucosal tunnel that creates a flap-valve. A cross-section inset shows the flap-valve: the channel lies in a submucosal tunnel between the detrusor and the mucosa, and a full bladder presses it flat against the wall so the patient stays dry between catheterizations. Key: it is the first-line catheterizable channel needing about a 4 to 5 to 1 tunnel-to-diameter ratio; the appendix is end-arterial so protect the mesoappendix; if the appendix is absent or used for a MACE, build a Yang-Monti channel instead; stomal stenosis is the commonest late problem and umbilical stomas tend to fare better.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Mitrofanoff appendicovesicostomy">
 <defs>
 <marker id="av" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.bladEdge}"/></marker>
 </defs>
@@ -88,5 +88,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'appendicovesicostomy.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'appendicovesicostomy'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

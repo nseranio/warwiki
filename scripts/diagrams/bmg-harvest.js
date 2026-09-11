@@ -4,7 +4,7 @@
  *
  * Intraoral view of the right inner cheek: the graft is taken from the central
  * buccal mucosa, staying clear of Stensen's (parotid) duct papilla — opposite
- * the 2nd maxillary molar — and the oral commissure, with ~1 cm margins from the
+ * the 2nd maxillary molar — and the oral commissure, with protect commissures from the
  * gingiva. The workhorse substitution graft of urethral reconstruction.
  *
  * Output: static/img/diagrams/bmg-harvest.svg
@@ -55,17 +55,17 @@ push(txt(dx + 12, dy + 6, 8.5, 500, C.muted, 'start', 'opposite the 2nd upper mo
 const gx = 350, gy = 232;
 push(`<ellipse cx="${gx}" cy="${gy}" rx="118" ry="46" fill="${C.graftFill}" stroke="${C.graft}" stroke-width="2.6" stroke-dasharray="7 4"/>`);
 push(txt(gx, gy - 2, 11, 700, C.graft, 'middle', 'graft'));
-push(txt(gx, gy + 14, 9, 500, C.muted, 'middle', 'up to ~2.5 cm wide &#215; needed length'));
+push(txt(gx, gy + 14, 9, 500, C.muted, 'middle', 'dimensions tailored to patient'));
 // margins
 push(`<path d="M ${gx - 118} ${gy + 46} l 0 14 M ${gx - 118} ${gy + 53} l -34 0" fill="none" stroke="${C.margin}" stroke-width="1.2"/>`);
-push(txt(gx - 160, gy + 57, 8.5, 600, C.margin, 'end', '~1 cm margin'));
+push(txt(gx - 160, gy + 57, 8.5, 600, C.margin, 'end', 'protect commissure'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal mucosa graft harvest shown as an intraoral view of the cheek, framed by the upper and lower teeth and gingiva with the oral commissure anteriorly. Stensen's parotid duct papilla sits high on the cheek opposite the second maxillary molar, with a dashed line marking the stay-below boundary. The graft is outlined as an ellipse in the central cheek below the duct line and clear of the commissure, up to about 2.5 centimeters wide by the needed length, with roughly 1 centimeter margins from the gingiva. Key: non-keratinized epithelium with thin lamina propria gives excellent graft take; mark with the cheek tented, infiltrate, and harvest at partial thickness; spare Stensen's duct, the commissure, and the lip; open versus closed donor closure gives similar pain; use bilateral cheeks or add lingual or labial mucosa for long or panurethral grafts.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal mucosa graft harvest">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'bmg-harvest.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'bmg-harvest'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -79,18 +79,16 @@ push(txt(cx2 - 30, 212, 8, 500, C.muted, 'end', 'lengthens'));
 push(txt(cx2 - 30, 223, 8, 500, C.muted, 'end', 'concave side'));
 push(txt(cx2 + 30, 215, 10, 800, C.ok, 'middle', '&#10003;'));
 push(txt(cx2, 338, 12, 700, C.ink, 'middle', '3. Incision + graft', false));
-push(txt(cx2, 354, 9, 500, C.muted, 'middle', 'straight, length preserved', false));
+push(txt(cx2, 354, 9, 500, C.muted, 'middle', 'aim: limit further shortening', false));
 
 // ============ decision strip ============
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Peyronie curvature correction options" aria-describedby="diagram-description">
-<title>Peyronie curvature correction options</title>
-<desc id="diagram-description">Peyronie's disease curvature correction in three panels. Panel 1, the deformity: the penis curves toward the plaque, which lies on the concave or short side, opposite the convex or long side. Panel 2, plication or Nesbit: sutures shorten the convex long side to match, straightening the penis but making it slightly shorter. Panel 3, incision plus graft: the plaque on the concave side is incised and the defect bridged with a graft, lengthening the short side and straightening the penis while preserving length. Decision: plication for curves up to about 60 degrees with good length and erections; incision or grafting for curves over about 60 degrees, hourglass deformity, or a short penis with good rigidity. Plication trades length for simplicity, grafting preserves length but raises de-novo erectile-dysfunction risk, and a penile prosthesis is added when erectile function is inadequate.</desc>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Peyronie straightening concepts" aria-describedby="diagram-description">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'peyronie-correction.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'peyronie-correction'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -26,10 +26,8 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  // Kept at 'ignore' because WARWIKI's citation pattern uses raw <a id="refN"></a>
-  // HTML anchors (7,597 references site-wide). Docusaurus's broken-anchor checker
-  // only recognises heading-derived IDs and emits 400+ false positives that would
-  // mask real broken anchors. Replace with a custom check script when feasible.
+  // Citation anchors are raw HTML. The postbuild rendered-link checker validates
+  // actual output IDs, including citations and data-driven links.
   onBrokenAnchors: 'ignore',
 
   headTags: [
@@ -129,20 +127,18 @@ const config: Config = {
           label: 'Special Populations',
         },
         {
-          to: '/video-library',
-          label: 'Video Library',
+          to: '/clinic',
+          label: 'Clinic',
           position: 'left',
         },
         {
-          to: '/docs/journal-club',
-          label: 'Journal Club',
           position: 'left',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'resourcesSidebar',
-          position: 'left',
-          label: 'Resources',
+          label: 'Library',
+          items: [
+            {to: '/video-library', label: 'Video Library'},
+            {to: '/docs/journal-club', label: 'Journal Club'},
+            {to: '/docs/resources', label: 'Resources'},
+          ],
         },
         {
           type: 'search',
@@ -168,6 +164,7 @@ const config: Config = {
           title: 'WARWIKI',
           items: [
             {label: 'About', to: '/about'},
+            {label: 'Clinic quick access', to: '/clinic'},
             {label: 'Foundations', to: '/docs/foundations'},
             {label: 'Treatment Atlas', to: '/docs/surgical-techniques'},
           ],

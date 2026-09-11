@@ -113,14 +113,11 @@ push(txt(sx, yAt(-3.7) - 11, 10.5, 600, C.muted, 'middle', 'cm', false));
 push(txt(56, 511, 10.5, 500, C.muted, 'start', '*Stage 0 requires all normal points. Stage III / IV depends on TVL &#8722; 2 cm. Diagram not to scale.', false));
 push(txt(56, 526, 10, 500, C.muted, 'start', 'Source: ICS/IUGA POP terminology (ICS Standards 2020&#8211;2021). Maximal strain; TVL with prolapse reduced.', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Stylized midsagittal schematic of the vaginal canal showing the six POP-Q points (Aa, Ba, C, D, Ap, Bp), the hymen as the zero reference plane, the genital hiatus, perineal body and total vaginal length landmarks, and a stage ruler relating leading-edge position to POP-Q stage.">
-<title>POP-Q measurement points and sign convention</title>
-<desc>Negative values are above the hymen, zero is at the hymen, and positive values are below it. Stage II spans minus one to plus one cm. Stage zero requires all normal points; stage III versus IV also requires total vaginal length. This is an orientation schematic, not to scale.</desc>
-<metadata>Source: https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf ; source-checked: 2026-09-11 ; clinician sign-off: pending</metadata>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="POP-Q landmarks and sign convention">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'popq-points.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'popq-points'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

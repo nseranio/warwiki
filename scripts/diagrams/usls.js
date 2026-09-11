@@ -4,7 +4,7 @@
  *
  * Superior (bird's-eye) view: the vaginal vault is suspended bilaterally to the
  * intermediate uterosacral ligaments (at the ischial-spine level) and drawn back
- * toward the sacrum. The ureter runs ~1-2 cm lateral to the ligament — the
+ * toward the sacrum. The ureter runs proximity varies to the ligament — the
  * signature risk — so intraoperative cystoscopy is mandatory.
  *
  * Output: static/img/diagrams/usls.svg
@@ -27,7 +27,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Uterosacral ligament suspension (USLS) &#8212; mind the ureter', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', "bird&#8217;s-eye pelvic view: suspend the vault to the intermediate uterosacral ligaments &#8212; the ureter runs ~1&#8211;2 cm lateral", false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', "bird&#8217;s-eye pelvic view: suspend the vault to the intermediate uterosacral ligaments &#8212; ureteral proximity varies", false));
 
 const cx = 360; // midline
 // orientation
@@ -56,12 +56,12 @@ for (const s of [-1, 1]) {
 push(txt(cx + 96, 250, 9, 700, C.ligEdge, 'middle', 'uterosacral'));
 push(txt(cx + 96, 262, 9, 700, C.ligEdge, 'middle', 'ligament'));
 
-// ureters: run ~1-2 cm lateral to the USL, coursing anteriorly toward the bladder
+// ureters: run proximity varies to the USL, coursing anteriorly toward the bladder
 for (const s of [-1, 1]) {
   push(`<path d="M ${cx + s * 132} 120 C ${cx + s * 150} 190, ${cx + s * 120} 268, ${cx + s * 64} 322" fill="none" stroke="${C.ureter}" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="9 4"/>`);
 }
 push(txt(cx - 150, 150, 9, 700, C.ureter, 'middle', 'ureter'));
-push(txt(cx - 150, 162, 8, 500, C.muted, 'middle', '~1-2 cm lateral'));
+push(txt(cx - 150, 162, 8, 500, C.muted, 'middle', 'proximity varies'));
 
 // suspension sutures at the intermediate USL (ischial-spine level) -> vault
 for (const s of [-1, 1]) {
@@ -83,11 +83,11 @@ push(txt(572, 174, 9.5, 500, C.muted, 'start', 'placement; ureteral kinking is t
 push(txt(572, 188, 9.5, 500, C.muted, 'start', 'signature USLS complication.', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Uterosacral ligament suspension shown in a bird's-eye pelvic view with the sacrum posterior at top and the bladder anterior at bottom. The vaginal vault is suspended by sutures to the intermediate portion of each uterosacral ligament at the ischial-spine level and drawn back toward the sacrum. The ureters run about 1 to 2 centimeters lateral to the ligaments, the signature danger, so intraoperative cystoscopy is mandatory to confirm ureteral jets after suture placement; ureteral kinking is the characteristic complication. Key: a native-tissue apical repair equally effective to sacrospinous ligament fixation in the OPTIMAL trial, restoring a near-midline vaginal axis, placing sutures medial and cephalad on the ligament and releasing any suture that obstructs a ureter.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Uterosacral ligament suspension">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'usls.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'usls'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

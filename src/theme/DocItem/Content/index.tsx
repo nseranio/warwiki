@@ -21,7 +21,7 @@ export default function ContentWrapper(props: Props): React.ReactElement {
 
   return (
     <>
-      {!frontMatter.hide_title && <EvidenceStatus evidenceUpdated={review.evidenceUpdated} evidenceNote={review.evidenceNote} lastReviewed={review.lastReviewed} reviewer={review.reviewer} />}
+      <EvidenceStatus evidenceUpdated={review.evidenceUpdated} evidenceNote={review.evidenceNote} lastReviewed={review.lastReviewed} reviewer={review.reviewer} />
       {showListener && <ArticleListener />}
       <Content {...props} />
       <CitationTooltips />

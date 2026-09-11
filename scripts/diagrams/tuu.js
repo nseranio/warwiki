@@ -27,7 +27,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Transureteroureterostomy (TUU) &#8212; cross to the good ureter', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'anterior view: the donor ureter crosses the midline above the IMA to an end-to-side anastomosis with the healthy recipient', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Anterior view: a tension-free retroperitoneal crossing joins the donor to the healthy recipient ureter', false));
 
 const cx = 330;
 // faint great vessels (aorta + IVC) with bifurcation
@@ -77,11 +77,11 @@ push(txt(cx + 30, 196, 9, 700, C.ok, 'middle', 'gentle curve'));
 push(txt(cx + 30, 207, 8, 500, C.muted, 'middle', 'no tension, no kink'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Transureteroureterostomy in anterior view. The donor ureter from the affected side is mobilized and brought across the midline, cephalad to the inferior mesenteric artery and aortic bifurcation through a window in the sigmoid mesentery, in a gentle tension-free curve to an end-to-side anastomosis with the healthy recipient ureter, which continues intact to the bladder; the diseased distal donor ureter is excluded. Key: a salvage option when a long distal ureteral defect cannot reach the bladder and bladder-based repair is exhausted; contraindicated when disease threatens the recipient ureter such as stones, reflux, urothelial cancer, prior pelvic radiation, or retroperitoneal fibrosis, because the one good ureter must never be risked.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Transureteroureterostomy">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'tuu.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'tuu'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

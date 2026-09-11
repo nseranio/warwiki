@@ -63,7 +63,7 @@ push(txt(300, 296, 8.5, 700, C.sling, 'middle', 'hammock at bladder neck'));
 // cough -> compress urethra against pubis
 push(`<line x1="360" y1="260" x2="320" y2="282" stroke="${C.cough}" stroke-width="2.4" marker-end="url(#ps)"/>`);
 push(txt(392, 256, 9, 600, C.cough, 'middle', 'cough &#8594; compress'));
-push(txt(392, 268, 9, 600, C.cough, 'middle', 'urethra vs pubis'));
+push(txt(392, 268, 9, 600, C.cough, 'middle', 'bladder-neck support'));
 
 // ---- level comparison inset (PVS vs MUS) ----
 const ix = 560, iy = 110;
@@ -76,7 +76,7 @@ push(txt(ix + 30, iy + 122, 8, 600, C.muted, 'middle', 'meatus'));
 // PVS at bladder neck (proximal)
 push(`<line x1="${ix + 18}" y1="${iy + 36}" x2="${ix + 42}" y2="${iy + 36}" stroke="${C.sling}" stroke-width="5" stroke-linecap="round"/>`);
 push(txt(ix + 50, iy + 39, 9, 700, C.sling, 'start', 'PVS &#8212; bladder neck'));
-push(txt(ix + 50, iy + 51, 8, 500, C.muted, 'start', 'autologous, compressive'));
+push(txt(ix + 50, iy + 51, 8, 500, C.muted, 'start', 'autologous fascial support'));
 // MUS at midurethra
 push(`<line x1="${ix + 18}" y1="${iy + 74}" x2="${ix + 42}" y2="${iy + 74}" stroke="${C.mus}" stroke-width="5" stroke-linecap="round"/>`);
 push(txt(ix + 50, iy + 77, 9, 700, C.mus, 'start', 'MUS &#8212; midurethra'));
@@ -85,8 +85,6 @@ push(txt(ix + 50, iy + 89, 8, 500, C.muted, 'start', 'synthetic, supportive'));
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Autologous fascial pubovaginal sling" aria-describedby="diagram-description">
-<title>Autologous fascial pubovaginal sling</title>
-<desc id="diagram-description">Autologous fascial pubovaginal sling in sagittal view. A strip of the patient's own fascia, from the rectus abdominis or fascia lata, is placed as a hammock beneath the bladder neck; its two arms pass retropubically behind the pubic symphysis and are tied over the anterior rectus fascia, where the graft was harvested and the defect closed. A cough compresses the urethra against the pubis. An inset compares where slings sit: the pubovaginal sling is autologous and compressive at the bladder neck, while the synthetic midurethral sling is supportive at the midurethra. Key: AUA/SUFU prefers the pubovaginal sling for intrinsic sphincter deficiency, a fixed urethra, mesh-averse patients, prior radiation, and concurrent urethral reconstruction; it uses a combined vaginal and abdominal approach with tension set just snug, is durable and mesh-free, but has higher early retention and de novo urgency than the midurethral sling.</desc>
 <defs>
 <marker id="ps" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.cough}"/></marker>
 </defs>
@@ -95,5 +93,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'pubovaginal-sling.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'pubovaginal-sling'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

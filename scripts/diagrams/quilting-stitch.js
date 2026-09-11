@@ -57,7 +57,7 @@ const BED = 182;
   push(txt(cx, BED - 50, 10, 700, C.graftDeadEdge, 'middle', 'graft'));
   push(txt(cx, BED + 4, 9.5, 700, C.blood, 'middle', 'hematoma / seroma'));
   push(txt(cx, BED + 58, 10, 700, C.bedEdge, 'middle', 'vascularized bed'));
-  push(txt(cx, BED + 86, 12, 700, C.bad, 'middle', '&#10007; lifts off &#8594; graft starves', false));
+  push(txt(cx, BED + 86, 12, 700, C.bad, 'middle', '&#10007; separation threatens graft take', false));
 }
 
 // ===== PANEL B: with quilting =============================================
@@ -78,7 +78,7 @@ const BED = 182;
   push(txt(cx, BED - 32, 10, 700, C.graftEdge, 'middle', 'graft quilted flat'));
   push(txt(x1 + 2, BED, 9, 700, C.suture, 'end', ''));
   push(txt(cx, BED + 58, 9, 600, C.feed, 'middle', 'plasma + new vessels reach the graft'));
-  push(txt(cx, BED + 86, 12, 700, C.ok, 'middle', '&#10003; intimate contact &#8594; graft takes', false));
+  push(txt(cx, BED + 86, 12, 700, C.ok, 'middle', '&#10003; close contact supports graft take', false));
 }
 
 // divider + vs
@@ -86,7 +86,7 @@ push(`<line x1="410" y1="86" x2="410" y2="280" stroke="${C.border}" stroke-width
 push(`<circle cx="410" cy="${BED - 6}" r="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.3"/>`);
 push(txt(410, BED - 2, 10, 700, C.muted, 'middle', 'vs', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="The quilting stitch and graft survival, two panels. A free graft has no blood supply of its own and survives only when pressed flat against a vascularized bed through plasmatic imbibition, inosculation, and neovascularization. Without quilting, a hematoma or seroma collects between the graft and the bed, lifting the pale graft off and curling its edges so it loses contact and starves. With quilting, multiple tacking sutures hold the graft in intimate contact with the bed, eliminating dead space, so plasma and new vessels reach the graft and it takes.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Graft-bed contact and quilting">
 <defs>
 <marker id="fd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.feed}"/></marker>
 </defs>
@@ -95,5 +95,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'quilting-stitch.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'quilting-stitch'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

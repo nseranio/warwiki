@@ -453,6 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Brand / title */
 .navbar__brand {
   margin-right: 1.5rem;
+  flex-shrink: 0;
 }
 
 .navbar__title {
@@ -469,6 +470,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Nav items — direct links AND dropdown triggers */
 .navbar__item.navbar__link,
 .navbar__item .navbar__link {
+  white-space: nowrap;
   font-size: 0.815rem;
   font-weight: 500;
   letter-spacing: 0.005em;

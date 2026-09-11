@@ -82,10 +82,10 @@ push(txt((cx0 + cx1) / 2, cy + 44, 10, 700, C.gain, 'middle', '~5&#8211;6 cm  (1
 push(txt((cx0 + cx1) / 2, cy - 24, 9, 600, C.cath, 'middle', 'over catheter'));
 push(txt((cx0 + cx1) / 2, cy + 132, 12, 700, C.ink, 'middle', '3. Re-tubularize', false));
 // double-monti note
-push(txt((cx0 + cx1) / 2, cy + 64, 9, 500, C.muted, 'middle', 'double (spiral) Monti &#8594; ~10&#8211;12 cm', false));
+push(txt((cx0 + cx1) / 2, cy + 64, 9, 500, C.muted, 'middle', 'Double Monti and spiral variants extend reach', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Yang-Monti catheterizable channel construction in three steps. Step 1: a short 2 to 2.5 centimeter ileal segment on its mesentery. Step 2: the segment is opened (detubularized) into a flat sheet and re-rolled the perpendicular way, so the bowel circumference becomes the new tube length. Step 3: re-tubularized over a 12 to 14 French catheter into a long narrow channel about 5 to 6 centimeters, or about 10 to 12 centimeters as a double spiral Monti. Key: a Mitrofanoff alternative when the appendix is unusable, sparing bowel and the ileocecal valve, implanted with a flap-valve continence mechanism, with the bowel-loop end prone to stomal stenosis.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Yang-Monti retubularization">
 <defs>
 <marker id="ym" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 <marker id="ym2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.suture}"/></marker>
@@ -95,5 +95,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'yang-monti.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'yang-monti'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

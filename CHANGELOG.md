@@ -6,6 +6,20 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Clinical retrieval, source reliability and build safeguards
+
+Implemented the approved site improvements: seven-topic Clinic quick access with browser-local saved topics, compact Library navigation and clinical search abbreviations. Added 14 structured evidence comparisons and concise openings across the seven core clinical pathways. The complete 55-figure editorial/source-coverage and visual pass now has per-figure provenance, scope, text equivalents, clinician-review status and accessible enlargement; generators and SVGs stay in sync.
+
+Reworked CTU, RUG/VCUG, MRI, ultrasound and MAG3 guidance to remove unsupported diagnostic/operative rules and connect actionable claims to primary sources. Corrected renal/stone alkali, vitamin-C and diversion-surveillance statements and added the July 2026 IUGA OASI guideline with a clear primary-versus-delayed repair distinction. This is scoped evidence repair; broader historical content is not stamped as clinically signed off.
+
+Upgraded the compatible Docusaurus/build/test stack and pinned Node 24 LTS. Package audit entries dropped from 63 to 17; an input-format guard mitigates remaining upstream image-decoder advisories without claiming them patched. Added compiled HTML/data-link/anchor checks and a 200 MB output budget to every production build. Reference identity/density and media-review queues now expose further work without automatically publishing unreviewed sources.
+
+**Verification:** production build 139.55 MB, compiled destinations (1,192 pages / 102,789 links and assets / 746 data links), source lint, typecheck, 38 component/API tests, 42 maintenance tests, four headless browser tests and whitespace checks pass. Desktop and phone screenshots were visually checked.
+
+**Epic remains paused.** [EPIC-ROADMAP.md](EPIC-ROADMAP.md) preserves modular HPI/A&P/operative planning and the resume steps; no templates or patient data were created. [Implementation details and verification](reports/2026-09-11/implementation-followup.md) distinguish completed work from the remaining sign-ins. Vercel old-deployment cleanup is authorized but has not occurred because credentials expired; the user asked to leave their screen alone. GitHub workflow commits `5ede68bb` and `682dda8f` remain on local `codex/monthly-workflows` until workflow-scope sign-in can finish.
+
+---
+
 ## 2026-09-11 — Evidence refresh, monthly maintenance, and smaller deployments
 
 Reviewed major post-June literature and corrections, with targeted evidence updates across 29 articles in functional urology, urogynecology, reconstruction, outlet surgery and prosthetics. Corrected existing NLUTD/OAB guideline interpretations, methenamine companion-page inconsistencies, vaginal-estrogen labeling overstatements, UroLift guideline attribution and superseded prosthesis outcomes. Incorporated verified new trials, reviews and reconstructive series with their design and access limitations. A ureteroenteric-anastomosis article's expression of concern and the PHOENIX correction are explicitly flagged. Detailed sources and unresolved questions are in the [reconstructive report](reports/2026-09-11/reconstructive-literature.md) and [functional/urogynecology report](reports/2026-09-11/functional-urogynecology-literature.md).

@@ -30,7 +30,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Layered architecture of the urogenital perineum &#8212; skin to pelvic floor', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'coronal slice: two fascial pouches separated by the perineal membrane &#8212; each layer is a surgical plane', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Expanded male compartment map, not a literal coronal slice; layers blend and vary in living tissue', false));
 
 // coronal frame: ischiopubic rami (side bars) + horizontal layer bands
 const xL = 170, xR = 440, cx = (xL + xR) / 2;
@@ -95,18 +95,18 @@ function leg(yc, name, sub, planeColor, labelY) {
   push(txt(lx, ly + 12, 9.5, 500, planeColor || C.muted, 'start', sub));
 }
 leg((LEV0 + LEV1) / 2, 'Levator ani (pelvic floor)', 'roof; interface with intrapelvic surgery');
-leg(dpc, 'Deep perineal pouch', 'rhabdosphincter / striated UG sphincter — PFUI plane', C.blue);
-leg((PM0 + PM1) / 2 + 2, 'Perineal membrane', 'roof of superficial / floor of deep; AUS landmark', C.blue);
+leg(dpc, 'Deep perineal pouch', 'urethral sphincter complex; not a uniform muscle sheet', C.blue);
+leg((PM0 + PM1) / 2 + 2, 'Perineal membrane', 'connective-tissue boundary; regional anatomy varies', C.blue);
 leg(spc + 8, 'Superficial perineal pouch', 'bulb + crura + muscles — bulbar urethroplasty, AUS', C.blue);
 leg((CF0 + CF1) / 2, "Colles' fascia", "Fournier's spread plane; → dartos / Scarpa", C.blue, 326);
 leg((SK0 + SK1) / 2, 'Skin', 'perineal incision', C.muted, 360);
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Coronal section of the urogenital perineum showing its layered architecture between the two ischiopubic rami. From top to bottom: levator ani (pelvic floor) with a midline hiatus; the deep perineal pouch containing the membranous urethra ringed by the rhabdosphincter (the pelvic-fracture urethroplasty plane); the fibrous perineal membrane (roof of the superficial pouch, floor of the deep pouch, and AUS transcorporal landmark); the superficial perineal pouch containing the midline bulb and two lateral crura with their bulbospongiosus and ischiocavernosus muscles (the plane of bulbar urethroplasty and AUS); Colles' fascia (the Fournier's-gangrene spread plane, continuous with dartos and Scarpa's fascia); and skin. A legend tags each layer with its surgical plane.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Male perineal compartments">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'perineal-layers.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'perineal-layers'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

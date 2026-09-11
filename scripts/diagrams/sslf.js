@@ -64,7 +64,7 @@ push(`<circle cx="${sx}" cy="${sy}" r="11" fill="none" stroke="${C.safe}" stroke
 // distance bracket from spine to safe point
 push(`<path d="M 506 222 L 506 206 M 506 214 L ${sx} 214 M ${sx} 222 L ${sx} 206" fill="none" stroke="${C.safe}" stroke-width="1.2"/>`);
 push(txt((sx + 506) / 2, 200, 9, 700, C.safe, 'middle', '1.5&#8211;2 cm'));
-push(txt((sx + 506) / 2, 189, 8, 500, C.muted, 'middle', '(2 fingerbreadths)'));
+push(txt((sx + 506) / 2, 189, 8, 500, C.muted, 'middle', 'anatomy varies'));
 
 // ---- vaginal apex pulled to the safe point ----
 push(`<path d="M 320 370 C 300 340, 320 320, 356 322 C 392 324, 404 348, 388 372 Z" fill="${C.vag}" stroke="${C.vagEdge}" stroke-width="1.8" stroke-linejoin="round"/>`);
@@ -76,11 +76,11 @@ push(txt(420, 300, 9, 700, C.suture, 'start', 'suspension'));
 push(txt(420, 312, 9, 700, C.suture, 'start', 'sutures'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacrospinous ligament fixation shown on a posterior view of the right pelvic sidewall. The sacrospinous ligament with its overlying coccygeus muscle runs from the ischial spine to the sacrum and coccyx. The pudendal nerve and vessels loop behind the ischial spine and the sciatic nerve passes above it, marking a danger zone at the spine. Suspension sutures from the vaginal apex are placed into the ligament 1.5 to 2 centimeters, about two fingerbreadths, medial to the ischial spine, in the safe zone. Key: a native-tissue apical repair usually done right-sided and unilateral; placing sutures too lateral risks the pudendal bundle and sciatic nerve causing gluteal pain; the repair pulls the apex posteriorly, raising later anterior-compartment recurrence compared with sacrocolpopexy.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacrospinous ligament fixation">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'sslf.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'sslf'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

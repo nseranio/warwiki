@@ -88,9 +88,7 @@ push(txt(150, bulbBase + 14, 8.5, 600, C.uret, 'middle', 'bulbar urethra'));
 
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Webster progressive perineal maneuvers" aria-describedby="diagram-description">
-<title>Webster progressive perineal maneuvers</title>
-<desc id="diagram-description">Webster progressive perineal maneuvers for a posterior urethral distraction defect, shown as four escalating steps that shorten the route from the mobilized bulbar urethra to the prostatic apex. Step 1, mobilize the bulbar urethra distally. Step 2, split the corpora by separating the crura in the midline. Step 3, inferior pubectomy, wedge-resecting the lower pubis to create a subpubic tunnel. Step 4, supracrural rerouting around a penile crus, which closes the gap but underperforms. Key: climb the ladder only as far as a tension-free mucosa-to-mucosa anastomosis requires; partial inferior pubectomy is preferred over abandoned total pubectomy; supracrural rerouting has about 75 percent restenosis in Kizer 2007 versus about 80 percent success with the abdominoperineal approach; a high proximal stump above the inferior pubic margin on MRI predicts needing pubectomy or an abdominoperineal repair.</desc>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Progressive perineal maneuvers after PFUI" aria-describedby="diagram-description">
 <defs>
 <marker id="pw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -99,5 +97,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'pfui-webster-steps.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'pfui-webster-steps'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

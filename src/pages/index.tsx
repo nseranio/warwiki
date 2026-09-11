@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import ClinicQuickAccess from '@site/src/components/ClinicQuickAccess';
 
 import stats from '@site/src/data/stats.json';
 
@@ -137,6 +138,7 @@ export default function Home(): ReactNode {
       description="The functional reconstructive urology wiki.">
       <div className={styles.homepageRoot}>
         <HomepageHeader />
+        <ClinicQuickAccess compact />
         <HomepageSocialFooter />
       </div>
     </Layout>

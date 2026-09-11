@@ -26,7 +26,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 38, 16, 700, C.ink, 'start', 'Y-V plasty &#8212; advancement geometry', false));
-push(txt(40, 57, 12.5, 500, C.muted, 'start', 'the triangular flap slides along the stem &#8212; the Y becomes a V and the tissue lengthens', false));
+push(txt(40, 57, 12.5, 500, C.muted, 'start', 'A triangular flap advances to redistribute local tissue; this diagram is not a length-gain formula', false));
 
 // ---- panel A: Y incision -------------------------------------------------
 const ax = 188, cy = 168;
@@ -66,11 +66,11 @@ for (let t = 0.25; t <= 0.8; t += 0.27) {
 }
 // lengthening bracket (gain x)
 push(`<path d="M ${bx + 78} ${cy} L ${bx + 86} ${cy} M ${bx + 82} ${cy} L ${bx + 82} ${cy + x} M ${bx + 78} ${cy + x} L ${bx + 86} ${cy + x}" fill="none" stroke="${C.gain}" stroke-width="1.4"/>`);
-push(txt(bx + 92, cy + x / 2 + 4, 11.5, 700, C.gain, 'start', '+ x'));
+push(txt(bx + 92, cy + x / 2 + 4, 11.5, 700, C.gain, 'start', 'advancement'));
 push(txt(bx, cy + 116, 13, 700, C.ink, 'middle', 'V closure', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Y-V plasty geometry: a Y-shaped incision with a triangular flap (panel A) whose flap advances distally along the stem so the wound closes as a V and the tissue lengthens by the advancement distance x (panel B), with a key noting it lengthens without undermining and is used for bladder-neck contracture, VUAS, Foley pyeloplasty, and meatoplasty.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Y-V advancement geometry">
 <defs>
 <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -79,5 +79,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'y-v-plasty.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'y-v-plasty'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

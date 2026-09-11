@@ -25,7 +25,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 40, 16, 700, C.ink, 'start', 'Perineal skin incisions for bulbar / posterior urethroplasty', false));
-push(txt(40, 59, 12.5, 500, C.muted, 'start', 'the midline vertical incision is the contemporary default — lowest wound-complication rate, fewest neurovascular structures injured', false));
+push(txt(40, 59, 12.5, 500, C.muted, 'start', 'Incision choice depends on exposure, prior scars and reconstruction; shapes are not a risk ranking', false));
 
 function panel(cx, color, name, incision, stat, preferred) {
   // perineal field
@@ -47,23 +47,23 @@ function panel(cx, color, name, incision, stat, preferred) {
 }
 
 const cxs = [178, 410, 642];
-panel(cxs[0], '#16A34A', 'Midline vertical',
-  `M ${cxs[0]} 132 L ${cxs[0]} 282`, 'SSI 1.9–3.1%', true);
-panel(cxs[1], '#EA580C', 'Inverted-U',
+panel(cxs[0], '#185FA5', 'Midline vertical',
+  `M ${cxs[0]} 132 L ${cxs[0]} 282`, 'midline exposure', false);
+panel(cxs[1], '#185FA5', 'Inverted-U',
   `M ${cxs[1] - 38} 282 L ${cxs[1] - 38} 168 Q ${cxs[1] - 38} 132 ${cxs[1]} 132 Q ${cxs[1] + 38} 132 ${cxs[1] + 38} 168 L ${cxs[1] + 38} 282`,
-  'SSI 16–19%', false);
-panel(cxs[2], '#DC2626', 'Lambda (LPI)',
+  'wider perineal exposure', false);
+panel(cxs[2], '#185FA5', 'Lambda (LPI)',
   `M ${cxs[2]} 282 L ${cxs[2]} 190 L ${cxs[2] - 38} 140 M ${cxs[2]} 190 L ${cxs[2] + 38} 140`,
-  'wound comp. ~23%', false);
+  'branched exposure', false);
 
 // shared orientation note
 push(txt(W / 2, 408, 11, 500, C.muted, 'middle', 'perineum viewed from below — anterior (scrotum) above, posterior (anus, &#9679;) below', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three stylized perineal fields comparing the midline vertical, inverted-U, and lambda urethroplasty skin incisions, colour-coded by wound-complication rate, with the midline vertical marked preferred.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Perineal incision shapes">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'perineal-incisions.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'perineal-incisions'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

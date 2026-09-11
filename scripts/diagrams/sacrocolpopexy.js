@@ -83,7 +83,7 @@ push(txt(456, 150, 9.5, 700, C.mesh, 'middle', 'sacral stem'));
 push(txt(456, 163, 8.5, 500, C.muted, 'middle', '(no tension)'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sagittal pelvis showing sacrocolpopexy. A Y-shaped mesh has an anterior arm sutured along the anterior vaginal wall and a posterior arm along the posterior vaginal wall; the two arms join at the vault into a single stem that runs back and up to the sacral promontory, where it is fixed to the anterior longitudinal ligament just below S1. The bladder lies anterior, the rectum posterior. Key: gold-standard durable apical repair restoring the natural vaginal axis; suture to the anterior longitudinal ligament avoiding the left common iliac vein and middle sacral vessels; keep the mesh bridging not taut and re-peritonealize it.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacrocolpopexy mesh support">
 <defs>
 <marker id="sa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.muted}"/></marker>
 </defs>
@@ -92,5 +92,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'sacrocolpopexy.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'sacrocolpopexy'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

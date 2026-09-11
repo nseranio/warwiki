@@ -1,0 +1,21 @@
+.compact { margin: 0 auto; padding: 0 1.5rem 2rem; width: 100%; max-width: 980px; text-align: center; }
+.compact h2 { font-size: 1.25rem; margin-bottom: 1.2rem; }
+.shortcuts { display: flex; flex-wrap: wrap; gap: .65rem; justify-content: center; }
+.shortcuts a { border: 1px solid var(--warwiki-border); border-radius: 999px; padding: .6rem 1rem; background: var(--ifm-background-surface-color); font-size: .9rem; }
+.browse { display: inline-block; margin-top: 1.25rem; }
+.controls { display: flex; flex-wrap: wrap; align-items: end; gap: 1.5rem; }
+.search { display: grid; gap: .4rem; flex: 1 1 280px; font-weight: 600; }
+.search input { border: 1px solid var(--warwiki-border); border-radius: .6rem; padding: .8rem; font: inherit; color: var(--ifm-font-color-base); background: var(--ifm-background-surface-color); min-width: 0; }
+.checkbox { display: flex; align-items: center; gap: .5rem; padding: .8rem 0; }
+.note, .count { color: var(--ifm-color-emphasis-700); font-size: .9rem; margin: .6rem 0 1rem; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.card { padding: 1.5rem; border: 1px solid var(--warwiki-border); border-radius: .85rem; background: var(--ifm-background-surface-color); scroll-margin-top: calc(var(--ifm-navbar-height) + 1.5rem); }
+.cardHeading { display: flex; align-items: start; gap: .8rem; justify-content: space-between; }
+.card h2 { font-size: 1.2rem; line-height: 1.4; }
+.card p { color: var(--ifm-color-emphasis-700); }
+.card ul { padding-left: 1.2rem; margin-bottom: 0; }
+.card li + li { margin-top: .5rem; }
+.save { border: 1px solid var(--warwiki-border); border-radius: .5rem; background: transparent; color: var(--ifm-color-primary); font: inherit; font-size: .85rem; padding: .35rem .6rem; cursor: pointer; }
+.save[aria-pressed='true'] { background: var(--warwiki-note-bg); }
+.save:focus-visible, .shortcuts a:focus-visible, .search input:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 3px; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } .card { padding: 1.15rem; } }

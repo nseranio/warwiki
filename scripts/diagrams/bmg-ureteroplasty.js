@@ -107,7 +107,7 @@ push(txt(ix, iy + ir + 40, 9.5, 700, C.omentEdge, 'middle', 'omental / fat wrap'
 push(txt(ix, iy + ir + 52, 8.5, 500, C.muted, 'middle', 'feeds the free graft'));
 push(txt(ix, 354, 8.5, 500, C.muted, 'middle', 'dorsal or ventral onlay'));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal mucosa graft ureteroplasty. On the left, a ureteral stricture is opened by a non-transecting longitudinal ureterotomy across the narrowing. In the middle, a buccal mucosa graft is sewn in as an onlay patch over a double-J stent, widening the caliber, with suture lines around the graft. The cross-section inset shows the buccal graft replacing the dorsal arc of the ureter wall around the lumen, the whole repair wrapped in a lobulated ring of omentum or perinephric fat that supplies the free graft; the graft may be placed as a dorsal or ventral onlay.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Buccal graft ureteroplasty">
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -116,5 +116,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'bmg-ureteroplasty.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'bmg-ureteroplasty'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

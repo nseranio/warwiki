@@ -85,15 +85,13 @@ push(`<path d="M ${ix - 60} ${iy + 16} L ${ix + 18} ${iy + 16} Q ${ix + 30} ${iy
 push(`<path d="M ${ix + 60} ${iy + 40} L ${ix - 18} ${iy + 40} Q ${ix - 30} ${iy + 40} ${ix - 30} ${iy + 28} L ${ix - 30} ${iy + 26}" fill="none" stroke="${C.eas}" stroke-width="12" stroke-linecap="round"/>`);
 // mattress sutures through both layers (2)
 for (const sx of [ix - 8, ix + 8]) push(`<path d="M ${sx} ${iy + 10} L ${sx} ${iy + 46} M ${sx - 6} ${iy + 10} L ${sx + 6} ${iy + 10} M ${sx - 6} ${iy + 46} L ${sx + 6} ${iy + 46}" fill="none" stroke="${C.suture}" stroke-width="1.6"/>`);
-push(txt(ix, iy + 74, 8.5, 500, C.muted, 'middle', 'ends double-breasted &#8594;'));
-push(txt(ix, iy + 86, 8.5, 500, C.muted, 'middle', 'more bulk + circumference'));
-push(txt(ix, iy + 100, 8.5, 500, C.muted, 'middle', 'than end-to-end apposition'));
+push(txt(ix, iy + 74, 8.5, 500, C.muted, 'middle', 'selected full-thickness EAS'));
+push(txt(ix, iy + 86, 8.5, 500, C.muted, 'middle', 'overlap is one repair option'));
+push(txt(ix, iy + 100, 8.5, 500, C.muted, 'middle', 'partial tears: end-to-end'));
 
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Overlapping anal sphincteroplasty" aria-describedby="diagram-description">
-<title>Overlapping anal sphincteroplasty</title>
-<desc id="diagram-description">Overlapping anal sphincteroplasty in perineal view with anterior at top. Panel 1: the external anal sphincter ring is disrupted by an anterior defect, its two ends retracted with scar between them, around an intact internal anal sphincter and anal lumen, below the perineal body. Panel 2: the ends are mobilized and overlapped vest-over-pants, secured with two rows of horizontal mattress sutures, restoring a continuous ring with extra anterior bulk. A detail inset shows the double-breasted overlap with mattress sutures passing through both muscle layers, giving more bulk and circumference than an end-to-end apposition. Key: used for symptomatic external-sphincter defects after obstetric injury or trauma; mobilize the scarred ends fully and keep the scar on the muscle for suture purchase; overlapping and end-to-end repairs give similar long-term continence per Cochrane, and continence often deteriorates over years.</desc>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Overlapping external anal sphincter repair" aria-describedby="diagram-description">
 <defs>
 <marker id="sp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -102,5 +100,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'sphincteroplasty.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'sphincteroplasty'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

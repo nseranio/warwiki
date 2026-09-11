@@ -12,6 +12,7 @@
  * Output: static/img/diagrams/pressure-flow-nomogram.svg
  */
 const fs = require('fs');
+const {BOOI, pressureAtBoundary} = require('./lib/quantitative');
 const path = require('path');
 
 const C = { ink: '#1E293B', axis: '#334155', muted: '#64748B', grid: '#EAEDF1', border: '#E2E8F0' };
@@ -35,17 +36,17 @@ push(txt(PL, 38, 16, 700, C.ink, 'start', 'Male pressure-flow nomogram (ICS / Ab
 push(txt(PL, 57, 11.5, 500, C.muted, 'start', 'BOOI = Pdet@Qmax &#8722; 2 &#215; Qmax   ·   &gt; 40 obstructed   ·   20&#8211;40 equivocal   ·   &lt; 20 unobstructed', false));
 
 // zones (boundaries: Pdet = 2Q+40 and 2Q+20)
-push(`<polygon points="${pt(0,0)} ${pt(30,0)} ${pt(30,80)} ${pt(0,20)}" fill="#DCFCE7" opacity="0.7"/>`);
-push(`<polygon points="${pt(0,20)} ${pt(30,80)} ${pt(30,100)} ${pt(0,40)}" fill="#FEF3C7" opacity="0.7"/>`);
-push(`<polygon points="${pt(0,40)} ${pt(30,100)} ${pt(30,120)} ${pt(0,120)}" fill="#FEE2E2" opacity="0.7"/>`);
+push(`<polygon points="${pt(0,0)} ${pt(30,0)} ${pt(30,pressureAtBoundary(30,BOOI.lower))} ${pt(0,pressureAtBoundary(0,BOOI.lower))}" fill="#DCFCE7" opacity="0.7"/>`);
+push(`<polygon points="${pt(0,pressureAtBoundary(0,BOOI.lower))} ${pt(30,pressureAtBoundary(30,BOOI.lower))} ${pt(30,pressureAtBoundary(30,BOOI.upper))} ${pt(0,pressureAtBoundary(0,BOOI.upper))}" fill="#FEF3C7" opacity="0.7"/>`);
+push(`<polygon points="${pt(0,pressureAtBoundary(0,BOOI.upper))} ${pt(30,pressureAtBoundary(30,BOOI.upper))} ${pt(30,120)} ${pt(0,120)}" fill="#FEE2E2" opacity="0.7"/>`);
 
 // gridlines
 for (let p = 0; p <= PMAX; p += 20) { const y = yOf(p); push(`<line x1="${PL}" y1="${f(y)}" x2="${PR}" y2="${f(y)}" stroke="${C.grid}" stroke-width="1"/>`); push(txt(PL - 9, y + 4, 10.5, 400, C.muted, 'end', String(p), false)); }
 for (let q = 0; q <= QMAX; q += 5) { const x = xOf(q); push(`<line x1="${f(x)}" y1="${PB}" x2="${f(x)}" y2="${PB + 6}" stroke="${C.axis}" stroke-width="1"/>`); push(txt(x, PB + 22, 10.5, 400, C.muted, 'middle', String(q), false)); }
 
 // boundary lines
-push(`<line x1="${pt(0,40).split(',')[0]}" y1="${pt(0,40).split(',')[1]}" x2="${pt(30,100).split(',')[0]}" y2="${pt(30,100).split(',')[1]}" stroke="#B45309" stroke-width="1.6" stroke-dasharray="6 4"/>`);
-push(`<line x1="${pt(0,20).split(',')[0]}" y1="${pt(0,20).split(',')[1]}" x2="${pt(30,80).split(',')[0]}" y2="${pt(30,80).split(',')[1]}" stroke="#15803D" stroke-width="1.6" stroke-dasharray="6 4"/>`);
+push(`<line x1="${pt(0,pressureAtBoundary(0,BOOI.upper)).split(',')[0]}" y1="${pt(0,pressureAtBoundary(0,BOOI.upper)).split(',')[1]}" x2="${pt(30,pressureAtBoundary(30,BOOI.upper)).split(',')[0]}" y2="${pt(30,pressureAtBoundary(30,BOOI.upper)).split(',')[1]}" stroke="#B45309" stroke-width="1.6" stroke-dasharray="6 4"/>`);
+push(`<line x1="${pt(0,pressureAtBoundary(0,BOOI.lower)).split(',')[0]}" y1="${pt(0,pressureAtBoundary(0,BOOI.lower)).split(',')[1]}" x2="${pt(30,pressureAtBoundary(30,BOOI.lower)).split(',')[0]}" y2="${pt(30,pressureAtBoundary(30,BOOI.lower)).split(',')[1]}" stroke="#15803D" stroke-width="1.6" stroke-dasharray="6 4"/>`);
 push(txt(xOf(24.5), yOf(99), 10.5, 700, '#B45309', 'start', 'BOOI 40'));
 push(txt(xOf(24.5), yOf(79), 10.5, 700, '#15803D', 'start', 'BOOI 20'));
 
@@ -65,14 +66,11 @@ push(`<text transform="translate(${PL - 46},${(PT + PB) / 2}) rotate(-90)" text-
 push(txt((PL + PR) / 2, PB + 44, 12, 600, C.axis, 'middle', 'Qmax (mL/s)', false));
 push(txt(PL, 448, 10, 500, C.muted, 'start', 'Source: ICS male terminology, section 5.12. Not a female BOO nomogram. Dots are hypothetical examples.', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="ICS Abrams-Griffiths pressure-flow nomogram plotting detrusor pressure at maximum flow against maximum flow rate, with obstructed, equivocal and unobstructed zones bounded by the BOOI 40 and BOOI 20 lines, and three example patient points.">
-<title>Male ICS pressure-flow nomogram</title>
-<desc>In men, BOOI equals detrusor pressure at maximum flow minus twice maximum flow. Values above 40 indicate obstruction, 20 through 40 are equivocal, and below 20 are unobstructed. This classification is not a female nomogram. Example dots show hypothetical values, not study patients.</desc>
-<metadata>Source: https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf ; source-checked: 2026-09-11 ; clinician sign-off: pending</metadata>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Male pressure-flow classification">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'pressure-flow-nomogram.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'pressure-flow-nomogram'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

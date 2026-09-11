@@ -1,0 +1,26 @@
+.figure {display:block; margin:1.25rem 0; border:1px solid var(--ifm-color-emphasis-300); border-radius:12px; overflow:hidden; background:var(--ifm-background-surface-color);}
+.imageButton {display:block; width:100%; padding:0; border:0; background:#fff; color:#1e293b; cursor:zoom-in; position:relative; text-align:center;}
+.image {display:block; width:100%; max-width:100%; height:auto; margin:0 auto;}
+.imageButton:focus-visible, .textButton:focus-visible {outline:3px solid var(--ifm-color-primary); outline-offset:-3px;}
+.enlargeHint {display:block; padding:0.35rem 0.8rem; text-align:right; font:600 0.78rem var(--ifm-font-family-base); background:#f8fafc;}
+.caption {display:block; padding:0.85rem 1rem;}
+.title {display:block; font-weight:650;}
+.status {display:block; margin-top:0.15rem; color:var(--ifm-color-emphasis-700); font-size:0.78rem;}
+.textButton {border:0; padding:0.5rem 0 0; background:transparent; color:var(--ifm-link-color); text-align:left; cursor:pointer; font:inherit; font-size:0.85rem; text-decoration:underline; text-underline-offset:3px;}
+.details {display:block; padding:0 1rem 1rem; font-size:0.9rem; line-height:1.6;}
+.details[hidden] {display:none;}
+.paragraph {display:block; margin:0.6rem 0;}
+.source {display:block; margin:0.65rem 0; padding-left:0.8rem; border-left:2px solid var(--ifm-color-emphasis-300);}
+.dialog {width:min(96vw,1500px); max-width:96vw; max-height:94vh; padding:0; border:1px solid var(--ifm-color-emphasis-300); border-radius:12px; background:var(--ifm-background-color); color:var(--ifm-font-color-base);}
+.dialog::backdrop {background:rgb(15 23 42 / 75%);}
+.modalBody {padding:1rem;}
+.toolbar {display:flex; align-items:center; justify-content:space-between; gap:0.7rem; flex-wrap:wrap; padding-bottom:0.8rem;}
+.controls {display:flex; flex-wrap:wrap; align-items:center; gap:0.7rem; font-size:0.85rem;}
+.controls button {padding:0.5rem 0.7rem; border:1px solid var(--ifm-color-emphasis-400); border-radius:6px; background:var(--ifm-background-surface-color); color:inherit; font:inherit; cursor:pointer;}
+.viewport {overflow:auto; max-height:68vh; border:1px solid var(--ifm-color-emphasis-300); background:white;}
+.viewport img {display:block; width:100%; height:auto; margin:0 auto;}
+.actualSize img {width:auto; max-width:none; min-width:100%;}
+.modalDescription {margin:0.9rem 0 0.5rem; font-size:0.95rem;}
+.modalLimits {margin:0; font-size:0.82rem; color:var(--ifm-color-emphasis-700);}
+@media(max-width:600px) {.caption,.details {padding-left:0.75rem; padding-right:0.75rem;} .modalBody {padding:0.65rem;} .viewport {max-height:65vh;} .controls {gap:0.5rem;} .dialog {max-height:95dvh;}}
+@media print {.textButton,.enlargeHint {display:none;} .imageButton {cursor:default;} .figure {break-inside:avoid;} .dialog {display:none;}}

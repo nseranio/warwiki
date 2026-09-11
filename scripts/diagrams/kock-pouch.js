@@ -102,7 +102,7 @@ push(txt(nx, 168, 9.5, 700, C.press, 'middle', 'pouch pressure'));
 push(txt(nx, 360, 9.5, 700, C.ok, 'middle', 'valve held shut'));
 push(txt(nx, 372, 8.5, 500, C.muted, 'middle', 'continence + antireflux'));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Kock pouch continent cutaneous urinary diversion. The main drawing shows a detubularized low-pressure ileal reservoir with two intussuscepted nipple valves: an afferent antireflux valve on the left receiving both ureters, and an efferent continence valve at the bottom leading through the efferent limb to a flush catheterizable stoma emptied by self-catheterization. An inset shows the nipple-valve mechanism: bowel intussuscepted into the reservoir forms a double-walled finger whose central channel is compressed shut by rising pouch pressure, making it a one-way valve that provides continence and prevents reflux.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Kock continent ileal reservoir">
 <defs>
 <marker id="pr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.press}"/></marker>
 </defs>
@@ -111,5 +111,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'kock-pouch.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'kock-pouch'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

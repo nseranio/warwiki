@@ -95,8 +95,8 @@ push(txt(110, 236, 9, 500, C.muted, 'middle', 'saphenous vein'));
 
 // ===== inset: distal tunical windows, smallest -> largest ==================
 push(`<line x1="40" y1="248" x2="${W - 40}" y2="248" stroke="${C.border}" stroke-width="1.3"/>`);
-push(txt(40, 270, 12, 700, C.ink, 'start', 'Distal tunical windows', false));
-push(txt(196, 270, 11, 500, C.muted, 'start', '&#8212; smallest to largest opening', false));
+push(txt(40, 270, 12, 700, C.ink, 'start', 'Distal tunical windows (concepts)', false));
+push(txt(410, 270, 10, 500, C.muted, 'start', 'Proximal shunts: historical / limited evidence', false));
 
 const iy = 312, isz = 44;
 function patch(cx, drawWin, name, sub) {
@@ -107,13 +107,13 @@ function patch(cx, drawWin, name, sub) {
 }
 patch(150, (x, y) => push(`<circle cx="${x}" cy="${y}" r="3.4" fill="${C.cc}"/>`), 'Winter', 'needle core');
 patch(320, (x, y) => push(`<line x1="${x}" y1="${y - 9}" x2="${x}" y2="${y + 9}" stroke="${C.cc}" stroke-width="3.4" stroke-linecap="round"/>`), 'Ebbehoj', 'blade stab');
-patch(490, (x, y) => { push(`<line x1="${x}" y1="${y - 10}" x2="${x}" y2="${y + 10}" stroke="${C.cc}" stroke-width="3.4" stroke-linecap="round"/>`); push(`<line x1="${x - 10}" y1="${y}" x2="${x + 10}" y2="${y}" stroke="${C.cc}" stroke-width="3.4" stroke-linecap="round"/>`); }, 'T-shunt', 'cruciate, 90&#176;');
+patch(490, (x, y) => { push(`<line x1="${x}" y1="${y - 10}" x2="${x}" y2="${y + 10}" stroke="${C.cc}" stroke-width="3.4" stroke-linecap="round"/>`); push(`<line x1="${x - 10}" y1="${y}" x2="${x + 10}" y2="${y}" stroke="${C.cc}" stroke-width="3.4" stroke-linecap="round"/>`); }, 'T-shunt', 'blade rotated 90&#176;');
 patch(660, (x, y) => push(`<circle cx="${x}" cy="${y}" r="11" fill="#FBE4E4" stroke="${C.blood}" stroke-width="2.6"/>`), 'Al-Ghorab', 'excised disc');
 // progression arrow
-push(`<line x1="200" y1="${iy + 70}" x2="610" y2="${iy + 70}" stroke="${C.gain}" stroke-width="2.4" marker-end="url(#gn)"/>`);
-push(txt(405, iy + 64, 9.5, 600, C.gain, 'middle', 'larger, more durable, lower reoperation', false));
+push(`<line x1="200" y1="${iy + 70}" x2="610" y2="${iy + 70}" stroke="${C.muted}" stroke-width="1"/>`);
+push(txt(405, iy + 64, 9.5, 600, C.gain, 'middle', 'Window size is not a proven outcome ranking', false));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Surgical shunts for ischemic priapism on one longitudinal penile schematic from proximal crus on the left to glans on the right. The corpus cavernosum is drawn dark with ischemic blood; the corpus spongiosum and urethra run ventrally to the glans. A distal corporoglanular shunt opens a window at the corpus-cavernosum-to-glans junction draining dark blood out; the Burnett snake maneuver passes a Hegar dilator from that distal window down the corpus to the crus. Proximally, the Quackels shunt opens a cavernosum-to-spongiosum window and the Grayhack shunt grafts a saphenous vein to the corpus cavernosum. An inset compares the four distal tunical windows from smallest to largest: Winter needle core, Ebbehoj blade stab, T-shunt cruciate, and Al-Ghorab excised disc.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Ischemic priapism shunt concepts">
 <defs>
 <marker id="bld" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.blood}"/></marker>
 <marker id="stl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.steel}"/></marker>
@@ -124,5 +124,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'priapism-shunts.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'priapism-shunts'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

@@ -54,7 +54,7 @@ hemi(-1); hemi(1);
 const su = 286; // suburethral level
 push(`<rect x="${cx - 9}" y="214" width="18" height="92" rx="9" fill="${C.uret}"/>`);
 push(`<rect x="${cx - 3}" y="214" width="6" height="92" rx="3" fill="${C.lumen}"/>`);
-push(txt(cx, 322, 9, 600, C.uret, 'middle', 'urethra'));
+push(txt(cx + 58, 222, 11, 600, C.uret, 'start', 'urethra'));
 // sling hammock under midurethra
 push(`<path d="M ${cx - 40} ${su + 6} Q ${cx} ${su + 22} ${cx + 40} ${su + 6}" fill="none" stroke="${C.sling}" stroke-width="5" stroke-linecap="round"/>`);
 push(txt(cx, su + 38, 9.5, 700, C.sling, 'middle', 'suburethral sling'));
@@ -94,14 +94,14 @@ push(txt(lx + 30, ly + 47, 9.5, 500, C.muted, 'start', 'and vascular risk &#8594
 row(ly + 74, C.to, 'Transobturator (TOT)', 'through foramen; less bladder');
 push(txt(lx + 30, ly + 97, 9.5, 500, C.muted, 'start', 'injury, more groin/thigh pain'));
 row(ly + 124, C.si, 'Single-incision (SIMS)', 'anchored in obturator');
-push(txt(lx + 30, ly + 147, 9.5, 500, C.muted, 'start', 'internus; no exit, least pain'));
+push(txt(lx + 30, ly + 147, 9.5, 500, C.muted, 'start', 'internus; device-specific risks'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Anterior-pelvis view comparing three midurethral-sling trajectories around the pubic symphysis and obturator foramina. All place a tension-free tape as a hammock under the midurethra. The retropubic (TVT) route passes behind the pubis to a suprapubic exit, carrying bladder-perforation and vascular risk so cystoscopy is mandatory. The transobturator (TOT) route passes through the obturator foramen to a groin exit, with less bladder injury but more groin and thigh pain. The single-incision (SIMS) route is anchored in the obturator internus with no skin exit and the least pain. Key notes comparable cure rates and non-inferior modern single-incision slings.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Midurethral sling trajectories">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'sling-trajectories.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'sling-trajectories'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

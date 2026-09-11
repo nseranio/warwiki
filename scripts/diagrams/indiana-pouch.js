@@ -37,7 +37,7 @@ push(`<ellipse cx="${cx}" cy="100" rx="10" ry="6.5" fill="#FFFFFF" stroke="${C.b
 push(txt(cx, 78, 9.5, 700, C.ink, 'middle', 'catheterizable stoma'));
 push(txt(cx, 126, 8.5, 500, C.muted, 'middle', '(umbilicus)', false));
 push(`<line x1="${cx}" y1="62" x2="${cx}" y2="96" stroke="${C.cath}" stroke-width="3" stroke-dasharray="2 3" stroke-linecap="round"/>`);
-push(txt(cx + 46, 64, 9, 600, C.cath, 'start', 'CIC q4-6h'));
+push(txt(cx + 46, 64, 9, 600, C.cath, 'start', 'scheduled CIC'));
 
 // tapered terminal ileum (efferent limb) - narrow tube
 push(`<path d="M ${cx} 108 C ${cx + 4} 150, ${cx - 4} 196, ${cx} 224" fill="none" stroke="${C.bowelEdge}" stroke-width="12" stroke-linecap="round"/>`);
@@ -72,7 +72,7 @@ push(txt(bxr + 16, byr + 24, 12, 700, C.ink, 'start', 'Continent, no bag', false
 const items = [
   ['Reservoir', 'detubularized right colon = low pressure'],
   ['Continence', 'ileocecal valve + tapered/plicated ileum'],
-  ['Emptying', 'self-catheterize the stoma every 4-6 h'],
+  ['Emptying', 'CIC interval tailored to capacity and output'],
   ['vs neobladder', 'cutaneous stoma, not voided per urethra'],
 ];
 items.forEach(([h, d], i) => {
@@ -84,13 +84,11 @@ items.forEach(([h, d], i) => {
 
 
 // Keep the root tag short: image-size detects SVG within the first 1,000 bytes.
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Indiana pouch continent cutaneous diversion" aria-describedby="diagram-description">
-<title>Indiana pouch continent cutaneous diversion</title>
-<desc id="diagram-description">Indiana pouch continent cutaneous urinary diversion. A low-pressure reservoir is built from detubularized right colon (cecum and ascending colon). The terminal ileum is tapered to about 14 French and brought to a catheterizable umbilical stoma; continence is supplied by the ileocecal valve plus plication of the ileal limb plus low reservoir pressure. The ureters are reimplanted into the pouch. The patient self-catheterizes the stoma every 4 to 6 hours and wears no external bag, in contrast to an orthotopic neobladder that is voided per urethra. Key: chosen for continent diversion when the patient is not an orthotopic-neobladder candidate due to positive urethral margin, sphincter damage, or prior pelvic radiation; continence is about 89 percent at 3 years; lifelong vitamin B12 and metabolic-acidosis surveillance is needed after ileocecal resection, and stomal stenosis and pouch stones are common late issues.</desc>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Indiana continent reservoir" aria-describedby="diagram-description">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'indiana-pouch.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'indiana-pouch'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

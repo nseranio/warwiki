@@ -97,11 +97,11 @@ function bladder(cx, sagLeft) {
 push(txt(410, 92, 10.5, 700, C.atfpEdge, 'middle', 'arcus tendineus fascia pelvis ("white line")'));
 push(txt(410, 105, 9, 500, C.muted, 'middle', 'the lateral anchor of the anterior vaginal wall'));
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Paravaginal defect and repair in two axial panels. The anterior vaginal wall and pubocervical fascia normally hang between the two arcus tendineus fasciae pelvis, the white line, on each pelvic sidewall, supporting the bladder above. Panel 1: a paravaginal defect detaches the lateral vaginal wall from the ATFP on the left, so that lateral sulcus and the bladder descend as a lateral cystocele while the right side stays intact. Panel 2: paravaginal repair re-suspends the lateral vaginal wall to the ATFP with several sutures, restoring the lateral sulci and a level anterior wall.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Paravaginal support repair">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'paravaginal-repair.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'paravaginal-repair'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

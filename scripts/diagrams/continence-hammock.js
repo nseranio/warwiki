@@ -28,7 +28,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'The hammock hypothesis &#8212; why a cough does (or doesn&#8217;t) stay dry', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'axial section at the midurethra: continence depends on the support beneath the urethra, not the urethra itself', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'axial section at the midurethra: a support hypothesis: sphincter function and urethral closure also contribute', false));
 
 const levTextY = 300;
 // levator / sidewall anchors at each side
@@ -75,7 +75,7 @@ push(txt(bx, 112, 10.5, 700, C.cough, 'middle', 'cough &#8593; abd. pressure'));
 // leak drips
 for (let i = 0; i < 3; i++) push(`<circle cx="${bx - 18 + i * 12}" cy="${244 + (i % 2) * 6}" r="2.6" fill="${C.leak}"/>`);
 push(txt(bx, 274, 12.5, 700, C.leak, 'middle', 'Stress leak', false));
-push(txt(bx, 290, 9.5, 500, C.muted, 'middle', 'lax hammock &#8594; no compression', false));
+push(txt(bx, 290, 9.5, 500, C.muted, 'middle', 'lax support may impair closure', false));
 
 // shared labels (panel A)
 push(txt(ax - 150, 196 - 12, 9, 600, C.ham, 'middle', 'hammock'));
@@ -85,7 +85,7 @@ push(txt(ax - 128, 260, 8, 500, C.muted, 'middle', '/ arcus tendineus'));
 push(txt(ax, 230, 8.5, 600, C.vagEdge, 'middle', 'vagina'));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="DeLancey hammock hypothesis of stress continence shown in axial section at the midurethra. Left panel, normal: the urethra rests on a taut supportive layer (anterior vaginal wall plus endopelvic fascia) anchored on both sides to the levator ani and arcus tendineus; a cough raises abdominal pressure and compresses the urethra against this stable backboard so the lumen closes and the patient stays continent. Right panel, stress incontinence: a lateral attachment is detached so the hammock sags, the urethra descends and rotates, and a cough no longer compresses it, so the lumen stays open and urine leaks. Key: continence depends on a stable suburethral backboard rather than a tighter urethra, which is why a midurethral sling restores the backboard; intrinsic sphincter deficiency is a separate mechanism.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="The urethral hammock hypothesis">
 <defs>
 <marker id="ch" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.cough}"/></marker>
 </defs>
@@ -94,5 +94,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'continence-hammock.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'continence-hammock'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

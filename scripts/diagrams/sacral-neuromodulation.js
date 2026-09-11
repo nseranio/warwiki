@@ -26,7 +26,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Sacral neuromodulation &#8212; tined lead in the S3 foramen', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'posterior sacrum: a quadripolar lead through S3, tunneled to a buttock pulse generator; the S3 response confirms placement', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'posterior sacrum: a quadripolar lead through S3, tunneled to a buttock pulse generator; motor, sensory and imaging findings guide placement', false));
 
 // ---- posterior sacrum (shield, wide top -> apex) ----
 const cx = 250;
@@ -75,7 +75,7 @@ push(txt(494, 316, 8.5, 500, C.muted, 'middle', '(upper buttock)', false));
 // ---- S3 response callout ----
 const rx = 588, ry = 120;
 push(`<rect x="${rx}" y="${ry}" width="234" height="180" rx="12" fill="#F0FAF3" stroke="#CDEBD7" stroke-width="1.3"/>`);
-push(txt(rx + 16, ry + 24, 12.5, 700, '#166534', 'start', 'S3 response = correct lead', false));
+push(txt(rx + 16, ry + 24, 12.5, 700, '#166534', 'start', 'S3 response supports targeting', false));
 push(txt(rx + 16, ry + 40, 9.5, 500, C.muted, 'start', 'seen on intraoperative test stimulation', false));
 const items = [
   ['Bellows', 'inward levator/perineal contraction'],
@@ -88,14 +88,14 @@ items.forEach(([h, d], i) => {
   push(txt(rx + 34, y, 11, 700, C.ink, 'start', h));
   push(txt(rx + 34, y + 13, 9.5, 500, C.muted, 'start', d));
 });
-push(txt(rx + 16, ry + 170, 9, 500, C.muted, 'start', 'S2 = clamp/heel rotation; S4 = bellows only, no toe.', false));
+push(txt(rx + 16, ry + 170, 9, 500, C.muted, 'start', 'Responses overlap; confirm lead position in context.', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacral neuromodulation shown on a posterior sacrum with the S1 through S4 foramina. A tined quadripolar lead is placed through the S3 foramen, with four electrode contacts straddling the foramen and tines anchoring it, tunneled to an implantable pulse generator in the upper buttock. A callout lists the S3 responses that confirm correct placement on test stimulation: the bellows (inward levator and perineal contraction), plantar flexion of the great toe, and a pulling sensation in the rectum, perineum, or genitals; S2 gives clamp and heel rotation, S4 gives bellows without toe movement. Key: two-stage or PNE testing for refractory urgency-frequency, urge incontinence, non-obstructive retention, and fecal incontinence, progressing to implant only after at least 50 percent symptom improvement.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="S3 neuromodulation lead">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'sacral-neuromodulation.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'sacral-neuromodulation'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

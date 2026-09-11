@@ -108,7 +108,7 @@ push(`<line x1="${c3 - 44}" y1="${ya + 14}" x2="${c3 - 44}" y2="${yb - 26}" stro
 push(`<line x1="${c3 - 44}" y1="${yb + 14}" x2="${c3 - 44}" y2="${yc - 50}" stroke="${C.arrow}" stroke-width="1.6" marker-end="url(#at)"/>`);
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tubularized incised plate (TIP / Snodgrass) hypospadias repair. Step 1, ventral view: the urethral plate from the ectopic meatus to the glans tip is outlined by two parallel incisions and a single deep dorsal-midline relaxing incision. Step 2: the plate is tubularized over a catheter with a two-layer midline closure and dartos cover, creating a neourethra with a new slit meatus at the glans tip. A cross-section ladder shows why the plate is incised: a narrow flat plate is too tight to roll; the midline incision splays it wider; it then tubularizes over a catheter, the raw dorsal strip re-epithelializing. Key: default single-stage distal repair, correct chordee first, lowest fistula rate versus Mathieu, main risk meatal stenosis.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Tubularized incised plate repair">
 <defs>
 <marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -117,5 +117,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'tip-snodgrass.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'tip-snodgrass'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

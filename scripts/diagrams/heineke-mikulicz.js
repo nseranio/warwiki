@@ -64,7 +64,7 @@ push(txt(axm, cy + 92, 13, 700, C.ink, 'middle', '1. Incise the narrowing', fals
 
 // ---- transform arrow -----------------------------------------------------
 push(`<line x1="350" y1="${cy}" x2="402" y2="${cy}" stroke="${C.arrow}" stroke-width="2.6" marker-end="url(#ah)"/>`);
-push(txt(376, cy - 11, 10.5, 600, C.arrow, 'middle', 'rotate 90&#176;', false));
+push(txt(376, cy - 11, 10.5, 600, C.arrow, 'middle', 'closure axis 90&#176;', false));
 
 // ---- panel B: transverse closure (widened) ------------------------------
 const bx0 = 430, bx1 = 690, bxm = (bx0 + bx1) / 2;
@@ -90,7 +90,7 @@ push(txt(bx1 + 26, cy + 8, 11, 700, C.gain, 'start', 'caliber'));
 push(txt(bxm, cy + 92, 13, 700, C.ink, 'middle', '2. Close transversely', false));
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Heineke-Mikulicz principle: a longitudinal incision is made across a short luminal narrowing (panel 1) and then closed transversely at 90 degrees (panel 2), widening the caliber at the former stricture while slightly shortening the segment; key notes it preserves blood supply because no tissue is removed and the lumen is not transected, used for non-transecting bulbar urethroplasty, Fenger pyeloplasty, and transverse ureterotomy closure.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Heineke-Mikulicz geometry">
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.arrow}"/></marker>
 </defs>
@@ -99,5 +99,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'heineke-mikulicz.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'heineke-mikulicz'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

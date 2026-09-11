@@ -51,7 +51,7 @@ function sutureRow(cx, y, half) {
 // ===== frame + title =======================================================
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Transabdominal VVF repair: extravesical vs O&#8217;Conor', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'both excise the tract, close bladder and vagina as separate layers, and interpose omentum &#8212; the difference is the access', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Separate bladder and vaginal closures; tract excision and interposition depend on tissue and repair', false));
 
 // ===== PANEL A: extravesical (no cystotomy) ===============================
 {
@@ -59,7 +59,7 @@ push(txt(40, 55, 12.5, 500, C.muted, 'start', 'both excise the tract, close blad
   // closed bladder
   push(`<ellipse cx="${cx}" cy="170" rx="82" ry="60" fill="${C.lumen}" stroke="${C.wall}" stroke-width="2.6"/>`);
   push(txt(cx, 150, 10, 700, C.lumenEdge, 'middle', 'bladder'));
-  push(txt(cx, 163, 8.5, 500, C.muted, 'middle', '(not opened)'));
+  push(txt(cx, 163, 8.5, 500, C.muted, 'middle', '(not bivalved)'));
   // bladder-base closure
   sutureRow(cx, 232, 40);
   // omentum interposed between bladder base and vagina
@@ -73,7 +73,7 @@ push(txt(40, 55, 12.5, 500, C.muted, 'start', 'both excise the tract, close blad
   push(txt(cx + 92, 188, 9.5, 700, C.tool, 'middle', 'dissect from'));
   push(txt(cx + 96, 200, 9.5, 700, C.tool, 'middle', 'outside'));
   push(txt(cx + 70, 270, 8.5, 500, C.muted, 'middle', 'vesicovaginal space'));
-  push(txt(cx, 392, 12.5, 700, C.ink, 'middle', 'Extravesical &#8212; no cystotomy', false));
+  push(txt(cx, 392, 12.5, 700, C.ink, 'middle', 'Extravesical: no bivalving cystotomy', false));
 }
 
 // ===== PANEL B: transvesical (O'Conor) ====================================
@@ -108,7 +108,7 @@ push(txt(410, 312, 9.5, 700, C.omentEdge, 'middle', 'interposition'));
 leader(388, 300, 300, 262);
 leader(432, 300, 560, 272);
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Transabdominal vesicovaginal fistula repair comparing two approaches. The extravesical panel shows the bladder left intact and unopened while the vesicovaginal space is dissected from outside, the tract excised, and the bladder base and vagina closed as separate layers with omentum interposed between them. The O'Conor transvesical panel shows the bladder bivalved by a sagittal cystotomy down to the fistula, exposing both ureteral orifices and the fistula from inside, before separate layered closure of vagina and bladder with omental interposition. Both interpose omentum between the non-overlapping suture lines.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Abdominal vesicovaginal fistula approaches">
 <defs>
 <marker id="th" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${C.tool}"/></marker>
 </defs>
@@ -117,5 +117,5 @@ ${el.join('\n')}
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'vvf-abdominal.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'vvf-abdominal'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

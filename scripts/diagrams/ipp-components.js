@@ -27,7 +27,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Three-piece inflatable penile prosthesis', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'paired corporal cylinders + scrotal pump + retropubic reservoir, fluid-linked &#8212; an on-demand hydraulic erection', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'Paired corporal cylinders + scrotal pump + reservoir; reservoir position is individualized', false));
 
 // ---- lateral schematic ----
 // pubic bone
@@ -36,7 +36,7 @@ push(txt(150, 318, 8.5, 600, C.boneEdge, 'middle', 'pubis'));
 // reservoir (space of Retzius, behind pubis)
 push(`<ellipse cx="132" cy="214" rx="26" ry="20" fill="${C.fluid}" stroke="${C.dev}" stroke-width="2.4"/>`);
 push(txt(132, 217, 8.5, 700, C.dev, 'middle', 'reservoir'));
-push(txt(132, 184, 8, 500, C.muted, 'middle', '65-100 mL'));
+push(txt(132, 184, 8, 500, C.muted, 'middle', 'volume per device IFU'));
 // penis (shaft + glans), angled up-right
 push(`<path d="M 188 262 L 360 150 A 22 22 0 0 1 388 178 L 214 296 A 18 18 0 0 1 188 262 Z" fill="${C.skin}" stroke="${C.skinEdge}" stroke-width="1.8" stroke-linejoin="round"/>`);
 // corpus / cylinder inside (one shown laterally) with proximal + distal tips
@@ -57,7 +57,7 @@ push(`<path d="M 150 228 C 180 280, 210 310, 224 322" fill="none" stroke="${C.tu
 push(`<path d="M 224 322 C 212 300, 208 282, 208 272" fill="none" stroke="${C.tube}" stroke-width="2" stroke-dasharray="1 4" stroke-linecap="round"/>`);
 // ---- cross-section inset (penis) ----
 const ix = 470, iy = 150;
-push(txt(ix, iy - 36, 10.5, 700, C.ink, 'middle', 'Cross-section', false));
+push(txt(ix, iy - 52, 10.5, 700, C.ink, 'middle', 'Cross-section', false));
 push(`<circle cx="${ix}" cy="${iy}" r="40" fill="${C.skin}" stroke="${C.skinEdge}" stroke-width="1.6"/>`);
 // two corpora cavernosa (dorsal) with cylinders
 for (const s of [-1, 1]) {
@@ -90,11 +90,11 @@ steps.forEach(([h, d], i) => {
 });
 
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three-piece inflatable penile prosthesis in lateral view: paired cylinders implanted in the corpora cavernosa of the penis, a control pump in the scrotum, and a fluid reservoir of 65 to 100 milliliters in the retropubic space, all linked by tubing. A penile cross-section shows the two cylinders within the corpora cavernosa with the urethra spared ventrally in the spongiosum. On demand: squeezing the pump moves fluid from the reservoir to the cylinders for a rigid erection; pressing the deflation valve returns fluid to the reservoir for flaccidity. Key: highest-satisfaction ED therapy after medical options fail, with coatings and no-touch technique keeping infection around 1 to 3 percent; two-piece and malleable variants exist and the reservoir may be placed ectopically.">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Three-piece penile implant">
 ${el.join('\n')}
 </svg>
 `;
 const out = path.join(__dirname, '..', '..', 'static', 'img', 'diagrams', 'ipp-components.svg');
 fs.mkdirSync(path.dirname(out), { recursive: true });
-fs.writeFileSync(out, svg);
+fs.writeFileSync(out, require('./lib/metadata').withFigureMetadata(svg, 'ipp-components'));
 console.log('wrote', path.relative(path.join(__dirname, '..', '..'), out), `(${svg.length} bytes)`);

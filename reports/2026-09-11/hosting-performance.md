@@ -2,7 +2,7 @@
 
 Prepared September 11, 2026. Measurements describe local files; the Vercel account was not changed.
 
-**The final local deployment output is 140.43 MB, down from 566.08 MB: a 75.2% reduction.** This reflects the approved handout pause, quiz removal and video rendering changes alongside the other site updates. Old Vercel deployments still need retention/cleanup; their stored outputs do not shrink when new source code is optimized.
+**The final local deployment output is 139.55 MB, down from 566.08 MB: a 75.3% reduction.** This reflects the approved handout pause, quiz removal and video rendering changes alongside the other site updates. Old Vercel deployments still need retention/cleanup; their stored outputs do not shrink when new source code is optimized.
 
 ## The reported limit is deployment storage
 
@@ -31,11 +31,11 @@ Twenty copies of a 566 MB output would total approximately 11.32 GB. This is an 
 ## Changes implemented
 
 1. **Omit the paused handout collection from every normal deployment.** At the user's request, `postbuild` now removes only `build/handouts` and `build/img/handouts` after the static site is generated. `vercel.json` explicitly uses `npm run build` and the `build/` output directory so the postbuild exclusion is part of deployment. This removes **308.93 MB of PDFs plus 114.85 MB of original preview JPEGs**, approximately **423.79 MB per build** relative to the baseline. The gallery is paused and has no active download links; old direct PDF URLs will no longer serve files after this deployment. All 881 PDFs and 881 original previews remain in `static/` for private use or restoration. To restore publication, set `WARWIKI_INCLUDE_HANDOUTS=true` at build time; it enables the gallery and keeps the outputs. The restore path also compresses generated previews from **114.85 MB to 46.24 MB** while preserving dimensions and filenames. Every original PDF remains byte-identical.
-2. **Render the first 24 video cards, with Show more.** Search and filters still inspect the complete registry, including videos that have not been rendered. The new HTML is **51,993 bytes instead of 1,829,600 bytes (97.2% smaller)**; gzip is **8,302 instead of 93,628 bytes (91.1% smaller)**. This cuts initial HTML and browser work; thumbnails were already lazy loaded and players already click-to-load. The registry remains available to the client, so this is not a claim that all video-related JavaScript disappears.
+2. **Render the first 24 video cards, with Show more.** Search and filters still inspect the complete registry, including videos that have not been rendered. The new HTML is **52,298 bytes instead of 1,829,600 bytes (97.1% smaller)**; gzip is **8,415 instead of 93,628 bytes (91.0% smaller)**. This cuts initial HTML and browser work; thumbnails were already lazy loaded and players already click-to-load. The registry remains available to the client, so this is not a claim that all video-related JavaScript disappears.
 3. **Actually restrict automatic deployments to `main`.** The previous `{main: true}` configuration did not disable other branches. The explicit wildcard-false/main-true rule now does. Preview branches remain buildable through local/CI checks; Vercel preview deployments require deliberately enabling their branch again. [Vercel branch matching rules](https://vercel.com/docs/project-configuration/git-configuration)
 4. **Skip report-only releases.** The Vercel ignored-build step compares with the last deployed Git revision. It skips only when every changed path is a known authoring-only report, social asset, README, changelog, or agent handbook. Article, media, API, dependency, and configuration changes still build. Missing history or uncertainty causes a build. This prevents a literature surveillance report from creating another whole-site release when no public content changed.
 5. **Exclude authoring output from deployment uploads.** `.vercelignore` excludes reports, social assets, source-authoring material and local verification output. This is upload hygiene; it is not counted toward the measured handout build-output saving. Source handouts are not excluded, so the restore flag remains functional.
-6. **Add a repeatable size audit.** `npm run audit:size` reports total size, extension totals, largest files and initial video cards. `npm run audit:size -- --max-mb=200` also fails above a 200 MB output budget; this budget monitors output and is not a guarantee about account-level retained storage.
+6. **Add a repeatable size audit.** `npm run audit:size` reports total size, extension totals, largest files and initial video cards. `npm run audit:size` enforces a 200 MB output budget and runs automatically in `postbuild` on local and Vercel production builds; this budget monitors output and is not a guarantee about account-level retained storage.
 7. **Cache only content-hashed assets for one year.** The `/assets/` rule avoids repeat downloads; HTML and unversioned clinical PDFs do not receive immutable caching. This improves repeat visits but does not reduce the reported storage meter. [Cache-Control guidance](https://vercel.com/docs/caching/cache-control-headers)
 
 ### Separate finding: paid audio requests
@@ -53,7 +53,7 @@ The live Safari dashboard was inspected: **all four retention categories already
 3. Be aware that the current retention documentation protects the latest 20 ready production deployments and latest 20 ready non-production deployments, among other exceptions. A short retention setting alone can therefore leave substantial storage. The earlier April announcement mentioned a different protected count; use the current dashboard and current documentation. Policy deletion is asynchronous, and successful releases have a recovery period. [Current retention exceptions](https://vercel.com/docs/deployment-retention)
 4. Recheck both Deployment Storage and Functions Storage after the policy/cleanup has taken effect and inspect usage over time. Smaller new builds do not rewrite old deployments. [Storage optimization workflow](https://vercel.com/docs/deployment-storage/optimize)
 
-**Recommended order:** inventory the retained releases and aliases, review a specific obsolete-deployment cleanup list, deploy the substantially smaller build with handouts paused, then reassess. No historical deployment deletion has been authorized or performed. Avoid report-only/previews creating unnecessary releases going forward. The new output is smaller, but old releases still retain their original handout assets; this does not prove that today's account usage is already under 10 GB.
+**Recommended order:** inventory the retained releases and aliases, review a specific obsolete-deployment cleanup list, deploy the substantially smaller build with handouts paused, then reassess. The user has authorized obsolete-deployment cleanup, but none has been performed: silent Vercel authentication refresh failed, and interactive sign-in is deferred while the user is watching a show. Avoid report-only/previews creating unnecessary releases going forward. The new output is smaller, but old releases still retain their original handout assets; this does not prove that today's account usage is already under 10 GB.
 
 ## If storage still grows
 
@@ -65,7 +65,7 @@ For a full hosting move, Cloudflare is a plausible fit for this mostly static si
 |---|---|
 | Stay with Vercel and manage history | Least migration work. Best immediate step for the known storage quota. Old release storage still needs cleanup/retention. |
 | Cloudflare Workers Static Assets | Static asset requests are free and unlimited and asset storage has no additional charge. Worker/API execution is metered separately. This is Cloudflare's current recommendation for new static projects. [Billing and limits](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) |
-| Cloudflare Pages | Current free-plan limits include 20,000 files, 25 MiB per asset, 500 builds/month and a 20-minute build timeout. The final site's measured 2,534 files and largest 4.24 MB asset fit those file limits. Pages Functions use Workers quotas separately. Validate full build duration and redirect migration. |
+| Cloudflare Pages | Current free-plan limits include 20,000 files, 25 MiB per asset, 500 builds/month and a 20-minute build timeout. The final site's measured 2,572 files and largest 4.24 MB asset fit those file limits. Pages Functions use Workers quotas separately. Validate full build duration and redirect migration. |
 | GitHub Pages | Published site max 1 GB and soft bandwidth limit 100 GB/month. The static artifact fits, but there is no native Vercel `/api/tts` route. Its restrictions on online-business hosting also make it less attractive for future commercial practice-facing expansion. |
 
 The Pages and GitHub comparisons use their current published [Cloudflare Pages limits](https://developers.cloudflare.com/pages/platform/limits/) and [GitHub Pages limits and use restrictions](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
@@ -77,19 +77,19 @@ The Pages and GitHub comparisons use their current published [Cloudflare Pages l
 - Urethroplasty preview was visually compared with its source; the original-resolution PDF remains the reading/printing artifact.
 - Targeted tests verify progressive video rendering, searching unloaded videos, reset after filtering, lazy audio requests, cancellation, and zero paid requests for default device audio.
 - The ignored-build step was exercised in a disposable repository: report-only commits skip, API edits build, and missing previous revision builds.
-- All 13 Vitest tests, seven maintenance-script tests, lint, typecheck and the final production build (including postbuild) passed. The final build emitted no SVG type warnings after the metadata repair; the affected SVGs also passed Chromium loading and the installed image-size detector.
+- All 38 component/API tests and 42 maintenance-script tests pass, and typecheck and the final production build (including postbuild) pass. The compiled-site checker validates 1,192 HTML pages, 102,789 local links/assets and 746 data-link literals with zero issues; the 200 MB local production budget is enforced. The final build emitted no SVG type warnings after the metadata repair; the affected SVGs also passed Chromium loading and the installed image-size detector.
 
 
 ## Final local output measurements
 
 | Measure | Baseline inherited build | Final rebuilt output | Change |
 |---|---:|---:|---:|
-| Total bytes | 566,081,841 | 140,434,270 | −425,647,571 (75.2%) |
-| Published files | 4,298 | 2,534 | −1,764 |
+| Total bytes | 566,081,841 | 139,552,607 | −426,529,234 (75.3%) |
+| Published files | 4,298 | 2,572 | −1,726 |
 | Published handout PDFs | 881 | 0 | Sources retained |
 | Published handout previews | 881 | 0 | Sources retained |
-| Video library HTML bytes | 1,829,600 | 51,993 | −97.2% |
-| Video library gzip bytes | 93,628 | 8,302 | −91.1% |
+| Video library HTML bytes | 1,829,600 | 52,298 | −97.1% |
+| Video library gzip bytes | 93,628 | 8,415 | −91.0% |
 | Initial rendered video cards | 1,546 | 24 | Search still covers entire registry |
 
-`build-size-after.json` contains the full final inventory. The 200 MB output budget passes. Both omitted handout directories are absent from `build/`, while their original `static/` directories remain. Twenty outputs at the new 140.43 MB scale would be roughly 2.81 GB; this remains an illustration, not a measured Vercel bill or a claim that old deployment storage has been removed. No deployed function bundle was fetched, and this audit does not assume that Functions Storage includes the static handout collection.
+`build-size-after.json` contains the full final inventory. The 200 MB output budget passes. Both omitted handout directories are absent from `build/`, while their original `static/` directories remain. Twenty outputs at the new 139.55 MB scale would be roughly 2.79 GB; this remains an illustration, not a measured Vercel bill or a claim that old deployment storage has been removed. No deployed function bundle was fetched, and this audit does not assume that Functions Storage includes the static handout collection.
