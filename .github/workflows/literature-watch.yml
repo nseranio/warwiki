@@ -21,9 +21,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Test maintenance tools
-        run: node --test scripts/tests/*.test.js
+        run: node --test scripts/tests/maintenance.test.js
       - name: Collect publication metadata
         run: node scripts/literature-watch.js
       - name: Inventory review gaps

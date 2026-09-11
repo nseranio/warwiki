@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Sample 200 external links
         run: node scripts/check-external-links.js --sample 200 --json > external-link-report.json
       - name: Upload report even when links fail

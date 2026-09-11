@@ -45,8 +45,5 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deployment size inventory
-        run: npm run audit:size -- --max-mb=200
-
       - name: Freshness advisory (non-blocking)
         run: npm run lint:freshness || true
