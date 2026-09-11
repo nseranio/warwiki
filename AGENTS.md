@@ -4,7 +4,21 @@ This file is for Codex to read at the start of every session. It captures the pr
 
 ---
 
-## Current handoff snapshot - September 11, 2026 (June updates saved)
+## Current handoff snapshot — September 11, 2026 (evidence and maintenance refresh)
+
+Read the current [CLAUDE.md](CLAUDE.md) handoff and [site review](reports/2026-09-11/site-review.md). The dated reports cover 29 targeted article evidence updates, source limitations, correction notices, the full structural inventory, diagram findings, storage measurements and the Epic practice roadmap. This does not constitute clinician sign-off of every article.
+
+- **Standing user instruction remains:** commit and push validated completed changes to `main` / `origin/main` unless changed by the user.
+- **User navigation/storage preferences:** quiz removed; History & Lineage mostly hidden with a discreet About link; patient handouts paused/unlisted and omitted from deployment output while originals remain recoverable in source. Restore only deliberately with `WARWIKI_INCLUDE_HANDOUTS=true` and the runbook steps.
+- **Evidence provenance:** use `evidenceUpdated` and a narrow `evidenceNote` for targeted edits; `lastReviewed`/`reviewer` require an actual clinical review. Preserve the pharmacology/workflow source-of-truth split.
+- **Maintenance:** monthly GitHub literature/link artifacts plus active local Codex automation `warwiki-monthly-evidence-update`. See [maintenance.md](reports/2026-09-11/maintenance.md) for laptop/app availability, missed-run catch-up and GitHub inactivity limitations.
+- **Deployment:** preserve npm `postbuild` and Vercel's explicit `npm run build`; this excludes handout copies and reduces output from about 566 MB to 140 MB. Vercel retention was already 30 days in all four categories; historical deployments were not deleted.
+- **Epic later:** user prefers generic new-patient and operative shells plus separate condition HPI, A&P and procedure modules, with verified local Epic autopopulation. First topics are female UI, POP, male UI, BPH, male stricture, ED and female recurrent UTI. No templates were built in this refresh; personal operative notes belong outside this public repository.
+- **Checks:** lint, typecheck, unit tests, maintenance tests, production build, deployment size audit and `git diff --check`; verify the remote deployment after pushing. Keep clinical-video sections immediately before References.
+
+---
+
+## Previous handoff snapshot - September 11, 2026 (June updates saved)
 
 The requested June content work is saved in MDX and [CHANGELOG.md](CHANGELOG.md), committed through `65df15e3`, and pushed to `origin/main`. See the current handoff in [CLAUDE.md](CLAUDE.md) for the latest file links and implementation notes; the older snapshots below are historical.
 

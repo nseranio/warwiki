@@ -3,9 +3,9 @@
  * check-external-links.js
  *
  * Samples external URLs (http/https) referenced from MDX in `docs/` and
- * HEADs them to detect link rot. Designed to be run by a nightly CI cron;
+ * HEADs them to detect link rot. Designed to be run by a monthly CI schedule;
  * exits non-zero only when at least one sampled link returns a 4xx/5xx
- * (so the workflow can open an issue).
+ * (the workflow retains a report without opening repeated issues).
  *
  * Usage:
  *   node scripts/check-external-links.js                    # default sample 100
@@ -42,7 +42,23 @@ const SEED = flag('seed', new Date().toISOString().slice(0, 10));
 const CONCURRENCY = Number(flag('concurrency', 10));
 const TIMEOUT_MS = Number(flag('timeout', 8000));
 
-const URL_RE = /https?:\/\/[^\s)"'<>\]`]+/g;
+// Parentheses can be part of a DOI or path. A closing parenthesis only ends
+// a Markdown destination when it has no matching opening one inside the URL.
+function extractUrls(source) {
+  const candidates = source.match(/https?:\/\/[^\s"'<>\]`]+/g) || [];
+  return candidates.map(candidate => {
+    let depth = 0;
+    let end = candidate.length;
+    for (let i = 0; i < candidate.length; i++) {
+      if (candidate[i] === '(') depth++;
+      else if (candidate[i] === ')') {
+        if (depth === 0) { end = i; break; }
+        depth--;
+      }
+    }
+    return candidate.slice(0, end).replace(/[.,;:!?]+$/, '');
+  });
+}
 
 function* walkMdx(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -51,22 +67,6 @@ function* walkMdx(dir) {
     else if (entry.isFile() && entry.name.endsWith('.mdx')) yield p;
   }
 }
-
-const linkMap = new Map();
-for (const file of walkMdx(DOCS)) {
-  const src = fs.readFileSync(file, 'utf8');
-  const rel = path.relative(ROOT, file);
-  const matches = src.match(URL_RE) || [];
-  for (const raw of matches) {
-    // Strip trailing punctuation commonly seen at sentence ends.
-    const url = raw.replace(/[.,;:!?]+$/, '');
-    if (DOMAIN_FILTER && !url.includes(DOMAIN_FILTER)) continue;
-    if (!linkMap.has(url)) linkMap.set(url, rel);
-  }
-}
-
-const allLinks = Array.from(linkMap.entries());
-const total = allLinks.length;
 
 // Deterministic shuffle seeded by SEED so the sample is reproducible
 // within a day but rotates across days.
@@ -78,10 +78,6 @@ function hashStr(s) {
   }
   return h >>> 0;
 }
-allLinks.sort((a, b) => hashStr(SEED + a[0]) - hashStr(SEED + b[0]));
-
-const sample = allLinks.slice(0, Math.min(SAMPLE, allLinks.length));
-
 async function check([url, file]) {
   const isDoi = url.includes('doi.org/') || url.includes('doi:');
   const method = isDoi ? 'GET' : 'HEAD';
@@ -92,7 +88,7 @@ async function check([url, file]) {
       method,
       redirect: 'follow',
       signal: controller.signal,
-      headers: { 'user-agent': 'warwiki-linkcheck/1.0 (+https://warwiki.io)' },
+      headers: { 'user-agent': 'warwiki-linkcheck/1.0 (+https://warwiki.org)' },
     });
     clearTimeout(timer);
     return { url, file, status: res.status, ok: res.ok, soft: res.status === 429 || res.status === 403 };
@@ -115,7 +111,21 @@ async function runPool(items, fn, concurrency) {
   return results;
 }
 
-(async () => {
+async function main() {
+  const linkMap = new Map();
+  for (const file of walkMdx(DOCS)) {
+    const src = fs.readFileSync(file, 'utf8');
+    const rel = path.relative(ROOT, file);
+    for (const url of extractUrls(src)) {
+      if (DOMAIN_FILTER && !url.includes(DOMAIN_FILTER)) continue;
+      if (!linkMap.has(url)) linkMap.set(url, rel);
+    }
+  }
+  const allLinks = Array.from(linkMap.entries());
+  const total = allLinks.length;
+  allLinks.sort((a, b) => hashStr(SEED + a[0]) - hashStr(SEED + b[0]));
+  const sample = allLinks.slice(0, Math.min(SAMPLE, allLinks.length));
+
   if (!AS_JSON) {
     console.log(`External-link check: ${total} unique external URLs, sampling ${sample.length} (seed=${SEED}).`);
   }
@@ -145,4 +155,10 @@ async function runPool(items, fn, concurrency) {
   }
 
   process.exit(broken.length > 0 ? 1 : 0);
-})();
+}
+
+if (require.main === module) main().catch(error => {
+  console.error(error.message);
+  process.exitCode = 1;
+});
+module.exports = { extractUrls };

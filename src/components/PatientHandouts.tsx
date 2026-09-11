@@ -1,4 +1,5 @@
 import React, {useMemo, useState} from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   PATIENT_HANDOUTS,
   HANDOUT_CATEGORY_ORDER,
@@ -25,6 +26,14 @@ import type {HandoutAudience} from '@site/src/data/handouts';
  * src/data/handouts.ts.
  */
 export default function PatientHandouts(): React.ReactElement {
+  const {siteConfig} = useDocusaurusContext();
+  if (siteConfig.customFields?.handoutsEnabled !== true) {
+    return <p>The WARWIKI handout library is currently paused. Visit <a href="/docs/resources/patient-resources">Patient Resources</a> for society and academic patient education.</p>;
+  }
+  return <PatientHandoutsGallery />;
+}
+
+function PatientHandoutsGallery(): React.ReactElement {
   const [lang, setLang] = useState(DEFAULT_LANGUAGE);
   const [query, setQuery] = useState('');
   const [cat, setCat] = useState('all');

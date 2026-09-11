@@ -5,6 +5,7 @@ const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
 
 type SortMode = 'playlist' | 'recent' | 'longest' | 'shortest' | 'alpha';
+const PAGE_SIZE = 24;
 
 const SORT_OPTIONS: Array<{ id: SortMode; label: string }> = [
   { id: 'playlist', label: 'Playlist order' },
@@ -95,6 +96,11 @@ export default function VideoLibrary() {
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
   const [sort, setSort] = useState<SortMode>('playlist');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [search, channel, topic, playlist, sort]);
 
   const channels = useMemo(
     () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
@@ -165,14 +171,14 @@ export default function VideoLibrary() {
   // newest video appears first).
   const grouped = useMemo(() => {
     const map = new Map<string, VideoEntry[]>();
-    for (const v of filtered) {
+    for (const v of filtered.slice(0, visibleCount)) {
       const key = v.topic || 'Other';
       const arr = map.get(key);
       if (arr) arr.push(v);
       else map.set(key, [v]);
     }
     return Array.from(map.entries());
-  }, [filtered]);
+  }, [filtered, visibleCount]);
 
   return (
     <div className="vl-wrapper">
@@ -237,20 +243,21 @@ export default function VideoLibrary() {
             ))}
           </select>
         </div>
-        <div className="td-count vl-count">
-          {filtered.length} of {VIDEOS.length} videos
+        <div className="td-count vl-count" role="status">
+          Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} matching videos
+          {' · '}{VIDEOS.length} in the library
         </div>
       </div>
 
       {filtered.length === 0 ? (
         <div className="td-empty">No videos match your filters.</div>
       ) : (
-        <div className="vl-grouped">
+        <div className="vl-grouped" id="video-results">
           {grouped.map(([topicName, items]) => (
             <section key={topicName} className="vl-group">
               <h2 className="vl-group-heading">
                 {topicName}
-                <span className="vl-group-count">{items.length}</span>
+                <span className="vl-group-count">{filtered.filter(v => (v.topic || 'Other') === topicName).length}</span>
               </h2>
               <div className="vc-grid vl-grid">
                 {items.map((v, i) => (
@@ -260,6 +267,16 @@ export default function VideoLibrary() {
             </section>
           ))}
         </div>
+      )}
+      {visibleCount < filtered.length && (
+        <button
+          type="button"
+          className="button button--secondary margin-top--md"
+          aria-controls="video-results"
+          onClick={() => setVisibleCount(count => count + PAGE_SIZE)}
+        >
+          Show {Math.min(PAGE_SIZE, filtered.length - visibleCount)} more videos
+        </button>
       )}
     </div>
   );

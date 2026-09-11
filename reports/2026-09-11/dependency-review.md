@@ -1,0 +1,41 @@
+# Dependency review
+
+September 11, 2026. Read-only triage of the current lockfile and the npm audit captured during this session. No dependency, lockfile or installed-package changes were made. This is a bounded assessment of the four packages labeled critical and all five direct packages reported vulnerable, not a penetration test or proof that every other finding is unreachable.
+
+## Result and exposure
+
+The audit reports **63 affected package entries: 4 critical, 37 high, 19 moderate and 3 low**. This counts packages, including parent packages flagged because a dependency is vulnerable; it is not a count of 63 independent vulnerabilities, exploitable public endpoints or confirmed compromises. The dated raw result is preserved in [dependency-audit.json](dependency-audit.json).
+
+The four critical entries currently trace to developer/test/build tools. WARWIKI serves prebuilt static articles; its only checked-in API handler is `api/tts.ts`. No reviewed production request path invokes these four packages. That lowers the demonstrated website exposure but does not remove risk to development or CI, and the deployed function bundle was not inspected. npm's “production dependency” label is not equivalent to code executed on every visitor request: Docusaurus is a production dependency in the manifest but performs the static build.
+
+## Four critical package entries
+
+| Locked package | Verified dependency path and code use | Assessment and next step |
+|---|---|---|
+| `shell-quote` 1.8.3 | Docusaurus core 3.10.0 → webpack-dev-server 5.2.3 → launch-editor 2.13.2 → shell-quote. The installed `launch-editor/guess.js` calls `parse(specifiedEditor)`; no call to `quote()` was found in that consumer. | The critical advisory requires attacker-influenced object operator tokens reaching `quote()` and a shell. That route is not established here. The separate parse-complexity advisory still applies to this version. Upgrade to a compatible patched release covering both advisories; 1.8.4 fixes the critical issue but remains within the other reported affected range. [Maintainer advisory](https://github.com/ljharb/shell-quote/security/advisories/GHSA-w7jw-789q-3m8p) |
+| `tar` 7.5.13 | Dev dependency @vercel/node 5.7.11 → @vercel/nft 1.5.0 → @mapbox/node-pre-gyp 2.0.3 → tar. node-pre-gyp uses tar when installing native binary archives. No site upload/extraction endpoint was found. | Relevant to build/install inputs, particularly untrusted archives. The critical decompression finding is fixed in 7.5.19, but this audit also includes later findings through 7.5.20, so update beyond all reported affected ranges instead of stopping at the first patch. [Maintainer advisory](https://github.com/isaacs/node-tar/security/advisories/GHSA-23hp-3jrh-7fpw) |
+| `vitest` 2.1.9 | Direct dev dependency. `npm test` runs `vitest run`; the checked-in config uses jsdom with no UI/API server or Browser Mode configuration. CI runs that non-watch command. | The critical issue requires the affected UI/API exposure conditions; those are not configured here. Keep development test servers private until upgraded. Upgrade Vitest/Vite and the React test plugin together and verify all tests; fixing only the older critical advisory would leave newer mocker/Vite findings. [Maintainer advisory and prerequisites](https://github.com/vitest-dev/vitest/security/advisories/GHSA-5xrq-8626-4rwp) |
+| `websocket-driver` 0.7.4 | Docusaurus → webpack-dev-server → sockjs 0.3.24 (also through faye-websocket 0.11.4) → websocket-driver. | Malformed draft-protocol length headers can corrupt parsing; 0.7.5 is the documented fix. This is a development-server dependency, not a WebSocket service provided by the static production site. Refresh the compatible transitive version and keep dev servers off public interfaces. [Maintainer advisory](https://github.com/faye/websocket-driver-node/security/advisories/GHSA-xv26-6w52-cph6) |
+
+Severity labels above deliberately reproduce npm's captured result. Maintainer and aggregated advisory scores can differ; for example, the shell-quote maintainer page labels its finding high while the npm/GitHub aggregate reports critical. The actual call path and attack prerequisites matter more than re-labeling the same finding.
+
+## All five direct packages flagged
+
+| Direct package | Why it is flagged / relevant local use | Upgrade approach |
+|---|---|---|
+| `@docusaurus/core` 3.10.0 | Inherited findings through the bundler and MDX loader. The loader includes `image-size` 2.0.2 parser denial-of-service findings; bundler paths include copy/CSS minimizer plugins using serialize-javascript. These are build inputs rather than a public image-upload service. | Update the Docusaurus family and its resolved toolchain together. npm currently reports no automatic fix for this parent entry; do not interpret that as permission to ignore it or as proof that no upstream remedy can exist. |
+| `@docusaurus/preset-classic` 3.10.0 | Parent propagation through Docusaurus plugins/themes, not a separate demonstrated exploit in every plugin. | Keep all directly pinned Docusaurus packages on the same supported release and rerun MDX, routing, stylesheet and image checks. |
+| `@vercel/node` 5.7.11 | Inherited build utilities, static configuration, path-to-regexp and undici findings. In `api/tts.ts`, Vercel request/response types are imported with `import type`; the application does not import the package as runtime code. Vercel's actual deployed builder/runtime must be checked separately. | Review the current supported Vercel builder release and inspect a built function dependency trace. **The audit's proposed fix is 4.0.0, a major downgrade from 5.7.11**, not a suitable blind upgrade instruction. |
+| `sharp` 0.34.5 | Native image-library findings. Its only application-code use found is the build preview compressor, which reads committed JPGs. With handouts paused, the script returns before processing images; there is no on-demand image conversion endpoint. | Update to a compatible release covering all native-library advisories, including the audit's 0.35.4 target, with Node/platform compatibility review. Verify image decode, dimensions and output sizes in both normal and handout-restored builds. |
+| `vitest` 2.1.9 | Direct critical entry discussed above, plus inherited Vite/mocker findings. | A coordinated test-tool migration is required; npm proposes 5.0.0, a major change. Select a supported version after reviewing migration and Node requirements rather than adopting the force suggestion automatically. |
+
+OpenAI, React and Analytics were not direct entries in this audit. That is an observation about this snapshot, not a general security guarantee. The separate public paid-audio cost exposure was addressed in this session by requiring explicit cloud opt-in; it is distinct from package advisories.
+
+## Recommended next maintenance change
+
+1. Start a separate, reviewable dependency patch with the current passing site as the baseline. First resolve compatible transitive patches for shell-quote, tar and websocket-driver; check the resulting full tree, not merely top-level versions.
+2. Coordinate Docusaurus packages and bundled build tools; coordinate Vitest/Vite/plugin dependencies; update Sharp and review the Vercel builder separately. Review release/Node requirements before selecting exact versions. Avoid broad overrides that violate a parent's supported API.
+3. Re-run clean install, audit, lint, typecheck, all tests, the production build and the 200 MB output budget. Verify representative MDX pages, all SVG dimensions, video filtering and device speech. Exercise the optional handout restore build in a disposable output directory and inspect the Vercel function trace before cloud audio is enabled.
+4. Record remaining advisories with package path, local exposure, upstream status and a next-review date. Keep a dated audit comparison; total count alone is insufficient to approve or reject a release.
+
+`npm audit fix --force` was deliberately not run: it can change major versions, this audit suggests a Vercel downgrade, and some Docusaurus parent entries have no automatic fix. No exploit payloads, untrusted archive tests, public development servers or network installs were used for this review.

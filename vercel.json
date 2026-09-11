@@ -1,6 +1,7 @@
 {
   "git": {
     "deploymentEnabled": {
+      "**": false,
       "main": true
     }
   },
@@ -9,9 +10,25 @@
       "VERCEL_DEEP_CLONE": "true"
     }
   },
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false,
+  "ignoreCommand": "node scripts/ignore-vercel-build.js",
+  "headers": [
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ],
   "redirects": [
+    {
+      "source": "/quiz",
+      "destination": "/docs/resources",
+      "permanent": true
+    },
     {
       "source": "/docs/foundations/tools/instruments/robotic/large-needle-driver",
       "destination": "/docs/foundations/tools/instruments/robotic/needle-drivers#large",

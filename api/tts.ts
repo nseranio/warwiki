@@ -13,9 +13,19 @@ const ALLOWED_MODELS = new Set(['tts-1', 'tts-1-hd']);
 const DEFAULT_MODEL = 'tts-1';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // POST bodies are not part of a reusable public CDN cache key. The client
+  // keeps successful audio in its own content-addressed browser cache.
+  res.setHeader('Cache-Control', 'private, no-store');
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+
+  // An API key alone must not turn this public route into a paid text-to-audio
+  // service. Configure access/rate controls before explicitly enabling it.
+  if (process.env.WARWIKI_ENABLE_CLOUD_TTS !== 'true') {
+    res.status(503).json({ error: 'Cloud audio is disabled. Use the device voice.' });
     return;
   }
 
@@ -58,11 +68,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const buffer = Buffer.from(await mp3.arrayBuffer());
 
-    // Content-addressable response — since the client hashes the input and sends
-    // the same text for the same hash, browsers and CDN layers can cache aggressively.
     res.setHeader('Content-Type', 'audio/mpeg');
     res.setHeader('Content-Length', buffer.length.toString());
-    res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=604800, immutable');
     res.status(200).send(buffer);
   } catch (err: any) {
     const msg = err?.message || 'TTS generation failed';

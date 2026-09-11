@@ -4,7 +4,22 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-09-11 - June content updates saved
+## Current Handoff — 2026-09-11 — September evidence and maintenance refresh
+
+See the [site-wide review](reports/2026-09-11/site-review.md), [maintenance runbook](reports/2026-09-11/maintenance.md), and newest [CHANGELOG.md](CHANGELOG.md) entry. Targeted primary-source updates span 29 articles; this is not a full clinical review of the corpus. The two dated literature reports record source access, corrections and unresolved claims.
+
+- Keep `evidenceUpdated` + a narrow `evidenceNote` distinct from clinician `lastReviewed`/`reviewer`. Never manufacture clinical sign-off from a Git timestamp or automated edit.
+- Monthly GitHub collectors save literature and link-check artifacts. Local Codex automation `warwiki-monthly-evidence-update` reviews and integrates meaningful verified changes on the second day of each month. It requires this computer/app running; catch up from the last completed update after missed runs.
+- Patient handouts are paused, unlisted, and omitted from build output. Originals remain in `static/`; `WARWIKI_INCLUDE_HANDOUTS=true` deliberately restores the gallery/assets. The quiz is removed. History & Lineage stays available discreetly from About.
+- Vercel explicitly runs `npm run build` including `postbuild`; preserve these hooks. Output is approximately 140 MB versus 566 MB before. Main-only deployments and report-only skips reduce storage growth. All four live retention categories were already 30 days; old deployments were not deleted.
+- Device speech is the default; `WARWIKI_ENABLE_CLOUD_TTS=true` requires deliberate access/rate controls before paid cloud audio is enabled.
+- POP-Q and BOOI diagrams were corrected; nine SVG metadata fixes preserve visible content. The remaining diagram/clinical audit queue is explicit in the reports.
+- Epic work is a future phase: generic visit/op shells plus separate HPI, A&P and procedure modules, seven common conditions first. Keep personal operative notes and patient-specific data outside this public repository.
+- Validate with lint, typecheck, unit tests, maintenance tests, build, size audit and diff whitespace check. Commit/push completed work to `main` / `origin/main` under the standing user instruction, then verify deployment status.
+
+---
+
+## Previous Handoff - 2026-09-11 - June content updates saved
 
 The requested June site updates are saved in the article MDX files and [CHANGELOG.md](CHANGELOG.md), committed through `65df15e3`, and pushed to `origin/main`. This September handoff records that completed work; it is not a new clinical review or media-library sync.
 

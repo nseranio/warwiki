@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { AudioQueue } from './audioQueue';
 
 /**
- * ArticleListener — cloud TTS (OpenAI) with browser-TTS fallback.
+ * ArticleListener — device speech with optional cloud TTS (OpenAI).
  *
  * Behavior:
  *   1. On play, extract the article text and chunk it into ≤3500-char pieces
  *      at sentence boundaries.
- *   2. Fetch each chunk's audio from /api/tts in parallel, cached via the
+ *   2. When cloud audio is enabled, fetch only the current chunk, cached via the
  *      browser Cache API keyed by SHA-256(model|voice|text).
  *   3. Play chunks sequentially via an HTMLAudioElement; advance on 'ended'.
  *   4. On any API failure or missing API key, fall back to native
@@ -168,7 +170,7 @@ function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
 }
 
 // Fetch one chunk's audio as a Blob, with Cache API read-through
-async function fetchChunkAudio(text: string, voice: Voice, model: Model): Promise<Blob> {
+async function fetchChunkAudio(text: string, voice: Voice, model: Model, signal: AbortSignal): Promise<Blob> {
   const hash = await sha256(`${model}|${voice}|${text}`);
   const cacheKey = `/tts-audio/${hash}.mp3`;
 
@@ -186,6 +188,7 @@ async function fetchChunkAudio(text: string, voice: Voice, model: Model): Promis
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ text, voice, model }),
+    signal,
   });
 
   if (!response.ok) {
@@ -229,6 +232,8 @@ function speakFallback(text: string, rate: number, onEnd: () => void): void {
 }
 
 export default function ArticleListener(): React.ReactElement | null {
+  const { siteConfig } = useDocusaurusContext();
+  const cloudEnabled = siteConfig.customFields?.cloudTtsEnabled === true;
   const [supported, setSupported] = useState(true);
   const [state, setState] = useState<'idle' | 'loading' | 'playing' | 'paused' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
@@ -243,11 +248,13 @@ export default function ArticleListener(): React.ReactElement | null {
   const [currentSection, setCurrentSection] = useState<number>(0);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const chunkPromisesRef = useRef<Promise<Blob>[]>([]);
+  const queueRef = useRef<AudioQueue | null>(null);
   const chunkUrlsRef = useRef<Map<number, string>>(new Map());
   const currentIndexRef = useRef<number>(0);
   const cancelledRef = useRef<boolean>(false);
   const sectionMetaRef = useRef<SectionMeta[]>([]);
+  const deviceSessionRef = useRef(0);
+  const rateRef = useRef(rate);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -257,7 +264,7 @@ export default function ArticleListener(): React.ReactElement | null {
 
     const hasAudio = typeof Audio !== 'undefined';
     const hasSpeech = !!window.speechSynthesis;
-    if (!hasAudio && !hasSpeech) {
+    if ((!cloudEnabled || !hasAudio) && !hasSpeech) {
       setSupported(false);
       return;
     }
@@ -273,16 +280,18 @@ export default function ArticleListener(): React.ReactElement | null {
 
     return () => {
       cancelledRef.current = true;
+      deviceSessionRef.current++;
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.src = '';
       }
       chunkUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
       chunkUrlsRef.current.clear();
-      chunkPromisesRef.current = [];
+      queueRef.current?.dispose();
+      queueRef.current = null;
       if (window.speechSynthesis) window.speechSynthesis.cancel();
     };
-  }, []);
+  }, [cloudEnabled]);
 
   // Walk the article DOM, produce sections + a flat chunk plan.
   const planArticle = useCallback((): { chunks: string[]; meta: SectionMeta[]; rawText: string } => {
@@ -295,7 +304,8 @@ export default function ArticleListener(): React.ReactElement | null {
   const disposeQueue = useCallback(() => {
     chunkUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
     chunkUrlsRef.current.clear();
-    chunkPromisesRef.current = [];
+    queueRef.current?.dispose();
+    queueRef.current = null;
     currentIndexRef.current = 0;
   }, []);
 
@@ -303,7 +313,12 @@ export default function ArticleListener(): React.ReactElement | null {
   const getChunkUrl = useCallback(async (i: number): Promise<string> => {
     const existing = chunkUrlsRef.current.get(i);
     if (existing) return existing;
-    const blob = await chunkPromisesRef.current[i];
+    const queue = queueRef.current;
+    if (!queue) throw new DOMException('Playback stopped', 'AbortError');
+    const blob = await queue.get(i);
+    if (queue !== queueRef.current || cancelledRef.current) {
+      throw new DOMException('Playback stopped', 'AbortError');
+    }
     const url = URL.createObjectURL(blob);
     chunkUrlsRef.current.set(i, url);
     return url;
@@ -312,14 +327,16 @@ export default function ArticleListener(): React.ReactElement | null {
   const playIndex = useCallback(
     async (i: number) => {
       if (cancelledRef.current) return;
-      if (i >= chunkPromisesRef.current.length) {
+      const queue = queueRef.current;
+      if (!queue) return;
+      if (i >= queue.length) {
         setState('idle');
         setChunkProgress(null);
         disposeQueue();
         return;
       }
 
-      setChunkProgress({ current: i + 1, total: chunkPromisesRef.current.length });
+      setChunkProgress({ current: i + 1, total: queue.length });
 
       // Update current-section highlight based on this chunk's section membership.
       const meta = sectionMetaRef.current;
@@ -337,7 +354,7 @@ export default function ArticleListener(): React.ReactElement | null {
       } catch (err: any) {
         // Handled centrally in startCloudPlayback's fallback path on chunk 0.
         // On chunks >0 (mid-article failure), surface as error.
-        if (cancelledRef.current) return;
+        if (cancelledRef.current || queue !== queueRef.current || err?.name === 'AbortError') return;
         if (i === 0) {
           // startCloudPlayback's .catch handler owns fallback for chunk 0 —
           // silently bail here so we don't double-set error state.
@@ -348,7 +365,7 @@ export default function ArticleListener(): React.ReactElement | null {
         disposeQueue();
         return;
       }
-      if (cancelledRef.current) return;
+      if (cancelledRef.current || queue !== queueRef.current) return;
 
       if (!audioRef.current) audioRef.current = new Audio();
       const audio = audioRef.current;
@@ -390,12 +407,8 @@ export default function ArticleListener(): React.ReactElement | null {
       sectionMetaRef.current = meta;
       setSections(meta);
 
-      // Fire all fetches in parallel up front. Each becomes available as it resolves.
-      chunkPromisesRef.current = chunks.map((c) =>
-        fetchChunkAudio(c, voice, model).catch((err) => {
-          throw err;
-        }),
-      );
+      const queue = new AudioQueue(chunks, (text, signal) => fetchChunkAudio(text, voice, model, signal));
+      queueRef.current = queue;
       currentIndexRef.current = 0;
 
       // Start playing chunk 0 as soon as its promise resolves.
@@ -403,13 +416,13 @@ export default function ArticleListener(): React.ReactElement | null {
       // Only the first-chunk promise can trigger the fallback. Later chunks
       // can still recover via error-bar surfacing inside playIndex.
       const fallbackChunkIndex = startIndex;
-      chunkPromisesRef.current[fallbackChunkIndex].catch(() => {
-        if (cancelledRef.current) return;
+      queue.get(fallbackChunkIndex).catch(() => {
+        if (cancelledRef.current || queue !== queueRef.current) return;
         if (typeof window !== 'undefined' && window.speechSynthesis) {
           setUsingFallback(true);
           setState('playing');
           setChunkProgress(null);
-          speakFallback(rawText, rate, () => {
+          speakFallback(chunks.slice(startIndex).join(' '), rate, () => {
             setState('idle');
             setUsingFallback(false);
           });
@@ -425,6 +438,26 @@ export default function ArticleListener(): React.ReactElement | null {
     [voice, model, rate, playIndex, disposeQueue],
   );
 
+  const startDevicePlayback = useCallback((chunks: string[]) => {
+    const session = ++deviceSessionRef.current;
+    cancelledRef.current = false;
+    setUsingFallback(true);
+    setErrorMsg('');
+    const speakChunk = (index: number) => {
+      if (cancelledRef.current || session !== deviceSessionRef.current) return;
+      if (index >= chunks.length) {
+        setState('idle');
+        setUsingFallback(false);
+        setChunkProgress(null);
+        return;
+      }
+      setState('playing');
+      setChunkProgress({current: index + 1, total: chunks.length});
+      speakFallback(chunks[index], rateRef.current, () => speakChunk(index + 1));
+    };
+    speakChunk(0);
+  }, []);
+
   const handlePlay = useCallback(() => {
     if (state === 'paused') {
       if (usingFallback) {
@@ -433,6 +466,13 @@ export default function ArticleListener(): React.ReactElement | null {
         audioRef.current.play();
       }
       setState('playing');
+      return;
+    }
+
+    const plan = planArticle();
+    if (!plan.chunks.length) return;
+    if (!cloudEnabled) {
+      startDevicePlayback(plan.chunks);
       return;
     }
 
@@ -455,10 +495,8 @@ export default function ArticleListener(): React.ReactElement | null {
     setState('loading');
     setChunkProgress(null);
 
-    const plan = planArticle();
-    if (!plan.chunks.length) return;
     startCloudPlayback(plan, 0);
-  }, [state, usingFallback, planArticle, startCloudPlayback]);
+  }, [state, usingFallback, planArticle, startCloudPlayback, cloudEnabled, startDevicePlayback]);
 
   const jumpToSection = useCallback(
     (sectionIdx: number) => {
@@ -493,6 +531,7 @@ export default function ArticleListener(): React.ReactElement | null {
 
   const handleStop = useCallback(() => {
     cancelledRef.current = true;
+    deviceSessionRef.current++;
     if (usingFallback) {
       window.speechSynthesis.cancel();
     } else if (audioRef.current) {
@@ -508,6 +547,7 @@ export default function ArticleListener(): React.ReactElement | null {
   const handleRateChange = useCallback(
     (newRate: number) => {
       setRate(newRate);
+      rateRef.current = newRate;
       if (audioRef.current && !usingFallback) audioRef.current.playbackRate = newRate;
     },
     [usingFallback],
@@ -583,7 +623,7 @@ export default function ArticleListener(): React.ReactElement | null {
               : isPaused
                 ? 'Paused'
                 : usingFallback
-                  ? 'Playing (fallback)'
+                  ? 'Playing (device voice)'
                   : chunkProgress && chunkProgress.total > 1
                     ? `Playing ${chunkProgress.current}/${chunkProgress.total}`
                     : 'Playing'}
@@ -616,7 +656,7 @@ export default function ArticleListener(): React.ReactElement | null {
               </svg>
             </button>
           )}
-          <button
+          {cloudEnabled && <button
             type="button"
             onClick={() => setShowSettings((s) => !s)}
             className={`${styles.controlButton} ${showSettings ? styles.active : ''}`}
@@ -626,7 +666,7 @@ export default function ArticleListener(): React.ReactElement | null {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
             </svg>
-          </button>
+          </button>}
         </div>
       )}
       {isError && (
@@ -661,7 +701,7 @@ export default function ArticleListener(): React.ReactElement | null {
           ))}
         </div>
       )}
-      {isActive && showSettings && (
+      {cloudEnabled && isActive && showSettings && (
         <div className={styles.settingsPanel}>
           <div>
             <label htmlFor="warwiki-tts-voice" className={styles.settingsLabel}>

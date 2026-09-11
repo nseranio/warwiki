@@ -88,6 +88,18 @@ function main() {
     generatedAt: new Date().toISOString(),
   };
 
+  // A verification build with unchanged counts must not create a timestamp-only
+  // source change that can trigger another deployment.
+  if (fs.existsSync(OUT_FILE)) {
+    try {
+      const previous = JSON.parse(fs.readFileSync(OUT_FILE, 'utf8'));
+      if (['articles', 'articlesRounded', 'references', 'referencesRounded'].every(key => previous[key] === stats[key])) {
+        console.log(`✓ Stats unchanged: ${articles} articles, ${references} references`);
+        return;
+      }
+    } catch { /* Regenerate invalid output. */ }
+  }
+
   // Ensure target dir exists
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, JSON.stringify(stats, null, 2) + '\n');

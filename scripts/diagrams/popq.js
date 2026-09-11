@@ -7,6 +7,9 @@
  * reference plane, the gh / pb / tvl landmarks, a "reading the points" key,
  * and a stage ruler relating leading-edge position to POP-Q stage.
  *
+ * Source: ICS/IUGA terminology, ICS Standards 2020-2021, pp. 144-146.
+ * https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf
+ * Sign/stage labels checked 2026-09-11; anatomy is schematic, not to scale.
  * Output: static/img/diagrams/popq-points.svg
  */
 const fs = require('fs');
@@ -42,11 +45,12 @@ push(txt(70, 100, 11.5, 600, C.muted, 'start', '&#8592; anterior', false));
 push(txt(470, 100, 11.5, 600, C.muted, 'end', 'posterior &#8594;', false));
 
 // ---- "reading the points" key (fills the upper-left, teaches) ------------
-push(`<rect x="56" y="118" width="266" height="82" rx="8" fill="${C.panel}" stroke="${C.panelBorder}" stroke-width="1.2"/>`);
+push(`<rect x="56" y="118" width="266" height="100" rx="8" fill="${C.panel}" stroke="${C.panelBorder}" stroke-width="1.2"/>`);
 push(txt(70, 138, 11.5, 700, C.ink, 'start', 'Reading the points', false));
-push(txt(70, 156, 10.8, 500, C.muted, 'start', 'Aa, Ap &#8212; fixed, 3 cm above hymen', false));
-push(txt(70, 172, 10.8, 500, C.muted, 'start', 'Ba, Bp &#8212; lowest point, upper wall', false));
-push(txt(70, 188, 10.8, 500, C.muted, 'start', 'C &#8212; cervix / cuff&#160;&#160;&#160;&#160;&#160;D &#8212; posterior fornix', false));
+push(txt(70, 156, 10.8, 500, C.muted, 'start', 'Aa &#8212; 3 cm proximal to urethral meatus', false));
+push(txt(70, 172, 10.8, 500, C.muted, 'start', 'Ap &#8212; 3 cm proximal to hymen', false));
+push(txt(70, 188, 10.8, 500, C.muted, 'start', 'Ba, Bp &#8212; lowest point, upper wall', false));
+push(txt(70, 204, 10.8, 500, C.muted, 'start', 'C &#8212; cervix / cuff&#160;&#160;&#160;&#160;&#160;D &#8212; posterior fornix', false));
 
 // ---- context anatomy (muted) --------------------------------------------
 push(`<ellipse cx="178" cy="392" rx="15" ry="24" fill="${C.ctxFill}" stroke="${C.ctxStroke}" stroke-width="1.6"/>`);
@@ -89,25 +93,30 @@ push(txt(322, 318, 11, 700, C.axis, 'start', 'tvl'));
 
 // ---- stage ruler (right) -------------------------------------------------
 const sx = 600, y0 = 432, cm = 19;
-const yAt = v => y0 - v * cm;
+const yAt = v => y0 + v * cm;
 const band = (vTop, vBot, fill, stroke, label, sub) => {
   const yt = yAt(vTop), yb = yAt(vBot);
   push(`<rect x="${sx - 14}" y="${f(yt)}" width="170" height="${f(yb - yt)}" fill="${fill}" opacity="0.6"/>`);
   push(txt(sx + 26, (yt + yb) / 2 - 4, 11.5, 700, stroke, 'start', label));
   push(txt(sx + 26, (yt + yb) / 2 + 11, 10, 500, C.muted, 'start', sub));
 };
-band(3.7, 1, '#DCFCE7', '#166534', 'Stage 0–I', 'above the hymen');
-band(1, -1, '#FEF3C7', '#92400E', 'Stage II', 'within 1 cm of hymen');
-band(-1, -2.7, '#FEE2E2', '#991B1B', 'Stage III–IV', 'at / beyond hymen');
-push(`<line x1="${sx}" y1="${f(yAt(3.7))}" x2="${sx}" y2="${f(yAt(-2.7))}" stroke="${C.axis}" stroke-width="1.5"/>`);
-for (let v = 3; v >= -2; v--) {
+band(-3.7, -1, '#DCFCE7', '#166534', 'Stage 0–I*', 'more than 1 cm above');
+band(-1, 1, '#FEF3C7', '#92400E', 'Stage II', 'within 1 cm of hymen');
+band(1, 2.7, '#FEE2E2', '#991B1B', 'Stage III–IV*', 'more than 1 cm below');
+push(`<line x1="${sx}" y1="${f(yAt(-3.7))}" x2="${sx}" y2="${f(yAt(2.7))}" stroke="${C.axis}" stroke-width="1.5"/>`);
+for (let v = -3; v <= 2; v++) {
   const y = yAt(v);
   push(`<line x1="${sx - 4}" y1="${f(y)}" x2="${sx + 4}" y2="${f(y)}" stroke="${C.axis}" stroke-width="1.2"/>`);
   push(txt(sx - 9, y + 4, 10.5, v === 0 ? 700 : 400, v === 0 ? C.hymen : C.muted, 'end', v > 0 ? `+${v}` : String(v), false));
 }
-push(txt(sx, yAt(3.7) - 11, 10.5, 600, C.muted, 'middle', 'cm', false));
+push(txt(sx, yAt(-3.7) - 11, 10.5, 600, C.muted, 'middle', 'cm', false));
+push(txt(56, 511, 10.5, 500, C.muted, 'start', '*Stage 0 requires all normal points. Stage III / IV depends on TVL &#8722; 2 cm. Diagram not to scale.', false));
+push(txt(56, 526, 10, 500, C.muted, 'start', 'Source: ICS/IUGA POP terminology (ICS Standards 2020&#8211;2021). Maximal strain; TVL with prolapse reduced.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Stylized midsagittal schematic of the vaginal canal showing the six POP-Q points (Aa, Ba, C, D, Ap, Bp), the hymen as the zero reference plane, the genital hiatus, perineal body and total vaginal length landmarks, and a stage ruler relating leading-edge position to POP-Q stage.">
+<title>POP-Q measurement points and sign convention</title>
+<desc>Negative values are above the hymen, zero is at the hymen, and positive values are below it. Stage II spans minus one to plus one cm. Stage zero requires all normal points; stage III versus IV also requires total vaginal length. This is an orientation schematic, not to scale.</desc>
+<metadata>Source: https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf ; source-checked: 2026-09-11 ; clinician sign-off: pending</metadata>
 ${el.join('\n')}
 </svg>
 `;

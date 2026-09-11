@@ -23,20 +23,26 @@ function walk(dir, files = []) {
   return files;
 }
 
-function checkFile(file, rel) {
-  const content = fs.readFileSync(file, 'utf8');
+function checkContent(content) {
   const issues = [];
 
   // Superscript citation pattern: <sup>[[N]](#refN)</sup>  — may chain
-  const refLinkRe = /\[\[(\d+)\]\]\(#ref\d+\)/g;
+  const refLinkRe = /\[\[(\d+)\]\]\(#ref(\d+)\)/g;
   const cited = new Set();
   let m;
-  while ((m = refLinkRe.exec(content)) !== null) cited.add(parseInt(m[1], 10));
+  while ((m = refLinkRe.exec(content)) !== null) {
+    cited.add(parseInt(m[2], 10));
+    if (m[1] !== m[2]) issues.push(`citation label ${m[1]} links to ref${m[2]}`);
+  }
 
   // Anchor pattern: <a id="refN"></a>
   const anchorRe = /<a\s+id=["']ref(\d+)["']\s*><\/a>/g;
   const anchors = new Set();
-  while ((m = anchorRe.exec(content)) !== null) anchors.add(parseInt(m[1], 10));
+  while ((m = anchorRe.exec(content)) !== null) {
+    const n = parseInt(m[1], 10);
+    if (anchors.has(n)) issues.push(`duplicate ref${n} anchor`);
+    anchors.add(n);
+  }
 
   // Skip files with no citation structure at all.
   if (cited.size === 0 && anchors.size === 0) {
@@ -75,7 +81,7 @@ function main() {
 
   for (const file of files) {
     const rel = path.relative(path.resolve(__dirname, '..'), file);
-    const issues = checkFile(file, rel);
+    const issues = checkContent(fs.readFileSync(file, 'utf8'));
     if (issues.length > 0) problems.push({ rel, issues });
   }
 
@@ -92,4 +98,5 @@ function main() {
   process.exit(1);
 }
 
-main();
+if (require.main === module) main();
+module.exports = { checkContent };

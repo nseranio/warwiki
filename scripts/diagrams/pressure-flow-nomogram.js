@@ -4,9 +4,11 @@
  *
  * Pdet@Qmax (y) vs Qmax (x) with the obstructed / equivocal / unobstructed
  * zones defined by the bladder outlet obstruction index
- * (BOOI = Pdet@Qmax - 2*Qmax; >=40 obstructed, <20 unobstructed), plus three
+ * (BOOI = Pdet@Qmax - 2*Qmax; >40 obstructed, <20 unobstructed), plus three
  * worked example points.
  *
+ * Source: ICS adult male terminology, ICS Standards 2020-2021, section 5.12.
+ * https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf
  * Output: static/img/diagrams/pressure-flow-nomogram.svg
  */
 const fs = require('fs');
@@ -29,8 +31,8 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 const pt = (q, p) => `${f(xOf(q))},${f(yOf(p))}`;
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
-push(txt(PL, 38, 16, 700, C.ink, 'start', 'Pressure-flow nomogram (ICS / Abrams-Griffiths)', false));
-push(txt(PL, 57, 12.5, 500, C.muted, 'start', 'BOOI = Pdet@Qmax &#8722; 2 &#215; Qmax   ·   &#8805; 40 obstructed   ·   &lt; 20 unobstructed', false));
+push(txt(PL, 38, 16, 700, C.ink, 'start', 'Male pressure-flow nomogram (ICS / Abrams-Griffiths)', false));
+push(txt(PL, 57, 11.5, 500, C.muted, 'start', 'BOOI = Pdet@Qmax &#8722; 2 &#215; Qmax   ·   &gt; 40 obstructed   ·   20&#8211;40 equivocal   ·   &lt; 20 unobstructed', false));
 
 // zones (boundaries: Pdet = 2Q+40 and 2Q+20)
 push(`<polygon points="${pt(0,0)} ${pt(30,0)} ${pt(30,80)} ${pt(0,20)}" fill="#DCFCE7" opacity="0.7"/>`);
@@ -49,7 +51,7 @@ push(txt(xOf(24.5), yOf(79), 10.5, 700, '#15803D', 'start', 'BOOI 20'));
 
 // zone labels
 push(txt(xOf(5.2), yOf(96), 13, 700, '#991B1B', 'start', 'Obstructed'));
-push(txt(xOf(2.6), yOf(50), 13, 700, '#92400E', 'start', 'Equivocal'));
+push(txt(xOf(2.6), yOf(35), 13, 700, '#92400E', 'start', 'Equivocal'));
 push(txt(xOf(15.5), yOf(20), 13, 700, '#166534', 'start', 'Unobstructed'));
 
 // example points
@@ -61,8 +63,12 @@ push(`<line x1="${PL}" y1="${PT}" x2="${PL}" y2="${PB}" stroke="${C.axis}" strok
 push(`<line x1="${PL}" y1="${PB}" x2="${PR}" y2="${PB}" stroke="${C.axis}" stroke-width="1.5"/>`);
 push(`<text transform="translate(${PL - 46},${(PT + PB) / 2}) rotate(-90)" text-anchor="middle" font-family="${FONT}" font-size="12" font-weight="600" fill="${C.axis}">Pdet at Qmax (cm H&#8322;O)</text>`);
 push(txt((PL + PR) / 2, PB + 44, 12, 600, C.axis, 'middle', 'Qmax (mL/s)', false));
+push(txt(PL, 448, 10, 500, C.muted, 'start', 'Source: ICS male terminology, section 5.12. Not a female BOO nomogram. Dots are hypothetical examples.', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="ICS Abrams-Griffiths pressure-flow nomogram plotting detrusor pressure at maximum flow against maximum flow rate, with obstructed, equivocal and unobstructed zones bounded by the BOOI 40 and BOOI 20 lines, and three example patient points.">
+<title>Male ICS pressure-flow nomogram</title>
+<desc>In men, BOOI equals detrusor pressure at maximum flow minus twice maximum flow. Values above 40 indicate obstruction, 20 through 40 are equivocal, and below 20 are unobstructed. This classification is not a female nomogram. Example dots show hypothetical values, not study patients.</desc>
+<metadata>Source: https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf ; source-checked: 2026-09-11 ; clinician sign-off: pending</metadata>
 ${el.join('\n')}
 </svg>
 `;

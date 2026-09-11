@@ -6,6 +6,22 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Evidence refresh, monthly maintenance, and smaller deployments
+
+Reviewed major post-June literature and corrections, with targeted evidence updates across 29 articles in functional urology, urogynecology, reconstruction, outlet surgery and prosthetics. Corrected existing NLUTD/OAB guideline interpretations, methenamine companion-page inconsistencies, vaginal-estrogen labeling overstatements, UroLift guideline attribution and superseded prosthesis outcomes. Incorporated verified new trials, reviews and reconstructive series with their design and access limitations. A ureteroenteric-anastomosis article's expression of concern and the PHOENIX correction are explicitly flagged. Detailed sources and unresolved questions are in the [reconstructive report](reports/2026-09-11/reconstructive-literature.md) and [functional/urogynecology report](reports/2026-09-11/functional-urogynecology-literature.md).
+
+Added an evidence-status display that distinguishes targeted `evidenceUpdated` notes from an actual clinician `lastReviewed`/`reviewer` record. The corpus inventory covers 1,186 documentation pages; it is not a whole-site clinical sign-off. Strengthened citation checks for mismatched numbers and duplicate anchors; repaired six collapsed references in the AMAB nullification article. Corrected POP-Q signs/staging and the male BOOI diagram/consuming text. Fixed intrinsic-size detection for nine SVGs while preserving their visible content and accessible teaching descriptions.
+
+Removed the quiz and redirected `/quiz` to Resources. Moved History & Lineage access to a discreet About-page link. Paused the handout gallery and excluded its PDFs/previews from production builds while preserving all source originals. Reduced the measured output from approximately 566 MB to 140 MB (75%); video-library initial rendering is 24 cards with full-library search and progressive loading. Device speech is the default; cloud speech is explicitly opt-in. Vercel builds now explicitly run npm lifecycle hooks, deploy only `main`, skip report-only changes and cache content-hashed assets.
+
+Configured monthly GitHub literature collection and external-link reports, plus the active local Codex automation `warwiki-monthly-evidence-update`. The GitHub collector runs independently; the evidence editor requires this computer and Codex running. See the [maintenance runbook](reports/2026-09-11/maintenance.md). No Vercel plan upgrade or historical-deployment deletion was performed; all four live retention categories were already set to 30 days.
+
+The [site review and practice roadmap](reports/2026-09-11/site-review.md) ranks remaining evidence, diagram, navigation and retrieval work. Preserve the user's Epic plan: visit/operative shells plus separate condition HPI, A&P and procedure modules; seven common clinic problems first. No Epic templates or patient records were created. Personal operative examples belong outside this public repository.
+
+**Verification:** production build (including asset exclusion, with no SVG size warnings), lint, typecheck, 13 unit tests, maintenance-tool tests, 200 MB size budget and `git diff --check` passed. Representative desktop/phone browser checks covered Resources, paused handouts, full-library video search/progressive loading and evidence-status labels. Remote deployment and scheduled-workflow outcomes are recorded separately after publication.
+
+---
+
 ## 2026-09-11 - Session handoff saved
 
 Updated [CLAUDE.md](CLAUDE.md) and [AGENTS.md](AGENTS.md) with the completed June VVF, urodynamics, and BackTable podcast work, including commit identifiers and article links. Earlier video, PUL, VRAM, and AUS changes remain recorded in the June entries below. All corresponding site edits were already saved in MDX and pushed through `65df15e3`.

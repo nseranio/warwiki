@@ -7,6 +7,13 @@ const config: Config = {
   tagline: 'Reconstruction, codified.',
   favicon: 'img/favicon.svg',
 
+  customFields: {
+    // Device speech is the default. Enabling paid cloud audio requires an
+    // explicit build/runtime setting; keep the API key server-side only.
+    cloudTtsEnabled: process.env.WARWIKI_ENABLE_CLOUD_TTS === 'true',
+    handoutsEnabled: process.env.WARWIKI_INCLUDE_HANDOUTS === 'true',
+  },
+
   future: {
     v4: true,
   },
@@ -170,7 +177,6 @@ const config: Config = {
           items: [
             {label: 'Video Library', to: '/video-library'},
             {label: 'Resources', to: '/docs/resources'},
-            {label: 'History & Lineage', to: '/docs/roots'},
             {label: 'Journal Club', to: '/docs/journal-club'},
           ],
         },
