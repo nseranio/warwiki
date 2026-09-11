@@ -1,5 +1,7 @@
 # WARWIKI - Claude Session Reference
 
+**Latest travel checkpoint, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md). Clinic removal and the simple last-updated presentation are live in `6e50cdba`;41 obsolete Vercel deployments were deleted. The whole-site clinical audit and110-item OpenEvidence reconciliation remain in progress. The user paused work to board a flight; resume when they return. [Quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) is saved. Earlier snapshots below are historical.
+
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 
 **Epic is paused:** use [EPIC-ROADMAP.md](EPIC-ROADMAP.md) when the user is ready. Do not start templates automatically because of the practice start date. The current authorized work is the remaining site improvements and removal of obsolete Vercel deployments after verifying the live/rollback releases and aliases.

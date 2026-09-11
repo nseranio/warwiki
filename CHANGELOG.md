@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Travel checkpoint for whole-site clinical review
+
+Saved a stable, unpublished clinical correction batch at the user's request before boarding. Domain reports record full-text reading separately from targeted source verification; the whole-site clinical audit remains incomplete. Corrections include drug-label/dose safety, continence/prolapse outcome interpretation, female urethral operative anatomy and source identity, neurogenic surveillance, autonomic dysreflexia, RPF trials and perioperative diabetes. Detailed changes, sources and unresolved claims are in [the page ledger](reports/2026-09-11/full-site-review/README.md).
+
+Saved the user's [quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) and the complete supplied 110-reference survey, with an initial DOI-coverage reconciliation. No proposed finding is accepted solely from the supplied summary. [RESUME-HERE.md](RESUME-HERE.md) identifies the exact unfinished source checks and publication steps.
+
+**Checkpoint validation:** typecheck, 32 unit tests and 47 maintenance tests passed. Full lint passed after removal of obsolete references. A production build and compiled-link/size checks also passed during checkpoint preparation; repeat the build against the final frozen citation cleanup and complete diff/visual review before publication. The clinical checkpoint has not been deployed. The earlier UI release `6e50cdba` passed CI 34619397550, is live, and was checked directly: no Clinic shortcut/banner, `/clinic` 404 and ordinary article last-updated information preserved.
+
+---
+
 ## 2026-09-11 — Remove Clinic and simplify article updates; activate maintenance
 
 Removed Clinic Quick Access from the homepage, the `/clinic` route, its navigation links and exclusive data/styles/tests at the user's request. Removed the extra public Evidence Status banner; articles retain the existing last-updated presentation and internal scoped source metadata. General search-abbreviation support and accessible figure enlargement remain.

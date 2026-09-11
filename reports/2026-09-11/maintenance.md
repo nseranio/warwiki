@@ -58,3 +58,7 @@ GitHub and Vercel authentication are complete. The user has explicitly allowed b
 Cleanup deleted all 41 obsolete candidates after verifying project, terminal state and aliases; five deployments remain in the listing, including the live release and verified rollbacks. All aliases were preserved. See [deployment-cleanup.md](deployment-cleanup.md); account storage has not yet been reliably remeasured. Never infer deployment IDs or safe deletion from age alone, and do not equate local output bytes with Vercel's metered storage.
 
 Reference and media maintenance now have reproducible source-only queues: see [reference-media-maintenance.md](reference-media-maintenance.md). The media collector does not automatically approve a video, place it on a clinical page, or turn it into evidence.
+
+## Quarterly user-supplied OpenEvidence survey
+
+Use [OPEN-EVIDENCE-PROMPT.md](../../OPEN-EVIDENCE-PROMPT.md) for the reusable prompt. The user plans to supply a broad survey approximately every three months, independently of the monthly maintenance. Save the supplied response, reconcile original sources against existing pages, and log included/already-covered/deferred/rejected items. The September 11 survey contains 110 references; [its reconciliation](open-evidence/README.md) is in progress. Do not treat a supplied summary as verified evidence.

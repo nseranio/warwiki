@@ -1,4 +1,6 @@
 ---
+evidenceUpdated: '2026-09-11'
+evidenceNote: 'Corrected unsupported universal dorsal preference and female selection labels against AUA/EAU guidance.'
 title: Female Urethroplasty
 sidebar_position: 3
 slug: /surgical-techniques/04a-urethral-reconstruction/female-urethroplasty
@@ -8,24 +10,24 @@ import TechniqueDatabase from '@site/src/components/TechniqueDatabase';
 
 # Female Urethroplasty
 
-Female urethral reconstruction addresses stricture, diverticulum, prolapse, post-MUS-erosion scarring, and complete urethral loss / obliteration. The female framework reflects emerging consensus that **dorsal onlay BMG is the preferred default** for most non-distal female strictures, with vaginal-flap and labial-mucosa options reserved for specific scenarios. Repeated dilation is discouraged — efficacy drops with each subsequent dilation and the AUA recommends urethroplasty over endoscopic management for recurrent disease.
+Female urethral reconstruction addresses stricture, diverticulum, prolapse, post-MUS-erosion scarring, and complete urethral loss / obliteration. **No dorsal or ventral approach is universally preferred.** Choose oral-mucosal graft or vaginal-flap reconstruction according to stricture anatomy, tissue quality and surgeon experience. AUA guidance supports urethroplasty in women because endoscopic treatment has limited durability.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
 ---
 
 ## Decision Framework — Choosing a Female Urethroplasty
 
-| Clinical Scenario | First-Line Technique | Alternative(s) | Avoid |
+| Clinical Scenario | Reconstructive option | Alternative(s) | Avoid / limitations |
 |---|---|---|---|
 | **Distal / meatal stricture (short, isolated)** | [Distal urethrectomy + advancement meatoplasty](/docs/surgical-techniques/04a-urethral-reconstruction/distal-urethrectomy-advancement) | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (BMG, labial, or lingual mucosa) | Repeated dilation |
 | **Mid-urethral stricture, healthy vaginal tissue** | [Vaginal wall flap (ventral onlay or inlay)](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) ± [Martius reinforcement](/docs/foundations/surgical-principles/flaps/martius) | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | — |
 | **Mid-urethral stricture, atrophic vagina** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) (BMG default; labial / lingual alternates) | — | Vaginal flap / graft (atrophic tissue) |
-| **Pan-urethral or long-segment stricture** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) — extensive grafting of entire urethra | — | Dilation (49% success; worsens fibrosis) |
+| **Pan-urethral or long-segment stricture** | [Dorsal onlay graft](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) — extensive grafting of entire urethra | — | Repeated dilation with curative intent |
 | **LS-related stricture** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | — | Vaginal / labial tissue (LS involvement risk) |
 | **Prior MUS erosion / scarred periurethral bed** | [Ventral onlay BMG with Martius reinforcement](/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-onlay-urethroplasty) | [Dorsal BMG](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty) | Vaginal flap (scarred bed) |
 | **Complete urethral loss / obliteration** | [Vaginal-wall tubularization](/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-wall-tubularization) + pubovaginal sling | [Bladder wall flap (Tanagho or Nayyar)](/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty) | — |
 | **Bladder neck obliteration (post-PFUI)** | [Bladder flap urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/bladder-wall-flap-urethroplasty) (anterior or posterior) | Nayyar novel anterior bladder tube | Repeated endoscopic procedures |
 | **Failed prior urethroplasty** | [Combined vaginal flap + BMG](/docs/surgical-techniques/04a-urethral-reconstruction/vaginal-flap-bmg-combined) (with Martius reinforcement when tissue is compromised) | [Vaginal flap](/docs/surgical-techniques/04a-urethral-reconstruction/female-vaginal-flap-urethroplasty) (if tissue healthy); alternative graft source | Further dilation |
-| **First presentation, mild symptoms** | Trial of [dilation or DVIU](/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu-dilation) (once) → if fails, proceed to urethroplasty | CIC ± intraurethral steroids (LS) | Repeated dilations (diminishing returns) |
+| **First presentation, mild symptoms** | Trial of [dilation](/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu-dilation) after confirming an anatomical stricture | Discuss urethroplasty or intermittent self-dilation according to goals | Treating nonspecific LUTS without confirmed stricture |
 
 ---
 
@@ -34,7 +36,7 @@ export const femaleTechniques = [
   {
     name: "Female DVIU and Urethral Dilation",
     category: "Endoscopic / Minimally Invasive",
-    indication: "First-line endoscopic; ≤2 attempts before urethroplasty",
+    indication: "Dilation for selected confirmed strictures; female DVIU evidence is limited",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dviu-dilation",
   },
 
@@ -74,7 +76,7 @@ export const femaleTechniques = [
   {
     name: "Labia Minora Pedicled Flap",
     category: "Flap Urethroplasty",
-    indication: "Compromised vaginal tissue (atrophy, LS)",
+    indication: "Selected reconstruction with healthy labial tissue; avoid diseased donor tissue",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/labia-minora-flap",
   },
   {
@@ -88,7 +90,7 @@ export const femaleTechniques = [
   {
     name: "Female Dorsal Onlay Urethroplasty",
     category: "Free Graft Urethroplasty",
-    indication: "Default for most female strictures (BMG / labial / lingual / vaginal)",
+    indication: "Dorsal graft option selected by anatomy and tissue quality",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty",
   },
   {
@@ -100,13 +102,13 @@ export const femaleTechniques = [
   {
     name: "Female Ventral Inlay BMG Urethroplasty",
     category: "Free Graft Urethroplasty",
-    indication: "Vaginal-sparing; shortest OR; same-day discharge possible",
+    indication: "Vaginal-sparing graft option in selected anatomy",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-ventral-inlay-bmg",
   },
   {
     name: "Female Dorsal Inlay BMG Urethroplasty",
     category: "Free Graft Urethroplasty",
-    indication: "Distal / fossa-navicularis stricture; transurethral approach",
+    indication: "Female urethral stricture; transurethral inlay approach",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-inlay-bmg",
   },
   {
@@ -162,3 +164,9 @@ export const femaleTechniques = [
 ## Technique Database
 
 <TechniqueDatabase data={femaleTechniques} hideLocation hideEponym hideNotes />
+
+## References
+
+<a id="ref1"></a>1. Wessells H, Morey A, Souter L, et al. Urethral stricture disease guideline amendment (2023). *J Urol.* 2023;210:64–71. doi:[10.1097/JU.0000000000003482](https://doi.org/10.1097/JU.0000000000003482).
+
+<a id="ref2"></a>2. European Association of Urology. *Urethral Strictures: Disease Management in Females.* 2026. [Official guideline](https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-females).

@@ -1,5 +1,7 @@
 # WARWIKI — Codex Session Reference
 
+**Latest travel checkpoint, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md). Clinic removal and the simple last-updated presentation are live in `6e50cdba`;41 obsolete Vercel deployments were deleted. The whole-site clinical audit and110-item OpenEvidence reconciliation remain in progress. The user paused work to board a flight; resume when they return. [Quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) is saved. Earlier snapshots below are historical.
+
 This file is for Codex to read at the start of every session. It captures the project architecture, conventions, and component patterns. Session history is in `CHANGELOG.md`; the stub backlog is in `docs/_STATUS.md`.
 
 **Current user preference:** Epic work is explicitly paused. Its retrievable plan is [EPIC-ROADMAP.md](EPIC-ROADMAP.md). Do not start templates or schedule Epic work until the user asks to resume. Site reliability, content and deployment improvements remain authorized. The user authorized removing obsolete Vercel deployments while retaining the live release and a known-good rollback; verify the actual deployment/alias inventory first.
