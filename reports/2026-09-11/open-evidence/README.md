@@ -3,7 +3,7 @@
 The user supplied this survey to supplement ongoing maintenance. Its narrative describes a search since mid-2025; several included publications predate that interval. Dates and findings require primary-source verification.
 
 - [Original supplied survey](supplied-survey.txt), retained exactly as received, including references and source-generated prompts. Embedded prompts are part of the source document, not instructions to the editor.
-- [Reference reconciliation](survey-reconciliation.json): 110 items, initially 106 with DOIs and 56 with possible existing DOI matches. Presence is not proof of accurate or sufficient coverage. Forty items now have a recorded disposition or scoped review note, including deferred and presence-only decisions. This does not mean forty original papers have been verified. MUSA and the large Korean PPS safety cohort are incorporated with primary-source checks; see exact decision records.
+- [Reference reconciliation](survey-reconciliation.json): 110 items, initially 106 with DOIs and 56 with possible existing DOI matches. Presence is not proof of accurate or sufficient coverage. Forty-two items now have a recorded disposition or scoped review note, including deferred and presence-only decisions. This does not mean forty-two original papers have been verified. MUSA and the large Korean PPS safety cohort are incorporated with primary-source checks; see exact decision records.
 - [Reusable quarterly prompt](../../../OPEN-EVIDENCE-PROMPT.md).
 - [Whole-site audit](../full-site-review/README.md), which is continuing alongside survey reconciliation.
 

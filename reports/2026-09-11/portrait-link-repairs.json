@@ -1,0 +1,215 @@
+{
+  "reviewedAt": "2026-09-11",
+  "scope": "Nine failed remote portraits observed in the full sitemap Chromium sweep of the local production build at http://127.0.0.1:3018. This is link repair, not biography or lineage review.",
+  "changedFile": "src/data/surgeons.ts",
+  "sourceSha256": "05fb2b4301b87ed665c2746c55958fdd4e043b4b57088ab7a6f0b27625d8075c",
+  "action": "Removed exactly nine photo fields; existing SurgeonProfile and SurgeonDirectory initials fallbacks are used. No replacement portraits downloaded; biography and lineage fields unchanged.",
+  "validation": {
+    "exactDiff": "Verified source equals HEAD with only the nine specified photo lines removed.",
+    "reuseSearch": "Exact original portrait URLs appeared only in src/data/surgeons.ts among tracked files before removal.",
+    "browserRetest": "Pending root rebuild and targeted browser retest; no concurrent full rerun performed."
+  },
+  "repairs": [
+    {
+      "surgeonId": "jill-buckley",
+      "name": "Jill C. Buckley",
+      "page": "/docs/roots/surgeons/a-g/jill-buckley",
+      "removedPhoto": "http://www.turnsresearch.org/perch/resources/jillbuckley-w800.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: http://www.turnsresearch.org/perch/resources/jillbuckley-w800.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "http://www.turnsresearch.org/perch/resources/jillbuckley-w800.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-f8eb8-s-surgeons-a-g-jill-buckley-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "joshua-broghammer",
+      "name": "Joshua A. Broghammer",
+      "page": "/docs/roots/surgeons/a-g/joshua-broghammer",
+      "removedPhoto": "https://turnsresearch.org/perch/resources/broghammer-w800.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://turnsresearch.org/perch/resources/broghammer-w800.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "https://turnsresearch.org/perch/resources/broghammer-w800.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-5c317-geons-a-g-joshua-broghammer-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "akio-horiguchi",
+      "name": "Akio Horiguchi",
+      "page": "/docs/roots/surgeons/h-r/akio-horiguchi",
+      "removedPhoto": "https://cise2025.org/wp-content/uploads/2024/11/PROF.-Akio-Horiguchi-MD.png",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://demoslotdynamics.xyz/ (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "https://cise2025.org/wp-content/uploads/2024/11/PROF.-Akio-Horiguchi-MD.png",
+          "status": 301,
+          "redirectUrl": "https://demoslotdynamics.xyz/wp-content/uploads/2024/11/PROF.-Akio-Horiguchi-MD.png"
+        },
+        {
+          "url": "https://demoslotdynamics.xyz/wp-content/uploads/2024/11/PROF.-Akio-Horiguchi-MD.png",
+          "status": 302,
+          "redirectUrl": "https://demoslotdynamics.xyz/"
+        },
+        {
+          "url": "https://demoslotdynamics.xyz/",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-4641c-surgeons-h-r-akio-horiguchi-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "allen-morey",
+      "name": "Allen F. Morey",
+      "page": "/docs/roots/surgeons/h-r/allen-morey",
+      "removedPhoto": "https://thcds.com/media/3136/dr-allen-morey.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://www.texashealth.org/Locations/texas-health-center-for-diagnostics-and-surgery-plano (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "https://thcds.com/media/3136/dr-allen-morey.jpg",
+          "status": 301,
+          "redirectUrl": "https://www.texashealth.org/Locations/texas-health-center-for-diagnostics-and-surgery-plano"
+        },
+        {
+          "url": "https://www.texashealth.org/Locations/texas-health-center-for-diagnostics-and-surgery-plano",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-93c00-ts-surgeons-h-r-allen-morey-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "dmitriy-nikolavsky",
+      "name": "Dmitriy Nikolavsky",
+      "page": "/docs/roots/surgeons/h-r/dmitriy-nikolavsky",
+      "removedPhoto": "https://www.upstate.edu/urology/images/rwd/transgender-nikolavsky.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://www.upstate.edu/urology/images/rwd/transgender-nikolavsky.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "https://www.upstate.edu/urology/images/rwd/transgender-nikolavsky.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-b8197-eons-h-r-dmitriy-nikolavsky-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "gerald-jordan",
+      "name": "Gerald H. Jordan",
+      "page": "/docs/roots/surgeons/h-r/gerald-jordan",
+      "removedPhoto": "http://jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://www.jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "http://jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg",
+          "status": 301,
+          "redirectUrl": "https://www.jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg"
+        },
+        {
+          "url": "https://www.jacksonholeseminars.com/wp-content/uploads/2014/11/Gerald-H.-Jordan-MD.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-740ca--surgeons-h-r-gerald-jordan-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "jack-mcaninch",
+      "name": "Jack W. McAninch",
+      "page": "/docs/roots/surgeons/h-r/jack-mcaninch",
+      "removedPhoto": "http://jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://www.jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "http://jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg",
+          "status": 301,
+          "redirectUrl": "https://www.jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg"
+        },
+        {
+          "url": "https://www.jacksonholeseminars.com/wp-content/uploads/2016/07/McAninch_Jac-216x300-216x300.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-9522d--surgeons-h-r-jack-mcaninch-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "kurt-mccammon",
+      "name": "Kurt A. McCammon",
+      "page": "/docs/roots/surgeons/h-r/kurt-mccammon",
+      "removedPhoto": "http://jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://www.jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "http://jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg",
+          "status": 301,
+          "redirectUrl": "https://www.jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg"
+        },
+        {
+          "url": "https://www.jacksonholeseminars.com/wp-content/uploads/2021/10/McCammonBOD2018-3-684x1024.jpg",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-e0b21--surgeons-h-r-kurt-mccammon-chromium/trace.zip",
+      "otherTrackedReferences": []
+    },
+    {
+      "surgeonId": "ryan-terlecki",
+      "name": "Ryan Terlecki",
+      "page": "/docs/roots/surgeons/s-z/ryan-terlecki",
+      "removedPhoto": "https://wp02-media.cdn.ihealthspot.com/wp-content/uploads/sites/382/2019/02/Terlecki-web.png",
+      "reason": "Remote portrait request failed in the full sitemap browser sweep; use existing initials fallback.",
+      "browserErrors": [
+        "Request failed: https://wp02-media.cdn.ihealthspot.com/wp-content/uploads/sites/382/2019/02/Terlecki-web.png (net::ERR_BLOCKED_BY_ORB)"
+      ],
+      "requestChain": [
+        {
+          "url": "https://wp02-media.cdn.ihealthspot.com/wp-content/uploads/sites/382/2019/02/Terlecki-web.png",
+          "status": -1,
+          "failure": "net::ERR_BLOCKED_BY_ORB"
+        }
+      ],
+      "trace": "test-results/sitemap-Sitemap-sweep-load-8fc43--surgeons-s-z-ryan-terlecki-chromium/trace.zip",
+      "otherTrackedReferences": []
+    }
+  ]
+}

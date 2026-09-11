@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Broader quarterly discovery and portrait repairs
+
+Expanded scheduled literature discovery from seven to fourteen focused groups. Added pelvic pain, bowel dysfunction, GU trauma, cancer survivorship, lifelong care, genital/gender reconstruction and bladder-neck/underactivity searches; extended ED, testosterone, fistula and relevant survivor terms. The original group IDs, 100-day overlap, 60-candidate editorial shortlist and separate guideline/regulatory review remain. All nine new or changed queries were checked live for June 3–September 11, 2026: 53–804 hits per query, below the collector's 3,000-record safety limit. These were query/count checks, not review of every result.
+
+The whole-sitemap browser check identified nine failed external portraits in History profiles, including an expired conference-domain redirect to an unrelated site. Removed those nine photo URLs so the existing initials fallback is used; biographies and lineage were preserved. [Repair record](reports/2026-09-11/portrait-link-repairs.json).
+
+OpenEvidence follow-up confirms the September 2026 HoLEP Cochrane review is already accurately summarized. NeuroSAFE PROOF is a verified functional-preservation gap ready for a later survivorship addition; it has not yet been incorporated. Forty-two survey items now have a recorded decision, including deferred and presence-only findings.
+
+---
+
 ## 2026-09-11 — Resumed evidence corrections and whole-site browser safeguards
 
 Corrected40 documentation pages after the flight checkpoint. This includes the MUSA2025 trial (added without interpreting failed superiority as equivalence), Botox adult/pediatric label regimens and ROSETTA denominators, FDA/AUA ProACT selection and indirect sling comparisons, renal/metabolic/B12 surveillance, IC/BPS AUA/CUA2025 guidance and PPS retinal risk, product-specific sealant composition/handling, anastomotic urethroplasty anatomy/outcome interpretation and the2026 Scandinavian follow-up, plus UPJ/ureteral/fistula evidence. Targeted companion corrections align cystectomy selection, study comparisons and references. Exact sources, corrected statements and unresolved claims are recorded in the [page ledger](reports/2026-09-11/full-site-review/README.md).

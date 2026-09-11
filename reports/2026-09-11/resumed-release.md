@@ -32,3 +32,9 @@ Baseline5afd0f89: CI34642415845 succeeded; Vercel dpl_CXgc6HUc5kZoJBbvZVZTgSgao9
 ## Continuing work
 
 Use RESUME-HERE.md and the domain ledgers. Reference metadata collection is paused after6,355 records (6,318 found); it is resumable and incomplete. Low-overlap title signals are investigation leads, not automatic citation errors. The remaining OpenEvidence reconciliation and full-site clinical review are ongoing. Epic remains paused.
+
+## Final maintenance and media follow-up
+
+Literature discovery now uses 14 focused groups. Nine new or changed queries returned 53–804 metadata hits each during a live count check for June 3–September 11; full candidate collection was not rerun. Text searches are not exhaustive, and guideline/regulatory review remains separate. The 100-day overlap and 60-primary-candidate shortlist are unchanged.
+
+Nine History portrait URLs failed browser loading, including an expired conference domain redirect. Removed only those photo fields; existing initials render instead. Biographies and lineage remain intact. The final source build and affected-page retest are pending.

@@ -5,19 +5,289 @@
     "editorialCheck": "Confirm source identity, society authority where relevant, study size, methods, population, follow-up and likely practice impact before changing a page. Metadata cues do not establish quality or a practice-changing result."
   },
   "topics": [
-    { "id": "urethral-reconstruction", "terms": ["urethroplasty", "urethral stricture", "urethral reconstruction"], "pageHints": ["docs/04-surgical-techniques/04a-urethral-reconstruction", "docs/03-clinical-conditions/03b-voiding-outlet"] },
-    { "id": "upper-tract-reconstruction", "terms": ["ureteroplasty", "ureteral reconstruction", "ureteral stricture", "pyeloplasty", "ileal ureter"], "pageHints": ["docs/04-surgical-techniques/04d-upper-tract-reconstruction"] },
-    { "id": "continence-functional", "terms": ["artificial urinary sphincter", "stress urinary incontinence", "overactive bladder", "sacral neuromodulation", "tibial nerve stimulation"], "pageHints": ["docs/04-surgical-techniques/04f-incontinence-procedures"] },
-    { "id": "urogynecology", "terms": ["pelvic organ prolapse", "sacrocolpopexy", "sacrospinous", "urogynecology", "vesicovaginal fistula"], "pageHints": ["docs/04-surgical-techniques/04g-prolapse-repair", "docs/04-surgical-techniques/04h-fistula-repair"] },
-    { "id": "neurogenic-reservoir", "terms": ["neurogenic lower urinary tract", "neurogenic bladder", "augmentation cystoplasty", "catheterizable channel", "urinary diversion"], "pageHints": ["docs/03-clinical-conditions/03d-nlutd", "docs/04-surgical-techniques/04b-bladder-reconstruction", "docs/04-surgical-techniques/04c-urinary-diversion"] },
-    { "id": "female-functional", "terms": ["recurrent urinary tract infection", "genitourinary syndrome of menopause", "female sexual dysfunction"], "pageHints": ["docs/05-special-populations/05e-womens-health"] },
-    { "id": "male-outlet-sexual-reconstruction", "terms": ["benign prostatic hyperplasia", "penile prosthesis", "Peyronie", "rectourethral fistula", "urethrocutaneous fistula", "phalloplasty", "vaginoplasty"], "pageHints": ["docs/04-surgical-techniques"] }
+    {
+      "id": "urethral-reconstruction",
+      "terms": [
+        "urethroplasty",
+        "urethral stricture",
+        "urethral reconstruction"
+      ],
+      "pageHints": [
+        "docs/04-surgical-techniques/04a-urethral-reconstruction",
+        "docs/03-clinical-conditions/03b-voiding-outlet"
+      ]
+    },
+    {
+      "id": "upper-tract-reconstruction",
+      "terms": [
+        "ureteroplasty",
+        "ureteral reconstruction",
+        "ureteral stricture",
+        "pyeloplasty",
+        "ileal ureter"
+      ],
+      "pageHints": [
+        "docs/04-surgical-techniques/04d-upper-tract-reconstruction"
+      ]
+    },
+    {
+      "id": "continence-functional",
+      "terms": [
+        "artificial urinary sphincter",
+        "stress urinary incontinence",
+        "overactive bladder",
+        "sacral neuromodulation",
+        "tibial nerve stimulation"
+      ],
+      "pageHints": [
+        "docs/04-surgical-techniques/04f-incontinence-procedures"
+      ]
+    },
+    {
+      "id": "urogynecology",
+      "terms": [
+        "pelvic organ prolapse",
+        "sacrocolpopexy",
+        "sacrospinous",
+        "urogynecology",
+        "vesicovaginal fistula",
+        "urethrovaginal fistula",
+        "ureterovaginal fistula",
+        "rectovaginal fistula",
+        "vesicouterine fistula",
+        "obstetric fistula",
+        "colovesical fistula",
+        "enterovesical fistula",
+        "rectovesical fistula",
+        "vesicocutaneous fistula",
+        "ureterocolonic fistula",
+        "pyeloenteric fistula",
+        "nephropleural fistula",
+        "ureteroarterial fistula",
+        "arterioureteral fistula",
+        "urosymphyseal fistula",
+        "urethropubic fistula",
+        "urethroperineal fistula",
+        "urinary fistula"
+      ],
+      "pageHints": [
+        "docs/04-surgical-techniques/04g-prolapse-repair",
+        "docs/04-surgical-techniques/04h-fistula-repair",
+        "docs/03-clinical-conditions/03f-fistulas"
+      ]
+    },
+    {
+      "id": "neurogenic-reservoir",
+      "terms": [
+        "neurogenic lower urinary tract",
+        "neurogenic bladder",
+        "augmentation cystoplasty",
+        "catheterizable channel",
+        "urinary diversion"
+      ],
+      "pageHints": [
+        "docs/03-clinical-conditions/03d-nlutd",
+        "docs/04-surgical-techniques/04b-bladder-reconstruction",
+        "docs/04-surgical-techniques/04c-urinary-diversion"
+      ]
+    },
+    {
+      "id": "female-functional",
+      "terms": [
+        "recurrent urinary tract infection",
+        "genitourinary syndrome of menopause",
+        "female sexual dysfunction"
+      ],
+      "pageHints": [
+        "docs/05-special-populations/05e-womens-health"
+      ]
+    },
+    {
+      "id": "male-outlet-sexual-reconstruction",
+      "terms": [
+        "benign prostatic hyperplasia",
+        "penile prosthesis",
+        "Peyronie",
+        "rectourethral fistula",
+        "urethrocutaneous fistula",
+        "phalloplasty",
+        "vaginoplasty",
+        "erectile dysfunction",
+        "testosterone therapy",
+        "testosterone replacement"
+      ],
+      "pageHints": [
+        "docs/03-clinical-conditions/03b-voiding-outlet",
+        "docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx",
+        "docs/04-surgical-techniques/04j-sexual-dysfunction",
+        "docs/04-surgical-techniques/04m-bph-male-luts",
+        "docs/01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx"
+      ]
+    },
+    {
+      "id": "pelvic-pain",
+      "terms": [
+        "interstitial cystitis",
+        "bladder pain syndrome",
+        "chronic pelvic pain",
+        "myofascial pelvic pain",
+        "pudendal neuralgia",
+        "chronic prostatitis"
+      ],
+      "pageHints": [
+        "docs/03-clinical-conditions/03h-pelvic-pain",
+        "docs/01-foundations/pharmacology/bladder-pain-ic-bps",
+        "docs/01-foundations/pharmacology/neuropathic-pelvic-pain"
+      ]
+    },
+    {
+      "id": "bowel-dysfunction",
+      "terms": [
+        "fecal incontinence",
+        "faecal incontinence",
+        "neurogenic bowel",
+        "dyssynergic defecation",
+        "obstructed defecation",
+        "defecatory dysfunction",
+        "rectal prolapse"
+      ],
+      "pageHints": [
+        "docs/03-clinical-conditions/03i-defecatory-disorders",
+        "docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx"
+      ]
+    },
+    {
+      "id": "genitourinary-trauma",
+      "terms": [
+        "genitourinary trauma",
+        "urologic trauma",
+        "renal trauma",
+        "ureteral injury",
+        "ureteric injury",
+        "bladder injury",
+        "urethral injury",
+        "penile fracture",
+        "testicular trauma",
+        "priapism",
+        "Fournier gangrene",
+        "Fournier gangrene reconstruction"
+      ],
+      "pageHints": [
+        "docs/05-special-populations/05a-trauma-emergencies"
+      ]
+    },
+    {
+      "id": "cancer-survivorship",
+      "terms": [
+        "prostate cancer survivorship",
+        "prostate cancer survivors",
+        "bladder cancer survivorship",
+        "bladder cancer survivors",
+        "radiation cystitis",
+        "hemorrhagic cystitis",
+        "haemorrhagic cystitis",
+        "pelvic radiation injury",
+        "penile rehabilitation",
+        "postprostatectomy incontinence",
+        "post-prostatectomy incontinence",
+        "gynecologic cancer survivors",
+        "gynecological cancer survivors",
+        "gynecologic cancer survivorship",
+        "gynecological cancer survivorship",
+        "colorectal cancer survivors",
+        "colorectal cancer survivorship",
+        "NeuroSAFE"
+      ],
+      "pageHints": [
+        "docs/05-special-populations/05d-cancer-survivorship",
+        "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction",
+        "docs/03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx"
+      ]
+    },
+    {
+      "id": "lifelong-care",
+      "terms": [
+        "transitional urology",
+        "transition urology",
+        "adult spina bifida",
+        "bladder exstrophy",
+        "epispadias",
+        "hypospadias",
+        "posterior urethral valves",
+        "prune belly syndrome",
+        "anorectal malformation",
+        "geriatric urology"
+      ],
+      "pageHints": [
+        "docs/05-special-populations/05f-lifelong-care"
+      ]
+    },
+    {
+      "id": "genital-gender-reconstruction",
+      "terms": [
+        "genital reconstruction",
+        "penile reconstruction",
+        "scrotal reconstruction",
+        "buried penis",
+        "genital lymphedema",
+        "genital lymphoedema",
+        "genital lichen sclerosus",
+        "phalloplasty",
+        "vaginoplasty",
+        "metoidioplasty",
+        "vulvoplasty",
+        "clitoral reconstruction",
+        "gender affirming genital surgery",
+        "labiaplasty"
+      ],
+      "pageHints": [
+        "docs/03-clinical-conditions/03g-genital-scrotal",
+        "docs/04-surgical-techniques/04e-genital-reconstruction",
+        "docs/04-surgical-techniques/04k-gender-affirming-surgery",
+        "docs/05-special-populations/05c-gender-affirming"
+      ]
+    },
+    {
+      "id": "bladder-neck-underactivity",
+      "terms": [
+        "bladder neck contracture",
+        "bladder neck stenosis",
+        "bladder neck obstruction",
+        "vesicourethral anastomotic stenosis",
+        "vesicourethral anastomotic stricture",
+        "detrusor underactivity",
+        "underactive bladder",
+        "nonobstructive urinary retention",
+        "non-obstructive urinary retention",
+        "dysfunctional voiding"
+      ],
+      "pageHints": [
+        "docs/04-surgical-techniques/04ab-bladder-neck-reconstruction",
+        "docs/03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx",
+        "docs/03-clinical-conditions/03b-voiding-outlet"
+      ]
+    }
   ],
   "guidelineSources": [
-    { "name": "AUA guideline inventory", "url": "https://www.auanet.org/guidelines-and-quality/guidelines" },
-    { "name": "EAU guideline inventory and version summaries", "url": "https://uroweb.org/guidelines" },
-    { "name": "AUGS clinical practice documents", "url": "https://www.augs.org/clinical-patient-resources/clinical-practice-documents/" },
-    { "name": "FDA device recalls", "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm" },
-    { "name": "FDA drug safety communications", "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications" }
+    {
+      "name": "AUA guideline inventory",
+      "url": "https://www.auanet.org/guidelines-and-quality/guidelines"
+    },
+    {
+      "name": "EAU guideline inventory and version summaries",
+      "url": "https://uroweb.org/guidelines"
+    },
+    {
+      "name": "AUGS clinical practice documents",
+      "url": "https://www.augs.org/clinical-patient-resources/clinical-practice-documents/"
+    },
+    {
+      "name": "FDA device recalls",
+      "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm"
+    },
+    {
+      "name": "FDA drug safety communications",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications"
+    }
   ]
 }
