@@ -4,7 +4,31 @@ Read this at the start of a session. Keep it small: this file is the working han
 
 ---
 
-## Current Handoff - 2026-06-27 — AUS device-page video cleanup
+## Current Handoff - 2026-09-11 - June content updates saved
+
+The requested June site updates are saved in the article MDX files and [CHANGELOG.md](CHANGELOG.md), committed through `65df15e3`, and pushed to `origin/main`. This September handoff records that completed work; it is not a new clinical review or media-library sync.
+
+### Latest completed changes
+
+- **VVF evidence (`bb9e5448`, June 27):** [Vesicovaginal Fistula](docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx) now covers tissue-readiness-based repair timing, tract excision versus preservation, selective interposition, complexity-stratified outcomes, and emerging BMG / PRP / SIS / bioglue adjuncts. The female fistula hub, conservative-management and named-technique pages, general principles, and [Vaginal Fistula Flaps](docs/04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps.mdx) were aligned with this framing.
+- **Urodynamics (`4bb4fd7c`, June 28):** [Urodynamics](docs/02-evaluation/ancillary-tests/urodynamics.mdx#normal-reference-values-quick-lookup) opens with a prominent normal-reference quick lookup covering uroflowmetry / PVR, filling cystometry, pressure-flow studies, and quality-control pressures. The [Evaluation & Workup](docs/02-evaluation/index.mdx) landing page highlights the reference values. Keep the distinction between broad reference ranges and diagnostic cutoffs.
+- **Podcasts (`65df15e3`, June 28):** [Podcast Library](docs/08-resources/podcasts.mdx) includes BackTable Urology #309, "Advancing Urologic Reconstruction with Robotics"; Urology #304, "Optimizing Office Protocols for Urological Incontinence Procedures"; and Women's Health #121, "Urogynecology Surgical Trends & Training Insights." They appear in the reconstruction, FPMRS, and prolapse groups respectively. The library's last-updated label remains June 2026.
+
+### Earlier changes retained
+
+- Michigan Four-Wall, Glean, and ileal ureter video updates are documented in the June 19 handoff below, including the direct PMC MP4 and Grand Rounds / ScienceDirect source links.
+- PUL and the Higuchi abstract are documented in the June 23 handoff. The last recorded YouTube sync was June 23: 141 playlists / 1,546 unique videos, including the robotic VRAM video.
+- The VRAM video remains immediately before References. AUS mechanics and activation / deactivation videos are on the device page; operative-placement videos remain on the procedure page.
+
+### Workflow and verification
+
+- Standing user instruction: commit and push completed changes to `main` / `origin/main`, including future updates, unless the user changes that instruction.
+- Keep article video sections near the end, immediately before References. Keep dated media-sync counts separate from the date of a documentation-only save.
+- The VVF, urodynamics, and podcast implementation commits each passed `npm run lint`, `npm run typecheck`, `npm run build`, and `git diff --check`; see their dated changelog entries.
+
+---
+
+## Previous Handoff - 2026-06-27 — AUS device-page video cleanup
 
 Moved AUS device-mechanics videos to the device page and kept the surgical procedure page focused on operative videos.
 

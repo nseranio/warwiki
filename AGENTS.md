@@ -4,7 +4,19 @@ This file is for Codex to read at the start of every session. It captures the pr
 
 ---
 
-## Current handoff snapshot — April 25, 2026 (upper-tract technique fill + validation hardening)
+## Current handoff snapshot - September 11, 2026 (June updates saved)
+
+The requested June content work is saved in MDX and [CHANGELOG.md](CHANGELOG.md), committed through `65df15e3`, and pushed to `origin/main`. See the current handoff in [CLAUDE.md](CLAUDE.md) for the latest file links and implementation notes; the older snapshots below are historical.
+
+- Latest additions: VVF evidence and aligned technique pages (`bb9e5448`), prominent normal urodynamic reference values (`4bb4fd7c`), and BackTable Urology #309 / #304 plus Women's Health #121 (`65df15e3`).
+- Earlier completed work: Michigan Four-Wall / Glean / ileal ureter video resources, PUL with the Higuchi abstract, the video-library sync, and VRAM / AUS video placement. These are recorded in the June 19-27 changelog entries.
+- **Standing user instruction:** commit and push completed changes to `main` / `origin/main`, including future updates, unless the user changes that instruction.
+- **Video convention:** video sections belong near the end, immediately before References. AUS device-mechanics videos live on the device page; operative-placement videos live on the procedure page.
+- The most recent recorded media updates are the June 23 YouTube sync and June 28 podcast additions. This handoff save does not imply a September media refresh.
+
+---
+
+## Previous handoff snapshot — April 25, 2026 (upper-tract technique fill + validation hardening)
 
 The upper-tract technique fill is continuing on `origin/main`. Baseline pushed commits before the current Boari / ileal batch: `4442b99` (pyeloplasty) and `d2b59d1` (ureteral reimplantation).
 

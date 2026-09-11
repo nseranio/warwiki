@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 - Session handoff saved
+
+Updated [CLAUDE.md](CLAUDE.md) and [AGENTS.md](AGENTS.md) with the completed June VVF, urodynamics, and BackTable podcast work, including commit identifiers and article links. Earlier video, PUL, VRAM, and AUS changes remain recorded in the June entries below. All corresponding site edits were already saved in MDX and pushed through `65df15e3`.
+
+Recorded the user's standing instruction to push completed and future changes to `main`, plus the pre-References video placement convention and AUS device-versus-procedure split. This is a documentation save; clinical review dates and media-library refresh dates remain unchanged.
+
+**Verification:** `npm run lint`, all eight added local Markdown link targets, and `git diff --check` passed. No build or typecheck rerun was needed for these root-level Markdown notes.
+
+---
+
 ## 2026-06-28 — Podcast library BackTable refresh
 
 Added three new BackTable episodes to [Podcast Library](docs/08-resources/podcasts.mdx): BackTable Urology #309 on robotic reconstructive urology, BackTable Urology #304 on office protocols for incontinence / OAB procedures, and BackTable Women's Health #121 on urogynecology surgical trends and training insights. Updated the podcast library timestamp to June 2026.
