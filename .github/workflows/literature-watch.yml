@@ -1,0 +1,45 @@
+name: Monthly literature watch
+
+on:
+  schedule:
+    # Off the hour to reduce scheduler contention. UTC, first day each month.
+    - cron: '23 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: monthly-literature-watch
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test maintenance tools
+        run: node --test scripts/tests/*.test.js
+      - name: Collect publication metadata
+        run: node scripts/literature-watch.js
+      - name: Inventory review gaps
+        run: node scripts/audit-content.js --out reports/literature-inbox/content-inventory.json > reports/literature-inbox/content-summary.json
+      - name: Save complete inbox
+        uses: actions/upload-artifact@v4
+        with:
+          name: literature-inbox
+          path: reports/literature-inbox/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Report where to review
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const r = require('./reports/literature-inbox/latest.json');
+          console.log(`# Literature watch: ${r.records.length} candidates`);
+          console.log(`Window: ${r.from} to ${r.to}. Download the literature-inbox artifact for metadata and review gaps.`);
+          console.log('This run collects candidates only. It does not edit clinical recommendations or trigger a Vercel deployment. Society guidelines and FDA safety changes require separate review.');
+          NODE
