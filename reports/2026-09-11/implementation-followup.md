@@ -2,6 +2,8 @@
 
 This follow-up implements the approved recommendations after the initial evidence/storage release. Epic is paused; its retrievable plan is [EPIC-ROADMAP.md](../../EPIC-ROADMAP.md). Clinical source edits are scoped evidence updates, not clinician approval of the entire library.
 
+**Latest user direction:** remove Clinic quick access and the `/clinic` page; simplify the public evidence display to the existing last-updated presentation. A full site audit is requested, with a page-by-page error/currency log and priority for major guidelines, large trials, Cochrane reviews and high-yield practice changes. Clinic and the verbose evidence banner have been removed. The full page-by-page audit is in progress. The implementation record below describes what was built and tested before this direction; it is not an instruction to retain Clinic or the extra public evidence display.
+
 ## Implemented
 
 - **Clinic access:** a `/clinic` landing page for female UI, POP, male UI, BPH, male stricture, ED and female recurrent UTI; assessment/treatment/companion links, abbreviation filtering and browser-local saved topics. Homepage shortcuts and a compact Library menu improve retrieval without another account system.
@@ -21,11 +23,12 @@ Primary sources included the 2026 ACR contrast manual, AUA/EAU guidance, SNMMI/E
 
 The whole-corpus structural audit covers 1,186 source documents. It does not establish clinical validity of every historical recommendation. Broader clinician review remains especially important before any material is reused in patient-care documentation. Historical outcome estimates outside the scoped changes remain queued rather than stamped with a new review date.
 
-## Operational items requiring sign-in later
+## Account and workflow activation
 
-1. **Vercel stored builds:** the user authorized deletion of obsolete deployments. Current CLI credentials expired and the one official silent refresh failed. No old deployment was deleted. Resume with sign-in, inventory aliases/deployments, retain the actual live release and known-good rollback, remove obsolete unaliased builds, and verify measured storage. A smaller new build does not erase old stored deployments.
-2. **GitHub schedules:** the existing sign-in lacks `workflow` scope. Prepared commits `5ede68bb` and `682dda8f` are on local `codex/monthly-workflows`; apply both to current main after authorization, publish and manually verify the jobs. The active local monthly Codex editor can use the already-published collector script meanwhile; it requires this computer and app to be available.
-3. **User screen preference:** browser/sign-in interactions were paused while the user watches a show. Background code, research and headless checks continued. No new Epic work should begin until requested.
+1. **Vercel stored builds:** sign-in is complete and 41 obsolete deployments were deleted. Five remain listed; live/rollback and all alias records were preserved. See [deployment-cleanup.md](deployment-cleanup.md). The account usage meter still needs a reliable later reading; local build bytes are not metered storage.
+2. **GitHub schedules:** GitHub sign-in now includes the required workflow scope. Commits `8881cd95`, `d592751e` and `76cadfd4` are published on `main`; CI [34617018910](https://github.com/nseranio/warwiki/actions/runs/34617018910) passed. All workflows use Node 24. Literature collection runs on the first day of each month at 06:23 UTC and link checking at 07:13 UTC. The local monthly Codex editor remains active and requires this computer and app to be available.
+3. **First collector verification:** literature run [34617072232](https://github.com/nseranio/warwiki/actions/runs/34617072232) passed and saved 1,618 metadata candidates across seven topics for June 3–September 11. These are screening candidates, not verified updates. External-link run [34617068341](https://github.com/nseranio/warwiki/actions/runs/34617068341) correctly reported two DOI 404s and saved its artifact; repair and repeat verification are in progress.
+4. **User screen preference:** browser/UI interaction is now explicitly allowed. No new Epic work should begin until requested.
 
 ## Validation
 

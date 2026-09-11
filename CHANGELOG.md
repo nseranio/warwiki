@@ -6,6 +6,20 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Remove Clinic and simplify article updates; activate maintenance
+
+Removed Clinic Quick Access from the homepage, the `/clinic` route, its navigation links and exclusive data/styles/tests at the user's request. Removed the extra public Evidence Status banner; articles retain the existing last-updated presentation and internal scoped source metadata. General search-abbreviation support and accessible figure enlargement remain.
+
+Monthly GitHub literature and link jobs are published and authenticated. The literature inbox now leads with an explained shortlist of guidelines, Cochrane/systematic reviews, randomized trials, durable multicenter evidence and correction/safety notices, while retaining all records in JSON. Trial size, quality and clinical importance require source review; labels alone do not justify publication. The local monthly automation now follows these priorities across the entire site. Epic stays paused.
+
+Deleted 41 obsolete Vercel deployments after per-deployment project/state/alias checks. The live release, verified rollback and all alias records were preserved; five deployments remain listed. No paid-plan change was made. [Cleanup record](reports/2026-09-11/deployment-cleanup.md) distinguishes retained builds from delayed account storage accounting.
+
+**Validation for the simplified UI and collector:** an isolated checkout passed lint, typecheck, 32 unit tests, 47 maintenance tests, production build (139.32 MB), compiled-link checks and both retained browser tests. The homepage screenshot was visually inspected; no Clinic output or evidence-status banner remains. An initial browser run used a static server without clean-URL support; rerunning against the production site server passed.
+
+The full page-by-page clinical review requested by the user is ongoing, with source-specific correction logs under `reports/2026-09-11/full-site-review/`; it is not complete and must not be represented as a whole-site clinical sign-off.
+
+---
+
 ## 2026-09-11 — Clinical retrieval, source reliability and build safeguards
 
 Implemented the approved site improvements: seven-topic Clinic quick access with browser-local saved topics, compact Library navigation and clinical search abbreviations. Added 14 structured evidence comparisons and concise openings across the seven core clinical pathways. The complete 55-figure editorial/source-coverage and visual pass now has per-figure provenance, scope, text equivalents, clinician-review status and accessible enlargement; generators and SVGs stay in sync.

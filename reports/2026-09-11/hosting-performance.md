@@ -2,7 +2,7 @@
 
 Prepared September 11, 2026. Measurements describe local files; the Vercel account was not changed.
 
-**The final local deployment output is 139.55 MB, down from 566.08 MB: a 75.3% reduction.** This reflects the approved handout pause, quiz removal and video rendering changes alongside the other site updates. Old Vercel deployments still need retention/cleanup; their stored outputs do not shrink when new source code is optimized.
+**The final local deployment output is 139.55 MB, down from 566.08 MB: a 75.3% reduction.** This reflects the approved handout pause, quiz removal and video rendering changes alongside the other site updates. The subsequent authorized cleanup deleted 41 obsolete deployments; see [deployment-cleanup.md](deployment-cleanup.md). Existing deployment outputs do not shrink when new source code is optimized.
 
 ## The reported limit is deployment storage
 
@@ -53,7 +53,7 @@ The live Safari dashboard was inspected: **all four retention categories already
 3. Be aware that the current retention documentation protects the latest 20 ready production deployments and latest 20 ready non-production deployments, among other exceptions. A short retention setting alone can therefore leave substantial storage. The earlier April announcement mentioned a different protected count; use the current dashboard and current documentation. Policy deletion is asynchronous, and successful releases have a recovery period. [Current retention exceptions](https://vercel.com/docs/deployment-retention)
 4. Recheck both Deployment Storage and Functions Storage after the policy/cleanup has taken effect and inspect usage over time. Smaller new builds do not rewrite old deployments. [Storage optimization workflow](https://vercel.com/docs/deployment-storage/optimize)
 
-**Recommended order:** inventory the retained releases and aliases, review a specific obsolete-deployment cleanup list, deploy the substantially smaller build with handouts paused, then reassess. The user has authorized obsolete-deployment cleanup, but none has been performed: silent Vercel authentication refresh failed, and interactive sign-in is deferred while the user is watching a show. Avoid report-only/previews creating unnecessary releases going forward. The new output is smaller, but old releases still retain their original handout assets; this does not prove that today's account usage is already under 10 GB.
+**Cleanup completed:** sign-in is resolved, 41 obsolete deployments were deleted, and live/rollback/alias references were preserved. Five deployments remain listed. See [deployment-cleanup.md](deployment-cleanup.md) for exact counts and preserved releases. The dashboard meter is not yet a reliable post-cleanup measurement; do not claim the account is already under 10 GB.
 
 ## If storage still grows
 

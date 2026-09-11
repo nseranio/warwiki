@@ -127,11 +127,6 @@ const config: Config = {
           label: 'Special Populations',
         },
         {
-          to: '/clinic',
-          label: 'Clinic',
-          position: 'left',
-        },
-        {
           position: 'left',
           label: 'Library',
           items: [
@@ -164,7 +159,6 @@ const config: Config = {
           title: 'WARWIKI',
           items: [
             {label: 'About', to: '/about'},
-            {label: 'Clinic quick access', to: '/clinic'},
             {label: 'Foundations', to: '/docs/foundations'},
             {label: 'Treatment Atlas', to: '/docs/surgical-techniques'},
           ],

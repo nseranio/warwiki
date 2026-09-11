@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { validDate, makeQuery, collectTopic, normalize, mergeRecords } = require('../literature-watch');
+const { validDate, makeQuery, collectTopic, normalize, mergeRecords, shortlist, markdown } = require('../literature-watch');
 const { checkContent } = require('../check-citations');
 const topic = {id:'test', terms:['urethroplasty']};
 test('citation validation catches misleading labels and duplicate destinations', () => {
@@ -33,4 +33,75 @@ test('dedup retains topic membership and identifies retraction signals without q
   assert.equal(merged.length,1);assert.deepEqual(merged[0].topics,['a','b']);
   assert.equal(merged[0].prioritySignal,'correction-or-retraction-check');
   assert.equal(merged[0].doi,'10.1/abc');
+});
+const candidate = (id, title, types = [], journal = {}) => normalize({id, source:'MED', title, pubTypeList:{pubType:types}, journalInfo:{journal}, firstPublicationDate:'2026-09-01'}, 'test');
+test('high-yield screening recognizes title and Cochrane journal cues despite delayed index labels', () => {
+  assert.equal(candidate('1','Interventions for urinary incontinence',[],{title:'Cochrane Database of Systematic Reviews'}).screening.category,'cochrane-review');
+  assert.equal(candidate('2','Interventions for urinary incontinence',[],{medlineAbbreviation:'Cochrane Database Syst Rev'}).screening.category,'cochrane-review');
+  assert.equal(candidate('3','A Cochrane review of pelvic floor treatment').screening.category,'cochrane-review');
+  assert.equal(candidate('4','Pelvic floor treatment: a systematic review and meta-analysis').screening.category,'systematic-review');
+  const trial = candidate('5','A randomised trial of continence treatments');
+  assert.equal(trial.screening.category,'randomized-trial');
+  assert.match(trial.screening.reasons.join(' '),/Title cue/);
+  assert.match(trial.screening.editorialCheck,/study size/);
+  assert.doesNotMatch(trial.screening.reasons.join(' '),/large|high.quality|practice.changing/);
+});
+test('protocols, letters, case reports and exploratory trials stay out of the default shortlist', () => {
+  for (const [title, types] of [
+    ['Randomized controlled trial protocol for continence surgery',['Randomized Controlled Trial']],
+    ['Letter: Systematic review of prolapse care',['Letter']],
+    ['Device safety alert: a case report',['Case Reports']],
+    ['Randomized trial of a new approach: an exploratory pilot',['Randomized Controlled Trial']],
+    ['Feasibility of a randomized comparison',['Randomized Controlled Trial']],
+    ['Post-hoc analysis of a randomized trial',['Randomized Controlled Trial']]
+  ]) {
+    const record = candidate(title,title,types);
+    assert.equal(record.screening.shortlistEligible,false,title);
+    assert.ok(record.screening.exclusions.length,title);
+  }
+  const corrected = normalize({id:'corrected',source:'MED',title:'A pilot randomized trial',pubTypeList:{pubType:['Randomized Controlled Trial']},commentCorrectionList:{commentCorrection:[{type:'ErratumIn',id:'notice',source:'MED'}]}},'test');
+  assert.equal(corrected.screening.category,'correction-or-retraction');
+  assert.equal(corrected.screening.shortlistEligible,true);
+  assert.ok(corrected.screening.exclusions.length);
+});
+test('ordinary safety, surgical correction and nonrandomized titles do not imply high-yield notices or trials', () => {
+  assert.equal(candidate('1','Surgical correction of pelvic organ prolapse').screening.category,'other');
+  assert.equal(candidate('correction','Correction of pelvic organ prolapse').screening.category,'other');
+  assert.equal(candidate('retraction','Retraction of the foreskin during examination').screening.category,'other');
+  assert.equal(candidate('2','Safety and efficacy of a new device').screening.category,'other');
+  assert.equal(candidate('3','A non-randomized controlled comparison').screening.category,'other');
+  assert.equal(candidate('4','Adherence to guidelines in daily practice').screening.category,'other');
+  assert.equal(candidate('5','FDA device recall for a continence implant').screening.category,'safety-notice');
+  assert.equal(candidate('6','Guideline update on urinary incontinence').screening.category,'guideline');
+  assert.equal(candidate('7','Long-term outcomes of a multicentre study').screening.category,'multicenter-long-term');
+  assert.equal(candidate('8','Outcomes of a multicentre study').screening.category,'other');
+  assert.equal(candidate('9','Retraction Note: Outcomes of a continence trial').screening.category,'correction-or-retraction');
+  assert.equal(candidate('10','Outcomes of a continence trial: Erratum').screening.category,'correction-or-retraction');
+});
+test('shortlist ranks explicit evidence cues and never hides correction/safety notices behind a cap', () => {
+  const trial = candidate('trial','Randomized trial of continence care');
+  const guideline = candidate('guideline','Guidelines on continence care');
+  const cochrane = candidate('cochrane','Continence treatment',[],{title:'Cochrane Database of Systematic Reviews'});
+  assert.deepEqual(shortlist([trial,cochrane,guideline],2).selected.map(r=>r.id),['MED:guideline','MED:cochrane']);
+  const notice = candidate('notice','Correction to a randomized trial');
+  const safety = candidate('safety','Device recall affecting a continence implant');
+  const result = shortlist([trial,notice,safety],1);
+  assert.deepEqual(result.selected.map(r=>r.id),['MED:notice','MED:safety']);
+  assert.equal(result.omittedEligibleCount,1);
+  assert.throws(()=>shortlist([trial],0),/positive integer/);
+  const reviews = Array.from({length:10},(_,i)=>candidate(`review${i}`,`Systematic review of treatment ${i}`));
+  const balanced = shortlist([...reviews,trial,candidate('long','Long-term outcomes of a multicenter study')],4);
+  assert.deepEqual(balanced.selected.map(r=>r.screening.category),['systematic-review','systematic-review','randomized-trial','multicenter-long-term']);
+});
+test('Markdown leads with a concise shortlist while all additional records remain available in JSON', () => {
+  const records = [candidate('trial','Randomized trial of continence care'),...Array.from({length:100},(_,i)=>candidate(`case${i}`,`Unusual case report ${i}`,['Case Reports']))];
+  const before = JSON.stringify(records);
+  const output = markdown({from:'2026-06-03',to:'2026-09-11',records,searches:[]});
+  assert.ok(output.indexOf('## High-yield screening shortlist')<output.indexOf('## Search coverage'));
+  assert.match(output,/100 other records remain available/);
+  assert.match(output,/\[complete metadata file\]\(latest\.json\)/);
+  assert.match(output,/size unverified/);
+  assert.doesNotMatch(output,/Unusual case report/);
+  assert.equal(JSON.stringify(records),before);
+  assert.equal(records.length,101);
 });
