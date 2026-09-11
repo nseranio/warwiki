@@ -1,6 +1,8 @@
 # WARWIKI - Claude Session Reference
 
-**Latest travel checkpoint, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md). Clinic removal and the simple last-updated presentation are live in `6e50cdba`;41 obsolete Vercel deployments were deleted. The whole-site clinical audit and110-item OpenEvidence reconciliation remain in progress. The user paused work to board a flight; resume when they return. [Quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) is saved. Earlier snapshots below are historical.
+**Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
+
+**Latest travel checkpoint, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md). Clinic removal and the simple last-updated presentation are live in `6e50cdba`;41 obsolete Vercel deployments were deleted. The whole-site clinical audit and110-item OpenEvidence reconciliation remain in progress. The user resumed work after the flight. The frozen clinical correction commit `7d886c61` has passed exact-source build and independent diff review; check publication status in RESUME-HERE.md. [Quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) is saved. Earlier snapshots below are historical.
 
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 

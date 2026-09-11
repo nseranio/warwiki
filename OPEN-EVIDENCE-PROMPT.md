@@ -1,6 +1,6 @@
 # Quarterly OpenEvidence literature update
 
-Saved September 11, 2026 at the user's request. Copy the prompt below into OpenEvidence approximately every three months, when ready. Replace **[TIME WINDOW]** with explicit dates and **[DEPTH]** with the desired depth. No quarterly reminder has been scheduled.
+Saved September 11, 2026 at the user's request. Copy the prompt below into OpenEvidence approximately every three months, when ready. Replace **[TIME WINDOW]** with explicit dates and **[DEPTH]** with the desired depth. No separate reminder to run the user-supplied OpenEvidence query has been scheduled.
 
 Examples: “between 2026-06-01 and 2026-09-11”; “comprehensive, emphasizing major trials and guideline changes.” Use a modest date overlap with the last search to catch delayed indexing.
 
@@ -50,4 +50,4 @@ If a domain has no notable new publications in the time window, say so briefly r
 
 Paste or attach the complete response, including references, in this task or a later WARWIKI task. Compare it with existing pages, verify original sources, and document each item as added, already covered, deferred or rejected with a reason. OpenEvidence summaries are research leads; their statistics, recommendations and citations need verification before publication.
 
-The September 11 survey and reconciliation are saved in [the OpenEvidence review folder](reports/2026-09-11/open-evidence/README.md). The [monthly maintenance runbook](reports/2026-09-11/maintenance.md) describes the complementary automatic process. [Epic preparation remains paused](EPIC-ROADMAP.md).
+The September 11 survey and reconciliation are saved in [the OpenEvidence review folder](reports/2026-09-11/open-evidence/README.md). The [maintenance runbook](reports/2026-09-11/maintenance.md) describes the complementary automatic process. [Epic preparation remains paused](EPIC-ROADMAP.md).

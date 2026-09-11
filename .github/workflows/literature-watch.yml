@@ -1,16 +1,16 @@
-name: Monthly literature watch
+name: Quarterly literature watch
 
 on:
   schedule:
-    # Off the hour to reduce scheduler contention. UTC, first day each month.
-    - cron: '23 6 1 * *'
+    # Off the hour to reduce scheduler contention. UTC, first day of March, June, September and December.
+    - cron: '23 6 1 3,6,9,12 *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: monthly-literature-watch
+  group: quarterly-literature-watch
   cancel-in-progress: false
 
 jobs:

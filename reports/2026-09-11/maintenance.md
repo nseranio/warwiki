@@ -1,19 +1,21 @@
 # WARWIKI maintenance runbook
 
-## Monthly operation
+## Quarterly evidence review and monthly technical checks
 
-**Publication status, September 11:** GitHub and Vercel sign-ins are complete. The monthly GitHub workflows are published on `main` in commits `8881cd95`, `d592751e` and `76cadfd4`, using Node 24 LTS. CI run [34617018910](https://github.com/nseranio/warwiki/actions/runs/34617018910) passed. The local Codex automation is also active. The reliability release `eccd245a` was verified live; further work and deployment cleanup are described in [implementation-followup.md](implementation-followup.md).
+**Publication status, September 11:** GitHub and Vercel sign-ins are complete. The initial monthly GitHub workflows were published on `main` in commits `8881cd95`, `d592751e` and `76cadfd4`, using Node 24 LTS. CI run [34617018910](https://github.com/nseranio/warwiki/actions/runs/34617018910) passed. The local Codex automation is also active. The reliability release `eccd245a` was verified live; further work and deployment cleanup are described in [implementation-followup.md](implementation-followup.md).
+
+The user changed evidence review to every three months on September 11. The next planned cycle is December 2026. The existing automation ID is retained to avoid duplicates; its display name and schedule are quarterly. Technical link checks remain monthly.
 
 Two complementary mechanisms are active:
 
-1. **GitHub, first day of each month:** at **06:23 UTC**, `Monthly literature watch` runs a free Europe PMC metadata search and produces a downloadable `literature-inbox` artifact, retained for 90 days. It uses seven topic searches, a 100-day overlap, pagination, duplicate detection, and correction/retraction screening. It uses no paid AI API and makes no Vercel deployment. At **07:13 UTC**, `External link check` separately samples 200 URLs and saves a report.
-2. **This Codex task, second day of each month:** the active `WARWIKI monthly evidence update` automation reviews primary sources, compares existing pages, integrates verified meaningful updates, runs checks, and commits/pushes under the standing user instruction. It reports meaningful changes or failures. Ambiguous findings stay in a review queue. Automation ID: `warwiki-monthly-evidence-update`.
+1. **GitHub, March/June/September/December 1:** at **06:23 UTC**, `Quarterly literature watch` runs a free Europe PMC metadata search and produces a downloadable `literature-inbox` artifact, retained for 90 days. It uses seven topic searches, a 100-day overlap, pagination, duplicate detection, and correction/retraction screening. It uses no paid AI API and makes no Vercel deployment. On the first day of every month at **07:13 UTC**, `External link check` separately samples 200 URLs and saves a report.
+2. **This Codex task, March/June/September/December 2:** the active `WARWIKI quarterly evidence update` automation reviews primary sources, compares existing pages, integrates verified meaningful updates, runs checks, and commits/pushes under the standing user instruction. It reports meaningful changes or failures. Ambiguous findings stay in a review queue. Automation ID: `warwiki-monthly-evidence-update`.
 
 The local editor needs this computer on, the app running, and the repository available. The GitHub collector runs independently of the laptop. This is not a promise of unattended cloud clinical editing. If the editor misses a run, the next run must search back to the last completed update, not merely assume that 100 days covers the gap. [Official scheduled-task guidance](https://learn.chatgpt.com/docs/automations?surface=app)
 
 The first manually dispatched literature run, [34617072232](https://github.com/nseranio/warwiki/actions/runs/34617072232), passed and saved **1,618 metadata candidates across seven topics for June 3–September 11**. They are candidates for screening, not verified clinical updates. Initial external-link run [34617068341](https://github.com/nseranio/warwiki/actions/runs/34617068341) completed its check and artifact upload, then correctly failed because two DOI URLs returned 404. Repair and repeat verification are in progress; this is not an authentication or runner setup failure.
 
-GitHub schedules can be delayed and public-repository schedules are disabled after 60 days without repository activity. The old nightly external-link workflow was found disabled for this reason on September 11. Check the Actions page when returning after a long absence; the monthly editor checks this state too. This is a known limitation, not an always-on SLA. [GitHub schedule behavior](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+GitHub schedules can be delayed and public-repository schedules are disabled after 60 days without repository activity. The old nightly external-link workflow was found disabled for this reason on September 11. Check the Actions page when returning after a long absence; the quarterly editor checks this state too. This is a known limitation, not an always-on SLA. [GitHub schedule behavior](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
 ## Evidence review sequence
 
@@ -61,4 +63,4 @@ Reference and media maintenance now have reproducible source-only queues: see [r
 
 ## Quarterly user-supplied OpenEvidence survey
 
-Use [OPEN-EVIDENCE-PROMPT.md](../../OPEN-EVIDENCE-PROMPT.md) for the reusable prompt. The user plans to supply a broad survey approximately every three months, independently of the monthly maintenance. Save the supplied response, reconcile original sources against existing pages, and log included/already-covered/deferred/rejected items. The September 11 survey contains 110 references; [its reconciliation](open-evidence/README.md) is in progress. Do not treat a supplied summary as verified evidence.
+Use [OPEN-EVIDENCE-PROMPT.md](../../OPEN-EVIDENCE-PROMPT.md) for the reusable prompt. The user plans to supply a broad survey approximately every three months, aligned with the quarterly evidence maintenance. Save the supplied response, reconcile original sources against existing pages, and log included/already-covered/deferred/rejected items. The September 11 survey contains 110 references; [its reconciliation](open-evidence/README.md) is in progress. Do not treat a supplied summary as verified evidence.

@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-11 — Quarterly evidence cadence and checkpoint validation
+
+Changed literature collection and the existing Codex evidence-review automation from monthly to every three months, in March, June, September and December. The next planned cycle is December 2026. Technical external-link checks remain monthly. The existing automation ID is preserved, and the reusable OpenEvidence prompt remains at the repository root.
+
+The exact clinical checkpoint `7d886c61` passed full lint, typecheck, production build, rendered-link/size checks and two headless browser checks (search expansion and figure keyboard behavior). Three independent change-focused reviews covered 22 pharmacology, 27 clinical/special-population and 29 surgical files without identifying a blocking introduced issue. These checks do not establish correctness of all unchanged content. The page-by-page audit continues.
+
+---
+
 ## 2026-09-11 — Travel checkpoint for whole-site clinical review
 
 Saved a stable, unpublished clinical correction batch at the user's request before boarding. Domain reports record full-text reading separately from targeted source verification; the whole-site clinical audit remains incomplete. Corrections include drug-label/dose safety, continence/prolapse outcome interpretation, female urethral operative anatomy and source identity, neurogenic surveillance, autonomic dysreflexia, RPF trials and perioperative diabetes. Detailed changes, sources and unresolved claims are in [the page ledger](reports/2026-09-11/full-site-review/README.md).
