@@ -16,6 +16,8 @@ Upgraded the compatible Docusaurus/build/test stack and pinned Node 24 LTS. Pack
 
 **Verification:** production build 139.55 MB, compiled destinations (1,192 pages / 102,789 links and assets / 746 data links), source lint, typecheck, 38 component/API tests, 42 maintenance tests, four headless browser tests and whitespace checks pass. Desktop and phone screenshots were visually checked.
 
+**Publication:** `eccd245a` is live; remote CI 34607685640 and Vercel deployment 2Quu6iDEhcmxuksPpZTXmfgfQSft succeeded. New public Clinic and OASI page content was checked directly.
+
 **Epic remains paused.** [EPIC-ROADMAP.md](EPIC-ROADMAP.md) preserves modular HPI/A&P/operative planning and the resume steps; no templates or patient data were created. [Implementation details and verification](reports/2026-09-11/implementation-followup.md) distinguish completed work from the remaining sign-ins. Vercel old-deployment cleanup is authorized but has not occurred because credentials expired; the user asked to leave their screen alone. GitHub workflow commits `5ede68bb` and `682dda8f` remain on local `codex/monthly-workflows` until workflow-scope sign-in can finish.
 
 ---

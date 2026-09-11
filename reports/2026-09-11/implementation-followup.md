@@ -36,4 +36,4 @@ The whole-corpus structural audit covers 1,186 source documents. It does not est
 - All 55 figure renders, generator parity, intrinsic dimensions and text bounds were checked separately.
 - The initial integrated build exposed unsupported custom-heading syntax under the site's v4 mode; explicit anchor elements replaced it. One initial browser assertion expected an abbreviated title although the UI correctly used its full name; the test was corrected. Both final runs pass.
 
-Publication outcome is recorded after pushing; a local successful build is not itself a live deployment.
+Release `eccd245a95bcce01dbfadd13f66506fa84b3ee88` was committed and pushed to `origin/main`. [GitHub CI 34607685640](https://github.com/nseranio/warwiki/actions/runs/34607685640) completed successfully. [Vercel deployment 2Quu6iDEhcmxuksPpZTXmfgfQSft](https://vercel.com/nseranios-projects/warwiki/2Quu6iDEhcmxuksPpZTXmfgfQSft) reports completed successfully. Direct HTTP checks returned 200 and confirmed the new Clinic page and 2026 IUGA content on warwiki.org. This confirms publication of the smaller release, not reclamation of old deployment storage.
