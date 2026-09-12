@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twenty-second continuation: fine, tonsil and Péan hemostats
+
+Corrected Jacobson, Schnidt, Péan and Rochester-Péan instrument identity, model-specific geometry and dimensions, tissue handling and inappropriate pressure/safety claims; reconciled four database records. Complete originals and revisions read. Preserved all 19 inherited reference entries and read all 15 unique indexed abstracts, two complete mains, eleven actual journal figures and seven selected catalog pages. Exact remaining full-paper/IFU/supplement gaps are recorded.
+
+Lint, typecheck, 32 unit tests, 52 maintenance tests, production build and article/database browser checks pass. Output is 131.54 MB. Ledger: 664 full current MDX reads, 637 scoped updates, 517 unreviewed. Publication verification pending; see the [release record](reports/2026-09-12/twenty-second-continuation-release.md). The whole-site review continues with the complete Cochrane traditional-sling package and remaining source/page work.
+
+---
+
 ## 2026-09-12 — Twenty-first continuation: hysterectomy evidence and operative-page reconciliation
 
 Rebuilt vaginal hysterectomy around appropriate selection, apical support, flexible operative stages and source-specific outcome evidence. Corrected Jeppson/FINHYST attribution, mixed-route denominators, device safety claims, obsolete complication rankings and routine gabapentin. Reconciled vNOTES with the 2026 direct VANH trial and sparse urinary-injury evidence. Videos remain before references; no public review banner added.

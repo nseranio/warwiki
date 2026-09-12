@@ -1,0 +1,167 @@
+{
+  "checkedAt": "2026-09-12T19:58:21.662Z",
+  "sourceBaseCommit": "b4ae2de971dafdd3f09ef159ebfbe88cbc7e7769",
+  "scope": "Four changed documentation routes, actual citation-anchor clicks, desktop/mobile overflow and horizontal table scrolling on local production build. Clinical/source review is separate.",
+  "results": [
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/jacobson",
+      "checks": {
+        "http200": true,
+        "0.8": true,
+        "bulldog": true,
+        "18 cm": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/schnidt",
+      "checks": {
+        "http200": true,
+        "half serrations": true,
+        "18.5 cm": true,
+        "one open ring": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/pean",
+      "checks": {
+        "http200": true,
+        "220 mm": true,
+        "ligated stump": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/rochester-pean",
+      "checks": {
+        "http200": true,
+        "45.5 cm": true,
+        "14 cm": true,
+        "Carmalt": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/jacobson",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twenty-second-desktop-0.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/jacobson",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twenty-second-mobile-0.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/schnidt",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twenty-second-desktop-1.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/schnidt",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twenty-second-mobile-1.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/pean",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twenty-second-desktop-2.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/pean",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twenty-second-mobile-2.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/rochester-pean",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twenty-second-desktop-3.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/rochester-pean",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twenty-second-mobile-3.png"
+    }
+  ],
+  "instrumentDatabase": {
+    "checkedAt": "2026-09-12T20:03:07.331Z",
+    "scope": "Visible name/category/eponym search, actual article links, category filter and mobile table scrolling. Stored use descriptions are neither rendered nor searched by this table.",
+    "priorAttempt": "Incorrect test expected the non-rendered use field in visible text; corrected test assumptions after inspecting component and rendered table. No site code change.",
+    "results": [
+      {
+        "term": "Jacobson",
+        "expected": [
+          "Jacobson"
+        ],
+        "actual": [
+          "Jacobson"
+        ],
+        "searchPassed": true,
+        "articleLinkPassed": true
+      },
+      {
+        "term": "Schnidt",
+        "expected": [
+          "Schnidt (Tonsil)"
+        ],
+        "actual": [
+          "Schnidt (Tonsil)"
+        ],
+        "searchPassed": true,
+        "articleLinkPassed": true
+      },
+      {
+        "term": "Péan",
+        "expected": [
+          "Péan",
+          "Rochester-Péan"
+        ],
+        "actual": [
+          "Péan",
+          "Rochester-Péan"
+        ],
+        "searchPassed": true,
+        "articleLinkPassed": true
+      }
+    ],
+    "filterPassed": true,
+    "errors": [],
+    "noMobileOverflow": true,
+    "tableScrollable": true,
+    "passed": true
+  }
+}
