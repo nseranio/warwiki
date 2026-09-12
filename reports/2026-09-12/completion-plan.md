@@ -17,7 +17,7 @@ The user explicitly requested completion after the previous release stopped at 1
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; next all 44 pages in `04h-fistula-repair` with a separate ledger.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The fourth batch is validated and awaiting publication verification; resume edits after root confirms the committed snapshot. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
+The fourth batch is live as `2322d0b9` with exact-commit CI/Vercel and six production checks passed. The fifth batch is in progress. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
 
 ## Retained preferences
 

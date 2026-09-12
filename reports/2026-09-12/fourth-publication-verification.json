@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-09-12T09:10:03.556090+00:00",
+  "sourceCommit": "2322d0b9af6adf92b99c2cadbba54b14a2483312",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "2322d0b9af6adf92b99c2cadbba54b14a2483312",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34684857810"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/DMj2QUwdG8V9YcQG7JkdzfgZ8APz",
+      "updated_at": "2026-09-12T09:05:34Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {},
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/grafts/buccal-mucosa",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/grafts/buccal-mucosa",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "quasi-randomized": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/grafts/penile-preputial-skin",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/grafts/penile-preputial-skin",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "PeeBuSt": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04c-urinary-diversion/kock-pouch",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04c-urinary-diversion/kock-pouch",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "intussuscepted": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/instruments/staplers",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/staplers",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "48230M-05": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {},
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}

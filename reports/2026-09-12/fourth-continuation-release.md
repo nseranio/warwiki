@@ -18,7 +18,7 @@ The Kock illustration is withheld pending anatomical validation; the BMG schemat
 
 ## Publication
 
-Validation complete; commit/push and exact-commit CI/Vercel/production verification follow under standing authorization.
+Published as **`2322d0b9af6adf92b99c2cadbba54b14a2483312`** on `main/origin/main`. GitHub CI **34684857810** succeeded for that exact commit; Vercel deployment **DMj2QUwdG8V9YcQG7JkdzfgZ8APz** succeeded. Six direct production checks passed, including corrected graft/reservoir/device text and the removed `/clinic` route returning404. See `fourth-publication-verification.json`.
 
 ## Continued work
 
