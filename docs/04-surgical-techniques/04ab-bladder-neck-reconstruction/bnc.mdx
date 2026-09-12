@@ -7,149 +7,140 @@ slug: /surgical-techniques/04ab-bladder-neck-reconstruction/bnc
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
 
+
 # Bladder Neck Contracture (BNC)
 
-Reconstruction of the bladder neck after **endoscopic prostate surgery** (TURP, HoLEP, ThuLEP, monopolar / bipolar resection). Incidence ~2–4.7%. Per AUA 2023, transurethral incision and bladder-neck resection have comparable outcomes, and **repeat endoscopic treatment may be necessary**. ≥ 2 prior failed endoscopic treatments is the strongest predictor of further endoscopic failure. Open Y-V plasty has reported 100% patency (Shamout 2022) but a high rate of persistent storage symptoms; staged AUS or sling after stable patency yields 91% patient satisfaction with continence (Brede 2014).
+This atlas concerns stenosis of the bladder neck after **benign prostate surgery**, such as TURP or HoLEP. Post-prostatectomy [VUAS](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/vuas) involves a different anastomosis and remaining sphincter anatomy. Select treatment by lumen, length, prior procedures/radiation, bladder function, continence and patient goals.<sup>[[1]](#ref1)</sup>
 
-> Success rates should be interpreted cautiously — definitions of success vary (patent lumen, continence, freedom from reintervention), follow-up intervals differ, and most data come from small case series.
+## Decision framework
 
----
+| Clinical situation | Main considerations |
+|---|---|
+| Nonobliterative post-BPO BNC | Transurethral resection or hot-knife incision are guideline-supported initial treatments; choose the technique for the anatomy and safe access |
+| Recurrent but patent lumen | A further endoscopic procedure may be reasonable; repeated recurrence or unacceptable treatment burden warrants reconstruction discussion, without a fixed two-failure rule |
+| Complete obliteration | Do not attempt endoluminal treatment; assess reconstructive access, tissue availability and drainage alternatives |
+| Concurrent SUI | Establish stable patency and assess bladder/sphincter function before continence surgery; an AUS may be appropriate for substantial sphincteric leakage |
+| Radiation, necrosis or fistula | Reassess tissue viability and bladder salvageability; reconstructive or diversion planning may require a specialist team |
+| Devastated outlet | Consider chronic suprapubic drainage, selected closure with a dependable alternate route, or diversion according to bladder function and goals |
 
-## Decision Framework
+**Avoid deep posterior-stenosis incisions at 6 and 12 o'clock. Mitomycin C should remain within a clinical trial under EAU guidance, and posterior urethral stents are discouraged.** Drug-coated balloons in BNC are off-label; novel graft or mucosal-realignment procedures are not established first-line replacements.<sup>[[1]](#ref1)</sup>
 
-| Clinical Scenario | First-Line | Second-Line (if first fails) | Recalcitrant / Refractory |
-|---|---|---|---|
-| **First-time post-TURP / endoscopic-BPH BNC** | [TUIBNC](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc) (Collins / cold knife at 3 & 9 o'clock) or BN resection | Repeat endoscopic ± mitomycin C; [TUITMR](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment) (Abramowitz 2021) | Open / robotic [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty) or [T-plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc) |
-| **Highly recurrent BNC (≥ 2 endoscopic failures, non-radiated)** | Open or laparoscopic [Y-V plasty](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty) (Shamout 2022; Zang 2022) | [Primary re-anastomosis (open / robotic / transvesical)](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/primary-reanastomosis) (Pfalzgraf 2011; TURNS 2018/2022; Lee/Eun 2025); [robotic subtrigonal BMG inlay](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay) (Avallone 2019) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **BNC + concurrent severe SUI** | Stabilize patency endoscopically or surgically → delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) or [male sling](/docs/surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings) (Brede 2014; ~91% satisfaction) | Reconstruction + delayed [AUS](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **Orthotopic neobladder BNC** | Endoscopic incision + 1-month CIC (58% vs 32% success with vs without; Pariser 2015) | Repeat endoscopic ± steroid injection | [Continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) |
-| **Devastated bladder outlet (failed reconstruction; densely fibrotic)** | Permanent suprapubic tube or chronic catheter drainage | [Bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) + [continent catheterizable channel (Mitrofanoff)](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels) | [Urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) ± cystectomy (~5–8% of refractory BNC; Martins 2021) |
+The database links to the detailed techniques. Reported outcomes identify selected cohorts and should not be compared as if they were trials in equivalent patients. Patency, dryness and freedom from additional procedures are different endpoints.
 
----
 
 ## Treatment Database
 
 export const bncTechniques = [
-  // ===== ENDOSCOPIC — FIRST-LINE =====
   {
     name: "Transurethral Incision of BNC (TUIBNC)",
-    aka: "BNI — Collins / cold knife",
+    aka: "BNI — electrocautery Collins or other incision technique",
     tier: "Endoscopic — First-Line",
-    successRate: "82% (1×) / 94% (2×)",
-    bestFor: "First-line treatment of BNC after endoscopic prostate surgery (TURP/HoLEP).",
+    successRate: "101/123 after one; 116/123 after two (mixed cohort)",
+    bestFor: "Nonobliterative BNC; see anatomy, depth and continence precautions.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc",
   },
   {
     name: "Transurethral Bladder Neck Resection (TURBN)",
     tier: "Endoscopic — First-Line",
-    successRate: "Comparable to incision",
-    bestFor: "First-time BNC when surgeon prefers loop-electrode resection over cold-knife incision.",
+    successRate: "Observational evidence; see detailed technique",
+    bestFor: "Nonobliterative post-BPO BNC suitable for controlled loop resection.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-bladder-neck-resection",
   },
   {
     name: "Balloon Dilation for BNC",
-    tier: "Endoscopic — First-Line",
-    successRate: "~59% standalone / 82–94% combined",
-    bestFor: "Adjunct to incision/resection; standalone option when continence preservation is paramount.",
+    tier: "Endoscopic — Adjunct / Novel",
+    successRate: "Balloon-only and combined-incision outcomes differ",
+    bestFor: "Selected nonobliterative disease or access before incision; posterior DCB use is off-label.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/balloon-dilation-bnc",
   },
-
-  // ===== ENDOSCOPIC — ADJUNCT / NOVEL =====
   {
     name: "Transurethral Incision with Transverse Mucosal Realignment (TUITMR)",
     aka: "Abramowitz endoscopic Y-V",
     tier: "Endoscopic — Adjunct / Novel",
-    successRate: "89% (1×) / 100% (2×)",
-    bestFor: "Recurrent BNC needing mucosal coverage; useful in radiated patients.",
+    successRate: "17/19 initial; 19/19 after repeat, median 6 mo",
+    bestFor: "Evolving endoscopic mucosal-realignment option; mixed BNC/VUAS index cohort.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment",
   },
-
-  // ===== RECONSTRUCTION — ROBOTIC =====
   {
     name: "Y-V Plasty (Robotic / Open)",
     tier: "Reconstruction — Robotic",
-    successRate: "75–90.5% patency",
-    bestFor: "Recalcitrant BNC after ≥2 failed endoscopic treatments; non-radiated patients with stenosis ≤2 cm.",
+    successRate: "Selected observational cohorts",
+    bestFor: "Refractory stenosis with viable bladder tissue that can reach the opened outlet without tension.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/yv-plasty",
   },
   {
     name: "Robotic Subtrigonal BMG Inlay",
     tier: "Reconstruction — Robotic",
-    successRate: "Promising early data",
-    bestFor: "Refractory BNC where mucosal augmentation is preferred over excision/anastomosis.",
+    successRate: "Single post-BPH BNC case report",
+    bestFor: "Specialist graft augmentation; distinct from perineal dorsal onlay.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/subtrigonal-inlay",
   },
   {
     name: "Robotic Bladder Flap Posterior Urethroplasty",
     tier: "Reconstruction — Robotic",
-    successRate: "78% (7/9) at 21 wk",
-    bestFor: "Recalcitrant BNC requiring transection + VUA reconstruction from an anterior bladder-wall flap.",
+    successRate: "7/9 without recurrence, mean 21.1 wk",
+    bestFor: "Selected mixed BNC/VUAS defects requiring a new flap-based anastomosis.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/robotic-bladder-flap-urethroplasty",
   },
   {
     name: "Transvesical RARP for Recalcitrant BNC",
     aka: "TvRARP — Yu 2025",
     tier: "Reconstruction — Robotic",
-    successRate: "100% at ≥6 mo",
-    bestFor: "Recalcitrant post-HoLEP BNC where residual prostate tissue is the source of recurrent contracture.",
+    successRate: "8 selected post-HoLEP cases; minimum 6 mo",
+    bestFor: "Exceptional salvage with remaining prostate tissue; not routine BNC treatment.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transvesical-approaches",
   },
-
-  // ===== RECONSTRUCTION — OPEN =====
   {
     name: "T-Plasty",
     tier: "Reconstruction — Open",
-    successRate: "100% at 45 mo",
-    bestFor: "Highly recurrent post-TURP/BPH BNC at centers without robotic platform; longest-follow-up open option.",
+    successRate: "27/27 evaluable of 30, median 45 mo",
+    bestFor: "Selected recurrent post-BPO BNC; one center with overlapping reports.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/t-plasty-bnc",
   },
   {
     name: "Tanagho Flap",
     tier: "Reconstruction — Open",
-    successRate: "—",
-    bestFor: "Female urethral reconstruction with total urethral loss; complex incontinence unsuitable for AUS.",
+    successRate: "Historical heterogeneous series",
+    bestFor: "Bladder-tube reconstruction for selected outlet/urethral loss; not routine post-BPO BNC.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/tanagho-flap",
   },
   {
     name: "Salvage Prostatectomy (Reconstructive)",
     tier: "Reconstruction — Open",
-    successRate: "73–83% continence (BN closure variant)",
-    bestFor: "Necrotic post-radiation/HIFU/cryo prostate with devastated outlet, prostatic abscess, or urorectal fistula.",
+    successRate: "Highly selected salvage cohorts",
+    bestFor: "An unsalvageable remaining prostate in complex outlet disease; abscess alone does not mandate prostatectomy.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/salvage-prostatectomy",
   },
-
-  // ===== CONTINENCE-CREATING OUTLET =====
   {
     name: "Bladder Neck Closure",
     tier: "Continence-Creating Outlet",
-    successRate: "Definitive",
-    bestFor: "Devastated or irreparably incontinent bladder neck; paired with a continent catheterizable channel.",
+    successRate: "Closure, continence and revision are separate outcomes",
+    bestFor: "Selected devastated outlet with permanent SPT or another dependable drainage route.",
     slug: "/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure",
   },
-
-  // ===== SALVAGE / DIVERSION =====
   {
     name: "Permanent Suprapubic Catheter",
     tier: "Salvage / Diversion",
-    successRate: "Temporizing or definitive",
-    bestFor: "Devastated bladder outlet in non-reconstruction candidates; bridge or definitive drainage.",
+    successRate: "Drainage option",
+    bestFor: "Temporary or long-term drainage according to reconstruction suitability and patient goals.",
     slug: "/docs/foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter",
   },
   {
     name: "Continent Catheterizable Channel (Mitrofanoff)",
     tier: "Salvage / Diversion",
-    successRate: "Salvage / definitive",
-    bestFor: "Continent abdominal-stoma alternative to permanent SPT after failed outlet reconstruction.",
+    successRate: "Catheterizable access; long-term revision risk",
+    bestFor: "Selected patients with safe storage and reliable catheterization; outlet closure/augmentation only when indicated.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels",
   },
   {
     name: "Urinary Diversion ± Cystectomy",
     tier: "Salvage / Diversion",
-    successRate: "~5–8% of refractory BNC",
-    bestFor: "Last resort for failed reconstruction in radiated, fibrotic, or comorbid patients.",
+    successRate: "Individual reconstruction-specific outcomes",
+    bestFor: "Unsuitable bladder/outlet or unacceptable further reconstructive burden; choose with the patient.",
     slug: "/docs/surgical-techniques/04c-urinary-diversion",
-  },
+  }
 ];
+
 
 export const bncColumns = [
   {
@@ -171,12 +162,12 @@ export const bncColumns = [
   },
   {
     key: 'successRate',
-    header: 'Success Rate',
+    header: 'Evidence / reported outcome',
     fallback: '—',
   },
   {
     key: 'bestFor',
-    header: 'Best for / indication',
+    header: 'Clinical use',
   },
 ];
 
@@ -187,3 +178,7 @@ export const bncColumns = [
   filterLabel="Tier"
   entityLabel="techniques"
 />
+
+## References
+
+<a id="ref1"></a>1. European Association of Urology. EAU Guidelines on Urethral Strictures. 2026. Disease management in males, sections 6.3.5–6.3.6. [Guideline](https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males).

@@ -4,23 +4,22 @@
 
 ## Current work and publication
 
-The September 12 continuation batch changes **170 documentation files**. The [release record](reports/2026-09-12/continuation-release.md) tracks exact validation and publication status. **Live site commit is `c4d3f30a`**, with CI 34676588480 and commit-specific Vercel deployment status both successful. Five production pages and the removed `/clinic` route were checked directly. The prior site commit was `b8b60a0e`.
+The second September 12 continuation batch changes **111 documentation files**. The [current release record](reports/2026-09-12/second-continuation-release.md) tracks final checks and publication; **the currently confirmed live site remains `c4d3f30a` until that new record reports otherwise**. Prior batch CI 34676588480 and Vercel passed.
 
-Local validation for the new batch: full lint, typecheck, 32 component tests, 50 maintenance tests and production build passed. Build is **139.22 MB**; all 101,564 compiled local links/assets and 731 data-link literals passed. All 170 changed documentation routes passed browser checks. Browser and publication evidence is saved in the release record.
+The new batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **137.95 MB**, all100,904 compiled links/assets and730 data links valid. All111 changed pages pass browser checks plus search/figure interaction tests. Commit/push and CI/Vercel/production verification are next; read the current release record for the latest result.
 
 ## Review coverage and next work
 
-The [central ledger](reports/2026-09-11/full-site-review/README.md) contains every one of the **1,186 documentation files**; **293** have full reading recorded against current source hashes and **275** have scoped updates. Full MDX reading and primary-paper reading are recorded separately. No complete clinical clearance is asserted.
+The [central ledger](reports/2026-09-11/full-site-review/README.md) contains all **1,186 documentation files**; **396** have full reading recorded against current hashes and **372** have scoped updates. No complete clinical clearance is asserted. Current source reads include 95/95 pharmacology, 73/73 clinical conditions, 46/46 special populations, 144/451 surgical techniques and 36/38 evaluation pages.
 
-- Clinical conditions: all **73/73** read. Continue unresolved source/companion checks from `clinical-conditions.json`.
-- Urethral and upper-tract techniques: all **98** in the original domain read; `operative_review` has the remaining surgical families. Next prepared family is bladder-neck reconstruction; all 21 pages were read during the release freeze, with corrections still pending.
-- Pharmacology: **71/95** recorded; `auth_handoff` has read additional pain/Botox pages in temporary research files and must integrate them after the freeze. Reassign foundational tools/principles after pharmacology is completed.
-- Special populations: **18/46** recorded, including all **17 trauma** pages. `workflow_readiness` has prepared further gender/women/survivorship reads. Correct SOC8 eligibility, registry updates and primary evidence before recording updated hashes.
-- Evaluation: **28/38** read. Root next: the seven remaining micronutrient pages, then three assessment/examination pages. Examine the 17 PMID-title flags on male/female examination references.
-- Remaining foundations, imported History biographies/data, resources, journal club, source pages and clinical data still need actual reads and substantive review. Targeted corrections do not clear whole pages.
-- Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube 13%/58% figures belong to the 1998 66-patient report (7/54 vs 7/12), not the original 1993 paper. Coordinate disjoint edits.
+- `auth_handoff`: all 231 foundation/tools MDX pages next, starting with energy/device safety; new `tools.json/md`. Coordinate shared-data edits.
+- `operative_review`: 04c diversion index/remaining reservoirs, then other surgical families except04h. Original98 urethral/upper-tract,21 bladder-neck,19 bladder and4 diversion reads are saved. Independent bladder, nutrition and female-exam change reviews are recorded.
+- `workflow_readiness`: all44 pages of04h-fistula-repair next. Clinical/special-population scope reports stay available for unresolved companion/source issues.
+- Root: assessment-tools original399lines has been fully read but is **not yet corrected or added to the ledger**. Work in `/tmp/warwiki-assessment-*` includes complete34DOI metadata/available-abstract checks, full standing-cough-test stratification paper and MsFLASH short-form paper, and initial instrument/PISQ/ICS source retrieval. Correct MSIGS definitions, screening-score misuse, FSFI-6 pain domain, FSDS versus FSDS-R, PROMIS/PISQ and pad/urethral-satisfaction generalizations. The male examination page has **not yet been fully read**.
+- Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data need actual reads and substantive review. Targeted companion corrections do not clear whole pages. Root retains perioperative care/anatomy/surgical principles/skills.
+- Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube13%/58% figures belong to the1998 66-patient report(7/54 vs7/12), not the original1993 paper. Perioperative nutrition/electrolyte pages also require full reads and thiamine/refeeding alignment.
 
-The temporary release freeze has been **released**; all three agents resumed tracked corrections after commit. Their new source edits are the next batch. Do not overwrite them or confuse the current working tree with the published release.
+During final release validation all agents are researching read-only. Root will release the freeze once the commit is saved, then continue work without stopping at deployment. Do not overwrite another agent's working source or mistake it for the published release.
 
 ## Evidence and saved material
 
