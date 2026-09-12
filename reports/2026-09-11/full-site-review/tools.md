@@ -2,8 +2,8 @@
 
 Actual full MDX reads, including frontmatter, tables and references. Device labeling, source identity and consequential clinical/thermal safety claims receive targeted primary-source checks appropriate to the page. Source read extent and access limits are recorded; fullTextRead is not clinical clearance. All 231 physical tools pages remain in scope. Unread pages are not entered as reviewed.
 
-- Actual full reads: **39/231**.
-- Updated after selected primary checks: **36**.
+- Actual full reads: **56/231**.
+- Updated after selected primary checks: **53**.
 - Checked without additional edits: **1**.
 - Entries explicitly marked pending still require their documented follow-up; no source read implies clinical clearance.
 
@@ -241,7 +241,7 @@ Actual full MDX reads, including frontmatter, tables and references. Device labe
 
 ### docs/01-foundations/tools/instruments/staplers/index.mdx
 - Status: updated; full text read: true; clinical verification complete: false.
-- SHA-256: `e4ff5bd7b79cd5beb14b9c23fe033a3a5f5653f5049a73b376d870712e3bed4a`.
+- SHA-256: `4e5a3e9f1465a931fe531f23ed14cfb2dafead6ffe3d8713daf19d5cda34c886`.
 - Entire original MDX and revised content read, including tables and references.
 - Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
 - Expanded targeted safety edit into full-content review: removed universal cartridge/color/height and polymer-equivalence claims, TA safety ranking from MAUDE, en-bloc zero-risk claim, incorrect Cochrane scope and causal neobladder superiority. Preserved 2026 recall and donor-artery Hem-o-lok contraindication. Corrected clinical versus animal context, incomplete imaging, denominators and omitted adverse outcomes. Mastroianni retrospective design and sex-sparing confounding retained; old linked section anchor preserved.
@@ -323,3 +323,173 @@ Actual full MDX reads, including frontmatter, tables and references. Device labe
 - Mann2022 included only156men who had erosion; its estimates are not population erosion risk. Bentellis2021 excluded infection/erosion revisions;56.5% nonmechanical category is not all atrophy. Lee2025 timing1.74years was exploratory and nonsignificant. Capsulotomy expert review does not establish universal superiority. Manufacturer InhibiZone registry has voluntary-reporting, nonoperative-infection and mortality/follow-up limitations.
 - UroActive2026 complete primary abstract read (PMID41564274); six-man first-in-human finding used only to correct outdated conceptual-only status, not recommend routine clinical adoption. Full first-in-human paper not retrieved. Regional device authorization, female/pediatric indications and detailed operative techniques require their own model/jurisdiction/source review.
 - Flagged AUS procedure companion scope to operative_review; no source changes made outside owned subtree.
+
+### docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `fd37cf07592035315e0424079eb7d88d695b3c83840590f4a404a4b406819a7d`.
+- Entire original MDX, all 57 references and current rewritten content read. Updated model construction/availability, device handling, MRI, recall actions, candidate boundaries, and major evidence interpretation.
+- Complete primary MED abstracts of all 57 original DOI-bearing references read using /tmp/tools-prosthetics-primary.json. Major source endpoint/denominator checks include Eid, Bole, Chawareb, Miller, Cocci, Luna, mechanical-revision cohorts, and combined AUS/IPP studies. Original full papers were not all accessed; pooled results and observational estimates retain their limitations.
+- AMS 700 TENACIO IFU 51558342-01A: complete text of pages 1–17 and 41–44 read, including tables/captions; operative pages 18–40, graphical figures and remaining symbol pages not reviewed. /tmp/tools-ams700-tenacio-ifu.pdf/.txt. Current AMS 700 manufacturer model/ordering sections read. Ambicor 50654573-01C complete English text pages 1–10 read including tables and figure captions, not rendered figures or other languages; /tmp/tools-ambicor-ifu.pdf/.txt.
+- Titan Prime current manufacturer main body and full brief safety text, June 2026 approval/launch announcement, FDA P000006/S072 record and linked GUDID record read. Full model-specific operative IFU not retrieved. Manufacturer launch statement distinguishes phased late-2026 access from FDA approval on June 2. Bench tubing/button findings are not clinical durability evidence.
+- Infla10 current selected product/model/ordering/US-availability sections and entire four-page manufacturer Safety Information INF10-07-03.2020 read (/tmp/tools-infla10-safety.pdf/.txt); the currently linked safety document is dated 2020 and is not a complete operative IFU. Corrected AX length/girth expansion and hydrophilic coating of components/connectors/RTEs. Availability explicitly not US.
+- FDA TENACIO recall event 97603: all seven associated record listings and complete action bodies for records 216086 and 216088 read; exact listed models/lots, unused stock return, no action for functioning implanted affected devices, evaluation for inflation/deflation symptoms. This is not an all-model recall or prophylactic-explant recommendation. FDA Titan Touch event 91800 first ten listings and complete record 198914 read; exact affected-lot matching retained, not all 17 record bodies reviewed.
+- EAU 2026 ED entire penile-prosthesis section and priapism immediate-prosthesis/recommendations sections read, not entire sexual-health guideline. Corrected mandatory third-line sequencing, universal HbA1c threshold, zero pelvic risk, guaranteed satisfaction/lifespan, and blanket post-shunt early implantation. Fifth ICSM 2025 penile-prosthesis recommendation paper DOI10.1093/sxmrev/qeaf001: full abstract/metadata only; full recommendation text remained inaccessible and was not used to invent recommendations.
+- Coloplast August 2026 two-page MRI memo entire text read: current Titan/Prime conditions differ from Genesis/legacy devices. Removed blanket safe-to-3T description and retained need for exact gradient/RF/SAR/time conditions. Current FDA/IFU data do not independently certify compatibility of every historic model.
+- Cocci systematic review May 26, 2026 correction DOI10.1038/s41443-026-01282-z was checked via full indexed publisher correction text: added omitted author Afonso Morgado, not outcome data. Original review abstract read; full review tables/supplements not obtained. Bole primary retrospective comparison and virulent-organism definition corrected; Chawareb OR0.22 is association, not universal causal antifungal mandate.
+- Flagged overlapping surgical implant-models/index/intraoperative-setup/infection/complications descriptions to operative_review. No surgical source files edited. Emerging device long-term comparative outcomes, exact local availability and unaccessed full-paper details remain limitations.
+
+### docs/01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `db277b80095292c3f70607941a671051e0cb27ca07ab7a1bdaf0f8a62f2e0b77`.
+- Entire original MDX, all 28 references and current rewritten content read. Device identity/material/coating/size, indication/safety boundaries, major comparative outcomes and selected source-denominator claims reviewed.
+- All 27 DOI-bearing primary MED abstracts from the 28 original references read using /tmp/tools-prosthetics-primary.json; historical Bretan 1989 reference had no DOI/abstract retrieved. Full original source papers were not all obtained, so manufacturer-form registry, EHR cohorts and small neophallus/salvage reports are not represented as causal comparative evidence.
+- Current Tactra manufacturer product body and complete brief safety text 51519609-01A read, not complete operative IFU. Corrected Tactra-versus-Spectra identity, Nitinol and dual silicone, false Parylene/articulating-segment claims, mechanical-failure guarantee and trimming/bending/tissue-pressure precautions.
+- Current Genesis manufacturer main body and full brief safety PM16954 April 2024 read: hydrophilic surface and 9.5/11/13 mm widths. Current Rigi10 selected device details/ordering/availability sections read: stainless steel/titanium, 9–14 mm, 14 mm not available in US. Full operative manuals not retrieved. TUBE manufacturer Spanish product body and construction section of English brochure read, not whole brochure; silver/PTFE/silicone, distinct from Shah.
+- EAU 2026 ED penile-prosthesis and priapism implantation/recommendation sections read. Removed universal all-prior-treatment failure, no-dexterity requirement, all-MPP mechanical immunity, automatic implantation within 48–72h, guaranteed length preservation and categorical safety equivalence in neophallus. EAU recommends delay after shunt; specific priapism timing remains patient dependent.
+- Kohl 2026 global EHR abstract n29,385 verified: five-year recorded revision/removal13.9%IPP versus13.7%semirigid; breakdown9.1%versus6.7%, explant6.5%versus8.4%. Rigi10 study manufacturer patient-information forms, mean follow-up21.6months, no randomized comparator; 99.2%three-year estimate not all605complete3yr follow-up. Habous length outcome measured intraoperatively, not a long-term guarantee.
+- MIST Gross58patients/54infection-free/17of54converted corrected. VA2026 complete primary abstract read; abstract reinfection denominator not sufficiently clear to reconstruct exact fraction, so no invented denominator added. Fraiman9-study meta intervals37%(18–62)MPP/38%(21–59)IPP do not establish equivalence. Sun40implanted/30follow-up/12revision corrected. Pigot2020 versus Levy2026 study identity separated. 2026 consensus is expert opinion, not outcome trial.
+- Coloplast August 2026 MRI memo entire two-page text read; Genesis limits differ from current Titan. Future safety/availability checks must identify actual device and local authorization. Surgical companions flagged to operative_review; no edits outside tools.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/glean-urodynamics.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `f889c33b2bd6809ec5cae09a57af570c71d7a1ddb3af32019d8859deea9a2f9b`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected manufacturer to Bright Uro and added March 2025 initial and April 2026 abdominal-sensor FDA clearances. Corrected commercial stored-data/post-removal transmission versus prototype real-time receiver; clinic environment versus unproven home monitoring; current multichannel Pdet capability and no continuous volume measurement. Removed guaranteed no-expulsion, universally normal voiding, clinical accuracy/comfort superiority and unsupported use-case hierarchy. MUSE 38 enrolled/33 attempts/32 insertions/17 men and short safety follow-up clarified; bench versus clinical evidence and prototype versus current device separated. Videos moved immediately before References.
+- Entire original MDX read and new text checked. Entire nine-page FDA K243052 and entire nine-page K253537 text read, including tables. Complete nine original MED abstracts read (/tmp/tools-adjunct-primary.json). Gross 2026 full main text including all section text, Tables 1/2 and figure captions read via PMC/EuropePMC XML (/tmp/tools-glean-gross.xml); figures not visually assessed and references/supplementary items not independently followed. MUSE full paper not obtained; FDA detailed clinical summary and full MED abstract read. Hamson bench full abstract only. Bright Uro May 7, 2026 abdominal-sensor announcement full body read; anticipated Q3 first cases not represented as verified commercial deployment.
+- Access limits: no current final commercial operating manual obtained; 2024 online draft rejected as current IFU. K253537 table has an EMG-capability entry without a corresponding described new physical component; not adopted as verified current functionality. No clinical outcome superiority or rare-event safety established.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/aquablation.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `d7a034a7008589f45cd8ea6ef731734d9b3ed7720992d26c9728007890afb5d5`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected surgeon control rather than autonomous treatment planning, removed supersonic/universal five-minute resection and unsupported contemporary transfusion rates. Replaced wrong DOI (10.1016/j.urology.2020.05.115 resolves to AUTHOR REPLY) and Bach three-month cohort misuse with actual WATER five-year and WATER II five-year reports. Separated randomized WATER versus single-arm WATER II and labeled indication versus trial-size bounds.
+- Entire original MDX read. Entire six-page FDA K253211 June 23, 2026 clearance/summary text read, not operating IFU. Complete five original MED records/available abstracts read, including unrelated DOI identity; complete WATER five-year PMID35150215 and WATER II five-year PMID37115632 abstracts read. No full outcome papers, attrition tables or current HYDROS manual read in this batch. No claim of head-to-head equivalence to HoLEP/simple prostatectomy.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/itind.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `3bbde313c91c621839a355e07f6afe5a446958883a57e035182ade94fcb166bd`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected label age ≥50 and distinguished trial volume criteria from device indication; five-to-seven-day removal and no permanent implant retained. Replaced mislabeled MT04 three-year evidence with actual first-generation 32-patient TIND cohort and later 175-participant iTind randomized trial with three-month unblinding. Removed zero-risk sexual preservation and unique-no-permanent-implant claims.
+- Entire original MDX and all three original MED abstracts read. Entire five-page FDA K210138 June 2021 clearance/summary text read. Current IFU direct access failed and full DEN190020 review/full papers not read. No unverified procedural contraindication list or universal volume cutoff imported.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/optilume-bph.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `114f8da135d22b194bef087e8837634f0eaf14938d36b689723341fa1091646d`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected uncoated predilation plus separate DCB, BPH paclitaxel dose 2.4 micrograms/mm2, label age ≥50, AUS/penile-prosthesis/UTI contraindications and BPH-specific 30-day barrier/at least12-month pregnancy prevention. Corrected PINNACLE one-year-active versus three-month-sham comparison and two-year 56/83 evaluable response denominator. Removed two wrong-source DOIs (weight-loss drugs review and Urology Match commentary).
+- Entire original MDX and all three source records/available abstracts read. Full FDA approval overview and manufacturer BPH product/safety body read. FDA-posted 30-page P220029C physician-label pages1–8 fully read (local /tmp/tools-optilume-bph.txt); not entire30pages, and document footer is Draft1124-004rA despite FDA approval-label posting. Full PINNACLE 2023 and two-year2024 MED abstracts read. No full RCT paper or five-year conference abstract adopted.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/rezum.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `abcab3946668cc160556c9811bb89c8a45147c03039d86aa4af3550b067befb1`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected reusable generator versus disposable delivery kit, 4mm30-degree30cm compatible cystoscope, label ≥50/30–80cm3 including central/median lobe and AUS/IPP/UTI contraindications. Removed guaranteed mucosal/ejaculatory sparing and unsupported2018median-lobe approval contrast. Added needle-retraction and priming heat precautions; distinguished five-year treatment follow-up from a five-year sham comparison.
+- Entire original MDX and all three primary MED abstracts read. Manufacturer-posted US DFU50998296-01 October2019 pages1–2 fully read; not whole eight-page manual. No verified newer expanded USvolume label found in targeted search; retained precisely dated accessed-label range rather than assuming a2026 expansion.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/urolift.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `fc6ce75dd5509aeff9e0f1b0f4648a027a2c7e233561435a1a148a7998847c3b`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Corrected nitinol capsular tab/stainless-steel urethral end-piece/PET suture. Updated USlabel ≥45, ≤100cc, median-lobe eligibility and actual listed contraindications. Corrected single-patient handle up-to-eight deployments, average4–6 and maximum10implants/patient, MRConditional implanted components versus delivery system. Separated LIFT206randomized and MedLift45cohort.
+- Entire original MDX read. Full text of all10pages of manufacturer-linked UroLift2USIFU read (/tmp/tools-urolift2.txt), including handling/troubleshooting, trial summary, adverse events and MRI conditions. Link filename saysRevC but document itself is L00127-01RevE06/2022; this mismatch recorded rather than inventing new revision. Figures not independently visually assessed; full LIFT/MedLift articles not read in this batch.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/himplant.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `ee029bbd0325017e141da46340fa4e4afd80c4ee505d4a2442a025add0124334`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Removed promises of reversibility, straightforward clean explant/restored appearance, ventral-opening preservation guarantee, unsupported current size superiority and blanket only-FDA device claim. Added explicit SMSNA2024 IRB/long-term safety/no-patient-charge consensus position and distinguished devicegeneration,510kclearance and ED treatment.
+- Entire original MDX read. Entire six-page FDA K220760 clearance/summary text read; SMSNA2024 full abstract and complete silicone-sleeve section plus related future-research/dropout discussion read from publisher. Original retrospective series full papers not read in this batch; no complication-rate estimate derived from selected referral series. No current Himplant IFU obtained or historical specification treated as universal.
+
+### docs/01-foundations/tools/biomaterials/adjunct-specialty/spaceoar.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `dff928101e4aed7021c19b7fdee3e9ad130066fb86674cc9797aad8dd461012e`.
+- Entire original MDX read; rewritten content checked.
+- Device identity, current primary labeling and consequential safety/evidence-source corrections.
+- Added original versus iodinatedVue distinction and February2026same-indication clearance; corrected absorption to approximate six months with possible longer persistence. Replaced blanket acute/late benefit and no-oncologic-effect claim with scoped222-person conventionalIMRTtrial. Added placement/embolism/rectal injury/fistula precautions and prior-radiation/sensitivity considerations.
+- Entire original MDX read. Entire seven-page FDA K260119 February2026text read (/tmp/tools-spaceoar2026.txt). Full current manufacturer product and safety webpage bodies read; complete Swissmedic-hosted manufacturer February24,2022IFU-update appendix text read. Full Hamstra2017phaseIII abstract read, not complete RCTpaper or current operatingIFU. No new clinical-outcome claim inferred from2026component change.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/altaviva.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `9d4a007b4dc9f9c64ee18a1945f2f984e70112b35ef0fb84b7d1918f735673ea`.
+- Entire original MDX and current revised page read.
+- Device identity, model-specific current primary labeling and pivotal/long-term study design, denominator and safety review.
+- Corrected PMA date, single-arm TITAN2 design and 188 enrolled versus126 implanted; published59%/61% response is not comparative effectiveness. Corrected adverse-event denominator and FDA additional serious wound-infection classification. Replaced implied no external equipment/immediate benefit/default SNM alternative with rechargeable system, conditional projected life and model-specific safety. Actual implant manual says on, not through, deep fascia.
+- Entire original and revised MDX read. FDA P240011B pages1–6 and16–34 fully read as text including clinical tables/captions; selected bench material pp7–9, not pp10–15. FDA-posted combined manual P240011D implant-manual pp6/13 anatomy and dissection, plus selected contraindication/postimplant passages; not entire combined manual. Full manufacturer product/safety body read. Full TITAN2 MED abstract read; publisher procedure excerpt read, not complete article/supplement. AUA2024 indexed official full page30 and32 text read, not entire guideline.
+- SSED adverse-device-effect definition includes procedure/therapy/study aids; source prose/table inconsistencies around explant timing and serious classification recorded, not converted into a precise new total explant rate. No postapproval five-year outcome claim.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/ptns-systems.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `fccb1e52e7cb4379f10ae8a7c291c2c99a4aad97b9ae4508de3ac671cfd58fac`.
+- Entire original MDX and current revised page read.
+- Device identity, model-specific current primary labeling and pivotal/long-term study design, denominator and safety review.
+- Removed rigid third-line rule, fixed lifelong every2–3week maintenance, universal identical hardware protocol and unsupported implant-versus-SNM/neurologicalTTNS equivalence. Added correct SUmiT global-improvement outcome and STEP selected-responder/attrition context, manufacturer contraindications and exact AUA percutaneous versus implant distinction.
+- Entire original and revised MDX read. Full current Medtronic NURO safety body and Laborie US safety-footer/product body read. Complete SUmiT and STEP primary abstracts read; no full primary trial papers or complete device operating IFUs obtained. AUA2024 official indexed pp30/32 full text read, no whole-guideline-read claim.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/ecoin.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `690d045f26e251f7ff39567e6854baa77e28c5edb8320d45b9028fcd80fdbf48`.
+- Entire original MDX and current revised page read.
+- Device identity, model-specific current primary labeling and pivotal/long-term study design, denominator and safety review.
+- Corrected intermittent stimulation, required patient controller magnet, adjustable amplitude, label conservative-treatment OR successful PTNS-trial eligibility and current manufacturer ownership. Added actual restrictive MRI positioning and external magnet MRUnsafe status. Separated137 enrolled/133 implanted/132ITT from72 extension completers; removed false improved-over-time and unsupported2015review as source for eCoin PVR/MRI.
+- Entire original and revised MDX read. Full manufacturer important-safety webpage body read, including controller, MRI, programming, implantation and replacement precautions. Complete original applicable MED abstracts read (feasibility,12-month,pivotal,two-year,device review,TITAN2); no full eCoin primary trial papers. Selected FDA P200036MRI text read, not complete original SSED/manual. No universal MRI or comparative retention/safety claim retained.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/revi-system.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `b5b2856de6bbc50d93cccbc64990a57f374e19edbe89a6216573c9e0b1e90981`.
+- Entire original MDX and current revised page read.
+- Device identity, model-specific current primary labeling and pivotal/long-term study design, denominator and safety review.
+- Removed unlimited life/no replacement/no charging/MRI unrestricted promises and false universal GradeA endorsement. Added FDA2025replaceable rechargeable wearable and July28,2026K25365115-year implant labeled life versus10-year predicate, separating tested life from clinical follow-up and manufacturer plannedQ4launch. OASIS151women/ITT76.4%6mo and78.4%12mo distinguished from90three-year diaries and83/87 satisfaction; no causal cross-device ranking.
+- Entire original and revised MDX read. Full nine-page K252391 and eight-page K253651FDA text read including all tables; local /tmp/tools-K252391.txt and /tmp/tools-K253651.txt. DEN220073review pp1–4,13–20 fully read; not complete26pages. Full manufacturer safety body and AugustExtend announcement read. OASIS2026three-year full main text read from EuropePMCXML including all Methods/Results/Discussion/Conclusion, Tables1–4 and figure captions (/tmp/tools-PMC13361951.xml/.txt); not rendered figures, supplemental tables or individually followed references. All16original primary records/available MED abstracts read, including OASIS2yr/QoL and indirect meta; no full meta paper. AUA2024 official pp30/32 full indexed text read.
+- Access/interpretation limits: current full Extend operating IFU not obtained; do not apply older-model manual dimensions or service life to all current products. OASIS article has internal tabular/prose anomalies (Table1 count72 labeled5.7%, some event-total and explant-timing inconsistencies); avoid those disputed precise totals. Long-term result is a completer analysis and does not establish 15-year efficacy or rare-event safety.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/medtronic-interstim.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `08d55cdecab2afdc41f2e0f3c972685acd529c7ecdc41ef71a64be8647a6c278`.
+- Entire original and revised MDX read, including tables and references.
+- Selected current device identity, safety/indication/MRI labeling and pivotal/long-term evidence design, denominator and applicability checked against primary sources.
+- Corrected current InterStim II/X/Micro generator and SureScan lead combinations; recharge-free does not mean head-only MRI. Distinguished model-specific conditional MRI and projected battery life from freedom from revision. Corrected label/test-response requirements, manufacturer versus AUA treatment sequencing, and AUA NLUTD urgency/frequency/UUI recommendation versus the erroneous stress-incontinence claim.
+- Clarified InSite 340 tested/272 implanted, five-year missing-data estimands, older retention cohort denominator and catheterization outcome. ROSETTA used 200 U toxin and the two-year analysis concerned clinical responders; economic estimates were dated/modeled. ASCRS 2023 recommendation is conditional, low evidence. French 10-year cohort crude versus Kaplan–Meier result, Medicare cumulative reoperation including battery replacement, and observational rechargeable-device revision comparison are explicitly scoped. Added serial-specific April 2025 evaluation-handset FDA recall without implying implant removal.
+- Entire original and revised MDX read. Complete current US Medtronic InterStim safety, X and Micro product webpage bodies read; SureScan brochure model/lead and first-page scanning text read, not the complete MRI physician manual or every system IFU. Entire official indexed AUA OAB 2024 pages 30 and 32 read; AUA NLUTD 2021 recommendations 47–51 and ASCRS 2023 recommendation table plus page 649 text read, not whole guidelines. Full FDA recall Z-1704-2025 body and serial list read.
+- Original reference identities and available MED abstracts retrieved in /tmp/tools-snm-primary.json and /tmp/tools-snm-unique.json; complete adopted InSite, worldwide retention, ROSETTA 2016/2018 and cost, French 10-year, 2025 FI systematic review, Medicare and Cohen abstracts read. These papers were not fully read in this batch. Complete ARTISAN two-year main text and references were separately read for the device companion. MRI safety is manufacturer-labeled, not inferred from small off-label MRI reports.
+- Access limits: current full implantation/MRI manuals and all original trial full texts were not obtained. Recall checking is targeted, not exhaustive. A 2025 Brazilian field notice about percutaneous extension 3560030 connector migration was located; latest complete manufacturer corrective instructions not yet obtained, so no new technical handling protocol is asserted.
+
+### docs/01-foundations/tools/biomaterials/neuromodulation-devices/axonics-snm.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `824cd09fa7b2b864f8aad9eee7a66e339644bc7cbf7a5d1d63e2df989be7de0e`.
+- Entire original and revised MDX read, including tables and references.
+- Selected current device identity, safety/indication/MRI labeling and pivotal/long-term evidence design, denominator and applicability checked against primary sources.
+- Corrected R20 to rechargeable and F15 to recharge-free, current models and charging interval; older R15 trial charging schedules are not R20 specifications. Preserved manufacturer test-response and MRI conditions. ARTISAN 93% of 121 completers versus 88% of all 129, and 82%/37% response-depth percentages among 113 responders, are now explicit. Nine prior successful external trials are distinguished from the research single-stage design. RELAX selected test responders and retrospective rechargeable comparisons are not universal success/equivalence claims.
+- Entire original and revised MDX read. Complete Boston Scientific current US F15/R20 product/specification body and Axonics US/Canada safety body read. Manual library relevant model/revision listing read; not all implantation or MRI operating manuals. Full October 2025 Health Canada RA-78345 and TGA RC-2025-RN-00854-1 notice bodies read: model 1201 insertion issue does not affect already implanted lead performance; Australian action closed January 2026.
+- ARTISAN two-year full main article including Methods, Results, Discussion, Conclusion, tables, figure captions, funding and references read from Europe PMC XML (/tmp/tools-PMC7986436.xml and .txt). Rendered figures and supplements not read. Original ARTISAN six-month/one-year, RELAX, Cohen and indirect SNM/tibial meta-analysis primary available abstracts read (/tmp/tools-snm-primary.json); not their full papers. No twenty-year R20 outcome or controlled head-to-head device equivalence is claimed.
+- Access limits: product lifetime and charging figures are manufacturer specifications under stated conditions, not observed long-term clinical outcomes. Regional lead notices are identified as Canadian/Australian rather than silently treated as US FDA actions. The current model-specific full MRI and implantation instructions must govern procedure-specific use.
+
+### docs/01-foundations/tools/biomaterials/bulking-agents/bulkamid.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `40c31e70cfa911fec5e5fa97aaf8e8d53b44912b70027c676d81e976ff4dadc0`.
+- Entire original and revised MDX read, including tables and reference list.
+- Current US indication, safety warnings, original FDA clinical/administration labeling, AUA positioning and major trial denominator/outcome/source-identity review.
+- Corrected US ISD indication/current manufacturer, omitted acute-UTI contraindication and explicit no-male-use warning. Removed unsupported guarantees of no embolism, migration, erosion, granuloma, obstruction or serious complications; restored ischemia/overcorrection, prior different-agent injection, pregnancy and device-processing restrictions. Removed a dosing recipe that could exceed the original FDA 2 mL per-session limit and stated the dated original labeling/current-supplied-IFU distinction.
+- Full original FDA physician P170023D and patient P170023C labeling text read, including tables, procedure text, figure labels and symbol descriptions; local /tmp/tools-bulkamid-P170023D.pdf/.txt and -P170023C.pdf/.txt. Current full US manufacturer product body/specifications and safety-summary body (IFU 110-0303rB) read. Current full manufacturer IFU was not obtained; FDA PMA explicitly warns its original posted labeling may not be current. No independent visual inspection of the FDA instructional figures.
+- All 24 original reference identities resolved and available MED abstracts read in /tmp/tools-bulkamid-primary.json. Corrected pooled-agent post hoc predictor attribution, disparate cough/combined objective endpoints and unqualified cost model. FDA pivotal ITT/LOCF composite 107/228 versus50/117 is distinguished from different figures in the original Sokol abstract; source discrepancy recorded rather than silently mixing analyses.
+- Helsinki five-year RCT full abstract and university primary abstract record read, not full article/supplements (publisher subscription/access limits). Kept directly supported 223 randomized/212 treated/195 follow-up, satisfaction denominators and pre-crossover complications; removed unsupported five-year objective-cure table assembled with three-year TVT results. No full-trial-read claim. Three-year trial, Finnish cohort, recurrent-SUI systematic review, economic model and pediatric VUR study are abstract-level checks.
+- AUA 2023 published guideline entire Bulking Agents section and adjacent cited reference entries read in official indexed publisher text; complete unabridged guideline not read. AUA/GURS/SUFU 2024 IPT statements24–31 read from official indexed text, particularly statement25. EU manufacturer safety summary also read for comparison; US restrictions were not replaced by broader regional indication.
+- Procedural companion corrections were flagged to operative_review with exact label source and denominator distinctions; no outside-owned procedure edit made. Current source checks are selected-claim verification, not exhaustive adverse-event surveillance or clinical clearance.
+
+## Targeted companion checks
+
+### docs/02-evaluation/ancillary-tests/urodynamics.mdx
+
+Only AUM section and relevant reference entries read/edited in this batch; root owns prior full-page review. Corrected general natural-filling description/ref15 DOI and current Glean clinic/multichannel/volume-limit paragraph/ref34.
+
+Full page read in this batch: false. Clinical verification complete: false.
+
+SHA-256: `864c158e6650c788511790da91cb8a1158d97754b3c215c670755dc4337a1311`.
+
+- Entire nine-page FDA K253537 text read; 2019 ambulatory-review abstract and prior Glean page source check. No new full-page read claim.

@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Fifth continuation: oral donors, antisepsis, diversion and device safety
+
+43 documentation pages corrected; cumulative ledger 518 full current MDX reads and 490 scoped updates across 1,186 files. This remains an incomplete clinical/source review. Tools 56/231, fistula techniques 31/44 and diversion 25/25 have reading records.
+
+Corrected oral donor identity/anatomy, comparative study interpretation and donor morbidity; independently reviewed oral and antisepsis revisions. Rebuilt draping, surgical hand preparation and glove-wetting guidance and aligned surgical gloving. Complete paper packages are distinguished from main-manuscript-only, selected guidance and abstracts in the dated source records. Added high-yield comparative trial evidence without transferring unrelated operative populations or surrogate outcomes into universal GU rules.
+
+Corrected six diversion and nine fistula pages, 17 device pages and four clinical/operative companions. Includes Mainz II surveillance safety, Penn reservoir identity, iROC applicability, lot-specific implant recall, Glean 2026 clearances, Optilume BPH contraception, neuromodulation hardware and Bulkamid labeled risks.
+
+Lint, typecheck, 32 component and 50 maintenance tests pass. Final build 135.37 MB, all 99,608 compiled links/assets and 730 data links valid.47 browser checks pass. A missing conservative-RUF anchor was fixed before the successful final build. [Fifth release record](reports/2026-09-12/fifth-continuation-release.md) tracks remaining visual/publication verification. Continue whole-site review after this batch; quarterly cadence and paused Epic phase remain.
+
+---
+
 ## 2026-09-12 — Fourth continuation: graft evidence, reservoirs, fistulas and devices
 
 Published as **`2322d0b9`**; CI34684857810, exact-commit Vercel deployment and six production checks passed. The next batch is underway.
@@ -84,7 +96,7 @@ Cumulative resumed audit:121 of1,186 documentation pages have a full source-text
 
 Added a homepage main landmark, limited Vercel analytics to the public production origin, strengthened whole-sitemap browser error capture, and added interactive search result/no-result coverage. External-link checks now confirm suspicious HEAD responses with GET while cancelling response bodies, preventing false broken-link results from large working PDFs. Saved checkpoint/OpenEvidence/Epic authoring-only edits skip deployments.
 
-**Validation so far:** source lint and typecheck,32 component tests,50 maintenance tests, production build (139.40MB), and compiled link/asset checks pass. Independent reviews of introduced corrections found no remaining blocker after correcting the Farias2025 alternating-allocation study label. Final whole-sitemap browser and live-publication results are tracked in [the resumed release record](reports/2026-09-11/resumed-release.md).
+**Validation so far:** source lint and typecheck, 32 component tests, 50 maintenance tests, production build (139.40MB), and compiled link/asset checks pass. Independent reviews of introduced corrections found no remaining blocker after correcting the Farias2025 alternating-allocation study label. Final whole-sitemap browser and live-publication results are tracked in [the resumed release record](reports/2026-09-11/resumed-release.md).
 
 ---
 

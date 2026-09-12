@@ -416,3 +416,128 @@ Sources: https://doi.org/10.1016/s0022-5347(17)44429-6, https://doi.org/10.1016/
 
 Source SHA-256: 28751dfe3c5cbc0d2c827d7298bc8c59068409fe396f348c7a5e9dbea867bf4f
 
+## Mainz Pouch II (Sigma-Rectum Pouch)
+
+docs/04-surgical-techniques/04c-urinary-diversion/mainz-pouch-ii.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Original full 332-line MDX and complete rewritten content read. All 26 original references screened using complete primary abstracts, including corrected identities for Cipolla, Hadzi-Djokic2014, Gilja and Gittes; obsolete redundant case/review citations removed. Complete ureterosigmoidostomy section of primary BSG/ACPGBI2010 guideline pp674–675 read in deposited primary PDF. Jing2024 entire manuscript text, all four tables and references read (not figure graphic or supplements). Hadzi-Djokic2014 English main text and tables1–2 read; remaining references/Serbian summary not completely read. Other older papers remain abstract-only.
+
+- Replaced universal pressure elimination, cross-series superiority and mild-acidosis framing with patient selection and lifelong risk assessment.
+- Corrected evaluated denominators versus operated counts, accumulation period versus follow-up, pediatric renal-unit denominators, response selection and serious metabolic/infectious harms.
+- Removed universal enema threshold, antireflux-method preference, fixation material and drainage timing unsupported as standards.
+- Jing37 described correctly as robotic cystectomy with only2 intracorporeal and35 open diversions; safety-pad endpoint and small observational limits retained.
+- Corrected Gilja PMID8647149 and Hadzi2014 PMID25782222/DOI; removed obsolete Cipolla/Gittes citations with unrelated old PMIDs after screening.
+- Added anastomotic-polyp no-snare warning, BSG2010 gradeC annual sigmoidoscopy from10years, older5–6year variation, and continuing surveillance after conversion if original ureteric anastomoses remain.
+
+Limits: No full operative source review for every historical technique or universal protocol; this is not clinician sign-off. Jing contains accrual/submission/minimum-follow-up inconsistencies, prospective/retrospective labeling mismatch and table percentage/typographic errors; precise long-term and subgroup claims are not used. Figure1 not visually inspected. Fisch1996 abstract reports impossible mean127months with range1–34; no guessed correction or long-term claim retained. Precise Mainz-II-specific lifetime cancer risk and optimal surveillance-start interval are not established by these sources; historical BSG guidance is explicitly dated and individualized with GI/urology.
+
+Sources: https://doi.org/10.1111/j.1464-410X.2003.04777.x, https://doi.org/10.1016/s0022-5347(17, https://doi.org/10.1136/gut.2009.179804, https://doi.org/10.2298/ACI1401029H, https://pubmed.ncbi.nlm.nih.gov/25782222/, https://doi.org/10.1159/000052437, https://doi.org/10.1159/000475238, https://doi.org/10.1186/s12885-024-11874-x, https://doi.org/10.1111/j.1464-410X.2004.04778.x, https://doi.org/10.1111/j.1464-410X.2004.04963.x, https://pubmed.ncbi.nlm.nih.gov/8647149/, https://doi.org/10.1111/j.1464-410X.2006.05995.x, https://doi.org/10.1016/S0022-5347(05, https://doi.org/10.1046/j.1365-2168.1998.00904.x, https://doi.org/10.1016/j.eururo.2004.06.007, https://doi.org/10.1016/S0022-5347(01, https://doi.org/10.1016/j.eururo.2011.07.006, https://doi.org/10.1007/BF02236220, https://data.parliament.uk/DepositedPapers/Files/DEP2011-1612/DEP2011-1612.pdf, https://pmc.ncbi.nlm.nih.gov/articles/PMC10809619/, https://doiserbia.nb.rs/ft.aspx?id=0354-950X1401029H
+
+Source SHA-256: 35a057194938ddbe514ec88225a4e67eb1f1feb8fd1ba4707394866f24a32115
+
+## Penn Pouch
+
+docs/04-surgical-techniques/04c-urinary-diversion/penn-pouch.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Original174-line MDX and complete rewritten text read. All six original primary abstracts read. Two primary operative case manuscripts PMC2684388 and PMC4360461 full available main text and references read, including explicit appendiceal Mitrofanoff Penn construction; figures not visually inspected. Original historical textbooks and Amis full imaging review not accessed.
+
+- Corrected central pouch identity: appendiceal Mitrofanoff Penn versus Webster/Bertram intussuscepted ileocecal-valve/Marlex reconstruction.
+- Removed borrowed non-Penn population outcome rates and exact step protocol; separated related ileocecal techniques and source populations.
+- Retained channel/perfusion/stoma principles and lifelong catheterization/metabolic follow-up with appropriate source-of-truth links.
+- New small case citations serve to verify operative identity, not as practice-changing outcome evidence or population risk estimates.
+
+Limits: Original Duckett/Snyder operative textbook chapters and historical Amis full imaging figures unavailable. Contemporary comparative Penn-specific outcome evidence remains sparse. Source case graphics not visually inspected; case-report bicarbonate irrigation and other unsupported routine protocols were not imported.
+
+Sources: https://doi.org/10.4103/0970-1591.44271, https://doi.org/10.4103/0971-9261.151554, https://doi.org/10.1148/radiology.168.2.3293109, https://doi.org/10.1016/s0022-5347(17, https://doi.org/10.1016/0090-4295(90, https://doi.org/10.1016/s0022-5347(01, https://pmc.ncbi.nlm.nih.gov/articles/PMC2684388/, https://pmc.ncbi.nlm.nih.gov/articles/PMC4360461/
+
+Source SHA-256: c7d173d07f90103f9d1cbdd24c46617a9eaa60b55e3c4581321725a2f03b843e
+
+## Right Colon Pouch
+
+docs/04-surgical-techniques/04c-urinary-diversion/right-colon-pouch.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Original280-line MDX and complete rewritten text read. All27 original DOI-linked primary abstracts read, including Cochrane2012 complete structured abstract. LeBag reference without identifier was previously checked for its dedicated page and is now linked rather than restated. Companion Penn operative identity checked in two full primary case manuscripts. Other original study full texts/figures not newly accessed.
+
+- Corrected Baboudjian15 versus erroneous153 patients and39 versus9months follow-up.
+- Separated reservoir/outlet/ureteric designs, linked named companions and corrected Penn appendiceal identity.
+- Corrected follow-up populations and renal-unit denominators, Florida survivor cohort versus original179, Mainz pediatric65/118, and Wiesner59/809 versus3/74 implantation comparison.
+- Removed cross-series complication ranking, universal channel superiority, low-pressure and active-colonic-voiding guarantees.
+- Retained Cochrane five-trial355 evidence limits and meaningful standardized reoperation burden; explained small observational comparison limits.
+- Corrected B12 low/low-normal versus confirmed deficiency, limited18-person bone evaluation and renal-equivalence overstatement; removed universal annual pouchography/arterial blood-gas schedule.
+
+Limits: Historical operative full reports and source figures not independently inspected; no universal patient-specific technique recommendation or clinician sign-off. D Orazio abstract counts36/38 night continent but prints92percent, and title accrual duration is not individual follow-up. Florida abstract ureteral-stricture percentages are arithmetically inconsistent with counts; these precise values omitted here. Cochrane2012 is older limited trial evidence, not a modern proof of best bowel segment.
+
+Sources: https://doi.org/10.1002/nau.23951, https://doi.org/10.1016/s0022-5347(17, https://doi.org/10.1016/s0090-4295(99, https://doi.org/10.1111/j.1464-410X.2007.06991.x, https://doi.org/10.1007/s00345-020-03412-8, https://doi.org/10.1007/s00345-006-0078-y, https://doi.org/10.1007/s00467-005-1848-2, https://doi.org/10.1016/S0022-5347(05, https://doi.org/10.1016/j.urology.2021.02.004, https://doi.org/10.1016/j.ajog.2004.01.023, https://doi.org/10.1016/j.eururo.2004.01.013, https://doi.org/10.1097/01.ju.0000177078.38975.58, https://doi.org/10.1016/s0302-2838(03, https://doi.org/10.1002/14651858.CD003306.pub2, https://doi.org/10.1007/s00345-020-03348-z, https://doi.org/10.1007/s00345-016-1949-5, https://doi.org/10.1097/01.ju.0000091900.57347.ee, https://doi.org/10.1007/s00345-022-04211-z
+
+Source SHA-256: 286222b90490b3c9cd0b131c3a8530343b9bcc5293c2c3446d37a4186e262b84
+
+## Intracorporeal Urinary Diversion (ICUD)
+
+docs/04-surgical-techniques/04c-urinary-diversion/intracorporeal-urinary-diversion.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Original176-line MDX and full rewritten text read. All25 original reference identities/available complete abstracts screened. Added iROC2022 original complete abstract from author repository/PubMed and JAMA primary figure-caption passages; full article Methods/tables and supplements could not be completely retrieved despite repeated JAMA/PMC/EuropePMC access attempts. No unseen full-text claim. Core endpoint added within abstract-supported scope; no secondary wound-rate claim used.
+
+- Added high-yield338-randomized iROC trial,317operated305primary analyzed and modest2.2day adjusted recovery difference; distinguishes total robotic/ICUD versus open from isolated ICUD versus ECUD.
+- Removed only-RCT assertion; retained Mastroianni116 randomized transfusion benefit with19percentage-point CI2–36 and secondary-outcome limits.
+- Corrected IRCC adoption population and adverse high-grade13versus10percent signal; removed misleading observational superiority matrix and wrong time window on meta-analysis subgroup.
+- Removed universal vascular-staple-load bowel division, mandatory robotic stapler, universal trocar/redocking/case-count requirements and whole-reservoir detubularization that would include a Studer chimney.
+- Corrected AlNader740 screened versus209matched per group, bilateral1versus15; Kouba per-ureter denominators rather than patient rates.
+- Retained videos immediately before references; added feasible-design/learning-curve and late-surveillance limitations.
+
+Limits: Original technical paper full texts, figures and video demonstrations not all inspected. Core operative principles do not constitute a validated product-specific protocol. iROC full Methods/tables/supplements remain access-limited; exact secondary wound-event percentages not used because indexed abstract/difference appeared inconsistent. Some technical citations have no complete abstract; identity checks are not clinical validation. No clinician sign-off.
+
+Sources: https://doi.org/10.3791/61331, https://doi.org/10.1016/j.eururo.2023.11.017, https://doi.org/10.1001/jama.2022.7393, https://doi.org/10.1016/j.eururo.2024.01.018, https://doi.org/10.1007/s10147-021-01972-2, https://doi.org/10.1016/j.juro.2017.12.045, https://doi.org/10.1097/JU.0000000000000570, https://doi.org/10.1245/s10434-021-10295-5, https://doi.org/10.1002/jso.24009, https://doi.org/10.1089/end.2020.1079, https://doi.org/10.1177/08927790251390881, https://doi.org/10.1111/bju.13611, https://doi.org/10.1089/end.2022.0248, https://doi.org/10.1016/j.eururo.2016.10.018, https://doi.org/10.1111/iju.15471, https://doi.org/10.1016/j.juro.2007.05.030, https://doi.org/10.1245/s10434-014-3591-z, https://doi.org/10.3389/fonc.2022.975444, https://doi.org/10.3390/jcm10245969, https://doi.org/10.1111/bju.12347, https://pubmed.ncbi.nlm.nih.gov/35569079/, https://discovery.ucl.ac.uk/id/eprint/10150005/, https://jamanetwork.com/journals/jama/fullarticle/2792543
+
+Source SHA-256: f27beec3c285080a007cf3c543799737c45c367d813e52b8e64e5cbfbd578834
+
+## Parastomal Hernia After Urinary Diversion
+
+docs/04-surgical-techniques/04c-urinary-diversion/parastomal-hernia.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Entire original 305-line MDX and entire revised MDX read. Checked all 29 original DOI identities and complete available abstracts in /tmp/parastomal-hernia-primary.json and -abstracts.txt; separately identified and fully read Helal1997 abstract PMID9112492. Maskal2024 original published PDF /tmp/parastomal-maskal2024.pdf/.txt: complete main paper, all three tables, figure captions/text and references read; figures not visually inspected and supplements not accessed. ASCRS2022 complete Methodology passage and selected indexed recommendations read on official Toolkit/PDF; not full guideline. Detailed source scopes distinguish primary full paper, abstracts and selected guideline text.
+
+- Separated prophylactic mesh from repair; foregrounded three conduit RCTs with analyzed denominators and endpoint distinctions. Removed inferred mesh-material ranking and universal prophylaxis benefit; restored Cochrane low certainty, absent reoperation benefit and pre-conduit-trial search date.
+- Corrected Hussein symptomatic/treated denominators, Liu follow-up selection and Ghoreifi progression scope; removed pooled authoritative incidence/risk tables and fixed risk-plateau promise.
+- Corrected ASCRS scope: urostomies explicitly excluded. Removed constant-urine-exposure mesh anatomy claim, mandatory emergency laparotomy, universal MIS/Sugarbaker preference and automatic channel reconstruction.
+- Maskal2024: complete main paper confirms 25 ileal conduits among150, open retromuscular only, superiority design, not equivalence; included proper randomized denominators and confidence interval.
+- Removed false sandwich above/below-fascia description and unsupported randomized13.5% outcome; did not add small case reports to pad technique coverage. Corrected Tully27/40 follow-up, Helal19/21 repairs and Stout four-case success overstatement.
+- Corrected Medicare30-day mortality and combined parastomal/incisional reoperation endpoint; removed causal MIS mortality claim and borrowed end-colostomy outcomes. Preserved video position and relevant internal links; removed obsolete unused references and renumbered.
+
+Limits: Three prophylactic conduit RCTs, Cochrane2018 and remaining original cohort/review sources were checked at complete available abstract level, not full methods/tables. No exhaustive updated meta-analysis or clinician sign-off claimed. Maskal main-paper figure graphics and supplements were not independently inspected; no subgroup efficacy estimate claimed for its25 conduits. Technical guidance remains planning-level, not a complete operative manual; specific mesh choice, contamination management and emergency strategy require individual specialist judgment.
+
+Sources: https://doi.org/10.1001/jamasurg.2024.1686, https://doi.org/10.1016/j.eururo.2020.07.033, https://doi.org/10.1097/JU.0000000000003902, https://doi.org/10.1097/JU.0000000000004703, https://doi.org/10.1002/14651858.CD008905.pub3, https://www.ascrsu.com/ascrs/view/ASCRS-Toolkit/2851081/all/Ostomy_Surgery, https://doi.org/10.1007/s10029-025-03359-y, https://doi.org/10.1016/j.juro.2017.08.112, https://doi.org/10.1111/bju.15658, https://doi.org/10.1016/j.juro.2013.11.104, https://doi.org/10.1007/s00423-023-03062-5, https://doi.org/10.1007/s10029-024-03207-5, https://pubmed.ncbi.nlm.nih.gov/9112492/, https://doi.org/10.1016/j.urology.2021.01.020, https://doi.org/10.1016/j.urology.2019.05.006, https://doi.org/10.1001/jamasurg.2022.7978
+
+Source SHA-256: 6c879d73a205dd75a0b21dd9f0a450bea7a8668cbfc0e8e33d771b2c0ec43ce5
+
+## Ureterosigmoidostomy and Rectosigmoid Diversion
+
+docs/04-surgical-techniques/04c-urinary-diversion/ureterosigmoidostomy.mdx
+
+Status: updated. Full site-page text read: True. Complete clinical verification: false.
+
+Entire original326-line MDX and revised page fully read. All original DOI-linked identities and complete available abstracts read in /tmp/ureterosigmoidostomy-primary.json and -abstracts.txt; Koo1996 PMID8911384 and Hall1991 PMID1949404 complete original abstracts separately read on PubMed. BSG2010 original full ureterosigmoidostomy section pp674–675 read in /tmp/bsg2010.txt (not entire guideline). MainzII-specific source access also documented in companion row; no transfer of full-source status to sources checked only by abstract.
+
+- Separated classical USS from detubularized MainzII and isolated colon conduit; removed false Coffey non-antireflux row, unsupported historical chronology and prescriptive technique/drainage dimensions. Kept technique-specific MainzII detail on its companion.
+- Removed unconditional modern-standard/resurgence, improved renal/metabolic safety, guaranteed elimination of high-pressure contractions and isolated-pouch cancer protection. The small Atta series cannot establish cancer protection.
+- Removed mismatched cross-series superiority tables, erroneous Fisch10.6-year follow-up and all-modern-zero-mortality claims. Restored Tollefson51 selected long-term patients with22latecomplications/19reoperations, Koo27day/night outcomes, Bissada patient-versus-renal-unit distinction and Obek50/60 denominator with severe metabolic events.
+- Replaced fixed universal citrate/low-chloride diet, mandatory testing and resource-limited simplicity claims with individual renal/metabolic assessment and actual access-to-follow-up requirements. Linked pharmacology source of truth.
+- Corrected colorectal neoplasia versus cancer and MainzII theoretical-risk misstatement. Pettersson24afterearlydeath,7invasive/1insitu/5deaths and post-conversion cancers framed as selected historic cohort, not universal lifetime probability.
+- Added exact BSG2010 annual flexible sigmoidoscopy from10thanniversary, contrasted older5–6-year review without inventing a new consensus; surveillance afterconversion unless original anastomoses removed. Removed blanket snare-polypectomy advice: ureteric implantation can look polypoid and snaring risks urinary leak. Removed automatic prophylactic resection for follow-up nonattendance.
+- Dropped obsolete duplicated low-yield references and fixed available missing PubMed identifiers; all remaining anchors renumbered and full revised text reread.
+
+Limits: Most original clinical series, Cochrane2012 and2018review were checked at complete available abstract level only; source full methods/figures/supplements were not obtained. No exhaustive historical technique adjudication or clinician sign-off claimed. The 2010 BSG dedicated surveillance section is dated and GradeC. Differing older start-time guidance is explicit; no current randomized evidence establishes one optimal surveillance schedule. Unidentified older no-DOI references no longer supporting retained claims were removed rather than being represented as fully verified. This page is a scoped corrective review, not a complete operative manual.
+
+Sources: https://doi.org/10.1016/j.urology.2018.01.003, https://doi.org/10.1111/j.1464-410X.2009.08811.x, https://pubmed.ncbi.nlm.nih.gov/8911384/, https://pubmed.ncbi.nlm.nih.gov/1949404/, https://doi.org/10.1136/gut.2009.179804, https://data.parliament.uk/DepositedPapers/Files/DEP2011-1612/DEP2011-1612.pdf, https://doi.org/10.1016/j.juro.2012.11.179, https://doi.org/10.1159/000052437, https://doi.org/10.1002/14651858.CD003306.pub2, https://doi.org/10.1016/s0022-5347(17)57938-0, https://doi.org/10.1016/s0022-5347(17)36050-0, https://doi.org/10.1016/s0022-5347(01)65662-3, https://doi.org/10.1016/s0022-5347(01)67420-2, https://doi.org/10.1111/j.1464-410X.2003.04777.x, https://doi.org/10.1111/j.1464-410X.2006.05995.x, https://doi.org/10.1007/BF02236220
+
+Source SHA-256: db571afc3c35f28ec62198c2e2e12426bff156cea02c00ed59b7a570fa33e818
+

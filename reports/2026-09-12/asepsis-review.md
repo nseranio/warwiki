@@ -1,0 +1,35 @@
+# Antisepsis and glove-wetting corrective review — September 12, 2026
+
+Three original documentation pages and their complete revised versions were read: draping/skin antisepsis, surgical hand antisepsis, and glove wetting. [Source-access records](asepsis-reference-access.json) distinguish complete main manuscripts, selected guidance, abstracts, figures and supplements. This is a substantive correction batch, not complete clinical clearance. [Surgical gloving](surgical-gloving-review.md) was reviewed separately and coordinated with these pages.
+
+## Corrections implemented
+
+- Separated intact-skin, external-genital and vaginal preparation. Restored actual formulation/applicator restrictions, complete drying and pooling precautions. Corrected the label identity to Coloplast Micro-Guard CHG; it is not Hibiclens. Removed universal genital chlorhexidine, scrotal shaving, lithotomy/Trendelenburg/chest-strap and three-minute drying instructions.
+- Added the large PICASSO and PREPARE trials with their actual comparator, populations and outcome boundaries. Iodine povacrylex is not povidone-iodine; alcohol-versus-aqueous comparisons do not isolate antiseptic ingredient effects. Added the 2025 hysterectomy review without mistaking fewer positive cultures for proven fewer SSIs.
+- Distinguished sterile drapes from adhesive incise drapes and described the WHO/NICE difference. Corrected the Cochrane iodophor confidence interval from the main analysis rather than reproducing its abstract typo. Removed an equivalence claim for reusable/disposable systems and causal attribution to individual elements of a before/after bundle.
+- Corrected hand-rub volume/timing, drying before rub and before gloving, sequential antiseptic scrub/rub, nails/brushes and spore-related hand-hygiene framing. Bacterial counts and clinical infection outcomes remain separate.
+- Rebuilt glove wetting around what the studies actually tested. Savage's wet conditions often lowered knot failure strength, contrary to the previous blanket benefit. Removed claims that wetting prevents glove damage, infection or leakage; corrected operation-versus-glove denominators and the artificial-puncture simulation; removed universal throw/twist counts and a misleading double-gloving percentage.
+
+## Material source reads
+
+- **ACOG Bulletin 195:** the complete 18-page published bulletin, all 105 references, three boxes, two tables, methodology and disclosures were read. Tables and their footnotes were also visually inspected. This does not make every older antibiotic/allergy statement current; only the relevant preparation recommendations were used here.
+- **PICASSO/JAMA 2024:** complete main manuscript, two tables, two figure images, references and disclosures read. Supplement1 pages1–6 read; remaining supplementary analyses, protocol, SAP and data-sharing statement remain open.
+- **Savage 2023, Enz 2023 and Romeo 2023:** all three complete main manuscripts, eight total tables and all16 figure images/captions read, with references/disclosures. Enz's separate supplement remains unavailable. The other two retrieved article packages list no separate supplement.
+- **Cochrane drapes:** complete published review read, including both summary tables, all seven included-study tables, excluded studies, five appendices, all references/disclosures and published feedback/replies. All six risk-of-bias/analysis graphics were visually inspected. External manufacturer correspondence cited by the review was not independently obtained.
+- **Cochrane hand preparation:** main narrative and principal evidence tables read; remaining study-characteristic tables, appendices, reference list and graphic analyses still require completion. This package is explicitly not recorded as completely read.
+- **Current labels:** full text for the26-mL and1.75-mL ChloraPrep products and March2026 Micro-Guard4% CHG label read. Packaging images remain unchecked. Applicator-specific instructions were not transferred between products.
+- **Guidance and other trials:** exact selected WHO/NICE/SHEA sections and complete available source abstracts are itemized in the JSON. PREPARE main text was only partly accessible; Rozycki's full review remains unaccessed. Download failures and HTML files masquerading as PDFs were not counted as paper reads.
+
+## Evidence not adopted
+
+The Ahmed2026 vaginal-preparation meta-analysis (10.1097/MS9.0000000000004311) was not used to recommend vaginal chlorhexidine superiority. Its study table includes the CAPICA2017 cesarean **abdominal skin-preparation** trial among supposed vaginal trials. CAPICA's original abstract identifies the skin-preparation applicator and confirms that distinction. The review's own AMSTAR2 rating is low; its headline high-certainty claim is insufficient for adoption without resolving trial classification and pooling. Its main text/tables were read; the remaining references, graphics and supplementary checklists were not.
+
+McKinney2026 cesarean network meta-analysis and the2026 gynecologic-oncology ERAS guideline were found and their complete abstracts read. Full texts and applicability remain queued; neither was used to create a new GU protocol from an abstract.
+
+## Independent review
+
+A second reviewer read all three complete drafts and checked the specific PICASSO denominators, ACOG vaginal/formulation paragraph, PREPARE/Rozycki/Feng/Battersby/Vij abstracts, drape main analysis, product instructions, NICE/WHO/SHEA guidance and selected Savage/Enz/Romeo Methods/Results. No blocking introduced error was found. The reviewer did not independently read all manuscripts, figures or supplements. Two precision suggestions were incorporated: Savage's monotonic tensile test and restrained Battersby knot-quality-score wording. The final three pages were reread after correction.
+
+## Work still open
+
+Complete the source-access gaps above and the retained historical full-paper reads. Check later guideline revisions before extending these specific preparation findings to antibiotics, perioperative glucose or other decisions. No clinician review date/sign-off was invented. The public pages retain the existing last-updated presentation, with detailed review accounting confined to authoring reports.

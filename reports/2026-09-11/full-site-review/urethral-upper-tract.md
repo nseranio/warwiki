@@ -291,3 +291,13 @@ docs/04-surgical-techniques/04a-urethral-reconstruction/flap/mcaninch-circular-f
 docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx — updated SHA-256: 4b052170c6d6e1bce809b86d433d4ea2e68289f23d1314c19a197b4c14f67862
 
 docs/04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft.mdx — updated SHA-256: 1cc7071517044ce4bbf62d961deb0985dd7de78af27b7f7a44ae7a95855b211d
+
+## 2026-09-12 Jena donor-attribution companion correction
+
+Removed unsupported vulvar labia-minora attribution and donor-specific Jena2025 outcomes from female dorsal-onlay, labia-minora flap and Onol pages. This is an access-gap correction, not confirmation of oral or vulvar tissue. Full Methods unavailable. Previously completed full page reads remain valid; the changed paragraphs/tables were reread. Other previously logged source gaps persist.
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-dorsal-onlay-urethroplasty.mdx — 73cfccf112c580971595ad7cdc1c9c42e37f5d83131c493ec2e0ae4efadb4229
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/female/labia-minora-flap.mdx — 8da8cad2e2c730e0225c600cbdfdaf9e119d78d1fc5318f26f02449b4fe3e76a
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/female/onol-vaginal-mucosal-inlay.mdx — e9b0835fba0a11eb10ee539ce16e2b56422158b5caf02877a631790c24bcd14d
