@@ -94,6 +94,10 @@ function screenRecord(record) {
   for (const [pattern, label] of excludedCues) {
     if (pattern.test(`${title} ${types.join(' ')}`)) exclusions.push(label);
   }
+  // Cochrane protocols can have ordinary review titles and only "Journal
+  // Article" indexing. Retain the explicit abstract signal when normalizing so
+  // later shortlist/Markdown passes do not promote the protocol back to a review.
+  if (record.cochraneProtocolInAbstract === true) exclusions.push('Abstract explicitly identifies a Cochrane review protocol');
   if (category !== 'correction-or-retraction' && exclusions.length === 0) {
     if (cue(/\bsafety (?:alert|communication|warning|notice)\b|\b(?:drug|device|product) recall\b/, 'explicit safety alert / recall')) category = 'safety-notice';
     else if (cue(/\b(?:practice )?guidelines?\b/, 'guideline', false) || cue(/\b(?:clinical practice |evidence[- ]based )guidelines?\b|\bguidelines? (?:on|for|update|amendment|from|by)\b|\b(?:updated?|amended) guidelines?\b|\bconsensus (?:statement|guidance|recommendations)\b/, 'guideline / consensus guidance')) category = 'guideline';
@@ -123,6 +127,7 @@ function normalize(record, topicId) {
     journalTitle:record.journalInfo?.journal?.title || '',
     firstPublicationDate:record.firstPublicationDate || null, firstIndexDate:record.firstIndexDate || null,
     publicationTypes, corrections, topics:[topicId],
+    cochraneProtocolInAbstract: /\bthis is (?:a|the) protocol for a cochrane review\b/.test(signalText(record.abstractText).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ')),
     url:`https://europepmc.org/article/${encodeURIComponent(record.source)}/${encodeURIComponent(record.id)}` };
   normalized.screening = screenRecord(normalized);
   normalized.prioritySignal = normalized.screening.category === 'correction-or-retraction' ? 'correction-or-retraction-check' : normalized.screening.shortlistEligible ? 'higher-priority-screen' : 'screen';
@@ -172,7 +177,7 @@ function markdown(report) {
   for (const record of report.records) categoryCounts[screenRecord(record).category]++;
   return [`# WARWIKI literature inbox — ${report.to}`, '',
     `Search window: **${report.from} through ${report.to}**. ${report.records.length} deduplicated records.`, '',
-    '**Screening candidates, not verified clinical updates.** Start with major guidelines, Cochrane reviews, large trials and findings likely to change practice. The shortlist uses explicit publication-type, title and journal cues; it cannot establish that a guideline is authoritative, a trial is large, or a result changes practice. Publication-type labels may lag indexing. Case reports/series, letters/editorials, protocols/preprints and exploratory/pilot/feasibility/post-hoc reports are excluded by default; correction or retraction signals override that exclusion.', '',
+    '**Screening candidates, not verified clinical updates.** Start with major guidelines, Cochrane reviews, large trials and findings likely to change practice. The shortlist uses explicit publication-type, title and journal cues, plus an explicit Cochrane-protocol declaration in the abstract; it cannot establish that a guideline is authoritative, a trial is large, or a result changes practice. Publication-type labels may lag indexing and abstracts may be missing. Case reports/series, letters/editorials, detected protocols/preprints and exploratory/pilot/feasibility/post-hoc reports are excluded by default; correction or retraction signals override that exclusion.', '',
     config.screening.editorialCheck + ' Verify publisher dates, outcomes and correction status, then compare the current page before editing. The overlap intentionally includes older papers indexed recently. Abstracts and full text are not republished here.', '',
     '## High-yield screening shortlist', '',
     `${primary.selected.length} shown from ${primary.eligibleCount} records with selected metadata cues. The main list is capped at ${config.screening.maxPrimaryCandidates}, with all correction/retraction and explicit safety notices kept even if that exceeds the cap. Remaining slots are shared across candidate types so a large batch of reviews does not hide every trial. Priority is for screening only.`, '',

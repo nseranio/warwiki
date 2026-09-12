@@ -258,6 +258,17 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.92);
 }
 
+.markdown table thead a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.markdown table thead a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .markdown table tbody tr {
   border-top: 1px solid var(--warwiki-border);
   transition: background-color 0.1s ease;

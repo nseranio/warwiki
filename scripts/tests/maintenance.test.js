@@ -78,6 +78,24 @@ test('ordinary safety, surgical correction and nonrandomized titles do not imply
   assert.equal(candidate('9','Retraction Note: Outcomes of a continence trial').screening.category,'correction-or-retraction');
   assert.equal(candidate('10','Outcomes of a continence trial: Erratum').screening.category,'correction-or-retraction');
 });
+test('Cochrane protocols declared only in abstracts remain excluded through every screening pass', () => {
+  // CD016320 has a review-like title and Journal Article indexing despite being
+  // a protocol. Do not copy or save the source abstract into the public inbox.
+  const base = {id:'41574662',source:'MED',title:'Bipolar coagulation techniques versus the clamp-crush technique for elective liver resection',pubTypeList:{pubType:['Journal Article']},journalInfo:{journal:{title:'Cochrane Database of Systematic Reviews'}}};
+  const record = normalize({...base,abstractText:'<h4>Objectives</h4>This is a protocol for a <i>Cochrane</i> Review (intervention). We will assess benefits and harms.'},'test');
+  assert.equal(record.cochraneProtocolInAbstract,true);
+  assert.equal(record.screening.shortlistEligible,false);
+  assert.match(record.screening.exclusions.join(' '),/Abstract explicitly/);
+  assert.equal(shortlist([record]).selected.length,0);
+  const output = markdown({from:'2026-01-01',to:'2026-09-12',records:[record],searches:[]});
+  assert.doesNotMatch(output,/\|.*Bipolar coagulation/);
+  assert.equal(JSON.stringify(record).includes('We will assess'),false);
+  const corrected = normalize({...base,abstractText:'This is a protocol for a Cochrane Review.',commentCorrectionList:{commentCorrection:[{type:'ErratumIn',id:'notice',source:'MED'}]}},'test');
+  assert.equal(shortlist([corrected]).selected[0].screening.category,'correction-or-retraction');
+  for (const abstractText of ['We followed a published protocol. This review includes randomized trials.',undefined]) {
+    assert.equal(normalize({...base,abstractText},'test').screening.category,'cochrane-review');
+  }
+});
 test('shortlist ranks explicit evidence cues and never hides correction/safety notices behind a cap', () => {
   const trial = candidate('trial','Randomized trial of continence care');
   const guideline = candidate('guideline','Guidelines on continence care');
