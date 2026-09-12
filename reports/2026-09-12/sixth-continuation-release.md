@@ -17,7 +17,7 @@ Ten bulking-product pages and their operative companion distinguish formulation 
 
 ## Publication
 
-Commit, exact-head CI, Vercel status and direct production-content checks are being completed. This record will be updated after verification.
+Published as **`a9c62610f4b18d50e3adac209ccdc28b96b578ed`**. [GitHub CI34688041429](https://github.com/nseranio/warwiki/actions/runs/34688041429) and exact-commit [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/9sptwKqj9dXz1m6uqqw5NUGBVDaV) succeeded. Six direct production checks passed, including updated graft/STSG/Durasphere/USF content, the home page and the removed `/clinic` route. See [publication verification](sixth-publication-verification.json). Initial verification used two incorrect route guesses and case-sensitive text mismatches; corrected against the built-route inventory and source, then all checks passed. No site correction was needed.
 
 ## Continued work
 
