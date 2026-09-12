@@ -112,3 +112,7 @@ Vascular-urinary and vesicocutaneous full pages were reread, with targeted sourc
 ## September12 USF/urethroperineal companion follow-up
 
 Both current originals and final revisions were fully reread. USF now distinguishes selected bone-infection cohorts, actual culture/pathology denominators, post-radiation organ preservation and individualized antimicrobial/source-control decisions; all14original DOI abstracts were read plus the Haas2025 clinical main body. Urethroperineal text now separates congenital functional anatomy, RUF outcomes, urethroplasty revision and skin-fistula incidence, and uses current EAU imaging/biopsy scope. Verla4/85fistulas is no longer conflated with stricture failure. Remaining PU/LS long-term figures and unavailable historical operative manuscripts are not newly certified; exact limitations and current hashes are in JSON.
+
+### Rectourethral fistula surgical-companion alignment — 2026-09-12
+
+Entire current page and40references reread; introduced changes reviewed against the York–Mason/TAMIS primary source checks. Corrected2025eight-of12 subgroup andfive-reversal denominator, bowel continence ascertainment, prior-operation scope, radiation selection, robotic/laparoscopic case mix and noncausal mesh observation. Removed universal BMG/diversion rules and cross-series ranking. This focused alignment does not newly verify every retained epidemiology or technical claim; exact hash/scope are in JSON.

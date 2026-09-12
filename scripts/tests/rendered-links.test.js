@@ -72,3 +72,13 @@ test('validates rendered image, script and stylesheet destinations without reque
 test('includes hidden clinic assessment/treatment and article destinations in the source check', () => {
   assert.deepEqual(extractDataLinks("{assessment: \'/docs/assessment\', treatment: \'/docs/treatment\', articleSlug: \'/docs/article\'}", 'clinic.ts'), ['/docs/assessment', '/docs/treatment', '/docs/article']);
 });
+
+test('rejects raw clinical warning markup while allowing rendered alerts and literal code examples', async t => {
+  const buildDir = fixture(t, {
+    'index.html': '<p>:::warning Balloon safety\nInsert correctly.</p><p>:::danger Severe reaction</p>',
+    'valid.html': '<div class="alert alert--warning"><strong>Balloon safety</strong></div><pre><code>:::warning[Example]</code></pre><script>":::danger hidden"</script>',
+  });
+  const result = await checkRenderedLinks({buildDir});
+  assert.equal(result.issues.length, 2);
+  assert.ok(result.issues.every(issue => issue.from === 'index.html' && issue.reason.startsWith('unrendered admonition')));
+});

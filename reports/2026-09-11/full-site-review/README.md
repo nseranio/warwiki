@@ -2,14 +2,14 @@
 
 Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.
 
-Current snapshot: 1186 pages; 553 with full-text reading recorded against current content; 0 fully clinically verified.
+Current snapshot: 1186 pages; 575 with full-text reading recorded against current content; 0 fully clinically verified.
 
 | Section | Pages | Full text read | Updated | Unreviewed |
 |---|---:|---:|---:|---:|
-| 01-foundations | 446 | 178 | 171 | 268 |
+| 01-foundations | 446 | 192 | 182 | 242 |
 | 02-evaluation | 38 | 38 | 32 | 0 |
 | 03-clinical-conditions | 73 | 73 | 66 | 0 |
-| 04-surgical-techniques | 451 | 218 | 215 | 226 |
+| 04-surgical-techniques | 451 | 226 | 225 | 220 |
 | 05-special-populations | 46 | 46 | 40 | 0 |
 | 06-journal-club | 1 | 0 | 0 | 1 |
 | 07-roots | 120 | 0 | 0 | 120 |

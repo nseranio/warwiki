@@ -301,3 +301,7 @@ docs/04-surgical-techniques/04a-urethral-reconstruction/female/female-dorsal-onl
 docs/04-surgical-techniques/04a-urethral-reconstruction/female/labia-minora-flap.mdx — 8da8cad2e2c730e0225c600cbdfdaf9e119d78d1fc5318f26f02449b4fe3e76a
 
 docs/04-surgical-techniques/04a-urethral-reconstruction/female/onol-vaginal-mucosal-inlay.mdx — e9b0835fba0a11eb10ee539ce16e2b56422158b5caf02877a631790c24bcd14d
+
+### September12 companion alignment — liquid/minced buccal mucosa
+
+Karapanos2023 selected full Tables1/3 and Discussion resolve the inconsistent abstract: >10-dilation success5/16 versus10/12 (31.3% versus83.3%, p=.006), not81.3%/p=.003. Both operative passages corrected and reread. Prior whole-page read preserved; new source access is selected sections only. SHA-256: `e98a8f6f474e3ee9fa931b60cc231e51438e10a9dae634a581ba3fc32842dfaf`.

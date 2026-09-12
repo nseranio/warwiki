@@ -20,9 +20,14 @@ function extractHtml(document, parse) {
   const root = parse(document);
   const ids = new Set();
   const links = [];
+  const unrenderedAdmonitions = [];
   let canonical;
   let base;
-  function visit(node) {
+  function visit(node, literal = false) {
+    const isLiteral = literal || ['pre', 'code', 'script', 'style'].includes(node.tagName);
+    if (!isLiteral && node.nodeName === '#text' && /(?:^|\n)\s*:::(?:note|tip|info|warning|danger|caution|important|success|secondary)\b/.test(node.value)) {
+      unrenderedAdmonitions.push(node.value.trim().split('\n')[0].slice(0, 160));
+    }
     const attrs = Object.fromEntries((node.attrs || []).map(a => [a.name, a.value]));
     if (attrs.id) ids.add(attrs.id);
     if (node.tagName === 'a' && attrs.name) ids.add(attrs.name);
@@ -32,10 +37,10 @@ function extractHtml(document, parse) {
     if (['img', 'script', 'iframe', 'source', 'audio', 'video'].includes(node.tagName) && attrs.src) links.push(attrs.src);
     if (node.tagName === 'video' && attrs.poster) links.push(attrs.poster);
     if (node.tagName === 'link' && /\b(?:stylesheet|icon|preload|modulepreload)\b/.test(attrs.rel || '') && attrs.href) links.push(attrs.href);
-    for (const child of node.childNodes || []) visit(child);
+    for (const child of node.childNodes || []) visit(child, isLiteral);
   }
   visit(root);
-  return {ids, links, canonical, base};
+  return {ids, links, canonical, base, unrenderedAdmonitions};
 }
 
 // Tables/decision trees can hide rows until a filter/tab is used. Check their
@@ -107,6 +112,9 @@ async function checkRenderedLinks({buildDir, sourceDirs = [], siteUrl = 'https:/
     if (!pages.get(file)?.ids.has(hash)) issues.push({from, href, reason: `missing section #${hash}`, target: path.relative(buildDir, file)});
   }
   for (const page of pages.values()) {
+    for (const text of page.unrenderedAdmonitions) {
+      issues.push({from: path.relative(buildDir, page.file), href: text, reason: 'unrendered admonition; use directive syntax such as :::warning[Title]'});
+    }
     const pageUrl = new URL(page.route, site);
     const base = page.base ? new URL(page.base, pageUrl) : pageUrl;
     for (const href of page.links) check(href, path.relative(buildDir, page.file), base);
@@ -128,7 +136,7 @@ async function main() {
   else {
     console.log(`Rendered link check: ${result.htmlPages} HTML pages, ${result.checkedLinks} local links/assets, ${result.dataLinks} data-link literals.`);
     for (const issue of result.issues) console.error(`  ${issue.from} → ${issue.href}: ${issue.reason}`);
-    console.log(result.issues.length ? `${result.issues.length} broken local links/sections.` : 'All local destinations and section anchors passed.');
+    console.log(result.issues.length ? `${result.issues.length} rendered content/link issues.` : 'All local destinations, section anchors and admonition markup passed.');
   }
   if (result.issues.length) process.exitCode = 1;
 }

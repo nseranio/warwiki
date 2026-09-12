@@ -1,6 +1,6 @@
-# Surgical fistula full-text review — in progress
+# Surgical fistula full-text review — full MDX coverage recorded
 
-As of 2026-09-12: **42/44 original MDX pages fully read;40updated.** York–Mason is read but has known unresolved corrections; the index remains scoped/unresolved. Transanal minimally invasive repair and vaginal fistula flaps are the two unread originals. This is targeted source verification, not whole-domain clinician sign-off. Exact hashes and access limitations are in JSON.
+As of 2026-09-12: **44/44 original MDX pages fully read; 44 updated and final text reread.** The final York–Mason, transanal minimally invasive repair and vaginal-flap corrections are saved; the index has been reconciled. This completes assigned full-page reading, not clinician sign-off or full access to every primary manuscript, figure or supplement. Exact hashes and source-access limits are in JSON.
 
 Corrections address erroneous outcome denominators, mixing fistula sites and indications, unsupported drug schedules, urgent source control and anatomy-dependent reconstruction. Current scope includes vaginal VVF, fecal diversion, male/all-patient atlases, pyeloenteric, nephropleural, transplant, ureterocolonic and colovesical/enterovesical pages.
 
@@ -32,7 +32,7 @@ Corrections address erroneous outcome denominators, mixing fistula sites and ind
 | female/urethrovaginal-fistula-repair.mdx | Yes | updated |
 | female-fistula.mdx | Yes | updated |
 | fistula-repair-principles.mdx | Yes | updated |
-| index.mdx | Yes | unresolved |
+| index.mdx | Yes | updated |
 | male/conservative-ruf-management.mdx | Yes | updated |
 | male/eraf-ruf.mdx | Yes | updated |
 | male/salvage-prostatectomy-usf.mdx | Yes | updated |
@@ -48,10 +48,10 @@ Corrections address erroneous outcome denominators, mixing fistula sites and ind
 | male/usf-organ-sparing-interposition.mdx | Yes | updated |
 | male/usf-ppf-bladder-sparing.mdx | Yes | updated |
 | male/usf-primary-repair-no-flap.mdx | Yes | updated |
-| male/york-mason.mdx | Yes | unresolved |
+| male/york-mason.mdx | Yes | updated |
 | male-fistula.mdx | Yes | updated |
-| transanal-minimally-invasive-repair.mdx | No | unresolved |
-| vaginal-fistula-flaps.mdx | No | unresolved |
+| transanal-minimally-invasive-repair.mdx | Yes | updated |
+| vaginal-fistula-flaps.mdx | Yes | updated |
 
 ## Source-access limitations
 
@@ -122,3 +122,14 @@ All three remaining USF originals/final rewrites read; all24distinct original DO
 ### Sixth-release checkpoint
 
 Source and owned ledger edits are frozen for publication. Clinical urethropubic and urethroperineal companion corrections are saved and logged separately.42/44fistula originals have full reads,40updated; York–Mason is read with identified unresolved errors and partial original-source checking. The two unread originals are transanal-minimally-invasive-repair.mdx and vaginal-fistula-flaps.mdx. Resume York–Mason first after release. Earlier continuation entries above are historical checkpoints, not current coverage.
+
+## Final original-page reads and current corrections
+
+All44 originals are now fully read. York–Mason corrections remove zero-incontinence guarantees, correct8/12 first-repair subgroup, 5reversal denominator, colostomy, Utah overlapping cohorts and experience-period/follow-up confusion. All16 primary abstracts and full2025 main article/Table1/captions were read; actual figures/videos remain outside this check. TAMIS corrections distinguish platforms/clinical populations, remove causal mesh-harm claims and universal no-diversion/sphincter guarantees, and incorporate full2026Lapergola main text within its single-case IDEALstage1 scope. All11 original nonguideline abstracts plus ASCRS2022 recommendations11–18 were checked. Both final MDX pages/bibliographies reread and citation lint passed. Clinical RUF companion was fully reread and aligned for the same specific claims; its other40-reference content is not newly certified. Vaginal-flap rewrite/source reconciliation remains in progress.
+
+## Final fistula overview correction — September 12
+
+- **Vaginal flap overview:** all 50 original references reconciled with complete available primary abstracts or the full ASCRS RVF recommendation section. Added the omitted Singh 2019 randomized study after reading its complete seven-page paper, three tables and CONSORT figure; the figure/table pages were also visually inspected. The study randomized flap use within the selected surgical route, not vaginal versus abdominal surgery. Few failures do not establish equivalence, and its simple-fistula population excludes the difficult recurrent/radiation cases for which readers often seek flap advice.
+- Corrected mixed populations, flap-versus-patient counts, initial-versus-repeat repair, eligible-versus-analyzed patients, short follow-up and concomitant treatments. Removed unsupported comparisons and blanket donor-safety claims. Corrected Martius/Latzko/rectovaginal anatomy and biologic-versus-synthetic/vascularized-versus-free material descriptions.
+- **Index:** fully reread; replaced the misleading near-complete sex separation with the actual anatomy-based and shared-section structure.
+- **Limits:** 49 original nonguideline items were read as complete abstracts, with prior independently logged full-text access preserved where available; Singh main text/tables/figure were fully read, and ASCRS access was limited to the relevant full recommendation sections. The retained clinical video and most original manuscripts, figures and supplements were not independently reviewed. No all-reference clinical certification is implied.

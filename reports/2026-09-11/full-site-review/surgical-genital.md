@@ -2,7 +2,7 @@
 
 Entire original and revised MDX read including references. Consequential claims checked against identified primary sources, official guidance and device labeling. Source access is recorded individually; a full MDX read is not full access to every cited study or clinical clearance.
 
-Saved full-page reads with scoped substantive review: **9**. This is an ongoing family review, not a statement that the entire family has been reviewed.
+Saved full-page reads with scoped substantive review: **15**. This is an ongoing family review, not a statement that the entire family has been reviewed.
 
 ## Penile Grafting With Tissue Substitutes
 
@@ -185,5 +185,127 @@ Limits:
 - No source provides a validated individualized risk calculator, guaranteed SUI benefit, graft success or insurance coverage. This is a scoped substantive review, not clinical clearance.
 
 Final source SHA-256: `f25c26c6d40d3268ee9a9a5e7c610a78dffed613bf200f6380e6ef299b3da3ef`
+
+## Scrotal Reconstruction
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-reconstruction.mdx` — updated
+
+Complete original and final revised MDX, tables and all references read. Consequential reconstructive anatomy, graft-bed selection, tension/percentage algorithms, emergency source control, adjunct evidence, lymphatic surgery selection, transgender/pediatric populations and fertility endpoints checked. All 24 original DOI-linked primary abstracts and identities read; raw Abdelfattah abstract separately read after a text-rendering omission. Full-source scopes are individually recorded.
+
+Changes:
+- Replaced fixed defect-percentage hierarchy and automatic flap requirement for exposed testes with viable bed, depth, perfusion and closure tension; removed mandatory septum/gubernaculum division, cord coiling and upward testicular relocation.
+- Preserved named graft, flap and pouch approaches while distinguishing small technique-series protocols from general requirements; 2026 flap review reports loss rather than all complications and supplies no graft comparison.
+- Corrected Fournier source-control sequence, individualized diversion and NPWT observational versus guideline evidence, including guideline search-date limitation.
+- Corrected lymphedema cure/recurrence claims and operative-revision endpoints; incorporated the ISL 2023 consensus with donor-risk and conservative-care limits.
+- Corrected gender-affirming urethral-lengthening context, Miller denominator/severe complications, historical implant timing and pediatric-versus-adult Z-plasty extrapolation.
+- Removed human fertility hierarchy inferred from a rat experiment and the mixed-population complication table.
+
+Limits:
+- Full papers for the 24 original DOI sources were not obtained in this page pass except separately identified shared full sources; operative details beyond abstracts require original full reports.
+- Karian 2015 internal subgroup-count inconsistencies and Susini 2024 extraction/denominator problems are logged; neither is used for reliable pooled comparative rates.
+- Figure captions in shared full sources were read, but figure graphics and supplements were not inspected. No claim of every cited study being fully validated or current clinical sign-off.
+
+Final source SHA-256: `f1d4ec9a94c6f77bc2d24f8438eca7584f968f49db1c0690936303222728031d`
+
+## Scrotal Reconstruction
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal.mdx` — updated
+
+Entire original MDX including all database entries and references read in contiguous output supplemented after truncation; entire rewritten page and database reread. All 22 original DOI-linked primary abstracts and identities read. Selection, graft-bed anatomy, emergency sequence, outcome denominators, lymphatic claims and follow-up assessed with full-source scopes below.
+
+Changes:
+- Replaced unsafe fixed skin-loss ladder, mandatory septum/cord maneuvers and poor-dartos-bed assertion with viability, depth, tension and patient-goal decisions.
+- Removed unsupported flap-versus-graft fertility/thermoregulation ranking and guaranteed normal physiology with thigh pouches; removed universal monthly cancer self-exam advice.
+- Corrected flap-loss versus all-complication interpretation and device-survival versus satisfaction/lifetime guarantee.
+- Removed obligatory diversion, fixed NPWT/graft timing, universal orchidopexy and misleading mortality or 98% take promises.
+- Aligned all searchable treatment entries, removing fixed 50% rules, genital extrapolation of limb staging and curative labels; retained links to uncommon procedures with evidence limits.
+
+Limits:
+- Technique-linked pages remain subject to their own full reviews; database presence is not an endorsement or evidence of comparative superiority.
+- Except individually described shared papers, the original citations were accessed as complete available primary abstracts, not full methods or graphics.
+- EAU adjunct guidance has an explicitly old search window; later observational studies do not settle causal benefit.
+
+Final source SHA-256: `ed70d6c721b962202c8f2a770c1bbd35a69c37c36a75bc25b1fdd6e8998d69e5`
+
+## Scrotal Primary Closure
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-primary-closure.mdx` — updated
+
+Entire original and revised MDX including all tables and references read. Every original available primary abstract read (25 DOI-linked sources plus Lauerman indexed title/DOI); consequence-focused review of vascular anatomy, testicular safety, closure eligibility, observational outcome selection, expansion protocols and fertility extrapolation.
+
+Changes:
+- Removed universal 50%/75% thresholds and mandatory septum/gubernaculum/cord dissection; corrected false avascular-gubernaculum and unlimited-undermining claims with primary anatomy.
+- Distinguished testicular repair from scrotal closure using current EAU selected guidance; tailored sutures/drainage instead of unsupported specific universal protocol.
+- Corrected Sandberg causal/superiority inference, Lauerman selection confounding and Kumar serious complication categories; cohort timing is not a closure deadline.
+- Retained selected tissue-expansion approaches with tiny-cohort limits; separated expanded groin flap from primary scrotal closure and thigh-pouch volume from fertility.
+- Removed mixed-cohort complication ranking, permanent human infertility assertion and obligatory delay for grafting; preserved long-term functional counseling.
+
+Limits:
+- Most original studies are available here as complete abstracts, not full methods/figures. Detailed expansion pressure, dissection and suture protocols are not independently validated.
+- The complete Carrera paper was text/caption reviewed but its graphics were not inspected; the Ellis vascular study was abstract-only.
+- No validated head-to-head human fertility or method-specific complication ranking was established.
+
+Final source SHA-256: `ef009773b798ff10d21f01a72f1fd2cca5a07b4a35baf88d618ad06df8617f08`
+
+## Scrotal Skin Grafting (STSG / FTSG)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-stsg.mdx` — updated
+
+Entire original and final MDX read including tables, video component and all references. All23 DOI-linked primary abstracts read, including Morey/Malloy recovered with quoted DOI queries; McAninch1989 full text not obtained. Graft-bed anatomy, fixation, cohort populations and denominators, comparative evidence, NPWT pressure inferences, donor-site evidence and fertility claims assessed.
+
+Changes:
+- Removed automatic 50% threshold, poor-dartos-bed rule, universal tunica-vaginalis requirement and mandatory cord coiling/orchidopexy; preserved selected study protocols with limits.
+- Distinguished scrotal coverage from penile AABP graft data; removed false FTSG equivalence/erectile-function guarantee and mislabeled universal complication rates.
+- Corrected Cao86-patient overall versus high-mobility subgroup endpoints, retained Lee16-RCT/812-patient high-yield synthesis with heterogeneity, and rejected universal optimal-pressure inference.
+- Separated postgraft fixation evidence from Fournier acute NPWT/mortality claims, with current EAU recommendation and old search-window limitation.
+- Corrected Alwaal mixed-cohort take versus formal functional denominators, Jeng32-case complication categories and Cochrane donor-dressing scope; removed rat-to-human fertility certainty.
+- Retained two-stage contour option as six-patient technical report; removed unsupported comparative superiority, fixed timing and mandatory bed rest.
+
+Limits:
+- Except individually recorded shared full sources, original papers were read as complete primary abstracts only. No full Cao/Lee/Jiang reports, pressure-allocation methods or study figures were inspected.
+- McAninch1989 full source remains unavailable; claims requiring it were replaced or scoped using accessible primary material.
+- Karian and Susini full textual reviews contain logged internal inconsistencies, so their pooled counts are not presented as validated comparative estimates. Graphics/supplements not inspected.
+
+Final source SHA-256: `93fe696755486a3d75ba1ffcd34c97d1f1a524c588812630c17cb2c3cb173285`
+
+## Scrotal Flap Reconstruction
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-flaps.mdx` — updated
+
+Complete original and revised MDX, every table and all references read. All16original DOI-linked primary abstracts and identities read. Consequential defect selection, vascular claims, loss/complication endpoints, cross-population rankings, sensory/fertility claims and special applications assessed.
+
+Changes:
+- Replaced fixed 50%/exposed-testis flap mandates and numerical maximum-size/sensation/superiority table with individual defect and donor considerations.
+- Corrected flap loss versus all complications, removed unsupported highest-gracilis/lowest-VRAM scrotal ranking derived from perineal oncology cohorts.
+- Corrected rat versus human evidence and IIEF versus sperm/fertility outcomes; Yao was only three patients without graft comparison.
+- Corrected Kim EMPD flap/graft choices, EPAP single penile case attribution, Coskunfirat two wound dehiscences and Wishart12patients/21flaps with only3scrotal cases.
+- Corrected Ehrl9patients/5VLNT and recurrence attribution; distinguished lymphatic reconstruction from coverage and TUGPAP double-pedicle microsurgical mixed-defect cohort.
+
+Limits:
+- Original DOI sources were complete available primary abstracts only, except separately described Carrera and shared full reviews/consensus. No new full operative papers or graphics were inspected.
+- Foundation flap pages are linked for detailed anatomy but are not certified by this overview review; root notified of suspected companion ranking/pedicle drift.
+- No high-quality genital head-to-head trial establishes a universal technique, fertility advantage or complication ranking.
+
+Final source SHA-256: `ac1357b1eb9353db4f26a374bbe168fee7aeb03ebb5fb720e217c7c3d6f0e368`
+
+## Testicular Thigh Pouch
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/scrotal-thigh-pouch.mdx` — updated
+
+Entire original and revised MDX including all technique steps, tables and references read. All nine original primary abstracts read: seven original DOI entries plus Mandel and McAninch recovered by exact title. Selection, vascular safety, temporary/definitive/staged distinctions, cohort outcomes, heat/fertility inference and follow-up reviewed.
+
+Changes:
+- Removed total-loss and exposed-testis pouch mandates, fixed 50% eligibility, mandatory cord/gubernacular/cremasteric release and incorrect return via the external inguinal ring.
+- Retained Okwudili temporary return, Staniorski definitive flap/pouch and Mandel staged pseudocapsule options with correct denominators and evidence limits.
+- Removed unsupported guarantee that anterior placement prevents pain and false simplicity/no-expertise claim; corrected serious risks and possible later revision.
+- Separated volume from fertility, age from reproductive priorities and animal heat schedules from a clinical infertility deadline; removed blanket cancer self-screening.
+- Identified Mandel as one case with three-year follow-up and Berli hydrocele as a single eight-year complication report, with plausible rather than proven mechanism.
+
+Limits:
+- Original operative papers were accessible here as complete primary abstracts only. Specific pocket dimensions, flap perforator maps, fixation, capsule maturation and nonsurgical-return protocol are not fully verified.
+- No controlled evidence establishes comparative fertility, painless positioning or lifelong satisfaction for definitive thigh pouches.
+- Shared Karian full text/captions reviewed but figure graphics not inspected; historical subgroup inconsistencies remain logged.
+
+Final source SHA-256: `644dddd274206eee31ea08a1de606acda8c9f3b629c4e471a8190368e9321648`
 
 Individual primary-source URLs and exact access scopes are in the companion JSON.
