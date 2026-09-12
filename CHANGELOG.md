@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Corrected Jacobson, Schnidt, Péan and Rochester-Péan instrument identity, model-specific geometry and dimensions, tissue handling and inappropriate pressure/safety claims; reconciled four database records. Complete originals and revisions read. Preserved all 19 inherited reference entries and read all 15 unique indexed abstracts, two complete mains, eleven actual journal figures and seven selected catalog pages. Exact remaining full-paper/IFU/supplement gaps are recorded.
 
-Lint, typecheck, 32 unit tests, 52 maintenance tests, production build and article/database browser checks pass. Output is 131.54 MB. Ledger: 664 full current MDX reads, 637 scoped updates, 517 unreviewed. Publication verification pending; see the [release record](reports/2026-09-12/twenty-second-continuation-release.md). The whole-site review continues with the complete Cochrane traditional-sling package and remaining source/page work.
+Lint, typecheck, 32 unit tests, 52 maintenance tests, production build and article/database browser checks pass. Output is 131.54 MB. Ledger: 664 full current MDX reads, 637 scoped updates, 517 unreviewed. Content `6baccfb6` is pushed and verified live with successful exact-commit CI and Vercel; see the [release record](reports/2026-09-12/twenty-second-continuation-release.md). The whole-site review continues with the complete Cochrane traditional-sling package and remaining source/page work.
 
 ---
 

@@ -16,8 +16,8 @@ Four article routes pass desktop/mobile checks, actual citation-anchor clicks, r
 
 ## Publication
 
-Local validation complete; content commit/push and exact-commit CI/Vercel/live verification pending.
+Content `6baccfb62fc3dc38c22ece11f3f5f3567b3110a3` is pushed to main. Exact-commit [GitHub CI](https://github.com/nseranio/warwiki/actions/runs/34716008816) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/BKLhqLMpk13TTStcHmiuUTRdq3Qz) succeeded. Production home and all four changed articles return 200 with the corrected text; `/clinic` remains 404. See [publication verification](twenty-second-publication-verification.json).
 
 ## Continue
 
-Complete the Cochrane traditional-sling source package and reconcile relevant fascia/procedure pages. All 483,639 extracted review characters have now been read across four assigned contiguous segments; its 206 actual graphics are being inspected separately. Continue remaining tools, foundations, operative pages, resources/History and OpenEvidence reconciliation. Quarterly evidence maintenance and paused Epic work are unchanged. Local output size does not measure Vercel billed storage.
+Complete the Cochrane traditional-sling source package and reconcile relevant fascia/procedure pages. All 483,639 extracted review characters have now been read across four assigned contiguous segments; all 206 actual graphics have also been inspected in separately recorded assignments. Continue remaining tools, foundations, operative pages, resources/History and OpenEvidence reconciliation. Quarterly evidence maintenance and paused Epic work are unchanged. Local output size does not measure Vercel billed storage.

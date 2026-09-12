@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-09-12T20:07:03.978085+00:00",
+  "sourceCommit": "6baccfb62fc3dc38c22ece11f3f5f3567b3110a3",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "6baccfb62fc3dc38c22ece11f3f5f3567b3110a3",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34716008816"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/BKLhqLMpk13TTStcHmiuUTRdq3Qz",
+      "updated_at": "2026-09-12T20:06:47Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://www.warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/jacobson",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/jacobson",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "bulldog": true,
+        "18 cm": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/schnidt",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/schnidt",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "half serrations": true,
+        "18.5 cm": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/pean",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/pean",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "220 mm": true,
+        "ligated stump": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/rochester-pean",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/rochester-pean",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "45.5 cm": true,
+        "14 cm": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}
