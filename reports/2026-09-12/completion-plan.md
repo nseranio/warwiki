@@ -12,9 +12,9 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-The twenty-fourth batch is locally validated: **671 complete current MDX reads, 643 scoped updates, 21 checked, 12 unresolved and 510 unreviewed of 1,186 files**. Five prolapse/estrogen pages and the conceptual SCP diagram are corrected within exact source scopes. Build 131.45 MB; content `d12c57e5` is verified live with successful exact-commit CI/Vercel and all ten live checks in the [release record](twenty-fourth-continuation-release.md).
+The twenty-fifth batch is locally validated: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Four apical/colpocleisis articles rebuilt, two companions linked, USLS diagram corrected and SSLF diagram withdrawn. Build131.37MB; publication pending. [Release record](../2026-09-13/twenty-fifth-continuation-release.md).
 
-Complete ASPIRe and E-OPTIMAL main/supplement packages are now read; remaining paper/figure/supplement gaps are itemized in the [source records](prolapse-source-reading/README.md). Current bounded readers are working read-only on colpocleisis, USLS and SSLF. Continue remaining tools (112/231 read), surgical techniques, foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Publication does not complete the whole-site request. Do not redeem account usage credits without explicit authorization.
+Current bounded source readers cover two hysteropexy pages, SUPeR2021 and barbed sutures. Continue all remaining tools, surgical techniques, foundations/resources/History/imported data and OpenEvidence reconciliation. No usage-reset credits authorized.
 
 ## Retained preferences
 

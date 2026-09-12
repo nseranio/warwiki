@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-13 — Twenty-fifth continuation: apical outcomes, operative anatomy and colpocleisis
+
+Rebuilt four apical/colpocleisis pages and linked two companions to the September2026 U-POP review. Corrected trial versions/denominators, testing and operative mandates, mesh/uterine-preservation selection, and sling-material attribution. Withdrawn inaccurate SSLF diagram; corrected USLS conceptual geometry/labels and urinary-tract assessment. Full original OPTIMAL package, additional original sources and complete apical Cochrane text read; actual-figure/supplement gaps remain explicit.
+
+All local checks and16visual checks pass at131.37MB; registry52figures. Ledger: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Publication pending. See [release record](reports/2026-09-13/twenty-fifth-continuation-release.md) and [source index](reports/2026-09-13/apical-source-reading/README.md). Continue the whole-site request.
+
+---
+
 ## 2026-09-12 — Twenty-fourth continuation: prolapse trials, operative claims and source packages
 
 Corrected five prolapse/estrogen pages and the SCP conceptual diagram; revised study populations, denominators, outcomes, hysterectomy choice, perioperative estrogen interpretation and testing/counseling. Complete ASPIRe and E-OPTIMAL main/supplement packages, PEOPLE/IUC/EVA/Li mains, the hysterectomy Cochrane main and 29 actual graphics, and additional operative sources are recorded separately from remaining access gaps. SAVE-U original randomization and source access are corrected; maintenance tests no longer reject current evidence because of an obsolete fixed date.

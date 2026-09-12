@@ -3,8 +3,8 @@
  * WARWIKI original schematic — uterosacral ligament suspension (USLS).
  *
  * Superior (bird's-eye) view: the vaginal vault is suspended bilaterally to the
- * intermediate uterosacral ligaments (at the ischial-spine level) and drawn back
- * toward the sacrum. The ureter runs proximity varies to the ligament — the
+ * intermediate uterosacral regions (schematic locations) and drawn back
+ * toward the posterior pelvis. Ureteral proximity varies along the ligament — the
  * signature risk — so intraoperative cystoscopy is mandatory.
  *
  * Output: static/img/diagrams/usls.svg
@@ -14,7 +14,7 @@ const path = require('path');
 
 const C = { ink: '#1E293B', muted: '#64748B', border: '#E2E8F0', bone: '#ECE4D4', boneEdge: '#B6A98C',
   lig: '#E0D4B4', ligEdge: '#B0995F', vag: '#F3DBDC', vagEdge: '#CF9DA3', ureter: '#B91C1C',
-  suture: '#185FA5', safe: '#15803D', spine: '#94A3B8' };
+  suture: '#185FA5', marker: '#64748B', spine: '#94A3B8' };
 const FONT = "-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 const W = 820, H = 376;
 const f = n => Number(n.toFixed(1));
@@ -36,7 +36,7 @@ push(txt(cx, 360, 9, 700, C.muted, 'middle', 'anterior (bladder)', false));
 
 // sacrum (posterior, top)
 push(`<path d="M ${cx - 70} 96 C ${cx - 30} 84, ${cx + 30} 84, ${cx + 70} 96 C ${cx + 50} 120, ${cx - 50} 120, ${cx - 70} 96 Z" fill="${C.bone}" stroke="${C.boneEdge}" stroke-width="1.6" stroke-linejoin="round"/>`);
-push(txt(cx, 102, 8.5, 700, C.boneEdge, 'middle', 'sacrum (S2-4)'));
+push(txt(cx, 102, 8.5, 700, C.boneEdge, 'middle', 'sacral region'));
 
 // ischial spines (lateral landmarks)
 for (const s of [-1, 1]) {
@@ -63,24 +63,23 @@ for (const s of [-1, 1]) {
 push(txt(cx - 150, 150, 9, 700, C.ureter, 'middle', 'ureter'));
 push(txt(cx - 150, 162, 8, 500, C.muted, 'middle', 'proximity varies'));
 
-// suspension sutures at the intermediate USL (ischial-spine level) -> vault
+// Illustrative suspension attachment; these marks are not safe suture targets.
 for (const s of [-1, 1]) {
-  const px = cx + s * 70, py = 212; // suture point on USL near ischial-spine level
+  const px = cx + s * 70, py = 212; // conceptual attachment marker, not an anatomical coordinate
   push(`<circle cx="${px}" cy="${py}" r="4.5" fill="${C.suture}"/>`);
-  push(`<circle cx="${px}" cy="${py}" r="11" fill="none" stroke="${C.safe}" stroke-width="1.5"/>`);
   push(`<path d="M ${cx + s * 26} 300 C ${cx + s * 50} 260, ${px - s * 4} ${py + 16}, ${px} ${py + 6}" fill="none" stroke="${C.suture}" stroke-width="2.2" stroke-linecap="round"/>`);
 }
-push(txt(cx, 196, 9, 700, C.safe, 'middle', 'intermediate USL'));
-push(txt(cx, 207, 8, 500, C.muted, 'middle', '(ischial-spine level)'));
+push(txt(cx, 196, 9, 700, C.marker, 'middle', 'intermediate USL'));
+push(txt(cx, 207, 8, 500, C.muted, 'middle', '(approximate region)'));
 push(txt(cx - 96, 300, 8.5, 700, C.suture, 'middle', 'suspension'));
 push(txt(cx - 96, 311, 8.5, 700, C.suture, 'middle', 'sutures'));
 
 // cystoscopy reminder
 push(`<rect x="556" y="120" width="232" height="86" rx="10" fill="#FEF2F2" stroke="#F3C6C6" stroke-width="1.3"/>`);
-push(txt(572, 142, 11.5, 700, C.ureter, 'start', 'Cystoscopy is mandatory', false));
-push(txt(572, 160, 9.5, 500, C.muted, 'start', 'confirm ureteral jets after suture', false));
-push(txt(572, 174, 9.5, 500, C.muted, 'start', 'placement; ureteral kinking is the', false));
-push(txt(572, 188, 9.5, 500, C.muted, 'start', 'signature USLS complication.', false));
+push(txt(572, 142, 11.5, 700, C.ureter, 'start', 'Cystoscopy after suspension', false));
+push(txt(572, 160, 9.5, 500, C.muted, 'start', 'Assess bladder and bilateral jets;', false));
+push(txt(572, 174, 9.5, 500, C.muted, 'start', 'repeat after relevant later repair.', false));
+push(txt(572, 188, 9.5, 500, C.muted, 'start', 'Normal jets do not exclude all injury.', false));
 
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Uterosacral ligament suspension">

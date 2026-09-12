@@ -1,0 +1,15 @@
+# Cochrane Maher2023 graphical-asset inventory and access gap
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC10370901/ . Main HTML SHA256 `957459ad6eb2bd2cc9b81cf7c40e2e2a48a7242bdf9ea0b7363f45da92418a9f`.
+
+**No readable numerical figure inspection could be completed.** All **251** article figure occurrences were inventoried and successfully downloaded from their observed PMC source URLs. Every downloaded JPEG is exactly **100×100pixels**. Their binary hashes form **189unique thumbnail groups**; this is deduplication of thumbnails, not a claim that the underlying full-resolution plots are all identical within each group.
+
+Inventory: `/tmp/warwiki-apical-cochrane/figures/inventory.json` includes occurrence ordinal, figureID, displayed figure/analysis label, preceding source text, exact thumbnail and figure-page URLs, local path, byte count, SHA256, dimensions and duplicate ordinals. `/tmp/warwiki-apical-cochrane/figures/deduplicated.json` provides one row per binary-thumbnail group. Named main figures and priority comparison1–4ordinals are recorded in `/tmp/warwiki-apical-cochrane/figures/review.json`.
+
+**Actual preview scope:** main Figure1 thumbnail (ordinal1) and Analysis1.1 thumbnail (ordinal4) were opened with the image tool. The images are genuine source thumbnails but the flowchart labels, study rows, event denominators, confidence intervals and plot-axis values are not legible. Neither preview is credited as a full graphical read. The other249downloaded thumbnails were not visually read. No plot-versus-text numerical consistency result is claimed. Enlargement cannot recover missing source detail, so no reconstructed or AI-upscaled figure was substituted.
+
+**Full-resolution access:** a normally fetched individual figure page (Figure1) contains exactly the same100pixelasset and no full-resolution alternative. One native-filename candidate (thumbnailprefix removed) gave404. The PMC OA-package API and EuropePMCfullXML endpoint returned404. The observed PMC PDF link yielded1817bytes of challengeHTML rather than a PDF (renamed `CD012376-pdf-response.html` to avoid accidental PDF credit); web open also failed. Cochrane full page returned403, and the separate normal ePDF route returned412. OpenAlex lists only the same PMC PDF as an OA source. ResearchGate's author record offers RequestPDF, not a retrieved public copy. Normal browser entry was attempted once and returned “No browser is available.” Exact URL/status register is in review.json. No authentication, paywall, CAPTCHA or tool-access boundary was bypassed.
+
+**Remaining work:** obtain the legitimate actual review PDF or original graphical assets, then read main figures and comparisons1–4first (and subsequently the remaining analyses). Use the inventory's labels to align with the fully read narrative/table text. The previous complete text-slice report remains valid; it does not close this separate graphical-access gap. No source figures, numerical plot data or graphics-completion credit should be added to the site ledger from this task.
+
+No repository edits, ledger changes, builds, commits or deployment occurred.
