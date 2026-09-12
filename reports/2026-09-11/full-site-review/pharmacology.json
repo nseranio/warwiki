@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-09-11",
-  "methodology": "Page-by-page pharmacology review in progress. Status updated means the whole page text was read and specific listed claims corrected against primary labels, guidelines, full study text or abstracts. It does not mean every dose, citation, mechanism or clinical recommendation was independently validated. fullTextRead explicitly records reading coverage, while clinicalVerificationComplete remains false for every page. Unresolved pages may be unread or read with unresolved content, as recorded individually. Desmopressin is excluded because the root agent owns its review. SHA256 hashes identify saved text, not clinical certification.",
+  "reviewedAt": "2026-09-12",
+  "methodology": "Page-by-page pharmacology review in progress, covering all 95 physical MDX pages including desmopressin and short indexes/stubs. fullTextRead records actual entire-content reading; SHA256 identifies that saved text. Status updated means listed claims were corrected; checked means selected claims or navigation content were reviewed without a required correction. Neither is comprehensive clinical certification: clinicalVerificationComplete remains false, with remaining limitations recorded per page. Primary guideline/label and high-impact evidence checks are prioritized over adding small studies.",
   "pages": [
     {
       "file": "docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx",
@@ -82,152 +82,237 @@
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx",
       "title": "Antimitotics & Antifibrotics",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read including reference list.",
+        "Corrected routine MMC endorsement using current EAU trial-only guidance; cytotoxic mechanism, historical rather than prescribing dose table, TURNS required/planned diversion distinction.",
+        "Corrected ROBUST III six-month anatomical versus one-year reintervention outcome; separated FDA anterior label from recurrent bulbar guideline selection."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4307389/",
+        "https://urotronic.com/wp-content/uploads/2023/04/1111-003-rB-IFU-Urethral-DCB-Dilation-Catheter-US.pdf",
+        "https://uroweb.ru/sites/default/files/2310_One-Year_Results_for_the_ROBUST_III_RCT.pdf?v1.2.149=",
+        "https://pubmed.ncbi.nlm.nih.gov/30535714/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Primary Rezaei abstract prints 24-month p0.34; current EAU prints p0.034. Page now explicitly records discrepancy without inferring vanished two-year efficacy. Historical small-series effect estimates and every injection recipe remain incompletely verified."
       ],
-      "sourceSha256": "7ca06f86110e5320a1bff7766b9374d5b0a4047bd9906c5590151a781bac79fd",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "3d7f58e38270720ef728201a399d79fd513ab98a224f4d76d3a148f833463bd5",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx",
       "title": "Drug-Coated Balloon Therapy (Optilume)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read including all references.",
+        "Verified US IFU 1111-003 Rev B from manufacturer current IFU index: label, paclitaxel/implant contraindications, active-UTI restriction, 30-day barrier/abstinence and six-month conception precautions.",
+        "Replaced generic fixed balloon pressure with size-specific rated-burst-pressure instructions and >=60-second hydration / >=5-minute inflation, Foley minimum two days.",
+        "Corrected 31 five-year completers versus 43 functional-success analysis denominator; extension/subgroup and device-size association limitations."
       ],
-      "sources": [],
+      "sources": [
+        "https://urotronic.com/ifu/",
+        "https://urotronic.com/wp-content/uploads/2023/04/1111-003-rB-IFU-Urethral-DCB-Dilation-Catheter-US.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/39213367/",
+        "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Manufacturer regional IFUs differ; US-specific document used. Full ROBUST five-year article not reread; primary abstract checked for counts. Other small off-label cohorts and every effect estimate not independently verified."
       ],
-      "sourceSha256": "11ea173734d7a97b92c8711cc28feb594e41559d2e9aacd926de0f17e8ede8fe",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "fcc2428375e97bde05892c3405e1d99a87f36b03247eb833e658bd3b9c5e1eb8",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/high-potency-topical-corticosteroids.mdx",
       "title": "High-Potency Topical Corticosteroids",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "EAU current pediatric phimosis treatment versus normal physiological non-retractability; Cochrane2024 low-certainty outcome figures checked.",
+        "EuroGuiDerm induction/individualized maintenance, US clobetasol label ceiling versus off-label genital use; removed universal lifelong BID/maintenance and automatic superior-steroid claims.",
+        "Aligned Moss2023 overall responder endpoint with prior primary full-text review."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/paediatric-urology/chapter/phimosis-and-other-abnormalities-of-the-penile-skin",
+        "https://www.cochrane.org/evidence/CD008973_topical-corticosteroids-treating-phimosis-boys",
+        "https://www.guidelines.edf.one/uploads/attachments/clmub3q4l0an5uhjrluc4r0yq-lichen-sclerosus-gl.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/41778748/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485e931d-16a7-4e92-996e-d3b32d9f41e7",
+        "https://onlinelibrary.wiley.com/doi/10.1002/nau.25142"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "2026 German S3 abstract verified; its PMC full text returned browser challenge, so dose framework checked in primary EuroGuiDerm full PDF. Not every historical small dermatosis series/potency formulation independently verified."
       ],
-      "sourceSha256": "c09f722e06283c87b0bec32f7dd12297a013d63d1a4ed54cae8170ef036681be",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "f2bbd20f3c4cff67beb8af19455a544ee10f4a2d9c6a44ffc548cb359d6dd0f2",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/hpv-topical-agents.mdx",
       "title": "HPV / Condyloma Topical Agents",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "CDC options, meatal cryotherapy/surgery, pregnancy distinctions, HIV approach and podophyllin toxicity; removed mandatory topical-before-ablation hierarchy.",
+        "US Condylox0.5% versus unsupported0.15% brand conflation, dose/area ceiling; Veregen external immunocompetent adult labeling and sexual-contact precautions.",
+        "Removed mismatched Gorlin basal-cell-carcinoma citation used to support postoperative genital HPV/PeIN treatment and unsupported comparative safety/superiority claims."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.cdc.gov/std/treatment-guidelines/anogenital-warts.htm",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=032e4bcb-b1ed-4029-b2a6-e92f3bf5cc37",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0fc1e21-e3cf-4bce-860c-307f670b192e"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Historical clearance/recurrence ranges not exhaustively revalidated; specialist intraurethral5FU and oncologic uses are not endorsed as standard care."
       ],
-      "sourceSha256": "f447f062495ab786ff1405ed8fa2aab45000c746ab01459b242ee7ae3cd99a76",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "5af1ff5265ab5e4ed4fb435b23b3d4bc20311a712f6706de5bac5225a9509a3b",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx",
       "title": "Dermatologic & Topical Urethral",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "Full navigation index read and descriptions matched to revised companions; removed nonexistent5FU/halofuginone/TrostBNC promises and routine PRP framing."
       ],
-      "sources": [],
+      "sources": [
+        "Local seven sibling pages, each actually read in this pass"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Navigation/summary consistency review, not independent clinical certification."
       ],
-      "sourceSha256": "ea535da6c7b40331656bc0a223ead2d9fd4f7a3b56367627e4a1b73cad623796",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "d2f4f38fbb8f1a75031924a9a0f3197121107c60bfc6df9d6ece4e5c1e78a729",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/intralesional-corticosteroids.mdx",
       "title": "Intralesional Corticosteroids",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "Hunner injection with or without fulguration versus uncertain stricture/BNC injections; removed MMC-first routine sequence and uniform best BNC protocol.",
+        "Kenalog40/80 actual label routes/excipients versus heterogeneous off-label urologic injection protocols; removed pediatric diacetate/interval recommendation inferred from1980 case report.",
+        "Palminteri report is BNC not general VUAS; removed transferable6/12o-clock recipe; recorded Eltahawy abstract19patients/83% among24 enrolled denominator inconsistency."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf",
+        "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cf970688-cd77-b95c-4bd9-c541590e9722",
+        "https://pubmed.ncbi.nlm.nih.gov/18671784/",
+        "https://link.springer.com/article/10.1007/s00345-024-04912-7",
+        "https://uroweb.org/guidelines/paediatric-urology/chapter/phimosis-and-other-abnormalities-of-the-penile-skin",
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-curvature"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Not every legacy protocol, total dose or small-series numerical claim independently checked. Eltahawy denominator inconsistency needs full-paper resolution; do not derive19/24=83%."
       ],
-      "sourceSha256": "d037cb73dfa2cf5ea050a36b00c7031e69eef525b667712cf911b8063d979563",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "6654915857dc993e3f8dc7e2e3b0ea16c222e64fa685da3ee3ba16da51a60c08",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma.mdx",
       "title": "Platelet-Rich Plasma",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "Reclassified routine PRP-before-AUS/sling alternatives/ICBPS algorithms as investigational; primary2026ICBPSmeta full text confirms uncontrolled nonrandomized evidence.",
+        "EAU2026EDtrial-only guidance; corrected false only-double-blind-RCT statement against Poulios2021 primary record.",
+        "Removed zero-transmission/no-harm assurance; CDC primary PRP cosmetic-procedure infection investigation illustrates processing risk, explicitly not urologic incidence.",
+        "PRP stricture p-value discrepancy recorded; preliminary Peyronie within-sequence changes not proof of delayed comparative effect."
       ],
-      "sources": [],
+      "sources": [
+        "https://link.springer.com/article/10.1007/s00192-026-06515-9",
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/management-of-erectile-dysfunction",
+        "https://pubmed.ncbi.nlm.nih.gov/33906807/",
+        "https://pubmed.ncbi.nlm.nih.gov/30535714/",
+        "https://pubmed.ncbi.nlm.nih.gov/38424354/",
+        "https://www.cdc.gov/mmwr/volumes/73/wr/mm7316a3.htm"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Ledesma full text inaccessible during this pass; source identity verified and inference narrowed. All older mechanistic/small-series numerics not independently validated."
       ],
-      "sourceSha256": "f27ccb65b250fac5bb325287baa9254a8edab341bca1d123e90323be241858ea",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "41604e0dc54b60519e5286a6dfecfa95357b6961affd20ae33e4842bc7c323e4",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/dermatologic-topical-urethral/topical-calcineurin-inhibitors.mdx",
       "title": "Topical Calcineurin Inhibitors",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current MDX text read, including references and navigation content.",
+        "April2026tacrolimus ointment label and Elidel label: off-label genital versus approved atopic-dermatitis indication, ages/strengths, noncontinuous use, malignancy uncertainty and barrier/GVHD absorption.",
+        "Removed automatic indefinite BID maintenance substitution, no-increased-cancer certainty and outdated AUA numbered-ladder implication."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2d2e3a1-f346-4245-b445-6dd44e371180",
+        "https://pi.bauschhealth.com/globalassets/BHC/PI/elidel-pi.pdf",
+        "https://www.guidelines.edf.one/uploads/attachments/clmub3q4l0an5uhjrluc4r0yq-lichen-sclerosus-gl.pdf"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Historical response/relapse rates and investigational intravesical tacrolimus dose-response not comprehensively verified. Product label is not a genital-disease efficacy study."
       ],
-      "sourceSha256": "d6f3d04ca3948f069fd9ea574b64a619de47c21ffccada9369a3b0c819844ef2",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "c5eee0ededa781a743567c078d7f9adc891df78b69d2e0398ea003ad9d5f8903",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/gender-affirming-hormone-therapy.mdx",
       "title": "Gender-Affirming Hormone Therapy",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire article read; WPATH SOC8 full text retrieved and relevant adult regimen/perioperative sections read; AVEED US label, EMA cyproterone meningioma warning, ACR screening, Nos primary cohort and Dutch cardiovascular abstract checked."
       ],
-      "sources": [],
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553112/",
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9553112/fullTextXML",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f80f025b-17d8-40af-8739-20ce07902045",
+        "https://www.ema.europa.eu/en/news/restrictions-use-cyproterone-due-meningioma-risk-0",
+        "https://acsearch.acr.org/docs/3155692/Narrative/",
+        "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2798002",
+        "https://pubmed.ncbi.nlm.nih.gov/41187090/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected US AVEED750mg at0/4weeks then10-week interval and30-minute observation, lower SOC8 cyproterone range, unsupported injection VTE equivalence and routine estrogen withdrawal. Nos cohort434 not2688; observational timing cannot prove causation. Small pelvic-floor symptom sample not universal prevalence. PSA1ng/mL is proposed rather than validated. Broader adolescent developmental/bone outcomes and all historical dose/interaction studies were not exhaustively verified; current text explicitly preserves uncertainty. NCCN exact versions not accessed; no blanket clearance."
       ],
-      "sourceSha256": "f980186d0b1518a7ecdd1638fbf50b1cf381810437bee75cf840cff7e455b51a",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "ee149faf936ad317fd6fa4f183ee5bb1f935d27fc5c3ea631c18f6f5816c855b",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/index.mdx",
       "title": "Hormonal Therapies",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full landing-page text and navigation read; summaries aligned with current companion evidence and label corrections."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/GSM%20Unabridged%202025.pdf",
+        "https://doi.org/10.1111/1471-0528.70311"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed blanket FDA warning-removal, perioperative hormone hold, DHEA safety and ospemifene urinary-benefit assertions. Links retained; no independent clinical certification of every linked article."
       ],
-      "sourceSha256": "e65191b424fe2b5e1fbc9669476d05d2d96a673562b682d64c2c7da63123a410",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "4102b3ef93a366d639fc434264d7eecafb67f5ed867078a4ddec0e6f76e36d8d",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/ospemifene.mdx",
@@ -252,17 +337,25 @@
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/preoperative-hormonal-priming.mdx",
       "title": "Preoperative Hormonal Priming",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full article read; primary IMPROVE population/model-estimated failure and endpoint definitions, Cochrane2023 certainty,2025 pessary trial, and new EVA2026 multicenter primary abstract checked."
       ],
-      "sources": [],
+      "sources": [
+        "https://jamanetwork.com/journals/jama/fullarticle/2808329",
+        "https://www.cochrane.org/evidence/CD014592_does-oestrogen-therapy-help-treat-pelvic-organ-prolapse-postmenopausal-women",
+        "https://www.bmj.com/content/389/bmj-2025-084418",
+        "https://pubmed.ncbi.nlm.nih.gov/42663275/",
+        "https://doi.org/10.1111/1471-0528.70311",
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A42663275"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "EVA published primary abstract verified via Europe PMC MED; publisher early-view confirms Aug28,2026 identity. Full paper and registry retrieval failed: missing-data/analysis details unresolved;57/293 attrition disclosed. Removed unsupported Nowakowski/DHEA priming recommendation,2018-review misattribution, arbitrary7.7% tissue claim, universal dosing and blanket FDA-warning interpretation. Earlier mechanistic/slings trials retained with design limits; no complete clinical clearance."
       ],
-      "sourceSha256": "10f80fba21bdc0f56bc4ff7228207fdc68edf4a8c89424bc04018fbd27fbd9d0",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "975964341f2b2d3cf7f3a63242ff3274da0dd6e3b6206bb6aa6427da19bdc98d",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/vaginal-dhea.mdx",
@@ -286,32 +379,44 @@
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx",
       "title": "Vaginal Moisturizers & Lubricants",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full article read;2025 GSM treatment choice, nonhormonal positioning, FDA device classification, WHO osmolality and unsupported reconstructive benefits checked."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/GSM%20Unabridged%202025.pdf",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf6/K062682.pdf",
+        "https://iris.who.int/bitstream/handle/10665/76580/WHO_RHR_12.33_eng.pdf?sequence=1"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "AUA official indexed guideline passages reviewed; direct PDF retrieval returned403. Product-specific comparative trials retained; each historical result was not independently reproduced. Laboratory tolerability is not proof of improved surgical healing or infection prevention."
       ],
-      "sourceSha256": "23c88bd2713292ddb6531ddfbe67ebf9ff0bd5c725ab60c8437927a5fdd79d7c",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "7891905c073a9a69549c18cd5079383944d87a15e977f616a509ea93ae693b8a",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx",
       "title": "Vaginal & Topical Estrogen",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full article read; AUA2025 GSM/rUTI guidance, Premarin indication-specific schedules, prasterone systemic metabolites, ospemifene endometrial/breast warnings, distinction between cancer recurrence and mortality checked."
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/GSM%20Unabridged%202025.pdf",
+        "https://www.auanet.org/guidelines-and-quality/guidelines/recurrent-uti",
+        "https://labeling.pfizer.com/showlabeling.aspx?id=132",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ada639d4-bac0-2ad0-e053-2a95a90afce7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9accbcc9-78ee-4f84-9b7e-704f2ab1c413"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Official AUA indexed excerpts reviewed after direct PDF403. Replaced inaccessible version-specific NCCN assertion with verified AUA guidance. TAPER/FDA chronology previously checked by root retained. EVA crosslink added; symptom benefit differs from durable anatomical success. Not all historical individual trial endpoints or drug brands independently rechecked."
       ],
-      "sourceSha256": "a8c63a2d2a3199547fb7802af89ad0aaf21f0192db8df898a45e50b525315f57",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "255f61b6a61690c287df45363254299d436c4b810626e1044376de263be08ae4",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/index.mdx",
@@ -331,107 +436,203 @@
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/antifungals.mdx",
       "title": "Antifungals",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX text read; IDSA urinary candidiasis recommendations 97–114 and renal aspergillosis checked",
+        "Corrected ascending pyelonephritis fluconazole dose, resistant C. glabrata options/duration, C. krusei flucytosine exclusion and hematogenous-kidney exception",
+        "Separated AUA/IDSA periprocedural funguria approach, implant observational evidence and cystectomy multicomponent before/after data; added renal/interaction monitoring"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.idsociety.org/practice-guideline/candidiasis/",
+        "https://www.idsociety.org/practice-guideline/aspergillosis/",
+        "https://auau.auanet.org/sites/default/files/media/2022-02/3%20Urologic%20procedures%20and%20antimicrobial%20prophylaxis.pdf",
+        "https://doi.org/10.1097/JU.0000000000004716",
+        "https://doi.org/10.1016/j.jsxm.2019.05.003",
+        "https://doi.org/10.1016/j.urolonc.2015.10.007",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f694c617-3383-416c-91b6-b94fda371204"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "PUMP and cystectomy primary abstracts/metadata reviewed, not full patient-level data. Removed OR 0.22=92% error, Level 1 labels and universal antifungal orders. Gross 2019 abstract contains internally inconsistent 23/26=83% arithmetic; neither inconsistent percentage nor inferred correction retained. AUA official BPS summary available; full web guideline endpoint returned error. Rare endemic/prostatic fungal case literature not individually reappraised."
       ],
-      "sourceSha256": "3d398e4b9537366af8dbb9a02c924f09ec14d2e659362f7f7de73dfd8563add0",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "521ea46d9ecfdcf5a6d5d4fc3e3f9e0f8aa7affbf1d94e9b4d0027396dc54511",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/index.mdx",
       "title": "Infection & Prophylaxis",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full 39-line navigation/index read; qualified novel antimicrobial and PUMP claims and updated recurrent-UTI guideline year",
+        "Removed false PUMP 92% reduction and separated intravesical aminoglycoside antibiotic strategy from non-antibiotics"
       ],
-      "sources": [],
+      "sources": [
+        "https://doi.org/10.1097/JU.0000000000004716",
+        "https://www.auanet.org/guidelines-and-quality/guidelines/recurrent-uti"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Index links to detailed drug pages; linked UTI pages still being reviewed, so their older summaries are not individually certified by this index check."
       ],
-      "sourceSha256": "5a49f5f15999a50578a0ec2387efe81933a8c47a0999925723cf654b3a1ef7d8",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "bc58a9526257b9fa1e0308168e8d0dba99a50d3adb82c5fa02a8ab556ab56951",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention.mdx",
       "title": "Non-Antibiotic UTI Prevention",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire 408-line MDX read in two complete chunks; current AUA cranberry Moderate/B and hydration population, current EAU vaccine trial setting, primary MV140/MERIT/ImpresU results, Cochrane cranberry population uncertainty",
+        "Removed universal cranberry threshold efficacy, mandatory twice-daily regimen, vitamin-D prevention certainty, unproven hygiene/probiotic counseling, duplicated estrogen dosing and DHEA substitution; corrected intravesical-antibiotic classification, no-absorption guarantee and generic dosing recipe"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/rUTI%20Update/rUTI%202025%20Unabridged%20Final.pdf",
+        "https://d56bochluxqnz.cloudfront.net/documents/full-guideline/EAU-Guidelines-on-Urological-Infections-2026_2026-05-18-101552_yupb.pdf",
+        "https://doi.org/10.1097/JU.0000000000002239",
+        "https://doi.org/10.1056/EVIDoa2100018",
+        "https://doi.org/10.1016/j.cmi.2025.07.006",
+        "https://doi.org/10.1001/jamainternmed.2024.0264",
+        "https://www.cochrane.org/evidence/CD001321_cranberries-preventing-urinary-tract-infections",
+        "https://doi.org/10.1111/bju.70252",
+        "https://doi.org/10.1093/jacamr/dlad040",
+        "https://doi.org/10.1093/infdis/jiac279",
+        "https://doi.org/10.1111/bju.70016"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Primary evidence relevant to important claims verified at abstract or selected full-text section level. Different intravesical pooled IRR/RR estimates do not prove comparative superiority; optimal local product/regimen and long-term safety remain uncertain. Existing methenamine label/acidification and hormonal hub links retained."
       ],
-      "sourceSha256": "718a795f5bcac0e3259c291e3eb994d1aa9e530cdadb703c2f3d34f061557ed0",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "2e660c19864b875e2fad4c2643b5d79f5dd6d7c615316802b4eae049fdeb3066",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/perioperative-antibiotic-prophylaxis.mdx",
       "title": "Perioperative Antibiotic Prophylaxis",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire source MDX read; verified ASHP dosing/redosing, AUA/IDSA ASB distinction, EAU 2026 biopsy prophylaxis, NORAPP and cystectomy-duration trial identities/results, drug-allergy parameter and MRSA stewardship",
+        "Removed unsupported urethroplasty extension, universal implant antifungal recipe, device dip duplication, incorrect NORAPP n=1008 and Cochrane protocol-as-completed-review claims; corrected odds/risk and observational evidence grading"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.ashp.org/surgical-guidelines",
+        "https://auau.auanet.org/sites/default/files/media/2022-02/3%20Urologic%20procedures%20and%20antimicrobial%20prophylaxis.pdf",
+        "https://academic.oup.com/cid/article/68/10/e83/5407612",
+        "https://d56bochluxqnz.cloudfront.net/documents/full-guideline/EAU-Guidelines-on-Urological-Infections-2026_2026-05-18-101552_yupb.pdf",
+        "https://doi.org/10.1016/S1473-3099(22)00373-5",
+        "https://doi.org/10.1001/jamanetworkopen.2024.39382",
+        "https://doi.org/10.1002/14651858.CD015990",
+        "https://doi.org/10.1016/j.jaci.2022.08.028",
+        "https://doi.org/10.1017/ice.2023.67",
+        "https://www.idsociety.org/practice-guideline/vancomycin/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Primary guideline relevant sections and trial abstracts reviewed; no claim of full-text verification of every legacy study. Exact local antibiogram, procedural regimen and manufacturer device preparation remain institution/product specific."
       ],
-      "sourceSha256": "9c766c80be76fa6d9c3bc54f08e2a7a82f29c497d42802ab646a39503787e643",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "309d79a72ef6a3e5099322b9ade7003d93ade0c302f84f7a3af9be3f59f5cd19",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/prosthetic-infection-biofilm.mdx",
       "title": "Prosthetic Infection & Biofilm Protocols",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX text read including opening recovered after output truncation",
+        "Reconciled InhibiZone/Titan handling with manufacturer material; removed unverified fixed dip concentrations/duration and covalent-coating claim",
+        "Checked PUMP, Towe, Ivan 2026 and Helo primary abstracts; distinguished retrospective association from equivalence/causation and prophylaxis from infected salvage",
+        "Corrected Simhal/Im/Manka reference identities; Karpman studied Titan, not InhibiZone; corrected ACOG vaginal formulation distinction and ASB standard-prophylaxis exception"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.bostonscientific.com/content/dam/elabeling/uro-ph/92127382-01C_AMS-700_ORM_en_s.pdf",
+        "https://www.bostonscientific.com/us/en/healthcare-professionals/products/artificial-urinary-sphincter/ams-800-artificial-urinary-sphincter/fp00000139/indications-safety-warnings.html",
+        "https://iu.coloplast.us/products/titan-penile-implants/",
+        "https://www.irrisept.com/products/",
+        "https://doi.org/10.1097/JU.0000000000004716",
+        "https://doi.org/10.1016/j.jsxm.2020.07.009",
+        "https://doi.org/10.1093/jsxmed/qdaf368",
+        "https://doi.org/10.1097/JU.0000000000004853",
+        "https://doi.org/10.1093/jsxmed/qdaf009",
+        "https://doi.org/10.1093/jsxmed/qdae073",
+        "https://doi.org/10.1093/jsxmed/qdae093",
+        "https://doi.org/10.1093/jsxmed/qdad055",
+        "https://doi.org/10.1016/j.esxm.2020.05.010",
+        "https://academic.oup.com/cid/article/68/10/e83/5407612",
+        "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/09/perioperative-pathways-enhanced-recovery-after-surgery"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Manka full article methods/results/discussion accessed via Europe PMC XML; most other study checks used primary abstracts/metadata. CHG cohorts do not prove coating mechanism or general safety; Helo abstract reverses revision subgroup labels, so only unambiguous overall counts retained. Manufacturer current public product information read; packaged Titan model-specific IFU still controls exact preparation. Older registration and microbial-prevalence sources not all fully reappraised."
       ],
-      "sourceSha256": "7885a2edd6c1a9fd96817ba09dd80ecbd2b7e2d6423add13d9a350e451f04069",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "5655c0df86a4b38224574090624928ab2eaa594a291956a2b4af2d46e1cc68c9",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx",
       "title": "UTI Suppressive & Prophylactic Therapy",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; current AUA 2025 prevention options, EAU 2026 vaccine trial-only recommendation, AUA NLUTD CIC-with-rUTI exception, major AnTIC/MV140/ImpresU/MERIT results",
+        "Removed ciprofloxacin routine prophylaxis, self-start ≤2/year cutoff, universal fluid dose and ineffective-all-neurogenic assertion; corrected empirical TMP threshold versus susceptible-isolate selection, nitrofurantoin label/guideline distinction"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/rUTI%20Update/rUTI%202025%20Unabridged%20Final.pdf",
+        "https://d56bochluxqnz.cloudfront.net/documents/full-guideline/EAU-Guidelines-on-Urological-Infections-2026_2026-05-18-101552_yupb.pdf",
+        "https://doi.org/10.1097/JU.0000000000002239",
+        "https://doi.org/10.1056/EVIDoa2100018",
+        "https://doi.org/10.1016/j.cmi.2025.07.006",
+        "https://doi.org/10.1001/jamainternmed.2024.0264",
+        "https://www.cochrane.org/evidence/CD001321_cranberries-preventing-urinary-tract-infections",
+        "https://doi.org/10.1016/S1473-3099(18)30279-2",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28bc9ec9-b8db-4ece-a14a-8bcf618cbf7e"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Guideline selected statements and primary trial abstracts verified; local prophylaxis choice requires susceptibility and toxicity review. AUA official PDF direct opening intermittently failed; indexed official statement text and primary journal version were accessible. Earlier detailed HIPREX/ALTAR checks preserved; no blanket review of all source full texts."
       ],
-      "sourceSha256": "a6c95ddd94a1327757053c84ace3b7df710945a38aabe8899f6ae2624775192b",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "c6c2329372d02151f3d9887d8c6a6de0723a98ce21221265a0e141d860635c90",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/infection-prophylaxis/uti-treatment-antibiotics.mdx",
       "title": "UTI Treatment Antibiotics",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full 468-line original MDX read in two complete chunks; revised text reviewed during edits",
+        "Reconciled current IDSA 2025 cUTI classification/duration/oral switch and 2026 AMR guidance; corrected systemic versus bladder infection, renal/prostate restrictions and ASB implant/transplant exceptions",
+        "Corrected US Pivya 185mg TID3–7d versus higher off-label guideline regimens; Blujepa age/weight/meal and interaction limits; distinguished actual trial comparators",
+        "Added concise FDA-labeled Orlynvah, Contepo, Zaynich and Utebzi scope; removed unvalidated universal resistance percentages and high-dose formulation equivalence"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://academic.oup.com/cid/article/68/10/e83/5407612",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=440a5f17-ab11-0fc8-e063-6394a90a58e9",
+        "https://gskpro.com/content/dam/global/hcpportal/en_US/Prescribing_Information/Blujepa/pdf/BLUJEPA-PI-MG.PDF",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215960Origs000lbl.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/220787Orig1s000lbl.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/212271s000lbl.pdf",
+        "https://www.fda.gov/drugs/news-events-human-drugs/fda-approves-new-treatment-uncomplicated-urinary-tract-infections-adult-women-who-have-limited-or-no",
+        "https://d56bochluxqnz.cloudfront.net/documents/full-guideline/EAU-Guidelines-on-Urological-Infections-2026_2026-05-18-101552_yupb.pdf",
+        "https://doi.org/10.1001/jama.2018.3627",
+        "https://doi.org/10.1056/NEJMoa2304748",
+        "https://doi.org/10.1001/jamanetworkopen.2023.49544",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28bc9ec9-b8db-4ece-a14a-8bcf618cbf7e",
+        "https://doi.org/10.1111/jgs.18372",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7653726/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "IDSA current official AMR page explicitly titled2026 and replaces earlier guidance, despite retained2024 update-history field; selected urinary/resistance sections checked, not entire all-organism document. Utebzi/Zaynich/Blujepa FDA/manufacturer label dosing and safety sections directly read; their entire registration datasets not independently reappraised. CERTAIN-1 and antibiogram survey primary abstracts reviewed; corrected susceptible-microITT and survey-versus-clinical-outcome overclaims. Nitrofurantoin modern guidance versus US-label renal restriction explicitly retained. Higher-dose Pivya AMR guidance is distinguished from US-label dosing. All legacy review papers and every secondary dosing alternative not individually fully reappraised."
       ],
-      "sourceSha256": "cfd4f4eafa2f41da82d3a821a58b44a5d328ee2550d03a5dc415783e1aab5473",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "8e11ed1a458b9096e85cb612119476fcda46cf7c49b57dd71021489b2f25741c",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/arista.mdx",
@@ -546,47 +747,67 @@
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/hydrodissection-agents.mdx",
       "title": "Hydrodissection",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; Cochrane2025 perioperative review, primary hydrodissection/ornipressin RCTs and vasoconstrictor meta-analyses; anatomical procedure-scope consistency"
       ],
-      "sources": [],
+      "sources": [
+        "https://doi.org/10.1002/14651858.CD013105.pub2",
+        "https://doi.org/10.1111/ajo.13431",
+        "https://doi.org/10.1007/s00192-015-2821-7",
+        "https://doi.org/10.1016/j.jmig.2021.10.003",
+        "https://doi.org/10.1007/s00192-023-05614-1"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed universal standard-of-care/repair-integrity assertions, routine posterior dissection to SSL/anterior ATFP, best-safety ornipressin ranking and vasopressin concentration as safety guarantee. Separated nine-trial review from six-trial491-patient pooled vasoconstrictor estimate. Cochrane full text was blocked by PMC browser challenge and EPMC XML404; primary abstract supports limited certainty but full comparison details remain unverified. Historical technique-specific injectates and local availability require local protocol verification."
       ],
-      "sourceSha256": "ee1db2a772428ede1cca01ab4b36f1abf81c21f23b2934124a77a52b17d73584",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "a417e0883436b8dc149d632f753ab8b5c5b62cf6f2d164d6ebdfbb86e4281238",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/index.mdx",
       "title": "Intraoperative Adjuncts",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire short index read; all visible summary claims and navigation consistency against already reviewed child hubs"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb5a9e59-0f51-11df-8a39-0800200c9a66",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b91c39d-5f15-4dcf-9d3d-b378470e6bd7"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed first-line investigational dye, MB-only UVF diagnosis, glue rescue for high-tension anastomosis/dead space and universal sealant duration. Corrected Evarrest carrier and TAP status using child source-of-truth hubs. Index navigation review does not certify every underlying procedure."
       ],
-      "sourceSha256": "dd7ca8facb3f9f4ff7afa5f02bc8d82934dadc14dd4d774152b7d6f2aa562c35",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "a69d58408d34ac192d4e317998cf60a9d316b834b083e4565f904f6180ced3a8",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/liposomal-bupivacaine.mdx",
       "title": "Liposomal Bupivacaine",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; current EXPAREL dose/route/compatibility restrictions and primary Ilfeld/Ji/CLEVELAND/EXPLANE/Roebuck/QoR records"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb5a9e59-0f51-11df-8a39-0800200c9a66",
+        "https://doi.org/10.1097/ALN.0000000000003630",
+        "https://doi.org/10.1016/j.jss.2021.02.024",
+        "https://doi.org/10.1097/ALN.0000000000005869",
+        "https://doi.org/10.1016/j.jclinane.2021.110640",
+        "https://doi.org/10.1016/j.urology.2021.11.023",
+        "https://doi.org/10.3389/fmed.2025.1655756"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected admixture limit HCl:EXPARELmg≤1:2 beyond adductor block; 96h warning not only same site; TAP off-label; obstetrical paracervical contraindication and noninterchangeability. CLEVELAND online2025/print2026 null comparison not equivalence/all-TAP futility; 4/36 infiltration subset not4/76; COI odds ratio not14-fold probability. Historical cost estimates removed; primary studies not all fully reappraised and current local pricing not checked."
       ],
-      "sourceSha256": "22b2b1f87a5b6b7e948b81e0b7b7831db20fc1ae2ecbd89d8e913528cb6fd39d",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "8b6be014ce0ec627086490ff00eed0a277f6a77d170dbc460dc2b7be7d3f333c",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/cyanoacrylates.mdx",
@@ -702,182 +923,248 @@
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/tranexamic-acid.mdx",
       "title": "Tranexamic Acid",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; prespecified2026 POISE-3 urology primary/component endpoints, new TRACTION multicenter RCT, TACT and current US TXA label; PCNL Cochrane/EAU evidence"
       ],
-      "sources": [],
+      "sources": [
+        "https://doi.org/10.1016/j.eururo.2026.03.019",
+        "https://doi.org/10.1056/NEJMoa2515820",
+        "https://doi.org/10.1056/NEJMoa2201171",
+        "https://doi.org/10.1001/jamasurg.2024.4183",
+        "https://doi.org/10.1002/14651858.CD015122.pub2",
+        "https://doi.org/10.1111/ejh.13762",
+        "https://labeling.pfizer.com/ShowLabeling.aspx?id=556",
+        "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "POISE-3 urologic primary bleeding composite nonsignificant despite significant major-bleeding component; TRACTION8273/10hospitals added with distinct VTE noninferiority interpretation. Removed unsupported less-than1% obstruction rate, blanket all-upper-tract-surgery contraindication, universal2g/day seizure boundary, unverified repeated hematuria regimen and generic NCCN high-risk-urology assertion. Label route-error boxed warning/active clotting/SAH/hypersensitivity and renal dosing added. TRACTION primary indexed abstract and publisher metadata checked; full NEJM methods403, so clinical implementation details not appraised."
       ],
-      "sourceSha256": "7c34424119887dc3c1ae9dab62877d81d4b6137983cb3a42f5bb61a8fbc97e6f",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "0be54cb911bd0b4bf12a013b7c333bb4babf93ceb67d58e1dd8959090f0ac2f6",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/icg.mdx",
       "title": "Indocyanine Green (ICG)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; current IC-GREEN label dosing, hypersensitivity, radioiodine interference and labeling boundaries; urinary route and perfusion limitations"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ccd92843-1f0a-4ece-9978-4b300d158886"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed blanket iodine/shellfish contraindication, unsupported anaphylaxis rate and fixed repeat interval; corrected retrograde direction, off-label urinary recipes and mismatched partial-nephrectomy citation on omental flap. Individual hardware versions and all historical technique outcomes not independently certified."
       ],
-      "sourceSha256": "b547e0b26abf372ad40ff8295df14589183f3009e867a5597c71d11d8cc4d400",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "3db8050893e11a8fb40a842b267495bdeb32ac9e3b85840845bb378254550eb4",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/index.mdx",
       "title": "Intraoperative Visualization Agents",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; all DOI reference identities queried, selected study abstracts, EAU2026 staging/diagnosis, current dye labels and Cochrane2026 BLC update"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5aeed40d-6841-4adf-8940-f51d439fdfa3",
+        "https://uroweb.org/guidelines/penile-cancer/chapter/diagnostic-evaluation-and-staging",
+        "https://uroweb.org/guidelines/non-muscleinvasive-bladder-cancer/chapter/diagnosis",
+        "https://doi.org/10.1002/14651858.CD013776.pub3",
+        "https://doi.org/10.3390/cancers15235560",
+        "https://doi.org/10.1016/j.eururo.2020.05.040",
+        "https://doi.org/10.1002/pros.70107",
+        "https://doi.org/10.1097/AOG.0000000000001750",
+        "https://doi.org/10.1016/j.juro.2016.07.099"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected obsolete shortage, label contraindications, CYSVIEW June2026 1–3h dwell/gross-hematuria change, guideline identity, observational vs causal claims and false phenazopyridine noninferiority. Cochrane public summary mixes current plain-language summary with old numerical abstract; 2026 Europe PMC indexed primary abstract confirms17 RCTs/4890 and risk-dependent conclusions. Full Cochrane methods not retrieved; historical outcome estimates selectively checked rather than every underlying paper fully appraised."
       ],
-      "sourceSha256": "e89ae23b42d7fdc1a80b16c20d20665f36468ba7d060d424c0111c3932d089b2",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "f527e22449925c224a7eb615cfdeed5108e7968a9d997ff06786f18c8c6d8185",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/indigo-carmine.mdx",
       "title": "Indigo Carmine",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; BLUDIGO approval, current administration, tubular secretion, renal threshold and cardiovascular/anaphylaxis/oximetry precautions"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b91c39d-5f15-4dcf-9d3d-b378470e6bd7",
+        "https://doi.org/10.1186/s13017-023-00513-8",
+        "https://doi.org/10.1097/AOG.0000000000000675"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Replaced permanent-shortage narrative and unrelated sacrocolpopexy reference; removed unverified repeat-dose instruction and triple-dye confusion. Local inventory not checked; efflux does not exclude delayed injury."
       ],
-      "sourceSha256": "acc4d1da2696f77f6c30ae048355db9c53d68c49193306d2b9f7a7018061cbe1",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "4dc84989f1434529f4ba42b79a793500b1f82f789c432f98489a6ceb4a742fe5",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/methylene-blue.mdx",
       "title": "Methylene Blue",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; PROVAYBLUE current concentration, methemoglobinemia dosing, renal restrictions, G6PD contraindication, serotonin warning and oximetry"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f6848e5-35ed-4046-b13c-3032b5ba3232",
+        "https://doi.org/10.1186/s13017-023-00513-8"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected 5 mg/mL vs assumed 10 mg/mL, 1 mg/kg over 5–30 minutes and renal single-dose limit. Removed dye-dose safety exemption, inverted SpO2 effect, unverified bladder/ureter recipes and intraventricular suggestion; clarified double-dye interpretation. Local instillation risk magnitude is not established by IV labeling; no claim of complete surgical-protocol validation."
       ],
-      "sourceSha256": "76c7d4418357189b980cd4653fad62c133a27ff318dfaa7be60c442690919e7e",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "bd60c0bd8f08117f7f72837046c9bf0a848aa0fe0182cec178010441c952a28e",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/pudexacianinium.mdx",
       "title": "Pudexacianinium (ASP-5354)",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; current sponsor pipeline, FDA substance identity caveat, primary phase-II and 2026 renal-PK records"
       ],
-      "sources": [],
+      "sources": [
+        "https://www.astellas.com/content/dam/astellas-com/global/en/confidential-documents/financial-results/4q2025_sup_en.pdf",
+        "https://precision.fda.gov/uniisearch/srs/unii/d23r36l5qy",
+        "https://doi.org/10.1007/s00464-023-10193-9",
+        "https://doi.org/10.1007/s00228-026-04063-1"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed false US approval, manufacturer regimen, routine redosing/renal adjustment, universal hardware compatibility, commercial-price and injury-prevention assertions. April 2026 sponsor pipeline still phase III; no FDA approval identified as of review. 2026 PK full-text relevant sections accessed through Europe PMC XML after PMC browser challenge; not an exhaustive regulatory-database certification."
       ],
-      "sourceSha256": "b1c91a3243233a25d757d98bf2d6cc4fb80dd224b5a40fc047b22ee2488e3f9c",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "f0616e6352307ee3dbf61790bcf0a60db66fa60edac1437a563637ddb595f87e",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/sodium-fluorescein.mdx",
       "title": "Sodium Fluorescein",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; FLUORESCITE indication/safety and primary Doyle/Grimes off-label urinary-efflux regimens"
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ebb3883c-71f6-4fd0-a7e6-0ba8e1136dd9",
+        "https://doi.org/10.1097/AOG.0000000000000675",
+        "https://doi.org/10.1016/j.ajog.2017.07.012"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected false FDA approval by extension, wrong DOI and citation identity, unverified intravesical recipe, obsolete indigo availability; added fatal hypersensitivity and extravasation cautions. Individual urinary timing and color/laboratory effects remain patient/formulation dependent."
       ],
-      "sourceSha256": "6bf10c2f9ea5831b9195442f36a6117b94b839dcdbc4656051498ead468b84ad",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "7718fd7a5b8bb67d195a633703299071d0fea8eff6557b321b7dd430fee1bff7",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/legacy-low-evidence/imipramine.mdx",
       "title": "Imipramine",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX read; US HCl indication, dosing boundary, mechanism/ECG/perioperative precautions checked; NICE specialist refractory positioning and combination restriction; Cochrane source updated."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9dbcebe-9aba-4a93-a7b7-48d29e07d3c4",
+        "https://www.nice.org.uk/guidance/cg111/chapter/recommendations",
+        "https://www.cochrane.org/evidence/CD002117_tricyclics-and-related-drugs-treating-bedwetting-children"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed imipramine-plus-anticholinergic endorsement contrary to NICE and automatic perioperative continuation. Cochrane 2016 publisher results verified. Historic adult series not all full-text re-extracted; healthy-volunteer SUI surrogate is not a therapeutic SUI trial."
       ],
-      "sourceSha256": "32dfe831506732506b945d65968019232d9dd6183ba1f1e5e54df8e2e0d4200d",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "87ad270816fe88e32c00598f9165d75baf0e63c5ba8b8f52b5fe764a8137dfcc",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/legacy-low-evidence/index.mdx",
       "title": "Legacy & Low-Evidence Classes",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire short index read; aligned summaries with reviewed companion pages."
       ],
       "sources": [],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Navigation and scope review; no independent clinical certification."
       ],
-      "sourceSha256": "f94f3b498c59324c0a226fb8006492d59c52d4640f4d73d1649e3546ec541981",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "93755f0cdcc6fec355e73658f55e40d8b23ceee67dc1d101aa3b89afba9cbee3",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/legacy-low-evidence/parasympathomimetics.mdx",
       "title": "Parasympathomimetics",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX read; EAU routine-use position; bethanechol and pyridostigmine safety; full publisher methods/results of 2025 post-TURP pyridostigmine trial read."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16523451-cd3d-4c10-be06-d59a6f12ac68",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1aa7a886-c726-cc91-e063-6294a90a1af1",
+        "https://link.springer.com/article/10.1007/s00345-025-05842-8"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed strongest/best evidence claims, animal distigmine human-dose/half-life extrapolation, validated-electromotive-test claim and universal atropine protocol. AUR trial publisher returned429; existing result retained as study-specific pending full-method verification. Historical BST numerical claims not all re-extracted; no current-practice endorsement."
       ],
-      "sourceSha256": "dfb22679ce09dc474615c8ec69c7e361b600ff2604781de752834d1c04426b0b",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "199c9354179463e9aa190334896536299e110a95a46a8273e3a2e825d41ff304",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/legacy-low-evidence/phenazopyridine.mdx",
       "title": "Phenazopyridine",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX read; current prescription labeling and marketing status, renal/hepatic precautions and laboratory interference checked; PROVAYBLUE G6PD contraindication verified."
       ],
-      "sources": [],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eb59b69-4ad0-47b1-bd3c-1d04d0852ec5",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f6848e5-35ed-4046-b13c-3032b5ba3232"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed false FDA-approved claim, sulfur sensitivity, fixed preop/24-hour washout rules, and oral vitamin-C interchangeability for severe methemoglobinemia. Product-specific labeling can differ; preclinical TRPM8 quantitative details not all re-extracted."
       ],
-      "sourceSha256": "104701c85e24eed872928322619c1ffbe22c810310bc94cbf35968ddb73de72f",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "845a5ea523374b49c0660537ba94ce1e71dfefe0f72c06d58087b3737866ac38",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/legacy-low-evidence/phytotherapy.mdx",
       "title": "Phytotherapy",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Full MDX read; EAU hexanic-Serenoa position, Cochrane2023 effect and large GRANU trial primary abstract checked; table comparisons and prescribing interpretations corrected."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management",
+        "https://www.cochrane.org/evidence/CD001423_serenoa-repens-benign-prostatic-hyperplasia",
+        "https://pubmed.ncbi.nlm.nih.gov/25196580/",
+        "https://doi.org/10.1002/14651858.CD001423.pub4"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed false no-guideline-option statement, made uncontrolled versus placebo comparisons distinct, removed arbitrary efficacy rankings, blanket safety/PSA guarantees and universal periop-coagulopathy claims. Added omitted1431-man GRANU trial with negative extract arm and partial-blinding limitation. Historical smaller studies and mechanistic estimates not all full-text re-extracted."
       ],
-      "sourceSha256": "59692e3d56aa5461d1ea6d3acda5838b77f5d29e545b4c378b927f61044e2fe4",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "732c949ad5b1008ca775c01f6aacfb211d27034dfd5f2b27589993044529e7f9",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin.mdx",
@@ -1344,7 +1631,7 @@
     },
     {
       "file": "docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx",
-      "title": "\u03b23-Adrenergic Receptor Agonists",
+      "title": "β3-Adrenergic Receptor Agonists",
       "status": "updated",
       "scope": [
         "Entire page text read; targeted primary-source verification only.",
@@ -1383,6 +1670,30 @@
       "clinicalVerificationComplete": false
     },
     {
+      "file": "docs/01-foundations/pharmacology/storage-oab/desmopressin.mdx",
+      "title": "Desmopressin",
+      "status": "updated",
+      "scope": [
+        "Full current MDX read; preserved prior root NOCDURNA/NOCTIVA label and monitoring corrections. Verified US oral/injection indications, doses and safety; distinguished regional enuresis melts from NOCDURNA and added 2025 Cochrane enuresis evidence."
+      ],
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cf51914a-55df-4b4a-8ea8-c7af257c1d59",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d55baa9-2b62-469c-93ae-3909ab249332",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10b29aa2-274e-4c29-bccd-424bd3761758",
+        "https://www.cochrane.org/evidence/CD002112_desmopressin-bedwetting-children",
+        "https://www.medicines.org.uk/emc/product/171/smpc",
+        "https://www.nice.org.uk/guidance/cg111/chapter/Recommendations"
+      ],
+      "notes": [
+        "Cochrane publisher summary/main results read; no extraction of every included trial. Historical nocturia and neurogenic series not all independently recalculated. Removed erroneous NOCDURNA support for hemostasis and ambiguous 360-mcg enuresis melt recipe.",
+        "NICE direct browser fetch failed; official indexed guidance confirms four-week response assessment. URL casing normalized."
+      ],
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "sourceSha256": "d069f386cc21ce2340f7ea6a11c545b0cf4486f7f57f3a7b0f82bc65faba7b2a",
+      "lastReadAt": "2026-09-12"
+    },
+    {
       "file": "docs/01-foundations/pharmacology/storage-oab/index.mdx",
       "title": "Storage & Overactive Bladder",
       "status": "updated",
@@ -1403,62 +1714,81 @@
     {
       "file": "docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx",
       "title": "Urinary Diversion-Specific",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire index read; aligned summaries with corrected companion pages."
       ],
       "sources": [],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed false 45–87% continence interpretation (the figures describe bicarbonate use), blanket oral B12 replacement and routine urea-rescue framing. Navigation review, not independent clinical certification."
       ],
-      "sourceSha256": "7bd269deb5ece06d6eea905f51f55b541c6506ea9a7be0856148581fb9214d94",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "2e199f39c60992e800dc8f4a8ea878a5d00dfb4c44ae7a35f60ebdff99c42dbb",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/urinary-diversion-specific/mucus-management.mdx",
       "title": "Mucus Management",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page read. Verified randomized-trial abstracts, clinical irrigation guidance, acetylcysteine labeled routes and AUA annual NLUTD bowel-reconstruction follow-up."
       ],
-      "sources": [],
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11342892/",
+        "https://pubmed.ncbi.nlm.nih.gov/27894777/",
+        "https://www.mskcc.org/cancer-care/patient-education/caring-for-your-ileal-neobladder",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f56b4087-db48-4fd7-84ec-9c927962b805",
+        "https://www.auanet.org/documents/guidelines/pdf/nlutd.pdf"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Removed universal 22Fr SPT/schedule claims, chemical-rescue-before-drainage advice, unsupported intravesical preparation instructions and strong/generalizable octreotide framing. Noctreotide trial full text and N Dow route-specific methods not obtained; abstract effects retained with narrow scope. Historical case series do not establish emergency protocols."
       ],
-      "sourceSha256": "6d7a25f6618e8fa7e28340e54655fa9a04f2582c3639846f45b0cb9cb027ba35",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "5709a9a6b1589c8ea89298c2b9ff0371cc6168f3417cdb7c7a0f3948030a94bd",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/urinary-diversion-specific/urinary-acidifiers.mdx",
       "title": "Urinary Acidifiers &amp; Alkalinizers",
-      "status": "unresolved",
+      "status": "checked",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire current page read including references; preserved prior root prescribing audit. Rechecked EAU metabolic guidance and potassium-citrate label safety."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/urolithiasis/chapter/metabolic-evaluation-and-recurrence-prevention",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1201c777-2388-4235-bb8f-eb7dc1e867f8"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Prior root record contains detailed KDIGO, AUA, dRTA and bicarbonate-study checks; no new source edit required. Did not independently reproduce all historical study outcomes."
       ],
       "sourceSha256": "7b924fd7c744299fe9a9dbae5ffab397356944e304b220ff7987e63a1409fbe8",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/urinary-diversion-specific/vitamin-b12-supplementation.mdx",
       "title": "Vitamin B12 Supplementation",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire page read; verified EAU annual bowel-diversion surveillance, AUA NLUTD monitoring, NICE adult malabsorption route selection and Cochrane oral/IM evidence limits."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+        "https://www.auanet.org/documents/guidelines/pdf/nlutd.pdf",
+        "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+        "https://www.cochrane.org/evidence/CD004655_oral-vitamin-b12-compared-intramuscular-vitamin-b12-vitamin-b12-deficiency",
+        "https://pubmed.ncbi.nlm.nih.gov/8632531/"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "NICE text obtained directly after browser fetch failed. Replaced inaccessible NCCN assertion with accessible EAU recommendation. Removed colon zero-risk/no-monitoring, routine Schilling testing, oral equivalence for all malabsorption and nutritional associations as sexual-treatment instructions. Historic small-cohort percentages remain explicitly non-generalizable; not all full texts obtained."
       ],
-      "sourceSha256": "de9cd957f966e7414b2d97e90c1a2ce962d6c1f842227113e09c1f753355d0b8",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "425ce97de366a089a92b92f2792581b1292d5defe6330e39853a272e925f38e5",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx",
@@ -1509,17 +1839,21 @@
     {
       "file": "docs/01-foundations/pharmacology/voiding-outlet/cholinergic-agonists.mdx",
       "title": "Cholinergic Agonists",
-      "status": "unresolved",
+      "status": "updated",
       "scope": [
-        "Inventory only; full-text clinical reading and primary-source checking not yet completed in this batch."
+        "Entire MDX read; current bethanechol label dosage/contraindications/toxicity and EAU underactive-bladder recommendations verified."
       ],
-      "sources": [],
+      "sources": [
+        "https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16523451-cd3d-4c10-be06-d59a6f12ac68"
+      ],
       "notes": [
-        "Pending page-by-page review; no clinical approval or currency claim."
+        "Corrected cumulative50mg dose-finding ceiling (not additional single50mg dose), added routine-use restriction and removed unsupported meta-analysis high-AE claim. Atropine label context is not universal crisis management. No re-extraction of every receptor/animal experiment."
       ],
-      "sourceSha256": "1c15ecdb83505fe7c8fb920045beb750c01ac9e3ada4b2066502f19d0b6abe82",
-      "fullTextRead": false,
-      "clinicalVerificationComplete": false
+      "sourceSha256": "a236bd3e3491df852a77cc3e2b9d3307e650f5ed86955e1767dcfcc8bcd48132",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "lastReadAt": "2026-09-12"
     },
     {
       "file": "docs/01-foundations/pharmacology/voiding-outlet/dantrolene.mdx",
@@ -1600,7 +1934,7 @@
         ],
         "status": "added",
         "doi": "10.1016/j.ophtha.2024.07.027",
-        "reason": "Primary Korean cohort abstract verified:103553 users/205792 nonusers, adjusted HR1.34 CI1.31\u20131.38. Added as observational safety corroboration, explicitly not absolute risk or randomized causal evidence."
+        "reason": "Primary Korean cohort abstract verified:103553 users/205792 nonusers, adjusted HR1.34 CI1.31–1.38. Added as observational safety corroboration, explicitly not absolute risk or randomized causal evidence."
       },
       {
         "oeIds": [
@@ -1619,7 +1953,7 @@
       }
     ]
   },
-  "fullTextReadCount": 30,
+  "fullTextReadCount": 71,
   "companionCorrections": [
     {
       "file": "docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening.mdx",
@@ -1662,6 +1996,6 @@
   "validation": {
     "citationIntegrity": "Passed:1187 repository documents, no citation anchor/numbering issues. This is structural citation checking, not source-content validation.",
     "whitespace": "git diff --check passed after companion alignment.",
-    "integratedValidation": "Pending root build/type/lint and publication validation."
+    "integratedValidation": "Ongoing review; parent owns integrated validation and publication. Counts and hashes describe only saved reviewed content."
   }
 }

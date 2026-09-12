@@ -2,7 +2,7 @@
 
 **Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
 
-**Current resumed audit, September 11:** start with [RESUME-HERE.md](RESUME-HERE.md) for publication evidence, validation and exact next pages. The travel checkpoint and quarterly cadence are in `5afd0f89`; the resumed correction batch is in `90a9e8f1` and `b8b60a0e`. The whole-site clinical audit and 110-item OpenEvidence reconciliation remain in progress. The [quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md) is saved. Earlier snapshots below are historical.
+**Current audit continuation, September 12:** read [RESUME-HERE.md](RESUME-HERE.md), the [completion plan](reports/2026-09-12/completion-plan.md) and [current release record](reports/2026-09-12/continuation-release.md). The cumulative ledger now records 293 full documentation reads; all 73 clinical-condition pages and all 17 trauma pages have been read. The entire-site review remains active and incomplete. Publishing an intermediate correction batch is not task completion. Keep progressing through remaining source pages and inaccessible-source gaps; do not stop at a successful deployment. Earlier snapshots below are historical.
 
 This file is for Codex to read at the start of every session. It captures the project architecture, conventions, and component patterns. Session history is in `CHANGELOG.md`; the stub backlog is in `docs/_STATUS.md`.
 

@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Broader clinical review and high-impact corrections
+
+Corrected **170 documentation pages** in the next whole-site review batch. The cumulative ledger now records **293 full source-text reads and 275 scoped updated pages across 1,186 documentation files**. All 73 clinical-condition pages, all 98 urethral/upper-tract pages and all 17 trauma pages have full reads recorded. Review remains incomplete; full source-page reading does not mean every cited paper was available in full text.
+
+Corrections include trauma safety and units, urethral/upper-tract anatomy and outcomes, erroneous citation identities, pharmacology label/indication and trial interpretation, urine/renal workup, inflammatory nutrition markers, GLIM/AWGS/EWGSOP criteria, and KDIGO 2026 iron thresholds. Added the FDA September 1 Injectafer hypophosphatemia boxed warning and corrected IV iron dosing and overpromised perioperative benefits using PREVENTT. Full paper/chapter reads, targeted guideline sections and inaccessible sources are documented separately in the domain ledgers.
+
+The original DOI metadata collection is complete; new PMID-title checks expose additional citation leads for investigation. Metadata matching is not source verification. Lint, typecheck, 32 component tests, 50 maintenance tests, production build and compiled links pass; output is **139.22 MB**. [Release evidence](reports/2026-09-12/continuation-release.md) records the browser and publication checks. Continue the remaining source/clinical review after publication; Epic remains paused and evidence maintenance quarterly.
+
+---
+
 ## 2026-09-11 — Resumed batch published and verified
 
 Published `b8b60a0e` (including `90a9e8f1`): 40 clinical-page corrections, broader quarterly discovery and browser/link safeguards. GitHub CI 34645036653 passed; Vercel deployment `dpl_5iD48Bji8GPZMSVMoqDruYmL45qy` is READY with the production aliases.

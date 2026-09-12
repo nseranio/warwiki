@@ -1,40 +1,40 @@
-# WARWIKI — resume here
+# WARWIKI — continue the whole-site review
 
-The flight checkpoint has been resumed and the next correction batch published. **Evidence maintenance is quarterly**, in March, June, September and December; the next planned cycle is December 2026. Technical link checks remain monthly. The existing automation was updated, not duplicated.
+**The requested review is still active. Continue after each publication batch.** The user specifically challenged the previous partial stop and asked for actual full-text/source checks across the entire site. Read the [completion plan](reports/2026-09-12/completion-plan.md).
 
-## Published site and verification
+## Current work and publication
 
-**Live site commit: `b8b60a0e`**, including `90a9e8f1` (40 documentation-page corrections) and the earlier travel checkpoint / quarterly schedule in `5afd0f89`.
+The September 12 continuation batch changes **170 documentation files**. The [release record](reports/2026-09-12/continuation-release.md) tracks exact validation and publication status. Before this batch, the verified live site commit was `b8b60a0e`, with notes through `4728ae3c`; do not assume the new batch is live until remote verification is recorded.
 
-- [GitHub CI 34645036653](https://github.com/nseranio/warwiki/actions/runs/34645036653) passed.
-- Vercel `dpl_5iD48Bji8GPZMSVMoqDruYmL45qy` is READY and owns the production aliases.
-- Local final build: 139.30 MB; source checks, 32 component tests, 50 maintenance tests and compiled links/assets passed.
-- Browser sweep visited all 1,190 sitemap URLs. Nine broken portraits and one test-fixture failure were resolved; the final 120-page History / three-interaction retest passed all 123 checks.
-- [External-link workflow 34645055611](https://github.com/nseranio/warwiki/actions/runs/34645055611) passed: 111 successful, 89 soft responses and no confirmed broken links in 200 sampled URLs. Soft responses remain unresolved.
+Local validation for the new batch: full lint, typecheck, 32 component tests, 50 maintenance tests and production build passed. Build is **139.22 MB**; all 101,564 compiled local links/assets and 731 data-link literals passed. Browser and publication evidence is appended to the release record when completed.
 
-See [the full release record](reports/2026-09-11/resumed-release.md) for exact scope, source commits and production checks. A later notes-only commit can be ahead of the live content commit without requiring another site deployment.
+## Review coverage and next work
 
-## Saved references
+The [central ledger](reports/2026-09-11/full-site-review/README.md) contains every one of the **1,186 documentation files**; **293** have full reading recorded against current source hashes and **275** have scoped updates. Full MDX reading and primary-paper reading are recorded separately. No complete clinical clearance is asserted.
+
+- Clinical conditions: all **73/73** read. Continue unresolved source/companion checks from `clinical-conditions.json`.
+- Urethral and upper-tract techniques: all **98** in the original domain read; `operative_review` has the remaining surgical families. Next prepared family is bladder-neck reconstruction; all 21 pages were read during the release freeze, with corrections still pending.
+- Pharmacology: **71/95** recorded; `auth_handoff` has read additional pain/Botox pages in temporary research files and must integrate them after the freeze. Reassign foundational tools/principles after pharmacology is completed.
+- Special populations: **18/46** recorded, including all **17 trauma** pages. `workflow_readiness` has prepared further gender/women/survivorship reads. Correct SOC8 eligibility, registry updates and primary evidence before recording updated hashes.
+- Evaluation: **28/38** read. Root next: the seven remaining micronutrient pages, then three assessment/examination pages. Examine the 17 PMID-title flags on male/female examination references.
+- Remaining foundations, imported History biographies/data, resources, journal club, source pages and clinical data still need actual reads and substantive review. Targeted corrections do not clear whole pages.
+- Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube 13%/58% figures belong to the 1998 66-patient report (7/54 vs 7/12), not the original 1993 paper. Coordinate disjoint edits.
+
+The three agents temporarily froze tracked source/ledger edits during validation while doing read-only research in `/tmp`. Explicitly release the freeze after committing the current batch, then continue. Do not lose their pending research or overwrite others' files.
+
+## Evidence and saved material
+
+Evidence maintenance is **quarterly: March, June, September, December**, next December 2026. Technical link checks stay monthly. The existing automation was updated; do not duplicate it.
 
 - [Quarterly OpenEvidence prompt](OPEN-EVIDENCE-PROMPT.md).
-- [Original 110-reference survey and reconciliation](reports/2026-09-11/open-evidence/README.md).
-- [Whole-site page ledger](reports/2026-09-11/full-site-review/README.md): 1,186 documentation pages, 121 full source-text reads and 113 scoped updates. The clinical audit remains incomplete; no whole-site clinical clearance has been given.
-- [Epic roadmap](EPIC-ROADMAP.md). Epic stays paused until explicitly resumed. Keep patient data and private operative notes outside the public repository.
-
-## Exact next work
-
-1. **Clinical conditions:** continue at `docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx` (OpenEvidence items 41/42), then the remaining genital, pelvic-pain and defecatory pages. Forty of the 73 clinical-condition pages have full reads recorded. Targeted IC/BPS companion corrections do not count as a full-page review.
-2. **Operative review:** continue at `docs/04-surgical-techniques/04a-urethral-reconstruction/combined/erickson-dorsal-bmg-ventral-flap.mdx`. The urethral/upper-tract domain ledger records 44 completed full reads; avoid unnecessary rereading. Follow up its unresolved historical estimates, vaginal tubularization claims, Boari ICG route and minced-graft erratum.
-3. **Pharmacology:** next unread entry is `docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx`. The domain ledger records 30 full reads among 94 pages. Eight sealant/IC pages and targeted companions were corrected in the latest batch.
-4. **Verified addition ready for integration:** NeuroSAFE PROOF (OpenEvidence 101) belongs in `docs/05-special-populations/05d-cancer-survivorship/index.mdx`, Sexual Health section, with a concise ED cross-link. Eligibility, effect sizes, publication date and limits are saved in the survey JSON. Do not imply oncologic equivalence or long-term safety from its functional endpoints.
-5. **Other survey leads:** HoLEP Cochrane 25 is source-checked and already accurately covered. NEUROGED 12 has verified identity/correction but still needs recommendation-level integration. GenderCOS 74/75, ACS 82 / AAST 94, obstetric fistula and SPIRIT 102 require their recorded primary-source checks. Presence-only and deferred decisions are not completed reviews. Keep cancer topics within reconstructive/survivorship scope.
-6. **Root follow-up:** Botox/MUSA, ProACT and renal-metabolic corrections are complete for their recorded scope. Implant-model, ATOMS, REMEEX, preoperative-labs and cystectomy companion pages still need their broader remaining checks; targeted edits did not clear whole pages.
-7. **Reference identities:** resume `reports/2026-09-11/full-site-review/fetch-reference-metadata.py` from its existing 6,355-record JSONL cache. Collection is paused, not running. Rebuild title signals against fresh source when useful. Missing Crossref registration or low title overlap is an investigation lead, not proof of a false citation.
+- [Original 110-reference survey and reconciliation](reports/2026-09-11/open-evidence/README.md): still incomplete. Previously verified NeuroSAFE PROOF awaits survivorship integration; other GenderCOS/NEUROGED/SPIRIT items need exact recorded follow-up.
+- [Epic roadmap](EPIC-ROADMAP.md): Epic stays paused until the user resumes it.
+- DOI metadata collection completed the original 10,956-DOI snapshot (10,887 found). Current title signals match 10,757 of 10,909 current DOIs. PMID cache covers 243 identifiers (242 found); low-overlap flags require investigation, not automatic replacement. These scans do not count as clinical or full-paper review.
 
 ## Publication and efficiency
 
-Standing authorization: validate completed changes, commit and push to `main/origin/main`, then verify GitHub, Vercel and live content. GitHub and Vercel sign-ins are complete; no repeat approval is needed. Run source lint, types, relevant tests, production build/compiled links/size, appropriate browser checks and whitespace checks. Group related completed changes into a release to avoid unnecessary deployments.
+Standing authorization: validate, commit/push completed changes to `main/origin/main`, then verify CI, Vercel and live content. Sign-ins are complete. Group related changes to limit deployments. Keep temporary source PDFs and large research downloads outside the repository.
 
-Earlier cleanup deleted 41 obsolete Vercel deployments. Eight are listed after the latest site release; live/rollback and alias references are preserved. Retention remains 30 days with a minimum of 10 deployments. Build output is approximately 139 MB versus 566 MB before. The account meter has not been confirmed below 10 GB; do not equate deleted builds with an immediate meter reset. Report/authoring-only changes should skip deployment.
+Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to about 139 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
 
-Preserve unrelated `world-cup-next-week-pacific.ics`. Quiz and Clinic stay removed. History stays discreet. Handouts stay recoverable but excluded from build. Keep public article metadata to the ordinary last-updated display and detailed source-review notes in internal records. Epic remains paused.
+Preserve unrelated `world-cup-next-week-pacific.ics`. Clinic and quiz stay removed. History stays discreet. Handouts stay recoverable but excluded from builds. Keep public metadata to ordinary page last-updated; detailed review notes stay internal. Never invent clinical sign-off.

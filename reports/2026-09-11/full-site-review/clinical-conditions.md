@@ -89,3 +89,25 @@ Every entry records source-checked scope and limits. A full-text read does not v
 - **Clinical Conditions — checked**: Full text read. Clinical domain overview is descriptive; internal route validation is separate from clinical evidence verification.
 
 Validation: citation lint (1,187 files), internal /docs/ link check (1,187 files), exact recorded hashes and `git diff --check` passed. The combined production build and deployment verification remain root responsibilities.
+
+## September 12 continuation
+
+Full texts read: **52/73**. Female fistula review adds obstetric, ureterovaginal, vesicouterine, rectovaginal and vesicovaginal pages. Corrected protocol/study-design errors, misleading diagnostic dye interpretations, outcome denominators, universal route/flap claims and population-specific catheter recommendations. Removed an unverifiable Adinata early-repair citation. Current exact file hashes, verified scopes and limitations are in the JSON ledger. Remaining pages and important unresolved guideline details are still being reviewed; this is not full clinical sign-off.
+
+All remaining fistula articles have now been read in full. Additional corrections address mixed enterovesical/urocutaneous populations, an inverted radiation-versus-flap comparison, the unsafe contradictory day-three urethral-catheter removal instruction, and selected-cohort outcomes presented as universal prognosis. Remaining clinical-condition full reads: 21.
+
+### Genital continuation — September 12
+
+Full-read coverage now 56/73. Buried penis: qualified weight-loss, prevalence and selected-series outcomes. Clitoral phimosis: selective symptomatic intervention and corrected ACOG identity. ED: 2025 Cochrane low-certainty interpretation and AUA/EAU distinction. FGM/C: WHO 2025 timing/consent/reconstruction and RCOG anesthesia correction. Full text was read; targeted source scope and remaining historical-series limits are recorded per page in JSON.
+
+Full-read coverage now 61/73. Both genital lymphedema pages: compression/pump safety, drug citation mismatches, filarial treatment indications, and selected-series claims corrected. HS: actual adalimumab dosing error, bimekizumab status and trial endpoint repaired. LS: subgroup/observational interpretation and staging interval corrected. Müllerian anomalies: MAC2021 diagnostic threshold and congenital category, consent/dilation, septum evidence and registry denominator corrected. Remaining historic-source limits are explicit in JSON.
+
+
+## Pelvic pain review — September 12
+
+Full-text coverage is now 69/73 clinical-condition pages. Four pelvic-pain articles corrected: GaPP2 and AUA/EAU CPP scope; IC/BPS treatment certainty and denominators; Botox RCTs and compounded-drug limitations in MFPP; and pelvic-venous selection/POTS causal overstatements. Detailed claim checks, primary sources and exact final hashes are in the JSON. Four bowel pages remain, followed by special populations. No whole-site clinical sign-off is implied.
+
+
+## Bowel review — September 12
+
+All 73/73 clinical-condition MDX files have now been read in full, including references and indexes. The final four bowel pages were corrected for guideline scope, diagnostic-test limitations, Rome IV/V distinctions, and 2025–2026 neuromodulation trial denominators. The exact JSON records retain source-access limits; full reading does not certify every legacy numerical assertion. Remaining work includes specific earlier companion concerns and all 46 special-population pages.

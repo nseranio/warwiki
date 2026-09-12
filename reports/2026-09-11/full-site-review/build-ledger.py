@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 inventory=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./scripts/audit-content').inventory()))"],cwd=ROOT))
 records={}
-for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json']:
+for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json','surgical-rest.json','special-populations.json','evaluation.json','foundations-rest.json','resources-history.json','site-data.json']:
  p=HERE/name
  if not p.exists():continue
  report=json.loads(p.read_text())
@@ -32,6 +32,6 @@ lines=['# Whole-site page review','',result['methodology'],'',f"Current snapshot
 for sec in sorted({p['section'] for p in pages}):
  group=[p for p in pages if p['section']==sec]
  lines.append(f"| {sec} | {len(group)} | {sum(p['fullTextReadForCurrentContent'] for p in group)} | {sum(p['status']=='updated' for p in group)} | {sum(p['status']=='unreviewed' for p in group)} |")
-lines+=['','[Full page-by-page ledger](page-ledger.json) contains paths, exact scope, sources, unresolved claims and content hashes. Domain reports record what was corrected.','', 'The separate reference-metadata scan checks DOI registration and title identity across the corpus. A missing Crossref record or title-overlap flag requires source investigation; it is not an automatic claim that a paper is false.','']
+lines+=['','[Full page-by-page ledger](page-ledger.json) contains paths, exact scope, sources, unresolved claims and content hashes. Domain reports record what was corrected.','', 'The separate reference-metadata scans check DOI registration and PubMed identifier/title identity. DOI and PMID caches reflect their collection snapshots; current additions may be uncached. Missing records or title-overlap flags require source investigation, not an automatic claim that a paper is false. Metadata matching does not establish that a cited claim is supported or that its full paper was read.','']
 (HERE/'README.md').write_text('\n'.join(lines))
 print(json.dumps(summary,indent=2))

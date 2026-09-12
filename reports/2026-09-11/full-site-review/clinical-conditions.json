@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint-incomplete",
+  "status": "in-progress-full-domain-completion",
   "pages": [
     {
       "file": "docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx",
@@ -241,13 +241,14 @@
       "readScope": "full MDX text including bibliography",
       "sources": [
         "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
-        "https://doi.org/10.1097/JU.0000000000003482"
+        "https://doi.org/10.1097/JU.0000000000003482",
+        "https://pubmed.ncbi.nlm.nih.gov/31381896/"
       ],
       "scope": [
         "Nonobliterative endoscopic management, reconstruction and MMC restriction."
       ],
-      "notes": "Full text read. Aligned MMC safety with BNC. Individual robotic-series claims, precise continence risks and every outcome denominator remain unverified.",
-      "sourceSha256": "2156d28f4bf09c743328c733bf0f043792442c880b753872a6ca43f662f27434"
+      "notes": "Full text read. Aligned MMC safety with BNC. Individual robotic-series claims, precise continence risks and every outcome denominator remain unverified. Follow-up identity audit repaired Lavolle title/DOI .2019.07.027 and scoped six-patient feasibility with 3 recurrences/3 AUS outcomes.",
+      "sourceSha256": "d3772c21d3980d5c5283dc0857518b1cd27854a61b9461e5c37ff3e6faea7683"
     },
     {
       "file": "docs/03-clinical-conditions/03c-pelvic-support/anterior-compartment.mdx",
@@ -514,11 +515,20 @@
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel.mdx",
       "title": "Colovesical & Small Bowel Fistulas",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11458060/",
+        "https://pubmed.ncbi.nlm.nih.gov/27466166/",
+        "https://pubmed.ncbi.nlm.nih.gov/29084079/",
+        "https://pubmed.ncbi.nlm.nih.gov/40701562/"
+      ],
+      "scope": [
+        "Pneumaturia differential; diagnostic-study scope; optional cystoscopy; conservative/diversion selection; 14-EVF anti-TNF denominator; 93 internal-fistula cohort has only16EVF; current ACG2025 source."
+      ],
+      "notes": "Full text and21references read. Corrected generalizations and mixed-cohort inference. Historical diagnostic sensitivities and every small surgical outcome not independently validated.",
+      "sourceSha256": "71a920c760392caa7b27fb103f96be28ffa0ec438c866a0e5d3056b44b259e9d",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/nephropleural.mdx",
@@ -528,13 +538,14 @@
       "sources": [
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC5465116/",
         "https://pmc.ncbi.nlm.nih.gov/articles/PMC12688617/",
-        "https://pubmed.ncbi.nlm.nih.gov/15302470/"
+        "https://pubmed.ncbi.nlm.nih.gov/15302470/",
+        "https://pubmed.ncbi.nlm.nih.gov/14665341/"
       ],
       "scope": [
         "Urinothorax biochemical diagnosis; transudate/exudate pattern; supracostal fistula versus all pleural injury rates; source identity and healing endpoint."
       ],
-      "notes": "Removed pathognomonic creatinine-ratio claim and exudate inversion. Verified Lallas authors/title and repaired unrelated DOI to 10.1016/j.urology.2004.03.031; its four cases resolved by three months, not a universal days-to-weeks deadline. Full MDX read. Individual imaging sensitivity, procedural drainage/removal schedules and other historical bibliography details remain incompletely verified.",
-      "sourceSha256": "d9f056f931514407a4921131958c581c5142dfde97dbd52778f2f2e0ab786392"
+      "notes": "Removed pathognomonic creatinine-ratio claim and exudate inversion. Verified Lallas authors/title and repaired unrelated DOI to 10.1016/j.urology.2004.03.031; its four cases resolved by three months, not a universal days-to-weeks deadline. Full MDX read. Individual imaging sensitivity, procedural drainage/removal schedules and other historical bibliography details remain incompletely verified. Follow-up identity audit repaired Ogan DOI to 10.1016/j.urology.2003.07.024 and aligned imaging claim: study did not recommend routine CXR after negative intraoperative fluoroscopy; symptoms trigger imaging.",
+      "sourceSha256": "d6b3766bbc4a9f5d87b6d6217cbef393d0c6a449072071525ae695e9065e7acc"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/post-kidney-transplant.mdx",
@@ -607,101 +618,200 @@
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous.mdx",
       "title": "Vesicocutaneous Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/26391386/",
+        "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines",
+        "https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12797282/"
+      ],
+      "scope": [
+        "Acute-trauma catheter regimen not a chronic VCF rule; comparable CT/plain cystography accuracy; urocutaneous versus VCF populations; conduit catheter not condom diversion; unsupported Cochrane-protocol brachytherapy claim removed."
+      ],
+      "notes": "Full text and29references read. Source matching and safety claims corrected; rare case reports, exact radiation subgroup estimates and all flap procedures not fully verified.",
+      "sourceSha256": "704452a9640387d3b7282d2f0e8568a1aa63b6bdc21ac3d2b39fca94cbd90584",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx",
       "title": "Obstetric Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12797282/",
+        "https://link.springer.com/article/10.1007/s00192-025-06413-6",
+        "https://www.who.int/news/item/11-01-2018-short-period-of-postoperative-bladder-catheterization-effective-for-repair-of-simple-urinary-fistula",
+        "https://www.who.int/publications/i/item/9789240109346",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0112299"
+      ],
+      "scope": [
+        "Protocol versus completed Cochrane review; guideline-specific catheter duration; timing and viable-edge preservation; post-repair continence, IUGA/ICS success and expert assessment; historical burden; partograph/WHO Labour Care Guide; adjusted cesarean association."
+      ],
+      "notes": "Full text and all references read; corrected consequential claims. Older prevalence estimates, individual cohort subgroup outcomes and all technical details are not independently revalidated.",
+      "sourceSha256": "9d17aeefff8e5f73b34c19f5c8e08c11232c58dcf84bb26d9d060504fa196660",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-females/rectovaginal.mdx",
       "title": "Rectovaginal Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/38653492/",
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:38653492&format=json&resultType=core",
+        "https://pubmed.ncbi.nlm.nih.gov/40701562/",
+        "https://mdcgastro.com.au/wp-content/uploads/2025/06/ACG-Crohns-Disease-Clinical-Guideline-Update.pdf"
+      ],
+      "scope": [
+        "ASCRS pathway; distinction of urgent sepsis drainage from elective repair with controlled proctitis; retrospective Martius/gracilis sequence, denominator and later success; individualized diversion and sphincter surgery."
+      ],
+      "notes": "Full text and 17 references read. Primary ASCRS indexed text/visual abstract accessible; direct full PDF returned403. Detailed legacy outcome estimates and one episioproctotomy continence phrase remain to reconcile against full guideline; not clinician sign-off.",
+      "sourceSha256": "317748914d4836be104703d6dcadcadb5fa696f245df51bad2ba63d7e184c8ef",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-females/ureterovaginal.mdx",
       "title": "Ureterovaginal Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+        "https://pubmed.ncbi.nlm.nih.gov/35032348/",
+        "https://pubmed.ncbi.nlm.nih.gov/33787314/",
+        "https://med.stanford.edu/content/dam/sm/urology/JJimages/publications/Urologic-injury-and-fistula-after-hysterectomy-for-benign-indications.pdf"
+      ],
+      "scope": [
+        "Diagnostic non-specificity of preserved voiding and dye patterns; stenting timing evidence/intervals; urgent drainage; robotic cohort denominator/endpoints; no route equivalence; prophylactic stent limits; retrospective injury-recognition endpoint."
+      ],
+      "notes": "Full text including 24 original references read; corrected overclaims and avoidable routine CT follow-up. Not every small case series or historical percentage independently checked.",
+      "sourceSha256": "345dc10ac9ebb88e31610da2cec92ae22b44f664a8bdf72cdeeaaabff88a0e8e",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-females/vesicouterine.mdx",
       "title": "Vesicouterine Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+        "https://pubmed.ncbi.nlm.nih.gov/38055313/",
+        "https://obgyn.onlinelibrary.wiley.com/doi/10.1002/ijgo.15256"
+      ],
+      "scope": [
+        "Low-level conservative/hormonal evidence; individualized timing and uterine conservation; no robotic standard or guaranteed closure; series pregnancy denominators; selective interposition/stents."
+      ],
+      "notes": "Full text including all 27 original references read; corrected major generalizations. Small-series hormones, unusual presentations and technical case details not all independently validated.",
+      "sourceSha256": "eb6073ccba5c44073d6fd75e3ba40431a8ff42338c8ecaf319006220379011f3",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx",
       "title": "Vesicovaginal Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+        "https://pubmed.ncbi.nlm.nih.gov/16530766/",
+        "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1016/j.ijgo.2006.01.003",
+        "https://pubmed.ncbi.nlm.nih.gov/38033311/",
+        "https://www.ics.org/Publications/ICI_7/Incontinence-7th-Edition-15-03-2024.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12797282/",
+        "https://pubmed.ncbi.nlm.nih.gov/25615249/",
+        "https://pubmed.ncbi.nlm.nih.gov/17036168/"
+      ],
+      "scope": [
+        "Dye-test interpretation; Goh fibrosis grouping; Browning retrospective design; unverified Adinata DOI removed; Cochrane protocol identified; catheter populations; limits on route equivalence, flaps, HBOT and fertility effects."
+      ],
+      "notes": "Full text and all40 original references read; unverified Adinata2026 DOI10.3390/jcm15217191 returnedCrossref404/no matching search, removed claim rather than invented replacement. Other small-series and emerging-material outcomes are not all independently source-validated. Follow-up source-identity audit: repaired Bragayrac DOI to .06.12 (4 cases); removed unrecoverable He delayed-VVF citation whose DOI resolves to priapism; removed unsupported narrow spontaneous-closure estimate and universal transvesical preference.",
+      "sourceSha256": "bef43661c1379a8ce112d91d2ed7282749cf771e0779ed5a8fae727f3acc3741",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-males/rectourethral.mdx",
       "title": "Rectourethral Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23538238/",
+        "https://pubmed.ncbi.nlm.nih.gov/20952036/",
+        "https://pubmed.ncbi.nlm.nih.gov/27538801/"
+      ],
+      "scope": [
+        "Linder17%versus87%compares irradiated versus nonirradiated primary repair, NOT flap use; diversion outcome versus initial stoma use; mixed cohort radiation estimate; Wexner versusStMarks scale; biopsy/diversion individualized."
+      ],
+      "notes": "Full text and40references read. Corrected major inverted treatment comparison and clinical overstatements. Other small-series technical outcome claims not all independently verified.",
+      "sourceSha256": "b014b2fe9ef7838499101ae69206bd1884e07fc69667025f94a0180bba7e9099",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-males/rectovesical.mdx",
       "title": "Rectovesical Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/36150030/",
+        "https://pubmed.ncbi.nlm.nih.gov/27538801/",
+        "https://pubmed.ncbi.nlm.nih.gov/23841640/",
+        "https://pubmed.ncbi.nlm.nih.gov/20883482/"
+      ],
+      "scope": [
+        "VUA nomenclature overlap and approach selection; mixed RVF/RUF populations; closure versus function; Mundy40total23surgical17radiated; postoperative catheter day3/3wk contradiction; individualized stomas/flaps/follow-up."
+      ],
+      "notes": "Full text and27references read. Primary cohorts verified; removed unsafe unsupported day3urethral-catheter instruction. Detailed robotic maneuvers, device/suture choices and every small-series statistic not independently validated.",
+      "sourceSha256": "6bbf933a662403efc6f5fb315f9ac3e288ae725c5dc942106fb0600eb87ae9a5",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-males/urethrocutaneous.mdx",
       "title": "Urethrocutaneous Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/41525974/",
+        "https://pubmed.ncbi.nlm.nih.gov/37010625/",
+        "https://pubmed.ncbi.nlm.nih.gov/26391386/"
+      ],
+      "scope": [
+        "Obstruction must be distal to fistula, not vice versa;2026meta stent/length estimates fromtwo studies each hypothesis-generating; pooled repair series are not causal rankings; individualized timing/drainage; neurogenic diversion denominator."
+      ],
+      "notes": "Full text and34references read. High-yield meta-analysis and cohort scopes verified; individual techniques and historical small-series numbers not all revalidated.",
+      "sourceSha256": "4a5cc7b6ab2c702c4feec5224055fe2d9ba4ec9de1c788e003cd8675856062c3",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx",
       "title": "Urethroperineal Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/26391386/",
+        "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males"
+      ],
+      "scope": [
+        "Confirm orthotopic urethra before congenital accessory-tract excision; urgent source control versus elective timing; stricture and neurogenic outcome generalizations; selected LS may have single-stage oral mucosa repair."
+      ],
+      "notes": "Full text and37references read. Corrected cross-page contradictions and unsupported universal outcomes. Detailed congenital case series, every repair technique and all long-term percentages remain source-validation limits.",
+      "sourceSha256": "4e7dbed4210bef8571d5e528bb407db95b489fcf155d875965d26e887cb381b5",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx",
       "title": "Urethropubic Fistula",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/37182647/",
+        "https://pubmed.ncbi.nlm.nih.gov/32389815/"
+      ],
+      "scope": [
+        "MRI case-confirmation rate not sensitivity;63%culture concordance denominator; urine cannot substitute for bone culture; source control and patient-specific debridement; no comparative robotic morbidity proof."
+      ],
+      "notes": "Full text and15references read. Existing major review and culture primary studies verified; rare technique series and exact rates not all independently checked.",
+      "sourceSha256": "c25d329dbb3d90635880c12a0073555b25e81db6470492e6ace354dcf3e406f3",
+      "reviewedAt": "2026-09-12"
     },
     {
       "file": "docs/03-clinical-conditions/03f-fistulas/index.mdx",
@@ -720,191 +830,444 @@
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx",
       "title": "Buried Penis",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-size-abnormalities-and-dysmorphophobia",
+        "https://pubmed.ncbi.nlm.nih.gov/40752848/"
+      ],
+      "scope": [
+        "EAU 2026 risk-factor optimization and surgical counseling",
+        "Selected-cohort LS/stricture denominators, cancer findings, outcome generalization and pediatric framework"
+      ],
+      "notes": "Corrected weight-loss futility claim, selected-cohort prevalence/incidence confusion and universal operative/outcome language. Individual historical technique-series numbers were read but not independently recalculated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "2b7ae3baebd42fefea3a5cbc4c500d57186b195f364bb1fd0ee74050bdfb0cb9"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx",
       "title": "Clitoral Phimosis & Adhesions",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11898701/",
+        "https://pubmed.ncbi.nlm.nih.gov/30770072/",
+        "https://pubmed.ncbi.nlm.nih.gov/35869023/",
+        "https://academic.oup.com/bjd/article/178/4/839/6602656",
+        "https://doi.org/10.1097/AOG.0000000000003616"
+      ],
+      "scope": [
+        "Symptoms versus incidental anatomy; selective treatment and biopsy",
+        "Primary series denominators and incorrect ACOG reference"
+      ],
+      "notes": "Removed mandatory surgery and causal orgasm claims; qualified small uncontrolled results; replaced mismatched ACOG 795 citation. Rare operative adjunct series remain read-only, not separately validated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "1781d665da0ab78e1dc8be62436c038b42219a15ebee4fb0dfc51d480524aae6"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx",
       "title": "\"Erectile Dysfunction (Condition)\"",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/management-of-erectile-dysfunction",
+        "https://www.cochrane.org/evidence/CD013166_low-intensity-shockwave-therapy-effective-and-safe-treating-erectile-dysfunction",
+        "https://www.auajournals.org/doi/10.1016/j.juro.2018.05.004"
+      ],
+      "scope": [
+        "EAU/AUA treatment positioning and 2025 Cochrane LiSWT",
+        "Historical cardiovascular and prevalence overstatements"
+      ],
+      "notes": "Added the Cochrane 21-trial/1357-man low-certainty interpretation and guideline disagreement; removed universal two-thirds CAD presentation claim. Existing seven-pathway primary trial check retained; not a fresh audit of all dosing hubs or every historical review.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "96f1350e4df0696aa0325f05fac696c8a4e988c9eb47b168925efc59c64aefb3"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/female-genital-mutilation-cutting.mdx",
       "title": "Female Genital Mutilation / Cutting (FGM/C)",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK614880/",
+        "https://www.who.int/en/news-room/fact-sheets/detail/female-genital-mutilation",
+        "https://www.rcog.org.uk/media/au0jn5of/gtg-53-fgm.pdf",
+        "https://uscode.house.gov/view.xhtml?edition=prelim&hl=false&num=0&req=granuleid%3AUSC-2000-title18-section116"
+      ],
+      "scope": [
+        "WHO 2025 deinfibulation, timing, consent and selected reconstruction",
+        "WHO classification and RCOG local anesthesia option; dated legal count"
+      ],
+      "notes": "Corrected compulsory timing/anesthesia/surgery language and Type II anatomy; current WHO conditional recommendation now explicit. Removed stale 35-state count. Small reconstructive cohorts and historical prevalence aggregates read but not independently validated; large Foldes series attrition remains to clarify.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "25ed1dbf78ace2ade7ea8c941033ccb1265d8cd6829ca86a2436f950552ccf63"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/genital-lymphedema.mdx",
       "title": "Genital Lymphedema",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+        "https://insight.jci.org/articles/view/123775",
+        "https://www.cdc.gov/filarial-worms/hcp/clinical-care/index.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://pubmed.ncbi.nlm.nih.gov/40448967/",
+        "https://pubmed.ncbi.nlm.nih.gov/34756554/",
+        "https://pubmed.ncbi.nlm.nih.gov/38137655/"
+      ],
+      "scope": [
+        "ISL compression safety and limb-to-genital extrapolation",
+        "Drug/source mismatches, CDC filariasis treatment, IDSA cellulitis prophylaxis",
+        "Small genital flap series versus curative algorithm"
+      ],
+      "notes": "Removed unsupported drug regimens and universal cure/compression-free promises; repaired ketoprofen source and endpoint scope. All 59 references read; not every historical limb-series statistic or reference identity independently checked. Staging/GLS numerical mapping remains a descriptive framework, not validated thresholds.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "ca64bd6d0c6ebb08012889ee7c7cb9b9d189a6d6edc14f1ff7c177fb19c5d4fe"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema.mdx",
       "title": "Giant Penoscrotal Lymphedema",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/38137655/",
+        "https://pubmed.ncbi.nlm.nih.gov/34756554/",
+        "https://pubmed.ncbi.nlm.nih.gov/40448967/",
+        "https://pubmed.ncbi.nlm.nih.gov/25456280/",
+        "https://www.cdc.gov/filarial-worms/hcp/clinical-care/index.html"
+      ],
+      "scope": [
+        "Selected small surgical series versus universal gold standard",
+        "Causal CDP revision claim, filariasis drug safety and weight-loss recurrence scope"
+      ],
+      "notes": "Removed curative gold-standard and mandatory antifilarial-course claims; qualified retrospective series comparison. Historical individual technique details read but not all independently source-verified.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "059c7cd8e5aa89f961269fca36e221d1472d06307062a52c0ab9647594b493ce"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx",
       "title": "Hidradenitis Suppurativa (Genitourinary)",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.rxabbvie.com/pdf/humiracordavis.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/761151s010lbl.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/38795716/",
+        "https://pubmed.ncbi.nlm.nih.gov/34406349/",
+        "https://pubmed.ncbi.nlm.nih.gov/36746171/"
+      ],
+      "scope": [
+        "FDA-approved biologic schedules/status and pivotal phase 3 endpoints",
+        "SHARPS perioperative scope and selected SCC case denominators"
+      ],
+      "notes": "Corrected twice-weekly adalimumab error, bimekizumab approval year and published results, and HiSCR versus IHS4 endpoint; limited blanket biologic-continuation rule. Small reconstructive and cancer-case-series outcomes remain scoped, not independently validated in full.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "13df3eb9735da72629f8eb2d6a3ad358c9dab8b46462855ce823ab4c6fcb6b41"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx",
       "title": "Lichen Sclerosus",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/41778748/",
+        "https://pubmed.ncbi.nlm.nih.gov/34032494/",
+        "https://pubmed.ncbi.nlm.nih.gov/37040216/",
+        "https://pubmed.ncbi.nlm.nih.gov/26892645/",
+        "https://pubmed.ncbi.nlm.nih.gov/36498536/",
+        "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males"
+      ],
+      "scope": [
+        "2026 S3 medical treatment standard and source-of-truth split",
+        "Kurtzman meta-analysis long-term subgroup and nonrandomized technique comparisons",
+        "Selected staging/PU rates and treatment-course duration"
+      ],
+      "notes": "Removed duplicate steroid regimen; corrected overall versus long-term LS recurrence conclusion, causal technique advantage and universal 12-month staging rule. Full 49-reference text read; remaining historic absolute cancer rates and series outcomes not all recalculated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "9c3c46cbd14c161236f50a1b83b01a44b21c8a875feb9b5f36fd3a9e80bf4554"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies.mdx",
       "title": "Müllerian Anomalies & Vaginal Agenesis",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.asrm.org/practice-guidance/practice-committee-documents/asrm-mullerian-anomalies-classication-2021/",
+        "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/01/mullerian-agenesis-diagnosis-management-and-treatment",
+        "https://www.cochrane.org/evidence/CD008576_does-septum-resection-improve-chance-live-birth-women-childbearing-age-septate-uterus",
+        "https://pubmed.ncbi.nlm.nih.gov/30196972/",
+        "https://pubmed.ncbi.nlm.nih.gov/41701557/"
+      ],
+      "scope": [
+        "MAC2021 septum threshold and missing cervical-agenesis category",
+        "ACOG dilation preference/consent, Cochrane 2025 septum uncertainty",
+        "Historical surgical comparison and ISUTx registry denominator"
+      ],
+      "notes": "Corrected ASRM >1 cm threshold, optional informed surgical preference and registry-versus-worldwide counts. Qualified historical McIndoe and inter-technique comparisons; no standalone validation of all neovagina operative steps.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "97f7dfa934f11df0efc3d5b45d0e9948520da614a85a1f6b7d2b9f48f5a38e65"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx",
       "title": "Peyronie's Disease",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-curvature",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5027990/",
+        "https://endodocuments.com/XIAFLEX/PI",
+        "https://doi.org/10.1002/14651858.CD012206.pub2"
+      ],
+      "scope": [
+        "AUA oral-agent recommendation strength, minimum assessment and injection selection",
+        "EAU 2026 stability, IFN withdrawal, HA limited off-label role, ESWT pain, graft ED risk/type and absence of best graft",
+        "CCH current US labeling and serious-injury counseling; nonrandomized comparative estimates"
+      ],
+      "notes": "Full text and bibliography read. Corrected unsupported AUA may-offer oral antifibrotics, wrong Cochrane citation, obsolete IFN consensus, low graft ED ceiling, bovine graft classification and categorical graft ranking. Added current label counseling. Historical prevalence/natural-history percentages and every small surgical/device series were not independently re-estimated; no blanket clinical validation is claimed. OE89 guideline lead checked against primary EAU/AUA; OE90 FDA approval inference rejected (limited EAU HA option only).",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "39bf7df0cffdf4b5460eb1e346b0ebb8e3fd6790061a0339dcbaa87598f7a14d"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/small-penis-syndrome.mdx",
       "title": "Small Penis Syndrome / Penile Dysmorphic Disorder",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://academic.oup.com/jsm/article/21/6/573/7656694",
+        "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-size-abnormalities-and-dysmorphophobia",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K181387.pdf"
+      ],
+      "scope": [
+        "Micropenis reference-based threshold; SMSNA 2024 procedure-specific research restrictions; clearance versus long-term evidence; no automatic escalation after conservative care."
+      ],
+      "notes": "Full page and bibliography read. Corrected misleading SMSNA Penuma may-offer recommendation in both sections, procedural escalation ladder, fixed universal micropenis cutoffs, and categorical evidence claims. Small cosmetic cohorts remain described as studies rather than guaranteed outcomes; not every outcome re-estimated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "eeb46f0d071f84da8668d8bf973032f4b8e11c80997672a84493da74c7641345"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/testicular-reimplantation.mdx",
       "title": "\"Testicular Reimplantation (Condition)\"",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/29164757/",
+        "https://pubmed.ncbi.nlm.nih.gov/7609136/",
+        "https://pubmed.ncbi.nlm.nih.gov/6130164/",
+        "https://pubmed.ncbi.nlm.nih.gov/40272560/",
+        "https://ascopubs.org/doi/10.1200/JCO-24-02782"
+      ],
+      "scope": [
+        "Traumatic replantation fertility denominator; historical cryptorchidism series applicability; TVF high bias and experimental tissue fertility preservation."
+      ],
+      "notes": "Full page and bibliography read. Corrected 5/11 all-techniques sperm denominator, 1990s reports labeled modern, >95% blanket promise, and preclinical graft timelines as human outcomes. Verified Starmer, two Bukowski abstracts, Wacksman 6/7, Kim 2025 and ASCO 2025. Other historical technical series not independently re-estimated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "23e0c923bad55fa8b42a979ac8eb4610252f8ee249053dbed5a2a74e459774d5"
     },
     {
       "file": "docs/03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx",
       "title": "Vaginal Cysts & Masses",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.exxcellence.org/list-of-pearls/management-of-vaginal-cysts/",
+        "https://pubmed.ncbi.nlm.nih.gov/31471622/",
+        "https://pubmed.ncbi.nlm.nih.gov/36201769/",
+        "https://pubmed.ncbi.nlm.nih.gov/32972784/",
+        "https://pubmed.ncbi.nlm.nih.gov/36958755/",
+        "https://guidelines.esgo.org/media/2023/06/Pocket-Guidelines_Vaginal-cancer-3.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/41825134/"
+      ],
+      "scope": [
+        "Selective investigation/biopsy of benign-appearing versus suspicious cysts; Bartholin age-specific concern",
+        "Gartner denominators and no comparative winner; selected periurethral referral cohort",
+        "VAIN 5-FU discouraged in society consensus; separate PFS/DSS instead of survival ranges"
+      ],
+      "notes": "Full text and bibliography read. Corrected mandatory MRI/cystoscopy and age-only biopsy/excision, cyst recurrence rankings, and false combined survival ranges. Primary NCCN 2026 abstract/identity verified but complete article inaccessible; detailed current NCCN algorithm not certified. ESGO primary pocket guidance supports tissue diagnosis and radiotherapy/surgical selection. Rare mesenchymal tumors and every small cohort were screened but not all independently re-estimated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "eb536d325042af8a402f9323a00954ad12ab264ac16df430b8fbe85df7d46ec9"
     },
     {
       "file": "docs/03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx",
       "title": "Chronic Pelvic Pain",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/32979978/",
+        "https://uroweb.org/guidelines/chronic-pelvic-pain/chapter/management",
+        "https://www.auanet.org/documents/Guidelines/PDF/2025%20Guidelines/CPP%20Unabridged%202025.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/39142363/",
+        "https://pubmed.ncbi.nlm.nih.gov/41389120/"
+      ],
+      "scope": [
+        "GaPP2 actual primary source, absence of benefit and increased adverse events in unexplained female CPP",
+        "AUA2025 phenotype-directed options vs fixed escalation; EAU empirical-antibiotic scope distinguished",
+        "Physiotherapy female-population/short-term certainty, pudendal response vs pain-intensity denominator, targeted diagnostic testing"
+      ],
+      "notes": "Full body and all references read. AUA recommendations verified through indexed primary PDF passages; direct PDF retrieval blocked. Legacy prevalence estimates and all small intervention series not independently re-estimated.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "36f1d185a95fa1de0bacb2b9891a3a3f09235002991c37a52c13864b625ed615"
     },
     {
       "file": "docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx",
       "title": "Interstitial Cystitis / PBS",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/36093391/",
+        "https://pubmed.ncbi.nlm.nih.gov/22503015/",
+        "https://cuaj.ca/index.php/journal/article/view/9182",
+        "https://www.auanet.org/documents/guidelines/pdf/icbps%20guideline.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/40783827/"
+      ],
+      "scope": [
+        "Sex-specific prevalence and survey versus diagnosis ascertainment",
+        "Individualized dietary triggers, PT trial population and primary versus secondary outcomes",
+        "Hunner triamcinolone dose ambiguity removed; hydrodistension safety; CUA2025 conditional very-low-certainty Botox",
+        "SNM observational limitations; supratrigonal cystectomy with augmentation capacity; retained prior PPS/RIMSO source-of-truth corrections"
+      ],
+      "notes": "Full text including bibliography read. Original therapeutic consensus present; rejected interpretation that Botox is the only strongly supported therapy. AUA/CUA guideline recommendations checked via primary indexed passages; this is not an independent meta-analysis of each instillation.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "b1143039adaf3fd05866fdb42e893178ef8153be7e716996edaca61974e7f46b"
     },
     {
       "file": "docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx",
       "title": "Myofascial Pelvic Pain",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/38387036/",
+        "https://pubmed.ncbi.nlm.nih.gov/39539076/",
+        "https://pubmed.ncbi.nlm.nih.gov/41551998/",
+        "https://pubmed.ncbi.nlm.nih.gov/35339694/",
+        "https://pubmed.ncbi.nlm.nih.gov/40364259/",
+        "https://pubmed.ncbi.nlm.nih.gov/36513896/",
+        "https://pubmed.ncbi.nlm.nih.gov/33274514/",
+        "https://pubmed.ncbi.nlm.nih.gov/31010782/",
+        "https://pubmed.ncbi.nlm.nih.gov/41051572/",
+        "https://rapm.bmj.com/content/early/2024/07/16/rapm-2024-105593",
+        "https://pubmed.ncbi.nlm.nih.gov/37633575/",
+        "https://pubmed.ncbi.nlm.nih.gov/40266309/"
+      ],
+      "scope": [
+        "Levator anatomy; screening tool does not replace examination",
+        "Expert-consensus versus guideline evidence, no automatic Botox or compounded-drug escalation",
+        "Added n94 negative 2025 Botox RCT and n29 positive 2026 endometriosis phase2 trial with open-extension limits",
+        "TPI steroid guidance, underpowered magnesium trial not equivalence, additive local-anesthetic dose and negative-aspiration limitations",
+        "Retrospective ten-point study and immediate-PFPT association not RCT effects",
+        "Vaginal diazepam RCT limitations and substantial systemic absorption; removed unvalidated baclofen/ketamine vaginal dosing and false safety assumptions"
+      ],
+      "notes": "Full text and all39 original references read. Consequential primary abstracts and consensus passages verified. Small dosing series remain clearly illustrative rather than standardized or certified protocols.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "0fb039082f8c193407efe18ff563c1043e6d73ba9694396a17d2a881be0f3fe3"
     },
     {
       "file": "docs/03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders.mdx",
       "title": "Pelvic Venous Disorders",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11332375/",
+        "https://pubmed.ncbi.nlm.nih.gov/39362632/",
+        "https://pubmed.ncbi.nlm.nih.gov/41675297/",
+        "https://pubmed.ncbi.nlm.nih.gov/37095614/",
+        "https://pubmed.ncbi.nlm.nih.gov/40512129/",
+        "https://pubmed.ncbi.nlm.nih.gov/40634644/",
+        "https://pubmed.ncbi.nlm.nih.gov/41786126/"
+      ],
+      "scope": [
+        "Incidental compression/reflux not diagnosis or indication; postcoital pain not pathognomonic",
+        "TVUS 187/195 positive-selection confirmation not diagnostic sensitivity",
+        "IVUS selection and no exploratory angioplasty; removed mandatory obstruction-first sequence",
+        "Nutcracker Delphi renal-vein-transposition preference and migration concerns; small balloon series not standard",
+        "POTS83% denominator selected symptomatic cohort, stenting association not causal or superior to autonomic treatment"
+      ],
+      "notes": "Full text and all36 original references read. Current SIR2026 guidance identity/abstract verified but full recommendation text not obtained; no detailed recommendation attributed to abstract. Anatomical numerical microdetails not individually remeasured.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "491351909b4c49777daa87edeb3e148c412e5b8d2c7fadf84299df98312e6541"
     },
     {
       "file": "docs/03-clinical-conditions/03i-defecatory-disorders/chronic-constipation.mdx",
       "title": "Chronic Constipation",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://gastro.org/clinical-guidance/pharmacological-management-of-chronic-idiopathic-constipation-cic/",
+        "https://gastro.org/clinical-guidance/evaluation-and-management-of-refractory-constipation/",
+        "https://pubmed.ncbi.nlm.nih.gov/41713703/",
+        "https://pubmed.ncbi.nlm.nih.gov/41713709/",
+        "https://www.ascrsu.com/ascrs/repview?name=3_2851100_PDF&type=784-160"
+      ],
+      "scope": [
+        "AGA2026 refractory evaluation, transit off/ideally on treatment and colectomy selection",
+        "RomeIV historical criteria distinguished from RomeV nomenclature/questionnaire limits",
+        "Prucalopride12-week trial not24-month efficacy, no head-to-head secretagogue equivalence, concurrent dyssynergia care"
+      ],
+      "notes": "Full text and10 original references read. RomeV bowel/questionnaire primary abstracts and process passages checked; full bowel criteria not reproduced as a newly verified complete diagnostic instrument.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "2af003e7f93e03d93e37bb19e4d2967e0f8d57828b4b8f4a96627898caa7cdd5"
     },
     {
       "file": "docs/03-clinical-conditions/03i-defecatory-disorders/defecatory-dysfunction.mdx",
       "title": "Defecatory Dysfunction",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.ascrsu.com/ascrs/repview?name=3_2851100_PDF&type=784-160",
+        "https://gastro.org/clinical-guidance/evaluation-and-management-of-refractory-constipation/",
+        "https://pubmed.ncbi.nlm.nih.gov/41713710/",
+        "https://els-jbs-prod-cdn.jbs.elsevierhealth.com/article/S0016-5085%2826%2900145-9/fulltext",
+        "https://pubmed.ncbi.nlm.nih.gov/41677229/"
+      ],
+      "scope": [
+        "Functional/structural syndrome not all behavioral or interchangeable with dyssynergia",
+        "RomeIV symptoms+two categories; RomeV primary-process update and removal of surfaceEMG from criteria",
+        "BET limited sensitivity; descriptive patterns and study-specific probabilities not stand-alone diagnosis",
+        "ASCRS biofeedback/TPI/rectocele selection; no universal5-cm surgery threshold, no automatic therapeutic sequence",
+        "AGA2026 biofeedback when indicated not mandatory dyssynergia in every refractory patient",
+        "Added2026 PFConsortium expert-consensus role, removed blanket claim all nonbiofeedbackPFPT ineffective"
+      ],
+      "notes": "Full text and17 original references read. RomeV anorectal primary chapter abstract and indexed publisher passages available; complete chapter-specific symptom duration/probable-versus-definite test rules not independently retrieved, so not presented as a definitive reproduced new checklist.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "fba26d67579d62f04e8f356be7937338d07597fd9c0594774723d94a0989d1dc"
     },
     {
       "file": "docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx",
       "title": "Fecal Incontinence",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://www.ascrsu.com/ascrs/repview?name=2_2851090_PDF&type=784-159",
+        "https://pubmed.ncbi.nlm.nih.gov/41220094/",
+        "https://pubmed.ncbi.nlm.nih.gov/42105947/",
+        "https://pubmed.ncbi.nlm.nih.gov/41713710/"
+      ],
+      "scope": [
+        "ASCRS2023 no routine bulking and selective manometry/EAUS, pudendal latency not routine",
+        "Replaced unrelated urodynamic reference with current anorectal primary source",
+        "SUBSoNIC39enrolled16complete inconclusive active/sham; TNT109randomized correct group denominators and QoL not between-group significant"
+      ],
+      "notes": "Full text and14 original references read. High-yield guideline and new RCT primary abstracts verified; legacy SNM cohort outcomes retained with test-selection/durability caveats rather than re-meta-analyzed.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "05f6df21a09cc673c0500f130a03e57bee5f02e17778f5ccf68f29bcae19c483"
     },
     {
       "file": "docs/03-clinical-conditions/03i-defecatory-disorders/index.mdx",
       "title": "Defecatory Disorders",
-      "status": "unresolved",
-      "readScope": "not yet read in this review",
-      "sources": [],
-      "scope": [],
-      "notes": "Pending full-text screening."
+      "status": "updated",
+      "readScope": "full MDX text including bibliography",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/40372366/",
+        "https://pubmed.ncbi.nlm.nih.gov/41713710/",
+        "https://www.ascrsu.com/ascrs/repview?name=2_2851090_PDF&type=784-159"
+      ],
+      "scope": [
+        "47%FIconstipation overlap scoped165/349specialistcohort",
+        "RomeV classification corrected and overflow not always dyssynergia",
+        "Removed allmesh/slingsinevitablyfail and FIinmostolderwomen claims"
+      ],
+      "notes": "Full index text and8 references read. Descriptive clinical pathways scoped; no individual risk prediction inferred.",
+      "reviewedAt": "2026-09-12",
+      "sourceSha256": "8a8e141c19b73e624a768cab905552cfc69a6d36311463bc2542a6030ce230e2"
     },
     {
       "file": "docs/03-clinical-conditions/index.mdx",
@@ -919,10 +1282,10 @@
       "sourceSha256": "92508ce534df2c499eeeb91b3ca5483bfdadb2d9421a6e1a35f3ef6c6746abbf"
     }
   ],
-  "reviewedAt": "2026-09-11",
+  "reviewedAt": "2026-09-12",
   "methodology": "Full MDX and bibliography screening, with targeted primary-guideline and major-trial verification of named claims. Checked does not mean every numerical claim, reference, figure or drug/device label is validated. Unresolved entries explicitly identify unread work.",
-  "fullTextPagesRead": 40,
-  "nextFile": "docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx",
+  "fullTextPagesRead": 73,
+  "nextFile": "docs/05-special-populations/05a-trauma-emergencies/index.mdx",
   "openEvidenceSurvey": {
     "providedFile": "pasted-text.txt (110-reference survey supplied by user)",
     "method": "Survey treated as leads, not authority; present means found in source and does not itself mean independently validated. Current bounded batch incorporates OE item 1; remaining leads remain explicit.",
@@ -972,15 +1335,18 @@
         "referenceIds": [
           41
         ],
-        "status": "deferred",
-        "notes": "IUGA/ICS fistula success consensus needs original-source review and exact definition, not automatic worldwide incurable label."
+        "status": "added",
+        "notes": "IUGA/ICS original consensus verified: success includes closure and continence, three adequate failed repairs plus two independent expert assessments before an incurable label, not automatic futility.",
+        "sources": [
+          "https://link.springer.com/article/10.1007/s00192-025-06413-6"
+        ]
       },
       {
         "referenceIds": [
           42
         ],
         "status": "present",
-        "notes": "FIGO 2025 DOI present in obstetric fistula bibliography; that page is not yet full-text reviewed in this audit."
+        "notes": "FIGO POFRI original citation and publication identity verified. Obstetric full text reviewed; revised POFRI framework recognizes SUI/OAB/mixed/overflow. Detailed FIGO full-text recommendations still limited by publisher access."
       },
       {
         "referenceIds": [
@@ -1021,26 +1387,29 @@
     ]
   },
   "validation": {
-    "citationLint": "npm run lint:citations passed: 1,187 files, no issues.",
-    "internalLinks": "node scripts/check-internal-links.js passed: 1,187 files, no broken /docs/ links. Initial npm alias lint:internal-links does not exist; direct script used successfully.",
-    "diffCheck": "git diff --check passed after edits.",
-    "limits": "Combined production build and remote verification are root responsibilities; these checks validate citation wiring and routes, not all source claims."
+    "citationLint": "Current citation lint reports no owned-file issues; only root-owned cystography mid-edit anchors.",
+    "diffCheck": "git diff --check passed on owned files.",
+    "limits": "Validation ongoing; root handles production build and publication."
   },
   "latestBatch": {
-    "description": "Upper tract and selected fistulas; eight pages plus scoped MUSA addition to a previously read page.",
+    "description": "Full-domain completion underway; all fistula pages now fully read.",
     "files": [
-      "docs/03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx",
-      "docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/all-patients/nephropleural.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/all-patients/pyeloenteric.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/all-patients/ureterocolonic.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/all-patients/vascular-urinary.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/all-patients/post-kidney-transplant.mdx",
-      "docs/03-clinical-conditions/03f-fistulas/index.mdx",
-      "docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx"
+      "docs/03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-females/rectovaginal.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-females/ureterovaginal.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-females/vesicouterine.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-males/rectourethral.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-males/rectovesical.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-males/urethrocutaneous.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx",
+      "docs/03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx"
     ],
-    "fullTextNewPages": 7,
-    "remainingFullTextUnread": 33,
-    "limits": "Source checks are targeted, not a line-by-line validation of all claims or clinical sign-off. Next priority obstetric fistula with OE 41/42, then remaining fistulas, genital/scrotal, pain and defecatory pages."
-  }
+    "fullTextNewPages": 12,
+    "remainingFullTextUnread": 21,
+    "limits": "Review continues across all remaining clinical conditions and special populations; source validation targeted and precisely scoped per page."
+  },
+  "clinicalOutstanding": "Resolve consequential prior flagged companion claims (Optilume/MMC, NLUTD/NEUROGED, FGM follow-up denominator, POP/EVA); all73clinical MDX full texts have now been read."
 }
