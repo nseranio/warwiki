@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Sixteenth continuation: drain decisions and device reliability
+
+Rebuilt Jackson-Pratt, Blake and Penrose, consolidating shared clinical guidance and correcting unsupported removal/creatinine thresholds, suction rules, device superiority, sample collection and material/reservoir claims. Nine complete original mains, the Ma supplement and WHO drain appendix were read; exact remaining full-paper/figure/supplement gaps and all 78 inherited references are recorded in the [source review](reports/2026-09-12/surgical-drains-source-review.md).
+
+Lint/typecheck/build and all three desktop/mobile browser checks pass: 131.88 MB, 97,569 compiled local links/assets and 722 data links. Ledger: 643 current full MDX reads and 616 scoped updates. Publication verification is pending in the [sixteenth release record](reports/2026-09-12/sixteenth-continuation-release.md). Continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Fifteenth continuation: foreign-body safety and tissue-scaffold evidence
 
 Corrected five biomaterials pages: free silicone, penile pearls, decellularized ECM, composite scaffolds and synthetic polymer scaffolds. Removed unsupported global legality/incidence, blanket implant safety, imaging/removal assumptions and automatic medication/flap instructions. Clarified cell-free versus cultured graft guidance, material-dependent degradation and the limits of cell-culture/animal evidence.
