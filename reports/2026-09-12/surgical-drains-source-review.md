@@ -32,6 +32,8 @@ Fully read the original and final Jackson-Pratt, Blake and Penrose MDX pages. Th
 
 **Kundu 2010, DOI 10.1111/j.1464-410X.2010.09230.x:** complete main, all three tables, six references and disclosures. No figures or separate supplements listed. This older mostly-open PN cohort used a leak-duration definition and retained drains as conservative treatment. Its abstract/results percentages and delayed-leak proportions contain inconsistencies; no numerical removal rule or universal observation policy was adopted. It remains in the inherited-source register rather than being added as new evidence.
 
+**Musser 2014, DOI 10.1089/end.2014.0268 (follow-up after the content commit):** complete main, all five tables, 23 references and disclosures read. No main figures listed. The study analyzed 637 of 651 consecutive operations, primarily by sequential policy periods, with an additional comparison by actual drain use. It was not randomized; omission still allowed drainage for a suspected leak, and confidence intervals permitted clinically meaningful differences. No further MDX change was needed. Separate Supplementary Table S1 remains unread: PMC returned an HTML challenge and Europe PMC a no-files XML response.
+
 ## Guidelines, manufacturer documents and scope limits
 
 - **EAU 2026:** complete online prostatectomy subsection 6.2.2.e, Pelvic drain; complete RCC subsection 7.2.3.e, Placement of a drain, and the related evidence-summary row. Watertight-anastomosis selection, the PLND evidence gap and absence of robotic-PN randomized evidence were checked. These are complete relevant subsections, not complete guideline reads or reads of every cited original.
@@ -44,7 +46,7 @@ Fully read the original and final Jackson-Pratt, Blake and Penrose MDX pages. Th
 
 Complete indexed abstracts were read for Khansa 2018, Swartz 2012, Kowalewski 2020, Williams 2017, Chenam 2018, Kriegmair 2016 and Makita 2020. Williams/Chenam/Kriegmair were re-read with an extractor preserving literal comparison symbols. Chenam stopped at 189 of 312 planned patients and excluded an intraoperative leak; Kriegmair studied open PN. Khansa/Swartz are not comparative patient-outcome trials proving a favored drain design. Publisher attempts returned access errors or HTML challenges; these mains remain unread.
 
-Mahmud 2025, Oh 2023, WSES 2023 and Musser 2014 full files were downloaded but are still unread at this checkpoint. Other inherited citations have metadata-only records or no DOI, not credited abstract/full-paper reads. Removing unsupported text does not silently close those access/review gaps.
+Mahmud 2025, Oh 2023 and WSES 2023 full files were downloaded but are still unread at this checkpoint. Other inherited citations have metadata-only records or no DOI, not credited abstract/full-paper reads. Removing unsupported text does not silently close those access/review gaps.
 
 The bounded recent-literature search did not identify a verified new large practice-changing drain trial for these pages. Small studies, conference posters and narrative reviews were not added for novelty. This is not a claim that the entire literature has been exhausted.
 

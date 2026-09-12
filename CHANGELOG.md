@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Rebuilt Jackson-Pratt, Blake and Penrose, consolidating shared clinical guidance and correcting unsupported removal/creatinine thresholds, suction rules, device superiority, sample collection and material/reservoir claims. Nine complete original mains, the Ma supplement and WHO drain appendix were read; exact remaining full-paper/figure/supplement gaps and all 78 inherited references are recorded in the [source review](reports/2026-09-12/surgical-drains-source-review.md).
 
-Lint/typecheck/build and all three desktop/mobile browser checks pass: 131.88 MB, 97,569 compiled local links/assets and 722 data links. Ledger: 643 current full MDX reads and 616 scoped updates. Publication verification is pending in the [sixteenth release record](reports/2026-09-12/sixteenth-continuation-release.md). Continue the whole-site task after publication.
+Lint/typecheck/build and all three desktop/mobile browser checks pass: 131.88 MB, 97,569 compiled local links/assets and 722 data links. Ledger: 643 current full MDX reads and 616 scoped updates. Content `af5256a7` passed exact-commit CI/Vercel and all five live checks; see the [sixteenth release record](reports/2026-09-12/sixteenth-continuation-release.md). Subsequent source follow-up completes Musser 2014, with its supplement still inaccessible. Continue the whole-site task after publication.
 
 ---
 

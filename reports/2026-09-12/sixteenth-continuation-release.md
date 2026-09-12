@@ -16,8 +16,8 @@ All three revised routes pass desktop/mobile content, actual citation-anchor cli
 
 ## Publication
 
-Validated content is ready for the authorized main-branch push. Exact-commit CI/Vercel and live verification are pending; do not treat local validation as deployment confirmation.
+Content commit `af5256a7edadaae72e13a5d4584c00689c15f172` is pushed to `main`. Exact-commit GitHub CI [34708172172](https://github.com/nseranio/warwiki/actions/runs/34708172172) and Vercel deployment `9ucaSdPSG8iLY2rjsKiPowmQbSw7` succeeded. All five live checks pass: homepage, three corrected drain routes and removed Clinic route (404). See [publication verification](sixteenth-publication-verification.json). No fresh account-storage measurement is claimed. A subsequent authoring-only source follow-up completes Musser 2014, bringing the source register to ten full mains; its supplement remains inaccessible.
 
 ## Continue
 
-Continue remaining tools and the whole-site queue after this publication. Drain-source gaps remain individually recorded, including five inaccessible Blachman-Braun supplements and four downloaded-but-unread mains. The traditional-sling Cochrane review remains mostly unread. Follow [RESUME-HERE.md](../../RESUME-HERE.md); evidence remains quarterly, Epic paused and public metadata ordinary last-updated.
+Continue remaining tools and the whole-site queue after this publication. Drain-source gaps remain individually recorded, including five inaccessible Blachman-Braun supplements and three downloaded-but-unread mains. The traditional-sling Cochrane review remains mostly unread. Follow [RESUME-HERE.md](../../RESUME-HERE.md); evidence remains quarterly, Epic paused and public metadata ordinary last-updated.

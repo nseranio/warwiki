@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-09-12T17:29:30.900504+00:00",
+  "sourceCommit": "af5256a7edadaae72e13a5d4584c00689c15f172",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "af5256a7edadaae72e13a5d4584c00689c15f172",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34708172172"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/9ucaSdPSG8iLY2rjsKiPowmQbSw7",
+      "updated_at": "2026-09-12T17:27:20Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/jackson-pratt",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/jackson-pratt",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "flat does not mean fluted": true,
+        "screening aid": true,
+        "no validated universal": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/blake-drain",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/blake-drain",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "does not eliminate blockage": true,
+        "rigid chest tubes": true,
+        "entire assembly": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/penrose-drain",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/surgical-drains/penrose-drain",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "open, passive": true,
+        "does not make culture": true,
+        "prophylactic antibiotics": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}
