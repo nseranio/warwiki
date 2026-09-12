@@ -2,7 +2,7 @@
 
 **Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
 
-**Current audit continuation, September 12:** read [RESUME-HERE.md](RESUME-HERE.md) and the [seventeenth release record](reports/2026-09-12/seventeenth-continuation-release.md). The current ledger records **650 full current MDX reads and 626 scoped updates** across 1,186 files. Six clamp pages and clinical/protocol corrections are ready; publication checks are recorded in that release file. Three flap companions received targeted corrections only and still need full reads. The whole-site review remains active after each publication; source, figure and supplement gaps remain explicit. Do not manufacture clinical sign-off.
+**Current audit continuation, September 12:** read [RESUME-HERE.md](RESUME-HERE.md) and the [seventeenth release record](reports/2026-09-12/seventeenth-continuation-release.md). The current ledger records **650 full current MDX reads and 626 scoped updates** across 1,186 files. Six clamp pages and clinical/protocol corrections are live at `2107fba8`; exact-commit CI, Vercel and 14 production checks passed. Three flap companions received targeted corrections only and still need full reads. The whole-site review remains active after each publication; source, figure and supplement gaps remain explicit. Do not manufacture clinical sign-off.
 
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 

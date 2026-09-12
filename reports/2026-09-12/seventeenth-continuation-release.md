@@ -16,7 +16,7 @@ All 12 changed routes passed desktop/mobile content, actual reference-anchor, ru
 
 ## Publication
 
-Pending exact-commit CI, Vercel and production checks after the grouped content push. No fresh account-storage measurement is claimed.
+Content commit `2107fba805b62b0e96542eb11dd744ced524b307` was pushed to `main`. [CI 34710073155](https://github.com/nseranio/warwiki/actions/runs/34710073155) and [Vercel deployment EcSi6TgnHVvsnd75ERYhvQHAxj7D](https://vercel.com/nseranios-projects/warwiki/EcSi6TgnHVvsnd75ERYhvQHAxj7D) both succeeded for that exact commit. All 14 production checks passed: the 12 corrected routes, homepage and `/clinic` remaining 404. See [publication verification](seventeenth-publication-verification.json). No fresh account-storage measurement is claimed.
 
 ## Continue
 

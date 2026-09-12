@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The seventeenth September 12 batch corrects six clamp articles, female testosterone, genital lymphedema and anal anatomy, with targeted protocol corrections in three flap companions. It also fixes quarterly protocol screening and table-header link contrast. See the [seventeenth release record](reports/2026-09-12/seventeenth-continuation-release.md) for final validation and publication status; do not infer publication from local edits. The preceding sixteenth release was verified live.
+The seventeenth September 12 batch is verified live at content commit `2107fba8`: six clamp articles, female testosterone, genital lymphedema and anal anatomy, with targeted protocol corrections in three flap companions. It also fixes quarterly protocol screening and table-header link contrast. Exact-commit CI and Vercel succeeded; all 14 production checks passed. See the [seventeenth release record](reports/2026-09-12/seventeenth-continuation-release.md). Full peritoneal and omental original-page reading has now begun the next batch; consequential source verification is underway and is not yet reflected in the current-content ledger.
 
 ## Review coverage and next work
 
