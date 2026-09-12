@@ -4,6 +4,7 @@ import styles from './EvidenceTable.module.css';
 
 const accessLabels: Record<string, string> = {
   abstract: 'Published abstract and source metadata',
+  'full-main-text': 'Complete main article and tables; supplements assessed separately',
   'selected-full-text': 'Selected full-text methods/results and source metadata',
 };
 const correctionLabels: Record<string, string> = {

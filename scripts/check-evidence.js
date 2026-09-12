@@ -32,7 +32,7 @@ function validateEvidence(data, {root = ROOT, checkFiles = true, today = new Dat
     if (!Array.isArray(record?.endpoints) || !record.endpoints.length) fail('no endpoints');
     else for (const endpoint of record.endpoints) for (const field of ['name', 'timepoint', 'result', 'uncertainty']) if (!filled(endpoint?.[field])) fail(`endpoint missing ${field}`);
     if (!Array.isArray(record?.limitations) || !record.limitations.length || record.limitations.some(item => !filled(item))) fail('missing limitations');
-    if (!['abstract', 'selected-full-text'].includes(record?.access?.level)) fail('invalid source-access level');
+    if (!['abstract', 'selected-full-text', 'full-main-text'].includes(record?.access?.level)) fail('invalid source-access level');
     if (!url(record?.access?.url)) fail('invalid source-access URL');
     for (const field of ['access', 'correction']) if (!date(record?.[field]?.checkedAt) || record[field].checkedAt > today) fail(`invalid or future ${field} date`);
     if (!['not-identified', 'not-assessed', 'correction-notice', 'retracted', 'expression-of-concern'].includes(record?.correction?.status)) fail('invalid correction status');

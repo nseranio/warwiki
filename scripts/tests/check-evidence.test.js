@@ -2,7 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const {validateEvidence} = require('../check-evidence');
 const source = require('../../src/data/evidence-registry.json');
-const check = data => validateEvidence(data, {checkFiles: false, today: '2026-09-11'});
+const today = new Date().toISOString().slice(0, 10);
+const check = data => validateEvidence(data, {checkFiles: false, today});
 
 test('curated registry has explicit denominators, uncertainty and all seven pathways', () => {
   assert.deepEqual(check(source), []);
@@ -25,7 +26,9 @@ test('retractions, impossible dates and future checks require intervention', () 
   const data = structuredClone(source);
   data.records[0].correction.status = 'retracted';
   data.records[1].access.checkedAt = '2026-02-30';
-  data.records[2].correction.checkedAt = '2027-01-01';
+  const tomorrow = new Date(`${today}T00:00:00Z`);
+  tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+  data.records[2].correction.checkedAt = tomorrow.toISOString().slice(0, 10);
   assert.ok(check(data).some(error => error.includes('flagged publication')));
   assert.equal(check(data).filter(error => error.includes('invalid or future')).length, 2);
 });

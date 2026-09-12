@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twenty-fourth continuation: prolapse trials, operative claims and source packages
+
+Corrected five prolapse/estrogen pages and the SCP conceptual diagram; revised study populations, denominators, outcomes, hysterectomy choice, perioperative estrogen interpretation and testing/counseling. Complete ASPIRe and E-OPTIMAL main/supplement packages, PEOPLE/IUC/EVA/Li mains, the hysterectomy Cochrane main and 29 actual graphics, and additional operative sources are recorded separately from remaining access gaps. SAVE-U original randomization and source access are corrected; maintenance tests no longer reject current evidence because of an obsolete fixed date.
+
+All local checks and 14 visual checks pass at 131.45 MB. Ledger: **671 full current MDX reads and 643 scoped updates** of 1,186 files; 21 checked, 12 unresolved and 510 unreviewed. No complete clinical clearance is asserted. Publication pending. See the [release record](reports/2026-09-12/twenty-fourth-continuation-release.md) and [detailed source records](reports/2026-09-12/prolapse-source-reading/README.md). Continue the whole-site task.
+
+---
+
 ## 2026-09-12 — Twenty-third continuation: sling/Burch evidence and diagram reliability
 
 Rebuilt PVS, Burch and the female SUI index; aligned rectus/fascia-lata and targeted three prolapse companions. Corrected operative dimensions, selection distinctions, source attribution, outcome denominators, CARE correction, SUCRA and prophylactic Burch interpretation. Three prolapse companions retain unresolved broader source review. Withdrawn two anatomically misleading diagrams, assets and generators; fixed transparent enlarged-figure backgrounds.

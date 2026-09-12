@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T20:26:34.574477+00:00",
+  "generatedAt": "2026-09-12T20:58:24.561178+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 670,
+    "fullTextReadForCurrentContent": 671,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
-      "unresolved": 14,
-      "unreviewed": 511,
-      "updated": 640
+      "unresolved": 12,
+      "unreviewed": 510,
+      "updated": 643
     }
   },
   "pages": [
@@ -3010,30 +3010,48 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "975964341f2b2d3cf7f3a63242ff3274da0dd6e3b6206bb6aa6427da19bdc98d",
+      "sourceSha256": "f67f5ea1012a47cf5431f248fb2f64cb070024152e898ec59836fbaa9098f8df",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/pharmacology/hormonal-therapies/preoperative-hormonal-priming.mdx",
           "title": "Preoperative Hormonal Priming",
           "status": "updated",
-          "scope": [
-            "Full article read; primary IMPROVE population/model-estimated failure and endpoint definitions, Cochrane2023 certainty,2025 pessary trial, and new EVA2026 multicenter primary abstract checked."
-          ],
-          "sources": [
-            "https://jamanetwork.com/journals/jama/fullarticle/2808329",
-            "https://www.cochrane.org/evidence/CD014592_does-oestrogen-therapy-help-treat-pelvic-organ-prolapse-postmenopausal-women",
-            "https://www.bmj.com/content/389/bmj-2025-084418",
-            "https://pubmed.ncbi.nlm.nih.gov/42663275/",
-            "https://doi.org/10.1111/1471-0528.70311",
-            "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A42663275"
-          ],
-          "notes": [
-            "EVA published primary abstract verified via Europe PMC MED; publisher early-view confirms Aug28,2026 identity. Full paper and registry retrieval failed: missing-data/analysis details unresolved;57/293 attrition disclosed. Removed unsupported Nowakowski/DHEA priming recommendation,2018-review misattribution, arbitrary7.7% tissue claim, universal dosing and blanket FDA-warning interpretation. Earlier mechanistic/slings trials retained with design limits; no complete clinical clearance."
-          ],
-          "sourceSha256": "975964341f2b2d3cf7f3a63242ff3274da0dd6e3b6206bb6aa6427da19bdc98d",
+          "reviewedAt": "2026-09-12",
           "fullTextRead": true,
+          "readScope": "Full MDX text including tables and bibliography; final targeted refinements separately read.",
           "clinicalVerificationComplete": false,
-          "lastReadAt": "2026-09-12",
+          "scope": "Complete current MDX/all16refs read; targeted EVA section/summary/link corrected from complete final main, and conflicting tissue-quality summary reconciled with article sections. Underlying non-EVA references not newly fully verified.",
+          "sourceSha256": "f67f5ea1012a47cf5431f248fb2f64cb070024152e898ec59836fbaa9098f8df",
+          "reports": [
+            "reports/2026-09-12/prolapse-source-reading/eva-li-2026.md",
+            "reports/2026-09-12/prolapse-source-reading/priming-current-read.md"
+          ],
+          "unresolvedIssues": [
+            "EVA final actual figures and most supplements remain unread; separately complete earlier thesis chapter is not final-package completion. Other historical source gaps remain."
+          ],
+          "previousRecord": {
+            "file": "docs/01-foundations/pharmacology/hormonal-therapies/preoperative-hormonal-priming.mdx",
+            "title": "Preoperative Hormonal Priming",
+            "status": "updated",
+            "scope": [
+              "Full article read; primary IMPROVE population/model-estimated failure and endpoint definitions, Cochrane2023 certainty,2025 pessary trial, and new EVA2026 multicenter primary abstract checked."
+            ],
+            "sources": [
+              "https://jamanetwork.com/journals/jama/fullarticle/2808329",
+              "https://www.cochrane.org/evidence/CD014592_does-oestrogen-therapy-help-treat-pelvic-organ-prolapse-postmenopausal-women",
+              "https://www.bmj.com/content/389/bmj-2025-084418",
+              "https://pubmed.ncbi.nlm.nih.gov/42663275/",
+              "https://doi.org/10.1111/1471-0528.70311",
+              "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=EXT_ID%3A42663275"
+            ],
+            "notes": [
+              "EVA published primary abstract verified via Europe PMC MED; publisher early-view confirms Aug28,2026 identity. Full paper and registry retrieval failed: missing-data/analysis details unresolved;57/293 attrition disclosed. Removed unsupported Nowakowski/DHEA priming recommendation,2018-review misattribution, arbitrary7.7% tissue claim, universal dosing and blanket FDA-warning interpretation. Earlier mechanistic/slings trials retained with design limits; no complete clinical clearance."
+            ],
+            "sourceSha256": "975964341f2b2d3cf7f3a63242ff3274da0dd6e3b6206bb6aa6427da19bdc98d",
+            "fullTextRead": true,
+            "clinicalVerificationComplete": false,
+            "lastReadAt": "2026-09-12"
+          },
           "recordFile": "pharmacology.json"
         }
       ]
@@ -18641,49 +18659,70 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "02551d0cd1650f7842f33f7ef472c39011267708a7600b508f493ad54571db79",
+      "sourceSha256": "389ebf0c7ee6c0dcd077b53d415a98e88eb03caa4dedabe776869e8e1eefedc4",
       "reviewRecords": [
         {
           "file": "docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx",
           "title": "POP Overview",
           "status": "updated",
-          "readScope": "full MDX text including bibliography",
-          "sources": [
-            "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
-            "https://www.bmj.com/content/389/bmj-2025-084418",
-            "https://www.cochrane.org/evidence/CD012376_surgical-management-pelvic-organ-prolapse-women",
-            "https://pubmed.ncbi.nlm.nih.gov/38530401/",
-            {
-              "url": "https://pubmed.ncbi.nlm.nih.gov/42663275/",
-              "access": "Complete original abstract read via Europe PMC /tmp/eva-42663275.json; fullpaper and detailed missing-data methods unavailable"
-            }
-          ],
-          "scope": [
-            "Pessary estrogen RCT, shared procedure selection, long-term mesh exposure, POP-Q preference."
-          ],
-          "notes": [
-            "Removed mandatory pessary, unsupported fixed SCP age/BMI mandates, universal colpocleisis superiority and misdescribed Baden-Walker grade. Added 2025 estrogen trial and qualified long-term mesh exposure. Preexisting 2026 trials were retained; not all historical risk ratios, fitting-success tables or genetic claims were independently verified.",
-            "Added EVA293participants/57dropouts and subjective92vs80percent improvement; anatomy/composite success/reintervention not significantly different.",
-            "Abstract-only access stated; no durability, safety or universal estrogen mandate inferred."
-          ],
-          "sourceSha256": "02551d0cd1650f7842f33f7ef472c39011267708a7600b508f493ad54571db79",
+          "reviewedAt": "2026-09-12",
           "fullTextRead": true,
+          "readScope": "Full MDX text including tables and bibliography; final targeted refinements separately read.",
           "clinicalVerificationComplete": false,
-          "targetedFollowup": {
-            "reviewedAt": "2026-09-12",
-            "scope": "Previously full-read MDX; current surgical-context section reread and complete EVA2026 primary abstract checked.",
-            "notes": [
-              "Added EVA293participants/57dropouts and subjective92vs80percent improvement; anatomy/composite success/reintervention not significantly different.",
-              "Abstract-only access stated; no durability, safety or universal estrogen mandate inferred."
-            ],
+          "scope": "Full original and revised MDX/all references, imported POP evidence records and rendering component read; complete PEOPLE/IUC/EVA/Li originals and coordinated current prolapse source review. Corrected risk attribution, pessary strategy/attrition, testing, native-tissue outcomes, hysteropexy populations, estrogen inference and procedure-specific harms.",
+          "sourceSha256": "389ebf0c7ee6c0dcd077b53d415a98e88eb03caa4dedabe776869e8e1eefedc4",
+          "reports": [
+            "reports/2026-09-12/prolapse-source-reading/pop-overview-sources.md",
+            "reports/2026-09-12/prolapse-source-reading/pop-overview-peer.md",
+            "reports/2026-09-12/prolapse-source-reading/eva-li-2026.md",
+            "reports/2026-09-12/prolapse-source-reading/principles.md",
+            "reports/2026-09-12/prolapse-source-reading/eoptimal-sap.md"
+          ],
+          "unresolvedIssues": [
+            "Original Bump, OPUS full package, Maher2023 full package, Baessler2026/SUPeR2026 embargoed mains and other explicitly recorded original-paper/figure/supplement gaps remain."
+          ],
+          "previousRecord": {
+            "file": "docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx",
+            "title": "POP Overview",
+            "status": "updated",
+            "readScope": "full MDX text including bibliography",
             "sources": [
+              "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "https://www.bmj.com/content/389/bmj-2025-084418",
+              "https://www.cochrane.org/evidence/CD012376_surgical-management-pelvic-organ-prolapse-women",
+              "https://pubmed.ncbi.nlm.nih.gov/38530401/",
               {
                 "url": "https://pubmed.ncbi.nlm.nih.gov/42663275/",
                 "access": "Complete original abstract read via Europe PMC /tmp/eva-42663275.json; fullpaper and detailed missing-data methods unavailable"
               }
-            ]
+            ],
+            "scope": [
+              "Pessary estrogen RCT, shared procedure selection, long-term mesh exposure, POP-Q preference."
+            ],
+            "notes": [
+              "Removed mandatory pessary, unsupported fixed SCP age/BMI mandates, universal colpocleisis superiority and misdescribed Baden-Walker grade. Added 2025 estrogen trial and qualified long-term mesh exposure. Preexisting 2026 trials were retained; not all historical risk ratios, fitting-success tables or genetic claims were independently verified.",
+              "Added EVA293participants/57dropouts and subjective92vs80percent improvement; anatomy/composite success/reintervention not significantly different.",
+              "Abstract-only access stated; no durability, safety or universal estrogen mandate inferred."
+            ],
+            "sourceSha256": "02551d0cd1650f7842f33f7ef472c39011267708a7600b508f493ad54571db79",
+            "fullTextRead": true,
+            "clinicalVerificationComplete": false,
+            "targetedFollowup": {
+              "reviewedAt": "2026-09-12",
+              "scope": "Previously full-read MDX; current surgical-context section reread and complete EVA2026 primary abstract checked.",
+              "notes": [
+                "Added EVA293participants/57dropouts and subjective92vs80percent improvement; anatomy/composite success/reintervention not significantly different.",
+                "Abstract-only access stated; no durability, safety or universal estrogen mandate inferred."
+              ],
+              "sources": [
+                {
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/42663275/",
+                  "access": "Complete original abstract read via Europe PMC /tmp/eva-42663275.json; fullpaper and detailed missing-data methods unavailable"
+                }
+              ]
+            },
+            "reviewedAt": "2026-09-12"
           },
-          "reviewedAt": "2026-09-12",
           "recordFile": "clinical-conditions.json"
         }
       ]
@@ -37216,26 +37255,46 @@
       "title": "Sacrocolpopexy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "2aa0f0172f79613c08027e961dacd395f3e6a2040c7f8764252efc7f18074697",
+      "sourceSha256": "3daa5de4f79862d8ac440e1b78d0418cf666d03eeebfeaa7dc4e917c56c277b4",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx",
           "title": "Sacrocolpopexy",
-          "status": "unresolved",
+          "status": "updated",
           "reviewedAt": "2026-09-12",
           "fullTextRead": true,
+          "readScope": "Full MDX text including tables and bibliography; final targeted refinements separately read.",
           "clinicalVerificationComplete": false,
-          "scope": "Complete originalMDX/all22references and finalchangedtext/references read. CorrectedCAREratesandendpoint, removedgeneric40%de-novoSUIpromise, qualified2026CochraneprophylacticBurchconclusion.",
-          "sourceSha256": "2aa0f0172f79613c08027e961dacd395f3e6a2040c7f8764252efc7f18074697",
+          "scope": "Full original and revised MDX/all references read; operative, fixation, route, hysterectomy and comparative outcome claims reconciled against complete originals and exact source-access reports. Actual original/revised conceptual SVG viewed by root and peer; arrow/junction/attachment label corrected and scope narrowed.",
+          "sourceSha256": "3daa5de4f79862d8ac440e1b78d0418cf666d03eeebfeaa7dc4e917c56c277b4",
           "reports": [
-            "reports/2026-09-12/burch-and-sling-companion-review.md"
+            "reports/2026-09-12/prolapse-source-reading/sacrocolpopexy.md",
+            "reports/2026-09-12/prolapse-source-reading/aspire-main-supplements.md",
+            "reports/2026-09-12/prolapse-source-reading/aspire-protocol-001-132.md",
+            "reports/2026-09-12/prolapse-source-reading/ferrari-access.md"
           ],
           "unresolvedIssues": [
-            "Multiple other operative/suture/hysterectomy/roboticclaims have mismatched citations or overstatement; dedicatedfullsource audit active next. Currentfigure notclinicallyrevalidated inthispass."
+            "Several original-paper supplements, actual Tagliaferri CONSORT and clipped Pollack table-image areas, Anger2014 correction, three operative videos remain unread; conceptual figure is not an operative-anatomy or safe-dissection map."
           ],
+          "previousRecord": {
+            "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx",
+            "title": "Sacrocolpopexy",
+            "status": "unresolved",
+            "reviewedAt": "2026-09-12",
+            "fullTextRead": true,
+            "clinicalVerificationComplete": false,
+            "scope": "Complete originalMDX/all22references and finalchangedtext/references read. CorrectedCAREratesandendpoint, removedgeneric40%de-novoSUIpromise, qualified2026CochraneprophylacticBurchconclusion.",
+            "sourceSha256": "2aa0f0172f79613c08027e961dacd395f3e6a2040c7f8764252efc7f18074697",
+            "reports": [
+              "reports/2026-09-12/burch-and-sling-companion-review.md"
+            ],
+            "unresolvedIssues": [
+              "Multiple other operative/suture/hysterectomy/roboticclaims have mismatched citations or overstatement; dedicatedfullsource audit active next. Currentfigure notclinicallyrevalidated inthispass."
+            ]
+          },
           "recordFile": "surgical-rest.json"
         }
       ]
@@ -37278,11 +37337,30 @@
       "title": "Supracervical Hysterectomy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "fb8223d51e273fcf490398ffa84ddd59bfefbda40cfff6e606b46c1e81d1cbc6",
-      "reviewRecords": []
+      "sourceSha256": "1622129f969b1bdc47bda58bafeb2f3e1741e9eeb143b8a754fcf2d50988f4d4",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/supracervical-hysterectomy.mdx",
+          "title": "Supracervical Hysterectomy",
+          "status": "updated",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "readScope": "Full MDX text including tables and bibliography; final targeted refinements separately read.",
+          "clinicalVerificationComplete": false,
+          "scope": "Full original and revised MDX/all references read. Corrected function-preservation claims, mesh outcome distinctions, unsupported endocervical ablation and misattributed Mayo citation; FDA containment/patient-selection guidance and cervical surveillance clarified.",
+          "sourceSha256": "1622129f969b1bdc47bda58bafeb2f3e1741e9eeb143b8a754fcf2d50988f4d4",
+          "reports": [
+            "reports/2026-09-12/prolapse-source-reading/uterine-preservation.md"
+          ],
+          "unresolvedIssues": [
+            "Cochrane benign-hysterectomy main/all29actualgraphics complete; SAVEU full main/tables complete but actual Fig1/DOCX unavailable. Several contemporary hysterectomy/mesh papers remain abstract-only; exact distinctions in report."
+          ],
+          "recordFile": "surgical-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx",
@@ -37453,26 +37531,46 @@
       "title": "Principles of Prolapse Repair",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "3ead49f4f1fac4041d7420f3a804bfbd0018728acdeb14131b21848148b99961",
+      "sourceSha256": "9118ad1d25dff74aecb7d8cd040aacbb7a11aefc82bdb478363766996f58ef7b",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx",
           "title": "Principles of Prolapse Repair",
-          "status": "unresolved",
+          "status": "updated",
           "reviewedAt": "2026-09-12",
           "fullTextRead": true,
+          "readScope": "Full MDX text including tables and bibliography; final targeted refinements separately read.",
           "clinicalVerificationComplete": false,
-          "scope": "Complete originalMDX and revisedchangedtext/references read. CorrectedCAREthree-monthcomposite, separatedBurch/MUS/prolapsepopulations, correctedUStransvaginalPOPmeshavailability andremovedincorrectSUPeRname.",
-          "sourceSha256": "3ead49f4f1fac4041d7420f3a804bfbd0018728acdeb14131b21848148b99961",
+          "scope": "Full original and final revised MDX/all references read. Removed fixed pessary/age/BMI promises, separated apical trial populations, composite failure, recurrence and retreatment; corrected mesh/hysteropexy/PFMT/continence/cystoscopy scope using complete ASPIRe/EOPTIMAL packages and actual current guideline sections.",
+          "sourceSha256": "9118ad1d25dff74aecb7d8cd040aacbb7a11aefc82bdb478363766996f58ef7b",
           "reports": [
-            "reports/2026-09-12/burch-and-sling-companion-review.md"
+            "reports/2026-09-12/prolapse-source-reading/principles.md",
+            "reports/2026-09-12/prolapse-source-reading/eoptimal-sap.md",
+            "reports/2026-09-12/prolapse-source-reading/aspire-main-supplements.md",
+            "reports/2026-09-12/prolapse-source-reading/aspire-protocol-001-132.md"
           ],
           "unresolvedIssues": [
-            "Broaderapicalrepair, mesh, hysteropexy, pessary andoperative recommendations stillrequireoriginalfullsource review; ASPIRe package assigned next."
+            "Current anterior/continence Cochrane full mains embargoed; several hysteropexy originals and Zhou actual figure/protocol/appendix unavailable; complete ACOG214 guideline unavailable."
           ],
+          "previousRecord": {
+            "file": "docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx",
+            "title": "Principles of Prolapse Repair",
+            "status": "unresolved",
+            "reviewedAt": "2026-09-12",
+            "fullTextRead": true,
+            "clinicalVerificationComplete": false,
+            "scope": "Complete originalMDX and revisedchangedtext/references read. CorrectedCAREthree-monthcomposite, separatedBurch/MUS/prolapsepopulations, correctedUStransvaginalPOPmeshavailability andremovedincorrectSUPeRname.",
+            "sourceSha256": "3ead49f4f1fac4041d7420f3a804bfbd0018728acdeb14131b21848148b99961",
+            "reports": [
+              "reports/2026-09-12/burch-and-sling-companion-review.md"
+            ],
+            "unresolvedIssues": [
+              "Broaderapicalrepair, mesh, hysteropexy, pessary andoperative recommendations stillrequireoriginalfullsource review; ASPIRe package assigned next."
+            ]
+          },
           "recordFile": "surgical-rest.json"
         }
       ]

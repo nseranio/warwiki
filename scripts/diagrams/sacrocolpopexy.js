@@ -27,11 +27,11 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
 push(txt(40, 36, 16, 700, C.ink, 'start', 'Sacrocolpopexy &#8212; Y-mesh from vaginal vault to sacral promontory', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'sagittal view: anterior and posterior mesh arms join into one stem fixed to the anterior longitudinal ligament at S1', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'sagittal view: anterior and posterior mesh arms join into one stem fixed to the anterior longitudinal ligament near the promontory', false));
 
 // orientation
 push(txt(96, 90, 10, 700, C.muted, 'middle', 'anterior', false));
-push(`<line x1="138" y1="86" x2="172" y2="86" stroke="${C.muted}" stroke-width="1" marker-end="url(#sa)"/>`);
+push(`<line x1="172" y1="86" x2="138" y2="86" stroke="${C.muted}" stroke-width="1" marker-end="url(#sa)"/>`);
 push(txt(250, 90, 10, 700, C.muted, 'middle', 'posterior &#8594;', false));
 
 // ---- sacrum + promontory (posterior, right) ----
@@ -67,9 +67,9 @@ push(txt(351, 192, 9, 600, C.muted, 'middle', 'vault'));
 
 // ---- Y-mesh ----
 // anterior arm along anterior vaginal wall
-push(`<path d="M ${vaultA[0]} ${vaultA[1]} C 304 268, 276 314, 262 348" fill="none" stroke="${C.mesh}" stroke-width="5.5" stroke-linecap="round"/>`);
+push(`<path d="M 351 200 L ${vaultA[0]} ${vaultA[1]} C 304 268, 276 314, 262 348" fill="none" stroke="${C.mesh}" stroke-width="5.5" stroke-linecap="round"/>`);
 // posterior arm along posterior vaginal wall
-push(`<path d="M ${vaultP[0]} ${vaultP[1]} C 360 258, 340 300, 326 330" fill="none" stroke="${C.mesh}" stroke-width="5.5" stroke-linecap="round"/>`);
+push(`<path d="M 351 200 L ${vaultP[0]} ${vaultP[1]} C 360 258, 340 300, 326 330" fill="none" stroke="${C.mesh}" stroke-width="5.5" stroke-linecap="round"/>`);
 // stem from vault up-and-back to promontory (suspended along the axis, bridging not tight)
 push(`<path d="M 351 200 C 420 176, 500 160, 558 152" fill="none" stroke="${C.mesh}" stroke-width="6" stroke-linecap="round"/>`);
 // fixation sutures at promontory
@@ -80,7 +80,7 @@ for (const p of [[300, 268], [285, 300], [355, 262], [340, 296]]) push(`<line x1
 push(txt(262, 366, 9.5, 700, C.mesh, 'middle', 'anterior arm'));
 push(txt(330, 348, 9.5, 700, C.mesh, 'middle', 'posterior arm'));
 push(txt(456, 150, 9.5, 700, C.mesh, 'middle', 'sacral stem'));
-push(txt(456, 163, 8.5, 500, C.muted, 'middle', '(no tension)'));
+push(txt(456, 163, 8.5, 500, C.muted, 'middle', '(attachment concept)'));
 
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sacrocolpopexy mesh support">
