@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 inventory=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./scripts/audit-content').inventory()))"],cwd=ROOT))
 records={}
-for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json','surgical-rest.json','surgical-bladder.json','surgical-diversion.json','special-populations.json','evaluation.json','foundations-rest.json','resources-history.json','site-data.json']:
+for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json','surgical-rest.json','surgical-bladder.json','surgical-diversion.json','special-populations.json','evaluation.json','foundations-rest.json','resources-history.json','site-data.json','tools.json','surgical-fistula.json']:
  p=HERE/name
  if not p.exists():continue
  report=json.loads(p.read_text())

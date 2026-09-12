@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Third continuation: device safety, fistulas and perioperative care
+
+This intermediate batch corrects **54 documentation pages**. The cumulative ledger records **457 full current-source reads and 425 scoped updated pages across 1,186 documentation files**. All 38 evaluation pages have full reading records; current tools coverage is 30/231 and fistula-technique coverage 16/44. Reading a source page does not establish complete paper access or clinical clearance.
+
+Added the specific 2026 SureForm 30 gray-reload recall and donor-renal-artery Hem-o-lok contraindication; corrected platform clearances, instrument specifications and occupational guidance. Corrected diversion/fistula source attribution, outcome denominators and unsupported operative rules, including the Padua VIP/ileum-valve pouch confusion and transplant companion guidance. Rebuilt assessment-scale and male-examination content around the correct instruments and primary sources.
+
+Nutrition now incorporates the negative phase 3 SWOG S1600 trial, corrects the reversed OCULUS result, and separates ESPEN timing and ASPEN/NICE refeeding guidance. Electrolyte guidance now includes TIGHT K, July 2026 UKKA emergency care, calcium measurement distinctions and individualized replacement. Independent reviews checked male examination, nutrition and acute electrolyte recommendations; the reports identify remaining source-access gaps.
+
+[Third release record](reports/2026-09-12/third-continuation-release.md) tracks checks and publication. The remaining whole-site and full-paper review continues after this batch. Evidence remains quarterly and Epic remains paused.
+
+---
+
 ## 2026-09-12 — Second continuation: pharmacology, reconstruction and evaluation
 
 Published as **`ae704f6f`**; CI 34681722568 and the exact-commit Vercel deployment succeeded. All 111 changed documentation routes passed browser checks, and direct live-content checks passed. Review continues in the next batch.

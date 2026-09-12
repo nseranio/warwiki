@@ -100,3 +100,6 @@ Full text read: **73/73**. No unread MDX remains in this owned domain. Clinical 
 ## Final validation checkpoint — September 12
 
 All owned citation anchors pass. Internal-link validation checked 1,187 files without a broken `/docs/` link; the EVA heading slug was independently verified. Owned-file diff checks pass, and all 119 ledger hashes match the MDX. The whole-site citation check currently identifies only a ref17 gap in the separately owned 5-ARI pharmacology page. Production build and publication remain with the coordinating agent.
+
+
+2026-09-12 transplant companion alignment: corrected known outcome-denominator/population errors found during operative review. Full current text reread; primary abstracts checked; prophylactic stenting review preserved. Exact new scope and hash are in the JSON record.

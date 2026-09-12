@@ -5,168 +5,81 @@ sidebar_position: 1
 
 # Robotic Platforms & Manufacturers
 
-The da Vinci system (Intuitive Surgical) has defined robotic urologic surgery since 2000, but the market is now genuinely multi-vendor. **At least eleven clinical or late-stage robotic platforms** are in use or imminent launch globally, with meaningful differences in console architecture, instrument design, haptic feedback, and cost.<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)[[4]](#ref4)</sup> This page catalogs the manufacturers, platforms, and the features that matter when choosing — or reading an outcomes paper from — one.
+Robotic systems differ in access, instruments, feedback, approved procedures and service requirements. **Authorization is specific to a model, indication, patient group and jurisdiction**; a platform's use in an overseas series does not establish US clearance for the same operation. This overview identifies clinically relevant distinctions and selected verified regulatory changes, rather than ranking manufacturers by marketing claims.
 
-See also: [Reconstructive Applications](/docs/foundations/tools/technology/robotics/reconstructive-applications), [Single-Port Robotics](/docs/foundations/tools/technology/robotics/single-port).
-
----
+See [Reconstructive Applications](/docs/foundations/tools/technology/robotics/reconstructive-applications) for outcome evidence and [Single-Port Robotics](/docs/foundations/tools/technology/robotics/single-port) for access planning.
 
 ## Platform Overview
 
-| Platform | Manufacturer | HQ | Status | Console | Key Feature |
-|---|---|---|---|---|---|
-| **da Vinci Si / Xi / X** | Intuitive Surgical | Sunnyvale, CA, USA | FDA + CE | Closed, immersive | Market reference standard |
-| **da Vinci SP** | Intuitive Surgical | Sunnyvale, CA, USA | FDA 2018, CE 2024 | Closed | Single-port, flexible camera + articulating instruments |
-| **da Vinci 5** | Intuitive Surgical | Sunnyvale, CA, USA | FDA 2024 | Closed | Force feedback ("Force Feedback" instruments), improved 3D |
-| **Hugo RAS** | Medtronic | Minneapolis, MN, USA | CE 2021, FDA pending (IDE) | Open, 3D | Modular arm carts — table-independent docking |
-| **Versius** | CMR Surgical | Cambridge, UK | CE 2019, FDA 2025 | Open, 3D, seated | Portable per-arm bedside units; wristed 5 mm instruments |
-| **Senhance** | Asensus Surgical (prev. TransEnterix) | Morrisville, NC, USA | FDA 2017, CE 2012 | Open with eye-tracking | **Haptic force feedback** + eye-tracking camera control |
-| **Avatera** | Avateramedical | Jena, Germany | CE 2019 | Closed | **5 mm instruments** with 6 DOF; disposable sterile instruments |
-| **Hinotori** | Medicaroid (Kawasaki + Sysmex JV) | Kobe, Japan | PMDA 2020, limited CE/FDA | Open, 3D | 8-axis arm geometry; Japanese domestic leader |
-| **REVO-I (MSR-5000)** | Meere Company | Yongin, South Korea | KFDA 2017 | Closed | First Korean platform; low acquisition cost target |
-| **KangDuo** | Suzhou Kangduo Robot Co. | Suzhou, China | NMPA 2022 | Closed | Used in multi-center Chinese trials for prostatectomy and partial nephrectomy |
-| **MicroHand S** | Tianjin Weigao / Tianjin University | Tianjin, China | NMPA 2018 | Closed | First Chinese master-slave surgical robot |
-| **Toumai** | MicroPort MedBot | Shanghai, China | NMPA 2022 | Closed | Used for telesurgery (Beijing–Xinjiang 2022 demonstration) |
-| **Dexter** | Distalmotion | Lausanne, Switzerland | CE 2022 | Open | Seat-and-stand hybrid; drop-in laparoscopic instruments + robotic arms |
-| **Telelap ALF-X** | SOFAR → TransEnterix (now Senhance lineage) | Milan, Italy | Historical / evolved into Senhance | Open | Original eye-tracking + haptic design — progenitor of Senhance |
+| Platform / manufacturer | Architecture and distinguishing features | Regulatory or interpretation point |
+|---|---|---|
+| **da Vinci X / Xi / 5 — Intuitive** | Multiport systems with surgeon console and patient cart. Xi has boom rotation; X shares much of the Xi instrument ecosystem but does not have that rotating boom. Da Vinci 5 supports dedicated Force Feedback instruments. | Instruments, software, use limits and approved procedures are generation-specific; Si is a distinct legacy system.<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
+| **da Vinci SP — Intuitive** | One 25 mm cannula accommodates a flexible endoscope and three jointed instruments. | Single-port access is a different instrument/working-space architecture, not merely clustering Xi trocars. See the dedicated page for approach and label limits.<sup>[[3]](#ref3)</sup> |
+| **Hugo RAS — Medtronic** | Modular arm carts and an open 3D console. | **FDA clearance for adult urologic procedures announced December 3, 2025**, including prostatectomy, nephrectomy and cystectomy. The current US indication page specifies trained physicians and the system's indications document.<sup>[[4]](#ref4)</sup> |
+| **Versius / Versius Plus — CMR Surgical** | Modular bedside units; open console with choice of working position; wristed instruments. | First-generation US De Novo authorization was **October 2024 for cholecystectomy in adults ≥22 years**, not general authorization for all soft-tissue surgery. Current US Versius Plus labeling also specifies cholecystectomy; a submission for another specialty is not clearance.<sup>[[5]](#ref5)</sup> |
+| **DEXTER — Distalmotion** | Allows switching between laparoscopic and robotic work; open console and separately positioned robotic units. | US indications have expanded beyond its original inguinal-hernia authorization. **June 16, 2026 clearance includes sacrocolpopexy, sacrocervicopexy, sacrohysteropexy and endometriosis resection**; the exact current instructions still govern use.<sup>[[6]](#ref6)</sup> |
+| **Senhance — Asensus / KARL STORZ** | Haptic feedback and eye-tracking are features of the Senhance lineage. | KARL STORZ acquired Asensus in August 2024. The current manufacturer notice says **Senhance will be discontinued**, with support/transition arrangements communicated to customers. This is a legacy platform, not the only available force-feedback option.<sup>[[7]](#ref7)</sup> |
+| **avatera — avateramedical** | Four-arm system; 5 mm instruments, manufacturer-described **seven** degrees of freedom and single-use instruments/sterile accessories. | The manufacturer records CE conformity in 2019. Disposable instruments avoid their reprocessing step; they do not eliminate all infection or cross-contamination risk.<sup>[[8]](#ref8)</sup> |
+| **hinotori — Medicaroid** | Eight-axis arms, software-defined pivot and an ergonomic surgeon cockpit with 3D viewing. | **CE marking under MDR announced July 9, 2026**, following earlier Japanese and selected Asian-market authorizations. Verify procedure-specific local labeling; this does not establish US FDA clearance.<sup>[[9]](#ref9)</sup> |
+| **Revo-i — meerecompany** | Master console, operation cart and vision cart; instrument portfolio includes graspers, needle holders and energy tools. | Korean platform with an evolving clinical footprint. Confirm the exact marketed model and local indication, rather than assuming lower cost or equivalence to another system.<sup>[[10]](#ref10)</sup> |
+| **KANGDUO — Harbin Sagebot** | Current SR2000 product information describes an **open** console, with an optional second console; other generations/configurations differ. | Correct manufacturer identity matters when interpreting older studies. The manufacturer announced CE certification under MDR in December 2025.<sup>[[11]](#ref11)</sup> |
+| **MicroHand-S — WEGO** | Manufacturer identifies the WG-NST600T system, with 3D visualization and flexible robotic arms. | Avoid transferring one generation's console, instrument or regulatory details to all MicroHand systems.<sup>[[12]](#ref12)</sup> |
+| **Toumai — MicroPort MedBot** | Multiport laparoscopic platform; the company also develops separate single-port and remote-surgery systems. | Company regulatory reporting records CE marking of the laparoscopic system in May 2024. Remote-surgery or single-port authorization must be checked separately.<sup>[[13]](#ref13)</sup> |
 
----
+The table is not a complete inventory of every country's approvals. Manufacturer sources establish identity and reported product/regulatory facts; they do not independently demonstrate superior clinical outcomes.
 
-## Intuitive Surgical — da Vinci
+## Da Vinci Generations and Feedback
 
-Intuitive Surgical (Sunnyvale, CA) has dominated robotic surgery since the 2000 FDA clearance of the original da Vinci. The product family matters because outcomes literature spans multiple generations:
+The X should not be described as “Si-era arms on an Xi boom”: its instrument compatibility and patient-cart architecture are separate questions. Xi's rotating boom and positioning features should not be assumed on X. Likewise, the multiport instrument family is not uniformly one diameter or one reuse count: specialized Single-Site instruments, SP instruments and dedicated Force Feedback instruments have their own specifications.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
-- **da Vinci Si (2009)** — dual-console, HD 3D, legacy workhorse still in wide use internationally.
-- **da Vinci Xi (2014)** — overhead boom, thinner arms, 360° arm rotation, easier multi-quadrant docking. The dominant platform in US urology from 2015 to 2024.
-- **da Vinci X (2017)** — cost-reduced Xi variant (Si-era arms on Xi boom) for emerging markets.
-- **da Vinci SP (2018, FDA; 2024, CE)** — single-port system; 2.5 cm cannula houses a flexible 3D endoscope + three multi-jointed wristed instruments. See [Single-Port Robotics](/docs/foundations/tools/technology/robotics/single-port).<sup>[[5]](#ref5)[[6]](#ref6)</sup>
-- **da Vinci 5 (2024)** — 10,000× the computing power of Xi; **Force Feedback instruments** provide proprioceptive tension data to the surgeon (the first shipped haptic capability on a da Vinci multi-port system); improved 3D imaging and case-insights data.
+Da Vinci 5 Force Feedback transmits instrument-tip forces to the surgeon's hand controllers. This is different from the **Force Bipolar** grasper's selectable grip setting. Manufacturer-reported reductions in applied force from preclinical tissue-model studies do not by themselves establish better continence, potency, anastomotic durability or fewer clinical injuries.<sup>[[2]](#ref2)[[14]](#ref14)</sup>
 
-**Instrument ecosystem:** 8 mm wristed EndoWrist instruments (multi-port platforms); 6 mm articulating instruments on SP; disposable / use-limited instruments drive per-case consumable cost.
+Use [Robotic Instruments](/docs/foundations/tools/instruments) and the [Energy Devices](/docs/foundations/tools/technology/energy-devices) hub for actual model limitations. The latest local manual takes precedence over an old study's instrument list.
 
----
+## What Matters for Reconstructive Practice
 
-## Medtronic — Hugo RAS
+| Decision | What to compare |
+|---|---|
+| Access and exposure | Target distance, docking space, patient positioning, assistant access, ability to reach multiple quadrants and safe emergency undocking. |
+| Fine reconstruction | Instrument dimensions, wrist/elbow geometry, needle handling, motion scaling, visualization and the operator's training on that configuration. |
+| Feedback | Whether the specific instrument transmits force, which forces it measures, and whether evidence concerns simulation, animal tissue or patient outcomes. |
+| Energy and stapling | Compatible generators, tissue indications, availability of safe alternatives and instrument-specific limitations. |
+| Reprocessing and supply | Validated reprocessing, use limits, sterile single-use components, availability, failure support and traceability. |
+| Economics | Actual local acquisition/lease, service, consumables, operating time, staffing, training and utilization. A generic "$2 million" price or “cheaper competitor” label is not a current cost comparison. |
+| Clinical evidence | Procedure, population, learning curve, comparator, follow-up and outcome definition. Technical feasibility is not comparative efficacy or long-term functional equivalence. |
 
-Medtronic's Hugo RAS system (Minneapolis, MN) is the principal Intuitive competitor in Western markets. **CE-marked 2021; FDA IDE trials in US urology ongoing.**
+These are evaluation criteria, not a recommendation to acquire a particular system. Port diameter alone cannot predict pain, cosmesis or complications, and an open console does not automatically establish better ergonomics for every operator.
 
-- **Modular architecture:** four independent arm carts can be positioned around the table rather than a single fixed cart — useful for multi-quadrant cases and low-volume sites where the cart footprint must be stored between cases.
-- **Open console** with 3D HD visualization — surgeon retains situational awareness of the OR.
-- **Integrated Touch Surgery** digital platform — video capture, analytics, remote case review.
-- Clinical urology data emerging from Europe and India (RAPN, RARP, cystectomy feasibility series).
+## Remote Surgery and Digital Assistance
 
----
-
-## CMR Surgical — Versius
-
-Versius (Cambridge, UK) targets small and mid-size hospitals with a **portable, arm-by-arm modular system**. **CE-marked 2019; FDA cleared 2025 for soft-tissue surgery.**
-
-- Each arm is wheeled to the tableside independently — the system is smaller and cheaper to ship/install than da Vinci or Hugo.
-- **Seated, open console** with 3D HD visualization.
-- **5 mm wristed instruments** — 7 DOF.
-- Wide cholecystectomy, colorectal, and gynecology deployment globally; urologic adoption building.
-
----
-
-## Asensus Surgical — Senhance
-
-Senhance (Morrisville, NC; formerly TransEnterix) is the only commercially available platform offering **true haptic (force) feedback** and **eye-tracking camera control** — inherited from the Telelap ALF-X progenitor.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
-
-- Surgeon feels tissue tension at the instrument tip — meaningful for microsurgery and reconstructive anastomosis work.
-- Eye-tracker moves the camera based on gaze, freeing a hand.
-- Uses reusable laparoscopic instruments (low per-case consumable cost).
-- **"Intelligent Surgical Unit" (ISU)** — FDA-cleared machine-vision augmentation layer (digital tagging, scene awareness).
-
----
-
-## Avateramedical — Avatera
-
-Avatera (Jena, Germany; CE 2019) targets a different niche: **5 mm wristed instruments with 6 degrees of freedom** and **fully sterile disposable instrument sets** to eliminate reprocessing.
-
-- Closed, immersive console.
-- Smaller port footprint than 8 mm da Vinci instruments — theoretical cosmesis and pain advantages.
-- Primarily European deployment to date.
-
----
-
-## Medicaroid — Hinotori
-
-Hinotori (Kobe, Japan; PMDA 2020) is a Kawasaki Heavy Industries / Sysmex joint venture — Japan's domestic robot of choice.
-
-- Open 3D console, 8-axis arm geometry for flexible docking.
-- Japanese urology series reporting comparable outcomes to da Vinci in RARP.
-
----
-
-## Meere Company — REVO-I
-
-REVO-I (MSR-5000; Yongin, South Korea; KFDA 2017) is the first Korean robotic platform with clinical urology data.
-
-- Closed immersive console with 3D.
-- Lower acquisition cost is an explicit design goal.
-- Early RARP series from Korean centers with feasibility data.
-
----
-
-## Chinese Platforms — KangDuo, MicroHand S, Toumai
-
-Three Chinese platforms have NMPA approval and a growing clinical footprint:
-
-- **MicroHand S** (Tianjin Weigao / Tianjin University; NMPA 2018) — first Chinese master-slave robot, used across general and urologic surgery.
-- **KangDuo** (Suzhou Kangduo Robot Co.; NMPA 2022) — multi-center Chinese trials for prostatectomy, partial nephrectomy, and pyeloplasty.
-- **Toumai** (MicroPort MedBot, Shanghai; NMPA 2022) — notable for a 2022 **telesurgery demonstration** across ~5,000 km (Beijing to Xinjiang), foreshadowing distance-surgery applications.
-
----
-
-## Distalmotion — Dexter
-
-Dexter (Lausanne, Switzerland; CE 2022) is a **hybrid laparoscopic-robotic** system.
-
-- Surgeon alternates between standing at the bedside with conventional laparoscopic instruments and sitting at an open console controlling two robotic arms plus a robotic camera.
-- Lower capital cost than da Vinci; designed for laparoscopic-trained surgeons transitioning to robotic work.
-- Growing European urologic adoption.
-
----
-
-## Feature Axes That Matter
-
-When reading comparative papers or evaluating a platform for institutional purchase, these are the axes along which they actually differ:
-
-- **Console design:** closed/immersive (da Vinci, Avatera, REVO-I) vs open/3D (Hugo, Versius, Senhance, Hinotori, Dexter). Open consoles preserve OR awareness; closed consoles maximize surgeon immersion.
-- **Haptic feedback:** Senhance is the only multi-port system with true force feedback in production; da Vinci 5 adds partial force-feedback instruments (2024); Telelap ALF-X lineage originated the capability.
-- **Eye-tracking camera control:** Senhance (inherited from Telelap ALF-X).
-- **Modular architecture:** Hugo (cart-per-arm) and Versius (unit-per-arm) — table- and room-flexibility; da Vinci remains boom-based.
-- **Instrument size:** Avatera (5 mm, 6 DOF) and Versius (5 mm, 7 DOF) at the smaller end; da Vinci Xi at 8 mm; SP at 6 mm articulating.
-- **Cost:** acquisition for da Vinci Xi ~$2M USD + annual service + per-case consumables is the benchmark; Hugo, Versius, Dexter, Hinotori, REVO-I, and the Chinese platforms compete primarily on price and consumable model.<sup>[[1]](#ref1)[[4]](#ref4)</sup>
-- **Instrument reuse model:** reusable (Senhance, Versius partial) vs use-limited / disposable (da Vinci, Avatera) — drives per-case economics.
-
----
-
-## Future Directions
-
-Incremental platform features are converging on a short list of anticipated developments:<sup>[[1]](#ref1)[[4]](#ref4)[[7]](#ref7)</sup>
-
-- **Force-feedback / true haptics** on every platform — da Vinci 5 is the first multi-port da Vinci with it; expect this to become table stakes.
-- **Integrated AI / computer-vision augmentation** — anatomic segmentation, autonomous suturing modules, scene-safety alerts.
-- **Augmented-reality overlay** — registered preoperative imaging onto the live surgical field (useful for partial nephrectomy, nerve-sparing RP).
-- **Telesurgery** — the Toumai Beijing–Xinjiang case demonstrated the technical feasibility; latency, regulatory, and malpractice frameworks are the gating factors.
-- **Miniaturization** — 3–5 mm instrument platforms, reduction to bedside-unit form factors.
-- **Autonomous / semi-autonomous task modules** — knot-tying, pattern suturing, instrument exchange.
-
----
+Telesurgery demonstrations, video teleproctoring, automated camera functions and autonomous tissue manipulation are distinct capabilities. Confirm what a specific system actually does and what is authorized. Remote connectivity still requires a local surgical team, failure contingencies and an appropriate clinical/regulatory framework. Promising computer-vision or autonomous-suturing research should not be listed as routine functionality of every commercial platform.
 
 ## References
 
-<a id="ref1"></a>1. Katsimperis S, Tzelves L, Feretzakis G, et al. "Beyond Da Vinci: Comparative Review of Next-Generation Robotic Platforms in Urologic Surgery." *J Clin Med.* 2025;14(19):6775. doi:[10.3390/jcm14196775](https://doi.org/10.3390/jcm14196775)
+<a id="ref1"></a>1. Intuitive. Da Vinci X and Xi system brochures: instrument compatibility and system comparison. [X brochure](https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-x-system-brochure.pdf); [Xi comparison](https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-xi-system-brochure.pdf).
 
-<a id="ref2"></a>2. Farinha R, Puliatti S, Mazzone E, et al. "Potential Contenders for the Leadership in Robotic Surgery." *J Endourol.* 2022;36(3):317–326. doi:[10.1089/end.2021.0321](https://doi.org/10.1089/end.2021.0321)
+<a id="ref2"></a>2. Intuitive. Da Vinci instrument portfolio and Force Feedback technology. [Instrument information](https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments).
 
-<a id="ref3"></a>3. Kallidonis P, Gkeka K, Tatanis V, et al. "Novel Robotic Platforms for Robot-Assisted Laparoscopic Surgery in Urology: A Narrative Review." *J Endourol.* 2024;38(7):652–660. doi:[10.1089/end.2023.0732](https://doi.org/10.1089/end.2023.0732)
+<a id="ref3"></a>3. Intuitive. Da Vinci SP surgical system. [Manufacturer information](https://www.intuitive.com/en-us/products-and-services/da-vinci/sp).
 
-<a id="ref4"></a>4. Alip SL, Kim J, Rha KH, Han WK. "Future Platforms of Robotic Surgery." *Urol Clin North Am.* 2022;49(1):23–38. doi:[10.1016/j.ucl.2021.07.008](https://doi.org/10.1016/j.ucl.2021.07.008)
+<a id="ref4"></a>4. Medtronic. FDA clearance of Hugo RAS for urologic procedures, December 3, 2025. [Announcement](https://news.medtronic.com/2025-12-03-Medtronic-announces-FDA-clearance-of-Hugo-TM-robotic-assisted-surgery-system-for-urologic-surgical-procedures); [current US indications](https://www.medtronic.com/en-us/healthcare-professionals/products/surgical-robotics/robotic-systems/hugo-robotic-assisted-surgery-system.html).
 
-<a id="ref5"></a>5. Biasatti A, Soputro NA, Porpiglia F, et al. "The Current Landscape of Single-Port Robotic Surgery in Urology." *Nat Rev Urol.* 2026;23(3):156–173. doi:[10.1038/s41585-025-01081-z](https://doi.org/10.1038/s41585-025-01081-z)
+<a id="ref5"></a>5. CMR Surgical. Versius FDA De Novo authorization, October 2024. [Announcement](https://us.cmrsurgical.com/news/cmr-receives-fda-marketing-authorization-for-versius); [current US Versius Plus information and indications](https://us.cmrsurgical.com/).
 
-<a id="ref6"></a>6. Dobbs RW, Halgrimson WR, Talamini S, et al. "Single-Port Robotic Surgery: The Next Generation of Minimally Invasive Urology." *World J Urol.* 2020;38(4):897–905. doi:[10.1007/s00345-019-02898-1](https://doi.org/10.1007/s00345-019-02898-1)
+<a id="ref6"></a>6. Distalmotion. Additional DEXTER gynecology indications, June 16, 2026. [Manufacturer clearance announcement](https://www.distalmotion.com/news/distalmotion_receives_clearance_for_additional_gynecology_indications).
 
-<a id="ref7"></a>7. Rassweiler JJ, Autorino R, Klein J, et al. "Future of Robotic Surgery in Urology." *BJU Int.* 2017;120(6):822–841. doi:[10.1111/bju.13851](https://doi.org/10.1111/bju.13851)
+<a id="ref7"></a>7. KARL STORZ. Acquisition of Asensus Surgical, August 22, 2024. [Acquisition](https://www.karlstorz.com/us/en/asensus-surgical-announces-closing-of-acquisition-by-karl-storz.htm); [current Senhance discontinuation notice and features](https://www.asensus.com/senhance).
+
+<a id="ref8"></a>8. avateramedical. System specifications and European conformity history. [System](https://avatera.eu/en/avatera-system/); [company regulatory history](https://avatera.eu/en/company/made-in-germany).
+
+<a id="ref9"></a>9. Medicaroid. Hinotori system and July 9, 2026 CE marking. [Product information](https://www.medicaroid.com/en/product/hinotori/); [CE announcement](https://www.medicaroid.com/en/release/pdf/260709_en.pdf).
+
+<a id="ref10"></a>10. meerecompany. Revo-i system. [Manufacturer information](https://revosurgical.com/render/view/revo_i/discover_revo_i.html).
+
+<a id="ref11"></a>11. Harbin Sagebot. KANGDUO SR2000 system and December 2025 CE announcement. [Manufacturer information](https://www.kangduorobot.com/).
+
+<a id="ref12"></a>12. WEGO. MicroHand-S, WG-NST600T. [Manufacturer product information](https://en.weigaoholding.com/Product/info.html?cate=81&id=380).
+
+<a id="ref13"></a>13. MicroPort MedBot. 2025 results announcement, published March 26, 2026: Toumai platform and regulatory history. [Company exchange filing](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603342.pdf).
+
+<a id="ref14"></a>14. Intuitive. Preclinical Force Feedback study announcement, March 27, 2025. [Research setting and claims](https://isrg.intuitive.com/news-releases/news-release-details/peer-reviewed-studies-intuitives-force-feedback-technology).

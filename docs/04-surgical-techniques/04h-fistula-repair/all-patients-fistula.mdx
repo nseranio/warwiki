@@ -9,21 +9,23 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # Fistula Repair (All Patients)
 
-Genitourinary fistulas that occur regardless of sex — **upper-tract uroenteric**, **enterovesical**, **vesicocutaneous**, **post-transplant ureteral**, and **vascular-urinary** — share a small set of recurring decisions: whether the fistula will close with **diversion alone** (proximal urinary decompression ± fecal diversion), whether **endovascular or endoscopic** salvage is feasible, and when **definitive segmental resection ± interposition flap** is required. The dominant variables are the **etiology** (iatrogenic, inflammatory, malignant, radiation, post-transplant ischemia), the **functionality of the upstream organ** (kidney, bladder, bowel), and the **patient's fitness for major reconstruction**.
-
----
+This atlas groups upper-tract, bowel–bladder, cutaneous, transplant and arterial fistulas. Start with **source control, organ function, viable tissue and the patient's ability to tolerate reconstruction**. Closure of the fistula, preservation of kidney function and freedom from later obstruction are different outcomes. The database links to technique-specific evidence and limitations.
 
 ## Decision Framework
 
-| Fistula | First-Line | Definitive | Salvage / Adjunct |
-|---|---|---|---|
-| **Pyeloenteric** | Percutaneous nephrostomy ± stent (70% closure)<sup>[[1]](#ref1)</sup> | Nephrectomy + bowel repair when kidney non-functional | Endoscopic clipping / fulguration |
-| **Nephropleural** (post-PCNL ~3.3%) | Urinary diversion (PCN / JJ) + chest-tube drainage; small-bore 8–12F adequate | Most resolve &lt; 3 mo conservatively | VATS decortication; intrapleural t-PA |
-| **Ureterocolonic** | Resect diseased bowel + primary anastomosis; ureter usually preserved | Same | Anti-TNF first in Crohn's (ACG 2025) |
-| **Colovesical / Enterovesical** | One-stage sigmoidectomy + anastomosis; **Foley alone for bladder in 68%** (Ferguson 2008) | MIS sigmoidectomy preferred | OTS clip 50% durable when unfit |
-| **Vesicocutaneous** | Foley drainage; VAC for granulation control | Fistulectomy + partial cystectomy + vascularized flap (rectus femoris / omentum) | Endoscopic suture cystorrhaphy |
-| **Post-transplant** | Antegrade PCN ± JJ — definitive in **62%** at &gt; 72 h | Re-do UNC, ureteroureterostomy, [Boari + psoas hitch](/docs/surgical-techniques/04d-upper-tract-reconstruction/boari-flap-psoas-hitch); omental wrap | Native-to-graft UU (1.5% vs 4.1% leak) |
-| **Ureteroarterial** | **Endovascular stent-graft** (preferred) | Open bypass / ligation if infected, failed endo, or pre-existing graft | Provocative arteriography for occult cases |
+| Fistula | Initial priorities | Reconstruction considerations |
+|---|---|---|
+| **Pyeloenteric** | Control infection and ensure renal drainage; assess salvageable function | Treat renal and bowel disease; kidney-preserving repair or nephrectomy depends on function, tissue and cause |
+| **Nephropleural** | Decompress the urinary source and manage the pleural collection | Escalate pleural treatment for inadequate drainage, infection or organization; pleural procedures alone do not correct the urinary source |
+| **Ureterocolonic** | Define ureteral injury/obstruction and bowel pathology; drain infection | Bowel resection and ureteral repair are selected separately; neither automatic nephrectomy nor leaving every ureter unrepaired is appropriate |
+| **Colovesical / enterovesical** | Identify diverticular, Crohn's, malignant or other cause | Resect diseased bowel when indicated; bladder closure and one-stage versus staged bowel reconstruction depend on the defect and setting |
+| **Vesicocutaneous** | Evaluate obstruction, bladder pressure, infection and tissue viability | Selected leaks may close with drainage; persistent or unhealthy defects may need repair and vascularized coverage |
+| **Post-transplant** | Early low-volume leaks may respond to drainage; massive leaks or nonviable ureter need surgical assessment | Repeat implantation, native ureter or bladder-based reconstruction according to viable tissue and reach |
+| **Ureteroarterial** | **Potential hemorrhagic emergency:** coordinate vascular surgery, interventional radiology and urology | Endovascular control is commonly favored initially; infection, anatomy, recurrence and available expertise may require open or staged treatment |
+
+Historical upper-tract diversion studies combine different fistula sites and causes. Their closure percentages cannot be assigned to every pyeloenteric or ureterocolonic case.<sup>[[1]](#ref1)</sup> Likewise, pleural drainage alone may fail when the urinary source remains uncontrolled.<sup>[[2]](#ref2)</sup>
+
+For diverticulitis complicated by fistula, ASCRS recommends consideration of elective colectomy; the extent and timing are individualized. Crohn's medical therapy requires assessment and control of abscess/sepsis, and perianal-fistula drug trials should not be treated as ureterocolonic repair evidence.<sup>[[3]](#ref3)[[4]](#ref4)</sup> The transplant and arterial pathways have distinct urgent-care requirements.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
 
 ---
 
@@ -31,49 +33,49 @@ export const allPatientsFistulaTechniques = [
   {
     name: "Pyeloenteric Fistula Repair",
     domain: "Pyeloenteric",
-    bestFor: "PCN ± stent first-line; nephrectomy + bowel repair if kidney non-functional.",
+    bestFor: "Renal drainage, bowel treatment and kidney salvage selected by cause and residual function.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/pyeloenteric",
   },
   {
     name: "Nephropleural Fistula Repair",
     domain: "Nephropleural",
-    bestFor: "PCN / JJ + chest-tube drainage first-line; VATS decortication for refractory collections.",
+    bestFor: "Urinary-source decompression plus pleural management tailored to the collection.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/nephropleural",
   },
   {
     name: "Ureterocolonic Fistula Repair",
     domain: "Ureterocolonic",
-    bestFor: "Bowel resection + primary anastomosis, ureter usually preserved; medical therapy first in Crohn's.",
+    bestFor: "Assess bowel disease and ureteral viability separately; drainage, bowel resection and reconstruction as indicated.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/ureterocolonic",
   },
   {
     name: "Colovesical / Enterovesical Fistula Repair",
     domain: "Colovesical / Enterovesical",
-    bestFor: "One-stage sigmoidectomy + Foley for bladder; staged resection if abscess / emergent; OTS clip for unfit.",
+    bestFor: "Bowel and bladder management selected by cause, defect and fitness for surgery.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/colovesical-enterovesical",
   },
   {
     name: "Vesicocutaneous Fistula Repair",
     domain: "Vesicocutaneous",
-    bestFor: "Foley ± VAC for small fistulas; fistulectomy + interposition flap for large / persistent defects.",
+    bestFor: "Drainage and correction of bladder/obstructive causes; repair or tissue coverage when needed.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/vesicocutaneous",
   },
   {
     name: "Post-Kidney-Transplant Ureteral Fistula Repair",
     domain: "Post-Transplant",
-    bestFor: "PCN ± antegrade stent first-line; re-UNC, native UU, Boari flap, or omental wrap by defect length.",
+    bestFor: "Drainage for selected small leaks; reconstruction for massive, persistent or ischemic defects.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/post-kidney-transplant",
   },
   {
     name: "Ureteroarterial Fistula Repair",
     domain: "Ureteroarterial",
-    bestFor: "Endovascular stent-graft first-line; open bypass for infection or failed endo.",
+    bestFor: "Urgent multidisciplinary hemorrhage control; endovascular, open or staged treatment by anatomy and infection.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/all-patients/ureteroarterial",
   },
   {
     name: "Fecal Diversion",
     domain: "Colovesical / Enterovesical",
-    bestFor: "Loop ileostomy or colostomy as adjunct in complex bowel-urinary fistula; staged Shackley protocol.",
+    bestFor: "Selected adjunct for contamination control or protection of a complex bowel repair.",
     slug: "/docs/surgical-techniques/04h-fistula-repair/fecal-diversion",
   },
 ];
@@ -98,7 +100,7 @@ export const allPatientsFistulaTechniques = [
         'Ureteroarterial': '#b91c1c',
       },
     },
-    { key: 'bestFor', header: 'Best for / indication' },
+    { key: 'bestFor', header: 'Selection considerations' },
   ]}
   filterKey="domain"
   filterLabel="Fistula Type"
@@ -110,3 +112,13 @@ export const allPatientsFistulaTechniques = [
 ## References
 
 <a id="ref1"></a>1. Maillet PJ, Pelle-Francoz D, Leriche A, Leclercq R, Demiaux C. Fistulas of the upper urinary tract: percutaneous management. *J Urol.* 1987;138(6):1382–5. doi:[10.1016/s0022-5347(17)43648-2](https://doi.org/10.1016/s0022-5347(17)43648-2)
+
+<a id="ref2"></a>2. Toubes ME, Lama A, Ferreiro L, et al. Urinothorax: a systematic review. *J Thorac Dis.* 2017;9:1209–1218. doi:[10.21037/jtd.2017.04.22](https://doi.org/10.21037/jtd.2017.04.22).
+
+<a id="ref3"></a>3. Hall J, Hardiman K, Lee S, et al. ASCRS clinical practice guidelines for treatment of left-sided colonic diverticulitis. *Dis Colon Rectum.* 2020;63:728–747. doi:[10.1097/DCR.0000000000001679](https://doi.org/10.1097/DCR.0000000000001679).
+
+<a id="ref4"></a>4. Lightner AL, Vogel JD, Carmichael JC, et al. ASCRS clinical practice guidelines for surgical management of Crohn's disease. *Dis Colon Rectum.* 2020;63:1028–1052. doi:[10.1097/DCR.0000000000001716](https://doi.org/10.1097/DCR.0000000000001716).
+
+<a id="ref5"></a>5. European Association of Urology. *EAU Guidelines on Renal Transplantation.* 2026. Section 3.1.7.h, urinary leak. [Guideline](https://uroweb.org/guidelines/renal-transplantation/chapter/the-guideline).
+
+<a id="ref6"></a>6. Kamphorst K, Lock TMTW, van den Bergh RCN, et al. Arterio-ureteral fistula: systematic review of 445 patients. *J Urol.* 2022;207:35–43. doi:[10.1097/JU.0000000000002241](https://doi.org/10.1097/JU.0000000000002241).
