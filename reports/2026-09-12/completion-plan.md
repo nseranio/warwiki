@@ -10,14 +10,13 @@ The user explicitly requested completion after the previous release stopped at 1
 - Reconcile the supplied OpenEvidence survey by actual clinical impact and primary-source verification. Do not add studies merely to increase the count.
 - Rebuild the complete page ledger, run appropriate validation, then commit/push under standing authorization and verify production. A successful build or a full browser sweep does not replace clinical review.
 
-## Current ownership
+## Current ownership and checkpoint
 
-- `auth_handoff`: completed all 95 pharmacology MDX reads and scoped corrections; next all 231 tools pages, recorded in `tools.json/md`. Coordinate any shared imported-data edits.
-- `operative_review`: remaining surgical-technique families except 04h; original 98 urethral/upper-tract, 21 bladder-neck, 19 bladder and 25 diversion pages now saved. Continue 04e genital reconstruction, then remaining families.
-- `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; all 44 fistula originals now read; all15perioperative pages now corrected and read; current full-source task is ESVS2025vascular-trauma guidance.
-- Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
+Root integrated the twelfth batch after all three independent reviewers stopped with account usage-limit errors. Their prior saved work remains in the domain ledgers; no unfinished source task is credited as complete. Do not retry repeatedly or redeem a usage reset without explicit authorization.
 
-The eleventh batch revises three documentation pages and records 625 current full MDX reads. Lint/typecheck/tests/build pass (132.32 MB); three routes, reference interactions and mobile tables pass. Published as `3b2dee90`; exact-commit CI/Vercel and five live checks passed. Continue after publication without another user message. Current primary-source reading and access limits are in the vascular/exposure release record; tools, genital and adjacent anatomy reviews are proceeding independently. Page reading is not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
+Nine anatomy, graft and genital pages were corrected. Current ledger: 634 complete current MDX reads, 607 scoped updates, 21 checked, 11 unresolved and 547 unreviewed of 1,186 documentation files. Lint/typecheck, 32 component tests, 51 maintenance tests and build pass (132.02 MB). All nine browser routes and the citation regression pass; publication verification follows; see the [twelfth release record](twelfth-continuation-release.md).
+
+Remaining queues include tools (88/231 read), genital techniques (29 page records), remaining foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Source reading is separate: the complete published abridged LS guideline and actual figures were read, but the AWMF long version/evidence package remains outstanding; the downloaded Cochrane traditional-sling full text is mostly unread. See [RESUME-HERE.md](../../RESUME-HERE.md) for exact continuation pointers. Publication does not complete the whole-site request.
 
 ## Retained preferences
 

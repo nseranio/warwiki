@@ -2,7 +2,7 @@
 
 Entire original and revised MDX read including references. Consequential claims checked against identified primary sources, official guidance and device labeling. Source access is recorded individually; a full MDX read is not full access to every cited study or clinical clearance.
 
-Saved full-page reads with scoped substantive review: **22**. This is an ongoing family review, not a statement that the entire family has been reviewed.
+Saved full-page reads with scoped substantive review: **29**. This is an ongoing family review, not a statement that the entire family has been reviewed.
 
 ## Penile Grafting With Tissue Substitutes
 
@@ -480,3 +480,43 @@ Complete original and revised MDX read; all13originalprimaryabstracts checked, p
 
 - File: `docs/04-surgical-techniques/04e-genital-reconstruction/complete-functional-lymphatic-pedicled-transfer.mdx`
 - SHA256: `c9579dfb3652092fa641cb1d2943d62fa47019e85dd4d3f7c1885459c9d7a5cc`
+
+
+## CHASCIP — Charles + Bilateral Lymphatic SCIP Flap (Ciudad) — September 12, 2026
+
+Complete original MDX and all 12 original references read, complete proposed revision read and copied exactly to public source. Full author technical review and consensus separately recorded; CHASCIP index report remains abstract-scoped.
+
+- Removed unverified hypogastric FTSG recipe, fixed deep excision plane and obligatory inguinal-node harvest; distinguished node-preserving lymphatic SCIP from node-containing transfer.
+- Removed doubled lymphatic-capacity and penile-lymphatics-unimportant claims, cure and sexual-function guarantees, and unmatched comparisons with other small series.
+- Retained eight patients, mean 34-month follow-up, two observed complications and GLS 6.6 to 0.6 as small uncontrolled evidence; no proven comparative superiority.
+- Replaced stage-only algorithm with individualized tissue, lymphatic, vascular and conservative-care assessment; added ongoing recipient/donor follow-up.
+
+Limits: Full Ciudad2025 operative manuscript, graft donor/thickness, node inclusion, actual figures and any supplementary content not obtained. Removed details are unverified, not asserted to be false. Not all original full papers independently reviewed. Clinical verification is scoped and is not clinician sign-off.
+
+Full source access: [source-preparation report](../../2026-09-12/chascip-bloom-source-preparation.md).
+
+- File: `docs/04-surgical-techniques/04e-genital-reconstruction/chascip.mdx`
+- SHA-256: `a87af84050e33f482e9cb4c7c8cd9147cb4dff75fb0b45fd1fbde1f40c6120ee`
+
+
+## BLOOM — Bariatric + VLNT (Sim) — September 12, 2026
+
+Complete original MDX and all 22 original references read, complete proposed revision read and copied exactly to public source. Full WISER main/three table texts/actual CONSORT, obesity review narrative and full Shah review with all graphics/supplements read as itemized; BLOOM full Methods/video unavailable.
+
+- Corrected right gastroepiploic/station-4d attribution to publisher-confirmed left gastroepiploic donor; removed routine-specimen salvage assumptions and specific right-pedicle measurements.
+- Removed zero additional morbidity, universally best donor, immune-restoration and guaranteed weight-loss reversal claims.
+- Removed unsupported ideal-candidate BMI/stage rules, combined-versus-sequential superiority and genital efficacy extrapolation from a single lower-limb case.
+- Preserved WISER as breast-cancer arm evidence with 351 randomized and null primary interlimb-volume result; explicitly limited applicability to BLOOM/genital care.
+- Screened Shah2026 full review but removed donor rankings because of uncontrolled heterogeneity, inconsistent denominators and figure/table extraction/label defects.
+
+Limits: BLOOM full Methods/results, actual two clinical photos and approximately188MB supplementary operative video unread; abstract, publisher preview, references/disclosures and public video description read. WISER full protocol and data-sharing supplement not read; main all table texts and actual CONSORT inspected. Obesity review actual three figures unread; complete narrative/table/captions/references read. Not all 22 original full papers independently reviewed.
+
+Full source access: [source-preparation report](../../2026-09-12/chascip-bloom-source-preparation.md).
+
+- File: `docs/04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt.mdx`
+- SHA-256: `6cc910e96f27a6bb1d26338b013a43f75d4976bd5d5d5a664aee8c840d3afc11`
+
+
+## Twelfth batch: penile closure and LS local flaps
+
+Both original and revised MDX pages read; root completed final review. 29 genital page records now exist. See [source review](../../2026-09-12/genital-closure-ls-source-review.md) for complete Kirtschig published article and Ho main/figures, AAFP text and retained abstract limits. Complete clinical verification is not asserted.

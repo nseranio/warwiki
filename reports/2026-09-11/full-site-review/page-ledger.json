@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T13:07:36.813316+00:00",
+  "generatedAt": "2026-09-12T15:46:56.036464+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 625,
+    "fullTextReadForCurrentContent": 634,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 11,
-      "unreviewed": 556,
-      "updated": 598
+      "unreviewed": 547,
+      "updated": 607
     }
   },
   "pages": [
@@ -248,11 +248,76 @@
       "title": "Bony Pelvic Anatomy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "5acbded23d35316ebc8cf4b099c1662df986eeccd84b3b08143e0c953e349af7",
-      "reviewRecords": []
+      "sourceSha256": "812fc52c6d0d8fcd81c9369603b14954214682895c7ea6f0dad56b715748b1db",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/bony-pelvic-anatomy.mdx",
+          "title": "Bony Pelvic Anatomy",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original MDX read by the assigned reviewer or root; root independently read entire final revision, tables, references and links. Source-specific scope is recorded separately.",
+          "sourceSha256": "812fc52c6d0d8fcd81c9369603b14954214682895c7ea6f0dad56b715748b1db",
+          "changes": [
+            "Corrected pelvic ring joints, obturator canal, sacral neural foramina and common iliac vein course.",
+            "Removed fixed safe needle/suture/trocar geometries and individual planning from population pelvic dimensions.",
+            "Distinguished PFUI from straddle injury; corrected displacement risk interpretation and male/female urethral investigation."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1016/j.ajog.2017.07.008",
+              "bibliography": "<a id=\"ref1\"></a>1. Florian-Rodriguez ME, Hamner JJ, Corton MM. First sacral nerve and anterior longitudinal ligament anatomy: clinical applications during sacrocolpopexy. *Am J Obstet Gynecol.* 2017;217(5):607.e1\u2013607.e4. doi:[10.1016/j.ajog.2017.07.008](https://doi.org/10.1016/j.ajog.2017.07.008).",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1016/j.ajog.2017.12.236",
+              "bibliography": "<a id=\"ref2\"></a>2. Giraudet G, Protat A, Cosson M. The anatomy of the sacral promontory. *Am J Obstet Gynecol.* 2018;218(4):457.e1\u2013457.e3. doi:[10.1016/j.ajog.2017.12.236](https://doi.org/10.1016/j.ajog.2017.12.236).",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1097/AOG.0000000000002324",
+              "bibliography": "<a id=\"ref3\"></a>3. Katrikh AZ, Ettarh R, Kahn MA. Cadaveric nerve and artery proximity to sacrospinous ligament fixation sutures placed by a suture-capturing device. *Obstet Gynecol.* 2017;130(5):1033\u20131038. doi:[10.1097/AOG.0000000000002324](https://doi.org/10.1097/AOG.0000000000002324).",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1016/j.ajog.2016.06.025",
+              "bibliography": "<a id=\"ref4\"></a>4. Florian-Rodriguez ME, Hare A, Chin K, et al. Inferior gluteal and other nerves associated with sacrospinous ligament: a cadaver study. *Am J Obstet Gynecol.* 2016;215(5):646.e1\u2013646.e6. doi:[10.1016/j.ajog.2016.06.025](https://doi.org/10.1016/j.ajog.2016.06.025).",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1016/j.juro.2006.09.040",
+              "bibliography": "<a id=\"ref5\"></a>5. Basta AM, Blackmore CC, Wessells H. Predicting urethral injury from pelvic fracture patterns in male patients with blunt trauma. *J Urol.* 2007;177(2):571\u2013575. doi:[10.1016/j.juro.2006.09.040](https://doi.org/10.1016/j.juro.2006.09.040).",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": null,
+              "bibliography": "<a id=\"ref6\"></a>6. American College of Surgeons. *Best Practices Guidelines: Management of Genitourinary Injuries.* 2025; urethral injury chapter. [Full guideline](https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf).",
+              "access": "ACS 2025 printed pages 51\u201353: complete diagnostic and initial-management subsections and references read. Figure captions read; actual figures not newly inspected. Not a whole-guideline read.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md",
+          "unresolved": [
+            "Retained sources without complete manuscript/figure/supplement access remain pending. Full-page reading and structural checks are not complete clinical verification."
+          ],
+          "recordFile": "pelvic-support-anatomy.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-neuroanatomy.mdx",
@@ -381,11 +446,153 @@
       "title": "The Presacral Space",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "5bfa427f75789c02bd597437c72fdd860c4a7a84d49fe45bc85a14937abd87d2",
-      "reviewRecords": []
+      "sourceSha256": "99660ba4262f3e7bca0f2cdc849290eb84c29175c2ed41e2c2b857038562e371",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/presacral-anatomy.mdx",
+          "title": "The Presacral Space",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original MDX read by the assigned reviewer or root; root independently read entire final revision, tables, references and links. Source-specific scope is recorded separately.",
+          "sourceSha256": "99660ba4262f3e7bca0f2cdc849290eb84c29175c2ed41e2c2b857038562e371",
+          "changes": [
+            "Corrected fascial compartment/plane distinction, variable superior boundary and rectosacral release scope.",
+            "Removed universally safe CT rectangle, fixed nerve margins and hazardous neural-foramen tacking; corrected medians/ranges and hemorrhage escalation.",
+            "Corrected tailgut-cyst and exenteration generalizations; added limited 2026 localized-chordoma consensus update."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1148/rg.334115171",
+              "bibliography": "<a id=\"ref1\"></a>1. Hain KS, Pickhardt PJ, Lubner MG, Menias CO, Bhalla S. \"Presacral Masses: Multimodality Imaging of a Multidisciplinary Space.\" *Radiographics.* 2013;33(4):1145\u20131167. doi:[10.1148/rg.334115171](https://doi.org/10.1148/rg.334115171)",
+              "access": "Reviewer completed Hain 23-page main plus teaching page, 32 references, two tables and all 21 actual figures. Root independently read developmental-cyst discussion and full abstract.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1007/BF01627680",
+              "bibliography": "<a id=\"ref2\"></a>2. Fritsch H. \"Topography and Subdivision of the Pelvic Connective Tissue in Human Fetuses and in the Adult.\" *Surg Radiol Anat.* 1994;16(3):259\u2013265. doi:[10.1007/BF01627680](https://doi.org/10.1007/BF01627680)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1007/DCR.0b013e3181e74525",
+              "bibliography": "<a id=\"ref3\"></a>3. Zhang C, Ding ZH, Li GX, et al. \"Perirectal Fascia and Spaces: Annular Distribution Pattern Around the Mesorectum.\" *Dis Colon Rectum.* 2010;53(9):1315\u20131322. doi:[10.1007/DCR.0b013e3181e74525](https://doi.org/10.1007/DCR.0b013e3181e74525)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1097/DCR.0000000000001778",
+              "bibliography": "<a id=\"ref4\"></a>4. Stelzner S, Heinze T, Nikolouzakis TK, et al. \"Perirectal Fascial Anatomy: New Insights Into an Old Problem.\" *Dis Colon Rectum.* 2021;64(1):91\u2013102. doi:[10.1097/DCR.0000000000001778](https://doi.org/10.1097/DCR.0000000000001778)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1111/j.1463-1318.2007.01472.x",
+              "bibliography": "<a id=\"ref5\"></a>5. Garc\u00eda-Armengol J, Garc\u00eda-Botello S, Martinez-Soriano F, Roig JV, Lled\u00f3 S. \"Review of the Anatomic Concepts in Relation to the Retrorectal Space and Endopelvic Fascia: Waldeyer's Fascia and the Rectosacral Fascia.\" *Colorectal Dis.* 2008;10(3):298\u2013302. doi:[10.1111/j.1463-1318.2007.01472.x](https://doi.org/10.1111/j.1463-1318.2007.01472.x)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1016/j.ajog.2006.07.045",
+              "bibliography": "<a id=\"ref6\"></a>6. Wieslander CK, Rahn DD, McIntire DD, et al. \"Vascular Anatomy of the Presacral Space in Unembalmed Female Cadavers.\" *Am J Obstet Gynecol.* 2006;195(6):1736\u20131741. doi:[10.1016/j.ajog.2006.07.045](https://doi.org/10.1016/j.ajog.2006.07.045)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding. Previously documented pelvic-vascular source read.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1007/s00192-020-04645-2",
+              "bibliography": "<a id=\"ref7\"></a>7. Shen P, Peng C, Zhang W, et al. \"Exploration of the Safe Suture Area of the Presacral Space in Sacrocolpopexy by 3-Dimensional (3D) Models Reconstructed From CT.\" *Int Urogynecol J.* 2021;32(4):865\u2013870. doi:[10.1007/s00192-020-04645-2](https://doi.org/10.1007/s00192-020-04645-2)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": "10.1007/s00276-004-0258-7",
+              "bibliography": "<a id=\"ref8\"></a>8. Baqu\u00e9 P, Karimdjee B, Iannelli A, et al. \"Anatomy of the Presacral Venous Plexus: Implications for Rectal Surgery.\" *Surg Radiol Anat.* 2004;26(5):355\u2013358. doi:[10.1007/s00276-004-0258-7](https://doi.org/10.1007/s00276-004-0258-7)",
+              "access": "Source cited in the complete Celentano/Zurcher readings; Baque original full manuscript not read. Original-source status preserved without full-read credit.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 9,
+              "doi": "10.1148/rg.220012",
+              "bibliography": "<a id=\"ref9\"></a>9. Zurcher KS, Staack SO, Spencer EB, et al. \"Venous Anatomy and Collateral Pathways of the Pelvis: An Angiographic Review.\" *Radiographics.* 2022;42(5):1532\u20131545. doi:[10.1148/rg.220012](https://doi.org/10.1148/rg.220012)",
+              "access": "Complete Zurcher 2022 main, sole table, 49 references and all 17 actual figures read in this continuing review.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 10,
+              "doi": "10.1097/DCR.0000000000001335",
+              "bibliography": "<a id=\"ref10\"></a>10. Kanjanasilp P, Ng JL, Kajohnwongsatit K, et al. \"Anatomical Variations of Iliac Vein Tributaries and Their Clinical Implications During Complex Pelvic Surgeries.\" *Dis Colon Rectum.* 2019;62(7):809\u2013814. doi:[10.1097/DCR.0000000000001335](https://doi.org/10.1097/DCR.0000000000001335)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding. Previously documented pelvic-vascular source read.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 11,
+              "doi": "10.1007/s00192-014-2572-x",
+              "bibliography": "<a id=\"ref11\"></a>11. Huber SA, Northington GM, Karp DR. \"Bowel and Bladder Dysfunction Following Surgery Within the Presacral Space: An Overview of Neuroanatomy, Function, and Dysfunction.\" *Int Urogynecol J.* 2015;26(7):941\u2013946. doi:[10.1007/s00192-014-2572-x](https://doi.org/10.1007/s00192-014-2572-x)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 12,
+              "doi": "10.1016/j.ajog.2016.12.002",
+              "bibliography": "<a id=\"ref12\"></a>12. Ripperda CM, Jackson LA, Phelan JN, Carrick KS, Corton MM. \"Anatomic Relationships of the Pelvic Autonomic Nervous System in Female Cadavers: Clinical Applications to Pelvic Surgery.\" *Am J Obstet Gynecol.* 2017;216(4):388.e1\u2013388.e7. doi:[10.1016/j.ajog.2016.12.002](https://doi.org/10.1016/j.ajog.2016.12.002)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 13,
+              "doi": "10.1016/j.ejogrb.2010.05.009",
+              "bibliography": "<a id=\"ref13\"></a>13. Shiozawa T, Huebner M, Hirt B, Wallwiener D, Reisenauer C. \"Nerve-Preserving Sacrocolpopexy: Anatomical Study and Surgical Approach.\" *Eur J Obstet Gynecol Reprod Biol.* 2010;152(1):103\u2013107. doi:[10.1016/j.ejogrb.2010.05.009](https://doi.org/10.1016/j.ejogrb.2010.05.009)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 14,
+              "doi": "10.1016/j.ajog.2017.07.008",
+              "bibliography": "<a id=\"ref14\"></a>14. Florian-Rodriguez ME, Hamner JJ, Corton MM. \"First Sacral Nerve and Anterior Longitudinal Ligament Anatomy: Clinical Applications During Sacrocolpopexy.\" *Am J Obstet Gynecol.* 2017;217(5):607.e1\u2013607.e4. doi:[10.1016/j.ajog.2017.07.008](https://doi.org/10.1016/j.ajog.2017.07.008)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 15,
+              "doi": "10.1016/j.ajog.2017.12.236",
+              "bibliography": "<a id=\"ref15\"></a>15. Giraudet G, Protat A, Cosson M. \"The Anatomy of the Sacral Promontory: How to Avoid Complications of the Sacrocolpopexy Procedure.\" *Am J Obstet Gynecol.* 2018;218(4):457.e1\u2013457.e3. doi:[10.1016/j.ajog.2017.12.236](https://doi.org/10.1016/j.ajog.2017.12.236)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 16,
+              "doi": "10.1308/003588414X13814021679951",
+              "bibliography": "<a id=\"ref16\"></a>16. Celentano V, Ausobsky JR, Vowden P. Surgical management of presacral bleeding. *Ann R Coll Surg Engl.* 2014;96:261\u2013265. doi:[10.1308/003588414X13814021679951](https://doi.org/10.1308/003588414X13814021679951).",
+              "access": "Complete Celentano 2014 main, table, 49 references and both actual figures read.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            },
+            {
+              "ref": 17,
+              "doi": "10.1001/jamaoncol.2026.2054",
+              "bibliography": "<a id=\"ref17\"></a>17. Radaelli S, Frezza AM, Fossati P, et al. Global consensus on the management of primary localized chordoma. *JAMA Oncol.* Published online July 9, 2026. doi:[10.1001/jamaoncol.2026.2054](https://doi.org/10.1001/jamaoncol.2026.2054).",
+              "access": "Complete Radaelli 2026 indexed abstract read; full main, supporting evidence and supplements not obtained.",
+              "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/pelvic-support-anatomy-review.md",
+          "unresolved": [
+            "Retained sources without complete manuscript/figure/supplement access remain pending. Full-page reading and structural checks are not complete clinical verification."
+          ],
+          "recordFile": "pelvic-support-anatomy.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/retropubic-anatomy.mdx",
@@ -7257,11 +7464,141 @@
       "title": "Martius Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "09feec6af26cf05c387726d4711af53fa38a7104426e7de6440547c4c810c2af",
-      "reviewRecords": []
+      "sourceSha256": "46519c593893283e1e81979495a495d6655a8b8a1950139cc424896dfcd713d2",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/flaps/martius.mdx",
+          "title": "Martius Flap",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original MDX read by the assigned reviewer or root; root independently read entire final revision, tables, references and links. Source-specific scope is recorded separately.",
+          "sourceSha256": "46519c593893283e1e81979495a495d6655a8b8a1950139cc424896dfcd713d2",
+          "changes": [
+            "Corrected modern fat-pad anatomy, target/pedicle contradictions and unsupported default side/drain rules.",
+            "Corrected VVF/RVF cohort and at-risk SUI denominators, timing and combined success endpoints; removed equivalence and universal morbidity claims.",
+            "Replaced the Cochrane protocol as outcome evidence; separated mesh exposure from urinary-tract erosion and selective interposition from routine use."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": null,
+              "bibliography": "<a id=\"ref1\"></a>1. Elkins TE, DeLancey JO, McGuire EJ. \"The Use of Modified Martius Graft as an Adjunctive Technique in Vesicovaginal and Rectovaginal Fistula Repair.\" *Obstet Gynecol.* 1990;75(4):727\u2013733.",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1007/s00345-016-1887-2",
+              "bibliography": "<a id=\"ref2\"></a>2. Malde S, Spilotros M, Wilson A, et al. \"The Uses and Outcomes of the Martius Fat Pad in Female Urology.\" *World J Urol.* 2017;35(3):473\u2013478. doi:[10.1007/s00345-016-1887-2](https://doi.org/10.1007/s00345-016-1887-2)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1007/s00192-025-06383-9",
+              "bibliography": "<a id=\"ref3\"></a>3. Rothenberger RW, Feroz R, Hogarth N, et al. \"Neurovascular Mapping of the Labial Fat Pad: Implications for Optimal Martius Flap Harvest.\" *Int Urogynecol J.* 2026;37(7):1997\u20132003 (published online 2025). doi:[10.1007/s00192-025-06383-9](https://doi.org/10.1007/s00192-025-06383-9)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1111/bju.16350",
+              "bibliography": "<a id=\"ref4\"></a>4. Kapriniotis K, Loufopoulos I, Gresty HCM, Greenwell TJ, Ockrim JL. \"The Utility of Martius Fat Pad in the Repair of Urogenital Fistulae: Review of Current Evidence.\" *BJU Int.* 2024;134(3):365\u2013374. doi:[10.1111/bju.16350](https://doi.org/10.1111/bju.16350)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1097/01.ju.0000049723.57485.e7",
+              "bibliography": "<a id=\"ref5\"></a>5. Eilber KS, Kavaler E, Rodr\u00edguez LV, Rosenblum N, Raz S. \"Ten-Year Experience With Transvaginal Vesicovaginal Fistula Repair Using Tissue Interposition.\" *J Urol.* 2003;169(3):1033\u20131036. doi:[10.1097/01.ju.0000049723.57485.e7](https://doi.org/10.1097/01.ju.0000049723.57485.e7)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1016/j.eururo.2008.04.044",
+              "bibliography": "<a id=\"ref6\"></a>6. Pushkar DY, Dyakov VV, Kasyan GR. \"Management of Radiation-Induced Vesicovaginal Fistula.\" *Eur Urol.* 2009;55(1):131\u2013137. doi:[10.1016/j.eururo.2008.04.044](https://doi.org/10.1016/j.eururo.2008.04.044)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1111/bju.13579",
+              "bibliography": "<a id=\"ref7\"></a>7. Malde S, Sihra N, Naaseri S, et al. \"Urethral Diverticulectomy With Martius Labial Fat Pad Interposition Improves Symptom Resolution and Reduces Recurrence.\" *BJU Int.* 2017;119(1):158\u2013163. doi:[10.1111/bju.13579](https://doi.org/10.1111/bju.13579)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": "10.1097/DCR.0000000000002473",
+              "bibliography": "<a id=\"ref8\"></a>8. Gaertner WB, Burgess PL, Davids JS, et al. \"The American Society of Colon and Rectal Surgeons Clinical Practice Guidelines for the Management of Anorectal Abscess, Fistula-in-Ano, and Rectovaginal Fistula.\" *Dis Colon Rectum.* 2022;65(8):964\u2013985. doi:[10.1097/DCR.0000000000002473](https://doi.org/10.1097/DCR.0000000000002473)",
+              "access": "Entire ASCRS 2022 RVF section, Recommendations 12\u201318 and actual page 974 read. Other sections and complete bibliography not newly read.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 9,
+              "doi": "10.1111/ans.18922",
+              "bibliography": "<a id=\"ref9\"></a>9. Swindon D, Izwan S, Ng J, et al. \"Martius Flaps for Low Rectovaginal Fistulae: A Systematic Review and Proportional Meta-Analysis.\" *ANZ J Surg.* 2024;94(9):1471\u20131479. doi:[10.1111/ans.18922](https://doi.org/10.1111/ans.18922)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 10,
+              "doi": "10.1097/DCR.0000000000003148",
+              "bibliography": "<a id=\"ref10\"></a>10. Pastier C, Loriau J, Denost Q, et al. \"Rectovaginal Fistula: What Is the Role of Martius Flap and Gracilis Muscle Interposition in the Therapeutic Strategy?\" *Dis Colon Rectum.* 2024;67(8):1056\u20131064. doi:[10.1097/DCR.0000000000003148](https://doi.org/10.1097/DCR.0000000000003148)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 11,
+              "doi": null,
+              "bibliography": "<a id=\"ref11\"></a>11. American College of Obstetricians and Gynecologists; American Urogynecologic Society. Management of mesh and graft complications in gynecologic surgery. Committee Opinion No. 694. *Obstet Gynecol.* 2017;129:e102\u2013e108. [ACOG guidance](https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/04/management-of-mesh-and-graft-complications-in-gynecologic-surgery).",
+              "access": "Complete original ACOG/AUGS 2017 seven-page guidance, 33 references and actual table read; historical document used for exposure-versus-erosion distinction.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 12,
+              "doi": "10.1016/j.juro.2014.04.009",
+              "bibliography": "<a id=\"ref12\"></a>12. Blaivas JG, Mekel G. \"Management of Urinary Fistulas Due to Midurethral Sling Surgery.\" *J Urol.* 2014;192(4):1137\u20131142. doi:[10.1016/j.juro.2014.04.009](https://doi.org/10.1016/j.juro.2014.04.009)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 13,
+              "doi": "10.21037/tau.2017.04.38",
+              "bibliography": "<a id=\"ref13\"></a>13. Wilson A, Pillay S, Greenwell T. How and why to take a Martius labial interposition flap in female urology. *Transl Androl Urol.* 2017;6(Suppl 2):S81\u2013S87. doi:[10.21037/tau.2017.04.38](https://doi.org/10.21037/tau.2017.04.38).",
+              "access": "Complete Wilson 2017 main, 35 references and all 13 actual operative images read.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 14,
+              "doi": "10.5152/tud.2019.85233",
+              "bibliography": "<a id=\"ref14\"></a>14. Singh V, Mehrotra S, Bansal A, Akhtar A, Sinha RJ. Prospective randomized comparison of repairing vesicovaginal fistula with or without the interposition flap: result from a tertiary care Institute in Northern India. *Turk J Urol.* 2019;45(5):377\u2013383. doi:[10.5152/tud.2019.85233](https://doi.org/10.5152/tud.2019.85233).",
+              "access": "Complete Singh 2019 seven-page main, 19 references, three actual tables and actual CONSORT figure read. Separate protocol/supplements unverified.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            },
+            {
+              "ref": 15,
+              "doi": "10.1097/AOG.0000000000005468",
+              "bibliography": "<a id=\"ref15\"></a>15. Thompson JC, Halder GE, Jeppson PC, et al. Repair of vesicovaginal fistulae: a systematic review. *Obstet Gynecol.* 2024;143(2):229\u2013241. doi:[10.1097/AOG.0000000000005468](https://doi.org/10.1097/AOG.0000000000005468).",
+              "access": "Complete Thompson 2024 main, table, 62 references and all four actual figures read. Supplement download challenge; supplement unread.",
+              "sourceReport": "reports/2026-09-12/martius-source-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/martius-source-review.md",
+          "unresolved": [
+            "Retained sources without complete manuscript/figure/supplement access remain pending. Full-page reading and structural checks are not complete clinical verification."
+          ],
+          "originalSourceInventory": "reports/2026-09-12/martius-original-source-access.json",
+          "peerReview": "Independent full-MDX peer read; Malde 12-month timing and Pastier fistula/stoma endpoint corrections applied. Root inspected listed actual source graphics and existing site SVG.",
+          "recordFile": "flap-principles.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/mcfap.mdx",
@@ -10280,22 +10617,124 @@
       "title": "Autologous Fascia Lata",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a7c3ef8201dfd9f884bc098479e056d21a6081617343225afddf9f13ed71dcfa",
-      "reviewRecords": []
+      "sourceSha256": "4b24cd4474dfc3aff6d0ab564be339dd267003e0eac8141963eb44aa6643733c",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/autologous-tissue/fascia-lata.mdx",
+          "title": "Autologous Fascia Lata",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "4b24cd4474dfc3aff6d0ab564be339dd267003e0eac8141963eb44aa6643733c",
+          "originalReadSha256": "a7c3ef8201dfd9f884bc098479e056d21a6081617343225afddf9f13ed71dcfa",
+          "scope": [
+            "Full original and final MDX texts read, including all original bibliography entries and final tables/references. Source identities, actual donor tissue, trial endpoints, follow-up denominators and important harvest/recipient-site harms checked; this is not clinical clearance."
+          ],
+          "sources": [
+            "https://doi.org/10.1007/s40279-021-01634-3",
+            "https://pubmed.ncbi.nlm.nih.gov/10494122/",
+            "https://doi.org/10.1016/j.urology.2022.08.038",
+            "https://doi.org/10.1016/j.jmig.2022.07.001",
+            "https://doi.org/10.1007/s00192-025-06421-6",
+            "https://doi.org/10.1002/nau.25462",
+            "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+            "https://doi.org/10.1097/01.ju.0000111807.67599.8d",
+            "https://doi.org/10.1089/end.2020.0537",
+            "https://doi.org/10.1007/s00192-025-06424-3",
+            "https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-curvature",
+            "https://doi.org/10.1097/01.PRS.0000095951.04305.38",
+            "https://doi.org/10.1097/00005392-199503000-00025",
+            "https://doi.org/10.1016/j.urology.2003.07.012",
+            "https://doi.org/10.1111/j.1464-410X.2006.06251.x",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7027385/",
+            "https://link.springer.com/article/10.1007/s00192-023-05702-2",
+            "https://eprints.soton.ac.uk/487187/"
+          ],
+          "notes": [
+            "Original-source inventory: /tmp/tools-autologous-originals.json; DOI metadata/complete indexed abstracts: /tmp/tools-autologous-reference-cache.json. All 99 unique DOI queries matched records across rectus fascia, fascia lata and queued bowel-segments pages, but retrieval is not reading: the bowel abstracts have not yet been read or credited.",
+            "AUA/SUFU 2023 original guideline PDF: selected complete counseling/PVS and special-case Statements 12\u201313 and 16\u201318 discussions, intraoperative cystoscopy paragraph and donor-site morbidity paragraph read; not the complete guideline. Cache /tmp/tools-mesh-aua2023.pdf/.txt. FDA current POP-mesh regulatory body checked; 2019 action applies to transvaginal POP products, not every sling or abdominal sacrocolpopexy mesh.",
+            "Full original E-SISTEr 2012 accepted-manuscript main text read, including all three tables and 13 bibliography entries; all four actual figures viewed. Cache /tmp/tools-PMC3586411.html and -read.txt (32,148 extracted characters), /tmp/tools-esister-nihms437653f{1,2,3,4}.jpg. No separate supplement identified. This does not imply full reads of all cited papers.",
+            "E-SISTEr cautions: observational extension enrolled 482, with persistent incontinence more likely to enter; definition differs from the original trial; Kaplan\u2013Meier estimates differ from respondent-only proportions. Figure 1 fifth-year follow-up counts and Table 2 satisfaction counts vary. Malformed abstract/table values and discussion/table inconsistencies were not reproduced as outcome evidence. The extension finding of no serious adverse events does not cover all events during the original trial.",
+            "SISTEr 2007: complete primary indexed abstract and extensive selected publisher-indexed methods/results/discussion read; direct main/PDF access returned 403, so no full-paper/table/figure/supplement read claimed. Complete primary correction 10.1056/NEJMx070036 read: Figure 1B changed rectus femoris to rectus abdominus; this does not change the efficacy result.",
+            "Cochrane traditional suburethral slings, 2020, DOI 10.1002/14651858.CD001754.pub5: complete abstract, plain-language summary and included-study Lucas 2000 record plus part of adjacent Maher 2005 record read only. Full 483,639-character text is available at /tmp/tools-PMC7027385-read.txt, but remaining main text, study tables, appendices/references and graphics are not fully read. Not newly cited as a fully reviewed source; no 2017-edition or source-wide completeness claim.",
+            "Nair 2024, DOI 10.1007/s00192-023-05702-2: complete publisher abstract and bibliography/appendix listing read, but full manuscript inaccessible. Southampton accepted-manuscript listing https://eprints.soton.ac.uk/487187/ and its exports returned 403. Guerrero 2007 complete original abstract read (165 randomized); Nair follow-up includes 107 respondents. Actual fascial donor material is not verified from primary methods; removed the legacy attribution of this 17-year result to fascia lata rather than treating an indirect older table as proof. This remains an explicit access debt.",
+            "Original 15,261-character page and 25 bibliography entries fully read. All 21 available original DOI-linked abstracts read in explicit batches; Wu had no abstract. Separate full primary abstracts for Lemer, Govier and Brown retrieved/read at /tmp/tools-autologous-lata-extra.json. Govier chart and patient-survey dryness differed; Brown allograft/autologous comparison had differing follow-up and response denominators. No full-paper reads claimed for these sources.",
+            "Corrected material identity: Lemer 1999 compared autologous rectus with processed cadaveric fascia lata/dermis, not two fresh autografts. Kalsi 2006 used Tutoplast allograft; separated its citation from Kargi 2004 autologous series. Hutchinson ITB anatomical review complete primary abstract read only, not full available article; harvest is not portrayed as functionally expendable.",
+            "Buckley 2026 complete primary abstract read: 201 baseline, postoperative hematoma requiring transfusion/drainage, two hernia repairs and 64 women reporting a thigh issue at six weeks. Its later 28 (17%) has an unclear denominator in the abstract, and a separate prospective subset has 18 (24%) cosmetic complaints; those percentages are not merged or presented as uniform follow-up of all 201. Johnson 2024 complete abstract read: 29/72 respondents, seven discomfort and three weakness; disproves a blanket no-functional-deficit promise, but remains patient report with substantial nonresponse.",
+            "Corrected Latini dry-or-improved versus dry, Shaw mixed 16 fascia-lata/three rectus cohort and sling-loosening events, Bock nonrandomized 19/45 comparison without equivalence inference, and Vereeck 2026 denominators (131 planned, seven excluded, 124 included, 101 with at least six-month follow-up, 86/101 much/very-much improved). Five repeat operations distinguish three prolapse and two thigh procedures. Each retained primary cohort abstract fully read; no full manuscript obtained.",
+            "EAU 2026 penile-curvature surgical section, graft-material tables and recommendations fully read in prior biological-material batch and reused, not the entire guideline. No graft superiority or mandatory curvature-threshold claim. Kakizaki population spans ages 3\u201372 with mixed fascia and nine augmentations; Kargi fistula report is eight children, short uncontrolled follow-up. Removed unsupported nationwide mesh unavailability and universal 100% closure claims.",
+            "Unresolved: primary full methods confirming Nair 17-year donor tissue; complete manuscripts for newer donor-site/sacrocolpopexy cohorts and historical small series; long-term comparative fascia-lata versus rectus/mesh durability. Source limits remain explicit in this ledger, while the public page emphasizes clinically useful risks and choices."
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/autologous-tissue/rectus-fascia.mdx",
       "title": "Autologous Rectus Fascia",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "6a37c669b89b0347f4cbe853ae6011190dbf91e78abb3aa781c7318d3f9e57f9",
-      "reviewRecords": []
+      "sourceSha256": "8906e9186a759d49cac1a753c0c021b1e159e31c3cdfce620c66d1d5957a8824",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/autologous-tissue/rectus-fascia.mdx",
+          "title": "Autologous Rectus Fascia",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "8906e9186a759d49cac1a753c0c021b1e159e31c3cdfce620c66d1d5957a8824",
+          "originalReadSha256": "6a37c669b89b0347f4cbe853ae6011190dbf91e78abb3aa781c7318d3f9e57f9",
+          "scope": [
+            "Full original and final MDX texts read, including all original bibliography entries and final tables/references. Source identities, actual donor tissue, trial endpoints, follow-up denominators and important harvest/recipient-site harms checked; this is not clinical clearance."
+          ],
+          "sources": [
+            "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+            "https://www.fda.gov/medical-devices/urogynecologic-surgical-mesh-implants/pelvic-organ-prolapse-pop-surgical-mesh-considerations-and-recommendations",
+            "https://doi.org/10.1016/j.ajog.2019.12.009",
+            "https://doi.org/10.1007/s00192-018-3643-1",
+            "https://doi.org/10.1056/NEJMoa070416",
+            "https://doi.org/10.1111/bju.12851",
+            "https://doi.org/10.1016/j.juro.2011.11.087",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3586411/",
+            "https://doi.org/10.1007/s00192-024-05768-6",
+            "https://doi.org/10.1016/j.eururo.2018.04.031",
+            "https://doi.org/10.1002/nau.25527",
+            "https://doi.org/10.1111/1471-0528.17107",
+            "https://doi.org/10.1016/j.juro.2015.03.104",
+            "https://doi.org/10.1111/j.1464-410X.2006.05876.x",
+            "https://doi.org/10.1016/j.urology.2004.12.062",
+            "https://doi.org/10.1097/01.ju.0000084145.34813.97",
+            "https://doi.org/10.1016/s0090-4295(98",
+            "https://doi.org/10.1016/j.urology.2018.03.013",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7027385/",
+            "https://link.springer.com/article/10.1007/s00192-023-05702-2",
+            "https://eprints.soton.ac.uk/487187/"
+          ],
+          "notes": [
+            "Original-source inventory: /tmp/tools-autologous-originals.json; DOI metadata/complete indexed abstracts: /tmp/tools-autologous-reference-cache.json. All 99 unique DOI queries matched records across rectus fascia, fascia lata and queued bowel-segments pages, but retrieval is not reading: the bowel abstracts have not yet been read or credited.",
+            "AUA/SUFU 2023 original guideline PDF: selected complete counseling/PVS and special-case Statements 12\u201313 and 16\u201318 discussions, intraoperative cystoscopy paragraph and donor-site morbidity paragraph read; not the complete guideline. Cache /tmp/tools-mesh-aua2023.pdf/.txt. FDA current POP-mesh regulatory body checked; 2019 action applies to transvaginal POP products, not every sling or abdominal sacrocolpopexy mesh.",
+            "Full original E-SISTEr 2012 accepted-manuscript main text read, including all three tables and 13 bibliography entries; all four actual figures viewed. Cache /tmp/tools-PMC3586411.html and -read.txt (32,148 extracted characters), /tmp/tools-esister-nihms437653f{1,2,3,4}.jpg. No separate supplement identified. This does not imply full reads of all cited papers.",
+            "E-SISTEr cautions: observational extension enrolled 482, with persistent incontinence more likely to enter; definition differs from the original trial; Kaplan\u2013Meier estimates differ from respondent-only proportions. Figure 1 fifth-year follow-up counts and Table 2 satisfaction counts vary. Malformed abstract/table values and discussion/table inconsistencies were not reproduced as outcome evidence. The extension finding of no serious adverse events does not cover all events during the original trial.",
+            "SISTEr 2007: complete primary indexed abstract and extensive selected publisher-indexed methods/results/discussion read; direct main/PDF access returned 403, so no full-paper/table/figure/supplement read claimed. Complete primary correction 10.1056/NEJMx070036 read: Figure 1B changed rectus femoris to rectus abdominus; this does not change the efficacy result.",
+            "Cochrane traditional suburethral slings, 2020, DOI 10.1002/14651858.CD001754.pub5: complete abstract, plain-language summary and included-study Lucas 2000 record plus part of adjacent Maher 2005 record read only. Full 483,639-character text is available at /tmp/tools-PMC7027385-read.txt, but remaining main text, study tables, appendices/references and graphics are not fully read. Not newly cited as a fully reviewed source; no 2017-edition or source-wide completeness claim.",
+            "Nair 2024, DOI 10.1007/s00192-023-05702-2: complete publisher abstract and bibliography/appendix listing read, but full manuscript inaccessible. Southampton accepted-manuscript listing https://eprints.soton.ac.uk/487187/ and its exports returned 403. Guerrero 2007 complete original abstract read (165 randomized); Nair follow-up includes 107 respondents. Actual fascial donor material is not verified from primary methods; removed the legacy attribution of this 17-year result to fascia lata rather than treating an indirect older table as proof. This remains an explicit access debt.",
+            "Original 18,184-character page and 29 bibliography entries fully read. All 25 available original DOI-linked abstracts read in explicit batches; Wu review had no indexed abstract. Missing-DOI original Nguyen, Walker and Horton records were separately retrieved: Nguyen and Walker complete abstracts read; Horton only the complete available indexed 250-word truncation. /tmp/tools-autologous-extra.json also contains the complete SISTEr and Guerrero abstracts. Metadata retrieval does not imply full manuscripts.",
+            "Corrected Cardenas harvest geometry: 5.4 cm is superior to the pubic symphysis and 9.4 cm is transverse inferior-edge length, not a second vertical landmark. Twelve-cadaver averages do not guarantee individual nerve protection and did not establish hernia prevention. Current guideline donor risks cited; removed inert/no-inflammation, complication-free and universal-size claims.",
+            "SISTEr outcomes distinguish SUI-specific 66% versus 49% from strict overall 47% versus 38%, with 520/655 assessed at 24 months. Khan follow-up distinguishes dry/improved from completely dry and zero further surgery for persistent SUI from zero all-cause reoperation; 162/201 respondents. E-SISTEr estimates and selection limits added. Grigoryan 2024 and Vasudeva 2024 full primary abstracts read; not full systematic reviews. Their nonsignificant comparisons are not equivalence evidence; anomalous abstract metric labeling was not copied.",
+            "Complete primary abstracts for retained cohort references read, not full manuscripts. Removed misleading pooled cure ranges, interpreted Wang 132-patient sacrocolpopexy cohort using composite/anatomic/retreatment outcomes and wide five-year uncertainty, distinguished Cormio anterior from other-compartment recurrence, Craatz dorsal sheath from standard anterior sheath, Pathak prosthesis feasibility from universal success, Bugg 9/15 dryness from guaranteed pediatric continence, vascularized myofascial wraps from free fascia and Johnsen three-patient early fistula results from established effectiveness.",
+            "Unresolved: complete primary manuscripts/supplements for SISTEr and Khan, the 2024 reviews and most historical cohorts; outcome definitions not available beyond their indexed abstracts where stated. Final page confines claims to the verified scope and redirects operative placement/tensioning to the procedure hub."
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/biological-grafts/bovine-dermal.mdx",
@@ -29840,11 +30279,254 @@
       "title": "BLOOM \u2014 Bariatric + VLNT (Sim)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "ba8f6ec5f5293c6686d753f7f7170d25ac387445860faa36b0363eff77ca0850",
-      "reviewRecords": []
+      "sourceSha256": "6cc910e96f27a6bb1d26338b013a43f75d4976bd5d5d5a664aee8c840d3afc11",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt.mdx",
+          "title": "BLOOM \u2014 Bariatric + VLNT (Sim)",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original MDX and all 22 original references read, complete proposed revision read and copied exactly to public source. Full WISER main/three table texts/actual CONSORT, obesity review narrative and full Shah review with all graphics/supplements read as itemized; BLOOM full Methods/video unavailable.",
+          "sources": [
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40198493/",
+              "doi": "10.1007/s11695-025-07847-z",
+              "originalReference": 1,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35074795/",
+              "doi": "10.1101/cshperspect.a041176",
+              "originalReference": 2,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40150810/",
+              "doi": "10.1111/obr.13922",
+              "originalReference": 3,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41840147/",
+              "doi": "10.1038/s41574-026-01243-y",
+              "originalReference": 4,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35308249/",
+              "doi": "10.3389/fphar.2022.823266",
+              "originalReference": 5,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28660651/",
+              "doi": "10.1111/obr.12565",
+              "originalReference": 6,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31415063/",
+              "doi": "10.1001/jamaoncol.2019.2109",
+              "originalReference": 7,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30428297/",
+              "doi": "10.1056/nejmcp1803290",
+              "originalReference": 8,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35837897/",
+              "doi": "10.1097/sla.0000000000005591",
+              "originalReference": 9,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41950607/",
+              "doi": "10.1016/j.bjps.2026.03.005",
+              "originalReference": 10,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38925528/",
+              "doi": "10.1016/j.jvsv.2024.101934",
+              "originalReference": 11,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38530528/",
+              "doi": "10.1245/s10434-024-15113-2",
+              "originalReference": 12,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28582379/",
+              "doi": "10.1097/sle.0000000000000412",
+              "originalReference": 13,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41583515/",
+              "doi": "10.7150/ijms.125568",
+              "originalReference": 14,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30020230/",
+              "doi": "10.1097/prs.0000000000004772",
+              "originalReference": 16,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29209990/",
+              "doi": "10.1007/s00276-017-1951-7",
+              "originalReference": 17,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33766726/",
+              "doi": "10.1016/j.jamcollsurg.2021.03.002",
+              "originalReference": 18,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35879204/",
+              "doi": "10.1016/j.bjps.2022.04.105",
+              "originalReference": 19,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35583944/",
+              "doi": "10.1097/prs.0000000000009247",
+              "originalReference": 20,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35159986/",
+              "doi": "10.3390/jcm11030534",
+              "originalReference": 21,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/22233832/",
+              "doi": "10.1097/sla.0b013e3182426757",
+              "originalReference": 22,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://link.springer.com/article/10.1007/s11695-025-07847-z",
+              "doi": "10.1007/s11695-025-07847-z",
+              "access": "Complete publisher public abstract, references, disclosures and video description read; first-page publisher preview read via ResearchGate. Full Methods/results, two actual clinical photographs and supplementary video not obtained. Description explicitly names LEFT gastroepiploic nodes."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6696732/",
+              "doi": "10.1001/jamaoncol.2019.2109",
+              "access": "Complete main text, all three table texts/footnotes,37 references, disclosures and actual CONSORT read. Protocol and data-sharing supplements not read.",
+              "cache": [
+                "/tmp/genital11-PMC6696732.html",
+                "/tmp/genital11-PMC6696732.txt",
+                "/tmp/genital11-wiser-fig1.jpg"
+              ]
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9159261/",
+              "doi": "10.1101/cshperspect.a041176",
+              "access": "Complete main narrative, table text, captions and references read; three actual figures not inspected. Referral BMI patterns and animal mechanisms not generalized as guaranteed human recovery.",
+              "cache": [
+                "/tmp/genital11-PMC9159261.html",
+                "/tmp/genital11-PMC9159261.txt"
+              ]
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13384956/",
+              "doi": "10.1016/j.bjps.2026.03.005",
+              "access": "Full main narrative, all five tables/footnotes,59 references, five actual main figures and all six supplementary funnel plots read. Screened and not retained for donor rankings.",
+              "cache": [
+                "/tmp/genital11-PMC13384956.xml",
+                "/tmp/genital11-PMC13384956-media/"
+              ],
+              "notes": [
+                "Title/abstract total395 differs from Results407; adverse-event totals differ.",
+                "Figure5 reverses pre/post cellulitis headings; Figure3B Chen/Cheng values and Figure4 Schaverien data disagree with table5.",
+                "Combined techniques excluded; not a BLOOM effectiveness review."
+              ]
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33581761/",
+              "doi": "10.1016/S2468-1253(20)30302-2",
+              "originalReference": 15,
+              "access": "Complete primary indexed abstract and identity read through PubMed web retrieval. Original citation screened; not retained in revised public text.",
+              "notes": [
+                "Gastrointestinal physiology review abstract; does not establish routine bariatric specimen vascular-arcade availability. No full manuscript read."
+              ]
+            }
+          ],
+          "changes": [
+            "Corrected right gastroepiploic/station-4d attribution to publisher-confirmed left gastroepiploic donor; removed routine-specimen salvage assumptions and specific right-pedicle measurements.",
+            "Removed zero additional morbidity, universally best donor, immune-restoration and guaranteed weight-loss reversal claims.",
+            "Removed unsupported ideal-candidate BMI/stage rules, combined-versus-sequential superiority and genital efficacy extrapolation from a single lower-limb case.",
+            "Preserved WISER as breast-cancer arm evidence with 351 randomized and null primary interlimb-volume result; explicitly limited applicability to BLOOM/genital care.",
+            "Screened Shah2026 full review but removed donor rankings because of uncontrolled heterogeneity, inconsistent denominators and figure/table extraction/label defects."
+          ],
+          "unresolved": [
+            "BLOOM full Methods/results, actual two clinical photos and approximately188MB supplementary operative video unread; abstract, publisher preview, references/disclosures and public video description read.",
+            "WISER full protocol and data-sharing supplement not read; main all table texts and actual CONSORT inspected.",
+            "Obesity review actual three figures unread; complete narrative/table/captions/references read.",
+            "Not all 22 original full papers independently reviewed."
+          ],
+          "sourceSha256": "6cc910e96f27a6bb1d26338b013a43f75d4976bd5d5d5a664aee8c840d3afc11",
+          "supportingReport": "reports/2026-09-12/chascip-bloom-source-preparation.md",
+          "peerReview": "Root independently read complete draft and source-preparation report; accepted scoped correction before applying.",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/buried-penis-repair.mdx",
@@ -30074,11 +30756,157 @@
       "title": "CHASCIP \u2014 Charles + Bilateral Lymphatic SCIP Flap (Ciudad)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "be7e83101e00711ecfc296dfb20195299e5ca413ca117ddd2207897d5257f2eb",
-      "reviewRecords": []
+      "sourceSha256": "a87af84050e33f482e9cb4c7c8cd9147cb4dff75fb0b45fd1fbde1f40c6120ee",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/chascip.mdx",
+          "title": "CHASCIP \u2014 Charles + Bilateral Lymphatic SCIP Flap (Ciudad)",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original MDX and all 12 original references read, complete proposed revision read and copied exactly to public source. Full author technical review and consensus separately recorded; CHASCIP index report remains abstract-scoped.",
+          "sources": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12718889/",
+              "access": "Complete author technical review: main text, GLS table, all four captions, all23references and COI read. All four original figure graphics inspected individually. This is an author narrative review, not an independent comparative trial.",
+              "doi": "10.1097/JCMA.0000000000001021",
+              "cache": [
+                "/tmp/scip9-PMC12718889.xml",
+                "/tmp/scip9-PMC12718889.txt",
+                "/tmp/scip9-media/PMC12718889/"
+              ],
+              "notes": [
+                "Sections6.2-6.3 and Figs3-4 preserve inguinal nodes around pedicle and retain deep-fat collectors; distinguish LIFT from routine node-containing LYST.",
+                "Did not adopt unquantified less-than1% tip-necrosis claim, rigid etiology/age categories, or comparative/curative author conclusions."
+              ]
+            },
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40448967/",
+              "doi": "10.1002/micr.70075",
+              "originalReference": 1,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31985539/",
+              "doi": "10.1097/sap.0000000000002263",
+              "originalReference": 2,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/12913680/",
+              "doi": "10.1097/01.ju.0000067625.45000.9e",
+              "originalReference": 3,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34756554/",
+              "doi": "10.1016/j.bjps.2021.08.011",
+              "originalReference": 4,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41677268/",
+              "doi": "10.1097/prs.0000000000012927",
+              "originalReference": 5,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39706138/",
+              "doi": "10.1016/j.bjps.2024.11.052",
+              "originalReference": 6,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/16924318/",
+              "doi": "10.1590/s1807-59322006000400003",
+              "originalReference": 7,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31135508/",
+              "doi": "10.1097/sap.0000000000001875",
+              "originalReference": 9,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36809836/",
+              "doi": "10.1016/j.urology.2023.02.006",
+              "originalReference": 10,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25456280/",
+              "doi": "10.1016/j.bjps.2014.10.003",
+              "originalReference": 11,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38137655/",
+              "doi": "10.3390/jcm12247586",
+              "originalReference": 12,
+              "access": "Complete available primary indexed abstract and identity read. Full manuscript/graphics not read unless separately itemized. Screened original citation; not necessarily retained in revised text.",
+              "cache": "/tmp/genital11-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9301709/",
+              "doi": "10.1016/S0090-4295(97)00259-8",
+              "originalReference": 8,
+              "access": "Complete primary indexed abstract and identity read through PubMed web retrieval. Original citation screened; not retained in revised public text.",
+              "notes": [
+                "Nine-patient genital excision and split-thickness skin graft series; not support for full-thickness grafts. No full manuscript read."
+              ]
+            }
+          ],
+          "changes": [
+            "Removed unverified hypogastric FTSG recipe, fixed deep excision plane and obligatory inguinal-node harvest; distinguished node-preserving lymphatic SCIP from node-containing transfer.",
+            "Removed doubled lymphatic-capacity and penile-lymphatics-unimportant claims, cure and sexual-function guarantees, and unmatched comparisons with other small series.",
+            "Retained eight patients, mean 34-month follow-up, two observed complications and GLS 6.6 to 0.6 as small uncontrolled evidence; no proven comparative superiority.",
+            "Replaced stage-only algorithm with individualized tissue, lymphatic, vascular and conservative-care assessment; added ongoing recipient/donor follow-up."
+          ],
+          "unresolved": [
+            "Full Ciudad2025 operative manuscript, graft donor/thickness, node inclusion, actual figures and any supplementary content not obtained. Removed details are unverified, not asserted to be false.",
+            "Not all original full papers independently reviewed. Clinical verification is scoped and is not clinician sign-off."
+          ],
+          "sourceSha256": "a87af84050e33f482e9cb4c7c8cd9147cb4dff75fb0b45fd1fbde1f40c6120ee",
+          "supportingReport": "reports/2026-09-12/chascip-bloom-source-preparation.md",
+          "peerReview": "Root independently read complete draft and source-preparation report; accepted scoped correction before applying.",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/complete-functional-lymphatic-pedicled-transfer.mdx",
@@ -31302,11 +32130,90 @@
       "title": "Local Skin Flaps for LS Sequelae (Long-Term Outcomes)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "63d411d4faaa78415dc19100ba8b5422b64b6cb2c0f4fe0bd578150ebd9c34c8",
-      "reviewRecords": []
+      "sourceSha256": "6f11d87b7aa3da0785fbc385e0426e2c2ebaf0f93011f05210695dbbc07d07b7",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/local-flaps-ls-sequelae.mdx",
+          "title": "Local Skin Flaps for LS Sequelae",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original MDX read by the assigned reviewer or root; root independently read entire final revision, tables, references and links. Source-specific scope is recorded separately.",
+          "sourceSha256": "6f11d87b7aa3da0785fbc385e0426e2c2ebaf0f93011f05210695dbbc07d07b7",
+          "changes": [
+            "Aligned surgical selection and topical therapy with the 2026 S3 published article.",
+            "Corrected respondent denominators, pain-versus-intercourse outcomes, combined SCC/VIN endpoint and observational interpretation.",
+            "Removed universal relapse rates and mandatory local-flap sequence; preserved individualized maintenance and suspicious-lesion assessment."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1111/ddg.70000",
+              "bibliography": "<a id=\"ref1\"></a>1. Kirtschig G, Woelber L, G\u00fcnthert A, et al. Evidence- and consensus-based guideline on lichen sclerosus. *J Dtsch Dermatol Ges.* 2026;24:566\u2013584. doi:[10.1111/ddg.70000](https://doi.org/10.1111/ddg.70000)",
+              "access": "Complete published 2026 Kirtschig article: front matter, all main text, two numbered tables and recommendation boxes, 127 references and all five actual figures read. This is an abridged guideline; AWMF long version/development/evidence package remains unread.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1016/S0002-9378(97)70078-4",
+              "bibliography": "<a id=\"ref2\"></a>2. Reid R. Local and distant skin flaps in the reconstruction of vulvar deformities. *Am J Obstet Gynecol.* 1997;177(6):1372\u20131383. doi:[10.1016/S0002-9378(97)70078-4](https://doi.org/10.1016/S0002-9378(97)70078-4)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1016/j.jsxm.2016.04.072",
+              "bibliography": "<a id=\"ref3\"></a>3. Brauer M, van Lunsen RH, Laan ET, Burger MP. A qualitative study on experiences after vulvar surgery in women with lichen sclerosus and sexual pain. *J Sex Med.* 2016;13(7):1080\u20131090. doi:[10.1016/j.jsxm.2016.04.072](https://doi.org/10.1016/j.jsxm.2016.04.072)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1016/S1470-2045(08)70147-5",
+              "bibliography": "<a id=\"ref4\"></a>4. H\u00f6ckel M, Dornh\u00f6fer N. Vulvovaginal reconstruction for neoplastic disease. *Lancet Oncol.* 2008;9(6):559\u2013568. doi:[10.1016/S1470-2045(08)70147-5](https://doi.org/10.1016/S1470-2045(08)70147-5)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1016/j.bjps.2016.12.008",
+              "bibliography": "<a id=\"ref5\"></a>5. Rangatchew F, Knudsen J, Thomsen MV, Drzewiecki KT. Surgical treatment of disabling conditions caused by anogenital lichen sclerosus in women: an account of surgical procedures and results, including patient satisfaction, benefits, and improvements in health-related quality of life. *J Plast Reconstr Aesthet Surg.* 2017;70(4):501\u2013508. doi:[10.1016/j.bjps.2016.12.008](https://doi.org/10.1016/j.bjps.2016.12.008)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1067/mob.2002.119186",
+              "bibliography": "<a id=\"ref6\"></a>6. Rouzier R, Haddad B, Deyrolle C, et al. Perineoplasty for the treatment of introital stenosis related to vulvar lichen sclerosus. *Am J Obstet Gynecol.* 2002;186(1):49\u201352. doi:[10.1067/mob.2002.119186](https://doi.org/10.1067/mob.2002.119186)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1016/j.ejogrb.2020.12.030",
+              "bibliography": "<a id=\"ref7\"></a>7. Lauber F, Vaz I, Krebs J, G\u00fcnthert AR. Outcome of perineoplasty and de-adhesion in patients with vulvar lichen sclerosus and sexual disorders. *Eur J Obstet Gynecol Reprod Biol.* 2021;258:38\u201342. doi:[10.1016/j.ejogrb.2020.12.030](https://doi.org/10.1016/j.ejogrb.2020.12.030)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": "10.1001/jamadermatol.2015.0643",
+              "bibliography": "<a id=\"ref8\"></a>8. Lee A, Bradford J, Fischer G. Long-term management of adult vulvar lichen sclerosus: a prospective cohort study of 507 women. *JAMA Dermatol.* 2015;151(10):1061\u20131067. doi:[10.1001/jamadermatol.2015.0643](https://doi.org/10.1001/jamadermatol.2015.0643)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md",
+          "unresolved": [
+            "Retained sources without complete manuscript/figure/supplement access remain pending. Full-page reading and structural checks are not complete clinical verification."
+          ],
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis.mdx",
@@ -32136,11 +33043,83 @@
       "title": "Penile Primary Closure \u00b1 Z-Plasty",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "1fef9d77987609ae3f1425c7221781e778272a50d4815632481471966abec51a",
-      "reviewRecords": []
+      "sourceSha256": "7543e481ec6e2331910dd4af1a9a02792b841c66917ec575d7773223b28d258a",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/penile-primary-closure.mdx",
+          "title": "Penile Primary Closure \u00b1 Z-Plasty",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original MDX read by the assigned reviewer or root; root independently read entire final revision, tables, references and links. Source-specific scope is recorded separately.",
+          "sourceSha256": "7543e481ec6e2331910dd4af1a9a02792b841c66917ec575d7773223b28d258a",
+          "changes": [
+            "Distinguished skin closure, rearrangement, fixation, degloving and grafting; preserved healthy available skin.",
+            "Removed universal pharmacologic-erection and tadalafil regimen extrapolated from four graft cases.",
+            "Corrected geometric versus penile lengthening and pediatric outcome scope."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.21037/tau.2018.05.06",
+              "bibliography": "<a id=\"ref1\"></a>1. Ho TS, Gelman J. Evaluation and management of adult acquired buried penis. *Transl Androl Urol.* 2018;7(4):618\u2013627. doi:[10.21037/tau.2018.05.06](https://doi.org/10.21037/tau.2018.05.06)",
+              "access": "Complete Ho/Gelman 2018 main, disclosures, 22 bibliography entries and all seven actual figures read.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": null,
+              "bibliography": "<a id=\"ref2\"></a>2. Salam GA, Amin JP. The basic Z-plasty. *Am Fam Physician.* 2003;67(11):2329\u20132332. [Full article](https://www.aafp.org/pubs/afp/issues/2003/0601/p2329.html)",
+              "access": "Complete AAFP 2003 main, three references and all figure captions read; actual diagrams not separately inspected. Only geometry and basic rearrangement principles used.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1097/PRS.0000000000002519",
+              "bibliography": "<a id=\"ref3\"></a>3. Tausch TJ, Tachibana I, Siegel JA, et al. Classification system for individualized treatment of adult buried penis syndrome. *Plast Reconstr Surg.* 2016;138(3):703\u2013711. doi:[10.1097/PRS.0000000000002519](https://doi.org/10.1097/PRS.0000000000002519)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1097/01.ju.0000107824.72182.95",
+              "bibliography": "<a id=\"ref4\"></a>4. Frenkl TL, Agarwal S, Caldamone AA. Results of a simplified technique for buried penis repair. *J Urol.* 2004;171(2 Pt 1):826\u2013828. doi:[10.1097/01.ju.0000107824.72182.95](https://doi.org/10.1097/01.ju.0000107824.72182.95)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1016/j.bjps.2012.04.020",
+              "bibliography": "<a id=\"ref5\"></a>5. Iblher N, Fritsche HM, Katzenwadel A, et al. Refinements in reconstruction of penile skin loss using intra-operative prostaglandin injections, postoperative tadalafil application and negative pressure dressings. *J Plast Reconstr Aesthet Surg.* 2012;65(10):1377\u20131383. doi:[10.1016/j.bjps.2012.04.020](https://doi.org/10.1016/j.bjps.2012.04.020)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1016/j.urology.2020.01.021",
+              "bibliography": "<a id=\"ref6\"></a>6. Manasherova D, Kozyrev G, Gazimiev M. Buried penis surgical correction: midline incision rotation flaps. *Urology.* 2020;138:174\u2013178. doi:[10.1016/j.urology.2020.01.021](https://doi.org/10.1016/j.urology.2020.01.021)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1016/j.urology.2025.06.011",
+              "bibliography": "<a id=\"ref7\"></a>7. \u00c1lvarez Vega DR, Mendelson JL, Gitlin JS, Joshi P, Hanna MK. Optimizing pediatric genital reconstruction: the role of Z-plasty in enhancing aesthetic and functional outcomes. *Urology.* 2025. doi:[10.1016/j.urology.2025.06.011](https://doi.org/10.1016/j.urology.2025.06.011)",
+              "access": "Complete indexed abstract read; full manuscript, actual figures and supplements remain outstanding.",
+              "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/genital-closure-ls-source-review.md",
+          "unresolved": [
+            "Retained sources without complete manuscript/figure/supplement access remain pending. Full-page reading and structural checks are not complete clinical verification."
+          ],
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx",

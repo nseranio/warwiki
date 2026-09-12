@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twelfth continuation: pelvic anatomy, grafts and genital reconstruction
+
+Revised nine full pages: Martius flap, bony/presacral anatomy, rectus/fascia lata grafts, CHASCIP, BLOOM, penile primary closure and LS local flaps. Corrected pedicle and fixation anatomy, unsafe preset distances, flap/graft conflations, cohort denominators and unsupported efficacy guarantees. Integrated the published 2026 LS guideline article and a narrowly scoped localized-chordoma consensus update. Complete mains, actual graphics, selected guideline sections and unresolved full-text access are individually logged.
+
+Fixed citation-preview overflow after viewport resizing: hidden previews no longer occupy layout, and resize dismisses stale previews. Added browser regression coverage.
+
+Ledger: 634 current full MDX reads, 607 scoped updates across 1,186 files. Lint/typecheck, 32 component and 51 maintenance tests pass. Build 132.02 MB; all 97,679 compiled links/assets and 722 data links pass. All nine routes, citation anchors, mobile layouts and a keyboard/resize tooltip regression pass; 18 screenshots inspected. Publication verification follows in the [twelfth release record](reports/2026-09-12/twelfth-continuation-release.md). No whole-site clinical clearance is asserted; continue after this checkpoint.
+
+---
+
 ## 2026-09-12 — Eleventh continuation: vascular control, exposure and anatomy
 
 Revised three full articles, correcting unsafe or unsupported hemorrhage rules, anatomical errors, procedure conflations and citation identities. Integrated major trauma trials through 2026, ESVS 2025, WHO 2025 postpartum source-control guidance and a narrowly applied 2026 fascial terminology consensus. Complete main papers, actual figures, supplements and limited-access sources are recorded individually; no whole-site clinical clearance is claimed.

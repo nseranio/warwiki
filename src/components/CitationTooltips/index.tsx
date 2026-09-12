@@ -101,6 +101,7 @@ export default function CitationTooltips(): null {
     const hide = () => {
       tooltip!.classList.remove(styles.visible);
       tooltip!.setAttribute('aria-hidden', 'true');
+      tooltip!.style.visibility = '';
     };
 
     // Citations on WARWIKI: <sup><a href="#refN">[N]</a></sup>
@@ -115,7 +116,11 @@ export default function CitationTooltips(): null {
       a.addEventListener('blur', hide);
     });
 
+    // A preview's document coordinates become stale when the viewport changes.
+    window.addEventListener('resize', hide);
+
     return () => {
+      window.removeEventListener('resize', hide);
       citations.forEach((a) => {
         a.removeEventListener('mouseenter', show);
         a.removeEventListener('mouseleave', hide);
