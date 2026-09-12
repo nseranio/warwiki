@@ -8,6 +8,8 @@ For commit-level detail run `git log --oneline`.
 
 ## 2026-09-12 — Broader clinical review and high-impact corrections
 
+Published as `c4d3f30a`; CI 34676588480 and Vercel succeeded. All 170 changed documentation routes passed browser checks, and direct production content checks passed. Subsequent authoring-only notes do not require another site build.
+
 Corrected **170 documentation pages** in the next whole-site review batch. The cumulative ledger now records **293 full source-text reads and 275 scoped updated pages across 1,186 documentation files**. All 73 clinical-condition pages, all 98 urethral/upper-tract pages and all 17 trauma pages have full reads recorded. Review remains incomplete; full source-page reading does not mean every cited paper was available in full text.
 
 Corrections include trauma safety and units, urethral/upper-tract anatomy and outcomes, erroneous citation identities, pharmacology label/indication and trial interpretation, urine/renal workup, inflammatory nutrition markers, GLIM/AWGS/EWGSOP criteria, and KDIGO 2026 iron thresholds. Added the FDA September 1 Injectafer hypophosphatemia boxed warning and corrected IV iron dosing and overpromised perioperative benefits using PREVENTT. Full paper/chapter reads, targeted guideline sections and inaccessible sources are documented separately in the domain ledgers.

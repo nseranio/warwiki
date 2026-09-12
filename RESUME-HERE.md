@@ -4,9 +4,9 @@
 
 ## Current work and publication
 
-The September 12 continuation batch changes **170 documentation files**. The [release record](reports/2026-09-12/continuation-release.md) tracks exact validation and publication status. Before this batch, the verified live site commit was `b8b60a0e`, with notes through `4728ae3c`; do not assume the new batch is live until remote verification is recorded.
+The September 12 continuation batch changes **170 documentation files**. The [release record](reports/2026-09-12/continuation-release.md) tracks exact validation and publication status. **Live site commit is `c4d3f30a`**, with CI 34676588480 and commit-specific Vercel deployment status both successful. Five production pages and the removed `/clinic` route were checked directly. The prior site commit was `b8b60a0e`.
 
-Local validation for the new batch: full lint, typecheck, 32 component tests, 50 maintenance tests and production build passed. Build is **139.22 MB**; all 101,564 compiled local links/assets and 731 data-link literals passed. Browser and publication evidence is appended to the release record when completed.
+Local validation for the new batch: full lint, typecheck, 32 component tests, 50 maintenance tests and production build passed. Build is **139.22 MB**; all 101,564 compiled local links/assets and 731 data-link literals passed. All 170 changed documentation routes passed browser checks. Browser and publication evidence is saved in the release record.
 
 ## Review coverage and next work
 
@@ -20,7 +20,7 @@ The [central ledger](reports/2026-09-11/full-site-review/README.md) contains eve
 - Remaining foundations, imported History biographies/data, resources, journal club, source pages and clinical data still need actual reads and substantive review. Targeted corrections do not clear whole pages.
 - Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube 13%/58% figures belong to the 1998 66-patient report (7/54 vs 7/12), not the original 1993 paper. Coordinate disjoint edits.
 
-The three agents temporarily froze tracked source/ledger edits during validation while doing read-only research in `/tmp`. Explicitly release the freeze after committing the current batch, then continue. Do not lose their pending research or overwrite others' files.
+The temporary release freeze has been **released**; all three agents resumed tracked corrections after commit. Their new source edits are the next batch. Do not overwrite them or confuse the current working tree with the published release.
 
 ## Evidence and saved material
 

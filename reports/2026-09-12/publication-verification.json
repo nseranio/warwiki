@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-09-12T05:53:38.093575+00:00",
+  "sourceCommit": "c4d3f30a7abda04637bb063dc80185732cd797b8",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "c4d3f30a7abda04637bb063dc80185732cd797b8",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34676588480"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/9tmgsuM2AuhzQCFv5w55C8FyeZVG",
+      "updated_at": "2026-09-12T05:51:58Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {},
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/evaluation/laboratory-studies/nutritional-assessment/iron-ferritin",
+      "finalUrl": "https://www.warwiki.org/docs/evaluation/laboratory-studies/nutritional-assessment/iron-ferritin",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "September 1, 2026": true,
+        "PREVENTT": true,
+        "KDIGO 2026": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/evaluation/laboratory-studies/preoperative-labs",
+      "finalUrl": "https://www.warwiki.org/docs/evaluation/laboratory-studies/preoperative-labs",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "against postponing surgery": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/evaluation/laboratory-studies/nutritional-assessment/handgrip-strength",
+      "finalUrl": "https://www.warwiki.org/docs/evaluation/laboratory-studies/nutritional-assessment/handgrip-strength",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "AWGS 2025": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/clinical-conditions/03i-defecatory-disorders/defecatory-dysfunction",
+      "finalUrl": "https://www.warwiki.org/docs/clinical-conditions/03i-defecatory-disorders/defecatory-dysfunction",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Rome V (2026)": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {},
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "The direct Vercel API returned 403 Not authorized with the saved CLI credential. GitHub commit-specific Vercel status and direct production content passed. A fresh alias, retention and storage inventory was unavailable in this pass."
+}
