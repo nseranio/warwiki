@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-09-12T19:16:57.487Z",
+  "sourceBaseCommit": "1dad1e5fa344fd0078da3b7fca72b8073e453272",
+  "scope": "Two changed documentation routes, actual citation-anchor clicks, desktop/mobile overflow and horizontal table scrolling on local production build. Clinical/source review is separate.",
+  "results": [
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/heaney",
+      "checks": {
+        "http200": true,
+        "Heaney-Ballantine": true,
+        "19 comparative": true,
+        "37 mL": true,
+        "retained pedicle": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/masterson",
+      "checks": {
+        "http200": true,
+        "straight and curved patterns": true,
+        "25.5 cm": true,
+        "6,811": true,
+        "did not differ significantly": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/heaney",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twentieth-desktop-0.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/heaney",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twentieth-mobile-0.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/masterson",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-twentieth-desktop-1.png"
+    },
+    {
+      "route": "/docs/foundations/tools/instruments/clamps/masterson",
+      "viewport": 390,
+      "path": "/tmp/warwiki-twentieth-mobile-1.png"
+    }
+  ]
+}

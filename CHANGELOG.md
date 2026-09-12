@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twentieth continuation: hysterectomy clamps and database consistency
+
+Corrected Heaney and Masterson geometry, pedicle handling, ureteral safety and route-versus-device evidence. Added the 2024 SGS vaginal-technology systematic review with narrow source-supported findings. Aligned eleven instrument-database rows with their reviewed children. Three complete source mains, 18 actual journal figures, five society-PDF pages and three actual catalog pages read/inspected; all 20 inherited citations preserved with exact remaining access/read scopes.
+
+Lint/typecheck/build and article/database desktop/mobile checks pass. Output: 131.60 MB. Ledger: 659 full current MDX reads and 632 scoped updates. See the [twentieth release record](reports/2026-09-12/twentieth-continuation-release.md). The recovered full Cochrane manuscript and 51-page SGS supplement still have substantial unfinished reading; continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Nineteenth continuation: gracilis and instrument reliability
 
 Completed gracilis, Backhaus, Mixter and Gemini. Corrected pedicled/free harvest distinctions, anatomy, first versus final closure, cohort denominators, staged graft timing, donor-risk comparisons, penetrating clamp classification and unsafe generic instrument uses. Six complete gracilis source mains and 22 actual figures were checked, alongside three society documents and four actual manufacturer catalog pages. Remaining full-text and supplement gaps stay explicit in the two source registers, preserving 76 inherited references.
