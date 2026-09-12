@@ -4,16 +4,16 @@
 
 ## Current work and publication
 
-The tenth September12 batch revises **12documentation pages** across closure/access, biological grafts, genital lymphatic techniques and perioperative care. Lint/typecheck,32component tests,51maintenance tests and production build pass: **132.42MB**,97,898compiled links/assets and722data links. All12routes and three interaction tests pass. Published as5024e443; exact-commit CI/Vercel and six live checks passed. See the [current release record](reports/2026-09-12/tenth-continuation-release.md).
+The eleventh September 12 batch revises **three documentation pages**: vascular management, exposure and pelvic vascular anatomy. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **132.32 MB**, 97,856 compiled links/assets and 722 data links. Three routes, reference anchors and mobile tables pass; six screenshots inspected. Publication verification pending in the [current release record](reports/2026-09-12/eleventh-continuation-release.md).
 
 ## Review coverage and next work
 
-The ledger contains **1,186documentation files**: **622**full current reads, **595**scoped updates,21checked,11unresolved and559unreviewed. No complete clinical clearance is asserted. Tools86/231; all44fistula originals read; genital25pages. All15assigned perioperative pages are corrected and read.
+The ledger contains **1,186 documentation files**: **625** full current reads, **598** scoped updates, 21 checked, 11 unresolved and 556 unreviewed. No complete clinical clearance is asserted. Tools 86/231; all 44 fistula originals read; genital 25 pages. All 15 assigned perioperative pages are corrected and read.
 
-- `auth_handoff`: three biological pages corrected; all136PREPARE protocol pages independently read. Current task: full TOWAR/SWiFT2026 trials and accessible supplements, then remaining tools.
-- `operative_review`: LYST and Abdelfattah transfer corrected; all114OPTIMISEII supplement pages independently read. Current task: full UK-REBOA main/supplements, then remaining genital techniques.
-- `workflow_readiness`: all15perioperative pages corrected and read; exact source boundaries logged. Current task: full59-page ESVS2025 vascular-trauma guideline.
-- Root: closure/access and landing final-read and independently checked. Current task: vascular damage control/exposure; both originals and52available indexed abstracts read. Entire European trauma-bleeding2023 main and allfour supplements read. Continue remaining foundations/anatomy, resources/History/imported content, clinical data and OpenEvidence reconciliation.
+- `auth_handoff`: exposure and both 2026 whole-blood trials completed; next bowel-segment and fascia graft pages. New drafts stay outside docs during publication freeze.
+- `operative_review`: complete UK-REBOA, PROCOAG supplements and FiiRST-2 protocol; original Cochrane damage-control review/currentness also complete; next genital techniques. CHASCIP/BLOOM drafts and source limits are in reports, not public docs.
+- `workflow_readiness`: complete ESVS main and selected WHO treatment/annex scope; independently reviewed pelvic vascular anatomy and final obstetric branch. Next presacral and bony pelvic anatomy; originals read, significant corrections/source work pending.
+- Root: all three current pages final-read, logged and validated. Continue remaining foundations, resources/History/imported content, clinical data and OpenEvidence reconciliation after publication.
 
 Each publication batch is a checkpoint within the continuing task. Read source text and accessible primary reports; log inaccessible full papers and unread figures/supplements. Do not turn a full MDX read or passing site checks into clinical certification.
 
@@ -30,6 +30,6 @@ Evidence maintenance is **quarterly: March, June, September, December**, next De
 
 Standing authorization: validate, commit/push completed changes to `main/origin/main`, then verify CI, Vercel and live content. Sign-ins are complete. Group related changes to limit deployments. Keep temporary source PDFs and large research downloads outside the repository.
 
-Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 132.42 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
+Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 132.32 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
 
 Preserve unrelated `world-cup-next-week-pacific.ics`. Clinic and quiz stay removed. History stays discreet. Handouts stay recoverable but excluded from builds. Keep public metadata to ordinary page last-updated; detailed review notes stay internal. Never invent clinical sign-off.

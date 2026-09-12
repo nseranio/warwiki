@@ -1,0 +1,11 @@
+# Vaginal malignant bleeding: complete Cochrane review read
+
+Root read the complete 107,278-character primary PMC HTML for [Eleje et al., CD011000.pub3](https://doi.org/10.1002/14651858.CD011000.pub3), PMC6423555: all main text, 22 excluded-study descriptions, all four appendices (including search strategies), proposed future analysis methods, all bibliography entries, declarations and the actual sole PRISMA graphic. No separate supplemental download was listed. Bibliography reading is not independent reading of all cited papers.
+
+The actual findings are no eligible controlled comparisons with radiotherapy; narrative single-arm reports were excluded and rated critically vulnerable to bias. The 2019 review's main search ended March 2018. Its later What's New entry records a March 17, 2021 scoping search with no eligible studies and marks the review stable in November 2021. This is not a fresh September 2026 systematic search.
+
+The original site's routine four-percent formalin recipe and blanket antibiotic rule overstate the evidence. The review's claim of no toxicity at that concentration cites a radiation-proctitis paper, not a controlled vaginal-tumor safety trial. Its description of formalin composition conflates formaldehyde-releasing agents; it should not be copied as chemistry or prescribing guidance. The five-patient formaldehyde series does not establish cervical-cancer efficacy or safety; none of its patients had cervical cancer. The review itself recommends attention to patient goals and local resources, not equivalence of treatments.
+
+Source identity issues: abstract calls 1,522 references unique, whereas results and actual flow correctly show 1,522 retrieved and 1,352 after deduplication; 1,330 excluded plus 22 full texts reconciles. Narrative assigns Grigsby2002 to embolization and cites Yanazume2013a for absence of embolization complications, although excluded-study table identifies cervical-ring radiotherapy and a Mohs-paste case respectively. These errors must not populate WARWIKI treatment-effect claims. No pooled effect or forest plot exists because zero comparative studies were included.
+
+Source SHA-256: `335e085c1c51e592c46bccda16039f4216755b97ad3e7fc1ea973293750875ef`. Local cache: `/tmp/vascular11-vaginal-cochrane.html`.

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T12:39:48.697679+00:00",
+  "generatedAt": "2026-09-12T13:07:36.813316+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 622,
+    "fullTextReadForCurrentContent": 625,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 11,
-      "unreviewed": 559,
-      "updated": 595
+      "unreviewed": 556,
+      "updated": 598
     }
   },
   "pages": [
@@ -270,11 +270,100 @@
       "title": "Pelvic Vascular Anatomy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "43df263d7837ceeb9dbc599f03dd271254de330f7a260e58c10e3d670917c42a",
-      "reviewRecords": []
+      "sourceSha256": "4669ecd93ac18faab23b84fbded8c5146094aed5141f17e79fcfeb841ba82e42",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy.mdx",
+          "title": "Pelvic Vascular Anatomy",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and final current MDX including tables,references and links actually read. Independent bounded peer review completed; source-specific limits retained.",
+          "sourceSha256": "4669ecd93ac18faab23b84fbded8c5146094aed5141f17e79fcfeb841ba82e42",
+          "changes": [
+            "Corrected named arterial routes,pudendal/Martius supply,ureter safety and corona mortis definitions/denominators.",
+            "Corrected venous valves/communications,arterial versus venous embolization,presacral bleeding and iliac tributary claims.",
+            "Replaced unverified surgical lymphadenectomy template with bounded current EAU regional drainage orientation.",
+            "Removed misleading small-study extrapolations and repaired bibliography identities."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1016/j.ejvs.2024.12.018",
+              "bibliography": "<a id=\"ref1\"></a>1. Wahlgren CM, Aylwin C, Davenport RA, et al. European Society for Vascular Surgery (ESVS) 2025 clinical practice guidelines on the management of vascular trauma. *Eur J Vasc Endovasc Surg.* 2025;69:179\u2013237. doi:[10.1016/j.ejvs.2024.12.018](https://doi.org/10.1016/j.ejvs.2024.12.018).",
+              "access": "Complete59-page main,105recommendations,12tables,505references and all6actual figures read. AppendixA/evidence tables inaccessible; not complete package.",
+              "sourceReport": "reports/2026-09-12/esvs-vascular-trauma-source-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1055/s-0031-1281481",
+              "bibliography": "<a id=\"ref2\"></a>2. Yavagal S, de Farias TF, Medina CA, Takacs P. Normal vulvovaginal, perineal, and pelvic anatomy with reconstructive considerations. *Semin Plast Surg.* 2011;25:121\u2013129. doi:[10.1055/s-0031-1281481](https://doi.org/10.1055/s-0031-1281481).",
+              "access": "Complete main,32references and all4actual figures read. Used for stable anatomy; historical clinical recommendations not adopted.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.14740/jocmr4062",
+              "bibliography": "<a id=\"ref3\"></a>3. Noussios G, Galanis N, Chatzis I, et al. The anatomical characteristics of corona mortis: a systematic review of the literature and its clinical importance in hernia repair. *J Clin Med Res.* 2020;12:108\u2013114. doi:[10.14740/jocmr4062](https://doi.org/10.14740/jocmr4062).",
+              "access": "Complete main,both tables,24references and all5actual figures read. Hemipelvis denominator and source errors documented.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.21037/tau.2017.04.38",
+              "bibliography": "<a id=\"ref4\"></a>4. Wilson A, Pillay S, Greenwell T. How and why to take a Martius labial interposition flap in female urology. *Transl Androl Urol.* 2017;6(Suppl 2):S81\u2013S87. doi:[10.21037/tau.2017.04.38](https://doi.org/10.21037/tau.2017.04.38).",
+              "access": "Complete main,35references and all13actual operative/follow-up photographs read. Expert technique source; observational outcomes not proof of benefit.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1148/rg.220012",
+              "bibliography": "<a id=\"ref5\"></a>5. Zurcher KS, Staack SO, Spencer EB, et al. Venous anatomy and collateral pathways of the pelvis: an angiographic review. *Radiographics.* 2022;42:1532\u20131545. doi:[10.1148/rg.220012](https://doi.org/10.1148/rg.220012).",
+              "access": "Complete14-page main,table,49references and17actual figures/allpanels read. Separate publisher supplement inventory unverified.",
+              "sourceReport": "reports/2026-09-12/pelvic-venous-source-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1016/j.ajog.2006.07.045",
+              "bibliography": "<a id=\"ref6\"></a>6. Wieslander CK, Rahn DD, McIntire DD, et al. Vascular anatomy of the presacral space in unembalmed female cadavers. *Am J Obstet Gynecol.* 2006;195:1736\u20131741. doi:[10.1016/j.ajog.2006.07.045](https://doi.org/10.1016/j.ajog.2006.07.045).",
+              "access": "Complete indexed abstract and source identity read; main methods,figures,supplements pending.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1097/DCR.0000000000001335",
+              "bibliography": "<a id=\"ref7\"></a>7. Kanjanasilp P, Ng JL, Kajohnwongsatit K, et al. Anatomical variations of iliac vein tributaries and their clinical implications during complex pelvic surgeries. *Dis Colon Rectum.* 2019;62:809\u2013814. doi:[10.1097/DCR.0000000000001335](https://doi.org/10.1097/DCR.0000000000001335).",
+              "access": "Complete indexed abstract and source identity read; main methods,figures,supplements pending.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": null,
+              "bibliography": "<a id=\"ref8\"></a>8. European Association of Urology. *Penile cancer guideline.* 2026. [Regional lymphatic drainage and management](https://uroweb.org/guidelines/penile-cancer/chapter/disease-management).",
+              "access": "Current official regional drainage paragraphs with surrounding context read; not entire guideline or all antecedent studies.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-peer-review.md"
+            },
+            {
+              "ref": 9,
+              "doi": null,
+              "bibliography": "<a id=\"ref9\"></a>9. European Association of Urology. *Primary urethral carcinoma guideline.* 2026. [Diagnostic evaluation and staging](https://uroweb.org/guidelines/primary-urethral-carcinoma/chapter/diagnostic-evaluation-and-staging).",
+              "access": "Current official regional drainage paragraphs with surrounding context read; not entire guideline or all antecedent studies.",
+              "sourceReport": "reports/2026-09-12/pelvic-vascular-peer-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/pelvic-vascular-anatomy-review.md",
+          "originalSourceInventory": "reports/2026-09-12/pelvic-vascular-original-source-access.json",
+          "unresolved": [
+            "Full retained historical sources and listed inaccessible supplements remain unresolved. Review is not complete clinical certification."
+          ],
+          "peerReview": "Root fully reread final pages; independent vascular and anatomy/WHO reviews identify exact hashes and primary-source scope.",
+          "recordFile": "vascular-exposure.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/perineum.mdx",
@@ -6891,11 +6980,134 @@
       "title": "Operative Exposure",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "6de29023b47a5ced4c2377bb965ba3db0582526791812fad14d7f08f9b8c2221",
-      "reviewRecords": []
+      "sourceSha256": "9fc898564a8a4ec15578d81f6f94e2a73953f2e12501bfe97afaf934bcfe19ed",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/exposure.mdx",
+          "title": "Operative Exposure",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and final current MDX including tables,references and links actually read. Independent bounded peer review completed; source-specific limits retained.",
+          "sourceSha256": "9fc898564a8a4ec15578d81f6f94e2a73953f2e12501bfe97afaf934bcfe19ed",
+          "changes": [
+            "Corrected positioning,retractor classifications,vaginal/perineal operation distinctions and unsupported fixed safety rules.",
+            "Corrected Kocher/right/left visceral mobilization and renal fascial planes; integrated narrowly scoped2026 JSES consensus.",
+            "Corrected historic cohort denominators and replaced always/never hematoma zones with ESVS2025 physiology criteria."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1097/ALN.0000000000001937",
+              "bibliography": "<a id=\"ref1\"></a>1. American Society of Anesthesiologists Task Force. \u201cPractice Advisory for the Prevention of Perioperative Peripheral Neuropathies 2018.\u201d *Anesthesiology.* 2018;128:11\u201326. doi:[10.1097/ALN.0000000000001937](https://doi.org/10.1097/ALN.0000000000001937).",
+              "access": "Complete relevant lower-extremity positioning subsection read; not entire ASA advisory or all supplements.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1097/SPV.0000000000000846",
+              "bibliography": "<a id=\"ref2\"></a>2. American Urogynecologic Society and International Urogynecological Association Joint Writing Group. \u201cJoint Report on Terminology for Surgical Procedures to Treat Pelvic Organ Prolapse.\u201d *Female Pelvic Med Reconstr Surg.* 2020;26:173\u2013201. doi:[10.1097/SPV.0000000000000846](https://doi.org/10.1097/SPV.0000000000000846). [Society document](https://www.augs.org/wp-content/uploads/2025/04/Joint_Report_on_Terminology_for_Surgical.3.pdf).",
+              "access": "Selected complete procedure/terminology passages read; not entire29-page report,figures or references.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1016/j.amjsurg.2012.10.036",
+              "bibliography": "<a id=\"ref3\"></a>3. Showalter SL, Kelz RR, Mahmoud NN. \u201cEffect of technique on postoperative perineal wound infections in abdominoperineal resection.\u201d *Am J Surg.* 2013;206:80\u201385. doi:[10.1016/j.amjsurg.2012.10.036](https://doi.org/10.1016/j.amjsurg.2012.10.036).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1097/PRS.0000000000011137",
+              "bibliography": "<a id=\"ref4\"></a>4. Shahzad F, Ray E. \u201cPelvic and perineal reconstruction.\u201d *Plast Reconstr Surg.* 2024;154:803e\u2013816e. doi:[10.1097/PRS.0000000000011137](https://doi.org/10.1097/PRS.0000000000011137).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1016/s0022-5347(17)38805-5",
+              "bibliography": "<a id=\"ref5\"></a>5. Peters CA, Hendren WH. \u201cSplitting the pubis for exposure in difficult reconstructions for incontinence.\u201d *J Urol.* 1989;142:527\u2013531. doi:[10.1016/s0022-5347(17)38805-5](https://doi.org/10.1016/s0022-5347(17)38805-5).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1016/s0022-5347(17)35331-4",
+              "bibliography": "<a id=\"ref6\"></a>6. Marsh CL, Lange PH. \u201cApplication of liver transplant and organ procurement techniques to difficult upper abdominal urological cases.\u201d *J Urol.* 1994;151:1652\u20131656. doi:[10.1016/s0022-5347(17)35331-4](https://doi.org/10.1016/s0022-5347(17)35331-4).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1111/j.1442-2042.2006.01477.x",
+              "bibliography": "<a id=\"ref7\"></a>7. Orikasa S, Kanbe K, Shirai S, et al. \u201cMidline extraperitoneal approach to upper urinary tract surgery: anatomical basis of surgical technique.\u201d *Int J Urol.* 2006;13:1150\u20131153. doi:[10.1111/j.1442-2042.2006.01477.x](https://doi.org/10.1111/j.1442-2042.2006.01477.x).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": "10.1089/end.2020.0175",
+              "bibliography": "<a id=\"ref8\"></a>8. Sato M, Kaiho Y, Kawamorita N, et al. \u201cRetroperitoneal laparoscopic approach to ureteral primary and reoperative ureteral reconstructive surgery: a case series.\u201d *J Endourol.* 2021;35:828\u2013834. doi:[10.1089/end.2020.0175](https://doi.org/10.1089/end.2020.0175).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 9,
+              "doi": "10.1111/ases.70348",
+              "bibliography": "<a id=\"ref9\"></a>9. Watanabe J, Shinohara H, Obama K, et al. \u201cStandardizing Upper Abdominal Fascial Terminology: A Transdisciplinary Expert Consensus From the Japanese Society for Endoscopic Surgery.\u201d *Asian J Endosc Surg.* 2026;19:e70348. doi:[10.1111/ases.70348](https://doi.org/10.1111/ases.70348). [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC13351518/).",
+              "access": "Complete main,consensus table,37references and both actual multi-panel figures read. No separate supplement identified.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 10,
+              "doi": "10.1136/tsaco-2016-000015",
+              "bibliography": "<a id=\"ref10\"></a>10. Kobayashi LM, Costantini TW, Hamel MG, Dierksheide JE, Coimbra R. \u201cAbdominal vascular trauma.\u201d *Trauma Surg Acute Care Open.* 2016;1:e000015. doi:[10.1136/tsaco-2016-000015](https://doi.org/10.1136/tsaco-2016-000015). [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC5891707/).",
+              "access": "Complete main,table,66references and all7actual operative images read. Historical recommendations subordinated to current guidance.",
+              "sourceReport": "reports/2026-09-12/abdominal-pelvic-trauma-source-review.md"
+            },
+            {
+              "ref": 11,
+              "doi": "10.1016/j.ejvs.2024.12.018",
+              "bibliography": "<a id=\"ref11\"></a>11. Wahlgren CM, Aylwin C, Davenport RA, et al. \u201cEditor's Choice \u2014 European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Vascular Trauma.\u201d *Eur J Vasc Endovasc Surg.* 2025;69:179\u2013237. doi:[10.1016/j.ejvs.2024.12.018](https://doi.org/10.1016/j.ejvs.2024.12.018). Sections 1.6 and 5.1\u20135.3, recommendations 61\u201363.",
+              "access": "Complete59-page main,105recommendations,12tables,505references and all6actual figures read. AppendixA/evidence tables inaccessible; not complete package.",
+              "sourceReport": "reports/2026-09-12/esvs-vascular-trauma-source-review.md"
+            },
+            {
+              "ref": 12,
+              "doi": "10.1016/s0741-5214(94)70065-6",
+              "bibliography": "<a id=\"ref12\"></a>12. Reilly LM, Ramos TK, Murray SP, Cheng SW, Stoney RJ. \u201cOptimal exposure of the proximal abdominal aorta: a critical appraisal of transabdominal medial visceral rotation.\u201d *J Vasc Surg.* 1994;19:375\u2013389. doi:[10.1016/s0741-5214(94)70065-6](https://doi.org/10.1016/s0741-5214(94)70065-6).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 13,
+              "doi": "10.1016/j.eururo.2008.12.038",
+              "bibliography": "<a id=\"ref13\"></a>13. Ciancio G, Vaidya A, Shirodkar S, et al. \u201cEn bloc mobilization of the pancreas and spleen to facilitate resection of large tumors, primarily renal and adrenal, in the left upper quadrant of the abdomen: techniques derived from multivisceral transplantation.\u201d *Eur Urol.* 2009;55:1106\u20131111. doi:[10.1016/j.eururo.2008.12.038](https://doi.org/10.1016/j.eururo.2008.12.038).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            },
+            {
+              "ref": 14,
+              "doi": "10.1097/00006250-199406000-00032",
+              "bibliography": "<a id=\"ref14\"></a>14. Benedetti-Panici P, Maneschi F, Scambia G, Mancuso S. \u201cA new transabdominal approach to the left retroperitoneum for systematic removal of lymph nodes left of the aorta in gynecologic malignancies.\u201d *Obstet Gynecol.* 1994;83:1060\u20131064. doi:[10.1097/00006250-199406000-00032](https://doi.org/10.1097/00006250-199406000-00032).",
+              "access": "Entire available original indexed abstract and source identity read; full main,tables,figures and supplements remain pending.",
+              "sourceReport": "reports/2026-09-12/exposure-final-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/exposure-final-review.md",
+          "originalSourceInventory": "reports/2026-09-12/vascular-exposure-original-source-access.json",
+          "unresolved": [
+            "Full retained historical sources and listed inaccessible supplements remain unresolved. Review is not complete clinical certification."
+          ],
+          "peerReview": "Root fully reread final pages; independent vascular and anatomy/WHO reviews identify exact hashes and primary-source scope.",
+          "recordFile": "vascular-exposure.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/anterolateral-thigh.mdx",
@@ -7981,13 +8193,13 @@
             },
             {
               "ref": 3,
-              "doi": "10.1016/s0022-5347(17",
+              "doi": "10.1016/s0022-5347(17)43472-0",
               "bibliography": "3. Orland SM, Snyder HM, Duckett JW. \"The Dorsal Lumbotomy Incision in Pediatric Urological Surgery.\" *J Urol.* 1987;138(4 Pt 2):963\u20136. doi:[10.1016/s0022-5347(17)43472-0](https://doi.org/10.1016/s0022-5347(17)43472-0)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
             {
               "ref": 4,
-              "doi": "10.1016/s0022-5347(17",
+              "doi": "10.1016/s0022-5347(17)55369-0",
               "bibliography": "4. Novick AC. \"Posterior Surgical Approach to the Kidney and Ureter.\" *J Urol.* 1980;124(2):192\u20135. doi:[10.1016/s0022-5347(17)55369-0](https://doi.org/10.1016/s0022-5347(17)55369-0)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
@@ -7999,7 +8211,7 @@
             },
             {
               "ref": 6,
-              "doi": "10.1016/S0140-6736(15",
+              "doi": "10.1016/S0140-6736(15)60459-7",
               "bibliography": "6. Deerenberg EB, Harlaar JJ, Steyerberg EW, et al. \"Small Bites Versus Large Bites for Closure of Abdominal Midline Incisions (STITCH): A Double-Blind, Multicentre, Randomised Controlled Trial.\" *Lancet.* 2015;386(10000):1254\u201360. doi:[10.1016/S0140-6736(15)60459-7](https://doi.org/10.1016/S0140-6736(15)60459-7)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
@@ -8202,7 +8414,7 @@
             },
             {
               "ref": 14,
-              "doi": "10.1016/S0029-7844(97",
+              "doi": "10.1016/S0029-7844(97)00211-1",
               "bibliography": "14. Chatzipapas IK, Magos AL. \"A simple technique of securing inferior epigastric vessels and repairing the rectus sheath at laparoscopic surgery.\" *Obstet Gynecol.* 1997;90(2):304-306. doi:[10.1016/S0029-7844(97)00211-1](https://doi.org/10.1016/S0029-7844(97)00211-1)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
@@ -8214,13 +8426,13 @@
             },
             {
               "ref": 16,
-              "doi": "10.1016/s0022-5347(01",
+              "doi": "10.1016/s0022-5347(01)61797-x",
               "bibliography": "16. Bishoff JT, Allaf ME, Kirkels W, et al. \"Laparoscopic bowel injury: incidence and clinical presentation.\" *J Urol.* 1999;161(3):887-890. doi:[10.1016/s0022-5347(01)61797-x](https://doi.org/10.1016/s0022-5347(01)61797-x)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
             {
               "ref": 17,
-              "doi": "10.1016/s0016-5107(96",
+              "doi": "10.1016/s0016-5107(96)70193-1",
               "bibliography": "17. Schrenk P, Woisetschl\u00e4ger R, Rieger R, Wayand W. \"Mechanism, management, and prevention of laparoscopic bowel injuries.\" *Gastrointest Endosc.* 1996;43(6):572-574. doi:[10.1016/s0016-5107(96)70193-1](https://doi.org/10.1016/s0016-5107(96)70193-1)",
               "access": "Complete available original indexed abstract and primary identity read; full main article,tables,figures and supplements remain pending unless a separate source record says otherwise."
             },
@@ -9486,11 +9698,128 @@
       "title": "Vascular Management & Damage Control",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "1a7fc272ba6aed0185de3f67c86c2a971e2e7aa1e3b26e6831d55fd9b456dea0",
-      "reviewRecords": []
+      "sourceSha256": "4cd6bd91f225f3693551532116f6f42cf32555299b4d55f8ab850172ca4b591d",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/vascular-damage-control.mdx",
+          "title": "Vascular Management & Damage Control",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and final current MDX including tables,references and links actually read. Independent bounded peer review completed; source-specific limits retained.",
+          "sourceSha256": "4cd6bd91f225f3693551532116f6f42cf32555299b4d55f8ab850172ca4b591d",
+          "changes": [
+            "Rebuilt source-specific hemorrhage/resuscitation guidance; separated traumatic from iatrogenic and postpartum applicability.",
+            "Integrated major2023\u20132026 trials with exact denominators and no equivalence/safety overclaims.",
+            "Corrected REBOA,hepatic vascular exclusion,renal/visceral sacrifice,shunt timing and caustic vaginal-packing advice.",
+            "Added WHO2025 first-response/tamponade/escalation distinctions supported by selected full guidance and evidence annex."
+          ],
+          "sources": [
+            {
+              "ref": 1,
+              "doi": "10.1186/s13054-023-04327-7",
+              "bibliography": "<a id=\"ref1\"></a>1. Rossaint R, Afshari A, Bouillon B, et al. The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition. *Crit Care.* 2023;27:80. doi:[10.1186/s13054-023-04327-7](https://doi.org/10.1186/s13054-023-04327-7).",
+              "access": "Complete main,39recommendations,4tables,391references,all4supplements and actual figures read.",
+              "sourceReport": "reports/2026-09-12/european-trauma-bleeding-source-review.md"
+            },
+            {
+              "ref": 2,
+              "doi": "10.1016/j.ejvs.2024.12.018",
+              "bibliography": "<a id=\"ref2\"></a>2. Wahlgren CM, Aylwin C, Davenport RA, et al. ESVS 2025 Clinical Practice Guidelines on the Management of Vascular Trauma. *Eur J Vasc Endovasc Surg.* 2025;69:179\u2013237. doi:[10.1016/j.ejvs.2024.12.018](https://doi.org/10.1016/j.ejvs.2024.12.018).",
+              "access": "Complete59-page main,105recommendations,12tables,505references and all6actual figures read. AppendixA/evidence tables inaccessible; not complete package.",
+              "sourceReport": "reports/2026-09-12/esvs-vascular-trauma-source-review.md"
+            },
+            {
+              "ref": 3,
+              "doi": "10.1136/tsaco-2016-000015",
+              "bibliography": "<a id=\"ref3\"></a>3. Kobayashi LM, Costantini TW, Hamel MG, Dierksheide JE, Coimbra R. Abdominal vascular trauma. *Trauma Surg Acute Care Open.* 2016;1:e000015. doi:[10.1136/tsaco-2016-000015](https://doi.org/10.1136/tsaco-2016-000015).",
+              "access": "Complete main,table,66references and all7actual operative images read. Historical recommendations subordinated to current guidance.",
+              "sourceReport": "reports/2026-09-12/abdominal-pelvic-trauma-source-review.md"
+            },
+            {
+              "ref": 4,
+              "doi": "10.1186/s13017-017-0117-6",
+              "bibliography": "<a id=\"ref4\"></a>4. Coccolini F, Stahel PF, Montori G, et al. Pelvic trauma: WSES classification and guidelines. *World J Emerg Surg.* 2017;12:5. doi:[10.1186/s13017-017-0117-6](https://doi.org/10.1186/s13017-017-0117-6).",
+              "access": "Complete main,2tables,156references and all3actual figures read; no separate appendix identified.",
+              "sourceReport": "reports/2026-09-12/abdominal-pelvic-trauma-source-review.md"
+            },
+            {
+              "ref": 5,
+              "doi": "10.1001/jama.2023.20850",
+              "bibliography": "<a id=\"ref5\"></a>5. Jansen JO, Hudson J, Cochran C, et al. Emergency department resuscitative endovascular balloon occlusion of the aorta in trauma patients with exsanguinating hemorrhage: the UK-REBOA randomized clinical trial. *JAMA.* 2023;330:1862\u20131871. doi:[10.1001/jama.2023.20850](https://doi.org/10.1001/jama.2023.20850).",
+              "access": "Complete main,2actual figures,34references and all116supplement pages read, including actual supplied graphics.",
+              "sourceReport": "reports/2026-09-12/uk-reboa-source-review.md"
+            },
+            {
+              "ref": 6,
+              "doi": "10.1056/NEJMoa2215457",
+              "bibliography": "<a id=\"ref6\"></a>6. Gruen RL, Mitra B, Bernard SA, et al. Prehospital tranexamic acid for severe trauma. *N Engl J Med.* 2023;389:127\u2013136. doi:[10.1056/NEJMoa2215457](https://doi.org/10.1056/NEJMoa2215457).",
+              "access": "Complete10-page main,3actual figures,2tables,15references read. All4publisher supplements inaccessible; not claimed read.",
+              "sourceReport": "reports/2026-09-12/patch-trauma-source-review.md"
+            },
+            {
+              "ref": 7,
+              "doi": "10.1001/jama.2023.4080",
+              "bibliography": "<a id=\"ref7\"></a>7. Bouzat P, Charbit J, Abback PS, et al. Efficacy and safety of early administration of 4-factor prothrombin complex concentrate in patients with trauma at risk of massive transfusion: the PROCOAG randomized clinical trial. *JAMA.* 2023;329:1367\u20131375. doi:[10.1001/jama.2023.4080](https://doi.org/10.1001/jama.2023.4080).",
+              "access": "Complete main,3tables,29references,2actual figures and all5supplements54pages read. Seven actual supplementary tables and three figures inspected.",
+              "sourceReport": "reports/2026-09-12/procoag-main-source-review.md"
+            },
+            {
+              "ref": 8,
+              "doi": "10.1001/jamanetworkopen.2025.32702",
+              "bibliography": "<a id=\"ref8\"></a>8. da Luz LT, Karkouti K, Carroll J, et al. Factors in the initial resuscitation of patients with severe trauma: the FiiRST-2 randomized clinical trial. *JAMA Netw Open.* 2025;8:e2532702. doi:[10.1001/jamanetworkopen.2025.32702](https://doi.org/10.1001/jamanetworkopen.2025.32702).",
+              "access": "Complete main,36references,3actual figures,88-page protocol,21-pageSAP,9-page results and1-page data supplement read. Source discrepancies logged.",
+              "sourceReport": "reports/2026-09-12/fiirst2-main-source-review.md"
+            },
+            {
+              "ref": 9,
+              "doi": "10.1001/jama.2023.21019",
+              "bibliography": "<a id=\"ref9\"></a>9. Davenport R, Curry N, Fox EE, et al. Early and empirical high-dose cryoprecipitate for hemorrhage after traumatic injury: the CRYOSTAT-2 randomized clinical trial. *JAMA.* 2023;330:1882\u20131891. doi:[10.1001/jama.2023.21019](https://doi.org/10.1001/jama.2023.21019).",
+              "access": "Complete main with actual figures/tables; accessible registry protocol/SAP read. Exact JAMA supplements inaccessible.",
+              "sourceReport": "reports/2026-09-12/cryostat2-source-review.md"
+            },
+            {
+              "ref": 10,
+              "doi": "10.1056/NEJMoa2602167",
+              "bibliography": "<a id=\"ref10\"></a>10. Sperry JL, Guyette FX, Cotton BA, et al. Prehospital resuscitation with type O whole blood for trauma and hemorrhage. *N Engl J Med.* 2026;394:2317\u20132328. doi:[10.1056/NEJMoa2602167](https://doi.org/10.1056/NEJMoa2602167).",
+              "access": "Complete main and actual figures/tables;29-page journal supplement and33-page registry protocol/SAP read.",
+              "sourceReport": "reports/2026-09-12/prehospital-whole-blood-source-review.md"
+            },
+            {
+              "ref": 11,
+              "doi": "10.1056/NEJMoa2516043",
+              "bibliography": "<a id=\"ref11\"></a>11. Smith JE, Cardigan R, Sanderson E, et al. Prehospital whole blood in traumatic hemorrhage \u2014 a randomized controlled trial. *N Engl J Med.* 2026;394:2305\u20132316. doi:[10.1056/NEJMoa2516043](https://doi.org/10.1056/NEJMoa2516043).",
+              "access": "Complete main and actual figures/tables;59-page registry protocol/SAP read. Exact journal supplement inaccessible.",
+              "sourceReport": "reports/2026-09-12/prehospital-whole-blood-source-review.md"
+            },
+            {
+              "ref": 12,
+              "doi": null,
+              "bibliography": "<a id=\"ref12\"></a>12. World Health Organization, FIGO, ICM. *Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage.* 2025. [WHO publication](https://www.who.int/publications/i/item/9789240115637).",
+              "access": "Entire selected main Recommendations21\u201341 (21physicalpages) and140selected evidence-annex pages read;18actualpages inspected. Remaining guideline/annex and underlying originals not full-read.",
+              "sourceReport": "reports/2026-09-12/who-pph2025-source-review.md"
+            },
+            {
+              "ref": 13,
+              "doi": "10.1002/14651858.CD011000.pub3",
+              "bibliography": "<a id=\"ref13\"></a>13. Eleje GU, Eke AC, Igberase GO, Igwegbe AO, Eleje LI. Palliative interventions for controlling vaginal bleeding in advanced cervical cancer. *Cochrane Database Syst Rev.* 2019;3:CD011000. doi:[10.1002/14651858.CD011000.pub3](https://doi.org/10.1002/14651858.CD011000.pub3).",
+              "access": "Complete main,all4appendices,22excluded-study entries,references/history/disclosures and sole actual flowchart read. No eligible controlled studies; not equivalence evidence.",
+              "sourceReport": "reports/2026-09-12/vaginal-bleeding-cochrane-source-review.md"
+            }
+          ],
+          "sourceReport": "reports/2026-09-12/vascular-exposure-review.md",
+          "originalSourceInventory": "reports/2026-09-12/vascular-exposure-original-source-access.json",
+          "unresolved": [
+            "Full retained historical sources and listed inaccessible supplements remain unresolved. Review is not complete clinical certification."
+          ],
+          "peerReview": "Root fully reread final pages; independent vascular and anatomy/WHO reviews identify exact hashes and primary-source scope.",
+          "recordFile": "vascular-exposure.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/wound-healing-adjuncts.mdx",

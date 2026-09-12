@@ -17,7 +17,7 @@ The user explicitly requested completion after the previous release stopped at 1
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; all 44 fistula originals now read; all15perioperative pages now corrected and read; current full-source task is ESVS2025vascular-trauma guidance.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The tenth batch revises12documentation pages and records622current full MDX reads. Lint/typecheck/tests/build pass (132.42MB); all12routes and three interaction tests pass; published as5024e443; exact-commit CI/Vercel and six live checks passed. Continue after publication without another user message. Source reviews underway for vascular damage control/exposure, UK-REBOA, ESVS2025and major2026whole-blood trials. Domain ledgers preserve exact source access and unresolved claims; page reading is not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
+The eleventh batch revises three documentation pages and records 625 current full MDX reads. Lint/typecheck/tests/build pass (132.32 MB); three routes, reference interactions and mobile tables pass. Publication verification pending. Continue after publication without another user message. Current primary-source reading and access limits are in the vascular/exposure release record; tools, genital and adjacent anatomy reviews are proceeding independently. Page reading is not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
 
 ## Retained preferences
 

@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-09-12T13:06:07.547Z",
+  "sourceBaseCommit": "b974dad5d6c83b981822f612f95efc61b2b4bed9",
+  "scope": "Three changed documentation routes, actual citation-anchor clicks, desktop/mobile overflow and horizontal table scrolling on local production build. Clinical/source review is separate.",
+  "results": [
+    {
+      "route": "/docs/foundations/surgical-principles/vascular-damage-control",
+      "checks": {
+        "http200": true,
+        "TOWAR": true,
+        "1,131": true,
+        "56/161": true,
+        "within three hours of birth": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/surgical-principles/exposure",
+      "checks": {
+        "http200": true,
+        "Cattell": true,
+        "23 operations in 22 patients": true,
+        "2026 JSES": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "route": "/docs/foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy",
+      "checks": {
+        "http200": true,
+        "1,455 hemipelves": true,
+        "inferior pedicle": true,
+        "Galanis": true,
+        "noRuntimeError": true,
+        "noRawAdmonition": true,
+        "noOldEvidenceBanner": true,
+        "noDesktopOverflow": true,
+        "referenceAnchor": true,
+        "noMobileOverflow": true,
+        "tablesScrollable": true
+      },
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "route": "/docs/foundations/surgical-principles/vascular-damage-control",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-eleventh-desktop-0.png"
+    },
+    {
+      "route": "/docs/foundations/surgical-principles/vascular-damage-control",
+      "viewport": 390,
+      "path": "/tmp/warwiki-eleventh-mobile-0.png"
+    },
+    {
+      "route": "/docs/foundations/surgical-principles/exposure",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-eleventh-desktop-1.png"
+    },
+    {
+      "route": "/docs/foundations/surgical-principles/exposure",
+      "viewport": 390,
+      "path": "/tmp/warwiki-eleventh-mobile-1.png"
+    },
+    {
+      "route": "/docs/foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy",
+      "viewport": 1440,
+      "path": "/tmp/warwiki-eleventh-desktop-2.png"
+    },
+    {
+      "route": "/docs/foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy",
+      "viewport": 390,
+      "path": "/tmp/warwiki-eleventh-mobile-2.png"
+    }
+  ],
+  "visualReview": "Root actually inspected all6listed screenshots: readable desktop articles and mobile tables; wide exposure table scrolls horizontally without document overflow."
+}

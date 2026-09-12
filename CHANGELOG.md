@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Eleventh continuation: vascular control, exposure and anatomy
+
+Revised three full articles, correcting unsafe or unsupported hemorrhage rules, anatomical errors, procedure conflations and citation identities. Integrated major trauma trials through 2026, ESVS 2025, WHO 2025 postpartum source-control guidance and a narrowly applied 2026 fascial terminology consensus. Complete main papers, actual figures, supplements and limited-access sources are recorded individually; no whole-site clinical clearance is claimed.
+
+Ledger: 625 current full MDX reads, 598 scoped updates across 1,186 files. Lint/typecheck, 32 component and 51 maintenance tests pass. Build 132.32 MB; all 97,856 compiled links/assets and 722 data links pass. Three routes, citation-anchor interactions and mobile table scrolling pass, with six actual screenshots inspected. Publication verification pending in the [eleventh release record](reports/2026-09-12/eleventh-continuation-release.md). Continue the whole-site review after this checkpoint.
+
+---
+
 ## 2026-09-12 — Tenth continuation: closure, access and perioperative evidence
 
 Revised12documentation pages: closure/access and principles landing, three biological grafts, two genital lymphatic techniques and four perioperative topics. Corrected false/mismatched citations, trial populations and effect claims, material and product indications, entry-safety guarantees and gas-embolism instructions. Integrated major2025/2026closure syntheses and high-yield perioperative findings with exact applicability limits.
