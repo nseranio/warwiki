@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Nineteenth continuation: gracilis and instrument reliability
+
+Completed gracilis, Backhaus, Mixter and Gemini. Corrected pedicled/free harvest distinctions, anatomy, first versus final closure, cohort denominators, staged graft timing, donor-risk comparisons, penetrating clamp classification and unsafe generic instrument uses. Six complete gracilis source mains and 22 actual figures were checked, alongside three society documents and four actual manufacturer catalog pages. Remaining full-text and supplement gaps stay explicit in the two source registers, preserving 76 inherited references.
+
+All four desktop/mobile checks, lint/typecheck/build and whitespace checks pass. Output is 131.65 MB; ledger records 657 full current MDX reads and 630 scoped updates. See the [nineteenth release record](reports/2026-09-12/nineteenth-continuation-release.md) for publication status. Continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Eighteenth continuation: peritoneal and omental reconstruction
 
 Rebuilt both flap articles and the peritoneal vaginoplasty technique page after full original/revised reads. Corrected misattributed VVF tissue, gastric vascular anatomy, cohort denominators, false revision comparisons, unsupported outcome guarantees and generic bowel-obstruction advice. Added major lymphocele trials, APR omentoplasty synthesis, the 500-case vaginoplasty cohort and June 2026 review with explicit evidence limits.

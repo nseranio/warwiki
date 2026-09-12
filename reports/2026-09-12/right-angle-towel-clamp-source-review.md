@@ -1,0 +1,11 @@
+# Right-angle and towel clamps — September 12, 2026
+
+Complete original and revised reads: Backhaus, Mixter and Gemini. The [access register](right-angle-towel-clamp-reference-access.json) preserves all 14 inherited and 12 current reference entries. Source identity, abstract access, full text and images remain separate.
+
+Backhaus incorrectly classified Jones as nonpenetrating, claimed ball-and-socket interlock, required skin puncture and four to six clips, promised uncomplicated healing, and encouraged simple reapplication. It now distinguishes actual clamp patterns, preserves the drape barrier, uses appropriate securement and addresses contamination. Lhotka's skin-closure-clip allergy data are not towel-clamp incidence; the unrelated negative-pressure skull-base drape is not proof of an airtight Lorna seal.
+
+Mixter and Gemini now distinguish passing a tie from occlusive clamping or tissue retraction. Removed generic nerve/lymphatic/urethral-plate recommendations, blind passage/spreading, flap-tunneling assumptions and the unsupported trauma ranking. Manufacturer descriptions contradict the fixed geometry/short-length claims. Broglia remains a specific technical description, and Manship concerns atherosclerotic arterial segments, not proof that fragile pelvic veins tolerate spreading. History sources cannot substantiate modern operative indications.
+
+All seven pages of the AST draping standard's extracted text and both complete AORN educational web articles were read. The 2008 AST effective-date statement is retained; obsolete regulatory/fabric-cycle claims were not imported. These are not a full read of the separate current AORN guideline. Manufacturer product descriptions and tables were read. The complete relevant Teleflex catalog pages 33, 81, 85 and 86, including actual illustrations, were inspected; page 353 text was also read. Remaining catalog pages and separate IFUs remain unread.
+
+All indexed abstracts for the 14 original entries were read, including the corrected complete DOI queries with parentheses. Original journal mains remain open; a public PMC location was identified for David's NOVID report but initial access returned a challenge. No new small study was added to inflate the bibliography. Downloaded/attempted source material stays outside the deployed site.
