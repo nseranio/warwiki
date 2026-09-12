@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The fourteenth September 12 batch rebuilds **Bowel Segments** and completes five cited originals, the Cochrane graphics, and the separate 2026 quality-of-life paper plus all six supplements. Lint/typecheck/build and desktop/mobile browser checks pass; build **132.05 MB**, 97,691 compiled local links/assets and 722 data links. Publication verification is pending; see the [fourteenth release record](reports/2026-09-12/fourteenth-continuation-release.md). Prior batch `f1052805` was fully verified live.
+The fourteenth September 12 batch rebuilds **Bowel Segments** and completes five cited originals, the Cochrane graphics, and the separate 2026 quality-of-life paper plus all six supplements. Lint/typecheck/build and desktop/mobile browser checks pass; build **132.05 MB**, 97,691 compiled local links/assets and 722 data links. Published and verified at `ebea936d` with passing exact-commit CI/Vercel and all three live checks; see the [fourteenth release record](reports/2026-09-12/fourteenth-continuation-release.md). Prior batch `f1052805` was fully verified live.
 
 ## Review coverage and next work
 

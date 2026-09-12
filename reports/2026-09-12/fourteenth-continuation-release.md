@@ -16,7 +16,7 @@ The revised route passes content assertions, a click to the new renal-review cit
 
 ## Publication
 
-Commit/push, exact-commit CI/Vercel and live-content verification are pending at this pre-publication checkpoint. Update this section after checking the actual release. No fresh Vercel account-storage measurement is claimed.
+Published commit `ebea936dd1237921b3e23b43a78b0b5ec9800679` to `main/origin/main`. Exact-commit GitHub CI [34706240438](https://github.com/nseranio/warwiki/actions/runs/34706240438) and Vercel deployment `a7dcCo2psmwyawMwTg6AitiEC8Cj` succeeded. All three live checks pass: home, the revised bowel route with six content assertions, and removed `/clinic` returning 404. See [publication verification](fourteenth-publication-verification.json). No fresh Vercel account-storage measurement is claimed.
 
 ## Continue
 

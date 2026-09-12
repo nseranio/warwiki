@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Rebuilt Bowel Segments, correcting jejunal transport, universal cutoffs and lengths, misleading outcomes and blanket cancer surveillance. Integrated current AUA/EAU guidance, the final USC-STAR RCT and the 2026 renal synthesis with exact access limits. Five cited original full texts and the separate 2026 quality-of-life review with all six supplements were completed; conflicting numerical claims from that review were withheld. All 54 inherited references remain recoverable in the new source register.
 
-Lint/typecheck/build and desktop/mobile citation/layout checks pass: 132.05 MB, 97,691 local links/assets and 722 data links. Ledger: 635 full current MDX reads, 608 scoped updates. Publication verification pending; see the [fourteenth release record](reports/2026-09-12/fourteenth-continuation-release.md). Continue the whole-site task after this batch.
+Lint/typecheck/build and desktop/mobile citation/layout checks pass: 132.05 MB, 97,691 local links/assets and 722 data links. Ledger: 635 full current MDX reads, 608 scoped updates. Published and verified at `ebea936d`: exact-commit CI/Vercel and all three live checks pass; see the [fourteenth release record](reports/2026-09-12/fourteenth-continuation-release.md). Continue the whole-site task after this batch.
 
 ---
 

@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-09-12T16:49:20.452615+00:00",
+  "sourceCommit": "ebea936dd1237921b3e23b43a78b0b5ec9800679",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "ebea936dd1237921b3e23b43a78b0b5ec9800679",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34706240438"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/a7dcCo2psmwyawMwTg6AitiEC8Cj",
+      "updated_at": "2026-09-12T16:47:54Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/bowel-segments",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/bowel-segments",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Detubularization is a reservoir principle": true,
+        "33/36": true,
+        "9/48": true,
+        "22/33": true,
+        "USC-STAR": true,
+        "14 retrospective cohorts": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}
