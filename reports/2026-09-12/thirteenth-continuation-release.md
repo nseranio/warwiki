@@ -20,7 +20,7 @@ Complete Goldstein accepted manuscript, Mitchell main and actual tables/figures,
 
 Lint, typecheck and full production build pass. Build **132.05 MB**, 2,569 files and 1,191 HTML pages; **97,693 compiled links/assets and 722 data links** valid. All five routes pass content assertions, citation-anchor clicks, desktop/mobile overflow, table scrolling and runtime-error checks. Ten screenshots inspected; an additional mobile screenshot of the new laser comparison and its new citation-anchor click also pass. No shared component changed, so no new unit test was needed. Existing reference-density advisories remain.
 
-Publication verification is pending; fill in the exact commit/CI/deployment result after pushing. Temporary research PDFs, source images and browser captures remain outside the deployment. No fresh account-storage measurement is claimed.
+Published commit `f1052805dde8a4f6dedee1135869694939c6c13e` passed [GitHub CI](https://github.com/nseranio/warwiki/actions/runs/34705047990) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/6NTwfcjUP12nM2991xeENHDPJqou). Seven live checks passed: home, all five revised pages with their new text, and the deleted `/clinic` route returning 404. See [verification data](thirteenth-publication-verification.json). Temporary research PDFs, source images and browser captures remain outside the deployment. No fresh account-storage measurement is claimed.
 
 ## Continue
 

@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Revised clinical LS and four pharmacology companions after completing the 124/34/97-page S3 guideline package. Added the large 2026 laser RCT, missing placebo-controlled PRP trial, a narrowly interpreted cancer-risk cohort and PEARLS protocol tracking. Corrected injection-dose contradictions, treatment positioning, unsupported outcome rankings and a Cochrane protocol misused as completed evidence. Full original-source and supplement access is logged individually; Hecken/Adams full mains remain unavailable.
 
-Lint/typecheck/build pass; 132.05 MB, 97,693 compiled links/assets and 722 data links valid. Five routes pass desktop/mobile and citation checks. Ledger remains 634 current full reads/607 scoped updates; this batch deepens previously reviewed pages. Publication verification is pending. See the [thirteenth release record](reports/2026-09-12/thirteenth-continuation-release.md). Continue the whole-site task after publication.
+Lint/typecheck/build pass; 132.05 MB, 97,693 compiled links/assets and 722 data links valid. Five routes pass desktop/mobile and citation checks. Ledger remains 634 current full reads/607 scoped updates; this batch deepens previously reviewed pages. Commit `f1052805` passed CI and Vercel deployment; all seven live checks pass. See the [thirteenth release record](reports/2026-09-12/thirteenth-continuation-release.md). Continue the whole-site task after publication.
 
 ---
 

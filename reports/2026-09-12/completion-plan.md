@@ -22,4 +22,4 @@ Remaining queues include tools (88/231 read), genital techniques (29 page record
 
 Quarterly evidence maintenance; Epic paused; Clinic and quiz removed; History discreet; handouts recoverable but excluded from deployment; no verbose public evidence banner. Preserve unrelated `world-cup-next-week-pacific.ics`.
 
-The thirteenth batch deepens source review on five previously read LS/pharmacology pages; counts are unchanged. Complete mains, figures and supplements, plus the Hecken/Adams abstract-only limits, are in the [source record](lichen-sclerosus-topical-source-review.md). Validation passes; publication verification is pending in the [release record](thirteenth-continuation-release.md).
+The thirteenth batch deepens source review on five previously read LS/pharmacology pages; counts are unchanged. Complete mains, figures and supplements, plus the Hecken/Adams abstract-only limits, are in the [source record](lichen-sclerosus-topical-source-review.md). Validation and exact-commit CI/Vercel/live verification pass for `f1052805`; see the [release record](thirteenth-continuation-release.md).

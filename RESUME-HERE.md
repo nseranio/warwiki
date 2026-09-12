@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The thirteenth September 12 batch revises **five linked LS/pharmacology pages**, completes the separate 124/34/97-page guideline package, and integrates high-impact trial/cohort evidence with exact source-access limits. Lint/typecheck/build and five desktop/mobile browser checks pass; build **132.05 MB**, 97,693 compiled links/assets and 722 data links. Publication verification is pending. See the [thirteenth release record](reports/2026-09-12/thirteenth-continuation-release.md). Prior batch `b9d1533d` was fully verified live.
+The thirteenth September 12 batch revises **five linked LS/pharmacology pages**, completes the separate 124/34/97-page guideline package, and integrates high-impact trial/cohort evidence with exact source-access limits. Lint/typecheck/build and five desktop/mobile browser checks pass; build **132.05 MB**, 97,693 compiled links/assets and 722 data links. Commit `f1052805` passed CI and Vercel deployment; all seven live checks pass. See the [thirteenth release record](reports/2026-09-12/thirteenth-continuation-release.md). Prior batch `b9d1533d` was fully verified live.
 
 ## Review coverage and next work
 
