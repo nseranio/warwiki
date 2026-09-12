@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-09-12T13:12:37.225312+00:00",
+  "sourceCommit": "3b2dee90c59a86bf7975ce803e81afa536d80058",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "3b2dee90c59a86bf7975ce803e81afa536d80058",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34695559698"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/JCBHBijzFABevcnQYEjFzqE1heVL",
+      "updated_at": "2026-09-12T13:09:25Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/vascular-damage-control",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/vascular-damage-control",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "PATCH-Trauma": true,
+        "PROCOAG": true,
+        "TOWAR": true,
+        "SWiFT": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/exposure",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/exposure",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Cattell": true,
+        "visceral": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "inferior internal-pudendal": true,
+        "Martius": true,
+        "corona mortis": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}

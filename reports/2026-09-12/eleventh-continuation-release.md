@@ -16,10 +16,10 @@ All three revised routes pass runtime, content and citation-anchor checks. Deskt
 
 ## Publication
 
-Commit, CI, Vercel and live checks are pending. This record will be updated after exact-commit verification.
+Published as `3b2dee90c59a86bf7975ce803e81afa536d80058`. Exact-commit GitHub CI [34695559698](https://github.com/nseranio/warwiki/actions/runs/34695559698) and Vercel deployment [JCBHBijzFABevcnQYEjFzqE1heVL](https://vercel.com/nseranios-projects/warwiki/JCBHBijzFABevcnQYEjFzqE1heVL) succeeded. All five live checks passed: homepage, three revised routes and removed `/clinic` returning 404. See [publication verification](eleventh-publication-verification.json).
 
 Temporary downloaded sources and figures remain outside the repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched. No change to quarterly evidence maintenance, paused Epic work, removed Clinic/quiz, discreet History or excluded handouts. The Vercel account meter is still not reconfirmed below 10 GB; local build size is a separate measure.
 
 ## Continue after publication
 
-Continue tools/autologous grafts, genital techniques, presacral/bony anatomy and remaining foundations/resources/imported content. CHASCIP/BLOOM drafts are held outside public docs while full-source limits are resolved. The original Cochrane damage-control review and a later pilot main report received a complete additional reading/currentness check; the review search ends in 2012. It is not the basis for an assertion that no modern randomized evidence exists. Continue the supplied OpenEvidence reconciliation and remaining source gaps. Publication is a checkpoint within the active whole-site review.
+Continue tools/autologous grafts, genital techniques, presacral/bony anatomy and remaining foundations/resources/imported content. The next CHASCIP/BLOOM revisions preserve their unresolved full-source limits; their preparation record distinguishes retrieved evidence from unavailable operative methods. The original Cochrane damage-control review and a later pilot main report received a complete additional reading/currentness check; the review search ends in 2012. It is not the basis for an assertion that no modern randomized evidence exists. Continue the supplied OpenEvidence reconciliation and remaining source gaps. Publication is a checkpoint within the active whole-site review.
