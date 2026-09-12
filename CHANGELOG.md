@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Thirteenth continuation: LS trials and topical-treatment reliability
+
+Revised clinical LS and four pharmacology companions after completing the 124/34/97-page S3 guideline package. Added the large 2026 laser RCT, missing placebo-controlled PRP trial, a narrowly interpreted cancer-risk cohort and PEARLS protocol tracking. Corrected injection-dose contradictions, treatment positioning, unsupported outcome rankings and a Cochrane protocol misused as completed evidence. Full original-source and supplement access is logged individually; Hecken/Adams full mains remain unavailable.
+
+Lint/typecheck/build pass; 132.05 MB, 97,693 compiled links/assets and 722 data links valid. Five routes pass desktop/mobile and citation checks. Ledger remains 634 current full reads/607 scoped updates; this batch deepens previously reviewed pages. Publication verification is pending. See the [thirteenth release record](reports/2026-09-12/thirteenth-continuation-release.md). Continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Twelfth continuation: pelvic anatomy, grafts and genital reconstruction
 
 Revised nine full pages: Martius flap, bony/presacral anatomy, rectus/fascia lata grafts, CHASCIP, BLOOM, penile primary closure and LS local flaps. Corrected pedicle and fixation anatomy, unsafe preset distances, flap/graft conflations, cohort denominators and unsupported efficacy guarantees. Integrated the published 2026 LS guideline article and a narrowly scoped localized-chordoma consensus update. Complete mains, actual graphics, selected guideline sections and unresolved full-text access are individually logged.

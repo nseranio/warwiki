@@ -12,12 +12,14 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-Root integrated the twelfth batch after all three independent reviewers stopped with account usage-limit errors. Their prior saved work remains in the domain ledgers; no unfinished source task is credited as complete. Do not retry repeatedly or redeem a usage reset without explicit authorization.
+Root continued through the thirteenth LS/source batch after all three independent reviewers stopped with account usage-limit errors. Their prior saved work remains in the domain ledgers; no unfinished source task is credited as complete. Do not retry repeatedly or redeem a usage reset without explicit authorization.
 
 Nine anatomy, graft and genital pages were corrected. Current ledger: 634 complete current MDX reads, 607 scoped updates, 21 checked, 11 unresolved and 547 unreviewed of 1,186 documentation files. Lint/typecheck, 32 component tests, 51 maintenance tests and build pass (132.02 MB). All nine browser routes and the citation regression pass; published as `b9d1533d`, with successful exact-commit CI/Vercel, 11 live checks and the production citation regression; see the [twelfth release record](twelfth-continuation-release.md).
 
-Remaining queues include tools (88/231 read), genital techniques (29 page records), remaining foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Source reading is separate: the complete published abridged LS guideline and actual figures were read, but the 34-page AWMF methods report is now fully read, the long guideline is read through page 16, and its remaining pages/evidence package remain outstanding; the downloaded Cochrane traditional-sling full text is mostly unread. See [RESUME-HERE.md](../../RESUME-HERE.md) for exact continuation pointers. Publication does not complete the whole-site request.
+Remaining queues include tools (88/231 read), genital techniques (29 page records), remaining foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Source reading is separate: the complete published abridged LS guideline and actual figures were read, but the 34-page AWMF methods report is now fully read, the complete 124-page long guideline and all six figures are now read, and its separate 97-page evidence report and all actual forest plots are now fully read; the downloaded Cochrane traditional-sling full text is mostly unread. See [RESUME-HERE.md](../../RESUME-HERE.md) for exact continuation pointers. Publication does not complete the whole-site request.
 
 ## Retained preferences
 
 Quarterly evidence maintenance; Epic paused; Clinic and quiz removed; History discreet; handouts recoverable but excluded from deployment; no verbose public evidence banner. Preserve unrelated `world-cup-next-week-pacific.ics`.
+
+The thirteenth batch deepens source review on five previously read LS/pharmacology pages; counts are unchanged. Complete mains, figures and supplements, plus the Hecken/Adams abstract-only limits, are in the [source record](lichen-sclerosus-topical-source-review.md). Validation passes; publication verification is pending in the [release record](thirteenth-continuation-release.md).
