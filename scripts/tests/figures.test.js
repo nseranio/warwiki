@@ -10,7 +10,7 @@ const {withFigureMetadata} = require('../diagrams/lib/metadata');
 test('every published diagram has an accessible versioned source record without invented sign-off', () => {
   const assets = fs.readdirSync(path.join(__dirname, '../../static/img/diagrams')).filter(x => x.endsWith('.svg')).map(x => x.slice(0,-4)).sort();
   assert.deepEqual(Object.keys(registry.figures).sort(), assets);
-  assert.equal(assets.length,55);
+  assert.equal(assets.length,53);
   for (const id of assets) {
     const figure = registry.figures[id];
     assert.equal(figure.clinicalReview.status,'pending',id);

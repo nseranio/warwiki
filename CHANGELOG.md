@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twenty-third continuation: sling/Burch evidence and diagram reliability
+
+Rebuilt PVS, Burch and the female SUI index; aligned rectus/fascia-lata and targeted three prolapse companions. Corrected operative dimensions, selection distinctions, source attribution, outcome denominators, CARE correction, SUCRA and prophylactic Burch interpretation. Three prolapse companions retain unresolved broader source review. Withdrawn two anatomically misleading diagrams, assets and generators; fixed transparent enlarged-figure backgrounds.
+
+Complete traditional-sling/open/laparoscopic Cochrane mains and all 342 actual graphics are read, with additional original mains and separately tracked inaccessible figures/videos/supplements. All local checks and 20 visual checks pass; output 131.46 MB. Ledger: 670 full current MDX reads, 640 scoped updates, 14 unresolved, 511 unreviewed. Publication verification is pending; see the [release record](reports/2026-09-12/twenty-third-continuation-release.md). Continue the whole-site task with the active sacrocolpopexy/ASPIRe source review.
+
+---
+
 ## 2026-09-12 — Twenty-second continuation: fine, tonsil and Péan hemostats
 
 Corrected Jacobson, Schnidt, Péan and Rochester-Péan instrument identity, model-specific geometry and dimensions, tissue handling and inappropriate pressure/safety claims; reconciled four database records. Complete originals and revisions read. Preserved all 19 inherited reference entries and read all 15 unique indexed abstracts, two complete mains, eleven actual journal figures and seven selected catalog pages. Exact remaining full-paper/IFU/supplement gaps are recorded.

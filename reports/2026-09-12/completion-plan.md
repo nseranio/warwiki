@@ -12,11 +12,11 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-Root continued through the sixteenth surgical-drain batch after all three independent reviewers stopped with account usage-limit errors. Their prior saved work remains in the domain ledgers; no unfinished source task is credited as complete. Do not retry repeatedly or redeem a usage reset without explicit authorization.
+The twenty-third batch is locally validated: **670 complete current MDX reads, 640 scoped updates, 21 checked, 14 unresolved and 511 unreviewed of 1,186 files**. Eight sling/fascia/prolapse pages are corrected within explicitly recorded scopes; two misleading diagrams are withdrawn. Build 131.46 MB; publication verification is pending in the [release record](twenty-third-continuation-release.md).
 
-Current ledger: **643 complete current MDX reads, 616 scoped updates, 21 checked, 11 unresolved and 538 unreviewed of 1,186 documentation files**. The three latest drain revisions pass lint, typecheck, build and desktop/mobile browser checks (131.88 MB). Content `af5256a7` passed exact-commit CI/Vercel and all five live checks in the [sixteenth release record](sixteenth-continuation-release.md); prior content `fa4bc6f6` was verified live.
+The three complete sling/open/laparoscopic Cochrane mains and all 342 actual graphics have been read. Original trials, actual figures, videos and supplements have their own access/read records. This does not close those remaining gaps.
 
-Remaining queues include tools (97/231 read), genital techniques (29 page records), remaining foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Source reading is separate: nine drain originals, the Ma supplement and WHO drain appendix are now read with exact figure/access scope recorded. The LS guideline package is complete; the downloaded Cochrane traditional-sling full text is mostly unread. See [RESUME-HERE.md](../../RESUME-HERE.md) for continuation pointers. Publication does not complete the whole-site request.
+Three active bounded readers are continuing the sacrocolpopexy/ASPIRe source review alongside root. ASPIRe has a 395-page protocol/SAP supplement divided into exact page ranges; unfinished ranges remain uncredited. See [RESUME-HERE.md](../../RESUME-HERE.md) for current assignments and source paths. Continue remaining tools (112/231 read), surgical techniques, foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Publication does not complete the whole-site request. Do not redeem account usage credits without explicit authorization.
 
 ## Retained preferences
 
