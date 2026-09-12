@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-09-12T12:43:09.985442+00:00",
+  "sourceCommit": "5024e4431bf83c3274edf0358976950303659845",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "5024e4431bf83c3274edf0358976950303659845",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34694300993"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/9hCzPnB25dgHHM5eMHGpgBdPM17L",
+      "updated_at": "2026-09-12T12:41:53Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/incisions-closure",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/incisions-closure",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "SUBITE": true,
+        "31-mm needle": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/laparoscopic-access",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/laparoscopic-access",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "right-ventricular gas": true,
+        "7,584": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/perioperative-care/preoperative-assessment/frailty",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/perioperative-care/preoperative-assessment/frailty",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "850": true,
+        "847": true,
+        "705": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/perioperative-care/perioperative-protocols/eras",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/perioperative-care/perioperative-protocols/eras",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "OPTIMISE II": true,
+        "2026": true,
+        "1,670": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}

@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The tenth September12 batch revises **12documentation pages** across closure/access, biological grafts, genital lymphatic techniques and perioperative care. Lint/typecheck,32component tests,51maintenance tests and production build pass: **132.42MB**,97,898compiled links/assets and722data links. All12routes and three interaction tests pass. Publication verification pending. See the [current release record](reports/2026-09-12/tenth-continuation-release.md).
+The tenth September12 batch revises **12documentation pages** across closure/access, biological grafts, genital lymphatic techniques and perioperative care. Lint/typecheck,32component tests,51maintenance tests and production build pass: **132.42MB**,97,898compiled links/assets and722data links. All12routes and three interaction tests pass. Published as5024e443; exact-commit CI/Vercel and six live checks passed. See the [current release record](reports/2026-09-12/tenth-continuation-release.md).
 
 ## Review coverage and next work
 
