@@ -16,7 +16,7 @@ Current output: **131.74 MB**, 2,569 files, 1,191 HTML pages, **97,528 compiled 
 
 ## Publication
 
-Content is validated and ready for the authorized main-branch push. Exact-commit CI, Vercel and production verification will be recorded after the push.
+Content commit `58f162cf234ab516c33a575c1a568dbecb86137a` is pushed and verified live. [GitHub CI 34711678565](https://github.com/nseranio/warwiki/actions/runs/34711678565) passed for that exact commit; [Vercel deployment 3Z12n1LL9P4gkZs3hiSLpPrp8RMB](https://vercel.com/nseranios-projects/warwiki/3Z12n1LL9P4gkZs3hiSLpPrp8RMB) completed successfully. All three changed production routes and the homepage return 200 with expected revised text; `/clinic` remains 404. See [production verification](eighteenth-publication-verification.json).
 
 ## Continue
 

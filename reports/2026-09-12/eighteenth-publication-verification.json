@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-09-12T18:41:15.236092+00:00",
+  "sourceCommit": "58f162cf234ab516c33a575c1a568dbecb86137a",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "58f162cf234ab516c33a575c1a568dbecb86137a",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34711678565"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/3Z12n1LL9P4gkZs3hiSLpPrp8RMB",
+      "updated_at": "2026-09-12T18:37:29Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/flaps/peritoneal",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/flaps/peritoneal",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "530": true,
+        "1,080": true,
+        "vaginal": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/flaps/omental",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/flaps/omental",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "1,894": true,
+        "27%": true,
+        "10": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "974": true,
+        "incarcerated internal hernias": true,
+        "separate studies": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ]
+}

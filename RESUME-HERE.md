@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The eighteenth September 12 batch has three corrected and fully read pages: peritoneal flap, omental flap and peritoneal pull-through vaginoplasty. Sixteen new source mains were read; figures/supplements/full-paper gaps are individually documented. Local validation and all three desktop/mobile checks pass at 131.74 MB. See the [eighteenth release record](reports/2026-09-12/eighteenth-continuation-release.md) for publication status. Previous verified live content was `2107fba8`.
+The eighteenth September 12 batch has three corrected and fully read pages: peritoneal flap, omental flap and peritoneal pull-through vaginoplasty. Sixteen new source mains were read; figures/supplements/full-paper gaps are individually documented. Local validation and all three desktop/mobile checks pass at 131.74 MB. Content `58f162cf` is verified live with successful exact-commit GitHub CI and Vercel deployment; all five production checks pass. See the [eighteenth release record](reports/2026-09-12/eighteenth-continuation-release.md). The next gracilis original is fully read; its source audit is in progress and is not yet credited as a completed update.
 
 ## Review coverage and next work
 
