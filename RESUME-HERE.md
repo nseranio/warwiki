@@ -4,9 +4,9 @@
 
 ## Current work and publication
 
-The second September 12 continuation batch changes **111 documentation files**. The [current release record](reports/2026-09-12/second-continuation-release.md) tracks final checks and publication; **the currently confirmed live site remains `c4d3f30a` until that new record reports otherwise**. Prior batch CI 34676588480 and Vercel passed.
+The second September 12 continuation batch changes **111 documentation files** and is live as **`ae704f6f`**. [GitHub CI 34681722568](https://github.com/nseranio/warwiki/actions/runs/34681722568), exact-commit Vercel deployment and direct production checks passed. See the [current release record](reports/2026-09-12/second-continuation-release.md).
 
-The new batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **137.95 MB**, all100,904 compiled links/assets and730 data links valid. All111 changed pages pass browser checks plus search/figure interaction tests. Commit/push and CI/Vercel/production verification are next; read the current release record for the latest result.
+The new batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **137.95 MB**, all100,904 compiled links/assets and730 data links valid. All111 changed pages pass browser checks plus search/figure interaction tests. Publication is verified; the next source-review batch is in progress.
 
 ## Review coverage and next work
 
@@ -15,11 +15,11 @@ The [central ledger](reports/2026-09-11/full-site-review/README.md) contains all
 - `auth_handoff`: all 231 foundation/tools MDX pages next, starting with energy/device safety; new `tools.json/md`. Coordinate shared-data edits.
 - `operative_review`: 04c diversion index/remaining reservoirs, then other surgical families except04h. Original98 urethral/upper-tract,21 bladder-neck,19 bladder and4 diversion reads are saved. Independent bladder, nutrition and female-exam change reviews are recorded.
 - `workflow_readiness`: all44 pages of04h-fistula-repair next. Clinical/special-population scope reports stay available for unresolved companion/source issues.
-- Root: assessment-tools original399lines has been fully read but is **not yet corrected or added to the ledger**. Work in `/tmp/warwiki-assessment-*` includes complete34DOI metadata/available-abstract checks, full standing-cough-test stratification paper and MsFLASH short-form paper, and initial instrument/PISQ/ICS source retrieval. Correct MSIGS definitions, screening-score misuse, FSFI-6 pain domain, FSDS versus FSDS-R, PROMIS/PISQ and pad/urethral-satisfaction generalizations. The male examination page has **not yet been fully read**.
+- Root: assessment-tools original399lines has been fully read and corrections are in progress, **not yet added to the ledger or published**. Work in `/tmp/warwiki-assessment-*` includes complete34DOI metadata/available-abstract checks, full standing-cough-test stratification paper and MsFLASH short-form paper, and initial instrument/PISQ/ICS source retrieval. Correct MSIGS definitions, screening-score misuse, FSFI-6 pain domain, FSDS versus FSDS-R, PROMIS/PISQ and pad/urethral-satisfaction generalizations. The male examination page has **not yet been fully read**.
 - Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data need actual reads and substantive review. Targeted companion corrections do not clear whole pages. Root retains perioperative care/anatomy/surgical principles/skills.
 - Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube13%/58% figures belong to the1998 66-patient report(7/54 vs7/12), not the original1993 paper. Perioperative nutrition/electrolyte pages also require full reads and thiamine/refeeding alignment.
 
-During final release validation all agents are researching read-only. Root will release the freeze once the commit is saved, then continue work without stopping at deployment. Do not overwrite another agent's working source or mistake it for the published release.
+The release freeze has ended and agents are working on the next correction batch. Do not overwrite another agent's working source or mistake it for the published release.
 
 ## Evidence and saved material
 

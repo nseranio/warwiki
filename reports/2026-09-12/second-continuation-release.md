@@ -18,7 +18,7 @@ Independent introduced-change reviews found no new blocking issue in the 19 blad
 - Full source lint passed after restoring one visible inbound link to the hidden transperineal-reanastomosis page; reference-density advisories remain.
 - Final production build: **137.95 MB**, 2,570 files, 1,191 HTML pages. All **100,904 local links/assets and 730 data-link literals** pass.
 - All **111 changed documentation routes** pass browser hydration, content, JavaScript and resource checks. Search result/no-result, abbreviation expansion and clinical-figure enlargement/focus tests also pass. Runs:111 checks plus4 omitted landing-route checks, zero failures. [Browser evidence](second-browser-validation.json).
-- Commit, CI, Vercel and production verification are the remaining publication steps; do not infer a live deployment yet.
+- Published commit **`ae704f6f2b5a88ded6675fa920b7eacdadb0a7b7`**. [GitHub CI 34681722568](https://github.com/nseranio/warwiki/actions/runs/34681722568) and the exact-commit [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/3n7r91HQMf8MeP8nJomv26T96eoK) succeeded. Direct production checks passed for the homepage, corrected female examination, B12, testosterone, VUAS and simple-cystectomy content; `/clinic` remains 404. [Publication evidence](second-publication-verification.json).
 
 ## Continued work and hosting
 

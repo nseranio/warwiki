@@ -8,6 +8,8 @@ For commit-level detail run `git log --oneline`.
 
 ## 2026-09-12 — Second continuation: pharmacology, reconstruction and evaluation
 
+Published as **`ae704f6f`**; CI 34681722568 and the exact-commit Vercel deployment succeeded. All 111 changed documentation routes passed browser checks, and direct live-content checks passed. Review continues in the next batch.
+
 This intermediate batch updates **111 documentation pages**. The cumulative ledger records **396 full source-page reads and 372 scoped updates across 1,186 documentation files**. All 95 pharmacology, 73 clinical-condition and 46 special-population pages have recorded full reads; 144 surgical pages and 36 evaluation pages are recorded. Full page reading does not imply full-paper access or clinical clearance.
 
 Corrected bladder-neck/augmentation/diversion anatomy and outcome denominators, drug labels and current AUA BPH/testosterone distinctions, sexual-medicine regimens and short-term SPIRIT results, nutrition test interpretation and vitamin regimens, female pelvic measurement/examination errors, current screening/gender/lifelong-care recommendations, and clinical companion citations. Removed unsupported universal rules and outcome claims attributed to the wrong sources. Source reports distinguish complete paper reads from selected guideline sections, abstracts and access gaps. Independent change reviews covered 19 bladder pages, six micronutrient pages and the female pelvic examination.
