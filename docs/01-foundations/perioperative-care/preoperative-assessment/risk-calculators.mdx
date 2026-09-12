@@ -5,254 +5,120 @@ sidebar_position: 1
 
 # Risk Calculators
 
-Validated risk calculators convert the mess of a preoperative evaluation into a number — a patient-specific probability of MACE, VTE, pulmonary failure, or overall morbidity. For the reconstructive urologist the point of these tools is not to choose between operating and not operating (clinical judgment does that), but to **inform consent, guide optimization timing, stratify postoperative monitoring, and document the risk-benefit conversation**. This article catalogs the general calculators every surgeon should know — RCRI, NSQIP, Caprini, ARISCAT, Apfel, Surgical Apgar, Clinical Frailty Scale — along with procedure-specific NSQIP morbidity benchmarks for common urologic operations.
+Risk tools support informed consent and perioperative planning by estimating **specified outcomes in defined populations**. They do not all predict the same event, and a score is not a treatment instruction or surgical clearance. Choose a tool that addresses the clinical question, verify its inputs and explain important risks that the model does not capture.<sup>[[1]](#ref1)[[3]](#ref3)</sup>
 
-See also: [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk), [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty), [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy) (Caprini applied), [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting) (Apfel applied).
-
----
+See also: [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk), [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty), [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy), [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting).
 
 ## General Risk Calculators
 
+| Tool | Main question | Important limit |
+|---|---|---|
+| **RCRI** | Cardiac complication risk | Original and later studies use different endpoints and event rates |
+| **Gupta MICA** | Myocardial infarction or cardiac arrest within 30 days | Five predictors include a broad surgical category; this is not the CPT-based Universal calculator |
+| **ACS NSQIP Universal** | Multiple short-term complications and length of stay | Procedure and population fit matter; reconstructive durability and many functional outcomes are outside its scope |
+| **Caprini** | Patient VTE risk | Combine with procedure-specific thrombosis and bleeding guidance |
+| **ARISCAT** | In-hospital pulmonary complications | Original band percentages are cohort observations, not universal rates |
+| **Apfel** | PONV risk | Historical baseline estimates do not equal residual risk after prophylaxis |
+| **Surgical Apgar** | Condition and subsequent risk at the end of surgery | Uses intraoperative data; does not independently determine ICU disposition |
+| **Frailty instruments** | Vulnerability, function and support needs | Instruments measure different constructs and are not interchangeable probability calculators |
+
 ### Revised Cardiac Risk Index (RCRI)
 
-The workhorse bedside cardiac-risk tool. Six variables, one point each:<sup>[[3]](#ref3)[[4]](#ref4)</sup>
+The six components are high-risk surgery as defined by the original index, ischemic heart disease, heart failure, cerebrovascular disease, insulin treatment for diabetes, and creatinine &gt;2.0 mg/dL, with one point for each. The surgical category includes intraperitoneal, intrathoracic and suprainguinal vascular operations; it should not be confused with the overall patient-plus-procedure risk classification in a modern guideline.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
-1. High-risk surgery (intraperitoneal, intrathoracic, suprainguinal vascular)
-2. Ischemic heart disease
-3. Congestive heart failure
-4. Cerebrovascular disease
-5. Insulin-dependent diabetes
-6. Preoperative creatinine &gt;2.0 mg/dL
-
-**30-day MACE (MI / cardiac arrest / death):**<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)</sup>
-
-| RCRI score | MACE risk |
-|---|---|
-| 0 | ~0.4–0.5% |
-| 1 | ~1% |
-| 2 | ~2.4% |
-| ≥3 | ~5.4–10% |
-
-**Limitations:** modest discrimination (AUC 0.75); poorer performance in vascular surgery (AUC 0.64). Still the most widely cited quick-bedside cardiac-risk score.
+The original RCRI outcome included myocardial infarction, pulmonary edema, ventricular fibrillation or primary cardiac arrest, and complete heart block. Later studies have assessed other composites, including 30-day death, MI or cardiac arrest. **Do not relabel an old RCRI percentage table as a universal 30-day MACE estimate.** State the calculator or validation source and its endpoint when quoting an absolute risk.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
 ### Gupta NSQIP MICA Calculator
 
-Predicts **myocardial infarction or cardiac arrest (MICA)** within 30 days using 5 variables:<sup>[[4]](#ref4)</sup>
+Five predictors are age, ASA class, functional dependence, creatinine category and type of surgery. The original model was developed in 211,410 NSQIP patients and validated in a later 257,385-patient dataset; it discriminated MI/cardiac-arrest risk better than RCRI in that validation. That does not establish superiority in every contemporary reconstructive subgroup.<sup>[[4]](#ref4)</sup>
 
-- Age
-- ASA class
-- Functional status
-- Serum creatinine
-- **Procedure type** (21 surgical categories, including urology)
-
-**Advantage over RCRI:** superior discrimination and procedure-specific risk adjustment — important in urology where cystectomy and open nephrectomy carry distinctly different MACE profiles.
+The model's “urology” category does not distinguish every urologic operation. For stress testing and cardiovascular management, combine the estimate with symptoms, functional capacity and the [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk) pathway. Do not routinely calculate several cardiac scores and select whichever result appears most reassuring.<sup>[[1]](#ref1)</sup>
 
 ### ACS NSQIP Universal Surgical Risk Calculator
 
-The most comprehensive general tool — 21 preoperative variables + CPT-specific risk — predicts 8–10 outcomes:<sup>[[5]](#ref5)[[6]](#ref6)</sup>
+The [official calculator](https://riskcalculator.facs.org/RiskCalculator/) combines patient characteristics with a planned procedure code. Outputs include mortality, cardiac and pulmonary complications, infection, VTE, renal complications, readmission, reoperation, discharge destination and predicted hospital stay; some outputs are procedure-specific. The official About page currently lists 19 outputs. Use the current interface rather than an old fixed “21 variables, 8–10 outcomes” description.<sup>[[3]](#ref3)</sup>
 
-- Mortality
-- Any complication
-- Serious complication
-- Pneumonia
-- Cardiac complication
-- SSI
-- UTI
-- VTE
-- Renal failure
-- Discharge to nursing facility
+- Confirm that the selected procedure represents the intended operation, especially in combined or unusual reconstruction.
+- Review inputs rather than leaving unknown characteristics silently interpreted as absent.
+- Explain the **30-day horizon** and the model's missing factors. Late stricture, fistula recurrence, continence, sexual function and long-term device failure require separate discussion.
+- Document any clinician adjustment and its rationale; an adjusted estimate remains an estimate.<sup>[[3]](#ref3)</sup>
 
-**Performance:** c-statistic 0.944 for mortality, 0.816 for morbidity.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
-
-**Urologic validation:** confirmed useful in urology multidisciplinary meetings for surgical candidacy decisions and preoperative counseling.<sup>[[7]](#ref7)</sup>
-
-In practice this is the calculator to print out and include with the consent discussion before any major reconstructive case — radical cystectomy, open nephrectomy, major urethroplasty, complex ureteral reconstruction.
-
----
+A 2025 assessment of 1,085,707 NSQIP records evaluated current machine-learning models across 21 selected risk subsets. It reported good overall calibration and generally good discrimination, but is not independent validation of every rare GU reconstruction. An earlier urology MDM study changed the plan in **3 of 63 assessed cases**; it studied decision impact, not proof that calculator-directed decisions improve outcomes.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
 
 ### Caprini Score — VTE Risk
 
-The most widely used VTE risk assessment tool in surgery. Approximately 40 weighted items (age, BMI, cancer, prior VTE, thrombophilia, recent trauma, immobility, estrogen use, etc.).
+Caprini weights patient and treatment characteristics associated with VTE. Specify the instrument version and use a locally adopted pathway. A score alone does not determine whether a patient needs heparin, mechanical prophylaxis or four weeks of treatment: the operation, bleeding risk, mobility and contraindications also matter.
 
-| Caprini score | Risk | Prophylaxis recommendation |
-|---|---|---|
-| 0–1 | Very low (~0.5%) | Early ambulation only |
-| 2 | Low (~1.5%) | Mechanical prophylaxis |
-| 3–4 | Moderate (~3%) | Mechanical + chemical |
-| ≥5 | High (~6%) | Mechanical + chemical; consider extended |
-| ≥9 | Very high | Extended chemoprophylaxis; closer surveillance |
-
-Applied Caprini + management decisions are covered in [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy).
-
----
+Urology-specific guidance can differ substantially between an ambulatory minor procedure, minimally invasive prostate surgery with or without lymph-node dissection, and open radical cystectomy. Use [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy) for the actual prevention decision. The 2024 European urology guidance explicitly combines procedure and patient risk rather than applying a universal Caprini-to-prescription table.<sup>[[7]](#ref7)</sup>
 
 ### ARISCAT — Pulmonary Complication Risk
 
-Predicts postoperative pulmonary complications (respiratory failure, pneumonia, atelectasis, pleural effusion, pneumothorax, bronchospasm, aspiration).
+ARISCAT uses age, preoperative oxygen saturation, respiratory infection in the preceding month, anemia, incision location, surgical duration and emergency status. The original prospective study included 2,464 adult inpatients at 59 Spanish hospitals; outpatient procedures and transplantation were excluded. Its composite comprised respiratory infection/failure, bronchospasm, atelectasis, pleural effusion, pneumothorax and aspiration pneumonitis.<sup>[[8]](#ref8)</sup>
 
-Seven variables:
+| Score | Risk band | Pulmonary complications in the original validation subset |
+|---|---|---|
+| &lt;26 | Low | 1.6% |
+| 26–44 | Intermediate | 13.3% |
+| ≥45 | High | 42.1% |
 
-- Age
-- Preoperative SpO₂
-- Respiratory infection in the last month
-- Preoperative anemia
-- Surgical incision (peripheral / upper abdominal / intrathoracic)
-- Duration of surgery
-- Emergency procedure
-
-**Risk bands:**
-
-- **Low:** &lt;26 points (~1.6% pulmonary complications)
-- **Intermediate:** 26–44 points (~13%)
-- **High:** ≥45 points (~42%)
-
-Useful preoperatively for patients with COPD, asthma, or recent respiratory infection undergoing major abdominal urologic surgery (cystectomy, open nephrectomy).
-
----
+These figures came from an **837-patient validation subset** and depend on the original broad, in-hospital complication definitions. For example, the corresponding intermediate-risk rate in the development subset was 6.3%. Use the score to support assessment and planning; do not promise the same absolute rate in a modern robotic or outpatient GU population.<sup>[[8]](#ref8)</sup>
 
 ### Apfel Score — PONV Risk
 
-Four risk factors (1 point each):
+The adult simplified score assigns one point each for female sex, nonsmoking, prior PONV or motion sickness, and anticipated postoperative opioid use. Approximate baseline PONV rates for 0–4 factors are 10%, 20%, 40%, 60% and 80%; these are not estimates after effective prophylaxis.<sup>[[9]](#ref9)</sup>
 
-- **Female sex**
-- **Non-smoker**
-- **History of PONV or motion sickness**
-- **Postoperative opioid use anticipated**
-
-| Apfel score | 24-h PONV risk | Prophylaxis |
-|---|---|---|
-| 0 | 10% | None |
-| 1 | 20% | Consider monotherapy |
-| 2 | 40% | Dual prophylaxis |
-| 3 | 60% | Triple prophylaxis |
-| 4 | 80% | Triple + TIVA + regional anesthesia |
-
-Applied dosing and drug combinations are in [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting).
-
----
+The **2025 Fifth Consensus Guidelines recommend two preventive interventions in adults at any PONV risk**, including those with one or two factors. Do not retain an old automatic “one factor → monotherapy” rule. Assess risk and formulate the anesthetic/antiemetic plan **before surgery**, with further measures for high-risk patients and drug-specific contraindications considered. Doses and rescue choices are in [Nausea & Vomiting](/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting).<sup>[[9]](#ref9)</sup>
 
 ### Surgical Apgar Score (SAS)
 
-A **postoperative** (not preoperative) score, calculated at the end of surgery from 3 intraoperative variables:<sup>[[8]](#ref8)[[10]](#ref10)</sup>
+Calculate this 0–10 score **at the end of the operation**, using intraoperative estimated blood loss, lowest mean arterial pressure and lowest heart rate.<sup>[[10]](#ref10)</sup>
 
-| Variable | 0 pts | 1 pt | 2 pts | 3 pts | 4 pts |
+| Variable | 0 points | 1 point | 2 points | 3 points | 4 points |
 |---|---|---|---|---|---|
-| **EBL (mL)** | &gt;1000 | 601–1000 | 101–600 | ≤100 | — |
-| **Lowest MAP (mmHg)** | &lt;40 | 40–54 | 55–69 | ≥70 | — |
-| **Lowest HR (bpm)** | &gt;85 | 76–85 | 66–75 | 56–65 | ≤55 |
+| EBL, mL | &gt;1000 | 601–1000 | 101–600 | ≤100 | — |
+| Lowest MAP, mmHg | &lt;40 | 40–54 | 55–69 | ≥70 | — |
+| Lowest HR, beats/min | &gt;85 | 76–85 | 66–75 | 56–65 | ≤55* |
 
-**Score range:** 0–10 (higher is better).
+**\*Pathological bradyarrhythmia or asystole receives zero heart-rate points**, not four. The original rule includes sinus arrest, atrioventricular block/dissociation and escape rhythms.<sup>[[10]](#ref10)</sup>
 
-**Clinical utility:**<sup>[[8]](#ref8)[[9]](#ref9)[[11]](#ref11)</sup>
+A lower score identifies patients with a more concerning intraoperative course, but event rates vary with baseline risk and procedure. Use it to communicate the course and reconsider postoperative needs alongside blood loss, organ support, hemodynamics and other findings. The score does not make hypotension safe, reward induced bradycardia or replace a clinical decision about PACU, ward or ICU care.
 
-- **SAS ≤4:** 49% major complication rate; higher mortality, septic shock, respiratory failure
-- **SAS 7–10:** low-risk (~5% major complications)
-- Independent predictor of ICU admission
-- Improves cardiac risk re-estimation when combined with RCRI (2023 Daza *Ann Surg*)
+### Clinical Frailty Scale and Other Frailty Tools
 
-Useful in the PACU to decide whether a patient needs step-down or ICU after a difficult cystectomy or nephrectomy.
+CFS is a nine-level clinical judgment scale, not a direct numerical prediction of operative mortality. ASA 2025 supports considering expanded evaluation for older inpatient surgery patients with low-certainty evidence; it does not endorse CFS as universally the most accurate tool.<sup>[[11]](#ref11)</sup>
 
----
+The Edmonton Frail Scale has **nine domains and 11 items**. RAI has prospective questionnaire and administrative-data forms. Use the current instrument instructions and the [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty) page for corrected definitions, assessment scope and intervention evidence.
 
-### Clinical Frailty Scale (CFS) and Frailty Tools
+## Historical Urologic NSQIP Morbidity Data
 
-Frailty affects **25–40% of older surgical patients** and is associated with **2–5-fold increased complications, mortality, and new disability**.<sup>[[14]](#ref14)</sup>
+Patel et al. analyzed **39,700 procedures from 2006–2011**, reporting 30-day complications in 56% after cystectomy, 21% after nephrectomy and 19% after radical retropubic prostatectomy; cystectomy mortality was 3.2%. These are **historical observational benchmarks**, not outputs of the current Universal calculator for a particular patient, and not interchangeable with contemporary minimally invasive or 90-day outcome series.<sup>[[12]](#ref12)</sup>
 
-**Clinical Frailty Scale (CFS)** — the most feasible and accurate:<sup>[[12]](#ref12)[[13]](#ref13)</sup>
+## Using an Estimate in Practice
 
-- 9-point scale based on clinical judgment
-- Strongest association with mortality (OR 4.89) and non-home discharge (OR 6.31)
-- Minimal time, no performance testing required
-- **Recommended by the 2025 ASA Practice Advisory** for older inpatient surgery.<sup>[[14]](#ref14)</sup>
-
-Other validated frailty tools:
-
-| Tool | Components |
-|---|---|
-| **Fried Phenotype** | Weight loss, exhaustion, low activity, slow gait, weak grip |
-| **Edmonton Frail Scale** | 11 domains (cognition, mood, function, etc.) |
-| **FRAIL Questionnaire** | 5 self-reported items |
-| **Risk Analysis Index (RAI)** | Electronic-health-record–based |
-
-Applied frailty assessment and prehabilitation strategies are in [Frailty](/docs/foundations/perioperative-care/preoperative-assessment/frailty).
-
----
-
-## Summary — General Risk Calculators
-
-| Calculator | Primary outcome | Variables | Best use |
-|---|---|---|---|
-| **RCRI** | 30-d MACE | 6 | Quick bedside cardiac screening |
-| **Gupta MICA** | MI / cardiac arrest | 5 + procedure | Procedure-specific cardiac risk |
-| **ACS NSQIP Universal** | 8–10 outcomes | 21 + CPT | Comprehensive risk, informed consent |
-| **Caprini** | VTE | ~40 | VTE prophylaxis decisions |
-| **ARISCAT** | Pulmonary complications | 7 | Pulmonary risk stratification |
-| **Apfel** | PONV | 4 | Antiemetic prophylaxis |
-| **Surgical Apgar** | Complications / mortality | 3 (intraop) | PACU / ICU disposition |
-| **Clinical Frailty Scale** | Mortality, disability | Clinical judgment | Older adults, prehabilitation |
-
----
-
-## General Urologic NSQIP Morbidity Data
-
-The ACS-NSQIP universal calculator has been applied across urologic procedures, yielding procedure-specific morbidity benchmarks:<sup>[[15]](#ref15)</sup>
-
-| Operation | Any complication | Mortality |
-|---|---|---|
-| **Radical cystectomy** | **56%** | 3.2% |
-| Open nephrectomy | 21% | — |
-| Radical prostatectomy | 19% | — |
-| TURBT | 11% | — |
-| TURP | 10% | — |
-
-**Key complication predictors in urology (NSQIP):**<sup>[[15]](#ref15)</sup>
-
-- Older age
-- ASA class
-- Dependent functional status
-- Acute kidney injury (OR 2.70)
-- Preoperative transfusion ≥5 units (OR 4.44)
-
----
-
-## Key Takeaways for the Reconstructive Urologist
-
-1. **Every major elective reconstruction** — run the patient through **ACS NSQIP Universal** for comprehensive risk + **Gupta MICA** for cardiac risk + **Caprini** for VTE.
-2. **Older adults** — add the **Clinical Frailty Scale** (recommended by 2025 ASA).
-3. **PACU disposition** — the **Surgical Apgar Score** is the one to calculate before leaving the OR, especially after a bloody or unstable case.
-4. **Apfel before extubation** — three or more factors means triple antiemetic prophylaxis and consideration of TIVA.
-5. **Documentation** — calculated risks belong in the consent note; "discussed 1.3% estimated risk of major cardiac event" is a more defensible note than "patient accepts surgical risk."
-
----
+Record the procedure, tool/version, date, important inputs, predicted outcome and time horizon. Explain the number in plain terms together with its limitations, alternative treatments and outcomes important to the patient. A model's ability to rank higher-risk patients does not ensure accurate absolute estimates in a different population, and none of these tools captures every benefit or burden of reconstruction.
 
 ## References
 
-<a id="ref1"></a>1. Duceppe E, Parlow J, MacDonald P, et al. "Canadian Cardiovascular Society Guidelines on Perioperative Cardiac Risk Assessment and Management for Patients Who Undergo Noncardiac Surgery." *Can J Cardiol.* 2017;33(1):17–32. doi:[10.1016/j.cjca.2016.09.008](https://doi.org/10.1016/j.cjca.2016.09.008)
+<a id="ref1"></a>1. Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. *J Am Coll Cardiol.* 2024;84:1869–1969. doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013).
 
-<a id="ref2"></a>2. Davis C, Tait G, Carroll J, Wijeysundera DN, Beattie WS. "The Revised Cardiac Risk Index in the New Millennium — 9,519 Consecutive Elective Surgical Patients." *Can J Anaesth.* 2013;60(9):855–63. doi:[10.1007/s12630-013-9988-5](https://doi.org/10.1007/s12630-013-9988-5)
+<a id="ref2"></a>2. Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and Prospective Validation of a Simple Index for Prediction of Cardiac Risk of Major Noncardiac Surgery. *Circulation.* 1999;100:1043–1049. doi:[10.1161/01.CIR.100.10.1043](https://doi.org/10.1161/01.CIR.100.10.1043).
 
-<a id="ref3"></a>3. Thompson A, Fleischmann KE, Smilowitz NR, et al. "2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery." *J Am Coll Cardiol.* 2024;84(19):1869–1969. doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)
+<a id="ref3"></a>3. American College of Surgeons. [ACS NSQIP Surgical Risk Calculator: About](https://riskcalculator.facs.org/RiskCalculator/about.html) and [FAQ](https://riskcalculator.facs.org/RiskCalculator/faq.html).
 
-<a id="ref4"></a>4. Patel AY, Eagle KA, Vaishnava P. "Cardiac Risk of Noncardiac Surgery." *J Am Coll Cardiol.* 2015;66(19):2140–2148. doi:[10.1016/j.jacc.2015.09.026](https://doi.org/10.1016/j.jacc.2015.09.026)
+<a id="ref4"></a>4. Gupta PK, Gupta H, Sundaram A, et al. Development and Validation of a Risk Calculator for Prediction of Cardiac Risk After Surgery. *Circulation.* 2011;124:381–387. doi:[10.1161/CIRCULATIONAHA.110.015701](https://doi.org/10.1161/CIRCULATIONAHA.110.015701).
 
-<a id="ref5"></a>5. Bilimoria KY, Liu Y, Paruch JL, et al. "Development and Evaluation of the Universal ACS NSQIP Surgical Risk Calculator: A Decision Aid and Informed Consent Tool for Patients and Surgeons." *J Am Coll Surg.* 2013;217(5):833–42.e1–3. doi:[10.1016/j.jamcollsurg.2013.07.385](https://doi.org/10.1016/j.jamcollsurg.2013.07.385)
+<a id="ref5"></a>5. Cohen ME, Liu Y, Hall BL, Ko CY. ACS NSQIP Risk Calculator Performance Across Multiple Domains of Operative Risk and Risk-associated Features. *Ann Surg.* 2025. doi:[10.1097/SLA.0000000000006753](https://doi.org/10.1097/SLA.0000000000006753).
 
-<a id="ref6"></a>6. Cohen ME, Liu Y, Hall BL, Ko CY. "ACS NSQIP Risk Calculator Performance Across Multiple Domains of Operative Risk and Risk-Associated Features." *Ann Surg.* 2025. doi:[10.1097/SLA.0000000000006753](https://doi.org/10.1097/SLA.0000000000006753)
+<a id="ref6"></a>6. Wu H, Guduguntla A, Gyomber D, Niall O, Satasivam P. NSQIP Surgical Risk Calculator: A Useful Adjunct for the Urology Multidisciplinary Meeting. *ANZ J Surg.* 2025;95:117–123. doi:[10.1111/ans.19357](https://doi.org/10.1111/ans.19357).
 
-<a id="ref7"></a>7. Wu H, Guduguntla A, Gyomber D, Niall O, Satasivam P. "NSQIP Surgical Risk Calculator: A Useful Adjunct for the Urology Multidisciplinary Meeting." *ANZ J Surg.* 2025;95(1-2):117–123. doi:[10.1111/ans.19357](https://doi.org/10.1111/ans.19357)
+<a id="ref7"></a>7. Tikkinen KAO, et al. European Guidelines on Peri-operative Venous Thromboembolism Prophylaxis: First Update. Chapter 12: Urology. *Eur J Anaesthesiol.* 2024. [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC11224558/).
 
-<a id="ref8"></a>8. Lin YC, Chen YC, Yang CH, Su NY. "Surgical Apgar Score Is Strongly Associated With Postoperative ICU Admission." *Sci Rep.* 2021;11(1):115. doi:[10.1038/s41598-020-80393-z](https://doi.org/10.1038/s41598-020-80393-z)
+<a id="ref8"></a>8. Canet J, Gallart L, Gomar C, et al. Prediction of Postoperative Pulmonary Complications in a Population-based Surgical Cohort. *Anesthesiology.* 2010;113:1338–1350. doi:[10.1097/ALN.0b013e3181fc6e0a](https://doi.org/10.1097/ALN.0b013e3181fc6e0a).
 
-<a id="ref9"></a>9. Tracy BM, Srinivas S, Baselice H, Gelbard RB, Coleman JR. "Surgical Apgar Scores Predict Complications After Emergency General Surgery Laparotomy." *J Trauma Acute Care Surg.* 2024;96(3):429–433. doi:[10.1097/TA.0000000000004189](https://doi.org/10.1097/TA.0000000000004189)
+<a id="ref9"></a>9. Gan TJ, et al. Fifth Consensus Guidelines for the Management of Postoperative Nausea and Vomiting. *Anesth Analg.* 2025. doi:[10.1213/ANE.0000000000007816](https://doi.org/10.1213/ANE.0000000000007816).
 
-<a id="ref10"></a>10. Regenbogen SE, Ehrenfeld JM, Lipsitz SR, et al. "Utility of the Surgical Apgar Score — Validation in 4,119 Patients." *Arch Surg.* 2009;144(1):30–6. doi:[10.1001/archsurg.2008.504](https://doi.org/10.1001/archsurg.2008.504)
+<a id="ref10"></a>10. Gawande AA, Kwaan MR, Regenbogen SE, et al. An Apgar Score for Surgery. *J Am Coll Surg.* 2007;204:201–208. doi:[10.1016/j.jamcollsurg.2006.11.011](https://doi.org/10.1016/j.jamcollsurg.2006.11.011).
 
-<a id="ref11"></a>11. Daza JF, Bartoszko J, Van Klei W, et al. "Improved Re-Estimation of Perioperative Cardiac Risk Using the Surgical Apgar Score — A Retrospective Cohort Study." *Ann Surg.* 2023;278(1):65–71. doi:[10.1097/SLA.0000000000005509](https://doi.org/10.1097/SLA.0000000000005509)
+<a id="ref11"></a>11. Sieber F, McIsaac DI, Deiner S, et al. 2025 American Society of Anesthesiologists Practice Advisory for Perioperative Care of Older Adults Scheduled for Inpatient Surgery. *Anesthesiology.* 2025;142:22–51. doi:[10.1097/ALN.0000000000005172](https://doi.org/10.1097/ALN.0000000000005172).
 
-<a id="ref12"></a>12. McIsaac DI, MacDonald DB, Aucoin SD. "Frailty for Perioperative Clinicians: A Narrative Review." *Anesth Analg.* 2020;130(6):1450–1460. doi:[10.1213/ANE.0000000000004602](https://doi.org/10.1213/ANE.0000000000004602)
-
-<a id="ref13"></a>13. Aucoin SD, Hao M, Sohi R, et al. "Accuracy and Feasibility of Clinically Applied Frailty Instruments Before Surgery — A Systematic Review and Meta-Analysis." *Anesthesiology.* 2020;133(1):78–95. doi:[10.1097/ALN.0000000000003257](https://doi.org/10.1097/ALN.0000000000003257)
-
-<a id="ref14"></a>14. Sieber F, McIsaac DI, Deiner S, et al. "2025 American Society of Anesthesiologists Practice Advisory for Perioperative Care of Older Adults Scheduled for Inpatient Surgery." *Anesthesiology.* 2025;142(1):22–51. doi:[10.1097/ALN.0000000000005172](https://doi.org/10.1097/ALN.0000000000005172)
-
-<a id="ref15"></a>15. Patel HD, Ball MW, Cohen JE, et al. "Morbidity of Urologic Surgical Procedures — An Analysis of Rates, Risk Factors, and Outcomes." *Urology.* 2015;85(3):552–9. doi:[10.1016/j.urology.2014.11.034](https://doi.org/10.1016/j.urology.2014.11.034)
+<a id="ref12"></a>12. Patel HD, Ball MW, Cohen JE, et al. Morbidity of Urologic Surgical Procedures: An Analysis of Rates, Risk Factors, and Outcomes. *Urology.* 2015;85:552–559. doi:[10.1016/j.urology.2014.11.034](https://doi.org/10.1016/j.urology.2014.11.034).

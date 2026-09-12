@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Tenth continuation: closure, access and perioperative evidence
+
+Revised12documentation pages: closure/access and principles landing, three biological grafts, two genital lymphatic techniques and four perioperative topics. Corrected false/mismatched citations, trial populations and effect claims, material and product indications, entry-safety guarantees and gas-embolism instructions. Integrated major2025/2026closure syntheses and high-yield perioperative findings with exact applicability limits.
+
+Both complete Cochrane reviews and accessible major-source supplements were read, including all136PREPARE protocol pages and114OPTIMISEII supplement pages with actual graphics inspected. Inaccessible full papers and partial guideline reads remain individually logged. Ledger:622current full MDX reads,595scoped updates across1,186files; no whole-site clinical clearance. Lint/typecheck,32component and51maintenance tests pass; build132.42MB,97,898compiled links/assets and722data links valid. All12routes and three interaction tests pass. Publication verification pending. See the [tenth release record](reports/2026-09-12/tenth-continuation-release.md). Vascular/exposure source review continues.
+
+---
+
 ## 2026-09-12 — Ninth continuation: bowel reconstruction and procedural safety
 
 Revised 17 documentation pages across bowel handling/harvest/anastomosis/stoma principles, biomaterials, genital lymphatic techniques and perioperative anesthesia/analgesia/positioning. Corrected mismatched citations, trial endpoints and denominators, product indications and unsupported operative rules. Removed an unused reoperative-bowel decision tree with outdated clinical choices and dead anchors.

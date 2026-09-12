@@ -466,3 +466,17 @@ Final source SHA-256: `fd7e052412e03604d1299ab2b54ec602d2c07daf29af5630ca9c6f728
 Full original327 lines and revised102 lines read; hash `cfaba84fa714989e95c54d0c5910da9a16b621515952fb5087348504fe266453`. Corrected node-containing LYST conflation using Sun/Yamamoto's complete technical review and allfour diagrams: SCIP-LIFT retains collectors in deep fat and preserves inguinal nodes around the pedicle. Removed guaranteed cure/no compression/no donor risk, exact-anatomy/survival claims, incompatible cross-series comparisons, and routine male pelvic prophylaxis extrapolation.
 
 Sources: complete Sun/Yamamoto2024 main+table+23refs+fourgraphics; complete Caretto2022 main+fourcaptions+62refs (graphics unread); complete Schiltz2021 main+3tables+fivecaptions+42refs (graphics unread); prior fullISL2023 consensus. Original7-patient3R,26-patientcomplete-system,LYST,anatomy andGuiotto outcomes are limited to the listed completeprimaryabstracts. The originaloperativepapers and some screened/removedreferences remain inaccessible or unread, as explicitly itemized in JSON. No comparative cure or fullclinicalclearance claim.
+
+## LYST — September12,2026
+
+Complete original and final page read; corrected immediate-drainage, donor-safe-zone, microsurgery and comparison claims. Original2020three-patient paper and ultrasoundplanning2022 complete main/tables/captions/references read, with graphics/videos limits; 19 original indexed abstracts read. Eight-patient and six-patient limb studies remain small uncontrolled evidence, not genitalcomparative validation. Exact source access and unresolved papers are in JSON.
+
+- File: `docs/04-surgical-techniques/04e-genital-reconstruction/lyst.mdx`
+- SHA256: `25b6ceabb6937c0ba554e62ce9d5f6e7b87bd5d726021fddc609c744b5e2bb1e`
+
+## Abdelfattah pedicled transfer — September12,2026
+
+Complete original and revised MDX read; all13originalprimaryabstracts checked, plus separately recorded completeauthorreview and consensus. Corrected GLS definition, unsupported namedprocedure rankings, immediate-drainage/immune claims, single-flap assumptions, and broad postpelvic-surgeryextrapolation. Full2023techniquemanuscript remains unavailable; kept precise abstract-outcome scope.
+
+- File: `docs/04-surgical-techniques/04e-genital-reconstruction/complete-functional-lymphatic-pedicled-transfer.mdx`
+- SHA256: `c9579dfb3652092fa641cb1d2943d62fa47019e85dd4d3f7c1885459c9d7a5cc`

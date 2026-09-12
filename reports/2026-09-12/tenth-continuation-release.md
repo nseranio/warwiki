@@ -1,0 +1,19 @@
+# Tenth continuation release — September 12, 2026
+
+## Scope
+
+Twelve documentation pages revised: Incisions & Closure, Laparoscopic Access, their principles landing page, three biological-graft pages, two genital lymphatic techniques and four perioperative pages. The ledger records **622 current full MDX reads, 595 scoped updates, 21 checked, 11 unresolved and 559 unreviewed files** across 1,186 documentation files. No complete clinical clearance is asserted. Tools coverage is 86/231 and genital coverage is 25 pages; all 15 assigned perioperative originals are now corrected and read.
+
+Closure and access revisions correct the false Henriksen meta-analysis citation, STITCH needle/package and population figures, unsupported material superiority, universal entry-safety rankings and misleading network denominators. Complete source reading includes EHS/AHS2022 and its supplement, STITCH main report, two closure syntheses in2025 and SUBITE2026, both Cochrane reviews with all analyses/appendices and actual graphics, and ISGE guidance. Gas-embolism instructions follow the complete relevant AHA2025 section, not an asserted whole-guideline read. Source-level errors and inaccessible retained papers remain explicitly documented in the [access and closure report](access-closure-review.md) and [original source inventory](access-closure-original-source-access.json).
+
+Biological-graft revisions distinguish current product composition/indications and urethral versus prolapse evidence. LYST and the Abdelfattah transfer pages remove unsupported outcome promises and correct patient/endpoint descriptions. Cardiovascular, frailty, risk-calculator and ERAS revisions repair risk estimates, guideline applicability and trial interpretations. PREPARE had850randomized and847retained; the operated complication population was705, with no demonstrated primary benefit. The entire136-page [PREPARE protocol](prepare-protocol-source-review.md) and all114pages of [OPTIMISEII supplements](optimise-ii-supplement-source-review.md) were independently read with actual graphics inspected. OPTIMISEII tested a monitoring/fluids/inotrope strategy, not monitoring alone. The2026 RELIEF renal follow-up is labeled post hoc and abstract-level in the internal access record; unavailable main/supplement material is not counted as read.
+
+## Validation and publication
+
+Lint, typecheck, 32 component tests and 51 maintenance tests pass. The final production build is **132.42 MB**, 2,569files and1,191HTML pages; all **97,898compiled links/assets and722data links** pass. All12changed routes and three interaction tests pass. Five desktop samples and two mobile tables were visually inspected, including horizontal scrolling; final frailty/ERAS source clarifications also passed route and actual screenshot checks. See the [browser record](tenth-browser-validation.json). Publication and exact-commit live verification pending.
+
+Temporary source papers, supplements and screenshots stay outside the deployed repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched. The Vercel account deployment-storage meter has not been reconfirmed; local artifact size is a separate measure.
+
+## Continue after publication
+
+The next source review is underway for vascular damage control and surgical exposure: all original page text and52available indexed abstracts from56references are read. The complete2023European trauma-bleeding guideline and allfour supplements are read; full ESVS2025, UK-REBOA and major2026whole-blood trial reviews are in progress. Continue remaining tools and genital techniques, foundations/anatomy, resources/History/imported content and supplied OpenEvidence reconciliation. Evidence stays quarterly; Epic stays paused. This release is a checkpoint within the continuing whole-site request.

@@ -14,10 +14,10 @@ The user explicitly requested completion after the previous release stopped at 1
 
 - `auth_handoff`: completed all 95 pharmacology MDX reads and scoped corrections; next all 231 tools pages, recorded in `tools.json/md`. Coordinate any shared imported-data edits.
 - `operative_review`: remaining surgical-technique families except 04h; original 98 urethral/upper-tract, 21 bladder-neck, 19 bladder and 25 diversion pages now saved. Continue 04e genital reconstruction, then remaining families.
-- `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; all 44 fistula originals now read; continue four remaining perioperative corrections (ERAS, cardiovascular risk, frailty and calculators).
+- `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; all 44 fistula originals now read; all15perioperative pages now corrected and read; current full-source task is ESVS2025vascular-trauma guidance.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The ninth batch revises 17 documentation pages and records 614 current full MDX reads. Lint/typecheck/tests/build pass (132.77 MB); all 21 browser checks pass; published as 9cad97d7; exact-commit CI/Vercel and six live checks passed. Continue after publication without another user message. Domain ledgers record exact source access and unresolved claims; root merges hashes and verifies production. Counts describe page reading, not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
+The tenth batch revises12documentation pages and records622current full MDX reads. Lint/typecheck/tests/build pass (132.42MB); all12routes and three interaction tests pass; publication verification pending. Continue after publication without another user message. Source reviews underway for vascular damage control/exposure, UK-REBOA, ESVS2025and major2026whole-blood trials. Domain ledgers preserve exact source access and unresolved claims; page reading is not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
 
 ## Retained preferences
 
