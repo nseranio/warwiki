@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Ninth continuation: bowel reconstruction and procedural safety
+
+Revised 17 documentation pages across bowel handling/harvest/anastomosis/stoma principles, biomaterials, genital lymphatic techniques and perioperative anesthesia/analgesia/positioning. Corrected mismatched citations, trial endpoints and denominators, product indications and unsupported operative rules. Removed an unused reoperative-bowel decision tree with outdated clinical choices and dead anchors.
+
+Four major ICG trial main papers and three complete supplements were read, with original-source and graphic limitations individually logged. The large EssentiAL supplement independently confirms the six-point effect was a power assumption, not a superiority margin. Focused independent checks covered all revised pages. Ledger: 614 current full MDX reads and 583 scoped updates across 1,186 files; no whole-site clinical clearance. Lint/typecheck, 32 component and 51 maintenance tests pass; build 132.77 MB, all 98,134 compiled links/assets and 722 data links valid. All 21 browser checks pass. Publication verification pending. See [ninth release record](reports/2026-09-12/ninth-continuation-release.md). Continue after this checkpoint.
+
+---
+
 ## 2026-09-12 — Eighth continuation: wound evidence, radiation and perioperative safety
 
 Revised 21 documentation pages covering wound biology/adjuncts/HBOT, radiation effects, ureteral drainage, genital lymphedema and perioperative care. Corrected 20 wrong radiation-page PubMed links, misleading outcome denominators, device instructions and universal treatment claims. Added SWHSI-2, current PACE-B follow-up, CIRSE 2026 and high-yield perioperative evidence with explicit applicability limits. The new wound diagram has no fixed healing deadline.

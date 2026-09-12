@@ -2,7 +2,7 @@
 
 Entire original and revised MDX read including references. Consequential claims checked against identified primary sources, official guidance and device labeling. Source access is recorded individually; a full MDX read is not full access to every cited study or clinical clearance.
 
-Saved full-page reads with scoped substantive review: **19**. This is an ongoing family review, not a statement that the entire family has been reviewed.
+Saved full-page reads with scoped substantive review: **22**. This is an ongoing family review, not a statement that the entire family has been reviewed.
 
 ## Penile Grafting With Tissue Substitutes
 
@@ -393,3 +393,76 @@ Limits:
 Final source SHA-256: `d97351784cf5bb33f5b766d078c6ac7868c2c87ffa2fc102d0a4c3b4a472b540`
 
 Individual primary-source URLs and exact access scopes are in the companion JSON.
+
+## Lymphaticovenous Anastomosis (LVA)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis.mdx` — updated
+
+Complete original 323-line MDX and current 139-line rewritten MDX, including all tables and bibliography, read. Consequential selection, anatomy, operative safety, outcome denominators, study design and evidence hierarchy checked against the individually scoped primary sources; current full read is not independent clinical clearance of every claim.
+
+Changes:
+- Replaced cross-series complication rankings, universal early-stage or six-month-CDT selection and guaranteed cure with functional-vessel mapping, tissue composition and individualized specialist selection.
+- Distinguished superficial genital lymphatics from a five-operation spermatic-cord bypass series. Corrected recipient-size configuration, side-to-end versus end-to-side interpretation, and immediate anastomotic patency versus clinical success.
+- Corrected Hara and Lu cohort denominators, concurrent excision and recurrence endpoints; removed false imaging accuracy and universal caliber rules.
+- Added the 336-randomized Mihara trial with its 225-person available-data analysis, six-month cellulitis benefit, null circumference/pain differences, missing-data and non-genital limitations.
+- Qualified the Hahn meta-analysis excess-volume/circumference endpoint and extreme heterogeneity; replaced broad economic claims with the uncertainty of the 2026 randomized-cohort economic analysis.
+- Removed Haas Cochrane protocol as efficacy evidence, arithmetic-inconsistent patency claims, LLIS reductions misreported as raw scores, prophylactic oncology extrapolation and small-study padding.
+
+Limits:
+- All fifty original MDX reference entries read. Forty-six original complete available indexed abstracts were read across retrieval batches, including Hahn via its full paper; four retrieval gaps were not treated as evidence that the papers do not exist. Removed original refs 14, 28, 45 and 48 remain unverified.
+- Most retained surgical series were read as complete abstracts only. Exact operative anatomy and instruction details beyond available primary access were not asserted.
+- Mihara supplementary embedded images/checklist/reprinted-paper appendix, Hahn actual graphics/supplements, SEATTLE actual graphics/video and Lu image-only table/graphics remain unread. These limits are not clinical sign-off.
+- No robust genital randomized comparison establishes cure, freedom from compression, optimal vessel configuration, universal thresholds or prophylactic pelvic benefit.
+
+Final source SHA-256: `66f28f8bfb157aba9b0a25444ad3ee64e30f04ce2c5549de77d2a9380c45d627`
+
+## Vascularized Lymph Node Transfer (VLNT)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer.mdx` — updated
+
+Complete original 247-line MDX and current 136-line rewritten MDX, including all tables and bibliography, read. Consequential selection, anatomy, operative safety, outcome denominators, study design and evidence hierarchy checked against the individually scoped primary sources; current full read is not independent clinical clearance of every claim.
+
+Changes:
+- Removed mandatory advanced-stage/VLNT algorithms and cure promises; preserved individualized selection based on functional collectors, fibrosis, recipient bed and donor morbidity.
+- Reframed mechanisms as human observations and animal hypotheses, removed preclinical hyaluronidase prescriptions, and distinguished pedicled lymphatic flaps from free-node transplantation.
+- Replaced donor superiority and zero-risk guarantees with site-specific morbidity, bowel/perfusion considerations and reverse-mapping limitations; separated regional-groin from local-scrotal recipient choices.
+- Corrected Ehrl nine-operation groups and 49-month overall versus 18/16-month scrotal-transfer follow-up, recurrence without transplantation and unvalidated anatomical staging; corrected two-patient Phan and one-patient Abdelfattah interpretations.
+- Added the actual completed Cochrane review with one 36-person very-low-certainty arm trial. Corrected pooled excess circumference/volume versus whole volume, very high heterogeneity and the absence of comparative genital or donor superiority.
+- Removed transplant survival as a cure endpoint, guaranteed compression cessation/fertility, isolated distal-placement pooling as site superiority and unsupported duration/pressure prescriptions.
+
+Limits:
+- All thirty-three original MDX reference entries read; thirty-one available complete original indexed abstracts read. Original Liu orthotopic and Schaverien 2021 metadata verified but complete primary abstracts/full papers not read; unsupported quantitative claims removed.
+- Ehrl full paper, tables and all graphics read. Hahn main/table/captions read, actual graphics and supplements not inspected. Cochrane access is the complete official public summary/abstract, not the full review.
+- Most donor/technical series remain abstract-scoped; no new detailed donor-harvest manual inferred from abstracts. No robust genital controlled trial demonstrates the best donor, recipient location or durable lymphatic cure.
+
+Final source SHA-256: `2aa9e93ec1d600968e15fc19a6853363611a371ac83ab99f9e96846493ca9d2a`
+
+## Suction-Assisted Protein Lipectomy (SAPL / Liposuction)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/sapl-liposuction.mdx` — updated
+
+Complete original 319-line MDX and final 115-line revised MDX read, including all tables and twenty original references. Nineteen available complete primary abstracts read; one NEJM letter had no abstract and its full text was not read. Full Karlsson, Yoshida, Chen and Sollie main sources read with exact table/caption/reference scopes below; actual source graphics/supplements not inspected. Clinically consequential technique, selection, compression, denominator and causality claims corrected.
+
+Changes:
+- Corrected circumferential/radial cannula instruction to longitudinal limb passes; distinguished circumference of treatment from direction of cannula travel. Preserved previous LVA/transferred-tissue protection.
+- Corrected PAL versus infiltration terminology and dry-tourniquet plus proximal-tumescent technique. Removed claims tumescent infiltration necessarily damages lymphatics, universal cannula/device settings, fixed aspiration targets and outpatient recovery.
+- Removed universal 25% volume threshold, stage-only genital algorithm, automatic bilateral exclusion and required physiologic-surgery-first sequence. Removed biologic hypothesis as a cycle broken only by surgery.
+- Replaced repeated fixed 40/20-mmHg and automatic six-month taper with Yoshida19patients/21legs, previous LVA/VLT, nonrandom compression groups and ulcer/standalone limitations.
+- Corrected excess-volume versus whole-volume meaning, Karlsson five-year12arms/6legs of59, Stewart15legs of72, Granzow58%-15% across all26procedures nottenSAPL, and Torio open-excision notliposuction.
+- Removed causal standalone-versus-combined meta-analysis ranking and pooled compression claim; documented Chen inconsistent totals, mixed endpoints, high heterogeneity and narrative compression/QoL synthesis.
+- Removed unsupported Charles comparative table, guaranteed cosmetic/minimal-risk superiority, genital-compression impossibility and hypothesis-driven automatic early-genital-liposuction recommendations. Removed Cochrane citation from compression rule because its included treatment trial was VLNT, not SAPL.
+
+Limits:
+- No robust direct genital liposuction trial establishes operative selection, device choice, complication superiority, pressure targets or freedom from compression.
+- Granoff, Granzow, Brazio, Lamprou, Stewart, Torio, AVF/AAPS and mechanistic reports remain primarily abstract-scoped for this audit; operative detail uses separately full-read sources.
+- Karlsson/Yoshida/Chen/Sollie actual graphics and supplements not inspected. Chen source inconsistencies are recorded and its precise pooled percentages not adopted as clinical targets.
+- NEJM Greene letter original ref17 had no indexed abstract and full text was not obtained; physiologic mechanism and foot-edema claims removed rather than assumed verified.
+
+Final source SHA-256: `fd7e052412e03604d1299ab2b54ec602d2c07daf29af5630ca9c6f7282249d45`
+
+
+## 3R / SCIP-LFT — 2026-09-12
+
+Full original327 lines and revised102 lines read; hash `cfaba84fa714989e95c54d0c5910da9a16b621515952fb5087348504fe266453`. Corrected node-containing LYST conflation using Sun/Yamamoto's complete technical review and allfour diagrams: SCIP-LIFT retains collectors in deep fat and preserves inguinal nodes around the pedicle. Removed guaranteed cure/no compression/no donor risk, exact-anatomy/survival claims, incompatible cross-series comparisons, and routine male pelvic prophylaxis extrapolation.
+
+Sources: complete Sun/Yamamoto2024 main+table+23refs+fourgraphics; complete Caretto2022 main+fourcaptions+62refs (graphics unread); complete Schiltz2021 main+3tables+fivecaptions+42refs (graphics unread); prior fullISL2023 consensus. Original7-patient3R,26-patientcomplete-system,LYST,anatomy andGuiotto outcomes are limited to the listed completeprimaryabstracts. The originaloperativepapers and some screened/removedreferences remain inaccessible or unread, as explicitly itemized in JSON. No comparative cure or fullclinicalclearance claim.

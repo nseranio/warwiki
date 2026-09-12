@@ -5,16 +5,8 @@ import React, { useState } from 'react';
  * for operative algorithms. The tree spec is JSON-shaped; every leaf is a
  * `result` with optional rationale and citation links back into WARWIKI.
  *
- * Designed for the algorithms currently buried in comparison tables:
- * segment selection in reoperative bowel harvest, urethroplasty technique
- * choice, NLUTD management ladder, etc.
- *
- * Usage in MDX:
- *
- *   import DecisionTree from '@site/src/components/DecisionTree';
- *   import { reoperativeBowelTree } from '@site/src/data/decisionTrees/reoperative-bowel';
- *
- *   <DecisionTree tree={reoperativeBowelTree} />
+ * Pass a clinically reviewed DecisionNode as the tree prop. Keep its
+ * recommendations and citation targets aligned with the source article.
  */
 
 export type DecisionNode = {
