@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Corrected five prolapse/estrogen pages and the SCP conceptual diagram; revised study populations, denominators, outcomes, hysterectomy choice, perioperative estrogen interpretation and testing/counseling. Complete ASPIRe and E-OPTIMAL main/supplement packages, PEOPLE/IUC/EVA/Li mains, the hysterectomy Cochrane main and 29 actual graphics, and additional operative sources are recorded separately from remaining access gaps. SAVE-U original randomization and source access are corrected; maintenance tests no longer reject current evidence because of an obsolete fixed date.
 
-All local checks and 14 visual checks pass at 131.45 MB. Ledger: **671 full current MDX reads and 643 scoped updates** of 1,186 files; 21 checked, 12 unresolved and 510 unreviewed. No complete clinical clearance is asserted. Publication pending. See the [release record](reports/2026-09-12/twenty-fourth-continuation-release.md) and [detailed source records](reports/2026-09-12/prolapse-source-reading/README.md). Continue the whole-site task.
+All local checks and 14 visual checks pass at 131.45 MB. Ledger: **671 full current MDX reads and 643 scoped updates** of 1,186 files; 21 checked, 12 unresolved and 510 unreviewed. No complete clinical clearance is asserted. Content `d12c57e5` passed exact-commit CI/Vercel and all ten live checks. See the [release record](reports/2026-09-12/twenty-fourth-continuation-release.md) and [detailed source records](reports/2026-09-12/prolapse-source-reading/README.md). Continue the whole-site task.
 
 ---
 

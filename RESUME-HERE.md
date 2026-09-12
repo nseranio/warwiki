@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The twenty-fourth batch corrects five prolapse/estrogen pages and the SCP conceptual diagram. All local checks and 14 visual checks pass at 131.45 MB. Exact-commit publication is pending; see the [twenty-fourth release record](reports/2026-09-12/twenty-fourth-continuation-release.md). Prior content `dd4eafee` is verified live.
+The twenty-fourth batch corrects five prolapse/estrogen pages and the SCP conceptual diagram. All local checks and 14 visual checks pass at 131.45 MB. Content `d12c57e5` passed exact-commit CI/Vercel and all ten live checks; see the [twenty-fourth release record](reports/2026-09-12/twenty-fourth-continuation-release.md). Prior content `dd4eafee` is verified live.
 
 ## Review coverage and next work
 
@@ -37,3 +37,7 @@ Standing authorization: validate, commit/push completed changes to `main/origin/
 Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 131.45 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
 
 Preserve unrelated `world-cup-next-week-pacific.ics`. Clinic and quiz stay removed. History stays discreet. Handouts stay recoverable but excluded from builds. Keep public metadata to ordinary page last-updated; detailed review notes stay internal. Never invent clinical sign-off.
+
+## Active additional Cochrane source read
+
+Root recovered Maher2023 complete main HTML at PMC10370901; `/tmp/warwiki-apical-cochrane/main.txt` has418,436 characters. Root has actually read contiguous `[0:28000]`, `[28000:55000]`, `[55000:82000]`; remainder and all actual graphics are still uncredited. This includes all8 summary-of-findings tables, methods and results through earlyComparison1. Root has also completely read the existing apical-prolapse clinical MDX/all20references and backed it up to `/tmp/warwiki-apical-original.mdx`; no revision yet. Continue complete-source reading and precise source-access/figure tracking.

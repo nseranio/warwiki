@@ -12,7 +12,7 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-The twenty-fourth batch is locally validated: **671 complete current MDX reads, 643 scoped updates, 21 checked, 12 unresolved and 510 unreviewed of 1,186 files**. Five prolapse/estrogen pages and the conceptual SCP diagram are corrected within exact source scopes. Build 131.45 MB; exact-commit publication is pending in the [release record](twenty-fourth-continuation-release.md).
+The twenty-fourth batch is locally validated: **671 complete current MDX reads, 643 scoped updates, 21 checked, 12 unresolved and 510 unreviewed of 1,186 files**. Five prolapse/estrogen pages and the conceptual SCP diagram are corrected within exact source scopes. Build 131.45 MB; content `d12c57e5` is verified live with successful exact-commit CI/Vercel and all ten live checks in the [release record](twenty-fourth-continuation-release.md).
 
 Complete ASPIRe and E-OPTIMAL main/supplement packages are now read; remaining paper/figure/supplement gaps are itemized in the [source records](prolapse-source-reading/README.md). Current bounded readers are working read-only on colpocleisis, USLS and SSLF. Continue remaining tools (112/231 read), surgical techniques, foundations/resources/History/imported biographies/data and OpenEvidence reconciliation. Publication does not complete the whole-site request. Do not redeem account usage credits without explicit authorization.
 

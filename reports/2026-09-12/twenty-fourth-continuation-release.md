@@ -18,7 +18,7 @@ Five changed routes pass desktop/mobile overflow, table scrolling, citation-anch
 
 ## Publication
 
-Local verification complete; exact-commit CI, Vercel and production checks are pending publication. This sentence will be replaced with the verified release identifiers.
+Content `d12c57e5878c58a5076bbd15e88c095fc489e9a0` is pushed to main. Exact-commit [GitHub CI](https://github.com/nseranio/warwiki/actions/runs/34718763286) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/TJTWdSgrbAR5fQM57k2jgF74cZNL) succeeded. All ten production checks pass: home, five changed articles and the corrected SCP SVG return 200 with the expected content; Clinic and the two withdrawn sling/Burch SVGs return 404. See [publication verification](twenty-fourth-publication-verification.json).
 
 ## Continue
 
