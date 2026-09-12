@@ -12,7 +12,7 @@ Revised nine full pages: Martius flap, bony/presacral anatomy, rectus/fascia lat
 
 Fixed citation-preview overflow after viewport resizing: hidden previews no longer occupy layout, and resize dismisses stale previews. Added browser regression coverage.
 
-Ledger: 634 current full MDX reads, 607 scoped updates across 1,186 files. Lint/typecheck, 32 component and 51 maintenance tests pass. Build 132.02 MB; all 97,679 compiled links/assets and 722 data links pass. All nine routes, citation anchors, mobile layouts and a keyboard/resize tooltip regression pass; 18 screenshots inspected. Publication verification follows in the [twelfth release record](reports/2026-09-12/twelfth-continuation-release.md). No whole-site clinical clearance is asserted; continue after this checkpoint.
+Ledger: 634 current full MDX reads, 607 scoped updates across 1,186 files. Lint/typecheck, 32 component and 51 maintenance tests pass. Build 132.02 MB; all 97,679 compiled links/assets and 722 data links pass. All nine routes, citation anchors, mobile layouts and a keyboard/resize tooltip regression pass; 18 screenshots inspected. Published as `b9d1533d`; exact-commit CI/Vercel, 11 live checks and the production citation regression passed. Details in the [twelfth release record](reports/2026-09-12/twelfth-continuation-release.md). No whole-site clinical clearance is asserted; continue after this checkpoint.
 
 ---
 

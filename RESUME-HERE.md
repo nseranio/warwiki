@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The twelfth September 12 batch revises **nine documentation pages**: Martius flap, bony/presacral anatomy, rectus/fascia lata grafts, CHASCIP, BLOOM, penile primary closure and LS local flaps. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **132.02 MB**, 97,679 compiled links/assets and 722 data links. All nine browser routes and a citation-preview keyboard/resize regression pass; publication verification follows. See the [release record](reports/2026-09-12/twelfth-continuation-release.md).
+The twelfth September 12 batch revises **nine documentation pages**: Martius flap, bony/presacral anatomy, rectus/fascia lata grafts, CHASCIP, BLOOM, penile primary closure and LS local flaps. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **132.02 MB**, 97,679 compiled links/assets and 722 data links. All nine browser routes and a citation-preview keyboard/resize regression pass; published as `b9d1533d`, with successful exact-commit CI/Vercel, 11 live checks and the production citation regression. See the [release record](reports/2026-09-12/twelfth-continuation-release.md).
 
 ## Review coverage and next work
 
@@ -12,7 +12,7 @@ The ledger contains **1,186 documentation files**: **634** full current reads, *
 
 - Root completed final reads and integrated the saved work from all three reviewers. Their sessions stopped with an account usage-limit error; they are **not currently working**. Do not repeatedly retry them or redeem credits without the user's authorization.
 - Continue the remaining tools, beginning with bowel-segment grafts; its downloaded source metadata has not been fully reviewed. Complete the accessible Cochrane traditional-sling review, whose full file was downloaded but only selected sections were previously read.
-- Continue remaining genital techniques and full-source gaps. The complete Kirtschig 2026 **published abridged article**, all five actual figures and 127 references were read; the separate AWMF long version/development/evidence reports remain outstanding. Ho/Gelman 2018 main and all seven actual figures are now read.
+- Continue remaining genital techniques and full-source gaps. The complete Kirtschig 2026 **published abridged article**, all five actual figures and 127 references were read; the separate 34-page AWMF methods report is now fully read. The 124-page long guideline is read through page 16; the 97-page evidence report and remaining actual graphics are pending. See the [package review](reports/2026-09-12/lichen-sclerosus-guideline-package-review.md). Ho/Gelman 2018 main and all seven actual figures are now read.
 - Continue remaining foundations, resources/History/imported content, clinical data and OpenEvidence reconciliation. The topical-steroid companion's PRP/laser shorthand needs reconciliation during its next full-source pass.
 - Martius and presacral source reports identify complete mains/figures, selected guidelines and inaccessible supplements. CHASCIP/BLOOM full operative methods remain unresolved; the pages no longer infer their unverified details.
 

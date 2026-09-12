@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-09-12T15:55:58.662244+00:00",
+  "sourceCommit": "b9d1533d76d4c06c9cc3e6b6e4ce3b3980eb5a36",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "b9d1533d76d4c06c9cc3e6b6e4ce3b3980eb5a36",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34703535282"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/E2qcBnbDYbHPF6srwcx4iznyJs31",
+      "updated_at": "2026-09-12T15:54:04Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/flaps/martius",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/flaps/martius",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "27/29": true,
+        "41 women": true,
+        "2017": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/bony-pelvic-anatomy",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/bony-pelvic-anatomy",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "two sacroiliac joints": true,
+        "1.9 mm": true,
+        "Straddle": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/presacral-anatomy",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/anatomy-physiology/pelvis-support/presacral-anatomy",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "176": true,
+        "2026 Global Chordoma Consensus": true,
+        "neural sacral foramen": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/rectus-fascia",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/rectus-fascia",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "SISTEr": true,
+        "9.4": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/fascia-lata",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/autologous-tissue/fascia-lata",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "201": true,
+        "donor": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/chascip",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/chascip",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "CHASCIP": true,
+        "eight": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "BLOOM": true,
+        "left gastroepiploic": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/penile-primary-closure",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/penile-primary-closure",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "97%": true,
+        "Buck": true,
+        "four skin-graft": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/local-flaps-ls-sequelae",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04e-genital-reconstruction/local-flaps-ls-sequelae",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "0/357": true,
+        "2026 S3": true,
+        "45/50": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403.",
+  "productionBrowserRegression": {
+    "command": "WARWIKI_E2E_BASE_URL=https://www.warwiki.org npx playwright test tests/e2e/citation-tooltips.spec.ts",
+    "passed": true,
+    "tests": 1,
+    "durationSeconds": 4.9
+  }
+}

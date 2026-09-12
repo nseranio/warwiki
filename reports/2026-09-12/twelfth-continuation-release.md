@@ -10,7 +10,7 @@ Sources and limits:
 
 - [Martius review](martius-source-review.md) and [VVF systematic review](vvf-systematic-review-source-review.md): complete mains, actual graphics, selected ASCRS scope and unavailable supplements distinguished. Cochrane protocol is not outcome evidence.
 - [Pelvic anatomy review](pelvic-support-anatomy-review.md): exact Hain/Celentano/Zurcher main/figure scope, selected ACS diagnostic guidance, anatomical-abstract limits and narrow 2026 chordoma abstract integration.
-- [Genital closure/LS review](genital-closure-ls-source-review.md): complete Kirtschig published abridged guideline, 127 references and five actual figures; complete Ho/Gelman main and seven actual figures. Separate AWMF package remains unread.
+- [Genital closure/LS review](genital-closure-ls-source-review.md): complete Kirtschig published abridged guideline, 127 references and five actual figures; complete Ho/Gelman main and seven actual figures. Separate AWMF package review continues in the [package record](lichen-sclerosus-guideline-package-review.md); its methods report is now fully read.
 - [CHASCIP/BLOOM source record](chascip-bloom-source-preparation.md): full named-technique methods remain inaccessible; major-review inconsistencies and actual supplementary-figure review recorded.
 - [Autologous graft records](../2026-09-11/full-site-review/tools.json): full E-SISTEr main/figures, original SISTEr access limits, donor morbidity and graft-identity corrections. Downloading a Cochrane review did not constitute a full read.
 
@@ -24,7 +24,7 @@ Initial browser validation found a real citation-preview overflow after desktop-
 
 ## Publication
 
-Validated locally; commit/push and exact-commit CI/Vercel/live verification follow. Temporary source PDFs and graphics remain outside the repository. Keep the unrelated calendar file untouched.
+Published as `b9d1533d` to `main/origin/main`. Exact-commit GitHub CI and Vercel deployment succeeded. All 11 production route/content checks passed, including the removed Clinic route returning 404; the citation-preview regression also passed on the live site. See [publication verification](twelfth-publication-verification.json). Temporary source PDFs and graphics remain outside the repository. Keep the unrelated calendar file untouched.
 
 Evidence cadence stays quarterly; Epic stays paused. Clinic/quiz remain removed, History discreet, handouts recoverable and excluded from deployment. Local build size is separate from Vercel's account storage meter, which has not been reconfirmed below 10 GB. The prior deployment-retention and main-only/report-skip controls remain in place.
 
