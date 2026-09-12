@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Sixth continuation: skin grafts, genital reconstruction and bulking safety
+
+This batch corrects **37 documentation pages**. The ledger now records **553 full current-page reads and 524 scoped updates across 1,186 files**, with no complete clinical clearance asserted. Tools coverage is 66/231; fistula originals are logged at 42/44, with final-page corrections pending.
+
+Rebuilt skin/STSG/FTSG and their overview, corrected contraction and donor anatomy, mixed-cohort outcomes and MRKH/urethral restrictions, and removed the recalled ORISE gel recommendation. Repaired unrelated Zhao/Converse PubMed references. Completed the published Cochrane hydrogel review and an independent full Granieri paper read; completed PICASSO supplement/hand-preparation source gaps and PREPARE main-manuscript access without claiming its supplements. Exact source limits and focused peer checks are documented.
+
+Corrected ten bulking-product pages, the operative companion, nine genital-reconstruction pages and eleven fistula techniques plus two clinical companions. Changes separate current versus historical device formulations, actual indications and endpoint denominators; remove unsupported graft/substitute advantages and unsafe pannus-suspension advice; and align urethrocutaneous/urosymphyseal anatomy, evidence and selection.
+
+Lint, typecheck, 32 component tests, 50 maintenance tests and the production build pass. All 99,044 compiled links/assets and 730 data links pass. Output **134.39 MB**. All 37 changed routes plus four interaction checks pass; five visual samples were checked. [Sixth release record](reports/2026-09-12/sixth-continuation-release.md) tracks publication. Continue the entire-site review after this release; evidence stays quarterly and Epic stays paused.
+
+---
+
 ## 2026-09-12 — Fifth continuation: oral donors, antisepsis, diversion and device safety
 
 Published as **`27356a32`**; CI34686563312, exact-commit Vercel success and six live checks passed. The next batch is underway.

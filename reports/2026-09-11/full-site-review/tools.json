@@ -1442,11 +1442,335 @@
         "https://doi.org/10.1016/j.juro.2016.08.093"
       ],
       "sourceSha256": "40c31e70cfa911fec5e5fa97aaf8e8d53b44912b70027c676d81e976ff4dadc0"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/coaptite.mdx",
+      "title": "Coaptite",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including tables and references.",
+        "Current US labeling, contraindications, administration-route and volume distinctions, pivotal/post-approval evidence denominators and major comparative claims."
+      ],
+      "notes": [
+        "Full current manufacturer IN00259-01 September2025 instructions text read, all10pages including postapproval tables, procedures and symbols; /tmp/tools-coaptite-current-ifu.pdf/.txt. Current manufacturer safety body read. FDA P040047/S078 August2025 labeling-update entry confirms update but does not identify individual text changes. No independent visual figure review.",
+        "All12 original reference identities resolved and all available MED abstracts read in /tmp/tools-coaptite-primary.json. ACOG155 had no accessible abstract/fulltext and was not retained as support for numeric outcomes. Original trial papers and supplements were not fully read. AUA2023 entire indexed Bulking Agents section and adjacent references read; not full unabridged guideline.",
+        "Restored unresolved-UTI/current cystitis-urethritis/fragile-mucosa contraindications, tissue viability/stricture/vascular/erosion cautions. Corrected course versus initial volume, route and population precautions. Removed no-allergy/no-erosion product comparisons and unsupported market-decline claim.",
+        "Current459-woman postapproval dataset separated observed199/329 improvement from BOCF199/458 and treatment-emergent from related adverse events. IFU contains inconsistent serious-AE totals/causality summaries and a Table7 analysis-set typographical mismatch; these were not silently reconciled or used for a precise serious-AE rate. Pivotal83/131 versus57/100 is available-case improvement, not all-randomized dryness.",
+        "Small20-patient ultrasound association not generalized to universal resorption/causal failure. Pediatric VUR remained outsideUS indication; attrition and patient-versus-ureter denominators prevent unsupported head-to-head superiority inference. Selected-claim verification only, not complete clinical approval."
+      ],
+      "sources": [
+        "https://www.coaptite.com/pdfs/coaptite_IFU.pdf",
+        "https://www.coaptite.com/",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P040047S078",
+        "https://doi.org/10.1097/JU.0000000000003435",
+        "https://doi.org/10.1016/j.urology.2007.01.050",
+        "https://doi.org/10.1002/14651858.CD003881.pub4",
+        "https://doi.org/10.1097/SPV.0000000000000250",
+        "https://doi.org/10.1097/AOG.0b013e3182161953",
+        "https://doi.org/10.1016/S0022-5347(05)00013-3"
+      ],
+      "sourceSha256": "971e5df2729b1f379be7fa415409ca49babc820dd210d32f2aca18f7858b79cc"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/macroplastique.mdx",
+      "title": "Macroplastique",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including all tables and reference entries.",
+        "US versus international indication, label safety/route, major female SUI trial and registry denominators, male-SUI positioning and VUR endpoint distinctions."
+      ],
+      "notes": [
+        "Full original FDA20-page physician/patient labeling text read (PN4226/4231 RevA September2006), including tables, procedure descriptions and figure text; /tmp/tools-macroplastique-fda-ifu.pdf/.txt. Current full Laborie product body/specifications read. FDA P040050S013 May2023 notes ROSE labeling update; revised complete IFU not retrieved despite current eIFU/archive searches, so source version and access limit explicit. No independent image inspection of original FDA instructional figures.",
+        "All28 original reference identities and available full abstracts read;26 DOI-indexed MED records in /tmp/tools-macroplastique-primary.json plus HenlyPMID7752390 and SheriffPMID9358214 onPubMed. No whole source-paper/supplement reads claimed. ROSE2025 publisher abstract and full preview references/disclosures read; main article is subscription-only. Source abstract stray line numbers removed, not mistaken for data.",
+        "Replaced no-migration/zero-serious-event guarantees with label and scoped animal/clinical observations. Added infection/fragile-mucosa/stricture/vascular/overcorrection and original12weekinterval warnings, separating MIS from US endoscopic route and internationalmale/VUR from USfemaleISD indication.",
+        "Pivotal FDA260enrolled versus247perprotocol and improvement versus dryness separated; preserved source discrepancy of control61/130all-enrolled versus60/125perprotocol rather than conflating them. ROSE70/147improved with147/274fiveyearfollowup notallcohortdryness;106woman7.4yearcohort and67selected12monthresponders separately framed. Ambiguous54percent single-injection abstract statement omitted.",
+        "AUA2023 entire indexed bulking section and2024IPT statements24–31 read previously. Cochrane2019 full abstract and indexed different-materials Results/Summary-of-findings4 segments read, not whole review. Macroplastique-deflux reflux analysis uses ureter counts; certainty differs (moderate in outcome paragraph vs low abstract/discussion) and table comparator headings appear reversed. Retained restrained qualitative endpoint distinction, no false certainty grade or all-child pooleddenominator.",
+        "Removed noncomparable cross-agent outcome/risk table, low-impact network-ranking claims and outdated male-treatment-of-choice conclusion. Rare exposure series14/580eligiblecases and animalmigration are detection signals, not universal incidence. Selected-claim review only, not full clinical clearance."
+      ],
+      "sources": [
+        "https://www.laborie.com/product/macroplastique-plastique-family-of-products/",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf4/P040050C.pdf",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P040050S013",
+        "https://pubmed.ncbi.nlm.nih.gov/7752390/",
+        "https://pubmed.ncbi.nlm.nih.gov/9358214/",
+        "https://doi.org/10.1016/j.juro.2008.09.032",
+        "https://doi.org/10.1007/s00192-025-06163-5",
+        "https://doi.org/10.1016/j.urology.2023.12.019",
+        "https://doi.org/10.1007/s00192-012-1825-9",
+        "https://doi.org/10.1016/j.juro.2009.12.038",
+        "https://doi.org/10.1007/s00192-021-04910-y",
+        "https://doi.org/10.1097/JU.0000000000003435",
+        "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/IPT%20Unabridged%20Final%206-18-24.pdf",
+        "https://doi.org/10.1016/j.juro.2014.05.116",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6380991/"
+      ],
+      "sourceSha256": "ccd9ff9dc9dda980a87330c943e748bddfce732d246cecc2ea6cd4370659fbe3"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/deflux.mdx",
+      "title": "Deflux",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including all tables and references.",
+        "Current US device indication and contraindications, pediatric VUR guideline selection, randomized infection/renal versus radiographic endpoints, attrition and rare-complication denominators."
+      ],
+      "notes": [
+        "Full current manufacturer-linked two-page US IFU text read, all instructions, tables and figure labels (90-96532-04; /tmp/tools-deflux-current.pdf/.txt). No independent figure-pixel inspection. Full US HCP, patient-safety and HCP-safety website bodies read. The abbreviated website contraindication list omits distal-stenotic primary refluxing megaureter; the complete IFU includes it. Used complete IFU. Current HCP adverse-event table differs from abbreviated patient frequency statement; not imported as an all-patient risk estimate.",
+        "All 35 original reference identities checked and all available complete MED abstracts read, plus Swedish III and IV (/tmp/tools-deflux-primary.json). Reused identical previously read Moore and Cochrane abstracts. No full read of all cited journal papers claimed.",
+        "Swedish trial: full abstracts II/III/IV and entire relevant Methods pp31–35 and Results pp37–47 of Brandström doctoral thesis read (/tmp/tools-swedish-reflux-thesis.pdf/.txt, extracted lines920–1706). Table11 individual-patient detail was not decodable; figures not visually inspected; appended journal articles not read. Indexed publisher renal-damage Results and Tables1–2 also read. Did not treat thesis flowchart/table typographical inconsistencies as alternate denominators. Corrected 203 randomized distribution, antibiotics after injection, 52/66 endoscopic VCUG follow-up, resolution-or-downgrade versus cure, sex-specific UTI benefit versus surveillance, and renal-damage counts without claiming injection superiority over prophylaxis.",
+        "EAU2026 selected VUR sections17.2.6,17.3.2a and17.4 recommendations read, not full guideline or entire VUR chapter. Cochrane2019 full abstract and selected indexed endoscopy/material comparisons read, not entire review; certainty wording differs between abstract and individual-material result and comparator headings appear inconsistent, so avoided unsupported certainty assignment. ASCRS2023 exact anal-bulking recommendation table16 read (conditional, low-quality). Solesta FDA approval entry read, not its full IFU.",
+        "Current label safety now includes all six contraindications, vascular occlusion, streptococcal-protein allergy, duplex/age/volume limitations and implant-card/obstruction follow-up. Removed automatic injection volumes and conflation of current-label precautions with contraindications. STING/HIT observational comparison remains explicitly nonrandomized.",
+        "Corrected all-agent meta-analysis attribution, ureter versus patient denominators, selected one-year and long-term imaging follow-up, substantial label post-approval attrition, and failed-explant histology selection. Solesta separated from Deflux indication. Safety case reports retained as possibility signals rather than high-impact comparative evidence. Unresolved: individual local IFU differences, full trial supplements and exhaustive claims were not independently verified; no blanket clinical clearance."
+      ],
+      "sources": [
+        "https://defluxsecure.s3.us-east-2.amazonaws.com/us/ifu/Deflux-US-IFU-current.pdf",
+        "https://deflux.com/hcp",
+        "https://uroweb.org/guidelines/paediatric-urology/chapter/vesicoureteric-reflux",
+        "https://doi.org/10.1016/j.jpedsurg.2016.09.028",
+        "https://doi.org/10.1016/j.urology.2014.04.032",
+        "https://doi.org/10.1016/j.juro.2010.01.059",
+        "https://gupea.ub.gu.se/server/api/core/bitstreams/f88d8f70-fe79-485e-a9ff-265fb5a40586/content",
+        "https://doi.org/10.1016/j.juro.2010.01.061",
+        "https://doi.org/10.1016/j.juro.2010.01.060",
+        "https://doi.org/10.1002/14651858.CD001532.pub5",
+        "https://doi.org/10.1016/j.juro.2014.05.116",
+        "https://doi.org/10.1016/j.juro.2018.03.074",
+        "https://doi.org/10.1016/j.juro.2008.12.005",
+        "https://doi.org/10.1016/j.urology.2022.04.025",
+        "https://doi.org/10.1016/j.juro.2006.06.101",
+        "https://doi.org/10.1016/j.juro.2007.03.165",
+        "https://doi.org/10.1097/01.ju.0000053013.49676.89",
+        "https://doi.org/10.1016/j.juro.2006.08.144",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P100014",
+        "https://doi.org/10.1097/DCR.0000000000002776"
+      ],
+      "sourceSha256": "94ea5be64ae45462d88efeb6d9b3c57ee3caa6ad138a584f9bdbc992098afc2b"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/durasphere.mdx",
+      "title": "Durasphere",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including tables and references.",
+        "Current EXP material generation, US labeling and device compatibility, pivotal/long-term selected denominators, safety causality and guideline positioning."
+      ],
+      "notes": [
+        "Full current March2026 DFU51013(1), all seven pages including all tables, procedures and symbol text read; /tmp/tools-durasphere-current-ifu.pdf/.txt. Earlier April2023 RevJ full seven-page text also read because manufacturer needle link currently resolves to that document rather than a needle-only IFU. No independent figure/symbol image inspection. Current full manufacturer US product body and original FDA approval record read.",
+        "All17 original reference identities and available full MED abstracts read (/tmp/tools-durasphere-primary.json); Pannek letter had no abstract and was not substituted for original PMID11547072. Original article main texts/supplements not obtained. Reused prior exact AUA2023 bulking section, AUA2024 IPT statement25 and ASCRS2023 bulking recommendation reads; these are selected guideline sections, not entire guidelines.",
+        "Corrected current graphite90–212micron EXP versus original zirconium212–500micron study material and graphite X-ray invisibility. Removed uniform radiopacity, no-migration/no-inflammation guarantees, obsolete needle/volume recipe and arbitrary cross-agent ranking. Added infection/stricture/intravascular/pregnancy/viable-tissue/resterilization/needle-compatibility restrictions and no forced injection through resistant muscle.",
+        "Separated pivotal178treated/115followed with76improved36dry from61women one year after last treatment in published80.3percent analysis. Added selected76initialresponders/70enrolled/38maintained/sixdry postapproval study rather than calling absence from guideline examples no long-term data. All-event44/178urgency versus related23/178 corrected; overlapping retention categories not summed.",
+        "Read full two-page April2026 manufacturer InjecSURE announcement and FDA K253598 clearance entry plus indexed summary indications/device-description/technology comparison; not entire510k dossier or device IFU. Added narrow March31,2026 accessory clearance, without implying better continence or a broadened implant indication.",
+        "Rare migration/mass/obstruction reports remain detection signals rather than current EXP incidence. Unresolved: full primary outcome papers, local generation-specific historical implant identification and complete clinical safety verification. No blanket clinical clearance."
+      ],
+      "sources": [
+        "https://carbonmed.com/wp-content/uploads/2026/04/510131_EN.pdf",
+        "https://doi.org/10.1016/s0090-4295(01)01148-7",
+        "https://doi.org/10.1016/S0022-5347(05)00679-8",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253598",
+        "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253598.pdf",
+        "https://doi.org/10.1097/01.ju.0000103688.83606.06",
+        "https://doi.org/10.1097/JU.0000000000003435",
+        "https://doi.org/10.1002/14651858.CD003881.pub4",
+        "https://pubmed.ncbi.nlm.nih.gov/11547072/",
+        "https://doi.org/10.1016/s0090-4295(03)00249-8",
+        "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/IPT%20Unabridged%20Final%206-18-24.pdf",
+        "https://doi.org/10.1002/14651858.CD007959.pub3",
+        "https://doi.org/10.1097/DCR.0000000000002776"
+      ],
+      "sourceSha256": "7ecc9ae9947a50ac26a5c9024ed556db9716bcf54a0b212abea076034854687e"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/teflon.mdx",
+      "title": "Teflon (Polytef / PTFE) — Historical",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read.",
+        "Historical indication/technique framing, selected clinically consequential primary claims, source identity and denominator checks."
+      ],
+      "notes": [
+        "All original MDX text read in complete chunks, including initially truncated middle paragraph and references; full revised MDX reread. All32 original reference identities and available complete MED abstracts read in /tmp/tools-teflon-primary.json. An unrelated cryptorchidism hit for ref4 was excluded. Matouschek1981 primary English abstract PMID7197421 and Spanish-record identity7332371 read, not full originals. EAU2026 selected complete bulking-material section read, not entire pediatric guideline.",
+        "Removed unsupported first-ever/all-later-agents/longest-ever superlatives, pyrolysis description, universal phagocytosis cutoff, obsolete injection recipe and conflation with solid PTFE uses. Corrected 1981 attribution to Matouschek; Politano1964–1991 experience is retained as reported cohort rather than proof of invention. No original FDA regulatory-decision dossier retrieved; retained directly supported EAU pediatric migration/nonapproval statement without an invented causal FDA refusal chronology.",
+        "Separated historical survey12251ureters from patient outcomes, 360/379 long-term assessed ureters from393original, and initially successful Yucel48ureter cohort. Herschorn90/60percent durability belongs to14dryresponders, not46treated. Aragona giant ureteral granuloma occurred inone ofthree operated children while allthree had nodal foreign-body reactions.",
+        "Animal migration endpoints distinguish unexamined brain/kidney at50–70days from later observations. Human cases are rare-event signals, not universal rates; laterAUSfeasibility in seven men does not guarantee uncomplicated reconstruction. No full original journal-paper or supplement reads; selected-claim review, not complete clinical clearance."
+      ],
+      "sources": [
+        "https://uroweb.org/guidelines/paediatric-urology/chapter/vesicoureteric-reflux",
+        "https://pubmed.ncbi.nlm.nih.gov/6374180/",
+        "https://doi.org/10.1016/s0022-5347(17)35632-x",
+        "https://pubmed.ncbi.nlm.nih.gov/7197421/",
+        "https://doi.org/10.1097/00005392-199809020-00011",
+        "https://doi.org/10.1016/s0022-5347(01)64275-7",
+        "https://doi.org/10.1016/s0022-5347(05)65340-2",
+        "https://doi.org/10.1016/j.juro.2007.03.060",
+        "https://pubmed.ncbi.nlm.nih.gov/10799194/",
+        "https://doi.org/10.1159/000474637",
+        "https://doi.org/10.1016/s0022-5347(17)38903-6",
+        "https://doi.org/10.1097/00005392-199501000-00053",
+        "https://doi.org/10.1016/s0022-5347(17)41213-4",
+        "https://doi.org/10.1007/s00467-007-0725-6",
+        "https://doi.org/10.1016/s0022-5347(17)32446-1"
+      ],
+      "sourceSha256": "5ca1139d6604a44166c482af47efa487088f7905f63523d27ce62584fc4c2856"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/autologous-fat.mdx",
+      "title": "Autologous Fat — Historical",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read.",
+        "Historical indication/technique framing, selected clinically consequential primary claims, source identity and denominator checks."
+      ],
+      "notes": [
+        "Entire original and revised MDX read, including all tables and references. All21 original reference identities and complete MED abstracts read (/tmp/tools-autologous-fat-primary.json). Full Cochrane2017 abstract plus indexed entire Lee2001 comparison Results, safety, discussion and study-characteristics table read at PMC6483304; not entire review or source trial paper. Original search endedNovember2010; Cochrane prose inconsistently calls56participants termination versus68randomized/56reported, so denominator distinctions explicit.",
+        "Retained recommendation against routine historical fat bulking based on no demonstrated placebo advantage and fatal embolism. Corrected three-month6/27vs6/29cure-or-improvement (not12monthcure), RR.98failure endpoint, injection-level29/91vs11/98complications, and placebo-arm harvest-site infections. Removed patient-levelNNH derived from repeated-injection events and unsupported only-everdeath/absoluteallergy-or-granulomaguarantees.",
+        "Identified Kato/Chen/Liu mechanistic studies as mouse/rabbit models, not human periurethral proof. Removed general17–49percenthumanresorption rate, uniformavascularurethra assertion and unrelated vocal-fold efficacy table. Old harvest/injection recipe removed; modern treatment selection crosslinked.",
+        "ADRESU45singlearm endpoint is greater-than50percent reduction at52weeks/orlastwithin52weeks and absenceofcell-attributedSAEs, notallSAEs. Gotoh13-manallcohort260.7to152.7 separated from10responder281.5to119.0. AUA2023 statement15 and full indexed therapeutic-opportunities section read. Iltamiocel2024 full primary abstract and publisher indexedMethodsread (DOI10.1002/nau.25588), not full10-pagearticle/supplements:297randomizedprimarynotmet; muscle-cell product distinguished fromfat. Pooled2025prior-surgery abstractread, no newindependenttrialclaim; not added as extra efficacy evidence.",
+        "Parent and clinical peer informed of muscle-cell RCT lead. No current cellular product regulatoryapproval was inferred from a processing-device clearance; no blanket clinical clearance or exhaustive celltherapy review."
+      ],
+      "sources": [
+        "https://doi.org/10.1097/00005392-200101000-00037",
+        "https://doi.org/10.1002/14651858.CD003881.pub4",
+        "https://doi.org/10.1016/s0022-5347(17)35029-2",
+        "https://pubmed.ncbi.nlm.nih.gov/10037377/",
+        "https://doi.org/10.1097/PRS.0000000000000066",
+        "https://doi.org/10.1097/SAP.0000000000001683",
+        "https://doi.org/10.1089/ten.TEC.2012.0126",
+        "https://doi.org/10.1016/0090-4295(94)90039-6",
+        "https://doi.org/10.1111/iju.14311",
+        "https://doi.org/10.1111/iju.13886",
+        "https://doi.org/10.1002/nau.25588",
+        "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf"
+      ],
+      "sourceSha256": "90e4dd64b46130c19bf5362900779646bea1501786cd1d86176646ba1573a0cd"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/historical-agents.mdx",
+      "title": "Historical Bulking Agents",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read.",
+        "Navigation and prior-treatment assessment framing; no numerical efficacy duplication."
+      ],
+      "notes": [
+        "Entire24-line original landing page and revised navigation content read. Removed first-everPTFE and37percentselectedcartilageclaims plus blanket assertion that no prior exposure contraindicates subsequent reconstruction. Linked retained individual hubs instead of duplicating doses and outcomes.",
+        "Cross-checked prior-injection complication framing against Teflon and autologous-fat primary sources reviewed in this batch and current Deflux/Durasphere labels. Contigen and chondrocyte detailed companion reviews remain the next pages; this short landing review does not imply their complete clinical verification. No blanket clinical clearance."
+      ],
+      "sources": [],
+      "sourceSha256": "67e4a16a29b79a531e0d39949ff6ace46d5f42e6c958892b52a9be332ffdef8e"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/contigen.mdx",
+      "title": "Contigen (GAX-Collagen) — Historical",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including references.",
+        "Selected primary regulatory, study-identity, outcome-denominator and safety checks; precise access limits recorded below."
+      ],
+      "notes": [
+        "Entire original 235-line MDX and complete revised page read. Corrected FDA original approval to September 30, 1993, withdrawal October 25, 2011, and historical ISD indication including men and women after at least 12 months without improvement. Removed unverified competition/BSE withdrawal-cause claims and obsolete injection instructions.",
+        "All 37 original reference entries read; Europe PMC returned complete available abstracts for original references 1–3, 5–6, 8–10, 12, 14–17 and 19, with ACOG 13 metadata only. Broad 502/503/504 failures prevented a complete new abstract harvest of the remaining original entries. Original reference 6 title search also returned Cross 1998; identity was distinguished from Appell 1994. The retained Westney 2005, Gorton 1999, Stothers 1998 and new collagenoma case were independently read as complete primary publisher/PubMed abstracts. Other discarded legacy claims were not stamped verified. Cache /tmp/tools-contigen-primary.json.",
+        "Full FDA original PMA, S005/S010/S011 database bodies and complete Cohort C report read; no full archived Contigen IFU obtained. Cohort C actually enrolled 62, with 21% follow-up, not the planned 200; autoimmune label signal retained without causal incidence claims. Manufacturer SEC product-passage access did not amount to a complete financial report read and was not used to attribute withdrawal.",
+        "Corrected Smith 94 evaluable versus 96 treated and initially successful 35-patient maintenance subset; Gorton 14/53 improvement versus one dry; Westney all-patient 6.3-month response versus 11.1 months among 17% completely continent. Removed incompatible cross-agent cure/durability/volume table and guarantees about no granuloma or subsequent-surgery difficulty. McClelland 28% antibody response retained with 27-responder immunoglobulin analysis and no clinical-event correlation; Atelocollagen skin-test and cosmetic dermal-collagen myositis evidence separated from urethral Contigen. No full clinical paper or general clinical clearance claimed."
+      ],
+      "sources": [
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P900030",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma_pas.cfm?c_id=157&t_id=89739",
+        "https://doi.org/10.1016/S0022-5347(01)66111-1",
+        "https://doi.org/10.1016/s0022-5347(17)32669-1",
+        "https://doi.org/10.1016/j.urology.2007.01.050",
+        "https://doi.org/10.1016/S0090-4295(99)80223-4",
+        "https://doi.org/10.1046/j.1464-410x.1999.00321.x",
+        "https://doi.org/10.1097/01.ju.0000170237.72750.64",
+        "https://doi.org/10.1016/j.juro.2008.09.032",
+        "https://doi.org/10.1016/s0029-7844(97)00274-3",
+        "https://doi.org/10.1016/s0190-9622(89)70330-3",
+        "https://doi.org/10.7326/0003-4819-118-12-199306150-00002",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P900030S005",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P900030S010",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?ID=P900030S011",
+        "https://pubmed.ncbi.nlm.nih.gov/9474154/",
+        "https://doi.org/10.1007/s00192-015-2649-1",
+        "https://pubmed.ncbi.nlm.nih.gov/25752468/"
+      ],
+      "sourceSha256": "a13700756b64a860aaaec389b82d1e318308863c268d2ee76295b3ff115895ed"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/autologous-chondrocytes.mdx",
+      "title": "Autologous Chondrocytes — Historical",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including references.",
+        "Selected primary regulatory, study-identity, outcome-denominator and safety checks; precise access limits recorded below."
+      ],
+      "notes": [
+        "Entire original 193-line MDX and complete rewritten MDX read, including references. Complete primary abstracts read for all seven retained clinical/preclinical studies through NCBI EFetch: Atala 1993/1994, Diamond 1999, Caldamone 2001, Bent 2001, Paltiel 2004 and Gargollo 2009. Original Amiel, Noordzij, Cochrane and Hillary abstracts also read; Nabzdyk abstract and identity read via PubMed; Marks NEJM metadata has no abstract. No full original clinical papers obtained. Caches /tmp/tools-last-bulking-ncbi.xml/.json and /tmp/tools-bent-chondro.xml. Europe PMC 503/504 failures were bypassed through NCBI, not recorded as no evidence.",
+        "Corrected first animal experiment to calf articular cells in athymic mice; distinguished four-pig autologous experiment. Removed lifelong nonmigration/nonimmunogenic/no-obstruction assurances, definite endochondral-calcification mechanism, broad BLA pathway/abandonment-cause claims, and cross-agent numerical ranking. Historical investigational role retained; this is not an independently verified current regulatory approval inventory.",
+        "Diamond second-treatment success 12/19 is not cumulative; total 38/46 ureters and 24/29 children. Caldamone 2001 abstract contains inconsistent early percentages and denominators (27/47 printed 55%, later 42/49 versus initial 47); those early figures were not reused. Clear one-year 32/46 ureters and 19/29 children retained, with unavailable retreatment follow-up stated. Paltiel paired volume decline applies to 14 children, not all 32. Gargollo 10/27 calcification appeared at median 2.1 years during median nine-year follow-up; absence of hydronephrosis in that cohort is not a general obstruction guarantee. Bent 16 dry plus 10 improved in 32 uncontrolled participants does not establish comparator equivalence. Source bibliographic end page corrected to 2708. No source-wide or clinical clearance claimed."
+      ],
+      "sources": [
+        "https://doi.org/10.1016/S0022-5347(01)68124-2",
+        "https://doi.org/10.1016/S0022-5347(05)66170-8",
+        "https://pubmed.ncbi.nlm.nih.gov/11170190/",
+        "https://doi.org/10.1016/j.juro.2009.02.053",
+        "https://doi.org/10.1016/s0022-5347(17)35603-3",
+        "https://doi.org/10.1016/s0022-5347(17)32671-x",
+        "https://doi.org/10.1148/radiol.2322030551"
+      ],
+      "sourceSha256": "f36af7bb823cc2be94dab9a83d319af358a61e905c11ab6b87da866d1cadb6d5"
+    },
+    {
+      "file": "docs/01-foundations/tools/biomaterials/bulking-agents/urolastic.mdx",
+      "title": "Urolastic (PDMS-U)",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "scope": [
+        "Entire original and revised MDX read, including references.",
+        "Selected primary regulatory, study-identity, outcome-denominator and safety checks; precise access limits recorded below."
+      ],
+      "notes": [
+        "Entire original 186-line MDX and complete rewritten MDX read. All 12 original reference identities and complete available abstracts read using NCBI EFetch after Europe PMC 503/504 failures. Cache /tmp/tools-last-bulking-ncbi.xml/.json. Original FDA/AUA guideline citation abstract alone was not used to assert a product-specific authorization; unrelated EU regulatory cohort extrapolation removed.",
+        "Independently read the entire Casteleijn 2020 main article text, all three main tables, both embedded appendix tables A1/A2, figure captions, acknowledgments and all 23 reference entries: https://pmc.ncbi.nlm.nih.gov/articles/PMC7497040/. Caches /tmp/tools-urolastic2020.html and -html.txt, plus separately retrieved XML. Figure graphics themselves were not inspected; the numerical conclusions used are available directly in tables/text. No separate supplements claimed. Tables/prose differ for some UTI counts and erosion categories; those inconsistent details were not reproduced.",
+        "Corrected 2020 denominators: 202 eligible, 110 included, 87 questionnaires, 74 cough tests; subjective cure is much/very much better, not dryness. Preserved 24/110 retention and 20/110 excision with observational/access limitations. Cross-sectional time groups are not longitudinal durability measurements. Futyma 2015 is 105 (91 recurrent), not 60; 2016 evaluable improvement/dryness kept separate from ITT and intravesical finding not assigned a proven migration mechanism. 2023 cohort is nonrandomized, with separate assessment denominators; costs are total, not acquisition. Learning-curve nonsignificance does not prove training irrelevant. All these additional clinical papers were read as complete abstracts only, not full manuscripts.",
+        "Current NeoMedic distributor product body read. Searches found historical Urogyn manufacturer brochures/training/manual copies; 36-page Rev0 training PDF retrieval timed out twice, with only indexed equipment/introductory passages available. Current manufacturer IFU and active country-specific authorization were not verified; this consequential limit is explicit on the page. Removed current-CE/never-PMA assertions, unsupported unique/highest-risk rankings, zero-erosion comparison, nonmigration guarantee and dose/clock-position recipe. No complete label review or clinical clearance claimed."
+      ],
+      "sources": [
+        "https://doi.org/10.1002/nau.23924",
+        "https://doi.org/10.1002/nau.24417",
+        "https://neomedicgmbh.de/en/urolastic/",
+        "https://doi.org/10.1016/j.ejogrb.2016.10.011",
+        "https://doi.org/10.1002/nau.23299",
+        "https://doi.org/10.1155/2015/851823",
+        "https://doi.org/10.1007/s00192-018-3703-6",
+        "https://doi.org/10.1111/1471-0528.17396",
+        "https://doi.org/10.1002/nau.24696",
+        "https://doi.org/10.1159/000530666",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7497040/"
+      ],
+      "sourceSha256": "9b671adb582be81e9408c986bcb98864c7cb04756882956c0683e495b15de505"
     }
   ],
   "domain": "docs/01-foundations/tools",
   "physicalPageCount": 231,
-  "fullReadCount": 56,
+  "fullReadCount": 66,
   "companionChecks": [
     {
       "file": "docs/02-evaluation/ancillary-tests/urodynamics.mdx",

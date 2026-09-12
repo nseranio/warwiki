@@ -107,3 +107,8 @@ All owned citation anchors pass. Internal-link validation checked 1,187 files wi
 ## September 12 targeted fistula companion alignment
 
 Vascular-urinary and vesicocutaneous full pages were reread, with targeted source corrections aligned to their surgical companions. Removed VCF outcomes from a cohort with no VCF cases, corrected neurogenic-pressure and operative generalizations, and scoped AUF outcomes/renal-preservation choices. Malgor abstract/full-text estimates conflict; the combined long-term table was removed. Existing unchanged claims retain their earlier verification limits. Current hashes and exact sources are in each JSON follow-up record.
+
+
+## September12 USF/urethroperineal companion follow-up
+
+Both current originals and final revisions were fully reread. USF now distinguishes selected bone-infection cohorts, actual culture/pathology denominators, post-radiation organ preservation and individualized antimicrobial/source-control decisions; all14original DOI abstracts were read plus the Haas2025 clinical main body. Urethroperineal text now separates congenital functional anatomy, RUF outcomes, urethroplasty revision and skin-fistula incidence, and uses current EAU imaging/biopsy scope. Verla4/85fistulas is no longer conflated with stricture failure. Remaining PU/LS long-term figures and unavailable historical operative manuscripts are not newly certified; exact limitations and current hashes are in JSON.

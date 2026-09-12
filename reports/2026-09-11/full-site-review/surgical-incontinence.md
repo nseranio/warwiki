@@ -34,3 +34,26 @@ Source access:
 - https://pubmed.ncbi.nlm.nih.gov/26493494/ — Complete primary Linder2016 abstract. No full paper.
 
 Source SHA-256: 20904b6c6ef647a9d64d1c2e2f6d144511c9fedefd9e1072e4e5740764966f65
+
+## Urethral Bulking Agents — September 12,2026
+
+Entire original MDX including19references and entire rewritten page read. All19original identities and17available complete abstracts read (Wu/ACOG noabstract). Complete originalFDA16-pageIFU extracted text and current manufacturer safety-summary body independently read; selected AUA2023female/2024male bulking passages and five-yearRCT completeabstract read.
+
+- Added high-yield five-year Helsinki PAHG-versus-TVT RCT:223randomized/212treated/195followup; high-satisfaction74/99vs89/96, noninferioritynotmet;22/99vs42/96 complications beforecrossover notsevere-event or reoperation rates. Satisfaction distinguished from dryness.
+- Added exact US BulkAmid ISDadultwomen label scope, acuteUTIcontraindication, strictured/damaged-tissue restrictions, capillary-fading/ischemia and intravascular warnings; no male use and no cross-injection of different agents into same sites.
+- Preserved distinction between populations notstudied and contraindications. Separated general injection workflow from product-dependent details; Jan2020FDAIFU2mL/session, ≥4wtopup, upto3sessions explicitlyversion-specific and currentfullIFU accessnotclaimed.
+- Removed blanket PAHG safest/noerosion/no-migration assurance, cross-study agent rank/ranges and assumption officeprocedure eliminates anticoagulant risk. Added current adverse-event scope and retention plan.
+- Corrected Cochrane2017 search-date2010 limitation, imprecise safety comparison, Brosche388seven-yearcompleters/1200treated and prolongedemptying≠acute retention. Removed cost-model threshold presented without cost-setting assumptions and low-yieldFrenchcohort from maincomparison.
+- RecurrentSUI pooled75%cure/improvement qualified for heterogeneity; no agenthead-to-head superiority or guarantee later surgeryunaffected. Fixedimmobileurethra favorsPVS perAUA.
+- Added2024AUA male lowefficacy/rarecure statement and BulkAmid male warning; removed femalePAHG extrapolation and proven-equivalentregenerativeclaim. Pharmacology separated from mandatoryproceduraloptimization.
+
+Limits:
+
+- Current full BulkAmid IFU110-0303rB not obtained; contemporary website is a brief safety summary. The exact operative limit citation comes fromJan2020FDAIFU. Figure graphics in oldIFU not visually inspected.
+- Five-yearRCT full methods, crossovers, event adjudication, tables and supplements not accessed; onlyabstract-supported endpoints retained. Most original studies/systematic reviews were completeabstract checks only.
+- OriginalSokol abstract armcounts229/116 differ fromFDAITT228/117 and endpoints use differentanalysissets; removed detailed old pivotal comparisons rather than merging them. OriginalmaleCochrane abstract18/20 reported82% is arithmeticallyinconsistent, not propagated.
+- No complete operative-manual validation or clinician signoff; other agents currentlabels remain maintained on devicehubs, not revalidated in this proceduralreview.
+
+Source SHA-256: `67c10cb1d8fb891e593324a836a6560b0e266e05040b6e299745d2640289439a`
+
+Peer-review follow-up: Peer-review follow-up: scoped direct-vision deposit placement to endoscopically administered systems, with exact instructions for other delivery systems; entire current page and final changed workflow paragraph reread.
