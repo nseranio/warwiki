@@ -12,12 +12,12 @@ Domains: 23 tools/device pages, 11 diversion pages, 15 fistula-technique pages, 
 - Production build passed: **136.90 MB**, 2,570 files and 1,191 HTML pages. All 100,389 compiled links/assets and 730 data-link literals passed.
 - All 54 changed documentation routes and four selected interaction checks passed in Chromium (58/58); see `third-browser-validation.json`.
 - Desktop hyperkalemia table and mobile nutrition opening visually inspected; text, table and navigation remain readable.
-- `git diff --check` passed. Publication verification pending.
+- `git diff --check` passed. Publication verification passed.
 - Independent peer checks covered the full revised male examination, nutrition and electrolyte MDX, with focused primary-source verification. They do not establish that every underlying paper/supplement was read.
 
 ## Publication
 
-Pending final validation and source commit. Standing user instruction authorizes main/origin/main publication.
+Published as **`d0b2abedc8d7244dac5ed79ac5b1da28fc5b1db5`** under standing authorization. [GitHub CI 34683687370](https://github.com/nseranio/warwiki/actions/runs/34683687370) and the exact-commit Vercel deployment succeeded. Six production checks passed: home, nutrition, electrolytes, stapler recall, VIP and removed Clinic route. See [publication verification](third-publication-verification.json). The first live check targeted the wrong stapler page; correcting the check to the published stapler hub verified the recall text. No source change was needed.
 
 ## Continued work
 

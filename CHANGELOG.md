@@ -8,6 +8,8 @@ For commit-level detail run `git log --oneline`.
 
 ## 2026-09-12 — Third continuation: device safety, fistulas and perioperative care
 
+Published as **`d0b2abed`**; CI 34683687370, exact-commit Vercel deployment and six production checks passed. Output is **136.90 MB**. The next correction batch is underway.
+
 This intermediate batch corrects **54 documentation pages**. The cumulative ledger records **457 full current-source reads and 425 scoped updated pages across 1,186 documentation files**. All 38 evaluation pages have full reading records; current tools coverage is 30/231 and fistula-technique coverage 16/44. Reading a source page does not establish complete paper access or clinical clearance.
 
 Added the specific 2026 SureForm 30 gray-reload recall and donor-renal-artery Hem-o-lok contraindication; corrected platform clearances, instrument specifications and occupational guidance. Corrected diversion/fistula source attribution, outcome denominators and unsupported operative rules, including the Padua VIP/ileum-valve pouch confusion and transplant companion guidance. Rebuilt assessment-scale and male-examination content around the correct instruments and primary sources.

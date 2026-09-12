@@ -4,22 +4,21 @@
 
 ## Current work and publication
 
-The second September 12 continuation batch changes **111 documentation files** and is live as **`ae704f6f`**. [GitHub CI 34681722568](https://github.com/nseranio/warwiki/actions/runs/34681722568), exact-commit Vercel deployment and direct production checks passed. See the [current release record](reports/2026-09-12/second-continuation-release.md).
+The third September 12 continuation batch changes **54 documentation files** and is live as **`d0b2abed`**. [GitHub CI 34683687370](https://github.com/nseranio/warwiki/actions/runs/34683687370), exact-commit Vercel deployment and direct production checks passed. See the [current release record](reports/2026-09-12/third-continuation-release.md).
 
-The new batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **137.95 MB**, all100,904 compiled links/assets and730 data links valid. All111 changed pages pass browser checks plus search/figure interaction tests. Publication is verified; the next source-review batch is in progress.
+The batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **136.90 MB**, all 100,389 compiled links/assets and 730 data links valid. All 54 changed documentation routes and four interaction checks passed. Publication is verified; the next source-review batch is in progress.
 
 ## Review coverage and next work
 
-The [central ledger](reports/2026-09-11/full-site-review/README.md) contains all **1,186 documentation files**; **396** have full reading recorded against current hashes and **372** have scoped updates. No complete clinical clearance is asserted. Current source reads include 95/95 pharmacology, 73/73 clinical conditions, 46/46 special populations, 144/451 surgical techniques and 36/38 evaluation pages.
+The [central ledger](reports/2026-09-11/full-site-review/README.md) contains all **1,186 documentation files**; at publication **457** have full reading recorded against current hashes and **425** have scoped updates. No complete clinical clearance is asserted. All 95 pharmacology, 73 clinical-condition, 46 special-population and 38 evaluation pages have full reads. Current tools coverage is 30/231 and fistula-technique coverage 16/44.
 
-- `auth_handoff`: all 231 foundation/tools MDX pages next, starting with energy/device safety; new `tools.json/md`. Coordinate shared-data edits.
-- `operative_review`: 04c diversion index/remaining reservoirs, then other surgical families except04h. Original98 urethral/upper-tract,21 bladder-neck,19 bladder and4 diversion reads are saved. Independent bladder, nutrition and female-exam change reviews are recorded.
-- `workflow_readiness`: all44 pages of04h-fistula-repair next. Clinical/special-population scope reports stay available for unresolved companion/source issues.
-- Root: assessment-tools original399lines has been fully read and corrections are in progress, **not yet added to the ledger or published**. Work in `/tmp/warwiki-assessment-*` includes complete34DOI metadata/available-abstract checks, full standing-cough-test stratification paper and MsFLASH short-form paper, and initial instrument/PISQ/ICS source retrieval. Correct MSIGS definitions, screening-score misuse, FSFI-6 pain domain, FSDS versus FSDS-R, PROMIS/PISQ and pad/urethral-satisfaction generalizations. The male examination page has **not yet been fully read**.
-- Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data need actual reads and substantive review. Targeted companion corrections do not clear whole pages. Root retains perioperative care/anatomy/surgical principles/skills.
-- Root companion pending: penile-preputial flap page incorrectly calls Buck fascia the main McAninch pedicle; verified source says dartos conduit. Its onlay/tube13%/58% figures belong to the1998 66-patient report(7/54 vs7/12), not the original1993 paper. Perioperative nutrition/electrolyte pages also require full reads and thiamine/refeeding alignment.
+- `auth_handoff`: all 231 tools pages, recorded in `tools.json/md`. Finishing seven previously read instrument/index pages, then remaining instruments. The stapler hub has the specific 2026 recall and donor-renal-artery clip contraindication published; further substantive corrections are underway.
+- `operative_review`: remaining 04c reservoirs (Indiana, Florida, Mainz I next), then other surgical families except 04h. Fifteen diversion pages were saved at publication, alongside 98 urethral/upper-tract, 21 bladder-neck and 19 bladder pages.
+- `workflow_readiness`: remaining 28/44 fistula-technique pages, beginning ureteroarterial and vesicocutaneous; narrowly align clinical companions when sources expose residual errors.
+- Root: assessment tools, male examination, nutrition and electrolytes are now fully read, corrected, checked and published. Next the penile/preputial flap and graft foundations pages: both original MDX files fully read and pending records appended, clinical corrections not yet saved. Check graft trials mislabeled as flap trials, failed superiority called equivalence, misattributed recurrence cohorts, and generalized comparisons. McAninch's 1993 abstract actually uses Buck's-conduit wording; Carney/McAninch 2002 distinguishes Buck's supporting fascia from the dartos vascular pedicle. Do not blindly replace one with the other or infer a deep dorsal artery pedicle.
+- Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data still need actual reads and substantive review. Targeted companion corrections do not clear whole pages. Root retains perioperative care/anatomy/surgical principles/skills.
 
-The release freeze has ended and agents are working on the next correction batch. Do not overwrite another agent's working source or mistake it for the published release.
+Agents are actively editing the next correction batch. Do not overwrite their source files or confuse them with the published release. Exact source access, outstanding full-paper gaps and hashes are kept in domain ledgers.
 
 ## Evidence and saved material
 
@@ -34,6 +33,6 @@ Evidence maintenance is **quarterly: March, June, September, December**, next De
 
 Standing authorization: validate, commit/push completed changes to `main/origin/main`, then verify CI, Vercel and live content. Sign-ins are complete. Group related changes to limit deployments. Keep temporary source PDFs and large research downloads outside the repository.
 
-Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to about 139 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
+Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 136.9 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
 
 Preserve unrelated `world-cup-next-week-pacific.ics`. Clinic and quiz stay removed. History stays discreet. Handouts stay recoverable but excluded from builds. Keep public metadata to ordinary page last-updated; detailed review notes stay internal. Never invent clinical sign-off.
