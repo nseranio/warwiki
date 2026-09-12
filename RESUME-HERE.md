@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The fifteenth September 12 batch corrects five foreign-body/tissue-scaffold pages and completes three cited original mains plus all actual figures and the silicone review's complete supplement. Lint/typecheck/build and all five desktop/mobile browser checks pass; build **132.06 MB**, 97,693 compiled local links/assets and 722 data links. Publication verification is pending; see the [fifteenth release record](reports/2026-09-12/fifteenth-continuation-release.md). Prior batch `ebea936d` was fully verified live.
+The fifteenth September 12 batch corrects five foreign-body/tissue-scaffold pages and completes three cited original mains plus all actual figures and the silicone review's complete supplement. Lint/typecheck/build and all five desktop/mobile browser checks pass; build **132.06 MB**, 97,693 compiled local links/assets and 722 data links. Commit `fa4bc6f6` passed exact-commit CI/Vercel and all seven live checks; see the [fifteenth release record](reports/2026-09-12/fifteenth-continuation-release.md). Prior batch `ebea936d` was fully verified live.
 
 ## Review coverage and next work
 

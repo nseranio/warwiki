@@ -12,7 +12,7 @@ Corrected five biomaterials pages: free silicone, penile pearls, decellularized 
 
 Completed three cited original mains and their actual figures, plus the silicone review's full supplement with methods, PRISMA and treatment tables; recorded remaining original-access gaps individually. No small new studies were added for novelty. See the [source review](reports/2026-09-12/foreign-bodies-scaffolds-source-review.md).
 
-Lint/typecheck/build and all five desktop/mobile browser checks pass: 132.06 MB, 97,693 local links/assets and 722 data links. Ledger: 640 current full MDX reads and 613 scoped updates. Publication verification pending; see the [fifteenth release record](reports/2026-09-12/fifteenth-continuation-release.md). Continue the whole-site task after publication.
+Lint/typecheck/build and all five desktop/mobile browser checks pass: 132.06 MB, 97,693 local links/assets and 722 data links. Ledger: 640 current full MDX reads and 613 scoped updates. Commit `fa4bc6f6` passed exact-commit CI/Vercel and all seven live checks; see the [fifteenth release record](reports/2026-09-12/fifteenth-continuation-release.md). Continue the whole-site task after publication.
 
 ---
 

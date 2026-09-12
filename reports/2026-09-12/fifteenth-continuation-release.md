@@ -16,7 +16,7 @@ All five revised routes pass content assertions, actual citation-anchor clicks, 
 
 ## Publication
 
-Commit/push and exact-commit CI/Vercel/live verification are pending at this pre-publication checkpoint. No fresh Vercel account-storage measurement is claimed.
+Content commit `fa4bc6f6885b0b4ed9f84b7b3529ed4a15895faa` is pushed to `main`. Exact-commit GitHub CI [34706962297](https://github.com/nseranio/warwiki/actions/runs/34706962297) and Vercel deployment `GrnmndGc3n8d4E6vaoKNjd4xcULS` succeeded. All seven production checks pass: homepage, five corrected routes and the removed Clinic route (404). See [publication verification](fifteenth-publication-verification.json). No fresh Vercel account-storage measurement is claimed.
 
 ## Continue
 
