@@ -2,9 +2,10 @@
 
 Actual full MDX reads, including frontmatter, tables and references. Device labeling, source identity and consequential clinical/thermal safety claims receive targeted primary-source checks appropriate to the page. Source read extent and access limits are recorded; fullTextRead is not clinical clearance. All 231 physical tools pages remain in scope. Unread pages are not entered as reviewed.
 
-- Actual full reads: **30/231**.
-- Updated after selected primary checks: **23**.
-- Remaining entered pages have documented corrections still pending; source reads do not imply clinical clearance.
+- Actual full reads: **39/231**.
+- Updated after selected primary checks: **36**.
+- Checked without additional edits: **1**.
+- Entries explicitly marked pending still require their documented follow-up; no source read implies clinical clearance.
 
 ## Page record
 
@@ -182,18 +183,18 @@ Actual full MDX reads, including frontmatter, tables and references. Device labe
 - Read entire ACS2025 guide extracted text (17-page PDF; figures not visually inspected), complete indexed OSHA standing/lower-extremity section and indexed NHS Highland assessment/contraindication passages; direct OSHA/Highland page fetches returned403, so full pages not obtained. Guy's2025 care-page body fully read. No product comparative trials or individualized occupational assessment.
 
 ### docs/01-foundations/tools/index.mdx
-- Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `f368a4dc11ba4484bd399ff7a1adf929778f52c38c3b8d609412d18d5110858f`.
-- Entire original MDX actually read.
-- Tools overview: category descriptions, navigation and platform names.
-- Entire MDX read. Fixed category counts appear stale; remove brittle counts after child inventory. Links and overview will be reconciled after instrument/material review. No new primary checks on this short index yet.
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `e169d9e7de63381d873bfbe82205e757765b0ffa6f103426bb77af9bacafb771`.
+- Entire current navigation-only MDX read.
+- Removed outdated fixed inventory counts and long platform list; aligned link descriptions with reviewed child sections. No new clinical claims.
 
 ### docs/01-foundations/tools/instruments/index.mdx
 - Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `68b0e1bf6188458b70d86fc5776403d484f5a8c56bc13991e0148f4ce050ecfb`.
+- SHA-256: `0d35d56da25d2bd5d5421c6f1870cd936321b22c79d4fd31e1decbd50939fe01`.
 - Entire original MDX actually read.
 - Entire embedded searchable instrument database, columns, row descriptions, links and MDX wrappers.
 - Full original read in three untruncated chunks (lines 1–82, 83–180 and 181–end). Pending alignment of VSE versus SynchroSeal vessel ceilings, platform/instrument identity, Hem-o-lok donor renal-artery contraindication, MAUDE denominators, tissue-energy and bladder-irrigation claims. Manufacturer energy checks already recorded on completed child hubs; FDA K232970 contraindication passage read. No blanket clearance of the database.
+- September12 follow-up: corrected seventeen database descriptions to match reviewed bone/robotic/cautery pages and added explicit donor renal-artery Hem-o-lok contraindication with hub link. Other database rows retain pending companion review; do not infer full clinical verification from the saved full-source read.
 
 ### docs/01-foundations/tools/biomaterials/index.mdx
 - Status: read-corrections-pending; full text read: true; clinical verification complete: false.
@@ -203,38 +204,122 @@ Actual full MDX reads, including frontmatter, tables and references. Device labe
 - Full original MDX read. Pending targeted primary checks of sling versus POP mesh indications, bulking complications, neuromodulation battery/model claims, stent exchange intervals and cosmetic implant regulatory language. No clinical approval or current-label confirmation yet.
 
 ### docs/01-foundations/tools/instruments/robotic/prograsp.mdx
-- Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `45a34e2277dc0c8cb243daa26df53f5c0079356ad1a1bb56a061b3a1db4e4b6d`.
-- Entire original MDX actually read.
-- Entire original grasper page, specifications, grip claims, clinical extrapolations and references.
-- Full original read. Pending exact current model availability, unsupported 6 mm SP identity, generic no-haptic-feedback claim, historical force testing and 2016 cost generalization. Need actual catalog/IFU and cited primary study verification before corrections.
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `65640990db0d55587b10a1ac9fc5dab626da3f707ff6d860b2ca3a80e7ac5455`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Corrected nonexistent SP ProGrasp, modern Force Feedback exception, historical grip-force scope, fixed docking distance, universal lowest-cost/retraction-default assertions and mandatory-energy hemostasis.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
 
 ### docs/01-foundations/tools/instruments/robotic/cadiere.mdx
-- Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `1276e6d6dbc4a6a13a39a2fab38d95850ea168803fde22871111223accd8db4b`.
-- Entire original MDX actually read.
-- Entire original grasper page, jaw/force comparisons, clinical extrapolations and references.
-- Full original read. Pending fenestration-bench versus named-device attribution, Hubens bowel-injury/conversion denominator, current model compatibility and no-haptic-feedback generalization. No current primary check yet sufficient to approve these claims.
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `88b907b20a3072ab2388e93fda0aa35930aa71d88bb4f22202f3c7779bfd2685`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Corrected SP versus Single-Site identity and Force Feedback; removed attribution of experimental parallel-jaw fenestration ratios to clinical Cadiere performance and universal bowel-safety/cost claims. Historical 5/45 lacerations retained with non-device-specific scope.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
 
 ### docs/01-foundations/tools/instruments/robotic/tip-up-fenestrated.mdx
-- Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `ff565129e1750536db2626e04dd0e4a13412652df85761e3ffc9f0708edf7686`.
-- Entire original MDX actually read.
-- Entire original grasper page, tip geometry, force ranking, indications and references.
-- Full original read. Pending identification error: historical double-fenestrated force testing cannot establish present Tip-Up as gentlest. Also review current platform, thermal/hemostasis and universal atraumatic-handling claims against manufacturer information.
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `6521812e5c23161e2e73246e244ea9a304261c69faeb709a921a428376a05ac8`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Removed false attribution of double-fenestrated measured grip force to Tip-Up and unsupported lower-force/atraumatic/vector-superiority claims; removed blind lifting beneath adherent bowel/mesh.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
 
 ### docs/01-foundations/tools/instruments/robotic/needle-drivers.mdx
-- Status: read-corrections-pending; full text read: true; clinical verification complete: false.
-- SHA-256: `a08c1ceb3591270f1d0be1751d8fb5336cdc845926b80ad6a4483de6df9ee178`.
-- Entire original MDX actually read.
-- Entire original MDX (lines 1–145 and 146–234), including all variants, microsurgery table, clinical examples and 29 references.
-- Full original read. Pending exact catalog model/use-life/needle compatibility, unsupported Mega force ranking and universal maximal grip, fixed vessel-size wall and microsurgical platform superiority, study denominators and imprecise robotic versus laparoscopic trial attribution. Primary papers and device manuals require targeted checking; not clinically cleared.
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `8319f44f6d3bf04ffe7fdb8fd447bcab44973e90241d9da4fe9c06deb3b087ed`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Corrected catalog names/use counts, new Force Feedback and SP distinctions, Lima nonrandomized design, Massoud bundled comparison, training-model versus patient outcomes, Lai 17 robotic anastomoses in 15 patients, unproven 1mm threshold and microsurgical-platform superiority. Sudarman abstract internally totals platform patient counts inconsistently; no platform proportions adopted. Catalog duplicates a Force Feedback needle-driver part number with atrial retractor; did not reproduce that questionable part number.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
 
 ### docs/01-foundations/tools/instruments/staplers/index.mdx
 - Status: updated; full text read: true; clinical verification complete: false.
-- SHA-256: `262871db90662c4a9b9efdfb1f6b4f1da3ef6a63d8e445dd2027bf2530006f1f`.
-- Entire original MDX read in three untruncated chunks: lines 1–95, 96–210, 211–356.
-- Narrow safety corrections in this publication batch: 2026 Class I recall of specific SureForm 30 gray reloads and the Hem-o-lok donor renal-artery contraindication. Remaining nonurgent clinical and device corrections are pending.
-- Added current FDA recall warning with exact affected part numbers, action and device scope. Full FDA communication body and update timeline read; it reports four serious injuries and one death as of February 23, 2026, without establishing a population incidence. Manufacturer letter itself not obtained. Replaced the unsafe clips-versus-stapler equivalence recommendation with the explicit donor renal-artery contraindication; explained that the eight observational-study meta-analysis cannot remove labeling restrictions and removed the associated generic clip cost-saving recommendation.
-- Preparatory research: all 40 cited MED abstracts actually read (/tmp/tools-staplers-primary.json); full Cochrane public summary/abstract read, with searches through December 2010, not the complete review. Full seven-page FDA K232970 text read; figure/form checkboxes not visually inspected. Full 13-page FDA 2021 labeling guidance text and three example-label tables read after the initial checkpoint; not a complete IFU for every commercial model. Mastroianni full publisher access failed; abstract-only interpretation.
-- UNRESOLVED — important next batch: remove claim that TA is inherently safer from denominator-free MAUDE; replace generic cartridge-size and absorbable-staple availability/material claims; qualify observational neobladder comparisons and exposure/stone estimates; correct partial cohort and preclinical outcome omissions. This entry is not approval of the unchanged legacy recommendations.
+- SHA-256: `e4ff5bd7b79cd5beb14b9c23fe033a3a5f5653f5049a73b376d870712e3bed4a`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Expanded targeted safety edit into full-content review: removed universal cartridge/color/height and polymer-equivalence claims, TA safety ranking from MAUDE, en-bloc zero-risk claim, incorrect Cochrane scope and causal neobladder superiority. Preserved 2026 recall and donor-artery Hem-o-lok contraindication. Corrected clinical versus animal context, incomplete imaging, denominators and omitted adverse outcomes. Mastroianni retrospective design and sex-sparing confounding retained; old linked section anchor preserved.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
+
+### docs/01-foundations/tools/instruments/robotic/robotic-stapler.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `08d40b41625146471ab4a3f42616d7640361c746c71156fd22368527d87bbbdf`.
+- Entire original MDX and revised content read, including tables and references.
+- Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked.
+- Corrected platform-specific compatibility/access/rows and 12-fire single-patient limit, current recall, before/during compression monitoring, false ten-donor comparative equivalence, observational effect claims, protocol versus results, OPI compression claim and elimination of bedside assistant.
+- Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.
+- Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation.
+
+### docs/01-foundations/tools/instruments/bone-instruments/air-drill.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `608ce3a20e0d940074f5d130b84f517d085984ece825287fc25bd7bc76a46092`.
+- Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.
+- Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked.
+- Corrected pneumatic versus electric identity and product-family overgeneralization; removed diamond-burr neurovascular safety guarantee, universal performance rankings and fixed all-system irrigation claim. Read complete MR8 web indications, residual risks, warnings W1–63 and cautions C1–10; not all page material or a separate full IFU. Read full 2021 EG1 four-page brochure text/specifications/references, not figure visual inspection or underlying technical reports.
+- Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages.
+
+### docs/01-foundations/tools/instruments/bone-instruments/osteotome-and-mallet.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `5f7c731a279d0d3ca2b130e3ceceae631286c8526ef058d95021c35f7ca54d11`.
+- Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.
+- Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked.
+- Removed universal superiority, melting-bone rhetoric, no-risk manual technique assumptions, routine periosteal stripping and simplistic binding diagnosis. Read complete AccessGUDID device-description/nomenclature/characteristics record; it is a device identity source, not comparative clinical evidence or a pubectomy protocol.
+- Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages.
+
+### docs/01-foundations/tools/instruments/bone-instruments/periosteal-elevator.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `52c3a2bd23a206e6f4d6e2a9c3698af39278338146abb6bbfd7fbecf47ffa4fa`.
+- Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.
+- Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked.
+- Removed prerequisite universal periosteal stripping and unsupported routine genital/urethral/prosthetic pocket technique. Read full AccessGUDID device description/nomenclature/characteristics and KLS Freer product specification section, not all KLS catalog or model IFU.
+- Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages.
+
+### docs/01-foundations/tools/instruments/bone-instruments/pituitary-rongeur.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `c20c94bf08a783e85d70ed6f9097a21178bf203fc7ca0992af1665a30f0467ae`.
+- Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.
+- Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked.
+- Corrected routine cortical-bone-cutting characterization and automatic Leksell-to-pituitary pubectomy sequence; distinguished soft/disc/cartilaginous Decker description from bone-fragment Peapod variant. Read complete Wiggins product page including both variant descriptions and specification table; no full model IFU or operative comparative trial.
+- Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages.
+
+### docs/01-foundations/tools/instruments/bone-instruments/rongeur.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `7c4d081c611039b88f8a03534fc3d44d43e62ba7cdbf848b20632844b9e45fcc`.
+- Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.
+- Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked.
+- Removed requirement to remove all cortex until cancellous bleeding and universal periosteal stripping; differentiated bone versus pituitary instruments and tool identity from operation indication. Read full Sklar Leksell product description/specification body and AccessGUDID Leksell record, not all manufacturer IFUs or complete osteomyelitis literature.
+- Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages.
+
+### docs/01-foundations/tools/biomaterials/prosthetics/male-continence-implants.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `f04832a50ad06c45335b4f958f426a77992a65040dffa0144e68582d9c34384d`.
+- Device components, routes, postoperative adjustment mechanisms, regulatory distinctions and source identity.
+- Entire original MDX including tables and references read; edited content checked. Corrected Argus postoperative adjustment and route distinctions, Remeex temporary manipulator/reconnection, AdVance XP anchors and US clearance date, and false universal classification/approval claims. Removed unverified ATOMS 25 mL recipe, guaranteed absence of migration and unsupported commercial-withdrawal causation.
+- Read entire English AdVance XP IFU section (2020-04, 51117738-01A), FDA XP and Virtue indication pages plus full device summaries (not first clearance-letter page). Read full Argus manufacturer product body and six-page brochure; ATOMS complete device section in 2024 portfolio, not full IFU; entire male Remeex manufacturer product body. Read eight original full MED abstracts and correct Virtue PMID24972946 abstract; corrected DOI from unrelated MRI article to 10.1016/j.urology.2014.02.062. AUA2024 statements20–24 and relevant treatment discussion read via primary indexed text, not entire guideline.
+- Current US authorization of regional adjustable sling variants was not established; overview explicitly requires country/model verification. Manufacturer descriptions establish construction, not comparative clinical superiority.
+
+### docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx
+- Status: checked; full text read: true; clinical verification complete: false.
+- SHA-256: `d8e461bfa288ed66895087a1790adc167352af76e1b8933c410bcf545beb6953`.
+- Current device description, approval indication, adjustment limits, MRI conditions and adverse-event denominators.
+- Entire current MDX read; no additional source change needed. Independently read original FDA approval record and complete Coloplast product/safety body; FDA physician IFU device-description, indications, contraindications, warnings and precautions sections, not entire 29-page labeling; AUA2024 balloon/radiotherapy recommendations; complete Fernandez2025 MED abstract.
+- Manufacturer-linked one-page safety summary read in full; it is not a newer complete IFU. Original approval labeling and current model instructions remain explicitly distinguished. Event percentages correctly represent shares of 752 adverse events, not patient-level risks.
+
+### docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx
+- Status: updated; full text read: true; clinical verification complete: false.
+- SHA-256: `d1c11ff88e60d38ead5c0ac897fdde84ae9db4246730f74be763681f57ff7f68`.
+- Entire original MDX including all43references and videos read; rewritten current content checked.
+- Current device construction/label handling, MRI and candidate boundaries; major prospective, randomized and long-term cohort outcomes; selected source-design/denominator corrections.
+- Read full primary MED abstracts for all41 DOI-bearing original references (two historical references had no DOI/abstract retrieved). Corrected false fixed cuff increments/PRB ranges, deactivation-button description, universal MRI safety, mandatory urodynamics, blanket female-radiation exclusion and Victo absence of reservoir. Removed unsourced most-promising ranking and unconditional dual-implant safety.
+- Boston Scientific male IFU51266569-01A: complete selected English physical pages3–10 and17–19 read with tables/captions, not complete manual or operative pages11–16. Local /tmp/tools-ams800-male-ifu.pdf and /tmp/tools-ams800-raw.txt. Full current Victo manufacturer product/safety body read; not complete Victo IFU. AUA2024 statements17–19 and treatment/balloon/radiation sections read via primary indexed text, not entire guideline.
+- AUSCO full main article including methods, results, discussion, all five tables, funding/conflicts and references read via PMC and /tmp/tools-ausco-full.xml; graphical figures and separate supplements not inspected. Correctly separates zero infection-related revisions from three postoperative wound infections. Records available-case denominators and one-year/high-volume/single-arm limits.
+- Mann2022 included only156men who had erosion; its estimates are not population erosion risk. Bentellis2021 excluded infection/erosion revisions;56.5% nonmechanical category is not all atrophy. Lee2025 timing1.74years was exploratory and nonsignificant. Capsulotomy expert review does not establish universal superiority. Manufacturer InhibiZone registry has voluntary-reporting, nonoperative-infection and mortality/follow-up limitations.
+- UroActive2026 complete primary abstract read (PMID41564274); six-man first-in-human finding used only to correct outdated conceptual-only status, not recommend routine clinical adoption. Full first-in-human paper not retrieved. Regional device authorization, female/pediatric indications and detailed operative techniques require their own model/jurisdiction/source review.
+- Flagged AUS procedure companion scope to operative_review; no source changes made outside owned subtree.

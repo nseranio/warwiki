@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Fourth continuation: graft evidence, reservoirs, fistulas and devices
+
+This intermediate batch corrects **34 documentation pages**. The cumulative ledger now records **479 full current-page reads and 451 scoped updates across 1,186 files**; complete clinical clearance is not asserted. Tools coverage is 39/231 and fistula-technique coverage 22/44.
+
+Separated free graft trials from pedicled-flap comparisons, corrected randomized/analyzed denominators and donor-site evidence, and removed unsupported LS, graft-take and sexual-safety guarantees. Independent reviews checked the three rewritten tissue pages. Corrected Indiana, Florida, Mainz I and Kock reservoirs, multiple fistula repairs and clinical companions, urethral-technique companions, robotic/bone tools and continence-device guidance. Added narrow operative AUS safety fixes while keeping its broader clinical review unresolved. Withheld the unvalidated Kock illustration; retained source assets.
+
+Source lint, typecheck, 32 component tests, 50 maintenance tests and production build pass; output is **136.30 MB**. A stapler heading-format build error was corrected while preserving its older anchor. [Fourth release record](reports/2026-09-12/fourth-continuation-release.md) tracks browser checks and publication. Review continues after this intermediate release.
+
+---
+
 ## 2026-09-12 — Third continuation: device safety, fistulas and perioperative care
 
 Published as **`d0b2abed`**; CI 34683687370, exact-commit Vercel deployment and six production checks passed. Output is **136.90 MB**. The next correction batch is underway.

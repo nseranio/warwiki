@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T08:35:14.574249+00:00",
+  "generatedAt": "2026-09-12T09:02:03.035749+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 457,
+    "fullTextReadForCurrentContent": 479,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
-      "unresolved": 44,
-      "unreviewed": 696,
-      "updated": 425
+      "unresolved": 34,
+      "unreviewed": 680,
+      "updated": 451
     }
   },
   "pages": [
@@ -4478,11 +4478,39 @@
       "title": "Pedicled Penile / Preputial Skin Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "c9fac49f873cfb7fc0ac78a97640a998fea656731fc915f4d3b351585c5e950f",
-      "reviewRecords": []
+      "sourceSha256": "71245da9cd245f4a9d420165705122d7eb425489c9e946b3d22732f15080faf8",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/flaps/penile-preputial.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "71245da9cd245f4a9d420165705122d7eb425489c9e946b3d22732f15080faf8",
+          "scope": "Complete original and rewritten MDX/reference lists read. Original41 unique DOI identities and all available abstracts checked; primary full manuscripts, trial supplement, images and selected guideline sections read with exact scope in reports/2026-09-12/penile-tissue-review.md and penile-tissue-reference-access.json.",
+          "unresolved": [
+            "Several retained historical/technique papers remain abstract-only; original anatomy chapter and AUA complete PDF inaccessible. Some nonpivotal figure/supplement access remains as listed. No complete clinical certification."
+          ],
+          "changes": [
+            "Separated free skin-graft trials from pedicled-flap comparisons; removed statistical-equivalence claims.",
+            "Corrected vascular anatomy, eligibility, denominators, complication ascertainment and initial-versus-eventual success.",
+            "Aligned EAU2026 tissue selection; removed pediatric-to-adult, small-series and donor-site overgeneralization."
+          ],
+          "sources": [
+            "https://doi.org/10.1007/s00345-021-03843-x",
+            "https://doi.org/10.1038/s41598-025-14191-w",
+            "https://doi.org/10.1007/s00345-021-03613-9",
+            "https://doi.org/10.4103/iju.IJU_298_19",
+            "https://doi.org/10.5534/wjmh.2014.32.2.87",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer"
+          ],
+          "peerReview": "Second reviewer read both complete current MDX pages. Independently read both graft RCT main texts/tables/references and entire PeeBuSt supplement, viewed Alrefaey flow figure, reread EAU9.1-9.3; checked selected DOIG Methods/Results, Sharma Methods/Table1/Results and Kim operative Methods. No introduced blocking issue found. Other historical/pediatric sources were not independently fully reread.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/peritoneal.mdx",
@@ -4676,11 +4704,39 @@
       "title": "Buccal Mucosa Graft (BMG)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "65ef2c8ea6bcdb602a9b3ca91d91ffb634ea88416eced131b0aa38c89ecf88a4",
-      "reviewRecords": []
+      "sourceSha256": "b02391f002c1f74d0b088ae85a6efd86be064daf40bbf6fedb9430eb241107b1",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/grafts/buccal-mucosa.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "b02391f002c1f74d0b088ae85a6efd86be064daf40bbf6fedb9430eb241107b1",
+          "scope": "Complete original220-line MDX/reference list and revised164-line MDX read. All22original DOI abstracts checked; four additional/full primary manuscripts and two previously read graft RCTs assessed, exact scopes in reports/2026-09-12/buccal-review.md and buccal-reference-access.json.",
+          "changes": [
+            "Corrected biological guarantees, fixed harvest size and bilateral requirements.",
+            "Separated closure RCT from Wood pain scores and added low-certainty systematic-review context.",
+            "Corrected posterior adjunct-DVIU outcomes, survey/Bracka denominator and population claims.",
+            "Removed universal LS staging, blood-loss benefit and no-sexual-harm claims; aligned current EAU guidance."
+          ],
+          "sources": [
+            "https://doi.org/10.5534/wjmh.200175",
+            "https://doi.org/10.1080/2090598X.2022.2097613",
+            "https://doi.org/10.1590/acb403525",
+            "https://doi.org/10.1097/JU.0000000000003848",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer"
+          ],
+          "unresolved": [
+            "Retained historical sources and Soave RCT remain abstract-level; full AUA PDF inaccessible. Nonpivotal images and separate review supplements remain unread. Abbas2026 comparison full paper requires access and event-direction appraisal before adoption. Figure anatomical clinical sign-off remains pending."
+          ],
+          "peerReview": "Independent reviewer read complete current MDX/references; checked Hwang/Guler Methods/Results and main evidence tables, Yoshikawa Methods/Results, Sterling 2024 main clinical sections and three tables, both graft RCT main texts/tables, targeted original donor/posterior/LS abstracts and EAU/AUA recommendations. No blocking introduced issue. Graphic figures, supplements and all full historical papers were not independently rechecked. Exact scope in reports/2026-09-12/buccal-review.md.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/grafts/ftsg.mdx",
@@ -4731,11 +4787,39 @@
       "title": "Penile / Preputial Skin Graft",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "05a1d9c268ef5d695052bd3bfec307aae6a3c985ab6b550fe2f8146ca9340da1",
-      "reviewRecords": []
+      "sourceSha256": "71bb981f0b8870fccabcad144a702dd146b8b88f986054dbe73e775e0a104185",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/grafts/penile-preputial-skin.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "71bb981f0b8870fccabcad144a702dd146b8b88f986054dbe73e775e0a104185",
+          "scope": "Complete original and rewritten MDX/reference lists read. Original41 unique DOI identities and all available abstracts checked; primary full manuscripts, trial supplement, images and selected guideline sections read with exact scope in reports/2026-09-12/penile-tissue-review.md and penile-tissue-reference-access.json.",
+          "unresolved": [
+            "Several retained historical/technique papers remain abstract-only; original anatomy chapter and AUA complete PDF inaccessible. Some nonpivotal figure/supplement access remains as listed. No complete clinical certification."
+          ],
+          "changes": [
+            "Separated free skin-graft trials from pedicled-flap comparisons; removed statistical-equivalence claims.",
+            "Corrected vascular anatomy, eligibility, denominators, complication ascertainment and initial-versus-eventual success.",
+            "Aligned EAU2026 tissue selection; removed pediatric-to-adult, small-series and donor-site overgeneralization."
+          ],
+          "sources": [
+            "https://doi.org/10.1007/s00345-021-03843-x",
+            "https://doi.org/10.1038/s41598-025-14191-w",
+            "https://doi.org/10.1007/s00345-021-03613-9",
+            "https://doi.org/10.4103/iju.IJU_298_19",
+            "https://doi.org/10.5534/wjmh.2014.32.2.87",
+            "https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer"
+          ],
+          "peerReview": "Second reviewer read both complete current MDX pages. Independently read both graft RCT main texts/tables/references and entire PeeBuSt supplement, viewed Alrefaey flow figure, reread EAU9.1-9.3; checked selected DOIG Methods/Results, Sharma Methods/Table1/Results and Kim operative Methods. No introduced blocking issue found. Other historical/pediatric sources were not independently fully reread.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/grafts/posterior-auricular.mdx",
@@ -5442,11 +5526,57 @@
       "title": "Artificial Urinary Sphincter (Device)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "270ed9b3e7474fb2748984cce783ea341e124a76a146d8a205a48505e78b26a4",
-      "reviewRecords": []
+      "sourceSha256": "d1c11ff88e60d38ead5c0ac897fdde84ae9db4246730f74be763681f57ff7f68",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter.mdx",
+          "title": "Artificial Urinary Sphincter (Device)",
+          "status": "updated",
+          "scope": [
+            "Entire original MDX including all43references and videos read; rewritten current content checked.",
+            "Current device construction/label handling, MRI and candidate boundaries; major prospective, randomized and long-term cohort outcomes; selected source-design/denominator corrections."
+          ],
+          "sources": [
+            "https://www.auanet.org/guidelines-and-quality/guidelines/incontinence-after-prostate-treatment",
+            "https://doi.org/10.21037/tau-23-10",
+            "https://www.bostonscientific.com/content/dam/elabeling/uro-ph/ams-800-ifu-male/51266569-01A_AMS800_IFU_MALE_ML_s.pdf",
+            "https://doi.org/10.1097/JU.0000000000002239",
+            "https://doi.org/10.1016/j.eururo.2018.07.036",
+            "https://doi.org/10.1111/iju.15083",
+            "https://doi.org/10.1097/JU.0000000000004796",
+            "https://doi.org/10.1371/journal.pone.0290949",
+            "https://doi.org/10.1097/JU.0000000000004285",
+            "https://doi.org/10.1016/j.urology.2015.05.029",
+            "https://doi.org/10.1016/j.eururo.2021.01.024",
+            "https://doi.org/10.1016/j.urology.2013.06.044",
+            "https://doi.org/10.1097/JU.0000000000001954",
+            "https://doi.org/10.1016/j.urology.2022.06.023",
+            "https://doi.org/10.1007/s00345-025-05625-1",
+            "https://doi.org/10.1038/s41443-020-0307-8",
+            "https://promedon-upf.com/product/victo/",
+            "https://doi.org/10.1111/bju.16511",
+            "https://doi.org/10.1111/j.1464-410X.2012.11468.x",
+            "https://doi.org/10.5173/ceju.2019.1920",
+            "https://doi.org/10.1097/JU.0000000000004945",
+            "https://doi.org/10.1038/s41443-025-01202-7"
+          ],
+          "notes": [
+            "Read full primary MED abstracts for all41 DOI-bearing original references (two historical references had no DOI/abstract retrieved). Corrected false fixed cuff increments/PRB ranges, deactivation-button description, universal MRI safety, mandatory urodynamics, blanket female-radiation exclusion and Victo absence of reservoir. Removed unsourced most-promising ranking and unconditional dual-implant safety.",
+            "Boston Scientific male IFU51266569-01A: complete selected English physical pages3\u201310 and17\u201319 read with tables/captions, not complete manual or operative pages11\u201316. Local /tmp/tools-ams800-male-ifu.pdf and /tmp/tools-ams800-raw.txt. Full current Victo manufacturer product/safety body read; not complete Victo IFU. AUA2024 statements17\u201319 and treatment/balloon/radiation sections read via primary indexed text, not entire guideline.",
+            "AUSCO full main article including methods, results, discussion, all five tables, funding/conflicts and references read via PMC and /tmp/tools-ausco-full.xml; graphical figures and separate supplements not inspected. Correctly separates zero infection-related revisions from three postoperative wound infections. Records available-case denominators and one-year/high-volume/single-arm limits.",
+            "Mann2022 included only156men who had erosion; its estimates are not population erosion risk. Bentellis2021 excluded infection/erosion revisions;56.5% nonmechanical category is not all atrophy. Lee2025 timing1.74years was exploratory and nonsignificant. Capsulotomy expert review does not establish universal superiority. Manufacturer InhibiZone registry has voluntary-reporting, nonoperative-infection and mortality/follow-up limitations.",
+            "UroActive2026 complete primary abstract read (PMID41564274); six-man first-in-human finding used only to correct outdated conceptual-only status, not recommend routine clinical adoption. Full first-in-human paper not retrieved. Regional device authorization, female/pediatric indications and detailed operative techniques require their own model/jurisdiction/source review.",
+            "Flagged AUS procedure companion scope to operative_review; no source changes made outside owned subtree."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "d1c11ff88e60d38ead5c0ac897fdde84ae9db4246730f74be763681f57ff7f68",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx",
@@ -5464,11 +5594,40 @@
       "title": "Male Continence Implants (Slings)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "0808183d62ad6f76c72f1f1e4db6e44788c4d2cc2c6f351064036e0ac249b280",
-      "reviewRecords": []
+      "sourceSha256": "f04832a50ad06c45335b4f958f426a77992a65040dffa0144e68582d9c34384d",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/prosthetics/male-continence-implants.mdx",
+          "title": "Male Continence Implants (Slings)",
+          "status": "updated",
+          "scope": "Device components, routes, postoperative adjustment mechanisms, regulatory distinctions and source identity.",
+          "sources": [
+            "https://www.auanet.org/guidelines-and-quality/guidelines/incontinence-after-prostate-treatment",
+            "https://www.bostonscientific.com/content/dam/elabeling/uro-ph/advancexp/51117738-01A_AdVanceXP_IFU_multi_s.pdf",
+            "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231891.pdf",
+            "https://ami.at/wp-content/uploads/2024/07/Solutions-for-Urology_EN_MDD_240425.pdf",
+            "https://promedon-upf.com/product/argus/",
+            "https://promedon-upf.com/wp-content/uploads/argus_webbrochure_eng_v8.pdf",
+            "https://neomedic.com/es/remeex-male/",
+            "https://doi.org/10.1016/j.urology.2014.02.062",
+            "https://doi.org/10.1111/j.1464-410X.2010.09619.x",
+            "https://doi.org/10.1016/j.eururo.2007.05.017",
+            "https://www.accessdata.fda.gov/cdrh_docs/pdf21/K211847.pdf"
+          ],
+          "notes": [
+            "Entire original MDX including tables and references read; edited content checked. Corrected Argus postoperative adjustment and route distinctions, Remeex temporary manipulator/reconnection, AdVance XP anchors and US clearance date, and false universal classification/approval claims. Removed unverified ATOMS 25 mL recipe, guaranteed absence of migration and unsupported commercial-withdrawal causation.",
+            "Read entire English AdVance XP IFU section (2020-04, 51117738-01A), FDA XP and Virtue indication pages plus full device summaries (not first clearance-letter page). Read full Argus manufacturer product body and six-page brochure; ATOMS complete device section in 2024 portfolio, not full IFU; entire male Remeex manufacturer product body. Read eight original full MED abstracts and correct Virtue PMID24972946 abstract; corrected DOI from unrelated MRI article to 10.1016/j.urology.2014.02.062. AUA2024 statements20\u201324 and relevant treatment discussion read via primary indexed text, not entire guideline.",
+            "Current US authorization of regional adjustable sling variants was not established; overview explicitly requires country/model verification. Manufacturer descriptions establish construction, not comparative clinical superiority."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "f04832a50ad06c45335b4f958f426a77992a65040dffa0144e68582d9c34384d",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx",
@@ -5516,6 +5675,27 @@
           ],
           "sourceSha256": "d8e461bfa288ed66895087a1790adc167352af76e1b8933c410bcf545beb6953",
           "recordFile": "root-reviewed-pages.json"
+        },
+        {
+          "file": "docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx",
+          "title": "ProACT Adjustable Continence Balloons (Device)",
+          "status": "checked",
+          "scope": "Current device description, approval indication, adjustment limits, MRI conditions and adverse-event denominators.",
+          "sources": [
+            "https://iu.coloplast.us/products/proact/",
+            "https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130018D.pdf",
+            "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P130018",
+            "https://www.auanet.org/guidelines-and-quality/guidelines/incontinence-after-prostate-treatment",
+            "https://doi.org/10.21037/tau-24-587"
+          ],
+          "notes": [
+            "Entire current MDX read; no additional source change needed. Independently read original FDA approval record and complete Coloplast product/safety body; FDA physician IFU device-description, indications, contraindications, warnings and precautions sections, not entire 29-page labeling; AUA2024 balloon/radiotherapy recommendations; complete Fernandez2025 MED abstract.",
+            "Manufacturer-linked one-page safety summary read in full; it is not a newer complete IFU. Original approval labeling and current model instructions remain explicitly distinguished. Event percentages correctly represent shares of 752 adverse events, not patient-level risks."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "d8e461bfa288ed66895087a1790adc167352af76e1b8933c410bcf545beb6953",
+          "recordFile": "tools.json"
         }
       ]
     },
@@ -5876,24 +6056,23 @@
       "title": "Tools",
       "section": "01-foundations",
       "kind": "landing/database",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f368a4dc11ba4484bd399ff7a1adf929778f52c38c3b8d609412d18d5110858f",
+      "sourceSha256": "e169d9e7de63381d873bfbe82205e757765b0ffa6f103426bb77af9bacafb771",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/index.mdx",
           "title": "Tools",
-          "status": "read-corrections-pending",
+          "status": "updated",
           "scope": [
-            "Entire original MDX actually read.",
-            "Tools overview: category descriptions, navigation and platform names."
+            "Entire current navigation-only MDX read."
           ],
           "sources": [],
           "notes": [
-            "Entire MDX read. Fixed category counts appear stale; remove brittle counts after child inventory. Links and overview will be reconciled after instrument/material review. No new primary checks on this short index yet."
+            "Removed outdated fixed inventory counts and long platform list; aligned link descriptions with reviewed child sections. No new clinical claims."
           ],
-          "sourceSha256": "f368a4dc11ba4484bd399ff7a1adf929778f52c38c3b8d609412d18d5110858f",
+          "sourceSha256": "e169d9e7de63381d873bfbe82205e757765b0ffa6f103426bb77af9bacafb771",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -5905,55 +6084,163 @@
       "title": "Air Drill",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "7a3ee5a2008e81ebb986a936875fee65ed0b54c58b90ad2d2c13f5a3f7128887",
-      "reviewRecords": []
+      "sourceSha256": "608ce3a20e0d940074f5d130b84f517d085984ece825287fc25bd7bc76a46092",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/bone-instruments/air-drill.mdx",
+          "title": "Air Drill",
+          "status": "updated",
+          "scope": [
+            "Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.",
+            "Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked."
+          ],
+          "sources": [
+            "https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/powered-surgical-instruments/high-speed-pneumatic-surgical-drills/midas-rex-mr8-high-speed-drill-system.html",
+            "https://www.jnjmedtech.com/sites/default/files/user_uploaded_assets/pdf_assets/2021-06/164800-210421_EG1%20System%20Brochure_FINAL.pdf"
+          ],
+          "notes": [
+            "Corrected pneumatic versus electric identity and product-family overgeneralization; removed diamond-burr neurovascular safety guarantee, universal performance rankings and fixed all-system irrigation claim. Read complete MR8 web indications, residual risks, warnings W1\u201363 and cautions C1\u201310; not all page material or a separate full IFU. Read full 2021 EG1 four-page brochure text/specifications/references, not figure visual inspection or underlying technical reports.",
+            "Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "608ce3a20e0d940074f5d130b84f517d085984ece825287fc25bd7bc76a46092",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/bone-instruments/osteotome-and-mallet.mdx",
       "title": "Osteotome and Mallet",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "91ed3f65ed7948f6ffd07229bee7d450e3fc7edda4ed18cba2564822902c40ee",
-      "reviewRecords": []
+      "sourceSha256": "5f7c731a279d0d3ca2b130e3ceceae631286c8526ef058d95021c35f7ca54d11",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/bone-instruments/osteotome-and-mallet.mdx",
+          "title": "Osteotome and Mallet",
+          "status": "updated",
+          "scope": [
+            "Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.",
+            "Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked."
+          ],
+          "sources": [
+            "https://accessgudid.nlm.nih.gov/devices/10840199522283"
+          ],
+          "notes": [
+            "Removed universal superiority, melting-bone rhetoric, no-risk manual technique assumptions, routine periosteal stripping and simplistic binding diagnosis. Read complete AccessGUDID device-description/nomenclature/characteristics record; it is a device identity source, not comparative clinical evidence or a pubectomy protocol.",
+            "Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "5f7c731a279d0d3ca2b130e3ceceae631286c8526ef058d95021c35f7ca54d11",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/bone-instruments/periosteal-elevator.mdx",
       "title": "Periosteal Elevator",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a65c593a4e383e44315cabdc15bc2bc28851c0e356100fc5f7479b641e511bdc",
-      "reviewRecords": []
+      "sourceSha256": "52c3a2bd23a206e6f4d6e2a9c3698af39278338146abb6bbfd7fbecf47ffa4fa",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/bone-instruments/periosteal-elevator.mdx",
+          "title": "Periosteal Elevator",
+          "status": "updated",
+          "scope": [
+            "Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.",
+            "Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked."
+          ],
+          "sources": [
+            "https://accessgudid.nlm.nih.gov/devices/00083208130021",
+            "https://www.klsmartin.com/shop/en/products/product/23-436-23-07/"
+          ],
+          "notes": [
+            "Removed prerequisite universal periosteal stripping and unsupported routine genital/urethral/prosthetic pocket technique. Read full AccessGUDID device description/nomenclature/characteristics and KLS Freer product specification section, not all KLS catalog or model IFU.",
+            "Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "52c3a2bd23a206e6f4d6e2a9c3698af39278338146abb6bbfd7fbecf47ffa4fa",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/bone-instruments/pituitary-rongeur.mdx",
       "title": "Pituitary Rongeur",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "876244251e563d1e2468c3881e21d0b8d969b28729adcfeba5e9d1dddadeb7ce",
-      "reviewRecords": []
+      "sourceSha256": "c20c94bf08a783e85d70ed6f9097a21178bf203fc7ca0992af1665a30f0467ae",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/bone-instruments/pituitary-rongeur.mdx",
+          "title": "Pituitary Rongeur",
+          "status": "updated",
+          "scope": [
+            "Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.",
+            "Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked."
+          ],
+          "sources": [
+            "https://wigginsmedical.com/product/decker-pituitary-rongeurs/"
+          ],
+          "notes": [
+            "Corrected routine cortical-bone-cutting characterization and automatic Leksell-to-pituitary pubectomy sequence; distinguished soft/disc/cartilaginous Decker description from bone-fragment Peapod variant. Read complete Wiggins product page including both variant descriptions and specification table; no full model IFU or operative comparative trial.",
+            "Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "c20c94bf08a783e85d70ed6f9097a21178bf203fc7ca0992af1665a30f0467ae",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/bone-instruments/rongeur.mdx",
       "title": "Rongeur",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "fcee7bac50fe026648ae0651fc3f5d289ea2cd7562e4968f9afcaf0bb83f5c19",
-      "reviewRecords": []
+      "sourceSha256": "7c4d081c611039b88f8a03534fc3d44d43e62ba7cdbf848b20632844b9e45fcc",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/bone-instruments/rongeur.mdx",
+          "title": "Rongeur",
+          "status": "updated",
+          "scope": [
+            "Entire original and revised MDX read, including all frontmatter/text; originals had no reference lists.",
+            "Instrument identity, intended tissue, consequential safety overstatements and inappropriate operative extrapolation checked."
+          ],
+          "sources": [
+            "https://www.sklarcorp.com/p/Sklar-Leksell-Rongeur/40-4092",
+            "https://accessgudid.nlm.nih.gov/devices/00190660151799"
+          ],
+          "notes": [
+            "Removed requirement to remove all cortex until cancellous bleeding and universal periosteal stripping; differentiated bone versus pituitary instruments and tool identity from operation indication. Read full Sklar Leksell product description/specification body and AccessGUDID Leksell record, not all manufacturer IFUs or complete osteomyelitis literature.",
+            "Current complete IFUs for every named pattern were not obtained. No claim of clinical clearance or independent validation of the linked operative/clinical pages."
+          ],
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "7c4d081c611039b88f8a03534fc3d44d43e62ba7cdbf848b20632844b9e45fcc",
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/cautery/bovie-tip.mdx",
@@ -6565,7 +6852,7 @@
       "status": "unresolved",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "68b0e1bf6188458b70d86fc5776403d484f5a8c56bc13991e0148f4ce050ecfb",
+      "sourceSha256": "0d35d56da25d2bd5d5421c6f1870cd936321b22c79d4fd31e1decbd50939fe01",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/index.mdx",
@@ -6579,9 +6866,10 @@
             "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232970.pdf"
           ],
           "notes": [
-            "Full original read in three untruncated chunks (lines 1\u201382, 83\u2013180 and 181\u2013end). Pending alignment of VSE versus SynchroSeal vessel ceilings, platform/instrument identity, Hem-o-lok donor renal-artery contraindication, MAUDE denominators, tissue-energy and bladder-irrigation claims. Manufacturer energy checks already recorded on completed child hubs; FDA K232970 contraindication passage read. No blanket clearance of the database."
+            "Full original read in three untruncated chunks (lines 1\u201382, 83\u2013180 and 181\u2013end). Pending alignment of VSE versus SynchroSeal vessel ceilings, platform/instrument identity, Hem-o-lok donor renal-artery contraindication, MAUDE denominators, tissue-energy and bladder-irrigation claims. Manufacturer energy checks already recorded on completed child hubs; FDA K232970 contraindication passage read. No blanket clearance of the database.",
+            "September12 follow-up: corrected seventeen database descriptions to match reviewed bone/robotic/cautery pages and added explicit donor renal-artery Hem-o-lok contraindication with hub link. Other database rows retain pending companion review; do not infer full clinical verification from the saved full-source read."
           ],
-          "sourceSha256": "68b0e1bf6188458b70d86fc5776403d484f5a8c56bc13991e0148f4ce050ecfb",
+          "sourceSha256": "0d35d56da25d2bd5d5421c6f1870cd936321b22c79d4fd31e1decbd50939fe01",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -7011,24 +7299,33 @@
       "title": "Cadiere Forceps (da Vinci)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "1276e6d6dbc4a6a13a39a2fab38d95850ea168803fde22871111223accd8db4b",
+      "sourceSha256": "88b907b20a3072ab2388e93fda0aa35930aa71d88bb4f22202f3c7779bfd2685",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/robotic/cadiere.mdx",
           "title": "Cadiere Forceps (da Vinci)",
-          "status": "read-corrections-pending",
+          "status": "updated",
           "scope": [
-            "Entire original MDX actually read.",
-            "Entire original grasper page, jaw/force comparisons, clinical extrapolations and references."
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
           ],
-          "sources": [],
+          "sources": [
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-x-xi-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-sp-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments",
+            "https://www.intuitive.com/en-us/about-us/newsroom/force-feedback",
+            "https://doi.org/10.1007/s00464-013-3323-7",
+            "https://doi.org/10.1007/s00464-007-9698-6"
+          ],
           "notes": [
-            "Full original read. Pending fenestration-bench versus named-device attribution, Hubens bowel-injury/conversion denominator, current model compatibility and no-haptic-feedback generalization. No current primary check yet sufficient to approve these claims."
+            "Corrected SP versus Single-Site identity and Force Feedback; removed attribution of experimental parallel-jaw fenestration ratios to clinical Cadiere performance and universal bowel-safety/cost claims. Historical 5/45 lacerations retained with non-device-specific scope.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
           ],
-          "sourceSha256": "1276e6d6dbc4a6a13a39a2fab38d95850ea168803fde22871111223accd8db4b",
+          "sourceSha256": "88b907b20a3072ab2388e93fda0aa35930aa71d88bb4f22202f3c7779bfd2685",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -7265,24 +7562,42 @@
       "title": "Needle Drivers (da Vinci)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a08c1ceb3591270f1d0be1751d8fb5336cdc845926b80ad6a4483de6df9ee178",
+      "sourceSha256": "8319f44f6d3bf04ffe7fdb8fd447bcab44973e90241d9da4fe9c06deb3b087ed",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/robotic/needle-drivers.mdx",
           "title": "Needle Drivers (da Vinci)",
-          "status": "read-corrections-pending",
+          "status": "updated",
           "scope": [
-            "Entire original MDX actually read.",
-            "Entire original MDX (lines 1\u2013145 and 146\u2013234), including all variants, microsurgery table, clinical examples and 29 references."
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
           ],
-          "sources": [],
+          "sources": [
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-x-xi-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-sp-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments",
+            "https://www.intuitive.com/en-us/about-us/newsroom/force-feedback",
+            "https://doi.org/10.1089/lap.2022.0062",
+            "https://doi.org/10.1002/micr.30458",
+            "https://doi.org/10.1002/micr.31246",
+            "https://doi.org/10.1016/j.bjps.2026.02.021",
+            "https://doi.org/10.1089/end.2009.0573",
+            "https://doi.org/10.1097/SLE.0b013e318150e590",
+            "https://doi.org/10.1007/s00464-016-5356-1",
+            "https://doi.org/10.1016/j.urology.2013.02.002",
+            "https://doi.org/10.1007/s00464-009-0578-0",
+            "https://doi.org/10.1016/j.urology.2007.09.052",
+            "https://doi.org/10.1007/s00464-012-2659-8"
+          ],
           "notes": [
-            "Full original read. Pending exact catalog model/use-life/needle compatibility, unsupported Mega force ranking and universal maximal grip, fixed vessel-size wall and microsurgical platform superiority, study denominators and imprecise robotic versus laparoscopic trial attribution. Primary papers and device manuals require targeted checking; not clinically cleared."
+            "Corrected catalog names/use counts, new Force Feedback and SP distinctions, Lima nonrandomized design, Massoud bundled comparison, training-model versus patient outcomes, Lai 17 robotic anastomoses in 15 patients, unproven 1mm threshold and microsurgical-platform superiority. Sudarman abstract internally totals platform patient counts inconsistently; no platform proportions adopted. Catalog duplicates a Force Feedback needle-driver part number with atrial retractor; did not reproduce that questionable part number.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
           ],
-          "sourceSha256": "a08c1ceb3591270f1d0be1751d8fb5336cdc845926b80ad6a4483de6df9ee178",
+          "sourceSha256": "8319f44f6d3bf04ffe7fdb8fd447bcab44973e90241d9da4fe9c06deb3b087ed",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -7294,24 +7609,38 @@
       "title": "ProGrasp Forceps (da Vinci)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "45a34e2277dc0c8cb243daa26df53f5c0079356ad1a1bb56a061b3a1db4e4b6d",
+      "sourceSha256": "65640990db0d55587b10a1ac9fc5dab626da3f707ff6d860b2ca3a80e7ac5455",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/robotic/prograsp.mdx",
           "title": "ProGrasp Forceps (da Vinci)",
-          "status": "read-corrections-pending",
+          "status": "updated",
           "scope": [
-            "Entire original MDX actually read.",
-            "Entire original grasper page, specifications, grip claims, clinical extrapolations and references."
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
           ],
-          "sources": [],
+          "sources": [
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-x-xi-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-sp-instruments-accessories-catalog.pdf",
+            "https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments",
+            "https://www.intuitive.com/en-us/about-us/newsroom/force-feedback",
+            "https://doi.org/10.1089/end.2008.0416",
+            "https://doi.org/10.1016/j.urology.2005.03.061",
+            "https://doi.org/10.1089/end.2010.0306",
+            "https://doi.org/10.1016/j.jss.2013.07.032",
+            "https://doi.org/10.1007/s11517-014-1230-2",
+            "https://doi.org/10.3349/ymj.2010.51.1.148",
+            "https://doi.org/10.1016/j.urology.2016.03.067"
+          ],
           "notes": [
-            "Full original read. Pending exact current model availability, unsupported 6 mm SP identity, generic no-haptic-feedback claim, historical force testing and 2016 cost generalization. Need actual catalog/IFU and cited primary study verification before corrections."
+            "Corrected nonexistent SP ProGrasp, modern Force Feedback exception, historical grip-force scope, fixed docking distance, universal lowest-cost/retraction-default assertions and mandatory-energy hemostasis.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
           ],
-          "sourceSha256": "45a34e2277dc0c8cb243daa26df53f5c0079356ad1a1bb56a061b3a1db4e4b6d",
+          "sourceSha256": "65640990db0d55587b10a1ac9fc5dab626da3f707ff6d860b2ca3a80e7ac5455",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -7323,35 +7652,75 @@
       "title": "Robotic Stapler (da Vinci)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "7fd0bc3acee482650d2f97dcdd2fc58f006325da567a8d38fd7785336afbe63a",
-      "reviewRecords": []
+      "sourceSha256": "08d40b41625146471ab4a3f42616d7640361c746c71156fd22368527d87bbbdf",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/instruments/robotic/robotic-stapler.mdx",
+          "title": "Robotic Stapler (da Vinci)",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "sourceSha256": "08d40b41625146471ab4a3f42616d7640361c746c71156fd22368527d87bbbdf",
+          "scope": [
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
+          ],
+          "sources": [
+            "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/surgical-stapler-reload-recall-intuitive-surgical-removes-8mm-sureform-30-gray-reloads",
+            "https://www.intuitive.com/en-us/products-and-services/da-vinci/stapling",
+            "https://doi.org/10.1089/end.2018.0461",
+            "https://doi.org/10.1177/08927790251390881",
+            "https://doi.org/10.1089/lap.2016.0409",
+            "https://doi.org/10.1089/lap.2017.0545",
+            "https://doi.org/10.1007/s00464-023-10208-5",
+            "https://doi.org/10.1007/s00464-025-11862-7",
+            "https://doi.org/10.1371/journal.pone.0339191",
+            "https://www.fda.gov/media/123572/download"
+          ],
+          "notes": [
+            "Corrected platform-specific compatibility/access/rows and 12-fire single-patient limit, current recall, before/during compression monitoring, false ten-donor comparative equivalence, observational effect claims, protocol versus results, OPI compression claim and elimination of bedside assistant.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/instruments/robotic/tip-up-fenestrated.mdx",
       "title": "Tip-Up Fenestrated Grasper (da Vinci)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "ff565129e1750536db2626e04dd0e4a13412652df85761e3ffc9f0708edf7686",
+      "sourceSha256": "6521812e5c23161e2e73246e244ea9a304261c69faeb709a921a428376a05ac8",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/robotic/tip-up-fenestrated.mdx",
           "title": "Tip-Up Fenestrated Grasper (da Vinci)",
-          "status": "read-corrections-pending",
+          "status": "updated",
           "scope": [
-            "Entire original MDX actually read.",
-            "Entire original grasper page, tip geometry, force ranking, indications and references."
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
           ],
-          "sources": [],
+          "sources": [
+            "https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-x-xi-instruments-accessories-catalog.pdf",
+            "https://doi.org/10.1089/end.2010.0306",
+            "https://doi.org/10.1007/s00464-013-3323-7",
+            "https://doi.org/10.1007/s11517-014-1230-2",
+            "https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments",
+            "https://www.intuitive.com/en-us/about-us/newsroom/force-feedback"
+          ],
           "notes": [
-            "Full original read. Pending identification error: historical double-fenestrated force testing cannot establish present Tip-Up as gentlest. Also review current platform, thermal/hemostasis and universal atraumatic-handling claims against manufacturer information."
+            "Removed false attribution of double-fenestrated measured grip force to Tip-Up and unsupported lower-force/atraumatic/vector-superiority claims; removed blind lifting beneath adherent bowel/mesh.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
           ],
-          "sourceSha256": "ff565129e1750536db2626e04dd0e4a13412652df85761e3ffc9f0708edf7686",
+          "sourceSha256": "6521812e5c23161e2e73246e244ea9a304261c69faeb709a921a428376a05ac8",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "tools.json"
@@ -7657,31 +8026,47 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "262871db90662c4a9b9efdfb1f6b4f1da3ef6a63d8e445dd2027bf2530006f1f",
+      "sourceSha256": "4e5a3e9f1465a931fe531f23ed14cfb2dafead6ffe3d8713daf19d5cda34c886",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/instruments/staplers/index.mdx",
           "title": "Staplers",
           "status": "updated",
           "scope": [
-            "Entire original MDX read in three untruncated chunks: lines 1\u201395, 96\u2013210, 211\u2013356.",
-            "Narrow safety corrections in this publication batch: 2026 Class I recall of specific SureForm 30 gray reloads and the Hem-o-lok donor renal-artery contraindication. Remaining nonurgent clinical and device corrections are pending."
+            "Entire original MDX and revised content read, including tables and references.",
+            "Model/label safety and source identity, study design, outcome denominators and inappropriate extrapolation checked."
           ],
           "sources": [
             "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/surgical-stapler-reload-recall-intuitive-surgical-removes-8mm-sureform-30-gray-reloads",
-            "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232970.pdf",
             "https://www.fda.gov/media/123572/download",
-            "https://www.cochrane.org/evidence/CD004320_comparison-two-methods-join-small-and-large-bowel-together-surgery",
-            "https://doi.org/10.1111/bju.16826"
+            "https://doi.org/10.1016/j.juro.2016.07.077",
+            "https://doi.org/10.1016/j.urology.2017.01.051",
+            "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K232970.pdf",
+            "https://doi.org/10.1097/MD.0000000000013116",
+            "https://doi.org/10.1016/j.urology.2021.02.010",
+            "https://doi.org/10.1016/j.urolonc.2013.06.006",
+            "https://doi.org/10.1177/08927790251390881",
+            "https://doi.org/10.1016/j.urology.2018.09.010",
+            "https://doi.org/10.1002/14651858.CD004320.pub3",
+            "https://doi.org/10.1016/S0090-4295(99",
+            "https://doi.org/10.1016/j.ejso.2015.11.010",
+            "https://doi.org/10.1111/bju.16826",
+            "https://doi.org/10.1046/j.1464-410x.1999.00211.x",
+            "https://doi.org/10.1016/s0022-5347(17",
+            "https://doi.org/10.1016/S0022-5347(05",
+            "https://doi.org/10.1016/j.surg.2022.11.013"
           ],
           "notes": [
-            "Added current FDA recall warning with exact affected part numbers, action and device scope. Full FDA communication body and update timeline read; it reports four serious injuries and one death as of February 23, 2026, without establishing a population incidence. Manufacturer letter itself not obtained. Replaced the unsafe clips-versus-stapler equivalence recommendation with the explicit donor renal-artery contraindication; explained that the eight observational-study meta-analysis cannot remove labeling restrictions and removed the associated generic clip cost-saving recommendation.",
-            "Preparatory research: all 40 cited MED abstracts actually read (/tmp/tools-staplers-primary.json); full Cochrane public summary/abstract read, with searches through December 2010, not the complete review. Full seven-page FDA K232970 text read; figure/form checkboxes not visually inspected. Full 13-page FDA 2021 labeling guidance text and three example-label tables read after the initial checkpoint; not a complete IFU for every commercial model. Mastroianni full publisher access failed; abstract-only interpretation.",
-            "UNRESOLVED \u2014 important next batch: remove claim that TA is inherently safer from denominator-free MAUDE; replace generic cartridge-size and absorbable-staple availability/material claims; qualify observational neobladder comparisons and exposure/stone estimates; correct partial cohort and preclinical outcome omissions. This entry is not approval of the unchanged legacy recommendations."
+            "Expanded targeted safety edit into full-content review: removed universal cartridge/color/height and polymer-equivalence claims, TA safety ranking from MAUDE, en-bloc zero-risk claim, incorrect Cochrane scope and causal neobladder superiority. Preserved 2026 recall and donor-artery Hem-o-lok contraindication. Corrected clinical versus animal context, incomplete imaging, denominators and omitted adverse outcomes. Mastroianni retrospective design and sex-sparing confounding retained; old linked section anchor preserved.",
+            "Read 58 complete MED abstracts across the five robotic source pages, with the remaining generic Lancet physics reference unavailable from the initial malformed DOI query and not retained; cache /tmp/tools-remaining-robotics-primary.json. For main stapler hub, all 40 original complete MED abstracts read (/tmp/tools-staplers-primary.json); primary clinical full papers were not obtained. Read current January 2026 multiport 19-page and June 2026 SP 16-page catalogs in full extracted web text/tables/terms, not visual figure inspection; attempted local PDF downloads were HTML and not used. Read manufacturer instrument/Force Feedback main bodies and stapling specifications/FAQ. FDA stapler-label guidance entire13-page text including example tables; FDA K232970 entire7-page text including donor-artery contraindication; full FDA May2026 recall body/timeline. Cochrane ileocolic public summary/abstract in full, not entire review.",
+            "Clinical verification remains targeted: current complete IFUs for every instrument generation and every original operative paper were not obtained; no clinical clearance or universal operative recommendation."
           ],
-          "sourceSha256": "262871db90662c4a9b9efdfb1f6b4f1da3ef6a63d8e445dd2027bf2530006f1f",
+          "sourceSha256": "4e5a3e9f1465a931fe531f23ed14cfb2dafead6ffe3d8713daf19d5cda34c886",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
+          "changes": [
+            "Root build correction: retained the older neobladder heading target using a valid explicit MDX anchor; source passage reread, no clinical text change."
+          ],
           "recordFile": "tools.json"
         }
       ]
@@ -11420,7 +11805,7 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "ba0caf122a10713f8192059236bcabcf5b7d10750ba2a3c2b8903fab4361e255",
+      "sourceSha256": "77ae798e0c1f4e7ddc061bcb92d572ee03ddb1d7e8859ccdfd167415eba6198c",
       "reviewRecords": [
         {
           "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/vascular-urinary.mdx",
@@ -11437,9 +11822,112 @@
             "AUF controlled provocation, negative-test limits and CTA stability; stent infection versus reintervention denominator; renal AVF screening, surveillance and intervention."
           ],
           "notes": "Corrected dangerous automatic provocative angiography, false 100% sensitivity, graft infection 14\u201350% conflation and routine screening after uneventful biopsy. Replaced initial six-month wait with individualized follow-up and correctly attributed cohort protocol; persistence alone does not mandate TAE. Full MDX read. All embolization success/parenchymal-loss rates, small-series congenital AVF prevalence, open-versus-endovascular selection details and other older cohorts remain unverified; removed unrelated glomerulonephritis reference.",
-          "sourceSha256": "ba0caf122a10713f8192059236bcabcf5b7d10750ba2a3c2b8903fab4361e255",
+          "sourceSha256": "77ae798e0c1f4e7ddc061bcb92d572ee03ddb1d7e8859ccdfd167415eba6198c",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
+          "followupReviews": [
+            {
+              "reviewedAt": "2026-09-12",
+              "scope": "Full current MDX and bibliography reread; targeted companion corrections only, not independent reverification of all unchanged claims.",
+              "notes": [
+                "Replaced rigid sequential stages and blind immediate ureteral stent reinsertion with urgent coordinated arterial control; preserved manipulation/tamponade safety and distinguished CBI from lateralization.",
+                "Corrected era19%/7% versus open/endovascular false comparison, Fox combined ligation-or-nephrectomy category, selected lower-limb morbidity and ileal-conduit infection denominators; removed mandatory PCN and automatic nephrectomy/graft-based exclusions.",
+                "Removed unsupported pooled comparative outcome table, prognosis-only arterial ligation and unverified drug protocols. Malgor abstract/full-text timepoints and percentages conflict; preserved clear clinical principles/counts. Resolved Vandersteen DOI."
+              ],
+              "sources": [
+                {
+                  "url": "https://doi.org/10.1016/j.jvs.2022.05.015",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jvs_2022_05_015.json"
+                },
+                {
+                  "url": "https://doi.org/10.2214/AJR.14.13405",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_14_13405.json"
+                },
+                {
+                  "url": "https://doi.org/10.1097/JU.0000000000002241",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1097_ju_0000000000002241.json"
+                },
+                {
+                  "url": "https://doi.org/10.1089/end.2017.0819",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1089_end_2017_0819.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.urology.2005.05.036",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2005_05_036.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.juro.2010.10.062",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_juro_2010_10_062.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.jvs.2011.11.043",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jvs_2011_11_043.json"
+                },
+                {
+                  "url": "https://doi.org/10.1007/s00270-017-1586-4",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00270_017_1586_4.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.avsg.2020.11.014",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2020_11_014.json"
+                },
+                {
+                  "url": "https://doi.org/10.2214/ajr.162.4.8141010",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_162_4_8141010.json"
+                },
+                {
+                  "url": "https://doi.org/10.2214/AJR.20.23132",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_20_23132.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.avsg.2016.01.026",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2016_01_026.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.avsg.2016.02.033",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2016_02_033.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.juro.2007.09.087",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_juro_2007_09_087.json"
+                },
+                {
+                  "url": "https://doi.org/10.1089/end.2014.0394",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1089_end_2014_0394.json"
+                },
+                {
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4476467/",
+                  "readScope": "Full original Methods, Results including table/figure text, and Discussion/Conclusion read; introduction and complete back matter not certified. Abstract/full results have conflicting follow-up times and long-term estimates; these were not recombined.",
+                  "cache": "/tmp/workflow-malgor4476467.txt"
+                },
+                {
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/9258074/",
+                  "readScope": "Complete original Vandersteen abstract read; DOI identity independently matched on publisher/OHSU record; no full paper.",
+                  "cache": "/tmp/workflow-uaf-vandersteen9258074.json"
+                },
+                {
+                  "url": "https://doi.org/10.1007/s00270-012-0534-6",
+                  "readScope": "Complete Okada original abstract read; not full paper.",
+                  "cache": "/tmp/workflow-okada-uaf.json"
+                }
+              ]
+            }
+          ],
           "recordFile": "clinical-conditions.json"
         }
       ]
@@ -11452,7 +11940,7 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "704452a9640387d3b7282d2f0e8568a1aa63b6bdc21ac3d2b39fca94cbd90584",
+      "sourceSha256": "41efac89ed3a00d44c1c5f7d6ee98553ac9c5d5ec21d2fa27fcdffa42879589d",
       "reviewRecords": [
         {
           "file": "docs/03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous.mdx",
@@ -11469,10 +11957,102 @@
             "Acute-trauma catheter regimen not a chronic VCF rule; comparable CT/plain cystography accuracy; urocutaneous versus VCF populations; conduit catheter not condom diversion; unsupported Cochrane-protocol brachytherapy claim removed."
           ],
           "notes": "Full text and29references read. Source matching and safety claims corrected; rare case reports, exact radiation subgroup estimates and all flap procedures not fully verified.",
-          "sourceSha256": "704452a9640387d3b7282d2f0e8568a1aa63b6bdc21ac3d2b39fca94cbd90584",
+          "sourceSha256": "41efac89ed3a00d44c1c5f7d6ee98553ac9c5d5ec21d2fa27fcdffa42879589d",
           "reviewedAt": "2026-09-12",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
+          "followupReviews": [
+            {
+              "reviewedAt": "2026-09-12",
+              "scope": "Full current MDX and bibliography reread; targeted companion corrections only, not independent reverification of all unchanged claims.",
+              "notes": [
+                "Removed Zhang2026 outcome and radiation-failure extrapolations:67patients consisted of vaginal/uterine fistulas with zero VCF. Removed mandatory sequential stages derived from enterourinary sources.",
+                "Scoped ACS18Fr/seven-day guidance to acute uncomplicated extraperitoneal trauma; removed universal chronic catheter, NPWT dressing, endoscopic-selection and compulsory fistulectomy/flap rules.",
+                "Read Banihani and Lau full two-page reports: Banihani anatomy actually posterior urethra-to-thigh; Lau selected irradiated bladder repair succeeded short-term. Corrected Raup mixed urinary-cutaneous population/conduit-catheter terminology; no assumed universally high-pressure neurogenic bladder.",
+                "Replaced broad pooled prognosis claims with case/series-specific limitations and coordinated oncologic handling of sunitinib-associated case."
+              ],
+              "sources": [
+                {
+                  "url": "https://doi.org/10.1016/j.urology.2016.04.001",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2016_04_001.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.urology.2008.04.063",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2008_04_063.json"
+                },
+                {
+                  "url": "https://doi.org/10.1046/j.1464-410x.2000.00871.x",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1046_j_1464_410x_2000_00871_x.json"
+                },
+                {
+                  "url": "https://doi.org/10.1186/1471-230X-10-128",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1186_1471_230x_10_128.json"
+                },
+                {
+                  "url": "https://doi.org/10.12968/jowc.2010.19.4.157",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_12968_jowc_2010_19_4_157.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/s0022-5347(01)64256-3",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0022_5347_01_64256_3.json"
+                },
+                {
+                  "url": "https://doi.org/10.1100/tsw.2007.253",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1100_tsw_2007_253.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.suc.2016.02.012",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_suc_2016_02_012.json"
+                },
+                {
+                  "url": "https://doi.org/10.1111/iju.12545",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1111_iju_12545.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/s0022-5347(17)54989-7",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0022_5347_17_54989_7.json"
+                },
+                {
+                  "url": "https://doi.org/10.1186/s13017-019-0274-x",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1186_s13017_019_0274_x.json"
+                },
+                {
+                  "url": "https://doi.org/10.1007/s00192-026-06580-0",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_026_06580_0.json"
+                },
+                {
+                  "url": "https://doi.org/10.1016/j.urology.2015.07.057",
+                  "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+                  "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2015_07_057.json"
+                },
+                {
+                  "url": "https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf",
+                  "readScope": "Complete Management of Bladder Injury section pp39\u201340 read, including catheter and cystogram recommendations; not entire guideline.",
+                  "cache": "/tmp/warwiki-acs-gu-2025.txt"
+                },
+                {
+                  "url": "https://smj.sma.org.sg/5009/5009cr9.pdf",
+                  "readScope": "Entire two-page primary Banihani report read; actual contrast-defined origin is posterior urethra."
+                },
+                {
+                  "url": "https://annals.edu.sg/pdf_5sep/kolau.pdf",
+                  "readScope": "Entire two-page primary Lau report read. Obvious radiation-dose unit error in original was not copied."
+                }
+              ]
+            }
+          ],
           "recordFile": "clinical-conditions.json"
         }
       ]
@@ -14213,15 +14793,17 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "184ef7cda0bd498190897df1813aa75bdf4d9ea6c377ff28ee8db8ce4ffbad68",
+      "sourceSha256": "e5687f0d39ad7286ed90af7c92c74ff778220a0925374aecbceb77ea28d4ded2",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04a-urethral-reconstruction/flap/mcaninch-circular-flap.mdx",
           "title": "McAninch Transverse Circular Penile Skin Flap",
           "status": "updated",
-          "scope": "Entire current MDX read in full, including techniques, tables and references; clipped tool-output intervals retrieved separately. Major operative anatomy, patient selection and consequential evidence claims reviewed against identified primary sources. Not all historical citations or linked media independently reviewed.",
+          "scope": "Entire current MDX read in full, including techniques, tables and references; clipped tool-output intervals retrieved separately. Major operative anatomy, patient selection and consequential evidence claims reviewed against identified primary sources. Not all historical citations or linked media independently reviewed. Follow-up2026-09-12: complete primary PeeBuSt and Alrefaey main manuscripts with tables/references read from PMC XML text, plus entire PeeBuSt DOCX supplement; targeted changed table/paragraphs reread after edit. Previously completed full MDX read retained, not counted as another page.",
           "notes": [
-            "Removed incorrect retrograde deep-dorsal-artery pedicle/dissection; retained historical superficial fascial-support terminology while identifying dartos vascular supply. Corrected free-graft RCTs misclassified as flap-BMG trials, overall versus primary long-term survival and overconfident superiority/sexual-outcome claims."
+            "Removed incorrect retrograde deep-dorsal-artery pedicle/dissection; retained historical superficial fascial-support terminology while identifying dartos vascular supply. Corrected free-graft RCTs misclassified as flap-BMG trials, overall versus primary long-term survival and overconfident superiority/sexual-outcome claims.",
+            "Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation.",
+            "Follow-up source inspection: Alrefaey Fig1 visually confirms98randomized49/49, lost5PSG/1BMG,44/48analyzed; updated reported\u2192randomized. DOIG primary Methods/Results and Table1 state median48mo despite mean inabstract; spiral companion aligned to median. Source access: complete twoRCTmaintexts/supplement previously read; Alrefaey Fig1 viewed2026-09-12; DOIG completeabstract and fullMethods/firstResults paragraph plusTable1 followup row read, notentireDOIGpaper."
           ],
           "sources": [
             {
@@ -14273,15 +14855,26 @@
               "url": "https://www.auanet.org/documents/Guidelines/PDF/Urethral%20Stricture%20Disease%20Unabridged%20FINAL.pdf",
               "coverage": "Guideline statements on tissue transfer, genital skin/LS and hair-bearing skin; retrieved relevant official text",
               "accessedAt": "2026-09-12"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8520101/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references and complete DOCX supplement read; /tmp/warwiki-PMC8520101-read.txt and /tmp/warwiki-peebust-supplement.txt. Figures not visually assessed."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12343868/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references read; /tmp/warwiki-PMC12343868-read.txt. Figures not visually assessed."
             }
           ],
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "remaining": [
-            "Other historical series, detailed harvest variants, exact donor-risk estimates and linked videos were not independently fully verified. This scoped safety/evidence review is not complete clinical clearance."
+            "Other historical series, detailed harvest variants, exact donor-risk estimates and linked videos were not independently fully verified. This scoped safety/evidence review is not complete clinical clearance.",
+            "PeeBuSt main ITT sentence appears arm-reversed and S4success88/7 conflicts with S1counts86/9; no predictor or ITT claim repeated. Source HR CI uses negative lower bound; supplement ORCI0.3291\u20135.2111 is valid, so do not label that ORCI negative. Alrefaey Figure1 resolves98randomized to92analyzed aftersixlosses. Full manuscripts read does not validate every reported statistic."
           ],
-          "sourceSha256": "184ef7cda0bd498190897df1813aa75bdf4d9ea6c377ff28ee8db8ce4ffbad68",
-          "wordCount": 3347,
+          "sourceSha256": "e5687f0d39ad7286ed90af7c92c74ff778220a0925374aecbceb77ea28d4ded2",
+          "wordCount": 3339,
           "reviewedAt": "2026-09-12",
           "fullTextReadAt": "2026-09-12",
           "recordFile": "urethral-upper-tract.json"
@@ -14534,16 +15127,18 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "030ad12fefedc2e9434a4ff5b5a413d3059d37ed20f9582ec7fd1dda23ccd977",
+      "sourceSha256": "4b052170c6d6e1bce809b86d433d4ea2e68289f23d1314c19a197b4c14f67862",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx",
           "title": "Quartey Flap",
           "status": "updated",
-          "scope": "Entire current MDX read in full, including techniques, tables and references; clipped tool-output intervals retrieved separately. Major operative anatomy, patient selection and consequential evidence claims reviewed against identified primary sources. Not all historical citations or linked media independently reviewed.",
+          "scope": "Entire current MDX read in full, including techniques, tables and references; clipped tool-output intervals retrieved separately. Major operative anatomy, patient selection and consequential evidence claims reviewed against identified primary sources. Not all historical citations or linked media independently reviewed. Follow-up2026-09-12: complete primary PeeBuSt and Alrefaey main manuscripts with tables/references read from PMC XML text, plus entire PeeBuSt DOCX supplement; targeted changed table/paragraphs reread after edit. Previously completed full MDX read retained, not counted as another page.",
           "notes": [
             "Corrected Quartey/Q confusion and McAninch pedicle anatomy, SEPApresenceversusorigin denominator, unsupported dorsal-superiority/equivalence claims and short-penile-EPA generalization. Separated free-graft RCTs from flap evidence, qualified hypospadias cutoffs and cohorts, flagged Bhandari recurrence inconsistency.",
-            "PMID audit: corrected Orandi 1968 from unrelated PMID4880395 to verified PMID4883846. Identity correction does not newly validate all historical operative claims."
+            "PMID audit: corrected Orandi 1968 from unrelated PMID4880395 to verified PMID4883846. Identity correction does not newly validate all historical operative claims.",
+            "Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation.",
+            "Follow-up source inspection: Alrefaey Fig1 visually confirms98randomized49/49, lost5PSG/1BMG,44/48analyzed; updated reported\u2192randomized. DOIG primary Methods/Results and Table1 state median48mo despite mean inabstract; spiral companion aligned to median. Source access: complete twoRCTmaintexts/supplement previously read; Alrefaey Fig1 viewed2026-09-12; DOIG completeabstract and fullMethods/firstResults paragraph plusTable1 followup row read, notentireDOIGpaper."
           ],
           "sources": [
             {
@@ -14604,16 +15199,27 @@
             {
               "url": "https://pubmed.ncbi.nlm.nih.gov/4883846/",
               "access": "Original bibliographic identity verified; no abstract available."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8520101/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references and complete DOCX supplement read; /tmp/warwiki-PMC8520101-read.txt and /tmp/warwiki-peebust-supplement.txt. Figures not visually assessed."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12343868/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references read; /tmp/warwiki-PMC12343868-read.txt. Figures not visually assessed."
             }
           ],
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "remaining": [
             "Other historical series, detailed harvest variants, exact donor-risk estimates and linked videos were not independently fully verified. This scoped safety/evidence review is not complete clinical clearance.",
-            "Bhandari2001 abstract has inconsistent VOrecurrence count/percentage; full report/author clarification needed to resolve exact value."
+            "Bhandari2001 abstract has inconsistent VOrecurrence count/percentage; full report/author clarification needed to resolve exact value.",
+            "PeeBuSt main ITT sentence appears arm-reversed and S4success88/7 conflicts with S1counts86/9; no predictor or ITT claim repeated. Source HR CI uses negative lower bound; supplement ORCI0.3291\u20135.2111 is valid, so do not label that ORCI negative. Alrefaey Figure1 resolves98randomized to92analyzed aftersixlosses. Full manuscripts read does not validate every reported statistic."
           ],
-          "sourceSha256": "030ad12fefedc2e9434a4ff5b5a413d3059d37ed20f9582ec7fd1dda23ccd977",
-          "wordCount": 4638,
+          "sourceSha256": "4b052170c6d6e1bce809b86d433d4ea2e68289f23d1314c19a197b4c14f67862",
+          "wordCount": 4621,
           "reviewedAt": "2026-09-12",
           "fullTextReadAt": "2026-09-12",
           "recordFile": "urethral-upper-tract.json"
@@ -15101,15 +15707,17 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "308d36de29bd794096e9efd7194c8c9e312fcbfbc75027a6451f3c1f06e4c4a7",
+      "sourceSha256": "1cc7071517044ce4bbf62d961deb0985dd7de78af27b7f7a44ae7a95855b211d",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft.mdx",
           "title": "Preputial Spiral Graft Urethroplasty (PSGU)",
           "status": "updated",
-          "scope": "Entire MDX read including all body tables and references; targeted current-guideline, operative safety, primary-source identity and consequential numerical/clinical review. Clipped reference interval for enterourethroplasty was separately recovered.",
+          "scope": "Entire MDX read including all body tables and references; targeted current-guideline, operative safety, primary-source identity and consequential numerical/clinical review. Clipped reference interval for enterourethroplasty was separately recovered. Follow-up2026-09-12: complete primary PeeBuSt and Alrefaey main manuscripts with tables/references read from PMC XML text, plus entire PeeBuSt DOCX supplement; targeted changed table/paragraphs reread after edit. Previously completed full MDX read retained, not counted as another page.",
           "notes": [
-            "Corrected DLIPG80/69, PeeBuSt100and89/91%, and free-graft versus flap trial identity. LS genital-skin contraindication is not limited to active disease. Mathur flap RRs cannot be transferred to spiral graft; 2025success endpoint and short follow-up explicit."
+            "Corrected DLIPG80/69, PeeBuSt100and89/91%, and free-graft versus flap trial identity. LS genital-skin contraindication is not limited to active disease. Mathur flap RRs cannot be transferred to spiral graft; 2025success endpoint and short follow-up explicit.",
+            "Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation.",
+            "Follow-up source inspection: Alrefaey Fig1 visually confirms98randomized49/49, lost5PSG/1BMG,44/48analyzed; updated reported\u2192randomized. DOIG primary Methods/Results and Table1 state median48mo despite mean inabstract; spiral companion aligned to median. Source access: complete twoRCTmaintexts/supplement previously read; Alrefaey Fig1 viewed2026-09-12; DOIG completeabstract and fullMethods/firstResults paragraph plusTable1 followup row read, notentireDOIGpaper."
           ],
           "sources": [
             {
@@ -15151,15 +15759,26 @@
               "url": "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
               "accessedAt": "2026-09-12",
               "coverage": "Relevant current guideline sections, not entire guideline full-text review"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8520101/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references and complete DOCX supplement read; /tmp/warwiki-PMC8520101-read.txt and /tmp/warwiki-peebust-supplement.txt. Figures not visually assessed."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12343868/",
+              "accessedAt": "2026-09-12",
+              "coverage": "Complete primary main text with tables/references read; /tmp/warwiki-PMC12343868-read.txt. Figures not visually assessed."
             }
           ],
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "remaining": [
-            "Historical references, all granular operative variants/donor-risk estimates and linked videos were not independently fully verified. This review is not complete clinical clearance."
+            "Historical references, all granular operative variants/donor-risk estimates and linked videos were not independently fully verified. This review is not complete clinical clearance.",
+            "PeeBuSt main ITT sentence appears arm-reversed and S4success88/7 conflicts with S1counts86/9; no predictor or ITT claim repeated. Source HR CI uses negative lower bound; supplement ORCI0.3291\u20135.2111 is valid, so do not label that ORCI negative. Alrefaey Figure1 resolves98randomized to92analyzed aftersixlosses. Full manuscripts read does not validate every reported statistic."
           ],
-          "sourceSha256": "308d36de29bd794096e9efd7194c8c9e312fcbfbc75027a6451f3c1f06e4c4a7",
-          "wordCount": 1535,
+          "sourceSha256": "1cc7071517044ce4bbf62d961deb0985dd7de78af27b7f7a44ae7a95855b211d",
+          "wordCount": 1515,
           "reviewedAt": "2026-09-12",
           "fullTextReadAt": "2026-09-12",
           "recordFile": "urethral-upper-tract.json"
@@ -19893,11 +20512,61 @@
       "title": "Florida Pouch",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "8a7c66844ec84b93dc04184bde26541fa7588e9c01697046b39f20935c9e3a4c",
-      "reviewRecords": []
+      "sourceSha256": "0ba8e3ee6894e831af16365e0bbe8836947926add39b97a0ba07b7014637e337",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04c-urinary-diversion/florida-pouch.mdx",
+          "title": "Florida Pouch",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original13-reference and final15-reference MDX read. All11 original DOI reference abstracts and both incorrect PMID reference records read, then corrected PMID1925899 and7869474 complete primary abstracts retrieved/read. Caches /tmp/florida-pouch-primary.json,/tmp/florida-primary-abstracts.txt,/tmp/florida-corrected-pmids.json. Current AUA/EAU selection, postcystectomy labs, annualB12 and reconstructed-tract ASB sections reused with exact access scopes as Indiana row. No full historical Florida operative or outcome manuscript obtained; unsupported procedural precision removed rather than invented.",
+          "sources": [
+            "https://doi.org/10.1016/s0022-5347(17)39610-6",
+            "https://doi.org/10.1016/s0022-5347(17)35626-4",
+            "https://doi.org/10.1016/s0022-5347(05)64061-x",
+            "https://doi.org/10.1016/s0022-5347(17)38953-x",
+            "https://doi.org/10.1016/s0022-5347(17)37236-1",
+            "https://doi.org/10.1016/s0090-4295(98)00566-4",
+            "https://doi.org/10.1016/j.urology.2021.02.004",
+            "https://doi.org/10.1007/s00345-022-03954-z",
+            "https://doi.org/10.1007/s00345-004-0429-5",
+            "https://doi.org/10.1111/j.1464-410x.2008.07976.x",
+            "https://doi.org/10.1111/bju.12919",
+            "https://doi.org/10.1097/00132586-199236030-00029",
+            "https://doi.org/10.1016/s0022-5347(01)67520-7",
+            "https://pubmed.ncbi.nlm.nih.gov/1925899/",
+            "https://pubmed.ncbi.nlm.nih.gov/7869474/",
+            "https://doi.org/10.1016/S0022-5347(01)67521-9",
+            "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/MIBC%20Unabridged.pdf",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+            "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline"
+          ],
+          "changes": [
+            "Corrected PMID1925898 coronaryangioplasty to1925899 Florida report and7869473polycystickidney to7869474trans-reservoirrevision, with correctDOI. Source identity is distinct from full manuscript access.",
+            "Removed repeated claims lowest reoperation/simplest/largest/globalbest and clinically harmless reflux from uncontrolled historical cohorts. Early4/65reoperations mean17mo not11yr6%reoperation; Webster74of179after105died/lost mean133mo clearlyseparated.",
+            "Lockhart1991 stabilityat3\u20134yr onlysixUDS patients, not107; removed invented108evaluable and105/108 derivedfrom internally inconsistent abstract. Urodynamic capacity1,200mL notnormalorclinicaltarget.",
+            "Direct165patients326ureters versus first30tunneled sequentialcohort; no causal superiority or guaranteedrenalprotection. Megaureter3/6 wereplicated/direct, notindependentoftechnique.",
+            "Rebuilt surgical framework without unverified fixedcaliber, bowellength or3\u20134wkdrainrule. FloridaI/II conversion distinguishedpreservingfunctioningconduit/anastomoses versusdiscard/patchwithnewimplantation; avoidedabstract9versus10preservedunitsinconsistency.",
+            "Restored failedrecovery5/7preobstructedunits in20conversionseries; questionnaire improvement notuniversalcontinence orcomparativeQoLproof. Later12conversionpatients7metabolicalterations not12pureFloridaIIoruniversal58%risk.",
+            "Webster table uses actualcounts7/108,4/24,4/14ureters rather thanpublishedarithmeticallyinconsistent6.3/16.4/28.4%; clinicalversusrenalunitdenominators clear. Small irradiatedsubgrouplimits retained.",
+            "Miami15 atmedian39mo had2nightleakswhenCIC5\u20137h, notunqualified100%continence; Pattou14vs17retrospective smallstudydoesnotprovesuperiority. Masel13successfulreservoirpilot limited todescription, notnewrecommendedoutlet.",
+            "Added currentselection/CICrequirements/lifelongfunctional monitoring, AUA postcystectomylabinterval, EAU annualB12 and no routineASBtreatment. Removedunsupportedrankingtables and repetitivelegacy takeaways."
+          ],
+          "unresolved": [
+            "Historical primary outcomes verified at complete-abstract level; fulloperativeatlases and fullstatisticalmethods notread. Fullclinicalverification remainsfalse.",
+            "Lockhart1991 abstract states107patients and105continent=97.2%, which is internally inconsistent; finaldoesnotinvent108denominator. PowSang1992 reports9then10preservedanastomoses; detailed denominator omitted pending fullpaper.",
+            "Webster publishedpercentages do not matchallrawcounts; finalusescountswithoutclaimingcorrectedsourcevalues. No new high-impact Florida trial identified; small modernMiami cohorts retained only aslimitedexistingcomparison."
+          ],
+          "sourceSha256": "0ba8e3ee6894e831af16365e0bbe8836947926add39b97a0ba07b7014637e337",
+          "recordFile": "surgical-diversion.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04c-urinary-diversion/hautmann-neobladder.mdx",
@@ -20075,11 +20744,77 @@
       "title": "Indiana Pouch",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "d49ad6a6d5b336279fd585ebe46320f859c0ce7f142af3565d564ca7b7817a67",
-      "reviewRecords": []
+      "sourceSha256": "4efde8754988cdcff5e54642cdd49fce8969b72f2f7600b4a00cda69fb3336d5",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx",
+          "title": "Indiana Pouch",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Full original279-line29-reference MDX read, then full final31-reference MDX read and changed sentences reread after final precision edit. All29 original DOI identities checked and28 complete available primary abstracts read; JAMA Oncology2025 patient-page record has no abstract and full text was not retrieved. Caches /tmp/indiana-pouch-primary.json and /tmp/indiana-primary-abstracts.txt. Pearce2014 original authors institutional technique, fully read Technique section (indexed468\u2013618), inpatient620\u2013714 and Postoperative716\u2013735 plus surrounding selection material; not whole review or images. Access via coauthor-uploaded primary manuscript on ResearchGate. Current EAU2026 full reconstructed-tract ASB section3.3.5.d.5, mucosa-breaching surgery3.3.5.e and recommendations3.3.7 read; bladderstones6.4.5.a\u2013d,6.5,6.6 read. Reused AUA2024 indexed complete statements13\u201314+discussion and31\u201332+discussion (full PDF blocked), EAU2026 complete diversion6.7.5 and functionalfollowup7.4 exactly as prior diversion rows.",
+          "sources": [
+            "https://doi.org/10.1001/jamaoncol.2025.3644",
+            "https://doi.org/10.1016/s0094-0143(05)70419-5",
+            "https://doi.org/10.1016/s0022-5347(17)31651-8",
+            "https://doi.org/10.1016/j.urology.2023.10.023",
+            "https://doi.org/10.1007/bf00182564",
+            "https://doi.org/10.1016/s0022-5347(17)38561-0",
+            "https://doi.org/10.1016/s0022-5347(17)40154-6",
+            "https://doi.org/10.1016/j.juro.2017.01.091",
+            "https://doi.org/10.1016/j.urology.2011.12.050",
+            "https://doi.org/10.1016/j.urology.2022.04.016",
+            "https://doi.org/10.1111/bju.12919",
+            "https://doi.org/10.1016/j.juro.2009.08.148",
+            "https://doi.org/10.1016/j.urology.2012.03.038",
+            "https://doi.org/10.1016/j.eururo.2007.09.008",
+            "https://doi.org/10.1111/j.1464-410x.2010.09432.x",
+            "https://doi.org/10.1016/s0090-4295(02)01945-3",
+            "https://doi.org/10.1002/nau.25344",
+            "https://doi.org/10.1016/j.urolonc.2004.07.018",
+            "https://doi.org/10.1016/j.ucl.2017.09.007",
+            "https://doi.org/10.1097/00005392-199501000-00016",
+            "https://doi.org/10.1097/01.ju.0000091900.57347.ee",
+            "https://doi.org/10.1007/s00345-022-04211-z",
+            "https://doi.org/10.1016/j.juro.2013.09.011",
+            "https://doi.org/10.1016/j.juro.2014.10.103",
+            "https://doi.org/10.1016/j.urology.2020.12.036",
+            "https://doi.org/10.1016/j.urology.2017.03.053",
+            "https://doi.org/10.1007/s00345-020-03348-z",
+            "https://doi.org/10.1016/s0022-5347(17)39026-2",
+            "https://doi.org/10.1016/s0022-5347(17)35394-6",
+            "https://doi.org/10.1007/s11884-014-0265-4",
+            "https://www.researchgate.net/publication/277719164_Patient_Selection_Operative_Technique_and_Contemporary_Outcomes_of_Continent_Catheterizable_Diversion_the_Indiana_Pouch",
+            "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/MIBC%20Unabridged.pdf",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+            "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/bladder-stones"
+          ],
+          "changes": [
+            "Corrected 8\u201310.4% utilization as all continent diversions, not Indiana prevalence; removed unsupported causality and institutional misattribution. Kim97 median93mo distinguished from16-year accrual; no invented separate day/night percentages.",
+            "Replaced composite universal operative recipe with primary institutional framework: vascularized segment, ileocolic continuity, repeated catheter passage checks, technique-dependent caliber (Pearce18Fr), stoma accessibility and ureteral technique distinction. Separate historic ileal-patch modification; no guaranteed one-way leakproof valve.",
+            "Current AUA/EAU selection replaces creatinine2 cutoff and age labels; prior radiation not automatically indication. CIC lifelong but schedule individualized; remove blanket q4\u20136h or selected8\u201310h as prescription.",
+            "Torrey continence30/31 of34, Desai9remaining of10 withone requesting undiversion, AlHussein73mixedCCUD of322 restored. Khavari34 neurogenic augmentation retaining nativebladder separated from total diversion. Ferriero32/62 with appendix or invaginatedileum outlets notclassic Indiana expected urodynamics.",
+            "Separated Burnsfirst-year ClavienII\u2013V39% from Kim30/90dayall-grade73.2/76.5%, and Holmes125mean41.1mo mixed early/late complications. Polm33benign22revised45procedures atmedian258mo doesnotguarantee durability without maintenance.",
+            "Wilkin12irradiated14comparison83/57p.2 notuniversal causal radiation multiplier; restored smallcohort limits. EAU stoneaccess protects continentchannel andweak salineirrigation guidance withdysreflexia qualifier added.",
+            "Pfitzenmaier37%alkali/32%B12 explicitly MainzI, notIndiana and notproven osteoporosisprevention. Removed PyrgidisMainzI asIndiana renal outcome and obsolete Terai100mg/daystudy versus article320threshold mismatch by deleting unnecessary oldurinary-biochemistry claim.",
+            "Renal comparisons retain selection/CI and do not infer equivalence; SEERpreexistingrenal/hydronephrosisexclusions and AlHusseinmixedCCUD distinguished from Eisenberg riskfactors. QoLcomparisons show domain/respondent/selection limits; removed crossstudy age/continence/reoperation rankings.",
+            "Surveillance now uppertract imaging ratherthanpouchographyforhydronephrosis, AUA postcystectomy labs/currentEAU annualB12, symptom-triggered cultures and no routineASB treatment. Removed unproven routinegallbladderscreening. Pharmacology remains sourceoftruth fordrugregimens."
+          ],
+          "unresolved": [
+            "Most full original outcome manuscripts were not accessible/read; numerical and population checks primarily use complete primary abstracts, with explicit study limitations retained. No newly discovered practice-changing Indiana RCT added; tiny2026 case reports not promoted.",
+            "Pearce2014 institutional technique is not a universal protocol; its old antimicrobial and feeding practices were not imported. Full historical harvest variants and images remain unverified.",
+            "Existing Indiana SVG and its pre-existing technical-review limitation retained; no new image/video validation. This is scoped source verification after a full page read, not exhaustive clinical clearance."
+          ],
+          "sourceSha256": "4efde8754988cdcff5e54642cdd49fce8969b72f2f7600b4a00cda69fb3336d5",
+          "recordFile": "surgical-diversion.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04c-urinary-diversion/intracorporeal-urinary-diversion.mdx",
@@ -20097,11 +20832,86 @@
       "title": "Kock Pouch",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "4976c48212c3ce837400f422ebd7144f7152599d2f8f844d79b64cec8e66c30a",
-      "reviewRecords": []
+      "sourceSha256": "28751dfe3c5cbc0d2c827d7298bc8c59068409fe396f348c7a5e9dbea867bf4f",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04c-urinary-diversion/kock-pouch.mdx",
+          "title": "Kock Pouch",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original345-line33-reference MDX read including references; first128lines reread after resuming and remaining129\u2013345read, then complete final30-reference MDX reread with finalformat/link corrections separately read. All28original DOI complete abstracts plus5incorrect PMID records read; corrected5PMID complete abstracts read from primary indexedPubMed and EuropePMC. Caches /tmp/kock-pouch-primary.json,/tmp/kock-primary-abstracts.txt,/tmp/kock-corrected-pmids.json. No full historical Kock operative manuscript obtained. Current AUA selection/labs and EAU followup/ASB/stone sections reused per precise Indiana scope; EAU functional section reread and AUAselectionindexed passage refreshed. STAR fullpaperaccess reused from T-pouch/Studerledger plusprimaryabstract refreshed.",
+          "sources": [
+            "https://doi.org/10.1016/s0022-5347(17)44429-6",
+            "https://doi.org/10.1016/s0022-5347(17)50052-x",
+            "https://doi.org/10.1016/0002-9610(83)90252-0",
+            "https://doi.org/10.1097/00000658-198809000-00011",
+            "https://doi.org/10.1097/dcr.0000000000002631",
+            "https://doi.org/10.3748/wjg.v18.i27.3479",
+            "https://doi.org/10.1002/bjs.1800700214",
+            "https://doi.org/10.1016/s0022-5347(01)65663-5",
+            "https://doi.org/10.1016/s0022-5347(17)43531-2",
+            "https://doi.org/10.1016/s0022-5347(17)41185-2",
+            "https://doi.org/10.1016/s0022-5347(17)37238-5",
+            "https://doi.org/10.1016/s0022-5347(01)63170-7",
+            "https://doi.org/10.1016/s0022-5347(17)38238-1",
+            "https://doi.org/10.1016/0090-4295(90)80154-f",
+            "https://doi.org/10.1016/s0022-5347(17)37703-0",
+            "https://doi.org/10.1016/s0022-5347(17)35394-6",
+            "https://doi.org/10.1111/j.1442-2042.1996.tb00549.x",
+            "https://doi.org/10.1016/s0022-5347(17)40602-1",
+            "https://doi.org/10.1016/s0022-5347(17)34942-x",
+            "https://doi.org/10.1016/j.urology.2021.02.023",
+            "https://doi.org/10.1016/s0090-4295(96)00424-4",
+            "https://doi.org/10.1016/s0022-5347(17)38499-9",
+            "https://doi.org/10.1111/j.1442-2042.1997.tb00133.x",
+            "https://doi.org/10.1016/s0302-2838(01)00032-x",
+            "https://doi.org/10.1097/00005392-199501000-00016",
+            "https://doi.org/10.1111/bju.12919",
+            "https://doi.org/10.1007/s10350-004-6192-2",
+            "https://doi.org/10.1097/dcr.0b013e31823a969b",
+            "https://doi.org/10.1016/s0022-5347(01)66134-2",
+            "https://doi.org/10.1016/s0022-5347(05)67346-6",
+            "https://doi.org/10.1016/s0022-5347(01)66803-4",
+            "https://doi.org/10.1097/00005392-199601000-00022",
+            "https://doi.org/10.1016/s0022-5347(01)66220-7",
+            "https://pubmed.ncbi.nlm.nih.gov/8627827/",
+            "https://pubmed.ncbi.nlm.nih.gov/10893568/",
+            "https://pubmed.ncbi.nlm.nih.gov/7563361/",
+            "https://pubmed.ncbi.nlm.nih.gov/7490900/",
+            "https://pubmed.ncbi.nlm.nih.gov/8632531/",
+            "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/MIBC%20Unabridged.pdf",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+            "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/bladder-stones",
+            "https://doi.org/10.1016/j.juro.2015.03.101"
+          ],
+          "changes": [
+            "Corrected five wrong PMIDs:8627828\u21928627827afferent complications;10893571\u219210893568Steven166;7563366\u21927563361GotohUDS;7490902\u21927490900Terai stones;8632532\u21928632531PannekB12. Wrong sources concernedStuder,KUBvsCT,arteriovesicalfistula,bone studies.",
+            "Removed globalbest/largest/all-modern-diversions-founded claims and fecal ileostomy outcome transfer; historicalcohorts not pooled asindependent or presented asmoderncomparativerank. Corrected1988 denominator531overall/489cutaneous andpost1985subgroup22%.",
+            "Separated cutaneous2valves fromorthotopic1afferentvalve/urethraloutlet; replaced unsupported5limb/mandatorydimensions/stapler prescription with generaloperativeframework andvascularprotection. Removed unvalidated inline KockSVGandcaption from activepage; originalasset retained, visualgeometry notcleared.",
+            "Corrected Arai76/39operatedversus68/37longterm,mean53/34mo;Okada102/61operatedversus95/59assessed,mean83/50mo and90%successnotcontinence. Carr16/30versus4/30revisions explicitly unequal50/16mo anddifferentcase-mix.",
+            "Corrected1989orthotopic34evaluable/43total and30/34continence;1992night85/117. BothElmajian87/86%weregoodorsatisfactorynotpadfree. Stevennightreported75\u219294% distinguishedprotection39.8%none1yr/45.9%3yr andCIC16%sixmo\u219244%fiveyr;not166assessedatfiveyr.",
+            "Removed universal1.4Lcapacitytarget and dayonlyq4\u20136h;source includedovernightCIC. ChenUDS20patientsandspikegroupsscoped;Gotoh18meanstorage33.2/void77.3andeight80\u2013150, notnormalunitlessrange orvalidatednipplecutoff.",
+            "Afferentreport79patients84events distinguished42stones35stenoses7prolapses;normalpouchogramdoesnotexcludeobstruction13patientseries; Locke7cases median17yr notmaxsinglecase. No universalimmediateopenrepair.",
+            "Ginsbergstone13recurrencesretainedascountbecause13/64doesnotmatchabstract22%; Terai31/72versus7/54andtime-to-eventestimates clear. EAUcontinentchannelaccessriskandweakirrigationrecommendationwithADexception aligned.",
+            "Pannek20/25malabsorptionversus0/29 but4lowB12eachgroup;50cmnotabsolutevalidatedcutoff. Terai3/9testedKock/4/6Indiana notwholecohortsclinicaldeficiency; pediatric20twosubnormal. Removedacidosisclinicallyinsignificantlifetimeclaim and addedcurrentmonitoring/annualB12/noASBscreen-treat.",
+            "T-pouchinitial40hadoneperioperativedeathunrelatedtodiversion, notzerodeaths; no latecomplications atmean10.5mo only. Added high-yieldSTARno3yrenaladvantage/morereintervention insteadclaimeliminatesallvalvecomplications."
+          ],
+          "unresolved": [
+            "Historicaloperativeandoutcomemanuscripts remaincomplete-abstract checks; detailedsurgicalconstructionandfigures notfullyvalidated. Clinical verification remainsfalse.",
+            "Stein1996abstract gives79affectedpatients but81patientsrequiringintervention; finalomitsinconsistentinterventiondenominator. Ginsberg13/64recurrences labeled22% inabstract; finalusesrawcount.",
+            "Existing KockSVGnotrendered or clinicallyvalidated inthisreview; activeembedremovedpendinganatomicreview,sourceassetretained. Nonewdrawnfigure.",
+            "Historicalsmallstudies retainedsolelytofixexistingclaims, notpromotedaspractice-changingevidence. No high-impactnewKock-specifictrial identified."
+          ],
+          "sourceSha256": "28751dfe3c5cbc0d2c827d7298bc8c59068409fe396f348c7a5e9dbea867bf4f",
+          "recordFile": "surgical-diversion.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04c-urinary-diversion/le-bag.mdx",
@@ -20158,11 +20968,71 @@
       "title": "Mainz Pouch I",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "32cab2703b234f8ebd0fd97121c49e003a6b85bc0ccc896084611b3d2f6d0d2d",
-      "reviewRecords": []
+      "sourceSha256": "746be2ad64016099fd1c4ba63b5c968836816e3bd9d3417b4b029709a7e04466",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04c-urinary-diversion/mainz-pouch-i.mdx",
+          "title": "Mainz Pouch I",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original344-line/21-reference MDX read in three chunks and complete final17-reference MDX reread. All20 original DOI reference abstracts read; founding1986 abstract read separately from historical2006 reprint without abstract. Wrong PMID10647687 record and corrected10647686 complete abstract read. Full indexed textual article of original-author2010 surgical atlas read, including main text, figure1\u201322 captions, postoperative section, surgeon-to-surgeon advice and references, through third-party Scribd copy; illustrations themselves not visually reviewed and full publisher page inaccessible. Current AUA/EAU selection, lab/B12 and reconstructed-tract ASB sections reused with exact access scopes in Indiana ledger. Caches /tmp/mainz-pouch-i-primary.json,/tmp/mainz-i-primary-abstracts.txt and /tmp/diversion-freeze-research-2026-09-12.md.",
+          "sources": [
+            "https://doi.org/10.1016/s0022-5347(17)44714-8",
+            "https://doi.org/10.1016/s0022-5347(17)41584-9",
+            "https://doi.org/10.1007/s00345-006-0078-y",
+            "https://doi.org/10.1007/bf00182563",
+            "https://doi.org/10.1159/000472481",
+            "https://doi.org/10.1016/s0022-5347(06)00571-4",
+            "https://doi.org/10.1097/00005392-199502000-00004",
+            "https://doi.org/10.1016/s0022-5347(01)64105-3",
+            "https://doi.org/10.1046/j.1464-410x.1999.00049.x",
+            "https://doi.org/10.1007/s00467-005-1848-2",
+            "https://doi.org/10.1111/j.1464-410x.2007.06991.x",
+            "https://doi.org/10.1016/s0022-5347(17)36195-5",
+            "https://doi.org/10.1007/s00467-005-1847-3",
+            "https://doi.org/10.1016/s0302-2838(03)00042-3",
+            "https://doi.org/10.1016/s0090-4295(99)00098-9",
+            "https://doi.org/10.1097/01.ju.0000091900.57347.ee",
+            "https://doi.org/10.1007/s00345-020-03348-z",
+            "https://doi.org/10.1016/s0022-5347(17)39026-2",
+            "https://doi.org/10.1097/01.ju.0000134890.07434.8e",
+            "https://doi.org/10.1016/j.eururo.2011.07.006",
+            "https://doi.org/10.1016/s0022-5347(05)67934-7",
+            "https://pubmed.ncbi.nlm.nih.gov/10647686/",
+            "https://doi.org/10.1111/j.1464-410X.2010.09773.x",
+            "https://www.scribd.com/document/419259276/j-1464-410X-2010-09773-x",
+            "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/MIBC%20Unabridged.pdf",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+            "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup",
+            "https://uroweb.org/guidelines/urological-infections/chapter/the-guideline"
+          ],
+          "changes": [
+            "Corrected unrelated overactive-bladder PMID10647687 to10647686; that neurogenic report includes149operations/129followed across59conduits,12orthotopic and58MainzI, not149Mainz patients.",
+            "Rebuilt operative sequence from original-author2010 atlas:20\u201325cmileum/10\u201312cmcecum-ascending for appendix version, additional12cmileum unopened for nipple; preserve lowercecum for appendix continence tunnel. Removed unsupported universal dimensions, performance rankings and copied historical perioperative rules.",
+            "Separated cutaneous, orthotopic and augmentation applications and their continence/emptying mechanisms. Current AUA/EAU renal/hepatic/CIC selection and negativeurethralmargin clarified; agealone notcutoff.",
+            "Alcini30teniamyotomy patients were nondetubularized reconstruction, not evidence to add myotomies to standarddetubularizedMainz. Lampel17flaptube series clearly shortfollowup.",
+            "Corrected Wiesner401 retrospectiveoutlet comparison,92%appendix versus82%nipple,144interventions and differing stenosis/stone burdens; morethan800series92.8% is overallnotappendixspecific and cohorts mayoverlap. Removed duplicative inconsistent Gerharz cohort and stenosis/failure-to-continence inversions.",
+            "Wiesner2007 implantation study is retrospective458patients/809submucosal and74extramural renalunits; retained actual subgroup estimates without invented p-values or universal guideline preference. Creatinine alone cannotexcludeunilateralobstruction.",
+            "Leissner108men/103evaluable,88%day includes17%safetypad; nighttime34%dryplus33%safetypad cannotbecalled67%dry. Removed unqualified seriesrankings and conflation with augmentation.",
+            "Stein70pediatric/65followed and113/118renalunits stable/improved atmedian8.7yr, ratherthanall patientsguaranteeddurableprotection; transition/followup context.",
+            "Pfitzenmaier94of458 selected atmedian9yr,32%B12recommendedforlow/low-normal notpuredeficiencyincidence,37%alkali and BMDonly18 do notprove absenceofmetabolicrisk or alkaliosteoprotection.",
+            "K\u00e4lble17758diversions32tumors/0.14%reportedileocecalprevalence notlifetimeincidence. Its ileocecalrecommendation is symptomtriggeredendoscopy, notmandatoryroutine everyasymptomaticpatient. Added currentlifelongfunctionalmonitoring, AUA postcystectomylabs, EAUannualB12 and no routineASBscreen/treat."
+          ],
+          "unresolved": [
+            "Historical outcome reports checked at complete-abstract level, not full methods/tables. Clinical verification remains incomplete; no promise that every estimate has been independently reanalyzed.",
+            "Original2010 operative text accessed through public indexed third-party copy, not verified author upload. Actual atlas illustration geometry was not viewed. Historical catheter/drug rules intentionally not imported.",
+            "Gerharz1997 abstract mechanismcounts96+106 do notmatch193total; detailed inconsistent cohort removed. Leissner nighttime abstract categories are not exhaustive; final doesnot invent remaining categories.",
+            "No high-impact new comparative MainzI trial identified in this scoped review; retained historical variants are presented as limited existing evidence, not recommended innovations."
+          ],
+          "sourceSha256": "746be2ad64016099fd1c4ba63b5c968836816e3bd9d3417b4b029709a7e04466",
+          "recordFile": "surgical-diversion.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04c-urinary-diversion/mainz-pouch-ii.mdx",
@@ -22691,11 +23561,66 @@
       "title": "Artificial Urinary Sphincter (Procedure)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "unresolved",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "57d5bea13e9996122e4566a1a47662a3248cd9eb81d6ee2c7d73c3449a343bbc",
-      "reviewRecords": []
+      "sourceSha256": "20904b6c6ef647a9d64d1c2e2f6d144511c9fedefd9e1072e4e5740764966f65",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx",
+          "title": "Artificial Urinary Sphincter (Procedure)",
+          "status": "unresolved",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original 658-line MDX including all 73 references and videos read; all changed text and final reference addition reread. Targeted source alignment of device handling, InhibiZone evidence, AUSCO adverse-event endpoints, Bentellis revision population and capsulotomy/component-replacement evidence. This is not a completed review of all operative claims on this large page.",
+          "sources": [
+            {
+              "url": "https://www.bostonscientific.com/content/dam/elabeling/uro-ph/ams-800-ifu-male/51266569-01A_AMS800_IFU_MALE_ML_s.pdf",
+              "access": "Selected full manufacturer IFU text: InhibiZone description, indications/contraindications and warnings, valve-closure precautions, InhibiZone handling, PIF registry limitations and complete p16 deactivation/post-procedure/reactivation sections. /tmp/tools-ams800-raw.txt lines260\u2013280,370\u2013440,453\u2013473,490\u2013518,1070\u20131100,1498\u20131600. Other operative pages and illustrations not inspected."
+            },
+            {
+              "url": "https://doi.org/10.1097/JU.0000000000004796",
+              "access": "AUSCO original full abstract, complete methods/results/discussion paragraphs addressing enrollment, follow-up, denominators, infections/revisions and ascertainment limitations, via /tmp/tools-ausco-full.xml. Not complete paper, tables, figures or supplements in this targeted check."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34184925/",
+              "access": "Complete primary Bentellis2021 abstract, /tmp/tools-prosthetics-primary.json. No full paper."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26384584/",
+              "access": "Complete primary Bugeja2016 abstract. No full paper."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/32444833/",
+              "access": "Complete primary Terlecki/Wilson2022 narrative-review abstract, /tmp/tools-prosthetics-primary.json. No full paper."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37902863/",
+              "access": "Complete primary Cousin2023 abstract. Five-year survival ordering ambiguous; omitted exact estimates pending full text."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26493494/",
+              "access": "Complete primary Linder2016 abstract. No full paper."
+            }
+          ],
+          "changes": [
+            "Corrected deactivation dimple location to the partly filled pump bulb; added manufacturer partial-refill sequence and warning that button closure with an inflated cuff can trap fluid. Reactivation sequence now follows the IFU.",
+            "Corrected InhibiZone treated components and separated voluntary infection-related revision registry evidence from all infections or randomized efficacy; retained prophylaxis and no-soaking/brief-rinse handling.",
+            "AUSCO now explicitly reports three postoperative wound infections alongside zero infection-related revisions and one-year/single-arm limitations.",
+            "Corrected Bentellis PMID34191633 to34184925 and its excluded infection/erosion population; separated 214-revision category denominators from the separate 125 mechanical-malfunction series.",
+            "Removed universal capsulotomy/same-size/complete-replacement directives and absolute atrophy-mechanism claims; distinguished six capsule-release observations from12/14 replacement success and individualized decisions.",
+            "Corrected large-cuff hazard-ratio attribution; removed ambiguous five-year Cousin survival numbers and acknowledged nonsignificant Linder component-replacement comparison."
+          ],
+          "unresolvedIssues": [
+            "Broader full clinical/source audit still required before this page is considered scoped-complete. Source checking of remaining female AUS selection/outcomes, transcorporal meta-analysis identity/direction, salvage sequence, erosion-repair selection, drain-and-retain, catheter-size/duration rules and long-term survival/counseling numbers is pending.",
+            "Other PMID/title signals on this page remain for full reference audit. Current figure and videos were read as source references but not visually/clinically inspected.",
+            "Cousin2023 abstract lists paired five-year endpoints in potentially inconsistent order; full source required before exact endpoint estimates are restored."
+          ],
+          "sourceSha256": "20904b6c6ef647a9d64d1c2e2f6d144511c9fedefd9e1072e4e5740764966f65",
+          "recordFile": "surgical-incontinence.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling.mdx",
@@ -23965,22 +24890,116 @@
       "title": "Ureteroarterial Fistula Repair",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "923e21dafdfb3d3adc1369deb3ed8d9859ecd166288d20976c29674328c562ad",
+      "sourceSha256": "29ab262130ebadea8232bd1d9112db8ed7d330d073ceaa1ad65b89f4f406b3f8",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/all-patients/ureteroarterial.mdx",
           "originalSha256": "923e21dafdfb3d3adc1369deb3ed8d9859ecd166288d20976c29674328c562ad",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Replaced rigid sequential stages and blind immediate ureteral stent reinsertion with urgent coordinated arterial control; preserved manipulation/tamponade safety and distinguished CBI from lateralization.",
+            "Corrected era19%/7% versus open/endovascular false comparison, Fox combined ligation-or-nephrectomy category, selected lower-limb morbidity and ileal-conduit infection denominators; removed mandatory PCN and automatic nephrectomy/graft-based exclusions.",
+            "Removed unsupported pooled comparative outcome table, prognosis-only arterial ligation and unverified drug protocols. Malgor abstract/full-text timepoints and percentages conflict; preserved clear clinical principles/counts. Resolved Vandersteen DOI."
+          ],
           "title": "Ureteroarterial Fistula Repair",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "923e21dafdfb3d3adc1369deb3ed8d9859ecd166288d20976c29674328c562ad",
+          "status": "updated",
+          "scope": "Full original and revised MDX including bibliography read. All16original cited sources checked:15complete DOI abstracts plus Vandersteen complete abstract and exact identifier resolution; selected full primary paper sections separately recorded.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1016/j.jvs.2022.05.015",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jvs_2022_05_015.json"
+            },
+            {
+              "url": "https://doi.org/10.2214/AJR.14.13405",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_14_13405.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/JU.0000000000002241",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_ju_0000000000002241.json"
+            },
+            {
+              "url": "https://doi.org/10.1089/end.2017.0819",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1089_end_2017_0819.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2005.05.036",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2005_05_036.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.juro.2010.10.062",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_juro_2010_10_062.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jvs.2011.11.043",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jvs_2011_11_043.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00270-017-1586-4",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00270_017_1586_4.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.avsg.2020.11.014",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2020_11_014.json"
+            },
+            {
+              "url": "https://doi.org/10.2214/ajr.162.4.8141010",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_162_4_8141010.json"
+            },
+            {
+              "url": "https://doi.org/10.2214/AJR.20.23132",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_2214_ajr_20_23132.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.avsg.2016.01.026",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2016_01_026.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.avsg.2016.02.033",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_avsg_2016_02_033.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.juro.2007.09.087",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_juro_2007_09_087.json"
+            },
+            {
+              "url": "https://doi.org/10.1089/end.2014.0394",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1089_end_2014_0394.json"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4476467/",
+              "readScope": "Full original Methods, Results including table/figure text, and Discussion/Conclusion read; introduction and complete back matter not certified. Abstract/full results have conflicting follow-up times and long-term estimates; these were not recombined.",
+              "cache": "/tmp/workflow-malgor4476467.txt"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9258074/",
+              "readScope": "Complete original Vandersteen abstract read; DOI identity independently matched on publisher/OHSU record; no full paper.",
+              "cache": "/tmp/workflow-uaf-vandersteen9258074.json"
+            }
+          ],
+          "sourceSha256": "29ab262130ebadea8232bd1d9112db8ed7d330d073ceaa1ad65b89f4f406b3f8",
+          "unresolved": [
+            "Most rare-fistula source full manuscripts were not accessed; abstract-only verification is explicit. No clinician sign-off or comparative efficacy certification.",
+            "Targeted clinical companions also aligned with these verified corrections; other related pages remain in the review queue."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]
@@ -24147,22 +25166,110 @@
       "title": "Vesicocutaneous Fistula Repair",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "7dc47f1dfe60263962d39d8e5d3101ead2d18140bf6689a6333f9d7aa980718a",
+      "sourceSha256": "e78a05f884f24b6939318f92ca14837a250c1e7920de4e475a921f0521d7ebed",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/all-patients/vesicocutaneous.mdx",
           "originalSha256": "7dc47f1dfe60263962d39d8e5d3101ead2d18140bf6689a6333f9d7aa980718a",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Removed Zhang2026 outcome and radiation-failure extrapolations:67patients consisted of vaginal/uterine fistulas with zero VCF. Removed mandatory sequential stages derived from enterourinary sources.",
+            "Scoped ACS18Fr/seven-day guidance to acute uncomplicated extraperitoneal trauma; removed universal chronic catheter, NPWT dressing, endoscopic-selection and compulsory fistulectomy/flap rules.",
+            "Read Banihani and Lau full two-page reports: Banihani anatomy actually posterior urethra-to-thigh; Lau selected irradiated bladder repair succeeded short-term. Corrected Raup mixed urinary-cutaneous population/conduit-catheter terminology; no assumed universally high-pressure neurogenic bladder.",
+            "Replaced broad pooled prognosis claims with case/series-specific limitations and coordinated oncologic handling of sunitinib-associated case."
+          ],
           "title": "Vesicocutaneous Fistula Repair",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "7dc47f1dfe60263962d39d8e5d3101ead2d18140bf6689a6333f9d7aa980718a",
+          "status": "updated",
+          "scope": "Full original and revised MDX including bibliography read. All13original DOI complete abstracts read; other3sources read directly (ACS bladder-management section, full Banihani and Lau reports). Removed4irrelevant/extrapolated references.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1016/j.urology.2016.04.001",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2016_04_001.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2008.04.063",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2008_04_063.json"
+            },
+            {
+              "url": "https://doi.org/10.1046/j.1464-410x.2000.00871.x",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1046_j_1464_410x_2000_00871_x.json"
+            },
+            {
+              "url": "https://doi.org/10.1186/1471-230X-10-128",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1186_1471_230x_10_128.json"
+            },
+            {
+              "url": "https://doi.org/10.12968/jowc.2010.19.4.157",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_12968_jowc_2010_19_4_157.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/s0022-5347(01)64256-3",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0022_5347_01_64256_3.json"
+            },
+            {
+              "url": "https://doi.org/10.1100/tsw.2007.253",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1100_tsw_2007_253.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.suc.2016.02.012",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_suc_2016_02_012.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/iju.12545",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1111_iju_12545.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/s0022-5347(17)54989-7",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0022_5347_17_54989_7.json"
+            },
+            {
+              "url": "https://doi.org/10.1186/s13017-019-0274-x",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1186_s13017_019_0274_x.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-026-06580-0",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_026_06580_0.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2015.07.057",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2015_07_057.json"
+            },
+            {
+              "url": "https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf",
+              "readScope": "Complete Management of Bladder Injury section pp39\u201340 read, including catheter and cystogram recommendations; not entire guideline.",
+              "cache": "/tmp/warwiki-acs-gu-2025.txt"
+            },
+            {
+              "url": "https://smj.sma.org.sg/5009/5009cr9.pdf",
+              "readScope": "Entire two-page primary Banihani report read; actual contrast-defined origin is posterior urethra."
+            },
+            {
+              "url": "https://annals.edu.sg/pdf_5sep/kolau.pdf",
+              "readScope": "Entire two-page primary Lau report read. Obvious radiation-dose unit error in original was not copied."
+            }
+          ],
+          "sourceSha256": "e78a05f884f24b6939318f92ca14837a250c1e7920de4e475a921f0521d7ebed",
+          "unresolved": [
+            "Most rare-fistula source full manuscripts were not accessed; abstract-only verification is explicit. No clinician sign-off or comparative efficacy certification.",
+            "Targeted clinical companions also aligned with these verified corrections; other related pages remain in the review queue."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]
@@ -24421,22 +25528,121 @@
       "title": "Anal Sphincteroplasty",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "cde52a3f6b2e1f8f57baec87af897eb284998b80c6c5d8ef674cb1af87c59ec4",
+      "sourceSha256": "7c241f7650191d6e2167a7fadf34e9bf601529c2653d27445f9bd0c293f84017",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx",
           "originalSha256": "cde52a3f6b2e1f8f57baec87af897eb284998b80c6c5d8ef674cb1af87c59ec4",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Separated acute OASI, dehisced early secondary and delayed FI repair. Replaced mandatory scar preservation, universal stitch/caliber and 3\u20136month timing with actual technique variants; current IUGA wound infection/IAS guidance scoped accurately.",
+            "Corrected Haug18year outcome attribution and20/33follow-up; separated satisfaction, improvement and cure. Corrected observational Rodrigues within-group P-value superiority error, Emile2025/2026 comparative uncertainty, and ASCRS10\u201314%as selected low-end estimates.",
+            "Replaced repair-before-SNM mandatory pathway; added accurate Tsang52patients/62procedures source viaASCRS2022 and preserved original figure scope. New SUBSoNIC evidence is linked to the already-updated clinical hub."
+          ],
           "title": "Anal Sphincteroplasty",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "cde52a3f6b2e1f8f57baec87af897eb284998b80c6c5d8ef674cb1af87c59ec4",
+          "status": "updated",
+          "scope": "Full original and revised MDX including bibliography read. All14original source records inspected,12complete original abstracts read and2no-abstract guideline records; original guideline/paper sections read as specified.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002776",
+              "readScope": "Metadata record has no abstract; relevant original guideline passages read separately.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_dcr_0000000000002776.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/AOG.0000000000003187",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_aog_0000000000003187.json"
+            },
+            {
+              "url": "https://doi.org/10.14309/ajg.0000000000001507",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_14309_ajg_0000000000001507.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/14651858.CD001757.pub4",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1002_14651858_cd001757_pub4.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/S0140-6736(04)16856-6",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0140_6736_04_16856_6.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/AOG.0000000000002841",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_aog_0000000000002841.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/ans.17650",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1111_ans_17650.json"
+            },
+            {
+              "url": "https://doi.org/10.3390/jcm11133755",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_3390_jcm11133755.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.cgh.2017.08.023",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_cgh_2017_08_023.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00384-021-04026-1",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00384_021_04026_1.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/codi.16313",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1111_codi_16313.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/wjs.70152",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1002_wjs_70152.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/codi.13510",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1111_codi_13510.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-026-06642-3",
+              "readScope": "Metadata record has no abstract; relevant original guideline passages read separately.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_026_06642_3.json"
+            },
+            {
+              "url": "https://www.ascrsu.com/ascrs/repview?name=2_2851090_PDF&type=784-112",
+              "readScope": "ASCRS2023 complete relevant testing discussions (manometry, EAUS, PNTML) and sphincteroplasty/repeat-repair/SNM sections read, plus recommendation table; not entire guideline.",
+              "cache": "/tmp/workflow-ascrs-fi2023.txt"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9311690/",
+              "readScope": "Ong complete narrative including operative description, discussion and figure caption read; bibliography and visual operative figure not separately certified. Technique is a reported variant, not comparative evidence.",
+              "cache": "/tmp/workflow-ong9311690.xml"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/",
+              "readScope": "IUGA2026 complete operative sutures/IAS/EAS repair and early-secondary-dehiscence sections read, including evidence discussion. Not all57pages.",
+              "cache": "/tmp/workflow-iuga-oasi2026.xml"
+            },
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002473",
+              "readScope": "ASCRS2022 full RVF recommendations13\u201316 and supporting discussion read, including Tsang procedure counts and Hull functional terminology. Other guideline sections not newly certified.",
+              "cache": "/tmp/workflow-ascrs-fistula2022-raw.txt"
+            }
+          ],
+          "sourceSha256": "7c241f7650191d6e2167a7fadf34e9bf601529c2653d27445f9bd0c293f84017",
+          "unresolved": [
+            "ACOG198/210 and ACG2021 full manuscripts were not newly accessed; retained background references have abstract-level scope. No clinical clearance of all remote source details.",
+            "Diagram unchanged; prior targeted figure review is preserved. Long-term comparative trial evidence remains limited."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]
@@ -24674,22 +25880,85 @@
       "title": "Episioproctotomy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "b5fbac4fd5f0711c48f76dc548cd326782e1a3c00a5fbb8888d3e9859965dcb1",
+      "sourceSha256": "a549a59178b45ecd9b47924700491a67a935e4f96fca88e69fa66cd91d49d6dd",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/female/episioproctotomy.mdx",
           "originalSha256": "b5fbac4fd5f0711c48f76dc548cd326782e1a3c00a5fbb8888d3e9859965dcb1",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Corrected Hull2007 RVF denominator22/33 versus combined31/42; removed double-counted Hull2011 row, causal functional superiority and equivalence claims. Scoped ElGazzaz dyspareunia12/47 and potential institutional-cohort overlap.",
+            "Removed absolute Crohn prohibition contradicted by actual included operations, automatic intact-sphincter division, absent-versus-retracted sphincter claim, unverified compulsory ten-step repair, mandatory levator/complete scar excision and fixed stoma reversal schedule.",
+            "Added restrained Venara2025 obstetric-only32nonrandomized-study NMA: anatomical association, insufficient functional/diversion pooling and poor confounder reporting. May2025correction only author initial; correct HouletE used."
+          ],
           "title": "Episioproctotomy",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "b5fbac4fd5f0711c48f76dc548cd326782e1a3c00a5fbb8888d3e9859965dcb1",
+          "status": "updated",
+          "scope": "Full original and revised MDX including bibliography read. All5original source records inspected:4complete original abstracts and1no-abstract guideline record; ASCRS full pertinent sections and added primary synthesis/methods read as specified.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002473",
+              "readScope": "Metadata record has no abstract; relevant original guideline passages read separately.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_dcr_0000000000002473.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s10350-006-0790-0",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s10350_006_0790_0.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/01.dcr.0000388926.29548.36",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_01_dcr_0000388926_29548_36.json"
+            },
+            {
+              "url": "https://doi.org/10.1093/ecco-jcc/jjac151",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1093_ecco_jcc_jjac151.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s11605-010-1259-y",
+              "readScope": "Complete original abstract read; not full paper unless separately recorded.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s11605_010_1259_y.json"
+            },
+            {
+              "url": "https://www.ascrsu.com/ascrs/repview?name=2_2851090_PDF&type=784-112",
+              "readScope": "ASCRS2023 complete relevant testing discussions (manometry, EAUS, PNTML) and sphincteroplasty/repeat-repair/SNM sections read, plus recommendation table; not entire guideline.",
+              "cache": "/tmp/workflow-ascrs-fi2023.txt"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9311690/",
+              "readScope": "Ong complete narrative including operative description, discussion and figure caption read; bibliography and visual operative figure not separately certified. Technique is a reported variant, not comparative evidence.",
+              "cache": "/tmp/workflow-ong9311690.xml"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/",
+              "readScope": "IUGA2026 complete operative sutures/IAS/EAS repair and early-secondary-dehiscence sections read, including evidence discussion. Not all57pages.",
+              "cache": "/tmp/workflow-iuga-oasi2026.xml"
+            },
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002473",
+              "readScope": "ASCRS2022 full RVF recommendations13\u201316 and supporting discussion read, including Tsang procedure counts and Hull functional terminology. Other guideline sections not newly certified.",
+              "cache": "/tmp/workflow-ascrs-fistula2022-raw.txt"
+            },
+            {
+              "url": "https://link.springer.com/article/10.1007/s10151-025-03133-3",
+              "readScope": "Complete original abstract and Methods, selected narrative Results including full meta-analysis paragraph/figure captions, full Discussion/Conclusion read. Not all tabular cells, supplement or every original study. Full text describes595women and/or procedures; no unique-patient claim reused.",
+              "cache": "/tmp/workflow-PMC11976829.xml"
+            },
+            {
+              "url": "https://link.springer.com/article/10.1007/s10151-025-03168-6",
+              "readScope": "Entire correction notice read: author initial changed H to E; no clinical-results change."
+            }
+          ],
+          "sourceSha256": "a549a59178b45ecd9b47924700491a67a935e4f96fca88e69fa66cd91d49d6dd",
+          "unresolved": [
+            "Hull2007/2011 and ElGazzaz full operative manuscripts not accessed; their full abstracts and ASCRS discussion were read. Detailed universal stitches/timing not retained as validated instructions.",
+            "Clinical RVF companion and remaining ERAF/flap pages will receive targeted consistency review as those surgical families are reached. No clinician sign-off."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]
@@ -24699,22 +25968,81 @@
       "title": "Endorectal Advancement Flap (ERAF)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "82d97d7a2ca18a75366c7de89b3efa92f1312f9591c85346c52c7c37e2ff09fc",
+      "sourceSha256": "5f70dc2e65f128e10756a776bbe6f1f86ad912f7e0d669500d3dfe4916e5bd9d",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/female/eraf.mdx",
           "originalSha256": "82d97d7a2ca18a75366c7de89b3efa92f1312f9591c85346c52c7c37e2ff09fc",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Removed deterministic pressure mechanism, mandatory seton/MBP/flap dimensions, dye-as-proof-of-debridement, unsupported donor-site instruction and automatic very-low-flap conversion.",
+            "Corrected Tsang52patients/62procedures comparison and Khanduja heterogeneous sphincter reconstruction; no universal diameter>1cm sphincteroplasty or only-durable-FI-solution claim.",
+            "Separated Jones/Sonoda mixed cohorts from RVF subgroups; removed Corte286mixed-procedure72%fromERAF outcomes; preserved deParades exclusion/function scope and no causal predictor claims.",
+            "Updated Crohn selection to original ECCO2024 sections without importing perianal rates as RVF-specific outcomes."
+          ],
           "title": "Endorectal Advancement Flap (ERAF)",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "82d97d7a2ca18a75366c7de89b3efa92f1312f9591c85346c52c7c37e2ff09fc",
+          "status": "updated",
+          "scope": "Full original and revised MDX including bibliography read. All8original source records inspected:6complete abstracts,2no-abstract guideline records. Current full pertinent ASCRS and ECCO sections read as specified.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002473",
+              "readScope": "No abstract; ASCRS pertinent full recommendations read separately.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_dcr_0000000000002473.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/BF02235043",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_bf02235043.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.gastro.2003.08.024",
+              "readScope": "Metadata only; obsolete AGA2003 citation replaced by current ECCO2024 original guideline.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_gastro_2003_08_024.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/BF02554276",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_bf02554276.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s10350-004-7249-y",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s10350_004_7249_y.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/j.1463-1318.2010.02338.x",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1111_j_1463_1318_2010_02338_x.json"
+            },
+            {
+              "url": "https://doi.org/10.1080/00365521.2025.2468493",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1080_00365521_2025_2468493.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/SLA.0000000000001461",
+              "readScope": "Complete original abstract read; not full paper.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1097_sla_0000000000001461.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/DCR.0000000000002473",
+              "readScope": "Full recommendations13\u201316 with discussion and general fistula-in-ano advancement-flap recommendation7 discussion read; not entire guideline.",
+              "cache": "/tmp/workflow-ascrs-fistula2022-raw.txt"
+            },
+            {
+              "url": "https://vbn.aau.dk/ws/files/726048807/Adamina_et_al._2024_._ECCO_Guidelines_on_Therapeutics_in_Crohn_s_Disease_-_Surgical_Treatment.pdf",
+              "readScope": "Complete primary ECCO2024 statements3.11 and3.21 with supporting discussion read at accepted-manuscript pp14\u201315 and25\u201326. Perianal and rectogenital populations kept separate; not entire73-page document."
+            }
+          ],
+          "sourceSha256": "5f70dc2e65f128e10756a776bbe6f1f86ad912f7e0d669500d3dfe4916e5bd9d",
+          "unresolved": [
+            "Most original operative manuscripts were abstract-only. Exact flap design and stitches are individualized; no full-source or clinical clearance.",
+            "Clinical RVF companion will be checked for these denominator/selection contradictions after the related operative family."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]
@@ -24724,22 +26052,136 @@
       "title": "Extravesical Transabdominal VVF Repair",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "b4f27bfdf7be90b576b59acd2764e2abb5f887acf45e5f5708ab8fd5830c9036",
+      "sourceSha256": "5d1f1cfb6f58b3d3b9730402e61e5e985a65a5e290f38aeaef9576be7137224e",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04h-fistula-repair/female/extravesical-vvf-repair.mdx",
           "originalSha256": "b4f27bfdf7be90b576b59acd2764e2abb5f887acf45e5f5708ab8fd5830c9036",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
-          "notes": [],
+          "notes": [
+            "Corrected no-bladder-opening claim to no separate access cystotomy. Removed equivalence, universal extravesical superiority and absolute trigonal/reimplant/augmentation prohibition. A vaginal sizer supports the cuff, not placement through fistula.",
+            "Replaced unverified mandatory margins, universal scar excision, merged suturing/timing and universal postoperative schedules with the actual Miklos/ERUS variants. Maintained capacity-aware leak testing and ureter-specific protection.",
+            "Corrected Evans benign10/10 versus12/19, Miklos accrual-versus-followup and disputed abstract/body perioperative values. Lecoanet22 includes4complications/1major; zero recurrence is not comparative equivalence. Dayan operated in treatment-free interval, not proof of surgery during active chemotherapy.",
+            "Tavares14studies206cases contains169transvesical/37extravesical; descriptive synthesis and exploratory comparisons only. EBL/LOS/catheter duration explicitly not statistically compared. Wangplatform comparisons cannot establish extravesical advantages. Cochrane publication is protocol."
+          ],
           "title": "Extravesical Transabdominal VVF Repair",
-          "status": "unresolved",
-          "scope": "Not yet read; no clinical claims checked.",
-          "sources": [],
-          "sourceSha256": "b4f27bfdf7be90b576b59acd2764e2abb5f887acf45e5f5708ab8fd5830c9036",
+          "status": "updated",
+          "scope": "Full original and revised MDX including all17references, diagram caption and video placement read. All17original abstracts read; full primary texts/sections separately specified.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1002/14651858.CD015413",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified. Cochrane CD015413 is a protocol, not completed review.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1002_14651858_cd015413.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-013-2292-7",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_013_2292_7.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-014-2458-y",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_014_2458_y.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jmig.2015.03.001",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jmig_2015_03_001.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.eururo.2020.06.029",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_eururo_2020_06_029.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bpobgyn.2018.06.008",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_bpobgyn_2018_06_008.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-026-06578-8",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_026_06578_8.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/s0022-5347(01)61951-7",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0022_5347_01_61951_7.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-016-3218-y",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_016_3218_y.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2018.05.021",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2018_05_021.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-010-1334-7",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_010_1334_7.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00192-023-05565-7",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00192_023_05565_7.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00404-024-07919-y",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1007_s00404_024_07919_y.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2011.05.036",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_urology_2011_05_036.json"
+            },
+            {
+              "url": "https://doi.org/10.1186/s40001-026-03937-5",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1186_s40001_026_03937_5.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/s0090-4295(01)00933-5",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_s0090_4295_01_00933_5.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jmig.2025.06.015",
+              "readScope": "Complete original abstract read; full paper not read unless separately specified.",
+              "cache": "/tmp/workflow-fistula-abstracts/10_1016_j_jmig_2025_06_015.json"
+            },
+            {
+              "url": "https://www.miklosandmoore.com/wp-content/uploads/2019/08/VVF-page-paper-Extravesical-VVF-repair-15-year-exprience.pdf",
+              "readScope": "Complete primary six-page paper text, methods/results/discussion, bibliography and figure captions read from author-hosted CC-BY copy. Operative images and video not independently evaluated. Source inconsistencies explicitly recorded.",
+              "cache": "/tmp/workflow-miklos2015.txt"
+            },
+            {
+              "url": "https://fistula-group.ch/wp-content/uploads/2020/08/EURURO8940.pdf",
+              "readScope": "Complete narrative of eleven-page ERUS2020 consensus, procedure table4, figure captions and bibliography read. Large table3 text inspected but column alignment in extraction is imperfect, so each tabular cell not certified. Consensus based on literature, survey and expertise; not comparative trial.",
+              "cache": "/tmp/workflow-erus-vvf2020.txt"
+            },
+            {
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0302283820309192",
+              "readScope": "Original publisher correction text read: Buffi affiliation correction only; no operative or outcome correction."
+            },
+            {
+              "url": "https://link.springer.com/article/10.1007/s00192-026-06578-8",
+              "readScope": "Complete abstract, Introduction, Methods, narrative Results, Discussion/limitations and Conclusion read in publisher full text. Separate tables1\u20137 and original included studies not all read; no full systematic-review replication. Methods explicitly no formal meta-analysis and no statistical comparison of EBL/LOS/catheter duration."
+            }
+          ],
+          "sourceSha256": "5d1f1cfb6f58b3d3b9730402e61e5e985a65a5e290f38aeaef9576be7137224e",
+          "unresolved": [
+            "Miklos full paper has internal43-versus44secondary denominator, EBL39-versus51mL and LOS1.1-versus1.2d discrepancies; conflicting secondary precision removed. Overall43/44 and abstract42/43no-omentum result explicitly attributed. No unverified resolution invented.",
+            "Most other primary operative manuscripts remain abstract-only. The pre-existing schematic and embedded videos were not visually re-audited in this source-text pass.",
+            "Tavares tables and all included primary full papers not individually audited; no superiority conclusion from indirect comparisons. Clinical VVF/RVF companions require a subsequent targeted consistency pass."
+          ],
           "recordFile": "surgical-fistula.json"
         }
       ]

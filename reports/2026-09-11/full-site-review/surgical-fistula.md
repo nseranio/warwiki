@@ -1,6 +1,6 @@
 # Surgical fistula full-text review — in progress
 
-As of 2026-09-12: **16/44 original MDX pages fully read; 15 updated.** The remaining 28 pages are explicitly unread in the JSON. This is targeted source verification, not whole-domain clinician sign-off. Original/current hashes, source access and unresolved items are recorded per page.
+As of 2026-09-12: **22/44 original MDX pages fully read; 21 updated.** The remaining 24 pages are explicitly unread in the JSON. This is targeted source verification, not whole-domain clinician sign-off. Original/current hashes, source access and unresolved items are recorded per page.
 
 Corrections address erroneous outcome denominators, mixing fistula sites and indications, unsupported drug schedules, urgent source control and anatomy-dependent reconstruction. Current scope includes vaginal VVF, fecal diversion, male/all-patient atlases, pyeloenteric, nephropleural, transplant, ureterocolonic and colovesical/enterovesical pages.
 
@@ -12,17 +12,17 @@ Corrections address erroneous outcome denominators, mixing fistula sites and ind
 | all-patients/nephropleural.mdx | Yes | updated |
 | all-patients/post-kidney-transplant.mdx | Yes | updated |
 | all-patients/pyeloenteric.mdx | Yes | updated |
-| all-patients/ureteroarterial.mdx | No | unresolved |
+| all-patients/ureteroarterial.mdx | Yes | updated |
 | all-patients/ureterocolonic.mdx | Yes | updated |
-| all-patients/vesicocutaneous.mdx | No | unresolved |
+| all-patients/vesicocutaneous.mdx | Yes | updated |
 | all-patients-fistula.mdx | Yes | updated |
 | fecal-diversion.mdx | Yes | updated |
-| female/anal-sphincteroplasty.mdx | No | unresolved |
+| female/anal-sphincteroplasty.mdx | Yes | updated |
 | female/conservative-vvf-management.mdx | Yes | updated |
 | female/endoscopic-vvf-repair.mdx | Yes | updated |
-| female/episioproctotomy.mdx | No | unresolved |
-| female/eraf.mdx | No | unresolved |
-| female/extravesical-vvf-repair.mdx | No | unresolved |
+| female/episioproctotomy.mdx | Yes | updated |
+| female/eraf.mdx | Yes | updated |
+| female/extravesical-vvf-repair.mdx | Yes | updated |
 | female/martius-flap-vvf.mdx | No | unresolved |
 | female/nonoperative-rvf-management.mdx | No | unresolved |
 | female/oconor-vvf-repair.mdx | Yes | updated |
@@ -63,6 +63,10 @@ The colovesical review corrects the anti-TNF14-patient denominator, Chen74 surgi
 
 With root approval, the clinical transplant page was narrowly aligned for verified denominator and stricture-versus-fistula errors. Its own clinical ledger/hash was updated; prior prophylactic stenting review was preserved.
 
-## Publication checkpoint
+## Current continuation
 
-Source and ledger edits paused after the colovesical/enterovesical page for root validation. Next work resumes with unread fistula techniques and focused clinical-companion checks; the remaining 28original pages still require actual full reads.
+AUF and VCF surgical pages are corrected and their clinical companions narrowly aligned. The source record distinguishes full original page reads from selective full papers and complete abstracts. Sphincteroplasty and episioproctotomy corrections are now source-checked within the recorded scope: original abstracts plus selected full ASCRS/IUGA sections and Ong operative narrative. Corrected Hull RVF denominator, observational SNM comparison, acute/delayed repair distinction and unsupported technical mandates. Added the restrained2025obstetric-RVF NMA; ERAF is now corrected, including mixed-cohort denominators and current Crohn selection. Extravesical VVF is now corrected after full Miklos paper, ERUS narrative and Tavares synthesis narrative reads. Source edits are frozen for root publication; next original is Martius VVF.
+
+Key new corrections: dangerous unprotected ureteral manipulation; false open-versus-endovascular mortality comparison; mandatory nephrostomy/nephrectomy; Zhang's zero-VCF cohort misapplied to cutaneous fistula outcomes; trauma-only catheter regimens generalized to chronic fistulae. Malgor's abstract/full-paper longitudinal estimates disagree and were not merged.
+
+Extravesical VVF follow-up: removed unsupported equivalence and superiority, corrected Cochrane protocol, Evans denominator, no-access-cystotomy anatomy and Tavares unperformed statistical comparisons. Miklos internal source discrepancies are explicitly limited rather than reconciled speculatively. All17original abstracts were read; exact fuller-source scope is in JSON.

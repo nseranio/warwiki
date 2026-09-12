@@ -103,3 +103,7 @@ All owned citation anchors pass. Internal-link validation checked 1,187 files wi
 
 
 2026-09-12 transplant companion alignment: corrected known outcome-denominator/population errors found during operative review. Full current text reread; primary abstracts checked; prophylactic stenting review preserved. Exact new scope and hash are in the JSON record.
+
+## September 12 targeted fistula companion alignment
+
+Vascular-urinary and vesicocutaneous full pages were reread, with targeted source corrections aligned to their surgical companions. Removed VCF outcomes from a cohort with no VCF cases, corrected neurogenic-pressure and operative generalizations, and scoped AUF outcomes/renal-preservation choices. Malgor abstract/full-text estimates conflict; the combined long-term table was removed. Existing unchanged claims retain their earlier verification limits. Current hashes and exact sources are in each JSON follow-up record.

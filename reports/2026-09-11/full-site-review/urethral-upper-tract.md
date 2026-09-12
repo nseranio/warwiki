@@ -2,7 +2,7 @@
 
 Bounded page-by-page operative audit. Inventory includes every MDX page in urethral and upper-tract reconstruction. Read coverage and source checks are explicit per page. Priority: major AUA/EAU guidance, validated trials, correct anatomy, patient selection, denominators and unsupported inferences. Historical small series are checked only when needed to correct existing claims, not promoted as practice-changing updates. Updated means specified edits, not complete clinical clearance. Unread or partly verified pages remain unresolved. No clinician sign-off or review dates manufactured.
 
-Inventory: **98 pages**. Status counts: {'updated': 38, 'unresolved': 59, 'checked': 1}. Full-text reads: **44**. **No clinical article is certified as fully verified.**
+Inventory: **98 pages**. Current status counts: {'updated': 93, 'unresolved': 4, 'checked': 1}. Full-text reads: **98**. **No clinical article is certified as fully verified.** The chronological batch notes below preserve prior checkpoints.
 
 ## Resumed anastomotic batch and ureterocalicostomy correction
 
@@ -271,3 +271,23 @@ All **98** pages in the original 04a/04d scope have been read in full. Current s
 The PMID audit corrected Orandi1968 in four pages (4880395 →4883846), Richardson1982 (7053335 →7078852), and Blaivas/Heritz1996 (8583554 →8583550). The Blaivas page was also corrected for mixed-procedure populations and continence-versus-anatomical endpoints.
 
 Next unread surgical page: `docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bladder-neck-reconstruction-principles.mdx`. Source edits paused only for the parent's intermediate validation/publication checkpoint; the other surgical domains remain in scope.
+
+## 2026-09-12 graft-trial full-text follow-up
+
+Read the complete primary manuscripts at https://pmc.ncbi.nlm.nih.gov/articles/PMC8520101/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC12343868/ plus the entire PeeBuSt supplement. This closes the earlier abstract-only access gap for these trials. It does not add new page reads or complete clinical clearance.
+
+- docs/04-surgical-techniques/04a-urethral-reconstruction/flap/mcaninch-circular-flap.mdx: Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation. Source SHA-256: c3fc8291ca61cb254aab91112fbddef138c8521adb45263c88006020b3aba956
+- docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx: Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation. Source SHA-256: 86b88520ae4431db1858c98bd7b55e6c5b2cc251fb88612bdddecff4de51859c
+- docs/04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft.mdx: Primary full-text alignment: PeeBuSt100randomized/95analyzed,42/47PSGversus44/48BMGat18mo; powered for24percentagepointdifference, not equivalence. Alrefaey98reported/92analyzed,41/44versus47/48at12mo, explicit superiority design with baseline etiology/location imbalances. Removed broad no-difference/comparable assertions and unnecessary HR extrapolation. Source SHA-256: e1a4b996b909fe33db0d39267743a7af5820c8c9ff2ac099f44c12b8d300bfd7
+
+Source limits: PeeBuSt main ITT sentence appears arm-reversed and S4success88/7 conflicts with S1counts86/9; no predictor or ITT claim repeated. Source HR CI uses negative lower bound; supplement ORCI0.3291–5.2111 is valid, so do not label that ORCI negative. Alrefaey sample denominator discrepancy remains visible as98reported/92analyzed. Full manuscripts read does not validate every reported statistic.
+
+### Trial flow diagram and DOIG follow-up clarification
+
+Follow-up source inspection: Alrefaey Fig1 visually confirms98randomized49/49, lost5PSG/1BMG,44/48analyzed; updated reported→randomized. DOIG primary Methods/Results and Table1 state median48mo despite mean inabstract; spiral companion aligned to median. Source access: complete twoRCTmaintexts/supplement previously read; Alrefaey Fig1 viewed2026-09-12; DOIG completeabstract and fullMethods/firstResults paragraph plusTable1 followup row read, notentireDOIGpaper.
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/flap/mcaninch-circular-flap.mdx — updated SHA-256: e5687f0d39ad7286ed90af7c92c74ff778220a0925374aecbceb77ea28d4ded2
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx — updated SHA-256: 4b052170c6d6e1bce809b86d433d4ea2e68289f23d1314c19a197b4c14f67862
+
+docs/04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft.mdx — updated SHA-256: 1cc7071517044ce4bbf62d961deb0985dd7de78af27b7f7a44ae7a95855b211d

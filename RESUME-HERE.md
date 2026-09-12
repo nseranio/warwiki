@@ -4,21 +4,18 @@
 
 ## Current work and publication
 
-The third September 12 continuation batch changes **54 documentation files** and is live as **`d0b2abed`**. [GitHub CI 34683687370](https://github.com/nseranio/warwiki/actions/runs/34683687370), exact-commit Vercel deployment and direct production checks passed. See the [current release record](reports/2026-09-12/third-continuation-release.md).
-
-The batch passes full source lint, typecheck, 32 component tests, 50 maintenance tests and final production build: **136.90 MB**, all 100,389 compiled links/assets and 730 data links valid. All 54 changed documentation routes and four interaction checks passed. Publication is verified; the next source-review batch is in progress.
+The fourth September 12 continuation batch changes **34 documentation files**. Source lint, typecheck, 32 component tests, 50 maintenance tests and production build pass: **136.30 MB**, all 100,112 compiled links/assets and 730 data links valid. All 34 changed documentation routes and four interaction checks passed, and desktop/mobile samples were visually inspected. Commit/push and exact-commit CI/Vercel/live checks follow; see the [current release record](reports/2026-09-12/fourth-continuation-release.md).
 
 ## Review coverage and next work
 
-The [central ledger](reports/2026-09-11/full-site-review/README.md) contains all **1,186 documentation files**; at publication **457** have full reading recorded against current hashes and **425** have scoped updates. No complete clinical clearance is asserted. All 95 pharmacology, 73 clinical-condition, 46 special-population and 38 evaluation pages have full reads. Current tools coverage is 30/231 and fistula-technique coverage 16/44.
+The central ledger contains **1,186 documentation files**: **479** full reads against current hashes, **451** scoped updates, 21 checked, 34 unresolved and 680 unreviewed. No complete clinical clearance is asserted. All 95 pharmacology, 73 clinical-condition, 46 special-population and 38 evaluation pages have reading records. Tools coverage is 39/231 and fistula techniques 22/44.
 
-- `auth_handoff`: all 231 tools pages, recorded in `tools.json/md`. Finishing seven previously read instrument/index pages, then remaining instruments. The stapler hub has the specific 2026 recall and donor-renal-artery clip contraindication published; further substantive corrections are underway.
-- `operative_review`: remaining 04c reservoirs (Indiana, Florida, Mainz I next), then other surgical families except 04h. Fifteen diversion pages were saved at publication, alongside 98 urethral/upper-tract, 21 bladder-neck and 19 bladder pages.
-- `workflow_readiness`: remaining 28/44 fistula-technique pages, beginning ureteroarterial and vesicocutaneous; narrowly align clinical companions when sources expose residual errors.
-- Root: assessment tools, male examination, nutrition and electrolytes are now fully read, corrected, checked and published. Next the penile/preputial flap and graft foundations pages: both original MDX files fully read and pending records appended, clinical corrections not yet saved. Check graft trials mislabeled as flap trials, failed superiority called equivalence, misattributed recurrence cohorts, and generalized comparisons. McAninch's 1993 abstract actually uses Buck's-conduit wording; Carney/McAninch 2002 distinguishes Buck's supporting fascia from the dartos vascular pedicle. Do not blindly replace one with the other or infer a deep dorsal artery pedicle.
-- Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data still need actual reads and substantive review. Targeted companion corrections do not clear whole pages. Root retains perioperative care/anatomy/surgical principles/skills.
+- `auth_handoff`: continue remaining tools. Pending inflatable/malleable penile-implant corrections include the lot-specific TENACIO recall, Titan Prime approval versus phased availability, model construction and MRI conditions. Research continued during release freeze; those corrections are not in this batch.
+- `operative_review`: 19/25 diversion pages have saved review records; all six remaining originals were read during the freeze and await corrections/logging. Mainz II polyp surveillance safety, Penn identity and iROC intracorporeal-diversion evidence are among the next fixes. Continue remaining surgical families except 04h. Operative AUS has a full read and narrow safety fixes recorded separately, with broader review unresolved.
+- `workflow_readiness`: continue remaining 22/44 fistula-technique pages. Martius VVF and nonoperative RVF sources were researched during the freeze; update after release, with exact source scopes.
+- Root: buccal and penile/preputial foundations are rewritten, source-checked and independently reviewed. Next oral-cavity anatomy and lingual/labial graft companions. Oral-cavity and lingual originals have been fully read but not yet edited/logged; distinguish rabbit angiogenesis from clinical evidence, pooled versus site-specific histology, comparative uncertainty and donor morbidity. Other foundations, imported History biographies/data, resources, journal club, source pages and clinical data remain.
 
-Agents are actively editing the next correction batch. Do not overwrite their source files or confuse them with the published release. Exact source access, outstanding full-paper gaps and hashes are kept in domain ledgers.
+Each publication batch is a checkpoint within the continuing task. Read source text and actual accessible primary reports; log inaccessible full papers and unread figures/supplements. Do not turn a full MDX read or a passing site check into clinical certification.
 
 ## Evidence and saved material
 
@@ -33,6 +30,6 @@ Evidence maintenance is **quarterly: March, June, September, December**, next De
 
 Standing authorization: validate, commit/push completed changes to `main/origin/main`, then verify CI, Vercel and live content. Sign-ins are complete. Group related changes to limit deployments. Keep temporary source PDFs and large research downloads outside the repository.
 
-Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 136.9 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
+Earlier cleanup removed 41 obsolete Vercel deployments. Retention is 30 days with a minimum of 10; preserve production, aliases and a known-good rollback. Local build size has fallen from 566 MB to 136.3 MB. **The account meter has not been confirmed below 10 GB.** No paid upgrade was made. Authoring-only changes skip deployment.
 
 Preserve unrelated `world-cup-next-week-pacific.ics`. Clinic and quiz stay removed. History stays discreet. Handouts stay recoverable but excluded from builds. Keep public metadata to ordinary page last-updated; detailed review notes stay internal. Never invent clinical sign-off.

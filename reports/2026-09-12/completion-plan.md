@@ -13,11 +13,11 @@ The user explicitly requested completion after the previous release stopped at 1
 ## Current ownership
 
 - `auth_handoff`: completed all 95 pharmacology MDX reads and scoped corrections; next all 231 tools pages, recorded in `tools.json/md`. Coordinate any shared imported-data edits.
-- `operative_review`: remaining surgical-technique families except 04h; original 98 urethral/upper-tract, 21 bladder-neck, 19 bladder and 15 diversion pages read at the third release. Continue 04c index and named reservoirs, then remaining families.
+- `operative_review`: remaining surgical-technique families except 04h; original 98 urethral/upper-tract, 21 bladder-neck, 19 bladder and 19 diversion pages saved at the fourth release. Continue 04c index and named reservoirs, then remaining families.
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; next all 44 pages in `04h-fistula-repair` with a separate ledger.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The third release `d0b2abed` is verified live; the release freeze has ended. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
+The fourth batch is validated and awaiting publication verification; resume edits after root confirms the committed snapshot. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
 
 ## Retained preferences
 
