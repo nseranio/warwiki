@@ -14,7 +14,7 @@ Perioperative revisions address antithrombotics, pulmonary embolism, steroids, i
 
 ## Validation and publication
 
-Lint, typecheck, 32 component tests and 51 maintenance tests pass. Production build: **133.29 MB**, 2,569 files and 1,191 HTML pages; all **98,467 compiled links/assets and 730 data links** pass. All **25 Chromium checks pass** (21 changed routes and four interaction checks). Four desktop samples and the mobile wound diagram have been visually inspected (390px viewport, no document overflow); [browser record](eighth-browser-validation.json) tracks the exact scope. Publication and live checks are pending at this pre-publication checkpoint.
+Lint, typecheck, 32 component tests and 51 maintenance tests pass. Production build: **133.29 MB**, 2,569 files and 1,191 HTML pages; all **98,467 compiled links/assets and 730 data links** pass. All **25 Chromium checks pass** (21 changed routes and four interaction checks). Four desktop samples and the mobile wound diagram have been visually inspected (390px viewport, no document overflow); [browser record](eighth-browser-validation.json) tracks the exact scope. Published as **17e9f50edfbb92d19f015933bde8f9c0b4415dcb**. [GitHub CI34691159207](https://github.com/nseranio/warwiki/actions/runs/34691159207) and exact-commit [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/3TzRR9Na2YojkorQtCJ75EYL89W2) succeeded. All six live checks passed. See [publication verification](eighth-publication-verification.json).
 
 Source PDFs, research downloads and screenshots remain outside the deployed repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched. The account's Vercel deployment-storage meter has not been reconfirmed; local artifact size is not that meter.
 

@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The eighth September 12 batch revises **21 documentation pages** across wounds/HBOT, radiation, drainage devices, genital lymphedema and perioperative care. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **133.29 MB**, 98,467 compiled links/assets and 730 data links. All 25 browser checks pass. Publication is pending in the [current release record](reports/2026-09-12/eighth-continuation-release.md).
+The eighth September 12 batch revises **21 documentation pages** across wounds/HBOT, radiation, drainage devices, genital lymphedema and perioperative care. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **133.29 MB**, 98,467 compiled links/assets and 730 data links. All 25 browser checks pass. Published as 17e9f50e; exact-commit CI/Vercel and six live checks passed. See the [current release record](reports/2026-09-12/eighth-continuation-release.md).
 
 ## Review coverage and next work
 

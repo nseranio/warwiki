@@ -2,7 +2,7 @@
 
 **Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
 
-**Current audit continuation, September 12:** read [RESUME-HERE.md](RESUME-HERE.md), the [completion plan](reports/2026-09-12/completion-plan.md) and [current release record](reports/2026-09-12/eighth-continuation-release.md). Eighth batch: 21 revised documentation pages, 594 current full MDX reads. Lint/typecheck/tests/build pass at 133.29 MB; all 25 browser checks pass; publication pending. The entire-site review remains active. A release is a checkpoint, not completion. Keep progressing through remaining pages and full-source gaps. Earlier snapshots are historical.
+**Current audit continuation, September 12:** read [RESUME-HERE.md](RESUME-HERE.md), the [completion plan](reports/2026-09-12/completion-plan.md) and [current release record](reports/2026-09-12/eighth-continuation-release.md). Eighth batch: 21 revised documentation pages, 594 current full MDX reads. Lint/typecheck/tests/build pass at 133.29 MB; all 25 browser checks pass; published as 17e9f50e; exact-commit CI/Vercel and six live checks passed. The entire-site review remains active. A release is a checkpoint, not completion. Keep progressing through remaining pages and full-source gaps. Earlier snapshots are historical.
 
 Read this at the start of a session. Keep it small: this file is the working handbook, not the project archive. Put substantive history in `CHANGELOG.md`; use `docs/_STATUS.md` for the stub backlog.
 

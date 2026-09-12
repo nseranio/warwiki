@@ -17,7 +17,7 @@ The user explicitly requested completion after the previous release stopped at 1
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; next all 44 pages in `04h-fistula-repair` with a separate ledger.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The eighth batch revises 21 documentation pages and records 594 current full MDX reads. Lint/typecheck/tests/build pass (133.29 MB); all 25 browser checks pass; publication pending. Continue after publication without another user message. Domain ledgers record exact source access and unresolved claims; root merges hashes and verifies production. Counts describe page reading, not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
+The eighth batch revises 21 documentation pages and records 594 current full MDX reads. Lint/typecheck/tests/build pass (133.29 MB); all 25 browser checks pass; published as 17e9f50e; exact-commit CI/Vercel and six live checks passed. Continue after publication without another user message. Domain ledgers record exact source access and unresolved claims; root merges hashes and verifies production. Counts describe page reading, not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
 
 ## Retained preferences
 

@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-09-12T11:31:06.055080+00:00",
+  "sourceCommit": "17e9f50edfbb92d19f015933bde8f9c0b4415dcb",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "17e9f50edfbb92d19f015933bde8f9c0b4415dcb",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34691159207"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/3TzRR9Na2YojkorQtCJ75EYL89W2",
+      "updated_at": "2026-09-12T11:30:37Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/wound-healing",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/wound-healing",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "not a day-60 milestone": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/radiation-tissue-effects",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/radiation-tissue-effects",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "PACE-B patient-reported outcomes, 2026": true,
+        "preceding four weeks": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/wound-healing-adjuncts",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/wound-healing-adjuncts",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "SWHSI-2": true,
+        "0.97": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/perioperative-care/intraoperative-care/nausea-vomiting",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Fifth Consensus Guidelines": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}
