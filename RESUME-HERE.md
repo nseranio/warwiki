@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The fifth September 12 continuation batch changes **43 documentation files**. Lint, typecheck, 32 component tests, 50 maintenance tests and production build pass: **135.37 MB**, all 99,608 compiled links/assets and 730 data links valid. All43 changed documentation routes and four interaction checks passed. Publication verification is pending; the last verified live release is `2322d0b9`. See the [current release record](reports/2026-09-12/fifth-continuation-release.md).
+The fifth September 12 continuation batch changes **43 documentation files**. Lint, typecheck, 32 component tests, 50 maintenance tests and production build pass: **135.37 MB**, all 99,608 compiled links/assets and 730 data links valid. All43 changed documentation routes and four interaction checks passed. Published as `27356a32` with exact-commit CI34686563312, Vercel success and six passing live checks. The sixth batch is underway. See the [current release record](reports/2026-09-12/fifth-continuation-release.md).
 
 ## Review coverage and next work
 

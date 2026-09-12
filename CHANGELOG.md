@@ -8,13 +8,15 @@ For commit-level detail run `git log --oneline`.
 
 ## 2026-09-12 — Fifth continuation: oral donors, antisepsis, diversion and device safety
 
+Published as **`27356a32`**; CI34686563312, exact-commit Vercel success and six live checks passed. The next batch is underway.
+
 43 documentation pages corrected; cumulative ledger 518 full current MDX reads and 490 scoped updates across 1,186 files. This remains an incomplete clinical/source review. Tools 56/231, fistula techniques 31/44 and diversion 25/25 have reading records.
 
 Corrected oral donor identity/anatomy, comparative study interpretation and donor morbidity; independently reviewed oral and antisepsis revisions. Rebuilt draping, surgical hand preparation and glove-wetting guidance and aligned surgical gloving. Complete paper packages are distinguished from main-manuscript-only, selected guidance and abstracts in the dated source records. Added high-yield comparative trial evidence without transferring unrelated operative populations or surrogate outcomes into universal GU rules.
 
 Corrected six diversion and nine fistula pages, 17 device pages and four clinical/operative companions. Includes Mainz II surveillance safety, Penn reservoir identity, iROC applicability, lot-specific implant recall, Glean 2026 clearances, Optilume BPH contraception, neuromodulation hardware and Bulkamid labeled risks.
 
-Lint, typecheck, 32 component and 50 maintenance tests pass. Final build 135.37 MB, all 99,608 compiled links/assets and 730 data links valid.47 browser checks pass. A missing conservative-RUF anchor was fixed before the successful final build. [Fifth release record](reports/2026-09-12/fifth-continuation-release.md) tracks remaining visual/publication verification. Continue whole-site review after this batch; quarterly cadence and paused Epic phase remain.
+Lint, typecheck, 32 component and 50 maintenance tests pass. Final build 135.37 MB, all 99,608 compiled links/assets and 730 data links valid.47 browser checks pass. A missing conservative-RUF anchor was fixed before the successful final build. [Fifth release record](reports/2026-09-12/fifth-continuation-release.md) records successful visual/publication verification. Continue whole-site review after this batch; quarterly cadence and paused Epic phase remain.
 
 ---
 

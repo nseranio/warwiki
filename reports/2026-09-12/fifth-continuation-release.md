@@ -18,7 +18,7 @@ Corrected nine fistula pages and the six remaining diversion pages, including Ma
 
 ## Publication
 
-Publication verification pending. The last verified production release is `2322d0b9`; this report does not claim the fifth changes are already live.
+Published as **`27356a32bc0deed2c1cc1d77d6793ae3daa85bcb`** on `main/origin/main`. GitHub CI **34686563312** succeeded for that exact commit; Vercel deployment **2PPfHxmTDcZu5p5RCTHnBCX77tqm** succeeded. Six direct production checks passed, including corrected oral-lip/antisepsis/Bulkamid text, the conservative-RUF page and `/clinic` returning404. See [publication verification](fifth-publication-verification.json).
 
 ## Continued work
 

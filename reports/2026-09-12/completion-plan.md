@@ -17,7 +17,7 @@ The user explicitly requested completion after the previous release stopped at 1
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; next all 44 pages in `04h-fistula-repair` with a separate ledger.
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The fifth batch has 43 corrected pages and 518 current full MDX reads. Source/build/browser checks pass; publication verification is pending. Last verified production is `2322d0b9`. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
+The fifth batch has 43 corrected pages and 518 current full MDX reads. Published as `27356a32`; source/build/browser checks, exact-commit CI34686563312/Vercel and six live checks pass. The sixth batch is underway. Continue corrections without waiting for another user message. Do not overlap edits without coordination. Each agent records exact source access, unresolved claims and final source hashes; root merges the domain ledgers. The counts describe page reading, not complete clinical clearance.
 
 ## Retained preferences
 

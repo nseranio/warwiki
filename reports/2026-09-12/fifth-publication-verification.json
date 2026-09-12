@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-09-12T09:45:00.082227+00:00",
+  "sourceCommit": "27356a32bc0deed2c1cc1d77d6793ae3daa85bcb",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "27356a32bc0deed2c1cc1d77d6793ae3daa85bcb",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34686563312"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/2PPfHxmTDcZu5p5RCTHnBCX77tqm",
+      "updated_at": "2026-09-12T09:44:33Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {},
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/grafts/labial-mucosa",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/grafts/labial-mucosa",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Oral-Lip Mucosa Graft": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/perioperative-care/intraoperative-care/draping-skin-antisepsis",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/perioperative-care/intraoperative-care/draping-skin-antisepsis",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "PICASSO": true,
+        "Micro-Guard": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/bulking-agents/bulkamid",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/bulking-agents/bulkamid",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "intrinsic sphincter deficiency": true,
+        "erosion": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04h-fistula-repair/male/conservative-ruf-management",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04h-fistula-repair/male/conservative-ruf-management",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {},
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {},
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}
