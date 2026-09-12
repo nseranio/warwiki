@@ -2,7 +2,7 @@
 
 Entire original and revised MDX read including references. Consequential claims checked against identified primary sources, official guidance and device labeling. Source access is recorded individually; a full MDX read is not full access to every cited study or clinical clearance.
 
-Saved full-page reads with scoped substantive review: **15**. This is an ongoing family review, not a statement that the entire family has been reviewed.
+Saved full-page reads with scoped substantive review: **19**. This is an ongoing family review, not a statement that the entire family has been reviewed.
 
 ## Penile Grafting With Tissue Substitutes
 
@@ -307,5 +307,89 @@ Limits:
 - Shared Karian full text/captions reviewed but figure graphics not inspected; historical subgroup inconsistencies remain logged.
 
 Final source SHA-256: `644dddd274206eee31ea08a1de606acda8c9f3b629c4e471a8190368e9321648`
+
+## Complex Decongestive Therapy (CDT)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/complex-decongestive-therapy.mdx` — updated
+
+Entire original and rewritten MDX including references read. Substantive review of genotype/site-independent overreach, pressure and wear-time claims, treatment safety, maintenance, direct genital outcomes and study design against full ISL consensus, two complete2024 summit papers, full genital review/cohort main text, selected compression consensus and available original abstracts.
+
+Changes:
+- Replaced universal40–80mmHg genital compression,23-hour/inpatient/three-week rules with trained assessment, fit/perfusion/sensation safeguards and individualized delivery.
+- Separated BCRL/limb evidence from direct genital evidence; removed irrelevant limb volume percentages, prevention-to-treatment IPC inference and one-case HS efficacy framing.
+- Removed Haas2025Cochrane CD016019 from efficacy claims: primary abstract confirms a protocol without results; retained appropriate Ezzo2015Cochrane limitations.
+- Replaced blanket CHF/DVT/diabetes contraindications with modality- and site-specific assessment and current compression-consensus distinctions.
+- Removed falsely validated MRL algorithm; reports nonrandomized36-patient study and moderate group self-selection.
+- Removed causal CDP conversion-to-primary-closure/recurrence claims and compulsory all-stage-before-surgery requirement; preserved51-patient combined-care revision endpoint.
+- Added ongoing maintenance/access review and pump-associated proximal/genital edema precautions; no guaranteed freedom from compression after lymphatic reconstruction.
+
+Limits:
+- Genital CDT lacks large comparative trials and a validated universal pressure or schedule.
+- No full Ezzo Cochrane, Gilchrist review, Borman cases, Torio-Padron, Forner-Cordero or2026device-position full papers reviewed this batch; use limited to available primary abstract claims.
+- NCCN2026Survivorship full source not accessed; unsupported uncited entry removed.
+- Genital-review figures and Lu image-only table/figures not visually inspected; full-source uncertainty preserved.
+
+Final source SHA-256: `496d43c769f4ebb9b50f503341a81d4d1556bb1d359d90f17d47979796346334`
+
+## Debulking Scrotoplasty (Excision + Primary Closure)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/debulking-scrotoplasty.mdx` — updated
+
+Entire original and revised MDX including references read. Reviewed primary-closure selection, viable dissection anatomy, compression/debulking interaction, repeated cohort outcomes, recurrence attribution, pediatric follow-up and filarial treatment. Full Modolin operative report plus previously read Lu, Carrera, Vignes, Karian and ISL material; complete original available abstracts.
+
+Changes:
+- Removed false primary-closure-only10% complication ranking: Guiotto grouped primary closure with skin grafting and compared differently selected disease groups.
+- Removed rigid50%skin cutoff, routine stripping to tunica vaginalis, septum/gubernacular division, superior testis relocation, mandatory hydrocele eversion and fixed granulation/graft scheme; preserved safe anatomy and defect-specific coverage.
+- Clarified modified Charles terminology can include primary scrotal closure plus penile STSG; separate penile and scrotal coverage endpoints.
+- Corrected Garaffa90assessed/34operated; Schook25children/11operated/only6followed; corrected Modolin recurrence previously falsely assigned to Singh48filarial cohort.
+- Retained tiny MLL/lymphatic-transfer series only with denominator/causality limits; removed obesity50%universal recurrence, guaranteed fertility, cure and lowest-complication claims.
+- Removed compulsory inpatient preoperative CDT and repeated antifilarial-course rule; CDC distinguishes active infection from late chronic elephantiasis.
+
+Limits:
+- Most direct genital surgical evidence remains uncontrolled and retrospective. No comparative efficacy or patient-specific recurrence guarantee inferred.
+- Guiotto, Torio-Padron, Wisenbaugh, Machol, Garaffa, Schook, Singh, Ross and lymphatic-transfer papers limited to available indexed abstracts for this page; operative details use separately logged full sources.
+- Modolin and Lu figures not inspected visually and Lu Table1 is image-only; anatomy paper graphics likewise not independently viewed.
+- Current device/operative instructions remain procedure-specific; no new universal graft, drain or catheter timing rule added.
+
+Final source SHA-256: `df727149c28fbcd6c48cca8a58f732e8ceae81c222bcc1a7caa5e55422fa9d19`
+
+## Modified Charles Procedure
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx` — updated
+
+Full original and revised MDX including all tables and bibliography read. All17original reference identities and16available complete abstracts read; one RRRP letter has no abstract. Genital operative claims checked against complete Modolin main text and prior complete ISL/Vignes/Lu source scopes, with explicit distinction between limb and genital evidence.
+
+Changes:
+- Corrected wholesale source-number mismatches: Modolin, Singh, Torio, Wisenbaugh, Ehrl and Guiotto claims previously cited different limb papers. Rebuilt bibliography around retained genital-specific claims.
+- Distinguished genital local scrotoplasty plus penile STSG from limb fascial excision and grafting; removed universal deep-fascial stripping, FTSG superiority, hydrocele protocol and required failed microsurgery.
+- Separated van der Walt8limb delayed-NPWT grafting with3regrafts from Stokes8genital patients/6NPWT bolsters with complete reported take; removed unsupported causal100%versus88%comparison and limb hospital-stay transfer.
+- Corrected Modolin17recurrence context and Salako11/19selection, added CHASCIP2/8complications alongside no observed recurrence, removed cross-study treatment ranking and unproven compression-free cure.
+- Removed routine PRP, toe/limb protocol and stale insurance percentages from genital guidance. Qualified lymphatic drainage improvement versus guaranteed restoration using Lu observations.
+
+Limits:
+- No comparative trial establishes best genital excision/coverage or benefit of adding lymphatic transfer. Salako, Stokes and CHASCIP full operative manuscripts unavailable; cohort statements are abstract-scoped.
+- Modolin, Vignes and Lu figures were not visually inspected; Lu image-only Table1 not read. ISL source staging is extremity-based. These source limitations do not mean clinician sign-off.
+
+Final source SHA-256: `ca7aeb59b8f24870f5ca4f67e8cfe2e3967064909ce7ef5030c3e6d7e944f702`
+
+## Excision + Flap Reconstruction (Genital Lymphedema)
+
+`docs/04-surgical-techniques/04e-genital-reconstruction/excision-flap-reconstruction-lymphedema.mdx` — updated
+
+Complete original and revised MDX including every table and all22original references read. All20DOI-linked complete indexed abstracts plus Ross and Chitale primary abstracts/identities read. Selection, donor/anatomic assumptions, populations, failure versus all-complication endpoints, fertility and lymphatic-cure claims checked against these original records and prior complete ISL/Karian source scopes.
+
+Changes:
+- Replaced misleading highest-complication headline and cross-series flap ranking with individualized tissue/defect selection; removed fixed50%andexposed-testis mandates and Fournier1.6%flap-loss transfer into lymphedema outcomes.
+- Distinguished coverage from lymphatic reconstruction, pedicled SCIP from freeVLNT,26flapsurvival from recurrence/cure, and7patient compression-free protocol from universal permanent cessation; included2/8CHASCIPcomplications.
+- Corrected Mendel22patients versus12questionnaireresponders and postoperative erection score versus maintainedbaseline; flagged mixedindications and revision endpoints.
+- Corrected Yu7mixedperineoscrotal/ischialulcer population, Coskunfirat7Fournier/2dehiscences withoutsuperiority trial, Han10/1partialnecrosis; removed unsupported uniform lowrisk/sensory/fertility rankings.
+- Removed inferredTFLlymphabsorption asestablishedmechanism and rejected routinegroinblockdissection. Removed broadALT/PSL/othermiscasecatalog from this condition-specific hub; coverage details remain linked.
+
+Limits:
+- Most original studies were accessible as complete abstracts only. Full operative text/graphics for those series were not obtained; specific technical prescriptions and causalcomparisons not supported by that access were removed.
+- ISL consensus and Karian fullmain/tables/captions were previously read; Karian actualfiguregraphics andsupplements not inspected. Karian is Fourniercoverage evidence, not a genitallymphedema treatment trial.
+- No robust genital head-to-head study establishes a universal flap, fertility advantage, lymphatic cure or a mandatory lymphatic-transfer pathway.
+
+Final source SHA-256: `d97351784cf5bb33f5b766d078c6ac7868c2c87ffa2fc102d0a4c3b4a472b540`
 
 Individual primary-source URLs and exact access scopes are in the companion JSON.

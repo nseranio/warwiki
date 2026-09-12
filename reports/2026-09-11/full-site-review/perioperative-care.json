@@ -5,14 +5,20 @@
     {
       "file": "docs/01-foundations/perioperative-care/index.mdx",
       "title": "Perioperative Care",
-      "status": "unresolved",
-      "fullTextRead": false,
+      "status": "updated",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "336203a2eb44e6a32aad8bdc239759813f7dc8eeffcc998c686853ff0bb442d1",
-      "sourceSha256": "336203a2eb44e6a32aad8bdc239759813f7dc8eeffcc998c686853ff0bb442d1",
-      "scope": "Not yet read; no clinical verification claimed.",
+      "sourceSha256": "2202f4e573b63320630b1f97ce6947201e598707084862c86a07ea60b5b21736",
+      "scope": "Entire 108-line navigation/index MDX read, including all descriptions and targets. No substantive dosing/operative instructions. Antisepsis description made neutral to avoid overstating one historical guideline position.",
       "sources": [],
-      "notes": []
+      "notes": [
+        "Navigation description simplified; clinical evidence remains in root-reviewed linked antisepsis hub. All other descriptions are summaries of linked topic scope."
+      ],
+      "reviewedAt": "2026-09-12",
+      "unresolved": [
+        "Index review does not constitute clearance of linked articles."
+      ]
     },
     {
       "file": "docs/01-foundations/perioperative-care/intraoperative-care/analgesia.mdx",
@@ -41,14 +47,71 @@
     {
       "file": "docs/01-foundations/perioperative-care/intraoperative-care/nausea-vomiting.mdx",
       "title": "Nausea & Vomiting",
-      "status": "unresolved",
-      "fullTextRead": false,
+      "status": "updated",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "a9de6bf59b9ab0638b27b60ac4684ae80be91ee3e716584e210aba689393e9d4",
-      "sourceSha256": "a9de6bf59b9ab0638b27b60ac4684ae80be91ee3e716584e210aba689393e9d4",
-      "scope": "Not yet read; no clinical verification claimed.",
-      "sources": [],
-      "notes": []
+      "sourceSha256": "0ba97810d349b19d139cee8f81120b38dceefb2d820043c91d913d1a78ea0e6d",
+      "scope": "Complete original and revised MDX, all tables and bibliography read. Entire Fifth Consensus full-report narrative pp1–28 read, plus supplementary tables and primary label sections as detailed below. References and actual guideline algorithms were not fully reviewed.",
+      "sources": [
+        {
+          "url": "https://cdn-links.lww.com/permalink/aa/f/aa_1_1_2025_11_24_cd_1_sdc1.pdf",
+          "doi": "10.1213/ANE.0000000000007816",
+          "cache": "/tmp/workflow-ponv2025-full.pdf",
+          "readScope": "Entire full-report narrative, author pages, contents and endorsement list pp1–28 read. Bibliography pp29–51 only initial entries observed, not fully read. Separate executive summary selected sections read; actual algorithm figures not yet obtained/visually reviewed."
+        },
+        {
+          "url": "https://links.lww.com/AA/F570",
+          "cache": "/tmp/workflow-ponv2025-tables.pdf",
+          "readScope": "All substantive Appendix 3 grading, supplementary Tables S1–S8 and Appendix 4 Tables1–3 text pp1–15 read; dose Tables1/3 visually inspected on rendered pp12/15. Supplementary references pp16 onward not read; search-strategy appendix not read."
+        },
+        {
+          "url": "https://www.cochrane.org/evidence/CD012859_which-medicines-work-best-prevent-people-being-sick-vomiting-after-operation",
+          "doi": "10.1002/14651858.CD012859.pub2",
+          "readScope": "Entire original abstract and plain-language summary read; full review/appendices not read. 585 overall trials versus 282 vomiting-network distinction and lower safety certainty retained."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d1b111eb-659a-496b-a86a-8f0fa370f147",
+          "readScope": "Primary current label indication/dose and CYP/warfarin/contraception warning summaries read; not entire label."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab23bc6e-b6a8-165f-e053-2a95a90ab144",
+          "readScope": "Label indication, section2.1 dose and5.1 QT precaution plus interaction summaries read; not entire label."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=d89f33ac-8a6e-49e7-94fb-84e58aad65a8",
+          "readScope": "Complete boxed warning, indication, contraindication and warning sections read; not entire label."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=b877a694-a1d0-4280-937a-a06820b12a88",
+          "readScope": "Complete indication, administration, contraindications and warnings5.1–5.8 read including2025 hyperthermia; not entire label."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cdb2c4b4-a20a-3f8f-e053-2a95a90aaf72",
+          "readScope": "Current label selected indication, hepatic-dose, contraindication and full warnings5.1–5.4 read. Oral16mg instruction corroborated from primary label indexed text and FifthConsensus."
+        },
+        {
+          "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requires-updates-labeling-promethazine-hydrochloride-injection-products",
+          "readScope": "Entire substantive FDA safety communication including both adult/pediatric preparation tables read."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=481866da-a712-48a5-853f-8e84aacaab6d",
+          "readScope": "Complete boxed warning, route contraindications and tissue-injury administration warning read; not entire label."
+        }
+      ],
+      "notes": [
+        "Updated adult two-intervention prophylaxis at any risk; removed rigid monotherapy at one risk factor and universal combination superiority. Removed exploratory ML risk claims and routine procedural blanket rules.",
+        "Corrected ondansetron IV end-of-surgery timing and 16 mg oral prophylaxis distinction; added labeled amisulpride prevention/treatment and IV aprepitant formulation distinction.",
+        "Rescue different class with >6 hour limited repeat exception; no scopolamine as immediate rescue or prophylaxis-to-rescue efficacy assumption.",
+        "Preserved current FDA label QT precautions despite more reassuring consensus narrative; added promethazine dilution/vein/infusion and pediatric respiratory warning, scopolamine 2025 hyperthermia/retention/MRI cautions, and APONVIE contraception/interactions.",
+        "Pediatric dosing/algorithm separate from adult Apfel; no mandatory third pediatric agent. Removed fictitious ileal-conduit bladder-retention mechanism and unnecessary editorial references to old page."
+      ],
+      "reviewedAt": "2026-09-12",
+      "unresolved": [
+        "Full Cochrane review, all original seven-source manuscripts and every underlying FifthConsensus trial not read; no exhaustive reference certification.",
+        "Guideline full narrative contains occasional internally inconsistent exploratory risk entries, PDNV percentages and label-safety shorthand; these were not generalized. Actual guideline flowcharts not yet visually reviewed.",
+        "Drug-specific prescribing limits beyond selected common workflow instructions remain in product labeling/anesthesia-pharmacy protocols."
+      ]
     },
     {
       "file": "docs/01-foundations/perioperative-care/intraoperative-care/nerve-blocks.mdx",
@@ -77,62 +140,271 @@
     {
       "file": "docs/01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx",
       "title": "Antithrombotic Therapy",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "06f62d9317c81f0f4b85ef3ae88ec8c3a3f1274b83f8c2fa30331a935b65db94",
-      "sourceSha256": "06f62d9317c81f0f4b85ef3ae88ec8c3a3f1274b83f8c2fa30331a935b65db94",
-      "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-      "sources": [],
+      "sourceSha256": "f948415591d5fe3a54fc8f409a2721a9585d8a9fb7ea177b84a4e6fee66b4eb9",
+      "scope": "Full original and revised MDX, all tables and bibliography read. Consequential prophylaxis, bridging, antiplatelet, neuraxial, HIT/reversal and antithrombin claims checked against the scoped primary sources below. This is not exhaustive full-manuscript verification of every retained citation.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1016/j.eururo.2017.02.025",
+          "accessScope": "Complete primary abstract and identity read; full manuscript not obtained. Non-cancer scope retained."
+        },
+        {
+          "url": "https://doi.org/10.1097/EJA.0000000000002012",
+          "accessScope": "Complete main urology chapter, Table1 text, all11references/disclosures read; infographic not visually inspected. /tmp/workflow-PMC11224558.xml/.txt"
+        },
+        {
+          "url": "https://doi.org/10.1378/chest.11-2297",
+          "accessScope": "Primary indexed formal recommendations3.6.1–3.6.6 read, plus risk-model discussion. Full guideline/appendix not read. Follow recommendation cutoffs rather than inconsistent narrative."
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa1501035",
+          "accessScope": "Complete primary abstract and identity read; full manuscript not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1136/bmj.n1205",
+          "accessScope": "Complete main paper,4tables,2figurecaptions,12references/disclosures read; actual figures and supplement not read. 1471randomized1470analyzed; all prebridged; high-risk valve exclusions, early stop and randomization programming issue noted. /tmp/workflow-PMC8188228.xml/.txt"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.chest.2022.07.025",
+          "accessScope": "Official CHEST key recommendations and selected indexed primary recommendations5–7,14–15,21–28 read; full manuscript not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa1401105",
+          "accessScope": "Complete primary abstract and identity read; full manuscript not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jacc.2024.06.013",
+          "accessScope": "Indexed primary selected bridging, PCI timing and antiplatelet recommendations/Table12 read; not entire guideline."
+        },
+        {
+          "url": "https://doi.org/10.1136/rapm-2024-105766",
+          "accessScope": "Formal UFH/LMWH and dose-specific DOAC recommendations with surrounding context read (selected pp8–9,12–14); not complete29-page guideline. /tmp/pharm-asra2025.pdf/.txt"
+        },
+        {
+          "url": "https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication",
+          "accessScope": "Complete substantive FDA safety communication read, current US commercial-sales cessation verified."
+        },
+        {
+          "url": "https://doi.org/10.1016/S0140-6736(16)30392-0",
+          "accessScope": "Complete primary abstract and identity read; full manuscript not obtained. Spontaneous ICH context corrected."
+        },
+        {
+          "url": "https://doi.org/10.1182/bloodadvances.2018024489",
+          "accessScope": "Indexed primary formal4Ts and recommendations3.1/3.5/3.9 read; full guideline not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1182/hematology.2024000659",
+          "accessScope": "Complete main text and4figurecaptions read; actual graphics not inspected; references1–13 of23 read. No universal rescue recommendation."
+        },
+        {
+          "url": "https://www.fda.gov/media/188338/download",
+          "accessScope": "Complete July2025 prescribing text,11pages and3tables read; reconstitution figuresA–F not visually inspected. /tmp/workflow-thrombate2025.pdf/.txt"
+        },
+        {
+          "url": "https://doi.org/10.1002/14651858.CD005370.pub3",
+          "accessScope": "Complete primary abstract and identity read; full review not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.thromres.2025.109302",
+          "accessScope": "Complete primary abstract and identity read; full review not obtained."
+        }
+      ],
       "notes": [
-        "Incorrect no-hold UFH neuraxial instruction; generic 12-hour LMWH postoperative/catheter rule misses regimen differences.",
-        "POISE-2 interpretation reversed; PATCH was spontaneous intracerebral hemorrhage, not ischemic stroke.",
-        "Routine bridge indications conflict with CHEST 2022 and overgeneralize PERIOP2; postoperative versus preoperative design and excluded valves must be distinguished.",
-        "28 days after discharge should be procedure-specific duration counted from surgery; procedure risks/table combine unverified contexts and Caprini recommendations are not a universal urologic mandate.",
-        "Current antithrombin labeling and heparin-resistance/sepsis evidence require source checks; odds ratio is not a 66% mortality risk reduction."
-      ]
+        "Corrected UFH/LMWH neuraxial timing, postoperative versus preoperative bridging scope, aspirin/PATCH direction and populations, procedure-specific prophylaxis and duration counted from surgery.",
+        "Removed unsupported procedure risk percentages, routine high-risk dose escalation, automatic valve bridging, universal DOAC platelet-recovery wait and observational mortality causality.",
+        "Aligned FDA antithrombin indication/calculation/hypersensitivity and current Andexxa status with pharmacology companions.",
+        "All original23reference identities/available abstracts from the41source batch checked where available; original narrative references without accessible full text were removed when their associated detailed claims were unsupported. No mass review stamp."
+      ],
+      "finalTextReread": true
     },
     {
       "file": "docs/01-foundations/perioperative-care/perioperative-protocols/eras.mdx",
       "title": "Enhanced Recovery After Surgery (ERAS)",
       "status": "unresolved",
-      "fullTextRead": false,
+      "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "2bbc9bfbd59e250e9a4870d8f731ab4dc42828d2ae902f9f5f45c5b2ac992a07",
       "sourceSha256": "2bbc9bfbd59e250e9a4870d8f731ab4dc42828d2ae902f9f5f45c5b2ac992a07",
-      "scope": "Not yet read; no clinical verification claimed.",
+      "scope": "Complete original 255-line MDX, all tables and 19 bibliography entries read. Primary verification/correction in progress.",
       "sources": [],
-      "notes": []
+      "notes": [
+        "Universal fluid cap, postoperative targets and prophylaxis/catheter advice need individualization; odds-ratio-to-risk and observational-to-causal language, duplicate guideline and suspicious article identity/outcome claims require correction."
+      ]
     },
     {
       "file": "docs/01-foundations/perioperative-care/postoperative-management/constipation.mdx",
       "title": "Constipation",
-      "status": "unresolved",
-      "fullTextRead": false,
+      "status": "updated",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "17c41936825d0a5d0b258dcb22fdb09c0f5037aa440e44de884b3aab273b7328",
-      "sourceSha256": "17c41936825d0a5d0b258dcb22fdb09c0f5037aa440e44de884b3aab273b7328",
-      "scope": "Not yet read; no clinical verification claimed.",
-      "sources": [],
-      "notes": []
+      "sourceSha256": "60e891d49708f4e27865a7733f58457605077c97d16c9c1f976f5313af3c4aa5",
+      "scope": "Complete original 159-line MDX and final rewritten MDX, all tables and bibliography read. Targeted current primary guideline, label and trial verification of bowel preparation, OIC, ileus prevention, acute imaging and escalation. Not all original ten manuscripts were obtained; replaced unsupported instructions rather than certifying them.",
+      "sources": [
+        {
+          "url": "https://amedeolucente.it/public/the%20Medical%20Management%20of%20Opioid-Induced%20Constipation.pdf",
+          "readScope": "All nine pages of original AGA main text, Tables 1–5 as text and all 58 bibliography entries read in contiguous overlapping web PDF chunks. Actual tables not visually verified; referred Figure 1 decision tool is separate and not obtained. Full accompanying technical review not read.",
+          "doi": "10.1053/j.gastro.2018.07.016"
+        },
+        {
+          "url": "https://gastro.org/clinical-guidance/medical-management-of-opioid-induced-constipation/",
+          "readScope": "Entire formal official recommendation list read, confirming laxative-first, PAMORA strengths and no recommendations for lubiprostone/prucalopride."
+        },
+        {
+          "url": "https://link.springer.com/article/10.1186/s13017-018-0185-2",
+          "readScope": "Full patient-assessment, diagnostic imaging, nonoperative-management and operative-management sections read with supporting rationale; also scope and special-population narrative. Not a complete guideline/table/figure/bibliography read. Used for general adhesive SBO, not a universal early postoperative waiting interval.",
+          "doi": "10.1186/s13017-018-0185-2"
+        },
+        {
+          "url": "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+          "readScope": "Current radical-cystectomy perioperative-management section and formal recommendations, including against bowel preparation, read. Other MIBC chapters not reviewed."
+        },
+        {
+          "url": "https://www.ascrsu.com/ascrs/repview?name=2_2851103_PDF&type=784-162",
+          "readScope": "Complete recommendations 2–3 and supporting bowel-preparation paragraphs read in official full PDF page 1372; not complete fifteen-page guideline, figures or bibliography.",
+          "doi": "10.1097/DCR.0000000000003450",
+          "cache": "/tmp/workflow-ascrs-ssi.pdf"
+        },
+        {
+          "url": "https://doi.org/10.1111/iju.15668",
+          "readScope": "Complete primary abstract read from saved indexed MED data and official Wiley title/authors verified. Full paper not read; no causal or universal diversion inference.",
+          "cache": "/tmp/pharm-bowelprep-primary.json"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9746347/",
+          "readScope": "Complete postoperative mobilization, ileus prevention and alvimopan sections 20–23, routine NGT 19 and relevant fluid/analgesia passages read; not entire guideline/415 references/figures. Colorectal scope and limited extrapolation to GU stated.",
+          "doi": "10.1097/DCR.0000000000002650"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6278928/",
+          "readScope": "Full indexed Consensus Statement 10 and rationale plus source scope read; not the entire SHM article/supplement. Medical-inpatient scope made explicit.",
+          "doi": "10.12788/jhm.2980"
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cd584de-b704-4d26-8451-e3247ffb8d08",
+          "readScope": "Complete boxed warning, indications, dosing, contraindications and warnings 5.1–5.7 read; not whole label or underlying trials."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.eururo.2014.02.036",
+          "readScope": "Complete original structured abstract read, including denominators/outcomes/limitations; full RCT/tables/supplements not obtained. Literal p-value text reread without generic HTML stripping.",
+          "cache": "/tmp/pharm-ileus-primary.json"
+        },
+        {
+          "url": "https://doi.org/10.1002/14651858.CD012111.pub2",
+          "readScope": "Complete original structured Cochrane abstract read; single included trial, outcome certainty and cardiovascular interval checked. Full review/tables not read.",
+          "cache": "/tmp/pharm-ileus-primary.json"
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c488fb7c-0a5b-487c-b452-996809d1cb99",
+          "readScope": "Complete indication subsections, administration-information subsection, contraindications and warnings 5.1–5.3 read. No universal dose matrix retained; full label/trial tables not read."
+        },
+        {
+          "url": "https://www.americanjournalofsurgery.com/article/S0002-9610%2819%2931038-4/fulltext",
+          "readScope": "Complete publisher abstract and highlights read; no complete manuscript. No-consensus waiting interval and cause/index-procedure selection retained.",
+          "doi": "10.1016/j.amjsurg.2019.11.008"
+        },
+        {
+          "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=134",
+          "readScope": "Both initial-imaging variant tables and complete acute-presentation CT subsection read, including oral contrast and CT ischemia sensitivity limits; not full narrative, references or other modalities. PDF itself headed New 2019; not misdated as a newly issued 2026 guideline.",
+          "cache": "/tmp/workflow-acr-sbo.pdf"
+        }
+      ],
+      "notes": [
+        "Removed fixed POD-five CT delay, universal 10–14-day obstruction wait, mandatory POD-three phosphate enema, docusate-first ladder, and unreliable sound/stool/onset distinctions.",
+        "Corrected alvimopan preventive/label scope, preoperative start, prior-opioid contraindication, 280 randomized versus 277 analysis and single-trial Cochrane overlap; removed cardiovascular safety guarantee.",
+        "Corrected AGA lubiprostone/prucalopride position and methylnaltrexone chronic-versus-advanced-illness route/indication confusion; retained current perforation/withdrawal cautions.",
+        "Separated EAU urinary-diversion preparation from ASCRS elective colorectal preparation; 2025 Simhal remains observational and scoped. Fresh-repair rectal-intervention caution is an explicitly individualized surgical workflow inference, not a claimed trial-tested protocol."
+      ],
+      "reviewedAt": "2026-09-12",
+      "unresolved": [
+        "Lee alvimopan RCT and Cochrane full manuscripts/tables/supplements remain unavailable; complete abstracts only.",
+        "New AUA 2026 meeting abstract DOI 10.1097/01.JU.0001191604.52386.88.03 was discovered but unavailable; no purported results used.",
+        "New ERAS gynecologic-oncology 2026 DOI 10.1016/j.ygyno.2026.05.022 is queued for the separate ERAS review; no unread recommendation imported.",
+        "No universal GU reconstruction postoperative bowel regimen is validated here; procedure-specific bowel/rectal healing and consultation remain necessary."
+      ]
     },
     {
       "file": "docs/01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx",
       "title": "Pulmonary Embolism",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "e61149eda6948bf7046b0f76113a8d141bcc91dde1f05add3c31d59b91d82fb8",
-      "sourceSha256": "e61149eda6948bf7046b0f76113a8d141bcc91dde1f05add3c31d59b91d82fb8",
-      "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-      "sources": [],
+      "sourceSha256": "3864f4aed6ee8d8103e81dab9f3e91ffaec36c1ba99bff4b0c2583f28425f65f",
+      "scope": "Full original and revised MDX with all tables/bibliography read. Major diagnostic, treatment, postoperative, follow-up and new-trial claims corrected using scoped primary sources. Complete main HI-PEITHO and API-CAT papers read; not all75pages of the2026 guideline or all cited manuscripts.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1001/jama.2022.16815",
+          "accessScope": "Complete primary abstract and identity read; full review not obtained."
+        },
+        {
+          "url": "https://doi.org/10.1161/CIR.0000000000001415",
+          "accessScope": "Selected actual primary guideline diagnosis/PERC/D-dimer/imaging, categories/Figure2, risk/disposition/hemodynamic, anticoagulation, IVC filters, reperfusion, duration and follow-up/CTEPD sections read. Not whole75pages/evidence tables. Figure2 visually inspected in early-online PDF; final published pagination checked. /tmp/workflow-pe2026.pdf/.txt"
+        },
+        {
+          "url": "https://doi.org/10.1001/jama.2014.2135",
+          "accessScope": "Primary abstract, selected methods/results and Table2 read; not complete article or figures. Recent surgery392/3324; outpatient ED applicability retained."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jacc.2017.09.024",
+          "accessScope": "Complete primary abstract and identity read; full review not obtained."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e9481622-7cc6-418a-acb6-c5450daae9b0",
+          "accessScope": "Current label adult dosage2.1 plus indications/highlights/contraindications read; not full label or pediatric tables."
+        },
+        {
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+          "accessScope": "Current label adult dosage2.1, treatment/extended VTE indications and relevant clinical study text read; not full label."
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa2510703",
+          "accessScope": "Complete primary abstract read and identity verified PMID41812192. No full main paper obtained. 2760randomized; primary analyzed1345/1355, not all randomized."
+        },
+        {
+          "url": "https://clinicaltrials.gov/study/NCT03266783",
+          "accessScope": "Complete registered inclusion/exclusion criteria read via API; full trial protocol not read. /tmp/workflow-NCT03266783.json"
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa2416112",
+          "accessScope": "Complete main paper11publishedpages1363–1373 plus2repositorycovers,28refs/disclosures,2tables/2figures read and visually inspected. Publisher protocol/appendix unavailable; not read. Institutional primary copy https://access.archive-ouverte.unige.ch/access/metadata/0a73c0c0-9f0d-4d6e-ab11-e3c1062f5879/download ; /tmp/workflow-api-cat2025.pdf/.txt"
+        },
+        {
+          "url": "https://clinicaltrials.gov/study/NCT03692065",
+          "accessScope": "Complete registered eligibility criteria read; no protocol. Major surgery2weeks, several bleeding/function exclusions. /tmp/workflow-NCT03692065.json"
+        },
+        {
+          "url": "https://doi.org/10.1016/S0140-6736(24)02842-3",
+          "accessScope": "Complete primary abstract read; full main paper unavailable. Failed noninferiority retained; corrected HR confidenceinterval from primary rather than malformed2026guideline reproduction."
+        },
+        {
+          "url": "https://doi.org/10.1161/CIR.0000000000001117",
+          "accessScope": "Complete primary abstract/identity read; no full statement."
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa1302097",
+          "accessScope": "Complete primary abstract plus indexed selected results/discussion read; no complete main/figures/supplement. Death/decompensation versus mortality and bleeding distinguished."
+        },
+        {
+          "url": "https://doi.org/10.1056/NEJMoa2516567",
+          "accessScope": "Complete12page main article,39refs/disclosures,4tables/flowfigure read and visually inspected. Protocol/appendix403, notread. 544ITT/542treated and bleeding denominators distinguished. Primary institutional copy https://www.unimedizin-mainz.de/fileadmin/kliniken/kardiologie_1/Bilder/paper_of_the_month/NEJM_4-2026.pdf ; /tmp/workflow-hipeitho2026.pdf/.txt"
+        },
+        {
+          "url": "https://clinicaltrials.gov/study/NCT04790370",
+          "accessScope": "Complete registered eligibility read, including exclusion of major surgery/trauma in preceding3weeks. /tmp/workflow-hipeitho-registry.json"
+        }
+      ],
       "notes": [
-        "2026 guideline is cited but new A–E classification and one-week follow-up are missing.",
-        "Postoperative low D-dimer absolute 2-week prohibition, automatic day-7 DOAC transition, blanket GI-cancer exclusion and routine recurrent-PE filter indication need correction.",
-        "Thrombolysis effect from mixed trial populations mislabeled high-risk-only; catheter thrombolysis still carries bleeding risk after surgery.",
-        "Active cancer mislabeled strong transient factor; persistent risk factor versus unprovoked conflated; CTEPH hemodynamic definition incomplete.",
-        "High-yield HI-PEITHO 2026 544-patient randomized trial missing; obtain full main trial and exclusion criteria before adding scoped summary."
-      ]
+        "Replaced unsupported epidemiology/mortality and rigid postoperative day rules; distinguished VTE from PE and active cancer from transient provoking factors.",
+        "Corrected PERC and D-dimer setting/assay limits, normotensive shock,2026A–Eclassification, LMWH/UFH nuance, GI/GU cancer selection, DOAC food and treatment/extended doses.",
+        "Added HI-PEITHO, COBRRA, API-CAT and RENOVE with explicit endpoints/denominators and recent-surgery or access limitations; no mortality/equivalence overclaim.",
+        "Reframed IVC filter and reperfusion decisions and corrected follow-up to within1week/by3months and ongoing symptom surveillance.",
+        "Remaining limitation: guideline evidence tables and unavailable trial supplements/full COBRRA/RENOVE papers have not been read; no complete clinical certification."
+      ],
+      "finalTextReread": true
     },
     {
       "file": "docs/01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx",
@@ -161,14 +433,53 @@
     {
       "file": "docs/01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx",
       "title": "Immunosuppression",
-      "status": "unresolved",
-      "fullTextRead": false,
+      "status": "updated",
+      "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "58182db0a32dcc9929727731009c41f87149dca7e7302d0097a24b472b34404d",
-      "sourceSha256": "58182db0a32dcc9929727731009c41f87149dca7e7302d0097a24b472b34404d",
-      "scope": "Not yet read; no clinical verification claimed.",
-      "sources": [],
-      "notes": []
+      "sourceSha256": "8a5cae68a31dd545b716bd11a2c4afc1a96155aab803819fd2a8d41d4b8428cf",
+      "scope": "Complete original and revised MDX, context table and bibliography read. Targeted current primary recommendations checked with separate full-article versus selected-section/abstract access below.",
+      "sources": [
+        {
+          "url": "https://www.rcsed.ac.uk/news-resources/rcsed-blog/2022/september/transplant-immunosuppression-in-the-perioperative-period/",
+          "readScope": "Entire substantive professional guidance article read; authored clinical blog, not formal guideline/RCT."
+        },
+        {
+          "url": "https://doi.org/10.3389/ti.2023.11802",
+          "cache": "/tmp/workflow-fistula-abstracts/10_3389_ti_2023_11802.json",
+          "readScope": "Complete primary abstract and identity read; full main study/tables/supplements not read."
+        },
+        {
+          "url": "https://academic.oup.com/ecco-jcc/article/18/10/1556/7693896",
+          "doi": "10.1093/ecco-jcc/jjae089",
+          "readScope": "Primary selected sections 3.16–3.18, 4.9–4.10 and biologic rationale/practice sections read. Complete guideline and figures/supplements not read."
+        },
+        {
+          "url": "https://academic.oup.com/ecco-jcc/article/20/6/jjag072/8722674",
+          "doi": "10.1093/ecco-jcc/jjag072",
+          "readScope": "Primary indexed Statement 10 and supporting medication paragraphs read. Full guideline/figures/supplements not read; low-evidence and small-molecule limitations retained."
+        },
+        {
+          "url": "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.24893",
+          "readScope": "Primary indexed formal biologic withholding, selected conventional-DMARD and restarting recommendations read; arthroplasty population scoped. Full guideline/supplements not read."
+        },
+        {
+          "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria/",
+          "readScope": "Complete formal XIII.1–3 and XIV.1–2 and supporting endourology/device portions read; not whole guideline."
+        }
+      ],
+      "notes": [
+        "Removed autotransplantation-as-immunosuppression implication; maintenance interruption and mTOR substitution are coordinated with transplant team, not automatic.",
+        "Replaced blanket biologic holding rules with distinct Crohn abdominal, UC 2026 and inflammatory-arthritis arthroplasty contexts; limited JAK/new-agent evidence explicit.",
+        "Seton recommendation restricted to complex perianal Crohn fistulas; removed enterourinary seton instruction and unqualified interposition-flap guarantee.",
+        "Corrected colonization treatment versus symptomatic infection and mucosal-trauma prophylaxis, with IDSA AUS/IPP ASB exception. Yang300 retrospective association does not establish causal benefit of immunosuppression reduction.",
+        "ECCO 2026 author sequence confirmed against original MED bibliographic record; corrected from mistaken draft sequence."
+      ],
+      "reviewedAt": "2026-09-12",
+      "unresolved": [
+        "No comprehensive drug-by-drug transplant, rheumatologic or newer IBD agent protocol established; use treating-specialty plans.",
+        "Evidence for GU-specific timing of biologics and mTOR interruption remains insufficient; arthroplasty rules are not presented as proven GU rules."
+      ]
     },
     {
       "file": "docs/01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx",
@@ -185,18 +496,54 @@
     {
       "file": "docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx",
       "title": "Steroids",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextRead": true,
       "clinicalVerificationComplete": false,
       "originalSha256": "f3ec18969a19a00477b4b81f89ad3ecacb9ef3316f884e321607c3ba18fb9bc9",
-      "sourceSha256": "f3ec18969a19a00477b4b81f89ad3ecacb9ef3316f884e321607c3ba18fb9bc9",
-      "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-      "sources": [],
+      "sourceSha256": "4866b321476bfaa25e30a4bb909ce52a0e30199b8824da87d6716ac2ef96cfaa",
+      "scope": "Complete original and revised MDX, all tables and bibliography read. Targeted primary source verification of adrenal risk, recovery tests, stress coverage and crisis management; no claim that every guideline chapter or trial supplement was fully read.",
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11180513/",
+          "doi": "10.1210/clinem/dgae250",
+          "cache": "/tmp/workflow-PMC11180513.xml",
+          "readScope": "Complete summary recommendations and definitions; complete sections s9.8–s9.11 and s9.14–s9.16, including Tables 6, 8, 9 and relevant figure captions read. Remaining manuscript, actual graphics and supplements not read."
+        },
+        {
+          "url": "https://www.endocrinology.org/clinical-practice/clinical-guidance/adrenal-crisis/",
+          "readScope": "Complete substantive adult emergency guidance and patient preparedness sections read; pediatric material not reviewed."
+        },
+        {
+          "url": "https://www.nice.org.uk/guidance/NG243/chapter/recommendations",
+          "readScope": "Primary recommendations 1.7.1–1.7.9 for adult adrenal crisis read; not the full guideline."
+        },
+        {
+          "url": "https://www.binasss.sa.cr/mayo2021/31.pdf",
+          "doi": "10.1056/NEJMoa2028982",
+          "readScope": "Complete primary abstract; original PDF pages 1–2 and part of 3 through postoperative day-3 wound assessment, plus indexed original NEJM selected Methods/Results/Discussion read. Remaining full main paper, tables/figures and supplements not fully read; repeated full PDF downloads timed out."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23759697/",
+          "doi": "10.1016/j.amjsurg.2012.11.018",
+          "readScope": "Complete original abstract read; full review unavailable, so no procedure-specific dose or risk estimate asserted."
+        },
+        {
+          "url": "https://academic.oup.com/ecco-jcc/article/20/6/jjag072/8722674",
+          "doi": "10.1093/ecco-jcc/jjag072",
+          "readScope": "Primary indexed Statement 10 and its support concerning steroid taper, biologics and small molecules read; low evidence and UC operation scope preserved. Complete guideline not read."
+        }
+      ],
       "notes": [
-        "Current 2024 HPA suppression dose/duration and recovery-testing thresholds conflict with existing categories; chronic low-dose and inhaled-risk statements are too absolute.",
-        "Guideline Table 8 stress coverage applies to adrenal-insufficiency risk, not every steroid user; avoid double-counting usual dose and indefinite NPO 200 mg.",
-        "Unverified universal BMG/prosthesis prednisone dose cutoffs, chronic IC steroid framing, and assured stress hydrocortisone antiemesis require correction.",
-        "Postoperative 2–3x baseline oral regimen is not the cited Table 8 scheme and may lower a high baseline; crisis hyperkalemia applies primarily mineralocorticoid-deficient disease."
+        "Separated chronic replacement, stress coverage and single-dose antiemesis; corrected 2024 dose/duration risk thresholds, prior higher-dose risk and nonoral exposure.",
+        "Recovery cortisol thresholds and test context corrected; general/regional anesthetic Table 8 coverage explicitly limited to diagnosed/at-risk adults, with baseline dose preservation and no duplicate oral/IV dosing.",
+        "Crisis treatment starts without waiting for refractory shock or lab confirmation; saline and monitoring specified with cardiorenal individualization; glucocorticoid-induced insufficiency does not routinely require fludrocortisone.",
+        "Removed universal BMG/AUS/IPP prednisone cutoffs, guaranteed hydrocortisone antiemesis and zero mortality. Scoped PADDI to a studied single 8 mg dose and UC 2026 steroid taper to elective proctectomy/restorative surgery."
+      ],
+      "reviewedAt": "2026-09-12",
+      "unresolved": [
+        "Table 8 suggested regimens rely substantially on clinical practice and limited comparative evidence; lower-dose center protocols exist.",
+        "PADDI complete manuscript/tables/figures/supplements were not obtained; observed abstract and selected primary passages support only the restrained single-dose summary.",
+        "No comprehensive verification of other transplant rejection or specialty steroid protocols, which remain in their companion hubs."
       ]
     }
   ]

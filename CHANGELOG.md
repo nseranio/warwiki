@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Eighth continuation: wound evidence, radiation and perioperative safety
+
+Revised 21 documentation pages covering wound biology/adjuncts/HBOT, radiation effects, ureteral drainage, genital lymphedema and perioperative care. Corrected 20 wrong radiation-page PubMed links, misleading outcome denominators, device instructions and universal treatment claims. Added SWHSI-2, current PACE-B follow-up, CIRSE 2026 and high-yield perioperative evidence with explicit applicability limits. The new wound diagram has no fixed healing deadline.
+
+Complete Cochrane NPWT and HBOT reviews, including all graphics, were read; original-trial, product-label, guideline and supplement access is documented precisely. Focused independent peer checks were completed. Ledger: 594 current full MDX reads and 566 scoped updates across 1,186 pages; no whole-site clinical clearance. Lint/typecheck, 32 component and 51 maintenance tests pass; build 133.29 MB, all 98,467 compiled links/assets and 730 data links valid. All 25 browser checks pass. Publication tracked in the [eighth release record](reports/2026-09-12/eighth-continuation-release.md). Continue after this checkpoint.
+
+---
+
 ## 2026-09-12 — Seventh continuation: alternative grafts, catheter trials and warning-box repair
 
 49documentation files changed:23substantive revisions and26additional presentation-only repairs. Corrected five alternative-graft pages, six urinary-catheter pages, six scrotal pages, final fistula pages/companion and MukoCell subgroup figures. The review ledger records575current full MDX reads and545scoped updates; source access remains explicitly incomplete.

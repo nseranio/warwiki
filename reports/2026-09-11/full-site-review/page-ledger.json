@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T10:39:21.759670+00:00",
+  "generatedAt": "2026-09-12T11:27:37.155207+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 575,
+    "fullTextReadForCurrentContent": 594,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
-      "unresolved": 26,
-      "unreviewed": 594,
-      "updated": 545
+      "unresolved": 19,
+      "unreviewed": 580,
+      "updated": 566
     }
   },
   "pages": [
@@ -391,22 +391,28 @@
       "title": "Perioperative Care",
       "section": "01-foundations",
       "kind": "landing/database",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "336203a2eb44e6a32aad8bdc239759813f7dc8eeffcc998c686853ff0bb442d1",
+      "sourceSha256": "2202f4e573b63320630b1f97ce6947201e598707084862c86a07ea60b5b21736",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/index.mdx",
           "title": "Perioperative Care",
-          "status": "unresolved",
-          "fullTextRead": false,
+          "status": "updated",
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "336203a2eb44e6a32aad8bdc239759813f7dc8eeffcc998c686853ff0bb442d1",
-          "sourceSha256": "336203a2eb44e6a32aad8bdc239759813f7dc8eeffcc998c686853ff0bb442d1",
-          "scope": "Not yet read; no clinical verification claimed.",
+          "sourceSha256": "2202f4e573b63320630b1f97ce6947201e598707084862c86a07ea60b5b21736",
+          "scope": "Entire 108-line navigation/index MDX read, including all descriptions and targets. No substantive dosing/operative instructions. Antisepsis description made neutral to avoid overstating one historical guideline position.",
           "sources": [],
-          "notes": [],
+          "notes": [
+            "Navigation description simplified; clinical evidence remains in root-reviewed linked antisepsis hub. All other descriptions are summaries of linked topic scope."
+          ],
+          "reviewedAt": "2026-09-12",
+          "unresolved": [
+            "Index review does not constitute clearance of linked articles."
+          ],
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -505,22 +511,79 @@
       "title": "Nausea & Vomiting",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a9de6bf59b9ab0638b27b60ac4684ae80be91ee3e716584e210aba689393e9d4",
+      "sourceSha256": "0ba97810d349b19d139cee8f81120b38dceefb2d820043c91d913d1a78ea0e6d",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/intraoperative-care/nausea-vomiting.mdx",
           "title": "Nausea & Vomiting",
-          "status": "unresolved",
-          "fullTextRead": false,
+          "status": "updated",
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "a9de6bf59b9ab0638b27b60ac4684ae80be91ee3e716584e210aba689393e9d4",
-          "sourceSha256": "a9de6bf59b9ab0638b27b60ac4684ae80be91ee3e716584e210aba689393e9d4",
-          "scope": "Not yet read; no clinical verification claimed.",
-          "sources": [],
-          "notes": [],
+          "sourceSha256": "0ba97810d349b19d139cee8f81120b38dceefb2d820043c91d913d1a78ea0e6d",
+          "scope": "Complete original and revised MDX, all tables and bibliography read. Entire Fifth Consensus full-report narrative pp1\u201328 read, plus supplementary tables and primary label sections as detailed below. References and actual guideline algorithms were not fully reviewed.",
+          "sources": [
+            {
+              "url": "https://cdn-links.lww.com/permalink/aa/f/aa_1_1_2025_11_24_cd_1_sdc1.pdf",
+              "doi": "10.1213/ANE.0000000000007816",
+              "cache": "/tmp/workflow-ponv2025-full.pdf",
+              "readScope": "Entire full-report narrative, author pages, contents and endorsement list pp1\u201328 read. Bibliography pp29\u201351 only initial entries observed, not fully read. Separate executive summary selected sections read; actual algorithm figures not yet obtained/visually reviewed."
+            },
+            {
+              "url": "https://links.lww.com/AA/F570",
+              "cache": "/tmp/workflow-ponv2025-tables.pdf",
+              "readScope": "All substantive Appendix 3 grading, supplementary Tables S1\u2013S8 and Appendix 4 Tables1\u20133 text pp1\u201315 read; dose Tables1/3 visually inspected on rendered pp12/15. Supplementary references pp16 onward not read; search-strategy appendix not read."
+            },
+            {
+              "url": "https://www.cochrane.org/evidence/CD012859_which-medicines-work-best-prevent-people-being-sick-vomiting-after-operation",
+              "doi": "10.1002/14651858.CD012859.pub2",
+              "readScope": "Entire original abstract and plain-language summary read; full review/appendices not read. 585 overall trials versus 282 vomiting-network distinction and lower safety certainty retained."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d1b111eb-659a-496b-a86a-8f0fa370f147",
+              "readScope": "Primary current label indication/dose and CYP/warfarin/contraception warning summaries read; not entire label."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab23bc6e-b6a8-165f-e053-2a95a90ab144",
+              "readScope": "Label indication, section2.1 dose and5.1 QT precaution plus interaction summaries read; not entire label."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=d89f33ac-8a6e-49e7-94fb-84e58aad65a8",
+              "readScope": "Complete boxed warning, indication, contraindication and warning sections read; not entire label."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=b877a694-a1d0-4280-937a-a06820b12a88",
+              "readScope": "Complete indication, administration, contraindications and warnings5.1\u20135.8 read including2025 hyperthermia; not entire label."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cdb2c4b4-a20a-3f8f-e053-2a95a90aaf72",
+              "readScope": "Current label selected indication, hepatic-dose, contraindication and full warnings5.1\u20135.4 read. Oral16mg instruction corroborated from primary label indexed text and FifthConsensus."
+            },
+            {
+              "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requires-updates-labeling-promethazine-hydrochloride-injection-products",
+              "readScope": "Entire substantive FDA safety communication including both adult/pediatric preparation tables read."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=481866da-a712-48a5-853f-8e84aacaab6d",
+              "readScope": "Complete boxed warning, route contraindications and tissue-injury administration warning read; not entire label."
+            }
+          ],
+          "notes": [
+            "Updated adult two-intervention prophylaxis at any risk; removed rigid monotherapy at one risk factor and universal combination superiority. Removed exploratory ML risk claims and routine procedural blanket rules.",
+            "Corrected ondansetron IV end-of-surgery timing and 16 mg oral prophylaxis distinction; added labeled amisulpride prevention/treatment and IV aprepitant formulation distinction.",
+            "Rescue different class with >6 hour limited repeat exception; no scopolamine as immediate rescue or prophylaxis-to-rescue efficacy assumption.",
+            "Preserved current FDA label QT precautions despite more reassuring consensus narrative; added promethazine dilution/vein/infusion and pediatric respiratory warning, scopolamine 2025 hyperthermia/retention/MRI cautions, and APONVIE contraception/interactions.",
+            "Pediatric dosing/algorithm separate from adult Apfel; no mandatory third pediatric agent. Removed fictitious ileal-conduit bladder-retention mechanism and unnecessary editorial references to old page."
+          ],
+          "reviewedAt": "2026-09-12",
+          "unresolved": [
+            "Full Cochrane review, all original seven-source manuscripts and every underlying FifthConsensus trial not read; no exhaustive reference certification.",
+            "Guideline full narrative contains occasional internally inconsistent exploratory risk entries, PDNV percentages and label-safety shorthand; these were not generalized. Actual guideline flowcharts not yet visually reviewed.",
+            "Drug-specific prescribing limits beyond selected common workflow instructions remain in product labeling/anesthesia-pharmacy protocols."
+          ],
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -871,28 +934,93 @@
       "title": "Antithrombotic Therapy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "06f62d9317c81f0f4b85ef3ae88ec8c3a3f1274b83f8c2fa30331a935b65db94",
+      "sourceSha256": "f948415591d5fe3a54fc8f409a2721a9585d8a9fb7ea177b84a4e6fee66b4eb9",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx",
           "title": "Antithrombotic Therapy",
-          "status": "unresolved",
+          "status": "updated",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "06f62d9317c81f0f4b85ef3ae88ec8c3a3f1274b83f8c2fa30331a935b65db94",
-          "sourceSha256": "06f62d9317c81f0f4b85ef3ae88ec8c3a3f1274b83f8c2fa30331a935b65db94",
-          "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-          "sources": [],
-          "notes": [
-            "Incorrect no-hold UFH neuraxial instruction; generic 12-hour LMWH postoperative/catheter rule misses regimen differences.",
-            "POISE-2 interpretation reversed; PATCH was spontaneous intracerebral hemorrhage, not ischemic stroke.",
-            "Routine bridge indications conflict with CHEST 2022 and overgeneralize PERIOP2; postoperative versus preoperative design and excluded valves must be distinguished.",
-            "28 days after discharge should be procedure-specific duration counted from surgery; procedure risks/table combine unverified contexts and Caprini recommendations are not a universal urologic mandate.",
-            "Current antithrombin labeling and heparin-resistance/sepsis evidence require source checks; odds ratio is not a 66% mortality risk reduction."
+          "sourceSha256": "f948415591d5fe3a54fc8f409a2721a9585d8a9fb7ea177b84a4e6fee66b4eb9",
+          "scope": "Full original and revised MDX, all tables and bibliography read. Consequential prophylaxis, bridging, antiplatelet, neuraxial, HIT/reversal and antithrombin claims checked against the scoped primary sources below. This is not exhaustive full-manuscript verification of every retained citation.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1016/j.eururo.2017.02.025",
+              "accessScope": "Complete primary abstract and identity read; full manuscript not obtained. Non-cancer scope retained."
+            },
+            {
+              "url": "https://doi.org/10.1097/EJA.0000000000002012",
+              "accessScope": "Complete main urology chapter, Table1 text, all11references/disclosures read; infographic not visually inspected. /tmp/workflow-PMC11224558.xml/.txt"
+            },
+            {
+              "url": "https://doi.org/10.1378/chest.11-2297",
+              "accessScope": "Primary indexed formal recommendations3.6.1\u20133.6.6 read, plus risk-model discussion. Full guideline/appendix not read. Follow recommendation cutoffs rather than inconsistent narrative."
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa1501035",
+              "accessScope": "Complete primary abstract and identity read; full manuscript not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1136/bmj.n1205",
+              "accessScope": "Complete main paper,4tables,2figurecaptions,12references/disclosures read; actual figures and supplement not read. 1471randomized1470analyzed; all prebridged; high-risk valve exclusions, early stop and randomization programming issue noted. /tmp/workflow-PMC8188228.xml/.txt"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.chest.2022.07.025",
+              "accessScope": "Official CHEST key recommendations and selected indexed primary recommendations5\u20137,14\u201315,21\u201328 read; full manuscript not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa1401105",
+              "accessScope": "Complete primary abstract and identity read; full manuscript not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jacc.2024.06.013",
+              "accessScope": "Indexed primary selected bridging, PCI timing and antiplatelet recommendations/Table12 read; not entire guideline."
+            },
+            {
+              "url": "https://doi.org/10.1136/rapm-2024-105766",
+              "accessScope": "Formal UFH/LMWH and dose-specific DOAC recommendations with surrounding context read (selected pp8\u20139,12\u201314); not complete29-page guideline. /tmp/pharm-asra2025.pdf/.txt"
+            },
+            {
+              "url": "https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication",
+              "accessScope": "Complete substantive FDA safety communication read, current US commercial-sales cessation verified."
+            },
+            {
+              "url": "https://doi.org/10.1016/S0140-6736(16)30392-0",
+              "accessScope": "Complete primary abstract and identity read; full manuscript not obtained. Spontaneous ICH context corrected."
+            },
+            {
+              "url": "https://doi.org/10.1182/bloodadvances.2018024489",
+              "accessScope": "Indexed primary formal4Ts and recommendations3.1/3.5/3.9 read; full guideline not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1182/hematology.2024000659",
+              "accessScope": "Complete main text and4figurecaptions read; actual graphics not inspected; references1\u201313 of23 read. No universal rescue recommendation."
+            },
+            {
+              "url": "https://www.fda.gov/media/188338/download",
+              "accessScope": "Complete July2025 prescribing text,11pages and3tables read; reconstitution figuresA\u2013F not visually inspected. /tmp/workflow-thrombate2025.pdf/.txt"
+            },
+            {
+              "url": "https://doi.org/10.1002/14651858.CD005370.pub3",
+              "accessScope": "Complete primary abstract and identity read; full review not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1016/j.thromres.2025.109302",
+              "accessScope": "Complete primary abstract and identity read; full review not obtained."
+            }
           ],
+          "notes": [
+            "Corrected UFH/LMWH neuraxial timing, postoperative versus preoperative bridging scope, aspirin/PATCH direction and populations, procedure-specific prophylaxis and duration counted from surgery.",
+            "Removed unsupported procedure risk percentages, routine high-risk dose escalation, automatic valve bridging, universal DOAC platelet-recovery wait and observational mortality causality.",
+            "Aligned FDA antithrombin indication/calculation/hypersensitivity and current Andexxa status with pharmacology companions.",
+            "All original23reference identities/available abstracts from the41source batch checked where available; original narrative references without accessible full text were removed when their associated detailed claims were unsupported. No mass review stamp."
+          ],
+          "finalTextReread": true,
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -903,7 +1031,7 @@
       "section": "01-foundations",
       "kind": "article",
       "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
       "sourceSha256": "2bbc9bfbd59e250e9a4870d8f731ab4dc42828d2ae902f9f5f45c5b2ac992a07",
       "reviewRecords": [
@@ -911,13 +1039,15 @@
           "file": "docs/01-foundations/perioperative-care/perioperative-protocols/eras.mdx",
           "title": "Enhanced Recovery After Surgery (ERAS)",
           "status": "unresolved",
-          "fullTextRead": false,
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "2bbc9bfbd59e250e9a4870d8f731ab4dc42828d2ae902f9f5f45c5b2ac992a07",
           "sourceSha256": "2bbc9bfbd59e250e9a4870d8f731ab4dc42828d2ae902f9f5f45c5b2ac992a07",
-          "scope": "Not yet read; no clinical verification claimed.",
+          "scope": "Complete original 255-line MDX, all tables and 19 bibliography entries read. Primary verification/correction in progress.",
           "sources": [],
-          "notes": [],
+          "notes": [
+            "Universal fluid cap, postoperative targets and prophylaxis/catheter advice need individualization; odds-ratio-to-risk and observational-to-causal language, duplicate guideline and suspicious article identity/outcome claims require correction."
+          ],
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -927,22 +1057,102 @@
       "title": "Constipation",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "17c41936825d0a5d0b258dcb22fdb09c0f5037aa440e44de884b3aab273b7328",
+      "sourceSha256": "60e891d49708f4e27865a7733f58457605077c97d16c9c1f976f5313af3c4aa5",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/postoperative-management/constipation.mdx",
           "title": "Constipation",
-          "status": "unresolved",
-          "fullTextRead": false,
+          "status": "updated",
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "17c41936825d0a5d0b258dcb22fdb09c0f5037aa440e44de884b3aab273b7328",
-          "sourceSha256": "17c41936825d0a5d0b258dcb22fdb09c0f5037aa440e44de884b3aab273b7328",
-          "scope": "Not yet read; no clinical verification claimed.",
-          "sources": [],
-          "notes": [],
+          "sourceSha256": "60e891d49708f4e27865a7733f58457605077c97d16c9c1f976f5313af3c4aa5",
+          "scope": "Complete original 159-line MDX and final rewritten MDX, all tables and bibliography read. Targeted current primary guideline, label and trial verification of bowel preparation, OIC, ileus prevention, acute imaging and escalation. Not all original ten manuscripts were obtained; replaced unsupported instructions rather than certifying them.",
+          "sources": [
+            {
+              "url": "https://amedeolucente.it/public/the%20Medical%20Management%20of%20Opioid-Induced%20Constipation.pdf",
+              "readScope": "All nine pages of original AGA main text, Tables 1\u20135 as text and all 58 bibliography entries read in contiguous overlapping web PDF chunks. Actual tables not visually verified; referred Figure 1 decision tool is separate and not obtained. Full accompanying technical review not read.",
+              "doi": "10.1053/j.gastro.2018.07.016"
+            },
+            {
+              "url": "https://gastro.org/clinical-guidance/medical-management-of-opioid-induced-constipation/",
+              "readScope": "Entire formal official recommendation list read, confirming laxative-first, PAMORA strengths and no recommendations for lubiprostone/prucalopride."
+            },
+            {
+              "url": "https://link.springer.com/article/10.1186/s13017-018-0185-2",
+              "readScope": "Full patient-assessment, diagnostic imaging, nonoperative-management and operative-management sections read with supporting rationale; also scope and special-population narrative. Not a complete guideline/table/figure/bibliography read. Used for general adhesive SBO, not a universal early postoperative waiting interval.",
+              "doi": "10.1186/s13017-018-0185-2"
+            },
+            {
+              "url": "https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/disease-management",
+              "readScope": "Current radical-cystectomy perioperative-management section and formal recommendations, including against bowel preparation, read. Other MIBC chapters not reviewed."
+            },
+            {
+              "url": "https://www.ascrsu.com/ascrs/repview?name=2_2851103_PDF&type=784-162",
+              "readScope": "Complete recommendations 2\u20133 and supporting bowel-preparation paragraphs read in official full PDF page 1372; not complete fifteen-page guideline, figures or bibliography.",
+              "doi": "10.1097/DCR.0000000000003450",
+              "cache": "/tmp/workflow-ascrs-ssi.pdf"
+            },
+            {
+              "url": "https://doi.org/10.1111/iju.15668",
+              "readScope": "Complete primary abstract read from saved indexed MED data and official Wiley title/authors verified. Full paper not read; no causal or universal diversion inference.",
+              "cache": "/tmp/pharm-bowelprep-primary.json"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9746347/",
+              "readScope": "Complete postoperative mobilization, ileus prevention and alvimopan sections 20\u201323, routine NGT 19 and relevant fluid/analgesia passages read; not entire guideline/415 references/figures. Colorectal scope and limited extrapolation to GU stated.",
+              "doi": "10.1097/DCR.0000000000002650"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6278928/",
+              "readScope": "Full indexed Consensus Statement 10 and rationale plus source scope read; not the entire SHM article/supplement. Medical-inpatient scope made explicit.",
+              "doi": "10.12788/jhm.2980"
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cd584de-b704-4d26-8451-e3247ffb8d08",
+              "readScope": "Complete boxed warning, indications, dosing, contraindications and warnings 5.1\u20135.7 read; not whole label or underlying trials."
+            },
+            {
+              "url": "https://doi.org/10.1016/j.eururo.2014.02.036",
+              "readScope": "Complete original structured abstract read, including denominators/outcomes/limitations; full RCT/tables/supplements not obtained. Literal p-value text reread without generic HTML stripping.",
+              "cache": "/tmp/pharm-ileus-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/14651858.CD012111.pub2",
+              "readScope": "Complete original structured Cochrane abstract read; single included trial, outcome certainty and cardiovascular interval checked. Full review/tables not read.",
+              "cache": "/tmp/pharm-ileus-primary.json"
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c488fb7c-0a5b-487c-b452-996809d1cb99",
+              "readScope": "Complete indication subsections, administration-information subsection, contraindications and warnings 5.1\u20135.3 read. No universal dose matrix retained; full label/trial tables not read."
+            },
+            {
+              "url": "https://www.americanjournalofsurgery.com/article/S0002-9610%2819%2931038-4/fulltext",
+              "readScope": "Complete publisher abstract and highlights read; no complete manuscript. No-consensus waiting interval and cause/index-procedure selection retained.",
+              "doi": "10.1016/j.amjsurg.2019.11.008"
+            },
+            {
+              "url": "https://acsearch.acr.org/list/TopicNarrativePdf?topicId=134",
+              "readScope": "Both initial-imaging variant tables and complete acute-presentation CT subsection read, including oral contrast and CT ischemia sensitivity limits; not full narrative, references or other modalities. PDF itself headed New 2019; not misdated as a newly issued 2026 guideline.",
+              "cache": "/tmp/workflow-acr-sbo.pdf"
+            }
+          ],
+          "notes": [
+            "Removed fixed POD-five CT delay, universal 10\u201314-day obstruction wait, mandatory POD-three phosphate enema, docusate-first ladder, and unreliable sound/stool/onset distinctions.",
+            "Corrected alvimopan preventive/label scope, preoperative start, prior-opioid contraindication, 280 randomized versus 277 analysis and single-trial Cochrane overlap; removed cardiovascular safety guarantee.",
+            "Corrected AGA lubiprostone/prucalopride position and methylnaltrexone chronic-versus-advanced-illness route/indication confusion; retained current perforation/withdrawal cautions.",
+            "Separated EAU urinary-diversion preparation from ASCRS elective colorectal preparation; 2025 Simhal remains observational and scoped. Fresh-repair rectal-intervention caution is an explicitly individualized surgical workflow inference, not a claimed trial-tested protocol."
+          ],
+          "reviewedAt": "2026-09-12",
+          "unresolved": [
+            "Lee alvimopan RCT and Cochrane full manuscripts/tables/supplements remain unavailable; complete abstracts only.",
+            "New AUA 2026 meeting abstract DOI 10.1097/01.JU.0001191604.52386.88.03 was discovered but unavailable; no purported results used.",
+            "New ERAS gynecologic-oncology 2026 DOI 10.1016/j.ygyno.2026.05.022 is queued for the separate ERAS review; no unread recommendation imported.",
+            "No universal GU reconstruction postoperative bowel regimen is validated here; procedure-specific bowel/rectal healing and consultation remain necessary."
+          ],
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -1053,28 +1263,90 @@
       "title": "Pulmonary Embolism",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e61149eda6948bf7046b0f76113a8d141bcc91dde1f05add3c31d59b91d82fb8",
+      "sourceSha256": "3864f4aed6ee8d8103e81dab9f3e91ffaec36c1ba99bff4b0c2583f28425f65f",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx",
           "title": "Pulmonary Embolism",
-          "status": "unresolved",
+          "status": "updated",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "e61149eda6948bf7046b0f76113a8d141bcc91dde1f05add3c31d59b91d82fb8",
-          "sourceSha256": "e61149eda6948bf7046b0f76113a8d141bcc91dde1f05add3c31d59b91d82fb8",
-          "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-          "sources": [],
-          "notes": [
-            "2026 guideline is cited but new A\u2013E classification and one-week follow-up are missing.",
-            "Postoperative low D-dimer absolute 2-week prohibition, automatic day-7 DOAC transition, blanket GI-cancer exclusion and routine recurrent-PE filter indication need correction.",
-            "Thrombolysis effect from mixed trial populations mislabeled high-risk-only; catheter thrombolysis still carries bleeding risk after surgery.",
-            "Active cancer mislabeled strong transient factor; persistent risk factor versus unprovoked conflated; CTEPH hemodynamic definition incomplete.",
-            "High-yield HI-PEITHO 2026 544-patient randomized trial missing; obtain full main trial and exclusion criteria before adding scoped summary."
+          "sourceSha256": "3864f4aed6ee8d8103e81dab9f3e91ffaec36c1ba99bff4b0c2583f28425f65f",
+          "scope": "Full original and revised MDX with all tables/bibliography read. Major diagnostic, treatment, postoperative, follow-up and new-trial claims corrected using scoped primary sources. Complete main HI-PEITHO and API-CAT papers read; not all75pages of the2026 guideline or all cited manuscripts.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1001/jama.2022.16815",
+              "accessScope": "Complete primary abstract and identity read; full review not obtained."
+            },
+            {
+              "url": "https://doi.org/10.1161/CIR.0000000000001415",
+              "accessScope": "Selected actual primary guideline diagnosis/PERC/D-dimer/imaging, categories/Figure2, risk/disposition/hemodynamic, anticoagulation, IVC filters, reperfusion, duration and follow-up/CTEPD sections read. Not whole75pages/evidence tables. Figure2 visually inspected in early-online PDF; final published pagination checked. /tmp/workflow-pe2026.pdf/.txt"
+            },
+            {
+              "url": "https://doi.org/10.1001/jama.2014.2135",
+              "accessScope": "Primary abstract, selected methods/results and Table2 read; not complete article or figures. Recent surgery392/3324; outpatient ED applicability retained."
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jacc.2017.09.024",
+              "accessScope": "Complete primary abstract and identity read; full review not obtained."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e9481622-7cc6-418a-acb6-c5450daae9b0",
+              "accessScope": "Current label adult dosage2.1 plus indications/highlights/contraindications read; not full label or pediatric tables."
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+              "accessScope": "Current label adult dosage2.1, treatment/extended VTE indications and relevant clinical study text read; not full label."
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa2510703",
+              "accessScope": "Complete primary abstract read and identity verified PMID41812192. No full main paper obtained. 2760randomized; primary analyzed1345/1355, not all randomized."
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03266783",
+              "accessScope": "Complete registered inclusion/exclusion criteria read via API; full trial protocol not read. /tmp/workflow-NCT03266783.json"
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa2416112",
+              "accessScope": "Complete main paper11publishedpages1363\u20131373 plus2repositorycovers,28refs/disclosures,2tables/2figures read and visually inspected. Publisher protocol/appendix unavailable; not read. Institutional primary copy https://access.archive-ouverte.unige.ch/access/metadata/0a73c0c0-9f0d-4d6e-ab11-e3c1062f5879/download ; /tmp/workflow-api-cat2025.pdf/.txt"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03692065",
+              "accessScope": "Complete registered eligibility criteria read; no protocol. Major surgery2weeks, several bleeding/function exclusions. /tmp/workflow-NCT03692065.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/S0140-6736(24)02842-3",
+              "accessScope": "Complete primary abstract read; full main paper unavailable. Failed noninferiority retained; corrected HR confidenceinterval from primary rather than malformed2026guideline reproduction."
+            },
+            {
+              "url": "https://doi.org/10.1161/CIR.0000000000001117",
+              "accessScope": "Complete primary abstract/identity read; no full statement."
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa1302097",
+              "accessScope": "Complete primary abstract plus indexed selected results/discussion read; no complete main/figures/supplement. Death/decompensation versus mortality and bleeding distinguished."
+            },
+            {
+              "url": "https://doi.org/10.1056/NEJMoa2516567",
+              "accessScope": "Complete12page main article,39refs/disclosures,4tables/flowfigure read and visually inspected. Protocol/appendix403, notread. 544ITT/542treated and bleeding denominators distinguished. Primary institutional copy https://www.unimedizin-mainz.de/fileadmin/kliniken/kardiologie_1/Bilder/paper_of_the_month/NEJM_4-2026.pdf ; /tmp/workflow-hipeitho2026.pdf/.txt"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT04790370",
+              "accessScope": "Complete registered eligibility read, including exclusion of major surgery/trauma in preceding3weeks. /tmp/workflow-hipeitho-registry.json"
+            }
           ],
+          "notes": [
+            "Replaced unsupported epidemiology/mortality and rigid postoperative day rules; distinguished VTE from PE and active cancer from transient provoking factors.",
+            "Corrected PERC and D-dimer setting/assay limits, normotensive shock,2026A\u2013Eclassification, LMWH/UFH nuance, GI/GU cancer selection, DOAC food and treatment/extended doses.",
+            "Added HI-PEITHO, COBRRA, API-CAT and RENOVE with explicit endpoints/denominators and recent-surgery or access limitations; no mortality/equivalence overclaim.",
+            "Reframed IVC filter and reperfusion decisions and corrected follow-up to within1week/by3months and ongoing symptom surveillance.",
+            "Remaining limitation: guideline evidence tables and unavailable trial supplements/full COBRRA/RENOVE papers have not been read; no complete clinical certification."
+          ],
+          "finalTextReread": true,
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -1171,22 +1443,61 @@
       "title": "Immunosuppression",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "58182db0a32dcc9929727731009c41f87149dca7e7302d0097a24b472b34404d",
+      "sourceSha256": "8a5cae68a31dd545b716bd11a2c4afc1a96155aab803819fd2a8d41d4b8428cf",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx",
           "title": "Immunosuppression",
-          "status": "unresolved",
-          "fullTextRead": false,
+          "status": "updated",
+          "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "58182db0a32dcc9929727731009c41f87149dca7e7302d0097a24b472b34404d",
-          "sourceSha256": "58182db0a32dcc9929727731009c41f87149dca7e7302d0097a24b472b34404d",
-          "scope": "Not yet read; no clinical verification claimed.",
-          "sources": [],
-          "notes": [],
+          "sourceSha256": "8a5cae68a31dd545b716bd11a2c4afc1a96155aab803819fd2a8d41d4b8428cf",
+          "scope": "Complete original and revised MDX, context table and bibliography read. Targeted current primary recommendations checked with separate full-article versus selected-section/abstract access below.",
+          "sources": [
+            {
+              "url": "https://www.rcsed.ac.uk/news-resources/rcsed-blog/2022/september/transplant-immunosuppression-in-the-perioperative-period/",
+              "readScope": "Entire substantive professional guidance article read; authored clinical blog, not formal guideline/RCT."
+            },
+            {
+              "url": "https://doi.org/10.3389/ti.2023.11802",
+              "cache": "/tmp/workflow-fistula-abstracts/10_3389_ti_2023_11802.json",
+              "readScope": "Complete primary abstract and identity read; full main study/tables/supplements not read."
+            },
+            {
+              "url": "https://academic.oup.com/ecco-jcc/article/18/10/1556/7693896",
+              "doi": "10.1093/ecco-jcc/jjae089",
+              "readScope": "Primary selected sections 3.16\u20133.18, 4.9\u20134.10 and biologic rationale/practice sections read. Complete guideline and figures/supplements not read."
+            },
+            {
+              "url": "https://academic.oup.com/ecco-jcc/article/20/6/jjag072/8722674",
+              "doi": "10.1093/ecco-jcc/jjag072",
+              "readScope": "Primary indexed Statement 10 and supporting medication paragraphs read. Full guideline/figures/supplements not read; low-evidence and small-molecule limitations retained."
+            },
+            {
+              "url": "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.24893",
+              "readScope": "Primary indexed formal biologic withholding, selected conventional-DMARD and restarting recommendations read; arthroplasty population scoped. Full guideline/supplements not read."
+            },
+            {
+              "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria/",
+              "readScope": "Complete formal XIII.1\u20133 and XIV.1\u20132 and supporting endourology/device portions read; not whole guideline."
+            }
+          ],
+          "notes": [
+            "Removed autotransplantation-as-immunosuppression implication; maintenance interruption and mTOR substitution are coordinated with transplant team, not automatic.",
+            "Replaced blanket biologic holding rules with distinct Crohn abdominal, UC 2026 and inflammatory-arthritis arthroplasty contexts; limited JAK/new-agent evidence explicit.",
+            "Seton recommendation restricted to complex perianal Crohn fistulas; removed enterourinary seton instruction and unqualified interposition-flap guarantee.",
+            "Corrected colonization treatment versus symptomatic infection and mucosal-trauma prophylaxis, with IDSA AUS/IPP ASB exception. Yang300 retrospective association does not establish causal benefit of immunosuppression reduction.",
+            "ECCO 2026 author sequence confirmed against original MED bibliographic record; corrected from mistaken draft sequence."
+          ],
+          "reviewedAt": "2026-09-12",
+          "unresolved": [
+            "No comprehensive drug-by-drug transplant, rheumatologic or newer IBD agent protocol established; use treating-specialty plans.",
+            "Evidence for GU-specific timing of biologics and mTOR interruption remains insufficient; arthroplasty rules are not presented as proven GU rules."
+          ],
           "recordFile": "perioperative-care.json"
         }
       ]
@@ -1221,26 +1532,62 @@
       "title": "Steroids",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f3ec18969a19a00477b4b81f89ad3ecacb9ef3316f884e321607c3ba18fb9bc9",
+      "sourceSha256": "4866b321476bfaa25e30a4bb909ce52a0e30199b8824da87d6716ac2ef96cfaa",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx",
           "title": "Steroids",
-          "status": "unresolved",
+          "status": "updated",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "originalSha256": "f3ec18969a19a00477b4b81f89ad3ecacb9ef3316f884e321607c3ba18fb9bc9",
-          "sourceSha256": "f3ec18969a19a00477b4b81f89ad3ecacb9ef3316f884e321607c3ba18fb9bc9",
-          "scope": "Full original MDX including all tables, practical instructions and bibliography read. Primary-source verification and corrections underway.",
-          "sources": [],
+          "sourceSha256": "4866b321476bfaa25e30a4bb909ce52a0e30199b8824da87d6716ac2ef96cfaa",
+          "scope": "Complete original and revised MDX, all tables and bibliography read. Targeted primary source verification of adrenal risk, recovery tests, stress coverage and crisis management; no claim that every guideline chapter or trial supplement was fully read.",
+          "sources": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11180513/",
+              "doi": "10.1210/clinem/dgae250",
+              "cache": "/tmp/workflow-PMC11180513.xml",
+              "readScope": "Complete summary recommendations and definitions; complete sections s9.8\u2013s9.11 and s9.14\u2013s9.16, including Tables 6, 8, 9 and relevant figure captions read. Remaining manuscript, actual graphics and supplements not read."
+            },
+            {
+              "url": "https://www.endocrinology.org/clinical-practice/clinical-guidance/adrenal-crisis/",
+              "readScope": "Complete substantive adult emergency guidance and patient preparedness sections read; pediatric material not reviewed."
+            },
+            {
+              "url": "https://www.nice.org.uk/guidance/NG243/chapter/recommendations",
+              "readScope": "Primary recommendations 1.7.1\u20131.7.9 for adult adrenal crisis read; not the full guideline."
+            },
+            {
+              "url": "https://www.binasss.sa.cr/mayo2021/31.pdf",
+              "doi": "10.1056/NEJMoa2028982",
+              "readScope": "Complete primary abstract; original PDF pages 1\u20132 and part of 3 through postoperative day-3 wound assessment, plus indexed original NEJM selected Methods/Results/Discussion read. Remaining full main paper, tables/figures and supplements not fully read; repeated full PDF downloads timed out."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23759697/",
+              "doi": "10.1016/j.amjsurg.2012.11.018",
+              "readScope": "Complete original abstract read; full review unavailable, so no procedure-specific dose or risk estimate asserted."
+            },
+            {
+              "url": "https://academic.oup.com/ecco-jcc/article/20/6/jjag072/8722674",
+              "doi": "10.1093/ecco-jcc/jjag072",
+              "readScope": "Primary indexed Statement 10 and its support concerning steroid taper, biologics and small molecules read; low evidence and UC operation scope preserved. Complete guideline not read."
+            }
+          ],
           "notes": [
-            "Current 2024 HPA suppression dose/duration and recovery-testing thresholds conflict with existing categories; chronic low-dose and inhaled-risk statements are too absolute.",
-            "Guideline Table 8 stress coverage applies to adrenal-insufficiency risk, not every steroid user; avoid double-counting usual dose and indefinite NPO 200 mg.",
-            "Unverified universal BMG/prosthesis prednisone dose cutoffs, chronic IC steroid framing, and assured stress hydrocortisone antiemesis require correction.",
-            "Postoperative 2\u20133x baseline oral regimen is not the cited Table 8 scheme and may lower a high baseline; crisis hyperkalemia applies primarily mineralocorticoid-deficient disease."
+            "Separated chronic replacement, stress coverage and single-dose antiemesis; corrected 2024 dose/duration risk thresholds, prior higher-dose risk and nonoral exposure.",
+            "Recovery cortisol thresholds and test context corrected; general/regional anesthetic Table 8 coverage explicitly limited to diagnosed/at-risk adults, with baseline dose preservation and no duplicate oral/IV dosing.",
+            "Crisis treatment starts without waiting for refractory shock or lab confirmation; saline and monitoring specified with cardiorenal individualization; glucocorticoid-induced insufficiency does not routinely require fludrocortisone.",
+            "Removed universal BMG/AUS/IPP prednisone cutoffs, guaranteed hydrocortisone antiemesis and zero mortality. Scoped PADDI to a studied single 8 mg dose and UC 2026 steroid taper to elective proctectomy/restorative surgery."
+          ],
+          "reviewedAt": "2026-09-12",
+          "unresolved": [
+            "Table 8 suggested regimens rely substantially on clinical practice and limited comparative evidence; lower-dose center protocols exist.",
+            "PADDI complete manuscript/tables/figures/supplements were not obtained; observed abstract and selected primary passages support only the restrained single-dose summary.",
+            "No comprehensive verification of other transplant rejection or specialty steroid protocols, which remain in their companion hubs."
           ],
           "recordFile": "perioperative-care.json"
         }
@@ -5892,11 +6239,36 @@
       "title": "Hyperbaric Oxygen Therapy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "456fe9a5669b764e2ac7b827133dcc5888fc8f68343227ba17b9806f51769b6f",
-      "reviewRecords": []
+      "sourceSha256": "577b44b59ddaba404af4c455a471f49bb28378b37e08f34dd5fb32e4e5df54df",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/hyperbaric-oxygen-therapy.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "577b44b59ddaba404af4c455a471f49bb28378b37e08f34dd5fb32e4e5df54df",
+          "scope": "Complete original and final revised MDX, tables and references read. Primary reading includes complete main manuscripts, selected guidance/labels and available abstracts; exact figures/supplement limits in reports/2026-09-12/wound-care-review.md and companion source-access JSON. No all-paper clearance asserted.",
+          "changes": [
+            "Corrected RICH-ART trial versus crossover follow-up, missingness and endpoint attribution.",
+            "Corrected HOT2, Fournier/NSTI causality, fistula, graft and sexual-function claims; narrowed selection and safety."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/j.eclinm.2025.103214",
+            "https://doi.org/10.1016/S1470-2045(15)00461-1",
+            "https://doi.org/10.1371/journal.pone.0300738",
+            "https://doi.org/10.1002/14651858.CD005005.pub5"
+          ],
+          "unresolved": [
+            "Some full original manuscripts, product IFUs, graphics and supplements remain inaccessible or unread. Linked media and independent clinical sign-off are incomplete."
+          ],
+          "peerReview": "Independent reviewer fully read revised pages and performed focused source checks. See wound-hbot-peer-review.md and wound-adjuncts-peer-review.md; infection/pH correction incorporated and reread.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/incisions-closure.mdx",
@@ -5958,11 +6330,478 @@
       "title": "Radiation & Tissue Effects",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "567051b2b1153e90bc01bf3fdb441251acea631699f49875cf4974bc649eacf3",
-      "reviewRecords": []
+      "sourceSha256": "ddee436a0b2e2675d0ba3b60c5df3165fbe41c639af507854b395b3140780b4e",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/radiation-tissue-effects.mdx",
+          "title": "Radiation & Tissue Effects",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original 364-line MDX and all 31 original references read; entire revised 153-line MDX, every table and all 19 final references reread. Consequential safety, anatomy/selection, endpoint, denominator, temporal and reference-identity claims checked. Primary-source access varies and is described individually; this is not clinician sign-off or exhaustive confirmation of every original paper.",
+          "sources": [
+            {
+              "ref": 1,
+              "url": "https://doi.org/10.1056/NEJMra2506017",
+              "bibliography": "Citrin DE, Timmerman RD. Effects of radiotherapy in normal tissue. *N Engl J Med.* 2026;394:996\u20131009. [DOI](https://doi.org/10.1056/NEJMra2506017)",
+              "access": "Complete fourteen-page published main text (954 extracted lines), all five figure captions/extractable labels, all 72 references and main disclosure statement read. Actual figure graphics and separate disclosure forms were not inspected.",
+              "cacheOrAccessUrl": "/tmp/rad8-citrin2026.txt"
+            },
+            {
+              "ref": 2,
+              "url": "https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males",
+              "bibliography": "European Association of Urology. EAU Guidelines on Urethral Strictures. 2026. Disease management in males, radiation/high-energy induced posterior strictures and urinary diversion. [Guideline](https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males)",
+              "access": "Selected complete EAU 2026 radiation/high-energy posterior stricture and diversion sections read; relevant current pages 52\u201353 independently reread for EPA/augmentation selection, evidence level, functional outcomes and diversion. Not the entire guideline in this page review.",
+              "cacheOrAccessUrl": "/tmp/warwiki-eau-strictures-2026.txt"
+            },
+            {
+              "ref": 3,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36455582/",
+              "bibliography": "Martin JM, Richardson M, Siva S, et al. Mechanisms, mitigation, and management of urinary toxicity from prostate radiotherapy. *Lancet Oncol.* 2022;23:e534\u2013e543. [PMID 36455582](https://pubmed.ncbi.nlm.nih.gov/36455582/)",
+              "access": "Complete available primary indexed abstract and identity read; full article not accessed.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 4,
+              "url": "https://doi.org/10.1016/j.ijrobp.2017.01.008",
+              "bibliography": "Rodda S, Tyldesley S, Morris WJ, et al. ASCENDE-RT: an analysis of treatment-related morbidity for a randomized trial comparing a low-dose-rate brachytherapy boost with a dose-escalated external beam boost for high- and intermediate-risk prostate cancer. *Int J Radiat Oncol Biol Phys.* 2017;98:286\u2013295. [DOI](https://doi.org/10.1016/j.ijrobp.2017.01.008)",
+              "access": "Complete original primary abstract and identity read. Verified randomized enrollment 398 and actual-treatment morbidity analysis 383; cumulative grade 3 GU endpoint versus point prevalence. Full paper/tables/figures not read.",
+              "cacheOrAccessUrl": "/tmp/rad8-added-primary.json"
+            },
+            {
+              "ref": 5,
+              "url": "https://doi.org/10.1056/NEJMoa2403365",
+              "bibliography": "van As N, Griffin C, Tree A, et al. Phase 3 trial of stereotactic body radiotherapy in localized prostate cancer. *N Engl J Med.* 2024;391:1413\u20131425. [DOI](https://doi.org/10.1056/NEJMoa2403365)",
+              "access": "Complete thirteen-page published main text, entire Table 1, three figure captions and extractable plot labels/denominators, all 15 references, main funding/disclosure statement and author appendix read. Actual figure graphics, protocol, supplement and separate disclosures not inspected.",
+              "cacheOrAccessUrl": "/tmp/rad8-pace2024.txt"
+            },
+            {
+              "ref": 6,
+              "url": "https://doi.org/10.1016/j.eururo.2026.05.034",
+              "bibliography": "Cooper S, Patel J, Moore C, et al. Patient-reported outcomes after prostate stereotactic body radiotherapy at 5 yr: results from the PACE-B trial. *Eur Urol.* 2026. [DOI](https://doi.org/10.1016/j.eururo.2026.05.034)",
+              "access": "Complete primary indexed abstract and identity read. Item-specific five-year respondent denominators verified; full paper and waffle-chart graphics not accessed.",
+              "cacheOrAccessUrl": "/tmp/rad8-added-primary.json"
+            },
+            {
+              "ref": 7,
+              "url": "https://doi.org/10.1056/EVIDoa2300018",
+              "bibliography": "Donovan JL, Hamdy FC, Lane JA, et al. Patient-reported outcomes 12 years after localized prostate cancer treatment. *NEJM Evid.* 2023;2. [DOI](https://doi.org/10.1056/EVIDoa2300018)",
+              "access": "Complete accepted main manuscript narrative, abstract and all 29 references read via Cardiff institutional PDF. Acknowledgments and placeholder author text read. This author manuscript contains no supplied main tables/figure graphics; those and supplements were not independently reviewed. Shell download returned 403 but indexed PDF text was accessible.",
+              "cacheOrAccessUrl": "https://orca.cardiff.ac.uk/id/eprint/157780/3/Final%20ProtecT%20PROMs%20Oct%202022.pdf"
+            },
+            {
+              "ref": 8,
+              "url": "https://doi.org/10.5489/cuaj.5788",
+              "bibliography": "Goucher G, Saad F, Lukka H, Kapoor A. Canadian Urological Association Best Practice Report: diagnosis and management of radiation-induced hemorrhagic cystitis. *Can Urol Assoc J.* 2019;13:15\u201323. [DOI](https://doi.org/10.5489/cuaj.5788)",
+              "access": "Complete nine-page report, Table 1, extracted Figure 1 algorithm and caption, all 71 references and competing-interest statement read in contiguous chunks. Figure graphic itself not visually inspected.",
+              "cacheOrAccessUrl": "/tmp/rad8-cua.txt"
+            },
+            {
+              "ref": 9,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35260794/",
+              "bibliography": "David R, Buckby A, Kahokehr AA, et al. Long-term genitourinary toxicity following curative intent intensity-modulated radiotherapy for prostate cancer: a systematic review and meta-analysis. *Prostate Cancer Prostatic Dis.* 2023;26:8\u201315. [PMID 35260794](https://pubmed.ncbi.nlm.nih.gov/35260794/)",
+              "access": "Complete primary indexed abstract and identity read; pooled subset denominators and retention n=10 checked. Full paper/forest plots not read in this page review.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 10,
+              "url": "https://doi.org/10.1001/jamaoncol.2024.4397",
+              "bibliography": "Unger JM, Till C, Tangen CM, et al. Long-term adverse effects and complications after prostate cancer treatment. *JAMA Oncol.* 2024. [DOI](https://doi.org/10.1001/jamaoncol.2024.4397)",
+              "access": "Complete primary indexed abstract and identity read. Composite urinary/sexual endpoint separated from UI; observational Medicare linkage retained. Full manuscript/tables not read.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 11,
+              "url": "https://doi.org/10.1016/S1470-2045(19)30494-2",
+              "bibliography": "Oscarsson N, M\u00fcller B, Ros\u00e9n A, et al. Radiation-induced cystitis treated with hyperbaric oxygen therapy (RICH-ART): a randomised, controlled, phase 2\u20133 trial. *Lancet Oncol.* 2019;20:1602\u20131614. [DOI](https://doi.org/10.1016/S1470-2045(19)30494-2)",
+              "access": "Primary university research-portal abstract findings read for randomized design, exclusions after randomization and urinary symptom benefit. No independent complete original 2019 paper read; long-term design checked directly in 2025 Methods.",
+              "cacheOrAccessUrl": "https://researchprofiles.ku.dk/en/publications/radiation-induced-cystitis-treated-with-hyperbaric-oxygen-therapy/"
+            },
+            {
+              "ref": 12,
+              "url": "https://doi.org/10.1016/j.eclinm.2025.103214",
+              "bibliography": "Oscarsson N, Ros\u00e9n A, M\u00fcller B, et al. Radiation-induced cystitis treated with hyperbaric oxygen therapy (RICH-ART): long-term follow-up of a randomised controlled, phase 2\u20133 trial. *EClinicalMedicine.* 2025;83:103214. [DOI](https://doi.org/10.1016/j.eclinm.2025.103214)",
+              "access": "Complete primary abstract, full Methods and relevant Results including Tables 2 and 3, extracted Figure 2 caption and initial Table 4 values independently read. Checked 70 eligible/39 actual five-year, missingness, mixed model, exclusions and crossover. Root separately read entire main source; this reviewer did not independently read all main text, Table 1, actual graphics or supplement.",
+              "cacheOrAccessUrl": "/tmp/wound8-richart2025.txt"
+            },
+            {
+              "ref": 13,
+              "url": "https://doi.org/10.1002/14651858.CD005005.pub5",
+              "bibliography": "Lin ZC, Bennett MH, Hawkins GC, et al. Hyperbaric oxygen therapy for late radiation tissue injury. *Cochrane Database Syst Rev.* 2023;8:CD005005. [DOI](https://doi.org/10.1002/14651858.CD005005.pub5)",
+              "access": "Official Cochrane summary key message, main results and conclusions read. This is not a full independent review of all 18 trials, analyses or appendices; only qualitative uncertainty/selection conclusion used.",
+              "cacheOrAccessUrl": "https://www.cochrane.org/evidence/CD005005_hyperbaric-oxygen-therapy-treatment-late-effects-radiotherapy",
+              "additionalIndependentAccess": "Separate reviewer completed all main text,38tables,6appendices,91references and14graphics; see reports/2026-09-12/hbot-cochrane-source-review.md. No root claim of a second full review read."
+            },
+            {
+              "ref": 14,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26047655/",
+              "bibliography": "Rourke K, Kinnaird A, Zorn J. Observations and outcomes of urethroplasty for bulbomembranous stenosis after radiation therapy for prostate cancer. *World J Urol.* 2016;34:377\u2013382. [PMID 26047655](https://pubmed.ncbi.nlm.nih.gov/26047655/)",
+              "access": "Complete original indexed abstract and identity read; 23 EPA/7 BMG/5 flap and 30/35 whole-cohort patency verified. EAU 2026 discussion crosschecked. Full original manuscript not accessed.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 15,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/32814443/",
+              "bibliography": "Asghar AM, Lee Z, Lee RA, et al. Robotic ureteral reconstruction in patients with radiation-induced ureteral strictures: experience from the Collaborative of Reconstructive Robotic Ureteral Surgery. *J Endourol.* 2021;35:144\u2013150. [PMID 32814443](https://pubmed.ncbi.nlm.nih.gov/32814443/)",
+              "access": "Complete original indexed abstract and identity read; 32 patients/35 units, 30 successes/34 follow-up units after death exclusion, median 13 months and procedure categories verified. Full original manuscript not accessed.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 16,
+              "url": "https://doi.org/10.1007/s00192-026-06557-z",
+              "bibliography": "P\u00e9rez CDA, Rocha AKL, Volpato MP, et al. Prevalence of pelvic floor dysfunction in women after pelvic radiotherapy: systematic review and meta-analysis. *Int Urogynecol J.* 2026. [DOI](https://doi.org/10.1007/s00192-026-06557-z)",
+              "access": "Complete publisher main narrative from abstract through conclusion and all 32 references read. Verified eligibility, outcome-specific n, heterogeneity and observational limitations. Table 1/2 contents, two figure graphics, supplements and end disclosures not inspected; table-anchor clicks returned main text only. No causal or formal GRADE claim adopted.",
+              "cacheOrAccessUrl": "https://link.springer.com/article/10.1007/s00192-026-06557-z"
+            },
+            {
+              "ref": 17,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25198150/",
+              "bibliography": "Miles T, Johnson N. Vaginal dilator therapy for women receiving pelvic radiotherapy. *Cochrane Database Syst Rev.* 2014;9:CD007291. [PMID 25198150](https://pubmed.ncbi.nlm.nih.gov/25198150/)",
+              "access": "Complete primary 2014 Cochrane abstract and identity read; historical 2010 abstract also screened. No full 2014 report/appendices read.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 18,
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38458217/",
+              "bibliography": "Hickey M, Basu P, Sassarini J, et al. Managing menopause after cancer. *Lancet.* 2024;403:984\u2013996. [PMID 38458217](https://pubmed.ncbi.nlm.nih.gov/38458217/)",
+              "access": "Complete intended 2024 Lancet primary abstract and identity read. Unrelated 2026 similarly titled qualitative paper excluded. Full Lancet paper not accessed.",
+              "cacheOrAccessUrl": "/tmp/radiation-effects-title-primary.json"
+            },
+            {
+              "ref": 19,
+              "url": "https://doi.org/10.1001/jama.2014.2626",
+              "bibliography": "Pisansky TM, Pugh SL, Greenberg RE, et al. Tadalafil for prevention of erectile dysfunction after radiotherapy for prostate cancer: the Radiation Therapy Oncology Group [0831] randomized clinical trial. *JAMA.* 2014;311:1300\u20131307. [DOI](https://doi.org/10.1001/jama.2014.2626)",
+              "access": "Complete primary JAMA/PubMed abstract and identity read, including double-blind placebo design, spontaneous off-drug endpoint and null result. Full manuscript/tables/supplements not independently read.",
+              "cacheOrAccessUrl": "https://pubmed.ncbi.nlm.nih.gov/24691606/"
+            }
+          ],
+          "sourceSha256": "ddee436a0b2e2675d0ba3b60c5df3165fbe41c639af507854b395b3140780b4e",
+          "notes": [
+            "Replaced deterministic permanent/progressive injury and universal graft/anastomosis failure with individual tissue assessment; removed fixed fractionation/dosimetry rules and unvalidated molecular-prognosis implications.",
+            "Corrected ASCENDE-RT 18.4%/5.2% from alleged stricture to cumulative grade 3 GU toxicity, with treatment and denominator scope.",
+            "Added PACE-B 2024 large randomized trial and 2026 patient-reported follow-up; explicitly separated cumulative toxicity, visit prevalence and item respondent denominator.",
+            "Added ProtecT 12-year randomized-allocation survivorship evidence, with treatment crossover, earlier RT regimen and changing sexual/urinary trajectories.",
+            "Removed RTOG\u2013CTCAE equivalence table, universal retention/IMRT prevalence, UI misattribution of composite HR 2.76, and automatic surveillance cystoscopy language.",
+            "Replaced formalin-before-HBOT ladder with CUA severity-based approach, alum renal caution, formalin perforation/upper-tract precautions, and high-risk diversion counseling.",
+            "Corrected RICH-ART 2025 design to treated follow-up after crossover, with 39/70 actual five-year, missingness, 9 retreatments, mixed-model estimate and exclusion limits; added original 2019 comparison and qualitative Cochrane 2023 context.",
+            "Added EAU 2026 selected EPA/augmentation criteria and functional counseling; corrected Rourke 85.7% whole mixed cohort and Asghar 30/34 ureteral-unit denominator.",
+            "Removed extrapolated three-woman female urethroplasty certainty, small-series robotic superiority, universal omental necessity and diversion-referral percentages as general risk.",
+            "Corrected 2026 female pelvic-floor review outcome-specific denominators/eligibility; removed nested UUI percentage, unqualified biomechanical indices and unverified NCCN citation claims.",
+            "Replaced prophylactic PDE5 preservation claim with RTOG 0831 null preventive tadalafil finding; removed categorical implant infection claim and universal menopause prescriptions.",
+            "Identified 20 wrong/unrelated original PMID links among 24 original PMID-linked citations. All 28 intended linked source identities/available abstracts read; three unlinked NCCN entries not verified. Rebuilt bibliography to 19 used sources."
+          ],
+          "unresolved": [
+            "Several original and newly cited papers are available only as full indexed abstracts; full source/graphics/supplement limits are itemized.",
+            "Full 2026 PACE-B patient-reported paper/waffle graphics not obtained; only independently verified abstract item denominators used.",
+            "Perez 2026 main narrative and all references read but tables/graphics/supplements not yet independently examined; its observational estimates remain qualified.",
+            "Citrin/PACE-B actual figure graphics and separate disclosures/supplements not inspected; no image-specific claim or figure copied.",
+            "No diagnostic/patient-specific or radiation-planning protocol validation implied."
+          ],
+          "originalReferenceAudit": [
+            {
+              "originalRef": 1,
+              "originalPmid": "36400097",
+              "correctPmid": "36455582",
+              "correctTitle": "Mechanisms, mitigation, and management of urinary toxicity from prostate radiotherapy.",
+              "correctDoi": "10.1016/s1470-2045(22)00544-7",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 2,
+              "originalPmid": "30012457",
+              "correctPmid": "30036617",
+              "correctTitle": "Urologic Complications Following Pelvic Radiotherapy.",
+              "correctDoi": "10.1016/j.urology.2018.07.017",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 3,
+              "originalPmid": null,
+              "correctPmid": "40291346",
+              "correctTitle": "Radiation-induced cystitis treated with hyperbaric oxygen therapy (RICH-ART): long-term follow-up of a randomised controlled, phase 2-3 trial.",
+              "correctDoi": "10.1016/j.eclinm.2025.103214",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 4,
+              "originalPmid": null,
+              "correctPmid": "41780002",
+              "correctTitle": "Effects of Radiotherapy in Normal Tissue.",
+              "correctDoi": "10.1056/nejmra2506017",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 5,
+              "originalPmid": "12137636",
+              "correctPmid": "12137633",
+              "correctTitle": "Non-surgical interventions for late radiation cystitis in patients who have received radical radiotherapy to the pelvis.",
+              "correctDoi": "10.1002/14651858.cd001773",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 6,
+              "originalPmid": "35344984",
+              "correctPmid": "35301146",
+              "correctTitle": "Increased extracellular matrix stiffness accompanies compromised bladder function in a murine model of radiation cystitis.",
+              "correctDoi": "10.1016/j.actbio.2022.03.017",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 7,
+              "originalPmid": "34584186",
+              "correctPmid": "34588475",
+              "correctTitle": "Voiding defects in acute radiation cystitis driven by urothelial barrier defect through loss of E-cadherin, ZO-1 and Uroplakin III.",
+              "correctDoi": "10.1038/s41598-021-98303-2",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 8,
+              "originalPmid": "39356502",
+              "correctPmid": "39509091",
+              "correctTitle": "Long-Term Adverse Effects and Complications After Prostate Cancer Treatment.",
+              "correctDoi": "10.1001/jamaoncol.2024.4397",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 9,
+              "originalPmid": "35869175",
+              "correctPmid": "35260794",
+              "correctTitle": "Long term genitourinary toxicity following curative intent intensity-modulated radiotherapy for prostate cancer: a systematic review and meta-analysis.",
+              "correctDoi": "10.1038/s41391-022-00520-x",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 10,
+              "originalPmid": "24931512",
+              "correctPmid": "25168555",
+              "correctTitle": "Urinary diversions after radiation for prostate cancer: indications and treatment.",
+              "correctDoi": "10.1016/j.urology.2014.04.023",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 11,
+              "originalPmid": "27681893",
+              "correctPmid": "27469289",
+              "correctTitle": "Management of Radiation Therapy Oncology Group grade 4 urinary adverse events after radiotherapy for prostate cancer.",
+              "correctDoi": "10.1111/bju.13607",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 12,
+              "originalPmid": "27130548",
+              "correctPmid": "27301047",
+              "correctTitle": "Vessel-sparing radiation and functional anatomy-based preservation for erectile function after prostate radiotherapy.",
+              "correctDoi": "10.1016/s1470-2045(16)00063-2",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 13,
+              "originalPmid": "27626365",
+              "correctPmid": "27626365",
+              "correctTitle": "Patient-Reported Outcomes after Monitoring, Surgery, or Radiotherapy for Prostate Cancer.",
+              "correctDoi": "10.1056/nejmoa1606221",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 14,
+              "originalPmid": "31314157",
+              "correctPmid": "31256432",
+              "correctTitle": "Patient-reported sexual quality of life after different types of radical prostatectomy and radiotherapy: Analysis of a population-based prospective cohort.",
+              "correctDoi": "10.1002/cncr.32288",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 15,
+              "originalPmid": null,
+              "correctPmid": "41824028",
+              "correctTitle": "Prevalence of Pelvic Floor Dysfunction in Women After Pelvic Radiotherapy: Systematic Review and Meta-Analysis.",
+              "correctDoi": "10.1007/s00192-026-06557-z",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 16,
+              "originalPmid": "12535480",
+              "correctPmid": "12535485",
+              "correctTitle": "Interventions for the physical aspects of sexual dysfunction in women following pelvic radiotherapy.",
+              "correctDoi": "10.1002/14651858.cd003750",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 17,
+              "originalPmid": "25198150",
+              "correctPmid": "25198150",
+              "correctTitle": "Vaginal dilator therapy for women receiving pelvic radiotherapy.",
+              "correctDoi": "10.1002/14651858.cd007291.pub3",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 18,
+              "originalPmid": "34217019",
+              "correctPmid": "34273752",
+              "correctTitle": "The impact of radiation therapy on vaginal biomechanical properties.",
+              "correctDoi": "10.1016/j.ejogrb.2021.06.046",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 19,
+              "originalPmid": "23358971",
+              "correctPmid": "23382474",
+              "correctTitle": "Female reproductive health after childhood, adolescent, and young adult cancers: guidelines for the assessment and management of female reproductive complications.",
+              "correctDoi": "10.1200/jco.2012.43.5511",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 20,
+              "decision": "removed",
+              "reason": "Unversioned/unlinked NCCN 2025 attribution not verified; replaced generic authority claim with accessible scoped sources."
+            },
+            {
+              "originalRef": 21,
+              "decision": "removed",
+              "reason": "Unversioned/unlinked NCCN 2025 attribution not verified; replaced generic authority claim with accessible scoped sources."
+            },
+            {
+              "originalRef": 22,
+              "decision": "removed",
+              "reason": "Unversioned/unlinked NCCN 2025 attribution not verified; replaced generic authority claim with accessible scoped sources."
+            },
+            {
+              "originalRef": 23,
+              "originalPmid": "37373646",
+              "correctPmid": "37373644",
+              "correctTitle": "Complications after Prostate Cancer Treatment: Pathophysiology and Repair of Post-Radiation Urethral Stricture Disease.",
+              "correctDoi": "10.3390/jcm12123950",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 24,
+              "originalPmid": "26272217",
+              "correctPmid": "26047655",
+              "correctTitle": "Observations and outcomes of urethroplasty for bulbomembranous stenosis after radiation therapy for prostate cancer.",
+              "correctDoi": "10.1007/s00345-015-1608-2",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 25,
+              "originalPmid": "34116110",
+              "correctPmid": "34157343",
+              "correctTitle": "Dorsal Onlay Buccal Mucosal Graft Urethroplasty in Post Radiation Female Urethral Stricture - A Technical Appraisal With Outcomes.",
+              "correctDoi": "10.1016/j.urology.2021.06.006",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 26,
+              "originalPmid": "32883115",
+              "correctPmid": "32814443",
+              "correctTitle": "Robotic Ureteral Reconstruction in Patients with Radiation-Induced Ureteral Strictures: Experience from the Collaborative of Reconstructive Robotic Ureteral Surgery.",
+              "correctDoi": "10.1089/end.2020.0643",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 27,
+              "originalPmid": "24916760",
+              "correctPmid": "24916760",
+              "correctTitle": "American Cancer Society prostate cancer survivorship care guidelines.",
+              "correctDoi": "10.3322/caac.21234",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 28,
+              "originalPmid": "38885827",
+              "correctPmid": "38692496",
+              "correctTitle": "Incidence and Management of Radiation Cystitis After Pelvic Radiotherapy for Prostate Cancer: Analysis From a National Database.",
+              "correctDoi": "10.1016/j.urology.2024.04.035",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 29,
+              "originalPmid": "38458217",
+              "correctPmid": "38458217",
+              "correctTitle": "Managing menopause after cancer.",
+              "correctDoi": "10.1016/s0140-6736(23)02802-7",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 30,
+              "originalPmid": "24094630",
+              "correctPmid": "23992740",
+              "correctTitle": "The effects of pelvic radiotherapy on cancer survivors: symptom profile, psychological morbidity and quality of life.",
+              "correctDoi": "10.1016/j.clon.2013.08.003",
+              "identifierMismatch": true,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            },
+            {
+              "originalRef": 31,
+              "originalPmid": null,
+              "correctPmid": "41360302",
+              "correctTitle": "Genitourinary Radiation Injury: A Mixed-methods Study Exploring Patient-reported Outcomes and Impact on Quality of Life.",
+              "correctDoi": "10.1016/j.urology.2025.11.258",
+              "identifierMismatch": false,
+              "access": "Complete available intended primary abstract/identity read; full source access only as separately itemized.",
+              "decision": "Retained with corrected scope/identifier, replaced with higher-yield evidence, or removed when claim unsupported; not simply relinked."
+            }
+          ],
+          "peerReview": "Root read complete revised MDX and references, independently checked EAU radiation/posterior/diversion sections, PACE-B2024 toxicity Results, full PACE-B2026 and ASCENDE primary abstracts, selected CUA assessment/formalin/sequencing text and RICH-ART2025 Methods/Results (complete main source previously read). Added exact four-week transfusion-exclusion window and reread sentence. Other references and all figure/supplement packages were not independently duplicated.",
+          "recordFile": "radiation-effects.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/reconstructive-ladder.mdx",
@@ -6035,22 +6874,71 @@
       "title": "Wound Healing Adjuncts",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "8f4706beb6baec84556c04cab6d039683c0d945859d3542edac93c8685f23027",
-      "reviewRecords": []
+      "sourceSha256": "4c02634445bb85b3d35baf8bf54d8436d6dc55520b8dd42883efeecd5eece537",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/wound-healing-adjuncts.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "4c02634445bb85b3d35baf8bf54d8436d6dc55520b8dd42883efeecd5eece537",
+          "scope": "Complete original and final revised MDX, tables and references read. Primary reading includes complete main manuscripts, selected guidance/labels and available abstracts; exact figures/supplement limits in reports/2026-09-12/wound-care-review.md and companion source-access JSON. No all-paper clearance asserted.",
+          "changes": [
+            "Added SWHSI-2 and corrected Cochrane NPWT interpretation; separated wound types and indications.",
+            "Corrected adhesive, donor-dressing, matrix, cell-product and growth-factor claims with selected current labels/guidance."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/S0140-6736(25)00143-6",
+            "https://doi.org/10.1002/14651858.CD009261.pub7",
+            "https://doi.org/10.1002/14651858.CD013570.pub2",
+            "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-07-Wound-Healing-Guideline.pdf"
+          ],
+          "unresolved": [
+            "Some full original manuscripts, product IFUs, graphics and supplements remain inaccessible or unread. Linked media and independent clinical sign-off are incomplete."
+          ],
+          "peerReview": "Independent reviewer fully read revised pages and performed focused source checks. See wound-hbot-peer-review.md and wound-adjuncts-peer-review.md; infection/pH correction incorporated and reread.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/wound-healing.mdx",
       "title": "Wound Healing",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "809785a443af197feeeffef64584b8f1b62d3d49b65f796c4ba56fdb1cdb696c",
-      "reviewRecords": []
+      "sourceSha256": "9ed6b8a9f69ddbf28076e4d5d761f04954384b3031396ab5ca77a3c98a85a14e",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/wound-healing.mdx",
+          "reviewedAt": "2026-09-12",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "9ed6b8a9f69ddbf28076e4d5d761f04954384b3031396ab5ca77a3c98a85a14e",
+          "scope": "Complete original and final revised MDX, tables and references read. Primary reading includes complete main manuscripts, selected guidance/labels and available abstracts; exact figures/supplement limits in reports/2026-09-12/wound-care-review.md and companion source-access JSON. No all-paper clearance asserted.",
+          "changes": [
+            "Corrected healing-phase timing, collagen, macrophage, scar vascularity and nutrition mechanisms.",
+            "Replaced misleading timeline with original accessible SVG; corrected photo provenance and smoking PMID."
+          ],
+          "sources": [
+            "https://doi.org/10.2741/1184",
+            "https://doi.org/10.1177/0022034509359125",
+            "https://doi.org/10.1001/archsurg.2012.5"
+          ],
+          "unresolved": [
+            "Some full original manuscripts, product IFUs, graphics and supplements remain inaccessible or unread. Linked media and independent clinical sign-off are incomplete."
+          ],
+          "peerReview": "Independent reviewer fully read revised pages and performed focused source checks. See wound-hbot-peer-review.md and wound-adjuncts-peer-review.md; infection/pH correction incorporated and reread.",
+          "recordFile": "foundations-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-skills/glove-wetting.mdx",
@@ -7711,66 +8599,280 @@
       "title": "Double-J Ureteral Stent",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "2bb4d3622cdaeb436fdc2b7b5d7493f75eddf100698923a5833b41414a6f28e6",
-      "reviewRecords": []
+      "sourceSha256": "81ba0e7f4dd6c13ea8cc1453655924fe78eeaa5e6ba1e6f15651f2281b2a71aa",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/double-j-stent.mdx",
+          "title": "Double-J Ureteral Stent",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "81ba0e7f4dd6c13ea8cc1453655924fe78eeaa5e6ba1e6f15651f2281b2a71aa",
+          "originalReadSha256": "2bb4d3622cdaeb436fdc2b7b5d7493f75eddf100698923a5833b41414a6f28e6",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected Resonance material/handling, migration and patency guarantees, fixed postoperative dwell rules, injury/reconstruction overgeneralization, indirect drug-ranking cookbook and ASB exceptions. Stent registration and explicit responsible service preserved. Full original360-line page and full revised page read.",
+            "CIRSE2026 PMC12963180, DOI10.1007/s00270-025-04328-9: entire main article/front/backmatter, all9tables and89reference entries read (/tmp/tools-cirse-nephrostomy2026.txt/.html,77872characters). Figure graphics and separate supplements not read. This is a technical practice standard, explicitly not a clinical-practice guideline or systematic review. Important source errors/overstatements were not adopted: Hgb>8g/L/creatinine1.2mg/ml units, blanket nighttime delay/stents-contraindicated-in-all-UTI/pregnancy/neurogenic-bladder wording, stent-and-forget advice, Table6transfusion.0014% and Table7hemorrhagic-cystitis citation mismatch.",
+            "EAU2026 Urolithiasis: complete selected sections3.4.2 sepsis/decompression,3.4.6 URS/access-sheath/pressure/stenting,3.4.14.a pregnancy read; /tmp/tools-stent-eaustones2026.txt/.html. Also entire3.4.7 PCNL including drainage and recommendations read in this batch; initial3.4.8.a infection/prophylaxis text and first recommendations read, not rest3.4.8. Not the entire guideline, figures or reference list.",
+            "EAU2026 Urological Trauma: complete indexed primary sections4.2.2.b imaging,4.2.3 prevention,4.2.4.a immediate injury,4.2.4.b.1 delayed endourology and4.2.5 recommendations read. Proximal-repair subsection only partly returned. Prophylactic stents are weakly recommended for high-risk cases; visual identification remains central. No full-guideline read claimed.",
+            "Cook Resonance: current US product page linked all IFUs to IFU0020-18.PDF. Cover and complete English pages3\u20135, including MRI table and all procedural steps/warnings, read; all three placement graphics on page2 separately viewed. /tmp/tools-resonance-ifu.pdf/.txt and /tmp/tools-resonance-figure.png. Translations not read. Temporary adult extrinsic obstruction, maximum12months, nickel warning; closed-ended coil inserted through supplied sheath after initial wire/catheter removal.",
+            "Cochrane2024 PMC11232101 CD004925.pub4: first81500characters read, covering complete main article, summary-of-findings table, methods/results/discussion/conclusions, history/acknowledgments, Appendix1search and Appendix2bias, all Data-and-Analyses summary rows and beginning of Barbosa study characteristics. Remaining included/excluded-study characteristics, complete reference list and figure graphics not read. /tmp/tools-stent-cochrane2024.html/.txt. Twelve studies1960; MUC11/1834 RR.30(.16\u2013.55) moderate; UTI10/1726 RR1.32(.97\u20131.80) very-low certainty. Duration subgroups do not establish optimal timing. Source internal typos (124 versus1246 longer-duration subgroup, UTI p-value heterogeneity/overall confusion, NNT/SOF mismatch) avoided.",
+            "DUET/Oudmaijer2025 PMC11781732: entire main/front/back text, both tables and all30reference entries read (/tmp/tools-stent-oudmaijer2025.html/.txt,47858characters). Two figure captions read; graphics, supplementary tables/figures and protocol not read.300randomized: external7FrSingleJday9 versus internal7FrDJ3weeks; PCN6months21/145 versus7/155. Reconstruction/CIC exclusions and protocol differences limit generalization. Intro falsely describes Cochrane RCTs as retrospective; cost-component prose conflicts and other minor source typos not adopted.",
+            "Yin2026 PMC12861130: entire main text, both tables and references read (/tmp/tools-stent-yin2026.html/.txt,46734characters); three figure captions read, graphics and four supplements not read.16studies2486, but includes Moray2005 and Tavakoli2007 which Cochrane excludes for design concerns. No GRADE; UTI RR1.41 differs from Cochrane. This remains a qualified evidence comparison, not an uncritical new guideline conclusion.",
+            "Complete available original DJ abstracts14,15,16,17,18,22,23,24,35 read. Ghani2023 is observational emergency-visit analysis; Heidenberg2023 is the3-versus7-day symptom trial. IDSA2019 bacteriuria recommendations were independently read in prior pharmacology review, not a new complete guideline read here."
+          ],
+          "sources": [
+            "https://doi.org/10.1111/iju.14119",
+            "https://doi.org/10.1007/s00270-025-04328-9",
+            "https://ifu.cookmedical.com/data/IFU_PDF/IFU0020-18.PDF",
+            "https://doi.org/10.1007/s00192-018-3762-8",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+            "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines",
+            "https://doi.org/10.1002/14651858.CD004925.pub4",
+            "https://doi.org/10.1097/JU.0000000000003555",
+            "https://doi.org/10.1089/end.2023.0189",
+            "https://doi.org/10.1371/journal.pone.0317991",
+            "https://doi.org/10.7717/peerj.20665",
+            "https://doi.org/10.1111/ajt.14223",
+            "https://doi.org/10.1093/cid/ciy1121"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/metal-long-term-stents.mdx",
       "title": "Metal & Long-Term Ureteral Stents",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "ca11b7260dad6559eb6c7e08eba7fbdfd027ef02751c9eb6e7bdb68c0a4bc21d",
-      "reviewRecords": []
+      "sourceSha256": "d2aa705648389a2205d8c542ad1dd0bea725972fae3fd82f8cc9880d754e9c0a",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/metal-long-term-stents.mdx",
+          "title": "Metal & Long-Term Ureteral Stents",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "d2aa705648389a2205d8c542ad1dd0bea725972fae3fd82f8cc9880d754e9c0a",
+          "originalReadSha256": "ca11b7260dad6559eb6c7e08eba7fbdfd027ef02751c9eb6e7bdb68c0a4bc21d",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected universal12+month use, Resonance alloy/delivery/patency guarantees, label-versus-cohort contraindications, outdated NICE economics, Allium delivery and curative regulatory claims, cross-device ranking and mixed patient/stent/ureteral-unit denominators. Removed unverified device identity of321-patient covered-stent cohort and low-yield speculative technology recipes. Full original233-line and revised text read.",
+            "Cook Resonance: current US product page linked all IFUs to IFU0020-18.PDF. Cover and complete English pages3\u20135, including MRI table and all procedural steps/warnings, read; all three placement graphics on page2 separately viewed. /tmp/tools-resonance-ifu.pdf/.txt and /tmp/tools-resonance-figure.png. Translations not read. Temporary adult extrinsic obstruction, maximum12months, nickel warning; closed-ended coil inserted through supplied sheath after initial wire/catheter removal.",
+            "NICEHTG651: entire23-page current2022 guidance PDF read including all recommendations, technology, evidence, committee discussion, cost-model and appendix-information text (/tmp/tools-stent-nice2022.pdf/.txt). No separate supporting assessment reports. December2025 migration changed identifier without new recommendations. Cost-model5year replacement assumption is not a device label; no universal30month savings. Source typo urethral versus ureteral obstruction not copied.",
+            "Allium current manufacturer product main body read:24\u201330Fr stent,10Fr delivery, up-to3year marketing and explicit curative-effect-not-CE-approved notice. Linked October2022 IFU via Dropbox failed to retrieve after web attempt/two timed-out downloads. Full current IFU, local availability and US regulatory authorization therefore remain unverified; page avoids a prescriptive dwell/deployment/removal recipe.",
+            "Complete available original metal abstracts1,3,4,8,12,16,17,18,19,20,22,25 read. Khoo2021:129insertions/76patients; failures by insertion11/23,31/48,11/58. Blaschko2007 six minipigs does not prove patient occlusion impossible. Tian2026 retrospective101 selected after-removal follow-up:64success;92.86% is a selected subgroup, anastomotic OR interval crosses1 and etiology percentages sum inconsistently; neither an approved cure nor reconstruction equivalence. Bian2025 pooled31studies1660 with high long-term heterogeneity. Wang2025 abstract identifies generic CMUS,321patients366units; exactdevice/fullpaper not verified, so Allium assignment removed. Su2024 is30patients40stents, migration11/40,encrustation8/40. Kim2016 Uventa major complications14/50units, not14/44patients. Chong2019 Detour13patients20stents:leak revisions4patients andUTI2patients, one dislodgement/sepsis death; denominators corrected. These papers were abstract-read, not full-paper reviewed."
+          ],
+          "sources": [
+            "https://ifu.cookmedical.com/data/IFU_PDF/IFU0020-18.PDF",
+            "https://www.nice.org.uk/guidance/htg651",
+            "https://doi.org/10.4103/singaporemedj.SMJ-2021-418",
+            "https://allium-medical.com/products/ureteric-stents/",
+            "https://doi.org/10.1089/end.2016.0462",
+            "https://doi.org/10.1089/end.2018.0610",
+            "https://doi.org/10.1089/end.2006.0315",
+            "https://doi.org/10.1089/end.2021.0208",
+            "https://doi.org/10.1097/JS9.0000000000003899",
+            "https://doi.org/10.1097/JS9.0000000000002384",
+            "https://doi.org/10.1038/s41598-024-73125-0"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/nephrostomy-tube.mdx",
       "title": "Nephrostomy Tube (PCN)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "33d541acf7ef2b8cdd5123781db55ae77be02f0dbeab7f54b58e6c59de3c1c40",
-      "reviewRecords": []
+      "sourceSha256": "574b3528806f6e9181d3d07e55fa6ac6c584503d46dad6a2b8e25480e9cf0d32",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/nephrostomy-tube.mdx",
+          "title": "Nephrostomy Tube (PCN)",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "574b3528806f6e9181d3d07e55fa6ac6c584503d46dad6a2b8e25480e9cf0d32",
+          "originalReadSha256": "33d541acf7ef2b8cdd5123781db55ae77be02f0dbeab7f54b58e6c59de3c1c40",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected urgent source-control sequencing, universal drainage-route hierarchy, quality-threshold/risk conflation, unsafe fixed tract-maturity/withdrawal rules, ceftriaxone-Enterococcus claim, exchange timing, capping and pregnancy/ASB statements. Full original160-line and revised text read.",
+            "CIRSE2026 PMC12963180, DOI10.1007/s00270-025-04328-9: entire main article/front/backmatter, all9tables and89reference entries read (/tmp/tools-cirse-nephrostomy2026.txt/.html,77872characters). Figure graphics and separate supplements not read. This is a technical practice standard, explicitly not a clinical-practice guideline or systematic review. Important source errors/overstatements were not adopted: Hgb>8g/L/creatinine1.2mg/ml units, blanket nighttime delay/stents-contraindicated-in-all-UTI/pregnancy/neurogenic-bladder wording, stent-and-forget advice, Table6transfusion.0014% and Table7hemorrhagic-cystitis citation mismatch.",
+            "EAU2026 Urolithiasis: complete selected sections3.4.2 sepsis/decompression,3.4.6 URS/access-sheath/pressure/stenting,3.4.14.a pregnancy read; /tmp/tools-stent-eaustones2026.txt/.html. Also entire3.4.7 PCNL including drainage and recommendations read in this batch; initial3.4.8.a infection/prophylaxis text and first recommendations read, not rest3.4.8. Not the entire guideline, figures or reference list.",
+            "Complete available original PCN abstracts1,16,17,18,19,20 read; refs6/8 had no abstract and were not full-source reads. Ahmad2024 meta18studies1228 separates PCN-versus-retrograde-stent outcomes from antegrade-versus-retrograde stent studies. Final pediatric statement is general and cites CIRSE; unreviewed pediatric full SIR text not used as certified guidance.",
+            "Current Baxter ceftriaxone label DailyMed setid4c5c2d3f-5038-41a1-a2fe-4dcd048dbac1: selected complete returned Microbiology section and resistance note read (October7,2024 label). It supports lack of reliable Enterococcus coverage; not a complete label read. No antibiotic dose copied. IDSA2019 relevant ASB recommendations were previously independently read in pharmacology."
+          ],
+          "sources": [
+            "https://doi.org/10.1007/s00270-025-04328-9",
+            "https://doi.org/10.1016/j.jacr.2020.01.039",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+            "https://doi.org/10.1016/j.urology.2024.05.042",
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c5c2d3f-5038-41a1-a2fe-4dcd048dbac1",
+            "https://doi.org/10.1016/j.ajem.2021.09.034",
+            "https://doi.org/10.1093/cid/ciy1121"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/nephroureteral-stent.mdx",
       "title": "Nephroureteral Stent (Internal-External)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "15a160f31c04e196b395885c7a0f7221ed78823098a7ac76ce51cc66f5c2e218",
-      "reviewRecords": []
+      "sourceSha256": "ef5b190f90a88d1402cb4c987acc0ef9b9826cba29e8320af5159be114b36500",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/nephroureteral-stent.mdx",
+          "title": "Nephroureteral Stent (Internal-External)",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "ef5b190f90a88d1402cb4c987acc0ef9b9826cba29e8320af5159be114b36500",
+          "originalReadSha256": "15a160f31c04e196b395885c7a0f7221ed78823098a7ac76ce51cc66f5c2e218",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected capped external port/bag distinction, cap trial versus native-ureter healing, pressure-release-valve claim, side-hole placement and generic preferred-device statements. Removed all-neurogenic-bladder contraindication and one-session/staged procedure conflation. Six-patient hematuria evidence explicitly limited; no clot-proof or automatic bilateral diversion guarantee. Full original155-line and revised text read.",
+            "CIRSE2026 PMC12963180, DOI10.1007/s00270-025-04328-9: entire main article/front/backmatter, all9tables and89reference entries read (/tmp/tools-cirse-nephrostomy2026.txt/.html,77872characters). Figure graphics and separate supplements not read. This is a technical practice standard, explicitly not a clinical-practice guideline or systematic review. Important source errors/overstatements were not adopted: Hgb>8g/L/creatinine1.2mg/ml units, blanket nighttime delay/stents-contraindicated-in-all-UTI/pregnancy/neurogenic-bladder wording, stent-and-forget advice, Table6transfusion.0014% and Table7hemorrhagic-cystitis citation mismatch.",
+            "EAU2026 Urolithiasis: complete selected sections3.4.2 sepsis/decompression,3.4.6 URS/access-sheath/pressure/stenting,3.4.14.a pregnancy read; /tmp/tools-stent-eaustones2026.txt/.html. Also entire3.4.7 PCNL including drainage and recommendations read in this batch; initial3.4.8.a infection/prophylaxis text and first recommendations read, not rest3.4.8. Not the entire guideline, figures or reference list.",
+            "Makramalla/Zuckerman2011 PMC3312172: complete main/front/back text, all21references and all6figure captions read (/tmp/tools-stent-pcnu2011.html/.txt,46679characters). Figure graphics not viewed. Historical technical review; broad bladder contraindications, forced wire crossing and universal antibiotic/exchange rules were not adopted.",
+            "Complete available original PCNU abstracts2,7 and protocol11 read. Returned abstracts12/14 were read but a preprocessing regex stripped comparator fragments, so these are partial returned-text reads, not complete pristine abstracts; their unsupported outcome claims were removed. Other original references were read as bibliography only. IDSA2019 relevant ASB recommendations previously read in pharmacology."
+          ],
+          "sources": [
+            "https://doi.org/10.1007/s00270-025-04328-9",
+            "https://doi.org/10.1055/s-0031-1296079",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+            "https://doi.org/10.1093/bjr/tqae143",
+            "https://doi.org/10.1016/j.ajem.2021.09.034",
+            "https://doi.org/10.1093/cid/ciy1121",
+            "https://doi.org/10.1016/j.urology.2019.01.003",
+            "https://doi.org/10.1016/j.urology.2024.05.042"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/open-ended-ureteral-catheter.mdx",
       "title": "Open-Ended Ureteral Catheters",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "9a39197a4839440542ea5c4d12aec894da245d087a37de3a86f31b8273494a5d",
-      "reviewRecords": []
+      "sourceSha256": "1162057add759f6a3665cfca47358adb8ed4ca8d6b8f2ed7a24f1a052808a5e1",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/open-ended-ureteral-catheter.mdx",
+          "title": "Open-Ended Ureteral Catheters",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "1162057add759f6a3665cfca47358adb8ed4ca8d6b8f2ed7a24f1a052808a5e1",
+          "originalReadSha256": "9a39197a4839440542ea5c4d12aec894da245d087a37de3a86f31b8273494a5d",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected RPG/RUG terminology, device-specific wire compatibility, open-versus-occluding tips, prophylactic-catheter scope, placement-sequence overgeneralization and short-term external catheter evidence. Removed universal sepsis/migration rates and every-DJ-needs-cystoscopy assertion. Full original123-line and revised text read.",
+            "CIRSE2026 PMC12963180, DOI10.1007/s00270-025-04328-9: entire main article/front/backmatter, all9tables and89reference entries read (/tmp/tools-cirse-nephrostomy2026.txt/.html,77872characters). Figure graphics and separate supplements not read. This is a technical practice standard, explicitly not a clinical-practice guideline or systematic review. Important source errors/overstatements were not adopted: Hgb>8g/L/creatinine1.2mg/ml units, blanket nighttime delay/stents-contraindicated-in-all-UTI/pregnancy/neurogenic-bladder wording, stent-and-forget advice, Table6transfusion.0014% and Table7hemorrhagic-cystitis citation mismatch.",
+            "EAU2026 Urolithiasis: complete selected sections3.4.2 sepsis/decompression,3.4.6 URS/access-sheath/pressure/stenting,3.4.14.a pregnancy read; /tmp/tools-stent-eaustones2026.txt/.html. Also entire3.4.7 PCNL including drainage and recommendations read in this batch; initial3.4.8.a infection/prophylaxis text and first recommendations read, not rest3.4.8. Not the entire guideline, figures or reference list.",
+            "EAU2026 Urological Trauma: complete indexed primary sections4.2.2.b imaging,4.2.3 prevention,4.2.4.a immediate injury,4.2.4.b.1 delayed endourology and4.2.5 recommendations read. Proximal-repair subsection only partly returned. Prophylactic stents are weakly recommended for high-risk cases; visual identification remains central. No full-guideline read claimed.",
+            "Cook current Open-End US product page complete specifications read:3Fr/.018inch,4Fr/.025,5\u20138Fr/.038; page links T_URECAT_REV1.PDF. Entire English pp3\u20134 plus cover read (/tmp/tools-stent-cookcatheter-rev1.pdf/.txt), no other language sections. Earlier NOCE_REV0 English also read but final page cites currently linked REV1. Single-use precautions, resistance/deflected-scope/adapter handling and wire sequence checked; current product not generalized to every brand.",
+            "All14 original available abstracts read; initial output truncation in refs6\u20138 recovered with a separate full chunk. Pace2003:22-patient randomized-order catheter comparison; Zhou2017:109-patient randomized tubeless mini-PCNL, not reconstructive equivalence. Case reports used only to identify possible tip separation, not quantify incidence."
+          ],
+          "sources": [
+            "https://ifu.cookmedical.com/data/IFU_PDF/T_URECAT_REV1.PDF",
+            "https://www.cookmedical.com/products/uro_0200_webds/",
+            "https://doi.org/10.1089/089277903770802335",
+            "https://doi.org/10.1016/j.urology.2019.03.027",
+            "https://doi.org/10.1007/s00192-018-3762-8",
+            "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+            "https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines",
+            "https://doi.org/10.1016/s0022-5347(17",
+            "https://doi.org/10.1007/s00270-025-04328-9",
+            "https://doi.org/10.1089/end.2016.0759"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/ureteral-access-sheath.mdx",
       "title": "Ureteral Access Sheath (UAS)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a148177aab6c8280362bc7c5f10a60f7fdcc1b3b6bfd265176d63a54ed2c5a87",
-      "reviewRecords": []
+      "sourceSha256": "c74870b35c8c9445819de248222295ae6e54c194741c40c1a6e0b21522d6b422",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/tools/biomaterials/ureteral-stents/ureteral-access-sheath.mdx",
+          "title": "Ureteral Access Sheath (UAS)",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "lastReadAt": "2026-09-12",
+          "sourceSha256": "c74870b35c8c9445819de248222295ae6e54c194741c40c1a6e0b21522d6b422",
+          "originalReadSha256": "a148177aab6c8280362bc7c5f10a60f7fdcc1b3b6bfd265176d63a54ed2c5a87",
+          "scope": [
+            "Entire original and revised MDX read, including all tables, references and navigation. Original 169 bibliography rows across this family were read; 151 DOI queries retrieved metadata/abstracts in /tmp/tools-stent-original-references.json and /tmp/tools-stent-reference-cache.json. Retrieval alone was not counted as a source read. Other uncited legacy references removed during correction are not clinically certified.",
+            "Substantive device/guideline safety, evidence identity and clinically important numerical/selection claims reviewed; no blanket clinical clearance."
+          ],
+          "notes": [
+            "Corrected pressure units and safe-pressure/flow guarantees, Traxer-versus-PULS identity, universal sizes/prestenting, force-threshold guarantee, retrospective study mislabeledRCT, mixed stone-free endpoint definitions, infection guarantee and routine post-reconstruction ureteroscopy claims. Full original191-line and revised text read.",
+            "EAU2026 Urolithiasis: complete selected sections3.4.2 sepsis/decompression,3.4.6 URS/access-sheath/pressure/stenting,3.4.14.a pregnancy read; /tmp/tools-stent-eaustones2026.txt/.html. Also entire3.4.7 PCNL including drainage and recommendations read in this batch; initial3.4.8.a infection/prophylaxis text and first recommendations read, not rest3.4.8. Not the entire guideline, figures or reference list.",
+            "Zhu2024 PMC11277316 DOI10.1016/j.eclinm.2024.102724: entire main/front/back article, four tables and25references read (/tmp/tools-stent-zhu2024.html/.txt,53989characters). Both figure captions read; graphics, video, supplementary tablesS1\u20134 and protocol/SAP not read.320randomized160/arm, expert8centers, adultsstones\u226430mm, abnormaltract/ilealconduit/uncontrolledUTI excluded. Immediate endpoint130/160vs79/160 with earlyKUB/US and endoscopic criteria;3moCT140/160vs112/160 allows\u22642mmfragments. Different irrigation delivery betweenarms; IRPnotmeasured; fever9vs28; ORtime/stay/reinterventions nonsignificant;3moinsufficientlongtermstricture. Cefuroxime200mg and some procedural-denominator inconsistencies in source not copied.",
+            "Complete available original UAS abstracts2,4,5,8,11,12,13,15,16,17,18,19,21 read without comparator-stripping; additional original Schoenthaler2012 PULS abstract PMID22698147 and Tapiero2021 DOI10.1097/JU.0000000000001719 abstract read. Traxer359patients167anyinjury48muscleinjury; PULS0\u20135 is not Traxer0\u20134. No full primary grading-table access claimed, so incorrect table removed. Croghan47.6 iscmH2O notmmHg. Ali2026 238patients250units,14516Frplacements andtwoPULS3\u22658N; noinjury-elimination claim. Arikan2025 retrospective207, notRCT; Xie2025 meta not allrandomized. Stern56highgradeone stricture lacks uninjured comparator; Cooper1332with1060follow-up does not guarantee absence of obstruction. CROES adjusted estimates miscalled unadjusted removed; ex-vivo porcine120mL/min not patient-safe permission."
+          ],
+          "sources": [
+            "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+            "https://doi.org/10.1111/bju.14389",
+            "https://doi.org/10.1111/bju.15764",
+            "https://doi.org/10.1016/j.eclinm.2024.102724",
+            "https://doi.org/10.1089/end.2024.0921",
+            "https://doi.org/10.1007/s00345-025-05856-2",
+            "https://doi.org/10.1016/j.juro.2012.08.197",
+            "https://doi.org/10.1089/end.2012.0227",
+            "https://doi.org/10.1177/08927790251400350",
+            "https://doi.org/10.1016/j.urology.2019.02.032",
+            "https://doi.org/10.1097/JU.0000000000001147"
+          ],
+          "recordFile": "tools.json"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/tools/biomaterials/urinary-catheters/coude-catheter.mdx",
@@ -25592,22 +26694,459 @@
       "title": "Complex Decongestive Therapy (CDT)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "11b8ad08f7a0c005fa9b2c459ac9f39758ad39ec62449aa0a9b5a63920524cec",
-      "reviewRecords": []
+      "sourceSha256": "496d43c769f4ebb9b50f503341a81d4d1556bb1d359d90f17d47979796346334",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/complex-decongestive-therapy.mdx",
+          "title": "Complex Decongestive Therapy (CDT)",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and rewritten MDX including references read. Substantive review of genotype/site-independent overreach, pressure and wear-time claims, treatment safety, maintenance, direct genital outcomes and study design against full ISL consensus, two complete2024 summit papers, full genital review/cohort main text, selected compression consensus and available original abstracts.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1002/14651858.cd003475.pub2",
+              "title": "Manual lymphatic drainage for lymphedema following breast cancer treatment.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s12032-024-02407-4",
+              "title": "Complete decongestive therapy phase 1: an expert consensus document.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s12032-024-02442-1",
+              "title": "Essential components of the maintenance phase of complex decongestive therapy.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jacc.2008.06.005",
+              "title": "Diagnosis and management of lymphatic vascular disease.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1056/nejmcp1803290",
+              "title": "Lymphedema after Breast Cancer Treatment.",
+              "access": "Bibliographic identity only; no abstract provided and full article not read.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1093/ptj/pzaa087",
+              "title": "Interventions for Breast Cancer-Related Lymphedema: Clinical Practice Guideline From the Academy of Oncologic Physical Therapy of APTA.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s12032-024-02421-6",
+              "title": "Effectiveness of complete decongestive therapy for upper extremity breast cancer-related lymphedema: a review of systematic reviews.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1188/20.onf.518-538",
+              "title": "ONS Guidelines\u2122 for Cancer Treatment-Related Lymphedema.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.12968/jowc.2021.30.sup12a.6",
+              "title": "Conservative and integrated management of genital lymphoedema: case reports for men.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3390/cancers14235809",
+              "title": "Genital Lymphedema after Cancer Treatment: A Narrative Review.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/14651858.cd016019",
+              "title": "Microsurgical versus complex physical decongestive therapy for chronic breast cancer-related lymphoedema.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3322/caac.20001",
+              "title": "Lymphedema: a primer on the identification and management of a chronic condition in oncologic treatment.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2014.10.003",
+              "title": "Treatment of male genital lymphedema: an integrated concept.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1093/ptj/pzaa012",
+              "title": "Clinical and Scintigraphic Predictors of Primary Lower Limb Lymphedema-Volume Reduction During Complete Decongestive Physical Therapy.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1080/09638288.2026.2636408",
+              "title": "Effectiveness of digital combined decongestive therapy for lower extremity lymphedema: a prospective single-arm clinical trial with follow-up.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/md.0000000000003755",
+              "title": "Assessment of The Lymphatic System of the Genitalia Using Magnetic Resonance Lymphography Before and After Treatment of Male Genital Lymphedema.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.12968/jowc.2024.33.sup2a.xxviii",
+              "title": "Complex decongestive therapy in hidradenitis suppurativa-related genital lymphoedema: a case report.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1371/journal.pone.0326040",
+              "title": "Outcomes of complex decongestive therapy in managing upper limb lymphedema in female breast cancer patients at a palliative care unit of a tertiary care hospital in Bangladesh.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.clbc.2021.08.005",
+              "title": "Combined Complete Decongestive Therapy Reduces Volume and Improves Quality of Life and Functional Status in Patients With Breast Cancer-Related Lymphedema.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1007/s00520-025-10159-8",
+              "title": "Intermittent pneumatic compression devices for the prevention and treatment of breast cancer-related lymphedema-a systematic review and meta-analysis.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1177/02683555211053532",
+              "title": "The American Venous Forum, American Vein and Lymphatic Society and the Society for Vascular Medicine expert opinion consensus on lymphedema diagnosis and treatment.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1177/02692155211032651",
+              "title": "Physical therapies in the decongestive treatment of lymphedema: A randomized, non-inferiority controlled study.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jvsv.2025.102356",
+              "title": "Non-pneumatic compression and its clinical utility in management of lymphedema. A position statement endorsed by the American Venous Forum and the American Venous and Lymphatic Society.",
+              "access": "Complete available primary indexed abstract and bibliographic record read; no full paper unless separately logged.",
+              "cache": "/tmp/cdt-primary.json"
+            },
+            {
+              "url": "https://lymphoedemaeducation.com.au/wp-content/uploads/2024/11/s12032-024-02407-4-1.pdf",
+              "doi": "10.1007/s12032-024-02407-4",
+              "access": "Complete four-page published main text, all ten statements and rationales in Table 1, all seven references, funding and COI read. Text first accessed from indexed Klose-hosted PDF then complete alternate PDF; not evidence of a genital trial. No supplementary file reviewed.",
+              "cache": "/tmp/cdt-phase1.pdf and .txt",
+              "limitations": "Explicitly BCRL-focused. Workshop sponsorship includes Stryker; authors report no relevant interests. Five-day/two-week regimen cannot be mandated for genital LE."
+            },
+            {
+              "url": "https://lymphoedemaeducation.com.au/wp-content/uploads/2024/10/s12032-024-02442-1-1.pdf",
+              "doi": "10.1007/s12032-024-02442-1",
+              "access": "Complete four-page main text, six recommendations, Figure 1 caption, all eight references, funding and COI read. Figure graphic not inspected; no supplements obtained.",
+              "cache": "/tmp/cdt-phase2.pdf and .txt",
+              "limitations": "Predominantly BCRL evidence extrapolated by expert consensus to other cancer-related LE; no genital pressure trial."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9739141/",
+              "doi": "10.3390/cancers14235809",
+              "access": "Complete narrative main text, Table 1 text, all six figure captions, all 70 references, COI and funding read; missing truncated paragraphs recovered in overlapping reads. Figure graphics not inspected; no supplements obtained.",
+              "cache": "/tmp/cdt-PMC9739141.xml and .txt",
+              "limitations": "Narrative review, not a systematic genital trial synthesis; its broad universal endoscopy and diagnostic statements were not adopted."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/",
+              "doi": "10.1097/MD.0000000000003755",
+              "access": "Complete main text, six figure captions, all28 references and funding read; overlapping reads restored all truncated material. Figure graphics and image-only Table 1 not inspected; not recorded as a full visual/table audit.",
+              "cache": "/tmp/cdt-PMC4902367.xml and .txt",
+              "limitations": "36 selected men;9 moderate-dysfunction men selected CDP after declining surgery; no randomized validation. Numerical reduction differences in Results do not equal printed mean before-minus-after values, so those differences were not propagated. MRL injection described is a research protocol, not labeling authorization."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7383414/",
+              "doi": "10.1177/0268355520909066",
+              "access": "Full abstract/introduction/methods and selected main sections from nerve-injury precautions through Recommendations11\u201321, conclusions, COI and funding read. Earlier adverse-event sections and all references/figures were not fully reviewed.",
+              "cache": "/tmp/cdt-PMC7383414.xml and .txt",
+              "limitations": "Medical limb compression, not genital pressure trials or universal MLD contraindications. SIGVARIS funded editorial/medical writing and several authors report device-company relationships."
+            },
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            }
+          ],
+          "changes": [
+            "Replaced universal40\u201380mmHg genital compression,23-hour/inpatient/three-week rules with trained assessment, fit/perfusion/sensation safeguards and individualized delivery.",
+            "Separated BCRL/limb evidence from direct genital evidence; removed irrelevant limb volume percentages, prevention-to-treatment IPC inference and one-case HS efficacy framing.",
+            "Removed Haas2025Cochrane CD016019 from efficacy claims: primary abstract confirms a protocol without results; retained appropriate Ezzo2015Cochrane limitations.",
+            "Replaced blanket CHF/DVT/diabetes contraindications with modality- and site-specific assessment and current compression-consensus distinctions.",
+            "Removed falsely validated MRL algorithm; reports nonrandomized36-patient study and moderate group self-selection.",
+            "Removed causal CDP conversion-to-primary-closure/recurrence claims and compulsory all-stage-before-surgery requirement; preserved51-patient combined-care revision endpoint.",
+            "Added ongoing maintenance/access review and pump-associated proximal/genital edema precautions; no guaranteed freedom from compression after lymphatic reconstruction."
+          ],
+          "unresolved": [
+            "Genital CDT lacks large comparative trials and a validated universal pressure or schedule.",
+            "No full Ezzo Cochrane, Gilchrist review, Borman cases, Torio-Padron, Forner-Cordero or2026device-position full papers reviewed this batch; use limited to available primary abstract claims.",
+            "NCCN2026Survivorship full source not accessed; unsupported uncited entry removed.",
+            "Genital-review figures and Lu image-only table/figures not visually inspected; full-source uncertainty preserved."
+          ],
+          "sourceSha256": "496d43c769f4ebb9b50f503341a81d4d1556bb1d359d90f17d47979796346334",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/debulking-scrotoplasty.mdx",
       "title": "Debulking Scrotoplasty (Excision + Primary Closure)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "5633393ac0d2f5b39e484521b3f05439af25c98507e8f9f13bc59310d5d80588",
-      "reviewRecords": []
+      "sourceSha256": "df727149c28fbcd6c48cca8a58f732e8ceae81c222bcc1a7caa5e55422fa9d19",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/debulking-scrotoplasty.mdx",
+          "title": "Debulking Scrotoplasty (Excision + Primary Closure)",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and revised MDX including references read. Reviewed primary-closure selection, viable dissection anatomy, compression/debulking interaction, repeated cohort outcomes, recurrence attribution, pediatric follow-up and filarial treatment. Full Modolin operative report plus previously read Lu, Carrera, Vignes, Karian and ISL material; complete original available abstracts.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1097/sap.0000000000001875",
+              "title": "A Systematic Review of Outcomes After Genital Lymphedema Surgery: Microsurgical Reconstruction Versus Excisional Procedures.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2014.10.003",
+              "title": "Treatment of male genital lymphedema: an integrated concept.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/j.1464-410x.2008.07559.x",
+              "title": "The management of genital lymphoedema.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1038/s41443-021-00468-x",
+              "title": "Reconstructive surgery of the scrotum: a systematic review.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/01.ju.0000067625.45000.9e",
+              "title": "Lymphedema of the external genitalia.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2016.09.063",
+              "title": "Reconstruction of Massive Localized Lymphedema of the Scrotum: Results, Complications, and Quality of Life Improvements.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2014.07.031",
+              "title": "Surgical reduction of scrotal massive localized lymphedema (MLL) in obesity.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1001/jamasurg.2020.2611",
+              "title": "Multidisciplinary Update on Genital Hidradenitis Suppurativa: A Review.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3390/cancers14235809",
+              "title": "Genital Lymphedema after Cancer Treatment: A Narrative Review.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.jpedsurg.2014.05.031",
+              "title": "Male genital lymphedema: clinical features and management in 25 pediatric patients.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2010.10.026",
+              "title": "Reconstructive surgery for penoscrotal filarial lymphedema: a decade of experience and follow-up.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1590/s1807-59322006000400003",
+              "title": "Surgical treatment of lymphedema of the penis and scrotum.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/bjs.6716",
+              "title": "Quality of life after surgical reduction for severe primary lymphoedema of the limbs and genitalia.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2016.09.064",
+              "title": "Surgical Reconstruction of Giant Penoscrotal Lymphedema in Sub-Saharan Africa.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/01.sap.0000258448.17867.20",
+              "title": "Surgical management of scrotal lymphedema using local flaps.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3390/jcm12247586",
+              "title": "Giant Penoscrotal Lymphedema-What to Do? Presentation of a Curative Treatment Algorithm.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2023.02.006",
+              "title": "Treatment of Advanced Male Genital Lymphedema With a Complete Functional Lymphatic System Pedicled Transfer.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2021.08.011",
+              "title": "Radical reduction and reconstruction for male genital elephantiasis: Superficial circumflex iliac artery perforator (SCIP) lymphatic flap transfer after elephantiasis tissue resection.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/debulking-primary.json"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9739141/",
+              "doi": "10.3390/cancers14235809",
+              "access": "Complete narrative main text, Table 1 text, all six figure captions, all 70 references, COI and funding read; missing truncated paragraphs recovered in overlapping reads. Figure graphics not inspected; no supplements obtained.",
+              "cache": "/tmp/cdt-PMC9739141.xml and .txt",
+              "limitations": "Narrative review, not a systematic genital trial synthesis; its broad universal endoscopy and diagnostic statements were not adopted."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/",
+              "doi": "10.1097/MD.0000000000003755",
+              "access": "Complete main text, six figure captions, all28 references and funding read; overlapping reads restored all truncated material. Figure graphics and image-only Table 1 not inspected; not recorded as a full visual/table audit.",
+              "cache": "/tmp/cdt-PMC4902367.xml and .txt",
+              "limitations": "36 selected men;9 moderate-dysfunction men selected CDP after declining surgery; no randomized validation. Numerical reduction differences in Results do not equal printed mean before-minus-after values, so those differences were not propagated. MRL injection described is a research protocol, not labeling authorization."
+            },
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            },
+            {
+              "url": "https://www.drshevchuk.com.ua/wp-content/uploads/2018/02/Arteries-of-the-scrotum.pdf",
+              "doi": "10.1111/j.1464-410X.2008.08167.x",
+              "cache": [
+                "/tmp/genital-carrera2009.pdf",
+                "/tmp/genital-carrera2009.txt"
+              ],
+              "access": "Complete five-page published main text, all eight figure captions, COI and all17references read in contiguous text with missing overlap restored after output truncation; figure graphics not inspected."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4447098/",
+              "pmid": "26171090",
+              "cache": [
+                "/tmp/genital-PMC4447098.xml",
+                "/tmp/genital-PMC4447098.txt"
+              ],
+              "scope": "Complete primary front matter, abstract, main text, all2tables, all5figure captions and all30references read from EuropePMC full-text XML. Figure graphics not yet inspected; no supplemental files accessed.",
+              "notes": [
+                "16 retrospective studies,425patients, including2women; search throughSeptember2013. Not a meta-analysis and no RCTs.",
+                "Threshold50% is a proposed reconstructive algorithm; actual skin mobility/tension/viability matters, no conclusive superiority of flap over STSG.",
+                "Tunica-vaginalis absence is disputed in source, not an absolute graft prohibition. Adequately vascularized recipient surface still required.",
+                "Thigh-pouch fertility evidence sparse; harm concern not guaranteed sterility. Review notes two testicular losses from cord necrosis in ten-patient Badejo series.",
+                "Do not propagate internal source errors: scrotal advancement68body versus78Table2, other flaps128body versus118Table2; Hsu8patients but complications inexplicably2/17; Spyropoulou22%(9) in n9; orchiectomy-never claim contradicted by its own reported infected/necrotic testicular cases.",
+                "No generic sealant-no-disadvantage claim, no mandatory apposition or2:1mesh protocol, no proven protection of fertility with STSG. Individual original-source checking remains needed for quantitative claims."
+              ]
+            },
+            {
+              "url": "https://revistas.usp.br/clinics/article/download/17551/19612/21063",
+              "doi": "10.1590/s1807-59322006000400003",
+              "access": "Complete six-page published main text, Table1 all17patient rows, all six figure captions, Portuguese abstract and all18references read. Figures not visually inspected; no supplementary file reviewed.",
+              "cache": "/tmp/debulking-modolin2006.pdf and .txt",
+              "limitations": "Small uncontrolled cohort, subjective outcomes. Obsolete antimicrobial regimen, universal hydrocele and statements dismissing all conservative therapy or claiming superior graft outcomes were not adopted. The paper calls scrotal closure with penile STSG modified Charles; one recurrence patient required two reoperations."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9751400/",
+              "doi": "10.1016/S0022-5347(01)62598-9",
+              "access": "Complete primary indexed abstract and metadata read. Full paper/figures not accessed.",
+              "cache": "/tmp/debulking-ross-primary.json",
+              "limitations": "Five children, four operated, two later grafted; historic proposed sequence cannot be mandated for every child."
+            },
+            {
+              "url": "https://www.cdc.gov/filarial-worms/hcp/clinical-care/index.html",
+              "access": "Complete current primary clinical-treatment webpage read including antiparasitic treatment, coinfection cautions, lymphedema/elephantiasis and hydrocele sections.",
+              "limitations": "Used to distinguish active infection treatment from established tissue damage; no drug regimen copied to operative page."
+            }
+          ],
+          "changes": [
+            "Removed false primary-closure-only10% complication ranking: Guiotto grouped primary closure with skin grafting and compared differently selected disease groups.",
+            "Removed rigid50%skin cutoff, routine stripping to tunica vaginalis, septum/gubernacular division, superior testis relocation, mandatory hydrocele eversion and fixed granulation/graft scheme; preserved safe anatomy and defect-specific coverage.",
+            "Clarified modified Charles terminology can include primary scrotal closure plus penile STSG; separate penile and scrotal coverage endpoints.",
+            "Corrected Garaffa90assessed/34operated; Schook25children/11operated/only6followed; corrected Modolin recurrence previously falsely assigned to Singh48filarial cohort.",
+            "Retained tiny MLL/lymphatic-transfer series only with denominator/causality limits; removed obesity50%universal recurrence, guaranteed fertility, cure and lowest-complication claims.",
+            "Removed compulsory inpatient preoperative CDT and repeated antifilarial-course rule; CDC distinguishes active infection from late chronic elephantiasis."
+          ],
+          "unresolved": [
+            "Most direct genital surgical evidence remains uncontrolled and retrospective. No comparative efficacy or patient-specific recurrence guarantee inferred.",
+            "Guiotto, Torio-Padron, Wisenbaugh, Machol, Garaffa, Schook, Singh, Ross and lymphatic-transfer papers limited to available indexed abstracts for this page; operative details use separately logged full sources.",
+            "Modolin and Lu figures not inspected visually and Lu Table1 is image-only; anatomy paper graphics likewise not independently viewed.",
+            "Current device/operative instructions remain procedure-specific; no new universal graft, drain or catheter timing rule added."
+          ],
+          "sourceSha256": "df727149c28fbcd6c48cca8a58f732e8ceae81c222bcc1a7caa5e55422fa9d19",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/defibulation.mdx",
@@ -25758,11 +27297,208 @@
       "title": "Excision + Flap Reconstruction (Genital Lymphedema)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "0a5c3d26d9e0db85b2dfb24fcf3ea1192d2489405622bfae7a5e0401cd1baaea",
-      "reviewRecords": []
+      "sourceSha256": "d97351784cf5bb33f5b766d078c6ac7868c2c87ffa2fc102d0a4c3b4a472b540",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/excision-flap-reconstruction-lymphedema.mdx",
+          "title": "Excision + Flap Reconstruction (Genital Lymphedema)",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Complete original and revised MDX including every table and all22original references read. All20DOI-linked complete indexed abstracts plus Ross and Chitale primary abstracts/identities read. Selection, donor/anatomic assumptions, populations, failure versus all-complication endpoints, fertility and lymphatic-cure claims checked against these original records and prior complete ISL/Karian source scopes.",
+          "sources": [
+            {
+              "url": "https://doi.org/10.1097/sap.0000000000001875",
+              "title": "A Systematic Review of Outcomes After Genital Lymphedema Surgery: Microsurgical Reconstruction Versus Excisional Procedures.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/01.sap.0000258448.17867.20",
+              "title": "Surgical management of scrotal lymphedema using local flaps.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.burns.2026.107888",
+              "title": "Flap reconstruction following Fournier's gangrene: A systematic review of techniques and outcomes.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1038/s41443-021-00468-x",
+              "title": "Reconstructive surgery of the scrotum: a systematic review.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2023.02.006",
+              "title": "Treatment of Advanced Male Genital Lymphedema With a Complete Functional Lymphatic System Pedicled Transfer.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2021.08.011",
+              "title": "Radical reduction and reconstruction for male genital elephantiasis: Superficial circumflex iliac artery perforator (SCIP) lymphatic flap transfer after elephantiasis tissue resection.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.eururo.2016.09.033",
+              "title": "Aesthetic Penoscrotal Resurfacing: Creating Propeller Flaps from Gluteal Folds.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/sap.0000000000002533",
+              "title": "Anterolateral Thigh Flap With Vascularized Fascia Lata Associated With Thigh Flaps: A Case Report of an All-in-One Reconstruction of the Suspensory Ligament and Penoscrotal District After Fournier Gangrene.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2015.10.039",
+              "title": "Scrotal reconstruction with modified pudendal thigh flaps.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/00006534-199012000-00027",
+              "title": "A new surgical approach in genital lymphedema.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3791/64017",
+              "title": "A Modified Bilateral Scrotal Flap for Penile Skin Defect Repair.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2023.03.025",
+              "title": "Bilateral Pedicled Scrotal Flaps as an Alternative to Skin Graft in Penile Shaft Defects Repair.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2007.03.049",
+              "title": "Scrotum reconstruction with neurovascular pedicled pudendal thigh flaps.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/00006534-200202000-00030",
+              "title": "Anterolateral thigh fasciocutaneous island flaps in perineoscrotal reconstruction.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2013.04.044",
+              "title": "Reconstruction of perineoscrotal and vaginal defects with pedicled anterolateral thigh flap.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1111/ans.12973",
+              "title": "Clinical applications of the pedicled anterolateral thigh flap in reconstruction.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/s0090-4295(03)00158-4",
+              "title": "A new technique in scrotal reconstruction: short gracilis flap.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2006.09.005",
+              "title": "Unilateral gracilis myofasciocutaneous advancement flap for single stage reconstruction of scrotal and perineal defects.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2016.05.024",
+              "title": "Bilateral pedicled gracilis flap for scrotal reconstruction.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/sap.0b013e318208ff00",
+              "title": "Superiority of medial circumflex femoral artery perforator flap in scrotal reconstruction.",
+              "access": "Complete available primary abstract and bibliographic identity read; no full methods/figures unless separately stated.",
+              "cache": "/tmp/excision-flap-primary.json"
+            },
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4447098/",
+              "pmid": "26171090",
+              "cache": [
+                "/tmp/genital-PMC4447098.xml",
+                "/tmp/genital-PMC4447098.txt"
+              ],
+              "scope": "Complete primary front matter, abstract, main text, all2tables, all5figure captions and all30references read from EuropePMC full-text XML. Figure graphics not yet inspected; no supplemental files accessed.",
+              "notes": [
+                "16 retrospective studies,425patients, including2women; search throughSeptember2013. Not a meta-analysis and no RCTs.",
+                "Threshold50% is a proposed reconstructive algorithm; actual skin mobility/tension/viability matters, no conclusive superiority of flap over STSG.",
+                "Tunica-vaginalis absence is disputed in source, not an absolute graft prohibition. Adequately vascularized recipient surface still required.",
+                "Thigh-pouch fertility evidence sparse; harm concern not guaranteed sterility. Review notes two testicular losses from cord necrosis in ten-patient Badejo series.",
+                "Do not propagate internal source errors: scrotal advancement68body versus78Table2, other flaps128body versus118Table2; Hsu8patients but complications inexplicably2/17; Spyropoulou22%(9) in n9; orchiectomy-never claim contradicted by its own reported infected/necrotic testicular cases.",
+                "No generic sealant-no-disadvantage claim, no mandatory apposition or2:1mesh protocol, no proven protection of fertility with STSG. Individual original-source checking remains needed for quantitative claims."
+              ]
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/9751400/",
+              "access": "Complete primary indexed abstract and identity read; full paper/graphics not obtained. Fiveboys,4operated withlocalflaps,2latergrafted; no universalgraftfirstorlast rule adopted.",
+              "cache": "/tmp/debulking-ross-primary.json"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/2817711/",
+              "access": "Complete primary indexed abstract and identity read; full paper/graphics not obtained. TFL lymph absorption was inferred,12mixed tubercular/filarial cases plusonecongenitallimbcase; no routinegroinblockdissection recommendation adopted."
+            },
+            {
+              "url": "https://doi.org/10.1002/micr.70075",
+              "access": "Complete primary indexed abstract and identity read; full paper/graphics not obtained. Eightmen,two complications,norecurrenceobservedmean34months; notcontrolled.",
+              "cache": "/tmp/charles-primary.json"
+            }
+          ],
+          "changes": [
+            "Replaced misleading highest-complication headline and cross-series flap ranking with individualized tissue/defect selection; removed fixed50%andexposed-testis mandates and Fournier1.6%flap-loss transfer into lymphedema outcomes.",
+            "Distinguished coverage from lymphatic reconstruction, pedicled SCIP from freeVLNT,26flapsurvival from recurrence/cure, and7patient compression-free protocol from universal permanent cessation; included2/8CHASCIPcomplications.",
+            "Corrected Mendel22patients versus12questionnaireresponders and postoperative erection score versus maintainedbaseline; flagged mixedindications and revision endpoints.",
+            "Corrected Yu7mixedperineoscrotal/ischialulcer population, Coskunfirat7Fournier/2dehiscences withoutsuperiority trial, Han10/1partialnecrosis; removed unsupported uniform lowrisk/sensory/fertility rankings.",
+            "Removed inferredTFLlymphabsorption asestablishedmechanism and rejected routinegroinblockdissection. Removed broadALT/PSL/othermiscasecatalog from this condition-specific hub; coverage details remain linked."
+          ],
+          "unresolved": [
+            "Most original studies were accessible as complete abstracts only. Full operative text/graphics for those series were not obtained; specific technical prescriptions and causalcomparisons not supported by that access were removed.",
+            "ISL consensus and Karian fullmain/tables/captions were previously read; Karian actualfiguregraphics andsupplements not inspected. Karian is Fourniercoverage evidence, not a genitallymphedema treatment trial.",
+            "No robust genital head-to-head study establishes a universal flap, fertility advantage, lymphatic cure or a mandatory lymphatic-transfer pathway."
+          ],
+          "sourceSha256": "d97351784cf5bb33f5b766d078c6ac7868c2c87ffa2fc102d0a4c3b4a472b540",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/fgm-fat-grafting.mdx",
@@ -26047,11 +27783,179 @@
       "title": "Modified Charles Procedure",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "73d93079abb6cc64a529addac0a099e3e4a931a4271b521e4f0e951ac66a9bd4",
-      "reviewRecords": []
+      "sourceSha256": "ca7aeb59b8f24870f5ca4f67e8cfe2e3967064909ce7ef5030c3e6d7e944f702",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx",
+          "title": "Modified Charles Procedure",
+          "reviewedAt": "2026-09-12",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Full original and revised MDX including all tables and bibliography read. All17original reference identities and16available complete abstracts read; one RRRP letter has no abstract. Genital operative claims checked against complete Modolin main text and prior complete ISL/Vignes/Lu source scopes, with explicit distinction between limb and genital evidence.",
+          "sources": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9739141/",
+              "doi": "10.3390/cancers14235809",
+              "access": "Complete narrative main text, Table 1 text, all six figure captions, all 70 references, COI and funding read; missing truncated paragraphs recovered in overlapping reads. Figure graphics not inspected; no supplements obtained.",
+              "cache": "/tmp/cdt-PMC9739141.xml and .txt",
+              "limitations": "Narrative review, not a systematic genital trial synthesis; its broad universal endoscopy and diagnostic statements were not adopted."
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/",
+              "doi": "10.1097/MD.0000000000003755",
+              "access": "Complete main text, six figure captions, all28 references and funding read; overlapping reads restored all truncated material. Figure graphics and image-only Table 1 not inspected; not recorded as a full visual/table audit.",
+              "cache": "/tmp/cdt-PMC4902367.xml and .txt",
+              "limitations": "36 selected men;9 moderate-dysfunction men selected CDP after declining surgery; no randomized validation. Numerical reduction differences in Results do not equal printed mean before-minus-after values, so those differences were not propagated. MRL injection described is a research protocol, not labeling authorization."
+            },
+            {
+              "url": "https://isl.arizona.edu/sites/default/files/2024-11/THE-DIAGNOSIS-AND-TREATMENT-OF-PERIPHERAL-LYMPHEDEMA-2023-CONSENSUS-DOCUMENT-OF-THE-INTERNATIONAL-SOCIETY-OF-LYMPHOLOGY.pdf",
+              "pmid": "39207406",
+              "cache": [
+                "/tmp/genital-isl2023.pdf",
+                "/tmp/genital-isl2023.txt"
+              ],
+              "scope": "Complete nineteen-page consensus text including all11references read in three contiguous chunks, extracted lines1\u20131009. PDF pages133\u2013151. No separate illustrations or supplements reviewed. Complete primary PubMed abstract and COI also read.",
+              "notes": [
+                "Consensus explicitly acknowledges weak comparative evidence and allows individualized practice; not an evidence-graded operative algorithm.",
+                "Physical ISL stages0\u2013III are explicitly defined for extremities; direct genital staging/percentage-volume extrapolation must be qualified.",
+                "CDT phase1 reduction and phase2 maintenance; no universal required weeks or genital pressure range. Pneumatic treatment can displace edema into genitalia/proximally; individualized monitoring.",
+                "Surgery selection and imaging depend on actual functional vessels, tissue composition and context; early-stage success generalization is chiefly extremity experience.",
+                "VLNT donor lymphedema reported; reverse mapping may reduce, not eliminate risk. Combined scar release/compression confounds outcomes.",
+                "Excision can serve advanced genital disease; superficial collateral loss, wound problems and recurrence considered. Charles/Thompson approaches generally discouraged when alternatives available; this is not a ban on all modern tailored genital excision.",
+                "Specialized liposuction is established for selected nonpitting extremity lymphedema, distinct from cosmetic liposuction; long-term compression remains essential. Do not infer equivalent established genital benefit from limb evidence.",
+                "Omental transposition/enteromesenteric bridges described as unproven and discouraged; distinguish this from contemporary vascularized omental node transfer, which is a different operation.",
+                "Long-term diuretics discouraged for pure lymphedema; comorbid conditions can justify them. MLD additive volume evidence primarily breast-cancer limbs, not genital cohorts."
+              ]
+            },
+            {
+              "url": "https://revistas.usp.br/clinics/article/download/17551/19612/21063",
+              "doi": "10.1590/s1807-59322006000400003",
+              "access": "Complete six-page published main text, Table1 all17patient rows, all six figure captions, Portuguese abstract and all18references read. Figures not visually inspected; no supplementary file reviewed.",
+              "cache": "/tmp/debulking-modolin2006.pdf and .txt",
+              "limitations": "Small uncontrolled cohort, subjective outcomes. Obsolete antimicrobial regimen, universal hydrocele and statements dismissing all conservative therapy or claiming superior graft outcomes were not adopted. The paper calls scrotal closure with penile STSG modified Charles; one recurrence patient required two reoperations."
+            },
+            {
+              "url": "https://doi.org/10.1097/sap.0000000000002263",
+              "title": "The Charles Procedure as Part of the Modern Armamentarium Against Lymphedema.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1177/02683555211053532",
+              "title": "The American Venous Forum, American Vein and Lymphatic Society and the Society for Vascular Medicine expert opinion consensus on lymphedema diagnosis and treatment.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1186/s12885-017-3444-9",
+              "title": "A comprehensive overview on the surgical management of secondary lymphedema of the upper and lower extremities related to prior oncologic therapies.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.3389/fonc.2025.1676803",
+              "title": "Integrated surgical treatment: a new model for treating secondary extremity lymphedema based on algorithms.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/bjs.1800730612",
+              "title": "Filarial lymphoedema and elephantiasis of lower limb: a review of 44 cases.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/sap.0b013e3181d6e45e",
+              "title": "Optimizing outcome of charles procedure for chronic lower extremity lymphoedema.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2016.09.064",
+              "title": "Surgical Reconstruction of Giant Penoscrotal Lymphedema in Sub-Saharan Africa.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/sap.0b013e318180cd24",
+              "title": "Modified Charles procedure using negative pressure dressings for primary lymphedema: a functional assessment.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/jso.25356",
+              "title": "Comprehensive multimodal surgical treatment of end-stage lower extremity lymphedema with toe management: The combined Charles,' Homan's, and vascularized lymph node transfer (CHAHOVA) procedures.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/0002-9610(80)90276-7",
+              "title": "Charles procedure for lymphedema: a warning.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/01.sap.0000202826.61782.c9",
+              "title": "Use of negative-pressure dressings and split-thickness skin grafts following penile shaft reduction and reduction scrotoplasty in the management of penoscrotal elephantiasis.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/micr.30569",
+              "title": "Combined radical reduction with preservation of perforators and distal lymphaticovenular anastomosis for advanced lower extremity lymphedema.",
+              "access": "Bibliographic identity only; indexed record has no abstract and full manuscript was not obtained. Numerical claims removed.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1097/prs.0000000000005993",
+              "title": "Surgical Treatment of Lymphedema.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1001/jamasurg.2023.2017",
+              "title": "Cross-Sectional Analysis of Insurance Coverage for Lymphedema Treatments in the United States.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.bjps.2021.08.011",
+              "title": "Radical reduction and reconstruction for male genital elephantiasis: Superficial circumflex iliac artery perforator (SCIP) lymphatic flap transfer after elephantiasis tissue resection.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1016/j.urology.2023.02.006",
+              "title": "Treatment of Advanced Male Genital Lymphedema With a Complete Functional Lymphatic System Pedicled Transfer.",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            },
+            {
+              "url": "https://doi.org/10.1002/micr.70075",
+              "title": "Surgical Management of Genital Lymphedema Using the Combined Charles' Procedure and Lymphatic Superficial Circumflex Iliac Artery Perforator Flap Transfer (CHASCIP).",
+              "access": "Complete primary indexed abstract and bibliographic identity read; full manuscript/figures not obtained.",
+              "cache": "/tmp/charles-primary.json"
+            }
+          ],
+          "changes": [
+            "Corrected wholesale source-number mismatches: Modolin, Singh, Torio, Wisenbaugh, Ehrl and Guiotto claims previously cited different limb papers. Rebuilt bibliography around retained genital-specific claims.",
+            "Distinguished genital local scrotoplasty plus penile STSG from limb fascial excision and grafting; removed universal deep-fascial stripping, FTSG superiority, hydrocele protocol and required failed microsurgery.",
+            "Separated van der Walt8limb delayed-NPWT grafting with3regrafts from Stokes8genital patients/6NPWT bolsters with complete reported take; removed unsupported causal100%versus88%comparison and limb hospital-stay transfer.",
+            "Corrected Modolin17recurrence context and Salako11/19selection, added CHASCIP2/8complications alongside no observed recurrence, removed cross-study treatment ranking and unproven compression-free cure.",
+            "Removed routine PRP, toe/limb protocol and stale insurance percentages from genital guidance. Qualified lymphatic drainage improvement versus guaranteed restoration using Lu observations."
+          ],
+          "unresolved": [
+            "No comparative trial establishes best genital excision/coverage or benefit of adding lymphatic transfer. Salako, Stokes and CHASCIP full operative manuscripts unavailable; cohort statements are abstract-scoped.",
+            "Modolin, Vignes and Lu figures were not visually inspected; Lu image-only Table1 not read. ISL source staging is extremity-based. These source limitations do not mean clinician sign-off."
+          ],
+          "sourceSha256": "ca7aeb59b8f24870f5ca4f67e8cfe2e3967064909ce7ef5030c3e6d7e944f702",
+          "recordFile": "surgical-genital.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/muranyi-scrotal-tunnel-flap.mdx",
