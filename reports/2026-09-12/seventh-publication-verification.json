@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-09-12T10:56:39.163305+00:00",
+  "sourceCommit": "302597297db8f3855af7a64c816af8b96a7eae7b",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "302597297db8f3855af7a64c816af8b96a7eae7b",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34689094896"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/Cy2mGJxDASHSZ4faLzrqUF1ZB44p",
+      "updated_at": "2026-09-12T10:42:45Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/grafts/tissue-engineered",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/grafts/tissue-engineered",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "5/16": true,
+        "83.3%": true,
+        "PEI.A.12195.01.1": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/grafts/saphenous-vein",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/grafts/saphenous-vein",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "13 months": true,
+        "external jugular": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/urinary-catheters/intermittent-catheter",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/urinary-catheters/intermittent-catheter",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "MultICath": true,
+        "COMPARE": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/surgical-techniques/04h-fistula-repair/male/york-mason",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04h-fistula-repair/male/york-mason",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}

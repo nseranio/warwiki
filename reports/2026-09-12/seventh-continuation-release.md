@@ -16,7 +16,7 @@ Six scrotal pages correct graft-bed selection, closure/flap/thigh-pouch indicati
 
 Lint, typecheck,32component tests and51maintenance tests pass. Production output is133.92MB with2,569files/1,191HTMLpages. All98,795compiled links/assets and730data links pass, including the new raw-admonition guard. An initial visual pass discovered the formatting issue; repairs and the expanded browser sweep follow below.
 
-All **53/53 Chromium checks pass**:49changed documentation routes plus4interaction checks. Three desktop/mobile samples were visually inspected; the repaired warning was re-inspected. See [browser record](seventh-browser-validation.json). Publication verification remains pending until confirmed. Temporary articles and figures stay outside the public repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched.
+All **53/53 Chromium checks pass**:49changed documentation routes plus4interaction checks. Three desktop/mobile samples were visually inspected; the repaired warning was re-inspected. See [browser record](seventh-browser-validation.json). Published as **302597297db8f3855af7a64c816af8b96a7eae7b**. [GitHub CI34689094896](https://github.com/nseranio/warwiki/actions/runs/34689094896) and exact-commit [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/Cy2mGJxDASHSZ4faLzrqUF1ZB44p) succeeded. All six live checks passed, including corrected graft/catheter content, rendered warning markup and the removed Clinic404. See [publication verification](seventh-publication-verification.json). Temporary articles and figures stay outside the public repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched.
 
 ## Continue after this checkpoint
 

@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 49documentation files changed:23substantive revisions and26additional presentation-only repairs. Corrected five alternative-graft pages, six urinary-catheter pages, six scrotal pages, final fistula pages/companion and MukoCell subgroup figures. The review ledger records575current full MDX reads and545scoped updates; source access remains explicitly incomplete.
 
-Integrated2026COMPARE/MultICath with protocol and attrition limits; corrected graft efficacy/regulatory/animal claims after six full main-manuscript reads and focused independent checking. Visual QA found31raw warning boxes across30pages: fixed title syntax and added a generated-content regression guard. Lint/typecheck,32component tests,51maintenance tests and full build pass (133.92MB). All53browser checks pass; publication verification is pending in the [seventh release record](reports/2026-09-12/seventh-continuation-release.md). Continue after publication.
+Integrated2026COMPARE/MultICath with protocol and attrition limits; corrected graft efficacy/regulatory/animal claims after six full main-manuscript reads and focused independent checking. Visual QA found31raw warning boxes across30pages: fixed title syntax and added a generated-content regression guard. Lint/typecheck,32component tests,51maintenance tests and full build pass (133.92MB). Published as30259729; CI34689094896, exact-commit Vercel and six live checks passed. All53browser checks pass; details in the [seventh release record](reports/2026-09-12/seventh-continuation-release.md). Continue after publication.
 
 ---
 
