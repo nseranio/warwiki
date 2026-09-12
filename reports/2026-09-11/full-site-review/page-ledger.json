@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T19:15:16.266993+00:00",
+  "generatedAt": "2026-09-12T19:44:12.083331+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 659,
+    "fullTextReadForCurrentContent": 660,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 11,
-      "unreviewed": 522,
-      "updated": 632
+      "unreviewed": 521,
+      "updated": 633
     }
   },
   "pages": [
@@ -16122,7 +16122,7 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "3969785eb8d514022723ce13431e10d1813571b4845ba8389acbbab5c7e68dab",
+      "sourceSha256": "50355c0d519e76d3ebd9602da90388a15b302a57d0663905acc27a4c957df675",
       "reviewRecords": [
         {
           "file": "docs/01-foundations/tools/technology/robotics/vnotes.mdx",
@@ -16146,11 +16146,14 @@
           ],
           "notes": [
             "Separated conventional from robotic vNOTES and transabdominal robotic evidence. Corrected abdominal camera/extra-incision boundary, Hominis/Anovo identity, Kanno matched denominators and four-day stay, Guan total versus console time and extraction mini-laparotomy, Lowenstein three-day stay, Lim hematuria versus total complications, and nonrobotic vNOTES in sentinel-node comparison. Removed fixed ten-case competence, broad ideal-patient/cost/oncology-equivalence claims.",
-            "Read all 18 original reference MED abstracts in full (/tmp/tools-vnotes-primary.json), full Cochrane 2023 public summary and abstract, complete 2026 Acil randomized-trial abstract, entire SAGES device assessment body and FDA2025 K251761 text pages4\u20137 plus letter. FDA2021 indication letter and manufacturer name-change body read. Full original clinical papers, operative videos and current full device IFUs were not obtained. FDA2026 K260804 appears in lifecycle listing but summary retrieval failed; no claim of exhaustive current regulatory certification. Cochrane conclusions are limited to the retrieved summary/abstract, not its entire review and appendices."
+            "Read all 18 original reference MED abstracts in full (/tmp/tools-vnotes-primary.json), full Cochrane 2023 public summary and abstract, complete 2026 Acil randomized-trial abstract, entire SAGES device assessment body and FDA2025 K251761 text pages4\u20137 plus letter. FDA2021 indication letter and manufacturer name-change body read. Full original clinical papers, operative videos and current full device IFUs were not obtained. FDA2026 K260804 appears in lifecycle listing but summary retrieval failed; no claim of exhaustive current regulatory certification. Cochrane conclusions are limited to the retrieved summary/abstract, not its entire review and appendices.",
+            "Subsequent full original/current MDX reread: added VANH2026 direct conventional-VH comparison and Cassani2026 sparse-injury limits. Cochrane entire text now read, superseding earlier abstract-only scope; full-size figures remain unresolved. See reports/2026-09-12/vaginal-hysterectomy-source-review.md and reference-access JSON. Other original main-paper/IFU gaps retained."
           ],
-          "sourceSha256": "3969785eb8d514022723ce13431e10d1813571b4845ba8389acbbab5c7e68dab",
+          "sourceSha256": "50355c0d519e76d3ebd9602da90388a15b302a57d0663905acc27a4c957df675",
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
+          "fullTextReadAt": "2026-09-12",
+          "sourceReview": "reports/2026-09-12/vaginal-hysterectomy-source-review.md",
           "recordFile": "tools.json"
         }
       ]
@@ -37127,11 +37130,32 @@
       "title": "Vaginal Hysterectomy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "4d178e759f2316ed8287cce954277cb2256577ed42c7b8280bef4c36836e922e",
-      "reviewRecords": []
+      "sourceSha256": "dfab981eb26ed7222271dd3ee2544eb1bc49e909766b30141dae39cacdff9743",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx",
+          "title": "Vaginal Hysterectomy",
+          "status": "updated",
+          "scope": "Full original and revised MDX read. Reconciled benign-route selection, prolapse support, operative framework, device evidence, current route comparisons, complication denominators and perioperative links.",
+          "fullTextRead": true,
+          "fullTextReadAt": "2026-09-12",
+          "sourceSha256": "dfab981eb26ed7222271dd3ee2544eb1bc49e909766b30141dae39cacdff9743",
+          "clinicalVerificationComplete": false,
+          "sourceReview": "reports/2026-09-12/vaginal-hysterectomy-source-review.md",
+          "referenceAccess": "reports/2026-09-12/vaginal-hysterectomy-reference-access.json",
+          "notes": [
+            "All 19 inherited abstract entries read; original entries preserved. Exact main/figure/supplement scopes in access register.",
+            "Corrected wrong apical-support source, Jeppson attribution, FINHYST attribution and denominator, routine gabapentin, universal route/rate claims and device-safety guarantees."
+          ],
+          "unresolvedIssues": [
+            "Remaining original full papers, VANH/Acil full reports, individual trial reports and listed figures/supplements. Teaching videos not fully watched."
+          ],
+          "recordFile": "surgical-rest.json"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/index.mdx",

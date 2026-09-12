@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Twenty-first continuation: hysterectomy evidence and operative-page reconciliation
+
+Rebuilt vaginal hysterectomy around appropriate selection, apical support, flexible operative stages and source-specific outcome evidence. Corrected Jeppson/FINHYST attribution, mixed-route denominators, device safety claims, obsolete complication rankings and routine gabapentin. Reconciled vNOTES with the 2026 direct VANH trial and sparse urinary-injury evidence. Videos remain before references; no public review banner added.
+
+Completed the entire Cochrane text and the 51-page SGS supplement, plus complete LAVA, Yildiz, Cassani and Febrasgo source mains. Inspected all nine Cassani supplemental analysis panels, study/rate tables and four-page risk-of-bias summary. Individual full-paper/figure/supplement gaps remain explicit; original 19 VH citations preserved. Source reading found and documented internal citation, denominator, confidence-interval and plot-label discrepancies.
+
+Lint, typecheck, 32 unit tests, 52 maintenance tests, production build, rendered-link/size checks and both desktop/mobile route checks pass. Build 131.59 MB. Ledger: 660 full current MDX reads, 633 scoped updates, 521 unreviewed. See the [release record](reports/2026-09-12/twenty-first-continuation-release.md). The whole-site clinical review continues.
+
+---
+
 ## 2026-09-12 — Twentieth continuation: hysterectomy clamps and database consistency
 
 Corrected Heaney and Masterson geometry, pedicle handling, ureteral safety and route-versus-device evidence. Added the 2024 SGS vaginal-technology systematic review with narrow source-supported findings. Aligned eleven instrument-database rows with their reviewed children. Three complete source mains, 18 actual journal figures, five society-PDF pages and three actual catalog pages read/inspected; all 20 inherited citations preserved with exact remaining access/read scopes.

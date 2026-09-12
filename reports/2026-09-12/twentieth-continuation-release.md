@@ -1,10 +1,10 @@
 # Twentieth continuation release — September 12, 2026
 
-## Scope
+## Scope at publication
 
 Corrected Heaney and Masterson after complete original/revised page reads. Replaced false instrument geometry and route restrictions, unsafe fixed-distance/retained-pedicle descriptions, universal suture choices and misapplied study claims. Added the relevant 2024 Society of Gynecologic Surgeons review at its explicitly recorded abstract scope. Eleven instrument-index rows now match the reviewed clamp pages.
 
-Read three complete inherited source mains (ACOG 701, Stark and Tsolakidis), all 18 journal figures, all five ACOG PDF pages and three manufacturer-catalog pages. All 20 inherited reference entries are preserved in the [source/access record](hysterectomy-clamps-source-review.md). Other full-paper gaps remain explicit. The complete Cochrane manuscript was recovered; its abstract, seven summary-of-findings tables, Background/two classification tables and Objectives are read. Methods onward remain unfinished. Its available full text and the available 51-page Balgobin supplement must not be mislabeled inaccessible.
+Read three complete inherited source mains (ACOG 701, Stark and Tsolakidis), all 18 journal figures, all five ACOG PDF pages and three manufacturer-catalog pages. All 20 inherited reference entries are preserved in the [source/access record](hysterectomy-clamps-source-review.md). Other full-paper gaps remain explicit. The complete Cochrane manuscript was recovered; its abstract, seven summary-of-findings tables, Background/two classification tables and Objectives are read. At that publication checkpoint, Methods onward remained unfinished. Its available full text and the available 51-page Balgobin supplement must not be mislabeled inaccessible.
 
 Ledger: **659 full current MDX reads, 632 scoped updates, 21 checked, 11 unresolved, 522 unreviewed of 1,186 files**. Tools: 108/231. The database count retains its prior full read plus complete changed-row review, not a newly counted full index read. No complete clinical clearance is asserted.
 
@@ -20,4 +20,4 @@ Content **`9e4603924e6445505ea43cb80f48c5dec3304327`** is pushed and verified li
 
 ## Continue
 
-The whole-site task remains active. Continue the recovered Cochrane hysterectomy review from Methods (local offset 59288), the Balgobin 51-page supplement, then Jacobson/Schnidt and Péan/Rochester-Péan, with matching index rows. Other foundations, surgical, resources/history and OpenEvidence reconciliation remain outstanding. Quarterly maintenance and paused Epic work remain unchanged.
+The whole-site task remains active. The Cochrane hysterectomy text is now fully read; full-size figures remain unresolved. The Balgobin supplement and subsequent hysterectomy work are now recorded in [the follow-through review](vaginal-hysterectomy-source-review.md). Continue Jacobson/Schnidt and Péan/Rochester-Péan with matching index rows. See [follow-through](hysterectomy-cochrane-follow-through.md). Other foundations, surgical, resources/history and OpenEvidence reconciliation remain outstanding. Quarterly maintenance and paused Epic work remain unchanged.
