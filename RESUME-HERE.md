@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The twentieth September 12 batch corrects Heaney/Masterson and aligns eleven instrument-database rows. Three complete original source mains, 18 journal figures, five society-PDF pages and three catalog pages were read/inspected. All local and desktop/mobile checks pass at 131.60 MB; publication verification is pending. See the [twentieth release record](reports/2026-09-12/twentieth-continuation-release.md). The nineteenth content batch `2f54f892` is already verified live.
+The twentieth September 12 batch corrects Heaney/Masterson and aligns eleven instrument-database rows. Three complete original source mains, 18 journal figures, five society-PDF pages and three catalog pages were read/inspected. All local and desktop/mobile checks pass at 131.60 MB. Content `9e460392` passed exact-commit CI/Vercel and all five production route/content checks. See the [twentieth release record](reports/2026-09-12/twentieth-continuation-release.md). The nineteenth content batch `2f54f892` is already verified live.
 
 ## Review coverage and next work
 

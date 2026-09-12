@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-09-12T19:21:36.390742+00:00",
+  "sourceCommit": "9e4603924e6445505ea43cb80f48c5dec3304327",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "9e4603924e6445505ea43cb80f48c5dec3304327",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34713804239"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/P1Yjh8iG8r1o96x6ZMCCfTkifMvE",
+      "updated_at": "2026-09-12T19:20:24Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://www.warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/heaney",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/heaney",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Heaney-Ballantine": true,
+        "19 comparative": true,
+        "37 mL": true,
+        "retained pedicle": true,
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/masterson",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments/clamps/masterson",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "straight and curved patterns": true,
+        "25.5 cm": true,
+        "6,811": true,
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/instruments",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/instruments",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Gemini Dissecting Forceps": true,
+        "Masterson Pedicle Clamp": true,
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    }
+  ]
+}

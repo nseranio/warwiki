@@ -16,7 +16,7 @@ Build: **131.60 MB**, 2,569 files, 1,191 HTML pages, 97,454 local links/assets a
 
 ## Publication
 
-Validated locally; content commit and exact CI/Vercel/live checks will be recorded after publication.
+Content **`9e4603924e6445505ea43cb80f48c5dec3304327`** is pushed and verified live. [GitHub CI 34713804239](https://github.com/nseranio/warwiki/actions/runs/34713804239) and [Vercel deployment P1Yjh8iG8r1o96x6ZMCCfTkifMvE](https://vercel.com/nseranios-projects/warwiki/P1Yjh8iG8r1o96x6ZMCCfTkifMvE) succeeded for that exact commit. All five production route/content checks passed, including both corrected articles, the instrument index and the removed Clinic route. See [production verification](twentieth-publication-verification.json).
 
 ## Continue
 
