@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The nineteenth September 12 batch corrects gracilis, Backhaus, Mixter and Gemini after full original/revised reads. Six gracilis source mains and 22 actual figures, three society documents and four actual instrument-catalog pages were read/inspected. Exact full-paper/supplement/IFU gaps remain recorded. Local validation and all four desktop/mobile checks pass at 131.65 MB. Publication verification is pending; see the [nineteenth release record](reports/2026-09-12/nineteenth-continuation-release.md).
+The nineteenth September 12 batch corrects gracilis, Backhaus, Mixter and Gemini after full original/revised reads. Six gracilis source mains and 22 actual figures, three society documents and four actual instrument-catalog pages were read/inspected. Exact full-paper/supplement/IFU gaps remain recorded. Local validation and all four desktop/mobile checks pass at 131.65 MB. Content commit `2f54f892` is verified live with successful GitHub CI and Vercel deployment; see the [nineteenth release record](reports/2026-09-12/nineteenth-continuation-release.md).
 
 ## Review coverage and next work
 

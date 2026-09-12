@@ -16,7 +16,7 @@ Build output: **131.65 MB**, 2,569 files, 1,191 HTML pages. **97,476 compiled lo
 
 ## Publication
 
-Local work is validated; content commit, exact-commit GitHub/Vercel status and live checks will be recorded after publication.
+Published content commit `2f54f892cbd1f69d96d858fb9ebd2a023a7dde95` passed GitHub CI [34713096642](https://github.com/nseranio/warwiki/actions/runs/34713096642) and Vercel deployment [5syCh6oK3P79Nwf8JAMHqzbnKirk](https://vercel.com/nseranios-projects/warwiki/5syCh6oK3P79Nwf8JAMHqzbnKirk). All four updated production pages and the homepage return 200 with the corrected text; `/clinic` remains 404. See [exact publication verification](nineteenth-publication-verification.json).
 
 ## Continue
 
