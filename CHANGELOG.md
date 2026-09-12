@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Fifteenth continuation: foreign-body safety and tissue-scaffold evidence
+
+Corrected five biomaterials pages: free silicone, penile pearls, decellularized ECM, composite scaffolds and synthetic polymer scaffolds. Removed unsupported global legality/incidence, blanket implant safety, imaging/removal assumptions and automatic medication/flap instructions. Clarified cell-free versus cultured graft guidance, material-dependent degradation and the limits of cell-culture/animal evidence.
+
+Completed three cited original mains and their actual figures, plus the silicone review's full supplement with methods, PRISMA and treatment tables; recorded remaining original-access gaps individually. No small new studies were added for novelty. See the [source review](reports/2026-09-12/foreign-bodies-scaffolds-source-review.md).
+
+Lint/typecheck/build and all five desktop/mobile browser checks pass: 132.06 MB, 97,693 local links/assets and 722 data links. Ledger: 640 current full MDX reads and 613 scoped updates. Publication verification pending; see the [fifteenth release record](reports/2026-09-12/fifteenth-continuation-release.md). Continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Fourteenth continuation: bowel-segment selection and source reliability
 
 Rebuilt Bowel Segments, correcting jejunal transport, universal cutoffs and lengths, misleading outcomes and blanket cancer surveillance. Integrated current AUA/EAU guidance, the final USC-STAR RCT and the 2026 renal synthesis with exact access limits. Five cited original full texts and the separate 2026 quality-of-life review with all six supplements were completed; conflicting numerical claims from that review were withheld. All 54 inherited references remain recoverable in the new source register.
