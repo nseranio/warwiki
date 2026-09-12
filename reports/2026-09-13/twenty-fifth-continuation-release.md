@@ -18,7 +18,7 @@ All six changed routes pass desktop/mobile, citation anchors, expected content, 
 
 ## Publication
 
-Pending exact-commit CI, Vercel and live checks after push. No fresh storage-meter/alias/retention inventory was performed; previous41-deployment cleanup and30-day/minimum10retention remain the last documented state.
+Content commit `db18de10ccca0020131dd8ea7d8beeb5dd839dcc` is pushed to `origin/main`. Exact-commit [GitHub CI34719968980](https://github.com/nseranio/warwiki/actions/runs/34719968980) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/EosseWuA1Layk8dbJTae9ZTd1HoK) succeeded. All12live checks pass, including six revised routes, USLS SVG, homepage and four removed-route/figure404 checks. [Verification record](twenty-fifth-publication-verification.json). An initial check during deployment correctly still found the previous production; the final check after Vercel success passes. No fresh storage-meter/alias/retention inventory was performed; previous41-deployment cleanup and30-day/minimum10retention remain the last documented state.
 
 ## Continue
 

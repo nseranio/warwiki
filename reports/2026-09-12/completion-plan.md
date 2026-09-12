@@ -12,9 +12,9 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-The twenty-fifth batch is locally validated: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Four apical/colpocleisis articles rebuilt, two companions linked, USLS diagram corrected and SSLF diagram withdrawn. Build131.37MB; publication pending. [Release record](../2026-09-13/twenty-fifth-continuation-release.md).
+The twenty-fifth batch is locally validated: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Four apical/colpocleisis articles rebuilt, two companions linked, USLS diagram corrected and SSLF diagram withdrawn. Build131.37MB; content `db18de10` passed exact-commit CI34719968980/Vercel and all12live checks. [Release record](../2026-09-13/twenty-fifth-continuation-release.md).
 
-Current bounded source readers cover two hysteropexy pages, SUPeR2021 and barbed sutures. Continue all remaining tools, surgical techniques, foundations/resources/History/imported data and OpenEvidence reconciliation. No usage-reset credits authorized.
+Current bounded source readers cover two hysteropexy pages, Manchester2026 review and barbed sutures; SUPeR2021 main/figures complete with supplement inaccessible. Root is reconciling Manchester-Fothergill and has read the complete SAM main and30-page SAP. Continue all remaining tools, surgical techniques, foundations/resources/History/imported data and OpenEvidence reconciliation. No usage-reset credits authorized.
 
 ## Retained preferences
 

@@ -10,7 +10,7 @@ For commit-level detail run `git log --oneline`.
 
 Rebuilt four apical/colpocleisis pages and linked two companions to the September2026 U-POP review. Corrected trial versions/denominators, testing and operative mandates, mesh/uterine-preservation selection, and sling-material attribution. Withdrawn inaccurate SSLF diagram; corrected USLS conceptual geometry/labels and urinary-tract assessment. Full original OPTIMAL package, additional original sources and complete apical Cochrane text read; actual-figure/supplement gaps remain explicit.
 
-All local checks and16visual checks pass at131.37MB; registry52figures. Ledger: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Publication pending. See [release record](reports/2026-09-13/twenty-fifth-continuation-release.md) and [source index](reports/2026-09-13/apical-source-reading/README.md). Continue the whole-site request.
+All local checks and16visual checks pass at131.37MB; registry52figures. Ledger: 674 full current MDX reads and 646 scoped updates of 1,186 files; 21 checked, 12 unresolved and 507 unreviewed. No complete clinical clearance is asserted. Content `db18de10` passed exact-commit CI34719968980/Vercel and all12live checks. See [release record](reports/2026-09-13/twenty-fifth-continuation-release.md) and [source index](reports/2026-09-13/apical-source-reading/README.md). Continue the whole-site request.
 
 ---
 
