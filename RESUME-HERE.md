@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The ninth September 12 batch revises **17 documentation pages** across bowel reconstruction, biomaterials, genital lymphatic techniques and perioperative care. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **132.77 MB**, 98,134 compiled links/assets and 722 data links. All 21 browser checks pass. Publication verification is pending. See the [current release record](reports/2026-09-12/ninth-continuation-release.md).
+The ninth September 12 batch revises **17 documentation pages** across bowel reconstruction, biomaterials, genital lymphatic techniques and perioperative care. Lint/typecheck, 32 component tests, 51 maintenance tests and production build pass: **132.77 MB**, 98,134 compiled links/assets and 722 data links. All 21 browser checks pass. Published as 9cad97d7; exact-commit CI/Vercel and six live checks passed. See the [current release record](reports/2026-09-12/ninth-continuation-release.md).
 
 ## Review coverage and next work
 

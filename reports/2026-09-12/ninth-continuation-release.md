@@ -12,7 +12,7 @@ Removed the unused reoperative-bowel decision-tree module after reading it and c
 
 ## Validation and publication
 
-Lint, typecheck, 32 component tests and 51 maintenance tests pass. Production build: **132.77 MB**, 2,569 files and 1,191 HTML pages; all **98,134 compiled links/assets and 722 data links** pass. All **21 Chromium checks pass** (17 changed routes and four interaction checks). Four desktop samples and the mobile bowel comparison table were visually inspected (390px viewport, no document overflow); [browser record](ninth-browser-validation.json) tracks scope. Commit, CI, Vercel and live verification are pending and will be recorded here.
+Lint, typecheck, 32 component tests and 51 maintenance tests pass. Production build: **132.77 MB**, 2,569 files and 1,191 HTML pages; all **98,134 compiled links/assets and 722 data links** pass. All **21 Chromium checks pass** (17 changed routes and four interaction checks). Four desktop samples and the mobile bowel comparison table were visually inspected (390px viewport, no document overflow); [browser record](ninth-browser-validation.json) tracks scope. Published as **9cad97d7de1b585e4d021070e2dd042bd3ebd309**. [GitHub CI34692608771](https://github.com/nseranio/warwiki/actions/runs/34692608771) and the exact-commit [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/2m57VhqFnjJ5a6kduA4x8Ny5dymD) succeeded; all six live checks passed. See [publication verification](ninth-publication-verification.json).
 
 Source PDFs, research downloads and screenshots remain outside the deployed repository. Unrelated `world-cup-next-week-pacific.ics` remains untouched. The account's Vercel deployment-storage meter has not been reconfirmed; local artifact size is not that meter.
 

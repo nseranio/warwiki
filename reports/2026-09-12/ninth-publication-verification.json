@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-09-12T12:05:45.826185+00:00",
+  "sourceCommit": "9cad97d7de1b585e4d021070e2dd042bd3ebd309",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "9cad97d7de1b585e4d021070e2dd042bd3ebd309",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34692608771"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/2m57VhqFnjJ5a6kduA4x8Ny5dymD",
+      "updated_at": "2026-09-12T12:04:37Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/bowel-handling-injury-management",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/bowel-handling-injury-management",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Seprafilm": true,
+        "fresh": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/surgical-principles/bowel-anastomosis",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/surgical-principles/bowel-anastomosis",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "EssentiAL": true,
+        "AVOID": true,
+        "ICG-COLORAL": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/tools/biomaterials/synthetic-meshes/absorbable-mesh",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/biomaterials/synthetic-meshes/absorbable-mesh",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "Phasix": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/docs/foundations/perioperative-care/intraoperative-care/nerve-blocks",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/perioperative-care/intraoperative-care/nerve-blocks",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "ASRA": true,
+        "no raw admonitions": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true
+      },
+      "passed": true
+    }
+  ],
+  "deploymentInventoryAccess": "Fresh Vercel alias/retention/storage inventory was not requested in this batch. Exact-commit Vercel success and live content were checked. Prior direct CLI-credential inventory attempt returned403."
+}

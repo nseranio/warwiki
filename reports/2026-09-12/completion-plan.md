@@ -17,7 +17,7 @@ The user explicitly requested completion after the previous release stopped at 1
 - `workflow_readiness`: completed all 73 clinical-condition and 46 special-population reads and scoped corrections; all 44 fistula originals now read; continue four remaining perioperative corrections (ERAS, cardiovascular risk, frailty and calculators).
 - Root: other foundations, remaining evaluation, History/imported biographies, resources, journal club, source pages/data, central ledger, cross-domain review and publication.
 
-The ninth batch revises 17 documentation pages and records 614 current full MDX reads. Lint/typecheck/tests/build pass (132.77 MB); all 21 browser checks pass; publication verification pending. Continue after publication without another user message. Domain ledgers record exact source access and unresolved claims; root merges hashes and verifies production. Counts describe page reading, not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
+The ninth batch revises 17 documentation pages and records 614 current full MDX reads. Lint/typecheck/tests/build pass (132.77 MB); all 21 browser checks pass; published as 9cad97d7; exact-commit CI/Vercel and six live checks passed. Continue after publication without another user message. Domain ledgers record exact source access and unresolved claims; root merges hashes and verifies production. Counts describe page reading, not clinical clearance. See [RESUME-HERE.md](../../RESUME-HERE.md).
 
 ## Retained preferences
 
