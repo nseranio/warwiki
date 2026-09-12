@@ -16,7 +16,7 @@ Both changed routes pass desktop/mobile content, actual citation-anchor clicks, 
 
 ## Publication
 
-Pending commit, push and exact-commit CI/Vercel/live verification. The prior verified content is `9e4603924e6445505ea43cb80f48c5dec3304327`.
+Content `7a102940f18a56dcaaaa59c11893d4d013c900fe` is pushed to main. Exact-commit [GitHub CI](https://github.com/nseranio/warwiki/actions/runs/34715139040) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/4zaYoF46NXAMGxPrDesJpGonG7Pa) succeeded. Production home and both changed routes return 200 with the corrected text; `/clinic` remains 404. See [publication verification](twenty-first-publication-verification.json).
 
 ## Continue
 

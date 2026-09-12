@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-09-12T19:50:37.571827+00:00",
+  "sourceCommit": "7a102940f18a56dcaaaa59c11893d4d013c900fe",
+  "githubCI": {
+    "conclusion": "success",
+    "headSha": "7a102940f18a56dcaaaa59c11893d4d013c900fe",
+    "status": "completed",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/34715139040"
+  },
+  "vercelCommitStatuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/nseranios-projects/warwiki/4zaYoF46NXAMGxPrDesJpGonG7Pa",
+      "updated_at": "2026-09-12T19:48:07Z"
+    }
+  ],
+  "productionChecks": [
+    {
+      "url": "https://www.warwiki.org/",
+      "finalUrl": "https://www.warwiki.org/",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/surgical-techniques/04g-prolapse-repair/vaginal-hysterectomy",
+      "finalUrl": "https://www.warwiki.org/docs/surgical-techniques/04g-prolapse-repair/vaginal-hysterectomy",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "87.3%": true,
+        "71.4%": true,
+        "FINHYST": true,
+        "19 comparative": true,
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/docs/foundations/tools/technology/robotics/vnotes",
+      "finalUrl": "https://www.warwiki.org/docs/foundations/tools/technology/robotics/vnotes",
+      "status": 200,
+      "expectedStatus": 200,
+      "textChecks": {
+        "VANH": true,
+        "48": true,
+        "87.3%": true,
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.warwiki.org/clinic",
+      "finalUrl": "https://www.warwiki.org/clinic",
+      "status": 404,
+      "expectedStatus": 404,
+      "textChecks": {
+        "no raw admonitions": true,
+        "no old evidence banner": true
+      },
+      "passed": true
+    }
+  ]
+}

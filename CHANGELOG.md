@@ -12,7 +12,7 @@ Rebuilt vaginal hysterectomy around appropriate selection, apical support, flexi
 
 Completed the entire Cochrane text and the 51-page SGS supplement, plus complete LAVA, Yildiz, Cassani and Febrasgo source mains. Inspected all nine Cassani supplemental analysis panels, study/rate tables and four-page risk-of-bias summary. Individual full-paper/figure/supplement gaps remain explicit; original 19 VH citations preserved. Source reading found and documented internal citation, denominator, confidence-interval and plot-label discrepancies.
 
-Lint, typecheck, 32 unit tests, 52 maintenance tests, production build, rendered-link/size checks and both desktop/mobile route checks pass. Build 131.59 MB. Ledger: 660 full current MDX reads, 633 scoped updates, 521 unreviewed. See the [release record](reports/2026-09-12/twenty-first-continuation-release.md). The whole-site clinical review continues.
+Lint, typecheck, 32 unit tests, 52 maintenance tests, production build, rendered-link/size checks and both desktop/mobile route checks pass. Build 131.59 MB. Content `7a102940` is pushed and verified live with successful CI and Vercel. Ledger: 660 full current MDX reads, 633 scoped updates, 521 unreviewed. See the [release record](reports/2026-09-12/twenty-first-continuation-release.md). The whole-site clinical review continues.
 
 ---
 

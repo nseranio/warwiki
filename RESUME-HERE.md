@@ -4,7 +4,7 @@
 
 ## Current work and publication
 
-The twenty-first September 12 batch corrects vaginal hysterectomy and reconciles vNOTES. Entire Cochrane text, all 51 SGS supplemental pages and four further complete mains are read; exact figure/supplement gaps remain explicit. All local checks and both desktop/mobile route checks pass at 131.59 MB. Publication is pending. See the [twenty-first release record](reports/2026-09-12/twenty-first-continuation-release.md). The twentieth content `9e460392` is already verified live.
+The twenty-first September 12 batch corrects vaginal hysterectomy and reconciles vNOTES. Entire Cochrane text, all 51 SGS supplemental pages and four further complete mains are read; exact figure/supplement gaps remain explicit. All local checks and both desktop/mobile route checks pass at 131.59 MB. Content `7a102940` is pushed and verified live with successful exact-commit CI and Vercel. See the [twenty-first release record](reports/2026-09-12/twenty-first-continuation-release.md). The twentieth content `9e460392` is the prior verified release.
 
 ## Review coverage and next work
 
