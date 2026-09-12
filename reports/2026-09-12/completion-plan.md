@@ -12,7 +12,7 @@ The user explicitly requested completion after the previous release stopped at 1
 
 ## Current ownership and checkpoint
 
-The twenty-third batch is locally validated: **670 complete current MDX reads, 640 scoped updates, 21 checked, 14 unresolved and 511 unreviewed of 1,186 files**. Eight sling/fascia/prolapse pages are corrected within explicitly recorded scopes; two misleading diagrams are withdrawn. Build 131.46 MB; publication verification is pending in the [release record](twenty-third-continuation-release.md).
+The twenty-third batch is locally validated: **670 complete current MDX reads, 640 scoped updates, 21 checked, 14 unresolved and 511 unreviewed of 1,186 files**. Eight sling/fascia/prolapse pages are corrected within explicitly recorded scopes; two misleading diagrams are withdrawn. Build 131.46 MB; content `dd4eafee` passed exact-commit CI/Vercel and all twelve live checks in the [release record](twenty-third-continuation-release.md).
 
 The three complete sling/open/laparoscopic Cochrane mains and all 342 actual graphics have been read. Original trials, actual figures, videos and supplements have their own access/read records. This does not close those remaining gaps.
 

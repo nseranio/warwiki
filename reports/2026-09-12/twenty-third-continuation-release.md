@@ -20,7 +20,7 @@ All eight changed routes pass desktop/mobile checks, real citation-anchor naviga
 
 ## Publication
 
-Local validation is complete; exact-commit CI, Vercel and live verification are pending publication. Update this section after checking the pushed content commit.
+Content `dd4eafee0cdca52061ab46c8121159cfc6f3c25a` is pushed to main. Exact-commit [GitHub CI](https://github.com/nseranio/warwiki/actions/runs/34717398230) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/Fwwh4g3LrwY4YuNg7mnZEsa8JMbq) succeeded. All eight changed articles and the home page return 200 with the corrected text; `/clinic` and both withdrawn public SVG URLs return 404. All twelve live checks pass. See [publication verification](twenty-third-publication-verification.json).
 
 ## Continue
 
