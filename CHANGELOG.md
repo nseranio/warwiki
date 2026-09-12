@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-12 — Eighteenth continuation: peritoneal and omental reconstruction
+
+Rebuilt both flap articles and the peritoneal vaginoplasty technique page after full original/revised reads. Corrected misattributed VVF tissue, gastric vascular anatomy, cohort denominators, false revision comparisons, unsupported outcome guarantees and generic bowel-obstruction advice. Added major lymphocele trials, APR omentoplasty synthesis, the 500-case vaginoplasty cohort and June 2026 review with explicit evidence limits.
+
+Sixteen new complete source mains are read; figures, supplements and inaccessible originals are tracked separately. All 92 inherited reference entries remain preserved in the [source/access record](reports/2026-09-12/peritoneal-omental-source-review.md). Lint/typecheck/build and desktop/mobile checks pass; output is 131.74 MB. Ledger: 653 current full MDX reads and 627 scoped updates. See the [eighteenth release record](reports/2026-09-12/eighteenth-continuation-release.md) for exact publication status. Continue the whole-site task after publication.
+
+---
+
 ## 2026-09-12 — Seventeenth continuation: clamp handling and protocol attribution
 
 Corrected six clamp pages plus testosterone, lymphedema and anal anatomy; reconciled VVF protocol attribution in three flap companions and removed an unsupported universal omental-flap ranking. Quarterly screening now detects explicit Cochrane-protocol declarations in abstracts without publishing the abstracts; seven real protocol records and the 52-test suite pass. Fixed blue-on-blue table-header links identified during desktop/mobile inspection.
