@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Twenty-seventh continuation: barbed-suture evidence recovery
+
+Rebuilt the barbed-sutures article around the complete accessible VUA and partial-nephrectomy evidence. Removed unsupported product hierarchies, universal gauge/clip rules, deliberate-gapped VUA closure, standard-of-care language, claimed functional superiority, and numerical upper-tract/bladder risks rooted in inaccessible or indirect sources. The revised article retains bounded time-related findings and explicitly distinguishes unresolved tubular-reconstruction and animal/bench evidence. The durable [source record](reports/2026-09-19/barbed-sutures-recovery-review.md) records main-text scope, unreviewed supplements, and missing primary sources.
+
+Ledger: 678 full current MDX reads and 650 scoped updates of 1,186 files; 21 checked, 12 unresolved and 503 unreviewed. This remains a continuing whole-site audit, not clinical clearance. Validation and publication details are recorded in the companion release record.
+
+---
+
 ## 2026-09-19 — Twenty-sixth continuation: hysteropexy evidence recovery
 
 Rebuilt the native sacrospinous and sacral hysteropexy pages around bounded trial evidence and corrected Manchester-Fothergill trial interpretation. SAVE-U and SUPeR are now explicitly distinguished from LAVA and SAM, and SUPeR is no longer presented as native-tissue evidence. Corrected SAM point-D eligibility, cervical-stenosis denominator, repeat-operation/PGI-I framing, pathology wording, and the limits of the Dutch economic estimate. Removed unsupported universal operative rules and broad outcome/pregnancy/mesh claims. The durable [source record](reports/2026-09-19/hysteropexy-recovery-review.md) identifies complete accessible source reading, reused prior work, and unresolved supplements/source packages.

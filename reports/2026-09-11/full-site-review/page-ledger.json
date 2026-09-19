@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-12T21:20:02.582398+00:00",
+  "generatedAt": "2026-09-19T16:31:00+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 677,
+    "fullTextReadForCurrentContent": 678,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 504,
-      "updated": 649
+      "unreviewed": 503,
+      "updated": 650
     }
   },
   "pages": [
@@ -6103,11 +6103,44 @@
       "title": "Barbed Sutures",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "75551acefca57e1fd42863d66ebf51c6e3dd9f1fb29db5c082f3bd7f491d63c8",
-      "reviewRecords": []
+      "sourceSha256": "a83ab6b1a556fa12139820fa7af284a07298e968918e54041abfbd51b4e20b80",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/barbed-sutures.mdx",
+          "title": "Barbed Sutures",
+          "reviewedAt": "2026-09-19",
+          "status": "updated",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "scope": "Entire original and final revised MDX, tables, and references read. Complete accessible main text of Li 2015, Lin 2018, and Hu 2025 read. Hu's two operative-video supplements were not reviewed. No inaccessible primary study was treated as verified support for a retained quantitative claim.",
+          "sources": [
+            {
+              "ref": 1,
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4489906/",
+              "access": "Complete accessible HTML main text, tables, references, and linked figure captions read; external figure images not separately reviewed."
+            },
+            {
+              "ref": 2,
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6329109/",
+              "access": "Complete accessible HTML main text, tables, references, and linked figure captions read; downloadable 96.4 KB supplementary DOCX was not separately reviewed."
+            },
+            {
+              "ref": 3,
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11892290/",
+              "access": "Complete accessible HTML main text, tables, references, and linked figure captions read. Two linked operative-video supplements (999.6 MB and 457.2 MB) were not reviewed."
+            },
+            {
+              "ref": 4,
+              "url": "https://doi.org/10.1007/s00464-019-06890-z",
+              "access": "Bibliographic record retained; full text not accessed in this recovery pass. Only the cautious linkage statement is retained."
+            }
+          ],
+          "unresolved": "Full primary texts for the prior product-specific pyeloplasty failure claims, Williams technique details, and multiple bench/animal/product claims were not accessible in this pass. Those claims were removed rather than considered verified."
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/bowel-anastomosis.mdx",
