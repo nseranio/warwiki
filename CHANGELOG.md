@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Twenty-sixth continuation: hysteropexy evidence recovery
+
+Rebuilt the native sacrospinous and sacral hysteropexy pages around bounded trial evidence and corrected Manchester-Fothergill trial interpretation. SAVE-U and SUPeR are now explicitly distinguished from LAVA and SAM, and SUPeR is no longer presented as native-tissue evidence. Corrected SAM point-D eligibility, cervical-stenosis denominator, repeat-operation/PGI-I framing, pathology wording, and the limits of the Dutch economic estimate. Removed unsupported universal operative rules and broad outcome/pregnancy/mesh claims. The durable [source record](reports/2026-09-19/hysteropexy-recovery-review.md) identifies complete accessible source reading, reused prior work, and unresolved supplements/source packages.
+
+Ledger: 677 full current MDX reads and 649 scoped updates of 1,186 files; 21 checked, 12 unresolved and 504 unreviewed. This is a continuing whole-site audit, not clinical clearance. Validation and publication details are recorded in the companion release record.
+
+---
+
 ## 2026-09-13 — Twenty-fifth continuation: apical outcomes, operative anatomy and colpocleisis
 
 Rebuilt four apical/colpocleisis pages and linked two companions to the September2026 U-POP review. Corrected trial versions/denominators, testing and operative mandates, mesh/uterine-preservation selection, and sling-material attribution. Withdrawn inaccurate SSLF diagram; corrected USLS conceptual geometry/labels and urinary-tract assessment. Full original OPTIMAL package, additional original sources and complete apical Cochrane text read; actual-figure/supplement gaps remain explicit.
