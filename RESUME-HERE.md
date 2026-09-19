@@ -2,9 +2,11 @@
 
 **The requested review is still active. Continue after each publication batch.** The user specifically challenged the previous partial stop and asked for actual full-text/source checks across the entire site. Read the [completion plan](reports/2026-09-12/completion-plan.md).
 
+**September19 handoff:** use the [compact recovery checkpoint](reports/2026-09-19/continuation-checkpoint.md) and [efficient continuation prompt](reports/2026-09-19/efficient-continuation-prompt.md). No reviewers are currently active. Unfinished batch26 temporary research files are absent; older reader assignments below are historical, not live work or completed edits.
+
 ## Current work and publication
 
-The twenty-fifth batch rebuilds four apical/colpocleisis pages, updates two companions, withdraws the SSLF figure and corrects USLS. All local and16visual checks pass at131.37MB. Content `db18de10` is pushed and verified: exact-commit CI34719968980, Vercel and all12live checks pass; see [release record](reports/2026-09-13/twenty-fifth-continuation-release.md). 
+The twenty-fifth batch rebuilds four apical/colpocleisis pages, updates two companions, withdraws the SSLF figure and corrects USLS. All local and16visual checks pass at131.37MB. Content `db18de10` is pushed and verified: exact-commit CI34719968980, Vercel and all12live checks pass; see [release record](reports/2026-09-13/twenty-fifth-continuation-release.md).
 
 ## Review coverage and next work
 
