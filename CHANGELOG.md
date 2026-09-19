@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Twenty-ninth continuation: pectopexy evidence boundaries
+
+Rebuilt pectopexy around its actual evidence limits. Removed fixed operative instructions, product/device preferences, mesh configurations, universal selection rules, learning-curve and surveillance mandates, and numerical claims of comparative superiority, safety, recurrence, or durability. The revised page distinguishes its bilateral iliopectineal anchor from sacral fixation while retaining uncertainty about patient-centered and long-term comparisons. The [recovery record](reports/2026-09-19/pectopexy-recovery-review.md) separates complete accessible source reading, reused Cochrane scope, the abstract-only scoping review, and unresolved original reports.
+
+Ledger: 679 full current MDX reads and 651 scoped updates of 1,186 files; 21 checked, 12 unresolved and 502 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Twenty-eighth continuation: Manchester source follow-through
 
 Recovered and read the accessible 2026 Manchester review and its four actual figures, plus the accessible complete 2025 SAM economic-evaluation record and its central cost-effectiveness figure. Removed speculative reproductive-risk extrapolation from cervical-cancer surgery, corrected the “case reports only” pregnancy wording, and narrowed retained-uterus follow-up language. The [hysteropexy recovery record](reports/2026-09-19/hysteropexy-recovery-review.md) now separates completed source scope from the source-host download-protected supplements. Coverage totals are unchanged; this is source follow-through on an already reviewed page, not clinical clearance.
