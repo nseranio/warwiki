@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirtieth continuation: lateral-suspension evidence boundaries
+
+Rebuilt laparoscopic lateral suspension around three complete accessible current sources and the reusable Cochrane source record. Removed fixed tunneling and mesh instructions, universal selection and follow-up rules, pooled rates as patient predictions, and claims of lower overall risk or superiority. The revised page preserves the non-sacral lateral-route identity and makes the immature randomized evidence explicit. The [recovery record](reports/2026-09-19/lateral-suspension-recovery-review.md) separates completed source scope from unreviewed older cohorts, technical reports, and supplement.
+
+Ledger: 680 full current MDX reads and 652 scoped updates of 1,186 files; 21 checked, 12 unresolved and 501 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Twenty-ninth continuation: pectopexy evidence boundaries
 
 Rebuilt pectopexy around its actual evidence limits. Removed fixed operative instructions, product/device preferences, mesh configurations, universal selection rules, learning-curve and surveillance mandates, and numerical claims of comparative superiority, safety, recurrence, or durability. The revised page distinguishes its bilateral iliopectineal anchor from sacral fixation while retaining uncertainty about patient-centered and long-term comparisons. The [recovery record](reports/2026-09-19/pectopexy-recovery-review.md) separates complete accessible source reading, reused Cochrane scope, the abstract-only scoping review, and unresolved original reports.
