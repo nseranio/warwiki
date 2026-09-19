@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Twenty-eighth continuation: Manchester source follow-through
+
+Recovered and read the accessible 2026 Manchester review and its four actual figures, plus the accessible complete 2025 SAM economic-evaluation record and its central cost-effectiveness figure. Removed speculative reproductive-risk extrapolation from cervical-cancer surgery, corrected the “case reports only” pregnancy wording, and narrowed retained-uterus follow-up language. The [hysteropexy recovery record](reports/2026-09-19/hysteropexy-recovery-review.md) now separates completed source scope from the source-host download-protected supplements. Coverage totals are unchanged; this is source follow-through on an already reviewed page, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Twenty-seventh continuation: barbed-suture evidence recovery
 
 Rebuilt the barbed-sutures article around the complete accessible VUA and partial-nephrectomy evidence. Removed unsupported product hierarchies, universal gauge/clip rules, deliberate-gapped VUA closure, standard-of-care language, claimed functional superiority, and numerical upper-tract/bladder risks rooted in inaccessible or indirect sources. The revised article retains bounded time-related findings and explicitly distinguishes unresolved tubular-reconstruction and animal/bench evidence. The durable [source record](reports/2026-09-19/barbed-sutures-recovery-review.md) records main-text scope, unreviewed supplements, and missing primary sources.
