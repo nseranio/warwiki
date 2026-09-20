@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 757,
+    "fullTextReadForCurrentContent": 758,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 424,
-      "updated": 728
+      "unreviewed": 423,
+      "updated": 729
     }
   },
   "pages": [
@@ -8615,11 +8615,25 @@
       "title": "Vertical Rectus Abdominis Myocutaneous (VRAM) Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "ae8b9d471b4345bb96b5e3a4f5a5f4f5a47f1cd9d801685447ba6af6e0cd933e",
-      "reviewRecords": []
+      "sourceSha256": "fb4cce4643fe084471176f1a9030b8ca42b97d0fe6c4152400b8a0c97230b84c",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Radwan et al. 2021, Paprottka et al. 2016, Parsons et al. 2003, and Kim et al. 2022.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified anatomy, technical, outcome, comparison, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/?term=10.1016%2Fj.bjps.2020.10.100",
+            "https://pubmed.ncbi.nlm.nih.gov/26453181/",
+            "https://pubmed.ncbi.nlm.nih.gov/12809913/",
+            "https://pubmed.ncbi.nlm.nih.gov/34895852/"
+          ],
+          "unresolved": "Inherited anatomy, harvesting, donor-site, robotic, urosymphyseal, genital, groin, comparative, and additional pelvic source packages were not fully reviewed. No clinical clearance, procedure recommendation, or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/vram-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/y-v-plasty.mdx",
