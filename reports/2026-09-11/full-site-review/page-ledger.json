@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 709,
+    "fullTextReadForCurrentContent": 710,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 472,
-      "updated": 681
+      "unreviewed": 471,
+      "updated": 682
     }
   },
   "pages": [
@@ -36580,11 +36580,32 @@
       "title": "Ventral Slit Scrotal Flap (VSSF)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "dd1fcb0b5d86c9c9c74b13efefa1c76a4099bb4f630be887b722b9b435be0caf",
-      "reviewRecords": []
+      "sourceSha256": "90dcdd8106f952e010813c6569b15742fa2a33aa3bca7e9ffdc059c85d7b6879",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "90dcdd8106f952e010813c6569b15742fa2a33aa3bca7e9ffdc059c85d7b6879",
+          "scope": "Complete inherited and revised MDX read. Crossref bibliographic record read for Westerman et al. 2015; no abstract, full article, figures, tables or supplements were recovered.",
+          "changes": [
+            "Replaced detailed local-flap instructions, categorical selection criteria, comparative outcomes and recurrence claims with a bibliographic-record-bounded overview.",
+            "Preserved the named approach and direct links to the broader buried-penis and reconstructive pages."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/j.urology.2015.02.030"
+          ],
+          "unresolved": [
+            "The primary report and the inherited supporting source packages remain unrecovered.",
+            "No technical protocol, comparative efficacy or safety conclusion, or broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/ventral-slit-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/vulvar-gcipf.mdx",
