@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 730,
+    "fullTextReadForCurrentContent": 731,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 451,
-      "updated": 701
+      "unreviewed": 450,
+      "updated": 702
     }
   },
   "pages": [
@@ -956,11 +956,30 @@
       "title": "The Ureters",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "2c86422c2bd73f63a9c11c4b5e90b5118b5df5b2d3ff53e9084871d5c2853746",
-      "reviewRecords": []
+      "sourceSha256": "07bc7c3182bd035e45caf6a45d70ec744e9b306c95048feaf7899e66f54bf03f",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/urinary-tract/ureter-anatomy-physiology.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "07bc7c3182bd035e45caf6a45d70ec744e9b306c95048feaf7899e66f54bf03f",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for broad ureteral anatomy, wall structure, peristalsis, and the ureterovesical junction read for retained high-level anatomy. Inherited reconstructive, injury, stone, innervation, physiology, reflux, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded ureter anatomy and physiology orientation.",
+            "Removed fixed measurements, procedural rules, diagnostic and treatment claims, and outcome assertions that were not verified in this batch.",
+            "Retained existing anatomy video placement."
+          ],
+          "unresolved": [
+            "Clinical interpretation of ureteral obstruction, stones, reflux, injury, catheter or stent use, reconstruction, and postoperative function requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/ureter-anatomy-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/index.mdx",
