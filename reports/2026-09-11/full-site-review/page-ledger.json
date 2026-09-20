@@ -3,12 +3,12 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 721,
+    "fullTextReadForCurrentContent": 722,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
-      "checked": 21,
+      "checked": 22,
       "unresolved": 12,
-      "unreviewed": 460,
+      "unreviewed": 459,
       "updated": 693
     }
   },
@@ -345,11 +345,19 @@
       "title": "Anatomy & Physiology",
       "section": "01-foundations",
       "kind": "landing/database",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "checked",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
       "sourceSha256": "e102168b631e283835b7f5561a54e1554f1373a012f2be512c5f686f1d52634c",
-      "reviewRecords": []
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Full current MDX read and rendered-link review of the structural landing page.",
+          "outcome": "Current group labels, scope description, and destinations remained appropriate; no clinical claims or content change required.",
+          "clinicalVerification": "not applicable to structural landing-page review",
+          "report": "reports/2026-09-20/anatomy-physiology-landing-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/anal-anatomy.mdx",
