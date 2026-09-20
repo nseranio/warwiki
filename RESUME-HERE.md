@@ -6,7 +6,7 @@ Recovered **141 pages**: 120 prior-content restorations with narrow correction c
 
 Manufacturer IFUs/catalogs can support specifications, assembly, intended use and warnings. Anatomy texts, atlases, technical papers, operative videos and established teaching can support anatomy and practical technique. Prefer major trials/guidelines/Cochrane reviews for treatment recommendations and new practice-changing updates. **An unfinished source review or absence of an RCT does not justify emptying a page.** Correct particular errors, preserve useful content and keep source gaps in internal records.
 
-**Published:** content `96816311` passed exact-commit GitHub CI/Vercel and all 141 live article-body comparisons. Full validation and source limitations are in the release record.
+**Published:** restoration content `96816311` passed exact-commit GitHub CI/Vercel and all 141 live article-body comparisons. Subsequent workflow/OAB content `ab3a9ed9` also passed exact-commit CI/Vercel and a complete live OAB article-body comparison; see [the workflow release](reports/2026-09-20/audit-workflow-release.md). Continue WARWIKI audit is now the Sol/High single writer.
 
 ## Current audit coverage
 
