@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T14:44:13.589482+00:00",
+  "generatedAt": "2026-09-20T14:49:22.813753+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
@@ -13,8 +13,8 @@
       "updated": 674
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1181,
-      "partial": 5
+      "not-recorded": 1179,
+      "partial": 7
     }
   },
   "pages": [
@@ -22108,8 +22108,8 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "d5dd93af7aaf12e9f6a9f15ce8e9221603acc60eb2756cc851a35006491c17a6",
+      "auditDisposition": "partial",
+      "sourceSha256": "c75b34c2d6689d56053fcc038db15c91f853ed2fa41588a71897be2bd39caf82",
       "reviewRecords": [
         {
           "file": "docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx",
@@ -22131,6 +22131,96 @@
           "fullTextRead": true,
           "clinicalVerificationComplete": false,
           "recordFile": "clinical-conditions.json"
+        },
+        {
+          "file": "docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx",
+          "sourceSha256": "c75b34c2d6689d56053fcc038db15c91f853ed2fa41588a71897be2bd39caf82",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Entire current 237-line MDX including all references and treatment/phenotype tables; corrected epidemiology paragraph reread",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Prior scoped IUGA phenotype/diagnosis review reused; no new whole-source evaluation check",
+            "treatment": "Prior IUGA/ESTEEM/MUSA and AUA checks reused; no new intervention source closure",
+            "numbers": "NHANES 18.1% all-adult-women and 31.4% age \u226560 Table 2 denominators verified and corrected",
+            "doseDeviceSafety": "No dose or device change; linked procedures retain own pending packages",
+            "anatomyTechnique": "No operative technique on this clinical page; pathophysiology text read, source review pending",
+            "followUp": "Existing follow-up/failure text read but not freshly sourced",
+            "importedDataFigures": "All inline tables read; no imported clinical data or figures",
+            "references": "Ref 4 original PDF reconciled for changed denominator; other refs prior scope or pending",
+            "currency": "NHANES source version verified; broader MUI currency review remains partial"
+          },
+          "claimChecks": [
+            {
+              "claim": "MUI 18.1% described as fraction of women with UI",
+              "sourceIds": [
+                "abufaraj21"
+              ],
+              "locator": "NHANES methods population/weighted-prevalence denominator and Table 2 MUI overall/age rows",
+              "verdict": "corrected",
+              "note": "18.1% is among all adult US women in 2017\u20132018, not conditional on already having UI; \u226560 subgroup 31.4% uses that age-group denominator."
+            },
+            {
+              "claim": "Other MUI phenotype, treatment and special-population claims",
+              "sourceIds": [
+                "prior-mui"
+              ],
+              "locator": "Remaining MUI sections and earlier ledger scope",
+              "verdict": "unresolved",
+              "note": "Earlier targeted checks retained; full source packages not closed here."
+            }
+          ],
+          "unresolvedClaims": [
+            "Full source packages for epidemiology beyond NHANES, pathophysiology, urodynamics, older-women treatment and linked procedure comparisons; complete review of supplied OpenEvidence material still deferred to audit completion"
+          ],
+          "preservationReview": "No heading, table, option, existing reference or practical counseling text removed; one denominator sentence corrected.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/female-sui-mui-prevalence-laser-review.md",
+          "recordFile": "claim-batches/2026-09-20-female-sui-mui-prevalence-laser.json",
+          "sources": [
+            {
+              "id": "abufaraj21",
+              "url": "https://eacademic.ju.edu.jo/mabufaraj/Lists/Published%20Research/Attachments/76/6.Prevalence%20of%20incontinence_Abufaraj.pdf",
+              "version": "Abufaraj et al, AJOG 2021 original 12-page author-hosted PDF",
+              "access": "relevant-sections",
+              "readScope": "NHANES sample/question definitions and analysis denominator, Table 2 including age strata, discussion and limitations; original PDF downloaded outside repo; not a cover-to-cover reading of all other regression tables",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cochrane25",
+              "url": "https://www.cochrane.org/evidence/CD013643_what-are-benefits-and-risks-vaginal-lasers-treating-stress-urinary-incontinence-women",
+              "version": "Ippolito et al Cochrane review CD013643, published July 2025",
+              "access": "abstract-only",
+              "readScope": "Entire official public summary and full abstract: methods, all comparisons/results and authors' conclusions; complete review/appendices returned 403 and were not read",
+              "reusedFrom": ""
+            },
+            {
+              "id": "aua23-index",
+              "url": "https://helpdesk.auanet.org/hc/en-us/articles/40948838469143-Guidelines",
+              "version": "Current AUA guideline index, accessed September 20, 2026",
+              "access": "indexed-excerpts",
+              "readScope": "Female SUI currency listing only: published 2017/amended 2023; not the guideline text",
+              "reusedFrom": ""
+            },
+            {
+              "id": "prior-sui",
+              "url": "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+              "version": "AUA/SUFU female surgical SUI guideline amended 2023 and prior selected trials",
+              "access": "prior-review",
+              "readScope": "Prior scoped AUA/ValUE/TOMUS and PFMT checks only; not re-read in this batch",
+              "reusedFrom": "reports/2026-09-11/full-site-review/clinical-conditions.json"
+            },
+            {
+              "id": "prior-mui",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10908639/",
+              "version": "IUGA MUI committee opinion 2024 and prior ESTEEM/MUSA checks",
+              "access": "prior-review",
+              "readScope": "Prior scoped MUI phenotyping/trial checks only; not re-read in this batch",
+              "reusedFrom": "reports/2026-09-11/full-site-review/clinical-conditions.json"
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },
@@ -22174,8 +22264,8 @@
       "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "4bc590939c648e9effe72884777c2354a0a1bf06d4152041e414de8e12bffdb7",
+      "auditDisposition": "partial",
+      "sourceSha256": "692579152a3f68fd5252502a6b0693f90434f5b6f3bf742114a23197e0524e34",
       "reviewRecords": [
         {
           "file": "docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx",
@@ -22241,6 +22331,105 @@
           },
           "reviewedAt": "2026-09-12",
           "recordFile": "clinical-conditions.json"
+        },
+        {
+          "file": "docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx",
+          "sourceSha256": "692579152a3f68fd5252502a6b0693f90434f5b6f3bf742114a23197e0524e34",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Entire current 288-line MDX including references, diagram caption and EvidenceTable invocation; imported evidence table was previously checked and not re-credited here",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Prior scoped AUA/ValUE checks reused; other diagnostic cutoffs pending",
+            "treatment": "Cochrane laser conclusion targeted; prior guideline/PFMT/TOMUS checks reused, other choices pending",
+            "numbers": "NHANES 45.9% and age denominator checked against full original PDF Table 2; TOMUS prior targeted check reused",
+            "doseDeviceSafety": "No new drug dose; device-label and mesh complication packages pending",
+            "anatomyTechnique": "Hammock diagram/caption read as page content; source/anatomic figure audit remains pending",
+            "followUp": "Existing follow-up text read but not freshly sourced",
+            "importedDataFigures": "Diagram caption and EvidenceTable invocation read; imported evidence dataset has prior scope, not independently rechecked here",
+            "references": "Primary NHANES reference added; Cochrane review is full abstract/public summary only",
+            "currency": "AUA index lists 2023 amendment; Cochrane 2025 summary checked, full review inaccessible"
+          },
+          "claimChecks": [
+            {
+              "claim": "46% prevalence implied to be clinical SUI across adult women",
+              "sourceIds": [
+                "abufaraj21"
+              ],
+              "locator": "NHANES methods question/denominator, Table 2 overall stress UI 2017\u20132018 and limitations",
+              "verdict": "corrected",
+              "note": "Now 45.9% broad self-reported stress leakage in prior year among all US women aged \u226520; not treatment-seeking disease."
+            },
+            {
+              "claim": "Vaginal laser evidence described only as evolving",
+              "sourceIds": [
+                "cochrane25"
+              ],
+              "locator": "Official Cochrane abstract Main Results and Authors' Conclusions",
+              "verdict": "corrected",
+              "note": "Now states very-low-certainty short-term result, clinically small reported improvement and no major events observed in included trials; full review and long-term harms remain open."
+            },
+            {
+              "claim": "Other SUI diagnostic, risk-factor, device and procedure comparison claims",
+              "sourceIds": [
+                "prior-sui"
+              ],
+              "locator": "Remaining SUI sections and earlier ledger scope",
+              "verdict": "unresolved",
+              "note": "Preserved useful content; prior scoped work does not establish complete claim review."
+            }
+          ],
+          "unresolvedClaims": [
+            "Full Cochrane laser review/appendices through legitimate access for detailed bias/harms; ISD/test cutoffs, risk-factor estimates, device labels, anatomy figure and procedure comparison source packages"
+          ],
+          "preservationReview": "No heading, existing table, figure, media, option, prior reference or procedure link removed; one primary NHANES citation added and two paragraphs clarified.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/female-sui-mui-prevalence-laser-review.md",
+          "recordFile": "claim-batches/2026-09-20-female-sui-mui-prevalence-laser.json",
+          "sources": [
+            {
+              "id": "abufaraj21",
+              "url": "https://eacademic.ju.edu.jo/mabufaraj/Lists/Published%20Research/Attachments/76/6.Prevalence%20of%20incontinence_Abufaraj.pdf",
+              "version": "Abufaraj et al, AJOG 2021 original 12-page author-hosted PDF",
+              "access": "relevant-sections",
+              "readScope": "NHANES sample/question definitions and analysis denominator, Table 2 including age strata, discussion and limitations; original PDF downloaded outside repo; not a cover-to-cover reading of all other regression tables",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cochrane25",
+              "url": "https://www.cochrane.org/evidence/CD013643_what-are-benefits-and-risks-vaginal-lasers-treating-stress-urinary-incontinence-women",
+              "version": "Ippolito et al Cochrane review CD013643, published July 2025",
+              "access": "abstract-only",
+              "readScope": "Entire official public summary and full abstract: methods, all comparisons/results and authors' conclusions; complete review/appendices returned 403 and were not read",
+              "reusedFrom": ""
+            },
+            {
+              "id": "aua23-index",
+              "url": "https://helpdesk.auanet.org/hc/en-us/articles/40948838469143-Guidelines",
+              "version": "Current AUA guideline index, accessed September 20, 2026",
+              "access": "indexed-excerpts",
+              "readScope": "Female SUI currency listing only: published 2017/amended 2023; not the guideline text",
+              "reusedFrom": ""
+            },
+            {
+              "id": "prior-sui",
+              "url": "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+              "version": "AUA/SUFU female surgical SUI guideline amended 2023 and prior selected trials",
+              "access": "prior-review",
+              "readScope": "Prior scoped AUA/ValUE/TOMUS and PFMT checks only; not re-read in this batch",
+              "reusedFrom": "reports/2026-09-11/full-site-review/clinical-conditions.json"
+            },
+            {
+              "id": "prior-mui",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10908639/",
+              "version": "IUGA MUI committee opinion 2024 and prior ESTEEM/MUSA checks",
+              "access": "prior-review",
+              "readScope": "Prior scoped MUI phenotyping/trial checks only; not re-read in this batch",
+              "reusedFrom": "reports/2026-09-11/full-site-review/clinical-conditions.json"
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },

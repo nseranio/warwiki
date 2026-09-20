@@ -7,6 +7,13 @@ For commit-level detail run `git log --oneline`.
 ---
 
 
+## 2026-09-20 — Female SUI/MUI prevalence denominator and laser evidence
+
+Checked the original NHANES paper's population questions and table: the 18.1% MUI estimate is for all adult US women, not only women already reporting UI, and the 45.9% SUI figure means any reported stress leakage in the prior year. Clarified both page descriptions. Replaced vague laser-evidence wording with the 2025 Cochrane summary's very-low-certainty short-term finding while preserving the treatment discussion. [Source/access report](reports/2026-09-20/female-sui-mui-prevalence-laser-review.md); both pages remain partial.
+
+---
+
+
 ## 2026-09-20 — Male Botox retention wording scoped to primary studies
 
 Replaced a blanket male-versus-female CIC claim on the OAB condition page with source-scoped emptying/outlet counseling. Clarified that the Botox procedure page's 62.3% response and 13% retention are from one retrospective cohort of 146 men, not a universal risk estimate. The [source report](reports/2026-09-20/oab-male-botox-retention-review.md) separates the open-access trial's exploratory subgroup from the Mateu abstract-only cohort and preserves remaining access gaps. Both pages remain partial audits.
