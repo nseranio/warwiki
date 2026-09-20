@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 749,
+    "fullTextReadForCurrentContent": 750,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 432,
-      "updated": 720
+      "unreviewed": 431,
+      "updated": 721
     }
   },
   "pages": [
@@ -8419,11 +8419,24 @@
       "title": "Radial Forearm Free Flap (RFFF)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a37423bf4a9191509bb07f978823bb9297655aff7dfc8111e9b7093418ceb860",
-      "reviewRecords": []
+      "sourceSha256": "f677bd066c042b9065a7c2587008b6edfe313bcdb3df5b0d135eb64593936ec0",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Complete accessible reading of Moors et al. 2025; PubMed abstract/record reading for Netshiongolwe et al. 2025 and Dabernig et al. 2007.",
+          "changes": "Rebuilt the broad operative overview as a bounded RFFF orientation; removed unverified harvesting, testing, innervation, technical, device, outcome, comparison, and recommendation claims.",
+          "sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC12108030/",
+            "https://pubmed.ncbi.nlm.nih.gov/41133896/",
+            "https://pubmed.ncbi.nlm.nih.gov/17303320/"
+          ],
+          "unresolved": "Inherited phalloplasty, urethral, donor-site, anatomy, device, technical-variant, and comparative source packages were not fully reviewed. No clinical clearance or patient-specific flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/radial-forearm-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/rhomboid-limberg.mdx",
