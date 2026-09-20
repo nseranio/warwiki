@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 710,
+    "fullTextReadForCurrentContent": 711,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 471,
-      "updated": 682
+      "unreviewed": 470,
+      "updated": 683
     }
   },
   "pages": [
@@ -18,11 +18,24 @@
       "title": "The Abdominal Wall",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e3b4ebaaca880ffef4304031a4371bcad5514fdd10080b7c1d5bf0e2c1455e7d",
-      "reviewRecords": []
+      "sourceSha256": "eb5d88ee528724d9b24ca0a8ef3d7c7e770e743a579ff1a7d5d1ad98fe76853e",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Full accessible NCBI Bookshelf main-text reading for the 2023 Rectus Sheath and Abdominal Wall StatPearls chapters; PubMed abstract read for Rizk 1991.",
+          "changes": "Rebuilt the broad, uncited operative overview as a bounded anatomic orientation; removed procedure instructions, numeric rules, complication-management claims, flap specifications, and prescriptive recommendations.",
+          "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK537153/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK551649/",
+            "https://pubmed.ncbi.nlm.nih.gov/1828798/"
+          ],
+          "unresolved": "No full review of the inherited procedure-, flap-, hernia-, block-, or complication-management source packages. This page is not clinical verification of those decisions.",
+          "recordFile": "reports/2026-09-20/abdominal-wall-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/donor-sites/bowel-anatomy.mdx",
