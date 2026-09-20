@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T16:05:40.376219+00:00",
+  "generatedAt": "2026-09-20T16:16:44.494259+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 710,
+    "fullTextReadForCurrentContent": 712,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
       "restored-pending-review": 118,
       "unresolved": 11,
-      "unreviewed": 353,
-      "updated": 684
+      "unreviewed": 351,
+      "updated": 686
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1168,
-      "partial": 18
+      "not-recorded": 1166,
+      "partial": 20
     }
   },
   "pages": [
@@ -45549,24 +45549,432 @@
       "title": "Prolapse Repair",
       "section": "04-surgical-techniques",
       "kind": "landing/database",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "722e89ae21b018a72effa079f6be31458ee3085070d646bdb5b642bc5560f04a",
-      "reviewRecords": []
+      "auditDisposition": "partial",
+      "sourceSha256": "5e30264016f12a330087fadd4c748798eef43b35c05a667e7f6f20a5bf313f32",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/index.mdx",
+          "sourceSha256": "5e30264016f12a330087fadd4c748798eef43b35c05a667e7f6f20a5bf313f32",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current and revised 04g landing MDX, all headings, both comparison tables, four stepwise lists, all 25 searchable data rows and GenericDatabase rendering logic; no embedded figure/video or separate imported data.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Symptom-led POP-Q/compartment and selective occult-SUI assessment aligned with prior NICE source reading; not a new full ACOG read.",
+            "treatment": "ASPIRe route/population, NICE conservative versus surgical choice, posterior no-mesh and FDA US mesh availability corrected; individual linked techniques retain open source packages.",
+            "numbers": "ASPIRe 376 randomized/360 operated, modeled 28/29/43% at 36 months and 99% CI; E-OPTIMAL 61.5/70.3% five-year composite distinct from SAM uterine outcomes.",
+            "doseDeviceSafety": "No drug dose; FDA transvaginal POP-mesh market status checked separately from abdominal POP mesh and SUI slings. Individual surgical/device risk estimates need source-by-source review.",
+            "anatomyTechnique": "Database descriptions checked against corrected paravaginal, Michigan, USLS and iliococcygeus pages; other individual operation descriptions remain linked-source tasks.",
+            "followUp": "ASPIRe 36-month, E-OPTIMAL five-year and SAM two-year endpoints kept population-specific; long-term cross-route ranking not established.",
+            "importedDataFigures": "25 literal data rows and GenericDatabase search/filter rendering inspected. No separate import or embedded figure/video.",
+            "references": "Landing page has inline primary/regulatory links and an explicit principles companion rather than a bibliography; deeper linked procedure-reference packages are not automatically certified.",
+            "currency": "Current FDA US mesh-market text checked 2026-09-20; NICE current indexed recommendation checked and prior full relevant sections reused; current AWMF iliococcygeus recommendation reused."
+          },
+          "claimChecks": [
+            {
+              "claim": "ASPIRe 2024 trial identity, population and endpoint versus SUPeR",
+              "sourceIds": [
+                "aspire-2024",
+                "fda-pop-mesh"
+              ],
+              "locator": "ASPIRe main Results/Table 2 and FDA sale/distribution section",
+              "verdict": "corrected",
+              "note": "Replaced SUPeR mislabel, general POP extrapolation, p-value-only and equivalence language with post-hysterectomy vault 36-month modeled failure, 99% CI and historical US mesh status."
+            },
+            {
+              "claim": "Stage-based surgical and mandatory conservative/occult-SUI choices",
+              "sourceIds": [
+                "nice-ng123",
+                "aspire-2024"
+              ],
+              "locator": "NG123 \u00a7\u00a71.7\u20131.8 and ASPIRe enrolled population",
+              "verdict": "corrected",
+              "note": "No POP-Q stage alone determines route; pessary is optional, and prophylactic continence surgery is not automatic for a continent patient."
+            },
+            {
+              "claim": "USLS/SSLF and Manchester comparison metrics",
+              "sourceIds": [
+                "e-optimal-2018",
+                "sam-2023"
+              ],
+              "locator": "E-OPTIMAL five-year first-event composite and SAM uterine-prolapse population",
+              "verdict": "corrected",
+              "note": "Removed cross-trial two-year success ranking and unqualified equivalence; kept each trial-specific anchor and distinct endpoints."
+            },
+            {
+              "claim": "Paravaginal prevalence and iliococcygeus injury/selection descriptions",
+              "sourceIds": [
+                "arenholt-2017",
+                "awmf-2026"
+              ],
+              "locator": "Arenholt selected operative-validation populations; AWMF \u00a76.6/6.E54",
+              "verdict": "corrected",
+              "note": "No 60\u201380% universal lateral-defect rate or guaranteed pudendal avoidance; 2026 AWMF limits consideration when no adequate alternative."
+            },
+            {
+              "claim": "Current US transvaginal POP-mesh option",
+              "sourceIds": [
+                "fda-pop-mesh"
+              ],
+              "locator": "FDA 2019 order and current marketed-product statement",
+              "verdict": "corrected",
+              "note": "Historical vaginal mesh kits remain listed for understanding but not as an available US alternative; distinct SCP and SUI mesh routes retained."
+            },
+            {
+              "claim": "Remaining operation-specific database row indications, procedure risks and outcomes",
+              "sourceIds": [],
+              "locator": "Linked 04g technique pages and original packages for posterior/enterocele, McCall, LLS and pectopexy",
+              "verdict": "unresolved",
+              "note": "Cross-page review beyond the corrected high-impact rows remains necessary; this landing-page edit is not blanket surgical clearance."
+            }
+          ],
+          "unresolvedClaims": [
+            "Reconcile every remaining 04g database technique descriptor and risk claim against its linked page and original sources, prioritizing posterior/enterocele, McCall, laparoscopic lateral suspension and pectopexy.",
+            "Retrieve inaccessible full ACOG PB214 and any superseding jurisdiction guidance before attributing ACOG-specific evidence grades or universal stage thresholds."
+          ],
+          "preservationReview": "Kept all three general-principles links, both comparison tables, four compartment/scenario lists, every one of 25 searchable procedure rows and all route links. Corrected specific claims and language without blanking the landing page or replacing it with an audit notice.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/pop-index-lifestyle-review.md",
+          "recordFile": "claim-batches/2026-09-20-pop-index-lifestyle.json",
+          "sources": [
+            {
+              "id": "nice-ng123",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123 current recommendations, originally 2019; checked September 2026",
+              "access": "prior-review",
+              "readScope": "Prior complete relevant \u00a7\u00a71.3 and 1.6\u20131.9; current official indexed text checked this batch after direct web retrieval returned 403. No new full guideline read claimed.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "aspire-2024",
+              "url": "https://doi.org/10.1001/jamasurg.2024.1206",
+              "version": "Menefee et al. ASPIRe 2024 corrected report",
+              "access": "prior-review",
+              "readScope": "Prior full main/tables/figures and documented supplement division for 376 randomized, 360 operated, 36-month modeled composite and 99% CI; no duplicate source read.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "e-optimal-2018",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5933329/",
+              "version": "Jelovsek et al. E-OPTIMAL 2018 five-year extension",
+              "access": "prior-review",
+              "readScope": "Prior full main, tables, figures, supplement 3 and extension protocol; 61.5/70.3% modeled five-year first composite failure, not equivalent two-year success.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "fda-pop-mesh",
+              "url": "https://www.fda.gov/medical-devices/implants-and-prosthetics/urogynecologic-surgical-mesh-implants",
+              "version": "Current FDA urogynecologic surgical mesh overview, checked 2026-09-20",
+              "access": "relevant-sections",
+              "readScope": "Current FDA sale/distribution order and route distinctions reread; prior complete FDA regulatory review remains separately documented.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "sam-2023",
+              "url": "https://doi.org/10.1001/jama.2023.13140",
+              "version": "Enklaar et al. SAM 2023 with published correction",
+              "access": "prior-review",
+              "readScope": "Reused prior durable population/endpoint corrections and reported original main/SAP reading; did not re-read the trial.",
+              "reusedFrom": "reports/2026-09-19/hysteropexy-recovery-review.md"
+            },
+            {
+              "id": "arenholt-2017",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5429977/",
+              "version": "Arenholt et al. review of paravaginal defects 2017",
+              "access": "prior-review",
+              "readScope": "Reused documented anatomy/diagnosis discussion: up to 47% in selected operative-validation populations, not 60\u201380% of all cystoceles.",
+              "reusedFrom": "reports/2026-09-20/paravaginal-repair-review.md"
+            },
+            {
+              "id": "awmf-2026",
+              "url": "https://register.awmf.org/assets/guidelines/015-006l_S2e_Descensus_genitalis-Diagnostik-Therapie_2026-06.pdf",
+              "version": "AWMF/DGGG S3 015-006 v6.0, 2026, 6.E54",
+              "access": "prior-review",
+              "readScope": "Reused official \u00a76.6/6.E54 read for iliococcygeus role and source limitations; not a new 260-page guideline read.",
+              "reusedFrom": "reports/2026-09-20/iliococcygeus-suspension-review.md"
+            },
+            {
+              "id": "jeppson-iuc-2025",
+              "url": "https://www.iuga.org/images/content/IUJ/IUJ_IUC_Chapter_3.1_3.2_3.3.pdf",
+              "version": "Jeppson et al. IUC lifestyle consultation, 2025; search through October 2021",
+              "access": "relevant-sections",
+              "readScope": "Complete relevant article main pp. 59\u201366 in IUGA combined PDF, including methods, activity/lifting, weight, constipation, pulmonary, discussion and limitations; reference pp. 67\u201369 and actual PRISMA figure image not inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "fitz-people-2023",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37256322/",
+              "version": "Fitz et al. PEOPLE risk-factor meta-analysis 2023",
+              "access": "abstract-only",
+              "readScope": "Original abstract for BMI >30 and <25, waist, constipation, occupation and persistent-cough pooled associations; full paper/forest plots not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "hadizadeh-2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42014244/",
+              "version": "Hadizadeh et al. bariatric surgery/PFD review 2026",
+              "access": "abstract-only",
+              "readScope": "Original abstract and current metadata: 32 prospective studies, 5299 mixed PFD patients, mean BMI change 12.26, POP symptom improvement; full subgroup tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "wang-pfmt-2022",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35312800/",
+              "version": "Wang et al. PFMT meta-analysis 2022",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 13 RCTs, POP-SS MD -1.66 and POP-stage improvement RR 1.51; full forest plots not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "poppy-2014",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0140673613619777",
+              "version": "Hagen et al. POPPY randomized trial 2014",
+              "access": "abstract-only",
+              "readScope": "Original publisher abstract for 447 randomized, 295 twelve-month questionnaire responders and adjusted symptom difference 1.52; full paper tables not newly read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "prevprol-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28010994/",
+              "version": "Hagen et al. PREVPROL randomized trial 2017",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 414 randomized, 412 analyzed and two-year adjusted POP-SS difference -1.01; full paper tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "iuc-pfmt-2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9477909/",
+              "version": "B\u00f8 et al. IUC PFMT consultation 2022",
+              "access": "relevant-sections",
+              "readScope": "Original abstract and relevant conclusions for 11 treatment RCTs, stages I\u2013III and supervision; not all tables, figures or cited trials read.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/lifestyle-modifications.mdx",
       "title": "Lifestyle Modifications for POP",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "891e9713e1c060e142f98b0268ecc73260ce02354f25b50369280e7a54c1cee5",
-      "reviewRecords": []
+      "auditDisposition": "partial",
+      "sourceSha256": "908eabb62e5b0c74f120898a53e95a06188ffb42a46e93ec7cc78a9ace11b44b",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/lifestyle-modifications.mdx",
+          "sourceSha256": "908eabb62e5b0c74f120898a53e95a06188ffb42a46e93ec7cc78a9ace11b44b",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete original and revised lifestyle MDX, headings, risk/summary table, link to the canonical PFMT page, related links and all nine original plus one added reference entries; PFMT target page not reread. No embedded figure/video/import.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Observational POP associations separated from individual treatment benefit; asymptomatic observation and symptom assessment aligned with prior NICE reading.",
+            "treatment": "IUC lifestyle review main and NICE advice support optional weight/constipation/lifting counseling; IUC PFMT and two RCT abstracts support distinct supervised-PFMT option.",
+            "numbers": "PEOPLE BMI/waist, constipation, occupation/cough OR scope corrected; 2026 bariatric 5299 mixed PFD population and POPPY/PREVPROL denominators/endpoints made explicit.",
+            "doseDeviceSafety": "No medication dose or device IFU; osmotic-laxative example is general bowel care, not a proven POP-anatomic treatment. Bariatric surgery not recommended solely for POP.",
+            "anatomyTechnique": "No operative technique. Activity advice no longer imposes universal lifting limits or presents the Knack as established POP-prevention efficacy.",
+            "followUp": "POPPY 12-month questionnaire responders and PREVPROL two-year outcome stated; longer-term effect and objective anatomy remain uncertain.",
+            "importedDataFigures": "No page media or imported data. IUC PRISMA figure exists externally but was not inspected and no study-flow claim depends on it.",
+            "references": "All nine inherited entries retained and official NICE reference added. ACOG PB214 remains bibliographic provenance only because detailed full text was inaccessible.",
+            "currency": "Current NICE indexed \u00a7\u00a71.7\u20131.8 and 2026 Hadizadeh metadata checked; Jeppson search ends October 2021 and is not represented as a 2026 systematic refresh."
+          },
+          "claimChecks": [
+            {
+              "claim": "Lifestyle advice versus demonstrated POP treatment effects",
+              "sourceIds": [
+                "jeppson-iuc-2025",
+                "nice-ng123"
+              ],
+              "locator": "IUC article Results/Body Weight/Medical Conditions/Discussion, pp. 62\u201366; NG123 1.7.2",
+              "verdict": "corrected",
+              "note": "Practical advice kept, but review says prevention/treatment effects of most individual lifestyle interventions are uncertain; NICE says consider, not guarantee."
+            },
+            {
+              "claim": "PEOPLE risk magnitudes and occupation-versus-lifting scope",
+              "sourceIds": [
+                "fitz-people-2023"
+              ],
+              "locator": "Original abstract Results",
+              "verdict": "corrected",
+              "note": "BMI >30 OR1.44, <25 OR0.71, waist OR1.80, constipation OR1.77, occupation OR1.86 and cough OR1.52 are associations, not causal treatment effects."
+            },
+            {
+              "claim": "Bariatric surgery cohort denominator and anatomic inference",
+              "sourceIds": [
+                "hadizadeh-2026",
+                "jeppson-iuc-2025"
+              ],
+              "locator": "Hadizadeh original abstract and IUC Body Weight Summary",
+              "verdict": "corrected",
+              "note": "5299 patients had mixed pelvic-floor dysfunction, not all POP; symptomatic improvement and 12.26 kg/m2 BMI change do not establish anatomic cure or bariatric indication for POP alone."
+            },
+            {
+              "claim": "Exercise restriction, cough and constipation intervention efficacy",
+              "sourceIds": [
+                "jeppson-iuc-2025",
+                "nice-ng123"
+              ],
+              "locator": "IUC activity, occupation, constipation, pulmonary and discussion sections; NG123 1.7.2",
+              "verdict": "corrected",
+              "note": "Conflicting observational data do not support blanket exercise bans, fixed lifting limits or claims that cough/constipation treatment reverses POP."
+            },
+            {
+              "claim": "PFMT trials and conservative choice",
+              "sourceIds": [
+                "wang-pfmt-2022",
+                "poppy-2014",
+                "prevprol-2017",
+                "iuc-pfmt-2022",
+                "nice-ng123"
+              ],
+              "locator": "Original abstracts and IUC PFMT Conclusions; NG123 1.8.1",
+              "verdict": "corrected",
+              "note": "Wang MD/RR, POPPY 447/295 and PREVPROL 414/412 plus 12-/24-month endpoints scoped; supported option is not a mandatory pre-surgical course."
+            },
+            {
+              "claim": "Full study tables, subgroup and long-term causal claims",
+              "sourceIds": [],
+              "locator": "Fitz/Hadizadeh/Wang/POPPY/PREVPROL full papers and IUC Figure 1 when using its study-flow counts",
+              "verdict": "unresolved",
+              "note": "Only abstracts or relevant IUC sections read; stronger subgroup, forest-plot, outcome-duration or causal claims need original full-source review."
+            }
+          ],
+          "unresolvedClaims": [
+            "Read Fitz/Hadizadeh/Wang/POPPY/PREVPROL full original methods, tables and relevant figures before asserting detailed subgroup, forest-plot or long-term benefit beyond their abstracts.",
+            "Retrieve full ACOG PB214 before restoring ACOG-specific wellness or posture recommendations; do not infer them from bibliography alone.",
+            "Reassess newer lifestyle intervention evidence beyond the Jeppson review's October 2021 search if future claims of proven prevention or anatomic response are proposed."
+          ],
+          "preservationReview": "Retained all practical weight, bowel, activity, cough and PFMT sections, summary table, see-also links and nine inherited references; renamed the exercise-avoidance heading to reflect evidence, added current NICE, corrected concrete overstatements without deleting useful counseling.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/pop-index-lifestyle-review.md",
+          "recordFile": "claim-batches/2026-09-20-pop-index-lifestyle.json",
+          "sources": [
+            {
+              "id": "nice-ng123",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123 current recommendations, originally 2019; checked September 2026",
+              "access": "prior-review",
+              "readScope": "Prior complete relevant \u00a7\u00a71.3 and 1.6\u20131.9; current official indexed text checked this batch after direct web retrieval returned 403. No new full guideline read claimed.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "aspire-2024",
+              "url": "https://doi.org/10.1001/jamasurg.2024.1206",
+              "version": "Menefee et al. ASPIRe 2024 corrected report",
+              "access": "prior-review",
+              "readScope": "Prior full main/tables/figures and documented supplement division for 376 randomized, 360 operated, 36-month modeled composite and 99% CI; no duplicate source read.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "e-optimal-2018",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5933329/",
+              "version": "Jelovsek et al. E-OPTIMAL 2018 five-year extension",
+              "access": "prior-review",
+              "readScope": "Prior full main, tables, figures, supplement 3 and extension protocol; 61.5/70.3% modeled five-year first composite failure, not equivalent two-year success.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "fda-pop-mesh",
+              "url": "https://www.fda.gov/medical-devices/implants-and-prosthetics/urogynecologic-surgical-mesh-implants",
+              "version": "Current FDA urogynecologic surgical mesh overview, checked 2026-09-20",
+              "access": "relevant-sections",
+              "readScope": "Current FDA sale/distribution order and route distinctions reread; prior complete FDA regulatory review remains separately documented.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            },
+            {
+              "id": "sam-2023",
+              "url": "https://doi.org/10.1001/jama.2023.13140",
+              "version": "Enklaar et al. SAM 2023 with published correction",
+              "access": "prior-review",
+              "readScope": "Reused prior durable population/endpoint corrections and reported original main/SAP reading; did not re-read the trial.",
+              "reusedFrom": "reports/2026-09-19/hysteropexy-recovery-review.md"
+            },
+            {
+              "id": "arenholt-2017",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5429977/",
+              "version": "Arenholt et al. review of paravaginal defects 2017",
+              "access": "prior-review",
+              "readScope": "Reused documented anatomy/diagnosis discussion: up to 47% in selected operative-validation populations, not 60\u201380% of all cystoceles.",
+              "reusedFrom": "reports/2026-09-20/paravaginal-repair-review.md"
+            },
+            {
+              "id": "awmf-2026",
+              "url": "https://register.awmf.org/assets/guidelines/015-006l_S2e_Descensus_genitalis-Diagnostik-Therapie_2026-06.pdf",
+              "version": "AWMF/DGGG S3 015-006 v6.0, 2026, 6.E54",
+              "access": "prior-review",
+              "readScope": "Reused official \u00a76.6/6.E54 read for iliococcygeus role and source limitations; not a new 260-page guideline read.",
+              "reusedFrom": "reports/2026-09-20/iliococcygeus-suspension-review.md"
+            },
+            {
+              "id": "jeppson-iuc-2025",
+              "url": "https://www.iuga.org/images/content/IUJ/IUJ_IUC_Chapter_3.1_3.2_3.3.pdf",
+              "version": "Jeppson et al. IUC lifestyle consultation, 2025; search through October 2021",
+              "access": "relevant-sections",
+              "readScope": "Complete relevant article main pp. 59\u201366 in IUGA combined PDF, including methods, activity/lifting, weight, constipation, pulmonary, discussion and limitations; reference pp. 67\u201369 and actual PRISMA figure image not inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "fitz-people-2023",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37256322/",
+              "version": "Fitz et al. PEOPLE risk-factor meta-analysis 2023",
+              "access": "abstract-only",
+              "readScope": "Original abstract for BMI >30 and <25, waist, constipation, occupation and persistent-cough pooled associations; full paper/forest plots not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "hadizadeh-2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42014244/",
+              "version": "Hadizadeh et al. bariatric surgery/PFD review 2026",
+              "access": "abstract-only",
+              "readScope": "Original abstract and current metadata: 32 prospective studies, 5299 mixed PFD patients, mean BMI change 12.26, POP symptom improvement; full subgroup tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "wang-pfmt-2022",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35312800/",
+              "version": "Wang et al. PFMT meta-analysis 2022",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 13 RCTs, POP-SS MD -1.66 and POP-stage improvement RR 1.51; full forest plots not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "poppy-2014",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0140673613619777",
+              "version": "Hagen et al. POPPY randomized trial 2014",
+              "access": "abstract-only",
+              "readScope": "Original publisher abstract for 447 randomized, 295 twelve-month questionnaire responders and adjusted symptom difference 1.52; full paper tables not newly read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "prevprol-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28010994/",
+              "version": "Hagen et al. PREVPROL randomized trial 2017",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 414 randomized, 412 analyzed and two-year adjusted POP-SS difference -1.01; full paper tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "iuc-pfmt-2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9477909/",
+              "version": "B\u00f8 et al. IUC PFMT consultation 2022",
+              "access": "relevant-sections",
+              "readScope": "Original abstract and relevant conclusions for 11 treatment RCTs, stages I\u2013III and supervision; not all tables, figures or cited trials read.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx",
