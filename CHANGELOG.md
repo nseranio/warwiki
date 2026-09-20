@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-fifth continuation: bipedicled anterior scrotal flap evidence boundaries
+
+Rebuilt the bipedicled anterior scrotal flap page around small, diagnosis-specific retrospective reports. Removed its fixed protocol, universal single-versus-two-stage selection, superiority, and functional-prediction claims. The [recovery record](reports/2026-09-19/bipedicled-scrotal-flap-recovery-review.md) records the abstract-only primary-source access and unrecovered anatomy source.
+
+Ledger: 685 full current MDX reads and 657 scoped updates of 1,186 files; 21 checked, 12 unresolved and 496 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-fourth continuation: aOAP evidence boundaries
 
 Rebuilt the anterior obturator artery perforator flap page around its cadaveric anatomy, combined-procedure cohort reports, and indirect vulvoperineal reconstruction review. Removed unsupported operative protocol, selection, tissue-superiority, and durable outcome claims. The [recovery record](reports/2026-09-19/aoap-recovery-review.md) distinguishes full review access from abstract-only primary reports.

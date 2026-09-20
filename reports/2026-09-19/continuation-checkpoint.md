@@ -4,7 +4,7 @@
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.
 
-Recorded coverage after the aOAP recovery batch:684full current MDX reads,656scoped updates,21checked,12unresolved,497unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
+Recorded coverage after the bipedicled-scrotal-flap recovery batch:685full current MDX reads,657scoped updates,21checked,12unresolved,496unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
 
 ## Next work and recovery warning
 
@@ -19,7 +19,8 @@ Prior reviewers stopped on a usage-limit error. Their unfinished batch26 `/tmp` 
 5. **Lateral suspension completed:** [the recovery review](lateral-suspension-recovery-review.md) records three complete accessible 2024–25 sources and reused Cochrane scope. The rebuilt page removes prescriptive tunneling/product rules and immature superiority claims.
 6. **Mesh/graft overview completed:** [the recovery review](mesh-graft-recovery-review.md) records current FDA source verification and exact inaccessible source packages. The page now avoids historic procedure/rate/management claims.
 7. **Moschcowitz and Halban completed:** their recovery reviews record the directly read historical RCT/combined-procedure abstracts. Both rebuilt pages remove unsupported outcome rankings and technical mandates.
-8. **aOAP completed:** [the recovery review](aoap-recovery-review.md) records full reading of the indirect 2024 systematic review and abstract-only access to the primary anatomy and clinical reports. The page is a bounded overview. Continue with Bipedicled Anterior Scrotal Flap (Fakin).
+8. **aOAP completed:** [the recovery review](aoap-recovery-review.md) records full reading of the indirect 2024 systematic review and abstract-only access to the primary anatomy and clinical reports. The page is a bounded overview.
+9. **Bipedicled anterior scrotal flap completed:** [the recovery review](bipedicled-scrotal-flap-recovery-review.md) records abstract-only primary clinical access and the unrecovered anatomy source. The page is a bounded overview. Continue with the next unreviewed ledger item.
 
 Use committed reports under `reports/2026-09-13/apical-source-reading/` and `reports/2026-09-12/prolapse-source-reading/` for completed work. Keep their exact source-access distinctions. Then continue the existing ledger's remaining tools, foundations, techniques, resources/History, imported clinical data, figures and OpenEvidence reconciliation.
 

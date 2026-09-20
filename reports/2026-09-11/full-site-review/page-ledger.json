@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 684,
+    "fullTextReadForCurrentContent": 685,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 497,
-      "updated": 656
+      "unreviewed": 496,
+      "updated": 657
     }
   },
   "pages": [
@@ -31027,11 +31027,36 @@
       "title": "Bipedicled Anterior Scrotal Flap (Fakin)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f0e344e716b577db8a5d39082ea98cbae1cbc3af2383de1aae66633e4ff1b938",
-      "reviewRecords": []
+      "sourceSha256": "ba125b1f7d70a8eb75831416ddf4676f60509e258bca867c51982874cbc49c67",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/bipedicled-anterior-scrotal-flap.mdx",
+          "reviewedAt": "2026-09-19",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "ba125b1f7d70a8eb75831416ddf4676f60509e258bca867c51982874cbc49c67",
+          "scope": "Complete current MDX and four primary clinical abstracts read. Carrera 2009 anatomy source was not recovered; exact limits in bipedicled-scrotal-flap-recovery-review.md.",
+          "changes": [
+            "Removed unsupported technique protocol, stage-selection, comparative-superiority, and functional-prediction claims.",
+            "Retained diagnosis- and source-specific cohort findings with design and follow-up limits."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/j.juro.2016.11.093",
+            "https://doi.org/10.1016/j.urology.2023.03.025",
+            "https://doi.org/10.1111/iju.15209",
+            "https://doi.org/10.1097/PRS.0000000000010811"
+          ],
+          "unresolved": [
+            "Clinical reports were abstract-access only; full texts, figures, tables, supplements, and detailed technical methods were not reviewed.",
+            "No randomized or direct comparative study against grafting or other local flaps recovered. No complete clinical clearance."
+          ],
+          "recordFile": "bipedicled-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt.mdx",
