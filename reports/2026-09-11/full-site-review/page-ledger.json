@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 742,
+    "fullTextReadForCurrentContent": 743,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 439,
-      "updated": 713
+      "unreviewed": 438,
+      "updated": 714
     }
   },
   "pages": [
@@ -8010,11 +8010,25 @@
       "title": "Labia Majora Fasciocutaneous Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e3ed54e358bafb5625f091311bdf6a0fcf221667d96ada2c5091f5882568cb49",
-      "reviewRecords": []
+      "sourceSha256": "343213129f3c49982d416a3ef5ab05facce77a5e6f1dc332f3209a51182fa70f",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Indexed-record scope for Gupta et al. 2022; PubMed abstract/record reading for Höckel and Dornhöfer 2008, Rothenberger et al. 2026, and Xu et al. 2009.",
+          "changes": "Rebuilt the page as a bounded terminology, reconstruction-context, and evidence-boundary overview; removed anatomy and vascular prescriptions, operative steps, dimensions, indications, outcome figures, comparison tables, technical pearls, and postoperative protocols.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/35654273/",
+            "https://pubmed.ncbi.nlm.nih.gov/18510987/",
+            "https://pubmed.ncbi.nlm.nih.gov/41385083/",
+            "https://pubmed.ncbi.nlm.nih.gov/18468778/"
+          ],
+          "unresolved": "The full text of the 2022 fistula article was not accessible through the reviewed record, and inherited fistula, vulvar-oncology, vaginoplasty, urethral-reconstruction, perineal-reconstruction, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/labia-majora-fasciocutaneous-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/lotus-petal.mdx",
