@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 740,
+    "fullTextReadForCurrentContent": 741,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 441,
-      "updated": 711
+      "unreviewed": 440,
+      "updated": 712
     }
   },
   "pages": [
@@ -7963,11 +7963,23 @@
       "title": "IPAP Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a5762f279157ea2e64faff609bb213b76d1cf689d3de3539e5a7cce0d2e30e3e",
-      "reviewRecords": []
+      "sourceSha256": "7f3af09f410934d1ca19988e481ef7100ac0464c1b3e1d5cf48423256b9a189e",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. PubMed abstract/record reading of Hashimoto et al. 2014 (originating Level IV series) and Coltro et al. 2017 (prospective nonrandomized irradiated-abdominoperineal-resection cohort).",
+          "changes": "Rebuilt the page as a bounded terminology and reconstructive-context overview; removed anatomy measurements, protocol steps, variants, outcomes tables, sensory/functional claims, complication thresholds, comparisons, algorithms, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/24675194/",
+            "https://pubmed.ncbi.nlm.nih.gov/28796733/"
+          ],
+          "unresolved": "The inherited anatomy, technique, variant, sensory, postoperative, comparative, vulvar, pressure-injury, and algorithm source packages were not fully reviewed. No clinical clearance or flap-selection recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/ipap-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/island-groin.mdx",
