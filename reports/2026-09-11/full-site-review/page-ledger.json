@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 750,
+    "fullTextReadForCurrentContent": 751,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 431,
-      "updated": 721
+      "unreviewed": 430,
+      "updated": 722
     }
   },
   "pages": [
@@ -8443,11 +8443,24 @@
       "title": "Rhomboid (Limberg) Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "83a3e7d1c57ea6032344c1fa5dbf2f5981f91ecfeecf590f1a2b42d8bc625849",
-      "reviewRecords": []
+      "sourceSha256": "276f5555862a686d330d98416d6cb2050a29fb5f0b095b99ac680b9b35c33e12",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Lamprou et al. 2025, Kramer and Jackson 1986, and Cai et al. 2024.",
+          "changes": "Rebuilt the detailed operative overview as a bounded terminology and limited GU-context page; removed unverified geometry, technical, outcome, comparison, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/40630354/",
+            "https://pubmed.ncbi.nlm.nih.gov/3952218/",
+            "https://pubmed.ncbi.nlm.nih.gov/38226663/"
+          ],
+          "unresolved": "Inherited anatomy, vulvar, scrotal, perineal, Fournier, pilonidal, technical-variant, comparative, and radiation-field source packages were not fully reviewed. No clinical clearance or reconstruction algorithm is asserted.",
+          "recordFile": "reports/2026-09-20/rhomboid-limberg-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/scip.mdx",
