@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 771,
+    "fullTextReadForCurrentContent": 772,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 410,
-      "updated": 742
+      "unreviewed": 409,
+      "updated": 743
     }
   },
   "pages": [
@@ -14949,11 +14949,18 @@
       "title": "Collins Knife",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "d388d4e0b2c31fe788b249fc571196c4922ebe043be774d9e27085649bd9e818",
-      "reviewRecords": []
+      "sourceSha256": "d14fab7bafd5a50c61af747d2270ba33eb35ae25b64eede97f7e19711646bcaa",
+      "reviewRecords": [{
+        "date": "2026-09-20",
+        "scope": "Complete inherited and revised MDX read; PubMed record/abstract reading for Nealon 2022 and Yang 2001; accessible AUA guideline text returned in focused search.",
+        "changes": "Rebuilt the detailed instrument guide as a bounded evidence orientation; removed unverified energy settings, incision locations/depths, indications, outcomes, and safety rules.",
+        "sources": ["https://pubmed.ncbi.nlm.nih.gov/35955973/", "https://pubmed.ncbi.nlm.nih.gov/11342911/", "https://www.auanet.org/documents/Guidelines/PDF/Urethral%20Stricture%20Disease%20Unabridged%20FINAL.pdf"],
+        "unresolved": "Full primary-source packages, procedural videos, device instructions for use, and current procedure-specific guidance were not fully adjudicated. No clinical verification or operative protocol is asserted.",
+        "recordFile": "reports/2026-09-20/collins-knife-recovery-review.md"
+      }]
     },
     {
       "file": "docs/01-foundations/tools/instruments/endoscopy/flexible-cystoscope.mdx",
