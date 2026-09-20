@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 732,
+    "fullTextReadForCurrentContent": 733,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 449,
-      "updated": 703
+      "unreviewed": 448,
+      "updated": 704
     }
   },
   "pages": [
@@ -7727,11 +7727,29 @@
       "title": "Anterolateral Thigh (ALT) Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e179d8689d8f9c4751b8b56e4488107ad858521853a7c0fb5cf869b4bb291fb8",
-      "reviewRecords": []
+      "sourceSha256": "890965a03d37824f3c715c18562f48f092172e17a5997c91c7355116221a12b3",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/flaps/anterolateral-thigh.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "890965a03d37824f3c715c18562f48f092172e17a5997c91c7355116221a12b3",
+          "scope": "Complete inherited MDX read. PubMed abstract and indexed records for the 2012 vascular-anatomy and 2013/2025 donor-site systematic reviews; indexed PMC anatomy-review record only because direct full-text access was blocked by the PMC challenge. Inherited phalloplasty, pelvic, vulvar, Fournier, vaginal, urinary-tract, thinning, and comparative source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded ALT flap anatomy overview.",
+            "Removed technical instructions, fixed dimensions and rates, comparative rankings, indications, and outcomes that were not verified in this batch."
+          ],
+          "unresolved": [
+            "Flap selection, imaging, harvesting, thinning, closure, phalloplasty, pelvic/perineal/vulvar reconstruction, Fournier reconstruction, urinary reconstruction, and donor-site management require focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/anterolateral-thigh-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/bilobed.mdx",
