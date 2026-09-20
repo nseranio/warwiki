@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 714,
+    "fullTextReadForCurrentContent": 715,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 467,
-      "updated": 686
+      "unreviewed": 466,
+      "updated": 687
     }
   },
   "pages": [
@@ -201,11 +201,25 @@
       "title": "The Cervix",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "18ac554f497d26ab7c1aa8b0d4ba0d26c5c91cf3234a214460b2fd7494da2487",
-      "reviewRecords": []
+      "sourceSha256": "1a26700d6cc52acf78f2bcdc2088c04041a89f94f3c41788fb8b0d09b105a4bb",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Accessible NCBI Bookshelf text for cervical dilation, uterus, pelvic examination, and uterine physiology was read; inherited oncology, screening, obstetric, prolapse, nerve-sparing, and reconstructive source packages were not fully reviewed.",
+          "changes": "Rebuilt a detailed clinical and operative guide as a bounded cervical anatomy overview; removed measurements, screening and treatment guidance, surgical steps, outcomes, and management claims.",
+          "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK557582/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK470297/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK534223/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK557575/"
+          ],
+          "unresolved": "No full-source review of inherited cancer screening, cervical cancer, radical hysterectomy, ureteral injury, apical repair, cerclage, radiation, fistula, or endocrine claims. No clinical verification or management recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/cervix-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/female-external-genitalia.mdx",
