@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Forty-first continuation: genitourinary VCA evidence boundaries
+
+Rebuilt GUVCA as a rare-investigational overview anchored to directly reported case observations and the historical 2023 review count. Removed unsupported operative protocol, immunosuppression, global-case, comparative, and functional-prediction claims. The [recovery record](reports/2026-09-19/genitourinary-vca-recovery-review.md) preserves incomplete correspondence and registry access.
+
+Ledger: 691 full current MDX reads and 663 scoped updates of 1,186 files; 21 checked, 12 unresolved and 490 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-eighth continuation: EPAP hemi-scrotal flap evidence boundaries
 
 Rebuilt EPAP hemi-scrotal flap as a one-case feasibility overview with separate cadaveric anatomy context. Removed unsupported protocol, superiority, comparative, and sensory/functional-prediction claims. The [recovery record](reports/2026-09-19/epap-hemi-scrotal-flap-recovery-review.md) records the full-text and replication gaps.

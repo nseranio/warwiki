@@ -4,7 +4,7 @@
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.
 
-Recorded coverage after the EPAP recovery batch:688full current MDX reads,660scoped updates,21checked,12unresolved,493unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
+Current coverage after the GUVCA recovery batch:691full current MDX reads,663scoped updates,21checked,12unresolved,490unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
 
 ## Next work and recovery warning
 
@@ -24,6 +24,8 @@ Prior reviewers stopped on a usage-limit error. Their unfinished batch26 `/tmp` 
 10. **Cecil-Culp completed:** [the recovery review](cecil-culp-recovery-review.md) records three primary abstracts, current AUA guideline statements, and unrecovered inherited source packages. The page is a bounded historical overview. Continue with defibulation.
 11. **Defibulation completed:** [the recovery review](defibulation-recovery-review.md) records full reading of current WHO recommendations and abstract-only scope for the remaining current evidence. The page is a bounded overview. Continue with EPAP hemi-scrotal flap.
 12. **EPAP hemi-scrotal flap completed:** [the recovery review](epap-hemi-scrotal-flap-recovery-review.md) records one primary case abstract and one anatomy abstract. The page is a bounded feasibility overview. Continue with FGM/C fat grafting.
+13. **FGM/C fat grafting and Foldès clitoral reconstruction completed:** their recovery reviews record only observational/abstract-level scope and remove unverified technical and outcome claims. Both are bounded evidence overviews.
+14. **GUVCA completed:** [the recovery review](genitourinary-vca-recovery-review.md) records the accessible 2023 review and two primary case abstracts, plus an unrecovered extended-allograft correspondence. The page is a bounded investigational overview. Continue with glans reconstruction.
 
 Use committed reports under `reports/2026-09-13/apical-source-reading/` and `reports/2026-09-12/prolapse-source-reading/` for completed work. Keep their exact source-access distinctions. Then continue the existing ledger's remaining tools, foundations, techniques, resources/History, imported clinical data, figures and OpenEvidence reconciliation.
 
