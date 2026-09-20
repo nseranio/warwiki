@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Perineorrhaphy evidence and technique scope
+
+Distinguished perineorrhaphy from posterior repair and obstetric laceration repair; corrected cohort denominators, GH measurement timing, observational risk interpretation, urinary-retention endpoint, and trial-registry status. Preserved the practical technique, tables, related links and 24 references. The [source/access review](reports/2026-09-20/perineorrhaphy-review.md) records exact remaining full-text and operative-source gaps; this is a partial audit, not clinical clearance. The preceding [POP atlas/lifestyle release](reports/2026-09-20/pop-index-lifestyle-publication.json) passed CI but was rate-limited by Vercel and is not yet live-verified.
+
+---
+
 ## 2026-09-20 — POP treatment atlas and lifestyle evidence scope
 
 Corrected the prolapse landing page's ASPIRe/SUPeR trial swap, historical vaginal-mesh availability, cross-trial outcome ranking, stage-only route mandates and outdated linked-procedure summaries. Kept the searchable procedure database and counseling tables. On the lifestyle page, separated risk associations from treatment effects, corrected the occupational OR and bariatric-study population, and scoped PFMT trial denominators while retaining practical advice. The [two-page source/access review](reports/2026-09-20/pop-index-lifestyle-review.md) records exact partial coverage and remaining full-source work. The earlier [iliococcygeus release](reports/2026-09-20/iliococcygeus-suspension-publication.json) passed CI/Vercel and exact production-body checks, carrying the initially rate-limited Kelly correction.

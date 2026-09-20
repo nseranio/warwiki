@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T16:16:44.494259+00:00",
+  "generatedAt": "2026-09-20T16:25:42.910906+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 712,
+    "fullTextReadForCurrentContent": 713,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
       "restored-pending-review": 118,
       "unresolved": 11,
-      "unreviewed": 351,
-      "updated": 686
+      "unreviewed": 350,
+      "updated": 687
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1166,
-      "partial": 20
+      "not-recorded": 1165,
+      "partial": 21
     }
   },
   "pages": [
@@ -46524,12 +46524,255 @@
       "title": "Perineorrhaphy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "35c9f1a0d9a98f57198a53b3225d1109ae995f02a604d9301cf37ffb40360e2c",
-      "reviewRecords": []
+      "auditDisposition": "partial",
+      "sourceSha256": "20fca0cd432c17f2e7f3dd39353ad708a5a3dfbe520d97fc083d6f4cf7927d79",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/perineorrhaphy.mdx",
+          "sourceSha256": "20fca0cd432c17f2e7f3dd39353ad708a5a3dfbe520d97fc083d6f4cf7927d79",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete original and revised page, all 24 inherited references, operative steps, both outcome/risk tables, summary table and links. No imported data, embedded figure or video.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "GH and symptomatic perineal-body deficiency considered, but 3.5-cm selection threshold is study-specific and not validated for universal surgery.",
+            "treatment": "Practical perineal reconstruction preserved; posterior repair, obstetric reconstruction and isolated perineorrhaphy distinguished. No demonstrated recurrence-prevention effect.",
+            "numbers": "Swieten selection OR, Mothes/Bonglack GH, Rotstein symptoms, Sutkin posterior repair, Blomquist incident POP, Siff postoperative risk and Cervantes retention scoped to their actual populations/designs.",
+            "doseDeviceSafety": "No drug/device dose; urinary retention defined by discharge catheter after failed voiding trial and dyspareunia caution retained without causal incidence claim.",
+            "anatomyTechnique": "Kanter survey and Bonglack operative Methods support variant techniques; DeLancey triad labeled hypothesis, Kochov\u00e1 fractions qualified as postmenopausal samples.",
+            "followUp": "Bonglack three months, Rotstein one year, Mothes postoperative interval from abstract, OPTIMAL two years and protocol without results distinguished.",
+            "importedDataFigures": "No page imports, figures or videos; external Bonglack/Rotstein/DeLancey figure images and supplements not inspected.",
+            "references": "All 24 inherited entries preserved; Blomquist author attribution corrected. ACOG PB214 kept bibliographically but not used for unverified specific operative language.",
+            "currency": "Current NCT05422209 registry checked 2026-09-20: unknown status/no results after July 2024; recent 2026 Swieten/Cervantes sources scoped. Full ACOG PB214 still inaccessible."
+          },
+          "claimChecks": [
+            {
+              "claim": "Perineal anatomy and operative variants",
+              "sourceIds": [
+                "kanter-2015",
+                "kochova-2019",
+                "bonglack-2022"
+              ],
+              "locator": "Kanter Results/technique discussion; Kochov\u00e1 abstract; Bonglack Methods",
+              "verdict": "corrected",
+              "note": "Histology sample qualified; optional septal attachment and separate levator plication distinguished. No fixed universal step inferred."
+            },
+            {
+              "claim": "Patient factors for perineoplasty selection",
+              "sourceIds": [
+                "swieten-2026",
+                "mothes-2023"
+              ],
+              "locator": "Swieten Table 1/Results; Mothes abstract Methods",
+              "verdict": "corrected",
+              "note": "Parity OR30 and obesity OR2.3 describe physician selection; GH\u22653.5 cm is a study-specific criterion, not proven treatment threshold."
+            },
+            {
+              "claim": "Postoperative GH and symptom estimates",
+              "sourceIds": [
+                "bonglack-2022",
+                "mothes-2023",
+                "rotstein-2023"
+              ],
+              "locator": "Bonglack Tables 2\u20134/Results; Mothes abstract Results; Rotstein eligibility/Tables 1\u20132",
+              "verdict": "corrected",
+              "note": "Resting versus Valsalva, 29/56, 131/119 and combined versus isolated procedure contexts made explicit; no isolated efficacy inferred."
+            },
+            {
+              "claim": "Prolapse recurrence prevention and GH risk-marker associations",
+              "sourceIds": [
+                "sutkin-2020",
+                "siff-2020",
+                "blomquist-2018",
+                "delancey-2025"
+              ],
+              "locator": "Sutkin Methods/abstract; Siff Results/discussion; Blomquist Table 3; DeLancey abstract",
+              "verdict": "corrected",
+              "note": "Posterior repair is not isolated perineorrhaphy; GH HR3/HR9 attributed to Blomquist; Siff 3.5-cm cutoff exploratory, MRI area distinct from POP-Q length."
+            },
+            {
+              "claim": "Postoperative catheter discharge risk",
+              "sourceIds": [
+                "cervantes-2026"
+              ],
+              "locator": "Original abstract Methods/Results",
+              "verdict": "corrected",
+              "note": "30.2% vs 19.1% p<0.01 with failed-voiding-trial definition; selection association is not proof of causality."
+            },
+            {
+              "claim": "Randomized-trial availability",
+              "sourceIds": [
+                "shakhaliev-2024",
+                "nct05422209"
+              ],
+              "locator": "Protocol arms/sample; ClinicalTrials.gov status and results modules",
+              "verdict": "corrected",
+              "note": "Replaced stale ongoing status with unknown status/no posted results; protocol n310 is planned enrollment."
+            },
+            {
+              "claim": "Obstetric tear versus elective POP repair",
+              "sourceIds": [
+                "aafp-2021",
+                "kettle-2012"
+              ],
+              "locator": "AAFP second-degree repair/key recommendations; Cochrane abstract",
+              "verdict": "corrected",
+              "note": "Short-term continuous-suture and three-month skin-closure findings apply to postpartum tears, not elective prolapse surgery."
+            },
+            {
+              "claim": "Full guideline-specific wording, adjusted adverse events and long-term outcomes",
+              "sourceIds": [],
+              "locator": "ACOG PB214 full bulletin; Mothes/Cervantes publisher full papers; Siff appendix; DeLancey figures",
+              "verdict": "unresolved",
+              "note": "These source packages were not obtained; no complete clinical disposition or ACOG-specific recommendation asserted."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain ACOG PB214 full text before attributing perineorrhaphy-specific recommendation or grade; current official indexed page does not expose the needed language.",
+            "Read Mothes full methods/tables and Cervantes adjusted models before independent efficacy or attributable adverse-event estimates.",
+            "Inspect Siff tables/appendix, DeLancey MRI figures, Kanter survey supplement and remaining inherited anatomy/sexual-function source packages before a complete disposition."
+          ],
+          "preservationReview": "No section, table, reference, operative sequence, related link or media removed. Corrected specific causal overreach, population attribution, two p-values, a study author, trial status and unsupported ACOG quotation while retaining practical teaching.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/perineorrhaphy-review.md",
+          "recordFile": "claim-batches/2026-09-20-perineorrhaphy.json",
+          "sources": [
+            {
+              "id": "kanter-2015",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4670594/",
+              "version": "Kanter et al. 2015 surgeon survey",
+              "access": "relevant-sections",
+              "readScope": "Original indexed Introduction, Methods, Results, Tables 1\u20132 and technique discussion. Survey supplement not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "swieten-2026",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12898559/",
+              "version": "Swieten et al. J Clin Med 2026",
+              "access": "relevant-sections",
+              "readScope": "Accessible full-text XML abstract, methods, Table 1, Results and limitations; no postoperative outcomes exist in this report.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "bonglack-2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8929254/",
+              "version": "Bonglack et al. 2022 prospective cohort",
+              "access": "relevant-sections",
+              "readScope": "Accessible full-text XML Methods, Tables 1\u20134, Results, figure captions and discussion. Figure images/supplements not inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "mothes-2023",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36493583/",
+              "version": "Mothes et al. 2023 combined-repair cohort",
+              "access": "abstract-only",
+              "readScope": "Original PubMed abstract for eligibility, GH and patient-reported results; full paper/tables unavailable in this pass.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "rotstein-2023",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10540923/",
+              "version": "Rotstein et al. 2023 postpartum-deficiency cohort",
+              "access": "relevant-sections",
+              "readScope": "Accessible full-text XML eligibility, operative/follow-up methods, Tables 1\u20132, Results and limitations. Figure images/supporting files not inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "sutkin-2020",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6995410/",
+              "version": "Sutkin et al. 2020 OPTIMAL secondary analysis",
+              "access": "relevant-sections",
+              "readScope": "Original indexed main Methods, Results and discussion plus publisher abstract; direct PMC full retrieval challenged, tables and supplements not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "siff-2020",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7526641/",
+              "version": "Siff et al. 2020 OPTIMAL ancillary analysis",
+              "access": "relevant-sections",
+              "readScope": "Original indexed Methods, Results and discussion; full tables/appendices not retrieved.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "blomquist-2018",
+              "url": "https://jamanetwork.com/journals/jama/fullarticle/2718794",
+              "version": "Blomquist et al. JAMA 2018 longitudinal cohort",
+              "access": "relevant-sections",
+              "readScope": "Original Methods, Table 3, Results and discussion for delivery-mode-stratified GH hazard ratios.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "delancey-2025",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39800182/",
+              "version": "DeLancey et al. AJOG 2025 MRI study",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 91 anterior-predominant POP cases, 30 controls and 68% resting UGH area result; main/figures not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "kochova-2019",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29994970/",
+              "version": "Kochov\u00e1 et al. Menopause 2019 histology",
+              "access": "abstract-only",
+              "readScope": "Original abstract for sampled postmenopausal perineal body tissue fractions; full histology methods/tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cervantes-2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40981998/",
+              "version": "Cervantes et al. IUJ 2026 retrospective cohort",
+              "access": "abstract-only",
+              "readScope": "Original PubMed abstract for 715/281 population, retention definition, 30.2/19.1% and p<0.01; full adjusted models not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "shakhaliev-2024",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11446006/",
+              "version": "Shakhaliev et al. Trials 2024 protocol",
+              "access": "relevant-sections",
+              "readScope": "Protocol abstract, arms, planned enrollment and design in accessible full-text XML; not an efficacy result.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nct05422209",
+              "url": "https://clinicaltrials.gov/api/v2/studies/NCT05422209",
+              "version": "ClinicalTrials.gov record checked 2026-09-20, last update 2024-07-03",
+              "access": "relevant-sections",
+              "readScope": "Status module and results-section presence: UNKNOWN status, last known active-not-recruiting, no posted results.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "aafp-2021",
+              "url": "https://www.aafp.org/afp/2021/0615/p745",
+              "version": "Arnold et al. 2021 obstetric laceration review",
+              "access": "relevant-sections",
+              "readScope": "Second-degree repair and key recommendations, including skin-closure RCT and Cochrane-based continuous-suture statement.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "kettle-2012",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23152204/",
+              "version": "Kettle et al. Cochrane 2012 CD000947.pub3",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 16 obstetric RCTs, short-term pain and absence of proven long-term pain difference; full review not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nice-ng123",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123 current recommendations",
+              "access": "prior-review",
+              "readScope": "Prior documented relevant POP surgical-route recommendations; no new full guideline read or perineorrhaphy-specific attribution.",
+              "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/posterior-colporrhaphy.mdx",
