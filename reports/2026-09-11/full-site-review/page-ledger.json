@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 741,
+    "fullTextReadForCurrentContent": 742,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 440,
-      "updated": 712
+      "unreviewed": 439,
+      "updated": 713
     }
   },
   "pages": [
@@ -7986,11 +7986,24 @@
       "title": "Island Groin Flap (SCIA-Axial)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a911777eabc027559b9783fb6558e68f0c6f988a79f288bb04c20127c8d21070",
-      "reviewRecords": []
+      "sourceSha256": "e1b5adfcb7d88ba9b54f4a906f9564c4d94447ed02a2a9d06e22c8cc6250aa64",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed indexed-record/abstract reading for Hsu et al. 2007 (12-patient SCIP clinical application), Goh et al. 2015 indexed record (210-case SCIP series), and Sahai and Singh 2021 (29-case scrotal island-groin experience).",
+          "changes": "Rebuilt the page as a bounded SCIA/SCIP terminology and reconstruction-context overview; removed detailed anatomy, history-first claims, operative and design instructions, dimensions, outcomes tables, comparative rankings, indications, composite/chimeric claims, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/17415243/",
+            "https://pubmed.ncbi.nlm.nih.gov/25357163/",
+            "https://pubmed.ncbi.nlm.nih.gov/33906811/"
+          ],
+          "unresolved": "The inherited anatomy, historical, technical, genital, extremity, head-and-neck, vulvar/perineal, lymphatic, and comparative source packages were not fully reviewed. Indexed records/abstracts are not a substitute for complete source review. No clinical clearance, selection recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/island-groin-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/labia-majora-fasciocutaneous.mdx",
