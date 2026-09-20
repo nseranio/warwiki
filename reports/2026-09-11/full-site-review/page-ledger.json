@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 728,
+    "fullTextReadForCurrentContent": 729,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 453,
-      "updated": 699
+      "unreviewed": 452,
+      "updated": 700
     }
   },
   "pages": [
@@ -896,11 +896,30 @@
       "title": "Male Urethra",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "897ce7f927343c368f88bdd64fa9f06a7bd3df6ac7082b594d9050bc368b97bf",
-      "reviewRecords": []
+      "sourceSha256": "0bba5c9e1a70a76c0d3854e6c3ef3a5a21bbea1b22e8e1087bdafe9e48b4f5e9",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/urinary-tract/male-urethra.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "0bba5c9e1a70a76c0d3854e6c3ef3a5a21bbea1b22e8e1087bdafe9e48b4f5e9",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for male-urethral histology and broad male genitourinary anatomy read for retained high-level anatomy. Inherited trauma, reconstruction, continence, cancer-staging, vascular, neural, functional, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded anatomy orientation.",
+            "Removed fixed measurements, disease mechanisms, diagnostic and treatment claims, procedural guidance, and outcome claims that were not verified in this batch.",
+            "Retained existing anatomy video placement."
+          ],
+          "unresolved": [
+            "Clinical interpretation of urethral stricture, trauma, malignancy, catheterization, continence, ejaculation, reconstruction, and postoperative function requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/male-urethra-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/urinary-tract/renal-anatomy-physiology.mdx",
