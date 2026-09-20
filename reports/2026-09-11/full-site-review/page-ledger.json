@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 762,
+    "fullTextReadForCurrentContent": 763,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 419,
-      "updated": 733
+      "unreviewed": 418,
+      "updated": 734
     }
   },
   "pages": [
@@ -9735,11 +9735,23 @@
       "title": "Plastic Surgery Principles",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "281683dfdaf0f3b46b519d7f41338f3e0b26c1f1636242884755bc5f8cf8772b",
-      "reviewRecords": []
+      "sourceSha256": "575da757b11c6b6f11356d78a5fc9ea72c5a118c41f2649c38d110cb5012d258",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed record reading for Rohrich et al. 2017 and PubMed abstract reading for Mühlbauer and Schoeller 2003.",
+          "changes": "Rebuilt the extensive historical and technical overview as a bounded navigation page; removed unverified commandments, textbook-derived operative rules, suture sizes, tissue-mechanics claims, and urethral-reconstruction guidance.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/29176422/",
+            "https://pubmed.ncbi.nlm.nih.gov/14560143/"
+          ],
+          "unresolved": "The inherited historical-text, textbook, tissue-biomechanics, suture, and urethral-reconstruction source packages were not fully reviewed. No clinical clearance, operative instruction, or reconstructive standard is asserted.",
+          "recordFile": "reports/2026-09-20/plastic-surgery-principles-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/radiation-tissue-effects.mdx",
