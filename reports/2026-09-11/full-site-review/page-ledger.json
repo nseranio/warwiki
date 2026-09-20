@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 746,
+    "fullTextReadForCurrentContent": 747,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 435,
-      "updated": 717
+      "unreviewed": 434,
+      "updated": 718
     }
   },
   "pages": [
@@ -8347,11 +8347,24 @@
       "title": "PMTP Propeller Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "afb0af6240c93d431b2492c143dc96ec6d3e7dab4f5c00a149cd3c75ad6e2164",
-      "reviewRecords": []
+      "sourceSha256": "641827a3a86df7a92235c0da99c7b7a061c68ccd38ebe7713f39c2ed0e0c172b",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Scaglioni et al. 2018, Kwon et al. 2021, and Wishart et al. 2021.",
+          "changes": "Rebuilt the page as a bounded terminology and small-series evidence overview; removed anatomy maps, operative technique, dimensions, perforator guidance, outcome pooling, comparisons, algorithms, radiation claims, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/29100881/",
+            "https://pubmed.ncbi.nlm.nih.gov/33675678/",
+            "https://pubmed.ncbi.nlm.nih.gov/32839109/"
+          ],
+          "unresolved": "Inherited anatomy, oncologic, perineal, scrotal, vulvar, pelvic-floor, technical-variant, systematic-review, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/pmtp-propeller-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/posterior-thigh.mdx",
