@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-  "fullTextReadForCurrentContent": 817,
+  "fullTextReadForCurrentContent": 818,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-    "unreviewed": 364,
-    "updated": 788
+    "unreviewed": 363,
+    "updated": 789
     }
   },
   "pages": [
@@ -15631,8 +15631,17 @@
       "status": "unreviewed",
       "fullTextReadForCurrentContent": false,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "66ecbd58ec6f2a6dfe819a58c0a2b8e5accfd09b0b99ec331af5f165677b88e3",
-      "reviewRecords": []
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
+      "sourceSha256": "d94350f9144a8394831d97865873e388c879f1c22f1dd83cdc3a8f430d97938f",
+      "reviewRecords": [{
+        "date": "2026-09-20",
+        "scope": "Complete inherited and revised MDX read; narrowed unsupported instrument and procedure content.",
+        "changes": "Removed unadjudicated specifications, safety figures, applications, comparisons, and instructions.",
+        "sources": [],
+        "unresolved": "Complete source packages and instrument documentation were not adjudicated; no clinical verification is asserted.",
+        "recordFile": "reports/2026-09-20/malleable-retractor-recovery-review.md"
+      }]
     },
     {
       "file": "docs/01-foundations/tools/instruments/retractors/mouth-retractors.mdx",
