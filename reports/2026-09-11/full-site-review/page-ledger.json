@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 733,
+    "fullTextReadForCurrentContent": 734,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 448,
-      "updated": 704
+      "unreviewed": 447,
+      "updated": 705
     }
   },
   "pages": [
@@ -7756,11 +7756,29 @@
       "title": "Bilobed Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e590d3e75c87e6efba2cee04355920f9ead09781aa089494c89ee99f1a50b2ca",
-      "reviewRecords": []
+      "sourceSha256": "48dc60989eafb1fe0d534037985f827a23a05c2e72949ea2e5ad0b0759ee5e79",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/flaps/bilobed.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "48dc60989eafb1fe0d534037985f827a23a05c2e72949ea2e5ad0b0759ee5e79",
+          "scope": "Complete inherited MDX read. PubMed abstracts for the 2014 transposition-flap review, 2024 nasal-reconstruction review, and 2020 six-flap bilobed-gracilis series; accessible NCBI Bookshelf indexed text for broad bilobed-flap orientation. Inherited GU, urogynecologic, obstetric, oncologic, and comparative source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded double-transposition design overview.",
+            "Removed measurements, geometric templates, technical steps, indications, outcome claims, and comparative rankings that were not verified in this batch."
+          ],
+          "unresolved": [
+            "Patient selection, flap planning, harvesting, and use in vulvar, perineal-body, genital, oncologic, and gender-affirming reconstruction require focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/bilobed-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/bladder-flap.mdx",
