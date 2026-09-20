@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 727,
+    "fullTextReadForCurrentContent": 728,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 454,
-      "updated": 698
+      "unreviewed": 453,
+      "updated": 699
     }
   },
   "pages": [
@@ -867,11 +867,29 @@
       "title": "GU Embryology",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "3a4775ea5ee9207255a6956cc5081347dfc64f545287b5eb343bebb9dd019268",
-      "reviewRecords": []
+      "sourceSha256": "f0bd0c1cfe6a738cb9c954c2d32bb71905cb85b194f5afea758607fe71698ff9",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/urinary-tract/gu-embryology.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "f0bd0c1cfe6a738cb9c954c2d32bb71905cb85b194f5afea758607fe71698ff9",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for kidney/bladder/ureter, general genitourinary, sexual-development, and urethral-fold embryology read for retained high-level development. Inherited congenital-condition, genetic, surgical, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded developmental anatomy overview.",
+            "Removed specific timings, estimates, classifications, diagnostic frameworks, treatment recommendations, and outcome claims that were not verified in this batch."
+          ],
+          "unresolved": [
+            "Condition-specific genetics, counseling, evaluation, surveillance, surgical management, and outcomes for CAKUT, Müllerian or Wolffian variations, cryptorchidism, hypospadias, exstrophy, and differences of sex development require focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/gu-embryology-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/urinary-tract/male-urethra.mdx",
