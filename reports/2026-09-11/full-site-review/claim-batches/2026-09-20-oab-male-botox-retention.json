@@ -1,0 +1,70 @@
+{
+  "batchId": "2026-09-20-oab-male-botox-retention",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {"id":"yokoyama21","url":"https://link.springer.com/article/10.1007/s11255-021-02962-z","version":"Yokoyama et al, Int Urol Nephrol 2021, open-access publisher full text","access":"relevant-sections","readScope":"Methods, Table 1 and footnotes, Results including safety, Discussion and limitations; figure images and separate parent RCT report not independently read","reusedFrom":""},
+    {"id":"mateu20","url":"https://pubmed.ncbi.nlm.nih.gov/31479408/","version":"Mateu Arrom et al, J Urol 2020","access":"abstract-only","readScope":"Primary-study abstract, confirmed on publisher result; full article and supplement unavailable","reusedFrom":""},
+    {"id":"aua24","url":"https://onlinelibrary.wiley.com/doi/10.1002/nau.25532","version":"AUA/SUFU idiopathic OAB guideline 2024","access":"prior-review","readScope":"Previously documented statements 23-29, not newly read in this batch","reusedFrom":"reports/2026-09-20/oab-treatment-database-review.md"},
+    {"id":"botox23","url":"https://www.rxabbvie.com/pdf/botox_pi.pdf","version":"BOTOX US label PDF marked November 2023","access":"prior-review","readScope":"Previously documented section 5.13 and Table 10, not newly read in this batch","reusedFrom":"reports/2026-09-20/oab-treatment-database-review.md"}
+  ],
+  "pages": [
+    {
+      "file":"docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx",
+      "sourceSha256":"50f4e95396a78b2bb8226d1b23de2ca5255d93e25ac11c02dc067f2b63867d00",
+      "status":"updated",
+      "fullTextRead":true,
+      "readScope":"Entire current 216-line MDX, references and inline VideoCards entry; targeted full reread of corrected paragraph",
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "coverage":{
+        "evaluation":"Prior scoped AUA/pilot work reused; male emptying/outlet counseling checked here",
+        "treatment":"Male Botox counseling corrected; other treatment selection and comparative claims pending",
+        "numbers":"Male 146-person cohort and exploratory RCT subgroup denominators checked within actual source access; other figures pending",
+        "doseDeviceSafety":"Reused documented 100-U label Table 10; no new label or dose adjudication",
+        "anatomyTechnique":"No new operative-anatomy or technique claim; linked procedure remains separate",
+        "followUp":"No new follow-up adjudication; page outcomes and treatment failure remain partial",
+        "importedDataFigures":"Inline VideoCards entry read; no imported clinical table or figure; Yokoyama Table 1 text/footnotes read, figure images not needed for corrected claim",
+        "references":"Added two primary-study references; remaining references not fully adjudicated",
+        "currency":"2024 AUA guideline/2023 manufacturer label checks reused; no whole-topic currency closure"
+      },
+      "claimChecks":[
+        {"claim":"Universal higher male post-Botox CIC risk relative to women","sourceIds":["yokoyama21","mateu20","botox23"],"locator":"Yokoyama Table 1 and safety/limitations; Mateu abstract; BOTOX §5.13/Table 10","verdict":"corrected","note":"Changed blanket sex comparison to source-scoped emptying/outlet risk discussion. RCT male PSA subgroup is exploratory and cohort has no female comparator; retention and pooled CIC endpoints differ."},
+        {"claim":"Other clinical OAB comparison, epidemiology and treatment claims","sourceIds":[],"locator":"Remaining condition-page claim groups","verdict":"unresolved","note":"Existing pilot's scoped checks retained; full source packages remain pending."}
+      ],
+      "unresolvedClaims":["Mateu full article/supplement to appraise retention definition and BOOI model; Farag full review for intervention comparison; remaining condition-page epidemiology, GSM, male treatment and procedural source packages"],
+      "preservationReview":"No heading, table, video, existing reference or practical pathway removed; one unsupported blanket comparative sentence was replaced and two primary-study references added.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/oab-male-botox-retention-review.md"
+    },
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx",
+      "sourceSha256":"3a0d5dfe4058ace20c0055c12ef63495b5a6fa1a2d86babebe74f79da18d2920",
+      "status":"updated",
+      "fullTextRead":true,
+      "readScope":"Complete current 301-line MDX, references, tables and inline video entry; targeted reread of male-specific paragraph",
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "coverage":{
+        "evaluation":"Baseline PVR and catheterization planning previously checked against label; male BOOI association checked at abstract level",
+        "treatment":"Male cohort scope corrected; broader Botox indications/comparisons pending",
+        "numbers":"62.3% and 13% verified to Mateu abstract for 146-man cohort only; remaining outcomes not rechecked here",
+        "doseDeviceSafety":"Existing documented label checks reused; no new full label read or dosing change",
+        "anatomyTechnique":"Existing procedure steps preserved; underlying technique source package not adjudicated here",
+        "followUp":"Existing follow-up text preserved; not newly adjudicated",
+        "importedDataFigures":"Inline video entry read; no imported clinical data; trial figure images not relevant to changed cohort scope",
+        "references":"Ref 25 identity/abstract checked; other references remain subject to prior scoped work or pending review",
+        "currency":"Current label/source review reused; no complete procedure currency clearance"
+      },
+      "claimChecks":[
+        {"claim":"62.3% response, 13% retention and higher BOOI prediction in men","sourceIds":["mateu20"],"locator":"Mateu primary-study abstract Results and Conclusion","verdict":"corrected","note":"Numbers retained but explicitly scoped to one retrospective cohort of 146 men; not a universal male rate or comparable to pooled label CIC."},
+        {"claim":"Broader Botox mechanism, NDO/off-label, technique, duration and comparisons","sourceIds":[],"locator":"Other procedure-page sections and references","verdict":"unresolved","note":"Not newly adjudicated; useful content retained with previous targeted checks."}
+      ],
+      "unresolvedClaims":["Mateu full text/supplement for cohort definitions and regression model; broader Botox mechanism, NDO/off-label, technique, duration and comparative source packages"],
+      "preservationReview":"No section, table, video, procedural detail or reference removed; only male-cohort scope was clarified.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/oab-male-botox-retention-review.md"
+    }
+  ]
+}

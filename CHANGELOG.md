@@ -7,6 +7,13 @@ For commit-level detail run `git log --oneline`.
 ---
 
 
+## 2026-09-20 — Male Botox retention wording scoped to primary studies
+
+Replaced a blanket male-versus-female CIC claim on the OAB condition page with source-scoped emptying/outlet counseling. Clarified that the Botox procedure page's 62.3% response and 13% retention are from one retrospective cohort of 146 men, not a universal risk estimate. The [source report](reports/2026-09-20/oab-male-botox-retention-review.md) separates the open-access trial's exploratory subgroup from the Mateu abstract-only cohort and preserves remaining access gaps. Both pages remain partial audits.
+
+---
+
+
 
 ## 2026-09-20 — OAB treatment database safety and sequencing corrections
 

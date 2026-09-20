@@ -17,6 +17,6 @@ Current snapshot: 1186 pages; 701 with full-text reading recorded against curren
 
 [Full page-by-page ledger](page-ledger.json) contains paths, exact scope, sources, unresolved claims and content hashes. Domain reports record what was corrected.
 
-Claim-level audit dispositions: {"not-recorded": 1182, "partial": 4}. These supplement the historical read/update counts; not-recorded means no new claim-level closure record, not that all prior source work is discarded. Partial/blocked pages remain unfinished.
+Claim-level audit dispositions: {"not-recorded": 1181, "partial": 5}. These supplement the historical read/update counts; not-recorded means no new claim-level closure record, not that all prior source work is discarded. Partial/blocked pages remain unfinished.
 
 The separate reference-metadata scans check DOI registration and PubMed identifier/title identity. DOI and PMID caches reflect their collection snapshots; current additions may be uncached. Missing records or title-overlap flags require source investigation, not an automatic claim that a paper is false. Metadata matching does not establish that a cited claim is supported or that its full paper was read.

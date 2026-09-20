@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-09-20T14:44:00Z",
+  "contentCommit": "9acb1436748488f220c2b4ca29ee0d63205b5406",
+  "scope": "Targeted OAB treatment database corrections; partial claim audit, not clinical clearance.",
+  "githubCI": {
+    "databaseId": 35517218357,
+    "headSha": "9acb1436748488f220c2b4ca29ee0d63205b5406",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/35517218357"
+  },
+  "vercel": {
+    "context": "Vercel",
+    "state": "failure",
+    "description": "Deployment rate limited — retry in 24 hours.",
+    "targetUrl": "https://vercel.com/nseranios-projects?upgradeToPro=build-rate-limit",
+    "nextAction": "After the build-rate limit clears, deploy the latest validated intended main commit once; then verify the exact deployment and live article body. Do not call this commit live before that check."
+  },
+  "localValidation": {
+    "auditRecord": "passed consistency/hash check; not clinical correctness certification",
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": "32 passed",
+    "maintenanceTests": "58 passed",
+    "buildAndRenderedLinks": "passed",
+    "buildSizeMb": 131.13,
+    "sizeBudgetMb": 200,
+    "whitespace": "passed",
+    "desktopAndMobileRender": "inspected; mobile tables scroll horizontally without document overflow"
+  },
+  "liveCheck": {
+    "route": "/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database",
+    "status": 200,
+    "expectedArticleTextSha256": "b5bc4d7b65dc091ba6471b936353aa0775e67fe1d6738df21fdbc33f3caf4f07",
+    "liveArticleTextSha256": "d41c6d6ca386de2e631fcaf1e0035c0e15761b4c31c02bd1d7a1449f16768c90",
+    "exactArticleTextMatch": false,
+    "checkedBeforeHostedDeployment": true
+  },
+  "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
+}
