@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 708,
+    "fullTextReadForCurrentContent": 709,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 473,
-      "updated": 680
+      "unreviewed": 472,
+      "updated": 681
     }
   },
   "pages": [
@@ -36326,11 +36326,32 @@
       "title": "Total Anterior Scrotal Flap (Zhao)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "9f080da7601d7957b3f7b7733ae428dcd88163e567dcea66ad346df7bc71b0fe",
-      "reviewRecords": []
+      "sourceSha256": "ef4a010fc437155ccb48fe60ee844dbd5091e8c1b33c4542269d8e46c2d5e508",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "ef4a010fc437155ccb48fe60ee844dbd5091e8c1b33c4542269d8e46c2d5e508",
+          "scope": "Complete inherited and revised MDX read. Crossref bibliographic record read for Zhao et al. 2009; no abstract, full article, figures, tables or supplements were recovered.",
+          "changes": [
+            "Replaced detailed vascular anatomy, operative instructions, selection algorithm, comparisons and outcomes with a bibliographic-record-bounded overview.",
+            "Retained the named historical approach and direct links to separately audited alternatives."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/j.juro.2009.07.048"
+          ],
+          "unresolved": [
+            "The primary source package and supporting anatomy/outcome sources remain unrecovered.",
+            "No operative protocol, efficacy or safety conclusion, or broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/total-anterior-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer.mdx",
