@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 758,
+    "fullTextReadForCurrentContent": 759,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 423,
-      "updated": 729
+      "unreviewed": 422,
+      "updated": 730
     }
   },
   "pages": [
@@ -8640,11 +8640,25 @@
       "title": "Y-V Plasty",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "b17355a375590db4e90765583352989c5592e4826b9da04b61e07021d00621a0",
-      "reviewRecords": []
+      "sourceSha256": "a1b125f1b4aa5cefcdc446771793d77f0c36988ada64e7584844e2739f4621dd",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Masumoto et al. 2025, Shamout et al. 2022, and Szydełko et al. 2010. Reused the Sennert et al. 2025 abstract/record review from v-y-advancement-recovery-review.md.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified geometric, technical, outcome, comparison, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/39801036/",
+            "https://pubmed.ncbi.nlm.nih.gov/35481590/",
+            "https://pubmed.ncbi.nlm.nih.gov/20687849/",
+            "https://pubmed.ncbi.nlm.nih.gov/40973687/"
+          ],
+          "unresolved": "Inherited plastic-surgery, bladder-neck, VUAS, pyeloplasty, meatal, hypospadias, robotic, endoscopic, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or reconstruction standard is asserted.",
+          "recordFile": "reports/2026-09-20/y-v-plasty-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/z-plasty.mdx",
