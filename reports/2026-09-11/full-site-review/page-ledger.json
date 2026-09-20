@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 712,
+    "fullTextReadForCurrentContent": 713,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 469,
-      "updated": 684
+      "unreviewed": 468,
+      "updated": 685
     }
   },
   "pages": [
@@ -66,11 +66,24 @@
       "title": "The Leg & Thigh",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "fafad92178b7b5a74f7e75c784f95d61adadcf6d3e1b02ef8993f2099545a7fc",
-      "reviewRecords": []
+      "sourceSha256": "0debf655a9c208c867601b457e81174608593a6d9473bccb48bc9ebda321e5f0",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed record scope for Kumar et al. 2024; accessible NCBI Bookshelf tibial-nerve and tarsal-tunnel anatomy text read. Older gracilis and all inherited GU reconstruction and neuromodulation source packages were not fully reviewed.",
+          "changes": "Rebuilt a detailed flap and tibial-neuromodulation guide as a bounded medial-thigh and medial-ankle anatomy orientation; removed harvest and implant instructions, measurements, outcomes, device claims, and treatment recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/41477445/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK537028/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK513273/"
+          ],
+          "unresolved": "No full-source review of the gracilis reconstruction literature, PTNS/iTNS studies, guideline claims, or inherited operative source packages. No clinical verification or procedural recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/leg-thigh-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/donor-sites/oral-cavity.mdx",
