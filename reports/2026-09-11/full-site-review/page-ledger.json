@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 747,
+    "fullTextReadForCurrentContent": 748,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 434,
-      "updated": 718
+      "unreviewed": 433,
+      "updated": 719
     }
   },
   "pages": [
@@ -8371,11 +8371,24 @@
       "title": "Posterior Thigh Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f47a71a0416b5acc57b313a3cb5cf59936b943bac4d3c7fba9f17dc82d0f6a9c",
-      "reviewRecords": []
+      "sourceSha256": "89eb201730de9c9fcbccc4f6b2310d65e62f040b9264e9aba37a1c2738a7f86f",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Rubin et al. 1995, Friedman et al. 2010, and Achauer et al. 1984.",
+          "changes": "Rebuilt the page as a bounded terminology and small-series evidence overview; removed anatomy measurements, operative technique, nerve guidance, dimensions, outcome pooling, comparisons, indications, algorithms, radiation claims, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/7761510/",
+            "https://pubmed.ncbi.nlm.nih.gov/20220559/",
+            "https://pubmed.ncbi.nlm.nih.gov/6469091/"
+          ],
+          "unresolved": "Inherited anatomy, oncologic, pressure-injury, sacral, vaginal, scrotal, propeller-variant, systematic-review, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/posterior-thigh-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/propeller-flap.mdx",
