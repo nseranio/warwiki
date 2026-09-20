@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Anterior POP technique source-fit corrections
+
+Scoped anterior colporrhaphy indications, historic mesh comparisons, OPUS endpoints and mixed-procedure complication rates to the actual source populations. Corrected the Michigan four-wall operative description and eight-year responder/anatomy denominators; retained teaching and video, with no claim of head-to-head superiority. [Source/access review](reports/2026-09-20/anterior-pop-techniques-review.md) records remaining gaps. Both pages remain partial audits.
+
+---
+
 ## 2026-09-20 — POP mesh-complication and pessary safety corrections
 
 Corrected the current US transvaginal POP mesh distinction, ICS complication codes, retention/exposure guidance and small-sample imaging interpretation. Reconciled pessary fitting, maintenance, PEOPLE/TOPSY trial denominators and estrogen claims against current IUC/NICE and primary trial sources. Preserved operative/device teaching, tables, references and media. [Mesh review](reports/2026-09-20/pop-mesh-complications-review.md) and [pessary review](reports/2026-09-20/pop-pessary-review.md) list exact source limits; both pages remain partial audits.
