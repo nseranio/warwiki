@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 724,
+    "fullTextReadForCurrentContent": 725,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 457,
-      "updated": 695
+      "unreviewed": 456,
+      "updated": 696
     }
   },
   "pages": [
@@ -778,11 +778,29 @@
       "title": "The Retropubic Space",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "1b6a4b94f780f4aa5a85ba2f35eab1f5b66a2feb881397ad4de37bb7f86fc52a",
-      "reviewRecords": []
+      "sourceSha256": "f0db3a94d154537118469b0afd9aa09a9da02a8ba3736623ca149346b74b69b7",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/retropubic-anatomy.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "f0db3a94d154537118469b0afd9aa09a9da02a8ba3736623ca149346b74b69b7",
+          "scope": "Complete inherited MDX read. Accessible PMC pelvic-surgeon overview and cadaveric-dissection atlas plus accessible NCBI Bookshelf anatomy text read for retained high-level anatomy. Inherited procedure-specific, variant-vessel, complication, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded regional anatomy orientation.",
+            "Removed fixed measurements, prevalence estimates, procedural instructions, diagnostic frameworks, interventions, and outcome claims that were not verified in this batch."
+          ],
+          "unresolved": [
+            "Procedure-specific retropubic anatomy and safety for prostatectomy, continence surgery, hernia repair, lymphadenectomy, implants, catheterization, trauma, and reoperative pelvis require focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/retropubic-space-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/urinary-tract/bladder-anatomy-physiology.mdx",
