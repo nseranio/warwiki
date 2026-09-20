@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T16:56:38.102917+00:00",
+  "generatedAt": "2026-09-20T17:13:00.753814+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 717,
+    "fullTextReadForCurrentContent": 718,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
-      "restored-pending-review": 116,
+      "restored-pending-review": 115,
       "unresolved": 11,
       "unreviewed": 348,
-      "updated": 691
+      "updated": 692
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1161,
-      "partial": 25
+      "not-recorded": 1160,
+      "partial": 26
     }
   },
   "pages": [
@@ -45211,11 +45211,11 @@
       "title": "Pectopexy",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "restored-pending-review",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "4c01ef882ebaac53b8183d741fdc4edddaaf5e17682c1c7eb700f27a3e051d23",
+      "auditDisposition": "partial",
+      "sourceSha256": "48653929b31d258579354763ee6f9c15c0f8cd0e09f611b2b7992eca030b8847",
       "reviewRecords": [
         {
           "reviewedAt": "2026-09-19",
@@ -45247,6 +45247,268 @@
             "Whole-page source adjudication remains incomplete. Manufacturer specifications and technical teaching do not require an RCT; their support must match the particular claim."
           ],
           "recordFile": "content-restoration.json"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/pectopexy.mdx",
+          "sourceSha256": "48653929b31d258579354763ee6f9c15c0f8cd0e09f611b2b7992eca030b8847",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current/restored and revised MDX, all technique, variant, outcome, comparison, complication and reference sections; 24 inherited references, two VideoCards and links identified. No imported clinical data or local figure. Video contents not watched.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Stage >=2 population and obese/anterior-access selection claims scoped to series; comprehensive selection guidance remains open.",
+            "treatment": "Bilateral Cooper's-ligament pectopexy distinguished from Y-mesh sacral reconstruction, HUSLS and SSLF; comparative efficacy not declared equivalent.",
+            "numbers": "Chuang n18/21, CUSUM case12, p=.11; No\u00e9 n832/42 apical re-fixations; Lin 764 patients and pooled perioperative estimates checked. Yang 13.7% urinary recurrence distinguished from de novo SUI. Unsupported composite operative/success ranges replaced with cohort-specific values; other inherited ranges remain open.",
+            "doseDeviceSafety": "No drug dose; Chuang device names and suture-versus-absorbable-tack distinction checked. Manufacturer IFUs and Pirtea/video fixation safety not yet verified.",
+            "anatomyTechnique": "Cooper's ligament medial to external iliac vessels in Chuang description; false S2 attribution removed. Port/position/mesh-shape details preserved as illustrative pending primary technique review.",
+            "followUp": "Unequal Chuang follow-up, Lyu mean 19.71 months and No\u00e9 cohort event timing scoped; no mandated four-year surveillance claim.",
+            "importedDataFigures": "No imported page data/figure. Two VideoCards preserved, unwatched. Relevant source figure images/supplements remain open.",
+            "references": "All 24 inherited references retained; original Banerjee/No\u00e9 citation added. Chen/Li and mesh-comparison procedure identities corrected, not erased.",
+            "currency": "2025 scoping and meta-analysis plus 2026 No\u00e9 long-term cohort considered; scoping full text and remaining recent series not closed."
+          },
+          "claimChecks": [
+            {
+              "claim": "Pectopexy anchor and Y-mesh source identity",
+              "sourceIds": [
+                "chuang-2022",
+                "chen-2018",
+                "li-2021",
+                "banerjee-2011"
+              ],
+              "locator": "Chuang Methods; Chen/Li original abstracts; Lin reference 8 for original technique date",
+              "verdict": "corrected",
+              "note": "Cooper's ligament pectopexy is not Chen/Li sacral-promontory Y-mesh reconstruction; online 2010/print 2011 date distinguished."
+            },
+            {
+              "claim": "Cooper's-ligament operative relation and fixation devices",
+              "sourceIds": [
+                "chuang-2022"
+              ],
+              "locator": "Chuang Methods, operative paragraph and Tables 1-3",
+              "verdict": "corrected",
+              "note": "Medial to external iliac vessels, not S2; 3x23 DynaMesh-PRS, Ethibond sutures or absorbable AbsorbaTack in that series, not universal technique."
+            },
+            {
+              "claim": "Cadaveric one-suture load versus clinical equivalence",
+              "sourceIds": [
+                "sauerwald-2016"
+              ],
+              "locator": "Original experiment Methods/Results and load table",
+              "verdict": "corrected",
+              "note": "8 cadavers/16 ligaments/33 material tests, 35 +/-12 versus 48 +/-7 N, nonsignificant; no clinical fixation equivalence conclusion."
+            },
+            {
+              "claim": "Long-term recurrence versus apical re-fixation",
+              "sourceIds": [
+                "noe-2026"
+              ],
+              "locator": "No\u00e9 Methods, Results and Tables 1-2",
+              "verdict": "corrected",
+              "note": "42/832 apical re-fixations gives 94.9% without re-fixation, not all apical cure or success of re-fixation; 8.0% apical recurrence separate; concomitant native repairs."
+            },
+            {
+              "claim": "Pooled comparative perioperative outcomes and null tests",
+              "sourceIds": [
+                "lin-2025",
+                "chuang-2022"
+              ],
+              "locator": "Lin Table 1 and Results pages 4-6; Chuang Table 2",
+              "verdict": "corrected",
+              "note": "Estimates sourced to Lin's mixed-design 3-21.8-month package, not case reports; null results do not establish equivalence; Chuang bowel/back pain 0/18 vs4/21 p=.11."
+            },
+            {
+              "claim": "Urinary recurrence misclassified as de novo stress urinary incontinence",
+              "sourceIds": [
+                "yang-2023"
+              ],
+              "locator": "Original publisher abstract and Table 4 at month 12",
+              "verdict": "corrected",
+              "note": "13.7% versus 5.0% is urinary symptom recurrence, not de novo SUI; Yang lists de novo urinary symptoms as a separate endpoint."
+            },
+            {
+              "claim": "Mesh material comparison applies to pectopexy",
+              "sourceIds": [
+                "kavallaris-2020"
+              ],
+              "locator": "Original PubMed abstract procedure identity",
+              "verdict": "corrected",
+              "note": "Polypropylene/PVDF comparison was sacrocolpopexy, not pectopexy."
+            },
+            {
+              "claim": "Meshless, LESS and robotic variant outcomes",
+              "sourceIds": [
+                "zhang-2022",
+                "lyu-2024",
+                "wang-2021",
+                "usta-2017",
+                "salman-2025"
+              ],
+              "locator": "Original indexed abstracts and report designs",
+              "verdict": "corrected",
+              "note": "Reports separated as n16, n14, single-video, single-case and n40 single-group observations, not generalized superiority or pooled patient predictions."
+            },
+            {
+              "claim": "Exact operative port, position, mesh dimensions and fixation safety across variants",
+              "sourceIds": [
+                "chuang-2022",
+                "banerjee-2011"
+              ],
+              "locator": "Chuang Methods versus unread Pirtea/Banerjee complete technique and IFUs",
+              "verdict": "unresolved",
+              "note": "Useful detailed technique retained and labeled illustrative; obtain original complete operative sources and device IFUs before technical clearance."
+            },
+            {
+              "claim": "Lin bowel-dysfunction RR and remaining numerical ranges",
+              "sourceIds": [
+                "lin-2025",
+                "scoping-2025"
+              ],
+              "locator": "Lin Results page 5 and Fig 6A described but not visually adjudicated; restricted scoping full text",
+              "verdict": "unresolved",
+              "note": "Narrative direction favors pectopexy but RR 1.09 coding and supplemental/forest-plot details not reconciled; no quantitative bowel-risk estimate or whole-page clearance."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain Jongjakapun full review/supplement and Lin supplement/forest-plot figures; reconcile Lin bowel RR event coding and study overlap before any quantitative bowel-risk statement.",
+            "Obtain complete original Pirtea and Banerjee technique/video and product IFUs for ports, 45-degree positioning, peritonization, implant preparation and fixation-device safety; two educational VideoCards remain unwatched.",
+            "Read full original remaining inherited RCT/series/variant sources and relevant figures/tables for numerical ranges, comparisons and follow-up; reconcile No\u00e9 apical recurrence phrasing with supplementary endpoints."
+          ],
+          "preservationReview": "All substantive headings, steps, mesh/variant/outcome/comparison/complication tables, 24 inherited references and both VideoCards retained; Banerjee original citation added. No heading, table, inherited reference or media removed. False pectopexy attribution of sacral Y-mesh and universal clinical claims corrected; Y-mesh material remains explicitly described as another procedure.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/pectopexy-review.md",
+          "recordFile": "claim-batches/2026-09-20-pectopexy.json",
+          "sources": [
+            {
+              "id": "chuang-2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9270277/",
+              "version": "Chuang et al. 2022 original cohort",
+              "access": "relevant-sections",
+              "readScope": "Europe PMC full-text XML original Methods/Results, Tables 1-3 and figure captions; operative and learning-curve image content not visually reviewed.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "noe-2026",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13032970/",
+              "version": "No\u00e9 et al. 2026 10-year case-series analysis",
+              "access": "relevant-sections",
+              "readScope": "Europe PMC full-text XML original Methods/Results and Tables 1-2; figure image and supplement not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "lin-2025",
+              "url": "https://www.binasss.sa.cr/ago25/36.pdf",
+              "version": "Lin et al. 2025 original meta-analysis public-copy PDF",
+              "access": "relevant-sections",
+              "readScope": "Browser-extracted original-paper Methods, Table 1, Results, Discussion and figure descriptions read; forest plots/risk-of-bias images and supplement not visually adjudicated. Direct shell download timed out.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "yang-2023",
+              "url": "https://www.sciencedirect.com/science/article/pii/S1553465023002686",
+              "version": "Yang et al. 2023 prospective pectopexy versus sacrocolpopexy cohort",
+              "access": "relevant-sections",
+              "readScope": "Original publisher abstract and Table 4 clinical follow-up entries read; rest of article, figures and supplement not read. Urinary recurrence separated from de novo urinary symptoms.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "scoping-2025",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40668393/",
+              "version": "Jongjakapun et al. 2025 scoping review",
+              "access": "prior-review",
+              "readScope": "Original abstract and identity reused for study counts and heterogeneity only; full text restricted.",
+              "reusedFrom": "reports/2026-09-19/pectopexy-recovery-review.md"
+            },
+            {
+              "id": "peng-2023",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10613309/",
+              "version": "Peng et al. 2023 HUSLS comparison",
+              "access": "prior-review",
+              "readScope": "Complete main text, tables, methods and figures from prior documented source review; not re-read.",
+              "reusedFrom": "reports/2026-09-19/pectopexy-recovery-review.md"
+            },
+            {
+              "id": "sauerwald-2016",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4741420/",
+              "version": "Sauerwald et al. 2016 cadaveric biomechanical study",
+              "access": "prior-review",
+              "readScope": "Complete main text, table and figures from prior documented source review; not re-read.",
+              "reusedFrom": "reports/2026-09-19/pectopexy-recovery-review.md"
+            },
+            {
+              "id": "chen-2018",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29432905/",
+              "version": "Chen et al. 2018 transvaginal Y-mesh report",
+              "access": "abstract-only",
+              "readScope": "Original abstract: sacral-promontory fixation and anterior pubic-ramus attachment; full text unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "li-2021",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/32737533/",
+              "version": "Li et al. 2021 93-case transvaginal Y-mesh series",
+              "access": "abstract-only",
+              "readScope": "Original abstract and procedure identity; full text unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "kavallaris-2020",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/32776608/",
+              "version": "Kavallaris/Zygouris 2020 mesh-material comparison",
+              "access": "abstract-only",
+              "readScope": "Original abstract establishes sacrocolpopexy, not pectopexy, procedure; full text unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "zhang-2022",
+              "url": "https://doi.org/10.3791/64388",
+              "version": "Zhang et al. 2022 LNMCP original article",
+              "access": "abstract-only",
+              "readScope": "Original abstract via Europe PMC core: 16 cases, 67.8-minute mean operation, 73.1-mL mean blood loss and reported success; JoVE complete article/video blocked by bot challenge.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "lyu-2024",
+              "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:39526623&format=json&resultType=core",
+              "version": "Lyu et al. 2024 LNMCPUP",
+              "access": "abstract-only",
+              "readScope": "Original indexed abstract via Europe PMC core: 14 cases and mean follow-up 19.71 months; JoVE article/video access restricted.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "wang-2021",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33096264/",
+              "version": "Wang et al. 2021 LESS pectopexy video article",
+              "access": "abstract-only",
+              "readScope": "Original indexed abstract reports one illustrative ~80-minute case; video/full method unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "usta-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28396951/",
+              "version": "Usta et al. 2017 robotic pectouteropexy case/video",
+              "access": "abstract-only",
+              "readScope": "Original abstract reports one obese-patient uterus-preserving case; video/full method unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "salman-2025",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40167602/",
+              "version": "Erdem/Salman et al. 2025 meshless series",
+              "access": "abstract-only",
+              "readScope": "Original abstract: single-group n40, one-year C-point change and 7.9% reported apical recurrence; full text/video unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "banerjee-2011",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20941503/",
+              "version": "Banerjee/No\u00e9 original technique, online 2010, print 2011",
+              "access": "indexed-excerpts",
+              "readScope": "Original title, DOI, print citation and electronic publication date checked in Chuang and Lin original-paper reference lists; PubMed page challenged and full original text unread.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },
