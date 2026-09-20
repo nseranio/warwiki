@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 737,
+    "fullTextReadForCurrentContent": 738,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 444,
-      "updated": 708
+      "unreviewed": 443,
+      "updated": 709
     }
   },
   "pages": [
@@ -7863,11 +7863,23 @@
       "title": "EPAP Flap (External Pudendal Artery Perforator)",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "85ce22eb6cfd9225080629dfda5b7a1b8f4ca49c32f05dafc19c28ae5cdf7d3b",
-      "reviewRecords": []
+      "sourceSha256": "256e6248fdd29b72635ce7a5864e576eb7348d8f0fb0458591ba0954b07753ac",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. Reused the September 19 EPAP recovery record: direct PubMed abstract/record reading of Tsukuura et al. 2025 and Carrera et al. 2009; no source packages were duplicated.",
+          "changes": "Rebuilt the page as a bounded feasibility and terminology overview; removed protocol steps, fixed measurements, sensory and functional claims, alternative-flap comparisons, indications, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/41054917/",
+            "https://pubmed.ncbi.nlm.nih.gov/19016690/"
+          ],
+          "unresolved": "The EPAP report remains an abstract-access single case with unrecovered full text, figures, video, supplements, sensory testing, and long-term outcomes. No comparative or replication evidence was recovered. No clinical clearance is asserted.",
+          "recordFile": "reports/2026-09-19/epap-hemi-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/gracilis.mdx",
