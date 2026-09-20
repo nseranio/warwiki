@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 761,
+    "fullTextReadForCurrentContent": 762,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 420,
-      "updated": 732
+      "unreviewed": 419,
+      "updated": 733
     }
   },
   "pages": [
@@ -9710,11 +9710,25 @@
       "title": "Needles",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f76c6754a7b68f724a912b85f17032e49df66b816755bd646dca7d2e5c8bd068",
-      "reviewRecords": []
+      "sourceSha256": "69e227fb47a204a8eac7ea9875351560e553c744041a101d490dba2051ca41a4",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract reading for Byrne and Aly 2019, Potter et al. 2025, Parantainen et al. 2011, and Arevalo-Rodriguez et al. 2017.",
+          "changes": "Rebuilt the detailed needle-selection and handling guide as a bounded evidence orientation; removed unverified product mappings, tissue recommendations, technique instructions, injury estimates, biopsy specifications, and physics rules.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/30869752/",
+            "https://pubmed.ncbi.nlm.nih.gov/39325023/",
+            "https://pubmed.ncbi.nlm.nih.gov/22071864/",
+            "https://pubmed.ncbi.nlm.nih.gov/28388808/"
+          ],
+          "unresolved": "The inherited manufacturer, urologic tissue, curvature, handling, injury-transfer, biopsy, and needle-tissue-physics source packages were not fully reviewed. No clinical clearance, procedural instruction, or product-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/needles-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/plastic-surgery-principles.mdx",
