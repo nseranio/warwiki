@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 716,
+    "fullTextReadForCurrentContent": 717,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 465,
-      "updated": 688
+      "unreviewed": 464,
+      "updated": 689
     }
   },
   "pages": [
@@ -250,11 +250,19 @@
       "title": "The Penis",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e0561031c4e9368ba9a58305d2d332afd4690b495c3f0957b2492a7aabd4f7a8",
-      "reviewRecords": []
+      "sourceSha256": "875e1983c827ba703e2af2ebde1d06157ad16d97dcee781886940e5305db8697",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Full current MDX read; accessible NCBI anatomy text and a full-text physiology review checked for a bounded overview.",
+          "outcome": "Rebuilt as a source-bounded gross-anatomy page; removed procedure, treatment, outcome, and emergency-management claims.",
+          "clinicalVerification": "not complete",
+          "report": "reports/2026-09-20/penis-anatomy-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/prostate-seminal-vesicle.mdx",
