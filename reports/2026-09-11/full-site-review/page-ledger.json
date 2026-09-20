@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 706,
+    "fullTextReadForCurrentContent": 707,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 475,
-      "updated": 678
+      "unreviewed": 474,
+      "updated": 679
     }
   },
   "pages": [
@@ -36258,11 +36258,34 @@
       "title": "Testicular Prosthesis",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "0eecb22c2a18b2bd081871b107490b06dfb6889d0a7053b0983867bd828816cd",
-      "reviewRecords": []
+      "sourceSha256": "4150955d586201d55fe588cee1ab6e6c45667616206e23ba2a35a8afcde847d0",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "4150955d586201d55fe588cee1ab6e6c45667616206e23ba2a35a8afcde847d0",
+          "scope": "Complete inherited and revised MDX read. Accessible full texts retrieved for Hayon et al. 2020, Araújo et al. 2024 and Osemlak et al. 2018; their abstracts and relevant cohort methods/results tables were reviewed. The inherited source set was not comprehensively reread.",
+          "changes": [
+            "Replaced device history, fixed recommendations, procedural instructions, broad complication rates and experimental-device claims with a bounded counseling and evidence overview.",
+            "Retained only clearly attributed observational satisfaction and pediatric cohort findings."
+          ],
+          "sources": [
+            "https://doi.org/10.4103/aja.aja_93_19",
+            "https://doi.org/10.4103/aja202325",
+            "https://doi.org/10.1097/MD.0000000000013911"
+          ],
+          "unresolved": [
+            "The broader device-label, comparative, adult complication, gender-affirming and long-term source packages were not fully reviewed in this batch.",
+            "No single device, technique, timing, access route, or individual outcome is verified as best; no broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/testicular-prosthesis-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/testicular-reimplantation.mdx",
