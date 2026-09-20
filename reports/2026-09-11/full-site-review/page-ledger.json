@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 773,
+    "fullTextReadForCurrentContent": 774,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 408,
-      "updated": 744
+      "unreviewed": 407,
+      "updated": 745
     }
   },
   "pages": [
@@ -14985,11 +14985,18 @@
       "title": "Flexible Ureteroscope",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "fd354d551c0878939fbd9d32c184b0d964c53237bd201c951bfbf2cb22b369c7",
-      "reviewRecords": []
+      "sourceSha256": "17774ca9af77934139ee8b3e17af6af4acd66b65b2e6ff9205bd13339fa0365e",
+      "reviewRecords": [{
+        "date": "2026-09-20",
+        "scope": "Complete inherited and revised MDX read; PubMed record/abstract reading for single-use ureteroscope comparison, ureteral access sheaths, CROES global ureteroscopy outcomes, and UTUC guideline metadata.",
+        "changes": "Rebuilt the detailed instrument guide as a bounded evidence orientation; removed unverified specifications, access-sheath sizes and complication rates, treatment criteria, energy settings, outcomes, safety rates, and workflow rules.",
+        "sources": ["https://pubmed.ncbi.nlm.nih.gov/38413490/", "https://pubmed.ncbi.nlm.nih.gov/29752769/", "https://pubmed.ncbi.nlm.nih.gov/24147820/", "https://pubmed.ncbi.nlm.nih.gov/37096584/"],
+        "unresolved": "Full source packages, device instructions for use, current stone and UTUC guidelines, and procedure-specific evidence were not adjudicated. No clinical verification, endourologic protocol, or equipment-selection policy is asserted.",
+        "recordFile": "reports/2026-09-20/flexible-ureteroscope-recovery-review.md"
+      }]
     },
     {
       "file": "docs/01-foundations/tools/instruments/endoscopy/resection-loop.mdx",
