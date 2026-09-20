@@ -4,7 +4,7 @@
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.
 
-Recorded coverage after the Halban recovery batch:683full current MDX reads,655scoped updates,21checked,12unresolved,498unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
+Recorded coverage after the aOAP recovery batch:684full current MDX reads,656scoped updates,21checked,12unresolved,497unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
 
 ## Next work and recovery warning
 
@@ -18,7 +18,8 @@ Prior reviewers stopped on a usage-limit error. Their unfinished batch26 `/tmp` 
 4. **Pectopexy completed:** [the recovery review](pectopexy-recovery-review.md) records a complete accessible Peng2023 main, complete Sauerwald2016 cadaver study, reused Cochrane scope, and the abstract-only 2025 scoping review. The rebuilt page deliberately removes prescriptive technique and comparative-superiority claims.
 5. **Lateral suspension completed:** [the recovery review](lateral-suspension-recovery-review.md) records three complete accessible 2024–25 sources and reused Cochrane scope. The rebuilt page removes prescriptive tunneling/product rules and immature superiority claims.
 6. **Mesh/graft overview completed:** [the recovery review](mesh-graft-recovery-review.md) records current FDA source verification and exact inaccessible source packages. The page now avoids historic procedure/rate/management claims.
-7. **Moschcowitz completed:** [the recovery review](moschcowitz-recovery-review.md) records the directly read historical RCT and combined-procedure abstracts. The rebuilt page removes universal adjunct and technical mandates. Continue with Halban culdoplasty.
+7. **Moschcowitz and Halban completed:** their recovery reviews record the directly read historical RCT/combined-procedure abstracts. Both rebuilt pages remove unsupported outcome rankings and technical mandates.
+8. **aOAP completed:** [the recovery review](aoap-recovery-review.md) records full reading of the indirect 2024 systematic review and abstract-only access to the primary anatomy and clinical reports. The page is a bounded overview. Continue with Bipedicled Anterior Scrotal Flap (Fakin).
 
 Use committed reports under `reports/2026-09-13/apical-source-reading/` and `reports/2026-09-12/prolapse-source-reading/` for completed work. Keep their exact source-access distinctions. Then continue the existing ledger's remaining tools, foundations, techniques, resources/History, imported clinical data, figures and OpenEvidence reconciliation.
 

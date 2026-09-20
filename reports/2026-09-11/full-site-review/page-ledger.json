@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 683,
+    "fullTextReadForCurrentContent": 684,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 498,
-      "updated": 655
+      "unreviewed": 497,
+      "updated": 656
     }
   },
   "pages": [
@@ -18,8 +18,8 @@
       "title": "The Abdominal Wall",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
       "sourceSha256": "e3b4ebaaca880ffef4304031a4371bcad5514fdd10080b7c1d5bf0e2c1455e7d",
       "reviewRecords": []
@@ -30994,8 +30994,33 @@
       "status": "unreviewed",
       "fullTextReadForCurrentContent": false,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "db8d0690b9182cdae1e11a68cf2fd94e11857abee2f7e4b21e1ae5ac49d99e83",
-      "reviewRecords": []
+      "sourceSha256": "925af0848d4955e5072d07eb764445dba81eb12ea49b386be9fdf5b012cc3e28",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/aoap-flap.mdx",
+          "reviewedAt": "2026-09-19",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "925af0848d4955e5072d07eb764445dba81eb12ea49b386be9fdf5b012cc3e28",
+          "scope": "Complete current MDX and full Wendelspiess 2024 systematic review/meta-analysis read. O'Dey 2010 anatomy and 2024 FGM/C and lichen-sclerosus primary reports were abstract-access only; exact limits in aoap-recovery-review.md.",
+          "changes": [
+            "Removed unsupported protocol, selection, superiority, and long-term outcome claims.",
+            "Separated cadaveric anatomy, combined-procedure cohort outcomes, and indirect cancer-reconstruction evidence."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/j.ygyno.2010.08.033",
+            "https://doi.org/10.1097/PRS.0000000000011026",
+            "https://doi.org/10.1016/j.bjps.2024.05.046",
+            "https://doi.org/10.3390/cancers16122213"
+          ],
+          "unresolved": [
+            "The three primary aOAP reports were abstract-access only; full texts, figures, tables, supplements, and technical details were not reviewed.",
+            "No independent multicenter replication or direct comparative aOAP trial recovered. No complete clinical clearance."
+          ],
+          "recordFile": "aoap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/bipedicled-anterior-scrotal-flap.mdx",

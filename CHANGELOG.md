@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-fourth continuation: aOAP evidence boundaries
+
+Rebuilt the anterior obturator artery perforator flap page around its cadaveric anatomy, combined-procedure cohort reports, and indirect vulvoperineal reconstruction review. Removed unsupported operative protocol, selection, tissue-superiority, and durable outcome claims. The [recovery record](reports/2026-09-19/aoap-recovery-review.md) distinguishes full review access from abstract-only primary reports.
+
+Ledger: 684 full current MDX reads and 656 scoped updates of 1,186 files; 21 checked, 12 unresolved and 497 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-third continuation: Halban evidence boundaries
 
 Rebuilt Halban culdoplasty as a bounded historical overview. Removed its unproven exact efficacy, equivalence, ureteral-risk ranking, and procedural mandates. The existing randomized source has no Halban arm; this and the limited combined-procedure evidence are explicit in the [recovery record](reports/2026-09-19/halban-recovery-review.md).
