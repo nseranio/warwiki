@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 725,
+    "fullTextReadForCurrentContent": 726,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 456,
-      "updated": 696
+      "unreviewed": 455,
+      "updated": 697
     }
   },
   "pages": [
@@ -807,11 +807,30 @@
       "title": "The Bladder",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "609217af800f1d1153ba705b4018535011096dc208d239c97ccd46d6c3ab5d56",
-      "reviewRecords": []
+      "sourceSha256": "568b2ff80f869656ff08f2c736ef0bd8e365c74a8eccd056729a62e97bd8dbbc",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/urinary-tract/bladder-anatomy-physiology.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "568b2ff80f869656ff08f2c736ef0bd8e365c74a8eccd056729a62e97bd8dbbc",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for bladder physiology, gross anatomy, histology, and urination physiology read for retained high-level anatomy and physiology. Inherited clinical, oncologic, urodynamic, reconstructive, trauma, and therapeutic source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded anatomy and physiology orientation.",
+            "Removed numerical ranges, procedural instructions, diagnostic frameworks, treatment recommendations, and outcome claims that were not verified in this batch.",
+            "Retained existing source-recorded figures and anatomy video placement."
+          ],
+          "unresolved": [
+            "Clinical interpretation of bladder compliance, urodynamics, neurogenic bladder, malignancy staging, trauma, reconstruction, continence, and treatment requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/bladder-anatomy-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/urinary-tract/female-urethra.mdx",
