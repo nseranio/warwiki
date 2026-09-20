@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 707,
+    "fullTextReadForCurrentContent": 708,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 474,
-      "updated": 679
+      "unreviewed": 473,
+      "updated": 680
     }
   },
   "pages": [
@@ -36292,11 +36292,34 @@
       "title": "Testicular Reimplantation (Procedure)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "9ec0c5188c900fa9cd507fca2f0ba839711881258a9771392e9ab2bbc22242d9",
-      "reviewRecords": []
+      "sourceSha256": "5cf0872488a0ef86fee131506b249f1a7fd7c974b9fad1a95bdeb79f8d91f5d1",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "5cf0872488a0ef86fee131506b249f1a7fd7c974b9fad1a95bdeb79f8d91f5d1",
+          "scope": "Complete inherited and revised MDX read. Reused the detailed source review for the already-audited clinical companion: Starmer 2018 and two Bukowski abstracts plus Wacksman 6/7 and the ACS 2025 guideline had been checked there. No duplicate source review was claimed.",
+          "changes": [
+            "Replaced a high-detail operative atlas, ischemia thresholds, drug protocols and pooled outcomes with a bounded specialist-procedure overview.",
+            "Kept distinct traumatic and high-intra-abdominal-testis contexts, cross-linked the audited clinical companion, and retained evidence limits."
+          ],
+          "sources": [
+            "https://doi.org/10.1111/bju.14084",
+            "https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf",
+            "https://doi.org/10.1016/s0022-5347(17)53481-3"
+          ],
+          "unresolved": [
+            "Historical technical source packages were not independently reread for this companion.",
+            "No universal protocol, outcome probability or broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/testicular-reimplantation-procedure-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/total-anterior-scrotal-flap.mdx",
