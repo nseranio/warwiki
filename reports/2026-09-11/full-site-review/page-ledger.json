@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 772,
+    "fullTextReadForCurrentContent": 773,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 409,
-      "updated": 743
+      "unreviewed": 408,
+      "updated": 744
     }
   },
   "pages": [
@@ -14967,11 +14967,18 @@
       "title": "Flexible Cystoscope",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "0bb53f3527ff8d1fc4abe266633c9959867aacc061113d634a13714e36341fa1",
-      "reviewRecords": []
+      "sourceSha256": "ab057c66b98df9f90b8deb58866c88da3940e559712dec618391f6250a0872fa",
+      "reviewRecords": [{
+        "date": "2026-09-20",
+        "scope": "Complete inherited and revised MDX read; PubMed record/abstract reading for flexible-versus-rigid pain, lidocaine, single-use noninferiority, single-use systematic review, and cystoscopy prophylaxis Cochrane review.",
+        "changes": "Rebuilt the detailed instrument guide as a bounded evidence orientation; removed unverified device specifications, workflow steps, indications, comparisons, cost/environmental estimates, imaging claims, and prophylaxis recommendations.",
+        "sources": ["https://pubmed.ncbi.nlm.nih.gov/34118847/", "https://pubmed.ncbi.nlm.nih.gov/31219763/", "https://pubmed.ncbi.nlm.nih.gov/36128833/", "https://pubmed.ncbi.nlm.nih.gov/37838621/", "https://pubmed.ncbi.nlm.nih.gov/30789676/"],
+        "unresolved": "Full source packages, device instructions for use, current diagnostic and antimicrobial guidelines, and video contents were not adjudicated. No clinical verification, procedure protocol, or equipment-selection policy is asserted.",
+        "recordFile": "reports/2026-09-20/flexible-cystoscope-recovery-review.md"
+      }]
     },
     {
       "file": "docs/01-foundations/tools/instruments/endoscopy/flexible-ureteroscope.mdx",
