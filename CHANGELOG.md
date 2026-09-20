@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Sling trial outcomes and operative safety
+
+Rechecked the single-incision, retropubic and transobturator sling pages against the accessible SIMS HTA, TOMUS trial, Cochrane reviews and current EAU recommendations. Corrected trial denominators and endpoint interpretation, qualified device-specific and long-term conclusions, and made intraoperative cystoscopy explicit. Preserved operative teaching and media. [Mini-sling review](reports/2026-09-20/sims-sling-evidence-review.md) and [full-length route review](reports/2026-09-20/full-length-sling-route-evidence-review.md) record IFU, full-text and other remaining checks; all three pages remain partial audits.
+
+---
+
 
 ## 2026-09-20 — Female sling route selection across jurisdictions
 

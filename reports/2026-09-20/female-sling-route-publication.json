@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-20T14:58:42Z",
+  "contentCommit": "c28da1040de027e8aab37ae123e8d987332cfd0d",
+  "scope": "Female SUI database and transobturator/single-incision route guidance; this successful latest deployment also carries the three previously CI-passed but rate-limited OAB/SUI batches. Clinical source reviews remain partial.",
+  "githubCI": {
+    "databaseId": 35517966675,
+    "headSha": "c28da1040de027e8aab37ae123e8d987332cfd0d",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/35517966675"
+  },
+  "vercel": {
+    "context": "Vercel",
+    "state": "success",
+    "description": "Deployment has completed",
+    "targetUrl": "https://vercel.com/nseranios-projects/warwiki/35H7QersP7CprviWrw25zQaFJqmy"
+  },
+  "localValidation": {
+    "auditRecords": "passed consistency/current-hash checks; not clinical correctness certificates",
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": "32 passed",
+    "maintenanceTests": "58 passed",
+    "buildAndRenderedLinks": "passed",
+    "buildSizeMb": 131.14,
+    "sizeBudgetMb": 200,
+    "whitespace": "passed"
+  },
+  "liveVerification": {
+    "method": "Compared normalized text in article .theme-doc-markdown to the validated local build; excluded the ordinary last-updated footer because the pre-commit local build and hosted post-commit build have different Git dates.",
+    "status": "all eight changed pages returned HTTP 200 and exactly matched",
+    "routes": [
+      "/docs/clinical-conditions/03a-storage-incontinence/mixed-incontinence",
+      "/docs/clinical-conditions/03a-storage-incontinence/sui-female",
+      "/docs/clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab",
+      "/docs/surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database",
+      "/docs/surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database",
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox",
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling",
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling"
+    ]
+  },
+  "previousRateLimitedRecordsNowCovered": [
+    "reports/2026-09-20/oab-database-publication.json",
+    "reports/2026-09-20/oab-male-botox-publication.json",
+    "reports/2026-09-20/female-sui-mui-publication.json"
+  ],
+  "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
+}

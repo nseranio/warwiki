@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T14:54:02.918179+00:00",
+  "generatedAt": "2026-09-20T15:08:53.302052+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 703,
+    "fullTextReadForCurrentContent": 704,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
       "restored-pending-review": 118,
       "unresolved": 12,
-      "unreviewed": 360,
-      "updated": 676
+      "unreviewed": 359,
+      "updated": 677
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1176,
-      "partial": 10
+      "not-recorded": 1175,
+      "partial": 11
     }
   },
   "pages": [
@@ -43244,12 +43244,157 @@
       "title": "Retropubic Mid-Urethral Sling",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "cfe992b330e228c110004b9eb1b2150f5ae461ffe05004066d6506ad53ac2ac5",
-      "reviewRecords": []
+      "auditDisposition": "partial",
+      "sourceSha256": "9e0f78a39ad8c85a3b9a595cdd011e857c1902f44c5e24b5ed5501aee06b1ca8",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx",
+          "sourceSha256": "9e0f78a39ad8c85a3b9a595cdd011e857c1902f44c5e24b5ed5501aee06b1ca8",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Entire current page before and after edit, including technique, outcome table, references and VideoCards listing; video not watched.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "TOMUS index eligibility and AUA indexed fixed-urethra distinction checked; detailed ISD selection full text pending",
+            "treatment": "Route-specific objective/subjective equivalence checked against TOMUS",
+            "numbers": "TOMUS endpoints and bladder injury, Cochrane broad cure ranges/pooled perforation checked",
+            "doseDeviceSafety": "Cystoscopy and route harms checked; TVT current IFU and mesh-specific later harms pending",
+            "anatomyTechnique": "Full generic page steps read; trial general procedure and EAU cystoscopy checked, model-specific IFU not read",
+            "followUp": "Cochrane longer-term caveat and EAU route counseling checked; JAMA removal cohort and other long-term packages pending",
+            "importedDataFigures": "No imported clinical data or figure; inline table read, external video listed not viewed",
+            "references": "TOMUS and Cochrane relevant source sections, EAU current recommendations read; AUA, ISD and Imamura indexed/abstract only, other references pending",
+            "currency": "Current EAU online checked; AUA 2023 unabridged direct PDF blocked, later IFU and cohort checks pending"
+          },
+          "claimChecks": [
+            {
+              "claim": "Objective versus subjective retropubic/transobturator equivalence and cure ranges",
+              "sourceIds": [
+                "tomus-2010",
+                "cochrane-mus"
+              ],
+              "locator": "TOMUS 12-month outcome results/Figure 2; Cochrane abstract and Summary-of-Findings 1",
+              "verdict": "corrected",
+              "note": "Objective composite met equivalence; subjective composite did not despite nonsignificant difference. Preserved Cochrane ranges with definition/follow-up context."
+            },
+            {
+              "claim": "Bladder perforation and route-specific harms",
+              "sourceIds": [
+                "tomus-2010",
+                "cochrane-mus",
+                "eau-online"
+              ],
+              "locator": "TOMUS Table 2; Cochrane Summary-of-Findings 1; EAU MUS recommendations",
+              "verdict": "corrected",
+              "note": "5.0% TOMUS RMUS, 4.5% versus 0.6% Cochrane pooled; cystoscopy remains routine."
+            },
+            {
+              "claim": "Fixed immobile urethra and ISD route selection",
+              "sourceIds": [
+                "aua23-indexed",
+                "schierlitz-isd"
+              ],
+              "locator": "AUA indexed Special Cases; Schierlitz 2012 abstract",
+              "verdict": "corrected",
+              "note": "Qualified RMUS preference to selected ISD and noted autologous PVS discussion for fixed immobile urethra; full source package remains open."
+            },
+            {
+              "claim": "Network review ranks RMUS above TMUS near 12 months",
+              "sourceIds": [
+                "imamura-nma-2019"
+              ],
+              "locator": "Imamura indexed abstract/results; direct BMJ page blocked",
+              "verdict": "supported",
+              "note": "Retained a narrow review-level ranking, not a universal route or long-term superiority claim; full review remains open."
+            },
+            {
+              "claim": "Model-specific TVT operative steps and late mesh risks",
+              "sourceIds": [],
+              "locator": "Technique, outcomes and video sections",
+              "verdict": "unresolved",
+              "note": "Practical generic content preserved; current IFU, video and long-term JAMA/cohort source packages still need review."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain and compare current TVT IFU and operative video with generic technical steps.",
+            "Read full ISD route comparison and long-term mesh-removal/cohort sources for selection and late-harm counseling."
+          ],
+          "preservationReview": "No operative step, table, reference, link, pearl or video removed; Cochrane cure ranges retained and contextualized.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/full-length-sling-route-evidence-review.md",
+          "recordFile": "claim-batches/2026-09-20-full-length-sling-route-evidence.json",
+          "sources": [
+            {
+              "id": "tomus-2010",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2962585/",
+              "version": "Richter et al., NEJM 2010, DOI 10.1056/NEJMoa0912658",
+              "access": "relevant-sections",
+              "readScope": "Open primary main article: eligibility, design, procedures, endpoint definitions, Tables 1\u20132, figures and 12-month results, harms, discussion. Supplement not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cochrane-mus",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6483329/",
+              "version": "Ford et al., Cochrane 2017, CD006375.pub4, search through June 2014",
+              "access": "relevant-sections",
+              "readScope": "Open full article abstract, Summary-of-Findings tables 1/3, route comparison results/discussion, limitations and practice conclusion; not all study-level appendices or forest plots.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "eau-online",
+              "url": "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+              "version": "EAU Non-neurogenic Female LUTS current online disease-management chapter, accessed 2026-09-20",
+              "access": "relevant-sections",
+              "readScope": "Direct current MUS evidence/recommendation section, including cystoscopy, route-specific harms and long-term counseling; not entire guideline.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "aua23-indexed",
+              "url": "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+              "version": "AUA/SUFU female SUI guideline 2023 unabridged",
+              "access": "indexed-excerpts",
+              "readScope": "Official indexed excerpt for intraoperative cystoscopy and fixed immobile urethra; direct PDF returned 403. Earlier scoped route check reused; no new full guideline read.",
+              "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+            },
+            {
+              "id": "schierlitz-isd",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/22270284/",
+              "version": "Schierlitz et al., Obstet Gynecol 2012 three-year ISD RCT follow-up",
+              "access": "abstract-only",
+              "readScope": "PubMed indexed abstract showing selected ISD population and repeat-surgery outcome; full paper not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nice-prior",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123, last updated 2019-06-24",
+              "access": "prior-review",
+              "readScope": "Transobturator selection restriction reused without repeating source review.",
+              "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+            },
+            {
+              "id": "imamura-nma-2019",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6549286/",
+              "version": "Imamura et al., BMJ 2019, DOI 10.1136/bmj.l1842",
+              "access": "abstract-only",
+              "readScope": "Accessible indexed abstract/results for relative near-12-month network ranking; publisher page returned 403 and full review was not reread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "fusco-meta-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28479203/",
+              "version": "Fusco et al., Eur Urol 2017, DOI 10.1016/j.eururo.2017.04.026",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract for broad MUS-versus-other-operation comparison; full article not read.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx",
@@ -43272,7 +43417,7 @@
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
       "auditDisposition": "partial",
-      "sourceSha256": "b71cd49fedb387f94d0c92b2807e2026d7013daae1a345719e129028456e5ddf",
+      "sourceSha256": "6a994015749bb57de72c84499870c61cd40a23cdb43b43230219dc2a8789b453",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx",
@@ -43338,6 +43483,119 @@
             }
           ],
           "reviewedAt": "2026-09-20"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx",
+          "sourceSha256": "6a994015749bb57de72c84499870c61cd40a23cdb43b43230219dc2a8789b453",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Entire current MDX before and after edits, including selection, generic technique, outcome table, references, links and VideoCards entry; the external video itself was not watched.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "SIMS trial index-population exclusions and prior NICE/AUA selection distinction checked; severe SUI/ISD selection claims pending",
+            "treatment": "Trial noninferiority limited to Ajust/Altis and selected population; Cochrane route comparison checked",
+            "numbers": "Randomization, exclusions, patient-reported endpoints, dyspareunia, exposure, retreatment and early-recovery numbers checked to HTA tables; Zhou only abstract-level",
+            "doseDeviceSafety": "Ajust/Altis trial methods and EAU intraoperative cystoscopy recommendation checked; model-specific current package IFUs and availability pending",
+            "anatomyTechnique": "Generic steps matched to HTA chapter 2; cystoscopy added from HTA/EAU; named-device IFU and video details pending",
+            "followUp": "Three-year trial and longer-term Cochrane uncertainty checked; device-specific later durability pending",
+            "importedDataFigures": "No imported clinical dataset or figure; inline table read, external video listed but not viewed",
+            "references": "SIMS HTA relevant chapters, Cochrane relevant full-text sections and Zhou abstract checked; other references and supplements pending",
+            "currency": "2023 Cochrane and 2025 meta abstract considered; current device versions/IFUs and newer long-term results pending"
+          },
+          "claimChecks": [
+            {
+              "claim": "SIMS sample and noninferior patient-reported success through three years",
+              "sourceIds": [
+                "sims-hta"
+              ],
+              "locator": "Scientific summary; chapter 4 Table 7 and Figure 8; chapter 2 eligible devices/population",
+              "verdict": "corrected",
+              "note": "600 randomized, 596 included after exclusions; 79% vs 76% at 15 months and 72% vs 67% at 36 months with prespecified 10% margin, limited to studied devices and selected women."
+            },
+            {
+              "claim": "Dyspareunia, mesh exposure and further SUI surgery in the SIMS trial",
+              "sourceIds": [
+                "sims-hta"
+              ],
+              "locator": "Chapter 3 baseline sexual symptoms; chapter 5 Tables 13\u201314 and safety discussion",
+              "verdict": "corrected",
+              "note": "Added denominators and baseline dyspareunia imbalance; exposure difference was nonsignificant; retreatment rates are descriptive."
+            },
+            {
+              "claim": "Pooled 12-month cure and safety/early-recovery generalization",
+              "sourceIds": [
+                "cochrane-sims",
+                "zhou-2025",
+                "sims-hta"
+              ],
+              "locator": "Cochrane Summary-of-Findings 2\u20133 and applicability; Zhou abstract; HTA operative Table 12 and safety discussion",
+              "verdict": "corrected",
+              "note": "Distinguished trial noninferiority from a nonsignificant meta-analytic difference; retained pooled organ-injury signal with comparator/rarity caveat; early pain/stay not generalized to proven earlier normal activities."
+            },
+            {
+              "claim": "Generic operative steps and device-specific anchoring/tensioning",
+              "sourceIds": [
+                "sims-hta",
+                "eau-online"
+              ],
+              "locator": "HTA chapter 2 adjustable anchored SIMS intervention steps; EAU MUS recommendation for intraoperative cystoscopy",
+              "verdict": "unresolved",
+              "note": "Generic sequence retained and tied to Ajust/Altis trial methods; cystoscopy added. Current product IFUs and named Solyx video/device details still need direct review."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain current named-device IFUs and availability for Ajust, Altis and Solyx; reconcile any device-specific anchor/tensioning differences with the generic technique and video.",
+            "Obtain full Zhou 2025 meta-analysis and supplements through a legitimate route for study selection, device mix, organ-injury counts and risk-of-bias appraisal; publisher access was blocked.",
+            "Check severe SUI/ISD, complex recurrent SUI and long-term device-specific selection claims against their primary source package."
+          ],
+          "preservationReview": "No indication heading, operative step, table, reference, link, pearl or VideoCards entry removed; wording and source scope narrowed while preserving teaching.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/sims-sling-evidence-review.md",
+          "recordFile": "claim-batches/2026-09-20-sims-sling-evidence.json",
+          "sources": [
+            {
+              "id": "sims-hta",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK587586/",
+              "version": "NIHR Health Technology Assessment 2022;26(47), DOI 10.3310/BTSA6148",
+              "access": "relevant-sections",
+              "readScope": "Open 220-page PDF: scientific summary; chapter 2 methods, interventions and eligibility; chapter 3 baseline and operative data; chapter 4 primary outcome and Table 7/Figure 8; chapter 5 safety and Tables 13\u201314; discussion of safety/limitations. Not every appendix or full NEJM supplement read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cochrane-sims",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10604512/",
+              "version": "Carter et al., Cochrane 2023, CD008709.pub4, search through September 20 2022",
+              "access": "relevant-sections",
+              "readScope": "Full accessible article: abstract, Summary-of-Findings tables 2\u20133, discussion/applicability, certainty and practice conclusion; not every trial appendix or forest plot.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "zhou-2025",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40465798/",
+              "version": "Zhou et al., International Journal of Surgery 2025;111:5518\u20135534",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract, including trial count, mean follow-up and reported pooled results. Ovid publisher full text returned payment/access error; methods tables and supplements not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nice-aua-prior",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123 (2019) and AUA/SUFU 2023 selection distinction",
+              "access": "prior-review",
+              "readScope": "Previously checked jurisdictional selection only; no repeat source read in this batch.",
+              "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+            },
+            {
+              "id": "eau-online",
+              "url": "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+              "version": "EAU Non-neurogenic Female LUTS current online disease-management chapter, accessed 2026-09-20",
+              "access": "relevant-sections",
+              "readScope": "Direct current online midurethral sling summary/recommendation section, including intraoperative cystoscopy and device-specific follow-up limits; not complete EAU guideline.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },
@@ -43350,7 +43608,7 @@
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
       "auditDisposition": "partial",
-      "sourceSha256": "36a075b50a565f9728554e1ed08c552b84fa8896f22738768bfcf5f6ffb0eb73",
+      "sourceSha256": "8d09d726b69d1d3b89b5b9000ac225d6532f37c5f01f17c5d045314a43246fde",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling.mdx",
@@ -43413,6 +43671,151 @@
               "access": "prior-review",
               "readScope": "Official statement 13 indexed excerpt and prior scoped AUA/SUFU review; PDF returned 403, no new full read",
               "reusedFrom": "reports/2026-09-20/female-sui-database-nice-selection-review.md"
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling.mdx",
+          "sourceSha256": "8d09d726b69d1d3b89b5b9000ac225d6532f37c5f01f17c5d045314a43246fde",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Entire current page before and after edit, including route table, technique, outcomes and references; no imported data, figure or video.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "NICE/AUA route restriction reused; TOMUS eligibility and ISD limitation checked, detailed complex selection pending",
+            "treatment": "TOMUS objective/subjective route comparison and Cochrane pooled direction checked",
+            "numbers": "TOMUS endpoint and bladder injury denominators; Cochrane pooled perforation/voiding/groin pain checked",
+            "doseDeviceSafety": "EAU/AUA intraoperative cystoscopy recommendation applied; TVT-O/Monarc IFUs and late harms pending",
+            "anatomyTechnique": "Generic steps read; pooled versus TOMUS nonrandomized inside/outside-out vaginal injury discrepancy contextualized; device IFUs pending",
+            "followUp": "Cochrane long-term uncertainty and EAU route counseling checked; detailed cohorts pending",
+            "importedDataFigures": "No imported dataset, figure or video; inline tables read",
+            "references": "TOMUS/Cochrane/EAU relevant sections read; AUA unabridged indexed only, Fusco/Imamura abstracts only, other inherited references pending",
+            "currency": "Current EAU online and earlier NICE/AUA versions checked; device IFUs/late cohorts pending"
+          },
+          "claimChecks": [
+            {
+              "claim": "Optional cystoscopy after transobturator synthetic sling",
+              "sourceIds": [
+                "eau-online",
+                "aua23-indexed",
+                "tomus-2010"
+              ],
+              "locator": "EAU MUS recommendations; AUA Cystoscopy and Urodynamics statement 4 indexed explanatory text; TOMUS standardized cystoscopy",
+              "verdict": "corrected",
+              "note": "Changed to routine intraoperative bladder/urethra check despite lower TMUS injury incidence."
+            },
+            {
+              "claim": "TOMUS route equivalence and Cochrane bladder-perforation estimates",
+              "sourceIds": [
+                "tomus-2010",
+                "cochrane-mus"
+              ],
+              "locator": "TOMUS 12-month outcomes/Table 2; Cochrane Summary-of-Findings 1 and abstract",
+              "verdict": "corrected",
+              "note": "Objective but not subjective equivalence; pooled perforation 0.6% TMUS versus 4.5% RMUS, with zero TMUS events in TOMUS."
+            },
+            {
+              "claim": "Inside-out route has fewer vaginal epithelial perforations",
+              "sourceIds": [
+                "tomus-2010",
+                "cochrane-mus"
+              ],
+              "locator": "TOMUS adverse-event results/discussion; Cochrane Summary-of-Findings 3 and route discussion",
+              "verdict": "corrected",
+              "note": "TOMUS exploratory nonrandomized route subgroup showed reverse direction from pooled comparisons; replaced one-way ranking with heterogeneity caveat."
+            },
+            {
+              "claim": "Broader synthesis puts both full-length MUS routes among effective operations; network ranking near 12 months favors RMUS",
+              "sourceIds": [
+                "fusco-meta-2017",
+                "imamura-nma-2019"
+              ],
+              "locator": "Fusco PubMed abstract and Imamura indexed abstract/results",
+              "verdict": "supported",
+              "note": "Retained narrow abstract-supported comparison only; not individual route choice or full-source clearance."
+            },
+            {
+              "claim": "Device-specific helical-trocar path and later mesh/pain outcomes",
+              "sourceIds": [],
+              "locator": "Technique and outcomes sections",
+              "verdict": "unresolved",
+              "note": "Generic useful technique preserved; current TVT-O/Monarc IFUs and detailed long-term sources not read."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain current TVT-O and Monarc IFUs and verify model-specific trocar/guide/cystoscopy instructions against the generic technique.",
+            "Read full long-term route and severe-ISD sources for durability and complex selection claims."
+          ],
+          "preservationReview": "No route, operative step, table, reference, linked procedure or practical pearl removed; corrected an unsafe optional-cystoscopy instruction and qualified conflicting route-safety evidence.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/full-length-sling-route-evidence-review.md",
+          "recordFile": "claim-batches/2026-09-20-full-length-sling-route-evidence.json",
+          "sources": [
+            {
+              "id": "tomus-2010",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2962585/",
+              "version": "Richter et al., NEJM 2010, DOI 10.1056/NEJMoa0912658",
+              "access": "relevant-sections",
+              "readScope": "Open primary main article: eligibility, design, procedures, endpoint definitions, Tables 1\u20132, figures and 12-month results, harms, discussion. Supplement not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "cochrane-mus",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6483329/",
+              "version": "Ford et al., Cochrane 2017, CD006375.pub4, search through June 2014",
+              "access": "relevant-sections",
+              "readScope": "Open full article abstract, Summary-of-Findings tables 1/3, route comparison results/discussion, limitations and practice conclusion; not all study-level appendices or forest plots.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "eau-online",
+              "url": "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+              "version": "EAU Non-neurogenic Female LUTS current online disease-management chapter, accessed 2026-09-20",
+              "access": "relevant-sections",
+              "readScope": "Direct current MUS evidence/recommendation section, including cystoscopy, route-specific harms and long-term counseling; not entire guideline.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "aua23-indexed",
+              "url": "https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf",
+              "version": "AUA/SUFU female SUI guideline 2023 unabridged",
+              "access": "indexed-excerpts",
+              "readScope": "Official indexed excerpt for intraoperative cystoscopy and fixed immobile urethra; direct PDF returned 403. Earlier scoped route check reused; no new full guideline read.",
+              "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+            },
+            {
+              "id": "schierlitz-isd",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/22270284/",
+              "version": "Schierlitz et al., Obstet Gynecol 2012 three-year ISD RCT follow-up",
+              "access": "abstract-only",
+              "readScope": "PubMed indexed abstract showing selected ISD population and repeat-surgery outcome; full paper not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nice-prior",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123, last updated 2019-06-24",
+              "access": "prior-review",
+              "readScope": "Transobturator selection restriction reused without repeating source review.",
+              "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+            },
+            {
+              "id": "imamura-nma-2019",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6549286/",
+              "version": "Imamura et al., BMJ 2019, DOI 10.1136/bmj.l1842",
+              "access": "abstract-only",
+              "readScope": "Accessible indexed abstract/results for relative near-12-month network ranking; publisher page returned 403 and full review was not reread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "fusco-meta-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28479203/",
+              "version": "Fusco et al., Eur Urol 2017, DOI 10.1016/j.eururo.2017.04.026",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract for broad MUS-versus-other-operation comparison; full article not read.",
+              "reusedFrom": ""
             }
           ],
           "reviewedAt": "2026-09-20"

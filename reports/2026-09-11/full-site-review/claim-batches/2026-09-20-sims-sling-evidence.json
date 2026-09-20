@@ -1,0 +1,108 @@
+{
+  "batchId": "2026-09-20-sims-sling-evidence",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "sims-hta",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK587586/",
+      "version": "NIHR Health Technology Assessment 2022;26(47), DOI 10.3310/BTSA6148",
+      "access": "relevant-sections",
+      "readScope": "Open 220-page PDF: scientific summary; chapter 2 methods, interventions and eligibility; chapter 3 baseline and operative data; chapter 4 primary outcome and Table 7/Figure 8; chapter 5 safety and Tables 13–14; discussion of safety/limitations. Not every appendix or full NEJM supplement read.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "cochrane-sims",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10604512/",
+      "version": "Carter et al., Cochrane 2023, CD008709.pub4, search through September 20 2022",
+      "access": "relevant-sections",
+      "readScope": "Full accessible article: abstract, Summary-of-Findings tables 2–3, discussion/applicability, certainty and practice conclusion; not every trial appendix or forest plot.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "zhou-2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40465798/",
+      "version": "Zhou et al., International Journal of Surgery 2025;111:5518–5534",
+      "access": "abstract-only",
+      "readScope": "PubMed abstract, including trial count, mean follow-up and reported pooled results. Ovid publisher full text returned payment/access error; methods tables and supplements not read.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "nice-aua-prior",
+      "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+      "version": "NICE NG123 (2019) and AUA/SUFU 2023 selection distinction",
+      "access": "prior-review",
+      "readScope": "Previously checked jurisdictional selection only; no repeat source read in this batch.",
+      "reusedFrom": "reports/2026-09-20/female-sling-route-guidance-review.md"
+    },
+    {
+      "id": "eau-online",
+      "url": "https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management",
+      "version": "EAU Non-neurogenic Female LUTS current online disease-management chapter, accessed 2026-09-20",
+      "access": "relevant-sections",
+      "readScope": "Direct current online midurethral sling summary/recommendation section, including intraoperative cystoscopy and device-specific follow-up limits; not complete EAU guideline.",
+      "reusedFrom": ""
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx",
+      "sourceSha256": "6a994015749bb57de72c84499870c61cd40a23cdb43b43230219dc2a8789b453",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Entire current MDX before and after edits, including selection, generic technique, outcome table, references, links and VideoCards entry; the external video itself was not watched.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "SIMS trial index-population exclusions and prior NICE/AUA selection distinction checked; severe SUI/ISD selection claims pending",
+        "treatment": "Trial noninferiority limited to Ajust/Altis and selected population; Cochrane route comparison checked",
+        "numbers": "Randomization, exclusions, patient-reported endpoints, dyspareunia, exposure, retreatment and early-recovery numbers checked to HTA tables; Zhou only abstract-level",
+        "doseDeviceSafety": "Ajust/Altis trial methods and EAU intraoperative cystoscopy recommendation checked; model-specific current package IFUs and availability pending",
+        "anatomyTechnique": "Generic steps matched to HTA chapter 2; cystoscopy added from HTA/EAU; named-device IFU and video details pending",
+        "followUp": "Three-year trial and longer-term Cochrane uncertainty checked; device-specific later durability pending",
+        "importedDataFigures": "No imported clinical dataset or figure; inline table read, external video listed but not viewed",
+        "references": "SIMS HTA relevant chapters, Cochrane relevant full-text sections and Zhou abstract checked; other references and supplements pending",
+        "currency": "2023 Cochrane and 2025 meta abstract considered; current device versions/IFUs and newer long-term results pending"
+      },
+      "claimChecks": [
+        {
+          "claim": "SIMS sample and noninferior patient-reported success through three years",
+          "sourceIds": ["sims-hta"],
+          "locator": "Scientific summary; chapter 4 Table 7 and Figure 8; chapter 2 eligible devices/population",
+          "verdict": "corrected",
+          "note": "600 randomized, 596 included after exclusions; 79% vs 76% at 15 months and 72% vs 67% at 36 months with prespecified 10% margin, limited to studied devices and selected women."
+        },
+        {
+          "claim": "Dyspareunia, mesh exposure and further SUI surgery in the SIMS trial",
+          "sourceIds": ["sims-hta"],
+          "locator": "Chapter 3 baseline sexual symptoms; chapter 5 Tables 13–14 and safety discussion",
+          "verdict": "corrected",
+          "note": "Added denominators and baseline dyspareunia imbalance; exposure difference was nonsignificant; retreatment rates are descriptive."
+        },
+        {
+          "claim": "Pooled 12-month cure and safety/early-recovery generalization",
+          "sourceIds": ["cochrane-sims", "zhou-2025", "sims-hta"],
+          "locator": "Cochrane Summary-of-Findings 2–3 and applicability; Zhou abstract; HTA operative Table 12 and safety discussion",
+          "verdict": "corrected",
+          "note": "Distinguished trial noninferiority from a nonsignificant meta-analytic difference; retained pooled organ-injury signal with comparator/rarity caveat; early pain/stay not generalized to proven earlier normal activities."
+        },
+        {
+          "claim": "Generic operative steps and device-specific anchoring/tensioning",
+          "sourceIds": ["sims-hta", "eau-online"],
+          "locator": "HTA chapter 2 adjustable anchored SIMS intervention steps; EAU MUS recommendation for intraoperative cystoscopy",
+          "verdict": "unresolved",
+          "note": "Generic sequence retained and tied to Ajust/Altis trial methods; cystoscopy added. Current product IFUs and named Solyx video/device details still need direct review."
+        }
+      ],
+      "unresolvedClaims": [
+        "Obtain current named-device IFUs and availability for Ajust, Altis and Solyx; reconcile any device-specific anchor/tensioning differences with the generic technique and video.",
+        "Obtain full Zhou 2025 meta-analysis and supplements through a legitimate route for study selection, device mix, organ-injury counts and risk-of-bias appraisal; publisher access was blocked.",
+        "Check severe SUI/ISD, complex recurrent SUI and long-term device-specific selection claims against their primary source package."
+      ],
+      "preservationReview": "No indication heading, operative step, table, reference, link, pearl or VideoCards entry removed; wording and source scope narrowed while preserving teaching.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/sims-sling-evidence-review.md"
+    }
+  ]
+}
