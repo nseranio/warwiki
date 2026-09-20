@@ -1,0 +1,139 @@
+{
+  "batchId": "2026-09-20-pop-pessaries",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "iuc-pessary-2025",
+      "url": "https://www.iuga.org/images/content/IUJ/IUJ_IUC_Chapter_3.1_3.2_3.3.pdf",
+      "version": "IUC Chapter 3 Committee 1 Pessary Management, 2025 official combined PDF",
+      "access": "relevant-sections",
+      "readScope": "Pessary chapter abstract and fitting, type, continuation, symptom, complication and maintenance sections in PDF pp 0–11; not the separate PFMT/lifestyle chapters or all cited original studies.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "nice-ng123-current",
+      "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+      "version": "Current NICE NG123 recommendations accessed 2026-09-20",
+      "access": "relevant-sections",
+      "readScope": "POP conservative care and pessary recommendations 1.7.5–1.7.9, including PFMT, fitting, estrogen, removal and at-risk clinic follow-up.",
+      "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+    },
+    {
+      "id": "people-2022",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9857016/",
+      "version": "van der Vaart et al., JAMA 2022 PEOPLE, DOI 10.1001/jama.2022.22385",
+      "access": "prior-review",
+      "readScope": "Reused documented full main, three tables and two actual figures; four supplement downloads were HTML challenges and remain unread.",
+      "reusedFrom": "reports/2026-09-12/prolapse-source-reading/pop-overview-sources.md"
+    },
+    {
+      "id": "topsy-2023",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK603983/",
+      "version": "TOPSY NIHR 2024 scientific summary of 2023 randomized trial",
+      "access": "relevant-sections",
+      "readScope": "Scientific summary objective, methods, randomized counts, primary PFIQ-7 finding, process/adherence results and implications; complete original eClinicalMedicine main/tables not reread.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "zhou-2025",
+      "url": "https://www.bmj.com/content/389/bmj-2025-084418",
+      "version": "Zhou et al., BMJ 2025, DOI 10.1136/bmj-2025-084418",
+      "access": "prior-review",
+      "readScope": "Reused documented full main and relevant tables, population and primary/secondary outcomes; not a new full-paper read in this batch.",
+      "reusedFrom": "reports/2026-09-12/prolapse-source-reading/principles.md"
+    },
+    {
+      "id": "cochrane-pessary-2020",
+      "url": "https://www.cochrane.org/evidence/CD004010_pessaries-mechanical-devices-managing-pelvic-organ-prolapse-women",
+      "version": "Cochrane CD004010.pub4, 2020",
+      "access": "relevant-sections",
+      "readScope": "Official public summary and abstract for PFMT-combination effect; complete main tables/plots not reopened.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "topsy-four-year-2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40832737/",
+      "version": "TOPSY four-year follow-up, 2025",
+      "access": "indexed-excerpts",
+      "readScope": "Follow-up publication identity and selected abstract result excerpt identified for currency; complete abstract, main and tables not adjudicated or used for the page.",
+      "reusedFrom": ""
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/prolapse-pessaries.mdx",
+      "sourceSha256": "d5d6df5fba523bf0bd696e5c98589307156bb0ea9a5e5d54cb5466c78833dde0",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX before/after edit, device/outcome/follow-up tables, complications, special populations, 12 inherited references and two video listings; no imported data or figures; videos not played.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Symptom/patient-goal selection checked against NICE/IUC; device fitting considerations partly source-checked",
+        "treatment": "NICE PFMT/pessary/surgery choice and estrogen role checked; uncommon devices/special populations pending",
+        "numbers": "IUC fitting range, PEOPLE denominators and TOPSY primary result checked; inherited meta-analysis, symptom and complication rates pending",
+        "doseDeviceSafety": "NICE six-month removal and at-risk clinic follow-up checked; specific device materials and cleaning/IFUs pending",
+        "anatomyTechnique": "Ring-to-space-filling practical selection read and supported at IUC scope; individual fitting technique/device claims pending",
+        "followUp": "NICE/IUC intervals checked and corrected; TOPSY four-year findings and tailored schedules pending",
+        "importedDataFigures": "No imported clinical dataset or figure; inline tables read, videos listed but not played",
+        "references": "IUC/NICE/TOPSY relevant primary text; prior full PEOPLE/Zhou readings attributed; remaining inherited originals pending",
+        "currency": "Current NICE and IUC plus 2025 estrogen RCT checked; TOPSY four-year follow-up identified but not fully adjudicated"
+      },
+      "claimChecks": [
+        {
+          "claim": "Pessary as an option and stage 1–2 PFMT pathway, without mandatory pessary trial",
+          "sourceIds": ["nice-ng123-current", "iuc-pessary-2025"],
+          "locator": "NICE 1.7.5–1.7.8; IUC PDF pp 0–1 introduction/abstract",
+          "verdict": "corrected",
+          "note": "Removed universal first-line and required-before-surgery implication while preserving pessary as useful nonsurgical treatment."
+        },
+        {
+          "claim": "Universal 92% fitting and stage-specific 100%/71%/64% rates",
+          "sourceIds": ["iuc-pessary-2025"],
+          "locator": "IUC PDF abstract p 0 and fitting section/table pp 4–5",
+          "verdict": "corrected",
+          "note": "Replaced with 41–96.6% heterogeneous range and distinguished fit, persistence and symptom benefit; ring/Gellhorn practical advice retained."
+        },
+        {
+          "claim": "PEOPLE randomized/response/crossover denominators and noninferiority",
+          "sourceIds": ["people-2022"],
+          "locator": "Prior full-main/table/figure review; JAMA 2022 results and patient-flow data",
+          "verdict": "corrected",
+          "note": "440 randomized, one excluded; 118/218 crossover, 74/173 remaining among primary responders; no generalized 24–49% discontinuation rate."
+        },
+        {
+          "claim": "Fixed ACOG maintenance intervals, self-management benefit and universal estrogen continuation effect",
+          "sourceIds": ["nice-ng123-current", "iuc-pessary-2025", "topsy-2023", "zhou-2025"],
+          "locator": "NICE 1.7.8–1.7.9; IUC follow-up section p 7; TOPSY scientific summary results/synthesis; Zhou primary and adverse-event tables in prior review",
+          "verdict": "corrected",
+          "note": "Six-month removal versus clinician visit distinguished; TOPSY no clear PFIQ-7 superiority; estrogen for menopausal symptoms, not established continuation benefit."
+        },
+        {
+          "claim": "PFMT combination and neglected-pessary severe complications",
+          "sourceIds": ["cochrane-pessary-2020", "iuc-pessary-2025"],
+          "locator": "Official Cochrane summary; IUC abstract and complications section",
+          "verdict": "supported",
+          "note": "Retained PFMT combination and rare-complication teaching; changed almost-exclusively to usually."
+        },
+        {
+          "claim": "Other inherited efficacy, complications, older-adult, device and emerging-design claims",
+          "sourceIds": [],
+          "locator": "Efficacy, complications, special populations and emerging innovations sections",
+          "verdict": "unresolved",
+          "note": "Useful material preserved pending source-specific checks; not newly cleared."
+        }
+      ],
+      "unresolvedClaims": [
+        "Read Sansone 2022 and Mendes 2021 main/tables for QoL and anatomy endpoints; compare symptom percentages with IUC original-study scope.",
+        "Check complication percentages, Gold 2021 older-adult cohort and ACOG 214 pregnancy/maintenance wording against original sources.",
+        "Check device-specific materials, fitting/cleaning instructions and emerging-design claims using relevant IFUs/primary reports; watch the listed videos before claiming video-source review.",
+        "Read TOPSY four-year main/tables before any long-term self-management inference."
+      ],
+      "preservationReview": "No section, device/outcome/follow-up table, operative fitting advice, inherited reference, related link or video removed. Removed only unsupported universal percentages and generic discontinuation estimate; corrected the schedule and estrogen claims narrowly.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/pop-pessary-review.md"
+    }
+  ]
+}
