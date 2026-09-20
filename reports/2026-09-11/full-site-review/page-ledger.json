@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 739,
+    "fullTextReadForCurrentContent": 740,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 442,
-      "updated": 710
+      "unreviewed": 441,
+      "updated": 711
     }
   },
   "pages": [
@@ -7939,11 +7939,24 @@
       "title": "IGAP / SGAP / Gluteal-Fold Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "642315d0a54b08accbd22ba19c7888203cfeee529471e4d6bc3dfa8532372078",
-      "reviewRecords": []
+      "sourceSha256": "242ef6167d42938017bfa99ee27a168cd025dcfdec08e32b1e9682dedf85d6e5",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. PubMed abstract/record reading of Ahmadzadeh et al. 2007 and Hainsworth et al. 2012. Accessible full-text reading of Chrelias et al. 2023 main article; its supplementary videos were not read.",
+          "changes": "Rebuilt the page as a bounded anatomy and reconstructive-context overview; removed detailed anatomy measurements, operative steps, outcome tables, cross-flap comparisons, randomized-trial interpretation, decision algorithms, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/18040187/",
+            "https://pubmed.ncbi.nlm.nih.gov/22231559/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10299709/"
+          ],
+          "unresolved": "The inherited SGAP, IGAP, gluteal-fold, turnover, breast-reconstruction, pressure-injury, vulvar, and comparative source packages were not fully reviewed. The Chrelias supplementary videos were not read. No clinical clearance or flap-selection recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/igap-gluteal-fold-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/ipap.mdx",
