@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 751,
+    "fullTextReadForCurrentContent": 752,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 430,
-      "updated": 722
+      "unreviewed": 429,
+      "updated": 723
     }
   },
   "pages": [
@@ -8467,11 +8467,24 @@
       "title": "Superficial Circumflex Iliac Artery Perforator (SCIP) Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "08772dabe65bcfe159a9c9367afee684d94c9e5ab0618a37e380de13a40b0772",
-      "reviewRecords": []
+      "sourceSha256": "d23668c58daad54f4d102a48f73f33e6ffa84ca9a63f18c6a2a4269d56e02ef7",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Scaglioni et al. 2022 and Gentileschi et al. 2022; De Gelder et al. 2025 record accessed, with PMC full text blocked and no abstract available.",
+          "changes": "Rebuilt the broad operative overview as a bounded reported-use orientation; removed unverified anatomy, imaging, technical, outcome, comparison, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/35730684/",
+            "https://pubmed.ncbi.nlm.nih.gov/34866009/",
+            "https://pubmed.ncbi.nlm.nih.gov/39465658/"
+          ],
+          "unresolved": "Inherited anatomy, phalloplasty, genital, vulvar, fistula, lymphatic, donor-site, technical-variant, and comparative source packages were not fully reviewed. No clinical clearance or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/scip-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/singapore-pudendal-thigh.mdx",
