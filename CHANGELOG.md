@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-eighth continuation: EPAP hemi-scrotal flap evidence boundaries
+
+Rebuilt EPAP hemi-scrotal flap as a one-case feasibility overview with separate cadaveric anatomy context. Removed unsupported protocol, superiority, comparative, and sensory/functional-prediction claims. The [recovery record](reports/2026-09-19/epap-hemi-scrotal-flap-recovery-review.md) records the full-text and replication gaps.
+
+Ledger: 688 full current MDX reads and 660 scoped updates of 1,186 files; 21 checked, 12 unresolved and 493 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-seventh continuation: defibulation evidence boundaries
 
 Rebuilt defibulation around the current WHO conditional recommendation, flexible pregnancy-timing guidance, counselling requirements, and no-reinfibulation boundary. Removed unsupported universal timing, anaesthesia, technique, outcome, and psychosocial rules. The [recovery record](reports/2026-09-19/defibulation-recovery-review.md) preserves exact source access and gaps.
