@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 760,
+    "fullTextReadForCurrentContent": 761,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 421,
-      "updated": 731
+      "unreviewed": 420,
+      "updated": 732
     }
   },
   "pages": [
@@ -8690,11 +8690,24 @@
       "title": "Flaps in GU Reconstruction",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e4f85ead4b09fac15ec0f9acad4929dd6b52b62eb75dde7820e69ac7b6512940",
-      "reviewRecords": []
+      "sourceSha256": "474212a96a02b1cc6337e3d788d21c42de4795c75339d9dc5a8cd1cfa9c77d3d",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract reading for Saint-Cyr et al. 2009, Joshi et al. 2022, and Alammar et al. 2026.",
+          "changes": "Rebuilt the detailed flap-design and selection guide as a bounded navigation overview; removed unverified anatomy, dimensions, technique, outcome, comparison, and treatment-selection claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/20009839/",
+            "https://pubmed.ncbi.nlm.nih.gov/35931429/",
+            "https://pubmed.ncbi.nlm.nih.gov/41720016/"
+          ],
+          "unresolved": "The inherited flap anatomy, random-pattern physiology, delay, pharmacologic adjunct, urethral, VUAS, fistula, genital-coverage, and vulvovaginal source packages were not fully reviewed. No clinical clearance, flap-selection recommendation, or operative standard is asserted.",
+          "recordFile": "reports/2026-09-20/flaps-gu-reconstruction-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/grafts/bladder-mucosa.mdx",
