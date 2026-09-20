@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — McCall culdoplasty trial identity and outcome scope
+
+Corrected the Menefee citation from SUPeR five-year McCall counseling to its actual ASPIRe post-hysterectomy, 36-month composite endpoint, which did not study McCall. Replaced cross-study apical recurrence rankings with source-specific prophylactic and observational comparisons; clarified hysterectomy route, advanced-prolapse subgroup and cystoscopic ureteral safety. Retained operative variants, both videos, all inherited references and related links, and added original technical/randomized sources. The [source/access review](reports/2026-09-20/mccall-culdoplasty-review.md) records full-text and operative-source gaps; this is a partial audit, not clinical clearance. The preceding [posterior release](reports/2026-09-20/posterior-colporrhaphy-publication.json) passed CI but is not live because Vercel rate-limited deployment.
+
+---
+
 ## 2026-09-20 — Posterior colporrhaphy outcome and mesh-context corrections
 
 Reconciled route-comparison effect direction and endpoint denominators, Paraiso trial arms, the Swedish posterior subgroup, dyspareunia populations and nonrandomized STARR/LVMR comparisons. Kept operative variants, both videos, all 20 references and related links. The historical recurrent-rectocele mesh cohort is now clearly separated from the current US transvaginal POP mesh stop-sale. The [source/access review](reports/2026-09-20/posterior-colporrhaphy-review.md) records remaining original full texts, guidance and operative-source work; clinical review remains partial. The preceding [perineorrhaphy release](reports/2026-09-20/perineorrhaphy-publication.json) passed exact CI/Vercel/live-body verification and brought the earlier POP atlas/lifestyle pages live.
