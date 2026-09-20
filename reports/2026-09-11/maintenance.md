@@ -19,6 +19,8 @@ GitHub schedules can be delayed and public-repository schedules are disabled aft
 
 ## Evidence review sequence
 
+**September 20 content-preservation correction:** Follow the [editorial policy](../2026-09-20/content-preservation-policy.md). High-impact study screening governs new treatment updates; manufacturer instructions, anatomy references, technical papers and established operative teaching remain valuable. Preserve useful existing content while source checks are pending. Correct particular errors rather than replacing pages with audit notices.
+
 **Current review priority:** audit the entire site, with a page-by-page log of errors, source currency and unresolved items. Prioritize major guidelines, large trials, Cochrane reviews and findings likely to change practice. Isolated small studies should not drive routine updates without meaningful context. The seven-topic collector supports this work but does not establish complete coverage of every page.
 
 1. Establish the last actual clinical update from the changelog and scoped `evidenceUpdated` notes; Git edit times and handoff saves are not clinical reviews.

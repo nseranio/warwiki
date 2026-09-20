@@ -1,0 +1,7 @@
+# Lone Star restoration — September 20, 2026
+
+The original and restored page were read completely. Replaced the audit/removal notice with components, model-specific dimensions, stay options, manufacturer setup sequence, reconstructive applications, practical handling, related instruments, the existing fistula teaching video and seven directly relevant references.
+
+Specific corrections: a hooked tissue end and elastic lead rather than hooks at both ends; actual gynecology/colorectal-kit distinction rather than a universal 14.1 cm vaginal frame; no invented light/medium/heavy stay classification; no absolute atraumatic or no-pull-through claim; disposable IFU distinguished from historical reusable models; APS document dated by its 2012 revision rather than its 2026 upload folder; Tranchart's rare colorectal signal retained without extrapolating a GU incidence or claiming blunt hooks prevent tumor implantation.
+
+Exact source coverage, versions, incomplete access and all eight inherited references are preserved in [the JSON record](lone-star-restoration.json). The complete English IFU and its setup drawings were read; manufacturer technical information is valid support for these facts without a clinical trial. Only relevant sections of the posterior urethroplasty review were read, and the Tranchart full text was unavailable. This is a scoped device-page correction and restoration, not whole-site clinical clearance.

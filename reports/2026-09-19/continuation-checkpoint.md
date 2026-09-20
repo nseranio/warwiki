@@ -1,5 +1,7 @@
 # Efficient continuation checkpoint — September 19, 2026
 
+**Superseded continuation state:** The [September 20 recovery record](../2026-09-20/content-restoration-release.md) and [content-preservation policy](../2026-09-20/content-preservation-policy.md) take precedence. Subsequent blanket removals were reversed; do not resume that approach. The snapshot below is historical.
+
 ## Verified repository state
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.

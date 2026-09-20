@@ -7,9 +7,14 @@ Paste the text below into a fresh Codex task in the WARWIKI project. Suggested s
 Continue WARWIKI in `/Users/joyboy/Documents/WARWIKI/warwiki`. Complete the ongoing whole-site clinical reliability and technical optimization audit while minimizing duplicated work and token use. Implement changes; do not merely propose them.
 
 **Resume efficiently**
-- Follow current `AGENTS.md`. Read `reports/2026-09-19/continuation-checkpoint.md`, then the current sections of `RESUME-HERE.md` and the completion criteria in `reports/2026-09-12/completion-plan.md`. Check Git status before editing. Open older reports only when relevant to the selected pages.
+- Follow current `AGENTS.md`. Read the current sections of `RESUME-HERE.md` and `reports/2026-09-20/content-restoration-release.md` and the completion criteria in `reports/2026-09-12/completion-plan.md`. Check Git status before editing. Open older reports only when relevant to the selected pages.
 - Use the existing page ledger and source records. Do not restart the audit, load the entire conversation/changelog, or reread already-reviewed unchanged sources without a specific reason. Verify page hashes; attribute reused reviews instead of claiming new personal reads.
-- Work on a coherent batch of roughly 3–5 related pages, fewer for complex source packages. Start with unfinished hysteropexy, Manchester-Fothergill and barbed-suture work. The entire-site objective remains open after each batch.
+- Work on a coherent batch of roughly 3–5 related pages, fewer for complex source packages. Select the next unfinished coherent batch from the current ledger; September 20 restoration supersedes the previous destructive audit. The entire-site objective remains open after each batch.
+
+**Preserve useful content**
+- Follow `reports/2026-09-20/content-preservation-policy.md`. Manufacturer IFUs/catalogs support device facts and use; anatomy texts, technical papers, operative videos and established teaching support anatomy and technique. RCTs are not required for these descriptions.
+- Preserve practical details, references and media. Unfinished review or inaccessible full text does not make existing content false. Correct or qualify specific problematic claims; never replace a substantive page with an audit/removal notice. Keep source gaps in internal records.
+- Inspect the diff for accidental content loss before publishing. Do not improve audit counts by deleting the material that still needs review.
 
 **Preserve clinical standards**
 - Fully read each selected page, including references and clinical data imported by components. Prioritize major guidelines, large trials, Cochrane reviews, systematic reviews and practice-changing evidence.

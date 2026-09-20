@@ -1,5 +1,7 @@
 # Complete the whole-site review
 
+**September 20 correction:** Follow the [content-preservation policy](../2026-09-20/content-preservation-policy.md) and [current recovery record](../2026-09-20/content-restoration-release.md). Prioritize trials for practice-changing treatment evidence, not as a prerequisite for anatomy, manufacturer specifications or operative teaching. Preserve useful existing material while source checks continue; no audit-notice substitutes for substantive pages.
+
 The user explicitly requested completion after the previous release stopped at 121 full-text reads. A publication batch is not completion of this task. Continue through context compactions and successful deployments until the remaining source-reading and substantive review queues have been worked through.
 
 ## Completion criteria

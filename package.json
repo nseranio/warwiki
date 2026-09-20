@@ -29,7 +29,7 @@
     "lint:figures": "node scripts/check-figure-captions.js",
     "lint:freshness": "node scripts/check-freshness.js",
     "lint:external-links": "node scripts/check-external-links.js",
-    "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans && npm run lint:links && npm run lint:figures && npm run lint:density && npm run lint:evidence",
+    "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans && npm run lint:links && npm run lint:figures && npm run lint:density && npm run lint:evidence && npm run lint:content-preservation",
     "status": "node scripts/gen-status.js",
     "videos:fetch": "node scripts/fetch-youtube-playlists.js",
     "videos:build": "node scripts/build-videos-registry.js",
@@ -42,7 +42,8 @@
     "lint:evidence": "node scripts/check-evidence.js",
     "lint:image-inputs": "node scripts/check-source-image-formats.js",
     "audit:references": "node scripts/audit-references.js",
-    "media:review": "node scripts/media-review-queue.js"
+    "media:review": "node scripts/media-review-queue.js",
+    "lint:content-preservation": "node scripts/check-content-preservation.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

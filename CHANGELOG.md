@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+
+## 2026-09-20 — Restore useful content removed by the audit
+
+Recovered 141 pages affected by blanket evidence-audit reductions: 120 content restorations with targeted correction carry-forward, 16 manufacturer-supported retractor pages, and five selective operative/suture restorations. Lone Star again includes configurations, setup, applications, practical handling, references and its fistula teaching video. Preserved established factual corrections instead of undoing the entire audit.
+
+Added a content-preservation policy and regression check. Manufacturer IFUs, anatomy references, technical papers and established teaching remain valid for the claims they support; unfinished source review is not a reason to empty a page. Restorations are recorded separately from clinical verification. See the [recovery release record](reports/2026-09-20/content-restoration-release.md) for the exact scope and validation. Older entries describing blanket removal are historical, not instructions to repeat that approach.
+
+---
+
 ## 2026-09-19 — Forty-first continuation: genitourinary VCA evidence boundaries
 
 Rebuilt GUVCA as a rare-investigational overview anchored to directly reported case observations and the historical 2023 review count. Removed unsupported operative protocol, immunosuppression, global-case, comparative, and functional-prediction claims. The [recovery record](reports/2026-09-19/genitourinary-vca-recovery-review.md) preserves incomplete correspondence and registry access.

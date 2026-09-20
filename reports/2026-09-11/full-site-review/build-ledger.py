@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 inventory=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./scripts/audit-content').inventory()))"],cwd=ROOT))
 records={}
-for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json','surgical-rest.json','surgical-bladder.json','surgical-diversion.json','surgical-genital.json','special-populations.json','evaluation.json','foundations-rest.json','radiation-effects.json','bowel-principles.json','access-closure.json','vascular-exposure.json','flap-principles.json','pelvic-support-anatomy.json','resources-history.json','site-data.json','tools.json','surgical-fistula.json','surgical-incontinence.json','perioperative-care.json']:
+for name in ['clinical-conditions.json','urethral-upper-tract.json','pharmacology.json','root-reviewed-pages.json','surgical-rest.json','surgical-bladder.json','surgical-diversion.json','surgical-genital.json','special-populations.json','evaluation.json','foundations-rest.json','radiation-effects.json','bowel-principles.json','access-closure.json','vascular-exposure.json','flap-principles.json','pelvic-support-anatomy.json','resources-history.json','site-data.json','tools.json','surgical-fistula.json','surgical-incontinence.json','perioperative-care.json','post-checkpoint-reviews.json','content-restoration.json']:
  p=HERE/name
  if not p.exists():continue
  report=json.loads(p.read_text())
@@ -20,13 +20,15 @@ for page in inventory['articles']:
  def read(c):return c.get('fullTextRead') is True or c.get('readScope','').lower().startswith('full mdx text')
  full=any(read(c) for c in current)
  status='unreviewed'
- if current:
+ if any(c.get('editorialRestoration') is True for c in current):
+  status='restored-pending-review'
+ elif current:
   status='updated' if any(c.get('status')=='updated' for c in current) else 'checked' if full and any(c.get('status')=='checked' for c in current) else 'unresolved'
  elif any(c.get('sourceSha256') for c in checks):status='changed-since-review'
  elif checks:status='unresolved' if any(c.get('status')=='unresolved' for c in checks) else 'unreviewed'
  pages.append({'file':file,'title':page['title'],'section':page['section'],'kind':page['kind'],'status':status,'fullTextReadForCurrentContent':full,'clinicalVerificationComplete':any(c.get('clinicalVerificationComplete') is True for c in current),'sourceSha256':sha,'reviewRecords':checks})
 summary={'pages':len(pages),'fullTextReadForCurrentContent':sum(p['fullTextReadForCurrentContent'] for p in pages),'clinicalVerificationComplete':sum(p['clinicalVerificationComplete'] for p in pages),'statusCounts':{s:sum(p['status']==s for p in pages) for s in sorted({p['status'] for p in pages})}}
-result={'generatedAt':datetime.now(timezone.utc).isoformat(),'methodology':'Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.','summary':summary,'pages':pages}
+result={'generatedAt':datetime.now(timezone.utc).isoformat(),'methodology':'Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.','summary':summary,'pages':pages}
 (HERE/'page-ledger.json').write_text(json.dumps(result,indent=2)+'\n')
 lines=['# Whole-site page review','',result['methodology'],'',f"Current snapshot: {summary['pages']} pages; {summary['fullTextReadForCurrentContent']} with full-text reading recorded against current content; {summary['clinicalVerificationComplete']} fully clinically verified.",'','| Section | Pages | Full text read | Updated | Unreviewed |','|---|---:|---:|---:|---:|']
 for sec in sorted({p['section'] for p in pages}):
