@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 763,
+    "fullTextReadForCurrentContent": 764,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 418,
-      "updated": 734
+      "unreviewed": 417,
+      "updated": 735
     }
   },
   "pages": [
@@ -10236,11 +10236,23 @@
       "title": "Reconstructive Ladder",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "d900f6658f7afb992a59794ca757e5c9594b2f8b1291c19c990d84dac8453702",
-      "reviewRecords": []
+      "sourceSha256": "febbec6a0bd7b5e82f16ec85ccedaba0c7e318236f518cd2d3b1c3232f607f35",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed record scope for Gottlieb and Krieger 1994. Search-result abstract scope for Simman 2009; direct PMC retrieval was blocked by a download challenge.",
+          "changes": "Rebuilt the detailed wound-management and technique ladder as a bounded conceptual overview; removed unverified rung rules, timing, outcomes, product examples, anatomy, and regenerative-treatment claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/8208526/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3478906/"
+          ],
+          "unresolved": "The Simman full text could not be accessed beyond the search-result abstract, and inherited wound-care, NPWT, graft, flap, free-tissue, Fournier's, and regenerative source packages were not fully reviewed. No clinical clearance, wound-care protocol, or reconstructive-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/reconstructive-ladder-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/reoperative-bowel-harvest.mdx",
