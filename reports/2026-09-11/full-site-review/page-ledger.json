@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 715,
+    "fullTextReadForCurrentContent": 716,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 466,
-      "updated": 687
+      "unreviewed": 465,
+      "updated": 688
     }
   },
   "pages": [
@@ -226,11 +226,24 @@
       "title": "The Vulva",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "d3634ec8cf50470874da447e3287284b00e14aa9a9900d4a45fdc1876bb03ed4",
-      "reviewRecords": []
+      "sourceSha256": "7d109577688fe89d9149863397b6bff7ffdaba2030ea1b3258ec3a44920a2f1d",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Accessible NCBI Bookshelf text for Female External Genitalia, Gynecologic Pelvic Examination, and Vulvar-Vaginal Reconstruction anatomy was read; inherited disease, oncologic, obstetric, pain, and reconstruction source packages were not fully reviewed.",
+          "changes": "Rebuilt a detailed clinical and operative guide as a bounded vulvar anatomy overview; removed measurements, surgical steps, disease and treatment claims, outcome claims, and management recommendations.",
+          "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK547703/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK534223/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK568772/"
+          ],
+          "unresolved": "No full-source review of inherited vulvar surgical, dermatologic, oncologic, FGM/C, gender-affirming, obstetric, fistula, infection, or pain-management claims. No clinical verification or management recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/vulva-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/penis-anatomy-physiology.mdx",
