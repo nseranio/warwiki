@@ -6,9 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Posterior enterocele technique source-scope correction
+
+Halban and Moschcowitz pages retain practical operative teaching while distinguishing classic closure from modified apical colpopexy, the three-arm vaginal-hysterectomy trial from untested Halban, and combined sacrocolpopexy results from an isolated closure effect. Corrected the Baessler follow-up denominator, unsupported fixed suture count, rectal-prolapse replacement claim and procedure-specific harm attribution. The [two-page review](reports/2026-09-20/posterior-enterocele-techniques-review.md) records exact source access and remaining operative/full-text checks. Both reviews are partial, not clinical clearance. The preceding [McCall release](reports/2026-09-20/mccall-culdoplasty-publication.json) passed exact-commit CI/Vercel/live-body checks and carried the earlier rate-limited posterior-colporrhaphy change live.
+
+---
+
 ## 2026-09-20 — McCall culdoplasty trial identity and outcome scope
 
-Corrected the Menefee citation from SUPeR five-year McCall counseling to its actual ASPIRe post-hysterectomy, 36-month composite endpoint, which did not study McCall. Replaced cross-study apical recurrence rankings with source-specific prophylactic and observational comparisons; clarified hysterectomy route, advanced-prolapse subgroup and cystoscopic ureteral safety. Retained operative variants, both videos, all inherited references and related links, and added original technical/randomized sources. The [source/access review](reports/2026-09-20/mccall-culdoplasty-review.md) records full-text and operative-source gaps; this is a partial audit, not clinical clearance. The preceding [posterior release](reports/2026-09-20/posterior-colporrhaphy-publication.json) passed CI but is not live because Vercel rate-limited deployment.
+Corrected the Menefee citation from SUPeR five-year McCall counseling to its actual ASPIRe post-hysterectomy, 36-month composite endpoint, which did not study McCall. Replaced cross-study apical recurrence rankings with source-specific prophylactic and observational comparisons; clarified hysterectomy route, advanced-prolapse subgroup and cystoscopic ureteral safety. Retained operative variants, both videos, all inherited references and related links, and added original technical/randomized sources. The [source/access review](reports/2026-09-20/mccall-culdoplasty-review.md) records full-text and operative-source gaps; this is a partial audit, not clinical clearance. The [publication record](reports/2026-09-20/mccall-culdoplasty-publication.json) documents successful hosted verification and live carry-forward of the earlier rate-limited posterior release.
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-20T16:38:00Z",
+  "checkedAt": "2026-09-20T16:49:10Z",
   "contentCommit": "ba0a606f65061ccefdd264073ef331d00da1c52a",
   "scope": "Posterior colporrhaphy source-scope correction; local validations passed and clinical audit remains partial.",
   "githubCI": {
@@ -11,18 +11,19 @@
   },
   "vercel": {
     "context": "Vercel",
-    "state": "failure",
-    "description": "Deployment rate limited — retry in 24 hours.",
-    "targetUrl": "https://vercel.com/nseranios-projects?upgradeToPro=build-rate-limit"
+    "state": "carried-by-later-success",
+    "description": "Original ba0a606f deployment was rate-limited; the later cdfe1943 deployment completed and includes this page.",
+    "targetUrl": "https://vercel.com/nseranios-projects/warwiki/Ez4SioWWEwamYWdQ8o9Rwwg8UBYG",
+    "carryingCommit": "cdfe1943723bfa966a7238295ef05446dfea6665"
   },
   "liveVerification": {
-    "status": "not-matched-not-deployed",
+    "status": "matched-on-later-release",
     "route": "/docs/surgical-techniques/04g-prolapse-repair/posterior-colporrhaphy",
     "method": "Production and validated local article text were whitespace-normalized and SHA256-compared, excluding the last-updated footer.",
     "localArticleTextSha256": "f8be378f9d8614eb01ba8a46c337dd1a82067821d0bd9ef0bec79d336a86df92",
-    "productionArticleTextSha256": "61ec072f9fa3bdc3ec83fae103702e04efeecebe026e07afbaa2825fd81f2e52"
+    "productionArticleTextSha256": "f8be378f9d8614eb01ba8a46c337dd1a82067821d0bd9ef0bec79d336a86df92"
   },
-  "nextCheck": "Recheck after the Vercel build-rate window resets or after a later successful deployment; match this page's exact article body before clearing hosted verification.",
+  "nextCheck": "No pending hosted check for this page; continue its explicitly unresolved clinical source packages separately.",
   "clinicalClearance": false,
   "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
 }
