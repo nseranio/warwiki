@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 711,
+    "fullTextReadForCurrentContent": 712,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 470,
-      "updated": 683
+      "unreviewed": 469,
+      "updated": 684
     }
   },
   "pages": [
@@ -42,11 +42,24 @@
       "title": "Bowel Anatomy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a7c32131484126f3066622ca0df774c3b1f10244a40477b97cf15fbd50923735",
-      "reviewRecords": []
+      "sourceSha256": "0ea77f8ba526041e9ffeaa9f8d0d29b750040413067270e440bdb5bf23ebe80d",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Full accessible NCBI Bookshelf main-text reading for Physiology, Small Bowel (2024) and Intestinal Stoma anatomy/physiology; accessible full-text retrieval for Vasdev et al. was blocked by PMC challenge, so its search-record scope is not treated as a full-source read.",
+          "changes": "Rebuilt a detailed procedural and metabolic guide as a bounded bowel anatomy and physiology orientation; removed segment lengths, operative steps, numeric risks, surveillance schedules, and management recommendations.",
+          "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK532263/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK565910/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3822347/"
+          ],
+          "unresolved": "The urinary-diversion review could not be opened beyond its indexed record, and inherited primary procedure, metabolic, surveillance, and complication source packages were not fully reviewed. No clinical verification or management recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/bowel-anatomy-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/donor-sites/leg-thigh.mdx",
