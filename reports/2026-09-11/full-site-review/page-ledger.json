@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 718,
+    "fullTextReadForCurrentContent": 719,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 463,
-      "updated": 690
+      "unreviewed": 462,
+      "updated": 691
     }
   },
   "pages": [
@@ -288,11 +288,19 @@
       "title": "The Testicles & Scrotum",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "5225ac8d10341866637d5468645615b98fc60ac4fe67cd48b112d4eda6a3327b",
-      "reviewRecords": []
+      "sourceSha256": "cbcd86e7aee94e11035d59f5b14d4ab210e2b101b5396fbf2f6574f2133a8954",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Full current MDX read; accessible NCBI testis, vasectomy, and spermatogenesis texts checked for a bounded overview.",
+          "outcome": "Rebuilt as a source-bounded gross-anatomy page; removed procedure, treatment, outcome, and emergency-management claims.",
+          "clinicalVerification": "not complete",
+          "report": "reports/2026-09-20/testicles-scrotum-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/uterus.mdx",
