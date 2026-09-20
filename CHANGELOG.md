@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Lateral-suspension technique and outcome attribution
+
+Corrected the bladder-neck dissection landmark, variant-specific tunnel/mesh/fixation teaching, and single-arm versus comparative outcome citations while retaining the operative sequence, mesh and robotic variants, all 15 inherited references and the video. Scoped an older mesh-erosion cohort and preliminary non-inferiority evidence without treating associations or null results as universal rules. The [source review](reports/2026-09-20/lateral-suspension-review.md) records exact full-text, supplement, video and IFU gaps; clinical disposition remains partial. The preceding [pectopexy release](reports/2026-09-20/pectopexy-publication.json) passed exact-commit CI/Vercel and live-body comparison, carrying the formerly rate-limited Halban/Moschcowitz pages live.
+
+---
+
 ## 2026-09-20 — Pectopexy source-identity and outcome-scope correction
 
 Corrected sacral Y-mesh citations misclassified as bilateral-Cooper's pectopexy, study-specific implant/fixation anatomy, cadaveric single-suture inference, the long-term apical re-fixation denominator, pooled comparison attribution, and urinary-symptom recurrence mislabeled as de novo SUI. Replaced unsupported composite success and operative-time ranges with source-specific series while retaining the practical technique, all 24 inherited references, both videos and linked variants. The [scoped source review](reports/2026-09-20/pectopexy-review.md) records exact full-text, figure, video and IFU gaps; this remains a partial audit, not clinical clearance. The preceding [posterior-enterocele release](reports/2026-09-20/posterior-enterocele-publication.json) passed exact-commit CI but Vercel rate-limited deployment, so live content is not yet verified.

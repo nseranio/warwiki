@@ -6,7 +6,7 @@
 
 **Current evidence cadence:** every three months, aligned with the user's quarterly OpenEvidence surveys. The literature collector and Codex evidence review run in March, June, September and December; technical link checks remain monthly. This supersedes older monthly-evidence instructions below.
 
-**Current audit continuation, September 20:** Read [RESUME-HERE.md](RESUME-HERE.md) and the [restoration release record](reports/2026-09-20/content-restoration-release.md). Useful content was recovered on 141 pages. The ledger separates 120 restored-pending-review pages from scoped verified edits; 698 full current-page reads are recorded across 1,186 files, with no complete clinical clearance. Local build is 131.11 MB. Follow the content-preservation policy above; do not restart the blanket-deletion audit.
+**Current audit continuation, September 20:** Read [RESUME-HERE.md](RESUME-HERE.md) and the [restoration release record](reports/2026-09-20/content-restoration-release.md). Useful content was recovered on 141 pages; 120 were initially restored-pending-review, with 114 still in that ledger bucket. The current ledger records 719 full current-page reads across 1,186 files, with no complete clinical clearance. Local build is 131.25 MB. Follow the content-preservation policy above; do not restart the blanket-deletion audit.
 
 This file is for Codex to read at the start of every session. It captures the project architecture, conventions, and component patterns. Session history is in `CHANGELOG.md`; the stub backlog is in `docs/_STATUS.md`.
 

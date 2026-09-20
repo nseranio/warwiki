@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T17:13:00.753814+00:00",
+  "generatedAt": "2026-09-20T17:22:24.912607+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 718,
+    "fullTextReadForCurrentContent": 719,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
-      "restored-pending-review": 115,
+      "restored-pending-review": 114,
       "unresolved": 11,
       "unreviewed": 348,
-      "updated": 692
+      "updated": 693
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1160,
-      "partial": 26
+      "not-recorded": 1159,
+      "partial": 27
     }
   },
   "pages": [
@@ -45138,11 +45138,11 @@
       "title": "Laparoscopic Lateral Suspension (LLS)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "restored-pending-review",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "306043a27a9444d8e85d81ca70d950997588567ae3850243a3e0e7920dab07d5",
+      "auditDisposition": "partial",
+      "sourceSha256": "8c6db25d2f5c961f230e71bc0d6e462e43422fc381a9f3a05c972ae13d4d8653",
       "reviewRecords": [
         {
           "reviewedAt": "2026-09-19",
@@ -45174,6 +45174,228 @@
             "Whole-page source adjudication remains incomplete. Manufacturer specifications and technical teaching do not require an RCT; their support must match the particular claim."
           ],
           "recordFile": "content-restoration.json"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/laparoscopic-lateral-suspension.mdx",
+          "sourceSha256": "8c6db25d2f5c961f230e71bc0d6e462e43422fc381a9f3a05c972ae13d4d8653",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current/restored and revised 221-line MDX, all operative, mesh, outcomes, comparison, complication, key-principle and reference sections; 15 inherited citations, one VideoCard and internal links. No imported clinical data/local figure; video unwatched.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Anterior/apical POP stage, uterine preservation and altered access scoped to studied selection; obesity-specific outcome advantage not established.",
+            "treatment": "LLS, robotic case, LLS-ULFS modification, posterior native-tissue option and sacrocolpopexy alternatives distinguished; no equivalence asserted.",
+            "numbers": "Wang pooled rates, Plotti study medians, Lombisani comparison, Xiong n213/232 and D\u00e4llenbach one-cohort erosion/OR denominators corrected; remaining inherited individual outcomes open.",
+            "doseDeviceSafety": "No drug doses; mesh Type 1/Type 3 observational associations scoped. Original manufacturer IFUs and full device/technical video remain unverified.",
+            "anatomyTechnique": "Lange bladder-neck direction corrected to 2 cm above, tunnel/vessel relation and absorbable peritoneal tacks scoped to one robotic case; Delphi expert variation prevents universal fascia anchoring.",
+            "followUp": "Wang mean 20.27 months, Lombisani median about 14 months, D\u00e4llenbach mean 82.3 months and preliminary trial 1-12 months separated; long-term comparative outcomes not closed.",
+            "importedDataFigures": "No imported page data or local figure. One inherited VideoCard retained, unwatched; relevant source supplements/forest plots still need visual adjudication.",
+            "references": "All 15 inherited references and video retained; one original 2024 Delphi citation added. Mistaken attribution of Wang/Lombisani outcomes to Plotti repaired.",
+            "currency": "2025 reviews/cohorts and 2026 technical-video metadata considered; full recent comparative trial package and quarterly refresh remain open."
+          },
+          "claimChecks": [
+            {
+              "claim": "Open and laparoscopic history, lateral tunnel and anchoring variation",
+              "sourceIds": [
+                "simoncini-2024",
+                "lange-2023"
+              ],
+              "locator": "Simoncini technique history and Table 2; Lange operative Methods",
+              "verdict": "corrected",
+              "note": "Kapandji 1967/Dubuisson 1997; aponeurotic support versus absorbable abdominal-wall-peritoneal tacks; 76% of Delphi panel do not always attach arms to muscle fascia."
+            },
+            {
+              "claim": "Bladder-neck landmark, port and mesh dimensions",
+              "sourceIds": [
+                "lange-2023",
+                "chatzi-2022",
+                "dimichele-2026"
+              ],
+              "locator": "Lange original Methods/figure captions; Chatzi technique; Di Michele indexed abstract",
+              "verdict": "corrected",
+              "note": "Lange dissects 2 cm above, not below, bladder neck; 9x41.5-cm mesh and its robotic ports are case-specific. Di Michele Foley tip remains abstract-attributed."
+            },
+            {
+              "claim": "Pooled versus study-median anterior, apical and posterior success",
+              "sourceIds": [
+                "wang-2025",
+                "plotti-2025"
+              ],
+              "locator": "Wang Results/Table outcomes; Plotti Results study-level medians",
+              "verdict": "corrected",
+              "note": "92.9/86.9/88.9% are Wang single-arm pooled endpoints; 91.15/94.95/86.55% are Plotti study medians; no individual patient prediction."
+            },
+            {
+              "claim": "LLS versus sacrocolpopexy comparison and operating time",
+              "sourceIds": [
+                "lombisani-2025",
+                "malanowska-2024",
+                "niguez-2025",
+                "maher-2023"
+              ],
+              "locator": "Lombisani Methods/Results; randomized report design and preliminary trial methods; Cochrane mixed comparator scope",
+              "verdict": "corrected",
+              "note": "OR 1.24/0.78 and 43.1-min estimate belong to Lombisani, not Plotti; I2 97%, imbalanced hysterectomy, short follow-up. Nonsignificance and incomplete trial do not prove equivalence/non-inferiority."
+            },
+            {
+              "claim": "LLS-ULFS and three-way cohort scope",
+              "sourceIds": [
+                "xiong-2025",
+                "sanchez-2025"
+              ],
+              "locator": "Xiong original cohort tables; S\u00e1nchez-Ferrer original abstract/Results",
+              "verdict": "corrected",
+              "note": "Xiong's combined operation n213 versus n232 is not LLS alone; three-way n180 cohort is observational, not comparative proof."
+            },
+            {
+              "claim": "Mesh erosion rate and material/smoking/posterior mesh odds",
+              "sourceIds": [
+                "dallenbach-2016",
+                "wang-2025"
+              ],
+              "locator": "D\u00e4llenbach original abstract; Wang pooled mesh-related results",
+              "verdict": "corrected",
+              "note": "3.8% at 82.3 months is one cohort, not pooled; adjusted ORs are associations with wide CIs, not universal device bans or absolute-risk multipliers."
+            },
+            {
+              "claim": "Exact operative ports, tunnel trajectory, fixation-device safety and mesh-specific instructions",
+              "sourceIds": [
+                "dimichele-2026",
+                "lange-2023",
+                "simoncini-2024"
+              ],
+              "locator": "Restricted complete technical video, one robotic Methods report, expert technique table; manufacturer IFUs not reviewed",
+              "verdict": "unresolved",
+              "note": "Illustrative teaching retained, but complete original operative video/papers, embedded video and relevant IFUs are needed before technical clearance."
+            },
+            {
+              "claim": "Long-term/advanced-stage efficacy and pooled source graphics",
+              "sourceIds": [
+                "wang-2025",
+                "lombisani-2025",
+                "niguez-2025"
+              ],
+              "locator": "Mean/median follow-up and preliminary design; unread supplements/forest-plot images",
+              "verdict": "unresolved",
+              "note": "Short follow-up, cohort overlap, definitions, advanced-stage and posterior subgroups need source-package reconciliation before durable comparative claims."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain complete Di Michele/original LLS operative videos and manufacturer IFUs plus full D\u00e4llenbach paper; verify exact ports, tunnel, mesh, fixation and erosion-risk advice. Embedded educational video remains unwatched.",
+            "Review Wang and Lombisani supplements/forest plots and remaining inherited individual trial tables/figures, including advanced-stage and posterior subgroups; reconcile overlap and long-term comparative outcomes."
+          ],
+          "preservationReview": "All substantive operative sections, mesh configuration/robotic/modification/outcome/comparison/complication tables, 15 inherited citations and one VideoCard retained. One Delphi reference added. No heading, inherited citation or media removed; misleading numeric rows replaced with source-specific rows, and universal instructions made illustrative.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/lateral-suspension-review.md",
+          "recordFile": "claim-batches/2026-09-20-lateral-suspension.json",
+          "sources": [
+            {
+              "id": "plotti-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12072532/",
+              "version": "Plotti et al. 2025 systematic review",
+              "access": "prior-review",
+              "readScope": "Complete accessible original main text, tables, figures and references in prior review; targeted Results spot check in original XML this pass; supplement unread.",
+              "reusedFrom": "reports/2026-09-19/lateral-suspension-recovery-review.md"
+            },
+            {
+              "id": "malanowska-2024",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10931691/",
+              "version": "Malanowska-Jarema et al. 2024 randomized short-term comparison",
+              "access": "prior-review",
+              "readScope": "Complete accessible main text, methods, tables and figures documented previously; n93/89 and 12-month design reused.",
+              "reusedFrom": "reports/2026-09-19/lateral-suspension-recovery-review.md"
+            },
+            {
+              "id": "niguez-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11943180/",
+              "version": "\u00d1\u00edguez-Sevilla et al. 2025 preliminary non-inferiority-trial report",
+              "access": "prior-review",
+              "readScope": "Complete accessible main text, methods, tables and figures documented previously; 106/182 and immature follow-up reused.",
+              "reusedFrom": "reports/2026-09-19/lateral-suspension-recovery-review.md"
+            },
+            {
+              "id": "maher-2023",
+              "url": "https://doi.org/10.1002/14651858.CD012376.pub2",
+              "version": "Maher et al. 2023 Cochrane apical prolapse review",
+              "access": "prior-review",
+              "readScope": "Prior complete relevant Cochrane reading; mixed lateral/round-ligament and pectopexy group not treated as direct LLS estimate.",
+              "reusedFrom": "reports/2026-09-13/apical-source-reading/"
+            },
+            {
+              "id": "lange-2023",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10167164/",
+              "version": "Lange et al. 2023 single robotic technical case/video article",
+              "access": "relevant-sections",
+              "readScope": "Original full-text Methods and figure captions in Europe PMC XML; actual operative video and visual figure content not watched/adjudicated.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "simoncini-2024",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11289001/",
+              "version": "Simoncini et al. 2024 Delphi expert panel",
+              "access": "relevant-sections",
+              "readScope": "Original technique-history section, Delphi methods and Table 2 agreement results read from XML; expert consensus, not comparative outcome proof.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "wang-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12393998/",
+              "version": "Wang et al. 2025 single-arm LLS meta-analysis",
+              "access": "relevant-sections",
+              "readScope": "Original Methods, Results and relevant outcome tables read from XML; supplements/forest plots not visually adjudicated.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "lombisani-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12705715/",
+              "version": "Lombisani et al. 2025 LLS-versus-sacrocolpopexy meta-analysis",
+              "access": "relevant-sections",
+              "readScope": "Original Methods, Results and relevant comparative tables read from XML; supplement unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "xiong-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12370751/",
+              "version": "Xiong et al. 2025 retrospective LLS-ULFS comparison",
+              "access": "relevant-sections",
+              "readScope": "Original Methods, Results and tables read from XML; baseline differences and two-year outcomes checked.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "dallenbach-2016",
+              "url": "https://researchportal.vub.be/en/publications/incidence-and-risk-factors-for-mesh-erosion-after-laparoscopic-re/",
+              "version": "D\u00e4llenbach et al. 2016 mesh-erosion cohort",
+              "access": "abstract-only",
+              "readScope": "Original institutional indexed abstract with n480, erosion n18, mean follow-up 82.3 months and adjusted OR/CIs; full paper unread.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "dimichele-2026",
+              "url": "https://doi.org/10.1016/j.jmig.2026.01.044",
+              "version": "Di Michele et al. 2026 technical video guide",
+              "access": "abstract-only",
+              "readScope": "Original indexed publisher abstract only; full article/video blocked, no port or device validation inferred.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "chatzi-2022",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8803665/",
+              "version": "Chatziioannidou et al. 2022 standardized prospective cohort",
+              "access": "relevant-sections",
+              "readScope": "Original Methods/technique sections inspected for mesh and central fixation context; results/figures/supplement not fully adjudicated in this pass.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "sanchez-2025",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12429115/",
+              "version": "S\u00e1nchez-Ferrer et al. 2025 three-way observational comparison",
+              "access": "relevant-sections",
+              "readScope": "Original abstract/Results in pectopexy source pass reused for n180 and direction only; full figures/supplement not adjudicated.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },
