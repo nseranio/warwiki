@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Posterior colporrhaphy outcome and mesh-context corrections
+
+Reconciled route-comparison effect direction and endpoint denominators, Paraiso trial arms, the Swedish posterior subgroup, dyspareunia populations and nonrandomized STARR/LVMR comparisons. Kept operative variants, both videos, all 20 references and related links. The historical recurrent-rectocele mesh cohort is now clearly separated from the current US transvaginal POP mesh stop-sale. The [source/access review](reports/2026-09-20/posterior-colporrhaphy-review.md) records remaining original full texts, guidance and operative-source work; clinical review remains partial. The preceding [perineorrhaphy release](reports/2026-09-20/perineorrhaphy-publication.json) passed exact CI/Vercel/live-body verification and brought the earlier POP atlas/lifestyle pages live.
+
+---
+
 ## 2026-09-20 — Perineorrhaphy evidence and technique scope
 
 Distinguished perineorrhaphy from posterior repair and obstetric laceration repair; corrected cohort denominators, GH measurement timing, observational risk interpretation, urinary-retention endpoint, and trial-registry status. Preserved the practical technique, tables, related links and 24 references. The [source/access review](reports/2026-09-20/perineorrhaphy-review.md) records exact remaining full-text and operative-source gaps; this is a partial audit, not clinical clearance. The preceding [POP atlas/lifestyle release](reports/2026-09-20/pop-index-lifestyle-publication.json) passed CI but was rate-limited by Vercel and is not yet live-verified.

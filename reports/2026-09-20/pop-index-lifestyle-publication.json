@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-20T16:26:09Z",
+  "checkedAt": "2026-09-20T16:33:21Z",
   "contentCommit": "fce572016d4f9ad5605069f0bf7ac30875c7b2ff",
   "scope": "POP atlas/index and lifestyle evidence-scope corrections; both claim-level reviews remain partial.",
   "githubCI": {
@@ -17,12 +17,17 @@
     "targetUrl": "https://vercel.com/nseranios-projects?upgradeToPro=build-rate-limit"
   },
   "liveVerification": {
-    "status": "pending; this commit did not deploy",
+    "status": "cleared by the later successful eb68dfe1 deployment",
+    "method": "Production HTTP 200 and whitespace-normalized .theme-doc-markdown text exactly matched the validated local build; ordinary last-updated footer excluded.",
     "routes": [
       "/docs/surgical-techniques/04g-prolapse-repair",
       "/docs/surgical-techniques/04g-prolapse-repair/lifestyle-modifications"
     ],
-    "nextAction": "After a later successful production deployment containing fce5720, compare normalized live article bodies with the validated local build and record exact hashes."
+    "articleTextSha256": {
+      "pop-atlas-index": "024ba0652ff66155ab84ca68fc98e0ca5bc6805ab1cb6a0e8b208eb1fc0b73c4",
+      "lifestyle-modifications": "a8d5c83b9eb443b247db3eb4777b31323a2bb33257781a79d548129b87ff6f62"
+    },
+    "carriedByCommit": "eb68dfe1b78cbd29fe3ee66015aa77ac8d239497"
   },
   "clinicalClearance": false,
   "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
