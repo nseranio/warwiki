@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 735,
+    "fullTextReadForCurrentContent": 736,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 446,
-      "updated": 706
+      "unreviewed": 445,
+      "updated": 707
     }
   },
   "pages": [
@@ -7814,11 +7814,24 @@
       "title": "Blandy Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "bebc40c75ed1c7c7d0887982edbf9a8af96efe09422b632a06e9d9aab1bd4033",
-      "reviewRecords": []
+      "sourceSha256": "fcb08b112b1335d12cd9c4c3fcf8bd6fe85b83e0d2799db4eefa37deb7eab1f8",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. PubMed abstract/record scope for Navarro-Galmes et al. 2022, Romero-Maroto et al. 2018, and Bouchard and Campeau 2025. The linked female vaginal-flap and male perineal-urethrostomy procedure pages have separate prior scoped reviews; their source packages were not duplicated here.",
+          "changes": "Rebuilt the page as a bounded terminology and reconstructive-context overview; removed operative steps, dimensions, catheter plans, outcome rates, comparative rankings, treatment recommendations, and guideline interpretation.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/33957637/",
+            "https://pubmed.ncbi.nlm.nih.gov/27692474/",
+            "https://pubmed.ncbi.nlm.nih.gov/38197721/"
+          ],
+          "unresolved": "The inherited historical source package, detailed operative technique, outcomes, and all linked media were not independently verified for this overview. No clinical clearance or treatment recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/blandy-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/diep.mdx",
