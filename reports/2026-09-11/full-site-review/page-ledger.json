@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 717,
+    "fullTextReadForCurrentContent": 718,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 464,
-      "updated": 689
+      "unreviewed": 463,
+      "updated": 690
     }
   },
   "pages": [
@@ -269,11 +269,19 @@
       "title": "The Prostate & Seminal Vesicles",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "82a8a9b894860393030d74ea7b9abfe2b76bfda94ea6d43592567885ef5725bd",
-      "reviewRecords": []
+      "sourceSha256": "40f095966bb50fe97ec9586be88521f52c386a66529388ffb9a123934c9d7c03",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Full current MDX read; accessible NCBI prostate and seminal-vesicle anatomy texts plus a neuroanatomy review checked for a bounded overview.",
+          "outcome": "Rebuilt as a source-bounded gross-anatomy page; removed procedure, treatment, outcome, and disease-management claims.",
+          "clinicalVerification": "not complete",
+          "report": "reports/2026-09-20/prostate-seminal-vesicle-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/testicles-scrotum.mdx",
