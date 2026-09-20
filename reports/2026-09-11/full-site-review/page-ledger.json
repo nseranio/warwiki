@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T14:18:57.474244+00:00",
+  "generatedAt": "2026-09-20T14:31:18.147701+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 698,
+    "fullTextReadForCurrentContent": 700,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
-      "restored-pending-review": 120,
+      "restored-pending-review": 118,
       "unresolved": 12,
       "unreviewed": 363,
-      "updated": 671
+      "updated": 673
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1185,
-      "partial": 1
+      "not-recorded": 1183,
+      "partial": 3
     }
   },
   "pages": [
@@ -37608,11 +37608,11 @@
       "title": "Glans Resurfacing",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "restored-pending-review",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "e718045903f94abc11a7315ea210b582b9c8c1bc6f13009121362aa7d0e53b62",
+      "auditDisposition": "partial",
+      "sourceSha256": "348768101be75e770b8265038dca491691887ed8e869b5d22aeb738339476b25",
       "reviewRecords": [
         {
           "historicalRecord": "reports/2026-09-19/glans-resurfacing-recovery-review.md",
@@ -37639,6 +37639,147 @@
             "Whole-page source adjudication remains incomplete. Manufacturer specifications and technical teaching do not require an RCT; their support must match the particular claim."
           ],
           "recordFile": "content-restoration.json"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing.mdx",
+          "sourceSha256": "348768101be75e770b8265038dca491691887ed8e869b5d22aeb738339476b25",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current MDX and references, including oral-mucosa section; imported video and figures not viewed",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Indication/selection claims targeted; remaining diagnostic details pending",
+            "treatment": "Resurfacing selection and comparator statements targeted; broader options pending",
+            "numbers": "Shabbir, Elst, Falcone and TODGA denominators targeted; remaining tables pending",
+            "doseDeviceSafety": "No drug/device claims independently closed",
+            "anatomyTechnique": "Named resurfacing technique and margin language targeted; other dimensions pending",
+            "followUp": "Risk wording corrected; precise surveillance schedule pending",
+            "importedDataFigures": "Video and image panels not inspected",
+            "references": "New 2026 guideline linked; other references pending full check",
+            "currency": "2026 EAU and Elst print year incorporated; remainder pending"
+          },
+          "claimChecks": [
+            {
+              "claim": "Resurfacing indications, local pathology staging and fixed margin rule",
+              "sourceIds": [
+                "eau26"
+              ],
+              "locator": "EAU 6.1.1.c, 6.1.2.a, recommendations",
+              "verdict": "corrected",
+              "note": "Retained staging advantage, selected PeIN indication; removed blanket first-line and fixed 5 mm rule."
+            },
+            {
+              "claim": "Shabbir CIS outcomes and occult invasion",
+              "sourceIds": [
+                "shabbir11"
+              ],
+              "locator": "PubMed abstract; n=25",
+              "verdict": "corrected",
+              "note": "Retained 12/25 positive margins, 7/25 further surgery and 5/25 unexpected invasion rather than deleting useful data; full paper pending."
+            },
+            {
+              "claim": "Elst 550-person recurrence and CSS attribution",
+              "sourceIds": [
+                "elst26",
+                "eau26"
+              ],
+              "locator": "Elst abstract; EAU 6.1.2 general discussion",
+              "verdict": "corrected",
+              "note": "Identified lower-risk mixed glans-sparing cohort, not resurfacing-specific or universally benign recurrence."
+            },
+            {
+              "claim": "Falcone functional comparison and TODGA dominance",
+              "sourceIds": [
+                "falcone24",
+                "malone11"
+              ],
+              "locator": "Falcone and Malone abstracts",
+              "verdict": "corrected",
+              "note": "44 functional evaluable; within-arm p values are not causal comparative proof; TODGA retained as named technique, not quilting replacement."
+            },
+            {
+              "claim": "Oral mucosa graft section and complete technique/outcome matrix",
+              "sourceIds": [],
+              "locator": "Remaining page sections and source packages",
+              "verdict": "unresolved",
+              "note": "Not independently source-adjudicated in this targeted batch."
+            }
+          ],
+          "unresolvedClaims": [
+            "Full source packages for Shabbir, Falcone, Elst appendix and Malone; oral-mucosa section, technical dimensions, surveillance and remaining outcome studies; imported video/images"
+          ],
+          "preservationReview": "No sections, operative steps, outcome tables, references, videos or media removed; preserved Shabbir and TODGA detail while replacing narrow unsupported claims.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/glans-draft-source-adjudication.md",
+          "recordFile": "claim-batches/2026-09-20-glans-draft-adjudication.json",
+          "sources": [
+            {
+              "id": "eau26",
+              "url": "https://uroweb.org/guidelines/penile-cancer/chapter/disease-management",
+              "version": "EAU-ASCO Penile Cancer 2026",
+              "access": "relevant-sections",
+              "readScope": "Sections 6.1.1-6.1.2 and evidence/recommendations, including margins, frozen section, resurfacing and glansectomy",
+              "reusedFrom": ""
+            },
+            {
+              "id": "pappas19",
+              "url": "https://backoffice.biblio.ugent.be/download/8727650/8728846",
+              "version": "Pappas et al 2019 main article",
+              "access": "full-text",
+              "readScope": "Main PDF text, operative steps, discussion, figure captions and references; image panels and supplementary video not viewed",
+              "reusedFrom": ""
+            },
+            {
+              "id": "roussel21",
+              "url": "https://asm.usanz.org.au/wp-content/uploads/2025/07/Predictors-of-local-recurrence-and-its-impact-on-survival.pdf",
+              "version": "Roussel et al BJU Int 2021",
+              "access": "full-text",
+              "readScope": "Main PDF methods, results, Table 1, figure captions/extracted values, discussion and limitations; supplements not read",
+              "reusedFrom": ""
+            },
+            {
+              "id": "shabbir11",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/21050658/",
+              "version": "Shabbir et al Eur Urol 2011",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract, including 25-patient denominators; full article not obtained",
+              "reusedFrom": ""
+            },
+            {
+              "id": "elst26",
+              "url": "https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/bju.70055",
+              "version": "Elst et al BJU Int 2026, online 2025",
+              "access": "abstract-only",
+              "readScope": "Publisher abstract; full-text and Appendix S1 links returned 403",
+              "reusedFrom": ""
+            },
+            {
+              "id": "falcone24",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39187573/",
+              "version": "Falcone et al Int J Impot Res online 2024",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract and institutional abstract; 99 enrolled and 44 functional-evaluable denominators; publisher full text unavailable",
+              "reusedFrom": ""
+            },
+            {
+              "id": "parnham18",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/27746062/",
+              "version": "Parnham et al Eur Urol 2018",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract, outcomes and explicit lack of functional/sexual outcomes; full article not obtained",
+              "reusedFrom": ""
+            },
+            {
+              "id": "malone11",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20840546/",
+              "version": "Malone et al BJU Int 2011",
+              "access": "abstract-only",
+              "readScope": "PubMed and publisher abstracts; full publisher text returned 403",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },
@@ -37647,11 +37788,11 @@
       "title": "Glansectomy With STSG",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "restored-pending-review",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "cefbf86733ca233bcd6180b1dc0b2d3f8a8182162a5880f936af68ce106288c0",
+      "auditDisposition": "partial",
+      "sourceSha256": "2d351618cf3363c1539653e5f021406a4027ab7f39504bfeb64a91011d79b9f5",
       "reviewRecords": [
         {
           "historicalRecord": "reports/2026-09-19/glansectomy-stsg-recovery-review.md",
@@ -37678,6 +37819,148 @@
             "Whole-page source adjudication remains incomplete. Manufacturer specifications and technical teaching do not require an RCT; their support must match the particular claim."
           ],
           "recordFile": "content-restoration.json"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/glansectomy-stsg.mdx",
+          "sourceSha256": "2d351618cf3363c1539653e5f021406a4027ab7f39504bfeb64a91011d79b9f5",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current MDX, references and video declarations; video not viewed",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Selection and depth/plane claims targeted; full staging workup pending",
+            "treatment": "Glansectomy selection and frozen section targeted; other options pending",
+            "numbers": "Parnham, Roussel, Elst and Falcone denominators targeted; other studies pending",
+            "doseDeviceSafety": "No drug/device claims independently closed",
+            "anatomyTechnique": "Buck's plane and margin width targeted; remaining steps/dimensions pending",
+            "followUp": "Risk-specific recurrence counseling targeted; schedule pending",
+            "importedDataFigures": "Video not viewed",
+            "references": "New 2026 guideline linked; NCCN and other source versions pending",
+            "currency": "EAU 2026 and Elst print year incorporated; remainder pending"
+          },
+          "claimChecks": [
+            {
+              "claim": "Glansectomy selection and Buck's fascia plane",
+              "sourceIds": [
+                "eau26"
+              ],
+              "locator": "EAU 6.1.2.g and recommendations",
+              "verdict": "corrected",
+              "note": "Procedure-specific selection distinguished from organ-sparing class recommendation; plane tied to corporal-tip proximity, not primary versus salvage label."
+            },
+            {
+              "claim": "Frozen section and mandatory 5 mm margin",
+              "sourceIds": [
+                "eau26"
+              ],
+              "locator": "EAU 6.1.2.a-b, recommendations",
+              "verdict": "corrected",
+              "note": "No fixed safe width; frozen section in cases of doubt, not routine."
+            },
+            {
+              "claim": "Recurrence implications in Roussel versus Elst",
+              "sourceIds": [
+                "roussel21",
+                "elst26",
+                "eau26"
+              ],
+              "locator": "Roussel main article Results/Discussion; Elst abstract; EAU 6.1.2",
+              "verdict": "corrected",
+              "note": "Higher-risk glansectomy survival association separated from lower-risk mixed glans-sparing cohort."
+            },
+            {
+              "claim": "Parnham functional outcomes and Falcone comparison",
+              "sourceIds": [
+                "parnham18",
+                "falcone24"
+              ],
+              "locator": "PubMed abstracts",
+              "verdict": "corrected",
+              "note": "Parnham lacked functional measures; Falcone functional subset was 44, not all 99; comparative causation not established."
+            },
+            {
+              "claim": "Remaining operative parameters, outcomes, NCCN details and media",
+              "sourceIds": [],
+              "locator": "Remaining page sections and source packages",
+              "verdict": "unresolved",
+              "note": "Not independently source-adjudicated in this targeted batch."
+            }
+          ],
+          "unresolvedClaims": [
+            "Full primary articles for Parnham, Tang, Falcone and Malone; NCCN version, other study tables, technical dimensions, surveillance schedule, and imported video"
+          ],
+          "preservationReview": "No sections, operative steps, outcome tables, references, videos or media removed; retained numeric outcomes with clearer denominators and selection boundaries.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/glans-draft-source-adjudication.md",
+          "recordFile": "claim-batches/2026-09-20-glans-draft-adjudication.json",
+          "sources": [
+            {
+              "id": "eau26",
+              "url": "https://uroweb.org/guidelines/penile-cancer/chapter/disease-management",
+              "version": "EAU-ASCO Penile Cancer 2026",
+              "access": "relevant-sections",
+              "readScope": "Sections 6.1.1-6.1.2 and evidence/recommendations, including margins, frozen section, resurfacing and glansectomy",
+              "reusedFrom": ""
+            },
+            {
+              "id": "pappas19",
+              "url": "https://backoffice.biblio.ugent.be/download/8727650/8728846",
+              "version": "Pappas et al 2019 main article",
+              "access": "full-text",
+              "readScope": "Main PDF text, operative steps, discussion, figure captions and references; image panels and supplementary video not viewed",
+              "reusedFrom": ""
+            },
+            {
+              "id": "roussel21",
+              "url": "https://asm.usanz.org.au/wp-content/uploads/2025/07/Predictors-of-local-recurrence-and-its-impact-on-survival.pdf",
+              "version": "Roussel et al BJU Int 2021",
+              "access": "full-text",
+              "readScope": "Main PDF methods, results, Table 1, figure captions/extracted values, discussion and limitations; supplements not read",
+              "reusedFrom": ""
+            },
+            {
+              "id": "shabbir11",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/21050658/",
+              "version": "Shabbir et al Eur Urol 2011",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract, including 25-patient denominators; full article not obtained",
+              "reusedFrom": ""
+            },
+            {
+              "id": "elst26",
+              "url": "https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/bju.70055",
+              "version": "Elst et al BJU Int 2026, online 2025",
+              "access": "abstract-only",
+              "readScope": "Publisher abstract; full-text and Appendix S1 links returned 403",
+              "reusedFrom": ""
+            },
+            {
+              "id": "falcone24",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39187573/",
+              "version": "Falcone et al Int J Impot Res online 2024",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract and institutional abstract; 99 enrolled and 44 functional-evaluable denominators; publisher full text unavailable",
+              "reusedFrom": ""
+            },
+            {
+              "id": "parnham18",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/27746062/",
+              "version": "Parnham et al Eur Urol 2018",
+              "access": "abstract-only",
+              "readScope": "PubMed abstract, outcomes and explicit lack of functional/sexual outcomes; full article not obtained",
+              "reusedFrom": ""
+            },
+            {
+              "id": "malone11",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20840546/",
+              "version": "Malone et al BJU Int 2011",
+              "access": "abstract-only",
+              "readScope": "PubMed and publisher abstracts; full publisher text returned 403",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },

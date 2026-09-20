@@ -8,6 +8,12 @@ For commit-level detail run `git log --oneline`.
 
 
 
+## 2026-09-20 — Targeted glans-page source adjudication
+
+Checked the preserved glans-resurfacing and glansectomy draft against the 2026 EAU-ASCO guidance and accessible primary reports. Kept operative teaching and study tables; corrected the fixed 5 mm margin rule, routine frozen-section framing, mixed-cohort recurrence attribution, observational functional comparison, and TODGA dominance claim. The [source report](reports/2026-09-20/glans-draft-source-adjudication.md) and claim batch record distinguish full papers from abstracts and list remaining access gaps. Both pages remain partially audited, not clinically cleared.
+
+---
+
 ## 2026-09-20 — Sol/High audit workflow and deferred OpenEvidence register
 
 Replaced the Terra/Medium lead recommendation with Sol/High, bounded shared-source batches, one writer, claim-level source/access records and explicit completion checks. Added a deferred refresh list led by SUI and OAB; new OpenEvidence pulls wait until the existing audit is finished. Preserved the two concurrent, unverified glans-page drafts as a reversible patch pending source verification.

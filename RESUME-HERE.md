@@ -10,14 +10,14 @@ Manufacturer IFUs/catalogs can support specifications, assembly, intended use an
 
 ## Current audit coverage
 
-The reproducible [ledger](reports/2026-09-11/full-site-review/page-ledger.json) lists **1,186 pages**: 698 with recorded full current-page reading; 671 scoped updates, 20 checked, 12 unresolved, **120 restored pending review**, and 363 unreviewed. Zero complete clinical clearances are asserted. The new claim-level dispositions separately track completion; the OAB pilot remains partial. The recovered material did not receive automatic new reading or source-review credit. Actual source reading remains distinct from full MDX reading.
+The reproducible [ledger](reports/2026-09-11/full-site-review/page-ledger.json) lists **1,186 pages**: 700 with recorded full current-page reading; 673 scoped updates, 20 checked, 12 unresolved, **118 restored pending review**, and 363 unreviewed. Zero complete clinical clearances are asserted. The new claim-level dispositions separately track completion; the OAB pilot and both [glans-page adjudications](reports/2026-09-20/glans-draft-source-adjudication.md) remain partial. The recovered material did not receive automatic new reading or source-review credit. Actual source reading remains distinct from full MDX reading.
 
 The 120 restored pages were checked against 94 prior reports; 11 needed narrow factual corrections. Twenty-one separately restored instrument/operative/suture pages have current full MDX reading recorded, with exact source-access limits in their reports. None of this certifies the entire site.
 
 ## Next action
 
 1. Confirm no other task is editing this checkout. Check Git status; preserve unrelated `world-cup-next-week-pacific.ics`.
-2. Use the updated [Sol/High continuation prompt](reports/2026-09-19/efficient-continuation-prompt.md). Resolve the saved glans draft proposals with primary sources, then continue OAB/SUI and related high-yield clusters before the remaining corpus, following the workflow order. The two unverified glans drafts are preserved in [a patch](reports/2026-09-20/glans-drafts-pending-source-review.json); do not blindly apply it. Reuse saved source audits with attribution.
+2. Use the updated [Sol/High continuation prompt](reports/2026-09-19/efficient-continuation-prompt.md). The saved glans drafts have been [adjudicated narrowly](reports/2026-09-20/glans-draft-source-adjudication.md), with open source gaps recorded; do not apply their preserved [draft patch](reports/2026-09-20/glans-drafts-pending-source-review.json). Continue OAB's remaining shared-source work, then SUI/MUI and related high-yield clusters before the remaining corpus, following the workflow order. Reuse saved source audits with attribution.
 3. Read the complete selected pages; verify the consequential claims with the appropriate source type. Keep useful existing material while addressing source gaps. No generic public audit/removal placeholders.
 4. Save claim-level batch records and check them with `reports/2026-09-20/check-audit-batch.py`; then regenerate the ledger with `reports/2026-09-11/full-site-review/build-ledger.py`; never hand-edit generated totals or store new evidence solely in the generated ledger.
 5. Validate and publish completed batches under the standing main-branch authorization; group changes to avoid excessive Vercel builds. Check exact-commit CI/Vercel and live content. The release record has the latest publication status.
@@ -26,4 +26,4 @@ The 120 restored pages were checked against 94 prior reports; 11 needed narrow f
 
 Evidence maintenance stays quarterly; technical link checks monthly. Epic remains paused with [EPIC-ROADMAP.md](EPIC-ROADMAP.md) available. Clinic and quiz stay removed, History discreet, handouts recoverable but excluded from deployment. Preserve the normal page-last-updated display. Keep manufacturer facts distinct from unsupported marketing superiority claims. Maintain practical sections, related links and media; videos remain immediately before references.
 
-Current local production output is **131.11 MB**, below the 200 MB budget. This is not Vercel's account-storage meter. The previous 41-deployment cleanup remains historical; new deletion requires checking production, aliases and a known-good rollback.
+Current local production output is **131.12 MB**, below the 200 MB budget. This is not Vercel's account-storage meter. The previous 41-deployment cleanup remains historical; new deletion requires checking production, aliases and a known-good rollback.
