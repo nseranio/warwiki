@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 745,
+    "fullTextReadForCurrentContent": 746,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 436,
-      "updated": 716
+      "unreviewed": 435,
+      "updated": 717
     }
   },
   "pages": [
@@ -8224,11 +8224,24 @@
       "title": "Medial Thigh Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "58a6578b2fc5e2b020c61c043ec8093d28d1f04de08d4fc19ce669a3a891b9ce",
-      "reviewRecords": []
+      "sourceSha256": "5c234d4bdd27ffa8b79f62713c1544e8def696a33684908c87d8432d76dfa5a7",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Wang et al. 1987, Persichetti et al. 2003, and Huang et al. 2015.",
+          "changes": "Rebuilt the page as a bounded family-term and evidence-context overview; removed vascular maps, operative technique, dimensions, selection algorithms, comparison tables, outcome pooling, donor-site rules, functional claims, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/3602166/",
+            "https://pubmed.ncbi.nlm.nih.gov/12545115/",
+            "https://pubmed.ncbi.nlm.nih.gov/25596518/"
+          ],
+          "unresolved": "Inherited anatomy, short-gracilis, adductor, PAP, posteromedial-thigh, perineal, scrotal, vaginal, breast, technical-variant, systematic-review, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/medial-thigh-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/omental.mdx",
