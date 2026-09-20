@@ -4,7 +4,7 @@
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.
 
-Recorded coverage after the Moschcowitz recovery batch:682full current MDX reads,654scoped updates,21checked,12unresolved,499unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
+Recorded coverage after the Halban recovery batch:683full current MDX reads,655scoped updates,21checked,12unresolved,498unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
 
 ## Next work and recovery warning
 

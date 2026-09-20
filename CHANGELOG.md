@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-third continuation: Halban evidence boundaries
+
+Rebuilt Halban culdoplasty as a bounded historical overview. Removed its unproven exact efficacy, equivalence, ureteral-risk ranking, and procedural mandates. The existing randomized source has no Halban arm; this and the limited combined-procedure evidence are explicit in the [recovery record](reports/2026-09-19/halban-recovery-review.md).
+
+Ledger: 683 full current MDX reads and 655 scoped updates of 1,186 files; 21 checked, 12 unresolved and 498 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-second continuation: Moschcowitz evidence boundaries
 
 Rebuilt Moschcowitz around the directly read historical randomized abstract and small combined-procedure series. Removed fixed operative rules, mandatory sacrocolpopexy adjunct language, and unverified long-term or procedure-specific safety claims. The revised page retains the source-specific vaginal-hysterectomy comparison favoring McCall, without extending it across routes or variants. The [recovery record](reports/2026-09-19/moschcowitz-recovery-review.md) preserves the exact full-text gaps.
