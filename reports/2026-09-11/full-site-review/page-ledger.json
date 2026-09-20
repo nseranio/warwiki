@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 734,
+    "fullTextReadForCurrentContent": 735,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 447,
-      "updated": 705
+      "unreviewed": 446,
+      "updated": 706
     }
   },
   "pages": [
@@ -7785,11 +7785,29 @@
       "title": "Bladder Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "63d155d9bb471058e0f500de0ae425bf2d8ef611bc5f2f3a13456aebfa23018b",
-      "reviewRecords": []
+      "sourceSha256": "910406758ae44d481e5ce15060eadb19951bc436c1425fa3bd4144ba8a999a9f",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/surgical-principles/flaps/bladder-flap.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "910406758ae44d481e5ce15060eadb19951bc436c1425fa3bd4144ba8a999a9f",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for bladder and distal genitourinary anatomy; PubMed/DOI record scope for a psoas-hitch series. Inherited ureteral-reconstruction, fistula, female-outlet, trauma-guideline, full-length bladder-flap, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded bladder-flap framework overview.",
+            "Removed technical steps, fixed defect thresholds, selection criteria, outcomes, complication rates, and guideline recommendations that were not verified in this batch."
+          ],
+          "unresolved": [
+            "Use of bladder flaps in ureteral reconstruction, fistula repair, female outlet reconstruction, trauma, and postoperative management requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/bladder-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/blandy.mdx",
