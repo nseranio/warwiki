@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 719,
+    "fullTextReadForCurrentContent": 720,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 462,
-      "updated": 691
+      "unreviewed": 461,
+      "updated": 692
     }
   },
   "pages": [
@@ -307,11 +307,19 @@
       "title": "The Uterus",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f33cb07f8546e59ea99c08b1dfdde0c2ed7bf225119f2a8630e235678c55f276",
-      "reviewRecords": []
+      "sourceSha256": "65989b03c8a45086fe7337fb55d307b93a9de574d9815d7d520aaeb71f70face",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Full current MDX read; accessible NCBI uterine anatomy, ligament, and physiology texts plus an apical-support review checked for a bounded overview.",
+          "outcome": "Rebuilt as a source-bounded gross-anatomy page; removed procedure, treatment, outcome, diagnostic-threshold, and disease-management claims.",
+          "clinicalVerification": "not complete",
+          "report": "reports/2026-09-20/uterus-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/vaginal-anatomy.mdx",
