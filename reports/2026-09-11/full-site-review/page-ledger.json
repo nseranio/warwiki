@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 748,
+    "fullTextReadForCurrentContent": 749,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 433,
-      "updated": 719
+      "unreviewed": 432,
+      "updated": 720
     }
   },
   "pages": [
@@ -8395,11 +8395,24 @@
       "title": "Propeller Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "e9fbf76ec3949a5f3c201253b9f61f513c7c1561ceae07abfe633a4d4fd54661",
-      "reviewRecords": []
+      "sourceSha256": "98db835b171769c0af63912f6d23275cb78a70624478ac56c5807f6bd4f908af",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Pignatti et al. 2011, Han et al. 2018, and Schulster et al. 2021.",
+          "changes": "Rebuilt the page as a bounded terminology and limited GU-series overview; removed geometry rules, imaging and dissection instructions, complication protocols, comparisons, algorithms, indications, recommendations, and postoperative protocols.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/21285776/",
+            "https://pubmed.ncbi.nlm.nih.gov/27743757/",
+            "https://pubmed.ncbi.nlm.nih.gov/33309704/"
+          ],
+          "unresolved": "Inherited general-propeller, lower-extremity, perineal, vulvar, scrotal, urethral, vascular-salvage, technical-variant, systematic-review, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or outcome standard is asserted.",
+          "recordFile": "reports/2026-09-20/propeller-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/radial-forearm.mdx",
