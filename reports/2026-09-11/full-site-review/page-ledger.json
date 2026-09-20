@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 685,
+    "fullTextReadForCurrentContent": 686,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 496,
-      "updated": 657
+      "unreviewed": 495,
+      "updated": 658
     }
   },
   "pages": [
@@ -31529,11 +31529,36 @@
       "title": "Cecil-Culp Procedure",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "f197727bc5dec60d8b20cd7a49d6fe72e55d2953eb463d452e89bb6b00126f9b",
-      "reviewRecords": []
+      "sourceSha256": "16aeb93969badd3ff35f6195f5cf396b90e5157c422d2d828da4d672f53e0885",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04e-genital-reconstruction/cecil-culp-procedure.mdx",
+          "reviewedAt": "2026-09-19",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "16aeb93969badd3ff35f6195f5cf396b90e5157c422d2d828da4d672f53e0885",
+          "scope": "Complete current MDX, three primary abstracts, and current AUA guideline statements read. Exact limits in cecil-culp-recovery-review.md.",
+          "changes": [
+            "Removed unsupported contemporary protocol, technique-family equivalence, timing, and comparative outcome claims.",
+            "Retained limited historical hypospadias/fistula context, a labeled trauma case, and the lichen-sclerosus guideline boundary."
+          ],
+          "sources": [
+            "https://doi.org/10.1016/S0022-5347(17)56777-4",
+            "https://doi.org/10.1016/S0090-4295(00)00997-3",
+            "https://doi.org/10.1016/j.urology.2017.04.023",
+            "https://doi.org/10.1097/JU.0000000000003482"
+          ],
+          "unresolved": [
+            "Primary full texts, figures, tables, supplements, and detailed operative methods were not recovered.",
+            "Inherited posterior-injury, scrotal-flap, Johanson, staged-BMG, and Turner-Warwick sources were not fully recovered. No complete clinical clearance."
+          ],
+          "recordFile": "cecil-culp-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/chascip.mdx",

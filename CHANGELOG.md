@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-sixth continuation: Cecil-Culp evidence boundaries
+
+Rebuilt Cecil-Culp as a bounded historical overview around its recoverable hypospadias/fistula reports, separately labeled trauma case, and current lichen-sclerosus guideline boundary. Removed unsupported adult-stricture protocol, terminology equivalence, timing, and comparative outcome claims. The [recovery record](reports/2026-09-19/cecil-culp-recovery-review.md) records the direct source access and gaps.
+
+Ledger: 686 full current MDX reads and 658 scoped updates of 1,186 files; 21 checked, 12 unresolved and 495 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-fifth continuation: bipedicled anterior scrotal flap evidence boundaries
 
 Rebuilt the bipedicled anterior scrotal flap page around small, diagnosis-specific retrospective reports. Removed its fixed protocol, universal single-versus-two-stage selection, superiority, and functional-prediction claims. The [recovery record](reports/2026-09-19/bipedicled-scrotal-flap-recovery-review.md) records the abstract-only primary-source access and unrecovered anatomy source.
