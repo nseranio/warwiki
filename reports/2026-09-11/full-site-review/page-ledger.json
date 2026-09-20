@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 723,
+    "fullTextReadForCurrentContent": 724,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 458,
-      "updated": 694
+      "unreviewed": 457,
+      "updated": 695
     }
   },
   "pages": [
@@ -595,11 +595,30 @@
       "title": "The Perineum",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "85ddb78ba831e70c3235b27d2aafb435e2a2fb014e856817354b47d7afce3455",
-      "reviewRecords": []
+      "sourceSha256": "4ffd1db00461180392a62171bd4c99a02ba6669417c9e0e1126836448750f9c1",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/perineum.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "4ffd1db00461180392a62171bd4c99a02ba6669417c9e0e1126836448750f9c1",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for deep and superficial perineal spaces, pelvic floor, and pudendal nerve anatomy read for retained high-level anatomy. Inherited procedure-specific, obstetric, functional, flap, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded regional anatomy orientation.",
+            "Removed fixed measurements, procedural instructions, diagnostic frameworks, interventions, and outcome claims that were not verified in this batch.",
+            "Retained source-recorded figures with bounded captions."
+          ],
+          "unresolved": [
+            "Procedure-specific anatomy for urethral reconstruction, continence surgery, obstetric repair, flap reconstruction, infection, pain, and gender-affirming procedures requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/perineum-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/presacral-anatomy.mdx",
