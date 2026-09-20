@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-20T14:36:23Z",
+  "contentCommit": "b5f714c59f70bfc18a47ad6e6c44a67afda818e7",
+  "scope": "Two narrowly corrected glans surgery pages and claim/source records; both remain partial, with no whole-site clinical clearance.",
+  "githubCI": {
+    "databaseId": 35516818445,
+    "headSha": "b5f714c59f70bfc18a47ad6e6c44a67afda818e7",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/35516818445"
+  },
+  "vercel": {
+    "context": "Vercel",
+    "state": "success",
+    "targetUrl": "https://vercel.com/nseranios-projects/warwiki/3WCt82QUcRxTeQ8cgNxNoUU7mF8G"
+  },
+  "localValidation": {
+    "auditRecord": "passed schema and current-hash check; not a clinical correctness certificate",
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": "32 passed",
+    "maintenanceTests": "58 passed",
+    "buildAndRenderedLinks": "passed",
+    "buildSizeMb": 131.12,
+    "sizeBudgetMb": 200,
+    "whitespace": "passed"
+  },
+  "liveChecks": [
+    {
+      "route": "/docs/surgical-techniques/04e-genital-reconstruction/glans-resurfacing",
+      "status": 200,
+      "expectedArticleTextSha256": "d4a974b748d559f8edad0d4f9613e5e623c00bde243cd62dcd3bce812aaae1ac",
+      "liveArticleTextSha256": "d4a974b748d559f8edad0d4f9613e5e623c00bde243cd62dcd3bce812aaae1ac",
+      "exactArticleTextMatch": true
+    },
+    {
+      "route": "/docs/surgical-techniques/04e-genital-reconstruction/glansectomy-stsg",
+      "status": 200,
+      "expectedArticleTextSha256": "bf794bb4d2b280a38e02a87c7ef3ac2a506f24023b5e15e7950d0dcf126a8dea",
+      "liveArticleTextSha256": "bf794bb4d2b280a38e02a87c7ef3ac2a506f24023b5e15e7950d0dcf126a8dea",
+      "exactArticleTextMatch": true
+    }
+  ],
+  "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
+}
