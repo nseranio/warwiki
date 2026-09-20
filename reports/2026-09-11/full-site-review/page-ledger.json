@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 753,
+    "fullTextReadForCurrentContent": 754,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 428,
-      "updated": 724
+      "unreviewed": 427,
+      "updated": 725
     }
   },
   "pages": [
@@ -8515,11 +8515,24 @@
       "title": "Tensor Fasciae Latae (TFL) Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "07b8f3b008305a42376f77de9e491625bb962c3a1e0f04b30629d89e8ae4e96c",
-      "reviewRecords": []
+      "sourceSha256": "9504c6696b8d1f85741f260eccb7f7a9e8e4781fb343d28da854b26c4ea89151",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Nahai et al. 1978, Nirmal et al. 2011, and Höckel and Dornhöfer 2008.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified anatomy, technical, outcome, comparison, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/365059/",
+            "https://pubmed.ncbi.nlm.nih.gov/21626446/",
+            "https://pubmed.ncbi.nlm.nih.gov/18510987/"
+          ],
+          "unresolved": "Inherited anatomy, pressure-injury, groin, vulvar, abdominal-wall, technical-variant, comparative, and donor-site source packages were not fully reviewed. No clinical clearance or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/tfl-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/tram.mdx",
