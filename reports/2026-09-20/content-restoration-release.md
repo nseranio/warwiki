@@ -29,4 +29,8 @@ Build output: **131.11 MB / 2,563 files**, below the 200 MB budget. Compiled val
 
 Ledger: **1,186 pages; 698 full current-page reads; 670 scoped updates, 21 checked, 12 unresolved, 120 restored pending review, 363 unreviewed; no complete clinical clearance.** Historical source reviews remain reusable with attribution. The local output size is not the Vercel account-storage meter.
 
-Publication is pending until the exact content commit, CI/Vercel results and live checks are recorded below.
+Published content commit **`96816311f0c77534385d4f96b2f1e71f48d54127`** to `origin/main`. Exact-commit [GitHub CI 35514689423](https://github.com/nseranio/warwiki/actions/runs/35514689423) and [Vercel deployment](https://vercel.com/nseranios-projects/warwiki/EwJjaX4JeyQSLdejQpinGHsTjpL2) succeeded.
+
+All **141 production article bodies** match the validated local build's normalized article text exactly, including Lone Star's restored setup and video section. See [production verification](content-restoration-publication.json). The initial verification helper assumed directory-index HTML paths; it was corrected to use the build's `.html` output and the final complete check passed. No site defect resulted from that checker-path issue.
+
+The recovery is published; the broader page-by-page clinical audit remains open. Continue from [RESUME-HERE](../../RESUME-HERE.md), preserving practical content and source-access distinctions. No Vercel account-storage-meter remeasurement or additional deployment deletion was performed in this repair.

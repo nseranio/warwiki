@@ -6,6 +6,8 @@ Recovered **141 pages**: 120 prior-content restorations with narrow correction c
 
 Manufacturer IFUs/catalogs can support specifications, assembly, intended use and warnings. Anatomy texts, atlases, technical papers, operative videos and established teaching can support anatomy and practical technique. Prefer major trials/guidelines/Cochrane reviews for treatment recommendations and new practice-changing updates. **An unfinished source review or absence of an RCT does not justify emptying a page.** Correct particular errors, preserve useful content and keep source gaps in internal records.
 
+**Published:** content `96816311` passed exact-commit GitHub CI/Vercel and all 141 live article-body comparisons. Full validation and source limitations are in the release record.
+
 ## Current audit coverage
 
 The reproducible [ledger](reports/2026-09-11/full-site-review/page-ledger.json) lists **1,186 pages**: 698 with recorded full current-page reading; 670 scoped updates, 21 checked, 12 unresolved, **120 restored pending review**, and 363 unreviewed. Zero complete clinical clearances are asserted. The recovered material did not receive automatic new reading or source-review credit. Actual source reading remains distinct from full MDX reading.
