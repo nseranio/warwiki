@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 756,
+    "fullTextReadForCurrentContent": 757,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 425,
-      "updated": 727
+      "unreviewed": 424,
+      "updated": 728
     }
   },
   "pages": [
@@ -8590,11 +8590,25 @@
       "title": "Vastus Lateralis Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "3609d758bdc7f189db29195765550f47ca613c28bb1f023b3911e4fbf5f6789e",
-      "reviewRecords": []
+      "sourceSha256": "d64117ab58d6c5f43dd356df3c4f41c670c099812d4449a4115f257a698429a0",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Tayfur et al. 2010, di Summa et al. 2015, Wong et al. 2009, and Wu et al. 2010.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified technical, outcome, comparative, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/21119465/",
+            "https://pubmed.ncbi.nlm.nih.gov/24830661/",
+            "https://pubmed.ncbi.nlm.nih.gov/19935301/",
+            "https://pubmed.ncbi.nlm.nih.gov/20023456/"
+          ],
+          "unresolved": "Inherited clinical anatomy, harvesting, donor-site, scrotal, penile, vulvovaginal, comparative, and additional pelvic source packages were not fully reviewed. No clinical clearance, procedure recommendation, or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/vastus-lateralis-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/vram.mdx",
