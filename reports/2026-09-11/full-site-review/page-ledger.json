@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 759,
+    "fullTextReadForCurrentContent": 760,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 422,
-      "updated": 730
+      "unreviewed": 421,
+      "updated": 731
     }
   },
   "pages": [
@@ -8665,11 +8665,25 @@
       "title": "Z-Plasty",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "a9f255ea39bc42afc9935beb434d39f803d7bca488df94cae997d0ea1bfb3dea",
-      "reviewRecords": []
+      "sourceSha256": "2c7f1c42ef4e67ffcbc20e9c2c7d7f56317c37ae8a531da6b63a3c06d946eaa9",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract reading for Álvarez Vega et al. 2025, Stewart et al. 2012, and Wierrani et al. 2003; PubMed record reading for Frappell et al. 2018.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified geometry, technical, outcome, comparison, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/40490108/",
+            "https://pubmed.ncbi.nlm.nih.gov/22921703/",
+            "https://pubmed.ncbi.nlm.nih.gov/12620448/",
+            "https://pubmed.ncbi.nlm.nih.gov/29477552/"
+          ],
+          "unresolved": "The inherited geometric, pediatric-genital, preputial, frenular, Peyronie's, vaginal, oncologic, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or reconstruction standard is asserted.",
+          "recordFile": "reports/2026-09-20/z-plasty-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps-gu-reconstruction.mdx",
