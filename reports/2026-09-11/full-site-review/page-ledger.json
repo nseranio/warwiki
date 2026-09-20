@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 704,
+    "fullTextReadForCurrentContent": 705,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 477,
-      "updated": 676
+      "unreviewed": 476,
+      "updated": 677
     }
   },
   "pages": [
@@ -36193,11 +36193,32 @@
       "title": "Rectus Abdominis Myofascial Neoglans (Shaeer)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "97b5f6b9748a8df8c1e7f31e7cc05ef916fa38daa9bd9c9359c1074b8fd2e8bb",
-      "reviewRecords": []
+      "sourceSha256": "3638f8254611a8b88b79a0174dc1223268762b07a1c254448ae91ea1e1ada539",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "3638f8254611a8b88b79a0174dc1223268762b07a1c254448ae91ea1e1ada539",
+          "scope": "Complete inherited and revised MDX read. Crossref bibliographic record and abstract read for Shaeer and El-Sebaie 2005; full article, tables, figures and supplements were not recovered.",
+          "changes": [
+            "Replaced detailed anatomy, operative protocol, comparisons and outcome claims with an abstract-bounded single-case overview.",
+            "Retained only abstract-described intervention and six-month individual findings while making uncertainty explicit."
+          ],
+          "sources": [
+            "https://doi.org/10.1111/j.1743-6109.2005.20237.x"
+          ],
+          "unresolved": [
+            "Full primary article and all supporting source packages remain unrecovered.",
+            "No long-term, comparative, functional, donor-site, guideline or population-level conclusion is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/shaeer-myofascial-neoglans-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/staged-scrotal-flap.mdx",
