@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 703,
+    "fullTextReadForCurrentContent": 704,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 478,
-      "updated": 675
+      "unreviewed": 477,
+      "updated": 676
     }
   },
   "pages": [
@@ -34687,11 +34687,33 @@
       "title": "Reverse Bilateral Anterior Scrotal Artery Flap (Gao)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "18d19f4e3270539e985eb42e7117b6e78c670bcdd2a1fae893f8bd1404805364",
-      "reviewRecords": []
+      "sourceSha256": "692ce43c33230dda8cce132b9274f63ec8ebc45ca9cb63664cb741a817ed3cad",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "692ce43c33230dda8cce132b9274f63ec8ebc45ca9cb63664cb741a817ed3cad",
+          "scope": "Complete inherited and revised MDX read. Complete open-access Gao and Qu case report read through Europe PMC XML, including case narrative, figures/captions, discussion and references.",
+          "changes": [
+            "Replaced unverified vascular physiology, selection rules, comparative outcomes and procedural detail with a bounded single-case overview.",
+            "Retained only the reported presentation, intervention and individual follow-up while making the evidence limitation explicit."
+          ],
+          "sources": [
+            "https://doi.org/10.1097/MD.0000000000018106",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6919477/"
+          ],
+          "unresolved": [
+            "No comparative studies, validated protocol, population complication rate or guideline recommendation was established by the reviewed case report.",
+            "No broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/reverse-anterior-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/sapl-liposuction.mdx",
