@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-09-20T15:26:22Z",
+  "contentCommit": "ae54f23cb22d6de7fdfe291171daa5a274478619",
+  "scope": "Targeted POP mesh-complication and pessary guidance corrections on two pages; both claim-level audits remain partial. The successful deployment also carries the previously rate-limited a3e50ae2 sling pages.",
+  "githubCI": {
+    "databaseId": 35519445253,
+    "headSha": "ae54f23cb22d6de7fdfe291171daa5a274478619",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/nseranio/warwiki/actions/runs/35519445253"
+  },
+  "vercel": {
+    "context": "Vercel",
+    "state": "success",
+    "description": "Deployment has completed",
+    "targetUrl": "https://vercel.com/nseranios-projects/warwiki/2CysfHreqxWQPVrkkiH24A5dSziK"
+  },
+  "localValidation": {
+    "auditRecords": "both passed current-hash/schema checks; clinical correctness still requires source judgment",
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": "32 passed",
+    "maintenanceTests": "58 passed",
+    "buildAndRenderedLinks": "passed",
+    "buildSizeMb": 131.16,
+    "sizeBudgetMb": 200,
+    "whitespace": "passed",
+    "visualReview": "both edited articles and their changed tables inspected in local rendered pages"
+  },
+  "liveVerification": {
+    "method": "HTTP 200 and normalized .theme-doc-markdown text compared exactly against the validated local build; ordinary last-updated footer excluded.",
+    "status": "all five changed article bodies exactly matched",
+    "routes": [
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling",
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling",
+      "/docs/surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling",
+      "/docs/surgical-techniques/04g-prolapse-repair/mesh-complications",
+      "/docs/surgical-techniques/04g-prolapse-repair/prolapse-pessaries"
+    ]
+  },
+  "previousRateLimitedRecordNowCovered": "reports/2026-09-20/sling-evidence-publication.json",
+  "unrelatedFilesPreserved": ["world-cup-next-week-pacific.ics"]
+}
