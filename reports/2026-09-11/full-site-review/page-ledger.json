@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 764,
+    "fullTextReadForCurrentContent": 765,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 417,
-      "updated": 735
+      "unreviewed": 416,
+      "updated": 736
     }
   },
   "pages": [
@@ -10912,11 +10912,24 @@
       "title": "Surgical Ergonomics",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "60a9cb1a4ad6d55f526aebf108d7032b4444970ef9d573936fa5697eea456822",
-      "reviewRecords": []
+      "sourceSha256": "8e44a6a624b916ddf25c58b961349754afab51116b1ddea8cbadaea525ce083a",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract reading for Epstein et al. 2018, Gabrielson et al. 2021, and Park et al. 2017.",
+          "changes": "Rebuilt the detailed ergonomics guide as a bounded evidence orientation; removed unverified prevalence, position, device-setting, modality-comparison, exercise, and institutional-policy claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/29282463/",
+            "https://pubmed.ncbi.nlm.nih.gov/33432182/",
+            "https://pubmed.ncbi.nlm.nih.gov/28059962/"
+          ],
+          "unresolved": "The inherited urology, posture, robotic, endoscopic, microsurgical, exercise, educational, and institutional-intervention source packages were not fully reviewed. No clinical clearance, operating-room setup standard, exercise prescription, or occupational-health assessment is asserted.",
+          "recordFile": "reports/2026-09-20/surgical-ergonomics-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/sutures.mdx",
