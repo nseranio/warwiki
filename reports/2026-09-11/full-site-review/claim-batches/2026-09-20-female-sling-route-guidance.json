@@ -1,0 +1,57 @@
+{
+  "batchId":"2026-09-20-female-sling-route-guidance","reviewedAt":"2026-09-20","model":"gpt-5.6-sol","reasoningEffort":"high",
+  "sources":[
+    {"id":"nice-ng123","url":"https://www.nice.org.uk/guidance/ng123/chapter/recommendations","version":"NICE NG123, published 2019, last updated June 24 2019","access":"relevant-sections","readScope":"Direct current-page read of SUI transobturator and single-incision surgical recommendations; not complete NICE guideline/evidence reviews","reusedFrom":"reports/2026-09-20/female-sui-database-nice-selection-review.md"},
+    {"id":"aua23","url":"https://www.auanet.org/documents/Guidelines/PDF/SUI/SUI%20Amendment%20Summary%20041423.pdf","version":"AUA/SUFU female surgical SUI 2023 amendment","access":"prior-review","readScope":"Official statement 13 indexed excerpt and prior scoped AUA/SUFU review; PDF returned 403, no new full read","reusedFrom":"reports/2026-09-20/female-sui-database-nice-selection-review.md"}
+  ],
+  "pages":[
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling.mdx",
+      "sourceSha256":"36a075b50a565f9728554e1ed08c552b84fa8896f22738768bfcf5f6ffb0eb73",
+      "status":"updated","fullTextRead":true,"readScope":"Entire original and changed 98-line procedure MDX including technique, outcome table and references; no imported data/figure/video",
+      "clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "coverage":{
+        "evaluation":"Indication selection targeted against NICE and prior AUA; other evaluation statements pending",
+        "treatment":"Jurisdictional transobturator restriction checked and inserted",
+        "numbers":"Bladder-injury and other outcome estimates not newly adjudicated against full trials",
+        "doseDeviceSafety":"Trocar/device IFUs and mesh-specific harms pending",
+        "anatomyTechnique":"Full on-page steps read; anatomical/technical source package not verified here",
+        "followUp":"No formal follow-up protocol on page; pain evaluation pearl read, source check pending",
+        "importedDataFigures":"No imported clinical dataset, figure or video; inline tables read",
+        "references":"NICE NG123 added; Cochrane/TOMUS/meta-analysis full texts pending",
+        "currency":"NICE 2019 and AUA 2023 selection versions distinguished; broader source update pending"
+      },
+      "claimChecks":[
+        {"claim":"Transobturator selection presented without NICE jurisdictional limit","sourceIds":["nice-ng123","aua23"],"locator":"NICE NG123 do-not-offer-except-specific-circumstances recommendation; AUA 2023 indexed statement 13","verdict":"corrected","note":"Added jurisdiction-aware route selection without calling it universally prohibited."},
+        {"claim":"Technique steps and outcome/harms estimates","sourceIds":[],"locator":"Routes, technique and outcomes sections","verdict":"unresolved","note":"Full page read, but device IFUs and primary trial/meta-analysis source packages not checked here."}
+      ],
+      "unresolvedClaims":["Full Cochrane CD006375 and TOMUS outcome denominator/harms checks; device-specific transobturator trocar IFU and detailed technique/anatomy source package"],
+      "preservationReview":"No heading, route table, step, outcome table, reference, linked page or practical pearl removed; NICE reference/selection paragraph added.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/female-sling-route-guidance-review.md"
+    },
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx",
+      "sourceSha256":"b71cd49fedb387f94d0c92b2807e2026d7013daae1a345719e129028456e5ddf",
+      "status":"updated","fullTextRead":true,"readScope":"Entire original and changed 107-line MDX including steps, outcome table, references and inline VideoCards entry",
+      "clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "coverage":{
+        "evaluation":"Selected index-patient indication targeted; detailed selection/ISD source check pending",
+        "treatment":"NICE clinical-trial-only restriction and AUA option distinguished",
+        "numbers":"SIMS noninferiority and harms percentages not newly verified to full RCT/HTA",
+        "doseDeviceSafety":"Device-specific anchors/tensioning IFUs pending",
+        "anatomyTechnique":"All on-page technical steps read; operative source package/IFU not fully checked",
+        "followUp":"Long-term outcome counseling read, original follow-up evidence pending",
+        "importedDataFigures":"Inline video entry and table read; no imported clinical data or figure",
+        "references":"NICE NG123 added; Cochrane/SIMS/2025 meta-analysis full packages pending",
+        "currency":"NICE 2019 and AUA 2023 versions distinguished; broader SIMS evidence update pending"
+      },
+      "claimChecks":[
+        {"claim":"Single-incision sling presented without NICE clinical-trial restriction","sourceIds":["nice-ng123","aua23"],"locator":"NICE NG123 single-incision short mesh sling recommendation; AUA 2023 indexed statement 13","verdict":"corrected","note":"Added jurisdiction-aware selection and device-specific caveat while preserving AUA option."},
+        {"claim":"SIMS noninferiority, adverse-event percentages, device technique and durability","sourceIds":[],"locator":"Indications, technique, evidence position and counseling table","verdict":"unresolved","note":"Read entire page but did not credit full trial/HTA/Cochrane/IFU review."}
+      ],
+      "unresolvedClaims":["Full SIMS RCT/HTA Table and supplementary endpoint/harms checks; Cochrane CD008709 and 2025 meta-analysis; specific Solyx or other mini-sling IFU and device heterogeneity"],
+      "preservationReview":"No heading, step, table, reference, practical pearl or video removed; NICE reference/selection paragraph added.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/female-sling-route-guidance-review.md"
+    }
+  ]
+}

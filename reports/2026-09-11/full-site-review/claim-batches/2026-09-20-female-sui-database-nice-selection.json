@@ -1,0 +1,34 @@
+{
+  "batchId":"2026-09-20-female-sui-database-nice-selection",
+  "reviewedAt":"2026-09-20","model":"gpt-5.6-sol","reasoningEffort":"high",
+  "sources":[
+    {"id":"nice-ng123","url":"https://www.nice.org.uk/guidance/ng123/chapter/recommendations","version":"NICE NG123, published April 2019, last updated June 24 2019; accessed September 20 2026","access":"relevant-sections","readScope":"Current recommendation page surgical SUI option, transobturator restriction, single-incision trial-only recommendation and page version; not the entire guideline/evidence reviews","reusedFrom":""},
+    {"id":"aua23-amend","url":"https://www.auanet.org/documents/Guidelines/PDF/SUI/SUI%20Amendment%20Summary%20041423.pdf","version":"AUA/SUFU female surgical SUI 2023 amendment summary","access":"indexed-excerpts","readScope":"Official indexed excerpt of amendment statements 12-13 on index-patient options only; not a full PDF or unabridged guideline read","reusedFrom":""},
+    {"id":"prior-database","url":"https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf","version":"Prior scoped landing-page AUA/SUFU and NICE review","access":"prior-review","readScope":"Earlier complete MDX/data read and scoped surgical-selection corrections, not repeated here","reusedFrom":"reports/2026-09-11/full-site-review/surgical-incontinence.json"}
+  ],
+  "pages":[{
+    "file":"docs/04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx",
+    "sourceSha256":"0f78f60663360356b69785c7a1b6d644889e7109d8547c586bf7d3ab6a95f513",
+    "status":"updated","fullTextRead":true,
+    "readScope":"Complete 201-line MDX including 20 exported treatment records, columns, references and component invocation; GenericDatabase component presentation behavior reused from documented OAB database report",
+    "clinicalVerificationComplete":false,"auditDisposition":"partial",
+    "coverage":{
+      "evaluation":"Prior scoped AUA/NICE selection work reused; no full new diagnostic-source check",
+      "treatment":"NICE transobturator and single-incision restrictions checked and added to filterable rows; other options remain prior scope/pending",
+      "numbers":"No new numeric outcome claims in changed rows; linked operation outcomes pending",
+      "doseDeviceSafety":"Device-specific IFUs and complication rates not independently rechecked",
+      "anatomyTechnique":"No new operative technique; database routes preserved; linked technique pages separate",
+      "followUp":"No new follow-up assertion; linked pages remain separate",
+      "importedDataFigures":"All 20 inline data records read; GenericDatabase presentation component reused from OAB audit; no figure",
+      "references":"NICE current recommendation page and AUA amendment summary targeted; prior landing-page refs preserved",
+      "currency":"NICE NG123 version last updated June 2019 and AUA 2023 amendment distinguished; no global clearance"
+    },
+    "claimChecks":[
+      {"claim":"Transobturator and single-incision rows implied unrestricted routine availability","sourceIds":["nice-ng123","aua23-amend"],"locator":"NICE NG123 surgical SUI recommendations on transobturator/single-incision; AUA/SUFU 2023 amendment statements 12-13","verdict":"corrected","note":"Filterable rows now state NICE specific-circumstances/trial-only limits while preserving AUA/SUFU index-patient options."},
+      {"claim":"Other treatment-record indications, device IFUs and linked operation outcomes","sourceIds":["prior-database"],"locator":"Remaining landing-page rows and linked procedure source packages","verdict":"unresolved","note":"Prior scoped landing-page review retained; no linked page considered clinically cleared."}
+    ],
+    "unresolvedClaims":["Device-specific IFUs and linked operation source packages; original trials/outcomes behind other database records; NICE full evidence reviews and unabridged AUA guideline beyond documented scope"],
+    "preservationReview":"All 20 treatment records, categories, links, table, component, practical guidance and references retained; only two row descriptions and provenance frontmatter changed.",
+    "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/female-sui-database-nice-selection-review.md"
+  }]
+}

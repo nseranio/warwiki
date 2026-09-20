@@ -7,6 +7,13 @@ For commit-level detail run `git log --oneline`.
 ---
 
 
+## 2026-09-20 — Female sling route selection across jurisdictions
+
+Read the female-SUI treatment database and previously unreviewed transobturator and single-incision sling pages. Added NICE's specific-circumstances/trial-only restrictions to the filterable database rows and procedure pages while retaining the AUA/SUFU options and operative teaching. [Database review](reports/2026-09-20/female-sui-database-nice-selection-review.md) and [procedure review](reports/2026-09-20/female-sling-route-guidance-review.md) keep the unreviewed trial, harm and device-source packages explicit; none of these pages is clinically cleared.
+
+---
+
+
 ## 2026-09-20 — Female SUI/MUI prevalence denominator and laser evidence
 
 Checked the original NHANES paper's population questions and table: the 18.1% MUI estimate is for all adult US women, not only women already reporting UI, and the 45.9% SUI figure means any reported stress leakage in the prior year. Clarified both page descriptions. Replaced vague laser-evidence wording with the 2025 Cochrane summary's very-low-certainty short-term finding while preserving the treatment discussion. [Source/access report](reports/2026-09-20/female-sui-mui-prevalence-laser-review.md); both pages remain partial.
