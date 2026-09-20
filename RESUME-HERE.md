@@ -1,6 +1,6 @@
-# WARWIKI — resume after the content-preservation recovery
+# WARWIKI — resume the claim-level audit
 
-**Current checkpoint: September 20, 2026.** Read the [restoration release record](reports/2026-09-20/content-restoration-release.md) and [content-preservation policy](reports/2026-09-20/content-preservation-policy.md) first. The user rejected the blanket deletion of manufacturer information and practical teaching. That approach is superseded.
+**Current checkpoint: September 20, 2026.** The lead is now **GPT-5.6 Sol / High**. Use [the workflow](reports/2026-09-20/audit-workflow.md), [single-writer control](reports/2026-09-20/audit-control.json) and [deferred OpenEvidence list](reports/2026-09-20/open-evidence-refresh-queue.md). Finish the existing audit before new OpenEvidence pulls. The [OAB pilot](reports/2026-09-20/sol-high-oab-pilot.md) documents a narrow FUTURE population-count correction and remaining source work.  Read the [restoration release record](reports/2026-09-20/content-restoration-release.md) and [content-preservation policy](reports/2026-09-20/content-preservation-policy.md) first. The user rejected the blanket deletion of manufacturer information and practical teaching. That approach is superseded.
 
 Recovered **141 pages**: 120 prior-content restorations with narrow correction carry-forward, 16 retractor restorations and five selective operative/suture restorations. The [inventory](reports/2026-09-20/content-removal-inventory.md) and [change records](reports/2026-09-20/content-restoration-release.md) identify the exact scope. Genuine corrections and intentionally withdrawn erroneous diagrams remain. A concurrent mouth-retractor reduction was also caught and repaired; the separate audit task was told to stop simultaneous edits.
 
@@ -10,16 +10,16 @@ Manufacturer IFUs/catalogs can support specifications, assembly, intended use an
 
 ## Current audit coverage
 
-The reproducible [ledger](reports/2026-09-11/full-site-review/page-ledger.json) lists **1,186 pages**: 698 with recorded full current-page reading; 670 scoped updates, 21 checked, 12 unresolved, **120 restored pending review**, and 363 unreviewed. Zero complete clinical clearances are asserted. The recovered material did not receive automatic new reading or source-review credit. Actual source reading remains distinct from full MDX reading.
+The reproducible [ledger](reports/2026-09-11/full-site-review/page-ledger.json) lists **1,186 pages**: 698 with recorded full current-page reading; 671 scoped updates, 20 checked, 12 unresolved, **120 restored pending review**, and 363 unreviewed. Zero complete clinical clearances are asserted. The new claim-level dispositions separately track completion; the OAB pilot remains partial. The recovered material did not receive automatic new reading or source-review credit. Actual source reading remains distinct from full MDX reading.
 
 The 120 restored pages were checked against 94 prior reports; 11 needed narrow factual corrections. Twenty-one separately restored instrument/operative/suture pages have current full MDX reading recorded, with exact source-access limits in their reports. None of this certifies the entire site.
 
 ## Next action
 
 1. Confirm no other task is editing this checkout. Check Git status; preserve unrelated `world-cup-next-week-pacific.ics`.
-2. Use the [efficient continuation prompt](reports/2026-09-19/efficient-continuation-prompt.md), now corrected to preserve practical content. Work in small coherent batches from the current ledger, starting with the remaining instrument pages and their manufacturer/technical sources. Reuse saved source audits with attribution.
+2. Use the updated [Sol/High continuation prompt](reports/2026-09-19/efficient-continuation-prompt.md). Resolve the saved glans draft proposals with primary sources, then continue OAB/SUI and related high-yield clusters before the remaining corpus, following the workflow order. The two unverified glans drafts are preserved in [a patch](reports/2026-09-20/glans-drafts-pending-source-review.json); do not blindly apply it. Reuse saved source audits with attribution.
 3. Read the complete selected pages; verify the consequential claims with the appropriate source type. Keep useful existing material while addressing source gaps. No generic public audit/removal placeholders.
-4. Update durable source records and regenerate the ledger with `reports/2026-09-11/full-site-review/build-ledger.py`; never hand-edit generated totals or store new evidence solely in the generated ledger.
+4. Save claim-level batch records and check them with `reports/2026-09-20/check-audit-batch.py`; then regenerate the ledger with `reports/2026-09-11/full-site-review/build-ledger.py`; never hand-edit generated totals or store new evidence solely in the generated ledger.
 5. Validate and publish completed batches under the standing main-branch authorization; group changes to avoid excessive Vercel builds. Check exact-commit CI/Vercel and live content. The release record has the latest publication status.
 
 ## Retained preferences

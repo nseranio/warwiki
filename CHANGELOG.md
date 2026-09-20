@@ -7,6 +7,14 @@ For commit-level detail run `git log --oneline`.
 ---
 
 
+
+## 2026-09-20 — Sol/High audit workflow and deferred OpenEvidence register
+
+Replaced the Terra/Medium lead recommendation with Sol/High, bounded shared-source batches, one writer, claim-level source/access records and explicit completion checks. Added a deferred refresh list led by SUI and OAB; new OpenEvidence pulls wait until the existing audit is finished. Preserved the two concurrent, unverified glans-page drafts as a reversible patch pending source verification.
+
+The OAB pilot and a focused second review corrected FUTURE's population wording: 1,103 randomized, 1,099 analyzed after four exclusions. The primary report now accompanies the citation. All useful page content remains. The pilot also corrected an internal overstatement of prior guideline-read scope; it does not establish full-page clinical clearance. See [the workflow release record](reports/2026-09-20/audit-workflow-release.md) for validation/publication status.
+
+---
 ## 2026-09-20 — Restore useful content removed by the audit
 
 Recovered 141 pages affected by blanket evidence-audit reductions: 120 content restorations with targeted correction carry-forward, 16 manufacturer-supported retractor pages, and five selective operative/suture restorations. Lone Star again includes configurations, setup, applications, practical handling, references and its fistula teaching video. Preserved established factual corrections instead of undoing the entire audit.

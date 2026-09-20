@@ -1,0 +1,146 @@
+{
+  "batchId": "2026-09-20-oab-pilot",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "aua-oab-2024",
+      "url": "https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/OAB%202024%20Unabridgedv2.pdf",
+      "version": "AUA/SUFU idiopathic OAB guideline, 2024 unabridged v2",
+      "access": "indexed-excerpts",
+      "readScope": "Fresh official PDF search extracts of statements 5-6, 16-19, 22-27 and adjacent explanatory excerpts; not complete sections, tables, supplement or cover-to-cover PDF. Existing record supports only a scoped core-guideline check.",
+      "reusedFrom": "reports/2026-09-11/full-site-review/clinical-conditions.json, urgency-incontinence-oab entry, same page SHA-256"
+    },
+    {
+      "id": "future-hta-2025",
+      "url": "https://www.ncbi.nlm.nih.gov/books/n/ukhta2927/pdf/",
+      "version": "NIHR Health Technology Assessment 2025;29(27), FUTURE trial detailed primary report",
+      "access": "relevant-sections",
+      "readScope": "Methods pp. 30-33, randomized/analysis flow pp. 44-45, Table 5 p. 49 and discussion pp. 112-114 checked. No cover-to-cover 164-page read or supplements checked.",
+      "reusedFrom": "Prior scoped FUTURE update indexed at reports/2026-09-11/functional-urogynecology-literature.md; source-table check here is new"
+    },
+    {
+      "id": "botox-fda-label-2023",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/103000s5327lbl.pdf",
+      "version": "FDA BOTOX prescribing information, revised August 2023; PDF warns a newer label may exist",
+      "access": "relevant-sections",
+      "readScope": "Sections 2.3 and 5.12-5.13 plus Table 10 p. 16 checked; current-label approval history and remaining sections not checked.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "botox-manufacturer-current",
+      "url": "https://www.botoxone.com/oab/dosing",
+      "version": "Manufacturer OAB dosing and safety page accessed 2026-09-20",
+      "access": "relevant-sections",
+      "readScope": "Urinary retention, catheterization ability, PVR monitoring and OAB trial CIC figures checked; no device IFU or approval-history read.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "rf-publisher-abstract-2026",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/nau.70362",
+      "version": "Alvear et al., online July 6, 2026",
+      "access": "abstract-only",
+      "readScope": "Publisher abstract checked for n=140, 72/68 split, three sessions, behavioral therapy both arms, six-month symptom conclusion and 44.2% versus 22.9% adverse events. Publisher /doi/full/ redirected to abstract; no full methods, outcome/harms tables, figures or supplement accessed.",
+      "reusedFrom": "reports/2026-09-11/functional-urogynecology-literature.md summarizes this trial without documenting full-text access"
+    },
+    {
+      "id": "rf-pubmed-2026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42403115/",
+      "version": "PubMed PMID 42403115, same July 2026 RF trial",
+      "access": "abstract-only",
+      "readScope": "Abstract and citation identity cross-check only; not full paper, tables, figures or supplement.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "future-hta-flow-html",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK615947/",
+      "version": "NIHR HTA 2025;29(27), Chapter 3",
+      "access": "relevant-sections",
+      "readScope": "Root read the HTML participant recruitment and postrandomization-exclusion paragraphs and checked corresponding Chapter 4 flow/results text at https://www.ncbi.nlm.nih.gov/books/NBK615956/. Not a fresh whole-report or supplement read. PDF retry returned 403; official HTML supplied the needed source text.",
+      "reusedFrom": ""
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx",
+      "sourceSha256": "9ec6a9f9b7a248f707a5eeba44be33670b2a7b74880a0bea31d6ee903b476538",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "All 212 current MDX lines read, including frontmatter, all clinical prose/tables, 10 references and inline VideoCards entry. Sole import is VideoCards; inline video metadata has no imported clinical claims. Linked treatment/technique pages and video itself not read. Root then read the full MDX, implemented the narrow FUTURE count/citation correction and reviewed the final diff; no other clinical content changed.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "partial: core guideline and FUTURE check; sex-specific diagnostic pathways remain",
+        "treatment": "partial: AUA sequence checked; male, estrogen, behavioral and intervention comparisons remain",
+        "numbers": "partial: FUTURE analysis/randomization counts corrected and Table 5 results checked; prevalence and other trial numbers remain",
+        "doseDeviceSafety": "partial: Botox label safety checked; male CIC and remaining class/device risks remain",
+        "anatomyTechnique": "pending: outlet-associated mechanisms and reconstructive safe-storage indications not source checked",
+        "followUp": "pending: treatment-failure/follow-up pathway not independently source checked",
+        "importedDataFigures": "no clinical data or figures imported; sole VideoCards import has inline video ID/title",
+        "references": "partial: all 10 bibliography entries read in MDX; underlying sources beyond five checked groups remain",
+        "currency": "partial: official AUA 2024 guidance and July 2026 RF abstract checked; full cross-topic current-guidance sweep not done"
+      },
+      "claimChecks": [
+        {
+          "claim": "OAB diagnosis, selective PVR and no routine initial advanced testing",
+          "sourceIds": [
+            "aua-oab-2024"
+          ],
+          "locator": "MDX Definitions and Epidemiology; Diagnosis and Evaluation. AUA 2024 statement 5, statement 6 and adjacent diagnostic search extracts; prior scoped core-guideline record.",
+          "verdict": "supported",
+          "note": "Consistent at targeted-check level; neither snippets nor prior record establish full guideline section reading. Other differential details remain pending."
+        },
+        {
+          "claim": "OAB medication choices/risks and minimally invasive treatment sequence",
+          "sourceIds": [
+            "aua-oab-2024"
+          ],
+          "locator": "MDX Pharmacotherapy and Minimally invasive therapy. AUA 2024 statements 16-19 and 22-27 in targeted official search extracts, with adjacent side-effect excerpts.",
+          "verdict": "supported",
+          "note": "Guideline permits procedures without mandatory behavior/drug trials and recommends offering SNM/PTNS/botulinum after insufficient response/intolerance. Extracts are not full-section adjudication."
+        },
+        {
+          "claim": "FUTURE randomized count and final patient-reported outcome",
+          "sourceIds": [
+            "future-hta-2025",
+            "future-hta-flow-html"
+          ],
+          "locator": "MDX Escalation paragraph; NIHR HTA flow pp. 44-45 and Table 5 p. 49 (web PDF lines 1746-1819 and 2001-2017). Root repeatable HTML check: https://www.ncbi.nlm.nih.gov/books/NBK615947/ opening recruitment/postrandomization-exclusion paragraphs, and https://www.ncbi.nlm.nih.gov/books/NBK615956/ Flow of participants through the trial and Primary outcome sections.",
+          "verdict": "corrected",
+          "note": "Corrected to 1,103 randomized and 1,099 analyzed after four exclusions, with added direct HTA flow/results citations. Root independently verified the flow in official HTML. Final effect estimate is unchanged; Sol checked Table 5, root checked the corresponding results text. Neither reader claims whole-source-package completion."
+        },
+        {
+          "claim": "Botox retention/UTI and catheterization safety counseling",
+          "sourceIds": [
+            "botox-fda-label-2023",
+            "botox-manufacturer-current"
+          ],
+          "locator": "MDX Minimally invasive therapy table. FDA 2023 label sections 2.3 and 5.12-5.13, Table 10 p. 16; current manufacturer OAB safety text.",
+          "verdict": "supported",
+          "note": "Warnings and pre-injection PVR/catheterization counseling supported; label states it may not be latest, so current FDA label/version remains an open check. No dose amount appears in this MDX."
+        },
+        {
+          "claim": "July 2026 microablative vaginal RF RCT null added benefit and higher adverse-event percentage",
+          "sourceIds": [
+            "rf-publisher-abstract-2026",
+            "rf-pubmed-2026"
+          ],
+          "locator": "MDX Energy-based treatment paragraph; publisher/PubMed abstract only, no full trial tables or supplement.",
+          "verdict": "unresolved",
+          "note": "Abstract matches 140 randomized, RF 72/sham 68, behavioral therapy in both arms, no superiority at six months and 44.2% vs 22.9% adverse events. Full paper, harms definitions, attrition, numerical outcome table and supplement remain unread; do not generalize across device classes."
+        }
+      ],
+      "unresolvedClaims": [
+        "Obtain legitimate RF full paper plus outcome/adverse-event tables and supplement if available; publisher full URL redirected to abstract. Until then retain abstract-level scoped claim.",
+        "Check prevalence range and its population denominator (refs 1-2), male outlet/combination pathways and post-Botox CIC by sex (refs 3, 6), vaginal/systemic estrogen distinction (refs 4-5), men's stepped behavior/drug trial (ref 7), and comparative procedural benefits/harms (ref 8).",
+        "Check reconstructive safe-storage indications and follow-up/treatment-failure pathways with shared linked treatment/procedure pages; no whole-page clearance yet.",
+        "Confirm latest FDA Botox label before declaring label-currency coverage complete; 2023 FDA PDF warns it may be superseded."
+      ],
+      "preservationReview": "Root inspected final diff: no sections, tables, references or media removed. Only FUTURE count wording, supporting citation and narrowly scoped evidence metadata changed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/sol-high-oab-pilot.md",
+      "reviewNote": "Passed for accurate bounded scope, preservation and the FUTURE correction only; this is not independent confirmation of every pilot claim or full-page clearance. Root corrected overstatement of the inherited guideline read scope."
+    }
+  ]
+}

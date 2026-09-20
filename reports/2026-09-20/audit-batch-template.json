@@ -1,0 +1,51 @@
+{
+  "batchId": "REPLACE-WITH-CLUSTER-ID",
+  "reviewedAt": "YYYY-MM-DD",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "source-1",
+      "url": "https://REPLACE-WITH-PRIMARY-SOURCE",
+      "version": "Actual publication or guideline/IFU version",
+      "access": "relevant-sections",
+      "readScope": "Exact sections, tables, figures and supplements actually read; distinguish new reading from reused report",
+      "reusedFrom": ""
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/REPLACE.mdx",
+      "sourceSha256": "REPLACE-WITH-FINAL-CONTENT-SHA256",
+      "status": "unresolved",
+      "fullTextRead": false,
+      "readScope": "Exact current page and imported clinical data actually read",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "pending",
+        "treatment": "pending",
+        "numbers": "pending",
+        "doseDeviceSafety": "pending",
+        "anatomyTechnique": "pending",
+        "followUp": "pending",
+        "importedDataFigures": "pending",
+        "references": "pending",
+        "currency": "pending"
+      },
+      "claimChecks": [
+        {
+          "claim": "Specific consequential claim or coherent claim group",
+          "sourceIds": ["source-1"],
+          "locator": "Page/section/table/figure and exact applicable population/version",
+          "verdict": "unresolved",
+          "note": "What matches, what changes and what cannot yet be concluded"
+        }
+      ],
+      "unresolvedClaims": ["Specific outstanding claim/source package and next action"],
+      "preservationReview": "List removed sections/tables/references/media with specific justification, or explicitly state none removed",
+      "reviewCheck": "pending",
+      "reviewRecord": "reports/YYYY-MM-DD/REPLACE.md"
+    }
+  ]
+}

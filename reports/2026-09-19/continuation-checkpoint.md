@@ -1,5 +1,7 @@
 # Efficient continuation checkpoint — September 19, 2026
 
+**Current entry point:** [RESUME-HERE.md](../../RESUME-HERE.md) and the [Sol/High workflow](../2026-09-20/audit-workflow.md). Do not use the historical queue below to choose the next page.
+
 **Superseded continuation state:** The [September 20 recovery record](../2026-09-20/content-restoration-release.md) and [content-preservation policy](../2026-09-20/content-preservation-policy.md) take precedence. Subsequent blanket removals were reversed; do not resume that approach. The snapshot below is historical.
 
 ## Verified repository state

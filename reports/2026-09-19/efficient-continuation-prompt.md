@@ -1,38 +1,21 @@
 # WARWIKI — efficient continuation prompt
 
-Paste the text below into a fresh Codex task in the WARWIKI project. Suggested setting: GPT-5.6 Terra, Medium reasoning. This is a workflow recommendation, not a guarantee of a particular token saving or clinical accuracy. Use stronger review for unresolved consequential clinical interpretation; Luna is better suited to clearly specified mechanical changes.
+**Updated September 20, 2026: GPT-5.6 Sol / High.** This replaces the Terra / Medium lead recommendation. Use the existing **Continue WARWIKI audit** task when possible; avoid two tasks editing the same checkout. A fresh task must deliberately receive the writer assignment in the control file first.
 
 ---
 
-Continue WARWIKI in `/Users/joyboy/Documents/WARWIKI/warwiki`. Complete the ongoing whole-site clinical reliability and technical optimization audit while minimizing duplicated work and token use. Implement changes; do not merely propose them.
+Continue the existing WARWIKI audit in `/Users/joyboy/Documents/WARWIKI/warwiki` with **GPT-5.6 Sol / High**. Complete the audit before starting new OpenEvidence pulls. Record later refresh candidates, especially SUI/OAB, in `reports/2026-09-20/open-evidence-refresh-queue.md`. Epic stays paused.
 
-**Resume efficiently**
-- Follow current `AGENTS.md`. Read the current sections of `RESUME-HERE.md` and `reports/2026-09-20/content-restoration-release.md` and the completion criteria in `reports/2026-09-12/completion-plan.md`. Check Git status before editing. Open older reports only when relevant to the selected pages.
-- Use the existing page ledger and source records. Do not restart the audit, load the entire conversation/changelog, or reread already-reviewed unchanged sources without a specific reason. Verify page hashes; attribute reused reviews instead of claiming new personal reads.
-- Work on a coherent batch of roughly 3–5 related pages, fewer for complex source packages. Select the next unfinished coherent batch from the current ledger; September 20 restoration supersedes the previous destructive audit. The entire-site objective remains open after each batch.
+Read only the current instructions in `AGENTS.md`, `RESUME-HERE.md`, `reports/2026-09-20/audit-control.json` `reports/2026-09-20/audit-workflow.md` and `reports/2026-09-20/content-preservation-policy.md`. Check Git status and writer ownership. Do not load the old conversation or full changelog. Follow the control file's exact next action, using existing page hashes/source records and the completed OAB pilot. Preserve the unrelated calendar file and any other task's drafts.
 
-**Preserve useful content**
-- Follow `reports/2026-09-20/content-preservation-policy.md`. Manufacturer IFUs/catalogs support device facts and use; anatomy texts, technical papers, operative videos and established teaching support anatomy and technique. RCTs are not required for these descriptions.
-- Preserve practical details, references and media. Unfinished review or inaccessible full text does not make existing content false. Correct or qualify specific problematic claims; never replace a substantive page with an audit/removal notice. Keep source gaps in internal records.
-- Inspect the diff for accidental content loss before publishing. Do not improve audit counts by deleting the material that still needs review.
+Work on **one coherent 2–4-page cluster** (one page if dense). Fully read its MDX, imported clinical data and relevant figures. Map consequential claims to exact source locations; check guideline/label currency and high-impact newer evidence. Actually read the required primary text, tables, figures and supplements. Record what was read, what is reused and what remains inaccessible. A page read, an abstract, metadata or downloaded PDF is not full-source review. Reuse adequately documented unchanged source reviews with attribution instead of restarting them.
 
-**Preserve clinical standards**
-- Fully read each selected page, including references and clinical data imported by components. Prioritize major guidelines, large trials, Cochrane reviews, systematic reviews and practice-changing evidence.
-- Verify substantive recommendations, numbers, denominators, operative instructions and diagram anatomy against primary sources. For sources requiring full review, actually read the accessible full text, tables, relevant supplements and figures; record exact coverage. Abstracts, downloads, captions and metadata never count as full-source reads.
-- Reuse sufficiently detailed existing source audits. Do not recursively read every paper in a review's bibliography just because it is cited; pursue originals needed to check site claims and the existing unresolved-source queue. Preserve outstanding gaps.
-- If access fails, make a bounded attempt through a legitimate alternative, log the limitation, and continue independent work. Do not guess missing results or mark unresolved claims verified. Escalate a consequential uncertainty for stronger review while progressing other pages.
+Preserve useful manufacturer IFUs, specifications, anatomy, operative teaching, small-series technical descriptions, references and media. Match the source type to the claim. Lack of an RCT or unfinished rereview never justifies emptying a page. Correct demonstrated errors narrowly; keep gaps internal and keep ordinary page-last-updated display. No Clinic/quiz, public audit notices or manufactured clinician sign-off.
 
-**Reduce overhead**
-- Use focused searches and bounded, non-truncated reads. Batch independent retrievals. Keep lengthy tool output out of progress updates.
-- Default to one worker; delegate only a bounded, non-overlapping task when it saves total work. Do not give multiple workers the same source or automatically reread everything they reviewed. Spot-check consequential findings.
-- Keep one concise source/change record per batch: page/hash, claim corrected, source URL/DOI and version, actual read scope, remaining gaps and checks. Reuse the existing ledger; avoid duplicate narrative reports. Save durable research notes under `reports/`, never solely in `/tmp`. Keep PDFs and large downloads outside deployment assets.
-- Give brief updates on meaningful findings. Run required checks once after the batch; repeat only after relevant edits or failures.
+Use one source/change report and a structured record per batch, following `reports/2026-09-20/audit-batch-template.json`. Save records in `reports/2026-09-11/full-site-review/claim-batches/`; run `python3 reports/2026-09-20/check-audit-batch.py <record>` and regenerate the existing ledger. Claims with unresolved sources remain partial/blocked, even on previously “updated” pages. Apply the focused source/diff review gate in the workflow before publication. Keep research downloads outside deployment assets.
 
-**Deliver and retain preferences**
-- Correct pages and affected companions, citations, figures and links. Preserve ordinary page-last-updated display; never invent clinician sign-off. Update the ledger, changelog and a compact next-step checkpoint.
-- For site changes, run lint, typecheck, unit tests, maintenance tests, production build/size checks and whitespace checks; visually inspect changed layouts/figures. Authoring-only reports need appropriate document/link checks, not a fresh site build.
-- Standing authorization: commit and push completed validated changes to `main/origin/main`, stage only intended files, and verify exact-commit CI/Vercel/live content when a deployment is expected. Preserve `world-cup-next-week-pacific.ics` and other unrelated work.
-- Evidence maintenance stays quarterly; technical link checks monthly. Epic stays paused with `EPIC-ROADMAP.md` available. Clinic/quiz remain removed, History discreet, handouts recoverable but excluded from builds.
-- Keep Vercel deployments lean and grouped. Delete obsolete deployments only after checking current production, aliases and a known-good rollback. Local build size is not the account's storage meter. Do not upgrade plans or redeem credits.
+One writer; delegate only a bounded non-overlapping read-only task when it saves work. Terra/Medium is for specified mechanical support, not unsupervised clinical decisions. No automatic Astra/Ultra escalation. If a difficult consequential question needs stronger review, isolate it and continue other independent claims. After a bounded failed source-access attempt, save the exact gap rather than repeating requests or removing useful content.
 
-Begin the next unfinished batch. At a stopping point, report briefly what changed, what passed, what remains and the exact next action. Never describe a partial batch as a completed whole-site clinical audit.
+For site changes run lint, typecheck, unit/maintenance tests, build/size/link checks, whitespace checks and relevant visual review once per grouped release. Stage only intended files, commit/push validated work to main/origin/main, and verify exact-commit CI/Vercel/live content. Reports-only changes need document/data checks, not a site build. Do not publish one deployment per paper. No spending, plan upgrades or credit redemption.
+
+After each completed cluster, continue the next cluster in the workflow priority order, preserving the entire-site objective. At a checkpoint save the current cluster, finished claim/source locations, exact unresolved next action, draft paths and validation/publication status. Do not advance merely because a report exists. Do not call a partial batch or successful build a completed clinical audit. Quarterly evidence maintenance and monthly technical link checks remain unchanged.
