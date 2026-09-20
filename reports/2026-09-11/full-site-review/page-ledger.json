@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 754,
+    "fullTextReadForCurrentContent": 755,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 427,
-      "updated": 725
+      "unreviewed": 426,
+      "updated": 726
     }
   },
   "pages": [
@@ -8539,11 +8539,25 @@
       "title": "TRAM Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "9d94576b941e0c286d37880a8be17d4a9826e40524c3e120c5d6dba7736f921d",
-      "reviewRecords": []
+      "sourceSha256": "f403efb6b6bec067ae1956a5fc0446f50f03bc9494a95779c94081c49e46de5f",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Hartrampf et al. 1982, Patsner and Hetzler 1994, Höckel and Dornhöfer 2008, and Qiu et al. 2013.",
+          "changes": "Rebuilt the detailed operative overview as a bounded reported-use page; removed unverified anatomy, technical, outcome, comparison, algorithm, and recommendation claims. Corrected the dependent vulvar database descriptor.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/6459602/",
+            "https://pubmed.ncbi.nlm.nih.gov/7959272/",
+            "https://pubmed.ncbi.nlm.nih.gov/18510987/",
+            "https://pubmed.ncbi.nlm.nih.gov/24281607/"
+          ],
+          "unresolved": "Inherited vascular, perforator, perfusion-zone, operative, donor-site, enhancement, and comparative source packages were not fully reviewed. No clinical clearance, procedure recommendation, or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/tram-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/v-y-advancement.mdx",
