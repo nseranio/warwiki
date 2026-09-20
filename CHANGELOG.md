@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-second continuation: Moschcowitz evidence boundaries
+
+Rebuilt Moschcowitz around the directly read historical randomized abstract and small combined-procedure series. Removed fixed operative rules, mandatory sacrocolpopexy adjunct language, and unverified long-term or procedure-specific safety claims. The revised page retains the source-specific vaginal-hysterectomy comparison favoring McCall, without extending it across routes or variants. The [recovery record](reports/2026-09-19/moschcowitz-recovery-review.md) preserves the exact full-text gaps.
+
+Ledger: 682 full current MDX reads and 654 scoped updates of 1,186 files; 21 checked, 12 unresolved and 499 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-first continuation: mesh/graft regulatory recovery
 
 Rebuilt the vaginal mesh/graft overview around the current FDA U.S. availability and follow-up boundary. Removed historical numeric rates, product/risk mandates, procedural rules, detailed removal advice, and broad cross-route claims not supported by newly accessible complete sources. The [recovery record](reports/2026-09-19/mesh-graft-recovery-review.md) distinguishes verified FDA content from Cochrane/trial records whose complete texts remain unrecovered.
