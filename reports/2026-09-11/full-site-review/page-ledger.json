@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 713,
+    "fullTextReadForCurrentContent": 714,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 468,
-      "updated": 685
+      "unreviewed": 467,
+      "updated": 686
     }
   },
   "pages": [
@@ -177,11 +177,24 @@
       "title": "The Adnexa",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "6886ac05629305a353c3636e15ec3ac91b198f4b252dbca00483e37aa6b0f9dd",
-      "reviewRecords": []
+      "sourceSha256": "2db14410f16c93306d6847d98ef35eae3af65ee82dc1e690761ae0e0e2b6a727",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. Accessible NCBI Bookshelf anatomy text for Fallopian Tube, Broad Ligaments, and Oophorectomy was read; inherited disease, oncology, fertility, endocrine, and procedure source packages were not fully reviewed.",
+          "changes": "Rebuilt a detailed multidisciplinary clinical guide as a bounded adnexal anatomy overview; removed surgical technique, risk-reduction, staging, endocrine-treatment, outcome, diagnostic, and management claims.",
+          "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK547660/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK499943/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK559235/"
+          ],
+          "unresolved": "No full-source review of the inherited ureteral-injury, torsion, ectopic pregnancy, infection, ovarian-vein, oncologic, salpingectomy, RRSO, or hormone-related claims. No clinical verification or management recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/adnexa-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/genitalia/cervix.mdx",
