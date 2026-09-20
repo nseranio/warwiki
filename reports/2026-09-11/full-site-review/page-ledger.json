@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 705,
+    "fullTextReadForCurrentContent": 706,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 21,
       "unresolved": 12,
-      "unreviewed": 476,
-      "updated": 677
+      "unreviewed": 475,
+      "updated": 678
     }
   },
   "pages": [
@@ -36225,11 +36225,33 @@
       "title": "Staged Bipedicled Scrotal Flap (Pribaz / McLaughlin)",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "b8d88a8a3682fd21128d000d70e4a846ff8a006a88afe0bccf0058deee2acf03",
-      "reviewRecords": []
+      "sourceSha256": "bfa3829ae467d7e3569365705e1e5755b23d13a76b46854273a781118d924281",
+      "reviewRecords": [
+        {
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "bfa3829ae467d7e3569365705e1e5755b23d13a76b46854273a781118d924281",
+          "scope": "Complete inherited and revised MDX read. Crossref bibliographic records and abstracts read for McLaughlin/Abbassi/Pribaz 2024 and Lumbiganon et al. 2023. Full source packages, tables, figures and supplements were not recovered.",
+          "changes": [
+            "Replaced detailed staging protocol, timing, comparative table, generalized indications and outcome claims with an abstract-bounded overview.",
+            "Retained only cohort-level abstract findings and explicitly limited the condition-specific comparison."
+          ],
+          "sources": [
+            "https://doi.org/10.1097/PRS.0000000000010811",
+            "https://doi.org/10.1111/iju.15209"
+          ],
+          "unresolved": [
+            "Full primary source packages and inherited supporting sources remain unrecovered.",
+            "No standardized protocol, comparative conclusion beyond the abstract-level condition-specific finding, or broad clinical verification is asserted."
+          ],
+          "recordFile": "reports/2026-09-20/staged-scrotal-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04e-genital-reconstruction/testicular-prosthesis.mdx",
