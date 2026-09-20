@@ -1,0 +1,46 @@
+{
+  "batchId": "2026-09-20-oab-treatment-database",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {"id":"aua24","url":"https://onlinelibrary.wiley.com/doi/10.1002/nau.25532","version":"AUA/SUFU idiopathic OAB guideline 2024, publisher-hosted full HTML","access":"relevant-sections","readScope":"Statements 1-6, 16-22, 23-29, 30-33 and adjacent discussion; official AUA PDF returned 403; no full guideline or supplement read","reusedFrom":""},
+    {"id":"gemtesa25","url":"https://www.gemtesa.com/files/gemtesa-prescribing-information.pdf","version":"GEMTESA US label revised February 2025","access":"manufacturer-document","readScope":"Highlights and sections 1, 2.1, 5.1, male BPH safety excerpts; not entire label","reusedFrom":""},
+    {"id":"botox23","url":"https://www.rxabbvie.com/pdf/botox_pi.pdf","version":"BOTOX US label PDF marked revised November 2023","access":"manufacturer-document","readScope":"Indication/dose highlights, section 5.13 and Table 10; not entire label","reusedFrom":""},
+    {"id":"malcher22","url":"https://pubmed.ncbi.nlm.nih.gov/35686842/","version":"Malcher et al J Urol 2022","access":"abstract-only","readScope":"PubMed abstract with class-exposure dose strata; full article not read","reusedFrom":""}
+  ],
+  "pages": [
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx",
+      "sourceSha256":"5c9c2e12f34600ba94a3cf7116994c65719f50ed35ca2713978e8055c068eda3",
+      "status":"updated",
+      "fullTextRead":true,
+      "readScope":"Complete original 210-line MDX including all exported treatment rows and final changed sections; imported GenericDatabase component read and found to be presentation/filtering only",
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "coverage":{
+        "evaluation":"AUA minimum versus optional initial evaluation verified and corrected",
+        "treatment":"AUA option versus Grade A sequence, BPH and invasive categories targeted; device comparisons pending",
+        "numbers":"75-mg vibegron dose and pooled 100-U Botox CIC rate checked; other response/duration percentages pending",
+        "doseDeviceSafety":"GEMTESA label dose/retention and Botox label CIC targeted; other device IFUs pending",
+        "anatomyTechnique":"Navigation database only; linked procedures not clinically audited here",
+        "followUp":"Botox two-week PVR and invasive long-term counseling targeted; other follow-up pending",
+        "importedDataFigures":"All inline database rows and GenericDatabase presentation component read; linked procedure media not read",
+        "references":"Direct guideline and label links added; original trial-level claims remain pending",
+        "currency":"AUA 2024, GEMTESA 2025 and available current BOTOX label checked; broader guideline/device update search pending"
+      },
+      "claimChecks":[
+        {"claim":"Mandatory questionnaire, three-day diary and PVR as initial evaluation","sourceIds":["aua24"],"locator":"AUA statements 1-6 and adjacent evaluation discussion","verdict":"corrected","note":"History, examination and urinalysis are minimum; other measures are selective."},
+        {"claim":"All minimally invasive options are first-line Grade A","sourceIds":["aua24"],"locator":"AUA statements 23-25 and discussion","verdict":"corrected","note":"Early access without trials is Expert Opinion; Grade A offer follows inadequate response/intolerance."},
+        {"claim":"Vibegron 100 mg presented as US treatment dose","sourceIds":["gemtesa25"],"locator":"US label section 2.1 and indication section 1.2","verdict":"corrected","note":"US labeled dose 75 mg daily; male BPH-drug population indication confirmed."},
+        {"claim":"Botox retention shorthand and comparator ranking","sourceIds":["botox23","aua24"],"locator":"BOTOX section 5.13, Table 10; AUA statements 25-27","verdict":"corrected","note":"Label CIC rate 36/552 versus 2/542 and baseline PVR/catheterization planning; cross-trial efficacy ranking not established."},
+        {"claim":"Trospium cannot cross BBB, fesoterodine uniquely dementia-safe and Malcher estimate agent-specific","sourceIds":["aua24","malcher22"],"locator":"AUA statement 18 and discussion; Malcher abstract","verdict":"corrected","note":"Lower expected CNS penetration is not proof of zero risk; Malcher 1.48 is a class-exposure observational estimate."},
+        {"claim":"Individual response percentages, implant risks, MRI conditions and remaining efficacy rows","sourceIds":[],"locator":"Comparison table and linked device source packages","verdict":"unresolved","note":"Not fully rechecked against each trial/IFU in this batch; page remains partial."}
+      ],
+      "unresolvedClaims":["Full original trials and IFUs behind SNM/iTNM/PTNS response, duration, MRI and implant-risk cells; Sheyn and other dementia cohorts; Huang network meta-analysis; linked procedure and pharmacology pages"],
+      "preservationReview":"No sections, treatment categories, procedure-comparison rows, practical links or database entries removed; two unsupported cognitive risk tiers were consolidated into one while agent detail remains in the linked hub; specific unsafe dose/mandatory-test/ranking statements corrected.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/oab-treatment-database-review.md"
+    }
+  ]
+}

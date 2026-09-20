@@ -8,6 +8,12 @@ For commit-level detail run `git log --oneline`.
 
 
 
+## 2026-09-20 — OAB treatment database safety and sequencing corrections
+
+Read the previously unreviewed treatment database and its rendered data component. Corrected the US vibegron dose to 75 mg, the mandatory-versus-optional initial evaluation distinction, procedural access versus Grade A sequencing, Botox CIC denominator, and unsupported drug/device rankings. Preserved treatment options, links and practical tables. [Source/access report](reports/2026-09-20/oab-treatment-database-review.md); unresolved comparisons remain partial.
+
+---
+
 ## 2026-09-20 — Targeted glans-page source adjudication
 
 Checked the preserved glans-resurfacing and glansectomy draft against the 2026 EAU-ASCO guidance and accessible primary reports. Kept operative teaching and study tables; corrected the fixed 5 mm margin rule, routine frozen-section framing, mixed-cohort recurrence attribution, observational functional comparison, and TODGA dominance claim. The [source report](reports/2026-09-20/glans-draft-source-adjudication.md) and claim batch record distinguish full papers from abstracts and list remaining access gaps. Both pages remain partially audited, not clinically cleared.
