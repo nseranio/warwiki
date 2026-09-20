@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-seventh continuation: defibulation evidence boundaries
+
+Rebuilt defibulation around the current WHO conditional recommendation, flexible pregnancy-timing guidance, counselling requirements, and no-reinfibulation boundary. Removed unsupported universal timing, anaesthesia, technique, outcome, and psychosocial rules. The [recovery record](reports/2026-09-19/defibulation-recovery-review.md) preserves exact source access and gaps.
+
+Ledger: 687 full current MDX reads and 659 scoped updates of 1,186 files; 21 checked, 12 unresolved and 494 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirty-sixth continuation: Cecil-Culp evidence boundaries
 
 Rebuilt Cecil-Culp as a bounded historical overview around its recoverable hypospadias/fistula reports, separately labeled trauma case, and current lichen-sclerosus guideline boundary. Removed unsupported adult-stricture protocol, terminology equivalence, timing, and comparative outcome claims. The [recovery record](reports/2026-09-19/cecil-culp-recovery-review.md) records the direct source access and gaps.

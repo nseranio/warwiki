@@ -4,7 +4,7 @@
 
 Checked locally September19: main contains content commit `db18de10` and publication record `38575d8a`. The September13 release record documents exact-commit CI/Vercel success and all12production checks; production was not rechecked for this authoring-only handoff. Start with [the release record](../2026-09-13/twenty-fifth-continuation-release.md) only if those details are needed.
 
-Recorded coverage after the Cecil-Culp recovery batch:686full current MDX reads,658scoped updates,21checked,12unresolved,495unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
+Recorded coverage after the defibulation recovery batch:687full current MDX reads,659scoped updates,21checked,12unresolved,494unreviewed out of1,186files. Reading a page is not full-source or clinical clearance.52figures remain; SSLF is withdrawn, USLS corrected. Build/publication status is recorded separately after validation.
 
 ## Next work and recovery warning
 
@@ -22,6 +22,7 @@ Prior reviewers stopped on a usage-limit error. Their unfinished batch26 `/tmp` 
 8. **aOAP completed:** [the recovery review](aoap-recovery-review.md) records full reading of the indirect 2024 systematic review and abstract-only access to the primary anatomy and clinical reports. The page is a bounded overview.
 9. **Bipedicled anterior scrotal flap completed:** [the recovery review](bipedicled-scrotal-flap-recovery-review.md) records abstract-only primary clinical access and the unrecovered anatomy source. The page is a bounded overview. Continue with the next unreviewed ledger item.
 10. **Cecil-Culp completed:** [the recovery review](cecil-culp-recovery-review.md) records three primary abstracts, current AUA guideline statements, and unrecovered inherited source packages. The page is a bounded historical overview. Continue with defibulation.
+11. **Defibulation completed:** [the recovery review](defibulation-recovery-review.md) records full reading of current WHO recommendations and abstract-only scope for the remaining current evidence. The page is a bounded overview. Continue with EPAP hemi-scrotal flap.
 
 Use committed reports under `reports/2026-09-13/apical-source-reading/` and `reports/2026-09-12/prolapse-source-reading/` for completed work. Keep their exact source-access distinctions. Then continue the existing ledger's remaining tools, foundations, techniques, resources/History, imported clinical data, figures and OpenEvidence reconciliation.
 
