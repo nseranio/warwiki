@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 726,
+    "fullTextReadForCurrentContent": 727,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 455,
-      "updated": 697
+      "unreviewed": 454,
+      "updated": 698
     }
   },
   "pages": [
@@ -837,11 +837,30 @@
       "title": "Female Urethra",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "61ba2a353ebc79a24b42defa78ef71b2817593747a43acdf9fadb2c10149d4dd",
-      "reviewRecords": []
+      "sourceSha256": "da37d42a77c0184250aa92c25969fbc9794491d1695ab09692e8c136ceab1c2a",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/urinary-tract/female-urethra.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "da37d42a77c0184250aa92c25969fbc9794491d1695ab09692e8c136ceab1c2a",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf text for deep perineal space and urethral-sphincter anatomy plus accessible PMC lower-urinary-tract and female-urethral anatomy/histology reviews read for retained high-level anatomy. Inherited continence, surgical, functional, imaging, vascular, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded anatomy orientation.",
+            "Removed fixed measurements, continence models, procedural targeting, diagnostic frameworks, treatment recommendations, and outcome claims that were not verified in this batch.",
+            "Retained existing anatomy lecture series placement."
+          ],
+          "unresolved": [
+            "Clinical interpretation of female continence mechanisms, menopause-related change, sling or other continence surgery, urethral diverticulum, stricture, fistula, reconstruction, and postoperative function requires focused current-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/female-urethra-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/urinary-tract/gu-embryology.mdx",
