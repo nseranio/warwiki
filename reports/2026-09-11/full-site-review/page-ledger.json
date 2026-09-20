@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T15:45:40.693487+00:00",
+  "generatedAt": "2026-09-20T15:53:15.465271+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
@@ -8,13 +8,13 @@
     "statusCounts": {
       "checked": 20,
       "restored-pending-review": 118,
-      "unresolved": 12,
+      "unresolved": 11,
       "unreviewed": 354,
-      "updated": 682
+      "updated": 683
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1170,
-      "partial": 16
+      "not-recorded": 1169,
+      "partial": 17
     }
   },
   "pages": [
@@ -44314,11 +44314,11 @@
       "title": "Kelly Plication",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unresolved",
+      "status": "updated",
       "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "4d60f701197a5e0ee48158e6d5d5c8352025a04f77274055fa9f0d89a59b483b",
+      "auditDisposition": "partial",
+      "sourceSha256": "0bbaa3eb97df91321465ed1202a56fb0de3671c458d82914ef7055da592f31ab",
       "reviewRecords": [
         {
           "file": "docs/04-surgical-techniques/04g-prolapse-repair/anterior/kelly-plication.mdx",
@@ -44336,6 +44336,149 @@
             "Historicaltechnique/cohorts, anteriorrepairCochrane fullpackage, contemporaryPLPreport and other numerical/morbidityclaims needdedicatedfullsourceaudit. Narrowcorrections do notclose thosegaps."
           ],
           "recordFile": "surgical-rest.json"
+        },
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/anterior/kelly-plication.mdx",
+          "sourceSha256": "0bbaa3eb97df91321465ed1202a56fb0de3671c458d82914ef7055da592f31ab",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current MDX before and after edit, operative steps, all headings/tables, 14 references and related links. No imported data, figure or video exists on this page.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Historical genuine-SUI trial/series populations and assessed denominators corrected; inherited diagnostic/mechanistic claims remain source-pending.",
+            "treatment": "NICE SUI-versus-POP distinction reused; Kelly, modified Kelly and distinct PLP no longer conflated. Named variants and technique source package remain open.",
+            "numbers": "Two unrelated PMIDs fixed; Beck 194/519, Park >3-year 69/66, Bergman 127/107/93 and Cochrane endpoint denominators scoped.",
+            "doseDeviceSafety": "No drug dose or device IFU. Historical Beck harms scoped; comparative modern safety and PLP adverse-event methods remain unresolved.",
+            "anatomyTechnique": "Useful five-step transvaginal technique and named variations preserved; primary technical texts and exact suture placement not completely reconciled.",
+            "followUp": "Park >3 years versus up to ten-year observation, Bergman five-year completers and PLP six-month endpoint clarified; full longitudinal tables unavailable.",
+            "importedDataFigures": "No imported clinical data, linked figure or video on this page.",
+            "references": "All 14 references retained; Beck/Park wrong PMIDs and PLP malformed author string corrected. Other inherited references not independently identity-audited.",
+            "currency": "Current NICE recommendation and 2026 PLP abstract checked; no new practice-change claim inferred from short nonrandomized cohort."
+          },
+          "claimChecks": [
+            {
+              "claim": "Beck historical 519 series versus 194 genuine-SUI subgroup and 75/94% outcome",
+              "sourceIds": [
+                "beck-1991"
+              ],
+              "locator": "PubMed 1945199 original title/abstract",
+              "verdict": "corrected",
+              "note": "Fixed unrelated PMID 1945202; subgroup, design and morbidity denominators made explicit."
+            },
+            {
+              "claim": "Park 680-patient comparative follow-up and Kelly/MMK 69/66% timing",
+              "sourceIds": [
+                "park-1988"
+              ],
+              "locator": "PubMed 3353049 original abstract",
+              "verdict": "corrected",
+              "note": "Fixed unrelated PMID 3281007 and falsely stated one-year estimate; now more than three years."
+            },
+            {
+              "claim": "Bergman five-year RCT outcomes",
+              "sourceIds": [
+                "bergman-1995"
+              ],
+              "locator": "PubMed 7631729 Study design and Results",
+              "verdict": "corrected",
+              "note": "Added 127 randomized, 107 at one year and 93 at five years; cotton-swab interpretation limited to evaluated trial cohort."
+            },
+            {
+              "claim": "Cochrane anterior repair versus open retropubic suspension",
+              "sourceIds": [
+                "glazener-2017",
+                "nice-ng123"
+              ],
+              "locator": "Official Cochrane Main results/Conclusions and indexed original comparator/results sections",
+              "verdict": "corrected",
+              "note": "Mostly Burch, not exclusively; exposed event denominators and preserved current NG123 recommendation without substituting POP indication."
+            },
+            {
+              "claim": "Modern PLP versus TOT cohort as an alternative to Kelly",
+              "sourceIds": [
+                "incebiyik-2026"
+              ],
+              "locator": "PubMed 41653288 Methods and Results",
+              "verdict": "corrected",
+              "note": "Separated distinct PLP technique, 48/92 nonrandomized six-month population and baseline imbalance; nonsignificance is not equivalence."
+            },
+            {
+              "claim": "Inherited variants, mechanism, exact suture anatomy and comparative complications",
+              "sourceIds": [],
+              "locator": "Definition, Technique, Mechanism, Variations and Complications sections",
+              "verdict": "unresolved",
+              "note": "Practical content retained; primary operative/anatomy sources and full historical methods/harms tables required before clearance."
+            }
+          ],
+          "unresolvedClaims": [
+            "Obtain Beck/Park/Bergman original full methods, follow-up and arm-level complication tables via legitimate library access; do not infer randomized effects from Beck or Park.",
+            "Read full Cochrane risk-of-bias and outcome tables and 2026 PLP publisher operative/adverse-event package before upgrading abstract/indexed support.",
+            "Reconcile named variations, exact fascial/suture placement, mechanism and remaining reference identities with primary technical/anatomy sources; preserve usable teaching meanwhile."
+          ],
+          "preservationReview": "All headings, five operative steps, named variants, 14 references and related links retained. Only mis-scoped numeric claims, citation identities and an unsupported cross-procedure safety ranking were corrected; no video/figure was present to remove.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/kelly-plication-review.md",
+          "recordFile": "claim-batches/2026-09-20-kelly-plication.json",
+          "sources": [
+            {
+              "id": "beck-1991",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/1945199/",
+              "version": "Beck et al. 1991, PMID 1945199",
+              "access": "abstract-only",
+              "readScope": "Complete original indexed abstract and bibliographic record; publisher full text and subgroup tables unavailable.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "park-1988",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/3353049/",
+              "version": "Park and Miller 1988, PMID 3353049",
+              "access": "abstract-only",
+              "readScope": "Complete original PubMed abstract for 680-patient comparative follow-up and more-than-three-year 69/66% results; full follow-up tables unavailable.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "bergman-1995",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/7631729/",
+              "version": "Bergman and Elia 1995, PMID 7631729",
+              "access": "abstract-only",
+              "readScope": "Complete original randomized-trial abstract for 127/107/93 follow-up, five-year rates and cotton-swab results; Elsevier/Ovid full methods and tables not obtained.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "glazener-2017",
+              "url": "https://www.cochrane.org/evidence/CD001755_anterior-vaginal-repair-urinary-incontinence-women",
+              "version": "Glazener et al. 2017, CD001755.pub2",
+              "access": "indexed-excerpts",
+              "readScope": "Official Cochrane complete abstract/summary plus indexed original PMC methods, comparator, results and conclusion excerpts; PMC main browser-challenged, no full tables/figures inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "incebiyik-2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41653288/",
+              "version": "\u0130nceb\u0131y\u0131k and Adak 2026, PMID 41653288",
+              "access": "abstract-only",
+              "readScope": "Complete original indexed abstract for nonrandomized 48/92 arms, six-month pad-count endpoint and baseline imbalance; publisher full text and technique/AE tables not obtained.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "nice-ng123",
+              "url": "https://www.nice.org.uk/guidance/ng123/chapter/recommendations",
+              "version": "NICE NG123 recommendation 1.5.14, online 2026-09-20",
+              "access": "prior-review",
+              "readScope": "Prior selected official recommendation read for anterior colporrhaphy as SUI treatment, not POP repair; current search confirmed wording, not the whole guideline.",
+              "reusedFrom": "reports/2026-09-12/burch-and-sling-companion-review.md"
+            },
+            {
+              "id": "sister-sucra",
+              "url": "https://doi.org/10.1056/NEJMoa070416",
+              "version": "Albo et al. SISTEr 2007 and Imamura BMJ 2019 as documented 2026-09-12",
+              "access": "prior-review",
+              "readScope": "Earlier documented endpoint and network-ranking corrections reused; not independently reread for this batch.",
+              "reusedFrom": "reports/2026-09-12/burch-and-sling-companion-review.md"
+            }
+          ],
+          "reviewedAt": "2026-09-20"
         }
       ]
     },

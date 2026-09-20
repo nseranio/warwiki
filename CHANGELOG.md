@@ -6,9 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Kelly plication citation and outcome-scope corrections
+
+Corrected two unrelated historical PubMed links, restricted Beck and Park outcome figures to their actual cohorts and follow-up, added Bergman's five-year assessment denominator, and separated the distinct nonrandomized pubourethral-ligament plication study from Kelly technique. Preserved the operative steps, variants, all 14 references and related links. The [source/access review](reports/2026-09-20/kelly-plication-review.md) records remaining full-text and technique checks; this is a partial audit, not clinical clearance. The prior [paravaginal release](reports/2026-09-20/paravaginal-repair-publication.json) is now hosted-verified and also carries the earlier anterior POP release.
+
+---
+
 ## 2026-09-20 — Paravaginal repair source and figure-provenance correction
 
-Corrected the Richardson 1981 PMID on the paravaginal page and its original schematic, replaced a universal defect-prevalence claim with the source's selected operative-cohort estimate, and clarified MRI, ultrasound, trial-arm and follow-up denominators. The practical operative approaches, figure, all references and related links remain. The [claim/access report](reports/2026-09-20/paravaginal-repair-review.md) records unresolved full texts and figure review; this is a partial audit, not clinical clearance. The prior anterior POP release passed GitHub CI but [Vercel rate-limited deployment](reports/2026-09-20/anterior-pop-techniques-publication.json).
+Corrected the Richardson 1981 PMID on the paravaginal page and its original schematic, replaced a universal defect-prevalence claim with the source's selected operative-cohort estimate, and clarified MRI, ultrasound, trial-arm and follow-up denominators. The practical operative approaches, figure, all references and related links remain. The [claim/access report](reports/2026-09-20/paravaginal-repair-review.md) records unresolved full texts and figure review; this is a partial audit, not clinical clearance. The later successful [production release](reports/2026-09-20/paravaginal-repair-publication.json) also cleared hosted verification of the earlier Vercel-rate-limited anterior POP changes.
 
 ---
 

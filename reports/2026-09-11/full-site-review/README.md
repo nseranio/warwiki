@@ -9,7 +9,7 @@ Current snapshot: 1186 pages; 709 with full-text reading recorded against curren
 | 01-foundations | 446 | 283 | 276 | 72 |
 | 02-evaluation | 38 | 38 | 32 | 0 |
 | 03-clinical-conditions | 73 | 73 | 67 | 0 |
-| 04-surgical-techniques | 451 | 269 | 267 | 150 |
+| 04-surgical-techniques | 451 | 269 | 268 | 150 |
 | 05-special-populations | 46 | 46 | 40 | 0 |
 | 06-journal-club | 1 | 0 | 0 | 1 |
 | 07-roots | 120 | 0 | 0 | 120 |
@@ -17,6 +17,6 @@ Current snapshot: 1186 pages; 709 with full-text reading recorded against curren
 
 [Full page-by-page ledger](page-ledger.json) contains paths, exact scope, sources, unresolved claims and content hashes. Domain reports record what was corrected.
 
-Claim-level audit dispositions: {"not-recorded": 1170, "partial": 16}. These supplement the historical read/update counts; not-recorded means no new claim-level closure record, not that all prior source work is discarded. Partial/blocked pages remain unfinished.
+Claim-level audit dispositions: {"not-recorded": 1169, "partial": 17}. These supplement the historical read/update counts; not-recorded means no new claim-level closure record, not that all prior source work is discarded. Partial/blocked pages remain unfinished.
 
 The separate reference-metadata scans check DOI registration and PubMed identifier/title identity. DOI and PMID caches reflect their collection snapshots; current additions may be uncached. Missing records or title-overlap flags require source investigation, not an automatic claim that a paper is false. Metadata matching does not establish that a cited claim is supported or that its full paper was read.
