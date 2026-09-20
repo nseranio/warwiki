@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 765,
+    "fullTextReadForCurrentContent": 766,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 416,
-      "updated": 736
+      "unreviewed": 415,
+      "updated": 737
     }
   },
   "pages": [
@@ -10936,11 +10936,25 @@
       "title": "Sutures",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "6726680d0d11027ba9d0d8101cf0b5cde1154ce9bd70c60b47f6f8997698f1f7",
-      "reviewRecords": []
+      "sourceSha256": "6dfd9ca3c2d1f5cf28fc19af096e38e7083803acef1da124e6a527d0a382c260",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed record/abstract reading for a surgical-suture review, a Cochrane laparotomy-closure review, a high-quality triclosan-suture meta-analysis, and a urethrovesical-anastomosis barbed-suture meta-analysis.",
+          "changes": "Rebuilt the inherited procedure-default guide as a bounded evidence orientation; removed unverified material-retention tables, knot counts, procedure-specific defaults, product claims, and complication rules; linked to the separately reviewed barbed-suture page.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/30869751/",
+            "https://pubmed.ncbi.nlm.nih.gov/29099149/",
+            "https://pubmed.ncbi.nlm.nih.gov/35644158/",
+            "https://pubmed.ncbi.nlm.nih.gov/26135310/"
+          ],
+          "unresolved": "The accessible material was limited to PubMed records/abstracts. Full source packages, manufacturer instructions for use, current professional-society guidance, and local protocols were not adjudicated. No clinical clearance or procedure-specific suture recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/sutures-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/vascular-damage-control.mdx",
