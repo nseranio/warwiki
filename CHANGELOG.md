@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-19 — Thirty-first continuation: mesh/graft regulatory recovery
+
+Rebuilt the vaginal mesh/graft overview around the current FDA U.S. availability and follow-up boundary. Removed historical numeric rates, product/risk mandates, procedural rules, detailed removal advice, and broad cross-route claims not supported by newly accessible complete sources. The [recovery record](reports/2026-09-19/mesh-graft-recovery-review.md) distinguishes verified FDA content from Cochrane/trial records whose complete texts remain unrecovered.
+
+Ledger: 681 full current MDX reads and 653 scoped updates of 1,186 files; 21 checked, 12 unresolved and 500 unreviewed. This is a continuing whole-site audit, not clinical clearance.
+
+---
+
 ## 2026-09-19 — Thirtieth continuation: lateral-suspension evidence boundaries
 
 Rebuilt laparoscopic lateral suspension around three complete accessible current sources and the reusable Cochrane source record. Removed fixed tunneling and mesh instructions, universal selection and follow-up rules, pooled rates as patient predictions, and claims of lower overall risk or superiority. The revised page preserves the non-sacral lateral-route identity and makes the immature randomized evidence explicit. The [recovery record](reports/2026-09-19/lateral-suspension-recovery-review.md) separates completed source scope from unreviewed older cohorts, technical reports, and supplement.
