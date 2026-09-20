@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Iliococcygeus suspension anatomy and source-scope correction
+
+Corrected the fascial fixation target relative to the ischial spine using AUGS–IUGA terminology, qualified suture variants and theoretical nerve-distance benefit, and scoped historical outcomes to their actual cohorts. Replaced an unsupported ACOG-specific recommendation with the current 2026 AWMF S3 recommendation; retained the practical technique, tables, references and links. The [source/access review](reports/2026-09-20/iliococcygeus-suspension-review.md) records original figures, full papers and other unresolved checks. This is a partial audit, not clinical or operative clearance. Kelly plication was pushed and passed CI, but its [deployment record](reports/2026-09-20/kelly-plication-publication.json) remains rate-limited and unverified live.
+
+---
+
 ## 2026-09-20 — Kelly plication citation and outcome-scope corrections
 
 Corrected two unrelated historical PubMed links, restricted Beck and Park outcome figures to their actual cohorts and follow-up, added Bergman's five-year assessment denominator, and separated the distinct nonrandomized pubourethral-ligament plication study from Kelly technique. Preserved the operative steps, variants, all 14 references and related links. The [source/access review](reports/2026-09-20/kelly-plication-review.md) records remaining full-text and technique checks; this is a partial audit, not clinical clearance. The prior [paravaginal release](reports/2026-09-20/paravaginal-repair-publication.json) is now hosted-verified and also carries the earlier anterior POP release.

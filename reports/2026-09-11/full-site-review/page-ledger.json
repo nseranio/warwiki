@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-20T15:53:15.465271+00:00",
+  "generatedAt": "2026-09-20T16:05:40.376219+00:00",
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. Editorial restorations are tracked separately and do not establish a fresh source review. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 709,
+    "fullTextReadForCurrentContent": 710,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 20,
       "restored-pending-review": 118,
       "unresolved": 11,
-      "unreviewed": 354,
-      "updated": 683
+      "unreviewed": 353,
+      "updated": 684
     },
     "claimAuditDispositionCounts": {
-      "not-recorded": 1169,
-      "partial": 17
+      "not-recorded": 1168,
+      "partial": 18
     }
   },
   "pages": [
@@ -44927,12 +44927,211 @@
       "title": "Iliococcygeus Fascia Suspension",
       "section": "04-surgical-techniques",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "auditDisposition": "not-recorded",
-      "sourceSha256": "fc01b96d3d277de031486c53aa2ef902ea98be0b7b5bc71049137ba559a289ed",
-      "reviewRecords": []
+      "auditDisposition": "partial",
+      "sourceSha256": "b61ca44d0c191e8a52e7be21df259a3de6fd29c4957f137806361e3e42e0c1da",
+      "reviewRecords": [
+        {
+          "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/iliococcygeus-suspension.mdx",
+          "sourceSha256": "b61ca44d0c191e8a52e7be21df259a3de6fd29c4957f137806361e3e42e0c1da",
+          "status": "updated",
+          "fullTextRead": true,
+          "readScope": "Complete current MDX before and after edits, all headings, procedure steps, tables, 14 original plus two added references and related links. No imported dataset, page figure or embedded video.",
+          "clinicalVerificationComplete": false,
+          "auditDisposition": "partial",
+          "coverage": {
+            "evaluation": "Vault-versus-hysteropexy populations and stage-IV predictor scoped; detailed patient-selection/diagnostic criteria not fully verified.",
+            "treatment": "AUGS\u2013IUGA fixation target/step variants and current AWMF S3 6.E54 recommendation checked; old ACOG-specific evidence grade withdrawn as unverified.",
+            "numbers": "Meeks 4/110 and 41/110, Maher 50/78 with 36 pairs and 50% power, Peters 81/30 and projected estimates, Serati 44/39, Milani 36/41, Suh 144 corrected/scoped.",
+            "doseDeviceSafety": "No drug dose or implant device. Suture material/number variation checked against AUGS\u2013IUGA; nerve-distance benefit labeled theoretical; full adverse-event tables pending.",
+            "anatomyTechnique": "Corrected anterior-to-spine target to medial/caudal iliococcygeus fascia and nonfixed suture count from official operative terminology; full original Figure 7/video and all original technical methods not viewed.",
+            "followUp": "Meeks minimum three years, Maher 19/21 months, Serati median 68.8/120 months, Suh median four years and Peters projected two years made source-specific; cohort overlap unresolved.",
+            "importedDataFigures": "No page-embedded data, figure or video. AUGS\u2013IUGA PDF relevant text and erratum read, but its external Figure 7 image was not visually inspected.",
+            "references": "All 14 inherited references preserved and two primary society/guideline sources added; de Alba MRI source no longer presented as surgical contraindication evidence; ACOG full text remains inaccessible.",
+            "currency": "Current AWMF 2026 S3 v6.0 \u00a76.6/6.E54 verified; 2016 predecessor not represented as current. AUGS terminology erratum checked for scope."
+          },
+          "claimChecks": [
+            {
+              "claim": "Iliococcygeus suture target and variation",
+              "sourceIds": [
+                "augs-iuga-2020"
+              ],
+              "locator": "Official IF definition, steps 1\u20135, variations and erratum",
+              "verdict": "corrected",
+              "note": "Replaced unsupported 1\u20132 cm anterior target, fixed four sutures/full-thickness vault rule and guaranteed neurovascular avoidance with medial/caudal fascia and technique-specific variants."
+            },
+            {
+              "claim": "Current guideline ranking",
+              "sourceIds": [
+                "awmf-2026",
+                "acog-augs-2019"
+              ],
+              "locator": "AWMF v6.0 \u00a76.6, 6.E54 and middle-compartment recommendation; ACOG bibliographic abstract only",
+              "verdict": "corrected",
+              "note": "Current S3 considers IF when no adequate alternative; removed unverified ACOG Level-A equivalence attribution to this procedure."
+            },
+            {
+              "claim": "Meeks success, recurrence and complication pattern",
+              "sourceIds": [
+                "meeks-1994"
+              ],
+              "locator": "Original PubMed abstract Study design/Results/Conclusion",
+              "verdict": "corrected",
+              "note": "4/110 anterior recurrent defects are series-specific; 41/110 any postoperative complications and catheter days not retention rate."
+            },
+            {
+              "claim": "ICG versus SSLF and coccygeus/SCP comparisons",
+              "sourceIds": [
+                "maher-2001",
+                "peters-1995",
+                "milani-2014"
+              ],
+              "locator": "Original abstracts Methods/Results, source-arm and analyzed denominators",
+              "verdict": "corrected",
+              "note": "Matched-pair underpower and distinct coccygeus target clarified; nonsignificant comparisons no longer prove equivalence; Milani blood-loss tradeoff shown."
+            },
+            {
+              "claim": "Long-term Serati and hysteropexy outcome interpretation",
+              "sourceIds": [
+                "serati-2015",
+                "serati-2021",
+                "suh-2018"
+              ],
+              "locator": "Original abstracts cohort, follow-up and endpoint definitions",
+              "verdict": "corrected",
+              "note": "44/39 evaluated denominators and subjective/objective split; stage IV and advanced hysteropexy are cohort risks, not absolute bans."
+            },
+            {
+              "claim": "Low morbidity, severe levator defects and technical video support",
+              "sourceIds": [
+                "milani-2017",
+                "levator-mri-2026",
+                "meeks-1994"
+              ],
+              "locator": "One-case video abstract, MRI study abstract and Meeks complications",
+              "verdict": "corrected",
+              "note": "Single-case tutorial and MRI defects do not establish population safety or surgical contraindication; useful caution retained in proper scope."
+            },
+            {
+              "claim": "Original technical figures, video and arm-level safety/methods",
+              "sourceIds": [],
+              "locator": "AUGS Figure 7, Milani operative video, original full papers and supplements",
+              "verdict": "unresolved",
+              "note": "Legitimate full-source access and visual review still needed for operative sign-off and stronger comparative safety claims."
+            }
+          ],
+          "unresolvedClaims": [
+            "Inspect original AUGS\u2013IUGA Figure 7 and Milani technique video plus full operative methods before any claim of detailed technique or clinician sign-off.",
+            "Retrieve original Meeks/Maher/Peters/Milani/Serati/Suh full methods and arm-level complication tables; resolve Serati 2015-to-2021 cohort overlap and attrition.",
+            "Read the full ACOG/AUGS PB214 recommendation package before assigning iliococcygeus-specific status; do not generalize the verified AWMF jurisdiction to all guidelines."
+          ],
+          "preservationReview": "All clinical sections, procedure steps, tables, related links and 14 inherited references retained; two primary references added. Corrected the suture target, fixed-step assertions, source populations and misleading safety/equivalence claims without replacing useful teaching with an audit notice. No page media existed to remove.",
+          "reviewCheck": "passed",
+          "reviewRecord": "reports/2026-09-20/iliococcygeus-suspension-review.md",
+          "recordFile": "claim-batches/2026-09-20-iliococcygeus-suspension.json",
+          "sources": [
+            {
+              "id": "augs-iuga-2020",
+              "url": "https://www.augs.org/wp-content/uploads/2025/04/Joint_Report_on_Terminology_for_Surgical.3.pdf",
+              "version": "AUGS\u2013IUGA joint terminology report 2020, DOI 10.1097/SPV.0000000000000846; erratum DOI 10.1097/SPV.0000000000000892",
+              "access": "relevant-sections",
+              "readScope": "Original full PDF text of IF definition and steps/variations plus table wording; official erratum text checked and limited to USLS Figures 3\u20134. IF Figure 7 image itself not visually inspected.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "awmf-2026",
+              "url": "https://register.awmf.org/assets/guidelines/015-006l_S2e_Descensus_genitalis-Diagnostik-Therapie_2026-06.pdf",
+              "version": "AWMF 015-006 S3 v6.0 March 2026, published June 2026; PDF legacy filename says S2e",
+              "access": "relevant-sections",
+              "readScope": "Official 260-page PDF cover/version and \u00a76.6, recommendation 6.E54 and middle-compartment summary on PDF pp. 159\u2013160/175; not all guideline chapters or supplements read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "meeks-1994",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/7802052/",
+              "version": "Meeks et al. 1994, PMID 7802052",
+              "access": "abstract-only",
+              "readScope": "Complete original PubMed abstract for 110 retrospective cases, follow-up, 4 anterior defects, 41 any postoperative complications, individual injuries and catheter days; full operative figures/tables unavailable.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "maher-2001",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/11430954/",
+              "version": "Maher et al. 2001, PMID 11430954",
+              "access": "abstract-only",
+              "readScope": "Complete original abstract for 50/78 source cohorts, 36 matched pairs, 50% power, success/satisfaction/recovery and harm interpretation; full methods/tables unavailable.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "peters-1995",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/7778650/",
+              "version": "Peters and Christenson 1995, PMID 7778650",
+              "access": "abstract-only",
+              "readScope": "Complete original abstract for related coccygeus-fascial target, 121 records with 81/30 vaginal arms and ten excluded abdominal cases, projected Kaplan\u2013Meier result; full technique not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "milani-2014",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/24030216/",
+              "version": "Milani et al. 2014, PMID 24030216",
+              "access": "abstract-only",
+              "readScope": "Complete original retrospective-cohort abstract for 36/41 arms, operating time, blood loss, relapse and outcomes; full tables unavailable.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "serati-2015",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25653034/",
+              "version": "Serati et al. 2015, PMID 25653034",
+              "access": "abstract-only",
+              "readScope": "Original abstract for 44 evaluated, median 68.8-month follow-up, 39/44 subjective and 37/44 objective cure, stage-IV predictor; full cohort flow not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "serati-2021",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33237354/",
+              "version": "Serati et al. 2021, PMID 33237354",
+              "access": "abstract-only",
+              "readScope": "Complete original abstract for 39 evaluated at median 120 months, 32/39 subjective, 29/39 objective/overall and stage-IV predictor; cohort overlap with 2015 unconfirmed without main.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "suh-2018",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29747142/",
+              "version": "Suh and Jeon 2018, PMID 29747142",
+              "access": "abstract-only",
+              "readScope": "Complete original abstract for 144 retrospective patients, median four years, composite failure definition, 75.3/48.0% hysteropexy estimates and multivariable associations; full tables not read.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "milani-2017",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28321474/",
+              "version": "Milani et al. 2017, PMID 28321474",
+              "access": "abstract-only",
+              "readScope": "Original one-case video-tutorial abstract for pararectal exposure and technical positioning; actual operative video and full technique text not viewed.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "levator-mri-2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41547955/",
+              "version": "de Alba Alvarez et al. 2026, PMID 41547955",
+              "access": "abstract-only",
+              "readScope": "Original imaging-study abstract and title; does not assess fixation outcomes, suture hold or surgical contraindication.",
+              "reusedFrom": ""
+            },
+            {
+              "id": "acog-augs-2019",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31651832/",
+              "version": "ACOG/AUGS POP bulletin 214, 2019; AUGS directory lists reaffirmed 2024",
+              "access": "unavailable",
+              "readScope": "Bibliographic abstract and current AUGS directory only; full iliococcygeus-specific recommendations not accessible or claimed.",
+              "reusedFrom": ""
+            }
+          ],
+          "reviewedAt": "2026-09-20"
+        }
+      ]
     },
     {
       "file": "docs/04-surgical-techniques/04g-prolapse-repair/apical/laparoscopic-lateral-suspension.mdx",
