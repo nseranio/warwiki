@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-20 — Paravaginal repair source and figure-provenance correction
+
+Corrected the Richardson 1981 PMID on the paravaginal page and its original schematic, replaced a universal defect-prevalence claim with the source's selected operative-cohort estimate, and clarified MRI, ultrasound, trial-arm and follow-up denominators. The practical operative approaches, figure, all references and related links remain. The [claim/access report](reports/2026-09-20/paravaginal-repair-review.md) records unresolved full texts and figure review; this is a partial audit, not clinical clearance. The prior anterior POP release passed GitHub CI but [Vercel rate-limited deployment](reports/2026-09-20/anterior-pop-techniques-publication.json).
+
+---
+
 ## 2026-09-20 — Anterior POP technique source-fit corrections
 
 Scoped anterior colporrhaphy indications, historic mesh comparisons, OPUS endpoints and mixed-procedure complication rates to the actual source populations. Corrected the Michigan four-wall operative description and eight-year responder/anatomy denominators; retained teaching and video, with no claim of head-to-head superiority. [Source/access review](reports/2026-09-20/anterior-pop-techniques-review.md) records remaining gaps. Both pages remain partial audits.
