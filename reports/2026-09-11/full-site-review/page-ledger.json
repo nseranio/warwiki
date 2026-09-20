@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 755,
+    "fullTextReadForCurrentContent": 756,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 426,
-      "updated": 726
+      "unreviewed": 425,
+      "updated": 727
     }
   },
   "pages": [
@@ -8564,11 +8564,26 @@
       "title": "V-Y Advancement Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "38f5bed5d04b66b53d8e24c715289e983e6cca1937cc639d39a5f80a4ff487fa",
-      "reviewRecords": []
+      "sourceSha256": "a7a09972806c14bf49756900247f3b01437b16caf97834350a3f77b516074190",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited and revised MDX read. PubMed abstract/record reading for Remache et al. 2015, Yildirim et al. 2007, Sennert et al. 2025, Lenoir et al. 2021, and Sakamoto et al. 2013.",
+          "changes": "Rebuilt the detailed operative overview as a bounded geometric and reported-use page; removed unverified technical, outcome, comparative, algorithm, and recommendation claims.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/26342442/",
+            "https://pubmed.ncbi.nlm.nih.gov/17452833/",
+            "https://pubmed.ncbi.nlm.nih.gov/40973687/",
+            "https://pubmed.ncbi.nlm.nih.gov/33449126/",
+            "https://pubmed.ncbi.nlm.nih.gov/23962265/"
+          ],
+          "unresolved": "Inherited buried-penis, bladder-neck, Fournier's, vulvovaginal, pelvic, irradiated-field, and lichen-sclerosus source packages were not fully reviewed. No clinical clearance, procedure recommendation, or flap-selection standard is asserted.",
+          "recordFile": "reports/2026-09-20/v-y-advancement-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/vastus-lateralis.mdx",
