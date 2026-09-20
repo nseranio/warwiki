@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 736,
+    "fullTextReadForCurrentContent": 737,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 445,
-      "updated": 707
+      "unreviewed": 444,
+      "updated": 708
     }
   },
   "pages": [
@@ -7838,11 +7838,25 @@
       "title": "DIEP Flap",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "c4ea156748f07172346c69b02f76cd3a443d730bbb4539ea3a33fbd25799aa2e",
-      "reviewRecords": []
+      "sourceSha256": "6611d72d236c47c3029fc05afdb0d73a5b3c29a9776d5c0e5e4162ee2e6547ed",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. PubMed abstract/record scope for Pividori et al. 2023 and Rozen et al. 2007. Indexed PMC result scope for Caretto et al. 2023 and Thimmappa et al. 2019; direct PMC full-text access was blocked by a download challenge, so neither is recorded as a full-source read.",
+          "changes": "Rebuilt the page as a bounded DIEP anatomy and reconstructive-context overview; removed operative instructions, anatomy measurements, perfusion and flap-design rules, outcome tables, comparative claims, selection algorithms, and recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/37531805/",
+            "https://pubmed.ncbi.nlm.nih.gov/18040172/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6732116/"
+          ],
+          "unresolved": "Direct PMC full-text retrieval was blocked for the two open-access articles. The inherited anatomy, pelvic-reconstruction, breast-reconstruction, technical, outcome, and comparative source packages were not fully reviewed. No clinical clearance or flap-selection recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/diep-flap-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/epap.mdx",
