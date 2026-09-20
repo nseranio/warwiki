@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 738,
+    "fullTextReadForCurrentContent": 739,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 443,
-      "updated": 709
+      "unreviewed": 442,
+      "updated": 710
     }
   },
   "pages": [
@@ -7917,11 +7917,22 @@
       "title": "Heineke-Mikulicz Technique",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "c6e3390b4fd466f580d2eff880262a0a5f167c99a4495171cfbba2e284704e7a",
-      "reviewRecords": []
+      "sourceSha256": "0d0b79fe7cbaabbd91e0e1d4c1331c8c444a4da76b1ce69c6f52fd1e6f4e2634",
+      "reviewRecords": [
+        {
+          "date": "2026-09-20",
+          "scope": "Complete inherited MDX read. PubMed abstract/record reading of Lumen et al. 2010, a preliminary ten-patient urethral series. Inherited upper-tract, female-urethral, genital-skin, bowel, gender-affirming, and guideline source packages were not fully reviewed.",
+          "changes": "Rebuilt the page as a bounded geometric-concept overview; removed operative steps, fixed selection criteria, outcomes, comparisons, indications, and treatment recommendations.",
+          "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/20951413/"
+          ],
+          "unresolved": "The underlying source is a small preliminary series, and the inherited application-specific source packages were not fully reviewed. The retained diagram is conceptual only. No clinical clearance or procedural recommendation is asserted.",
+          "recordFile": "reports/2026-09-20/heineke-mikulicz-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/surgical-principles/flaps/igap-gluteal-fold.mdx",
