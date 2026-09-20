@@ -3,13 +3,13 @@
   "methodology": "Every documentation source file is listed. Actual reading, scoped source checks and complete clinical verification are distinct. Missing records stay unreviewed; content changed after the recorded SHA256 must be checked again. Structural checks and metadata lookups do not establish clinical correctness. This is an ongoing audit, not certification that the whole site is error-free.",
   "summary": {
     "pages": 1186,
-    "fullTextReadForCurrentContent": 722,
+    "fullTextReadForCurrentContent": 723,
     "clinicalVerificationComplete": 0,
     "statusCounts": {
       "checked": 22,
       "unresolved": 12,
-      "unreviewed": 459,
-      "updated": 693
+      "unreviewed": 458,
+      "updated": 694
     }
   },
   "pages": [
@@ -465,11 +465,30 @@
       "title": "Pelvic Neuroanatomy",
       "section": "01-foundations",
       "kind": "article",
-      "status": "unreviewed",
-      "fullTextReadForCurrentContent": false,
+      "status": "updated",
+      "fullTextReadForCurrentContent": true,
       "clinicalVerificationComplete": false,
-      "sourceSha256": "9420ee3437526216da3fe8d433a0634126b0a98da57ff0ef41450976e51778e1",
-      "reviewRecords": []
+      "sourceSha256": "6eb18abe3f800df9b932b0f2547fd647e18c1c82d10d722575ced4253b4db4ce",
+      "reviewRecords": [
+        {
+          "file": "docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-neuroanatomy.mdx",
+          "reviewedAt": "2026-09-20",
+          "fullTextRead": true,
+          "clinicalVerificationComplete": false,
+          "status": "updated",
+          "sourceSha256": "6eb18abe3f800df9b932b0f2547fd647e18c1c82d10d722575ced4253b4db4ce",
+          "scope": "Complete inherited MDX read. Accessible NCBI Bookshelf anatomy text for the inferior hypogastric plexus and pudendal nerve plus an accessible PMC overview read for retained high-level anatomy. Inherited procedural, diagnostic, treatment, and outcome source packages were not fully reviewed.",
+          "changes": [
+            "Rebuilt the page as a source-bounded autonomic and somatic anatomy orientation.",
+            "Removed fixed measurements, procedural landmarks, diagnostic frameworks, interventions, and outcome claims that were not verified in this batch.",
+            "Retained the pudendal schematic with a non-procedural caption and explicit anatomy-variation boundary."
+          ],
+          "unresolved": [
+            "Procedure-specific nerve preservation, neuropathic diagnosis, blocks, neuromodulation, and postoperative functional outcomes require focused specialty-source review before reintroduction."
+          ],
+          "report": "reports/2026-09-20/pelvic-neuroanatomy-recovery-review.md"
+        }
+      ]
     },
     {
       "file": "docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy.mdx",
