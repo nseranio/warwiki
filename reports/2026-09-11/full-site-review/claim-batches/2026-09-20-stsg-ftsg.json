@@ -1,0 +1,76 @@
+{
+  "batchId":"2026-09-20-stsg-ftsg",
+  "reviewedAt":"2026-09-20",
+  "model":"Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort":"current task setting not exposed to audit record",
+  "sources":[
+    {"id":"skin-prior","url":"https://doi.org/10.1002/14651858.CD013570.pub2","version":"September 12 skin-graft review; Younis et al. Cochrane 2023 CD013570 and named 2021-2026 originals","access":"prior-review","readScope":"Reused complete Cochrane published 42 pages, tables/graphics/appendices, and documented full main text/tables of Furr, Plamadeala, Wu, Wright, Alwaal with their unread image/supplement limits; remaining originals mostly abstract-only. No source reread in this batch.","reusedFrom":"reports/2026-09-12/skin-graft-review.md"},
+    {"id":"guidance-prior","url":"https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer","version":"EAU 2026 tissue-transfer and penile-cancer chapters; selected AUA 2023/ACOG 728","access":"prior-review","readScope":"Reused full relevant EAU urethral tissue-transfer chapter 9.1-9.5/tables/recommendations and selected other guideline sections; not complete guideline or underlying trial packages.","reusedFrom":"reports/2026-09-12/skin-graft-review.md"},
+    {"id":"quilting-prior","url":"https://pubmed.ncbi.nlm.nih.gov/36161796/","version":"Cao et al. 2022 NPWT RCT abstract and September 20 quilting review","access":"prior-review","readScope":"Reused original RCT abstract n=86, days 5-7 graft-area take 97.2% versus 90.2%; full article, figures and supplement not read.","reusedFrom":"reports/2026-09-20/quilting-stitch-targeted-review.md"},
+    {"id":"npwt-prior","url":"https://doi.org/10.1016/j.bjps.2025.01.036","version":"Lee et al., JPRAS 2025;102:204-217","access":"prior-review","readScope":"Reused original abstract of 16 RCTs/812 participants and substantial heterogeneity; full manuscript/subgroups not read.","reusedFrom":"reports/2026-09-12/skin-graft-review.md"}
+  ],
+  "pages":[
+    {
+      "file":"docs/01-foundations/surgical-principles/grafts/stsg.mdx",
+      "sourceSha256":"0ef06ac3112075c9917c7502ffe32670a0e1dca37d32d19cab781521ffd9bc3b",
+      "status":"checked",
+      "fullTextRead":true,
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "readScope":"Complete current 328-line MDX in nontruncated chunks, all tables/sections/links and 52 references. No embedded figure, imported clinical dataset or video.",
+      "coverage":{
+        "evaluation":"Donor/recipient selection and comparative populations scoped; not a patient-specific cancer or urethral algorithm.",
+        "treatment":"Harvest, tumescence, lubrication, donor dressing and graft fixation retained with device/patient-specific caveats; full IFUs and drug protocols open.",
+        "numbers":"Furr, Alwaal, Parnham, Gül, Cao and NPWT results interpreted within documented source access; many source tables/figures remain unread.",
+        "doseDeviceSafety":"No fixed local-anesthetic/epinephrine dose; dermatome setting and lubrication require exact current device instructions.",
+        "anatomyTechnique":"Hair risk, graft thickness, donor options and operation distinctions reviewed; linked operative pages not certified.",
+        "followUp":"Early graft-area take versus patient success and Furr long-term recurrence separated; individual later outcomes open.",
+        "importedDataFigures":"No page figure, video or imported clinical dataset.",
+        "references":"All 52 entries read; prior source access log reused without full-text inflation.",
+        "currency":"EAU 2026 and 2025 NPWT abstract reused; complete contemporary protocol/currency review remains open."
+      },
+      "claimChecks":[
+        {"claim":"Thin STSG is hair-free and has a universal take or contraction percentage","sourceIds":["skin-prior","guidance-prior"],"locator":"Prior complete EAU tissue-transfer chapter, skin-graft review biological and donor sections","verdict":"supported","note":"Current page rejects universal depth/hair/take rules and distinguishes primary from secondary contraction."},
+        {"claim":"Furr staged STSG versus BMG outcomes prove randomized graft inferiority","sourceIds":["skin-prior"],"locator":"Prior complete Furr 2021 main text/Tables 1-3: 49 followed, different complexity/follow-up, late recurrences","verdict":"supported","note":"Page preserves observed 96.4% versus 53% within selected groups without causal comparison."},
+        {"claim":"NPWT yields durable 97.2% patient success or a universal genital pressure regimen","sourceIds":["quilting-prior","npwt-prior"],"locator":"Cao 2022 original abstract days 5-7 graft-area take, n=86; Lee 2025 original abstract 16 RCTs/812 with heterogeneity","verdict":"supported","note":"Page limits endpoint to graft area/time and keeps pressure/protocol unresolved."},
+        {"claim":"Cochrane proves hydrogel is the best STSG donor dressing","sourceIds":["skin-prior"],"locator":"Prior full 42-page Younis 2023 Cochrane review and summary tables, two trials/162 participants","verdict":"supported","note":"Page states low/very-low-certainty limits and distinguishes hydrogel from hydrocolloid."},
+        {"claim":"All 52 original studies, IFUs and operative media are fully verified","sourceIds":[],"locator":"September 12 source-access log and current STSG refs 1-52","verdict":"unresolved","note":"Many abstracts only; source figures/supplements, dermatome IFUs and medication protocols remain open."}
+      ],
+      "unresolvedClaims":["Acquire remaining genital outcome and NPWT trial/meta-analysis original full packages where feasible; inspect unread source figures/supplements.","Check current dermatome and graft-processing equipment IFUs, and drug/tumescence/topical-agent safety before any numeric protocol.","Review linked penile cancer, buried penis, Fournier, vaginal and urethral named-operation pages independently; donor summary does not clear them."],
+      "preservationReview":"Reports-only check; no site edits or removal. Retained all 52 references, detailed harvest teaching, comparison tables and links; no embedded media existed.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/stsg-ftsg-claim-check.md"
+    },
+    {
+      "file":"docs/01-foundations/surgical-principles/grafts/ftsg.mdx",
+      "sourceSha256":"862bfda5084aec0a8979abcae0d178b7b9f9a7c8d28308dca70b09920177835d",
+      "status":"checked",
+      "fullTextRead":true,
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "readScope":"Complete current 238-line MDX, every table/section/link and 34 references. No embedded figure, imported clinical dataset or video.",
+      "coverage":{
+        "evaluation":"Donor/recipient and GU versus gynecologic selection contexts scoped; not patient-specific surgery guidance.",
+        "treatment":"FTSG, skin versus de-epithelialized dermal patch, penile/vaginal applications and bed/fixation caveats retained.",
+        "numbers":"Plamadeala, Wu, Jeng, Gül and other cohorts framed by true denominators and source-access limits; many full originals pending.",
+        "doseDeviceSafety":"No fixed dose; graft thickness, donor closure and NPWT remain operation/device-specific.",
+        "anatomyTechnique":"Epidermis/full dermis versus STSG and donor hair/closure risks distinguished; named operations not certified.",
+        "followUp":"Early take, revision, recurrence and long-term functional outcomes separated; later patient outcomes unresolved.",
+        "importedDataFigures":"No page figure, video or imported clinical dataset.",
+        "references":"All 34 entries read; September 12 source-access limits maintained.",
+        "currency":"EAU 2026/ACOG selected guidance reused; complete comparative/current-device review remains open."
+      },
+      "claimChecks":[
+        {"claim":"FTSG has less immediate recoil and more secondary contraction than STSG","sourceIds":["skin-prior"],"locator":"September 12 skin-graft review, biology and Stekelenburg-specific contraction scope","verdict":"supported","note":"Current page states the inverse: greater immediate FTSG recoil and generally less later contraction, without universal percentages."},
+        {"claim":"Gül 2024-online/2026-issue or Plamadeala 2026 establishes FTSG/STSG equivalence in AABP","sourceIds":["skin-prior"],"locator":"Prior Gül abstract and complete Plamadeala main text/Tables 1-6 with response denominators","verdict":"supported","note":"Current page says nonsignificance is not equivalence and overall cohort outcomes are not FTSG-specific."},
+        {"claim":"Wu 2026 pediatric study compares FTSG against STSG","sourceIds":["skin-prior"],"locator":"Prior complete Wu 2026 main text/Tables 1-3: 132 FTSG versus 141 modified Sugita fixation repairs","verdict":"supported","note":"Current comparator is correctly named; selection and 12-month limits retained."},
+        {"claim":"Dermal Peyronie patch is an intact epidermis-containing FTSG","sourceIds":["skin-prior"],"locator":"September 12 skin-graft review correction and current FTSG tissue distinctions","verdict":"supported","note":"Current page distinguishes de-epithelialized dermal grafting from full-skin coverage."},
+        {"claim":"All 34 cohort/technical/guideline source packages establish a universal donor or best graft","sourceIds":[],"locator":"Current FTSG refs 1-34 and September 12 source-access limits","verdict":"unresolved","note":"Most original full outcome papers and source figures/supplements remain unread; no universal comparative rule is claimed."}
+      ],
+      "unresolvedClaims":["Acquire remaining complete AABP, penile, Fournier, Peyronie and vaginoplasty originals/tables/figures where feasible before stronger comparative recommendations.","Inspect Plamadeala and Wu source images/supplements and reconcile any source inconsistencies before using exact subgroups or technique details.","Review named-operation pages, current graft-support/device instructions and patient-specific risk counseling separately."],
+      "preservationReview":"Reports-only check; no site edits or removal. Retained all 34 references, donor/biology/gynecologic sections, tables and links; no embedded media existed.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/stsg-ftsg-claim-check.md"
+    }
+  ]
+}

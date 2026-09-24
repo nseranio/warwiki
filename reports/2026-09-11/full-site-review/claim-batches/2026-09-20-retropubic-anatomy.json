@@ -1,0 +1,52 @@
+{
+  "batchId": "2026-09-20-retropubic-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/retropubic-space-recovery-review.md","version":"September 20 regional-anatomy recovery scope","access":"prior-review","readScope":"Reused only the bounded prevesical/retropubic orientation and unresolved list; earlier blanket reduction superseded, not treated as clinical clearance.","reusedFrom":"reports/2026-09-20/retropubic-space-recovery-review.md"},
+    {"id":"pelvic-vascular-review","url":"docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy.mdx","version":"Current WARWIKI pelvic vascular page and prior source review","access":"prior-review","readScope":"Reused previously documented corona-mortis source attribution; relevant current-page paragraph checked, then original Noussios PDF read separately.","reusedFrom":"reports/2026-09-11/full-site-review/pelvic-support-anatomy.json"},
+    {"id":"noussios-2020","url":"https://www.jocmr.org/index.php/JOCMR/article/download/4062/25893072","version":"Noussios et al. 2020 original systematic review PDF","access":"relevant-sections","readScope":"Original PDF definition, included-study table, pooled 13-study/1455-hemipelvis table, heterogeneity, arterial/venous analysis and limitations read; not each included study."},
+    {"id":"henry-2017","url":"https://pubmed.ncbi.nlm.nih.gov/28202357/","version":"Henry et al. 2017 original accessory-pudendal meta-analysis","access":"abstract-only","readScope":"Original indexed abstract: 23 studies/4945 patients, pooled 28.5% accessory-artery presence and method/definition variation; full paper not read."},
+    {"id":"williams-2017","url":"https://pubmed.ncbi.nlm.nih.gov/28859491/","version":"Williams et al. 2017 original 880-patient cohort","access":"abstract-only","readScope":"Original abstract: 33.1% APA transection and no adjusted association with erectile-function recovery; full methods/tables not read."},
+    {"id":"aua-sui-2023","url":"https://www.auanet.org/documents/Guidelines/PDF/2023%20Guidelines/SUI%20Unabridged%20FINAL%20080223.pdf","version":"AUA/SUFU female SUI guideline, 2023 amendment","access":"indexed-excerpts","readScope":"Official indexed cystoscopy section says intraoperative cystoscopy with midurethral sling surgery to check lower urinary tract; direct full PDF failed to open, entire guideline not read."},
+    {"id":"baus-spc","url":"https://www.baus.org.uk/professionals/baus_business/publications/10/baus_suprapubic_catheter_practice_guidelines","version":"BAUS revised SPC guideline notice, 2020","access":"relevant-sections","readScope":"Official BAUS notice confirms update and links BJUI guideline; full linked guideline not read, no full procedural recommendation attributed to it."},
+    {"id":"hall-2019","url":"https://pubmed.ncbi.nlm.nih.gov/31532853/","version":"Hall et al. 2019 national UK suprapubic-catheter bowel-injury audit","access":"abstract-only","readScope":"Original indexed audit abstract on 11,473 insertions and nonzero bowel-injury risk; full study not read."},
+    {"id":"ippoliti-2023","url":"https://pubmed.ncbi.nlm.nih.gov/37597197/","version":"Ippoliti et al. 2023 RCT continence-technique systematic review","access":"abstract-only","readScope":"Original abstract: 39 RCTs, heterogeneous definitions; strongest early continence signal for Retzius-sparing, low-certainty or absent evidence for other maneuvers; full RCT tables not read."},
+    {"id":"gong-2025","url":"https://pubmed.ncbi.nlm.nih.gov/40444077/","version":"Gong et al. 2025 Retzius-sparing meta-analysis","access":"abstract-only","readScope":"Original abstract: earlier continence, no 12-month difference, positive-margin signal in pooled ≥pT3 patients; full paper/subgroups not read."},
+    {"id":"perineum-batch","url":"reports/2026-09-20/perineum-targeted-review.md","version":"Current perineum targeted review","access":"prior-review","readScope":"Reused documented female clitoral-to-vesical venous drainage correction; did not repeat Elsevier source review.","reusedFrom":"reports/2026-09-20/perineum-targeted-review.md"}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/pelvis-support/retropubic-anatomy.mdx",
+    "sourceSha256": "7c00f571665cf26ab4b68807a4bd43cefa0538a0a994a843acd06970133f4247",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 149 inherited MDX lines and seven inherited bibliography entries; no linked image/video or imported clinical dataset.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Regional anatomy and selected risks read; cancer node mapping, pelvic fracture, infection, urachal and reoperative diagnosis remain unresolved.",
+      "treatment": "Sling cystoscopy, catheter safety and Retzius-sparing outcome statements narrowed; Burch, hernia, prostatectomy, urachal and trauma techniques not fully reviewed.",
+      "numbers": "Corona-mortis 45.55% pooled estimate with I2 94.99% from source table, not a safety probability; accessory-pudendal 28.5% pooled estimate and outcome null in one cohort scoped; inherited fingerbreadth and 10-15% rules removed.",
+      "doseDeviceSafety": "No drug dose; AUS reservoir and male-sling variants noted without IFU-level clearance; AUA intraoperative cystoscopy statement only indexed, full guideline and devices open.",
+      "anatomyTechnique": "Entire current page read; female vein and lymphatic/vascular spatial overstatements corrected; detailed fascial variants and safe operative corridors remain unresolved.",
+      "followUp": "Prostatectomy continence/margin tradeoff retained as partial pooled evidence; procedure complications and follow-up pathways open.",
+      "importedDataFigures": "No page figures, videos or imported clinical data; cross-linked pelvic vascular and perineal source records reused only within their documented scopes.",
+      "references": "Seven inherited bibliography entries read but not all source-mapped; placeholder corona-mortis citation removed, eight focused identifiable sources added.",
+      "currency": "AUA/SUFU 2023 indexed cystoscopy passage, BAUS 2020 notice, 2023 RCT review and 2025 Retzius-sparing synthesis checked in stated scopes; no comprehensive multi-specialty update sweep."
+    },
+    "claimChecks": [
+      {"claim":"Corona mortis is only an aberrant arterial vessel in 20-30% with a fixed Cooper's safe distance","sourceIds":["pelvic-vascular-review","noussios-2020"],"locator":"Original systematic-review PDF definition and pooled Table 2","verdict":"corrected","note":"Arterial/venous connections recognized; 45.55% pooled estimate across 1455 hemipelves with severe heterogeneity, not a patient-specific safe zone."},
+      {"claim":"Accessory pudendal vessels occur in 10-15% and inadvertent sacrifice causes erectile dysfunction","sourceIds":["henry-2017","williams-2017"],"locator":"Original meta-analysis and 880-patient cohort abstracts","verdict":"corrected","note":"Prevalence depends on detection method; pooled 28.5% in meta-analysis, no significant adjusted ED association in one cohort; preservation still desirable when feasible."},
+      {"claim":"Blind retropubic sling passage plus cystoscopy is a complete safety recipe","sourceIds":["aua-sui-2023"],"locator":"Official indexed 2023 guideline cystoscopy section","verdict":"corrected","note":"Removed blind instruction, retained cystoscopy for urinary-tract integrity; major vessel and bowel safety not inferred."},
+      {"claim":"Bladder distension alone makes suprapubic catheter insertion safe","sourceIds":["baus-spc","hall-2019","prior-recovery"],"locator":"Official BAUS notice, UK audit abstract and prior regional anatomy note","verdict":"corrected","note":"Distension described as one consideration; guidance/open route depends on anatomy and history, bowel injury remains possible. Full BAUS text open."},
+      {"claim":"Clitoral deep dorsal vein joins prostatic plexus and obturator nodes are the sole first station for bladder/prostate cancer","sourceIds":["perineum-batch","prior-recovery"],"locator":"Documented female vein review and current inherited page","verdict":"corrected","note":"Sex-specific venous drainage and multi-basin lymphatic drainage distinguished; cancer-specific templates remain open."},
+      {"claim":"All male slings and AUS balloons use this central space and Retzius-sparing guarantees continence without oncologic tradeoff","sourceIds":["ippoliti-2023","gong-2025"],"locator":"Original indexed RCT-review and pooled-study abstracts","verdict":"corrected","note":"Device routes qualified and prostatectomy evidence limited to earlier continence with variable margin signals; IFUs and full studies not read."},
+      {"claim":"All other inherited procedure and outcome claims have full source and clinical clearance","sourceIds":["prior-recovery"],"locator":"Full current page and bounded prior gap record","verdict":"unresolved","note":"Practical content retained with narrower claims; full multi-specialty primary and device review remains open."}
+    ],
+    "unresolvedClaims": ["Map all inherited retropubic fascia, ligament, vessel, cancer node and quantitative claims to complete primary sources rather than using an abstract or old regional review as clearance.", "Read full current SUI/SPC guidance, relevant AUS and sling IFUs and original procedure papers before device-specific or patient-level safety recommendations.", "Adjudicate prostatectomy, Burch, hernia, catheter, trauma packing, infection, urachal and reoperative-pelvis pathways and outcomes with their own source packages."],
+    "preservationReview": "Restored useful practical anatomy and procedure context remained; demonstrable errors and unsafe fixed/mandatory rules were narrowed without public audit/removal notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/retropubic-anatomy-targeted-review.md"
+  }]
+}

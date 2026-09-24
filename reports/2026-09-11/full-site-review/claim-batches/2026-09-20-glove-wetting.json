@@ -1,0 +1,53 @@
+{
+  "batchId": "2026-09-20-glove-wetting",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"pietschmann","url":"https://doi.org/10.1016/j.arthro.2011.06.031","version":"Pietschmann et al., Arthroscopy 2011;27:1628-1636","access":"prior-review","readScope":"Reused 2026-09-12 indexed abstract only; full material/test tables not read.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"},
+    {"id":"savage","url":"https://doi.org/10.1016/j.heliyon.2023.e19391","version":"Savage et al., Heliyon 2023;9:e19391","access":"prior-review","readScope":"Reused 2026-09-12 complete original main paper, five tables, six figure images/captions, 29 references and disclosures; no separate supplement listed.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"},
+    {"id":"coleridge","url":"https://doi.org/10.1111/vsu.12627","version":"Coleridge et al., Vet Surg 2017;46:306-315","access":"prior-review","readScope":"Reused 2026-09-12 indexed abstract only, veterinary continuous-pattern knot fluid-media study; full manuscript/tables not read.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"},
+    {"id":"muffly","url":"https://doi.org/10.1016/j.jsurg.2011.06.012","version":"Muffly et al., J Surg Educ 2012;69:37-40","access":"prior-review","readScope":"Reused 2026-09-12 indexed abstract only, saline versus petroleum-gauze suture exposure; full manuscript/material-stratified table unread.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"},
+    {"id":"enz","url":"https://doi.org/10.1007/s00167-022-07136-7","version":"Enz et al., Knee Surg Sports Traumatol Arthrosc 2023;31:1824-1832","access":"prior-review","readScope":"Reused 2026-09-12 complete main paper, two tables, three figure images/captions, references/disclosures; linked 79-KB supplement not obtained because host failed DNS.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"},
+    {"id":"battersby","url":"https://doi.org/10.1007/s00268-016-3577-z","version":"Battersby et al., World J Surg 2016;40:2598-2602","access":"prior-review","readScope":"Reused 2026-09-12 indexed abstract and second-review check only; full trial methods/outcome table not read.","reusedFrom":"reports/2026-09-12/asepsis-review.md"},
+    {"id":"romeo","url":"https://doi.org/10.3390/jcm12196418","version":"Romeo et al., J Clin Med 2023;12:6418","access":"prior-review","readScope":"Reused 2026-09-12 complete main paper, Table 1, seven figure images/captions, references/disclosures; no separate supplement listed.","reusedFrom":"reports/2026-09-12/asepsis-reference-access.json"}
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/surgical-skills/glove-wetting.mdx",
+      "sourceSha256": "75b03a35a43b7482ca3b451b70c797c01386b7856fc4a3f501d179824e82654b",
+      "status": "checked",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "readScope": "Entire current 52-line MDX, frontmatter, table, practical application, seven references and two internal links reread; original full current-page read in 2026-09-12 asepsis-review. No imported clinical data, page figure or embedded video.",
+      "coverage": {
+        "evaluation": "No diagnostic algorithm; distinguishes material handling outcomes from clinical outcomes and operation-level glove damage.",
+        "treatment": "Wetting remains optional sterile handling preference, not recommended infection/leak/glove-perforation prevention; no new page correction warranted.",
+        "numbers": "Savage 24-hour soaking, Enz 117 operations and Battersby score scope cross-checked against documented original reads; incomplete full texts for four other cited comparisons remain.",
+        "doseDeviceSafety": "No drug dose. Sterile source and suspected glove-breach response retained; no glove/suture brand IFU or institution protocol newly validated.",
+        "anatomyTechnique": "Knot configuration and throw count correctly material/task-specific; no GU or robotic extrapolation from arthroscopic/veterinary bench work.",
+        "followUp": "No patient follow-up recommendation; studies do not establish SSI or anastomotic-outcome benefit of wet gloves.",
+        "importedDataFigures": "No imported clinical data, local figure or embedded video; prior source paper figures read only where documented in asepsis access register.",
+        "references": "All seven current reference entries retained; prior source-access record reused by DOI with exact full-main/abstract/supplement distinctions.",
+        "currency": "Current-page 2026-09-12 correction reread September 20; no new literature or full guideline version search, so global currency remains incomplete."
+      },
+      "claimChecks": [
+        {"claim":"Wet-suture bench behavior proves wet-glove clinical benefit","sourceIds":["pietschmann","savage","coleridge","muffly"],"locator":"Prior asepsis source-access entries by DOI and current MDX comparison table","verdict":"supported","note":"Current page explicitly rejects transfer from saline-soaked knots or petroleum media to wet-glove clinical outcomes; Pietschmann/Coleridge/Muffly full papers remain unread."},
+        {"claim":"Savage wet conditions uniformly strengthen knot security","sourceIds":["savage"],"locator":"Prior full main Methods/Results, five tables and six figures as documented September 12","verdict":"supported","note":"Current page correctly describes the 24-hour soak and material-dependent lower failure strength, not a universal benefit."},
+        {"claim":"Enz glove lesions were universal GU perforation or demonstrated wetting prevents infections","sourceIds":["enz"],"locator":"Prior complete main Enz methods, Tables 1-2 and three figures; simulation described separately","verdict":"supported","note":"Current page limits observation to 117 orthopedic operations and simulated bacterial passage; separate supplement remains unread."},
+        {"claim":"Double gloving clinically causes anastomotic failure, or outer-glove change restores knot quality","sourceIds":["battersby"],"locator":"Original indexed abstract and documented second-review check in asepsis-review","verdict":"supported","note":"Page keeps knot-quality score as a surrogate and explicitly denies measured clinical failure or proven restoration; full trial unavailable."},
+        {"claim":"One fixed throw count or glove-wetting technique is valid across GU suture materials and robotic tying","sourceIds":["romeo","savage"],"locator":"Prior complete original main papers/tables/figures as recorded in asepsis-reference-access","verdict":"supported","note":"Page retains task/material-dependent technique and no robotic glove-contact extrapolation."},
+        {"claim":"All material-specific saline/petroleum comparisons, Enz supplement and product IFU compatibility are fully checked","sourceIds":[],"locator":"Current references 1,3,4,5,6 and prior source-access gaps","verdict":"unresolved","note":"Obtain full Pietschmann, Coleridge, Muffly and Battersby papers/tables, Enz supplement and relevant current product instructions before closure or prescriptive expansion."}
+      ],
+      "unresolvedClaims": [
+        "Obtain full Pietschmann 2011, Coleridge 2017, Muffly 2012 and Battersby 2016 methods/outcome tables; compare actual exposure and endpoint before any clinical handling recommendation.",
+        "Retrieve Enz 2023 linked 79-KB supplement through publisher/institutional route after prior Springer supplementary-host DNS failure; do not infer its contents.",
+        "Check current suture/glove manufacturer instructions and local sterile-field protocol before adding brand-specific saline-wetting, lubricant or material compatibility claims; assess later evidence only after existing audit's higher-priority packages."
+      ],
+      "preservationReview": "No page edit this pass. All existing content, comparison table, seven references and two internal links remain; no figure/video existed. September 12 narrow corrections remain intact.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/glove-wetting-claim-check.md"
+    }
+  ]
+}

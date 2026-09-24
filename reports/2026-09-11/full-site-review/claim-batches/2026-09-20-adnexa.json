@@ -1,0 +1,54 @@
+{
+  "batchId": "2026-09-20-adnexa",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/adnexa-recovery-review.md","version":"September 20 recovery scope","access":"prior-review","readScope":"Attributed accessible Bookshelf anatomy review; not disease, operative or endocrine source review. Current task read report only.","reusedFrom":"reports/2026-09-20/adnexa-recovery-review.md"},
+    {"id":"esgo-ovarian","url":"https://www.esgo.org/media/2025/08/Pocket-Guidelines_Ovarian-cancer-consensus.pdf","version":"2025 ESGO/ESMO/ESP consensus pocket guideline","access":"relevant-sections","readScope":"Opened 24-page PDF; read early-stage subtype-specific staging p. 12 and advanced node recommendation p. 15, not whole guideline.","reusedFrom":""},
+    {"id":"lion","url":"https://pubmed.ncbi.nlm.nih.gov/30811909/","version":"Harter et al. 2019 randomized LION trial","access":"abstract-only","readScope":"Indexed trial population, survival and complications; full paper/protocol not read.","reusedFrom":""},
+    {"id":"improve","url":"https://pubmed.ncbi.nlm.nih.gov/37581673/","version":"Rahn et al. 2023 randomized IMPROVE trial","access":"abstract-only","readScope":"Indexed 199-randomized design, 12-month failure and atrophy symptom outcomes; full article not read.","reusedFrom":""},
+    {"id":"eva","url":"https://pubmed.ncbi.nlm.nih.gov/42663275/","version":"Vodegel et al. 2026 randomized EVA trial","access":"abstract-only","readScope":"Indexed 293-patient design, patient-reported and anatomic outcomes; full article not read.","reusedFrom":""},
+    {"id":"acog-salpingectomy","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/04/opportunistic-salpingectomy-as-a-strategy-for-epithelial-ovarian-cancer-prevention","version":"ACOG Committee Opinion 774, 2019","access":"relevant-sections","readScope":"Recommendations, counseling, surgical technique and conclusion from accessible official page; full reference list not reviewed.","reusedFrom":""},
+    {"id":"acog-torsion","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/08/adnexal-torsion-in-adolescents","version":"ACOG Committee Opinion 783, 2019","access":"relevant-sections","readScope":"Accessible official adolescent diagnosis and management sections, including appearance/Doppler limitations; references not read.","reusedFrom":""},
+    {"id":"local-figure","url":"static/img/anatomy/ovary-follicle-stages.jpg","version":"Current local image 1953x797","access":"relevant-sections","readScope":"Viewed entire image, labels and stage endpoint; original external provenance not adjudicated.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/adnexa.mdx",
+    "sourceSha256": "4e423ca2d0f70a5e3c6db58d986a0f4d1fe2ed56361b66c8538cf5afb33624f6",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete restored/revised 217-line MDX, all anatomy, clinical, technique and endocrine sections/tables, 22 inherited references and visually inspected follicle image; no imported data or video.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Adnexal torsion and mass pathways read; adolescent torsion diagnosis/appearance corrected; other evaluation claims open.",
+      "treatment": "Opportunistic salpingectomy and advanced-ovarian node recommendations narrowed with society guidance; other surgery/ectopic/TOA/venous treatments open.",
+      "numbers": "Trial population and 12-month endpoints indexed; original lymphatic percentages, ectopic/malformation statistics and fertility risks open.",
+      "doseDeviceSafety": "Methotrexate eligibility and anticoagulation/antibiotics are clinical-safety claims still needing full pathway review; no dose specified.",
+      "anatomyTechnique": "Entire anatomy and surgical correlation sections read; Bookshelf anatomy prior scope attributed; operative, ovarian lymph and ovarian-vein source packages incomplete.",
+      "followUp": "Surgical menopause, estrogen, RRSO and cancer follow-up implications remain open; no complete follow-up clearance.",
+      "importedDataFigures": "No imported clinical data or video. Local follicle image viewed; caption endpoint corrected, original provenance remains open.",
+      "references": "All 22 inherited references retained and six focused sources appended. Complete source mapping/reading open.",
+      "currency": "2025 ESGO/ESMO/ESP consensus node recommendation and 2026 EVA trial abstract checked; broad clinical-source currency remains open."
+    },
+    "claimChecks": [
+      {"claim":"Ovarian cancer staging universally requires pelvic and paraaortic lymphadenectomy; ovarian lymph never drains to pelvic nodes","sourceIds":["esgo-ovarian","lion"],"locator":"ESGO pocket consensus pp. 12, 15; LION trial indexed methods/results","verdict":"corrected","note":"Qualified advanced complete-resection/non-suspicious-node exception, distinguished early-stage histologies and acknowledged pelvic drainage."},
+      {"claim":"Perioperative vaginal estrogen makes native-tissue prolapse repair more durable","sourceIds":["improve","eva"],"locator":"IMPROVE and EVA indexed primary outcome results","verdict":"corrected","note":"Retained symptom/tissue role without asserting demonstrated anatomic success improvement; full trials open."},
+      {"claim":"Bilateral salpingectomy is mandatory standard adjunct to benign hysterectomy or sterilization","sourceIds":["acog-salpingectomy"],"locator":"ACOG Committee Opinion 774 counseling/technique and route recommendations","verdict":"corrected","note":"Changed to offer/discuss, preserve ovarian blood supply and original hysterectomy route."},
+      {"claim":"RRSO timing is a universal inherited-risk indication and perioperative estrogen protects later prolapse repair","sourceIds":["acog-salpingectomy","improve","eva"],"locator":"ACOG BSO counseling; IMPROVE/EVA primary outcome abstracts","verdict":"corrected","note":"Gene- and patient-specific counseling and symptom-directed estrogen distinguished from unproven repair-durability benefit; full genetics guidance open."},
+      {"claim":"Adnexal detorsion only if gross residual perfusion apparent","sourceIds":["acog-torsion"],"locator":"ACOG Committee Opinion 783 adolescent management and viability discussion","verdict":"corrected","note":"Adolescent scope specified; blue/black appearance and Doppler alone do not establish nonviability."},
+      {"claim":"Local follicle figure ends at corpus luteum","sourceIds":["local-figure"],"locator":"Viewed final diagram label pre-ovulatory follicle","verdict":"corrected","note":"Caption endpoint changed without editing source image; provenance open."},
+      {"claim":"Remaining adnexal anatomy/operative/endocrine/oncology/acute management and quantitative claims","sourceIds":["prior-recovery"],"locator":"Full current page and prior recovery scope record","verdict":"unresolved","note":"Substantive material retained; exact primary and guideline source packages remain to reconcile."}
+    ],
+    "unresolvedClaims": [
+      "Verify inherited ovarian lymphatic percentages, vessel variants, tubal transport, tumor origin, histology and endocrine details against original anatomy/physiology texts and studies.",
+      "Reconcile hereditary RRSO, ovarian cancer histology/stage-specific staging and menopause counseling with full relevant society guidelines and primary papers.",
+      "Review full primary ectopic/PID/TOA, venous thrombosis/congestion, ovarian remnant and incidental mass workup/therapy sources; preserve utility meanwhile.",
+      "Read full LION and estrogen trial reports/supplements as needed for consequential claimed population/endpoints and establish source/provenance of follicle figure."
+    ],
+    "preservationReview": "All sections, tables, 22 inherited references and the image retained. Six references added; only specific blanket claims and figure caption narrowed.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/adnexa-targeted-review.md"
+  }]
+}

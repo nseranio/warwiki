@@ -1,0 +1,15 @@
+# Testicles and scrotum — focused review (20 September 2026)
+
+**Disposition:** full 239-line inherited page and all 24 references read; targeted corrections; **partial clinical verification, not clearance**. The actual local Gray 1143 image was viewed: its caption was made side-neutral because the exposed testis is on the viewer's right while the image labels the right half of the scrotum on the opposite side. No video or imported clinical data is present. The earlier recovery report was reused for its limited anatomy scope only.
+
+## Source scope
+
+- EAU paediatric acute-scrotum and undescended-testes online chapters: torsion management/follow-up and high-testis surgical-choice sections read. Removed a guaranteed six-hour salvage percentage and fixed manual-detorsion instruction; urgent exploration remains prominent. The underlying study full texts were not read.
+- EAU 2026 testicular-cancer diagnostic chapter: ultrasound, inguinal orchiectomy, small-mass/testis-sparing context, prosthesis, fertility-preservation and scrotal-approach passages read. The inherited assertion that scrotal violation automatically upstages cancer and requires radiation/hemiscrotectomy was removed; the guideline supports higher *local recurrence* risk, not those automatic consequences.
+- EAU sexual/reproductive male-infertility and male-hypogonadism chapters: isolated clinical right varicocele, repair selection, sperm retrieval, exogenous-testosterone fertility effects and off-label SERM sections read. These support replacing fixed imaging, retrieval and 3–6-month sperm-recovery promises with individualized language.
+- CDC U.S. permanent-contraception clinical guidance: PVSA 8–16 weeks, unreliable ejaculation-count threshold and continued contraception until laboratory clearance checked. A newly released AUA 2026 vasectomy guideline was identified, but its direct page returned 403; its full text was **not** used to claim clearance and its exact updates remain open.
+- Original venous anatomy evidence: Wishahi 1991 (inherited ref 19) and Sofikitis 1993 PubMed abstracts read, not full articles. Wishahi reports some abdominal cross-communication and valveless veins in his series; Sofikitis found valves present in many cadavers and sometimes incompetent. The disagreement rules out a blanket “no valves/no cross-communication” claim, but does not establish population prevalence.
+
+The inherited testicular anatomy, surgical planes, vas/epididymal organization and practical reconstruction sections were retained. Thirty-one references now appear, seven added for the focused corrections. There was no blanket removal or public audit notice.
+
+**Unresolved:** complete source-to-claim mapping of all inherited measurements, endocrine and sperm-production numbers, antisperm-antibody effects, thermal mechanisms, microsurgical varicocelectomy and vasoreversal outcomes, RPLND nerve-sparing details, Fournier reconstruction and chronic-pain procedures; full original venous papers and current AUA 2026 vasectomy guidance; confirm Gray figure provenance and remaining inherited bibliographic metadata. No clinician sign-off is implied.

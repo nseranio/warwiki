@@ -1,0 +1,206 @@
+{
+  "batchId": "2026-09-21-visualizing-cutting-instruments",
+  "reviewedAt": "2026-09-21",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "gelman-catalog",
+      "url": "https://www.cssurgical.com/; https://www.cssurgical.com/urology-catalog.pdf",
+      "version": "Current CS Surgical website and available urology catalog",
+      "access": "manufacturer-document",
+      "readScope": "Current product listing and complete relevant catalog row read for CS7001, Gelman Urethroplasty Guide/visual sound and 20 Fr internal diameter; full IFU and reprocessing document unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "gelman-technique",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4672120/",
+      "version": "Gelman and Wisenbaugh 2015 full article",
+      "access": "full-text",
+      "readScope": "Complete relevant posterior-urethral reconstruction sections, Figure 9/caption, mature-tract planning, visualizing-sound design, 2/9 versus 0/76 institutional experience and solid-sound trade-off read.",
+      "reusedFrom": "2026-09-21-mechanical-sounds-dilators"
+    },
+    {
+      "id": "gelman-abstract",
+      "url": "https://doi.org/10.1016/j.juro.2012.02.048",
+      "version": "Carrillo/Wisenbaugh/Gelman AUA 2012 abstract",
+      "access": "abstract-only",
+      "readScope": "Complete accessible abstract read for development year, 16 Fr flexible-scope passage, 2/9 versus 0/74 cohorts and technical conclusions; conference full text unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "gelman-radiation-use",
+      "url": "https://doi.org/10.1007/s00345-023-04429-5",
+      "version": "Spilotros et al. 2023",
+      "access": "relevant-sections",
+      "readScope": "Relevant operative-method section read for use of a solid Haygrove or hollow Gelman sound through a pre-existing suprapubic tract; no universal device recommendation inferred.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "otis-bougie-catalog-history",
+      "url": "https://www.henryschein.com/assets/Medical/1919112.pdf; https://eaucongress.uroweb.org/wp-content/uploads/Historia-Vol-28-EAU21.pdf",
+      "version": "Sklar catalog and EAU History Office 2021 review",
+      "access": "relevant-sections",
+      "readScope": "Complete Sklar Otis bougie-à-boule table read for chrome 8-32 Fr models/sets; historical review section read for Bell ball-probe and Leroy d'Etiolles bougie-à-boule attribution.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "ics-urethrotomy-terms",
+      "url": "https://www.ics.org/Publications/ICS%20Standards%202020-2021.pdf",
+      "version": "ICS Standards 2020-2021 / male LUT surgery terminology",
+      "access": "full-text",
+      "readScope": "Urethral assessment/enlargement and incision definitions read for calibration, dilation, blind Otis urethrotomy and direct-vision Sachse urethrotomy.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "otis-current-devices",
+      "url": "https://www.richard-wolf.com/fileadmin/USA/Catalogs/Urology/1777-_02.03-0424USA_-_Urology_Catalog_2024.pdf; https://accessgudid.nlm.nih.gov/devices/10885403050046; https://accessgudid.nlm.nih.gov/devices/search?filters%5BFDA+Product+Code%5D%5B%5D=FCL&filters%5BGMDN+Term+Name%5D%5B%5D=Urethrotome&letter=F&option=FDA+Product+Code&page=1&query=1.mka",
+      "version": "Richard Wolf 2024 catalog and current FDA AccessGUDID records",
+      "access": "manufacturer-document",
+      "readScope": "Complete relevant catalog/device rows read for Wolf 15-45 Fr 236-mm three-tip 12-o'clock system, V. Mueller 30-cm set and RZ two-knife/three-tip set; complete IFUs unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "otis-historical-evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6632096/; https://pubmed.ncbi.nlm.nih.gov/2642313/; https://pubmed.ncbi.nlm.nih.gov/2670580/",
+      "version": "Hjortrup 1983, Schultz 1989 and Nielsen 1989 indexed records",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstracts read for the 72-patient Otis series and two conflicting randomized TURP-prevention studies; full articles unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "sachse-current-system",
+      "url": "https://www.karlstorz.com/us/en/product-detail-page.htm?cat=1000071971&productID=1000137508; https://www.karlstorz.com/us/en/product-detail-page.htm?cat=1000071971&productID=1000105474; https://www.karlstorz.com/us/en/product-detail-page.htm?cat=1000071971&productID=1000137244; https://www.karlstorz.com/sa/en/product-detail-page.htm?cat=1000151785&productID=1000137147",
+      "version": "Current Karl Storz product pages",
+      "access": "manufacturer-document",
+      "readScope": "Complete displayed specifications read for 27068D sheath, 27005AA telescope, 27050E working element and 27069K straight knife, including sizes, working lengths, reuse and no-HF designation; full system IFU unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "sachse-clinical-evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9037288/; https://pubmed.ncbi.nlm.nih.gov/28479479/; https://pmc.ncbi.nlm.nih.gov/articles/PMC11994259/; https://www.auanet.org/documents/Guidelines/PDF/URETHRAL%20STRICTURE%20Amendment%20Summary.pdf",
+      "version": "Giannakopoulos 1997, Kluth 2017, Cochrane review and AUA 2023 amendment summary",
+      "access": "relevant-sections",
+      "readScope": "Complete indexed trial/series abstracts, full Cochrane review relevant comparisons and full AUA amendment summary read for actual populations, technique, outcomes, recurrence predictors and current treatment-level recommendations.",
+      "reusedFrom": "2026-09-21-urethral-dilation-access"
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/gelman-visualizing-sound.mdx",
+      "sourceSha256": "68f92dd11f1d7ab1fdb2eaf9ae446bcc0fb67047474bd6f5a1d6679fe84da1da",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, design, workflow, institutional experience, radiation use, practical limits and all four references; source Figure 9 reviewed and no local figure/video present.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Proximal-lumen localization through a mature midline suprapubic tract scoped to selected posterior reconstruction.",
+        "treatment": "Specialized operative aid retained without universal-standard or replacement claim.",
+        "numbers": "CS7001 20 Fr ID, 16 Fr scope and 2/9 versus 0/74 or 0/76 denominators individually attributed.",
+        "doseDeviceSafety": "No drug dose; compatibility, tract maturity and no-force boundaries retained.",
+        "anatomyTechnique": "Haygrove-like hollow contour, endoscopic/light localization and larger-OD trade-off verified.",
+        "followUp": "No comparative stricture durability inferred from technical-feasibility cohorts.",
+        "importedDataFigures": "Source Figure 9 reviewed; no local data, media or figure.",
+        "references": "Current catalog, abstract, full technical review and radiation-series method scoped separately.",
+        "currency": "Current CS Surgical listing checked; full IFU/reprocessing and comparative evidence remain open."
+      },
+      "claimChecks": [
+        {"claim": "CS7001 is a Cook Medical visualizing sound", "sourceIds": ["gelman-catalog"], "locator": "CS Surgical current listing/catalog row", "verdict": "corrected", "note": "CS7001 is listed by CS Surgical, not Cook Medical."},
+        {"claim": "The visualizing sound universally replaced the Haygrove", "sourceIds": ["gelman-technique"], "locator": "Device discussion following Figure 9", "verdict": "corrected", "note": "The authors retained the solid sound when its smaller tip was readily palpable."},
+        {"claim": "2/9 versus 0/76 proves comparative superiority", "sourceIds": ["gelman-technique", "gelman-abstract"], "locator": "Institutional before/after reports", "verdict": "corrected", "note": "Technical experience is nonrandomized and later denominator differs from the abstract."}
+      ],
+      "unresolvedClaims": ["Obtain complete current CS7001 IFU and reprocessing/compatibility instructions.", "Reconcile 0/74 versus 0/76 denominators from the underlying cohort.", "Locate comparative multicenter evidence, if any, and primary development/history records."],
+      "preservationReview": "Design, mature-tract workflow, endoscopic/light localization, observational outcomes, radiation-series use and practical trade-offs retained; vendor, universal-standard, broad-indication and royalty claims corrected or removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/visualizing-cutting-instruments-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/otis-bougie.mdx",
+      "sourceSha256": "03512f55f1c1246f397e0b2a970ff8f4f17d1b00cf763dca32932f8ade93ed1d",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, catalog configuration, tactile/calibration role, limitations, history and both references; no local data, figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Tactile localization/calibration retained as an estimate, not a complete stricture study.",
+        "treatment": "No therapeutic efficacy assigned to the ball-tip sound.",
+        "numbers": "Current catalog 8-32 Fr individual sizes and set configurations checked.",
+        "doseDeviceSafety": "No dose; no-force and model/IFU checks added.",
+        "anatomyTechnique": "Bulbous-tip function preserved without unsupported curved/straight universality.",
+        "followUp": "Not applicable to a diagnostic/calibration instrument.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Current catalog and focused historical review read.",
+        "currency": "Current commercial listing checked; full IFU and primary history remain open."
+      },
+      "claimChecks": [
+        {"claim": "Otis invented the bougie-à-boule", "sourceIds": ["otis-bougie-catalog-history"], "locator": "EAU history review, ball-probe/bougie-à-boule passage", "verdict": "corrected", "note": "The concept/name predates Otis; Otis remains a commercial pattern name."},
+        {"claim": "Largest passing ball definitively measures stricture anatomy", "sourceIds": ["otis-bougie-catalog-history"], "locator": "Instrument purpose versus absent imaging definition", "verdict": "corrected", "note": "It provides a mechanical estimate and does not replace imaging/endoscopy."}
+      ],
+      "unresolvedClaims": ["Obtain current Sklar IFU/reprocessing instructions and exact shaft geometry.", "Read primary Bell, Leroy d'Etiolles and Otis historical texts for design attribution.", "Verify any retained modern clinical role in current stricture-evaluation guidance."],
+      "preservationReview": "Ball-tip design, tactile localization, French sizing, calibration role and history retained; false inventorship and stand-alone diagnostic certainty corrected.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/visualizing-cutting-instruments-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/otis-urethrotome.mdx",
+      "sourceSha256": "5a7e75c8af344aad4f642c1f8c088d02b1f75a97adeda351c2a92f3591597363",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, terminology, current configurations, operating concept, historical series/TURP evidence, comparison and all seven references; no local figure/video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Blind urethrotomy distinguished from direct-vision evaluation and incision.",
+        "treatment": "Historical stricture/TURP evidence retained without modern niche-indication invention.",
+        "numbers": "Current model specifications and exact historical abstract outcomes checked.",
+        "doseDeviceSafety": "No dose; fixed anesthesia, target caliber, catheter size and dwell rules removed.",
+        "anatomyTechnique": "Blind expansion/incision concept retained; device configurations shown to vary.",
+        "followUp": "Historical outcome definitions explicitly predate current standards.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "ICS full terminology, current catalogs/device records and three abstracts scoped separately.",
+        "currency": "Current commercial-distribution records checked; complete IFUs and modern indication evidence remain open."
+      },
+      "claimChecks": [
+        {"claim": "All Otis urethrotomes share one configuration and procedural target", "sourceIds": ["otis-current-devices"], "locator": "Wolf/V. Mueller/RZ current records", "verdict": "corrected", "note": "Current systems differ and do not support a universal target or accessory set."},
+        {"claim": "DVIU success figures transfer approximately to Otis urethrotomy", "sourceIds": ["ics-urethrotomy-terms", "sachse-clinical-evidence"], "locator": "ICS separation of blind/direct-vision procedures", "verdict": "corrected", "note": "The procedures are distinct; evidence is not automatically transferable."},
+        {"claim": "Prophylactic Otis urethrotomy before TURP consistently prevents stricture", "sourceIds": ["otis-historical-evidence"], "locator": "Two 1989 randomized abstracts", "verdict": "corrected", "note": "Trials conflict and do not establish routine use with current platforms."}
+      ],
+      "unresolvedClaims": ["Obtain full IFUs and reprocessing instructions for current Wolf, V. Mueller and RZ systems.", "Retrieve full Hjortrup, Schultz and Nielsen articles and map exact technique/complications.", "Find current evidence, if any, for specific contemporary Otis indications."],
+      "preservationReview": "Blind-incision identity, current commercial configurations, historical stricture series, conflicting TURP trials and comparison with optical urethrotomy retained; fixed procedural rules and transferred DVIU outcomes removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/visualizing-cutting-instruments-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/sachse-urethrotome.mdx",
+      "sourceSha256": "763f627033ab04b8f3baf907d4dd98e3934e2b0431e8abf2306d07a6fa715e5a",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, current system example, operating concept, procedure-evidence boundary, safety, history and all eight references; no local figure/video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "True-lumen visualization and guide use retained without claiming safety in obliteration.",
+        "treatment": "Clinical selection and adjunct decisions delegated to canonical DVIU page.",
+        "numbers": "Current Storz component specifications and trial/series outcomes checked.",
+        "doseDeviceSafety": "No drug dose retained; non-HF knife designation and no universal catheter/incision rules emphasized.",
+        "anatomyTechnique": "Optical cold-knife principle retained; excessive full-thickness language removed.",
+        "followUp": "Five-year trial decline and 16-month series recurrence properly scoped.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Four current product pages, two indexed studies, full Cochrane and AUA summary scoped separately.",
+        "currency": "Current Storz products and AUA 2023 summary checked; full IFU and 2026 EAU reconciliation remain open."
+      },
+      "claimChecks": [
+        {"claim": "Every Sachse system is universally a 21 Fr, fixed-channel instrument", "sourceIds": ["sachse-current-system"], "locator": "Current Storz component pages", "verdict": "corrected", "note": "21 Fr describes the cited current sheath; components and accessories vary by system."},
+        {"claim": "DVIU requires full-thickness cutting into healthy periurethral tissue", "sourceIds": ["sachse-current-system", "sachse-clinical-evidence"], "locator": "Manufacturer device facts and clinical evidence boundary", "verdict": "corrected", "note": "No universal manufacturer instruction supports this potentially excessive depth statement."},
+        {"claim": "Kluth establishes per-centimeter and lifetime recurrence figures", "sourceIds": ["sachse-clinical-evidence"], "locator": "Kluth indexed abstract", "verdict": "corrected", "note": "The abstract supports 51.6% success, six-month median recurrence and prior-DVIU HR, not those extra figures."},
+        {"claim": "ICS sexual-health terminology supports a 2-10% ED rate after Sachse", "sourceIds": ["sachse-clinical-evidence"], "locator": "Prior citation/source mismatch", "verdict": "corrected", "note": "The unsupported device-specific rate and mechanism list were removed."}
+      ],
+      "unresolvedClaims": ["Obtain the complete current Storz system IFU and compatibility/reprocessing matrix.", "Retrieve full Giannakopoulos and Kluth articles and reconcile device/procedure details.", "Review the current EAU 2026 endoluminal guidance and canonical DVIU page claim by claim before clearance."],
+      "preservationReview": "Current system architecture, optical cold-knife principle, historical role, key trial/series outcomes, AUA context and safety boundaries retained; cross-anatomic dosing/incision rules, unsupported outcome figures and source-mismatched ED claims removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/visualizing-cutting-instruments-targeted-review.md"
+    }
+  ]
+}

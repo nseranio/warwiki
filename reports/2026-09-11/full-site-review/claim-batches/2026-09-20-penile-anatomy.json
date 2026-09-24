@@ -1,0 +1,57 @@
+{
+  "batchId": "2026-09-20-penile-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/penis-anatomy-recovery-review.md","version":"September 20 bounded anatomy recovery","access":"prior-review","readScope":"Attributed prior gross anatomy/physiology reading, not current restored operative/emergency sources.","reusedFrom":"reports/2026-09-20/penis-anatomy-recovery-review.md"},
+    {"id":"brock","url":"https://pubmed.ncbi.nlm.nih.gov/8976279/","version":"Brock et al. J Urol 1997","access":"abstract-only","readScope":"Original study abstract on six cadavers, ten surgical patients, circular/longitudinal tunical layers and ventral gap. Full article not accessed.","reusedFrom":""},
+    {"id":"eau-pd","url":"https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/penile-curvature","version":"EAU current online guideline accessed 2026-09-20","access":"relevant-sections","readScope":"Disease/surgical management, tunical lengthening, prosthesis, limitations and recommendations; other sections and appendices not fully read.","reusedFrom":""},
+    {"id":"eau-priapism","url":"https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/priapism","version":"EAU current online guideline accessed 2026-09-20","access":"relevant-sections","readScope":"Ischemic diagnosis/blood gas, emergency treatment, shunts, early prosthesis and recommendations; nonischemic diagnosis/treatment and recommendations. Supplementary evidence/appendices not read.","reusedFrom":""},
+    {"id":"aua-priapism","url":"https://www.auanet.org/documents/Guidelines/PDF/priapism/Priapism.pdf","version":"AUA/SMSNA 2022 guideline","access":"indexed-excerpts","readScope":"Indexed proximal-shunt caveat and post-shunting statement 13; direct PDF open returned internal error, no full-document reading claimed.","reusedFrom":""},
+    {"id":"eau-trauma","url":"https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines","version":"EAU 2026 urogenital trauma update","access":"relevant-sections","readScope":"Penile fracture presentation, urethral injury, management and recommendations in genital/urethral trauma. Remaining trauma guideline not fully read.","reusedFrom":""},
+    {"id":"eau-ed","url":"https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/management-of-erectile-dysfunction","version":"EAU current online guideline accessed 2026-09-20","access":"relevant-sections","readScope":"Post-radical-prostatectomy penile rehabilitation and recommendation sections; remaining ED therapies not fully reconciled.","reusedFrom":""},
+    {"id":"dorsal-nerve","url":"https://www.ncbi.nlm.nih.gov/books/NBK525966/","version":"Weech et al. Bookshelf updated 2023","access":"relevant-sections","readScope":"Structure/function, blood/nerve course, variations and clinical block sections; full bibliography not read.","reusedFrom":""},
+    {"id":"flores-block","url":"https://pubmed.ncbi.nlm.nih.gov/25605058/","version":"Flores/Herring 2015 case report","access":"abstract-only","readScope":"Abstract describes variable landmark 10/2 approach, ultrasound target and complication potential; full technical paper not read.","reusedFrom":""},
+    {"id":"local-schematic","url":"static/img/diagrams/penile-cross-section.svg; reports/2026-09-11/diagrams-quality.md","version":"2026-09-11 WARWIKI original schematic and audit metadata","access":"relevant-sections","readScope":"Read SVG labels/shapes as source markup and embedded provenance plus prior audit row; no rendered visual review or adult anatomy validation.","reusedFrom":"reports/2026-09-11/diagrams-quality.md"}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/penis-anatomy-physiology.mdx",
+    "sourceSha256": "311e0ae08933ef661d9d9834f9f7856a4f27fb20b7dbfea9efbcf70d85ead35f",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete restored/current 248-line page including 26 inherited references, anatomy/physiology, clinical correlations and both VideoCards IDs; schematic source markup and metadata inspected, but graphic not rendered and videos not watched. No imported clinical data.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "EAU ischemic/nonischemic differentiation and penile-fracture/urethral injury warnings checked; other ED/oncology/operative evaluations open.",
+      "treatment": "EAU priapism, trauma, PD and ED recommendation sections corrected in their limited scopes; full algorithms and companion pages open.",
+      "numbers": "Removed universal nerve-sparing recovery percentage and mandatory 24-hour prosthesis threshold; numerous tunical, vessel, oxygen and operative estimates open.",
+      "doseDeviceSafety": "No drug dose introduced; phenylephrine escalation and shunt decision checked at guideline level, complete dosing/safety package and implant technical instructions open.",
+      "anatomyTechnique": "Brock original abstract and Bookshelf nerve course support focused corrections; vascular supply, donor flaps, implant dilation and schematic adult validation open.",
+      "followUp": "Post-trauma, ED, PD and priapism follow-up pathways not cleared.",
+      "importedDataFigures": "No imported clinical data. Original conceptual SVG source/provenance inspected but not rendered/clinically signed off; two VideoCards IDs retained, footage not viewed.",
+      "references": "All 26 inherited references retained, seven focused references added; inherited refs 3/4 anatomy-citation mismatch and full source mappings open.",
+      "currency": "Current EAU online recommendations and 2026 EAU trauma section checked; AUA 2022 priapism indexed excerpt only, full PDF inaccessible in web tool."
+    },
+    "claimChecks": [
+      {"claim":"Ventral tunical outer-layer gap predicts dorsal Peyronie's curvature and plication choice","sourceIds":["brock","eau-pd"],"locator":"Brock original abstract results; EAU PD tunical shortening/lengthening recommendations","verdict":"corrected","note":"Kept 5–7-o'clock original anatomy, removed unsupported directional cause; full Brock text open."},
+      {"claim":"Peyronie's grafting is indicated for compromised erection or any curvature >60 degrees","sourceIds":["eau-pd"],"locator":"EAU 8.2.3.b.2–4, threshold caveat and recommendations","verdict":"corrected","note":"Adequate function/complex deformity distinguished from refractory ED prosthesis."},
+      {"claim":"Proximal shunt is mandatory and immediate prosthesis follows automatically after 24 hours of ischemic priapism","sourceIds":["eau-priapism","aua-priapism"],"locator":"EAU 10.1.2–10.1.4; AUA indexed proximal-shunt discussion and statement 13","verdict":"corrected","note":"Individualized prolonged/refractory decision, distal shunting and post-shunt confirmation; AUA full PDF open gap noted."},
+      {"claim":"Nonischemic priapism can simply be observed without time-sensitive erectile risk","sourceIds":["eau-priapism"],"locator":"EAU 10.3.2–10.3.3 conservative/compression and embolization recommendations","verdict":"corrected","note":"Specialist assessment and definitive option if persistence; not ischemic emergency."},
+      {"claim":"Fracture urethral injury requires visible signs; delayed presentation rules out useful surgery","sourceIds":["eau-trauma"],"locator":"EAU 2026 sections 4.4.2 and 4.5.2–4.5.7","verdict":"corrected","note":"Signs can be absent; urethral assessment, surgical repair and late presentation caveat retained."},
+      {"claim":"Bilateral nerve sparing uniformly yields 60–85 percent one-year recovery and a specific PDE5i rehabilitation regimen restores spontaneous erectile function","sourceIds":["eau-ed"],"locator":"EAU ED post-prostatectomy rehab and recommendations","verdict":"corrected","note":"Removed universal rate and mechanistic rehabilitation guarantee, preserved individualized early symptom treatment."},
+      {"claim":"Somatic pudendal fibers mediate emission and 10/2 block has an absolute safe midline/precise depth","sourceIds":["dorsal-nerve","flores-block"],"locator":"Bookshelf structure/function/variations; Flores/Herring abstract","verdict":"corrected","note":"Somatic expulsion vs sympathetic emission; block technique caveated without fixed depth."},
+      {"claim":"Inherited detailed fascia, vascular, implant, neurochemical, hypospadias, oncology, pressure and donor-flap claims and original videos","sourceIds":["prior-recovery","local-schematic"],"locator":"Entire restored page and limited original recovery; diagram source provenance","verdict":"unresolved","note":"Preserved useful technical content, schematic and videos pending direct original packages and visual review."}
+    ],
+    "unresolvedClaims": [
+      "Read original full adult penile anatomy/vascular and operative studies for tunical collagen, septum, dorsal nerve, accessory arteries, axial dartos flaps and cross-over technique; reconcile inherited refs 3/4 to claims.",
+      "Review full AUA/SMSNA priapism PDF through legitimate access after web-tool error, EAU appendices and current perioperative safety/dose details; assess companion page consistency.",
+      "Reconcile penile prosthesis placement, hypospadias, oncology lymphatics, fracture follow-up and ED-specific evidence/companion pages; no generic anatomy inference of efficacy.",
+      "Render and visually assess conceptual penile-cross-section SVG against adult source anatomy and inspect both linked video contents/provenance before any media clearance."
+    ],
+    "preservationReview": "All original headings, table, 26 references, schematic, related teaching and two VideoCards IDs retained. Seven focused references appended; no section or media removed. Specific erroneous treatment and physiology statements narrowed.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/penile-anatomy-targeted-review.md"
+  }]
+}

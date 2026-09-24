@@ -1,0 +1,234 @@
+{
+  "batchId": "2026-09-21-urethral-dilation-access",
+  "reviewedAt": "2026-09-21",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "optilume-urethral-ifu",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf21/P210020C.pdf",
+      "version": "FDA PMA P210020 Optilume urethral DCB labeling, 2021",
+      "access": "manufacturer-document",
+      "readScope": "Relevant indication, description, size, guidewire compatibility, balloon compliance, drug-density, pressure and procedural sections read; device-specific warnings retained at the linked labeling rather than reproduced exhaustively.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "aua-stricture-amendment",
+      "url": "https://www.auanet.org/documents/Guidelines/PDF/URETHRAL%20STRICTURE%20Amendment%20Summary.pdf",
+      "version": "AUA Urethral Stricture Guideline Amendment Summary, 2023",
+      "access": "full-text",
+      "readScope": "Complete amendment summary read, including statement 11b limiting DCB use to recurrent bulbar strictures shorter than 3 cm as a conditional Grade B recommendation.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "optilume-bph-ifu",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/P220029C.pdf",
+      "version": "FDA PMA P220029 Optilume BPH labeling, 2025",
+      "access": "manufacturer-document",
+      "readScope": "Relevant system description, two-catheter/double-lobe design, indication, contraindication and procedural sections read to separate BPH use from urethral-stricture DCB use.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "gelman-balloon",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21745112/",
+      "version": "Gelman et al. 2011 direct-vision balloon report",
+      "access": "full-text",
+      "readScope": "Complete PubMed abstract and available PMC article read for direct-vision device/technique description; no comparative durability or universal safety inference made.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "filiform-manufacturers",
+      "url": "https://www.bd.com/en-us/products-and-solutions/products/product-families/filiforms; https://www.teleflex.com/usa/en/product-areas/urology/educational-resources/UR__CAT_FiliformsFollowers_DS_2012-1430_5349.pdf",
+      "version": "Current BD and Teleflex filiform/follower records",
+      "access": "manufacturer-document",
+      "readScope": "Relevant current size, tip, material, length, connector, drainage and compatible-follower descriptions read; complete reprocessing and every model IFU not obtained.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "aua-difficult-foley",
+      "url": "https://auau.auanet.org/sites/default/files/media/2023-05/Lesson%204%20Erratum%20June%202023.pdf",
+      "version": "AUA Update Series 2023 Lesson 4 with June 2023 erratum",
+      "access": "full-text",
+      "readScope": "Complete difficult-catheter lesson and erratum reviewed for traumatic-attempt escalation, filiform/follower connection, objective bladder confirmation, S-dilator preparation/sequence and catheter-caliber guidance.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "wire-assisted-urethral-series",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8048205/; https://pubmed.ncbi.nlm.nih.gov/8648783/",
+      "version": "Beaghler 1994 flexible-cystoscope and Freid-Smith 1996 Glidewire series",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstracts read for technique, objective confirmation, cohort size, success and reported complications; both are small older series without comparative contemporary safety estimates.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "dilation-outcomes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9679876/; https://pmc.ncbi.nlm.nih.gov/articles/PMC11994259/",
+      "version": "Heyns et al. 1998 trial and Wong et al. Cochrane review",
+      "access": "full-text",
+      "readScope": "Complete indexed trial abstract and complete open Cochrane review read for randomized groups, follow-up, recurrence estimates, technical failure and filiform-specific adverse-event categories.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "guidewire-bench",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15126774/; https://pubmed.ncbi.nlm.nih.gov/23992968/; https://pubmed.ncbi.nlm.nih.gov/32070125/; https://pubmed.ncbi.nlm.nih.gov/35801659/",
+      "version": "Clayman 2004, Torricelli 2013, Amasyali 2020 and Kolvatzis 2022 guidewire studies",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstracts read for bench methods, tested properties, impacted-stone apparatus results, contradictory puncture/friction findings and lack of standardized stiffness definitions; no patient-outcome inference made.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "guidewire-safety",
+      "url": "https://doi.org/10.1089/end.2013.0248; https://doi.org/10.1089/end.2008.0071; https://doi.org/10.1089/end.2010.0145; https://doi.org/10.1016/j.urology.2007.04.050; https://doi.org/10.1016/j.urology.2011.11.002",
+      "version": "Ulvik, Eandi, Dickstein, Pedro and Graversen safety-wire/perforation studies",
+      "access": "abstract-only",
+      "readScope": "Indexed abstracts and reported study-design details reviewed; center comparison, selected clinical series and ex-vivo models are distinguished from randomized clinical evidence.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "prophylactic-ureteric-catheter",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38602151/",
+      "version": "Gurumurthy et al. 2024 systematic review/meta-analysis",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstract read for three RCTs, seven observational studies and lack of lower ureteric-injury risk in complex gynecologic surgery.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "scurve-manufacturer",
+      "url": "https://www.cookmedical.com/products/uro_073701_webds/; https://ifu.cookmedical.com/data/IFU_PDF/T_SCURV_REV1.PDF",
+      "version": "Current Cook S~Curve product record and IFU T_SCURV_REV1",
+      "access": "manufacturer-document",
+      "readScope": "Complete relevant indication, size, length, sideport, hydrophilic preparation, 0.038-inch guidewire and placement sections read.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "pediatric-wire-dilation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14666469/",
+      "version": "Dewan et al. 2003 pediatric guidewire/sheath series",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstract read for cystoscopic wire placement, 32-patient series, follow-up and reported UTI, bladder-spasm, false-passage and sepsis outcomes.",
+      "reusedFrom": ""
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/balloon-dilator.mdx",
+      "sourceSha256": "67606a9c2720b836e5baff23c40dfc253c33bc2d718f8c80f93ad1ee63b7dd65",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, frontmatter, device-family table, mechanism, workflow, anatomic uses, practical boundaries, links and all six references; no local figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Device class and anatomy must be identified before applying an IFU or outcome.",
+        "treatment": "Procedure selection stays on dedicated pages; AUA DCB scope narrowed to recurrent bulbar strictures under 3 cm.",
+        "numbers": "Urethral DCB sizes, lengths, wire diameter and drug density verified from FDA labeling.",
+        "doseDeviceSafety": "Device-specific pressure, duration, drug handling, catheter and contraindication rules emphasized; universal protocol removed.",
+        "anatomyTechnique": "Plain urethral, ureteral, urethral DCB and BPH systems separated.",
+        "followUp": "Outcome data delegated to canonical procedure pages; no instrument-wide durability claim retained.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "FDA labeling, AUA amendment, technical report and dedicated trial/procedure references individually scoped.",
+        "currency": "Current FDA labeling and 2023 AUA amendment checked; plain-balloon IFUs remain open."
+      },
+      "claimChecks": [
+        {"claim": "All urologic balloon dilators are non-compliant PET/polyethylene and use 0.035-inch wires", "sourceIds": ["optilume-urethral-ifu"], "locator": "FDA device description and compatibility tables", "verdict": "corrected", "note": "Optilume urethral DCB is semi-compliant and labeled for a 0.038-inch wire."},
+        {"claim": "Optilume urethral DCB is only 30 Fr", "sourceIds": ["optilume-urethral-ifu"], "locator": "FDA size table", "verdict": "corrected", "note": "Labeling lists 18, 24, 30 and 36 Fr and 30/50-mm lengths."},
+        {"claim": "DCB is broadly recommended for anterior urethral stricture", "sourceIds": ["aua-stricture-amendment"], "locator": "Guideline statement 11b", "verdict": "corrected", "note": "The AUA recommendation is conditional for recurrent bulbar strictures shorter than 3 cm."},
+        {"claim": "Optilume BPH and urethral DCB are one interchangeable device family", "sourceIds": ["optilume-urethral-ifu", "optilume-bph-ifu"], "locator": "FDA system descriptions", "verdict": "corrected", "note": "They are distinct systems with different anatomy, components, indications and labeling."}
+      ],
+      "unresolvedClaims": ["Obtain full current IFUs for representative plain urethral and ureteral balloons.", "Reconcile each dedicated procedure page with current product labeling and guidelines.", "Retrieve full comparative trials before any safety or durability ranking."],
+      "preservationReview": "Radial mechanism, workflow, anatomic uses, device links and limitations retained; family conflation, universal sizing/pressure/hold-time and risk rankings corrected.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/urethral-dilation-access-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/filiforms-followers.mdx",
+      "sourceSha256": "d830b50e13137340770f1fee13c4c00d249bae00d19a795c6dac317d8136a805",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, design, indications, verification technique, evidence, complications, alternatives, links and all ten references; no local figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Traumatic attempts and suspected false passage trigger visualization rather than repeated blind passage.",
+        "treatment": "Legacy role retained without calling it the preferred treatment for near-obliterative disease.",
+        "numbers": "Current manufacturer sizes and older trial/series denominators checked and attributed.",
+        "doseDeviceSafety": "No drug dose; objective bladder confirmation, matched components and minimal required endpoint emphasized.",
+        "anatomyTechnique": "Threaded follower architecture retained; tactile-only confirmation and direct Council-over-filiform assumption removed.",
+        "followUp": "Older recurrence estimates confined to the strategy studied, not current product performance.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Current manufacturer records, AUA lesson, trial, Cochrane review and small access series individually scoped.",
+        "currency": "Current BD/Teleflex product facts checked; full IFUs and contemporary comparative evidence remain open."
+      },
+      "claimChecks": [
+        {"claim": "Loss of resistance and expected urethral length confirm bladder entry", "sourceIds": ["aua-difficult-foley", "wire-assisted-urethral-series"], "locator": "AUA verification section and Freid abstract", "verdict": "corrected", "note": "Objective drainage, endoscopic, contrast/fluoroscopic or ultrasound confirmation is required."},
+        {"claim": "Multiple filiforms filling false passages is a current safety standard", "sourceIds": ["aua-difficult-foley"], "locator": "Contemporary difficult-catheter escalation", "verdict": "unresolved", "note": "Retained only as historical teaching; no contemporary comparative safety evidence found."},
+        {"claim": "All cases should be dilated to approximately 24 Fr", "sourceIds": ["filiform-manufacturers", "aua-difficult-foley"], "locator": "Current product ranges and catheter goal guidance", "verdict": "corrected", "note": "Endpoint depends on the immediate goal, tissue response and compatible product."},
+        {"claim": "Heyns outcomes validate modern filiform product safety", "sourceIds": ["dilation-outcomes"], "locator": "Trial abstract and Cochrane review", "verdict": "corrected", "note": "They describe an older treatment strategy and do not validate a current device."}
+      ],
+      "unresolvedClaims": ["Obtain complete current IFUs and compatibility tables for representative filiform/follower systems.", "Retrieve the full Beaghler, Freid and Heyns primary papers.", "Find contemporary evidence for or against the historical multiple-filiform maneuver."],
+      "preservationReview": "Design, narrow-stricture role, sequential technique, complications, outcomes and modern alternatives retained; unsafe confirmation, universal endpoint and comparative risk claims corrected.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/urethral-dilation-access-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/guidewires.mdx",
+      "sourceSha256": "423a2ef54fd8029086f36e762f5e22dc071a7b0a888d6ce76aa5baf0637fdec3",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, construction, functional categories, reconstructive uses, difficult urethral access, selection framework, safety-wire debate, bench evidence, practical safety and all 18 references; no local figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Wire selection begins with true-lumen confirmation, access-versus-support goal and downstream-device compatibility.",
+        "treatment": "Retrograde/antegrade, injury, urethral access and selective pelvic-surgery roles retained without universal named-wire recommendations.",
+        "numbers": "Bench values removed from prescriptive tables; study designs and key contradictory results retained qualitatively.",
+        "doseDeviceSafety": "No drug dose; coating care, wire control, position confirmation, exchange and stiff-wire hazards emphasized.",
+        "anatomyTechnique": "RUG error corrected to retrograde pyelography; prophylactic stents framed as selective identification aids.",
+        "followUp": "Safety-wire clinical series presented as selected/observational evidence, not universal practice change.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Bench, ex-vivo, observational, systematic-review and technique sources explicitly separated.",
+        "currency": "2022 stiffness review and 2024 prophylactic-catheter meta-analysis included; current product IFUs remain open."
+      },
+      "claimChecks": [
+        {"claim": "Glidewire is universally the lowest-friction and safest hydrophilic wire", "sourceIds": ["guidewire-bench"], "locator": "Torricelli indexed abstract", "verdict": "corrected", "note": "It had relatively high puncture force but also the highest friction in that in-vitro comparison."},
+        {"claim": "Bench impacted-stone performance determines the recommended clinical wire", "sourceIds": ["guidewire-bench"], "locator": "Amasyali apparatus and methods", "verdict": "corrected", "note": "Results are labeled benchtop and used only to explain physical behavior."},
+        {"claim": "Routine prophylactic ureteral stents prevent injury during complex pelvic surgery", "sourceIds": ["prophylactic-ureteric-catheter"], "locator": "2024 meta-analysis abstract", "verdict": "corrected", "note": "No lower ureteric-injury risk was found in complex gynecologic surgery."},
+        {"claim": "Safety wires are obsolete for ureteroscopy", "sourceIds": ["guidewire-safety"], "locator": "Observational/selected clinical and ex-vivo evidence", "verdict": "corrected", "note": "Evidence supports selective practice, not a universal prohibition."}
+      ],
+      "unresolvedClaims": ["Obtain current IFUs for named access, hydrophilic, stiff and hybrid wires.", "Retrieve all full bench, ex-vivo and safety-wire papers and reconcile apparatus-specific definitions.", "Verify procedure-specific wire recommendations on each linked ureteral and urethral page."],
+      "preservationReview": "Construction, categories, reconstructive uses, access/exchange teaching, safety-wire debate and bench evidence retained; clinical rankings, RUG error and overbroad prophylactic-stent claims corrected.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/urethral-dilation-access-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/sounds-bougies/s-dilators.mdx",
+      "sourceSha256": "7f4231529dec70e2406eddc65381608fae4074e6d7c220a2de261c449c687e4d",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, product configuration, rationale/evidence, uses, verified technique, comparison boundaries, complications, links and all seven references; no local figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Confirmed wire access and the immediate drainage/procedure goal drive use.",
+        "treatment": "Selected dilation and catheter access roles retained without blanket bridge, pediatric or definitive-treatment claims.",
+        "numbers": "Cook current 0.038-inch compatibility, 8-20 Fr set, 22-26 Fr individual sizes and 37-cm length checked.",
+        "doseDeviceSafety": "No drug dose; IFU hydration, objective bladder confirmation, minimal necessary dilation and no blanket antibiotic rule.",
+        "anatomyTechnique": "Curved over-wire concept retained; false-passage elimination and shape superiority removed.",
+        "followUp": "Pediatric series and older recurrence trial framed by design/population limits.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Current manufacturer product/IFU, AUA lesson and primary series individually scoped.",
+        "currency": "Current Cook product and IFU checked; comparative modern outcomes remain unresolved."
+      },
+      "claimChecks": [
+        {"claim": "Guidewire tracking eliminates false passage", "sourceIds": ["scurve-manufacturer", "aua-difficult-foley"], "locator": "IFU placement and contemporary difficult-catheter technique", "verdict": "corrected", "note": "Risk is reduced only when the wire is correctly positioned; it is not eliminated."},
+        {"claim": "All S-shaped dilators use a standard 0.035-inch wire", "sourceIds": ["scurve-manufacturer"], "locator": "Cook current product and IFU", "verdict": "corrected", "note": "The current Cook S~Curve system is labeled for a 0.038-inch wire."},
+        {"claim": "S-shaped dilation is clinically superior to straight coaxial dilation and lower cost than balloon dilation", "sourceIds": ["scurve-manufacturer", "pediatric-wire-dilation"], "locator": "Device/technique sources", "verdict": "unresolved", "note": "No comparative clinical or cost study supporting those rankings was identified."},
+        {"claim": "A fixed large endpoint and blanket antibiotics apply to every use", "sourceIds": ["aua-difficult-foley"], "locator": "Catheter-goal and dilation sequence", "verdict": "corrected", "note": "Use minimal dilation for the intended catheter and procedure-specific infection guidance."}
+      ],
+      "unresolvedClaims": ["Obtain any newer S~Curve IFU revision and full Herschorn/Dewan/Freid papers.", "Locate direct comparisons with straight coaxial, balloon and sound dilation.", "Reconcile procedure-specific recurrence and catheter plans with dedicated stricture pages."],
+      "preservationReview": "Current design, rationale, uses, sequence, comparisons, risks and recurrence teaching retained; false-passage elimination, superiority/cost rankings and blanket prophylaxis corrected.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/urethral-dilation-access-targeted-review.md"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "batchId": "2026-09-20-penile-replantation-vca",
+  "reviewedAt": "2026-09-20",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "acs-2025",
+      "url": "https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf",
+      "version": "American College of Surgeons Best Practices Guidelines: Management of Genitourinary Injuries, August 2025",
+      "access": "relevant-sections",
+      "readScope": "Penile-amputation management on guideline page 60/PDF page 59 directly read: timely corporal/urethral reconstruction, urgent microsurgical replantation and transfer, two-bag preservation, macroscopic fallback and mental-health evaluation.",
+      "reusedFrom": "reports/2026-09-20/penile-replantation-recovery-review.md"
+    },
+    {
+      "id": "wang-2022",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35300997/",
+      "version": "Wang et al. 2022 original case report/video abstract",
+      "access": "abstract-only",
+      "readScope": "Complete abstract: one patient, presentation, treatment classes, ischemic/operative times, wound/voiding/Qmax, sensory and EHS outcomes through six months; full article and video unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "jin-2022",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35723457/",
+      "version": "Jin et al. 2022 original JoVE abstract",
+      "access": "abstract-only",
+      "readScope": "Complete abstract: indication, protocol purpose and author-reported appearance, micturition, complication and sensation outcomes; full article/video unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "lopez-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9838304/",
+      "version": "Lopez et al. 2023 review and Baltimore Criteria update",
+      "access": "relevant-sections",
+      "readScope": "Accessible full-text XML checked for abstract, key points, historical cases, techniques, complications, immunosuppression, selection/ethics, tables and figure captions; actual image panels not independently inspected. Historical five-case/two-explant scope and all-case intervention statement verified.",
+      "reusedFrom": "reports/2026-09-19/genitourinary-vca-recovery-review.md"
+    },
+    {
+      "id": "knoedler-2026",
+      "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2026.1733221/full",
+      "version": "Knoedler et al. 2026 systematic review",
+      "access": "relevant-sections",
+      "readScope": "Abstract, methods, relevant results/table context, penile-recipient row/context, discussion and limitations read. Cohort was 136 recipients with one penile VCA; supplement not opened because no supplement-only claim was retained.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "recovery-context",
+      "url": "reports/2026-09-20/penile-replantation-recovery-review.md",
+      "version": "September 19-20 recovery reviews and restoration correction record",
+      "access": "prior-review",
+      "readScope": "Previously documented access boundaries for ACS, Sanger, Cape Town, MGH, Redett and Caplan reused without upgrading bibliographic/abstract/full-text access.",
+      "reusedFrom": "reports/2026-09-20/penile-replantation-recovery-review.md; reports/2026-09-19/genitourinary-vca-recovery-review.md; reports/2026-09-20/restoration-correction-review.md"
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx",
+      "sourceSha256": "5de8f1db4887abf61c157c7c430b5c3c9ee1dd5eebe837a9335e2590469d4585",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, frontmatter, emergency guidance, anatomy, complete/glans operative sequences, outcome/comparison/complication/adjunct/pediatric tables and text, VCA bridge, all references and video card; no local imported clinical data or figure.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Etiologies and psychiatric context retained with small-series boundaries; ACS transfer and mental-health evaluation checked.",
+        "treatment": "ACS acute management verified; Wang/Jin and adjunctive techniques labeled source-specific rather than universal.",
+        "numbers": "Wang abstract numbers verified; Sanger and other case outcomes retained at prior access with no pooled or expected-rate inference.",
+        "doseDeviceSafety": "No medication recommendation added; antithrombotics, leeches, HBO, catheter and monitoring regimens remain case-specific and pending full packages.",
+        "anatomyTechnique": "Useful vessel anatomy and operative steps preserved; fixed vessel minimum/optimal count removed; fine details await full technical sources.",
+        "followUp": "Case follow-up durations separated; no standardized long-term outcome or surveillance claim.",
+        "importedDataFigures": "No local figure/imported data; one existing video card preserved, source video package not independently reviewed.",
+        "references": "All 26 inherited references retained; access limits recorded individually or by unresolved package.",
+        "currency": "Current ACS 2025 penile-amputation guidance directly checked; no new OpenEvidence query."
+      },
+      "claimChecks": [
+        {
+          "claim": "Microsurgical replantation universally restores appearance, voiding, erections and sensation",
+          "sourceIds": ["acs-2025", "wang-2022", "recovery-context"],
+          "locator": "ACS penile-amputation management; Wang abstract Results; recovery source limits",
+          "verdict": "corrected",
+          "note": "Urgent microsurgery is preferred when feasible, but outcomes and complications vary and the evidence is mostly cases/small series."
+        },
+        {
+          "claim": "The Wang sequence, one-dorsal-artery minimum and a fixed optimal vessel set are universal requirements",
+          "sourceIds": ["acs-2025", "wang-2022"],
+          "locator": "ACS repair principles and Wang one-case abstract/video citation",
+          "verdict": "corrected",
+          "note": "Sequence labeled case-specific; repair targets depend on injury anatomy and no fixed count guarantees survival."
+        },
+        {
+          "claim": "Microsurgical versus macroscopic complication and functional rates are reliably established",
+          "sourceIds": ["acs-2025", "recovery-context"],
+          "locator": "ACS macroscopic fallback; unresolved heterogeneous primary series",
+          "verdict": "corrected",
+          "note": "Table now reports patterns without rare/common/normal-most rates or an unsupported comparative effect."
+        },
+        {
+          "claim": "Jin glans outcomes apply generally",
+          "sourceIds": ["jin-2022"],
+          "locator": "Abstract Results and Conclusion",
+          "verdict": "corrected",
+          "note": "Outcome wording is explicitly author-reported for the cited protocol/case."
+        },
+        {
+          "claim": "Leeches, HBO and antithrombotics are proven routine salvage therapies",
+          "sourceIds": ["recovery-context"],
+          "locator": "Individual retained case citations; no comparative package recovered",
+          "verdict": "corrected",
+          "note": "Adjuncts are described as individualized case strategies with unestablished comparative benefit."
+        },
+        {
+          "claim": "Every retained vessel measurement, suture size, case outcome, pediatric statement and adjunct regimen has complete source verification",
+          "sourceIds": ["recovery-context"],
+          "locator": "Outstanding full primary source and video packages",
+          "verdict": "unresolved",
+          "note": "Obtain and inspect the complete sources before technical or clinical clearance."
+        }
+      ],
+      "unresolvedClaims": [
+        "Obtain complete Wang and Jin article/video packages and Sanger full paper; verify every retained technique detail and outcome.",
+        "Obtain Tuffaha, Lohasammakul, Sherman, leech/HBO, Putra, Ching and other retained primary full texts/figures; reconcile anatomy, pediatric and adjunct claims.",
+        "Reconcile the AUA video card content with the page and verify continued availability before clearance."
+      ],
+      "preservationReview": "All headings, anatomy, operative steps, outcome/comparison/complication tables, 26 references and the video card retained. Only universal guarantees, unsupported incidence labels and fixed target rules were narrowed; no substantive teaching or media removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/penile-replantation-vca-targeted-review.md"
+    },
+    {
+      "file": "docs/04-surgical-techniques/04e-genital-reconstruction/genitourinary-vca.mdx",
+      "sourceSha256": "9eaf4716583b4908bb2ef1f7fdf1ff84ec9163f2aaac7bd235729b12ea9e1ce6",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current MDX, frontmatter, five-case table, Johns Hopkins section, selection/Baltimore criteria, surgical/immunosuppression/outcome/complication/ethics/preclinical/comparison/future sections and all 21 references; no local imported data, figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Published and proposed candidate settings separated; gender-affirming use labeled cadaveric/preclinical.",
+        "treatment": "Case-specific operative and immunosuppression protocols retained without standard-of-care or universal-regimen inference.",
+        "numbers": "Five-case history dated to 2023; all-VCA rejection denominator/composition and overlap clarified; case outcomes remain source-specific.",
+        "doseDeviceSafety": "Cape Town tacrolimus target and prophylaxis labeled case-specific; complete case protocols remain pending.",
+        "anatomyTechnique": "Cadaveric feasibility separated from clinical outcomes; Hopkins/Cape Town/MGH technical descriptions retained with source scope.",
+        "followUp": "Case-specific follow-up retained; no stable graft-survival or expected functional rate inferred.",
+        "importedDataFigures": "No local media/imported data; Lopez figure captions read but image panels and dependent primary figures not independently inspected.",
+        "references": "All 21 inherited references retained; one incorrect claim-to-source mapping corrected from Ruiz anatomy to Lopez review.",
+        "currency": "2023 penile review and 2026 all-VCA rejection review checked; global penile-case registry remains unavailable and no new OpenEvidence query was made."
+      },
+      "claimChecks": [
+        {
+          "claim": "Five penile transplants and two explantations is a current global registry total",
+          "sourceIds": ["lopez-2023"],
+          "locator": "Abstract, key points and Introduction",
+          "verdict": "supported",
+          "note": "Accurate only as the historical experience summarized by the 2023 review; page already preserves that date boundary."
+        },
+        {
+          "claim": "All five historical cases had vascular complications",
+          "sourceIds": ["lopez-2023"],
+          "locator": "Introduction paragraph 1 and key points",
+          "verdict": "corrected",
+          "note": "The review reports vascular congestion and/or hematoma requiring intervention in all five and necrosis in all but one; citation corrected from a cadaveric anatomy study."
+        },
+        {
+          "claim": "Knoedler's rejection percentages estimate penile-VCA risk",
+          "sourceIds": ["knoedler-2026"],
+          "locator": "Abstract, patient-demographics results, penile treatment result and limitations",
+          "verdict": "corrected",
+          "note": "The 136-recipient cohort included only one penile VCA; aggregate and overlapping event data are now labeled all-VCA only."
+        },
+        {
+          "claim": "Cadaveric gender-affirming/anterior-pubic-osteotomy models establish clinical indications and outcomes",
+          "sourceIds": ["lopez-2023", "recovery-context"],
+          "locator": "Current page source identities and preserved 2023 anatomy-study descriptions",
+          "verdict": "corrected",
+          "note": "Both are explicitly preclinical anatomical feasibility evidence."
+        },
+        {
+          "claim": "Tacrolimus monotherapy demonstrates tolerance and the Cape Town regimen is a standard protocol",
+          "sourceIds": ["lopez-2023"],
+          "locator": "Abstract, key points and immunosuppression discussion",
+          "verdict": "corrected",
+          "note": "Monotherapy is immunosuppression minimization, not tolerance; dosing/prophylaxis remain case-specific."
+        },
+        {
+          "claim": "Natural conception represents donor fertility and VCA has no donor-site ethical burden",
+          "sourceIds": ["lopez-2023", "recovery-context"],
+          "locator": "Case-history/fertility context and donor-recovery discussion",
+          "verdict": "corrected",
+          "note": "Conception used recipient gonads; VCA avoids a recipient autologous flap site but still involves deceased-donor recovery and family ethics."
+        },
+        {
+          "claim": "Every retained operative, immunosuppression, outcome, complication and preclinical detail has complete primary-source verification",
+          "sourceIds": ["lopez-2023", "recovery-context"],
+          "locator": "Outstanding Redett, Cape Town, MGH and anatomy/preclinical source packages",
+          "verdict": "unresolved",
+          "note": "Obtain and inspect the complete primary texts, tables, figures and supplements before clinical clearance."
+        }
+      ],
+      "unresolvedClaims": [
+        "Obtain the Redett correspondence/full figures and complete Johns Hopkins outcome material; verify all extended-allograft anatomy, anastomoses, immunomodulation and three-year outcomes.",
+        "Obtain complete Cape Town and MGH case packages, tables and figures; verify regimen doses, prophylaxis, complications and every numeric functional outcome.",
+        "Obtain and inspect Cristofari, Ruiz, Tuffaha, Sopko and Fidder full primary figures/tables; keep cadaveric, ex-vivo and animal claims preclinical.",
+        "No current harmonized global penile-VCA registry was found; do not update the historical five-case count without a current authoritative dataset."
+      ],
+      "preservationReview": "All headings, five-case table, technical/immunosuppression/outcome/complication/comparison content and 21 references retained. Claims were scoped and one mismatched citation corrected; no section, table, reference or media removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/penile-replantation-vca-targeted-review.md"
+    }
+  ]
+}

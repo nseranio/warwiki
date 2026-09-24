@@ -1,0 +1,46 @@
+{
+  "batchId": "2026-09-20-anterolateral-thigh",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"recovery","url":"reports/2026-09-20/anterolateral-thigh-flap-recovery-review.md","version":"September 20 recovery inventory","access":"prior-review","readScope":"Only its abstract/indexed-source access history and unresolved packages reused; destructive reduction superseded by restoration, not clinical clearance.","reusedFrom":"reports/2026-09-20/anterolateral-thigh-flap-recovery-review.md"},
+    {"id":"darpa-2019","url":"https://pubmed.ncbi.nlm.nih.gov/30688908/","version":"D'Arpa et al. PRS 2019, PMID 30688908","access":"abstract-only","readScope":"Original indexed abstract, methods, 93-patient technique-group sizes, complication results and eventual standing-voiding conclusion; full methods, tables, figures, supplement not read."},
+    {"id":"netshiongolwe-2025","url":"https://pubmed.ncbi.nlm.nih.gov/41133896/","version":"Netshiongolwe et al. Ann Plast Surg 2025, PMID 41133896","access":"abstract-only","readScope":"Original indexed abstract methods/results and GRADE/selection-bias/conclusion; operative-time sentence has reversed group labels versus stated direction. Publisher Ovid link returned 402 payment-required and DOI fetch failed; full text, tables and supplement not read."},
+    {"id":"zelken-2016","url":"https://pubmed.ncbi.nlm.nih.gov/25487137/","version":"Zelken et al. Microsurgery 2016, PMID 25487137","access":"abstract-only","readScope":"Original indexed abstract: 22 patients, three bladder-reconstruction urinary leaks, flap configurations and outcome; no operative bladder-lining detail in abstract, full article not read."},
+    {"id":"pang-2014","url":"https://pubmed.ncbi.nlm.nih.gov/24807597/","version":"Pang et al. Dis Colon Rectum 2014, PMID 24807597","access":"abstract-only","readScope":"Original indexed abstract methods, 10 ALT/9 VRAM groups, null short-term outcomes, limitations and conclusion; full comparison tables and supplement not read."},
+    {"id":"alammar-2026","url":"https://pubmed.ncbi.nlm.nih.gov/41720016/","version":"Alammar et al. Burns 2026, PMID 41720016","access":"abstract-only","readScope":"Original indexed abstract of 107-study/619-patient Fournier flap review; no subgroup tables, individual ALT counts or full article read."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/surgical-principles/flaps/anterolateral-thigh.mdx",
+    "sourceSha256": "afc315ade1e16d95dd7360dd8da8757510e6f40a632c33784144e494c6554a09",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete 354-line restored MDX including anatomy, technique/application sections, numeric tables, all 40 bibliography entries and See Also links; no page figure, video or imported data.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Flap selection and imaging text read; individual indication and preoperative-source mapping unfinished.",
+      "treatment": "Observed phalloplasty technique cohorts and ALT–VRAM comparison narrowly corrected; other techniques/algorithms and patient-selection guidance require full primary packages.",
+      "numbers": "93-case group sizes/rates checked against indexed abstract; operative-time mapping contradictory in 2025 abstract and withheld; remaining dimensions/outcomes and comparison table unfinished.",
+      "doseDeviceSafety": "No medication dose or device IFU; pedicle and harvest/closure safety dimensions remain unverified.",
+      "anatomyTechnique": "Entire page read; vascular patterns, perforator subtype rates, dissection, thinning, split and composite techniques still need primary text/tables.",
+      "followUp": "Standing voiding explicitly eventual in D'Arpa abstract; longer-term outcomes and follow-up for other cohorts unfinished.",
+      "importedDataFigures": "No imported clinical data, figure or video in this MDX; related linked flap pages not implied reviewed.",
+      "references": "All 40 entries inspected for scope; five original indexed abstracts read and recovery record reused; rest not systematically full-source mapped.",
+      "currency": "Selected 2025 review and 2026 Fournier review indexed abstracts checked; no comprehensive specialty evidence or full-source currency clearance."
+    },
+    "claimChecks": [
+      {"claim":"SCIP provides established superior de novo urethral outcomes and standing voiding only after revision in D'Arpa's ALT series","sourceIds":["darpa-2019"],"locator":"2019 original indexed abstract, 93-case methods/results/conclusion","verdict":"corrected","note":"Nonrandomized unequal groups do not prove superiority; 91.86% eventually stood to void with reported techniques."},
+      {"claim":"ALT operative time is 290 versus RFFF 516 minutes in 2025 pooled review","sourceIds":["netshiongolwe-2025"],"locator":"2025 original indexed abstract, Results sentence","verdict":"corrected","note":"Abstract states ALT shorter but writes RFF vs pALT 290 vs 516; numerical group mapping removed from public table pending full paper or author correction. Ovid full text payment-required."},
+      {"claim":"Zelken bladder leaks prove ALT skin-lining limitations","sourceIds":["zelken-2016"],"locator":"2016 original indexed abstract, 22-patient Results","verdict":"corrected","note":"Three urinary leaks reported after bladder reconstruction; source abstract does not state lining composition or causality. Specific clinical mechanism open."},
+      {"claim":"Pang demonstrates ALT–VRAM equivalence and lower ALT donor morbidity","sourceIds":["pang-2014"],"locator":"2014 original indexed abstract, 19-patient comparison and limitations","verdict":"corrected","note":"No statistically significant difference in specified outcomes in small retrospective cohort does not prove equivalence or donor-morbidity superiority."},
+      {"claim":"Fournier review identifies ALT among commonly utilized flaps","sourceIds":["alammar-2026"],"locator":"2026 original indexed abstract, pooled scope and conclusion","verdict":"supported","note":"ALT listed among commonly used regional flaps; 619 patients and 625 flaps refer to all flap types, not ALT alone."},
+      {"claim":"Every quantitative anatomy/technique, donor-site threshold, application rate and comparative ranking is validated","sourceIds":["recovery"],"locator":"Complete current page against bounded earlier unresolved inventory","verdict":"unresolved","note":"Original full papers, relevant tables/figures/supplements, and several source identities remain to be adjudicated; preserve teaching with exact open work."}
+    ],
+    "unresolvedClaims": ["Obtain full Netshiongolwe 2025 paper or author correction to resolve conflicting operative-time labels, and full D'Arpa/Ascha/Wang phalloplasty methods/tables before comparison conclusions.", "Read primary vascular-anatomy, donor-site/closure/thinning and technique reports including Chang 2025 algorithm, mapping each numeric threshold and safety step.", "Read pelvic, vulvar, Fournier, vaginal and urinary-transect reconstruction primary series and relevant tables/figures/supplements; distinguish cases from comparative recommendations.", "Reconcile all 40 bibliography entries and cross-flap comparison table with current original sources before claiming page-level clearance."],
+    "preservationReview": "No heading, application, operative step, table, bibliography entry or media removed. Corrected only specific overinterpretations, mixed-cohort summary and one internally inconsistent abstract-derived time assignment. Existing useful content retained; no public audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/anterolateral-thigh-targeted-review.md"
+  }]
+}

@@ -1,0 +1,52 @@
+{
+  "batchId": "2026-09-20-testicles-scrotum",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/testicles-scrotum-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Reused earlier bounded anatomy scope/gap record only; not treated as new verification.","reusedFrom":"reports/2026-09-20/testicles-scrotum-recovery-review.md"},
+    {"id":"eau-acute","url":"https://uroweb.org/guidelines/paediatric-urology/chapter/acute-scrotum","version":"Current EAU paediatric acute-scrotum online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Torsion diagnosis, management, salvage determinants, contralateral fixation and follow-up passages; referenced studies not read in full."},
+    {"id":"eau-undescended","url":"https://uroweb.org/guidelines/paediatric-urology/chapter/management-of-undescended-testes","version":"Current EAU paediatric undescended-testes online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Orchiopexy timing and high intra-abdominal testis/alternative staged procedures; underlying studies not read."},
+    {"id":"eau-testicular-cancer","url":"https://uroweb.org/guidelines/testicular-cancer/chapter/diagnostic-evaluation","version":"2026 EAU testicular-cancer diagnostic chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Primary tumor imaging, inguinal orchiectomy, testis-sparing, prosthesis and fertility-preservation recommendations; entire cancer guideline not read."},
+    {"id":"eau-infertility","url":"https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/male-infertility","version":"Current EAU male-infertility online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Varicocele evaluation/repair, isolated right-side findings, obstructive and non-obstructive sperm retrieval, and selected recommendations; full chapter not read."},
+    {"id":"eau-hypogonadism","url":"https://uroweb.org/guidelines/sexual-and-reproductive-health/chapter/male-hypogonadism","version":"Current EAU male-hypogonadism online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Exogenous testosterone fertility effects, contraindication in men seeking fertility, gonadotropins and off-label SERM evidence; full chapter not read."},
+    {"id":"cdc-pvsa","url":"https://www.cdc.gov/contraception/hcp/usspr/permanent-contraception.html","version":"CDC U.S. Selected Practice Recommendations permanent-contraception online guidance, accessed 2026-09-20","access":"relevant-sections","readScope":"Vasectomy/PVSA timing, unreliable ejaculation-count threshold and alternate contraception until semen-analysis clearance; not an AUA 2026 full-text read."},
+    {"id":"wishahi-1991","url":"https://pubmed.ncbi.nlm.nih.gov/1752275/","version":"Wishahi 1991 original venous anatomy, inherited ref 19","access":"abstract-only","readScope":"PubMed original abstract of autopsy/venography/dissection series; manuscript figures and methods not read."},
+    {"id":"sofikitis-1993","url":"https://pubmed.ncbi.nlm.nih.gov/8470944/","version":"Sofikitis et al. 1993 original 49-cadaver left testicular venous study","access":"abstract-only","readScope":"PubMed original abstract and cohort-level valve/venous-channel findings; full paper and images not read."},
+    {"id":"aua-vasectomy-2026","url":"https://www.auanet.org/guidelines-and-quality/guidelines/vasectomy-guideline","version":"AUA 2026 vasectomy guideline","access":"unavailable","readScope":"Direct official guideline page returned HTTP 403; indexed snippets only and no full-text clinical adjudication performed."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/testicles-scrotum.mdx",
+    "sourceSha256": "e01390203b88e81c260e80288cb61f0db89bbcae77cf9043e72cf925f5ab6bd6",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 239 inherited MDX lines and 24 references, complete revised prose, and the local Gray 1143 image; no video or imported clinical data.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Torsion urgency, cancer mass route and isolated right varicocele assessment checked in EAU sections; full differential/evaluation pathways open.",
+      "treatment": "Orchiopexy, orchiectomy, sperm retrieval and vasectomy counseling absolutes narrowed; other surgical choices/outcomes open.",
+      "numbers": "Removed fixed six-hour salvage, TRT 3–6-month recovery and vasoreversal patency promises; inherited anatomy/physiology numbers not comprehensively reconciled.",
+      "doseDeviceSafety": "No medication dose/device specification on page; exogenous-testosterone fertility risk narrowed; full hormonal-treatment evidence open.",
+      "anatomyTechnique": "Full page and image read; venous valves/collaterals corrected from conflicting original abstracts; deeper vascular, lymphatic and technical sources remain open.",
+      "followUp": "PVSA timing and continued contraception checked via CDC; torsion atrophy follow-up partly checked; current AUA 2026 vasectomy full text inaccessible.",
+      "importedDataFigures": "Gray 1143 image visually inspected and side-neutral caption corrected; no imported clinical data or video.",
+      "references": "All 24 inherited bibliography entries read but not all source-mapped; seven focused references added.",
+      "currency": "Current EAU sections and CDC guidance checked; direct AUA 2026 vasectomy guideline returned 403, so exact current AUA criteria unresolved."
+    },
+    "claimChecks": [
+      {"claim":"All testicular veins lack valves and there is no side-to-side venous communication","sourceIds":["wishahi-1991","sofikitis-1993"],"locator":"Wishahi and Sofikitis original indexed abstracts","verdict":"corrected","note":"Contradictory small series show variable valves/competence and some abdominal communication; no population prevalence inferred."},
+      {"claim":"Isolated right varicocele always mandates imaging for IVC obstruction","sourceIds":["eau-infertility"],"locator":"EAU male-infertility varicocele diagnostic evaluation","verdict":"corrected","note":"Further assessment retained; imaging individualized to clinical context."},
+      {"claim":"Scrotal orchiectomy automatically upstages clinical stage I cancer and requires hemiscrotectomy or radiotherapy","sourceIds":["eau-testicular-cancer"],"locator":"EAU testicular-cancer diagnostic evaluation §5.4.1","verdict":"corrected","note":"Inguinal route retained as standard; scrotal approach avoided for local recurrence risk, without invented automatic staging/salvage consequences."},
+      {"claim":"Torsion has 100% salvage under six hours and fixed manual-detorsion instruction","sourceIds":["eau-acute"],"locator":"EAU acute-scrotum §§8.3.2–8.4 and recommendation table","verdict":"corrected","note":"Emphasized urgent exploration, variable salvage/atrophy, manual detorsion only while awaiting surgery and perinatal nuance."},
+      {"claim":"Fowler-Stephens is mandatory for high intra-abdominal testis and collateral flow guarantees survival","sourceIds":["eau-undescended"],"locator":"EAU undescended testes operative §4.5","verdict":"corrected","note":"One staged option among others, with testicular atrophy risk."},
+      {"claim":"TRT fertility recovers routinely in 3–6 months and SERMs are established fertility-preserving optimization","sourceIds":["eau-hypogonadism"],"locator":"EAU male-hypogonadism fertility and off-label anti-oestrogen sections","verdict":"corrected","note":"Removed recovery promise; described individualized evaluation and limited/off-label SERM evidence."},
+      {"claim":"Twenty ejaculations or three months determines vasectomy success","sourceIds":["cdc-pvsa"],"locator":"CDC permanent contraception vasectomy comments and evidence summary","verdict":"corrected","note":"PVSA laboratory clearance required, commonly 8–16 weeks; count alone unreliable, contraception continues until clearance."},
+      {"claim":"All inherited physiologic, operative, reconstruction and outcome details are fully source-verified","sourceIds":["prior-recovery"],"locator":"Entire inherited page and recovery-review gap list","verdict":"unresolved","note":"Useful teaching retained but full underlying studies/guidelines not reconciled; no clinical clearance."}
+    ],
+    "unresolvedClaims": ["Reconcile inherited anatomy measurements, thermal and endocrine/spermatogenesis numbers, antisperm-antibody effects, varicocelectomy/vasoreversal and chronic-pain/Fournier reconstruction outcomes, and all inherited references to full sources.", "Read full original venous papers to characterize valve/collateral disagreement; obtain direct current AUA 2026 vasectomy guideline or explicitly retain access limitation before claiming current AUA PVSA criteria.", "Check Gray 1143 provenance and any side labeling beyond the inspected current raster; figure caption is deliberately side-neutral."],
+    "preservationReview": "Retained substantive anatomy, fertility, emergency and reconstruction teaching; corrected discrete false absolutes and unsupported guarantees without replacing page with an audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/testicles-scrotum-targeted-review.md"
+  }]
+}

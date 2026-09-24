@@ -1,0 +1,78 @@
+{
+  "batchId": "2026-09-20-cervix-vagina-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"asccp-ecc-2023","url":"https://www.asccp.org/wp-content/uploads/2025/12/colposcopy_standards__guidelines_for_endocervical.-ECC-18-1.pdf","version":"Massad et al., 2023 ECC-at-colposcopy standard","access":"relevant-sections","readScope":"Original five-page guideline recommendations, exceptions and pregnancy prohibition checked; broader screening guidance not read.","reusedFrom":""},
+    {"id":"querleu-2017","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6093205/","version":"Querleu et al. 2017 classification","access":"relevant-sections","readScope":"Original C1/C2 descriptions and Table 1 checked; supplements/operative figures not visually adjudicated.","reusedFrom":""},
+    {"id":"timmons-2010","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2880223/","version":"Timmons et al. 2010 cervical-remodeling review","access":"relevant-sections","readScope":"Remodeling phases and figure-caption text checked; internally inconsistent isolated wording noted; not an original clinical trial.","reusedFrom":""},
+    {"id":"esgo-fertility","url":"https://www.esgo.org/media/2025/05/Pocket-Guidelines_Fertility-sparing-in-gynae-cancers.pdf","version":"ESGO/ESHRE/ESGE pocket edition based on 2024 Lancet Oncology guideline","access":"relevant-sections","readScope":"Official 28-page PDF identity and cervical-cancer selection/recommendation pages checked; underlying guideline package and all figures not fully read.","reusedFrom":""},
+    {"id":"eau-fistula","url":"https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management","version":"Current EAU non-neurogenic female LUTS online §4.8, accessed 2026-09-20","access":"relevant-sections","readScope":"Urinary-fistula evaluation, surgical approach, interposition and radiated-fistula sections/recommendation table checked; whole LUTS chapter not read.","reusedFrom":""},
+    {"id":"nice-ng123","url":"https://www.nice.org.uk/guidance/ng123/chapter/recommendations","version":"Current online NG123; 2019 recommendations, accessed 2026-09-20","access":"prior-review","readScope":"Complete §§1.6–1.9 previously documented; topical estrogen and pessary-fit recommendations spot checked in current online version.","reusedFrom":"reports/2026-09-12/prolapse-source-reading/principles.md"},
+    {"id":"zhou-2025","url":"https://www.bmj.com/content/389/bmj-2025-084418","version":"Zhou et al. 2025 ring-pessary estrogen RCT","access":"prior-review","readScope":"Complete original main/tables previously documented; actual Figure 1, protocol and appendix remain unread.","reusedFrom":"reports/2026-09-12/prolapse-source-reading/principles.md"},
+    {"id":"barnhart-2006","url":"https://pubmed.ncbi.nlm.nih.gov/16478763/","version":"Barnhart et al. 2006 MRI dimensions","access":"abstract-only","readScope":"Original indexed abstract confirms cohort mean 62.7 mm; full article and original images not read.","reusedFrom":""},
+    {"id":"rahn-2023","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC10427941/","version":"Rahn et al. 2023 IMPROVE randomized trial","access":"relevant-sections","readScope":"Complete main HTML retrieved; design, results, main tables, discussion/limitations and figure captions checked. Actual figure images and supplement not adjudicated.","reusedFrom":""},
+    {"id":"rahn-2024","url":"https://pubmed.ncbi.nlm.nih.gov/38710269/","version":"Rahn et al. 2024 36-month randomized follow-up","access":"abstract-only","readScope":"Original indexed design, results and conclusion abstract read; full main/tables/supplement not read.","reusedFrom":""},
+    {"id":"blausen-image","url":"static/img/anatomy/blausen-female-repro.png","version":"Inherited Blausen Medical local image","access":"relevant-sections","readScope":"Actual image visually inspected at high detail; inherited license provenance not independently checked.","reusedFrom":""}
+  ],
+  "pages": [
+    {
+      "file":"docs/01-foundations/anatomy-physiology/genitalia/cervix.mdx",
+      "sourceSha256":"05c1b7d1f135cfaa40836909f1fde854eadd5f8680f6f5d480c8b5aa9af20e63",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete current and revised MDX including all anatomy, cancer/obstetric/reconstruction bullets and 20 inherited bibliography entries; no local figure, imported data or video.",
+      "coverage":{
+        "evaluation":"ASCCP ECC-at-colposcopy indication and pregnancy exception corrected; broader screening/workup guidance open.",
+        "treatment":"Fertility-sparing surgery and radiated-fistula advice scoped to specialist selection and tissue quality; other inherited recommendations open.",
+        "numbers":"Removed unverified >90% transformation-zone and most-common ureter-injury claims; 2-cm ureter distance made approximate; 2025 pessary RCT endpoint stated with denominator and CI.",
+        "doseDeviceSafety":"No dose/device instruction; estrogen is not presented as a proven pessary-retention intervention.",
+        "anatomyTechnique":"C1/C2 nerve-preservation reversal corrected against original classification; uterine-artery crossing and variable ureter distance retained; broader ligament/nerve tables open.",
+        "followUp":"No complete cervical-cancer or cerclage follow-up audit; deferred to relevant clinical pages.",
+        "importedDataFigures":"No local figure, video or imported clinical dataset.",
+        "references":"All 20 inherited entries retained; seven primary/guideline references added, with source-access limits recorded.",
+        "currency":"2023 ASCCP standard and current official EAU/NICE pages checked; 2024 ESGO/ESHRE/ESGE fertility-sparing guideline pocket checked; other newer guidance open."
+      },
+      "claimChecks":[
+        {"claim":"Postmenopausal screening always needs endocervical sampling","sourceIds":["asccp-ecc-2023"],"locator":"Guideline recommendations/summary and pregnancy exclusion","verdict":"corrected","note":"ECC is a colposcopy procedure under named risk/visibility conditions, not universal screening."},
+        {"claim":"Querleu–Morrow C2 nerve-preserving and C1 non-preserving","sourceIds":["querleu-2017"],"locator":"Type C1, Type C2 and Table 1","verdict":"corrected","note":"C1 preserves autonomic branches; C2 does not. Equivalent cancer control not inferred."},
+        {"claim":"Cervical ripening reduces compliance and insufficiency is early normal-phase entry","sourceIds":["timmons-2010"],"locator":"Remodeling phases and figure caption","verdict":"corrected","note":"Ripening increases distensibility; insufficiency is not defined mechanistically by phase timing."},
+        {"claim":"All early IB1 cancers require radical trachelectomy and all radiated fistula repairs mandate the same flap","sourceIds":["esgo-fertility","eau-fistula"],"locator":"Cervical selection pages; EAU §4.8.4 and recommendation table","verdict":"corrected","note":"Specialist selection and case-specific fistula repair retained; weak EAU recommendation for interposition in radiation-associated repairs."},
+        {"claim":"Vaginal estrogen guarantees pessary fit/retention","sourceIds":["nice-ng123","zhou-2025"],"locator":"NG123 §§1.7.3–1.7.8; Zhou primary endpoint table","verdict":"corrected","note":"NICE indication is concomitant menopause-associated symptoms; Zhou primary composite was similar between arms."},
+        {"claim":"Other cervical ligament, neurovascular, cervical-cancer, obstetric and fistula-workup details","sourceIds":["timmons-2010","eau-fistula"],"locator":"Inherited sections outside completed source packages","verdict":"unresolved","note":"Practical content retained; source/claim mapping and full relevant packages still required."}
+      ],
+      "unresolvedClaims":["Check inherited ligament/nerve/vascular studies and relevant source figures; reconcile Timmons inconsistent wording.","Obtain/review current screening, cervical-cancer, cerclage and retained-cervix guideline packages plus inherited source tables for remaining clinical claims."],
+      "preservationReview":"All substantive sections and 20 inherited references retained. Demonstrated categorical errors were rewritten narrowly, not replaced with an audit notice. No media removed.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/cervix-vagina-anatomy-review.md"
+    },
+    {
+      "file":"docs/01-foundations/anatomy-physiology/genitalia/vaginal-anatomy.mdx",
+      "sourceSha256":"d367668fc04e7bcda277f2f71e5ea64ab273336e56230183abce333267ff2db5",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete current and revised MDX, all 25 inherited references and the actual Blausen image; no imported clinical data or video. Source studies for many inherited anatomy/operative statements remain unread.",
+      "coverage":{
+        "evaluation":"MRI cohort mean distinguished from cast-study range; no universal anatomic cutoff; other evaluation claims open.",
+        "treatment":"Estrogen for genitourinary symptoms distinguished from prolapse-recurrence/pessary-retention claims; fistula approach and compartment repair made case-specific.",
+        "numbers":"62.7-mm Barnhart mean and Rahn 19% vs 9% 12-month model estimates source-scoped; mixed-study length range withdrawn.",
+        "doseDeviceSafety":"No dosing recommendation; pessary type/trial population specified; surgical/mesh/device instructions not cleared.",
+        "anatomyTechnique":"Ureter distance treated as variable; DeLancey model kept without a mandatory three-stage failure/repair sequence; other neurovascular/embryology assertions open.",
+        "followUp":"Rahn 12-month main and 36-month abstract distinguished; long-term pessary, reconstructive and oncology follow-up not cleared.",
+        "importedDataFigures":"Blausen image visually inspected; it is a frontal schematic, so inherited sagittal caption/alt corrected. No imported clinical dataset.",
+        "references":"All 25 inherited references and Blausen figure retained; four new references added.",
+        "currency":"Rahn 2023/2024 and Zhou 2025 trial results, current NICE and EAU guidance checked; remaining operative/oncologic currency open."
+      },
+      "claimChecks":[
+        {"claim":"6.3-cm mean and 6.9–14.8-cm range came from one cohort","sourceIds":["barnhart-2006"],"locator":"Original Barnhart abstract mean; inherited separate Pendergrass cast citation","verdict":"corrected","note":"The inherited sentence mixed study methods/cohorts; precise cast range withheld pending full paper."},
+        {"claim":"Rahn 2023 establishes estrogen improves tissue quality and prolapse-repair success","sourceIds":["rahn-2023","rahn-2024"],"locator":"2023 main Results/Tables/Discussion; 2024 indexed abstract","verdict":"corrected","note":"Surgeon-rated appearance improved but 12- and 36-month composite surgical outcomes did not significantly improve; no proven suture-holding or fistula benefit."},
+        {"claim":"Vaginal estrogen improves ring-pessary retention","sourceIds":["nice-ng123","zhou-2025"],"locator":"NICE §§1.7.3–1.7.8; Zhou main primary endpoint","verdict":"corrected","note":"Treatment may target menopause-associated symptoms; primary continuation-plus-improvement endpoint did not improve."},
+        {"claim":"All apical surgeries require every compartment repair and prolapse follows one three-step sequence","sourceIds":["nice-ng123"],"locator":"NICE individualized treatment recommendations and inherited biomechanical citations","verdict":"corrected","note":"Useful three-level framework preserved without deterministic timing or mandatory repair of all levels."},
+        {"claim":"Every VVF needs one route and routine Martius flap","sourceIds":["eau-fistula"],"locator":"EAU §4.8.4 approach, tissue-interposition and radiation sections","verdict":"corrected","note":"Vaginal/abdominal approach and flap depend on anatomy, access, prior treatment and tissue quality."},
+        {"claim":"Blausen image is a sagittal section","sourceIds":["blausen-image"],"locator":"Visual inspection of static/img/anatomy/blausen-female-repro.png","verdict":"corrected","note":"Image is a frontal schematic; caption/alt corrected and image retained."},
+        {"claim":"Human vaginal epithelial lineage, exact innervation/vascular territories and named reconstructive advantages","sourceIds":[],"locator":"Inherited references/sections not source-adjudicated in this pass","verdict":"unresolved","note":"Content retained pending original source and figure/table review; no clearance implied."}
+      ],
+      "unresolvedClaims":["Read full Barnhart/Pendergrass papers before restoring ranges; audit inherited 25-reference anatomy, embryology and technique packages claim by claim.","Inspect Rahn 2023 figures/supplement and full 2024 follow-up; retain documented Zhou figure/protocol/appendix gaps; confirm inherited Blausen license provenance."],
+      "preservationReview":"All anatomy/clinical-correlation sections, 25 inherited references and the Blausen image retained. Categorical outcome/technique sentences were corrected, not blanked; four references added.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/cervix-vagina-anatomy-review.md"
+    }
+  ]
+}

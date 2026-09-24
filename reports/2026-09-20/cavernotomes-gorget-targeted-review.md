@@ -1,0 +1,14 @@
+# Cavernotomes and gorget cluster — 2026-09-21
+
+The complete current MDX and references for `cavernotomes.mdx` and `gorget.mdx` were read. Both remain **partial claim reviews, not clinical clearances**. Device geometry, operative teaching, history, references and the cavernotome video were preserved; no OpenEvidence query, commit, push or deployment occurred.
+
+## Focused source/diff findings
+
+- **Cavernotomes:** the 59.5% use figure is now explicitly limited to Krughoff's selected 42-patient tertiary-referral fibrosis cohort. The original 1999 Mooreville five-instrument 6–13 mm set is separated from the currently marketed Mooreville II double-bladed system (six-piece 6–11 mm main set plus 12–14 mm XL set). Current blade, length, marking, handle and motion details are attributed to Uramix rather than treated as class-wide facts. Carrion-Rossello backward-rasp geometry is distinguished from forward-cutting Mooreville geometry. Original-series perforations and outcomes remain with the actual uncontrolled population; unrelated tissue-sparing meta-analysis results were removed from this instrument page. Current EAU guidance supports cavernotomes as one option in severe post-priapism fibrosis but not superiority of a design. Two broad prosthesis-history references tied only to removed lineage claims were also removed; the fibrosis and instrument evidence was retained.
+- **Gorget:** modern reconstructive use is now supported directly by technical sources: extending a bulbar stricturotomy, assisting proximal bulbomembranous suturing, visualizing the posterior urethra, and selected female dorsal graft dissection. Current STERIS large and small Teales catalog dimensions are labeled model-specific. The broad historical survey was condensed to the instrument's sourced lithotomy and Wheelhouse-stricture lineage; false claims that open lithotomy ceased and bladder stones virtually disappeared were removed.
+
+## Exact unresolved source action
+
+Obtain the current Mooreville II full IFU, validated cleaning/sterilization instructions and component/cylinder compatibility information. Retrieve the complete original Mooreville and Krughoff articles beyond their indexed abstracts, and verify the full clinical source package for alternative cavernotomes before any device-level clearance. For the gorget, obtain current manufacturer IFUs for representative Teale/Turner-Warwick models and primary historical texts; no comparative study establishes superiority over nasal or lighted specula.
+
+**Local validation:** final-hash batch checking and ledger regeneration passed. Grouped lint, typecheck, 32 unit tests, 58 maintenance tests, production build, 97,463 rendered-link/asset checks, the 131.50 MB size audit and whitespace checks passed. These checks do not close source gaps or create clinical clearance. Publication remains deferred.

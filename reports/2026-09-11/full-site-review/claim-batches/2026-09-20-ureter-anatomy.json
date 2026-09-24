@@ -1,0 +1,46 @@
+{
+  "batchId": "2026-09-20-ureter-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"campbell-ureter","url":"https://elsevier-elibrary.com/contents/fullcontent/58071/epubcontent_v2/OEBPS/B9781416069119000013.htm","version":"Campbell-Walsh Urology electronic text, surgical anatomy","access":"relevant-sections","readScope":"Ureteral blood-supply paragraph and adventitial-plexus teaching; entire chapter/figures not read.","reusedFrom":""},
+    {"id":"eau-trauma","url":"https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines","version":"Current online EAU Urological Trauma, accessed 2026-09-20","access":"relevant-sections","readScope":"Ureteral trauma §§4.2.1–4.2.5, prevention, recommendations and reconstruction lines; entire guideline and cited studies not read.","reusedFrom":""},
+    {"id":"djurhuus-1982","url":"https://pubmed.ncbi.nlm.nih.gov/7157560/","version":"Djurhuus & Constantinou 1982 original porcine study","access":"abstract-only","readScope":"Original indexed abstract; full paper not read.","reusedFrom":""},
+    {"id":"venkatesh-2005","url":"https://pubmed.ncbi.nlm.nih.gov/15798413/","version":"Venkatesh et al. 2005 original porcine study","access":"abstract-only","readScope":"Original indexed abstract; full paper not read.","reusedFrom":""},
+    {"id":"kinn-2002","url":"https://pubmed.ncbi.nlm.nih.gov/12202937/","version":"Kinn & Lykkeskov-Andersen 2002 original porcine study","access":"abstract-only","readScope":"Original indexed abstract; full paper not read.","reusedFrom":""},
+    {"id":"kalayeh-2021","url":"https://pubmed.ncbi.nlm.nih.gov/33017072/","version":"Kalayeh et al. 2021 finite-element study","access":"abstract-only","readScope":"Original indexed abstract, methods/results/conclusions; full model/figures not read.","reusedFrom":""},
+    {"id":"eisner-2009","url":"https://pubmed.ncbi.nlm.nih.gov/19450856/","version":"Eisner et al. 2009 CT stone-location cohort","access":"abstract-only","readScope":"Original indexed abstract, 94-patient cohort methods/results/limits; full paper not read.","reusedFrom":""},
+    {"id":"ramesmayer-2023","url":"https://link.springer.com/article/10.1186/s12894-023-01200-1","version":"Ramesmayer et al. 2023 original retrospective UNC series","access":"relevant-sections","readScope":"Publisher Methods/Surgical technique paragraphs and cohort size checked; outcome tables/figures not adjudicated.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file":"docs/01-foundations/anatomy-physiology/urinary-tract/ureter-anatomy-physiology.mdx",
+    "sourceSha256":"aabfb829c6cedcd835010e8c40085b955cf1207585daecaad49542ece4ab110b",
+    "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+    "readScope":"Complete current and revised MDX, ten inherited bibliography entries and the video-card identifier; video content not watched and no imported dataset or figure.",
+    "coverage":{
+      "evaluation":"Stone-location and injury-hotspot categorical statements corrected; broader imaging and injury diagnosis not source-cleared.",
+      "treatment":"EAU injury-prevention/reconstruction principles checked in relevant sections; individual reconstructive indications not fully adjudicated.",
+      "numbers":"5:1 ratio and 94-patient stone cohort source-scoped; remaining inherited lengths/timing/distances and neuroanatomy numbers open.",
+      "doseDeviceSafety":"Stent physiology corrected from porcine abstracts; device sizing, safety and human performance not cleared; no dose instructions.",
+      "anatomyTechnique":"Medial abdominal/lateral pelvic feeder direction checked against anatomy text; incorrect universal plane rule corrected; rest of course/relations open.",
+      "followUp":"Human recovery after obstruction and reconstruction follow-up remain unresolved; no clearance inferred from animal data.",
+      "importedDataFigures":"No imported dataset or local figure; embedded ureter-anatomy video retained but content not verified.",
+      "references":"Ten inherited references retained; eight focused references added. Full inherited source packages remain unread.",
+      "currency":"Current online EAU trauma section checked; newer guideline/study reconciliation for all inherited claims remains open."
+    },
+    "claimChecks":[
+      {"claim":"Ureter feeder direction implies medial abdominal and lateral pelvic dissection","sourceIds":["campbell-ureter"],"locator":"Surgical-anatomy ureteral blood-supply paragraph","verdict":"corrected","note":"The printed opposite-side directions were reversed; replaced with preservation of feeders and adventitia rather than a universal plane."},
+      {"claim":"Universal ureter mobilization and stenting prevent injury; uterine crossing always most common site","sourceIds":["eau-trauma"],"locator":"EAU §§4.2.1.b, 4.2.3 and recommendations","verdict":"corrected","note":"Location varies; visually identify and dissect carefully. Stents may aid identification in complex cases, without proven universal prevention."},
+      {"claim":"Chronic dilation permanently removes human contractility","sourceIds":["djurhuus-1982"],"locator":"Original abstract: 15 healthy and 11 hydronephrotic pigs","verdict":"corrected","note":"Animal coordination finding does not prove irreversible human non-recovery."},
+      {"claim":"Stents always eliminate peristalsis and make kinks safe","sourceIds":["venkatesh-2005","kinn-2002"],"locator":"Original porcine abstracts, methods/results","verdict":"corrected","note":"Effects vary over time and model; no universal human mechanism established."},
+      {"claim":"5:1 tunnel ratio mandatory for every reimplantation","sourceIds":["kalayeh-2021"],"locator":"Finite-element abstract, model conditions and conclusion","verdict":"corrected","note":"Historical heuristic retained; model found operative-state implementation could overestimate required length."},
+      {"claim":"Every adult reimplantation must have a submucosal anti-reflux tunnel","sourceIds":["ramesmayer-2023"],"locator":"Original retrospective series Methods/Surgical technique; 60 patients","verdict":"corrected","note":"Its refluxing extravesical UNC approach included psoas hitch and Boari cases; this shows an option, not superiority or universal practice."},
+      {"claim":"Iliac crossing is one of three common stone lodgment sites","sourceIds":["eisner-2009"],"locator":"Original 94-patient CT-cohort abstract results","verdict":"corrected","note":"Only one stone at crossing in cohort; no universal distribution inferred."},
+      {"claim":"Remaining inherited course, innervation, timing, anti-reflux, reconstruction and numerical details","sourceIds":[],"locator":"Inherited bibliography and video outside completed source packages","verdict":"unresolved","note":"Useful teaching retained; inherited full papers, figures, human outcome and video review required."}
+    ],
+    "unresolvedClaims":["Read inherited anatomy/innervation/physiology papers and relevant figures against remaining numerical/mechanistic claims; check embedded video content.","Read accessible full original stent/obstruction/5:1/stone papers and human recovery/reimplantation evidence before stronger clinical conclusions."],
+    "preservationReview":"All substantive sections, 10 inherited references and video card retained. Demonstrated categorical errors were narrowly rewritten; no blanket removal or audit notice.",
+    "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/ureter-anatomy-targeted-review.md"
+  }]
+}

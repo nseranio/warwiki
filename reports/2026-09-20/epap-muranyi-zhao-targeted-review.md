@@ -1,0 +1,21 @@
+# EPAP, Murányi and Zhao scrotal-flap claim review — 2026-09-20
+
+Three complete current MDX pages and their inherited reference lists were read. This is a **partial claim review**, not clinical clearance. No reference, operative section or media was removed; Epic and publication remain paused.
+
+## Source access reused or obtained
+
+- Tsukuura 2025, [PMID 41054917](https://pubmed.ncbi.nlm.nih.gov/41054917/): complete indexed abstract, **one** post-replantation case, 9 × 14 cm unilateral EPAP, anterior scrotal nerve preserved, good subjective sensation/color and no pain/stretching at seven months. Full operative text/figures unavailable. No comparative sensory, dyspareunia or donor-site estimate.
+- Phoon 2014, [PMID 25037499](https://pubmed.ncbi.nlm.nih.gov/25037499/): complete indexed abstract of **six-cadaver free STEPA** anatomy, 8 hemi-scrotal plus 2 bipedicled flaps; EPA diameter 2.81 mm, vein 4.44 mm, pedicle 11 cm, mean thickness 1.1 mm. These are not pedicled-EPAP patient measurements; full figures unread.
+- Murányi 2022, [author-accepted manuscript PDF](https://dea.lib.unideb.hu/bitstreams/9c48ff2f-069f-473b-b3aa-9273e515d29b/download): relevant methods/selection, outcomes/table, discussion and figure legends read (manuscript pp. 5–11, legends pp. 16–17). Figure images could not be visually inspected (web screenshots timed out). Of 49 paraffinoma operations, 13 patients had 14 graded events (5 grade 1, 8 grade 3a, 1 grade 3b); 8 lacked clinical follow-up; 30/49 answered the ≥18-month questionnaire and 27/30 were satisfied or very satisfied, 30/30 reported intercourse, 2/30 ED, 3/30 pain/tension. Stage 4a limited penoscrotal involvement was included; stage 4b anterior/whole-scrotal infiltration excluded. Incision geometry is measured, not a fixed 2–3 cm offset. Authors caution against cross-series comparisons.
+- Zhao 2009, [PMID 19762052](https://pubmed.ncbi.nlm.nih.gov/19762052/): complete indexed abstract; **18 mixed operations**, six bilateral and 12 total anterior, all with suspensory-ligament division; mean follow-up 2.3 years (1–9), length increase p&lt;0.05, reported sensory/erectile preservation, 15/18 satisfactory intercourse. Abstract provides no total-flap-only outcome, zero-loss rate, exact operative plane or comparative group. Full text/figures unavailable.
+- Reused documented Fakin and Lumbiganon abstracts and Parasca 2025 [open systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12195437/) relevant methods, Table 1, Table 4 and discussion from the immediately prior three-page cluster; did not re-read them. Parasca's supplement and each original technique figure remain unreviewed.
+
+## Corrections and boundary
+
+- EPAP: removed universal bilateral-EPA-sacrifice, dyspareunia-elimination, immediate-sensation and superiority claims. Distinguished the single patient from Phoon's separate cadaveric free-flap measurements and added the missing Phoon reference. Other techniques' named-nerve preservation is **not established here**, not proven absent.
+- Murányi: corrected questionnaire satisfaction/intercourse denominators, 13 **patients** versus 14 **events**, stage 4a/4b selection, measured incision geometry and unsupported claims that the inverted V prevents necrosis in every patient. A grade-3a event is not automatically a wound-dehiscence or necrosis event. Lumbiganon's 56.5% is postoperative fever, not all complications.
+- Zhao: identified mixed-cohort outcomes, removed inferred 0% flap loss and fixed the invented claim that all 12 total-flap patients exceeded bilateral capacity. The anatomical operative outline remains as teaching, explicitly **not verified as Zhao's exact sequence** without the full paper. Separate cadaveric length gain and Mendel complication rates are not Zhao-specific or class effects.
+
+## Exact open source actions
+
+Obtain Tsukuura's full case/figures before patient-level sensory or pedicle-course claims; inspect Murányi manuscript figures and, if available, publisher final tables before exact flap-plane/complication-subtype clearance; obtain Zhao's full technique/figures and subgroup outcomes before exact sequence, perfusion or total-flap-specific success claims. The existing pages remain useful but **partial**. No new OpenEvidence request was made.

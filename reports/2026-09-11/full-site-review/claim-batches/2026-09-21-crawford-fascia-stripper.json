@@ -1,0 +1,61 @@
+{
+  "batchId": "2026-09-21-crawford-fascia-stripper",
+  "reviewedAt": "2026-09-21",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {"id":"n4298-catalog","url":"https://www.storzeye.com/ent-instruments/specialty-ent-facial-plastic-instruments/crawford-fascia-stripper","version":"Current N4298 listing accessed September 2026","access":"manufacturer-document","readScope":"Text product listing and 355-mm specification; product image pixels not independently inspected."},
+    {"id":"n4298-ifu","url":"https://www.bauschinstruments.com/sterilization-dfu_4080003.aspx?prod=Crawford+Fascia+Stripper+-+N4298","version":"Bausch + Lomb 4080003 Rev. 2022-10","access":"manufacturer-document","readScope":"English PDF p 1 fully: assembly, blade matching, cleaning/disassembly, sterilization and warnings; Ukrainian translation pp 2–3 not read."},
+    {"id":"iowa","url":"https://iowaprotocols.medicine.uiowa.edu/protocols/fascia-lata-harvest","version":"Iowa Head and Neck Protocols page accessed September 2026","access":"full-text","readScope":"Entire operative teaching protocol, narrow-strip versus sheet techniques, incision, traction, strip passage, proximal cutting, band integrity, closure and cited complications; linked images not independently interpreted."},
+    {"id":"bleyen","url":"https://repub.eur.nl/pub/17897/100128_Bleyen%2C%20Isabel.pdf","version":"Bleyen 2009 original article reproduced in doctoral thesis","access":"full-text","readScope":"Original article pp 48–52 main text, methods, results, discussion and figure captions, including 30-child bulge categories/scar width discrepancy; figure image pixels and supplements not interpreted."},
+    {"id":"chibber","url":"https://pubmed.ncbi.nlm.nih.gov/16132758/","version":"Chibber et al., Int Urol Nephrol 2005;37:43–46","access":"abstract-only","readScope":"Primary abstract: 25 PVS women, 10 one incision/12 two/3 three; device model and full operative figures unavailable."},
+    {"id":"augs","url":"https://education.augs.org/AssetListing/PFD-Week-2017-3822/Harvest-of-Autologous-Fascia-Lata-From-the-Thigh-Surgical-Technique-Video-16997","version":"AUGS 2017 surgical technique","access":"indexed-excerpts","readScope":"Accessible technique text summary/transcript only, 1 by 12 cm example; video not watched."},
+    {"id":"johnson","url":"https://pubmed.ncbi.nlm.nih.gov/38587244/","version":"Johnson et al., Neurourol Urodyn 2024;43:1185–91","access":"abstract-only","readScope":"Primary abstract, 29/72 questionnaire response and donor-site numerators; Wiley full HTML and PDF returned 403, no tables/figures."},
+    {"id":"delu","url":"https://pubmed.ncbi.nlm.nih.gov/38587269/","version":"Delu et al., Neurourol Urodyn 2024;43:1179–84","access":"abstract-only","readScope":"Primary abstract, 108 patients/111 large POP grafts, bulge/seroma/paresthesia outcomes; no full text, figures or supplements."},
+    {"id":"wheatcroft","url":"https://pubmed.ncbi.nlm.nih.gov/9290374/","version":"Wheatcroft et al., Br J Ophthalmol 1997;81:581–83","access":"abstract-only","readScope":"24-patient ptosis-harvest abstract and early walking-pain numerator; full article/figures not read."},
+    {"id":"naugle","url":"https://pubmed.ncbi.nlm.nih.gov/9307645/","version":"Naugle et al., Ophthalmology 1997;104:1480–88","access":"abstract-only","readScope":"23-patient high-leg ophthalmic-incision abstract; no comparative herniation outcome."},
+    {"id":"cochrane-ptosis","url":"https://www.cochrane.org/evidence/CD012725_types-materials-frontalis-sling-surgery-congenital-ptosis","version":"Cochrane materials review 2019","access":"relevant-sections","readScope":"Public review summary and comparative uncertainty conclusion; full trials/tables not read."},
+    {"id":"rvf-case","url":"https://www.jstage.jst.go.jp/article/jsswc/17/3/17_93/_article/-char/en","version":"Kagoura et al. 2026;17:93–97","access":"abstract-only","readScope":"Original article landing abstract reports free fascia lata plus gracilis; full case PDF/figures not read."},
+    {"id":"rvf-review","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4755772/","version":"Rectovaginal Fistulae 2016 review","access":"indexed-excerpts","readScope":"Indexed interposition/perfused tissue passages; full review figures and underlying series not read."}
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/tools/instruments/urethral-specialty/crawford-stripper.mdx",
+      "sourceSha256": "b0beb8dd86dc4f881321c6caf44c227e9e773c9ac5acbb80f352e8fc0bd82725",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Entire current original and final MDX including eight operative steps, comparison table, 17 inherited references, added sources and links; no local page figure, imported clinical data or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "SUI/PVS patient selection and fistula/POP indication scoped; disease-level guidelines and unusual uses remain open.",
+        "treatment": "Fascia-lata strip versus broad sheet and optional stripper versus universal standard separated.",
+        "numbers": "N4298 355 mm; Bleyen, Chibber, Wheatcroft, Johnson and Delu denominators scoped to distinct populations; full primary tables remain open.",
+        "doseDeviceSafety": "N4298 matched blade, disassembly, cleaning, wrapped steam and emergency flash instructions read from English IFU; no transfer to other manufacturers.",
+        "anatomyTechnique": "Iowa narrow-strip operative protocol read, with transverse entry, proximal advancement/cut and band integrity; AUGS text-only graft example; full Chibber technique open.",
+        "followUp": "Pediatric mean 27-month Bleyen observation and donor-site questionnaires distinguished from PVS long-term success.",
+        "importedDataFigures": "No local imported dataset/figure/video; Bleyen image pixels and AUGS video not independently reviewed.",
+        "references": "All 17 inherited entries preserved; seven new model, teaching, case and primary-study sources; cross-specialty use and probe lineage not inherited as device proof.",
+        "currency": "2022-10 N4298 manufacturer PDF and 2026 case landing checked; current model-specific clinical operating method and fuller comparative evidence outstanding."
+      },
+      "claimChecks": [
+        {"claim":"Crawford has a universal distal circumferential cutting tip, width and autoclavable specification","sourceIds":["n4298-catalog","n4298-ifu"],"locator":"N4298 listing and English PDF p 1 instructions/assembly/reprocessing","verdict":"corrected","note":"Matched movable blade/channel and model-specific processing substituted for inherited generic geometry."},
+        {"claim":"One 2–4 cm incision and parallel fascia cuts always yield a 10–15 cm PVS strip","sourceIds":["iowa","chibber","augs","bleyen"],"locator":"Iowa strip versus sheet steps; Chibber abstract 10/12/3 incision groups; AUGS text summary; Bleyen methods","verdict":"corrected","note":"Named narrow-strip entry/traction/proximal cut retained; sizes and number of incisions vary."},
+        {"claim":"Johnson and Delu demonstrate low morbidity of Crawford-harvested PVS","sourceIds":["johnson","delu"],"locator":"2024 primary abstracts, study populations and donor-site numerators","verdict":"corrected","note":"Johnson SUI questionnaire 29/72 with nontrivial symptoms; Delu large POP harvest 108/111; neither establishes Crawford model."},
+        {"claim":"Bleyen 50 percent invisible bulge and 26.7 percent visible bulge apply to adult PVS","sourceIds":["bleyen","wheatcroft"],"locator":"Bleyen 2009 reproduced original methods/results and Wheatcroft ptosis abstract","verdict":"corrected","note":"15/30 no prolapse and 8/30 visible in children; 67 percent early walking pain in separate 24-person ptosis cohort."},
+        {"claim":"Fascia lata interposition is a well-vascularized routine VVF/RVF/RUF flap","sourceIds":["rvf-case","rvf-review"],"locator":"Kagoura 2026 case abstract with gracilis and 2016 review indexed interposition passages","verdict":"corrected","note":"Free fascia not vascularized; rare selected graft use retained; broad fistula-standard claim not established."},
+        {"claim":"Fascia lata is proven superior/gold standard frontalis-sling material and high harvest reduces herniation","sourceIds":["cochrane-ptosis","naugle"],"locator":"Cochrane review public conclusions; Naugle primary abstract","verdict":"corrected","note":"Comparative material ranking and high-incision herniation reduction unsupported at this access level."},
+        {"claim":"Pediatric bladder-neck wrap, urethroplasty buttress and VVF/RUF are established Crawford-stripper applications","sourceIds":["chibber","rvf-case"],"locator":"PVS abstract and narrow RVF case versus inherited unlinked claims","verdict":"unresolved","note":"Preserved as conditional potential uses with distinct graft needs; obtain operation-specific primary sources before stronger indication/outcome claims."}
+      ],
+      "unresolvedClaims": [
+        "Obtain Johnson 2024 publisher full text/tables via institutional or author access after direct publisher 403; determine harvest technique and outcome ascertainment.",
+        "Obtain Chibber 2005 full operative methods/figures and current model-specific operating instructions for passage and graft dimensions; N4298 PDF is assembly/reprocessing, not a complete clinical technique.",
+        "Read Kagoura 2026 full case/figures and VVF/RUF, pediatric bladder-neck and urethroplasty-graft originals before asserting established indications or specific stripper selection.",
+        "Inspect Bleyen figure images and full alternative-harvest/cross-specialty primary series if comparative morbidity or anatomy details are proposed; AUGS video was not watched."
+      ],
+      "preservationReview": "Every substantive heading, eight-step sequence, comparison table, morbidity section, history, all 17 inherited references and links retained; no page figure/video existed. False geometry, vascularity, universal standard and out-of-population numerical extrapolations corrected rather than deleting practical teaching.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/crawford-fascia-stripper-targeted-review.md"
+    }
+  ]
+}

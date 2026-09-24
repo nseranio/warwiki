@@ -1,0 +1,50 @@
+{
+  "batchId": "2026-09-20-bilobed-flap",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"recovery","url":"reports/2026-09-20/bilobed-flap-recovery-review.md","version":"September 20 recovery inventory","access":"prior-review","readScope":"Prior limited abstract/Bookshelf access and gap index only; restored page's operative content had not been fully source checked.","reusedFrom":"reports/2026-09-20/bilobed-flap-recovery-review.md"},
+    {"id":"pathan-2024","url":"https://www.hmpgloballearningnetwork.com/site/eplasty/original-research/bilobed-flap-critical-analysis-and-new-mathematically-precise-design","version":"Pathan 2024 original ePlasty article","access":"full-text","readScope":"Full publisher HTML main text, methods, geometry equations and table prose, results, discussion, limitations and figure 1–10 captions read; linked underlying figure images not inspected. Theoretical nasal model, no clinical/cadaveric validation or GU extrapolation."},
+    {"id":"weinstein-2020","url":"https://pubmed.ncbi.nlm.nih.gov/31592948/","version":"Weinstein et al. PRS 2020","access":"abstract-only","readScope":"Indexed original abstract: five oncologic and one Fournier bilobed-gracilis flap, authors' indications and Level IV; full technical paper and illustrations not read."},
+    {"id":"yun-2010","url":"https://pubmed.ncbi.nlm.nih.gov/20538324/","version":"Yun et al. Gynecol Oncol 2010","access":"abstract-only","readScope":"Indexed original abstract: 15 patients, nine bilobed and six unilobed; all-flap survival, sizes and mean 4.6-month follow-up; operative text/figures unread."},
+    {"id":"yao-2022","url":"https://pubmed.ncbi.nlm.nih.gov/36468711/","version":"Yao et al. J Vis Exp 2022","access":"abstract-only","readScope":"Original indexed abstract: seven patients, bilateral opposing scrotal pedicles and two partial necroses; linked operative video/full methods not viewed."},
+    {"id":"mendel-2023","url":"https://pubmed.ncbi.nlm.nih.gov/37004847/","version":"Mendel et al. Urology 2023","access":"abstract-only","readScope":"Original indexed abstract: 22 patients, 12 questionnaire respondents, complications and 27.3% late revisions; full study tables not read."},
+    {"id":"jandali-2010","url":"https://pubmed.ncbi.nlm.nih.gov/20010412/","version":"Jandali et al. Ann Plast Surg 2010","access":"abstract-only","readScope":"Original indexed abstract describes combined anterior sphincter repair and bilateral pedicled bilobed perineal-body reconstruction; full operative illustrations not read."},
+    {"id":"ricotta-2025","url":"https://pubmed.ncbi.nlm.nih.gov/39966025/","version":"Ricotta et al. IJGC 2025","access":"abstract-only","readScope":"Original indexed abstract on authors' location-based perforator preference; publisher and ScienceDirect full-text requests returned 403. Figure 1, full algorithm, outcomes and supplement unread."},
+    {"id":"hong-2017","url":"https://pubmed.ncbi.nlm.nih.gov/28052404/","version":"Hong et al. Microsurgery 2017","access":"abstract-only","readScope":"Original indexed abstract: 37 separate perforator flaps/16 patients, mean 2.31, no flap loss, average 11.06 months; full technique not read."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/surgical-principles/flaps/bilobed.mdx",
+    "sourceSha256": "d09a678546d14789610a80f9fe06167c6c8594c8b21b422ba6e67e881bce4bd6",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Entire 189-line restored MDX including geometry and technique tables, applications, 15 original bibliography entries and cross-links; no MDX figure, embedded media or imported clinical data. One new theoretical source added.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Defect-site/size indications read; selection by clinical anatomy, oncologic and obstetric indication still needs full primary source and figures.",
+      "treatment": "Six-case gracilis authors' recommendation scoped; bilobed PAP and bilateral scrotal distinct; comparative algorithm and operative details unfinished.",
+      "numbers": "15-patient Yun survival denominator corrected to mixed designs, Mendel satisfaction denominator 12/22; other flap measurements and comparison geometries not fully reconciled.",
+      "doseDeviceSafety": "No drug or device IFU; Doppler perforator guidance, perfusion and operative safety not clinically cleared.",
+      "anatomyTechnique": "Nasal theory's main text/table prose and captions read, actual figures not inspected; GU adaptations and geometry extrapolation remain open.",
+      "followUp": "Yun mean follow-up 4.6 months and Hong mean 11.06 months visible in abstracts; late reconstruction outcomes unfinished.",
+      "importedDataFigures": "No MDX figures or imported clinical data; JoVE linked study video and original source figures were not watched/visually reviewed.",
+      "references": "All 15 original references inspected; one full open theoretical source added, seven original clinical abstracts read, prior limited scope reused; other full primary packages not yet cleared.",
+      "currency": "2025 Toulouse abstract checked but full algorithm inaccessible; no complete guideline or technique-currentness survey."
+    },
+    "claimChecks": [
+      {"claim":"Zitelli's 90–100-degree nasal geometry is directly prescribed for all GU bilobed flaps","sourceIds":["pathan-2024","recovery"],"locator":"Pathan publisher full text Introduction, theoretical geometry/limitations and figure captions","verdict":"corrected","note":"Retained nasal-design principle but disclaimed fixed dimensions for gracilis/PAP anatomy; 2024 alternative is a nonvalidated mathematical model."},
+      {"claim":"Bilateral pedicled scrotal flaps are bilobed sequential-relay flaps","sourceIds":["yao-2022","mendel-2023","pathan-2024"],"locator":"Original 2022/2023 abstract design descriptions versus publisher geometric definition","verdict":"corrected","note":"Two separate opposing pedicles are not one bilobed shared-pivot relay; preserved adjacent penile reconstruction examples with proper classification."},
+      {"claim":"Mendel scores represent all 22 patients and all 27.3% late revisions result from retraction","sourceIds":["mendel-2023"],"locator":"Original indexed abstract Methods and Results","verdict":"corrected","note":"Scores from 12 respondents; 27.3% retraction and 27.3% revisions reported separately, causal identity unestablished."},
+      {"claim":"Yun reports 100% bilobed-flap survival","sourceIds":["yun-2010"],"locator":"Original indexed abstract Results","verdict":"corrected","note":"All 15 flaps survived, including six unilobed and nine bilobed; no subgroup-specific comparative efficacy implied."},
+      {"claim":"All six Weinstein patients received chemoradiation and six-case gracilis recommendation is comparative standard of care","sourceIds":["weinstein-2020"],"locator":"Original indexed abstract, Level IV technique report","verdict":"corrected","note":"Only oncologic patients identified as chemoradiated; attributed indications to authors' six-case experience, not guideline."},
+      {"claim":"Toulouse requires multi-bilobed perforator flaps with proven equal coverage and Hong tests bilobed geometry","sourceIds":["ricotta-2025","hong-2017"],"locator":"Both original indexed abstracts, distinct algorithm and multiple-flap series","verdict":"corrected","note":"Toulouse is location-based authors' proposal without bilobed-specific validation; Hong used multiple separate flaps. Full Toulouse figure inaccessible."},
+      {"claim":"All flap geometry, detailed operative steps, follow-up and comparison-table claims have final full-source coverage","sourceIds":["recovery","pathan-2024"],"locator":"Complete restored page and prior gap inventory compared with bounded new theory reading","verdict":"unresolved","note":"Theory cannot validate GU clinical effects; original source figures/operative video, quantitative comparisons and full technique series remain unread."}
+    ],
+    "unresolvedClaims": ["Read full Yun/Weinstein/Vyas/Jandali and related GU series including operative figures to resolve paddle design, Doppler, indications and longer-term outcomes.", "Obtain Ricotta 2025 full algorithm figure/primary text by legitimate publisher/library route; publisher and ScienceDirect returned 403 in this pass. Confirm whether any bilobed configuration is even recommended.", "Review original JoVE operative video and Mendel/Yao full methods before detailed penile-flap claims; continue to distinguish bilateral from bilobed.", "Map nasal geometry measurements and all comparison-table claims to site-specific sources; Pathan 2024 is a theoretical nasal model without clinical validation."],
+    "preservationReview": "Retained every application, technical section, table and all 15 original references/media links. Corrected category errors, cohort denominators, overgeneralized superiority and attributed technique preference; added one open theory reference and a terminology distinction. No generic audit notice or blanket deletion.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/bilobed-flap-targeted-review.md"
+  }]
+}

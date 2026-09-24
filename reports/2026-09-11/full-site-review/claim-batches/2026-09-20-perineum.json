@@ -1,0 +1,50 @@
+{
+  "batchId": "2026-09-20-perineum",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/perineum-recovery-review.md","version":"September 20 limited recovery review","access":"prior-review","readScope":"Reused NCBI regional-anatomy orientation and unresolved-scope notes only; earlier blanket reduction superseded, not treated as clinical clearance.","reusedFrom":"reports/2026-09-20/perineum-recovery-review.md"},
+    {"id":"plochocki-2016","url":"https://pubmed.ncbi.nlm.nih.gov/27565019/","version":"Plochocki et al. 2016 inherited original anatomy study","access":"abstract-only","readScope":"Original indexed abstract on EAS subdivision innervation and 89.2% separate inferior rectal nerve origin; full sample methods/figures not read."},
+    {"id":"zifan-2018","url":"https://pubmed.ncbi.nlm.nih.gov/30552351/","version":"Zifan et al. 2018 inherited original DTI study","access":"abstract-only","readScope":"Original abstract states 10 nulliparous women, four men and one cadaveric micro-CT comparison; crossing fibers observed, not population-wide >90% rate."},
+    {"id":"delancey-2024","url":"https://pubmed.ncbi.nlm.nih.gov/38206338/","version":"DeLancey et al. 2024 inherited perineal-complex hypothesis","access":"abstract-only","readScope":"Original abstract and PubMed figure descriptions of study design, levator line of action and simulated loss of perineal-body connection; full paper not read."},
+    {"id":"elsevier-clitoral-vein","url":"https://www.elsevier.com/resources/anatomy/cardiovascular-system/veins/deep-dorsal-vein-of-clitoris/18767","version":"Elsevier Complete Anatomy anatomy entry, accessed 2026-09-20","access":"relevant-sections","readScope":"Deep dorsal clitoral vein course and drainage into vesical plexus; broader pelvic venous variation not verified."},
+    {"id":"chehensse-2017","url":"https://pubmed.ncbi.nlm.nih.gov/27917533/","version":"Chéhensse et al. 2017 original human spinal-generator study","access":"abstract-only","readScope":"Original abstract: L2–L5 galaninergic neurons and L3–L5 injury predictor of PVS failure in 384 clinically complete SCI patients; full article not read."},
+    {"id":"chehensse-2013","url":"https://pubmed.ncbi.nlm.nih.gov/23820516/","version":"Chéhensse et al. 2013 systematic review","access":"abstract-only","readScope":"Original abstract: ejaculation can persist after lesions above sacral segments; lower lesion extent matters. Full review and included studies not read."},
+    {"id":"rcog-oasis","url":"https://www.rcog.org.uk/media/5jeb5hzu/gtg-29.pdf","version":"RCOG Green-top Guideline No. 29, 2015 PDF","access":"relevant-sections","readScope":"PDF classification and repair recommendation pages read for 3a/3b/3c/4 and partial/full EAS/IAS repair; entire 19-page guideline not read."},
+    {"id":"ascrs-fi-2023","url":"https://www.ascrsu.com/ascrs/view/ASCRS-Evidence-Based-Guidelines-and-Expert-Consensus/3982020/all/Management%20of%20Fecal%20Incontinence%20%282023%29","version":"ASCRS 2023 fecal-incontinence guideline","access":"prior-review","readScope":"Relevant evaluation and SNM sections reused from pelvic-neuroanatomy targeted review; current mobile redirect showed subscription gate, not counted as new full read.","reusedFrom":"reports/2026-09-20/pelvic-neuroanatomy-targeted-review.md"},
+    {"id":"local-figures","url":"docs/01-foundations/anatomy-physiology/pelvis-support/perineum.mdx","version":"Current three inherited raster images and perineal-layers SVG, 2026-09-20","access":"relevant-sections","readScope":"All four linked local images opened/rendered and visually inspected for gross legibility and schematic limits; original figure sources and clinical label accuracy not fully verified."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/pelvis-support/perineum.mdx",
+    "sourceSha256": "d4480e51a29592978d2b9ee289f2d99d7e3e718b0e93c99df11e7d71a44a940c",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 309 inherited MDX lines, 21 listed references and four linked images; no video or imported clinical dataset.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "OASIS classification and multifactorial FI symptom framing corrected; detailed pelvic pain, prolapse, cauda equina and other evaluations remain open.",
+      "treatment": "RCOG partial/full EAS and IAS repair recommendations checked; automatic decompression and mandatory irradiated fistula flap statements narrowed; other procedures not cleared.",
+      "numbers": "Removed unsupported >90% continuity and universal sphincter-outcome percentages; 89.2% EAS nerve origin attributed to one sample; other inherited dimensions and outcomes open.",
+      "doseDeviceSafety": "No drug doses; dorsal block clock-face safe zone removed, male-sling mechanism qualified; device-specific IFUs and surgical safety details open.",
+      "anatomyTechnique": "Entire page and four figures viewed; female clitoral venous route corrected and spinal-generator lesion direction repaired; perineal/flap/nerve variants and operative planes not fully sourced.",
+      "followUp": "OASIS and FI follow-up individualized; procedure-specific outcomes and surveillance remain unresolved.",
+      "importedDataFigures": "Three inherited PNGs and local SVG visually inspected, not changed; schematic clinical review pending and full source-label audit open; male OpenStax full-view label cropping noted.",
+      "references": "All 21 inherited bibliography entries read as page text but not reconciled claim-by-claim; four focused references added with access limits recorded.",
+      "currency": "RCOG 2015 OASIS and ASCRS 2023 FI relevant sections used; no comprehensive current update search across all perineal subdomains."
+    },
+    "claimChecks": [
+      {"claim":"The clitoral deep dorsal vein drains to the male prostatic plexus","sourceIds":["elsevier-clitoral-vein"],"locator":"Complete Anatomy course and drainage text","verdict":"corrected","note":"Female vein now routed to vesical venous plexus; male prostatic route described separately."},
+      {"claim":"Suprasacral injury above L3 typically abolishes ejaculation","sourceIds":["chehensse-2017","chehensse-2013"],"locator":"Original indexed study and review abstracts","verdict":"corrected","note":"L3–L5 segment injury predicted PVS failure; injury above those segments alone does not establish anejaculation."},
+      {"claim":"All EAS subdivisions have universally separate innervation and >90% of people show midline DTI connectivity","sourceIds":["plochocki-2016","zifan-2018"],"locator":"Original anatomy-study abstracts","verdict":"corrected","note":"89.2% attributed to Plochocki sample; Zifan small DTI sample described without invented population-wide rate."},
+      {"claim":"Perineal-body loss alone produces prolapse and urinary/fecal incontinence","sourceIds":["delancey-2024","ascrs-fi-2023"],"locator":"Hypothesis abstract and previously read FI evaluation section","verdict":"corrected","note":"Triad framed as proposed anatomy; symptoms remain multifactorial."},
+      {"claim":"Fourth-degree OASIS means mucosal involvement alone and any EAS tear may use overlap","sourceIds":["rcog-oasis"],"locator":"PDF classification and repair sections","verdict":"corrected","note":"Fourth-degree requires EAS, IAS and anorectal mucosa; partial EAS approximation differs from full-thickness options."},
+      {"claim":"Inherited images and all perineal surgical content have clinical sign-off","sourceIds":["local-figures","prior-recovery"],"locator":"Current images, full inherited page and prior gap record","verdict":"unresolved","note":"Figures visually inspected and substantive material preserved, but full source/technical review and clinician sign-off remain open."}
+    ],
+    "unresolvedClaims": ["Reconcile inherited pressure/angle/size figures and all 21 original references to claims; inspect full perineal-body, EAS, nerve and membrane studies.", "Review Martius/gracilis/perforator anatomy, urethroplasty/AUS/sling/fistula/radiation, abscess/Fournier, pudendal, obstetric and gender-affirming procedure sources and relevant IFUs before clinical clearance.", "Verify all linked figure provenance/labels and obtain clinician review; conceptual SVG and inspected rasters are not cleared procedural maps."],
+    "preservationReview": "Retained regional anatomy, operative applications and reconstructive links; corrected explicit errors and narrowed unsafe absolutes without a public audit/removal notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/perineum-targeted-review.md"
+  }]
+}

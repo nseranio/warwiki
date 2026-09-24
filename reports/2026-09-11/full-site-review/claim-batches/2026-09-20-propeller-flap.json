@@ -1,0 +1,61 @@
+{
+  "batchId": "2026-09-20-propeller-flap",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-gracilis","url":"reports/2026-09-12/gracilis-source-review.md","version":"September 12 current-hash review","access":"prior-review","readScope":"Six full source mains and 22 actual figures documented for unchanged current gracilis file; source-access limits retained; no duplicate clinical read credited.","reusedFrom":"reports/2026-09-12/gracilis-source-review.md"},
+    {"id":"prior-propeller","url":"reports/2026-09-20/propeller-flap-recovery-review.md","version":"September 20 recovery inventory","access":"prior-review","readScope":"Prior full MDX inventory but only limited abstracts; its blanket-removal approach is superseded.","reusedFrom":"reports/2026-09-20/propeller-flap-recovery-review.md"},
+    {"id":"prior-ipap","url":"reports/2026-09-20/epap-ipap-lotus-targeted-review.md","version":"September 20 targeted review","access":"prior-review","readScope":"Reused documented Hashimoto 2014 and Han 2023 cohort/denominator findings without upgrading source access.","reusedFrom":"reports/2026-09-20/epap-ipap-lotus-targeted-review.md"},
+    {"id":"prior-fournier","url":"reports/2026-09-20/igap-singapore-labia-targeted-review.md","version":"September 20 targeted review","access":"prior-review","readScope":"Reused documented mixed-flap Fournier 2026 pooled result; not propeller-specific.","reusedFrom":"reports/2026-09-20/igap-singapore-labia-targeted-review.md"},
+    {"id":"pignatti-2011","url":"https://pubmed.ncbi.nlm.nih.gov/21285776/","version":"Tokyo consensus original indexed abstract","access":"abstract-only","readScope":"2009 meeting, 2011 publication, island rotation and three design categories; full text/illustrations unread."},
+    {"id":"darpa-2014","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4058175/","version":"2014 review","access":"unavailable","readScope":"PMC direct open returned reCAPTCHA; Europe PMC fullTextXML returned 503. Search snippet only; no full main text, figures, tables or supplement read."},
+    {"id":"perez-2014","url":"https://pubmed.ncbi.nlm.nih.gov/24094618/","version":"Original indexed abstract","access":"abstract-only","readScope":"15 mixed free/regional flaps, salvage and transfusion/hematoma/syncope findings; full safety methods unread."},
+    {"id":"sisti-2016","url":"https://pubmed.ncbi.nlm.nih.gov/27381596/","version":"Original indexed abstract","access":"abstract-only","readScope":"119 studies, 1315 flaps/1242 patients and all-body complication scope; full subgroup tables unread."},
+    {"id":"han-2018","url":"https://pubmed.ncbi.nlm.nih.gov/27743757/","version":"Original indexed abstract","access":"abstract-only","readScope":"Ten penoscrotal IPAP propeller cases and one distal partial necrosis; full operative figures unread."},
+    {"id":"chaput-2018","url":"https://pubmed.ncbi.nlm.nih.gov/28314066/","version":"Original indexed abstract","access":"abstract-only","readScope":"Consecutive nonrandom 30/30 lower-limb comparison, congestion and necrosis outcomes; full methods/tables unread."},
+    {"id":"schulster-2021","url":"https://pubmed.ncbi.nlm.nih.gov/33309704/","version":"Original indexed abstract","access":"abstract-only","readScope":"One posterior-thigh propeller PU-revision case and 17-month result; full technical figures unread."},
+    {"id":"witte-2021","url":"https://pubmed.ncbi.nlm.nih.gov/33973948/","version":"Original indexed abstract","access":"abstract-only","readScope":"58 studies/1988 patients overall versus 910 APR subgroup and 91% rectus use; full selection/methods unread."},
+    {"id":"shin-2022","url":"https://pubmed.ncbi.nlm.nih.gov/35717498/","version":"Original indexed abstract","access":"abstract-only","readScope":"16 patients/27 new PPSF flaps, earlier PPPF comparison; comparator denominator and full ratings tables unread."},
+    {"id":"huang-2026","url":"https://pubmed.ncbi.nlm.nih.gov/41758125/","version":"Original indexed abstract","access":"abstract-only","readScope":"402 distal-leg/ankle/hindfoot flaps and geometry associations; ratio <2.5 p=0.15; full meta-analysis tables unread."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/surgical-principles/flaps/propeller-flap.mdx",
+    "sourceSha256": "95d1a79027944a2d1f1216043fe7596d3aff598e330b726efdebb1be1fdd337d",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Entire 226-line restored MDX, all principle, application, complication, selection and technical sections, comparison table, links and 28 inherited references; no embedded figure/video or imported clinical data. Final-file diff reread after corrections.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Defect selection and donor/recipient principles read; full site-specific patient-selection sources/figures unfinished.",
+      "treatment": "Classification and several small GU series corrected; full propeller and muscle-bearing variant comparison not cleared.",
+      "numbers": "Mixed 1.6% Fournier estimate, 16/27 Shin PPSF cohort, 1988/910 Witte denominators, lower-limb 30/30 Chaput and 402 Huang scope corrected; remaining series tables unread.",
+      "doseDeviceSafety": "Pérez local LMWH positioned as high-morbidity specialist salvage, not protocol; full bleeding/safety methods and device-specific Doppler/imaging methods unread.",
+      "anatomyTechnique": "Tokyo design classes corrected and universal geometry/cuff rules removed; D'Arpa and GU operative figures not read.",
+      "followUp": "Single PU case 17-month result limited; long-term comparative reconstruction and donor-site outcomes unresolved.",
+      "importedDataFigures": "No page figures or imported clinical data; original study figures/supplements not inspected, D'Arpa and Toulouse full algorithms inaccessible.",
+      "references": "All 28 inherited references read as citations and retained; selected original abstracts checked, prior reviews reused at recorded access level; full source packages still needed.",
+      "currency": "2025 Toulouse abstract and 2026 Huang/Fournier signals checked only at documented abstract/prior-review scope; no comprehensive current guideline survey."
+    },
+    "claimChecks": [
+      {"claim":"Every propeller island rotates around one skeletonized perforator; Tokyo consensus was published in 2009","sourceIds":["pignatti-2011","prior-propeller"],"locator":"Pignatti original abstract definition, meeting date and class list","verdict":"corrected","note":"Subcutaneous-pedicled, perforator-pedicled and supercharged designs distinguished; consensus meeting 2009, paper 2011."},
+      {"claim":"Fournier pooled 1.6% flap loss is a propeller-specific risk","sourceIds":["prior-fournier"],"locator":"Prior Alammar 2026 mixed-flap source review","verdict":"corrected","note":"Kept 619-patient/625-flap mixed pooled figure and explicitly disallowed propeller-only inference."},
+      {"claim":"One posterior-thigh PU revision establishes general propeller durability","sourceIds":["schulster-2021"],"locator":"Original indexed case abstract","verdict":"corrected","note":"Retained technique example; scoped 17-month patency to one patient."},
+      {"claim":"Shin 16 patients/27 flaps and all-survived result jointly cover PPPF and PPSF","sourceIds":["shin-2022"],"locator":"Original indexed abstract Methods/Results","verdict":"corrected","note":"16/27 is new PPSF cohort; earlier PPPF denominator/survival not silently combined."},
+      {"claim":"Witte 91% VRAM applies to all 1988 patients and proves comparative superiority","sourceIds":["witte-2021"],"locator":"Original indexed systematic-review abstract","verdict":"corrected","note":"91% rectus use pertains to 910 APR cases; observational case mix cannot show matched superiority."},
+      {"claim":"All-body Sisti and lower-limb Chaput/Huang findings are GU propeller complication and geometry standards","sourceIds":["sisti-2016","chaput-2018","huang-2026"],"locator":"Original indexed abstract population/method/results fields","verdict":"corrected","note":"Anatomic scope and nonrandom design made explicit; Huang ratio <2.5 p=0.15 is not a validated threshold."},
+      {"claim":"Pérez local LMWH is routine low-risk propeller salvage","sourceIds":["perez-2014"],"locator":"Original indexed abstract Results and adverse events","verdict":"corrected","note":"Mixed-flap specialist salvage had substantial transfusion and complications; routine-care implication removed."},
+      {"claim":"Toulouse requires propeller-first reconstruction and specific imaging, cuff and supercharging rules apply to every flap","sourceIds":["prior-ipap","darpa-2014","chaput-2018"],"locator":"Prior Toulouse access note and bounded original abstracts; D'Arpa full review unavailable","verdict":"unresolved","note":"Universal language removed and anatomy-specific teaching retained; full Toulouse figure, D'Arpa source and GU operative packages still needed before clinical clearance."}
+    ],
+    "unresolvedClaims": [
+      "Obtain full Pignatti/D'Arpa taxonomy and technique with figures; D'Arpa PMC reCAPTCHA and Europe PMC 503 blocked this pass.",
+      "Read full Shin comparator cohort/tables, Witte methods, and Toulouse 2025 location algorithm figure before stronger selection or comparative claims.",
+      "Read Chaput/Huang full methods/subgroups and Pérez bleeding protocol before importing lower-limb geometry or local heparin to GU decisions.",
+      "Reconcile remaining GU application and comparison table against original operative figures, follow-up and donor-site outcomes."
+    ],
+    "preservationReview": "Retained all application, technique, selection, complication and comparison sections and all 28 inherited references/links. Corrected denominator, classification and population transfer errors without removing practical content or adding public audit notices. Paired gracilis source work reused unchanged, not duplicated.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/propeller-flap-targeted-review.md"
+  }]
+}

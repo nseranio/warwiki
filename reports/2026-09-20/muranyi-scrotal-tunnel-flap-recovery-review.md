@@ -6,7 +6,7 @@ The inherited page converted one paraffinoma cohort into a detailed procedure, c
 
 ## Sources reviewed
 
-- **Murányi et al., 2022** (PMID: 35014987): bibliographic/abstract-level record recovered. It describes a modified bipedicle scrotal flap for paraffin-induced sclerosing lipogranuloma; full text, tables, and technical materials were not recovered.
+- **Murányi et al., 2022** (PMID: 35164523): bibliographic/abstract-level record recovered. It describes a modified bipedicle scrotal flap for paraffin-induced sclerosing lipogranuloma; full text, tables, and technical materials were not recovered.
 
 ## Changes made
 

@@ -1,0 +1,53 @@
+{
+  "batchId": "2026-09-20-uterus",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/uterus-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Reused bounded anatomy and preservation observations only; no blanket clinical clearance.","reusedFrom":"reports/2026-09-20/uterus-recovery-review.md"},
+    {"id":"ncbi-anatomy","url":"https://www.ncbi.nlm.nih.gov/books/NBK554601/","version":"Female internal genitals anatomy chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Uterine position and support; not entire chapter or all underlying citations."},
+    {"id":"tellum-2019","url":"https://pubmed.ncbi.nlm.nih.gov/31264010/","version":"Tellum et al. prospective MRI study, Eur Radiol 2019","access":"abstract-only","readScope":"Indexed abstract and bibliographic metadata; full text, imaging and tables not read."},
+    {"id":"acog-pmb-2026","url":"https://www.acog.org/news/news-releases/2026/04/acog-publishes-updated-guidance-evaluation-postmenopausal-bleeding","version":"ACOG official announcement of April 2026 Clinical Practice Update","access":"indexed-excerpts","readScope":"Official indexed announcement says initial TVUS plus tissue sampling for most symptomatic patients and supersedes prior ultrasound-alone rule; direct full announcement/update returned access error, detailed exception criteria not verified."},
+    {"id":"acog-pmb-2018","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/the-role-of-transvaginal-ultrasonography-in-evaluating-the-endometrium-of-women-with-postmenopausal-bleeding","version":"Committee Opinion 734, 2018; symptomatic triage superseded in 2026","access":"indexed-excerpts","readScope":"Official indexed prior opinion's incidental asymptomatic >4 mm and persistent/recurrent bleeding statements; direct full page unavailable. Not used as current initial symptomatic triage."},
+    {"id":"cochrane-hysterectomy","url":"https://www.cochrane.org/evidence/CD004993_subtotal-versus-total-hysterectomy","version":"Cochrane evidence summary, 2022","access":"relevant-sections","readScope":"Summary of randomized functional outcomes and cyclic bleeding; full systematic review and trials not read."},
+    {"id":"nice-uae","url":"https://www.nice.org.uk/guidance/htg240/resources/uterine-artery-embolisation-for-fibroids-pdf-1809589872688837","version":"NICE HTG240 current fibroid UAE guidance, accessed 2026-09-20","access":"indexed-excerpts","readScope":"Official indexed recommendation 1.2 on uncertain fertility/pregnancy effects; direct PDF returned 403. IPG367 superseded/redirected."},
+    {"id":"who-pph","url":"https://www.who.int/publications/i/item/9789240115637","version":"WHO consolidated postpartum-hemorrhage guideline, 2025","access":"relevant-sections","readScope":"Official publication landing only; 116-page guideline not read in full."},
+    {"id":"who-pph-summary","url":"https://www.who.int/news/item/05-10-2025-global-health-agencies-issue-new-recommendations-to-help-end-deaths-from-postpartum-haemorrhage","version":"WHO/FIGO/ICM official guideline news summary, 2025","access":"relevant-sections","readScope":"Full MOTIVE first-response and escalation passage read; not a substitute for the guideline full text."},
+    {"id":"acog-route","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/06/choosing-the-route-of-hysterectomy-for-benign-disease","version":"ACOG Committee Opinion 701","access":"indexed-excerpts","readScope":"Official indexed route-selection recommendations; direct full guidance returned access error."},
+    {"id":"who-fistula","url":"https://www.who.int/news-room/facts-in-pictures/detail/10-facts-on-obstetric-fistula","version":"WHO obstetric-fistula fact page, 2018","access":"relevant-sections","readScope":"Obstructed-labor cause and access-to-care statements read; no global VVF cause ranking or full clinical repair guidance inferred."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/uterus.mdx",
+    "sourceSha256": "9e3dc1959c93baa5559bd08a07e9198a7cc83ecd720fdc052a032419385c9c3f",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 200 inherited MDX lines and 26 references, complete revised prose, and actual local Gray 1170 raster; no video or imported clinical data.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "2026 ACOG change to postmenopausal-bleeding workup recognized; detailed full update and other evaluation algorithms open.",
+      "treatment": "PPH response, hysterectomy route, subtotal outcomes, UAE fertility, adenomyosis and fistula absolutes narrowed; other treatment claims open.",
+      "numbers": "Removed stand-alone MRI 12 mm diagnosis and 2018 symptomatic 4 mm ultrasound-only triage; inherited dimensions, cycles and outcomes not comprehensively reconciled.",
+      "doseDeviceSafety": "No medication doses or device specifications; PPH drug sequence narrowed without prescribing doses; full WHO guideline open.",
+      "anatomyTechnique": "Entire page and Gray figure read; corrected anteversion/anteflexion and caption; deeper vascular/surgical technique evidence open.",
+      "followUp": "Persistent/recurrent bleeding and asymptomatic incidental distinction noted; full 2026 ACOG exception criteria remain open.",
+      "importedDataFigures": "Gray 1170 raster visually inspected and caption corrected from broad-ligament depiction to arterial diagram; no imported clinical data/video.",
+      "references": "All 26 inherited bibliography entries read but not all source-mapped; ten focused references added.",
+      "currency": "2026 ACOG PMB update and current HTG240 identified; inaccessible full guidance explicitly unresolved."
+    },
+    "claimChecks": [
+      {"claim":"Anteversion and anteflexion angles were reversed","sourceIds":["ncbi-anatomy"],"locator":"NCBI Bookshelf uterine position","verdict":"corrected","note":"Restored cervix-vagina versus body-cervix definitions."},
+      {"claim":"MRI junctional zone >12 mm diagnoses adenomyosis","sourceIds":["tellum-2019"],"locator":"Prospective-study abstract","verdict":"corrected","note":"No stand-alone cutoff; full imaging study not read."},
+      {"claim":"An initial symptomatic postmenopausal endometrium <=4 mm routinely needs no sampling","sourceIds":["acog-pmb-2026","acog-pmb-2018"],"locator":"ACOG official 2026 announcement and indexed 2018 opinion","verdict":"corrected","note":"2026 focused update recommends TVUS plus sampling for most patients; asymptomatic incidental thickness distinguished; detailed exceptions remain open."},
+      {"claim":"Postpartum hemorrhage treatment is a fixed sequential ladder","sourceIds":["who-pph","who-pph-summary"],"locator":"WHO 2025 guideline landing and official MOTIVE summary","verdict":"corrected","note":"Concurrent first-response bundle and cause-directed escalation substituted; full guideline not read."},
+      {"claim":"Subtotal hysterectomy improves urinary and sexual outcomes","sourceIds":["cochrane-hysterectomy"],"locator":"Cochrane evidence summary","verdict":"corrected","note":"Randomized evidence does not demonstrate this benefit; cyclic bleeding counseling retained."},
+      {"claim":"UAE usually fails because of ovarian collaterals and is contraindicated for any fertility plans","sourceIds":["nice-uae"],"locator":"HTG240 recommendation 1.2 official indexed PDF excerpt","verdict":"corrected","note":"Collateral supply remains a consideration; fertility/pregnancy effects described as uncertain."},
+      {"claim":"Cesarean surgery is the leading worldwide VVF cause","sourceIds":["who-fistula"],"locator":"WHO obstetric-fistula facts","verdict":"corrected","note":"Removed unsupported global ranking; retained prolonged obstructed labor as major pathway where access is limited."},
+      {"claim":"All inherited uterine surgical/physiology statements are clinically cleared","sourceIds":["prior-recovery"],"locator":"Entire inherited page and recovery gap record","verdict":"unresolved","note":"Substantive content preserved but full source-to-claim reconciliation incomplete."}
+    ],
+    "unresolvedClaims": ["Obtain/read full 2026 ACOG PMB Clinical Practice Update before defining ultrasound-only exceptions; 2018 initial symptomatic triage is superseded.", "Read full Tellum article, NICE HTG240 PDF and WHO 2025 postpartum-hemorrhage guideline; reconcile inherited dimensions, vascular/countercurrent and labor-physiology claims, FIGO treatment details, surgical outcomes and remaining bibliographic metadata.", "Confirm Gray 1170 provenance beyond the inspected local raster; gender-affirming, accreta, endometrial-cancer and transplantation details need individual source mapping."],
+    "preservationReview": "Retained substantive anatomy, vascular and reconstructive teaching; corrected discrete false absolutes and outdated workup language without an audit/removal notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/uterus-targeted-review.md"
+  }]
+}

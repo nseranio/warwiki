@@ -1,0 +1,16 @@
+# Nasal, Pederson, Sims and Auvard instruments — 2026-09-21
+
+All four complete current MDX pages, tables and references were read. Each remains a **partial claim review, not a clinical clearance**. Practical exposure, examination and safety teaching was preserved; no OpenEvidence query or publication occurred.
+
+## Focused source/diff findings
+
+- **Nasal speculum:** Plowright is a two-case report and Solomon/Jelovsek is one case; both support a narrow transurethral exposure adjunct, not comparative superiority. Karim's open systematic review contains only retrospective series, no open comparator and a 20–25% repeat-endoscopy signal. The inherited 0.3–3% “urethral erosion” range mixed non-equivalent mesh outcomes and was removed. Posterior-urethroplasty use remains labeled specialist teaching because no primary technique source was verified.
+- **Pederson:** the open pelvic-examination review recommends the smallest adequate speculum and describes extra-narrow Pederson use for a narrow introitus, but says there are no industry size standards or evidence-based size rules. Current ACOG initial-adolescent-visit guidance emphasizes autonomy and trauma-informed care; it does not mandate an internal exam or prescribe a Pederson/Huffman. Hill's RCT measured mean visualization (95.1% vs 78.2%) and complete-cervix visualization (61.8% vs 16.4%); these were separated. Thomas's comfort and preference endpoints were also separated. Vaginal estrogen is not presented as a trial-proven pre-exam analgesic.
+- **Sims:** “Sims speculum” and “Sims retractor” are inconsistently applied to a handheld, double-ended single-blade family; the page no longer invents a separate modern bivalve device. Historical claims now distinguish the coercion of enslavement from disputed anesthesia chronology and do not claim every modern catalog form was designed by Sims. The practical procedure list remains, but manufacturer dimensions and comparative ergonomics are unresolved.
+- **Auvard weighted speculum:** Vilos's abstract directly supports one burn case, a tested ball remaining above 45 °C for at least 30 minutes, and cooling below 40 °C within one minute with at least 1 L saline. The page no longer turns that experiment into a universal 30–45-minute rule or substitutes touch/padding for temperature control. Model dimensions, mass and weight attachment are explicitly manufacturer-specific; the Smithsonian artifact record supports the Auvard association, not “first invention” or universal tray use.
+
+## Exact unresolved source action
+
+Obtain the complete Plowright, Solomon/Jelovsek, Sobota, Allagany, Thomas, Hill, Vilos and remaining operative/history papers, plus current manufacturer catalogs/IFUs for every named pattern. Verify posterior-urethroplasty nasal-speculum use, all instrument dimensions/materials, procedure lists, pressure-injury precautions, cleaning/sterilization instructions and historical assertions before clearance.
+
+**Local validation:** the claim-batch schema/hash check, regenerated ledger, focused source/diff review, lint, typecheck, 32 unit tests, 58 maintenance tests, production build, 97,516 rendered-link/asset checks, 131.72 MB size check and whitespace check passed. These checks do not close source gaps or create clinical clearance. Commit, push and deployment remain deferred.

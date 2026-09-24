@@ -1,0 +1,45 @@
+{
+  "batchId": "2026-09-20-prostate-seminal-vesicle",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/prostate-seminal-vesicle-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Prior anatomy-source review scope and explicit unresolved gaps reused; not a fresh verification of all inherited claims.","reusedFrom":"reports/2026-09-20/prostate-seminal-vesicle-recovery-review.md"},
+    {"id":"garcia-monaco-2014","url":"https://www.hospitalitaliano.org.ar/multimedia/archivos/noticias_attachs/8/documentos/17724_jvir-2014-vol-25-RGM.pdf","version":"García-Mónaco et al., JVIR 2014, DOI 10.1016/j.jvir.2013.10.026","access":"full-text","readScope":"Eight-page original PDF text, methods/results, tables and figure captions read; figure images not independently assessed."},
+    {"id":"eau-male-luts","url":"https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management","version":"Current EAU male LUTS online disease-management chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"5ARI/PSA, PAE, TURP and selected ejaculation-related minimally invasive therapy sections; entire guideline and referenced primary studies not read."},
+    {"id":"eau-prostate-cancer","url":"https://uroweb.org/guidelines/prostate-cancer/chapter/treatment","version":"Current EAU prostate-cancer online treatment chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Nerve-sparing selection and seminal-vesicle-removal sections including its RCT summary; underlying RCT full text not read."},
+    {"id":"bookshelf-prostate","url":"https://www.ncbi.nlm.nih.gov/books/NBK540987/?report=reader","version":"NCBI Bookshelf prostate anatomy online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Gross anatomy and arterial-supply passages; other clinical sections not independently reconciled."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/prostate-seminal-vesicle.mdx",
+    "sourceSha256": "232aa7bdd19e1fe33918a209215cd186c9e8552daace75d1122622b75c461755",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 206 inherited MDX lines and 15 references, full revised text, and the local Gray 1160 figure; embedded lecture retained but not watched. No imported clinical data identified.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "PSA 5ARI timing corrected; inherited cancer distribution, biopsy/MRI and infertility-evaluation details remain open.",
+      "treatment": "PAE map, nerve-sparing and seminal-vesicle-tip statements narrowed against current EAU sections; other operative interventions remain open.",
+      "numbers": "5ARI/PSA 6–12-month qualifier checked; zone/cancer and ejaculate percentages not fully reconciled.",
+      "doseDeviceSafety": "No drug dose/device specification on page; 5ARI/PSA interpretation corrected; treatment-specific safety claims not fully reviewed.",
+      "anatomyTechnique": "Full prose and figure read; vascular anatomy checked against original cadaver study; inherited neural, zonal and operative claims still need source mapping.",
+      "followUp": "No systematic follow-up schedule in this anatomy page; clinical counseling/outcome sections remain partial.",
+      "importedDataFigures": "Gray 1160 local image visually inspected and caption matched; no imported clinical data. Embedded lecture not watched or used as verification.",
+      "references": "Fifteen inherited references retained without complete reconciliation; three focused references added at corrections.",
+      "currency": "Current EAU LUTS/prostate-cancer treatment sections checked; remaining inherited guidelines/studies and source details not exhaustively refreshed."
+    },
+    "claimChecks": [
+      {"claim":"Prostate and paired seminal vesicles share a single arterial pedicle and fixed prostatic bifurcation","sourceIds":["garcia-monaco-2014","bookshelf-prostate"],"locator":"JVIR 2014 methods/results and Tables 2–3; Bookshelf vascular-supply passage","verdict":"corrected","note":"Single-pedicle model removed; bilateral superior/inferior pedicles and variable origin/territory described without claiming one universal PAE map."},
+      {"claim":"PAE targets a single urethral branch of the inferior vesical artery","sourceIds":["garcia-monaco-2014","eau-male-luts"],"locator":"JVIR 2014 anatomy and EAU LUTS PAE §5.3.4","verdict":"corrected","note":"Described selective angiographic mapping of variable feeding arteries and non-target collateral hazards."},
+      {"claim":"5ARI treatment always requires immediate doubling of PSA","sourceIds":["eau-male-luts"],"locator":"EAU LUTS 5ARI §5.2.2","verdict":"corrected","note":"Added approximately 50% PSA reduction after 6–12 months and serial/time-aware interpretation."},
+      {"claim":"Seminal-vesicle-tip sparing during radical prostatectomy preserves fertility or demonstrably improves potency","sourceIds":["eau-prostate-cancer"],"locator":"EAU prostate cancer treatment §6.2.2.c.1 and seminal-vesicle-removal paragraph","verdict":"corrected","note":"Removed fertility-preserving claim; guideline reports RCT without erectile/continence advantage. Primary RCT not read, so underlying effect details remain scoped to EAU summary."},
+      {"claim":"Castration-resistant prostate cancer is not androgen-dependent","sourceIds":["eau-prostate-cancer"],"locator":"EAU prostate cancer treatment sections on castration-resistant disease and androgen-receptor pathway inhibitors","verdict":"corrected","note":"Distinguished progression despite castrate serum testosterone from frequent persistent AR signaling."},
+      {"claim":"All inherited zone percentages, PSA modifiers, infertility intervention details and operative outcomes are fully established","sourceIds":["prior-recovery"],"locator":"Entire inherited page and recovery-review gap list","verdict":"unresolved","note":"Useful details preserved pending exact source-to-claim reconciliation; this batch cannot confer clinical clearance."}
+    ],
+    "unresolvedClaims": ["Reconcile inherited zonal distribution/cancer percentages, prostate/SV embryology, cavernous-nerve detail, PSA modifiers, seminal-volume claims, TURED/infertility/fistula/PFUI technical statements and outcome assertions to complete primary sources and current guidance.", "Review underlying seminal-vesicle-tip RCT and embedded lecture if their results/content will be used beyond the limited guideline summary or as verification."],
+    "preservationReview": "Substantive zonal, physiologic and operative anatomy retained; only specific false absolutes and unsupported outcome/fertility claims narrowed. No public audit/removal notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/prostate-seminal-vesicle-targeted-review.md"
+  }]
+}

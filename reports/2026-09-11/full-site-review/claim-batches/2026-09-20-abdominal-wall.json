@@ -1,0 +1,59 @@
+{
+  "batchId": "2026-09-20-abdominal-wall",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/abdominal-wall-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Attributed prior full accessible NCBI Bookshelf Rectus Sheath and Abdominal Wall main-text reads; Rizk abstract only. Current task read this report, not those full chapters again.","reusedFrom":"reports/2026-09-20/abdominal-wall-recovery-review.md"},
+    {"id":"rizk","url":"https://pubmed.ncbi.nlm.nih.gov/1828798/","version":"Rizk 1991 anatomical study","access":"abstract-only","readScope":"Indexed original abstract describing variable, gradual/doubled or absent arcuate line in 40 specimens; full paper not read.","reusedFrom":""},
+    {"id":"loukas","url":"https://pubmed.ncbi.nlm.nih.gov/18956785/","version":"Loukas et al. 2008 anatomical study","access":"abstract-only","readScope":"Indexed abstract on arcuate-line morphology and variable position; full paper not read.","reusedFrom":""},
+    {"id":"ehs-closure","url":"https://www.britishherniasociety.org/wp-content/uploads/2022/12/ABDOMINAL-WALL.pdf","version":"EHS/AHS 2022 incision closure guideline","access":"relevant-sections","readScope":"KQ1b and KQ2 statements/recommendations, PDF pp. 2-3; full guideline and underlying trials not read.","reusedFrom":""},
+    {"id":"herniasurge-2023","url":"https://academic.oup.com/bjsopen/article/7/5/zrad080/7325871","version":"HerniaSurge 2023 update","access":"indexed-excerpts","readScope":"Search-indexed chronic postoperative inguinal-pain recommendations only; full publisher page open failed.","reusedFrom":""},
+    {"id":"herniasurge-2018","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5809582/","version":"HerniaSurge 2018 guideline","access":"indexed-excerpts","readScope":"Search-indexed multidisciplinary/selected neurectomy pain guidance only; direct PMC open showed CAPTCHA.","reusedFrom":""},
+    {"id":"wsacs","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3680657/","version":"WSACS 2013 consensus","access":"relevant-sections","readScope":"Definition table 1 and management table 5, including pressure definition and decompressive laparotomy recommendation; full guideline not read.","reusedFrom":""},
+    {"id":"eau-trauma","url":"https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines","version":"Current online EAU urological trauma chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Distal ureteral injury/psoas-hitch section §4.2.4.b.2.b; entire guideline not read.","reusedFrom":""},
+    {"id":"wocn-marking","url":"https://cdn.ymaws.com/member.wocn.org/resource/resmgr/document_library/WOCN_Stoma_Marking_Procedure.pdf","version":"WOCN/AUA/ASCRS stoma marking procedure, hosted resource current at access","access":"relevant-sections","readScope":"Landmark, position and rectus-site marking steps; full associated position-statement source package not read.","reusedFrom":""},
+    {"id":"eau-testis","url":"https://uroweb.org/guidelines/testicular-cancer/chapter/diagnostic-evaluation","version":"Current online EAU testicular cancer chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Section 5.4 inguinal exploration/orchidectomy and exceptions; whole guideline not read.","reusedFrom":""},
+    {"id":"de-troyer","url":"https://pubmed.ncbi.nlm.nih.gov/2140344/","version":"De Troyer et al. 1990 original respiratory physiology study","access":"abstract-only","readScope":"Indexed methods/results for six subjects and respiratory recruitment; full paper not read.","reusedFrom":""},
+    {"id":"arnbjornsson","url":"https://pubmed.ncbi.nlm.nih.gov/6461270/","version":"Arnbjörnsson 1982 hypothesis study","access":"indexed-excerpts","readScope":"Indexed abstract hypothesis on transversus denervation after appendectomy; direct PubMed open showed CAPTCHA and full paper not read.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/donor-sites/abdominal-wall.mdx",
+    "sourceSha256": "1f881ab7cea971d8429aecadad4d0c7f7fa9d43eef72d0d948ad0240066ae462",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete current/revised 304-line MDX including all tables and 14 inherited references; no imported clinical data, figures or video found.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Stoma placement and chronic groin-pain evaluation narrowly corrected; hernia/hematoma diagnostic packages open.",
+      "treatment": "Port-closure, psoas-hitch, neurectomy and ACS absolutes corrected; broader operative choices and outcomes open.",
+      "numbers": "Arcuate position, ASIS nerve and port-spacing absolutes removed; inherited flap vascular numbers and other measurements remain unverified.",
+      "doseDeviceSafety": "No drug dosing/device settings; surgical hazards at stoma, psoas, trocar and ACS thresholds corrected. Other operative safety details remain open.",
+      "anatomyTechnique": "Layered anatomy read; prior Bookshelf main-text reviews reused by attribution, with current arcuate and technique spot checks. ICAP/TAR, flap and incision packages open.",
+      "followUp": "Not a longitudinal-disease article; chronic pain and stoma-care implications partly checked, full clinical pathways open.",
+      "importedDataFigures": "No imported clinical data, figures or video identified.",
+      "references": "All 14 inherited references retained; 11 traceable references appended; not all 25 entries claim-mapped or read full-text.",
+      "currency": "Current EAU chapters, WOCN resource and society guideline sections checked; full HerniaSurge access and broad source currency open."
+    },
+    "claimChecks": [
+      {"claim":"A fixed arcuate line and absent posterior sheath below it are universal anatomy","sourceIds":["prior-recovery","rizk","loukas"],"locator":"Prior rectus-sheath chapter review; Rizk and Loukas original indexed abstracts","verdict":"corrected","note":"Described variable line/transition and avoided a fixed surface rule; full studies not read."},
+      {"claim":"Every ≥10-mm port must be closed and closure evidence is settled","sourceIds":["ehs-closure"],"locator":"EHS/AHS 2022 KQ2, PDF p. 2-3","verdict":"corrected","note":"Societies suggest closure especially umbilical/SILS, weak recommendation with very-low-certainty direct evidence."},
+      {"claim":"Triple neurectomy is automatic definitive treatment for post-hernia pain","sourceIds":["herniasurge-2023","herniasurge-2018"],"locator":"Indexed chronic postoperative inguinal-pain recommendations; full pages blocked","verdict":"corrected","note":"Retained neurectomy as selected refractory option after multidisciplinary assessment; full pain sections remain unresolved."},
+      {"claim":"ACS decompression requires a ≥25-mmHg trigger","sourceIds":["wsacs"],"locator":"WSACS table 1 definition and table 5 recommendation 5","verdict":"corrected","note":"Overt ACS is sustained >20 mmHg plus new organ dysfunction; guideline recommends decompression for overt syndrome, not a wait for 25."},
+      {"claim":"An ileal conduit is placed at the anterior axillary line through rectus","sourceIds":["wocn-marking"],"locator":"WOCN marking procedure steps 2-4","verdict":"corrected","note":"Removed anatomically incompatible default; marked individualized flat/visible location within rectus when feasible."},
+      {"claim":"Psoas hitch and suspected testicular-cancer orchiectomy require fixed incision/suture details","sourceIds":["eau-trauma","eau-testis"],"locator":"EAU trauma distal injury §4.2.4; EAU testis diagnostic §5.4","verdict":"corrected","note":"Kept tension-free/high-cord principles; added genitofemoral hazard and removed arbitrary 1-cm incision wording."},
+      {"claim":"Transversus is obligatory for all expiration and post-appendectomy bulge has one processus-vaginalis mechanism","sourceIds":["de-troyer","arnbjornsson"],"locator":"Original indexed abstract and historical indexed mechanistic hypothesis","verdict":"corrected","note":"Narrowed both to variable recruitment and non-exclusive post-appendectomy mechanisms; full papers open."},
+      {"claim":"Inherited ICAP planes, component-separation preference, flap specifications, vascular estimates and remaining operative/complication claims","sourceIds":["prior-recovery"],"locator":"Complete restored page and prior recovery gap report","verdict":"unresolved","note":"Useful content retained; exact full-text source packages and claim mapping remain outstanding."}
+    ],
+    "unresolvedClaims": [
+      "Read full HerniaSurge 2023/2018 chronic postoperative inguinal-pain sections through legitimate accessible copies; map indications, risks and treatment sequencing.",
+      "Read Parker ICAP full text/figures and technical TAR/component-separation sources; reconcile all eight inherited mesh-plane labels and claimed preference.",
+      "Read inherited flap, vascular, incision/entry, hernia and rectus-hematoma source packages for their numerical and management claims; update exact locators.",
+      "Obtain full De Troyer/Arnbjörnsson papers if retaining granular recruitment/denervation teaching beyond their indexed abstracts."
+    ],
+    "preservationReview": "Every section, table, 14 inherited references and media status retained. Only specific false absolutes/unsupported superlatives narrowed and 11 source entries added; no blanket removal or public audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/abdominal-wall-targeted-review.md"
+  }]
+}

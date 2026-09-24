@@ -1,0 +1,51 @@
+{
+  "batchId": "2026-09-20-bowel-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/bowel-anatomy-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Attributed complete accessible NCBI Bookshelf Physiology, Small Bowel main-text reading and relevant Intestinal Stoma anatomy/physiology text; Vasdev 2013 indexed record only. Current task read the report, not those source texts again.","reusedFrom":"reports/2026-09-20/bowel-anatomy-recovery-review.md"},
+    {"id":"eau-mibc","url":"https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer/chapter/followup","version":"Current EAU MIBC online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Follow-up §7.4 functional diversion complications and annual B12 recommendation; full guideline/table image/underlying cohorts not read.","reusedFrom":""},
+    {"id":"ganesan","url":"https://pubmed.ncbi.nlm.nih.gov/12123505/","version":"Ganesan et al. 2002 original 70-patient study","access":"abstract-only","readScope":"Indexed methods/results including segment groups and conclusion that length alone did not determine B12 malabsorption; full paper not read.","reusedFrom":""},
+    {"id":"eau-infections","url":"https://uroweb.org/guidelines/urological-infections/chapter/the-guideline","version":"Current EAU urological infections online guideline, accessed 2026-09-20","access":"relevant-sections","readScope":"ASB §3.3.5 reconstructed-tract and pre-mucosal-procedure subsections plus §3.3.7 recommendation table; full guideline not read.","reusedFrom":""},
+    {"id":"idsa-asb","url":"https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria/","version":"IDSA 2019 asymptomatic-bacteriuria guideline","access":"relevant-sections","readScope":"Definition, executive recommendations and endourologic procedures with mucosal trauma section; entire guideline not read.","reusedFrom":""},
+    {"id":"bsg-uretero-colon","url":"https://pubmed.ncbi.nlm.nih.gov/12221034/","version":"BSG/ACPGBI 2002 ureterosigmoidostomy monitoring guideline","access":"indexed-excerpts","readScope":"Indexed bibliographic identity and search excerpts of specific surveillance recommendations; full guideline not read.","reusedFrom":""},
+    {"id":"spina-guideline","url":"https://journals.sagepub.com/doi/10.3233/PRM-200712","version":"Joseph et al. 2020 spina-bifida urologic guideline","access":"indexed-excerpts","readScope":"Search-indexed adult augmentation cystoscopy indications and annual chemistry/B12 table; full article not read.","reusedFrom":""},
+    {"id":"wocn-stoma","url":"https://www.wocn.org/education-resources/professional-resources/stomasitemarking/","version":"WOCN/AUA/ASCRS site-marking resource at access","access":"relevant-sections","readScope":"Procedure resource's patient positioning, rectus and skin-contour site-selection steps; full position statement not read.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/donor-sites/bowel-anatomy.mdx",
+    "sourceSha256": "c1723208e5e0ca14b34b50eb474d9578250bc6487ecd6ae2c28a2a674d5d195f",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete current/revised 226-line MDX, all tables and 13 inherited bibliography entries; no imported clinical data, figure or video identified.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Bacteriuria symptom distinction and individualized stoma marking partly checked; bowel, infection and metabolic evaluation algorithms open.",
+      "treatment": "ASB/procedure exception and diversion-selection absolutes narrowed; full surgical, infection, stone and nutrition pathways open.",
+      "numbers": "Fixed B12/ileal-length and reservoir-pressure rules removed; inherited vessel, microbiome, motility and segment dimensions not fully verified.",
+      "doseDeviceSafety": "No drug dose/device settings; antibiotic indication and automatic B12 replacement wording corrected. Cholestyramine and other treatments remain to source-review.",
+      "anatomyTechnique": "All bowel organization, vascular, absorptive and operative sections read; prior Bookshelf physiology reviews reused by attribution. Detailed urinary reconstruction technique sources remain open.",
+      "followUp": "EAU annual B12 after cystectomy/bowel diversion verified; blanket annual cancer endoscopy narrowed. Other long-term schedules open.",
+      "importedDataFigures": "No imported clinical data, figure or video identified.",
+      "references": "All 13 inherited references retained; seven sources appended. Full mapping/reading of all 20 remains open.",
+      "currency": "Current online EAU MIBC/infection sections and IDSA guideline checked; broader follow-up and surgical-source currency unresolved."
+    },
+    "claimChecks": [
+      {"claim":"Preserving a fixed 15–20 cm or using a >60-cm cutoff guarantees B12 status; lifelong replacement follows segment length alone","sourceIds":["eau-mibc","ganesan"],"locator":"EAU MIBC §7.4; Ganesan 2002 original 70-patient indexed abstract","verdict":"corrected","note":"Annual measurement after cystectomy/bowel diversion retained; deterministic length/replacement claims removed. Full primary paper open."},
+      {"claim":"Persistent bacteriuria in bowel urinary reconstruction only needs treatment for sepsis, stone or stoma infection","sourceIds":["eau-infections","idsa-asb"],"locator":"EAU infections §3.3.5/§3.3.7 reconstructed tract and procedure tables; IDSA pre-mucosal-procedure recommendations","verdict":"corrected","note":"Distinguished asymptomatic bacteriuria from symptomatic infection and procedure exception; stones/stoma issues are not automatic antibiotic indications."},
+      {"claim":"Every bowel urinary reservoir requires annual endoscopic cancer surveillance","sourceIds":["bsg-uretero-colon","spina-guideline"],"locator":"Indexed BSG ureterosigmoidostomy recommendations versus spina-bifida adult augmentation table","verdict":"corrected","note":"Surveillance made reconstruction-specific; full BSG and other patient-group source packages remain open."},
+      {"claim":"All ileal conduit, colostomy and catheterizable stomas have fixed quadrant/umbilical sites","sourceIds":["wocn-stoma"],"locator":"WOCN/AUA/ASCRS site-marking procedure resource","verdict":"corrected","note":"Retained common locations as examples; final site individualized for contour, visibility, reach and appliance needs."},
+      {"claim":"Inherited segment dimensions, mesenteric vascular percentages, reservoir pressure/outcomes, metabolic prescriptions and secondary malignancy risk","sourceIds":["prior-recovery"],"locator":"Entire inherited restored page and recovery gap report","verdict":"unresolved","note":"Useful practical sections retained; requires full technique, anatomy and long-term source mapping."}
+    ],
+    "unresolvedClaims": [
+      "Reconcile all inherited diversion/augmentation/neovaginal segment sizes, operative steps and outcome claims with full primary technique/guideline packages; keep useful material pending.",
+      "Read full bowel vascular, metabolic, stone and malignancy source packages, including BSG ureterosigmoidostomy guidance and population-specific augmentation surveillance, for precise long-term recommendations.",
+      "Reconcile inherited microbiome counts, motility pressure values and malabsorption treatments with full source text before giving those claims clearance."
+    ],
+    "preservationReview": "All sections, tables, examples and 13 inherited references retained. Seven references added; only specified unsafe absolutes/fixed cutoffs narrowed. No blanket removal or public audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/bowel-anatomy-targeted-review.md"
+  }]
+}

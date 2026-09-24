@@ -1,0 +1,76 @@
+{
+  "batchId": "2026-09-20-graft-hub-buccal",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"graft-prior","url":"https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer","version":"EAU Urethral Strictures tissue-transfer chapter 2026 and September 12 graft-hub source review","access":"prior-review","readScope":"Reused complete guideline chapter 9.1-9.5 text/tables/recommendations, FDA ORISE recall fields, Granieri full article/table/six figures and exact abstract-only limits for rectal/physiology papers; no new full source read.","reusedFrom":"reports/2026-09-12/graft-overview-review.md"},
+    {"id":"buccal-prior","url":"https://uroweb.org/guidelines/urethral-strictures/chapter/tissue-transfer","version":"September 12 buccal review with EAU 2026/AUA 2023 selected guidance","access":"prior-review","readScope":"Reused full Hwang/Güler/Sterling 2024/Yoshikawa main texts and tables, PeeBuSt/Alrefaey papers and selected guidance, with unread figure/supplement boundaries exactly as logged; no source access upgraded.","reusedFrom":"reports/2026-09-12/buccal-reference-access.json"},
+    {"id":"soave","url":"https://pubmed.ncbi.nlm.nih.gov/29198583/","version":"Soave et al., Eur Urol 2018;73:910-922","access":"abstract-only","readScope":"Targeted repeat of original indexed abstract: 135 randomized, 63 closed/72 open, oral-pain noninferiority and oral-morbidity endpoints; no full paper/tables accessed."},
+    {"id":"quilting-prior","url":"https://asopahospital.in/wp-content/uploads/2025/11/2.-Aldaqadossi_et_al-2014-International_Journal_of_Urology.pdf","version":"September 20 quilting-stitch claim review","access":"prior-review","readScope":"Reused documented graft-bed apposition and selected fixation study scope; no graft-donor outcome inferred or source reopened.","reusedFrom":"reports/2026-09-20/quilting-stitch-targeted-review.md"}
+  ],
+  "pages": [
+    {
+      "file":"docs/01-foundations/surgical-principles/grafts-gu-reconstruction.mdx",
+      "sourceSha256":"97d196203853be44065eb55392c0a6d14b9824fbba5309c3c041d9bd906ca8f5",
+      "status":"checked",
+      "fullTextRead":true,
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "readScope":"Complete current 162-line MDX, every donor table row/section and all 15 references. No imported clinical dataset, embedded figure or video; linked donor pages were not silently counted as reviewed here.",
+      "coverage":{
+        "evaluation":"Graft-versus-flap and recipient-bed selection distinctions reviewed; patient-specific indications remain on linked operation pages.",
+        "treatment":"Graft take, fixation, oral/skin/rectal donors, bowel segments and ORISE warning scoped to prior primary source access; not complete procedure guidance.",
+        "numbers":"Rectal series denominators/outcomes reused from prior access, including Granieri full text; other cohorts abstract-only.",
+        "doseDeviceSafety":"ORISE withdrawal reused from FDA record; no drug dose or current substitute-agent IFU certified.",
+        "anatomyTechnique":"Free versus vascularized transfer, oral-lip naming, Duckett/TIP and STSG/FTSG distinctions retained; individual donor harvest figures/videos remain on linked pages.",
+        "followUp":"Rectal recurrence timing and early graft-take versus durable success properly separated; broader follow-up incomplete.",
+        "importedDataFigures":"No imported data, page figure or video; linked illustration/media not counted as this page's assets.",
+        "references":"All 15 entries read; prior source review exact access preserved, not upgraded to all full-text.",
+        "currency":"EAU 2026 chapter and ORISE recall reused; full newer rectal/graft comparison search incomplete; no OpenEvidence pull."
+      },
+      "claimChecks":[
+        {"claim":"A free graft and vascularized flap/bowel segment are different reconstructive categories","sourceIds":["graft-prior"],"locator":"Prior full EAU 2026 tissue-transfer chapter 9.1-9.5; September 12 graft overview correction","verdict":"supported","note":"Current donor table and selection summary preserve the distinction without ranking all materials."},
+        {"claim":"48-hour inosculation is a fixed viability clock for human GU grafts","sourceIds":["graft-prior","quilting-prior"],"locator":"Prior Converse 1975 original abstract in rat skin grafts; quilt review source-scope discussion","verdict":"supported","note":"Current page treats the interval as approximate and species-limited; 1969 historical full paper not read."},
+        {"claim":"ORISE gel remains an appropriate current rectal-graft lifting agent","sourceIds":["graft-prior"],"locator":"September 12 review of FDA recall/product-removal record","verdict":"supported","note":"Current page explicitly warns it was removed from market in December 2022; no substitute agent prescribed."},
+        {"claim":"Rectal-graft cohorts prove a universal preferred harvest or zero bowel morbidity","sourceIds":["graft-prior"],"locator":"Granieri 2019 full original seven-page paper/table/six figures; other series abstracts in September 12 review","verdict":"supported","note":"Current page separates populations, timing and nonpooling; other full manuscripts/possible overlap remain open."},
+        {"claim":"Every graft-donor, physiology and operative source package is fully adjudicated","sourceIds":[],"locator":"Hub refs 1-15 and linked donor/procedure pages; details in September 12 graft overview remaining limits","verdict":"unresolved","note":"Most rectal/physiology originals and linked donor-specific operative media remain unreviewed at full depth."}
+      ],
+      "unresolvedClaims":["Obtain available full rectal-graft source methods/tables/figures (Palmer, Howard, Accioly/Ozgur) and determine cohort overlap before any combined estimate.","Obtain original Converse 1969 physiology paper if precise time-phase teaching is expanded; present approximate teaching only.","Review current product labeling for contemporary rectal lifting agents before any procedural recommendation; retain FDA ORISE warning.","Finish linked donor/operation source packages rather than treating hub coverage as clearance of each linked page."],
+      "preservationReview":"No site content removed or edited; kept all donor/biology tables, technical distinctions, 15 references and links. No embedded media existed.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/graft-hub-buccal-claim-check.md"
+    },
+    {
+      "file":"docs/01-foundations/surgical-principles/grafts/buccal-mucosa.mdx",
+      "sourceSha256":"b02391f002c1f74d0b088ae85a6efd86be064daf40bbf6fedb9430eb241107b1",
+      "status":"checked",
+      "fullTextRead":true,
+      "clinicalVerificationComplete":false,
+      "auditDisposition":"partial",
+      "readScope":"Complete current 164-line MDX, all tables, 22 references, BMG SVG (SHA-256 285c8a3e128fe4caf7caa31f5f83ff1d37f896d2bdbbd021318f56b9a4ceb6c9) and figure registry metadata. SVG rendered and visually inspected, not clinically signed off. Operative video listing retained but video not watched.",
+      "coverage":{
+        "evaluation":"Stricture site, LS, radiation/continence and donor selection qualifications retained from detailed prior review; not an individual patient algorithm.",
+        "treatment":"Harvest, fixation, donor closure and graft placement described with individualization; full Soave trial and operative video not obtained.",
+        "numbers":"Prior exact source ledger supports selected posterior, RCT, donor morbidity and recurrence numbers; abstract-only and unread-table limits remain explicit.",
+        "doseDeviceSafety":"No drug dose; local anesthetic concentration remains to operative plan. Duct injury/anatomic safety is not certified by conceptual SVG.",
+        "anatomyTechnique":"Full harvest text, visual schematic and linked donor anatomy reviewed; video not watched and diagram clinical review pending.",
+        "followUp":"3-year freedom-from-recurrence versus auxiliary DVIU and 36-month mean follow-up distinguished; other long-term source details open.",
+        "importedDataFigures":"One unchanged SVG rendered/visually inspected, figure registry clinical review pending. One operative video listing retained, not viewed; no imported data.",
+        "references":"All 22 entries read; exact full/abstract source scopes inherited from September 12 buccal access record.",
+        "currency":"EAU 2026 selected sections and 2025 recurrence review reused; Abbas 2026 comparative synthesis remains subscription-limited. No OpenEvidence pull."
+      },
+      "claimChecks":[
+        {"claim":"Buccal/lingual mucosa are guideline-supported oral graft options and genital skin is avoided in LS-related urethral repair","sourceIds":["buccal-prior"],"locator":"Prior EAU 2026 tissue-transfer/LS sections and selected AUA 2023 donor statements","verdict":"supported","note":"Current wording is qualified by donor and recipient condition; full AUA PDF remains inaccessible."},
+        {"claim":"Soave's 135-person RCT proves nonclosure universally superior for every oral outcome","sourceIds":["soave","buccal-prior"],"locator":"Original abstract Methods/Results: 63 closed, 72 nonclosed; pain noninferiority; prior Hwang/Güler main tables","verdict":"supported","note":"Current text confines result to oral pain intensity/affective quality and presents both options; full Soave tables not read."},
+        {"claim":"PeeBuSt and Alrefaey nonsignificance establishes equivalence of penile skin and buccal graft","sourceIds":["buccal-prior"],"locator":"September 12 access ledger: both complete main articles, tables/figures and PeeBuSt operative/statistical supplement","verdict":"supported","note":"Current page states neither was an equivalence trial and keeps short follow-up/selection limits."},
+        {"claim":"The BMG figure defines a universal safe duct margin or has clinical sign-off","sourceIds":["buccal-prior"],"locator":"Current conceptual SVG/registry; September 11 diagrams-quality source scope","verdict":"supported","note":"Figure has no numeric safety margin and registry clinicalReview is pending; visual check is not anatomical sign-off."},
+        {"claim":"All donor morbidity, posterior outcomes, 2026 comparative synthesis and media are fully verified","sourceIds":[],"locator":"Buccal refs 1-22, Abbas 2026 access gap, BMG video and unread source graphics/supplements","verdict":"unresolved","note":"Soave and multiple original studies abstract-only; Abbas full manuscript/arm coding, operative video and clinical diagram review pending."}
+      ],
+      "unresolvedClaims":["Get Soave 2018 full RCT methods/tables and remaining donor-morbidity original papers before stronger closure recommendations.","Get Abbas 2026 full comparative synthesis and verify arm/event coding, included cohorts and follow-up before revising oral-versus-penile-skin preference.","Inspect remaining main figure images/supplements for prior full-text studies and BMG operative video if used to validate harvest steps; obtain actual clinical/anatomical review of SVG.","Resolve abstract-only posterior outcome and longer-term recurrence source packages before clinical clearance."],
+      "preservationReview":"No page edit; retained all harvest/biology/outcome sections, tables, 22 references, conceptual SVG, internal links and operative video.",
+      "reviewCheck":"passed",
+      "reviewRecord":"reports/2026-09-20/graft-hub-buccal-claim-check.md"
+    }
+  ]
+}

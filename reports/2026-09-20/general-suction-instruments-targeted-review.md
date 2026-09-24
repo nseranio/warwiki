@@ -1,0 +1,15 @@
+# Frazier, Poole and Yankauer cluster — 2026-09-21
+
+Complete current MDX and references for all three suction pages were read. They remain **partial claim reviews, not clinical clearances**. The instrument-specific design and practical teaching were preserved; unsupported universal device geometry, tissue-safety, procedure-size and urologic-outcome claims were corrected. No OpenEvidence query, commit, push or deployment occurred.
+
+## Focused source/diff findings
+
+- **Frazier:** CONMED's current product page and complete 2024 brochure pages identify multiple vented, non-vented, Baron, standard and soft-tip models from 3–18 Fr, with an obturator in its cited single-use range. The former 3–12 Fr “universal” range and procedure-by-size table were replaced by model-specific choice principles. Thumb-vent control is not unique to Frazier and does not replace appropriate source regulation. The septoplasty paper is retained only as an adjacent-specialty example, not proof of shorter urologic operative time. Detailed original-inventor geometry and clinical superiority remain unverified.
+- **Poole:** CONMED documents a single-use, removable perforated sheath with 132 eyes for its model, and ICRC/IFRC documents a reusable double-tube metal example. Perforations reduce but do not prevent tissue capture; processing is model-specific. The abdominal-fluid role and comparison with Yankauer were retained.
+- **Yankauer:** current CONMED descriptions distinguish bulb/open tips, vent/no-vent/switch controls and sterile single-use models; ICRC/IFRC describes a reusable metal example. Finke's complete full-text, tables and figure confirm a bench comparison of specific 18 Ch Yankauer, 14 Ch soft catheter and 28 Ch DuCanto under airway-fluid simulation, not clinical urologic superiority. Nikolla and Kei are separate airway-simulation studies with limited article access. The prior universal 50–100% and 20–30% advantage statements, “all trays” wording, presumed identical tips and the already-disproved Ellik 80–100 mmHg ceiling were removed. Bladder catheter and endoscopic evacuation remain separate workflows.
+
+## Exact unresolved source action
+
+Obtain full current IFUs and validated reprocessing instructions for representative reusable Frazier, Poole and Yankauer models; confirm whether each specific single-use model has any distinct suction-source or tubing limits. Read complete primary history and Frazier modification papers before attributing an exact original design or inventor. Obtain the full Nikolla and Kei laboratory articles and any relevant operative-field rather than airway simulation data before making quantitative urologic performance claims. No comparative patient outcome study supports one suction pattern as universally superior for reconstructive procedures.
+
+**Local validation:** final-hash batch check, ledger regeneration, focused diff, lint, typecheck, 32 unit tests, 58 maintenance tests, build, 97,462 rendered-link/asset checks, 131.49 MB size audit and whitespace check passed. This validates local content mechanics, not clinical clearance. Publication remains deferred.

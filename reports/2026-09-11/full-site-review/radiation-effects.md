@@ -4,7 +4,7 @@ Date: 2026-09-12. Original and complete revised page read; no clinician sign-off
 
 File: `docs/01-foundations/surgical-principles/radiation-tissue-effects.mdx`
 
-SHA-256: `07086e3f46cc220489442594fd197899646f9d38a4548a6f920ff6bbd3309468`
+Current-page SHA-256 after the final September 12 correction: `ddee436a0b2e2675d0ba3b60c5df3165fbe41c639af507854b395b3140780b4e` (matches the source record and the September 20 reread). The earlier report draft hash was `07086e3f46cc220489442594fd197899646f9d38a4548a6f920ff6bbd3309468`.
 
 ## Changes
 

@@ -1,0 +1,54 @@
+{
+  "batchId": "2026-09-20-leg-thigh",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/leg-thigh-recovery-review.md","version":"September 20 recovery report","access":"prior-review","readScope":"Attributed accessible NCBI Bookshelf tibial anatomy text and Kumar PubMed record, not inherited flap/neuromodulation source package. Current task read report, not source again.","reusedFrom":"reports/2026-09-20/leg-thigh-recovery-review.md"},
+    {"id":"deutinger","url":"https://pubmed.ncbi.nlm.nih.gov/7761511/","version":"1995 original 42-patient donor study","access":"abstract-only","readScope":"Indexed abstract strength, sensation and contour results; full paper not read.","reusedFrom":""},
+    {"id":"guo","url":"https://pubmed.ncbi.nlm.nih.gov/28161353/","version":"2017 original 32-patient pelvic-fracture series","access":"abstract-only","readScope":"Indexed methods/results/subgroup details; full paper not read.","reusedFrom":""},
+    {"id":"aua-oab","url":"https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/OAB%202024%20Unabridgedv2.pdf","version":"AUA/SUFU 2024 idiopathic OAB guideline","access":"indexed-excerpts","readScope":"Official search-indexed Statement 25 and treatment-framework excerpts; direct PDF open returned 403; full guideline not read.","reusedFrom":""},
+    {"id":"fda-nuro","url":"https://www.accessdata.fda.gov/cdrh_docs/pdf13/K132561.pdf","version":"FDA 2013 NURO 510(k) with Urgent PC predicate","access":"full-text","readScope":"Entire seven-page PDF including comparative device specifications pp. 2–3 and FDA determination; not a current manufacturer IFU.","reusedFrom":""},
+    {"id":"warehime","url":"https://pubmed.ncbi.nlm.nih.gov/37419167/","version":"2023 original cadaveric ankle mapping","access":"abstract-only","readScope":"Indexed 10-donor methods, prediction intervals and left/right differences; full paper not read.","reusedFrom":""},
+    {"id":"obturator-anatomy","url":"https://www.ncbi.nlm.nih.gov/books/NBK551640/","version":"NCBI Bookshelf anatomy page accessed 2026-09-20","access":"relevant-sections","readScope":"Obturator canal and anterior/posterior division course excerpts; complete text not read.","reusedFrom":""},
+    {"id":"kumar","url":"https://pubmed.ncbi.nlm.nih.gov/41477445/","version":"Kumar 2024 F1000Res v2 indexed record","access":"abstract-only","readScope":"44-limb morphology and pedicle abstract; PMC full page challenged, not read.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/donor-sites/leg-thigh.mdx",
+    "sourceSha256": "e1cdb3ff1613125e4e47b4b6ec1aab7b3b3d7346dc4bc671149ca5f288a37e0a",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete restored/current 245-line MDX, all anatomy, technique, outcomes, neuromodulation/device and clinical-correlation sections and 19 inherited references; no imported clinical data, figure or video.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "OAB treatment selection sequence corrected against indexed AUA 2024 statement; detailed diagnostic and selection pathways open.",
+      "treatment": "Gracilis applications/harvest and PTNS/iTNS overviews read; unsupported absolute language narrowed; full source reconciliation open.",
+      "numbers": "29/32 pelvic-fracture series scope and 20-Hz named device corrected; other anatomy/outcome numbers open.",
+      "doseDeviceSafety": "NURO/Urgent PC specifications checked in full FDA summary; current IFUs, implant models, needle depth and contraindications open.",
+      "anatomyTechnique": "Obturator versus adductor canal corrected; entire flap and ankle technical text read; source packages for pedicle and safe harvest/implant not complete.",
+      "followUp": "PTNS maintenance made individualized; full treatment/follow-up guidance open.",
+      "importedDataFigures": "No imported clinical data, figure or video identified.",
+      "references": "All 19 inherited references retained; four focused sources appended. Complete mapping/full reading remains open.",
+      "currency": "AUA 2024 official indexed framework and FDA device filing checked; current full guideline, IFUs and newer large trials remain open."
+    },
+    "claimChecks": [
+      {"claim":"Gracilis harvest causes no clinically detectable deficit or donor-site morbidity","sourceIds":["deutinger"],"locator":"42-patient original indexed abstract, 11% dynamometric reduction and sensory findings","verdict":"corrected","note":"Low morbidity retained; absolutes removed. Full text open."},
+      {"claim":"91% fistula repair success applies across post-radiation and post-prostatectomy settings","sourceIds":["guo"],"locator":"Original series abstract, 29/32 pelvic-fracture urethral defects with urethrorectal fistula","verdict":"corrected","note":"Population scoped; not extrapolated to other fistula etiologies."},
+      {"claim":"PTNS requires failure of both behavioral and pharmacologic therapy as mandatory third line","sourceIds":["aua-oab"],"locator":"2024 official indexed treatment framework and Statement 25","verdict":"corrected","note":"Guideline full PDF direct access 403; wording restricted to visible official recommendation."},
+      {"claim":"Standard Urgent PC/NURO percutaneous protocol has fixed 10-Hz frequency","sourceIds":["fda-nuro"],"locator":"FDA K132561 pp. 2–3 product comparator: 20 Hz, 200 µs, 30 minutes","verdict":"corrected","note":"Named device comparator only; current IFU still open."},
+      {"claim":"Cadaveric ankle proximity establishes great saphenous vein as commonest clinical bleeding source","sourceIds":["warehime"],"locator":"Original study indexed methods/results; no clinical bleeding incidence measured","verdict":"corrected","note":"Preserved proximity and variability, removed unsupported incident-frequency claim."},
+      {"claim":"Obturator nerve runs within Hunter's adductor canal","sourceIds":["obturator-anatomy"],"locator":"NCBI Bookshelf obturator canal and division course","verdict":"corrected","note":"Distinguished obturator canal from femoral-vessel adductor canal."},
+      {"claim":"Remaining flap pedicle measurements, operative sequence, comparative choices, mechanistic assertions, needle depth, implant instructions and clinical outcomes","sourceIds":["prior-recovery","kumar"],"locator":"Full current restored MDX and prior recovery source-scope record","verdict":"unresolved","note":"Useful content preserved; full technical, clinical and device source packages still required."}
+    ],
+    "unresolvedClaims": [
+      "Read original gracilis anatomy/technical papers and verify pedicle variants/distances, extended dissection gain, safe tunneling and donor effects in the relevant flap type.",
+      "Reconcile fistula, long-stricture and graciloplasty outcome/selection claims with full primary cohorts and guidelines rather than transfer one population's rate.",
+      "Read full current OAB guideline and model-specific PTNS/iTNS IFUs; check implant safety, insertion depth, stimulation schedule, MRI and follow-up before clearance.",
+      "Reconcile remaining PTNS mechanism, urodynamic effect, efficacy comparison and ankle-risk claims against full original/review source packages."
+    ],
+    "preservationReview": "Every original section, table and 19 inherited references retained; four focused references added. Only absolute or misplaced claims corrected; no public audit notice or blanket deletion.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/leg-thigh-targeted-review.md"
+  }]
+}

@@ -1,0 +1,51 @@
+{
+  "batchId": "2026-09-20-pelvic-neuroanatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/pelvic-neuroanatomy-recovery-review.md","version":"September 20 recovery scope record","access":"prior-review","readScope":"Reused NCBI plexus/pudendal orientation and unresolved-scope notes only; not blanket clinical clearance.","reusedFrom":"reports/2026-09-20/pelvic-neuroanatomy-recovery-review.md"},
+    {"id":"splanchnic-anatomy","url":"https://www.ncbi.nlm.nih.gov/books/NBK560504/","version":"NCBI Bookshelf splanchnic anatomy chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Thoracic/lumbar/sacral/pelvic splanchnic pathway and variation passages read; underlying cited studies not read."},
+    {"id":"rothlisberger-2018","url":"https://pubmed.ncbi.nlm.nih.gov/29577446/","version":"Röthlisberger et al. 2018 original male IHP dissection, inherited reference","access":"abstract-only","readScope":"Original PubMed abstract describes dorsal/lateral routes and limited communications; full figures/methods not read."},
+    {"id":"shiozawa-2010","url":"https://pubmed.ncbi.nlm.nih.gov/20542624/","version":"Shiozawa et al. 2010 six-cadaver sacrocolpopexy study, inherited reference","access":"abstract-only","readScope":"Original PubMed indexed abstract and six-cadaver approach; no universal 30 by 20 mm safe zone. Full paper not read."},
+    {"id":"florian-2017","url":"https://pubmed.ncbi.nlm.nih.gov/28709584/","version":"Florian-Rodriguez et al. 2017 S1 cadaveric study","access":"abstract-only","readScope":"Original indexed abstract and study medians/ranges; full figures/methods not read."},
+    {"id":"labat-2008","url":"https://pubmed.ncbi.nlm.nih.gov/17828787/","version":"Labat et al. 2008 original Nantes consensus","access":"abstract-only","readScope":"All five essential criteria and caution that no single feature is pathognomonic; full paper not read."},
+    {"id":"aua-oab-2024","url":"https://www.auanet.org/documents/Guidelines/PDF/2024%20Guidelines/OAB%202024%20Unabridgedv2.pdf","version":"AUA/SUFU 2024 idiopathic OAB guideline","access":"indexed-excerpts","readScope":"Official indexed statement 25 on offering SNM/PTNS/Botox after inadequate or intolerable behavioral/pharmacologic therapy; direct full PDF not read. Prior scoped OAB pilot not mistaken for full PDF coverage."},
+    {"id":"aua-retention","url":"https://www.auanet.org/advocacy/best-practice-statements-and-whitepapers/chronic-urinary-retention","version":"AUA non-neurogenic chronic urinary retention white paper","access":"indexed-excerpts","readScope":"Official indexed SNM non-obstructive retention passage; full white paper not read."},
+    {"id":"ascrs-fi-2023","url":"https://www.ascrsu.com/ascrs/view/ASCRS-Evidence-Based-Guidelines-and-Expert-Consensus/3982020/all/Management%20of%20Fecal%20Incontinence%20%282023%29","version":"ASCRS 2023 fecal-incontinence online guideline","access":"relevant-sections","readScope":"Official SNM recommendation and relevant explanatory passage read; not whole guideline or underlying studies."},
+    {"id":"pudendal-figure","url":"src/data/figures.json#pudendal-nerve","version":"WARWIKI figure registry, current generated SVG 2026-09-20","access":"prior-review","readScope":"Existing Chhabra 2016 abstract-only concept attribution reused; local current SVG visually inspected and generated script/registry consistency checked. No new full Chhabra review.","reusedFrom":"src/data/figures.json"}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/pelvis-support/pelvic-neuroanatomy.mdx",
+    "sourceSha256": "9cbc0fb801dbc7dae20790412f0397457fb29c022ce19fc7e342e0bc0e5ff8c3",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 223 inherited MDX lines, nine references, linked local SVG and regenerated SVG source/metadata; no video or imported clinical data.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Original Nantes five-criterion list repaired; pelvic-pain and neurogenic-bladder evaluation not fully adjudicated.",
+      "treatment": "Removed fixed surgical safety and guaranteed preservation claims; SNM established bladder/bowel indications narrowly checked; full operative/pain-treatment evidence open.",
+      "numbers": "Cadaveric S1 medians/ranges distinguished from operative safety boundaries; inherited fixed plexus distances, percentages and timed positioning rule removed or narrowed; other quantitative claims open.",
+      "doseDeviceSafety": "No drug doses; pudendal-block needle direction removed, SVG procedural cue corrected; SNM device technique and manufacturer IFU not fully reviewed.",
+      "anatomyTechnique": "Whole page and SVG read; thoracic/lumbar route corrected, dorsal/lateral cavernous routes scoped to cadaver observation; detailed female/male branch variation and surgical planes open.",
+      "followUp": "Functional outcomes and monitoring after pelvic nerve injury remain unresolved; lesion-level patterns are not patient-specific predictions.",
+      "importedDataFigures": "Original local pudendal vector rendered and visually inspected after regeneration; schematic label and risk callouts corrected; source-figure full text and clinical sign-off open.",
+      "references": "Nine inherited bibliography entries read but not fully source-mapped; five focused references added; selected original abstracts and guideline excerpts scoped explicitly.",
+      "currency": "AUA 2024 OAB and ASCRS 2023 FI/retention recommendations checked only for stated SNM scope; latest specialty updates beyond those not comprehensively screened."
+    },
+    "claimChecks": [
+      {"claim":"Greater/lesser/least thoracic splanchnic nerves are the direct pelvic sympathetic route","sourceIds":["splanchnic-anatomy"],"locator":"NCBI Bookshelf splanchnic structure/nerve sections","verdict":"corrected","note":"Lumbar contributions to superior hypogastric plexus distinguished from chiefly abdominal thoracic routes."},
+      {"claim":"One fixed plexus/nerve distance or 30 by 20 mm zone makes sacrocolpopexy safe","sourceIds":["shiozawa-2010","florian-2017"],"locator":"Original indexed cadaveric study abstracts","verdict":"corrected","note":"Study medians/ranges retained only as orientation; false universal safe zone removed."},
+      {"claim":"Lateral NVB/seminal-vesicle sparing guarantees continence or potency","sourceIds":["rothlisberger-2018"],"locator":"Original male IHP dissection abstract","verdict":"corrected","note":"Dorsal and lateral branches are anatomy observations, not guaranteed patient outcome."},
+      {"claim":"Four listed Nantes features complete the diagnostic criteria","sourceIds":["labat-2008"],"locator":"Original consensus abstract","verdict":"corrected","note":"Restored fifth criterion of no objective sensory loss and diagnostic limitations."},
+      {"claim":"SNM is equally established for OAB, retention, fecal incontinence and chronic pelvic pain","sourceIds":["aua-oab-2024","aua-retention","ascrs-fi-2023"],"locator":"Official OAB statement 25, AUA retention passage, ASCRS FI SNM section","verdict":"corrected","note":"Narrowed to selected established urinary/bowel uses; chronic pelvic pain not portrayed as routine equivalent indication."},
+      {"claim":"Pudendal drawing can identify a safe suture/needle route and shows all distal branches","sourceIds":["pudendal-figure"],"locator":"Local rendered SVG, generator and registry","verdict":"corrected","note":"Risk callout and clipped branch label corrected; figure remains schematic and unapproved clinically."},
+      {"claim":"All inherited neuroanatomy and operative predictions are clinically cleared","sourceIds":["prior-recovery"],"locator":"Full inherited page and recovery gap record","verdict":"unresolved","note":"Useful anatomy retained with narrowed absolutes, but full source reconciliation remains open."}
+    ],
+    "unresolvedClaims": ["Read full cadaveric anatomy papers and reconcile inherited female/male plexus branch descriptions, enteric anatomy, injury patterns, surgery, pain procedures, positioning and outcome predictions.", "Review full current OAB/retention/FI and pelvic-pain specialty guidance before procedure-level SNM or block recommendations; indexed statements and selected sections are not full clearance.", "Check Chhabra figure-source full text/branch variants and obtain actual clinical figure review; conceptual SVG is not a safe procedural map."],
+    "preservationReview": "Retained substantive autonomic/somatic anatomy, branching, cross-links and practical clinical correlations; narrowed unsafe fixed geometry and outcome promises without replacing content with an audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/pelvic-neuroanatomy-targeted-review.md"
+  }]
+}

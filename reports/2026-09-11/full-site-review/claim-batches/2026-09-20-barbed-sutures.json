@@ -1,0 +1,56 @@
+{
+  "batchId": "2026-09-20-barbed-sutures",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"manufacturer-prior","url":"https://www.medtronic.com/content/dam/medtronic-wide/public/western-europe/products/wound-closure/v-loc-product-catalogue.pdf","version":"Medtronic V-Loc catalog, Corza Quill catalog and J&J STRATAFIX product pages checked September 20, 2026","access":"prior-review","readScope":"Reused targeted material, absorption, configuration and Quill sizing fields. No complete code-specific IFU was read in this batch.","reusedFrom":"reports/2026-09-20/selective-content-restoration.md"},
+    {"id":"upper-tract-prior","url":"https://pubmed.ncbi.nlm.nih.gov/35549514/","version":"Anand et al. 2022; Liatsikos 2013 and Radford 2018 original abstracts","access":"prior-review","readScope":"Reused prior abstract checks of Liatsikos 5/6, Radford 4/10 and Anand five-study redo RR/CI; no full paper, figures or tables newly read.","reusedFrom":"reports/2026-09-20/needles-sutures-targeted-review.md"},
+    {"id":"gupta","url":"https://pubmed.ncbi.nlm.nih.gov/27418451/","version":"Gupta et al., J Urol 2016;196:1560-1565","access":"abstract-only","readScope":"Original abstract methods/results/conclusion for 4-N saline-tank closure systems and specific failure rates; full paper/figures not accessed."},
+    {"id":"li","url":"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131167","version":"Li et al., PLoS One 2015;10:e0131167","access":"relevant-sections","readScope":"Original full HTML methods, study characteristics, primary/secondary results, Table 2 text and discussion. Forest-plot images/supplements not inspected."},
+    {"id":"hu","url":"https://link.springer.com/article/10.1186/s12885-025-13825-6","version":"Hu et al., BMC Cancer 2025;25:429","access":"relevant-sections","readScope":"Original open HTML patient selection, methods, both closure descriptions, results, discussion, Table 1 and Table 2 HTML. Tables 3/4, actual figure panels and operative supplements not inspected."},
+    {"id":"clapp","url":"https://pubmed.ncbi.nlm.nih.gov/31183792/","version":"Clapp et al., Surg Endosc 2020;34:1261-1269","access":"abstract-only","readScope":"Original abstract methods/results/conclusion including 18 case reports, 14 MAUDE records and operative-exploration conclusion; full case table not accessed."},
+    {"id":"sassun","url":"https://link.springer.com/article/10.1007/s00464-026-12580-4","version":"Sassun et al., Surg Endosc 2026;40:2914-2918","access":"abstract-only","readScope":"Publisher abstract methods/results/conclusions; subscription preview only, no full methods, tables, figures or supplements."}
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/surgical-principles/barbed-sutures.mdx",
+      "sourceSha256": "c671937fc78f24d874af7d5e5915fb79cb439ec23b126db4f64c438bbe2017b1",
+      "status": "updated",
+      "fullTextRead": true,
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "readScope": "Complete inherited and final MDX, all 34 references, all product/mechanics/clinical tables, internal links and cross-field safety discussion. No imported clinical dataset, embedded page figure or video.",
+      "coverage": {
+        "evaluation": "Not a diagnostic page; device/operation applicability and complication ascertainment scoped.",
+        "treatment": "VUA, pyeloplasty, renorrhaphy and bowel-adjacent handling distinguished by operation; complete technique/IFU validation remains open.",
+        "numbers": "Gupta bench rates, Li VUA pooled figures, Hu T1 RAPN timing and Clapp/Sassun bowel denominators checked at recorded access depth; other numeric tables not certified.",
+        "doseDeviceSafety": "No drug doses. Manufacturer product sections reused; exact current device-code IFUs, needle/clip pairings and exposure handling not fully reviewed.",
+        "anatomyTechnique": "Entire page and Hu original closure methods read; other operative figures and technique-specific source packages remain open.",
+        "followUp": "Hu short-term selected-cohort results and Li specific continence intervals scoped; long-term renal, stricture and device safety outcomes not certified.",
+        "importedDataFigures": "No imported clinical dataset, page figure or video. Hu actual figure panels and linked operative-video supplements not viewed.",
+        "references": "All 34 entries scanned; seven source groups adjudicated at explicit access depth. Remaining cited original papers not fully checked.",
+        "currency": "Found 2026 large cohort relevant to bowel risk; no new OpenEvidence query. Whole-topic currency and current device IFUs incomplete."
+      },
+      "claimChecks": [
+        {"claim":"Quill, V-Loc and STRATAFIX require product-specific sizing and material descriptions","sourceIds":["manufacturer-prior"],"locator":"Prior restoration report, Medtronic catalog fields, Corza configuration/sizing fields and J&J product-family section","verdict":"supported","note":"Current page keeps product-specific distinctions; full IFUs and exact code/needle combinations remain unresolved."},
+        {"claim":"Pyeloplasty small-series failures and pooled redo RR are signals, not a universal ban or equivalence proof","sourceIds":["upper-tract-prior"],"locator":"Prior abstract checks: Liatsikos n=6, Radford n=10 and Anand five-study pooled RR 6.00 (0.78-46.14)","verdict":"supported","note":"Current page preserves both signals and favorable selected reports without a universal brand rule; original full packages are open."},
+        {"claim":"Gupta 82% versus 24% measures laboratory closure-system failure, not clinical renal closure failure","sourceIds":["gupta"],"locator":"Original abstract Methods/Results: 4-N saline tank, Lapra-Ty/Hem-o-Lok clip system, three-week test","verdict":"supported","note":"Page identifies laboratory system failure, not patient failure; full test matrix/figures remain unread."},
+        {"claim":"Li 2015 found faster VUA suturing without a statistically significant difference in pooled leak or specified continence intervals","sourceIds":["li"],"locator":"Original main article Results, Table 2 and Discussion: 3 RCTs + 6 observational, n=786; leak 7.08% vs 3.37%, OR 2.17 (0.86-5.50)","verdict":"supported","note":"Time-saving and non-significance supported; equivalence is not established and cannot transfer to graft quilting or ureter."},
+        {"claim":"Hu 2025 reported shorter warm-ischemia time in selected T1 RAPN patients, not a universal renal-function benefit","sourceIds":["hu"],"locator":"Original Methods/Results and Tables 1-2: 25/arm selected T1 RAPN; WIT 11.76 vs 14.56 minutes","verdict":"supported","note":"Page limits this to small selected trial and short-term outcomes; different closure systems and unviewed Table 3/supplements limit broader claims."},
+        {"claim":"Every barbed-suture-related bowel obstruction inevitably needs surgery and case reports supply incidence","sourceIds":["clapp"],"locator":"Original abstract Results/Conclusion: 18 reports plus 14 MAUDE records; authors' exploration conclusion","verdict":"corrected","note":"Management row scoped to reported cases; mechanism signal retained, no incidence inferred."},
+        {"claim":"No large denominator evidence exists for bowel entrapment, or zero observed cases proves zero risk","sourceIds":["sassun","clapp"],"locator":"Sassun publisher abstract Methods/Results: 20,260 exposed, 264 diagnosed obstruction, 102 obstruction reoperations, 279 total abdominal reoperations, none attributed","verdict":"corrected","note":"Added 2026 cohort beside earlier cases; no non-barbed control, paywalled full methods or blanket safety inference."},
+        {"claim":"All product-specific bench, animal, clinical and cross-field source packages have been validated","sourceIds":[],"locator":"Remaining refs 5-9, 11-14, 16-21, 23-25, 27-29, 31-33 and Hu/Sassun supplements","verdict":"unresolved","note":"Original full methods/tables/figures, device IFUs and relevant operative media remain to be reviewed before clearance."}
+      ],
+      "unresolvedClaims": [
+        "Get full Sassun 2026 methods/tables/figures and Clapp 2020 case-level table to assess surveillance, follow-up, device/exposure and event ascertainment; neither an observed zero nor case series is a universal risk estimate.",
+        "Read current code-specific V-Loc, Quill, STRATAFIX and MONOFIX IFUs and relevant clip instructions; adjudicate product gauge, material persistence and exposed-tail handling without cross-device extrapolation.",
+        "Finish original full source packages for Amend/Paka/Gingras mechanical tests, Yalcin rabbit study, individual VUA trials, Lin 2018/renorrhaphy cohorts, cross-field meta tables and ACS companion guidance.",
+        "Inspect Hu 2025 Tables 3/4, figure panels and operative-video supplements before certifying functional results or technical steps; resolve missing long-term/whole-topic currency separately."
+      ],
+      "preservationReview": "Retained all product, biomechanical, upper-tract, VUA, renorrhaphy, bladder, bowel, decision and 33 inherited references; appended one reference. Only bowel heading and management scope narrowed; no figure or video existed and none removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/barbed-sutures-targeted-review.md"
+    }
+  ]
+}

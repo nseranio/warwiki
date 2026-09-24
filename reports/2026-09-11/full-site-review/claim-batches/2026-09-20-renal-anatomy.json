@@ -1,0 +1,52 @@
+{
+  "batchId": "2026-09-20-renal-anatomy",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"osullivan-2023","url":"https://pubmed.ncbi.nlm.nih.gov/37691990/","version":"O'Sullivan/Anderson 2023 adult PUJO systematic review","access":"abstract-only","readScope":"Original indexed abstract and metadata: 12 studies/513 adults, 50.5% crossing-vessel finding; full review not read.","reusedFrom":""},
+    {"id":"triantafyllou-2025","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12358822/","version":"Triantafyllou et al. Clin Anat 2025;38:660–672","access":"relevant-sections","readScope":"Abstract, methods, prevalence results and conclusion; supporting DOCX and full tables not read.","reusedFrom":""},
+    {"id":"karmacharya-2006","url":"https://pubmed.ncbi.nlm.nih.gov/16414380/","version":"Karmacharya et al. J Vasc Surg 2006;43:8–13","access":"abstract-only","readScope":"Original indexed abstract including 35 selected EVAR patients, seven radiographic infarcts and renal-function results; full paper not read; indirect renal-surgery applicability.","reusedFrom":""},
+    {"id":"lenihan-2015","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4362245/","version":"Lenihan et al. J Clin Invest 2015;125:1311–1318","access":"relevant-sections","readScope":"Original abstract, results and discussion excerpts on 21 donors; full tables/figures and supplement not read.","reusedFrom":""},
+    {"id":"acr-nkf-2020","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7525144/","version":"ACR/NKF iodinated-contrast consensus 2020","access":"indexed-excerpts","readScope":"Search-indexed consensus terminology and CA-AKI/CI-AKI risk section; PDF/PMC full page challenged in this pass.","reusedFrom":""},
+    {"id":"kdigo-anemia-2026","url":"https://kdigo.org/wp-content/uploads/2026/01/KDIGO-2026-Anemia-in-CKD-Guideline-Executive-Summary.pdf","version":"KDIGO 2026 anemia guideline executive summary","access":"indexed-excerpts","readScope":"Search-indexed Ch. 1 pathophysiology summary: multifactorial CKD anemia including relative EPO deficiency and blood loss; full guideline not read.","reusedFrom":""},
+    {"id":"rod-2016","url":"https://pubmed.ncbi.nlm.nih.gov/27409986/","version":"Rod et al. BJU Int 2016;118:692–705 systematic review","access":"abstract-only","readScope":"Original indexed methods/results/conclusion; full paper and included studies not read.","reusedFrom":""},
+    {"id":"eau-rcc","url":"https://uroweb.org/guidelines/renal-cell-carcinoma/chapter/disease-management","version":"Current online EAU RCC guideline, accessed 2026-09-20","access":"relevant-sections","readScope":"§7.2.3.b.9 CLOCK/off-clamp paragraph and partial-nephrectomy evidence/recommendation table; rest of chapter/guideline not read.","reusedFrom":""},
+    {"id":"kdigo-donor-2017","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5540357/","version":"KDIGO 2017 living donor guideline","access":"relevant-sections","readScope":"Chapter 19 recommendations 19.1–19.4 and relevant follow-up rationale; full guideline not read.","reusedFrom":""},
+    {"id":"figures","url":"static/img/anatomy/","version":"Four inherited renal/nephron diagrams","access":"relevant-sections","readScope":"Actual local OpenStax and Gray images visually inspected against captions; original provenance/license not independently checked.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/urinary-tract/renal-anatomy-physiology.mdx",
+    "sourceSha256": "b047eb058b7c1305486be3c39b9f4e0484d4763005cfde857063bf876658a287",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Entire current and revised MDX, five inherited bibliography entries, four actual local figures; three video IDs inventoried but videos not watched.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Split-function testing and contrast terminology narrowed; exact test-selection claims and original physiology sources remain open.",
+      "treatment": "Current EAU partial-nephrectomy off-clamp section checked; broader renal operations and obstruction management not cleared.",
+      "numbers": "Accessory-artery 21.10% estimate, 513-patient PUJO review and ischemia threshold scoped to source populations; other inherited physiologic numbers remain open.",
+      "doseDeviceSafety": "No drug dose/device instructions on this page; contrast causation and operative vascular safety partly checked, full packages open.",
+      "anatomyTechnique": "Four figures viewed; artery and crossing-vessel absolutes corrected; inherited fascial, vascular and neural details still need source reconciliation.",
+      "followUp": "KDIGO donor Chapter 19 follow-up elements checked; lifetime outcome claims remain open.",
+      "importedDataFigures": "No clinical data import identified; four local figures viewed, licensing unverified; three videos not watched.",
+      "references": "Five inherited bibliography entries retained; nine focused sources added; full source-to-claim reconciliation of inherited entries open.",
+      "currency": "Current EAU RCC section and KDIGO 2026 anemia summary checked; other inherited source packages not currency-cleared."
+    },
+    "claimChecks": [
+      {"claim":"Crossing vessel at adult UPJ necessarily causes obstruction and every accessory renal artery ligation inevitably infarcts a segment","sourceIds":["osullivan-2023","triantafyllou-2025","karmacharya-2006"],"locator":"O'Sullivan indexed results; Triantafyllou pooled prevalence; Karmacharya selected EVAR abstract","verdict":"corrected","note":"Association/presence is not individual causation; arterial consequences depend on supplied territory and setting. EVAR evidence is indirect to renal surgery."},
+      {"claim":"Donor compensatory hyperfiltration inevitably causes proteinuria or glomerulosclerosis","sourceIds":["lenihan-2015","kdigo-donor-2017"],"locator":"Lenihan original results/discussion excerpts; KDIGO Ch. 19","verdict":"corrected","note":"A 21-donor physiologic cohort showed adaptation without albuminuria at median 6.3 years, not a lifetime guarantee; retain donor surveillance."},
+      {"claim":"Every post-contrast AKI is contrast-induced; medulla or proximal tubule is invariably first affected","sourceIds":["acr-nkf-2020"],"locator":"ACR/NKF consensus terminology and risk section, indexed excerpts","verdict":"corrected","note":"Distinguished association from proven causation and removed universal anatomic sequence; full mechanism package remains open."},
+      {"claim":"A universal 25-minute warm-ischemia boundary mandates zero/off-clamp partial nephrectomy","sourceIds":["rod-2016","eau-rcc"],"locator":"Rod original abstract; EAU §7.2.3.b.9 and recommendation table","verdict":"corrected","note":"Preserved-parenchyma effect and selected CLOCK population limit the inference; no routine off-clamp superiority in normal baseline function."},
+      {"claim":"Abrupt postoperative hemoglobin decrease is expected from new renal EPO loss","sourceIds":["kdigo-anemia-2026"],"locator":"KDIGO 2026 executive-summary Chapter 1 indexed pathophysiology","verdict":"corrected","note":"CKD anemia is chronic and multifactorial; prompt evaluation of postoperative bleeding/dilution remains important."},
+      {"claim":"Living donor follow-up assesses BP, eGFR and albuminuria","sourceIds":["kdigo-donor-2017"],"locator":"KDIGO 2017 Ch. 19 recommendation 19.2","verdict":"supported","note":"Annual recommendation; no claim of all-donor lifetime outcome guarantee."},
+      {"claim":"Four inherited figure captions match visible anatomy","sourceIds":["figures"],"locator":"Four actual local renal/nephron image files","verdict":"supported","note":"Visual match only; provenance/license not checked."},
+      {"claim":"Inherited Gerota fascia/urinoma pathways, detailed neural and segmental anatomy, physiologic reference values and embedded video teaching","sourceIds":[],"locator":"Inherited content outside this targeted source scope","verdict":"unresolved","note":"Retained useful text/media pending exact source reconciliation; no full clinical clearance."}
+    ],
+    "unresolvedClaims": ["Verify inherited fascial/urinoma-track, vascular, neural, nephron and numeric physiology claims against primary anatomy/physiology packages, especially Brezis/Rosen 1995 which has no indexed abstract.", "Review full paper/tables/supplements where current source checks are abstract or relevant-section only; obtain renal-surgery-specific branch occlusion evidence rather than extrapolating selected EVAR observations.", "Verify four figure provenance/licenses and watch three videos before any whole-page clearance."],
+    "preservationReview": "No heading, substantive section, inherited reference, figure or video removed; nine sources added and specific categorical claims qualified. Changed-claim/source and diff check passed; no generic public audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/renal-anatomy-targeted-review.md"
+  }]
+}

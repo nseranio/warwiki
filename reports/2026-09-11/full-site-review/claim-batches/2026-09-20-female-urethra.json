@@ -1,0 +1,40 @@
+{
+  "batchId":"2026-09-20-female-urethra",
+  "reviewedAt":"2026-09-20",
+  "model":"Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort":"current task setting not exposed to audit record",
+  "sources":[
+    {"id":"delancey-1986","url":"https://pubmed.ncbi.nlm.nih.gov/3725263/","version":"DeLancey 1986 original paraurethral anatomy study","access":"abstract-only","readScope":"Original indexed abstract and four functional-region percentages; full text/figures not read.","reusedFrom":""},
+    {"id":"pipitone-2021","url":"https://onlinelibrary.wiley.com/doi/abs/10.1002/nau.24760","version":"Pipitone et al. 2021 evidence review","access":"abstract-only","readScope":"Publisher abstract including study size, MUCP group comparisons, variability and postpartum caveat; full review/original datasets not read.","reusedFrom":""},
+    {"id":"eau-female-luts","url":"https://uroweb.org/guidelines/non-neurogenic-female-luts/chapter/disease-management","version":"Current online EAU non-neurogenic female LUTS, accessed 2026-09-20","access":"relevant-sections","readScope":"§§4.2, 4.7, 4.8 and 4.9 estrogen/SUI, surgery/POP, urethrovaginal fistula and diverticulum recommendations/technical paragraphs; whole guideline and cited trials not read.","reusedFrom":""},
+    {"id":"burch-prior","url":"https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD002912.pub7/full","version":"Open retropubic colposuspension Cochrane 2017 as previously reviewed","access":"prior-review","readScope":"Prior Burch source-reading report reused for open/laparoscopic procedure distinction and nonuniversal selection; no new full Cochrane read this turn.","reusedFrom":"reports/2026-09-12/sling-source-reading/burch-review.md"}
+  ],
+  "pages":[{
+    "file":"docs/01-foundations/anatomy-physiology/urinary-tract/female-urethra.mdx",
+    "sourceSha256":"9153b07a229b73427385242b9bd27717d6a5774eb67fd01ed7b2e4b4bee93f39",
+    "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+    "readScope":"Complete current and revised MDX, 25 inherited references and seven lecture-card identifiers; video contents not watched. No imported dataset or local figure.",
+    "coverage":{
+      "evaluation":"Approximate anatomical regions distinguished from patient-specific MRI/sling cutoffs; fixed MUCP normal range withdrawn; other diagnostics open.",
+      "treatment":"EAU estrogen, SUI surgical-choice, POP, diverticulum and urethrovaginal fistula sections checked; broader comparative treatment evidence remains open.",
+      "numbers":"Percent-region values tied to original DeLancey study; one-third estimate linked to five women and group MUCP/aging/postpartum comparisons scoped; underlying data not read.",
+      "doseDeviceSafety":"No dose recommendation; sling and AUS choices individualized. Device specifications and full safety studies not cleared.",
+      "anatomyTechnique":"Original DeLancey regions retained; deterministic hammock/nerve-injury and flap/frozen-section rules corrected; other inherited histologic/neural/vascular sources open.",
+      "followUp":"EAU fistula/diverticulum long-term limits noted; no comprehensive follow-up audit or oncologic surveillance clearance.",
+      "importedDataFigures":"No imported data or local figure. Seven embedded videos retained but contents not verified.",
+      "references":"All 25 inherited entries retained; current EAU guideline added. Inherited full-source packages largely unread.",
+      "currency":"Current EAU disease-management sections checked; complete guideline and urethral-cancer/diversion guidance remain open."
+    },
+    "claimChecks":[
+      {"claim":"20–60% region is a fixed operative sling target and establishes one reflex-closure mechanism","sourceIds":["delancey-1986"],"locator":"Original abstract, functional-region mapping","verdict":"corrected","note":"Study percentages are approximate anatomy, not patient-specific operative cutoffs or proof of a single mechanism."},
+      {"claim":"Each MUCP component is one-third in all women; birth causes universal 25% loss; 60–100 is a normal cutoff","sourceIds":["pipitone-2021"],"locator":"Publisher abstract: five-woman estimate, group comparisons and longitudinal birth caveat","verdict":"corrected","note":"Numbers now population-scoped; fixed normal cutoff removed. Original underlying studies remain unread."},
+      {"claim":"Estrogen treats all SUI and Burch is only suited to concurrent laparotomy","sourceIds":["eau-female-luts","burch-prior"],"locator":"EAU §4.2.4.b.1 and §4.2.4.c.2.a; prior Burch source report","verdict":"corrected","note":"Estrogen recommendation applies with atrophy symptoms; open or laparoscopic colposuspension remains a counseled option."},
+      {"claim":"All diverticulectomy and urethrovaginal fistula repairs require a Martius/interposition flap","sourceIds":["eau-female-luts"],"locator":"EAU §§4.8.4.c.1 and 4.9.4.a","verdict":"corrected","note":"Flaps are selected by defect/tissue; evidence for universal Martius use is lacking."},
+      {"claim":"Occult-risk impression mandates concurrent anti-incontinence repair during cystocele surgery","sourceIds":["eau-female-luts"],"locator":"EAU §4.7 reduction test and combined-surgery recommendations","verdict":"corrected","note":"Counsel by symptomatic/occult status and added adverse events; no surgery if neither symptomatic nor occult SUI at abdominal repair."},
+      {"claim":"Remaining inherited vascular, neural, histologic, oncologic and functional claims, plus seven lecture videos","sourceIds":[],"locator":"Inherited papers/figures and media outside completed source packages","verdict":"unresolved","note":"Practical material retained pending primary packages, video review and tumor-specific guidance."}
+    ],
+    "unresolvedClaims":["Read full original anatomy/vascular/neural/MUCP papers, figures and underlying five-woman study; verify all seven teaching videos.","Review current urethral-cancer/diversion selection and margin guidance before treating cystectomy/frozen-section statements as cleared."],
+    "preservationReview":"All substantive sections, 25 inherited references and seven lecture videos retained. Categorical numerical and treatment-selection claims narrowed; no blanket removal.",
+    "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/female-urethra-targeted-review.md"
+  }]
+}

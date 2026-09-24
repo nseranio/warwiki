@@ -1,0 +1,16 @@
+# Pelvic neuroanatomy — focused review (20 September 2026)
+
+**Disposition:** all 223 inherited MDX lines and nine references read; targeted corrections; **partial clinical verification, not clearance**. The earlier recovery note was reused for its limited plexus/pudendal orientation, not as permission to erase the restored practical page. The local pudendal SVG was rendered and visually inspected; its generated source, figure registry and output were updated together. The figure remains a conceptual lateral-view schematic, not a procedural map or clinician-approved anatomy atlas.
+
+## Source scope and changes
+
+- NCBI Bookshelf splanchnic anatomy: relevant pathway text checked. Corrected the inherited routing of greater/lesser/least thoracic splanchnic nerves as a direct pelvic route; lumbar, sacral and pelvic splanchnic pathways retained.
+- Existing Röthlisberger 2018 male cadaveric inferior-hypogastric-plexus paper: PubMed abstract read, **not full article/figures**. Its dorsal/lateral cavernous contributions are useful anatomy, but the page no longer promises that a particular seminal-vesicle or NVB maneuver preserves potency/continence.
+- Existing Shiozawa 2010 six-cadaver sacrocolpopexy study and Florian-Rodriguez 2017 S1 study: original PubMed abstracts/indexed methods and measurements read, **not full articles**. Removed the invented 30 × 20 mm universal mesh safe zone; retained S1 distances explicitly as study medians/ranges, not a suture boundary.
+- Labat 2008 original Nantes consensus: PubMed abstract read, **not full paper**. Restored the omitted *no objective sensory loss* criterion and separated suggestive criteria from proof of entrapment.
+- AUA/SUFU 2024 OAB statement 25 and AUA non-neurogenic-retention statement: official indexed recommendation passages checked; full OAB PDF was not read. ASCRS 2023 fecal-incontinence guidance: relevant sections of the accessible official online guideline read, not every cited study. Narrowed SNM to selected established bladder/bowel indications and did not present chronic pelvic pain as equivalent routine use.
+- Figure Chhabra et al. 2016 abstract scope was already documented in the figure registry; it was **not credited as a new full-paper review**. Current raster showed an overconfident ischial-spine suture/block callout and clipped dorsal-branch label. The figure-generator source and registry now produce a legible, non-procedural warning; regeneration and visual inspection were performed.
+
+Substantive pathway, branch, operative-risk and cross-link material remains. Fixed millimeter positions, guaranteed injury phenotypes/functional protection, blind block/suture directions, and a universal lithotomy interval were narrowed, not replaced with a public audit notice. Fourteen bibliography entries now appear (five focused additions).
+
+**Unresolved:** complete verification of the inherited female and male pelvic-plexus microanatomy, branch variability, autonomic/enteric physiology, outcome claims, nerve blocks/pain procedures and positioning protocols; full original cadaveric papers/guidelines and all older references; underlying figure-source images/branches and clinical figure sign-off. The linked guideline snippets and study abstracts do not establish procedure-level clinical clearance.

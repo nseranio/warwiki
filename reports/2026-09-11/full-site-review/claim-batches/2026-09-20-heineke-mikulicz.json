@@ -1,0 +1,55 @@
+{
+  "batchId": "2026-09-20-heineke-mikulicz",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"recovery","url":"reports/2026-09-20/heineke-mikulicz-recovery-review.md","version":"September 20 recovery inventory","access":"prior-review","readScope":"Earlier limited Lumen abstract and source-gap index only; blanket-removal approach superseded.","reusedFrom":"reports/2026-09-20/heineke-mikulicz-recovery-review.md"},
+    {"id":"lumen-2010","url":"https://pubmed.ncbi.nlm.nih.gov/20951413/","version":"Original indexed abstract","access":"abstract-only","readScope":"Selected ten-patient ventral urethral series, <1 cm selection, 9/10 success, 46.6-month mean follow-up; full technique/table unread."},
+    {"id":"kanematsu-2025","url":"https://pubmed.ncbi.nlm.nih.gov/40372082/","version":"Original indexed abstract","access":"abstract-only","readScope":"Eleven penoscrotal-junction cases, 3–20 mm, 9/11 success, median 33 months. Abstract says both closures longitudinally; publisher DOI timed out and PDF access failed; full figures unread."},
+    {"id":"waterloos-2019","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/","version":"Open practical review","access":"relevant-sections","readScope":"Full HTML main available; read female meatoplasty, site/length limits and selection text. Linked original clinical figures not visually inspected."},
+    {"id":"tsivian-2004","url":"https://pubmed.ncbi.nlm.nih.gov/14665908/","version":"Original indexed case abstract","access":"abstract-only","readScope":"One upper-ureteral injury gap repair; full surgical illustration/outcome detail unread."},
+    {"id":"xu-2022","url":"https://pubmed.ncbi.nlm.nih.gov/35430235/","version":"Original indexed abstract","access":"abstract-only","readScope":"Seven adult preputioplasty patients, technique, one recurrent symptom treated with steroid and 1.8-month median follow-up; full text unread."},
+    {"id":"elrouby-2024","url":"https://link.springer.com/article/10.1186/s12894-024-01450-7","version":"Open publisher original article","access":"full-text","readScope":"Publisher HTML main text, design, operative method, outcomes and table narrative read; 20/20 groups, transverse incision/vertical closure, 85% versus 95% with nonsignificant difference. Linked patient/operative figures and any supplement not inspected."},
+    {"id":"jambunathan-2024","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC11433648/","version":"Open original case report","access":"full-text","readScope":"Entire main case text, excision followed by transverse closure, postoperative cystoscopy at three months; clinical images not visually inspected."},
+    {"id":"elyaguov-2023","url":"https://pubmed.ncbi.nlm.nih.gov/36423326/","version":"Original indexed review abstract","access":"abstract-only","readScope":"General transmasculine neourethral complications context; abstract does not itself enumerate HM technique."},
+    {"id":"derooij-2022","url":"https://bjui-journals.onlinelibrary.wiley.com/doi/10.1111/bju.15500","version":"Open original publisher HTML","access":"relevant-sections","readScope":"Full HTML main available; read cohort methods, HMP section and outcome/selection text, 6/7 selected repairs; linked algorithm figure not viewed."},
+    {"id":"janetschek-2000","url":"https://pubmed.ncbi.nlm.nih.gov/11206624/","version":"Original indexed abstract","access":"abstract-only","readScope":"Selected short UPJ Fenger use and Y-V alternatives in series; full figures/tables unread."},
+    {"id":"eau-current","url":"https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males","version":"2026 official EAU male-stricture chapter","access":"relevant-sections","readScope":"Read short bulbar and non-transecting recommendation context; not interpreted as named HM endorsement; supplements unread."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/surgical-principles/flaps/heineke-mikulicz.mdx",
+    "sourceSha256": "f6dbf336ea47cf9ab8b4b3d2c2b0c29e69746c498dd8ebd316dbcfc951a2d557",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Entire 109-line restored MDX, all applications/table/links and 11 inherited references; retained original WARWIKI SVG visually inspected as rendered and found conceptual/not to scale. Two primary references added; final diff reread.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Short/focal selection scoped by site; full male/female/neo-urethral algorithm and history source packages unfinished.",
+      "treatment": "Classic luminal versus reverse-axis web repair corrected; small case/series indications retained but not generalized.",
+      "numbers": "Lumen 9/10, Kanematsu 9/11, Xu seven with one recurrence/short follow-up, Elrouby 20/20 and de Rooij 6/7 adjudicated at documented source scope; full tables/figures pending.",
+      "doseDeviceSafety": "No drug dosing or device IFU; Xu steroid rescue described only as report observation, not recommendation. Urethral perfusion no longer guaranteed.",
+      "anatomyTechnique": "Original conceptual SVG viewed; scrotoplasty transverse/vertical orientation corrected from full publisher method; Kanematsu exact suture orientation unresolved because abstract conflicts with title/geometry.",
+      "followUp": "Kanematsu median 33 months and Lumen mean 46.6 months from abstracts; Xu median 1.8 months; diverticulum full case only confirms three-month cystoscopy, not unspecified durable cure.",
+      "importedDataFigures": "Page's original schematic rendered and inspected; original Elrouby/Waterloos/Jambunathan clinical images, Kanematsu figures and de Rooij algorithm not viewed.",
+      "references": "All 11 inherited references retained, two directly relevant originals added; selected abstracts/open main sections checked, others remain unreviewed.",
+      "currency": "Current official EAU male-stricture section checked for broad context; no full fresh AUA, history or cross-site evidence survey completed."
+    },
+    "claimChecks": [
+      {"claim":"The classic longitudinal/transverse axes apply unchanged to penoscrotal-web scrotoplasty","sourceIds":["elrouby-2024"],"locator":"Publisher original Background and Patients & methods Group B operative paragraph","verdict":"corrected","note":"Web release incises transversely and closes vertically; classical luminal geometry is reverse."},
+      {"claim":"Heineke-Mikulicz scrotoplasty has equivalent pediatric success to Z-plasty","sourceIds":["elrouby-2024"],"locator":"Original Methods/Results and Discussion: randomized 20/20, 85% vs 95%, p=0.605","verdict":"corrected","note":"Small comparison found no significant difference; not proof of equivalence or long-term durability; operative time was shorter."},
+      {"claim":"Seven-patient Xu preputioplasty series establishes durable six-of-seven cure","sourceIds":["xu-2022"],"locator":"Original indexed abstract Results, follow-up and steroid rescue","verdict":"corrected","note":"One recurrent bothersome symptom was treated with triamcinolone at median 1.8 months; longer-term outcome not established."},
+      {"claim":"Kanematsu double-sided repair definitely closed both incisions transversely and doubled luminal gain","sourceIds":["kanematsu-2025"],"locator":"Original indexed abstract Methods, internally discordant with named principle","verdict":"unresolved","note":"Abstract says longitudinal closure of both incisions. Specific transverse orientation and doubled gain removed pending full technical paper/figures; 9/11 and median 33 months retained."},
+      {"claim":"Every HM application avoids tissue excision and preserves perfusion","sourceIds":["jambunathan-2024","lumen-2010","derooij-2022"],"locator":"Jambunathan full case excision; Lumen abstract; de Rooij HMP Discussion","verdict":"corrected","note":"Diverticulum case excised defect; nontransection can preserve continuity but cannot guarantee perfusion."},
+      {"claim":"Tsivian upper-ureter repair and Jambunathan diverticulum establish general treatment strategies","sourceIds":["tsivian-2004","jambunathan-2024"],"locator":"Original case abstract and full open case presentation","verdict":"corrected","note":"Each is one case; scope made explicit."},
+      {"claim":"AUA/SUFU explicitly recommends the named HM maneuver for short bulbar disease","sourceIds":["eau-current","recovery"],"locator":"EAU current broad treatment section and prior gap inventory; inherited AUA reference not reread","verdict":"corrected","note":"Removed SUFU attribution and named guideline endorsement; broader technique selection retained without claiming full guideline clearance."},
+      {"claim":"HM is a described option for selected transmasculine short strictures","sourceIds":["derooij-2022","elyaguov-2023"],"locator":"de Rooij open publisher cohort methods and HMP results; Elyaguov general abstract","verdict":"supported","note":"Six of seven selected repairs successful in single-center retrospective analysis; not generalized to every neourethral stricture."},
+      {"claim":"Fenger pyeloplasty uses HM longitudinal/transverse principle in selected UPJ anatomy","sourceIds":["janetschek-2000"],"locator":"Original indexed Fenger series abstract","verdict":"supported","note":"Added direct primary reference; full operative figures remain unread."}
+    ],
+    "unresolvedClaims": ["Obtain Kanematsu full technical paper and figures to resolve indexed abstract's longitudinal-closure discrepancy before asserting exact double-sided suturing geometry.", "Inspect Elrouby operative images, Xu/Lumen full technical and follow-up packages, de Rooij algorithm figure/subgroup table, and Waterloos/Jambunathan clinical figures.", "Read original Tsivian case illustrations, Lovasik history, AUA full guideline and inherited Verla review for remaining attribution/selection claims."],
+    "preservationReview": "Retained all application and technique sections, conceptual SVG, links and 11 inherited references; added de Rooij and Janetschek. Corrected specific axes, denominators, follow-up and single-case generalization without blanket removal or public audit placeholder.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/heineke-mikulicz-targeted-review.md"
+  }]
+}

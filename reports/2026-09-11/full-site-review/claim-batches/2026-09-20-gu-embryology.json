@@ -1,0 +1,49 @@
+{
+  "batchId": "2026-09-20-gu-embryology",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/gu-embryology-recovery-review.md","version":"September 20 recovery source-scope record","access":"prior-review","readScope":"Read scope/history only: broad Bookshelf developmental anatomy; condition-specific source packages explicitly left unresolved.","reusedFrom":"reports/2026-09-20/gu-embryology-recovery-review.md"},
+    {"id":"ferlin-2009","url":"https://pubmed.ncbi.nlm.nih.gov/19416190/","version":"Ferlin et al. 2009 newborn INSL3/RXFP2 cohort","access":"abstract-only","readScope":"Original indexed methods/results: 600 newborn cases, 7/600 at birth and 7/303 persistent; full article not read.","reusedFrom":""},
+    {"id":"eau-testes","url":"https://uroweb.org/guidelines/paediatric-urology/chapter/management-of-undescended-testes","version":"Current EAU paediatric urology online chapter, accessed 2026-09-20","access":"relevant-sections","readScope":"Management timing, surgery and malignancy subsections plus recommendation table; full chapter and underlying studies not read.","reusedFrom":""},
+    {"id":"acog-mrkh","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/01/mullerian-agenesis-diagnosis-management-and-treatment","version":"ACOG Committee Opinion 728 (2018)","access":"relevant-sections","readScope":"Management, dilation, readiness and uterine-transplant context; full reference set not read.","reusedFrom":""},
+    {"id":"cftr-review","url":"https://pubmed.ncbi.nlm.nih.gov/29216686/","version":"2017/2018 CBAVD and CFTR review","access":"abstract-only","readScope":"Original indexed abstract: nearly 95% of males with CF have CBAVD and counseling context; full review not read.","reusedFrom":""},
+    {"id":"daudin-2000","url":"https://pubmed.ncbi.nlm.nih.gov/11119745/","version":"Daudin et al. 2000 primary CBAVD cohort","access":"abstract-only","readScope":"Original indexed abstract of 41 men and CFTR findings; full paper not read.","reusedFrom":""},
+    {"id":"dsd-risk-review","url":"https://pubmed.ncbi.nlm.nih.gov/28544305/","version":"2017 DSD gonadal-tumor risk review","access":"abstract-only","readScope":"Indexed abstract on diagnosis-specific risk and gonadectomy factors; full review not read.","reusedFrom":""},
+    {"id":"karila-2022","url":"https://pubmed.ncbi.nlm.nih.gov/36305565/","version":"Karila et al. 45,X/46,XY cohort","access":"abstract-only","readScope":"Original indexed abstract: 70 patients, nine gonadoblastomas, phenotypic/whole-Y context; full paper not read.","reusedFrom":""},
+    {"id":"aua-vur","url":"https://www.auanet.org/documents/education/clinical-guidance/vesicoureteral-reflux-a.pdf","version":"AUA primary VUR screening guideline","access":"indexed-excerpts","readScope":"Search-indexed recommendations for high-grade dilation/hydroureter/abnormal bladder/UTI versus low-grade observation; full PDF not read.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/urinary-tract/gu-embryology.mdx",
+    "sourceSha256": "1f087d65ccfaef261fc91d9946c83cdb1df5a26c8923df2dc28fbfff42f1ef73",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "All 330 lines of current/revised MDX and all 19 inherited bibliography entries; no image, video or imported clinical data identified.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Selective postnatal UTD/VCUG and DSD/gonadal-risk claims narrowed; complete diagnostic algorithms open.",
+      "treatment": "MRKH dilation priority and cryptorchidism timing checked in relevant ACOG/EAU sections; other techniques and outcome claims open.",
+      "numbers": "INSL3/RXFP2 9% corrected to one cohort's 1.2%/2.3%; all other inherited prevalence/timing values not fully reconciled.",
+      "doseDeviceSafety": "No dose/device instructions identified; irreversible DSD surgery statement narrowed, full specialist management source review open.",
+      "anatomyTechnique": "Entire developmental account read; selected association/technique absolutes narrowed; inherited mechanisms and operative anatomy require primary-source reconciliation.",
+      "followUp": "Cryptorchidism timing and selective postnatal imaging partly checked; lifelong CAKUT/DSD follow-up packages open.",
+      "importedDataFigures": "No imported clinical data, local figures or videos identified on this page.",
+      "references": "Nineteen inherited entries retained, not fully source-mapped; focused current sources linked at corrected claims.",
+      "currency": "Current EAU testes section and ACOG guidance checked; full inherited and DSD/UTD guideline currency work open."
+    },
+    "claimChecks": [
+      {"claim":"About 9% of cryptorchid cases have INSL3/LGR8 mutations, often maternally inherited","sourceIds":["ferlin-2009"],"locator":"Ferlin original cohort abstract, 600 newborns and 303 persistent cases","verdict":"corrected","note":"1.2% at birth and 2.3% among persistent cases in this cohort; inheritance generalization removed."},
+      {"claim":"All cryptorchid testes require orchiopexy strictly in 6–12 months and high testes require staged Fowler-Stephens","sourceIds":["eau-testes"],"locator":"EAU management §4.4 and recommendation table","verdict":"corrected","note":"No descent by six corrected months triggers referral; preferred by 12, latest 18 months; technique individualized."},
+      {"claim":"MRKH is primarily a neovaginoplasty problem and uterine transplant is a vaginal reconstruction technique","sourceIds":["acog-mrkh"],"locator":"ACOG Committee Opinion 728 management/readiness and transplantation paragraphs","verdict":"corrected","note":"Dilation first line for most who desire elongation; surgery conditional, uterine transplant separate fertility intervention."},
+      {"claim":"Up to two-thirds of CFTR carriers have CBAVD","sourceIds":["cftr-review","daudin-2000"],"locator":"Review and primary CBAVD cohort indexed abstracts","verdict":"corrected","note":"Distinguished males with CF, men with CBAVD and single-variant carriers; partner counseling retained."},
+      {"claim":"Y material automatically requires gonadectomy and all fetal dilation requires sequential VCUG/MAG3","sourceIds":["dsd-risk-review","karila-2022","aua-vur"],"locator":"DSD risk abstract, 45,X/46,XY cohort abstract, AUA VUR screening recommendations","verdict":"corrected","note":"Individualized gonadal risk and selective imaging; deeper clinical packages still open."},
+      {"claim":"Inherited CAKUT prevalences, gene mechanisms, developmental timings, operative choices and outcome claims","sourceIds":["prior-recovery"],"locator":"Entire inherited page and historical recovery gap list","verdict":"unresolved","note":"Useful material retained pending direct source-to-claim adjudication; no clearance."}
+    ],
+    "unresolvedClaims": ["Reconcile inherited embryologic timings/mechanisms, CAKUT genetics/prevalence, DSD/hypospadias/exstrophy operative claims and all 19 inherited references with exact full primary packages.", "Read full current DSD/UTD guidelines and source tables/supplements for individual risk and imaging pathways; do not extend abstract-level results beyond their cohorts."],
+    "preservationReview": "All developmental sections and 19 inherited references retained; only nine narrow text substitutions to correct specific numbers, management priorities and categorical statements. No blanket removal or public audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/gu-embryology-targeted-review.md"
+  }]
+}

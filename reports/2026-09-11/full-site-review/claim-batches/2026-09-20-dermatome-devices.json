@@ -1,0 +1,65 @@
+{
+  "batchId": "2026-09-20-dermatome-devices",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"dargan","url":"https://pubmed.ncbi.nlm.nih.gov/40313029/","version":"Dargan et al. 2025, PMID 40313029","access":"abstract-only","readScope":"Original PubMed abstract methods/results on six dermatome apertures and observer reliability; full manuscript/figures not read."},
+    {"id":"egro","url":"https://pubmed.ncbi.nlm.nih.gov/31401246/","version":"Egro et al. 2020, PMID 31401246","access":"abstract-only","readScope":"Original PubMed-indexed abstract via search result after direct page challenge; methods/results for 56 responses and 133 laceration events; full paper/tables not read."},
+    {"id":"padgett","url":"https://products.integralife.com/file/products/padgett-electric-dermatome-models-b-and-pi-ifu-rev-fab.pdf","version":"Integra Padgett Electric Dermatome Models B and PI guide, direct PDF access denied (403)","access":"relevant-sections","readScope":"Manufacturer-authored guide text through https://manualzz.com/doc/69757785/integra-padgett%C2%AE-electric-dermatome-models-b-and-pi-bedie...; relevant specifications, clip inventories, voltage/reprocessing/maintenance sections only. Current official PDF and whole IFU not obtained."},
+    {"id":"zimmer-catalog","url":"https://www.zimmerbiomet.com/content/dam/zb-corporate/en/products/specialties/surgical/skin-grafting/0059.5-US-en-Skin%20Grafting%20Family%20Brochure.pdf","version":"Zimmer Biomet 2022 skin-grafting family brochure, six pages","access":"full-text","readScope":"All six PDF pages in extracted text; product ranges, plates, power and annual service. Not the current model-specific IFU."},
+    {"id":"zimmer-recall","url":"https://www.igj.nl/site/binaries/site-content/collections/documents/fsn-2026/02/03/zimmer-surgical-inc-zfa-2025-00141-zimmer-air-dermatome-and-zimmer-dermatome-an/fame-2512-00764-zimmer-surgical-inc-zfa-2025-00141-zimmer-air-dermatome-and-zimmer-dermatome-an-phase-2.pdf","version":"Zimmer Surgical ZFA-2025-00141 phase 2, 23 January 2026","access":"relevant-sections","readScope":"Original 17-page manufacturer PDF hosted by Dutch regulator: front matter, risks, hospital/surgeon actions and affected-list header; not every serial row or local inventory. Phase-1 front matter/actions also checked."},
+    {"id":"skin-prior","url":"https://doi.org/10.1016/j.burns.2017.02.010","version":"McBride 2017 and September 12 skin-graft source review","access":"prior-review","readScope":"Reused documented original abstract-based thickness variability and donor/setting caveats, with no new full-text claim.","reusedFrom":"reports/2026-09-12/skin-graft-review.md"}
+  ],
+  "pages": [
+    {
+      "file":"docs/01-foundations/tools/instruments/graft-harvest/dermatome.mdx",
+      "sourceSha256":"90521d804928860f920213aa0c9a94e4ba48daf825da94dc753ae4c8a5500756",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete current and final 136-line overview, all sections, tables, links and 10 references; no embedded media/dataset.",
+      "coverage":{"evaluation":"Indications as examples, not ranked GU prevalence.","treatment":"Harvest and graft-selection teaching retained; universal default thickness narrowed.","numbers":"Dargan ICC and McBride variability scoped; other numeric ranges not fully original-verified.","doseDeviceSafety":"No universal calibration test or model-independent IFU claim; device-specific instructions open.","anatomyTechnique":"Donor/recipient and graft-depth teaching reviewed, named operations not cleared.","followUp":"Healing time ranges remain contextual, not patient forecasts.","importedDataFigures":"No page figure, video or imported dataset.","references":"All 10 entries read; targeted original abstract/source access recorded.","currency":"2025 aperture study assessed; broader current device/procedure review incomplete."},
+      "claimChecks":[
+        {"claim":"Scalpel-blade passage validates actual harvested tissue thickness","sourceIds":["dargan"],"locator":"Original abstract Methods/Results: six device apertures, no tissue cut measurement","verdict":"corrected","note":"Now identifies aperture behavior only and retains manufacturer-specific checks."},
+        {"claim":"An intermediate graft is a universal genital/perineal default and a thicker graft always gives better cosmesis","sourceIds":["skin-prior"],"locator":"Prior skin-graft depth/donor review; current selection table","verdict":"corrected","note":"Choice and outcome now site- and technique-dependent."},
+        {"claim":"All ten original references and named GU procedures have full clinical verification","sourceIds":[],"locator":"Current reference list and linked procedure pages","verdict":"unresolved","note":"Most source full texts, IFUs and linked operations remain open."}
+      ],
+      "unresolvedClaims":["Obtain current model-specific IFUs and full graft-depth validation data.","Finish original sources behind donor/healing ranges and linked GU operation indications."],
+      "preservationReview":"Retained useful variant, harvest, donor, healing and history sections with all ten references; no media removed.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/dermatome-device-targeted-review.md"
+    },
+    {
+      "file":"docs/01-foundations/tools/instruments/graft-harvest/padgett-dermatome.mdx",
+      "sourceSha256":"e2dc4d64454975acf41ab77036f7a7bf612aea169e790f51f7fa7ec4b9bb417f",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete current and final 93-line Padgett page, comparison table, technique, history, links and six references; no embedded media/dataset.",
+      "coverage":{"evaluation":"GU uses treated as examples, not proven prevalence.","treatment":"Electric B/PI specifications and free-flap technique retained without device-superiority claim.","numbers":"Clip sizes and Egro denominators checked at recorded source depth; remaining numeric technique ranges open.","doseDeviceSafety":"Separated sterilizable handpiece cable from nonautoclavable power supply/wall cord; official current IFU inaccessible.","anatomyTechnique":"Breast-flap report not extrapolated as phalloplasty proof; technique details not clinically cleared.","followUp":"No patient-specific outcome claim; linked operations open.","importedDataFigures":"No page figure, video or imported dataset.","references":"All six entries read; Hattori full report and Padgett current official IFU open.","currency":"Current product revision/IFU and comparative utilization not confirmed."},
+      "claimChecks":[
+        {"claim":"Every Padgett component including wall cord/power supply can be autoclaved","sourceIds":["padgett"],"locator":"Manufacturer guide mirror: reprocessing warning and component list","verdict":"corrected","note":"Handpiece/attached cable distinct from power supply/wall cord; current official IFU remains required."},
+        {"claim":"Model B standard kit has 1–4-inch clips and all variants work with any wall supply","sourceIds":["padgett"],"locator":"Guide mirror model B/PI kit specifications and 120/230-V variants","verdict":"corrected","note":"Lists standard 2–4 B, 2–6 PI and optional 1-inch clips; voltage compatibility must be checked."},
+        {"claim":"Egro establishes Zimmer market share or Padgett's lower use and risk","sourceIds":["egro"],"locator":"Original indexed abstract Results, event-only denominators","verdict":"corrected","note":"Now identifies percentages among lacerations, not total utilization or comparative safety."},
+        {"claim":"Dargan validates a Padgett intraoperative graft-thickness calibration","sourceIds":["dargan"],"locator":"Original abstract Methods/Results: aperture blade test only","verdict":"corrected","note":"Replaced with manufacturer procedure and actual graft assessment."},
+        {"claim":"Padgett is more common/superior for free-flap de-epithelialization including phalloplasty","sourceIds":[],"locator":"Hattori 2020 reference is a breast technique report; no comparator accessed","verdict":"unresolved","note":"Published breast use retained; prevalence, superiority and phalloplasty extrapolation removed."}
+      ],
+      "unresolvedClaims":["Obtain current official Padgett B/PI model-specific IFU and verify all reprocessing/calibration steps; direct PDF returned 403.","Read complete Hattori technique and linked operative evidence before broader use claims."],
+      "preservationReview":"Retained design, applications, breast-flap technique, comparison, historical section and six references; corrected exact safety errors without blanking page.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/dermatome-device-targeted-review.md"
+    },
+    {
+      "file":"docs/01-foundations/tools/instruments/graft-harvest/zimmer-air-dermatome.mdx",
+      "sourceSha256":"6ca77e798a959221746181995421f4d0202909d2791f259fe2bfc49fa8b5af93",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete current and final 112-line Zimmer page, table, safety note, links and four inherited plus two added references; no embedded media/dataset.",
+      "coverage":{"evaluation":"Indications as examples, not ranked prevalence.","treatment":"Air model equipment and harvest teaching retained with device-specific caveats.","numbers":"Survey event denominator, brochure specifications, Dargan ICC and McBride variability scoped.","doseDeviceSafety":"Serial-specific Air/AN field action linked; current model IFU and local serial inventory not checked.","anatomyTechnique":"Harvest technique retained without survey-derived comparative-risk claims.","followUp":"Recall transition wording follows notice; no local disposition or patient outcome verified.","importedDataFigures":"No page figure, video or imported dataset; recall PDF serial rows not exhaustively read.","references":"Four inherited plus two added references read at documented scope.","currency":"2026 field notice found; full current labeling and ongoing recall status require follow-up."},
+      "claimChecks":[
+        {"claim":"Zimmer 71.6% and air 73.0% are market/utilization shares","sourceIds":["egro"],"locator":"Original indexed abstract Results: proportions among reported lacerations","verdict":"corrected","note":"Event denominators explicit; no comparative device/guard/setting risk inferred."},
+        {"claim":"A #15 blade test calibrates harvested graft thickness","sourceIds":["dargan"],"locator":"Original abstract aperture experiment on six dermatomes","verdict":"corrected","note":"Aperture check not tissue-thickness validation or replacement for service."},
+        {"claim":"Zimmer Air width plate/range and servicing details","sourceIds":["zimmer-catalog"],"locator":"Manufacturer brochure pages 2, 4–5","verdict":"supported","note":"Lists 1/2/3/4-inch kit, optional 1.5-inch plate, 0–0.030-inch nominal range and annual service; brochure not IFU."},
+        {"claim":"All Zimmer Air devices are recalled, or no depth-control action exists","sourceIds":["zimmer-recall"],"locator":"Original phase-2 notice front matter, risk, actions and affected-product header","verdict":"corrected","note":"Serial-specific Air/AN action with facility quarantine and distinct surgeon transition text; full serial roster not copied."},
+        {"claim":"All device- and procedure-specific claims are clinically cleared","sourceIds":[],"locator":"Current device IFU, unreviewed full studies/figures and linked GU procedures","verdict":"unresolved","note":"Manufacturer brochure and partial original source access do not establish complete clearance."}
+      ],
+      "unresolvedClaims":["Obtain current Zimmer Air/AN IFUs and check actual institution device serials against complete recall roster and manufacturer instructions.","Read Egro and Dargan complete manuscripts/tables/figures before risk or calibration claims; finish linked operative source packages."],
+      "preservationReview":"Retained device mechanics, graft settings, GU uses, survey signal, operative pearls, comparisons and history; added serial-specific warning and two references. No media removed.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/dermatome-device-targeted-review.md"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "batchId": "2026-09-21-conservative-ui-therapy",
+  "reviewedAt": "2026-09-21",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {"id":"aua-oab","url":"https://onlinelibrary.wiley.com/doi/full/10.1002/nau.25532","version":"AUA/SUFU idiopathic OAB 2024 journal text","access":"relevant-sections","readScope":"Full HTML Table 1, statements 10-14 and 23-25 and adjacent rationale; underlying unabridged evidence tables not read.","reusedFrom":"reports/2026-09-20/sol-high-oab-pilot.md and reports/2026-09-20/oab-treatment-database-review.md for existing OAB source framework"},
+    {"id":"nice-ui","url":"https://www.nice.org.uk/guidance/ng123/chapter/recommendations","version":"NICE NG123 indexed current recommendations 1.4.7-1.4.14","access":"relevant-sections","readScope":"Official indexed recommendation text and guideline PDF search excerpts; direct HTML open failed, full supporting evidence not read."},
+    {"id":"opal","url":"https://www.bmj.com/content/371/bmj.m3719","version":"Hagen et al BMJ 2020 OPAL trial","access":"relevant-sections","readScope":"Publisher-indexed full HTML abstract, eligibility, intervention, main results, discussion and Table 1/Figure 1 captions; table cells, figure pixels and supplement not inspected."},
+    {"id":"yu","url":"https://www.nature.com/articles/s41598-024-78358-7.pdf","version":"Yu et al Sci Rep 2024 14:26957","access":"relevant-sections","readScope":"Publisher main PDF relevant pp.1-4 and full HTML methods, taxonomy, main pooled results, confidence and figure captions; complete PDF, supplement S1-S6 and figure pixels not independently inspected."},
+    {"id":"cochrane-sui","url":"https://pubmed.ncbi.nlm.nih.gov/29271482/","version":"Stewart et al Cochrane 2017 CD012390","access":"abstract-only","readScope":"Original indexed abstract comparisons/certainty; full review tables not accessed."},
+    {"id":"pride","url":"https://pubmed.ncbi.nlm.nih.gov/19179316/","version":"Subak et al NEJM 2009 PRIDE","access":"abstract-only","readScope":"Original abstract population, main endpoint and stress/urge subgroup; original full tables/supplement pending."},
+    {"id":"goode","url":"https://pubmed.ncbi.nlm.nih.gov/21224456/","version":"Goode et al JAMA 2011","access":"abstract-only","readScope":"Original persistent post-prostatectomy study abstract and primary comparative reductions; PMC full text not read here."}
+  ],
+  "pages": [
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx",
+      "sourceSha256":"228db2b399bfb97e71d85c490d3c21712d2c773e45e5c36a2f740c78cf495d77",
+      "status":"updated","fullTextRead":true,
+      "readScope":"Complete current MDX, behavioral protocol/evidence/comparison tables, all twelve inherited references; no local clinical imports or media.",
+      "clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "coverage":{"evaluation":"OAB versus SUI indication checked against AUA and NICE; other phenotype evidence open.","treatment":"AUA bladder-training offer and NICE duration checked; sample intervals individualized.","numbers":"Burgio 1998 original abstract and PRIDE primary abstract checked; remaining trial full tables open.","doseDeviceSafety":"No drug doses/device specifications; retention/pain caution maintained.","anatomyTechnique":"Urge suppression practical teaching retained; not a device or anatomy page.","followUp":"NICE minimum six weeks; 8-12-week practical example not a mandate.","importedDataFigures":"No local imports, figures or media.","references":"All 12 inherited retained and PRIDE/NICE primary links added; inherited complete sources open.","currency":"AUA/SUFU 2024 and current indexed NICE recommendations checked; later trial sweep not exhaustive."},
+      "claimChecks":[
+        {"claim":"Bladder training is offered for OAB and duration is a fixed 3-4-hour 8-12-week regimen","sourceIds":["aua-oab","nice-ui"],"locator":"AUA statement 11 and NICE NG123 1.4.11","verdict":"corrected","note":"Offer to OAB; NICE urges at least six weeks for urgency/mixed UI; long intervals remain individualized examples."},
+        {"claim":"PRIDE 47% vs 28% applies equally to stress and urgency UI","sourceIds":["pride"],"locator":"Original abstract 338 overweight/obese women at six months, subgroup outcome","verdict":"corrected","note":"Overall endpoint confirmed; significant difference stress, not urgency subgroup."},
+        {"claim":"All Burgio 1998/2002 and combination-trial numerical/urodynamic claims","sourceIds":[],"locator":"Original full trials and tables not read in this cluster","verdict":"unresolved","note":"Read complete original results and comparator definitions before clearance."}
+      ],
+      "unresolvedClaims":["Read Burgio 1998/2002 complete original numerical/urodynamic tables, combination-trial methods and Funada 2024 supplement; check inherited claims against population and endpoints."],
+      "preservationReview":"Every heading, protocol, evidence table and twelve inherited references retained; one trial and one guideline citation added; no figures/media existed.","reviewCheck":"passed","reviewRecord":"reports/2026-09-20/conservative-ui-therapy-targeted-review.md"
+    },
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx",
+      "sourceSha256":"d40ceabe62845d9c8784f9a406a6efd4c9ab3b1ac623a0f96bc5f1e4631c517e",
+      "status":"updated","fullTextRead":true,
+      "readScope":"Complete current MDX, phenotype, biofeedback and evidence tables, all 37 inherited references; no local imports, figures or media.",
+      "clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "coverage":{"evaluation":"Low/high-tone phenotype and OAB cross-context read; IC/BPS guideline previously checked, other pain sources open.","treatment":"OPAL routine feedback and NICE unable-to-contract exception checked; remaining indications unadjudicated.","numbers":"OPAL primary n=600 and 24-month result checked, Goode 2011 abstract; early post-RP and FI figures open.","doseDeviceSafety":"No device IFU; PT adverse/contraindication advice retained with route-specific source gaps.","anatomyTechnique":"Manual therapy, contraction and relaxation teaching retained, IC/BPS guidance prior review reused.","followUp":"24-month OPAL endpoint checked; other follow-up trials open.","importedDataFigures":"No local imports, figures or media; OPAL figure captions only.","references":"All 37 inherited references retained, NICE added; many full packages open.","currency":"NICE current and OPAL original checked; full condition-specific source currency remains open."},
+      "claimChecks":[
+        {"claim":"OPAL showed negligible EMG biofeedback benefit for female SUI/UUI/mixed UI","sourceIds":["opal"],"locator":"OPAL eligibility excluded urgency-only UI and women unable to contract; main ICIQ-UI SF at 24 months","verdict":"corrected","note":"Stress/mixed population only; −0.09, 95% CI −0.92 to 0.75; cannot generalize to isolated UUI or inability to contract."},
+        {"claim":"Persistent post-RP behavioral plus ES/biofeedback improves versus behavioral only","sourceIds":["goode"],"locator":"Goode 2011 abstract comparative episode reductions","verdict":"supported","note":"Existing no-added-benefit row retained; 55% versus 51% reduction, separate from early recovery claims."},
+        {"claim":"Other pelvic-pain/POP/FI/early-RP efficacy rankings and exact figures","sourceIds":[],"locator":"POPPY, Morin, early-RP network, GI guidance full packages not read","verdict":"unresolved","note":"Do not extrapolate OPAL; read original outcome tables and relevant guidelines per phenotype."}
+      ],
+      "unresolvedClaims":["Read OPAL full secondary tables/supplement and pelvic-pain, POP, FI, postpartum and early post-prostatectomy primary outcomes; reconcile biofeedback ranking and long-term endpoints."],
+      "preservationReview":"All phenotype/core-component sections, tables and 37 inherited citations retained; corrected only OPAL scope and downstream conclusion, NICE added; no media existed.","reviewCheck":"passed","reviewRecord":"reports/2026-09-20/conservative-ui-therapy-targeted-review.md"
+    },
+    {
+      "file":"docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation.mdx",
+      "sourceSha256":"8f178df3cbf0e201136cf7a3c79827703858a5de5053eb387649f398ec78bedf",
+      "status":"updated","fullTextRead":true,
+      "readScope":"Complete current MDX, modalities/parameters, indications, safety and guideline tables, all 28 inherited references; no local clinical imports, figures or media.",
+      "clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "coverage":{"evaluation":"Female SUI versus OAB versus male post-RP/FI scopes separated; latter original packages open.","treatment":"AUA 2024 PTNS non-step framework, NICE contrary TTNS/ES and Yu six-class network checked.","numbers":"Yu 30 RCT/2447 and comparative estimates checked in original main paper; inherited other meta/trial figures open.","doseDeviceSafety":"Incorrect universal exclusions and current ceilings demoted; actual route/model IFUs all open.","anatomyTechnique":"PTNS illustrative placement and pelvic/afferent teaching retained; source-specific current needle/device instructions pending.","followUp":"Typical schedules retained as study examples; efficacy durability and maintenance model-dependent.","importedDataFigures":"No local imports/media; Yu figure captions read, pixels and supplements not inspected.","references":"All 28 inherited references retained and AUA/NICE added; complete older original packages open.","currency":"2024 AUA/NICE current indexed guidance and Yu 2024 reviewed; device IFUs open."},
+      "claimChecks":[
+        {"claim":"Yu 30-RCT meta identifies five including magnetic stimulation and proves PTNS best OAB modality","sourceIds":["yu"],"locator":"Main PDF pp.2-5 taxonomy, symptom/QoL network results and limitations","verdict":"corrected","note":"Six electrical classes, no magnetic chair; female UI populations heterogeneous, 2447 participants, moderate-low confidence."},
+        {"claim":"PTNS requires prior behavioral/drug failure as third-line OAB care","sourceIds":["aua-oab"],"locator":"2024 statements 23-25 and therapy Table 1","verdict":"corrected","note":"PTNS minimally invasive, may be offered by shared decision without required prior steps."},
+        {"claim":"ES/sham/PFMT comparative certainty uniform and all ES additions routine","sourceIds":["cochrane-sui","nice-ui"],"locator":"Cochrane original abstract comparative outcomes; NICE 1.4.7-1.4.10","verdict":"corrected","note":"Certainty varies by endpoint; NICE opposes routine addition, allows inability-to-contract use."},
+        {"claim":"Grade-II POP, neurogenic UI and any GU surgery within six months universally contraindicate all listed devices","sourceIds":["nice-ui"],"locator":"NICE indications versus inherited review eligibility; full device labeling unavailable","verdict":"corrected","note":"No source supports universal list; changed to device/route-specific screening without declaring any particular IFU cleared."},
+        {"claim":"Specific pulse, current, needle and absolute safety rules across devices","sourceIds":[],"locator":"Representative current manufacturer IFUs and original protocol tables not obtained","verdict":"unresolved","note":"Teaching retained as illustrative only, model labels and exact settings require separate primary reconciliation."}
+      ],
+      "unresolvedClaims":["Obtain representative current intravaginal/surface/magnetic/PTNS IFUs and compare precautions, contraindications, pulse/needle parameters; read Yu supplementary Tables S1-S6 and relevant figure pixels, Cochrane full outcome/AE tables and post-RP/FI/magnetic originals."],
+      "preservationReview":"All modality/parameter, efficacy, magnetic, safety and guideline sections and 28 inherited citations retained; no images/video existed. Erroneous universal list rewritten into individualized screening, two primary guidelines added.","reviewCheck":"passed","reviewRecord":"reports/2026-09-20/conservative-ui-therapy-targeted-review.md"
+    }
+  ]
+}

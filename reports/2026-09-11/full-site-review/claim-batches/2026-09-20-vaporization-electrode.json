@@ -1,0 +1,33 @@
+{
+  "batchId": "2026-09-20-vaporization-electrode",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"eau-luts","url":"https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management","version":"EAU Non-neurogenic Male LUTS online 2026","access":"relevant-sections","readScope":"Complete relevant online §§5.3.1.a and 5.3.3.a passages read, including evidence, limitations and recommendation; not whole guideline, figures or underlying RCTs."},
+    {"id":"nice-button","url":"https://www.nice.org.uk/advice/mib274/chapter/Clinical-and-technical-evidence","version":"NICE MIB274 technology evidence","access":"indexed-excerpts","readScope":"Indexed source excerpt of Zheng study design and evidence summary only; direct HTML and PDF both returned access errors. No full NICE page/table or manufacturer instruction accessed."},
+    {"id":"zheng","url":"https://pubmed.ncbi.nlm.nih.gov/31839744/","version":"Zheng et al. 2019 systematic review","access":"abstract-only","readScope":"Complete indexed abstract and selected publisher PDF search excerpts read; no complete article, forest plots, tables or supplements."},
+    {"id":"lotfy","url":"https://pubmed.ncbi.nlm.nih.gov/42018529/","version":"Lotfy et al. 2026 single-center RCT","access":"abstract-only","readScope":"Complete indexed abstract read, including 72-person randomization and 1–12-month outcomes; no full paper, tables or supplements."},
+    {"id":"poulakis","url":"https://pubmed.ncbi.nlm.nih.gov/15217438/","version":"Poulakis et al. 2004 historical electrovaporization meta-analysis","access":"abstract-only","readScope":"Complete indexed abstract read; no full paper or trial tables."},
+    {"id":"huang","url":"https://www.bmj.com/content/367/bmj.l5919","version":"Huang et al. 2019 network meta-analysis","access":"indexed-excerpts","readScope":"Indexed article abstract and relevant discussion excerpt read; direct full BMJ page returned 403, figures/supplements not read."}
+  ],
+  "pages": [
+    {
+      "file":"docs/01-foundations/tools/instruments/endoscopy/vaporization-electrode.mdx",
+      "sourceSha256":"1e8e8c944de58cffe907bd00498ef265160109213dcf6323352c5c9d873404d8",
+      "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+      "readScope":"Complete original, edited and final MDX, all principle/geometry/device/outcome/comparison/safety tables, 20 inherited and two added references, and links; no page figure, import or video declaration.",
+      "coverage":{"evaluation":"TUVP role and historical alternatives checked against EAU; no patient-specific anticoagulation protocol certified.","treatment":"EAU weak 30–80 mL bipolar-TUVP alternative framed against TURP; no universal hybrid preference.","numbers":"Zheng design/count and Lotfy 12-month endpoints corrected; old precise device outcome tables remain unverified and were narrowed.","doseDeviceSafety":"Removed transferable wattage/drag settings, unjustified thermal safety guarantee and false surface/current-density claim; exact electrode/generator IFUs pending.","anatomyTechnique":"Experimental geometry and chip-retrieval concepts preserved with model/era qualifiers.","followUp":"Modern bipolar durability gap and limits of historical ten-year comparisons identified.","importedDataFigures":"No imported clinical dataset, page figure or video declaration; source forest plots/tables/animal images not accessed.","references":"All 20 inherited references preserved; EAU and NICE sources added. Full legacy primary papers and exact device IFUs unresolved.","currency":"EAU 2026 online relevant sections and Lotfy 2026 abstract checked; current manufacturer IFUs and anticoagulation evidence packages open."},
+      "claimChecks":[
+        {"claim":"Eleven Zheng studies were all RCTs and lower overall complications prove advantage over bipolar TURP","sourceIds":["zheng","nice-button","eau-luts"],"locator":"Zheng abstract; NICE indexed study-design excerpt; EAU §5.3.3.a","verdict":"corrected","note":"Nine RCTs plus two nonrandomized studies; only three bipolar-TURP comparators, with nonsignificant subgroup differences not equivalence."},
+        {"claim":"Any vaporization electrode warrants a fixed 200–300 W/drag recipe and larger surface intrinsically raises current density","sourceIds":["eau-luts"],"locator":"EAU bipolar system-specific mechanism and historical study context","verdict":"corrected","note":"Experimental settings no longer read as instructions; local energy depends on geometry and generator/irrigation, with exact IFUs pending."},
+        {"claim":"Historical Hoekstra outcomes and Lotfy 12-month nonsignificant differences establish modern bipolar ten-year durability or TURP superiority","sourceIds":["lotfy","huang","poulakis","eau-luts"],"locator":"Lotfy abstract; Huang indexed text; Poulakis abstract; EAU §5.3.3.a","verdict":"corrected","note":"Era, comparator, follow-up and statistical-significance limits made explicit; no modern ten-year estimate claimed."},
+        {"claim":"Anticoagulation always favors vaporization, one experiment proves heating safe, pure vaporization preserves incidental cancer detection","sourceIds":["eau-luts"],"locator":"EAU §5.3.3.a limitations and §5.3.1.a bipolar circuit discussion","verdict":"corrected","note":"Removed blanket selection and safety claims; pure vaporization has no specimen from vaporized tissue, and individualized risk/source checks remain."},
+        {"claim":"All legacy device outcome rates, model compatibility and temperature experiment have complete source verification","sourceIds":["eau-luts","nice-button"],"locator":"Current guideline relevant sections and indexed evidence only","verdict":"unresolved","note":"Full legacy papers, model IFUs, tables and figures not accessed; page remains partial."}
+      ],
+      "unresolvedClaims":["Read exact electrode/generator IFUs and model compatibility before device-specific settings.","Reconcile complete Narayan, Lim, Wolf, Ishikawa, Patel, Kaplan, Gallucci, Gupta, Küpeli, Hoekstra and Lotfy papers/tables before restoring precise legacy outcomes or preferred-device claims."],
+      "preservationReview":"All electrosurgical principle, geometry, historical device-family, vaporesection, outcome, comparison, safety and bibliography sections retained; all inherited references preserved, with overclaims scoped rather than blanked.",
+      "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/vaporization-electrode-targeted-review.md"
+    }
+  ]
+}

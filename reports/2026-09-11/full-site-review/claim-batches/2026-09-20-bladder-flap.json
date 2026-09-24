@@ -1,0 +1,55 @@
+{
+  "batchId": "2026-09-20-bladder-flap",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"recovery","url":"reports/2026-09-20/bladder-flap-recovery-review.md","version":"September 20 recovery inventory","access":"prior-review","readScope":"Prior limited anatomy/abstract scope and gap index only; superseded blanket removal did not verify the restored technical page.","reusedFrom":"reports/2026-09-20/bladder-flap-recovery-review.md"},
+    {"id":"ureter-anatomy","url":"reports/2026-09-20/ureter-anatomy-targeted-review.md","version":"September 20 ureter-anatomy review","access":"prior-review","readScope":"Reused only its recorded refluxing extravesical anastomosis scope; not a full Boari review.","reusedFrom":"reports/2026-09-20/ureter-anatomy-targeted-review.md"},
+    {"id":"acs-2025","url":"https://www.facs.org/media/ya5hcu0s/genitourinary_guidelines.pdf","version":"ACS 2025 Best Practices Guidelines: Management of Genitourinary Injuries","access":"relevant-sections","readScope":"Official 78-page PDF, ureter injury repair text at approximately PDF pp. 46–48 and figure caption read; actual figure not visually inspected; remaining guideline sections unread."},
+    {"id":"bai-2021","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7890060/","version":"Bai et al. Scientific Reports 2021 original open article","access":"full-text","readScope":"Main abstract, methods and operation, baseline Table 1, results, discussion and limitations read; operative/CT figure captions read, actual figure images not inspected; no supplement verified."},
+    {"id":"manassero-2012","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3417182/","version":"Manassero et al. 2012 original open article","access":"abstract-only","readScope":"Original open article abstract and reported 24-person imaging endpoint checked; complete operative text, tables and figures not reviewed."},
+    {"id":"hardesty-2024","url":"https://pubmed.ncbi.nlm.nih.gov/38369201/","version":"Hardesty et al. Urology 2024","access":"abstract-only","readScope":"Original indexed methods/results: 29 women, 18 concurrent hitch, eight LUTS, five recurrent UTI, two strictures; full paper/tables unread."},
+    {"id":"mauck-2011","url":"https://pubmed.ncbi.nlm.nih.gov/21855904/","version":"Mauck et al. J Urol 2011","access":"abstract-only","readScope":"Original indexed abstract: 29 procedures, 20 Boari flaps, 83% proximal is flap use rather than success, group failure 17% vs 12%; full paper/tables unread."},
+    {"id":"corse-2023","url":"https://pubmed.ncbi.nlm.nih.gov/37128188/","version":"Corse et al. J Endourol 2023","access":"abstract-only","readScope":"Original indexed abstract: 45/50 success, five failures within two months, median follow-up 15 months; full paper and definitions/tables unread."},
+    {"id":"li-2014","url":"https://pubmed.ncbi.nlm.nih.gov/24767531/","version":"Li et al. Urology 2014","access":"abstract-only","readScope":"Original technical-considerations abstract on superior vesical pedicles, S-cut, flap width/length and adjuncts; full operative figures and outcomes unread."},
+    {"id":"chen-2016","url":"https://pubmed.ncbi.nlm.nih.gov/26235701/","version":"Chen et al. Neurourol Urodyn 2016","access":"abstract-only","readScope":"Original 18-patient rotational bladder/peritoneal series abstract, 17 closures, one reimplantation and mean 20-month follow-up; full paper unread."},
+    {"id":"ezzat-2009","url":"https://pubmed.ncbi.nlm.nih.gov/19152944/","version":"Ezzat et al. J Urol 2009","access":"abstract-only","readScope":"Original 35-patient giant-VVF series abstract: 31/35 primary repairs, 23 received additional interposition; full surgical paper unread."},
+    {"id":"sharifiaghdas-2012","url":"https://pubmed.ncbi.nlm.nih.gov/22840600/","version":"Sharifiaghdas and Taheri 2012","access":"abstract-only","readScope":"Original 10 recurrent mixed trigonal/supratrigonal VVF cases, nine closures; full operative paper unread."},
+    {"id":"patidar-2021","url":"https://pubmed.ncbi.nlm.nih.gov/33026468/","version":"Patidar et al. Int Urogynecol J 2021","access":"abstract-only","readScope":"Original 22-patient female outlet cohort abstract: 18 socially dry, 15 fully continent, two self-calibration; full technique unread."}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/surgical-principles/flaps/bladder-flap.mdx",
+    "sourceSha256": "c5ca8df8690a0bb804e8fb0cac478fcb40d3b7aaeb35f8a9ab274b068f55f6e2",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete restored 189-line MDX including two clinical cohort tables, comparison table, 18 inherited references and links; no local figure, embedded operative media or imported dataset.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Tension-free selection and reach qualified by bladder capacity/mobility; complete primary selection criteria still open.",
+      "treatment": "Psoas hitch distinguished from actual flap and Boari anastomosis/tubularization sequence corrected; alternative reconstructions retained but original operative packages incomplete.",
+      "numbers": "Mauck treatment share versus success corrected, distinct Manassero/Corse/Hardesty/Bai endpoints and denominators clarified; several inherited comparative figures remain to reconcile.",
+      "doseDeviceSafety": "No drug dosing or manufacturer IFU; stented-repair technical risks and alternate refluxing anastomosis not fully verified.",
+      "anatomyTechnique": "ACS ureter text and Bai main technical text read; actual operative figures and vascular/anatomy variants not inspected.",
+      "followUp": "Corse 15-month and Bai 18.5-month median and Hardesty 22.3-month mean from source; long-term comparative durability unresolved.",
+      "importedDataFigures": "No page figure or imported data. ACS and Bai figure captions read, underlying images not inspected; no supplements established.",
+      "references": "All 18 inherited entries inspected; duplicate Xiong citation retained pending full-source reconciliation, source-specific primary abstracts and one main open article checked.",
+      "currency": "ACS 2025 ureter injury text reviewed, not entire guideline or a full current literature survey; unresolved for other use domains."
+    },
+    "claimChecks": [
+      {"claim":"Psoas hitch is itself a tubularized bladder flap and all variants always sacrifice reservoir capacity","sourceIds":["acs-2025","bai-2021"],"locator":"ACS ureter injury repair text; Bai Surgical procedure","verdict":"corrected","note":"Separated bladder mobilization/hitch from actual bladder-wall tubularized flap and scoped potential capacity impact."},
+      {"claim":"Boari flap is tubularized around the ureteral stump and requires submucosal anti-reflux tunneling","sourceIds":["bai-2021","ureter-anatomy"],"locator":"Bai Surgical procedure paragraph four; prior documented refluxing-anastomosis scope","verdict":"corrected","note":"Ureter-to-flap apex anastomosis then tubularization over stent; anti-reflux tunnel optional in cited examples."},
+      {"claim":"Mauck 2011 reports Boari success 83% proximal and 88% distal","sourceIds":["mauck-2011"],"locator":"PubMed abstract Results: 10/12 proximal received Boari and 10/17 distal; 17%/12% overall failure across 29 reconstructions","verdict":"corrected","note":"83% is use rate, not success; 88% was complement of distal group failure, not separate Boari success."},
+      {"claim":"Manassero 91.6% represents the same success endpoint as ACS and Corse","sourceIds":["manassero-2012","corse-2023","acs-2025"],"locator":"Manassero original abstract imaging in 22/24 and no reinterventions; Corse original abstract 45/50 success at median 15 months","verdict":"corrected","note":"Endpoint-specific outcomes now labeled rather than pooled; longer-term durability incomplete."},
+      {"claim":"Hardesty's 27.6% LUTS and 17% recurrent UTI apply to every bladder-flap technique","sourceIds":["hardesty-2024"],"locator":"PubMed original abstract Methods and Results","verdict":"corrected","note":"Scoped to 29 women after Boari flap at one institution, 18 also with hitch; 8 new LUTS, five recurrent UTI, two strictures."},
+      {"claim":"Bai 9/10 stent removal is 90% durable success for all full-length defects","sourceIds":["bai-2021"],"locator":"Abstract, Table 1, Results and Discussion, including one nephrectomy","verdict":"corrected","note":"Nine stents removed by six months, one later ipsilateral nephrectomy; seven full-length/three upper reported but baseline lengths and some follow-up descriptions inconsistent."},
+      {"claim":"Rotational VVF series yield pooled 88–94% guaranteed success and Patidar establishes broadly reliable outlet outcomes","sourceIds":["chen-2016","ezzat-2009","sharifiaghdas-2012","patidar-2021"],"locator":"Each original indexed Methods/Results abstract","verdict":"corrected","note":"Retained distinct small cohorts and exact denominators; no pooled estimate or generalized guarantee."},
+      {"claim":"All vascular, selection, technique, figure, endpoint and currency claims are fully verified","sourceIds":["recovery","acs-2025","bai-2021"],"locator":"Complete restored page versus prior gap inventory and bounded primary access","verdict":"unresolved","note":"Most original technical full texts/figures and other domains remain unread; accessible guideline excerpt is trauma-specific."}
+    ],
+    "unresolvedClaims": ["Obtain full Hardesty, Mauck, Corse, Dell'Oglio, Riedmiller and Manassero papers/tables/figures for endpoints, selection, morbidity and technical details; do not extrapolate across cohorts.","Inspect Bai actual operative and imaging figures and reconcile its inconsistent defect-length/follow-up descriptions; inspect relevant ACS ureter injury figure and any supplement.","Read Li spiral-flap and Zhong Boari-plus-ileal full operative source packages and figures for pedicle, length, alternatives and outcomes.","Read full Ezzat, Chen, Sharifiaghdas and Patidar technique/figure packages; confirm trigonal/ureteral-orifice avoidance, interposition and female-outlet claims.","Resolve vascular terminology/Uebelhoer technique, fixed reach statements and duplicate Xiong reference with original anatomy and methods."],
+    "preservationReview": "Retained all operative variants, the outcomes/comparison tables, all 18 inherited references and navigation. Corrected endpoint/category errors and overgeneralizations without deleting useful technique teaching or adding an audit notice.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/bladder-flap-targeted-review.md"
+  }]
+}

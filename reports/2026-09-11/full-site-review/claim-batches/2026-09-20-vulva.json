@@ -1,0 +1,52 @@
+{
+  "batchId": "2026-09-20-vulva",
+  "reviewedAt": "2026-09-20",
+  "model": "Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort": "current task setting not exposed to audit record",
+  "sources": [
+    {"id":"prior-recovery","url":"reports/2026-09-20/vulva-recovery-review.md","version":"September 20 recovery report","access":"prior-review","readScope":"Attributed accessible NCBI Bookshelf vulva/pelvic examination/reconstruction anatomy reviews. No inherited operative, oncology or pain source clearance.","reusedFrom":"reports/2026-09-20/vulva-recovery-review.md"},
+    {"id":"esgo-vulva","url":"https://guidelines.esgo.org/media/2023/06/Pocket-Guidelines_VULVAR-cancer.pdf","version":"ESGO 2023 vulvar cancer pocket guideline","access":"relevant-sections","readScope":"Opened 20-page PDF; read local/groin/SLN recommendations pp. 9–11; rest not fully reviewed.","reusedFrom":""},
+    {"id":"perineal-anatomy","url":"https://www.ncbi.nlm.nih.gov/books/NBK542289/","version":"Fahmy et al. Bookshelf 2022 update","access":"relevant-sections","readScope":"Read authorship, fascial boundaries/continuity, surgical and female anatomy sections; full references not read.","reusedFrom":""},
+    {"id":"reconstructive-review","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3312145/","version":"Original reconstructive anatomy review","access":"indexed-excerpts","readScope":"Indexed excerpt on thigh attachment and anterior abdominal spread; direct full PMC access challenged.","reusedFrom":""},
+    {"id":"bartholin-review","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12691067/","version":"2025 Bartholin gland carcinoma review","access":"indexed-excerpts","readScope":"Indexed diagnostic warning for persistent, progressive or solid/atypical gland mass; full PMC text not read.","reusedFrom":""},
+    {"id":"acog-pain","url":"https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2016/09/persistent-vulvar-pain","version":"ACOG Committee Opinion 673, 2016","access":"relevant-sections","readScope":"Read official treatment and conclusion sections, including vestibulectomy after failed nonsurgical care; full references not read.","reusedFrom":""},
+    {"id":"local-image","url":"static/img/anatomy/gray589-female-external.png; static/img/anatomy/openstax-female-perineum.png","version":"Current local figures","access":"relevant-sections","readScope":"Visually viewed entire two local images and labels; licensing/original external provenance not adjudicated.","reusedFrom":""}
+  ],
+  "pages": [{
+    "file": "docs/01-foundations/anatomy-physiology/genitalia/female-external-genitalia.mdx",
+    "sourceSha256": "c2d13afdb6f59931681e8bf95b0267f62810833480ff6eb47501a4781e3064e6",
+    "status": "updated",
+    "fullTextRead": true,
+    "readScope": "Complete restored/current 186-line page, all structures, clitoral/nerve/fascial/oncology/reconstruction sections and 11 inherited references; viewed both local figure candidates. No imported clinical data or video.",
+    "clinicalVerificationComplete": false,
+    "auditDisposition": "partial",
+    "coverage": {
+      "evaluation": "Bartholin mass and localized vulvar pain triage narrowed; other vulvar diagnostic pathways open.",
+      "treatment": "ESGO groin and ACOG vestibulectomy scope checked; gland, SCC, LS, nerve and reconstructive treatments not fully adjudicated.",
+      "numbers": "ESGO <4-cm SLN selection checked; clitoral/labial dimensions, morbidity and outcome numbers open.",
+      "doseDeviceSafety": "No dose/device settings; corticosteroid regimen and oncologic/operative safety packages open.",
+      "anatomyTechnique": "Superficial fascial plane correction and image mismatch checked; clitoral, Martius and pudendal technical details open.",
+      "followUp": "Cancer, gland, pain and reconstruction follow-up not cleared.",
+      "importedDataFigures": "No imported clinical data/video. Mislabeled uterine-vessel image replaced with existing relevant perineal anatomy image; both viewed, original provenance open.",
+      "references": "All 11 inherited references retained; four focused sources appended. Full inherited source mapping open.",
+      "currency": "ESGO 2023 vulvar recommendations and ACOG 2016 pain sections checked; later/complete oncologic and operative guidance open."
+    },
+    "claimChecks": [
+      {"claim":"External genitalia image depicts vulva","sourceIds":["local-image"],"locator":"Local gray589 image labels uterine vessels/ovarian artery; replacement shows female perineal landmarks","verdict":"corrected","note":"Reused existing asset; no source image file deleted or edited."},
+      {"claim":"Near-midline vulvar cancer always requires bilateral complete inguinofemoral lymphadenectomy","sourceIds":["esgo-vulva"],"locator":"ESGO 2023 pocket pp. 10–11 groin and SLN recommendations","verdict":"corrected","note":"Bilateral evaluation distinguished from lymphadenectomy, with eligibility/failure conditions."},
+      {"claim":"Superficial perineal hematoma/infection tracks onto thigh/posteriorly but never reaches deeper tissue","sourceIds":["perineal-anatomy","reconstructive-review"],"locator":"Bookshelf fascial and surgical sections; original reconstructive indexed excerpt","verdict":"corrected","note":"Preserved anterior continuity, acknowledged attachments and infection that may cross compartments."},
+      {"claim":"Bartholin carcinoma is a retromolar mass with automatic radical excision and inguinal dissection","sourceIds":["bartholin-review"],"locator":"Indexed diagnostic criteria for solid/persistent/atypical gland mass","verdict":"corrected","note":"Specific anatomic typo and automatic treatment removed; full oncology package open."},
+      {"claim":"Vestibulectomy definitively restores normal sensory map in selected vestibulodynia","sourceIds":["acog-pain"],"locator":"ACOG treatment section after nonsurgical care and multidisciplinary conclusion","verdict":"corrected","note":"Surgical option retained without certainty, limited to tender tissue after other treatments."},
+      {"claim":"Remaining clitoral measurements, Martius technique, Bartholin/Skene, cancer, pain, LS, FGM/C, OASIS and gender-affirming surgery claims","sourceIds":["prior-recovery"],"locator":"Full current page and prior recovery gap record","verdict":"unresolved","note":"Substantive technical material preserved pending direct source work."}
+    ],
+    "unresolvedClaims": [
+      "Map clitoral neurovascular measurements, Martius vascular pedicles and harvest, fascial planes and exact genital measurements to original full anatomy/technical studies.",
+      "Review full vulvar SCC/Bartholin oncology guidance, pathology and treatment selection, including current version and complete groin algorithm.",
+      "Reconcile vestibulectomy, vulvar LS, gland infection, diverticulum, OASIS, FGM/C and gender-affirming reconstruction sources; avoid guaranteed outcomes.",
+      "Establish original source/licensing of reused figure and correct or retire the separately stored mismatched gray589 asset only after checking other consumers."
+    ],
+    "preservationReview": "Every substantive section/table, 11 inherited references, related links and image placement retained. Replaced only clinically mismatched figure with existing relevant asset and narrowed specific overclaims.",
+    "reviewCheck": "passed",
+    "reviewRecord": "reports/2026-09-20/vulva-targeted-review.md"
+  }]
+}

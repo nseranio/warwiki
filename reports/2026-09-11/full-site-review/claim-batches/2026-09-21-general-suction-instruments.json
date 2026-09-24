@@ -1,0 +1,194 @@
+{
+  "batchId": "2026-09-21-general-suction-instruments",
+  "reviewedAt": "2026-09-21",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "high",
+  "sources": [
+    {
+      "id": "conmed-current",
+      "url": "https://www.conmed.com/en/products/patient-monitoring-and-ems/suction-instruments-and-tubing",
+      "version": "Current CONMED suction product page, accessed 2026-09-21",
+      "access": "manufacturer-document",
+      "readScope": "Complete displayed Frazier, Poole and Yankauer descriptions and visible SKU sections read for model types, sizes, vent and sleeve differences; full individual IFUs unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "conmed-catalog",
+      "url": "https://www.conmed.com/en/-/media/conmed/documents/literature/suctioninstrumentstubing_productbrochure.ashx",
+      "version": "CONMED Suction Instruments and Tubing brochure 2024",
+      "access": "manufacturer-document",
+      "readScope": "Complete eight-page brochure and relevant product tables read for Frazier 3-18 Fr, obturator, vent exceptions, Baron/soft-tip types, Poole removable 132-eye sheath, Yankauer tip/vent variants and catalog numbers; not a full IFU.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "icrc-catalog",
+      "url": "https://itemscatalogue.redcross.int/detail.aspx?from=kit&itemcode=XSINMEDI098332",
+      "version": "ICRC/IFRC standard products catalogue, updated 2018",
+      "access": "manufacturer-document",
+      "readScope": "Complete relevant Frazier, Yankauer and Poole product specifications read for metal reusable-type configurations, geometry, removable Poole outer tube and abdominal use; no manufacturer reprocessing IFU.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "finke-bench",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9463842/",
+      "version": "Finke et al. 2022 full article",
+      "access": "full-text",
+      "readScope": "Complete abstract, methods, model dimensions, Table 1/2, Figure 1/2 captions, results, discussion and limitations read for four-fluid airway-suction technical simulation; no patient or urologic outcomes.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "nikolla-bench",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34006421/",
+      "version": "Nikolla et al. 2021 indexed record",
+      "access": "abstract-only",
+      "readScope": "Complete indexed abstract read for 45-trial laboratory comparison of standard Yankauer, commercial large-bore and makeshift ETT-meconium-aspirator devices across three fluid consistencies; full article unavailable.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "frazier-adjacent",
+      "url": "https://doi.org/10.1007/s00405-016-4368-8",
+      "version": "Lai et al. 2017 bibliographic record",
+      "access": "indexed-excerpts",
+      "readScope": "Article identity and adjacent-specialty septoplasty application checked; full article and tables unavailable, so no urologic operative-time extrapolation retained.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "kei-bench",
+      "url": "https://doi.org/10.1016/j.jemermed.2016.09.006",
+      "version": "Kei and Mebust 2017 bibliographic record",
+      "access": "indexed-excerpts",
+      "readScope": "Study identity and airway-simulation comparator checked; full results unavailable, so the prior exact 90 mL and universal-clog claims were not retained.",
+      "reusedFrom": ""
+    },
+    {
+      "id": "ellik-prior-review",
+      "url": "reports/2026-09-20/bladder-evacuation-instruments-targeted-review.md",
+      "version": "2026-09-21 completed Ellik/Toomey targeted review",
+      "access": "prior-review",
+      "readScope": "Reused the immediately preceding complete Bard IFU read and Ellik claim adjudication showing that no universal 80-100 mmHg figure was verified.",
+      "reusedFrom": "reports/2026-09-20/bladder-evacuation-instruments-targeted-review.md"
+    }
+  ],
+  "pages": [
+    {
+      "file": "docs/01-foundations/tools/instruments/suction/frazier.mdx",
+      "sourceSha256": "f64020e46f18d8af5ae01b0896da264b7cea0470f6b30843a3279d8822a2582d",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current design, vent, reconstructive uses, size table, technique, limitations, history, comparisons and all references; no local data figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Fine suction versus broader open-field and pooled-fluid roles distinguished.",
+        "treatment": "Named reconstructive applications retained as technical uses, not preferred-device outcome recommendations.",
+        "numbers": "Available 3-18 Fr range attributed to current CONMED products; unsupported procedure-size table removed.",
+        "doseDeviceSafety": "Vent exceptions, source regulation, tissue-capture risk and model-specific tubing/processing boundaries stated.",
+        "anatomyTechnique": "Fine tip and narrow-corridor rationale retained without claiming contact with fragile structures is safe.",
+        "followUp": "No device-driven operative-time or clinical outcome extrapolation.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Manufacturer product and brochure fully read; original history and adjacent papers remain access-limited.",
+        "currency": "Current CONMED models checked; individual full IFUs and primary history remain open."
+      },
+      "claimChecks": [
+        {
+          "claim": "All Frazier tips are vented, rigid and limited to 3-12 Fr",
+          "sourceIds": ["conmed-current", "conmed-catalog"],
+          "locator": "Current model list and brochure Frazier table",
+          "verdict": "corrected",
+          "note": "Vented, nonvented and soft-tip options through 18 Fr are identified as model-specific."
+        },
+        {
+          "claim": "An 8 Fr septoplasty finding proves shorter urologic procedures",
+          "sourceIds": ["frazier-adjacent"],
+          "locator": "Septoplasty article identity and scope",
+          "verdict": "corrected",
+          "note": "Adjacent-specialty example retained without urologic outcome extrapolation."
+        }
+      ],
+      "unresolvedClaims": ["Retrieve full original Frazier history and modification papers before detailed inventor/design lineage claims.", "Obtain full model IFUs and reprocessing/pressure/tubing limits.", "Find operative-field comparative data before superiority or procedure-caliber recommendations."],
+      "preservationReview": "Practical fine-suction uses, technique, adjacent instrument comparison and references retained; only unsupported universal geometry, fixed procedure-size and transferred outcome claims narrowed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/general-suction-instruments-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/suction/poole.mdx",
+      "sourceSha256": "a5f41624c7084d5892255e2c09b0ca5f8e69d6c3edf6f1fc141f17f525d4b012",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete short current page, design, use, Yankauer comparison and links; page originally had no references or local media.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "Pooled abdominal fluid indication verified for representative models.",
+        "treatment": "Abdominal/pelvic evacuation use retained; no universal device superiority inferred.",
+        "numbers": "132 sleeve eyes attributed only to CONMED single-use model.",
+        "doseDeviceSafety": "Perforated sleeve reduces but does not prevent tissue grab; reusable versus single-use processing model-specific.",
+        "anatomyTechnique": "Inner cannula/removable outer sleeve and focused versus sump use verified.",
+        "followUp": "No outcome or long-term claim present.",
+        "importedDataFigures": "No local data, figure or video.",
+        "references": "Current manufacturer brochure and ICRC/IFRC specifications added.",
+        "currency": "Representative single-use and reusable-type products checked; full IFUs remain open."
+      },
+      "claimChecks": [
+        {
+          "claim": "Perforations prevent all tissue capture",
+          "sourceIds": ["conmed-catalog", "icrc-catalog"],
+          "locator": "Poole design and intended-use sections",
+          "verdict": "corrected",
+          "note": "The sleeve reduces tissue grab but does not guarantee safety, especially retracted or under high suction."
+        }
+      ],
+      "unresolvedClaims": ["Obtain exact single-use and reusable model IFUs and validated processing instructions.", "No comparative patient-outcome study establishes superiority over Yankauer for specific pelvic operations."],
+      "preservationReview": "Entire existing instrument role and comparison retained and expanded with model-specific source, safety and reference details.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/general-suction-instruments-targeted-review.md"
+    },
+    {
+      "file": "docs/01-foundations/tools/instruments/suction/yankauer.mdx",
+      "sourceSha256": "df52ecb1acc74467cd5a7d697579dc69956f8a4401aaabcea8f8b5d7d624c53b",
+      "status": "updated",
+      "fullTextRead": true,
+      "readScope": "Complete current design, reconstructive uses, airway-bench performance table, limitations, instrument comparison, bottom line and all references; no local data figure or video.",
+      "clinicalVerificationComplete": false,
+      "auditDisposition": "partial",
+      "coverage": {
+        "evaluation": "General open-field versus fine and large-pool suction roles distinguished.",
+        "treatment": "Operative applications retained without universal tray or superior clinical-outcome claims.",
+        "numbers": "Unsupported 50-100% and 20-30% universal performance claims removed; Finke results scoped to three exact devices and four fluids.",
+        "doseDeviceSafety": "Bulb/open tip, vent/no-vent/switch, single-use and reusable examples attributed by model; tissue grab remains possible.",
+        "anatomyTechnique": "Airway bench flow not transferred to intravesical or delicate pelvic tissue use.",
+        "followUp": "No patient-outcome finding inferred from technical simulation.",
+        "importedDataFigures": "Finke source figure/table reviewed; no local data, figure or video.",
+        "references": "Full Finke article and current manufacturer documentation read; Nikolla/Kei full articles remain open.",
+        "currency": "Current CONMED configurations checked; complete IFUs and clinical operative comparisons outstanding."
+      },
+      "claimChecks": [
+        {
+          "claim": "Yankauer has one rigid bulb-tip and constant-on design",
+          "sourceIds": ["conmed-current", "conmed-catalog", "icrc-catalog"],
+          "locator": "Current Yankauer model list and representative reusable catalog row",
+          "verdict": "corrected",
+          "note": "Open/bulb tips and vented/nonvented/switch controls distinguished."
+        },
+        {
+          "claim": "Airway suction bench percentages establish broadly superior urologic performance",
+          "sourceIds": ["finke-bench", "nikolla-bench", "kei-bench"],
+          "locator": "Finke methods, results, tables and limitations; other indexed records",
+          "verdict": "corrected",
+          "note": "Quantitative universal claims removed; airway technical simulation not presented as urologic patient outcomes."
+        },
+        {
+          "claim": "Ellik has a universal 80-100 mmHg ceiling",
+          "sourceIds": ["ellik-prior-review"],
+          "locator": "Cross-device comparison against completed Ellik review",
+          "verdict": "corrected",
+          "note": "Unsupported value removed in consistency with the Ellik/Toomey batch; manufacturer source cannot establish it."
+        }
+      ],
+      "unresolvedClaims": ["Retrieve complete Nikolla and Kei bench articles beyond abstracts/indexed excerpts.", "Obtain full model IFUs and processing details, plus original Yankauer historical source.", "Find operative-field patient outcomes before reconstructive superiority claims."],
+      "preservationReview": "Reconstructive applications, device comparison, performance-literature context and references retained; universal dimensions, outcome transfer, false Ellik pressure and unsourced inventor specifics removed.",
+      "reviewCheck": "passed",
+      "reviewRecord": "reports/2026-09-20/general-suction-instruments-targeted-review.md"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "batchId":"2026-09-20-male-urethra",
+  "reviewedAt":"2026-09-20",
+  "model":"Codex desktop current task (model not exposed to audit record)",
+  "reasoningEffort":"current task setting not exposed to audit record",
+  "sources":[
+    {"id":"holstein-1991","url":"https://pubmed.ncbi.nlm.nih.gov/2054843/","version":"Holstein et al. 1991 original distal-male-urethra histology","access":"abstract-only","readScope":"Original indexed abstract, estrogen-exposure observation and histologic scope; full paper/images not read.","reusedFrom":""},
+    {"id":"juenemann-1988","url":"https://pubmed.ncbi.nlm.nih.gov/3275803/","version":"Juenemann et al. 1988 original cadaver/stimulation study","access":"abstract-only","readScope":"Original indexed methods/results abstract: three male cadavers, five neurologic patients and S3-stimulation result; full paper not read.","reusedFrom":""},
+    {"id":"basta-2007","url":"https://pubmed.ncbi.nlm.nih.gov/17222635/","version":"Basta et al. 2007 original single-center nested case-control study","access":"abstract-only","readScope":"Original indexed 119-man cohort, multivariable methods/results and millimeter association; full paper not read.","reusedFrom":""},
+    {"id":"eau-stricture","url":"https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males","version":"Current EAU male urethral stricture guidance, accessed 2026-09-20","access":"relevant-sections","readScope":"LS-related penile-stricture §6.3.1.e, recommendation and adjacent repair-selection paragraphs; entire chapter/underlying review not read.","reusedFrom":""},
+    {"id":"eau-trauma","url":"https://uroweb.org/guidelines/urological-trauma/chapter/urogenital-trauma-guidelines","version":"Current EAU Urological Trauma, accessed 2026-09-20","access":"relevant-sections","readScope":"Male posterior urethral injury §4.4.3 management, timing and recommendation table; underlying trials/figures not read.","reusedFrom":""},
+    {"id":"eau-male-luts","url":"https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts/chapter/disease-management","version":"Current EAU male LUTS disease management, accessed 2026-09-20","access":"relevant-sections","readScope":"§5.6.5 post-prostatectomy SUI sling/AUS indications and recommendation text; whole chapter/trials not read.","reusedFrom":""},
+    {"id":"gray-figure","url":"static/img/anatomy/gray1142-urethra.png","version":"Inherited Gray opened-male-urethra local diagram","access":"relevant-sections","readScope":"Actual image visually inspected at high detail; publication/license provenance not independently checked.","reusedFrom":""},
+    {"id":"lateral-figure","url":"static/img/anatomy/penis-lateral-cross-section.jpg","version":"Inherited lateral penile cross-section local diagram","access":"relevant-sections","readScope":"Actual image visually inspected at high detail; publication/license provenance not independently checked.","reusedFrom":""}
+  ],
+  "pages":[{
+    "file":"docs/01-foundations/anatomy-physiology/urinary-tract/male-urethra.mdx",
+    "sourceSha256":"e8c2237b1849258cc43805d1ad93065bd141286e94d8f2abf27f1b2f300d8b05",
+    "status":"updated","fullTextRead":true,"clinicalVerificationComplete":false,"auditDisposition":"partial",
+    "readScope":"Complete current and revised MDX, 16 inherited bibliography entries, both local images visually inspected and video ID inventoried; video content not watched.",
+    "coverage":{
+      "evaluation":"PFUI fracture-risk statistic cohort-scoped; other cancer, stricture and continence diagnostic claims unresolved.",
+      "treatment":"Current EAU trauma, stricture and male-LUTS recommendations checked in relevant sections; male LS estrogen therapy error corrected; full treatment packages open.",
+      "numbers":"S3 70% tied to five neurologic patients, PFUI 10% to 119-man model; fixed >100-cmH2O male MUCP cutoff withdrawn; inherited segment lengths/outcomes open.",
+      "doseDeviceSafety":"No estrogen regimen advised; AUS/sling choices qualified by severity and prior treatment. Device mechanism/safety studies not fully read.",
+      "anatomyTechnique":"Holstein histology retained without LS-treatment inference; phasic innervation and PFUI options narrowed; other vascular/nerve anatomy packages open.",
+      "followUp":"PFUI timing separated by injury type/stability; long-term stricture, continence and oncologic follow-up not cleared.",
+      "importedDataFigures":"Two local anatomy images visually inspected and retained, source/license provenance open; video card retained, content unverified.",
+      "references":"Sixteen inherited entries retained and four added; inherited ref15 is a female-urethra paper with no supported male claim; full source package open.",
+      "currency":"Current EAU trauma, male-stricture and male-LUTS relevant sections checked; full guideline and newer primary trials not completely reconciled."
+    },
+    "claimChecks":[
+      {"claim":"Estrogen-responsive fossa histology makes topical estrogen a male LS/distal-stricture treatment","sourceIds":["holstein-1991","eau-stricture"],"locator":"Holstein original abstract; EAU §6.3.1.e","verdict":"corrected","note":"Histology observation was in long-term estrogen-exposure cases and did not test treatment; LS reconstruction advice remains condition-specific."},
+      {"claim":"S3 always produces 70% of male closure pressure and unilateral injury preserves continence","sourceIds":["juenemann-1988"],"locator":"Original abstract: three cadavers/five neurologic patients with root stimulation","verdict":"corrected","note":"Study-specific stimulation result cannot predict general or individual clinical continence."},
+      {"claim":"PFUI risk rises by 10 absolute percentage points per mm and all cases need delayed repair","sourceIds":["basta-2007","eau-trauma"],"locator":"Basta original abstract; EAU §4.4.3.c and recommendation table","verdict":"corrected","note":"Modeled cohort association is not absolute; deferred repair standard for complete disruption, selected early repair/realignment options retained."},
+      {"claim":"AUS is the only gold-standard route and slings universally fit mild/moderate PPI","sourceIds":["eau-male-luts"],"locator":"EAU §5.6.5 sling/AUS evidence and recommendations","verdict":"corrected","note":"Options and poor-response modifiers are individualized; guideline's categories are not absolute."},
+      {"claim":"Both local diagrams show the anatomy their captions describe","sourceIds":["gray-figure","lateral-figure"],"locator":"Visual inspection of actual static images","verdict":"supported","note":"Captions match visual content; source/license provenance not cleared."},
+      {"claim":"Remaining inherited vascular, lymphatic, epithelial, neural, stricture and cancer claims plus video","sourceIds":[],"locator":"Inherited papers/figures and video outside checked source packages","verdict":"unresolved","note":"Useful material retained; full source/figure/video review and ref15 cleanup needed."}
+    ],
+    "unresolvedClaims":["Read full inherited original male-urethra anatomy, vascular, nerve, stricture and cancer packages including figures and exact claim mapping; resolve female ref15.","Verify image source/license provenance and video content; read full Holstein/Juenemann/Basta papers before extending beyond abstract-scoped findings."],
+    "preservationReview":"All substantive sections, 16 inherited references, two images and video card retained; specific unsupported causal/treatment/numerical claims narrowed, no blanket removal.",
+    "reviewCheck":"passed","reviewRecord":"reports/2026-09-20/male-urethra-targeted-review.md"
+  }]
+}
