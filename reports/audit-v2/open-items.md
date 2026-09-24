@@ -20,6 +20,54 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: STILL not checkable: FAERS bladder perforation (Hao 2025); Kim 2025 NIUS; Mazdak dose comparison; Gallegos 2016 0-9%; preclinical refs 26-34. lint pass.
 
+## 01-foundations/pharmacology/dermatologic-topical-urethral/drug-coated-balloon-therapy.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: cost-effectiveness statement (no health-economic source checked; would need a DCB vs urethroplasty/DVIU cost-effectiveness analysis); Gao case-report specifics beyond abstract; Optilume BPH and other DCBs not discussed on page; ROBUST III 1-yr 83.2/21.7% freedom from reintervention taken from AUA text not full paper; EAU cites control 1-yr 23.6% (differs from AUA 21.7%). Note: user-supplied IFU Rev A vs page/IFU Rev B - specs match Rev B.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/high-potency-topical-corticosteroids.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: (1) 'expected phimosis success 65-96%' - needs source range; (2) 'BXO most common cause of pathologic phimosis in boys >9 y' - Nguyen 2020 full text; (3) erosive vulvar LP clobetasol 71% - Le Cleach NEJM 2012 full text/primary cohort; (4) genital psoriasis 'up to 63%' - Menter 2011 full text; (5) tacrolimus/pimecrolimus Zoon case-series specifics, Trimovate 10/10 (Tang 2001 abstract only unchecked here); (6) ACOG PB 224 full text for biopsy statement; (7) Kirtschig 2026 S3 full text (verified via EuroGuiDerm parent + abstract). BAD guideline named but not cited on page.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/hpv-topical-agents.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: podofilox clearance 45-88%/recurrence 6-55% and TCA clearance 70-81% (absent from CDC 2021 text; would settle: 2015 CDC guideline table or primary trials); Aldara/Zyclara DailyMed labels not fetched (Aldara 403; 5% regimen confirmed via search snippet only; Zyclara 8-week nightly confirmed); approval years (Aldara 1997, Zyclara 2010, Veregen 2006) unverified; topical cidofovir off-label statement unreferenced; cystoscopic laser fulguration for deep urethral warts unreferenced.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/index.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE (not independently re-verified here; belong to child audits): AUA IC/BPS 2022 Grade C for Hunner lesion treatment (would settle: AUA IC/BPS guideline 2022 full text statement grading); 'contemporary safety re-evaluation' of TCI boxed warning (would settle: TCI post-marketing safety studies, e.g. Paller 2020 / FDA label); PRP 'conflicting controlled trials' and TCI/steroid child-page doses left to their own audits.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/intralesional-corticosteroids.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Kenalog label wording (DailyMed, not fetched); Eltahawy 40 mg dose (needs full text); Sharpe-Finney 4-8 injection points and 40 mg/mL (full text 1976); AUA 2015 PD guideline and Cochrane Rosenberg statements, Ure 2021, Manfredi 2025, Hayden 2020, Potts 2016 details, Wilkinson 2012 percentages, Katims 2021, Meretyk 1992, Augspurger 1980 (abstracts not compared this session); ACOG 224/AFP/S3 LS injection wording; AUA IC/BPS 2022 Grade C statement text. Keloid/scar not covered on page.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/platelet-rich-plasma.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (a) Utama 2026 pad-weight reduction - abstract omits it, need full text PMC13038994; (b) Goldstein 2019 counts/p-values - research letter, no abstract, need JAAD full text; (c) 2-7x concentration in Etulain/Dos Santos - abstracts silent; (d) refs 3,6-8,13-15,25-29,31 mechanism/preclinical/LS/renal not re-read beyond metadata; (e) Boero, Medina Garrido, Tedesco, Sun, El Attar, German S3 LS statements carried from prior edit unchecked; (f) Xu 2026 and Jiang 2020 details verified from abstract only.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/topical-calcineurin-inhibitors.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Paller 2020 post-marketing paper (not found in PubMed; needs full citation); Zoon BID x4 wk regimen (Kyriakou abstract gives no frequency); TRPV1 pruritus claim (Yosipovitch NEJM 2013 full text); Moreno-Arias 2005, Rallis 2007, Eichenfield 2014, Prucha 2013 mechanism/AE claims not opened; Amiri 2023 full text for genital-only results; Elidel label is Sept 2020 version.
+
+## 01-foundations/pharmacology/hormonal-therapies/gender-affirming-hormone-therapy.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: (1) Endocrine Society 2017 full text (blocked): Hct <54% threshold, 25-50 mg cyproterone contrast, BMD schedule - settle with ES guideline Table 9/12; (2) 10x unsatisfactory Pap rate (Safer NEJM 2019 / Peitzmeier 2014); (3) transfeminine breast cancer 4.1 vs 155/100k-py and 60% dense (Leone JAMA Oncol 2023 full text); (4) PSA median 0.02 ng/mL (Leone 2023/Assisi); (5) HIV drug-interaction direction (IDSA/HIVMA 2024 full text); (6) Goldstein 2025 finasteride 1-5 mg and pellet 150-450 mg doses (no SOC8/label source); (7) NCCN 2026 versions. No escalations.
+
+## 01-foundations/pharmacology/hormonal-therapies/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ospemifene 60 mg/food and prasterone 6.5 mg doses (not stated on hub; need current Osphena/Intrarosa labels, DailyMed); ospemifene boxed-warning wording (Osphena label); NAMS 2020 rUTI statement (Menopause 2020;27:976, full text); AUA rUTI 2025 Moderate/B taken from audited rUTI page; SOC 8 estradiol preference (WPATH SOC8 text).
+
+## 01-foundations/pharmacology/hormonal-therapies/ospemifene.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: pooled AE rows other than hot flush/UTI/discontinuation/SAE (Simon 2018 full text); uterine polyps 19.6 vs 8.3/1000 (Constantine full text); onset 4-6 wk (label/Simon); label wording of rifampin avoid-statement (label sec 7.3 full text); no generic/cost (Orange Book, ref 1 has no link); ACOG 2021 'controversial' quote and NCCN 2026 quote (full text); Bachmann 2010 and Simon 2013 trial figures not on page; 3x12wk+1x52wk trial structure (label sec 14); Nordstrom fine; Maffei/AYSEX/PEONY/Schiavi/Novara/Russo figures not rechecked.
+
+## 01-foundations/pharmacology/hormonal-therapies/preoperative-hormonal-priming.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: EVA 210 responders/97-106 vs 83-104/OR 2.73/15-point threshold/2-wk postop pause (full text 403; rests on prior v1 HTML read) - settle with EVA full text; Marschalek estradiol 0.10 mg/g daily 6 wk regimen and Rahn 2014 '4-8 wk range' (abstract lacks) - settle with full texts; ACOG PB 214 estrogen wording (paywalled). Page has no hypospadias/testosterone/DHT/hCG content; not added (outside page scope).
+
+## 01-foundations/pharmacology/hormonal-therapies/vaginal-dhea.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ERC-230 10 ASCUS/1 LSIL and no-hyperplasia detail (Heo abstract silent; need ERC-230 primary paper); Crandall 2023 40-80% prasterone range in JAMA text (abstract only); AUA 2025 GSM breast-cancer/DHEA statement wording (AUA site 403); NCCN survivorship/risk-reduction quotes (paywalled); cost -300; Portman 2014 not cited.
+
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
 - open: Resume: other blurbs unchecked.
