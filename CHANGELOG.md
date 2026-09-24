@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 — Audit v2 batch 1: female SUI, MUI and sling pages
+
+- **Checked:** [Female SUI](docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx), [Mixed Incontinence](docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx), [Female SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx) (no edits; matches AUA/SUFU 2023 and NICE NG123), [Retropubic MUS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx), [Female Slings & Suspensions](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx).
+- **Main corrections:** electrical stimulation scoped to urgency (SUI data limited); sling complication rates corrected to Cochrane 2017/TOMUS (bladder perforation 4.5% vs 0.6%, groin pain 1.3% vs 6.4%, unsourced voiding-dysfunction figure replaced); concomitant-sling adverse-event claim softened to Cochrane 2026; MUSA RCT (JAMA 2025) added to MUI and slings pages; incomplete TOMUS/ValUE/Schierlitz references completed; an unsupportive prevalence citation removed from MUI workup.
+
+---
+
 ## 2026-09-23 (later 3) — Audit v2 takeover: v1 backlog published
 
 - Published the uncommitted v1 audit edits in clusters (instruments/tools, surgical principles and skills, anatomy and pharmacology, genital reconstruction and incontinence, figures) after `npm run lint` and `npm run build` passed. v1 reports committed as history; `audit-control.json` marked superseded.
