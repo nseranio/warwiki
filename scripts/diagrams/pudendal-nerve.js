@@ -6,7 +6,8 @@
  * exiting the greater sciatic foramen below piriformis, hooking around the
  * ischial spine / sacrospinous ligament, re-entering the lesser sciatic
  * foramen into Alcock's canal on the obturator internus, then dividing into
- * the inferior rectal, perineal, and dorsal nerves. Surgical risk zones flagged.
+ * the inferior rectal, perineal, and dorsal nerves. Nearby landmarks shown;
+ * this is not a suture or needle-placement map.
  *
  * Output: static/img/diagrams/pudendal-nerve.svg
  */
@@ -28,7 +29,7 @@ function txt(x, y, size, weight, fill, anchor, s, halo = true) {
 function lead(x1, y1, x2, y2, col) { push(`<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${col || C.lead}" stroke-width="1"/>`); push(`<circle cx="${f(x1)}" cy="${f(y1)}" r="1.8" fill="${col || C.lead}"/>`); }
 
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
-push(txt(40, 38, 16, 700, C.ink, 'start', 'Pudendal nerve (S2&#8211;S4) &#8212; course and surgical risk zones', false));
+push(txt(40, 38, 16, 700, C.ink, 'start', 'Pudendal nerve (S2&#8211;S4) &#8212; schematic course and landmarks', false));
 push(txt(40, 57, 12.5, 500, C.muted, 'start', 'greater sciatic foramen &#8594; hook around the ischial spine &#8594; lesser sciatic foramen &#8594; Alcock&#8217;s canal &#8594; three branches', false));
 
 // ---- landmarks (muted) ---------------------------------------------------
@@ -73,7 +74,7 @@ push(`<path d="${trunk}" fill="none" stroke="${C.nerve}" stroke-width="4" stroke
 const branches = [
   ['M 568 308 C 542 334, 512 366, 488 398', 'inferior rectal n.', 484, 412, 'middle'],
   ['M 568 308 C 602 332, 626 352, 650 372', 'perineal n.', 668, 380, 'start'],
-  ['M 568 308 C 612 304, 648 302, 684 300', 'dorsal n. of penis / clitoris', 690, 300, 'start'],
+  ['M 568 308 C 612 304, 648 302, 684 300', 'dorsal n. of', 690, 294, 'start'],
 ];
 for (const [d, lab, lx, ly, anc] of branches) {
   push(`<path d="${d}" fill="none" stroke="${C.nerve}" stroke-width="3" stroke-linecap="round"/>`);
@@ -81,13 +82,14 @@ for (const [d, lab, lx, ly, anc] of branches) {
   push(`<circle cx="${end[0]}" cy="${end[1]}" r="3.2" fill="${C.nerve}"/>`);
   push(txt(lx, ly, 10, 600, C.nerveEdge, anc, lab));
 }
+push(txt(690, 307, 10, 600, C.nerveEdge, 'start', 'penis / clitoris'));
 
-// ---- risk callouts -------------------------------------------------------
+// ---- nearby anatomy callouts -------------------------------------------
 lead(388, 240, 470, 150, C.risk); push(txt(476, 142, 11, 700, C.risk, 'start', 'ischial spine'));
-push(txt(476, 156, 9.8, 500, C.muted, 'start', 'SSLF suture zone &amp; pudendal-block', false));
-push(txt(476, 169, 9.8, 500, C.muted, 'start', 'landmark &#8212; NVB just lateral', false));
+push(txt(476, 156, 9.8, 500, C.muted, 'start', 'nerve nearby; not a safe suture', false));
+push(txt(476, 169, 9.8, 500, C.muted, 'start', 'or needle-placement map', false));
 lead(498, 296, 560, 200, C.risk); push(txt(566, 192, 11, 700, C.risk, 'start', "Alcock's canal"));
-push(txt(566, 206, 9.8, 500, C.muted, 'start', 'entrapment &#8594; pudendal neuralgia', false));
+push(txt(566, 206, 9.8, 500, C.muted, 'start', 'possible entrapment site; not diagnostic', false));
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Pudendal nerve course">
 ${el.join('\n')}

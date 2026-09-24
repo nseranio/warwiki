@@ -2,11 +2,10 @@
 /**
  * WARWIKI original schematic — the quilting stitch (graft fixation).
  *
- * A free graft has no blood supply of its own; it survives only pressed flat
- * against a vascularized bed (imbibition -> inosculation -> neovascularization).
- * Two panels: WITHOUT quilting a hematoma/seroma lifts the graft off the bed and
- * it starves; WITH quilting, multiple tacking sutures hold the graft in intimate
- * contact so plasma and new vessels reach it and it takes.
+ * An initially avascular free graft needs contact with a suitable recipient bed
+ * during imbibition, inosculation, and neovascularization. These panels show
+ * how fluid separation can threaten contact and how quilting can maintain it;
+ * the schematic does not predict graft survival from fixation alone.
  *
  * Output: static/img/diagrams/quilting-stitch.svg
  */
@@ -41,8 +40,8 @@ function bed(x0, x1, y) {
 
 // ===== frame + title =======================================================
 push(`<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="#FFFFFF" stroke="${C.border}" stroke-width="1.5"/>`);
-push(txt(40, 36, 16, 700, C.ink, 'start', 'The quilting stitch &#8212; why a free graft lives or dies', false));
-push(txt(40, 55, 12.5, 500, C.muted, 'start', 'a free graft has no blood supply; it survives only pressed flat on a vascularized bed (imbibition &#8594; inosculation &#8594; neovascularization)', false));
+push(txt(40, 36, 16, 700, C.ink, 'start', 'The quilting stitch &#8212; why graft-bed contact matters', false));
+push(txt(40, 55, 12.5, 500, C.muted, 'start', 'an initially avascular free graft needs contact with a suitable bed during imbibition &#8594; inosculation &#8594; neovascularization', false));
 
 const BED = 182;
 
@@ -52,7 +51,7 @@ const BED = 182;
   bed(x0, x1, BED);
   // hematoma / seroma pocket lifting the graft off
   push(`<path d="M ${x0 + 30} ${BED} C ${cx - 30} ${BED - 34} ${cx + 30} ${BED - 34} ${x1 - 30} ${BED} Z" fill="${C.blood}" opacity="0.85"/>`);
-  // graft floating above, edges curling up (dying / pale)
+  // graft separated from the bed, edges curling up (pale conceptual contrast)
   push(`<path d="M ${x0 + 18} ${BED - 30} C ${x0 + 18} ${BED - 44} ${x0 + 40} ${BED - 46} ${x0 + 52} ${BED - 40} C ${cx} ${BED - 30} ${cx} ${BED - 30} ${x1 - 52} ${BED - 40} C ${x1 - 40} ${BED - 46} ${x1 - 18} ${BED - 44} ${x1 - 18} ${BED - 30} L ${x1 - 26} ${BED - 24} C ${cx} ${BED - 16} ${cx} ${BED - 16} ${x0 + 26} ${BED - 24} Z" fill="${C.graftDead}" stroke="${C.graftDeadEdge}" stroke-width="2"/>`);
   push(txt(cx, BED - 50, 10, 700, C.graftDeadEdge, 'middle', 'graft'));
   push(txt(cx, BED + 4, 9.5, 700, C.blood, 'middle', 'hematoma / seroma'));
