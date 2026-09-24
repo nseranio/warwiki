@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 8) — Guideline full-text pass: closing not-checkable items on 31 tier 1 pages
+
+- **Sources supplied by the user and used:** AUA/GURS/SUFU Incontinence After Prostate Treatment 2019 (amended 2024), AUA/SUFU OAB 2024, AUA/SUFU Female SUI 2017 (amended 2023), AUA Urethral Stricture Disease 2016 + 2023 amendment, AUA/CUA/SUFU rUTI 2025, AUA BPH 2026, EAU Urethral Strictures 2026, EAU Neuro-Urology 2026, NICE NG123. Text extracted locally to a gitignored folder; PDFs are not committed.
+- **Safety corrections:** infected AUS (guideline: explant all components and delay reimplantation 3–6 months; wash-out with immediate reimplantation is not reliable); ProACT is allowed in non-radiated men with mild to severe SUI (not "avoid" in severe); failed male sling now "recommend AUS" (AUA #30); mirabegron hypertension threshold and dry-mouth/persistence figures; anticholinergic BPH guidance (monotherapy or alpha-blocker combination supported, no significant retention increase).
+- **Attribution corrections:** NICE pessary and PFMT items are "consider", NICE's own mesh recommendations were withdrawn in 2019 (IPG599 is the research-only position); AUA female statement 22 lists PVS and bladder neck closure, not AUS; EAU mitomycin advice is in the posterior stenosis chapter (trial-only, grade 3 events in 4 of 55); EAU DCB is a strong recommendation after at least two endoscopic treatments while AUA is "may offer" without a prior-treatment count; rUTI Lactobacillus, fluoroquinolone and vitamin C statements verified; self-start therapy wording (Conditional, Grade C) fixed; UroLift 30–80 mL without an obstructing median lobe, PAE at least 50 mL, Optilume 20–80 mL.
+- **Other corrections:** stricture epidemiology (EAU 229–627 per 100,000), DVIU evidence (over 80% failure of repeat endoscopy; 35–70% success for short strictures), BNC and VUAS recommendation strengths, male SUI risk factors and recovery data, OAB prevalence range and BoNT retreatment interval, the AUA 2018 ED guideline confirmed as having no amendment (user).
+
+---
+
 ## 2026-09-24 (later 7) — Audit v2 batch 8: implants, ED hub, IC/BPS and antifibrotic pharmacology
 
 - **Checked:** [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx), [ED procedures hub](docs/04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx), [IC/BPS pharmacology hub](docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx), [Intravesical Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/intravesical-agents.mdx), [Oral IC/BPS Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx), [Antimitotics & Antifibrotics](docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx).

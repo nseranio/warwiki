@@ -113,7 +113,7 @@ TURP, HoLEP / endoscopic enucleation, and simple prostatectomy remain the durabi
 | **Ejaculation preservation** | PUL, water vapor thermal therapy, iTIND, aquablation, Optilume BPH | Usually accepts less deobstruction, slower onset, or less mature retreatment data; in network meta-analysis, ejaculatory function favored water vapor therapy and PUL over TURP<sup>[[7]](#ref7)[[8]](#ref8)[[9]](#ref9)</sup> |
 | **Median lobe / intravesical protrusion** | TURP, HoLEP / enucleation, aquablation, water vapor therapy in selected median lobes | Classic PUL selection is less favorable for obstructive median-lobe anatomy<sup>[[8]](#ref8)[[9]](#ref9)</sup> |
 | **Office / ambulatory treatment** | PUL, water vapor therapy, iTIND, Optilume BPH, PAE | Higher retreatment risk than TURP / HoLEP should be explicit |
-| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy; selected PAE if surgical risk is prohibitive | PAE gives symptom relief similar to TURP but more retreatment;<sup>[[10]](#ref10)</sup> confirm detrusor contractility when chronic retention suggests underactive bladder |
+| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy (AUA 2026 recommends a resective technology, Expert Opinion); selected PAE if surgical risk is prohibitive | PAE gives symptom relief similar to TURP but more retreatment;<sup>[[10]](#ref10)</sup> confirm detrusor contractility when chronic retention suggests underactive bladder |
 
 ---
 
@@ -169,8 +169,8 @@ export const bphTechniqueData = [
   {
     name: "UroLift",
     family: "MIST",
-    volume: "≤ 80 mL; MedLift for OML",
-    anatomy: "Lateral lobe; MedLift treats median lobe",
+    volume: "30–80 mL (AUA 2026)",
+    anatomy: "Lateral lobe; no obstructing median lobe per AUA 2026 (MedLift, a manufacturer technique, targets the median lobe)",
     sexual: "Best preservation; 0% anejaculation",
     slug: "/docs/surgical-techniques/bph-male-luts/urolift-pul",
   },
@@ -193,15 +193,15 @@ export const bphTechniqueData = [
   {
     name: "Optilume BPH",
     family: "MIST",
-    volume: "20–80 mL",
-    anatomy: "Median lobe excluded in trials",
+    volume: "20–80 mL; urethral length 32–55 mm (AUA 2026)",
+    anatomy: "No obstructing median lobe (excluded in trials)",
     sexual: "Excellent erectile + ejaculatory preservation",
     slug: "/docs/surgical-techniques/bph-male-luts/optilume-bph",
   },
   {
     name: "PAE",
     family: "Embolization",
-    volume: "Any size; large glands favored",
+    volume: "≥ 50 mL (AUA 2026)",
     anatomy: "Favorable pelvic arterial anatomy",
     sexual: "Excellent preservation",
     slug: "/docs/surgical-techniques/bph-male-luts/prostate-artery-embolization",
