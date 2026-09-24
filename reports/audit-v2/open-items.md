@@ -1,8 +1,8 @@
 # Audit v2 — open items (not checkable / needs source)
 
-Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I and III); EAU Urethral Strictures 2026, EAU Neuro-Urology 2026; NICE NG123.
+Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
 
-Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurourol Urodyn 2016;35 Suppl 2:S8-24); AUA BPH 2026 Part II; AUA testosterone deficiency guideline; AUA 2018 ED guideline full text; EAU non-neurogenic female LUTS chapter; NURO/Medtronic IFU; Coloplast Titan/Genesis IFU; MRI manuals (InterStim, Altaviva, Revi); MASTER, Tagliaferri, Frazier 2024, Cotte 2023, Shamloul 2013, Levine 2016, Hatzimouratidis 2016, Erickson 2020, Holm 2026, Furr 2019, VanDyke 2021; a trimix efficacy series; original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee & Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021).
+Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurourol Urodyn 2016;35 Suppl 2:S8-24); NURO/Medtronic IFU; Coloplast Titan/Genesis IFU; MRI manuals (InterStim II/Micro/X, Altaviva, Revi); MASTER (Eur Urol), Tagliaferri, Frazier 2024, Cotte 2023, Shamloul 2013, Levine 2016, Hatzimouratidis 2016, Erickson 2020, Holm 2026, Furr 2019, VanDyke 2021; a trimix efficacy series; original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee & Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021); AUA antimicrobial best-practice statement (implant infection prophylaxis regimen); Ialuril manufacturer IFU.
 
 ## 01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx
 - status: checked (2026-09-24)
@@ -20,25 +20,37 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: STILL not checkable: FAERS bladder perforation (Hao 2025); Kim 2025 NIUS; Mazdak dose comparison; Gallegos 2016 0-9%; preclinical refs 26-34. lint pass.
 
+## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
+- status: partial (2026-09-24)
+- open: Resume: other blurbs unchecked.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx
+- status: partial (2026-09-24)
+- open: Resume: product-label, TRAVERSE and formulation checks not done.
+
 ## 01-foundations/pharmacology/storage-oab/anticholinergics.mdx
 - status: checked (2026-09-24)
-- open: STILL NOT CHECKABLE: JAMA 2017 FDA-trial 53-80%/12-32% and placebo 30-47%.
+- open: STILL NOT CHECKABLE: JAMA 2017 FDA-trial 53-80%/12-32% and placebo 30-47%. || EAU 2026 text read: added EAU paragraph (ref 31): offer after conservative failure (Strong), ER preferred, early review, escalation options, no drug clearly superior (LE 1a), discontinuation within 3 mo (LE 2a), cognitive caution/burden (Strong), cumulative cognitive harm LE 2, agent-specific LE 1b. No contradiction with page cognitive wording.
 
 ## 01-foundations/pharmacology/storage-oab/beta3-agonists.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: pediatric mirabegron dosing, vibegron 2024 BPH approval date, some AE ranges (nasopharyngitis).
+- open: STILL NOT CHECKABLE: pediatric mirabegron dosing, vibegron 2024 BPH approval date, some AE ranges. || EAU 2026 text read: added EAU paragraph (ref 26): beta3 offered after conservative failure (Strong), alone/combined after anticholinergic failure (Strong), AE similar to placebo LE 1a, equal efficacy with less dry mouth LE 1a, better for nocturia (panel SR), add mirabegron to solifenacin 5 mg (Weak). Page's separate EAU Neuro-Urology claims (ref 22) remain unchecked: that guideline text not supplied.
 
 ## 01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: onset/peak timing, DSD ~100 U, Daxxify/Xeomin notes, bladder-neck/pelvic-pain/chemo-cystitis uses, antibody rarity (ref14 abstract-level), DailyMed.
+- open: STILL not checkable: onset/peak timing, DSD ~100 U, Daxxify/Xeomin notes, bladder-neck/pelvic-pain/chemo-cystitis uses, antibody rarity (ref14 abstract-level), DailyMed. || EAU 2026 text read: added 100 U Strong recommendation, non-licensed other doses/brands, suburothelial=intradetrusor (LE 1a) (ref 16). Page attributes 200 U option to AUA/SUFU; EAU differs (jurisdictional), now stated. Median 7.6 mo (Nitti extension) vs EAU 7.5 mo: rounding difference, page left.
+
+## 02-evaluation/laboratory-studies/hormonal-assessment.mdx
+- status: partial (2026-09-24)
+- open: Resume: PSA screening, 5-ARI, GAHT and infertility sections not checked.
 
 ## 03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: ESTEEM additional-treatment rates; older-women cognitive claim in ref 15 (treatment NMA) itself.
+- open: STILL not checkable: ESTEEM additional-treatment rates; older-women cognitive claim in ref 15 (treatment NMA) itself. || EAU 2026 text read: CLOSED most-bothersome-first (Weak), MUI diary+UDS (Strong), anticholinergic/beta3 for urgency-predominant (Strong), duloxetine selected stress-predominant (Weak), MUI surgery less successful (Strong), oral CEE worsens SUI (Strong). Corrected: 'systemic estrogen can worsen incontinence' scoped to oral conjugated equine estrogen; UDS sentence now notes EAU Strong recommendation (added ref 19).
 
 ## 03-clinical-conditions/03a-storage-incontinence/sui-female.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: cough-test PPV 78-97%, ~50% PFMT satisfaction (ACOG PB155), caffeine 1 cup/day, retropubic bladder injury ~3-5%, risk factor table.
+- open: STILL not checkable: cough-test PPV 78-97%, ~50% PFMT satisfaction (ACOG PB155), caffeine 1 cup/day, retropubic bladder injury ~3-5%, risk factor table. || EAU 2026 text read: CLOSED retropubic long-term better than TO (Strong/LE 1b), retropubic bladder perforation/voiding dysfunction vs TO groin pain (LE 1a), single-incision Ajust/Altis non-inferior success but more exposure/repeat surgery/dyspareunia (LE 1b), bulking Strong incl. no autologous fat/HA (added), periurethral retention, duloxetine Weak/titration Strong, vaginal estrogen Strong (added, ref 15). Bulking list still names dextranomer/HA (EAU cautions on HA). STILL not checkable: 3-5% bladder injury figure remains outside EAU text.
 
 ## 03-clinical-conditions/03a-storage-incontinence/sui-male.mdx
 - status: checked (2026-09-24)
@@ -46,7 +58,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: FUTURE 1,103 randomized/4 exclusions rests on prior HTA check (Lancet abstract says 1,099).
+- open: STILL not checkable: FUTURE 1,103 randomized/4 exclusions rests on prior HTA check (Lancet abstract says 1,099). || EAU 2026 non-neurogenic text read: CLOSED stepwise order, Strong/Weak ratings for bladder training, anticholinergic/beta3, BoNT 100 U, SNM, PTNS, laser, vaginal estrogen (Weak), long-term anticholinergic caution/burden (Strong), PVR monitoring, UDS not routine (Strong)/selective (Weak); added paragraph + ref 13. No contradiction found.
 
 ## 03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx
 - status: checked (2026-09-24)
@@ -54,7 +66,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: GreenLight volume conventions (EAU wattage-specific 30-80 mL only via search summary), epidemiology, EAU 2026 web pages. lint pass.
+- open: STILL not checkable in Part II: phytotherapy, desmopressin/nocturia, IPSS bands (not addressed in Part II); prior open items unchanged. lint pass.
 
 ## 03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx
 - status: checked (2026-09-24)
@@ -70,7 +82,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx
 - status: checked (2026-09-24)
-- open: STILL NOT CHECKABLE (unchanged): Shamloul Lancet prevalence figures, hypertension 68%/smoking doubles ED, psychogenic ~20%, 4-6 attempts rule, specialised tests list, EAU Princeton IV wording.
+- open: STILL NOT CHECKABLE (unchanged): Shamloul prevalence figures, hypertension 68%/smoking doubles ED, psychogenic ~20%, 4-6 attempts rule, specialised tests list, EAU Princeton IV wording.
 
 ## 04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx
 - status: checked (2026-09-24)
@@ -86,7 +98,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: linked procedure pages' outcome claims (separate audits), FDA 2018 laser warning (general knowledge), row notes on Poise Impressa/behavioral/weight loss (no source cited).
+- open: STILL not checkable: linked procedure pages' outcome claims (separate audits), FDA 2018 laser warning (general knowledge), row notes on Poise Impressa/behavioral/weight loss (no source cited). || EAU 2026 text read: added EAU paragraph (ref 4): supervised PFMT >=3 mo first-line, colposuspension/autologous sling/bulking/MUS Strong, cystoscopy, retropubic long-term superiority, adjustable MUS/new devices research only, no fat/HA bulking, complicated SUI Weak options, AUS/ACT complication warning Strong, UDS Strong/Weak. Row 'fixed urethra... adjustable retropubic sling' now sits beside EAU research-only statement for adjustable slings.
 
 ## 04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx
 - status: checked (2026-09-24)
@@ -94,7 +106,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: SNM/iTNM MRI and battery specs vs current IFUs; SYNERGY II/BESIDE numbers beyond guideline text; procedure-page links only link-checked.
+- open: STILL not checkable: SNM/iTNM MRI and battery specs vs current IFUs; SYNERGY II/BESIDE numbers beyond guideline text; procedure-page links only link-checked. || EAU 2026 text read: added EAU stepwise summary with Strong/Weak ratings and cognition levels (oxybutynin LE 2; darifenacin/fesoterodine/solifenacin/trospium LE 1b short-term); no contradiction with AUA-based table (jurisdictional difference stated).
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx
 - status: checked (2026-09-24)
@@ -110,11 +122,11 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: Altaviva and Revi full MRI manuals (SAR/duration tables), eCoin label details beyond prior check. lint pass.
+- open: STILL not checkable: Altaviva and Revi full MRI manuals (SAR/duration tables), eCoin label details beyond prior check. lint pass. || EAU 2026 text read: recommends P-/T-PTNS only (Strong); no statement on implanted tibial systems (searched eCoin/Revi/Altaviva); sentence + ref 22 added, no contradiction found.
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: post-11/2023 label revision; ROSETTA 35/178 vs 6/166 complete-resolution counts (not in guideline); Karsenty trigone-safety claim; video not watched.
+- open: STILL not checkable: post-11/2023 label revision; ROSETTA 35/178 vs 6/166 complete-resolution counts (not in guideline); Karsenty trigone-safety claim; video not watched. || EAU 2026 non-neurogenic text read: CLOSED 100 U offered for refractory OAB/UUI (Strong), counseling on duration/UTI/CIC (Strong), repeat injections (Strong), other doses/brands unlicensed in Europe, suburothelial=intradetrusor (LE 1a), more voiding dysfunction/UTI than antimuscarinics, ROSETTA UTI 24% vs 10% (added, ref 41). No contradiction; AUA 200 U option is jurisdiction-specific.
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx
 - status: checked (2026-09-24)
@@ -122,7 +134,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx
 - status: checked (2026-09-24)
-- open: NOT checkable: Medtronic NURO IFU not retrievable; Urgent PC-era descriptions (via patent/search summaries, unverified) give ~5 cm (three fingerbreadths) cephalad to the malleolus and ~2 cm posterior to the tibia, so the lead's '2 cm cephalad' looks like a conflation with the posterior-to-tibia distance; page's '5 cm, ~60 degrees, one technique, not every IFU' wording left unchanged. lint pass.
+- open: NOT checkable: Medtronic NURO IFU not retrievable; Urgent PC-era descriptions (via patent/search summaries, unverified) give ~5 cm (three fingerbreadths) cephalad to the malleolus and ~2 cm posterior to the tibia, so the lead's '2 cm cephalad' looks like a conflation with the posterior-to-tibia distance; page's '5 cm, ~60 degrees, one technique, not every IFU' wording left unchanged. lint pass. || EAU 2026 (Limited Update March 2026 text, ref 22) now read: CLOSED offer PTNS as option for OAB/UUI (Strong), first-line not required, S2-S4 mechanism wording, maintenance P-PTNS effective to 3 yr (LE 2a), T-PTNS not inferior to P-PTNS (LE 1a), optimal schedule not established (added). Corrected: table row said PTNS comparable to antimuscarinics for UUI; EAU panel SR found PTNS more effective for UUI episodes, no difference for other outcomes; PTNS+antimuscarinic adds nothing. Ref 22 edition label fixed. STILL not checkable: as above (NURO IFU).
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx
 - status: checked (2026-09-24)
@@ -130,7 +142,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: InterStim II/Micro/X model-specific MRI manuals (manuals portal), Medtronic conditions beyond the summary page. lint pass.
+- open: STILL not checkable: InterStim II/Micro/X model-specific MRI manuals (manuals portal), Medtronic conditions beyond the summary page. lint pass. || EAU 2026 non-neurogenic text read: CLOSED offer SNM for OAB/UUI refractory to anticholinergics (Strong), lifelong surveillance (Strong), test stimulation only reliable predictor, unblinded RCT limitation, revision 30-40% at 3-4 yr (LE 3); added with ref 41. ROSETTA 200 U and 24 vs 10% recurrent UTI match EAU. No contradiction found. STILL not checkable: EAU Neuro-Urology 2026 SNM claims (line ~201, refs 36; that guideline not supplied).
 
 ## 04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx
 - status: checked (2026-09-24)
@@ -158,15 +170,47 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: PDE5i 60-70% and MUSE 43-69% and VED 60-80% efficacy (ICSM 2015 Hatzimouratidis full text); trimix up to 90% (no cited source; search found none); IPP >90% 5-yr survival and 70-90% satisfaction (Levine 2016 ICSM / Ancha 2024 full text; abstracts lack figures), 2-piece >90% 5-yr survival (no source); testosterone-monotherapy avoid statement and T <300 ng/dL threshold (AUA testosterone guideline); post-RP penile rehabilitation as first-line (AUA 2018/EAU 2025 full text; search rate-limited); revascularization outcomes for atherosclerotic ED (Hatzichristou/ICSM vascular surgery text).
+- open: STILL NOT CHECKABLE: PDE5i 60-70%, MUSE 43-69%, VED 60-80% (ICSM 2015; AUA VED mean responder 76%), trimix ~90%, IPP >90% 5-yr survival and 70-90% satisfaction, 2-piece >90%, atherosclerotic revascularization outcomes.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/li-eswt.mdx
+- status: partial (2026-09-24)
+- open: Resume: non-ED indications unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/muse-intraurethral.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/pde5-inhibitors.mdx
+- status: partial (2026-09-24)
+- open: Resume: label/dose content unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/penile-arterial-revascularization.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
 
 ## 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: Genesis PTFE coating and tactile position indicator (absent from Coloplast sell sheet), Titan Touch tactile ridges and Titan PVP identity (Coloplast IFU not retrieved), 6-15 squeezes, Mulcahy salvage 80-90%, infection/erosion ranges, PHOENIX numbers.
+- open: STILL not checkable: as previously recorded (Genesis PTFE/tactile indicator, Titan Touch ridges/PVP, 6-15 squeezes, Mulcahy 80-90%, infection/erosion ranges, PHOENIX numbers).
+
+## 04-surgical-techniques/04j-sexual-dysfunction/stem-cell-therapy-ed.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/ved.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
+
+## 04-surgical-techniques/04j-sexual-dysfunction/venous-ligation.mdx
+- status: partial (2026-09-24)
+- open: Resume: rest unchecked.
 
 ## 04-surgical-techniques/04m-bph-male-luts/index.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: EAU laser vaporization 30-80 mL wattage-specific text; RE/anejaculation percentages (child pages). lint pass.
+- open: STILL not checkable: EAU laser vaporization 30-80 mL wattage text; RE/anejaculation percentages (child pages). lint pass.
 
 ## 05-special-populations/05e-womens-health/recurrent-uti.mdx
 - status: checked (2026-09-24)

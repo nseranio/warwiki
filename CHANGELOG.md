@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 10) — Guideline pass 2: AUA BPH Part II, EAU female LUTS 2026, AUA ED and testosterone 2018
+
+- **BPH Part II** (Goueli 2026, J Urol 216(2):152-160): added to the BPH hub; combination-therapy grades scoped correctly (antimuscarinic/β3 alone or with alpha blocker: Conditional, Grade C); "annual reassessment" removed (Part I says evaluate within 6 months of starting treatment); 5-ARI first reassessment 3-6 months; IFIS counselling detail.
+- **EAU Non-neurogenic Female LUTS 2026** (Limited Update March 2026): PTNS versus antimuscarinic corrected (more effective for UUI episodes, no added benefit in combination), oral conjugated estrogen caution, urodynamics in MUI, botulinum dose (EAU 100 U; other doses unlicensed in Europe), stepwise OAB and SUI surgery positions with ratings added to 12 pages.
+- **AUA ED 2018 and Testosterone Deficiency 2018:** "discuss all options as first-line" reworded; lifestyle IIEF figure removed (guideline gives none); T <300 ng/dL attributed to the AUA testosterone guideline; testosterone plus PDE5 inhibitor may be more effective (Moderate, Grade C; four small low-quality trials); vascular surgery qualifiers; venous ligation not recommended; stem cells investigational, PRP experimental; implant contraindication scoped to systemic, cutaneous or urinary tract infection; AUA "second-line" attribution removed from ICI and MUSE pages. Nine sibling ED/testosterone pages received attribution fixes and are recorded `partial`.
+
+---
+
 ## 2026-09-24 (later 9) — Label, IFU and erratum pass (user-supplied leads verified against primary sources)
 
 - **Method:** a user-supplied summary of drug and device labels was treated as leads only (its links were search-engine wrappers and several claims were wrong). Each item was checked against DailyMed, FDA PMA/510(k) documents and manufacturer labeling; the OPTIMAL erratum was applied.
