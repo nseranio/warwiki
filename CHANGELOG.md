@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 6) — Audit v2 batch 7: urethroplasty, DVIU, BNS, recurrent UTI, ED
+
+- **Checked:** [Bladder Neck Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx) (completed), [Male Urethroplasty hub](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx), [Excision & Primary Anastomosis](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx), [DVIU](docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx), [Recurrent UTI](docs/05-special-populations/05e-womens-health/recurrent-uti.mdx), [Erectile Dysfunction](docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx).
+- **Main corrections:** DVIU: three EAU 2026 statements (steroids, self-dilatation, drug-coated balloon) corrected to the guideline text, unsupported AUA self-catheterization and injection claims removed; EPA: AUA 2023 wording, SIU/ICUD threshold, chordee/incontinence figures, two non-transecting meta-analyses added; urethroplasty hub: AAU HR and dorsal-onlay preference scoped, dates fixed; BNS: incidence, mitomycin and TUITMR figures re-sourced, robotic outcomes added; recurrent UTI: unsupportive Beers citation replaced, AUA 2025 duration/cranberry statements added; ED: nitrate/alpha-blocker/riociguat guidance re-sourced, alprostadil risk and prosthesis satisfaction rates corrected to EAU 2026, testosterone threshold and TRAVERSE population fixed.
+
+---
+
 ## 2026-09-24 (later 5) — Audit v2 batch 6: male slings, AUS completion, BOO/BPH, stricture, VUAS
 
 - **Checked:** [AUS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) (completed), [Male Urethral Slings](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx), [BPH / BOO](docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx), [BPH procedures hub](docs/04-surgical-techniques/04m-bph-male-luts/index.mdx), [Urethral Stricture](docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx), [VUAS](docs/03-clinical-conditions/03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx) (completed).

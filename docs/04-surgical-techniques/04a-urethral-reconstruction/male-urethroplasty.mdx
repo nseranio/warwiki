@@ -16,7 +16,7 @@ Male urethral reconstruction encompasses procedures used to restore luminal cont
 
 ## Decision Framework — Choosing a Male Urethroplasty
 
-The matrix below summarizes the primary decision points, aligned with EAU guidance on anatomy and tissue selection.<sup>[[1]](#ref1)</sup> The AUA 2023 guideline anchors three of its most consequential rules — **oral mucosa is the first-choice graft**, **avoid genital skin in lichen sclerosus**, and **perineal urethrostomy is a legitimate long-term option** for high-risk patients.
+The matrix below summarizes the primary decision points, aligned with EAU guidance on anatomy and tissue selection.<sup>[[1]](#ref1)</sup> The AUA 2023 guideline anchors three of its most consequential rules — **oral mucosa is the first-choice graft**, **avoid genital skin in lichen sclerosus**, and **perineal urethrostomy is a legitimate long-term option** for high-risk patients.<sup>[[2]](#ref2)</sup>
 
 For incisions and surgical approaches across the entire male-urethroplasty operative spectrum — perineal skin incisions, the three penile-stricture exposure approaches, anterior urethrotomy approaches (ventral / dorsal Barbagli / dorsolateral / non-transecting), posterior approaches, graft-placement configurations, and one-stage vs staged — see [Male Urethroplasty — Incisions & Approaches](/docs/surgical-techniques/04a-urethral-reconstruction/male-urethroplasty-incisions-approaches).
 
@@ -24,7 +24,7 @@ For incisions and surgical approaches across the entire male-urethroplasty opera
 |---|---|---|---|
 | **Short nontraumatic bulbar stricture** | [Non-transecting repair](/docs/surgical-techniques/04a-urethral-reconstruction/non-transecting-bulbar) or [BMG](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg) | [Vessel-sparing EPA](/docs/surgical-techniques/04a-urethral-reconstruction/jordan-vessel-sparing-epa) in selected anatomy | Routine transection when a suitable preserving repair is feasible |
 | **Short traumatic bulbar obliteration** | [Transecting EPA](/docs/surgical-techniques/04a-urethral-reconstruction/excision-primary-anastomosis) when full-thickness scar requires excision | Individualized reconstruction for longer defects | Forcing a tensioned anastomosis |
-| **Long bulbar stricture (2–5 cm)** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg) (Barbagli or [Kulkarni one-sided](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage)) | [Ventral onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/ventral-onlay-omg) (proximal bulbar); [Asopa dorsal inlay](/docs/surgical-techniques/04a-urethral-reconstruction/asopa-dorsal-inlay-omg) | [AAU](/docs/surgical-techniques/04a-urethral-reconstruction/augmented-anastomotic) (HR 4.8 for recurrence vs dorsal onlay) |
+| **Long bulbar stricture (2–5 cm)** | [Dorsal onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg) (Barbagli or [Kulkarni one-sided](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage)); dorsal placement is favored by most surveyed GURS surgeons<sup>[[4]](#ref4)</sup> | [Ventral onlay BMG](/docs/surgical-techniques/04a-urethral-reconstruction/ventral-onlay-omg) (proximal bulbar); [Asopa dorsal inlay](/docs/surgical-techniques/04a-urethral-reconstruction/asopa-dorsal-inlay-omg) | [AAU](/docs/surgical-techniques/04a-urethral-reconstruction/augmented-anastomotic) (transecting AAU: HR 4.8 for recurrence vs non-transecting dorsal onlay in one retrospective series<sup>[[3]](#ref3)</sup>) |
 | **Penile stricture (non-LS)** | [Asopa dorsal inlay](/docs/surgical-techniques/04a-urethral-reconstruction/asopa-dorsal-inlay-omg) or [Kulkarni dorsolateral onlay](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage) | Dorsal Orandi flap; staged BMG | Ventral onlay (sacculation risk) |
 | **Penile stricture (LS)** | Oral-mucosal reconstruction; [one-stage](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage) when tissue permits | [Staged oral-mucosal repair](/docs/surgical-techniques/04a-urethral-reconstruction/bracka-two-stage) for adverse tissue conditions | All genital skin grafts/flaps |
 | **Panurethral stricture** | [Kulkarni one-sided dorsolateral BMG](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage) | Preputial spiral graft (PSGU); combined BMG + flap; [perineal urethrostomy](/docs/surgical-techniques/04a-urethral-reconstruction/blandy-perineal-urethrostomy) | — |
@@ -99,7 +99,7 @@ export const maleTechniques = [
     eponym: "Marks, Dahlem & Janisch, 2023",
     location: "Bulbar",
     category: "Anastomotic",
-    indication: "Bulbar obliterative core ≤ 1.5 cm via ventral approach with onlay BMG.",
+    indication: "Bulbar strictures ≥ 2 cm with an obliterative segment ≤ 1.5 cm; ventral approach with onlay BMG.",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/manta",
   },
   {
@@ -126,7 +126,7 @@ export const maleTechniques = [
     eponym: "Barbagli, 1996",
     location: "Bulbar",
     category: "Free Grafts",
-    indication: "Bulbar strictures > 2 cm; standard substitution technique (66% surgeon preference).",
+    indication: "Bulbar strictures > 2 cm; standard substitution technique; dorsal graft placement preferred over ventral by 66% vs 34% of surveyed GURS members.",
     slug: "/docs/surgical-techniques/04a-urethral-reconstruction/dorsal-onlay-omg",
   },
   {
@@ -147,7 +147,7 @@ export const maleTechniques = [
   },
   {
     name: "Palminteri Double-Face (Two-Sided) BMG Urethroplasty",
-    eponym: "Palminteri E, 2008",
+    eponym: "Palminteri E, 2011",
     location: "Bulbar",
     category: "Free Grafts",
     indication: "Tight / near-obliterative bulbar strictures inadequate for a single graft; non-transecting.",
@@ -469,3 +469,6 @@ export const maleTechniques = [
 ## References
 
 <a id="ref1"></a>1. European Association of Urology. *Urethral Strictures: Disease Management in Males.* 2026. [Official guideline](https://uroweb.org/guidelines/urethral-strictures/chapter/disease-management-in-males).
+<a id="ref2"></a>2. Wessells H, Morey A, Souter L, et al. Urethral Stricture Disease Guideline Amendment (2023). *J Urol.* 2023;210(1):64-71. doi:[10.1097/JU.0000000000003482](https://doi.org/10.1097/JU.0000000000003482)
+<a id="ref3"></a>3. Redmond EJ, Hoare DT, Rourke KF. Augmented Anastomotic Urethroplasty is Independently Associated with Failure after Reconstruction for Long Bulbar Urethral Strictures. *J Urol.* 2020;204(5):989-995. doi:[10.1097/JU.0000000000001177](https://doi.org/10.1097/JU.0000000000001177)
+<a id="ref4"></a>4. Berg C, Singh A, Hu P, et al. Current Trends in the Use of Buccal Grafts During Urethroplasty Among Society of Genitourinary Reconstructive Surgeons. *Urology.* 2024;191:139-143. doi:[10.1016/j.urology.2024.06.019](https://doi.org/10.1016/j.urology.2024.06.019)

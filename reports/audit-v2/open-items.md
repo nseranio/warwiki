@@ -31,8 +31,8 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 - open: Not checkable: AUA 2024 statement numbering/Expert Opinion label and 12-17% prevalence (guideline full text not read); FUTURE 1,103 randomized/4 exclusions rests on prior HTA check (Lancet abstract says 1,099 randomized).
 
 ## 03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx
-- status: partial (2026-09-23)
-- open: BNC in the Radiated Prostate section added and checked 2026-09-23; rest of page not yet audited.
+- status: checked (2026-09-24)
+- open: Not checkable: EAU 2026 MMC wording (ref 9), 'high bladder-neck tone' risk factor.
 
 ## 03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx
 - status: checked (2026-09-24)
@@ -49,6 +49,22 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 ## 03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx
 - status: checked (2026-09-24)
 - open: unverified 'retropubic'); Bretschneider exposure = mesh or permanent suture; SAVE-U 10y posterior failure/obstructive voiding added; refs 13-14 completed to house style; added ASPIRe (Menefee JAMA Surg 2024) as ref 20; removed unverified 'online June 24, 2026' for SUPeR. NOT CHECKABLE: (1) NICE NG123 pessary removal every 6 months and 6-monthly clinic review, and BMI>30 weight-loss advice - NICE site blocked; settle with NG123 rec text 1.6-1.8 (UK 2026 pessary guideline, Neurourol Urodyn, supports 6-month interval); (2) EVA 2026 denominators (311 randomized, 210 analyzed, 97/106 vs 83/104, 15-point threshold) - abstract gives only 293 participants/92% vs 80%; need full text; (3) Li 2026 '183 completed 24 months' and 220 randomized figure detail beyond abstract; (4) Bretschneider 56 examined of 82 - full text; (5) IUC ref 4 (Barbier 2023) >=200 mL bladder filling for reduction stress test, upright exam, Baden-Walker reproducibility - full chapter; (6) ref 6 Sung 2023 support for PFMT+ES statement; refs 1,2,7,11 (ACOG PB 214, IUC pathophysiology, Bump 1996, FDA timeline) not re-resolved this session; SAVE-U original randomized N=208 not in abstract; EvidenceTable pop data not audited. No escalations.
+
+## 03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: prevalence 40% age 40-49/50-100% >70 (Shamloul Lancet full text); hypertension ED prevalence up to 68% and smoking doubles ED (Shamloul/Rew full text); psychogenic ~20% (Rew AFP 2016); 4-6 attempts rule (ICSM 2015 full text; EAU does not state it); specialised tests list (duplex PSV/EDV, cavernosometry, arteriography; EAU chapter/ICSM diagnostic paper); riociguat contraindication taken from Adempas label knowledge and WARWIKI PDE5i hub, not fetched label; AUA 2018 ED guideline amendment status (only 2022 erratum found, no amendment located); EAU Princeton IV wording (EAU text adapted from Princeton IV 2024 but recommends ACC/AHA ASCVD score).
+
+## 04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (1) EPAPP operative details (26 Fr calibration, 2-0 Ethibond inverted mattress, 15-20 mm span, 10-12 sutures/16 Fr) - source: VanDyke 2021 Urology full text (abstract lacks them); (2) EAU 2026 catheter-timing and 'usually limited to ~2 cm posterior maneuver' statements (ref16/17) - source: EAU chapter full text/PDF, only summary read; (3) Furr 2019 ED figure cited in ED row - source: full text of Furr 2019 (abstract has no ED rate); (4) 2026 Holm long-term event counts - full text of Eur Urol Focus 2026;12:316; (5) Gallegos 2016 ED claim - review, not primary; (6) Shakir 2019 ~93% is n=14; (7) technique steps 1-7 (spatulation, 4-0/5-0 PGA, 16-18 Fr) - operative texts e.g. Campbell-Walsh urethroplasty chapter/Jordan technique paper; (8) videos not reviewed. No restoration needed (words up +236).
+
+## 04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Jordan vessel-sparing EPA 2007 (Jordan J Urol 2007 original, not indexed in search); Morey ventral onlay glanuloplasty 2001 (Morey original); Wee & Joseph Singapore flap 1989; Yii/Niranjan lotus petal 1996; Jordan fossa flap 1987 and <=2.5 cm limit; Blandy PU 1968; Asopa 2001; Orandi 6-8 cm and Quartey 12-15 cm reach (original series full text); Kulkarni 2009 BJU Int; Sa/Xu 2021 PFUI; Erickson 2012 verified; EAU 2026 guideline URL (live page); PUL VanDyke 2017 date (indexed paper is 2021). Child pages not audited.
+
+## 04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (1) AUA '>80% failure of repeat endoscopy' and '>4 cm ~20% success' - AUA 2023 full-text guideline discussion; (2) AUA 'urethroplasty as initial treatment for bulbar >=2 cm' - AUA statement wording in full text; (3) AUA catheter durations '1-8 days in literature' - AUA full text; (4) refs 2,6,9,13,14,16 not opened (Hampson 2014, Gelman 2011, HTA OPEN monograph, Farrell 2017, Rozanski 2021, Bandini 2023) - paywalled/abstract-level; page claims from them are qualitative. Lint citations+links clean.
 
 ## 04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx
 - status: checked (2026-09-24)
@@ -121,3 +137,7 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 ## 04-surgical-techniques/04m-bph-male-luts/index.mdx
 - status: checked (2026-09-24)
 - open: NOT CHECKABLE: (1) specific AUA 2026 Part III size/eligibility/PAE/median-lobe statements - full guideline behind AUA login, only abstract read; settle via full text of J Urol 2026;216:161-170 (doi 10.1097/JU.0000000000005099). (2) Part II (medical therapy) citation absent from page; page says three parts - settle via Part II abstract. (3) Table values (volumes, RE/anejaculation %) rely on child pages, not re-verified here: settle via each child page's own audit. (4) Ref2 EAU 2026 and ref4 AAFP web pages not opened. (5) IPSS bands, PSA>1.5 ng/mL ~ >30 mL from standard AUA text, uncited on page. lint:citations and lint:links pass.
+
+## 05-special-populations/05e-womens-health/recurrent-uti.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (1) E. coli 75-80% of rUTI (ref5 ACR 2020/Hooton 2012 NEJM full text); (2) AUA 2025 'cannot recommend Lactobacillus' and 'fluoroquinolones not routine prophylaxis' and 'no routine vitamin C with methenamine' (AUA full guideline PDF text; web summary lists no such statements); (3) EAU 2026 immunoprophylaxis/prophylaxis recs (uroweb chapter, reused v1 check); (4) ACR 2026 and Pat 2022 figures (reused v1 abstract check); (5) TAPER outcome numbers not on page. No doses on page (delegated to hubs). Lint citations/links pass.
