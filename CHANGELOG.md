@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 7) — Audit v2 batch 8: implants, ED hub, IC/BPS and antifibrotic pharmacology
+
+- **Checked:** [Penile Implants](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx), [ED procedures hub](docs/04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx), [IC/BPS pharmacology hub](docs/01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx), [Intravesical Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/intravesical-agents.mdx), [Oral IC/BPS Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx), [Antimitotics & Antifibrotics](docs/01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx).
+- **Main corrections:** implants index had about 13 wrong PMIDs, InhibiZone elution 72 h to about 14 days, MS-pump deflation, revision/survival figures re-sourced to Miller 2022 (about 77% at 10 years, not 50% revision), satisfaction 80–93%, device/manufacturer table errors, drains and OTR wording; ED hub: AUA 2018 "endorsed algorithm" corrected, combination-therapy meta-analysis (44 studies, +1.76 IIEF), Li-ESWT Cochrane 2025, ICI efficacy re-cited; intravesical: chondroitin 0.2%/40 mL corrected to 2%/20 mL, BoNT-A dosing no longer attributed to AUA, AUA statement grades for BCG and Hunner lesions; oral IC/BPS: doses confirmed, cyclosporine CUA scoping, gabapentinoid line added; antimitotics: Irdam 2019 meta-analysis figures and the MMC evidence level corrected. Sibling implant pages with the same errors are listed in `open-items.md`.
+
+---
+
 ## 2026-09-24 (later 6) — Audit v2 batch 7: urethroplasty, DVIU, BNS, recurrent UTI, ED
 
 - **Checked:** [Bladder Neck Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx) (completed), [Male Urethroplasty hub](docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx), [Excision & Primary Anastomosis](docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx), [DVIU](docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx), [Recurrent UTI](docs/05-special-populations/05e-womens-health/recurrent-uti.mdx), [Erectile Dysfunction](docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx).

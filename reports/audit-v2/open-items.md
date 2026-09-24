@@ -2,6 +2,22 @@
 
 Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume.
 
+## 01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (1) 'PPS retinal toxicity is a label warning' - Elmiron US prescribing information; (2) Hunner-lesion lesion-directed treatment emphasis - AUA 2022 full-text statements (only abstract read); (3) hub blurb agent lists (cyclosporine, hydroxyzine, botulinum toxin, heparin/lidocaine) - belong to child pages, not audited here. No doses on this page.
+
+## 01-foundations/pharmacology/bladder-pain-ic-bps/intravesical-agents.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: HA 40 mg/50 mL weekly x4-6 then monthly (needs Cystistat/Ialuril product label); intravesical oxybutynin 5-10 mg/20-30 mL 30 min (needs primary trial or product source); Corona 2026 meta figures, Moss 2023 and CUA 2025 details relied on v1 checks; Li 2025 DMSO stated as 'clinically meaningful' not re-derived.
+
+## 01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: (1) AUA 2022 full-text statements on cyclosporine/Hunner wording (abstract only; AUA guideline text); (2) hydroxyzine contraindication in early pregnancy/QT and cimetidine/cyclosporine interaction lists (need current US labels for Atarax/hydroxyzine, cimetidine, Neoral); (3) amitriptyline contraindication list (label); (4) 'pre-existing eye disease -> comprehensive exam' Elmiron label sentence (fetched summary did not show it; DailyMed full text); (5) amitriptyline 10 mg x1wk then 25 mg titration pearl (Foster protocol titrated 10-75 mg over 6 wk); (6) Sant PPS numbers not on page. Currency search: no new practice-changing PPS trial; Buford 2026 global consensus (Neurourol Urodyn) not reviewed.
+
+## 01-foundations/pharmacology/dermatologic-topical-urethral/antimitotics-antifibrotics.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Optilume FDA label wording/contraindications (IFU); Gallegos 2016 0-9% urethrotomy success (ref4 not opened); Mazdak 0.1 mg vs later dosing comparisons (no dose-finding trial); AUA 2023 'conflicting data on MMC for VUAS' quote and DCB recurrent bulbar <3cm wording (guideline full text not opened, abstract only); EAU 2026 sections 6.2.3.b/6.3.5.a.2.c (web guideline not re-opened); FAERS bladder perforation (Hao 2025 not opened); Kim 2025 NIUS, preclinical refs 26-34.
+
 ## 01-foundations/pharmacology/storage-oab/anticholinergics.mdx
 - status: checked (2026-09-23)
 - open: Not checkable: JAMA 2017 FDA-trial 53-80%/12-32% and placebo 30-47%; dry mouth up to 70%; oxybutynin gel/patch and trospium renal dosing taken from labels (not re-opened); ref6 Wei 2025 now cited only for CNS penetration.
@@ -134,6 +150,14 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 - status: checked (2026-09-24)
 - open: NOT CHECKABLE: (1) MUS reoperation ~1.1% at 5 yr and MUS dyspareunia denominator - need primary MUS long-term series (no ref cited); (2) sacrocolpopexy reoperation 2-19% and chronic pain 'variable' - need sacrocolpopexy SR; (3) TVM reoperation 6-8% - Yeung gives 6.1% for exposure only; (4) MUS-removal recurrent SUI 40-49% with 14% repeat surgery (refs 14/28) - Singla n=99 does not give these; need ACOG 694 full text; (5) ACOG 694 postop voiding-dysfunction percentages 20%/6%/2% (POD1/2wk/6wk) - need 694 full text or original series; (6) Frigerio full text and ACR narrative (403) - 28% exam-missed mesh figure; (7) Al-Badr Martius, Mohr 2023, Taithongchai/Shek/Kim/Ram imaging claims abstract-level only; (8) non-US mesh regulation not verified.
 
+## 04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: PDE5i 60-70% and MUSE 43-69% and VED 60-80% efficacy (ICSM 2015 Hatzimouratidis full text); trimix up to 90% (no cited source; search found none); IPP >90% 5-yr survival and 70-90% satisfaction (Levine 2016 ICSM / Ancha 2024 full text; abstracts lack figures), 2-piece >90% 5-yr survival (no source); testosterone-monotherapy avoid statement and T <300 ng/dL threshold (AUA testosterone guideline); post-RP penile rehabilitation as first-line (AUA 2018/EAU 2025 full text; search rate-limited); revascularization outcomes for atherosclerotic ED (Hatzichristou/ICSM vascular surgery text).
+
+## 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Coloplast Titan Touch tactile ridges, Genesis PTFE coating, Ambicor/Promedon Tube specs (Coloplast site 403; Coloplast IFU/Promedon catalog would settle); AMS/Titan '6-15 squeezes' (Titan IFU); Titan hydrophilic-coating dip examples (Coloplast IFU); Mulcahy salvage 80-90% (Mulcahy 2011/Kavoussi series); infection 1-3%/erosion figures supported only by Cocci 2026 range; PHOENIX corrected numbers (erratum has no abstract). Sibling infection.mdx states InhibiZone elutes 24-72 h and implant-models.mdx lists Rigicon Infla10 2-Piece: need same fix.
+
 ## 04-surgical-techniques/04m-bph-male-luts/index.mdx
 - status: checked (2026-09-24)
 - open: NOT CHECKABLE: (1) specific AUA 2026 Part III size/eligibility/PAE/median-lobe statements - full guideline behind AUA login, only abstract read; settle via full text of J Urol 2026;216:161-170 (doi 10.1097/JU.0000000000005099). (2) Part II (medical therapy) citation absent from page; page says three parts - settle via Part II abstract. (3) Table values (volumes, RE/anejaculation %) rely on child pages, not re-verified here: settle via each child page's own audit. (4) Ref2 EAU 2026 and ref4 AAFP web pages not opened. (5) IPSS bands, PSA>1.5 ng/mL ~ >30 mL from standard AUA text, uncited on page. lint:citations and lint:links pass.
@@ -141,3 +165,7 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 ## 05-special-populations/05e-womens-health/recurrent-uti.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: (1) E. coli 75-80% of rUTI (ref5 ACR 2020/Hooton 2012 NEJM full text); (2) AUA 2025 'cannot recommend Lactobacillus' and 'fluoroquinolones not routine prophylaxis' and 'no routine vitamin C with methenamine' (AUA full guideline PDF text; web summary lists no such statements); (3) EAU 2026 immunoprophylaxis/prophylaxis recs (uroweb chapter, reused v1 check); (4) ACR 2026 and Pat 2022 figures (reused v1 abstract check); (5) TAPER outcome numbers not on page. No doses on page (delegated to hubs). Lint citations/links pass.
+
+## Carry-over: sibling pages with penile-implant errors found in the index audit
+- penile-implants/infection.mdx (~line 30): InhibiZone elution stated as 24–72 h; the Boston Scientific brochure says about 14 days.
+- penile-implants/implant-models.mdx: 'Rigicon Infla10 2-Piece' row, Ambicor row and Genesis details need checking against manufacturer sources.
