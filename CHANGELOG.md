@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later) — Audit v2 batch 2: mini-sling, autologous PVS, OAB pages, anticholinergics
+
+- **Checked:** [Single-Incision Mini-Sling](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx), [Autologous PVS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/autologous-pubovaginal-sling.mdx), [Urgency Incontinence / OAB](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx), [OAB/UUI database](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx), [Anticholinergics](docs/01-foundations/pharmacology/storage-oab/anticholinergics.mdx).
+- **Main corrections:** anticholinergic efficacy replaced with Cochrane 2023 figures (about 0.85 fewer voids/urgency episodes per 24 h; the old 2–4 voids/day came from a pooled men's LUTS review), dementia-risk claim re-sourced to a 2025 meta-analysis (RR 1.2) and a matched cohort, unsourced retention absolute risk and PVR 150 mL cutoff removed, glaucoma contraindication reworded to uncontrolled; Yokoyama male-PSA finding corrected to PVR ≥200 mL; AUA/SUFU 2024 cognitive-caution statement re-attributed to the guideline; neuromodulation response cells in the OAB database labeled as indirect single-arm meta-analysis; autologous PVS restored operative steps (graft size, nerve safety zone, carrier and tie-down) and added Hong 2024 NSQIP result; Bortolini RCT described as retropubic.
+
+---
+
 ## 2026-09-24 — Audit v2 batch 1: female SUI, MUI and sling pages
 
 - **Checked:** [Female SUI](docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx), [Mixed Incontinence](docs/03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx), [Female SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx) (no edits; matches AUA/SUFU 2023 and NICE NG123), [Retropubic MUS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx), [Female Slings & Suspensions](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx).
