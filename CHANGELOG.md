@@ -6,6 +6,17 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-23 (later) — Radiation management organized by anatomy
+
+- **Why:** radiation modifies each anatomic type of stenosis rather than defining a separate disease, so its management now sits with each anatomic entity.
+- **Posterior Urethral Stenosis:** the standalone radiation page was folded into [Posterior Urethral Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx) as a "Radiation-Induced Stenosis" section focused on bulbomembranous disease. It covers biology, incidence, evaluation, endoscopic outcomes, reconstruction selection, EPA, BMG, EPA versus BMG, and the devastated outlet. AUS and follow-up material were merged into the page's shared continence section.
+- **VUAS:** [Vesicourethral Anastomotic Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx) gained a "VUAS After Radiation" section: Veerman, Rozanski, Neu and Pfalzgraf endoscopic data; dorsal onlay results after prostatectomy plus RT; robotic reconstruction after radiation (Bearrick, TURNS counterincision, Liu); and one center's adjuncts. The open-repair continence data and the Naser-Tavakolian/Lee VUAS algorithm moved there from the overview.
+- **BNC:** [Bladder Neck Contracture](docs/03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx) gained "BNC in the Radiated Prostate", with the guideline positions (via Abbasi 2022), mitomycin C cautions and diversion triggers.
+- **Videos:** added Nikolavsky (radiated VUAS, dorsal BMG) and Sean Elliott (post-radiation membranous stricture, EPA with gracilis wrap).
+- **Links and redirect:** the old radiation URL permanently redirects to the new section anchor, and existing cross-links were repointed. Lint and the build (131.94 MB) passed, and all section anchors and citation links resolve.
+
+---
+
 ## 2026-09-23 — Posterior urethral stenosis and radiation-induced stenosis pages
 
 Added two clinical-condition pages under Voiding & Outlet Disorders. [Posterior Urethral Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx) defines the posterior urethra and the stricture-versus-stenosis terminology, and gives an entity table (BNC, VUAS, radiation-induced stenosis, PFUI, and membranous stenosis after endoscopic prostate surgery) that routes to the detailed pages. It also covers incidence, evaluation, a management framework, endoscopic adjuncts (mitomycin C, triamcinolone, TUITMR, drug-coated balloon, stents), reconstruction by entity including open versus robotic VUAS continence data, one center's labeled VUAS algorithm, AUS sequencing and surveillance.
