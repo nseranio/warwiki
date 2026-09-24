@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 2) — Audit v2 batch 3: β3 agonists, botulinum toxin, SNM, PTNS
+
+- **Checked:** [β3 Agonists](docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx), [Botulinum Toxin (OAB)](docs/01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx), [Intradetrusor Botox](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx), [Sacral Neuromodulation](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx), [PTNS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx).
+- **Main corrections:** doses, CIC/UTI rates and contraindications verified against the BOTOX (11/2023), Myrbetriq and Gemtesa labels; mirabegron hypertension and dry-mouth figures corrected to label/trial values and interactions completed; Botox meta-analysis MCC/MDP figures relabeled as pooled results, antiplatelet-stop guidance and diabetes retention signal added, Osborn/Mehta/Kuo citations corrected; SNM battery life and MRI specs added as manufacturer figures and ROSETTA 24-month scoped to responders; PTNS vs SNM and vs conservative therapy rows re-sourced, Hotouras cohort scoped.
+
+---
+
 ## 2026-09-24 (later) — Audit v2 batch 2: mini-sling, autologous PVS, OAB pages, anticholinergics
 
 - **Checked:** [Single-Incision Mini-Sling](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx), [Autologous PVS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/autologous-pubovaginal-sling.mdx), [Urgency Incontinence / OAB](docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx), [OAB/UUI database](docs/04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx), [Anticholinergics](docs/01-foundations/pharmacology/storage-oab/anticholinergics.mdx).
