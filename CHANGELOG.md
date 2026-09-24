@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 3) — Audit v2 batch 4: prolapse and iTNS pages
+
+- **Checked:** [Implantable Tibial Nerve Stimulation](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx), [Pelvic Organ Prolapse](docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx), [Prolapse Repair hub](docs/04-surgical-techniques/04g-prolapse-repair/index.mdx) (no edits), [Sacrocolpopexy](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx), [Sacrospinous Ligament Fixation](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx).
+- **Main corrections:** iTNS AUA/SUFU 2024 overstatement removed, eCoin/Revi citations and FDA safety data corrected; POP trial populations (stage II–III, E-OPTIMAL), SAVE-U 10-year posterior-compartment result and ASPIRe added; sacrocolpopexy hysterectomy statement reconciled with the exposure literature (Glass Clark 2024 added); SSLF OPTIMAL inclusion corrected (hysterectomy in all). New [open-items.md](reports/audit-v2/open-items.md) lists not-checkable claims by page.
+
+---
+
 ## 2026-09-24 (later 2) — Audit v2 batch 3: β3 agonists, botulinum toxin, SNM, PTNS
 
 - **Checked:** [β3 Agonists](docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx), [Botulinum Toxin (OAB)](docs/01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx), [Intradetrusor Botox](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx), [Sacral Neuromodulation](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx), [PTNS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx).
