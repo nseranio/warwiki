@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 5) — Audit v2 batch 6: male slings, AUS completion, BOO/BPH, stricture, VUAS
+
+- **Checked:** [AUS](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) (completed), [Male Urethral Slings](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx), [BPH / BOO](docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx), [BPH procedures hub](docs/04-surgical-techniques/04m-bph-male-luts/index.mdx), [Urethral Stricture](docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx), [VUAS](docs/03-clinical-conditions/03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx) (completed).
+- **Main corrections:** AUS complication ranges replaced with Frazier 2024 full-text values (infection 1–33%, erosion 3–28%, retention 8–32%), Loh-Doyle/Magera/Trost claims corrected; male slings: Angulo ATOMS comparisons rewritten as observational with non-significant complication differences, Soljanik/Redmond figures re-attributed, radiation/failed-sling guidance aligned to AUA/GURS/SUFU 2024, MASTER 24-month added; BPH hub: PAE and ejaculation-preservation evidence re-cited (Cornu 2023, Jung 2022); stricture: etiology wording, U-score vs LSE recurrence prediction, ROBUST III 3-year added; VUAS: incidence and risk-factor figures re-sourced, EAU mitomycin statement corrected (anterior section only), endoscopic outcomes quantified.
+
+---
+
 ## 2026-09-24 (later 4) — Audit v2 batch 5: apical, mesh, male SUI and AUS
 
 - **Checked:** [Uterosacral Ligament Suspension](docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx), [Mesh Complications](docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx), [Male SUI](docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx), [Male SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx). **Partial:** [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) (about 45 claims and the male IFU checked; resume list in `open-items.md`).

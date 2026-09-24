@@ -110,10 +110,10 @@ TURP, HoLEP / endoscopic enucleation, and simple prostatectomy remain the durabi
 | **Maximum durability / strongest deobstruction** | HoLEP / laser enucleation, bipolar TURP, simple prostatectomy for very large glands | Ejaculatory dysfunction is common; transient incontinence can follow enucleation |
 | **Very large gland** | HoLEP / enucleation, robotic or open simple prostatectomy, PAE in selected high-risk patients | MISTs may underdeliver when bulk reduction is the real need |
 | **Bleeding risk / anticoagulation** | GreenLight PVP, HoLEP in expert hands, PAE in selected patients | Anticoagulation strategy still requires proceduralist-specific planning |
-| **Ejaculation preservation** | PUL, water vapor thermal therapy, iTIND, aquablation, Optilume BPH | Usually accepts less deobstruction, slower onset, or less mature retreatment data<sup>[[8]](#ref8)[[9]](#ref9)</sup> |
+| **Ejaculation preservation** | PUL, water vapor thermal therapy, iTIND, aquablation, Optilume BPH | Usually accepts less deobstruction, slower onset, or less mature retreatment data; in network meta-analysis, ejaculatory function favored water vapor therapy and PUL over TURP<sup>[[7]](#ref7)[[8]](#ref8)[[9]](#ref9)</sup> |
 | **Median lobe / intravesical protrusion** | TURP, HoLEP / enucleation, aquablation, water vapor therapy in selected median lobes | Classic PUL selection is less favorable for obstructive median-lobe anatomy<sup>[[8]](#ref8)[[9]](#ref9)</sup> |
 | **Office / ambulatory treatment** | PUL, water vapor therapy, iTIND, Optilume BPH, PAE | Higher retreatment risk than TURP / HoLEP should be explicit |
-| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy; selected PAE if surgical risk is prohibitive | Confirm detrusor contractility when chronic retention suggests underactive bladder<sup>[[10]](#ref10)</sup> |
+| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy; selected PAE if surgical risk is prohibitive | PAE gives symptom relief similar to TURP but more retreatment;<sup>[[10]](#ref10)</sup> confirm detrusor contractility when chronic retention suggests underactive bladder |
 
 ---
 
@@ -147,13 +147,13 @@ export const bphTechniqueData = [
     family: "Vaporization",
     volume: "≤ 80 mL",
     anatomy: "Lateral and median lobe",
-    sexual: "RE ~ 70%; hood-sparing 80–85%",
+    sexual: "RE ~ 70%; hood-sparing keeps antegrade ejaculation in 80–85%",
     slug: "/docs/surgical-techniques/bph-male-luts/greenlight-pvp",
   },
   {
     name: "Aquablation",
     family: "Robotic",
-    volume: "30–150+ mL",
+    volume: "30–150 mL (WATER / WATER II range)",
     anatomy: "Lateral and median lobe",
     sexual: "Antegrade preserved 72–99.6%",
     slug: "/docs/surgical-techniques/bph-male-luts/aquablation",
@@ -230,7 +230,7 @@ export const bphTechniqueColumns = [
       'Incision': '#9333ea',
       'Enucleation': '#1d4ed8',
       'Vaporization': '#0f766e',
-      'Robotic / Image-Guided': '#0369a1',
+      'Robotic': '#0369a1',
       'Adenomectomy': '#7c2d12',
       'MIST': '#047857',
       'Embolization': '#be123c',
