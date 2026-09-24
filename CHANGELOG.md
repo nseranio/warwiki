@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 4) — Audit v2 batch 5: apical, mesh, male SUI and AUS
+
+- **Checked:** [Uterosacral Ligament Suspension](docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx), [Mesh Complications](docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx), [Male SUI](docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx), [Male SUI database](docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx). **Partial:** [Artificial Urinary Sphincter](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx) (about 45 claims and the male IFU checked; resume list in `open-items.md`).
+- **Main corrections:** AUS had 17 references pointing to wrong PMIDs (fixed), female-AUS meta-analysis figures re-sourced to Barakat 2020, activation timing and auto-refill aligned to the IFU (4–6 weeks; a few minutes), penoscrotal-vs-perineal claim replaced by the 2025 meta-analysis; mesh page: CARE 10.5% re-cited to Nygaard 2013, Kowalik study type, Palmieri and Pace/Crosby figures corrected; male SUI: pad-test, PFMT, risk-factor and ProACT statements aligned to AUA/GURS/SUFU 2024 (full text read), surgery timing (may offer from 6 months, offer at 1 year) made consistent across both male SUI pages; USLS: cystoscopy detection and neurologic-pain rates added from OPTIMAL and Chang 2021.
+
+---
+
 ## 2026-09-24 (later 3) — Audit v2 batch 4: prolapse and iTNS pages
 
 - **Checked:** [Implantable Tibial Nerve Stimulation](docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx), [Pelvic Organ Prolapse](docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx), [Prolapse Repair hub](docs/04-surgical-techniques/04g-prolapse-repair/index.mdx) (no edits), [Sacrocolpopexy](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx), [Sacrospinous Ligament Fixation](docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx).
