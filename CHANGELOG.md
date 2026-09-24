@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-24 (later 9) — Label, IFU and erratum pass (user-supplied leads verified against primary sources)
+
+- **Method:** a user-supplied summary of drug and device labels was treated as leads only (its links were search-engine wrappers and several claims were wrong). Each item was checked against DailyMed, FDA PMA/510(k) documents and manufacturer labeling; the OPTIMAL erratum was applied.
+- **Drug labels:** amitriptyline, hydroxyzine, cimetidine, Neoral and Elmiron contraindication/interaction wording aligned to labels ([Oral IC/BPS Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/oral-ic-bps-agents.mdx)); Oxytrol/Gelnique carry no renal dosing guidance, trospium IR age 75+ dosing added ([Anticholinergics](docs/01-foundations/pharmacology/storage-oab/anticholinergics.mdx)); hyaluronic acid regimen per Cystistat leaflet ([Intravesical Agents](docs/01-foundations/pharmacology/bladder-pain-ic-bps/intravesical-agents.mdx)).
+- **Devices:** AMS 800 (13 cuff sizes 3.5–11 cm, PRB about 22 mL, MR Conditional 1.5/3 T at 40 T/m gradient and SAR 2 W/kg, no deactivation requirement); Optilume (0.038 in wire, at least 5 min at rated burst pressure of 12/10/8 atm by size, no predilation step in the label, contraindicated with penile implant or AUS); InhibiZone elutes over about 14 days; Rigicon Infla10 has a hydrophilic coating and is not sold in the US; Ambicor has no antibiotic surface treatment; AMS Spectra and Promedon Tube descriptions corrected; NURO 0–9 mA per 510(k); Rezum indication 30–80 cm3 including median lobe; GreenLight has no labeled volume limit; TURP 30–80 mL is EAU practice, not an AUA limit; SNM/iTNS MRI conditions by device.
+- **Erratum:** OPTIMAL corrected 2-year success (64.5% vs 63.1%, OR 1.1) was already on the apical pages; the landmark-trials entry no longer says the operations were equivalent.
+- **Still unchecked:** NURO needle gauge/site/angle (Medtronic IFU not retrievable), Titan/Genesis IFU, Biardeau 2015 primary text. See [open-items.md](reports/audit-v2/open-items.md).
+
+---
+
 ## 2026-09-24 (later 8) — Guideline full-text pass: closing not-checkable items on 31 tier 1 pages
 
 - **Sources supplied by the user and used:** AUA/GURS/SUFU Incontinence After Prostate Treatment 2019 (amended 2024), AUA/SUFU OAB 2024, AUA/SUFU Female SUI 2017 (amended 2023), AUA Urethral Stricture Disease 2016 + 2023 amendment, AUA/CUA/SUFU rUTI 2025, AUA BPH 2026, EAU Urethral Strictures 2026, EAU Neuro-Urology 2026, NICE NG123. Text extracted locally to a gitignored folder; PDFs are not committed.

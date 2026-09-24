@@ -121,7 +121,7 @@ export const bphTechniqueData = [
   {
     name: "TURP",
     family: "Resection",
-    volume: "30–80 mL",
+    volume: "30–80 mL (EAU); no volume limit in AUA 2026",
     anatomy: "Lateral and median lobe",
     sexual: "RE 60–75%; ED 10–14%",
     slug: "/docs/surgical-techniques/bph-male-luts/turp",
@@ -145,7 +145,7 @@ export const bphTechniqueData = [
   {
     name: "GreenLight PVP",
     family: "Vaporization",
-    volume: "≤ 80 mL",
+    volume: "≤ 80 mL (usual practice range; no volume limit in the FDA clearance or AUA 2026)",
     anatomy: "Lateral and median lobe",
     sexual: "RE ~ 70%; hood-sparing keeps antegrade ejaculation in 80–85%",
     slug: "/docs/surgical-techniques/bph-male-luts/greenlight-pvp",
@@ -177,8 +177,8 @@ export const bphTechniqueData = [
   {
     name: "Rezūm",
     family: "MIST",
-    volume: "30–80 mL",
-    anatomy: "Lateral and selected median lobe",
+    volume: "30–80 mL (FDA indication, men 50 or older)",
+    anatomy: "Lateral lobes, central zone and/or median lobe (FDA indication)",
     sexual: "Ejaculation preserved (~ 3% anejaculation)",
     slug: "/docs/surgical-techniques/bph-male-luts/rezum-water-vapor-therapy",
   },
@@ -261,6 +261,8 @@ export const bphTechniqueColumns = [
   entityLabel="BPH techniques"
 />
 
+Volume ranges come from different kinds of source: the TURP range is the EAU recommendation, the Rezum range and central-zone/median-lobe coverage are its FDA indication,<sup>[[13]](#ref13)</sup> and the AUA 2026 statements for PUL, water vapor, robotic waterjet, iTIND and the drug-coated BPH balloon carry their own size limits, as listed in the table. The GreenLight clearance is not volume-restricted; the 80 mL figure reflects practice and trial experience.
+
 ---
 
 ## Follow-Up Anchors
@@ -303,3 +305,5 @@ export const bphTechniqueColumns = [
 <a id="ref11"></a>11. Goueli R, Badlani GH, Welliver C, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline (2026). Part I: Presentation and evaluation. *J Urol.* 2026;216(2):143-151. doi:[10.1097/JU.0000000000005097](https://doi.org/10.1097/JU.0000000000005097).
 
 <a id="ref12"></a>12. Goueli R, Badlani GH, Welliver C, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline (2026). Part III: Procedural and surgical management. *J Urol.* 2026;216(2):161-170. doi:[10.1097/JU.0000000000005099](https://doi.org/10.1097/JU.0000000000005099).
+
+<a id="ref13"></a>13. US Food and Drug Administration. *510(k) Summary K150786: Rezum System (Nxthera), decision August 27, 2015*; indications unchanged in K160417 and K180237. Indications for use. [FDA 510(k) summary](https://www.accessdata.fda.gov/cdrh_docs/pdf15/K150786.pdf).

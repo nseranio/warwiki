@@ -134,8 +134,8 @@ export const trials: Trial[] = [
     population: 'Women with apical vaginal prolapse undergoing transvaginal repair',
     comparison: 'Sacrospinous ligament fixation (SSLF) vs uterosacral ligament suspension (ULS); ± perioperative behavioral therapy / PFMT',
     primaryOutcome: 'Surgical success at 2 years (composite)',
-    result: 'No difference between SSLF and ULS (success ~60–64% each); perioperative pelvic-floor muscle training did not improve outcomes. At 5 years, failure rose but the two procedures remained equivalent.',
-    bottomLine: 'SSLF and ULS are equivalent for apical prolapse — pick by surgeon comfort and anatomy — and adding perioperative PFMT does not help.',
+    result: 'Corrected 2-year composite success 64.5% (100/155) with ULS vs 63.1% (94/149) with SSLF (adjusted OR 1.1, 95% CI 0.7–1.7); perioperative pelvic-floor muscle training did not improve outcomes. At 5 years (E-OPTIMAL) cumulative composite failure rose to about 62–70% with no statistically clear difference between procedures.',
+    bottomLine: 'Neither SSLF nor ULS was superior for apical prolapse at 2 or 5 years — pick by surgeon experience, anatomy and complication profile — and adding perioperative PFMT does not help.',
     doi: '10.1001/jama.2014.1719',
   },
   {
