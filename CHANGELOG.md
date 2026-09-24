@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-23 (later 3) — Audit v2 takeover: v1 backlog published
+
+- Published the uncommitted v1 audit edits in clusters (instruments/tools, surgical principles and skills, anatomy and pharmacology, genital reconstruction and incontinence, figures) after `npm run lint` and `npm run build` passed. v1 reports committed as history; `audit-control.json` marked superseded.
+- **Held back:** 14 instrument pages that lost more than 15% of their words in v1 (Volkmann, Sachse, Otis, Gelman, Turner-Warwick, Dittel, Van Buren, Hegar, Weitlaner, Ellik, Filiforms, Haygrove, S-dilators, Toomey) were reverted to the published text. Their v1 diffs are in `reports/audit-v2/held-v1-diffs/` for restoration-rule review in v2.
+- Added Ceballos 2025 (BMC Urol, PMID 40684082) Optilume radiation-stenosis series to [Posterior Urethral Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx); figures taken from the abstract.
+
+---
+
 ## 2026-09-23 (later 2) — Audit workflow v2 for smaller models
 
 - **Runbook and prompt:** added [AUDIT.md](AUDIT.md) and a paste-ready [AUDIT-PROMPT.md](AUDIT-PROMPT.md). The audit now runs on Sonnet 5 at High effort, with Haiku for mechanical subtasks and Opus only for escalations.
