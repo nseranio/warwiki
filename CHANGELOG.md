@@ -6,6 +6,26 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-23 (later 2) — Audit workflow v2 for smaller models
+
+- **Runbook and prompt:** added [AUDIT.md](AUDIT.md) and a paste-ready [AUDIT-PROMPT.md](AUDIT-PROMPT.md). The audit now runs on Sonnet 5 at High effort, with Haiku for mechanical subtasks and Opus only for escalations.
+- **What changed from v1:**
+  - scripted page queue and status;
+  - a finishable per-page status (`checked`, `partial`, `not-clinical`, `escalate`);
+  - a bounded claim-checking procedure;
+  - a restoration check against the pre-audit baseline `e81c5b0d`;
+  - teach-first editing;
+  - batch publishing to `main` in place of the single-writer hold.
+- **Tooling:**
+  - `scripts/audit/audit.py`: next, info, record, stats and build-queue;
+  - `scripts/audit/pubmed.py`: DOI/PMID lookup, abstracts, house-style citations and currency search;
+  - `reports/audit-v2/queue.json`: 1,187 pages in four priority tiers;
+  - `reports/audit-v2/status.json`;
+  - a `warwiki-auditor` subagent (Sonnet) for delegating single pages.
+- **CLAUDE.md** now points to v2. The v1 files are kept as history. The first v2 session performs the one-time takeover: stop the Codex writer, publish the v1 backlog, and mark the v1 control file superseded.
+
+---
+
 ## 2026-09-23 (later) — Radiation management organized by anatomy
 
 - **Why:** radiation modifies each anatomic type of stenosis rather than defining a separate disease, so its management now sits with each anatomic entity.
