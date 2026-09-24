@@ -6,6 +6,34 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-23 — Posterior urethral stenosis and radiation-induced stenosis pages
+
+Added two clinical-condition pages under Voiding & Outlet Disorders. [Posterior Urethral Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx) defines the posterior urethra and the stricture-versus-stenosis terminology, and gives an entity table (BNC, VUAS, radiation-induced stenosis, PFUI, and membranous stenosis after endoscopic prostate surgery) that routes to the detailed pages. It also covers incidence, evaluation, a management framework, endoscopic adjuncts (mitomycin C, triamcinolone, TUITMR, drug-coated balloon, stents), reconstruction by entity including open versus robotic VUAS continence data, one center's labeled VUAS algorithm, AUS sequencing and surveillance.
+
+[Radiation-Induced Posterior Urethral Stenosis](docs/03-clinical-conditions/03b-voiding-outlet/radiation-posterior-urethral-stenosis.mdx) is the management page:
+
+- pathophysiology and incidence, including ASCENDE-RT framed as grade 3 GU events, the Calvo & Rourke 2026 composite endpoint, and brachytherapy dose data;
+- evaluation and continence prediction;
+- endoscopic outcomes in radiated men;
+- a reconstruction-selection table;
+- EPA technique and outcomes, and the dorsal onlay BMG technique (Kaldany/Nikolavsky 2025);
+- the Rourke–Gelman 2026 EPA-versus-BMG comparison, with a reconciliation of the conflicting continence data;
+- robotic repair after radiation;
+- AUS risk after radiation and urethroplasty;
+- the devastated outlet, fistula, diversion and follow-up.
+
+Sources came from the user's OpenEvidence summaries and the Ivan/Lee/Simhan 2025 and Naser-Tavakolian/Lee 2025 TAU reviews. Every cited primary study was checked against its PubMed abstract. Corrections to the summaries:
+
+- ASCENDE-RT 18.4% is a toxicity composite, not a stricture rate.
+- Meeks 2011 was not an all-EPA series.
+- Keith 2020 shows EPA recurrence rising to 36.6% with at least 1 year of follow-up.
+- New incontinence after dorsal onlay is reported among previously continent men only.
+- Merrick 2006 and Bearrick 2022 figures now follow the abstracts rather than the review tables.
+
+Unverifiable claims were omitted. Added cross-links from male urethral stricture, VUAS, BNC, radiation tissue effects, cancer survivorship and the clinical-conditions landing page. Lint and the production build (131.99 MB) passed, and both pages were checked in the browser.
+
+---
+
 ## 2026-09-20 — Lateral-suspension technique and outcome attribution
 
 Corrected the bladder-neck dissection landmark, variant-specific tunnel/mesh/fixation teaching, and single-arm versus comparative outcome citations while retaining the operative sequence, mesh and robotic variants, all 15 inherited references and the video. Scoped an older mesh-erosion cohort and preliminary non-inferiority evidence without treating associations or null results as universal rules. The [source review](reports/2026-09-20/lateral-suspension-review.md) records exact full-text, supplement, video and IFU gaps; clinical disposition remains partial. The preceding [pectopexy release](reports/2026-09-20/pectopexy-publication.json) passed exact-commit CI/Vercel and live-body comparison, carrying the formerly rate-limited Halban/Moschcowitz pages live.
