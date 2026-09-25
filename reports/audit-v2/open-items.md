@@ -596,9 +596,94 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: child-page intros. Corrected: radiation-fistula interposition was labelled an EAU recommendation; EAU actually says modified techniques/diversion and no high-level evidence that flaps improve outcomes. All 17 child links resolve; 17 hub summaries consistent with child pages. Not checked: child-page numbers (each audited on its own page); urethropubic/urethroperineal summaries left to their agents.
 
+## 03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Pestana 2009, Alter 1999, Tang 2008 (no abstract review), EAU 2026 penile size chapter (ref35) text, Brouwer 2023 support for buried-penis risk; Maizels classification details (abstract only); Hesse/Amend detail beyond abstract. Lint citations/links pass.
+
+## 03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Ringel 2020 (AFP) and ACOG PB 224 / BAD 2018 (no abstract detail; guideline statements on clitoral scarring surgery not confirmed against full text); postmenopausal and FGM/C etiology not covered on page (FGM/C handled by another agent); no clitoral-specific ISSVD position located.
+
 ## 03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx
 - status: checked (2026-09-24)
 - open: STILL NOT CHECKABLE (unchanged): Shamloul prevalence figures, hypertension 68%/smoking doubles ED, psychogenic ~20%, 4-6 attempts rule, specialised tests list, EAU Princeton IV wording.
+
+## 03-clinical-conditions/03g-genital-scrotal/female-genital-mutilation-cutting.mdx
+- status: checked (2026-09-24)
+- open: NOT checkable: WHO 2025 rec text (NCBI bookshelf blocked; conditional recs taken from search summaries), hemorrhage 4-19%, Type III ~10%, AAP-cited 94% would recommend/100% pleased, CDC >500,000, US statute details, UNICEF 2024 report itself, refs 7,8,14-17.
+
+## 03-clinical-conditions/03g-genital-scrotal/genital-lymphedema.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: filariasis prevalence figures (refs 4-7,42), NCCN 2026 survivorship (ref 25), ref 26 (breast-cancer review cited for LVA), ref 33 (Liao 2003, no abstract), refs 21,39,45,50,54 (2025-26 reviews, abstracts not read), ISL 2023 PDF not opened (stage definitions from standard ISL staging), IDSA 2014 3-4 episodes/yr from memory of guideline. Genital-specific evidence for CDT/pneumatic compression/liposuction absent (extremity data only).
+
+
+## 03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: refs 5,6,9,11,14-17,20-26,28-30,39 (background/imaging/CDC, not opened beyond DOI resolution); ISL/GLS staging text and Stewart-Treves statement uncited; W. bancrofti 90% and 120M/40M filariasis figures not verified; no radiation/HS-specific or antifilarial doxycycline currency search done. No word drop vs baseline (+71).
+
+## 03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: 'one-third or more' genital involvement (no cited abstract gives it); refs 4,6,7,8,10,12,13,16,18,19,20,22 not opened; clindamycin+rifampin 12-week course, tetracycline, OCP/spironolactone, resorcinol uncited (NA guideline Part II not checked); Hurley staging, obesity/smoking/PCOS 3-fold not verified; full text of Alikhan 2019 not read; recurrence rates for perianal/vulvar surgery (ref3) not verified; no deroofing content on page.
+
+## 03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Mitchell/Goldstein secondary p-values (Goldstein is a letter, no abstract), Hecken later crossover detail, BAD 2018 not cited/not checked, female 6:1-10:1 ratio, Kulkarni 80-90% short-term rate in table, ref 4/12/16 unverified content, Patel PU-vs-BMG stricture length.
+
+## 03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ASRM 2021 full text (paywalled; categories/table not verified line by line), ACOG CO728 full text (only summary), ref 8/9/13 (MedlinePlus/chapter), refs 3-7,16,19-21,24,26,28-30,32,33,35,36 not individually checked for claim detail, Apfel 2022 oxidized cellulose claim, MRKH Type II skeletal 32%/hearing/cardiac, 'up to 53% associated anomalies', Vecchietti 1 cm/day traction detail, Lachman-type Davydov 8-step list (page lists 5). Not covered: 3D ultrasound accuracy data, Ingram dilator, uterine transplant beyond registry.
+
+## 03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx
+- status: checked (2026-09-24)
+- open: Not checkable (no AUA 2015 full text): AUA vitamin E/tamoxifen/pentoxifylline/Potaba/colchicine statements, AUA ICI-before-intervention, plication ~50% of PD surgery, curvature correction attribution; AUA stability interval (removed); grafting de novo ED up to 50% (refs 40/41 abstracts silent); Penimaster PRO efficacy (ref 35); Xiaflex label sexual-abstinence wording (pharmacology page checked); vacuum device row.
+
+## 03-clinical-conditions/03g-genital-scrotal/small-penis-syndrome.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Oderda/Sultana/Salloum/Manfredi/Romero-Otero/Garcia Gomez/Schifano/Ramazan (abstract-level only, not claim-checked in detail); Deskoulidi 2-4 cm and Lei 50.8% abstract-level; fat resorption 30-70% and traction 4-6 month trial unsourced; EAU chapter read via WebFetch summary, not full text.
+
+## 03-clinical-conditions/03g-genital-scrotal/testicular-reimplantation.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ref 6 Giuliani 1983 (~5% intra-abdominal figure), ref 14/15/17 abstracts not read, PanCareLIFE 'research protocol only' wording (abstract lacks it), ACS 2025 replantation wording (PDF not read), Silber-Kelly 1976 attribution (via Chao abstract only).
+
+## 03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx
+- status: partial (2026-09-24)
+- open: Resume: not checked - refs 5,6,8,9,10-16,19,21-34 (Skene, AMFB/AAM, VAIN figures 81-88% regression, laser 69-90% cure, Rome 2000), 35-37,39-43,45,48; NCCN 2025/2026 staging table; vaginal-wall leiomyoma, condyloma and transverse septum not covered on page (not added); Omole AFP Bartholin 2% prevalence and I&D recurrence claim; 0.5-1% vaginal cyst prevalence unsourced. Lint citations/links pass.
+
+## 03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ACOG PB218 evidence levels (Level A adhesiolysis, B SNRI, C acupuncture; paywalled); PCS 'up to 30%' ACOG insufficient-evidence statement; endometriosis 33-50% of CPP; men pelvic-floor 27-64% and UPOINTS cite (ref26 is Cochrane, does not support UPOINTS); vulvodynia 8-16%; EAU 2026 CPP chapter (web-only, not opened). Word count up, no restoration needed.
+
+## 03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: peak onset 40-50 y, >50 y cystoscopy rationale (guideline body), pathophysiology refs 4/10-12 (Campbell chapter, reviews), lidocaine/HA/chondroitin dosing, major-surgery pain-persistence claim (ref 1), PPS label details (pharmacology page verified).
+
+## 03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Rogalski 2022 vaginal diazepam trial (not found on PubMed); AUA 2025 male CPP guideline PFPT statement (no search hit, page has no male CPP content); AUA IC/BPS 2022 manual-PT statement wording (not in abstract); Abbott anesthesia detail; ACOG 218 Level B TPI wording (full text); Tandon 2019 not located; refs 1-4, 9, 10, 27, 33-37, 39 unverified vs content beyond citation match.
+
+## 03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: MPA/GnRH statement (ref13 SVS 2011 full text), ref17 AJR panel, POTS study 2026 (ref28), refs 1-3, 18-26 anatomy details, Bałabuszek 2025 satisfaction figures, CT 13.7%/8% prevalence figures. ESVS 2022 / SIR position statements not located on PubMed search; not added.
+
+## 03-clinical-conditions/03i-defecatory-disorders/chronic-constipation.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASCRS 2024 full text (colectomy satisfaction range, evaluation sequence), Rome V criteria details (abstract only), AGA 2019 OIC recommendation grades (abstract blank), AGA 2026 refractory statements beyond abstract, defecography/transit thresholds.
+
+## 03-clinical-conditions/03i-defecatory-disorders/defecatory-dysfunction.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: EMG biofeedback OR 6.74 (Skardoon abstract lacks it); 33-50% referral figure (Sadler AFP); botulinum effect <=3 months; Rome IV two-test rule wording; AGA 2026 refractory update, Rome V, Pelvic Floor Consortium 2026 not re-read. No currency additions needed.
+
+## 03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASCRS 2023 full text paywalled (bulking/insert/sphincteroplasty/SNM/biofeedback wording taken from Guideline Central side-by-side summary); ACOG PB210 full text; nursing-home 'up to half' and women>men prevalence (Bharucha 2022 full text); pudendal latency 'not routinely recommended'; LINX/FENIX not established for FI in US (no source pulled); Solesta FDA approval 2011 from trade-press only; Vollebregt 2025 irrigation review abstract truncated; Hong 2013 ABS meta had no abstract; ICI/IUGA 2023 and NICE FI guidance not checked. Currency search on FI/SNM not run beyond above.
+
+## 03-clinical-conditions/03i-defecatory-disorders/index.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ACG 2021, ASCRS 2023, Heitmann 2021, Bharucha-Lacy 2020 refs not opened; hub table recommendations (FI-MC biofeedback, PFPT first-line) not compared to guideline text.
+
+## 03-clinical-conditions/index.mdx
+- status: not-clinical (2026-09-25)
+- open: Hub descriptions aligned to actual child pages in all nine sections (lichen sclerosus removed from 03b - it lives in 03g; added missing 03b/03c/03e/03g/03h/03f pages). All 9 section links resolve (lint:links clean). Hub contains no numbers. Not checked: clinical facts on child pages (audited separately); NLUTD/fistula index card wording not edited (child pages).
 
 ## 04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx
 - status: checked (2026-09-24)
