@@ -1,6 +1,8 @@
 # Audit v2 — open items (not checkable / needs source)
 
-Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): EAU Urological Infections 2026, AUA BPS Table V, ASHP 2013 prophylaxis, FloSeal human-thrombin and Recothrom IFUs, Gelfoam Pfizer label, Spongostan EMEA sheet, Ethicon hemostat booklet; AUA/SUFU/AUGS GSM 2025, NAMS 2020 GSM, ACOG Clinical Consensus 2 (2021, breast cancer), IDSA candidiasis 2016, AUA BPS antimicrobial prophylaxis 2019, WikiGuidelines UTI 2024 (Nelson), Cochrane cranberries; AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
+Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Note: neuropathic-pelvic-pain/antispasmodics.mdx is an unbuilt placeholder (no content to audit); the hub index stays partial until it is authored.
+
+Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): EAU Urological Infections 2026, AUA BPS Table V, ASHP 2013 prophylaxis, FloSeal human-thrombin and Recothrom IFUs, Gelfoam Pfizer label, Spongostan EMEA sheet, Ethicon hemostat booklet; AUA/SUFU/AUGS GSM 2025, NAMS 2020 GSM, ACOG Clinical Consensus 2 (2021, breast cancer), IDSA candidiasis 2016, AUA BPS antimicrobial prophylaxis 2019, WikiGuidelines UTI 2024 (Nelson), Cochrane cranberries; AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
 
 Leads for later audits (Lightner AUA BPS text lacks these claims): `penile-implants/infection.mdx` line ~100 (aminoglycoside + vancomycin/cephalosporin regimen; "2019 and 2020 updates"), `penile-implants/preoperative-evaluation.mdx` line ~64 (mupirocin/chlorhexidine MRSA decolonization), `urine-studies.mdx` and `flexible-cystoscope.mdx` BPS claims. AUA BPS supplementary procedure tables 3-4 and ASHP 2013 still wanted.
 
@@ -190,6 +192,70 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: Not checkable: Astellas April 2026 pipeline PDF (phase III listing) and FDA SRS page not re-opened; absence of FDA/EMA action rests on PubMed/ClinicalTrials.gov only; camera compatibility unverified.
 
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/sodium-fluorescein.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: lab-test interference (label text fetched has no such section; kept as hedged general caution), dilute/slow-injection advice removed as unsupported, flap-perfusion use (no source checked), indigo carmine/BLUDIGO availability row (sibling page audited).
+
+## 01-foundations/pharmacology/legacy-low-evidence/imipramine.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AAFP 2022 full text (ECG claim moved to label); EAU 2026 female LUTS silent on TCAs (grep only); Wein/Andersson/Athanasopoulos abstract-only; IC/BPS refs 16-21 only spot-checked.
+
+## 01-foundations/pharmacology/legacy-low-evidence/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: EAU 2026 male LUTS hexanic Serenoa weak recommendation (male LUTS text not in sources-local; AUA BPH 2026 text has no phytotherapy statement); imipramine 'only FDA-approved TCA for urology' rests on HCl label, not re-fetched. Child pages not audited here.
+
+## 01-foundations/pharmacology/legacy-low-evidence/parasympathomimetics.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: BST classic 15 cm H2O/2.5 mg origin (Lapides); Zeinelabden exclusion criteria (full text); Obara distigmine >12 h vs ~3 h (abstract-only, supported); Freeman JACC ref 21 supporting the pyridostigmine side-effect statement (not reread); AUA/SUFU and NICE NG123 have no UAB parasympathomimetic recommendation in local texts (grep negative).
+
+## 01-foundations/pharmacology/legacy-low-evidence/phenazopyridine.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA IC/BPS guideline position (no local text); vitamin C not-rescue statement (uncited); Heinz/bite-cell case-report statement (no cite); 100 mg x2 Rx equivalence; Zelenitsky content; no systematic review of efficacy found in PubMed.
+
+## 01-foundations/pharmacology/legacy-low-evidence/phytotherapy.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: STEP 2006 (uncited, named in text only), Theil/Leibbrand full stats, Pygeum 65% vs 30%, NBBS/mechanism preclinical refs 10/11/16/22, Ye n=354 fine; saw palmetto bleeding case reports not individually cited.
+
+## 01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA NLUTD 2021 full text (statements 40-42 confirmed only via auanet page; no 200/300 U text found), AUA IC/BPS 2022 stmt 20 Option/Grade C confirmed by web search only, Liu 2015/Chuang 2014/Kuo 2014/Jhang 2021 liposome-TC-3 refs not re-read, Whitmore 2025/Karp 2025/Wang 2026/Eilber 2025/Rovner 2014/Li 2025/Hanna 2026 not opened, ROSETTA 20% vs 4% complete resolution and Nitti 2016 median dosing beyond abstract not verified. Sibling storage-oab page (not edited) says label reports no added benefit of 300U over 200U; label text does not contain that (source is Cruz/Ginsberg).
+
+## 01-foundations/pharmacology/neuromodulation-adjuncts/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: none; child botulinum-toxin page label figures (400 U cumulative, pediatric dosing) left for its own audit.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/antispasmodics.mdx
+- status: partial (2026-09-24)
+- open: Resume: needs authored build-out (hyoscyamine, dicyclomine, baclofen oral/intrathecal boxed abrupt-withdrawal, tizanidine, cyclobenzaprine, methocarbamol, vaginal diazepam RCT Rogalski 2022 / Cochrane, benzodiazepine boxed warning, Beers/anticholinergic burden, AUA IC/BPS 2022, EAU CPP) with DailyMed and PubMed verification. Not checked: all agents/doses/labels/guideline positions.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/gabapentinoids.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Franco 2019 Cochrane pregabalin-specific GRADE wording (full text inaccessible); ACOG PB218 evidence level (paywalled); Raisi 2025 PE umbrella claim on mechanism; Goodman quote; EAU CPP guideline not consulted.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx
+- status: partial (2026-09-24)
+- open: Not checkable: hub statements on antispasmodics (diazepam PV/cyclobenzaprine/baclofen, levator ani use) unverified, child page is an unreviewed placeholder; AUA Grade B not in sources-local (IC/BPS guideline text absent); EU duloxetine labeling and GaPP2 rest on child pages (gabapentinoids under separate audit). Resume: re-record checked once antispasmodics is built and audited.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/local-anesthetics.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA IC/BPS full-text 'short-term <2 weeks' benefit wording (only summary statement read); mepivacaine/chloroprocaine not on page (not added); Rabets 2004, Alavi 2001, Valdez-Flores, Bingqian, Sen, Shih, Aggarwal, Zolnoun, Levin, Ly, Antolak, Hui, Zayed, Zako, Pischetola, Jung, Dong, Bai, Pehlivanoglu, Cai 2023, Boeri, Abu El-Hamd, Desai numbers not re-verified this pass.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/nsaids-analgesics.mdx
+- status: checked (2026-09-24)
+- open: Not checkable/not checked: EAU Urolithiasis 2026 sections 3.4.1-3.4.3 (stone, out of scope); Al-Terki 2021 (ref20); Gu 2019 NMA (ref10); mechanism/nephrotoxicity reviews refs 5,7,8,29-31,34,37-45; Patel PCPT n=4,726; Borgert JAMA 2025 (ref6); AUA IC/BPS 2022 and AUA 2018 opioid statement wording; ACOG opioid guidance not located.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/snris.mdx
+- status: checked (2026-09-24)
+- open: s QoL, Giannantoni dropout; added EAU titration/MUI, SmPC taper, serotonin syndrome, bleeding, BP, hepatotoxicity, hyponatremia detail. Not checked: Thor 1995 cat 5x/8x figures, Di Rezze, Sobay/Polat, Kang/Schlenker/Collado Serra details, Biyikoglu FSFI, PE section (AUA 2022 doses, Safarinejad), venlafaxine/Savella labels, FAERS paper; ACOG/AUA pelvic pain guideline positions not verified locally.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/topical-compounded-agents.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: generic lidocaine 5% ointment label (no DailyMed single-ingredient record found); compounded concentrations for amitriptyline+ketamine 2-5%, amitriptyline 2%+baclofen, ABGKL 5/2/5/5/5 (not stated in cited abstracts; Lawson full text partly read); Poterucha diagnosis list; Lawson ketamine-alone quote; AUA 2015 Peyronie topical wording (Hayat 2023 and Twidwell verified); ACOG CO 673, AAFP 2021/2025 (paywalled); ref 20 Kopsky, ref 2 Lancet, 26 Namazi not opened. Page has no capsaicin/nifedipine/nitroglycerin/diazepam/testosterone sections; not added.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/tricyclic-antidepressants.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA 10 mg QHS start and 75-100 mg upper range (only statement text obtained, not supporting text); Beers 2023 and NICE CG173 recs, Robson/AFP/Morin refs, older pharmacology refs (3-7,9,15,17,24-29,31-37,41-43) not re-read; imipramine label not re-fetched (covered by imipramine page audit).
+
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
 - open: Resume: other blurbs unchecked.
@@ -208,7 +274,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx
 - status: checked (2026-09-24)
-- open: STILL not checkable: onset/peak timing, DSD ~100 U, Daxxify/Xeomin notes, bladder-neck/pelvic-pain/chemo-cystitis uses, antibody rarity (ref14 abstract-level), DailyMed. || EAU 2026 text read: added 100 U Strong recommendation, non-licensed other doses/brands, suburothelial=intradetrusor (LE 1a) (ref 16). Page attributes 200 U option to AUA/SUFU; EAU differs (jurisdictional), now stated. Median 7.6 mo (Nitti extension) vs EAU 7.5 mo: rounding difference, page left.
+- open: STILL not checkable: onset/peak timing, DSD ~100 U, Daxxify/Xeomin notes, bladder-neck/pelvic-pain/chemo-cystitis uses, antibody rarity (ref14 abstract-level), DailyMed. || EAU 2026 text read: added 100 U Strong recommendation, non-licensed other doses/brands, suburothelial=intradetrusor (LE 1a) (ref 16). Page attributes 200 U option to AUA/SUFU; EAU differs (jurisdictional), now stated. Median 7.6 mo (Nitti extension) vs EAU 7.5 mo: rounding difference, page left. || Corrected 300 U vs 200 U attribution (Ginsberg 2012 CIC 35% vs 42%; not label text) after neuromodulation-adjuncts audit.
 
 ## 02-evaluation/laboratory-studies/hormonal-assessment.mdx
 - status: partial (2026-09-24)
