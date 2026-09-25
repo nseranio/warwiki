@@ -15,6 +15,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-25 (voice, later) — STYLE.md adopted; Pass 1 sweep wave 1
+
+- Adopted [STYLE.md](STYLE.md) (owner approved the Pass 1+2 voice; decisions on imperatives, run-in labels and deleted scope/hedge sentences are in its section 8), added the `warwiki-voice-editor` agent, and pointed CLAUDE.md, CONTRIBUTING.md, AGENTS.md and AUDIT.md at it.
+- Pass 1 sweep wave 1: 59 tier-4 pages (anatomy, surgical skills, tools, biomaterials). All passed `check_voice_diff.py`; 13 pages were judged for drift, two lost qualifiers were restored and one added connective was reverted. Progress is in `reports/voice/status.json`. Tooling: `scripts/voice/sweep_select.py` (skips pages with uncommitted changes and the next 30 audit-queue pages; tiers 4, 3, 2, 1) and `scripts/voice/sweep_record.py`. Remaining: about 190 tier-4, 540 tier-3 and the audited tier 1–2 pages, plus any pages skipped for uncommitted audit edits.
+
+---
+
 ## 2026-09-25 (session 3, batch 2) — Audit v2 tier 3: postoperative management and preoperative cardiovascular risk
 
 - **Checked:** [Electrolyte Abnormalities](docs/01-foundations/perioperative-care/postoperative-management/electrolyte-abnormalities.mdx), [Perioperative Nutrition](docs/01-foundations/perioperative-care/postoperative-management/nutrition.mdx), [Pulmonary Embolism](docs/01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx), [Cardiovascular Risk](docs/01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx).
