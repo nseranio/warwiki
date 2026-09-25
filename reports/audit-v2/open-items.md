@@ -425,8 +425,8 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - open: Not checkable: NLUTD AUA/SUFU ref3 details, Passos 2025 full text, NICE NG123 has no DV content, EAU neuro-urology 2026 has no DV-specific text; EAU paediatric guideline read via web summary only; Hsiao 2017 AUC 0.93 cited via EAU, primary not opened.
 
 ## 03-clinical-conditions/03b-voiding-outlet/female-urethral-masses.mdx
-- status: partial (2026-09-24)
-- open: Resume: verify carcinoma refs then set checked.
+- status: checked (2026-09-25)
+- open: Not checkable: Jacox full text (leiomyoma share); refs 27,9,25 are single case reports (design noted, claims kept modest); Conces ref 7 not rechecked this session.
 
 ## 03-clinical-conditions/03b-voiding-outlet/female-urethral-stricture.mdx
 - status: checked (2026-09-24)
@@ -501,8 +501,8 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - open: Not checkable: AUA/SUFU NLUTD text (no local copy; only abstract), SNM 'usually not used in MSA', vibegron BP label, desmopressin sodium/frailty advice, CIC/SPC practical statements, PD-specific botulinum retention rates.
 
 ## 03-clinical-conditions/03d-nlutd/nlutd-spina-bifida.mdx
-- status: partial (2026-09-24)
-- open: Not checkable: Lancet 2017 ref2 support for urodynamic-for-all; hydrocephalus 85-90%, US 1,500 births/yr, MOMS claim; latex allergy rate; vibegron pediatric status (no approval found, not label-verified); Botox dose from user-verified earlier audit, not re-read on label. Resume: transition, sexual/fertility, MACE/Mitrofanoff complication rates (perforation, stones, mucus), tethered cord, bowel program have no numbers on page and were not literature-checked.
+- status: checked (2026-09-25)
+- open: Not checkable: Lancet 2017 ref2 support for urodynamics-for-all; vibegron pediatric status; Botox dose not re-read on label; EAU mucus 12.5%/metabolic 3.35% come from Hoen 2017 full text (abstract confirms only bowel 15%, stones 10%); latex prevalence in SB not stated (no verified rate); Meneses abstract gives no specifics on primary avoidance timing; SBA women's-health cesarean recommendation not re-read.
 
 ## 03-clinical-conditions/03d-nlutd/nlutd-spinal-cord-injury.mdx
 - status: checked (2026-09-24)
@@ -616,7 +616,6 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: Not checkable: filariasis prevalence figures (refs 4-7,42), NCCN 2026 survivorship (ref 25), ref 26 (breast-cancer review cited for LVA), ref 33 (Liao 2003, no abstract), refs 21,39,45,50,54 (2025-26 reviews, abstracts not read), ISL 2023 PDF not opened (stage definitions from standard ISL staging), IDSA 2014 3-4 episodes/yr from memory of guideline. Genital-specific evidence for CDT/pneumatic compression/liposuction absent (extremity data only).
 
-
 ## 03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: refs 5,6,9,11,14-17,20-26,28-30,39 (background/imaging/CDC, not opened beyond DOI resolution); ISL/GLS staging text and Stewart-Treves statement uncited; W. bancrofti 90% and 120M/40M filariasis figures not verified; no radiation/HS-specific or antifilarial doxycycline currency search done. No word drop vs baseline (+71).
@@ -646,8 +645,8 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - open: Not checkable: ref 6 Giuliani 1983 (~5% intra-abdominal figure), ref 14/15/17 abstracts not read, PanCareLIFE 'research protocol only' wording (abstract lacks it), ACS 2025 replantation wording (PDF not read), Silber-Kelly 1976 attribution (via Chao abstract only).
 
 ## 03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses.mdx
-- status: partial (2026-09-24)
-- open: Resume: not checked - refs 5,6,8,9,10-16,19,21-34 (Skene, AMFB/AAM, VAIN figures 81-88% regression, laser 69-90% cure, Rome 2000), 35-37,39-43,45,48; NCCN 2025/2026 staging table; vaginal-wall leiomyoma, condyloma and transverse septum not covered on page (not added); Omole AFP Bartholin 2% prevalence and I&D recurrence claim; 0.5-1% vaginal cyst prevalence unsourced. Lint citations/links pass.
+- status: checked (2026-09-25)
+- open: Not checkable: ref 36 (HIV OI guideline, cited in VAIN mgmt cluster, no VAIN content confirmed), Pradhan 1986 full text (no PubMed abstract), endometriotic 7% and posterior-fornix site (refs 4,8), SCC 85-90% (Adams says 90%), NCCN v2.2026 stage-specific treatment table (abstract only), FIGO stage wording from a fetched summary of Adams full text. Lint citations/links pass.
 
 ## 03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx
 - status: checked (2026-09-24)
