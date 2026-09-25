@@ -68,6 +68,30 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: Not checkable: ERC-230 10 ASCUS/1 LSIL and no-hyperplasia detail (Heo abstract silent; need ERC-230 primary paper); Crandall 2023 40-80% prasterone range in JAMA text (abstract only); AUA 2025 GSM breast-cancer/DHEA statement wording (AUA site 403); NCCN survivorship/risk-reduction quotes (paywalled); cost -300; Portman 2014 not cited.
 
+## 01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ACOG PB 141/PB 213/2021 breast-cancer consensus wording (paywalled); AAFP 2023; WHO 2012 osmolality advisory (403); FDA K062682 device-clearance generalization; AUA GSM 2025 statement wording (PDF empty; would settle: local PDF extract); oil-based lubricant/latex claim and Palacios condom table (no source read).
+
+## 01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: cream absorption variability (refs 10/11); ACOG 2021 breast-cancer consensus, NAMS 2020, ACOG PB 213 wording; Mainar 2026/Buchanan/Bartz/Sriprasert commentary refs; EVA 2026 (priming hub); Osphena/Intrarosa full labels; DailyMed labels pulled may predate Feb 2026 boxed-warning revision.
+
+## 01-foundations/pharmacology/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: vibegron BPH-therapy label wording; Xiaflex sole-approved status/marketing; IMPRESS curvature figure; alvimopan availability; Nocdurna availability; saw palmetto (child page sources). Vaginal-estrogen AUA rUTI recommendation wording not rechecked on hub.
+
+## 01-foundations/pharmacology/infection-prophylaxis/antifungals.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA BPS 2020 full text (funguria wording via secondary summaries; 'high-pressure irrigation'/'planned surgical entry' bullets); IDSA candidiasis 2016 full PDF (doses read via summary); ECMM/ISHAM/ASM 2025 candiduria section (403); EAU Urological Infections 2026 antifungal text; Jenkin 1998, Miller 2024; IDSA aspergillosis 2016 renal statements.
+
+## 01-foundations/pharmacology/infection-prophylaxis/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Brant 2023/Sun 2023 adherence figures, NORAPP, Thurnheer 2024, CERTAIN-1, IDSA 2025 antibiogram thresholds (child audits); Pivya/Blujepa approvals; AUA BPS 2020 full text; Stonehouse 2025 and ImpresU not re-resolved.
+
+## 01-foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: WikiGuidelines 2024 >=36 mg PAC and hydration (JAMA blocked); Cochrane cranberry tablet/powder RR 0.45 and 18-72 mg PAC range (full text); Porru 2014 (not in PubMed); Volonte/Munir/Steinman/Schmiemann/Lorenzo-Gomez 2021 beyond abstract; NICE NG112 (403); OM-89 6 mg capsule strength (label).
+
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
 - open: Resume: other blurbs unchecked.
