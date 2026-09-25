@@ -504,6 +504,98 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: partial (2026-09-24)
 - open: Not checkable: Lancet 2017 ref2 support for urodynamic-for-all; hydrocephalus 85-90%, US 1,500 births/yr, MOMS claim; latex allergy rate; vibegron pediatric status (no approval found, not label-verified); Botox dose from user-verified earlier audit, not re-read on label. Resume: transition, sexual/fertility, MACE/Mitrofanoff complication rates (perforation, stones, mucus), tethered cord, bowel program have no numbers on page and were not literature-checked.
 
+## 03-clinical-conditions/03d-nlutd/nlutd-spinal-cord-injury.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU statement text only via web summary (auanet page, not full text); EAU cross-refs taken from local text; the Milligan 2020 and Romo 2018 refs matched by DOI only, claims not read in full; 42% CIC discontinuation is a single observational study cited via EAU; early catheter-in-acute-phase bullet is standard practice, uncited; Aging/BPH and prostate-cancer bullets and epidemiology figures (incidence, prevalence, age 43) not checked; the perioperative AD bullet relies on the AD page audit.
+
+## 03-clinical-conditions/03d-nlutd/nlutd-stroke-dementia.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU NLUTD risk category for stroke/dementia (no local text; abstract only), condom-catheter 12%/month bacteriuria, Beers alpha-blocker/desmopressin wording from memory (full text not read), mirabegron BP label, PVR-guided UDS thresholds. No content removed (word count up).
+
+## 03-clinical-conditions/03e-upper-tract/retroperitoneal-fibrosis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable (full text): incidence 0.1/100k, prevalence 1.38/100k, men 2-3x, 60-80% obstruction (Vaglio 2006); HLA/asbestos (Raglianti abstract ok); drug list beyond ergots; steroid contraindication in infection; Zhang/Stone ref16 IgG4-RD mgmt detail; methotrexate/azathioprine doses; no EAU/EULAR RPF-specific guideline found. Refs 4 and 8 duplicate Raglianti (left to avoid renumber).
+
+## 03-clinical-conditions/03e-upper-tract/upj-obstruction.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Diamond 2017 (ref 7) APRPD 16-24 mm and 4.5% antenatal figure, crossing vessel 30-60% adult prevalence, Hopf 'failures in first 24 mo', SNMMI T1/2 statements (ref 20, not opened), Kohno UTD claims, adult redo pyeloplasty outcomes, AUA has no UPJO guideline (none checked). Not restored: no word drop. lint:citations and lint:links pass.
+
+## 03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: reimplant 91-98% and psoas hitch 97% (unsourced; numbers removed); ref 33 ACS Best Practices 2025 and ref 34 EAU Trauma 2026 web text (reimplant reflux and ileal-substitution renal-impairment statements) not opened; ref 12 endoscopy <=2cm threshold from Ou/Lu only; ref 24 Xu 2016 iliopsoas tunnel and ref 18 Lee 2017 not read; Allium transplant ~90% claim removed; malignant obstruction covered only briefly (no verified series).
+
+## 03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: JAMA 2025 review (ref 1) figures 65%/5%/17-27% (paywalled, abstract lacks them); ACG 2025 recurrent-UTI relative indication (ref 7) and ASCRS Crohn 2020 primary repair of noninflamed sigmoid (ref 18) full text not read; ASCRS 2026 diverticulitis update (PMID 42478484, no abstract) not read; ECCO Crohn not located; oral charcoal test has no data (only charcoal enema n=1); Zhang 2014 57% vs Kaimakliotis not reconciled beyond scoping. Unrelated lint failure in pyeloenteric.mdx (ref14 anchor), another agent's page.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/nephropleural.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Stark 1982, Salcedo 1986, Salyer 1971 (old, no abstract checked); Munver 'hemothorax' figures from abstract only; no 12% supracostal pleural-complication figure verified beyond these; 2024 Lou surgical urinothorax case series not reviewed. No word loss vs baseline.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/post-kidney-transplant.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: refs 7,8,9,11,12,13,15,16,23,24,27,31,33,34 (not opened); KDIGO/AST guidance not consulted; 'cadaveric donor' risk factor (ref13) unverified; antegrade pyelography 100% upper bound; Ye 2012 omentum 13-patient count not re-read; Novacescu 2025 review outcomes; KDIGO/AST not searched.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/pyeloenteric.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Wang 1990 abstract only; no mortality figures exist for this entity; radiation and tuberculosis-of-renal-pelvis to bowel evidence essentially absent (single case); Gill 2016 and Yu 2004 abstract-only; hematuria and rectal stone passage uncited.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/ureterocolonic.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Cirocco full text (abstract only), Jiang 2023 series (no abstract), radiation pathogenesis mechanism (Turina abstract lacks it), CT urography 'gold standard' (Yu review abstract only), long-term-stent etiology (no source found; not added), ACS 2025 PDF not read in full, Brown JAMA 2025 does not address barium enema.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/vascular-urinary.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Kamphorst 445-pt full text (76% massive, 62% angiography sensitivity only abstract-verified; CTA 48%), Ebata EIA/IIA breakdown, Blasco 1991 ref9 graft-erosion claim, renal AVF Part 2 (refs 19-29) only lightly checked, vesicovascular/aortoureteral rarities not on page. Not read: refs 6,11 full text.
+
+## 03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Lau 1998 details (abstract only; omental coverage/healing), Banihani full text, Jones ch.24 (ref20), 1-4% bladder-in-hernia figure (ref7 is a single case), ACS 2025/EAU 2026 trauma guideline statements (ref11/28, not opened), refs 10,14,15,21-24,27 not opened. Crohn etiology: no VCF-specific source found, not added.
+
+## 03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: WHO 2M/50-100k primary WHO source (fact sheet not retrievable); WHO 2018 recommendation only via news item; Browning 2009 recommendation for elective cesarean (abstract only); refs 4,7-9,21,22,24-28,30-32,37 not individually re-verified; Mekelle 89.3% abstract-confirmed only; Nardos 2008 not located; Martius/sling outcome claims rest on Mourad 2026 abstract.
+
+## 03-clinical-conditions/03f-fistulas/in-females/rectovaginal.mdx
+- status: checked (2026-09-24)
+- open: Not checkable (ASCRS full text paywalled): rec numbers 12-18, obstetric 88%, spontaneous closure 52-66%, ERAF 41-78%/80%/55-93%, episioproctotomy 78-100%, anastomotic ~37%, fibrin glue/plug 'not recommended', 2.2% anastomoses; refs 3,7,9,10,16 exist-check only not re-read. ECCO 2020 and RCOG not addressed (no RVF-specific text found).
+
+## 03-clinical-conditions/03f-fistulas/in-females/ureterovaginal.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: 31% upper bound of UVF share (Goodwin 1980), Meirow 1994, Lang 1981, Mueller 1990, Binstock 1990, Murphy 1982 abstracts; psoas hitch +3-5 cm and Boari 8-12 cm gap figures; Linder/Laungani/Hudry technique series not opened. Lint citations/links clean.
+
+## 03-clinical-conditions/03f-fistulas/in-females/vesicouterine.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: incidence 1-4% and cesarean 83-93% (Tancer 1986/Buckspan 1983, no abstract access), HSG first-line (Tancer), Buckspan 1983 and Ravi 2003 (no abstract), ref 28 EAU web URL only local text checked; ref 18 fine.
+
+## 03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Goh axis cut-offs (no abstract); ~10% concurrent ureteral injury (Hilton abstract silent); Mourad recurrent/complex subgroup and 'no routine trimming'; Wall 2006 (ref 3) and Angioli 2003 (ref 8) closure/definition claims; Waaldijk 1994 applied to iatrogenic; Rafetto/Wei 2026 reviews full text; Kapriniotis Martius review; Streit PRP series.
+
+## 03-clinical-conditions/03f-fistulas/in-males/rectourethral.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: refs 12,14,21 (no abstract/paywalled reviews), Muñoz-era Crohn 0.3% is a 1985 secondhand estimate; LARS 0-20 detail for van der Graaf; Wexner/St Mark detail.
+
+## 03-clinical-conditions/03f-fistulas/in-males/rectovesical.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: contrast-enema/CT diagnostic claims and York Mason advantages (uncited teaching, no source verified); Lane technique steps 2/4 partly from Mundy; Sotelo step-by-step technique is from cited series/personal technique, not re-read in full text; reversal 83% etc. from abstracts only.
+
+## 03-clinical-conditions/03f-fistulas/in-males/urethrocutaneous.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Diamond Lancet 2017 (incidence, 50% proximal reoperation), Horton 1980, Caldamone 1999, Goldstein 1975, case reports 6,9-11,16,17,33,34 (not opened), Fahmy exact study counts, ref 28 Routh/29 Muruganandham figures only abstract-level. Baseline restoration not needed (+111 words vs e81c5b0d). lint:citations and lint:links pass; build not run.
+
+## 03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Horton 1980, Joseph 2002, Youssef 1999 (no abstract/DOI); Hwang 2023 and Johnsen 2018 only checked for existence/title, not outcome detail; WSES-AAST/Kuzaka/Hejase/Erickson/Susini (Fournier) verified to exist but claims (suprapubic cystostomy when urethra involved, gracilis/VRAM/SSG reconstruction) not checked against full text; EAU 2026 ref 38 chapter not checked against local text; no source found for prostatectomy/radiation as UPF cause so not added.
+
+## 03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: bone scan role (no verified source found); Hoyme 1984 (PMID 6700882 exists, abstract not read); Ross 6-week/CT-guided biopsy/RUG statements uncited; gracilis flap outcomes (no series with denominators found); Haas 2025 full text not read.
+
+## 03-clinical-conditions/03f-fistulas/index.mdx
+- status: checked (2026-09-24)
+- open: child-page intros. Corrected: radiation-fistula interposition was labelled an EAU recommendation; EAU actually says modified techniques/diversion and no high-level evidence that flaps improve outcomes. All 17 child links resolve; 17 hub summaries consistent with child pages. Not checked: child-page numbers (each audited on its own page); urethropubic/urethroperineal summaries left to their agents.
+
 ## 03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx
 - status: checked (2026-09-24)
 - open: STILL NOT CHECKABLE (unchanged): Shamloul prevalence figures, hypertension 68%/smoking doubles ED, psychogenic ~20%, 4-6 attempts rule, specialised tests list, EAU Princeton IV wording.
