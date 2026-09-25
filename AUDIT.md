@@ -104,6 +104,12 @@ Budget about 20–30 consequential claims per page. If a page has more, check in
   - Leave a blank line between an image and its caption.
   - Place videos immediately before References.
 - Voice: write for reconstructive surgeons and urogynecologists. Short sentences. Tables for comparisons.
+- **Evidence wording** (STYLE-draft-v3 section 4; applies to every audit edit and all new text):
+  - "causes" or "reduces" only when a causal conclusion is justified; "is associated with" for observational findings; "randomized trials showed" for randomized evidence; "retrospective series report" for retrospective evidence; "has been described" for technical reports and small series; "evidence is insufficient to determine" when that is the case.
+  - "guidelines recommend" only for an explicit recommendation, with the guideline's own strength label (AUA Strong/Moderate/Conditional/Expert Opinion/Clinical Principle; EAU strong/weak).
+  - Do not convert association into causation, absence of evidence into no effect, statistical significance into clinical importance, one study into consensus, expert practice into a guideline recommendation, a surrogate into a patient-centered outcome, or technical feasibility into efficacy.
+  - Report n/N, comparator, follow-up and the definition of success when the source gives them. Keep anatomical success, functional success, patient-reported improvement, retreatment, revision, explantation, recurrence and freedom from reoperation distinct. "Rare" needs a frequency and "durable" needs a follow-up duration.
+  - Label manufacturer information, a named surgeon's technique and institutional practice as such.
 
 **G. Record.** Record the page with `audit.py record` and one of:
 

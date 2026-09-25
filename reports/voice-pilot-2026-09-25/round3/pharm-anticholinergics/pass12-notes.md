@@ -1,0 +1,11 @@
+# pass12 notes: five most consequential citation moves
+
+Markers are unchanged in number; the checker requires each to appear once. Check each move against the cited paper.
+
+1. Trospium, ref 13 (trospium IR label). Before: "Trospium: limited brain penetration supports consideration when an antimuscarinic is needed; absence of an association in an individual study does not establish long-term cognitive safety.[13][14]". After: "Trospium has limited brain penetration, which supports consideration when an antimuscarinic is needed.[13]" [13] now sits only on the brain-penetration/consideration claim. Check that the label supports it (label pharmacology vs guideline statement).
+2. Trospium, ref 14 (AUA/SUFU 2024). After: "Absence of an association in an individual study does not establish long-term cognitive safety.[14]" [14] now sits only on the caution about single studies.
+3. BPH paragraph, ref 14. Before: [14][21][22][30] all at paragraph end. After: [14] sits on "the AUA/SUFU 2024 guideline supports antimuscarinic or β3 monotherapy, or α-blocker plus either class (Conditional Recommendation, Grade B)". Check the guideline states this.
+4. BPH paragraph, ref 21 (Cochrane, anticholinergic + alpha-blocker). After: "Combination with an α-blocker improves OAB symptoms more than α-blocker alone.[21]" The retention/PVR sentence before it ("may raise PVR slightly ... not associated with significantly more retention ... PVR above 200 mL not well studied") and "PVR is checked before initiation and at follow-up" now carry no marker (they used to fall under the block cite). Check whether 14 or 21 supports the retention claim; a marker may need to go back there.
+5. BPH paragraph, refs 22 and 30. After: "The AUA BPH guideline (2026) likewise allows an antimuscarinic alone or with an α-blocker ... (Conditional Recommendation, Grade C), and adds behavioral measures ....[22][30]" 30 is the 2026 guideline; 22 is the 2023 amendment. Check that 22 supports this clause and was not meant for the earlier "Grade B" sentence.
+
+Unresolved (not moved): the combination paragraph attaches [14] to both the AUA/SUFU "Conditional Recommendation, Grade B" clause and "in SYNERGY II, adverse events were 49% ... versus 41-44%". The SYNERGY II figure probably comes from 15/16, not the guideline. The single-cite rule blocked a split.

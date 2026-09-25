@@ -1,0 +1,710 @@
+[
+ {
+  "id": "p1",
+  "xArm": "C",
+  "yArm": "B",
+  "rewrite": "PASS; prose words 1493 \u2192 1593; em-dash count after: 7 (all within invariant-protected spots: 2 table first-column labels, 2 headings, 1 See Also link label, 2 reference titles in the byte-identical References section) \u2014 down from 26 in the original.\n\nOutput written to `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/out/p1-C.mdx`, report at `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/report/p1-C.md`. No files inside `/Users/joyboy/Documents/WARWIKI/warwiki` were created, edited, or deleted.",
+  "judge": {
+   "original_voice_score": 5,
+   "x": {
+    "voice_score": 6.5,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "directive target shifted",
+      "original": "Fecal incontinence \u2014 frequent in obstetric RVF because of concurrent sphincter damage; assess specifically rather than equating vaginal fecal leakage with anal incontinence",
+      "revised": "Fecal incontinence is frequent in obstetric RVF because of concurrent sphincter damage. Vaginal fecal leakage should be assessed specifically rather than equated with anal incontinence.",
+      "note": "In the original, the thing to assess specifically is the fecal (anal) incontinence, i.e. sphincter function. X makes the vaginal leakage the object instead. The warning not to conflate the two survives, but the instruction to assess continence directly is lost."
+     },
+     {
+      "severity": "minor",
+      "kind": "checklist turned into asserted findings",
+      "original": "Inspection of the perineum \u2014 scarring, deformity, external opening / Speculum exam \u2014 vaginal opening of the tract / Anoscopy / proctoscopy \u2014 rectal opening",
+      "revised": "Inspection of the perineum shows scarring, deformity or an external opening. / Speculum exam identifies the vaginal opening of the tract. / Anoscopy or proctoscopy identifies the rectal opening.",
+      "note": "The original lists what each exam looks for. X says each exam shows or identifies these findings, which implies they are always found. That sits badly with the next bullet, which says EUA is often needed to define the anatomy."
+     },
+     {
+      "severity": "trivial",
+      "kind": "explanatory link loosened",
+      "original": "Although RVF is owned operatively by colorectal surgery, the urogynecologist and reconstructive pelvic surgeon are routinely involved \u2014 RVF clusters with sphincter injury...",
+      "revised": "RVF is managed operatively by colorectal surgery, but the urogynecologist and reconstructive pelvic surgeon are routinely involved. RVF clusters with sphincter injury...",
+      "note": "Splitting the sentence drops the explicit reason for urogynecologic involvement, though it is still implied. 'owned' becomes 'managed'."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis weakened",
+      "original": "The ASCRS guideline emphasizes that the workup must define both **the fistula** and **the sphincter complex**",
+      "revised": "The ASCRS guideline states that the workup must define both the fistula and the sphincter complex",
+      "note": "'emphasizes' marked this as a priority; 'states' is neutral."
+     },
+     {
+      "severity": "trivial",
+      "kind": "wording",
+      "original": "The diagnostic workhorse for RVF",
+      "revised": "The primary imaging study for RVF",
+      "note": "The metaphor is gone. The meaning is essentially the same, and it does not conflict with EAUS being 'first-line for sphincter mapping'."
+     },
+     {
+      "severity": "trivial",
+      "kind": "tense and generalization",
+      "original": "Proctectomy with coloanal anastomosis (sleeve excision or pull-through): healing 75\u2013100%",
+      "revised": "Proctectomy with coloanal anastomosis (sleeve excision or pull-through) achieves healing in 75\u2013100% of cases.",
+      "note": "A reported range from case series is now written in the present tense as a property of the operation."
+     },
+     {
+      "severity": "trivial",
+      "kind": "list scope",
+      "original": "Failure predictors: sphincter defect on EAUS or manometry, Crohn's disease, prior pelvic radiation, recurrent fistula.",
+      "revised": "Predictors of ERAF failure include sphincter defect on EAUS or manometry, Crohn's disease, prior pelvic radiation and recurrent fistula.",
+      "note": "'include' makes the list non-exhaustive. Naming ERAF explicitly is accurate and matches the prognostic table."
+     },
+     {
+      "severity": "trivial",
+      "kind": "explanatory link loosened",
+      "original": "The most challenging subset \u2014 endarteritis obliterans produces a hostile, progressive bed.",
+      "revised": "Radiation-induced RVF is the most challenging subset; endarteritis obliterans produces a hostile, progressive bed.",
+      "note": "The semicolon weakens the sense that endarteritis is the reason this subset is hardest."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Stilted filler verbs added to make bullets into sentences: 'Foul-smelling vaginal discharge occurs.' 'Recurrent vaginitis and UTI occur.' 'Dyspareunia and significant psychosocial morbidity occur.' A human editor would reject these.",
+     "Bold lead-ins remain as sentence subjects in bullet lists (Clinical Presentation, Operative Principles, Crohn's, Radiation), e.g. '**Sphincter integrity and continence** should be assessed.'",
+     "Bold emphasis inside prose is retained ('**ASCRS 2022 Clinical Practice Guidelines**', '**draining seton**', '**Examination under anesthesia**', '**Smoking** was a negative predictor').",
+     "Over-splitting and subject repetition: 'Anatomic level is also commonly described as... Anatomic level dictates the operative approach.'; 'Seton placement is particularly important in Crohn's, where setons should be placed...'",
+     "Monotone passive cadence in the converted technique list ('The tract is excised... The rectal opening is closed... The flap is advanced...').",
+     "Fragment lead-in kept: 'The single most operative-decision-relevant categorization:'",
+     "Evaluative adjectives and metaphor: 'a high success rate' (a tacked-on appositive), 'hostile, progressive bed', 'prohibitively poor', 'the prototypical setting'.",
+     "The original's defective Smoking sentence is untouched: the p-value is attached to the wrong clause and the '; this does not exclude...' construction is awkward.",
+     "Symbols remain in tables ('~1.6%', 'obstetric / iatrogenic'); 'Best:'/'Worst:' colon labels are used in the table."
+    ],
+    "best_passage": "Conservative management for obstetric and minimally symptomatic benign RVF consists of sitz baths, perineal hygiene, infection control and stool-bulking fiber for 3\u20136 months. Spontaneous closure has been reported in 52\u201366% of obstetric RVF."
+   },
+   "y": {
+    "voice_score": 5.5,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "claim altered / scope changed",
+      "original": "and is the prototypical setting for **Martius and gracilis interposition** in the female perineum",
+      "revised": "and is a common indication for Martius and gracilis interposition in the female perineum",
+      "note": "The claim that RVF is the archetypal setting for these flaps becomes a frequency claim ('common indication') that the original did not make. The assertion is both weakened and changed in kind."
+     },
+     {
+      "severity": "minor",
+      "kind": "causal link added",
+      "original": "Select advanced therapy and any immunomodulator with gastroenterology; perianal-trial results do not guarantee RVF closure",
+      "revised": "Selection of advanced therapy and any immunomodulator should involve gastroenterology, since perianal-trial results do not guarantee RVF closure",
+      "note": "The original joins two independent points with a semicolon. 'since' makes one the reason for the other, which is a non-sequitur the source never stated."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive softened to description",
+      "original": "Drain abscesses and control sepsis before immunosuppression; use a loose seton when appropriate to maintain tract drainage",
+      "revised": "Abscesses are drained and sepsis controlled before immunosuppression; a loose seton is used when appropriate to maintain tract drainage",
+      "note": "The imperative becomes a description of usual practice. The required order (before immunosuppression) is kept."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive recast as assertion",
+      "original": "assess specifically rather than equating vaginal fecal leakage with anal incontinence",
+      "revised": "Vaginal fecal leakage is distinct from anal incontinence and warrants separate assessment",
+      "note": "An implied distinction becomes an explicit statement. The call for separate assessment survives."
+     },
+     {
+      "severity": "trivial",
+      "kind": "qualifier lost",
+      "original": "**Dyspareunia** and significant **psychosocial morbidity**",
+      "revised": "**Dyspareunia** and psychosocial morbidity",
+      "note": "Dropping 'significant' loses the severity qualifier."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis weakened",
+      "original": "The ASCRS guideline emphasizes that the workup must define both **the fistula** and **the sphincter complex**",
+      "revised": "The ASCRS guideline states that the workup must define both the fistula and the sphincter complex",
+      "note": "'emphasizes' becomes the neutral 'states'."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive turned into heading",
+      "original": "**Assess sphincter integrity and continence** \u2014 a clinically important defect may favor concurrent sphincteroplasty or episioproctotomy",
+      "revised": "**Assessing sphincter integrity and continence:** a clinically important defect may favor concurrent sphincteroplasty or episioproctotomy",
+      "note": "The imperative becomes a verbless gerund label, so the instruction to assess is only implied. The same happens with 'Controlling...' and 'Repairing...'."
+     }
+    ],
+    "redundancy_removals": 1,
+    "residual_patterns": [
+     "Colon connectors replace em dashes for rhythm: 'routinely involved: RVF clusters...', 'differs by setting: globally...', 'commonly described: low...', 'most challenging subset: endarteritis...'",
+     "Bold labels followed by colon fragments throughout Clinical Presentation and Operative Principles ('**Passage of flatus per vagina:** often the earliest symptom'; '**Etiology drives strategy:** obstetric, Crohn's...').",
+     "Awkward gerund labels: '**Assessing...:**', '**Controlling...:**', '**Repairing...:**'.",
+     "The bedside exam list still uses 'label: fragment' form ('Speculum exam: vaginal opening of the tract').",
+     "Symbols in prose: '~50\u201372%', '~37%', 'vs', '45.9% / 91.7%', 'obstetric / iatrogenic', 'Anoscopy / proctoscopy'; '\u2194' in the table.",
+     "Fragment bullets: 'Healing 78\u2013100%', 'Diversion used in ~50\u201372%...', 'Antibiotics for infection control...', 'Diverting stoma for refractory disease...', 'Median time to radiation-induced RVF: 20 months'.",
+     "Metaphor and jargon retained: 'diagnostic workhorse', 'owned operatively', 'hostile, progressive bed'.",
+     "Em-dash labels remain in the table ('Best \u2014', 'Worst \u2014'); bold emphasis remains inside table notes ('**stoma not mandatory**').",
+     "Fragment lead-in kept: 'The single most operative-decision-relevant categorization:'",
+     "The misplaced p-value in the Smoking sentence is carried over, although the sentence is otherwise improved."
+    ],
+    "best_passage": "Endorectal advancement flap (ERAF) is the guideline's procedure of choice for most simple RVF, with or without sphincteroplasty; recurrent or complex fistulas escalate to interposition (below)."
+   },
+   "preferred": "X",
+   "rationale": "Neither version has major drift. Both keep every numeric token of the original and all 72 citation markers, attached to the same claims; I checked this mechanically. Neither changes any table data, dose, threshold, comparator or follow-up figure.\n\nX is closer to publishable on WARWIKI. It does more of the voice work: most em-dash connectors, symbols in prose and bold emphasis inside sentences are gone, and fragments become full sentences. It also keeps the original's directives ('should be drained... before immunosuppression', 'should be assessed'). Its two minor drifts are editorial slips that are easy to reverse:\n- The bedside exams become assertions ('Inspection of the perineum shows...', 'Speculum exam identifies...').\n- The object of 'assess specifically' moves from anal continence to the vaginal leakage.\n\nY takes a lighter touch and reads less stiffly in places. It improves the Smoking sentence and drops the evaluative 'high success'. But two of its minor drifts change what the text claims: 'prototypical setting' becomes 'a common indication', and a 'since' introduces a causal link in the Crohn's bullet that the source did not make. It also softens several directives into descriptions or verbless gerund labels. Y keeps more machine patterns: colon connectors used for rhythm, bold 'Label:' fragments throughout Clinical Presentation and Operative Principles, '~', 'vs' and '/' in prose, 'diagnostic workhorse', and fragment bullets.\n\nX still needs these fixes:\n1. Restore the bedside list as findings sought, not findings shown (e.g. 'Perineal inspection looks for...'). Restore assessment of anal continence as the target in the fecal-incontinence bullet.\n2. Rewrite the 'occurs/occur' presentation bullets as a short prose paragraph or a plain noun list.\n3. Remove the 'Seton placement... setons should be placed' and 'Anatomic level... Anatomic level' repetitions.\n4. Fix the carried-over Smoking sentence. The p-value belongs with the smoking finding, and the bold lead-in should go.\n5. Recast 'The single most operative-decision-relevant categorization:'.\n6. Drop the 'a high success rate' appositive.\n7. Thin the bold lead-ins in Operative Principles and the Crohn's and radiation bullets."
+  }
+ },
+ {
+  "id": "p2",
+  "xArm": "B",
+  "yArm": "C",
+  "rewrite": "PASS prose words 1607 -> 1697, em-dash count after 8 (all 8 are in protected content: 4 section headings, 3 table placeholder cells, 1 in the byte-identical References section \u2014 zero remain in editable prose/lists)",
+  "judge": {
+   "original_voice_score": 4,
+   "x": {
+    "voice_score": 5,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "citation moved",
+      "original": "with efficacy comparable to antimuscarinics but a **substantially better tolerability profile** (no anticholinergic burden; this is not proof of zero long-term cognitive risk).<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)</sup>",
+      "revised": "with efficacy comparable to antimuscarinics but a substantially better tolerability profile from the absence of anticholinergic burden. The absence of anticholinergic burden does not establish an absence of long-term cognitive risk.<sup>[[1]](#ref1)[[2]](#ref2)[[3]](#ref3)</sup>",
+      "note": "Splitting the sentence leaves the mechanism, efficacy and tolerability claim with no citation. Refs 1-3 now sit on the cognitive-risk caveat alone, a claim those sources were not attached to by themselves."
+     },
+     {
+      "severity": "trivial",
+      "kind": "causal link made explicit",
+      "original": "a **substantially better tolerability profile** (no anticholinergic burden; ...)",
+      "revised": "a substantially better tolerability profile from the absence of anticholinergic burden",
+      "note": "The original parenthetical only implied a reason. 'From' now states that the tolerability advantage comes from the absence of anticholinergic burden. The claim is plausible, but it is stated more strongly than before."
+     },
+     {
+      "severity": "trivial",
+      "kind": "wording of approval basis",
+      "original": "2024 expansion to **OAB in men on BPH pharmacotherapy** (COURAGE trial).",
+      "revised": "with a 2024 expansion to OAB in men on BPH pharmacotherapy based on the COURAGE trial.",
+      "note": "The parenthetical becomes 'based on'. That is an accurate reading and has no practical effect."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis loss on safety cues",
+      "original": "monitor and consider adjustment of the **substrate drug**; ... **Not recommended with eGFR below 15 (including dialysis) or severe hepatic impairment**. ... **Digoxin requires level monitoring** ... does **not** confer an adult NDO indication",
+      "revised": "monitor and consider adjustment of the substrate drug; ... Not recommended with eGFR below 15 (including dialysis) or severe hepatic impairment. ... Digoxin requires level monitoring ... does not confer an adult NDO indication",
+      "note": "The wording is unchanged. Only the bold is gone. On 'substrate drug' the bold had shown which drug to adjust, so that cue is now weaker."
+     },
+     {
+      "severity": "trivial",
+      "kind": "label quotation removed",
+      "original": "the **\"prostate-with-OAB\" phenotype**",
+      "revised": "the prostate-with-OAB phenotype",
+      "note": "Without quotation marks, an informal label reads like a formal phenotype term."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Tables not revised at all: em-dash connectors remain in the mirabegron Key cautions and Drug interactions cells and the vibegron BP effects and Drug interactions cells ('\u2014 not recommended; ESRD \u2014 not recommended', 'Minimal** \u2014 ambulatory')",
+     "Adds a new pattern, bold label + colon + fragment, and in the mechanism list the colon splits noun phrases apart: '**Direct detrusor smooth muscle relaxation:** during the storage phase', '**Decreased afferent signaling:** from the bladder'. The list is also inconsistent: '**Increased functional bladder capacity**' has no colon",
+     "Bold label + fragment bullets in FAERS, general precautions and positioning lists ('**Offered alongside antimuscarinics:** an oral OAB option', '**Alternative:** when antimuscarinics...')",
+     "Bold emphasis inside prose kept ('a **prejunctional effect**:', '**Mirabegron 25\u201350 mg + solifenacin 5 mg** improves', '**Separate symptoms from urodynamic risk.**')",
+     "Symbols in prose: '+' in the combination paragraph and bullets, '21/22', '(9/20)', 'lip / tongue', '\u00b1', '~' and '\u2248' in tables",
+     "Handbook imperatives kept: 'Separate symptoms from urodynamic risk.', 'reassess pressure and compliance', 'Check BP periodically', 'Use the lowest digoxin dose', 'Discuss minimally invasive therapy', 'consider baseline PVR'",
+     "Colon connectors used for rhythm: 'identified a **prejunctional effect**: \u03b23 stimulation...', 'suboptimal response: SYNERGY II found...'",
+     "Contrast tic kept: 'Head-to-head direct comparison is limited, but:'",
+     "Evaluative or informal phrasing: 'a modest edge to vibegron', 'Often the better fit', 'rare but flagged signals', 'A stable option'",
+     "Stilted repetition an editor would reject: 'The absence of anticholinergic burden does not establish an absence of long-term cognitive risk.'",
+     "Redundant doubled qualifier kept: 'particularly for mirabegron, particularly in hypertensive patients'"
+    ],
+    "best_passage": "Vibegron is the first \u03b23-agonist approved specifically for the prostate-with-OAB phenotype, a common clinical scenario in which antimuscarinics are often avoided due to retention concerns. The AUA BPH guideline (2026) states that clinicians may offer a \u03b23 agonist alone or with an \u03b1-blocker for moderate-to-severe predominant storage LUTS (Conditional Recommendation, Grade C). In the PLUS trial, add-on mirabegron in men taking tamsulosin had adverse-event rates similar to tamsulosin alone, and mirabegron did not worsen Qmax or detrusor pressure at Qmax in men with obstruction."
+   },
+   "y": {
+    "voice_score": 6,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "operative/dosing trigger altered",
+      "original": "Use the lowest digoxin dose when starting with mirabegron and monitor digoxin levels.",
+      "revised": "The lowest digoxin dose should be used when starting mirabegron, with digoxin levels monitored.",
+      "note": "The original means starting digoxin together with mirabegron, and the table cell states it as starting digoxin at the lowest dose. The revision makes starting mirabegron the trigger. That can be read as cutting an established digoxin dose to the minimum when mirabegron is added. The table in Y still has the correct wording, so the page now contradicts itself."
+     },
+     {
+      "severity": "minor",
+      "kind": "timing detail misattached",
+      "original": "**Urinary retention risk assessment** \u2014 consider baseline PVR in men with BPH; particularly in the first 15 days of treatment",
+      "revised": "Urinary retention risk should be assessed, with baseline PVR considered in men with BPH, particularly in the first 15 days of treatment.",
+      "note": "In the original, the semicolon attached the first-15-days window to retention vigilance. The comma now attaches it to 'baseline PVR', which makes no sense because a baseline is measured before treatment. The early-retention monitoring point is blurred."
+     },
+     {
+      "severity": "trivial",
+      "kind": "scope broadened",
+      "original": "**BP monitoring** \u2014 particularly for mirabegron, particularly in hypertensive patients",
+      "revised": "BP monitoring is particularly important for mirabegron and in hypertensive patients.",
+      "note": "The original nested the two conditions: hypertensive patients on mirabegron. The revision makes them parallel, so the emphasis now covers hypertensive patients on any agent, vibegron included. It also adds 'important'."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive softened",
+      "original": "**Separate symptoms from urodynamic risk.**",
+      "revised": "**Symptom control and urodynamic risk are separate considerations.**",
+      "note": "The imperative becomes a description. The directive about reassessing pressure and compliance still follows, so the practical effect is small."
+     },
+     {
+      "severity": "trivial",
+      "kind": "signal reframed as general statement",
+      "original": "- **Angioedema** \u2014 lip / tongue swelling",
+      "revised": "- Angioedema presents as lip or tongue swelling.",
+      "note": "The original described a reported pharmacovigilance signal. The revision reads as a general definition of how angioedema presents."
+     },
+     {
+      "severity": "trivial",
+      "kind": "comparative subject blurred",
+      "original": "mirabegron 50 mg has **comparable overall efficacy to most antimuscarinics**, with **significantly better tolerability**",
+      "revised": "found comparable overall efficacy between mirabegron 50 mg and most antimuscarinics, with significantly better tolerability",
+      "note": "'Between X and Y ... with significantly better tolerability' no longer says which arm is better tolerated. Context still points to mirabegron."
+     },
+     {
+      "severity": "trivial",
+      "kind": "monitoring target narrowed",
+      "original": "monitor and consider adjustment of the **substrate drug**; this is not a blanket contraindication",
+      "revised": "the substrate drug should be monitored and its dose adjustment considered; the interaction is not a blanket contraindication",
+      "note": "The meaning is preserved. 'Adjustment' now means dose adjustment specifically, and the bold that pointed to the substrate drug is gone."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis loss on safety cues in tables",
+      "original": "**Digoxin levels rise \u2014 check levels before and during coadministration**; **Severe uncontrolled HTN**; **Child-Pugh C hepatic impairment**",
+      "revised": "Digoxin levels rise, and levels should be checked before and during coadministration; Not recommended for severe uncontrolled HTN ...; Child-Pugh C hepatic impairment",
+      "note": "The table data are unchanged, including all efficacy and AE numbers. Only the bold on warning items is gone. '~' and '\u2248' became 'approximately' with no change in value."
+     },
+     {
+      "severity": "trivial",
+      "kind": "citation scope",
+      "original": "Both stimulate ... and reduce urgency \u2014 with efficacy comparable ... (no anticholinergic burden; this is not proof of zero long-term cognitive risk).<sup>[[1]]...[[3]]</sup>",
+      "revised": "Both stimulate ... and reduce urgency. Efficacy is comparable to antimuscarinics, and the tolerability profile is substantially better (...).<sup>[[1]]...[[3]]</sup>",
+      "note": "The mechanism sentence no longer carries the citation, which now sits on the efficacy and tolerability sentence. The effect is negligible."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Grammar error an editor would reject: 'Mirabegron 25\u201350 mg and solifenacin 5 mg improves efficacy over monotherapy' (plural subject, singular verb; needs 'The combination of ...')",
+     "Imperatives turned into heavy passive voice, which reads stilted: 'the substrate drug should be monitored and its dose adjustment considered', 'The lowest digoxin dose should be used when starting mirabegron, with digoxin levels monitored', 'Minimally invasive therapy should be discussed'",
+     "Formulaic repeated cadence in the FAERS list: 'Cardiac arrhythmias reported include...', 'Neurological events include...', 'Vascular events include...', 'Angioedema presents as...'",
+     "Bold labels + fragments kept in some bullets ('**Real-world data:** in one single-center...', '**Indirect treatment comparison (Kennelly 2021):** vibegron may...') and bold paragraph openers ('**Vibegron specifically:**', '**Mirabegron:**')",
+     "Bold sentence inside prose: '**Symptom control and urodynamic risk are separate considerations.**'",
+     "Colon connectors kept: 'identified a prejunctional effect: \u03b23 stimulation...', 'suboptimal response: SYNERGY II found...'",
+     "Contrast tic kept: 'Head-to-head direct comparison is limited, but:'",
+     "Evaluative or informal phrasing kept: 'a modest edge to vibegron', 'Often the better fit', 'rare but flagged signals'",
+     "Inconsistent formatting: some bullets end with periods and others do not (combination and positioning lists); table cells start lowercase ('approximately 7.5\u20139%', 'placebo-level (&lt;2%)')",
+     "Symbols kept in places: '\u00b1' in '(1,105 men on \u03b1-blocker \u00b1 5-ARI)', 'OAB/UUI'"
+    ],
+    "best_passage": "Both stimulate \u03b23-adrenoceptors in the detrusor muscle to relax the detrusor during storage, increase functional bladder capacity, and reduce urgency. Efficacy is comparable to antimuscarinics, and the tolerability profile is substantially better (no anticholinergic burden; this is not proof of zero long-term cognitive risk)."
+   },
+   "preferred": "Y",
+   "rationale": "Neither version has major drift. Both keep every table number, dose, threshold, trial, grade and population. Each keeps all 49 citation markers with the same distribution, and the references and frontmatter match the original byte for byte.\n\nX is the more faithful of the two, but it is only a light pass. Its one minor issue is in the intro: splitting the sentence leaves the efficacy and tolerability claim uncited and puts refs 1-3 on the cognitive-risk caveat alone. The voice gain is small. X leaves every table untouched, so the em-dash connectors and bold stay. It also adds a new machine pattern, bold label + colon + fragment, that splits noun phrases in the mechanism list. Its new caveat sentence is stilted ('absence ... absence'). Getting X publishable would take a second full voice pass.\n\nY does much more of the voice work. It removes nearly all inline bold, puts table cells into sentences, spells out ROR, and replaces symbols such as '21/22' and '~'. It is closer to textbook register. It does bring two minor drifts into the Precautions section, and both must be fixed before publication:\n1. Restore 'Use the lowest digoxin dose when starting digoxin with mirabegron'. Y's 'when starting mirabegron' could imply cutting an established digoxin dose, and it contradicts Y's own table.\n2. Reattach the first-15-days window to retention vigilance rather than to baseline PVR.\n\nY also needs:\n- The subject-verb error fixed ('The combination of mirabegron 25\u201350 mg and solifenacin 5 mg improves...').\n- The heaviest passives lightened.\n- Bullet punctuation and table-cell capitalization made consistent.\n- Optionally, the parallel reading of the BP-monitoring bullet reverted.\n\nThese are few, local fixes, so Y is closer to publishable. It should not ship until the two precaution sentences are corrected.\n\nStill needed in both:\n- Remove 'Head-to-head direct comparison is limited, but:'.\n- Remove the colon connectors ('prejunctional effect:', 'suboptimal response:').\n- Replace the evaluative phrasing ('modest edge', 'Often the better fit', 'rare but flagged').\n- Rewrite the bold paragraph-opener labels ('**Vibegron specifically:**', '**Mirabegron:**')."
+  }
+ },
+ {
+  "id": "p3",
+  "xArm": "C",
+  "yArm": "B",
+  "rewrite": "PASS \u2014 prose words 668 \u2192 702, em-dash count after (prose) 0",
+  "judge": {
+   "original_voice_score": 5,
+   "x": {
+    "voice_score": 6.5,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "scope_broadened / claim added",
+      "original": "**Radiation is the single most important predictor of failure.** Ghaffar 2023 meta \u2014 irradiated patients OR 0.68, p &lt; 0.001 for sling success.",
+      "revised": "Radiation is the single most important predictor of failure across the implants. The Ghaffar 2023 meta-analysis found OR 0.68 (p &lt; 0.001) for sling success in irradiated patients.",
+      "note": "The phrase 'across the implants' states outright that radiation is the leading predictor for every device, AUS included. The original only implied this through the section heading, and the only evidence cited is a sling-only meta-analysis (ref 10). The added scope goes beyond what the citation supports. Revert to the original unqualified sentence."
+     },
+     {
+      "severity": "trivial",
+      "kind": "sequence softened",
+      "original": "**After failed AdVance** \u2192 re-evaluate the cause, then recommend [AUS] (AUA/GURS/SUFU 2024).",
+      "revised": "**After a failed AdVance,** the cause should be re-evaluated and [AUS] is recommended (AUA/GURS/SUFU 2024).",
+      "note": "Changing 'then' to 'and' makes the AUS recommendation read as parallel to the re-evaluation instead of following from it. The matching decision-matrix row still says 'then', so a reader will get the right meaning. Restore 'then' anyway."
+     },
+     {
+      "severity": "trivial",
+      "kind": "option list recast as practice description",
+      "original": "**After failed ATOMS** \u2192 repeat ATOMS or AUS; ... **After failed Argus or REMEEX** \u2192 AUS (H\u00fcbner: 7/13, Kim: 12/18).",
+      "revised": "**After a failed ATOMS,** repeat ATOMS or AUS is used. ... **After a failed Argus or REMEEX,** AUS is used (H\u00fcbner 7/13, Kim 12/18).",
+      "note": "Two salvage options become the passive statement 'is used', which describes practice instead of offering a choice. The meaning survives, but the phrasing is awkward and slightly weaker as guidance."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis lost",
+      "original": "[AUS] (AUA 2024 recommends AUS after sling failure) **or** repeat ATOMS",
+      "revised": "[AUS] (AUA 2024 recommends AUS after sling failure) or repeat ATOMS",
+      "note": "In the failed-ATOMS row, the bold 'or' marked the two options as equally acceptable. That cue is gone, but the row is still accurate."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive voice changed",
+      "original": "Re-evaluate the cause, then recommend [AUS] ... Do not assume repeat fixed sling is effective ... Evaluate cause, then consider cause-specific AUS revision ... Do not infer the best revision from a cohort's procedure frequency ... Consider [ProACT] ... Offer [AUS] ... counsel poorer fixed-sling outcomes",
+      "revised": "The cause should be re-evaluated, then [AUS] is recommended ... Repeat fixed sling should not be assumed effective ... The cause should be evaluated, then cause-specific AUS revision should be considered ... The best revision should not be inferred from a cohort's procedure frequency ... [ProACT] should be considered ... [AUS] should be offered ... poorer fixed-sling outcomes should be discussed",
+      "note": "Every imperative in the decision matrix became a passive 'should' construction. Each directive keeps its force, so the meaning is unchanged, but the cells are now wordy (see residual patterns)."
+     },
+     {
+      "severity": "trivial",
+      "kind": "interpretive addition",
+      "original": "counsel on longer operation and possible higher reoperation risk",
+      "revised": "with counseling on longer operation time and possible higher reoperation risk",
+      "note": "Adding 'time' spells out what 'longer operation' already meant. The addition is accurate."
+     },
+     {
+      "severity": "trivial",
+      "kind": "framing",
+      "original": "this article is the **decision-and-comparison hub** that ties them together.",
+      "revised": "this article compares the devices and supports the choice between them.",
+      "note": "The page's comparison and decision role is kept, so the purpose is unchanged."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "The decision-matrix cells are now passive 'should be ...' chains, e.g. 'The cause should be evaluated, then cause-specific AUS revision should be considered' and 'The best revision should not be inferred from a cohort's procedure frequency'. They are stilted in table cells and mix voices ('should be re-evaluated, then AUS is recommended').",
+     "Colon stacking in the Khouri cell: 'Single-surgeon AdVance series: mild: sling 78%; moderate: AUS 80% versus sling 63%'.",
+     "'versus' in the verdict cells but 'vs' in the Comparison column and headings, so the usage is inconsistent, and the dense cells get longer.",
+     "The awkward 'across the implants' tag at the end of the radiation sentence.",
+     "'repeat ATOMS or AUS is used' / 'AUS is used' in the salvage bullets.",
+     "Em-dash headings kept: '\u2014 chooser', 'Decision matrix \u2014 which device for which patient', 'MASTER trial \u2014 the definitive sling-vs-AUS RCT', 'Predictors of failure \u2014 common across implants', 'ATOMS vs AUS \u2014 durability'.",
+     "'the definitive sling-vs-AUS RCT' is an evaluative adjective.",
+     "Bold labels followed by fragments in the MASTER bullets and See Also (e.g. ': universal first-line', ': containment').",
+     "Fragment cells kept, e.g. 'Dual mechanism in theory', 'manual-dexterity prerequisite', 'Sling noninferior on strict 12-mo leakage endpoint'.",
+     "One remaining '+' ('Concomitant ED + SUI'), plus symbol shorthand ('3\u00d7', '\u2264 4', '\u00a330,000 / QALY').",
+     "The bolded lead term '**Male SUI implants**' in the opening sentence."
+    ],
+    "best_passage": "The **MASTER trial** is the only RCT comparing male transobturator sling (predominantly AdVance) to AUS. The trial enrolled 380 men across 27 UK centers."
+   },
+   "y": {
+    "voice_score": 5.5,
+    "drift": [
+     {
+      "severity": "trivial",
+      "kind": "framing",
+      "original": "Each device has its own canonical page; this article is the **decision-and-comparison hub** that ties them together.",
+      "revised": "Each device has its own page; this page compares them and links to each device page.",
+      "note": "The page no longer says it supports device choice, although it is a 'Chooser'. It now only 'compares' and 'links'. This does not change any clinical content."
+     },
+     {
+      "severity": "trivial",
+      "kind": "wording",
+      "original": "it is not covered as a standalone device here.",
+      "revised": "It is not covered as a standalone device in this comparison.",
+      "note": "The meaning is the same."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Arrow connectors are still in the prose salvage bullets: '**After failed AdVance** \u2192 re-evaluate the cause...', '**After failed ATOMS** \u2192 repeat ATOMS or AUS.', '**After failed Argus or REMEEX** \u2192 AUS (H\u00fcbner: 7/13, Kim: 12/18).'",
+     "'+' used for 'and' in the tables: 'Ventral elevation (transobturator arms) + compression', 'Compression + mechanical washer adjustment', 'bladder + bowel-injury risk', 'AUS + IPP', 'Sling + IPP', 'Bladder-neck closure + Mitrofanoff'.",
+     "Bold emphasis inside cells: '**residual sphincter function**', '**AUS 94.3% vs sling 68.6%**', '**AUS 57.3% vs adjustable sling 22.0%**', '**81% vs 58%**', '**device survival at 60 mo favors ATOMS...**', 'Sling **noninferior**', '**or** repeat ATOMS'.",
+     "Em-dash connectors inside cells: 'proximally \u2014 non-obstructive', 'mild \u2014 sling 78%; moderate \u2014 AUS 80%'.",
+     "Handbook imperatives kept throughout the decision matrix: 'Re-evaluate the cause, then recommend', 'Do not assume', 'Do not infer', 'counsel poorer fixed-sling outcomes', 'Evaluate cause'.",
+     "Symbol shorthand: '~ 3\u00d7', 'symptom/satisfaction', 'Classic / T'.",
+     "Fragment bullets under bold labels in the MASTER list ('male sling noninferior to AUS', 'AUS slightly greater'). Unbolding 'All secondary outcomes' makes the list's formatting inconsistent.",
+     "Em-dash headings and 'the definitive sling-vs-AUS RCT' kept.",
+     "The intro repeats 'page' three times in one sentence ('its own page; this page compares them and links to each device page')."
+    ],
+    "best_passage": "Radiation is the single most important predictor of failure. The Ghaffar 2023 meta-analysis found an odds ratio of 0.68 for sling success in irradiated patients (p &lt; 0.001)."
+   },
+   "preferred": "X",
+   "rationale": "Neither version has major drift. Both keep every number, citation marker (22 references, same per-reference counts) and table value, and both preserve every hedge and recommendation strength. Y is the safer edit, with only two trivial framing changes, but it leaves the page largely unedited. It rewrote only the few prose paragraphs, which are clean. The tables and salvage bullets, which make up most of the page, still have arrows, '+' for 'and', bold inside cells, em-dash connectors, '~' and slash shorthand. X deals with nearly all of those patterns and is closer to encyclopedia register. It has one minor drift: 'across the implants', appended to the radiation sentence, extends a claim supported only by a sling meta-analysis to all devices. It also overcorrects the decision matrix into passive 'should be ...' chains that a human editor would tighten. X is narrowly closer to publishable because its remaining fixes are small and local. To finish X: (1) delete 'across the implants'. (2) Restore 'then' in the failed-AdVance salvage bullet. (3) Rewrite the decision-matrix cells as short nominal phrases, e.g. 'AUS after re-evaluation of the cause (AUA/GURS/SUFU 2024)' and 'Revision chosen by cause, not by cohort procedure frequency', not full passive sentences. (4) Fix the colon stacking in the Khouri cell ('mild, sling 78%; moderate, AUS 80% versus sling 63%'). (5) Pick either vs or versus and use it consistently. (6) Replace 'is used' in the ATOMS and Argus/REMEEX salvage bullets with real options wording ('options are repeat ATOMS or AUS'). (7) Consider removing 'the definitive' from the MASTER heading. If Y were chosen instead, it would still need the full table and bullet cleanup that X already did."
+  }
+ },
+ {
+  "id": "p4",
+  "xArm": "B",
+  "yArm": "C",
+  "rewrite": "That one em dash is in the H1 heading (`# Surgicel \u2014 Oxidized Regenerated Cellulose`), which the invariants require to stay byte-identical \u2014 it's excluded from the checker's prose scan (headings start with `#`), hence 0 em dashes in prose per the style report.\n\nPASS, prose words 858 \u2192 942, em-dash count after: 1 (in the unchanged heading only; 0 in prose).\n\nOutput files written (both inside the scratchpad sandbox, no files touched in the WARWIKI repo):\n- `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/out/p4-C.mdx`\n- `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/report/p4-C.md`",
+  "judge": {
+   "original_voice_score": 4,
+   "x": {
+    "voice_score": 5,
+    "drift": [
+     {
+      "severity": "trivial",
+      "kind": "referent clarification",
+      "original": "The low pH is also **bactericidal in vitro**, including against MRSA and VRE; this is not a substitute for systemic prophylaxis or treatment of infection",
+      "revised": "The low pH is also bactericidal in vitro, including against MRSA and VRE; bactericidal activity is not a substitute for systemic prophylaxis or treatment of infection",
+      "note": "Makes the ambiguous 'this' explicit. The meaning is the same and the citations [2][3] are kept."
+     },
+     {
+      "severity": "trivial",
+      "kind": "referent clarification",
+      "original": "**Scrotal / perineal wounds** \u2014 avoid closing material into an infected or contaminated wound; this is not routine packing after Fournier debridement.",
+      "revised": "**Scrotal / perineal wounds**: avoid closing material into an infected or contaminated wound; Surgicel is not routine packing after Fournier debridement.",
+      "note": "Resolves 'this' to Surgicel, which is the evident intended referent. The directive 'avoid' and citation [2] are kept."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis loss on warning",
+      "original": "It is **not** for large-artery bleeding, non-hemorrhagic serous oozing, or use as an adhesion barrier. / About **7\u201314 days** is the commonly quoted teaching figure",
+      "revised": "It is not for large-artery bleeding, non-hemorrhagic serous oozing, or use as an adhesion barrier. / About 7\u201314 days is the commonly quoted teaching figure",
+      "note": "Removing the bold is a stylistic choice. The warning and the figure are unchanged."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Em-dash connector kept in the lead sentence ('hemostatic matrix \u2014 a sterile, absorbable, knitted fabric') and in two table cells ('Active \u2014 contains thrombin', 'Active \u2014 pure thrombin')",
+     "Every GU Applications bullet is a bold label, a colon, then a fragment ('**Pelvic sidewall**: after lymphadenectomy for residual oozing'; '**Retropubic space**: after closure of large pelvic dissections')",
+     "Bold imperative labels followed by fragments in Technique Pearls and Limitations ('**Apply dry.**', '**Not ideal for high-flow bleeding.** Control the source first')",
+     "Handbook imperatives throughout ('Pre-cut the sheet', 'Hold firmly', 'Do not combine Surgicel', 'document placement in the operative note', 'read the package insert for the form in hand')",
+     "Symbols left in prose and tables: slashes ('Scrotal / perineal', 'Heparinized / coagulopathic', 'optic nerve/chiasm', 'crevices / irregular cavities', 'Broad / sheet-like'), '\u2192' in the Arista row, '+' in the Surgicel row",
+     "Colon connectors ('The label gives no fixed absorption time: it states\u2026'; 'Do not combine Surgicel with topical thrombin: the low pH\u2026')",
+     "Inconsistent label punctuation: bold plus colon in GU Applications, bold plus period in Pearls and Limitations, a run-in bold with a semicolon in the 'Remove after hemostasis\u2026 swelling**;' bullet, and a run-in with no punctuation in the 'Not for packing or wadding** unless' bullet",
+     "Fragment bullets with no closing punctuation, while a few bullets do end in full sentences",
+     "Bold emphasis inside a sentence kept ('Surgicel is a **passive matrix**')",
+     "Awkward noun use carried over from the original ('Oversize increases residual foreign-body volume')",
+     "Parenthetical asides kept ('(and may be prevented in chemically cauterized areas)', '(The stone-nidus warning appears in the gelatin and Arista labels, not in Surgicel's.)')",
+     "Overall this is a light punctuation and de-bolding pass: sentence structure is about 95% identical to the original"
+    ],
+    "best_passage": "The low pH is also bactericidal in vitro, including against MRSA and VRE; bactericidal activity is not a substitute for systemic prophylaxis or treatment of infection"
+   },
+   "y": {
+    "voice_score": 5.5,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "directive merged / causal link added",
+      "original": "in urologic surgery use minimal amounts and avoid plugging the urethra, ureter or catheter",
+      "revised": "In urologic surgery, minimal amounts should be used to avoid plugging the urethra, ureter or catheter.",
+      "note": "The original has two independent directives. The rewrite turns the second into a purpose clause, implying that using less material is the way to prevent luminal plugging. It drops the separate instruction to take care over placement and fragments near the lumen."
+     },
+     {
+      "severity": "minor",
+      "kind": "hedge strengthened (use listed as efficacy claim)",
+      "original": "**Bladder-neck dissection** \u2014 controlling diffuse oozing after radical prostatectomy or bladder-neck reconstruction",
+      "revised": "**Bladder-neck dissection.** Surgicel controls diffuse oozing after radical prostatectomy or bladder-neck reconstruction.",
+      "note": "A listed application ('controlling oozing', i.e. used for) becomes an unqualified declarative statement that the agent works. The original makes no efficacy claim."
+     },
+     {
+      "severity": "minor",
+      "kind": "hedge strengthened + scope broadened",
+      "original": "**Urethroplasty donor bed** \u2014 control of bed bleeding at graft harvest sites (buccal mucosa, penile skin)",
+      "revised": "**Urethroplasty donor bed.** Surgicel controls bed bleeding at graft harvest sites, including buccal mucosa and penile skin.",
+      "note": "Same use-to-efficacy strengthening. 'Including' also turns the closed two-site list into an open-ended one."
+     },
+     {
+      "severity": "trivial",
+      "kind": "option recast as routine practice",
+      "original": "**Partial nephrectomy renal bed** \u2014 placement after sliding-clip renorrhaphy\u2026; **Pelvic sidewall** \u2014 after lymphadenectomy for residual oozing; **Retropubic space** \u2014 after closure of large pelvic dissections",
+      "revised": "Surgicel is placed after sliding-clip renorrhaphy\u2026; Surgicel is placed after lymphadenectomy for residual oozing.; Surgicel is used after closure of large pelvic dissections.",
+      "note": "Application noun phrases become present-tense statements of practice, which reads as though the step were standard. The clinical content is otherwise unchanged."
+     },
+     {
+      "severity": "trivial",
+      "kind": "fact added",
+      "original": "(Ethicon / Johnson & Johnson)",
+      "revised": "(Ethicon, a Johnson & Johnson company)",
+      "note": "Adds a corporate relationship the original did not state. It is accurate but was not in the source text."
+     },
+     {
+      "severity": "trivial",
+      "kind": "causal link flattened (table)",
+      "original": "Passive, absorbs water \u2192 concentrates clotting factors",
+      "revised": "Passive, absorbs water and concentrates clotting factors",
+      "note": "The arrow expressed a mechanism (water absorption concentrates factors). 'And' makes the two coordinate."
+     },
+     {
+      "severity": "trivial",
+      "kind": "tense / conditionality",
+      "original": "**Not for packing or wadding** unless it will be removed once hemostasis is achieved",
+      "revised": "**Surgicel is not for packing or wadding** unless it is removed once hemostasis is achieved",
+      "note": "The planned-removal requirement is softened to a present-tense conditional. The practical meaning is essentially the same."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive force shift",
+      "original": "Avoid placing it within the collecting system. / then avoid wiping or rinsing it off",
+      "revised": "It should not be placed within the collecting system. / It should not be wiped or rinsed off afterward.",
+      "note": "'Avoid' becomes 'should not', which is slightly firmer. It is near-equivalent."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive force shift",
+      "original": "avoid closing material into an infected or contaminated wound; this is not routine packing after Fournier debridement",
+      "revised": "Closing material into an infected or contaminated wound should be avoided, and Surgicel is not routine packing after Fournier debridement.",
+      "note": "The imperative becomes an agentless passive and the referent 'this' is resolved to Surgicel. The meaning is kept."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis loss on warning",
+      "original": "It is **not** for large-artery bleeding\u2026 / About **7\u201314 days**",
+      "revised": "It is not for large-artery bleeding\u2026 / About 7\u201314 days",
+      "note": "The bold is removed. The content is unchanged."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Pervasive agentless deontic passive: 23 'should' constructions against 0 in the original, giving a device-IFU register ('The package insert for the form in hand should be read.'; 'Only the minimum needed should be used'). This also runs against the WARWIKI house rule of active voice.",
+     "Formulaic subject repetition: 'Surgicel' appears 27 times in the body against 10 in the original; GU Applications runs 'Surgicel is placed\u2026 Surgicel is placed\u2026 Surgicel controls\u2026 Surgicel controls\u2026 Surgicel is used', and Limitations bullets all open 'Surgicel is not\u2026'",
+     "Bold spans whole directive clauses inside sentences ('**The minimum amount should be used, and excess should be removed** before closure'; '**Surgicel should be held firmly in place until bleeding stops** (commonly a few minutes)')",
+     "Inconsistent bold inside sentences in Mechanism: '**Cellulose fibers** are\u2026' and '**Mechanical tamponade** provides\u2026' are kept while the other three bullets are unbolded; '**passive matrix**' is kept",
+     "Colon connectors remain ('hemostatic matrix: a sterile, absorbable, knitted fabric'; 'no fixed absorption time: it states'; 'topical thrombin: the low pH'; table 'Active: contains thrombin')",
+     "Choppy over-splitting into short follow-on sentences ('**Surgicel is not ideal for high-flow bleeding.** The source should be controlled first.'; 'Handling and removal instructions differ by form. The package insert for the form in hand should be read.')",
+     "Wordier and stilted overall; a human editor would reject the passive conversions and the repeated subject"
+    ],
+    "best_passage": "**Urinary tract.** Fragments can plug the urethra, ureter or catheter. The label reports difficulty passing urine after prostatectomy and one blocked ureter after kidney resection, both needing catheterization. It should not be placed within the collecting system. The stone-nidus warning appears in the gelatin and Arista labels, not in Surgicel's."
+   },
+   "preferred": "X",
+   "rationale": "Neither version has major drift, and all 22 citation markers stay on the same claims in both.\n\n**Version X**\nX is meaning-exact. It changes only three things:\n- It removes the bold emphasis scattered through sentences.\n- It replaces most em-dash connectors with colons or periods.\n- It resolves two ambiguous 'this' referents.\n\nThe result reads like a clean, telegraphic surgical handbook, but it is barely a voice rewrite. These patterns remain:\n- Bullets that are a bold label, a colon, then a fragment.\n- Imperatives throughout.\n- Slashes, '\u2192' and '+'.\n- An em-dash in the lead sentence and in two table cells.\n- Inconsistent punctuation after bold labels.\n\n**Version Y**\nY goes further on surface tics. It removes all symbols and dashes and writes every bullet as full sentences. It pays for that in three ways:\n- **Minor drift.** It merges 'use minimal amounts and avoid plugging' into a purpose clause, which implies that quantity alone prevents plugging. It turns two listed uses ('controlling oozing', 'control of bed bleeding') into unqualified efficacy claims ('Surgicel controls\u2026'). It opens the closed donor-site list with 'including'. It adds 'a Johnson & Johnson company'.\n- **A passive register.** It uses 23 'should be' constructions. This conflicts with WARWIKI's active-voice house rule and reads as stilted, for example 'The package insert for the form in hand should be read.'\n- **Repetition.** 'Surgicel' appears 27 times as the subject, against 10 in the original.\n\nY scores slightly higher for textbook form, but fixing it means correcting the drift and then undoing most of the passive conversion, which is close to a second full rewrite.\n\n**Verdict: X is closer to publishable.** It could ship today without clinical risk and needs only a light finishing pass:\n- Recast the GU Applications bullets as short sentences in the active voice ('Used on the renal bed after sliding-clip renorrhaphy\u2026') or as consistent label-plus-sentence bullets.\n- Replace the slashes, '\u2192' and '+' with words.\n- Remove the lead em-dash and the table em-dashes.\n- Standardize the punctuation after bold labels and add closing punctuation to the bullets.\n- Fix 'Oversize increases\u2026'.\n\nIf Y were used instead, it would need, at a minimum:\n- Restore the two independent urologic directives.\n- Restore 'used to control' for the bladder-neck and donor-bed uses.\n- Restore the closed '(buccal mucosa, penile skin)' list.\n- Convert the deontic passives back to active voice.\n- Vary the repeated 'Surgicel' subject.\n\n**Pre-existing issue in both versions (not drift)**\nThe comparison table gives Surgicel's mechanism as 'acid-pH platelet activation', but the Mechanism section describes an acidic blood-cellulose coagulum plus tamponade. This should go to content review, not to a voice pass."
+  }
+ },
+ {
+  "id": "p5",
+  "xArm": "C",
+  "yArm": "B",
+  "rewrite": "PASS. Prose words 1318 \u2192 1449. Em-dash count after: 1 (the single em dash left is inside the heading `### PD vs MSA \u2014 the urologic clue`, which is byte-identical to the original \u2014 headings are a hard invariant and cannot be edited; all em dashes in body prose were removed, 0 per the checker's prose-only count).\n\nFiles written (scratchpad only, no repo files touched):\n- `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/out/p5-C.mdx`\n- `/private/tmp/claude-501/-Users-joyboy-Documents-WARWIKI-warwiki/31cb7676-355b-43e9-a44c-e4826ea4a5ce/scratchpad/pilot/report/p5-C.md`\n\nReport highlights (full detail in the report file): no sentences removed; \"most importantly\" \u2192 \"particularly\", the \"tip a borderline patient into\" metaphor replaced with its literal claim, and one colloquial phrase tightened. Flagged for the evidence-wording audit: \"Evidence is small and biased\" (unqualified bias claim), the Urodynamics recommendation bullet has no citation at all, and the nocturia-prevalence claim (\"very common and multifactorial\") is uncited. Judgment calls noted: bold-label folding policy, a colon used for explanation rather than a strict list/definition, the \"It\" pronoun in the MSA outlet-surgery bullet, and leaving Greek-letter pharmacology notation (\u03b23, \u03b1-blocker) untouched since the symbol rule targets connector symbols, not receptor nomenclature.",
+  "judge": {
+   "original_voice_score": 4,
+   "x": {
+    "voice_score": 6,
+    "drift": [
+     {
+      "severity": "minor",
+      "kind": "citation-moved",
+      "original": "The AGS Beers Criteria advise avoiding strongly anticholinergic drugs in patients with dementia or cognitive impairment, which covers most antimuscarinics for PD dementia or Lewy body disease; if cognition declines on treatment, switch to a beta-3 agonist or non-drug measures.<sup>[[10]](#ref10)</sup><sup>[[4]](#ref4)</sup>",
+      "revised": "...PD dementia or Lewy body disease. If cognition declines on treatment, treatment should be switched to a beta-3 agonist or non-drug measures.<sup>[[10]](#ref10)</sup><sup>[[4]](#ref4)</sup>",
+      "note": "Splitting the sentence leaves the Beers Criteria claim with no citation marker. Ref 10 (Beers 2023) now attaches only to the switch-therapy directive, which Beers does not specifically state."
+     },
+     {
+      "severity": "minor",
+      "kind": "citation-moved",
+      "original": "subthalamic DBS does not impair bladder function and may increase cystometric capacity (mean +124 mL in meta-analysis); coordinate with the movement-disorders team.<sup>[[7]](#ref7)</sup>",
+      "revised": "Subthalamic DBS does not impair bladder function and may increase cystometric capacity (mean +124 mL in meta-analysis). Care should be coordinated with the movement-disorders team.<sup>[[7]](#ref7)</sup>",
+      "note": "The +124 mL meta-analysis finding is now uncited. Ref 7 (J\u00f6rg meta-analysis) appears to support a care-coordination recommendation it did not make."
+     },
+     {
+      "severity": "minor",
+      "kind": "detail-lost / scope-narrowed",
+      "original": "post-injection urinary retention may tip a borderline patient into full retention requiring CIC \u2014 many PD patients lack the dexterity for CIC. Discuss explicitly before proceeding.",
+      "revised": "Post-injection urinary retention may cause a borderline patient to require CIC, and many PD patients lack the dexterity for CIC. The retention risk should be discussed explicitly before the injection.",
+      "note": "The mechanism is lost: a patient who is borderline at baseline is pushed into full retention. The dash that tied the dexterity problem to the warning becomes a flat 'and'. The discussion is also narrowed to 'retention risk', where the original covered CIC capability as well."
+     },
+     {
+      "severity": "minor",
+      "kind": "logic-garbled",
+      "original": "Treat the modifiable factors first (elevation, compression, evening fluid restriction) before adding desmopressin.",
+      "revised": "Modifiable factors, such as elevation, compression and evening fluid restriction, should be treated first before desmopressin is added.",
+      "note": "Elevation, compression and evening fluid restriction are the treatments. The revision presents them as the modifiable factors themselves, and 'first before' is redundant."
+     },
+     {
+      "severity": "minor",
+      "kind": "ambiguity-introduced",
+      "original": "History \u2014 symptom onset vs motor symptom onset (early = MSA red flag)",
+      "revised": "History: symptom onset versus motor symptom onset (early onset is an MSA red flag)",
+      "note": "The original means urinary symptoms that start before motor symptoms. 'Early onset' can be read as early age of onset, which is not the MSA clue; young-onset PD is not an MSA pointer."
+     },
+     {
+      "severity": "trivial",
+      "kind": "hedge-softened",
+      "original": "operating without documenting obstruction leaves an unhappy patient.",
+      "revised": "operating without documenting obstruction risks patient dissatisfaction with the outcome.",
+      "note": "A definite consequence becomes a risk. The practical message is the same."
+     },
+     {
+      "severity": "trivial",
+      "kind": "scope-broadened",
+      "original": "**Suprapubic catheter** \u2014 preferred over urethral in men for long-term drainage.",
+      "revised": "**Suprapubic catheter** is preferred over urethral catheterization in men for long-term drainage.",
+      "note": "'Urethral catheterization' could be read to include intermittent self-catheterization, but the original meant an indwelling urethral catheter. 'Long-term drainage' limits the misreading."
+     },
+     {
+      "severity": "trivial",
+      "kind": "subject-specified",
+      "original": "**Usually not used in MSA** because of the aggressive autonomic phenotype.",
+      "revised": "**Neuromodulation** is usually not used in MSA because of the aggressive autonomic phenotype.",
+      "note": "The implied subject (SNM/PTNS, from the heading) becomes the general term 'neuromodulation'. This fits the section heading and does not change practice."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive-to-descriptive",
+      "original": "**Renal US + eGFR** in patients with elevated PVR or MSA phenotype.",
+      "revised": "Renal US and eGFR are obtained in patients with elevated PVR or MSA phenotype.",
+      "note": "The item now describes routine practice. The 'as indicated' header still carries the conditional sense."
+     },
+     {
+      "severity": "trivial",
+      "kind": "causal-link-weakened",
+      "original": "Storage pressures are typically low \u2014 **upper-tract risk is rare**.",
+      "revised": "Storage pressures are typically low, and upper-tract risk is rare.",
+      "note": "The dash implied that low pressure is why upper-tract risk is rare. 'And' makes the two facts parallel."
+     },
+     {
+      "severity": "trivial",
+      "kind": "directive-rephrased",
+      "original": "**Antimuscarinics** \u2014 individualize benefit versus cognition, constipation, retention and total anticholinergic burden",
+      "revised": "**Antimuscarinics** carry a benefit that should be weighed against cognition, constipation, retention and total anticholinergic burden",
+      "note": "The instruction to individualize becomes weighing. The meaning is kept but the phrasing is awkward."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis-lost",
+      "original": "**In MSA, outlet surgery is generally contraindicated** \u2014 worsens incontinence...; table cells **Early**, **Elevated \u2014 early retention**, **Severe**, **Denervation pattern in many**",
+      "revised": "In MSA, outlet surgery is generally contraindicated. It worsens incontinence...; table cells unbolded",
+      "note": "Bold is removed from the key safety contraindication and from the table's MSA discriminators. No data changed."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Formulaic passive cadence: 'should be' appears 24 times (e.g. 'Alpha-blockers should be taken at night, and standing blood pressure should be checked'). This conflicts with the house active-voice rule.",
+     "Bold label forced in as the grammatical subject of a passive sentence: '**PD and MSA** should be differentiated', '**Storage medication** should be chosen individually', '**Urodynamics** should be obtained'",
+     "Bold label followed by filler plus a colon connector: '**MRI compatibility** is a consideration:'",
+     "Duplicate bold labels in adjacent Epidemiology bullets ('**Urinary symptoms**' twice)",
+     "Stilted or wordy constructions: 'carry a benefit that should be weighed against', 'Management in this scenario shifts emphasis', 'should be treated first before desmopressin is added', 'using SPC rather than ongoing CIC failure'",
+     "Redundant restatement under a same-name heading: 'Intradetrusor onabotulinumtoxinA is effective...'",
+     "Fragment lists kept as prose bullets: 'Timed voiding, bowel program, fluid management.'; 'UA, PVR, voiding diary.'",
+     "Bold-label-period tics remain: '**Caution.**', '**DBS interaction.**', '**Coexisting BPH.**'",
+     "Comma-stacked intro sentence ('mostly diagnostic, distinguishing..., and risk-avoidance, addressing anticholinergics...') is hard to parse",
+     "Evaluative/colloquial phrasing: 'far more aggressive', 'futile outlet surgery', 'is often bigger than'; 'etc.' in prose",
+     "Em dash kept in heading 'PD vs MSA \u2014 the urologic clue'"
+    ],
+    "best_passage": "Early urinary retention, severe orthostatic hypotension and poor dopamine response should raise concern for MSA and change counseling about prognosis and procedure selection. A PVR above about 150 mL on free flow (with impaired detrusor contractility) is the urodynamic finding that best separates MSA from PD (odds ratio approximately 8.7 in a retrospective series of 273 patients); it supports, but does not replace, neurologic assessment."
+   },
+   "y": {
+    "voice_score": 5,
+    "drift": [
+     {
+      "severity": "trivial",
+      "kind": "subject-dropped / redundancy-added",
+      "original": "- **US prevalence** of PD &gt;1 million; incidence rises with age.",
+      "revised": "- **US prevalence:** &gt;1 million in the US; incidence rises with age.",
+      "note": "'Of PD' is dropped; page context supplies it. 'In the US' now repeats the label. This is sloppy, but the clinical meaning is unchanged."
+     },
+     {
+      "severity": "trivial",
+      "kind": "emphasis-lost",
+      "original": "**Early urinary retention + severe orthostatic hypotension + poor dopamine response should raise concern for MSA**; **Usually not used in MSA**; **MRI-compatibility and DBS coexistence** drive implant selection.",
+      "revised": "Early urinary retention + severe orthostatic hypotension + poor dopamine response should raise concern for MSA; Usually not used in MSA; MRI-compatibility and DBS coexistence drive implant selection.",
+      "note": "Bold is removed from the key MSA red-flag sentence, the MSA exclusion and the last correlation bullet. That bullet is now the only unbolded one in its list. No data or directive changed."
+     },
+     {
+      "severity": "trivial",
+      "kind": "connector-change",
+      "original": "MSA ... far more aggressive autonomic phenotype \u2014 urinary symptoms often precede the motor diagnosis",
+      "revised": "MSA ... far more aggressive autonomic phenotype: urinary symptoms often precede the motor diagnosis",
+      "note": "The em dash is swapped for a colon. The meaning is identical. Similar swaps elsewhere ('contraindicated:** it worsens', 'multifactorial:') also keep the meaning."
+     }
+    ],
+    "redundancy_removals": 0,
+    "residual_patterns": [
+     "Symbols in prose: 'Early urinary retention + severe orthostatic hypotension + poor dopamine response', '(early = MSA red flag)', '= think MSA', '~64 mL', '~8.7', 'OAB + BPH mix', 'Renal US + eGFR'",
+     "Slash shorthand: 'OAB / detrusor overactivity', 'frail / older', 'late PD / MSA', 'cognitive / fall side effects'",
+     "Bold label + period + fragment throughout: '**Pelvic-floor PT.** Modest benefit in selected patients.', '**Alpha-blockers.** Helpful for documented obstruction', '**CIC.** Feasible in early PD', '**Suprapubic catheter.** Preferred over urethral'",
+     "Handbook imperatives kept: 'Check blood pressure', 'Individualize benefit versus', 'Avoid oxybutynin IR', 'Take at night', 'Discuss explicitly before proceeding', 'Teach CIC early', 'Differentiate PD from MSA.'",
+     "Fragment prose: 'Rare in PD.', 'Usually not used in MSA...', 'Very common and multifactorial:', 'Shifts emphasis to...', 'Timed voiding, bowel program, fluid management.'",
+     "Colon connectors used for rhythm: 'risk-avoidance: anticholinergics', 'phenotype: urinary symptoms', 'multifactorial: fluid intake', 'contraindicated:** it worsens'",
+     "Em dashes and bold kept in table cells ('**Early** \u2014 often before motor', '**Elevated \u2014 early retention**')",
+     "Colloquial phrasing: 'leaves an unhappy patient', 'tip a borderline patient', 'Plan drainage around that reality'",
+     "Abbreviations in prose: 'vs', 'post-op', 'etc.'",
+     "Inconsistent bolding across bullets in Epidemiology, Pathophysiology, SNM and Clinical Correlations",
+     "Mostly a punctuation swap: the section structure and cadence are still the original handbook's"
+    ],
+    "best_passage": "PD is a suprapontine disease. Loss of basal ganglia dopaminergic input disinhibits the pontine micturition center, producing detrusor overactivity usually with preserved coordination (true DSD is atypical and merits reassessment). Storage pressures are typically low; upper-tract risk is rare."
+   },
+   "preferred": "Y",
+   "rationale": "Neither version has major drift, and neither deleted any sentences (0 redundancy removals each). All numbers, doses, table data, populations and references are intact in both.\n\nVersion X does the real voice work. It removes the +, =, ~ and slash shorthand, turns the bold-label fragments into full sentences, and removes the table's bold and dashes. It also introduces five minor meaning changes:\n- **Two citation displacements.** When X splits sentences, the markers stay at the end. The Beers Criteria claim loses ref 10, which now appears to support the switch-to-beta-3 directive. The DBS +124 mL meta-analysis finding loses ref 7, which now appears to support a care-coordination sentence.\n- **Botox caution.** It drops the mechanism of a borderline patient being tipped 'into full retention'.\n- **Nocturia.** It turns the treatments (elevation, compression, fluid restriction) into the 'modifiable factors' themselves.\n- **MSA red flag.** '(early = MSA red flag)' becomes 'early onset', which can be read as early age of onset rather than urinary-before-motor onset.\n\nX also replaces imperatives with 24 'should be' passives, often with a bold subject ('**PD and MSA** should be differentiated'). This violates WARWIKI's active-voice rule, and an editor would reject it as stilted.\n\nVersion Y is safe: its only changes are trivial (it drops 'of PD' and adds a redundant 'in the US'; some bold emphasis is lost). But it is barely edited. Most changes swap em dashes for periods or colons and remove bold. The symbols, bold-label fragments, handbook imperatives, colloquialisms ('leaves an unhappy patient') and table bold/dashes all remain, so it scores only slightly above the original.\n\n**Verdict:** Y is closer to publishable. Publishing it today changes no meaning, while publishing X would misattribute two citations and add stilted passive prose.\n\nY still needs a real voice pass:\n- replace the +/=/~/slash shorthand in prose\n- rewrite the '**Label.** Fragment' bullets as sentences\n- convert imperatives to declarative statements, active where possible\n- fix 'US prevalence: >1 million in the US' (restore 'of PD')\n- make bolding consistent\n- remove dashes and bold from the table cells\n\nThe best outcome would merge the two: X's sentence conversions, keeping the original sentence joins so each citation stays with its claim. That merge also needs these fixes:\n- restore 'full retention' in the Botox caution\n- fix the nocturia sentence\n- say 'urinary onset before motor onset' in place of 'early onset'\n- recast most 'should be' passives as active statements."
+  }
+ }
+]

@@ -1,0 +1,7 @@
+# Pass 1 report: pharm-anticholinergics
+
+1. Removed sentences: none removed whole. Clause removed in L142: "The signal is not bulletproof, and residual confounding remains a concern" became "Residual confounding remains a concern" (the confounding fact stays).
+2. Generic statements: no closers deleted. Kept as guideline statements attributed to AUA/SUFU and EAU ("through shared decision-making" in the botulinum toxin/SNM/PTNS item; EAU paragraph). "critical for learning and memory" became "involved in learning and memory"; "a valuable option" became "an option" (intravesical oxybutynin).
+3. Suspected overstatements for the audit: "marked increased risk" for oxybutynin and solifenacin (dementia section, refs 10, 11); "synergistic effect" for combination therapy; "superior efficacy" for combination (BESIDE showed no advantage over solifenacin 10 mg, already stated); "Placebo response ... a durable reminder that behavioral therapy and regression-to-mean matter" is interpretive.
+4. Suggested headings: none.
+5. Uncertain: "Antimuscarinic plus β3-agonist" regimen written with "plus" in place of "+"; em dashes in list items replaced with colons after bold run-in labels or with parentheses. "higher dose → more dry mouth" became "higher dose gives more dry mouth". Arrow items L20, L21 rewritten with "leads to"/"produce". Items L150, L180 (AUA/SUFU), L184, L186, L193, L257, L259 left unchanged (name slash, attributed guideline wording, acronyms).
