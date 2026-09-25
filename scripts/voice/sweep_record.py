@@ -23,7 +23,8 @@ def main():
     for p in lst:
         cur = open(p).read()
         head = subprocess.run(['git', 'show', f'HEAD:{p}'], capture_output=True, text=True).stdout
-        if cur == head: unchanged += 1; continue
+        if cur == head:
+            unchanged += 1; st['pages'][p] = {'date': str(datetime.date.today()), 'unchanged': True}; continue
         r = check(head, cur)
         wd = 'reports/voice/work/' + p.replace('/', '__').replace('.mdx', '')
         os.makedirs(wd, exist_ok=True)
