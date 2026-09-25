@@ -1,6 +1,6 @@
 # Audit v2 — open items (not checkable / needs source)
 
-Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Note: neuropathic-pelvic-pain/antispasmodics.mdx is an unbuilt placeholder (no content to audit); the hub index stays partial until it is authored.
+Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Note: neuropathic-pelvic-pain/antispasmodics.mdx and voiding-outlet/dantrolene.mdx are unbuilt placeholders (no content to audit); their hub pages stay partial until they are authored. voiding-outlet/alpha-agonists.mdx was a placeholder built out during the audit (16 refs, claims checked as written); review if you prefer placeholders left for author build-out.
 
 Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): EAU Urological Infections 2026, AUA BPS Table V, ASHP 2013 prophylaxis, FloSeal human-thrombin and Recothrom IFUs, Gelfoam Pfizer label, Spongostan EMEA sheet, Ethicon hemostat booklet; AUA/SUFU/AUGS GSM 2025, NAMS 2020 GSM, ACOG Clinical Consensus 2 (2021, breast cancer), IDSA candidiasis 2016, AUA BPS antimicrobial prophylaxis 2019, WikiGuidelines UTI 2024 (Nelson), Cochrane cranberries; AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
 
@@ -297,8 +297,8 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - open: Not checkable: ACOG PB213 flibanserin wording and 'very low/<1 SSE' attribution (paywalled), Davis 2024 NEJM verbatim quote, Joffe 2016 (rejection history/debate, no abstract), AAFP Dalrymple 'flibanserin modest/expensive' (abstract only confirms CBT first-line); ISSWSH and NAMS positions not on page and not verified; label Table 6 SSE deltas by study not extracted.
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
-- status: partial (2026-09-24)
-- open: Resume: other blurbs unchecked.
+- status: checked (2026-09-24)
+- open: Not checkable: testosterone-replacement and priapism-management blurbs match their current text, but those pages are under audit by others and may change; AUA ED 2018 ICI second-line wording not re-read against local guideline text; other numbers taken from audited child pages, not re-derived from primary papers.
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx
 - status: checked (2026-09-24)
@@ -314,11 +314,15 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: AUA 2015 statement grades (full text 403; only AUA web summary read, no 2024-26 AUA update found); verapamil 10 mg/10 mL q2wk x12 dose (not in Levine abstract); Cochrane 12-degree prespecified threshold; EAU 2026 interferon no-longer-recommended wording; ICSM 2024 statements; interferon 2 MU Trost dose; Chung 2022 CCH vs verapamil RCT not added. Lint: citations clean for this page (another page intraurethral-alprostadil fails), links clean.
+- open: Still not checkable: AUA 2015 statement grades (no local copy), Cochrane 12-degree threshold and data-integrity exclusions (Cochrane full text 403), EAU 2026 interferon withdrawal year (uroweb summary only), ICSM 2024 statements, Chung 2022 CCH vs verapamil RCT not added. Lint citations/links clean; MDX compiles.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/priapism-management.mdx
+- status: checked (2026-09-24)
+- open: doephedrine doses, PDE5i daily dose recipes beyond sildenafil 50 mg, GnRH/cyproterone/baclofen specifics, transfusion Hb targets, 'PDE5i first-line' claim. Prior not-checkable: AUA Appendix A phenylephrine regimen, EAU 2026 regimen (200 mcg q3-5 min max 1 mg), 4-hour ED-injection threshold, ice in sickle cell, ketoconazole label; also blood-gas thresholds (Broderick 2010, numbers not in abstract).
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx
-- status: partial (2026-09-24)
-- open: Resume: product-label, TRAVERSE and formulation checks not done.
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: NEJM full text for PE/AF/AKI counts (403); Endocrine Society 2018 full-text thresholds (Hct >48% risk, >54% stop, PSA >1.4 rise) - abstract only; Buratto/Ng Tang Fui/Diem/EMAS/NCCN/Kaplan/Morgentaler details not re-read; Testim/patch/Fortesta not on page.
 
 ## 01-foundations/pharmacology/storage-oab/anticholinergics.mdx
 - status: checked (2026-09-24)
@@ -331,6 +335,58 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 ## 01-foundations/pharmacology/storage-oab/botulinum-toxin.mdx
 - status: checked (2026-09-24)
 - open: STILL not checkable: onset/peak timing, DSD ~100 U, Daxxify/Xeomin notes, bladder-neck/pelvic-pain/chemo-cystitis uses, antibody rarity (ref14 abstract-level), DailyMed. || EAU 2026 text read: added 100 U Strong recommendation, non-licensed other doses/brands, suburothelial=intradetrusor (LE 1a) (ref 16). Page attributes 200 U option to AUA/SUFU; EAU differs (jurisdictional), now stated. Median 7.6 mo (Nitti extension) vs EAU 7.5 mo: rounding difference, page left. || Corrected 300 U vs 200 U attribution (Ginsberg 2012 CIC 35% vs 42%; not label text) after neuromodulation-adjuncts audit.
+
+## 01-foundations/pharmacology/storage-oab/desmopressin.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: (1) sodium check at 3 days (US labels say 7 days + 1 month; UK Noqdirna SmPC per search summary says baseline/day 4-8/1 month for >=65, not read verbatim); (2) current Nocdurna label text read only via WebFetch summary of DailyMed page; status source is Drugs.com notice, no primary Antares/Ferring statement; (3) EAU male LUTS 2026 and AUA nocturia not in sources-local (AUA OAB 2024 does not address desmopressin); (4) MS 6 h symptom-relief claim and Beers 2023 desmopressin wording (cited via Steinman 2025 alternatives paper) not verified; (5) refs 4 and 9 are two publications of the same Cochrane review, left as is. lint:citations and lint:links pass.
+
+## 01-foundations/pharmacology/storage-oab/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: vibegron 2024 BPH-OAB FDA expansion and COURAGE n, Cochrane 2023 figure, NOCDURNA approval (belong to child pages; no label/PubMed check done here); desmopressin page not edited (other agent). lint:citations fails only on priapism-management.mdx (other agent).
+
+## 01-foundations/pharmacology/urinary-diversion-specific/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU NLUTD statement text (not in sources-local); mucus/octreotide and acidifier numeric claims left to child-page audits.
+
+## 01-foundations/pharmacology/urinary-diversion-specific/mucus-management.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Murray 1995 ranitidine paper not found in PubMed (likely George 1992/Murray 1987 BJU); NAC intravesical dose/label (DailyMed acetylcysteine label not re-fetched); refs 7,12,17,18 (no abstract/old); AUA/SUFU NLUTD annual-surveillance wording not checked against guideline text; no AUA/SUFU or EAU statement on mucus agents found; MSK protocol ref 25 not re-fetched; FDA primary URL 404'd, cited via Pharmacy Times summary.
+
+## 01-foundations/pharmacology/urinary-diversion-specific/urinary-acidifiers.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: KDIGO <18 text (from prior check, not re-read); ref2 Lenis (bladder cancer review) for lifelong diversion surveillance; ammonium chloride hepatic caution (no US Rx label, textbook mechanism only); no sodium bicarbonate/citrate diversion dose numbers (old unsourced 1-3 g bid-tid not restored); EAU/AUA stone pH targets not re-read; refs 1,30,31 not re-verified.
+
+## 01-foundations/pharmacology/urinary-diversion-specific/vitamin-b12-supplementation.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AGA full-text 30 cm threshold; DailyMed cyanocobalamin label dosing (search returned nothing useful); AUA/SUFU NLUTD statement 58 text (not in sources-local); EAU MIBC 17% figure per hub audit; Cochrane/OB12/Chen/Xu/Rastegar/Banihani/Mathew/Stabler/Mauermann refs not re-read this pass; nasal B12 not covered on page.
+
+## 01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Goodman 2019 NEJM letter numbers (42 vs 56 deaths; no abstract), REDUCE Gleason 8-10 timing detail, PCPT/REDUCE original papers, Welk/Garcia-Argibay/Andriole details, UKCPA perioperative pages, AUA CPP 2025 statement 19.
+
+## 01-foundations/pharmacology/voiding-outlet/alpha-agonists.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ephedrine oral urologic dosing (none cited); imipramine label dosing/boxed warning not fetched; Kamischke 1999 and Gibbons 2017 read at abstract level only; Soler 2007 abstract denominators inconsistent (185 treated vs 64.6%=102), cited as ~65%; EAU/NICE/AUA cited without DOI; FDA advisory page taken from search snippet, not opened.
+
+## 01-foundations/pharmacology/voiding-outlet/alpha-blockers.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Bauer exclusion criteria (prior retention/UTI/obstructive kidney disease) not in abstract; EAU male LUTS text only via WebFetch summary; alpha1D/receptor-subtype table is textbook, uncited; AUA/SUFU NLUTD Grade C not re-grepped (local text absent); AUA CPP 2025 stmt 18 not checked; UKCPA doxazosin periop advice not checked; naftopidil not on page (not US-approved; not added); ARL in request not interpretable
+
+## 01-foundations/pharmacology/voiding-outlet/cholinergic-agonists.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: EAU male LUTS 2026 UAB statement (ref15; not in sources-local), animal/pharmacology refs 5-8, 11-14 (mechanism only, abstracts not read), SC/oral PK figures and distigmine 'Japan/Europe use' (no cited source).
+
+## 01-foundations/pharmacology/voiding-outlet/dantrolene.mdx
+- status: partial (2026-09-24)
+- open: Resume: build from sources when the user requests. Items to verify then: DailyMed dantrolene (Dantrium) label for oral dosing and hepatotoxicity boxed warning/LFT monitoring; contraindications; NLUTD/DSD evidence (small trials; PubMed search); EAU Neuro-Urology 2026 (sources-local) and AUA/SUFU NLUTD positions; malignant hyperthermia context (IV dosing).
+
+## 01-foundations/pharmacology/voiding-outlet/index.mdx
+- status: partial (2026-09-24)
+- open: Resume: re-check dantrolene blurb once dantrolene.mdx is built.
+
+## 01-foundations/pharmacology/voiding-outlet/skeletal-muscle-relaxants.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU NLUTD text (no local copy); EAU Neuro-Urology 2026 has no baclofen/SMR statement (only BoNT, verified); diazepam and cyclobenzaprine IR label doses not stated on page/not re-verified; Murina/Rogalski/Ayyat/Harris/Bulchandani/Murdock/Miyazato/Pena resolved but not read past abstract.
 
 ## 02-evaluation/laboratory-studies/hormonal-assessment.mdx
 - status: partial (2026-09-24)
