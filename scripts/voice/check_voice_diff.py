@@ -94,7 +94,7 @@ def check(orig_t, rev_t):
     wo, wr = words(prose_lines(bo)), words(prose_lines(br))
     if wr < 0.8 * wo: warns.append(f'prose words fell {wo} -> {wr} ({(wr - wo) / wo:+.0%})')
     po, pr = prose_lines(bo), prose_lines(br)
-    conn = re.compile(r'\b(since|because|therefore|thus|hence|so that)\b', re.I)
+    conn = re.compile(r'\b(since|because|therefore|thus|hence|so that|so(?! far| called| much| many| long))\b', re.I)
     if len(conn.findall(pr)) > len(conn.findall(po)):
         warns.append(f'causal connectives added: {len(conn.findall(po))} -> {len(conn.findall(pr))} (STYLE section 3 forbids adding them)')
     style = {k: (round(len(rx.findall(po)) / max(wo, 1) * 1000, 1), round(len(rx.findall(pr)) / max(wr, 1) * 1000, 1)) for k, rx in STYLE.items()}
