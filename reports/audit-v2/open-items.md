@@ -4,6 +4,8 @@ Generated from `status.json` notes. Send the named source (PDF, label, full text
 
 Leads for later audits (Lightner AUA BPS text lacks these claims): `penile-implants/infection.mdx` line ~100 (aminoglycoside + vancomycin/cephalosporin regimen; "2019 and 2020 updates"), `penile-implants/preoperative-evaluation.mdx` line ~64 (mupirocin/chlorhexidine MRSA decolonization), `urine-studies.mdx` and `flexible-cystoscope.mdx` BPS claims. AUA BPS supplementary procedure tables 3-4 and ASHP 2013 still wanted.
 
+FloSeal: current US IFUs for the human-thrombin kit and FLOSEAL with Recothrom (page now says both kits exist; confirm from labels).
+
 Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurourol Urodyn 2016;35 Suppl 2:S8-24); NURO/Medtronic IFU; Coloplast Titan/Genesis IFU; MRI manuals (InterStim II/Micro/X, Altaviva, Revi); MASTER (Eur Urol), Tagliaferri, Frazier 2024, Cotte 2023, Shamloul 2013, Levine 2016, Hatzimouratidis 2016, Erickson 2020, Holm 2026, Furr 2019, VanDyke 2021; a trimix efficacy series; original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee & Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021); AUA antimicrobial best-practice statement (implant infection prophylaxis regimen); Ialuril manufacturer IFU.
 
 ## 01-foundations/pharmacology/bladder-pain-ic-bps/index.mdx
@@ -125,6 +127,38 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/index.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: FloSeal 6-8 wk resorption and 20% swelling, Gelfoam 4-6 wk, Surgicel 7-14 d taken from child pages/labels not re-opened (Baxter/BD/Pfizer/J&J pages not fetched by me); cost tiers unsourced (labelled rough).
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/surgicel.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: 7-14 d absorption (full package insert not retrieved), Nu-Knit and Powder handling specifics, stone-nidus reports (no source found), heparinized/coagulopathy efficacy claim, NVB strip technique.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/topical-thrombin.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Schreiber 2011 (AORN) full text; GU application list (NVB, bone, bladder neck) is operative practice with no primary source; pearl on heparin/DOAC/cirrhosis use unsourced; Evithrom current DailyMed title is 'Thrombin Human' (Ethicon), label text says Evithrom.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/hydrodissection-agents.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Henn 5 IU/100 mL and 80 mL/compartment (not in abstract); ref 15 ACOG 800 vasoconstrictor caution (abstract silent); Campagna saline-infiltration claim in mesh section; Kastelein saline+1:200,000 adrenaline detail; ornipressin regional availability; Cochrane 2025 vasoconstrictor subsection not read in full.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: FloSeal thrombin source (child says recombinant Recothrom; older IFUs say human) - hub silent; TXA/liposomal bupivacaine/ICG detail left to child pages.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/liposomal-bupivacaine.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: no ASRA/ERAS LB-specific statement found; Chu/Roebuck full text not read; Hamilton 2022 dominated/37% verified in PMC.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/cyanoacrylates.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Indermil and Glubran 2 labels (not retrieved; composition/CE status from secondary web sources); Dermabond Advanced showering wording is from the 2016 IFU rev5, not the current label; fistula/lymphocele glue claims left qualified as case-level, no primary source found; Singer review not read beyond abstract.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/fibrin-sealants.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Evicel current-revision insert (FDA copy is 2013), Raplixa status, GU-use claims (no supporting trials found), Tisseel Nov 2025 vs Sept 2025 revision date.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/index.mdx
+- status: checked (2026-09-24)
+- open: none recorded
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
