@@ -396,6 +396,10 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: STILL not checkable: ESTEEM additional-treatment rates; older-women cognitive claim in ref 15 (treatment NMA) itself. || EAU 2026 text read: CLOSED most-bothersome-first (Weak), MUI diary+UDS (Strong), anticholinergic/beta3 for urgency-predominant (Strong), duloxetine selected stress-predominant (Weak), MUI surgery less successful (Strong), oral CEE worsens SUI (Strong). Corrected: 'systemic estrogen can worsen incontinence' scoped to oral conjugated equine estrogen; UDS sentence now notes EAU Strong recommendation (added ref 19).
 
+## 03-clinical-conditions/03a-storage-incontinence/nocturia.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: NOCDURNA label (ref 27) contraindication/sodium schedule taken from audited desmopressin page not re-read on DailyMed; ref 13/25 ANP mechanism claim (abstracts only); Orlando 2025 (ref24) abstract only; no AUA/SUFU nocturia-specific statement found.
+
 ## 03-clinical-conditions/03a-storage-incontinence/sui-female.mdx
 - status: checked (2026-09-24)
 - open: STILL not checkable: cough-test PPV 78-97%, ~50% PFMT satisfaction (ACOG PB155), caffeine 1 cup/day, retropubic bladder injury ~3-5%, risk factor table. || EAU 2026 text read: CLOSED retropubic long-term better than TO (Strong/LE 1b), retropubic bladder perforation/voiding dysfunction vs TO groin pain (LE 1a), single-incision Ajust/Altis non-inferior success but more exposure/repeat surgery/dyspareunia (LE 1b), bulking Strong incl. no autologous fat/HA (added), periurethral retention, duloxetine Weak/titration Strong, vaginal estrogen Strong (added, ref 15). Bulking list still names dextranomer/HA (EAU cautions on HA). STILL not checkable: 3-5% bladder injury figure remains outside EAU text.
@@ -416,6 +420,34 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: STILL not checkable in Part II: phytotherapy, desmopressin/nocturia, IPSS bands (not addressed in Part II); prior open items unchanged. lint pass.
 
+## 03-clinical-conditions/03b-voiding-outlet/dysfunctional-voiding.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: NLUTD AUA/SUFU ref3 details, Passos 2025 full text, NICE NG123 has no DV content, EAU neuro-urology 2026 has no DV-specific text; EAU paediatric guideline read via web summary only; Hsiao 2017 AUC 0.93 cited via EAU, primary not opened.
+
+## 03-clinical-conditions/03b-voiding-outlet/female-urethral-masses.mdx
+- status: partial (2026-09-24)
+- open: Resume: verify carcinoma refs then set checked.
+
+## 03-clinical-conditions/03b-voiding-outlet/female-urethral-stricture.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Waterloos 47/58/27% dilation and 10% figures (narrative review, kept attributed); Optilume FDA label (ref 9) not re-fetched; ICS Blandy video not viewed.
+
+## 03-clinical-conditions/03b-voiding-outlet/primary-bladder-neck-obstruction.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA 2026 28-54% incidence primary source (ref 412 Cash 2019, not opened); Creta per-study figures beyond abstract; TIPD incision positions (AUA text only). No baseline word loss.
+
+## 03-clinical-conditions/03b-voiding-outlet/underactive-bladder.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: women pelvic-floor DU 4-37% (Osman 2014 abstract lacks it), Osman 2018/Taylor 2006/Bosch 2019/Resnick 1987/Gaitonde 2019 claims (abstracts only, background), BCI 100/150 cutoffs beyond AUA BPH 2026 surrogate (Abrams 1999 no abstract), TIBNC 82-woman figure (EAU text; primary ref 490 not opened), male EAU LUTS text not local.
+
+## 03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Black-women predominance (refs 7,8 abstracts silent); Peters 1976 etiology (no DOI/abstract); Jacoby 1999 and Kim 1993 details beyond abstract; stone-in-diverticulum frequency (no source added); Welch 2023 video. Baseline word count intact; no restoration needed. lint:citations and lint:links pass.
+
+## 03-clinical-conditions/03b-voiding-outlet/urethral-prolapse.mdx
+- status: checked (2026-09-24)
+- open: ement scoped (Fernandes 14/23 white), unsupported 'rare stress incontinence' and 'uncommon recurrence' fixed, added prolapsed ureterocele and rhabdomyosarcoma to differential (teaching, no citation), noted no guideline and no human urethropexy. Not checked: refs 4-7,11,14-17 (caruncle/case reports/abuse-mimic; abstracts not opened), differential ureterocele row uncited, Verma/Conces caruncle data.
+
 ## 03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx
 - status: checked (2026-09-24)
 - open: STILL not checkable: prostatectomy 21-25%/pelvic fracture 63%/iatrogenic 68% >60 y (refs 4-6 full text); LSE S3 and E1-E6 definitions (Erickson 2020); Horiguchi 2017 table, Kactan 2026, Campos-Juanatey 2022, Cabral 2025; OPEN population wording; 0.9% prevalence (ref2). Lint citations/links pass.
@@ -424,9 +456,53 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: STILL not checkable: laser vs cold-knife superiority/thermal caution; triamcinolone beyond Neu 2021; endoscopic BMG/mucosal resurfacing efficacy; concurrent AUS in expert hands.
 
+## 03-clinical-conditions/03c-pelvic-support/anterior-compartment.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: PVR>100 mL in 30% of stage III-IV (uncited), ACOG PB214 text (paywalled; occult SUI supported via AUA/EAU/Cochrane), Cochrane 2026 anterior full text embargoed to 2027-04, Tawfeek/Romanzi full text, FDA order exclusions (midurethral sling/sacrocolpopexy) not stated on fetched page, prevalence not on page.
+
+## 03-clinical-conditions/03c-pelvic-support/apical-prolapse.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: OPTIMAL corrected 100/155 vs 94/149 (correction has no abstract; matches user-supplied 64.5/63.1); SAVE-U 89 examinations; ref2 support for levator avulsion as recurrence risk; ACOG PB 214 and AUA/SUFU not read (no POP guideline from AUA/SUFU; PB214 not cited); FDA page text read via summarizer.
+
+## 03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: forceps+midline episiotomy OR 5.65/10.55 (ACOG 198 full text), 53-79% laceration incidence (ACOG 198), manual protection NNT 37 (Okeahialam full text), Arnold 2021 AFP, refs 7,12-15 not opened; RCOG Green-top 29 (2015) not located/cited; ACOG 198 not re-checked for updates.
+
 ## 03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx
 - status: checked (2026-09-24)
 - open: STILL not checkable: EVA 2026 denominators (full text), Li 2026 completion figures beyond abstract, Bretschneider 56 of 82, IUC ref 4 details (>=200 mL filling, upright exam, Baden-Walker reproducibility), ref 6 Sung 2023 PFMT+ES support, refs 1,2,7,11 not re-resolved, SAVE-U N=208, EvidenceTable pop data.
+
+## 03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ACOG PB214 exact mesh wording (abstract only), ASCRS 2024 constipation and ACG 2021 rectocele statements (abstract-only; STARR claim softened, ref6/11 retained), Nussler 2022 figures reused from prior 2026-09-20 report (not re-read), FDA 2019 order not re-fetched, uncited anatomy claims (ref4 Bordeianou weak support for support-layer anatomy). Currency search 2023+ found no new posterior-specific RCT/guideline.
+
+## 03-clinical-conditions/03d-nlutd/autonomic-dysreflexia.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: adult bladder-trigger % (75-85%), myelomeningocele rarely AD, misoprostol/clonidine-baclofen withdrawal triggers, ACOG 2002 text, AUA/SUFU NLUTD statement (no local text).
+
+## 03-clinical-conditions/03d-nlutd/index.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU NLUTD 2021 text not local (framework name/year matched to neurogenic-bladder page only).
+
+## 03-clinical-conditions/03d-nlutd/neurogenic-bladder.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: epidemiology figures (SCI, SB '85% at birth', MS, PD, stroke, diabetic cystopathy) uncited; AUA statement wording taken from auanet web summary not full text (no local AUA NLUTD text); ref 7 (paediatric review) supports drug table only loosely.
+
+## 03-clinical-conditions/03d-nlutd/nlutd-cauda-equina.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU 2021 statement numbers (no local text); BASS page (ref1) content; CES-I/CES-R definitions uncited (Gleave-Macfarlane/BASS, not fetched); CIC-hand-function and bowel regimen statements are teaching-level, unreferenced; no CES-specific SNM or AUS outcome data found.
+
+## 03-clinical-conditions/03d-nlutd/nlutd-multiple-sclerosis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: sexual dysfunction 50%/70%, US MS prevalence ~1M, women 3:1, NMSS pseudo-relapse (ref4), NICE MS, AUA/SUFU NLUTD full text (no local text), DMT perioperative statements, AUS MRI, steroid-UTI claim, alpha-blocker ref2 attribution.
+
+## 03-clinical-conditions/03d-nlutd/nlutd-parkinson.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/SUFU NLUTD text (no local copy; only abstract), SNM 'usually not used in MSA', vibegron BP label, desmopressin sodium/frailty advice, CIC/SPC practical statements, PD-specific botulinum retention rates.
+
+## 03-clinical-conditions/03d-nlutd/nlutd-spina-bifida.mdx
+- status: partial (2026-09-24)
+- open: Not checkable: Lancet 2017 ref2 support for urodynamic-for-all; hydrocephalus 85-90%, US 1,500 births/yr, MOMS claim; latex allergy rate; vibegron pediatric status (no approval found, not label-verified); Botox dose from user-verified earlier audit, not re-read on label. Resume: transition, sexual/fertility, MACE/Mitrofanoff complication rates (perforation, stones, mucus), tethered cord, bowel program have no numbers on page and were not literature-checked.
 
 ## 03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx
 - status: checked (2026-09-24)
