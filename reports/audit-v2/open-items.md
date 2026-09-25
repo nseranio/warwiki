@@ -158,6 +158,38 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: none recorded
 
+## 01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/peg-sealants.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Progel Pleural IFU PDF (404; used BD web page), Baxter IFU read via distributor copy, Spotnitz 2008 full text, any urologic-use data (none found), fibrin comparison figures removed as unverified.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/tissue-sealants/tachosil.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: whether Hatzichristodoulou fleece was TachoSil specifically (full text not read); Evarrest 3-min compression and Rickenbacher urology RCT detail not verified in full text; Evarrest label revision date not rechecked; EMA contraindications not on EPAR overview page.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/tranexamic-acid.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: WFH 2013 hematuria statement (full text not read; supported by WFH ch.7 search summary), Mannucci 1998 mechanism, intravesical/oral doses (abstracts give none), oral tablet label, Fowler/Soliman not tied to urologic subgroups, EAU 2026 urolithiasis chapter not opened.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/icg.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: IV-ICG ureter adventitial vessel claim, ICG intravesical VVF localization, penile/phalloplasty/Boari/omental perfusion uses (uncited), vendor hardware table, ref1-2 review content.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/index.mdx
+- status: checked (2026-09-24)
+- open: none recorded
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/indigo-carmine.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: WSES 2023 (ref2, emergency digestive surgery) for delayed/partial-obstruction claim - abstract only, kept; ACOG CO 372 (2007) and AUGS cystoscopy guidance not retrieved/cited; June 2014 shortage start from Doyle abstract; pudexacianinium phase 3 status not found.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/methylene-blue.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: dye-test concentrations (25 mg/250 mL) are institutional convention; no urogyn source found for intravesical MB dose or bladder-flap perfusion use; ureteral-orifice/MAOI-in-dye-dose risk unquantified.
+
+## 01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/pudexacianinium.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Astellas April 2026 pipeline PDF (phase III listing) and FDA SRS page not re-opened; absence of FDA/EMA action rests on PubMed/ClinicalTrials.gov only; camera compatibility unverified.
+
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
 - open: Resume: other blurbs unchecked.
