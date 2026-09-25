@@ -56,10 +56,6 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: NOT CHECKABLE: (1) Endocrine Society 2017 full text (blocked): Hct <54% threshold, 25-50 mg cyproterone contrast, BMD schedule - settle with ES guideline Table 9/12; (2) 10x unsatisfactory Pap rate (Safer NEJM 2019 / Peitzmeier 2014); (3) transfeminine breast cancer 4.1 vs 155/100k-py and 60% dense (Leone JAMA Oncol 2023 full text); (4) PSA median 0.02 ng/mL (Leone 2023/Assisi); (5) HIV drug-interaction direction (IDSA/HIVMA 2024 full text); (6) Goldstein 2025 finasteride 1-5 mg and pellet 150-450 mg doses (no SOC8/label source); (7) NCCN 2026 versions. No escalations.
 
-## 01-foundations/pharmacology/hormonal-therapies/index.mdx
-- status: checked (2026-09-24)
-- open: Not checkable: ospemifene 60 mg/prasterone 6.5 mg doses (hub does not state them; labels verified on child pages), ospemifene boxed-warning wording (label), AUA rUTI 2025 Moderate/B (taken from audited rUTI page), SOC 8 estradiol preference (WPATH text).
-
 ## 01-foundations/pharmacology/hormonal-therapies/ospemifene.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: pooled AE rows (Simon 2018), polyps 19.6 vs 8.3/1000, onset 4-6 wk, label sec 7.3 rifampin wording, cost/generic, NCCN 2026 quote, Bachmann 2010/Simon 2013 figures, 3x12wk+1x52wk structure, Maffei/AYSEX/PEONY/Schiavi/Novara/Russo figures.
@@ -276,10 +272,6 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: LLEGRO 2026), NG/ERAS Society 2013 rows, refs 31-35. Not checked: Donat 1999, Zingg 2008, Patel 2010, Hanna 2021, Belle 2019, Wahafu 2025, Williams 2020 IPD (-8.7 d NG coefficient), Alhashemi 2021, Pasay 2017 64% figure, ASCRS/ASGE ACPO doses; metoclopramide ESRD quarter-dose and epilepsy contraindication not re-read; cystectomy ileus rate figures rest on Hanna/Lee only. Lint citations+links pass.
 
-## 01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx
-- status: checked (2026-09-24)
-- open: Not checkable: ASRA 5th-ed interval table (full text not read; low-dose apixaban 36 h, LMWH renal), heparin label wording (DailyMed not re-fetched), ACOG PB 232 specifics (paywalled; cited generally), ESAIC ref lacks author list, AUA 2008 BPS and EAU 2026 thromboprophylaxis not located.
-
 ## 01-foundations/pharmacology/sexual-medicine-andrology/androgen-adjuncts.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: AUA/ASRM 2024 full text, BSSM 2026 abstract, tamoxifen/Ovidrel/Arimidex labels, FSH/letrozole, EAU SRH.
@@ -344,10 +336,6 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: Not checkable: vibegron 2024 BPH-OAB FDA expansion and COURAGE n, Cochrane 2023 figure, NOCDURNA approval (belong to child pages; no label/PubMed check done here); desmopressin page not edited (other agent). lint:citations fails only on priapism-management.mdx (other agent).
 
-## 01-foundations/pharmacology/urinary-diversion-specific/index.mdx
-- status: checked (2026-09-24)
-- open: Not checkable: AUA/SUFU NLUTD statement text (not in sources-local); mucus/octreotide and acidifier numeric claims left to child-page audits.
-
 ## 01-foundations/pharmacology/urinary-diversion-specific/mucus-management.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: Murray 1995 ranitidine paper not found in PubMed (likely George 1992/Murray 1987 BJU); NAC intravesical dose/label (DailyMed acetylcysteine label not re-fetched); refs 7,12,17,18 (no abstract/old); AUA/SUFU NLUTD annual-surveillance wording not checked against guideline text; no AUA/SUFU or EAU statement on mucus agents found; MSK protocol ref 25 not re-fetched; FDA primary URL 404'd, cited via Pharmacy Times summary.
@@ -359,10 +347,6 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 ## 01-foundations/pharmacology/urinary-diversion-specific/vitamin-b12-supplementation.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: AGA full-text 30 cm threshold; DailyMed cyanocobalamin label dosing (search returned nothing useful); AUA/SUFU NLUTD statement 58 text (not in sources-local); EAU MIBC 17% figure per hub audit; Cochrane/OB12/Chen/Xu/Rastegar/Banihani/Mathew/Stabler/Mauermann refs not re-read this pass; nasal B12 not covered on page.
-
-## 01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx
-- status: checked (2026-09-24)
-- open: Not checkable: Goodman 2019 NEJM letter numbers (42 vs 56 deaths; no abstract), REDUCE Gleason 8-10 timing detail, PCPT/REDUCE original papers, Welk/Garcia-Argibay/Andriole details, UKCPA perioperative pages, AUA CPP 2025 statement 19.
 
 ## 01-foundations/pharmacology/voiding-outlet/alpha-agonists.mdx
 - status: checked (2026-09-24)
@@ -815,3 +799,63 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 ## 05-special-populations/05e-womens-health/recurrent-uti.mdx
 - status: checked (2026-09-24)
 - open: STILL not checkable: E. coli 75-80% (ref5/ref8 full text); EAU 2026 immunoprophylaxis/prophylaxis recs (web); ACR 2026 and Pat 2022 figures; TAPER numbers not on page; 'nearly 25%' initial-UTI recurrence and '27-44%' (refs 1,2; AUA text says 20-40% then 25-50% multiple). lint citations/links pass.
+
+## 01-foundations/perioperative-care/intraoperative-care/analgesia.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASA/ASRA 2016 neuraxial opioid monitoring schedule (24 h; hourly x12 then q2h x12; no abstract available); EXPAREL label revision date seen as 11/2023 (indications and 96 h rule confirmed); ketamine bolus-vs-infusion claim rests on infusion consensus abstract; oral ibuprofen/celecoxib/meloxicam labels not checked (page defers to label).
+
+## 01-foundations/perioperative-care/intraoperative-care/anesthesia.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: DAS 2015 attempt limits (from memory, abstract silent); DAS 2025 attempt limits; MHAUS 24 h observation and cooling thresholds (page 403; cooling/2.5 mg/kg/>10 mg/kg confirmed via search snippet only); ASRA 5th ed interval tables not quoted (full text not read); ASA 2023 NMB recommendation strength/wording via abstract only; sugammadex anaphylaxis Savic 2025 abstract empty (cited for existence of risk only); succinylcholine/cisatracurium duration statements standard pharmacology, no source.
+
+## 01-foundations/perioperative-care/intraoperative-care/draping-skin-antisepsis.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: WHO 2018 recommendation wording/section numbers and NICE NG125 1.3 wording (NCBI/NICE blocked); ACOG PB 195 vaginal-prep wording (no full text); ACS/SIS 2016 not cited; ref 1-2 not opened in full. Cochrane abstract prints iodophor CI 0.06-1.66 (typo); page keeps 0.66-1.60 per v1 full-text read.
+
+## 01-foundations/perioperative-care/intraoperative-care/nausea-vomiting.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: exact adult dose Table 2 timing (image), promethazine FDA Dec 27 2023 date, PADDI dexamethasone SSI claim (on steroids page), 37% PDNV figure quoted from guideline text not primary study, Fifth Consensus supplementary tables. Pre-existing citation-lint gaps at ref13-17 are on other pages.
+
+## 01-foundations/perioperative-care/intraoperative-care/nerve-blocks.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASRA 30-min monitoring statement (2017 text not opened); USRA and AUA CPP 2025 links carried from v1; periurethral 5-10 mL 1% lidocaine and cord 10-20 mL volumes are labeled office convention (no source); mg/kg ceilings for bupivacaine/ropivacaine/levobupivacaine labeled convention; clonidine/dexmedetomidine durations not quantified. Lint citations+links pass.
+
+## 01-foundations/perioperative-care/intraoperative-care/positioning-nerve-injury.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: EAU 2026 urolithiasis PCNL statement and AUA 2018 white paper text; Galdakao leg arrangement (Ibarluzea abstract absent); AUA lateral/prone technique teaching unsourced; retrorenal colon rate dropped.
+
+## 01-foundations/perioperative-care/intraoperative-care/surgical-gloving.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASCIA 2010, AST 2014, FDA pages/final rule (not re-fetched; v1 read them); Cochrane full text; Enz Lancet ref 'Hand Deserve Better' title is the published typo; CDC/AORN/WHO 2016 glove positions not cited on page and not verified; ChEETAh cost-effectiveness (Lancet Glob Health 2024) not added.
+
+## 01-foundations/perioperative-care/intraoperative-care/surgical-hand-antisepsis.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: NEJM video (ref 9) technique detail; Purell label times; ABHR alcohol concentration of commercial products beyond Avagard/WHO formulation II. Currency search 2023+: nothing practice-changing.
+
+## 01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx
+- status: checked (2026-09-25)
+- open: NOT CHECKABLE: ASRA 2025 full text is paywalled (intervals verified only via Guideline Central quotations of the recommendations, not primary); CHEST 2022 mechanical-valve/VTE 'suggest against bridging' and AHA/ACC 2024 bridging wording and P2Y12 hold days verified via secondary summaries (CCJM, OpenAnesthesia), not full text; ASRA SC UFH 'or assess coagulation' wording.
+
+## 01-foundations/perioperative-care/perioperative-protocols/eras.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ERAS Society gyn-onc 2026 (Nelson) full text (paywalled) - diet within 24 h, catheter-removal wording, >=80% compliance target; alvimopan label details (DailyMed) not re-read; RC 2019/2025 ERAS update not found in PubMed.
+
+## 01-foundations/perioperative-care/postoperative-management/constipation.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: PEG 17 g daily and senna/bisacodyl role not checked against OTC labels; ASCRS chewing-gum statement not located in text; ACR SBO and EAU cystectomy no-bowel-prep statements not re-fetched (websites); Simhal 2025 read abstract only. lint:citations and lint:links pass.
+
+## 01-foundations/pharmacology/hormonal-therapies/index.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ospemifene boxed-warning wording (label), AUA rUTI 2025 Moderate/B (from audited rUTI page), SOC 8 estradiol preference (WPATH text).
+
+## 01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ASRA 5th-ed interval table (full text not read), heparin label wording, ACOG PB 232 specifics (paywalled), ESAIC ref lacks author list, AUA 2008 BPS and EAU 2026 thromboprophylaxis not located, Caprini score-to-tier mapping (ACCP full text not read). Apixaban 2.5 mg BID from 12-24 h, 35 d hip / 12 d knee verified vs DailyMed Eliquis label (2026-09-25).
+
+## 01-foundations/pharmacology/urinary-diversion-specific/index.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: AUA/SUFU NLUTD statement text (not in sources-local); numeric mucus/octreotide/acidifier claims left to child audits.
+
+## 01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: Goodman 2019 NEJM letter numbers (42 vs 56 deaths; no abstract), REDUCE Gleason 8-10 timing detail beyond abstract, Welk/Garcia-Argibay/Andriole details, UKCPA perioperative pages, AUA CPP 2025 statement 19, isoenzyme tissue distribution (textbook, uncited), Lee 2015 withdrawal RCT figures (from AUA text only).
