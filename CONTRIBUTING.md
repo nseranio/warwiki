@@ -36,7 +36,7 @@ Gray zone (acceptable as reconstructive consequence only):
 
 ## Voice
 
-- Formal academic prose, active voice.
+- Follow [STYLE.md](STYLE.md) (typography, word choice, sentence structure, evidence wording). Formal academic prose, active voice.
 - Written for reconstructive surgeons and urogynecologists, **not**
   patients or general medicine readers.
 - No consumer-health disclaimers.

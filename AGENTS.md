@@ -345,7 +345,7 @@ Before starting new work, run `git status --short` and expect a clean tree unles
 Before writing or modifying an article:
 
 1. **Scope.** Primary topics must fit reconstructive / functional urology / urogynecology. **Out of scope** as primary topics: endourology (PCNL, URS for stones) and primary urologic oncology (cancer cystectomy / nephrectomy / prostatectomy). Body mentions as *reconstructive context* are fine (post-PCNL stricture, post-cystectomy reconstruction, RUF after prostatectomy). See `feedback_site_scope.md`.
-2. **Voice.** Frame every article around surgical/operative relevance for the reconstructive surgeon — not general medicine. Cut subspecialty depth that belongs elsewhere (nephrology tubular transport, IBD pathophysiology, HPV molecular biology, etc.). See `feedback_article_voice.md`.
+2. **Voice.** Follow `STYLE.md` for how sentences are written. Frame every article around surgical/operative relevance for the reconstructive surgeon — not general medicine. Cut subspecialty depth that belongs elsewhere (nephrology tubular transport, IBD pathophysiology, HPV molecular biology, etc.). See `feedback_article_voice.md`.
 3. **Citations.** Real, DOI-linked references only. Default pattern: inline `<sup>[[N]](#refN)</sup>`, reference list with `<a id="refN"></a>N. …` anchors. GAS articles use footnote-style (`[^N]`). Do not fabricate citations.
 
 Before committing:

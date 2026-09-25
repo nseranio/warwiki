@@ -103,7 +103,7 @@ Budget about 20–30 consequential claims per page. If a page has more, check in
   - No `{#id}` heading anchors.
   - Leave a blank line between an image and its caption.
   - Place videos immediately before References.
-- Voice: write for reconstructive surgeons and urogynecologists. Short sentences. Tables for comparisons.
+- Voice: write for reconstructive surgeons and urogynecologists. Short sentences. Tables for comparisons. `STYLE.md` sections 1-3 apply to every page you edit: Pass 1 typography and word rules, and Pass 2 sentence structure on the paragraphs you touch (move each citation with its clause and check it against the source). A separate Pass 1 writer may work on pages outside the audit queue window; skip pages with uncommitted changes.
 - **Evidence wording** (STYLE-draft-v3 section 4; applies to every audit edit and all new text):
   - "causes" or "reduces" only when a causal conclusion is justified; "is associated with" for observational findings; "randomized trials showed" for randomized evidence; "retrospective series report" for retrospective evidence; "has been described" for technical reports and small series; "evidence is insufficient to determine" when that is the case.
   - "guidelines recommend" only for an explicit recommendation, with the guideline's own strength label (AUA Strong/Moderate/Conditional/Expert Opinion/Clinical Principle; EAU strong/weak).
