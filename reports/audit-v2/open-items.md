@@ -1,10 +1,8 @@
 # Audit v2 — open items (not checkable / needs source)
 
-Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): AUA/SUFU/AUGS GSM 2025, NAMS 2020 GSM, ACOG Clinical Consensus 2 (2021, breast cancer), IDSA candidiasis 2016, AUA BPS antimicrobial prophylaxis 2019, WikiGuidelines UTI 2024 (Nelson), Cochrane cranberries; AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
+Generated from `status.json` notes. Send the named source (PDF, label, full text) and the item can be closed. Regenerate after each batch. `partial` pages list where to resume. Guideline full texts already ingested (local only, `reports/audit-v2/sources-local/`, gitignored): EAU Urological Infections 2026, AUA BPS Table V, ASHP 2013 prophylaxis, FloSeal human-thrombin and Recothrom IFUs, Gelfoam Pfizer label, Spongostan EMEA sheet, Ethicon hemostat booklet; AUA/SUFU/AUGS GSM 2025, NAMS 2020 GSM, ACOG Clinical Consensus 2 (2021, breast cancer), IDSA candidiasis 2016, AUA BPS antimicrobial prophylaxis 2019, WikiGuidelines UTI 2024 (Nelson), Cochrane cranberries; AUA IPT 2024, OAB 2024, SUI 2023, Urethral Stricture 2023 + amendment, rUTI 2025, BPH 2026 (Parts I, II and III), ED 2018, Testosterone Deficiency 2018; EAU Urethral Strictures 2026, Neuro-Urology 2026, Non-neurogenic Female LUTS 2026 (Limited Update March 2026); NICE NG123.
 
 Leads for later audits (Lightner AUA BPS text lacks these claims): `penile-implants/infection.mdx` line ~100 (aminoglycoside + vancomycin/cephalosporin regimen; "2019 and 2020 updates"), `penile-implants/preoperative-evaluation.mdx` line ~64 (mupirocin/chlorhexidine MRSA decolonization), `urine-studies.mdx` and `flexible-cystoscope.mdx` BPS claims. AUA BPS supplementary procedure tables 3-4 and ASHP 2013 still wanted.
-
-FloSeal: current US IFUs for the human-thrombin kit and FLOSEAL with Recothrom (page now says both kits exist; confirm from labels).
 
 Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurourol Urodyn 2016;35 Suppl 2:S8-24); NURO/Medtronic IFU; Coloplast Titan/Genesis IFU; MRI manuals (InterStim II/Micro/X, Altaviva, Revi); MASTER (Eur Urol), Tagliaferri, Frazier 2024, Cotte 2023, Shamloul 2013, Levine 2016, Hatzimouratidis 2016, Erickson 2020, Holm 2026, Furr 2019, VanDyke 2021; a trimix efficacy series; original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee & Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021); AUA antimicrobial best-practice statement (implant infection prophylaxis regimen); Ialuril manufacturer IFU.
 
@@ -86,7 +84,7 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 01-foundations/pharmacology/infection-prophylaxis/antifungals.mdx
 - status: checked (2026-09-24)
-- open: Still not checkable: ECMM/ISHAM/ASM 2025, EAU Urological Infections 2026, Jenkin 1998, Miller 2024, IDSA aspergillosis 2016 renal statements, Bausch 2026.
+- open: Still not checkable: ECMM/ISHAM/ASM 2025, Jenkin 1998, Miller 2024, IDSA aspergillosis 2016 renal statements, Bausch 2026. lint pass.
 
 ## 01-foundations/pharmacology/infection-prophylaxis/index.mdx
 - status: checked (2026-09-24)
@@ -94,43 +92,43 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 
 ## 01-foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention.mdx
 - status: checked (2026-09-24)
-- open: Still not checkable: Porru 2014 (not in PubMed); Volonte/Munir/Steinman/Schmiemann/Lorenzo-Gomez beyond abstract; NICE NG112; OM-89 6 mg strength (label).
+- open: Still not checkable: Porru 2014; Volonte/Munir/Steinman/Schmiemann/Lorenzo-Gomez beyond abstract; NICE NG112; OM-89 6 mg strength (label). lint pass.
 
 ## 01-foundations/pharmacology/infection-prophylaxis/perioperative-antibiotic-prophylaxis.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: ASHP 2013 doses/redose intervals (guideline not local; consistent with memory only), AUA BPS supplementary procedure tables 3-4 (not in local text), Nelson Cochrane 12->39% colorectal SSI (quoted via BPS), FDA aortic/dysglycemia dates, 2022 allergy parameter cefazolin statement, Seidelman 28-RCT OR 1.06, Brant/Sun cohort figures, Calderwood 2022.
+- open: Still not checkable: FDA aortic/dysglycemia dates, 2022 allergy parameter cefazolin statement, Seidelman 28-RCT OR 1.06, Brant/Sun figures, Calderwood 2022.
 
 ## 01-foundations/pharmacology/infection-prophylaxis/prosthetic-infection-biofilm.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: Irrisept/Coloplast web labels; Simhal 'saline and CHG both remove dip' (abstract only); Im 2026 and Abou Chawareb 2025 survey % (no abstract detail); Helo 2025 numbers beyond abstract; ACOG ref 31 web page; IDSA ASB rec confirmed via web summary only.
+- open: Still not checkable: Irrisept/Coloplast labels, Simhal dip-removal detail, Im 2026/Abou Chawareb survey %, Helo 2025 beyond abstract, ACOG ref 31, IDSA ASB via summary.
 
 ## 01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: ref 19 (Apicella transplant TMP-SMX narrative), ref 14 Latin American Grade A OM-89, ref 15 Lorenzo-Gomez frail elderly, ref 20 Milligan, IDSA 2019 transplant ASB timing, HIPREX label sulfonamide exclusion (ref 22, not rechecked), frmRAB claim ref 11, fosfomycin 'limited data' wording, trimethoprim hyperkalemia attribution to ref 3. NICE NG123 has no rUTI content.
+- open: Still not checkable: refs 19, 14, 15, 20, IDSA 2019 transplant ASB timing, HIPREX label, frmRAB ref 11, TMP hyperkalemia attribution ref 3. lint pass.
 
 ## 01-foundations/pharmacology/infection-prophylaxis/uti-treatment-antibiotics.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: ciprofloxacin/aminoglycoside renal rules (not added), EAU chronic prostatitis duration/fosfomycin text (WebFetch could not retrieve), IDSA 2025 antibiogram/CAUTI text only via web summary, refs 2,3,13,33,34 not resolved (no DOI).
+- open: Still not checkable: cipro/aminoglycoside renal rules beyond EAU, IDSA 2025 antibiogram/CAUTI via web summary, refs 2,3,13,33,34 (no DOI). lint pass.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/arista.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: full IFU PDF (only web page), granuloma comparison vs Surgicel/Gelfoam, cost and FloSeal comparisons (softened), 1-2x water absorption (removed).
+- open: Not checkable: page does not mention granuloma (comparison row stays 'not established'), full IFU PDF, cost/FloSeal comparisons (no source; softened), ref2/ref3 not re-read.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/floseal.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: ~$200-500/kit cost, 2-5 mL typical volume (now stated as surgeon judgment), current Recothrom-kit-specific IFU PDF (only web page read; DailyMed has no FloSeal entry), Baxter pro page fetch failed, ref1/ref3 web pages not re-read in full; Recothrom hamster contraindication taken from Baxter FloSeal+Recothrom page; gas-embolism-specific label wording not found (label has intravascular/negative venous pressure and no-air-to-clear-tip warnings).
+- open: Not checkable: 2-5 mL typical volume (stated as surgeon judgment), gas-embolism wording (labels give intravascular uptake/negative venous pressure and no-air-to-clear-tip only; human IFU lacks negative-pressure line), 10 mL human-thrombin IFU not supplied, refs 1/3 web pages.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/gelfoam.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: collecting-system stone-nidus concern (no source found, marked theoretical); RARP NVB use (technique, unsourced); ~200% expansion (not in Gelfoam label; not added); Gelfoam powder as current Pfizer product and Surgiflo/Spongostan specs (no IFU read); 45x absorption is sponge-specific per label; ref1 review not read beyond abstract.
+- open: Not checkable: Gelfoam Powder as current Pfizer product (not in supplied label), ~200% expansion, RARP NVB use (technique), ref1 beyond abstract.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/index.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: FloSeal 6-8 wk resorption and 20% swelling, Gelfoam 4-6 wk, Surgicel 7-14 d taken from child pages/labels not re-opened (Baxter/BD/Pfizer/J&J pages not fetched by me); cost tiers unsourced (labelled rough).
+- open: Not checkable: relative cost tiers, hub silent on nothing further.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/surgicel.mdx
 - status: checked (2026-09-24)
-- open: Not checkable: 7-14 d absorption (full package insert not retrieved), Nu-Knit and Powder handling specifics, stone-nidus reports (no source found), heparinized/coagulopathy efficacy claim, NVB strip technique.
+- open: Not checkable: NVB strip (technique, now labelled), Nu-Knit handling specifics beyond cuttable, heparinized efficacy (mechanistic), 7-14 d primary source.
 
 ## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/topical-thrombin.mdx
 - status: checked (2026-09-24)
