@@ -256,9 +256,65 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 - status: checked (2026-09-24)
 - open: Not checkable: AUA 10 mg QHS start and 75-100 mg upper range (only statement text obtained, not supporting text); Beers 2023 and NICE CG173 recs, Robson/AFP/Morin refs, older pharmacology refs (3-7,9,15,17,24-29,31-37,41-43) not re-read; imipramine label not re-fetched (covered by imipramine page audit).
 
+## 01-foundations/pharmacology/perioperative-eras/anticoagulation-reversal.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE (paywalled): 2023 ACC/AHA AF class/LOE for idarucizumab (kept, unverified) and PCC (class labels removed); ACC 2020 pathway details; ASRA 5th ed interval numbers (none quoted); urgent-surgery low-dose vit K regimens and 5 mg PO~1 mg IV; NCCN VTE ref6 supports vit K/PCC rebound/half-life statements (unverified); PCC ~8 h duration; ciraparantag phase III status.
+
+## 01-foundations/pharmacology/perioperative-eras/bowel-preparation.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: Saltzman 2015 40% hyperphosphatemia; Feng 2015 survey percentages; Daneshmand, Wessels 96%, Simhal 2023 abstract, Willis-era ASCRS 2024 full text beyond recs 2-3, EAU 2026 cystectomy bowel-prep statement, Ozdemir 2025, AUGS-IUGA urogyn ERAS statement (not found on PubMed); no neomycin+metronidazole 1 g/1 g regimen source found.
+
+## 01-foundations/pharmacology/perioperative-eras/corticosteroids.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ref12 AbiDex abstract (conference), ref9/38 Yonsa label not re-opened, ref16 ACR Manual 2026 text, ref20 KDIGO 2009 (superseded by KDIGO 2009 only; 2020 update not reviewed), ref21/22/29/32-35 not opened, ref18 JACI-P DOI not resolved, EAU Urolithiasis 2026 MET text (ref39) not opened, ref13-14 mechanism reviews, ref30-31 Fournier reviews. Stress-dose regimen detail lives on preoperative-assessment/steroids (not edited).
+
+## 01-foundations/pharmacology/perioperative-eras/index.mdx
+- status: checked (2026-09-24)
+- open: ch VTE child; Simhal paradigm-shift/five-study wording softened to observational; Hanna 2021 'benefit attenuation' reversed to added benefit; docusate 'de-prescribe' -> not recommended as monotherapy; MET deflazacort qualified. Child links all resolve. Not re-checked against primary: child-page claims (sibling agents); Westerman/Pannucci/Simhal/Hanna numbers taken from child pages, not re-fetched.
+
+## 01-foundations/pharmacology/perioperative-eras/postop-bowel-ileus-management.mdx
+- status: checked (2026-09-24)
+- open: LLEGRO 2026), NG/ERAS Society 2013 rows, refs 31-35. Not checked: Donat 1999, Zingg 2008, Patel 2010, Hanna 2021, Belle 2019, Wahafu 2025, Williams 2020 IPD (-8.7 d NG coefficient), Alhashemi 2021, Pasay 2017 64% figure, ASCRS/ASGE ACPO doses; metoclopramide ESRD quarter-dose and epilepsy contraindication not re-read; cystectomy ileus rate figures rest on Hanna/Lee only. Lint citations+links pass.
+
+## 01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ASRA 5th-ed interval table (full text not read; low-dose apixaban 36 h, LMWH renal), heparin label wording (DailyMed not re-fetched), ACOG PB 232 specifics (paywalled; cited generally), ESAIC ref lacks author list, AUA 2008 BPS and EAU 2026 thromboprophylaxis not located.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/androgen-adjuncts.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA/ASRM 2024 full text, BSSM 2026 abstract, tamoxifen/Ovidrel/Arimidex labels, FSH/letrozole, EAU SRH.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AAFP cost/specialty-pharmacy statement (abstract only), Davis NEJM quote (no abstract), Cipriani/Barakeh only abstracts; no ISSWSH/ACOG/NAMS bremelanotide position found or claimed (page cites AAFP 2025 only). Flibanserin SSE ~0.5/month not verified here (flibanserin page).
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: ACOG PB213 detail beyond web summary (Level A DHEA claim dropped), Davis 2024 NEJM (2M Rx/yr, no abstract), Dalrymple AAFP 2025 (AAFP recs), NAMS 2022 (only checked it lacks HSDD testosterone rec), ES 2014 full-text recs beyond 4.1/abstract, Kling 2025 guideline summary beyond abstract.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/flibanserin.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: ACOG PB213 flibanserin wording and 'very low/<1 SSE' attribution (paywalled), Davis 2024 NEJM verbatim quote, Joffe 2016 (rejection history/debate, no abstract), AAFP Dalrymple 'flibanserin modest/expensive' (abstract only confirms CBT first-line); ISSWSH and NAMS positions not on page and not verified; label Table 6 SSE deltas by study not extracted.
+
 ## 01-foundations/pharmacology/sexual-medicine-andrology/index.mdx
 - status: partial (2026-09-24)
 - open: Resume: other blurbs unchecked.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx
+- status: checked (2026-09-24)
+- open: NOT CHECKABLE: papaverine 15-60 mg and phentolamine 0.5-1 mg ranges and bimix concentrations (no local source; not added); EAU 2026 ICI wording (ref2) and Invicorp regional authorization; Nauta/Miranda not read in full text; AUA ED 2018 has no newer update found.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: EAU 2026 full text (WebFetch summary), Vitaros/Virirec regional approval.
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: EAU 2026 web chapters refs 5,13,17,18; Princeton IV intervals via summary; OTC status; Spirito 2024 details; Sari Motlagh details
+
+## 01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx
+- status: checked (2026-09-24)
+- open: Not checkable: AUA 2015 statement grades (full text 403; only AUA web summary read, no 2024-26 AUA update found); verapamil 10 mg/10 mL q2wk x12 dose (not in Levine abstract); Cochrane 12-degree prespecified threshold; EAU 2026 interferon no-longer-recommended wording; ICSM 2024 statements; interferon 2 MU Trost dose; Chung 2022 CCH vs verapamil RCT not added. Lint: citations clean for this page (another page intraurethral-alprostadil fails), links clean.
 
 ## 01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx
 - status: partial (2026-09-24)
