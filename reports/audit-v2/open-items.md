@@ -859,3 +859,19 @@ Still needed from the user: Biardeau 2015 ICS AUS Consensus full report (Neurour
 ## 01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx
 - status: checked (2026-09-25)
 - open: Not checkable: Goodman 2019 NEJM letter numbers (42 vs 56 deaths; no abstract), REDUCE Gleason 8-10 timing detail beyond abstract, Welk/Garcia-Argibay/Andriole details, UKCPA perioperative pages, AUA CPP 2025 statement 19, isoenzyme tissue distribution (textbook, uncited), Lee 2015 withdrawal RCT figures (from AUA text only).
+
+## 01-foundations/perioperative-care/postoperative-management/electrolyte-abnormalities.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: AAFP hypernatremia shock/water-deficit statements, Wahr/Arora outcome claims (abstract-level only), Lorente/Vasdev/Stein table specifics beyond abstracts, MHRA gluconate alert text, 3% saline bolus volumes (left to institutional protocol).
+
+## 01-foundations/perioperative-care/postoperative-management/nutrition.mdx
+- status: checked (2026-09-25)
+- open: NOT CHECKABLE: ADA 2026 and Kindel 2024 full text (403; multisociety risk-factor list came from PMC text via summarizer); SPAQI 2025 specific recommendations not read (stated only that it differs); Mehta 2026 protein 60-120 g/day from abstract only; Wischmeyer 2018/ACG 2016/EN mortality 6.8 to 2.4% from baseline not restored; ASPEN thiamine/dosing details in ASPEN 2020 text not opened (only abstract).
+
+## 01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: 1-week/3-month/1-year follow-up wording; API-CAT recent-surgery exclusion; ADJUST-PE recent-surgery inclusion; HI-PEITHO 3-week surgery exclusion (registry not opened); Luijten CTEPH % (no abstract); PERC wording vs guideline text.
+
+## 01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: verbatim class/level of AHA/ACC recs (BNP>92/NT-proBNP>=300 cutoffs, DASI<=34, troponin 24/48h, >7-day beta-blocker start) - consistent with secondary summaries; ESC 2022 detail stated at summary level only; 2026 UDMI perioperative-specific text not located; IMPROVE-multi exclusion of nephrectomy/transplant not verified; CIED, valve, stroke statements not verified against full guideline. lint:citations fails only on unrelated pulmonary-embolism.mdx (ref16 missing anchor); lint:links pass.

@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-25 (session 3, batch 2) — Audit v2 tier 3: postoperative management and preoperative cardiovascular risk
+
+- **Checked:** [Electrolyte Abnormalities](docs/01-foundations/perioperative-care/postoperative-management/electrolyte-abnormalities.mdx), [Perioperative Nutrition](docs/01-foundations/perioperative-care/postoperative-management/nutrition.mdx), [Pulmonary Embolism](docs/01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx), [Cardiovascular Risk](docs/01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx).
+- **Main corrections:** nutrition page restored from 3,052 to about 5,960 words with 40 references after a 44% v1 drop (abdominoplasty protein study corrected to a 200-patient retrospective cohort, Kjaer collagen RCT scoped as an exploratory n=21 biomarker study, refeeding and carbohydrate-loading figures corrected to NICE/ASCRS, GLP-1 guidance updated to the 2024 multisociety statement); PE thrombolysis mortality figure not restored because it came from an all-PE-trial meta-analysis, with PEERLESS and STORM-PE added; insulin-glucose timing no longer misattributed to UKKA and sodium zirconium cyclosilicate position stated; RCRI components and event rates, POISE/POISE-2 numbers and VISION MINS figures added, with the 2026 Universal Definition claim limited to what could be verified.
+- **Open:** AHA/ACC 2024 perioperative and 2026 PE guideline recommendation details rest on secondary summaries (full texts returned 403); ADA 2026 and Kindel 2024 GLP-1 full texts not read (see `reports/audit-v2/open-items.md`).
+
+---
+
 ## 2026-09-25 (session 3) — Audit v2: restoration reviews and tier 3 perioperative care, first batch
 
 - **Restoration reviews (from the session 2 list):** [5-Alpha-Reductase Inhibitors](docs/01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx) (mechanism/effect table, combination-therapy data, placebo-adjusted adverse-event rates, contraindications, PCPT/REDUCE figures restored and verified; unsupported baseline claims left out), [VTE Prophylaxis](docs/01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx) (urologic risk table, extended-prophylaxis meta-analysis corrected to Knoll 2021 1.0% vs 2.1%, rivaroxaban renal cutoff corrected to CrCl below 15, apixaban 35/12-day durations confirmed against the label), plus the [Hormonal Therapies](docs/01-foundations/pharmacology/hormonal-therapies/index.mdx) and [Urinary Diversion](docs/01-foundations/pharmacology/urinary-diversion-specific/index.mdx) hubs (practical pointers restored to blurbs; child pages own the detail).
