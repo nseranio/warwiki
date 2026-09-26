@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-26 — Audit v2: tiers 1 to 3 complete, tier 4 started
+
+- Audited and published all of tier 3 (596 pages) and 138 of the 397 tier 4 pages in about 100 batches of five pages, each checked against PubMed abstracts, local guideline texts and manufacturer documents, then linted, built and pushed. Most batches also restored practical teaching that the v1 rewrite had removed, where a source supported it.
+- Recurring corrections: misattributed figures and denominators, wrong DOIs and PMIDs, references that did not support their claims, single cases and animal data presented as human series, guideline statements without their strength labels (AUA 2026 BPH, AUA/SUFU 2023-2025, EAU 2026, ACS 2025, WPATH SOC 8), and unsupported superlatives ("gold standard", "largest series", "first-line").
+- Not finished: 257 tier 4 pages (surgeon profiles and remaining instruments) and 2 partials. See [reports/audit-v2/RESUME-NEXT.md](reports/audit-v2/RESUME-NEXT.md).
+
+---
+
 ## 2026-09-25 (follow-up) — Cloud voice guardrails, Video Library refresh, AUGS documents, voice pilot
 
 - **Phase 1, cloud audio guardrails:** [api/tts.ts](api/tts.ts) now enforces a fail-closed monthly budget (`WARWIKI_TTS_MONTHLY_BUDGET_USD`, default 45) kept in a Vercel Blob ledger with optimistic concurrency, a shared SHA-256-keyed audio cache in Blob (a hit never calls OpenAI or spends budget) capped by `WARWIKI_TTS_CACHE_MAX_MB` (default 700), a same-site Origin/Referer allowlist (warwiki.org, `warwiki*.vercel.app`, localhost) and a per-IP limit on cache misses (429). The feature is still off until `WARWIKI_ENABLE_CLOUD_TTS=true` is set in Vercel with a Blob store connected. Model default stays tts-1 / nova. 23 tests in `src/test/tts-api.test.ts`. Recommendation on models is in the final report of the session (tts-1 $15 / 1M characters, tts-1-hd $30, gpt-4o-mini-tts about $0.015 per minute).
