@@ -887,3 +887,23 @@ Status on September 25, 2026: the 26 AUGS documents from the September 24 email 
 ## 01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx
 - status: checked (2026-09-25)
 - open: Not checkable: verbatim class/level of AHA/ACC recs (BNP>92/NT-proBNP>=300 cutoffs, DASI<=34, troponin 24/48h, >7-day beta-blocker start) - consistent with secondary summaries; ESC 2022 detail stated at summary level only; 2026 UDMI perioperative-specific text not located; IMPROVE-multi exclusion of nephrectomy/transplant not verified; CIED, valve, stroke statements not verified against full guideline. lint:citations fails only on unrelated pulmonary-embolism.mdx (ref16 missing anchor); lint:links pass.
+
+## 01-foundations/perioperative-care/preoperative-assessment/diabetes.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: AFP 2024 Gauer tables (setting table, NPH 0.1 U/kg per 10 mg prednisone; AFP tables not retrievable, schema also in Clore 2009 unverified); Endocrine Society 2022 basal-bolus statement (abstract-level); ACR contrast manual text (not fetched). No escalation; nutrition and CV pages consistent on SGLT2 3/4 d and ADA GLP-1 framing. Word count restoration check: baseline vs now, added content only, nothing removed of value.
+
+## 01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ACR JAKi 3-day and glucocorticoid wording verified only via secondary summaries; ECCO 2024/2026 biologic statements via secondary summaries (full text not retrieved); no tacrolimus/mycophenolate-specific numbers on page. Currency search returned nothing new. Word count above baseline; no restoration needed.
+
+## 01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ARISCAT 837-patient subset and 6.3% development figure (removed the 837 figure; band percentages 1.6/13.3/42.1 confirmed by secondary source only); ARISCAT exclusion of outpatients/transplant; ASA 2025 advisory low-certainty CFS statement (no abstract); Fifth Consensus full text (paywalled, verified via secondary summaries); Edmonton 9 domains/11 items. Not covered on page: STOP-BANG, POSSUM, ASA class, urology-specific calculators.
+
+## 01-foundations/perioperative-care/preoperative-assessment/steroids.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ACR/AAHKS 2022 glucocorticoid recommendation text (PMC blocked; confirmed via abstract + secondary summary); Liu 2017 Anesthesiology (no abstract); Woodcock dosing table (abstract only); vitamin A reversal not on page, not added. Open conflict: ESE 2024 stress dosing vs ACR/AAHKS continue-current-dose (arthroplasty).
+
+## 01-foundations/perioperative-care/index.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: no numeric claims on hub; child-page claims audited separately.

@@ -22,6 +22,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-26 (session 3, batch 3) — Audit v2 tier 3: preoperative assessment; perioperative-care section complete
+
+- **Checked:** [Diabetes](docs/01-foundations/perioperative-care/preoperative-assessment/diabetes.mdx), [Frailty](docs/01-foundations/perioperative-care/preoperative-assessment/frailty.mdx), [Immunosuppression](docs/01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx), [Risk Calculators](docs/01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx), [Steroids](docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx) and the [Perioperative Care hub](docs/01-foundations/perioperative-care/index.mdx).
+- **Main corrections:** frailty outcome figures re-attributed to Tjeertes 2020 (were cited to the AHA/ACC guideline) and restored after a 27% v1 drop; diabetes postoperative-glucose and SSI claims re-sourced and scoped, real HbA1c-versus-prosthetic-infection data added (Habous 2018, Corona 2026), NICE-SUGAR hypoglycemia figure corrected; steroids page rebuilt to ESE/Endocrine Society 2024 Table 8 with the 2020 UK risk threshold, wound-healing evidence scoped, unsupported baseline thresholds left out; risk-calculator discrimination figures added and an unverifiable ARISCAT figure removed; hub blurbs aligned to child pages and the missing hand-antisepsis entry added.
+- **Open:** ACR/AAHKS glucocorticoid and JAK-inhibitor wording and ECCO biologic statements rest on secondary summaries (full texts blocked); AFP tables for the type 1 diabetes and NPH-per-prednisone schemas not retrievable (see `reports/audit-v2/open-items.md`).
+
+---
+
 ## 2026-09-25 (session 3, batch 2) — Audit v2 tier 3: postoperative management and preoperative cardiovascular risk
 
 - **Checked:** [Electrolyte Abnormalities](docs/01-foundations/perioperative-care/postoperative-management/electrolyte-abnormalities.mdx), [Perioperative Nutrition](docs/01-foundations/perioperative-care/postoperative-management/nutrition.mdx), [Pulmonary Embolism](docs/01-foundations/perioperative-care/postoperative-management/pulmonary-embolism.mdx), [Cardiovascular Risk](docs/01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx).
