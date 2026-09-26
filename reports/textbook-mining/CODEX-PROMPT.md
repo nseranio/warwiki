@@ -1,69 +1,67 @@
-# Textbook mining prompt for Codex (reads WARWIKI directly, cannot edit it)
+# Textbook mining prompt for Codex (whole library)
 
-Codex reads the WARWIKI pages straight from the repo, so no corpus export is needed. The setup below makes the repo physically read-only for Codex: the Codex sandbox only allows writes inside the folder Codex is started from, so it is started from a separate folder on the Desktop.
+Codex works through the textbook library in `/Users/joyboy/Documents/Medicine`, checks each chapter against what WARWIKI already says, and collects only material that would add to the site. It writes its findings to `~/Desktop/WARWIKI-textbook-mining/`. Claude reviews the findings, verifies the sources and makes the site edits.
 
-## Setup (once)
+## How to run
 
-```bash
-mkdir -p ~/Desktop/WARWIKI-textbook-mining/books ~/Desktop/WARWIKI-textbook-mining/findings
-```
-
-Put each textbook PDF in `~/Desktop/WARWIKI-textbook-mining/books/`. Never put textbooks in the WARWIKI repo.
-
-## Per book
-
-1. Open Codex with `~/Desktop/WARWIKI-textbook-mining` as its project or workspace folder, not the WARWIKI repo. Keep the default permission mode (workspace write, labeled "Auto", "Agent" or "Default" depending on the version). Do **not** choose "Full access" or `--dangerously-bypass-approvals-and-sandbox`; that removes the protection. From a terminal, the equivalent is:
-
-   ```bash
-   cd ~/Desktop/WARWIKI-textbook-mining && codex --sandbox workspace-write
-   ```
-
-2. Paste everything below the line and fill in the bracketed fields.
-3. Codex works through the book and writes one findings file per chapter. If it stops, say `continue`; it resumes from `progress.md`.
-4. Tell Claude when a book is done. The findings are in `~/Desktop/WARWIKI-textbook-mining/findings/[abbrev]/`.
+1. Open Codex (full access is fine).
+2. Paste everything below the line.
+3. Whenever Codex stops, say `continue`. It resumes from its progress files.
+4. Tell Claude when it has finished a book or a batch of books. Claude checks that the WARWIKI repo is unchanged before using the findings.
 
 ---
 
-You are scouting an entire urology or urogynecology textbook for material that would improve WARWIKI, a specialist reference for reconstructive, functional and prosthetic urology and urogynecology, read by urologists, urogynecologists, fellows and residents. Your job is to find candidates. Another editor makes the final decision, verifies sources and writes the site text.
-
-**Book:** [Book title], [edition], [year], [editors]. File: `books/[filename].pdf`. Abbreviation: [e.g. CWW13].
+You are collecting material from my medical textbook library that could improve WARWIKI, a specialist reference for reconstructive, functional and prosthetic urology and urogynecology, read by urologists, urogynecologists, fellows and residents. Your goal is to collect and prepare information for Claude, the editor who maintains WARWIKI. Claude makes every decision about what goes on the site, verifies sources and writes the site text. You recommend; you do not edit.
 
 ## Absolute limits
 
-- **The WARWIKI repo at `/Users/joyboy/Documents/WARWIKI/warwiki` is read-only for this task.** Do not edit, move, delete, rename, format or commit anything in it, and do not run npm, git write commands or any script from it. Reading files and running `rg`, `grep`, `cat`, `sed -n` or `ls` there is fine.
-- Write only inside the current folder (`~/Desktop/WARWIKI-textbook-mining`): the book text under `books/`, and your output under `findings/[abbrev]/`.
-- Nothing you produce is a site edit. You are recommending; you are not deciding.
+- **Do not change WARWIKI.** The repo at `/Users/joyboy/Documents/WARWIKI/warwiki` is read-only for this task. Do not edit, create, move, rename, delete or reformat any file in it. Do not run git commands that write (commit, add, checkout, reset, stash, push, pull, merge), npm, or any repo script. Reading files and running `rg`, `grep`, `cat`, `sed -n`, `ls`, `git log` and `git status` is fine.
+- **Do not change the library.** `/Users/joyboy/Documents/Medicine` is read-only. Do not move, rename, convert in place, or delete anything there.
+- **Write only inside `~/Desktop/WARWIKI-textbook-mining/`**: converted text in `text/`, findings in `findings/`, and the queue files described below.
+- **Safety check.** At the start of every session, record the output of `git -C /Users/joyboy/Documents/WARWIKI/warwiki rev-parse HEAD` and `git -C /Users/joyboy/Documents/WARWIKI/warwiki status --porcelain` in `~/Desktop/WARWIKI-textbook-mining/session-log.md`. At the end of every session, run them again and confirm that you made no changes. Changes made by someone else during the session are not your concern, but say if you see any.
 
-## Step 0: prepare the book
+## Step 1: library queue (first session only)
 
-Convert the PDF once: `pdftotext -layout books/[filename].pdf books/[abbrev].txt`. Use the page breaks (form feeds) to track page numbers. If a page has no extractable text (a scanned image), note it as unreadable; do not guess its content.
+Survey `/Users/joyboy/Documents/Medicine` and write `~/Desktop/WARWIKI-textbook-mining/library-queue.md`: a table of every book-length source worth mining, with path, title, edition or year, scope, priority and a one-line reason. Rank in this order:
 
-## Step 1: triage
+1. **High:** `Urology/Reconstructive Urology and Trauma/` (including its subfolders), `Urology/URPS/` (skip `Old Textbooks/` when a newer edition of the same book exists), `Urology/Urodynamics/`, `Urology/Neuro Urology/`, penile prosthesis and Peyronie's books in `Urology/Andrology & Infertility/` (for example Wilson's Pearls, Penile Implant Surgery), Hinman's Atlas of Urologic Surgery and Hinman's Atlas of UroSurgical Anatomy, and the reconstructive and urogynecologic procedures in `Urology/BJUI Surgical Atlas/`.
+2. **Medium:** the reconstructive, functional, female urology, trauma and adult-congenital chapters of Campbell-Walsh-Wein Urology 13th edition; laparoscopic and robotic reconstructive atlases in `Urology/Endourology & Robotics/` (reconstructive chapters only); hypospadias and adult-congenital material in `Urology/Pediatric Urology/`; flap and graft books in `Plastic Surgery/`; `Surgical Equipment/` and `Surgical Technique/`; the Recon and Urogyn folders of `Urology/AUA Update Series/`.
+3. **Low:** urogynecology, fistula and pelvic-floor chapters of the gynecology texts in `Obstetrics & Gynecology/`; bowel, stoma and abdominal-wall chapters of the general surgery texts; `Urology/UroRadiology/`.
 
-From the table of contents, write `findings/[abbrev]/00-triage.md`: a table of every chapter with number, title, page range, scope (`in`, `partial`, `out`), priority (`high`, `medium`, `low`) and the WARWIKI pages it most likely overlaps. Order in-scope, high-priority chapters first. Then create `findings/[abbrev]/progress.md` listing the queue with a checkbox per chapter.
+Skip entirely: `Anki/`, `Test Prep/`, `Residency/`, `Fellowship/` (personal files), `Stanford Robo Videos/`, board-review and clerkship books, `General Medicine/`, `Physical Therapy/`, `Anesthesia/`, `Pediatrics/`, stone and endourology books, oncology books, transplant, and single journal articles. When two editions of a book exist, use the newer one.
 
-## Step 2: for each chapter in the queue
+Then process the queue in order, one book at a time, without waiting to be asked between books.
 
-1. **Check WARWIKI first.** Find the pages covering the chapter's topics under `docs/` in the repo (`rg -il "term" /Users/joyboy/Documents/WARWIKI/warwiki/docs`). Read the relevant sections and each page's `## References` list. Note the page URL: drop `docs/`, drop the leading number from the top-level folder (`04-surgical-techniques` becomes `surgical-techniques`), drop `.mdx`, and use the frontmatter `slug:` when one is set. Also record the repo file path.
-2. **Read the chapter** and keep a finding only if it is one of these:
+## Step 2: for each book
+
+1. **Convert.** PDF: `pdftotext -layout "[path]" ~/Desktop/WARWIKI-textbook-mining/text/[abbrev].txt` (form feeds mark page breaks). EPUB: unzip to a temporary folder under `~/Desktop/WARWIKI-textbook-mining/text/` and extract the XHTML text in reading order. If pages have no text layer (scanned), OCR them with `pdftoppm` and `tesseract` only for high-priority books; otherwise list them as unreadable. Never guess the content of a page you could not read.
+2. **Triage.** Write `findings/[abbrev]/00-triage.md`: every chapter with number, title, page range, scope (`in`, `partial`, `out`), priority and the WARWIKI pages it most likely overlaps. Create `findings/[abbrev]/progress.md` with a checkbox per in-scope chapter, highest priority first.
+3. **Process each chapter** as described in Step 3, ticking `progress.md` after each.
+4. **Summarize** the book in `findings/[abbrev]/99-summary.md` (see below), mark it done in `library-queue.md`, and start the next book.
+
+## Step 3: for each chapter
+
+1. **Check WARWIKI first.** Find the pages covering the chapter's topics: `rg -il "term" /Users/joyboy/Documents/WARWIKI/warwiki/docs`. Read the relevant sections and each page's `## References` list. Record the repo path and the URL: drop `docs/`, drop the leading number from the top-level folder (`04-surgical-techniques` becomes `surgical-techniques`), drop `.mdx`, and use the frontmatter `slug:` when one is set.
+2. **Check earlier findings.** Search `~/Desktop/WARWIKI-textbook-mining/findings/` for the same point from books already processed. If it is already collected, add this book's locator and references to that finding instead of creating a new one, unless this book adds numbers, steps or a different position.
+3. **Read the chapter** and keep a finding only if it is one of these:
    - **new**: a topic, operative step, anatomical detail, device, classification, complication or decision point WARWIKI does not cover
    - **more_detail**: WARWIKI covers the topic, but the book adds numbers, thresholds, technique detail or management steps the page lacks
    - **new_evidence**: the book cites a study that supports, strengthens or qualifies something WARWIKI says, and that study is not in the page's references
    - **conflict**: the book says something different from WARWIKI
    - **new_page**: a topic substantial enough for its own page that no WARWIKI page covers
    - **figure_idea**: a schematic that would clarify anatomy, geometry or a sequence on a page without one (not a drawing of a radiograph, CT, MRI or ultrasound appearance)
-3. Skip anything WARWIKI already states adequately. If unsure, include it with `coverage: unsure`.
-4. Write `findings/[abbrev]/ch[NNN].md` in the format below, tick the chapter in `progress.md`, and move to the next chapter without waiting to be asked.
+4. Skip anything WARWIKI already states adequately. If unsure, include it with `coverage: unsure`.
+5. Write `findings/[abbrev]/ch[NNN].md` in the format below.
 
 ## Rules
 
 1. **Use only the book** for new facts. No web search, memory or other books.
-2. **Paraphrase.** The book is copyrighted. Quote at most 15 words, only when exact wording matters. Restate tables in your own structure. Do not copy the book text into findings beyond that.
+2. **Paraphrase.** The books are copyrighted. Quote at most 15 words, only when exact wording matters. Restate tables in your own structure. Do not copy book text into findings beyond that.
 3. **Never invent a citation.** List the studies the chapter cites for each finding, copied from its reference list as printed. Include a DOI only if printed. If none, write `none cited (textbook teaching)`.
 4. **Keep numbers with context:** n, follow-up, study type, population. Do not merge figures from different studies.
-5. **Flag dating:** `may_be_outdated: true` for guideline positions, FDA or device status, drug labeling and anything else likely to have changed since the edition.
+5. **Flag dating:** `may_be_outdated: true` for guideline positions, FDA or device status, drug labeling and anything else likely to have changed since the edition's year.
 6. **Label the evidence:** RCT, meta-analysis, guideline, retrospective series, technique report, or authors' experience.
-7. **No repeats:** if a later chapter restates an earlier finding, add the locator to the earlier finding's file instead of creating a new one.
+7. **Prefer quality over volume.** A chapter can legitimately yield no findings. Do not pad.
 
 ## Scope
 
@@ -76,8 +74,9 @@ Highest value: operative steps and bailouts, dissection-relevant anatomy, decisi
 ## Findings file format
 
 ```markdown
-# Chapter [N]: [title]
+# [Book abbrev] chapter [N]: [title]
 
+- Book: [title, edition, year]
 - Authors:
 - Pages read:
 - Read status: full | partial (list unreadable pages)
@@ -106,6 +105,7 @@ Up to five ids, one line each on why.
   book_refs:
     - "As printed in the chapter reference list [ch. 128 ref #N]"
   locator: "ch. 128, p. 1134, section 'Dorsal onlay'"
+  also_in: []              # other books' locators for the same point
   may_be_outdated: false
   priority: high           # high | medium | low
   proposed_title: ""       # new_page only
@@ -116,6 +116,10 @@ Up to five ids, one line each on why.
 One line per skipped topic: already on WARWIKI (name the page), out of scope, or too basic.
 ```
 
-## Step 3: book summary
+## Book summary (`99-summary.md`)
 
-When every chapter is ticked, write `findings/[abbrev]/99-summary.md`: the top 25 findings; proposed new pages with the ids that would populate them; findings grouped by WARWIKI page, highest priority first; all conflicts and possibly outdated items; all book references cited in findings, deduplicated; and chapters with partial reads.
+The top 25 findings; proposed new pages with the ids that would populate them; findings grouped by WARWIKI page, highest priority first; all conflicts and possibly outdated items; all book references cited in findings, deduplicated; and chapters with partial reads.
+
+## When you stop
+
+Before ending any session, update `progress.md` and `library-queue.md`, run the safety check, and write a short entry in `session-log.md`: books and chapters completed, finding counts by type, and where to resume.
