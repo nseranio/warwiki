@@ -6,8 +6,9 @@ Codex works through the textbook library in `/Users/joyboy/Documents/Medicine`, 
 
 1. Open Codex (full access is fine).
 2. Paste everything below the line.
-3. Whenever Codex stops, say `continue`. It resumes from its progress files.
-4. Tell Claude when it has finished a book or a batch of books. Claude checks that the WARWIKI repo is unchanged before using the findings.
+3. Codex builds the library queue, mines one pilot book (*Advanced Male Urethral and Genital Reconstructive Surgery*), and stops. Tell Claude; Claude reviews the pilot findings and gives you any corrections to pass to Codex.
+4. Once the pilot is approved, tell Codex "Pilot approved, continue the queue" (plus any corrections). Whenever it stops after that, say `continue`; it resumes from its progress files.
+5. Tell Claude when it has finished a book or a batch of books. Claude checks that the WARWIKI repo is unchanged before using the findings.
 
 ---
 
@@ -30,7 +31,13 @@ Survey `/Users/joyboy/Documents/Medicine` and write `~/Desktop/WARWIKI-textbook-
 
 Skip entirely: `Anki/`, `Test Prep/`, `Residency/`, `Fellowship/` (personal files), `Stanford Robo Videos/`, board-review and clerkship books, `General Medicine/`, `Physical Therapy/`, `Anesthesia/`, `Pediatrics/`, stone and endourology books, oncology books, transplant, and single journal articles. When two editions of a book exist, use the newer one.
 
-Then process the queue in order, one book at a time, without waiting to be asked between books.
+## Pilot: one book first, then stop
+
+Before processing the queue, run a pilot on one book only: `/Users/joyboy/Documents/Medicine/Urology/Reconstructive Urology and Trauma/Advanced Male Urethral and Genital Reconstructive Surgery (2014, Humana Press) - libgen.lc.pdf` (abbreviation `AMUGRS`). Process every in-scope chapter of that book through Steps 2 and 3, write its `99-summary.md`, run the safety check, and then **stop**. Do not start any other book.
+
+End the pilot with a short report: chapters processed, finding counts by type, anything that was hard (unreadable pages, unclear WARWIKI coverage, reference lists you could not match), and the path to the findings folder. Claude will review the pilot and may send corrections to this procedure. Continue with the rest of the queue only after I tell you the pilot is approved, and apply any corrections I pass on.
+
+After approval, process the queue in order, one book at a time, without waiting to be asked between books.
 
 ## Step 2: for each book
 
