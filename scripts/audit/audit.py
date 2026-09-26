@@ -86,7 +86,8 @@ def load(p, default):
 
 
 def build_queue():
-    pages = sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'docs').rglob('*.mdx'))
+    pages = sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'docs').rglob('*.mdx')
+                   if 'docs/07-roots/surgeons/' not in str(p))  # surgeon profiles are out of the audit (user decision, Sept 26)
     missing = [p for p in TIER1 if p not in pages]
     if missing:
         raise SystemExit('Tier-1 paths not found:\n' + '\n'.join(missing))
