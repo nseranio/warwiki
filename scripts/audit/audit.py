@@ -11,6 +11,7 @@
 Status lives in reports/audit-v2/status.json. Only `checked` and `not-clinical` count as done.
 """
 import datetime
+import fcntl
 import hashlib
 import json
 import pathlib
@@ -145,10 +146,13 @@ def cmd_record(path, status, note):
     f = ROOT / path
     if not f.exists():
         raise SystemExit(f'no such page: {path}')
-    s = load(STATUS, {})
-    s[path] = {'status': status, 'date': str(datetime.date.today()),
-               'sha256': hashlib.sha256(f.read_bytes()).hexdigest()[:16], 'note': note}
-    STATUS.write_text(json.dumps(dict(sorted(s.items())), indent=1) + '\n')
+    # Lock so parallel auditors cannot overwrite each other's records.
+    with open(str(STATUS) + '.lock', 'w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        s = load(STATUS, {})
+        s[path] = {'status': status, 'date': str(datetime.date.today()),
+                   'sha256': hashlib.sha256(f.read_bytes()).hexdigest()[:16], 'note': note}
+        STATUS.write_text(json.dumps(dict(sorted(s.items())), indent=1) + '\n')
     print(f'recorded {status}: {path}')
 
 
