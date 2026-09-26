@@ -22,6 +22,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-26 (session 3, batch 4) — Audit v2: tier 2 complete; steroid framing; antispasmodics and dantrolene pages built
+
+- **Built and checked (previously placeholders):** [Antispasmodics](docs/01-foundations/pharmacology/neuropathic-pelvic-pain/antispasmodics.mdx) (smooth-muscle antispasmodics for bladder, stent and catheter-related spasm; skeletal-muscle relaxants cross-linked; 28 references) and [Dantrolene](docs/01-foundations/pharmacology/voiding-outlet/dantrolene.mdx) (historical DSD evidence, hepatotoxicity boxed warning and label titration from DailyMed; 13 references). Both were written from primary sources; the supplied summaries were used only as leads. The [Neuropathic Pelvic Pain](docs/01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx) and [Voiding Outlet](docs/01-foundations/pharmacology/voiding-outlet/index.mdx) hubs were re-checked against them.
+- **Steroids framing:** [Steroids](docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx) keeps ESE/Endocrine Society Table 8 as the structural default and presents ACR/AAHKS as the representative of a broader continue-usual-dose approach, with a practical default for chronic prednisone under 10 mg/day and the disagreement between frameworks stated plainly; [Immunosuppression](docs/01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx) row aligned.
+- **Corrections to the supplied leads:** Rogalski 2022 vaginal diazepam RCT and Dash 2012 drotaverine trial not found in PubMed and dropped; the boxed abrupt-withdrawal warning applies to intrathecal, not oral, baclofen; the 28% dantrolene case fatality belongs to Utili's series (Chan 1990 reports 27 deaths in 122 cases); a review's summary table mis-stated Hackler 1980 (8 of 15 responded, not 4 patients).
+- **Tier 2 is now complete** (155 of 155 recorded). Open: single-dose hydrocortisone 100 mg at induction has no located source and is labeled a common compromise; AUA/SUFU 2021 NLUTD, AUA IC/BPS 2022 and EAU chronic pelvic pain full texts not in `sources-local` (see `reports/audit-v2/open-items.md`).
+
+---
+
 ## 2026-09-26 (session 3, batch 3) — Audit v2 tier 3: preoperative assessment; perioperative-care section complete
 
 - **Checked:** [Diabetes](docs/01-foundations/perioperative-care/preoperative-assessment/diabetes.mdx), [Frailty](docs/01-foundations/perioperative-care/preoperative-assessment/frailty.mdx), [Immunosuppression](docs/01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx), [Risk Calculators](docs/01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx), [Steroids](docs/01-foundations/perioperative-care/preoperative-assessment/steroids.mdx) and the [Perioperative Care hub](docs/01-foundations/perioperative-care/index.mdx).

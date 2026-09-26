@@ -232,17 +232,9 @@ Status on September 25, 2026: the 26 AUGS documents from the September 24 email 
 - status: checked (2026-09-24)
 - open: Not checkable: none; child botulinum-toxin page label figures (400 U cumulative, pediatric dosing) left for its own audit.
 
-## 01-foundations/pharmacology/neuropathic-pelvic-pain/antispasmodics.mdx
-- status: partial (2026-09-24)
-- open: Resume: needs authored build-out (hyoscyamine, dicyclomine, baclofen oral/intrathecal boxed abrupt-withdrawal, tizanidine, cyclobenzaprine, methocarbamol, vaginal diazepam RCT Rogalski 2022 / Cochrane, benzodiazepine boxed warning, Beers/anticholinergic burden, AUA IC/BPS 2022, EAU CPP) with DailyMed and PubMed verification. Not checked: all agents/doses/labels/guideline positions.
-
 ## 01-foundations/pharmacology/neuropathic-pelvic-pain/gabapentinoids.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: Franco 2019 Cochrane pregabalin-specific GRADE wording (full text inaccessible); ACOG PB218 evidence level (paywalled); Raisi 2025 PE umbrella claim on mechanism; Goodman quote; EAU CPP guideline not consulted.
-
-## 01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx
-- status: partial (2026-09-24)
-- open: Not checkable: hub statements on antispasmodics (diazepam PV/cyclobenzaprine/baclofen, levator ani use) unverified, child page is an unreviewed placeholder; AUA Grade B not in sources-local (IC/BPS guideline text absent); EU duloxetine labeling and GaPP2 rest on child pages (gabapentinoids under separate audit). Resume: re-record checked once antispasmodics is built and audited.
 
 ## 01-foundations/pharmacology/neuropathic-pelvic-pain/local-anesthetics.mdx
 - status: checked (2026-09-24)
@@ -371,14 +363,6 @@ Status on September 25, 2026: the 26 AUGS documents from the September 24 email 
 ## 01-foundations/pharmacology/voiding-outlet/cholinergic-agonists.mdx
 - status: checked (2026-09-24)
 - open: Not checkable: EAU male LUTS 2026 UAB statement (ref15; not in sources-local), animal/pharmacology refs 5-8, 11-14 (mechanism only, abstracts not read), SC/oral PK figures and distigmine 'Japan/Europe use' (no cited source).
-
-## 01-foundations/pharmacology/voiding-outlet/dantrolene.mdx
-- status: partial (2026-09-24)
-- open: Resume: build from sources when the user requests. Items to verify then: DailyMed dantrolene (Dantrium) label for oral dosing and hepatotoxicity boxed warning/LFT monitoring; contraindications; NLUTD/DSD evidence (small trials; PubMed search); EAU Neuro-Urology 2026 (sources-local) and AUA/SUFU NLUTD positions; malignant hyperthermia context (IV dosing).
-
-## 01-foundations/pharmacology/voiding-outlet/index.mdx
-- status: partial (2026-09-24)
-- open: Resume: re-check dantrolene blurb once dantrolene.mdx is built.
 
 ## 01-foundations/pharmacology/voiding-outlet/skeletal-muscle-relaxants.mdx
 - status: checked (2026-09-24)
@@ -892,18 +876,30 @@ Status on September 25, 2026: the 26 AUGS documents from the September 24 email 
 - status: checked (2026-09-25)
 - open: Not checkable: AFP 2024 Gauer tables (setting table, NPH 0.1 U/kg per 10 mg prednisone; AFP tables not retrievable, schema also in Clore 2009 unverified); Endocrine Society 2022 basal-bolus statement (abstract-level); ACR contrast manual text (not fetched). No escalation; nutrition and CV pages consistent on SGLT2 3/4 d and ADA GLP-1 framing. Word count restoration check: baseline vs now, added content only, nothing removed of value.
 
-## 01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx
-- status: checked (2026-09-25)
-- open: Not checkable: ACR JAKi 3-day and glucocorticoid wording verified only via secondary summaries; ECCO 2024/2026 biologic statements via secondary summaries (full text not retrieved); no tacrolimus/mycophenolate-specific numbers on page. Currency search returned nothing new. Word count above baseline; no restoration needed.
-
 ## 01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx
 - status: checked (2026-09-25)
 - open: Not checkable: ARISCAT 837-patient subset and 6.3% development figure (removed the 837 figure; band percentages 1.6/13.3/42.1 confirmed by secondary source only); ARISCAT exclusion of outpatients/transplant; ASA 2025 advisory low-certainty CFS statement (no abstract); Fifth Consensus full text (paywalled, verified via secondary summaries); Edmonton 9 domains/11 items. Not covered on page: STOP-BANG, POSSUM, ASA class, urology-specific calculators.
 
-## 01-foundations/perioperative-care/preoperative-assessment/steroids.mdx
-- status: checked (2026-09-25)
-- open: Not checkable: ACR/AAHKS 2022 glucocorticoid recommendation text (PMC blocked; confirmed via abstract + secondary summary); Liu 2017 Anesthesiology (no abstract); Woodcock dosing table (abstract only); vitamin A reversal not on page, not added. Open conflict: ESE 2024 stress dosing vs ACR/AAHKS continue-current-dose (arthroplasty).
-
 ## 01-foundations/perioperative-care/index.mdx
 - status: checked (2026-09-25)
 - open: Not checkable: no numeric claims on hub; child-page claims audited separately.
+
+## 01-foundations/perioperative-care/preoperative-assessment/immunosuppression.mdx
+- status: checked (2026-09-25)
+- open: Not checkable: ACR JAKi 3-day and glucocorticoid wording verified only via secondary summaries; ECCO 2024/2026 biologic statements via secondary summaries (full text not retrieved); no tacrolimus/mycophenolate-specific numbers on page. Currency search returned nothing new. Word count above baseline; no restoration needed.
+
+## 01-foundations/perioperative-care/preoperative-assessment/steroids.mdx
+- status: checked (2026-09-26)
+- open: Not checkable: ACR/AAHKS 2017 wording directly (relied on 2022 statement that it is unchanged); Woodcock dosing table (abstract only); Liu 2017 Anesthesiology; source for the single-bolus compromise; Coccolini's cited primary refs 144-149 not opened. Open conflict retained plainly: ESE 2024 Table 8 vs continue-current-dose.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/antispasmodics.mdx
+- status: checked (2026-09-26)
+- open: Not checkable: AUA IC/BPS 2022 and EAU CPP wording (no local text; not cited); B&O product label/scheduling; hyoscine and drotaverine US status; flavoxate meta-analysis (Sweeney 2016) not used; mirabegron BP wording not cited (see beta3 page); stone-expulsion effect of antispasmodics not addressed.
+
+## 01-foundations/pharmacology/neuropathic-pelvic-pain/index.mdx
+- status: checked (2026-09-26)
+- open: Not checkable: AUA 2022 intravesical lidocaine Grade B (IC/BPS guideline text absent from sources-local); EU duloxetine labeling and GaPP2 rest on child pages (gabapentinoids under separate audit).
+
+## 01-foundations/pharmacology/voiding-outlet/dantrolene.mdx
+- status: checked (2026-09-26)
+- open: Not checkable: AUA/SUFU 2021 NLUTD (no full text; not cited); Murdock abstract has no numbers; IV MH dosing left to Anesthesia page; Tousignant's guideline claim is the authors' statement, unverified against CUA/AUA texts.
