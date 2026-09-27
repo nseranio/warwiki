@@ -3,9 +3,9 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import { head, put, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import OpenAI from 'openai';
 
-// Accepted OpenAI TTS voices. Default to 'nova' (professional female — clear for clinical content).
+// Accepted OpenAI TTS voices. Default to 'shimmer' (soft female — clear for clinical content).
 const ALLOWED_VOICES = new Set(['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']);
-const DEFAULT_VOICE = 'nova';
+const DEFAULT_VOICE = 'shimmer';
 
 // OpenAI TTS per-request input limit
 const MAX_INPUT_CHARS = 4096;

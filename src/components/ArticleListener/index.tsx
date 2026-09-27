@@ -26,8 +26,8 @@ type Voice = 'alloy' | 'echo' | 'fable' | 'onyx' | 'nova' | 'shimmer';
 type Model = 'tts-1' | 'tts-1-hd';
 
 const VOICES: { id: Voice; label: string; description: string }[] = [
-  { id: 'nova', label: 'Nova', description: 'Professional female — default' },
-  { id: 'shimmer', label: 'Shimmer', description: 'Soft female' },
+  { id: 'shimmer', label: 'Shimmer', description: 'Soft female — default' },
+  { id: 'nova', label: 'Nova', description: 'Professional female' },
   { id: 'alloy', label: 'Alloy', description: 'Neutral' },
   { id: 'echo', label: 'Echo', description: 'Male, measured' },
   { id: 'fable', label: 'Fable', description: 'British male' },
@@ -238,7 +238,7 @@ export default function ArticleListener(): React.ReactElement | null {
   const [state, setState] = useState<'idle' | 'loading' | 'playing' | 'paused' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
   const [rate, setRate] = useState(1.0);
-  const [voice, setVoice] = useState<Voice>('nova');
+  const [voice, setVoice] = useState<Voice>('shimmer');
   const [model, setModel] = useState<Model>('tts-1');
   const [usingFallback, setUsingFallback] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
