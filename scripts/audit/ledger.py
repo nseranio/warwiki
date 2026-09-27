@@ -156,7 +156,7 @@ SUPPLIED = [
     ("AMS 700/Tactra IFU/ORM", r"AMS.?700|Tactra|Tenacio", ["ams700", "ams-700", "tactra", "ams700"]),
     ("Rezum IFU", r"Rezum", ["rezum"]),
     ("TRAVERSE (NEJM 2023)", r"TRAVERSE", ["nejmoa2215025"]),
-    ("MASTER 24-month abstract", r"MASTER.{0,40}24", ["the_24-mo"]),
+    ("MASTER 24-month abstract", r"(?-i:\bMASTER\b).{0,40}24", ["the_24-mo"]),
     ("Erickson LSE 2020", r"Erickson|LSE (?:classification|staging)", ["erickson"]),
     ("Larson 2013 (Michigan four-wall)", r"Larson", ["nihms-521158"]),
     ("Haylen 2011 IUGA/ICS", r"Haylen|IUGA.{0,5}ICS.{0,20}(?:terminology|complication)", ["s00192-021-04742-w"]),
@@ -179,7 +179,7 @@ WAIT_SRC = [
     ("Laor 1995 (Fournier severity index)", r"Laor|FGSI|Fournier.{0,30}(?:score|index|sodium|bicarb)"),
     ("Biardeau 2016 ICS AUS consensus", r"Biardeau|ICS.{0,20}AUS"),
     ("AMS 800 operating room manual 92116967", r"92116967|AMS.?800.{0,30}(?:fill|tandem|ORM|operating room)"),
-    ("Coloplast Titan/Titan Touch/Genesis IFUs", r"Coloplast|Titan|Genesis"),
+    ("Coloplast Titan/Titan Touch/Genesis IFUs", r"Coloplast|(?-i:\bTitan\b|\bGenesis\b)"),
     ("ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823)", r"\bACOG\b"),
     ("ASCRS 2020 left-sided diverticulitis guideline", r"ASCRS.{0,30}diverticulitis|left-sided diverticulitis"),
     ("Revi surgical technique guide", r"Revi.{0,30}(?:technique|surgical)"),
@@ -188,9 +188,9 @@ WAIT_SRC = [
     ("Full ASRA LAST advisory (Neal 2018)", r"Neal.{0,20}2018|LAST advisory|30.minute"),
     ("US InterStim/Revi/eCoin MRI manuals", r"MRI (?:manual|guideline|condition)"),
     ("FDA SSEDs (Optilume, ProACT, Altaviva)", r"SSED|Altaviva"),
-    ("MASTER 12-month paper (Eur Urol 2021, open access)", r"MASTER"),
-    ("EVA trial", r"\bEVA\b"),
-    ("ASPIRe / OPTIMAL / E-OPTIMAL", r"ASPIRe|OPTIMAL"),
+    ("MASTER 12-month paper (Eur Urol 2021, open access)", r"(?-i:\bMASTER\b)"),
+    ("EVA trial", r"(?-i:\bEVA\b)"),
+    ("ASPIRe / OPTIMAL / E-OPTIMAL", r"(?-i:ASPIRe|OPTIMAL)"),
     ("AUS series (Cotte 2023, Phe 2017, Peyronnet 2019)", r"Cotte|Ph[eé]\b|Peyronnet"),
     ("Original urethroplasty technique papers", r"Jordan 2007|Morey 2001|Wee and Joseph|Yii|Niranjan|Blandy 1968|Asopa|Kulkarni 2009|Sa/Xu"),
     ("Trimix efficacy series", r"trimix"),
@@ -222,7 +222,7 @@ DECIDE = [
     ("A(a)", r"PTNS.{0,30}(?:label|US|fecal)|Urgent PC.{0,30}fecal"),
     ("A(b)", r"undated|no year.{0,30}diverticular"),
     (35, r"US Axonics|Axonics.{0,20}(?:US|Canadian)"),
-    ("A(e)", r"MASTER.{0,40}(?:SAE|serious adverse)"),
+    ("A(e)", r"(?-i:\bMASTER\b).{0,40}(?:SAE|serious adverse)"),
     (27, r"evidenceNote"),
 ]
 DECIDE = [(n, re.compile(rx, re.I)) for n, rx in DECIDE]
@@ -249,7 +249,7 @@ def files_for(subs):
     return out
 
 
-def main():
+def build_rows():
     d = json.load(open(AUD / "status.json"))
     rows, settled = [], []
     for page, v in d.items():
@@ -290,6 +290,11 @@ def main():
                 else:
                     disp = "waiting-on-source"
             rows.append(dict(sev=sev, disp=disp, src=src, page=short, claim=c))
+    return rows, settled
+
+
+def main():
+    rows, settled = build_rows()
     write(rows, settled)
     cnt = collections.Counter(r["sev"] for r in rows)
     dc = collections.Counter(r["disp"] for r in rows)
@@ -329,7 +334,7 @@ def write(rows, settled):
                 txt = "; ".join(c[:110] for c in cl[:3]) + (f" (+{len(cl)-3} more)" if len(cl) > 3 else "")
                 L.append(f"- `{p}`: {txt}")
             L.append("")
-    (AUD / "ledger.md").write_text("\n".join(L))
+    (AUD / "ledger.md").write_text("\n".join(x.rstrip() for x in L).rstrip() + "\n")
 
 
 if __name__ == "__main__":
