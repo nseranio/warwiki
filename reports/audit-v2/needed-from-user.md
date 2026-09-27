@@ -4,6 +4,8 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 ## A. Decisions (answer in one line each)
 
+**Answered September 26 (applied and pushed):** 1 keep both; 2 softened to "not recommended, outcomes unknown"; 3 keep "may be considered"; 4 coudé page now leads with the EAU gentle-attempt-by-experienced-staff position, ACS beside it; 5 TRAVERSE PE rating changed to "Low to Moderate"; 6 transfeminine breast screening aligned to Endocrine Society rec 4.5 and WPATH 15.6; 7 reimplantation page now carries the 2026 EAU text only (2023 sentence and its reference removed); 8 RCOG and IUGA OASIS sections merged; 9 B12 caveat added to the B12 lab page, urethrectomy frozen-section lines consolidated; 10 no hierarchy (pages already follow the statements). Items 11 to 26 remain open. Campbell-Walsh-Wein 13th ed and Wieder's Pocket Guide are in the general urology folder (remove from the not-found list; not yet indexed).
+
 **Guideline wording and page stance**
 1. **AUS washout with immediate replacement.** The AUS procedure page says it "has not been shown reliable" (guideline line); Frazier 2024 is more permissive for selected stable patients. Both are on the page, attributed. Keep both, or pick one stance?
 2. **Peyronie's, surgery in the active phase.** `peyronies.mdx` and `peyronies-disease/index.mdx` say "contraindicated". The AUA says only that outcomes are unknown. Soften to "not recommended, outcomes unknown"?
