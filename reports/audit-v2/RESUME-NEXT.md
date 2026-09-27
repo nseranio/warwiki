@@ -18,14 +18,10 @@
 5. **Top complications** -- usually already on the page; check it's there, don't duplicate.
 Cite real, checkable sources only (device IFUs/ORMs in `sources-local/dl-2026-09-26/`, guidelines already local, or a fresh PubMed/Crossref check); when nothing sourceable exists for a specific detail, say so or omit it. Most pages already have substantial technique/outcomes detail -- read the full page before assuming a gap; several batches found only a VTE cross-link was genuinely missing.
 
-**Done (25 of ~45):** AUS placement; anterior colporrhaphy, posterior colporrhaphy, USLS, SSLF, colpocleisis; TURP, HoLEP, GreenLight PVP, Aquablation, Rezum, simple prostatectomy; male urethral slings, ProACT, DVIU, penile implants; intradetrusor Botox, percutaneous nerve evaluation (PTNS/SNM test stim), sacral neuromodulation; tunica plication, plaque incision/grafting, CCH/Xiaflex (index.mdx); transvaginal VVF (Sims-Simon), abdominal VVF (O'Conor), RUF repair (transperineal).
+**Done (37 of ~45):** AUS placement; anterior colporrhaphy, posterior colporrhaphy, USLS, SSLF, colpocleisis; TURP, HoLEP, GreenLight PVP, Aquablation, Rezum, simple prostatectomy; male urethral slings, ProACT, DVIU, penile implants; intradetrusor Botox, percutaneous nerve evaluation (PTNS/SNM test stim), sacral neuromodulation; tunica plication, plaque incision/grafting, CCH/Xiaflex (index.mdx); transvaginal VVF (Sims-Simon), abdominal VVF (O'Conor), RUF repair (transperineal); mesh excision (`mesh-complications.mdx`), sling release (`urethrolysis.mdx`), urethral diverticulectomy (`female/urethral-diverticulum-repair.mdx`); TUIBNC, primary reanastomosis, BMG endourethroplasty, salvage prostatectomy, TUITMR (all `04ab-bladder-neck-reconstruction/`); pyeloplasty, balloon dilation (ureteral stenting), ureteral reimplantation, ileal ureter (all `04d-upper-tract-reconstruction/`).
 
-**Remaining (~20), by group:**
-- Mesh: mesh excision, sling release (`docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx` or the dedicated excision/release pages if they exist -- check first)
-- Diverticulum: urethral diverticulectomy, diverticulum-associated prolapse repair
+**Remaining (~14), by group:**
 - IC/BPS: hydrodistension, PFPT-related procedure (check `docs/03-clinical-conditions` / IC pages for a procedure-specific page)
-- BNC/posterior stricture: endoscopic BNC, reconstructive BNC, endoscopic BMG, salvage procedure, TUITMR (`docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/`)
-- Upper tract: pyeloplasty, ureteral stenting, ureteral reimplant, ureteral substitution (`docs/04-surgical-techniques/04d-upper-tract-reconstruction/`)
 - Diversion: bladder augmentation/catheterizable channel, ileal conduit (`docs/04-surgical-techniques/04b-bladder-reconstruction/`, `04c-urinary-diversion/`)
 - NGB: bladder neck closure, suprapubic tube placement
 - Retention: difficult catheter placement
