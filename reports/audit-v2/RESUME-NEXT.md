@@ -8,7 +8,7 @@
 
 **Next phase (September 26):** the audit-to-completion plan, including the Sonnet 5 execution table and the first batch, is [NEXT-PHASE-PLAN.md](NEXT-PHASE-PLAN.md). Work from it; the steps below remain the detail for Stage A.
 
-## Perioperative essentials (plan item 7, in progress)
+## Perioperative essentials (plan item 7, complete)
 
 **Pattern**, piloted and approved on AUS (`git show e90da1c9`), then run in two more batches (`git show 9e1c4285`, `git show 06f5cf28`): for a procedure page missing setup/postop or complications detail, add (only where a real source exists; hedge or skip otherwise):
 1. **Positioning and room setup** -- from the device IFU/operating room manual if a device is implanted, else EAU/AUA guideline or PubMed positioning literature.
@@ -18,20 +18,11 @@
 5. **Top complications** -- usually already on the page; check it's there, don't duplicate.
 Cite real, checkable sources only (device IFUs/ORMs in `sources-local/dl-2026-09-26/`, guidelines already local, or a fresh PubMed/Crossref check); when nothing sourceable exists for a specific detail, say so or omit it. Most pages already have substantial technique/outcomes detail -- read the full page before assuming a gap; several batches found only a VTE cross-link was genuinely missing.
 
-**Done (37 of ~45):** AUS placement; anterior colporrhaphy, posterior colporrhaphy, USLS, SSLF, colpocleisis; TURP, HoLEP, GreenLight PVP, Aquablation, Rezum, simple prostatectomy; male urethral slings, ProACT, DVIU, penile implants; intradetrusor Botox, percutaneous nerve evaluation (PTNS/SNM test stim), sacral neuromodulation; tunica plication, plaque incision/grafting, CCH/Xiaflex (index.mdx); transvaginal VVF (Sims-Simon), abdominal VVF (O'Conor), RUF repair (transperineal); mesh excision (`mesh-complications.mdx`), sling release (`urethrolysis.mdx`), urethral diverticulectomy (`female/urethral-diverticulum-repair.mdx`); TUIBNC, primary reanastomosis, BMG endourethroplasty, salvage prostatectomy, TUITMR (all `04ab-bladder-neck-reconstruction/`); pyeloplasty, balloon dilation (ureteral stenting), ureteral reimplantation, ileal ureter (all `04d-upper-tract-reconstruction/`).
+**Done (46 pages):** AUS placement; anterior colporrhaphy, posterior colporrhaphy, USLS, SSLF, colpocleisis; TURP, HoLEP, GreenLight PVP, Aquablation, Rezum, simple prostatectomy; male urethral slings, ProACT, DVIU, penile implants; intradetrusor Botox, percutaneous nerve evaluation (PTNS/SNM test stim), sacral neuromodulation; tunica plication, plaque incision/grafting, CCH/Xiaflex (index.mdx); transvaginal VVF (Sims-Simon), abdominal VVF (O'Conor), RUF repair (transperineal); mesh excision (`mesh-complications.mdx`), sling release (`urethrolysis.mdx`), urethral diverticulectomy (`female/urethral-diverticulum-repair.mdx`); TUIBNC, primary reanastomosis, BMG endourethroplasty, salvage prostatectomy, TUITMR (all `04ab-bladder-neck-reconstruction/`); pyeloplasty, balloon dilation (ureteral stenting), ureteral reimplantation, ileal ureter (all `04d-upper-tract-reconstruction/`); bladder augmentation, catheterizable channels, ileal conduit (VTE cites AUA/ASCO/SUO 2024 MIBC Statement 16); IC/BPS hydrodistension section (`03h-pelvic-pain/ic-pbs.mdx`); acute urinary retention (difficult catheterization + clot retention/evacuation, one page covering both); Fournier's gangrene, penile fracture, ureteral trauma, genital/scrotal trauma (surgical exploration).
 
-**Remaining (~14), by group:**
-- IC/BPS: hydrodistension, PFPT-related procedure (check `docs/03-clinical-conditions` / IC pages for a procedure-specific page)
-- Diversion: bladder augmentation/catheterizable channel, ileal conduit (`docs/04-surgical-techniques/04b-bladder-reconstruction/`, `04c-urinary-diversion/`)
-- NGB: bladder neck closure, suprapubic tube placement
-- Retention: difficult catheter placement
-- Hematuria: clot evacuation
-- Scrotal: hydrocele/varicocele repair, scrotal exploration
-- Vasectomy
-- Penile trauma group: Fournier's debridement, iatrogenic ureteral injury repair, penile fracture repair
+**Not applicable -- no dedicated WARWIKI page exists (checked, not skipped):** vasectomy and elective hydrocele/varicocele repair. These are general-urology procedures without a reconstructive/functional/urogyn framing in this wiki's scope (see CLAUDE.md Non-Negotiables #1); no title, section or stub page was found by grep across `docs/`. If the user wants these added as new pages, that is a separate decision from this pass, which only adds detail to existing procedure pages.
 
-**Session-start prompt for the next batch:**
-"Read reports/audit-v2/RESUME-NEXT.md's 'Perioperative essentials' section (plan item 7) and `git show e90da1c9` for the pattern. Find the exact file paths for the next 2-3 groups on the remaining list (find docs -iname or grep for the procedure name if the path isn't obvious). Dispatch 2-3 warwiki-auditor agents in parallel, each covering one group of 3-5 pages, with the same instructions used in the prior batches: check existing coverage first, add only genuine gaps, cite real sources (local device IFUs/guidelines in sources-local/dl-2026-09-26/ first, then PubMed), cross-link VTE rather than duplicating, hedge/omit rather than invent. After all agents report, run npm run lint, npm run typecheck and npm run build, fix any issues, commit with a descriptive message, push to main, and update this section's Done/Remaining lists. Stop after one batch of groups (roughly 8-12 pages) and report counts."
+Plan item 7 is complete. Batches, in order: pilot `e90da1c9` (AUS); `9e1c4285`, `06f5cf28` (POP/BPH/prosthetics/OAB/Peyronie's/fistula); `3cc31c2f` (mesh/diverticulum, BNC/posterior stricture, upper tract); `595d75a5` (diversion, IC/BPS, retention/hematuria, trauma).
 
 ## Ledger and sweeps (September 26, later)## Ledger and sweeps (September 26, later)
 [ledger.md](ledger.md) replaces open-items.md and sources-needed.md; regenerate with `python3 scripts/audit/ledger.py` after each batch (severity is keyword triage; counts move as notes change). Tools added in `scripts/audit/`: `openfda.py` (current FDA labels to `sources-local/openfda/`, gitignored), `refcheck.py` (DOI check with cache; report `reference-check.md`), `consistency.py` (`consistency.md`), `oe_prompts.py` (`openevidence-prompts.md`: 136 batches of S1/S2 named-source claims for the user to paste into OpenEvidence).
