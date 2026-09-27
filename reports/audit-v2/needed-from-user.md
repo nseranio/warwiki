@@ -25,6 +25,23 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 14. **Optilume.** (a) The Basic IFU (1151-001 Rev C) contradicts itself ("ureteral sections" in the description, urethral strictures in the indication). I followed the indication and cited it as the uncoated pre-dilation catheter. Confirm. (b) Is the FDA-posted Optilume BPH label the same revision as your Urotronic PDF (1124-004 Rev A)?
 15. **Manufacturer data.** (a) AMS 800 device page: add the manufacturer's prospective study (85 men, 79.5% two-year revision-free) and registry (24,257 implants; 87.6% with InhibiZone vs 79.4% without) numbers? I left them out as manufacturer data. (b) AMS 700: keep the "data on file" length-expansion and InhibiZone elution claims, labeled as marketing?
 16. **Shared status notes.** The EAU sexual-and-reproductive-health agent may have overwritten status notes that other agents wrote after the last commit on shared pages (intralesional-corticosteroids, platelet-rich-plasma, graft pages, penis-anatomy, testicles-scrotum). Have those re-checked next session?
+**Answered later on September 26 (applied):** 11 ASRA date now January 29, 2025; 12 NLUTD Diagnosis and Evaluation paper added; 13 accepted; 14a accepted; 14b dropped (cite IFU 1124-004 Rev A); 15a no manufacturer AMS 800 data; 15b marketing data removed from AMS 700 pages; 16 status notes re-checked (all accurate); 19 transfer age now "ideally 18 to 21" (2011 AAP/AAFP/ACP text; 2018 full text unreadable); 21 Carter-Trost stays removed (no real citation); 22 three evidenceNotes reworded. MASTER 12-month figures: undecided, pages unchanged.
+
+**New sources supplied and checked September 26 (evening):** AUA/ASCO/SUO MIBC 2024, AUA antimicrobial best practice statement 2019/2020, IDSA asymptomatic bacteriuria 2019, EAU 2026 Non-Neurogenic Male LUTS and Chronic Pelvic Pain, ACS GU injury guidelines 2025, Haylen 2011 IUGA/ICS complications, AHA/ACC 2024 perioperative, ESE/Endocrine Society 2024 glucocorticoid, WHO 2025 FGM, ASRA LAST checklist, Axonics MRI guidelines and Model 5101/4101 implant manuals (Canadian editions), eCoin patient manual.
+
+**New open decisions (answer in one line each):**
+27. About 47 other pages have audit-style `evidenceNote` wording; clean them the same way?
+28. Remove Spectra, Genesis and TUBE sell-sheet content on `implant-models.mdx` (marketing-data rule)?
+29. `steroids.mdx`: keep ESE Table 8 default plus the lower-intensity alternative side by side, or take one stance?
+30. Female urethrectomy without a neobladder: AUA says perform it; EAU is looser. Pages cite both. Keep both (recommended)?
+31. Add MIBC-based metabolic follow-up to `mainz-pouch-ii.mdx` (recommended)?
+32. `genital-scrotal-trauma.mdx` abuse assessment: ACS favors exam under anesthesia; the forensic source prefers a noninstrumented external exam. Which leads (recommended: ACS)?
+33. Pentosan polysulfate: EAU strongly recommends; CUA 2025 conditionally against; AUA counsels on retinal risk. Pages state the difference; want a stronger position?
+34. GreenLight 80 W: EAU strongly recommends; AUA judged 80 W less effective than 120/180 W. Both stated; choose?
+35. US Axonics implant manuals wanted, or are the Canadian editions enough?
+
+**Applied by the agents but still to do:** VTE prophylaxis Statement 16 (MIBC, strong, up to four weeks) on `perioperative-eras/vte-prophylaxis.mdx`.
+
 **Older open items (from the earlier handoff)**
 18. Fournier severity index cutoffs versus Laor 1995 (source needed: see B).
 19. Transitional urology transfer age (changed to 18 to 22 from a secondary summary of White and Cooley 2018): confirm from the primary text.
@@ -47,14 +64,14 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 **Guidelines and consensus (highest value first)**
 1. AUA/SUFU Neurogenic LUTD 2024 amendment text (the supplied 2021 file has none).
-2. AUA/ASCO/SUO Muscle-Invasive Bladder Cancer 2024 full text (statements 13 to 14, 31 to 32; urethrectomy in women).
-3. IUGA/ICS complications classification (Haylen 2011) and the 2025 AUGS-IUGA update (the file `s00192-024-05923-z` is the bladder pain report, not this); it would close the C/T/S code table on `mesh-complications.mdx`.
+2. (Supplied September 26 evening: AUA/ASCO/SUO MIBC 2024.)
+3. The 2025 AUGS-IUGA complications update (Haylen 2011 now supplied and the C/T/S table closed).
 4. ACOG documents: Practice Bulletins 214 (prolapse), 213 (sexual dysfunction), 155 (urinary incontinence), 210 (fecal incontinence), 198 (obstetric lacerations), 218 (chronic pelvic pain); Committee Opinions 694 (mesh complications), 795 (cosmetic genital surgery), 823 (transgender care).
-5. EAU 2026: Male LUTS/BPH, Chronic Pelvic Pain; ACS Best Practices for Genitourinary Injury (2025).
+5. (Supplied: EAU 2026 Male LUTS, Chronic Pelvic Pain, ACS GU Injury 2025.)
 6. ASCRS guidelines other than the two supplied: Constipation (2024), Hemorrhoids (2024), Ostomy (2022), Diverticulitis, Crohn's, Rectal Prolapse.
-7. AUA/SUFU/AUGS documents not yet supplied: AUA antimicrobial best-practice statement (implant infection regimen), AUA VUR guideline.
-8. Perioperative: AHA/ACC 2024, ADA Standards 2026, ESE 2024 glucocorticoid guideline (Table 8), IDSA 2019 asymptomatic bacteriuria, NICE (NG112, NG239), WHO 2025 female genital mutilation guideline.
-9. ASRA local anesthetic systemic toxicity advisory (the 30-minute monitoring claim on `nerve-blocks.mdx`).
+7. AUA VUR guideline and other AUA/SUFU/AUGS documents not yet supplied.
+8. Perioperative: ADA Standards 2026, NICE (NG112, NG239). (AHA/ACC 2024, ESE 2024, IDSA 2019, WHO 2025 supplied.)
+9. Full ASRA LAST advisory text (the 30-minute monitoring claim on `nerve-blocks.mdx`; the one-page checklist does not settle it).
 
 **Papers (full text)**
 1. Biardeau 2015 ICS AUS Consensus (*Neurourol Urodyn* 2016;35 Suppl 2:S8-24).
