@@ -8,6 +8,9 @@
 
 **Next phase (September 26):** the audit-to-completion plan, including the Sonnet 5 execution table and the first batch, is [NEXT-PHASE-PLAN.md](NEXT-PHASE-PLAN.md). Work from it; the steps below remain the detail for Stage A.
 
+## Ledger (rebuilt September 26)
+[ledger.md](ledger.md) replaces open-items.md and sources-needed.md. Regenerate with `python3 scripts/audit/ledger.py` after each batch. Counts: 3,597 open claims on about 870 pages (S1 111, S2 550, S3 379, S4 2,493, S5 64); dispositions: 3,425 waiting-on-source, 7 waiting-on-decision, 165 accepted-limitation; 112 claims dropped as settled by the September 26 sources. Severity is keyword-based triage. Next: item 6 (owed items, including MASTER 12-month from the open-access paper).
+
 ## Next steps, in order
 1. **Read [needed-from-user.md](needed-from-user.md)** and ask the user for the open decisions (numbers 27 to 35 and the "still open from this round" list a to f). Recommendations are written next to each; most are one-line applications.
 2. **Small items owed:** apply AUA MIBC Statement 16 (VTE prophylaxis, strong, up to four weeks) to `docs/01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx`; check whether NLUTD Statement 58 sits in the Diagnosis paper (doi 10.1097/JU.0000000000002235, now ref 31 on `renal-function-metabolic-surveillance.mdx`) or the Treatment paper (ref 6); open Okusanya 2026 to reconcile the defibulation counts (8 studies and 3,166 women vs the WHO review's 7 and 3,103).
