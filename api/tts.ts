@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { head, put } from '@vercel/blob';
+import { head, put, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import OpenAI from 'openai';
 
 // Accepted OpenAI TTS voices. Default to 'nova' (professional female — clear for clinical content).
@@ -76,12 +76,18 @@ function overMissLimit(ip: string): boolean {
 type Ledger = { month: string; spentMicroUsd: number; cacheBytes: number };
 
 function isConflict(err: unknown): boolean {
-  const { name = '', message = '' } = (err as { name?: string; message?: string }) || {};
-  return /Precondition|AlreadyExists|Conflict/i.test(name) || /already exists/i.test(message);
+  // @vercel/blob's BlobError subclasses never override `Error.prototype.name`
+  // (it stays the generic "Error"), so a name/message regex silently never
+  // matches — check the actual exported classes instead. The plain BlobError
+  // thrown for "already exists" (put with allowOverwrite: false) has no
+  // dedicated subclass, so its message is still the only signal for that case.
+  if (err instanceof BlobPreconditionFailedError) return true;
+  const { message = '' } = (err as { message?: string }) || {};
+  return /already exists/i.test(message);
 }
 
 function isNotFound(err: unknown): boolean {
-  return /NotFound/i.test((err as { name?: string })?.name || '');
+  return err instanceof BlobNotFoundError;
 }
 
 function readEnvNumber(name: string, fallback: number): number {
