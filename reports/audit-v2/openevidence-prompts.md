@@ -21,236 +21,257 @@ Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 82
 2. ACOG PB 214 estrogen wording (paywalled) (page: `01-foundations/pharmacology/hormonal-therapies/preoperative-hormonal-priming.mdx`)
 3. ACOG PB 141/213 and AAFP 2023 wording (page: `01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx`)
 4. ACOG PB 213 Level A ospemifene (page: `01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx`)
-5. ref 15 ACOG 800 vasoconstrictor caution (abstract silent) (page: `01-foundations/pharmacology/intraoperative-adjuncts/hydrodissection-agents.mdx`)
-6. ACOG CO 372 (2007) and AUGS cystoscopy guidance not retrieved/cited (page: `01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/indigo-carmine.mdx`)
+5. Estring/Vagifem steady-state pg/mL not in extracts (unverified). | ACOG PB 213 (relay): ospemifene Level A alternative to vaginal estrogen for GSM dyspareunia confirmed (page: `01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx`)
+6. ref 15 ACOG 800 vasoconstrictor caution (abstract silent) (page: `01-foundations/pharmacology/intraoperative-adjuncts/hydrodissection-agents.mdx`)
 
 ## Batch 3: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG PB 232 specifics (paywalled) (page: `01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx`)
-2. no ISSWSH/ACOG/NAMS bremelanotide position found or claimed (page cites AAFP 2025 only) (page: `01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx`)
-3. ACOG PB213 detail beyond web summary (Level A DHEA claim dropped) (page: `01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx`)
-4. ACOG CO 694 Martius-for-exposed-sling wording (paywalled) (page: `01-foundations/surgical-principles/flaps/martius.mdx`)
-5. ACOG CO 728 Mullerian agenesis (ref 40, not opened) (page: `01-foundations/surgical-principles/flaps/peritoneal.mdx`)
-6. ACOG 2019 committee opinion wording (no DOI) (page: `01-foundations/surgical-principles/flaps/z-plasty.mdx`)
+1. ACOG CO 372 (2007) and AUGS cystoscopy guidance not retrieved/cited (page: `01-foundations/pharmacology/intraoperative-adjuncts/visualization-agents/indigo-carmine.mdx`)
+2. ACOG PB 232 specifics (paywalled) (page: `01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx`)
+3. no ISSWSH/ACOG/NAMS bremelanotide position found or claimed (page cites AAFP 2025 only) (page: `01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx`)
+4. Flibanserin SSE ~0.5/month not verified here (flibanserin page). | ACOG PB 213 (relay) names only flibanserin (page: `01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx`)
+5. ACOG PB213 detail beyond web summary (Level A DHEA claim dropped) (page: `01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx`)
+6. Kling 2025 guideline summary beyond abstract. | ACOG PB 213 (OpenEvidence relay): systemic DHEA not recommended for sexual interest/arousal disorders (Level A; added) (page: `01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx`)
 
 ## Batch 4: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG CO 728 wording (not re-read) (page: `01-foundations/surgical-principles/grafts/ftsg.mdx`)
-2. ACOG CO 728 wording (page: `01-foundations/surgical-principles/grafts/stsg.mdx`)
-3. ACOG PB198 cervical-laceration technique detail and AFP 2021 (full text not read) (page: `01-foundations/surgical-skills/locking-stitch.mdx`)
-4. ACOG 214 RR 1.29 (page: `01-foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen.mdx`)
-5. 93% vs 62% sacrocolpopexy (ACOG PB214) not restored (page: `01-foundations/tools/biomaterials/synthetic-meshes/polypropylene.mdx`)
-6. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/ring-forceps.mdx`)
+1. ACOG CO 694 Martius-for-exposed-sling wording (paywalled) (page: `01-foundations/surgical-principles/flaps/martius.mdx`)
+2. ACOG CO 728 Mullerian agenesis (ref 40, not opened) (page: `01-foundations/surgical-principles/flaps/peritoneal.mdx`)
+3. ACOG 2019 committee opinion wording (no DOI) (page: `01-foundations/surgical-principles/flaps/z-plasty.mdx`)
+4. ACOG CO 728 wording (not re-read) (page: `01-foundations/surgical-principles/grafts/ftsg.mdx`)
+5. ACOG CO 728 wording (page: `01-foundations/surgical-principles/grafts/stsg.mdx`)
+6. ACOG PB198 cervical-laceration technique detail and AFP 2021 (full text not read). | ACOG PB 198 cervical-laceration text consistent (repair usually only with bleeding or distorted anatomy; technique  (page: `01-foundations/surgical-skills/locking-stitch.mdx`)
 
 ## Batch 5: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/russian.mdx`)
-2. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/singley.mdx`)
-3. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/wangensteen.mdx`)
-4. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/graft-harvest/dermatome.mdx`)
-5. Bates 2011 and ACOG CO 811 not rechecked (page: `01-foundations/tools/instruments/retractors/pederson.mdx`)
-6. ACOG 794 'no preferred QBL method' wording (page: `01-foundations/tools/instruments/urethral-specialty/ray-tec-sponges.mdx`)
+1. ACOG 214 RR 1.29 (page: `01-foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen.mdx`)
+2. 93% vs 62% sacrocolpopexy (ACOG PB214) not restored (page: `01-foundations/tools/biomaterials/synthetic-meshes/polypropylene.mdx`)
+3. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/ring-forceps.mdx`)
+4. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/russian.mdx`)
+5. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/singley.mdx`)
+6. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/forceps/wangensteen.mdx`)
 
 ## Batch 6: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ~50% PFMT satisfaction (ACOG PB155) (page: `03-clinical-conditions/03a-storage-incontinence/sui-female.mdx`)
-2. ACOG PB214 text (paywalled; occult SUI supported via AUA/EAU/Cochrane) (page: `03-clinical-conditions/03c-pelvic-support/anterior-compartment.mdx`)
-3. forceps+midline episiotomy OR 5.65/10.55 (ACOG 198 full text) (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
-4. 53-79% laceration incidence (ACOG 198) (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
-5. ACOG 198 not re-checked for updates (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
-6. ACOG PB214 exact mesh wording (page: `03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx`)
+1. ACOG vaginal prep detail (page: `01-foundations/tools/instruments/graft-harvest/dermatome.mdx`)
+2. Bates 2011 and ACOG CO 811 not rechecked (page: `01-foundations/tools/instruments/retractors/pederson.mdx`)
+3. ACOG 794 'no preferred QBL method' wording (page: `01-foundations/tools/instruments/urethral-specialty/ray-tec-sponges.mdx`)
+4. ACS statement text. | ACOG CO 794 (relay): quantitative measurement more accurate than visual (page: `01-foundations/tools/instruments/urethral-specialty/ray-tec-sponges.mdx`)
+5. ~50% PFMT satisfaction (ACOG PB155) (page: `03-clinical-conditions/03a-storage-incontinence/sui-female.mdx`)
+6. 3-5% bladder injury figure remains outside EAU text. | ACOG PB 155 (OpenEvidence quotation): PFMT satisfaction is about one half at 1 year after starting (page: `03-clinical-conditions/03a-storage-incontinence/sui-female.mdx`)
 
 ## Batch 7: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. Ringel 2020 (AFP) and ACOG PB 224 / BAD 2018 (no abstract detail; guideline statements on clitoral scarring surgery not confirmed against full text) (page: `03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx`)
-2. ACOG CO728 full text (only summary) (page: `03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies.mdx`)
-3. ACOG PB218 evidence levels (Level A adhesiolysis, B SNRI, C acupuncture; paywalled) (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
-4. PCS 'up to 30%' ACOG insufficient-evidence statement (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
-5. ACOG levels (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
-6. ACOG PB210 full text (page: `03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx`)
+1. ACOG PB214 text (paywalled; occult SUI supported via AUA/EAU/Cochrane) (page: `03-clinical-conditions/03c-pelvic-support/anterior-compartment.mdx`)
+2. prevalence not on page. | OpenEvidence quotation of ACOG PB 214 confirms the occult-SUI statement (preoperative cough stress or urodynamic testing with prolapse reduced; Level C) (page: `03-clinical-conditions/03c-pelvic-support/anterior-compartment.mdx`)
+3. forceps+midline episiotomy OR 5.65/10.55 (ACOG 198 full text) (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
+4. 53-79% laceration incidence (ACOG 198) (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
+5. ACOG 198 not re-checked for updates. | ACOG PB 198 (OpenEvidence relay): 53-79% laceration incidence confirmed (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
+6. no superseding ACOG document identified (PB 198 replaced PB 165) (page: `03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx`)
 
 ## Batch 8: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG PB 198 suture/repair wording (paywalled) (page: `04-surgical-techniques/04e-genital-reconstruction/vulvar-primary-closure.mdx`)
-2. ACOG CO 675 skinning-vulvectomy statement (abstract silent) (page: `04-surgical-techniques/04e-genital-reconstruction/vulvar-skin-graft.mdx`)
-3. ACOG PB 155 statements (removed, no text) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx`)
-4. ACOG/ACG guideline wording (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation.mdx`)
-5. ACOG PB 155 positioning (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/poise-impressa.mdx`)
-6. Wu NEJM/ACOG-era claims not needed (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx`)
+1. ACOG PB214 exact mesh wording (page: `03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx`)
+2. ref4 Bordeianou 2018 weak support for support-layer anatomy. | OpenEvidence quotation of ACOG PB 214 confirms no routine synthetic mesh or biologic graft in primary posterior repair (page: `03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx`)
+3. ACOG sentence added (ref 1) (page: `03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx`)
+4. Ringel 2020 (AFP) and ACOG PB 224 / BAD 2018 (no abstract detail; guideline statements on clitoral scarring surgery not confirmed against full text) (page: `03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx`)
+5. ACOG CO728 full text (only summary) (page: `03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies.mdx`)
+6. ACOG PB218 evidence levels (Level A adhesiolysis, B SNRI, C acupuncture; paywalled) (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
 
 ## Batch 9: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG CO 694 full text (paywalled, summary via search snippet only) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/urethrolysis.mdx`)
-2. ACOG CO 795 author string in ref 2 (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy.mdx`)
-3. ACOG PB 155 Level A/8% wording and Wu NEJM 2021 statement (no abstract) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence.mdx`)
-4. need ACOG 694 full text (page: `04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx`)
-5. (5) ACOG 694 postop voiding-dysfunction percentages 20%/6%/2% (POD1/2wk/6wk) - need 694 full text or original series (page: `04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx`)
-6. ACOG/AUGS CO 694 recommendation table (page paywalled) (page: `04-surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs.mdx`)
+1. PCS 'up to 30%' ACOG insufficient-evidence statement (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
+2. ACOG levels. | ACOG PB 218 (OpenEvidence relay): adhesiolysis is the only Level A item (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
+3. 'up to 30%' PCS is from Krambeck 2026 not ACOG (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
+4. ACOG PB210 full text (page: `03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx`)
+5. ACOG PB 198 suture/repair wording (paywalled) (page: `04-surgical-techniques/04e-genital-reconstruction/vulvar-primary-closure.mdx`)
+6. ACOG CO 675 skinning-vulvectomy statement (abstract silent) (page: `04-surgical-techniques/04e-genital-reconstruction/vulvar-skin-graft.mdx`)
 
 ## Batch 10: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG PB 214 detail (page: `04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx`)
-2. ACOG PB214 posterior content (page: `04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/posterior-colporrhaphy.mdx`)
-3. ACOG PB 210 (page: `04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx`)
-4. ACOG PB 213 referral wording (full text) (page: `04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx`)
-5. ACOG 79% hysterectomy figure (page: `04-surgical-techniques/04k-gender-affirming-surgery/gender-affirming-hysterectomy.mdx`)
-6. ACOG 823 granulation wording (page: `04-surgical-techniques/04k-gender-affirming-surgery/granulation-tissue-debridement.mdx`)
+1. ACOG PB 155 statements (removed, no text) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx`)
+2. ACOG/ACG guideline wording (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-electrical-stimulation.mdx`)
+3. ACOG PB 155 positioning (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/poise-impressa.mdx`)
+4. Wu NEJM/ACOG-era claims not needed (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx`)
+5. ACOG CO 694 full text (paywalled, summary via search snippet only) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/urethrolysis.mdx`)
+6. ACOG CO 795 author string in ref 2 (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy.mdx`)
 
 ## Batch 11: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. genital hair removal 6-12 mo (ACOG 823) (page: `04-surgical-techniques/04k-gender-affirming-surgery/penile-inversion-vaginoplasty.mdx`)
-2. ACOG dilation regimen (page: `04-surgical-techniques/04k-gender-affirming-surgery/phallus-preserving-vaginoplasty.mdx`)
-3. ACOG CO 823 6-month implant timing (page: `04-surgical-techniques/04k-gender-affirming-surgery/scrotoplasty.mdx`)
-4. WPATH SOC8/ACOG 823 full text (page: `04-surgical-techniques/04k-gender-affirming-surgery/simple-metoidioplasty.mdx`)
-5. ACOG 823 USTS 25%/61% (page: `04-surgical-techniques/04k-gender-affirming-surgery/simple-orchiectomy.mdx`)
-6. ACOG 823 dilation schedule (page: `04-surgical-techniques/04k-gender-affirming-surgery/skin-graft-vaginoplasty.mdx`)
+1. ACOG PB 155 Level A/8% wording and Wu NEJM 2021 statement (no abstract) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/weight-loss-incontinence.mdx`)
+2. need ACOG 694 full text (page: `04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx`)
+3. (5) ACOG 694 postop voiding-dysfunction percentages 20%/6%/2% (POD1/2wk/6wk) - need 694 full text or original series (page: `04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx`)
+4. ACOG/AUGS CO 694 recommendation table (page paywalled) (page: `04-surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs.mdx`)
+5. ACOG PB 214 detail (page: `04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx`)
+6. ACOG PB214 posterior content (page: `04-surgical-techniques/04g-prolapse-repair/posterior-enterocele/posterior-colporrhaphy.mdx`)
 
 ## Batch 12: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG 823 6-month timing (page: `04-surgical-techniques/04k-gender-affirming-surgery/testicular-implants.mdx`)
-2. ACOG 686 adolescent wording (abstract lacks it) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty.mdx`)
-3. ACOG direct quote on G-spot data (full text) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/g-spot-amplification.mdx`)
-4. ACOG 795 full text (402) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty.mdx`)
-5. ACOG satisfaction-reports line (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation.mdx`)
-6. Not checkable (Saheb-Al-Zamani, Alter full text, ACOG full text): wound dehiscence 'most common' (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction.mdx`)
+1. ACOG PB 210 (page: `04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx`)
+2. ACOG PB 213 referral wording (full text) (page: `04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx`)
+3. ACOG 79% hysterectomy figure (page: `04-surgical-techniques/04k-gender-affirming-surgery/gender-affirming-hysterectomy.mdx`)
+4. ACOG 823 granulation wording (page: `04-surgical-techniques/04k-gender-affirming-surgery/granulation-tissue-debridement.mdx`)
+5. genital hair removal 6-12 mo (ACOG 823) (page: `04-surgical-techniques/04k-gender-affirming-surgery/penile-inversion-vaginoplasty.mdx`)
+6. ACOG dilation regimen (page: `04-surgical-techniques/04k-gender-affirming-surgery/phallus-preserving-vaginoplasty.mdx`)
 
 ## Batch 13: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG 795 'aside from labia minora' wording (abstract only) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/monsplasty.mdx`)
-2. ACOG 686 full text on indications for adolescent labiaplasty (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty.mdx`)
-3. ACOG 795 full text not read (abstract only) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty.mdx`)
-4. ACOG OCC 7 stenting/balloon statements (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/procedures-causing-gu-injury/cesarean-section.mdx`)
-5. ACOG 2021 (ref1) 74%/87% figures (page: `05-special-populations/05c-gender-affirming/feminizing-procedures.mdx`)
-6. ACOG 2021 0.3% hysterectomy figure (page: `05-special-populations/05c-gender-affirming/masculinizing-procedures.mdx`)
+1. ACOG CO 823 6-month implant timing (page: `04-surgical-techniques/04k-gender-affirming-surgery/scrotoplasty.mdx`)
+2. WPATH SOC8/ACOG 823 full text (page: `04-surgical-techniques/04k-gender-affirming-surgery/simple-metoidioplasty.mdx`)
+3. ACOG 823 USTS 25%/61% (page: `04-surgical-techniques/04k-gender-affirming-surgery/simple-orchiectomy.mdx`)
+4. ACOG 823 dilation schedule (page: `04-surgical-techniques/04k-gender-affirming-surgery/skin-graft-vaginoplasty.mdx`)
+5. ACOG 823 6-month timing (page: `04-surgical-techniques/04k-gender-affirming-surgery/testicular-implants.mdx`)
+6. ACOG 686 adolescent wording (abstract lacks it) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/de-epithelialization-labiaplasty.mdx`)
 
 ## Batch 14: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG 2021 committee doc (page: `05-special-populations/05c-gender-affirming/overview.mdx`)
-2. ACOG April 2026 PMB update (announcement 402) (page: `05-special-populations/05e-womens-health/cancer-screening/endometrial.mdx`)
-3. ACOG PB 147 (2014) currency (page: `05-special-populations/05e-womens-health/cancer-screening/endometrial.mdx`)
-4. ACOG Feb 2026 announcement (page: `05-special-populations/05e-womens-health/endometriosis.mdx`)
-5. ACOG Aug 2026 clinical consensus (Ovid) (page: `05-special-populations/05e-womens-health/opportunistic-adnexal-surgery.mdx`)
-6. BHOF/ISCD/ACOG AFP details (page: `05-special-populations/05e-womens-health/osteoporosis-screening.mdx`)
+1. ACOG direct quote on G-spot data (full text) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/g-spot-amplification.mdx`)
+2. ACOG 795 full text (402) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/hymenoplasty.mdx`)
+3. ACOG satisfaction-reports line (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation.mdx`)
+4. Not checkable (Saheb-Al-Zamani, Alter full text, ACOG full text): wound dehiscence 'most common' (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-reduction.mdx`)
+5. ACOG 795 'aside from labia minora' wording (abstract only) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/monsplasty.mdx`)
+6. ACOG 686 full text on indications for adolescent labiaplasty (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/trim-labiaplasty.mdx`)
 
 ## Batch 15: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
 
 Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
-1. ACOG PB 213 level grades (full text) (page: `05-special-populations/05e-womens-health/sexual-dysfunction.mdx`)
-2. ACOG PB 210 FI figures (63%/54%, PTNS 38 vs 31%) (page: `05-special-populations/05f-lifelong-care/geriatric-urology.mdx`)
+1. ACOG 795 full text not read (abstract only) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/wedge-labiaplasty.mdx`)
+2. ACOG OCC 7 stenting/balloon statements (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/procedures-causing-gu-injury/cesarean-section.mdx`)
+3. ACOG 2021 (ref1) 74%/87% figures (page: `05-special-populations/05c-gender-affirming/feminizing-procedures.mdx`)
+4. ACOG 2021 0.3% hysterectomy figure (page: `05-special-populations/05c-gender-affirming/masculinizing-procedures.mdx`)
+5. ACOG 2021 committee doc (page: `05-special-populations/05c-gender-affirming/overview.mdx`)
+6. ACOG April 2026 PMB update (announcement 402) (page: `05-special-populations/05e-womens-health/cancer-screening/endometrial.mdx`)
 
-## Batch 16: EAU 2026 (S1+)
+## Batch 16: ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823) (S2)
+
+Question: In ACOG documents (CO 694, PB 214, 155, 213, 210, 198, 218, CO 795, 823), what does the source say about each of the following?
+1. ACOG PB 147 (2014) currency (page: `05-special-populations/05e-womens-health/cancer-screening/endometrial.mdx`)
+2. ACOG Feb 2026 announcement (page: `05-special-populations/05e-womens-health/endometriosis.mdx`)
+3. ACOG Aug 2026 clinical consensus (Ovid) (page: `05-special-populations/05e-womens-health/opportunistic-adnexal-surgery.mdx`)
+4. BHOF/ISCD/ACOG AFP details (page: `05-special-populations/05e-womens-health/osteoporosis-screening.mdx`)
+5. ACOG PB 213 level grades (full text) (page: `05-special-populations/05e-womens-health/sexual-dysfunction.mdx`)
+6. ACOG PB 210 FI figures (63%/54%, PTNS 38 vs 31%) (page: `05-special-populations/05f-lifelong-care/geriatric-urology.mdx`)
+
+## Batch 17: EAU 2026 (S1+)
 
 Question: In EAU 2026, what does the source say about each of the following?
 1. EAU 2026 phenylephrine regimen (200 mcg q3-5 min max 1 mg) and EAU prosthesis >48 h not re-read (page: `05-special-populations/05a-trauma-emergencies/priapism.mdx`)
 2. EAU 2026 lymphatic pages not opened (page: `01-foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy.mdx`)
-3. EAU 2026 urolithiasis PCNL statement and AUA 2018 white paper text (page: `01-foundations/perioperative-care/intraoperative-care/positioning-nerve-injury.mdx`)
-4. EAU 2026 cystectomy bowel-prep statement (page: `01-foundations/pharmacology/perioperative-eras/bowel-preparation.mdx`)
+3. no change. || EAU 2026 check Sept 26: §6.3.1.e verified verbatim (do not use genital skin in augmentation penile urethroplasty for LS, Strong; LE 3-4) (page: `01-foundations/anatomy-physiology/urinary-tract/male-urethra.mdx`)
+4. EAU 2026 urolithiasis PCNL statement and AUA 2018 white paper text (page: `01-foundations/perioperative-care/intraoperative-care/positioning-nerve-injury.mdx`)
 5. EAU 2026 ICI wording (ref2) and Invicorp regional authorization (page: `01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx`)
 6. EAU 2026 full text (WebFetch summary) (page: `01-foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil.mdx`)
-
-## Batch 17: EAU 2026 (S2)
-
-Question: In EAU 2026, what does the source say about each of the following?
-1. EAU 2026 web chapters refs 5 (page: `01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx`)
-2. EAU 2026 interferon withdrawal year (uroweb summary only) (page: `01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx`)
-3. some AE ranges. || EAU 2026 text read: added EAU paragraph (ref 26): beta3 offered after conservative failure (Strong) (page: `01-foundations/pharmacology/storage-oab/beta3-agonists.mdx`)
-4. EAU 2026 tissue-transfer web chapter details (page: `01-foundations/surgical-principles/grafts-gu-reconstruction.mdx`)
-5. EAU 2026 web chapter statements (page: `01-foundations/surgical-principles/grafts/buccal-mucosa.mdx`)
-6. EAU 2026 radiation stricture wording (not grepped) (page: `01-foundations/surgical-principles/radiation-tissue-effects.mdx`)
 
 ## Batch 18: EAU 2026 (S2)
 
 Question: In EAU 2026, what does the source say about each of the following?
-1. EAU 2026 VUR chapter wording (page: `01-foundations/tools/biomaterials/bulking-agents/deflux.mdx`)
-2. EAU 2026 pediatric statement on PTFE (page: `01-foundations/tools/biomaterials/bulking-agents/teflon.mdx`)
-3. EAU 2026 guideline (refs 1,24) (page: `01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx`)
-4. EAU 2026 guideline (page: `01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx`)
-5. EAU 2026 PCa/RCC drain text (page: `01-foundations/tools/biomaterials/surgical-drains/jackson-pratt.mdx`)
-6. EAU 2026 stenting text read via WebFetch summary only (page: `01-foundations/tools/biomaterials/ureteral-stents/double-j-stent.mdx`)
+1. EAU 2026 web chapters refs 5 (page: `01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx`)
+2. no change needed. || EAU 2026 check Sept 26 (group B): first-line strong rec (page: `01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx`)
+3. EAU 2026 interferon withdrawal year (uroweb summary only) (page: `01-foundations/pharmacology/sexual-medicine-andrology/peyronies-disease-agents.mdx`)
+4. some AE ranges. || EAU 2026 text read: added EAU paragraph (ref 26): beta3 offered after conservative failure (Strong) (page: `01-foundations/pharmacology/storage-oab/beta3-agonists.mdx`)
+5. EAU 2026 tissue-transfer web chapter details (page: `01-foundations/surgical-principles/grafts-gu-reconstruction.mdx`)
+6. 1:1.5/1:2 mesh ratios. || EAU 2026 check Sept 26: §9 tissue transfer verified (page: `01-foundations/surgical-principles/grafts-gu-reconstruction.mdx`)
 
 ## Batch 19: EAU 2026 (S2)
 
 Question: In EAU 2026, what does the source say about each of the following?
-1. EAU 2026 wording (page: `01-foundations/tools/biomaterials/ureteral-stents/open-ended-ureteral-catheter.mdx`)
-2. EAU 2026 pressure statements (page: `01-foundations/tools/biomaterials/ureteral-stents/ureteral-access-sheath.mdx`)
-3. EAU 2026 urolithiasis/UTUC guideline text (page: `01-foundations/tools/instruments/endoscopy/semi-rigid-ureteroscope.mdx`)
-4. EAU 2026 B-TUVP 30-80 mL statement (page: `01-foundations/tools/instruments/endoscopy/vaporization-electrode.mdx`)
-5. EAU 2026 guideline text (page: `01-foundations/tools/technology/energy-devices.mdx`)
-6. older-women cognitive claim in ref 15 (treatment NMA) itself. || EAU 2026 text read: CLOSED most-bothersome-first (Weak) (page: `03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx`)
+1. EAU 2026 web chapter statements (page: `01-foundations/surgical-principles/grafts/buccal-mucosa.mdx`)
+2. Alrefaey denominators (97.9%). || EAU 2026 check Sept 26: §9.3-9.5 verified (page: `01-foundations/surgical-principles/grafts/buccal-mucosa.mdx`)
+3. EAU 2026 radiation stricture wording (not grepped) (page: `01-foundations/surgical-principles/radiation-tissue-effects.mdx`)
+4. EAU 2026 guideline (refs 1,24) (page: `01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx`)
+5. Lo Re/Sedigh/Ramos dropped from baseline unverified. || EAU 2026 check Sept 26 (group B): prosthesis statements (5.6.11.c, priapism recs) re-verified (page: `01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx`)
+6. EAU 2026 guideline (page: `01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx`)
 
 ## Batch 20: EAU 2026 (S2)
 
 Question: In EAU 2026, what does the source say about each of the following?
-1. risk factor table. || EAU 2026 text read: CLOSED retropubic long-term better than TO (Strong/LE 1b) (page: `03-clinical-conditions/03a-storage-incontinence/sui-female.mdx`)
-2. EAU 2026 ref 38 chapter not checked against local text (page: `03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx`)
-3. EAU 2026 penile size chapter (ref35) text (page: `03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx`)
-4. EAU 2026 CPP chapter (web-only, not opened) (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
-5. EAU 2026 web text quoted only by section (page: `04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx`)
-6. EAU web-section cites (ref1) rely on local EAU 2026 text (page: `04-surgical-techniques/04ab-bladder-neck-reconstruction/vuas.mdx`)
+1. EAU 2026 PCa/RCC drain text (page: `01-foundations/tools/biomaterials/surgical-drains/jackson-pratt.mdx`)
+2. EAU 2026 stenting text read via WebFetch summary only (page: `01-foundations/tools/biomaterials/ureteral-stents/double-j-stent.mdx`)
+3. EAU 2026 wording (page: `01-foundations/tools/biomaterials/ureteral-stents/open-ended-ureteral-catheter.mdx`)
+4. EAU 2026 pressure statements (page: `01-foundations/tools/biomaterials/ureteral-stents/ureteral-access-sheath.mdx`)
+5. EAU 2026 urolithiasis/UTUC guideline text (page: `01-foundations/tools/instruments/endoscopy/semi-rigid-ureteroscope.mdx`)
+6. EAU 2026 B-TUVP 30-80 mL statement (page: `01-foundations/tools/instruments/endoscopy/vaporization-electrode.mdx`)
 
 ## Batch 21: EAU 2026 (S2)
 
 Question: In EAU 2026, what does the source say about each of the following?
-1. row notes on Poise Impressa/behavioral/weight loss (no source cited). || EAU 2026 text read: added EAU paragraph (ref 4): supervised PFMT >=3 mo first-line (page: `04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx`)
-2. procedure-page links only link-checked. || EAU 2026 text read: added EAU stepwise summary with Strong/Weak ratings and cognition levels (oxybutynin LE 2; darifenacin/fesoterodine/solifenacin/trospium  (page: `04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx`)
-3. EAU 2026 s3.1.7.h-i ureteral stenosis text and Novacescu full text beyond retrieved sections (page: `04-surgical-techniques/04h-fistula-repair/all-patients/post-kidney-transplant.mdx`)
-4. EAU 2026 section (page: `04-surgical-techniques/04h-fistula-repair/female/oconor-vvf-repair.mdx`)
-5. EAU 2026 section (page: `04-surgical-techniques/04h-fistula-repair/fistula-repair-principles.mdx`)
-6. EAU 2026 immunoprophylaxis/prophylaxis recs (web) (page: `05-special-populations/05e-womens-health/recurrent-uti.mdx`)
+1. animal-study details (Wolf, Ishikawa, Lim, Narayan). || EAU 2026 check Sept 26 (group B): B-TUVP as weak-strength alternative to TURP for 30-80 mL confirmed in EAU 5.3.3.a (LE 1a) (page: `01-foundations/tools/instruments/endoscopy/vaporization-electrode.mdx`)
+2. EAU 2026 guideline text (page: `01-foundations/tools/technology/energy-devices.mdx`)
+3. differential-table features are textbook teaching without a cited source. || EAU 2026 check Sept 26: EAU §3.1 confirms female urethral stricture as 'fixed anatomical narrowing' with no universal defin (page: `02-evaluation/history-physical/female-pelvic-examination.mdx`)
+4. older-women cognitive claim in ref 15 (treatment NMA) itself. || EAU 2026 text read: CLOSED most-bothersome-first (Weak) (page: `03-clinical-conditions/03a-storage-incontinence/mixed-incontinence.mdx`)
+5. risk factor table. || EAU 2026 text read: CLOSED retropubic long-term better than TO (Strong/LE 1b) (page: `03-clinical-conditions/03a-storage-incontinence/sui-female.mdx`)
+6. EAU 2026 ref 38 chapter not checked against local text (page: `03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx`)
 
 ## Batch 22: EAU 2026 (S2)
 
 Question: In EAU 2026, what does the source say about each of the following?
-1. EAU 2026 adult-vs-pediatric TIP statement (ref 48) (page: `05-special-populations/05f-lifelong-care/hypospadias-epispadias.mdx`)
+1. no source found for prostatectomy/radiation as UPF cause so not added. || EAU 2026 check Sept 26: ref 38 is EAU §5 (Diagnostic Evaluation): RUG+VCUG for (nearly) obliterative strictures/PFUI Strong (page: `03-clinical-conditions/03f-fistulas/in-males/urethroperineal.mdx`)
+2. EAU 2026 penile size chapter (ref35) text (page: `03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx`)
+3. not full text. || EAU 2026 check Sept 26 (group B): micropenis definition and penile size recommendations re-verified (page: `03-clinical-conditions/03g-genital-scrotal/small-penis-syndrome.mdx`)
+4. EAU 2026 CPP chapter (web-only, not opened) (page: `03-clinical-conditions/03h-pelvic-pain/chronic-pelvic-pain.mdx`)
+5. EAU posterior obliteration statement not located in local texts. || EAU 2026 check Sept 26: obliteration statements verified (§6.3.5.a: do not perform endoluminal treatment of VUAS/BMS/BNS with comple (page: `04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/endoscopic-urethroplasty.mdx`)
+6. videos. || EAU 2026 check Sept 26: §6.3.5.a-b verified (cut-to-the-light 'will not be successful', false-passage risk to bladder base/rectum; both obliteration recommendations Strong) (page: `04-surgical-techniques/04a-urethral-reconstruction/posterior/core-through-urethrotomy.mdx`)
 
-## Batch 23: AFP 2024 (S1)
+## Batch 23: EAU 2026 (S2)
+
+Question: In EAU 2026, what does the source say about each of the following?
+1. EAU 2026 web text quoted only by section. || EAU 2026 check Sept 26: cited '6.3.5-6.3.6' but the guideline has no 6.3.6 (page: `04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/dorsal-bmg-bnc.mdx`)
+2. EAU web-section cites (ref1) rely on local EAU 2026 text. || EAU 2026 check Sept 26: cited '6.3.5-6.3.6' (no 6.3.6 exists) (page: `04-surgical-techniques/04ab-bladder-neck-reconstruction/vuas.mdx`)
+3. row notes on Poise Impressa/behavioral/weight loss (no source cited). || EAU 2026 text read: added EAU paragraph (ref 4): supervised PFMT >=3 mo first-line (page: `04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx`)
+4. procedure-page links only link-checked. || EAU 2026 text read: added EAU stepwise summary with Strong/Weak ratings and cognition levels (oxybutynin LE 2; darifenacin/fesoterodine/solifenacin/trospium  (page: `04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx`)
+5. no contradiction with AUA-based table (jurisdictional difference stated). || EAU 2026 check Sept 26: paragraph re-verified (bladder training Strong, anticholinergic/beta3 after conservative failure St (page: `04-surgical-techniques/04f-incontinence-procedures/oab-uui/oab-uui-database.mdx`)
+6. technique steps (teaching, no source). || EAU 2026 check Sept 26: closes 'EAU web guideline (ref 8)': verified equivalent 1-year patient-reported outcomes (LE 1a) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx`)
+
+## Batch 24: EAU 2026 (S2)
+
+Question: In EAU 2026, what does the source say about each of the following?
+1. IFU-level technique steps. || EAU 2026 check Sept 26: closes 'EAU link': verified Ajust/Altis noninferior at 15 and 36 months (LE 1b) (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/single-incision-mini-sling.mdx`)
+2. EAU 2026 s3.1.7.h-i ureteral stenosis text and Novacescu full text beyond retrieved sections (page: `04-surgical-techniques/04h-fistula-repair/all-patients/post-kidney-transplant.mdx`)
+3. no new EjD/ED all confirmed. p=0.03 still not stated by EAU. || EAU 2026 check Sept 26 (group B): confirmed EAU does not state p=0.03 (page: `04-surgical-techniques/04m-bph-male-luts/itind.mdx`)
+
+## Batch 25: AFP 2024 (S1)
 
 Question: In AFP 2024, what does the source say about each of the following?
 1. AFP 2024 Gauer tables (NPH 0.1 U/kg per 10 mg prednisone; ADA text only says NPH with intermediate-acting steroids) (page: `01-foundations/perioperative-care/preoperative-assessment/diabetes.mdx`)
 
-## Batch 24: HIVMA 2024 (S1)
+## Batch 26: HIVMA 2024 (S1)
 
 Question: In HIVMA 2024, what does the source say about each of the following?
 1. (5) HIV drug-interaction direction (IDSA/HIVMA 2024 full text) (page: `01-foundations/pharmacology/hormonal-therapies/gender-affirming-hormone-therapy.mdx`)
 
-## Batch 25: ICM 2025 (S1)
+## Batch 27: ICM 2025 (S1)
 
 Question: In ICM 2025, what does the source say about each of the following?
 1. WHO/FIGO/ICM 2025 PPH specifics (fibrinogen >=2 g/L, TXA repeat dose, gauze packing advice) (page: `01-foundations/surgical-principles/vascular-damage-control.mdx`)
 
-## Batch 26: SHEA 2022 (S1)
+## Batch 28: SHEA 2022 (S1)
 
 Question: In SHEA 2022, what does the source say about each of the following?
 1. SHEA 2022 'bacitracin contraindicated' wording (page: `01-foundations/surgical-skills/suture-lubrication.mdx`)
 
-## Batch 27: Broderick 1990 (S1)
+## Batch 29: Broderick 1990 (S1)
 
 Question: In Broderick 1990, what does the source say about each of the following?
 1. Broderick 1990. || Sept 26 IDSA/BPS/MIBC pass: AUA/ASCO/SUO MIBC 2024 verified: Statements 13-14 contraindication content and eGFR<45 example (removed invented units mL/min/1.73 m2) (page: `04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx`)
 
-## Batch 28: FDA 2018 (S1)
+## Batch 30: FDA 2018 (S1)
 
 Question: In FDA 2018, what does the source say about each of the following?
 1. FDA 2018 laser warning (general knowledge) (page: `04-surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database.mdx`)
 
-## Batch 29: Urological Trauma March 2026 (S1)
-
-Question: In Urological Trauma March 2026, what does the source say about each of the following?
-1. pregnancy/neurogenic notes uncited. | EAU trauma 2026 pass (Sept 26): EAU Urological Trauma March 2026 read locally (s4.3, s4.4.3): added combined 5-8% (page: `05-special-populations/05a-trauma-emergencies/bladder-trauma.mdx`)
-
-## Batch 30: ACS 2025 (S2)
+## Batch 31: ACS 2025 (S2)
 
 Question: In ACS 2025, what does the source say about each of the following?
 1. textbook pelvic diameters/angles (standard obstetric texts, uncited). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (10%/mm, female urethral injury: speculum exam and cyst (page: `01-foundations/anatomy-physiology/pelvis-support/bony-pelvic-anatomy.mdx`)
@@ -260,7 +281,7 @@ Question: In ACS 2025, what does the source say about each of the following?
 5. ACS 2025 best practices guideline not read (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx`)
 6. refs 8-11 not opened. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed for reimplant success 91-98% and refluxing vs nonrefluxing controversy (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/non-transecting-reimplant.mdx`)
 
-## Batch 31: ACS 2025 (S2)
+## Batch 32: ACS 2025 (S2)
 
 Question: In ACS 2025, what does the source say about each of the following?
 1. Sherman viability limits (abstract only). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (microsurgical replantation by urologist and microvascular surgeon, two-bag transpo (page: `04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx`)
@@ -270,12 +291,12 @@ Question: In ACS 2025, what does the source say about each of the following?
 5. most-common-injury-type claim. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified: direct ureter inspection at laparotomy (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/index.mdx`)
 6. added as ref 16. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 verified: contralateral kidney palpation (page: `05-special-populations/05a-trauma-emergencies/on-table-ivp.mdx`)
 
-## Batch 32: ACS 2025 (S2)
+## Batch 33: ACS 2025 (S2)
 
 Question: In ACS 2025, what does the source say about each of the following?
 1. antegrade nephrostogram at 6-8 weeks (absent from both ACS and EAU text). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (AAST table, 55% hematuria absent, 5-40% blunt, RPG, (page: `05-special-populations/05a-trauma-emergencies/ureteral-trauma.mdx`)
 
-## Batch 33: WHO 2025 (S2)
+## Batch 34: WHO 2025 (S2)
 
 Question: In WHO 2025, what does the source say about each of the following?
 1. WHO 2025 rec text (NCBI bookshelf blocked; conditional recs taken from search summaries) (page: `03-clinical-conditions/03g-genital-scrotal/female-genital-mutilation-cutting.mdx`)
@@ -285,7 +306,7 @@ Question: In WHO 2025, what does the source say about each of the following?
 5. WHO 2025 rec 8 wording (NBK page blocked; carried from Sept 20 review) (page: `04-surgical-techniques/04e-genital-reconstruction/manero-vaginal-graft.mdx`)
 6. WHO 2025 conditional recommendation on sexual-health counseling (NCBI bookshelf blocked) (page: `04-surgical-techniques/04e-genital-reconstruction/vulvar.mdx`)
 
-## Batch 34: ASCRS 2022 (S2)
+## Batch 35: ASCRS 2022 (S2)
 
 Question: In ASCRS 2022, what does the source say about each of the following?
 1. ASCRS 2022 RVF option statements (paywalled full text) (page: `04-surgical-techniques/04h-fistula-repair/female-fistula.mdx`)
@@ -295,7 +316,7 @@ Question: In ASCRS 2022, what does the source say about each of the following?
 5. ASCRS 2022 RVF recommendation (full text) (page: `04-surgical-techniques/04h-fistula-repair/male/turnbull-cutait-ruf.mdx`)
 6. ASCRS 2022 recommendation grades and success ranges (41-78%, 55-93%, 65-94%) (page: `04-surgical-techniques/04k-gender-affirming-surgery/rectoneovaginal-fistula-repair.mdx`)
 
-## Batch 35: ADA 2026 (S2)
+## Batch 36: ADA 2026 (S2)
 
 Question: In ADA 2026, what does the source say about each of the following?
 1. ADA 2026 and Kindel 2024 full text (403; multisociety risk-factor list came from PMC text via summarizer) (page: `01-foundations/perioperative-care/postoperative-management/nutrition.mdx`)
@@ -303,7 +324,7 @@ Question: In ADA 2026, what does the source say about each of the following?
 3. ADA 2026 (page: `02-evaluation/laboratory-studies/preoperative-labs.mdx`)
 4. ADA 2026 VED wording (page: `04-surgical-techniques/04j-sexual-dysfunction/ved.mdx`)
 
-## Batch 36: AUA 2015 (S2)
+## Batch 37: AUA 2015 (S2)
 
 Question: In AUA 2015, what does the source say about each of the following?
 1. AUA 2015 PD guideline and Cochrane Rosenberg statements (page: `01-foundations/pharmacology/dermatologic-topical-urethral/intralesional-corticosteroids.mdx`)
@@ -311,7 +332,7 @@ Question: In AUA 2015, what does the source say about each of the following?
 3. AUA 2015 stability/oral-therapy statements (page: `04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/index.mdx`)
 4. AUA 2015 'Moderate (page: `04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting.mdx`)
 
-## Batch 37: ASCRS 2023 (S2)
+## Batch 38: ASCRS 2023 (S2)
 
 Question: In ASCRS 2023, what does the source say about each of the following?
 1. ASCRS 2023 full text paywalled (bulking/insert/sphincteroplasty/SNM/biofeedback wording taken from Guideline Central side-by-side summary) (page: `03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx`)
@@ -319,7 +340,7 @@ Question: In ASCRS 2023, what does the source say about each of the following?
 3. ASCRS 2023 50% wording (page: `04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-nerve-evaluation.mdx`)
 4. ASCRS 2023 FI survey 69 pts 83%/84% (no abstract) (page: `04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx`)
 
-## Batch 38: ES 2017 (S2)
+## Batch 39: ES 2017 (S2)
 
 Question: In ES 2017, what does the source say about each of the following?
 1. 12.18 and ES 2017 5.5 age wording corrected (page: `04-surgical-techniques/04k-gender-affirming-surgery/feminizing-surgery.mdx`)
@@ -327,51 +348,45 @@ Question: In ES 2017, what does the source say about each of the following?
 3. Endocrine Society 12-mo wording (secondary). | Sept 26 new-source pass: SOC 8 13.4-13.6 and ES 2017 12-month criteria verified against full text (page: `04-surgical-techniques/04k-gender-affirming-surgery/penile-disassembly.mdx`)
 4. ES 2017 age-of-majority/1-yr wording (abstract only). | Sept 26 new-source pass: ES 2017 5.1 (Strong) (page: `04-surgical-techniques/04k-gender-affirming-surgery/vaginectomy.mdx`)
 
-## Batch 39: WHO 2018 (S2)
+## Batch 40: WHO 2018 (S2)
 
 Question: In WHO 2018, what does the source say about each of the following?
 1. WHO 2018 recommendation wording/section numbers and NICE NG125 1.3 wording (NCBI/NICE blocked) (page: `01-foundations/perioperative-care/intraoperative-care/draping-skin-antisepsis.mdx`)
 2. WHO 2018 wording carried from v1 (page: `01-foundations/tools/biomaterials/surgical-drains/blake-drain.mdx`)
 3. WHO 2018 recommendation only via news item (page: `03-clinical-conditions/03f-fistulas/in-females/obstetric.mdx`)
 
-## Batch 40: IDSA 2019 (S2)
+## Batch 41: IDSA 2019 (S2)
 
 Question: In IDSA 2019, what does the source say about each of the following?
 1. no change needed. || Sept 26 IDSA/BPS/MIBC pass: IDSA 2019 and AUA BPS 2020 (J Urol 2020;203:351) read locally (page: `01-foundations/pharmacology/infection-prophylaxis/perioperative-antibiotic-prophylaxis.mdx`)
 2. IDSA 2019 transplant ASB timing (page: `01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx`)
 3. no change needed. || Sept 26 IDSA/BPS/MIBC pass: IDSA 2019 read locally: transplant >1 month strong and insufficient first month confirmed (page: `01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx`)
 
-## Batch 41: ASCRS 2020 left-sided diverticulitis guideline (S2)
+## Batch 42: ASCRS 2020 left-sided diverticulitis guideline (S2)
 
 Question: In ASCRS 2020 left-sided diverticulitis guideline, what does the source say about each of the following?
 1. ASCRS 2026 diverticulitis update (PMID 42478484) not read (page: `03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel.mdx`)
 2. ASCRS diverticulitis strength label (guideline full text not read) (page: `04-surgical-techniques/04h-fistula-repair/all-patients-fistula.mdx`)
 3. ASCRS 2020 diverticulitis wording and AGA 2021 wording (no abstract) (page: `04-surgical-techniques/04h-fistula-repair/all-patients/ureterocolonic.mdx`)
 
-## Batch 42: ISL 2023 (S2)
+## Batch 43: ISL 2023 (S2)
 
 Question: In ISL 2023, what does the source say about each of the following?
 1. ISL 2023 consensus (page: `04-surgical-techniques/04e-genital-reconstruction/3r-scip-lft.mdx`)
 2. ISL 2023 consensus statements (page: `04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt.mdx`)
 3. ISL 2023 consensus wording (PDF not read) (page: `04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx`)
 
-## Batch 43: ESVS 2025 (S2)
+## Batch 44: ESVS 2025 (S2)
 
 Question: In ESVS 2025, what does the source say about each of the following?
 1. ESVS 2025 vascular trauma guideline (ref 1) support for collateral/ligation statement not opened (page: `01-foundations/anatomy-physiology/pelvis-support/pelvic-vascular-anatomy.mdx`)
 2. ESVS 2025 iatrogenic exclusion and recommendations (guideline full text) (page: `01-foundations/surgical-principles/vascular-damage-control.mdx`)
 
-## Batch 44: AUA CPP 2025 (S2)
+## Batch 45: AUA CPP 2025 (S2)
 
 Question: In AUA CPP 2025, what does the source say about each of the following?
 1. USRA and AUA CPP 2025 links carried from v1 (page: `01-foundations/perioperative-care/intraoperative-care/nerve-blocks.mdx`)
 2. AUA CPP 2025 statement 19 (page: `01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx`)
-
-## Batch 45: EAU MIBC 2026 (S2)
-
-Question: In EAU MIBC 2026, what does the source say about each of the following?
-1. no neomycin+metronidazole 1 g/1 g regimen source found. || EAU MIBC 2026 pass (Sept 26): EAU MIBC 2026 now settled: 'Do not offer preoperative bowel preparation' (page: `01-foundations/pharmacology/perioperative-eras/bowel-preparation.mdx`)
-2. Heidler/Stewart/Altwein/Hall. || EAU MIBC 2026 pass (Sept 26): EAU MIBC 2026 6.7.5.a.4 added (ureterorectosigmoidostomy rarely used; UTI and stones) (page: `04-surgical-techniques/04c-urinary-diversion/ureterosigmoidostomy.mdx`)
 
 ## Batch 46: ASRM 2024 (S2)
 
@@ -383,7 +398,7 @@ Question: In ASRM 2024, what does the source say about each of the following?
 
 Question: In AUA ED 2018, what does the source say about each of the following?
 1. AUA ED 2018 ICI second-line wording not re-read against local guideline text (page: `01-foundations/pharmacology/sexual-medicine-andrology/index.mdx`)
-2. AUA ED 2018 has no newer update found (page: `01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx`)
+2. AUA ED 2018 has no newer update found. || EAU 2026 check Sept 26 (group B): ICI strong rec and LE 1a summary confirmed and labeled (page: `01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx`)
 
 ## Batch 48: Hockel 2008 (S2)
 
@@ -397,440 +412,416 @@ Question: In AUA 2023, what does the source say about each of the following?
 1. AUA 2023 amendment wording on recurrent meatal strictures (page: `01-foundations/surgical-principles/flaps/v-y-advancement.mdx`)
 2. AUA 2023 statement wording (page: `01-foundations/tools/instruments/sounds-bougies/dittel.mdx`)
 
-## Batch 50: AUA 2026 (S2)
+## Batch 50: Levy 2026 (S2)
+
+Question: In Levy 2026, what does the source say about each of the following?
+1. Levy 2026 consensus details (page: `01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx`)
+2. Levy 2026 Delphi protocol. || EAU 2026 check Sept 26 (group B): delay implantation after shunt (strong) (page: `01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx`)
+
+## Batch 51: AUA 2026 (S2)
 
 Question: In AUA 2026, what does the source say about each of the following?
 1. IPSS 12-15 / Qmax +162% / retreatment 3-14.5% (AUA 2026 Part III appendices not located) (page: `01-foundations/tools/instruments/endoscopy/resectoscope.mdx`)
 2. AUA 2026 28-54% incidence primary source (ref 412 Cash 2019, not opened) (page: `03-clinical-conditions/03b-voiding-outlet/primary-bladder-neck-obstruction.mdx`)
 
-## Batch 51: ACG 2025 (S2)
+## Batch 52: ACG 2025 (S2)
 
 Question: In ACG 2025, what does the source say about each of the following?
 1. ACG 2025 wording (page: `02-evaluation/laboratory-studies/nutritional-assessment/zinc.mdx`)
 2. ASCRS/ACG 2025/AGA 2021 full texts (recommendation grades 2C/1C only via v1 record) (page: `04-surgical-techniques/04h-fistula-repair/female/nonoperative-rvf-management.mdx`)
 
-## Batch 52: IUGA 2020 (S2)
+## Batch 53: IUGA 2020 (S2)
 
 Question: In IUGA 2020, what does the source say about each of the following?
 1. AUGS/IUGA 2020 terminology and Fig 5 (page: `04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx`)
 2. AUGS/IUGA 2020 terminology not re-opened (page: `04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx`)
 
-## Batch 53: Kirkpatrick WSACS 2013 (S2)
+## Batch 54: Kirkpatrick WSACS 2013 (S2)
 
 Question: In Kirkpatrick WSACS 2013, what does the source say about each of the following?
 1. Kirkpatrick WSACS 2013 decompression wording (page: `01-foundations/anatomy-physiology/donor-sites/abdominal-wall.mdx`)
 
-## Batch 54: AHS 2022 (S2)
+## Batch 55: AHS 2022 (S2)
 
 Question: In AHS 2022, what does the source say about each of the following?
 1. EHS/AHS 2022 port-closure grade (page: `01-foundations/anatomy-physiology/donor-sites/abdominal-wall.mdx`)
 
-## Batch 55: Joseph 2020 (S2)
+## Batch 56: Joseph 2020 (S2)
 
 Question: In Joseph 2020, what does the source say about each of the following?
 1. Joseph 2020 spina bifida guideline full text (page: `01-foundations/anatomy-physiology/donor-sites/bowel-anatomy.mdx`)
 
-## Batch 56: ESGO 2024 (S2)
+## Batch 57: ESGO 2024 (S2)
 
 Question: In ESGO 2024, what does the source say about each of the following?
 1. ESGO 2024 <=2 cm/2-4 cm threshold (guideline text not read this session; earlier ledger read pocket guideline) (page: `01-foundations/anatomy-physiology/genitalia/cervix.mdx`)
 
-## Batch 57: Global Chordoma Consensus 2026 (S2)
+## Batch 58: Global Chordoma Consensus 2026 (S2)
 
 Question: In Global Chordoma Consensus 2026, what does the source say about each of the following?
 1. Global Chordoma Consensus 2026 (ref 17) content (page: `01-foundations/anatomy-physiology/pelvis-support/presacral-anatomy.mdx`)
 
-## Batch 58: Carroll 1992 (S2)
+## Batch 59: Carroll 1992 (S2)
 
 Question: In Carroll 1992, what does the source say about each of the following?
 1. Carroll 1992 (no abstract). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (anterior vs posterior urethra, straddle, 10%/mm) (page: `01-foundations/anatomy-physiology/urinary-tract/male-urethra.mdx`)
 
-## Batch 59: ASA 2023 (S2)
+## Batch 60: ASA 2023 (S2)
 
 Question: In ASA 2023, what does the source say about each of the following?
 1. ASA 2023 NMB recommendation strength/wording via abstract only (page: `01-foundations/perioperative-care/intraoperative-care/anesthesia.mdx`)
 
-## Batch 60: Chen 2026 (S2)
+## Batch 61: Chen 2026 (S2)
 
 Question: In Chen 2026, what does the source say about each of the following?
 1. no source. || AUGS item: added Chen 2026 sustainability white paper (full text read) on regional anesthesia and IV propofol when appropriate (page: `01-foundations/perioperative-care/intraoperative-care/anesthesia.mdx`)
 
-## Batch 61: ASRA 2025 (S2)
+## Batch 62: ASRA 2025 (S2)
 
 Question: In ASRA 2025, what does the source say about each of the following?
 1. ASRA 2025 full text is paywalled (intervals verified only via Guideline Central quotations of the recommendations, not primary) (page: `01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx`)
 
-## Batch 62: CHEST 2022 (S2)
+## Batch 63: CHEST 2022 (S2)
 
 Question: In CHEST 2022, what does the source say about each of the following?
 1. CHEST 2022 mechanical-valve/VTE 'suggest against bridging' and AHA/ACC 2024 bridging wording and P2Y12 hold days verified via secondary summaries (CCJM, OpenAnesthesia) (page: `01-foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy.mdx`)
 
-## Batch 63: RC 2019 (S2)
+## Batch 64: RC 2019 (S2)
 
 Question: In RC 2019, what does the source say about each of the following?
 1. RC 2019/2025 ERAS update not found in PubMed. || AUGS item: added Reagan & Hardart 2025 white paper (full text read; doi 10.1097/SPV.0000000000001755) catheter guidance limited to routine reconstructi (page: `01-foundations/perioperative-care/perioperative-protocols/eras.mdx`)
 
-## Batch 64: ACC 2024 (S2)
+## Batch 65: ACC 2024 (S2)
 
 Question: In ACC 2024, what does the source say about each of the following?
 1. 2026 Universal Definition (not supplied). || Earlier: Sources verified via pubmed.py: AHA/ACC 2024 guideline (PMID 39320289; recs checked against secondary summaries CCJM/PMC review, not the full text (page: `01-foundations/perioperative-care/preoperative-assessment/cardiovascular-risk.mdx`)
 
-## Batch 65: ASA 2025 (S2)
+## Batch 66: ASA 2025 (S2)
 
 Question: In ASA 2025, what does the source say about each of the following?
 1. ASA 2025 advisory low-certainty CFS statement (no abstract) (page: `01-foundations/perioperative-care/preoperative-assessment/risk-calculators.mdx`)
 
-## Batch 66: AAHKS 2017 (S2)
+## Batch 67: AAHKS 2017 (S2)
 
 Question: In AAHKS 2017, what does the source say about each of the following?
 1. ACR/AAHKS 2017 wording directly (relied on 2022 statement that it is unchanged) (page: `01-foundations/perioperative-care/preoperative-assessment/steroids.mdx`)
 
-## Batch 67: CDC 2021 (S2)
+## Batch 68: CDC 2021 (S2)
 
 Question: In CDC 2021, what does the source say about each of the following?
 1. podofilox clearance 45-88%/recurrence 6-55% and TCA clearance 70-81% (absent from CDC 2021 text; would settle: 2015 CDC guideline table or primary trials) (page: `01-foundations/pharmacology/dermatologic-topical-urethral/hpv-topical-agents.mdx`)
 
-## Batch 68: UTI 2025 (S2)
+## Batch 69: UTI 2025 (S2)
 
 Question: In UTI 2025, what does the source say about each of the following?
 1. AUA rUTI 2025 Moderate/B (from audited rUTI page) (page: `01-foundations/pharmacology/hormonal-therapies/index.mdx`)
-
-## Batch 69: IDSA 2025 (S2)
-
-Question: In IDSA 2025, what does the source say about each of the following?
-1. IDSA 2025 antibiogram/CAUTI via web summary (page: `01-foundations/pharmacology/infection-prophylaxis/uti-treatment-antibiotics.mdx`)
 
 ## Batch 70: WFH 2013 (S2)
 
 Question: In WFH 2013, what does the source say about each of the following?
 1. WFH 2013 hematuria statement (full text not read; supported by WFH ch.7 search summary) (page: `01-foundations/pharmacology/intraoperative-adjuncts/tranexamic-acid.mdx`)
 
-## Batch 71: Willis-era ASCRS 2024 (S2)
-
-Question: In Willis-era ASCRS 2024, what does the source say about each of the following?
-1. Willis-era ASCRS 2024 full text beyond recs 2-3 (page: `01-foundations/pharmacology/perioperative-eras/bowel-preparation.mdx`)
-
-## Batch 72: AUA 2008 (S2)
+## Batch 71: AUA 2008 (S2)
 
 Question: In AUA 2008, what does the source say about each of the following?
 1. AUA 2008 BPS and EAU 2026 thromboprophylaxis not located (page: `01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx`)
 
-## Batch 73: Kling 2025 (S2)
-
-Question: In Kling 2025, what does the source say about each of the following?
-1. Kling 2025 guideline summary beyond abstract (page: `01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx`)
-
-## Batch 74: AUGS-IUGA 2020 (S2)
+## Batch 72: AUGS-IUGA 2020 (S2)
 
 Question: In AUGS-IUGA 2020, what does the source say about each of the following?
 1. AUGS-IUGA 2020 terminology report statements (page: `01-foundations/surgical-principles/exposure.mdx`)
 
-## Batch 75: ASA 2018 (S2)
+## Batch 73: ASA 2018 (S2)
 
 Question: In ASA 2018, what does the source say about each of the following?
 1. ASA 2018 advisory wording (page: `01-foundations/surgical-principles/exposure.mdx`)
 
-## Batch 76: Joshi 2022 (S2)
+## Batch 74: Joshi 2022 (S2)
 
 Question: In Joshi 2022, what does the source say about each of the following?
 1. Joshi 2022 IIEF-5 statement (abstract only) (page: `01-foundations/surgical-principles/flaps-gu-reconstruction.mdx`)
 
-## Batch 77: Chen 2021 (S2)
+## Batch 75: Chen 2021 (S2)
 
 Question: In Chen 2021, what does the source say about each of the following?
 1. Chen 2021 gastrodin paper is a weak source for the random-flap tip perfusion sentence (ref 16) (page: `01-foundations/surgical-principles/flaps-gu-reconstruction.mdx`)
 
-## Batch 78: ACG 2021 (S2)
+## Batch 76: ACG 2021 (S2)
 
 Question: In ACG 2021, what does the source say about each of the following?
 1. ACG 2021 statement on dynamic graciloplasty (page: `01-foundations/surgical-principles/flaps/gracilis.mdx`)
 
-## Batch 79: Wilson 2017 (S2)
+## Batch 77: Wilson 2017 (S2)
 
 Question: In Wilson 2017, what does the source say about each of the following?
 1. Wilson 2017 technique steps and drain statement (no abstract detail) (page: `01-foundations/surgical-principles/flaps/martius.mdx`)
 
-## Batch 80: EAU Prostate Cancer 2026 (S2)
+## Batch 78: EAU Prostate Cancer 2026 (S2)
 
 Question: In EAU Prostate Cancer 2026, what does the source say about each of the following?
 1. EAU Prostate Cancer 2026 PLND flap wording ('consider a studied flap technique'; guideline text not in sources-local) (page: `01-foundations/surgical-principles/flaps/peritoneal.mdx`)
 
-## Batch 81: ICSM 2024 (S2)
+## Batch 79: ICSM 2024 (S2)
 
 Question: In ICSM 2024, what does the source say about each of the following?
 1. ICSM 2024 and EAU 2026 sexual health graft-selection wording (paywalled/web) (page: `01-foundations/surgical-principles/grafts/saphenous-vein.mdx`)
 
-## Batch 82: AHA 2022 (S2)
+## Batch 80: AHA 2022 (S2)
 
 Question: In AHA 2022, what does the source say about each of the following?
 1. AHA 2022 statement wording (secondary only) (page: `01-foundations/surgical-principles/grafts/saphenous-vein.mdx`)
 
-## Batch 83: AHA 2025 (S2)
+## Batch 81: AHA 2025 (S2)
 
 Question: In AHA 2025, what does the source say about each of the following?
 1. AHA 2025 gas embolism wording and ISGE angle/pressure specifics (full text not read) (page: `01-foundations/surgical-principles/laparoscopic-access.mdx`)
 
-## Batch 84: ASGE 2023 (S2)
+## Batch 82: ASGE 2023 (S2)
 
 Question: In ASGE 2023, what does the source say about each of the following?
 1. ASGE 2023 recommendation/pilot percentages (no abstract) (page: `01-foundations/surgical-principles/surgical-ergonomics.mdx`)
 
-## Batch 85: Rossaint 2023 (S2)
+## Batch 83: Rossaint 2023 (S2)
 
 Question: In Rossaint 2023, what does the source say about each of the following?
 1. Rossaint 2023 thresholds (recalled from guideline, abstract lacks numbers) (page: `01-foundations/surgical-principles/vascular-damage-control.mdx`)
 
-## Batch 86: Enz 2026 (S2)
+## Batch 84: Enz 2026 (S2)
 
 Question: In Enz 2026, what does the source say about each of the following?
 1. Enz 2026 consensus '90-minute glove change' (paywalled, abstract lists topics only) so stated at topic level (page: `01-foundations/surgical-skills/glove-wetting.mdx`)
 
-## Batch 87: AUGS 2019 (S2)
+## Batch 85: AUGS 2019 (S2)
 
 Question: In AUGS 2019, what does the source say about each of the following?
 1. AUGS 2019 Pelvisoft statement (page: `01-foundations/tools/biomaterials/biological-grafts/porcine-acellular-collagen.mdx`)
 
-## Batch 88: Palminteri 2012 (S2)
+## Batch 86: Palminteri 2012 (S2)
 
 Question: In Palminteri 2012, what does the source say about each of the following?
 1. Palminteri 2012 n is 25 in abstract (EAU table lists 30) (page: `01-foundations/tools/biomaterials/biological-grafts/porcine-sis.mdx`)
 
-## Batch 89: SUFU 2023 (S2)
+## Batch 87: SUFU 2023 (S2)
 
 Question: In SUFU 2023, what does the source say about each of the following?
 1. AUA/SUFU 2023 list (page: `01-foundations/tools/biomaterials/biological-grafts/tutoplast-allografts.mdx`)
 
-## Batch 90: Kobashi 2023 (S2)
+## Batch 88: Kobashi 2023 (S2)
 
 Question: In Kobashi 2023, what does the source say about each of the following?
 1. Kobashi 2023 details beyond local guideline text (page: `01-foundations/tools/biomaterials/bulking-agents/durasphere.mdx`)
 
-## Batch 91: Levy 2026 (S2)
-
-Question: In Levy 2026, what does the source say about each of the following?
-1. Levy 2026 consensus details (page: `01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx`)
-
-## Batch 92: CIRSE 2026 (S2)
+## Batch 89: CIRSE 2026 (S2)
 
 Question: In CIRSE 2026, what does the source say about each of the following?
 1. CIRSE 2026 and EAU 2026 statements (kept from v1 review) (page: `01-foundations/tools/biomaterials/ureteral-stents/nephrostomy-tube.mdx`)
 
-## Batch 93: Feng 2021 (S2)
+## Batch 90: Feng 2021 (S2)
 
 Question: In Feng 2021, what does the source say about each of the following?
 1. Feng 2021 meta not read. | Sept 26 new-source pass: Hematuria bullet verified against AUA/SUFU 2025 statements 10 (page: `01-foundations/tools/instruments/endoscopy/flexible-cystoscope.mdx`)
 
-## Batch 94: AUA UTUC 2023 (S2)
+## Batch 91: AUA UTUC 2023 (S2)
 
 Question: In AUA UTUC 2023, what does the source say about each of the following?
 1. AUA UTUC 2023 statement wording (page: `01-foundations/tools/instruments/endoscopy/flexible-ureteroscope.mdx`)
 
-## Batch 95: SUFU 2025 (S2)
+## Batch 92: SUFU 2025 (S2)
 
 Question: In SUFU 2025, what does the source say about each of the following?
 1. rest of page not checked against these sources. | Sept 26 new-source pass: Hematuria bullet verified against AUA/SUFU 2025 statements 10 (page: `01-foundations/tools/instruments/endoscopy/rigid-cystoscope.mdx`)
 
-## Batch 96: AUA 2012 (S2)
+## Batch 93: AUA 2012 (S2)
 
 Question: In AUA 2012, what does the source say about each of the following?
 1. ref 1 (AUA 2012 abstract not in PubMed) (page: `01-foundations/tools/instruments/sounds-bougies/gelman-visualizing-sound.mdx`)
 
-## Batch 97: AUA 2025 (S2)
+## Batch 94: AUA 2025 (S2)
 
 Question: In AUA 2025, what does the source say about each of the following?
 1. AUA 2025 video abstract 5/7 at 21.6 mo (auajournals 403) (page: `01-foundations/tools/instruments/urethral-specialty/ravini.mdx`)
 
-## Batch 98: IUGA 2026 (S2)
+## Batch 95: IUGA 2026 (S2)
 
 Question: In IUGA 2026, what does the source say about each of the following?
 1. IUGA 2026 OASI guideline (page: `02-evaluation/ancillary-tests/anorectal-testing.mdx`)
 
-## Batch 99: ACR 2022 (S2)
+## Batch 96: ACR 2022 (S2)
 
 Question: In ACR 2022, what does the source say about each of the following?
 1. ACR 2022 wording (page: `02-evaluation/ancillary-tests/anorectal-testing.mdx`)
 
-## Batch 100: Fernbach 1993 (S2)
+## Batch 97: Fernbach 1993 (S2)
 
 Question: In Fernbach 1993, what does the source say about each of the following?
 1. SFU grade definitions from memory of Fernbach 1993 abstract (no abstract available) (page: `02-evaluation/imaging/ultrasound.mdx`)
 
-## Batch 101: ACR 2026 (S2)
+## Batch 98: ACR 2026 (S2)
 
 Question: In ACR 2026, what does the source say about each of the following?
 1. ACR 2026 sarcopenia criteria wording (paywalled) (page: `02-evaluation/laboratory-studies/nutritional-assessment/body-composition.mdx`)
 
-## Batch 102: Bordeianou 2018 (S2)
-
-Question: In Bordeianou 2018, what does the source say about each of the following?
-1. ref4 Bordeianou 2018 weak support for support-layer anatomy (page: `03-clinical-conditions/03c-pelvic-support/posterior-compartment.mdx`)
-
-## Batch 103: IDSA 2014 (S2)
+## Batch 99: IDSA 2014 (S2)
 
 Question: In IDSA 2014, what does the source say about each of the following?
 1. IDSA 2014 3-4 episodes/yr from memory of guideline (page: `03-clinical-conditions/03g-genital-scrotal/genital-lymphedema.mdx`)
 
-## Batch 104: SVS 2011 (S2)
+## Batch 100: SVS 2011 (S2)
 
 Question: In SVS 2011, what does the source say about each of the following?
 1. MPA/GnRH statement (ref13 SVS 2011 full text) (page: `03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders.mdx`)
 
-## Batch 105: AGA 2019 (S2)
+## Batch 101: AGA 2019 (S2)
 
 Question: In AGA 2019, what does the source say about each of the following?
 1. AGA 2019 OIC recommendation grades (abstract blank) (page: `03-clinical-conditions/03i-defecatory-disorders/chronic-constipation.mdx`)
 
-## Batch 106: IUGA 2023 (S2)
+## Batch 102: IUGA 2023 (S2)
 
 Question: In IUGA 2023, what does the source say about each of the following?
 1. ICI/IUGA 2023 and NICE FI guidance not checked (page: `03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx`)
 
-## Batch 107: Marshall 1991 (S2)
+## Batch 103: Marshall 1991 (S2)
 
 Question: In Marshall 1991, what does the source say about each of the following?
 1. 21 (Marshall 1991 chapter, EAU primary urethral carcinoma web chapter) not read in full (page: `04-surgical-techniques/04a-urethral-reconstruction/urethrectomy.mdx`)
 
-## Batch 108: Kaveggia 1991 (S2)
+## Batch 104: Kaveggia 1991 (S2)
 
 Question: In Kaveggia 1991, what does the source say about each of the following?
 1. Kaveggia 1991 not used. || EAU MIBC 2026 pass (Sept 26): EAU MIBC 2026 (local text, Mar 2026) checked: B12 statement is narrative text in 7.4 (annually; 17% low) (page: `04-surgical-techniques/04c-urinary-diversion/colon-conduit.mdx`)
 
-## Batch 109: ACPGBI 2010 (S2)
+## Batch 105: ACPGBI 2010 (S2)
 
 Question: In ACPGBI 2010, what does the source say about each of the following?
 1. BSG/ACPGBI 2010 annual sigmoidoscopy from year 10 (grade C) and snare-polypectomy caution at the anastomosis (Gut full text blocked) (page: `04-surgical-techniques/04c-urinary-diversion/mainz-pouch-ii.mdx`)
 
-## Batch 110: BSG 2010 (S2)
-
-Question: In BSG 2010, what does the source say about each of the following?
-1. BSG 2010 sigmoidoscopy wording (paywalled, v1 record only) (page: `04-surgical-techniques/04c-urinary-diversion/ureterosigmoidostomy.mdx`)
-
-## Batch 111: Tuderti 2020 (S2)
+## Batch 106: Tuderti 2020 (S2)
 
 Question: In Tuderti 2020, what does the source say about each of the following?
 1. Tuderti 2020 'older comparison group' statement (full text) (page: `04-surgical-techniques/04c-urinary-diversion/vip-neobladder.mdx`)
 
-## Batch 112: Han 2023 (S2)
+## Batch 107: Han 2023 (S2)
 
 Question: In Han 2023, what does the source say about each of the following?
 1. 24 abstracts not opened (Han 2023, Xu 2023, Pettersson 1984, Steffens 2007, Holmang 2005, McCabe 2025, EAU UTUC web section) (page: `04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/renal-autotransplantation.mdx`)
 
-## Batch 113: AUA 2010 (S2)
-
-Question: In AUA 2010, what does the source say about each of the following?
-1. AUA 2010 VUR guideline is old (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/ureteral-reimplantation.mdx`)
-
-## Batch 114: KDIGO 2025 (S2)
+## Batch 108: KDIGO 2025 (S2)
 
 Question: In KDIGO 2025, what does the source say about each of the following?
 1. KDIGO 2025 ADPKD recommendation grades 3.2.3 (2C) and HALN (2D) (full text not local) (page: `04-surgical-techniques/04d-upper-tract-reconstruction/simple-nephrectomy.mdx`)
 
-## Batch 115: Okusanya 2026 (S2)
+## Batch 109: Okusanya 2026 (S2)
 
 Question: In Okusanya 2026, what does the source say about each of the following?
 1. Okusanya 2026 published counts (8 studies/3,166) differ from the guideline's earlier review (7 studies/3,103) (page: `04-surgical-techniques/04e-genital-reconstruction/defibulation.mdx`)
 
-## Batch 116: Le 2021 (S2)
+## Batch 110: Le 2021 (S2)
 
 Question: In Le 2021, what does the source say about each of the following?
 1. Le 2021 (page: `04-surgical-techniques/04e-genital-reconstruction/fgm-fat-grafting.mdx`)
 
-## Batch 117: Charles 1912 (S2)
+## Batch 111: Lee 2016 (S2)
+
+Question: In Lee 2016, what does the source say about each of the following?
+1. Lee 2016 as anatomy source. || EAU 2026 check Sept 26: penile cancer guideline is not in local sources (page: `04-surgical-techniques/04e-genital-reconstruction/gulino-everted-urethral-flap.mdx`)
+
+## Batch 112: Charles 1912 (S2)
 
 Question: In Charles 1912, what does the source say about each of the following?
 1. Charles 1912 statement (uncited) (page: `04-surgical-techniques/04e-genital-reconstruction/modified-charles-procedure.mdx`)
 
-## Batch 118: KDIGO 2020 (S2)
+## Batch 113: KDIGO 2020 (S2)
 
 Question: In KDIGO 2020, what does the source say about each of the following?
 1. KDIGO 2020 panniculectomy wording (full text) (page: `04-surgical-techniques/04e-genital-reconstruction/panniculectomy.mdx`)
 
-## Batch 119: FDA 2019 (S2)
+## Batch 114: FDA 2019 (S2)
 
 Question: In FDA 2019, what does the source say about each of the following?
 1. need full text. (4) Spondylodiscitis 'uncommon' and no FDA statement on page: FDA 2019 order/abdominal-mesh exemption not cited (page: `04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx`)
 
-## Batch 120: Ferrari 2026 (S2)
+## Batch 115: Ferrari 2026 (S2)
 
 Question: In Ferrari 2026, what does the source say about each of the following?
 1. Ferrari 2026 RCT-vs-observational split beyond abstract. | AUGS session: added ReCOUP paragraph (Mueller 2021 1-yr, doi 10.1097/SPV.0000000000000922 verified PMID 32947549: 77/95, failure 8.8% liberal (page: `04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx`)
 
-## Batch 121: AUGS 2025 (S2)
+## Batch 116: AUGS 2025 (S2)
 
 Question: In AUGS 2025, what does the source say about each of the following?
 1. AUGS 2025 CCS Q20 and Uccella 2021 68.5 d/64% figures (full text unread) (page: `04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx`)
 
-## Batch 122: AWMF 2026 (S2)
+## Batch 117: AWMF 2026 (S2)
 
 Question: In AWMF 2026, what does the source say about each of the following?
 1. AWMF 2026 iliococcygeus statement (page: `04-surgical-techniques/04g-prolapse-repair/index.mdx`)
 
-## Batch 123: BTS 2023 (S2)
+## Batch 118: BTS 2023 (S2)
 
 Question: In BTS 2023, what does the source say about each of the following?
 1. BTS 2023 recommendation text (page: `04-surgical-techniques/04h-fistula-repair/all-patients/nephropleural.mdx`)
 
-## Batch 124: Lau 1998 (S2)
+## Batch 119: Lau 1998 (S2)
 
 Question: In Lau 1998, what does the source say about each of the following?
 1. Lau 1998 full text. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (18 Fr >=7 d, two-layer 2-0/3-0, closed-suction drain, cystography >=7 d, 3-4 wk complex) (page: `04-surgical-techniques/04h-fistula-repair/all-patients/vesicocutaneous.mdx`)
 
-## Batch 125: WSES-AAST 2021 (S2)
+## Batch 120: WSES-AAST 2021 (S2)
 
 Question: In WSES-AAST 2021, what does the source say about each of the following?
 1. WSES-AAST 2021 48-h wording (page: `04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx`)
 
-## Batch 126: EAST 2016 (S2)
+## Batch 121: EAST 2016 (S2)
 
 Question: In EAST 2016, what does the source say about each of the following?
 1. EAST 2016 rectal guideline (403) (page: `04-surgical-techniques/04h-fistula-repair/fecal-diversion.mdx`)
 
-## Batch 127: ICSM 2015 (S2)
+## Batch 122: ICSM 2015 (S2)
 
 Question: In ICSM 2015, what does the source say about each of the following?
 1. VED 60-80% (ICSM 2015; AUA VED mean responder 76%) (page: `04-surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction.mdx`)
 
-## Batch 128: Baniel 2000 (S2)
+## Batch 123: Baniel 2000 (S2)
 
 Question: In Baniel 2000, what does the source say about each of the following?
 1. QuadMix as salvage (AUA cites Baniel 2000 stepped-care only) (page: `04-surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections.mdx`)
 
-## Batch 129: SMSNA 2024 (S2)
+## Batch 124: SMSNA 2024 (S2)
 
 Question: In SMSNA 2024, what does the source say about each of the following?
 1. SMSNA 2024 wording that sliding/slicing is 'investigational/research-only' (abstract lists the topic; full text not reached, web tools rate-limited) (page: `04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/sliding-slicing-techniques.mdx`)
 
-## Batch 130: EAU 2025 (S2)
+## Batch 125: EAU 2025 (S2)
 
 Question: In EAU 2025, what does the source say about each of the following?
 1. EAU 2025 verapamil 'recommends against' (page: `04-surgical-techniques/04j-sexual-dysfunction/peyronies.mdx`)
 
-## Batch 131: ICSM 2016 (S2)
+## Batch 126: ICSM 2016 (S2)
 
 Question: In ICSM 2016, what does the source say about each of the following?
 1. ICSM 2016 wording (page: `04-surgical-techniques/04j-sexual-dysfunction/ved.mdx`)
 
-## Batch 132: ESSM 2020 (S2)
+## Batch 127: ESSM 2020 (S2)
 
 Question: In ESSM 2020, what does the source say about each of the following?
 1. ESSM 2020 wording (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx`)
 
-## Batch 133: FIGO 2025 (S2)
+## Batch 128: FIGO 2025 (S2)
 
 Question: In FIGO 2025, what does the source say about each of the following?
 1. FIGO 2025 statement (uncited) (page: `04-surgical-techniques/04l-cosmetic-genital-surgery/monsplasty.mdx`)
 
-## Batch 134: SIR 2019 (S2)
+## Batch 129: SIR 2019 (S2)
 
 Question: In SIR 2019, what does the source say about each of the following?
 1. SIR 2019 consensus levels (no abstract) (page: `04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx`)
 
-## Batch 135: ACS 2019 (S2)
+## Batch 130: ACS 2019 (S2)
 
 Question: In ACS 2019, what does the source say about each of the following?
 1. ACS 2019 Lynch age-35 statement (page: `05-special-populations/05e-womens-health/cancer-screening/endometrial.mdx`)
 
-## Batch 136: Beers 2023 (S2)
+## Batch 131: Beers 2023 (S2)
 
 Question: In Beers 2023, what does the source say about each of the following?
 1. Beers 2023 wording (page: `05-special-populations/05f-lifelong-care/geriatric-urology.mdx`)
