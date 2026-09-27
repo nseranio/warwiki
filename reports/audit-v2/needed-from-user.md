@@ -29,18 +29,24 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 **New sources supplied and checked September 26 (evening):** AUA/ASCO/SUO MIBC 2024, AUA antimicrobial best practice statement 2019/2020, IDSA asymptomatic bacteriuria 2019, EAU 2026 Non-Neurogenic Male LUTS and Chronic Pelvic Pain, ACS GU injury guidelines 2025, Haylen 2011 IUGA/ICS complications, AHA/ACC 2024 perioperative, ESE/Endocrine Society 2024 glucocorticoid, WHO 2025 FGM, ASRA LAST checklist, Axonics MRI guidelines and Model 5101/4101 implant manuals (Canadian editions), eCoin patient manual.
 
-**New open decisions (answer in one line each):**
-27. About 47 other pages have audit-style `evidenceNote` wording; clean them the same way?
-28. Remove Spectra, Genesis and TUBE sell-sheet content on `implant-models.mdx` (marketing-data rule)?
-29. `steroids.mdx`: keep ESE Table 8 default plus the lower-intensity alternative side by side, or take one stance?
-30. Female urethrectomy without a neobladder: AUA says perform it; EAU is looser. Pages cite both. Keep both (recommended)?
-31. Add MIBC-based metabolic follow-up to `mainz-pouch-ii.mdx` (recommended)?
-32. `genital-scrotal-trauma.mdx` abuse assessment: ACS favors exam under anesthesia; the forensic source prefers a noninstrumented external exam. Which leads (recommended: ACS)?
-33. Pentosan polysulfate: EAU strongly recommends; CUA 2025 conditionally against; AUA counsels on retinal risk. Pages state the difference; want a stronger position?
-34. GreenLight 80 W: EAU strongly recommends; AUA judged 80 W less effective than 120/180 W. Both stated; choose?
-35. US Axonics implant manuals wanted, or are the Canadian editions enough?
+**New decisions -- answered September 27, applied and pushed (`3cc31c2f`, `053d48ac`, `4106a5c6`):**
+27. `evidenceNote`/`evidenceUpdated` frontmatter is not rendered anywhere on the public page (checked every theme/component file) -- internal bookkeeping only. Per the user's conditional ("if on the page, remove"), left as-is; no page changes.
+28. Removed the Spectra, Genesis and TUBE sell-sheet citations on `implant-models.mdx`. Found legitimate non-marketing replacements instead of deleting the content outright: AMS Spectra now cites its FDA 510(k) summary (K082006); Genesis and Promedon Tube now cite a peer-reviewed device review (Chung & Wang 2023, *Ther Adv Urol*). One unverifiable claim was dropped (Genesis "silver wire coil and helix core"; Promedon Tube "radiopaque" RTEs) since neither source supports it.
+29. Confirmed: "Table 8" is the real table number in the published ESE/Endocrine Society guideline (Beuschlein 2024) -- not an arbitrary internal label. No page change; both positions stay side by side as before.
+30. Confirmed: keep both AUA and EAU positions on female urethrectomy without neobladder; no page change needed (already the case).
+31. Added AUA/ASCO/SUO 2024 MIBC Statement 31 metabolic-surveillance cadence to `mainz-pouch-ii.mdx`, cross-linked to `renal-function-metabolic-surveillance.mdx`.
+32. `genital-scrotal-trauma.mdx` abuse-assessment section reordered to lead with ACS as the primary standard; the forensic-medicine view is now stated as a secondary alternative.
+33. Confirmed: state the pentosan polysulfate split as-is (EAU strong-for / CUA conditional-against / AUA retinal caution); no page change needed (already the case).
+34. Confirmed: keep both GreenLight 80 W positions stated (EAU strong-recommend vs. AUA less-effective finding); no page change needed (already the case).
+35. Found and downloaded the three matching US-English Axonics editions (MRI Patient Guidelines, Model 4101 and Model 5101 IPG Implant Manuals) directly from axonics.com; extracted to `sources-local/dl-2026-09-26/` alongside the existing Canadian editions.
 
-**Applied by the agents but still to do:** VTE prophylaxis Statement 16 (MIBC, strong, up to four weeks) on `perioperative-eras/vte-prophylaxis.mdx`.
+**Still open decisions and MASTER 12-month figures (applied September 27, `4106a5c6`):**
+(a) PTNS pages already keep the US-cleared (OAB-only) and international (broader IFU) labeling separate and clearly marked -- checked, no change needed.
+(b) ASCRS diverticular-disease chapter citation fixed on 3 pages to "*The ASCRS Textbook of Colon and Rectal Surgery.* 4th ed. Springer; 2022," per the user's supplied detail.
+(f) MIBC VTE Statement 16 was already applied to `vte-prophylaxis.mdx` in an earlier batch -- confirmed done, not a repeat action.
+**MASTER 12-month figures.** OpenEvidence review of the primary paper (Abrams 2021, *Eur Urol*) confirmed both the 3.6% risk difference and the 1.4-point ICIQ difference are correct, distinct 12-month endpoints, not a conflation -- not flagged/softened. Applied the recommended clarity edits (label the risk difference as favoring AUS; state both the 2021-article and HTA-monograph ICIQ values) across `advance-sling.mdx`, `male-urethral-slings.mdx`, `male-stress-incontinence-database.mdx` and `artificial-urinary-sphincter.mdx`. Along the way, caught and fixed a real citation error on the latter two pages: what was cited as "the HTA report" was actually a different, later Constable paper (the 2026 24-month follow-up) -- the true 2022 HTA monograph (doi:10.3310/TBFZ0277) wasn't cited on either page at all. Added it as a new reference on both and corrected the mismatched citation.
+
+(c), (d), (e) remain open source requests (ASCRS 2020 diverticulitis guideline, Revi technique guide, US InterStim MRI guidelines) -- no decision needed, just the documents if available.
 
 **Sources supplied later on September 26 (checked, pushed):** NICE NG239 and NG112, ADA 2026 hospital chapter, AUA VUR guideline (2010, amended 2017), ASCRS Constipation 2024, Hemorrhoids 2024, Ostomy 2022, Crohn's 2020, Rectal Prolapse 2017, ASCRS diverticular textbook chapter, Urgent PC IFU, K132561 (NURO 510k), UCSD PTNS procedure, InterStim MRI checklist (UK), Revi patient therapy guide, Rezum Canada IFU, MASTER HTA monograph 2022 (12-month figures settled: the pages had the 2021 article values; the ICIQ-UI 1.4 was the 24-month value), Erickson LSE 2020, Larson 2013. The NLUTD 2024 amendment and the Medtronic NURO IFU could not be found by the user and are dropped from the wanted list. ACOG documents wait until the user has access.
 **Applied without a decision:** renal-function-metabolic-surveillance B12 clause tightened to NICE.
@@ -49,10 +55,10 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 **Older open items (from the earlier handoff)**
 18. Fournier severity index cutoffs versus Laor 1995 (source needed: see B).
 19. Transitional urology transfer age (changed to 18 to 22 from a secondary summary of White and Cooley 2018): confirm from the primary text.
-20. Endocrine Society 2017 criteria on `simple-orchiectomy.mdx`: the 2017 guideline is now supplied and the page was confirmed unchanged, so this can probably be closed.
+20. Endocrine Society 2017 criteria on `simple-orchiectomy.mdx`: closed September 27 -- no page change needed.
 21. Carter-Trost technique reference (removed from three penile implant pages): restore only with a real citation.
 22. Some frontmatter `evidenceNote` fields still contain audit-style wording (Backhaus, Mixter, vaginal anatomy). Reword by hand?
-23. Cloud voice: needs your steps (OpenAI $50 limit, Vercel Blob store, `WARWIKI_ENABLE_CLOUD_TTS=true`, `WARWIKI_TTS_MONTHLY_BUDGET_USD=45`, redeploy). Stays off until the audit is finished.
+23. Cloud voice: user said yes, bring it back online (September 27). In progress -- blocked on a Vercel login in the browser session (needs the user to sign in) before the Blob store and the two non-secret env vars (`WARWIKI_ENABLE_CLOUD_TTS=true`, `WARWIKI_TTS_MONTHLY_BUDGET_USD=45`) can be set; `OPENAI_API_KEY` must be entered by the user directly (Claude does not enter API keys/tokens into any field, even with permission).
 24. Codex CLI is still broken (`npm install -g @openai/codex`); nothing is delegated to GPT.
 
 **MASTER (new this session)**
