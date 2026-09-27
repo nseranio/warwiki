@@ -42,6 +42,10 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 **Applied by the agents but still to do:** VTE prophylaxis Statement 16 (MIBC, strong, up to four weeks) on `perioperative-eras/vte-prophylaxis.mdx`.
 
+**Sources supplied later on September 26 (checked, pushed):** NICE NG239 and NG112, ADA 2026 hospital chapter, AUA VUR guideline (2010, amended 2017), ASCRS Constipation 2024, Hemorrhoids 2024, Ostomy 2022, Crohn's 2020, Rectal Prolapse 2017, ASCRS diverticular textbook chapter, Urgent PC IFU, K132561 (NURO 510k), UCSD PTNS procedure, InterStim MRI checklist (UK), Revi patient therapy guide, Rezum Canada IFU, MASTER HTA monograph 2022 (12-month figures settled: the pages had the 2021 article values; the ICIQ-UI 1.4 was the 24-month value), Erickson LSE 2020, Larson 2013. The NLUTD 2024 amendment and the Medtronic NURO IFU could not be found by the user and are dropped from the wanted list. ACOG documents wait until the user has access.
+**Applied without a decision:** renal-function-metabolic-surveillance B12 clause tightened to NICE.
+**Still open from this round:** (a) state the US label separately on the PTNS page (Urgent PC IFU lists fecal incontinence internationally; NURO 510(k) covers OAB only)? (b) diverticular textbook chapter has no year: cite undated? (c) ASCRS 2020 left-sided diverticulitis guideline would close one fistula-page grade. (d) Revi surgical technique guide and US InterStim MRI guidelines wanted. (e) 24-month MASTER SAE counts are unpublished. (f) AUA MIBC VTE Statement 16 not yet applied to `vte-prophylaxis.mdx`.
+
 **Older open items (from the earlier handoff)**
 18. Fournier severity index cutoffs versus Laor 1995 (source needed: see B).
 19. Transitional urology transfer age (changed to 18 to 22 from a secondary summary of White and Cooley 2018): confirm from the primary text.
@@ -63,7 +67,7 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 ## B. Sources still needed, by value
 
 **Guidelines and consensus (highest value first)**
-1. AUA/SUFU Neurogenic LUTD 2024 amendment text (the supplied 2021 file has none).
+1. (Dropped: no NLUTD 2024 amendment could be found.)
 2. (Supplied September 26 evening: AUA/ASCO/SUO MIBC 2024.)
 3. The 2025 AUGS-IUGA complications update (Haylen 2011 now supplied and the C/T/S table closed).
 4. ACOG documents: Practice Bulletins 214 (prolapse), 213 (sexual dysfunction), 155 (urinary incontinence), 210 (fecal incontinence), 198 (obstetric lacerations), 218 (chronic pelvic pain); Committee Opinions 694 (mesh complications), 795 (cosmetic genital surgery), 823 (transgender care).
@@ -85,7 +89,7 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 **Manufacturer documents**
 1. Coloplast Titan, Titan Touch, Genesis IFUs (the AMS 800, AMS 700 and Tactra IFUs and the AMS 700 operating room manual are supplied); the AMS 800 male, female and pediatric operating room manual (92116967).
-2. Medtronic NURO/Urgent PC PTNS IFU (needle placement may be conflated on the PTNS pages: highest technique priority).
+2. (Dropped: Medtronic NURO IFU not findable; PTNS technique now checked against Urgent PC IFU, the NURO 510(k) and the UCSD protocol.)
 3. MRI manuals: InterStim II/Micro/X, Axonics, Altaviva, Revi, eCoin.
 4. ProACT, ATOMS, Argus/Virtue, Remeex IFUs; Rezum, UroLift, Aquablation, iTind IFUs.
 5. Drug labels: vaginal estrogen (Vagifem, Imvexxy, Premarin, Estring), Botox (post-11/2023), Nocdurna, Xiaflex, Vibegron, Ialuril, Elmiron.

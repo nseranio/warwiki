@@ -434,10 +434,10 @@ export const trials: Trial[] = [
     n: 380,
     population: 'Men with urodynamic stress urinary incontinence after prostate surgery',
     comparison: 'Male transobturator synthetic sling vs artificial urinary sphincter (AUS)',
-    primaryOutcome: 'Patient-reported incontinence (24-h pad use / continence) at 12 months',
+    primaryOutcome: 'Patient-reported continence at 12 months (any leakage on two ICIQ-UI SF items; 15% noninferiority margin)',
     result: 'Continence was similar at 12 months — 87.0% (sling) vs 84.2% (AUS), meeting noninferiority — but most secondary and post-hoc outcomes favored the AUS.',
     bottomLine: 'The first RCT comparing the male sling to the AUS for post-prostatectomy SUI: the sling is noninferior on the primary continence endpoint, but the AUS edges it on secondary outcomes — supporting the AUS as the benchmark for more severe incontinence.',
-    doi: '10.1016/j.eururo.2021.01.026',
+    doi: '10.1016/j.eururo.2021.01.024',
   },
 
   // ───────────────────────── Sexual Medicine (ED & Peyronie's) ─────────────────────────
