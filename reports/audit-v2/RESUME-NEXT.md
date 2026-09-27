@@ -6,6 +6,8 @@
 - After the queue finished, the user supplied about 75 guidelines, IFUs and papers on September 26 in three rounds. All were checked against the pages that rely on them and corrected. The lists are section C of [needed-from-user.md](needed-from-user.md) plus the two "Sources supplied" paragraphs in section A. Extracted text: `reports/audit-v2/sources-local/dl-2026-09-26/` (gitignored; PDFs in `~/Downloads`).
 - The user answered decisions 1 to 10, 11 to 16, 19, 21, 22 and the MASTER question (settled by the HTA monograph). All are applied.
 
+**Next phase (September 26):** the audit-to-completion plan, including the Sonnet 5 execution table and the first batch, is [NEXT-PHASE-PLAN.md](NEXT-PHASE-PLAN.md). Work from it; the steps below remain the detail for Stage A.
+
 ## Next steps, in order
 1. **Read [needed-from-user.md](needed-from-user.md)** and ask the user for the open decisions (numbers 27 to 35 and the "still open from this round" list a to f). Recommendations are written next to each; most are one-line applications.
 2. **Small items owed:** apply AUA MIBC Statement 16 (VTE prophylaxis, strong, up to four weeks) to `docs/01-foundations/pharmacology/perioperative-eras/vte-prophylaxis.mdx`; check whether NLUTD Statement 58 sits in the Diagnosis paper (doi 10.1097/JU.0000000000002235, now ref 31 on `renal-function-metabolic-surveillance.mdx`) or the Treatment paper (ref 6); open Okusanya 2026 to reconcile the defibulation counts (8 studies and 3,166 women vs the WHO review's 7 and 3,103).
