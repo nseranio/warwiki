@@ -30,10 +30,10 @@ Editorial:
 11. #35 Canadian Axonics manuals [try US manuals online first; ask only if blocked].
 12. (e) unpublished MASTER 24-month SAE counts [close; use 12-month paper].
 
-Plan level:
-13. Lift the hold on the textbook pilot (targeted version, section 3)?
-14. Separate Pass 2 voice sweep [no; apply Pass 2 only to pages touched in Stages A and B].
-15. Reviewer fields filled only for pages the user reviews, others blank?
+Plan level (answered September 27, applied):
+13. Lift the hold on the textbook pilot -- yes. Not the targeted grep-only version in section 3 below; the user reviewed the library directly and approved a 19-book queue (broader than "about 15"), run through the full CODEX-PROMPT.md mining procedure. See [library-queue.md](../textbook-mining/library-queue.md).
+14. Separate Pass 2 voice sweep -- no, confirmed. Pass 2 stays gated to pages the audit itself touches (per STYLE.md section 8); no dedicated sweep over the whole site.
+15. Reviewer fields filled only for pages the user reviews, others blank -- confirmed, already the status quo (no automation auto-fills `reviewer`; only 2 pages currently carry it, both set by Claude during early frontmatter-convention work).
 
 ### Sources
 
