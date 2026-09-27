@@ -278,23 +278,24 @@ Question: In ACS 2025, what does the source say about each of the following?
 2. ACS 2025 replantation wording (PDF not read) (page: `03-clinical-conditions/03g-genital-scrotal/testicular-reimplantation.mdx`)
 3. Kim/ Chung catheter-duration ranges only partly verified. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirms PER row/quote and 'within a few days' (page: `04-surgical-techniques/04a-urethral-reconstruction/posterior/primary-endoscopic-realignment.mdx`)
 4. Aaron textbook not rechecked. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (UU proximal to iliac vessels, reimplant distal, Heineke-Mikulicz conversion, principles) (page: `04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/ureteroureterostomy.mdx`)
-5. ACS 2025 best practices guideline not read (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx`)
+5. ACS 2025 best practices guideline not read. || ACS 2025 full-text check Sept 26: page makes no ACS claim and no 10-15 cm reach claim (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/boari-flap-psoas-hitch.mdx`)
 6. refs 8-11 not opened. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed for reimplant success 91-98% and refluxing vs nonrefluxing controversy (page: `04-surgical-techniques/04d-upper-tract-reconstruction/reimplantation/non-transecting-reimplant.mdx`)
 
 ## Batch 32: ACS 2025 (S2)
 
 Question: In ACS 2025, what does the source say about each of the following?
 1. Sherman viability limits (abstract only). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text confirmed (microsurgical replantation by urologist and microvascular surgeon, two-bag transpo (page: `04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx`)
-2. thigh-pouch/degloving bullets (standard teaching, uncited). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (75%, 50/30/9%, 3 days, US, >5 cm hematoma, bites, amputation tran (page: `05-special-populations/05a-trauma-emergencies/genital-scrotal-trauma.mdx`)
-3. transfer-criteria list wording vs ACS (paraphrase). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (10%, 3%, >90% blunt, ureter ~1%, 55%) (page: `05-special-populations/05a-trauma-emergencies/gu-injury-overview.mdx`)
-4. ACS 2025 and EAU statements (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/index.mdx`)
-5. most-common-injury-type claim. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified: direct ureter inspection at laparotomy (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/index.mdx`)
-6. added as ref 16. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 verified: contralateral kidney palpation (page: `05-special-populations/05a-trauma-emergencies/on-table-ivp.mdx`)
+2. no change. || ACS 2025 full-text check Sept 26: all six ACS bullets verified against Genital Injury pages 59-60 (no graded levels; wording 'perform', 'transfer urgently') (page: `04-surgical-techniques/04e-genital-reconstruction/penile-replantation.mdx`)
+3. thigh-pouch/degloving bullets (standard teaching, uncited). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (75%, 50/30/9%, 3 days, US, >5 cm hematoma, bites, amputation tran (page: `05-special-populations/05a-trauma-emergencies/genital-scrotal-trauma.mdx`)
+4. transfer-criteria list wording vs ACS (paraphrase). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (10%, 3%, >90% blunt, ureter ~1%, 55%) (page: `05-special-populations/05a-trauma-emergencies/gu-injury-overview.mdx`)
+5. ACS 2025 and EAU statements (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/index.mdx`)
+6. most-common-injury-type claim. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified: direct ureter inspection at laparotomy (page: `05-special-populations/05a-trauma-emergencies/intraoperative-consultation/index.mdx`)
 
 ## Batch 33: ACS 2025 (S2)
 
 Question: In ACS 2025, what does the source say about each of the following?
-1. antegrade nephrostogram at 6-8 weeks (absent from both ACS and EAU text). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (AAST table, 55% hematuria absent, 5-40% blunt, RPG, (page: `05-special-populations/05a-trauma-emergencies/ureteral-trauma.mdx`)
+1. added as ref 16. || ACS/IUGA primary-source pass (Sept 26): ACS 2025 verified: contralateral kidney palpation (page: `05-special-populations/05a-trauma-emergencies/on-table-ivp.mdx`)
+2. antegrade nephrostogram at 6-8 weeks (absent from both ACS and EAU text). || ACS/IUGA primary-source pass (Sept 26): ACS 2025 primary text verified (AAST table, 55% hematuria absent, 5-40% blunt, RPG, (page: `05-special-populations/05a-trauma-emergencies/ureteral-trauma.mdx`)
 
 ## Batch 34: WHO 2025 (S2)
 
