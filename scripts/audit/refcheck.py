@@ -7,18 +7,21 @@ Cache: reports/audit-v2/sources-local/refcheck-cache.json (gitignored).
 A reference is flagged when Crossref (or the DOI handle service) cannot find the DOI, or when the
 Crossref title shares under 40% of its words with the cited reference line, or the year differs by more than one.
 """
-import json, re, sys, pathlib, urllib.request, urllib.parse, concurrent.futures as cf, collections, time
+import html, json, re, sys, pathlib, urllib.request, urllib.parse, concurrent.futures as cf, collections, time
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CACHE = ROOT / "reports/audit-v2/sources-local/refcheck-cache.json"
 OUT = ROOT / "reports/audit-v2/reference-check.md"
-DOI = re.compile(r"10\.\d{4,9}/[^\s)>\]\"'<]+")
+DOI = re.compile(r"10\.\d{4,9}/[^\s>\]\"'<]+")
 REF = re.compile(r'^(?:<a id="ref[^"]*"></a>)+\s*(\d+)\.\s*(.*)$|^\[\^(\d+)\]:\s*(.*)$')
 UA = {"User-Agent": "WARWIKI-refcheck/1.0 (mailto:warwikihq@gmail.com)"}
 STOP = set("the of and for with in on a an to from by at as after versus vs study trial review patients".split())
 
 def clean(d):
-    return d.rstrip(".,;:").rstrip(")")
+    d = urllib.parse.unquote(html.unescape(d.replace("\\", ""))).rstrip(".,;:")
+    while d.endswith(")") and d.count(")") > d.count("("):
+        d = d[:-1].rstrip(".,;:")
+    return d
 
 def words(s):
     return {w for w in re.findall(r"[a-z]{4,}", s.lower()) if w not in STOP}
