@@ -140,7 +140,10 @@ async function adjustLedger(
       await writeLedger(path, next, etag);
       return { ok: true, store };
     } catch (err) {
-      if (!isConflict(err)) return { ok: false, reason: 'error' };
+      if (!isConflict(err)) {
+        console.error('[api/tts] ledger adjust failed', err);
+        return { ok: false, reason: 'error' };
+      }
       await new Promise((resolve) => setTimeout(resolve, 40 + Math.random() * 120));
     }
   }
@@ -216,7 +219,7 @@ export default async function handler(req: SpeechRequest, res: ServerResponse) {
   } catch (err) {
     // Not found is an ordinary miss. Any other cache fault is also treated as a
     // miss; the budget check below still fails closed if storage is unavailable.
-    if (!isNotFound(err)) console.error('[api/tts] cache lookup failed');
+    if (!isNotFound(err)) console.error('[api/tts] cache lookup failed', err);
   }
 
   const ip = firstHeader(req.headers?.['x-real-ip']) || firstHeader(req.headers?.['x-forwarded-for']).split(',')[0].trim() || 'unknown';
