@@ -10,7 +10,7 @@ const {withFigureMetadata} = require('../diagrams/lib/metadata');
 test('every published diagram has an accessible versioned source record without invented sign-off', () => {
   const assets = fs.readdirSync(path.join(__dirname, '../../static/img/diagrams')).filter(x => x.endsWith('.svg')).map(x => x.slice(0,-4)).sort();
   assert.deepEqual(Object.keys(registry.figures).sort(), assets);
-  assert.equal(assets.length,52);
+  assert.equal(assets.length,23);
   for (const id of assets) {
     const figure = registry.figures[id];
     assert.equal(figure.clinicalReview.status,'pending',id);
@@ -41,7 +41,7 @@ test('equal-limb Z geometry is calculated rather than treating clinical gain as 
   assert.equal(Math.round(zPlastyGain(30)),24);assert.equal(Math.round(zPlastyGain(90)),124);
 });
 test('metadata escapes registry text and keeps the original scene below a short SVG root', () => {
-  const svg=withFigureMetadata('<svg viewBox="0 0 800 300"><title>old</title><desc>old</desc><path id="scene"/></svg>', 'graft-placement');
+  const svg=withFigureMetadata('<svg viewBox="0 0 800 300"><title>old</title><desc>old</desc><path id="scene"/></svg>', 'quilting-stitch');
   assert.equal((svg.match(/<title\b/g)||[]).length,1);
   assert.match(svg,/<path id="scene"\/>/);assert.match(svg,/clinical review pending/);
   assert.match(svg,/viewBox="0 0 800 396"/);

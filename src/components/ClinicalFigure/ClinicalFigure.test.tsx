@@ -9,15 +9,15 @@ beforeAll(() => {
   HTMLDialogElement.prototype.showModal = function() {this.setAttribute('open', '');};
 });
 afterEach(cleanup);
-const figure = figures['graft-placement'];
+const figure = figures['quilting-stitch'];
 
 describe('clinical figures', () => {
   it('matches local original and hashed images, leaving unrelated and external images alone', () => {
-    expect(findFigure('/img/diagrams/graft-placement.svg')).toBe(figure);
-    expect(findFigure('/prefix/assets/images/graft-placement-a01c3456789def.svg?x=1')).toBe(figure);
+    expect(findFigure('/img/diagrams/quilting-stitch.svg')).toBe(figure);
+    expect(findFigure('/prefix/assets/images/quilting-stitch-a01c3456789def.svg?x=1')).toBe(figure);
     expect(findFigure('/img/logo.svg')).toBeUndefined();
-    expect(findFigure('https://other.example/img/diagrams/graft-placement.svg')).toBeUndefined();
-    expect(findFigure('/assets/images/graft-placement-wrong.svg')).toBeUndefined();
+    expect(findFigure('https://other.example/img/diagrams/quilting-stitch.svg')).toBeUndefined();
+    expect(findFigure('/assets/images/quilting-stitch-wrong.svg')).toBeUndefined();
   });
   it('provides the text equivalent, access limits and honest review status', () => {
     render(<ClinicalFigure figure={figure} src={figure.asset} alt="Existing article alt" />);
