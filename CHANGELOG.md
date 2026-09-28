@@ -6,6 +6,17 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-27 — Design refresh, audit gap closures, videos, schematic cull
+
+- **Design refresh** (mockups on a claude.ai design canvas, then built): section accent colors from `html[data-section]` set server-side in [Root.tsx](src/theme/Root.tsx) (Foundations blue, Evaluation teal, Conditions green, Atlas violet, Special Populations orange) on the active navbar, sidebar, TOC and breadcrumb items, H2 bars and landing labels; calmer headings (no underlines, section-colored H2 bar, horizontal rules become spacing), headings back in Inter after a serif trial; `section-stack` landing lists render as clickable cards; the citation hover preview keeps links and italics, adds "Jump to reference" and stays open while the pointer moves into it. Homepage: original tagline, suggested-search chips (desktop only, hidden below 820 px), section cards and a Recently updated strip from a build-time plugin ([plugins/warwiki-home-data.js](plugins/warwiki-home-data.js), no generated source files). Fixes: navbar overlap at 997–1240 px, database tables clipping their last column, the nested article card on mobile.
+- **"At a glance" removed** from the 10 pages that had it (user decision); CT Urogram keeps its study-selection table as "Choosing the Study"; the AUGS 2025 evaluation statement re-cited in the prolapse workup.
+- **Content fixes:** male uroflow and PVR reference values added beside the female ones on [Urodynamics](docs/02-evaluation/ancillary-tests/urodynamics.mdx) (Girman, Kolman, Berges, Roberts, Kuo, Lim and Yang, Liverpool nomograms, AUA 2026 chronic-retention definition); Fournier FGSI table corrected (sodium ≥180, bicarbonate >52); four unresolvable DOIs fixed or removed (Chancellor and Smith 2011 and Salyer 1971 do not exist); textbooks page corrected (seven entries) and three unfindable titles removed; CI fixed (TTS test mock, shimmer default voice).
+- **Sources applied:** FDA labels (Botox figures confirmed, three label dates corrected, dysuria/UTI/antibody data added; Exparel, Lovenox and Eliquis pharmacokinetics confirmed; MUSE discontinued in the US and noted on the ED pages); ASCRS 2020 diverticulitis (fistula colectomy 1B verified on five pages); US InterStim MRI guidelines (older leads are head-only 1.5 T, not excluded); Revi technique guide (OASIS 6-month ITT 76.4%, not 78%). Revi guide pages 6–8 (MRI) are still missing.
+- **Videos:** 44 pages gained one or two Video Library videos (user reviewed and accepted the picks); 90 pages skipped for lack of an on-topic video. Library gaps: Aquablation, Rezūm, UroLift, iTind, female TOT, Latzko.
+- **Schematics:** the user reviewed all 52 on a review page and deleted 29 (SVGs, generators, registry entries, embeds and captions); 23 remain. No new surgical schematics (user decision).
+
+---
+
 ## 2026-09-26 — Audit v2: tiers 1 to 3 complete, tier 4 started
 
 - Audited and published all of tier 3 (596 pages) and 138 of the 397 tier 4 pages in about 100 batches of five pages, each checked against PubMed abstracts, local guideline texts and manufacturer documents, then linted, built and pushed. Most batches also restored practical teaching that the v1 rewrite had removed, where a source supported it.
