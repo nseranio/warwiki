@@ -3,6 +3,7 @@ import Content from '@theme-original/DocItem/Content';
 import type ContentType from '@theme/DocItem/Content';
 import type { WrapperProps } from '@docusaurus/types';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { useLocation } from '@docusaurus/router';
 import ArticleListener from '@site/src/components/ArticleListener';
 import CitationTooltips from '@site/src/components/CitationTooltips';
 
@@ -14,11 +15,20 @@ export default function ContentWrapper(props: Props): React.ReactElement {
   // sub-section landings, and database index pages use this convention.
   // True article pages do not set hide_title, so they always get the player.
   const showListener = !frontMatter.hide_title;
+  const { pathname } = useLocation();
+  // Landings get the section label above their title (custom.css), except the
+  // five top-level section landings such as /docs/foundations.
+  const isSectionRoot = pathname.replace(/\/$/, '').split('/').length === 3;
+  const landingClass = frontMatter.hide_title
+    ? `wk-landing${isSectionRoot ? ' wk-landing--root' : ''}`
+    : undefined;
 
   return (
     <>
       {showListener && <ArticleListener />}
-      <Content {...props} />
+      <div className={landingClass}>
+        <Content {...props} />
+      </div>
       <CitationTooltips />
     </>
   );

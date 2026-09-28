@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import {usePluginData} from '@docusaurus/useGlobalData';
 
 import stats from '@site/src/data/stats.json';
 
@@ -20,7 +21,59 @@ function openSearch() {
   }
 }
 
+type RecentPage = {
+  title: string;
+  permalink: string;
+  section: string;
+  sectionKey: string;
+  updatedAt: number;
+};
+
+type HomeData = {
+  recent: RecentPage[];
+  sections: Record<string, number>;
+  schematics: number;
+  videos: number;
+};
+
+// Fill the DocSearch modal with a suggested query. The chip is also a plain
+// link to the search page, used when the modal input cannot be found.
+function searchFor(query: string) {
+  openSearch();
+  const started = Date.now();
+  const fill = () => {
+    const input = document.querySelector<HTMLInputElement>('.DocSearch-Input');
+    if (input) {
+      // Give DocSearch a moment to attach its handlers; a query typed into
+      // the input as it mounts is shown but never searched.
+      window.setTimeout(() => {
+        const setValue = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')?.set;
+        setValue?.call(input, query);
+        input.dispatchEvent(new Event('input', {bubbles: true}));
+        input.focus();
+      }, 200);
+    } else if (Date.now() - started < 2000) {
+      window.setTimeout(fill, 50);
+    } else {
+      window.location.assign(`/search?q=${encodeURIComponent(query)}`);
+    }
+  };
+  window.setTimeout(fill, 50);
+}
+
+const SUGGESTED_SEARCHES = [
+  'Buccal graft urethroplasty',
+  'Sacrocolpopexy',
+  'AUS cuff erosion',
+  'Urodynamics reference values',
+];
+
+function formatDate(ms: number): string {
+  return new Date(ms).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
+}
+
 function HomepageHeader() {
+  const {schematics, videos} = usePluginData('warwiki-home-data') as HomeData;
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -56,15 +109,147 @@ function HomepageHeader() {
             <kbd>K</kbd>
           </span>
         </button>
+        <div className={styles.trySearches}>
+          <span className={styles.tryLabel}>Try:</span>
+          {SUGGESTED_SEARCHES.map((query) => (
+            <a
+              key={query}
+              href={`/search?q=${encodeURIComponent(query)}`}
+              className={styles.tryChip}
+              onClick={(event) => {
+                event.preventDefault();
+                searchFor(query);
+              }}>
+              {query}
+            </a>
+          ))}
+        </div>
         <p className={styles.heroStats}>
           <span className={styles.heroStatsNumber}>{stats.articlesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>articles</span>
           <span className={styles.heroStatsDot} aria-hidden="true">·</span>
           <span className={styles.heroStatsNumber}>{stats.referencesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>references</span>
+          {schematics > 0 && (
+            <>
+              <span className={styles.heroStatsDot} aria-hidden="true">·</span>
+              <span className={styles.heroStatsNumber}>{schematics}</span>{' '}
+              <span className={styles.heroStatsLabel}>original schematics</span>
+            </>
+          )}
+          {videos > 0 && (
+            <>
+              <span className={styles.heroStatsDot} aria-hidden="true">·</span>
+              <span className={styles.heroStatsNumber}>{videos.toLocaleString()}</span>{' '}
+              <span className={styles.heroStatsLabel}>videos</span>
+            </>
+          )}
         </p>
       </div>
     </header>
+  );
+}
+
+type SectionCard = {
+  key: string;
+  accent: string;
+  title: string;
+  to: string;
+  description: string;
+  cta: string;
+};
+
+const SECTION_CARDS: SectionCard[] = [
+  {
+    key: 'foundations',
+    accent: 'foundations',
+    title: 'Foundations',
+    to: '/docs/foundations',
+    description: 'Anatomy, surgical principles and skills, perioperative care, pharmacology, instruments and biomaterials.',
+    cta: 'Explore Foundations',
+  },
+  {
+    key: 'evaluation',
+    accent: 'evaluation',
+    title: 'Evaluation',
+    to: '/docs/evaluation',
+    description: 'History, examination, imaging, urodynamics and laboratory workup before reconstruction.',
+    cta: 'Explore Evaluation',
+  },
+  {
+    key: 'clinical-conditions',
+    accent: 'conditions',
+    title: 'Clinical Conditions',
+    to: '/docs/clinical-conditions',
+    description: 'Storage and voiding disorders, pelvic support, neurogenic bladder, upper tract, fistula, genital and pelvic pain.',
+    cta: 'Explore Conditions',
+  },
+  {
+    key: 'surgical-techniques',
+    accent: 'atlas',
+    title: 'Treatment Atlas',
+    to: '/docs/surgical-techniques',
+    description: 'Searchable technique databases for urethral, bladder, upper-tract, prolapse, fistula and prosthetic surgery.',
+    cta: 'Open the Atlas',
+  },
+  {
+    key: 'special-populations',
+    accent: 'populations',
+    title: 'Special Populations',
+    to: '/docs/special-populations',
+    description: 'Trauma and emergencies, gender-affirming care, cancer survivorship, women’s health and lifelong care.',
+    cta: 'Explore Populations',
+  },
+];
+
+function HomepageSections() {
+  const {sections, videos} = usePluginData('warwiki-home-data') as HomeData;
+  return (
+    <section className={styles.homeSection} aria-labelledby="browse-heading">
+      <div className={styles.homeSectionHeader}>
+        <Heading as="h2" id="browse-heading" className={styles.homeHeading}>Browse the library</Heading>
+        <span className={styles.homeSectionNote}>Five sections, one reference</span>
+      </div>
+      <div className={styles.sectionGrid}>
+        {SECTION_CARDS.map((card) => (
+          <Link key={card.key} to={card.to} className={styles.sectionCard} data-accent={card.accent}>
+            <span className={styles.sectionCount}>
+              {sections[card.key] ? `${sections[card.key].toLocaleString()} pages` : '\u00a0'}
+            </span>
+            <span className={styles.sectionTitle}>{card.title}</span>
+            <span className={styles.sectionDesc}>{card.description}</span>
+            <span className={styles.sectionCta}>{card.cta} →</span>
+          </Link>
+        ))}
+        <Link to="/video-library" className={styles.sectionCard} data-accent="video">
+          <span className={styles.sectionCount}>{videos > 0 ? `${videos.toLocaleString()} videos` : '\u00a0'}</span>
+          <span className={styles.sectionTitle}>Video Library</span>
+          <span className={styles.sectionDesc}>Operative videos grouped by topic, searchable and playable inline.</span>
+          <span className={styles.sectionCta}>Watch →</span>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+function HomepageRecent() {
+  const {recent} = usePluginData('warwiki-home-data') as HomeData;
+  if (!recent?.length) return null;
+  return (
+    <section className={styles.homeSection} aria-labelledby="recent-heading">
+      <div className={styles.homeSectionHeader}>
+        <Heading as="h2" id="recent-heading" className={clsx(styles.homeHeading, styles.homeHeadingSmall)}>Recently updated</Heading>
+      </div>
+      <div className={styles.recentGrid}>
+        {recent.map((page) => (
+          <Link key={page.permalink} to={page.permalink} className={styles.recentCard} data-accent={SECTION_CARDS.find((c) => c.key === page.sectionKey)?.accent}>
+            <span className={styles.recentTag}>{page.section}</span>
+            <span className={styles.recentTitle}>{page.title}</span>
+            <span className={styles.recentDate}>{formatDate(page.updatedAt)}</span>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -137,6 +322,8 @@ export default function Home(): ReactNode {
       description="The functional reconstructive urology wiki.">
       <main className={styles.homepageRoot}>
         <HomepageHeader />
+        <HomepageSections />
+        <HomepageRecent />
         <HomepageSocialFooter />
       </main>
     </Layout>

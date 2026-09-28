@@ -5,7 +5,7 @@
 ═══════════════════════════════════════════════════════════ */
 
 /* ── GOOGLE FONTS ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500&display=swap');
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -53,9 +53,15 @@
   --warwiki-badge-journal:       #0369A1;
   --warwiki-badge-neutral:       #4B5767;
 
+  /* ── Section accent (set per section in §18; brand blue elsewhere) ── */
+  --wk-accent:       #185FA5;
+  --wk-accent-text:  #185FA5;
+  --wk-accent-tint:  #EBF3FB;
+
   /* ── Typography ── */
   --ifm-font-family-base:       'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --ifm-font-family-monospace:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  --warwiki-font-heading:       'Source Serif 4', Georgia, 'Times New Roman', serif;
   --ifm-font-size-base:         16px;
   --ifm-line-height-base:       1.75;
   --ifm-heading-font-weight:    600;
@@ -145,19 +151,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .markdown h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  border-bottom: 2px solid var(--warwiki-border);
-  padding-bottom: 0.5rem;
+  font-family: var(--warwiki-font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
 }
 
 .markdown h2 {
-  font-size: 1.35rem;
+  font-family: var(--warwiki-font-heading);
+  font-size: 1.7rem;
   font-weight: 600;
-  margin-top: 2.5rem;
-  border-bottom: 1px solid var(--warwiki-border);
-  padding-bottom: 0.3rem;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin-top: 2.75rem;
+}
+
+/* Section-colored bar in place of the old underline */
+.markdown > h2::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 0.8em;
+  margin-right: 0.6rem;
+  border-radius: 3px;
+  background: var(--wk-accent);
+  vertical-align: -0.02em;
 }
 
 .markdown h3 {
@@ -215,11 +235,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-color-primary-lighter);
 }
 
-/* Horizontal rule */
+/* Horizontal rule — kept as spacing only; headings carry the structure */
 .markdown hr {
   border: none;
-  border-top: 1px solid var(--warwiki-border);
-  margin: 2rem 0;
+  height: 0;
+  margin: 1.5rem 0;
 }
 
 
@@ -316,8 +336,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Reduce article heading sizes for readability */
-  .markdown h1 { font-size: 1.6rem; }
-  .markdown h2 { font-size: 1.25rem; }
+  .markdown h1 { font-size: 2rem; }
+  .markdown h2 { font-size: 1.45rem; }
   .markdown h3 { font-size: 1.05rem; }
 
   /* Tighten prose line width to avoid sprawling text on small tablets */
@@ -499,9 +519,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar__item.navbar__link--active,
 .navbar__item .navbar__link--active {
-  color: var(--ifm-color-primary);
+  color: var(--wk-accent-text);
   font-weight: 600;
-  background-color: var(--warwiki-note-bg);
+  background-color: var(--wk-accent-tint);
+  box-shadow: inset 0 -2px 0 var(--wk-accent);
 }
 
 [data-theme='dark'] .navbar__item.navbar__link,
@@ -510,11 +531,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme='dark'] .navbar__item.navbar__link:hover,
-[data-theme='dark'] .navbar__item.navbar__link--active,
-[data-theme='dark'] .navbar__item .navbar__link:hover,
-[data-theme='dark'] .navbar__item .navbar__link--active {
+[data-theme='dark'] .navbar__item .navbar__link:hover {
   color: var(--ifm-color-primary-lighter);
   background-color: var(--warwiki-note-bg);
+}
+
+[data-theme='dark'] .navbar__item.navbar__link--active,
+[data-theme='dark'] .navbar__item .navbar__link--active {
+  color: var(--wk-accent-text);
+  background-color: var(--wk-accent-tint);
 }
 
 /* Remove default dropdown caret styling that can affect weight/color */
@@ -665,17 +690,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu__link--active:not(.menu__link--sublist) {
-  color: var(--ifm-color-primary);
-  background-color: var(--warwiki-note-bg);
+  color: var(--wk-accent-text);
+  background-color: var(--wk-accent-tint);
   font-weight: 600;
-  border-left: 3px solid var(--ifm-color-primary);
+  border-left: 3px solid var(--wk-accent);
   padding-left: calc(0.75rem - 3px);
-}
-
-[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
-  background-color: var(--warwiki-note-bg);
-  color: var(--ifm-color-primary-lighter);
-  border-left-color: var(--ifm-color-primary);
 }
 
 /* Nested sub-items */
@@ -710,7 +729,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .table-of-contents__link--active {
-  color: var(--ifm-color-primary);
+  color: var(--wk-accent-text);
   font-weight: 600;
 }
 
@@ -726,7 +745,7 @@ article {
   background-color: var(--warwiki-white);
   border: 1px solid var(--warwiki-border);
   border-radius: 8px;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 2.75rem;
   box-shadow: var(--warwiki-shadow-sm);
 }
 
@@ -1125,29 +1144,42 @@ article {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   SECTION STACK — single-column vertical list for landing pages
-   Optimized for mobile: full-width tap targets, no wrapped inline links
+   SECTION STACK — landing-page card grid
+   Each <li> is a card; the title link is stretched over the whole card, so
+   any other link inside the card sits above it (z-index) and stays usable.
+   An optional <img className="section-stack-thumb"> as the first child adds
+   a schematic preview across the top of the card.
 ═══════════════════════════════════════════════════════════ */
 .section-stack {
   list-style: none;
   padding: 0;
-  margin: 1.75rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
 .section-stack li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--warwiki-border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border: 1px solid var(--warwiki-border);
+  border-radius: 12px;
+  background: var(--warwiki-white);
+  box-shadow: var(--warwiki-shadow-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.section-stack li:first-child {
-  padding-top: 0.25rem;
+.section-stack li:only-child {
+  grid-column: 1 / -1;
 }
 
-.section-stack li:last-child {
-  border-bottom: none;
+.section-stack li:hover {
+  border-color: var(--wk-accent);
+  box-shadow: var(--warwiki-shadow-md);
+  transform: translateY(-1px);
 }
 
 .section-stack-title {
@@ -1160,46 +1192,89 @@ article {
   letter-spacing: -0.005em;
 }
 
+.markdown .section-stack-link,
 .section-stack-link {
-  color: var(--ifm-color-primary);
+  color: var(--warwiki-text);
+  border-bottom: none;
   transition: color 0.15s ease;
 }
 
-.section-stack-link:hover {
-  color: var(--ifm-color-primary-dark);
+.section-stack-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.section-stack li:hover .section-stack-link {
+  color: var(--wk-accent-text);
   text-decoration: none;
+}
+
+.section-stack li a:not(.section-stack-link) {
+  position: relative;
+  z-index: 1;
+}
+
+.section-stack-link:focus-visible {
+  outline: none;
+}
+
+.section-stack-link:focus-visible::after {
+  outline: 2px solid var(--wk-accent);
+  outline-offset: 2px;
 }
 
 .section-stack-desc {
   display: block;
-  margin-top: 0.35rem;
-  font-size: 0.92rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
   color: var(--warwiki-text-muted);
   line-height: 1.5;
   font-weight: 400;
 }
 
-[data-theme='dark'] .section-stack li {
-  border-bottom-color: #2a3a4a;
+.section-stack-thumb {
+  order: -1;
+  display: block;
+  width: calc(100% + 2.5rem);
+  max-width: none;
+  height: 190px;
+  margin: -1.1rem -1.25rem 1rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  object-fit: contain;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--warwiki-border);
+  border-radius: 12px 12px 0 0;
 }
 
-[data-theme='dark'] .section-stack-title {
+[data-theme='dark'] .section-stack li {
+  background: #111A2A;
+  border-color: #1F2C42;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .section-stack li:hover {
+  border-color: var(--wk-accent);
+}
+
+[data-theme='dark'] .section-stack-title,
+[data-theme='dark'] .section-stack-link {
   color: #E6EAF2;
 }
 
 [data-theme='dark'] .section-stack-desc {
-  color: #B4BDCA;
+  color: #A3B0C4;
 }
 
 @media (max-width: 768px) {
+  .section-stack {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
   .section-stack-title {
-    font-size: 1.1rem;
-  }
-  .section-stack-desc {
-    font-size: 0.95rem;
-  }
-  .section-stack li {
-    padding: 1.1rem 0;
+    font-size: 1.05rem;
   }
 }
 
@@ -1327,11 +1402,13 @@ article {
    16. RESPONSIVE
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 996px) {
-  article {
-    padding: 1.5rem 1.25rem;
+  article,
+  [data-theme='dark'] article {
+    padding: 0.75rem 0 1.5rem;
+    border: none;
     border-radius: 0;
-    border-left: none;
-    border-right: none;
+    background: transparent;
+    box-shadow: none;
   }
 
   .hero__title {
@@ -2243,6 +2320,12 @@ a.book-card:visited {
 .td-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  /* Edge shadows appear only while more columns are off-screen */
+  background:
+    linear-gradient(to right, var(--warwiki-white), var(--warwiki-white)) left / 24px 100% no-repeat local,
+    linear-gradient(to left, var(--warwiki-white), var(--warwiki-white)) right / 24px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(18, 55, 105, 0.16), transparent) left / 12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(18, 55, 105, 0.16), transparent) right / 12px 100% no-repeat scroll;
 }
 
 .td-table {
@@ -2250,6 +2333,18 @@ a.book-card:visited {
   border-collapse: collapse;
   font-size: 0.845rem;
   margin: 0;
+}
+
+/* The generic markdown-table rules make every table its own nowrap scroll
+   box, which clipped the last database column inside the table. Database
+   tables lay out normally; .td-scroll does the scrolling. */
+.markdown .td-table {
+  display: table;
+  overflow: visible;
+  white-space: normal;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .td-wrapper .td-table thead th {
@@ -2291,7 +2386,7 @@ a.book-card:visited {
 }
 
 .td-name-cell {
-  min-width: 180px;
+  min-width: 150px;
 }
 
 .td-name-link {
@@ -2318,14 +2413,13 @@ a.book-card:visited {
 .td-eponym {
   color: var(--warwiki-text-muted);
   font-size: 0.82rem;
-  white-space: nowrap;
-  min-width: 110px;
+  min-width: 100px;
 }
 
 .td-notes {
   font-size: 0.82rem;
   color: var(--warwiki-text-muted);
-  min-width: 220px;
+  min-width: 180px;
   max-width: 380px;
   line-height: 1.5;
 }
@@ -3483,4 +3577,85 @@ a.book-card:visited {
   .lt-domain, .lt-design { font-size: 0.78rem; color: var(--ifm-color-emphasis-600); padding-left: 1.5rem; }
   .lt-detail { padding-left: 1rem; }
   .lt-fact { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION ACCENTS
+   Root.tsx sets <html data-section="…"> from the URL (server-rendered,
+   so there is no color flash). Each top-level section gets its own accent,
+   used by active nav/sidebar/TOC items, H2 bars, breadcrumbs, landing
+   labels and card hovers. Pages outside the five sections keep brand blue.
+═══════════════════════════════════════════════════════════ */
+html[data-section='foundations']  { --wk-accent: #185FA5; --wk-accent-text: #185FA5; --wk-accent-tint: #EBF3FB; }
+html[data-section='evaluation']   { --wk-accent: #0E7490; --wk-accent-text: #0E6A82; --wk-accent-tint: #E8F5F8; }
+html[data-section='conditions']   { --wk-accent: #0D9373; --wk-accent-text: #0A6F57; --wk-accent-tint: #EAF6F1; }
+html[data-section='atlas']        { --wk-accent: #7C3AED; --wk-accent-text: #6428D0; --wk-accent-tint: #F2EDFD; }
+html[data-section='populations']  { --wk-accent: #C2410C; --wk-accent-text: #A8380A; --wk-accent-tint: #FCF0EA; }
+
+[data-theme='dark'] { --wk-accent: #4A9FE0; --wk-accent-text: #74BAF2; --wk-accent-tint: rgba(74, 159, 224, 0.12); }
+html[data-theme='dark'][data-section='foundations']  { --wk-accent: #4A9FE0; --wk-accent-text: #74BAF2; --wk-accent-tint: rgba(74, 159, 224, 0.12); }
+html[data-theme='dark'][data-section='evaluation']   { --wk-accent: #22B8CF; --wk-accent-text: #67D3E3; --wk-accent-tint: rgba(34, 184, 207, 0.12); }
+html[data-theme='dark'][data-section='conditions']   { --wk-accent: #34C79A; --wk-accent-text: #6EDCB8; --wk-accent-tint: rgba(52, 199, 154, 0.12); }
+html[data-theme='dark'][data-section='atlas']        { --wk-accent: #A78BFA; --wk-accent-text: #C4B5FD; --wk-accent-tint: rgba(167, 139, 250, 0.14); }
+html[data-theme='dark'][data-section='populations']  { --wk-accent: #FB8C4A; --wk-accent-text: #FDB287; --wk-accent-tint: rgba(251, 140, 74, 0.13); }
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--wk-accent-text);
+  background: var(--wk-accent-tint);
+}
+
+/* Landing pages (hide_title): section label above the page title.
+   Top-level section landings skip it — the title already is the section. */
+html[data-section] .wk-landing:not(.wk-landing--root) .markdown > header h1::before {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wk-accent-text);
+}
+html[data-section='foundations'] .wk-landing:not(.wk-landing--root) .markdown > header h1::before { content: 'Foundations'; }
+html[data-section='evaluation'] .wk-landing:not(.wk-landing--root) .markdown > header h1::before { content: 'Evaluation'; }
+html[data-section='conditions'] .wk-landing:not(.wk-landing--root) .markdown > header h1::before { content: 'Clinical Conditions'; }
+html[data-section='atlas'] .wk-landing:not(.wk-landing--root) .markdown > header h1::before { content: 'Treatment Atlas'; }
+html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > header h1::before { content: 'Special Populations'; }
+
+.wk-landing .markdown > header h1 {
+  font-size: 2.9rem;
+}
+
+@media (max-width: 768px) {
+  .wk-landing .markdown > header h1 { font-size: 2.15rem; }
+}
+
+/* Database scroll hint: dark-mode cover color */
+[data-theme='dark'] .td-scroll {
+  background:
+    linear-gradient(to right, #0D1521, #0D1521) left / 24px 100% no-repeat local,
+    linear-gradient(to left, #0D1521, #0D1521) right / 24px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.45), transparent) left / 12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.45), transparent) right / 12px 100% no-repeat scroll;
+}
+
+/* Mid-width desktop navbar: six section links plus search and About do not
+   fit between 997px and ~1240px. Tighten the links and show search as an
+   icon-only pill so nothing overlaps. */
+@media (min-width: 997px) and (max-width: 1240px) {
+  .navbar__item.navbar__link,
+  .navbar__item .navbar__link {
+    padding: 0.4rem 0.4rem;
+    font-size: 0.78rem;
+  }
+  .navbar__brand {
+    margin-right: 0.75rem;
+  }
+  .DocSearch-Button-Placeholder,
+  .DocSearch-Button-Keys {
+    display: none;
+  }
 }

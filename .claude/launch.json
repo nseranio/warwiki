@@ -4,8 +4,27 @@
     {
       "name": "preview",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["start", "--", "--port", "3001", "--no-open"],
+      "runtimeArgs": [
+        "start",
+        "--",
+        "--port",
+        "3001",
+        "--no-open"
+      ],
       "port": 3001
+    },
+    {
+      "name": "preview-build",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "serve",
+        "--",
+        "--port",
+        "3002",
+        "--no-open"
+      ],
+      "port": 3002
     }
   ]
 }

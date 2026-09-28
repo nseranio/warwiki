@@ -30,7 +30,9 @@ function SubtleBadge({ label, color }: { label: string; color: string }) {
       backgroundColor: color + '18',
       color: color,
       border: `1px solid ${color}44`,
-      whiteSpace: 'nowrap',
+      // Long labels such as "Penile / hypospadias / panurethral" wrap so the
+      // badge column does not force the database wider than the page.
+      lineHeight: 1.35,
     }}>
       {label}
     </span>

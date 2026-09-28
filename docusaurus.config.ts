@@ -51,6 +51,8 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: ['./plugins/warwiki-home-data.js'],
+
   presets: [
     [
       'classic',

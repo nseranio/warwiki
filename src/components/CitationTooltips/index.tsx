@@ -3,8 +3,9 @@ import { useLocation } from '@docusaurus/router';
 import styles from './styles.module.css';
 
 /**
- * CitationTooltips — shows the full reference text on hover over an inline
- * <sup>[N]</sup> citation. Client-only; no UI unless hovering.
+ * CitationTooltips — previews the full reference on hover or focus over an
+ * inline <sup>[N]</sup> citation, with its DOI link and a jump link.
+ * Client-only; no UI unless hovering.
  *
  * Works with the WARWIKI citation pattern:
  *   <sup>[[1]](#ref1)</sup>   →   <sup><a href="#ref1">[1]</a></sup>
@@ -29,9 +30,10 @@ export default function CitationTooltips(): null {
       document.body.appendChild(tooltip);
     }
 
-    // Extract the reference text for #refN by walking the #refN anchor's
-    // surrounding paragraph / list-item text. Anchor itself is empty.
-    const getReferenceText = (href: string): string | null => {
+    // Build the preview from the reference entry itself, keeping its links
+    // and italics. The #refN anchor is empty; its paragraph / list item holds
+    // the reference, which starts with "N. ".
+    const buildPreview = (href: string): DocumentFragment | null => {
       if (!href.startsWith('#')) return null;
       let refEl: HTMLElement | null = null;
       try {
@@ -43,10 +45,30 @@ export default function CitationTooltips(): null {
       const container = refEl.closest('li, p, div') as HTMLElement | null;
       if (!container) return null;
       const clone = container.cloneNode(true) as HTMLElement;
-      // Remove any nav/button/code/hash-link artifacts from the reference
-      clone.querySelectorAll('button, .hash-link').forEach((n) => n.remove());
-      const text = (clone.textContent || '').replace(/\s+/g, ' ').trim();
-      return text || null;
+      clone.querySelectorAll('button, .hash-link, a[id]:empty').forEach((n) => n.remove());
+      const firstText = document.createTreeWalker(clone, NodeFilter.SHOW_TEXT).nextNode();
+      const numberMatch = firstText?.textContent?.match(/^\s*(\d+)\.\s*/);
+      if (firstText && numberMatch) firstText.textContent = firstText.textContent!.slice(numberMatch[0].length);
+      if (!(clone.textContent || '').trim()) return null;
+
+      const fragment = document.createDocumentFragment();
+      const label = document.createElement('span');
+      label.className = styles.label;
+      label.textContent = `[${numberMatch?.[1] ?? href.replace(/\D/g, '')}]`;
+      const body = document.createElement('div');
+      body.className = styles.body;
+      body.append(...Array.from(clone.childNodes));
+      body.querySelectorAll('a[href^="http"]').forEach((a) => {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+      const jump = document.createElement('a');
+      jump.className = styles.jump;
+      jump.href = href;
+      jump.textContent = 'Jump to reference ↓';
+      jump.addEventListener('click', () => hide());
+      fragment.append(label, body, jump);
+      return fragment;
     };
 
     const positionTooltip = (trigger: HTMLElement) => {
@@ -88,21 +110,35 @@ export default function CitationTooltips(): null {
       tooltip!.style.visibility = 'visible';
     };
 
+    // The preview stays open while the pointer moves from the citation into
+    // it, so its DOI link and jump link can be clicked.
+    let hideTimer: number | undefined;
+    const cancelHide = () => window.clearTimeout(hideTimer);
+    const scheduleHide = () => {
+      cancelHide();
+      hideTimer = window.setTimeout(hide, 180);
+    };
+
     const show = (event: Event) => {
+      cancelHide();
       const trigger = event.currentTarget as HTMLElement;
       const href = trigger.getAttribute('href') || '';
-      const refText = getReferenceText(href);
-      if (!refText) return;
-      tooltip!.textContent = refText;
+      const preview = buildPreview(href);
+      if (!preview) return;
+      tooltip!.replaceChildren(preview);
       tooltip!.setAttribute('aria-hidden', 'false');
       positionTooltip(trigger);
     };
 
-    const hide = () => {
+    function hide() {
+      cancelHide();
       tooltip!.classList.remove(styles.visible);
       tooltip!.setAttribute('aria-hidden', 'true');
       tooltip!.style.visibility = '';
-    };
+    }
+
+    tooltip.addEventListener('mouseenter', cancelHide);
+    tooltip.addEventListener('mouseleave', scheduleHide);
 
     // Citations on WARWIKI: <sup><a href="#refN">[N]</a></sup>
     const citations = document.querySelectorAll<HTMLAnchorElement>(
@@ -111,9 +147,9 @@ export default function CitationTooltips(): null {
 
     citations.forEach((a) => {
       a.addEventListener('mouseenter', show);
-      a.addEventListener('mouseleave', hide);
+      a.addEventListener('mouseleave', scheduleHide);
       a.addEventListener('focus', show);
-      a.addEventListener('blur', hide);
+      a.addEventListener('blur', scheduleHide);
     });
 
     // A preview's document coordinates become stale when the viewport changes.
@@ -123,10 +159,12 @@ export default function CitationTooltips(): null {
       window.removeEventListener('resize', hide);
       citations.forEach((a) => {
         a.removeEventListener('mouseenter', show);
-        a.removeEventListener('mouseleave', hide);
+        a.removeEventListener('mouseleave', scheduleHide);
         a.removeEventListener('focus', show);
-        a.removeEventListener('blur', hide);
+        a.removeEventListener('blur', scheduleHide);
       });
+      tooltip!.removeEventListener('mouseenter', cancelHide);
+      tooltip!.removeEventListener('mouseleave', scheduleHide);
       hide();
     };
     // Re-scan on path change so SPA navigation attaches handlers to the new
