@@ -4,6 +4,7 @@ sidebar_position: 1
 ---
 
 import GenericDatabase from '@site/src/components/GenericDatabase';
+import VideoCards from '@site/src/components/VideoCards';
 
 # OAB & Urgency Urinary Incontinence
 
@@ -213,3 +214,10 @@ export const oabUuiColumns = [
   filterLabel="Categories"
   entityLabel="treatments"
 />
+
+## Videos
+
+<VideoCards videos={[
+  { id: 'AX575S4swmw', title: 'The New Frontier of Overactive Bladder Treatments', subtitle: 'Dr. Katherine Amin, Grand Rounds in Urology (2025)' },
+  { id: 'OeVu7eiFCsI', title: 'Management of Overactive Bladder', subtitle: 'Dr. Gopal Badlani, Grand Rounds in Urology' },
+]} />
