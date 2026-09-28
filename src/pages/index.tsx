@@ -32,7 +32,6 @@ type RecentPage = {
 type HomeData = {
   recent: RecentPage[];
   sections: Record<string, number>;
-  schematics: number;
   videos: number;
 };
 
@@ -73,7 +72,7 @@ function formatDate(ms: number): string {
 }
 
 function HomepageHeader() {
-  const {schematics, videos} = usePluginData('warwiki-home-data') as HomeData;
+  const {videos} = usePluginData('warwiki-home-data') as HomeData;
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -130,13 +129,6 @@ function HomepageHeader() {
           <span className={styles.heroStatsDot} aria-hidden="true">·</span>
           <span className={styles.heroStatsNumber}>{stats.referencesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>references</span>
-          {schematics > 0 && (
-            <>
-              <span className={styles.heroStatsDot} aria-hidden="true">·</span>
-              <span className={styles.heroStatsNumber}>{schematics}</span>{' '}
-              <span className={styles.heroStatsLabel}>original schematics</span>
-            </>
-          )}
           {videos > 0 && (
             <>
               <span className={styles.heroStatsDot} aria-hidden="true">·</span>
@@ -208,7 +200,6 @@ function HomepageSections() {
     <section className={styles.homeSection} aria-labelledby="browse-heading">
       <div className={styles.homeSectionHeader}>
         <Heading as="h2" id="browse-heading" className={styles.homeHeading}>Browse the library</Heading>
-        <span className={styles.homeSectionNote}>Five sections, one reference</span>
       </div>
       <div className={styles.sectionGrid}>
         {SECTION_CARDS.map((card) => (

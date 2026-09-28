@@ -5,7 +5,6 @@
  * usePluginData('warwiki-home-data')):
  *   - recent:     the most recently updated articles, taken from the docs
  *                 plugin's git-based lastUpdatedAt, one per section first
- *   - schematics: number of original SVG schematics in static/img/diagrams
  *   - videos:     number of entries in the Video Library registry
  *   - sections:   page count per top-level section, keyed by URL segment
  *
@@ -25,14 +24,6 @@ const SECTIONS = {
 };
 
 const RECENT_COUNT = 4;
-
-function countSchematics(siteDir) {
-  try {
-    return fs.readdirSync(path.join(siteDir, 'static/img/diagrams')).filter((f) => f.endsWith('.svg')).length;
-  } catch {
-    return 0;
-  }
-}
 
 function countVideos(siteDir) {
   try {
@@ -87,7 +78,6 @@ module.exports = function warwikiHomeData(context) {
       actions.setGlobalData({
         recent: pickRecent(docs),
         sections: countSections(docs),
-        schematics: countSchematics(context.siteDir),
         videos: countVideos(context.siteDir),
       });
     },
