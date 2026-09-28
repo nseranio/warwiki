@@ -1,18 +1,21 @@
 import {beforeEach, afterEach, describe, expect, it, vi} from 'vitest';
 import handler from '../../api/tts';
 
-const {generateSpeech, head, put, fetchMock} = vi.hoisted(() => ({
+const {generateSpeech, head, put, fetchMock, BlobNotFoundError, BlobPreconditionFailedError} = vi.hoisted(() => ({
   generateSpeech: vi.fn(),
   head: vi.fn(),
   put: vi.fn(),
   fetchMock: vi.fn(),
+  // The handler checks errors with instanceof, so the mock exports classes.
+  BlobNotFoundError: class BlobNotFoundError extends Error {},
+  BlobPreconditionFailedError: class BlobPreconditionFailedError extends Error {},
 }));
 vi.mock('openai', () => ({default: class OpenAI {
   audio = {speech: {create: generateSpeech}};
 }}));
-vi.mock('@vercel/blob', () => ({head, put}));
+vi.mock('@vercel/blob', () => ({head, put, BlobNotFoundError, BlobPreconditionFailedError}));
 
-const notFound = () => Object.assign(new Error('not found'), {name: 'BlobNotFoundError'});
+const notFound = () => new BlobNotFoundError('not found');
 const origin = 'https://warwiki.org';
 
 async function request(method: string, body?: unknown, headers: Record<string, string> = {origin}) {
@@ -140,7 +143,7 @@ describe('shared cache and monthly budget', () => {
     blobStore({spentMicroUsd: 0, cacheBytes: 0});
     generateSpeech.mockResolvedValue({arrayBuffer: async () => new Uint8Array([1, 2, 3]).buffer});
     const response = await request('POST', {text: '  test speech  ', voice: 'unknown', model: 'unknown'});
-    expect(generateSpeech).toHaveBeenCalledWith({model: 'tts-1', voice: 'nova', input: 'test speech', response_format: 'mp3'});
+    expect(generateSpeech).toHaveBeenCalledWith({model: 'tts-1', voice: 'shimmer', input: 'test speech', response_format: 'mp3'});
     expect(response.statusCode).toBe(200);
     expect(response.setHeader).toHaveBeenCalledWith('Content-Type', 'audio/mpeg');
     expect(response.setHeader).toHaveBeenCalledWith('Content-Length', '3');
