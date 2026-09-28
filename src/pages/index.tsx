@@ -72,7 +72,6 @@ function formatDate(ms: number): string {
 }
 
 function HomepageHeader() {
-  const {videos} = usePluginData('warwiki-home-data') as HomeData;
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -129,13 +128,6 @@ function HomepageHeader() {
           <span className={styles.heroStatsDot} aria-hidden="true">·</span>
           <span className={styles.heroStatsNumber}>{stats.referencesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>references</span>
-          {videos > 0 && (
-            <>
-              <span className={styles.heroStatsDot} aria-hidden="true">·</span>
-              <span className={styles.heroStatsNumber}>{videos.toLocaleString()}</span>{' '}
-              <span className={styles.heroStatsLabel}>videos</span>
-            </>
-          )}
         </p>
       </div>
     </header>

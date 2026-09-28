@@ -323,13 +323,12 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  /* One row; on narrow screens it scrolls sideways instead of wrapping */
-  overflow-x: auto;
-  scrollbar-width: none;
 }
 
-.trySearches::-webkit-scrollbar {
-  display: none;
+/* One row only: where the chips no longer fit, the row is hidden rather
+   than wrapped or scrolled. */
+@media screen and (max-width: 820px) {
+  .trySearches { display: none; }
 }
 
 .tryLabel {
@@ -569,5 +568,4 @@
   .homeHeading { font-size: 1.7rem; }
   .sectionGrid,
   .recentGrid { grid-template-columns: 1fr; }
-  .trySearches { gap: 0.4rem; justify-content: flex-start; }
 }
