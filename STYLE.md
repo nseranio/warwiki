@@ -114,3 +114,19 @@ Wrong (mechanical, passive and stilted):
 - Bold run-in labels stay bold at the start of a list item, with a full stop after them (colon only before a list or value).
 - Pass 1 may delete a pure scope sentence and lists it. It never deletes a hedge or qualifier. Pass 2 may merge or drop a hedge only when the audit has checked it against the source.
 - Pass 2 (sentence structure) happens only inside the source audit, on pages the audit edits.
+
+## 9. Landing-page cards (September 29, 2026)
+
+Card descriptions on landing pages (`section-stack-desc`, `toc-desc`) help a reader choose where to click. The detail belongs on the page itself.
+
+- One plain sentence of about 12 to 20 words, never more than 25. Say what the page covers or helps the reader decide.
+- No slash-separated lists, trial names, statistics, doses, label dates or guideline years.
+- No layout words ("tabbed", "framework + database", "deep-dive", "N citations"). "With a searchable database" is fine.
+- Common abbreviations (SUI, AUS, BMG, IPP) are fine; niche ones and brand lists are not.
+- No links inside a card; the card title is the link.
+
+> Before: Tabbed GU/reconstructive-urology framework + database — Masculinizing (metoidioplasty / phalloplasty / UL / vaginectomy / …), Feminizing (…), and Non-Binary / Nullification (…)
+>
+> After: Masculinizing, feminizing and non-binary genital surgery, with a searchable database of techniques.
+
+`npm run lint:cards` enforces the word limit and the slash-list rule.
