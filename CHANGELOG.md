@@ -12,7 +12,15 @@ For commit-level detail run `git log --oneline`.
 - **v2 design** (user-approved on the implant sheet): two-level help box (call the office, with a 100.4 °F (38 °C) fever threshold, versus go to an emergency department), recovery timeline, "Benefits and Risks in Numbers" in natural frequencies where WARWIKI has solid figures, larger small print, sentence-case headings, and a "Reviewed September 2026" footer on both pages. Reading grade (Flesch-Kincaid) fell from a median of 7.8 to 4.9 (range 3.8–6.5); em dashes, slashes and all-caps removed.
 - **Gallery titles:** Alpha Blockers (for Prostate and Urine Flow); Ambulatory Urodynamics (Sensor Test); Urethropubic Fistula (Pubic Bone Fistula); TUITMR (Scar Repair Through a Scope); Vaginal Prolapse Repair (Own Tissue, Grafts and Mesh), rewritten around own-tissue repair and the 2019 FDA order; Urinary Diversion: Comparing Your Options. ACT now states it is not FDA-approved for women.
 - **Translations not yet updated:** the 10 translated versions of each sheet still reflect the June English text; retranslate the clinically changed sheets next. The handout gallery remains paused (`WARWIKI_INCLUDE_HANDOUTS`).
-- **WARWIKI fix:** the penile-implant counselling summary no longer says sensation is unaffected. **Inconsistencies found for later:** AUS 5-year revision-free figures, malleable "most durable" versus its device page, VED continued-use rates, plication shortening (1–2 cm versus 0.3–1.0 cm), TURP transfusion eras, and TUITMR "no new incontinence" versus the bladder-neck-stenosis page.
+- **WARWIKI fix:** the penile-implant counselling summary no longer says sensation is unaffected.
+- **Six cross-page conflicts resolved against the primary sources:**
+  - **AUS:** population-level (Lenfant 2025, n = 8,475: 57% reoperation-free at 5 years, 40% at 10) versus Mayo high-volume figures (72–74%, 56–57%) now in separate columns. The 83/73/64/46% risk-factor figures are re-cited to Fuller 2020 (redo AUS, previously misattributed to Bentellis). The guideline's 24%/50% is labelled as mechanical failure only. Three untraceable table figures (94%, 71–88% and 57–62%) were replaced by the sourced rows.
+  - **Malleable implant:** "most durable" became "fewest mechanical failures, with 5-year revision or removal similar to inflatable" (Kohl 2026).
+  - **Vacuum device:** 83.5% "as desired" use (no follow-up interval) is distinguished from the EAU two-year continuation rate of 50–64%.
+  - **Plication:** "1–2 cm typical" corrected to measured loss usually under 1 cm with modern suture-only techniques, up to about 2.5 cm, more with Nesbit; aligned across plication, Peyronie's index and grafting pages.
+  - **TURP:** 2.9% (Bavarian cohort) and 0.4% (pooled review) labelled by source.
+  - **Bladder-neck stenosis:** the EAU "up to 25%" leakage figure applies to open or robotic reconstruction, not endoluminal treatment. TUITMR now reads "no de novo incontinence" in two small cohorts.
+  - **Handouts updated to match:** plication, TUITMR and AUS.
 - Off-repo tooling in `~/Desktop/WARWIKI-handouts/`: `_handout-v2.css`, `render-en.sh`, `_tools/check.sh`, spec and findings in `_proposal/`, pre-refresh backup in `_backups/`.
 
 ---
