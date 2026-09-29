@@ -403,7 +403,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'pubosymphyseal-fistula',
-    title: 'Pubosymphyseal Fistula',
+    title: 'Urethropubic Fistula (Pubic Bone Fistula)',
     category: 'Conditions & Symptoms',
     subcategory: "Men's Genital & Reconstructive",
     audience: 'male',
@@ -464,13 +464,13 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'ambulatory-urodynamics',
-    title: 'Ambulatory Urodynamics (Catheter-Free)',
+    title: 'Ambulatory Urodynamics (Sensor Test)',
     category: 'Tests & Imaging',
     subcategory: 'Scope & Bladder-Function Tests',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
-      'A newer, catheter-free bladder test: a small wireless sensor records bladder pressure during normal daily activity for more lifelike readings — how it works and what to expect.',
+      'A bladder test using small sensors instead of tubes: the sensors record while you drink and move about in the clinic, and the readings are downloaded after removal. How it works and what to expect.',
   },
   {
     slug: 'ureteral-evaluation-under-anesthesia',
@@ -611,7 +611,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'endoscopic-urethroplasty',
-    title: 'Endoscopic Urethroplasty (TUITMR)',
+    title: 'TUITMR (Scar Repair Through a Scope)',
     category: 'Procedures & Surgery',
     subcategory: 'Urethral Narrowing & Stricture',
     audience: 'male',
@@ -632,7 +632,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'urinary-diversion-overview',
-    title: 'Urinary Diversion — Comparing Your Options',
+    title: 'Urinary Diversion: Comparing Your Options',
     category: 'Procedures & Surgery',
     subcategory: 'Urinary Diversion',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
@@ -782,7 +782,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'alpha-blockers',
-    title: 'Alpha Blockers (for Prostate / Urinary Flow)',
+    title: 'Alpha Blockers (for Prostate and Urine Flow)',
     category: 'Medications',
     subcategory: 'Prostate & Urinary Flow Medicines',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
@@ -908,7 +908,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
-      'A heat-free, ultrasound-guided waterjet that precisely removes obstructing prostate tissue through the urethra — flow results like TURP with a better chance of preserving ejaculation; how it works and recovery.',
+      'An ultrasound-guided waterjet that removes blocking prostate tissue through the urethra: flow results like TURP with a better chance of keeping ejaculation. Bleeding is the main early risk. How it works and recovery.',
   },
   {
     slug: 'simple-prostatectomy',
@@ -991,14 +991,14 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
   },
   {
     slug: 'vaginal-prolapse-repair-graft',
-    title: 'Vaginal Prolapse Repair Using Mesh / Graft',
+    title: 'Vaginal Prolapse Repair (Own Tissue, Grafts and Mesh)',
     category: 'Procedures & Surgery',
     subcategory: 'Prolapse Surgery',
     audience: 'female',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     description:
-      'Reinforcing a vaginal prolapse repair with a biological graft or, selectively, mesh — with an honest account of the transvaginal-mesh safety history and the questions to ask before choosing.',
+      'Vaginal prolapse repair with your own tissue, and where grafts and mesh fit: an honest account of the transvaginal-mesh history and the questions to ask before choosing.',
   },
   {
     slug: 'vaginal-suspension',
