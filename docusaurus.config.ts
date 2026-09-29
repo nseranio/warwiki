@@ -182,7 +182,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} WARWIKI · Editorially independent reference for functional urology and genitourinary reconstruction.`,
+      copyright: `© ${new Date().getFullYear()} WARWIKI`,
     },
     prism: {
       theme: prismThemes.github,
