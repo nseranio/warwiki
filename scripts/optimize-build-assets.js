@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 /**
- * Compress gallery previews in the disposable build output. Always encode from
- * the committed source, preserving dimensions, URLs and every original/PDF.
- * Repeated runs cannot compound JPEG loss. No image optimization API is used.
+ * Handout assets in the build output. While handouts are paused, remove the
+ * generated copies (sources in static/ are preserved). When restored with
+ * WARWIKI_INCLUDE_HANDOUTS=true, report the published payload; PDFs and WebP
+ * previews are committed already optimized, so nothing is re-encoded.
  */
 const fs = require('node:fs/promises');
 const path = require('node:path');
-const sharp = require('sharp');
 
 const ROOT = path.resolve(__dirname, '..');
-const SOURCE = path.join(ROOT, 'static/img/handouts');
 const OUTPUT = path.join(ROOT, 'build/img/handouts');
 
 async function main() {
@@ -21,26 +20,18 @@ async function main() {
     console.log('Handout PDFs and previews omitted from deployment. Sources preserved; restore with WARWIKI_INCLUDE_HANDOUTS=true.');
     return;
   }
-  const names = (await fs.readdir(SOURCE)).filter(name => name.endsWith('.jpg')).sort();
-  let before = 0;
-  let after = 0;
-  let next = 0;
-  const workers = Array.from({length: 4}, async () => {
-    while (next < names.length) {
-      const name = names[next++];
-      const input = await fs.readFile(path.join(SOURCE, name));
-      const destination = path.join(OUTPUT, name);
-      // Fail clearly if invoked without a successful site build.
-      await fs.access(destination);
-      const encoded = await sharp(input).jpeg({quality: 72, mozjpeg: true}).toBuffer();
-      const optimized = encoded.length < input.length ? encoded : input;
-      await fs.writeFile(destination, optimized);
-      before += input.length;
-      after += optimized.length;
+  // Thumbnails are committed already optimized (cropped WebP), so the restore
+  // path only reports the published handout payload; nothing is re-encoded.
+  const sizeOf = async dir => {
+    let total = 0; let count = 0;
+    for (const name of await fs.readdir(dir)) {
+      total += (await fs.stat(path.join(dir, name))).size; count += 1;
     }
-  });
-  await Promise.all(workers);
-  console.log(`Handout previews: ${names.length} files; ${(before / 1e6).toFixed(2)} MB → ${(after / 1e6).toFixed(2)} MB; saved ${((before - after) / 1e6).toFixed(2)} MB (${(100 * (1 - after / before)).toFixed(1)}%). Originals and PDF downloads unchanged.`);
+    return {total, count};
+  };
+  const pdfs = await sizeOf(path.join(ROOT, 'build/handouts'));
+  const thumbs = await sizeOf(OUTPUT);
+  console.log(`Handouts published: ${pdfs.count} PDFs (${(pdfs.total / 1e6).toFixed(2)} MB), ${thumbs.count} previews (${(thumbs.total / 1e6).toFixed(2)} MB).`);
 }
 
 main().catch(error => {

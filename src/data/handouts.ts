@@ -4,7 +4,8 @@
  * Plain-language, printable PDFs given to patients before a test or procedure.
  * The master HTML sources live off-repo (~/Desktop/WARWIKI-handouts); each
  * rendered PDF is committed to `static/handouts/<slug>.pdf` and a page-1
- * thumbnail to `static/img/handouts/<slug>.png`.
+ * thumbnail to `static/img/handouts/<slug>.webp` (top 3:2 of page 1, 700 px wide:
+ * exactly what the gallery card shows).
  *
  * To add a handout: render the PDF + a page-1 thumbnail (see the workflow), then
  * append one entry here. Cards render grouped by category in
@@ -17,7 +18,7 @@
 export type HandoutAudience = 'all' | 'female' | 'male';
 
 export interface PatientHandout {
-  /** filename stem — resolves to /handouts/<slug>.pdf and /img/handouts/<slug>.png */
+  /** filename stem — resolves to /handouts/<slug>.pdf and /img/handouts/<slug>.webp */
   slug: string;
   title: string;
   category: string;
@@ -126,12 +127,13 @@ export function handoutPdfPath(slug: string, code: string): string {
 }
 
 /**
- * Page-1 thumbnail path for a language (JPEG; mirrors handoutPdfPath naming).
- * English keeps `<slug>.jpg`; other languages use `<slug>.<code>.jpg`.
+ * Page-1 thumbnail path for a language (mirrors handoutPdfPath naming).
+ * English uses the lean cropped `<slug>.webp`. Translations still use the older
+ * full-page `<slug>.<code>.jpg` until they are retranslated and re-rendered.
  */
 export function handoutThumbPath(slug: string, code: string): string {
   return code === DEFAULT_LANGUAGE
-    ? `/img/handouts/${slug}.jpg`
+    ? `/img/handouts/${slug}.webp`
     : `/img/handouts/${slug}.${code}.jpg`;
 }
 

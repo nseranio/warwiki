@@ -91,7 +91,10 @@ function PatientHandoutsGallery(): React.ReactElement {
           <img
             src={handoutThumbPath(h.slug, effective)}
             alt={`${h.title} — patient handout, page 1`}
+            width={700}
+            height={467}
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="ph-body">
