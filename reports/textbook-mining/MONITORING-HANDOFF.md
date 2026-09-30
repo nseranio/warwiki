@@ -82,6 +82,39 @@ resolved independently, already applied to WARWIKI in its own commits).
 It is not part of the 25-book queue. Never let it affect book numbering,
 never resume it, never report on it as part of this queue's progress.
 
+## Parallel split (September 30, ~09:15 local) -- read this first
+
+At the user's request (they have ample Codex credits), books 23-25 now run as
+**three separate parallel Codex jobs**, each in its own folder so that
+`--resume-last` can never grab the wrong thread:
+
+| Book | Folder (its own `--cwd`) | Job id at launch |
+|---|---|---|
+| 22 HINMAN5 | `~/Desktop/WARWIKI-textbook-mining` (main) | `task-muo4kses-fjzpqi` |
+| 23 PERIREC | `~/Desktop/WARWIKI-mining-parallel/PERIREC` | `task-muo4jbyv-1z4x4c` |
+| 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | `task-muo4jc4k-tnh9sl` |
+| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | `task-muo4jca6-uf5coy` |
+
+- The main job now finishes **only** HINMAN5, then stops (noted at the end
+  of the main folder's `library-queue.md`; `auto-continue.sh` now stops at
+  book 22).
+- Each parallel folder has its own `PROMPT.md`, `text/`, `findings/<ABBREV>/`,
+  `session-log.md`, and writes `DONE.md` when its `99-summary.md` is
+  verified. Resume a stopped parallel job with the same resume command below
+  but `--cwd` set to that folder and a short "continue per your progress
+  files; finish only this one book" prompt.
+- **After a parallel book finishes:** verify its `99-summary.md`, copy
+  `findings/<ABBREV>/` (and `text/<ABBREV>.txt`) into the main mining folder,
+  and mark that book complete in both queue copies.
+- **HINMAN5 thread restart:** the original Codex thread
+  (`01a0e555-...`) got stuck behind a stale app-server holding its writer
+  lock, so companion `--resume-last` failed with "No previous Codex task
+  thread was found". HINMAN5 was restarted as a fresh thread from its
+  on-disk progress files (prompt saved as `hinman-fresh-prompt.md` in the
+  main folder). If that ever recurs, do the same: `--fresh` with that prompt.
+- The Campbell's 13th-edition mining is a separate, user-run job in
+  `~/Desktop/WARWIKI-campbell-mining/`; not monitored here.
+
 ## What to do right now
 
 1. Check the current Codex job:
