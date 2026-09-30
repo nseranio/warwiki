@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-30 — Textbook-mining incorporation, wave 4 (prolapse and mesh, fistula repair, prosthetics and sexual dysfunction, gender-affirming surgery)
+
+- **Wave 4 (batches b19–b24), 62 pages:** mesh complications, pessaries, colpocleisis and posterior repairs; fistula repair (female, male and all-patient pages, sphincteroplasty, episioproctotomy, Martius flap); penile implants (complications, infection, models, setup, preoperative evaluation, reservoir placement, revision), Peyronie's surgery, vacuum devices, venous ligation and arterial revascularization; gender-affirming surgery (vaginoplasty variants, phalloplasty and urethral lengthening, metoidioplasty, hysterectomy, scrotoplasty, orchiectomy, testicular implants).
+- **Verdicts:** 268 findings; 234 adopted, 3 merged, 30 rejected, 2 deferred (added to `consolidation/DEFERRED.md`: a proximal dilator-size caution and hand position during manual modeling). A third deferral (Martius pedicle arterial supply) was resolved in favor of the page: two chapters had the external and internal pudendal territories reversed.
+- **Book claims corrected against the primary paper:** Rahman 2005, Canguven 2017 and Moncada 2010 figures; a systematic review's colpocleisis success and fistula rates; a trial's screened versus randomized n; a 0.9% fistula rate that belongs to a different fistula type; a meeting abstract replaced by its 2019 full paper; cadaver measurements; a DOI printed in a book that resolved to an unrelated paper.
+- **Citation QA:** all new DOIs resolved on PubMed; all 143 new textbook-chapter citations checked against the book text and 47 corrected (one wrong book, one invented chapter title, several wrong chapters, page ranges).
+- Lint, typecheck and build pass.
+
+---
+
 ## 2026-09-30 — Textbook-mining incorporation, wave 3 (reconstruction, diversion, incontinence and prolapse procedures) and first Campbell's pass
 
 - **Wave 3 (batches b13–b18 plus c01–c02), 109 pages:** bladder augmentation and catheterizable channels; urinary diversion (conduits, continent pouches, neobladders, intracorporeal diversion, diversion principles); upper-tract reconstruction (pyeloplasty, ureteroureterostomy, TUU, ureterocalicostomy, ileal ureter, Boari and psoas hitch, reimplantation, ureterolysis, endoureterotomy); genital reconstruction; female SUI procedures, AUS, male slings, neuromodulation, bulking, urethrolysis; anterior and apical prolapse repair; and Campbell's-Walsh-Wein 13th ed findings on pages updated earlier today.
