@@ -185,9 +185,12 @@ that's for your own tracking between wakeups, not conversation noise.
 
 All 25 queue books are mined (HINMAN5 finished with 94 findings after the
 four-worker split; summary rebuilt and verified). Campbell's (CWW13): all 105
-selected chapters mined by the main job plus eight workers; the final summary
-job is `task-muo9c7x4-xz1l60` in `~/Desktop/WARWIKI-campbell-mining`. Its
-findings get their own incorporation pass after the 25-book waves.
+selected chapters mined by the main job plus eight workers; finished at 11:40 with 106 findings
+(7 high, 61 medium, 38 low; 11 conflicts, 4 new-page proposals); summary
+verified in `~/Desktop/WARWIKI-campbell-mining/findings/CWW13/99-summary.md`.
+Its findings get their own incorporation pass after the 25-book waves (run
+`build_index.py ~/Desktop/WARWIKI-campbell-mining/findings` into a separate
+index). No Codex jobs are running now.
 
 ## Incorporation (started September 30, ~10:45)
 
