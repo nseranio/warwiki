@@ -106,6 +106,17 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
   `chNNN.md` files into the main `findings/HINMAN5/`, tick them in the main
   `progress.md`, then run one final fresh job in the main folder to write and
   verify `99-summary.md` across all 76 chapters and mark Book 22 complete.
+- **Campbell's chapter split (~10:20):** of CWW13's 96 remaining chapters,
+  the main Campbell's job keeps 028, 038, 043, 046, 048, 052, 053, 055 (others
+  marked `[~]` in its `progress.md`); 88 went to eight page-balanced workers in
+  `~/Desktop/WARWIKI-campbell-mining-workers/CWW13-{B..I}` (job ids in the
+  `session-log`-style list below). Same pattern as Hinman's: workers write
+  `chNNN.md` + `DONE.md`, no summary; when all nine finish, copy the chapter
+  files into `~/Desktop/WARWIKI-campbell-mining/findings/CWW13/` and run one
+  final fresh job there for `99-summary.md`. Worker jobs: B
+  `task-muo6wvqq-159324`, C `task-muo6wvwk-rqps5i`, D `task-muo6ww2u-k25hsu`,
+  E `task-muo6wwbk-tkjq3b`, F `task-muo6wwi3-0sgm1g`, G `task-muo6wwrg-hkvnea`,
+  H `task-muo6wx4m-s77hwr`, I `task-muo6wxgo-fv4vuy`.
 - The main job now finishes **only** HINMAN5, then stops (noted at the end
   of the main folder's `library-queue.md`; `auto-continue.sh` now stops at
   book 22).
