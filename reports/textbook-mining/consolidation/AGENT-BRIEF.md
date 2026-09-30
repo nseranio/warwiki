@@ -55,14 +55,18 @@ findings file on the Desktop, which you may read for context).
    abstract the tool prints). The book's printed reference can be wrong;
    Codex paraphrased; figures from the book can be mis-transcribed. If you
    cannot find or confirm the paper, do not cite it; either drop the claim or
-   reject the finding. Never invent a citation, DOI or PMID.
+   reject the finding. Never invent a citation, DOI or PMID. Copy the DOI exactly from the
+   tool's output; never type one from memory (wave 1 agents did, and had to
+   correct it).
 5. **Textbook teaching without a primary paper** (book_refs `none cited`):
    add it only for established operative technique or anatomy, worded as
    "has been described" or attributed to the chapter authors, and cite the
    textbook chapter in house format, for example:
    `Author AB, Author CD. Chapter title. In: Editor EF, ed. *Book Title.* Nth ed. Publisher; Year:pages.`
-   Take authors, chapter title, editors, edition, publisher and year from the
-   chapter findings file (`source_file`) header. If you cannot fill those
+   Use the editors, edition, publisher and year in `BOOKS.md` (same folder)
+   exactly; take chapter authors, chapter title and pages from the chapter
+   itself (the converted book text is in `~/Desktop/WARWIKI-textbook-mining/text/`).
+   Chapter authors are usually not the book's editors. If you cannot fill those
    fields reliably, do not cite the book; reject the finding instead. Keep
    these rare.
 6. **Numbers.** Keep denominators, study type, population and follow-up next
