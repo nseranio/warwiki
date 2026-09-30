@@ -17,7 +17,7 @@ and incorporate the 25-book findings without waiting for Campbell's.
 | Wave | Batches | Status |
 |---|---|---|
 | 1 | b01-b06 | **done** (227 findings: 138 adopt, 2 merge, 87 reject; 63 pages) |
-| 2 | b07-b12 | |
+| 2 | b07-b12 | running (launched ~11:25) |
 | 3 | b13-b18 | |
 | 4 | b19-b24 | |
 | 5 | b25-b27, HINMAN5 100-105 addendum | |
