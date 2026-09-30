@@ -17,12 +17,12 @@ and incorporate the 25-book findings without waiting for Campbell's.
 | Wave | Batches | Status |
 |---|---|---|
 | 1 | b01-b06 | **done** (227 findings: 138 adopt, 2 merge, 87 reject; 63 pages) |
-| 2 | b07-b12 | running (launched ~11:25) |
-| 3 | b13-b18 | |
+| 2 | b07-b12 | **done** (262 findings: 179 adopt, 11 merge, 70 reject, 2 defer; 67 pages) |
+| 3 | b13-b18, c01, c02 | |
 | 4 | b19-b24 | |
-| 5 | b25-b27, HINMAN5 100-105 addendum | |
+| 5 | b25-b27 | |
 | 6 | new-pages | |
-| later | Campbell's (CWW13) | after its mining finishes |
+| — | Campbell's (CWW13, 106 findings) | folded in: 47 findings added to b13-b27 on the same pages; 56 on wave 1-2 pages or unbatched pages in c01/c02 (wave 3); 10 new-page proposals added to new-pages |
 
 ## Lessons from wave 1
 
@@ -33,3 +33,11 @@ and incorporate the 25-book findings without waiting for Campbell's.
   `BOOKS.md` now holds the canonical front matter; the brief points agents to it.
 - Large batches get split into helper agents by the batch agent itself; that
   works, but the parent must merge the helpers' ledgers into `verdicts/<batch>.md`.
+
+## Campbell's integration (decided September 30, ~11:50)
+
+The user left the timing to Claude. Folding Campbell's into the remaining
+batches edits each page once instead of twice. `index.json` was rebuilt with
+both finding folders (1,343 findings, 382 pages); `index-wave12.json` keeps
+the earlier snapshot. The last seven HINMAN5 findings (chapters 100-105) were
+folded in the same way.

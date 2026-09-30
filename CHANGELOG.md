@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-30 — Textbook-mining incorporation, wave 2 (conditions and urethral reconstruction)
+
+- **Wave 2 (batches b07–b12), 67 pages:** prolapse compartments and obstetric injury; neurogenic bladder and its subtypes (spinal cord injury, spina bifida, Parkinson and MSA, stroke, autonomic dysreflexia); upper-tract and fistula conditions (UPJ obstruction, ureteral stricture, obstetric, vesicovaginal, rectovaginal, ureterovaginal, rectourethral, urethrocutaneous, vesicocutaneous); genital and pelvic-pain conditions (Müllerian anomalies, lichen sclerosus, FGM/C, IC/BPS, myofascial pain); fecal incontinence; urethroplasty technique pages (anastomotic, female, flap, graft, staged, posterior, meatal and perineal, DVIU) and bladder-neck closure.
+- **Verdicts:** 262 findings; 179 adopted, 11 merged, 70 rejected, 2 deferred (one question, logged in `consolidation/DEFERRED.md`).
+- **Errors on the site corrected:** Romanzi arithmetic on the anterior-compartment page (72% and 6%, not 58% and 4%); the female end-to-end urethroplasty page's statement that non-transecting EPA had never been done in women; micromucosa donor site on the Müllerian anomalies page (vulvar or buccal).
+- **Book claims not supported by the primary paper (not added):** a "randomized" urethral dilation study that was a chart review with the opposite result; a vascular-urinary fistula rate from the chapter authors' arithmetic error; a 1.5 drain-to-serum creatinine threshold that the source's ROC analysis contradicts; female-SCI urethral botulinum figures, an "852-patient meta-analysis" that was a 40-patient pilot, and an off-topic eGFR citation (replaced with an on-topic paper); two book misquotations of studies already cited correctly on the pages (a 24 Fr minimum and a 79-patient subgroup rate).
+- **Citation QA:** all new journal references resolved on PubMed to the cited author and year; all 91 new textbook-chapter citations checked against the book text (pages, authors and chapters corrected where needed; two sentences narrowed to what their chapter supports). `consolidation/BOOKS.md` now covers every book in the set, including Campbell's 13th edition.
+- **Campbell's:** mined in parallel (106 findings) and folded into the remaining batches so each page is edited once.
+- Lint, typecheck and build pass.
+
+---
+
 ## 2026-09-30 — Textbook-mining incorporation, wave 1 (foundations, evaluation, storage and voiding conditions)
 
 - **Source:** Codex mined 25 approved textbooks (queue in `reports/textbook-mining/library-queue.md`); 1,230 candidate findings on 369 pages were indexed and split into 27 page batches (`reports/textbook-mining/consolidation/`). Findings are leads, not sources: every added claim was checked against the primary paper's PubMed abstract and cited to the paper; textbook chapters are cited only for established technique or anatomy with no primary paper.

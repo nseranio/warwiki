@@ -27,6 +27,20 @@ findings file on the Desktop, which you may read for context).
 - The CLAUDE.md sections "Non-Negotiables", "Article Pattern" and "MDX
   gotchas" (repo root).
 
+## Campbell's findings
+
+From wave 3 on, batches also contain findings from *Campbell-Walsh-Wein
+Urology*, 13th ed. (ids `CWW13-...`, `source_file` under
+`~/Desktop/WARWIKI-campbell-mining/findings/`; book text at
+`~/Desktop/WARWIKI-campbell-mining/text/CWW13.txt`). Treat them like any other
+finding. Campbell's is the newest general reference in the set, so where it
+conflicts with an older book it usually reflects the more current position,
+but the page's cited guideline or primary evidence still decides. Prefer the
+primary paper; cite Campbell's itself only as a last resort, per `BOOKS.md`.
+Batches `c01`/`c02` hold Campbell's findings for pages already updated in
+waves 1-2: read the page as it is now (including the recent additions) before
+adding anything.
+
 ## Procedure, page by page
 
 1. Read the whole target page, including tables and the reference list.
