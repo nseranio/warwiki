@@ -7,7 +7,7 @@ right now" below -- you do not need the prior conversation.
 
 ## What this project is
 
-Codex is mining a 23-book approved queue of urology/urogyn textbooks for
+Codex is mining a 25-book approved queue (23 originally; two added September 30) of urology/urogyn textbooks for
 content WARWIKI (the reconstructive/functional urology and urogynecology
 wiki at `/Users/joyboy/Documents/WARWIKI/warwiki`) could add. It runs as a
 background job via the `codex-companion.mjs` script (from the
@@ -22,14 +22,18 @@ synced copy in the mining folder). The original mining procedure is in
 `/Users/joyboy/Documents/Medicine` (the book library) are both read-only.
 All mining writes go only inside `~/Desktop/WARWIKI-textbook-mining/`.
 **No WARWIKI site edits or content adoption happen until the entire
-23-book queue is mined and the user asks for the consolidation pass** --
+25-book queue is mined and the user asks for the consolidation pass** --
 this has been the user's standing instruction since book 6 and still
 holds. Do not start writing findings into WARWIKI pages on your own
 initiative, even if a book finishes cleanly.
 
 ## Status as of this handoff (2026-09-30, ~11:00 local)
 
-21 of 23 books complete. Books 22-23 remain.
+21 of 25 books complete. Book 22 (HINMAN5) in progress; books 23-25 remain.
+On September 30 the user added *Perineal Reconstruction* (book 23) and
+*Atlas of Office Based Andrology Procedures* (book 24); *Penile Implant
+Surgery* moved to 25. Both queue copies and `auto-continue.sh` (now stops
+at book 25) were updated.
 
 | # | Book | Abbrev | Status |
 |---|---|---|---|
@@ -54,8 +58,10 @@ initiative, even if a book finishes cleanly.
 | 19 | Urological Care for the Transgender Patient | UCTP | Done |
 | 20 | Transition and Lifelong Care in Congenital Urology | TLCCU | Done |
 | 21 | Atlas of Male Genitourethral Surgery (Muneer, 2013) | AMGUS | **Just finished** |
-| 22 | Hinman's Atlas of Urologic Surgery, 5th ed | (TBD abbrev) | **Should be starting now** |
-| 23 | Penile Implant Surgery | (TBD abbrev) | Queued, last book |
+| 22 | Hinman's Atlas of Urologic Surgery, 5th ed | HINMAN5 | **In progress** (76 selected chapters) |
+| 23 | Perineal Reconstruction (Kosutic, 2023) | (suggested PERIREC) | Queued (added Sept 30) |
+| 24 | Atlas of Office Based Andrology Procedures (2017) | (suggested OFFANDRO) | Queued (added Sept 30); triage infertility chapters out |
+| 25 | Penile Implant Surgery | (TBD abbrev) | Queued, last book |
 
 Each completed book has a `findings/<ABBREV>/99-summary.md` in the mining
 folder with finding counts by type/priority and a shortlist of the
@@ -73,7 +79,7 @@ double-check the file exists before reporting a book done to the user.
 and the matching `text/AUACORE/` are from a completely separate user
 workstream (an "AUA Core Curriculum" content-mining project, run and
 resolved independently, already applied to WARWIKI in its own commits).
-It is not part of the 23-book queue. Never let it affect book numbering,
+It is not part of the 25-book queue. Never let it affect book numbering,
 never resume it, never report on it as part of this queue's progress.
 
 ## What to do right now
@@ -98,7 +104,7 @@ never resume it, never report on it as part of this queue's progress.
      --write \
      --background \
      --resume-last \
-     "Continue exactly where you left off per your own checkpoint note, then keep processing every remaining book in the approved 23-book queue (library-queue.md) in order without stopping to ask between books or chapters, always writing and verifying each book's 99-summary.md exists before marking it complete. There is an unrelated AUACORE folder in findings/ from a separate user workstream -- ignore it entirely. When you run out of turn budget, stop cleanly with progress files up to date -- you will be resumed the same way again." \
+     "Continue exactly where you left off per your own checkpoint note, then keep processing every remaining book in the approved 25-book queue (library-queue.md; books 23-24 were added September 30 -- re-read the table) in order without stopping to ask between books or chapters, always writing and verifying each book's 99-summary.md exists before marking it complete. There is an unrelated AUACORE folder in findings/ from a separate user workstream -- ignore it entirely. When you run out of turn budget, stop cleanly with progress files up to date -- you will be resumed the same way again." \
      --json
    ```
    This returns a new job id each time -- track whichever one is current.
@@ -117,11 +123,11 @@ only message the user when:
 Do not report routine chapter-count progress to the user every cycle --
 that's for your own tracking between wakeups, not conversation noise.
 
-## When all 23 books finish
+## When all 25 books finish
 
 Do not start writing anything into WARWIKI. Tell the user the queue is
 complete and ask whether they want the cross-book consolidation pass now
-(comparing findings across all 23 books, resolving overlaps, and producing
+(comparing findings across all 25 books, resolving overlaps, and producing
 adoption verdicts the way [pilot-review.md](pilot-review.md) did for book 1
 alone) -- that is a substantial, separate piece of work that hasn't started
 yet and deserves its own planning, not something to launch automatically.
