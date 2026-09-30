@@ -95,6 +95,17 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
 | 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | **Done 09:34**, 12 findings, copied to main `findings/` |
 | 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | current job `task-muo63jml-thl6sc` (8/14 chapters at 09:55) |
 
+- **HINMAN5 chapter split (~10:15):** to speed up Hinman's, 36 of its
+  remaining chapters went to four workers in
+  `~/Desktop/WARWIKI-mining-parallel/HINMAN5-{B,C,D,E}` (jobs
+  `task-muo6ogry-1ot85r`, `task-muo6ogz6-yr3gag`, `task-muo6oh7t-snty29`,
+  `task-muo6ohhv-radp1e`). Each has its own `PROMPT.md` with its chapter list,
+  writes `findings/HINMAN5/chNNN.md`, no summary, and `DONE.md` when finished.
+  The main job keeps only Chapters 93-105 (reassigned chapters are marked
+  `[~]` in the main `progress.md`). When all five are done: copy the workers'
+  `chNNN.md` files into the main `findings/HINMAN5/`, tick them in the main
+  `progress.md`, then run one final fresh job in the main folder to write and
+  verify `99-summary.md` across all 76 chapters and mark Book 22 complete.
 - The main job now finishes **only** HINMAN5, then stops (noted at the end
   of the main folder's `library-queue.md`; `auto-continue.sh` now stops at
   book 22).
