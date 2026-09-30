@@ -18,10 +18,10 @@ and incorporate the 25-book findings without waiting for Campbell's.
 |---|---|---|
 | 1 | b01-b06 | **done** (227 findings: 138 adopt, 2 merge, 87 reject; 63 pages) |
 | 2 | b07-b12 | **done** (262 findings: 179 adopt, 11 merge, 70 reject, 2 defer; 67 pages) |
-| 3 | b13-b18, c01, c02 | relaunched 14:40 after a usage-limit stop at ~13:00 (see RESUME-NOTE.md); no helper agents this time |
+| 3 | b13-b18, c01, c02 | **done** (393 findings: 328 adopt, 6 merge, 57 reject, 1 partial, 1 new-page; 109 pages) |
 | 4 | b19-b24 | |
 | 5 | b25-b27 | |
-| 6 | new-pages | |
+| 6 | new-pages | also CWW13-124-001 (bladder diverticulectomy, recommended as a page under 04b) from c02 |
 | — | Campbell's (CWW13, 106 findings) | folded in: 47 findings added to b13-b27 on the same pages; 56 on wave 1-2 pages or unbatched pages in c01/c02 (wave 3); 10 new-page proposals added to new-pages |
 
 ## Lessons from wave 1

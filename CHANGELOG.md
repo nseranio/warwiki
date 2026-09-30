@@ -6,6 +6,17 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-30 — Textbook-mining incorporation, wave 3 (reconstruction, diversion, incontinence and prolapse procedures) and first Campbell's pass
+
+- **Wave 3 (batches b13–b18 plus c01–c02), 109 pages:** bladder augmentation and catheterizable channels; urinary diversion (conduits, continent pouches, neobladders, intracorporeal diversion, diversion principles); upper-tract reconstruction (pyeloplasty, ureteroureterostomy, TUU, ureterocalicostomy, ileal ureter, Boari and psoas hitch, reimplantation, ureterolysis, endoureterotomy); genital reconstruction; female SUI procedures, AUS, male slings, neuromodulation, bulking, urethrolysis; anterior and apical prolapse repair; and Campbell's-Walsh-Wein 13th ed findings on pages updated earlier today.
+- **Verdicts:** 393 findings; 328 adopted, 6 merged, 57 rejected, 1 partial, 1 new-page proposal (bladder diverticulectomy, for the new-page decisions).
+- **Book claims corrected against the primary paper:** RIVUR recurrence and resistance rates; Mainz pouch I cohort totals (replaced with the paper's stricture data); Hautmann meta-analysis pooled odds ratios the book said did not exist; a 101-patient series that is 109 patients; Lundiana pouch n; SNM meta-analysis voided volume; urethrolysis outcomes; several sling, AUS and Burch figures not in their cited papers (dropped); two findings whose cited paper was a different study (rejected).
+- **Interruption:** the account usage limit stopped all wave-3 agents mid-edit at about 13:00; they were relaunched at 14:40 with a review-the-leftover-diff procedure (`consolidation/RESUME-NOTE.md`) and without nested helper agents. Half-finished edits in a separate worktree were discarded and redone.
+- **Citation QA:** all new DOIs resolved on PubMed (one wrong DOI on the retropubic sling page corrected); all 169 new textbook-chapter citations checked against the book text, 24 corrected (wrong authors from a two-column contents page, a chapter title that does not exist, pages); one combined textbook-plus-journal citation replaced with the primary paper.
+- Lint, typecheck and build pass.
+
+---
+
 ## 2026-09-30 — Textbook-mining incorporation, wave 2 (conditions and urethral reconstruction)
 
 - **Wave 2 (batches b07–b12), 67 pages:** prolapse compartments and obstetric injury; neurogenic bladder and its subtypes (spinal cord injury, spina bifida, Parkinson and MSA, stroke, autonomic dysreflexia); upper-tract and fistula conditions (UPJ obstruction, ureteral stricture, obstetric, vesicovaginal, rectovaginal, ureterovaginal, rectourethral, urethrocutaneous, vesicocutaneous); genital and pelvic-pain conditions (Müllerian anomalies, lichen sclerosus, FGM/C, IC/BPS, myofascial pain); fecal incontinence; urethroplasty technique pages (anastomotic, female, flap, graft, staged, posterior, meatal and perineal, DVIU) and bladder-neck closure.
