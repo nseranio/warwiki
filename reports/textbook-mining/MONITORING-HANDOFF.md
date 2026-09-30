@@ -91,9 +91,9 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
 | Book | Folder (its own `--cwd`) | Job id at launch |
 |---|---|---|
 | 22 HINMAN5 | `~/Desktop/WARWIKI-textbook-mining` (main) | `task-muo4kses-fjzpqi` |
-| 23 PERIREC | `~/Desktop/WARWIKI-mining-parallel/PERIREC` | `task-muo4jbyv-1z4x4c` |
+| 23 PERIREC | `~/Desktop/WARWIKI-mining-parallel/PERIREC` | **Done 09:55**, 10 findings, copied to main `findings/` |
 | 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | **Done 09:34**, 12 findings, copied to main `findings/` |
-| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | `task-muo4jca6-uf5coy`, resumed as `task-muo5ckti-hog81a` |
+| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | current job `task-muo63jml-thl6sc` (8/14 chapters at 09:55) |
 
 - The main job now finishes **only** HINMAN5, then stops (noted at the end
   of the main folder's `library-queue.md`; `auto-continue.sh` now stops at
@@ -114,9 +114,8 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
   main folder). If that ever recurs, do the same: `--fresh` with that prompt.
 - **Campbell's 13th ed (CWW13)** runs as a fifth job in
   `~/Desktop/WARWIKI-campbell-mining/` (launched ~09:20, job
-  `task-muo4pq7i-tzwgoe`, prompt in its `PROMPT.md`). It stops after a
-  three-chapter pilot; Claude reviews the pilot (the user delegated this)
-  and tells it to continue. Keep it running and resume it like the others,
+  `task-muo4pq7i-tzwgoe`, prompt in its `PROMPT.md`). Pilot (166 chapters triaged: 59 in, 46 partial, 61 out; 4 findings) was
+  approved by Claude at 09:57; current job `task-muo643hb-2vw4ll`. Keep it running and resume it like the others,
   but do not wait for it before the consolidation pass.
 
 ## What to do right now
