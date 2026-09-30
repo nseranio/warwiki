@@ -181,6 +181,13 @@ only message the user when:
 Do not report routine chapter-count progress to the user every cycle --
 that's for your own tracking between wakeups, not conversation noise.
 
+## Incorporation (started September 30, ~10:45)
+
+All 25 books except HINMAN5's last six chapters are mined, and the
+incorporation into WARWIKI is underway. Follow
+[consolidation/STATUS.md](consolidation/STATUS.md) for the wave plan and
+progress; the method is in [consolidation/AGENT-BRIEF.md](consolidation/AGENT-BRIEF.md).
+
 ## When all 25 books finish
 
 **Superseded September 30, 2026 (user instruction):** as soon as books 22-25
