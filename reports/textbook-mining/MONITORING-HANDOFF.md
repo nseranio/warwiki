@@ -92,8 +92,8 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
 |---|---|---|
 | 22 HINMAN5 | `~/Desktop/WARWIKI-textbook-mining` (main) | `task-muo4kses-fjzpqi` |
 | 23 PERIREC | `~/Desktop/WARWIKI-mining-parallel/PERIREC` | `task-muo4jbyv-1z4x4c` |
-| 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | `task-muo4jc4k-tnh9sl` |
-| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | `task-muo4jca6-uf5coy` |
+| 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | **Done 09:34**, 12 findings, copied to main `findings/` |
+| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | `task-muo4jca6-uf5coy`, resumed as `task-muo5ckti-hog81a` |
 
 - The main job now finishes **only** HINMAN5, then stops (noted at the end
   of the main folder's `library-queue.md`; `auto-continue.sh` now stops at
