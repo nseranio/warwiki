@@ -18,7 +18,7 @@ and incorporate the 25-book findings without waiting for Campbell's.
 |---|---|---|
 | 1 | b01-b06 | **done** (227 findings: 138 adopt, 2 merge, 87 reject; 63 pages) |
 | 2 | b07-b12 | **done** (262 findings: 179 adopt, 11 merge, 70 reject, 2 defer; 67 pages) |
-| 3 | b13-b18, c01, c02 | running (launched ~12:30) |
+| 3 | b13-b18, c01, c02 | relaunched 14:40 after a usage-limit stop at ~13:00 (see RESUME-NOTE.md); no helper agents this time |
 | 4 | b19-b24 | |
 | 5 | b25-b27 | |
 | 6 | new-pages | |
@@ -41,3 +41,14 @@ batches edits each page once instead of twice. `index.json` was rebuilt with
 both finding folders (1,343 findings, 382 pages); `index-wave12.json` keeps
 the earlier snapshot. The last seven HINMAN5 findings (chapters 100-105) were
 folded in the same way.
+
+## Usage-limit interruption (wave 3, ~13:00)
+
+All wave-3 agents and their helpers hit the account session limit at about
+13:00 (reset 14:30) and stopped mid-edit. One helper had been running in a
+separate git worktree; its half-finished edits were discarded (worktree
+removed). Seven pages in the main tree had citation markers without
+references. The relaunch uses `RESUME-NOTE.md`: each agent reviews its
+pages' leftover diff first, repairs or reverts partial edits, reuses partial
+ledgers, and works without helper agents (the nested helpers multiplied the
+load). If the limit trips again, wait for the reset and relaunch the same way.
