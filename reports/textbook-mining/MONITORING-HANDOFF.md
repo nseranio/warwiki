@@ -93,7 +93,7 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
 | 22 HINMAN5 | `~/Desktop/WARWIKI-textbook-mining` (main) | `task-muo4kses-fjzpqi` |
 | 23 PERIREC | `~/Desktop/WARWIKI-mining-parallel/PERIREC` | **Done 09:55**, 10 findings, copied to main `findings/` |
 | 24 OFFANDRO | `~/Desktop/WARWIKI-mining-parallel/OFFANDRO` | **Done 09:34**, 12 findings, copied to main `findings/` |
-| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | current job `task-muo63jml-thl6sc` (8/14 chapters at 09:55) |
+| 25 PIS | `~/Desktop/WARWIKI-mining-parallel/PIS` | **Done 10:29**, 31 findings, copied to main `findings/` |
 
 - **HINMAN5 chapter split (~10:15):** to speed up Hinman's, 36 of its
   remaining chapters went to four workers in
