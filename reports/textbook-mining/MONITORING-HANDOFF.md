@@ -181,6 +181,14 @@ only message the user when:
 Do not report routine chapter-count progress to the user every cycle --
 that's for your own tracking between wakeups, not conversation noise.
 
+## Mining complete (September 30, ~11:30)
+
+All 25 queue books are mined (HINMAN5 finished with 94 findings after the
+four-worker split; summary rebuilt and verified). Campbell's (CWW13): all 105
+selected chapters mined by the main job plus eight workers; the final summary
+job is `task-muo9c7x4-xz1l60` in `~/Desktop/WARWIKI-campbell-mining`. Its
+findings get their own incorporation pass after the 25-book waves.
+
 ## Incorporation (started September 30, ~10:45)
 
 All 25 books except HINMAN5's last six chapters are mined, and the
