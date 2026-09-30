@@ -112,8 +112,12 @@ At the user's request (they have ample Codex credits), books 23-25 now run as
   thread was found". HINMAN5 was restarted as a fresh thread from its
   on-disk progress files (prompt saved as `hinman-fresh-prompt.md` in the
   main folder). If that ever recurs, do the same: `--fresh` with that prompt.
-- The Campbell's 13th-edition mining is a separate, user-run job in
-  `~/Desktop/WARWIKI-campbell-mining/`; not monitored here.
+- **Campbell's 13th ed (CWW13)** runs as a fifth job in
+  `~/Desktop/WARWIKI-campbell-mining/` (launched ~09:20, job
+  `task-muo4pq7i-tzwgoe`, prompt in its `PROMPT.md`). It stops after a
+  three-chapter pilot; Claude reviews the pilot (the user delegated this)
+  and tells it to continue. Keep it running and resume it like the others,
+  but do not wait for it before the consolidation pass.
 
 ## What to do right now
 
@@ -158,12 +162,19 @@ that's for your own tracking between wakeups, not conversation noise.
 
 ## When all 25 books finish
 
-Do not start writing anything into WARWIKI. Tell the user the queue is
-complete and ask whether they want the cross-book consolidation pass now
-(comparing findings across all 25 books, resolving overlaps, and producing
-adoption verdicts the way [pilot-review.md](pilot-review.md) did for book 1
-alone) -- that is a substantial, separate piece of work that hasn't started
-yet and deserves its own planning, not something to launch automatically.
+**Superseded September 30, 2026 (user instruction):** as soon as books 22-25
+are done (all 25 queue books mined), **go straight into the cross-book
+consolidation pass and incorporate the results into WARWIKI** -- do not wait
+for the Campbell's (CWW13) job, and no separate go-ahead is needed. Method:
+compare findings across all 25 books, resolve overlaps and conflicts, and
+produce adoption verdicts the way [pilot-review.md](pilot-review.md) did for
+book 1; then apply the adopted items to the site. Rules that still apply:
+verify every cited primary paper (PubMed) before citing it, cite the primary
+study rather than the textbook, follow STYLE.md and the content-preservation
+policy, run `git status` on the repo first (Codex must not have touched it),
+lint/typecheck/build per CLAUDE.md, and commit and push each batch to `main`
+touching only the files it changed. Campbell's findings get folded in later
+as a follow-up pass when that job finishes.
 
 ## Fallback: user-run script
 
