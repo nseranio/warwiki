@@ -18,7 +18,7 @@ and incorporate the 25-book findings without waiting for Campbell's.
 |---|---|---|
 | 1 | b01-b06 | **done** (227 findings: 138 adopt, 2 merge, 87 reject; 63 pages) |
 | 2 | b07-b12 | **done** (262 findings: 179 adopt, 11 merge, 70 reject, 2 defer; 67 pages) |
-| 3 | b13-b18, c01, c02 | |
+| 3 | b13-b18, c01, c02 | running (launched ~12:30) |
 | 4 | b19-b24 | |
 | 5 | b25-b27 | |
 | 6 | new-pages | |
