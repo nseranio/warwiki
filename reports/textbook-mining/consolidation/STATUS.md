@@ -20,8 +20,8 @@ and incorporate the 25-book findings without waiting for Campbell's.
 | 2 | b07-b12 | **done** (262 findings: 179 adopt, 11 merge, 70 reject, 2 defer; 67 pages) |
 | 3 | b13-b18, c01, c02 | **done** (393 findings: 328 adopt, 6 merge, 57 reject, 1 partial, 1 new-page; 109 pages) |
 | 4 | b19-b24 | **done** (268 findings: 234 adopt, 3 merge, 30 reject, 2 defer; 62 pages) |
-| 5 | b25-b27 | running (launched ~16:15); new-page review running in parallel (read-only) |
-| 6 | new-pages | also CWW13-124-001 (bladder diverticulectomy, recommended as a page under 04b) from c02 |
+| 5 | b25-b27 | b27 done (5 adopted); b25 and b26 stopped by the usage limit at ~17:00, relaunched 21:45 with RESUME-NOTE.md |
+| 6 | new-pages | reviewed (`NEW-PAGES-REVIEW.md`); user chose 16 adult pages plus 3 adult-framed congenital pages; pediatric-primary topics become short context on existing lifelong-care pages; 9 folds; skips as listed |
 | — | Campbell's (CWW13, 106 findings) | folded in: 47 findings added to b13-b27 on the same pages; 56 on wave 1-2 pages or unbatched pages in c01/c02 (wave 3); 10 new-page proposals added to new-pages |
 
 ## Lessons from wave 1
