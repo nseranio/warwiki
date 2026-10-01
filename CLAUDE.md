@@ -89,7 +89,7 @@ Docusaurus v3 medical reference wiki for functional urology, genitourinary recon
 | `docs/03-clinical-conditions/` | `/docs/clinical-conditions` |
 | `docs/04-surgical-techniques/` | `/docs/surgical-techniques` (Treatment Atlas) |
 | `docs/05-special-populations/` | `/docs/special-populations` |
-| `docs/06-journal-club/` | `/docs/journal-club` (Landmark Trials database) |
+| `docs/08-resources/journal-club.mdx` | `/docs/journal-club` (Landmark Trials database; moved into Resources October 1, URL kept via `slug:`) |
 | `docs/07-roots/` | `/docs/roots` (History & Lineage) |
 | `docs/08-resources/` | `/docs/resources` |
 

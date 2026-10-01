@@ -61,10 +61,10 @@ function searchFor(query: string) {
 }
 
 const SUGGESTED_SEARCHES = [
-  'Buccal graft urethroplasty',
+  'Urethral stricture',
   'Sacrocolpopexy',
-  'AUS cuff erosion',
-  'Urodynamics reference values',
+  'Sacral neuromodulation',
+  'Urodynamics',
 ];
 
 function formatDate(ms: number): string {

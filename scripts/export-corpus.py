@@ -36,7 +36,7 @@ GROUPS = [
     ('10-gas-cosmetic-special-populations.txt', ['docs/04-surgical-techniques/04k-', 'docs/04-surgical-techniques/04l-',
                                                  'docs/05-special-populations']),
 ]
-SKIP = ('docs/06-journal-club', 'docs/07-roots', 'docs/08-resources')
+SKIP = ('docs/07-roots', 'docs/08-resources')
 
 
 def url_for(path, slug):

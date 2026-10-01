@@ -23,7 +23,7 @@ const ENTRIES = [
     'The Treatment Atlas — searchable, decision-framework-anchored reference for every operation in functional urology and pelvic reconstruction.'],
   ['docs/05-special-populations/index.mdx',
     'Trauma and emergencies, gender-affirming surgery, women’s health, cancer survivorship, and lifelong urologic care for transitional and geriatric populations.'],
-  ['docs/06-journal-club/index.mdx',
+  ['docs/08-resources/journal-club.mdx',
     'Curated literature and guideline references for functional urology, GU reconstruction, and pelvic floor medicine — separated from the operative-technique atlas.'],
   ['docs/07-roots/index.mdx',
     'Surgical genealogy and history of reconstructive urology and urogynecology — surgeon profiles, lineage tree, and the schools that shaped the field.'],
