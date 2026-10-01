@@ -4,11 +4,11 @@ Agreed with the user on September 30, 2026. Follow this order unless the user sa
 
 ## Order
 
-1. **Finish textbook mining ingestion** ([reports/textbook-mining/](../textbook-mining/)). Current focus.
-2. **Refresh the personal SmartPhrase library** against the post-mining site (off-repo, `~/Documents/Jefferson Einstein/Practice Building/AI/Smartphrase Corpus/`; rerun `regen_warwiki.py`, `digest.py`, per-unit reviewers with `BRIEF.md`).
+1. **Finish textbook mining ingestion** ([reports/textbook-mining/](../textbook-mining/)). **Done September 30** (25 books plus Campbell's; see `consolidation/STATUS.md`).
+2. **Done September 30:** refresh the personal SmartPhrase library against the post-mining site (report `WARWIKI-REFRESH-2026-09-30.md` in the library; 4 phrases and 1 list changed, no card or default changed) (off-repo, `~/Documents/Jefferson Einstein/Practice Building/AI/Smartphrase Corpus/`; rerun `regen_warwiki.py`, `digest.py`, per-unit reviewers with `BRIEF.md`).
 3. **Build the toolkit infrastructure and pilot Male SUI** (AUS, male sling, ProACT, PUL): op notes, counseling templates, handouts, and toolkit cards on the pages.
 4. **Scale the toolkit and publish it together with the handouts** (turn on `WARWIKI_INCLUDE_HANDOUTS` at the same time).
-5. **Campbell's**: scope triage of chapters first, then a 2–3 chapter pilot to measure the accept rate, then the in-scope remainder.
+5. **Campbell's**: done early, September 30 (mined with the textbook queue and incorporated; 106 findings).
 6. **Refresh the toolkit** after Campbell's changes land. Should be mostly automatic if counseling numbers are sourced from pages.
 
 ## Toolkit design decisions
