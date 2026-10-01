@@ -186,6 +186,30 @@ const SECTION_CARDS: SectionCard[] = [
   },
 ];
 
+// The trailer is hosted on Cloudflare R2 rather than YouTube: YouTube
+// age-restricts it (operative footage), and age-restricted videos cannot be
+// embedded. Click-to-play only, with a title-card poster.
+const TRAILER_SRC = 'https://pub-e681f0116a054b8ebfef29999e1d0a8b.r2.dev/video/warwiki-trailer.mp4';
+
+function HomepageTrailer() {
+  return (
+    <section className={styles.homeSection} aria-labelledby="trailer-heading">
+      <div className={styles.homeSectionHeader}>
+        <Heading as="h2" id="trailer-heading" className={styles.homeHeading}>Trailer</Heading>
+      </div>
+      <video
+        className={styles.trailerVideo}
+        src={TRAILER_SRC}
+        poster="/img/home/trailer-poster.jpg"
+        controls
+        preload="none"
+        playsInline
+        aria-label="WARWIKI trailer"
+      />
+    </section>
+  );
+}
+
 function HomepageSections() {
   const {sections, videos} = usePluginData('warwiki-home-data') as HomeData;
   return (
@@ -305,6 +329,7 @@ export default function Home(): ReactNode {
       description="The functional reconstructive urology wiki.">
       <main className={styles.homepageRoot}>
         <HomepageHeader />
+        <HomepageTrailer />
         <HomepageSections />
         <HomepageRecent />
         <HomepageSocialFooter />

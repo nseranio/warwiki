@@ -44,6 +44,22 @@
   margin: 0 auto;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Trailer
+   ═══════════════════════════════════════════════════════════ */
+
+.trailerVideo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  border: 1px solid var(--warwiki-border, #DDE3ED);
+  background: #0B1220;
+  box-shadow: 0 1px 3px rgba(18, 55, 105, 0.07);
+}
+
+[data-theme='dark'] .trailerVideo { border-color: #1F2C42; }
+
 @media screen and (max-width: 996px) {
   .heroBanner { padding: 4.5rem 1.5rem 4rem; }
 }
