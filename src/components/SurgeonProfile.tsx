@@ -1,22 +1,104 @@
 import React, { useState } from 'react';
-import { SURGEONS_BY_ID, getInitials, type Surgeon } from '../data/surgeons';
+import { SURGEONS_BY_ID, DYNASTIES, getInitials } from '../data/surgeons';
+import { LINEAGE_BY_ID, childrenOf, type LineageNode } from '../data/lineage';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
+const CITES_SHOWN = 12;
+const PAGES_SHOWN = 3;
 
-function ComingSoon() {
-  return <p className="sp-coming-soon">Content coming soon.</p>;
+export interface SurgeonCitation {
+  cite: string;
+  doi?: string | null;
+  year?: number | null;
+  pages: { title: string; url: string; ref: string }[];
 }
 
-export default function SurgeonProfile({ id, children }: { id: string; children?: React.ReactNode }) {
+function PersonLink({ node, className }: { node: LineageNode; className?: string }) {
+  return node.path
+    ? <a href={`${PAGE_BASE}${node.path}`} className={className}>{node.name}</a>
+    : <span className={className}>{node.name}</span>;
+}
+
+function CitedOn({ pages }: { pages: SurgeonCitation['pages'] }) {
+  const [open, setOpen] = useState(false);
+  const shown = open ? pages : pages.slice(0, PAGES_SHOWN);
+  return (
+    <div className="sp-cite-pages">
+      <span className="sp-cite-pages-label">Cited on:</span>{' '}
+      {shown.map((p, i) => (
+        <React.Fragment key={p.url}>
+          {i > 0 && ' · '}
+          <a href={`${p.url}#${p.ref}`}>{p.title}</a>
+        </React.Fragment>
+      ))}
+      {pages.length > PAGES_SHOWN && (
+        <button type="button" className="sp-cite-more" onClick={() => setOpen(!open)}>
+          {open ? 'fewer' : `+${pages.length - PAGES_SHOWN} more pages`}
+        </button>
+      )}
+    </div>
+  );
+}
+
+function Citations({ name, citations }: { name: string; citations: SurgeonCitation[] }) {
+  const [showAll, setShowAll] = useState(false);
+  const list = showAll ? citations : citations.slice(0, CITES_SHOWN);
+  return (
+    <section className="sp-section">
+      <h2>Cited on WARWIKI</h2>
+      <p className="sp-cites-intro">
+        {citations.length} {citations.length === 1 ? 'publication' : 'publications'} with {name} as a listed author{' '}
+        {citations.length === 1 ? 'is' : 'are'} cited on WARWIKI, ordered by the number of pages that cite them.
+        Papers whose author list is shortened to "et al." before this name are not included.
+      </p>
+      <ol className="sp-cites">
+        {list.map(c => (
+          <li key={c.doi ?? c.cite}>
+            <span className="sp-cite-text">{c.cite}</span>
+            {c.doi && (
+              <>
+                {' '}
+                <a href={`https://doi.org/${c.doi}`} target="_blank" rel="noopener noreferrer" className="sp-cite-doi">
+                  doi
+                </a>
+              </>
+            )}
+            <CitedOn pages={c.pages} />
+          </li>
+        ))}
+      </ol>
+      {citations.length > CITES_SHOWN && (
+        <button type="button" className="sp-cites-toggle" onClick={() => setShowAll(!showAll)}>
+          {showAll ? 'Show fewer' : `Show all ${citations.length} publications`}
+        </button>
+      )}
+    </section>
+  );
+}
+
+export default function SurgeonProfile({
+  id,
+  citations = [],
+  children,
+}: {
+  id: string;
+  citations?: SurgeonCitation[];
+  children?: React.ReactNode;
+}) {
   const [imgError, setImgError] = useState(false);
   const surgeon = SURGEONS_BY_ID.get(id);
+  const node = LINEAGE_BY_ID.get(id);
 
-  if (!surgeon) {
+  if (!surgeon || !node) {
     return <p>Surgeon not found: <code>{id}</code></p>;
   }
 
-  const mentor = surgeon.mentorId ? SURGEONS_BY_ID.get(surgeon.mentorId) : undefined;
-  const trainees = (surgeon.traineeIds ?? []).map(tid => SURGEONS_BY_ID.get(tid)).filter(Boolean) as Surgeon[];
+  const mentor = node.mentorId ? LINEAGE_BY_ID.get(node.mentorId) : undefined;
+  const coMentor = node.coMentorId ? LINEAGE_BY_ID.get(node.coMentorId) : undefined;
+  const trainees = childrenOf(id);
+  const institution = surgeon.institution ?? node.position;
+  const school = !mentor ? DYNASTIES.find(d => d.rootId === id) : undefined;
+  const hasLineage = Boolean(mentor || school || trainees.length);
 
   return (
     <div className="sp-wrapper">
@@ -35,8 +117,8 @@ export default function SurgeonProfile({ id, children }: { id: string; children?
             {surgeon.country && (
               <span className="sp-hero-meta-item">{surgeon.countryFlag} {surgeon.country}</span>
             )}
-            {surgeon.institution && (
-              <span className="sp-hero-meta-item">🏥 {surgeon.institution}</span>
+            {institution && (
+              <span className="sp-hero-meta-item">🏥 {institution}</span>
             )}
             {surgeon.title && (
               <span className="sp-hero-meta-item">{surgeon.title}</span>
@@ -81,63 +163,67 @@ export default function SurgeonProfile({ id, children }: { id: string; children?
       </div>
 
       {/* ── Lineage strip ── */}
+      {hasLineage && (
       <div className="sp-lineage">
         {mentor && (
           <div className="sp-lineage-item sp-lineage-item--mentor">
-            <div className="sp-lineage-label">Mentored by</div>
-            <a href={`${PAGE_BASE}${mentor.path}`} className="sp-lineage-name">{mentor.name}</a>
+            <div className="sp-lineage-label">Mentored by{node.year ? ` · fellowship ${node.year}` : ''}</div>
+            <PersonLink node={mentor} className="sp-lineage-name" />
+            {coMentor && (
+              <div className="sp-lineage-co">with <PersonLink node={coMentor} /></div>
+            )}
           </div>
         )}
-        {!mentor && (
+        {school && (
           <div className="sp-lineage-item sp-lineage-item--root">
             <div className="sp-lineage-label">Role</div>
-            <div className="sp-lineage-name">Foundational figure</div>
+            <div className="sp-lineage-name">Founder, {school.label}</div>
           </div>
         )}
         {trainees.length > 0 && (
           <div className="sp-lineage-item sp-lineage-item--trainees">
             <div className="sp-lineage-label">Trainees ({trainees.length})</div>
             <div className="sp-lineage-trainees">
-              {trainees.map(t => (
+              {trainees.map(t => t.path ? (
                 <a key={t.id} href={`${PAGE_BASE}${t.path}`} className="sp-trainee-chip">
-                  {t.countryFlag} {t.name}
+                  {t.surgeon?.countryFlag} {t.name}{t.year ? ` · ${t.year}` : ''}
                 </a>
+              ) : (
+                <span key={t.id} className="sp-trainee-chip sp-trainee-chip--plain">
+                  {t.name}{t.year ? ` · ${t.year}` : ''}
+                </span>
               ))}
             </div>
           </div>
         )}
       </div>
+      )}
 
       {/* ── Content sections ── */}
       <div className="sp-sections">
 
-        <section className="sp-section">
-          <h2>Biography</h2>
-          {children ?? <ComingSoon />}
-        </section>
+        {/* Biography MDX supplies its own headings. */}
+        {children && <section className="sp-section sp-bio">{children}</section>}
 
-        <section className="sp-section">
-          <h2>Key Publications</h2>
-          {surgeon.keyPubs && surgeon.keyPubs.length > 0 ? (
+        {surgeon.keyPubs && surgeon.keyPubs.length > 0 && (
+          <section className="sp-section">
+            <h2>Key Publications</h2>
             <ol className="sp-pubs">
               {surgeon.keyPubs.map((pub, i) => <li key={i}>{pub}</li>)}
             </ol>
-          ) : <ComingSoon />}
-        </section>
+          </section>
+        )}
 
-        <section className="sp-section">
-          <h2>Preferred Instruments & Setup</h2>
-          {surgeon.instruments && surgeon.instruments.length > 0 ? (
+        {citations.length > 0 && <Citations name={surgeon.name} citations={citations} />}
+
+        {surgeon.instruments && surgeon.instruments.length > 0 && (
+          <section className="sp-section">
+            <h2>Preferred Instruments & Setup</h2>
             <ul className="sp-instruments">
               {surgeon.instruments.map((item, i) => <li key={i}>{item}</li>)}
             </ul>
-          ) : <ComingSoon />}
-        </section>
-
-        <section className="sp-section">
-          <h2>Videos & Media</h2>
-          <ComingSoon />
-        </section>
+          </section>
+        )}
 
       </div>
     </div>

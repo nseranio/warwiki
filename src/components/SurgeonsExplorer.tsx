@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import SurgeonTree from './SurgeonTree';
 import SurgeonDirectory from './SurgeonDirectory';
-import { SUBSPECIALTIES, surgeonsBySubspecialty, type Subspecialty } from '../data/surgeons';
+import { SUBSPECIALTIES, type Subspecialty } from '../data/surgeons';
+import { lineageBySubspecialty } from '../data/lineage';
 
 export default function SurgeonsExplorer({
   defaultSubspecialty = 'GURS',
@@ -15,7 +16,7 @@ export default function SurgeonsExplorer({
       <div className="se-tabs" role="tablist" aria-label="Reconstructive subspecialty">
         {SUBSPECIALTIES.map(s => {
           const active = sub === s.id;
-          const count = surgeonsBySubspecialty(s.id).length;
+          const count = lineageBySubspecialty(s.id).length;
           return (
             <button
               key={s.id}

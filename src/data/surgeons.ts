@@ -105,7 +105,7 @@ export const SURGEONS: Surgeon[] = [
     country: 'United States',
     countryFlag: '🇺🇸',
     traineeIds: [
-      'allen-morey', 'hunter-wessells', 'jeremy-meyers', 'benjamin-breyer',
+      'allen-morey', 'hunter-wessells', 'jeremy-myers', 'benjamin-breyer',
       'sean-elliott', 'jill-buckley', 'michael-metro', 'steve-brandes',
       'bryan-voelzke', 'bradley-erickson',
       'noel-armenakas', 'reynaldo-gomez',
@@ -129,9 +129,9 @@ export const SURGEONS: Surgeon[] = [
     traineeIds: ['judith-hagedorn', 'alex-vanni', 'joshua-broghammer', 'thomas-smith-iii', 'bradley-figler'],
   },
   {
-    id: 'jeremy-meyers',
-    path: 'h-r/jeremy-meyers',
-    name: 'Jeremy Meyers',
+    id: 'jeremy-myers',
+    path: 'h-r/jeremy-myers',
+    name: 'Jeremy B. Myers',
     photo: 'https://medicine.utah.edu/sites/g/files/zrelqx351/files/styles/portrait_laptop/public/media/images/2022/myers-chief.jpeg',
     mentorId: 'jack-mcaninch',
     traineeIds: [],
