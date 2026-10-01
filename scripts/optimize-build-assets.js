@@ -12,7 +12,43 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const OUTPUT = path.join(ROOT, 'build/img/handouts');
 
+// Markdown images are bundled into build/assets/images under hashed names, so
+// the plain copies Docusaurus also makes from static/ go unused. Remove a copy
+// only when no built file references its /img/... path.
+const MARKDOWN_IMAGE_DIRS = ['img/figures', 'img/anatomy', 'img/wound-healing'];
+
+async function builtText() {
+  const chunks = [];
+  const walk = async dir => {
+    for (const entry of await fs.readdir(dir, {withFileTypes: true})) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) await walk(full);
+      else if (/\.(html|js|css|xml|json|txt)$/.test(entry.name)) chunks.push(await fs.readFile(full, 'utf8'));
+    }
+  };
+  await walk(path.join(ROOT, 'build'));
+  return chunks.join('\n');
+}
+
+async function removeUnreferencedImageCopies() {
+  const text = await builtText();
+  let removed = 0; let bytes = 0;
+  for (const rel of MARKDOWN_IMAGE_DIRS) {
+    const dir = path.join(ROOT, 'build', rel);
+    let names = [];
+    try { names = await fs.readdir(dir); } catch { continue; }
+    for (const name of names) {
+      if (text.includes(`/${rel}/${name}`)) continue;
+      bytes += (await fs.stat(path.join(dir, name))).size;
+      await fs.rm(path.join(dir, name), {force: true});
+      removed += 1;
+    }
+  }
+  console.log(`Unreferenced static image copies removed: ${removed} files (${(bytes / 1e6).toFixed(2)} MB).`);
+}
+
 async function main() {
+  await removeUnreferencedImageCopies();
   if (process.env.WARWIKI_INCLUDE_HANDOUTS === 'false') {
     // Retire only generated deployment copies; preserve all committed sources.
     await fs.access(path.join(ROOT, 'build/index.html'));
