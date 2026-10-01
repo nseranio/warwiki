@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   PATIENT_HANDOUTS,
@@ -7,6 +7,7 @@ import {
   HANDOUT_LANGUAGES,
   HANDOUT_AUDIENCES,
   DEFAULT_LANGUAGE,
+  handoutAudience,
   handoutHasLanguage,
   handoutMatchesAudience,
   handoutPdfPath,
@@ -22,9 +23,16 @@ import type {HandoutAudience} from '@site/src/data/handouts';
  *   handouts without a translation yet fall back to English and show a
  *   "translation coming soon" note. A language is selectable once at least one
  *   handout offers it.
- * Cards are grouped category → subcategory. Data + helpers live in
- * src/data/handouts.ts.
+ * Handouts are grouped category → subcategory. The default list view shows one
+ * row per handout (title, topic, audience, PDF link); a row expands to show the
+ * description and page-1 preview, and category headings collapse. A Grid/List
+ * toggle restores the thumbnail cards; the choice is remembered per browser.
+ * Data + helpers live in src/data/handouts.ts.
  */
+
+type View = 'list' | 'grid';
+const VIEW_KEY = 'warwiki-handouts-view';
+const AUDIENCE_SHORT: Record<string, string> = {all: 'All', female: 'Women', male: 'Men'};
 export default function PatientHandouts(): React.ReactElement {
   const {siteConfig} = useDocusaurusContext();
   if (siteConfig.customFields?.handoutsEnabled !== true) {
@@ -46,6 +54,33 @@ function PatientHandoutsGallery({
   const [query, setQuery] = useState('');
   const [cat, setCat] = useState('all');
   const [audience, setAudience] = useState<HandoutAudience>('all');
+  const [view, setView] = useState<View>('list');
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [open, setOpen] = useState<string | null>(null);
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem(VIEW_KEY);
+      if (saved === 'grid' || saved === 'list') setView(saved);
+    } catch {
+      // Storage unavailable (private mode); keep the default.
+    }
+  }, []);
+  const chooseView = (v: View) => {
+    setView(v);
+    try {
+      window.localStorage.setItem(VIEW_KEY, v);
+    } catch {
+      // Ignore storage failures.
+    }
+  };
+  const toggleGroup = (category: string) =>
+    setCollapsed((prev) => {
+      const next = new Set(prev);
+      if (next.has(category)) next.delete(category);
+      else next.add(category);
+      return next;
+    });
 
   // A language is selectable once at least one handout offers it.
   const liveCount = (code: string) =>
@@ -120,6 +155,58 @@ function PatientHandoutsGallery({
     );
   };
 
+  const renderRow = (h: (typeof PATIENT_HANDOUTS)[number]) => {
+    const effective = handoutHasLanguage(h, lang) ? lang : DEFAULT_LANGUAGE;
+    const isOpen = open === h.slug;
+    const pdf = handoutPdfPath(h.slug, effective);
+    return (
+      <li className={`ph-row${isOpen ? ' ph-row--open' : ''}`} key={h.slug}>
+        <div className="ph-row-line">
+          <button
+            type="button"
+            className="ph-row-main"
+            aria-expanded={isOpen}
+            onClick={() => setOpen(isOpen ? null : h.slug)}
+          >
+            <span className="ph-row-chev" aria-hidden="true">›</span>
+            <span className="ph-row-title">{h.title}</span>
+            <span className="ph-row-sub" title={h.subcategory}>{h.subcategory}</span>
+            <span className="ph-row-aud">{AUDIENCE_SHORT[handoutAudience(h)]}</span>
+          </button>
+          <a
+            className="ph-row-dl"
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Download ${h.title} PDF`}
+          >
+            PDF
+          </a>
+        </div>
+        {isOpen && (
+          <div className="ph-row-detail">
+            <a href={pdf} target="_blank" rel="noopener noreferrer" className="ph-row-thumb">
+              <img
+                src={handoutThumbPath(h.slug, effective)}
+                alt={`${h.title}, patient handout, page 1`}
+                width={700}
+                height={467}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <div className="ph-row-info">
+              <p>{h.description}</p>
+              <a href={pdf} target="_blank" rel="noopener noreferrer" className="ph-dl">
+                Download PDF · {h.pages} pages
+              </a>
+            </div>
+          </div>
+        )}
+      </li>
+    );
+  };
+
   return (
     <div className="ph-wrap">
       <div className="ph-controls">
@@ -160,6 +247,19 @@ function PatientHandoutsGallery({
             ))}
           </select>
         </div>
+        <div className="ph-viewtoggle" role="group" aria-label="View">
+          {(['list', 'grid'] as View[]).map((v) => (
+            <button
+              type="button"
+              key={v}
+              className={view === v ? 'is-active' : ''}
+              aria-pressed={view === v}
+              onClick={() => chooseView(v)}
+            >
+              {v === 'list' ? 'List' : 'Grid'}
+            </button>
+          ))}
+        </div>
         {translations && (
           <div className="ph-selectwrap">
             <select
@@ -196,24 +296,42 @@ function PatientHandoutsGallery({
           filters.
         </p>
       ) : (
-        groups.map(({category, count, subgroups}) => (
-          <section className="ph-group" key={category}>
-            <h2 className="ph-group-title">
-              {category}
-              <span className="ph-count">{count}</span>
-            </h2>
-            {subgroups.map(({subcategory, items}) => (
-              <div className="ph-subgroup" key={subcategory}>
-                {subgroups.length > 1 && (
-                  <h3 className="ph-subtitle">{subcategory}</h3>
-                )}
-                <div className="ph-grid">
-                  {items.map((h) => renderCard(h, category))}
-                </div>
-              </div>
-            ))}
-          </section>
-        ))
+        groups.map(({category, count, subgroups}) => {
+          const isCollapsed = !q && collapsed.has(category);
+          return (
+            <section className="ph-group" key={category}>
+              <h2 className="ph-group-title">
+                <button
+                  type="button"
+                  className="ph-collapse"
+                  aria-expanded={!isCollapsed}
+                  onClick={() => toggleGroup(category)}
+                >
+                  <span className="ph-collapse-chev" aria-hidden="true">›</span>
+                  {category}
+                  <span className="ph-count">{count}</span>
+                </button>
+              </h2>
+              {!isCollapsed &&
+                (view === 'list' ? (
+                  <ul className="ph-list">
+                    {subgroups.flatMap(({items}) => items.map(renderRow))}
+                  </ul>
+                ) : (
+                  subgroups.map(({subcategory, items}) => (
+                    <div className="ph-subgroup" key={subcategory}>
+                      {subgroups.length > 1 && (
+                        <h3 className="ph-subtitle">{subcategory}</h3>
+                      )}
+                      <div className="ph-grid">
+                        {items.map((h) => renderCard(h, category))}
+                      </div>
+                    </div>
+                  ))
+                ))}
+            </section>
+          );
+        })
       )}
     </div>
   );
