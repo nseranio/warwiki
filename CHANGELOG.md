@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-01 — Urology Video Journal additions (user-suggested)
+
+- **Single-Port Robotics:** new "Toolbox and camera modes" subsection (access kit and retractor sizes, instrument list including ROSI and extended-range instruments, custom remote center, Camera Adjust / Camera Control / Cobra, relocation, robot "burping") from Orsini 2025 (CC BY), with its video.
+- **Bladder Diverticulectomy:** single-port transvesical technique and selection rule (posterior or posterolateral narrow-necked diverticula without ureteral involvement; extraperitoneal when the ureter is close) from Chavali/Kaouk 2025, a three-patient row in the robotic series table, and the video.
+- **O'Conor VVF Repair:** PATIO tract-eversion single-port transvesical repair (Kata 2026, one patient) as a named variant, with the video; one-line cross-link from PATIO Repair (UCF).
+- **Source access:** ScienceDirect blocks automated fetches; the user downloaded the PDFs. Urology Video Journal videos stream directly from `https://ars.els-cdn.com/content/image/1-s2.0-<PII>-mmc1.mp4` and embed through `VideoCards` (`sourceUrl`, `sourceType: 'mp4'`). DOIs confirmed in Crossref.
+
 ## 2026-10-01 — Open-access figures, Flashcards, Journal Club moved into Resources
 
 - **Open-access figures:** all 11,125 cited DOIs were checked in OpenAlex and Europe PMC; 1,310 cited papers are CC BY or CC BY-NC with PMC full text. Their figure captions were filtered to operative, technique, anatomy and imaging figures (616 candidates, [reports/open-access-figures/](reports/open-access-figures/)). A 16-figure pilot plus the Ratanapornsompong 2026 Y-V pyeloplasty figure, then a 13-batch rollout, put 159 published figures on 112 pages, each viewed before use and credited "From Author, et al. Journal. Year;Vol:Pages, Fig. N (licence)". Excluded: charts and flowcharts, in-image © or "courtesy" credits (e.g. Miklos/Moore VVF art, UroLift photos), identifiable patients, and genital photographs of children (three DSD and Cantwell-Ransley figures and an ICG hypospadias figure were removed on review). Images are stored at most 1400 px, JPEG ~74, to keep the build under 200 MB (173.7 MB).
