@@ -6,6 +6,18 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-30 — Textbook-mining incorporation, wave 5 (cosmetic genital surgery, trauma and emergencies, special populations, history)
+
+- **Wave 5 (batches b25–b27), 24 pages:** cosmetic genital and genital-skin pages; trauma and intraoperative consultation (renal, ureteral, bladder, PFUI, penile fracture, priapism, genital trauma); special populations (lifelong care, cancer survivorship, women's health, recurrent UTI, gender-affirming care); and the prolapse and urogynecology history page (early vaginal prolapse operations, early incontinence surgery, the female urethroscope, IUGA's founding).
+- **Verdicts:** 122 findings; 92 adopted, 9 merged, 21 rejected. A pediatric clitoroplasty technique was kept off an adult and transition-care page.
+- **Corrections:** two merged subgroup incontinence rates split back out on the cancer-survivorship page; a bladder-trauma "repair threshold" that was a misreading of the AAST grading scale removed; Schultheiss 2000 cited under its indexed title.
+- **Citation QA:** all new DOIs resolved on PubMed; 47 new textbook-chapter citations checked against the book text, 33 corrected (one invented chapter title, wrong author initials, page ranges, title case).
+- **Interruption:** the usage limit stopped b25 and b26 at about 17:00; both were resumed at 21:45 with the review-the-leftover-diff procedure.
+- **New pages decided:** the user approved 16 adult pages and 3 congenital topics written for adults; pediatric-primary topics become short context on existing lifelong-care pages (`consolidation/NEW-PAGES-REVIEW.md`).
+- Lint, typecheck and build pass.
+
+---
+
 ## 2026-09-30 — Textbook-mining incorporation, wave 4 (prolapse and mesh, fistula repair, prosthetics and sexual dysfunction, gender-affirming surgery)
 
 - **Wave 4 (batches b19–b24), 62 pages:** mesh complications, pessaries, colpocleisis and posterior repairs; fistula repair (female, male and all-patient pages, sphincteroplasty, episioproctotomy, Martius flap); penile implants (complications, infection, models, setup, preoperative evaluation, reservoir placement, revision), Peyronie's surgery, vacuum devices, venous ligation and arterial revascularization; gender-affirming surgery (vaginoplasty variants, phalloplasty and urethral lengthening, metoidioplasty, hysterectomy, scrotoplasty, orchiectomy, testicular implants).
