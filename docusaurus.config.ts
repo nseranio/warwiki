@@ -11,7 +11,10 @@ const config: Config = {
     // Device speech is the default. Enabling paid cloud audio requires an
     // explicit build/runtime setting; keep the API key server-side only.
     cloudTtsEnabled: process.env.WARWIKI_ENABLE_CLOUD_TTS === 'true',
-    handoutsEnabled: process.env.WARWIKI_INCLUDE_HANDOUTS === 'true',
+    // English handouts publish by default (set WARWIKI_INCLUDE_HANDOUTS=false to
+    // pause). Translations stay off until they are redone from the final English.
+    handoutsEnabled: process.env.WARWIKI_INCLUDE_HANDOUTS !== 'false',
+    handoutTranslationsEnabled: process.env.WARWIKI_INCLUDE_HANDOUT_TRANSLATIONS === 'true',
   },
 
   future: {

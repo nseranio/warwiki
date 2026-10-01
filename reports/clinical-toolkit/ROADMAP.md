@@ -2,6 +2,10 @@
 
 Agreed with the user on September 30, 2026. Follow this order unless the user says otherwise.
 
+## Status (October 1, 2026)
+
+**Scrapped.** A searchable Resources corpus (`/docs/resources/clinical-toolkit`, 26 generic templates for Male SUI, Female SUI, urethral stricture and OAB) was built with Codex, published as `127ad2a0`, and reverted the same day (`966a126d`) at the user's request ("no good"). Do not rebuild a public template toolkit unless the user asks. The code and templates remain in git history (`git show 127ad2a0`). Patient handouts publish on their own.
+
 ## Order
 
 1. **Finish textbook mining ingestion** ([reports/textbook-mining/](../textbook-mining/)). **Done September 30** (25 books plus Campbell's; see `consolidation/STATUS.md`).

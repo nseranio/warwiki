@@ -30,10 +30,18 @@ export default function PatientHandouts(): React.ReactElement {
   if (siteConfig.customFields?.handoutsEnabled !== true) {
     return <p>The WARWIKI handout library is currently paused. Visit <a href="/docs/resources/patient-resources">Patient Resources</a> for society and academic patient education.</p>;
   }
-  return <PatientHandoutsGallery />;
+  return (
+    <PatientHandoutsGallery
+      translations={siteConfig.customFields?.handoutTranslationsEnabled === true}
+    />
+  );
 }
 
-function PatientHandoutsGallery(): React.ReactElement {
+function PatientHandoutsGallery({
+  translations,
+}: {
+  translations: boolean;
+}): React.ReactElement {
   const [lang, setLang] = useState(DEFAULT_LANGUAGE);
   const [query, setQuery] = useState('');
   const [cat, setCat] = useState('all');
@@ -152,26 +160,28 @@ function PatientHandoutsGallery(): React.ReactElement {
             ))}
           </select>
         </div>
-        <div className="ph-selectwrap">
-          <select
-            className="ph-filter"
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-            aria-label="Language"
-          >
-            {HANDOUT_LANGUAGES.map((l) => {
-              const live = isLive(l.code);
-              return (
-                <option key={l.code} value={l.code} disabled={!live}>
-                  {l.code === DEFAULT_LANGUAGE
-                    ? l.label
-                    : `${l.label} — ${l.englishLabel}`}
-                  {live ? '' : ' (coming soon)'}
-                </option>
-              );
-            })}
-          </select>
-        </div>
+        {translations && (
+          <div className="ph-selectwrap">
+            <select
+              className="ph-filter"
+              value={lang}
+              onChange={(e) => setLang(e.target.value)}
+              aria-label="Language"
+            >
+              {HANDOUT_LANGUAGES.map((l) => {
+                const live = isLive(l.code);
+                return (
+                  <option key={l.code} value={l.code} disabled={!live}>
+                    {l.code === DEFAULT_LANGUAGE
+                      ? l.label
+                      : `${l.label} — ${l.englishLabel}`}
+                    {live ? '' : ' (coming soon)'}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        )}
       </div>
 
       {filtered && (

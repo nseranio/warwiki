@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-01 — English patient handouts republished; Clinical Toolkit scrapped
+
+- **Handouts rechecked:** all 80 English sheets checked against the WARWIKI pages changed since the September 29 refresh (textbook mining and later corrections), by eight parallel agents following `_proposal/REFRESH-SPEC.md`. About 22 clinical edits, each verified against the current page, including: TURP and HoLEP orgasm wording; neobladder night dryness 1 in 2 to 8 in 10; nephrostomy rest before ureteral reconstruction; possible biopsy at ureteral evaluation (AUA/SUO); rectovaginal-fistula spontaneous-healing figure limited to mild obstetric fistulas; penile implant leg-swelling emergency; no sex between Xiaflex injections; hidden-drug "ED supplements"; cystogram pregnancy question; buried-penis skin pathology and expanding-hematoma warning; diverticulum redo risk; urodynamics prior-stricture question; IC/BPS in men; penile clamp short-term only; bulking catheter and imaging-mimic notes; ACT durability; sling and future pregnancy; ISC new leakage; pessary removal numbing cream; antidepressant sexual side effects; testosterone early clot risk. All footers now read "Reviewed October 2026"; every sheet passes the overflow gate, reading grade 3.8–6.5. PDFs re-rendered (Ghostscript-shrunk) and copied to `static/handouts/`.
+- **Published English only:** `handoutsEnabled` now defaults on (`WARWIKI_INCLUDE_HANDOUTS=false` pauses); new `handoutTranslationsEnabled` (off) hides the language selector and `optimize-build-assets.js` drops the 1,600 translated PDFs and previews from the build. Published payload: 80 PDFs (4.2 MB) and 80 previews (4.0 MB). The gallery is indexed again and linked from Patient Resources and the Resources landing.
+- **Clinical Toolkit:** a searchable Resources corpus of generic templates (`127ad2a0`) was reverted the same day at the user's request (`966a126d`).
+
+---
+
 ## 2026-09-30 — Textbook-mining deferred questions resolved
 
 - **Manual modeling** ([manual-modeling.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling.mdx)): hand-position guidance now combines Lucas 2020 (glanular pressure; co-authored by Wilson) and the Haile, Bajic and Levine chapter (bend from the distal shaft, not the glans; avoid pressing down on the cylinder tips; pressure over the corporotomies). The mechanism is stated as a cylinder tip driven through the fossa navicularis; the unsupported explanation about urethral compression against the pubic symphysis is removed.
