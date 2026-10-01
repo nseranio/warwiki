@@ -2,11 +2,11 @@
 
 Generated October 1, 2026. Every DOI cited on a WARWIKI page (11,125) was checked in OpenAlex and Europe PMC. Cited papers with full text in PubMed Central under CC BY (1,033), CC0/CC BY-SA (4), or CC BY-NC/BY-NC-SA (273, usable because WARWIKI is noncommercial) were pulled, and their figure captions filtered to operative, technique, anatomy and imaging figures. Charts, flowcharts, forest plots, survival curves, laboratory and animal figures were dropped, as were captions with third-party credit lines (reprinted, adapted, with permission, courtesy, ©).
 
-Result: 616 candidate figures. **PILOT** marks the 16 figures added October 1. Before using any other figure: view it, confirm the article licence and that the figure has no separate credit line, check for identifiable patients, and credit it as "From Author X, et al. Journal. Year;Vol:Pages, Fig. N (licence)." Full-size originals are often on the publisher site (Springer media server, MDPI, PLOS, Elsevier _lrg) when the PMC copy is small.
+Result: 616 candidate figures. **PILOT** marks the 16 pilot figures. The October 1 rollout then reviewed every candidate with an image and added about 135 more (agent reports in the session scratchpad; the site itself is the record of what was used). Before using any other figure: view it, confirm the article licence and that the figure has no separate credit line, check for identifiable patients, and credit it as "From Author X, et al. Journal. Year;Vol:Pages, Fig. N (licence)." Full-size originals are often on the publisher site (Springer media server, MDPI, PLOS, Elsevier _lrg) when the PMC copy is small.
 
 Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. Licence after the journal.
 
-## 04-surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/genital-reconstruction-principles  (2 figures on page now)
 
 - **[DP] Figure 1**: Defect reconstruction after resection of a rectal carcinoma using VRAM flap illustrated by intraoperative photographs and schematic drawings of the surgical technique. (A) Preoperative marking for VRAM-flap procedure wit… *Front Oncol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4597132/) · doi:10.3389/fonc.2015.00212
 - **[P] Figure 2**: Defect reconstruction at groin after resection of a dermatofibrosarcoma protuberans using caudal pedicled ALT flap. (A) Extent of groin defect after resection (black asterisk) of a dermatofibrosarcoma protuberans. (B) In… *Front Oncol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4597132/) · doi:10.3389/fonc.2015.00212
@@ -26,7 +26,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Figure 12**: The illustration shows the robot-assisted harvesting of a myocutaneous flap during perineal reconstructive surgery. *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
 - **[D] Figure 9**: The illustration of the PAP perforator flap shows its vascular supply based on perforators arising from the profunda femoris artery, located below the inguinal crease. *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
 
-## 01-foundations/surgical-principles/flaps/rhomboid-limberg  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/rhomboid-limberg  (2 figures on page now)
 
 - **[?] Figure 2**: Principle of the rhombic flap according to Limberg. (a) The defect (red) is shaped like a rhombus. The sides of the rhombus are of equal length and have an ideal angle of 60° and 120°. The flap (purple) has the same meas… *Cancers (Basel) 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11394374/) · doi:10.3390/cancers16173101
 - **[?] Figure 6**: Anterolateral thigh flap (ALT flap): Thigh anatomy: Location of the lateral circumflex femoral artery. Cutaneous and musculocutaneous perforators arising from this artery. Donor site: A rectangular area marked on the ant… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
@@ -47,7 +47,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 9**: Recurrence free outcome as a function of follow-up time of patients treated with Limberg and Dufourmentel flap technique. Data presented are for RCTs only and for all available studies. Numbers of patients included in th… *Sci Rep 2018, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5814421/) · doi:10.1038/s41598-018-20143-4
 - **[?] Figure 10**: Recurrence free outcome as a function of follow-up time of patients treated with other flap techniques. Data presented are for RCTs only and for all available studies. Numbers of patients included in the analysis are ind… *Sci Rep 2018, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5814421/) · doi:10.1038/s41598-018-20143-4
 
-## 04-surgical-techniques/04g-prolapse-repair/apical/laparoscopic-lateral-suspension  (1 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/apical/laparoscopic-lateral-suspension  (2 figures on page now)
 
 - **[DP] Fig. 1** **PILOT**: Positioning of the trocars. Left: intraoperative view. Center: schematic representation with positioning of the assistant trocar between the optical and the right lateral trocar (in the case of Da Vinci models S, Si, X).… *Int Urogynecol J 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10167164/) · doi:10.1007/s00192-023-05477-6
 - **[?] Figure 2**: Laparoscopic lateral suspension combined with uterosacral ligament folding and shortening group procedure. (A) An extraperitoneal tunnel was established by maintaining a 40–45° angle with the round ligament. (B) The shor… *Front Med (Lausanne) 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12370751/) · doi:10.3389/fmed.2025.1626735
@@ -83,7 +83,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Figure 12**: The illustration shows the robot-assisted harvesting of a myocutaneous flap during perineal reconstructive surgery. *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
 - **[D] Figure 9**: The illustration of the PAP perforator flap shows its vascular supply based on perforators arising from the profunda femoris artery, located below the inguinal crease. *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
 
-## 01-foundations/surgical-principles/flaps/epap  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/epap  (2 figures on page now)
 
 - **[P] Figure 4**: Intraoperative and postoperative views of DEPAP flap reconstruction. (A) Anterior view of the extensive scrotal defect with exposure of the perineal structures after serial debridement. (B) Posterior view demonstrating t… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12733778/) · doi:10.3390/jcm14248732
 - **[D] Figure 2**: A stepwise schematic diagram of the pull-up double-opposing keystone-designed perforator island flaps (KDPIFs) for circumferential penile defect coverage. (A, B) Circumferential penile shaft defect. (C, D) Design of the … *Medicine (Baltimore) 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7220202/) · doi:10.1097/md.0000000000018762
@@ -94,7 +94,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] FIGURE 3**: The harvested STEPA flap demonstrating its extremely thin and laminar architecture. The scrotal skin paddle, supplied by the external pudendal vessels, shows a uniform near‐millimetric thickness (approximately 2–3 mm), o… *Microsurgery 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13397553/) · doi:10.1002/micr.70261
 - **[P] Figure 5**: The patient showed satisfactory progress during the postoperative period for 9 months. The flap remained completely viable without any functional impairment, and the patient’s rectal mucosal and anal sphincter functions … *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12733778/) · doi:10.3390/jcm14248732
 
-## 01-foundations/surgical-skills/quilting-stitch  (1 figures on page now)
+## 01-foundations/surgical-skills/quilting-stitch  (2 figures on page now)
 
 - **[P] Fig. 2**: Operative steps of DOBMGU. A Midline perineal incision that exposes the underneath bulbospongiosus muscle (the blue arrow). B One-sided dissection between the urethra and left corpora cavernosa (the dotted black arrow). … *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
 - **[P] Fig. 1** **PILOT**: Operative steps of VOBMGU. A The bulbospongiosus muscle (BSM) is divided in the midline to expose the underlying bulb (the black arrows). B Opening the urethra ventrally over a urethral dilator (16-F). C Proximal anastom… *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
@@ -107,14 +107,14 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Fig. 2**: Operative steps of DOBMGU. A Midline perineal incision that exposes the underneath bulbospongiosus muscle (the blue arrow). B One-sided dissection between the urethra and left corpora cavernosa (the dotted black arrow). … *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
 - **[P] Fig. 1** **PILOT**: Operative steps of VOBMGU. A The bulbospongiosus muscle (BSM) is divided in the midline to expose the underlying bulb (the black arrows). B Opening the urethra ventrally over a urethral dilator (16-F). C Proximal anastom… *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
 
-## 04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty-incisions-approaches  (1 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty-incisions-approaches  (2 figures on page now)
 
 - **[P] Fig. 2**: Operative steps of DOBMGU. A Midline perineal incision that exposes the underneath bulbospongiosus muscle (the blue arrow). B One-sided dissection between the urethra and left corpora cavernosa (the dotted black arrow). … *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
 - **[P] Fig. 1** **PILOT**: Operative steps of VOBMGU. A The bulbospongiosus muscle (BSM) is divided in the midline to expose the underlying bulb (the black arrows). B Opening the urethra ventrally over a urethral dilator (16-F). C Proximal anastom… *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11772550/) · doi:10.1007/s00345-025-05441-7
 - **[?] Figure 2**: Surgical technique of single-stage penile urethroplasty using BMG. (a) Preoperative appearance in a severe LS fossa navicular stricture. (b) Urethral exposure and location of the stricture. (c) Dorsal incision for deepen… *Asian J Androl 2020, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7155792/) · doi:10.4103/aja.aja_78_19
 - **[I] Figure 1**: Preoperative urethrograms of patients included in the study. (a) Ascending urethrogram showing a short navicular fossa stricture. (b) Descending urethrogram showing a long penile stricture *Asian J Androl 2020, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7155792/) · doi:10.4103/aja.aja_78_19
 
-## 04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/appendiceal-ileal-onlay  (1 figures on page now)
+## 04-surgical-techniques/04d-upper-tract-reconstruction/interposition-graft/appendiceal-ileal-onlay  (2 figures on page now)
 
 - **[P] Fig. 2**: Intraoperative views of robotic appendiceal ureteroplasty. Yellow dotted line: appendix; and white dotted line: ureter. (A) Simple appendiceal flap: The detubularized appendiceal flap is anastomosed to the ureteral defec… *Eur Urol Open Sci 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13356656/) · doi:10.1016/j.euros.2026.05.018
 - **[D] Fig. 3** **PILOT**: Schematic illustrations of robotic appendiceal ureteroplasty. (A) Simple appendiceal flap: Indicated for ureteral strictures without luminal obliteration. (B) Appendiceal flap with posterior augmentation anastomosis: Ind… *Eur Urol Open Sci 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13356656/) · doi:10.1016/j.euros.2026.05.018
@@ -122,12 +122,12 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Figure 1**: Laparoscopic Mitrofanoff (MAV-L) procedure. Intraoperative view showing the mobilization of the appendix and creation of the appendicovesical anastomosis. *J Clin Med 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12986302/) · doi:10.3390/jcm15051954
 - **[?] Fig. 1**: Patient position, port placement, and robot docking for single-docking robotic appendiceal ureteroplasty. Blue circle, 8 mm robotic port; red circle, camera port, 8 mm robotic port (DaVinci Xi system) or 12 mm port (Da V… *Eur Urol Open Sci 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13356656/) · doi:10.1016/j.euros.2026.05.018
 
-## 04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing  (1 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing  (2 figures on page now)
 
 - **[?] Figure 4** **PILOT**: (a) The graft is rolled over glans starting from the ventral side. Quilting sutures are placed accordingly. (b) A meatotomy is performed to compensate for possible stricture at the level of the meatus due to sutures appr… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6595175/) · doi:10.1155/2019/5219048
 - **[?] Figure 3**: (a) Estimating the graft size needed by accurately placing a white paper over the glans circumference. Blood is absorbed from the paper defining the borders. (b) Marking the size of the skin graft over the harvesting sit… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6595175/) · doi:10.1155/2019/5219048
 
-## 04-surgical-techniques/04e-genital-reconstruction/vulvar-primary-closure  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/vulvar-primary-closure  (1 figures on page now)
 
 - **[?] Figure 6**: Anterolateral thigh flap (ALT flap): Thigh anatomy: Location of the lateral circumflex femoral artery. Cutaneous and musculocutaneous perforators arising from this artery. Donor site: A rectangular area marked on the ant… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12249552/) · doi:10.3390/jcm14134456
 - **[PI] Figure 1**: Pelvic reconstruction following a posterior exenteration with resection of Anus, posterior vaginal wall and vulva using the corpus uteri as a muscular flap: (a) the vulvar tumor with infiltration of anal sphincter; (b) i… *Cancers (Basel) 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8997096/) · doi:10.3390/cancers14071695
@@ -165,7 +165,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Fig. 3**: Improved toughness and mechanical stability of the hybrid coating.a Schematic illustration of supramolecular interactions in the hybrid nanofilm. b The deconvoluted IR bands to characterize hydrogen bonding in the hybrid… *Nat Commun 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10192346/) · doi:10.1038/s41467-023-38282-2
 - **[D] Fig. 5**: Mechanisms of drug release from a reservoir-type system.a Schematic showing the mechanism of drug release from a solid reservoir system consisting of a solid drug core and the surrounding membrane, including gradual diss… *Nat Commun 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10192346/) · doi:10.1038/s41467-023-38282-2
 
-## 01-foundations/surgical-principles/flaps/diep  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/diep  (1 figures on page now)
 
 - **[?] Figure 3**: (A) A 75-year-old patient showing a defect involving the upper perineum, mons pubis, and left groin after radical vulvectomy repaired by advancement flaps and wound breakdown. (B) An ALT flap planned on the left thigh wi… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
 - **[?] Figure 1**: (A) This picture shows the wound breakdown of a patient affected by vulvar cancer who underwent radical vulvectomy and was repaired by advancement flaps and primary closure. The dehiscence involved the anterior perineum,… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
@@ -175,7 +175,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 6**: (A) Massive vulvar cancer relapse after surgery and radiation therapy. Previous surgery consisted of a vulvectomy, repaired by flap advancement and primary closure. (B) Complete pelvic exenteration was performed, and the… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
 - **[?] Figure 7**: (A) Posterior pelvectomy performed for recurrent vulvar cancer after previous surgery and radiation therapy. (B) The defect was repaired by bilateral advancement VY flaps. (C) Late postoperative results, showing uneventf… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
 
-## 01-foundations/surgical-principles/flaps/igap-gluteal-fold  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/igap-gluteal-fold  (2 figures on page now)
 
 - **[?] Figure 3**: The de-epithelialized flap can now be sutured in depth. For this, we used a 0 non-absorbable suture. The VY flap from the other side was used to cover the defect from the contralateral side and in the parts of the de-epi… *Cancers (Basel) 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10340405/) · doi:10.3390/cancers15133345
 - **[?] Figure 3**: (A) After resection of an adenocarcinoma of the vagina with infiltration in the anal canal and placement of a biological patch for pelvic floor reconstruction. (B) Bilateral raised SGAP flaps before insertion (note: the … *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11242694/) · doi:10.3390/jcm13133825
@@ -208,7 +208,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 4**: (A) 3D-printed polycaprolactone (PCL), (B) Surelift and (C) HalbaMesH prolapse meshes after 10,000 cycles of fatigue tests. *Polymers (Basel) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8309226/) · doi:10.3390/polym13142295
 - **[?] Figure 2**: (A) Representative cross-sections of PLCL/Fg and PPM samples stained with hematoxylin and eosin at 24 weeks time points (scale bar =500 μm, ×40). (B) Histological analysis of PLCL/Fg and PPM after implantation. (a) Avera… *Int J Nanomedicine 2016, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4745856/) · doi:10.2147/ijn.s88803
 
-## 01-foundations/tools/biomaterials/urinary-catheters/council-tip-catheter  (0 figures on page now)
+## 01-foundations/tools/biomaterials/urinary-catheters/council-tip-catheter  (2 figures on page now)
 
 - **[P] Figure 4**: Deviation of each catheter tip. The upper panels of (A) show the photographs of each catheter tip when the syringe was pulled at 20 or 100 mm/s. The lower panel of (A) shows the distance that catheter tips have moved fro… *Sci Rep 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9399152/) · doi:10.1038/s41598-022-18778-5
 - **[I] Figure 2**: An 83-year-old male patient with severe urinary retention visited the emergency department, and blind urethral catheterization failed. Subsequently, he underwent fluoroscopy-guided urethral catheterization. (A) On retrog… *Sci Rep 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11043067/) · doi:10.1038/s41598-024-60224-1
@@ -227,7 +227,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Figure 2**: An automatic irrigation device. An automatic irrigation device for a 60 ml catheter tip syringe was used to repeat a predetermined movement at a constant velocity. (A) Detailed photographs of the device. (B) The tip of e… *Sci Rep 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9399152/) · doi:10.1038/s41598-022-18778-5
 - **[DP] Figure 1**: The efficiency of MBW. (A) Photographs viewed from the tip or each side of the catheters used in this study. Red dotted line shows the outline of each hole. (B) Total relative area of the holes in each catheter. The area… *Sci Rep 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9399152/) · doi:10.1038/s41598-022-18778-5
 
-## 01-foundations/tools/instruments/urethral-specialty/sacrocolpopexy-tacker  (0 figures on page now)
+## 01-foundations/tools/instruments/urethral-specialty/sacrocolpopexy-tacker  (2 figures on page now)
 
 - **[?] Fig. 6**: Failure modes for all three groups. Shown are the most common failure modes for the three different fixation devices used with the PVDF-tape (DynaMesh CESA, FEG Textiltechnik mbH Aachen, Germany) on the porcine cervices … *Arch Gynecol Obstet 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9984508/) · doi:10.1007/s00404-022-06827-3
 - **[?] Fig. 4**: Failure Mode for groups 1 and 2. Shown are the different failure modes for group 1 (Suture Spine), which used PremiCron (HR26s, braided, coated, non-absorbable sutures, Braun Surgical, S.A. Rubi. Spain) and group 2 (ProT… *Arch Gynecol Obstet 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8918131/) · doi:10.1007/s00404-021-06343-w
@@ -244,7 +244,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Fig. 2**: Pairwise comparisons of the anatomical results presented in the considered studies (each line corresponding to a direct pairwise comparison, the width of the line illustrating the number of studies presenting such a pair… *Tech Coloproctol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11976829/) · doi:10.1007/s10151-025-03133-3
 - **[?] Fig. 4**: Comparison of the odds ratios for each of the procedures studied (reference: endorectal advancement flap). ERAF endorectal advancement flap, Ov C Ovesco clip, Sph transp transperineal sphincteroplasty (excision and layer… *Tech Coloproctol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11976829/) · doi:10.1007/s10151-025-03133-3
 
-## 04-surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy  (0 figures on page now)
+## 04-surgical-techniques/04c-urinary-diversion/cutaneous-ureterostomy  (2 figures on page now)
 
 - **[?] Figure 1.**: Surgical procedure of modified tubeless ureterocutaneostomy. (a) An approximately 3 to 4 cm slit was made at each ureteral end. The ureters were conjoined side to side using 3 interrupted sutures (4-0 Coated Vicryl Plus … *Technol Cancer Res Treat 2023, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10563461/) · doi:10.1177/15330338231192906
 - **[D] Fig. 2**: (Left) This schematic diagram depicts the ureters being pulled out of the abdominal wall and a lateral incision being made on the ureter. (Right) This schematic diagram shows the effect of a ureteral anastomosis. As desc… *Eur J Med Res 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10405402/) · doi:10.1186/s40001-023-01250-z
@@ -255,7 +255,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Figure 2**: A stepwise schematic diagram of the pull-up double-opposing keystone-designed perforator island flaps (KDPIFs) for circumferential penile defect coverage. (A, B) Circumferential penile shaft defect. (C, D) Design of the … *Medicine (Baltimore) 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7220202/) · doi:10.1097/md.0000000000018762
 - **[P] Figure 1**: Clinical photographs. (A, B) The final post-debridement defect was circumferential (5.5 × 12 cm) and the double-opposing keystone-designed perforator island flap was designed for each side from the suprapubic area to the… *Medicine (Baltimore) 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7220202/) · doi:10.1097/md.0000000000018762
 
-## 04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/lymphaticovenous-anastomosis  (2 figures on page now)
 
 - **[P] Figure 1**: Photographs from an actual side-to-end anastomosis through temporary lymphatic expansion (SEATTLE) procedure.A lymphatic vessel with diameter of 0.45 mm (arrow) and a venule with diameter of 0.60 mm are prepared for anas… *PLoS One 2013, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3607574/) · doi:10.1371/journal.pone.0059523
 - **[PI] FIGURE 5**: A 66-year-old man with 3-year secondary genital lymphedema underwent the lymphovenous anastomoses technique. (A) Clinical photograph of the scrotum taken before the operation showed evident scrotal and penis lymphedema a… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
@@ -267,7 +267,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Fig. 2**: Intraoperative picture of an end-to-end lymphaticovenous anastomosis *Breast Cancer Res Treat 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7568701/) · doi:10.1007/s10549-020-05839-4
 - **[?] Figure 2**: A 54-year-old female suffered from International Society of Lymphology stage 2 lower extremity lymphedema (LEL), whose LEL index of the left leg was 284 (left).Two side-to-end lymphaticovenular anastomoses were performed… *PLoS One 2013, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3607574/) · doi:10.1371/journal.pone.0059523
 
-## 04-surgical-techniques/04e-genital-reconstruction/lyst  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/lyst  (2 figures on page now)
 
 - **[I] Figure 2**: Step-by-step ultrasound preoperative planning of inguinal vascularised lymph node transfer. Above, left: The 18-MHz linear probe is used. Above, right: Step 1. Identification of the superficial circumflex iliac artery an… *J Pers Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9410514/) · doi:10.3390/jpm12081346
 - **[P] Figure 6**: LIFT case example. Above, left: Preoperative planning of super-thin SCIP flap conducted with HF-US and UHF-US. Above, right: The super-thin SCIP flap has been elevated on superficial SCIA branch and SCIV. Middle, left: I… *J Pers Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9410514/) · doi:10.3390/jpm12081346
@@ -281,7 +281,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Figure 1**: Graphic illustration of the three subtypes of lymphatic tissue transfer: LIFT, lymphatic interposition flap transfer; VLNT, vascularised lymph node transfer; LYST, lymphatic system transfer. *J Pers Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9410514/) · doi:10.3390/jpm12081346
 - **[?] Figure 2**: A DIEP flap was designed in the left hemiabdomen, and a 14 × 5 cm lymphatic SCIP flap was designed in the Zone 4 region. DIEP, deep inferior epigastric perforator; SCIP, superficial circumflex iliac artery perforator. *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8836945/) · doi:10.3390/jcm11030534
 
-## 04-surgical-techniques/04e-genital-reconstruction/vulvar  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/vulvar  (2 figures on page now)
 
 - **[?] Figure 3**: (A) A 75-year-old patient showing a defect involving the upper perineum, mons pubis, and left groin after radical vulvectomy repaired by advancement flaps and wound breakdown. (B) An ALT flap planned on the left thigh wi… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
 - **[?] Figure 1**: (A) This picture shows the wound breakdown of a patient affected by vulvar cancer who underwent radical vulvectomy and was repaired by advancement flaps and primary closure. The dehiscence involved the anterior perineum,… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
@@ -292,7 +292,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 1**: The patient underwent vulvar reconstruction for recurrent squamous cell carcinoma (SCC) after tumor resection. a Flap design, b Perforator dissection (c) Detection of the perforators and flap design (D) Appearance of the… *BMC Cancer 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4635970/) · doi:10.1186/s12885-015-1792-x
 - **[?] Figure 7**: (A) Posterior pelvectomy performed for recurrent vulvar cancer after previous surgery and radiation therapy. (B) The defect was repaired by bilateral advancement VY flaps. (C) Late postoperative results, showing uneventf… *Front Oncol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10318400/) · doi:10.3389/fonc.2023.1195580
 
-## 04-surgical-techniques/04g-prolapse-repair/apical/cesa-vasa  (0 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/apical/cesa-vasa  (2 figures on page now)
 
 - **[?] Figure 3**: Trocar placement and insertion of uterosacral ligament (USL) tunneling device. Port locations with 4 trocar entries in laparoscopic cervicosacropexy: Opitcal, umbilicus (10 mm) (1). Left lower abdomen, in the anterior ax… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11942981/) · doi:10.3390/jcm14061880
 - **[?] Figure 6**: Tunneling of both uterosacral ligaments (USL) (white arrowheads) with the tunneling device (semi-curved hook). (a) The tunneling device (white arrow) is brought into the abdominal cavity via the right lateral trocar inci… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11942981/) · doi:10.3390/jcm14061880
@@ -307,7 +307,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 4**: Comparison of the odds ratios for each of the procedures studied (reference: endorectal advancement flap). ERAF endorectal advancement flap, Ov C Ovesco clip, Sph transp transperineal sphincteroplasty (excision and layer… *Tech Coloproctol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11976829/) · doi:10.1007/s10151-025-03133-3
 - **[I] Fig. 3**: Recommendations regarding postpartum management and subsequent pregnancy after obstetric anal sphincter injury (OASI) [305]. A Recommendations regarding postpartum management for women with OASI for centers without acces… *Int Urogynecol J 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/) · doi:10.1007/s00192-026-06642-3
 
-## 04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening  (0 figures on page now)
+## 04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening  (2 figures on page now)
 
 - **[?] Figure 1**: (a) Once Buck’s fascia and urethra have been completely dissected off the corpora, the point of maximum curvature is identified after induction of an artificial erection. (b) A circumferential incision is carried out at … *Asian J Androl 2026, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12912750/) · doi:10.4103/aja202512
 - **[?] Figure 4**: Here, we see the defect after tunical incision with the penile prosthesis cylinders in place for a patient with dorsal penile curvature. The initial transverse incision (A) results in curvature correction, and subsequent… *Asian J Androl 2020, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6958979/) · doi:10.4103/aja.aja_81_19
@@ -346,7 +346,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Figure 2** **PILOT**: Technique of Blandy PU. Inverted-U perineal incision (a). Exposure of the bulbar urethra (b). Opening of the bulbar urethra (c). Hemostatic sutures on the corpus spongiosum and suturing of the tip of the inverted-U flap … *Biomed Res Int 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4350848/) · doi:10.1155/2015/365715
 
-## 01-foundations/surgical-principles/flaps/gracilis  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/gracilis  (2 figures on page now)
 
 - **[?] Figure 3**: Steps of the Stage 2 procedure. (a) Engrafted perineal urethrostomy at 8 weeks, (b) dorsal plate dissected, (c) gracilis-buccal mucosa composite harvest, (d) gracilis tunneled into the perineal incision, (e) dorsal (left… *Case Rep Urol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4519531/) · doi:10.1155/2015/490518
 - **[I] Figure 1**: Preoperative retrograde urethrogram and attempted voiding cystogram. *Case Rep Urol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4519531/) · doi:10.1155/2015/490518
@@ -421,7 +421,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Figure.**: Final Evaluation and Catheterization Algorithm to Manage Urinary Retention Among InpatientsThe algorithm is intended for the inpatient setting. Cutoffs were determined based on a combination of literature review, expert … *JAMA Netw Open 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11252892/) · doi:10.1001/jamanetworkopen.2024.22281
 
-## 03-clinical-conditions/03b-voiding-outlet/female-urethral-stricture  (0 figures on page now)
+## 03-clinical-conditions/03b-voiding-outlet/female-urethral-stricture  (1 figures on page now)
 
 - **[?] Figure 6**: Vestibular flap (“Montorsi flap”). (a) = inverted-Y incision; (b) = dorsal stricturotomy; (c) = mobilization of the vestibular flap; (d) = suturing the tip of the flap to the proximal end of the opened urethra and the ed… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 7**: Lateral vaginal wall flap (“Orandi flap”). (a) = longitudinal midline incision at anterior vaginal wall; (b) = ventral stricturotomy; (c) = mobilization of the lateral vaginal wall flap; (d) = suturing the medial surface… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
@@ -433,7 +433,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: Female versus male urethral anatomy. (a) = female urethral anatomy; (b) = male urethral anatomy. Green = ventral urethra; red = dorsal urethra. *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 11**: Martius flap. (a) & (b) = sagittal incision at the most dependent line of the labium majus; (c) & (d) = mobilizing fibrofatty tissue; (e) = transposition of the Martius flap to the reconstructed area through a subcutaneo… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 
-## 04-surgical-techniques/04a-urethral-reconstruction/female/female-dorsal-onlay-urethroplasty  (1 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/female/female-dorsal-onlay-urethroplasty  (2 figures on page now)
 
 - **[?] Figure 6**: Vestibular flap (“Montorsi flap”). (a) = inverted-Y incision; (b) = dorsal stricturotomy; (c) = mobilization of the vestibular flap; (d) = suturing the tip of the flap to the proximal end of the opened urethra and the ed… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 7**: Lateral vaginal wall flap (“Orandi flap”). (a) = longitudinal midline incision at anterior vaginal wall; (b) = ventral stricturotomy; (c) = mobilization of the lateral vaginal wall flap; (d) = suturing the medial surface… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
@@ -457,7 +457,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: Female versus male urethral anatomy. (a) = female urethral anatomy; (b) = male urethral anatomy. Green = ventral urethra; red = dorsal urethra. *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 11**: Martius flap. (a) & (b) = sagittal incision at the most dependent line of the labium majus; (c) & (d) = mobilizing fibrofatty tissue; (e) = transposition of the Martius flap to the reconstructed area through a subcutaneo… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 
-## 04-surgical-techniques/04a-urethral-reconstruction/female/female-vaginal-flap-urethroplasty  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/female/female-vaginal-flap-urethroplasty  (1 figures on page now)
 
 - **[?] Figure 6**: Vestibular flap (“Montorsi flap”). (a) = inverted-Y incision; (b) = dorsal stricturotomy; (c) = mobilization of the vestibular flap; (d) = suturing the tip of the flap to the proximal end of the opened urethra and the ed… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 7**: Lateral vaginal wall flap (“Orandi flap”). (a) = longitudinal midline incision at anterior vaginal wall; (b) = ventral stricturotomy; (c) = mobilization of the lateral vaginal wall flap; (d) = suturing the medial surface… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
@@ -473,7 +473,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Figure 2** **PILOT**: Technique of Blandy PU. Inverted-U perineal incision (a). Exposure of the bulbar urethra (b). Opening of the bulbar urethra (c). Hemostatic sutures on the corpus spongiosum and suturing of the tip of the inverted-U flap … *Biomed Res Int 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4350848/) · doi:10.1155/2015/365715
 
-## 04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/ventral-onlay-glanuloplasty  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/ventral-onlay-glanuloplasty  (1 figures on page now)
 
 - **[?] Figure 2**: (a) The stenosed meatus is slit open ventrally up to corona. (b) Buccal mucosal graft (BMG) sutured to the lateral side of preserved dorsal mucosal strip (white arrow). (c) BMG rolled over 24 Fr. catheter and sutured to … *Indian J Urol 2014, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3897046/) · doi:10.4103/0970-1591.124200
 - **[I] Figure 1**: (a) Meatal stenosis due to lichen sclerosus et atrophicus (black arrow). (b) Micturating cystourethrogram urethrogram showing stricture of urethra limited exclusively to navicular fossa (white arrow) *Indian J Urol 2014, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3897046/) · doi:10.4103/0970-1591.124200
@@ -496,7 +496,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[D] Figure 3** **PILOT**: Schematic illustration of the procedure. (A) The flap, pedicled on the bilateral anterior scrotal artery, was taken from the anterior side of the scrotum. The dotted lines represent the skin incision. The flap was suppli… *Medicine (Baltimore) 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6919477/) · doi:10.1097/md.0000000000018106
 
-## 04-surgical-techniques/04f-incontinence-procedures/procedures/urethrolysis  (0 figures on page now)
+## 04-surgical-techniques/04f-incontinence-procedures/procedures/urethrolysis  (1 figures on page now)
 
 - **[?] Figure 6**: Vestibular flap (“Montorsi flap”). (a) = inverted-Y incision; (b) = dorsal stricturotomy; (c) = mobilization of the vestibular flap; (d) = suturing the tip of the flap to the proximal end of the opened urethra and the ed… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 7**: Lateral vaginal wall flap (“Orandi flap”). (a) = longitudinal midline incision at anterior vaginal wall; (b) = ventral stricturotomy; (c) = mobilization of the lateral vaginal wall flap; (d) = suturing the medial surface… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
@@ -510,14 +510,14 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 11**: Martius flap. (a) & (b) = sagittal incision at the most dependent line of the labium majus; (c) & (d) = mobilizing fibrofatty tissue; (e) = transposition of the Martius flap to the reconstructed area through a subcutaneo… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6398057/) · doi:10.1155/2019/6715257
 - **[?] Figure 6**: Lateral dissection may identify wings of obstructing suburethral sling. Source: Mayo Clinic. *Neurourol Urodyn 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11665769/) · doi:10.1002/nau.25387
 
-## 04-surgical-techniques/04h-fistula-repair/transanal-minimally-invasive-repair  (0 figures on page now)
+## 04-surgical-techniques/04h-fistula-repair/transanal-minimally-invasive-repair  (1 figures on page now)
 
 - **[P] FIGURE 2**: After introduction of the transanal endoscopic operation device and creation of a pneumorectum, endoscopic view showing the presence of a large rectovaginal fistula at the level of the anterior aspect of the colorectal a… *Colorectal Dis 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13020667/) · doi:10.1111/codi.70419
 - **[DP] VIDEO 1**: Step‐by‐step demonstration of a fully transanal endoscopic approach for the closure of a large post‐anastomotic high rectovaginal fistula using the transanal endoscopic operation (TEO®) platform. The video illustrates pa… *Colorectal Dis 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13020667/) · doi:10.1111/codi.70419
 - **[PI] FIGURE 1**: PRE preoperative pelvic magnetic resonance imaging (MRI)—axial (A) and sagittal (B) views—and lower GI series with rectal opacification (C and D) clearly showing a wide communication between the anterior aspect of the co… *Colorectal Dis 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13020667/) · doi:10.1111/codi.70419
 - **[?] FIGURE 3**: A good reciprocal mobilization is assessed ensuring at least 1 cm of release around the entire circumference of the defects before proceeding to suture phase (A, B); longitudinal closure of vaginal wall defect (C, D); an… *Colorectal Dis 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13020667/) · doi:10.1111/codi.70419
 
-## 05-special-populations/05a-trauma-emergencies/acute-urinary-retention  (0 figures on page now)
+## 05-special-populations/05a-trauma-emergencies/acute-urinary-retention  (1 figures on page now)
 
 - **[P] Figure.**: Final Evaluation and Catheterization Algorithm to Manage Urinary Retention Among InpatientsThe algorithm is intended for the inpatient setting. Cutoffs were determined based on a combination of literature review, expert … *JAMA Netw Open 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11252892/) · doi:10.1001/jamanetworkopen.2024.22281
 - **[I] Figure 2**: An 83-year-old male patient with severe urinary retention visited the emergency department, and blind urethral catheterization failed. Subsequently, he underwent fluoroscopy-guided urethral catheterization. (A) On retrog… *Sci Rep 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11043067/) · doi:10.1038/s41598-024-60224-1
@@ -532,7 +532,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] FIG. 3**: Significant predictors of trial without catheter (TWOC) success in univariate analysis. P, precipitated acute urinary retention (AUR); S, spontaneous AUR; IPSS, International Prostate Symptom Score; catheter duration is … *BJU Int 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3272343/) · doi:10.1111/j.1464-410x.2011.10430.x
 - **[PI] Figure 1.**: Flexible cystoscopy photograph with arrow indicating a urethral mucosal tear. *West J Emerg Med 2012, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3555603/) · doi:10.5811/westjem.2011.11.6810
 
-## 01-foundations/anatomy-physiology/pelvis-support/perineum  (5 figures on page now)
+## 01-foundations/anatomy-physiology/pelvis-support/perineum  (7 figures on page now)
 
 - **[DP] Figure 11** **PILOT**: A diagram of the levator ani, rhabdosphincter, and perineal membrane in women. Lateral view through the bony pelvis. In the female, the rhabdosphincter is connected with the ischiadic bony ramus by the perineal membrane.… *Biomed Res Int 2014, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4022307/) · doi:10.1155/2014/906921
 - **[DP] Figure 10** **PILOT**: A diagram of the levator ani and rhabdosphincter in men. Lateral view through the bony pelvis. In the male, the rhabdosphincter is connected with the inferomedial margin of the levator ani. The fibers of the levator ani … *Biomed Res Int 2014, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4022307/) · doi:10.1155/2014/906921
@@ -555,7 +555,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: ICG use for perfusion assessment during ileo-colic anastomosis. (A) Perfusion control ileocolic anastomosis (colonic side), (B) evaluation of enterotomy closure perfusion. *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11355299/) · doi:10.3390/jcm13164895
 - **[DP] Figure 3**: Oncological trajectory visualization using a Sankey diagram. The diagram illustrates the progression of patients from EAU risk classification through nodal status (positive vs. negative), BCR status, and subsequent devel… *Prostate 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12842867/) · doi:10.1002/pros.70107
 
-## 01-foundations/surgical-principles/exposure  (0 figures on page now)
+## 01-foundations/surgical-principles/exposure  (2 figures on page now)
 
 - **[P] FIGURE 2**: Intraoperative photographs demonstrating the dissection of the right‐sided mesocolon from the right retroperitoneum and the pancreaticoduodenal region (a–d); dissection of the mesoduodenum, including the pancreatic head,… *Asian J Endosc Surg 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13351518/) · doi:10.1111/ases.70348
 - **[D] FIGURE 1**: Updated schematic representation of the fusion interface between visceral organs and the retroperitoneum. Traditional eponymous or organ‐specific terms shown in parentheses are provided only as supplementary descriptors … *Asian J Endosc Surg 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13351518/) · doi:10.1111/ases.70348
@@ -568,7 +568,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: A 23-months-old female patient underwent tissue expansion on her abdomen for the reconstruction of her Rt. Forearm nevus lesion (A). 8 × 17 cm narrow based distant flap was designed (B). Surgical delay procedures (1st an… *Sci Rep 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10628270/) · doi:10.1038/s41598-023-45852-3
 - **[?] Figure 3**: A 52-month-old male patient underwent tissue expansion on his cheek for facial reconstruction. A flap with an anticipated back-cut was designed (A). A surgical delay procedure was performed to enhance flap circulation, b… *Sci Rep 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10628270/) · doi:10.1038/s41598-023-45852-3
 
-## 01-foundations/surgical-principles/flaps/peritoneal  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/peritoneal  (1 figures on page now)
 
 - **[?] Figure 1** **PILOT**: Extravesical Lich–Gregoir ureteroneocystostomy surgical technique: (A) two small parallel sero-muscular incisions are made in the donor bladder wall, perpendicular to the planned ureteric coarse, and a submucosal tunnel … *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12193927/) · doi:10.3390/jcm14124129
 - **[?] Fig. 2**: A A circumferential incision was made around the fistula opening at least 0.5 cm from the fistula opening. B The vaginal flap around the fistula was freed by at least 2–3 cm. C, E The fistula was sutured continuously. D,… *Int Urogynecol J 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10415502/) · doi:10.1007/s00192-023-05465-w
@@ -582,7 +582,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Fig. 1**: Decisional tree in case of intraoperatively suspected IUTI. N stands for no, Y for yes. IUTI, iatrogenic urinary tract injury; EDS, emergency digestive surgery *World J Emerg Surg 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10492308/) · doi:10.1186/s13017-023-00513-8
 - **[I] Fig. 2**: Decisional tree in case of postoperatively suspected IUTI. IUTI, iatrogenic urinary tract injury; EDS, emergency digestive surgery; CT, computed tomography; NOM, non-operative management *World J Emerg Surg 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10492308/) · doi:10.1186/s13017-023-00513-8
 
-## 01-foundations/surgical-principles/flaps/radial-forearm  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/radial-forearm  (2 figures on page now)
 
 - **[?] Figure 1**: (a–e) Case example of a radial phalloplasty in a transmasculine patient. Preoperative planning and preparation of the forearm flap; extensive donor site surface with partially exposed tendons after flap elevation; prepar… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11477785/) · doi:10.3390/jcm13196004
 - **[?] Fig. 4**: Urethra construction.Urethral tabularisation around a 16ch catheter following the harvest of the radial forearm flap at the time of the first stage. *Int J Impot Res 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12474536/) · doi:10.1038/s41443-025-01161-z
@@ -698,12 +698,12 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 11**: Duckett flap. Mobilization of a pedicled Duckett flap (inner preputium). *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6500724/) · doi:10.1155/2019/9046430
 - **[?] Figure 12**: Orandi flap. Mobilization of a pedicled Orandi flap (ventral longitudinal island; penile shaft skin). *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6500724/) · doi:10.1155/2019/9046430
 
-## 03-clinical-conditions/03b-voiding-outlet/primary-bladder-neck-obstruction  (1 figures on page now)
+## 03-clinical-conditions/03b-voiding-outlet/primary-bladder-neck-obstruction  (2 figures on page now)
 
 - **[DPI] Fig 1** **PILOT**: Baseline imaging studies illustrating bladder damage secondary to PBNO: A) Voiding cystourethrogram showing two large diverticula (arrowheads) and narrow (nonfunneling) bladder neck (arrows); B) Voiding cystourethrogram … *PLoS One 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7978344/) · doi:10.1371/journal.pone.0248938
 - **[DI] Fig 2**: Non-contrast CT Scans illustrating severe upper tract deterioration secondary to PBNO: A) Bilateral hydronephrosis (arrowheads) with preserved renal parenchyma, resolved after three weeks with a Foley catheter. Her Creat… *PLoS One 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7978344/) · doi:10.1371/journal.pone.0248938
 
-## 03-clinical-conditions/03f-fistulas/all-patients/post-kidney-transplant  (0 figures on page now)
+## 03-clinical-conditions/03f-fistulas/all-patients/post-kidney-transplant  (1 figures on page now)
 
 - **[?] Figure 1** **PILOT**: Extravesical Lich–Gregoir ureteroneocystostomy surgical technique: (A) two small parallel sero-muscular incisions are made in the donor bladder wall, perpendicular to the planned ureteric coarse, and a submucosal tunnel … *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12193927/) · doi:10.3390/jcm14124129
 - **[?] Figure 2**: Transvesical Leadbetter–Politano ureteroneocystostomy surgical technique: (A) Through an anterolateral cystotomy, a separate oblique full-thickness posterior parietal stab incision is performed, superolateral to the ipsi… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12193927/) · doi:10.3390/jcm14124129
@@ -747,7 +747,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 3**: Double graft technique, ventral approach: (a) the ventral surface of the urethra is opened and incision made in the dorsal mucosa; (b) a buccal graft is sutured in the dorsal defect; (c) the ventral urethrotomy is closed… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9740840/) · doi:10.3390/jcm11237033
 - **[?] Figure 4**: Double graft technique, dorsal approach: (a) the urethra is mobilized off the corpora and the dorsal surface is opened. An incision made in the ventral mucosa; (b) a buccal graft is sutured in the ventral defect; (c) the… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9740840/) · doi:10.3390/jcm11237033
 
-## 04-surgical-techniques/04a-urethral-reconstruction/female/distal-urethrectomy-advancement  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/female/distal-urethrectomy-advancement  (1 figures on page now)
 
 - **[?] Figure 3**: Principal steps of urethral neomeatus reconstruction. After cold knife incision on the urethral wall at approximately 2 cm from the urethral meatus (A,B), the free edges of the ventral vaginal wall were grasped with Alli… *Front Med (Lausanne) 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12554670/) · doi:10.3389/fmed.2025.1695521
 - **[?] Figure 2**: Martius flap interposition (a) Prelevation of the Martius flap—(b) After transposition of the Martius flap to the ventrally reconstructed area. *J Clin Med 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8432057/) · doi:10.3390/jcm10173950
@@ -798,7 +798,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Figure 4**: This picture shows the two patients of our series affected by postoperative infection. (a,b) Anterior and posterior view of a 57-year-old woman showing lymphangitis of the right lower limb (untreated side) involving the … *Cancers (Basel) 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8870617/) · doi:10.3390/cancers14041076
 - **[I] Figure 4**: Structured procedure for ultrasound-guided flap design of the SCIP flap. *J Clin Med 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8198546/) · doi:10.3390/jcm10112427
 
-## 04-surgical-techniques/04e-genital-reconstruction/glansectomy-stsg  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/glansectomy-stsg  (1 figures on page now)
 
 - **[P] Fig. 2**: Intraoperative and postoperative images of glansectomy and neoglans reconstruction.a tumour localised to the glans penis; (b) dissection above the Buck’s fascia; (c) transection of the urethra leaving around 1 cm length … *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12999463/) · doi:10.1038/s41443-025-01062-1
 
@@ -820,7 +820,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Fig. 2**: Intraoperative and postoperative images of glansectomy and neoglans reconstruction.a tumour localised to the glans penis; (b) dissection above the Buck’s fascia; (c) transection of the urethra leaving around 1 cm length … *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12999463/) · doi:10.1038/s41443-025-01062-1
 
-## 04-surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling  (0 figures on page now)
+## 04-surgical-techniques/04f-incontinence-procedures/procedures/atoms-sling  (2 figures on page now)
 
 - **[?] Figure 9**: (1 penile urethra, 2 urethral bulb, 3 rhabdosphincter/sphincteric coaptation zone). RUG of Case 3 after 2nd ATOMS SSP using our proximal implantation technique. ATOMS SSP proximal now allows a direct compression of the u… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10342856/) · doi:10.3390/jcm12134409
 - **[?] Figure 6**: When fixing the mesh, care should be taken to ensure that the tension is as high as possible. For this purpose, we use a cotton swab to press the lower edge of the silicone pad behind the urethra bulb. At the same time, … *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10342856/) · doi:10.3390/jcm12134409
@@ -829,7 +829,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 5**: (Picture with kind permission of Dr. Rheder, Innsbruck) The prepared pelvis demonstrates the ideal position of the tip of the tunneller: The insertion point (green circle) is located ventrolateral of a small palpable pub… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10342856/) · doi:10.3390/jcm12134409
 - **[?] Figure 1**: (a) Extrusion of the port; (b) exposure of the connection tubing to the port; (c) clamping of the connection tubing; (d) placement of non-absorbable sutures before proceeding with the section and removal of the port. *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10056794/) · doi:10.3390/jcm12062296
 
-## 04-surgical-techniques/04g-prolapse-repair/apical/pectopexy  (1 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/apical/pectopexy  (3 figures on page now)
 
 - **[P] Fig. 2** **PILOT**: Steps of pectopexy. a The peritoneum was opened to dissect the bladder and expose the cervix (star). b The peritoneum was opened along the pubic bone (dotted line) between the right round ligament (black star) and the ri… *Int Urogynecol J 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9270277/) · doi:10.1007/s00192-021-04934-4
 - **[?] Fig. 1**: Steps of the laparoscopic pectopexy with inverted T-mesh operation. The peritoneum was opened along the pubic bone between the left round ligament and the left medical umbilical ligament to expose the iliopectineal ligam… *Sci Rep 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13046823/) · doi:10.1038/s41598-026-40730-0
@@ -855,11 +855,11 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1** **PILOT**: Detailed key technical points concerning an overlapping sphincteroplasty. (a): Basal anal inspection. Scar tissue secondary to episiotomy and “smoothing” of anal margin should be noted. (b): Dissection of both puborectal… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9267180/) · doi:10.3390/jcm11133755
 - **[I] Fig. 3**: Recommendations regarding postpartum management and subsequent pregnancy after obstetric anal sphincter injury (OASI) [305]. A Recommendations regarding postpartum management for women with OASI for centers without acces… *Int Urogynecol J 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/) · doi:10.1007/s00192-026-06642-3
 
-## 04-surgical-techniques/04h-fistula-repair/male/ucf-patio-repair  (0 figures on page now)
+## 04-surgical-techniques/04h-fistula-repair/male/ucf-patio-repair  (1 figures on page now)
 
 - **[?] Figure 1**: Pictorial depiction of the (a) classic PATIO technique (the UCF tract is meticulously dissected from the skin down to the urethral wall and inverted into the urethral lumen. The tract is kept aligned in the direction of … *J Indian Assoc Pediatr Surg 2023, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10569280/) · doi:10.4103/jiaps.jiaps_25_23
 
-## 04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps  (0 figures on page now)
+## 04-surgical-techniques/04h-fistula-repair/vaginal-fistula-flaps  (1 figures on page now)
 
 - **[?] Fig. 2**: A A circumferential incision was made around the fistula opening at least 0.5 cm from the fistula opening. B The vaginal flap around the fistula was freed by at least 2–3 cm. C, E The fistula was sutured continuously. D,… *Int Urogynecol J 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10415502/) · doi:10.1007/s00192-023-05465-w
 - **[I] Figure 2**: PRP injection via cystoscope. Arrows pointing the fistula bladder orifice. (A–C) PRP injection via cystoscope. *J Clin Med 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6947156/) · doi:10.3390/jcm8122122
@@ -892,7 +892,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Figure 1**: Revised institutional bladder trauma protocol. ∗Surgical repair is performed in all intraperitoneal injuries and extraperitoneal injuries involving the bladder neck, concomitant rectal or vaginal injury, exposure to orth… *Adv Urol 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6930775/) · doi:10.1155/2019/2614586
 
-## 05-special-populations/05a-trauma-emergencies/intraoperative-consultation/procedures-causing-gu-injury/pelvic-tumor-resection  (0 figures on page now)
+## 05-special-populations/05a-trauma-emergencies/intraoperative-consultation/procedures-causing-gu-injury/pelvic-tumor-resection  (1 figures on page now)
 
 - **[?] Figure 2**: Ureteroenteric anastomotic techniques for the ileal conduit. (A) Bricker anastomosis. (B) Wallace I technique (head-to-head anastomosis). (C) Wallace II technique (head-to-tail anastomosis). *Int J Gynecol Cancer 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7803898/) · doi:10.1136/ijgc-2020-002015
 - **[D] Figure 1**: Schematic illustration of the main incontinent urinary reconstructions. (A) Double-barreled wet colostomy. (B) Bricker ileal conduit. *Int J Gynecol Cancer 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7803898/) · doi:10.1136/ijgc-2020-002015
@@ -908,13 +908,13 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 6.**: Indomethacin does not affect KCl-induced tonic contractions. A: recording of KCl-induced contraction in an urothelium-intact mouse bladder strip. KCl (60 mM) was administered to the bathing solution. After 5 min, indomet… *Am J Physiol Regul Integr Comp Physiol 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11334713/) · doi:10.1152/ajpregu.00084.2024
 - **[?] Fig 3**: Pathological findings during pressure flow study.a) Pressure flow study of a 24 years old healthy woman: The first spike indicates a cough to evaluate correct catheter placement, thereafter permission to void (*) is obta… *PLoS One 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5063299/) · doi:10.1371/journal.pone.0163847
 
-## 01-foundations/perioperative-care/intraoperative-care/nerve-blocks  (0 figures on page now)
+## 01-foundations/perioperative-care/intraoperative-care/nerve-blocks  (1 figures on page now)
 
 - **[I] Figure 1**: Panel (A): Erector spinae plane block (ESPB); from the left: level of puncture, in-plane technique, ultrasound visualization of transverse process, and ultrasound image of anesthetic spread. Panel (B): transversus abdomi… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10816131/) · doi:10.3390/jcm13020383
 - **[I] Figure 2**: The ultrasound-guided dorsal penile nerve block via perineal approach. (a) an ultrasound image of a penile neurovascular sheath before a complete nerve block injection; (b) an ultrasound image of a penile neurovascular s… *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6457289/) · doi:10.1155/2019/6875756
 - **[PI] Figure 4**: Changes in HR (P = .000) and MBP (P = .000) in the 5 times are significant. Compared with T1 (baseline), the following 4 times as T2 (during the entry of cystoscope into the urethra), T3 (intraoperatively at the beginnin… *Medicine (Baltimore) 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5728874/) · doi:10.1097/md.0000000000008932
 
-## 01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin  (0 figures on page now)
+## 01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin  (2 figures on page now)
 
 - **[I] Figure 4**: BoNT-A injection for relaxation of the urethra. (A) For female patients, it is convenient to use a 23 G 1-mL syringe and inject BoNT-A solution along the urethra at the 3, 6, 9, and 12 o’clock positions from the meatus s… *Toxins (Basel) 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9965145/) · doi:10.3390/toxins15020166
 - **[?] Figure 3**: Regular BoNT-A injection of the bladder. (A) Usually, urologists mapped twenty injection sites over the bladder. (B) Intradetrusor method: BoNT-A solution was injected directly into the trabeculation or detrusor muscle o… *Toxins (Basel) 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9965145/) · doi:10.3390/toxins15020166
@@ -963,7 +963,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Figure 1**: (a) Clinical photograph shows the skin incision measuring 2 cm and the glistening white band of fascia lata. The fibers of the fascia have a parallel arrangement and are aligned to the long axis of the thigh. (b) Clinica… *Indian J Ophthalmol 2018, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5859604/) · doi:10.4103/ijo.ijo_819_17
 
-## 01-foundations/tools/instruments/urethral-specialty/uterine-manipulator  (0 figures on page now)
+## 01-foundations/tools/instruments/urethral-specialty/uterine-manipulator  (1 figures on page now)
 
 - **[?] Figure 3**: Uterine manipulation achieved using the Boztosun technique (modified Rein technique). (a) Lateral traction of the uterus during dissection. (b) Anterior traction and bladder flap dissection. (c) Posterior traction and vi… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12156305/) · doi:10.3390/jcm14113652
 - **[?] Figure 1**: Classical Rein technique for uterine manipulation. (a) Cotton tape prepared on the surgical field prior to abdominal insertion. (b) Intra-abdominal appearance of the uterus manipulated using the classical Rein technique … *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12156305/) · doi:10.3390/jcm14113652
@@ -988,7 +988,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 2**: Seventy-two-year-old man with testicular exposure and penile degloving following FG. The patient was first subjected to surgical debridement. After 25 days, the loss of substance was covered with a split-thickness graft.… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11278345/) · doi:10.3390/jcm13144085
 - **[?] Fig. 3**: Vessel sparing (yellow arrow) in the non-transecting excision and primary anastomosis technique *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12316716/) · doi:10.1007/s00345-025-05839-3
 
-## 03-clinical-conditions/03g-genital-scrotal/genital-lymphedema  (0 figures on page now)
+## 03-clinical-conditions/03g-genital-scrotal/genital-lymphedema  (2 figures on page now)
 
 - **[PI] FIGURE 5**: A 66-year-old man with 3-year secondary genital lymphedema underwent the lymphovenous anastomoses technique. (A) Clinical photograph of the scrotum taken before the operation showed evident scrotal and penis lymphedema a… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 - **[?] Figure 5**: Proposed therapeutic algorithm for the treatment of penoscrotal lymphedema (PL) (according to the proposed treatment-oriented classification presented in Table 1). Prior to any surgical intervention, all conservative tre… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10743533/) · doi:10.3390/jcm12247586
@@ -999,7 +999,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] FIGURE 2**: Lymphovenous microsurgery. (A) Under ×40 magnification, the targeted venule (black arrows) and deep lymphatic collector (white arrows) were identified using isosulfan blue dye and were prepared for anastomosis. (B) Lymph… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 - **[PI] FIGURE 6**: A 28-year-old man with a 13-year primary genital lymphedema underwent surgical excision and scrotal reconstruction. Clinical photographs of the scrotum taken before surgery (A), 3 years (B), and 5 years (C) after surgery… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 
-## 03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema  (0 figures on page now)
+## 03-clinical-conditions/03g-genital-scrotal/giant-penoscrotal-lymphedema  (1 figures on page now)
 
 - **[PI] FIGURE 5**: A 66-year-old man with 3-year secondary genital lymphedema underwent the lymphovenous anastomoses technique. (A) Clinical photograph of the scrotum taken before the operation showed evident scrotal and penis lymphedema a… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 - **[?] Figure 5**: Proposed therapeutic algorithm for the treatment of penoscrotal lymphedema (PL) (according to the proposed treatment-oriented classification presented in Table 1). Prior to any surgical intervention, all conservative tre… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10743533/) · doi:10.3390/jcm12247586
@@ -1010,13 +1010,13 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] FIGURE 2**: Lymphovenous microsurgery. (A) Under ×40 magnification, the targeted venule (black arrows) and deep lymphatic collector (white arrows) were identified using isosulfan blue dye and were prepared for anastomosis. (B) Lymph… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 - **[PI] FIGURE 6**: A 28-year-old man with a 13-year primary genital lymphedema underwent surgical excision and scrotal reconstruction. Clinical photographs of the scrotum taken before surgery (A), 3 years (B), and 5 years (C) after surgery… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 
-## 03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa  (0 figures on page now)
+## 03-clinical-conditions/03g-genital-scrotal/hidradenitis-suppurativa  (2 figures on page now)
 
 - **[P] FIGURE 4**: Wound reconstruction using STSG and NPWT. Marginal areas left to heal by secondary intention. Meshed graft used for penile skin replacement (A and B). Graft donor sites (A and C). Installation of NPWT system (entire syst… *Int Wound J 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140972/) · doi:10.1111/iwj.70874
 - **[P] FIGURE 2**: Resection of entire diseased tissue together with negative pressure closure. Avoiding injuries to glans, corpora cavernosa, spongiosa and preserving tunica vaginalis layers of spermatic cord and testes (A and B). Taking … *Int Wound J 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140972/) · doi:10.1111/iwj.70874
 - **[?] FIGURE 5**: Final outcome of our surgical approach. 2 months postoperatively: secondary intention healing areas are healing without infection; grafted areas are covered with minimal fibrin (A). 2 years postoperatively: no major obst… *Int Wound J 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140972/) · doi:10.1111/iwj.70874
 
-## 03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies  (0 figures on page now)
+## 03-clinical-conditions/03g-genital-scrotal/mullerian-anomalies  (2 figures on page now)
 
 - **[P] Figure 2.**: Procedures of robot-assisted sigmoid vaginoplasty. (A) Perineal view after orchiectomy, penile disassembly, and part of the vulvoplasty, including neoclitoris creation and labial reconstruction; (B) rectovesical dissecti… *Medicine (Baltimore) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12956172/) · doi:10.1097/md.0000000000047849
 - **[?] Figure 1.**: Graft survival during the initial 12 months after uterus transplantation for live donor (LD) and deceased donor (DD) transplantation procedures. To simplify visualization, all graft losses that occurred between even mont… *Hum Reprod 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13061116/) · doi:10.1093/humrep/deag017
@@ -1025,13 +1025,13 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: Design and running of the project; the stepwise DELPHI consensus method has been used to find the agreement between the experts in the development of the new classification system. *Hum Reprod 2013, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3712660/) · doi:10.1093/humrep/det098
 - **[D] Figure 2**: ESHRE/ESGE classification of uterine anomalies: schematic representation (Class U2: internal indentation >50% of the uterine wall thickness and external contour straight or with indentation <50%, Class U3: external inden… *Hum Reprod 2013, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3712660/) · doi:10.1093/humrep/det098
 
-## 03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence  (0 figures on page now)
+## 03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence  (1 figures on page now)
 
 - **[?] Figure 3**: Normal internal and external anal sphincters (internal anal sphincter and external anal sphincter). Supplied from the Department of Gastroenterology, Galilee Medical Center, Nahariya, Israel. EAS: External anal sphincter… *World J Gastroenterol 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8058654/) · doi:10.3748/wjg.v27.i15.1553
 - **[?] Figure 4**: Internal anal sphincter atrophy manifested as sphincter thinning. Supplied from the Department of Gastroenterology, Galilee Medical Center, Nahariya, Israel. EAS: External anal sphincter; IAS: Internal anal sphincter. *World J Gastroenterol 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8058654/) · doi:10.3748/wjg.v27.i15.1553
 - **[I] Figure 6**: Stepwise approach of faecal incontinence investigation. EMG: Electromyography; MRI: Magnetic resonance imaging; TRUS: Trans-rectal ultrasound. *World J Gastroenterol 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8058654/) · doi:10.3748/wjg.v27.i15.1553
 
-## 04-surgical-techniques/04a-urethral-reconstruction/combined/erickson-dorsal-bmg-ventral-flap  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/combined/erickson-dorsal-bmg-ventral-flap  (2 figures on page now)
 
 - **[?] Figure 5.**: (A) Harvesting a non-closure buccal mucosa graft (BMG) with nasal intubation. (B) The BMG was dorsally attached to the damaged urethral plate and the Q flap was ventrally sutured. BMG = buccal mucosa graft. *Medicine (Baltimore) 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11936549/) · doi:10.1097/md.0000000000041888
 - **[?] Figure 3.**: Harvesting a circumferential penile skin flap with dorsal pedicled extension (Q flap). *Medicine (Baltimore) 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11936549/) · doi:10.1097/md.0000000000041888
@@ -1127,7 +1127,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 4**: (A) Patient 2’s Meshed Autografts (5 Weeks Postgrafting) and (B) Perennial Grafts (2 Months Postgrafting) *J Burn Care Res 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140523/) · doi:10.1093/jbcr/irag016
 - **[?] Figure 3**: (A) Patient 2’s Meshed Autografts in the Operating Room, (B) 2 Weeks Later, and (C) Perennial Grafts (17 Days Postautografting) *J Burn Care Res 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140523/) · doi:10.1093/jbcr/irag016
 
-## 04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/vascularized-lymph-node-transfer  (1 figures on page now)
 
 - **[PI] FIGURE 5**: A 66-year-old man with 3-year secondary genital lymphedema underwent the lymphovenous anastomoses technique. (A) Clinical photograph of the scrotum taken before the operation showed evident scrotal and penis lymphedema a… *Medicine (Baltimore) 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4902367/) · doi:10.1097/md.0000000000003755
 - **[?] Figure 5**: Proposed therapeutic algorithm for the treatment of penoscrotal lymphedema (PL) (according to the proposed treatment-oriented classification presented in Table 1). Prior to any surgical intervention, all conservative tre… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10743533/) · doi:10.3390/jcm12247586
@@ -1143,18 +1143,18 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 4**: (A) Patient 2’s Meshed Autografts (5 Weeks Postgrafting) and (B) Perennial Grafts (2 Months Postgrafting) *J Burn Care Res 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140523/) · doi:10.1093/jbcr/irag016
 - **[?] Figure 3**: (A) Patient 2’s Meshed Autografts in the Operating Room, (B) 2 Weeks Later, and (C) Perennial Grafts (17 Days Postautografting) *J Burn Care Res 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13140523/) · doi:10.1093/jbcr/irag016
 
-## 04-surgical-techniques/04g-prolapse-repair/apical/sacrohysteropexy  (1 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/apical/sacrohysteropexy  (2 figures on page now)
 
 - **[P] Fig. 1** **PILOT**: a During suture hysteropexy, sutures are placed into the posterior cervix and along each uterosacral ligament dorsally towards the sacrum (A) and, when tied (B), shorten the ligaments and re-support the uterus and upper … *Int Urogynecol J 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9834130/) · doi:10.1007/s00192-022-05283-6
 - **[?] Fig. 2**: Surgical technique for mesh hysteropexy. A “U-shaped” mesh, passes through the broad ligament windows, suspends the uterus and upper vagina from the sacral promontory and a supporting pessary is placed in the vagina *Int Urogynecol J 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9834130/) · doi:10.1007/s00192-022-05283-6
 
-## 04-surgical-techniques/04h-fistula-repair/all-patients/colovesical-enterovesical  (0 figures on page now)
+## 04-surgical-techniques/04h-fistula-repair/all-patients/colovesical-enterovesical  (1 figures on page now)
 
 - **[PI] Fig. 1**: Fistula location on bladder and patency of the rectovesical pouch were evaluated using preoperative magnetic resonance images (MRI) from a representative case, and the estimated contact area between the sigmoid colon and… *BMC Res Notes 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7092560/) · doi:10.1186/s13104-020-05022-4
 - **[I] Figure 3**: (a) Sagittal noncontrast computed tomography (CT) image showing air within the bladder and sigmoid diverticulitis with a suspected fistulous tract between the sigmoid colon and bladder (red arrow). (b) Sagittal noncontra… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12428890/) · doi:10.3390/jcm14176065
 - **[I] Figure 6**: (a,b) Postoperative cystogram obtained 2 weeks after surgical repair, demonstrating complete resolution of the colovesical fistula without evidence of extravasation. The bladder is outlined (white arrows), and a Foley ca… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12428890/) · doi:10.3390/jcm14176065
 
-## 04-surgical-techniques/04k-gender-affirming-surgery/intestinal-vaginoplasty  (0 figures on page now)
+## 04-surgical-techniques/04k-gender-affirming-surgery/intestinal-vaginoplasty  (2 figures on page now)
 
 - **[P] Figure 2.**: Procedures of robot-assisted sigmoid vaginoplasty. (A) Perineal view after orchiectomy, penile disassembly, and part of the vulvoplasty, including neoclitoris creation and labial reconstruction; (B) rectovesical dissecti… *Medicine (Baltimore) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12956172/) · doi:10.1097/md.0000000000047849
 - **[P] Figure 3**: De novo gender affirming surgery; pictures of a 45-year-old male-to-female patient. (A): Preoperative view. (B): The midscrotal flap is prepared at the dorsal side for vaginal introitus after orchiectomies, clitoroplasty… *Medicine (Baltimore) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8416006/) · doi:10.1097/md.0000000000027042
@@ -1170,7 +1170,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 6**: Labia skin graft is fixed in the gap between divided urethral plate (A); left labial skin flap is used for urethral tubularization, while flap pedicle is used for covering of the suture lines; distal urethra is created b… *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
 - **[?] Figure 7**: Buccal mucosa graft is used for urethral substitute (A); left labial flap with abundant vascular pedicle is used as an anterior part of the neourethra (B). *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
 
-## 04-surgical-techniques/04k-gender-affirming-surgery/modified-belgrade-metoidioplasty  (1 figures on page now)
+## 04-surgical-techniques/04k-gender-affirming-surgery/modified-belgrade-metoidioplasty  (2 figures on page now)
 
 - **[D] Figure 2** **PILOT**: Drawings of the urethral plate and inner side of labia minora, which is planned for urethral reconstruction (A); outer layer of the labia minora is planned for skin graft harvesting (B); labia minora flap and skin graft … *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
 - **[?] Figure 6**: Labia skin graft is fixed in the gap between divided urethral plate (A); left labial skin flap is used for urethral tubularization, while flap pedicle is used for covering of the suture lines; distal urethra is created b… *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
@@ -1194,7 +1194,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 6.**: The effect of platelets on oxidative stress of fat graft. (A) Representative images of ROS levels in fat grafts incubated with saline, human untreated platelets, or ROT/AA-treated platelets (n = 5) at Week 1. (B) Quantif… *Stem Cells Transl Med 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12616471/) · doi:10.1093/stcltm/szaf059
 - **[?] Figure 8.**: Microscopic appearance of fat grafts (A) HE staining of fat graft in PBS, Plts, and Plts/Int groups on week 1, week 2, week 4, week 6. Scale bar = 300 μm. (B) Masson staining of fat graft in different groups at day 10. S… *Stem Cells Transl Med 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12616471/) · doi:10.1093/stcltm/szaf059
 
-## 05-special-populations/05a-trauma-emergencies/fourniers-gangrene  (0 figures on page now)
+## 05-special-populations/05a-trauma-emergencies/fourniers-gangrene  (1 figures on page now)
 
 - **[?] Figure 3**: Sixty-five-year-old male patient with testicular exposure following FG. Twenty-one days after surgical debridement, the extensive loss of substance was covered with a bilateral advanced local flap (random vascular anatom… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11278345/) · doi:10.3390/jcm13144085
 - **[?] Figure 2**: Seventy-two-year-old man with testicular exposure and penile degloving following FG. The patient was first subjected to surgical debridement. After 25 days, the loss of substance was covered with a split-thickness graft.… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11278345/) · doi:10.3390/jcm13144085
@@ -1206,7 +1206,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 6**: Labia skin graft is fixed in the gap between divided urethral plate (A); left labial skin flap is used for urethral tubularization, while flap pedicle is used for covering of the suture lines; distal urethra is created b… *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
 - **[?] Figure 7**: Buccal mucosa graft is used for urethral substitute (A); left labial flap with abundant vascular pedicle is used as an anterior part of the neourethra (B). *Front Endocrinol (Lausanne) 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8548780/) · doi:10.3389/fendo.2021.760284
 
-## 01-foundations/anatomy-physiology/urinary-tract/gu-embryology  (0 figures on page now)
+## 01-foundations/anatomy-physiology/urinary-tract/gu-embryology  (1 figures on page now)
 
 - **[D] Fig. 7**: Model for lineage progression during nephric duct development.Schematic representation of the spatial (a) and temporal (b) hierarchy of nephric duct (ND) progenitor cells. NdPr: nephric duct progenitor, MT: mesonephric t… *Nat Commun 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8113267/) · doi:10.1038/s41467-021-22931-5
 - **[?] Fig. 4**: Developmental trajectory of nephric duct progenitors by single cell RNA-seq and transplantation assays.a Uniform Manifold Approximation and Projection (UMAP) analysis of intermediate mesoderm (IM), mesonephric tubules (M… *Nat Commun 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8113267/) · doi:10.1038/s41467-021-22931-5
@@ -1231,7 +1231,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 3**: Thermogram of monoplar electrosurgical devices during and after energy application. Power Level: preciseSect effect 5 for Laparoscopy and EndocutQ effect 3 for Endoscopy. a Laparoscopic hook during energy application. b … *Surg Endosc 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9085678/) · doi:10.1007/s00464-021-08804-4
 - **[?] Fig. 4**: Maximum temperature and residual heat of monopolar instruments. a Maximum temperature during energy application of a monopolar laparoscopic hook. b Maximum temperature in-between the endoknives. c Time to safety defined … *Surg Endosc 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9085678/) · doi:10.1007/s00464-021-08804-4
 
-## 01-foundations/surgical-principles/grafts/lingual-mucosa  (0 figures on page now)
+## 01-foundations/surgical-principles/grafts/lingual-mucosa  (1 figures on page now)
 
 - **[?] Fig 7**: Harvesting method of the buccal mucosa grafts: The lower lip mucosa is fully exposed and nor-epinephrine (1:200,000) is applied before harvesting the graft. *PLoS One 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5560762/) · doi:10.1371/journal.pone.0182803
 - **[?] Fig 8**: Harvesting method of the buccal mucosa grafts: The lower lip mucosa is fully exposed and nor-epinephrine (1:200,000) is applied before harvesting the graft. *PLoS One 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5560762/) · doi:10.1371/journal.pone.0182803
@@ -1239,7 +1239,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 1**: Graft sample preparation for histological analysis: (a) graft sample placed in a table and spread using pins; (b) sample in 10% buffered formalin; (c) final appearance after formalin fixation; (d) sample is sharply divid… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8999541/) · doi:10.3390/jcm11072064
 - **[?] Figure 2**: (a) Parallel incisions were made along the urethral plate from the hypospadiac urethral meatus to the glans tip. (b) A midline incision was made in the urethral plate longitudinally for the subsequent insertion of LMG. (… *Asian J Androl 2016, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4854106/) · doi:10.4103/1008-682x.157545
 
-## 01-foundations/surgical-principles/reconstructive-ladder  (0 figures on page now)
+## 01-foundations/surgical-principles/reconstructive-ladder  (1 figures on page now)
 
 - **[?] Fig. 1**: Surgical Management of Fournier’s Gangrene via skin-sparing technique and primary reconstruction. (A) Initial presentation showing necrotic skin prior to debridement. (B) Limited debridement with small incisions performe… *Curr Urol Rep 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12130067/) · doi:10.1007/s11934-025-01275-3
 
@@ -1272,7 +1272,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[I] Fig. 3**: Recommendations regarding postpartum management and subsequent pregnancy after obstetric anal sphincter injury (OASI) [305]. A Recommendations regarding postpartum management for women with OASI for centers without acces… *Int Urogynecol J 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/) · doi:10.1007/s00192-026-06642-3
 
-## 02-evaluation/imaging/ct-urogram  (0 figures on page now)
+## 02-evaluation/imaging/ct-urogram  (2 figures on page now)
 
 - **[I] Fig. 1**: A 79-year-old woman complaining of hypogastric pain, dysuria and fecaluria. Cystoscopy did not identify fistulous orifices. Abdomino-pelvic CT showed sigmoid diverticulosis with mild signs of perivisceral and fascial inf… *Insights Imaging 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3314733/) · doi:10.1007/s13244-011-0145-9
 - **[I] Fig. 4**: An elderly, 86-year-old woman with multiple medical problems, hospitalized for right femur fracture. CT urography requested for clinical suspicion of acute pyelonephritis detected extensive presence of air in the bladder… *Insights Imaging 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3314733/) · doi:10.1007/s13244-011-0145-9
@@ -1291,14 +1291,14 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[I] Fig. 3**: Recommendations regarding postpartum management and subsequent pregnancy after obstetric anal sphincter injury (OASI) [305]. A Recommendations regarding postpartum management for women with OASI for centers without acces… *Int Urogynecol J 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13486146/) · doi:10.1007/s00192-026-06642-3
 
-## 03-clinical-conditions/03f-fistulas/all-patients/vascular-urinary  (0 figures on page now)
+## 03-clinical-conditions/03f-fistulas/all-patients/vascular-urinary  (2 figures on page now)
 
 - **[PI] Fig. 5**: a R-UPG showing the flow from the ureter into a vascular structure (arrow). b and c A 2 months old CT scan showing the course of the left ureter (white arrow) crossing the midline between the aorta and the IMA (red arrow… *CVIR Endovasc 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11324626/) · doi:10.1186/s42155-024-00475-1
 - **[I] Figure 2.**: Computed tomography angiography. a: Cross-sectional CT shows high-density shadows (black quadrangles) with a diameter of 0.8 cm. b: A 1.1-cm diameter high-density shadow (black quadrangles) can be seen on the cross-secti… *J Int Med Res 2021, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8142530/) · doi:10.1177/03000605211016381
 - **[?] Fig. 2**: a Anatomic locations of ureterovascular fistulae without urinary diversion. b Anatomic locations of ureterovascular fistulae with urinary diversion *CVIR Endovasc 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11324626/) · doi:10.1186/s42155-024-00475-1
 - **[I] Fig. 4**: a CT scan showing the point of vascular crossing over the distal CIA with a ureteral stent seen (arrow). b A negative DSA shortly prior to a planned endovascular aortic repair (EVAR) due to an aortic aneurysm. During thi… *CVIR Endovasc 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11324626/) · doi:10.1186/s42155-024-00475-1
 
-## 03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous  (0 figures on page now)
+## 03-clinical-conditions/03f-fistulas/all-patients/vesicocutaneous  (1 figures on page now)
 
 - **[I] Fig. 2**: Fluoroscopic assessment demonstrating a defect in the posterior-inferior bladder wall with a contiguous tract extending through the pubic symphysis (panel A; arrow). Inferior extension of the tract into the right medial … *Urol Case Rep 2026, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13091206/) · doi:10.1016/j.eucr.2026.103432
 - **[I] Fig. 12**: Ileovaginal fistula in a patient with recurrent ovarian cancer who underwent hysterectomy, bilateral oophorectomy and adjuvant radiation therapy.A. Colon study shows a linear fistulous tract between the ileal loop and va… *Korean J Radiol 2001, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2718108/) · doi:10.3348/kjr.2001.2.2.97
@@ -1337,7 +1337,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[PI] Fig. 1**: a Initial MRI scan PADUA 12p. b Tumor thrombus occupying the renal vein. c Back-table tumor resection and renal reconstruction. d MRI scan showing tumor-recurrence laterally in the autotransplanted kidney in the right il… *World J Surg Oncol 2018, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5819675/) · doi:10.1186/s12957-018-1338-1
 
-## 04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/bloom-bariatric-vlnt  (1 figures on page now)
 
 - **[P] Fig 1**: (A) Gastroepiploic (GE) vascularized lymph node transfer (VLNT) harvest. Intraoperative injection of indocyanine green into the gastric wall to mark (B) lymph nodes and lymphatics of the omentum. (C) Near-infrared image … *J Vasc Surg Venous Lymphat Disord 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11523469/) · doi:10.1016/j.jvsv.2024.101934
 - **[?] Figure 4**: Left: the SCIA and the SCIV were anastomosed to the thoracodorsal artery and its accompanying vein, respectively. Right: the flap was de-epithelialized and the distal end of the flap was sutured to the axillary region (y… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8836945/) · doi:10.3390/jcm11030534
@@ -1348,14 +1348,14 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[P] Fig 2**: (A and B) Preoperative photograph of a 39-year-old woman with secondary lymphedema of her right leg. The patient received gastroepiploic (GE) vascularized lymph node transfer (VLNT) to the right groin, two lymphovenous a… *J Vasc Surg Venous Lymphat Disord 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11523469/) · doi:10.1016/j.jvsv.2024.101934
 - **[?] Figure 2**: A DIEP flap was designed in the left hemiabdomen, and a 14 × 5 cm lymphatic SCIP flap was designed in the Zone 4 region. DIEP, deep inferior epigastric perforator; SCIP, superficial circumflex iliac artery perforator. *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8836945/) · doi:10.3390/jcm11030534
 
-## 04-surgical-techniques/04e-genital-reconstruction/fgm-fat-grafting  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/fgm-fat-grafting  (2 figures on page now)
 
 - **[?] Fig. 3**: Vulvar fat grafting technique. The procedure is divided into three stages. The initial stage involves the removal of fat from a donor site, typically the abdomen or thighs, using a liposuction cannula (1). The second sta… *Aesthetic Plast Surg 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12855342/) · doi:10.1007/s00266-025-04895-9
 - **[?] Fig. 5**: Representative clinical case 1: volumetric enhancement. The patient underwent inner labia resection, and suture of the outer labia including the clitoral hood. According to WHO classification this is Type 3; according to… *Aesthetic Plast Surg 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12855342/) · doi:10.1007/s00266-025-04895-9
 - **[?] Fig. 7**: Representative clinical case 3: tissue preloading with fat to allow further surgical reconstruction. The patient underwent inner labia, clitoral hood, and clitoral glans resection, with suture of the outer labia includin… *Aesthetic Plast Surg 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12855342/) · doi:10.1007/s00266-025-04895-9
 - **[P] Figure 2**: Overview of fat processing and stromal vascular fraction (SVF) isolation techniques. Liposuction can be performed either with a classic cannula (1) for normal fat harvesting or with a multi-perforated cannula (2), which … *J Clin Med 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8396936/) · doi:10.3390/jcm10163637
 
-## 04-surgical-techniques/04e-genital-reconstruction/paraffinoma-excision  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/paraffinoma-excision  (1 figures on page now)
 
 - **[?] Fig. 1**: Pre-, intra-, and post-operative images of selected cases.Consent was obtained for the use of photos. 1.1a Penoscrotal oedema secondary to silicone injection; 1.1b excision of scrotal silicone; 1.1c 6 weeks post-operativ… *Int J Impot Res 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11251987/) · doi:10.1038/s41443-023-00675-8
 
@@ -1402,7 +1402,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Fig. 1**: Pre-, intra-, and post-operative images of selected cases.Consent was obtained for the use of photos. 1.1a Penoscrotal oedema secondary to silicone injection; 1.1b excision of scrotal silicone; 1.1c 6 weeks post-operativ… *Int J Impot Res 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11251987/) · doi:10.1038/s41443-023-00675-8
 
-## 04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization  (0 figures on page now)
+## 04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization  (1 figures on page now)
 
 - **[DI] Figure 1**: The figure illustrates the use of a dedicated software tool (EmboGuide, Philips—R1.4) during prostatic artery embolization. Following the acquisition of a cone beam computed tomography (CBCT) scan with contrast medium in… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12155755/) · doi:10.3390/jcm14113775
 - **[D] Figure 2**: Schematic depiction of prostatic artery embolization. A microcatheter is advanced super-selectively into the prostatic arterial branches, and embolic material is delivered to reduce hyperplastic tissue while avoiding non… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12733818/) · doi:10.3390/jcm14248631
@@ -1418,19 +1418,19 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[I] Figure 7**: Genitoplasty in a patient with former correction of ARM via abdomino-peritoneal rectoplasty and late diagnosis of abnormally absent paramesonephric (Müllerian) ducts. (a) Sagittal MRI UB = urinary bladder; * = vaginal re… *J Clin Med 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9267529/) · doi:10.3390/jcm11133688
 - **[PI] Figure 3.**: Indications to consider cardiology consultation. CV, cardiovascular; TTE, transthoracic echocardiogram; CMR, cardiovascular magnetic resonance; CT, computed tomography; CHD, congenital heart disease; QTc, corrected QT in… *Eur J Endocrinol 2024, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11759048/) · doi:10.1093/ejendo/lvae050
 
-## 05-special-populations/05f-lifelong-care/hypospadias-epispadias  (1 figures on page now)
+## 05-special-populations/05f-lifelong-care/hypospadias-epispadias  (2 figures on page now)
 
 - **[P] Figure 3**: Operative steps.(a) Midline incision of the hypoplastic urethra. (b) Incision up to the mid-glans. (c) Vertical deepening of the incision up to Buck’s fascia. (d) Ventral corporotomies. (e) Augmented urethral plate with … *Cureus 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10517426/) · doi:10.7759/cureus.44021
 - **[DP] Figure 1**: Key intraoperative situation diagram of the modified Cantwell–Ransley procedure. (a) The urethral plate and the bilateral corpus cavernosum were meticulously separated. (b) The urethra was placed on the ventral side of t… *Asian J Androl 2025, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12279356/) · doi:10.4103/aja2024114
 - **[?] Figure 3**: Comparison of the appearance of concealed and nonconcealed IME. This is the appearance of one concealed and one nonconcealed IME. (a) The urethra was dehisced to the middle of the penile body, and the overlying prepuce w… *Asian J Androl 2025, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12279356/) · doi:10.4103/aja2024114
 
-## 01-foundations/anatomy-physiology/genitalia/female-external-genitalia  (1 figures on page now)
+## 01-foundations/anatomy-physiology/genitalia/female-external-genitalia  (2 figures on page now)
 
 - **[I] Fig. 5**: Sagittal T2WI with fat saturation demonstrating Gartner duct cysts in two separate patients: 37-year-old undergoing MRI of the pelvis for abnormal uterine bleeding (a), Gartner duct cyst incidentally noted, and (b) 29-ye… *Abdom Radiol (NY) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13013239/) · doi:10.1007/s00261-025-05179-1
 - **[I] Fig. 1**: Axial T2WI (Left) and Sagittal T2WI with fat saturation (Right) demonstrating normal anatomy of the clitoris and relationship with surrounding structures in a 67-year-old female undergoing MRI for follow-up of repaired u… *Abdom Radiol (NY) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13013239/) · doi:10.1007/s00261-025-05179-1
 - **[I] Fig. 17**: a–c. 26-year-old female with Bartholin gland abscess. Greyscale and color US images of the region of the Bartholin gland demonstrate a complex collection with surrounding hyperemia. Axial high res T2FS demonstrates a Bar… *Abdom Radiol (NY) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13013239/) · doi:10.1007/s00261-025-05179-1
 
-## 01-foundations/anatomy-physiology/pelvis-support/anal-anatomy  (0 figures on page now)
+## 01-foundations/anatomy-physiology/pelvis-support/anal-anatomy  (2 figures on page now)
 
 - **[?] FIGURE 7**: Schemas of lymphovascular flow around the anal canal. (A) Sagittal section of the posterior wall. (B) Frontal section of the lateral and anterolateral wall. (C) Male axial section around the anal canal and LAM. Communica… *Colorectal Dis 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8248146/) · doi:10.1111/codi.15582
 - **[?] Fig 1**: The architecture of the levator ani muscle.Panel G shows the positions of the transverse sections in panels A-D and that of obliquely sectioned panel E (calculated from reconstruction). The sections show the bilayered ma… *PLoS One 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4549266/) · doi:10.1371/journal.pone.0132226
@@ -1439,14 +1439,14 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Figure 7**: Distinct taxonomic features detected to be different between pre- and post-treatment. Within the (A) Responder subgroup: three distinct families, Bacteroidaceae, Veillonellaceae, and Tissierellaceae are identified as hav… *Front Microbiol 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10948564/) · doi:10.3389/fmicb.2024.1302819
 
-## 01-foundations/surgical-principles/flaps/bladder-flap  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/bladder-flap  (1 figures on page now)
 
 - **[P] Figure 1**: Simplified split-cuff technique of ureteral reimplantation, consisting in the confection of a nipple of the intravesical ureter for a length about the double of its diameter: intraoperative appearance. *ScientificWorldJournal 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3417182/) · doi:10.1100/2012/379316
 - **[?] Figure 1**: (a) separate renal pelvis, upper ureter; (k: kidney; u: ureteral stump), (b) psoas major suspension; (b: bladder; p: psoas major), (c) inverted bladder flap; (p: pelvis; f: flap), (d) double J tube inserted; (s: ureteral… *Sci Rep 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7890060/) · doi:10.1038/s41598-021-83518-0
 - **[D] Figure 2**: Schematic diagram of the surgery. (a) bladder flap taking, (b) ureter Reconstruction, (c) anastomosis from PUJ to UVJ. *Sci Rep 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7890060/) · doi:10.1038/s41598-021-83518-0
 - **[P] Figure 3**: Intraoperative measurement of the ureteral defect length outlined by two forceps. *ScientificWorldJournal 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3417182/) · doi:10.1100/2012/379316
 
-## 01-foundations/surgical-principles/flaps/scip  (0 figures on page now)
+## 01-foundations/surgical-principles/flaps/scip  (1 figures on page now)
 
 - **[I] Figure 4**: Structured procedure for ultrasound-guided flap design of the SCIP flap. *J Clin Med 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8198546/) · doi:10.3390/jcm10112427
 - **[P] Fig. 2.**: Long-term (6 months) postoperative result for a bilateral SCIP flap. The coronaplasty was performed 2 weeks before this photograph was taken and is in the healing phase. We used the left-sided scar as a full-thickness sk… *Plast Reconstr Surg 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12105959/) · doi:10.1097/prs.0000000000011830
@@ -1508,19 +1508,19 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Fig. 1**: ConvaTec 14Ch suction catheter (left), Extrudan Yankauer 18Ch suction catheter (middle) and SSCOR DuCanto 28Ch suction catheter (right) *BMC Anesthesiol 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9463842/) · doi:10.1186/s12871-022-01830-2
 
-## 02-evaluation/imaging/penile-doppler-ultrasound  (0 figures on page now)
+## 02-evaluation/imaging/penile-doppler-ultrasound  (2 figures on page now)
 
 - **[?] Fig. 1**: Top left – Right sided corporal cavernosal artery waveforms showing characteristic low resistance waveforms (peak systolic velocity 45.9 cm/s and end diastolic velocity of 11.4 cm/s).Bottom left – Large bilobed pseudoane… *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13345945/) · doi:10.1038/s41443-024-00928-0
 - **[I] Fig. 2**: MRI and CDUS images in non-ischemic priapism.Top left – T2w MRI axial section through the crura/proximal corporal cavernosa showing ill defined low T2 signal in the central corpora (red arrow), this likely represents con… *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13345945/) · doi:10.1038/s41443-024-00928-0
 - **[I] Figure 7**: Cavernosal leakage of the penis in a 54‐year‐old‐man, mostly occurring in the external pudendal vein, who underwent a segmented ligation of the deep dorsal vein 2 years ago. A and B, The ultrasonographic images showed co… *J Ultrasound Med 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6849731/) · doi:10.1002/jum.14982
 
-## 03-clinical-conditions/03b-voiding-outlet/female-urethral-masses  (0 figures on page now)
+## 03-clinical-conditions/03b-voiding-outlet/female-urethral-masses  (1 figures on page now)
 
 - **[I] Figure 2.**: CT scan revealed that the tumor originates from the urethra. CT = computed tomography. *Medicine (Baltimore) 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11098236/) · doi:10.1097/md.0000000000037893
 - **[I] Fig. 1**: Different cystic periurethral anterior vaginal wall swellings. Skene gland cyst was evident on vaginal examination, with its characteristic juxtameatal location causing eversion of the urethral meatus (A). MRI T2W multip… *World J Urol 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9166838/) · doi:10.1007/s00345-022-03973-w
 - **[I] Fig. 2**: Different complex UD. MRI T2 WI sagittal (A) and T2 WI axial oblique (B) images revealed circumferential UD located posterior and above the symphysis pubis, totally encasing the urethra (B), with evident connection to th… *World J Urol 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9166838/) · doi:10.1007/s00345-022-03973-w
 
-## 03-clinical-conditions/03b-voiding-outlet/urethral-diverticula  (0 figures on page now)
+## 03-clinical-conditions/03b-voiding-outlet/urethral-diverticula  (1 figures on page now)
 
 - **[I] Figure 1**: Urethral diverticulum on MRI (T2 weighted, fast spin echo). Patient presented with dyspareunia, urinary urgency and a normal physical exam. VCUG showed no evidence of urethral diverticulum. MRI revealed the correct diagn… *Adv Urol 2008, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC2441842/) · doi:10.1155/2008/213516
 
@@ -1528,7 +1528,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[I] Fig. 2**: Longitudinal progression of PET and CT by relapse (dashed line) and no relapse (solid line) between baseline, first (n = 50) and second follow-up (n = 34). SUV Standard uptake value, MAV metabolic active volume, CT compu… *Eur J Nucl Med Mol Imaging 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12830415/) · doi:10.1007/s00259-025-07479-6
 
-## 03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel  (0 figures on page now)
+## 03-clinical-conditions/03f-fistulas/all-patients/colovesical-small-bowel  (1 figures on page now)
 
 - **[I] Figure 3**: (a) Sagittal noncontrast computed tomography (CT) image showing air within the bladder and sigmoid diverticulitis with a suspected fistulous tract between the sigmoid colon and bladder (red arrow). (b) Sagittal noncontra… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12428890/) · doi:10.3390/jcm14176065
 - **[I] Figure 6**: (a,b) Postoperative cystogram obtained 2 weeks after surgical repair, demonstrating complete resolution of the colovesical fistula without evidence of extravasation. The bladder is outlined (white arrows), and a Foley ca… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12428890/) · doi:10.3390/jcm14176065
@@ -1538,7 +1538,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[I] Figure 1**: Therapeutic area of the peripheral zone with an adjacent neuro vascular bundle. The figures show axial MRI images of the prostate and the therapeutic areas of the peripheral zone with adjacent neurovascular bundles (dott… *Biomedicines 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9687416/) · doi:10.3390/biomedicines10112876
 - **[I] Figure 3**: Calibration plots of the fitted model for severe erectile dysfunction after focal therapy with high-intensity focused ultrasound. The gray line indicates the perfect correspondence between the predicted and observed seve… *Biomedicines 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9687416/) · doi:10.3390/biomedicines10112876
 
-## 03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders  (0 figures on page now)
+## 03-clinical-conditions/03h-pelvic-pain/pelvic-venous-disorders  (2 figures on page now)
 
 - **[I] Figure 4**: Transvaginal ultrasonography of a patient with pelvic venous disorders and pelvic symptoms. (A) Gray-scale ultrasound shows varicose veins of the periuterine venous plexus (yellow arrow) adjacent to the uterus, connected… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12027578/) · doi:10.3390/jcm14082707
 - **[I] Figure 6**: Transabdominal duplex ultrasonography in a patient with May–Thurner syndrome. (A) Color Doppler ultrasound shows compression of the left common iliac vein (VIC L) by the overlying right common iliac artery (AIC R) (yello… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12027578/) · doi:10.3390/jcm14082707
@@ -1556,7 +1556,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 2**: (a) Harvesting of the spiral graft while keeping the cylinder of prepuce on a 30‐mL syringe and fixed with tourniquet on both extremities; (b) Placing the preputial spiral graft as dorsal onlay over the corpora while fix… *BJU Int 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12415319/) · doi:10.1111/bju.16796
 - **[?] Fig. 1**: (a) Subcoronal and preputial skin incisions; (b) Preputial cylinder harvesting while preserving the dartos fascia. *BJU Int 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12415319/) · doi:10.1111/bju.16796
 
-## 04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/graft/preputial-spiral-graft  (2 figures on page now)
 
 - **[?] Fig. 2**: (a) Harvesting of the spiral graft while keeping the cylinder of prepuce on a 30‐mL syringe and fixed with tourniquet on both extremities; (b) Placing the preputial spiral graft as dorsal onlay over the corpora while fix… *BJU Int 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12415319/) · doi:10.1111/bju.16796
 - **[?] Fig. 1**: (a) Subcoronal and preputial skin incisions; (b) Preputial cylinder harvesting while preserving the dartos fascia. *BJU Int 2025, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12415319/) · doi:10.1111/bju.16796
@@ -1567,13 +1567,13 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 2**: Transecting excision and primary anastomosis technique: a Splitting of the corpora cavernosa; b urethral transection; c spatulation of the proximal urethral end; d spatulation of the distal urethral end; e dorsal urethra… *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12316716/) · doi:10.1007/s00345-025-05839-3
 - **[?] Fig. 3**: Vessel sparing (yellow arrow) in the non-transecting excision and primary anastomosis technique *World J Urol 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12316716/) · doi:10.1007/s00345-025-05839-3
 
-## 04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty  (1 figures on page now)
+## 04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty  (2 figures on page now)
 
 - **[?] Fig. 1**: A1, A2 Right ureteropelvic junction before augmentation with the flap. B1 After stricturoplasty, the repair can be performed on either the medial or lateral wall, depending on which wall is more mobile. B2 Demonstration … *World J Urol 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13272238/) · doi:10.1007/s00345-026-06551-6
 - **[?] Figure 2**: Robot-assisted laparoscopic pyeloplasty: main surgical steps. (A) Ureter traced proximally till pelvis. (B) Ureteropelvic junction delineated and tractioned. (C) Pelvis dismembered. (D) First stitch after lateral spatula… *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10095392/) · doi:10.3390/jcm12072538
 - **[?] Figure 1**: Ports placement template. (A): Trocar template for right RALP; (B): Trocar template for left RALP. 5 = 5 mm assistant port; 8 = 8 mm robotic port; 12 = 12 mm assistant port. Black dot: umbilicus. *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10095392/) · doi:10.3390/jcm12072538
 
-## 04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/ureterocalicostomy  (0 figures on page now)
+## 04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/ureterocalicostomy  (2 figures on page now)
 
 - **[?] Fig. 2**: a A 12 mm camera port placed at the umbilicus (square) and three 5 mm working ports (triangle). b Pyelolithotomy without lithotripsy from the incision of the ureter. c Incision of the lower pole without renal pedicle cla… *BMC Res Notes 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5500951/) · doi:10.1186/s13104-017-2569-x
 - **[I] Fig. 1**: a Preoperative ultrasonography showed severe hydronephrosis. b CT scan revealed hydronephrosis and an 11 mm renal stone (white arrow) due to right ureteropelvic junction obstruction and thinning of the renal cortex *BMC Res Notes 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5500951/) · doi:10.1186/s13104-017-2569-x
@@ -1602,7 +1602,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 2**: (a) This photo highlights a subtotal fusion of the vulva, resulting from lichen sclerosus, in a 62-year-old patient. The small remaining opening is indicated by the white arrow. (b) The appearance of the vulva after open… *J Pers Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11204669/) · doi:10.3390/jpm14060617
 - **[?] Figure 3**: (a) The image of this 76-year-old patient shows an anterior vulvar fusion (yellow arrow) covering the urethral meatus and a posterior one (white arrow) reducing the vaginal introitus. (b) Four perineal flaps were marked … *J Pers Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11204669/) · doi:10.3390/jpm14060617
 
-## 04-surgical-techniques/04e-genital-reconstruction/shaeer-rectus-myofascial-neoglans  (0 figures on page now)
+## 04-surgical-techniques/04e-genital-reconstruction/shaeer-rectus-myofascial-neoglans  (1 figures on page now)
 
 - **[?] Fig. 4**: Urethra construction.Urethral tabularisation around a 16ch catheter following the harvest of the radial forearm flap at the time of the first stage. *Int J Impot Res 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12474536/) · doi:10.1038/s41443-025-01161-z
 - **[?] Fig. 3**: Outcome fo first stage phalloplasty.The patient has a drain inside the phallus to prevent hematoma, a suprapubic catheter, and a transurethral catheter. *Int J Impot Res 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12474536/) · doi:10.1038/s41443-025-01161-z
@@ -1624,13 +1624,13 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[PI] Fig. 5**: Examples of different degrees (0, 1, 2 or 3) of defects in the pubococcygeus muscle (PCM) using supine MRI and in the iliococcygeus muscle (ICM) and total iliococcygeus angle (ICA) in plane 4 using upright MRI, in the fo… *Sci Rep 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12891650/) · doi:10.1038/s41598-026-35598-z
 
-## 04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy  (0 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy  (1 figures on page now)
 
 - **[?] Figure 1**: On the left, the incision on the anterior vaginal wall is shown; in the center, the incision on the posterior vaginal wall is shown; on the right, the drop-like anterior vaginal incision in women with cystocele is shown. *Int J Environ Res Public Health 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9516991/) · doi:10.3390/ijerph191811381
 - **[?] Figure 3**: On the left, the exposure of the Douglas pouch peritoneum; in the center, the incision of the peritoneum with scissors; on the right, the scissors are pulled out while opened to expose the sacrouterine ligaments. *Int J Environ Res Public Health 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9516991/) · doi:10.3390/ijerph191811381
 - **[?] Figure 5**: On the left, the exposure of the uterine artery; in the center, the ligation of the uterine vessels after cutting it; on the right, the dissected and tied uterine arteries. *Int J Environ Res Public Health 2022, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9516991/) · doi:10.3390/ijerph191811381
 
-## 04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total  (0 figures on page now)
+## 04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total  (1 figures on page now)
 
 - **[?] Figure 1**: (a) Stitches on the anterior vaginal wall in a purse-string manner, running anteriorly to posteriorly. (b) Six stitches are set. Two polyester threads 2-0 (green) apically, three polydioxanone 2-0 and one distally with p… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12564928/) · doi:10.3390/jcm14207433
 
@@ -1676,7 +1676,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Fig. 1**: A Bordering landmark from the outside prior to colpectomy. Vaginal epithelium 15 mm around the ostium urethrae is necessary for the urethral anastomosis for further phalloplasty surgery. A suture needs to be placed prior… *Surg Endosc 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5501901/) · doi:10.1007/s00464-016-5333-8
 
-## 04-surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty  (0 figures on page now)
+## 04-surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty  (1 figures on page now)
 
 - **[P] Figure 2**: Intra-abdominal view of the peritoneal flaps that will be approximated to create the neovaginal apex. The extent of the anterior peritoneal flap is denoted by the black dashed line and the extent of the posterior periton… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11122258/) · doi:10.3390/jcm13102760
 - **[?] Figure 1**: Penile skin (proximal, white arrow) and scrotal skin graft (distal, black arrow) which have been inverted over a vaginal dilator. This tissue will be used to create the lining of the neovaginal canal in the open Penile I… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11122258/) · doi:10.3390/jcm13102760
@@ -1699,17 +1699,17 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Fig. 2.**: Long-term (6 months) postoperative result for a bilateral SCIP flap. The coronaplasty was performed 2 weeks before this photograph was taken and is in the healing phase. We used the left-sided scar as a full-thickness sk… *Plast Reconstr Surg 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12105959/) · doi:10.1097/prs.0000000000011830
 
-## 04-surgical-techniques/04k-gender-affirming-surgery/skin-graft-vaginoplasty  (0 figures on page now)
+## 04-surgical-techniques/04k-gender-affirming-surgery/skin-graft-vaginoplasty  (1 figures on page now)
 
 - **[P] Figure 2**: Intra-abdominal view of the peritoneal flaps that will be approximated to create the neovaginal apex. The extent of the anterior peritoneal flap is denoted by the black dashed line and the extent of the posterior periton… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11122258/) · doi:10.3390/jcm13102760
 - **[?] Figure 1**: Penile skin (proximal, white arrow) and scrotal skin graft (distal, black arrow) which have been inverted over a vaginal dilator. This tissue will be used to create the lining of the neovaginal canal in the open Penile I… *J Clin Med 2024, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11122258/) · doi:10.3390/jcm13102760
 
-## 04-surgical-techniques/04l-cosmetic-genital-surgery/hyaluronic-acid-filler  (0 figures on page now)
+## 04-surgical-techniques/04l-cosmetic-genital-surgery/hyaluronic-acid-filler  (2 figures on page now)
 
 - **[DP] Figure 1**: Illustration of penile augmentation with hyaluronic acid injection. (a) Cross sectional view of penile augmentation with hyaluronic acid. (b) Full dilation of penile shaft subcutaneous space via an 18-gauge cannula needl… *Asian J Androl 2022, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9809476/) · doi:10.4103/aja20223
 - **[?] Figure 4**: Nodule removal and purulent fluid and hyaluronic acid gel in the infected penile skin. (a) Purulent fluid and hyaluronic acid gel discharge following incision. (b) Three days after debridement. (c) Incision of a nodule f… *Asian J Androl 2021, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8269832/) · doi:10.4103/aja.aja_78_20
 
-## 04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation  (0 figures on page now)
+## 04-surgical-techniques/04l-cosmetic-genital-surgery/labia-majora-augmentation  (1 figures on page now)
 
 - **[D] Figure 2**: Scheme of MED technique (minimum effective dose technique). Original drawing by E. Fasola. *Life (Basel) 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13413318/) · doi:10.3390/life16071141
 
@@ -1721,7 +1721,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[DP] Figure 1**: Illustration of penile augmentation with hyaluronic acid injection. (a) Cross sectional view of penile augmentation with hyaluronic acid. (b) Full dilation of penile shaft subcutaneous space via an 18-gauge cannula needl… *Asian J Androl 2022, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9809476/) · doi:10.4103/aja20223
 
-## 04-surgical-techniques/04l-cosmetic-genital-surgery/suprapubic-lipectomy  (0 figures on page now)
+## 04-surgical-techniques/04l-cosmetic-genital-surgery/suprapubic-lipectomy  (1 figures on page now)
 
 - **[?] Figure 1**: Proposed technique for treating AABP. (a) Preoperative appearance of the penis. (b) Creation of a diamond-shaped incision at penopubic junction; points α, β, γ, and δ are the four corners of the diamond shape; point α is… *Asian J Androl 2025, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11784951/) · doi:10.4103/aja202476
 
@@ -1741,7 +1741,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Fig. 1**: Top left – Right sided corporal cavernosal artery waveforms showing characteristic low resistance waveforms (peak systolic velocity 45.9 cm/s and end diastolic velocity of 11.4 cm/s).Bottom left – Large bilobed pseudoane… *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13345945/) · doi:10.1038/s41443-024-00928-0
 - **[I] Fig. 2**: MRI and CDUS images in non-ischemic priapism.Top left – T2w MRI axial section through the crura/proximal corporal cavernosa showing ill defined low T2 signal in the central corpora (red arrow), this likely represents con… *Int J Impot Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13345945/) · doi:10.1038/s41443-024-00928-0
 
-## 05-special-populations/05a-trauma-emergencies/testicular-torsion  (0 figures on page now)
+## 05-special-populations/05a-trauma-emergencies/testicular-torsion  (2 figures on page now)
 
 - **[P] Fig. 1**: Visual representation of possible scrotal incisions. Following Round 2, it was agreed that both cranio‐caudal median raphe and transverse incisions (over the testis of concern) are acceptable, but it is uncertain which i… *BJU Int 2022, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9796508/) · doi:10.1111/bju.15818
 - **[DP] Fig. 4**: Visual illustration of a sutureless fixation of the right testis within a Dartos pouch. [Colour figure can be viewed at wileyonlinelibrary.com] *BJU Int 2022, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9796508/) · doi:10.1111/bju.15818
@@ -1759,7 +1759,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[D] Figure 2**: The panel illustrates the processing of silk fibroin solution into various scaffold morphologies by exploiting the physicochemical properties of silk fibroin. (a) Schematic showing the stages of 3D bioprinting: silk fibr… *Stem Cells Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6636521/) · doi:10.1155/2019/1286054
 
-## 01-foundations/anatomy-physiology/genitalia/cervix  (0 figures on page now)
+## 01-foundations/anatomy-physiology/genitalia/cervix  (1 figures on page now)
 
 - **[DP] Figure 1**: Schematic of the cervical transformation zone. (Top) View of cervix as seen through gynecologist’s speculum showing ectocervix, TZ with Nabothian cysts, and endocervix. (Bottom) Cross section of transformation zone showi… *Sci Rep 2018, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6194146/) · doi:10.1038/s41598-018-33865-2
 
@@ -1771,7 +1771,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Fig. 4**: Histology of the smooth and skeletal muscular tissue of the lateral aspect of the urethra. Transverse histological sections of the tissue at the lateral aspect of the urethra using EVG staining (a, c, e, and g) and immun… *Int Urogynecol J 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12003430/) · doi:10.1007/s00192-025-06045-w
 
-## 01-foundations/anatomy-physiology/urinary-tract/ureter-anatomy-physiology  (0 figures on page now)
+## 01-foundations/anatomy-physiology/urinary-tract/ureter-anatomy-physiology  (1 figures on page now)
 
 - **[P] Figure 3**: Intraoperative retrograde pyelogram showing the right ureter (A) before and (B) after inguinal hernia repair. Note the position of the ureter in relation to the prosthesis in (A) as it extends below the right superior pu… *BMJ Case Rep 2017, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5353493/) · doi:10.1136/bcr-2017-219288
 
@@ -1800,7 +1800,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] Fig 6**: Impact of pH on the growth of frmR+ and ∆frmR strains when exposed to methenamine in artificial urine.Data shown is the average of 3 independent repeats for all conditions. Formaldehyde concentration detected in the cult… *PLoS Pathog 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13029678/) · doi:10.1371/journal.ppat.1014081
 
-## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/arista  (0 figures on page now)
+## 01-foundations/pharmacology/intraoperative-adjuncts/hemostatic-agents/arista  (1 figures on page now)
 
 - **[?] Figure 1.**: Microporous polysaccharide hemospheres were sprayed on the prostatic bed and on the dissection surface of the prostate and transected edge after lymph node dissection following conventional hemostatic methods in group A. *Urol Res Pract 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10544207/) · doi:10.5152/tud.2023.22242
 
@@ -1835,16 +1835,16 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] Fig. 1**: Illustration of glove lesions during the water tigtening test in ascending size. Figure A shows the typical drop formation of a microlesion (< 1 mm). Figure B shows the water leakage from a 2 mm lesion (left finger shown… *Knee Surg Sports Traumatol Arthrosc 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10089991/) · doi:10.1007/s00167-022-07136-7
 - **[?] Fig. 3**: Images A and B show typical friction lesions with tear formation in the glove after the use of nonabsorbable suture material for suturing tendons (A in 20 × magnification, B in 200 × magnification). C and D show the Fibe… *Knee Surg Sports Traumatol Arthrosc 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10089991/) · doi:10.1007/s00167-022-07136-7
 
-## 01-foundations/tools/biomaterials/biological-grafts/bovine-dermal  (0 figures on page now)
+## 01-foundations/tools/biomaterials/biological-grafts/bovine-dermal  (1 figures on page now)
 
 - **[?] Figure 2**: The tunica albuginea of the corpora cavernosa is revealed where the incision was made to correct the curvature. *Asian J Androl 2017, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5427787/) · doi:10.4103/1008-682x.171572
 - **[?] Figure 5**: The patch was sutured to the penis using absorbable suture. *Asian J Androl 2017, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5427787/) · doi:10.4103/1008-682x.171572
 
-## 01-foundations/tools/biomaterials/bulking-agents/autologous-fat  (0 figures on page now)
+## 01-foundations/tools/biomaterials/bulking-agents/autologous-fat  (1 figures on page now)
 
 - **[?] Fig. 1**: Before injection, the external urethral sphincter was open. Solution and adipose tissue was injected into the rhabdosphincter and submucosal space at the 5 and 7 o'clock positions and at the 4, 6, and 8 o'clock positions… *Yonsei Med J 2016, CC BY-NC*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4960381/) · doi:10.3349/ymj.2016.57.5.1152
 
-## 01-foundations/tools/biomaterials/bulking-agents/bulkamid  (0 figures on page now)
+## 01-foundations/tools/biomaterials/bulking-agents/bulkamid  (1 figures on page now)
 
 - **[D] Figure 1**: Schematic illustration of urethral mobility assessed through linear dorsocaudal movement (LDM). The arrow shows an increase of urethral mobility. The measurement points were the edge of the symphysis pubis and the intern… *J Clin Med 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12471096/) · doi:10.3390/jcm14186555
 
@@ -1860,7 +1860,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[D] FIGURE 5**: Schematic diagram showing electrospinning of the SF/3D-BAMG composite scaffolds with (A) aligned and (B) nonaligned fibers in aqueous solutions. Scanning electron microscopy images show the surfaces of [(C), c’] aligned … *Front Bioeng Biotechnol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10461011/) · doi:10.3389/fbioe.2023.1258666
 
-## 01-foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter  (0 figures on page now)
+## 01-foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter  (2 figures on page now)
 
 - **[?] Figure 1**: Commercially available stainless steel trocar with an outer sheath and inner obturator. Inset shows distal end of trocar with a hole near the tip. *Ann R Coll Surg Engl 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3954289/) · doi:10.1308/003588412x13373405385412
 - **[?] Figure 2**: Gentle traction is applied on the catheter with countertraction on the abdominal wall by the opposite hand to tamponade the suprapubic catheter track. *Ann R Coll Surg Engl 2012, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC3954289/) · doi:10.1308/003588412x13373405385412
@@ -1899,7 +1899,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 4**: (a) Catheter balloon inflation with only 1–3 cc of air or fluid is associated with balloon inflation well beyond the normal caliber of the normal fossa navicularis. (b) Repeat RUG demonstrating, in addition to the previo… *Adv Urol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4672120/) · doi:10.1155/2015/628107
 - **[?] Figure 8**: (a) Lambda incision with the patient in the exaggerated lithotomy position. (b) Jordan-Simpson perineal retractor is used to facilitate exposure of the corpus spongiosum. (c) The corpus spongiosum is circumferentially mo… *Adv Urol 2015, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4672120/) · doi:10.1155/2015/628107
 
-## 01-foundations/tools/instruments/urethral-specialty/midurethral-sling-trocars  (0 figures on page now)
+## 01-foundations/tools/instruments/urethral-specialty/midurethral-sling-trocars  (1 figures on page now)
 
 - **[?] Figure 1**: Standardization of the transobturator tape placement in the TOT 8/4 surgical technique. While placing the suburethral tape according to Delorme, one Hegar 8 dilator (2 white asterisks) was placed intraurethrally and one … *Biomed Res Int 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4770120/) · doi:10.1155/2016/4941304
 - **[?] Figure 4**: Distances in millimeters (mm) between the suburethral tapes and the urethra. With the TOT 8/4 technique (black dots), 83% of tapes were placed within a tape-urethra distance of 3–5 mm (light grey marked area). Only 28% o… *Biomed Res Int 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4770120/) · doi:10.1155/2016/4941304
@@ -1912,7 +1912,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Box 1**: The search query in this review. MeSH: Medical Subject Headings; TESE: testicular sperm extraction. *Asian J Androl 2023, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10411258/) · doi:10.4103/aja202295
 
-## 02-evaluation/imaging/mri  (0 figures on page now)
+## 02-evaluation/imaging/mri  (1 figures on page now)
 
 - **[?] Fig. 4**: Pelvic floor relaxation and posterior compartment measurements. a,b,c Dynamic Balanced Fast Field Echo (BFFE) sequence in the midsagittal plane at rest (a) , mild (b), and maximum straining (c). (a) shows how to quantify… *Eur Radiol 2017, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5374191/) · doi:10.1007/s00330-016-4471-7
 
@@ -1924,11 +1924,11 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[?] FIG 6**: Accuracy of midstream clean-catch (MSCC), sterile urine bag (SUB), or diaper collection compared with that of suprapubic aspiration (SPA) or catheterization (CATH) for the diagnosis of urinary tract infection in children… *Clin Microbiol Rev 2016, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4771218/) · doi:10.1128/cmr.00030-15
 
-## 03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis  (0 figures on page now)
+## 03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis  (1 figures on page now)
 
 - **[I] Fig. 1**: Variations in urethral stricture imaging findings include: A Imaging that confirmed a diagnosis of an isolated short bulbomembranous urethral stricture-stenosis amenable to urethroplasty B RUG in a patient in retention w… *World J Urol 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10352169/) · doi:10.1007/s00345-023-04429-5
 
-## 03-clinical-conditions/03c-pelvic-support/posterior-compartment  (0 figures on page now)
+## 03-clinical-conditions/03c-pelvic-support/posterior-compartment  (1 figures on page now)
 
 - **[?] Figure 1**: Figures a and b showed the location of the rectum (R) in resting and Valsalva states, respectively. The yellow line refers to the horizontal line from the lower margin of pubis. The green line represents the extended ven… *Sci Rep 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7101397/) · doi:10.1038/s41598-020-62376-2
 
@@ -1953,7 +1953,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[I] Figure 2**: PRP injection via cystoscope. Arrows pointing the fistula bladder orifice. (A–C) PRP injection via cystoscope. *J Clin Med 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6947156/) · doi:10.3390/jcm8122122
 
-## 03-clinical-conditions/03f-fistulas/in-males/urethropubic  (0 figures on page now)
+## 03-clinical-conditions/03f-fistulas/in-males/urethropubic  (2 figures on page now)
 
 - **[I] Fig. 2**: Pelvic MRI demonstrating fistulous tract between urethra and pubic symphysis *Curr Urol Rep 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12484387/) · doi:10.1007/s11934-025-01293-1
 - **[PI] Fig. 3**: Sagittal view of pelvic MRI demonstrating fistulous tract between urethra and pubic symphysis *Curr Urol Rep 2025, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12484387/) · doi:10.1007/s11934-025-01293-1
@@ -1969,7 +1969,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[D] FIGURE 5**: Schematic representation of the current work on wound healing improvement using oral mucosa. The oral mucosa represents a valuable source of different components that translates into different routes of exploration and e… *Front Cell Dev Biol 2021, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8350526/) · doi:10.3389/fcell.2021.682143
 - **[?] Figure 3**: Histopathology images of stricture site biopsy of patients who underwent open urethroplasty. (a) Stricture site biopsy of patient A following recurrence after minced buccal mucosal graft endourethral urethroplasty (MBGEU… *Indian J Urol 2025, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12021355/) · doi:10.4103/iju.iju_519_24
 
-## 04-surgical-techniques/04a-urethral-reconstruction/posterior/abdominoperineal-urethroplasty  (0 figures on page now)
+## 04-surgical-techniques/04a-urethral-reconstruction/posterior/abdominoperineal-urethroplasty  (1 figures on page now)
 
 - **[?] Figure 2**: RGU/VCUG presenting normal anterior urethra, long gap, and bladder neck open (a,b). The urethra is routed around the lateral side of the left corporal body at the peno- bulbar junction to straighten the natural curve of … *J Clin Med 2023, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10058563/) · doi:10.3390/jcm12062427
 
@@ -2053,7 +2053,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 
 - **[P] Figure 1**: Endoscopic view of the vaginal apex after tying of the modified McCall culdoplasty Suture. *Biomed Res Int 2019, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6545777/) · doi:10.1155/2019/8047924
 
-## 04-surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair  (0 figures on page now)
+## 04-surgical-techniques/04h-fistula-repair/female/endoscopic-vvf-repair  (1 figures on page now)
 
 - **[P] Fig. 2**: Intraoperative image during VVF repair, repair of the vaginal wall (A); flap interposition (B), bladder closure (C) *Eur J Med Res 2026, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12924227/) · doi:10.1186/s40001-026-03937-5
 
@@ -2092,7 +2092,7 @@ Type key: D = drawing/schematic, P = operative or clinical photo, I = imaging. L
 - **[?] Figure 4**: Short graphic abstract of the study as proposed for the potential effect of LiESWT. OAB: overactive bladder; LiESWT: low-intensity extracorporeal shock wave therapy. *Biomed Res Int 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7364200/) · doi:10.1155/2020/9175676
 - **[?] Figure 4**: Short graphic abstract of study for a proposed potential effect of LiESWT. SUI, stress urinary incontinence; LiESWT, low intensity extracorporeal low energy shock wave therapy. *Sci Rep 2020, CC BY*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7118154/) · doi:10.1038/s41598-020-62471-4
 
-## 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/complications  (0 figures on page now)
+## 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/complications  (1 figures on page now)
 
 - **[?] Figure 2**: A. Right cylinder aneurysm; B. Septal defect showing communication between both right and left side; C. Redundant tunica marked with a pen for excision; D. Tunical closure with 6-0 polydioxanone sutures (PDS). *Cent European J Urol 2021, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8318022/) · doi:10.5173/ceju.2021.0098
 - **[?] Figure 3**: A and B. Right metal dilator inserted in tunical defect before closure; C. New Coloplast Titan® prosthesis before insertion; D. Final result. *Cent European J Urol 2021, CC BY-NC-SA*. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8318022/) · doi:10.5173/ceju.2021.0098
