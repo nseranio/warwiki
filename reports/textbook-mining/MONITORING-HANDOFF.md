@@ -1,5 +1,10 @@
 # Textbook-mining monitoring handoff
 
+> **Closed September 30, 2026 (~23:30).** All mining jobs finished and all
+> findings are incorporated into WARWIKI. Nothing here needs monitoring any
+> more; see `consolidation/STATUS.md` for the record and `consolidation/DEFERRED.md`
+> for the three open questions.
+
 Written September 30, 2026, to hand the monitoring loop to a fresh session
 when the current one runs low on usage. If you are a new Claude session
 picking this up: read this whole file, then go straight to "What to do
