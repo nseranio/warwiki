@@ -5,12 +5,8 @@ Priorities and notes are hand-edited and preserved across regenerations.
 
 **Priority scale:** `1` = fill soon (high-demand topic), `2` = normal, `3` = someday.
 
-**Totals:** 5 stubs — P1: 0, P2: 5, P3: 0.
+**Totals:** 1 stubs — P1: 0, P2: 1, P3: 0.
 
 | Path | Priority | Notes |
 |---|---|---|
-| `docs/05-special-populations/05f-lifelong-care/index.mdx` | 2 |  |
-| `docs/06-journal-club/index.mdx` | 2 |  |
 | `docs/07-roots/surgical-lineage.mdx` | 2 |  |
-| `docs/08-resources/hidden-curriculum/index.mdx` | 2 |  |
-| `docs/08-resources/patient-handouts.mdx` | 2 |  |

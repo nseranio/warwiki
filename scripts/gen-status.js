@@ -45,6 +45,8 @@ const WRAPPER_COMPONENTS = [
   'PodcastLibrary',
   'PodcastFeedList',
   'VideoCards',
+  'LandmarkTrials',
+  'PatientHandouts',
 ];
 
 function detectStub(content) {
@@ -53,6 +55,9 @@ function detectStub(content) {
 
   // Pages using a wrapper component are intentional shells, not stubs.
   if (WRAPPER_COMPONENTS.some((c) => new RegExp(`<\\s*${c}[\\s/>]`).test(content))) return null;
+
+  // Landing pages whose content is a section-stack / toc-list of child links.
+  if (/className="(section-stack|toc-list)"/.test(content)) return null;
 
   // Strip frontmatter + imports + blank lines for real-content measurement.
   let body = content.replace(/^---[\s\S]*?^---\s*\n/m, '');
