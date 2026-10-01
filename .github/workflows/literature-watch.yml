@@ -18,8 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: '24'
       - name: Test maintenance tools
@@ -29,7 +29,7 @@ jobs:
       - name: Inventory review gaps
         run: node scripts/audit-content.js --out reports/literature-inbox/content-inventory.json > reports/literature-inbox/content-summary.json
       - name: Save complete inbox
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: literature-inbox
           path: reports/literature-inbox/
