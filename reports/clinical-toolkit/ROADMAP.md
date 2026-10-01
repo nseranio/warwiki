@@ -2,6 +2,10 @@
 
 Agreed with the user on September 30, 2026. Follow this order unless the user says otherwise.
 
+## Status (October 1, 2026)
+
+The Resources corpus is live at `/docs/resources/clinical-toolkit` (`docs/08-resources/clinical-toolkit.mdx`, `src/components/ClinicalToolkit.tsx`, registry `src/data/toolkit/`, source check `scripts/check-toolkit-sources.js` in `npm run lint`). Wave 1: 26 templates (Male SUI, Female SUI, Urethral stricture, OAB). Handout entries appear only when `WARWIKI_INCLUDE_HANDOUTS=true`. Next waves: add topics unit by unit from the personal library at full depth (POP, Peyronie's, ED/IPP, neurogenic bladder, fistula, diversion, BNC/VUAS, trauma, mesh).
+
 ## Order
 
 1. **Finish textbook mining ingestion** ([reports/textbook-mining/](../textbook-mining/)). **Done September 30** (25 books plus Campbell's; see `consolidation/STATUS.md`).

@@ -1634,6 +1634,35 @@ a.book-card:visited {
 /* ============================================================
    Patient Handouts gallery (.ph-*) + Patient Resources CTA
    ============================================================ */
+.ct-wrap { margin: 1.2rem 0 2rem; }
+.ct-controls { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 0.6rem; }
+.ct-controls .ph-search { flex: 1 1 100%; margin: 0; }
+.ct-controls .ph-filter { width: auto; min-width: 190px; border-color: var(--ifm-color-emphasis-300); }
+.ct-group { margin: 1.45rem 0 1.85rem; }
+.ct-group h2 { display: flex; align-items: center; gap: 0.55rem; font-size: 1.14rem; margin-bottom: 0.4rem; }
+.ct-list { border-top: 1px solid var(--ifm-color-emphasis-200); }
+.ct-item { border-bottom: 1px solid var(--ifm-color-emphasis-200); scroll-margin-top: 6rem; }
+.ct-heading { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; width: 100%; padding: 0.58rem 0.55rem; color: var(--ifm-font-color-base); background: transparent; border: 0; text-align: left; cursor: pointer; font: inherit; }
+.ct-heading:hover, .ct-heading[aria-expanded='true'] { background: var(--ifm-color-emphasis-100); }
+.ct-heading:focus-visible, .ct-copy:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: -2px; }
+.ct-heading strong { display: block; font-size: 0.94rem; }
+.ct-heading small { display: block; margin-top: 0.15rem; color: var(--ifm-color-emphasis-700); font-size: 0.79rem; line-height: 1.4; }
+.ct-heading > span:last-child { color: var(--ifm-color-primary); font-size: 1.1rem; flex: none; }
+.ct-detail { padding: 0.5rem 0.55rem 1rem; max-width: 860px; }
+.ct-actions { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.7rem; color: var(--ifm-color-emphasis-600); font-size: 0.76rem; }
+.ct-copy { border: 1px solid var(--ifm-color-primary); border-radius: 6px; background: transparent; color: var(--ifm-color-primary); padding: 0.28rem 0.7rem; cursor: pointer; font: inherit; font-weight: 600; }
+.ct-template { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--ifm-color-emphasis-100); color: var(--ifm-font-color-base); border: 1px solid var(--ifm-color-emphasis-200); border-radius: 7px; padding: 1rem; max-height: 38rem; overflow-y: auto; font-size: 0.77rem; line-height: 1.52; }
+.ct-links { margin-top: 1rem; font-size: 0.82rem; }
+.ct-links h3 { font-size: 0.84rem; margin: 0 0 0.3rem; }
+.ct-links ul { margin: 0; padding-left: 1.25rem; }
+.ct-links li { margin: 0.2rem 0; }
+@media (max-width: 480px) {
+  .ct-controls .ph-filter { min-width: 0; width: 100%; }
+  .ct-heading { padding: 0.55rem 0.35rem; align-items: flex-start; }
+  .ct-detail { padding: 0.45rem 0.35rem 0.9rem; }
+  .ct-template { padding: 0.7rem; }
+}
+@media (max-width: 600px) { .ct-controls .ph-filter { flex: 1 1 100%; width: 100%; } }
 .ph-wrap { margin: 1.25rem 0 0.5rem; }
 .ph-group { margin: 0 0 2rem; }
 .ph-group-title {
