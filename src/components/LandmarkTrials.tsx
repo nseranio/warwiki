@@ -1,11 +1,23 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { trials, Trial } from '@site/src/data/trials';
 
 /**
  * Searchable, filterable table of landmark trials. Each row expands in place
  * to a structured key-facts panel — bottom line first, then only the facts
  * that change practice. No navigation; the whole database lives on one page.
+ * Each trial has a stable anchor (#trial-<id>): a link with that hash opens and
+ * scrolls to the trial, and opening a trial writes its hash to the address bar.
  */
+
+const ANCHOR_PREFIX = 'trial-';
+
+function trialFromHash(): string | null {
+  if (typeof window === 'undefined') return null;
+  const hash = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+  if (!hash.startsWith(ANCHOR_PREFIX)) return null;
+  const id = hash.slice(ANCHOR_PREFIX.length);
+  return trials.some(t => t.id === id) ? id : null;
+}
 
 const DOMAIN_ORDER = [
   'Stress Incontinence',
@@ -75,6 +87,31 @@ export default function LandmarkTrials() {
   const [domain, setDomain] = useState('All');
   const [open, setOpen] = useState<string | null>(null);
 
+  useEffect(() => {
+    const openFromHash = () => {
+      const id = trialFromHash();
+      if (!id) return;
+      setSearch('');
+      setDomain('All');
+      setOpen(id);
+      window.requestAnimationFrame(() => {
+        document.getElementById(ANCHOR_PREFIX + id)?.scrollIntoView({ block: 'start' });
+      });
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+    return () => window.removeEventListener('hashchange', openFromHash);
+  }, []);
+
+  const toggle = (id: string, isOpen: boolean) => {
+    const next = isOpen ? null : id;
+    setOpen(next);
+    if (typeof window !== 'undefined') {
+      const url = window.location.pathname + window.location.search + (next ? `#${ANCHOR_PREFIX}${next}` : '');
+      window.history.replaceState(null, '', url);
+    }
+  };
+
   const domains = useMemo(() => {
     const present = new Set(trials.map(t => t.domain));
     const ordered = DOMAIN_ORDER.filter(d => present.has(d));
@@ -143,11 +180,11 @@ export default function LandmarkTrials() {
           filtered.map(t => {
             const isOpen = open === t.id;
             return (
-              <div key={t.id} className={`lt-item${isOpen ? ' lt-item-open' : ''}`}>
+              <div key={t.id} id={ANCHOR_PREFIX + t.id} className={`lt-item${isOpen ? ' lt-item-open' : ''}`}>
                 <button
                   className="lt-row lt-rowbtn"
                   aria-expanded={isOpen}
-                  onClick={() => setOpen(isOpen ? null : t.id)}
+                  onClick={() => toggle(t.id, isOpen)}
                 >
                   <span className="lt-trial">
                     <span className="lt-caret" aria-hidden>{isOpen ? '▾' : '▸'}</span>
