@@ -779,9 +779,10 @@ export const trials: Trial[] = [
     n: 148,
     population: 'Men ≥50 y with LUTS secondary to BPH',
     comparison: 'Optilume BPH paclitaxel drug-coated balloon vs sham',
-    primaryOutcome: 'Change in IPSS at 12 months',
-    result: 'IPSS improved 11.5 vs 4.8 with sham (p<0.001); Qmax more than doubled (8.9 → 19.0 mL/s) with preserved sexual function.',
-    bottomLine: 'Brings the drug-coated-balloon concept (already validated for urethral stricture in ROBUST) to BPH — a quick, ejaculation-sparing option with strong 12-month symptom and flow gains.',
+    primaryOutcome: 'IPSS improvement with Optilume at 12 months vs sham at 3 months, with a prespecified 25% super-superiority margin on the sham effect',
+    result: 'IPSS improved 11.5 points with Optilume (12 months) vs 8.0 with sham (3 months), but the difference was not significant with the 25% margin (p=0.178), so the trial missed its primary endpoint; secondary endpoints were not formally tested. Qmax improved 9.7 vs 5.5 mL/s.',
+    bottomLine: 'Brings the drug-coated-balloon concept from urethral stricture (ROBUST) to BPH. FDA approved it on the totality of evidence, but the pivotal sham-controlled trial missed its prespecified primary endpoint; counsel on that basis.',
+    caveat: 'The comparison set 12-month device results against 3-month sham results, and approval leaned on a post hoc comparison with literature sham controls.',
     doi: '10.1097/JU.0000000000003568',
   },
 
