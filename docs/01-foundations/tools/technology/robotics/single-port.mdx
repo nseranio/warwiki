@@ -3,6 +3,8 @@ title: Single-Port Robotics
 sidebar_position: 3
 ---
 
+import VideoCards from '@site/src/components/VideoCards';
+
 # Single-Port Robotics
 
 The da Vinci SP system delivers an articulating endoscope and three jointed instruments through a 25 mm cannula. This permits several access strategies, but the incision and operative corridor still depend on target distance, working space, prior surgery, assistant access and the surgeon's experience. Single-port access does not remove positioning, insufflation, bleeding or conversion risks.<sup>[[1]](#ref1)</sup>
@@ -16,6 +18,14 @@ SP instruments articulate at an elbow and wrist, enabling triangulation beyond t
 **Floating docking** raises the port or cannula away from the skin within a sealed access arrangement, increasing the available distance for instrument articulation when the target is close. It is not simply a synonym for docking into the bladder. In the original dry-lab study the gel cap sat 8 cm off the skin with a wound protector as the conduit. The wrist and elbow needed at least 5 and 10 cm between cannula tip and target to articulate, and floating docking increased working volume by more than 390% when the target was closer than 10 cm. These measurements do not transfer to every later instrument or access kit.<sup>[[3]](#ref3)</sup>
 
 SP instruments generally need approximately 10 cm of deployment space beyond the cannula tip to articulate correctly, which is the constraint floating docking is designed to overcome in restricted spaces or thin patients. The instruments are also less rigid than Si/Xi multiport instruments, so they retract heavier tissue poorly and work better pulling tissue than pushing it. The combined working space of the camera and three instruments is comparable to the volume of a softball: external arm collisions are eliminated, but internal instrument collisions are common, especially early in a surgeon's experience; the retraction zone is narrower than with a multiport platform, and moving between quadrants generally requires repositioning the whole system rather than a relocation pedal alone.<sup>[[3]](#ref3)</sup>
+
+### Toolbox and camera modes
+
+A 2025 video guide summarizes the current SP toolbox. One patient-side arm carries four instrument drives: a 12 × 8 mm articulating camera and three 6 mm double-jointed instruments pass through an entry guide with one oval and three circular lumens. The access port kit combines a wound retractor, a multichannel cannula and an inflatable cap. The small retractor (2.7 to 4 cm incisions) suits smaller specimens such as pyeloplasty or prostatectomy; the large one (2.7 to 7 cm) is chosen when more working space or a larger specimen is expected. Insufflation can run through the access port alone, through an AirSeal placed beside the wound retractor ("side car") or through a separate trocar.<sup>[[13]](#ref13)</sup>
+
+Listed instruments are Cadiere forceps, round tooth retractor, medium-large clip applier, needle driver, fenestrated and Maryland bipolar forceps, monopolar curved scissors, hook and spatula, plus the Remotely Operated Suction Irrigation System (ROSI), a flexible tube with a rigid tip that the console surgeon steers. Extended-range instruments add about 20% wrist articulation and longer forearms (a manufacturer figure of about 57% more workspace), and the Force Bipolar has a strong-grip mode. The custom remote center (CRC) lets the instruments rotate about a fixed point within the body (the remote center of motion); the authors describe less force on the patient's tissues but give no measurement.<sup>[[13]](#ref13)</sup>
+
+Because the camera and instruments share one port, the camera is moved more often than in multiport surgery. **Camera Adjust** keeps the camera head fixed while the instruments move around it, **Camera Control** moves the camera independently, and **Cobra mode** swings it laterally relative to the instruments. **Relocation** pivots the cannula and arm about the fulcrum toward another quadrant through the same incision. When that is not enough, the bedside assistant can "burp" the robot, moving the instruments farther in or out to change working depth. The assistant still exchanges instruments, applies clips and suctions when ROSI is not in use.<sup>[[13]](#ref13)</sup>
 
 ## Incision and Corridor Options
 
@@ -54,6 +64,18 @@ Raver's **111-patient observational cohort** included 54 multiport and 57 SP pat
 
 Discuss the intended incision and corridor, the possibility of assistant or additional ports or conversion, catheter expectations and procedure-specific risks. Discharge depends on the operation, patient, local pathway and support at home. Small selected series, nonsignificant comparisons and scar questionnaires cannot establish equivalent long-term urinary, sexual or oncologic outcomes.
 
+## Videos
+
+<VideoCards videos={[
+  {
+    id: 'orsini-2025-sp-toolbox',
+    title: 'Single-Port Robotic Platform and Toolbox',
+    subtitle: 'Orsini A, et al. Urology Video Journal 2025 (CC BY 4.0): console, access kit, instruments, camera modes and bedside assistance',
+    sourceUrl: 'https://ars.els-cdn.com/content/image/1-s2.0-S2590089725000362-mmc1.mp4',
+    sourceType: 'mp4',
+  },
+]} />
+
 ## References
 
 <a id="ref1"></a>1. Intuitive. Da Vinci SP system and accessories. [System information](https://www.intuitive.com/en-us/products-and-services/da-vinci/sp); [instrument/accessory catalog](https://www.intuitive.com/en-us/-/media/ISI/Intuitive/Pdf/da-vinci-sp-instrument-accessory-catalog-1047733.pdf).
@@ -79,3 +101,5 @@ Discuss the intended incision and corridor, the possibility of assistant or addi
 <a id="ref11"></a>11. Raver M, Implicito C, Henrich M, et al. Does incision location matter? Analysis of single-port cosmesis in urologic reconstructive surgery. *J Endourol.* 2024;38:1364–1371. doi:[10.1089/end.2024.0322](https://doi.org/10.1089/end.2024.0322).
 
 <a id="ref12"></a>12. Kaouk J, Sawczyn G, Wilson C, et al. Single-Port Percutaneous Transvesical Simple Prostatectomy Using the SP Robotic System: Initial Clinical Experience. *Urology.* 2020;141:173-177. doi:[10.1016/j.urology.2020.02.024](https://doi.org/10.1016/j.urology.2020.02.024).
+
+<a id="ref13"></a>13. Orsini A, Bignante G, Lasorsa F, et al. Single port robotic platform and toolbox: what is new. *Urol Video J.* 2025;27:100361. doi:[10.1016/j.urolvj.2025.100361](https://doi.org/10.1016/j.urolvj.2025.100361)
