@@ -2365,6 +2365,38 @@ a.book-card:visited {
   background: #111827;
 }
 
+.td-wrapper .td-sort {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+.td-wrapper .td-sort:hover,
+.td-wrapper .td-sort:focus-visible {
+  color: var(--ifm-color-primary);
+}
+
+.td-wrapper .td-sort:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.td-wrapper .td-sort-icon {
+  font-size: 0.65rem;
+  opacity: 0.55;
+}
+
+.td-wrapper th[aria-sort='ascending'] .td-sort-icon,
+.td-wrapper th[aria-sort='descending'] .td-sort-icon {
+  opacity: 1;
+}
+
 .td-table tbody tr {
   border-bottom: 1px solid var(--warwiki-border);
   transition: background 0.1s;

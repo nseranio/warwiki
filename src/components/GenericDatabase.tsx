@@ -6,6 +6,8 @@ export interface ColumnDef {
   badge?: boolean;
   badgeColors?: Record<string, string>;
   fallback?: string;
+  /** With `sortable` on the database: sort this column numerically (blank values last). */
+  numeric?: boolean;
 }
 
 interface GenericDatabaseProps {
@@ -14,6 +16,8 @@ interface GenericDatabaseProps {
   filterKey?: string;
   filterLabel?: string;
   entityLabel?: string;
+  /** Let readers sort by clicking a column header (click again to reverse). */
+  sortable?: boolean;
 }
 
 const DEFAULT_BADGE_COLOR = '#6b7280';
@@ -51,9 +55,14 @@ export default function GenericDatabase({
   filterKey,
   filterLabel = 'Filter',
   entityLabel = 'procedures',
+  sortable = false,
 }: GenericDatabaseProps) {
   const [search, setSearch] = useState('');
   const [filterValue, setFilterValue] = useState('All');
+  const [sort, setSort] = useState<{ key: string; dir: 1 | -1 } | null>(null);
+
+  const toggleSort = (key: string) =>
+    setSort(prev => (prev?.key === key ? { key, dir: prev.dir === 1 ? -1 : 1 } : { key, dir: 1 }));
 
   const filterOptions = useMemo(() => {
     if (!filterKey) return [];
@@ -71,6 +80,19 @@ export default function GenericDatabase({
       return true;
     });
   }, [data, search, filterValue, filterKey, columns]);
+
+  const sorted = useMemo(() => {
+    if (!sort) return filtered;
+    const col = columns.find(c => c.key === sort.key);
+    return [...filtered].sort((a, b) => {
+      const av = (a[sort.key] || '').trim();
+      const bv = (b[sort.key] || '').trim();
+      // Blank values stay at the bottom in either direction.
+      if (!av || !bv) return av ? -1 : bv ? 1 : 0;
+      if (col?.numeric) return (parseFloat(av) - parseFloat(bv)) * sort.dir;
+      return av.localeCompare(bv, undefined, { sensitivity: 'base' }) * sort.dir;
+    });
+  }, [filtered, sort, columns]);
 
   return (
     <div className="td-wrapper">
@@ -111,13 +133,27 @@ export default function GenericDatabase({
           <table className="td-table">
             <thead>
               <tr>
-                {columns.map(col => (
-                  <th key={col.key}>{col.header}</th>
-                ))}
+                {columns.map(col => {
+                  if (!sortable) return <th key={col.key}>{col.header}</th>;
+                  const active = sort?.key === col.key;
+                  return (
+                    <th
+                      key={col.key}
+                      aria-sort={active ? (sort!.dir === 1 ? 'ascending' : 'descending') : 'none'}
+                    >
+                      <button type="button" className="td-sort" onClick={() => toggleSort(col.key)}>
+                        {col.header}
+                        <span className="td-sort-icon" aria-hidden="true">
+                          {active ? (sort!.dir === 1 ? '▲' : '▼') : '↕'}
+                        </span>
+                      </button>
+                    </th>
+                  );
+                })}
               </tr>
             </thead>
             <tbody>
-              {filtered.map((row, i) => (
+              {sorted.map((row, i) => (
                 <tr key={i}>
                   {columns.map((col, j) => {
                     const val = row[col.key] || col.fallback || '—';
