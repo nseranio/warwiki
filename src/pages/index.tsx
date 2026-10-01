@@ -193,7 +193,7 @@ const TRAILER_SRC = 'https://pub-e681f0116a054b8ebfef29999e1d0a8b.r2.dev/video/w
 
 function HomepageTrailer() {
   return (
-    <section className={styles.homeSection} aria-label="WARWIKI trailer">
+    <section className={clsx(styles.homeSection, styles.trailerSection)} aria-label="WARWIKI trailer">
       <video
         className={styles.trailerVideo}
         src={TRAILER_SRC}
