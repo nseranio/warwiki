@@ -21,7 +21,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 - **Preserve useful content** (September 20 policy): manufacturer IFUs, anatomy texts, technical papers, operative videos and established teaching are valid sources for the claims they support. Correct specific errors; never blank substantive pages or replace them with audit notices. See [content-preservation-policy.md](reports/2026-09-20/content-preservation-policy.md).
 - **Provenance:** keep `evidenceUpdated` / `evidenceNote` (internal) distinct from clinician `lastReviewed` / `reviewer`. Never manufacture clinical sign-off from a Git timestamp or automated edit.
 - **Voice:** [STYLE.md](STYLE.md) governs typography, word choice, sentence structure and evidence wording for all new content.
-- **Design (September 27):** headings are Inter; no "At a glance" blocks; section accents via `--wk-accent*` tokens and `html[data-section]`; homepage Try chips are desktop-only; **do not create new surgical schematics** (the user judged them unreliable; 23 remain after 29 were deleted).
+- **Design (September 27):** headings are Inter; no "At a glance" blocks; section accents via `--wk-accent*` tokens and `html[data-section]`; homepage Try chips are desktop-only; **do not create new surgical schematics** (the user judged them unreliable; 20 remain after 29 were deleted September 27 and 3 replaced by published open-access figures October 1).
 - **No standalone pediatric pages** (September 30). Pediatric-primary topics appear only as adult-facing context on lifelong-care pages.
 - **Scope of patient data:** personal operative notes, case logs and any patient-specific data never enter this public repository.
 
