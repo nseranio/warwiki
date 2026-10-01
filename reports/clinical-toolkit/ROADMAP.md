@@ -6,10 +6,10 @@ Agreed with the user on September 30, 2026. Follow this order unless the user sa
 
 1. **Finish textbook mining ingestion** ([reports/textbook-mining/](../textbook-mining/)). **Done September 30** (25 books plus Campbell's; see `consolidation/STATUS.md`).
 2. **Done September 30:** refresh the personal SmartPhrase library against the post-mining site (report `WARWIKI-REFRESH-2026-09-30.md` in the library; 4 phrases and 1 list changed, no card or default changed) (off-repo, `~/Documents/Jefferson Einstein/Practice Building/AI/Smartphrase Corpus/`; rerun `regen_warwiki.py`, `digest.py`, per-unit reviewers with `BRIEF.md`).
-3. **Build the toolkit infrastructure and pilot Male SUI** (AUS, male sling, ProACT, PUL): op notes, counseling templates, handouts, and toolkit cards on the pages.
-4. **Scale the toolkit and publish it together with the handouts** (turn on `WARWIKI_INCLUDE_HANDOUTS` at the same time).
+3. **Scrapped September 30 (user decision): per-page toolkit cards.** A Male SUI pilot was built and judged too busy for article pages; files kept in `scrapped-pilot-2026-09-30/`. **Replacement plan:** a downloadable or searchable generic template corpus in Resources, later. Original step text: **Build the toolkit infrastructure and pilot Male SUI** (AUS, male sling, ProACT, PUL): op notes, counseling templates, handouts, and toolkit cards on the pages.
+4. **Superseded by the Resources corpus plan (above); handouts still publish on their own once rechecked.** Original: **Scale the toolkit and publish it together with the handouts** (turn on `WARWIKI_INCLUDE_HANDOUTS` at the same time).
 5. **Campbell's**: done early, September 30 (mined with the textbook queue and incorporated; 106 findings).
-6. **Refresh the toolkit** after Campbell's changes land. Should be mostly automatic if counseling numbers are sourced from pages.
+6. **(For the future corpus) Refresh the templates** after Campbell's changes land. Should be mostly automatic if counseling numbers are sourced from pages.
 
 ## Toolkit design decisions
 

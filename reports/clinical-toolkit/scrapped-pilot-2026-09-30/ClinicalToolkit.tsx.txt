@@ -1,0 +1,170 @@
+import React, { useMemo, useState } from 'react';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
+import { toolkitForPage, type ToolkitItem } from '@site/src/data/toolkit';
+import { PATIENT_HANDOUTS, handoutPdfPath } from '@site/src/data/handouts';
+
+/** Docs source path ("docs/04-x/y.mdx") to the doc id Docusaurus uses ("x/y"; numeric prefixes stripped). */
+function sourceToDocId(source: string): string {
+  return source
+    .replace(/^docs\//, '')
+    .replace(/\.mdx?$/, '')
+    .split('/')
+    .map((seg) => seg.replace(/^\d+-/, ''))
+    .join('/');
+}
+
+function useDocPaths(): Map<string, string> {
+  const all = useAllDocsData();
+  return useMemo(() => {
+    const map = new Map<string, string>();
+    for (const plugin of Object.values(all)) {
+      for (const version of plugin.versions) {
+        for (const doc of version.docs) map.set(doc.id, doc.path);
+      }
+    }
+    return map;
+  }, [all]);
+}
+
+function CopyButton({ text }: { text: string }): React.ReactElement {
+  const [state, setState] = useState<'idle' | 'copied' | 'failed'>('idle');
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setState('copied');
+    } catch {
+      setState('failed');
+    }
+    window.setTimeout(() => setState('idle'), 2000);
+  };
+  return (
+    <button type="button" className="wk-toolkit__copy" onClick={copy}>
+      {state === 'copied' ? 'Copied' : state === 'failed' ? 'Copy failed' : 'Copy'}
+    </button>
+  );
+}
+
+function TemplateItem({
+  item,
+  docPaths,
+  currentSource,
+}: {
+  item: ToolkitItem;
+  docPaths: Map<string, string>;
+  currentSource: string;
+}): React.ReactElement {
+  const sources = item.sources ?? [];
+  return (
+    <details className="wk-toolkit__item">
+      <summary>
+        <span className="wk-toolkit__item-title">{item.title}</span>
+        <span className="wk-toolkit__item-summary">{item.summary}</span>
+      </summary>
+      <div className="wk-toolkit__item-body">
+        <div className="wk-toolkit__item-actions">
+          <CopyButton text={item.body ?? ''} />
+          <span className="wk-toolkit__checked">Checked against WARWIKI {item.updated}</span>
+        </div>
+        <pre className="wk-toolkit__template">{item.body}</pre>
+        {sources.length > 0 && (
+          <div className="wk-toolkit__sources">
+            <p className="wk-toolkit__sources-title">Where the figures come from</p>
+            <ul>
+              {sources.map((s, i) => {
+                const samePage = s.page === currentSource;
+                const base = samePage ? '' : docPaths.get(sourceToDocId(s.page));
+                const href = base === undefined ? undefined : `${base}${s.anchor ? `#${s.anchor}` : ''}`;
+                return (
+                  <li key={`${s.figure}-${i}`}>
+                    <span className="wk-toolkit__figure">{s.figure}</span>
+                    {href !== undefined ? (
+                      <>
+                        {' '}
+                        <Link to={href || '#'}>{samePage ? 'on this page' : 'source page'}</Link>
+                      </>
+                    ) : null}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
+    </details>
+  );
+}
+
+const COUNT_LABELS: Record<ToolkitItem['kind'], [string, string]> = {
+  'op-note': ['operative note', 'operative notes'],
+  counseling: ['counseling script', 'counseling scripts'],
+  handout: ['patient handout', 'patient handouts'],
+};
+
+const SECTION_LABELS: Record<ToolkitItem['kind'], string> = {
+  'op-note': 'Operative note templates',
+  counseling: 'Counseling scripts',
+  handout: 'Patient handouts',
+};
+
+/**
+ * "Clinical toolkit" card for a docs page: generic note templates, counseling
+ * scripts and handouts tagged to the page in src/data/toolkit. Renders nothing
+ * when the page has no items.
+ */
+export default function ClinicalToolkit({ source }: { source: string }): React.ReactElement | null {
+  const { siteConfig } = useDocusaurusContext();
+  const handoutsEnabled = siteConfig.customFields?.handoutsEnabled === true;
+  const docPaths = useDocPaths();
+  const items = toolkitForPage(source).filter((i) => i.kind !== 'handout' || handoutsEnabled);
+  if (items.length === 0) return null;
+
+  const groups = (['op-note', 'counseling', 'handout'] as const)
+    .map((kind) => ({ kind, items: items.filter((i) => i.kind === kind) }))
+    .filter((g) => g.items.length > 0);
+  const countText = groups
+    .map((g) => `${g.items.length} ${COUNT_LABELS[g.kind][g.items.length === 1 ? 0 : 1]}`)
+    .join(' · ');
+
+  return (
+    <details className="wk-toolkit">
+      <summary className="wk-toolkit__summary">
+        <span className="wk-toolkit__label">Clinical toolkit</span>
+        <span className="wk-toolkit__count">{countText}</span>
+      </summary>
+      <div className="wk-toolkit__content">
+        <p className="wk-toolkit__notice">
+          Templates are structures to complete, not records. Replace every *** and choose one option in
+          each [ ]. Findings, blood loss and complications are left blank on purpose. No billing codes are
+          included.
+        </p>
+        {groups.map((g) => (
+          <section key={g.kind} className="wk-toolkit__group">
+            <h3 className="wk-toolkit__group-title">{SECTION_LABELS[g.kind]}</h3>
+            {g.kind === 'handout'
+              ? g.items.map((item) => {
+                  const handout = PATIENT_HANDOUTS.find((h) => h.slug === item.handoutSlug);
+                  if (!handout) return null;
+                  return (
+                    <a
+                      key={item.id}
+                      className="wk-toolkit__handout"
+                      href={handoutPdfPath(handout.slug, 'en')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="wk-toolkit__item-title">{item.title}</span>
+                      <span className="wk-toolkit__item-summary">{item.summary} PDF.</span>
+                    </a>
+                  );
+                })
+              : g.items.map((item) => (
+                  <TemplateItem key={item.id} item={item} docPaths={docPaths} currentSource={source} />
+                ))}
+          </section>
+        ))}
+      </div>
+    </details>
+  );
+}

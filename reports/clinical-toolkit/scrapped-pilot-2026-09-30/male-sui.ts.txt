@@ -1,0 +1,425 @@
+/**
+ * Clinical Toolkit: Male stress urinary incontinence pilot.
+ *
+ * Generic op-note and counseling templates for the artificial urinary
+ * sphincter, male transobturator sling, ProACT balloons and perineal
+ * permanent urethral ligation. Templates are derived, never copied, from a
+ * personal library; every counseling figure is listed in `sources` with the
+ * WARWIKI page and anchor that supports it. See types.ts for the rules.
+ */
+
+import type { ToolkitItem } from './types';
+
+const AUS_PAGE =
+  'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx';
+const SLING_CHOOSER_PAGE =
+  'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx';
+const ADVANCE_PAGE =
+  'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/advance-sling.mdx';
+const PROACT_PAGE =
+  'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons.mdx';
+const PUL_PAGE =
+  'docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/permanent-urethral-ligation.mdx';
+const HUB_PAGE =
+  'docs/04-surgical-techniques/04f-incontinence-procedures/male-sui/male-stress-incontinence-database.mdx';
+
+const UPDATED = '2026-09-30';
+
+export const MALE_SUI_TOOLKIT: ToolkitItem[] = [
+  // ===== OP NOTES =====
+  {
+    id: 'aus-placement-op-note',
+    kind: 'op-note',
+    title: 'Artificial urinary sphincter placement',
+    summary:
+      'Operative note template for primary artificial urinary sphincter placement by perineal, transverse scrotal or transcorporal cuff route.',
+    pages: [AUS_PAGE, HUB_PAGE],
+    body: `Template: a structure to complete, not a record. Replace every *** and choose one option in each [ ].
+
+Preoperative diagnosis: Male stress urinary incontinence, [mild / moderate / severe], after [radical prostatectomy / radical prostatectomy and radiation / primary radiation / outlet surgery / other: ***]; [no prior pelvic radiation / prior pelvic radiation]
+Postoperative diagnosis: [Same / Same, with ***]
+Procedure(s): Placement of artificial urinary sphincter ([perineal bulbar / transverse scrotal / transcorporal] cuff, pressure-regulating balloon, scrotal pump); [cystourethroscopy / no cystourethroscopy]; ***
+Implants: Cuff *** cm; pressure-regulating balloon *** cmH2O, filled with *** mL of [normal saline / isotonic contrast / other: ***]; pump; [antibiotic-coated / uncoated] components; lot and serial numbers ***
+Anesthesia: ***
+
+Indication: *** with bothersome stress urinary incontinence after ***, persisting despite ***. Dexterity and cognition to operate the pump: ***. Options discussed: pelvic floor muscle training, containment, male sling, adjustable balloons, urethral bulking and artificial urinary sphincter. Risks discussed: bleeding and scrotal hematoma; infection or erosion requiring removal of the device; injury to the urethra, bladder, bowel or blood vessels; urinary retention; pain; pump migration; mechanical failure and the expected need for revision over time; recurrent leakage; MRI conditions for the device; and the requirement that the device be deactivated before any urethral catheter or instrument is passed. The patient chose an artificial urinary sphincter and gave consent.
+
+Findings:
+Cystourethroscopy: ***
+Urethra at the cuff site: ***
+Urethral circumference: ***
+Urethral integrity check: ***
+Device function on cycling: ***
+
+Procedure details:
+Perioperative antibiotics were given according to the implant protocol: ***. Skin preparation: ***. The patient was placed in [lithotomy / supine with the legs abducted] with pressure points padded, and was prepped and draped. A [urethral catheter / sound] was placed to identify the urethra, and the bladder was drained.
+[Perineal: a midline perineal incision was made and deepened through Colles' fascia; the bulbospongiosus was divided in the midline and reflected, and the bulbar urethra was mobilized circumferentially from the corpora cavernosa under direct vision. / Transverse scrotal: a transverse upper scrotal incision was made and the proximal bulbar urethra was mobilized circumferentially. / Transcorporal: the urethra was exposed through a *** incision, and the cuff path was created through incisions in the tunica albuginea of the corpora cavernosa so that a layer of tunica lies dorsal to the urethra; the tunical incisions were managed with ***.]
+The urethral circumference was measured with the cuff sizer at the selected site, and a *** cm cuff was selected. The catheter was removed before the cuff was closed. The urethra was checked for injury by [cystourethroscopy / retrograde instillation / inspection]; findings are listed above.
+The cuff was prepared according to the instructions for use with air removed, passed around the urethra and closed, with the tubing directed to the [right / left].
+Through a [separate lower abdominal / inguinal / the same scrotal] incision, the pressure-regulating balloon was placed in the [space of Retzius / high submuscular space / other: ***]. Position was confirmed by ***, and the balloon was filled with *** mL of ***.
+A dependent subdartos pouch was created in the [right / left] hemiscrotum, and the pump was placed with the deactivation button palpable and facing ***.
+The tubing was passed to the pump incision, trimmed with no air in the system, and joined with [quick connectors / suture-tie connectors].
+The wounds were irrigated with ***. The device was cycled to confirm function and left deactivated with the cuff open.
+Closure: ***. Dressing: ***.
+Catheter at the end of the case: [none; voiding trial / urethral catheter until *** / suprapubic tube / ***].
+
+Estimated blood loss: ***
+Specimens: ***
+Drains: ***
+Complications: ***
+
+Disposition and plan: [Discharged home / Admitted for observation] after ***. Voiding trial: ***. The device remains deactivated until the activation visit in *** weeks. Device card given and catheter precautions reviewed: ***. Antibiotics: ***. Activity restrictions: ***. Follow-up: ***.`,
+    updated: UPDATED,
+  },
+  {
+    id: 'male-sling-op-note',
+    kind: 'op-note',
+    title: 'Male transobturator sling placement',
+    summary:
+      'Operative note template for a fixed retrourethral transobturator male sling, with the device chosen at the top.',
+    pages: [SLING_CHOOSER_PAGE, ADVANCE_PAGE, HUB_PAGE],
+    body: `Template: a structure to complete, not a record. Replace every *** and choose one option in each [ ].
+
+Preoperative diagnosis: Male stress urinary incontinence, [mild / moderate], after [radical prostatectomy / outlet surgery / other: ***]; [no prior pelvic radiation / prior pelvic radiation]
+Postoperative diagnosis: [Same / Same, with ***]
+Procedure(s): Placement of transobturator male urethral sling ([AdVance XP / other: ***]); [cystourethroscopy / no cystourethroscopy]; ***
+Implants: [AdVance XP / other: ***] male sling; lot number ***
+Anesthesia: ***
+
+Indication: *** with bothersome stress urinary incontinence after ***, persisting despite ***. Residual sphincter function on preoperative cystoscopy (repositioning test): ***. Options discussed: pelvic floor muscle training, containment, artificial urinary sphincter, adjustable balloons and urethral bulking. Risks discussed: bleeding; infection; injury to the urethra or bladder; temporary urinary retention requiring a catheter or self-catheterization; perineal, groin or thigh pain; numbness; persistent or recurrent leakage; new urgency; mesh erosion or extrusion and possible removal; and that an artificial urinary sphincter remains possible later. The patient chose a male sling and gave consent.
+
+Findings:
+Cystourethroscopy: ***
+Coaptation after tensioning: ***
+Urethral or bladder injury: ***
+
+Procedure details:
+Perioperative antibiotics: ***. Skin preparation: ***. The patient was placed in lithotomy with pressure points padded, and was prepped and draped. [A urethral catheter was placed and the bladder drained / The bladder was drained and no catheter was left during dissection].
+A midline perineal incision was made over the bulbar urethra and deepened through Colles' fascia. The bulbospongiosus was [divided in the midline / ***] to expose the bulbar urethra.
+The central tendon was [divided / partially released] to mobilize the proximal bulb: ***.
+Stab incisions were made in each groin over the obturator foramen, located [with a finder needle / by palpation].
+[AdVance XP: the helical needle passers were passed outside-in through each obturator foramen onto a finger protecting the urethra in the perineal incision; the sling was attached at each needle tip and each passer was withdrawn along its insertion path, drawing the mesh through without twisting. / Other sling: the sling was passed according to its instructions for use: ***.]
+The central portion of the sling was laid flat on the proximal bulbar urethra and fixed to the corpus spongiosum with [absorbable / nonabsorbable] sutures: ***. The arms were tensioned to reposition the bulbar urethra proximally: ***.
+Cystourethroscopy after tensioning: [performed; findings are listed above / not performed].
+The sleeves were removed and the arms trimmed below the skin. The wounds were irrigated with ***.
+Closure: bulbospongiosus ***; Colles' fascia and subcutaneous tissue ***; skin ***. Dressing: ***.
+Catheter at the end of the case: [none; voiding trial / urethral catheter until *** / ***].
+
+Estimated blood loss: ***
+Specimens: ***
+Drains: ***
+Complications: ***
+
+Disposition and plan: [Discharged home / Admitted for observation] after ***. Voiding trial: ***. If unable to void: [urethral catheter / intermittent self-catheterization], with review on ***. Activity restrictions: ***. Follow-up: ***.`,
+    updated: UPDATED,
+  },
+  {
+    id: 'proact-placement-op-note',
+    kind: 'op-note',
+    title: 'ProACT adjustable balloon placement',
+    summary:
+      'Operative note template for placement of adjustable periurethral continence balloons with scrotal ports.',
+    pages: [PROACT_PAGE, HUB_PAGE],
+    body: `Template: a structure to complete, not a record. Replace every *** and choose one option in each [ ].
+
+Preoperative diagnosis: Male stress urinary incontinence, [mild / moderate / severe], after [radical prostatectomy / TURP / other: ***]; no prior pelvic radiation
+Postoperative diagnosis: [Same / Same, with ***]
+Procedure(s): Placement of adjustable periurethral continence balloons, [bilateral / right / left]; cystourethroscopy; [fluoroscopic / transrectal ultrasound] guidance; ***
+Implants: Balloons and ports, lot numbers ***; initial fill right *** mL, left *** mL of ***
+Anesthesia: [general / spinal / ***]
+
+Indication: *** with bothersome stress urinary incontinence for *** months after ***, persisting despite ***. Options discussed: pelvic floor muscle training, containment, male sling and artificial urinary sphincter. Risks discussed: bleeding; infection; perforation of the urethra or bladder; urinary retention; balloon migration, deflation or erosion requiring removal; pain at the ports; repeated adjustment visits; recurrent or persistent leakage; and that an artificial urinary sphincter remains possible later. The patient chose adjustable balloons and gave consent.
+
+Findings:
+Cystourethroscopy: ***
+Bladder neck: ***
+Balloon position: ***
+Perforation: ***
+
+Procedure details:
+Preoperative antibiotics: ***. The patient was placed in lithotomy with the hips abducted; the perineum and groins were prepped and draped, and the C-arm was positioned and draped into the field.
+A urethral catheter was placed with its balloon filled to mark the bladder neck, [and a cystoscope sheath with obturator was left in the urethra as a landmark / ***]. The bladder: ***.
+A small perineal incision was made on the [right / left], lateral to the midline.
+The trocar in its sheath was advanced through the incision alongside the urethra toward the bladder neck under [fluoroscopic / cystoscopic / transrectal ultrasound] guidance. Position beside the urethra, just distal to the bladder neck, was confirmed by ***, with no entry into the urethra or bladder.
+The balloon was advanced through the sheath to the bladder neck, the sheath was withdrawn, and the balloon was filled through its port with *** mL of ***. Position was confirmed by ***.
+The port was tunneled to a subcutaneous pocket in the [right / left] scrotum.
+The contralateral side: [completed in the same way / not performed because ***].
+Perforation: [none identified / identified on the *** side, involving the ***; no balloon was placed on that side, and a urethral catheter was left for *** days].
+The wounds were irrigated with *** and closed: ***. Dressing: ***.
+Voiding after the procedure: [voided / unable to void; catheter placed until *** / balloon volume reduced by *** mL in each balloon before voiding].
+
+Estimated blood loss: ***
+Specimens: ***
+Drains: ***
+Complications: ***
+
+Disposition and plan: [Discharged home / Admitted for observation] after ***. Catheter: ***. No balloon adjustment before *** weeks; first adjustment visit ***. Antibiotics: ***. Follow-up: ***.`,
+    updated: UPDATED,
+  },
+  {
+    id: 'pul-op-note',
+    kind: 'op-note',
+    title: 'Perineal permanent urethral ligation (PUL)',
+    summary:
+      'Operative note template for perineal permanent urethral ligation with suprapubic drainage for an end-stage urethra.',
+    pages: [PUL_PAGE, HUB_PAGE],
+    body: `Template: a structure to complete, not a record. Replace every *** and choose one option in each [ ].
+
+Preoperative diagnosis: Severe stress urinary incontinence with end-stage urethra after [recurrent artificial urinary sphincter cuff erosion / multiple failed artificial urinary sphincter revisions / other: ***]; [no prior pelvic radiation / prior pelvic radiation]
+Postoperative diagnosis: [Same / Same, with ***]
+Procedure(s): Perineal permanent urethral ligation; cystoscopy through the proximal urethral stump; [suprapubic tube placement / existing suprapubic tube confirmed / suprapubic tube exchange]; [intradetrusor onabotulinumtoxinA injection / no intradetrusor injection]; [removal of artificial urinary sphincter components: *** / no device removal]; ***
+Implants: ***
+Anesthesia: ***
+
+Indication: *** with severe stress urinary incontinence and an end-stage urethra after ***, not a candidate for further urethral or sphincter reconstruction because ***. The patient accepts a permanent suprapubic tube and wishes to avoid abdominal diversion. Options discussed: further artificial urinary sphincter reconstruction if feasible, bladder-neck closure with a catheterizable channel, cystectomy with urinary diversion, and containment. Risks discussed: irreversibility and lifelong suprapubic drainage; bleeding; wound infection, abscess or breakdown; bladder spasms; recanalization with recurrent urethral leakage and possible repeat ligation; urethrocutaneous fistula; urinary tract infection, catheter blockage and bladder stones; and later cystectomy with urinary diversion if suprapubic drainage fails or symptoms are not tolerated. The patient chose permanent urethral ligation and gave consent.
+
+Findings:
+Urethra and periurethral tissue: ***
+Erosion defect: ***
+Infection: ***
+Bladder on cystoscopy: ***
+Suprapubic tube position: ***
+Closure integrity: ***
+
+Procedure details:
+Perioperative antibiotics: ***. The patient was placed in lithotomy with pressure points padded, and was prepped and draped.
+A midline perineal incision was made and the bulbar urethra was dissected circumferentially. [The artificial urinary sphincter cuff was removed; other components: *** / No device was present].
+The urethra was transected [at the erosion defect / proximal to the abnormal urethra at ***].
+Cystoscopy was performed through the proximal urethral stump; findings are listed above. [OnabotulinumtoxinA *** units in *** mL was injected into the detrusor at *** sites / No intradetrusor injection was given].
+Suprapubic drainage: [an existing *** Fr suprapubic tube was confirmed in position / a *** Fr suprapubic tube was placed under direct vision].
+The proximal urethral mucosa was closed with running absorbable suture: ***. The proximal stump was imbricated with figure-of-eight absorbable sutures: ***.
+[Bulbospongiosus and surrounding perineal soft tissue / distal corpus spongiosum rotated over the stump, with bulbospongiosus as additional cover / other: ***] was interposed in layers over the closed stump.
+The distal urethral stump was left open for dependent drainage.
+Hemostasis was confirmed, the wound was irrigated with ***, and the superficial layers were closed: ***. Dressing: ***.
+
+Estimated blood loss: ***
+Specimens: ***
+Drains: ***
+Complications: ***
+
+Disposition and plan: [Discharged home / Admitted for observation] after ***. Suprapubic tube on continuous gravity drainage for ***. Bladder spasm treatment: ***. Antibiotics: ***. Evaluation for recanalization if urethral leakage recurs: ***. Follow-up: ***.`,
+    updated: UPDATED,
+  },
+
+  // ===== COUNSELING =====
+  {
+    id: 'aus-counseling',
+    kind: 'counseling',
+    title: 'Artificial urinary sphincter counseling',
+    summary:
+      'Plain-language counseling template for the artificial urinary sphincter: device, candidacy, expected results, durability, risks and alternatives.',
+    pages: [AUS_PAGE, HUB_PAGE],
+    body: `Artificial urinary sphincter (AUS) counseling
+
+What it is
+An artificial urinary sphincter is a fluid-filled device placed entirely inside the body. It has three parts joined by tubing: a cuff around the urethra that keeps it closed, a small balloon behind the pubic bone that sets the pressure, and a pump in the scrotum. To urinate, the pump is squeezed and released several times to open the cuff. The cuff closes again by itself within a few minutes. The cuff is placed through an incision in the perineum or the upper scrotum, and the balloon through a small incision in the lower abdomen.
+
+Who it suits
+Men with bothersome stress leakage after prostate treatment, from mild to severe. It is the preferred device after pelvic radiation or after a sling has failed. The patient must be able to find and squeeze the pump reliably. Dexterity and understanding for this patient: ***
+
+Expected result
+In a recent multicenter trial, 94% of men (91 of 97 assessed) had their pad weight at least halved at one year, and 60% (61 of 101) used no pads. Most men are much better rather than completely dry. In published series, more than 80% of men are satisfied, and 92 to 99% would recommend or repeat the procedure. The device treats stress leakage only; urgency, if present, needs its own treatment.
+
+Recovery
+The device is left open (deactivated) for about 4 to 6 weeks while the tissues heal, then switched on and taught at an office visit. Until then, pads or a condom catheter are used. Difficulty emptying the bladder at first has been reported in roughly 8 to 32% of implants. It is usually managed with a small catheter for a short time, or with a suprapubic tube if it lasts longer.
+
+Durability
+The AUS is a mechanical device, and further surgery is expected over time. In the trial, 9 of 115 men (7.8%) had a revision in the first year. In a national French series of 8,475 men, about 71% had needed no further surgery at 2 years, about 57% at 5 years and about 40% at 10 years, and the first revision came at a median of 6.6 years. Single high-volume centers report better results, about 72 to 74% at 5 years. Reasons for revision include loss of fluid or pressure, a worn part, the cuff no longer closing the urethra well, infection and erosion. If a second sphincter is needed after a complication, its 5-year revision-free rate in one multicenter study was 83% with no added risk factors, 73% after radiation, 64% after urethral reconstruction and 46% after both.
+
+Infection and erosion
+In long-term series cited by the AUA guideline, infection occurs in less than 1% to 5% of men and erosion of the cuff into the urethra in 1 to 10%. Either usually requires removal of the whole device. A new device can be placed after healing, at least 3 months later. The risk is higher after radiation, after a previous erosion and after urethral surgery.
+
+Catheter safety
+No catheter or scope may be passed through an active AUS. The device is first deactivated by someone trained to do so, the smallest catheter is used for the shortest time, and a suprapubic tube is placed if drainage is expected to last more than 48 hours. The device card and a medical alert bracelet tell emergency staff about the device.
+
+Other risks
+Bleeding or a scrotal hematoma, pain, injury to the urethra, bladder or nearby structures during placement, movement of the pump, and MRI conditions that depend on the device model.
+
+Compared with a male sling
+In a randomized trial of 380 men, a sling was not worse than an AUS for the main continence outcome at 1 and 2 years. The other outcomes that differed favored the AUS, and by 2 years further surgery was more common after a sling (11% versus 2%).
+
+Alternatives
+Pelvic floor muscle training, containment (pads, condom catheter or penile clamp), male sling, adjustable balloons (only without prior radiation), urethral bulking (low success) and suprapubic catheter.
+
+Questions answered and decision: ***`,
+    sources: [
+      { figure: '94% of men (91 of 97 assessed)', page: AUS_PAGE, anchor: 'continence' },
+      { figure: '60% (61 of 101)', page: AUS_PAGE, anchor: 'continence' },
+      { figure: 'more than 80% of men are satisfied', page: AUS_PAGE, anchor: 'continence' },
+      { figure: '92 to 99%', page: AUS_PAGE, anchor: 'continence' },
+      { figure: 'about 4 to 6 weeks', page: AUS_PAGE, anchor: 'postoperative-management' },
+      { figure: 'roughly 8 to 32% of implants', page: AUS_PAGE, anchor: 'early' },
+      { figure: '9 of 115 men (7.8%)', page: AUS_PAGE, anchor: 'continence' },
+      { figure: '8,475 men', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: 'about 71% had needed no further surgery at 2 years', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: 'about 57% at 5 years', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: 'about 40% at 10 years', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: 'a median of 6.6 years', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: 'about 72 to 74% at 5 years', page: AUS_PAGE, anchor: 'revision-and-long-term-durability' },
+      { figure: '83% with no added risk factors', page: AUS_PAGE, anchor: 'ref20' },
+      { figure: '73% after radiation', page: AUS_PAGE, anchor: 'ref20' },
+      { figure: '64% after urethral reconstruction', page: AUS_PAGE, anchor: 'ref20' },
+      { figure: '46% after both', page: AUS_PAGE, anchor: 'ref20' },
+      { figure: 'less than 1% to 5%', page: AUS_PAGE, anchor: 'late-requiring-reoperation' },
+      { figure: '1 to 10%', page: AUS_PAGE, anchor: 'late-requiring-reoperation' },
+      { figure: 'at least 3 months', page: AUS_PAGE, anchor: 'late-requiring-reoperation' },
+      { figure: 'more than 48 hours', page: AUS_PAGE, anchor: 'catheterization-and-urethral-instrumentation-in-an-aus-patient' },
+      { figure: '380 men', page: HUB_PAGE, anchor: 'decision-framework' },
+      { figure: 'at 1 and 2 years', page: HUB_PAGE, anchor: 'decision-framework' },
+      { figure: '11% versus 2%', page: HUB_PAGE, anchor: 'decision-framework' },
+    ],
+    updated: UPDATED,
+  },
+  {
+    id: 'male-sling-counseling',
+    kind: 'counseling',
+    title: 'Male sling counseling',
+    summary:
+      'Plain-language counseling template for a fixed transobturator male sling: candidacy, expected results, recovery, durability, risks and alternatives.',
+    pages: [SLING_CHOOSER_PAGE, ADVANCE_PAGE, HUB_PAGE],
+    body: `Male urethral sling counseling ([AdVance XP / other: ***])
+
+What it is
+A male sling is a strip of synthetic mesh placed under the urethra through an incision in the perineum, with its arms passed through small incisions in each groin. It lifts and repositions the urethra so that the remaining sphincter muscle closes better. There is nothing to operate.
+
+Who it suits
+Men with mild to moderate stress leakage after prostate treatment, without prior pelvic radiation, who still have some sphincter function (seen at cystoscopy as closure when the urethra is supported). It suits men who prefer not to use a pump or cannot operate one. It is not routinely advised for severe leakage.
+
+Expected result
+In a randomized trial of 380 men, the sling was not worse than an artificial urinary sphincter (AUS) for the main continence outcome at 1 and 2 years. Serious adverse events occurred in 8 of 180 men after a sling and 13 of 175 after an AUS. The other outcomes that differed favored the AUS, and by 2 years further surgery was more common after a sling (11% versus 2%). For moderate leakage, results are better with an AUS: in one matched study, 94% of men after an AUS and 69% after a sling were much improved. In one series, the sling succeeded in 78% of men with mild leakage. In the two largest long-term series, 45 to 51% of men were cured and 70 to 76% were cured or improved at 4 to 5 years, and one series suggested results decline after 4 years. Success is lower after radiation, with heavier leakage, with significant urgency and with obesity.
+
+Recovery
+Temporary difficulty urinating is the most common early problem (21% in one series and 13% in another). The AUA guideline states that it typically resolves within one week; a catheter or self-catheterization may be needed briefly. Early pain after surgery is common (about 23% in one multicenter review); most settles within 4 weeks, and 2.3% of men had pain for more than 3 months, which resolved within 1 year. Activity restrictions for this patient: ***
+
+Durability
+Further procedures were needed in about 10 to 12% of men in the cited series. Removal of the sling is uncommon (0.9% in one series of 230 men). Erectile function and bladder emptying were not significantly changed in the cited series. A sling does not rule out an AUS later; in one population study about 20% of sling recipients had an AUS within 8 years.
+
+Other risks
+Bleeding, infection, injury to the urethra or bladder, numbness, mesh erosion or extrusion, persistent or worse leakage, and new urgency.
+
+Alternatives
+Pelvic floor muscle training, containment (pads, condom catheter or penile clamp), artificial urinary sphincter, adjustable balloons (only without prior radiation) and urethral bulking (low success).
+
+Questions answered and decision: ***`,
+    sources: [
+      { figure: '380 men', page: SLING_CHOOSER_PAGE, anchor: 'ref9' },
+      { figure: 'at 1 and 2 years', page: SLING_CHOOSER_PAGE, anchor: 'ref21' },
+      { figure: '8 of 180 men after a sling and 13 of 175 after an AUS', page: SLING_CHOOSER_PAGE, anchor: 'ref9' },
+      { figure: '11% versus 2%', page: SLING_CHOOSER_PAGE, anchor: 'ref21' },
+      { figure: '94% of men after an AUS and 69% after a sling', page: SLING_CHOOSER_PAGE, anchor: 'ref3' },
+      { figure: '78% of men with mild leakage', page: ADVANCE_PAGE, anchor: 'ref19' },
+      { figure: '45 to 51% of men were cured', page: ADVANCE_PAGE, anchor: 'key-points-on-durability' },
+      { figure: '70 to 76% were cured or improved', page: ADVANCE_PAGE, anchor: 'key-points-on-durability' },
+      { figure: 'at 4 to 5 years', page: ADVANCE_PAGE, anchor: 'key-points-on-durability' },
+      { figure: 'decline after 4 years', page: ADVANCE_PAGE, anchor: 'key-points-on-durability' },
+      { figure: '21% in one series and 13% in another', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'within one week', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'about 23% in one multicenter review', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'within 4 weeks', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: '2.3% of men had pain for more than 3 months', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'within 1 year', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'about 10 to 12%', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: '0.9% in one series of 230 men', page: ADVANCE_PAGE, anchor: 'complications' },
+      { figure: 'about 20% of sling recipients had an AUS within 8 years', page: SLING_CHOOSER_PAGE, anchor: 'salvage-pathways' },
+    ],
+    updated: UPDATED,
+  },
+  {
+    id: 'proact-counseling',
+    kind: 'counseling',
+    title: 'ProACT adjustable balloon counseling',
+    summary:
+      'Plain-language counseling template for ProACT adjustable periurethral balloons: candidacy, expected results, adjustments, durability, risks and alternatives.',
+    pages: [PROACT_PAGE, HUB_PAGE],
+    body: `Adjustable continence balloons (ProACT) counseling
+
+What it is
+Two small silicone balloons are placed on each side of the urethra near the bladder neck through small incisions in the perineum, under general or spinal anesthesia with x-ray guidance. Each balloon is connected by tubing to a small port under the skin of the scrotum. In the office, fluid is added to the balloons through the ports, a little at a time, until leakage improves without blocking urination. The balloons can be emptied and removed.
+
+Who it suits
+Men without prior pelvic radiation who have leaked for at least 12 months after radical prostatectomy or TURP despite pelvic floor training, and who accept an implanted device with adjustment visits and a real chance of revision.
+
+Expected result
+In a pooled analysis of 19 studies (1,264 men), pad use fell from about 4.0 to 1.1 pads a day, 60% became dry and 82% were dry or improved. In a later pooled analysis, 53% used no more than one pad a day. In one series, 85% of men with mild leakage, 64% with moderate leakage and 33% with severe leakage became dry. Several adjustment visits are usually needed. Results are much poorer after radiation: success of about 35 to 46% with radiation versus 66 to 68% without, with more erosion of the urethra.
+
+Adjustments
+Fluid is not added for at least six weeks after placement. Adjustments are then made about every four weeks as needed, through a fine needle in the office.
+
+Placement risks
+In the study used for US approval, the bladder or urethra was punctured during placement in 19 of 123 men (15%), and urinary retention occurred in 19 of 123 (15%) through 2 years; a series using ultrasound guidance reported lower rates. If a puncture occurs, no balloon is placed on that side and a catheter is left for three days.
+
+Durability
+Problems are common. Overall complication rates of about 23 to 31% have been reported. About 24 to 27% of devices are removed over time, and about 23 to 34% of men need another operation. In one pooled comparison, 76% of devices were still working at 1 year, 61% at 2 years and 58% at 3 years. The usual reasons are balloon failure or deflation, movement of a balloon and erosion. In one series, about 29% of men eventually had an artificial urinary sphincter; balloons do not rule one out.
+
+Other risks
+Bleeding, infection, pain or discomfort at the ports, temporary difficulty urinating, and leakage that does not improve.
+
+Alternatives
+Pelvic floor muscle training, containment (pads, condom catheter or penile clamp), male sling and artificial urinary sphincter (preferred after radiation).
+
+Questions answered and decision: ***`,
+    sources: [
+      { figure: 'at least 12 months', page: PROACT_PAGE, anchor: 'ref14' },
+      { figure: '19 studies (1,264 men)', page: PROACT_PAGE, anchor: 'efficacy' },
+      { figure: 'about 4.0 to 1.1 pads a day', page: PROACT_PAGE, anchor: 'efficacy' },
+      { figure: '60% became dry', page: PROACT_PAGE, anchor: 'efficacy' },
+      { figure: '82% were dry or improved', page: PROACT_PAGE, anchor: 'efficacy' },
+      { figure: '53% used no more than one pad a day', page: PROACT_PAGE, anchor: 'efficacy' },
+      { figure: '85% of men with mild leakage, 64% with moderate leakage and 33% with severe leakage', page: PROACT_PAGE, anchor: 'efficacy-by-severity' },
+      { figure: 'about 35 to 46% with radiation versus 66 to 68% without', page: PROACT_PAGE, anchor: 'negative-predictive-factors' },
+      { figure: 'at least six weeks', page: PROACT_PAGE, anchor: 'positioning-and-room-setup' },
+      { figure: 'about every four weeks', page: PROACT_PAGE, anchor: 'positioning-and-room-setup' },
+      { figure: '19 of 123 men (15%)', page: PROACT_PAGE, anchor: 'positioning-and-room-setup' },
+      { figure: '19 of 123 (15%) through 2 years', page: PROACT_PAGE, anchor: 'positioning-and-room-setup' },
+      { figure: 'three days', page: PROACT_PAGE, anchor: 'positioning-and-room-setup' },
+      { figure: 'about 23 to 31%', page: PROACT_PAGE, anchor: 'complications-and-durability' },
+      { figure: 'About 24 to 27% of devices are removed', page: PROACT_PAGE, anchor: 'complications-and-durability' },
+      { figure: 'about 23 to 34% of men need another operation', page: PROACT_PAGE, anchor: 'complications-and-durability' },
+      { figure: '76% of devices were still working at 1 year, 61% at 2 years and 58% at 3 years', page: PROACT_PAGE, anchor: 'complications-and-durability' },
+      { figure: 'about 29% of men eventually had an artificial urinary sphincter', page: PROACT_PAGE, anchor: 'current-positioning' },
+    ],
+    updated: UPDATED,
+  },
+  {
+    id: 'pul-counseling',
+    kind: 'counseling',
+    title: 'Permanent urethral ligation counseling',
+    summary:
+      'Plain-language counseling template for perineal permanent urethral ligation with lifelong suprapubic drainage.',
+    pages: [PUL_PAGE, HUB_PAGE],
+    body: `Permanent urethral ligation (PUL) counseling
+
+What it is
+Permanent urethral ligation is an operation through an incision in the perineum that divides the urethra and closes it permanently below the bladder. Urine then drains for life through a suprapubic tube, a catheter that passes through the lower abdomen into the bladder. The operation cannot be reversed. It avoids an abdominal operation using bowel and avoids a stoma bag.
+
+Who it suits
+Men with severe stress leakage and a urethra too damaged for another sphincter, most often after repeated erosion of an artificial urinary sphincter, who accept a permanent suprapubic tube and wish to avoid larger abdominal surgery. It is not suitable for men who cannot manage a suprapubic tube, or whose bladder is painful, very overactive or under high pressure.
+
+Expected result
+In the largest series of 20 men, 90% stopped leaking through the urethra: 75% after the first operation and a further 15% after a repeat ligation. In another series, 6 of 7 men were continent at last follow-up. The bladder still makes urine and can spasm, and leakage through the urethra can return if the closure reopens.
+
+Recovery
+The suprapubic tube drains continuously for at least 3 months while the closure heals. Medicine for bladder spasms is taken on a schedule, and some men need botulinum toxin injections into the bladder. After healing, some men cap the tube during the day and drain it at intervals, with continuous drainage overnight. Suprapubic tube care and change schedule for this patient: ***
+
+Risks
+Complications within 90 days occurred in 55% of men in the largest series, and in 7 of 10 men in the first report. Bladder spasms affected 43% of men in a series of 7. Other risks are reopening of the closure (often treated with a repeat ligation), urinary infection and catheter blockage, wound infection or abscess, a fistula from the urethra to the skin (a particular concern after radiation), and bladder stones. Some men later have the bladder removed (cystectomy) because of pain, spasms or tube problems; this occurred in 20% of men in the largest series.
+
+Alternatives
+Further sphincter surgery if the urethra can still be reconstructed, closure of the bladder neck with a catheterizable channel, removal of the bladder with urinary diversion, and containment with pads.
+
+Questions answered and decision: ***`,
+    sources: [
+      { figure: '20 men', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: '90% stopped leaking through the urethra', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: '75% after the first operation', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: 'a further 15% after a repeat ligation', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: '6 of 7 men', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: 'at least 3 months', page: PUL_PAGE, anchor: 'postoperative-management' },
+      { figure: 'within 90 days occurred in 55% of men', page: PUL_PAGE, anchor: 'outcomes' },
+      { figure: '7 of 10 men', page: PUL_PAGE, anchor: 'complications' },
+      { figure: '43% of men in a series of 7', page: PUL_PAGE, anchor: 'complications' },
+      { figure: '20% of men in the largest series', page: PUL_PAGE, anchor: 'outcomes' },
+    ],
+    updated: UPDATED,
+  },
+];

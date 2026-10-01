@@ -1,0 +1,48 @@
+/**
+ * Clinical Toolkit registry types.
+ *
+ * The toolkit holds generic, EHR-agnostic note templates and counseling
+ * scripts that clinicians copy into their own records. Design rules
+ * (reports/clinical-toolkit/ROADMAP.md):
+ * - Generic, never personal: personal defaults become [option / option]
+ *   choice lists or *** blanks.
+ * - No cloned documentation: findings, EBL, complications, specimens and
+ *   drains are always *** blanks, never prefilled normals.
+ * - No CPT or billing codes.
+ * - Counseling figures come from WARWIKI pages: every figure in a
+ *   counseling template is listed in `sources` with the page and anchor it
+ *   comes from, so a lint check can flag a figure whose source is gone.
+ * - Tagging lives here: `pages` lists the docs source paths the item belongs
+ *   to, so pages need no edits to show their toolkit card.
+ */
+
+export type ToolkitKind = 'op-note' | 'counseling' | 'handout';
+
+export interface ToolkitSource {
+  /** The figure or claim exactly as it appears in the template, e.g. "about 57%". */
+  figure: string;
+  /** Docs source path of the WARWIKI page that supports it, e.g. "docs/04-.../artificial-urinary-sphincter.mdx". */
+  page: string;
+  /** Heading or reference anchor on that page, e.g. "outcomes" or "ref20". */
+  anchor?: string;
+}
+
+export interface ToolkitItem {
+  /** Stable id, kebab-case, e.g. "aus-placement-op-note". */
+  id: string;
+  kind: ToolkitKind;
+  /** Short title shown on the card, e.g. "Artificial urinary sphincter placement". */
+  title: string;
+  /** One sentence describing what the template covers. */
+  summary: string;
+  /** Docs source paths (relative to the repo root) of the pages that show this item. */
+  pages: string[];
+  /** Template text for op notes and counseling (plain text; *** blanks; [a / b] choices). */
+  body?: string;
+  /** For kind "handout": the slug in src/data/handouts.ts. */
+  handoutSlug?: string;
+  /** Counseling figures and where they come from. Required when body contains figures. */
+  sources?: ToolkitSource[];
+  /** ISO date the item was last checked against its pages. */
+  updated: string;
+}
