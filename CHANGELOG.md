@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-09-30 — Textbook-mining deferred questions resolved
+
+- **Manual modeling** ([manual-modeling.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/manual-modeling.mdx)): hand-position guidance now combines Lucas 2020 (glanular pressure; co-authored by Wilson) and the Haile, Bajic and Levine chapter (bend from the distal shaft, not the glans; avoid pressing down on the cylinder tips; pressure over the corporotomies). The mechanism is stated as a cylinder tip driven through the fossa navicularis; the unsupported explanation about urethral compression against the pubic symphysis is removed.
+- **Proximal dilator size** ([revision-scenarios.mdx](docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios.mdx)): the under-9 mm advice is added as labelled expert opinion without comparative data, not as a rule.
+- **Q-flap follow-up**: no change. The page already matches the Morey 2000 abstract (15 men, 10 excellent, 2 recurrent strictures); the books' differing follow-up figures cannot be verified (publisher full text not reachable).
+- Record in `reports/textbook-mining/consolidation/DEFERRED.md`. Lint and build pass.
+
+---
+
 ## 2026-09-30 — Textbook-mining incorporation complete: fold-ins and 18 new pages
 
 - **Fold-ins (batch f01), 12 existing pages:** findings first proposed as new pages, placed where they belong (Moschcowitz, uterosacral suspension, SCI, female SUI database, dysfunctional voiding, renal trauma). Pediatric-primary topics (bladder-exstrophy primary closure, urogenital sinus and cloacal reconstruction, pediatric urethral stricture, urethral duplication, megalourethra) appear only as short context for the clinician caring for the adolescent or adult, on the lifelong-care and urethral-stricture pages, per the user's decision. 20 findings; 16 adopted (most in part), 4 rejected.
