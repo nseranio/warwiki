@@ -132,7 +132,11 @@ export default function GenericDatabase({
                       return (
                         <td key={col.key} className="td-name-cell">
                           {row.slug ? (
-                            <a href={row.slug} className="td-name-link">{val}</a>
+                            /^https?:\/\//.test(row.slug) ? (
+                              <a href={row.slug} className="td-name-link" target="_blank" rel="noopener noreferrer">{val}</a>
+                            ) : (
+                              <a href={row.slug} className="td-name-link">{val}</a>
+                            )
                           ) : (
                             <span className="td-name-text">{val}</span>
                           )}

@@ -3,306 +3,686 @@ title: Textbooks
 sidebar_position: 4
 ---
 
+import GenericDatabase from '@site/src/components/GenericDatabase';
+
+export const textbooks = [
+  {
+    "title": "Advanced Male Urethral and Genital Reconstructive Surgery",
+    "authors": "Steven B. Brandes, Allen F. Morey",
+    "edition": "2nd ed · 2014",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Advanced+Male+Urethral+and+Genital+Reconstructive+Surgery%22+Brandes+Morey"
+  },
+  {
+    "title": "Textbook of Reconstructive Urologic Surgery",
+    "authors": "Drogo K. Montague, Inderbir S. Gill, Kenneth Angermeier, Jonathan H. Ross",
+    "edition": "2008",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Textbook+of+Reconstructive+Urologic+Surgery%22+Montague+Angermeier"
+  },
+  {
+    "title": "Atlas of Male Genitourethral Surgery: The Illustrated Guide",
+    "authors": "Asif Muneer, Manit Arya, Gerald H. Jordan",
+    "edition": "2014",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Male+Genitourethral+Surgery%22+Muneer+Arya+Jordan"
+  },
+  {
+    "title": "Urethral Reconstructive Surgery",
+    "authors": "Frank Schreiter, Gerald H. Jordan",
+    "edition": "2006",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Urethral+Reconstructive+Surgery%22+Schreiter+Jordan"
+  },
+  {
+    "title": "Surgical Atlas of Urethroplasty",
+    "authors": "Pankaj M. Joshi, Mélanie Aubé-Peterkin, Sanjay B. Kulkarni, Govind Datar",
+    "edition": "2024",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Surgical+Atlas+of+Urethroplasty%22+Joshi+Kulkarni"
+  },
+  {
+    "title": "Urinary Diversion",
+    "authors": "Siamak Daneshmand",
+    "edition": "2017",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Urinary+Diversion%22+Daneshmand+springer"
+  },
+  {
+    "title": "Urinary Fistula",
+    "authors": "René Sotelo, Charles F. Polotti, Juan Arriaga",
+    "edition": "2022",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Urinary+Fistula%22+Sotelo+Polotti+Arriaga"
+  },
+  {
+    "title": "The Ureter: A Comprehensive Review",
+    "authors": "Mahmoud Abdel-Gawad, Bedeir Ali-El-Dein, John Barry, Arnulf Stenzl",
+    "edition": "2023",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22The+Ureter%22+Abdel-Gawad+Stenzl"
+  },
+  {
+    "title": "Perineal Reconstruction: Principles and Practice",
+    "authors": "Damir Kosutic",
+    "edition": "2023",
+    "section": "Reconstruction",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Perineal+Reconstruction%22+Kosutic"
+  },
+  {
+    "title": "Urogenital Trauma: A Practical Guide",
+    "authors": "Said Abdallah Al-Mamari",
+    "edition": "2023",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Urogenital+Trauma%22+Al-Mamari+springer"
+  },
+  {
+    "title": "Prosthetic Surgery in Urology",
+    "authors": "Asif Muneer, Ian Pearce, David Ralph",
+    "edition": "2016",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Prosthetic+Surgery+in+Urology%22+Muneer+Pearce+Ralph"
+  },
+  {
+    "title": "Urologic Reconstructive Surgery (Urologic Clinics of North America 49:3)",
+    "authors": "Jill C. Buckley (consulting editor Kevin R. Loughlin)",
+    "edition": "2022",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Urologic+Reconstructive+Surgery%22+Buckley+Urologic+Clinics"
+  },
+  {
+    "title": "Techniques of Robotic Urinary Tract Reconstruction: A Complete Approach",
+    "authors": "Michael D. Stifelman, Lee C. Zhao, Daniel D. Eun, Chester J. Koh",
+    "edition": "2022",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Techniques+of+Robotic+Urinary+Tract+Reconstruction%22+Stifelman+Zhao+Eun+Koh"
+  },
+  {
+    "title": "Operative Atlas of Laparoscopic and Robotic Reconstructive Urology",
+    "authors": "Vipul R. Patel, Manickam Ramalingam",
+    "edition": "2nd ed · 2017",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Operative+Atlas+of+Laparoscopic+and+Robotic+Reconstructive+Urology%22+Patel+Ramalingam"
+  },
+  {
+    "title": "Glenn's Urologic Surgery",
+    "authors": "Sam D. Graham Jr., Thomas E. Keane",
+    "edition": "8th ed",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Glenn%27s+Urologic+Surgery%22+Graham+Keane"
+  },
+  {
+    "title": "Operative Urology at the Cleveland Clinic",
+    "authors": "Andrew C. Novick, J. Stephen Jones (section editors Inderbir S. Gill, Eric A. Klein, Raymond Rackley, Jonathan H. Ross)",
+    "edition": "2006",
+    "section": "Reconstruction",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Operative+Urology+at+the+Cleveland+Clinic%22+Novick+Cleveland+Clinic"
+  },
+  {
+    "title": "Surgical Management of Pelvic Organ Prolapse",
+    "authors": "Mickey M. Karram, Christopher F. Maher",
+    "edition": "2013",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Surgical+Management+of+Pelvic+Organ+Prolapse%22+Karram+Maher"
+  },
+  {
+    "title": "Walters & Karram Urogynecology and Reconstructive Pelvic Surgery",
+    "authors": "Matthew D. Barber, Catherine S. Bradley, Mickey M. Karram, Mark D. Walters",
+    "edition": "5th ed · 2022",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Walters+%26+Karram+Urogynecology+and+Reconstructive+Pelvic+Surgery%22+Barber+Walters+Karram"
+  },
+  {
+    "title": "Textbook of Female Urology and Urogynecology (Vol 1: Clinical; Vol 2: Surgical)",
+    "authors": "Linda Cardozo, David Staskin",
+    "edition": "5th ed · 2023",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Textbook+of+Female+Urology+and+Urogynecology%22+Cardozo+Staskin"
+  },
+  {
+    "title": "Female Genitourinary and Pelvic Floor Reconstruction",
+    "authors": "Francisco E. Martins, Henriette Veiby Holm, Jaspreet S. Sandhu, Kurt A. McCammon",
+    "edition": "2023",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Female+Genitourinary+and+Pelvic+Floor+Reconstruction%22+Martins+Holm+Sandhu+McCammon"
+  },
+  {
+    "title": "Female Bladder Outlet Obstruction and Urethral Reconstruction",
+    "authors": "Nikhil Khattar, Rishi Nayyar, Arabind Panda",
+    "edition": "2021",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Female+Bladder+Outlet+Obstruction+and+Urethral+Reconstruction%22+Khattar+Nayyar+Panda"
+  },
+  {
+    "title": "Major Complications of Female Pelvic Surgery: A Multidisciplinary Approach",
+    "authors": "Mitchel Hoffman, Tracy L. Hull, Bernard H. Bochner",
+    "edition": "2025",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Major+Complications+of+Female+Pelvic+Surgery%22+Hoffman+Hull+Bochner"
+  },
+  {
+    "title": "Complications of Female Incontinence and Pelvic Reconstructive Surgery",
+    "authors": "Howard B. Goldman",
+    "edition": "2nd ed · 2017",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Complications+of+Female+Incontinence+and+Pelvic+Reconstructive+Surgery%22+Goldman+springer"
+  },
+  {
+    "title": "Female Urinary Incontinence",
+    "authors": "Anne P. Cameron",
+    "edition": "2022",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Female+Urinary+Incontinence%22+Cameron+springer"
+  },
+  {
+    "title": "Native Tissue Repair for Incontinence and Prolapse",
+    "authors": "Philippe E. Zimmern, Elise J.B. De",
+    "edition": "2017",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Native+Tissue+Repair+for+Incontinence+and+Prolapse%22+Zimmern+De"
+  },
+  {
+    "title": "Female Pelvic Medicine and Reconstructive Surgery: Clinical Practice and Surgical Atlas",
+    "authors": "Rebecca G. Rogers (associate editors Vivian W. Sung, Cheryl B. Iglesia, Ranee Thakar)",
+    "edition": "2013",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Female+Pelvic+Medicine+and+Reconstructive+Surgery%22+Rogers+McGraw-Hill"
+  },
+  {
+    "title": "Urogynecology: Evidence-Based Clinical Practice",
+    "authors": "Kate H. Moore",
+    "edition": "3rd ed · 2022",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Urogynecology%22+Kate+Moore+springer"
+  },
+  {
+    "title": "Laparoscopic Urogynaecology: Principles and Practice",
+    "authors": "Christian H. Phillips, Stephen T. Jeffery, Barry O'Reilly, Marie Fidela R. Paraiso, Bruno Deval",
+    "edition": "2022",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Laparoscopic+Urogynaecology%22+Phillips+Cambridge"
+  },
+  {
+    "title": "The Use of Robotic Technology in Female Pelvic Floor Reconstruction",
+    "authors": "Jennifer T. Anger, Karyn S. Eilber",
+    "edition": "2018",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22The+Use+of+Robotic+Technology+in+Female+Pelvic+Floor+Reconstruction%22+Anger+Eilber"
+  },
+  {
+    "title": "Operative Techniques in Gynecologic Surgery: Urogynecology",
+    "authors": "Christopher Tarnay (series editor Jonathan S. Berek)",
+    "edition": "2019",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Operative+Techniques+in+Gynecologic+Surgery%22+Tarnay+Berek"
+  },
+  {
+    "title": "Te Linde's Operative Gynecology",
+    "authors": "Victoria L. Handa, Linda Van Le",
+    "edition": "12th ed · 2020",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Te+Linde%27s+Operative+Gynecology%22+Handa+Van+Le"
+  },
+  {
+    "title": "Atlas of Vaginal Reconstructive Surgery",
+    "authors": "Shlomo Raz",
+    "edition": "2015",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Vaginal+Reconstructive+Surgery%22+Raz+springer"
+  },
+  {
+    "title": "Atlas of Pelvic Anatomy and Gynecologic Surgery",
+    "authors": "Michael S. Baggish, Mickey M. Karram",
+    "edition": "5th ed · 2021",
+    "section": "Urogynecology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Pelvic+Anatomy+and+Gynecologic+Surgery%22+Baggish+Karram"
+  },
+  {
+    "title": "Female Pelvic Surgery Video Atlas Series",
+    "authors": "Mickey M. Karram (series editor)",
+    "edition": "",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Female+Pelvic+Surgery+Video+Atlas+Series%22+Karram"
+  },
+  {
+    "title": "Ambulatory Urology and Urogynaecology",
+    "authors": "Abhay Rane, Ajay Rane",
+    "edition": "2021",
+    "section": "Urogynecology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Ambulatory+Urology+and+Urogynaecology%22+Rane+Wiley"
+  },
+  {
+    "title": "Neuro-Urology",
+    "authors": "Roger Dmochowski, John Heesakkers",
+    "edition": "2018",
+    "section": "Functional and urodynamics",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Neuro-Urology%22+Dmochowski+Heesakkers"
+  },
+  {
+    "title": "Abrams' Urodynamics",
+    "authors": "Marcus Drake, Hashim Hashim, Andrew Gammie",
+    "edition": "4th ed · 2021",
+    "section": "Functional and urodynamics",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Abrams%27+Urodynamics%22+Drake+Hashim+Gammie"
+  },
+  {
+    "title": "Practical Urodynamics for the Clinician",
+    "authors": "Andrew C. Peterson, Matthew O. Fraser",
+    "edition": "2016",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Practical+Urodynamics+for+the+Clinician%22+Peterson+Fraser"
+  },
+  {
+    "title": "Interpretation of Basic and Advanced Urodynamics",
+    "authors": "Farzeen Firoozi",
+    "edition": "2017",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Interpretation+of+Basic+and+Advanced+Urodynamics%22+Firoozi"
+  },
+  {
+    "title": "Rapid and Practical Interpretation of Urodynamics",
+    "authors": "Eric S. Rovner, Michelle E. Koski",
+    "edition": "2015",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Rapid+and+Practical+Interpretation+of+Urodynamics%22+Rovner+Koski"
+  },
+  {
+    "title": "Atlas of Urodynamics",
+    "authors": "Jerry G. Blaivas, Michael B. Chancellor, Jeffrey P. Weiss, Michael Verhaaren",
+    "edition": "2nd ed · 2007",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Urodynamics%22+Blaivas+Chancellor"
+  },
+  {
+    "title": "Urodynamics: A Quick Pocket Guide",
+    "authors": "Giancarlo Vignoli",
+    "edition": "2016",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Urodynamics%22+Vignoli"
+  },
+  {
+    "title": "Practical Urodynamics",
+    "authors": "Victor W. Nitti",
+    "edition": "1998",
+    "section": "Functional and urodynamics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Practical+Urodynamics%22+Nitti"
+  },
+  {
+    "title": "Penile Implant Surgery: Contemporary Challenges and Controversies",
+    "authors": "Eduardo P. Miranda, John P. Mulhall",
+    "edition": "2022",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Penile+Implant+Surgery%22+Miranda+Mulhall"
+  },
+  {
+    "title": "Wilson's Pearls, Perils and Pitfalls of Penile Prosthesis Surgery",
+    "authors": "Tobias S. Köhler, Nikhil K. Gupta, Steven K. Wilson",
+    "edition": "2nd ed · 2018",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Wilson%27s+Pearls%2C+Perils+and+Pitfalls+of+Penile+Prosthesis+Surgery%22+Kohler+Gupta+Wilson"
+  },
+  {
+    "title": "Atlas of Office Based Andrology Procedures",
+    "authors": "John P. Mulhall, Lawrence C. Jenkins",
+    "edition": "2017",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Office+Based+Andrology+Procedures%22+Mulhall+Jenkins"
+  },
+  {
+    "title": "Practical Clinical Andrology",
+    "authors": "Carlo Bettocchi, Gian Maria Busetto, Giuseppe Carrieri, Luigi Cormio",
+    "edition": "2023 · open access",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Practical+Clinical+Andrology%22+Bettocchi+Busetto"
+  },
+  {
+    "title": "Male Sexual Dysfunction: Pathophysiology and Treatment",
+    "authors": "Fouad R. Kandeel",
+    "edition": "",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Male+Sexual+Dysfunction%22+Kandeel"
+  },
+  {
+    "title": "Erectile Dysfunction: A Clinical Guide",
+    "authors": "Culley Carson, Roger Kirby, Irwin Goldstein",
+    "edition": "2nd ed",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Erectile+Dysfunction%22+Carson+Kirby+Goldstein"
+  },
+  {
+    "title": "Peyronie's Disease: A Guide to Clinical Management",
+    "authors": "Laurence A. Levine",
+    "edition": "",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Peyronie%27s+Disease%22+Levine+springer"
+  },
+  {
+    "title": "Testosterone: From Basic to Clinical Aspects",
+    "authors": "Alexandre Hohl",
+    "edition": "2nd ed · 2023",
+    "section": "Sexual medicine and prosthetics",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Testosterone%22+Hohl+springer"
+  },
+  {
+    "title": "Genital Gender Affirming Surgery: An Illustrated Guide and Video Atlas",
+    "authors": "Maurice Garcia",
+    "edition": "2024",
+    "section": "Gender-affirming surgery",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Genital+Gender+Affirming+Surgery%22+Garcia+springer"
+  },
+  {
+    "title": "Urological Care for the Transgender Patient: A Comprehensive Guide",
+    "authors": "Dmitriy Nikolavsky, Stephen A. Blakely",
+    "edition": "2021",
+    "section": "Gender-affirming surgery",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Urological+Care+for+the+Transgender+Patient%22+Nikolavsky+Blakely"
+  },
+  {
+    "title": "Principles of Transgender Medicine and Surgery",
+    "authors": "Randi Ettner, Stan Monstrey, Eli Coleman",
+    "edition": "2nd ed · 2016",
+    "section": "Gender-affirming surgery",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Principles+of+Transgender+Medicine+and+Surgery%22+Ettner+Monstrey+Coleman"
+  },
+  {
+    "title": "Transgender Medicine: A Multidisciplinary Approach",
+    "authors": "Leonid Poretsky, Wylie C. Hembree",
+    "edition": "",
+    "section": "Gender-affirming surgery",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Transgender+Medicine%22+Poretsky+Hembree"
+  },
+  {
+    "title": "Campbell-Walsh-Wein Urology",
+    "authors": "Roger R. Dmochowski, Louis R. Kavoussi, Craig A. Peters",
+    "edition": "13th ed · 2025",
+    "section": "General urology",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Campbell-Walsh-Wein+Urology%22+13th+edition"
+  },
+  {
+    "title": "Campbell-Walsh-Wein Handbook of Urology",
+    "authors": "Alan W. Partin, Louis R. Kavoussi, Craig A. Peters, Roger R. Dmochowski",
+    "edition": "2022",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Campbell-Walsh-Wein+Handbook+of+Urology%22+Handbook"
+  },
+  {
+    "title": "Smith & Tanagho's General Urology",
+    "authors": "Jack W. McAninch, Tom F. Lue",
+    "edition": "19th ed",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Smith+%26+Tanagho%27s+General+Urology%22+McAninch+Lue"
+  },
+  {
+    "title": "Penn Clinical Manual of Urology",
+    "authors": "Thomas J. Guzzo, Robert C. Kovell, Alan J. Wein, Justin B. Ziemba",
+    "edition": "3rd ed · 2024",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Penn+Clinical+Manual+of+Urology%22+Guzzo+Wein"
+  },
+  {
+    "title": "Taneja's Complications of Urologic Surgery: Diagnosis, Prevention, and Management",
+    "authors": "Samir S. Taneja, Ojas Shah",
+    "edition": "5th ed · 2018",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Taneja%27s+Complications+of+Urologic+Surgery%22+Taneja+Shah"
+  },
+  {
+    "title": "The 5-Minute Urology Consult",
+    "authors": "Leonard G. Gomella",
+    "edition": "3rd ed · 2015",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22The+5-Minute+Urology+Consult%22+Gomella"
+  },
+  {
+    "title": "Guide to Antibiotics in Urology",
+    "authors": "Truls E. Bjerklund Johansen, Tommaso Cai",
+    "edition": "2nd ed · 2024",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Guide+to+Antibiotics+in+Urology%22+Bjerklund+Johansen+Cai"
+  },
+  {
+    "title": "Oxford Handbook of Urology",
+    "authors": "John Reynard, Simon Brewster, Suzanne Biers",
+    "edition": "4th ed",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Oxford+Handbook+of+Urology%22+Reynard+Brewster+Biers"
+  },
+  {
+    "title": "Emergencies in Urology",
+    "authors": "Markus Hohenfellner, Richard A. Santucci",
+    "edition": "2007",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Emergencies+in+Urology%22+Hohenfellner+Santucci"
+  },
+  {
+    "title": "Pocket Guide to Urology",
+    "authors": "Jeff A. Wieder",
+    "edition": "6th ed · 2021",
+    "section": "General urology",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Pocket+Guide+to+Urology%22+Wieder"
+  },
+  {
+    "title": "Hinman's Atlas of Urologic Surgery",
+    "authors": "Joseph A. Smith Jr., Roger R. Dmochowski, John C. Thomas, Glenn M. Preminger",
+    "edition": "5th ed · 2025",
+    "section": "Atlases and anatomy",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Hinman%27s+Atlas+of+Urologic+Surgery%22+5th+edition"
+  },
+  {
+    "title": "Hinman's Atlas of UroSurgical Anatomy",
+    "authors": "Gregory T. MacLennan",
+    "edition": "2nd ed · 2012",
+    "section": "Atlases and anatomy",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Hinman%27s+Atlas+of+UroSurgical+Anatomy%22+MacLennan"
+  },
+  {
+    "title": "Operative Dictations in Urologic Surgery",
+    "authors": "Noel A. Armenakas, John A. Fracchia, Ron Golan",
+    "edition": "2nd ed · 2019",
+    "section": "Atlases and anatomy",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Operative+Dictations+in+Urologic+Surgery%22+Armenakas+Fracchia+Golan"
+  },
+  {
+    "title": "Atlas of Male Genital Dermatology",
+    "authors": "Anthony Hall",
+    "edition": "2019",
+    "section": "Atlases and anatomy",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Male+Genital+Dermatology%22+Anthony+Hall+springer"
+  },
+  {
+    "title": "Practical Urological Ultrasound",
+    "authors": "Pat F. Fulgham, Bruce R. Gilbert",
+    "edition": "2nd ed · 2017",
+    "section": "Imaging",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Practical+Urological+Ultrasound%22+Fulgham+Gilbert"
+  },
+  {
+    "title": "Atlas of Ultrasonography in Urology, Andrology, and Nephrology",
+    "authors": "Pasquale Martino, Andrea B. Galosi",
+    "edition": "2017",
+    "section": "Imaging",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Atlas+of+Ultrasonography+in+Urology%2C+Andrology%2C+and+Nephrology%22+Martino+Galosi"
+  },
+  {
+    "title": "Textbook of Uroradiology",
+    "authors": "N. Reed Dunnick, Carl M. Sandler, Jeffrey H. Newhouse",
+    "edition": "5th ed · 2013",
+    "section": "Imaging",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Textbook+of+Uroradiology%22+Dunnick+Sandler+Newhouse"
+  },
+  {
+    "title": "Grabb and Smith's Plastic Surgery",
+    "authors": "Kevin C. Chung",
+    "edition": "8th ed · 2020",
+    "section": "Plastic and flap surgery",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Grabb+and+Smith%27s+Plastic+Surgery%22+Chung"
+  },
+  {
+    "title": "Flaps: Practical Reconstructive Surgery",
+    "authors": "Kayvan Shokrollahi, Iain S. Whitaker, Foad Nahai",
+    "edition": "2017",
+    "section": "Plastic and flap surgery",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Flaps%22+Shokrollahi+Whitaker+Nahai"
+  },
+  {
+    "title": "Handbook of Reconstructive Flaps",
+    "authors": "Matthew M. Hanasono, Charles E. Butler",
+    "edition": "2020",
+    "section": "Plastic and flap surgery",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Handbook+of+Reconstructive+Flaps%22+Hanasono+Butler"
+  },
+  {
+    "title": "Transition and Lifelong Care in Congenital Urology",
+    "authors": "Hadley M. Wood, Dan Wood",
+    "edition": "2015",
+    "section": "Pediatric and congenital",
+    "warwiki": "Mined",
+    "slug": "https://www.google.com/search?q=%22Transition+and+Lifelong+Care+in+Congenital+Urology%22+Wood+Wood+springer"
+  },
+  {
+    "title": "Hinman's Atlas of Pediatric Urologic Surgery",
+    "authors": "Frank Hinman Jr., Laurence S. Baskin",
+    "edition": "2nd ed",
+    "section": "Pediatric and congenital",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Hinman%27s+Atlas+of+Pediatric+Urologic+Surgery%22+Hinman+Baskin"
+  },
+  {
+    "title": "Pediatric Urology",
+    "authors": "John P. Gearhart, Richard C. Rink, Pierre D.E. Mouriquand",
+    "edition": "2nd ed",
+    "section": "Pediatric and congenital",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Pediatric+Urology%22+Gearhart+Rink+Mouriquand"
+  },
+  {
+    "title": "Kelalis–King–Belman Textbook of Clinical Pediatric Urology",
+    "authors": "Steven G. Docimo, Douglas Canning, Antoine Khoury, João Luiz Pippi Salle",
+    "edition": "6th ed",
+    "section": "Pediatric and congenital",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Kelalis%E2%80%93King%E2%80%93Belman+Textbook+of+Clinical+Pediatric+Urology%22+Docimo+Canning+Khoury"
+  },
+  {
+    "title": "Essentials of Pediatric Urology",
+    "authors": "David Thomas, Patrick Duffy, Anthony Rickwood",
+    "edition": "2nd ed",
+    "section": "Pediatric and congenital",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Essentials+of+Pediatric+Urology%22+Thomas+Duffy+Rickwood"
+  },
+  {
+    "title": "Hypospadiology: Principles and Practices",
+    "authors": "Amilal Bhat",
+    "edition": "2022",
+    "section": "Pediatric and congenital",
+    "warwiki": "",
+    "slug": "https://www.google.com/search?q=%22Hypospadiology%22+Amilal+Bhat"
+  }
+];
+
+export const sectionColors = {
+  "Reconstruction": "#7C3AED",
+  "Urogynecology": "#0D9373",
+  "Functional and urodynamics": "#0369A1",
+  "Sexual medicine and prosthetics": "#B45309",
+  "Gender-affirming surgery": "#DB2777",
+  "General urology": "#185FA5",
+  "Atlases and anatomy": "#047857",
+  "Imaging": "#374151",
+  "Plastic and flap surgery": "#6D28D9",
+  "Pediatric and congenital": "#DC2626"
+};
+
 # Textbooks
 
----
-
-## Genitourinary Reconstruction <span className="badge tag--surgical">Reconstruction</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Advanced+Male+Urethral+and+Genital+Reconstructive+Surgery%22+Morey+Brandes+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Advanced Male Urethral and Genital Reconstructive Surgery</div>
-  <div className="book-authors">Allen F. Morey &amp; Steven B. Brandes</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed · 2014</span></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Textbook+of+Reconstructive+Urologic+Surgery%22+Montague+Gill+Ross+Angermeier" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Textbook of Reconstructive Urologic Surgery</div>
-  <div className="book-authors">Edited by Drogo K. Montague, Inderbir Gill, Jonathan Ross, Kenneth Angermeier</div>
-  <div className="book-meta"><span className="badge tag--neutral">1st ed</span></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Atlas+of+Male+Genitourethral+Surgery%22+Muneer+Arya+Jordan" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Atlas of Male Genitourethral Surgery: The Illustrated Guide</div>
-  <div className="book-authors">Asif Muneer, Manit Arya, Gerald H. Jordan</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Reconstructive+Urethral+Surgery%22+Schreiter+Jordan+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Reconstructive Urethral Surgery</div>
-  <div className="book-authors">F. Schreiter, Gerald H. Jordan</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Surgical+Atlas+of+Urethroplasty%22+Joshi+Kulkarni" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Surgical Atlas of Urethroplasty</div>
-  <div className="book-authors">Pankaj M. Joshi, Mélanie Aubé-Peterkin, Sanjay B. Kulkarni, Govind Datar</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Urinary+Diversion%22+Daneshmand+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Urinary Diversion</div>
-  <div className="book-authors">Siamak Daneshmand</div>
-  <div className="book-meta"><span className="badge tag--neutral">2017</span></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Urinary+Fistula%22+Sotelo+Polotti+Arriaga+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Urinary Fistula</div>
-  <div className="book-authors">René Sotelo, Charles Polotti, Juan Arriaga</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Techniques+of+Robotic+Urinary+Tract+Reconstruction%22+Stifelman+Zhao+Eun+Koh+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Techniques of Robotic Urinary Tract Reconstruction</div>
-  <div className="book-authors">Michael D. Stifelman, Lee C. Zhao, Daniel D. Eun, Chester J. Koh</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Glenn%27s+Urologic+Surgery%22+Graham" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Glenn's Urologic Surgery</div>
-  <div className="book-authors">Sam D. Graham Jr., Thomas E. Keane</div>
-  <div className="book-meta"><span className="badge tag--neutral">8th ed</span></div>
-</a>
-
-<a className="book-card book-card--reconstruction" href="https://www.google.com/search?q=%22Operative+Urology+at+the+Cleveland+Clinic%22+Novick+Gill+Klein+Rackley+Ross+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Operative Urology at the Cleveland Clinic</div>
-  <div className="book-authors">Andrew C. Novick, Inderbir S. Gill, Eric A. Klein, Raymond Rackley, Jonathan H. Ross</div>
-  <div className="book-meta"></div>
-</a>
-
-</div>
-
----
-
-## Urogynecology &amp; Reconstructive Pelvic Surgery <span className="badge tag--clinical">URPS</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Surgical+Management+of+Pelvic+Organ+Prolapse%22+Karram+Maher" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Surgical Management of Pelvic Organ Prolapse</div>
-  <div className="book-authors">Mickey M. Karram, Christopher F. Maher</div>
-  <div className="book-meta"><span className="badge tag--neutral">2013</span></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Walters+%26+Karram+Urogynecology+and+Reconstructive+Pelvic+Surgery%22+Barber" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Walters &amp; Karram Urogynecology and Reconstructive Pelvic Surgery</div>
-  <div className="book-authors">Matthew D. Barber, Mark D. Walters, Mickey M. Karram, Catherine Bradley</div>
-  <div className="book-meta"><span className="badge tag--neutral">5th ed</span></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Textbook+of+Female+Urology+and+Urogynecology%22+Cardozo+Staskin" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Textbook of Female Urology and Urogynecology</div>
-  <div className="book-authors">Linda Cardozo, David Staskin</div>
-  <div className="book-meta"><span className="badge tag--neutral">5th ed</span></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Complications+of+Female+Incontinence+and+Pelvic+Reconstructive+Surgery%22+Goldman+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Complications of Female Incontinence and Pelvic Reconstructive Surgery</div>
-  <div className="book-authors">Howard Goldman</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Atlas+of+Pelvic+Anatomy+and+Gynecologic+Surgery%22+Baggish+Karram" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Atlas of Pelvic Anatomy and Gynecologic Surgery</div>
-  <div className="book-authors">Michael Baggish, Mickey Karram</div>
-  <div className="book-meta"><span className="badge tag--neutral">5th ed</span></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Atlas+of+Vaginal+Reconstructive+Surgery%22+Raz+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Atlas of Vaginal Reconstructive Surgery</div>
-  <div className="book-authors">Shlomo Raz</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--urps" href="https://www.google.com/search?q=%22Female+Pelvic+Surgery+Video+Atlas+Series%22+Karram" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Female Pelvic Surgery Video Atlas Series</div>
-  <div className="book-authors">Mickey M. Karram (series editor)</div>
-  <div className="book-meta"></div>
-</a>
-
-</div>
-
----
-
-## General Urology <span className="badge tag--foundations">General</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Campbell-Walsh-Wein+Urology%22+12th+OR+13th+edition" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Campbell-Walsh-Wein Urology</div>
-  <div className="book-authors">Roger R. Dmochowski, Louis R. Kavoussi, Craig A. Peters</div>
-  <div className="book-meta"><span className="badge tag--neutral">13th ed · 2025</span></div>
-</a>
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Smith+and+Tanagho%27s+General+Urology%22+McAninch+Lue" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Smith &amp; Tanagho's General Urology</div>
-  <div className="book-authors">Jack McAninch, Tom Lue</div>
-  <div className="book-meta"><span className="badge tag--neutral">19th ed</span></div>
-</a>
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Hinman%27s+Atlas+of+Urologic+Surgery%22" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Hinman's Atlas of Urologic Surgery</div>
-  <div className="book-authors">Joseph A. Smith Jr., Glenn M. Preminger, Roger R. Dmochowski, John C. Thomas</div>
-  <div className="book-meta"><span className="badge tag--neutral">5th ed</span></div>
-</a>
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Oxford+Handbook+of+Urology%22+Reynard+Brewster+Biers" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Oxford Handbook of Urology</div>
-  <div className="book-authors">John Reynard, Simon Brewster, Suzanne Biers</div>
-  <div className="book-meta"><span className="badge tag--neutral">4th ed</span></div>
-</a>
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Emergencies+in+Urology%22+Hohenfellner+Santucci+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Emergencies in Urology</div>
-  <div className="book-authors">Markus Hohenfellner, Richard Santucci</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--general" href="https://www.google.com/search?q=%22Pocket+Guide+to+Urology%22+Wieder" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Pocket Guide to Urology</div>
-  <div className="book-authors">Jeff A. Wieder</div>
-  <div className="book-meta"><span className="badge tag--neutral">6th ed · 2021</span></div>
-</a>
-
-</div>
-
----
-
-## Urodynamics <span className="badge tag--journal">Urodynamics</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--urodynamics" href="https://www.google.com/search?q=%22Urodynamics+A+Quick+Pocket+Guide%22+Vignoli+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Urodynamics: A Quick Pocket Guide</div>
-  <div className="book-authors">Giancarlo Vignoli</div>
-  <div className="book-meta"><span className="badge tag--neutral">2016</span></div>
-</a>
-
-<a className="book-card book-card--urodynamics" href="https://www.google.com/search?q=%22Urodynamics%22+Abrams+textbook" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Urodynamics</div>
-  <div className="book-authors">Peter Abrams</div>
-  <div className="book-meta"><span className="badge tag--neutral">3rd ed</span></div>
-</a>
-
-<a className="book-card book-card--urodynamics" href="https://www.google.com/search?q=%22Practical+Urodynamics%22+Nitti" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Practical Urodynamics</div>
-  <div className="book-authors">Victor W. Nitti</div>
-  <div className="book-meta"><span className="badge tag--neutral">1998</span></div>
-</a>
-
-</div>
-
----
-
-## Men's Health &amp; Andrology <span className="badge tag--populations">Andrology</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Penile+Implant+Surgery+Contemporary+Challenges+and+Controversies%22+Miranda+Mulhall" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Penile Implant Surgery: Contemporary Challenges and Controversies</div>
-  <div className="book-authors">E. P. Miranda, J. P. Mulhall</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Wilson%27s+Pearls%2C+Perils+and+Pitfalls+of+Penile+Prosthesis+Surgery%22" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Wilson's Pearls, Perils and Pitfalls of Penile Prosthesis Surgery</div>
-  <div className="book-authors">Tobias S. Köhler, Nikhil K. Gupta, Steven K. Wilson</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Male+Sexual+Dysfunction+Pathophysiology+and+Treatment%22+Kandeel" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Male Sexual Dysfunction: Pathophysiology and Treatment</div>
-  <div className="book-authors">Fouad R. Kandeel</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Erectile+Dysfunction+A+Clinical+Guide%22+Carson+Kirby+Goldstein" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Erectile Dysfunction: A Clinical Guide</div>
-  <div className="book-authors">Culley Carson, Roger Kirby, Irwin Goldstein</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Peyronie%27s+Disease+A+Guide+to+Clinical+Management%22+Levine+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Peyronie's Disease: A Guide to Clinical Management</div>
-  <div className="book-authors">Laurence Levine</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--prosthetics" href="https://www.google.com/search?q=%22Male+Infertility+A+Complete+Guide+to+Lifestyle+and+Environmental+Factors%22+du+Plessis+Agarwal" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Male Infertility: A Complete Guide to Lifestyle and Environmental Factors</div>
-  <div className="book-authors">Stefan S. du Plessis, Ashok Agarwal, Edmund S. Sabanegh Jr.</div>
-  <div className="book-meta"><span className="badge tag--neutral">2014</span></div>
-</a>
-
-</div>
-
----
-
-## Gender-Affirming Surgery <span className="badge tag--populations">Gender Affirming</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--gender" href="https://www.google.com/search?q=%22Genital+Gender+Affirming+Surgery%22+Garcia+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Genital Gender Affirming Surgery: An Illustrated Guide and Video Atlas</div>
-  <div className="book-authors">Maurice Garcia</div>
-  <div className="book-meta"><span className="badge tag--neutral">2024</span></div>
-</a>
-
-<a className="book-card book-card--gender" href="https://www.google.com/search?q=%22Urological+Care+for+the+Transgender+Patient%22+Nikolavsky+Blakely+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Urological Care for the Transgender Patient: A Comprehensive Guide</div>
-  <div className="book-authors">Dmitriy Nikolavsky, Sarah A. Blakely</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--gender" href="https://www.google.com/search?q=%22Principles+of+Transgender+Medicine+and+Surgery%22+Ettner+Monstrey+Coleman" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Principles of Transgender Medicine and Surgery</div>
-  <div className="book-authors">Randi Ettner, Stan Monstrey, Eli Coleman</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--gender" href="https://www.google.com/search?q=%22Transgender+Medicine+A+Multidisciplinary+Approach%22+Poretsky+Hembree+springer" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Transgender Medicine: A Multidisciplinary Approach</div>
-  <div className="book-authors">Leonid Poretsky, Wylie C. Hembree</div>
-  <div className="book-meta"></div>
-</a>
-
-</div>
-
----
-
-## Pediatric Urology <span className="badge" style={{backgroundColor: 'rgba(4,120,87,0.1)', color: '#047857'}}>Pediatric</span>
-
-<div className="book-grid">
-
-<a className="book-card book-card--pediatric" href="https://www.google.com/search?q=%22Hinman%27s+Atlas+of+Pediatric+Urologic+Surgery%22" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Hinman's Atlas of Pediatric Urologic Surgery</div>
-  <div className="book-authors">Frank Hinman Jr., Laurence S. Baskin</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--pediatric" href="https://www.google.com/search?q=%22Pediatric+Urology%22+Gearhart+Rink+Mouriquand" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Pediatric Urology</div>
-  <div className="book-authors">John Gearhart, Richard Rink, Patrick Mouriquand</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-<a className="book-card book-card--pediatric" href="https://www.google.com/search?q=%22Clinical+Pediatric+Urology%22+Docimo+Canning+Khoury" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Clinical Pediatric Urology</div>
-  <div className="book-authors">Panayotis Kelalis, Lowell King, Barry Belman (earlier editions)</div>
-  <div className="book-meta"></div>
-</a>
-
-<a className="book-card book-card--pediatric" href="https://www.google.com/search?q=%22Kelalis-King-Belman+Textbook+of+Clinical+Pediatric+Urology%22" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Kelalis–King–Belman Textbook of Clinical Pediatric Urology</div>
-  <div className="book-authors">Steven G. Docimo, Douglas Canning, Antoine Khoury, Joao Luiz Pippi Salle</div>
-  <div className="book-meta"><span className="badge tag--neutral">6th ed</span></div>
-</a>
-
-<a className="book-card book-card--pediatric" href="https://www.google.com/search?q=%22Essentials+of+Pediatric+Urology%22+Thomas+Duffy+Rickwood" target="_blank" rel="noopener noreferrer">
-  <div className="book-title">Essentials of Pediatric Urology</div>
-  <div className="book-authors">David Thomas, Patrick Duffy, Anthony Rickwood</div>
-  <div className="book-meta"><span className="badge tag--neutral">2nd ed</span></div>
-</a>
-
-</div>
+Reference texts for reconstructive urology, functional urology and urogynecology, with the surgical, imaging and plastic-surgery books that support them. Search by title, editor or topic, or filter by section. Books marked **Mined** were read chapter by chapter for WARWIKI; findings were checked against the primary papers before they reached a page. Titles link to a search for the book.
+
+<GenericDatabase
+  data={textbooks}
+  columns={[
+    { key: 'title', header: 'Title' },
+    { key: 'authors', header: 'Editors / authors' },
+    { key: 'edition', header: 'Edition' },
+    { key: 'section', header: 'Section', badge: true, badgeColors: sectionColors },
+    { key: 'warwiki', header: 'WARWIKI', badge: true, badgeColors: { Mined: '#185FA5' } },
+  ]}
+  filterKey="section"
+  filterLabel="Section"
+  entityLabel="books"
+/>
