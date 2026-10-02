@@ -3869,3 +3869,7 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
   .ph-row-detail { flex-direction: column; padding-left: 0.75rem; }
   .ph-row-thumb { flex-basis: auto; max-width: 320px; }
 }
+
+/* Surgeon profiles: bracket footnote markers so adjacent refs read [1][2], not 12 */
+.sp-sections sup a[data-footnote-ref]::before { content: '['; }
+.sp-sections sup a[data-footnote-ref]::after { content: ']'; }
