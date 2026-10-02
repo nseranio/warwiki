@@ -371,7 +371,7 @@ export const SURGEONS: Surgeon[] = [
   { id: 'elizabeth-miller', name: 'Elizabeth A. Miller',       mentorId: 'george-webster', traineeIds: [] },
   { id: 'khai-lee-toh', name: 'Khai Lee Toh',              mentorId: 'george-webster', traineeIds: [] },
   {
-    id: 'brian-flynn', name: 'Brian J. Flynn',
+    id: 'brian-flynn', path: 'a-g/brian-flynn', name: 'Brian J. Flynn',
     photo: 'https://som.cuanschutz.edu/FIMS/Content/faculty/3122/CU-Doctors-3122.jpg',
     country: 'United States',
     countryFlag: '🇺🇸',
