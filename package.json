@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "stats": "node scripts/gen-stats.js",
     "prestart": "node scripts/check-source-image-formats.js && node scripts/gen-stats.js",
-    "prebuild": "node scripts/check-source-image-formats.js && node scripts/gen-stats.js && node scripts/gen-surgeon-citations.js",
+    "prebuild": "node scripts/check-source-image-formats.js && node scripts/gen-stats.js && node scripts/gen-surgeon-citations.js && node scripts/genealogy/gen-profile-lineage.js",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "postbuild": "node scripts/optimize-build-assets.js && npm run check:rendered-links && npm run audit:size",

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { SURGEONS_BY_ID, DYNASTIES, getInitials } from '../data/surgeons';
-import { LINEAGE_BY_ID, childrenOf, type LineageNode } from '../data/lineage';
+import type { Surgeon } from '../data/surgeons';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
 const CITES_SHOWN = 12;
@@ -13,7 +12,38 @@ export interface SurgeonCitation {
   pages: { title: string; url: string; ref: string }[];
 }
 
-function PersonLink({ node, className }: { node: LineageNode; className?: string }) {
+/**
+ * Precomputed by scripts/genealogy/gen-profile-lineage.js
+ * (src/data/surgeon-profiles/<id>.json), so a profile page does not bundle
+ * the full lineage trees.
+ */
+export interface ProfileData {
+  surgeon: Partial<Surgeon> & { name: string };
+  position: string | null;
+  year: number | null;
+  mentor: ProfilePerson | null;
+  coMentor: ProfilePerson | null;
+  school: string | null;
+  trainees: (ProfilePerson & { id: string; year?: number; flag?: string })[];
+}
+
+interface ProfilePerson {
+  name: string;
+  path?: string;
+}
+
+function getInitials(name: string): string {
+  return name
+    .split(' ')
+    .filter(w => !w.match(/^(Jr\.|Sr\.|III|II|IV|MD|DO|FACS|FRCSC)$/i))
+    .map(w => w[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
+}
+
+function PersonLink({ node, className }: { node: ProfilePerson; className?: string }) {
   return node.path
     ? <a href={`${PAGE_BASE}${node.path}`} className={className}>{node.name}</a>
     : <span className={className}>{node.name}</span>;
@@ -78,26 +108,23 @@ function Citations({ name, citations }: { name: string; citations: SurgeonCitati
 
 export default function SurgeonProfile({
   id,
+  profile,
   citations = [],
   children,
 }: {
   id: string;
+  profile?: ProfileData;
   citations?: SurgeonCitation[];
   children?: React.ReactNode;
 }) {
   const [imgError, setImgError] = useState(false);
-  const surgeon = SURGEONS_BY_ID.get(id);
-  const node = LINEAGE_BY_ID.get(id);
 
-  if (!surgeon || !node) {
+  if (!profile) {
     return <p>Surgeon not found: <code>{id}</code></p>;
   }
 
-  const mentor = node.mentorId ? LINEAGE_BY_ID.get(node.mentorId) : undefined;
-  const coMentor = node.coMentorId ? LINEAGE_BY_ID.get(node.coMentorId) : undefined;
-  const trainees = childrenOf(id);
-  const institution = surgeon.institution ?? node.position;
-  const school = !mentor ? DYNASTIES.find(d => d.rootId === id) : undefined;
+  const { surgeon, mentor, coMentor, school, trainees } = profile;
+  const institution = surgeon.institution ?? profile.position;
   const hasLineage = Boolean(mentor || school || trainees.length);
 
   return (
@@ -167,7 +194,7 @@ export default function SurgeonProfile({
       <div className="sp-lineage">
         {mentor && (
           <div className="sp-lineage-item sp-lineage-item--mentor">
-            <div className="sp-lineage-label">Mentored by{node.year ? ` · fellowship ${node.year}` : ''}</div>
+            <div className="sp-lineage-label">Mentored by{profile.year ? ` · fellowship ${profile.year}` : ''}</div>
             <PersonLink node={mentor} className="sp-lineage-name" />
             {coMentor && (
               <div className="sp-lineage-co">with <PersonLink node={coMentor} /></div>
@@ -177,7 +204,7 @@ export default function SurgeonProfile({
         {school && (
           <div className="sp-lineage-item sp-lineage-item--root">
             <div className="sp-lineage-label">Role</div>
-            <div className="sp-lineage-name">Founder, {school.label}</div>
+            <div className="sp-lineage-name">Founder, {school}</div>
           </div>
         )}
         {trainees.length > 0 && (
@@ -186,7 +213,7 @@ export default function SurgeonProfile({
             <div className="sp-lineage-trainees">
               {trainees.map(t => t.path ? (
                 <a key={t.id} href={`${PAGE_BASE}${t.path}`} className="sp-trainee-chip">
-                  {t.surgeon?.countryFlag} {t.name}{t.year ? ` · ${t.year}` : ''}
+                  {t.flag} {t.name}{t.year ? ` · ${t.year}` : ''}
                 </a>
               ) : (
                 <span key={t.id} className="sp-trainee-chip sp-trainee-chip--plain">

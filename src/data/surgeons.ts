@@ -688,6 +688,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'cheryl-iglesia',
+    path: 'h-r/cheryl-iglesia',
     subspecialty: 'URPS', name: 'Cheryl B. Iglesia',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -706,6 +707,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'kathleen-kobashi',
+    path: 'h-r/kathleen-kobashi',
     subspecialty: 'URPS', name: 'Kathleen C. Kobashi',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -735,6 +737,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'eric-rovner',
+    path: 'h-r/eric-rovner',
     subspecialty: 'URPS', name: 'Eric S. Rovner',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -762,6 +765,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'sandip-vasavada',
+    path: 's-z/sandip-vasavada',
     subspecialty: 'URPS', name: 'Sandip P. Vasavada',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -770,6 +774,7 @@ export const SURGEONS: Surgeon[] = [
   },
   {
     id: 'mark-walters',
+    path: 's-z/mark-walters',
     subspecialty: 'URPS', name: 'Mark D. Walters',
     country: 'United States',
     countryFlag: '🇺🇸',
@@ -940,6 +945,40 @@ export const SURGEONS: Surgeon[] = [
   { id: 'travis-pagliara', name: 'Travis J. Pagliara' },
   { id: 'ty-higuchi', name: 'Ty T. Higuchi' },
   { id: 'uzoma-anele', name: 'Uzoma A. Anele' },
+  // ── URPS fellowship-tree surgeons with cited work and URPS school founders (profiles added October 2026) ──
+  { id: 'anna-rosamilia', subspecialty: 'URPS', path: 'h-r/anna-rosamilia', name: 'Anna Rosamilia' },
+  { id: 'benjamin-brucker', subspecialty: 'URPS', path: 'a-g/benjamin-brucker', name: 'Benjamin M. Brucker' },
+  { id: 'bilal-chughtai', subspecialty: 'URPS', path: 'a-g/bilal-chughtai', name: 'Bilal Chughtai' },
+  { id: 'casey-kowalik', subspecialty: 'URPS', path: 'h-r/casey-kowalik', name: 'Casey Kowalik' },
+  { id: 'chris-maher', subspecialty: 'URPS', path: 'h-r/chris-maher', name: 'Chris Maher' },
+  { id: 'david-rahn', subspecialty: 'URPS', path: 'h-r/david-rahn', name: 'David Rahn' },
+  { id: 'donald-ostergard', subspecialty: 'URPS', path: 'h-r/donald-ostergard', name: 'Donald Ostergard' },
+  { id: 'gamal-ghoniem', subspecialty: 'URPS', path: 'a-g/gamal-ghoniem', name: 'Gamal M. Ghoniem' },
+  { id: 'harold-drutz', subspecialty: 'URPS', path: 'a-g/harold-drutz', name: 'Harold Drutz' },
+  { id: 'jennifer-wu', subspecialty: 'URPS', path: 's-z/jennifer-wu', name: 'Jennifer M. Wu' },
+  { id: 'john-occhino', subspecialty: 'URPS', path: 'h-r/john-occhino', name: 'John Occhino' },
+  { id: 'john-stoffel', subspecialty: 'URPS', path: 's-z/john-stoffel', name: 'John T. Stoffel' },
+  { id: 'joshua-cohn', subspecialty: 'URPS', path: 'a-g/joshua-cohn', name: 'Joshua Cohn' },
+  { id: 'judith-goh', subspecialty: 'URPS', path: 'a-g/judith-goh', name: 'Judith Goh' },
+  { id: 'kaven-baessler', subspecialty: 'URPS', path: 'a-g/kaven-baessler', name: 'Kaven Baessler' },
+  { id: 'kavita-mishra', subspecialty: 'URPS', path: 'h-r/kavita-mishra', name: 'Kavita Mishra' },
+  { id: 'lewis-wall', subspecialty: 'URPS', path: 's-z/lewis-wall', name: 'Lewis Wall' },
+  { id: 'linda-cardozo', subspecialty: 'URPS', path: 'a-g/linda-cardozo', name: 'Linda Cardozo' },
+  { id: 'lysanne-campeau', subspecialty: 'URPS', path: 'a-g/lysanne-campeau', name: 'Lysanne Campeau' },
+  { id: 'margaret-mueller', subspecialty: 'URPS', path: 'h-r/margaret-mueller', name: 'Margaret Mueller' },
+  { id: 'marlene-corton', subspecialty: 'URPS', path: 'a-g/marlene-corton', name: 'Marlene Corton' },
+  { id: 'nazema-siddiqui', subspecialty: 'URPS', path: 's-z/nazema-siddiqui', name: 'Nazema Siddiqui' },
+  { id: 'nirit-rosenblum', subspecialty: 'URPS', path: 'h-r/nirit-rosenblum', name: 'Nirit Rosenblum' },
+  { id: 'peter-dwyer', subspecialty: 'URPS', path: 'a-g/peter-dwyer', name: 'Peter Dwyer' },
+  { id: 'peter-jeppson', subspecialty: 'URPS', path: 'h-r/peter-jeppson', name: 'Peter Jeppson' },
+  { id: 'ramy-goueli', subspecialty: 'URPS', path: 'a-g/ramy-goueli', name: 'Ramy Goueli' },
+  { id: 'roger-goldberg', subspecialty: 'URPS', path: 'a-g/roger-goldberg', name: 'Roger Goldberg' },
+  { id: 'rufus-cartwright', subspecialty: 'URPS', path: 'a-g/rufus-cartwright', name: 'Rufus Cartwright' },
+  { id: 'shawn-menefee', subspecialty: 'URPS', path: 'h-r/shawn-menefee', name: 'Shawn Menefee' },
+  { id: 'stuart-stanton', subspecialty: 'URPS', path: 's-z/stuart-stanton', name: 'Stuart Stanton' },
+  { id: 'thomas-benson', subspecialty: 'URPS', path: 'a-g/thomas-benson', name: 'J. Thomas Benson' },
+  { id: 'victoria-handa', subspecialty: 'URPS', path: 'h-r/victoria-handa', name: 'Victoria Handa' },
+  { id: 'vivian-sung', subspecialty: 'URPS', path: 's-z/vivian-sung', name: 'Vivian W. Sung' },
 ];
 
 // ── Lookup helpers ────────────────────────────────────────
@@ -965,11 +1004,17 @@ export const DYNASTIES: Dynasty[] = [
   { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
   { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
   { id: 'jordan',         label: 'Devine-Jordan School (EVMS)', rootId: 'charles-devine',     color: '#0284c7', subspecialty: 'GURS' },
-  // URPS dynasties — grow these as mentor/trainee links are confirmed
+  // URPS dynasties: the largest roots of the URPS fellowship tree (urps-lineage.generated.json).
+  // Urology-based: Raz, McGuire, Dmochowski, Kobashi. OB/GYN-based: Stanton, Ostergard, Drutz, Brubaker, Karram.
+  { id: 'stanton',        label: 'Stanton School',         rootId: 'stuart-stanton',          color: '#0D9373', subspecialty: 'URPS' },
+  { id: 'ostergard',      label: 'Ostergard School',       rootId: 'donald-ostergard',        color: '#185FA5', subspecialty: 'URPS' },
+  { id: 'drutz',          label: 'Drutz School',           rootId: 'harold-drutz',            color: '#b45309', subspecialty: 'URPS' },
   { id: 'raz',            label: 'Raz School',             rootId: 'shlomo-raz',              color: '#9333EA', subspecialty: 'URPS' },
-  { id: 'nitti',           label: 'Nitti School',            rootId: 'victor-nitti',             color: '#0EA5E9', subspecialty: 'URPS' },
-  { id: 'comiter',         label: 'Comiter School',          rootId: 'craig-comiter',            color: '#DC2626', subspecialty: 'URPS' },
-  { id: 'ginsberg',        label: 'Ginsberg School',         rootId: 'david-ginsberg',           color: '#059669', subspecialty: 'URPS' },
+  { id: 'brubaker',       label: 'Brubaker School',        rootId: 'linda-brubaker',          color: '#DC2626', subspecialty: 'URPS' },
+  { id: 'dmochowski',     label: 'Dmochowski School',      rootId: 'roger-dmochowski',        color: '#0284c7', subspecialty: 'URPS' },
+  { id: 'kobashi',        label: 'Kobashi School',         rootId: 'kathleen-kobashi',        color: '#059669', subspecialty: 'URPS' },
+  { id: 'karram',         label: 'Karram School',          rootId: 'mickey-karram',           color: '#7c3aed', subspecialty: 'URPS' },
+  { id: 'mcguire',        label: 'McGuire School',         rootId: 'edward-mcguire',          color: '#0EA5E9', subspecialty: 'URPS' },
 ];
 
 /** Subspecialty of a surgeon, defaulting to 'GURS' for legacy records that don't set it. */

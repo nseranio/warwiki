@@ -109,6 +109,15 @@ export default function SurgeonDirectory({ subspecialty }: { subspecialty?: Subs
                           </span>
                         </>
                       )}
+                      {!mentor && n.program && (
+                        <>
+                          {s?.country && <span className="sd-meta-sep">·</span>}
+                          <span className="sd-meta-mentor">
+                            Fellowship at {n.program}
+                            {n.year && ` (${n.year})`}
+                          </span>
+                        </>
+                      )}
                       {traineeCount > 0 && (
                         <>
                           <span className="sd-meta-sep">·</span>

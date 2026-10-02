@@ -1,17 +1,21 @@
 // ─────────────────────────────────────────────────────────
 //  WARWIKI — Unified surgical lineage
-//  Merges the curated profiles in surgeons.ts with the GURS fellowship
-//  lineage adapted from Lee Zhao's Reconstructive Urology Fellowship
-//  Family Tree (gurs-lineage.generated.json, built by
-//  scripts/genealogy/build-lineage.js).
+//  Merges the curated profiles in surgeons.ts with two fellowship lineages:
+//  GURS, adapted from Lee Zhao's Reconstructive Urology Fellowship Family
+//  Tree (gurs-lineage.generated.json, scripts/genealogy/build-lineage.js),
+//  and URPS, from WARWIKI's own research (urps-lineage.generated.json,
+//  scripts/genealogy/build-urps-lineage.js).
 //
 //  Precedence: a profile's own mentorId wins; then a profile that lists the
 //  person in traineeIds; then the fellowship-tree mentor. Every person has
-//  at most one parent, so nobody appears twice in a tree.
+//  at most one parent, so nobody appears twice in a tree. A fellowship-tree
+//  mentor from the other subspecialty is kept as crossMentorId rather than
+//  as the parent, so each subspecialty's schools stay within its own tab.
 // ─────────────────────────────────────────────────────────
 
 import { SURGEONS, DYNASTIES, getSubspecialty, type Surgeon, type Subspecialty, type Dynasty } from './surgeons';
 import lineageData from './gurs-lineage.generated.json';
+import urpsLineageData from './urps-lineage.generated.json';
 import corrections from './lineage-corrections.json';
 
 export interface LineageFellow {
@@ -21,6 +25,8 @@ export interface LineageFellow {
   year?: number;
   intl?: boolean;
   position?: string;
+  /** Fellowship program, when known (URPS). */
+  program?: string;
 }
 
 export interface LineageNode {
@@ -36,6 +42,10 @@ export interface LineageNode {
   year?: number;
   /** Latest confirmed position (fellowship tree). */
   position?: string;
+  /** Fellowship program (URPS tree), shown when no mentor is recorded. */
+  program?: string;
+  /** Fellowship mentor from the other subspecialty's tree (not used as the parent). */
+  crossMentorId?: string;
 }
 
 export const LINEAGE_SOURCE = {
@@ -44,7 +54,11 @@ export const LINEAGE_SOURCE = {
   retrieved: lineageData.retrieved,
 };
 
-const FELLOWS = lineageData.fellows as LineageFellow[];
+const DATASETS: { sub: Subspecialty; fellows: LineageFellow[] }[] = [
+  { sub: 'GURS', fellows: lineageData.fellows as LineageFellow[] },
+  { sub: 'URPS', fellows: urpsLineageData.fellows as LineageFellow[] },
+];
+const FELLOWS = DATASETS.flatMap(d => d.fellows);
 
 // ── Name matching ────────────────────────────────────────
 const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -97,24 +111,34 @@ function matchSurgeon(fellowName: string): Surgeon | undefined {
 
 // ── Build nodes ──────────────────────────────────────────
 const nodes = new Map<string, LineageNode>();
-const fellowIdByName = new Map<string, string>();
+// Fellow name -> node id, per subspecialty (the same name can be two people, one in each tree).
+const fellowIdByName: Record<Subspecialty, Map<string, string>> = { GURS: new Map(), URPS: new Map() };
 
 for (const s of SURGEONS) {
   nodes.set(s.id, { id: s.id, name: s.name, subspecialty: getSubspecialty(s), path: s.path, surgeon: s });
 }
 
-for (const f of FELLOWS) {
-  const s = matchSurgeon(f.name);
-  let node = s ? nodes.get(s.id)! : undefined;
-  if (!node) {
-    let id = slugify(f.name);
-    while (nodes.has(id)) id += '-gurs';
-    node = { id, name: f.name, subspecialty: 'GURS' };
-    nodes.set(id, node);
+for (const { sub, fellows } of DATASETS) {
+  for (const f of fellows) {
+    const s = matchSurgeon(f.name);
+    let node = s && (sub === 'GURS' || getSubspecialty(s) === sub || !fellowIdByName.GURS.has(f.name)) ? nodes.get(s.id)! : undefined;
+    if (!node) {
+      let id = slugify(f.name);
+      while (nodes.has(id)) id += `-${sub.toLowerCase()}`;
+      node = { id, name: f.name, subspecialty: sub };
+      nodes.set(id, node);
+    }
+    if (f.year && !node.year) node.year = f.year;
+    if (f.position && !node.position) node.position = f.position;
+    if (f.program && !node.program) node.program = f.program;
+    fellowIdByName[sub].set(f.name, node.id);
   }
-  if (f.year) node.year = f.year;
-  if (f.position) node.position = f.position;
-  fellowIdByName.set(f.name, node.id);
+}
+
+/** Resolve a fellowship-tree mentor name: same tree first, then any profile, then the other tree. */
+function resolveMentor(name: string, sub: Subspecialty): string | undefined {
+  const other: Subspecialty = sub === 'GURS' ? 'URPS' : 'GURS';
+  return fellowIdByName[sub].get(name) ?? matchSurgeon(name)?.id ?? fellowIdByName[other].get(name);
 }
 
 // Documented corrections to the fellowship-tree year and position.
@@ -132,12 +156,18 @@ for (const s of SURGEONS) for (const t of s.traineeIds ?? []) if (!listedBy.has(
 for (const node of nodes.values()) {
   node.mentorId = node.surgeon?.mentorId ?? listedBy.get(node.id);
 }
-for (const f of FELLOWS) {
-  const node = nodes.get(fellowIdByName.get(f.name)!)!;
-  if (!node.mentorId && f.mentor) node.mentorId = fellowIdByName.get(f.mentor);
-  if (f.coMentor) {
-    const co = fellowIdByName.get(f.coMentor);
-    if (co && co !== node.mentorId) node.coMentorId = co;
+for (const { sub, fellows } of DATASETS) {
+  for (const f of fellows) {
+    const node = nodes.get(fellowIdByName[sub].get(f.name)!)!;
+    if (!node.mentorId && f.mentor) {
+      const m = resolveMentor(f.mentor, sub);
+      if (m && nodes.get(m)!.subspecialty === node.subspecialty) node.mentorId = m;
+      else if (m && m !== node.id) node.crossMentorId = m;
+    }
+    if (f.coMentor) {
+      const co = resolveMentor(f.coMentor, sub);
+      if (co && co !== node.mentorId && co !== node.id && nodes.get(co)!.subspecialty === node.subspecialty) node.coMentorId = co;
+    }
   }
 }
 
