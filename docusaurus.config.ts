@@ -136,7 +136,6 @@ const config: Config = {
           label: 'Library',
           items: [
             {to: '/video-library', label: 'Video Library'},
-            {to: '/docs/journal-club', label: 'Journal Club'},
             {to: '/docs/resources', label: 'Resources'},
             {to: '/docs/roots', label: 'History'},
           ],
