@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Surgeons' signature work: profiles and site citations
+
+- **Research:** for each of the 236 profiled surgeons, Codex identified 2 to 4 best-known contributions (techniques, devices, trials, classifications, guidelines, landmark papers); 449 of 569 passed verification (DOI resolved in Crossref with the surgeon among the authors, or the attributing source page re-fetched with the quote). 185 were already cited on WARWIKI.
+- **Profiles:** the verified works are listed under Contributions on 214 profiles as neutral statements of what each paper reported, with Crossref-built citations and a link to the citing WARWIKI page. (A separate "Known for" heading was tried and dropped as too strong a claim.) Five founder profiles (McAninch, Devine, Jordan, Webster, Zinman) were rewritten from unsourced prose into source-checked cards and sections.
+- **Site gaps:** Codex triaged the 260 in-scope works the site did not cite (92 add, 70 covered by an equivalent source, 87 profile-only, 11 with no page yet; report in `reports/2026-10-02/signature-work-gaps.md`). Five agents added 85 citations to 59 pages, each checked against its PubMed abstract and written to state only what the abstract supports (e.g. Nygaard 2008 prevalence, CARE reduction urodynamics, LAS and mesh-configuration sacrocolpopexy trials, McGuire and Lytton sling, ABC trial, Fantl bladder training, Devine and Horton dermal graft, AUS cuff and approach reports, UREThRAL score, Abrams–Griffiths and Blaivas–Groutz nomograms). Skipped: VeSpAR (abstract unreadable) and one duplicate.
+
 ## 2026-10-02 — Deaths recorded on surgeon profiles
 
 - **28 profiles now note deaths:** 19 newly confirmed (Stanton 2024, Zinman 2021, Devine 1999, Hinman 2011, Skinner 2025, Stein 2008, Ingelman-Sundberg 2009, Kralj 2020, Petri 2019, Contreras Ortiz 2017, Riss 2026, Gibson 2012, Nilsson 2015, Marchant 2017, Aronson 2011, Boyarsky 2019, deProsse 2021, Hurt 2021, Hodgkinson 1999) plus the 9 whose cards already had dates (Turner-Warwick, Cardozo, McGuire, Benson, Robertson, Kohorn, Thiede, Shingleton, Sweeting). Each death came from an obituary or memorial page re-fetched with the death sentence found verbatim and text tying it to the same surgeon; same-name obituaries were rejected. Birth years only where a source states them.
