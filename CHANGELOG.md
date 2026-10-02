@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Deaths recorded on surgeon profiles
+
+- **28 profiles now note deaths:** 19 newly confirmed (Stanton 2024, Zinman 2021, Devine 1999, Hinman 2011, Skinner 2025, Stein 2008, Ingelman-Sundberg 2009, Kralj 2020, Petri 2019, Contreras Ortiz 2017, Riss 2026, Gibson 2012, Nilsson 2015, Marchant 2017, Aronson 2011, Boyarsky 2019, deProsse 2021, Hurt 2021, Hodgkinson 1999) plus the 9 whose cards already had dates (Turner-Warwick, Cardozo, McGuire, Benson, Robertson, Kohorn, Thiede, Shingleton, Sweeting). Each death came from an obituary or memorial page re-fetched with the death sentence found verbatim and text tying it to the same surgeon; same-name obituaries were rejected. Birth years only where a source states them.
+- **Display:** died (and born) in the profile header; a "Born and died" or "Died" line at the top of the training card, footnoted to the obituary; "Current position" relabeled "Last position".
+
 ## 2026-10-02 — Surgeon profiles: new criteria, 90 new profiles, countries for all
 
 - **Profile criteria (adopted October 2):** a surgeon whose principal work is in WARWIKI's scope gets a profile if any core criterion holds: WARWIKI citation score (GURS top 105; URPS score of at least 10), founder of a genealogy school, president of GURS, SUFU (or the Urodynamics Society), AUGS (or GUS) or IUGA, ICS chair or general secretary, a lifetime-achievement award from AUGS (Jack Robertson), IUGA, SUFU, GURS or ICS, or at least 10 fellows trained in the lineage data. Supporting lists alone (SGS, SIU, SMSNA presidencies; AUA Guiteras and Hugh Hampton Young awards; named lectureships) qualify only for in-scope reconstructive or prosthetic surgeons (Montague, Mulcahy, Hadley Wood). Non-surgeon scientists are excluded. Society rosters compiled by Codex from society pages are in `reports/surgical-genealogy/urps-work/criteria/` (off-git).
