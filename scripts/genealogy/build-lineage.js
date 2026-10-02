@@ -9,7 +9,8 @@
  * src/data/gurs-lineage.generated.json.
  *
  * Kept: name, mentor, co-mentor, fellowship completion year, international
- * flag, and the latest listed position. The position is dropped when the
+ * flag, and the latest listed position. The 1990 placeholder year of the first two
+ * generations is dropped. The position is dropped when the
  * source marks the placement as unconfirmed (verify: true).
  *
  * Usage: node scripts/genealogy/build-lineage.js [path/to/fellowship-tree.json]
@@ -30,7 +31,9 @@ const fellows = raw.fellows.map(f => {
   const row = { name: f.name };
   if (f.mentor) row.mentor = f.mentor;
   if (f.mentor2) row.coMentor = f.mentor2;
-  if (!f.founder && first.year) row.year = first.year;
+  // The source tree uses 1990 as a start-year placeholder for its first two
+  // generations (founders, and Mundy, Chapple and Dixon), so that year is dropped there.
+  if (!f.founder && first.year && !(first.year === 1990 && f.gen <= 2)) row.year = first.year;
   if (f.intl) row.intl = true;
   if (!f.verify && !f.founder && last.institution) {
     row.position = last.city ? `${last.institution}, ${last.city}` : last.institution;

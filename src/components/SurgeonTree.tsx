@@ -11,12 +11,16 @@ function TreeNodeComp({
   depth,
   expanded,
   toggle,
+  openSchool,
+  schoolSizes,
 }: {
   tree: LineageTree;
   dynastyColor: string;
   depth: number;
   expanded: Set<string>;
   toggle: (id: string) => void;
+  openSchool: (id: string) => void;
+  schoolSizes: Map<string, number>;
 }) {
   const n = tree.node;
   const hasChildren = tree.children.length > 0;
@@ -57,6 +61,16 @@ function TreeNodeComp({
         )}
         {n.year && <span className="vt-year">{n.year}</span>}
         {hasChildren && !open && <span className="vt-count">+{tree.size - 1}</span>}
+        {tree.subSchool && (
+          <button
+            type="button"
+            className="vt-subschool"
+            style={{ borderColor: tree.subSchool.color, color: tree.subSchool.color }}
+            onClick={() => openSchool(tree.subSchool!.id)}
+          >
+            {tree.subSchool.label} →{schoolSizes.get(tree.subSchool.id) ? ` ${schoolSizes.get(tree.subSchool.id)}` : ''}
+          </button>
+        )}
       </div>
 
       {open && (
@@ -69,6 +83,8 @@ function TreeNodeComp({
               depth={depth + 1}
               expanded={expanded}
               toggle={toggle}
+              openSchool={openSchool}
+              schoolSizes={schoolSizes}
             />
           ))}
         </div>
@@ -97,7 +113,11 @@ export default function SurgeonTree({ subspecialty = 'GURS' }: { subspecialty?: 
   }, [schools, activeId]);
 
   const school = schools.find(s => s.dynasty.id === activeId) ?? schools[0];
-  const trees = useMemo(() => (school ? school.rootIds.map(id => buildLineageTree(id)) : []), [school]);
+  const trees = useMemo(() => (school ? school.rootIds.map(id => buildLineageTree(id, new Set(), school.stops)) : []), [school]);
+  const schoolSizes = useMemo(() => new Map(schools.map(s => [
+    s.dynasty.id,
+    s.rootIds.reduce((n, id) => n + buildLineageTree(id, new Set(), s.stops).size, 0),
+  ])), [schools]);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
   // Each school opens with its root(s) expanded, so first-generation trainees show.
@@ -164,11 +184,13 @@ export default function SurgeonTree({ subspecialty = 'GURS' }: { subspecialty?: 
             depth={0}
             expanded={expanded}
             toggle={toggle}
+            openSchool={setActiveId}
+            schoolSizes={schoolSizes}
           />
         ))}
       </div>
 
-      <p className="sl-tree-hint">Years are fellowship completion. Linked names have a profile page.</p>
+      <p className="sl-tree-hint">Years are fellowship completion. Linked names have a profile page; plain names are mentors without a page who connect profiled surgeons.</p>
     </div>
   );
 }

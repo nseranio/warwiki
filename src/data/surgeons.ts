@@ -1019,22 +1019,29 @@ export interface Dynasty {
 }
 
 export const DYNASTIES: Dynasty[] = [
-  { id: 'mcaninch',       label: 'McAninch School',        rootId: 'jack-mcaninch',           color: '#185FA5', subspecialty: 'GURS' },
-  { id: 'turner-warwick', label: 'Turner-Warwick School',  rootId: 'richard-turner-warwick',  color: '#0D9373', subspecialty: 'GURS' },
-  { id: 'webster',        label: 'Webster School',         rootId: 'george-webster',          color: '#7c3aed', subspecialty: 'GURS' },
-  { id: 'santucci',       label: 'Santucci School',        rootId: 'richard-santucci',        color: '#b45309', subspecialty: 'GURS' },
-  { id: 'jordan',         label: 'Devine-Jordan School (EVMS)', rootId: 'charles-devine',     color: '#0284c7', subspecialty: 'GURS' },
-  // URPS dynasties: the largest roots of the URPS fellowship tree (urps-lineage.generated.json).
-  // Urology-based: Raz, McGuire, Dmochowski, Kobashi. OB/GYN-based: Stanton, Ostergard, Drutz, Brubaker, Karram.
-  { id: 'stanton',        label: 'Stanton School',         rootId: 'stuart-stanton',          color: '#0D9373', subspecialty: 'URPS' },
-  { id: 'ostergard',      label: 'Ostergard School',       rootId: 'donald-ostergard',        color: '#185FA5', subspecialty: 'URPS' },
-  { id: 'drutz',          label: 'Drutz School',           rootId: 'harold-drutz',            color: '#b45309', subspecialty: 'URPS' },
-  { id: 'raz',            label: 'Raz School',             rootId: 'shlomo-raz',              color: '#9333EA', subspecialty: 'URPS' },
-  { id: 'brubaker',       label: 'Brubaker School',        rootId: 'linda-brubaker',          color: '#DC2626', subspecialty: 'URPS' },
-  { id: 'dmochowski',     label: 'Dmochowski School',      rootId: 'roger-dmochowski',        color: '#0284c7', subspecialty: 'URPS' },
-  { id: 'kobashi',        label: 'Kobashi School',         rootId: 'kathleen-kobashi',        color: '#059669', subspecialty: 'URPS' },
-  { id: 'karram',         label: 'Karram School',          rootId: 'mickey-karram',           color: '#7c3aed', subspecialty: 'URPS' },
-  { id: 'mcguire',        label: 'McGuire School',         rootId: 'edward-mcguire',          color: '#0EA5E9', subspecialty: 'URPS' },
+  // GURS. A school inside another (Webster within Turner-Warwick, Morey within
+  // McAninch) keeps its own tab; the parent tab links to it instead of repeating it.
+  { id: 'mcaninch',       label: 'McAninch School (UCSF)',            rootId: 'jack-mcaninch',          color: '#185FA5', subspecialty: 'GURS' },
+  { id: 'morey',          label: 'Morey School (UT Southwestern)',    rootId: 'allen-morey',            color: '#b45309', subspecialty: 'GURS' },
+  { id: 'turner-warwick', label: 'Turner-Warwick School (London)',    rootId: 'richard-turner-warwick', color: '#0D9373', subspecialty: 'GURS' },
+  { id: 'webster',        label: 'Webster School (Duke)',             rootId: 'george-webster',         color: '#7c3aed', subspecialty: 'GURS' },
+  { id: 'kulkarni',       label: 'Kulkarni School (Pune)',            rootId: 'sanjay-kulkarni',        color: '#DC2626', subspecialty: 'GURS' },
+  { id: 'jordan',         label: 'Devine-Jordan School (EVMS)',       rootId: 'charles-devine',         color: '#0284c7', subspecialty: 'GURS' },
+  // URPS: the largest roots of the URPS fellowship tree. Urology-based: Raz,
+  // McGuire, Dmochowski, Kobashi. OB/GYN-based: Stanton (with Cardozo and Dwyer
+  // inside it), Ostergard, Drutz, Brubaker, Benson, Karram.
+  { id: 'stanton',        label: "Stanton School (St George's)",     rootId: 'stuart-stanton',         color: '#0D9373', subspecialty: 'URPS' },
+  { id: 'cardozo',        label: "Cardozo School (King's College)",   rootId: 'linda-cardozo',          color: '#be185d', subspecialty: 'URPS' },
+  { id: 'dwyer',          label: 'Dwyer School (Melbourne)',          rootId: 'peter-dwyer',            color: '#0891b2', subspecialty: 'URPS' },
+  { id: 'ostergard',      label: 'Ostergard School (Harbor-UCLA)',    rootId: 'donald-ostergard',       color: '#185FA5', subspecialty: 'URPS' },
+  { id: 'drutz',          label: 'Drutz School (Toronto)',            rootId: 'harold-drutz',           color: '#b45309', subspecialty: 'URPS' },
+  { id: 'raz',            label: 'Raz School (UCLA)',                 rootId: 'shlomo-raz',             color: '#9333EA', subspecialty: 'URPS' },
+  { id: 'brubaker',       label: 'Brubaker School (Loyola)',          rootId: 'linda-brubaker',         color: '#DC2626', subspecialty: 'URPS' },
+  { id: 'dmochowski',     label: 'Dmochowski School (Vanderbilt)',    rootId: 'roger-dmochowski',       color: '#0284c7', subspecialty: 'URPS' },
+  { id: 'kobashi',        label: 'Kobashi School (Virginia Mason)',   rootId: 'kathleen-kobashi',       color: '#059669', subspecialty: 'URPS' },
+  { id: 'benson',         label: 'Benson School (Indiana)',           rootId: 'thomas-benson',          color: '#64748b', subspecialty: 'URPS' },
+  { id: 'karram',         label: 'Karram School (Cincinnati)',        rootId: 'mickey-karram',          color: '#7c3aed', subspecialty: 'URPS' },
+  { id: 'mcguire',        label: 'McGuire School (Michigan)',         rootId: 'edward-mcguire',         color: '#0EA5E9', subspecialty: 'URPS' },
 ];
 
 /** Subspecialty of a surgeon, defaulting to 'GURS' for legacy records that don't set it. */

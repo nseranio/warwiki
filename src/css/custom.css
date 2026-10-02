@@ -3902,3 +3902,12 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
   border-color: var(--ifm-color-emphasis-300);
   border-left-color: var(--wk-accent);
 }
+
+/* Genealogy tree: a branch that is its own school links to that school's tab. */
+.vt-subschool {
+  margin-left: 8px; padding: 1px 9px;
+  font-size: 0.72rem; font-weight: 600;
+  background: transparent; border: 1px solid; border-radius: 10px;
+  cursor: pointer; white-space: nowrap;
+}
+.vt-subschool:hover { background: var(--warwiki-bg-subtle); }

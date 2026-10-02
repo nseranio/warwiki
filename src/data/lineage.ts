@@ -183,12 +183,27 @@ for (const node of nodes.values()) {
 }
 
 // ── Display: profiled surgeons only ──────────────────────
-// While true, the tree, directory and trainee lists show only surgeons with a
-// profile page. Each one hangs under its nearest profiled ancestor, so lines
-// stay connected. The full lineage data is kept; set to false to show everyone.
+// While true, the tree, directory and trainee lists show surgeons with a
+// profile page, plus any mentor without a page who sits on the line between
+// two profiled surgeons (shown as a plain name), so lineages stay intact.
+// The full lineage data is kept; set to false to show everyone.
 export const PROFILES_ONLY = true;
 
-const isVisible = (n: LineageNode) => !PROFILES_ONLY || Boolean(n.path);
+const visibleIds = new Set<string>();
+for (const n of nodes.values()) if (!PROFILES_ONLY || n.path) visibleIds.add(n.id);
+if (PROFILES_ONLY) {
+  for (const id of [...visibleIds]) {
+    const between: string[] = [];
+    let cur = nodes.get(id)!.mentorId ? nodes.get(nodes.get(id)!.mentorId!) : undefined;
+    while (cur) {
+      if (cur.path) { between.forEach(b => visibleIds.add(b)); break; }
+      between.push(cur.id);
+      cur = cur.mentorId ? nodes.get(cur.mentorId) : undefined;
+    }
+  }
+}
+
+const isVisible = (n: LineageNode) => visibleIds.has(n.id);
 
 /** Nearest visible ancestor (the mentor itself when it is visible). */
 function visibleMentorId(node: LineageNode): string | undefined {
@@ -241,40 +256,68 @@ export interface LineageTree {
   node: LineageNode;
   children: LineageTree[];
   size: number;
+  /** Set when this branch is another school, shown as a link to its own tab. */
+  subSchool?: Dynasty;
 }
 
-export function buildLineageTree(id: string, seen = new Set<string>()): LineageTree {
+export function buildLineageTree(id: string, seen = new Set<string>(), stops?: Map<string, Dynasty>): LineageTree {
   seen.add(id);
-  const kids = childrenOf(id).filter(c => !seen.has(c.id)).map(c => buildLineageTree(c.id, seen));
+  const kids = childrenOf(id).filter(c => !seen.has(c.id)).map(c => {
+    const sub = stops?.get(c.id);
+    if (sub) { seen.add(c.id); return { node: c, children: [], size: 1, subSchool: sub }; }
+    return buildLineageTree(c.id, seen, stops);
+  });
   return { node: nodes.get(id)!, children: kids, size: 1 + kids.reduce((n, k) => n + k.size, 0) };
+}
+
+export interface School {
+  dynasty: Dynasty;
+  rootIds: string[];
+  /** Roots of other schools inside this one; their branches collapse to a link. */
+  stops: Map<string, Dynasty>;
 }
 
 /**
  * Schools shown as tabs: the curated dynasties, plus one "Other lineages"
- * entry gathering any remaining root that has trainees.
+ * entry gathering any remaining root that has trainees. A school inside
+ * another (Webster within Turner-Warwick) keeps its own tab; in the parent
+ * tab its branch is a single row linking to that tab, so nobody appears twice.
  */
-export function lineageSchools(sub: Subspecialty): { dynasty: Dynasty; rootIds: string[] }[] {
+export function lineageSchools(sub: Subspecialty): School[] {
   const visible = lineageBySubspecialty(sub);
   const topLevel = visible.filter(n => !visibleMentorId(n));
   // A school whose founder is hidden starts from its highest visible members.
   const rootsOf = (rootId: string) => {
     const root = nodes.get(rootId)!;
-    return isVisible(root) ? [rootId] : topLevel.filter(n => descendsFrom(n, rootId)).map(n => n.id);
+    if (isVisible(root)) return [rootId];
+    return visible.filter(n => descendsFrom(n, rootId) && !(visibleMentorId(n) && descendsFrom(nodes.get(visibleMentorId(n)!)!, rootId)) && visibleMentorId(n) !== rootId)
+      .map(n => n.id);
   };
-  const curated = DYNASTIES
+  const all = DYNASTIES
     .filter(d => (d.subspecialty ?? 'GURS') === sub && nodes.has(d.rootId))
-    .map(d => ({ dynasty: d, rootIds: rootsOf(d.rootId) }))
-    // Skip a school that would show a single surgeon.
-    .filter(s => s.rootIds.reduce((n, id) => n + buildLineageTree(id).size, 0) > 1);
+    .map(d => ({ dynasty: d, rootIds: rootsOf(d.rootId) }));
+  const schoolOf = new Map<string, Dynasty>();
+  for (const s of all) for (const r of s.rootIds) schoolOf.set(r, s.dynasty);
+  const withStops = all.map(s => ({
+    ...s,
+    stops: new Map([...schoolOf].filter(([r, d]) => d.id !== s.dynasty.id && !s.rootIds.includes(r))),
+  }));
+  const size = (s: School) => s.rootIds.reduce((n, id) => n + buildLineageTree(id, new Set(), s.stops).size, 0);
+  // Skip a school that would show a single surgeon.
+  const curated = withStops.filter(s => s.rootIds.length && size(s) > 1);
+  const kept = new Set(curated.map(s => s.dynasty.id));
+  for (const s of curated) for (const [r, d] of [...s.stops]) if (!kept.has(d.id)) s.stops.delete(r);
   const covered = new Set(curated.flatMap(s => s.rootIds));
+  const inCurated = (n: LineageNode) => curated.some(s => s.rootIds.some(r => r === n.id || descendsFrom(n, r)));
   const others = topLevel
-    .filter(n => !covered.has(n.id) && childrenOf(n.id).length > 0)
+    .filter(n => !covered.has(n.id) && !inCurated(n) && childrenOf(n.id).length > 0)
     .sort((a, b) => buildLineageTree(b.id).size - buildLineageTree(a.id).size);
-  const schools = curated.map(s => ({ dynasty: s.dynasty, rootIds: s.rootIds }));
+  const schools: School[] = curated;
   if (others.length) {
     schools.push({
       dynasty: { id: `other-${sub.toLowerCase()}`, label: 'Other lineages', rootId: others[0].id, color: '#64748b', subspecialty: sub },
       rootIds: others.map(n => n.id),
+      stops: new Map(),
     });
   }
   return schools;

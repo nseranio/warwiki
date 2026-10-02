@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Genealogy schools reorganized; connecting mentors shown
+
+- **Schools:** GURS: McAninch (UCSF), Morey (UT Southwestern), Turner-Warwick (London), Webster (Duke), Kulkarni (Pune), Devine-Jordan (EVMS); Santucci is now a branch within McAninch. URPS adds Cardozo (King's College) and Dwyer (Melbourne) within Stanton, and Benson (Indiana). A school inside another keeps its own tab; in the parent tab its branch is one row linking to that tab, so nobody appears twice (Webster was previously shown both under Turner-Warwick and as its own school).
+- **Connecting mentors:** with profiles-only display, a mentor without a page who links two profiled surgeons now appears as a plain name (Brian Flynn between Webster and Nikolavsky; Quentin Clemens; Kimberly Kenton) instead of being skipped.
+- **Profiles:** school heads show "Founder, <school>" even when they have a mentor (Webster, Morey, Kulkarni, Cardozo, Dwyer).
+- **GURS years:** the source tree's 1990 start-year placeholder for Mundy, Chapple and Dixon is no longer shown as a fellowship year.
+
 ## 2026-10-02 — History pages audited; surgeon profiles get training cards and photos
 
 - **History pages:** urethral surgery, prolapse and urogynecology, and prosthetics and ED were each re-audited against their sources (one agent per page), brought in line with STYLE.md, cross-linked to current technique pages and to surgeon profiles, and their references rebuilt with resolved DOIs. Corrections include Scott (Baylor) with Bradley and Timm (University of Minnesota) for the IPP and AUS, AUS model dates (Chung 2024), Caverject approval July 1995, Turner-Warwick's death (2020) and Blandy's (2011), George D. Webster and Gerald H. Jordan names, AUGS founding officers (Robertson first president, Ostergard secretary-treasurer), Hamlin dates and patient numbers, McGuire and Lytton 50 of 52, Optilume FDA approval (2021), and several misattributed references and PMIDs. Unverifiable claims were removed or attributed. History & Lineage and History landing pages rewritten in the house voice.

@@ -35,7 +35,7 @@ for (const s of SURGEONS.filter(x => x.path)) {
   for (const f of SURGEON_FIELDS) if (s[f] !== undefined) surgeon[f] = s[f];
   const mentor = node?.mentorId ? LINEAGE_BY_ID.get(node.mentorId) : undefined;
   const coMentor = node?.coMentorId ? LINEAGE_BY_ID.get(node.coMentorId) : undefined;
-  const school = !mentor ? DYNASTIES.find(d => d.rootId === s.id) : undefined;
+  const school = DYNASTIES.find(d => d.rootId === s.id);
   const data = {
     surgeon,
     position: node?.position ?? null,
