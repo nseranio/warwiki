@@ -138,6 +138,7 @@ const config: Config = {
             {to: '/video-library', label: 'Video Library'},
             {to: '/docs/journal-club', label: 'Journal Club'},
             {to: '/docs/resources', label: 'Resources'},
+            {to: '/docs/roots', label: 'History'},
           ],
         },
         {
@@ -174,6 +175,7 @@ const config: Config = {
             {label: 'Video Library', to: '/video-library'},
             {label: 'Resources', to: '/docs/resources'},
             {label: 'Journal Club', to: '/docs/journal-club'},
+            {label: 'History', to: '/docs/roots'},
           ],
         },
         {
