@@ -165,7 +165,7 @@ if (require.main === module) {
 // ── Main ──────────────────────────────────────────────────────────────────
 const overrides = fs.existsSync(OVERRIDES) ? JSON.parse(fs.readFileSync(OVERRIDES, 'utf8')) : {};
 
-const keys = SURGEONS.map(s => {
+const keys = SURGEONS.filter(s => s.path).map(s => {
   const o = overrides[s.id] || {};
   const base = o.key ? { last: fold(o.key.last), initials: o.key.initials, strict: true } : surgeonKey(s.name);
   const all = [base, ...(o.aliases || []).map(a => ({ last: fold(a.last), initials: a.initials, exact: true }))];
@@ -206,11 +206,11 @@ for (const file of files) {
 
 const out = {};
 fs.mkdirSync(OUT_DIR, { recursive: true });
-const ids = new Set(SURGEONS.map(s => s.id));
+const ids = new Set(SURGEONS.filter(s => s.path).map(s => s.id));
 for (const f of fs.readdirSync(OUT_DIR)) {
   if (f.endsWith('.json') && !ids.has(f.slice(0, -5))) fs.unlinkSync(path.join(OUT_DIR, f));
 }
-for (const s of SURGEONS) {
+for (const s of SURGEONS.filter(s => s.path)) {
   const list = (pubs[s.id] || []).map(({ tKey, ...p }) => p).sort((a, b) =>
     b.pages.length - a.pages.length || (b.year || 0) - (a.year || 0) || a.cite.localeCompare(b.cite));
   if (list.length) out[s.id] = list;
@@ -220,7 +220,7 @@ for (const s of SURGEONS) {
 }
 
 const total = Object.values(out).reduce((n, l) => n + l.length, 0);
-console.log(`Surgeon citations: ${total} publications across ${Object.keys(out).length} of ${SURGEONS.length} profiles.`);
+console.log(`Surgeon citations: ${total} publications across ${Object.keys(out).length} of ${ids.size} profiles.`);
 if (process.argv.includes('--report')) {
   for (const s of SURGEONS) {
     const n = out[s.id]?.length || 0;

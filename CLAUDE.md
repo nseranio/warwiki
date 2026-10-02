@@ -170,4 +170,4 @@ Source-dump cleanup (chatbot-assisted drafts): strip trailing "Would you like...
 
 ## Surgeon Profiles
 
-Profiles live at `docs/07-roots/surgeons/{a-g|h-r|s-z}/{name}.mdx` (hidden category, reached through `docs/07-roots/surgical-lineage.mdx` / `SurgeonsExplorer`). Link with `s.path`, not `s.id`. Surgeon profiles are out of the audit queue by user decision.
+Profiles live at `docs/07-roots/surgeons/{a-g|h-r|s-z}/{name}.mdx` (hidden category, reached through `docs/07-roots/surgical-lineage.mdx` / `SurgeonsExplorer`). Link with `s.path`, not `s.id`. Surgeon profiles are out of the audit queue by user decision. Only featured surgeons have pages (top 105 by WARWIKI citations plus school founders, October 1); others keep lineage data in `src/data/surgeons.ts` with no `path`. Each profile MDX imports `src/data/surgeon-citations/<id>.json` (generated in prebuild). The GURS lineage merges `src/data/gurs-lineage.generated.json` (Lee Zhao's tree, used with permission; rebuild with `scripts/genealogy/build-lineage.js`) via `src/data/lineage.ts`.
