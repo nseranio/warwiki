@@ -3873,3 +3873,32 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
 /* Surgeon profiles: bracket footnote markers so adjacent refs read [1][2], not 12 */
 .sp-sections sup a[data-footnote-ref]::before { content: '['; }
 .sp-sections sup a[data-footnote-ref]::after { content: ']'; }
+
+/* Surgeon profile: training and career fact card (profile MDX wraps a
+   bullet list in <div className="sp-facts">; each item starts with a bold label). */
+.sp-facts ul {
+  list-style: none; margin: 0 0 18px; padding: 0;
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.sp-facts li {
+  margin: 0; padding: 12px 14px;
+  background: var(--warwiki-white);
+  border: 1px solid var(--warwiki-border);
+  border-left: 3px solid var(--wk-accent);
+  border-radius: 8px;
+  font-size: 0.88rem; line-height: 1.45; color: var(--warwiki-text);
+}
+.sp-facts li > strong:first-child,
+.sp-facts li > p > strong:first-child {
+  display: block; margin-bottom: 4px;
+  font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--wk-accent-text);
+}
+.sp-facts li p { margin: 0; }
+[data-theme='dark'] .sp-facts li {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+  border-left-color: var(--wk-accent);
+}
