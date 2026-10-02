@@ -17,7 +17,8 @@
  *    matching initials.
  *  - scripts/surgeon-citations.overrides.json can replace a surgeon's
  *    author key ("key"), add exact-match aliases ("aliases", e.g. the
- *    two-initial form a common surname needs) or exclude a DOI ("exclude").
+ *    two-initial form a common surname needs) or exclude a paper ("exclude":
+ *    a DOI, or "title:<normalized title key>" for references without one).
  *
  * Usage: node scripts/gen-surgeon-citations.js [--report]
  *   --report prints every matched author string per surgeon for review.
@@ -158,6 +159,9 @@ function initialsMatch(ref, s, strict) {
   return !strict;
 }
 
+module.exports = { walk, references, authors, surgeonKey, initialsMatch, fold, titleKey, citationText, doiOf, COMMON_SURNAMES, DOCS };
+
+if (require.main === module) {
 // ── Main ──────────────────────────────────────────────────────────────────
 const overrides = fs.existsSync(OVERRIDES) ? JSON.parse(fs.readFileSync(OVERRIDES, 'utf8')) : {};
 
@@ -189,6 +193,7 @@ for (const file of files) {
       if (doi && k.exclude.has(doi)) continue;
       const cite = citationText(text);
       const tKey = titleKey(cite);
+      if (k.exclude.has(`title:${tKey}`)) continue;
       const bucket = (pubs[k.id] ||= []);
       let pub = bucket.find(p => (doi && p.doi === doi) || p.tKey === tKey);
       if (!pub) bucket.push(pub = { cite, doi, year: yearOf(text), pages: [], tKey });
@@ -221,4 +226,5 @@ if (process.argv.includes('--report')) {
     const n = out[s.id]?.length || 0;
     console.log(`${String(n).padStart(4)}  ${s.name}  [${[...(seen[s.id] || [])].join('; ')}]`);
   }
+}
 }

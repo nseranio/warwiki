@@ -12,6 +12,7 @@
 
 import { SURGEONS, DYNASTIES, getSubspecialty, type Surgeon, type Subspecialty, type Dynasty } from './surgeons';
 import lineageData from './gurs-lineage.generated.json';
+import corrections from './lineage-corrections.json';
 
 export interface LineageFellow {
   name: string;
@@ -114,6 +115,14 @@ for (const f of FELLOWS) {
   if (f.year) node.year = f.year;
   if (f.position) node.position = f.position;
   fellowIdByName.set(f.name, node.id);
+}
+
+// Documented corrections to the fellowship-tree year and position.
+for (const [id, c] of Object.entries(corrections as Record<string, { year?: number; position?: string }>)) {
+  const node = nodes.get(id);
+  if (!node || id.startsWith('_')) continue;
+  if (c.year) node.year = c.year;
+  if (c.position) node.position = c.position;
 }
 
 // Parent precedence: own mentorId → listed in a profile's traineeIds → fellowship tree.
