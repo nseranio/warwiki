@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Surgeon profiles: new criteria, 90 new profiles, countries for all
+
+- **Profile criteria (adopted October 2):** a surgeon whose principal work is in WARWIKI's scope gets a profile if any core criterion holds: WARWIKI citation score (GURS top 105; URPS score of at least 10), founder of a genealogy school, president of GURS, SUFU (or the Urodynamics Society), AUGS (or GUS) or IUGA, ICS chair or general secretary, a lifetime-achievement award from AUGS (Jack Robertson), IUGA, SUFU, GURS or ICS, or at least 10 fellows trained in the lineage data. Supporting lists alone (SGS, SIU, SMSNA presidencies; AUA Guiteras and Hugh Hampton Young awards; named lectureships) qualify only for in-scope reconstructive or prosthetic surgeons (Montague, Mulcahy, Hadley Wood). Non-surgeon scientists are excluded. Society rosters compiled by Codex from society pages are in `reports/surgical-genealogy/urps-work/criteria/` (off-git).
+- **New profiles (90):** Brian Flynn plus 89 under the criteria (two skipped for lack of a verifiable biography, John Higgins and Tsung-Hsien Su), each with a source-checked training card (276 of 295 sentences verified; the rest dropped), confirmed WARWIKI citations where any exist, and 74 portraits checked in a browser and on a contact sheet. 236 profiles in total.
+- **Countries:** every profile now shows the country where the surgeon's career is based (current principal practice, or the main career country for retired or deceased surgeons), from the profile's sourced card and a Codex check with sources; "England" normalized to United Kingdom. Not inferred from names.
+
 ## 2026-10-02 — Genealogy schools reorganized; connecting mentors shown
 
 - **Schools:** GURS: McAninch (UCSF), Morey (UT Southwestern), Turner-Warwick (London), Webster (Duke), Kulkarni (Pune), Devine-Jordan (EVMS); Santucci is now a branch within McAninch. URPS adds Cardozo (King's College) and Dwyer (Melbourne) within Stanton, and Benson (Indiana). A school inside another keeps its own tab; in the parent tab its branch is one row linking to that tab, so nobody appears twice (Webster was previously shown both under Turner-Warwick and as its own school).
