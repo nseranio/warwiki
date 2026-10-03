@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Open-access journal operative videos embedded on 82 pages
+
+- Crossref harvest of Urology Video Journal (405 articles) and 19 other journals; Claude and Codex matched candidates to pages independently (62 of 82 overlapping matches agreed; Codex found several dedicated pages, Claude restored BPH and a few Joshi/bladder-neck matches). Report: `reports/2026-10-03/video-journal-candidates.md`.
+- User rules (October 3): embed only videos that can play on the page (no link cards unless exceptional); up to 4 videos per page.
+- 100 videos on 82 pages: 90 Urology Video Journal MP4s, 5 IBJU (SciELO MP4, CC BY), 5 FVVO (3 YouTube, 2 Vimeo). Every file HEAD-checked and probed (all H.264/AAC); two-file articles resolved from title frames (Spanish duplicate, short clip and duplicate uploads skipped); female dorsal BMG video placed on the dorsal onlay page after the frames showed an inverted-U suprameatal approach.
+- `VideoCards`: `sourceType: 'vimeo'` (player iframe with `dnt=1`) and optional `articleUrl` ("Read the article" link for CC attribution).
+- Not embedded: IUJ (Springer consent-gated player), PRS Global Open and JU Open Plus (LWW player), conference video abstracts without files; iTIND emergency removal and TURP-E (not the page's operation).
+
 ## 2026-10-03 — ACOG PB 155, PB 218 and Committee Opinion 795 claims checked against the full text
 
 - Read in the browser on Scribd at the user's direction (no downloads; pages Scribd blurred behind its ad gate were skipped: PB 218 two pages, CO 795 pages 3, 5 and 7; PB 155 fully readable; PB 155 and PB 213 rechecked and had no gated pages). 123 citing sentences checked; citations point to the published documents.

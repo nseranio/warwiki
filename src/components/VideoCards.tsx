@@ -5,9 +5,11 @@ export interface VideoCard {
   title: string;
   /** Optional short caption rendered below the title. */
   subtitle?: string;
-  /** Direct MP4 or other source URL for non-YouTube videos. */
+  /** Direct MP4 URL, or a Vimeo player URL (https://player.vimeo.com/video/<id>?h=<hash>). */
   sourceUrl?: string;
-  sourceType?: 'youtube' | 'mp4';
+  sourceType?: 'youtube' | 'mp4' | 'vimeo';
+  /** Optional link to the source article (DOI), shown below the card for attribution. */
+  articleUrl?: string;
 }
 
 interface Props {
@@ -51,6 +53,14 @@ export default function VideoCards({ videos }: Props) {
                   allow={IFRAME_ALLOW}
                   allowFullScreen
                 />
+              ) : isPlaying && sourceType === 'vimeo' && v.sourceUrl ? (
+                <iframe
+                  className="vc-iframe"
+                  src={`${v.sourceUrl}${v.sourceUrl.includes('?') ? '&' : '?'}autoplay=1&dnt=1`}
+                  title={v.title}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
               ) : isPlaying && v.sourceUrl ? (
                 <video className="vc-iframe" src={v.sourceUrl} title={v.title} controls autoPlay />
               ) : (
@@ -80,6 +90,11 @@ export default function VideoCards({ videos }: Props) {
               {!isYouTube && v.sourceUrl && (
                 <a className="vc-source-link" href={v.sourceUrl} target="_blank" rel="noopener noreferrer">
                   Open source video
+                </a>
+              )}
+              {v.articleUrl && (
+                <a className="vc-source-link" href={v.articleUrl} target="_blank" rel="noopener noreferrer">
+                  Read the article
                 </a>
               )}
             </div>
