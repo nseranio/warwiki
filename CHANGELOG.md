@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Needle suspensions and in situ slings (historical) page
+
+- **Needle Suspensions and In Situ Slings (Historical)** (female SUI procedures, 50 refs, all DOIs resolved and every paper checked against PubMed; Cochrane needle-suspension review read in full): shared rationale and anatomy; a summary table and sections for Pereyra and modified Pereyra, Stamey, Raz (1981 needle suspension and 1989 vaginal wall sling), Gittes–Loughlin, bone-anchored (Leach 1988) and Vesica (Benderev) suspensions, and the Ingelman-Sundberg repair with the 1959 partial denervation; outcomes and abandonment (11-row table; AUA 1997 panel, Anger 2013 quality indicator, NICE NG123 1.5.14); complications still seen; managing these patients today; evidence gaps. No database row (historical operations stay out of the restorative databases); linked from the female SUI database, Burch page, prolapse history page, Stamey needle and Raz-Pereyra trocar pages, and the Raz, Leach and Ingelman-Sundberg profiles (Ingelman-Sundberg citation year corrected from 2010 to 1947).
+- Built from the user's OpenEvidence answer as leads; the answer covered mostly MMK and Burch (already on WARWIKI), so the operations were sourced from primary papers. Pereyra 1959, Stamey 1973, Raz 1981 and Ingelman-Sundberg 1947 have no indexed abstract; their technique detail comes from later reports and reviews and the page says so. Corrections: "57% vs 18% beyond 5 years" is the 5-year arm of the single Bergman trial (17/30 vs 6/33), not a pooled Cochrane figure; "ilioinguinal entrapment up to 16%" has no supporting rate and was dropped; the ICI 2009 statement could not be verified. Dropped: Chou 2023 (cited for the mesh controversy), Rashid 2015, the mesh-controversy material.
+
 ## 2026-10-03 — Browser tests: first CI results, two flaky tests fixed
 
 - First complete CI run with the Playwright suite (run 37095777357, commit `6261ba83`): 1,346 passed in 13.5 minutes, one flaky. The citation-preview test hovered before hydration attached its handlers; it now waits for `data-has-hydrated`. Repeating the specs locally also showed the new two-timezone test reporting aborted chunk downloads when it navigated one page to the next; it now opens a fresh page per path. Both stable over 10 repeats (60 of 60).
