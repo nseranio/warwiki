@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Ketamine cystitis: merge from a repeat OpenEvidence answer
+
+- 13 verified references merged into Ketamine Cystitis without rewriting it (41 refs, renumbered in first-use order): Taiwanese rehabilitation-centre survey (Li CC 2019: 84% LUTS, snorting worse than smoking, self-reported treatment responses), European rise (van Riel 2025 Netherlands clinic 0→137 cases, 51 operated; Raingeard 2026 France; UK use from the ONS Crime Survey bulletins, 1.7% in 2010 → 3.2% in 2020 → 2.0% in 2025), a compact experimental pathophysiology paragraph (Baker, Gu, Juan, Lin; animal data labelled), histology mimicking CIS (Lopez-Beltran), imaging and a CT bladder-cancer mimic (Cassels, Ou YL), biliary strictures, and renal outcome (Ou SH 2020: 50% vs 7% reached the renal endpoint; hydronephrosis an independent predictor).
+- Corrections to the answer: Wu 2016 staging derived from 81 patients, not 123 (page already right); the UK "1.6% in 2015, doubled" figure replaced with the ONS series; ICI-RS hydronephrosis odds ratios trace to Yee 2017 (already cited). Dropped: the "Butt 2025" surgical series (no publication found; cited only to a conference-abstract placeholder), Wu's stage-wise upper-tract percentages (not in the abstract), Tan 2022 (letter, no access), and unverifiable figures (Winstock "43% unchanged", Sturgess "~80% bilateral", female severity).
+
 ## 2026-10-02 — MLD phalloplasty: merge from a repeat OpenEvidence answer
 
 - 12 verified sources merged into Musculocutaneous Latissimus Dorsi Flap Phalloplasty without rewriting it (33 refs, renumbered in first-use order): recipient-vessel meta-analysis (Gaston 2026; all flap types), Berli 2021 staging strategies, phalloplasty prosthesis survival from Chiriaco 2023, LD donor-site morbidity from non-phalloplasty LD literature (Lee and Mun 2014, Oberhofer 2022, Akça 2026), comparison-table and prose updates (Hu 2024, Xu and Watt 2018, van der Sluis 2017, Netshiongolwe 2025, Wang 2026; neither comparative study included MLD) and Ferrin 2026 / GenderCOS in Evidence Gaps. Berli profile linked.
