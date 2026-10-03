@@ -15,13 +15,16 @@ const PAGES = ['/', '/docs/foundations', '/docs/surgical-techniques'];
 for (const timezoneId of TIMEZONES) {
   test(`hydrates without errors in ${timezoneId}`, async ({browser}) => {
     const context = await browser.newContext({timezoneId});
-    const page = await context.newPage();
-    const errors = collectBrowserErrors(page);
+    // A fresh page per path: navigating an existing page aborts the previous
+    // page's in-flight chunk downloads, which would be reported as failures.
     for (const path of PAGES) {
-      await page.goto(path, {waitUntil: 'domcontentloaded'});
+      const page = await context.newPage();
+      const errors = collectBrowserErrors(page);
+      await page.goto(path, {waitUntil: 'load'});
       await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
+      expect(errors, `browser errors on ${path}`).toEqual([]);
+      await page.close();
     }
-    expect(errors).toEqual([]);
     await context.close();
   });
 }

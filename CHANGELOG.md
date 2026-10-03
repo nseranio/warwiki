@@ -6,6 +6,10 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Browser tests: first CI results, two flaky tests fixed
+
+- First complete CI run with the Playwright suite (run 37095777357, commit `6261ba83`): 1,346 passed in 13.5 minutes, one flaky. The citation-preview test hovered before hydration attached its handlers; it now waits for `data-has-hydrated`. Repeating the specs locally also showed the new two-timezone test reporting aborted chunk downloads when it navigated one page to the next; it now opens a fresh page per path. Both stable over 10 repeats (60 of 60).
+
 ## 2026-10-03 — History & Lineage reachable from the Resources sidebar
 
 - The Resources sidebar (manual, mirroring the Resources landing page) had no route to History & Lineage, which lives in its own section (`07-roots`); its comment still said History was reached from About. Added a History & Lineage link as the last sidebar item and a matching card at the end of the Resources landing page (user report, October 3).

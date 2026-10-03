@@ -3,6 +3,9 @@ import { expect, test } from '@playwright/test';
 test('citation previews stay within the viewport and leave no overflow when dismissed', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('/docs/foundations/tools/biomaterials/autologous-tissue/rectus-fascia');
+  // The preview handlers attach after hydration; hovering earlier is a no-op
+  // on slow CI runners.
+  await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
   const citation = page.locator('article .markdown sup > a[href="#ref1"]').first();
   const preview = page.locator('.warwiki-cite-tooltip');
 
