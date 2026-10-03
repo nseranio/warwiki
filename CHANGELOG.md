@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Postpartum perineal clinic section (obstetric perineal injury page)
+
+- **Postpartum Perineal Clinic** section added to Obstetric Perineal Lacerations (31 new refs, 58 total): referral and timing with a guideline table (RCOG GTG 29, IUGA 2026, ACOG/Australian/German as summarized by IUGA), the clinic visit, EAUS/manometry/transperineal ultrasound, a nine-row table of published clinic models (Croydon, Liverpool, Michigan, Cleveland Clinic, Dublin, Toronto and others), reoperation in clinic cohorts, mode of delivery after OASI (now the single home for that counseling; EPIC trial added) and evidence gaps. Fenner, Sultan and Thakar profiles linked; links back from the fecal incontinence and anal sphincteroplasty pages.
+- Built from the user's OpenEvidence answer as leads. Corrections: the garbled 64.3%/86.7% residual-defect figures are Giroux 2023 (Toronto); 45.6%/68.8% manometry figures are Jones 2022, not Badri; the median 17-day first visit is the Cleveland Clinic's (Hickman/Propst), not Michigan's; Cassis algorithm range is 40.3–85.0% (not 22–85%); RCOG places follow-up in a dedicated clinic with EAUS and manometry if resources allow (not "studies if symptomatic"); a randomized trial (EPIC) does exist. Dropped: the "94% agreement" consensus claim (Alshiek is a defecatory dynamic-imaging consensus), a textbook chapter and several unneeded reviews. ACOG PB 198 and SOGC No. 465 full texts remain unread (abstract or IUGA summary only).
+
 ## 2026-10-02 — Glans augmentation with hyaluronic acid (new page)
 
 - **Glans Augmentation with Hyaluronic Acid** (male cosmetic atlas, 31 refs; database row under a new "Injectable Glans" domain; linked from the HA girth filler page and the PE section of the local anesthetics page; Yang and Trost profiles linked). Built from the user's OpenEvidence answer as leads: covers cosmetic glans enlargement, glans after prosthesis, the premature-ejaculation indication (11-row trial table), technique, durability, complications with a vascular-occlusion protocol labelled as extrapolated from facial practice, and society positions checked in the primary texts (AUA/SMSNA 2022 statement 15 experimental; ISSM 2014 does not recommend; EAU 2026 added).
