@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — New pages from OpenEvidence leads: Mainz Pouch III, MLD phalloplasty, ketamine cystitis, PGAD/GPD
+
+- Built from the user's OpenEvidence answers treated as leads: every reference resolved on Crossref and checked against its PubMed abstract (full text where open), numbers corrected or dropped where the paper did not report them, and better primary sources added. Corrections included the Mainz III reoperation burden (8 outlet/stoma procedures in 44, not 4–5%), MLD prosthesis timing (Belgrade 6–9 months; "≥12 months" unsupported) and flap size, the source of Yee's 67.7% (second-line oral therapy) and the iPGAD control findings (venous convolutions 53.8% vs 46.2%; pudendal latencies 4/21 vs 0/24).
+- **Mainz Pouch III** (diversion atlas, 23 refs; database row; linked from Mainz I and Colon Conduit). **MLD Phalloplasty** (gender-affirming atlas, 21 refs; covers penile reconstruction outside GAS; masculinizing database row; linked from RFFF, ALT and the special-populations overview). **Ketamine Cystitis** (pelvic pain, 28 refs; recreational vs therapeutic use, staging, upper tract, reconstruction; linked from IC/BPS, supratrigonal cystectomy and the Clinical Conditions card). **PGAD/GPD** (pelvic pain, 23 refs; ISSWSH five-region process of care, iPGAD controlled data, procedural series table; linked from sexual dysfunction, chronic pelvic pain, pelvic venous disorders and pudendal decompression).
+
 ## 2026-10-02 — Surgeons' signature work: profiles and site citations
 
 - **Research:** for each of the 236 profiled surgeons, Codex identified 2 to 4 best-known contributions (techniques, devices, trials, classifications, guidelines, landmark papers); 449 of 569 passed verification (DOI resolved in Crossref with the surgeon among the authors, or the attributing source page re-fetched with the quote). 185 were already cited on WARWIKI.
