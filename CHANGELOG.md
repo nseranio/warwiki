@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — MLD phalloplasty: merge from a repeat OpenEvidence answer
+
+- 12 verified sources merged into Musculocutaneous Latissimus Dorsi Flap Phalloplasty without rewriting it (33 refs, renumbered in first-use order): recipient-vessel meta-analysis (Gaston 2026; all flap types), Berli 2021 staging strategies, phalloplasty prosthesis survival from Chiriaco 2023, LD donor-site morbidity from non-phalloplasty LD literature (Lee and Mun 2014, Oberhofer 2022, Akça 2026), comparison-table and prose updates (Hu 2024, Xu and Watt 2018, van der Sluis 2017, Netshiongolwe 2025, Wang 2026; neither comparative study included MLD) and Ferrin 2026 / GenderCOS in Evidence Gaps. Berli profile linked.
+- Page numbers held where the answer disagreed (flap size 11–15 × 13–18 cm per Bencic 2022; Kojovic volume year 2021). Dropped as unverifiable from abstracts: Djordjevic 2019 donor and second-stage figures, Morrison's "likely >50%", Kojovic pooled ranges, the ~82%/~15% motor figures; Girard 2022 (penile transplant review) and other off-topic refs dropped.
+
 ## 2026-10-02 — Outcome data sources and registries section (GAS overview)
 
 - **Outcome Data Sources and Registries** section added to Gender-Affirming Surgery — Overview (21 new footnotes, 31 total): the Transgender and Non-Binary Surgery (TRANS) Registry (Dy, Blasdel, Dugi et al. 2024: community-engaged, EHR-enabled, vaginoplasty/vulvoplasty, three pilot centers, PRO set named, no enrollment or outcomes reported), TRANS-ARC (research prioritization, not a registry), comparators (NSQIP, Amsterdam cohort, ENIGI, GENDER-Q, GenderCOS) with a 7-row table, and limits of current data (validated PRO use, surgeon- vs patient-reported complications, loss to follow-up, regret, a neutral detransition note). Dy, Dugi, Bluebond-Langner, Zhao, Nikolavsky and Ferrando profiles linked; links from the feminizing and masculinizing procedures pages.
