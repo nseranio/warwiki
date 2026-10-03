@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — ACOG PB 155, PB 218 and Committee Opinion 795 claims checked against the full text
+
+- Read in the browser on Scribd at the user's direction (no downloads; pages Scribd blurred behind its ad gate were skipped: PB 218 two pages, CO 795 pages 3, 5 and 7; PB 155 fully readable; PB 155 and PB 213 rechecked and had no gated pages). 123 citing sentences checked; citations point to the published documents.
+- **PB 155 (urinary incontinence):** the female SUI weight-loss row now gives ACOG's moderate weight loss (Level A; 7.8 kg, about 8%, 47% vs 28% fewer episodes) instead of "5–10%"; the AUS and pharmacotherapy lines now cite EAU 2026 and NICE instead of PB 155 (which does not discuss the AUS); Poise Impressa's unconfirmed "12-month cure ~58.8%" replaced with ACOG's "about half satisfied at 1 year"; metadata fixed.
+- **PB 218 (chronic pelvic pain):** acupuncture is Level C (with yoga) for musculoskeletal CPP, not ungraded; trigger point injections are recommended (Level B), not "may be considered"; endometriosis "33–50% of CPP" replaced by As-Sanie 2025 (28.1%) plus ACOG's 70% in women evaluated; pelvic congestion "up to 30%" now cites only Krambeck; opioids line separates ACOG (women) from AUA 2025 (men); muscle relaxants restated as ACOG's Cochrane finding (insufficient evidence, two studies); the gabapentin–nortriptyline trial now cites Gilron 2009.
+- **CO 795 (cosmetic genital surgery):** the G-spot quotation now matches ACOG exactly (laser assistance, rugation restoration or G-spot amplification); monsplasty page no longer says ACOG names monsplasty or exempts labia minora reduction; vaginal laser page's mis-authored CO 795 reference corrected.
+- Unverified (gated pages): CPP trauma-history, referred musculoskeletal and pelvic-denervation lines; the BDD 2.5% figure.
+
 ## 2026-10-03 — ACOG Practice Bulletins 214 and 213 claims checked against the full text
 
 - The user pointed to Scribd copies; per the user, nothing was downloaded. Claude read the bulletins in the browser (PB 214: 11 of 12 pages, page 6 behind Scribd's ad gate and left unread; PB 213: all 18 pages) and checked every citing sentence; all citations point to the published bulletins (Obstet Gynecol), never Scribd, and only paraphrases are used.
