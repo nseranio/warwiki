@@ -131,27 +131,34 @@ describe('shared cache and monthly budget', () => {
     expect(put).not.toHaveBeenCalled();
   });
 
-  it('keys the cache by SHA-256 of model|voice|text', async () => {
+  it('keys the cache by text alone, ignoring client voice and model', async () => {
     blobStore({spentMicroUsd: 0, cacheBytes: 0}, Buffer.from([1]));
     await request('POST', {text: 'hello', voice: 'nova', model: 'tts-1'});
-    const {createHash} = await import('node:crypto');
-    const hash = createHash('sha256').update('tts-1|nova|hello').digest('hex');
-    expect(head).toHaveBeenCalledWith(`tts/audio/${hash}.mp3`);
+    await request('POST', {text: 'hello'});
+    const audioLookups = head.mock.calls.map(([path]) => String(path)).filter((path) => path.startsWith('tts/audio/'));
+    expect(audioLookups).toHaveLength(2);
+    expect(audioLookups[0]).toBe(audioLookups[1]);
   });
 
   it('on a miss reserves cost, generates, stores and reports MISS', async () => {
     blobStore({spentMicroUsd: 0, cacheBytes: 0});
     generateSpeech.mockResolvedValue({arrayBuffer: async () => new Uint8Array([1, 2, 3]).buffer});
-    const response = await request('POST', {text: '  test speech  ', voice: 'unknown', model: 'unknown'});
-    expect(generateSpeech).toHaveBeenCalledWith({model: 'tts-1', voice: 'shimmer', input: 'test speech', response_format: 'mp3'});
+    const response = await request('POST', {text: '  test speech  ', voice: 'shimmer', model: 'tts-1-hd'});
+    expect(generateSpeech).toHaveBeenCalledWith(expect.objectContaining({
+      model: 'gpt-4o-mini-tts',
+      voice: 'marin',
+      input: 'test speech',
+      instructions: expect.stringContaining('clinical lecturer'),
+      response_format: 'mp3',
+    }));
     expect(response.statusCode).toBe(200);
     expect(response.setHeader).toHaveBeenCalledWith('Content-Type', 'audio/mpeg');
     expect(response.setHeader).toHaveBeenCalledWith('Content-Length', '3');
     expect(response.setHeader).toHaveBeenCalledWith('X-TTS-Cache', 'MISS');
     expect(response.end).toHaveBeenCalledWith(Buffer.from([1, 2, 3]));
     const ledgerWrite = put.mock.calls.find(([path]) => String(path).startsWith('tts/budget/'));
-    // 11 characters at tts-1's 15 micro-dollars per character, rounded up.
-    expect(JSON.parse(ledgerWrite![1]).spentMicroUsd).toBe(165);
+    // 11 characters at the reserved 20 micro-dollars per character.
+    expect(JSON.parse(ledgerWrite![1]).spentMicroUsd).toBe(220);
     expect(put.mock.calls.some(([path]) => String(path).startsWith('tts/audio/'))).toBe(true);
   });
 

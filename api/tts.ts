@@ -3,25 +3,33 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import { head, put, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import OpenAI from 'openai';
 
-// Accepted OpenAI TTS voices. Default to 'shimmer' (soft female — clear for clinical content).
-const ALLOWED_VOICES = new Set(['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']);
-const DEFAULT_VOICE = 'shimmer';
+// One narrator for the whole site: gpt-4o-mini-tts with the Marin voice and a
+// fixed delivery brief (chosen by ear against Cedar and tts-1 Shimmer, October 2026).
+// Clients send only text, so every listener shares one cached rendition per chunk.
+const MODEL = 'gpt-4o-mini-tts';
+const VOICE = 'marin';
+const INSTRUCTIONS =
+  'Voice: a calm, measured clinical lecturer speaking to surgeons. ' +
+  'Pace: unhurried; pause briefly between paragraphs. ' +
+  'Pronunciation: say eponyms and anatomical terms carefully and clearly; read numbers, units and ranges slowly and precisely. ' +
+  'Tone: neutral and authoritative, never salesy or overly warm.';
 
 // OpenAI TTS per-request input limit
 const MAX_INPUT_CHARS = 4096;
 
-// Allowed models and their list price in micro-dollars (USD * 1e6) per character.
-// tts-1 is $15 / 1M characters; tts-1-hd is $30 / 1M characters.
-const MODEL_PRICE_MICRO_USD_PER_CHAR: Record<string, number> = { 'tts-1': 15, 'tts-1-hd': 30 };
-const DEFAULT_MODEL = 'tts-1';
+// Worst-case price in micro-dollars (USD * 1e6) per input character. OpenAI
+// estimates gpt-4o-mini-tts at about $0.015 per minute of audio; WARWIKI text
+// measured about 15 characters per second, so roughly 17 micro-dollars per
+// character. 20 leaves headroom for the instructions and slower passages.
+const PRICE_MICRO_USD_PER_CHAR = 20;
 
 // Hard monthly ceiling. Stays below the $50 OpenAI project limit.
 const DEFAULT_MONTHLY_BUDGET_USD = 45;
 // Blob Hobby storage is 1 GB; leave headroom for the budget file and other use.
 const DEFAULT_CACHE_MAX_MB = 700;
 // Conservative bytes of mp3 per input character, used to cap the shared cache
-// before the audio exists (about 15 chars/s of speech at up to ~10 kB/s of mp3).
-const EST_MP3_BYTES_PER_CHAR = 700;
+// before the audio exists (about 15 chars/s of speech at 128 kbps, 16 kB/s of mp3).
+const EST_MP3_BYTES_PER_CHAR = 1100;
 
 // Per-IP limit on cache misses (each miss is paid audio). In-memory, so it is
 // per function instance: a soft brake. The monthly budget is the hard cap.
@@ -186,7 +194,7 @@ export default async function handler(req: SpeechRequest, res: ServerResponse) {
     return;
   }
 
-  const body = (req.body || {}) as { text?: string; voice?: string; model?: string };
+  const body = (req.body || {}) as { text?: string };
 
   const text = typeof body.text === 'string' ? body.text.trim() : '';
   if (!text) {
@@ -202,11 +210,8 @@ export default async function handler(req: SpeechRequest, res: ServerResponse) {
     return;
   }
 
-  const voice = body.voice && ALLOWED_VOICES.has(body.voice) ? body.voice : DEFAULT_VOICE;
-  const model = body.model && body.model in MODEL_PRICE_MICRO_USD_PER_CHAR ? body.model : DEFAULT_MODEL;
-
-  // Same key the browser computes: SHA-256(model|voice|text).
-  const hash = createHash('sha256').update(`${model}|${voice}|${text}`).digest('hex');
+  // Editing the model, voice or instructions changes the key, so stale audio is never served.
+  const hash = createHash('sha256').update(`${MODEL}|${VOICE}|${INSTRUCTIONS}|${text}`).digest('hex');
   const audioPath = `tts/audio/${hash}.mp3`;
 
   // Shared cache: a hit never calls OpenAI and never touches the budget.
@@ -236,7 +241,7 @@ export default async function handler(req: SpeechRequest, res: ServerResponse) {
   }
 
   // Reserve the worst-case cost before calling OpenAI (rounded up to a micro-dollar).
-  const costMicroUsd = Math.ceil(text.length * MODEL_PRICE_MICRO_USD_PER_CHAR[model]);
+  const costMicroUsd = Math.ceil(text.length * PRICE_MICRO_USD_PER_CHAR);
   const limitMicroUsd = Math.floor(readEnvNumber('WARWIKI_TTS_MONTHLY_BUDGET_USD', DEFAULT_MONTHLY_BUDGET_USD) * 1_000_000);
   const cacheMaxBytes = readEnvNumber('WARWIKI_TTS_CACHE_MAX_MB', DEFAULT_CACHE_MAX_MB) * 1024 * 1024;
   const estBytes = text.length * EST_MP3_BYTES_PER_CHAR;
@@ -250,9 +255,10 @@ export default async function handler(req: SpeechRequest, res: ServerResponse) {
 
   try {
     const mp3 = await client.audio.speech.create({
-      model,
-      voice: voice as any,
+      model: MODEL,
+      voice: VOICE,
       input: text,
+      instructions: INSTRUCTIONS,
       response_format: 'mp3',
     });
 

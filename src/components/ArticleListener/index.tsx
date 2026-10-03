@@ -10,29 +10,19 @@ import { AudioQueue } from './audioQueue';
  *   1. On play, extract the article text and chunk it into ≤3500-char pieces
  *      at sentence boundaries.
  *   2. When cloud audio is enabled, fetch only the current chunk, cached via the
- *      browser Cache API keyed by SHA-256(model|voice|text).
+ *      browser Cache API keyed by SHA-256(text). The server fixes the voice
+ *      (Marin on gpt-4o-mini-tts); there is no voice or quality picker.
  *   3. Play chunks sequentially via an HTMLAudioElement; advance on 'ended'.
  *   4. On any API failure or missing API key, fall back to native
  *      speechSynthesis so the feature still works without cloud backing.
  */
 
-const VOICE_STORAGE_KEY = 'warwiki-tts-voice';
-const MODEL_STORAGE_KEY = 'warwiki-tts-model';
-const CACHE_NAME = 'warwiki-tts-v1';
+// Bump the cache name whenever the server's voice, model or instructions change.
+const CACHE_NAME = 'warwiki-tts-v2';
+const RETIRED_CACHES = ['warwiki-tts-v1'];
+const RETIRED_STORAGE_KEYS = ['warwiki-tts-voice', 'warwiki-tts-model'];
 const MAX_CHUNK_CHARS = 3500;
 const API_ENDPOINT = '/api/tts';
-
-type Voice = 'alloy' | 'echo' | 'fable' | 'onyx' | 'nova' | 'shimmer';
-type Model = 'tts-1' | 'tts-1-hd';
-
-const VOICES: { id: Voice; label: string; description: string }[] = [
-  { id: 'shimmer', label: 'Shimmer', description: 'Soft female — default' },
-  { id: 'nova', label: 'Nova', description: 'Professional female' },
-  { id: 'alloy', label: 'Alloy', description: 'Neutral' },
-  { id: 'echo', label: 'Echo', description: 'Male, measured' },
-  { id: 'fable', label: 'Fable', description: 'British male' },
-  { id: 'onyx', label: 'Onyx', description: 'Deep male' },
-];
 
 // SHA-256 hex digest (SubtleCrypto — browser-only)
 async function sha256(text: string): Promise<string> {
@@ -170,8 +160,8 @@ function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
 }
 
 // Fetch one chunk's audio as a Blob, with Cache API read-through
-async function fetchChunkAudio(text: string, voice: Voice, model: Model, signal: AbortSignal): Promise<Blob> {
-  const hash = await sha256(`${model}|${voice}|${text}`);
+async function fetchChunkAudio(text: string, signal: AbortSignal): Promise<Blob> {
+  const hash = await sha256(text);
   const cacheKey = `/tts-audio/${hash}.mp3`;
 
   if ('caches' in window) {
@@ -187,7 +177,7 @@ async function fetchChunkAudio(text: string, voice: Voice, model: Model, signal:
   const response = await fetch(API_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text, voice, model }),
+    body: JSON.stringify({ text }),
     signal,
   });
 
@@ -238,10 +228,7 @@ export default function ArticleListener(): React.ReactElement | null {
   const [state, setState] = useState<'idle' | 'loading' | 'playing' | 'paused' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
   const [rate, setRate] = useState(1.0);
-  const [voice, setVoice] = useState<Voice>('shimmer');
-  const [model, setModel] = useState<Model>('tts-1');
   const [usingFallback, setUsingFallback] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
   const [showChapters, setShowChapters] = useState(false);
   const [chunkProgress, setChunkProgress] = useState<{ current: number; total: number } | null>(null);
   const [sections, setSections] = useState<SectionMeta[]>([]);
@@ -269,13 +256,14 @@ export default function ArticleListener(): React.ReactElement | null {
       return;
     }
 
+    // Clear audio and preferences left by the old multi-voice player.
     try {
-      const storedVoice = localStorage.getItem(VOICE_STORAGE_KEY);
-      if (storedVoice && VOICES.some((v) => v.id === storedVoice)) setVoice(storedVoice as Voice);
-      const storedModel = localStorage.getItem(MODEL_STORAGE_KEY);
-      if (storedModel === 'tts-1' || storedModel === 'tts-1-hd') setModel(storedModel);
+      RETIRED_STORAGE_KEYS.forEach((key) => localStorage.removeItem(key));
     } catch {
       /* localStorage unavailable */
+    }
+    if ('caches' in window) {
+      RETIRED_CACHES.forEach((name) => caches.delete(name).catch(() => undefined));
     }
 
     return () => {
@@ -407,7 +395,7 @@ export default function ArticleListener(): React.ReactElement | null {
       sectionMetaRef.current = meta;
       setSections(meta);
 
-      const queue = new AudioQueue(chunks, (text, signal) => fetchChunkAudio(text, voice, model, signal));
+      const queue = new AudioQueue(chunks, fetchChunkAudio);
       queueRef.current = queue;
       currentIndexRef.current = 0;
 
@@ -435,7 +423,7 @@ export default function ArticleListener(): React.ReactElement | null {
       currentIndexRef.current = startIndex;
       playIndex(startIndex);
     },
-    [voice, model, rate, playIndex, disposeQueue],
+    [rate, playIndex, disposeQueue],
   );
 
   const startDevicePlayback = useCallback((chunks: string[]) => {
@@ -541,7 +529,6 @@ export default function ArticleListener(): React.ReactElement | null {
     disposeQueue();
     setState('idle');
     setUsingFallback(false);
-    setShowSettings(false);
   }, [usingFallback, disposeQueue]);
 
   const handleRateChange = useCallback(
@@ -552,24 +539,6 @@ export default function ArticleListener(): React.ReactElement | null {
     },
     [usingFallback],
   );
-
-  const handleVoiceChange = useCallback((newVoice: Voice) => {
-    setVoice(newVoice);
-    try {
-      localStorage.setItem(VOICE_STORAGE_KEY, newVoice);
-    } catch {
-      /* */
-    }
-  }, []);
-
-  const handleModelChange = useCallback((newModel: Model) => {
-    setModel(newModel);
-    try {
-      localStorage.setItem(MODEL_STORAGE_KEY, newModel);
-    } catch {
-      /* */
-    }
-  }, []);
 
   if (!supported) return null;
 
@@ -656,17 +625,6 @@ export default function ArticleListener(): React.ReactElement | null {
               </svg>
             </button>
           )}
-          {cloudEnabled && <button
-            type="button"
-            onClick={() => setShowSettings((s) => !s)}
-            className={`${styles.controlButton} ${showSettings ? styles.active : ''}`}
-            aria-label="Voice settings"
-            aria-expanded={showSettings}
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
-            </svg>
-          </button>}
         </div>
       )}
       {isError && (
@@ -699,48 +657,6 @@ export default function ArticleListener(): React.ReactElement | null {
               <span className={styles.chapterTitle}>{s.title}</span>
             </button>
           ))}
-        </div>
-      )}
-      {cloudEnabled && isActive && showSettings && (
-        <div className={styles.settingsPanel}>
-          <div>
-            <label htmlFor="warwiki-tts-voice" className={styles.settingsLabel}>
-              Voice
-            </label>
-            <select
-              id="warwiki-tts-voice"
-              className={styles.voiceSelect}
-              value={voice}
-              onChange={(e) => handleVoiceChange(e.target.value as Voice)}
-              disabled={usingFallback}
-            >
-              {VOICES.map((v) => (
-                <option key={v.id} value={v.id}>
-                  {v.label} — {v.description}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="warwiki-tts-model" className={styles.settingsLabel}>
-              Quality
-            </label>
-            <select
-              id="warwiki-tts-model"
-              className={styles.voiceSelect}
-              value={model}
-              onChange={(e) => handleModelChange(e.target.value as Model)}
-              disabled={usingFallback}
-            >
-              <option value="tts-1">Standard (tts-1)</option>
-              <option value="tts-1-hd">High Definition (tts-1-hd)</option>
-            </select>
-          </div>
-          <p className={styles.settingsHint}>
-            {usingFallback
-              ? "Using your browser's built-in voice (cloud TTS unavailable). Voice and quality settings don't apply in fallback mode."
-              : 'Changes take effect on the next play. Audio is cached per article + voice; the same combination replays instantly.'}
-          </p>
         </div>
       )}
     </div>

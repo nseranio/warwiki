@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Article listener: one narrator (Marin on gpt-4o-mini-tts)
+
+- User compared Marin, Cedar (gpt-4o-mini-tts with a "calm clinical lecturer" brief) and the old default Shimmer (tts-1) on an Indiana pouch passage and chose Marin. Samples: `reports/2026-10-03/tts-samples/` (off-git).
+- `api/tts.ts` now fixes model, voice and instructions server-side and ignores client voice/model, so each chunk is generated and paid for once and shared by every listener. Cache key includes the instructions (changing the brief regenerates audio). Budget reservation 20 micro-dollars per character (measured about 17); mp3 size estimate corrected from 700 to 1,100 bytes per character (128 kbps measured).
+- Player: voice and quality pickers and the settings gear removed; browser cache renamed `warwiki-tts-v2`, and the old `v1` cache and stored voice/model preferences are cleared on load.
+
 ## 2026-10-03 — History and surgeon-profile cross-links on 81 clinical and technique pages
 
 - 103 links (65 to 43 surgeon profiles, 38 to History sections) so a reader can reach the people and history behind a topic in one click. Report: `reports/2026-10-03/history-crosslinks.md`.
