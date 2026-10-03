@@ -29,3 +29,28 @@ Layer 1 of the site consistency plan: check every DOI-bearing reference against 
 
 - About 3,350 references carry no DOI: about 1,900 are URL-only (guidelines, websites) and the rest are plain text. A Crossref and PubMed search could add DOIs to the plain-text journal articles.
 - **Formatting is not uniform.** DOI link style (99%) and italic journal names (96%) are consistent, but about half the references put the title in quotation marks and half do not, and about half list every author while half truncate with "et al." 2,559 DOIs cited more than once appear as textually different lines. Normalizing the format needs a decision on the house citation style before any rewrite.
+
+## DOI discovery for references without a DOI (same day)
+
+- 1,027 journal-style references had no DOI. `python3 scripts/refs/find_dois.py` matched them to PubMed (through an existing PMID) or Crossref. A match counted as high confidence only when title, first author, year, volume and first page all agreed: 617 lines, 12 of 12 sampled by hand correct, DOIs added in commit `c6dbe065`.
+- Codex searched PubMed, Crossref and publisher sites for the other 410 (`codex-doi-verdicts.jsonl`):
+
+  | Verdict | Lines |
+  |---|---|
+  | Exists without a DOI (mostly before 1995) | 326 |
+  | DOI found | 70 |
+  | Miscited | 7 |
+  | Not a journal article | 6 |
+  | Not found | 1 |
+
+  69 of the 70 DOIs were added after a Crossref check, in commit `ba1997ad`. The Gilja 1996 Mainz pouch II DOI returns 404 and was not added.
+- **Miscitations corrected against PubMed (`ba1997ad`):**
+  - The Turner-Warwick scrotal drop-back report was attributed to the wrong authors and journal (it is Boddepalli et al., *Indian J Urol* 2019).
+  - The Mauck Boari-flap paper is in *J Urol*, not *Int Braz J Urol*.
+  - The Balzano 2022 title and pages were wrong.
+  - The MMWR PRP report is now attributed to its authors rather than "CDC".
+  - Two authors had been inserted into Basiri 2011.
+  - The Arnold 2021 PMID was wrong.
+- **Needs the user:**
+  1. `priapism-shunts-decompression.mdx` ref 18 (Mireku-Boateng, *Urol Int* 2001;66:216–217, fistula closure after Winter shunt) cannot be found in PubMed or at the publisher. It supports one sentence ("fistula closure has been reported to restore erections in select cases"). The reference may be wrong or may not exist.
+  2. `otis-bougie.mdx` ref (Schultheiss, *De Historia Urologiae Europaeae* 2021;28): the linked EAU PDF is dead, and Codex reports that volume 28's stricture-history article is by Mundy. Not verified.

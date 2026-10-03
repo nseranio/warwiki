@@ -28,5 +28,5 @@ The reference metadata, the attribution facts and the numbers shared between pag
 
 - **`posterior-urethral-stenosis.mdx`** still has an "At a Glance" block of seven cited key points. The September 27 design rule says no At a glance blocks, but removing cited content needs the user's call (rename to a plain heading, fold into the sections, or keep).
 - **Surgeon profiles (215)** have no Pass 1 record because their prose sits inside the `SurgeonProfile` component, which `pass1.py` skips. Their voice metrics are mostly low; a few outliers (Turner-Warwick, Virasoro, Elliott) are listed in `reports/2026-10-03/scorecard/scorecard.md`.
-- **About 3,350 references carry no DOI** (about 1,900 URL-only). A Crossref and PubMed search for the plain-text journal articles would bring them into the registry check.
+- **DOI discovery done:** of 1,027 DOI-less journal references, 686 now carry a verified DOI, 326 exist without one and 6 miscitations were corrected (see `ref-registry/README.md`). Two references need the user: the unfindable Mireku-Boateng 2001 priapism reference and the Schultheiss Historia article behind a dead link. Book and URL-only references (about 3,000) are not covered.
 - **688 content pages lack `evidenceUpdated`.** This is provenance metadata and must not be manufactured from Git dates, so it is left for the evidence cadence.

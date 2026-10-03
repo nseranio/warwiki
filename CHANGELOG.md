@@ -12,6 +12,7 @@ For commit-level detail run `git log --oneline`.
 - References: 19,424 DOI-bearing references compared with Crossref; 347 flags, about 20 real errors fixed on 12 pages (Onofre DOI, two wrong author lists, five years, three "Client Challenge" placeholder titles). Report: `reports/2026-10-03/ref-registry/`.
 - People: Ahmad Orandi (not Amin), Turner-Warwick 1925–2020 on the retractor page, Bogoras spelling, Mulcahy salvage History now cites the 1996 first series.
 - Shared-source numbers: 469 papers cited with numbers on two or more pages; no contradictions found.
+- DOI discovery: 686 DOI-less journal references gained verified DOIs (PubMed or Crossref, Codex for hard cases); six miscitations corrected; one reference (Mireku-Boateng 2001, priapism page) cannot be found and is flagged for the user.
 - Voice Pass 1 on 81 pages added after the September sweep (Codex edits through the `pass1.py` invariant gate); See Also order fixed on two pages. STYLE.md section 10 sets the reference format for new and edited references.
 
 ## 2026-10-03 — Article listener: one narrator (Marin on gpt-4o-mini-tts)
