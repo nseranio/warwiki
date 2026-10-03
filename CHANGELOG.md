@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Outcome data sources and registries section (GAS overview)
+
+- **Outcome Data Sources and Registries** section added to Gender-Affirming Surgery — Overview (21 new footnotes, 31 total): the Transgender and Non-Binary Surgery (TRANS) Registry (Dy, Blasdel, Dugi et al. 2024: community-engaged, EHR-enabled, vaginoplasty/vulvoplasty, three pilot centers, PRO set named, no enrollment or outcomes reported), TRANS-ARC (research prioritization, not a registry), comparators (NSQIP, Amsterdam cohort, ENIGI, GENDER-Q, GenderCOS) with a 7-row table, and limits of current data (validated PRO use, surgeon- vs patient-reported complications, loss to follow-up, regret, a neutral detransition note). Dy, Dugi, Bluebond-Langner, Zhao, Nikolavsky and Ferrando profiles linked; links from the feminizing and masculinizing procedures pages.
+- Built from the user's OpenEvidence answer as leads. Corrections: the registry paper does name its PRO instruments (PROMIS-29 subset, PROMIS SexFS 2.0, FGSIS, Transgender Congruence Scale, PHQ-2, IPSS, UDI-6) and three pilot centers; the 1,082-patient fistula data are van der Sluis 2016, not Ferrando 2023 (rectoneovaginal fistula 0.8% primary vs 6.3% revision, OR 8.6); Amsterdam coverage is >95%; the one GENDER-Q test-retest exception is an item, not a scale. Dropped: an unverifiable Viewpoint (Barbee 2024), an unverified response-rate range, pediatric and chest-only items, ENIGI extras and the duplicate reference.
+
 ## 2026-10-02 — Postpartum perineal clinic section (obstetric perineal injury page)
 
 - **Postpartum Perineal Clinic** section added to Obstetric Perineal Lacerations (31 new refs, 58 total): referral and timing with a guideline table (RCOG GTG 29, IUGA 2026, ACOG/Australian/German as summarized by IUGA), the clinic visit, EAUS/manometry/transperineal ultrasound, a nine-row table of published clinic models (Croydon, Liverpool, Michigan, Cleveland Clinic, Dublin, Toronto and others), reoperation in clinic cohorts, mode of delivery after OASI (now the single home for that counseling; EPIC trial added) and evidence gaps. Fenner, Sultan and Thakar profiles linked; links back from the fecal incontinence and anal sphincteroplasty pages.
