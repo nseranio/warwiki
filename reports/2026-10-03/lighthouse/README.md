@@ -36,4 +36,22 @@ Local before/after on the article page (static `npm run serve` without compressi
 
 ## After the change (live)
 
-(pending: re-run the same eight Lighthouse measurements after deploy)
+Same eight measurements on the live site after commit `1ca4d7b5` deployed (October 3).
+
+| Page | Form | Perf | FCP | LCP | CLS |
+|---|---|---|---|---|---|
+| Homepage | mobile | 70 → 73 | 3.0 → 2.7 s | 5.6 → 5.5 s | 0 → 0 |
+| Homepage | desktop | 96 → 99 | 0.9 → 0.5 s | 1.3 → 0.9 s | 0.001 → 0.001 |
+| Article | mobile | 66 → **94** | 3.8 → 1.3 s | 6.5 → **3.0 s** | 0 → 0 |
+| Article | desktop | 84 → **100** | 1.0 → 0.4 s | 1.3 → 0.4 s | **0.226 → 0.002** |
+| Atlas | mobile | 69 → **91** | 3.2 → 1.3 s | 5.9 → 3.1 s | 0 → 0.006 |
+| Atlas | desktop | 93 → 96 | 0.9 → 0.4 s | 1.1 → 0.8 s | 0.12 → 0.112 |
+| Video Library | mobile | 69 → **96** | 4.0 → 1.1 s | 5.0 → **2.7 s** | 0 → 0.001 |
+| Video Library | desktop | 99 → 99 | 0.6 → 0.6 s | 0.8 → 0.9 s | 0.046 → 0.001 |
+
+## Remaining
+
+- **Homepage mobile LCP 5.5 s.** The LCP element is the trailer `<video>` poster (27 KB, downloads in about 0.2 s, server-rendered); Lighthouse attributes 4.6 s to render delay under its simulated mid-range phone, while main-thread blocking is only 45 ms. Field data from real devices would show whether readers see this; options if it matters are a static poster `<img>` that swaps to the video on click, or a `fetchpriority="high"` preload of the poster.
+- **Atlas desktop CLS 0.11.** The shifting node is a level-1 sidebar category that expands after hydration (Docusaurus sidebar behavior around the hidden atlas pages), not the database.
+- **Mobile LCP about 3 s on articles and atlas pages**, just above the 2.5 s target; the next item Lighthouse lists is unused JavaScript (about 300 ms).
+- **Accessibility 89–96:** color contrast, color-only links in text, control label/name mismatches, small tap targets on articles.
