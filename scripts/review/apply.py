@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""Collect verified review findings and apply the agreed edits.
+
+  python3 scripts/review/apply.py list [--section PREFIX]      -> WORK/review-sheet.md (pending agreed edits, high first)
+  python3 scripts/review/apply.py apply [--section PREFIX] [--skip ID ...]
+      Applies agreed or modified edits (verifier verdict agree/modify) whose `old` text occurs exactly once in the
+      current page. Pages with uncommitted changes not made by this tool are skipped. Applied and skipped edits are
+      recorded in WORK/applied.json, so each finding is applied once.
+"""
+import json, os, sys, glob, hashlib, subprocess
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
+LEDGER = os.path.join(WORK, "applied.json")
+
+
+def fid(v):
+    return hashlib.sha1((v["page"] + (v.get("edit") or {}).get("old", "") + v.get("finding", "")).encode()).hexdigest()[:10]
+
+
+def accepted(section=None):
+    led = json.load(open(LEDGER)) if os.path.exists(LEDGER) else {}
+    out = []
+    for f in sorted(glob.glob(os.path.join(WORK, "verdicts", "*.jsonl"))):
+        for line in open(f):
+            if not line.strip():
+                continue
+            try:
+                v = json.loads(line)
+            except Exception:
+                continue
+            if v.get("verdict") not in ("agree", "modify") or not v.get("edit") or not v["edit"].get("old"):
+                continue
+            if section and not v["page"].startswith(section):
+                continue
+            v["id"] = fid(v)
+            if v["id"] not in led:
+                out.append(v)
+    rank = {"high": 0, "medium": 1, "low": 2}
+    return sorted(out, key=lambda v: (v["page"], rank.get(v.get("severity"), 3))), led
+
+
+def main():
+    a = sys.argv[1:]
+    cmd = a[0] if a else "list"
+    section = a[a.index("--section") + 1] if "--section" in a else None
+    skip = set(a[a.index("--skip") + 1:]) if "--skip" in a else set()
+    items, led = accepted(section)
+    if cmd == "list":
+        lines = [f"# Review sheet ({len(items)} agreed edits pending)", ""]
+        for v in items:
+            lines += [f"## {v['id']} [{v.get('severity')}] {v['page']} ({v['verdict']})", f"Finding: {v.get('finding','')}",
+                      f"Verifier: {v.get('reason','')}", f"- OLD: {v['edit']['old']}", f"- NEW: {v['edit']['new']}", ""]
+        open(os.path.join(WORK, "review-sheet.md"), "w").write("\n".join(lines))
+        bysev = {}
+        for v in items:
+            bysev[v.get("severity")] = bysev.get(v.get("severity"), 0) + 1
+        print(len(items), bysev, "->", os.path.join(WORK, "review-sheet.md"))
+        return
+    dirty = {l[3:].strip() for l in subprocess.check_output(["git", "status", "--short"], cwd=ROOT).decode().splitlines() if l[:2].strip()}
+    mine = set(json.load(open(os.path.join(WORK, "touched.json")))) if os.path.exists(os.path.join(WORK, "touched.json")) else set()
+    applied, skipped = [], []
+    for v in items:
+        if v["id"] in skip:
+            led[v["id"]] = {"status": "vetoed", "page": v["page"]}; continue
+        p = os.path.join(ROOT, v["page"])
+        if v["page"] in dirty and v["page"] not in mine:
+            skipped.append((v, "page has uncommitted changes from another session")); continue
+        s = open(p).read()
+        old, new = v["edit"]["old"], v["edit"]["new"]
+        n = s.count(old)
+        if n != 1:
+            led[v["id"]] = {"status": f"not applied: old found {n} times", "page": v["page"]}
+            skipped.append((v, f"old found {n} times")); continue
+        open(p, "w").write(s.replace(old, new))
+        led[v["id"]] = {"status": "applied", "page": v["page"], "severity": v.get("severity")}
+        mine.add(v["page"]); applied.append(v)
+    json.dump(led, open(LEDGER, "w"), indent=1)
+    json.dump(sorted(mine), open(os.path.join(WORK, "touched.json"), "w"))
+    print(f"applied {len(applied)} edits on {len({v['page'] for v in applied})} pages; skipped {len(skipped)}")
+    for v, why in skipped:
+        print("  skip", v["id"], v["page"], why)
+
+
+if __name__ == "__main__":
+    main()
