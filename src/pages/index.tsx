@@ -67,8 +67,10 @@ const SUGGESTED_SEARCHES = [
   'Urodynamics',
 ];
 
+// Format in UTC so the server-rendered date (built in UTC) matches the browser's
+// and React hydration does not fail for readers in other timezones.
 function formatDate(ms: number): string {
-  return new Date(ms).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
+  return new Date(ms).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'});
 }
 
 function HomepageHeader() {

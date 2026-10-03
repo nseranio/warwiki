@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Site improvements, batch 1: hydration fix, search synonyms, one current handbook
+
+- **Homepage hydration error fixed:** "Recently updated" dates were formatted in the machine's timezone, so the UTC build rendered a different day from US browsers and React threw error #418 on every load. Dates now format in UTC (also in the unused FreshnessBadge).
+- **Search synonyms (`algolia-synonyms.json`; re-upload in the Algolia dashboard to take effect):** removed or split groups that merged distinct concepts: IFU ≠ indwelling Foley (IFU here means instructions for use); "meta" no longer expands to metoidioplasty (460 pages say meta-analysis); Monti no longer equals ileovesicostomy; PD no longer means only Peyronie's (Parkinson's pages); DO dropped (common English word); bladder neck obstruction separated from BNC; urostomy, ileocystoplasty and Kulkarni dropped from narrower groups; phalloplasty/RFFF/ALT split into separate flap groups; vasovasostomy and vasoepididymostomy split. Families made one-way (GAHT → feminizing/masculinizing; neobladder → Studer/Hautmann/Padua; GLP-1 → semaglutide/tirzepatide/liraglutide), with brand names grouped per drug.
+- **One authoritative handbook:** AGENTS.md (1,000 lines, opening with superseded September 20–21 orders such as "defer commit/push" and "finish the audit before new OpenEvidence pulls") archived to `reports/archive/AGENTS-2026-10-02-before-compaction.md` and replaced by a short Codex note pointing to CLAUDE.md. RESUME-HERE.md archived and replaced by a pointer; AUDIT.md gains a status line (complete, paused).
+- Prompted by an outside (GPT) review; its leads were verified first (hydration error reproduced on the live site; synonym, CI, ledger and link-sampling findings confirmed in the files).
+
 ## 2026-10-02 — Ketamine cystitis: merge from a repeat OpenEvidence answer
 
 - 13 verified references merged into Ketamine Cystitis without rewriting it (41 refs, renumbered in first-use order): Taiwanese rehabilitation-centre survey (Li CC 2019: 84% LUTS, snorting worse than smoking, self-reported treatment responses), European rise (van Riel 2025 Netherlands clinic 0→137 cases, 51 operated; Raingeard 2026 France; UK use from the ONS Crime Survey bulletins, 1.7% in 2010 → 3.2% in 2020 → 2.0% in 2025), a compact experimental pathophysiology paragraph (Baker, Gu, Juan, Lin; animal data labelled), histology mimicking CIS (Lopez-Beltran), imaging and a CT bladder-cancer mimic (Cassels, Ou YL), biliary strictures, and renal outcome (Ou SH 2020: 50% vs 7% reached the renal endpoint; hydronephrosis an independent predictor).

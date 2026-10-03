@@ -1,5 +1,7 @@
 # WARWIKI Audit — Runbook (v2, September 2026)
 
+**Status (October 1, 2026): queue complete; further auditing paused by the user.** Resume only when asked; current state is in [CLAUDE.md](CLAUDE.md).
+
 This replaces the September 2026 v1 workflow (`reports/2026-09-20/audit-workflow.md`, `audit-control.json`, the page ledger and claim-batch schema). Those files remain as history and as a source of prior checks. Do not update them.
 
 **Goal:** every clinical page teaches correctly, with its consequential claims traceable to real sources. A page is **done** when its sources have been checked and needed corrections are published. It does not need a completion certificate.
