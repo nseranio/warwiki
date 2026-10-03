@@ -13,6 +13,7 @@ For commit-level detail run `git log --oneline`.
 - People: Ahmad Orandi (not Amin), Turner-Warwick 1925–2020 on the retractor page, Bogoras spelling, Mulcahy salvage History now cites the 1996 first series.
 - Shared-source numbers: 469 papers cited with numbers on two or more pages; no contradictions found.
 - DOI discovery: 686 DOI-less journal references gained verified DOIs (PubMed or Crossref, Codex for hard cases); six miscitations corrected; one reference (Mireku-Boateng 2001, priapism page) cannot be found and is flagged for the user.
+- Follow-up: priapism shunt and Otis bougie references corrected; posterior stenosis At a Glance folded into the page; 50 book and chapter references corrected (Crossref-verified chapter DOIs and pages); voice Pass 1 on 7 surgeon profiles; Codex full-review pilot on 8 pages (`reports/2026-10-03/full-review-proposal.md`).
 - Voice Pass 1 on 81 pages added after the September sweep (Codex edits through the `pass1.py` invariant gate); See Also order fixed on two pages. STYLE.md section 10 sets the reference format for new and edited references.
 
 ## 2026-10-03 — Article listener: one narrator (Marin on gpt-4o-mini-tts)

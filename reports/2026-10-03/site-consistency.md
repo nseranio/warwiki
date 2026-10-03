@@ -24,9 +24,16 @@ The reference metadata, the attribution facts and the numbers shared between pag
 - Reference format: STYLE.md section 10 now sets the house format for new and edited references (quoted titles, AMA author truncation, version-of-record year). The existing roughly 19,000 lines are not rewritten in bulk.
 - The four scripts are listed in the CLAUDE.md command table for the quarterly evidence cadence.
 
-## Open items
+## Follow-up (same day, after user answers)
 
-- **`posterior-urethral-stenosis.mdx`** still has an "At a Glance" block of seven cited key points. The September 27 design rule says no At a glance blocks, but removing cited content needs the user's call (rename to a plain heading, fold into the sections, or keep).
-- **Surgeon profiles (215)** have no Pass 1 record because their prose sits inside the `SurgeonProfile` component, which `pass1.py` skips. Their voice metrics are mostly low; a few outliers (Turner-Warwick, Virasoro, Elliott) are listed in `reports/2026-10-03/scorecard/scorecard.md`.
-- **DOI discovery done:** of 1,027 DOI-less journal references, 686 now carry a verified DOI, 326 exist without one and 6 miscitations were corrected (see `ref-registry/README.md`). Two references need the user: the unfindable Mireku-Boateng 2001 priapism reference and the Schultheiss Historia article behind a dead link. Book and URL-only references (about 3,000) are not covered.
-- **688 content pages lack `evidenceUpdated`.** This is provenance metadata and must not be manufactured from Git dates, so it is left for the evidence cadence.
+- **Priapism shunts ref 18:** replaced by Stein, Patel and Benoit 2005 (PubMed 15780394), which reports the case. The Mireku-Boateng paper the user found (PubMed 11464133) is a cocaine-priapism case report and does not support the sentence.
+- **Otis bougie ref 2:** the *Historia* vol. 28 chapter is Mundy, "A history of the treatment of urethral stricture disease" (pp. 35–88). The claim was checked on pp. 61 and 65.
+- **Posterior urethral stenosis:** the At a Glance block was folded into the page. Five of its seven points were already stated, with the same citations, in the sections below; the other two were moved into The Entities, Evaluation and the management table.
+- **Surgeon profiles:** voice Pass 1 was run through the same gate (component tags and footnotes blanked on copies, then spliced back). Seven profiles carry edits; Codex's move of the year inside the bold label was reverted to keep the profile convention.
+- **Book references:** Codex checked all 592 unique book and chapter references. 461 were correct and 50 were corrected with Crossref or BOOKS.md confirmation (chapter end pages, chapter DOIs, missing editors). 32 proposals were left unchanged.
+- **Full-site second review:** pilot and proposal in `full-review-proposal.md`. The pilot found 28 high-severity findings on 8 already-audited pages, and the three Claude checked were real errors.
+
+## Still open
+
+- 688 content pages lack `evidenceUpdated`. This is provenance metadata and is not to be manufactured from Git dates.
+- About 2,350 URL-only references are covered by the quarterly external-link check, not by this pass.
