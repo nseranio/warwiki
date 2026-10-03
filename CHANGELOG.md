@@ -6,6 +6,10 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Glans augmentation: Alahwany 2019 responder time course
+
+- Added the responder IELT time course from Alahwany 2019 Fig. 3 (n = 20 who improved at 1 month; medians 34 s baseline, 44.5 s at 1 week, 120 s at 1 month, 105.5 s at 3 months, 85 s at 6 months, 45 s at 9 months; significant versus baseline from 1 month on, not at 1 week), verified from the figure supplied by the user; text notes that only responders were followed beyond 1 month. Still unverified (need the Results text): the single superficial papule, the full SSRI fold list, and the injected volume (page: 2 mL in 0.2 mL aliquots; an OpenEvidence summary said 1 mL).
+
 ## 2026-10-03 — Site improvements, batch 3: shareable filter links, font loading, blocking browser tests, Codex config, speed baseline
 
 - **Shareable filter links:** atlas databases (`GenericDatabase`, all 25 pages) mirror search, filter and sort into the URL (`?q=&filter=&sort=`, optional `urlKey` prefix), and the Video Library mirrors `?q=&channel=&topic=&playlist=&sort=`. A filtered view can be shared and survives opening a row and pressing Back. State renders at defaults on the server and is read from the URL after hydration, so markup still matches. New `tests/e2e/url-state.spec.ts`.
