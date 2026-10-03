@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Glans augmentation with hyaluronic acid (new page)
+
+- **Glans Augmentation with Hyaluronic Acid** (male cosmetic atlas, 31 refs; database row under a new "Injectable Glans" domain; linked from the HA girth filler page and the PE section of the local anesthetics page; Yang and Trost profiles linked). Built from the user's OpenEvidence answer as leads: covers cosmetic glans enlargement, glans after prosthesis, the premature-ejaculation indication (11-row trial table), technique, durability, complications with a vascular-occlusion protocol labelled as extrapolated from facial practice, and society positions checked in the primary texts (AUA/SMSNA 2022 statement 15 experimental; ISSM 2014 does not recommend; EAU 2026 added).
+- Corrections to the answer: Kim 2003 77% satisfaction was group I only (69% group II); vibratory-threshold data are from Kim 2004 and Kwak 2008; only the paroxetine 8.8-fold SSRI figure kept (Waldinger 2004 via the AUA/SMSNA guideline); facial consensus favours hyaluronidase within 24 h, not 4–6 h; two penile HA vascular-occlusion cases exist (the answer said none); Alahwany medians not in accessible text, so only the fold-change is used. Dropped as unsupportive or off-topic: Yang 2017 PLA and Hardrock (cited for FDA status), Quan 2021 (shaft series), and several reviews; Penuma clearance date omitted; FDA status cites the FDA dermal-filler page.
+
 ## 2026-10-02 — Damage control page; 25 open-access figures from newly cited papers
 
 - **Damage Control in Genitourinary Trauma** (trauma section, 21 refs; principles, temporizing maneuvers by organ with a summary table, return and definitive repair, outcomes, evidence gaps; linked from the trauma landing page, GU injury overview and the renal, ureteral, bladder and PFUI pages; Coburn and McAninch profiles linked). Built from the user's OpenEvidence answer as leads; corrections included the return interval (sources give 24–48 h, not 48–72 h), nephrectomy after exploration (EAU about 30%, 85% when zone II Gerota is opened), TQIP grade III nephrectomy linked to higher adjusted mortality, concurrent cystorrhaphy benefit attributed to Johnsen 2016 (MiGUTS found no complication difference), and the hilar-control conflict (German guideline vs Gonzalez 1999 RCT).
