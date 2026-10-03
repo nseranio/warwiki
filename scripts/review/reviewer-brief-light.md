@@ -11,3 +11,5 @@ Output for each page: OUTPUT_DIR/<page-basename>.jsonl, one finding per line:
 Also OUTPUT_DIR/<page-basename>.summary.md: claims checked, sources opened, and a 2-line verdict. An empty .jsonl is fine when nothing needs changing.
 
 MDX and citation rules: write `&lt;`/`&gt;` in prose; keep the page's own citation style; a new reference uses the next unused number and its own reference-list line, never a number another finding on the page already uses.
+
+NEW REFERENCES (overrides any earlier instruction about reference-list lines): never edit the reference list in an `edit`. When a finding needs a new reference, cite it in the edit's `new` text as `<sup>[[Rk]](#refRk)</sup>` (R1, R2 ... local placeholders, one per new source in this finding) and add to the JSON object a field "new_refs": [{"key": "R1", "line": "Last FM, et al. \"Title.\" *Journal.* Year;Vol(Issue):Pages. doi:[10.x/y](https://doi.org/10.x/y)"}]. The apply tool numbers it and appends it to the reference list. Keep each `old` short (one sentence, list item or table row; never more than about 1,200 characters).

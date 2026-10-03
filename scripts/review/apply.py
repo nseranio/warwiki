@@ -91,6 +91,25 @@ def main():
         s = open(p).read()
         old, new = v["edit"]["old"], v["edit"]["new"]
         new = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", new)
+        refs = v.get("new_refs") or []
+        if refs:
+            nums = [int(x) for x in re.findall(r'<a id="ref(\d+)"></a>', s)]
+            nxt = (max(nums) if nums else 0) + 1
+            add = []
+            for r in refs:
+                k = r.get("key"); line = r.get("line", "").strip()
+                if not k or not line:
+                    continue
+                new = new.replace(f"[[{k}]](#ref{k})", f"[[{nxt}]](#ref{nxt})")
+                add.append(f'<a id="ref{nxt}"></a>{nxt}. {line}')
+                nxt += 1
+            if re.search(r"\[\[R\d+\]\]", new) or not add:
+                skipped.append((v, "unresolved new-reference placeholder")); continue
+            anchors = list(re.finditer(r'^<a id="ref\d+"></a>.*$', s, re.M))
+            if not anchors:
+                skipped.append((v, "new reference on a page without numbered anchors")); continue
+            last = anchors[-1]
+            s = s[:last.end()] + "\n\n" + "\n\n".join(add) + s[last.end():]
         new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
         n = s.count(old)
         if n == 0:
