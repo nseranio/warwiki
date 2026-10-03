@@ -80,7 +80,7 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 1. (Dropped: no NLUTD 2024 amendment could be found.)
 2. (Supplied September 26 evening: AUA/ASCO/SUO MIBC 2024.)
 3. The 2025 AUGS-IUGA complications update (Haylen 2011 now supplied and the C/T/S table closed).
-4. ACOG documents: Practice Bulletins 214 (prolapse), 213 (sexual dysfunction), 155 (urinary incontinence), 210 (fecal incontinence), 198 (obstetric lacerations), 218 (chronic pelvic pain); Committee Opinions 694 (mesh complications), 795 (cosmetic genital surgery), 823 (transgender care).
+4. ACOG documents: Practice Bulletins 214 (prolapse), 213 (sexual dysfunction), 155 (urinary incontinence), 210 (fecal incontinence), 218 (chronic pelvic pain); Committee Opinions 694 (mesh complications), 795 (cosmetic genital surgery), 823 (transgender care). Practice Bulletin 198 (obstetric lacerations, 2018 interim update) was received October 3, 2026 and checked against the six pages that cite it (vulva, perineum, locking stitch, obstetric perineal lacerations, vulvar primary closure, anal sphincteroplasty).
 5. (Supplied: EAU 2026 Male LUTS, Chronic Pelvic Pain, ACS GU Injury 2025.)
 6. ASCRS guidelines other than the two supplied: Constipation (2024), Hemorrhoids (2024), Ostomy (2022), Diverticulitis, Crohn's, Rectal Prolapse.
 7. AUA VUR guideline and other AUA/SUFU/AUGS documents not yet supplied.
