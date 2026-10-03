@@ -10,8 +10,11 @@ import json, os, re, subprocess, sys, time, glob, shutil, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
-BRIEF = {k: open(os.path.join(ROOT, "scripts/review", f)).read() for k, f in
-         (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"))}
+BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"))
+
+
+def brief(k):
+    return open(os.path.join(ROOT, "scripts/review", dict(BRIEFS)[k])).read()
 ARGS = sys.argv[1:]
 NR = int(ARGS[ARGS.index("--reviewers") + 1]) if "--reviewers" in ARGS else 8
 NV = int(ARGS[ARGS.index("--verifiers") + 1]) if "--verifiers" in ARGS else 3
@@ -68,13 +71,13 @@ def launch(st, kind, pages):
     d = os.path.join(WORK, "jobs", jid)
     os.makedirs(d, exist_ok=True)
     if kind == "review":
-        brief = BRIEF["light" if all(st["pages"][p]["tier"] == 4 for p in pages) else "full"]
+        b = brief("light" if all(st["pages"][p]["tier"] == 4 for p in pages) else "full")
         names = "\n".join(f"- {p}  ->  write OUTPUT_DIR/{slug(p)}.jsonl and OUTPUT_DIR/{slug(p)}.summary.md" for p in pages)
-        prompt = (brief.replace("OUTPUT_DIR/<page-basename>", "OUTPUT_DIR/<slug given below>")
+        prompt = (b.replace("OUTPUT_DIR/<page-basename>", "OUTPUT_DIR/<slug given below>")
                   + f"\n\nPAGES (review each fully, one after the other; use these exact output file names):\n{names}\nOUTPUT_DIR: {d}\n")
     else:
         files = "\n".join(f"- {os.path.join(WORK, 'findings', slug(p) + '.jsonl')}" for p in pages)
-        prompt = BRIEF["verify"] + f"\n\nINPUT finding files:\n{files}\nOUTPUT: {os.path.join(d, 'verdicts.jsonl')}\n"
+        prompt = brief("verify") + f"\n\nINPUT finding files:\n{files}\nOUTPUT: {os.path.join(d, 'verdicts.jsonl')}\n"
     open(os.path.join(d, "prompt.md"), "w").write(prompt)
     proc = subprocess.Popen(["codex", "exec", "--skip-git-repo-check", "-s", "workspace-write", "-C", d,
                              "-o", os.path.join(d, "final.md"), prompt],
@@ -115,15 +118,28 @@ def finish(st, jid, ok):
     log(f"finish {jid} {j['kind']} ok={ok} minutes={(time.time() - j['start']) / 60:.0f}")
 
 
+class Orphan:
+    """Stand-in for Popen for a job started by a previous orchestrator run."""
+    def __init__(self, pid):
+        self.pid, self.returncode = pid, None
+
+    def poll(self):
+        try:
+            os.kill(self.pid, 0); return None
+        except OSError:
+            self.returncode = 0; return 0
+
+
 def main():
     os.makedirs(WORK, exist_ok=True)
     st = load_state()
-    for jid, j in list(st["jobs"].items()):  # restart: jobs from a previous run are gone
-        log(f"stale job {jid}; requeue")
-        for p in j["pages"]:
-            st["pages"][p]["status"] = "pending" if j["kind"] == "review" else "reviewed"
-        st["jobs"].pop(jid)
     procs = {}
+    for jid, j in list(st["jobs"].items()):  # restart: adopt jobs whose codex process is still alive
+        try:
+            os.kill(j["pid"], 0); procs[jid] = Orphan(j["pid"]); log(f"adopt running job {jid}")
+        except OSError:
+            log(f"stale job {jid}; collect output")
+            finish(st, jid, True)
     save(st)
     while True:
         for jid, proc in list(procs.items()):

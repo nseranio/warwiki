@@ -9,3 +9,5 @@ Rules: never invent a reference; every DOI/PMID/URL you cite must be one you ope
 Output for each page: OUTPUT_DIR/<page-basename>.jsonl, one finding per line:
 {"page": "<repo path>", "category": "accuracy|currency|consistency|completeness|voice|structure|reference", "severity": "high|medium|low", "finding": "<one or two sentences>", "evidence": "<PMID/DOI/URL and the quoted or paraphrased source text>", "edit": {"old": "<exact substring of the page>", "new": "<proposed replacement>"} or null, "confidence": "high|medium"}
 Also OUTPUT_DIR/<page-basename>.summary.md: claims checked, sources opened, and a 2-line verdict. An empty .jsonl is fine when nothing needs changing.
+
+MDX and citation rules: write `&lt;`/`&gt;` in prose; keep the page's own citation style; a new reference uses the next unused number and its own reference-list line, never a number another finding on the page already uses.

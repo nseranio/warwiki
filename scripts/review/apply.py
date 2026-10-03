@@ -7,7 +7,7 @@
       current page. Pages with uncommitted changes not made by this tool are skipped. Applied and skipped edits are
       recorded in WORK/applied.json, so each finding is applied once.
 """
-import json, os, sys, glob, hashlib, subprocess
+import json, os, re, sys, glob, hashlib, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
@@ -68,6 +68,8 @@ def main():
             skipped.append((v, "page has uncommitted changes from another session")); continue
         s = open(p).read()
         old, new = v["edit"]["old"], v["edit"]["new"]
+        new = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", new)
+        new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
         n = s.count(old)
         if n != 1:
             led[v["id"]] = {"status": f"not applied: old found {n} times", "page": v["page"]}

@@ -11,3 +11,5 @@ INPUT lists finding files (JSON Lines) written by another reviewer, one finding 
 
 Output JSON Lines at OUTPUT, one per verified finding: {"page":..., "finding": "<first 120 chars of the finding>", "severity":..., "verdict":..., "edit": {"old":...,"new":...} or null, "reason": "<one or two sentences with the source you opened>"}
 Skip low findings that are not reference fixes. Finish by printing counts per verdict.
+
+Also reject or fix any edit that: leaves a bare `<` or `>` before a number or letter in prose (must be `&lt;`/`&gt;`); cites a reference number that does not exist on the page and is not added by the same or another agreed finding on that page; or adds a reference-list line whose number collides with an existing one or with another finding's new reference on the same page (renumber in your modified edit and say so).
