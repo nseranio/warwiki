@@ -48,7 +48,9 @@ test.describe('Sitemap sweep', () => {
     test(`loads cleanly: ${url}`, async ({ page }) => {
       const errors = collectBrowserErrors(page);
       try {
-        const res = await page.goto(url, {waitUntil: 'load'});
+        // Wait for the document, not every image: hotlinked third-party
+        // portraits can hang on slow hosts, which the link check covers.
+        const res = await page.goto(url, {waitUntil: 'domcontentloaded'});
         expect(res?.status(), `HTTP status for ${url}`).toBeLessThan(400);
         await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
         if (['localhost', '127.0.0.1', '[::1]'].includes(new URL(url).hostname)) {

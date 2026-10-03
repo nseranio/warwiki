@@ -10,8 +10,9 @@ import { defineConfig, devices } from '@playwright/test';
  *   npm run build && npm run serve &
  *   npm run test:e2e
  *
- * In CI, this can be wired as a separate job — keep it out of the main
- * lint/build job since it's slower.
+ * Without WARWIKI_E2E_BASE_URL, Playwright serves `build/` itself on port
+ * 3000 (reusing a server that is already running). CI runs this as a
+ * separate job after the build (`.github/workflows/ci.yml`).
  */
 export default defineConfig({
   testDir: './tests/e2e',
@@ -23,6 +24,12 @@ export default defineConfig({
   use: {
     baseURL: process.env.WARWIKI_E2E_BASE_URL ?? 'http://localhost:3000',
     trace: 'retain-on-failure',
+  },
+  webServer: process.env.WARWIKI_E2E_BASE_URL ? undefined : {
+    command: 'npm run serve -- --port 3000 --no-open',
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
   },
   projects: [
     {

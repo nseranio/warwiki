@@ -2,9 +2,16 @@ name: External link check
 
 on:
   schedule:
-    # Monthly, independently of Vercel builds.
+    # Monthly, independently of Vercel builds. March, June, September and
+    # December (the quarterly evidence cadence) check every link; other months
+    # check a 200-link sample.
     - cron: '13 7 1 * *'
   workflow_dispatch:
+    inputs:
+      full:
+        description: 'Check every external link instead of a 200-link sample'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -16,14 +23,24 @@ concurrency:
 jobs:
   sample-external-links:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: '24'
-      - name: Sample 200 external links
-        run: node scripts/check-external-links.js --sample 200 --json > external-link-report.json
+      - name: Check external links (all in quarterly months, else a sample of 200)
+        env:
+          FULL_INPUT: ${{ inputs.full }}
+        run: |
+          month=$(date -u +%m)
+          if [ "$FULL_INPUT" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && case "$month" in 03|06|09|12) true;; *) false;; esac; }; then
+            echo "Full external-link check"
+            node scripts/check-external-links.js --all --json > external-link-report.json
+          else
+            echo "Sampled external-link check"
+            node scripts/check-external-links.js --sample 200 --json > external-link-report.json
+          fi
       - name: Upload report even when links fail
         if: always()
         uses: actions/upload-artifact@v6

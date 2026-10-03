@@ -18,7 +18,7 @@ concurrency:
 jobs:
   lint-typecheck-build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
 
@@ -47,3 +47,23 @@ jobs:
 
       - name: Freshness advisory (non-blocking)
         run: npm run lint:freshness || true
+
+      # Browser tests against the built site: every sitemap page loads and
+      # hydrates without console errors, two-timezone hydration check, search,
+      # citation previews, figure dialogs. Non-blocking while timings settle in
+      # CI; make blocking once a few runs are clean.
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests (non-blocking for now)
+        id: e2e
+        continue-on-error: true
+        run: npm run test:e2e
+
+      - name: Upload Playwright traces on failure
+        if: steps.e2e.outcome == 'failure'
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 14

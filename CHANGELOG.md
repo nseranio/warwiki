@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Site improvements, batch 2: browser tests in CI, handout source tracking, quarterly full link check
+
+- **Browser tests in CI** (non-blocking for now; `continue-on-error` until a few runs are clean): after the build, CI installs Chromium and runs the Playwright suite against `build/` (Playwright now serves it itself via `webServer`). The sitemap sweep loads all ~1,345 pages and fails on console errors, uncaught exceptions or first-party HTTP failures; traces upload on failure. New `hydration-timezones.spec.ts` loads key pages in UTC−12 and UTC+14 (26 h apart, so at least one always differs from the UTC build's date); verified to fail with React #418 on a build with the old homepage code. Failed loads of hotlinked third-party images are no longer counted (Mayo portraits load in real browsers but block headless Chromium); the sweep waits for the document, not every image. Local full run: 1,347 of 1,347 passed.
+- **Two hanging portraits removed:** Ying-Long Sa and Yue-Min Xu's photos (6thhosp.com) never finished loading in a real browser, leaving a blank slot and a page that never reached load; both profiles now use the no-photo layout.
+- **Handout source tracking** (built by Codex, reviewed): each of the 80 handouts in `src/data/handouts.ts` now lists `sourcePages` (the article(s) its content derives from) and `reviewedAgainst: '2026-10-01'`. New `npm run lint:handouts` (part of `npm run lint`) errors on missing source paths and advises when a source page has a commit after the review date. It currently flags 27 handouts whose source pages changed on October 2 (mostly signature-citation additions and today's merges); recheck them when the handouts are next revised.
+- **External links:** the monthly job checks every link (`--all`, about 15,000) in March, June, September and December and a 200-link sample in other months; a manual run can request the full check.
+- **Algolia:** the cleaned `algolia-synonyms.json` from batch 1 was uploaded by the user (October 3).
+- **Codex works again** with `-m gpt-6-sol` (the configured `gpt-6.1-sol` is rejected for the ChatGPT login); CLAUDE.md and needed-from-user item 24 updated. Run `codex exec` with stdin closed (`< /dev/null`) from background shells or it waits for input.
+
 ## 2026-10-02 — Site improvements, batch 1: hydration fix, search synonyms, one current handbook
 
 - **Homepage hydration error fixed:** "Recently updated" dates were formatted in the machine's timezone, so the UTC build rendered a different day from US browsers and React threw error #418 on every load. Dates now format in UTC (also in the unused FreshnessBadge).
