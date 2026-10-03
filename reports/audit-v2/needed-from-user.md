@@ -2,6 +2,19 @@
 
 Everything here is what Claude cannot settle alone. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md); this file is the short version, ordered by value. Sources you supplied on September 26 are listed at the end so they are not requested again.
 
+## To gather through work access (held October 3, 2026)
+
+Paywalled sources the user will fetch once institutional access is available. When one arrives (Downloads, or `reports/audit-v2/sources-local/pdfs-2026-10-03/`, gitignored), check every page that cites it, as was done October 3 for ACOG PB 198, 214, 213, 155, 218 and CO 795.
+
+| Source | What it settles |
+|---|---|
+| Djordjevic ML et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w | MLD phalloplasty page: donor-site figures (78% direct closure, 97% acceptable appearance, 21% minor dehiscence) and second-stage urethral counts (28 fistulas, 33 strictures, ~64% needing buccal stage), dropped as unverifiable |
+| SOGC Guideline No. 465, OASIs Part II (Giroux M et al. *J Obstet Gynaecol Can* 2025; doi:10.1016/j.jogc.2025.103186) and No. 457, Part I (2024) | Obstetric perineal injury page, Postpartum Perineal Clinic section: SOGC row and counseling statements now cited from the abstract only |
+| ACOG Practice Bulletin No. 210, Fecal Incontinence (2019) | Pages citing PB 210 (fecal incontinence and related) |
+| ACOG Committee Opinion No. 694, Management of Mesh and Graft Complications in Gynecologic Surgery (2017) | Mesh-complication pages |
+| ACOG Committee Opinion No. 823, Health Care for Transgender and Gender Diverse Individuals (2021) | Gender-affirming care pages |
+| Remaining gated pages, if a full copy becomes available: ACOG PB 214 p. 6 (transvaginal mesh trial data, cystoscopy, hysteropexy technique); PB 218 two pages (trauma history, referred musculoskeletal pain, pelvic denervation lines on the CPP page); CO 795 pp. 3, 5, 7 (BDD 2.5% figure) | The unverified lines named |
+
 ## A. Decisions (answer in one line each)
 
 **Answered September 26 (applied and pushed):** 1 keep both; 2 softened to "not recommended, outcomes unknown"; 3 keep "may be considered"; 4 coudé page now leads with the EAU gentle-attempt-by-experienced-staff position, ACS beside it; 5 TRAVERSE PE rating changed to "Low to Moderate"; 6 transfeminine breast screening aligned to Endocrine Society rec 4.5 and WPATH 15.6; 7 reimplantation page now carries the 2026 EAU text only (2023 sentence and its reference removed); 8 RCOG and IUGA OASIS sections merged; 9 B12 caveat added to the B12 lab page, urethrectomy frozen-section lines consolidated; 10 no hierarchy (pages already follow the statements). Items 11 to 26 remain open. Campbell-Walsh-Wein 13th ed and Wieder's Pocket Guide are in the general urology folder (remove from the not-found list; not yet indexed).
