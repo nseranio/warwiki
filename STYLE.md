@@ -130,3 +130,14 @@ Card descriptions on landing pages (`section-stack-desc`, `toc-desc`) help a rea
 > After: Masculinizing, feminizing and non-binary genital surgery, with a searchable database of techniques.
 
 `npm run lint:cards` enforces the word limit and the slash-list rule.
+
+## 10. Reference lines (October 3, 2026)
+
+Applies to every new or edited reference. Existing lines are not rewritten in bulk; a reference is brought to this form when its page is edited.
+
+- Journal article: `Last FM, Last FM, Last FM, et al. "Title." *Journal.* Year;Vol(Issue):Pages. doi:[10.xxxx/yyyy](https://doi.org/10.xxxx/yyyy)`
+- List all authors when there are six or fewer; when there are more, list the first three and add "et al." (AMA). Keep a profiled surgeon's name in the list when the paper is attributed to that surgeon on WARWIKI, since profile citation lists match authors by name.
+- Title in quotation marks, sentence or title case as published; journal in italics with its NLM abbreviation.
+- Year, volume and pages as in the version of record; when the online and print years differ, use the year printed with the volume.
+- Resolve every new DOI before committing (`scripts/audit/pubmed.py`, `scripts/refs/registry.py`). A group or society author is written as published (for example "American Urological Association").
+- `python3 scripts/refs/registry.py` re-checks every DOI-bearing reference against Crossref; run it after a large source dump.
