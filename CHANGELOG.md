@@ -6,6 +6,10 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — History & Lineage reachable from the Resources sidebar
+
+- The Resources sidebar (manual, mirroring the Resources landing page) had no route to History & Lineage, which lives in its own section (`07-roots`); its comment still said History was reached from About. Added a History & Lineage link as the last sidebar item and a matching card at the end of the Resources landing page (user report, October 3).
+
 ## 2026-10-03 — Site improvements, batch 2: browser tests in CI, handout source tracking, quarterly full link check
 
 - **Browser tests in CI** (non-blocking for now; `continue-on-error` until a few runs are clean): after the build, CI installs Chromium and runs the Playwright suite against `build/` (Playwright now serves it itself via `webServer`). The sitemap sweep loads all ~1,345 pages and fails on console errors, uncaught exceptions or first-party HTTP failures; traces upload on failure. New `hydration-timezones.spec.ts` loads key pages in UTC−12 and UTC+14 (26 h apart, so at least one always differs from the UTC build's date); verified to fail with React #418 on a build with the old homepage code. Failed loads of hotlinked third-party images are no longer counted (Mayo portraits load in real browsers but block headless Chromium); the sweep waits for the document, not every image. Local full run: 1,347 of 1,347 passed.
