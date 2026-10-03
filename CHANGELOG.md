@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-02 — Damage control page; 25 open-access figures from newly cited papers
+
+- **Damage Control in Genitourinary Trauma** (trauma section, 21 refs; principles, temporizing maneuvers by organ with a summary table, return and definitive repair, outcomes, evidence gaps; linked from the trauma landing page, GU injury overview and the renal, ureteral, bladder and PFUI pages; Coburn and McAninch profiles linked). Built from the user's OpenEvidence answer as leads; corrections included the return interval (sources give 24–48 h, not 48–72 h), nephrectomy after exploration (EAU about 30%, 85% when zone II Gerota is opened), TQIP grade III nephrectomy linked to higher adjusted mortality, concurrent cystorrhaphy benefit attributed to Johnsen 2016 (MiGUTS found no complication difference), and the hilar-control conflict (German guideline vs Gonzalez 1999 RCT).
+- **Figures:** the 913 DOIs cited since the October 1 figure pass were checked in Europe PMC (71 open access with a usable licence, 128 candidate figures on 77 pages). Four agents viewed every candidate; 25 figures were added (e.g. ketamine cystitis CT urogram and contracted-bladder cystogram, Mainz III pouchogram, PGAD Tarlov cyst MRI, MLD prosthesis with Dacron sock, Cocci double-Y incision and graft fixation, Plamadeala transecting EPA steps, Verla perineal urethrectomy exposure, Warner Kulkarni graft quilting). Cross-page duplicates were removed so each figure sits on its most specific page. Europe PMC image links return 403; images come from the PMC article pages (served at 600–800 px, kept at native size).
+
 ## 2026-10-02 — New pages from OpenEvidence leads: Mainz Pouch III, MLD phalloplasty, ketamine cystitis, PGAD/GPD
 
 - Built from the user's OpenEvidence answers treated as leads: every reference resolved on Crossref and checked against its PubMed abstract (full text where open), numbers corrected or dropped where the paper did not report them, and better primary sources added. Corrections included the Mainz III reoperation burden (8 outlet/stoma procedures in 44, not 4–5%), MLD prosthesis timing (Belgrade 6–9 months; "≥12 months" unsupported) and flap size, the source of Yee's 67.7% (second-line oral therapy) and the iPGAD control findings (venous convolutions 53.8% vs 46.2%; pudendal latencies 4/21 vs 0/24).

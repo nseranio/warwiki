@@ -4,7 +4,12 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ---
 
-## Current State (October 1, 2026)
+## Current State (October 2, 2026)
+
+- **October 2 summary:** History pages re-audited (sources, voice, links); Library dropdown now Video Library · Resources · History (Journal Club lives in Resources). Surgical Genealogy: 236 profiles under written criteria (see Surgeon Profiles note below), training cards, photos, countries, deaths from verified obituaries, verified signature work listed under Contributions (no "Known for" heading: user judged it too strong a claim). 85 signature citations added to 59 clinical pages (`reports/2026-10-02/signature-work-gaps.md`). New pages from user-supplied OpenEvidence answers (used as leads, every claim and reference re-verified): Mainz Pouch III, MLD Phalloplasty, Ketamine Cystitis, PGAD/GPD, Damage Control in GU Trauma. 25 open-access figures added from newly cited papers.
+- **Next (user's queue):** OpenEvidence answers still to come for glans augmentation, historical bladder-neck suspensions and in situ slings (Raz vaginal wall sling, Leach bone-fixed suspension, Ingelman-Sundberg repair), a postpartum perineal clinic section (obstetric perineal injury page) and a TRANS Registry section (GAS outcomes); the user may also re-run the MLD and ketamine prompts. Working notes and the page brief: `reports/surgical-genealogy/urps-work/newpages/` (off-git).
+
+## Earlier state (October 1, 2026)
 
 - **Content:** about 1,205 MDX pages. Textbook mining (25 books plus Campbell-Walsh-Wein 13th ed) is fully incorporated (method and ledgers: [reports/textbook-mining/consolidation/](reports/textbook-mining/consolidation/)). The audit queue (AUDIT.md, tiers 1 to 4) is complete; **the user does not want further auditing for now** (October 1). Open audit claims and sources still wanted are recorded in [reports/audit-v2/needed-from-user.md](reports/audit-v2/needed-from-user.md) and `reports/audit-v2/ledger.md`; use them only when the user supplies a source or asks.
 - **Clinical templates:** per-page "Clinical toolkit" cards were scrapped September 30 (too busy), and a searchable Resources template corpus built October 1 was reverted the same day at the user's request (`966a126d`). Do not rebuild a public template toolkit unless the user asks. History: [reports/clinical-toolkit/](reports/clinical-toolkit/).
