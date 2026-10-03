@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Site consistency pass: references, people facts, shared-source numbers, voice
+
+- Four repeatable checks, each a script plus Codex triage plus Claude verification (method and results: `reports/2026-10-03/site-consistency.md`): `npm run refs:registry`, `consistency:people`, `consistency:same-source`, `scorecard`.
+- References: 19,424 DOI-bearing references compared with Crossref; 347 flags, about 20 real errors fixed on 12 pages (Onofre DOI, two wrong author lists, five years, three "Client Challenge" placeholder titles). Report: `reports/2026-10-03/ref-registry/`.
+- People: Ahmad Orandi (not Amin), Turner-Warwick 1925–2020 on the retractor page, Bogoras spelling, Mulcahy salvage History now cites the 1996 first series.
+- Shared-source numbers: 469 papers cited with numbers on two or more pages; no contradictions found.
+- Voice Pass 1 on 81 pages added after the September sweep (Codex edits through the `pass1.py` invariant gate); See Also order fixed on two pages. STYLE.md section 10 sets the reference format for new and edited references.
+
 ## 2026-10-03 — Article listener: one narrator (Marin on gpt-4o-mini-tts)
 
 - User compared Marin, Cedar (gpt-4o-mini-tts with a "calm clinical lecturer" brief) and the old default Shimmer (tts-1) on an Indiana pouch passage and chose Marin. Samples: `reports/2026-10-03/tts-samples/` (off-git).
