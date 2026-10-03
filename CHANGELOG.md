@@ -6,6 +6,10 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Glans augmentation: Alahwany 2019 checked against the full text
+
+- The user supplied the Alahwany 2019 PDF (filed in `reports/audit-v2/sources-local/pdfs-2026-10-03/`, gitignored). Confirmed against the text: 2 mL total (two 1 mL syringes; 6 coronal and 4 mid-glans deep-dermal injections of 0.2 mL, 30 G, Teosyal PureSense Global Action, after 30 min of EMLA), so the page's volume stands and the OpenEvidence "1 mL" was wrong; the SSRI fold list (paroxetine 8.8, clomipramine 4.6, sertraline 4.1, fluoxetine 3.9) is the paper's citation of a prior meta-analysis, so the page keeps paroxetine via the AUA guideline. Added: adverse effects in 6/30 (20%) at 1 week (discomfort 3, ecchymosis 2, superficial-injection papule 1), all resolved by 1 month, saline ecchymosis 1; the 18-month washout before crossover.
+
 ## 2026-10-03 — Glans augmentation: Alahwany 2019 responder time course
 
 - Added the responder IELT time course from Alahwany 2019 Fig. 3 (n = 20 who improved at 1 month; medians 34 s baseline, 44.5 s at 1 week, 120 s at 1 month, 105.5 s at 3 months, 85 s at 6 months, 45 s at 9 months; significant versus baseline from 1 month on, not at 1 week), verified from the figure supplied by the user; text notes that only responders were followed beyond 1 month. Still unverified (need the Results text): the single superficial papule, the full SSRI fold list, and the injected volume (page: 2 mL in 0.2 mL aliquots; an OpenEvidence summary said 1 mL).
