@@ -18,6 +18,25 @@ def fid(v):
     return hashlib.sha1((v["page"] + (v.get("edit") or {}).get("old", "") + v.get("finding", "")).encode()).hexdigest()[:10]
 
 
+def minimal_hunks(old, new, ctx=60):
+    """Split an edit into its changed regions, each with up to ctx characters of unchanged context."""
+    import difflib
+    sm = difflib.SequenceMatcher(None, old, new, autojunk=False)
+    out = []
+    for tag, a, b, c, d in sm.get_opcodes():
+        if tag == "equal":
+            continue
+        a0, b0 = max(0, a - ctx), min(len(old), b + ctx)
+        pre, post = old[a0:a], old[b:b0]
+        out.append((pre + old[a:b] + post, pre + new[c:d] + post))
+    merged = []
+    for o, n in out:  # overlapping context: fall back to no hunks
+        if merged and o[:20] in merged[-1][0]:
+            return None
+        merged.append((o, n))
+    return merged
+
+
 def accepted(section=None):
     led = json.load(open(LEDGER)) if os.path.exists(LEDGER) else {}
     out = []
@@ -60,6 +79,9 @@ def main():
     dirty = {l[3:].strip() for l in subprocess.check_output(["git", "status", "--short"], cwd=ROOT).decode().splitlines() if l[:2].strip()}
     mine = set(json.load(open(os.path.join(WORK, "touched.json")))) if os.path.exists(os.path.join(WORK, "touched.json")) else set()
     applied, skipped = [], []
+    sheet = os.path.join(WORK, "review-sheet.md")
+    reviewed = set(re.findall(r"^## (\w{10}) ", open(sheet).read(), re.M)) if os.path.exists(sheet) else set()
+    items = [v for v in items if v["id"] in reviewed]  # only edits listed on the sheet Claude reviewed
     for v in items:
         if v["id"] in skip:
             led[v["id"]] = {"status": "vetoed", "page": v["page"]}; continue
@@ -71,6 +93,14 @@ def main():
         new = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", new)
         new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
         n = s.count(old)
+        if n == 0:
+            hunks = minimal_hunks(old, new)
+            if hunks and all(s.count(o) == 1 for o, _ in hunks):
+                for o, nn in hunks:
+                    s = s.replace(o, nn)
+                open(p, "w").write(s)
+                led[v["id"]] = {"status": "applied (minimal hunks)", "page": v["page"], "severity": v.get("severity")}
+                mine.add(v["page"]); applied.append(v); continue
         if n != 1:
             led[v["id"]] = {"status": f"not applied: old found {n} times", "page": v["page"]}
             skipped.append((v, f"old found {n} times")); continue
