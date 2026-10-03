@@ -97,6 +97,43 @@ export default function VideoLibrary() {
   const [playlist, setPlaylist] = useState('All');
   const [sort, setSort] = useState<SortMode>('playlist');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  // Filters are mirrored into the query string (?q=&channel=&topic=&playlist=&sort=)
+  // so a filtered view can be shared and survives opening an article and
+  // pressing Back. Defaults render on the server; the URL is read after
+  // hydration, and only then is it written back (`fromUrl` gates the writer).
+  const [fromUrl, setFromUrl] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    const ch = params.get('channel');
+    const tp = params.get('topic');
+    const pl = params.get('playlist');
+    const so = params.get('sort');
+    if (q) setSearch(q);
+    if (ch && VIDEOS.some(v => v.channel === ch)) setChannel(ch);
+    if (tp && VIDEOS.some(v => v.topic === tp)) setTopic(tp);
+    if (pl && VIDEOS.some(v => v.playlist === pl)) setPlaylist(pl);
+    if (so && SORT_OPTIONS.some(o => o.id === so)) setSort(so as SortMode);
+    setFromUrl(true);
+  }, []);
+
+  useEffect(() => {
+    if (!fromUrl) return;
+    const url = new URL(window.location.href);
+    const values: Record<string, string> = {
+      q: search.trim(),
+      channel: channel === 'All' ? '' : channel,
+      topic: topic === 'All' ? '' : topic,
+      playlist: playlist === 'All' ? '' : playlist,
+      sort: sort === 'playlist' ? '' : sort,
+    };
+    for (const [k, v] of Object.entries(values)) {
+      if (v) url.searchParams.set(k, v);
+      else url.searchParams.delete(k);
+    }
+    if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url.href);
+  }, [fromUrl, search, channel, topic, playlist, sort]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);

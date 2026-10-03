@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 
 export interface ColumnDef {
   key: string;
@@ -18,6 +18,36 @@ interface GenericDatabaseProps {
   entityLabel?: string;
   /** Let readers sort by clicking a column header (click again to reverse). */
   sortable?: boolean;
+  /**
+   * Prefix for the URL parameters that mirror search, filter and sort
+   * (`?q=`, `?filter=`, `?sort=`). Only needed if a page ever holds two
+   * databases; with `urlKey="x"` the parameters become `x-q`, `x-filter`, `x-sort`.
+   */
+  urlKey?: string;
+}
+
+/**
+ * Search, filter and sort are mirrored into the query string with
+ * history.replaceState, so a filtered view can be shared as a link and survives
+ * opening a row and pressing Back. State starts at the defaults during server
+ * rendering and is read from the URL after hydration, so markup always matches.
+ */
+function useUrlState(urlKey?: string) {
+  const name = (k: string) => (urlKey ? `${urlKey}-${k}` : k);
+  return {
+    read() {
+      const params = new URLSearchParams(window.location.search);
+      return { q: params.get(name('q')), filter: params.get(name('filter')), sort: params.get(name('sort')) };
+    },
+    write(values: { q: string; filter: string; sort: string }) {
+      const url = new URL(window.location.href);
+      for (const [k, v] of Object.entries(values)) {
+        if (v) url.searchParams.set(name(k), v);
+        else url.searchParams.delete(name(k));
+      }
+      if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url.href);
+    },
+  };
 }
 
 const DEFAULT_BADGE_COLOR = '#6b7280';
@@ -56,13 +86,44 @@ export default function GenericDatabase({
   filterLabel = 'Filter',
   entityLabel = 'procedures',
   sortable = false,
+  urlKey,
 }: GenericDatabaseProps) {
   const [search, setSearch] = useState('');
   const [filterValue, setFilterValue] = useState('All');
   const [sort, setSort] = useState<{ key: string; dir: 1 | -1 } | null>(null);
+  const url = useUrlState(urlKey);
+
+  // After hydration: restore any state carried in the URL (ignoring values
+  // that no longer match a filter option or column).
+  useEffect(() => {
+    const { q, filter, sort: sortParam } = url.read();
+    if (q) setSearch(q);
+    if (filter && filterKey && data.some(d => d[filterKey] === filter)) setFilterValue(filter);
+    if (sortParam && sortable) {
+      const key = sortParam.replace(/^-/, '');
+      if (columns.some(c => c.key === key)) setSort({ key, dir: sortParam.startsWith('-') ? -1 : 1 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Every change goes through commit(), which also updates the URL.
+  type SortState = { key: string; dir: 1 | -1 } | null;
+  const commit = (next: { search?: string; filterValue?: string; sort?: SortState }) => {
+    const s2 = next.search ?? search;
+    const f2 = next.filterValue ?? filterValue;
+    const o2 = next.sort !== undefined ? next.sort : sort;
+    if (next.search !== undefined) setSearch(s2);
+    if (next.filterValue !== undefined) setFilterValue(f2);
+    if (next.sort !== undefined) setSort(o2);
+    url.write({
+      q: s2.trim(),
+      filter: f2 === 'All' ? '' : f2,
+      sort: o2 ? `${o2.dir === -1 ? '-' : ''}${o2.key}` : '',
+    });
+  };
 
   const toggleSort = (key: string) =>
-    setSort(prev => (prev?.key === key ? { key, dir: prev.dir === 1 ? -1 : 1 } : { key, dir: 1 }));
+    commit({ sort: sort?.key === key ? { key, dir: sort.dir === 1 ? -1 : 1 } : { key, dir: 1 } });
 
   const filterOptions = useMemo(() => {
     if (!filterKey) return [];
@@ -101,7 +162,7 @@ export default function GenericDatabase({
           type="search"
           placeholder={`Search ${entityLabel}…`}
           value={search}
-          onChange={e => setSearch(e.target.value)}
+          onChange={e => commit({ search: e.target.value })}
           className="td-search"
           aria-label={`Search ${entityLabel}`}
         />
@@ -109,7 +170,7 @@ export default function GenericDatabase({
           <div className="td-filters">
             <select
               value={filterValue}
-              onChange={e => setFilterValue(e.target.value)}
+              onChange={e => commit({ filterValue: e.target.value })}
               className="td-select"
               aria-label={`Filter by ${filterLabel}`}
             >

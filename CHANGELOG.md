@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — Site improvements, batch 3: shareable filter links, font loading, blocking browser tests, Codex config, speed baseline
+
+- **Shareable filter links:** atlas databases (`GenericDatabase`, all 25 pages) mirror search, filter and sort into the URL (`?q=&filter=&sort=`, optional `urlKey` prefix), and the Video Library mirrors `?q=&channel=&topic=&playlist=&sort=`. A filtered view can be shared and survives opening a row and pressing Back. State renders at defaults on the server and is read from the URL after hydration, so markup still matches. New `tests/e2e/url-state.spec.ts`.
+- **Font loading and layout shift:** Google Fonts moved from a CSS `@import` (serial: HTML → site CSS → fonts CSS) to preconnected, non-blocking `<link>` tags in `headTags`, and an "Inter Fallback" `@font-face` (Arial scaled to Inter's metrics) added after Inter in the font stack so the swap keeps line breaks. Article desktop CLS 0.226 → 0.002 locally; first paint faster on mobile and desktop.
+- **Speed baseline** (`reports/2026-10-03/lighthouse/README.md`): live Lighthouse for the homepage, an article, an atlas page and the Video Library, mobile and desktop. Desktop LCP 0.8–1.3 s; mobile LCP 5–6.5 s (target 2.5 s), mostly render delay; accessibility 89–96 (contrast, color-only links, tap targets). Post-deploy re-measure pending.
+- **Browser tests now block CI** (after one automatic retry), following clean runs on `6261ba83` and `05fbb1cb`.
+- **Codex:** default model in `~/.codex/config.toml` changed to `gpt-6-sol` at the user's request (backup `config.toml.bak-2026-10-03`); Codex runs without a model flag again.
+- **PDFs:** Codex checked Unpaywall, Europe PMC, publisher and society sites for Alahwany 2019, Djordjevic 2019, ACOG PB 198 and SOGC No. 465 (and Part I, No. 457): none is legitimately free. The user will retrieve them through institutional access into `reports/audit-v2/sources-local/pdfs-2026-10-03/` (gitignored).
+
 ## 2026-10-03 — Needle suspensions and in situ slings (historical) page
 
 - **Needle Suspensions and In Situ Slings (Historical)** (female SUI procedures, 50 refs, all DOIs resolved and every paper checked against PubMed; Cochrane needle-suspension review read in full): shared rationale and anatomy; a summary table and sections for Pereyra and modified Pereyra, Stamey, Raz (1981 needle suspension and 1989 vaginal wall sling), Gittes–Loughlin, bone-anchored (Leach 1988) and Vesica (Benderev) suspensions, and the Ingelman-Sundberg repair with the 1959 partial denervation; outcomes and abandonment (11-row table; AUA 1997 panel, Anger 2013 quality indicator, NICE NG123 1.5.14); complications still seen; managing these patients today; evidence gaps. No database row (historical operations stay out of the restorative databases); linked from the female SUI database, Burch page, prolapse history page, Stamey needle and Raz-Pereyra trocar pages, and the Raz, Leach and Ingelman-Sundberg profiles (Ingelman-Sundberg citation year corrected from 2010 to 1947).

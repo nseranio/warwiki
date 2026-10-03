@@ -50,18 +50,18 @@ jobs:
 
       # Browser tests against the built site: every sitemap page loads and
       # hydrates without console errors, two-timezone hydration check, search,
-      # citation previews, figure dialogs. Non-blocking while timings settle in
-      # CI; make blocking once a few runs are clean.
+      # citation previews, figure dialogs, shareable filter URLs. Blocking since
+      # October 3 (clean CI runs 6261ba83 and 05fbb1cb); CI retries a failing
+      # test once before failing the job.
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Browser tests (non-blocking for now)
+      - name: Browser tests
         id: e2e
-        continue-on-error: true
         run: npm run test:e2e
 
       - name: Upload Playwright traces on failure
-        if: steps.e2e.outcome == 'failure'
+        if: failure() && steps.e2e.outcome == 'failure'
         uses: actions/upload-artifact@v6
         with:
           name: playwright-results

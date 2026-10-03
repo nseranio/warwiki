@@ -2,6 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const GOOGLE_FONTS_CSS =
+  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
+
 const config: Config = {
   title: 'WARWIKI',
   tagline: 'Reconstruction, codified.',
@@ -34,6 +37,26 @@ const config: Config = {
   onBrokenAnchors: 'ignore',
 
   headTags: [
+    // Fonts: preconnect, then load the Google Fonts stylesheet without blocking
+    // render (media="print" until loaded). Text paints at once in the
+    // metric-matched "Inter Fallback" and Inter swaps in without reflow; see the
+    // FONTS note at the top of src/css/custom.css.
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: GOOGLE_FONTS_CSS,
+        media: 'print',
+        onload: "this.media='all'",
+      },
+    },
+    {
+      tagName: 'noscript',
+      attributes: {},
+      innerHTML: `<link rel="stylesheet" href="${GOOGLE_FONTS_CSS}">`,
+    },
     {
       tagName: 'meta',
       attributes: {
