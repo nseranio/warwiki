@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-03 — History and surgeon-profile cross-links on 81 clinical and technique pages
+
+- 103 links (65 to 43 surgeon profiles, 38 to History sections) so a reader can reach the people and history behind a topic in one click. Report: `reports/2026-10-03/history-crosslinks.md`.
+- Rules (user-calibrated on Urethral Reconstruction): link only originators of named techniques, devices or classifications, or pages whose exact topic has a History section; guideline, trial and outcome-series authors are not linked; senior-author techniques skipped. Existing attribution names became links wherever possible; otherwise one short History clause or See Also bullet. Every attribution rests on a reference already on the page or profile.
+- AUS first (promo video): device page sentence on Scott, Bradley and Timm with the AUS History section and the Mulcahy, Montague and Linder profiles; procedure page links "Scott's 1972 design".
+- Codex drafted candidates for the remaining sections; Claude verified each against the page before editing. Flags for later (Orandi first name, Mulcahy salvage year, Turner-Warwick death year, Bogoras spelling, Singapore-flap originator, uncited Devine classification) are listed in the report.
+
 ## 2026-10-03 — Open-access journal operative videos embedded on 82 pages
 
 - Crossref harvest of Urology Video Journal (405 articles) and 19 other journals; Claude and Codex matched candidates to pages independently (62 of 82 overlapping matches agreed; Codex found several dedicated pages, Claude restored BPH and a few Joshi/bladder-neck matches). Report: `reports/2026-10-03/video-journal-candidates.md`.
