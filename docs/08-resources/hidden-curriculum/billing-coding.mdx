@@ -63,7 +63,7 @@ Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing mo
     { code: '53460', description: 'Urethromeatoplasty, with partial excision of distal urethral segment (Richardson)', category: 'Urethroplasty', wrvus: '7.56' },
     { code: '53520', description: 'Closure of urethrostomy or urethrocutaneous fistula, male', category: 'Urethroplasty', wrvus: '9.24' },
     /* ── Bladder Neck (BNC / VUAS) ── */
-    { code: '52275', description: 'Cystourethroscopy with internal urethrotomy (DVIU)', category: 'Bladder Neck', wrvus: '4.57' },
+    { code: '52275', description: 'Cystourethroscopy with internal urethrotomy, male', category: 'Bladder Neck', wrvus: '4.57' },
     { code: '52276', description: 'Cystourethroscopy with direct vision internal urethrotomy', category: 'Bladder Neck', wrvus: '4.87' },
     { code: '52277', description: 'Cystourethroscopy with resection of external sphincter (sphincterotomy)', category: 'Bladder Neck', wrvus: '6.01' },
     { code: '52450', description: 'Transurethral incision of prostate (TUIP) — applicable to bladder-neck contracture', category: 'Bladder Neck', wrvus: '7.59' },
@@ -285,7 +285,7 @@ Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing mo
     { code: '52601', description: 'TURP, complete (includes vasectomy, meatotomy, internal urethrotomy, urethral calibration)', category: 'BPH', wrvus: '9.75' },
     { code: '52630', description: 'TURP, residual or regrowth of obstructive tissue', category: 'BPH', wrvus: '6.39' },
     { code: '52647', description: 'Laser coagulation of prostate', category: 'BPH', wrvus: 'Not on CY2026 PFS' },
-    { code: '52648', description: 'Laser vaporization of prostate (HoLEP/PVP)', category: 'BPH', wrvus: '9.80' },
+    { code: '52648', description: 'Laser vaporization of prostate (PVP)', category: 'BPH', wrvus: '9.80' },
     { code: '52649', description: 'Laser enucleation of prostate (HoLEP)', category: 'BPH', wrvus: '12.68' },
     { code: '53850', description: 'Transurethral microwave thermotherapy of prostate (TUMT)', category: 'BPH', wrvus: '5.28' },
     { code: '53852', description: 'Transurethral needle ablation of prostate (TUNA)', category: 'BPH', wrvus: '5.78' },
@@ -301,6 +301,8 @@ Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing mo
 
 </TabItem>
 <TabItem value="icd" label="ICD-10 Diagnosis Codes">
+
+Check ICD-10-CM codes and descriptions against the CMS files effective on the date of service.<sup>[[23]](#ref23)</sup>
 
 <CodeSearchTable
   categoryLabel="Condition"
@@ -375,24 +377,24 @@ Reference tables for CPT procedure codes, ICD-10 diagnosis codes, and billing mo
     { code: 'N35.011',  description: 'Post-traumatic bulbous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.012',  description: 'Post-traumatic membranous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.013',  description: 'Post-traumatic anterior urethral stricture', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.014',  description: 'Post-traumatic urethral stricture, female', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.014',  description: 'Post-traumatic urethral stricture, male, unspecified', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.016',  description: 'Post-traumatic urethral stricture, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
     { code: 'N35.111',  description: 'Postinfective urethral stricture NEC, male, meatal', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.112',  description: 'Postinfective bulbous urethral stricture NEC', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.113',  description: 'Postinfective anterior bulbous urethral stricture NEC', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.114',  description: 'Postinfective urethral stricture NEC, female', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.113',  description: 'Postinfective membranous urethral stricture NEC, male', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.114',  description: 'Postinfective anterior urethral stricture NEC, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.116',  description: 'Postinfective urethral stricture NEC, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
     { code: 'N35.119',  description: 'Postinfective urethral stricture NEC, male, unspecified site', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.12',   description: 'Postinfective urethral stricture NEC, female', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.810',  description: 'Other urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.811',  description: 'Other urethral bulbous stricture, male', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.812',  description: 'Other urethral membranous stricture', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.813',  description: 'Other anterior bulbous urethral stricture, male', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.811',  description: 'Other urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.812',  description: 'Other urethral bulbous stricture, male', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.813',  description: 'Other urethral membranous stricture, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.814',  description: 'Other anterior urethral stricture, male', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.816',  description: 'Other urethral stricture, male, overlapping sites', notes: 'Panurethral stricture', category: 'Urethral Stricture' },
     { code: 'N35.819',  description: 'Other urethral stricture, male, unspecified site', notes: '', category: 'Urethral Stricture' },
     { code: 'N35.82',   description: 'Other urethral stricture, female', notes: '', category: 'Urethral Stricture' },
-    { code: 'N35.9',    description: 'Urethral stricture, unspecified', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.919',  description: 'Unspecified urethral stricture, male, unspecified site', notes: '', category: 'Urethral Stricture' },
+    { code: 'N35.92',   description: 'Unspecified urethral stricture, female', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.110',  description: 'Postprocedural urethral stricture, male, meatal', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.111',  description: 'Postprocedural bulbous urethral stricture', notes: '', category: 'Urethral Stricture' },
     { code: 'N99.112',  description: 'Postprocedural membranous urethral stricture', notes: '', category: 'Urethral Stricture' },
@@ -643,10 +645,10 @@ Modifiers are appended to CPT codes to indicate special circumstances.
 
 Dated practice notes from the AUGS Coding Committee commentaries and CMS documents. Re-check each January and against the local payer.
 
-- **E/M with procedures.** Append modifier 25 to the E/M code, never to the procedure. A same-day procedure and E/M also block the add-ons +99459 and G2211, so separating the visits is sometimes cleaner (Thompson 2025).<sup>[[1]](#ref1)</sup> Inside a global period, use 99024 for related follow-up. Unrelated care during a global period takes modifier 24 (E/M) or 79 (procedure).<sup>[[1]](#ref1)</sup>
+- **E/M with procedures.** Append modifier 25 to the E/M code, never to the procedure. A same-day procedure and E/M may require modifier 25, which generally prevents G2211 payment except with an eligible preventive service or vaccine administration; assess +99459 under its own add-on rules, so separating the visits is sometimes cleaner (Thompson 2025).<sup>[[1]](#ref1)[[17]](#ref17)</sup> Inside a global period, use 99024 for related follow-up. Unrelated care during a global period takes modifier 24 (E/M) or 79 (procedure).<sup>[[1]](#ref1)</sup>
 - **E/M level selection.** Choose by medical decision-making or total time on the date of the visit. Prolonged-service code 99417 is added for each full 15 minutes beyond the highest code's minimum time (Davidson 2025).<sup>[[2]](#ref2)</sup> Medicare does not accept 99417 (status I on the CY2026 file) and uses G2212, which has its own time thresholds.
 - **+99459 (pelvic examination).** Practice-expense-only add-on to an office E/M, once per patient per day, nonfacility settings only. Document the indication and chaperone presence (Price and Mamik 2025).<sup>[[3]](#ref3)</sup> Its RVUs are in the table above.
-- **G2211.** Add-on for longitudinal care of a serious or complex condition, such as recurrent prolapse followed with a pessary. It cannot be reported when a same-day procedure carries modifier 25 (Mamik and Price 2025).<sup>[[4]](#ref4)</sup>
+- **G2211.** Add-on for longitudinal care of a serious or complex condition, such as recurrent prolapse followed with a pessary. It generally cannot be reported when the same-day E/M carries modifier 25, except when an eligible preventive service or vaccine administration is also provided (Mamik and Price 2025).<sup>[[4]](#ref4)[[17]](#ref17)</sup>
 - **Modifiers 51, 59 and 22.** Prolapse repair plus midurethral sling reports 57240 with 57288-51. Cystoscopy (52000) is bundled with a sling and is not unbundled. Reserve modifier 22 for work substantially greater than typical, with the reason, added time and specific challenges in the operative note (Molden 2026).<sup>[[5]](#ref5)</sup>
 - **Sacral neuromodulation.** Code the electrode by approach: 64561 percutaneous (10-day global, imaging included) or 64581 open (90-day global; add 76000-26 for fluoroscopy interpretation). A peripheral nerve evaluation is 64561, with 95971 or 95972 when programmed. A replacement reports only the new lead and/or generator code (Muñoz and Davidson 2025).<sup>[[6]](#ref6)</sup>
 - **Urodynamics.** Bill the highest-valued complex code first (51726–51729) and add 51741-51 or 51784/51785-51 for uroflowmetry or EMG. 51797 needs no modifier. Post-void residual is bundled, and a simple cystometrogram is not combined with complex codes (Raza-Khan and Baker 2025).<sup>[[7]](#ref7)</sup>
@@ -786,3 +788,5 @@ Under wRVU-based compensation, clinic output can be estimated from the visit and
 <a id="ref21"></a>21. Weis JM, Levy PC. Copy, paste, and cloned notes in electronic health records: prevalence, benefits, risks, and best practice recommendations. *Chest.* 2014;145(3):632–638. doi:[10.1378/chest.13-0886](https://doi.org/10.1378/chest.13-0886)
 
 <a id="ref22"></a>22. Centers for Medicare & Medicaid Services. *Complying with Medical Record Documentation Requirements.* MLN Fact Sheet MLN909160. October 2024. [cms.gov](https://www.cms.gov/files/document/certmedrecdoc10workgroup.pdf)
+
+<a id="ref23"></a>23. Centers for Medicare & Medicaid Services. *ICD-10-CM Code Files.* [cms.gov](https://www.cms.gov/medicare/coding-billing/icd-10-codes) (accessed October 2026).

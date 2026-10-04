@@ -39,13 +39,13 @@ The **Resource-Based Relative Value Scale (RBRVS)** is the CMS-established syste
 | **Practice expense (PE) RVU** | Staff, rent, equipment, overhead |
 | **Malpractice (MP) RVU** | Liability-insurance cost |
 
-**Reimbursement calculation:**
+**Reimbursement calculation:**<sup>[[17]](#ref17)</sup>
 
 ```
-Payment = (wRVU + PE RVU + MP RVU) × Geographic Practice Cost Index × Conversion Factor
+Payment = [(wRVU × work GPCI) + (PE RVU × PE GPCI) + (MP RVU × MP GPCI)] × conversion factor
 ```
 
-The **conversion factor** is the dollar multiplier CMS sets annually. For CY2026 it is $33.4009 for most clinicians and $33.5675 for qualifying APM participants (CMS CY2026 relative value file, RVU26C).<sup>[[10]](#ref10)</sup> CMS also applied a −2.5% efficiency adjustment to the work RVUs of non-time-based services in CY2026. Time-based codes such as E/M are exempt, so the reduction falls on procedural codes.<sup>[[11]](#ref11)</sup> The conversion factor also moves through budget neutrality: when CMS projects a payment change above $20 million, it offsets the change across the schedule, and specialty societies argue this has cut procedural payment (Hall 2026).<sup>[[12]](#ref12)</sup> **Geographic Practice Cost Index (GPCI)** adjusts for regional cost differences.
+The **conversion factor** is the dollar multiplier CMS sets annually. For CY2026 it is $33.4009 for most clinicians and $33.5675 for qualifying APM participants (CMS CY2026 relative value file, RVU26C).<sup>[[10]](#ref10)</sup> CMS also applied a −2.5% efficiency adjustment to the work RVUs and corresponding intraservice time of selected non-time-based services in CY2026. Time-based codes such as E/M and additional listed codes are exempt, so its effect varies by procedure.<sup>[[11]](#ref11)</sup> The conversion factor also moves through budget neutrality: when CMS projects a payment change above $20 million, it offsets the change across the schedule, and specialty societies argue this has cut procedural payment (Hall 2026).<sup>[[12]](#ref12)</sup> **Geographic Practice Cost Index (GPCI)** adjusts for regional cost differences.
 
 **Selected urologic wRVUs for orientation:**
 
@@ -74,7 +74,7 @@ Values are Medicare work RVUs from the CY2026 relative value file (RVU26C, July 
 Every surgical episode generates two separate revenue streams:
 
 - **Professional fee.** Paid to the surgeon (or the surgeon's employer) for the operative work; uses the RBRVS professional fee schedule.
-- **Facility fee.** Paid to the hospital or ASC for the space, equipment, nursing, and supplies; uses the Outpatient Prospective Payment System (OPPS) for ASCs or HOPDs or MS-DRG for inpatient.
+- **Facility fee.** Paid to the hospital or ASC for the space, equipment, nursing, and supplies; Medicare uses the ASC payment system for ASCs, OPPS for hospital outpatient departments, and IPPS with MS-DRGs for acute inpatient hospital stays.<sup>[[18]](#ref18)[[19]](#ref19)[[20]](#ref20)</sup>
 
 A TURP case at a hospital may generate approximately $650 in professional fee and approximately $2,800 in facility fee. A cystectomy may generate $3,000 professional fee and $25,000+ facility fee (by MS-DRG). Facility fees are typically 3–10× the professional fee for procedural work, the main reason hospital systems want procedural volume.
 
@@ -98,7 +98,7 @@ A practice with 70% commercial payer mix has radically different economics from 
 
 ## Fixed vs Variable Costs — Why Hospital Finance Is Counterintuitive
 
-Classic Roberts *JAMA* 1999 study found hospital costs are predominantly fixed (infrastructure, core staffing, overhead), with a smaller variable component (pharmaceuticals, implants, supplies, case-specific labor).<sup>[[4]](#ref4)</sup>
+In Roberts and colleagues’ 1993 cost analysis of one large urban public teaching hospital, 84% of costs were classified as fixed (including salaries, buildings, and equipment) and 16% as variable (including medications and supplies).<sup>[[4]](#ref4)</sup>
 
 **Implications:**
 
@@ -121,17 +121,17 @@ The traditional model: providers are paid for each service. Incentives:
 - Potentially misaligned with cost containment
 - Complications can paradoxically increase revenue (longer stay, more services)
 
-In the Gani 2016 *JAMA Surg* colectomy analysis, 33.7% of patients generated net negative margins under FFS, climbing to &gt;40% under bundled payment, a reminder that even FFS does not always make the hospital money.<sup>[[5]](#ref5)</sup>
+In one tertiary hospital’s retrospective analysis of 821 Medicare elective colectomies, 277 patients (33.7%) had negative margins under observed fee-for-service payment; under the authors’ modeled bundled-payment scenario, 342 (41.7%) would have had negative margins.<sup>[[5]](#ref5)</sup>
 
 ### Bundled Payments
 
-**Bundled Payments for Care Improvement (BPCI)**, launched by CMS in 2013 and expanded through BPCI-Advanced, pays a single fixed price for a defined episode, typically 90 days from hospital admission.<sup>[[5]](#ref5)[[6]](#ref6)[[7]](#ref7)</sup>
+**Bundled Payments for Care Improvement (BPCI)** began in 2013 with several payment designs.<sup>[[5]](#ref5)[[6]](#ref6)[[7]](#ref7)[[21]](#ref21)</sup> Its BPCI Advanced successor (2018–2025) used episode target prices with retrospective reconciliation while Medicare continued fee-for-service billing. An inpatient episode included the anchor stay plus 90 days after discharge; an outpatient episode included the anchor procedure plus 90 days after completion.<sup>[[22]](#ref22)</sup>
 
 **Mechanics:**
 
-- Hospital receives reward if Medicare payment for the episode falls below a target price AND quality metrics are met.
-- Hospital pays a penalty if payment exceeds the target.
-- 48 clinical conditions are included under BPCI-Advanced.
+- After aggregate reconciliation, the model participant could receive a payment when eligible episode spending was below its target, subject to quality adjustment.
+- After aggregate reconciliation, the model participant could owe CMS a repayment when eligible episode spending exceeded its target.
+- The original BPCI Models 2–4 offered up to 48 clinical episodes; BPCI Advanced used a different catalog, with 29 inpatient, 3 outpatient, and 2 multi-setting categories in model years 6–8.<sup>[[23]](#ref23)[[24]](#ref24)</sup>
 
 **Incentives created:**
 
@@ -144,7 +144,7 @@ In the Gani 2016 *JAMA Surg* colectomy analysis, 33.7% of patients generated net
 
 - **78% of hospitals saw payment decreases for major joint replacement** (a relatively standardized, high-volume procedure).
 - Only 46% saw decreases for congestive heart failure (less standardized, more medical complexity).
-- Bundle success correlates with condition standardization.
+- The cited BPCI Advanced analysis found modest payment decreases for both medical and surgical episodes and did not establish that either episode type was better suited to bundling.<sup>[[8]](#ref8)</sup>
 
 ### Value-Based Care / Alternative Payment Models (APMs)
 
@@ -277,3 +277,19 @@ These steps cost nothing, are welcomed by competent administrators, and are the 
 <a id="ref15"></a>15. Centers for Medicare & Medicaid Services. Physician Fee Schedule: CY 2027 proposed rule. [cms.gov](https://www.cms.gov/medicare/payment/fee-schedules/physician) (accessed September 2026).
 
 <a id="ref16"></a>16. AUA Young Urologists Committee. *Transitioning from Residency to Practice Manual.* 8th ed. Linthicum, MD: American Urological Association; 2025.
+
+<a id="ref17"></a>17. Centers for Medicare & Medicaid Services. *Physician Fee Schedule Look-Up Tool: Documentation and Files.* [cms.gov](https://www.cms.gov/medicare/physician-fee-schedule/search/documentation)
+
+<a id="ref18"></a>18. Centers for Medicare & Medicaid Services. *Ambulatory Surgical Center (ASC) Payment.* [cms.gov](https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc) (accessed October 2026).
+
+<a id="ref19"></a>19. Centers for Medicare & Medicaid Services. *Hospital Outpatient Prospective Payment System (OPPS).* [cms.gov](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment/opps) (accessed October 2026).
+
+<a id="ref20"></a>20. Centers for Medicare & Medicaid Services. *Inpatient Prospective Payment System (IPPS).* [cms.gov](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment/ipps) (accessed October 2026).
+
+<a id="ref21"></a>21. Centers for Medicare & Medicaid Services. *Bundled Payments for Care Improvement (BPCI) Initiative: General Information.* [cms.gov](https://www.cms.gov/priorities/innovation/innovation-models/bundled-payments) (accessed October 2026).
+
+<a id="ref22"></a>22. Centers for Medicare & Medicaid Services. *BPCI Advanced: Model Overview.* [cms.gov](https://www.cms.gov/priorities/innovation/innovation-models/bpci-advanced) (accessed October 2026).
+
+<a id="ref23"></a>23. Centers for Medicare & Medicaid Services. *Bundled Payments for Care Improvement (BPCI) Initiative: General Information.* [cms.gov](https://www.cms.gov/priorities/innovation/innovation-models/bundled-payments) (accessed October 2026).
+
+<a id="ref24"></a>24. Centers for Medicare & Medicaid Services. *BPCI Advanced: Model Overview.* [cms.gov](https://www.cms.gov/priorities/innovation/innovation-models/bpci-advanced) (accessed October 2026).
