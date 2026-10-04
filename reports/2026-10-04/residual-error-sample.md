@@ -45,3 +45,36 @@ Almost all are the same class the first pass found: a correct paper with the wro
 ## Interpretation
 
 Detection is not saturating: a second, more thorough pass on already-reviewed pages still found about 1.6 serious errors per page. Page-level review alone is unlikely to converge cheaply. The dominant error class is mechanical (a numeric claim detached from its population, endpoint, denominator or time point), so it can be targeted claim by claim.
+
+## Follow-up: claim-level number check and second sample (October 4, evening)
+
+**Number check:** `scripts/review/claims.py` extracted every cited sentence or table row containing a statistic (11,788 claims on 1,036 pages). For each one, a Codex checker using `claim-checker-brief.md` at high reasoning opened the source and tested value, population, endpoint, time point, denominator and attribution. A separate Codex verifier then tried to refute each proposed fix, and Claude reviewed the high-severity fixes before publishing (`orchestrate.py --claims`).
+
+| Number check | Count |
+|---|---|
+| Claims checked (every claim got a status) | 11,788 |
+| Correct | 8,746 (74%) |
+| Error | 2,798 (24%) |
+| Unverifiable (source not openable) | 244 (2%) |
+| Verified edits published | 2,745 on 710 pages (high 1,295, medium 1,450) |
+| Verifier rejections | about 1% |
+
+**Second sample:** 30 new random pages (seed 20261005, none from the first sample), reviewed with the same ultra-reasoning method.
+
+| | Sample 1 (after second review) | Sample 2 (after number check) |
+|---|---|---|
+| High-severity accuracy errors per page | 1.57 (95% CI 1.0–2.1) | 1.37 (95% CI 0.94–1.79) |
+| Pages with at least one | 22/30 | 21/30 |
+| Of which numeric (wrong number, population, endpoint, denominator, time point) | about 38 of 47 | about 19 of 41 |
+
+**Interpretation:**
+- Numeric misattribution, the error class the number check targeted, roughly halved: from about 1.3 to about 0.6 per page.
+- The headline rate fell less because the thorough reviewer now reports more non-numeric issues. These include operative-technique nuance (Mayo scissors in mature scar, the Heaney fixation stitch on vascular pedicles, Breisky use during laparoscopy), guideline scope or strength, and over-absolute statements. Many are judgment calls rather than factual errors.
+- About 19% of numeric claims flagged in sample 2 had been rated "ok" by the single number-check pass.
+- Agents occasionally disagree: the MASTER risk-difference sign was judged one way on one page and the other way on another. The trial's Results text settles it (−3.6, sling minus AUS), and both pages now agree.
+- Both samples' fixes are published (`4459ee95`, `792c17f7`).
+
+**Implication:** another full AI pass costs about the same and yields fewer clear factual errors per token. The remaining rate is near the floor of what automated review defines consistently. Better value now:
+- a pre-publication gate, so new or rewritten pages get the number check and page review before going live;
+- a quarterly 30-page sample to track the rate;
+- named clinician review of the highest-traffic pages for the judgment-type issues AI review cannot settle.

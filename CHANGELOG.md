@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-04 (evening) — Residual-error samples and site-wide number check
+
+- Random 30-page samples measured what remained after the second review: 1.57 serious accuracy errors per page, mostly numbers attached to the wrong subgroup, endpoint, denominator or time point (`reports/2026-10-04/residual-error-sample.md`).
+- Claim-level number check: all 11,788 cited statistics checked against their sources by Codex, refuted by a Codex verifier and reviewed by Claude; 2,798 errors found (24%); 2,745 edits published on 710 pages. Tooling: `scripts/review/claims.py`, `claim-checker-brief.md`, `orchestrate.py --claims --work --pages`.
+- Second sample: 1.37 per page. Numeric errors roughly halved (about 1.3 to about 0.6 per page); the remainder are mostly technique and guideline-scope judgment calls. Both samples' fixes published.
+
 ## 2026-10-04 — Full-site second review (Codex reviewers and verifiers, Claude checks)
 
 - Every content page (1,036; indexes and surgeon profiles excluded) was reviewed by Codex reviewer agents and adversarially verified by separate Codex verifier agents. Claude read the high-severity findings, DOI- and PMID-checked new references, and published 19 batches after lint and build (method and results: `reports/2026-10-04/full-site-second-review.md`).
