@@ -7,12 +7,15 @@ python3 scripts/review/apply.py apply | head -3
 node scripts/check-citations.js 2>&1 | python3 -c "
 import sys,re,subprocess
 cur=None
+orph={}
 for line in sys.stdin:
     m=re.match(r'\s+(docs/\S+\.mdx)\s*$',line)
     if m: cur=m.group(1); continue
     m=re.search(r'has <a id=\"ref(\d+)\"> anchor but no citation',line)
-    if m and cur:
-        print('orphan', cur, m.group(1)); subprocess.run(['python3','scripts/review/drop_ref.py',cur,m.group(1)])
+    if m and cur: orph.setdefault(cur,[]).append(int(m.group(1)))
+for f,ns in orph.items():
+    for n in sorted(ns, reverse=True):
+        print('orphan', f, n); subprocess.run(['python3','scripts/review/drop_ref.py',f,str(n)])
 "
 npm run lint > $L/lint.log 2>&1; LINT=$?; echo LINT=$LINT
 grep -A12 "✗" $L/lint.log | head -40

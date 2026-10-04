@@ -14,6 +14,12 @@ WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
 LEDGER = os.path.join(WORK, "applied.json")
 
 
+def write(p, orig, s):
+    """Write s, stripping trailing whitespace from lines the edit introduced (an edit can end mid-line)."""
+    had = set(orig.split("\n"))
+    open(p, "w").write("\n".join(l if l in had else l.rstrip() for l in s.split("\n")))
+
+
 def fid(v):
     return hashlib.sha1((v["page"] + (v.get("edit") or {}).get("old", "") + v.get("finding", "")).encode()).hexdigest()[:10]
 
@@ -89,7 +95,7 @@ def main():
         p = os.path.join(ROOT, v["page"])
         if v["page"] in dirty and v["page"] not in mine:
             skipped.append((v, "page has uncommitted changes from another session")); continue
-        s = open(p).read()
+        s = orig = open(p).read()
         old, new = v["edit"]["old"], v["edit"]["new"]
         new = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", new)
         refs = v.get("new_refs") or []
@@ -128,13 +134,13 @@ def main():
             if hunks and all(s.count(o) == 1 for o, _ in hunks):
                 for o, nn in hunks:
                     s = s.replace(o, nn)
-                open(p, "w").write(s)
+                write(p, orig, s)
                 led[v["id"]] = {"status": "applied (minimal hunks)", "page": v["page"], "severity": v.get("severity")}
                 mine.add(v["page"]); applied.append(v); continue
         if n != 1:
             led[v["id"]] = {"status": f"not applied: old found {n} times", "page": v["page"]}
             skipped.append((v, f"old found {n} times")); continue
-        open(p, "w").write(s.replace(old, new))
+        write(p, orig, s.replace(old, new))
         led[v["id"]] = {"status": "applied", "page": v["page"], "severity": v.get("severity")}
         mine.add(v["page"]); applied.append(v)
     json.dump(led, open(LEDGER, "w"), indent=1)
