@@ -30,7 +30,7 @@ The original RCRI outcome included myocardial infarction, pulmonary edema, ventr
 
 ### Gupta NSQIP MICA Calculator
 
-Five predictors are age, ASA class, functional dependence, creatinine category and type of surgery. The original model was developed in 211,410 NSQIP patients and validated in a later 257,385-patient dataset; the C statistic was 0.884 in the development year and 0.874 in validation, compared with 0.747 for RCRI applied to the same validation data (observed MI/cardiac arrest 0.65% overall). That does not establish superiority in every contemporary reconstructive subgroup.<sup>[[4]](#ref4)</sup>
+Five predictors are age, ASA class, functional dependence, creatinine category and type of surgery. The original model was developed in 211,410 NSQIP patients and validated in a later 257,385-patient dataset; the C statistic was 0.884 in the development year and 0.874 in validation, compared with 0.747 for RCRI applied to the same validation data (observed MI or cardiac arrest in 1,371/211,410 (0.65%) of the 2007 development cohort). That does not establish superiority in every contemporary reconstructive subgroup.<sup>[[4]](#ref4)</sup>
 
 The model's “urology” category does not distinguish every urologic operation. For stress testing and cardiovascular management, combine the estimate with symptoms, functional capacity and the [Cardiovascular Risk](/docs/foundations/perioperative-care/preoperative-assessment/cardiovascular-risk) pathway. Do not routinely calculate several cardiac scores and select whichever result appears most reassuring.<sup>[[1]](#ref1)</sup>
 
@@ -43,11 +43,11 @@ The [official calculator](https://riskcalculator.facs.org/RiskCalculator/) combi
 - Explain the 30-day horizon and the model's missing factors. Late stricture, fistula recurrence, continence, sexual function and long-term device failure require separate discussion.
 - Document any clinician adjustment and its rationale; an adjusted estimate remains an estimate.<sup>[[3]](#ref3)</sup>
 
-A 2025 assessment by ACS-affiliated authors of 1,085,707 NSQIP records (2021–2024) evaluated the current machine-learning models across 21 high-risk subsets (older age, ASA 3–5, dependent status, emergency, laparotomy). Calibration error was under 10% and discrimination was generally AUC above 0.7. It is not independent validation of rare GU reconstructions. A urology tumor-board study changed the plan in 3 of 63 cancer cases; it studied decision impact, not proof that calculator-directed decisions improve outcomes.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
+A 2025 assessment by ACS-affiliated authors of 1,085,707 NSQIP records (2021–2024) compared the then-current XGBoost model with a proposed CatBoost model across 21 high-risk subsets (older age, ASA 3–5, dependent status, emergency, laparotomy). For mortality and morbidity, both models had absolute percentage error &lt;10% and, with few exceptions, AUC &gt;0.7. It is not independent validation of rare GU reconstructions. A urology tumor-board study changed the plan in 3 of 63 cancer cases; it studied decision impact, not proof that calculator-directed decisions improve outcomes.<sup>[[5]](#ref5)[[6]](#ref6)</sup>
 
 ### Caprini Score — VTE Risk
 
-Caprini weights patient and treatment characteristics associated with VTE. Specify the instrument version and use a locally adopted pathway. A score alone does not determine whether a patient needs heparin, mechanical prophylaxis or four weeks of treatment: the operation, bleeding risk, mobility and contraindications also matter.
+Caprini weights patient and treatment characteristics associated with VTE. Specify the instrument version and use a locally adopted pathway. A score alone does not determine whether pharmacological or mechanical prophylaxis is indicated, or how long pharmacological prophylaxis should continue: the operation, bleeding risk, mobility and contraindications also matter. The 2024 European urology guideline’s ungraded Principle 2 recommends a 2–4-week course when pharmacological prophylaxis is used.<sup>[[7]](#ref7)</sup>
 
 Urology-specific guidance can differ substantially between an ambulatory minor procedure, minimally invasive prostate surgery with or without lymph-node dissection, and open radical cystectomy. Use [Antithrombotic Therapy](/docs/foundations/perioperative-care/perioperative-protocols/antithrombotic-therapy) for the actual prevention decision. The 2024 European urology guidance explicitly combines procedure and patient risk rather than applying a universal Caprini-to-prescription table.<sup>[[7]](#ref7)</sup>
 
@@ -61,7 +61,7 @@ ARISCAT uses age, preoperative oxygen saturation, respiratory infection in the p
 | 26–44 | Intermediate | 13.3% |
 | ≥45 | High | 42.1% |
 
-These figures came from the original validation subsample (discrimination AUC 0.88, versus 0.90 in development) and depend on the original broad, in-hospital complication definitions. For example, the corresponding intermediate-risk rate in the development subset was 6.3%. Use the score to support assessment and planning; do not promise the same absolute rate in a modern robotic or outpatient GU population.<sup>[[8]](#ref8)</sup>
+The original in-hospital composite produced these validation rates in 645 low-, 135 intermediate- and 57 high-risk patients; for the simplified point score, AUC was 0.84 in validation versus 0.89 in development. The higher 0.88/0.90 AUCs describe the underlying logistic model.<sup>[[8]](#ref8)</sup> For example, the corresponding intermediate-risk rate in the development subset was 6.3%. Use the score to support assessment and planning; a 2025 meta-analysis estimated pooled ARISCAT discrimination at c=0.76 (95% CI 0.67–0.86), and the original absolute rates should not be promised in a modern robotic or outpatient GU population.<sup>[[8]](#ref8)[[13]](#ref13)</sup>
 
 ### Apfel Score — PONV Risk
 
@@ -122,3 +122,5 @@ Record the procedure, tool and version, date, important inputs, predicted outcom
 <a id="ref11"></a>11. Sieber F, McIsaac DI, Deiner S, et al. 2025 American Society of Anesthesiologists Practice Advisory for Perioperative Care of Older Adults Scheduled for Inpatient Surgery. *Anesthesiology.* 2025;142:22–51. doi:[10.1097/ALN.0000000000005172](https://doi.org/10.1097/ALN.0000000000005172).
 
 <a id="ref12"></a>12. Patel HD, Ball MW, Cohen JE, et al. Morbidity of Urologic Surgical Procedures: An Analysis of Rates, Risk Factors, and Outcomes. *Urology.* 2015;85:552–559. doi:[10.1016/j.urology.2014.11.034](https://doi.org/10.1016/j.urology.2014.11.034).
+
+<a id="ref13"></a>13. Huang Z, Han Y, Zhuang H, et al. "Prediction models for postoperative pulmonary complications: a systematic review and meta-analysis." *Br J Anaesth.* 2025;135(5):1415–1427. doi:[10.1016/j.bja.2025.04.025](https://doi.org/10.1016/j.bja.2025.04.025).
