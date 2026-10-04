@@ -111,6 +111,7 @@ def main():
             last = anchors[-1]
             s = s[:last.end()] + "\n\n" + "\n\n".join(add) + s[last.end():]
         new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
+        new = "\n".join(l.rstrip() for l in new.split("\n"))
         n = s.count(old)
         if n == 0:
             hunks = minimal_hunks(old, new)
