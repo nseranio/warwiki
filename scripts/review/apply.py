@@ -10,7 +10,7 @@
 import json, os, re, sys, glob, hashlib, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
+WORK = os.path.join(ROOT, os.environ.get("REVIEW_WORK", "reports/audit-v2/sources-local/full-review"))
 LEDGER = os.path.join(WORK, "applied.json")
 
 
