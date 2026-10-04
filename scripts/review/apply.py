@@ -79,6 +79,7 @@ def main():
     dirty = {l[3:].strip() for l in subprocess.check_output(["git", "status", "--short"], cwd=ROOT).decode().splitlines() if l[:2].strip()}
     mine = set(json.load(open(os.path.join(WORK, "touched.json")))) if os.path.exists(os.path.join(WORK, "touched.json")) else set()
     applied, skipped = [], []
+    added_on_page = {}
     sheet = os.path.join(WORK, "review-sheet.md")
     reviewed = set(re.findall(r"^## (\w{10}) ", open(sheet).read(), re.M)) if os.path.exists(sheet) else set()
     items = [v for v in items if v["id"] in reviewed]  # only edits listed on the sheet Claude reviewed
@@ -109,9 +110,16 @@ def main():
             if not anchors:
                 skipped.append((v, "new reference on a page without numbered anchors")); continue
             last = anchors[-1]
+            added_on_page.setdefault(v["page"], []).extend(int(re.match(r'(?:<a id="ref)?(\d+)', a).group(1)) for a in add)
             if re.match(r"\d+\. <a id", last.group(0)):  # number-first style
                 add = [re.sub(r'^<a id="ref(\d+)"></a>(\d+)\. ', r'\2. <a id="ref\1"></a>', a) for a in add]
             s = s[:last.end()] + "\n\n" + "\n\n".join(add) + s[last.end():]
+        if not refs and re.search(r"\[\[R\d+\]\]", new):
+            prev = added_on_page.get(v["page"], [])
+            if len(prev) == 1:
+                new = re.sub(r"\[\[R\d+\]\]\(#refR\d+\)", f"[[{prev[0]}]](#ref{prev[0]})", new)
+            else:
+                skipped.append((v, "placeholder citation without a matching new reference")); continue
         new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
         new = "\n".join(l.rstrip() for l in new.split("\n"))
         n = s.count(old)
