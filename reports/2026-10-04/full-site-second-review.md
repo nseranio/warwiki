@@ -29,7 +29,7 @@ The second review proposed in [full-review-proposal.md](../2026-10-03/full-revie
 | Verifier verdicts | agree 2,618, modify 2,470, no_edit 136, reject 93 |
 | Edits published | 5,086 (high 1,851, medium 3,168, low 67) on 962 pages |
 | Edits re-derived after the page changed | 16 (13 fixed, 3 already fixed) |
-| Edits vetoed (malformed) | 3, redone separately |
+| Edits vetoed (malformed) | 3, re-derived and published (pelvic neuroanatomy) |
 
 - **Findings by category:** accuracy 3,129, completeness 858, currency 641, consistency 581, voice 281, reference 260, structure 117.
 - **Commits:** batches 1–19 on `main`; the final batch is `f614bc5d`.
