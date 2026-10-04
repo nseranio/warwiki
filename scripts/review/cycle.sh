@@ -2,7 +2,7 @@
 # Apply pending agreed edits, then lint and build. Prints problems; commits nothing.
 cd "$(dirname $0)/../.."
 L=reports/audit-v2/sources-local/full-review
-python3 scripts/review/apply.py apply | head -3
+python3 scripts/review/apply.py apply | head -40
 # references left uncited by applied edits: remove and renumber (reported)
 node scripts/check-citations.js 2>&1 | python3 -c "
 import sys,re,subprocess

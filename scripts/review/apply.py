@@ -99,6 +99,23 @@ def main():
         old, new = v["edit"]["old"], v["edit"]["new"]
         new = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", new)
         refs = v.get("new_refs") or []
+        foot = re.findall(r"^\[\^(\d+)\]:", s, re.M)
+        if refs and foot and not re.search(r'<a id="ref\d+"></a>', s):  # footnote-style page (GAS)
+            nxt = max(int(x) for x in foot) + 1
+            add = []
+            for r in refs:
+                k = r.get("key"); line = r.get("line", "").strip()
+                if not k or not line:
+                    continue
+                new = re.sub(rf"\[\[{k}\]\]\(#ref{k}\)", f"[^{nxt}]", new)
+                add.append(f"[^{nxt}]: {line}")
+                nxt += 1
+            new = re.sub(r"<sup>((?:\[\^\d+\])+)</sup>", r"\1", new)
+            if re.search(r"\[\[R\d+\]\]", new) or not add:
+                skipped.append((v, "unresolved new-reference placeholder")); continue
+            last = list(re.finditer(r"^\[\^\d+\]:.*$", s, re.M))[-1]
+            s = s[:last.end()] + "\n" + "\n".join(add) + s[last.end():]
+            refs = []
         if refs:
             nums = [int(x) for x in re.findall(r'<a id="ref(\d+)"></a>', s)]
             nxt = (max(nums) if nums else 0) + 1
