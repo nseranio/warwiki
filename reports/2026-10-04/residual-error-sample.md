@@ -70,7 +70,7 @@ Detection is not saturating: a second, more thorough pass on already-reviewed pa
 **Interpretation:**
 - Numeric misattribution, the error class the number check targeted, roughly halved: from about 1.3 to about 0.6 per page.
 - The headline rate fell less because the thorough reviewer now reports more non-numeric issues. These include operative-technique nuance (Mayo scissors in mature scar, the Heaney fixation stitch on vascular pedicles, Breisky use during laparoscopy), guideline scope or strength, and over-absolute statements. Many are judgment calls rather than factual errors.
-- About 19% of numeric claims flagged in sample 2 had been rated "ok" by the single number-check pass.
+- Some numeric errors survived the single number-check pass (for example the penile-fracture 3.9% pooled estimate and the Allaire combined-surgery cohort), so one pass is not exhaustive.
 - Agents occasionally disagree: the MASTER risk-difference sign was judged one way on one page and the other way on another. The trial's Results text settles it (−3.6, sling minus AUS), and both pages now agree.
 - Both samples' fixes are published (`4459ee95`, `792c17f7`).
 
