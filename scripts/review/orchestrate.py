@@ -13,7 +13,8 @@ ARGV = sys.argv[1:]
 WORK = os.path.join(ROOT, ARGV[ARGV.index("--work") + 1]) if "--work" in ARGV else os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
 ONLY = json.load(open(os.path.join(ROOT, ARGV[ARGV.index("--pages") + 1]))) if "--pages" in ARGV else None  # sample run: fixed page list
 FULL_BRIEF = "--full-brief" in ARGV  # use the full reviewer brief for every tier
-BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"))
+CLAIMS = "--claims" in ARGV  # claim-level check: units are claim batches in WORK/batches (scripts/review/claims.py extract)
+BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"), ("claims", "claim-checker-brief.md"))
 
 
 def brief(k):
@@ -34,6 +35,8 @@ def log(msg):
 
 
 def slug(p):
+    if p.startswith("claims/"):
+        return p[len("claims/"):]
     return p[len("docs/"):-len(".mdx")].replace("/", "__")
 
 
@@ -51,6 +54,12 @@ def load_state():
     path = os.path.join(WORK, "state.json")
     if os.path.exists(path):
         return json.load(open(path))
+    if CLAIMS:
+        units = json.load(open(os.path.join(WORK, "units.json")))
+        st = {"pages": {u: {"status": "pending", "tier": 3, "tries": 0} for u in units}, "jobs": {}, "n": 0}
+        for sub in ("findings", "verdicts", "status"):
+            os.makedirs(os.path.join(WORK, sub), exist_ok=True)
+        return st
     pages, tier = page_list()
     if ONLY is not None:
         pages = [p for p in pages if p in set(ONLY)]
@@ -77,7 +86,10 @@ def launch(st, kind, pages):
     jid = f"{kind[0]}{st['n']:04d}"
     d = os.path.join(WORK, "jobs", jid)
     os.makedirs(d, exist_ok=True)
-    if kind == "review":
+    if kind == "review" and CLAIMS:
+        u = pages[0]
+        prompt = (brief("claims") + f"\n\nINPUT: {os.path.join(WORK, 'batches', slug(u) + '.json')}\nslug: {slug(u)}\nOUTPUT_DIR: {d}\n")
+    elif kind == "review":
         b = brief("light" if not FULL_BRIEF and all(st["pages"][p]["tier"] == 4 for p in pages) else "full")
         names = "\n".join(f"- {p}  ->  write OUTPUT_DIR/{slug(p)}.jsonl and OUTPUT_DIR/{slug(p)}.summary.md" for p in pages)
         prompt = (b.replace("OUTPUT_DIR/<page-basename>", "OUTPUT_DIR/<slug given below>")
@@ -107,6 +119,9 @@ def finish(st, jid, ok):
             f = os.path.join(d, slug(p) + ".jsonl")
             if os.path.exists(f):
                 shutil.copy(f, os.path.join(WORK, "findings", slug(p) + ".jsonl"))
+                sf = os.path.join(d, slug(p) + ".status.jsonl")
+                if CLAIMS and os.path.exists(sf):
+                    shutil.copy(sf, os.path.join(WORK, "status", slug(p) + ".status.jsonl"))
                 rows = [l for l in open(f) if l.strip()]
                 needs = any(json.loads(l).get("severity") in ("high", "medium") or json.loads(l).get("category") == "reference" for l in rows)
                 ps["status"] = "reviewed" if needs else "done"
@@ -166,7 +181,7 @@ def main():
             while nr < NR and pend:
                 batch = []
                 t = st["pages"][pend[0]]["tier"]
-                while pend and len(batch) < PAGES_PER_REVIEW and (st["pages"][pend[0]]["tier"] == 4) == (t == 4):
+                while pend and len(batch) < (1 if CLAIMS else PAGES_PER_REVIEW) and (st["pages"][pend[0]]["tier"] == 4) == (t == 4):
                     batch.append(pend.pop(0))
                 jp = launch(st, "review", batch); procs[f"r{st['n']:04d}"] = jp; nr += 1
             ready = [p for p, s in st["pages"].items() if s["status"] == "reviewed"]
