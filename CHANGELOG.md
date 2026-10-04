@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-04 — Full-site second review (Codex reviewers and verifiers, Claude checks)
+
+- Every content page (1,036; indexes and surgeon profiles excluded) was reviewed by Codex reviewer agents and adversarially verified by separate Codex verifier agents. Claude read the high-severity findings, DOI- and PMID-checked new references, and published 19 batches after lint and build (method and results: `reports/2026-10-04/full-site-second-review.md`).
+- 5,867 findings (1,906 high); 5,086 edits published on 962 pages. Most were misread denominators or endpoints, pooled evidence attached to the wrong operation, and guideline strength or currency (EAU 2026, AUA/GURS/SUFU 2024, ASCRS 2026, ACS 2025, CMS FY2026 codes). Misapplied citations were removed and the remaining references renumbered.
+- 136 findings were left without an edit (paywalled source or clinical judgment): `reports/2026-10-04/second-review-open-findings.md`.
+- Tooling: `scripts/review/` (orchestrate, apply, cycle, drop_ref, sheet_compact, briefs). Runs at high reasoning on the standard tier after an A/B against ultra/priority (about half the tokens, about 75–80% of the high-severity yield).
+
 ## 2026-10-03 — Site consistency pass: references, people facts, shared-source numbers, voice
 
 - Four repeatable checks, each a script plus Codex triage plus Claude verification (method and results: `reports/2026-10-03/site-consistency.md`): `npm run refs:registry`, `consistency:people`, `consistency:same-source`, `scorecard`.
