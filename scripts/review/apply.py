@@ -105,10 +105,12 @@ def main():
                 nxt += 1
             if re.search(r"\[\[R\d+\]\]", new) or not add:
                 skipped.append((v, "unresolved new-reference placeholder")); continue
-            anchors = list(re.finditer(r'^<a id="ref\d+"></a>.*$', s, re.M))
+            anchors = list(re.finditer(r'^(?:<a id="ref\d+"></a>|\d+\. <a id="ref\d+"></a>).*$', s, re.M))
             if not anchors:
                 skipped.append((v, "new reference on a page without numbered anchors")); continue
             last = anchors[-1]
+            if re.match(r"\d+\. <a id", last.group(0)):  # number-first style
+                add = [re.sub(r'^<a id="ref(\d+)"></a>(\d+)\. ', r'\2. <a id="ref\1"></a>', a) for a in add]
             s = s[:last.end()] + "\n\n" + "\n\n".join(add) + s[last.end():]
         new = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", new)
         new = "\n".join(l.rstrip() for l in new.split("\n"))
