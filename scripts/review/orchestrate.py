@@ -9,7 +9,10 @@ Touch WORK/STOP to stop launching new jobs (running jobs finish).
 import json, os, re, subprocess, sys, time, glob, shutil, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-WORK = os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
+ARGV = sys.argv[1:]
+WORK = os.path.join(ROOT, ARGV[ARGV.index("--work") + 1]) if "--work" in ARGV else os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
+ONLY = json.load(open(os.path.join(ROOT, ARGV[ARGV.index("--pages") + 1]))) if "--pages" in ARGV else None  # sample run: fixed page list
+FULL_BRIEF = "--full-brief" in ARGV  # use the full reviewer brief for every tier
 BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"))
 
 
@@ -49,10 +52,12 @@ def load_state():
     if os.path.exists(path):
         return json.load(open(path))
     pages, tier = page_list()
+    if ONLY is not None:
+        pages = [p for p in pages if p in set(ONLY)]
     st = {"pages": {p: {"status": "pending", "tier": tier.get(p, 3), "tries": 0} for p in pages}, "jobs": {}, "n": 0}
     os.makedirs(os.path.join(WORK, "findings"), exist_ok=True)
     os.makedirs(os.path.join(WORK, "verdicts"), exist_ok=True)
-    for f in glob.glob(os.path.join(PILOT, "*.jsonl")):  # pilot pages: reviewed already
+    for f in ([] if ONLY is not None else glob.glob(os.path.join(PILOT, "*.jsonl"))):  # pilot pages: reviewed already
         rows = [json.loads(l) for l in open(f) if l.strip()]
         if rows and rows[0]["page"] in st["pages"]:
             p = rows[0]["page"]
@@ -73,7 +78,7 @@ def launch(st, kind, pages):
     d = os.path.join(WORK, "jobs", jid)
     os.makedirs(d, exist_ok=True)
     if kind == "review":
-        b = brief("light" if all(st["pages"][p]["tier"] == 4 for p in pages) else "full")
+        b = brief("light" if not FULL_BRIEF and all(st["pages"][p]["tier"] == 4 for p in pages) else "full")
         names = "\n".join(f"- {p}  ->  write OUTPUT_DIR/{slug(p)}.jsonl and OUTPUT_DIR/{slug(p)}.summary.md" for p in pages)
         prompt = (b.replace("OUTPUT_DIR/<page-basename>", "OUTPUT_DIR/<slug given below>")
                   + f"\n\nPAGES (review each fully, one after the other; use these exact output file names):\n{names}\nOUTPUT_DIR: {d}\n")
