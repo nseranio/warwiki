@@ -136,6 +136,23 @@ def main():
             refs = []
         if refs and not plain and not foot and not re.search(r'<a id="ref\d+"></a>', s) and "\n## References" not in s:
             s = s.rstrip("\n") + "\n\n## References\n\n---\n\n<a id=\"ref0\"></a>"  # placeholder anchor; replaced below
+        if refs:  # a "new" reference already on the page (same DOI) reuses its number
+            have = {}
+            for ln in s.split("\n## References", 1)[-1].split("\n"):
+                dm = re.search(r"doi:\s*\[(10\.[^\]]+)\]", ln); nm = re.search(r'id="ref(\d+)"', ln)
+                if dm and nm:
+                    have[dm.group(1).lower().rstrip(".")] = nm.group(1)
+            keep = []
+            for r in refs:
+                dm = re.search(r"doi:\s*\[(10\.[^\]]+)\]", r.get("line", ""))
+                hit = have.get(dm.group(1).lower().rstrip(".")) if dm else None
+                if hit and r.get("key"):
+                    new = new.replace(f"[[{r['key']}]](#ref{r['key']})", f"[[{hit}]](#ref{hit})")
+                else:
+                    keep.append(r)
+            refs = keep
+            if not refs and re.search(r"\[\[R\d+\]\]", new):
+                skipped.append((v, "unresolved new-reference placeholder")); continue
         if refs:
             nums = [int(x) for x in re.findall(r'<a id="ref(\d+)"></a>', s)]
             nxt = (max(nums) if nums else 0) + 1

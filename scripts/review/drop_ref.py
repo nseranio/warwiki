@@ -24,5 +24,5 @@ def shift(m):
 s = re.sub(r"\[\[(\d+)\]\]\(#ref\d+\)", lambda m: f"[[{int(m.group(1)) - 1}]](#ref{int(m.group(1)) - 1})" if int(m.group(1)) > n else m.group(0), s)
 s = re.sub(r'<a id="ref(\d+)"></a>(\d+)\.', lambda m: f'<a id="ref{int(m.group(1)) - 1}"></a>{int(m.group(2)) - 1}.' if int(m.group(1)) > n else m.group(0), s)
 s = re.sub(r'^(\d+)\. <a id="ref(\d+)"></a>', lambda m: f'{int(m.group(1)) - 1}. <a id="ref{int(m.group(2)) - 1}"></a>' if int(m.group(2)) > n else m.group(0), s, flags=re.M)
-open(page, "w").write(s)
+open(page, "w").write(s.rstrip("\n") + "\n")
 print(f"removed ref{n}; later references renumbered")
