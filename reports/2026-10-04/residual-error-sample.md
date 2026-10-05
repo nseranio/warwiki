@@ -113,3 +113,27 @@ Detection is not saturating: a second, more thorough pass on already-reviewed pa
 - **Open items:**
   - [sources-needed.md](sources-needed.md): references the checks could not obtain;
   - [claims-needing-decision.md](claims-needing-decision.md): 225 flagged claims the verifier would not settle automatically.
+
+## Third sample, dose and guideline checks (October 5; paused for Codex credits)
+
+- **Third sample** (seed 20261006, 26 of 30 pages completed): **0.85 serious accuracy errors per page** (95% CI 0.33–1.36), 12/26 pages affected, down from 1.57 and 1.37. One page (skin-graft vaginoplasty) carried 6 of the 22. Fixes published.
+- **Dose check** (980 doses never checked): 16 of 38 batches done; 181 edits published. Most attach the supporting label or guideline citation. About 15 correct the dose itself:
+  - gentamicin 7 mg/kg for pyelonephritis, not the bladder-only 5 mg/kg;
+  - levofloxacin 500 mg daily for 28 days in chronic bacterial prostatitis;
+  - nitrofurantoin regimen by formulation;
+  - dalteparin reversal window;
+  - EXPAREL 133 mg for adductor canal block;
+  - pentosan titration to 75 mg.
+- **Guideline-statement check** (all 2,351 statements attributed to a guideline body or regulator): 17 of 89 batches done; 72 edits published (scope, strength and label indication).
+- **Claim gate:** doses and guideline statements are now gated kinds. 1,892 not-yet-checked dose and guideline claims are in the baseline.
+
+**Resume (when Codex credits return):**
+1. In `reports/audit-v2/sources-local/{dose-check,guideline-check,residual-sample-3}/`, delete `STOP` and set every `"failed"` page in `state.json` back to `"pending"` with `"tries": 0`.
+   - Most failures were not credit-related: `~/.codex/config.toml` was switched at 12:05 to `gpt-6.1-sol`, which the ChatGPT login rejects.
+   - The orchestrator now pins `gpt-6-sol` (`--model` overrides).
+2. Rerun each run with the same command:
+   - dose and guideline: `orchestrate.py --work <dir> --claims --effort high --tier default`;
+   - residual-sample-3: `--pages <dir>/pages.json --full-brief --effort ultra`.
+3. Publish with `REVIEW_WORK=<dir> apply.py list`, Claude review, then `cycle.sh`.
+4. Then: cross-page consistency (`npm run consistency:same-source` plus Codex triage).
+5. Last, after the cleanup: patient handouts, SmartPhrases and WARWIKI decks.

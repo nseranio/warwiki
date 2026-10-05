@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-05 (evening) — Duplicate references merged; dose and guideline checks started; paused
+
+- 51 duplicate references merged on 32 pages (46 introduced by verified edits); `npm run lint:ref-dupes` now blocks duplicate DOIs and the apply tool reuses existing references.
+- Gate extended to doses and guideline/regulatory statements. Dose check (16/38 batches) and guideline-statement check (17/89) published 253 verified edits, including gentamicin, levofloxacin, nitrofurantoin, dalteparin, EXPAREL and pentosan dose corrections.
+- Third residual sample: 0.85 serious accuracy errors per page (from 1.57 and 1.37). Work paused for Codex credits; resume steps in `reports/2026-10-04/residual-error-sample.md`.
+
 ## 2026-10-05 — Disputed claims settled; audit-voice cleanup
 
 - The 230 claims the verifier would not settle were decided by a Codex final-editor pass (ultra reasoning, earlier finding and objection attached), checked by a Codex verifier and reviewed by Claude: 106 kept with source quotes, 111 corrected (95 edits on 46 pages; tunica plication comparison tables rebuilt with study-specific endpoints), 13 added to `reports/2026-10-04/sources-needed.md`. Claim-gate baseline down to 4.
