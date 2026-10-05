@@ -27,7 +27,8 @@ NR = int(ARGS[ARGS.index("--reviewers") + 1]) if "--reviewers" in ARGS else 8
 NV = int(ARGS[ARGS.index("--verifiers") + 1]) if "--verifiers" in ARGS else 3
 PAGES_PER_REVIEW, PAGES_PER_VERIFY, TIMEOUT = 2, 4, 120 * 60
 EFFORT = ARGS[ARGS.index("--effort") + 1] if "--effort" in ARGS else "high"   # A/B Oct 3: high keeps ~75-80% of ultra yield at ~half the tokens
-TIER = ARGS[ARGS.index("--tier") + 1] if "--tier" in ARGS else "default"     # no priority surcharge
+TIER = ARGS[ARGS.index("--tier") + 1] if "--tier" in ARGS else "default"
+MODEL = ARGS[ARGS.index("--model") + 1] if "--model" in ARGS else "gpt-6-sol"  # pinned: the global default can change under a run     # no priority surcharge
 PILOT = os.path.join(ROOT, "reports/2026-10-03/full-review-pilot")
 
 
@@ -102,7 +103,7 @@ def launch(st, kind, pages):
         prompt = brief(VERIFY_BRIEF) + f"\n\nINPUT finding files:\n{files}\nOUTPUT: {os.path.join(d, 'verdicts.jsonl')}\n"
     open(os.path.join(d, "prompt.md"), "w").write(prompt)
     proc = subprocess.Popen(["codex", "exec", "--skip-git-repo-check", "-s", "workspace-write", "-C", d,
-                             "-c", f'model_reasoning_effort="{EFFORT}"', "-c", f'service_tier="{TIER}"',
+                             "-c", f'model="{MODEL}"', "-c", f'model_reasoning_effort="{EFFORT}"', "-c", f'service_tier="{TIER}"',
                              "-o", os.path.join(d, "final.md"), prompt],
                             stdin=subprocess.DEVNULL, stdout=open(os.path.join(d, "log.txt"), "w"), stderr=subprocess.STDOUT,
                             start_new_session=True)
