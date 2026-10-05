@@ -244,7 +244,8 @@ def main():
                         continue
                     m = difflib.SequenceMatcher(None, nu, newn, autojunk=False).find_longest_match(0, len(nu), 0, len(newn))
                     if nu in newn or newn in nu or m.size >= min(60, 0.5 * len(nu)):
-                        led[u["key"]] = {"s": "fixed", "src": (v.get("reason") or "")[:160], "d": today}; n += 1
+                        prev = "voice" if os.path.exists(os.path.join(work, "VOICE")) else "fixed"
+                        led[u["key"]] = {"s": prev, "src": (v.get("reason") or "")[:160], "d": today}; n += 1
         json.dump(led, open(LEDGER, "w"), indent=0, sort_keys=True)
         print(f"recorded {n} verified claims; ledger has {len(led)}")
     elif cmd == "baseline":

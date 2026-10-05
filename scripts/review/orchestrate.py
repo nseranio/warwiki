@@ -13,8 +13,11 @@ ARGV = sys.argv[1:]
 WORK = os.path.join(ROOT, ARGV[ARGV.index("--work") + 1]) if "--work" in ARGV else os.path.join(ROOT, "reports/audit-v2/sources-local/full-review")
 ONLY = json.load(open(os.path.join(ROOT, ARGV[ARGV.index("--pages") + 1]))) if "--pages" in ARGV else None  # sample run: fixed page list
 FULL_BRIEF = "--full-brief" in ARGV  # use the full reviewer brief for every tier
-CLAIMS = "--claims" in ARGV  # claim-level check: units are claim batches in WORK/batches (scripts/review/claims.py extract)
-BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"), ("claims", "claim-checker-brief.md"))
+CLAIMS = "--claims" in ARGV
+REVIEW_BRIEF = ARGV[ARGV.index("--brief") + 1] if "--brief" in ARGV else "claims"          # claims mode: which brief file key
+VERIFY_BRIEF = ARGV[ARGV.index("--verify-brief") + 1] if "--verify-brief" in ARGV else "verify"  # claim-level check: units are claim batches in WORK/batches (scripts/review/claims.py extract)
+BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"), ("claims", "claim-checker-brief.md"), ("decide", "claim-decision-brief.md"),
+          ("voice", "voice-brief.md"), ("voice-verify", "voice-verifier-brief.md"))
 
 
 def brief(k):
@@ -88,7 +91,7 @@ def launch(st, kind, pages):
     os.makedirs(d, exist_ok=True)
     if kind == "review" and CLAIMS:
         u = pages[0]
-        prompt = (brief("claims") + f"\n\nINPUT: {os.path.join(WORK, 'batches', slug(u) + '.json')}\nslug: {slug(u)}\nOUTPUT_DIR: {d}\n")
+        prompt = (brief(REVIEW_BRIEF) + f"\n\nINPUT: {os.path.join(WORK, 'batches', slug(u) + '.json')}\nslug: {slug(u)}\nOUTPUT_DIR: {d}\n")
     elif kind == "review":
         b = brief("light" if not FULL_BRIEF and all(st["pages"][p]["tier"] == 4 for p in pages) else "full")
         names = "\n".join(f"- {p}  ->  write OUTPUT_DIR/{slug(p)}.jsonl and OUTPUT_DIR/{slug(p)}.summary.md" for p in pages)
@@ -96,7 +99,7 @@ def launch(st, kind, pages):
                   + f"\n\nPAGES (review each fully, one after the other; use these exact output file names):\n{names}\nOUTPUT_DIR: {d}\n")
     else:
         files = "\n".join(f"- {os.path.join(WORK, 'findings', slug(p) + '.jsonl')}" for p in pages)
-        prompt = brief("verify") + f"\n\nINPUT finding files:\n{files}\nOUTPUT: {os.path.join(d, 'verdicts.jsonl')}\n"
+        prompt = brief(VERIFY_BRIEF) + f"\n\nINPUT finding files:\n{files}\nOUTPUT: {os.path.join(d, 'verdicts.jsonl')}\n"
     open(os.path.join(d, "prompt.md"), "w").write(prompt)
     proc = subprocess.Popen(["codex", "exec", "--skip-git-repo-check", "-s", "workspace-write", "-C", d,
                              "-c", f'model_reasoning_effort="{EFFORT}"', "-c", f'service_tier="{TIER}"',
