@@ -7,13 +7,16 @@ claims that existed before the gate and are still being worked through (uncited 
 A claim that is in neither file is NEW or CHANGED and fails the gate.
 
   python3 scripts/review/gate.py check [FILES...]        exit 1 if any claim is unverified (default: all pages)
-  python3 scripts/review/gate.py pending [--include-baseline] [FILES...]  write the unverified claims as claim-check batches
+  python3 scripts/review/gate.py pending [--include-baseline] [--kind dose|guideline|number|absolute] [--recheck] [--out DIR] [FILES...]
+                                                         --recheck includes claims already in the ledger; write the unverified claims as claim-check batches
                                                          (then: orchestrate.py --work <dir> --claims; apply; cycle)
   python3 scripts/review/gate.py record WORKDIR          add verified claims from a finished check run to the ledger
   python3 scripts/review/gate.py baseline                (one-off) put every currently unverified claim in the baseline
   python3 scripts/review/gate.py stats
 
-Claim kinds: "number" (a statistic: %, n/N, OR/HR/RR, CI, n =, mean/median value, durations and sizes) and
+Claim kinds: "dose" (a drug or device quantity: mg, mL, U, mg/kg ...), "guideline" (a statement attributed to a
+guideline body or regulator: AUA, EAU, NICE, ACOG, FDA ... with recommend/strength/approval/indication wording),
+"number" (a statistic: %, n/N, OR/HR/RR, CI, n =, mean/median value, durations and sizes) and
 "absolute" (always, never, contraindicated, eliminates, no risk, all/every patient(s), the only, gold standard,
 safest, guarantees, invariably, mandatory, impossible, proven, definitive, first-line, standard of care),
 excluding negated hedges such as "is not a universal rule" or "cannot establish".
@@ -31,6 +34,10 @@ ABS = re.compile(r"\b(always|never|contraindicat\w*|eliminat\w+|no risk|zero ris
                  r"gold standard|safest|guarantee\w*|invariabl\w+|universal(?:ly)?|mandatory|impossible|proven|"
                  r"absolute(?:ly)?|definitive(?:ly)?|first-line|standard of care)\b", re.I)
 HEDGE = re.compile(r"\b(?:not|no|nor|neither|cannot|can't|does not|do not|did not|is not|are not|was not|without|unproven|un)\b[\w\s,-]{0,25}$", re.I)
+DOSE = re.compile(r"\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg|mL|U|IU|units|mg/kg|mL/kg|mg/day|mg/m2|mmol)\b")
+GUIDE = re.compile(r"\b(AUA|EAU|NICE|ACOG|AUGS|SUFU|ICS|IUGA|WHO|ASCRS|BAUS|CUA|SIU|ESGO|RCOG|WPATH|AAGL|ACR|IDSA|CDC|FDA|ISSVD|GURS|SMSNA|ICSM|AAST|ACS|EAST|WSES|ESSM)\b[^.|]{0,80}\b("
+                   r"recommend\w*|suggest\w*|advis\w*|endorse\w*|Strong|Moderate|Conditional|Expert Opinion|Clinical Principle|"
+                   r"weak|Grade [A-C]|approv\w*|clear\w*|contraindicat\w*|indicat\w*|label\w*)", re.I)
 STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b|\bCI\b|\bn\s?=\s?\d|"
                     r"\b(?:mean|median)\b[^.|]{0,40}\d")
 
@@ -94,6 +101,10 @@ def units_of(path):
                 kinds.append("number")
             if is_absolute(u):
                 kinds.append("absolute")
+            if DOSE.search(plain):
+                kinds.append("dose")
+            if GUIDE.search(plain):
+                kinds.append("guideline")
             if not kinds or not norm(u):
                 continue
             nums = sorted({int(a or b) for a, b in C.CITE.findall(u)})
@@ -115,14 +126,16 @@ def targets(args):
     return [os.path.relpath(os.path.abspath(a), ROOT) for a in args if a.endswith(".mdx")] or C.pages(SECTIONS)
 
 
-def unverified(pages, include_baseline=False):
-    led = load(LEDGER, {})
-    base = set() if include_baseline else set(load(BASELINE, []))
+def unverified(pages, include_baseline=False, kind=None, recheck=False):
+    led = {} if recheck else load(LEDGER, {})
+    base = set() if include_baseline or recheck else set(load(BASELINE, []))
     bad = []
     for p in pages:
         if not os.path.exists(os.path.join(ROOT, p)):
             continue
         for u in units_of(p):
+            if kind and kind not in u["kinds"]:
+                continue
             if u["key"] not in led and u["key"] not in base:
                 bad.append((p, u))
     return bad
@@ -145,7 +158,11 @@ def main():
         out = os.path.join(ROOT, "reports/audit-v2/sources-local/gate-" + datetime.date.today().isoformat())
         os.makedirs(os.path.join(out, "batches"), exist_ok=True)
         bypage = {}
-        for p, u in unverified(targets([x for x in a[1:] if x != "--include-baseline"]), "--include-baseline" in a):
+        kind = a[a.index("--kind") + 1] if "--kind" in a else None
+        files = [x for x in a[1:] if x.endswith(".mdx")]
+        if "--out" in a:
+            out = os.path.join(ROOT, a[a.index("--out") + 1]); os.makedirs(os.path.join(out, "batches"), exist_ok=True)
+        for p, u in unverified(targets(files), "--include-baseline" in a, kind, "--recheck" in a):
             bypage.setdefault(p, []).append(u)
         units, cur, n = [], [], 0
         def flush():
