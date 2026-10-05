@@ -166,7 +166,7 @@ All three paused runs finished and are published, each batch after Claude review
 
 **Claim gate:**
 - The baseline was rebuilt from 2,843 entries to 13 claims; most old entries were keys for sentences rewritten since October 4.
-- The 13 remaining claims (7 dose, 2 guideline, 4 number) are being checked in `sources-local/gate-2026-10-05/`.
+- The 13 remaining claims (7 dose, 2 guideline, 4 number) were then checked in `sources-local/gate-2026-10-05/`: 2 correct, 11 errors, 7 verified edits published (`0a60f08f`), including the label tadalafil once-daily regimen. No baseline claims remain; every gated claim is in the ledger.
 - 56 new source-needed claims are listed at the end of [sources-needed.md](sources-needed.md).
 
 **Next:** handouts, SmartPhrases and the WARWIKI Anki decks, only on the user's go-ahead.

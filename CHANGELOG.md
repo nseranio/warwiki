@@ -13,7 +13,7 @@ For commit-level detail run `git log --oneline`.
 - Guideline-statement check finished (89/89): 443 verified edits in total, 371 tonight, mostly restoring each recommendation's population and strength, plus exact FDA indications. Examples: EAU strongly recommends *against* tissue-engineered oral mucosa grafts outside trials; Penuma is not the only FDA-cleared penile implant (Augmenta, K200073).
 - Third residual sample finished (30/30): **0.83 serious accuracy errors per page (95% CI 0.31–1.36)**, 13/30 pages affected (1.57 and 1.37 in the first two samples). Classification in `residual-sample-3/high-confirmed.json`.
 - Cross-page consistency: Codex triaged 575 same-source clusters and 282 people candidates; 18 verified fixes on 15 pages. Examples: Farrell, not Vanni, as first author; Mazza outcomes cited to Mazza rather than Belinky; Dubey dribbling 9/28; malleable implants in Abdelwahab 2025; Robertson's IUGA presidency 1981–1984.
-- Claim-gate baseline rebuilt: 2,843 entries down to 13 claims. 56 new `source-needed` claims added to `reports/2026-10-04/sources-needed.md`.
+- Claim-gate baseline rebuilt: 2,843 entries down to 13 claims, then checked (7 verified edits, `0a60f08f`); no baseline claims remain. 56 new `source-needed` claims added to `reports/2026-10-04/sources-needed.md`.
 
 ## 2026-10-05 (evening) — Duplicate references merged; dose and guideline checks started; paused
 
