@@ -107,6 +107,7 @@ def main():
                 k = r.get("key"); line = r.get("line", "").strip()
                 if not k or not line:
                     continue
+                line = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", line)
                 new = re.sub(rf"\[\[{k}\]\]\(#ref{k}\)", f"[^{nxt}]", new)
                 add.append(f"[^{nxt}]: {line}")
                 nxt += 1
@@ -124,6 +125,8 @@ def main():
                 k = r.get("key"); line = r.get("line", "").strip()
                 if not k or not line:
                     continue
+                line = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", line)
+                line = re.sub(r"(?<=[\s(])>(?=\s?[\d.=])", "&gt;", line)
                 new = new.replace(f"[[{k}]](#ref{k})", f"[[{nxt}]](#ref{nxt})")
                 add.append(f'<a id="ref{nxt}"></a>{nxt}. {line}')
                 nxt += 1
