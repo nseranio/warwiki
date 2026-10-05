@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-05 — Disputed claims settled; audit-voice cleanup
+
+- The 230 claims the verifier would not settle were decided by a Codex final-editor pass (ultra reasoning, earlier finding and objection attached), checked by a Codex verifier and reviewed by Claude: 106 kept with source quotes, 111 corrected (95 edits on 46 pages; tunica plication comparison tables rebuilt with study-specific endpoints), 13 added to `reports/2026-10-04/sources-needed.md`. Claim-gate baseline down to 4.
+- Voice: 4,310 audit-era sentences that argued with an unstated claim ("should not be read as", "is not a universal rule", "does not establish that every ...") were reviewed; 1,336 were rewritten as direct statements of the evidence and its limits (616 pages; most precise study-specific limits deliberately left unchanged). Numbers, citation markers, links and hedge strength preserved (Codex rewrite and verifier, mechanical number/marker check, Claude sample review). Editor-facing phrases fell from 537 to 223. Briefs: `scripts/review/voice-brief.md`, `voice-verifier-brief.md`, `claim-decision-brief.md`.
+
 ## 2026-10-05 — Pre-publication claim gate and claim-level pass
 
 - Gate: every number and absolute statement must be verified (claim ledger) before it can be published; `npm run lint:claims` runs in lint and CI. Workflow and results: `reports/2026-10-04/residual-error-sample.md`.
