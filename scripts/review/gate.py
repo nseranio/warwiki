@@ -196,6 +196,29 @@ def main():
                     led[k] = {"s": r["status"], "src": (r.get("source_opened") or "")[:160], "q": (r.get("quote") or "")[:300], "d": today}; n += 1
                 elif r.get("status") == "unverifiable" and k in cur:
                     led[k] = {"s": "source-needed", "src": (r.get("source_opened") or "")[:160], "d": today}; n += 1
+        # checker said error but the adversarial verifier rejected the finding: the claim stands as verified
+        findings = {}
+        for ff in glob.glob(os.path.join(work, "findings", "*.jsonl")):
+            for line in open(ff):
+                try:
+                    r = json.loads(line)
+                except Exception:
+                    continue
+                findings[(r.get("page"), (r.get("finding") or "")[:120])] = r
+        for vf in glob.glob(os.path.join(work, "verdicts", "*.jsonl")):
+            for line in open(vf):
+                try:
+                    v = json.loads(line)
+                except Exception:
+                    continue
+                r = findings.get((v.get("page"), (v.get("finding") or "")[:120]))
+                if v.get("verdict") != "reject" or not r or r.get("claim_id") not in claims_by_id:
+                    continue
+                p, c = claims_by_id[r["claim_id"]]
+                p = c.get("page", p)
+                k = key(p, c["text"])
+                if os.path.exists(os.path.join(ROOT, p)) and k in {u["key"] for u in units_of(p)}:
+                    led[k] = {"s": "ok-verifier", "src": (v.get("reason") or "")[:160], "d": today}; n += 1
         # claims rewritten by applied, verified edits count as verified in their new form
         applied = load(os.path.join(work, "applied.json"), {})
         for vf in glob.glob(os.path.join(work, "verdicts", "*.jsonl")):

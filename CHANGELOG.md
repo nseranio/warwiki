@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-05 — Pre-publication claim gate and claim-level pass
+
+- Gate: every number and absolute statement must be verified (claim ledger) before it can be published; `npm run lint:claims` runs in lint and CI. Workflow and results: `reports/2026-10-04/residual-error-sample.md`.
+- Claim-level pass on the 9,592 claims never checked individually (paragraph-cited and uncited numbers, absolute statements): 4,231 verified edits on 788 pages; supporting citations attached at the sentence or row; unsourced numbers sourced or removed; absolutes matched to source strength; operative teaching left as style.
+- Recheck of unverifiable claims: 31 corrected where open full text did not contain the number. Sources still needed: `reports/2026-10-04/sources-needed.md`; flagged claims awaiting a decision: `reports/2026-10-04/claims-needing-decision.md`.
+
 ## 2026-10-04 (evening) — Residual-error samples and site-wide number check
 
 - Random 30-page samples measured what remained after the second review: 1.57 serious accuracy errors per page, mostly numbers attached to the wrong subgroup, endpoint, denominator or time point (`reports/2026-10-04/residual-error-sample.md`).

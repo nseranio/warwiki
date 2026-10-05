@@ -78,3 +78,38 @@ Detection is not saturating: a second, more thorough pass on already-reviewed pa
 - a pre-publication gate, so new or rewritten pages get the number check and page review before going live;
 - a quarterly 30-page sample to track the rate;
 - named clinician review of the highest-traffic pages for the judgment-type issues AI review cannot settle.
+
+## Claim-level pass and pre-publication gate (October 4–5)
+
+- **Gate:** `scripts/review/gate.py` and `npm run lint:claims` (part of `npm run lint` and CI).
+  - Every sentence or table row stating a statistic or an absolute (always, never, contraindicated, eliminates, no risk, first-line, gold standard and similar, excluding negated hedges) must have an entry in `reports/audit-v2/claims-ledger.json` or appear in the shrinking baseline.
+  - New or edited claims fail lint until checked.
+  - The check workflow: `gate.py pending <files>` → `orchestrate.py --work <dir> --claims` (Codex checker, then Codex verifier) → `REVIEW_WORK=<dir> apply.py list`, Claude review, then `cycle.sh`, which records the verified claims in the ledger.
+- **Pass on the 9,592 claims never checked at claim level:**
+  - 5,199 numbers cited only by their paragraph or table;
+  - 1,810 numbers with no nearby citation;
+  - about 2,400 absolutes.
+
+  Codex checked each one against the opened source and recorded the supporting quote:
+
+  | Verdict | Claims |
+  |---|---|
+  | Error | 4,804 |
+  | Ok | 4,344 |
+  | Style (operative teaching) | 343 |
+  | Unverifiable | 101 |
+
+  4,231 verified edits went out on 788 pages (high 947), and 334 checker errors were rejected by the verifier. Most medium edits attach the supporting citation to the sentence or row itself. Unsourced numbers were replaced with sourced figures or removed, and absolutes were matched to the source's strength.
+- **Ledger state:**
+
+  | Status | Claims |
+  |---|---|
+  | Verified ok | 12,986 |
+  | Fixed after verification | 6,638 |
+  | Ok after verifier review | 348 |
+  | Operative style | 343 |
+  | Source needed | 300 |
+  | Baseline awaiting a decision | 230 |
+- **Open items:**
+  - [sources-needed.md](sources-needed.md): references the checks could not obtain;
+  - [claims-needing-decision.md](claims-needing-decision.md): 225 flagged claims the verifier would not settle automatically.
