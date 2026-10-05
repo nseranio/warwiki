@@ -137,3 +137,36 @@ Detection is not saturating: a second, more thorough pass on already-reviewed pa
 3. Publish with `REVIEW_WORK=<dir> apply.py list`, Claude review, then `cycle.sh`.
 4. Then: cross-page consistency (`npm run consistency:same-source` plus Codex triage).
 5. Last, after the cleanup: patient handouts, SmartPhrases and WARWIKI decks.
+
+## Results after resuming (October 5, night)
+
+All three paused runs finished and are published, each batch after Claude review, lint (claim gate and duplicate-reference check) and build.
+
+| Run | Batches | Verified edits | Notes |
+|---|---|---|---|
+| Dose check | 38/38 | 518 (337 tonight) | 1 vetoed (it dropped the labeled 2.5 mg once-daily tadalafil ED dose); 15 claims source-needed |
+| Guideline-statement check | 89/89 | 443 (371 tonight) | Mostly population, strength and FDA-indication scope; 41 claims source-needed |
+| Third residual sample | 30/30 pages | 48 tonight | See below |
+| Cross-page consistency | 19 Codex triage batches | 18 | 575 same-source clusters, 282 people candidates |
+
+**Third sample, final (seed 20261006, 30 pages):**
+
+| | Sample 1 | Sample 2 | Sample 3 |
+|---|---|---|---|
+| Serious accuracy errors per page | 1.57 (95% CI 1.0–2.1) | 1.37 (0.94–1.79) | **0.83 (0.31–1.36)** |
+| Pages with at least one | 22/30 | 21/30 | 13/30 |
+
+- **Counting rule:** Claude classified all 59 confirmed high-severity findings. 25 are accuracy errors: a wrong, misattributed or overstated statement, including a number attached to the wrong population, endpoint or time point. Omissions and findings whose original wording the verifier judged accurate are excluded.
+- **Skin-graft vaginoplasty:** one page carried 7 of the 25. Without it the rate is 0.62.
+- **Earlier figure:** the 0.85 reported at the pause covered 26 pages. Claude's reclassification of the same 26 gives 21 rather than 22. The classification is in `sources-local/residual-sample-3/high-confirmed.json`.
+
+**Cross-page consistency:**
+- **Method:** `npm run consistency:same-source` and `consistency:people` built the candidate lists. Codex triaged them, one agent per batch (brief and runner: `sources-local/consistency-2026-10-05/`), and Claude checked each proposal against PubMed, Crossref or the primary source before publishing (`c19c0372`).
+- **Spot check:** Claude also reviewed the 38 clusters whose pages give disjoint sample sizes. All were subgroups or arms, not contradictions.
+
+**Claim gate:**
+- The baseline was rebuilt from 2,843 entries to 13 claims; most old entries were keys for sentences rewritten since October 4.
+- The 13 remaining claims (7 dose, 2 guideline, 4 number) are being checked in `sources-local/gate-2026-10-05/`.
+- 56 new source-needed claims are listed at the end of [sources-needed.md](sources-needed.md).
+
+**Next:** handouts, SmartPhrases and the WARWIKI Anki decks, only on the user's go-ahead.

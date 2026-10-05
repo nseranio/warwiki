@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-05 (night) — Dose and guideline checks finished; third sample complete; cross-page consistency
+
+- Resumed after Codex credits returned (runs pinned to `gpt-6-sol`; the global `~/.codex/config.toml` still names the rejected `gpt-6.1-sol`).
+- Dose check finished (38/38 batches): 518 verified edits in total, 337 of them tonight. One edit vetoed because it dropped the labeled 2.5 mg once-daily tadalafil ED dose. Corrections include dexamethasone potency (30–60× hydrocortisone, ESE/ES 2024 Table 1), BPH outcome tables rebuilt with each trial's own figures, AMS 700 and Coloplast reservoir sizes, Cystografin VCUG volumes and CTCAE v5 cystitis grades.
+- Guideline-statement check finished (89/89): 443 verified edits in total, 371 tonight, mostly restoring each recommendation's population and strength, plus exact FDA indications. Examples: EAU strongly recommends *against* tissue-engineered oral mucosa grafts outside trials; Penuma is not the only FDA-cleared penile implant (Augmenta, K200073).
+- Third residual sample finished (30/30): **0.83 serious accuracy errors per page (95% CI 0.31–1.36)**, 13/30 pages affected (1.57 and 1.37 in the first two samples). Classification in `residual-sample-3/high-confirmed.json`.
+- Cross-page consistency: Codex triaged 575 same-source clusters and 282 people candidates; 18 verified fixes on 15 pages. Examples: Farrell, not Vanni, as first author; Mazza outcomes cited to Mazza rather than Belinky; Dubey dribbling 9/28; malleable implants in Abdelwahab 2025; Robertson's IUGA presidency 1981–1984.
+- Claim-gate baseline rebuilt: 2,843 entries down to 13 claims. 56 new `source-needed` claims added to `reports/2026-10-04/sources-needed.md`.
+
 ## 2026-10-05 (evening) — Duplicate references merged; dose and guideline checks started; paused
 
 - 51 duplicate references merged on 32 pages (46 introduced by verified edits); `npm run lint:ref-dupes` now blocks duplicate DOIs and the apply tool reuses existing references.
