@@ -117,6 +117,25 @@ def main():
             last = list(re.finditer(r"^\[\^\d+\]:.*$", s, re.M))[-1]
             s = s[:last.end()] + "\n" + "\n".join(add) + s[last.end():]
             refs = []
+        plain = re.findall(r"^(\d+)\. ", s.split("\n## References", 1)[1], re.M) if "\n## References" in s else []
+        if refs and plain and not re.search(r'<a id="ref\d+"></a>', s) and not foot:  # plain numbered list, [N] markers (database pages)
+            nxt = max(int(x) for x in plain) + 1
+            add = []
+            for r in refs:
+                k = r.get("key"); line = r.get("line", "").strip()
+                if not k or not line:
+                    continue
+                line = re.sub(r"(?<![&\w])<(?=\s?[\d.=])", "&lt;", line)
+                new = re.sub(rf"\[\[{k}\]\]\(#ref{k}\)", f"[{nxt}]", new)
+                add.append(f"{nxt}. {line}")
+                nxt += 1
+            new = re.sub(r"<sup>((?:\[\d+\])+)</sup>", r"\1", new)
+            if re.search(r"\[\[R\d+\]\]", new) or not add:
+                skipped.append((v, "unresolved new-reference placeholder")); continue
+            s = s.rstrip("\n") + "\n" + "\n".join(add) + "\n"
+            refs = []
+        if refs and not plain and not foot and not re.search(r'<a id="ref\d+"></a>', s) and "\n## References" not in s:
+            s = s.rstrip("\n") + "\n\n## References\n\n---\n\n<a id=\"ref0\"></a>"  # placeholder anchor; replaced below
         if refs:
             nums = [int(x) for x in re.findall(r'<a id="ref(\d+)"></a>', s)]
             nxt = (max(nums) if nums else 0) + 1
@@ -140,6 +159,7 @@ def main():
             if re.match(r"\d+\. <a id", last.group(0)):  # number-first style
                 add = [re.sub(r'^<a id="ref(\d+)"></a>(\d+)\. ', r'\2. <a id="ref\1"></a>', a) for a in add]
             s = s[:last.end()] + "\n\n" + "\n\n".join(add) + s[last.end():]
+            s = s.replace('<a id="ref0"></a>\n\n', "", 1)
         if not refs and re.search(r"\[\[R\d+\]\]", new):
             prev = added_on_page.get(v["page"], [])
             if len(prev) == 1:
