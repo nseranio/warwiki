@@ -76,7 +76,7 @@ def pages(sections):
     for sec in sections:
         ps += glob.glob(os.path.join(ROOT, "docs", sec + "*", "**", "*.mdx"), recursive=True)
     ps = [os.path.relpath(p, ROOT) for p in ps]
-    return sorted(p for p in ps if not p.endswith("index.mdx") and "/07-roots/surgeons/" not in p and not os.path.basename(p).startswith("_"))
+    return sorted(p for p in ps if "/07-roots/surgeons/" not in p and not os.path.basename(p).startswith("_"))  # hub index pages included since Oct 5, 2026
 
 
 def main():
