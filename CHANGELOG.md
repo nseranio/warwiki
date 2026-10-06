@@ -6,6 +6,29 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## 2026-10-05 (late night) — Reliability pass: retractions, wrong citations, hub pages, risk-targeted ultra review
+
+About 1,780 more verified edits, each batch reviewed by Claude and gated by lint, the claim gate and build before pushing. Details: last section of `reports/2026-10-04/residual-error-sample.md`.
+
+- **Retractions and corrections:**
+  - New `scripts/refs/retractions.py` checked every cited DOI against Crossref and Retraction Watch: 4 retractions or withdrawals and 1 expression of concern.
+  - The NSAIDs-page claim resting on the retracted Sereno 2010 study was removed; the other four notices were already labelled on their pages.
+  - The 155 papers with correction notices were checked by Codex: none changed a quoted clinical figure; 6 reference lines were updated.
+  - 5 plain-text references gained verified DOIs.
+- **Wrong-citation sweep:** new `scripts/consistency/citation_targets.py` flags markers that point to a different paper than the study the sentence names. Of 43 candidates, 11 marker fixes were made on 7 pages.
+- **Cross-model sample:** Claude re-reviewed the 30 third-sample pages already fixed by Codex at ultra effort and found 0.30 further serious errors per page (25 Codex-verified edits).
+- **Open second-review findings:** the 136 leads from October 4 were decided: 69 verified edits on 52 pages.
+- **Hub pages:**
+  - `index.mdx` pages had been outside the number check, the full-site review and the claim gate. Their 368 claims were checked: 203 edits, including a full ultra review of the seven largest hubs.
+  - Database rows use plain-text attributions, not `<sup>`.
+  - `lint:claims` now gates hub pages.
+- **Risk-targeted ultra review:** the 150 pages ranked highest for numeric density, named studies, study tables and recent churn got a full Codex ultra review with adversarial verifiers. 1,455 verified edits on 150 pages (510 high, 937 medium). Claude review vetoed none. Three were adjusted after applying:
+  - a heading that read as audit voice;
+  - a database-row "ref." pointer;
+  - a PubMed link replacing a DOI that does not resolve (Zhang 2019, *Asian J Androl*).
+- **Claude cross-check of 20 top-risk pages after that review:** 0 high-severity findings (30 minor; 9 verified edits).
+- `~/.codex/config.toml` still names the rejected `gpt-6.1-sol`; the orchestrator pins `gpt-6-sol`.
+
 ## 2026-10-05 (night) — Dose and guideline checks finished; third sample complete; cross-page consistency
 
 - Resumed after Codex credits returned (runs pinned to `gpt-6-sol`; the global `~/.codex/config.toml` still names the rejected `gpt-6.1-sol`).

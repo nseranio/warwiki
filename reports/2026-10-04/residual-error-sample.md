@@ -170,3 +170,25 @@ All three paused runs finished and are published, each batch after Claude review
 - 56 new source-needed claims are listed at the end of [sources-needed.md](sources-needed.md).
 
 **Next:** handouts, SmartPhrases and the WARWIKI Anki decks, only on the user's go-ahead.
+
+## Reliability pass after the cleanup (October 5, late night)
+
+The goal was to reduce errors and raise consistency without new user-supplied sources. Every batch went through Claude review of the verified sheet, DOI resolution for new references, lint (claim gate, duplicate references, card length) and build before it was pushed.
+
+| Step | Method | Result |
+|---|---|---|
+| Retractions | `scripts/refs/retractions.py`: Crossref `updates` filter (includes Retraction Watch) on every cited DOI | 4 retractions/withdrawals, 1 expression of concern; 4 already labelled; the Sereno 2010 claim removed (`78269f00`) |
+| Corrections and errata | Codex read the 155 papers with correction notices | No quoted clinical figure changed; 6 reference lines updated (`ad647b96`) |
+| DOI discovery | Crossref match on 377 journal references without a DOI | 5 high-confidence DOIs added; the remaining matches were not confident enough to apply |
+| Wrong-citation sweep | `scripts/consistency/citation_targets.py` (named study versus cited reference), Codex check, Claude verify | 43 candidates, 11 marker fixes (`659c4334`) |
+| Cross-model sample | Claude reviewed the 30 third-sample pages already fixed by Codex; Codex verified | **0.30 further serious errors per page**; 25 edits (`0e94fa13`, `cfa50890`) |
+| Open second-review findings | Codex final-editor pass on the 136 October 4 leads | 69 verified edits on 52 pages |
+| Hub pages | 368 claims on `index.mdx` pages (previously outside every check); full ultra review of the seven largest hubs | 203 edits; `lint:claims` now gates hub pages (`a65b12ac`) |
+| Risk-targeted ultra review | 150 pages ranked by numeric density, named studies, study-table rows, October 2–4 churn and section; full Codex ultra review with adversarial verifiers | 1,455 verified edits on 150 pages (510 high, 937 medium) in nine batches |
+| Claude cross-check of the risk review | 20 top-ranked pages after that review | **0 high-severity findings**; 9 Codex-verified minor edits (`1283c705`) |
+
+**Notes:**
+- **Risk ranking:** the ranking correlated only weakly with errors in the three residual samples, so it was used as a priority order, not as a predictor. Most edits on these pages narrowed overclaims, restored the population, endpoint or denominator behind a number, separated guideline strength from text, or added a recent trial or guideline that changes the counseling.
+- **Cross-check:** 0 high findings on 20 pages is consistent with fewer than about 0.15 remaining serious errors per page on reviewed high-risk pages (rule of three). It is not a site-wide rate; a fourth random residual sample would measure that.
+- **Not done:** sources the user must supply remain in `sources-needed.md` and `needed-from-user.md`. About a quarter of correction notices could not be opened.
+- **Commit and model:** final risk-review commit `58c69ac9`. `~/.codex/config.toml` still names `gpt-6.1-sol`; the orchestrator pins `gpt-6-sol`.
