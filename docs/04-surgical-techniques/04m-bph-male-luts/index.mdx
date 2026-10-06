@@ -71,7 +71,7 @@ For all men with bothersome LUTS, the core evaluation should document baseline s
 | **IPSS / QoL score** | Severity: mild 0-7, moderate 8-19, severe 20-35; a 3-point decrease is usually clinically meaningful |
 | **Focused exam + DRE** | Prostate texture, nodularity, neurologic clues, palpable bladder; DRE estimates volume poorly |
 | **Urinalysis** | Infection, hematuria, glycosuria, proteinuria |
-| **PSA when it will change management** | Cancer-screening decision and surrogate for gland size / progression risk; PSA >1.5 ng/mL often suggests prostate volume >30 mL |
+| **PSA when it will change management** | Cancer-screening decision and surrogate for gland size / progression risk; PSA &gt;1.5 ng/mL often suggests prostate volume &gt;30 mL<sup>[[2]](#ref2)</sup> |
 | **PVR** | Emptying safety, retention risk, antimuscarinic / beta3 safety |
 | **Uroflowmetry** | Qmax and curve shape; low flow can mean obstruction or weak detrusor |
 | **Diary / frequency-volume chart** | Nocturia, polyuria, urgency, and fluid-timing mismatch |
@@ -123,7 +123,7 @@ export const bphTechniqueData = [
     family: "Resection",
     volume: "30–80 mL (EAU); no volume limit in AUA 2026",
     anatomy: "Lateral and median lobe",
-    sexual: "RE 60–75%; ED 10–14%",
+    sexual: "RE 60–75%; ED 14% (Wei et al. 2025 review)",
     slug: "/docs/surgical-techniques/bph-male-luts/turp",
   },
   {
@@ -145,7 +145,7 @@ export const bphTechniqueData = [
   {
     name: "GreenLight PVP",
     family: "Vaporization",
-    volume: "≤ 80 mL (usual practice range; no volume limit in the FDA clearance or AUA 2026)",
+    volume: "30–80 mL (EAU strong recommendation for specified PVP lasers); FDA clearance has no volume cutoff",
     anatomy: "Lateral and median lobe",
     sexual: "RE ~ 70%; hood-sparing keeps antegrade ejaculation in 80–85%",
     slug: "/docs/surgical-techniques/bph-male-luts/greenlight-pvp",
@@ -163,14 +163,14 @@ export const bphTechniqueData = [
     family: "Adenomectomy",
     volume: "> 80 mL",
     anatomy: "Very large gland; bladder pathology",
-    sexual: "RE 80–90%; Madigan RASP preserves",
+    sexual: "Conventional simple prostatectomy: RE 80–90% (Wei et al. 2025 review); Madigan RASP aims to preserve ejaculation",
     slug: "/docs/surgical-techniques/bph-male-luts/simple-prostatectomy",
   },
   {
     name: "UroLift",
     family: "MIST",
     volume: "30–80 mL (AUA 2026)",
-    anatomy: "Lateral lobe; no obstructing median lobe per AUA 2026 (MedLift, a manufacturer technique, targets the median lobe)",
+    anatomy: "Lateral lobe; no obstructing median lobe per AUA 2026 (MedLift studied selected median lobes)",
     sexual: "Best preservation; 0% anejaculation",
     slug: "/docs/surgical-techniques/bph-male-luts/urolift-pul",
   },
@@ -261,7 +261,7 @@ export const bphTechniqueColumns = [
   entityLabel="BPH techniques"
 />
 
-Volume ranges come from different kinds of source: the TURP range is the EAU recommendation. The June 2025 FDA clearance indicates Rezūm for men aged 50 or older with 30–150 mL prostates and central-zone and/or median-lobe hyperplasia.<sup>[[15]](#ref15)</sup> Its earlier FDA clearance indicated 30–80 mL with the same anatomic coverage.<sup>[[13]](#ref13)</sup> The AUA 2026 statements for PUL, water vapor, robotic waterjet, iTIND and the drug-coated BPH balloon carry their own size limits, as listed in the table. The GreenLight clearance is not volume-restricted; the 80 mL figure reflects practice and trial experience. EAU 2026 sets its own strong-recommendation ranges: 30–80 mL for TURP, laser vaporization (80 W KTP, 120 W LBO, 180 W LBO) and Aquablation, under 30 mL without a middle lobe for TUIP, under 70 mL without a middle lobe for PUL, and above 80 mL for open prostatectomy when endoscopic enucleation is unavailable. HoLEP has no size limit in EAU. EAU makes weak recommendations for Tm:YAG and bipolar enucleation, bipolar vaporization and PAE, and none for water vapor therapy, iTIND or the drug-coated balloon, which it lists as under investigation.<sup>[[2]](#ref2)</sup>
+Volume ranges come from different kinds of source: the TURP range is the EAU recommendation. The June 2025 FDA clearance indicates Rezūm for men aged 50 or older with 30–150 mL prostates and central-zone and/or median-lobe hyperplasia.<sup>[[15]](#ref15)</sup> Its earlier FDA clearance indicated 30–80 mL with the same anatomic coverage.<sup>[[13]](#ref13)</sup> The AUA 2026 statements for PUL, water vapor, robotic waterjet, iTIND and the drug-coated BPH balloon carry their own size limits, as listed in the table. The GreenLight FDA clearance lists no prostate-volume cutoff;<sup>[[19]](#ref19)</sup> EAU 2026 strongly recommends 80/120/180-W PVP for 30–80 mL prostates.<sup>[[2]](#ref2)</sup> EAU 2026 sets its own strong-recommendation ranges: 30–80 mL for TURP, laser vaporization (80 W KTP, 120 W LBO, 180 W LBO) and Aquablation, under 30 mL without a middle lobe for TUIP, under 70 mL without a middle lobe for PUL, and above 80 mL for open prostatectomy when endoscopic enucleation is unavailable.<sup>[[2]](#ref2)</sup> HoLEP has no size limit in EAU. EAU makes weak recommendations for Tm:YAG and bipolar enucleation, bipolar vaporization and PAE, and none for water vapor therapy, iTIND or the drug-coated balloon, which it lists as under investigation.<sup>[[2]](#ref2)</sup>
 
 ---
 
@@ -319,3 +319,5 @@ AUA 2026 advises evaluating every man within six months of starting treatment, w
 <a id="ref17"></a>17. Müllhaupt G, Hechelhammer L, Graf N, et al. "Prostatic Artery Embolisation Versus Transurethral Resection of the Prostate for Benign Prostatic Obstruction: 5-year Outcomes of a Randomised, Open-label, Noninferiority Trial." *Eur Urol Focus.* 2024;10(5):788–795. doi:[10.1016/j.euf.2024.03.001](https://doi.org/10.1016/j.euf.2024.03.001)
 
 <a id="ref18"></a>18. Ritter M, Stein J, Barber N, et al. "WATER III: A Prospective, Partially Randomized Trial of Aquablation Therapy Versus Transurethral Laser Enucleation of the Prostate for Treatment of Lower Urinary Tract Symptoms." *Eur Urol Focus.* 2026;12(2):266–274. doi:[10.1016/j.euf.2026.01.006](https://doi.org/10.1016/j.euf.2026.01.006)
+
+<a id="ref19"></a>19. US Food and Drug Administration. *GreenLight XPS Laser System, 510(k) K092735: Indications for Use.* 2009. [FDA](https://www.accessdata.fda.gov/cdrh_docs/pdf9/K092735.pdf)
