@@ -1,19 +1,44 @@
-# Needed from you: decisions and sources (compiled September 26, 2026)
+# Needed from you: decisions and sources (compiled September 26, 2026; updated October 6)
 
 Everything here is what Claude cannot settle alone. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md); this file is the short version, ordered by value. Sources you supplied on September 26 are listed at the end so they are not requested again.
 
-## To gather through work access (held October 3, 2026)
+## Still needed from you (updated October 6, 2026)
 
-Paywalled sources the user will fetch once institutional access is available. When one arrives (Downloads, or `reports/audit-v2/sources-local/pdfs-2026-10-03/`, gitignored), check every page that cites it, as was done October 3 for ACOG PB 198, 214, 213, 155, 218 and CO 795.
+Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each arrival is checked against every page that cites it.
+
+**Sources**
 
 | Source | What it settles |
 |---|---|
-| Djordjevic ML et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w | MLD phalloplasty page: donor-site figures (78% direct closure, 97% acceptable appearance, 21% minor dehiscence) and second-stage urethral counts (28 fistulas, 33 strictures, ~64% needing buccal stage), dropped as unverifiable |
-| SOGC Guideline No. 465, OASIs Part II (Giroux M et al. *J Obstet Gynaecol Can* 2025; doi:10.1016/j.jogc.2025.103186) and No. 457, Part I (2024) | Obstetric perineal injury page, Postpartum Perineal Clinic section: SOGC row and counseling statements now cited from the abstract only |
-| ACOG Practice Bulletin No. 210, Fecal Incontinence (2019) | Pages citing PB 210 (fecal incontinence and related) |
-| ACOG Committee Opinion No. 694, Management of Mesh and Graft Complications in Gynecologic Surgery (2017) | Mesh-complication pages |
-| ACOG Committee Opinion No. 823, Health Care for Transgender and Gender Diverse Individuals (2021) | Gender-affirming care pages |
-| Remaining gated pages, if a full copy becomes available: ACOG PB 214 p. 6 (transvaginal mesh trial data, cystoscopy, hysteropexy technique); PB 218 two pages (trauma history, referred musculoskeletal pain, pelvic denervation lines on the CPP page); CO 795 pp. 3, 5, 7 (BDD 2.5% figure) | The unverified lines named |
+| Djordjevic ML et al. *World J Urol* 2019;37(4):631–637 (MLD phalloplasty), doi:10.1007/s00345-019-02641-w | MLD phalloplasty donor-site figures and second-stage counts |
+| SOGC Guidelines No. 465 (OASIs Part II, 2025, doi:10.1016/j.jogc.2025.103186) and No. 457 (Part I, 2024) | SOGC row of the postpartum perineal clinic table |
+| ACOG Practice Bulletin No. 210, Fecal Incontinence (2019) | Fecal incontinence pages |
+| ACOG PB 214 p. 6 and PB 218 (two gated pages) | Transvaginal mesh trial data, cystoscopy, hysteropexy; CPP trauma history, referred pain, denervation lines |
+| Erickson 2020 (LSE classification); original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee and Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021) | Urethroplasty technique and classification pages |
+| Wu NEJM 2021, Davis NEJM 2024, Le Cleach NEJM 2012, Goodman NEJM 2019, Diamond Lancet 2017 | Pages citing them (abstract-only today) |
+| EVA trial, Larson 2013 (Michigan four-wall), ASPIRe, OPTIMAL / E-OPTIMAL; Cotte 2023, Phé 2017, Peyronnet 2019; Laor 1995; Trimix series; Tagliaferri; Holm 2026, Furr 2019, VanDyke 2021 | Prolapse, AUS, Fournier and implant pages |
+| 2025 AUGS-IUGA complications update | Mesh complication classification pages |
+| Nocdurna US label (the October 6 download was an empty `getFile.cfm` page) | Nocturia dosing |
+| ATOMS IFU (the October 6 file is the A.M.I. product brochure, which has no indications or contraindications) | ATOMS device page |
+| Aquablation IFU; Intuitive X/Xi and SP manuals; stapler IFUs; instrument catalogs (Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun) | Device and instrument pages |
+| Books not in your library folders: Blandy's Urology 3rd ed, Gurtner/Neligan, Mathes-Nahai, Oxford Handbook of Urology 4th ed, Wieder Pocket Guide 6th ed, Feliciano's Trauma | Textbook citations |
+
+**Settings only you can change**
+- Vercel: enable deployment checks so production waits for CI (it currently deploys even when CI fails).
+- Optional: `~/.codex/config.toml` `model` still names the rejected `gpt-6.1-sol` (review scripts pin `gpt-6-sol`, so only ad-hoc use is affected).
+
+**Decisions**
+- Carter-Trost technique (removed from three penile implant pages): restore only if you have a real citation.
+- Audit-style wording left in some internal `evidenceNote` fields (Backhaus, Mixter, vaginal anatomy): reword by hand?
+
+## Received October 6, 2026 (checking in progress)
+
+Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extracted text; originals stay in Downloads). Pages citing each are being checked in the quality program.
+
+- Trials and papers: COBRRA (NEJM 2026) full text and protocol; MASTER 12-month paper (Abrams, *Eur Urol* 2021;79:812–823); Biardeau 2016 ICS AUS consensus; White and Cooley 2018 (*Pediatrics*, transition); ASRA LAST advisory 2017 (Neal, full text).
+- Guidelines: UKKA hyperkalaemia guideline (July 2026 update); ACOG Committee Opinions 694, 823 and 795 (full).
+- Device documents: Coloplast Titan (3 editions), Genesis and Virtue IFUs; AMS 800 operating room manual (92116967); Altaviva patient guide; eCoin physician manual and safety page; Revi surgical technique guide (complete); ProACT physician IFU; Argus IFU (manualslib copy); Remeex female, male and readjustment kits, Surelift and Contasure Needleless IFUs; Rezum (Canada), UroLift 2 and iTind (US) IFUs; Ialuril IFU.
+- Drug labels: Vagifem, Imvexxy, Premarin vaginal cream, Estring, Botox, Xiaflex, Gemtesa (vibegron), Elmiron.
 
 ## A. Decisions (answer in one line each)
 
