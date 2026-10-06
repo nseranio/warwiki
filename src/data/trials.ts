@@ -44,6 +44,8 @@ export interface Trial {
   caveat?: string;
   /** DOI or stable URL to the primary paper. */
   doi?: string;
+  /** Additional cited study or guideline source links displayed with the primary paper. */
+  additionalPapers?: { label: string; doi: string }[];
 }
 
 export const trials: Trial[] = [
@@ -131,12 +133,15 @@ export const trials: Trial[] = [
     domain: 'Pelvic Organ Prolapse',
     design: 'RCT (2×2 factorial)',
     n: 374,
-    population: 'Women with apical vaginal prolapse undergoing transvaginal repair',
+    population: 'Women with stage II–IV apical vaginal prolapse and stress urinary incontinence undergoing vaginal repair with a concomitant midurethral sling',
     comparison: 'Sacrospinous ligament fixation (SSLF) vs uterosacral ligament suspension (ULS); ± perioperative behavioral therapy / PFMT',
     primaryOutcome: 'Surgical success at 2 years (composite)',
-    result: 'Corrected 2-year composite success 64.5% (100/155) with ULS vs 63.1% (94/149) with SSLF (adjusted OR 1.1, 95% CI 0.7–1.7); perioperative pelvic-floor muscle training did not improve outcomes. At 5 years (E-OPTIMAL) cumulative composite failure rose to about 62–70% with no statistically clear difference between procedures.',
-    bottomLine: 'Neither SSLF nor ULS was superior for apical prolapse at 2 or 5 years — pick by surgeon experience, anatomy and complication profile — and adding perioperative PFMT does not help.',
+    result: 'Corrected 2-year composite success was 64.5% (100/155) with ULS vs 63.1% (94/149) with SSLF (adjusted OR 1.1, 95% CI 0.7–1.7); perioperative behavioral therapy/PFMT did not show a significant outcome improvement. At 5 years (E-OPTIMAL), estimated first composite surgical failure was 61.5% with ULS vs 70.3% with SSLF (adjusted difference −8.8 percentage points, 95% CI −24.2 to 6.6); prolapse symptom scores remained improved.',
+    bottomLine: 'At 2 and 5 years, OPTIMAL did not demonstrate superiority of SSLF or ULS for composite outcomes and did not establish equivalence; choose based on anatomy, surgeon experience, and complications. Added perioperative behavioral therapy/PFMT did not show a significant benefit on measured outcomes.',
     doi: '10.1001/jama.2014.1719',
+    additionalPapers: [
+      { label: 'E-OPTIMAL 5-year follow-up', doi: '10.1001/jama.2018.2827' },
+    ],
   },
   {
     id: 'care',
@@ -290,10 +295,13 @@ export const trials: Trial[] = [
     n: 220,
     population: 'Adults with overactive bladder',
     comparison: 'Percutaneous tibial nerve stimulation (PTNS) vs sham',
-    primaryOutcome: 'Global response assessment of OAB symptoms at 12 weeks',
-    result: '54.5% of PTNS patients reported moderate or marked improvement vs 20.9% with sham (p<0.001).',
-    bottomLine: 'Level-1 evidence that PTNS beats sham for OAB — established neuromodulation by the tibial route as a real, drug-free third-line option.',
+    primaryOutcome: 'Patient-reported global response at week 13 after 12 weekly PTNS or sham sessions',
+    result: 'At week 13, 60/110 (54.5%) PTNS patients reported moderate or marked improvement vs 23/110 (20.9%) sham patients (p less than 0.001).',
+    bottomLine: 'The randomized, sham-controlled SUmiT trial showed greater patient-reported improvement with PTNS than sham at week 13. PTNS is a drug-free minimally invasive OAB option; the 2024 AUA/SUFU guideline permits its use without prior therapy trials through shared decision-making (Expert Opinion).',
     doi: '10.1016/j.juro.2009.12.036',
+    additionalPapers: [
+      { label: '2024 AUA/SUFU OAB guideline', doi: '10.1097/JU.0000000000003985' },
+    ],
   },
   {
     id: 'orbit',
@@ -397,10 +405,14 @@ export const trials: Trial[] = [
     n: 127,
     population: 'Men with recurrent short (≤3 cm) anterior/bulbar urethral strictures',
     comparison: 'Optilume paclitaxel drug-coated balloon vs standard endoscopic management',
-    primaryOutcome: 'Anatomic/functional success (freedom from reintervention)',
-    result: 'The drug-coated balloon achieved higher stricture-free and reintervention-free rates than repeat endoscopic treatment, durable across multi-year (ROBUST I 5-yr, ROBUST III 3-yr) follow-up.',
-    bottomLine: 'A new minimally invasive middle ground between endoscopic treatment and urethroplasty for recurrent short strictures — better durability than repeat DVIU/dilation.',
+    primaryOutcome: 'ROBUST III: 6-month anatomic success (atraumatic passage of a 16 Fr flexible cystoscope or 14 Fr catheter)',
+    result: 'ROBUST III: 6-month anatomic success was 74.6% (50/67) with Optilume vs 26.8% (11/41) with standard endoscopy; 1-year Kaplan–Meier freedom from repeat intervention was 83.2% vs 21.7%. In the drug-coated balloon arm alone, estimated freedom from reintervention was 71.9% at 3 years; a separate single-arm ROBUST I cohort estimated 71.7% at 5 years.',
+    bottomLine: 'For selected men with recurrent short anterior strictures, Optilume offers a minimally invasive option between repeat endoscopy and urethroplasty. ROBUST III showed better 6-month anatomic success and 1-year freedom from repeat intervention than standard endoscopic management; urethroplasty was not compared, and longer follow-up lacks a contemporaneous control.',
     doi: '10.1089/end.2024.0718',
+    additionalPapers: [
+      { label: 'ROBUST III randomized 1-year report', doi: '10.1097/JU.0000000000002346' },
+      { label: 'ROBUST I single-arm 5-year report', doi: '10.1097/JU.0000000000004229' },
+    ],
   },
 
   // ───────────────────────── Male SUI / Prosthetics ─────────────────────────
@@ -841,8 +853,11 @@ export const trials: Trial[] = [
     primaryOutcome: 'Change in daily urgency-incontinence episodes and positive treatment response at 12 weeks',
     result: 'OnabotulinumtoxinA cut incontinence episodes significantly more than placebo; 22.9% became fully continent vs 6.5%, and 60.8% reported a positive response vs 29.2%. UTI was the commonest adverse event; ~5.4% had retention.',
     bottomLine: 'The pivotal trial behind FDA approval of Botox 100 U for idiopathic OAB (the dose for non-neurogenic disease — distinct from the 200 U used for neurogenic DO in the Ginsberg trial).',
-    guidelineImpact: 'Basis for the AUA/SUFU OAB guideline placement of intradetrusor onabotulinumtoxinA 100 U as third-line therapy.',
+    guidelineImpact: 'The 2024 AUA/SUFU guideline recommends offering intradetrusor botulinum toxin injection after inadequate response to or intolerable effects from pharmacotherapy or behavioral therapy (Moderate Recommendation; Evidence Level: Grade A), and permits earlier minimally invasive therapy through shared decision-making (Expert Opinion).',
     doi: '10.1016/j.juro.2012.12.022',
+    additionalPapers: [
+      { label: '2024 AUA/SUFU OAB guideline', doi: '10.1097/JU.0000000000003985' },
+    ],
   },
   {
     id: 'artisan-snm',

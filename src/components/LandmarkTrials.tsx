@@ -78,6 +78,18 @@ function Detail({ t }: { t: Trial }) {
           Read the paper ↗
         </a>
       )}
+      {t.additionalPapers?.map(paper => (
+        <a
+          key={paper.doi}
+          className="lt-paper-link"
+          href={doiHref(paper.doi) ?? undefined}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: '0.5rem', marginTop: '0.5rem' }}
+        >
+          {paper.label} ↗
+        </a>
+      ))}
     </div>
   );
 }
