@@ -59,7 +59,7 @@ PMID = re.compile(r"\bPMID:?\s*(\d{5,9})\b", re.I)
 
 SUPPORTED = {"verified-supported", "verified-corrected"}
 PASS_LEGACY = {"legacy-supported", "legacy-fuzzy-fixed", "legacy-voice", "legacy-rejection-only",
-               "legacy-source-needed", "legacy-not-applicable", "legacy-baseline"}
+               "legacy-source-needed", "legacy-not-applicable", "legacy-baseline", "legacy-disputed"}
 V1_MAP = {"ok": "legacy-supported", "fixed": "legacy-fuzzy-fixed", "voice": "legacy-voice",
           "ok-verifier": "legacy-rejection-only", "source-needed": "legacy-source-needed", "style": "legacy-not-applicable"}
 NO_SOURCE = {"", "none", "n/a", "na", "null"}
@@ -215,7 +215,7 @@ def verdict(u, e, exceptions, today=None):
         n = independent_ok(e)
         if n < 1:
             return False, "no supporting check on record"
-        if u["high_risk"] and n < 2:
+        if u["high_risk"] and n < 2 and not e.get("v1"):  # two runs for new or changed claims; unchanged migrated ones need one
             return False, "high-risk claim needs a second independent check"
         return True, s
     if s == "not-applicable":
@@ -384,8 +384,12 @@ def record(work, today=None):
             if not u:
                 continue
             vetoed = str(applied.get(A.fid(v), {}).get("status", "")).startswith(("skip", "veto"))
-            if v.get("verdict") in ("agree", "modify", "no_edit") and r.get("severity") in ("high", "medium") and not vetoed:
-                add_check(u, {"s": "confirmed-error", "src": (v.get("reason") or "")[:160]}, "flagged"); n["flagged"] = n.get("flagged", 0) + 1
+            attribution = r.get("category") == "attribution" or r.get("supported") is True
+            if v.get("verdict") in ("agree", "modify", "no_edit") and r.get("severity") in ("high", "medium") and not vetoed and not attribution:
+                # unchanged legacy teaching stays published as disputed (open finding); new or changed claims fail
+                was = led.get(u["key"], {}).get("s", "")
+                add_check(u, {"s": "confirmed-error", "src": (v.get("reason") or "")[:160]},
+                          "legacy-disputed" if was.startswith("legacy-") else "flagged"); n["flagged"] = n.get("flagged", 0) + 1
                 continue
             if v.get("verdict") != "reject":
                 continue

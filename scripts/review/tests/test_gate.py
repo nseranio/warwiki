@@ -171,11 +171,20 @@ class GateTests(Fixture):
 
     def test_confirmed_finding_flags_a_previously_supported_claim(self):
         u, = self.page("Success was 80% at 5 years.<sup>[[1]](#ref1)</sup>")
-        self.ledger({u["key"]: {"s": "legacy-supported"}})
         f = {"page": PAGE, "claim_id": "b#1", "severity": "high", "finding": "wrong endpoint", "edit": None}
-        G.record(self.work([dict(u)], status=[{"claim_id": "b#1", "status": "error", "source_opened": "PMID 1", "quote": "q"}],
-                           findings=[f], verdicts=[{"page": PAGE, "finding": "wrong endpoint", "verdict": "no_edit", "reason": "real"}]))
+        args = dict(status=[{"claim_id": "b#1", "status": "error", "source_opened": "PMID 1", "quote": "q"}], findings=[f],
+                    verdicts=[{"page": PAGE, "finding": "wrong endpoint", "verdict": "no_edit", "reason": "real"}])
+        self.ledger({u["key"]: {"s": "verified-supported", "checks": [{"s": "ok", "run": "r"}]}})
+        G.record(self.work([dict(u)], **args))
         self.assertEqual(len(self.failing()), 1)
+        # unchanged legacy teaching stays published but is recorded as disputed, never as supported
+        self.ledger({u["key"]: {"s": "legacy-supported"}})
+        G.record(self.work([dict(u)], **args))
+        self.assertEqual(G.load(G.LEDGER, {})[u["key"]]["s"], "legacy-disputed")
+        # a supported claim whose only problem is citation placement is not flagged
+        self.ledger({u["key"]: {"s": "verified-supported", "checks": [{"s": "ok", "run": "r"}]}})
+        G.record(self.work([dict(u)], **dict(args, findings=[dict(f, category="attribution", supported=True)])))
+        self.assertEqual(self.failing(), [])
 
     def test_header_spacing_is_formatting_but_section_and_link_are_meaning(self):
         row = "| Patency | 85%<sup>[[1]](#ref1)</sup> |"
