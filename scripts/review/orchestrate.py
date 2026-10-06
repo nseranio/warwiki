@@ -65,8 +65,8 @@ def load_state():
             os.makedirs(os.path.join(WORK, sub), exist_ok=True)
         return st
     pages, tier = page_list()
-    if ONLY is not None:
-        pages = [p for p in pages if p in set(ONLY)]
+    if ONLY is not None:  # an explicit page list wins, including hub index pages that page_list() skips
+        pages = [p for p in ONLY if os.path.exists(os.path.join(ROOT, p))]
     st = {"pages": {p: {"status": "pending", "tier": tier.get(p, 3), "tries": 0} for p in pages}, "jobs": {}, "n": 0}
     os.makedirs(os.path.join(WORK, "findings"), exist_ok=True)
     os.makedirs(os.path.join(WORK, "verdicts"), exist_ok=True)
