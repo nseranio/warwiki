@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Full-site second review: keep Codex reviewer and verifier agents busy until every page is reviewed and verified.
 
-Usage: nohup python3 scripts/review/orchestrate.py [--reviewers 8] [--verifiers 3] > WORK/orchestrator.out 2>&1 &
+Usage: nohup python3 scripts/review/orchestrate.py [--reviewers 1] [--verifiers 1] > WORK/orchestrator.out 2>&1 &
 State, findings and verdicts live in reports/audit-v2/sources-local/full-review/ (gitignored); the script resumes
 from state.json if restarted. Reviewers and verifiers are read-only on the repo and write only to their job folders.
 Touch WORK/STOP to stop launching new jobs (running jobs finish).
@@ -23,8 +23,8 @@ BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), (
 def brief(k):
     return open(os.path.join(ROOT, "scripts/review", dict(BRIEFS)[k])).read()
 ARGS = sys.argv[1:]
-NR = int(ARGS[ARGS.index("--reviewers") + 1]) if "--reviewers" in ARGS else 8
-NV = int(ARGS[ARGS.index("--verifiers") + 1]) if "--verifiers" in ARGS else 3
+NR = int(ARGS[ARGS.index("--reviewers") + 1]) if "--reviewers" in ARGS else 1  # serial by default (usage limits; Oct 6)
+NV = int(ARGS[ARGS.index("--verifiers") + 1]) if "--verifiers" in ARGS else 1
 PAGES_PER_REVIEW, PAGES_PER_VERIFY, TIMEOUT = 2, 4, 120 * 60
 EFFORT = ARGS[ARGS.index("--effort") + 1] if "--effort" in ARGS else "high"   # A/B Oct 3: high keeps ~75-80% of ultra yield at ~half the tokens
 TIER = ARGS[ARGS.index("--tier") + 1] if "--tier" in ARGS else "default"
@@ -114,6 +114,81 @@ def launch(st, kind, pages):
     return proc
 
 
+STATUSES = {"ok", "style", "error", "unverifiable"}
+VERDICTS = {"agree", "modify", "reject", "no_edit"}
+
+
+def jsonl(path):
+    """Rows of a JSON Lines file, or None if any line is not a JSON object."""
+    rows = []
+    for line in open(path):
+        if line.strip():
+            try:
+                r = json.loads(line)
+            except Exception:
+                return None
+            if not isinstance(r, dict):
+                return None
+            rows.append(r)
+    return rows
+
+
+def review_problem(d, p):
+    """Why a review job's output for unit p is not complete, or None. Claims mode needs exactly one valid status
+    per batch claim and findings that name batch claims; an empty or truncated file is not completion."""
+    f = os.path.join(d, slug(p) + ".jsonl")
+    if not os.path.exists(f):
+        return "no findings file"
+    rows = jsonl(f)
+    if rows is None:
+        return "findings file is not valid JSON Lines"
+    if not CLAIMS:
+        return None if os.path.exists(os.path.join(d, slug(p) + ".summary.md")) else "no summary file"
+    ids = [c["id"] for c in json.load(open(os.path.join(WORK, "batches", slug(p) + ".json")))["claims"]]
+    sf = os.path.join(d, slug(p) + ".status.jsonl")
+    srows = jsonl(sf) if os.path.exists(sf) else None
+    if srows is None:
+        return "status file missing or not valid JSON Lines"
+    got = [r.get("claim_id") for r in srows]
+    if len(got) != len(set(got)):
+        return "duplicate claim ids in status file"
+    if set(got) != set(ids):
+        return f"status covers {len(set(got) & set(ids))}/{len(ids)} claims ({len(set(got) - set(ids))} unknown ids)"
+    bad = [r for r in srows if r.get("status") not in STATUSES]
+    if bad:
+        return f"{len(bad)} invalid status values"
+    if any(r.get("status") in ("ok", "error") and not str(r.get("source_opened") or "").strip() for r in srows):
+        return "ok/error status without source_opened"
+    errs = {r["claim_id"] for r in srows if r["status"] == "error"}
+    fids = [r.get("claim_id") for r in rows]
+    if any(i not in ids for i in fids):
+        return "finding names a claim outside the batch"
+    if not errs <= set(fids):
+        return "error status without a finding"
+    return None
+
+
+def verify_problem(d, pages):
+    """Why a verify job is incomplete, or None: every high/medium or reference finding needs one valid verdict."""
+    v = os.path.join(d, "verdicts.jsonl")
+    if not os.path.exists(v):
+        return "no verdicts file"
+    rows = jsonl(v)
+    if rows is None:
+        return "verdicts file is not valid JSON Lines"
+    if any(r.get("verdict") not in VERDICTS for r in rows):
+        return "invalid verdict value"
+    have = {(r.get("page"), (r.get("finding") or "")[:120]) for r in rows}
+    need = set()
+    for p in pages:
+        f = os.path.join(WORK, "findings", slug(p) + ".jsonl")
+        for r in (jsonl(f) or []) if os.path.exists(f) else []:
+            if r.get("severity") in ("high", "medium") or r.get("category") == "reference":
+                need.add((r.get("page"), (r.get("finding") or "")[:120]))
+    missing = need - have
+    return f"{len(missing)}/{len(need)} findings have no verdict" if missing else None
+
+
 def finish(st, jid, ok):
     j = st["jobs"].pop(jid)
     d = j["dir"]
@@ -121,7 +196,10 @@ def finish(st, jid, ok):
         ps = st["pages"][p]
         if j["kind"] == "review":
             f = os.path.join(d, slug(p) + ".jsonl")
-            if os.path.exists(f):
+            why = "exit code not 0" if not ok else review_problem(d, p)
+            if why:
+                log(f"incomplete {jid} {slug(p)}: {why}")
+            if not why:
                 shutil.copy(f, os.path.join(WORK, "findings", slug(p) + ".jsonl"))
                 sf = os.path.join(d, slug(p) + ".status.jsonl")
                 if CLAIMS and os.path.exists(sf):
@@ -134,13 +212,15 @@ def finish(st, jid, ok):
                 ps["tries"] += 1
                 ps["status"] = "pending" if ps["tries"] < 2 else "failed"
         else:
-            v = os.path.join(d, "verdicts.jsonl")
-            if os.path.exists(v):
+            why = "exit code not 0" if not ok else verify_problem(d, j["pages"])
+            if why:
+                log(f"incomplete {jid}: {why}")
+            if not why:
                 ps["status"] = "done"
             else:
                 ps["tries"] += 1
                 ps["status"] = "reviewed" if ps["tries"] < 3 else "failed"
-    if j["kind"] == "verify" and os.path.exists(os.path.join(d, "verdicts.jsonl")):
+    if j["kind"] == "verify" and ok and not verify_problem(d, j["pages"]):
         shutil.copy(os.path.join(d, "verdicts.jsonl"), os.path.join(WORK, "verdicts", jid + ".jsonl"))
     log(f"finish {jid} {j['kind']} ok={ok} minutes={(time.time() - j['start']) / 60:.0f}")
 

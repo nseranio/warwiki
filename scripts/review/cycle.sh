@@ -17,7 +17,9 @@ for f,ns in orph.items():
     for n in sorted(ns, reverse=True):
         print('orphan', f, n); subprocess.run(['python3','scripts/review/drop_ref.py',f,str(n)])
 "
-# verified claims and claims rewritten by applied verified edits go into the claim ledger (gate)
+# record the run (schema 2): checks that opened a source support claims; claims rewritten by applied edits become
+# corrected-unconfirmed and fail the gate until a final-text check: gate.py pending <touched files> --out <dir>,
+# orchestrate.py --work <dir> --claims --reviewers 1 --verifiers 1, then gate.py record <dir>
 [ -d $L/status ] && python3 scripts/review/gate.py record $L
 npm run lint > $L/lint.log 2>&1; LINT=$?; echo LINT=$LINT
 grep -A3 "unverified" $L/lint.log | head -20

@@ -3,10 +3,14 @@ name: CI
 on:
   push:
     branches: [main]
-    paths-ignore: ['reports/**', 'AGENTS.md', 'CLAUDE.md', 'CHANGELOG.md', 'RESUME-HERE.md', 'OPEN-EVIDENCE-PROMPT.md', 'EPIC-ROADMAP.md']
+    # Authoring notes skip CI, but claim-gate inputs under reports/ (ledger, exceptions, baseline) must run it.
+    paths: ['**', '!reports/**', '!AGENTS.md', '!CLAUDE.md', '!CHANGELOG.md', '!RESUME-HERE.md', '!OPEN-EVIDENCE-PROMPT.md', '!EPIC-ROADMAP.md',
+            'reports/audit-v2/claims-ledger.json', 'reports/audit-v2/claim-exceptions.json', 'reports/audit-v2/claims-baseline.json', 'reports/audit-v2/verdicts.json']
   pull_request:
     branches: [main]
-    paths-ignore: ['reports/**', 'AGENTS.md', 'CLAUDE.md', 'CHANGELOG.md', 'RESUME-HERE.md', 'OPEN-EVIDENCE-PROMPT.md', 'EPIC-ROADMAP.md']
+    # Authoring notes skip CI, but claim-gate inputs under reports/ (ledger, exceptions, baseline) must run it.
+    paths: ['**', '!reports/**', '!AGENTS.md', '!CLAUDE.md', '!CHANGELOG.md', '!RESUME-HERE.md', '!OPEN-EVIDENCE-PROMPT.md', '!EPIC-ROADMAP.md',
+            'reports/audit-v2/claims-ledger.json', 'reports/audit-v2/claim-exceptions.json', 'reports/audit-v2/claims-baseline.json', 'reports/audit-v2/verdicts.json']
 
 permissions:
   contents: read

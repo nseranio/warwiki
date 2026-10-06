@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 6, 2026: claim gate schema 2 (quality program milestone 1)
+
+- Reproduced the weaknesses in Codex's error-reduction plan: the gate passed 361 `source-needed` claims (77 high-risk) on ledger membership alone; keys ignored citations and table context; rejected fixes became `ok-verifier`; applied edits closed claims by fuzzy overlap; the orchestrator accepted empty or partial output; CI ignored ledger changes.
+- Rewrote `scripts/review/gate.py` (verdict-based pass rules, v2 bindings, two-run rule for high-risk claims, owner exceptions, no bulk baseline), added output validation and serial defaults to `orchestrate.py`, extended the checker and verifier briefs, and narrowed the CI path filter. 19 regression tests (`scripts/review/tests/test_gate.py`, run by `npm run test:maintenance`).
+- Codex reviewed the first version adversarially (12 findings); 8 fixed, 4 declined or deferred with reasons in `reports/quality/gate-migration.md`.
+- Migrated the ledger: 24,498 current claims carried over under explicit `legacy-*` statuses; none relabelled as verified. Coverage matrix drafted in `reports/quality/coverage-matrix.md`.
+
 ## 2026-10-05 (late night) — Reliability pass: retractions, wrong citations, hub pages, risk-targeted ultra review
 
 About 1,780 more verified edits, each batch reviewed by Claude and gated by lint, the claim gate and build before pushing. Details: last section of `reports/2026-10-04/residual-error-sample.md`.
