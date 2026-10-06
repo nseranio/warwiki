@@ -28,7 +28,6 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 - Optional: `~/.codex/config.toml` `model` still names the rejected `gpt-6.1-sol` (review scripts pin `gpt-6-sol`, so only ad-hoc use is affected).
 
 **Decisions**
-- Carter-Trost technique (removed from three penile implant pages): restore only if you have a real citation.
 - Audit-style wording left in some internal `evidenceNote` fields (Backhaus, Mixter, vaginal anatomy): reword by hand?
 
 ## Received October 6, 2026 (checking in progress)
@@ -98,7 +97,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 18. Fournier severity index cutoffs versus Laor 1995: closed September 27. Laor abstract confirms 78%/75%; the full FGSI scoring table (Tufano 2023 J Pers Med, PMC10532663; 2021 validation PMC8200139) corrected sodium to >=180 and added bicarbonate >52 (`31acc8cd`).
 19. Transitional urology transfer age (changed to 18 to 22 from a secondary summary of White and Cooley 2018): confirm from the primary text.
 20. Endocrine Society 2017 criteria on `simple-orchiectomy.mdx`: closed September 27 -- no page change needed.
-21. Carter-Trost technique reference (removed from three penile implant pages): restore only with a real citation.
+21. Carter-Trost technique reference: closed October 6. No publication supports the named technique (the old wording described open corporotomy for severe fibrosis); it stays off the three penile implant pages.
 22. Some frontmatter `evidenceNote` fields still contain audit-style wording (Backhaus, Mixter, vaginal anatomy). Reword by hand?
 23. Cloud voice: done and verified live (September 27). Created the `warwiki-blob` Vercel Blob store (Public access, matching the code's explicit `access: 'public'` writes); set `WARWIKI_ENABLE_CLOUD_TTS=true` and `WARWIKI_TTS_MONTHLY_BUDGET_USD=10` (the user's own $10/month cap, not the code's $45 default); `OPENAI_API_KEY` was already present from an earlier attempt. Along the way found and fixed a real bug in `api/tts.ts`: `isNotFound()`/`isConflict()` checked the thrown error's `.name`, but `@vercel/blob`'s `BlobError` subclasses never override `Error.prototype.name` (it stays generic `"Error"`), so the checks never matched and the Blob-backed budget ledger could never initialize -- cloud TTS would have failed with 503 "Cloud audio paused" on any store, not just a fresh one. Fixed with `instanceof` checks against the SDK's actual exported error classes (`03783ae1`). Verified end to end: `POST /api/tts` returns real MP3 audio (200, `audio/mpeg`, cache MISS on first call, HIT on repeat), and the Blob store shows both `tts/budget/` and `tts/audio/` written.
 24. ~~Codex CLI is still broken~~ Resolved October 2: Codex 0.157.1 is installed and logged in. The configured default model `gpt-6.1-sol` is rejected for the ChatGPT login; `codex exec -m gpt-6-sol ...` works. Optional: change `model` in `~/.codex/config.toml` to `gpt-6-sol`.
