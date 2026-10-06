@@ -98,22 +98,22 @@ Do not slowly escalate medication when BPH is already complicated. Move to urolo
 | **Bothersome moderate-to-severe LUTS, no complications** | Discuss behavioral, medical, and procedural options in light of patient goals | Reassess benefit, burden, adverse effects, and preference at follow-up |
 | **Voiding-predominant, any prostate size** | Alpha blocker; tadalafil if ED / sexual-function priority and no nitrate contraindication | Persistent obstruction or recurrent retention |
 | **Large prostate / PSA surrogate / progression risk** | 5-ARI, often with alpha blocker during onset period | Persistent bother after 6 months or complications |
-| **Storage-predominant with acceptable PVR** | Beta3 agonist or anticholinergic, usually after outlet risk is assessed | Persistent urgency after outlet therapy or unsafe emptying |
+| **Storage-predominant with acceptable PVR** | Beta3 agonist or antimuscarinic, usually after outlet risk is assessed; the EAU guideline advises against antimuscarinics when PVR is &gt; 150 mL (weak recommendation)<sup>[[2]](#ref2)</sup> | Persistent urgency after outlet therapy or unsafe emptying |
 | **Complicated BPH or refractory LUTS** | Procedure selected by prostate size, median lobe, retention status, anticoagulation, sexual goals, anesthetic risk | Retreatment or salvage pathway if symptoms recur |
 
 ### 5. Select the procedure by the trade-off the patient accepts
 
-TURP, HoLEP / endoscopic enucleation, and simple prostatectomy remain the durability anchors. MISTs generally reduce perioperative morbidity and sexual adverse events but accept a higher retreatment burden and a smaller objective deobstruction signal.<sup>[[6]](#ref6)[[7]](#ref7)</sup>
+TURP, HoLEP / endoscopic enucleation, and simple prostatectomy remain the durability anchors. In a 2023 network meta-analysis, short-term symptom and quality-of-life outcomes after PAE, PUL, and water vapor therapy appeared similar to TURP; TURP produced greater flow gains, while ejaculatory outcomes favored water vapor therapy and PUL.<sup>[[7]](#ref7)</sup> A 2021 Cochrane review found major-adverse-event and retreatment comparisons uncertain for several MISTs.<sup>[[6]](#ref6)</sup>
 
 | Priority | Better-fitting options | Main caution |
 |---|---|---|
 | **Maximum durability / strongest deobstruction** | HoLEP / laser enucleation, bipolar TURP, simple prostatectomy for very large glands | Ejaculatory dysfunction is common; transient incontinence can follow enucleation |
-| **Very large gland** | HoLEP / enucleation, robotic or open simple prostatectomy, PAE in selected high-risk patients | MISTs may underdeliver when bulk reduction is the real need |
+| **Very large gland** | HoLEP / enucleation, robotic or open simple prostatectomy, selected Aquablation for 80–150 mL glands (WATER II single-arm cohort)<sup>[[2]](#ref2)</sup>, PAE in selected high-risk patients | Office MISTs may underdeliver when bulk reduction is needed. WATER III found similar three-month IPSS changes after Aquablation and laser enucleation in 80–180 mL glands, but only 66 of 170 men with three-month data were randomized; comparative durability remains unknown.<sup>[[18]](#ref18)</sup> |
 | **Bleeding risk / anticoagulation** | GreenLight PVP, HoLEP in expert hands, PAE in selected patients | Anticoagulation strategy still requires proceduralist-specific planning |
-| **Ejaculation preservation** | PUL, water vapor thermal therapy, iTIND, aquablation, Optilume BPH | Usually accepts less deobstruction, slower onset, or less mature retreatment data; in network meta-analysis, ejaculatory function favored water vapor therapy and PUL over TURP<sup>[[7]](#ref7)[[8]](#ref8)[[9]](#ref9)</sup> |
+| **Ejaculation preservation** | PUL, water vapor thermal therapy, iTIND, aquablation, Optilume BPH | Usually accepts less deobstruction, slower onset, or less mature retreatment data; in network meta-analysis, ejaculatory function favored water vapor therapy and PUL over TURP<sup>[[7]](#ref7)[[8]](#ref8)[[9]](#ref9)</sup>. The Optilume BPH label contraindicates use with an artificial urinary sphincter or penile prosthesis, advises abstinence or condom use for 30 days after treatment, and advises men with partners of childbearing potential to use highly effective contraception to avoid fathering a child for at least 12 months after treatment.<sup>[[16]](#ref16)</sup> |
 | **Median lobe / intravesical protrusion** | TURP, HoLEP / enucleation, aquablation, water vapor therapy in selected median lobes | Classic PUL selection is less favorable for obstructive median-lobe anatomy<sup>[[8]](#ref8)[[9]](#ref9)</sup> |
 | **Office / ambulatory treatment** | PUL, water vapor therapy, iTIND, Optilume BPH, PAE | Higher retreatment risk than TURP / HoLEP should be explicit |
-| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy (AUA 2026 recommends a resective technology, Expert Opinion); selected PAE if surgical risk is prohibitive | PAE gives symptom relief similar to TURP but more retreatment;<sup>[[10]](#ref10)</sup> confirm detrusor contractility when chronic retention suggests underactive bladder |
+| **Catheter-dependent retention** | HoLEP / enucleation, TURP, simple prostatectomy (AUA 2026 recommends a resective technology, Expert Opinion); selected PAE if surgical risk is prohibitive | PAE may yield similar IPSS improvement to TURP at 12 weeks–12 months in mixed LUTS/BPO trials, but likely has more retreatment; this does not establish catheter-free benefit in retention.<sup>[[10]](#ref10)</sup> In one five-year RCT, 20/48 PAE-treated men underwent TURP and only 18/48 attended five-year follow-up; catheter-free outcomes for the 9/48 with baseline indwelling catheters were not reported separately.<sup>[[17]](#ref17)</sup> Confirm detrusor contractility when chronic retention suggests underactive bladder |
 
 ---
 
@@ -177,7 +177,7 @@ export const bphTechniqueData = [
   {
     name: "Rezūm",
     family: "MIST",
-    volume: "30–80 mL (FDA indication, men 50 or older)",
+    volume: "FDA 30–150 mL (men 50 or older; see cited note)",
     anatomy: "Lateral lobes, central zone and/or median lobe (FDA indication)",
     sexual: "Ejaculation preserved (~ 3% anejaculation)",
     slug: "/docs/surgical-techniques/bph-male-luts/rezum-water-vapor-therapy",
@@ -187,7 +187,7 @@ export const bphTechniqueData = [
     family: "MIST",
     volume: "25–75 mL",
     anatomy: "No obstructing median lobe",
-    sexual: "Best ejaculatory preservation (~ 1% anejaculation)",
+    sexual: "No new ejaculatory dysfunction reported in cited studies [2]",
     slug: "/docs/surgical-techniques/bph-male-luts/itind",
   },
   {
@@ -203,7 +203,7 @@ export const bphTechniqueData = [
     family: "Embolization",
     volume: "≥ 50 mL (AUA 2026)",
     anatomy: "Favorable pelvic arterial anatomy",
-    sexual: "Excellent preservation",
+    sexual: "Erectile function may be similar to TURP; ejaculatory disorders may be fewer (low certainty) [10]",
     slug: "/docs/surgical-techniques/bph-male-luts/prostate-artery-embolization",
   },
   {
@@ -261,7 +261,7 @@ export const bphTechniqueColumns = [
   entityLabel="BPH techniques"
 />
 
-Volume ranges come from different kinds of source: the TURP range is the EAU recommendation, the Rezum range and central-zone/median-lobe coverage are its FDA indication,<sup>[[13]](#ref13)</sup> and the AUA 2026 statements for PUL, water vapor, robotic waterjet, iTIND and the drug-coated BPH balloon carry their own size limits, as listed in the table. The GreenLight clearance is not volume-restricted; the 80 mL figure reflects practice and trial experience. EAU 2026 sets its own strong-recommendation ranges: 30–80 mL for TURP, laser vaporization (80 W KTP, 120 W LBO, 180 W LBO) and Aquablation, under 30 mL without a middle lobe for TUIP, under 70 mL without a middle lobe for PUL, and above 80 mL for open prostatectomy when endoscopic enucleation is unavailable. HoLEP has no size limit in EAU. EAU makes weak recommendations for Tm:YAG and bipolar enucleation, bipolar vaporization and PAE, and none for water vapor therapy, iTIND or the drug-coated balloon, which it lists as under investigation.<sup>[[2]](#ref2)</sup>
+Volume ranges come from different kinds of source: the TURP range is the EAU recommendation. The June 2025 FDA clearance indicates Rezūm for men aged 50 or older with 30–150 mL prostates and central-zone and/or median-lobe hyperplasia.<sup>[[15]](#ref15)</sup> Its earlier FDA clearance indicated 30–80 mL with the same anatomic coverage.<sup>[[13]](#ref13)</sup> The AUA 2026 statements for PUL, water vapor, robotic waterjet, iTIND and the drug-coated BPH balloon carry their own size limits, as listed in the table. The GreenLight clearance is not volume-restricted; the 80 mL figure reflects practice and trial experience. EAU 2026 sets its own strong-recommendation ranges: 30–80 mL for TURP, laser vaporization (80 W KTP, 120 W LBO, 180 W LBO) and Aquablation, under 30 mL without a middle lobe for TUIP, under 70 mL without a middle lobe for PUL, and above 80 mL for open prostatectomy when endoscopic enucleation is unavailable. HoLEP has no size limit in EAU. EAU makes weak recommendations for Tm:YAG and bipolar enucleation, bipolar vaporization and PAE, and none for water vapor therapy, iTIND or the drug-coated balloon, which it lists as under investigation.<sup>[[2]](#ref2)</sup>
 
 ---
 
@@ -311,3 +311,11 @@ AUA 2026 advises evaluating every man within six months of starting treatment, w
 <a id="ref13"></a>13. US Food and Drug Administration. *510(k) Summary K150786: Rezum System (Nxthera), decision August 27, 2015*; indications unchanged in K160417 and K180237. Indications for use. [FDA 510(k) summary](https://www.accessdata.fda.gov/cdrh_docs/pdf15/K150786.pdf).
 
 <a id="ref14"></a>14. Goueli R, Badlani GH, Welliver C, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline (2026). Part II: Medical management. *J Urol.* 2026;216(2):152-160. doi:[10.1097/JU.0000000000005098](https://doi.org/10.1097/JU.0000000000005098).
+
+<a id="ref15"></a>15. US Food and Drug Administration. *510(k) Summary K250584: Rezūm System.* Decision June 11, 2025. [FDA 510(k) summary](https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250584.pdf).
+
+<a id="ref16"></a>16. US Food and Drug Administration. *Optilume BPH Catheter System: Physician Labeling (P220029C).* 2023. [FDA](https://www.accessdata.fda.gov/cdrh_docs/pdf22/P220029C.pdf).
+
+<a id="ref17"></a>17. Müllhaupt G, Hechelhammer L, Graf N, et al. "Prostatic Artery Embolisation Versus Transurethral Resection of the Prostate for Benign Prostatic Obstruction: 5-year Outcomes of a Randomised, Open-label, Noninferiority Trial." *Eur Urol Focus.* 2024;10(5):788–795. doi:[10.1016/j.euf.2024.03.001](https://doi.org/10.1016/j.euf.2024.03.001)
+
+<a id="ref18"></a>18. Ritter M, Stein J, Barber N, et al. "WATER III: A Prospective, Partially Randomized Trial of Aquablation Therapy Versus Transurethral Laser Enucleation of the Prostate for Treatment of Lower Urinary Tract Symptoms." *Eur Urol Focus.* 2026;12(2):266–274. doi:[10.1016/j.euf.2026.01.006](https://doi.org/10.1016/j.euf.2026.01.006)
