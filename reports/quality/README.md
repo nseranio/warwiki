@@ -32,3 +32,13 @@ Runs (ignored folders): `quality/pilot-rejection-dose-a` (first check), then fin
 - Final-text rechecks found errors that the first pass and its verifier had passed: dabigatran CrCl &lt;50 row narrowed to 30–&lt;50 mL/min (PAUSE excluded CrCl &lt;30; high); Kim 2023 denominator (69 patients, not transfers); Zhang 2021 endpoint ("92.9% treatment success", not "patent outlets"), fixed in the sentence and the table row; radiation row labels (salvage radiotherapy vs prior pelvic radiation). This supports the two-check design for high-risk claims.
 - Gate state after the pilot: 82 claims schema 2 verified; 3 `legacy-disputed` closed by edits; open items in [open-findings.md](open-findings.md).
 - Lesson: `apply.py apply` needs `apply.py list` first, and pages touched by an earlier run of the same batch need that run's `touched.json` carried over.
+
+## Legacy high-risk recheck: pharmacology (October 6)
+
+562 dose, guideline and contraindication claims on 73 pharmacology pages that had never been verified under schema 2 (`quality/legacy-hr-pharmacology`, two final-text rounds). Two reviewers, one verifier; about 85 minutes.
+
+- First pass: 497 supported, 37 errors, 26 unverifiable (kept as `legacy-source-needed`), 2 style. Verifier: 40 agree, 7 modify, 5 no_edit, 2 reject.
+- 51 corrections published (`2e2e2534`) on 29 pages, among them: levofloxacin chronic bacterial prostatitis 500 mg (label; the 500–750 mg range belongs to acute prostatitis); fluconazole-resistant *C. glabrata* regimens split by cystitis and pyelonephritis (IDSA 2016); Myrbetriq volume per void (+18 to +24 mL, week 12; the 12.8 mL value was the 25 mg arm); mirabegron pediatric granules from 11 kg; Botox OAB and NDO labeled populations; methylprednisolone contrast premedication timing; vitamin K dosing attributed per source (ACCP, NCCN, AHA/ASA); ESC VKA reversal timing; Lyrica PHN escalation condition; Addyi labeled population (women younger than 65); Xiaflex labeled for adult men.
+- Final-text rounds confirmed every corrected claim (42/45, then 7/7); round 1 found three more problems in corrected text.
+- Open: belladonna/opium suppository strength (abstract 15/30 mg vs methods 16.2/30 mg; PMC full text blocked) and Fortacin US approval status (EMA source only). See [open-findings.md](open-findings.md).
+- Engineering gap confirmed again: `GenericDatabase` cells cannot carry citation markers, so supported database rows keep drawing attribution findings.
