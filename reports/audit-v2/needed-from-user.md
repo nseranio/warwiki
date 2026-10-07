@@ -42,11 +42,11 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 *Device documents*
 - ATOMS IFU (A.M.I.; the file received is the product brochure)
 - Aquablation (PROCEPT AquaBeam) IFU
-- Intuitive da Vinci SP system user manual and SP instruments and accessories manual (only the SP SureForm 45 addendum is in hand)
+- Intuitive da Vinci SP instruments and accessories user manual (the SP system user manual 553400-07C, the SP SureForm 45 addendum and 17 Xi/X/da Vinci 5 manuals are in hand)
 - Stapler IFUs other than Intuitive; current catalogs: Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun
 
 *Books not in your library folders*
-- Blandy's Urology, 3rd ed; Gurtner and Neligan, Plastic Surgery; Mathes and Nahai, Reconstructive Surgery; Oxford Handbook of Urology, 4th ed; Wieder, Pocket Guide to Urology, 6th ed; Feliciano, Trauma
+- Blandy's Urology, 3rd ed; Gurtner and Neligan, Plastic Surgery; Mathes and Nahai, Reconstructive Surgery; Oxford Handbook of Urology, 4th ed; Feliciano, Trauma (Wieder's Pocket Guide is in `~/Documents/Medicine/Urology/General Urology/`, and no page cites it)
 
 **Settings only you can change**
 - Vercel: enable deployment checks so production waits for CI (it currently deploys even when CI fails).
@@ -63,7 +63,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 - Guidelines: UKKA hyperkalaemia guideline (July 2026 update); ACOG Committee Opinions 694, 823 and 795 (full).
 - Device documents: Coloplast Titan (3 editions), Genesis and Virtue IFUs; AMS 800 operating room manual (92116967); Altaviva patient guide; eCoin physician manual and safety page; Revi surgical technique guide (complete); ProACT physician IFU; Argus IFU (manualslib copy); Remeex female, male and readjustment kits, Surelift and Contasure Needleless IFUs; Rezum (Canada), UroLift 2 and iTind (US) IFUs; Ialuril IFU.
 - Drug labels: Vagifem, Imvexxy, Premarin vaginal cream, Estring, Botox, Xiaflex, Gemtesa (vibegron), Elmiron.
-- Second batch (evening): Erickson 2020 (LSE classification); Barber 2014 JAMA (OPTIMAL) and Jelovsek 2018 JAMA (E-OPTIMAL, 5 years); Menefee 2024 JAMA Surgery (ASPIRe); Larson 2013 *Obstet Gynecol* (Michigan four-wall, author manuscript); Goodman 2019 NEJM (PCPT long-term letter); Diamond 2017 Lancet (paediatric urology review); Davis 2024 NEJM Clinical Practice, "Sexual Dysfunction in Women" (pages 83–93 of a 93-page reading packet; the packet's other pages are lay material and are not a source); Intuitive da Vinci X/Xi Instruments and Accessories manual (553873-07 Rev D) and SP SureForm 45 addendum; Nocdurna original 2018 US label (FDA archive copy; the file itself warns it may not be the latest label).
+- Second batch (evening): Erickson 2020 (LSE classification); Barber 2014 JAMA (OPTIMAL) and Jelovsek 2018 JAMA (E-OPTIMAL, 5 years); Menefee 2024 JAMA Surgery (ASPIRe); Larson 2013 *Obstet Gynecol* (Michigan four-wall, author manuscript); Goodman 2019 NEJM (PCPT long-term letter); Diamond 2017 Lancet (paediatric urology review); Davis 2024 NEJM Clinical Practice, "Sexual Dysfunction in Women" (pages 83–93 of a 93-page reading packet; the packet's other pages are lay material and are not a source); Intuitive da Vinci X/Xi Instruments and Accessories manual (553873-07 Rev D) and SP SureForm 45 addendum; SP System User Manual (553400-07 Rev C, 2025) and 17 more Intuitive manuals from the `myarchive` folders (Xi system manual 551400-17, X/Xi instruments 553873-08, da Vinci 5 instruments 555726-06, E-200 generator, SureForm, SynchroSeal, Vessel Sealer Extend, Force Bipolar, Harmonic Ace, Firefly, Integrated Table Motion and others), filed under `pdfs-2026-10-06/intuitive/`; Nocdurna original 2018 US label (FDA archive copy; the file itself warns it may not be the latest label).
 
 ## A. Decisions (answer in one line each)
 
