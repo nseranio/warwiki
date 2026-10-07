@@ -32,6 +32,10 @@ Where the 82 are: Treatment Atlas 40 (22 pages sampled), Foundations 36 (32 page
 
 Not a trend. Sample 4 used a stricter, record-everything brief that barred reviewers from audit material, a frame that adds hub pages, and twice the sample size; samples 1–3 pre-date about 1,000 later corrections. The higher detection here more likely reflects the method than new errors; sample 3's lower figure was a 30-page estimate with a wide interval (0.31–1.36), which overlaps this one.
 
+## Negative audit
+
+11 of 60 pages had no confirmed high finding. Five of them, drawn with seed 20261007 ([residual-sample-4-negatives.json](residual-sample-4-negatives.json)), were rechecked by a Claude reviewer (about 55 claims checked against opened sources): **0 serious factual errors found**. Noted: two consequential omissions (ACOG's &lt;0.5 cm threshold beside NICE's &lt;1 cm² on the polypropylene page; incomplete blade-compatibility lists on the scalpel-handle page), one mild inference stated as a finding (scalpel handles, Wu 2009), an internal tension on the Heaney stitch page (second tie on the uterine pedicle versus "non-vascular pedicles"), and nine claims that could not be checked at source (NIH ODS vitamin D sheet blocked; KDIGO and ASMBS sources not opened; manufacturer pages blocked). Five pages is a small check; it found no evidence that the reviewer missed serious errors on clean pages, and it does not bound the miss rate.
+
 ## What the result says about the controls
 
 - The claim gate and the October 6–7 rechecks targeted numbers, doses, guideline statements and contraindications. The residual errors are dominated by content those controls do not extract: anatomy, operative steps, technique attribution, eponym history and the scope of guidance, plus numbers inside long technique tables.
@@ -40,5 +44,4 @@ Not a trend. Sample 4 used a stricter, record-everything brief that barred revie
 
 ## Not yet done
 
-- Negative audit (protocol item 5): Claude review of 5 randomly chosen pages with no high findings. In progress.
 - Repairs: findings were recorded before any edit; the agreed edits will be applied and rechecked separately, and those pages then no longer represent the untouched site.
