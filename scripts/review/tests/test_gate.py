@@ -197,6 +197,12 @@ class GateTests(Fixture):
         q, = self.page("Per the [guideline](https://a.org/v2), give 100 mg daily.")
         self.assertNotEqual(p["key"], q["key"])
 
+    def test_attribution_only_error_counts_as_support(self):
+        u, = self.page("Success was 80% at 5 years.<sup>[[1]](#ref1)</sup>")
+        f = {"page": PAGE, "claim_id": "b#1", "severity": "medium", "finding": "needs own marker", "category": "attribution", "supported": True}
+        G.record(self.work([dict(u)], status=[{"claim_id": "b#1", "status": "error", "source_opened": "PMID 1", "quote": "80%"}], findings=[f]))
+        self.assertEqual(self.failing(), [])
+
     def test_exception_needs_a_decision(self):
         u, = self.page("Give 100 mg of drug X.<sup>[[1]](#ref1)</sup>")
         json.dump({u["key"]: {"owner": "N", "expires": "2999-01-01"}}, open(G.EXCEPTIONS, "w"))

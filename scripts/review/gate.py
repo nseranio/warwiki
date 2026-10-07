@@ -260,7 +260,7 @@ def write_batches(out, bypage):
         for j, u in enumerate(cur):
             u["id"] = f"{uid.split('/', 1)[1]}#{j + 1}"
         # the checker sees the claim, its kinds and its sources, never a prior verdict
-        claims = [{k: u[k] for k in ("id", "page", "line", "text", "table_header", "kinds", "cite", "refs", "key")} for u in cur]
+        claims = [{k: u[k] for k in ("id", "page", "line", "text", "table_header", "kinds", "cite", "refs", "key", "local_sources") if k in u} for u in cur]
         json.dump({"page": cur[0]["page"], "claims": claims}, open(os.path.join(out, "batches", uid.split("/", 1)[1] + ".json"), "w"), indent=1)
         units.append(uid)
         cur.clear()
@@ -335,6 +335,12 @@ def record(work, today=None):
 
     n = {"ok": 0, "not-applicable": 0, "source-needed": 0, "verifier-supports": 0, "corrected-unconfirmed": 0, "stale": 0, "ignored": 0}
     n["incomplete-batches"] = sum(1 for v in complete.values() if not v)
+    # a finding that only moves a citation marker on a supported claim is support, not an error
+    attribution = set()
+    for ff in glob.glob(os.path.join(work, "findings", "*.jsonl")):
+        for r in read_jsonl(ff, []):
+            if r.get("category") == "attribution" and r.get("supported") is True:
+                attribution.add(r.get("claim_id"))
     for cid, rows in status_rows.items():
         for r in rows[:1]:
             if cid not in claims_by_id or not complete[batch_of(cid)]:
@@ -344,6 +350,8 @@ def record(work, today=None):
                 n["stale"] += 1; continue
             e = led.get(u["key"], {})
             st, src = r.get("status"), (r.get("source_opened") or "").strip()
+            if st == "error" and cid in attribution:
+                st = "ok"
             chk = {"s": st, "src": src[:160], "q": (r.get("quote") or "")[:300], "access": r.get("access", "")}
             if st == "ok" and src.lower() not in NO_SOURCE and chk["q"].strip() \
                     and chk["access"] not in ("not-accessed", "metadata-only"):
