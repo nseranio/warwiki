@@ -203,6 +203,23 @@ class GateTests(Fixture):
         G.record(self.work([dict(u)], status=[{"claim_id": "b#1", "status": "error", "source_opened": "PMID 1", "quote": "80%"}], findings=[f]))
         self.assertEqual(self.failing(), [])
 
+    def test_access_limited_correction_passes_only_when_low_risk_and_verifier_checked(self):
+        u, = self.page("Success was 80% at 5 years.<sup>[[1]](#ref1)</sup>")
+        self.ledger({u["key"]: {"s": "corrected-unconfirmed", "checks": [{"s": "verifier-supports", "run": "r:verifier"}]}})
+        G.record(self.work([dict(u)], status=[{"claim_id": "b#1", "status": "unverifiable", "source_opened": "abstract only"}]))
+        self.assertEqual(G.load(G.LEDGER, {})[u["key"]]["s"], "corrected-access-limited")
+        self.assertEqual(self.failing(), [])
+        d, = self.page("Give 100 mg of drug X.<sup>[[1]](#ref1)</sup>")
+        self.ledger({d["key"]: {"s": "corrected-access-limited", "checks": [{"s": "verifier-supports", "run": "r:verifier"}]}})
+        self.assertEqual(len(self.failing()), 1)
+
+    def test_flow_rates_are_not_doses(self):
+        u, = self.page("Qmax rose from 7 to 15 mL/s at 12 months.<sup>[[1]](#ref1)</sup>")
+        self.assertNotIn("dose", u["kinds"])
+        self.assertFalse(u["high_risk"])
+        d, = self.page("Inject 10 mL of 1% lidocaine.<sup>[[1]](#ref1)</sup>")
+        self.assertIn("dose", d["kinds"])
+
     def test_exception_needs_a_decision(self):
         u, = self.page("Give 100 mg of drug X.<sup>[[1]](#ref1)</sup>")
         json.dump({u["key"]: {"owner": "N", "expires": "2999-01-01"}}, open(G.EXCEPTIONS, "w"))

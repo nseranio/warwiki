@@ -47,7 +47,7 @@ ABS = re.compile(r"\b(always|never|contraindicat\w*|eliminat\w+|no risk|zero ris
                  r"gold standard|safest|guarantee\w*|invariabl\w+|universal(?:ly)?|mandatory|impossible|proven|"
                  r"absolute(?:ly)?|definitive(?:ly)?|first-line|standard of care)\b", re.I)
 HEDGE = re.compile(r"\b(?:not|no|nor|neither|cannot|can't|does not|do not|did not|is not|are not|was not|without|unproven|un)\b[\w\s,-]{0,25}$", re.I)
-DOSE = re.compile(r"\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg|mL|U|IU|units|mg/kg|mL/kg|mg/day|mg/m2|mmol)\b")
+DOSE = re.compile(r"\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg|mL|U|IU|units|mg/kg|mL/kg|mg/day|mg/m2|mmol)\b(?!\s?/\s?(?:s|sec|min)\b)")  # flow rates (mL/s, mL/min) are not doses
 GUIDE = re.compile(r"\b(AUA|EAU|NICE|ACOG|AUGS|SUFU|ICS|IUGA|WHO|ASCRS|BAUS|CUA|SIU|ESGO|RCOG|WPATH|AAGL|ACR|IDSA|CDC|FDA|ISSVD|GURS|SMSNA|ICSM|AAST|ACS|EAST|WSES|ESSM)\b[^.|]{0,80}\b("
                    r"recommend\w*|suggest\w*|advis\w*|endorse\w*|Strong|Moderate|Conditional|Expert Opinion|Clinical Principle|"
                    r"weak|Grade [A-C]|approv\w*|clear\w*|contraindicat\w*|indicat\w*|label\w*)", re.I)
@@ -224,6 +224,14 @@ def verdict(u, e, exceptions, today=None):
         return True, s
     if s == "source-needed":
         return False, "new or changed claim without a source"
+    if s == "corrected-access-limited":
+        # a verifier-checked correction whose final-text recheck failed only on source access: not verified, and
+        # never enough for a dose, guideline statement or contraindication
+        if u["high_risk"]:
+            return False, "high-risk correction awaiting an accessible final-text check"
+        if not any(c.get("s") == "verifier-supports" for c in e.get("checks", [])):
+            return False, "access-limited correction without a verifier check"
+        return True, "corrected-access-limited (open)"
     if s == "flagged":
         return False, "open error finding; no supporting check"
     if s == "corrected-unconfirmed":
@@ -363,7 +371,10 @@ def record(work, today=None):
             elif st == "unverifiable":
                 was = e.get("s") or ""
                 # inaccessibility is not adverse evidence: a correction awaiting its final-text check stays awaiting it
-                add_check(u, chk, None if was in SUPPORTED or was == "corrected-unconfirmed" else
+                verified_fix = any(c.get("s") == "verifier-supports" for c in e.get("checks", []))
+                add_check(u, chk, None if was in SUPPORTED else
+                          "corrected-access-limited" if was in ("corrected-unconfirmed", "corrected-access-limited") and verified_fix else
+                          None if was == "corrected-unconfirmed" else
                           ("legacy-source-needed" if was.startswith("legacy-") else "source-needed")); n["source-needed"] += 1
             elif st == "error":
                 add_check(u, chk)  # a finding: its verifier verdict and any applied edit decide what happens next
@@ -432,6 +443,45 @@ def record(work, today=None):
     save_ledger(led)
     print(f"recorded {n}; ledger has {len(led)}" + (f"; {len(errors)} unreadable lines" if errors else ""))
     return n, errors
+
+
+def attach_page_verdicts(work, today=None):
+    """Page-mode runs (no claim batches): every current claim unit wholly inside an applied agree/modify edit gets the
+    page verifier's check. A unit whose later final-text check was only unverifiable becomes corrected-access-limited;
+    otherwise it is corrected-unconfirmed (still needs its final-text check)."""
+    import apply as A  # noqa: E402
+    today = today or datetime.date.today().isoformat()
+    run = os.path.basename(os.path.normpath(work))
+    led, applied, n, cache = load(LEDGER, {}), load(os.path.join(work, "applied.json"), {}), 0, {}
+    for vf in glob.glob(os.path.join(work, "verdicts", "*.jsonl")):
+        for v in read_jsonl(vf, []):
+            e = v.get("edit") or {}
+            if v.get("verdict") not in ("agree", "modify") or not e.get("new") or \
+                    not str(applied.get(A.fid(v), {}).get("status", "")).startswith("applied"):
+                continue
+            p = v.get("page", "")
+            if not os.path.exists(os.path.join(ROOT, p)):
+                continue
+            if p not in cache:
+                cache[p] = units_of(p)
+            newn = norm(e["new"])
+            for u in cache[p]:
+                nu = norm(u["text"])
+                ent = led.get(u["key"], {})
+                # exact containment either way: the unit lies inside the applied text, or the applied text lies wholly
+                # inside the unit (an edit within a longer table row); never partial overlap
+                inside = nu and (nu in newn or (len(newn) >= 40 and newn in nu))
+                if not inside or ent.get("s") not in (None, "source-needed", "corrected-unconfirmed"):
+                    continue
+                checks = ent.get("checks", [])
+                if not any(c.get("s") == "verifier-supports" for c in checks):
+                    checks = checks + [{"s": "verifier-supports", "run": run + ":verifier", "d": today, "src": (v.get("reason") or "")[:160]}]
+                access_only = any(c.get("s") == "unverifiable" for c in checks) and not any(c.get("s") == "error" for c in checks)
+                led[u["key"]] = dict(ent, s="corrected-access-limited" if access_only else "corrected-unconfirmed", d=today, checks=checks)
+                n += 1
+    save_ledger(led)
+    print(f"attached page-verifier support to {n} claim units")
+    return n
 
 
 def stats(as_json=False):
@@ -536,6 +586,8 @@ def main():
               "--reviewers 1 --verifiers 1 --effort high --tier default &")
     elif cmd == "record":
         record(os.path.join(ROOT, a[1]))
+    elif cmd == "attach-page-verdicts":
+        attach_page_verdicts(os.path.join(ROOT, a[1]))
     elif cmd == "baseline":
         sys.exit("There is no bulk baseline (schema 2). Use claim-exceptions.json with an owner, decision and expiry.")
     elif cmd == "stats":

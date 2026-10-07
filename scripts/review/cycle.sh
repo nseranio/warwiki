@@ -21,6 +21,8 @@ for f,ns in orph.items():
 # corrected-unconfirmed and fail the gate until a final-text check: gate.py pending <touched files> --out <dir>,
 # orchestrate.py --work <dir> --claims --reviewers 1 --verifiers 1, then gate.py record <dir>
 [ -d $L/status ] && python3 scripts/review/gate.py record $L
+# page-mode runs have no claim batches: attach the page verifier's support to the claims their applied edits produced
+[ -d $L/status ] || python3 scripts/review/gate.py attach-page-verdicts $L
 npm run lint > $L/lint.log 2>&1; LINT=$?; echo LINT=$LINT
 grep -A3 "unverified" $L/lint.log | head -20
 grep -A12 "✗" $L/lint.log | head -40
