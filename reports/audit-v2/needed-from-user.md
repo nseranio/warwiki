@@ -16,6 +16,8 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 - AUGS–IUGA Joint Writing Group. Joint Report on Terminology for Surgical Procedures to Treat Pelvic Organ Prolapse. *Female Pelvic Med Reconstr Surg.* 2020;26:173–201. doi:10.1097/SPV.0000000000000846 (exposure page)
 
 *Papers*
+- ACOG Clinical Practice Update: Salpingectomy for the Prevention of Epithelial Ovarian Cancer. *Obstet Gynecol.* 2026;148(4):e275–e280. doi:10.1097/AOG.0000000000006400 (full text would restore the specific hysterectomy and contraception recommendations on the adnexa page)
+- Zeinelabden 2025, *World J Urol*, doi:10.1007/s00345-025-05842-8 (randomized count: 73 vs 66)
 - Djordjevic ML, Bencic M, Kojovic V, et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol.* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w
 - Wu JM. Stress incontinence in women. *N Engl J Med.* 2021;384(25):2428–2436. doi:10.1056/NEJMcp1914037
 - Le Cleach L, Chosidow O. Lichen planus. *N Engl J Med.* 2012;366(8):723–732. doi:10.1056/NEJMcp1103641

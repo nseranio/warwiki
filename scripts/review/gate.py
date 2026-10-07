@@ -362,7 +362,8 @@ def record(work, today=None):
                 add_check(u, chk, None if keep else "not-applicable"); n["not-applicable"] += 1
             elif st == "unverifiable":
                 was = e.get("s") or ""
-                add_check(u, chk, None if was in SUPPORTED else
+                # inaccessibility is not adverse evidence: a correction awaiting its final-text check stays awaiting it
+                add_check(u, chk, None if was in SUPPORTED or was == "corrected-unconfirmed" else
                           ("legacy-source-needed" if was.startswith("legacy-") else "source-needed")); n["source-needed"] += 1
             elif st == "error":
                 add_check(u, chk)  # a finding: its verifier verdict and any applied edit decide what happens next
