@@ -42,3 +42,12 @@ Runs (ignored folders): `quality/pilot-rejection-dose-a` (first check), then fin
 - Final-text rounds confirmed every corrected claim (42/45, then 7/7); round 1 found three more problems in corrected text.
 - Open: belladonna/opium suppository strength (abstract 15/30 mg vs methods 16.2/30 mg; PMC full text blocked) and Fortacin US approval status (EMA source only). See [open-findings.md](open-findings.md).
 - Engineering gap confirmed again: `GenericDatabase` cells cannot carry citation markers, so supported database rows keep drawing attribution findings.
+
+## Supplied sources check (October 6)
+
+469 claims on 115 pages that cite documents the owner supplied on October 6 (41 PDFs: trials, guidelines, ACOG opinions, device IFUs and manuals, drug labels; `pdfs-2026-10-06/`, ignored). Batches carried `local_sources` pointers so reviewers read the supplied full text (`quality/newsources-2026-10-06`, three final-text rounds).
+
+- First pass: 434 supported, 24 errors, 8 unverifiable; access mostly label/IFU (232) and full text (131). 62 corrections published (`f2dd898b`) on 42 pages.
+- Final-text rounds again found errors introduced or left by first-round edits (AMS 800 fill 24 then 20 mL; SSLF perioperative pain row; ProACT "reduced bladder compliance"; Rezum catheter-duration denominators).
+- Closed open findings: COBRRA eligibility and UKKA hyperkalaemia rows. New open findings: three-step composite satisfaction range, ITNS 96-week denominators ([open-findings.md](open-findings.md)).
+- Lesson: a source mapping by name alone attaches manuals to research papers (for example "Titan" also matched implant studies and the TITAN 2 tibial-nerve trial); device and label documents are attached only to reference lines that are themselves IFUs, labels, manuals or regulatory summaries.
