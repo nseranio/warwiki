@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 6–7, 2026: legacy high-risk recheck and owner-supplied sources
+
+- Rechecked every dose, guideline and contraindication claim whose only prior support was a fuzzy match, a rejected fix, a voice pass or a style label (1,858 claims, five waves), and 469 claims citing the 52 PDFs the owner supplied October 6. About 230 corrections on about 130 pages, each confirmed in its final wording by a separate check (`0d810585`, `2e2e2534`, `f2dd898b`, `fdcc5fd5`, `527133f6`, `c052f6fe`).
+- Gate refinements from the runs: citation-only findings on supported claims count as support; unresolved findings on unchanged legacy claims become `legacy-disputed`; migrated claims need one schema 2 check; batches can carry `local_sources` pointers to supplied full texts.
+- Retraction checker now rechecks stale DOIs and paginates (Codex, reviewed). Two pages moved from plain `[N]` markers to house citation style. Carter–Trost decision recorded (stays off). Needed-from-user list rewritten with full citations.
+
 ## October 6, 2026: claim gate schema 2 (quality program milestone 1)
 
 - Reproduced the weaknesses in Codex's error-reduction plan: the gate passed 361 `source-needed` claims (77 high-risk) on ledger membership alone; keys ignored citations and table context; rejected fixes became `ok-verifier`; applied edits closed claims by fuzzy overlap; the orchestrator accepted empty or partial output; CI ignored ledger changes.

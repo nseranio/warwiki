@@ -6,7 +6,7 @@ Started October 6, 2026 from revision `2f256438` (plan: [error-reduction-plan.md
 |---|---|
 | 1. Trustworthy controls (gate and pipeline repair) | Implemented October 6: [gate-migration.md](gate-migration.md). Codex adversarial review of the patch: see that file. |
 | 2. Inventory, calibration, baseline | Coverage matrix drafted: [coverage-matrix.md](coverage-matrix.md). Detector calibration on seeded mutations and the 60-page probability sample: not started. |
-| 3. Source-group review and repair | Calibration pilot done October 6 (below). Next queue: remaining legacy high-risk claims (`gate.py pending --legacy --kind dose`). |
+| 3. Source-group review and repair | Legacy high-risk queue complete October 7 (below): every dose, guideline and contraindication claim that had only fuzzy, rejection-only, voice or style support was rechecked against sources. Owner-supplied sources (October 6) checked. Remaining: challenge sample of `legacy-supported` claims, `legacy-source-needed` requests, non-high-risk legacy claims. |
 | 4. Engineering, media and operations | Not started (cross-browser, search benchmark, link inventory, API review, retraction-cache freshness). |
 | 5. Independent residual measurement | Not started. Historical samples (1.57, 1.37, 0.83 serious errors per page) predate current HEAD and are not a current rate. |
 
@@ -62,3 +62,13 @@ Runs (ignored folders): `quality/pilot-rejection-dose-a` (first check), then fin
 
 - Reviewer disagreement resolved from the source: round 1 changed the severe SUI threshold to "≥5 PPD"; the final-text round proposed ">5". The AUA 2024 IPT guideline defines severe incontinence as "5 plus pads per day" in its definitions section and uses ">5" only when describing which sling studies excluded severe cases. Claude vetoed the reversion; a third check with the local guideline text confirmed "≥5".
 - Extraction gap example: the corrected AUA/SUFU statement 7 sentence ("calls for risk stratification ... (statement 7, Clinical Principle)") is not extracted by the gate because the strength label sits more than 80 characters after "AUA/SUFU". Qualitative guideline sentences remain outside the claim gate (coverage matrix gap 1).
+
+## Legacy high-risk queue: complete (October 7)
+
+Treatment Atlas wave: 630 claims on 231 pages (`quality/legacy-hr-04`, two final-text rounds); first pass 530 supported, 36 errors, 59 unverifiable; 60 corrections on 40 pages published (`c052f6fe`). Open: MANTA ureteroplasty baseline renal values not in the published abstract; urethrolysis technique cited to the fifth edition of Karram while the content is in the third-edition chapter ([open-findings.md](open-findings.md)).
+
+Whole queue (October 6–7): 81 (pilot) + 562 + 278 + 307 + 630 = 1,858 high-risk claims rechecked, plus 469 claims against owner-supplied sources; about 230 content corrections published, each confirmed in its final text by a separate check. Final-text rounds found new or residual errors in every wave (11 in total), which supports keeping that step.
+
+Gate after the queue (`gate.py stats`): 24,503 claim units; 2,153 schema 2 verified (1,925 supported, 228 corrected). High-risk units: 1,889 verified, 3,263 `legacy-supported` (a schema 1 check named a source, binding reconstructed), 112 `legacy-source-needed`, 24 `legacy-not-applicable`, 4 `legacy-disputed`, 3 `legacy-fuzzy-fixed`. Non-high-risk: 6,724 `legacy-fuzzy-fixed`, 386 `legacy-rejection-only`, 206 `legacy-voice` remain unverified.
+
+Next (in order): (1) detector calibration on seeded mutations (milestone 2); (2) the 60-page probability sample at a frozen revision with a reviewer that sees no prior verdicts (milestone 5); (3) non-high-risk `legacy-fuzzy-fixed` claims by risk order; (4) a 10% challenge sample of `legacy-supported` high-risk claims; (5) engineering items: citation support for `GenericDatabase` cells, qualitative-claim extraction, `trials.ts` coverage.
