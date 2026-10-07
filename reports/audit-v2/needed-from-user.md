@@ -14,13 +14,12 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 | SOGC Guidelines No. 465 (OASIs Part II, 2025, doi:10.1016/j.jogc.2025.103186) and No. 457 (Part I, 2024) | SOGC row of the postpartum perineal clinic table |
 | ACOG Practice Bulletin No. 210, Fecal Incontinence (2019) | Fecal incontinence pages |
 | ACOG PB 214 p. 6 and PB 218 (two gated pages) | Transvaginal mesh trial data, cystoscopy, hysteropexy; CPP trauma history, referred pain, denervation lines |
-| Erickson 2020 (LSE classification); original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee and Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021) | Urethroplasty technique and classification pages |
-| Wu NEJM 2021, Davis NEJM 2024, Le Cleach NEJM 2012, Goodman NEJM 2019, Diamond Lancet 2017 | Pages citing them (abstract-only today) |
-| EVA trial, Larson 2013 (Michigan four-wall), ASPIRe, OPTIMAL / E-OPTIMAL; Cotte 2023, Phé 2017, Peyronnet 2019; Laor 1995; Trimix series; Tagliaferri; Holm 2026, Furr 2019, VanDyke 2021 | Prolapse, AUS, Fournier and implant pages |
+| Original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee and Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021) | Urethroplasty technique pages |
+| Wu NEJM 2021, Le Cleach NEJM 2012 | Pages citing them (abstract-only today) |
+| EVA trial; Cotte 2023, Phé 2017, Peyronnet 2019; Laor 1995; Trimix series; Tagliaferri; Holm 2026, Furr 2019, VanDyke 2021 | Prolapse, AUS, Fournier and implant pages |
 | 2025 AUGS-IUGA complications update | Mesh complication classification pages |
-| Nocdurna US label (the October 6 download was an empty `getFile.cfm` page) | Nocturia dosing |
 | ATOMS IFU (the October 6 file is the A.M.I. product brochure, which has no indications or contraindications) | ATOMS device page |
-| Aquablation IFU; Intuitive X/Xi and SP manuals; stapler IFUs; instrument catalogs (Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun) | Device and instrument pages |
+| Aquablation IFU; Intuitive SP system manual and SP instrument manual (only the SureForm 45 addendum is in hand); non-Intuitive stapler IFUs; instrument catalogs (Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun) | Device and instrument pages |
 | Books not in your library folders: Blandy's Urology 3rd ed, Gurtner/Neligan, Mathes-Nahai, Oxford Handbook of Urology 4th ed, Wieder Pocket Guide 6th ed, Feliciano's Trauma | Textbook citations |
 
 **Settings only you can change**
@@ -38,6 +37,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 - Guidelines: UKKA hyperkalaemia guideline (July 2026 update); ACOG Committee Opinions 694, 823 and 795 (full).
 - Device documents: Coloplast Titan (3 editions), Genesis and Virtue IFUs; AMS 800 operating room manual (92116967); Altaviva patient guide; eCoin physician manual and safety page; Revi surgical technique guide (complete); ProACT physician IFU; Argus IFU (manualslib copy); Remeex female, male and readjustment kits, Surelift and Contasure Needleless IFUs; Rezum (Canada), UroLift 2 and iTind (US) IFUs; Ialuril IFU.
 - Drug labels: Vagifem, Imvexxy, Premarin vaginal cream, Estring, Botox, Xiaflex, Gemtesa (vibegron), Elmiron.
+- Second batch (evening): Erickson 2020 (LSE classification); Barber 2014 JAMA (OPTIMAL) and Jelovsek 2018 JAMA (E-OPTIMAL, 5 years); Menefee 2024 JAMA Surgery (ASPIRe); Larson 2013 *Obstet Gynecol* (Michigan four-wall, author manuscript); Goodman 2019 NEJM (PCPT long-term letter); Diamond 2017 Lancet (paediatric urology review); Davis 2024 NEJM Clinical Practice, "Sexual Dysfunction in Women" (pages 83–93 of a 93-page reading packet; the packet's other pages are lay material and are not a source); Intuitive da Vinci X/Xi Instruments and Accessories manual (553873-07 Rev D) and SP SureForm 45 addendum; Nocdurna original 2018 US label (FDA archive copy; the file itself warns it may not be the latest label).
 
 ## A. Decisions (answer in one line each)
 
