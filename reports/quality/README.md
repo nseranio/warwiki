@@ -8,7 +8,7 @@ Started October 6, 2026 from revision `2f256438` (plan: [error-reduction-plan.md
 | 2. Inventory, calibration, baseline | Coverage matrix drafted: [coverage-matrix.md](coverage-matrix.md). Detector calibration on seeded mutations and the 60-page probability sample: not started. |
 | 3. Source-group review and repair | Legacy high-risk queue complete October 7 (below): every dose, guideline and contraindication claim that had only fuzzy, rejection-only, voice or style support was rechecked against sources. Owner-supplied sources (October 6) checked. Remaining: challenge sample of `legacy-supported` claims, `legacy-source-needed` requests, non-high-risk legacy claims. |
 | 4. Engineering, media and operations | Not started (cross-browser, search benchmark, link inventory, API review, retraction-cache freshness). |
-| 5. Independent residual measurement | Not started. Historical samples (1.57, 1.37, 0.83 serious errors per page) predate current HEAD and are not a current rate. |
+| 5. Independent residual measurement | Sample 4 done October 7 at `509f5ccd`: 1.37 serious factual errors per page (95% CI 0.97–1.76), 38/60 pages affected; negative audit 0/5 ([results](residual-sample-4-results.md)). Sampled pages repaired afterward (`8bb42166`); one further diagnostic sample allowed after the next repair phase, then a preregistered final validation. |
 
 Nothing in this program certifies the site. "Zero detected in N pages at revision X under method Y" is the strongest claim the data can support.
 
@@ -72,3 +72,9 @@ Whole queue (October 6–7): 81 (pilot) + 562 + 278 + 307 + 630 = 1,858 high-ris
 Gate after the queue (`gate.py stats`): 24,503 claim units; 2,153 schema 2 verified (1,925 supported, 228 corrected). High-risk units: 1,889 verified, 3,263 `legacy-supported` (a schema 1 check named a source, binding reconstructed), 112 `legacy-source-needed`, 24 `legacy-not-applicable`, 4 `legacy-disputed`, 3 `legacy-fuzzy-fixed`. Non-high-risk: 6,724 `legacy-fuzzy-fixed`, 386 `legacy-rejection-only`, 206 `legacy-voice` remain unverified.
 
 Next (in order): (1) detector calibration on seeded mutations (milestone 2); (2) the 60-page probability sample at a frozen revision with a reviewer that sees no prior verdicts (milestone 5); (3) non-high-risk `legacy-fuzzy-fixed` claims by risk order; (4) a 10% challenge sample of `legacy-supported` high-risk claims; (5) engineering items: citation support for `GenericDatabase` cells, qualitative-claim extraction, `trials.ts` coverage.
+
+## Residual sample 4 and repairs (October 7)
+
+Measured before repair: 1.37 serious factual errors per page, 63% of pages affected, 1.22 omissions per page ([results](residual-sample-4-results.md)). The 594 agreed edits on the sampled pages, plus 65 more from five final-text rounds, were published in `8bb42166`; every rewritten gated claim passed a separate final-text check. Two claims were narrowed to what accessible sources support (Zeinelabden randomized count; ACOG 2026 salpingectomy detail) and are on the source list.
+
+**Implication.** The remaining error mass is qualitative: anatomy, operative steps, technique attribution, eponym history, guidance scope and multi-series technique tables. The claim gate does not extract most of it. Recommended next phase: full-page, source-grounded review of the Treatment Atlas and Foundations surgical-principles and anatomy pages (about 600 pages) with the residual brief, repairs through the same apply/final-text loop, then one diagnostic sample of 60 untouched pages to measure the effect.
