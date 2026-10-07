@@ -6,21 +6,47 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each arrival is checked against every page that cites it.
 
-**Sources**
+**Sources** (full citations as cited on the pages)
 
-| Source | What it settles |
-|---|---|
-| Djordjevic ML et al. *World J Urol* 2019;37(4):631–637 (MLD phalloplasty), doi:10.1007/s00345-019-02641-w | MLD phalloplasty donor-site figures and second-stage counts |
-| SOGC Guidelines No. 465 (OASIs Part II, 2025, doi:10.1016/j.jogc.2025.103186) and No. 457 (Part I, 2024) | SOGC row of the postpartum perineal clinic table |
-| ACOG Practice Bulletin No. 210, Fecal Incontinence (2019) | Fecal incontinence pages |
-| ACOG PB 214 p. 6 and PB 218 (two gated pages) | Transvaginal mesh trial data, cystoscopy, hysteropexy; CPP trauma history, referred pain, denervation lines |
-| Original urethroplasty technique papers (Jordan 2007, Morey 2001, Wee and Joseph 1989, Yii/Niranjan 1996, Blandy 1968, Asopa 2001, Kulkarni 2009, Sa/Xu 2021) | Urethroplasty technique pages |
-| Wu NEJM 2021, Le Cleach NEJM 2012 | Pages citing them (abstract-only today) |
-| EVA trial; Cotte 2023, Phé 2017, Peyronnet 2019; Laor 1995; Trimix series; Tagliaferri; Holm 2026, Furr 2019, VanDyke 2021 | Prolapse, AUS, Fournier and implant pages |
-| 2025 AUGS-IUGA complications update | Mesh complication classification pages |
-| ATOMS IFU (the October 6 file is the A.M.I. product brochure, which has no indications or contraindications) | ATOMS device page |
-| Aquablation IFU; Intuitive SP system manual and SP instrument manual (only the SureForm 45 addendum is in hand); non-Intuitive stapler IFUs; instrument catalogs (Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun) | Device and instrument pages |
-| Books not in your library folders: Blandy's Urology 3rd ed, Gurtner/Neligan, Mathes-Nahai, Oxford Handbook of Urology 4th ed, Wieder Pocket Guide 6th ed, Feliciano's Trauma | Textbook citations |
+*Guidelines*
+- ACOG Practice Bulletin No. 210: Fecal Incontinence. *Obstet Gynecol.* 2019;133(4):e260–e273. doi:10.1097/AOG.0000000000003187
+- ACOG Practice Bulletin No. 214: Pelvic Organ Prolapse. *Obstet Gynecol.* 2019;134(5):e126–e142. doi:10.1097/AOG.0000000000003519 (only p. 6 is missing: mesh trial data, cystoscopy, hysteropexy)
+- ACOG Practice Bulletin No. 218: Chronic Pelvic Pain. *Obstet Gynecol.* 2020;135(3):e98–e109. doi:10.1097/AOG.0000000000003716 (two gated pages: trauma history, referred musculoskeletal pain, pelvic denervation)
+- Giroux M, Ramirez AC, Dufour S, et al. Guideline No. 465: Obstetrical anal sphincter injuries (OASIs) Part II: long-term management and counselling regarding subsequent mode of delivery. *J Obstet Gynaecol Can.* 2026;48(1):103186. doi:10.1016/j.jogc.2025.103186; and SOGC Guideline No. 457, OASIs Part I (2024)
+- AUGS–IUGA Joint Writing Group. Joint Report on Terminology for Surgical Procedures to Treat Pelvic Organ Prolapse. *Female Pelvic Med Reconstr Surg.* 2020;26:173–201. doi:10.1097/SPV.0000000000000846 (exposure page)
+
+*Papers*
+- Djordjevic ML, Bencic M, Kojovic V, et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol.* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w
+- Wu JM. Stress incontinence in women. *N Engl J Med.* 2021;384(25):2428–2436. doi:10.1056/NEJMcp1914037
+- Le Cleach L, Chosidow O. Lichen planus. *N Engl J Med.* 2012;366(8):723–732. doi:10.1056/NEJMcp1103641
+- Vodegel EV, van Rest K, Speksnijder L, et al; EVA Study Group. Vaginal oestrogen therapy for postmenopausal women undergoing prolapse surgery: a multicentre double-blind randomised placebo-controlled clinical trial. *BJOG.* Published online August 28, 2026. doi:10.1111/1471-0528.70311
+- Cotte J, Dechartres A, Mozer P, et al. Long-term device survival after a first implantation of AMS800 for stress urinary incontinence: comparison between men and women. *Neurourol Urodyn.* 2023;42(1):80–89. doi:10.1002/nau.25047
+- Phé V, Léon P, Granger B, et al. Stress urinary incontinence in female neurological patients: long-term functional outcomes after artificial urinary sphincter (AMS 800) implantation. *Neurourol Urodyn.* 2017;36(3):764–769. doi:10.1002/nau.23019
+- Peyronnet B, O'Connor E, Khavari R, et al. AMS-800 artificial urinary sphincter in female patients with stress urinary incontinence: a systematic review. *Neurourol Urodyn.* 2019;38 Suppl 4:S28–S41. doi:10.1002/nau.23833
+- Holm HV, Ohnesorge SS, Nilsen OJ. Long-term outcomes of transecting versus nontransecting bulbar urethroplasty: results from the Scandinavian Urethroplasty Study. *Eur Urol Focus.* 2026;12(3):316–318. doi:10.1016/j.euf.2026.05.007
+- Furr JR, Wisenbaugh ES, Gelman J. Urinary and sexual outcomes following bulbar urethroplasty — an analysis of 2 common approaches. *Urology.* 2019;130:162–166. doi:10.1016/j.urology.2019.02.042
+- VanDyke ME, Baumgarten AS, Ortiz NM, et al. Extended primary anastomosis with penile plication (EPAPP): a promising new alternative to perineal urethrostomy for reconstruction of long urethral strictures. *Urology.* 2021;149:245–250. doi:10.1016/j.urology.2020.11.048
+- Tagliaferri V, Ruggieri S, Taccaliti C, et al. Comparison of absorbable and permanent sutures for laparoscopic sacrocervicopexy: a randomized controlled trial. *Acta Obstet Gynecol Scand.* 2021;100:347–352. doi:10.1111/aogs.13997
+- Trimix efficacy: no specific paper is cited; any clinical series reporting response rates to papaverine–phentolamine–alprostadil injection would settle the "about 90%" figure on the erectile dysfunction page.
+
+*Original urethroplasty and flap technique papers*
+- Jordan GH, Eltahawy EA, Virasoro R. The technique of vessel sparing excision and primary anastomosis for proximal bulbous urethral reconstruction. *J Urol.* 2007;177(5):1799–1802. doi:10.1016/j.juro.2007.01.036
+- Morey AF. Urethral plate salvage with dorsal graft promotes successful penile flap onlay reconstruction of severe pendulous strictures. *J Urol.* 2001;166(4):1376–1378. doi:10.1016/s0022-5347(05)65773-4
+- Asopa HS, Garg M, Singhal GG, et al. Dorsal free graft urethroplasty for urethral stricture by ventral sagittal urethrotomy approach. *Urology.* 2001;58(5):657–659. doi:10.1016/S0090-4295(01)01377-2
+- Kulkarni S, Barbagli G, Sansalone S, Lazzeri M. One-sided anterior urethroplasty: a new dorsal onlay graft technique. *BJU Int.* 2009;104(8):1150–1155. doi:10.1111/j.1464-410X.2009.08590.x
+- Blandy JP, Singh M, Tresidder GC. Urethroplasty by scrotal flap for long urethral strictures. *Br J Urol.* 1968;40(3):261–267. doi:10.1111/j.1464-410X.1968.tb09886.x
+- Wee JT, Joseph VT. A new technique of vaginal reconstruction using neurovascular pudendal-thigh flaps: a preliminary report. *Plast Reconstr Surg.* 1989;83(4):701–709. doi:10.1097/00006534-198904000-00018
+- Yii NW, Niranjan NS. Lotus petal flaps in vulvo-vaginal reconstruction. *Br J Plast Surg.* 1996;49(8):547–554. doi:10.1016/s0007-1226(96)90132-0
+- "Sa/Xu 2021": no page cites a 2021 Sa/Xu paper today; the closest are Xu YM, Sa YL, et al. *Eur Urol* 2009;56(1):193–200 (transpubic pedicled labial urethroplasty) and *J Urol* 2013;189(1):176–181 (female stricture with urethrovaginal fistula). Skip unless you know the intended paper.
+
+*Device documents*
+- ATOMS IFU (A.M.I.; the file received is the product brochure)
+- Aquablation (PROCEPT AquaBeam) IFU
+- Intuitive da Vinci SP system user manual and SP instruments and accessories manual (only the SP SureForm 45 addendum is in hand)
+- Stapler IFUs other than Intuitive; current catalogs: Sklar, Teleflex, Aesculap, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun
+
+*Books not in your library folders*
+- Blandy's Urology, 3rd ed; Gurtner and Neligan, Plastic Surgery; Mathes and Nahai, Reconstructive Surgery; Oxford Handbook of Urology, 4th ed; Wieder, Pocket Guide to Urology, 6th ed; Feliciano, Trauma
 
 **Settings only you can change**
 - Vercel: enable deployment checks so production waits for CI (it currently deploys even when CI fails).
