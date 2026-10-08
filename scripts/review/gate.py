@@ -141,6 +141,8 @@ def units_of(path):
             section = line
         if in_code or line.lstrip().startswith(("import ", "export ", "<VideoCards", "![", "#")):
             continue
+        if re.match(r"\[\^[\w-]+\]:", line):  # footnote reference definitions (GAS pages) are references, not claims
+            continue
         if line.startswith("|"):
             if i == 1 or not lines[i - 2].startswith("|"):
                 header = line

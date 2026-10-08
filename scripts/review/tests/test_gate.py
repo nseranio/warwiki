@@ -240,6 +240,10 @@ class GateTests(Fixture):
         with self.assertRaises(SystemExit):
             G.record(w)
 
+    def test_footnote_reference_definitions_are_not_claims(self):
+        us = self.page('Reoperation occurred in 14% of patients.[^1]\n\n[^1]: Smith A. "Report of the 2022 U.S. survey." 2025;12:1-20.', refs="")
+        self.assertEqual([u["text"] for u in us], ["Reoperation occurred in 14% of patients.[^1]"])
+
     def test_baseline_command_refuses(self):
         sys.argv = ["gate.py", "baseline"]
         with self.assertRaises(SystemExit) as e:
