@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 7–8, 2026: full-page review of the Treatment Atlas and anatomy pages
+
+- 527 Treatment Atlas, Foundations anatomy and surgical-principles pages reviewed in four chunks by Codex (residual brief, ultra, adversarial verifiers); Claude read every high-severity edit and every final-text sheet. About 5,130 verified edits on 525 pages (`251fec20`, `54d7c62b`, `0dd69d87`, `a01d6160`); 16 vetoes (out-of-scope oncology and infertility additions, reversals of source-checked fixes). Every rewritten gated claim passed a separate final-text check.
+- Gate refinements: page-mode verdicts attach to the claims their edits produced; `corrected-access-limited` for verifier-checked non-high-risk corrections blocked only by access; flow rates are not doses; "OR" is an odds ratio only before a number (23 regression tests).
+- Summary and per-chunk table: `reports/quality/README.md`.
+
 ## October 6–7, 2026: legacy high-risk recheck and owner-supplied sources
 
 - Rechecked every dose, guideline and contraindication claim whose only prior support was a fuzzy match, a rejected fix, a voice pass or a style label (1,858 claims, five waves), and 469 claims citing the 52 PDFs the owner supplied October 6. About 230 corrections on about 130 pages, each confirmed in its final wording by a separate check (`0d810585`, `2e2e2534`, `f2dd898b`, `fdcc5fd5`, `527133f6`, `c052f6fe`).

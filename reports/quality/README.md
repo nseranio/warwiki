@@ -78,3 +78,18 @@ Next (in order): (1) detector calibration on seeded mutations (milestone 2); (2)
 Measured before repair: 1.37 serious factual errors per page, 63% of pages affected, 1.22 omissions per page ([results](residual-sample-4-results.md)). The 594 agreed edits on the sampled pages, plus 65 more from five final-text rounds, were published in `8bb42166`; every rewritten gated claim passed a separate final-text check. Two claims were narrowed to what accessible sources support (Zeinelabden randomized count; ACOG 2026 salpingectomy detail) and are on the source list.
 
 **Implication.** The remaining error mass is qualitative: anatomy, operative steps, technique attribution, eponym history, guidance scope and multi-series technique tables. The claim gate does not extract most of it. Recommended next phase: full-page, source-grounded review of the Treatment Atlas and Foundations surgical-principles and anatomy pages (about 600 pages) with the residual brief, repairs through the same apply/final-text loop, then one diagnostic sample of 60 untouched pages to measure the effect.
+
+## Full-page review of the Treatment Atlas and anatomy pages (October 7–8)
+
+Scope: 527 pages ([page-review-scope.json](page-review-scope.json)): Treatment Atlas plus Foundations anatomy and surgical-principles pages, in four chunks. Method: Codex full-page review with the residual brief at ultra effort (5 reviewers, 3 verifiers per chunk after the first), adversarial verification, Claude reading every high-severity edit and every final-text sheet, new DOIs resolved, then final-text rounds until the claim gate passed on every touched page.
+
+| Chunk | Pages | Verified edits | Claude vetoes | Commit |
+|---|---|---|---|---|
+| 1. Foundations anatomy and principles, early urethral | 131 | about 1,240 | 3 | `251fec20` |
+| 2. Urethral, bladder neck, bladder, diversion, upper tract | 132 | about 1,150 | 1 | `54d7c62b` |
+| 3. Genital reconstruction, incontinence, prolapse, fistula | 132 | about 1,060 | 9 | `0dd69d87` |
+| 4. Sexual dysfunction, gender-affirming, cosmetic, BPH devices | 130 | about 1,680 | 3 | `a01d6160` |
+
+Total: about 5,130 verified edits on 525 pages. Vetoes were mostly primary-oncology or infertility additions (out of scope) and three final-round reversals of source-checked corrections. Where reviewer rounds disagreed, Claude settled the point from the source (Hofer 2016 endpoints, Mazza 20.5% potency, Croghan 19 sexually active, ureterocutaneous-fistula skin-flap 238/272). In chunk 4, four claims whose detail sat only in paywalled full texts were narrowed by hand to what the abstracts show. Open leads: [open-findings.md](open-findings.md).
+
+Next: one diagnostic 60-page sample (sample 5) to measure the effect of this phase against sample 4's 1.37 serious errors per page.
