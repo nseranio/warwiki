@@ -93,3 +93,7 @@ Scope: 527 pages ([page-review-scope.json](page-review-scope.json)): Treatment A
 Total: about 5,130 verified edits on 525 pages. Vetoes were mostly primary-oncology or infertility additions (out of scope) and three final-round reversals of source-checked corrections. Where reviewer rounds disagreed, Claude settled the point from the source (Hofer 2016 endpoints, Mazza 20.5% potency, Croghan 19 sexually active, ureterocutaneous-fistula skin-flap 238/272). In chunk 4, four claims whose detail sat only in paywalled full texts were narrowed by hand to what the abstracts show. Open leads: [open-findings.md](open-findings.md).
 
 Next: one diagnostic 60-page sample (sample 5) to measure the effect of this phase against sample 4's 1.37 serious errors per page.
+
+## Residual sample 5 (October 8)
+
+1.15 serious factual errors per page (95% CI 0.75–1.55), 31/60 pages affected, against 1.37 in sample 4; reviewed pages 0.89, unreviewed 1.27, post-stratified 1.07 (0.67–1.48); negative audit 0/5 ([results](residual-sample-5-results.md)). Repairs on the sampled pages follow. Candidate next phase: the same full-page review for pharmacology, Special Populations, Clinical Conditions and Evaluation (about 500 pages), then a preregistered final validation sample.
