@@ -17,7 +17,8 @@ CLAIMS = "--claims" in ARGV
 REVIEW_BRIEF = ARGV[ARGV.index("--brief") + 1] if "--brief" in ARGV else "claims"          # claims mode: which brief file key
 VERIFY_BRIEF = ARGV[ARGV.index("--verify-brief") + 1] if "--verify-brief" in ARGV else "verify"  # claim-level check: units are claim batches in WORK/batches (scripts/review/claims.py extract)
 BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"), ("claims", "claim-checker-brief.md"), ("decide", "claim-decision-brief.md"),
-          ("voice", "voice-brief.md"), ("voice-verify", "voice-verifier-brief.md"), ("residual", "residual-brief.md"))
+          ("voice", "voice-brief.md"), ("voice-verify", "voice-verifier-brief.md"), ("residual", "residual-brief.md"),
+          ("trust", "trust-brief.md"), ("trust-verify", "trust-verifier-brief.md"))
 PAGE_BRIEF = ARGV[ARGV.index("--page-brief") + 1] if "--page-brief" in ARGV else None  # page mode: brief key for every page (e.g. residual)
 
 

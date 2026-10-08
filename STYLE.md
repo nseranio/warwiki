@@ -156,3 +156,22 @@ Before: "In reconstruction the kidney is a surgical territory (…), a functiona
 After: the cited facts alone (paired retroperitoneal organs, about 20% of cardiac output, up to 180 L of ultrafiltrate, about 1.5 L of urine a day).
 
 Landing pages: the intro is one or two sentences on what the section contains; no disclaimer paragraph. A landing link to a sidebar category opens the first page of that category in the sidebar.
+
+## 12. Trust the reader (October 8, 2026)
+
+The owner's rule: state the finding and its population once, then stop. Readers are surgeons; they can see that a lower-limb cohort is not a Fournier cohort. Spelling it out "reads like AI, saying the quiet part loud."
+
+Cut:
+
+- **Non-transfer warnings.** "Do not transfer its 87% versus 29% result to perineal ulcers", "this result is not a trial of closed incisions, graft bolsters, or Fournier reconstruction", "Trauma studies do not establish faster closure after Fournier debridement".
+- **Rebuttals of an overclaim nobody made.** "X does not establish/prove Y", "is not a universal rule", "should not be read as", "This is a major-burn resource, not routine GU wound care", "not only burns exceeding 90%".
+- **Restated design limits.** If the sentence already says "retrospective", "single-center", "case report" or names the population, do not add a sentence explaining what that means.
+- **Process notes.** Anything describing how the site checked a source: "in the inspected abstract", "not independently assessed", "Checked 2026-09-11", "the full notice text was not reviewed", "confidence interval not reported". These belong in the audit ledger, not on the page.
+
+Keep:
+
+- The population, design, size, follow-up and endpoint, written into the sentence that reports the result ("In a lower-limb cohort (80% diabetic), …").
+- Real safety points, contraindications, label limits and guideline statements, including a guideline "does not recommend".
+- A genuine conflict between sources, stated once.
+
+Fixing an overclaim means correcting the sentence's own scope (name the population or design), never adding a separate caveat sentence.
