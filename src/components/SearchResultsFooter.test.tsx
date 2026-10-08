@@ -14,4 +14,8 @@ describe('full search results transition', () => {
     render(<SearchResultsFooter query="BPH after radiation" count={3} createSearchLink={query => `/wiki/find?q=${encodeURIComponent(query)}`} />);
     expect(screen.getByRole('link')).toHaveAttribute('href', '/wiki/find?q=BPH%20after%20radiation');
   });
+  it('omits the number when the count for this query is not known', () => {
+    render(<SearchResultsFooter query="allen morey" createSearchLink={query => `/search?q=${encodeURIComponent(query)}`} />);
+    expect(screen.getByRole('link', {name: 'See all results'})).toBeInTheDocument();
+  });
 });

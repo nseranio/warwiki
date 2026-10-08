@@ -41,3 +41,14 @@ export function expandSearchRequests(input: unknown): unknown {
   }
   return input;
 }
+
+export function hitCountsFrom(response: unknown): Array<[string, number]> {
+  // DocSearch 4.7 adds each keystroke's nbHits to the previous total, so the
+  // footer takes the count for the exact query from the response instead.
+  const results = (response as {results?: unknown})?.results;
+  if (!Array.isArray(results)) return [];
+  return results.flatMap(result => {
+    const {query, nbHits} = (result ?? {}) as {query?: unknown; nbHits?: unknown};
+    return typeof query === 'string' && typeof nbHits === 'number' ? [[query, nbHits] as [string, number]] : [];
+  });
+}

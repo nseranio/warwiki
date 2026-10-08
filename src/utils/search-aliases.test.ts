@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {expandSearchAlias, expandSearchRequests} from './search-aliases';
+import {expandSearchAlias, expandSearchRequests, hitCountsFrom} from './search-aliases';
 
 describe('clinical search aliases', () => {
   it('expands whole abbreviations while preserving different concepts and specific queries', () => {
@@ -18,5 +18,10 @@ describe('clinical search aliases', () => {
     expect(expandSearchRequests(modern)).toEqual({...modern, requests: [{...modern.requests[0], query: 'erectile dysfunction'}]});
     expect(modern.requests[0].query).toBe('ED');
     expect(expandSearchRequests(null)).toBeNull();
+  });
+  it('reads the hit count of each query from a search response', () => {
+    expect(hitCountsFrom({results: [{query: 'allen morey', nbHits: 22, hits: []}, {nbHits: 4}]})).toEqual([['allen morey', 22]]);
+    expect(hitCountsFrom(null)).toEqual([]);
+    expect(hitCountsFrom({results: 'x'})).toEqual([]);
   });
 });
