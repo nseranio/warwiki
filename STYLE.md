@@ -141,3 +141,18 @@ Applies to every new or edited reference. Existing lines are not rewritten in bu
 - Year, volume and pages as in the version of record; when the online and print years differ, use the year printed with the volume.
 - Resolve every new DOI before committing (`scripts/audit/pubmed.py`, `scripts/refs/registry.py`). A group or society author is written as published (for example "American Urological Association").
 - `python3 scripts/refs/registry.py` re-checks every DOI-bearing reference against Crossref; run it after a large source dump.
+
+## 11. Openings (October 8, 2026)
+
+The owner's rule after reading the Foundations pages: get to the point. An opening paragraph defines the subject and gives its key facts, then stops. Cut, from new and edited openings:
+
+- **Relevance lists.** "For the reconstructive surgeon it matters in four ways: (1) …", "It is the central operative field for …", "Every one of those operations depends on …". The sections below show why the anatomy matters.
+- **Scope statements.** "This article focuses on …", "… not a molecular account of …", "Physiology is compressed to the depth …", "is described here". Exception: one short sentence that routes the reader to a sibling page ("The transobturator route has its own page").
+- **Hedges that rebut nobody.** "Average cadaver distances orient the surgeon but do not define a safe trajectory."
+- **Long parenthetical inventories** of every operation or structure involved.
+
+Before: "In reconstruction the kidney is a surgical territory (…), a functional reserve (…) and a pressure-sensitive end-organ (…). The gross, vascular and collecting-system anatomy relevant to operative planning is described here, with the physiology needed to interpret obstruction."
+
+After: the cited facts alone (paired retroperitoneal organs, about 20% of cardiac output, up to 180 L of ultrafiltrate, about 1.5 L of urine a day).
+
+Landing pages: the intro is one or two sentences on what the section contains; no disclaimer paragraph. A landing link to a sidebar category opens the first page of that category in the sidebar.
