@@ -57,6 +57,10 @@ const config: Config = {
       attributes: {},
       innerHTML: `<link rel="stylesheet" href="${GOOGLE_FONTS_CSS}">`,
     },
+    // Home-screen app: icon and name used by "Add to Home Screen" (iOS) and install (Android).
+    {tagName: 'link', attributes: {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}},
+    {tagName: 'link', attributes: {rel: 'manifest', href: '/site.webmanifest'}},
+    {tagName: 'meta', attributes: {name: 'apple-mobile-web-app-title', content: 'WARWIKI'}},
     {
       tagName: 'meta',
       attributes: {
