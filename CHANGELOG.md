@@ -8,6 +8,7 @@ For commit-level detail run `git log --oneline`.
 
 ## October 8, 2026: voice (openings, trust the reader), tables, sidebar, app icon, audio
 
+- **Methylene blue in urethroplasty:** new "Urethral stricture mapping during urethroplasty" section on the Methylene Blue page (retrograde staining of strictured urothelium, MB spongiography, margins, transillumination alternative) plus a pointer from Principles of Urethral Reconstruction. Lead was a user-supplied OpenEvidence answer whose mechanism was reversed (it said healthy mucosa stains); rebuilt on Joshi 2017 (full text, `reports/audit-v2/sources-local/pdfs-2026-10-08/`), Mousa 2025, Desai 2024 and Kuo 2015. Claim gate: 7/7 supported, both dose claims double-checked.
 - **Trust the reader (STYLE.md §12):** 3,460 hedge/caveat candidates (`scripts/voice/trust_extract.py`) reviewed by Codex with the new `trust` / `trust-verify` briefs; Claude read every edit. 2,600 cuts on 831 pages in three batches (`cc2776db`, `ed2eb022`, `31cbeaa9`); 2 vetoes; 18 references removed whose only use was a deleted caveat. Final-text rechecks of the ~530 trimmed numeric sentences corrected 47 older errors. All review briefs now forbid adding caveat sentences or process notes.
 - **Openings (STYLE.md §11):** relevance lists, scope lines and hedges cut from 45 page openings (Anatomy & Physiology and 28 others).
 - **Evidence tables:** no disclaimer, source-access or routine correction notes on the page; retraction/expression of concern still shown.
