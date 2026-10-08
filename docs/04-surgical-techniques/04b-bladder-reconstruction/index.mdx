@@ -11,7 +11,7 @@ import GenericDatabase from '@site/src/components/GenericDatabase';
 
 # Bladder Augmentation & Catheterizable Channels
 
-Bladder reconstruction includes augmentation cystoplasty for the hostile low-capacity bladder, continent catheterizable channels (CCC) for patients who cannot empty per urethra, and ileovesicostomy as an incontinent low-pressure outlet. For salvage of bladder-neck contracture and vesicourethral anastomotic stenosis (BNC / VUAS) and for bladder-neck closure, see the dedicated [Bladder Neck Reconstruction](/docs/surgical-techniques/04ab-bladder-neck-reconstruction) page.
+Bladder reconstruction includes augmentation cystoplasty for the hostile low-capacity bladder, continent catheterizable channels (CCC) for patients who cannot catheterize per urethra reliably or prefer an easier abdominal catheterization route, and ileovesicostomy as an incontinent low-pressure outlet.<sup>[[1]](#ref1)</sup> For salvage of bladder-neck contracture and vesicourethral anastomotic stenosis (BNC / VUAS) and for bladder-neck closure, see the dedicated [Bladder Neck Reconstruction](/docs/surgical-techniques/04ab-bladder-neck-reconstruction) page.
 
 ---
 
@@ -39,16 +39,17 @@ Plan three separate components: storage, access for emptying and outlet continen
 | Clinical problem | Reconstruction to consider |
 |---|---|
 | Low compliance or refractory neurogenic detrusor overactivity | [Augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation), with an achievable catheterization plan if needed. |
+| Severely impacted idiopathic OAB after all other therapies fail | In carefully selected patients, consider [augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/bladder-augmentation) or [urinary diversion](/docs/surgical-techniques/04c-urinary-diversion) after counseling about surgical morbidity and possible intermittent catheterization (AUA/SUFU Statement 30, Expert Opinion).<sup>[[6]](#ref6)</sup> |
 | Difficult urethral catheterization with otherwise suitable storage | [Catheterizable channel](/docs/surgical-techniques/04b-bladder-reconstruction/catheterizable-channels); augmentation is added only for a reservoir indication. |
-| Neurogenic stress incontinence | Confirm suitable storage, then consider an autologous sling or AUS according to sex, anatomy, hand function and the catheterization plan. AUA/SUFU states that clinicians should offer slings (Statement 45, Moderate Recommendation; Evidence Level: Grade C) and may offer an artificial urinary sphincter (Statement 46, Conditional Recommendation; Evidence Level: Grade C) to select NLUTD patients with stress incontinence and acceptable bladder storage parameters. An AUS is not restricted to patients who void spontaneously.<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
+| Neurogenic stress incontinence | Confirm suitable storage and assess sex, anatomy, hand function and the catheterization plan. EAU recommends an autologous sling first line for women able to self-catheterize (strong), a synthetic sling as an alternative for selected women able to self-catheterize (weak), AUS for selected women at experienced centers (weak), and AUS for men (strong).<sup>[[2]](#ref2)</sup> AUA/SUFU states that clinicians should offer slings (Statement 45, Moderate Recommendation; Evidence Level: Grade C) and may offer an artificial urinary sphincter (Statement 46, Conditional Recommendation; Evidence Level: Grade C) to select NLUTD patients with stress incontinence and acceptable bladder storage parameters. An AUS is not restricted to patients who void spontaneously.<sup>[[1]](#ref1)[[2]](#ref2)</sup> |
 | Devastated outlet | Selected [bladder-neck closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure) with a reliable alternative drainage route: CCC, permanent suprapubic drainage or selected diversion. AUA/SUFU states that clinicians may offer closure with concomitant bladder drainage to select NLUTD patients with refractory stress incontinence (Statement 47, Expert Opinion).<sup>[[1]](#ref1)</sup> |
-| End-stage bladder-centric IC/BPS | Carefully selected [supratrigonal cystectomy with augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/supratrigonal-cystectomy) or diversion after other therapies have failed (AUA Statement 22: Option, Evidence Strength Grade C); pain relief is not guaranteed even after cystectomy.<sup>[[4]](#ref4)</sup> |
+| Refractory bladder-centric IC/BPS or rare end-stage small fibrotic bladder | Carefully selected [supratrigonal cystectomy with augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/supratrigonal-cystectomy) or diversion after other therapies have failed (AUA Statement 22: Option, Evidence Strength Grade C); pain relief is not guaranteed even after cystectomy.<sup>[[4]](#ref4)</sup> |
 | Radiation injury, tuberculosis or other fibrotic bladder | Treat the underlying disease and assess remaining tissue, renal function and upper tracts before choosing augmentation or diversion. No single segment or capacity cutoff applies to every patient. |
 | Cannot sustain catheterization | Consider [cutaneous vesicostomy](/docs/surgical-techniques/04b-bladder-reconstruction/cutaneous-vesicostomy), selected [ileovesicostomy](/docs/surgical-techniques/04b-bladder-reconstruction/ileovesicostomy) or another [diversion](/docs/surgical-techniques/04c-urinary-diversion). Counsel about leakage, obstruction and repeat procedures. AUA/SUFU advises offering diversion when other options have failed or are inappropriate (Statement 54, Moderate Recommendation; Evidence Level: Grade C).<sup>[[1]](#ref1)</sup> |
 
 ### Reservoir and segment selection
 
-The [augmentation principles](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles) page covers bowel physiology and follow-up. Evidence does not establish one universally superior bowel segment.<sup>[[5]](#ref5)</sup>
+The [augmentation principles](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles) page covers bowel physiology and follow-up. The Cochrane review's segment comparisons address bladder replacement and diversion, not augmentation.<sup>[[5]](#ref5)</sup> Small observational augmentation comparisons favor ileum for some urodynamic outcomes but do not establish one superior bowel segment for every patient.<sup>[[7]](#ref7)[[8]](#ref8)</sup>
 
 | Option | Selection points |
 |---|---|
@@ -122,7 +123,7 @@ export const bladderTechniques = [
   {
     name: "Seromuscular Colocystoplasty (SCLU)",
     domain: "Capacity / Reservoir",
-    bestFor: "Select centers seeking to avoid mucus / stones; technically demanding.",
+    bestFor: "Mucosa-sparing augmentation intended to limit mucus; technically demanding.",
     slug: "/docs/surgical-techniques/04b-bladder-reconstruction/seromuscular-colocystoplasty",
   },
   {
@@ -233,3 +234,9 @@ export const bladderColumns = [
 <a id="ref4"></a>4. AUA. Diagnosis and Treatment of Interstitial Cystitis/Bladder Pain Syndrome. Amended 2022. Statement 22. [Guideline](https://www.auanet.org/documents/Guidelines/PDF/IC_BPS.pdf).
 
 <a id="ref5"></a>5. Cody JD, et al. Urinary diversion and bladder reconstruction/replacement using intestinal segments for intractable incontinence or following cystectomy. *Cochrane Database Syst Rev.* 2012;CD003306. doi:[10.1002/14651858.CD003306.pub2](https://doi.org/10.1002/14651858.CD003306.pub2).
+
+<a id="ref6"></a>6. Cameron AP, Chung DE, Dielubanza EJ, et al. "The AUA/SUFU Guideline on the Diagnosis and Treatment of Idiopathic Overactive Bladder." *J Urol.* 2024;212(1):11-20. doi:[10.1097/JU.0000000000003985](https://doi.org/10.1097/JU.0000000000003985)
+
+<a id="ref7"></a>7. Radomski SB, Herschorn S, Stone AR. "Urodynamic comparison of ileum vs. sigmoid in augmentation cystoplasty for neurogenic bladder dysfunction." *Neurourol Urodyn.* 1995;14(3):231-237. doi:[10.1002/nau.1930140304](https://doi.org/10.1002/nau.1930140304)
+
+<a id="ref8"></a>8. Juhász ZS, Kispál Z, Kardos D, Vajda P. "Long-term urodynamic findings following colo-, gastro- and ileocystoplasty." *Pediatr Surg Int.* 2024;40(1):131. doi:[10.1007/s00383-024-05714-z](https://doi.org/10.1007/s00383-024-05714-z)

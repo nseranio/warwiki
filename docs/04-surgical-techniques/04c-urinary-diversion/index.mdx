@@ -31,7 +31,7 @@ Urinary diversion encompasses the reconstructive options used when the native bl
 
 ## Decision Framework
 
-Discuss ileal conduit, continent cutaneous diversion and orthotopic neobladder with patients undergoing radical cystectomy. Suitability depends on organ function, bowel availability, urethral/sphincter status, ability to manage the diversion, and patient goals. A usable urethra is one prerequisite for a neobladder; candidacy also depends on tumour status, renal and hepatic function, ability to manage the diversion, and patient preference. The option is not mandatory or universally preferable.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
+AUA 2024 Statement 13 (Clinical Principle) calls for discussing ileal conduit, continent cutaneous diversion, and orthotopic neobladder with patients undergoing radical cystectomy.<sup>[[1]](#ref1)</sup> Suitability depends on organ function, bowel availability, urethral/sphincter status, ability to manage the diversion, and patient goals. For orthotopic diversion after radical cystectomy for bladder cancer, a usable urethra and a negative urethral margin are prerequisites (AUA 2024 Statement 14, Clinical Principle); EAU 2026 strongly recommends against it when invasive tumour is in the urethra or at the urethral dissection level.<sup>[[1]](#ref1)[[2]](#ref2)</sup> Renal and hepatic function, ability to manage the diversion, and patient preference also determine candidacy.<sup>[[1]](#ref1)[[2]](#ref2)</sup> The option is not mandatory or universally preferable.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
 
 | Decision | What to assess |
 |---|---|
@@ -222,12 +222,17 @@ export const diversionColumns = [
 ];
 
 <GenericDatabase
-  data={diversionData}
+  data={diversionData.filter(item => item.slug !== '/docs/surgical-techniques/04c-urinary-diversion/simple-cystectomy' && item.slug !== '/docs/surgical-techniques/04c-urinary-diversion/parastomal-hernia')}
   columns={diversionColumns}
   filterKey="family"
   filterLabel="Family"
   entityLabel="diversions"
 />
+
+## Related Procedures
+
+- [Simple Cystectomy (Benign Disease)](/docs/surgical-techniques/04c-urinary-diversion/simple-cystectomy): bladder removal for severe benign disease, including radiation injury, fistula, IC/BPS, or neurogenic conditions; commonly paired with a diversion.
+- [Parastomal Hernia Repair](/docs/surgical-techniques/04c-urinary-diversion/parastomal-hernia): prevention, assessment, and repair of a hernia around a urinary stoma.
 
 ## References
 
