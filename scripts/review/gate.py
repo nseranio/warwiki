@@ -51,7 +51,7 @@ DOSE = re.compile(r"\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg|mL|U|IU|units|mg/kg|mL/kg|mg
 GUIDE = re.compile(r"\b(AUA|EAU|NICE|ACOG|AUGS|SUFU|ICS|IUGA|WHO|ASCRS|BAUS|CUA|SIU|ESGO|RCOG|WPATH|AAGL|ACR|IDSA|CDC|FDA|ISSVD|GURS|SMSNA|ICSM|AAST|ACS|EAST|WSES|ESSM)\b[^.|]{0,80}\b("
                    r"recommend\w*|suggest\w*|advis\w*|endorse\w*|Strong|Moderate|Conditional|Expert Opinion|Clinical Principle|"
                    r"weak|Grade [A-C]|approv\w*|clear\w*|contraindicat\w*|indicat\w*|label\w*)", re.I)
-STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b|\bCI\b|\bn\s?=\s?\d|"
+STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b(?=[^.|]{0,15}\d)|\bCI\b|\bn\s?=\s?\d|"
                     r"\b(?:mean|median)\b[^.|]{0,40}\d")
 CONTRA = re.compile(r"contraindicat", re.I)
 DOI = re.compile(r"\b10\.\d{4,9}/[^\s\])>\"']+", re.I)

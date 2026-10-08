@@ -220,6 +220,11 @@ class GateTests(Fixture):
         d, = self.page("Inject 10 mL of 1% lidocaine.<sup>[[1]](#ref1)</sup>")
         self.assertIn("dose", d["kinds"])
 
+    def test_operating_room_is_not_an_odds_ratio(self):
+        self.assertEqual(self.page("| Measure | A |\n|---|---|\n| **OR time** | Varies by repair |"), [])
+        u, = self.page("Smoking raised failure (OR 2.1, 95% CI 1.2–3.4).<sup>[[1]](#ref1)</sup>")
+        self.assertIn("number", u["kinds"])
+
     def test_exception_needs_a_decision(self):
         u, = self.page("Give 100 mg of drug X.<sup>[[1]](#ref1)</sup>")
         json.dump({u["key"]: {"owner": "N", "expires": "2999-01-01"}}, open(G.EXCEPTIONS, "w"))
