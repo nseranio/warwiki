@@ -1,6 +1,6 @@
 import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import ArticleListener from './index';
+import ArticleListener, { chunkText } from './index';
 
 describe('default device audio', () => {
   beforeEach(() => {
@@ -24,5 +24,22 @@ describe('default device audio', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Stop'}));
     expect(screen.getByRole('button', {name: 'Listen to this article'})).toBeInTheDocument();
     expect(window.speechSynthesis.cancel).toHaveBeenCalled();
+  });
+});
+
+describe('chunk ramp', () => {
+  it('opens with a short chunk and grows toward the maximum', () => {
+    const sentence = 'The bulbar urethra is the commonest site of stricture in adult men. ';
+    const chunks = chunkText(sentence.repeat(120));
+    expect(chunks[0].length).toBeLessThanOrEqual(350);
+    expect(chunks[1].length).toBeLessThanOrEqual(1200);
+    expect(chunks[1].length).toBeGreaterThan(chunks[0].length);
+    expect(Math.max(...chunks.map((c) => c.length))).toBeLessThanOrEqual(3500);
+    expect(chunks.join(' ')).toBe(sentence.repeat(120).trim());
+  });
+
+  it('keeps a long opening sentence whole rather than cutting it', () => {
+    const long = `${'word '.repeat(100).trim()}.`;
+    expect(chunkText(`${long} Short tail.`)[0]).toBe(long);
   });
 });

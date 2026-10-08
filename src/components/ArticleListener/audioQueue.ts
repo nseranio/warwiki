@@ -1,4 +1,7 @@
-/** Audio is generated only when playback reaches a chunk, never for the whole article. */
+/**
+ * Audio is generated only as playback approaches a chunk (the current one plus
+ * one prefetched), never for the whole article.
+ */
 export class AudioQueue {
   readonly length: number;
   private controller = new AbortController();
@@ -20,6 +23,11 @@ export class AudioQueue {
       this.requests.set(index, request);
     }
     return request;
+  }
+
+  /** Start generating a chunk without waiting for it; failures surface on a later get(). */
+  prefetch(index: number): void {
+    this.get(index).catch(() => undefined);
   }
 
   dispose(): void {

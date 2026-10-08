@@ -28,4 +28,17 @@ describe('on-demand audio generation', () => {
     expect(requestedSignal?.aborted).toBe(true);
     expect(load).toHaveBeenCalledTimes(1);
   });
+
+  it('prefetches a chunk once and swallows its failure until it is played', async () => {
+    const load = vi.fn(async (text: string) => {
+      if (text === 'technique') throw new Error('generation failed');
+      return new Blob(['audio']);
+    });
+    const queue = new AudioQueue(['intro', 'technique'], load);
+    queue.prefetch(1);
+    queue.prefetch(1);
+    expect(load).toHaveBeenCalledTimes(1);
+    await expect(queue.get(1)).rejects.toThrow('generation failed');
+    expect(load).toHaveBeenCalledTimes(1);
+  });
 });

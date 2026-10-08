@@ -7,11 +7,14 @@ import { AudioQueue } from './audioQueue';
  * ArticleListener — device speech with optional cloud TTS (OpenAI).
  *
  * Behavior:
- *   1. On play, extract the article text and chunk it into ≤3500-char pieces
- *      at sentence boundaries.
- *   2. When cloud audio is enabled, fetch only the current chunk, cached via the
- *      browser Cache API keyed by SHA-256(text). The server fixes the voice
- *      (Marin on gpt-4o-mini-tts); there is no voice or quality picker.
+ *   1. On play, extract the article text and chunk it at sentence boundaries.
+ *      Each section opens with a short chunk, then grows to ≤3500 characters,
+ *      so the first audio arrives in seconds instead of the ~40 s a full chunk
+ *      takes to generate.
+ *   2. When cloud audio is enabled, fetch the current chunk plus the next one
+ *      (generated while the current one plays), cached via the browser Cache
+ *      API keyed by SHA-256(text). The server fixes the voice (Marin on
+ *      gpt-4o-mini-tts); there is no voice or quality picker.
  *   3. Play chunks sequentially via an HTMLAudioElement; advance on 'ended'.
  *   4. On any API failure or missing API key, fall back to native
  *      speechSynthesis so the feature still works without cloud backing.
@@ -22,6 +25,11 @@ const CACHE_NAME = 'warwiki-tts-v2';
 const RETIRED_CACHES = ['warwiki-tts-v1'];
 const RETIRED_STORAGE_KEYS = ['warwiki-tts-voice', 'warwiki-tts-model'];
 const MAX_CHUNK_CHARS = 3500;
+// Chunk-size ramp within each section. Generation runs at roughly 90 characters
+// per second plus a few seconds of overhead, and speech plays at about 15, so
+// a short opener starts quickly and each chunk covers the next one's generation.
+// Changing these changes the chunk text, so cached audio is regenerated.
+const CHUNK_RAMP = [350, 1200, MAX_CHUNK_CHARS];
 const API_ENDPOINT = '/api/tts';
 
 // SHA-256 hex digest (SubtleCrypto — browser-only)
@@ -121,11 +129,13 @@ function buildChunkPlan(sections: Array<{ title: string; text: string }>): {
   return { chunks, meta };
 }
 
-// Split at sentence boundaries, keeping each chunk ≤ maxLen
-function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
+// Split at sentence boundaries. Chunk k may grow to ramp[k] (the last value
+// repeats) but always holds at least one whole sentence ≤ maxLen.
+export function chunkText(text: string, maxLen = MAX_CHUNK_CHARS, ramp: number[] = CHUNK_RAMP): string[] {
   const sentences = text.match(/[^.!?]+[.!?]+|\s*[^.!?]+$/g) || [text];
   const chunks: string[] = [];
   let current = '';
+  const softLimit = () => Math.min(maxLen, ramp[Math.min(chunks.length, ramp.length - 1)] ?? maxLen);
 
   for (const raw of sentences) {
     const sentence = raw.trim();
@@ -147,7 +157,7 @@ function chunkText(text: string, maxLen = MAX_CHUNK_CHARS): string[] {
       continue;
     }
 
-    if (current.length + sentence.length + 1 > maxLen) {
+    if (current && current.length + sentence.length + 1 > softLimit()) {
       chunks.push(current.trim());
       current = sentence;
     } else {
@@ -335,6 +345,9 @@ export default function ArticleListener(): React.ReactElement | null {
 
       // If this chunk's audio isn't ready yet, show loading while we wait
       if (!chunkUrlsRef.current.has(i)) setState('loading');
+
+      // Generate the next chunk while this one loads and plays.
+      if (i + 1 < queue.length) queue.prefetch(i + 1);
 
       let url: string;
       try {
