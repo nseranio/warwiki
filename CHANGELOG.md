@@ -16,6 +16,11 @@ For commit-level detail run `git log --oneline`.
 - **Home-screen app:** apple-touch-icon, web manifest and icon (white W with shading on the brand gradient).
 - **Article listener:** each section opens with a ≤350-character chunk, then 1,200, then 3,500, and the next chunk is prefetched (first audio in about 5 s instead of about 38 s).
 
+## October 8, 2026: residual sample 5 and the second full-page review
+
+- Residual sample 5 (preregistered, 60 pages): 1.15 serious factual errors per page (95% CI 0.75–1.55), down from 1.37 in sample 4; pages reviewed in the October 7–8 phase 0.89, others 1.27; negative audit 0/5 (`reports/quality/residual-sample-5-results.md`). Repairs on the sampled pages: about 520 verified edits (`bdbbe2e2`). Gate no longer extracts footnote reference definitions as claims.
+- Second full-page review started on the remaining 455 pages in sections 01–05 (Evaluation, Clinical Conditions, Special Populations, pharmacology, perioperative care, tools), chunks 5–8.
+
 ## October 7–8, 2026: full-page review of the Treatment Atlas and anatomy pages
 
 - 527 Treatment Atlas, Foundations anatomy and surgical-principles pages reviewed in four chunks by Codex (residual brief, ultra, adversarial verifiers); Claude read every high-severity edit and every final-text sheet. About 5,130 verified edits on 525 pages (`251fec20`, `54d7c62b`, `0dd69d87`, `a01d6160`); 16 vetoes (out-of-scope oncology and infertility additions, reversals of source-checked fixes). Every rewritten gated claim passed a separate final-text check.
