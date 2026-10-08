@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 8, 2026: voice (openings, trust the reader), tables, sidebar, app icon, audio
+
+- **Trust the reader (STYLE.md §12):** 3,460 hedge/caveat candidates (`scripts/voice/trust_extract.py`) reviewed by Codex with the new `trust` / `trust-verify` briefs; Claude read every edit. 2,600 cuts on 831 pages in three batches (`cc2776db`, `ed2eb022`, `31cbeaa9`); 2 vetoes; 18 references removed whose only use was a deleted caveat. Final-text rechecks of the ~530 trimmed numeric sentences corrected 47 older errors. All review briefs now forbid adding caveat sentences or process notes.
+- **Openings (STYLE.md §11):** relevance lists, scope lines and hedges cut from 45 page openings (Anatomy & Physiology and 28 others).
+- **Evidence tables:** no disclaimer, source-access or routine correction notes on the page; retraction/expression of concern still shown.
+- **Tables:** Markdown tables render inside a `.wk-table-scroll` wrapper (MDXComponents) so narrow tables fill their frame.
+- **Sidebar:** Clinical Conditions groups ordered by approximate prevalence; landing links open each group's first page.
+- **Home-screen app:** apple-touch-icon, web manifest and icon (white W with shading on the brand gradient).
+- **Article listener:** each section opens with a ≤350-character chunk, then 1,200, then 3,500, and the next chunk is prefetched (first audio in about 5 s instead of about 38 s).
+
 ## October 7–8, 2026: full-page review of the Treatment Atlas and anatomy pages
 
 - 527 Treatment Atlas, Foundations anatomy and surgical-principles pages reviewed in four chunks by Codex (residual brief, ultra, adversarial verifiers); Claude read every high-severity edit and every final-text sheet. About 5,130 verified edits on 525 pages (`251fec20`, `54d7c62b`, `0dd69d87`, `a01d6160`); 16 vetoes (out-of-scope oncology and infertility additions, reversals of source-checked fixes). Every rewritten gated claim passed a separate final-text check.
