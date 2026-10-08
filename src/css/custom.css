@@ -326,12 +326,38 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--ifm-color-primary-darkest);
 }
 
-/* Mobile: make all markdown tables horizontally scrollable */
+/* Horizontal scroll. Markdown tables get a .wk-table-scroll wrapper
+   (src/theme/MDXComponents) that scrolls and carries the frame, so the table
+   fills the column. Raw-HTML tables without the wrapper keep the old
+   display:block scroll. */
 .markdown table {
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
+}
+
+.markdown .wk-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border: 1px solid var(--warwiki-border);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--warwiki-shadow-sm);
+}
+
+.markdown .wk-table-scroll > table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.markdown p + .wk-table-scroll {
+  margin-top: 0.4rem;
 }
 
 .markdown table td,
