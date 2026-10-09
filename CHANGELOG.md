@@ -20,6 +20,7 @@ For commit-level detail run `git log --oneline`.
 ## October 8, 2026: residual sample 5 and the second full-page review
 
 - Residual sample 5 (preregistered, 60 pages): 1.15 serious factual errors per page (95% CI 0.75–1.55), down from 1.37 in sample 4; pages reviewed in the October 7–8 phase 0.89, others 1.27; negative audit 0/5 (`reports/quality/residual-sample-5-results.md`). Repairs on the sampled pages: about 520 verified edits (`bdbbe2e2`). Gate no longer extracts footnote reference definitions as claims.
+- Chunks 5 (Evaluation, Clinical Conditions, Special Populations; about 1,520 edits on 147 pages) and 8 (73 plain-instrument pages; 48 edits) published in `6ca83465`; Claude agents now run the final-text rounds and chunk 8 review, Codex verifies. Review briefs forbid auanet.org pages.
 - Second full-page review started on the remaining 455 pages in sections 01–05 (Evaluation, Clinical Conditions, Special Populations, pharmacology, perioperative care, tools), chunks 5–8.
 
 ## October 7–8, 2026: full-page review of the Treatment Atlas and anatomy pages

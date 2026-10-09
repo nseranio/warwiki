@@ -97,3 +97,12 @@ Next: one diagnostic 60-page sample (sample 5) to measure the effect of this pha
 ## Residual sample 5 (October 8)
 
 1.15 serious factual errors per page (95% CI 0.75–1.55), 31/60 pages affected, against 1.37 in sample 4; reviewed pages 0.89, unreviewed 1.27, post-stratified 1.07 (0.67–1.48); negative audit 0/5 ([results](residual-sample-5-results.md)). Repairs on the sampled pages published in `bdbbe2e2` (about 520 verified edits, every rewritten gated claim final-text checked). Next phase, approved by the owner October 8: the same full-page review for the 455 remaining pages in sections 01–05 (chunks 5–8, [page-review-2-scope.json](page-review-2-scope.json)), then a preregistered final validation sample.
+
+## Second full-page review, chunks 5–8 (October 8–9)
+
+| Chunk | Pages | Reviewer / re-check | Verified edits | Vetoes | Commit |
+|---|---|---|---|---|---|
+| 5. Evaluation, Clinical Conditions, Special Populations | 153 | Codex ultra review; Claude final-text checks (815 claims, 4 rounds), Codex verifying | about 1,520 | 16 | `6ca83465` |
+| 8. Plain instruments (clamps, forceps, retractors, scissors, needle holders, suction, bone, staplers) | 73 | Claude review; Codex verification; Claude final-text check | 48 | 0 | `6ca83465` |
+
+From October 8 the work is split to conserve Codex tokens: Codex reviews chunks 6 and 7 and verifies every finding; Claude agents review chunk 8 and run the final-text rounds. AUA and EAU statements are checked against the local guideline copies (agents never open auanet.org; AUA prohibits AI use of its site). Low-severity findings (mostly caveat sentences) are not applied by this pipeline; a later trust-the-reader pass can pick them up.
