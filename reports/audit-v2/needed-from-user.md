@@ -57,6 +57,19 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 **Decisions**
 - Audit-style wording left in some internal `evidenceNote` fields (Backhaus, Mixter, vaginal anatomy): reword by hand?
 
+## Added October 9, 2026 (second full-page review; to restore narrowed wording)
+
+These paywalled documents could not be opened, so grade labels or clauses citing them were removed. With the full text, the original wording can be restored.
+
+- ACOG Practice Bulletin 224, *Diagnosis and Management of Vulvar Skin Disorders* (Obstet Gynecol 2020;136:e1–e14): vaginal dilation with intravaginal corticosteroids for erosive lichen planus (topical calcineurin inhibitors page).
+- SOGC Guideline No. 445, chronic pelvic pain (J Obstet Gynaecol Can 2024): TCA recommendation and its strength/certainty labels (tricyclic antidepressants page).
+- ACOG Practice Bulletin 195, *Prevention of Infection After Gynecologic Procedures* (2018): "Level C" label for vaginal preparation (draping and skin antisepsis page).
+- SAMBA 2024 updated consensus on perioperative glucose (Anesth Analg 2024): strength/evidence label for the 180–250 mg/dL target (diabetes page).
+- 2024 AHA/ACC perioperative cardiovascular guideline (Circulation/JACC 2024): evidence levels for aspirin recommendations (antithrombotic therapy page).
+- ASRA 5th-edition regional anesthesia and antithrombotic guideline (Reg Anesth Pain Med 2025): protamine/LMWH statement (anticoagulation reversal page).
+- AUA/ASRM male infertility guideline, Part II (2020/2024 amendment): "Grade C" for aromatase inhibitors (androgen adjuncts page).
+- SMSNA position statement on penile augmentation, 2026 correction (PMID 41950408) (Himplant page).
+
 ## Received October 6, 2026 (checking in progress)
 
 Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extracted text; originals stay in Downloads). Pages citing each are being checked in the quality program.
