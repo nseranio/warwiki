@@ -9,35 +9,11 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 **Sources** (full citations as cited on the pages)
 
 *Guidelines*
-- ACOG Practice Bulletin No. 210: Fecal Incontinence. *Obstet Gynecol.* 2019;133(4):e260–e273. doi:10.1097/AOG.0000000000003187
-- ACOG Practice Bulletin No. 214: Pelvic Organ Prolapse. *Obstet Gynecol.* 2019;134(5):e126–e142. doi:10.1097/AOG.0000000000003519 (only p. 6 is missing: mesh trial data, cystoscopy, hysteropexy)
-- ACOG Practice Bulletin No. 218: Chronic Pelvic Pain. *Obstet Gynecol.* 2020;135(3):e98–e109. doi:10.1097/AOG.0000000000003716 (two gated pages: trauma history, referred musculoskeletal pain, pelvic denervation)
 - Giroux M, Ramirez AC, Dufour S, et al. Guideline No. 465: Obstetrical anal sphincter injuries (OASIs) Part II: long-term management and counselling regarding subsequent mode of delivery. *J Obstet Gynaecol Can.* 2026;48(1):103186. doi:10.1016/j.jogc.2025.103186; and SOGC Guideline No. 457, OASIs Part I (2024)
-- AUGS–IUGA Joint Writing Group. Joint Report on Terminology for Surgical Procedures to Treat Pelvic Organ Prolapse. *Female Pelvic Med Reconstr Surg.* 2020;26:173–201. doi:10.1097/SPV.0000000000000846 (exposure page)
 
 *Papers*
-- ACOG Clinical Practice Update: Salpingectomy for the Prevention of Epithelial Ovarian Cancer. *Obstet Gynecol.* 2026;148(4):e275–e280. doi:10.1097/AOG.0000000000006400 (full text would restore the specific hysterectomy and contraception recommendations on the adnexa page)
-- Zeinelabden 2025, *World J Urol*, doi:10.1007/s00345-025-05842-8 (randomized count: 73 vs 66)
-- Djordjevic ML, Bencic M, Kojovic V, et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol.* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w
-- Wu JM. Stress incontinence in women. *N Engl J Med.* 2021;384(25):2428–2436. doi:10.1056/NEJMcp1914037
-- Le Cleach L, Chosidow O. Lichen planus. *N Engl J Med.* 2012;366(8):723–732. doi:10.1056/NEJMcp1103641
-- Vodegel EV, van Rest K, Speksnijder L, et al; EVA Study Group. Vaginal oestrogen therapy for postmenopausal women undergoing prolapse surgery: a multicentre double-blind randomised placebo-controlled clinical trial. *BJOG.* Published online August 28, 2026. doi:10.1111/1471-0528.70311
-- Cotte J, Dechartres A, Mozer P, et al. Long-term device survival after a first implantation of AMS800 for stress urinary incontinence: comparison between men and women. *Neurourol Urodyn.* 2023;42(1):80–89. doi:10.1002/nau.25047
-- Phé V, Léon P, Granger B, et al. Stress urinary incontinence in female neurological patients: long-term functional outcomes after artificial urinary sphincter (AMS 800) implantation. *Neurourol Urodyn.* 2017;36(3):764–769. doi:10.1002/nau.23019
-- Peyronnet B, O'Connor E, Khavari R, et al. AMS-800 artificial urinary sphincter in female patients with stress urinary incontinence: a systematic review. *Neurourol Urodyn.* 2019;38 Suppl 4:S28–S41. doi:10.1002/nau.23833
-- Holm HV, Ohnesorge SS, Nilsen OJ. Long-term outcomes of transecting versus nontransecting bulbar urethroplasty: results from the Scandinavian Urethroplasty Study. *Eur Urol Focus.* 2026;12(3):316–318. doi:10.1016/j.euf.2026.05.007
-- Furr JR, Wisenbaugh ES, Gelman J. Urinary and sexual outcomes following bulbar urethroplasty — an analysis of 2 common approaches. *Urology.* 2019;130:162–166. doi:10.1016/j.urology.2019.02.042
-- VanDyke ME, Baumgarten AS, Ortiz NM, et al. Extended primary anastomosis with penile plication (EPAPP): a promising new alternative to perineal urethrostomy for reconstruction of long urethral strictures. *Urology.* 2021;149:245–250. doi:10.1016/j.urology.2020.11.048
-- Tagliaferri V, Ruggieri S, Taccaliti C, et al. Comparison of absorbable and permanent sutures for laparoscopic sacrocervicopexy: a randomized controlled trial. *Acta Obstet Gynecol Scand.* 2021;100:347–352. doi:10.1111/aogs.13997
-- Trimix efficacy: no specific paper is cited; any clinical series reporting response rates to papaverine–phentolamine–alprostadil injection would settle the "about 90%" figure on the erectile dysfunction page.
 
 *Original urethroplasty and flap technique papers*
-- Jordan GH, Eltahawy EA, Virasoro R. The technique of vessel sparing excision and primary anastomosis for proximal bulbous urethral reconstruction. *J Urol.* 2007;177(5):1799–1802. doi:10.1016/j.juro.2007.01.036
-- Morey AF. Urethral plate salvage with dorsal graft promotes successful penile flap onlay reconstruction of severe pendulous strictures. *J Urol.* 2001;166(4):1376–1378. doi:10.1016/s0022-5347(05)65773-4
-- Asopa HS, Garg M, Singhal GG, et al. Dorsal free graft urethroplasty for urethral stricture by ventral sagittal urethrotomy approach. *Urology.* 2001;58(5):657–659. doi:10.1016/S0090-4295(01)01377-2
-- Kulkarni S, Barbagli G, Sansalone S, Lazzeri M. One-sided anterior urethroplasty: a new dorsal onlay graft technique. *BJU Int.* 2009;104(8):1150–1155. doi:10.1111/j.1464-410X.2009.08590.x
-- Blandy JP, Singh M, Tresidder GC. Urethroplasty by scrotal flap for long urethral strictures. *Br J Urol.* 1968;40(3):261–267. doi:10.1111/j.1464-410X.1968.tb09886.x
-- Wee JT, Joseph VT. A new technique of vaginal reconstruction using neurovascular pudendal-thigh flaps: a preliminary report. *Plast Reconstr Surg.* 1989;83(4):701–709. doi:10.1097/00006534-198904000-00018
 - Yii NW, Niranjan NS. Lotus petal flaps in vulvo-vaginal reconstruction. *Br J Plast Surg.* 1996;49(8):547–554. doi:10.1016/s0007-1226(96)90132-0
 - "Sa/Xu 2021": no page cites a 2021 Sa/Xu paper today; the closest are Xu YM, Sa YL, et al. *Eur Urol* 2009;56(1):193–200 (transpubic pedicled labial urethroplasty) and *J Urol* 2013;189(1):176–181 (female stricture with urethrovaginal fistula). Skip unless you know the intended paper.
 
@@ -61,15 +37,45 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 
 These paywalled documents could not be opened, so grade labels or clauses citing them were removed. With the full text, the original wording can be restored.
 
-- ACOG Practice Bulletin 224, *Diagnosis and Management of Vulvar Skin Disorders* (Obstet Gynecol 2020;136:e1–e14): vaginal dilation with intravaginal corticosteroids for erosive lichen planus (topical calcineurin inhibitors page).
 - SOGC Guideline No. 445, chronic pelvic pain (J Obstet Gynaecol Can 2024): TCA recommendation and its strength/certainty labels (tricyclic antidepressants page).
-- ACOG Practice Bulletin 195, *Prevention of Infection After Gynecologic Procedures* (2018): "Level C" label for vaginal preparation (draping and skin antisepsis page).
-- SAMBA 2024 updated consensus on perioperative glucose (Anesth Analg 2024): strength/evidence label for the 180–250 mg/dL target (diabetes page).
 - 2024 AHA/ACC perioperative cardiovascular guideline (Circulation/JACC 2024): evidence levels for aspirin recommendations (antithrombotic therapy page).
 - ASRA 5th-edition regional anesthesia and antithrombotic guideline (Reg Anesth Pain Med 2025): protamine/LMWH statement (anticoagulation reversal page).
 - AUA/ASRM male infertility guideline, Part II (2020/2024 amendment): "Grade C" for aromatase inhibitors (androgen adjuncts page).
 - SMSNA position statement on penile augmentation, 2026 correction (PMID 41950408) (Himplant page).
-- BAUS 2026 penile augmentation consensus (J Clin Urol, doi:10.1177/20514158251391054): the five recommendations (the page had "recommends against surgical techniques" for men without abnormality; narrowed to the abstract's evidence findings, suspensory ligament division page).
+- ASCRS 2023 fecal incontinence guideline (Bordeianou, *Dis Colon Rectum* 2023;66:647–661): clinically recognized (4–10%) and occult (21–35%) obstetric sphincter injury figures, removed from the fecal incontinence page (now cites Sultan 1993 for the occult-defect rate).
+- BAUS 2026 penile augmentation consensus (J Clin Urol, doi:10.1177/20514158251391054): the five recommendations (the page had "recommends against surgical techniques" for men without abnormality, suspensory ligament division page, and "strongly recommends against non-absorbable penile fillers", non-autologous injectables page; both narrowed to the abstract's evidence findings).
+
+## Received October 9, 2026 (checked and incorporated)
+
+Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-09/` (ignored). Every page citing them was checked against the full text and narrowed wording restored where supported; see CHANGELOG (October 9). Also received: the SMSNA 2024 cosmetic penile enhancement statement (J Sex Med 2024;21:573–578) and the POP-Q II draft for member comments (not cited; not used).
+
+- ACOG Practice Bulletin No. 210: Fecal Incontinence. *Obstet Gynecol.* 2019;133(4):e260–e273. doi:10.1097/AOG.0000000000003187
+- ACOG Practice Bulletin No. 214: Pelvic Organ Prolapse. *Obstet Gynecol.* 2019;134(5):e126–e142. doi:10.1097/AOG.0000000000003519 (only p. 6 is missing: mesh trial data, cystoscopy, hysteropexy)
+- ACOG Practice Bulletin No. 218: Chronic Pelvic Pain. *Obstet Gynecol.* 2020;135(3):e98–e109. doi:10.1097/AOG.0000000000003716 (two gated pages: trauma history, referred musculoskeletal pain, pelvic denervation)
+- AUGS–IUGA Joint Writing Group. Joint Report on Terminology for Surgical Procedures to Treat Pelvic Organ Prolapse. *Female Pelvic Med Reconstr Surg.* 2020;26:173–201. doi:10.1097/SPV.0000000000000846 (exposure page)
+- ACOG Clinical Practice Update: Salpingectomy for the Prevention of Epithelial Ovarian Cancer. *Obstet Gynecol.* 2026;148(4):e275–e280. doi:10.1097/AOG.0000000000006400 (full text would restore the specific hysterectomy and contraception recommendations on the adnexa page)
+- Zeinelabden 2025, *World J Urol*, doi:10.1007/s00345-025-05842-8 (randomized count: 73 vs 66)
+- Djordjevic ML, Bencic M, Kojovic V, et al. Musculocutaneous latissimus dorsi flap for phalloplasty in female to male gender affirmation surgery. *World J Urol.* 2019;37(4):631–637. doi:10.1007/s00345-019-02641-w
+- Wu JM. Stress incontinence in women. *N Engl J Med.* 2021;384(25):2428–2436. doi:10.1056/NEJMcp1914037
+- Le Cleach L, Chosidow O. Lichen planus. *N Engl J Med.* 2012;366(8):723–732. doi:10.1056/NEJMcp1103641
+- Vodegel EV, van Rest K, Speksnijder L, et al; EVA Study Group. Vaginal oestrogen therapy for postmenopausal women undergoing prolapse surgery: a multicentre double-blind randomised placebo-controlled clinical trial. *BJOG.* Published online August 28, 2026. doi:10.1111/1471-0528.70311
+- Cotte J, Dechartres A, Mozer P, et al. Long-term device survival after a first implantation of AMS800 for stress urinary incontinence: comparison between men and women. *Neurourol Urodyn.* 2023;42(1):80–89. doi:10.1002/nau.25047
+- Phé V, Léon P, Granger B, et al. Stress urinary incontinence in female neurological patients: long-term functional outcomes after artificial urinary sphincter (AMS 800) implantation. *Neurourol Urodyn.* 2017;36(3):764–769. doi:10.1002/nau.23019
+- Peyronnet B, O'Connor E, Khavari R, et al. AMS-800 artificial urinary sphincter in female patients with stress urinary incontinence: a systematic review. *Neurourol Urodyn.* 2019;38 Suppl 4:S28–S41. doi:10.1002/nau.23833
+- Holm HV, Ohnesorge SS, Nilsen OJ. Long-term outcomes of transecting versus nontransecting bulbar urethroplasty: results from the Scandinavian Urethroplasty Study. *Eur Urol Focus.* 2026;12(3):316–318. doi:10.1016/j.euf.2026.05.007
+- Furr JR, Wisenbaugh ES, Gelman J. Urinary and sexual outcomes following bulbar urethroplasty — an analysis of 2 common approaches. *Urology.* 2019;130:162–166. doi:10.1016/j.urology.2019.02.042
+- VanDyke ME, Baumgarten AS, Ortiz NM, et al. Extended primary anastomosis with penile plication (EPAPP): a promising new alternative to perineal urethrostomy for reconstruction of long urethral strictures. *Urology.* 2021;149:245–250. doi:10.1016/j.urology.2020.11.048
+- Tagliaferri V, Ruggieri S, Taccaliti C, et al. Comparison of absorbable and permanent sutures for laparoscopic sacrocervicopexy: a randomized controlled trial. *Acta Obstet Gynecol Scand.* 2021;100:347–352. doi:10.1111/aogs.13997
+- Trimix efficacy: no specific paper is cited; any clinical series reporting response rates to papaverine–phentolamine–alprostadil injection would settle the "about 90%" figure on the erectile dysfunction page.
+- Jordan GH, Eltahawy EA, Virasoro R. The technique of vessel sparing excision and primary anastomosis for proximal bulbous urethral reconstruction. *J Urol.* 2007;177(5):1799–1802. doi:10.1016/j.juro.2007.01.036
+- Morey AF. Urethral plate salvage with dorsal graft promotes successful penile flap onlay reconstruction of severe pendulous strictures. *J Urol.* 2001;166(4):1376–1378. doi:10.1016/s0022-5347(05)65773-4
+- Asopa HS, Garg M, Singhal GG, et al. Dorsal free graft urethroplasty for urethral stricture by ventral sagittal urethrotomy approach. *Urology.* 2001;58(5):657–659. doi:10.1016/S0090-4295(01)01377-2
+- Kulkarni S, Barbagli G, Sansalone S, Lazzeri M. One-sided anterior urethroplasty: a new dorsal onlay graft technique. *BJU Int.* 2009;104(8):1150–1155. doi:10.1111/j.1464-410X.2009.08590.x
+- Blandy JP, Singh M, Tresidder GC. Urethroplasty by scrotal flap for long urethral strictures. *Br J Urol.* 1968;40(3):261–267. doi:10.1111/j.1464-410X.1968.tb09886.x
+- Wee JT, Joseph VT. A new technique of vaginal reconstruction using neurovascular pudendal-thigh flaps: a preliminary report. *Plast Reconstr Surg.* 1989;83(4):701–709. doi:10.1097/00006534-198904000-00018
+- ACOG Practice Bulletin 224, *Diagnosis and Management of Vulvar Skin Disorders* (Obstet Gynecol 2020;136:e1–e14): vaginal dilation with intravaginal corticosteroids for erosive lichen planus (topical calcineurin inhibitors page).
+- ACOG Practice Bulletin 195, *Prevention of Infection After Gynecologic Procedures* (2018): "Level C" label for vaginal preparation (draping and skin antisepsis page).
+- SAMBA 2024 updated consensus on perioperative glucose (Anesth Analg 2024): strength/evidence label for the 180–250 mg/dL target (diabetes page).
 - Lange M, et al. *Ann Plast Surg* 2022;88(5):538–543 (PMID 34813520): new self-reported incontinence after vaginal-flap neomeatus reconstruction (the page had 6/42; not in the abstract; a different series, Franchi 2019, reports 6/33). Sentence removed from the AFAB genital nullification page (residual sample 6).
 
 ## Received October 6, 2026 (checking in progress)

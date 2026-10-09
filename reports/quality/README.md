@@ -118,3 +118,7 @@ Claude detector (Codex unavailable), so not a strict trend against samples 4–5
 ## Guideline-statement sweep (October 9)
 
 1,905 AUA/EAU/SUFU/AUGS statements on 510 pages that had no schema-2 verification, checked against local guideline copies by Claude agents grouped by guideline: 1,822 supported, 69 errors (3.6%), 13 unverifiable, 55 citation-marker fixes; 122 verified edits on 98 pages, three final-text rounds, gate passes ([report](guideline-sweep-2026-10-09.md)). Sentences the gate's pattern misses had twice the error rate (5.3% vs 2.5%); widening the gate's guideline pattern ("may consider", "should", "offer", "statement") would bring them under the gate. Not rechecked: the 1,091 statements already verified under schema 2.
+
+## Owner-supplied full texts (October 9)
+
+31 previously paywalled documents (`reports/audit-v2/sources-local/pdfs-2026-10-09/`, ignored) were checked against every page citing them in 9 topic batches (`quality/paywalled-2026-10-09`, two final-text rounds). About 100 verified edits on 57 pages; most were attribution errors (a source cited for something it does not say) rather than wrong numbers. Narrowed wording restored where the full text supports it. Still wanted: BAUS 2026 consensus, ASCRS 2023 fecal incontinence guideline, SOGC 445 and OASIS guidelines, AHA/ACC 2024, ASRA 2025, AUA/ASRM Part II, SMSNA 2026 correction, Yii lotus petal flap, device IFUs.
