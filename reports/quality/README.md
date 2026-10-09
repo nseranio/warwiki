@@ -114,3 +114,7 @@ Second review complete: 455 pages. Claude-only verification is less independent 
 ## Residual sample 6, final validation (October 9)
 
 Claude detector (Codex unavailable), so not a strict trend against samples 4–5. The Claude reviewers and verifiers rated no finding high, so the preregistered rule gives 0; classifying every verified finding by the rule's definition gives **0.50 serious errors per page** (95% CI 0.29–0.71), 19/60 pages (32%), omissions 0.63 per page; errors the verifiers rated medium or high, 0.10 per page; negative audit 0/5 ([results](residual-sample-6-results.md)). Repairs: 123 verified edits on 48 sampled pages, 1 veto, two Claude final-text rounds; claim gate passes.
+
+## Guideline-statement sweep (October 9)
+
+1,905 AUA/EAU/SUFU/AUGS statements on 510 pages that had no schema-2 verification, checked against local guideline copies by Claude agents grouped by guideline: 1,822 supported, 69 errors (3.6%), 13 unverifiable, 55 citation-marker fixes; 122 verified edits on 98 pages, three final-text rounds, gate passes ([report](guideline-sweep-2026-10-09.md)). Sentences the gate's pattern misses had twice the error rate (5.3% vs 2.5%); widening the gate's guideline pattern ("may consider", "should", "offer", "statement") would bring them under the gate. Not rechecked: the 1,091 statements already verified under schema 2.

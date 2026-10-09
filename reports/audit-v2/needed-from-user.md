@@ -69,6 +69,7 @@ These paywalled documents could not be opened, so grade labels or clauses citing
 - ASRA 5th-edition regional anesthesia and antithrombotic guideline (Reg Anesth Pain Med 2025): protamine/LMWH statement (anticoagulation reversal page).
 - AUA/ASRM male infertility guideline, Part II (2020/2024 amendment): "Grade C" for aromatase inhibitors (androgen adjuncts page).
 - SMSNA position statement on penile augmentation, 2026 correction (PMID 41950408) (Himplant page).
+- BAUS 2026 penile augmentation consensus (J Clin Urol, doi:10.1177/20514158251391054): the five recommendations (the page had "recommends against surgical techniques" for men without abnormality; narrowed to the abstract's evidence findings, suspensory ligament division page).
 - Lange M, et al. *Ann Plast Surg* 2022;88(5):538–543 (PMID 34813520): new self-reported incontinence after vaginal-flap neomeatus reconstruction (the page had 6/42; not in the abstract; a different series, Franchi 2019, reports 6/33). Sentence removed from the AFAB genital nullification page (residual sample 6).
 
 ## Received October 6, 2026 (checking in progress)
