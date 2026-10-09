@@ -20,3 +20,5 @@ REJECTED FINDINGS AND THE ORIGINAL CLAIM (claim gate schema 2, October 2026): re
 When a finding carries a `claim_id`, copy it into your verdict line as `"claim_id"`.
 
 TRUST THE READER (STYLE.md section 12, October 8, 2026): when a claim is broader than its source, fix the sentence's own scope (name the population, design, size or endpoint inside it). Never add a separate caveat sentence such as "Do not transfer this to …", "This does not establish …", "This is not a trial of …", "This is an X resource, not Y", "not a universal rule", and never write process notes ("in the inspected abstract", "not independently assessed", "confidence interval not reported", "checked <date>") into page text. A proposed edit that adds such a sentence is a voice error; a verifier rejects it.
+
+AUA SITE: do not open auanet.org pages (guidelines, Core Curriculum or university.auanet.org); the AUA prohibits use of its site content in AI tools. Check AUA guideline statements against the published guideline article (J Urol, Urol Pract or Neurourol Urodyn via PubMed, PMC or the publisher), or a local copy supplied in local_sources.

@@ -279,7 +279,8 @@ def main():
         for s in st["pages"].values():
             counts[s["status"]] = counts.get(s["status"], 0) + 1
         open(os.path.join(WORK, "progress.json"), "w").write(json.dumps({"time": time.time(), "counts": counts, "running": len(procs)}))
-        if not procs and (stop or all(s["status"] in ("done", "failed") for s in st["pages"].values())):
+        # 'claude-review': units a Claude agent is reviewing; ingested later (Oct 8), so they never block exit
+        if not procs and (stop or all(s["status"] in ("done", "failed", "claude-review") for s in st["pages"].values())):
             log(f"exit {counts}"); break
         time.sleep(20)
 
