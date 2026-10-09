@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 9, 2026: second full-page review complete (chunks 5–8)
+
+- Remaining 455 pages in sections 01–05 reviewed: chunk 5 (Evaluation, Clinical Conditions, Special Populations; about 1,520 edits), chunk 6 (pharmacology, perioperative care; about 880 edits), chunk 7 (129 clinical tool pages; about 200 edits) and chunk 8 (73 plain instruments; 48 edits). Commits `6ca83465`, `aab1ba01`.
+- Codex ran low (owner, October 8): chunks 7–8 were reviewed and every recheck round was run by Claude agents, with separate Claude agents verifying findings; usage capped at 75% of the weekly Claude allowance. Verifiers rejected several recheck deletions after confirming the original against full texts.
+- Guideline labels and clauses resting on paywalled sources were narrowed; the sources are listed in `reports/audit-v2/needed-from-user.md` (October 9 section).
+
 ## October 8, 2026: voice (openings, trust the reader), tables, sidebar, app icon, audio
 
 - **Methylene blue in urethroplasty:** new "Urethral stricture mapping during urethroplasty" section on the Methylene Blue page (retrograde staining of strictured urothelium, MB spongiography, margins, transillumination alternative) plus a pointer from Principles of Urethral Reconstruction. Lead was a user-supplied OpenEvidence answer whose mechanism was reversed (it said healthy mucosa stains); rebuilt on Joshi 2017 (full text, `reports/audit-v2/sources-local/pdfs-2026-10-08/`), Mousa 2025, Desai 2024 and Kuo 2015. Claim gate: 7/7 supported, both dose claims double-checked.

@@ -106,3 +106,7 @@ Next: one diagnostic 60-page sample (sample 5) to measure the effect of this pha
 | 8. Plain instruments (clamps, forceps, retractors, scissors, needle holders, suction, bone, staplers) | 73 | Claude review; Codex verification; Claude final-text check | 48 | 0 | `6ca83465` |
 
 From October 8 the work is split to conserve Codex tokens: Codex reviews chunks 6 and 7 and verifies every finding; Claude agents review chunk 8 and run the final-text rounds. AUA and EAU statements are checked against the local guideline copies (agents never open auanet.org; AUA prohibits AI use of its site). Low-severity findings (mostly caveat sentences) are not applied by this pipeline; a later trust-the-reader pass can pick them up.
+| 6. Pharmacology, perioperative care, surgical skills, hubs | 100 | Codex ultra review; Claude final-text rounds and Claude verifiers | about 880 | 5 | `aab1ba01` |
+| 7. Clinical tools (devices, biomaterials, catheters, endoscopy, robotic and urethral instruments) | 129 | Claude review, Claude verifiers and rechecks (Codex unavailable) | about 200 plus 15 reference fixes | 0 | `aab1ba01` |
+
+Second review complete: 455 pages. Claude-only verification is less independent than the Codex/Claude pairing; separate agents reviewed and verified, Claude read every high-severity edit, and AUA/EAU statements were checked against local copies. Labels that rest on paywalled guidelines were removed rather than left unverified (see needed-from-user.md, October 9). Next: final validation sample (Claude detector, preregistered).
