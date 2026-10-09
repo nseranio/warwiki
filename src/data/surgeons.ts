@@ -1152,6 +1152,7 @@ export const SURGEONS: Surgeon[] = [
   { id: 'andrew-cohen', path: 'a-g/andrew-cohen', name: 'Andrew J. Cohen', photo: 'https://cdn-images.kyruus.com/providermatch/johnshopkins/photos/orig/cohen-andrew-1144575689.jpg', country: 'United States', countryFlag: '🇺🇸', institution: 'Johns Hopkins University', title: 'MD' },
   { id: 'matthew-grimes', path: 'a-g/matthew-grimes', name: 'Matthew D. Grimes', photo: 'https://urology.wisc.edu/wp-content/uploads/2019/09/Grimes_Matthew-2023_500px.jpeg', country: 'United States', countryFlag: '🇺🇸', institution: 'University of Wisconsin School of Medicine and Public Health', title: 'MD' },
   { id: 'chris-mcclung', path: 'h-r/chris-mcclung', name: 'Christopher D. McClung', photo: 'https://www.turnsresearch.org/perch/resources/mcclung-w800.jpg', country: 'United States', countryFlag: '🇺🇸', institution: 'Reconstructive Surgical Arts, Columbus, Ohio', title: 'MD, MS' },
+  { id: 'divya-ajay', subspecialty: 'URPS', path: 'a-g/divya-ajay', name: 'Divya Ajay', photo: 'https://www.turnsresearch.org/perch/resources/dr-divya-ajay-md-mph-w800.jpg', country: 'United States', countryFlag: '🇺🇸', institution: 'Memorial Sloan Kettering Cancer Center', title: 'MD, MPH' },
   { id: 'william-brant', path: 'a-g/william-brant', name: 'William O. Brant', photo: 'https://grangermed2.wpenginepowered.com/wp-content/uploads/2025/06/Brant-William-O.MD_-scaled.jpg', country: 'United States', countryFlag: '🇺🇸', institution: 'Granger Medical Clinic, Salt Lake City', title: 'MD, FACS, FECSM', mentorId: 'tom-lue' },
 ];
 
