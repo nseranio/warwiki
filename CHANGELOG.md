@@ -11,6 +11,8 @@ For commit-level detail run `git log --oneline`.
 - Remaining 455 pages in sections 01–05 reviewed: chunk 5 (Evaluation, Clinical Conditions, Special Populations; about 1,520 edits), chunk 6 (pharmacology, perioperative care; about 880 edits), chunk 7 (129 clinical tool pages; about 200 edits) and chunk 8 (73 plain instruments; 48 edits). Commits `6ca83465`, `aab1ba01`.
 - Codex ran low (owner, October 8): chunks 7–8 were reviewed and every recheck round was run by Claude agents, with separate Claude agents verifying findings; usage capped at 75% of the weekly Claude allowance. Verifiers rejected several recheck deletions after confirming the original against full texts.
 - Guideline labels and clauses resting on paywalled sources were narrowed; the sources are listed in `reports/audit-v2/needed-from-user.md` (October 9 section).
+- **Residual sample 6 (final validation, Claude detector):** 60 preregistered pages. Claude reviewers and verifiers rated no finding high, so the preregistered rule gives 0; verifiers then checked every substantive finding and Claude classified each by the rule's definition: 0.50 serious errors per page (95% CI 0.29–0.71), 19/60 pages, 0.63 omissions per page, negative audit 0/5. Detector changed, so not a strict trend against sample 5 (1.15). Repairs: 123 verified edits on 48 pages, 1 oncology veto, two final-text rounds; claim gate passes. Report: `reports/quality/residual-sample-6-results.md`.
+- Sacrospinous hysteropexy and sacrospinous ligament fixation pages: PFD Week 2025 native-tissue hysteropexy video (Cacheiro, Chang, Menhaji; UC Irvine) added as the first video (`0c7cb5b6`).
 
 ## October 8, 2026: voice (openings, trust the reader), tables, sidebar, app icon, audio
 

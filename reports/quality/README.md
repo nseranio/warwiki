@@ -110,3 +110,7 @@ From October 8 the work is split to conserve Codex tokens: Codex reviews chunks 
 | 7. Clinical tools (devices, biomaterials, catheters, endoscopy, robotic and urethral instruments) | 129 | Claude review, Claude verifiers and rechecks (Codex unavailable) | about 200 plus 15 reference fixes | 0 | `aab1ba01` |
 
 Second review complete: 455 pages. Claude-only verification is less independent than the Codex/Claude pairing; separate agents reviewed and verified, Claude read every high-severity edit, and AUA/EAU statements were checked against local copies. Labels that rest on paywalled guidelines were removed rather than left unverified (see needed-from-user.md, October 9). Next: final validation sample (Claude detector, preregistered).
+
+## Residual sample 6, final validation (October 9)
+
+Claude detector (Codex unavailable), so not a strict trend against samples 4–5. The Claude reviewers and verifiers rated no finding high, so the preregistered rule gives 0; classifying every verified finding by the rule's definition gives **0.50 serious errors per page** (95% CI 0.29–0.71), 19/60 pages (32%), omissions 0.63 per page; errors the verifiers rated medium or high, 0.10 per page; negative audit 0/5 ([results](residual-sample-6-results.md)). Repairs: 123 verified edits on 48 sampled pages, 1 veto, two Claude final-text rounds; claim gate passes.
