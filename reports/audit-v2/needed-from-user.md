@@ -45,6 +45,20 @@ These paywalled documents could not be opened, so grade labels or clauses citing
 - ASCRS 2023 fecal incontinence guideline (Bordeianou, *Dis Colon Rectum* 2023;66:647–661): clinically recognized (4–10%) and occult (21–35%) obstetric sphincter injury figures, removed from the fecal incontinence page (now cites Sultan 1993 for the occult-defect rate).
 - BAUS 2026 penile augmentation consensus (J Clin Urol, doi:10.1177/20514158251391054): the five recommendations (the page had "recommends against surgical techniques" for men without abnormality, suspensory ligament division page, and "strongly recommends against non-absorbable penile fillers", non-autologous injectables page; both narrowed to the abstract's evidence findings).
 
+## Received October 10, 2026 (filed; restorations prepared, not yet applied)
+
+Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-10/` (ignored); exact passages and proposed wording in its `RESTORE-PREP.md`. Apply through the claim gate after the weekly usage reset.
+
+- 2024 AHA/ACC perioperative guideline (aspirin grades: 1/B-R, 1/B-NR, 2b/B-R, 3: No Benefit/B-R).
+- ASRA 5th edition (2025): LMWH protamine statement.
+- AUA/ASRM male infertility Part II: statement 39, Conditional, Grade C (check 2024 numbering).
+- ASCRS 2023 fecal incontinence: 4-10% recognized, up to 21-35% occult obstetric sphincter injury.
+- SMSNA 2026 correction (author order only; Landon Trost profile citation fixed).
+- Intuitive SP Instruments and Accessories User Manual 553415-05 Rev C (2023).
+- Rosen 1999 IIEF-5 (for the practice SHIM form).
+
+Still wanted from the list below: SOGC 445 and 465, BAUS 2026, Yii 1996, device IFUs and books.
+
 ## Received October 9, 2026 (checked and incorporated)
 
 Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-09/` (ignored). Every page citing them was checked against the full text and narrowed wording restored where supported; see CHANGELOG (October 9). Also received: the SMSNA 2024 cosmetic penile enhancement statement (J Sex Med 2024;21:573–578) and the POP-Q II draft for member comments (not cited; not used).
