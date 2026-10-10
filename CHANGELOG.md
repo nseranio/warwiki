@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 10, 2026 (afternoon): WARWIKI Anki decks v1.1
+
+- **Card-by-card refresh** of the WARWIKI GURS & URPS Review deck against the site as changed October 2–10: 552 of 800 cards linked to an edited section. Codex compared each with today's page (author); separate Claude verifiers checked every proposed change against today's WARWIKI and the card's primary source, plus a 40-card sample of "no change needed" verdicts (1 miss, fixed). Result: 44 cards corrected (e.g. OPTIMAL corrected 2-year success, ASPIRE three arms, dorsal penile nerve corridor, ROBUST III success definition and censoring caveat, perineal urethrostomy satisfaction, gabapentin renal band), 190 relinked, none retired.
+- **19 new cards** for content added since October 1 (Mainz pouch III, ketamine uropathy, PGAD/GPD, damage control, MLD phalloplasty, legacy bone-anchored suspensions, sacrocolpopexy revision, postpartum perineal clinic, male CP/CPPS). Cosmetic genital enhancement excluded from the decks by owner decision.
+- Release v1.1: Full 819 cards (563 Core), GURS 451, URPS 631; same GUIDs as v1.0, so personal and AnkiWeb decks update in place; live citation check (233 sources), import, upgrade-from-v1.0 and release checks passed. Flashcards page counts updated. Off-repo project: `reports/anki-deck/` (`refresh-2026-10-10/`, `WARWIKI-Anki-Claude-review/release/`). Owner still needs to upload v1.1 to the three AnkiWeb listings.
+
 ## October 10, 2026: owner decisions applied, sources restored, handouts republished
 
 - **Patient handouts republished:** 80 English handouts updated from the October 7–9 rechecks against the corrected pages plus the owner's October 9–10 decisions (print-light look; wording changes listed in each working copy's top comment in the off-repo clinic folder). `sourcePages` mapping fixes (urethroplasty female page removed; mid-urethral sling, urethral diverticulum, ACT balloons, BPH, penile implant and ICI pages added) and `reviewedAgainst` 2026-10-09. Masters in `~/Desktop/WARWIKI-handouts/` (pre-update backup `_backups/en-before-2026-10-10/`). 15 new handouts also published (rezum, greenlight-laser, ureteral-stent, urethral-stricture-choices, staged-urethroplasty, female-urethral-stricture, pelvic-fracture-urethral-injury, bladder-neck-contracture, bladder-augmentation-and-channels, neurogenic-bladder-options, problems-after-mesh-or-sling, lichen-sclerosus, pelvic-floor-pt-visit, sui-surgery-without-mesh, urinary-problems-after-radiation); gallery now 95. Translations remain off.
