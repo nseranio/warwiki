@@ -7,7 +7,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 ## Current State (October 2, 2026)
 
 - **NEXT SESSION:** the October 9-10 decision review and its follow-ups are done (SmartPhrases and cards: all 53 items applied, `WARWIKI-REFRESH-2026-10-09.md` "Author decisions"; practice sheets and handouts: DECISIONS-NOW-3/4/5 answered; rule: US/AUA sources take precedence in his own materials; 101 °F, 48 h shower and 20 lb across sheets and SmartPhrases). Done Oct 10: October 10 source restorations (`654af934`), sacrocolpopexy revision section, male CP/CPPS evidence and DCB censoring note (`6fae82b2`), VVF video, Landon Trost citation, 80 handouts republished (`5f43a3f7`) and 15 new handouts published (`f1d107ff`; gallery 95). Remaining:
-  1. Apply the owner's corrections to the 29 new practice sheets (`~/Documents/Seranio-Clinic-Resources/DECISIONS-NOW-5.md`, `-6.md`; every handout's pairing in `HANDOUT-PRACTICE-MAP.md`).
+  1. Owner decisions on all 54 practice sheets applied Oct 10 (clinic DECISIONS-LOG); only Jefferson facts remain open (phone numbers, instillation cocktail, PTNS device, semen-analysis lab, Glean visit length). SmartPhrase and card lifting limits now match the sheets.
   2. Citing-page sweep for the October 10 sources done (21 pages, 4 attribution fixes, `98aec0c8`). Still wanted: SOGC 445/465, BAUS 2026, Yii, Barry 1992, device IFUs, books.
   3. PFD Week poster videos are behind Cloudflare and AUGS videos are member-only; ask the owner for titles if he wants embeddable versions found.
   Usage: Claude weekly 93% on Oct 10 (cap 95%; resets Oct 14 1 pm ET). Handout `render-en.sh <slug> gate` hangs; check page count and footer text instead.
