@@ -204,7 +204,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Understanding sudden urges, frequent trips, night-time urination, and urge leaks — what causes OAB, how it is diagnosed, and the step-by-step treatments from lifestyle to Botox and nerve stimulation.',
   },
@@ -217,7 +217,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Leaking with coughing, laughing, lifting, or exercise from weakened support under the urethra — the female-specific options from pelvic-floor exercises to a pessary, bulking injection, or mid-urethral sling.',
   },
@@ -230,7 +230,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Leaking after prostate surgery or radiation from a weakened sphincter — how it usually improves over the first year, and the options (pelvic-floor exercises, male sling, ProACT adjustable balloons, artificial urinary sphincter).',
   },
@@ -242,7 +242,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Ongoing bladder or pelvic pain with urgency that is not an infection — what it is, how it is diagnosed, identifying flare triggers, and the combined treatments (self-care, pelvic-floor therapy, medicines, instillations).',
   },
@@ -254,7 +254,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/laboratory-studies/urine-studies.mdx', 'docs/01-foundations/pharmacology/infection-prophylaxis/uti-treatment-antibiotics.mdx', 'docs/05-special-populations/05e-womens-health/recurrent-uti.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'What a bladder vs. kidney infection is, how UTIs are treated, when antibiotics are (and are not) needed, and how to prevent repeats — including vaginal estrogen after menopause.',
   },
@@ -266,7 +266,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/laboratory-studies/urine-studies.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Bacteria found in the urine when you feel completely fine — why this usually should NOT be treated with antibiotics, the few exceptions (pregnancy, before some procedures), and what symptoms to watch for.',
   },
@@ -278,7 +278,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/laboratory-studies/urine-studies.mdx', 'docs/02-evaluation/imaging/ct-urogram.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
   },
@@ -290,7 +290,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03a-storage-incontinence/nocturia.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Waking at night to urinate — the three main causes (making too much urine at night, a bladder that holds less, disturbed sleep), why a bladder diary is the key first step, and how each cause is treated.',
   },
@@ -302,8 +302,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'male',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx', 'docs/04-surgical-techniques/04m-bph-male-luts/index.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'A common, non-cancerous enlarged prostate that causes urine-flow and frequency symptoms — what causes it, how it is evaluated, and the treatment ladder from lifestyle to medicines to minimally invasive or surgical options.',
   },
@@ -316,7 +316,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'When pelvic organs drop and cause a vaginal bulge or pressure — the types, what causes it, and the options from watchful waiting and pelvic-floor exercises to a pessary or surgery. Common and not dangerous.',
   },
@@ -328,7 +328,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Pelvic pain coming from tight, overactive muscles and nerves rather than the bladder or organs — real and treatable even when scans are normal, with pelvic-floor physical therapy as the cornerstone.',
   },
@@ -340,7 +340,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Losing control of gas or stool — common and treatable. What causes it and the step-by-step options from firming the stool and biofeedback to nerve stimulation or sphincter repair.',
   },
@@ -352,7 +352,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03i-defecatory-disorders/chronic-constipation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Why constipation matters for pelvic health (straining worsens prolapse and leakage) and how to fix it — fiber, fluids, toileting habits, gentle laxatives, and pelvic-floor therapy for outlet-type constipation.',
   },
@@ -365,7 +365,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Common, often treatable concerns about desire, arousal, orgasm, or pain with sex — the physical, hormonal, and emotional causes, and treatments from lubricants and vaginal estrogen to pelvic-floor therapy and counseling.',
   },
@@ -377,8 +377,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'female',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx', 'docs/04-surgical-techniques/04a-urethral-reconstruction/female/urethral-diverticulum-repair.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'A small pocket off the urethra that collects urine — the classic "3 Ds" (dribbling, burning, pain with sex) and recurrent infections, how MRI maps it, and surgical removal (diverticulectomy) when it is bothersome.',
   },
@@ -391,7 +391,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx', 'docs/03-clinical-conditions/03f-fistulas/in-females/rectovaginal.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An abnormal connection causing constant urine leakage (genitourinary) or gas/stool through the vagina (rectovaginal) — the causes, how it is found, and repair (often with a tissue flap), plus why timing matters.',
   },
@@ -404,7 +404,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Trouble getting or keeping an erection — common, highly treatable, and often an early warning sign of heart disease. The causes, the evaluation, and the treatment ladder from lifestyle and pills to devices, injections, and implants.',
   },
@@ -417,7 +417,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Scar tissue that bends the penis — the active vs. stable phases, how it is diagnosed, and phase-based treatment from traction and plaque injections to straightening surgery. Common, not cancer, and treatable.',
   },
@@ -430,7 +430,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx', 'docs/04-surgical-techniques/04e-genital-reconstruction/buried-penis-repair.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'When the penis becomes hidden beneath belly/scrotal skin and fat in adults — the causes (weight, scarring, lichen sclerosus, lymphedema) and the reconstructive repair (release, skin graft, fat-pad removal).',
   },
@@ -443,7 +443,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03f-fistulas/in-males/rectourethral.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An abnormal connection between the rectum and the urethra (gas/stool in the urine), usually after prostate cancer treatment — how it is found and the staged repair (divert, then repair with a tissue flap).',
   },
@@ -456,7 +456,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'When urine erodes into the pubic bone (with bone infection), causing severe pubic pain — usually years after prostate radiation; how MRI makes the diagnosis and why treatment removes infected bone and reroutes urine.',
   },
@@ -468,7 +468,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/imaging/rug-vcug.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An X-ray that maps the urethra using a contrast dye — what the test is, how to prepare, and what to expect during and after.',
   },
@@ -480,7 +480,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/imaging/rug-vcug.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An X-ray of the bladder and urethra during filling and urinating — written to work whether or not the patient already has a catheter or suprapubic tube.',
   },
@@ -492,7 +492,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/ancillary-tests/endoscopy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A look inside the bladder and urethra with a thin camera — flexible (awake, in the office) or rigid (asleep, in the operating room): how to prepare and what to expect during and after.',
   },
@@ -504,7 +504,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/imaging/cystography.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An X-ray of the bladder filled with contrast dye to check that a repair has healed or to look for a leak, fistula, or reflux — written to work whether or not the patient already has a catheter or suprapubic tube.',
   },
@@ -516,7 +516,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/ancillary-tests/urodynamics.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A group of tests that measure how the bladder fills and empties using small catheters — what the test is, how to prepare, and what to expect during and after.',
   },
@@ -528,7 +528,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/ancillary-tests/urodynamics.mdx', 'docs/01-foundations/tools/biomaterials/adjunct-specialty/glean-urodynamics.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A bladder test using small sensors instead of tubes: the sensors record while you drink and move about in the clinic, and the readings are downloaded after removal. How it works and what to expect.',
   },
@@ -540,7 +540,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx', 'docs/02-evaluation/ancillary-tests/endoscopy.mdx', 'docs/02-evaluation/imaging/cystography.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A detailed exam to map a narrowing of the ureter while asleep — any combination of ureteroscopy, retrograde and antegrade pyelogram, and cystography — to plan the right repair.',
   },
@@ -552,7 +552,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Placing a catheter that drains the bladder through the lower belly — preparation, the procedure (local, sedation, or general anesthesia), and aftercare.',
   },
@@ -564,7 +564,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/surgical-principles/grafts/buccal-mucosa.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The cheek-graft (donor-site) part of a urethral or ureteral repair — why the cheek lining is used, what happens during surgery, and how the mouth heals afterward.',
   },
@@ -576,7 +576,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
   },
@@ -588,8 +588,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'male',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx', 'docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/surgical-approaches.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx', 'docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/surgical-approaches.mdx', 'docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'An implanted device for erectile dysfunction not relieved by other treatments — how it works, preparing for surgery, what it does and does not change, and activation plus daily cycling afterward.',
   },
@@ -602,7 +602,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx', 'docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/surgical-approaches.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The bendable (semi-rigid) penile implant for erectile dysfunction — how it works (bend up to use, down to conceal), preparing for surgery, what it does and does not change, and recovery.',
   },
@@ -615,7 +615,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A mesh sling placed under the urethra for mild-to-moderate urine leakage after prostate surgery — how it works (nothing to operate), preparing for surgery, recovery, and how it compares with the artificial sphincter.',
   },
@@ -626,8 +626,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     subcategory: 'Urethral Narrowing & Stricture',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx', 'docs/04-surgical-techniques/04a-urethral-reconstruction/female-urethroplasty.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'Surgery to repair a narrowing (stricture) of the urethra — written to flex across approaches (penile, perineal, with or without a cheek graft): how it works, preparing, the catheter and healing X-ray, and recovery.',
   },
@@ -640,7 +640,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Surgery to straighten the penis in Peyronie\'s disease by stitching the longer side — the simplest option (some shortening, lowest new-ED risk): how it works, preparing, and recovery.',
   },
@@ -653,7 +653,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Straightening surgery for Peyronie\'s disease that releases the scar on the short side and patches it with a graft — preserves length for severe or complex curves (higher new-ED risk): how it works, preparing, and recovery.',
   },
@@ -666,7 +666,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/blandy-perineal-urethrostomy.mdx', 'docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/midline-perineal-urethrostomy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A durable option when the urethra is too narrowed or damaged to repair — a new, permanent opening for urine in the perineum (you urinate sitting down): how it works, preparing, and recovery.',
   },
@@ -678,7 +678,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Surgery to fix a blockage where the kidney drains into the ureter (UPJ obstruction) — usually keyhole (robotic/laparoscopic): how it works, preparing, the internal stent, and recovery.',
   },
@@ -691,7 +691,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/drug-coated-balloon.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A minimally invasive, no-incision treatment for a recurring urethral narrowing — a balloon widens the scar and delivers medicine to help keep it from re-narrowing: how it works, preparing, and recovery.',
   },
@@ -704,7 +704,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04ab-bladder-neck-reconstruction/bnc-vuas/transurethral-incision-transverse-mucosal-realignment.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A no-incision repair of a scar at the bladder neck or after prostate surgery — the scar is opened through a scope and covered with healthy lining so it heals open: how it works, preparing, and recovery.',
   },
@@ -716,7 +716,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04d-upper-tract-reconstruction/upper-tract-reconstruction-principles.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Surgery to repair a blocked or narrowed ureter — written to flex across approaches (rejoining the ends, a cheek graft, or a piece of intestine) over an internal stent: how it works, preparing, and recovery.',
   },
@@ -728,7 +728,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
   },
@@ -740,7 +740,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
   },
@@ -752,7 +752,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx', 'docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
   },
@@ -764,7 +764,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
   },
@@ -778,7 +778,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx', 'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Safe, free, proven first-line care for leaks and urgency — how to find and exercise the right muscles, a simple daily routine, and bladder training to wait longer between trips.',
   },
@@ -791,7 +791,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Low-dose, local estrogen (cream, tablet, or ring) for menopause-related dryness, painful sex, and urinary symptoms — how it works, how to use it, its safety, and why little is absorbed into the body.',
   },
@@ -804,7 +804,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/prolapse-pessaries.mdx', 'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/continence-pessary.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A removable vaginal device that supports prolapse (and some help stress leakage) without surgery — how it is fitted, how to care for it, and what to expect. Often a comfortable long-term option.',
   },
@@ -817,7 +817,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Hormone-free relief for vaginal dryness — the difference between lubricants (for sex) and moisturizers (used regularly), how to choose a type (water/silicone/oil-based), and how they pair with vaginal estrogen.',
   },
@@ -829,7 +829,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/tools/biomaterials/urinary-catheters/intermittent-catheter.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Emptying the bladder yourself with a thin catheter a few times a day when it will not empty on its own — why it protects the kidneys, the clean-technique steps, and how it beats a permanent catheter.',
   },
@@ -841,8 +841,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'male',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections.mdx', 'docs/01-foundations/pharmacology/sexual-medicine-andrology/intracavernosal-injection-agents.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'A self-injected treatment for erectile dysfunction when pills do not work — how it works, the first dose set in the office, safe technique, and the urgent priapism (erection over 4 hours) warning.',
   },
@@ -855,7 +855,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/ved.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A non-drug "penis pump" that draws blood in to create an erection, held by a base ring — for ED and penile rehabilitation after prostate surgery; how to use it and the 30-minute ring rule.',
   },
@@ -868,7 +868,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A wearable device that gently stretches the penis over months to reduce Peyronie\'s curvature and help preserve length — how it works, safe use, and realistic (gradual, modest) expectations.',
   },
@@ -882,7 +882,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/storage-oab/anticholinergics.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Pills that calm an overactive bladder (oxybutynin, solifenacin, tolterodine, others) — how they work, how to take them, the dry-mouth/constipation effects, and the cognitive caution in older adults.',
   },
@@ -894,7 +894,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Newer overactive-bladder pills (mirabegron, vibegron) that relax the bladder with far less dry mouth than anticholinergics — how they work, who they suit, and the blood-pressure point with mirabegron.',
   },
@@ -906,7 +906,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/voiding-outlet/alpha-blockers.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The usual first medicine for an enlarged prostate (tamsulosin, alfuzosin, silodosin, others) — fast relief of urine-flow symptoms, dizziness and retrograde-ejaculation effects, and the cataract-surgery (IFIS) warning.',
   },
@@ -919,7 +919,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Pills that gradually shrink an enlarged prostate (finasteride, dutasteride) over 3–6 months, lowering retention and surgery risk — plus the key point that they halve the PSA test and the pregnancy-handling caution.',
   },
@@ -932,7 +932,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Pills for erectile dysfunction (sildenafil, tadalafil, others; tadalafil also for prostate symptoms) — how they work with arousal, as-needed vs. daily, and the critical "never with nitrates" safety rule.',
   },
@@ -945,7 +945,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Treatment for confirmed low testosterone with symptoms (gel, injection, patch, or pellets) — who it is for, the forms, required monitoring (blood count, prostate), and that it lowers fertility.',
   },
@@ -959,7 +959,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Injections that relax an overactive bladder muscle to ease urgency, frequency, and urge leakage when other treatments fall short — a quick office procedure; the main trade-off is possible temporary self-catheterization.',
   },
@@ -971,7 +971,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A quick, no-incision office injection that helps the urethra seal to reduce stress urine leakage — less durable than a sling but low-risk and repeatable; how it works, preparing, and recovery.',
   },
@@ -983,7 +983,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A drug-free office treatment for overactive bladder using gentle nerve stimulation at the ankle — painless ~30-minute sessions, typically weekly for 12 weeks then maintenance.',
   },
@@ -995,7 +995,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An implanted "bladder/bowel pacemaker" for overactive bladder, non-obstructive retention, or bowel leakage — with a test phase first so you try it before committing to the permanent implant.',
   },
@@ -1007,7 +1007,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A small device implanted near the ankle that calms an overactive bladder — the at-home version of PTNS, with no weekly office visits. How the short outpatient implant works, the two device types (automatic vs. ankle-band powered), and what to expect.',
   },
@@ -1022,7 +1022,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04m-bph-male-luts/turp.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The long-standing standard surgery for an enlarged prostate — the obstructing inner tissue is removed through a scope (no incision); strong, durable flow improvement, with dry (retrograde) ejaculation the common after-effect.',
   },
@@ -1035,7 +1035,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Laser removal of the entire inner prostate through a scope — works for any prostate size (including very large), with low bleeding and durable results; how it works, preparing, and recovery.',
   },
@@ -1048,7 +1048,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04m-bph-male-luts/aquablation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'An ultrasound-guided waterjet that removes blocking prostate tissue through the urethra: flow results like TURP with a better chance of keeping ejaculation. Bleeding is the main early risk. How it works and recovery.',
   },
@@ -1061,7 +1061,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Surgery for a very large enlarged prostate (BPH) — removing the bulky inner tissue through the abdomen (open or robotic); how it differs from the cancer operation, when it is used, and recovery.',
   },
@@ -1075,8 +1075,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'female',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx', 'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx', 'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/transobturator-midurethral-sling.mdx', 'docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'The most common surgery for female stress incontinence — a mesh tape supporting the mid-urethra, quick and outpatient with nothing to operate afterward; the mesh facts and an own-tissue alternative.',
   },
@@ -1089,7 +1089,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Two adjustable silicone balloons placed beside the urethra to reduce leakage after prostate surgery — minimally invasive, reversible, and fine-tuned in the office through a scrotal port. Best for mild-to-moderate, non-radiated stress incontinence.',
   },
@@ -1101,8 +1101,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     audience: 'female',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx'],
-    reviewedAgainst: '2026-10-01',
+    sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx', 'docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx'],
+    reviewedAgainst: '2026-10-09',
     description:
       'Two adjustable silicone balloons placed beside the urethra for female stress incontinence — minimally invasive, reversible, and fine-tuned in the office through a labial port. Often considered for recurrent leakage or a weak sphincter; availability varies by country.',
   },
@@ -1115,7 +1115,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A simple, very durable prolapse repair that closes most of the vaginal canal — ideal when a low-stress fix is wanted; the key trade-off is that vaginal intercourse is no longer possible.',
   },
@@ -1128,7 +1128,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The most durable repair for top-of-vagina prolapse — abdominal mesh anchors the vaginal top to the sacrum, usually by keyhole surgery; how it works, the mesh facts, preparing, and recovery.',
   },
@@ -1141,7 +1141,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Removing the uterus through the vagina (no abdominal incision) with a suspension of the vaginal top — how it works, the uterus-sparing alternative, preparing, and recovery.',
   },
@@ -1154,7 +1154,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx', 'docs/04-surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Vaginal prolapse repair with your own tissue, and where grafts and mesh fit: an honest account of the transvaginal-mesh history and the questions to ask before choosing.',
   },
@@ -1167,7 +1167,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx', 'docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'A mesh-free lift of the top of the vagina using your own ligaments (USLS or SSLF), done through the vagina — how it works, how it compares with sacrocolpopexy, preparing, and recovery.',
   },
@@ -1180,7 +1180,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx', 'docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Severe childbirth tears involving the anal sphincter (OASIS) — how they are repaired and, importantly, how to heal well: stool softeners, wound care, pelvic-floor therapy, and follow-up.',
   },
@@ -1193,7 +1193,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'Balanced facts on elective genital procedures — labiaplasty vs. heavily marketed "vaginal rejuvenation" laser/energy devices (not FDA-approved, with warnings) — and how to set realistic, safe expectations.',
   },
@@ -1206,7 +1206,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx'],
-    reviewedAgainst: '2026-10-01',
+    reviewedAgainst: '2026-10-09',
     description:
       'The key decisions before pelvic organ prolapse surgery — repair vs. closure, vaginal vs. abdominal route, keeping the uterus, support material, and treating hidden leakage — plus questions to ask.',
   },

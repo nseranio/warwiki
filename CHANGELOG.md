@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 10, 2026: owner decisions applied, sources restored, handouts republished
+
+- **Patient handouts republished:** 80 English handouts updated from the October 7–9 rechecks against the corrected pages plus the owner's October 9–10 decisions (print-light look; wording changes listed in each working copy's top comment in the off-repo clinic folder). `sourcePages` mapping fixes (urethroplasty female page removed; mid-urethral sling, urethral diverticulum, ACT balloons, BPH, penile implant and ICI pages added) and `reviewedAgainst` 2026-10-09. Masters in `~/Desktop/WARWIKI-handouts/` (pre-update backup `_backups/en-before-2026-10-10/`). New draft handouts (`warwiki-new/`, about 16) are not yet published; they need gallery entries. Translations remain off.
+- **Owner-supplied full texts:** AHA/ACC 2024 aspirin recommendation grades, the ASRA 5th-edition LMWH protamine statement and the ASCRS 2023 obstetric sphincter-injury figures restored (claim gate checked; `654af934`). AUA/ASRM Grade C was already on the androgen-adjuncts page. SMSNA 2026 correction: Landon Trost profile author order fixed.
+- **New content (owner suggestions):** sacrocolpopexy "Recurrence and Revision" section (Patel 2026 review, Ruffolo 2026 anchoring to prior mesh, Lallemant 2022, Oliver 2017 complete excision, Papp 2024 peritoneocolpopexy); male CP/CPPS paragraph on the myofascial pelvic pain page (Polackwich 2015, Anderson 2011, Giubilei 2007); Ontario HTA censoring note on the drug-coated balloon page; Urology Video Journal VVF video on the vesicovaginal fistula page. Every new claim was checked by a Claude reviewer and an independent final-text recheck before recording.
+- **Off-repo:** SmartPhrase and preference-card decisions applied (53 items; 101 °F, 48-hour shower and 20 lb aligned with the practice sheets); practice-sheet decisions applied; 22 new practice sheets drafted from the owner's SmartPhrase patient phrases (general urology and the remaining procedures), awaiting his corrections.
+
 ## October 9, 2026: second full-page review complete (chunks 5–8)
 
 - Remaining 455 pages in sections 01–05 reviewed: chunk 5 (Evaluation, Clinical Conditions, Special Populations; about 1,520 edits), chunk 6 (pharmacology, perioperative care; about 880 edits), chunk 7 (129 clinical tool pages; about 200 edits) and chunk 8 (73 plain instruments; 48 edits). Commits `6ca83465`, `aab1ba01`.
