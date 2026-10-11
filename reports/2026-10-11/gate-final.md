@@ -1,0 +1,5 @@
+The claim gate now recognizes the four requested guideline sentence shapes. Across 1,102 docs, it newly classifies **1,505 claim units** on 555 pages; 1,235 were previously absent from the gate. Each pattern’s count, 20 random examples, and the sample-based false positive estimate are in the [report](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-11/gate-widening.md).
+
+The new entries carry unverified legacy statuses, with no invented verdicts. An exact-key verification batch is ready: **1,505 claims in 54 batches**. Its [key manifest](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-11/gate-widening-keys.json) matches the queued claims exactly. I did not launch the orchestrator.
+
+`npm run lint:claims` passes. `npx vitest run` passes (55 tests), and the Python gate suite passes (26 tests). The report contains the exact next commands. No commit, push, or network access was used.

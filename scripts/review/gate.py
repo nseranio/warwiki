@@ -14,13 +14,13 @@ Statuses and what the gate does with them:
   not-applicable        operative teaching / technique wording, no factual claim  pass (never for dose or guideline claims)
   corrected-unconfirmed an applied correction not yet re-checked in final text   FAIL
   source-needed         no source could be opened                                 pass with warning; high-risk FAILS
-  legacy-*              schema 1 records carried over; content unchanged since    pass, reported as NOT verified
+  legacy-*              older content carried over without a schema 2 guideline check; NOT verified
 High-risk claims are doses, guideline/regulatory statements and contraindications. A failing claim passes only with an
 unexpired owner decision in reports/audit-v2/claim-exceptions.json ({key: {owner, decision, expires: YYYY-MM-DD}}).
 There is no bulk baseline: `baseline` refuses.
 
   python3 scripts/review/gate.py check [FILES...]        exit 1 if any claim fails (default: all pages)
-  python3 scripts/review/gate.py pending [--kind K] [--recheck] [--legacy] [--challenge RATE] [--seed S] [--out DIR] [FILES...]
+  python3 scripts/review/gate.py pending [--kind K] [--recheck] [--legacy] [--challenge RATE] [--seed S] [--keys-file JSON] [--out DIR] [FILES...]
         write failing claims as claim-check batches; --legacy adds legacy-unverified high-risk claims; --challenge adds a
         random share of passing verified-supported claims for an independent challenge; --recheck adds every claim
   python3 scripts/review/gate.py record WORKDIR          record a finished, validated check run (see orchestrate.py)
@@ -51,6 +51,11 @@ DOSE = re.compile(r"\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg|mL|U|IU|units|mg/kg|mL/kg|mg
 GUIDE = re.compile(r"\b(AUA|EAU|NICE|ACOG|AUGS|SUFU|ICS|IUGA|WHO|ASCRS|BAUS|CUA|SIU|ESGO|RCOG|WPATH|AAGL|ACR|IDSA|CDC|FDA|ISSVD|GURS|SMSNA|ICSM|AAST|ACS|EAST|WSES|ESSM)\b[^.|]{0,80}\b("
                    r"recommend\w*|suggest\w*|advis\w*|endorse\w*|Strong|Moderate|Conditional|Expert Opinion|Clinical Principle|"
                    r"weak|Grade [A-C]|approv\w*|clear\w*|contraindicat\w*|indicat\w*|label\w*)", re.I)
+GUIDE_SOCIETY = re.compile(r"\b(?:AUA|EAU|NICE|ACOG|AUGS|SUFU|ICS|IUGA|WHO|ASCRS|BAUS|CUA|SIU|ESGO|RCOG|WPATH|AAGL|ACR|IDSA|CDC|ISSVD|GURS|SMSNA|ICSM|AAST|ACS|EAST|WSES|ESSM)\b")
+GUIDE_ACTION = re.compile(r"\b(?:recommend(?:s|ed|ing)?|suggest(?:s|ed|ing)?|advis(?:e|es|ed|ing)|endorse(?:s|d|ment)?|should|may (?:consider|offer)|offer(?:s|ed|ing)?|consider(?:s|ed|ing)?|calls? for|support(?:s|ed|ing)?|discourag(?:e|es|ed|ing))\b", re.I)
+GUIDE_STRENGTH = re.compile(r"\b(?:Grade [A-C](?!\s+(?:leaks?|complications?|events?)\b)|(?-i:Expert Opinion|Clinical Principle)|(?:strong|moderate|weak|conditional) recommendation|level (?:of evidence )?[1-5][a-d])\b", re.I)
+GUIDE_GENERIC = re.compile(r"\bguidelines?\s+(?:\w+\s+){0,3}(?:recommend(?:s|ed)?|advis(?:e|es|ed)|suggest(?:s|ed)?)\b", re.I)
+GUIDE_STATEMENT = re.compile(r"\b(?:guideline\s+)?statement\s*\#?\s*\d+[a-z]?\b", re.I)
 STRONG = re.compile(r"\d(?:[\d.,]*)\s?%|\b\d+\s?/\s?\d+\b|\b(?:OR|HR|RR|IRR|aOR|aHR)\b(?=[^.|]{0,15}\d)|\bCI\b|\bn\s?=\s?\d|"
                     r"\b(?:mean|median)\b[^.|]{0,40}\d")
 CONTRA = re.compile(r"contraindicat", re.I)
@@ -59,7 +64,8 @@ PMID = re.compile(r"\bPMID:?\s*(\d{5,9})\b", re.I)
 
 SUPPORTED = {"verified-supported", "verified-corrected"}
 PASS_LEGACY = {"legacy-supported", "legacy-fuzzy-fixed", "legacy-voice", "legacy-rejection-only",
-               "legacy-source-needed", "legacy-not-applicable", "legacy-baseline", "legacy-disputed"}
+               "legacy-source-needed", "legacy-not-applicable", "legacy-baseline", "legacy-disputed",
+               "legacy-unverified", "legacy-guideline-pending"}
 V1_MAP = {"ok": "legacy-supported", "fixed": "legacy-fuzzy-fixed", "voice": "legacy-voice",
           "ok-verifier": "legacy-rejection-only", "source-needed": "legacy-source-needed", "style": "legacy-not-applicable"}
 NO_SOURCE = {"", "none", "n/a", "na", "null"}
@@ -118,6 +124,22 @@ def is_absolute(text):
     return False
 
 
+def guideline_patterns(text):
+    """Name the independent cues that classify a sentence or table row as a guideline claim."""
+    hits = []
+    if GUIDE.search(text):
+        hits.append("existing")
+    if GUIDE_SOCIETY.search(text) and GUIDE_ACTION.search(text):
+        hits.append("society_action")
+    if GUIDE_STRENGTH.search(text):
+        hits.append("strength")
+    if GUIDE_GENERIC.search(text):
+        hits.append("guidelines_verb")
+    if GUIDE_STATEMENT.search(text):
+        hits.append("statement_number")
+    return hits
+
+
 def high_risk(u):
     return "dose" in u["kinds"] or "guideline" in u["kinds"] or ("absolute" in u["kinds"] and bool(CONTRA.search(u["text"])))
 
@@ -164,7 +186,7 @@ def units_of(path):
                 kinds.append("absolute")
             if DOSE.search(plain):
                 kinds.append("dose")
-            if GUIDE.search(plain):
+            if guideline_patterns(plain):
                 kinds.append("guideline")
             if not kinds or not norm(u):
                 continue
@@ -563,13 +585,24 @@ def main():
         if "--out" in a:
             out = os.path.join(ROOT, a[a.index("--out") + 1])
         kind = a[a.index("--kind") + 1] if "--kind" in a else None
+        key_pages = None
+        if "--keys-file" in a:
+            key_pages = load(os.path.join(ROOT, a[a.index("--keys-file") + 1]), None)
+            if not isinstance(key_pages, dict) or any(not isinstance(ks, list) for ks in key_pages.values()):
+                sys.exit("--keys-file must be a JSON object mapping page paths to claim-key lists")
+            key_pages = {p: set(ks) for p, ks in key_pages.items()}
         rate = float(a[a.index("--challenge") + 1]) if "--challenge" in a else 0.0
         rng = random.Random(int(a[a.index("--seed") + 1]) if "--seed" in a else 20261006)
         files = [x for x in a[1:] if x.endswith(".mdx")]
         if os.path.exists(os.path.join(out, "units.json")):
             sys.exit(f"{out} already holds a run; use a new --out (each run needs its own ID)")
         bypage, picked = {}, {"failing": 0, "legacy-high-risk": 0, "challenge": 0, "recheck": 0}
-        for p, u, ok, why in evaluate(targets(files), kind):
+        found = set()
+        for p, u, ok, why in evaluate(sorted(key_pages) if key_pages is not None else targets(files), kind):
+            if key_pages is not None:
+                if u["key"] not in key_pages[p]:
+                    continue
+                found.add((p, u["key"]))
             why_pick = None
             if not ok:
                 why_pick = "failing"
@@ -582,6 +615,12 @@ def main():
             if why_pick:
                 picked[why_pick] += 1
                 bypage.setdefault(p, []).append(u)
+        if key_pages is not None:
+            wanted = {(p, k) for p, ks in key_pages.items() for k in ks}
+            if found != wanted:
+                sys.exit(f"--keys-file has {len(wanted - found)} missing current claim keys; refusing an incomplete batch")
+            if sum(picked.values()) != len(wanted):
+                sys.exit("--keys-file selected passing claims; add --recheck to queue every listed claim")
         units = write_batches(out, bypage)
         print(f"{sum(picked.values())} claims {picked} on {len(bypage)} pages -> {out} ({len(units)} batches)")
         print(f"next: nohup python3 scripts/review/orchestrate.py --work {os.path.relpath(out, ROOT)} --claims "

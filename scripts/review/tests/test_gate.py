@@ -220,6 +220,52 @@ class GateTests(Fixture):
         d, = self.page("Inject 10 mL of 1% lidocaine.<sup>[[1]](#ref1)</sup>")
         self.assertIn("dose", d["kinds"])
 
+    def test_widened_guideline_cues_and_common_false_positives(self):
+        claims = [
+            "AUA describes this population and its prior treatment at some length, including selection by symptoms, "
+            "baseline risk, and preferences; it advises follow-up after treatment.",
+            "Follow-up should be discussed for selected patients (AUA 2026).",
+            "Offer treatment to selected patients (Grade B).",
+            "Selected patients may be treated (Expert Opinion).",
+            "Offer treatment after counseling (Strong recommendation).",
+            "Selected patients may be treated (Clinical Principle).",
+            "This option has level 1b evidence.",
+            "Counsel before treatment (conditional recommendation).",
+            "Current guidelines recommend treatment for selected patients.",
+            "Statement 12 advises treatment for selected patients.",
+        ]
+        for claim in claims:
+            with self.subTest(claim=claim):
+                u, = self.page(claim)
+                self.assertIn("guideline", u["kinds"])
+        nonclaims = [
+            "The patient who should return is unclear.",
+            "An earlier review of guideline recommendations found no new data.",
+            "Grade A leaks may have been undercounted.",
+            "This is expert opinion without comparative data.",
+            "In the FDA review, the reviewer did not consider this a safety concern.",
+        ]
+        for claim in nonclaims:
+            with self.subTest(claim=claim):
+                self.assertNotIn("guideline", [k for u in self.page(claim) for k in u["kinds"]])
+
+    def test_pending_keys_file_queues_only_listed_legacy_claim(self):
+        u, v = self.page("Statement 12 advises treatment. Statement 13 advises follow-up.")
+        self.ledger({u["key"]: {"s": "legacy-unverified"}, v["key"]: {"s": "legacy-unverified"}})
+        keyfile = os.path.join(self.root, "keys.json")
+        json.dump({PAGE: [u["key"]]}, open(keyfile, "w"))
+        out = os.path.join(self.root, "pending")
+        old_argv = sys.argv
+        try:
+            sys.argv = ["gate.py", "pending", "--keys-file", keyfile, "--recheck", "--out", out]
+            G.main()
+        finally:
+            sys.argv = old_argv
+        batches = os.listdir(os.path.join(out, "batches"))
+        self.assertEqual(len(batches), 1)
+        queued = json.load(open(os.path.join(out, "batches", batches[0])))["claims"]
+        self.assertEqual([c["key"] for c in queued], [u["key"]])
+
     def test_operating_room_is_not_an_odds_ratio(self):
         self.assertEqual(self.page("| Measure | A |\n|---|---|\n| **OR time** | Varies by repair |"), [])
         u, = self.page("Smoking raised failure (OR 2.1, 95% CI 1.2–3.4).<sup>[[1]](#ref1)</sup>")
