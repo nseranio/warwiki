@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 10, 2026 (night): AUS infection figure for first implants
+
+- **Owner question:** the AUS handout said "up to 5 in 100" get an infection. That came from the AUA/GURS/SUFU 2024 range (under 1% to 5%), whose upper source (Lai 2007, 5.5%) mixed primary, radiated and secondary implants. Two Codex literature checks (one testing an OpenEvidence answer claim by claim) plus Claude's PubMed recheck found first-implant figures of 2.3% (Mayo, 1,283 primary implants removed for infection) and 4.2% (16 centres, 892 primary implants, mean 32 months). The OpenEvidence answer misread several sources (8.5% is infection or erosion; Tutolo's 0.5-10.6% is a cited range; Roessler's 11% is a share of complications; Campbell's 18% pools penile prostheses).
+- **AUS page:** first-implant series (refs 111 Ziegelmann 2023, 15 Tutolo 2019) and radiation comparisons (112 Ravier 2015, 113 Mamane 2022) added after the guideline range; complications-table row points to them. Claim gate passed after four final-text rounds (placeholder-citation suggestion vetoed: ref 77 already supports that sentence).
+- **Handout** `artificial-urinary-sphincter`: "about 2 to 4 in 100 get an infection after a first implant"; risk line now names infection and earlier sphincter removal. Same change off-repo in the after-AUS practice sheet and the `.CAUS` SmartPhrase; Seranio Practice copies and combined PDF updated.
+
 ## October 10, 2026 (afternoon): WARWIKI Anki decks v1.1
 
 - **Card-by-card refresh** of the WARWIKI GURS & URPS Review deck against the site as changed October 2–10: 552 of 800 cards linked to an edited section. Codex compared each with today's page (author); separate Claude verifiers checked every proposed change against today's WARWIKI and the card's primary source, plus a 40-card sample of "no change needed" verdicts (1 miss, fixed). Result: 44 cards corrected (e.g. OPTIMAL corrected 2-year success, ASPIRE three arms, dorsal penile nerve corridor, ROBUST III success definition and censoring caveat, perineal urethrostomy satisfaction, gabapentin renal band), 190 relinked, none retired.

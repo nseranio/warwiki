@@ -576,7 +576,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx'],
-    reviewedAgainst: '2026-10-09',
+    reviewedAgainst: '2026-10-10',
     description:
       'An implanted device that restores bladder control after leakage (often after prostate surgery) — how it works, preparing for surgery, the ~6-week wait before activation, and the medical-alert rule for catheters.',
   },
