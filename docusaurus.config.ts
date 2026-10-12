@@ -59,6 +59,10 @@ const config: Config = {
     },
     // Home-screen app: icon and name used by "Add to Home Screen" (iOS) and install (Android).
     {tagName: 'link', attributes: {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}},
+    // Large PNG icons for Safari Favorites / Top Sites tiles, which otherwise
+    // keep only an 80 px copy of the touch icon and look soft on Retina screens.
+    {tagName: 'link', attributes: {rel: 'icon', type: 'image/png', sizes: '192x192', href: '/img/app-icon-192.png'}},
+    {tagName: 'link', attributes: {rel: 'icon', type: 'image/png', sizes: '512x512', href: '/img/app-icon-512.png'}},
     {tagName: 'link', attributes: {rel: 'manifest', href: '/site.webmanifest'}},
     {tagName: 'meta', attributes: {name: 'apple-mobile-web-app-title', content: 'WARWIKI'}},
     {
