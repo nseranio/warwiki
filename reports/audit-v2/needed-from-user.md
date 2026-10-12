@@ -4,7 +4,7 @@ Everything here is what Claude cannot settle alone. The full source list (131 en
 
 ## Received October 11, 2026 (night)
 
-In `reports/audit-v2/sources-local/pdfs-2026-10-11/`: Vodegel 2026 (EVA), Esquinas and Angulo 2019, Holm 2026, Furr 2019, VanDyke 2021, Wu 2021, Le Cleach 2012, Jordan 2007, Morey 2001. Codex check queued; findings applied through the claim gate after the Claude reset. Still needed via Jefferson access: SOGC 465 and 445, BAUS 2026, Yii 1996, Laor 1995, Angulo 2018, Eltahawy 2007, Wee and Joseph 1989.
+In `reports/audit-v2/sources-local/pdfs-2026-10-11/`: Vodegel 2026 (EVA), Esquinas and Angulo 2019, Holm 2026, Furr 2019, VanDyke 2021, Wu 2021, Le Cleach 2012, Jordan 2007, Morey 2001. Codex check queued; findings applied through the claim gate after the Claude reset. Later the same night (`pdfs-2026-10-11b/`): BAUS 2026, Yii 1996, Laor 1995, Angulo 2018, Eltahawy 2007, Wee and Joseph 1989 (scan; OCR text alongside). Still needed: SOGC 465 and 445.
 
 ## Checked against disk October 11, 2026 (supersedes the lists below)
 
