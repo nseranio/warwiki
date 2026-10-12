@@ -2,6 +2,12 @@
 
 Everything here is what Claude cannot settle alone. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md); this file is the short version, ordered by value. Sources you supplied on September 26 are listed at the end so they are not requested again.
 
+## Checked against disk October 11, 2026 (supersedes the lists below)
+
+Already on disk (do not request again): ACOG CO 694 and 823, PB 210-area ASCRS fecal incontinence 2023, AUA VUR, ASRA 2025 and the ASRA LAST advisory (Neal 2017), Biardeau 2016, MASTER (Abrams 2021 Eur Urol), Erickson 2020, Kulkarni 2009, Blandy 1968, Asopa, Morey (2018), Larson 2013, OPTIMAL (Barber 2014) and E-OPTIMAL, ASPIRe (Menefee 2024), Cotte 2022, Phé 2016, Peyronnet 2018, Tagliaferri 2020, Davis 2024, Goodman 2019, Diamond 2017, Coloplast Titan/Genesis/Virtue IFUs, AMS 800 IFUs, Revi technique guide, Altaviva, eCoin, ProACT physician IFU, Argus, Remeex, Rezum, UroLift, iTind IFUs, Intuitive Xi/X manuals and staplers, Medtronic GIA IFUs, Aesculap and Teleflex catalogs, labels (Vagifem, Premarin, Imvexxy, Estring, Botox, Nocdurna, Xiaflex, Gemtesa, Ialuril, Elmiron).
+
+Still missing: SOGC 465, 457, 445; BAUS 2026 penile augmentation consensus (confirm whether `baus.pdf` is it); AUGS-IUGA 2025 complications update; ASCRS Constipation 2024, Hemorrhoids 2024, Ostomy 2022, Rectal Prolapse, Crohn's, Diverticulitis guidelines; ADA Standards 2026; NICE NG112 and NG239; Yii and Niranjan 1996; Laor 1995; EVA trial; Frazier 2024; Trimix efficacy series; ATOMS (Esquinas, Angulo) and the ATOMS IFU (only the brochure is on disk); Holm 2026, Furr 2019, VanDyke 2021; Wu NEJM 2021; Le Cleach NEJM 2012; Barry 1992; Jordan 2007; Wee and Joseph 1989; Morey 2001; AquaBeam IFU; Sklar, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun catalogs; Gurtner/Neligan, Mathes/Nahai, Feliciano, Oxford Handbook of Urology 4th ed.
+
 ## Still needed from you (updated October 6, 2026)
 
 Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each arrival is checked against every page that cites it.
