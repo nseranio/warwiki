@@ -2,6 +2,10 @@
 
 Everything here is what Claude cannot settle alone. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md); this file is the short version, ordered by value. Sources you supplied on September 26 are listed at the end so they are not requested again.
 
+## Received October 11, 2026 (night)
+
+In `reports/audit-v2/sources-local/pdfs-2026-10-11/`: Vodegel 2026 (EVA), Esquinas and Angulo 2019, Holm 2026, Furr 2019, VanDyke 2021, Wu 2021, Le Cleach 2012, Jordan 2007, Morey 2001. Codex check queued; findings applied through the claim gate after the Claude reset. Still needed via Jefferson access: SOGC 465 and 445, BAUS 2026, Yii 1996, Laor 1995, Angulo 2018, Eltahawy 2007, Wee and Joseph 1989.
+
 ## Checked against disk October 11, 2026 (supersedes the lists below)
 
 Already on disk (do not request again): ACOG CO 694 and 823, PB 210-area ASCRS fecal incontinence 2023, AUA VUR, ASRA 2025 and the ASRA LAST advisory (Neal 2017), Biardeau 2016, MASTER (Abrams 2021 Eur Urol), Erickson 2020, Kulkarni 2009, Blandy 1968, Asopa, Morey (2018), Larson 2013, OPTIMAL (Barber 2014) and E-OPTIMAL, ASPIRe (Menefee 2024), Cotte 2022, Phé 2016, Peyronnet 2018, Tagliaferri 2020, Davis 2024, Goodman 2019, Diamond 2017, Coloplast Titan/Genesis/Virtue IFUs, AMS 800 IFUs, Revi technique guide, Altaviva, eCoin, ProACT physician IFU, Argus, Remeex, Rezum, UroLift, iTind IFUs, Intuitive Xi/X manuals and staplers, Medtronic GIA IFUs, Aesculap and Teleflex catalogs, labels (Vagifem, Premarin, Imvexxy, Estring, Botox, Nocdurna, Xiaflex, Gemtesa, Ialuril, Elmiron).
