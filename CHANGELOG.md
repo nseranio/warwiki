@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 13, 2026: sister-reference switcher
+
+- Added a chevron beside the colored text wordmark to switch between WARWIKI and WHITWIKI. Each choice names its specialty and identifies the current reference. The wordmark continues to link home; the switcher supports keyboard dismissal, outside-click dismissal, and the mobile navigation header.
+- WHITWIKI uses an identical component in its separate repository. WARWIKI's clinical content is unchanged.
+- Validation: full lint, TypeScript, production build, and rendered-link checks passed. Browser checks covered the reciprocal links, current-site indication, keyboard dismissal, and desktop/mobile behavior.
+
 ## October 10, 2026 (night): AUS infection figure for first implants
 
 - **Owner question:** the AUS handout said "up to 5 in 100" get an infection. That came from the AUA/GURS/SUFU 2024 range (under 1% to 5%), whose upper source (Lai 2007, 5.5%) mixed primary, radiated and secondary implants. Two Codex literature checks (one testing an OpenEvidence answer claim by claim) plus Claude's PubMed recheck found first-implant figures of 2.3% (Mayo, 1,283 primary implants removed for infection) and 4.2% (16 centres, 892 primary implants, mean 32 months). The OpenEvidence answer misread several sources (8.5% is infection or erosion; Tutolo's 0.5-10.6% is a cited range; Roessler's 11% is a share of complications; Campbell's 18% pools penile prostheses).
