@@ -46,7 +46,9 @@ for d in dec:
     elif fix == "delete keep citation":
         m = re.search(r"((?:<sup>(?:(?!<sup>).)*</sup>)|(?:\[\^\d+\])+)$", s)
         i = t.find(s)
-        if not m or i < 1 or t[i - 1] != " ":
+        if i >= 0 and t[t.rfind("\n", 0, i) + 1:i].strip() in ("", "-", ">", "*"):
+            u = remove(t, s)   # sentence opens its line: nothing before it to carry the citation
+        elif not m or i < 1 or t[i - 1] != " ":
             u = None
         else:
             cite, head = m.group(1), t[:i - 1]
