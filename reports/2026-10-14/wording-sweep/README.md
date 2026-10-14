@@ -46,3 +46,24 @@ Deleting a caveat sentence together with its trailing `<sup>` strips the citatio
 
 - **02-evaluation and 05-special-populations (25 pages, 98 rows; `followup/sections-02-05/`):** 68 applied on 23 pages, 15 skipped, 15 `defer-gate`. Lint, claim gate, build and the citation audit pass.
 - **04-surgical-techniques (81 pages, 297 rows; `followup/04-surgical-techniques/`):** 190 applied on 65 pages, 68 skipped, 39 `defer-gate` (one also leaves scrotal-reconstruction ref7 uncited). 83 caveat deletions kept their citation. Owner call added: the feminizing-surgery opening is an evidence-sources paragraph (van der Sluis, Morrison, Opsomer, Fakin, Lee, Blasdel…) that Codex proposed to dismantle sentence by sentence (f04-10-05–12); the stem-cell ED page opens with an AUA "investigational" box (f04-10-02). Lint, claim gate, build and the citation audit pass.
+- **Rows set aside as busy (`followup/leftover-busy/`):** after the source-needed-local wave was committed (`c74ae56f`) the 29 `defer` rows from batches A, B and D were rerun: 2 no longer matched the text, 23 applied, 4 `defer-gate` (one also leaves Indiana pouch ref22 uncited). The two pending citation reattachments (t31-19, t31-22) were applied. Lint, claim gate, build and the citation audit pass.
+
+## Totals (October 14)
+
+| Section | Rows reviewed | Applied | Skipped | Deferred to the claim gate |
+|---|---|---|---|---|
+| 02-evaluation (incl. follow-up) | 72 + 21 | 56 + 18 | 9 + 1 | 7 + 2 |
+| 05-special-populations (incl. follow-up) | 118 + 77 | 85 + 50 | 12 + 14 | 21 + 13 |
+| 04-surgical-techniques (batches A–D, follow-up, leftovers) | 1,142 + 297 | 651 + 190 + 23 | 401 + 68 + 2 | 189 + 39 + 4 |
+| Citation audit | 123 | 111 reattached | 6 left as is (justified) | 6 caveats restored |
+
+About 1,070 wording fixes on roughly 330 pages are on main; 281 reviewed edits wait in the deferred patches for a claim-gate run. Nothing in this sweep changed `reports/audit-v2/claims-ledger.json`.
+
+## Owner questions
+
+1. Nine cosmetic-genital pages open with a society-positions box (ACOG 795, FIGO 2025, SMSNA 2024, EAU 2026, FDA 2018). Keep them at the top, or move them to Indications (the SUI-page rule)? Rows t47-20, t48-08, t49-03, t50-01, t51-05, t51-07, t51-09, t52-05.
+2. Stem-cell ED therapy opens with an AUA 2018 "investigational" box (f04-10-02): same question.
+3. Feminizing-surgery opening: an evidence-sources paragraph listing the reviews and series behind the page (f04-10-05–12). Keep, trim or move?
+4. Incontinence-procedures landing intro carries the AUA 2024 statements plus MASTER-trial numbers (t26-01). Keep in the landing intro?
+5. Adjustable-devices hub has a "Launch Note" section that only says the page is a hub (t26-06/07). Remove the section?
+6. Cancer Survivorship carries an IMvigor011 adjuvant-oncology paragraph (s069): possible scope issue.
