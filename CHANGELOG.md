@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 14, 2026: owner feedback, podcasts, Dan Eun, Patient Materials, claim-gate wave
+
+- **SUI (female):** misplaced ACP box removed (PFMT section already cites it), Blaivas-Olsson classification folded into the mechanism paragraph without its stray outcome numbers, opening tightened (rebuttal and scope sentences cut; RISE FOR HEALTH sentence corrected to its 7-day window after a Codex check), database pointer moved to Surgical options.
+- **Podcasts:** new `PodcastCards` component (`## Podcasts` section, placed before `## Videos`, or before `## References`). 66 episodes on 50 pages from BackTable Urology/OBGYN, SUFU, IUGA, ICS and AUAUniversity, matched by Codex (catalog of 184 episodes), URL- and title-checked, weak matches and workshop previews dropped by Claude; 16 episodes added to the Podcast Library (incl. BackTable Ep. 66 for SUI/POP). Method: `reports/2026-10-14/podcasts/`. Note: the Codex run opened cme.auanet.org pages to check AUAUniversity titles, against the no-auanet rule; links only, no content used.
+- **Surgical Genealogy:** Daniel D. Eun profile (Jefferson; Temple MD, Henry Ford/Vattikuti residency and robotic fellowship; four DOI-checked contributions: ICG, robotic BMG ureteroplasty, appendiceal interposition, transvesical bladder neck reconstruction). No photo (institutional image 404) and no mentor/trainee edges (not stated by a source). Report `reports/2026-10-14/dan-eun/REPORT.md`.
+- **Practice products (off-repo):** pain sections on 36 practice sheets cut to Tylenol, ibuprofen and "take both together for 24 hours"; opioid line ("take only as prescribed") on 16 larger-surgery sheets (penile, scrotal, urethral, vaginal, abdominal); 28 SmartPhrase blocks aligned (`30-drafts/PAIN-SHORT-1014-REPORT.md`). Seranio Practice now has one `Patient Materials/` folder (154 PDFs: About 95, After 32, Visit 9, Form 5, Care 13, plus AUGS companions); old Practice Sheets/ and Handouts/ in `_archive/2026-10-14/`; sync script, INDEX.md and compendium updated (1,469 pages).
+- **Claim gate:** the October 11 gate-widening review sheet read (341 edits: 223 citation-marker placements, 118 wording edits, no vetoes) and applied on 202 pages (uncommitted until checks pass). Final-text and second high-risk checks running as `reports/audit-v2/sources-local/gate-final-2026-10-14` (1,029 claims, 2 reviewers + verifier). The 263 sentences the October 11 run could not check are queued as `source-needed-local-2026-10-14` against the local AUA/EAU guideline copies (221 of 263 have one).
+
 ## October 13, 2026: sister-reference switcher
 
 - Added a chevron beside the colored text wordmark to switch between WARWIKI and WHITWIKI. Each choice names its specialty and identifies the current reference. The wordmark continues to link home; the switcher supports keyboard dismissal, outside-click dismissal, and the mobile navigation header.
