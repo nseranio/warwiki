@@ -629,9 +629,11 @@ export const SURGEONS: Surgeon[] = [
     traineeIds: [],
   },
   {
-    id: 'daniel-eun', name: 'Daniel Eun',
+    id: 'daniel-eun', path: 'a-g/daniel-eun', name: 'Daniel D. Eun',
     country: 'United States',
     countryFlag: '🇺🇸',
+    institution: 'Thomas Jefferson University',
+    title: 'MD',
     traineeIds: [],
   },
   {
