@@ -33,3 +33,17 @@ python3 reports/2026-10-15/wording-sweep/run_codex.py docs/02-evaluation <work d
 ```
 
 Then merge the job TSVs, as for `pass2-codex.tsv` (add `id`, `found` and `busy` columns), review the rows into a decisions file, run `apply_fixes.py`, and run `npm run lint:claims` before committing. Expect about 4 candidates per page and about half to be worth applying.
+
+## Round 2 (October 14, evening, after gate-final-2026-10-14 was committed in c8dc859b)
+
+- **Former busy pages (104 rows):** 103 still matched the text (c242 was gone). 61 applied (`decisions-round2.tsv`; c022 and c096 were applied and then reverted because they held the only citation of a reference). The rest were skipped with reasons.
+- **Deferred claim-gate patch (45 edits):** applied and run through the claim gate. First a Codex check of the 34 claims (`sources-local/wording-sweep-2026-10-15`), then three final-text rounds (`-final`, `-final2`, `-final3`), which also supplied the second independent check for high-risk guideline claims. Seven verifier-confirmed corrections were applied:
+  - TOMUS 12-month denominator (565 of 597);
+  - the male cough-test series named as a retrospective surgical cohort;
+  - the testicular autotransplantation endpoints (Bukowski 1995, Boeckx 1998);
+  - AUA `[6]` and EAU `[9]` markers on the bladder-neck-stenosis table;
+  - the 5/89 and 25/37 denominators in the vaginal-mass series;
+  - two citation markers restored on the myofascial pain page.
+- **Lesson: citations on deleted caveat sentences.** When the result sentence before a caveat has no citation of its own, deleting the caveat with its `<sup>` strips the citation from the result. A check against the pre-sweep text (`ccbf68be`) found 22 such cases and reattached each citation to the sentence it supported. Three of them fix round-1 edits already on main: ureterocolonic `[5]`, small-penis syndrome `[24]`, and the myofascial Botox line `[18][22][25][41][42]`. In future sweeps, strip only the caveat text and keep its `<sup>` unless the caveat is its own paragraph.
+- **References dropped as no longer cited** (by `cycle.sh` / `drop_ref.py`, later references renumbered): urethral prolapse ref21 (urethropexy in dogs), vesicovaginal refs 20 (Cochrane protocol) and 27, genital lymphedema ref9 (Cochrane protocol), neurogenic bowel ref8, dysfunctional voiding ref30 (pediatric bowel survey).
+- **Watch for:** `apply.py` skips pages with uncommitted edits unless they are listed in the run's `touched.json`, and `cycle.sh` then drops any references that the skipped edits would have re-cited. Write `touched.json` before running `cycle.sh` on a patched tree.
