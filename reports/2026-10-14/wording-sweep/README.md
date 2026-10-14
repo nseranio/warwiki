@@ -54,7 +54,7 @@ Deleting a caveat sentence together with its trailing `<sup>` strips the citatio
 |---|---|---|---|---|
 | 02-evaluation (incl. follow-up) | 72 + 21 | 56 + 18 | 9 + 1 | 7 + 2 |
 | 05-special-populations (incl. follow-up) | 118 + 77 | 85 + 50 | 12 + 14 | 21 + 13 |
-| 04-surgical-techniques (batches A–D, follow-up, leftovers) | 1,142 + 297 | 651 + 190 + 23 | 401 + 68 + 2 | 189 + 39 + 4 |
+| 04-surgical-techniques (batches A–D, follow-up, leftovers) | 1,142 + 297 (+ 29 set aside, rerun) | 651 + 190 + 23 | 273 + 68 + 2 | 189 + 39 + 4 |
 | Citation audit | 123 | 111 reattached | 6 left as is (justified) | 6 caveats restored |
 
 About 1,070 wording fixes on roughly 330 pages are on main; 281 reviewed edits wait in the deferred patches for a claim-gate run. Nothing in this sweep changed `reports/audit-v2/claims-ledger.json`.
