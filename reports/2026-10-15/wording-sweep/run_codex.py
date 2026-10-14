@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Pass 2 runner: Codex reads batches of pages and writes TSV findings.
-Usage: run_codex.py <docs subdir> <work dir> [--parallel N] [--per-job N]"""
+Usage: run_codex.py <docs subdir> <work dir> [--parallel N] [--per-job N] [--skip <file of page paths>]"""
 import os, sys, subprocess, time, pathlib, json
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 sub, work = sys.argv[1], pathlib.Path(sys.argv[2]).resolve()
 par = int(sys.argv[sys.argv.index("--parallel") + 1]) if "--parallel" in sys.argv else 3
 per = int(sys.argv[sys.argv.index("--per-job") + 1]) if "--per-job" in sys.argv else 7
 brief = (pathlib.Path(__file__).parent / "brief.md").read_text()
-pages = sorted(str(p) for p in (ROOT / sub).rglob("*.mdx"))
+skip = set(open(sys.argv[sys.argv.index("--skip") + 1]).read().split()) if "--skip" in sys.argv else set()
+pages = sorted(str(p) for p in (ROOT / sub).rglob("*.mdx") if str(p.relative_to(ROOT)) not in skip)
 jobs = [pages[i:i + per] for i in range(0, len(pages), per)]
 work.mkdir(parents=True, exist_ok=True)
 running = {}

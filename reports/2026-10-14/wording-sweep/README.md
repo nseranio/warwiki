@@ -1,0 +1,22 @@
+# Wording sweep, October 14, 2026 (Evaluation, Special Populations, Treatment Atlas)
+
+Extends the Clinical Conditions sweep (`reports/2026-10-15/wording-sweep/`, commit `20a1a066`) to `docs/02-evaluation`, `docs/05-special-populations` and `docs/04-surgical-techniques`, one section per pass, with the same three problems (standalone-study, guideline-box, rebuttal-scope; STYLE.md §11/§12) and the same tools. Results are filled in per section below as each is published.
+
+## Method
+
+1. `pass1_regex.py docs/<section>` → `<section>/pass1-regex.tsv` (cross-check only).
+2. `run_codex.py docs/<section> <section>/codex --parallel 3 --per-job 7 --skip busy-pages.txt` (Codex `gpt-6-sol`, high effort; the `--skip` option was added for this run). Pages with uncommitted gate-final-2026-10-14 edits in the main checkout (`busy-pages.txt`, 202 pages at 16:55) were not sent to Codex; sweep them after that wave is committed. Job folders (`codex/`) are not committed.
+3. `merge.py <section>/codex <prefix> busy-pages.txt` → `<section>/pass2-codex.tsv` (adds `id`, `found`, `busy`).
+4. Claude reviewed every row (`context.py` prints each with its heading and paragraph) into `<section>/decisions.tsv`: `apply`, `skip` (reason), `defer-gate`. Single-study paragraphs kept unless off-topic (content-preservation policy); routing sentences and one- or two-sentence landing intros kept (STYLE §11).
+5. `apply_fixes.py`, then `gate.py check` and `orphans.py` on the touched pages. Rows that fail the claim gate or leave a reference uncited were marked `defer-gate`; `split_deferred.sh` applies the rest and writes the held-back edits as `<section>/deferred-claim-edits.patch` (relative to the published text; `git apply` from the repo root).
+6. `npm run lint` and `npm run build`, then commit and push to main.
+
+## Deferred edits: how to finish them
+
+After the gate-final-2026-10-14 wave is committed: `git apply reports/2026-10-14/wording-sweep/<section>/deferred-claim-edits.patch`, then for rows that orphan a reference remove the reference and renumber (renumbering keeps the claim binding; the removal re-gates the page), `gate.py pending <files> --out <dir>`, `orchestrate.py --claims --reviewers 1 --verifiers 1`, `gate.py record`, `apply.py list` / review, final-text recheck, `npm run lint:claims`, lint, build, commit.
+
+## Results
+
+### 02-evaluation (27 of 38 pages; 11 busy)
+
+72 Codex rows (all quoted sentences found verbatim). 57 applied on 22 pages, 8 skipped, 7 deferred (`defer-gate`): 5 change a gated number or dose unit (MAG3 low-function cohort, ultrasound example protocol, copper audit, B-PROOF follow-up, OB12 table cell) and 2 leave a reference uncited (transferrin ref9, zinc ref8 Unna boot). Applied edits are mostly opening relevance lists and scope lines, rebuttals of unstated thresholds ("not a validated universal threshold", "does not mandate"), restated populations and process notes ("These details come from technique descriptions"); one author-facing routing line on CT urogram became a `> See` pointer. Lint, claim gate and build pass.
