@@ -3,7 +3,9 @@
 Usage: apply_fixes.py <candidates.tsv> <decisions.tsv> [--dry]
 candidates.tsv: merged pass-2 rows with an `id` column.
 decisions.tsv: id<TAB>decision(apply|skip|defer)<TAB>fix override (optional)<TAB>text override (optional)<TAB>note
-Fixes: delete | rewrite | fold into previous paragraph | move to <heading text>."""
+Fixes: delete | delete keep citation | rewrite | fold into previous paragraph | move to <heading text>.
+"delete keep citation" removes the sentence but moves its trailing citation (<sup>…</sup> or [^N] footnotes) onto the
+end of the previous sentence, unless that sentence already ends with the same citation."""
 import csv, re, sys, pathlib
 csv.field_size_limit(10**7)
 rows = {r["id"]: r for r in csv.DictReader(open(sys.argv[1]), delimiter="\t")}
@@ -41,6 +43,19 @@ for d in dec:
     new = (text_o or r["proposed_text"]).strip()
     if fix == "delete":
         u = remove(t, s)
+    elif fix == "delete keep citation":
+        m = re.search(r"((?:<sup>(?:(?!<sup>).)*</sup>)|(?:\[\^\d+\])+)$", s)
+        i = t.find(s)
+        if not m or i < 1 or t[i - 1] != " ":
+            u = None
+        else:
+            cite, head = m.group(1), t[:i - 1]
+            if head.endswith(cite):
+                u = head + t[i + len(s):]
+            elif head.endswith("</sup>") and cite.startswith("<sup>"):   # merge into the existing citation group
+                u = head[:-len("</sup>")] + cite[len("<sup>"):] + t[i + len(s):]
+            else:
+                u = head + cite + t[i + len(s):]
     elif fix == "rewrite":
         u = t.replace(s, new, 1) if s in t else None
     elif fix.startswith("fold"):

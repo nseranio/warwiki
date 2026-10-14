@@ -14,6 +14,10 @@ for f in sorted(work.glob("j*/findings.tsv")):
         if not r.get("page"):
             continue
         page = r["page"][r["page"].index("docs/"):]
+        for c in ("sentence", "proposed_text"):   # Codex sometimes CSV-quotes cells that contain double quotes
+            v = r.get(c) or ""
+            if len(v) > 1 and v[0] == v[-1] == '"' and '""' in v:
+                r[c] = v[1:-1].replace('""', '"')
         n += 1
         found = "yes" if (r.get("sentence") or "") in (ROOT / page).read_text() else "no"
         w.writerow([f"{pre}{n:03d}", page] + [(r.get(c) or "") for c in cols[1:]] + [found, "yes" if page in busy else "no"])
