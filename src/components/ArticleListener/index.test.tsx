@@ -42,4 +42,15 @@ describe('chunk ramp', () => {
     const long = `${'word '.repeat(100).trim()}.`;
     expect(chunkText(`${long} Short tail.`)[0]).toBe(long);
   });
+
+  it('never splits decimals or section numbers', () => {
+    const text = 'Median survival was 40.4 months (P < 0.001). See §6.7.15 for details! Done?';
+    expect(chunkText(text)).toEqual([text]);
+    const chunks = chunkText(`${'word '.repeat(60).trim()} 40.4 months. Next was 0.001. Then §6.7.15 applies.`, 3500, [300]);
+    const joined = chunks.join(' ');
+    expect(joined).toContain('40.4 months');
+    expect(joined).toContain('0.001');
+    expect(joined).toContain('§6.7.15');
+    expect(joined).not.toMatch(/\d\. \d/);
+  });
 });

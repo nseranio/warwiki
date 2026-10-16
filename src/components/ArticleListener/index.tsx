@@ -21,8 +21,8 @@ import { AudioQueue } from './audioQueue';
  */
 
 // Bump the cache name whenever the server's voice, model or instructions change.
-const CACHE_NAME = 'warwiki-tts-v2';
-const RETIRED_CACHES = ['warwiki-tts-v1'];
+const CACHE_NAME = 'warwiki-tts-v3';
+const RETIRED_CACHES = ['warwiki-tts-v1', 'warwiki-tts-v2'];
 const RETIRED_STORAGE_KEYS = ['warwiki-tts-voice', 'warwiki-tts-model'];
 const MAX_CHUNK_CHARS = 3500;
 // Chunk-size ramp within each section. Generation runs at roughly 90 characters
@@ -132,7 +132,9 @@ function buildChunkPlan(sections: Array<{ title: string; text: string }>): {
 // Split at sentence boundaries. Chunk k may grow to ramp[k] (the last value
 // repeats) but always holds at least one whole sentence ≤ maxLen.
 export function chunkText(text: string, maxLen = MAX_CHUNK_CHARS, ramp: number[] = CHUNK_RAMP): string[] {
-  const sentences = text.match(/[^.!?]+[.!?]+|\s*[^.!?]+$/g) || [text];
+  // Split only where whitespace follows terminal punctuation, so decimals
+  // ("40.4", "P < 0.001") and section numbers ("§6.7.15") stay whole.
+  const sentences = text.split(/(?<=[.!?])\s+/);
   const chunks: string[] = [];
   let current = '';
   const softLimit = () => Math.min(maxLen, ramp[Math.min(chunks.length, ramp.length - 1)] ?? maxLen);
