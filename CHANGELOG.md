@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 17, 2026: guideline recommendation badges matched to WHITWIKI
+
+- Added the same expandable recommendation labels used by WHITWIKI. Source-specific strength, grade, statement and locator details remain available on activation.
+- Wrapped 2,245 existing recommendation parentheticals on 500 articles without changing their text, citations or claim bindings. Parentheticals containing clinical advice and non-guideline risk/severity labels remain visible.
+- Validation: full lint, TypeScript, all 63 component tests, production build and rendered-link checks passed. The release snapshot excludes unrelated edits already in the shared checkout.
+
 ## October 17, 2026: five diversion and hematuria handouts rechecked against WARWIKI
 
 - **Why:** a WHITWIKI recheck changed the owner's practice editions of these five handouts on October 17 (`~/Documents/Seranio-Clinic-Resources/30-drafts/WHITWIKI-RECHECK-1017-REPORT.md`, proposals divers 1, 3–11 and hemat 2–5). The public handouts follow WARWIKI pages, so each point was checked against the WARWIKI source pages before any change.

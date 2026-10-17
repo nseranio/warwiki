@@ -175,3 +175,7 @@ Keep:
 - A genuine conflict between sources, stated once.
 
 Fixing an overclaim means correcting the sentence's own scope (name the population or design), never adding a separate caveat sentence.
+
+## 13. Guideline recommendation detail (October 17, 2026)
+
+Use WHITWIKI’s `<Rec>` badges for existing guideline strength and evidence-grade parentheticals. Keep the original wording, parentheses, citations, and source-specific grading system inside the tag. The badge expands to the full detail on activation. Clinical advice and eligibility qualifiers remain visible in the sentence.

@@ -1,4 +1,5 @@
 import React from 'react';
+import Rec from '@site/src/components/Rec';
 import OriginalComponents from '@theme-original/MDXComponents';
 import OriginalImg from '@theme/MDXComponents/Img';
 import ClinicalFigure from '../../components/ClinicalFigure';
@@ -15,4 +16,4 @@ function ScrollableTable(props: React.TableHTMLAttributes<HTMLTableElement>): Re
   return <div className="wk-table-scroll"><table {...props} /></div>;
 }
 
-export default {...OriginalComponents, img: FigureAwareImage, table: ScrollableTable};
+export default {...OriginalComponents, img: FigureAwareImage, table: ScrollableTable, Rec};
