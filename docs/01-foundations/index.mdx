@@ -3,8 +3,11 @@ title: Foundations
 description: Anatomy, surgical principles, perioperative care, pharmacology, instruments, and technology — the foundational reference layer for functional urology and reconstruction.
 sidebar_position: 0
 hide_title: true
+hide_table_of_contents: true
 slug: /foundations
 ---
+
+import SectionLanding from '@site/src/components/SectionLanding';
 
 import CurriculumViewer from '@site/src/components/CurriculumViewer';
 
@@ -14,28 +17,13 @@ Foundations collects the core scientific and surgical principles used across the
 
 ## What you'll find in Foundations
 
-<ul className="section-stack">
-  <li>
-    <a href="/docs/foundations/anatomy-physiology" className="section-stack-title section-stack-link">Anatomy &amp; Physiology</a>
-    <span className="section-stack-desc">Regional anatomy of the GU tract and pelvis, nerve supply, vascular anatomy, and physiology.</span>
-  </li>
-  <li>
-    <a href="/docs/foundations/surgical-principles" className="section-stack-title section-stack-link">Surgical Principles</a>
-    <span className="section-stack-desc">Reconstructive frameworks, wound healing, flaps and grafts, GU-specific principles, and radiation tissue effects.</span>
-  </li>
-  <li>
-    <a href="/docs/foundations/perioperative-care" className="section-stack-title section-stack-link">Perioperative Care</a>
-    <span className="section-stack-desc">Preoperative assessment, perioperative pathways, analgesia, and postoperative care topics.</span>
-  </li>
-  <li>
-    <a href="/docs/foundations/pharmacology" className="section-stack-title section-stack-link">Pharmacology</a>
-    <span className="section-stack-desc">Searchable drug database organized by clinical indication, from overactive bladder to perioperative care.</span>
-  </li>
-  <li>
-    <a href="/docs/foundations/tools" className="section-stack-title section-stack-link">Tools</a>
-    <span className="section-stack-desc">Surgical instruments, biomaterials, robotics platforms, gear, intraoperative adjuncts, and energy devices.</span>
-  </li>
-</ul>
+<SectionLanding cards={{
+  "/docs/foundations/anatomy-physiology": "Regional anatomy of the GU tract and pelvis, nerve supply, vascular anatomy, and physiology.",
+  "/docs/foundations/surgical-principles": "Reconstructive frameworks, wound healing, flaps and grafts, GU-specific principles, and radiation tissue effects.",
+  "/docs/foundations/perioperative-care": "Preoperative assessment, perioperative pathways, analgesia, and postoperative care topics.",
+  "/docs/foundations/pharmacology": "Searchable drug database organized by clinical indication, from overactive bladder to perioperative care.",
+  "/docs/foundations/tools": "Surgical instruments, biomaterials, robotics platforms, gear, intraoperative adjuncts, and energy devices.",
+}} />
 
 ## Curriculum
 

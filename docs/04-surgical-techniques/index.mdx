@@ -3,65 +3,29 @@ title: Treatment Atlas
 description: The Treatment Atlas — searchable reference for every operation in functional urology and pelvic reconstruction.
 sidebar_position: 0
 hide_title: true
+hide_table_of_contents: true
 slug: /surgical-techniques
 ---
 
+import SectionLanding from '@site/src/components/SectionLanding';
+
 The Treatment Atlas is an operative and non-operative treatment reference organized by domain: reconstruction, diversion, incontinence, prolapse, genital reconstruction, fistula repair, sexual dysfunction, cosmetic genital surgery and BPH.
 
-<ul className="section-stack">
-  <li>
-    <a href="/docs/surgical-techniques/urethral-reconstruction" className="section-stack-title section-stack-link">Urethral Reconstruction</a>
-    <span className="section-stack-desc">EPA, onlay urethroplasty, two-stage repair, flap and graft techniques, female urethroplasty</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04ab-bladder-neck-reconstruction" className="section-stack-title section-stack-link">Bladder Neck Reconstruction</a>
-    <span className="section-stack-desc">BNC / VUAS salvage, continence-creating outlet procedures, the Decision Framework</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04b-bladder-reconstruction" className="section-stack-title section-stack-link">Bladder Augmentation & Catheterizable Channels</a>
-    <span className="section-stack-desc">Review augmentation cystoplasty, Mitrofanoff, Monti and tubularized bladder flap channels, Hemi-Kock stomas, Indiana augmentation cystoplasty, and ileovesicostomy.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04c-urinary-diversion" className="section-stack-title section-stack-link">Urinary Diversion</a>
-    <span className="section-stack-desc">Ileal conduit, orthotopic neobladder, continent catheterizable reservoirs</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04d-upper-tract-reconstruction" className="section-stack-title section-stack-link">Upper Tract Reconstruction</a>
-    <span className="section-stack-desc">Pyeloplasty, ureteroureterostomy, reimplantation, BMG ureteroplasty, ileal ureter, autotransplantation</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04e-genital-reconstruction" className="section-stack-title section-stack-link">Genital Reconstruction</a>
-    <span className="section-stack-desc">Repair of the buried penis and of penile, scrotal and vulvar defects, including lymphedema surgery.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/incontinence" className="section-stack-title section-stack-link">Incontinence</a>
-    <span className="section-stack-desc">Female SUI, male SUI, OAB &amp; UUI — slings, AUS, bulking agents, Botox, neuromodulation</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/bph-male-luts" className="section-stack-title section-stack-link">BPH &amp; Male LUTS</a>
-    <span className="section-stack-desc">Medication, office procedures and surgery for BPH, with a searchable technique database.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04g-prolapse-repair" className="section-stack-title section-stack-link">Prolapse Repair</a>
-    <span className="section-stack-desc">Native tissue repair, apical suspension, colpocleisis, pessary management</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04h-fistula-repair" className="section-stack-title section-stack-link">Fistula Repair</a>
-    <span className="section-stack-desc">Female (VVF, VUF, UVF, RVF, obstetric) and male (RUF, UCF, UPF) fistula repair — approach, interposition, and salvage</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04k-gender-affirming-surgery" className="section-stack-title section-stack-link">Gender-Affirming Surgery</a>
-    <span className="section-stack-desc">Masculinizing, feminizing and non-binary genital surgery, with a searchable database of techniques.</span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04j-sexual-dysfunction" className="section-stack-title section-stack-link">Male Sexual Dysfunction</a>
-    <span className="section-stack-desc">Explore PDE5 inhibitors, injections, MUSE (discontinued in the US), vacuum devices, shockwave for mild vasculogenic ED, investigational regenerative therapies, implants, Peyronie's disease and priapism.<sup>[[1]](#ref1)</sup></span>
-  </li>
-  <li>
-    <a href="/docs/surgical-techniques/04l-cosmetic-genital-surgery" className="section-stack-title section-stack-link">Cosmetic Genital Surgery</a>
-    <span className="section-stack-desc">Elective aesthetic genital procedures for men and women, with guidance on patient selection and a searchable database.</span>
-  </li>
-</ul>
+<SectionLanding cards={{
+  "/docs/surgical-techniques/urethral-reconstruction": "EPA, onlay urethroplasty, two-stage repair, flap and graft techniques, female urethroplasty",
+  "/docs/surgical-techniques/04ab-bladder-neck-reconstruction": "BNC / VUAS salvage, continence-creating outlet procedures, the Decision Framework",
+  "/docs/surgical-techniques/04b-bladder-reconstruction": "Review augmentation cystoplasty, Mitrofanoff, Monti and tubularized bladder flap channels, Hemi-Kock stomas, Indiana augmentation cystoplasty, and ileovesicostomy.",
+  "/docs/surgical-techniques/04c-urinary-diversion": "Ileal conduit, orthotopic neobladder, continent catheterizable reservoirs",
+  "/docs/surgical-techniques/04d-upper-tract-reconstruction": "Pyeloplasty, ureteroureterostomy, reimplantation, BMG ureteroplasty, ileal ureter, autotransplantation",
+  "/docs/surgical-techniques/04e-genital-reconstruction": "Repair of the buried penis and of penile, scrotal and vulvar defects, including lymphedema surgery.",
+  "/docs/surgical-techniques/incontinence": "Female SUI, male SUI, OAB & UUI — slings, AUS, bulking agents, Botox, neuromodulation",
+  "/docs/surgical-techniques/bph-male-luts": "Medication, office procedures and surgery for BPH, with a searchable technique database.",
+  "/docs/surgical-techniques/04g-prolapse-repair": "Native tissue repair, apical suspension, colpocleisis, pessary management",
+  "/docs/surgical-techniques/04h-fistula-repair": "Female (VVF, VUF, UVF, RVF, obstetric) and male (RUF, UCF, UPF) fistula repair — approach, interposition, and salvage",
+  "/docs/surgical-techniques/04k-gender-affirming-surgery": "Masculinizing, feminizing and non-binary genital surgery, with a searchable database of techniques.",
+  "/docs/surgical-techniques/04j-sexual-dysfunction": <>Explore PDE5 inhibitors, injections, MUSE (discontinued in the US), vacuum devices, shockwave for mild vasculogenic ED, investigational regenerative therapies, implants, Peyronie's disease and priapism.<sup><a href="#ref1">[1]</a></sup></>,
+  "/docs/surgical-techniques/04l-cosmetic-genital-surgery": "Elective aesthetic genital procedures for men and women, with guidance on patient selection and a searchable database.",
+}} />
 
 ## References
 

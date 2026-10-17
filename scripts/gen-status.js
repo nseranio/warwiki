@@ -38,6 +38,7 @@ function walk(dir, files = []) {
 const WRAPPER_COMPONENTS = [
   'SurgeonProfile',
   'GenericDatabase',
+  'SectionLanding',
   'SurgeonsExplorer',
   'SurgeonDirectory',
   'SurgeonTree',

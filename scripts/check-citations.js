@@ -34,6 +34,12 @@ function checkContent(content) {
     cited.add(parseInt(m[2], 10));
     if (m[1] !== m[2]) issues.push(`citation label ${m[1]} links to ref${m[2]}`);
   }
+  // JSX form inside component props, where Markdown links do not parse: <a href="#refN">[N]</a>
+  const jsxRefRe = /<a\s+href=["']#ref(\d+)["']\s*>\[(\d+)\]<\/a>/g;
+  while ((m = jsxRefRe.exec(content)) !== null) {
+    cited.add(parseInt(m[1], 10));
+    if (m[1] !== m[2]) issues.push(`citation label ${m[2]} links to ref${m[1]}`);
+  }
 
   // Anchor pattern: <a id="refN"></a>
   const anchorRe = /<a\s+id=["']ref(\d+)["']\s*><\/a>/g;

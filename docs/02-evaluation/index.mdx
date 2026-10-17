@@ -3,28 +3,19 @@ title: Evaluation & Workup
 description: History and physical, imaging, laboratory studies, urodynamics, and ancillary testing — clinical evaluation for the reconstructive urologist and urogynecologist.
 sidebar_position: 0
 hide_title: true
+hide_table_of_contents: true
 slug: /evaluation
 ---
+
+import SectionLanding from '@site/src/components/SectionLanding';
 
 The Evaluation section covers history, physical examination, imaging, laboratory studies and ancillary testing in functional and reconstructive urology and urogynecology.
 
 Tests are chosen to answer a clinical question and are interpreted with symptoms, examination, anatomy and patient goals. The pages below explain indications, reference values and limitations.
 
-<ul className="section-stack">
-  <li>
-    <a href="/docs/evaluation/history-physical" className="section-stack-title section-stack-link">History &amp; Physical</a>
-    <span className="section-stack-desc">Validated assessment tools and questionnaires, male urogenital exam, and female pelvic examination with POP-Q</span>
-  </li>
-  <li>
-    <a href="/docs/evaluation/laboratory-studies" className="section-stack-title section-stack-link">Laboratory Studies</a>
-    <span className="section-stack-desc">Urine studies, renal function and metabolic surveillance, hormonal assessment, preoperative labs and nutritional assessment, with interpretation in diversions, augmented bladders and CIC patients</span>
-  </li>
-  <li>
-    <a href="/docs/evaluation/imaging" className="section-stack-title section-stack-link">Imaging</a>
-    <span className="section-stack-desc">Radiation safety, RUG &amp; VCUG, cystography, MRI, ultrasound, MAG3 &amp; nuclear imaging, CT urogram and penile Doppler</span>
-  </li>
-  <li>
-    <a href="/docs/evaluation/ancillary-tests/urodynamics" className="section-stack-title section-stack-link">Ancillary Testing</a>
-    <span className="section-stack-desc">Urodynamics with normal reference values, cystoscopy, and anorectal function testing</span>
-  </li>
-</ul>
+<SectionLanding cards={{
+  "/docs/evaluation/history-physical": "Validated assessment tools and questionnaires, male urogenital exam, and female pelvic examination with POP-Q",
+  "/docs/evaluation/laboratory-studies": "Urine studies, renal function and metabolic surveillance, hormonal assessment, preoperative labs and nutritional assessment, with interpretation in diversions, augmented bladders and CIC patients",
+  "/docs/evaluation/imaging": "Radiation safety, RUG & VCUG, cystography, MRI, ultrasound, MAG3 & nuclear imaging, CT urogram and penile Doppler",
+  "/docs/evaluation/ancillary-tests/urodynamics": "Urodynamics with normal reference values, cystoscopy, and anorectal function testing",
+}} />
