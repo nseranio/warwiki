@@ -11,15 +11,15 @@ function normalized(text: string): string {
   return text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-function doi(publication: ProfilePublication): string | undefined {
+export function publicationDoi(publication: ProfilePublication): string | undefined {
   const value = publication.doi ?? publication.cite.match(/10\.\d{4,9}\/[^\s)]+/i)?.[0];
-  return value?.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '').trim().toLowerCase();
+  return value?.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '').trim().replace(/\]+$/, '').toLowerCase();
 }
 
 /** Match paper identity even when another page abbreviates its author list. */
 export function samePublication(a: ProfilePublication, b: ProfilePublication): boolean {
-  const aDoi = doi(a);
-  const bDoi = doi(b);
+  const aDoi = publicationDoi(a);
+  const bDoi = publicationDoi(b);
   if (aDoi && bDoi) return aDoi === bDoi;
   if (a.pmid && b.pmid) return a.pmid === b.pmid;
   if (normalized(a.cite) === normalized(b.cite)) return true;

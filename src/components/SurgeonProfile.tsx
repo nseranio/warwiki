@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Surgeon } from '../data/surgeons';
-import {samePublication, type ProfilePublication} from '../utils/surgeon-publications';
+import {publicationDoi, samePublication, type ProfilePublication} from '../utils/surgeon-publications';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
 const CITES_SHOWN = 12;
@@ -107,6 +107,19 @@ function Citations({ name, citations, additional = false }: { name: string; cita
   );
 }
 
+function uniqueCitations(citations: SurgeonCitation[]): SurgeonCitation[] {
+  const unique: SurgeonCitation[] = [];
+  for (const citation of citations) {
+    const existing = unique.find(other => samePublication(other, citation));
+    if (existing) {
+      existing.pages = [...new Map([...existing.pages, ...citation.pages].map(page => [page.url, page])).values()];
+    } else {
+      unique.push({...citation, doi: publicationDoi(citation), pages: [...citation.pages]});
+    }
+  }
+  return unique.sort((a, b) => b.pages.length - a.pages.length);
+}
+
 /** A selected paper appears once, with its description and every citing page. */
 export function KeyPublication({publication, citations, children}: {
   publication: ProfilePublication;
@@ -153,7 +166,7 @@ export default function SurgeonProfile({
   const institution = surgeon.institution ?? profile.position;
   const hasLineage = Boolean(mentor || school || trainees.length);
   const displayedPublications = [...keyPublications, ...referencePublications];
-  const otherCitations = citations.filter(citation => !displayedPublications.some(publication => samePublication(publication, citation)));
+  const otherCitations = uniqueCitations(citations.filter(citation => !displayedPublications.some(publication => samePublication(publication, citation))));
   const otherKeyPubs = surgeon.keyPubs?.filter(cite => !displayedPublications.some(publication => samePublication(publication, {cite})));
 
   return (
