@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 17, 2026: verified surgeon portraits
+
+- Added 19 official/professional-source portraits, including Dan Eun; source-page and image URLs are recorded in `src/data/surgeon-photo-sources.json`. All candidates were visually inspected and browser-tested outside their source sites; logos, group shots, photos of other people and blocked hotlinks were rejected. 19 profiles still use initials.
+- Isolated release snapshot passed full lint, TypeScript and production build, including 1,378 rendered pages, 156,805 local links/assets and the 200 MB cap (191.17 MB). Dan Eun’s profile was checked in the browser. Clinical text, reference lists and unrelated paused changes were excluded.
+
 ## October 17, 2026: surgeon publications without duplicate references; restored profile routes
 
 - Replaced Contributions/Principal Contributions with full Key Publications entries on 247 profiles (1,221 existing cited papers and books). Existing descriptions and citing-page links are preserved. Eleven sections containing career/leadership work without a selected bibliographic source retain that material under Professional Work.
