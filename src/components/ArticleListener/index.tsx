@@ -21,8 +21,8 @@ import { AudioQueue } from './audioQueue';
  */
 
 // Bump the cache name whenever the server's voice, model or instructions change.
-const CACHE_NAME = 'warwiki-tts-v3';
-const RETIRED_CACHES = ['warwiki-tts-v1', 'warwiki-tts-v2'];
+const CACHE_NAME = 'warwiki-tts-v4';
+const RETIRED_CACHES = ['warwiki-tts-v1', 'warwiki-tts-v2', 'warwiki-tts-v3'];
 const RETIRED_STORAGE_KEYS = ['warwiki-tts-voice', 'warwiki-tts-model'];
 const MAX_CHUNK_CHARS = 3500;
 // Chunk-size ramp within each section. Generation runs at roughly 90 characters
@@ -48,8 +48,60 @@ interface SectionMeta {
   endChunkIndex: number; // inclusive
 }
 
-// H2 titles whose section should be excluded from audio (references, further reading).
-const EXCLUDED_SECTION_REGEX = /^(references?|bibliography|further reading|citations?)(?:[\s#]|$)/i;
+// H2 titles whose section should be excluded from audio (references, link lists,
+// video and podcast cards).
+const EXCLUDED_SECTION_REGEX = /^(references?|bibliography|further reading|citations?|see also|videos?|podcasts?)(?:[\s#]|$)/i;
+
+// Interactive or data-dense blocks that do not read well aloud: technique and
+// condition databases, the billing code search, video and podcast cards, landing
+// link lists and footnote reference lists (GAS pages).
+const SKIPPED_BLOCKS = [
+  '.td-wrapper', '.cst-wrapper', '.vc-grid', '.web-grid', '.section-stack',
+  '.footnotes', 'img', 'svg', 'video', 'iframe',
+].join(', ');
+
+// A <Rec> badge renders as a chip such as "AUA · Strong · B" (the full
+// statement shows only when tapped). Speak it as a short aside:
+// "(AUA strong recommendation, grade B)"; a bare "Guideline" chip is dropped.
+export function spokenRec(label: string): string {
+  const parts = label.split('·').map((part) => part.trim()).filter(Boolean);
+  const words = parts.flatMap((part) => {
+    if (part === 'Guideline') return [];
+    if (/^[ABC]$/.test(part)) return [`grade ${part}`];
+    if (/^(Strong|Moderate|Conditional|Weak)$/i.test(part)) return [`${part.toLowerCase()} recommendation`];
+    if (/^(Category|Expert opinion|Clinical principle)/i.test(part)) return [part.charAt(0).toLowerCase() + part.slice(1)];
+    return [part];
+  });
+  if (!words.length) return '';
+  // "AUA" and "strong recommendation" read as one phrase; the grade follows a comma.
+  const [first, ...rest] = words;
+  const head = rest.length && !rest[0].startsWith('grade') ? `${first} ${rest.shift()}` : first;
+  return `(${[head, ...rest].join(', ')})`;
+}
+
+// Read a table row by row: "Header: value; Header: value." Tables without a
+// header row are read cell by cell.
+function spokenTable(table: HTMLTableElement): string {
+  const rows = Array.from(table.rows);
+  const headerRow = table.tHead?.rows[0] ?? (rows[0] && Array.from(rows[0].cells).every((c) => c.tagName === 'TH') ? rows[0] : undefined);
+  const headers = headerRow ? Array.from(headerRow.cells).map((c) => (c.textContent || '').trim()) : [];
+  const clean = (t: string) => t.replace(/\s+/g, ' ').trim().replace(/[.;:,]+$/, '');
+  return rows
+    .filter((row) => row !== headerRow)
+    .map((row) => {
+      const cells = Array.from(row.cells).map((c) => clean(c.textContent || ''));
+      const spoken = cells
+        .map((cell, i) => {
+          if (!cell || cell === '—' || cell === '-') return '';
+          const header = clean(headers[i] || '');
+          return header && i > 0 ? `${header}: ${cell}` : cell;
+        })
+        .filter(Boolean);
+      return spoken.length ? `${spoken.join('; ')}.` : '';
+    })
+    .filter(Boolean)
+    .join(' ');
+}
 
 // Walk the rendered article DOM and produce ordered sections, each with a
 // human-readable title and its text. The first (pre-H2) block becomes
@@ -59,11 +111,59 @@ function extractSections(): Array<{ title: string; text: string }> {
   if (!content) return [];
 
   const clone = content.cloneNode(true) as HTMLElement;
+  clone.querySelectorAll(SKIPPED_BLOCKS).forEach((n) => n.remove());
+  // Link rows ("Small renal masses · Partial nephrectomy") and "On this page:"
+  // jump lines are navigation, not prose.
+  clone.querySelectorAll('p').forEach((p) => {
+    const links = p.querySelectorAll('a');
+    const outside = Array.from(p.childNodes)
+      .filter((n) => n.nodeType === Node.TEXT_NODE)
+      .map((n) => n.textContent || '')
+      .join('');
+    const linkRow = links.length >= 2 && /^[\s·•|,/]*$/.test(outside);
+    if (linkRow || /^\s*On this page:/i.test(p.textContent || '')) p.remove();
+  });
+  clone.querySelectorAll('.wk-rec').forEach((rec) => {
+    const label = rec.querySelector('.wk-rec-chip')?.textContent || '';
+    rec.replaceWith(document.createTextNode(spokenRec(label)));
+  });
   clone
-    .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button, .hash-link, sup')
+    .querySelectorAll('pre, code, nav, aside, .theme-doc-toc-mobile, button, .hash-link, sup, input, select')
     .forEach((n) => n.remove());
-  clone.querySelectorAll('td, th').forEach((cell) => {
-    cell.textContent = (cell.textContent || '') + '. ';
+  clone.querySelectorAll('table').forEach((table) => {
+    const p = document.createElement('p');
+    p.textContent = spokenTable(table as HTMLTableElement);
+    // Tables usually sit inside a scroll wrapper; replace the table itself.
+    table.replaceWith(p);
+  });
+  // Subheadings: drop excluded blocks (an H3 "See also") and headings left
+  // empty because their database, timeline or comparison grid was skipped.
+  const level = (el: Element | null) => (el && /^H[1-6]$/.test(el.tagName) ? Number(el.tagName[1]) : 7);
+  Array.from(clone.querySelectorAll(':scope > h3, :scope > h4, :scope > h5, :scope > h6')).forEach((heading) => {
+    const own = level(heading);
+    if (EXCLUDED_SECTION_REGEX.test((heading.textContent || '').trim())) {
+      let next = heading.nextElementSibling;
+      while (next && level(next) > own) {
+        const after = next.nextElementSibling;
+        next.remove();
+        next = after;
+      }
+      heading.remove();
+      return;
+    }
+    let next = heading.nextElementSibling;
+    let hasText = false;
+    while (next && level(next) > own) {
+      if ((next.textContent || '').trim() && level(next) === 7) hasText = true;
+      next = next.nextElementSibling;
+    }
+    if (!hasText) heading.remove();
+  });
+  // End list items, the title and subheadings with a stop so the voice pauses between them.
+  clone.querySelectorAll('li, h1, h3, h4, h5, h6, dt, dd').forEach((el) => {
+    const t = (el.textContent || '').trim();
+    if (t && !/[.!?:;]$/.test(t)) el.append('.');
+    el.append(' ');
   });
 
   const sections: Array<{ title: string; text: string }> = [];
@@ -132,8 +232,8 @@ function buildChunkPlan(sections: Array<{ title: string; text: string }>): {
 // Split at sentence boundaries. Chunk k may grow to ramp[k] (the last value
 // repeats) but always holds at least one whole sentence ≤ maxLen.
 export function chunkText(text: string, maxLen = MAX_CHUNK_CHARS, ramp: number[] = CHUNK_RAMP): string[] {
-  // Split only where whitespace follows terminal punctuation, so decimals
-  // ("40.4", "P < 0.001") and section numbers ("§6.7.15") stay whole.
+  // Split only where whitespace follows the punctuation, so decimals ("40.4",
+  // "P < 0.001") and section numbers ("§6.7.15") stay whole.
   const sentences = text.split(/(?<=[.!?])\s+/);
   const chunks: string[] = [];
   let current = '';
@@ -375,16 +475,19 @@ export default function ArticleListener(): React.ReactElement | null {
       audio.src = url;
       audio.playbackRate = rate;
       audio.onended = () => {
+        if (cancelledRef.current || queue !== queueRef.current) return;
         currentIndexRef.current = i + 1;
         playIndex(i + 1);
       };
       audio.onerror = () => {
+        if (cancelledRef.current || queue !== queueRef.current) return;
         setState('error');
         setErrorMsg('Audio playback failed');
         disposeQueue();
       };
       setState('playing');
       audio.play().catch((err) => {
+        if (cancelledRef.current || queue !== queueRef.current) return;
         // If autoplay is rejected, surface a friendly error and stop.
         setState('error');
         setErrorMsg(

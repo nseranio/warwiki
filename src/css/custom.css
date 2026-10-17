@@ -398,11 +398,14 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     left: 0;
     z-index: 1;
-    background-color: var(--ifm-background-color);
+    /* Opaque page color: Infima's light --ifm-background-color is transparent,
+       which let scrolled cells show through the row labels. */
+    background-color: var(--warwiki-bg);
     box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.08);
   }
+  /* The header cell takes its row's color in both themes. */
   .markdown table thead th:first-child {
-    background-color: var(--ifm-color-primary);
+    background-color: inherit;
   }
   .markdown table tbody tr:nth-child(even) td:first-child {
     background-color: var(--warwiki-bg-subtle);
