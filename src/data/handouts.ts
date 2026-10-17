@@ -278,7 +278,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/02-evaluation/laboratory-studies/urine-studies.mdx', 'docs/02-evaluation/imaging/ct-urogram.mdx'],
-    reviewedAgainst: '2026-10-09',
+    reviewedAgainst: '2026-10-17',
     description:
       'Tiny amounts of blood in the urine found on a test, with no symptoms — what causes it, the risk-based check (imaging and a bladder look), and what happens next. Most causes are not serious.',
   },
@@ -727,8 +727,8 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     subcategory: 'Urinary Diversion',
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
-    sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx'],
-    reviewedAgainst: '2026-10-09',
+    sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx', 'docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx'],
+    reviewedAgainst: '2026-10-17',
     description:
       'A decision-aid comparing the three ways to drain urine after the bladder is removed or no longer works — bag (ileal conduit) vs. urinating through the urethra (neobladder) vs. catheterizing a stoma (Indiana pouch): how daily life differs and questions to ask.',
   },
@@ -740,7 +740,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx'],
-    reviewedAgainst: '2026-10-09',
+    reviewedAgainst: '2026-10-17',
     description:
       'The simplest, most common urinary diversion — a short piece of bowel drains urine to a stoma on the belly, into a bag you empty and change: how it works, preparing, stoma marking, and daily care.',
   },
@@ -752,7 +752,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx', 'docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx'],
-    reviewedAgainst: '2026-10-09',
+    reviewedAgainst: '2026-10-17',
     description:
       'A new bladder built from bowel and connected to the urethra so you urinate the natural way (no bag) — how it works, preparing, the catheter and healing X-ray, timed voiding day and night, and possible self-catheterization.',
   },
@@ -764,7 +764,7 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
     languages: ['es', 'zh', 'vi', 'fr', 'ko', 'tl', 'ar', 'ru', 'yue', 'hi'],
     pages: 2,
     sourcePages: ['docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx'],
-    reviewedAgainst: '2026-10-09',
+    reviewedAgainst: '2026-10-17',
     description:
       'An internal pouch from bowel with a small leak-proof opening (often the navel) that you empty with a catheter several times a day — no bag: how it works, preparing, catheterizing and flushing, and the urgent "can\'t catheterize" warning.',
   },

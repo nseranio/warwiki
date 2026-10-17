@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 17, 2026: five diversion and hematuria handouts rechecked against WARWIKI
+
+- **Why:** a WHITWIKI recheck changed the owner's practice editions of these five handouts on October 17 (`~/Documents/Seranio-Clinic-Resources/30-drafts/WHITWIKI-RECHECK-1017-REPORT.md`, proposals divers 1, 3–11 and hemat 2–5). The public handouts follow WARWIKI pages, so each point was checked against the WARWIKI source pages before any change.
+- **Applied (WARWIKI supports them):** ileal conduit: vitamin B12 effect of using bowel, and lifelong B12 and kidney checks (`ileal-conduit.mdx`). Neobladder: a cancer-free urethral margin is required after cancer surgery (`modified-studer-pouch.mdx`, `urinary-diversion-principles.mdx`); catheter use in women "from about 1 in 4 to 2 in 3 in different studies" (pooled 27.6%, Bartsch 62.5%, EAU about two-thirds). Indiana pouch: "continent" can still leak (any leakage 28%, `indiana-pouch.mdx`), and urgent help if the catheter will not pass. Overview: the urethral-margin rule and the leakage correction (`indiana-pouch.mdx` added to its `sourcePages`). Microscopic hematuria: infection moved out of the harmless list with a repeat urine test after treatment; risk group uses age and sex, smoking, degree and persistence of blood, visible blood and other risk factors; urine-marker option for intermediate risk with ultrasound still done and cystoscopy if blood persists at 12 months; MR urogram when CT is unsuitable (`urine-studies.mdx`, `ct-urogram.mdx`).
+- **Not applied:** "about 7 in 10 women" with daytime control after a neobladder. WARWIKI's daytime figures (86–92%) come from mostly male cohorts, and its one female series reports 40 of 43 women dry in the daytime, so the box stays "about 9 in 10". Divers 2 (rejected in the report) and divers 9 (SmartPhrase only) do not affect the public handouts.
+- **Published:** masters edited in `~/Desktop/WARWIKI-handouts/` (backups in `_backups/recheck-2026-10-17/`); the overview's Q-box lost one sentence to keep page 2's footer in place. All five render as two pages with both footers; overflow and footer position measured in Playwright. `reviewedAgainst` set to 2026-10-17. Translations are unchanged and still carry June text.
+
 ## October 14, 2026: owner feedback, podcasts, Dan Eun, Patient Materials, claim-gate wave
 
 - **SUI (female):** misplaced ACP box removed (PFMT section already cites it), Blaivas-Olsson classification folded into the mechanism paragraph without its stray outcome numbers, opening tightened (rebuttal and scope sentences cut; RISE FOR HEALTH sentence corrected to its 7-day window after a Codex check), database pointer moved to Surgical options.
