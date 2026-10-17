@@ -3,11 +3,12 @@ title: "Kenneth M. Peters"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/kenneth-peters.json';
 import profile from '@site/src/data/surgeon-profiles/kenneth-peters.json';
 import citations from '@site/src/data/surgeon-citations/kenneth-peters.json';
 
-<SurgeonProfile id="kenneth-peters" profile={profile} citations={citations}>
+<SurgeonProfile id="kenneth-peters" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,32 +22,44 @@ import citations from '@site/src/data/surgeon-citations/kenneth-peters.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Peters's cited work examines tibial nerve stimulation for overactive bladder, including the SUmiT and STEP studies, a device review, and implantable-device studies. Other cited papers address sacral and pudendal neuromodulation for voiding dysfunction and pelvic pain, as well as treatment of interstitial cystitis/bladder pain syndrome.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Sacral versus pudendal stimulation crossover trial** (2007). Compared sacral and pudendal nerve stimulation in a blinded randomized crossover study of refractory interstitial cystitis.[^8] Cited on WARWIKI: [Pudendal Neuromodulation](/docs/surgical-techniques/04f-incontinence-procedures/procedures/pudendal-neuromodulation).
-- **SUmiT trial of tibial nerve stimulation** (2010). Led a multicenter randomized sham-controlled trial of percutaneous tibial nerve stimulation for overactive bladder.[^9] Cited on WARWIKI: [Percutaneous Tibial Nerve Stimulation](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation).
-- **STEP study of sustained tibial nerve stimulation** (2013). Reported 24-month treatment and symptom outcomes among initial responders to percutaneous tibial nerve stimulation.[^10] Cited on WARWIKI: [Percutaneous Tibial Nerve Stimulation](/docs/surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation).
+Peters's cited work examines tibial nerve stimulation for overactive bladder, including the SUmiT and STEP studies, a device review, and implantable-device studies. Other cited papers address sacral and pudendal neuromodulation for voiding dysfunction and pelvic pain, as well as treatment of interstitial cystitis/bladder pain syndrome.<sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P2](#publication-9)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Sacral versus pudendal stimulation crossover trial** (2007). Compared sacral and pudendal nerve stimulation in a blinded randomized crossover study of refractory interstitial cystitis.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**SUmiT trial of tibial nerve stimulation** (2010). Led a multicenter randomized sham-controlled trial of percutaneous tibial nerve stimulation for overactive bladder.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**STEP study of sustained tibial nerve stimulation** (2013). Reported 24-month treatment and symptom outcomes among initial responders to percutaneous tibial nerve stimulation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Kenneth Peters. Oakland University](https://www.oakland.edu/medicine/directories/faculty-and-staff/Kenneth-Peters/). Accessed October 2026.
 
 [^2]: [Royal Oak, Urology. Corewell Health](https://corewellhealth.org/graduate-medical-education/southeast-michigan/residencies/royal-oak/urology/faculty). Accessed October 2026.
-
-[^3]: Buford K, Peters KM, Riedl C, et al. "Global consensus on interstitial cystitis/bladder pain syndrome: an update on therapeutic treatments." Neurourol Urodyn. 2025. doi:[10.1002/nau.70106](https://doi.org/10.1002/nau.70106)
-
-[^4]: Lee UJ, MacDiarmid S, Matthews CA, Gillespie E, Peters KM. "Tibial Nerve Stimulation for Urge Urinary Incontinence and Overactive Bladder: Narrative Review of Randomized Controlled Trials and Applicability to Implantable Devices." Adv Ther. 2024;41(7):2635–2654. doi:[10.1007/s12325-024-02864-3](https://doi.org/10.1007/s12325-024-02864-3)
-
-[^5]: Peters KM, Carrico DJ, Perez-Marrero RA, et al. Randomized Trial of Percutaneous Tibial Nerve Stimulation Versus Sham Efficacy in the Treatment of Overactive Bladder Syndrome: Results From the SUmiT Trial. J Urol. 2010;183:1438–1443. doi:[10.1016/j.juro.2009.12.036](https://doi.org/10.1016/j.juro.2009.12.036)
-
-[^6]: Peters KM, Feber KM, Bennett RC. Sacral versus pudendal nerve stimulation for voiding dysfunction: a prospective, single-blinded, randomized, crossover trial. Neurourol Urodyn. 2005;24(7):643-7. doi:[10.1002/nau.20174](https://doi.org/10.1002/nau.20174)
-
-[^7]: Peters KM, Carrico DJ, Wooldridge LS, et al. Percutaneous Tibial Nerve Stimulation for the Long-Term Treatment of Overactive Bladder: 3-Year Results of the STEP Study. J Urol. 2013;189:2194–2201. doi:[10.1016/j.juro.2012.11.175](https://doi.org/10.1016/j.juro.2012.11.175)
-
-[^8]: Peters KM, Feber KM, Bennett RC. "A prospective, single‐blind, randomized crossover trial of sacral vs pudendal nerve stimulation for interstitial cystitis." *BJU International.* 2007;100(4):835–839. doi:[10.1111/j.1464-410x.2007.07082.x](https://doi.org/10.1111/j.1464-410x.2007.07082.x)
-
-[^9]: Peters KM, Carrico DJ, Perez-Marrero RA, et al. "Randomized Trial of Percutaneous Tibial Nerve Stimulation Versus Sham Efficacy in the Treatment of Overactive Bladder Syndrome: Results From the SUmiT Trial." *Journal of Urology.* 2010;183(4):1438–1443. doi:[10.1016/j.juro.2009.12.036](https://doi.org/10.1016/j.juro.2009.12.036)
-
-[^10]: Peters KM, Carrico DJ, MacDiarmid SA, et al. "Sustained therapeutic effects of percutaneous tibial nerve stimulation: 24‐month results of the STEP study." *Neurourology and Urodynamics.* 2012;32(1):24–29. doi:[10.1002/nau.22266](https://doi.org/10.1002/nau.22266)
 
 </SurgeonProfile>

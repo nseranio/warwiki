@@ -3,11 +3,12 @@ title: "Anne P. Cameron"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/anne-cameron.json';
 import profile from '@site/src/data/surgeon-profiles/anne-cameron.json';
 import citations from '@site/src/data/surgeon-citations/anne-cameron.json';
 
-<SurgeonProfile id="anne-cameron" profile={profile} citations={citations}>
+<SurgeonProfile id="anne-cameron" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,27 +23,36 @@ import citations from '@site/src/data/surgeon-citations/anne-cameron.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited work covers adult neurogenic lower urinary tract dysfunction, including AUA/SUFU guidance on diagnosis and treatment, oral therapy, and intermittent catheterization in multiple sclerosis.[^2][^3][^4][^5][^6]
+## Key Publications
 
-- **National study of bladder management after spinal cord injury** (2010). Cameron analyzed decades of national spinal cord injury data, documenting changes in catheter use and limited persistence with intermittent catheterization.[^7] Cited on WARWIKI: [Spinal Cord Injury](/docs/clinical-conditions/03d-nlutd/nlutd-spinal-cord-injury).
-- **2024 AUA/SUFU idiopathic overactive bladder guideline** (2024). Cameron chaired and led the published AUA/SUFU guideline on evaluation and treatment of idiopathic overactive bladder.[^8] Cited on WARWIKI: [Incontinence](/docs/surgical-techniques/incontinence).
+Her cited work covers adult neurogenic lower urinary tract dysfunction, including AUA/SUFU guidance on diagnosis and treatment, oral therapy, and intermittent catheterization in multiple sclerosis.<sup>[P3](#publication-2)</sup><sup>[P3](#publication-2)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**National study of bladder management after spinal cord injury** (2010). Cameron analyzed decades of national spinal cord injury data, documenting changes in catheter use and limited persistence with intermittent catheterization.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**2024 AUA/SUFU idiopathic overactive bladder guideline** (2024). Cameron chaired and led the published AUA/SUFU guideline on evaluation and treatment of idiopathic overactive bladder.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Anne P. Cameron](https://medschool.umich.edu/profile/3644/anne-p-cameron). Accessed October 2026.
-
-[^2]: Ginsberg DA, Boone TB, Cameron AP, et al. "The AUA/SUFU guideline on adult neurogenic lower urinary tract dysfunction: treatment and follow-up." J Urol. 2021;206(5):1106–1113. doi:[10.1097/ju.0000000000002239](https://doi.org/10.1097/ju.0000000000002239)
-
-[^3]: Ginsberg DA, Boone TB, Cameron AP, et al. "The AUA/SUFU Guideline on Adult NLUTD: Treatment and Follow-Up." J Urol. 2021;206(5):1106–1113. doi:[10.1097/ju.0000000000002239](https://doi.org/10.1097/ju.0000000000002239)
-
-[^4]: Ginsberg DA, Boone TB, Cameron AP, et al. "The AUA/SUFU Guideline on Adult NLUTD: Diagnosis and Evaluation." J Urol. 2021;206(5):1097–1105. doi:[10.1097/ju.0000000000002235](https://doi.org/10.1097/ju.0000000000002235)
-
-[^5]: Cameron AP. "Medical Management of Neurogenic Bladder With Oral Therapy." Transl Androl Urol. 2016;5(1):51–62. doi:[10.3978/j.issn.2223-4683.2015.12.07](https://doi.org/10.3978/j.issn.2223-4683.2015.12.07)
-
-[^6]: Corona LE, Sion NR, Cameron AP, et al. Intermittent catheterization and urinary tract infection in multiple sclerosis patients. Can J Urol. 2020;27(4):10294-10299.
-
-[^7]: Cameron AP, Wallner LP, Tate DG, et al. "Bladder Management After Spinal Cord Injury in the United States 1972 to 2005." *Journal of Urology.* 2010;184(1):213–217. doi:[10.1016/j.juro.2010.03.008](https://doi.org/10.1016/j.juro.2010.03.008)
-
-[^8]: Cameron AP, Chung DE, Dielubanza EJ, et al. "The AUA/SUFU Guideline on the Diagnosis and Treatment of Idiopathic Overactive Bladder." *J Urol.* 2024;212(1):11–20. doi:[10.1097/ju.0000000000003985](https://doi.org/10.1097/ju.0000000000003985)
 
 </SurgeonProfile>

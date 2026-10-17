@@ -3,11 +3,12 @@ title: "Ingrid Nygaard"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/ingrid-nygaard.json';
 import profile from '@site/src/data/surgeon-profiles/ingrid-nygaard.json';
 import citations from '@site/src/data/surgeon-citations/ingrid-nygaard.json';
 
-<SurgeonProfile id="ingrid-nygaard" profile={profile} citations={citations}>
+<SurgeonProfile id="ingrid-nygaard" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,29 +24,40 @@ import citations from '@site/src/data/surgeon-citations/ingrid-nygaard.json';
 
 Her work focuses on pelvic floor research rather than clinical practice.[^1]
 
-## Contributions
+<a id="contributions"></a>
 
-Her confirmed citations examine pelvic organ prolapse natural history and surgical outcomes, including long-term sacrocolpopexy results and incontinence prevention during prolapse repair. They also cover treatment-response fluctuations after onabotulinumtoxinA and sacral neuromodulation and complications of retropubic incontinence surgery.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **National prevalence estimate for symptomatic pelvic floor disorders** (2008). Led a US population study estimating the prevalence of symptomatic urinary incontinence, fecal incontinence, and pelvic organ prolapse.[^8] Cited on WARWIKI: [POP Overview](/docs/clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse).
-- **Lifetime physical activity and stress incontinence study** (2015). Examined associations between lifetime activity patterns and stress urinary incontinence in middle-aged women.[^9] Cited on WARWIKI: [Stress Urinary Incontinence (Female)](/docs/clinical-conditions/03a-storage-incontinence/sui-female).
+Her confirmed citations examine pelvic organ prolapse natural history and surgical outcomes, including long-term sacrocolpopexy results and incontinence prevention during prolapse repair. They also cover treatment-response fluctuations after onabotulinumtoxinA and sacral neuromodulation and complications of retropubic incontinence surgery.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**National prevalence estimate for symptomatic pelvic floor disorders** (2008). Led a US population study estimating the prevalence of symptomatic urinary incontinence, fecal incontinence, and pelvic organ prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Lifetime physical activity and stress incontinence study** (2015). Examined associations between lifetime activity patterns and stress urinary incontinence in middle-aged women.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Ingrid E. Nygaard. Spencer Fox Eccles School of Medicine](https://medicine.utah.edu/faculty/ingrid-e-nygaard). Accessed October 2026.
 
 [^2]: [A Tribute to Ingrid Nygaard, MD, MS, Editor-in-Chief for Gynecology, 2014-2018. PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6449038/). Accessed October 2026.
-
-[^3]: Nygaard I, Brubaker L, Zyczynski HM, et al. Long-Term Outcomes Following Abdominal Sacrocolpopexy for Pelvic Organ Prolapse. JAMA. 2013;309(19):2016-2024. doi:[10.1001/jama.2013.4919](https://doi.org/10.1001/jama.2013.4919)
-
-[^4]: Wei JT, Nygaard I, Richter HE, et al. A midurethral sling to reduce incontinence after vaginal prolapse repair. N Engl J Med. 2012;366(25):2358-2367. doi:[10.1056/nejmoa1111967](https://doi.org/10.1056/nejmoa1111967)
-
-[^5]: Hendrickson WK, Zhang C, Jelovsek JE, Nygaard IE, Presson AP. "Longitudinal fluctuations in treatment response after onabotulinumtoxinA and sacral neuromodulation for refractory urgency incontinence." J Urol. 2024;211(1):134–143. doi:[10.1097/ju.0000000000003746](https://doi.org/10.1097/ju.0000000000003746)
-
-[^6]: Bradley CS, Zimmerman MB, Qi Y, Nygaard IE. Natural history of pelvic organ prolapse in postmenopausal women. Obstet Gynecol. 2007;109(4):848-854. doi:[10.1097/01.aog.0000255977.91296.5d](https://doi.org/10.1097/01.aog.0000255977.91296.5d)
-
-[^7]: Rogers RG, Lebküchner U, Kammerer-Doak DN, Thompson PK, Walters MD, Nygaard IE. Obesity and retropubic surgery for stress incontinence: is there really an increased risk of intraoperative complications? Am J Obstet Gynecol. 2006;195(6):1794-1798. doi:[10.1016/j.ajog.2006.07.012](https://doi.org/10.1016/j.ajog.2006.07.012)
-
-[^8]: Nygaard I. "Prevalence of Symptomatic Pelvic Floor Disorders in US Women." *JAMA.* 2008;300(11):1311. doi:[10.1001/jama.300.11.1311](https://doi.org/10.1001/jama.300.11.1311)
-
-[^9]: Nygaard IE, Shaw JM, Bardsley T, et al. "Lifetime physical activity and female stress urinary incontinence." *American Journal of Obstetrics and Gynecology.* 2015;213(1):40.e1–40.e10. doi:[10.1016/j.ajog.2015.01.044](https://doi.org/10.1016/j.ajog.2015.01.044)
 
 </SurgeonProfile>

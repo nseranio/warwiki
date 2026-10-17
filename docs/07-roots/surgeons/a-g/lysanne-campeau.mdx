@@ -3,11 +3,12 @@ title: "Lysanne Campeau"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/lysanne-campeau.json';
 import profile from '@site/src/data/surgeon-profiles/lysanne-campeau.json';
 import citations from '@site/src/data/surgeon-citations/lysanne-campeau.json';
 
-<SurgeonProfile id="lysanne-campeau" profile={profile} citations={citations}>
+<SurgeonProfile id="lysanne-campeau" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,27 +23,38 @@ import citations from '@site/src/data/surgeon-citations/lysanne-campeau.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Campeau's cited work covers female bladder outlet obstruction and urethral stricture reconstruction, including a Blandy flap chapter. Other cited work examines neurogenic bladder pharmacotherapy and urodynamic antibiotic prophylaxis.[^2][^3][^4][^5][^6]
+## Key Publications
 
-- **Intermittent catheterization in neurogenic bladder review** (2017). Senior-authored a systematic review comparing self-intermittent catheterization techniques and catheter types in neurogenic patients.[^7]
-- **Canadian Urological Association catheter-use report** (2020). First-authored the association's best-practice report on urinary catheter use.[^8]
+Campeau's cited work covers female bladder outlet obstruction and urethral stricture reconstruction, including a Blandy flap chapter. Other cited work examines neurogenic bladder pharmacotherapy and urodynamic antibiotic prophylaxis.<sup>[P3](#publication-2)</sup><sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P6](#publication-5)</sup><sup>[P7](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Intermittent catheterization in neurogenic bladder review** (2017). Senior-authored a systematic review comparing self-intermittent catheterization techniques and catheter types in neurogenic patients.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Canadian Urological Association catheter-use report** (2020). First-authored the association's best-practice report on urinary catheter use.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Lysanne Campeau. McGill University](https://www.mcgill.ca/urology/lysanne-campeau). Accessed October 2026.
-
-[^2]: Bouchard B, Campeau L. "Surgery for Female Urethral Stricture." Neurourol Urodyn. 2025;44(1):51–62. doi:[10.1002/nau.25358](https://doi.org/10.1002/nau.25358)
-
-[^3]: Loutochin O, Al Afraa T, Campeau L, et al. "Effect of the anticonvulsant medications pregabalin and lamotrigine on urodynamic parameters in an animal model of neurogenic detrusor overactivity." Neurourol Urodyn. 2012;31(7):1197–1202. doi:[10.1002/nau.21214](https://doi.org/10.1002/nau.21214)
-
-[^4]: Hamouda A, Covarrubias C, Campeau L. Advancing personalized care for neurogenic bladder — what medical management should be first line for bladder storage symptoms in NLUTD: pro anticholinergic. Neurourol Urodyn. 2025. doi:[10.1002/nau.70177](https://doi.org/10.1002/nau.70177)
-
-[^5]: Cameron AP, Campeau L, Brucker BM, et al. "Best practice policy statement on urodynamic antibiotic prophylaxis in the non-index patient." Neurourol Urodyn. 2017;36:915–926. doi:[10.1002/nau.23253](https://doi.org/10.1002/nau.23253)
-
-[^6]: Bouchard B, Campeau L. "Bladder outlet obstruction in women: scope of the problem and differential diagnosis." Neurourology and Urodynamics. 2025;44(1):63-68. doi:[10.1002/nau.25359](https://doi.org/10.1002/nau.25359)
-
-[^7]: Shamout S, Biardeau X, Corcos J, et al. "Outcome comparison of different approaches to self-intermittent catheterization in neurogenic patients: a systematic review." *Spinal Cord.* 2017;55(7):629–643. doi:[10.1038/sc.2016.192](https://doi.org/10.1038/sc.2016.192)
-
-[^8]: Campeau L, Shamout S, Baverstock RJ, et al. "Canadian Urological Association Best Practice Report: Catheter use." *CUAJ.* 2020;14(7). doi:[10.5489/cuaj.6697](https://doi.org/10.5489/cuaj.6697)
 
 </SurgeonProfile>

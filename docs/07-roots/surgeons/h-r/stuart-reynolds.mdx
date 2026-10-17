@@ -3,11 +3,12 @@ title: "W. Stuart Reynolds"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/stuart-reynolds.json';
 import profile from '@site/src/data/surgeon-profiles/stuart-reynolds.json';
 import citations from '@site/src/data/surgeon-citations/stuart-reynolds.json';
 
-<SurgeonProfile id="stuart-reynolds" profile={profile} citations={citations}>
+<SurgeonProfile id="stuart-reynolds" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,12 +24,31 @@ import citations from '@site/src/data/surgeon-citations/stuart-reynolds.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work comes from the Vanderbilt functional urology group: mesh complication surgery, onabotulinumtoxinA outcomes, sacral neuromodulation, and textbook chapters on slings and outlet obstruction after incontinence surgery.[^5][^6][^7][^8]
+## Key Publications
 
-- **Obturator foramen dissection for transobturator mesh excision** (2012). Led a series of 8 women with intractable groin or obturator pain after transobturator mesh in which residual mesh was found and removed through a lateral groin incision in every case, and 5 were cured of pain or infection at a mean 6 months.[^5] Cited on WARWIKI: [Mesh Complications & Removal](/docs/surgical-techniques/04g-prolapse-repair/mesh-complications).
-- **Urinary retention after onabotulinumtoxinA for overactive bladder** (2015). Senior author of a clinical-practice review of 160 patients in which 35% developed retention after a first injection; a preoperative postvoid residual of 100 mL or more was followed by retention in 94%.[^6] Cited on WARWIKI: [Botulinum Toxin (OAB / Storage)](/docs/foundations/pharmacology/storage-oab/botulinum-toxin).
+His cited work comes from the Vanderbilt functional urology group: mesh complication surgery, onabotulinumtoxinA outcomes, sacral neuromodulation, and textbook chapters on slings and outlet obstruction after incontinence surgery.<sup>[P1](#publication-5)</sup><sup>[P2](#publication-6)</sup><sup>[P3](#publication-7)</sup><sup>[P4](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Obturator foramen dissection for transobturator mesh excision** (2012). Led a series of 8 women with intractable groin or obturator pain after transobturator mesh in which residual mesh was found and removed through a lateral groin incision in every case, and 5 were cured of pain or infection at a mean 6 months.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Urinary retention after onabotulinumtoxinA for overactive bladder** (2015). Senior author of a clinical-practice review of 160 patients in which 35% developed retention after a first injection; a preoperative postvoid residual of 100 mL or more was followed by retention in 94%.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+</ol>
 
 [^1]: [William (Stuart) Reynolds, M.D., M.P.H. National Institute of Diabetes and Digestive and Kidney Diseases](https://www.niddk.nih.gov/about-niddk/staff-directory/biography/reynolds-william). Accessed October 2026.
 
@@ -37,13 +57,5 @@ His cited work comes from the Vanderbilt functional urology group: mesh complica
 [^3]: [Education: Female Pelvic Medicine and Reconstructive Surgery Fellowship. Vanderbilt University Medical Center Department of Urology](https://www.vumc.org/urology/education-female-pelvic-medicine-and-reconstructive-surgery-fellowship). Accessed October 2026.
 
 [^4]: [Female Pelvic Medicine and Reconstructive Surgery Fellowship: Our Fellows. Vanderbilt University Medical Center Department of Urology](https://www.vumc.org/urology/person/education-female-pelvic-medicine-and-reconstructive-surgery-fellowship-our-fellows). Accessed October 2026.
-
-[^5]: Reynolds WS, Kit LC, Kaufman MR, Karram M, Bales GT, Dmochowski RR. "Obturator foramen dissection for excision of symptomatic transobturator mesh." *J Urol.* 2012;187(5):1680–1684. doi:[10.1016/j.juro.2011.12.065](https://doi.org/10.1016/j.juro.2011.12.065)
-
-[^6]: Osborn DJ, Kaufman MR, Mock S, Guan MJ, Dmochowski RR, Reynolds WS. "Urinary retention rates after intravesical onabotulinumtoxinA injection for idiopathic overactive bladder in clinical practice and predictors of this outcome." *Neurourol Urodyn.* 2015;34(7):675–678. doi:[10.1002/nau.22642](https://doi.org/10.1002/nau.22642)
-
-[^7]: Cohn JA, Kowalik CG, Kaufman MR, Reynolds WS, Milam DF, Dmochowski RR. "Evaluation of the Axonics Modulation Technologies Sacral Neuromodulation System for the treatment of urinary and fecal dysfunction." *Expert Rev Med Devices.* 2017;14(1):3–14. doi:[10.1080/17434440.2017.1268913](https://doi.org/10.1080/17434440.2017.1268913)
-
-[^8]: Sebesta EM, Kaufman MR, Reynolds WS, Mock S, Dmochowski RR. Diagnosis and treatment of obstruction following incontinence surgery. In: Cardozo L, Staskin D, eds. *Textbook of Female Urology and Urogynecology. Vol 2: Surgical Perspectives.* 5th ed. CRC Press; 2023:847–859.
 
 </SurgeonProfile>

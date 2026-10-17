@@ -51,6 +51,11 @@ function countRefAnchors(content) {
   // GAS-style footnote definitions [^N]: ...
   const footnoteMatches = content.match(/^\[\^[\w-]+\]:\s/gm);
   if (footnoteMatches) total += footnoteMatches.length;
+  // Selected surgeon references render from their single bibliography record.
+  for (const match of content.matchAll(/@site\/src\/data\/surgeon-key-publications\/([^'"\n]+)\.json/g)) {
+    const publications = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/surgeon-key-publications', `${match[1]}.json`), 'utf8'));
+    total += publications.keyPublications.length;
+  }
   return total;
 }
 

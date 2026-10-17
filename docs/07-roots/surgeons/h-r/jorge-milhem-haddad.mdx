@@ -3,11 +3,12 @@ title: "Jorge Milhem Haddad"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jorge-milhem-haddad.json';
 import profile from '@site/src/data/surgeon-profiles/jorge-milhem-haddad.json';
 import citations from '@site/src/data/surgeon-citations/jorge-milhem-haddad.json';
 
-<SurgeonProfile id="jorge-milhem-haddad" profile={profile} citations={citations}>
+<SurgeonProfile id="jorge-milhem-haddad" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -17,19 +18,30 @@ import citations from '@site/src/data/surgeon-citations/jorge-milhem-haddad.json
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited consensus addresses treatment and prevention of recurrent uncomplicated urinary tract infection in Latin America.[^2]
+## Key Publications
+
+His cited consensus addresses treatment and prevention of recurrent uncomplicated urinary tract infection in Latin America.<sup>[P2](#publication-2)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Five-year randomized comparison of prolapse repairs** (2020). Coauthored a multicenter randomized follow-up comparing five-year outcomes of native-tissue and polypropylene-mesh pelvic organ prolapse repair.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+</ol>
+
+## Professional Work
 
 - **FEBRASGO urogynecology and vaginal-surgery manual** (2015). Coordinated the Brazilian federation’s manual covering pelvic organ prolapse, urinary incontinence, pelvic floor disorders, and vaginal surgery.[^3]
-- **Five-year randomized comparison of prolapse repairs** (2020). Coauthored a multicenter randomized follow-up comparing five-year outcomes of native-tissue and polypropylene-mesh pelvic organ prolapse repair.[^4]
 
 [^1]: [iuga.org (Host Site Directory REV2025)](https://www.iuga.org/images/Host_Site_Directory_REV2025.pdf). Accessed October 2026.
 
-[^2]: Haddad JM, Ubertazzi E, Cabrera OS, et al. "Latin American consensus on uncomplicated recurrent urinary tract infection — 2018." Int Urogynecol J. 2020;31(1):35–44. doi:[10.1007/s00192-019-04079-5](https://doi.org/10.1007/s00192-019-04079-5)
-
 [^3]: [grupoamigo.com.br](https://grupoamigo.com.br/wp-content/uploads/2022/06/Manual_de_Uroginecologia_e_Cirurgia_Vaginal.pdf). Accessed October 2026.
-
-[^4]: da Silveira SdRB, Auge AP, Jarmy‐Dibella ZI, et al. "A multicenter, randomized trial comparing pelvic organ prolapse surgical treatment with native tissue and synthetic mesh: A 5‐year follow‐up study." *Neurourology and Urodynamics.* 2020;39(3):1002–1011. doi:[10.1002/nau.24323](https://doi.org/10.1002/nau.24323)
 
 </SurgeonProfile>

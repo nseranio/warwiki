@@ -3,11 +3,12 @@ title: "Irwin Goldstein"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/irwin-goldstein.json';
 import profile from '@site/src/data/surgeon-profiles/irwin-goldstein.json';
 import citations from '@site/src/data/surgeon-citations/irwin-goldstein.json';
 
-<SurgeonProfile id="irwin-goldstein" profile={profile} citations={citations}>
+<SurgeonProfile id="irwin-goldstein" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,13 +22,41 @@ import citations from '@site/src/data/surgeon-citations/irwin-goldstein.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited papers cover erectile dysfunction treatments, including sildenafil, vascular stents, and penile revascularization. Other cited work addresses collagenase treatment for Peyronie's disease and the assessment and management of women's sexual dysfunction.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Oral sildenafil erectile dysfunction trial** (1998). Led randomized studies establishing the efficacy and tolerability of oral sildenafil for erectile dysfunction.[^10] Cited on WARWIKI: [Erectile Dysfunction (Condition)](/docs/clinical-conditions/03g-genital-scrotal/erectile-dysfunction).
-- **Textbook of Female Sexual Function and Dysfunction** (2018). Co-edited a multidisciplinary textbook covering diagnosis and treatment of female sexual function and dysfunction.[^11]
-- **ISSWSH consensus on persistent genital arousal disorder** (2021). Led consensus work that broadened the nomenclature to genito-pelvic dysesthesia and proposed a diagnostic and treatment process.[^12]
+His cited papers cover erectile dysfunction treatments, including sildenafil, vascular stents, and penile revascularization. Other cited work addresses collagenase treatment for Peyronie's disease and the assessment and management of women's sexual dysfunction.<sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P1](#publication-10)</sup><sup>[P7](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Oral sildenafil erectile dysfunction trial** (1998). Led randomized studies establishing the efficacy and tolerability of oral sildenafil for erectile dysfunction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Textbook of Female Sexual Function and Dysfunction** (2018). Co-edited a multidisciplinary textbook covering diagnosis and treatment of female sexual function and dysfunction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**ISSWSH consensus on persistent genital arousal disorder** (2021). Led consensus work that broadened the nomenclature to genito-pelvic dysesthesia and proposed a diagnostic and treatment process.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Meet Dr Goldstein. San Diego Sexual Medicine](https://www.sdsm.info/meet-dr-goldstein). Accessed October 2026.
 
@@ -36,21 +65,5 @@ His cited papers cover erectile dysfunction treatments, including sildenafil, va
 [^3]: [History. Urology](https://www.bumc.bu.edu/urology/about-us/history/). Accessed October 2026.
 
 [^4]: [URL Source: https://www.kidney.org/sites/default/files/national_kidney_foundation_the_first_40_years70_0.pdf](https://www.kidney.org/sites/default/files/national_kidney_foundation_the_first_40_years70_0.pdf). Accessed October 2026.
-
-[^5]: Gelbard M, Goldstein I, Hellstrom WJ, et al. Clinical efficacy, safety and tolerability of collagenase clostridium histolyticum for the treatment of peyronie disease in 2 large double-blind, randomized, placebo controlled phase 3 studies. J Urol. 2013;190(1):199-207. doi:[10.1016/j.juro.2013.01.087](https://doi.org/10.1016/j.juro.2013.01.087)
-
-[^6]: Sohn M, Hatzinger M, Goldstein I, Krishnamurti S. Standard operating procedures for vascular surgery in erectile dysfunction: revascularization and venous procedures. J Sex Med. 2013;10(1):172–9. doi:[10.1111/j.1743-6109.2012.02997.x](https://doi.org/10.1111/j.1743-6109.2012.02997.x)
-
-[^7]: Dicks B, Bastuba M, Goldstein I. Penile revascularization — contemporary update. Asian J Androl. 2013;15(1):5–9. doi:[10.1038/aja.2012.146](https://doi.org/10.1038/aja.2012.146)
-
-[^8]: Goldstein I, Lue TF, Padma-Nathan H, et al. Oral sildenafil in the treatment of erectile dysfunction. N Engl J Med. 1998;338(20):1397–404. doi:[10.1056/nejm199805143382001](https://doi.org/10.1056/nejm199805143382001)
-
-[^9]: Rogers JH, Goldstein I, Kandzari DE, et al. "Zotarolimus-Eluting Peripheral Stents for the Treatment of Erectile Dysfunction in Subjects With Suboptimal Response to Phosphodiesterase-5 Inhibitors." J Am Coll Cardiol. 2012;60(25):2618–2627. doi:[10.1016/j.jacc.2012.08.1016](https://doi.org/10.1016/j.jacc.2012.08.1016)
-
-[^10]: Goldstein I, Lue TF, Padma-Nathan H, et al. "Oral Sildenafil in the Treatment of Erectile Dysfunction." *N Engl J Med.* 1998;338(20):1397–1404. doi:[10.1056/nejm199805143382001](https://doi.org/10.1056/nejm199805143382001)
-
-[^11]: . "Textbook of Female Sexual Function and Dysfunction." 2018. doi:[10.1002/9781119266136](https://doi.org/10.1002/9781119266136)
-
-[^12]: Goldstein I, Komisaruk BR, Pukall CF, et al. "International Society for the Study of Women’s Sexual Health (ISSWSH) Review of Epidemiology and Pathophysiology, and a Consensus Nomenclature and Process of Care for the Management of Persistent Genital Arousal Disorder/Genito-Pelvic Dysesthesia (PGAD/GPD)." *The Journal of Sexual Medicine.* 2021;18(4):665–697. doi:[10.1016/j.jsxm.2021.01.172](https://doi.org/10.1016/j.jsxm.2021.01.172)
 
 </SurgeonProfile>

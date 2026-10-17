@@ -3,11 +3,12 @@ title: "Kris Strohbehn"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/kris-strohbehn.json';
 import profile from '@site/src/data/surgeon-profiles/kris-strohbehn.json';
 import citations from '@site/src/data/surgeon-citations/kris-strohbehn.json';
 
-<SurgeonProfile id="kris-strohbehn" profile={profile} citations={citations}>
+<SurgeonProfile id="kris-strohbehn" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,23 +22,34 @@ import citations from '@site/src/data/surgeon-citations/kris-strohbehn.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Strohbehn's cited studies address the female urethra in stress urinary incontinence: one compares magnetic resonance images with histology, and the other reports an autologous midurethral sling case series.[^3][^4]
+## Key Publications
 
-- **MRI correlation of levator ani anatomy** (1996). Strohbehn led a cadaver MRI and dissection study defining visible levator ani anatomy for pelvic floor research.[^5]
-- **Multicenter evaluation of a collapsible prolapse pessary** (2024). Strohbehn led a seven-center study comparing a collapsible pessary with participants' usual pessaries over three months.[^6] Cited on WARWIKI: [Prolapse Pessaries](/docs/surgical-techniques/04g-prolapse-repair/prolapse-pessaries).
+Strohbehn's cited studies address the female urethra in stress urinary incontinence: one compares magnetic resonance images with histology, and the other reports an autologous midurethral sling case series.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**MRI correlation of levator ani anatomy** (1996). Strohbehn led a cadaver MRI and dissection study defining visible levator ani anatomy for pelvic floor research.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Multicenter evaluation of a collapsible prolapse pessary** (2024). Strohbehn led a seven-center study comparing a collapsible pessary with participants' usual pessaries over three months.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+</ol>
 
 [^1]: [Kris Strohbehn, MD, FACS, FACOG. Dartmouth Health](https://providers.dartmouth-health.org/1716/kris-strohbehn). Accessed October 2026.
 
 [^2]: [Leadership. Society of Gynecologic Surgeons](https://www.sgsonline.org/about/leadership/). Accessed October 2026.
-
-[^3]: Shaw JS, Gerjevic KA, Pollack C, Strohbehn K. Minimally Invasive Autologous Fascia Sling at the Midurethra: A Case Series. Journal of Minimally Invasive Gynecology. 2022;29(10):1165-1169. doi:[10.1016/j.jmig.2022.07.001](https://doi.org/10.1016/j.jmig.2022.07.001)
-
-[^4]: Strohbehn K, Quint LE, Prince MR, Wojno KJ, DeLancey JO. "Magnetic Resonance Imaging Anatomy of the Female Urethra: A Direct Histologic Comparison." Obstet Gynecol. 1996;88(5):750–756. doi:[10.1016/0029-7844(96)00323-7](https://doi.org/10.1016/0029-7844(96)00323-7)
-
-[^5]: STROHBEHN K, ELUS J, STROHBEHN J, et al. "Magnetic resonance imaging of the levator ani with anatomic correlation." *Obstetrics &amp; Gynecology.* 1996;87(2):277–285. doi:[10.1016/0029-7844(95)00410-6](https://doi.org/10.1016/0029-7844(95)00410-6)
-
-[^6]: Strohbehn K, Wadensweiler PM, Richter HE, et al. "Effectiveness and safety of a novel, collapsible pessary for management of pelvic organ prolapse." *American Journal of Obstetrics and Gynecology.* 2024;231(2):271.e1–271.e10. doi:[10.1016/j.ajog.2024.05.009](https://doi.org/10.1016/j.ajog.2024.05.009)
 
 </SurgeonProfile>

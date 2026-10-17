@@ -3,11 +3,12 @@ title: "H. Henry Lai"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/henry-lai.json';
 import profile from '@site/src/data/surgeon-profiles/henry-lai.json';
 import citations from '@site/src/data/surgeon-citations/henry-lai.json';
 
-<SurgeonProfile id="henry-lai" profile={profile} citations={citations}>
+<SurgeonProfile id="henry-lai" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,38 @@ import citations from '@site/src/data/surgeon-citations/henry-lai.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Lai's cited work covers interstitial cystitis and bladder pain syndrome, including Hunner lesion phenotypes, and guidelines for evaluation and treatment of male chronic pelvic pain. Other confirmed citations examine skin preparation before genitourinary prosthetic surgery and outcomes after complex artificial urinary sphincter revision and reimplantation.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **MAPP whole-body pain mapping study** (2017). Led a MAPP study mapping pain beyond the pelvis among patients with urologic chronic pelvic pain syndromes.[^8] Cited on WARWIKI: [Interstitial Cystitis / Bladder Pain Syndrome](/docs/clinical-conditions/03h-pelvic-pain/ic-pbs).
-- **AUA male chronic pelvic pain guideline** (2025). Chaired the AUA guideline panel on evaluation and management of male chronic pelvic pain.[^9] Cited on WARWIKI: [Chronic Scrotal Content Pain](/docs/clinical-conditions/03h-pelvic-pain/chronic-scrotal-content-pain).
+Lai's cited work covers interstitial cystitis and bladder pain syndrome, including Hunner lesion phenotypes, and guidelines for evaluation and treatment of male chronic pelvic pain. Other confirmed citations examine skin preparation before genitourinary prosthetic surgery and outcomes after complex artificial urinary sphincter revision and reimplantation.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P2](#publication-9)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**MAPP whole-body pain mapping study** (2017). Led a MAPP study mapping pain beyond the pelvis among patients with urologic chronic pelvic pain syndromes.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**AUA male chronic pelvic pain guideline** (2025). Chaired the AUA guideline panel on evaluation and management of male chronic pelvic pain.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [H. Henry Lai. University of Iowa Health Care](https://uihc.org/providers/h-henry-lai). Accessed October 2026.
 
 [^2]: [Lai named chair and DEO of Department of Urology. UI Health Care](https://uihealthcare.org/article/lai-named-chair-and-deo-department-urology). Accessed October 2026.
-
-[^3]: Clemens JQ, Erickson DR, Varela NP, Lai HH. "Diagnosis and Treatment of Interstitial Cystitis/Bladder Pain Syndrome." J Urol. 2022;208(1):34–42. doi:[10.1097/ju.0000000000002756](https://doi.org/10.1097/ju.0000000000002756)
-
-[^4]: Lai HH, Pontari MA, Argoff CE, et al. Male Chronic Pelvic Pain: AUA Guideline: Part II Treatment of Chronic Prostatitis/Chronic Pelvic Pain Syndrome. J Urol. 2025;214(2):127-137. doi:[10.1097/ju.0000000000004565](https://doi.org/10.1097/ju.0000000000004565)
-
-[^5]: Lai HH, Pontari MA, Argoff CE, et al. Male Chronic Pelvic Pain: AUA Guideline: Part I Evaluation and Management Approach. J Urol. 2025;214(2):116-126. doi:[10.1097/ju.0000000000004564](https://doi.org/10.1097/ju.0000000000004564)
-
-[^6]: Lai HH, Pontari MA, Argoff CE, et al. Male Chronic Pelvic Pain: AUA Guideline: Part III Treatment of Chronic Scrotal Content Pain. J Urol. 2025;214(2):138-146. doi:[10.1097/ju.0000000000004566](https://doi.org/10.1097/ju.0000000000004566)
-
-[^7]: Yeung LL, Grewal S, Bullock A, Lai HH, Brandes SB. A Comparison of Chlorhexidine-Alcohol Versus Povidone-Iodine for Eliminating Skin Flora Before Genitourinary Prosthetic Surgery: A Randomized Controlled Trial. J Urol. 2013;189(1):136–140. doi:[10.1016/j.juro.2012.08.086](https://doi.org/10.1016/j.juro.2012.08.086)
-
-[^8]: Lai HH, Jemielita T, Sutcliffe S, et al. "Characterization of Whole Body Pain in Urological Chronic Pelvic Pain Syndrome at Baseline: A MAPP Research Network Study." *Journal of Urology.* 2017;198(3):622–631. doi:[10.1016/j.juro.2017.03.132](https://doi.org/10.1016/j.juro.2017.03.132)
-
-[^9]: Lai HH, Pontari MA, Argoff CE, et al. "Male Chronic Pelvic Pain: AUA Guideline: Part I Evaluation and Management Approach." *J Urol.* 2025;214(2):116–126. doi:[10.1097/ju.0000000000004564](https://doi.org/10.1097/ju.0000000000004564)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Mamdouh M. Koraitim"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/mamdouh-koraitim.json';
 import profile from '@site/src/data/surgeon-profiles/mamdouh-koraitim.json';
 import citations from '@site/src/data/surgeon-citations/mamdouh-koraitim.json';
 
-<SurgeonProfile id="mamdouh-koraitim" profile={profile} citations={citations}>
+<SurgeonProfile id="mamdouh-koraitim" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -17,30 +18,38 @@ import citations from '@site/src/data/surgeon-citations/mamdouh-koraitim.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Koraitim's cited papers repeatedly address pelvic fracture urethral injury, including preoperative assessment, posterior urethroplasty approaches, and erectile dysfunction after injury.[^2][^3][^4][^5][^6]
+## Key Publications
 
-- **145-case posterior urethral stricture series** (1995). Reported treatment selection and outcomes for 145 post-traumatic posterior urethral strictures and disruptions over 17 years.[^7] Cited on WARWIKI: [Male Urethroplasty — Incisions & Approaches](/docs/surgical-techniques/04a-urethral-reconstruction/male-urethroplasty-incisions-approaches).
-- **Comparison of initial pelvic fracture urethral injury management** (1996). Compared initial management approaches in 100 male pelvic fracture urethral injuries and reviewed outcomes reported for 771 additional patients.[^8]
-- **Preoperative decision-making for posterior urethroplasty** (2004). Analyzed imaging and endoscopy findings from 167 post-traumatic posterior urethral defects to guide operative selection.[^9] Cited on WARWIKI: [Core-Through Urethrotomy](/docs/surgical-techniques/04a-urethral-reconstruction/core-through-urethrotomy).
+Koraitim's cited papers repeatedly address pelvic fracture urethral injury, including preoperative assessment, posterior urethroplasty approaches, and erectile dysfunction after injury.<sup>[P1](#publication-7)</sup><sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P4](#publication-3)</sup><sup>[P3](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**145-case posterior urethral stricture series** (1995). Reported treatment selection and outcomes for 145 post-traumatic posterior urethral strictures and disruptions over 17 years.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Comparison of initial pelvic fracture urethral injury management** (1996). Compared initial management approaches in 100 male pelvic fracture urethral injuries and reviewed outcomes reported for 771 additional patients.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Preoperative decision-making for posterior urethroplasty** (2004). Analyzed imaging and endoscopy findings from 167 post-traumatic posterior urethral defects to guide operative selection.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Korrespondierende Mitglieder Stand 76. Kongress 2024](https://www.urologenportal.de/fachbesucher/urologische-kongresse/77-dgu-kongress/preise-und-ehrungen/chronologie-der-preistraeger/korrespondierende-mitglieder-stand-75-kongress-2023.html). Accessed October 2026.
-
-[^2]: Koraitim MM. The lessons of 145 post-traumatic posterior urethral strictures treated in 17 years. J Urol. 1995;153(1):63-66. doi:[10.1097/00005392-199501000-00024](https://doi.org/10.1097/00005392-199501000-00024)
-
-[^3]: Koraitim MM. On the art of anastomotic posterior urethroplasty: a 27-year experience. J Urol. 2005;173(1):135-139. doi:[10.1097/01.ju.0000146683.31101.ff](https://doi.org/10.1097/01.ju.0000146683.31101.ff)
-
-[^4]: Koraitim MM. Transpubic urethroplasty revisited: total, superior, or inferior pubectomy? Urology. 2010;75(3):691-694. doi:[10.1016/j.urology.2009.09.026](https://doi.org/10.1016/j.urology.2009.09.026)
-
-[^5]: Koraitim MM. "On the Art of Anastomotic Posterior Urethroplasty: A 27-Year Experience." J Urol. 2005;173(1):135–9. doi:[10.1097/01.ju.0000146683.31101.ff](https://doi.org/10.1097/01.ju.0000146683.31101.ff)
-
-[^6]: Koraitim MM. Post-traumatic posterior urethral strictures: preoperative decision making. Urology. 2004;64(2):228-31. doi:[10.1016/j.urology.2004.03.019](https://doi.org/10.1016/j.urology.2004.03.019)
-
-[^7]: Koraitim MM. "The Lessons of 145 Posttraumatic Posterior Urethral Strictures Treated in 17 Years." *Journal of Urology.* 1995;153(1):63–66. doi:[10.1097/00005392-199501000-00024](https://doi.org/10.1097/00005392-199501000-00024)
-
-[^8]: Koraitim MM. "Pelvic Fracture Urethral Injuries: Evaluation of Various Methods of Management." *Journal of Urology.* 1996;156(4):1288–1291. doi:[10.1016/s0022-5347(01)65571-x](https://doi.org/10.1016/s0022-5347(01)65571-x)
-
-[^9]: Koraitim MM. "Post-traumatic posterior urethral strictures: Preoperative decision making." *Urology.* 2004;64(2):228–231. doi:[10.1016/j.urology.2004.03.019](https://doi.org/10.1016/j.urology.2004.03.019)
 
 </SurgeonProfile>

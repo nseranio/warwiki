@@ -3,11 +3,12 @@ title: "Mark Vierhout"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/mark-vierhout.json';
 import profile from '@site/src/data/surgeon-profiles/mark-vierhout.json';
 import citations from '@site/src/data/surgeon-citations/mark-vierhout.json';
 
-<SurgeonProfile id="mark-vierhout" profile={profile} citations={citations}>
+<SurgeonProfile id="mark-vierhout" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,14 +23,25 @@ import citations from '@site/src/data/surgeon-citations/mark-vierhout.json';
 
 His professorship focused on pelvic floor dysfunction.[^1]
 
-## Contributions
+<a id="contributions"></a>
 
-- **Recurrent prolapse repair randomized trial** (2011). Senior-authored a trial comparing trocar-guided vaginal mesh with conventional repair for recurrent prolapse; it reported anatomical outcomes and mesh exposure.[^2] Cited on WARWIKI: [Mesh & Graft-Augmented Prolapse Repair](/docs/surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs).
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Recurrent prolapse repair randomized trial** (2011). Senior-authored a trial comparing trocar-guided vaginal mesh with conventional repair for recurrent prolapse; it reported anatomical outcomes and mesh exposure.
+
+</KeyPublication>
+
+</ol>
+
+## Professional Work
+
 - **Dutch urogynecology working group and curriculum**. Helped establish the Netherlands Pelvic Floor Working Group and initiated a national urogynecology curriculum.[^3]
 
 [^1]: [Prof. dr. Mark Vierhout. Radboudumc](https://www.radboudumc.nl/personen/mark-vierhout). Accessed October 2026.
-
-[^2]: Withagen MI, Milani AL, den Boon J, et al. "Trocar-Guided Mesh Compared With Conventional Vaginal Repair in Recurrent Prolapse." 2011;117(2):242–250. doi:[10.1097/aog.0b013e318203e6a5](https://doi.org/10.1097/aog.0b013e318203e6a5)
 
 [^3]: [IUGA Announces 2023 Lifetime Achievement Award Recipient](https://www.iuga.org/news/news/iuga-announces-2023-lifetime-achievement-award-recipient). Accessed October 2026.
 

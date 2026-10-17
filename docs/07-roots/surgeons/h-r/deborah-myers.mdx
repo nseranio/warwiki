@@ -3,11 +3,12 @@ title: "Deborah Myers"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/deborah-myers.json';
 import profile from '@site/src/data/surgeon-profiles/deborah-myers.json';
 import citations from '@site/src/data/surgeon-citations/deborah-myers.json';
 
-<SurgeonProfile id="deborah-myers" profile={profile} citations={citations}>
+<SurgeonProfile id="deborah-myers" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,19 +23,30 @@ import citations from '@site/src/data/surgeon-citations/deborah-myers.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Posterior prolapse and masked stress incontinence** (1998). Her prospective study found that severe posterior wall defects can mask stress urinary incontinence during testing.[^4]
-- **Rectocele graft augmentation randomized trial** (2012). Senior-authored a randomized trial finding no 12-month advantage from porcine subintestinal submucosal graft augmentation of rectocele repair.[^5] Cited on WARWIKI: [Posterior Colporrhaphy](/docs/surgical-techniques/04g-prolapse-repair/posterior-colporrhaphy).
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Posterior prolapse and masked stress incontinence** (1998). Her prospective study found that severe posterior wall defects can mask stress urinary incontinence during testing.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Rectocele graft augmentation randomized trial** (2012). Senior-authored a randomized trial finding no 12-month advantage from porcine subintestinal submucosal graft augmentation of rectocele repair.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [augs2026.eventscribe.net (fsPopup.asp)](https://augs2026.eventscribe.net/fsPopup.asp?PresenterId=2469936&mode=presenterinfo). Accessed October 2026.
 
 [^2]: [Myers, Deborah](https://vivo.brown.edu/display/dmyersmd). Accessed October 2026.
 
 [^3]: [rimed.org (2015 51 people)](https://www.rimed.org/rimedicaljournal/2015/03/2015-51-people.pdf). Accessed October 2026.
-
-[^4]: Myers D. "The Effect of Posterior Wall Support Defects on Urodynamic Indices in Stress Urinary Incontinence." *Obstetrics &amp; Gynecology.* 1998;91(5):710–714. doi:[10.1016/s0029-7844(98)00049-0](https://doi.org/10.1016/s0029-7844(98)00049-0)
-
-[^5]: Sung VW, Rardin CR, Raker CA, et al. "Porcine Subintestinal Submucosal Graft Augmentation for Rectocele Repair." *Obstetrics &amp; Gynecology.* 2012;119(1):125–133. doi:[10.1097/aog.0b013e31823d407e](https://doi.org/10.1097/aog.0b013e31823d407e)
 
 </SurgeonProfile>

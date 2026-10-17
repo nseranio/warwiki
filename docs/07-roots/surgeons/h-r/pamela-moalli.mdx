@@ -3,11 +3,12 @@ title: "Pamela A. Moalli"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/pamela-moalli.json';
 import profile from '@site/src/data/surgeon-profiles/pamela-moalli.json';
 import citations from '@site/src/data/surgeon-citations/pamela-moalli.json';
 
-<SurgeonProfile id="pamela-moalli" profile={profile} citations={citations}>
+<SurgeonProfile id="pamela-moalli" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,24 +23,38 @@ import citations from '@site/src/data/surgeon-citations/pamela-moalli.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
+
+## Key Publications
 
 Her laboratory studies the host response of vaginal tissue to polypropylene mesh, in animal models and in mesh removed from patients, along with the mechanisms of prolapse recurrence and maternal birth injury.[^1] She received the Society of Gynecologic Surgeons Distinguished Surgeon Award in 2026.[^2]
 
-- **Pelvic floor and lower urinary tract function** (2016). Senior author of a review describing how anterior vaginal wall support, the arcus tendineus fasciae pelvis and the levator ani maintain continence, and how acquired levator dysfunction can progress from urgency to incomplete emptying and retention.[^4] Cited on WARWIKI: [Female Urethra](/docs/foundations/anatomy-physiology/urinary-tract/female-urethra).
-- **Mesh stiffness and vaginal degeneration** (2013). Senior author of a rhesus macaque sacrocolpopexy study in which the stiffer Gynemesh PS thinned the vaginal smooth muscle layer, increased apoptosis and reduced collagen and elastin content compared with sham surgery and two lower-stiffness meshes.[^5]
-- **Host response to mesh in women with complications** (2016). Senior author of a study of 27 excised mesh-vagina complexes that found a predominantly M1 proinflammatory macrophage response years after implantation, with 88% higher pro-MMP-9 in meshes removed for exposure than in those removed for pain.[^6]
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Pelvic floor and lower urinary tract function** (2016). Senior author of a review describing how anterior vaginal wall support, the arcus tendineus fasciae pelvis and the levator ani maintain continence, and how acquired levator dysfunction can progress from urgency to incomplete emptying and retention.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Mesh stiffness and vaginal degeneration** (2013). Senior author of a rhesus macaque sacrocolpopexy study in which the stiffer Gynemesh PS thinned the vaginal smooth muscle layer, increased apoptosis and reduced collagen and elastin content compared with sham surgery and two lower-stiffness meshes.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Host response to mesh in women with complications** (2016). Senior author of a study of 27 excised mesh-vagina complexes that found a predominantly M1 proinflammatory macrophage response years after implantation, with 88% higher pro-MMP-9 in meshes removed for exposure than in those removed for pain.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Pamela Ann Moalli, MD, PhD. Department of Obstetrics, Gynecology & Reproductive Sciences, University of Pittsburgh](https://www.obgyn.pitt.edu/node/461). Accessed October 2026.
 
 [^2]: [A strategic agreement between MWRIF and Pitt Medicine will advance women's and infants' health research. Pittwire, University of Pittsburgh (July 2026)](https://www.pittwire.pitt.edu/features-articles/2026/07/07/magee-womens-health-research). Accessed October 2026.
 
 [^3]: [UPMC Magee-Womens Hospital Director awarded ASME Grood Interdisciplinary Team Science Medal. UPMC (March 4, 2026)](https://www.upmc.com/media/news/030426-moalli-asme). Accessed October 2026.
-
-[^4]: Chermansky CJ, Moalli PA. "Role of pelvic floor in lower urinary tract function." *Auton Neurosci.* 2016;200:43–48. doi:[10.1016/j.autneu.2015.06.003](https://doi.org/10.1016/j.autneu.2015.06.003)
-
-[^5]: Liang R, Abramowitch S, Knight K, et al. "Vaginal degeneration following implantation of synthetic mesh with increased stiffness." *BJOG.* 2013;120(2):233–243. doi:[10.1111/1471-0528.12085](https://doi.org/10.1111/1471-0528.12085)
-
-[^6]: Nolfi AL, Brown BN, Liang R, et al. "Host response to synthetic mesh in women with mesh complications." *Am J Obstet Gynecol.* 2016;215(2):206.e1–206.e8. doi:[10.1016/j.ajog.2016.04.008](https://doi.org/10.1016/j.ajog.2016.04.008)
 
 </SurgeonProfile>

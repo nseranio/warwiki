@@ -3,11 +3,12 @@ title: "Rachel Bluebond-Langner"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/rachel-bluebond-langner.json';
 import profile from '@site/src/data/surgeon-profiles/rachel-bluebond-langner.json';
 import citations from '@site/src/data/surgeon-citations/rachel-bluebond-langner.json';
 
-<SurgeonProfile id="rachel-bluebond-langner" profile={profile} citations={citations}>
+<SurgeonProfile id="rachel-bluebond-langner" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,30 +21,44 @@ import citations from '@site/src/data/surgeon-citations/rachel-bluebond-langner.
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited work addresses gender-affirming vaginoplasty, including vulvar construction, robotic peritoneal flap approaches, urinary function, and surgery for neovaginal stenosis and other complications. Other cited studies address patient-reported outcomes after penile reconstruction and a gracilis flap technique for vaginectomy and urethral lengthening.[^2][^3][^4][^5][^6]
+## Key Publications
 
-- **Robotic peritoneal-flap vaginoplasty** (2019). With Lee Zhao, adapted robot-assisted peritoneal flaps to augment vaginal depth during gender-affirming vaginoplasty.[^7] Cited on WARWIKI: [Peritoneal Flap Vaginoplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty).
-- **Split pedicled gracilis flap in phalloplasty** (2020). Senior-authored a technique using a split gracilis flap for urethral support and pelvic dead-space closure during phalloplasty.[^8] Cited on WARWIKI: [Gender-Affirming Vaginectomy / Colpectomy](/docs/surgical-techniques/04k-gender-affirming-surgery/vaginectomy).
-- **Five-hundred-case robotic peritoneal-flap vaginoplasty series** (2026). Senior-authored a 500-patient series reporting complications, vaginal dimensions, and sexual-function outcomes after robotic peritoneal-flap vaginoplasty.[^9] Cited on WARWIKI: [Peritoneal Flap Vaginoplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/peritoneal-pull-through-vaginoplasty).
+Her cited work addresses gender-affirming vaginoplasty, including vulvar construction, robotic peritoneal flap approaches, urinary function, and surgery for neovaginal stenosis and other complications. Other cited studies address patient-reported outcomes after penile reconstruction and a gracilis flap technique for vaginectomy and urethral lengthening.<sup>[P4](#publication-2)</sup><sup>[P5](#publication-3)</sup><sup>[P6](#publication-4)</sup><sup>[P7](#publication-5)</sup><sup>[P8](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Robotic peritoneal-flap vaginoplasty** (2019). With Lee Zhao, adapted robot-assisted peritoneal flaps to augment vaginal depth during gender-affirming vaginoplasty.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Split pedicled gracilis flap in phalloplasty** (2020). Senior-authored a technique using a split gracilis flap for urethral support and pelvic dead-space closure during phalloplasty.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Five-hundred-case robotic peritoneal-flap vaginoplasty series** (2026). Senior-authored a 500-patient series reporting complications, vaginal dimensions, and sexual-function outcomes after robotic peritoneal-flap vaginoplasty.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [Rachel Bluebond-Langner, MD. NYU Langone Health](https://nyulangone.org/doctors/1902867393/rachel-bluebond-langner). Accessed October 2026.
-
-[^2]: Dy GW, Salibian AA, Blasdel G, Zhao LC, Bluebond-Langner R. External genital revisions after gender-affirming penile inversion vaginoplasty: surgical assessment, techniques, and outcomes. Plast Reconstr Surg. 2022;149(6):1429–1438. doi:[10.1097/prs.0000000000009165](https://doi.org/10.1097/prs.0000000000009165)
-
-[^3]: Dy GW, Kaoutzanis C, Zhao L, Bluebond-Langner R. Technical refinements of vulvar reconstruction in gender-affirming surgery. Plast Reconstr Surg. 2020;145(5):984e–987e. doi:[10.1097/prs.0000000000006796](https://doi.org/10.1097/prs.0000000000006796)
-
-[^4]: Robinson IS, Cripps CN, Bluebond-Langner R, Zhao LC. "Operative Management of Complications Following Intestinal Vaginoplasty: A Case Series and Systematic Review." Urology. 2023;180:105–112. doi:[10.1016/j.urology.2023.07.005](https://doi.org/10.1016/j.urology.2023.07.005)
-
-[^5]: Robinson IS, Blasdel G, Cohen O, Zhao LC, Bluebond-Langner R. Surgical outcomes following gender-affirming penile reconstruction: patient-reported outcomes from a multi-center, international survey of 129 transmasculine patients. J Sex Med. 2021;18(4):800–811. doi:[10.1016/j.jsxm.2021.01.183](https://doi.org/10.1016/j.jsxm.2021.01.183)
-
-[^6]: Dy GW, Blasdel G, Shakir NA, Bluebond-Langner R, Zhao LC. Robotic peritoneal flap revision of gender-affirming vaginoplasty: a novel technique for treating neovaginal stenosis. Urology. 2021;154:308–314. doi:[10.1016/j.urology.2021.03.024](https://doi.org/10.1016/j.urology.2021.03.024)
-
-[^7]: Jacoby A, Maliha S, Granieri MA, et al. "Robotic Davydov Peritoneal Flap Vaginoplasty for Augmentation of Vaginal Depth in Feminizing Vaginoplasty." *Journal of Urology.* 2019;201(6):1171–1176. doi:[10.1097/ju.0000000000000107](https://doi.org/10.1097/ju.0000000000000107)
-
-[^8]: Cohen O, Stranix JT, Zhao L, et al. "Use of a Split Pedicled Gracilis Muscle Flap in Robotically Assisted Vaginectomy and Urethral Lengthening for Phalloplasty: A Novel Technique for Female-to-Male Genital Reconstruction." 2020;145(6):1512–1515. doi:[10.1097/prs.0000000000006838](https://doi.org/10.1097/prs.0000000000006838)
-
-[^9]: Blasdel G, Hemal K, Dubach-Reinhold C, et al. "Gender-affirming Vaginoplasty Using Robotic Peritoneal Flap Method." 2025;283(6):1068–1074. doi:[10.1097/sla.0000000000006621](https://doi.org/10.1097/sla.0000000000006621)
 
 </SurgeonProfile>

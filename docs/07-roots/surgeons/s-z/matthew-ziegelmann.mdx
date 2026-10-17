@@ -3,11 +3,12 @@ title: "Matthew J. Ziegelmann"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/matthew-ziegelmann.json';
 import profile from '@site/src/data/surgeon-profiles/matthew-ziegelmann.json';
 import citations from '@site/src/data/surgeon-citations/matthew-ziegelmann.json';
 
-<SurgeonProfile id="matthew-ziegelmann" profile={profile} citations={citations}>
+<SurgeonProfile id="matthew-ziegelmann" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,31 +22,40 @@ import citations from '@site/src/data/surgeon-citations/matthew-ziegelmann.json'
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers Peyronie's disease treatment with penile traction, collagenase injections, penile prostheses, and plaque incision with grafting.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Modified glanulopexy for penile prosthesis deformity** (2018). Described a glanulopexy modification for glanular hypermobility or supersonic transporter deformity associated with penile prostheses.[^9] Cited on WARWIKI: [Revision Scenarios in Penile Prosthesis Surgery](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios).
-- **RestoreX penile traction randomized trial** (2019). First-authored a randomized trial of short-duration RestoreX traction therapy for penile curvature and length in Peyronie’s disease.[^10] Cited on WARWIKI: [Penile Traction Therapy (PTT)](/docs/surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy).
+His cited work covers Peyronie's disease treatment with penile traction, collagenase injections, penile prostheses, and plaque incision with grafting.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P2](#publication-10)</sup><sup>[P6](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Modified glanulopexy for penile prosthesis deformity** (2018). Described a glanulopexy modification for glanular hypermobility or supersonic transporter deformity associated with penile prostheses.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**RestoreX penile traction randomized trial** (2019). First-authored a randomized trial of short-duration RestoreX traction therapy for penile curvature and length in Peyronie’s disease.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Matt J. Ziegelmann, M.D.](https://www.mayo.edu/research/faculty/ziegelmann-matt-j-m-d/bio-20593377). Accessed October 2026.
 
 [^2]: [Matt J. Ziegelmann, M.D.](https://www.mayoclinic.org/biographies/ziegelmann-matt-j-m-d/bio-20460946). Accessed October 2026.
 
 [^3]: [Andrology Fellowship. Rush University](https://www.rushu.rush.edu/education-training/graduate-medical-education/fellowship-programs/andrology-fellowship). Accessed October 2026.
-
-[^4]: Farrell MR, Abdelsayed GA, Ziegelmann MJ, Levine LA. A comparison of hemostatic patches versus pericardium allograft for the treatment of complex Peyronie's disease with penile prosthesis and plaque incision. Urology. 2019;129:113–118. doi:[10.1016/j.urology.2019.03.008](https://doi.org/10.1016/j.urology.2019.03.008)
-
-[^5]: Ziegelmann M, Hu Y, Xiang Q, et al. Incremental treatment response by cycle with collagenase clostridium histolyticum for Peyronie's disease: a pooled analysis of two phase 3 trials. Urology. 2023;175:126–131. doi:[10.1016/j.urology.2023.02.019](https://doi.org/10.1016/j.urology.2023.02.019)
-
-[^6]: Ziegelmann MJ, Viers BR, Montgomery BD, et al. Clinical Experience With Penile Traction Therapy Among Men Undergoing Collagenase Clostridium histolyticum for Peyronie Disease. Urology. 2017;104:102-109. doi:[10.1016/j.urology.2017.01.054](https://doi.org/10.1016/j.urology.2017.01.054)
-
-[^7]: Ziegelmann M, Savage J, Toussi A, et al. "Outcomes of a novel penile traction device in men with Peyronie's disease: a randomized, single-blind, controlled trial." J Urol. 2019;202(3):599–610. doi:[10.1097/ju.0000000000000245](https://doi.org/10.1097/ju.0000000000000245)
-
-[^8]: Joseph J, Ziegelmann MJ, Alom M, et al. "Outcomes of RestoreX penile traction therapy in men with Peyronie's disease: results from open label and follow-up phases." J Sex Med. 2020;17(12):2462–2471. doi:[10.1016/j.jsxm.2020.10.003](https://doi.org/10.1016/j.jsxm.2020.10.003)
-
-[^9]: Ziegelmann MJ, Alom M, Bole R, et al. "Modified Glanulopexy Technique for Supersonic Transporter Deformity and Glanular Hypermobility in Men With Penile Prostheses." 2018;15(6):914–919. doi:[10.1016/j.jsxm.2018.04.633](https://doi.org/10.1016/j.jsxm.2018.04.633)
-
-[^10]: Ziegelmann M, Savage J, Toussi A, et al. "Outcomes of a Novel Penile Traction Device in Men with Peyronie’s Disease: A Randomized, Single-Blind, Controlled Trial." *Journal of Urology.* 2019;202(3):599–610. doi:[10.1097/ju.0000000000000245](https://doi.org/10.1097/ju.0000000000000245)
 
 </SurgeonProfile>

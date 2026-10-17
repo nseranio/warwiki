@@ -3,11 +3,12 @@ title: "Cheryl Iglesia"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/cheryl-iglesia.json';
 import profile from '@site/src/data/surgeon-profiles/cheryl-iglesia.json';
 import citations from '@site/src/data/surgeon-citations/cheryl-iglesia.json';
 
-<SurgeonProfile id="cheryl-iglesia" profile={profile} citations={citations}>
+<SurgeonProfile id="cheryl-iglesia" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,9 +24,19 @@ import citations from '@site/src/data/surgeon-citations/cheryl-iglesia.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Randomized trial of vaginal mesh for prolapse** (2010). Led a mesh-versus-native-tissue prolapse trial stopped after reaching its predetermined mesh erosion criterion.[^5]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Randomized trial of vaginal mesh for prolapse** (2010). Led a mesh-versus-native-tissue prolapse trial stopped after reaching its predetermined mesh erosion criterion.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Cheryl Bernadette Iglesia, MD| Obstetrics And Gynecology, Urogynecology. MedStar Health](https://www.medstarhealth.org/Doctors/cheryl-bernadette-iglesia-md). Accessed October 2026.
 
@@ -34,7 +45,5 @@ import citations from '@site/src/data/surgeon-citations/cheryl-iglesia.json';
 [^3]: [OGDP-2022-Curriculum-Vitae-Cheryl-Iglesia.pdf](https://fda.report/media/162146/OGDP-2022-Curriculum-Vitae-Cheryl-Iglesia.pdf). Accessed October 2026.
 
 [^4]: [History. Society of Gynecologic Surgeons](https://www.sgsonline.org/about/history/). Accessed October 2026.
-
-[^5]: Iglesia CB, Sokol AI, Sokol ER, et al. "Vaginal Mesh for Prolapse." 2010;116(2):293–303. doi:[10.1097/aog.0b013e3181e7d7f8](https://doi.org/10.1097/aog.0b013e3181e7d7f8)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Marcus J. Drake"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/marcus-drake.json';
 import profile from '@site/src/data/surgeon-profiles/marcus-drake.json';
 import citations from '@site/src/data/surgeon-citations/marcus-drake.json';
 
-<SurgeonProfile id="marcus-drake" profile={profile} citations={citations}>
+<SurgeonProfile id="marcus-drake" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -19,26 +20,32 @@ import citations from '@site/src/data/surgeon-citations/marcus-drake.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers urodynamic practice and assessment of lower urinary tract dysfunction, including detrusor underactivity and urodynamics before prostate surgery.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **UPSTREAM trial** (2020). Led a 26-hospital randomized trial evaluating routine invasive urodynamics before surgery for male lower urinary tract symptoms.[^8] Cited on WARWIKI: [Benign Prostatic Hyperplasia](/docs/clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction).
+His cited work covers urodynamic practice and assessment of lower urinary tract dysfunction, including detrusor underactivity and urodynamics before prostate surgery.<sup>[P2](#publication-3)</sup><sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P1](#publication-8)</sup><sup>[P5](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**UPSTREAM trial** (2020). Led a 26-hospital randomized trial evaluating routine invasive urodynamics before surgery for male lower urinary tract symptoms.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Let’s talk bladder. Imperial College London](https://www.imperial.ac.uk/events/170550/lets-talk-bladder-dont-be-shy/). Accessed October 2026.
 
 [^2]: [Mr Marcus Drake. Imperial College Healthcare NHS Trust](https://www.imperial.nhs.uk/consultants/marcus-drake). Accessed October 2026.
-
-[^3]: Drake MJ, Williams J, Bijos DA. "Voiding dysfunction due to detrusor underactivity: an overview." Nat Rev Urol. 2014;11(8):454–464. doi:[10.1038/nrurol.2014.156](https://doi.org/10.1038/nrurol.2014.156)
-
-[^4]: Drake MJ, Doumouchtsis SK, Hashim H, Gammie A. "Fundamentals of Urodynamic Practice, Based on International Continence Society Good Urodynamic Practices Recommendations." Neurourol Urodyn. 2018;37(S6):S50–S60. doi:[10.1002/nau.23773]](https://doi.org/10.1002/nau.23773])
-
-[^5]: Drake M, Tindle R, Lee S-M. Cystometry and Pressure-Flow Studies. In: Drake M, Hashim H, Gammie A, eds. Abrams' Urodynamics. 4th ed. Wiley-Blackwell; 2021:109-157.
-
-[^6]: Drake MJ, Lewis AL, Young GJ, et al. "Diagnostic Assessment of Lower Urinary Tract Symptoms in Men Considering Prostate Surgery: A Noninferiority Randomised Controlled Trial of Urodynamics in 26 Hospitals." Eur Urol. 2020;78(5):701-710. doi:[10.1016/j.eururo.2020.06.004](https://doi.org/10.1016/j.eururo.2020.06.004)
-
-[^7]: Drake M, Nettleton J, Belal M. Neurological Disease and LUTS. In: Drake M, Hashim H, Gammie A, eds. Abrams' Urodynamics. 4th ed. Wiley-Blackwell; 2021:313–359.
-
-[^8]: Drake MJ, Lewis AL, Young GJ, et al. "Diagnostic Assessment of Lower Urinary Tract Symptoms in Men Considering Prostate Surgery: A Noninferiority Randomised Controlled Trial of Urodynamics in 26 Hospitals." *European Urology.* 2020;78(5):701–710. doi:[10.1016/j.eururo.2020.06.004](https://doi.org/10.1016/j.eururo.2020.06.004)
 
 </SurgeonProfile>

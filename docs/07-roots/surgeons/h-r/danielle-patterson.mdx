@@ -3,11 +3,12 @@ title: "Danielle Patterson"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/danielle-patterson.json';
 import profile from '@site/src/data/surgeon-profiles/danielle-patterson.json';
 import citations from '@site/src/data/surgeon-citations/danielle-patterson.json';
 
-<SurgeonProfile id="danielle-patterson" profile={profile} citations={citations}>
+<SurgeonProfile id="danielle-patterson" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,22 +24,36 @@ import citations from '@site/src/data/surgeon-citations/danielle-patterson.json'
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her published work covers management of failed midurethral slings, cost-utility modeling of stress incontinence treatment, and claims-based outcome studies of prolapse surgery with Johns Hopkins fellows.[^3][^4][^5]
+## Key Publications
 
-- **Sling plication for recurrent stress incontinence** (2010). Led a series of 20 women with recurrent stress incontinence after a synthetic midurethral sling in which midline plication of the sling under sedation gave subjective improvement in 85% at a median follow-up of 54.5 days, with no complications.[^3]
-- **Cost utility of stress incontinence treatment** (2015). Senior author of a Markov decision model in which the incontinence pessary was the most cost-effective option at a willingness-to-pay threshold of $50,000 and surgery became the most cost-effective at $60,000.[^4]
-- **Reoperation after sacrocolpopexy with or without hysterectomy** (2023). Senior author of a MarketScan cohort of 3463 women in which reoperation for prolapse (1.5%, 1.1% and 1.5%) and for mesh complications did not differ among supracervical hysterectomy, total hysterectomy and no hysterectomy.[^5]
+Her published work covers management of failed midurethral slings, cost-utility modeling of stress incontinence treatment, and claims-based outcome studies of prolapse surgery with Johns Hopkins fellows.<sup>[P1](#publication-3)</sup><sup>[P2](#publication-4)</sup><sup>[P3](#publication-5)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Sling plication for recurrent stress incontinence** (2010). Led a series of 20 women with recurrent stress incontinence after a synthetic midurethral sling in which midline plication of the sling under sedation gave subjective improvement in 85% at a median follow-up of 54.5 days, with no complications.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Cost utility of stress incontinence treatment** (2015). Senior author of a Markov decision model in which the incontinence pessary was the most cost-effective option at a willingness-to-pay threshold of $50,000 and surgery became the most cost-effective at $60,000.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Reoperation after sacrocolpopexy with or without hysterectomy** (2023). Senior author of a MarketScan cohort of 3463 women in which reoperation for prolapse (1.5%, 1.1% and 1.5%) and for mesh complications did not differ among supracervical hysterectomy, total hysterectomy and no hysterectomy.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Danielle Patterson, MD, SM. Johns Hopkins Medicine](https://profiles.hopkinsmedicine.org/provider/danielle-patterson/2700533). Accessed October 2026.
 
 [^2]: [Urogynecology and Reconstructive Pelvic Surgery Fellowship. Johns Hopkins Medicine, Gynecology and Obstetrics](https://www.hopkinsmedicine.org/gynecology-obstetrics/education/fellowships/fpmrs). Accessed October 2026.
-
-[^3]: Patterson D, Rajan S, Kohli N. "Sling plication for recurrent stress urinary incontinence." *Female Pelvic Med Reconstr Surg.* 2010;16(5):307–309. doi:[10.1097/SPV.0b013e3181ed3fc3](https://doi.org/10.1097/SPV.0b013e3181ed3fc3)
-
-[^4]: Von Bargen E, Patterson D. "Cost utility of the treatment of stress urinary incontinence." *Female Pelvic Med Reconstr Surg.* 2015;21(3):150–153. doi:[10.1097/SPV.0000000000000159](https://doi.org/10.1097/SPV.0000000000000159)
-
-[^5]: Kikuchi JY, Yanek LR, Handa VL, Chen CCG, Jacobs S, Blomquist J, Patterson D. "Prolapse and mesh reoperations following sacrocolpopexy: comparing supracervical hysterectomy, total hysterectomy, and no hysterectomy." *Int Urogynecol J.* 2023;34(1):135–145. doi:[10.1007/s00192-022-05263-w](https://doi.org/10.1007/s00192-022-05263-w)
 
 </SurgeonProfile>

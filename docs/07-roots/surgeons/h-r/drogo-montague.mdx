@@ -3,11 +3,12 @@ title: "Drogo K. Montague"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/drogo-montague.json';
 import profile from '@site/src/data/surgeon-profiles/drogo-montague.json';
 import citations from '@site/src/data/surgeon-citations/drogo-montague.json';
 
-<SurgeonProfile id="drogo-montague" profile={profile} citations={citations}>
+<SurgeonProfile id="drogo-montague" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,32 +21,46 @@ import citations from '@site/src/data/surgeon-citations/drogo-montague.json';
 
 Montague worked on American Urological Association guidelines.[^3]
 
-## Contributions
+<a id="contributions"></a>
 
-Montague's cited work addresses artificial urinary sphincter implantation, penile prosthesis outcomes in transplant recipients, and corporoplasty for penile curvature. An earlier paper examines jejunal conduit urinary diversion.[^4][^5][^6][^7]
+## Key Publications
 
-- **1996 AUA erectile dysfunction guideline** (1996). Chaired the AUA panel that evaluated treatments for organic erectile dysfunction and issued practice recommendations.[^8]
-- **Prosthesis cylinder selection in Peyronie’s disease** (1996). Compared AMS 700 CX and Ultrex cylinders for correcting deformity during penile prosthesis implantation in men with Peyronie’s disease.[^9]
-- **Long-term artificial urinary sphincter outcomes** (2001). Led a series assessing long-term continence and patient satisfaction after artificial sphincter implantation for post-prostatectomy incontinence.[^10]
+Montague's cited work addresses artificial urinary sphincter implantation, penile prosthesis outcomes in transplant recipients, and corporoplasty for penile curvature. An earlier paper examines jejunal conduit urinary diversion.<sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**1996 AUA erectile dysfunction guideline** (1996). Chaired the AUA panel that evaluated treatments for organic erectile dysfunction and issued practice recommendations.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Prosthesis cylinder selection in Peyronie’s disease** (1996). Compared AMS 700 CX and Ultrex cylinders for correcting deformity during penile prosthesis implantation in men with Peyronie’s disease.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Long-term artificial urinary sphincter outcomes** (2001). Led a series assessing long-term continence and patient satisfaction after artificial sphincter implantation for post-prostatectomy incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [find-doctor.ama-assn.org (5477741)](https://find-doctor.ama-assn.org/doctor/drogo-k-montague-md/5477741). Accessed October 2026.
 
 [^2]: [Peyronie’s Disease Expert on ‘Erectile Insufficiency’ and New Guide to Safe Sex](https://consultqd.clevelandclinic.org/peyronies-disease-expert-on-erectile-insufficiency-and-new-guide-to-safe-sex). Accessed October 2026.
 
 [^3]: [AwardsArchive](https://api.auanet.org/Content/awardsarchive/PC). Accessed October 2026.
-
-[^4]: Klein EA, Montie JE, Montague DK, Novick AC, Straffon RA. "Jejunal conduit urinary diversion." J Urol. 1986;135(2):244–246. doi:[10.1016/s0022-5347(17)45598-4](https://doi.org/10.1016/s0022-5347(17)45598-4)
-
-[^5]: Montague DK. Artificial Urinary Sphincter Implantation in the Adult Male. In: Montague DK, Gill IS, Angermeier KW, Ross JH, eds. Textbook of Reconstructive Urologic Surgery. Informa Healthcare; 2008:392-398.
-
-[^6]: Sun AY, Babbar P, Gill BC, Angermeier KW, Montague DK. Penile Prosthesis in Solid Organ Transplant Recipients-A Matched Cohort Study. Urology. 2018;117:86-88. doi:[10.1016/j.urology.2018.03.048](https://doi.org/10.1016/j.urology.2018.03.048)
-
-[^7]: Daitch JA, Angermeier KW, Montague DK. Modified corporoplasty for penile curvature: long-term results and patient satisfaction. J Urol. 1999;162(6):2006–2009. doi:[10.1016/s0022-5347(05)68088-3](https://doi.org/10.1016/s0022-5347(05)68088-3)
-
-[^8]: Montague DK, Barada JH, Belker AM, et al. "Clinical Guidelines Panel on Erectile Dysfunction: Summary Report on the Treatment of Organic Erectile Dysfunction." *Journal of Urology.* 1996;156(6):2007–2011. doi:[10.1016/s0022-5347(01)65419-3](https://doi.org/10.1016/s0022-5347(01)65419-3)
-
-[^9]: Montague DK, Angermeier KW, Lakin MM, et al. "AMS 3-Piece Inflatable Penile Prosthesis Implantation in Men with Peyronie's Disease: Comparison of CX and Ultrex Cylinders." *Journal of Urology.* 1996;156(5):1633–1635. doi:[10.1016/s0022-5347(01)65468-5](https://doi.org/10.1016/s0022-5347(01)65468-5)
-
-[^10]: MONTAGUE DK, ANGERMEIER KW, PAOLONE DR. "LONG-TERM CONTINENCE AND PATIENT SATISFACTION AFTER ARTIFICIAL SPHINCTER IMPLANTATION FOR URINARY INCONTINENCE AFTER PROSTATECTOMY." *Journal of Urology.* 2001;166(2):547–549. doi:[10.1016/s0022-5347(05)65981-2](https://doi.org/10.1016/s0022-5347(05)65981-2)
 
 </SurgeonProfile>

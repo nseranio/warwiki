@@ -3,11 +3,12 @@ title: "Christopher R. Chapple"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/christopher-chapple.json';
 import profile from '@site/src/data/surgeon-profiles/christopher-chapple.json';
 import citations from '@site/src/data/surgeon-citations/christopher-chapple.json';
 
-<SurgeonProfile id="christopher-chapple" profile={profile} citations={citations}>
+<SurgeonProfile id="christopher-chapple" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,31 +22,42 @@ import citations from '@site/src/data/surgeon-citations/christopher-chapple.json
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Chapple's cited work covers male and female urethral reconstruction, including graft augmentation and substitution urethroplasty. Other confirmed papers examine overactive and underactive bladder treatment, assessment, and terminology.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Tissue-engineered buccal mucosa urethroplasty series** (2008). Senior-authored a clinical series reporting use of tissue-engineered buccal mucosa grafts for substitution urethroplasty.[^9] Cited on WARWIKI: [Liquid / Minced Buccal Mucosal Graft](/docs/surgical-techniques/04a-urethral-reconstruction/liquid-minced-buccal).
-- **Twelve-month mirabegron phase 3 trial** (2013). First-authored a randomized phase 3 study comparing twelve-month mirabegron treatment with tolterodine for overactive bladder.[^10]
+Chapple's cited work covers male and female urethral reconstruction, including graft augmentation and substitution urethroplasty. Other confirmed papers examine overactive and underactive bladder treatment, assessment, and terminology.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Tissue-engineered buccal mucosa urethroplasty series** (2008). Senior-authored a clinical series reporting use of tissue-engineered buccal mucosa grafts for substitution urethroplasty.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Twelve-month mirabegron phase 3 trial** (2013). First-authored a randomized phase 3 study comparing twelve-month mirabegron treatment with tolterodine for overactive bladder.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Academy of Europe: CV](https://www.ae-info.org/ae/Member/Chapple_Christopher/CV). Accessed October 2026.
 
 [^2]: [20250227085040_51843.pdf](https://cdn.techscience.cn/uploads/attached/file/20250227/20250227085040_51843.pdf). Accessed October 2026.
 
 [^3]: [The EAU has a new Secretary General. Uroweb](https://uroweb.org/news/the-eau-has-a-new-secretary-general). Accessed October 2026.
-
-[^4]: Mangera A, Patterson JM, Chapple CR. "A Systematic Review of Graft Augmentation Urethroplasty Techniques for the Treatment of Anterior Urethral Strictures." Eur Urol. 2011;59(5):797-814. doi:[10.1016/j.eururo.2011.02.010](https://doi.org/10.1016/j.eururo.2011.02.010)
-
-[^5]: Patterson JM, Chapple CR. Surgical techniques in substitution urethroplasty using buccal mucosa for the treatment of anterior urethral strictures. Eur Urol. 2008;53(6):1162-1171. doi:[10.1016/j.eururo.2007.10.011](https://doi.org/10.1016/j.eururo.2007.10.011)
-
-[^6]: Osman NI, Mangera A, Chapple CR. A systematic review of surgical techniques used in the treatment of female urethral stricture. Eur Urol. 2013;64(6):965-973. doi:[10.1016/j.eururo.2013.07.038](https://doi.org/10.1016/j.eururo.2013.07.038)
-
-[^7]: Chapple C, Sievert KD, MacDiarmid S, et al. "OnabotulinumtoxinA 100 U significantly improves all idiopathic overactive bladder symptoms and quality of life in patients with overactive bladder and urinary incontinence: a randomised, double-blind, placebo-controlled trial." Eur Urol. 2013;64(2):249–256. doi:[10.1016/j.eururo.2013.04.001](https://doi.org/10.1016/j.eururo.2013.04.001)
-
-[^8]: Abdel-Fattah M, Chapple C, Cooper D, et al. "Invasive urodynamic investigations in the management of women with refractory overactive bladder symptoms (FUTURE) in the UK: a multicentre, superiority, parallel, open-label, randomised controlled trial." Lancet. 2025;405(10484):1057–1068. doi:[10.1016/s0140-6736(24)01886-5](https://doi.org/10.1016/s0140-6736(24)01886-5)
-
-[^9]: Bhargava S, Patterson JM, Inman RD, et al. "Tissue-Engineered Buccal Mucosa Urethroplasty—Clinical Outcomes." *European Urology.* 2008;53(6):1263–1271. doi:[10.1016/j.eururo.2008.01.061](https://doi.org/10.1016/j.eururo.2008.01.061)
-
-[^10]: Chapple CR, Kaplan SA, Mitcheson D, et al. "Randomized Double-blind, Active-controlled Phase 3 Study to Assess 12-Month Safety and Efficacy of Mirabegron, a β3-Adrenoceptor Agonist, in Overactive Bladder." *European Urology.* 2013;63(2):296–305. doi:[10.1016/j.eururo.2012.10.048](https://doi.org/10.1016/j.eururo.2012.10.048)
 
 </SurgeonProfile>

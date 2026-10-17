@@ -3,11 +3,12 @@ title: "Nicolaas Lumen"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/nicolaas-lumen.json';
 import profile from '@site/src/data/surgeon-profiles/nicolaas-lumen.json';
 import citations from '@site/src/data/surgeon-citations/nicolaas-lumen.json';
 
-<SurgeonProfile id="nicolaas-lumen" profile={profile} citations={citations}>
+<SurgeonProfile id="nicolaas-lumen" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,13 +22,43 @@ import citations from '@site/src/data/surgeon-citations/nicolaas-lumen.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Lumen's cited work covers urethral reconstruction for male and female stricture disease, including oral grafts, perineal urethrostomy, nontransecting repair, and reconstruction after phalloplasty. The cited work also includes EAU urethral stricture guidelines.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Etiology of urethral stricture disease** (2009). Led a study of 268 patients that characterized contemporary causes of urethral stricture disease.[^10] Cited on WARWIKI: [Male Urethral Stricture](/docs/clinical-conditions/03b-voiding-outlet/urethral-stricture).
-- **Nontransecting anastomotic urethroplasty outcomes** (2016). Reported surgical and functional outcomes after nontransecting anastomotic repair of urethral strictures.[^11] Cited on WARWIKI: [Non-Transecting Bulbar Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/non-transecting-bulbar).
-- **Chair, EAU urethral stricture guidelines panel** (2021). Chaired the EAU panel that issued guidance on male urethral stricture management.[^12]
+Lumen's cited work covers urethral reconstruction for male and female stricture disease, including oral grafts, perineal urethrostomy, nontransecting repair, and reconstruction after phalloplasty. The cited work also includes EAU urethral stricture guidelines.<sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup><sup>[P8](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Etiology of urethral stricture disease** (2009). Led a study of 268 patients that characterized contemporary causes of urethral stricture disease.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Nontransecting anastomotic urethroplasty outcomes** (2016). Reported surgical and functional outcomes after nontransecting anastomotic repair of urethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Chair, EAU urethral stricture guidelines panel** (2021). Chaired the EAU panel that issued guidance on male urethral stricture management.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [Research Explorer. Researcher profile for Nicolaas Lumen](https://research.ugent.be/web/person/nicolaas-lumen-0/en). Accessed October 2026.
 
@@ -36,21 +67,5 @@ Lumen's cited work covers urethral reconstruction for male and female stricture 
 [^3]: [prof. Nicolaas Lumen (MD, PhD). CRIG](https://www.crig.ugent.be/en/prof-nicolaas-lumen-md-phd). Accessed October 2026.
 
 [^4]: [Panel of the Urethral Strictures guideline. Uroweb](https://uroweb.org/guidelines/urethral-strictures/panel). Accessed October 2026.
-
-[^5]: D'Arpa S, Claes K, Lumen N, et al. "Urethral Reconstruction in Anterolateral Thigh Flap Phalloplasty: A 93-Case Experience." Plast Reconstr Surg. 2019;143(2):382e–392e. doi:[10.1097/prs.0000000000005278](https://doi.org/10.1097/prs.0000000000005278)
-
-[^6]: Turchi B, Lumen N, Verla W, Waterloos M. "Female urethral stricture disease: a narrative review on diagnosis, surgical techniques and outcomes." Int J Impot Res. 2026;38(4):286-295. [PMID: 40348941]. doi:[10.1038/s41443-025-01079-6](https://doi.org/10.1038/s41443-025-01079-6)
-
-[^7]: Lumen N, Vierstraete-Verlinde S, Oosterlinck W, et al. "Buccal Versus Lingual Mucosa Graft in Anterior Urethroplasty: A Prospective Comparison of Surgical Outcome and Donor Site Morbidity." J Urol. 2016;195(1):112–7. doi:[10.1016/j.juro.2015.07.098](https://doi.org/10.1016/j.juro.2015.07.098)
-
-[^8]: Verla W, Oosterlinck W, Waterloos M, Spinoit AF, Lumen N. "Perineal urethrostomy for complicated anterior urethral strictures: indications and patient's choice — an analysis at a single institution." Urology. 2020;138:160–165. doi:[10.1016/j.urology.2019.11.064](https://doi.org/10.1016/j.urology.2019.11.064)
-
-[^9]: Verla W, Oosterlinck W, Waterloos M, Lumen N. "Vessel-sparing excision and primary anastomosis." J Vis Exp. 2019;(143). doi:[10.3791/58214](https://doi.org/10.3791/58214)
-
-[^10]: Lumen N, Hoebeke P, Willemsen P, et al. "Etiology of Urethral Stricture Disease in the 21st Century." *Journal of Urology.* 2009;182(3):983–987. doi:[10.1016/j.juro.2009.05.023](https://doi.org/10.1016/j.juro.2009.05.023)
-
-[^11]: Lumen N, Poelaert F, Oosterlinck W, et al. "Nontransecting Anastomotic Repair in Urethral Reconstruction: Surgical and Functional Outcomes." *Journal of Urology.* 2016;196(6):1679–1684. doi:[10.1016/j.juro.2016.06.016](https://doi.org/10.1016/j.juro.2016.06.016)
-
-[^12]: Lumen N, Campos-Juanatey F, Greenwell T, et al. "European Association of Urology Guidelines on Urethral Stricture Disease (Part 1): Management of Male Urethral Stricture Disease." *European Urology.* 2021;80(2):190–200. doi:[10.1016/j.eururo.2021.05.022](https://doi.org/10.1016/j.eururo.2021.05.022)
 
 </SurgeonProfile>

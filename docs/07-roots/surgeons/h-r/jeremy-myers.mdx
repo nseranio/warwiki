@@ -3,11 +3,12 @@ title: "Jeremy B. Myers"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jeremy-myers.json';
 import profile from '@site/src/data/surgeon-profiles/jeremy-myers.json';
 import citations from '@site/src/data/surgeon-citations/jeremy-myers.json';
 
-<SurgeonProfile id="jeremy-myers" profile={profile} citations={citations}>
+<SurgeonProfile id="jeremy-myers" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,28 +21,39 @@ import citations from '@site/src/data/surgeon-citations/jeremy-myers.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers urethral reconstruction and stricture outcomes, neurogenic bladder augmentation and urinary diversion, and reconstruction after pelvic radiation injury.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Spinal cord injury bladder-management comparative study** (2020). Led a multicenter observational study comparing patient-reported outcomes across bladder-management approaches after spinal cord injury.[^8] Cited on WARWIKI: [Spinal Cord Injury](/docs/clinical-conditions/03d-nlutd/nlutd-spinal-cord-injury).
+His cited work covers urethral reconstruction and stricture outcomes, neurogenic bladder augmentation and urinary diversion, and reconstruction after pelvic radiation injury.<sup>[P2](#publication-3)</sup><sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Spinal cord injury bladder-management comparative study** (2020). Led a multicenter observational study comparing patient-reported outcomes across bladder-management approaches after spinal cord injury.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
+
+## Professional Work
+
 - **Founding the TURNS reconstructive urology research network.** Helped establish and later led a multicenter network studying trauma and reconstructive urology outcomes.[^9]
 
 [^1]: [Our Urology Leadership Team. U of U School of Medicine](https://medicine.utah.edu/surgery/urology/our-team). Accessed October 2026.
 
 [^2]: [Jeremy B. Myers. University of Utah Health](https://healthcare.utah.edu/find-a-doctor/jeremy-b-myers). Accessed October 2026.
-
-[^3]: Cheng PJ, Myers JB. Augmentation Cystoplasty in the Patient With Neurogenic Bladder. World Journal of Urology. 2020;38(12):3035-3046. doi:[10.1007/s00345-019-02919-z](https://doi.org/10.1007/s00345-019-02919-z)
-
-[^4]: Myers JB, Porten SP, McAninch JW. The outcomes of perineal urethrostomy with preservation of the dorsal urethral plate and urethral blood supply. Urology. 2011;77(5):1223-1227. doi:[10.1016/j.urology.2010.10.041](https://doi.org/10.1016/j.urology.2010.10.041)
-
-[^5]: Kirshenbaum EJ, Zhao LC, Myers JB, et al. "Patency and Incontinence Rates After Robotic Bladder Neck Reconstruction for Vesicourethral Anastomotic Stenosis and Recalcitrant Bladder Neck Contractures: The Trauma and Urologic Reconstructive Network of Surgeons Experience." Urology. 2018;118:227-233. doi:[10.1016/j.urology.2018.05.007](https://doi.org/10.1016/j.urology.2018.05.007)
-
-[^6]: Woodle T, Kurtzman JT, Ramsay J, McCormick B, Myers JB. A prospective analysis of patient-reported health-related quality of life outcomes following urinary diversion for pelvic radiation-related injury. Urology. 2026;214:105-110. doi:[10.1016/j.urology.2026.01.017](https://doi.org/10.1016/j.urology.2026.01.017)
-
-[^7]: Myers JB, Hernandez BS, McCormick B, et al. Comparison of Urinary Diversion in Patients With Prostatic Fistula to Those With Localized Radiation Injury After Radiotherapy for the Treatment of Prostate Cancer. Urology. 2024;183:256–263. doi:[10.1016/j.urology.2023.11.006](https://doi.org/10.1016/j.urology.2023.11.006)
-
-[^8]: Myers J, Lenherr S, Stoffel J, et al. "Comparing Bladder Management Strategies for People with Spinal Cord Injuries." 2020. doi:[10.25302/06.2020.cer.140921348](https://doi.org/10.25302/06.2020.cer.140921348)
 
 [^9]: [Trauma Urologic Reconstructive Network Surgeons | TURNS | Turns](https://turnsresearch.org/members/index.php?s=jeremy-b-myers-md-facs). Accessed October 2026.
 

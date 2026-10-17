@@ -3,11 +3,12 @@ title: "Michael J. Metro"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/michael-metro.json';
 import profile from '@site/src/data/surgeon-profiles/michael-metro.json';
 import citations from '@site/src/data/surgeon-citations/michael-metro.json';
 
-<SurgeonProfile id="michael-metro" profile={profile} citations={citations}>
+<SurgeonProfile id="michael-metro" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,12 +23,29 @@ import citations from '@site/src/data/surgeon-citations/michael-metro.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Metro's cited work covers Peyronie's disease plication outcomes, robotic buccal mucosa graft ureteroplasty and the SIU/ICUD consultation on lichen sclerosus urethral stricture.[^6][^7][^8]
+## Key Publications
 
-- **Functional penile length after plication** (2023). Senior author of a series of 28 men with Peyronie's disease in which functional penile length, measured on the erect penis from pubis to glans tip, rose from 11.1 cm before plication to 12.5 cm after correction.[^6] Cited on WARWIKI: [Tunica Plication](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication).
-- **Robotic ureteroplasty with buccal mucosa graft** (2017). Coauthored the Temple series of 12 proximal or mid ureteral strictures not suited to excision and anastomosis; 10 (83%) were clinically and radiologically successful at a median follow-up of 13 months.[^7] Cited on WARWIKI: [Buccal Mucosa Graft Ureteroplasty](/docs/surgical-techniques/04d-upper-tract-reconstruction/bmg-onlay-ureter), [Ureteral Stricture](/docs/clinical-conditions/03e-upper-tract/ureteral-stricture).
+Metro's cited work covers Peyronie's disease plication outcomes, robotic buccal mucosa graft ureteroplasty and the SIU/ICUD consultation on lichen sclerosus urethral stricture.<sup>[P1](#publication-6)</sup><sup>[P2](#publication-7)</sup><sup>[P3](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Functional penile length after plication** (2023). Senior author of a series of 28 men with Peyronie's disease in which functional penile length, measured on the erect penis from pubis to glans tip, rose from 11.1 cm before plication to 12.5 cm after correction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Robotic ureteroplasty with buccal mucosa graft** (2017). Coauthored the Temple series of 12 proximal or mid ureteral strictures not suited to excision and anastomosis; 10 (83%) were clinically and radiologically successful at a median follow-up of 13 months.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [Michael J Metro, MD. Jefferson Health](https://www.jeffersonhealth.org/find-a-doctor/m/metro-michael-j). Accessed October 2026.
 
@@ -38,11 +56,5 @@ Metro's cited work covers Peyronie's disease plication outcomes, robotic buccal 
 [^4]: [Where are our fellows now? Department of Urology, University of California, San Francisco](https://urology.ucsf.edu/education/fellowships/where-are-our-fellows-now). Accessed October 2026.
 
 [^5]: [GURS Fellowship Tree. Lee Zhao, NYU Langone](https://fellowshiptree.leezhaomd.org/). Accessed October 2026.
-
-[^6]: Ly L, Christianson SS, Taylor LC, Dunphy M, Morales-Lopez R, Douglass L, Metro M. "Functional penile length after penile plication: 'empha-sizing' what matters." *Urology.* 2023;172:210–212. doi:[10.1016/j.urology.2022.11.035](https://doi.org/10.1016/j.urology.2022.11.035)
-
-[^7]: Lee Z, Waldorf BT, Cho EY, Liu JC, Metro MJ, Eun DD. "Robotic ureteroplasty with buccal mucosa graft for the management of complex ureteral strictures." *J Urol.* 2017;198(6):1430–1435. doi:[10.1016/j.juro.2017.06.097](https://doi.org/10.1016/j.juro.2017.06.097)
-
-[^8]: Stewart L, McCammon K, Metro M, Virasoro R. "SIU/ICUD consultation on urethral strictures: anterior urethra—lichen sclerosus." *Urology.* 2014;83(3 Suppl):S27–S30. doi:[10.1016/j.urology.2013.09.013](https://doi.org/10.1016/j.urology.2013.09.013)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Matthew D. Barber"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/matthew-barber.json';
 import profile from '@site/src/data/surgeon-profiles/matthew-barber.json';
 import citations from '@site/src/data/surgeon-citations/matthew-barber.json';
 
-<SurgeonProfile id="matthew-barber" profile={profile} citations={citations}>
+<SurgeonProfile id="matthew-barber" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,11 +23,29 @@ import citations from '@site/src/data/surgeon-citations/matthew-barber.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers pelvic organ prolapse repair, including trials comparing apical and posterior vaginal procedures and studies of recurrence and perioperative complications. It also includes development of the PFDI-20 and PFIQ-7 questionnaires for pelvic floor disorders.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **OPTIMAL prolapse surgery trial** (2014). Led a randomized comparison of uterosacral ligament suspension, sacrospinous ligament fixation, and perioperative behavioral therapy for apical prolapse.[^10] Cited on WARWIKI: [Sacrospinous Ligament Fixation (SSLF)](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-ligament-fixation).
+His cited work covers pelvic organ prolapse repair, including trials comparing apical and posterior vaginal procedures and studies of recurrence and perioperative complications. It also includes development of the PFDI-20 and PFIQ-7 questionnaires for pelvic floor disorders.<sup>[P2](#publication-5)</sup><sup>[P1](#publication-10)</sup><sup>[P3](#publication-7)</sup><sup>[P4](#publication-8)</sup><sup>[P5](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**OPTIMAL prolapse surgery trial** (2014). Led a randomized comparison of uterosacral ligament suspension, sacrospinous ligament fixation, and perioperative behavioral therapy for apical prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Administration. 26-27 School of Medicine Bulletin](https://medicine.bulletins.duke.edu/about/administration). Accessed October 2026.
 
@@ -35,17 +54,5 @@ His cited work covers pelvic organ prolapse repair, including trials comparing a
 [^3]: [Matthew Don Barber. Duke Department of Obstetrics and Gynecology](https://obgyn.duke.edu/profile/matthew-don-barber). Accessed October 2026.
 
 [^4]: [Historical Highlights. Duke Department of Obstetrics and Gynecology](https://obgyn.duke.edu/news-events/historical-highlights). Accessed October 2026.
-
-[^5]: Jelovsek JE, Barber MD, Brubaker L, et al. Effect of uterosacral ligament suspension vs sacrospinous ligament fixation with or without perioperative behavioral therapy on outcomes at 5 years in the OPTIMAL randomized clinical trial. JAMA. 2018;319:1554–1565. doi:[10.1001/jama.2018.2827](https://doi.org/10.1001/jama.2018.2827)
-
-[^6]: Barber MD, Brubaker L, Burgio KL, et al. "Comparison of 2 Transvaginal Surgical Approaches and Perioperative Behavioral Therapy for Apical Vaginal Prolapse: The OPTIMAL Randomized Trial." JAMA. 2014;311(10):1023-1034. doi:[10.1001/jama.2014.1719](https://doi.org/10.1001/jama.2014.1719)
-
-[^7]: Paraiso MF, Barber MD, Muir TW, et al. "Rectocele Repair: A Randomized Trial of Three Surgical Techniques Including Graft Augmentation." Am J Obstet Gynecol. 2006;195(6):1762-71. doi:[10.1016/j.ajog.2006.07.026](https://doi.org/10.1016/j.ajog.2006.07.026)
-
-[^8]: Siff LN, Barber MD, Zyczynski HM, et al. "Immediate Postoperative Pelvic Organ Prolapse Quantification Measures and 2-Year Risk of Prolapse Recurrence." Obstet Gynecol. 2020;136(4):792-801. doi:[10.1097/aog.0000000000004043](https://doi.org/10.1097/aog.0000000000004043)
-
-[^9]: Unger CA, Walters MD, Ridgeway B, Jelovsek JE, Barber MD, Paraiso MF. "Incidence of Adverse Events After Uterosacral Colpopexy for Uterovaginal and Posthysterectomy Vault Prolapse." American Journal of Obstetrics and Gynecology. 2015;212(5):603.e1-603.e7. doi:[10.1016/j.ajog.2014.11.034](https://doi.org/10.1016/j.ajog.2014.11.034)
-
-[^10]: Barber MD, Brubaker L, Burgio KL, et al. "Comparison of 2 Transvaginal Surgical Approaches and Perioperative Behavioral Therapy for Apical Vaginal Prolapse." *JAMA.* 2014;311(10):1023. doi:[10.1001/jama.2014.1719](https://doi.org/10.1001/jama.2014.1719)
 
 </SurgeonProfile>

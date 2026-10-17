@@ -3,11 +3,12 @@ title: "Kaven Baessler"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/kaven-baessler.json';
 import profile from '@site/src/data/surgeon-profiles/kaven-baessler.json';
 import citations from '@site/src/data/surgeon-citations/kaven-baessler.json';
 
-<SurgeonProfile id="kaven-baessler" profile={profile} citations={citations}>
+<SurgeonProfile id="kaven-baessler" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -18,26 +19,34 @@ import citations from '@site/src/data/surgeon-citations/kaven-baessler.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Baeßler's cited work centers on pelvic organ prolapse surgery, including compartment-specific repairs, mesh and graft comparisons, and perioperative interventions.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Australian Pelvic Floor Questionnaire** (2009). Led validation of a questionnaire covering bladder, bowel, sexual and prolapse symptoms for clinical and research use.[^8] Cited on WARWIKI: [Assessment Tools &amp; Questionnaires](/docs/evaluation/history-physical/assessment-tools).
+Baeßler's cited work centers on pelvic organ prolapse surgery, including compartment-specific repairs, mesh and graft comparisons, and perioperative interventions.<sup>[P2](#publication-3)</sup><sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Australian Pelvic Floor Questionnaire** (2009). Led validation of a questionnaire covering bladder, bowel, sexual and prolapse symptoms for clinical and research use.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Team. Joseph Kliniken Berlin](https://www.joseph-kliniken.de/kliniken-zentren/zentren/berliner-beckenbodenzentrum/team). Accessed October 2026.
 
 [^2]: [International Urogynecology Journal (IUJ)](https://www.iuga.org/publications/iuj). Accessed October 2026.
-
-[^3]: Baessler K, Christmann-Schmid C, Haya N, et al. "Surgery for women with pelvic organ prolapse with or without stress urinary incontinence." Cochrane Database Syst Rev. 2026;2(2):CD013108. doi:[10.1002/14651858.cd013108.pub2](https://doi.org/10.1002/14651858.cd013108.pub2)
-
-[^4]: Yeung E, Baessler K, Christmann-Schmid C, et al. Transvaginal mesh or grafts or native tissue repair for vaginal prolapse. Cochrane Database Syst Rev. 2024;3:CD012079. doi:[10.1002/14651858.cd012079.pub2](https://doi.org/10.1002/14651858.cd012079.pub2)
-
-[^5]: Christmann-Schmid C, Baessler K, Yeung E, et al. "Surgery for women with anterior compartment prolapse." Cochrane Database Syst Rev. 2026;4:CD004014. doi:[10.1002/14651858.cd004014.pub7](https://doi.org/10.1002/14651858.cd004014.pub7)
-
-[^6]: Mowat A, Maher D, Baessler K, et al. "Surgery for Women With Posterior Compartment Prolapse." Cochrane Database Syst Rev. 2018;3(3):CD012975. doi:[10.1002/14651858.cd012975](https://doi.org/10.1002/14651858.cd012975)
-
-[^7]: Baessler K, Schuessler B. Abdominal sacrocolpopexy and anatomy and function of the posterior compartment. Obstet Gynecol. 2001;97(5 Pt 1):678-84. doi:[10.1016/s0029-7844(00)01205-9](https://doi.org/10.1016/s0029-7844(00)01205-9)
-
-[^8]: Baessler K, O’Neill SM, Maher CF, et al. "Australian pelvic floor questionnaire: a validated interviewer-administered pelvic floor questionnaire for routine clinic and research." *Int Urogynecol J.* 2008;20(2):149–158. doi:[10.1007/s00192-008-0742-4](https://doi.org/10.1007/s00192-008-0742-4)
 
 </SurgeonProfile>

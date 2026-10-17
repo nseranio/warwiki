@@ -3,11 +3,12 @@ title: "Jay Simhan"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jay-simhan.json';
 import profile from '@site/src/data/surgeon-profiles/jay-simhan.json';
 import citations from '@site/src/data/surgeon-citations/jay-simhan.json';
 
-<SurgeonProfile id="jay-simhan" profile={profile} citations={citations}>
+<SurgeonProfile id="jay-simhan" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,12 +22,33 @@ import citations from '@site/src/data/surgeon-citations/jay-simhan.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Simhan's cited work includes multi-institutional studies of dorsal onlay buccal mucosal graft urethroplasty for postradiation posterior urethral stenosis and a review of its contemporary management.[^5][^6][^7]
+## Key Publications
 
-- **Artificial urinary sphincter cuff sizing and revision** (2014). Simhan led a study associating more precise cuff sizing with fewer artificial urinary sphincter revisions for spongiosal atrophy.[^8] Cited on WARWIKI: [Artificial Urinary Sphincter (Procedure)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter).
-- **Radiation-associated erosion with a 3.5 cm AUS cuff** (2015). Simhan led a study reporting greater 3.5 cm artificial urinary sphincter cuff erosion risk among irradiated patients.[^9] Cited on WARWIKI: [Artificial Urinary Sphincter (Procedure)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter).
+Simhan's cited work includes multi-institutional studies of dorsal onlay buccal mucosal graft urethroplasty for postradiation posterior urethral stenosis and a review of its contemporary management.<sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Artificial urinary sphincter cuff sizing and revision** (2014). Simhan led a study associating more precise cuff sizing with fewer artificial urinary sphincter revisions for spongiosal atrophy.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Radiation-associated erosion with a 3.5 cm AUS cuff** (2015). Simhan led a study reporting greater 3.5 cm artificial urinary sphincter cuff erosion risk among irradiated patients.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Jay Simhan. Fox Chase Cancer Center](https://profiles.foxchase.org/en/persons/jay-simhan/). Accessed October 2026.
 
@@ -35,15 +57,5 @@ Simhan's cited work includes multi-institutional studies of dorsal onlay buccal 
 [^3]: [Dr. Jay Simhan Named Chair of the Department of Urology at Temple University Hospital and the Lewis Katz Schoo](https://www.templehealth.org/about/news/dr-jay-simhan-named-chair-of-the-department-of-urology-at-temple-university-hospital-and-the-lewis-katz-school-of-medicine-at-temple-university). Accessed October 2026.
 
 [^4]: [GURS Committees](https://societygurs.org/committees/). Accessed October 2026.
-
-[^5]: Sterling J, Simhan J, Flynn BJ, et al. "Multi-Institutional Outcomes of Dorsal Onlay Buccal Mucosal Graft Urethroplasty in Patients With Postprostatectomy, Postradiation Anastomotic Stenosis." J Urol. 2024;211(4):596–604. doi:[10.1097/ju.0000000000003848](https://doi.org/10.1097/ju.0000000000003848)
-
-[^6]: Ivan SJ, Lee M, Simhan J. "Contemporary management of radiation-associated posterior urethral stenosis: a narrative review." Transl Androl Urol. 2025;14(10):3377-3386. doi:[10.21037/tau-2025-183](https://doi.org/10.21037/tau-2025-183)
-
-[^7]: Policastro CG, Simhan J, Martins FE, et al. A multi-institutional critical assessment of dorsal onlay urethroplasty for post-radiation urethral stenosis. World J Urol. 2021;39(7):2669-2675. doi:[10.1007/s00345-020-03446-y](https://doi.org/10.1007/s00345-020-03446-y)
-
-[^8]: Simhan J, Morey AF, Zhao LC, et al. "Decreasing Need for Artificial Urinary Sphincter Revision Surgery by Precise Cuff Sizing in Men with Spongiosal Atrophy." *Journal of Urology.* 2014;192(3):798–803. doi:[10.1016/j.juro.2014.03.115](https://doi.org/10.1016/j.juro.2014.03.115)
-
-[^9]: Simhan J, Morey AF, Singla N, et al. "3.5 cm Artificial Urinary Sphincter Cuff Erosion Occurs Predominantly in Irradiated Patients." *Journal of Urology.* 2015;193(2):593–597. doi:[10.1016/j.juro.2014.07.115](https://doi.org/10.1016/j.juro.2014.07.115)
 
 </SurgeonProfile>

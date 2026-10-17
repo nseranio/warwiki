@@ -3,11 +3,12 @@ title: "Eric S. Rovner"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/eric-rovner.json';
 import profile from '@site/src/data/surgeon-profiles/eric-rovner.json';
 import citations from '@site/src/data/surgeon-citations/eric-rovner.json';
 
-<SurgeonProfile id="eric-rovner" profile={profile} citations={citations}>
+<SurgeonProfile id="eric-rovner" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,13 +24,41 @@ import citations from '@site/src/data/surgeon-citations/eric-rovner.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers female urethral diverticula and diverticulectomy, including dorsal or circumferential reconstruction and a systematic review. Other cited papers address intradetrusor onabotulinumtoxinA for neurogenic detrusor overactivity and its administration.[^6][^7][^8][^9][^10]
+## Key Publications
 
-- **Reconstruction of dorsal or circumferential female urethral diverticula** (2003). Reported diagnosis and surgical reconstruction of complex dorsal and circumferential female urethral diverticula.[^11] Cited on WARWIKI: [Urethral Diverticulectomy](/docs/surgical-techniques/04a-urethral-reconstruction/urethral-diverticulum-repair).
-- **Posterior urethral-flap bladder-neck closure** (2011). Described transvaginal bladder-neck closure using a posterior urethral flap for women with catheter-related urethral destruction.[^12] Cited on WARWIKI: [Bladder Neck Closure](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/outlet-continence/bladder-neck-closure).
-- **Minimum reporting data set for female stress-incontinence surgery** (2024). Led recommendations for a common minimum data set in publications on female stress-incontinence surgery.[^13]
+His cited work covers female urethral diverticula and diverticulectomy, including dorsal or circumferential reconstruction and a systematic review. Other cited papers address intradetrusor onabotulinumtoxinA for neurogenic detrusor overactivity and its administration.<sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup><sup>[P1](#publication-11)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Reconstruction of dorsal or circumferential female urethral diverticula** (2003). Reported diagnosis and surgical reconstruction of complex dorsal and circumferential female urethral diverticula.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Posterior urethral-flap bladder-neck closure** (2011). Described transvaginal bladder-neck closure using a posterior urethral flap for women with catheter-related urethral destruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Minimum reporting data set for female stress-incontinence surgery** (2024). Led recommendations for a common minimum data set in publications on female stress-incontinence surgery.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Faculty Directory. MUSC](https://education.musc.edu/muscapps/facultydirectory/Rovner-Eric). Accessed October 2026.
 
@@ -40,21 +69,5 @@ His cited work covers female urethral diverticula and diverticulectomy, includin
 [^4]: [newsletter-fall-2014.pdf](https://www.uclahealth.org/sites/default/files/documents/27/newsletter-fall-2014.pdf?f=3927f204). Accessed October 2026.
 
 [^5]: [Leadership. MUSC College of Medicine](https://medicine.musc.edu/departments/urology/about/leadership). Accessed October 2026.
-
-[^6]: Rovner E, Kohan A, Chartier-Kastler E, et al. "Long-term efficacy and safety of onabotulinumtoxinA in patients with neurogenic detrusor overactivity who completed 4 years of treatment." J Urol. 2016;196(3):801–808. doi:[10.1016/j.juro.2016.04.046](https://doi.org/10.1016/j.juro.2016.04.046)
-
-[^7]: Rovner E. "Chapter 6: practical aspects of administration of onabotulinumtoxinA." Neurourol Urodyn. 2014;33 Suppl 3:S32–S37. doi:[10.1002/nau.22637](https://doi.org/10.1002/nau.22637)
-
-[^8]: Cox L, Rovner ES. Bladder and Female Urethral Diverticula. In: Partin AW, Dmochowski RR, Kavoussi LR, Peters CA, eds. Campbell-Walsh-Wein Urology. 13th ed. Elsevier; 2025:2555-2583.
-
-[^9]: Rovner ES. "Urethral diverticula: a review and an update." Neurourology and Urodynamics. 2007;26(7):972-977. doi:[10.1002/nau.20434](https://doi.org/10.1002/nau.20434)
-
-[^10]: Rovner ES, Wein AJ. Diagnosis and reconstruction of the dorsal or circumferential urethral diverticulum. J Urol. 2003;170(1):82-86; discussion 86. doi:[10.1097/01.ju.0000067291.70172.b5](https://doi.org/10.1097/01.ju.0000067291.70172.b5)
-
-[^11]: ROVNER ES, WEIN AJ. "Diagnosis and Reconstruction of the Dorsal or Circumferential Urethral Diverticulum." *Journal of Urology.* 2003;170(1):82–86. doi:[10.1097/01.ju.0000067291.70172.b5](https://doi.org/10.1097/01.ju.0000067291.70172.b5)
-
-[^12]: Rovner ES, Goudelocke CM, Gilchrist A, et al. "Transvaginal Bladder Neck Closure With Posterior Urethral Flap for Devastated Urethra." *Urology.* 2011;78(1):208–212. doi:[10.1016/j.urology.2010.11.054](https://doi.org/10.1016/j.urology.2010.11.054)
-
-[^13]: Rovner E, Chermansky C, Costantini E, et al. "Recommendations of the SUFU/AUGS/ICS Female Stress Urinary Incontinence Surgical Publication Working Group: A common standard minimum data set for the literature." *Neurourology and Urodynamics.* 2024;43(8):1753–1764. doi:[10.1002/nau.25445](https://doi.org/10.1002/nau.25445)
 
 </SurgeonProfile>

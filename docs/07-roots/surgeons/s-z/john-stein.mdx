@@ -3,11 +3,12 @@ title: "John P. Stein"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/john-stein.json';
 import profile from '@site/src/data/surgeon-profiles/john-stein.json';
 import citations from '@site/src/data/surgeon-citations/john-stein.json';
 
-<SurgeonProfile id="john-stein" profile={profile} citations={citations}>
+<SurgeonProfile id="john-stein" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,34 +22,44 @@ import citations from '@site/src/data/surgeon-citations/john-stein.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Stein's cited work covers continent urinary diversion, including Kock ileal reservoirs, the orthotopic T-pouch neobladder, and adaptations of the T-pouch mechanism for urinary diversion and continent ileostomy. Other cited papers address orthotopic diversion after bladder contracture and diversion in women with bladder cancer.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Orthotopic neobladder reconstruction in women** (1997). Stein led a 34-patient series reporting functional outcomes and selection considerations for orthotopic diversion in women.[^9]
-- **Orthotopic T-pouch ileal neobladder** (1998). Stein and colleagues described an ileal neobladder with a serosal-lined antireflux T limb.[^10] Cited on WARWIKI: [Double T-Pouch](/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch).
-- **209-patient T-pouch outcomes series** (2004). Stein led an intermediate follow-up series assessing function and complications after orthotopic T-pouch construction in 209 patients.[^11] Cited on WARWIKI: [Double T-Pouch](/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch).
+Stein's cited work covers continent urinary diversion, including Kock ileal reservoirs, the orthotopic T-pouch neobladder, and adaptations of the T-pouch mechanism for urinary diversion and continent ileostomy. Other cited papers address orthotopic diversion after bladder contracture and diversion in women with bladder cancer.<sup>[P2](#publication-10)</sup><sup>[P4](#publication-4)</sup><sup>[P3](#publication-11)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Orthotopic neobladder reconstruction in women** (1997). Stein led a 34-patient series reporting functional outcomes and selection considerations for orthotopic diversion in women.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Orthotopic T-pouch ileal neobladder** (1998). Stein and colleagues described an ileal neobladder with a serosal-lined antireflux T limb.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**209-patient T-pouch outcomes series** (2004). Stein led an intermediate follow-up series assessing function and complications after orthotopic T-pouch construction in 209 patients.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [$1 million gift celebrates work of late Keck School urologist John Stein. HSC News](https://hscnews.usc.edu/1-million-gift-celebrates-work-of-late-keck-school-urologist-john-stein). Accessed October 2026.
 
 [^2]: [hsc_weekly_yellow.qxd](https://hscnews.usc.edu/archives/pdf08/1413.pdf). Accessed October 2026.
 
-[^3]: Stein JP, Lieskovsky G, Ginsberg DA, Bochner BH, Skinner DG. "The T Pouch: An Orthotopic Ileal Neobladder Incorporating a Serosal Lined Ileal Antireflux Technique." J Urol. 1998;159(6):1836–42. doi:[10.1016/s0022-5347(01)63170-7](https://doi.org/10.1016/s0022-5347(01)63170-7)
-
-[^4]: Stein JP, Freeman JA, Esrig D, et al. Complications of the afferent antireflux valve mechanism in the Kock ileal reservoir. J Urol. 1996;155(5):1579–1584. doi:[10.1016/s0022-5347(01)66131-7](https://doi.org/10.1016/s0022-5347(01)66131-7). PMID 8627827.
-
-[^5]: Stein JP, Dunn MD, Quek ML, Miranda G, Skinner DG. "The Orthotopic T Pouch Ileal Neobladder: Experience With 209 Patients." J Urol. 2004;172(2):584–7. doi:[10.1097/01.ju.0000131651.77048.73](https://doi.org/10.1097/01.ju.0000131651.77048.73)
-
-[^6]: Bochner BH, Stein JP, Ginsberg DA, et al. "A Serous Lined Antireflux Valve: In Vivo Fluorourodynamic Evaluation of Antireflux Continence Mechanism." J Urol. 1998;160(1):112–5. doi:[10.1016/s0022-5347(01)63049-0](https://doi.org/10.1016/s0022-5347(01)63049-0)
-
-[^7]: Nieder AM, Sved PD, Stein JP, Skinner DG, Soloway MS. Cystoprostatectomy and orthotopic ileal neobladder reconstruction for management of bacille Calmette-Guérin-induced bladder contractures. Urology. 2005;65(5):909-912. doi:[10.1016/j.urology.2004.11.053](https://doi.org/10.1016/j.urology.2004.11.053)
-
 [^8]: [$1 million gift celebrates work of late Keck School urologist John Stein - HSC News](https://hscnews.usc.edu/1-million-gift-celebrates-work-of-late-keck-school-urologist-john-stein). Accessed October 2026.
-
-[^9]: Stein JP, Grossfeld GD, Freeman JA, et al. "Orthotopic Lower Urinary Tract Reconstruction in Women Using the Kock Ileal Neobladder: Updated Experience in 34 Patients." *Journal of Urology.* 1997;158(2):400–405. doi:[10.1016/s0022-5347(01)64488-4](https://doi.org/10.1016/s0022-5347(01)64488-4)
-
-[^10]: STEIN JP, LIESKOVSKY G, GINSBERG DA, et al. "THE T POUCH: AN ORTHOTOPIC ILEAL NEOBLADDER INCORPORATING A SEROSAL LINED ILEAL ANTIREFLUX TECHNIQUE." *Journal of Urology.* 1998;159(6):1836–1842. doi:[10.1016/s0022-5347(01)63170-7](https://doi.org/10.1016/s0022-5347(01)63170-7)
-
-[^11]: STEIN JP, DUNN MD, QUEK ML, et al. "THE ORTHOTOPIC T POUCH ILEAL NEOBLADDER: EXPERIENCE WITH 209 PATIENTS." *Journal of Urology.* 2004;172(2):584–587. doi:[10.1097/01.ju.0000131651.77048.73](https://doi.org/10.1097/01.ju.0000131651.77048.73)
 
 </SurgeonProfile>

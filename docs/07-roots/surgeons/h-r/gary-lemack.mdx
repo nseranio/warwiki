@@ -3,11 +3,12 @@ title: "Gary Lemack"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/gary-lemack.json';
 import profile from '@site/src/data/surgeon-profiles/gary-lemack.json';
 import citations from '@site/src/data/surgeon-citations/gary-lemack.json';
 
-<SurgeonProfile id="gary-lemack" profile={profile} citations={citations}>
+<SurgeonProfile id="gary-lemack" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,40 @@ import citations from '@site/src/data/surgeon-citations/gary-lemack.json';
 - **Leadership** President, Society of Urodynamics, Female Pelvic Medicine, and Urogenital Reconstruction (SUFU; past)[^1]
 
 </div>
-## Contributions
+<a id="contributions"></a>
 
-His cited papers examine female lower urinary tract evaluation with urodynamics and endorectal coil MRI, as well as outcomes after Skene gland cyst excision and vesicovaginal fistula repair.[^4][^5][^6][^7]
+## Key Publications
 
-- **Upper-tract risk assessment in multiple-sclerosis neurogenic bladder** (2005). Studied upper-tract abnormalities and clinical and urodynamic risk factors in patients with multiple-sclerosis-related bladder dysfunction.[^8] Cited on WARWIKI: [Multiple Sclerosis](/docs/clinical-conditions/03d-nlutd/nlutd-multiple-sclerosis).
-- **Preoperative urodynamics and voiding dysfunction after incontinence surgery** (2008). Led an analysis finding that normal preoperative urodynamic tests did not predict voiding dysfunction after Burch colposuspension or sling surgery.[^9] Cited on WARWIKI: [Urodynamics](/docs/evaluation/ancillary-tests/urodynamics).
+His cited papers examine female lower urinary tract evaluation with urodynamics and endorectal coil MRI, as well as outcomes after Skene gland cyst excision and vesicovaginal fistula repair.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Upper-tract risk assessment in multiple-sclerosis neurogenic bladder** (2005). Studied upper-tract abnormalities and clinical and urodynamic risk factors in patients with multiple-sclerosis-related bladder dysfunction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Preoperative urodynamics and voiding dysfunction after incontinence surgery** (2008). Led an analysis finding that normal preoperative urodynamic tests did not predict voiding dysfunction after Burch colposuspension or sling surgery.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Gary Lemack, M.D.. UT Southwestern](https://profiles.utsouthwestern.edu/profile/28392/gary-lemack.html). Accessed October 2026.
 
 [^2]: [Urology: Medical School Advisers. UT Southwestern, Dallas, TX](https://medschool.utsouthwestern.edu/about-the-school/student-affairs/advisers/urology.html). Accessed October 2026.
 
 [^3]: [Gary Lemack, M.D.: Urology. UT Southwestern Medical Center](https://utswmed.org/doctors/gary-lemack/). Accessed October 2026.
-
-[^4]: Malik RD, Hess DS, Carmel ME, Lemack GE, Zimmern PE. "Prospective Evaluation of Urodynamic Utility in a Subspecialty Tertiary Practice." Urology. 2019;126:59–64. doi:[10.1016/j.urology.2019.01.004]](https://doi.org/10.1016/j.urology.2019.01.004])
-
-[^5]: Lorenzo AJ, Zimmern P, Lemack GE, Nurenberg P. "Endorectal coil magnetic resonance imaging for diagnosis of urethral and periurethral pathologic findings in women." Urology. 2003;61(6):1129-1133. doi:[10.1016/s0090-4295(03)00260-7](https://doi.org/10.1016/s0090-4295(03)00260-7)
-
-[^6]: Foster J, Lemack G, Zimmern P. "Skene's gland cyst excision." Int Urogynecol J. 2016;27(5):817–820. doi:[10.1007/s00192-015-2872-9](https://doi.org/10.1007/s00192-015-2872-9)
-
-[^7]: Lee D, Dillon BE, Lemack GE, Zimmern PE. Long-term functional outcomes following nonradiated vesicovaginal repair. J Urol. 2014;191(1):120–124. doi:[10.1016/j.juro.2013.07.004](https://doi.org/10.1016/j.juro.2013.07.004)
-
-[^8]: Lemack GE, Hawker K, Frohman E. "Incidence of upper tract abnormalities in patients with neurovesical dysfunction secondary to multiple sclerosis: Analysis of risk factors at initial urologic evaluation." *Urology.* 2005;65(5):854–857. doi:[10.1016/j.urology.2004.11.038](https://doi.org/10.1016/j.urology.2004.11.038)
-
-[^9]: Lemack GE, Krauss S, Litman H, et al. "Normal Preoperative Urodynamic Testing Does Not Predict Voiding Dysfunction After Burch Colposuspension Versus Pubovaginal Sling." *Journal of Urology.* 2008;180(5):2076–2080. doi:[10.1016/j.juro.2008.07.027](https://doi.org/10.1016/j.juro.2008.07.027)
 
 </SurgeonProfile>

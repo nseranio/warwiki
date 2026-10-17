@@ -3,11 +3,12 @@ title: "Donald G. Skinner"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/donald-skinner.json';
 import profile from '@site/src/data/surgeon-profiles/donald-skinner.json';
 import citations from '@site/src/data/surgeon-citations/donald-skinner.json';
 
-<SurgeonProfile id="donald-skinner" profile={profile} citations={citations}>
+<SurgeonProfile id="donald-skinner" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,13 +24,39 @@ import citations from '@site/src/data/surgeon-citations/donald-skinner.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Skinner's cited work covers continent ileal urinary diversion and neobladder reconstruction, including Kock reservoirs, T-pouch neobladders, and hemi-Kock augmentation ileocystoplasty.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Kock pouch continent urinary diversion in the United States** (1984). Reported his team's early U.S. experience constructing continent ileal urinary reservoirs using Kock's method.[^10] Cited on WARWIKI: [Hemi-Kock Continent Stoma](/docs/surgical-techniques/04b-bladder-reconstruction/hemi-kock).
-- **Orthotopic adaptation of the Kock reservoir** (1989). Adapted Kock reservoir construction to urethral anastomosis for selected patients undergoing cystectomy.[^11] Cited on WARWIKI: [Cutaneous Vesicostomy](/docs/surgical-techniques/04b-bladder-reconstruction/cutaneous-vesicostomy).
-- **T-pouch ileal neobladder** (1998). Co-reported an orthotopic ileal neobladder using a serosa-lined antireflux valve.[^12] Cited on WARWIKI: [Double T-Pouch](/docs/surgical-techniques/04c-urinary-diversion/double-t-pouch).
+Skinner's cited work covers continent ileal urinary diversion and neobladder reconstruction, including Kock reservoirs, T-pouch neobladders, and hemi-Kock augmentation ileocystoplasty.<sup>[P3](#publication-12)</sup><sup>[P1](#publication-10)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Kock pouch continent urinary diversion in the United States** (1984). Reported his team's early U.S. experience constructing continent ileal urinary reservoirs using Kock's method.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Orthotopic adaptation of the Kock reservoir** (1989). Adapted Kock reservoir construction to urethral anastomosis for selected patients undergoing cystectomy.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**T-pouch ileal neobladder** (1998). Co-reported an orthotopic ileal neobladder using a serosa-lined antireflux valve.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Donald G. Skinner. USC Today](https://today.usc.edu/profile/donald-g-skinner/). Accessed October 2026.
 
@@ -37,22 +64,6 @@ Skinner's cited work covers continent ileal urinary diversion and neobladder rec
 
 [^3]: [In memoriam: Dr. Donald G. Skinner](https://keck.usc.edu/news/in-memoriam-dr-donald-g-skinner/). Accessed October 2026.
 
-[^4]: Stein JP, Lieskovsky G, Ginsberg DA, Bochner BH, Skinner DG. "The T Pouch: An Orthotopic Ileal Neobladder Incorporating a Serosal Lined Ileal Antireflux Technique." J Urol. 1998;159(6):1836–42. doi:[10.1016/s0022-5347(01)63170-7](https://doi.org/10.1016/s0022-5347(01)63170-7)
-
-[^5]: Skinner DG, Boyd SD, Lieskovsky G. Clinical experience with the Kock continent ileal reservoir for urinary diversion. J Urol. 1984;132(6):1101–1107. doi:[10.1016/s0022-5347(17)50052-x](https://doi.org/10.1016/s0022-5347(17)50052-x)
-
-[^6]: Skinner DG, Lieskovsky G, Boyd SD. "Continent Urinary Diversion. A 5 1/2 Year Experience." Ann Surg. 1988;208(3):337–44. doi:[10.1097/00000658-198809000-00011](https://doi.org/10.1097/00000658-198809000-00011)
-
-[^7]: Stein JP, Dunn MD, Quek ML, Miranda G, Skinner DG. "The Orthotopic T Pouch Ileal Neobladder: Experience With 209 Patients." J Urol. 2004;172(2):584–7. doi:[10.1097/01.ju.0000131651.77048.73](https://doi.org/10.1097/01.ju.0000131651.77048.73)
-
-[^8]: Weinberg AC, Boyd SD, Lieskovsky G, Ahlering TE, Skinner DG. The hemi-Kock augmentation ileocystoplasty: a low pressure anti-refluxing system. J Urol. 1988;140(6):1380–1384. doi:[10.1016/s0022-5347(17)42050-7](https://doi.org/10.1016/s0022-5347(17)42050-7)
-
 [^9]: [Donald Skinner Obituary (2025) - Los Angeles, CA - Los Angeles Times](https://www.legacy.com/us/obituaries/latimes/name/donald-skinner-obituary?id=59220199.). Accessed October 2026.
-
-[^10]: Skinner DG, Boyd SD, Lieskovsky G. "Clinical Experience with the Kock Continent Ileal Reservoir for Urinary Diversion." *Journal of Urology.* 1984;132(6):1101–1107. doi:[10.1016/s0022-5347(17)50052-x](https://doi.org/10.1016/s0022-5347(17)50052-x)
-
-[^11]: Skinner DG, Lieskovsky G, Boyd S. "Continent Urinary Diversion." *Journal of Urology.* 1989;141(6):1323–1327. doi:[10.1016/s0022-5347(17)41295-x](https://doi.org/10.1016/s0022-5347(17)41295-x)
-
-[^12]: STEIN JP, LIESKOVSKY G, GINSBERG DA, et al. "THE T POUCH: AN ORTHOTOPIC ILEAL NEOBLADDER INCORPORATING A SEROSAL LINED ILEAL ANTIREFLUX TECHNIQUE." *Journal of Urology.* 1998;159(6):1836–1842. doi:[10.1016/s0022-5347(01)63170-7](https://doi.org/10.1016/s0022-5347(01)63170-7)
 
 </SurgeonProfile>

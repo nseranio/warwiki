@@ -3,11 +3,12 @@ title: "Catherine Bradley"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/catherine-bradley.json';
 import profile from '@site/src/data/surgeon-profiles/catherine-bradley.json';
 import citations from '@site/src/data/surgeon-citations/catherine-bradley.json';
 
-<SurgeonProfile id="catherine-bradley" profile={profile} citations={citations}>
+<SurgeonProfile id="catherine-bradley" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,9 +23,21 @@ import citations from '@site/src/data/surgeon-citations/catherine-bradley.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited papers address pelvic organ prolapse over time and clinical outcomes after prolapse procedures, including colpocleisis and changes in genital hiatus after repair.[^5][^6][^7]
+## Key Publications
+
+Her cited papers address pelvic organ prolapse over time and clinical outcomes after prolapse procedures, including colpocleisis and changes in genital hiatus after repair.<sup>[P1](#publication-5)</sup><sup>[P2](#publication-6)</sup><sup>[P3](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [Catherine Bradley. University of Iowa Health Care](https://uihc.org/providers/catherine-bradley). Accessed October 2026.
 
@@ -33,11 +46,5 @@ Her cited papers address pelvic organ prolapse over time and clinical outcomes a
 [^3]: [Research. The University of Iowa](https://obgyn.medicine.uiowa.edu/research). Accessed October 2026.
 
 [^4]: [Past Presidents. AUGS](https://www.augs.org/about-augs/past-presidents/). Accessed October 2026.
-
-[^5]: FitzGerald MP, Richter HE, Bradley CS, et al. Pelvic support, pelvic symptoms, and patient satisfaction after colpocleisis. Int Urogynecol J Pelvic Floor Dysfunct. 2008;19:1603–1609. doi:[10.1007/s00192-008-0696-6](https://doi.org/10.1007/s00192-008-0696-6)
-
-[^6]: Bradley CS, Zimmerman MB, Qi Y, Nygaard IE. Natural history of pelvic organ prolapse in postmenopausal women. Obstet Gynecol. 2007;109(4):848-854. doi:[10.1097/01.aog.0000255977.91296.5d](https://doi.org/10.1097/01.aog.0000255977.91296.5d)
-
-[^7]: Bonglack M, Maetzold E, Kenne KA, Bradley CS, Kowalski JT. "Prospective Evaluation of Genital Hiatus in Patients Undergoing Surgical Prolapse Repair." Int Urogynecol J. 2022;33(11):3247-3254. doi:[10.1007/s00192-022-05157-x](https://doi.org/10.1007/s00192-022-05157-x)
 
 </SurgeonProfile>

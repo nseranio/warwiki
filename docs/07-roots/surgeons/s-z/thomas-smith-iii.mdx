@@ -3,11 +3,12 @@ title: "Thomas G. Smith III"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/thomas-smith-iii.json';
 import profile from '@site/src/data/surgeon-profiles/thomas-smith-iii.json';
 import citations from '@site/src/data/surgeon-citations/thomas-smith-iii.json';
 
-<SurgeonProfile id="thomas-smith-iii" profile={profile} citations={citations}>
+<SurgeonProfile id="thomas-smith-iii" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,22 +24,36 @@ import citations from '@site/src/data/surgeon-citations/thomas-smith-iii.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Smith served on the American Urological Association Urotrauma Guideline panel and coauthored the 2014 guideline.[^3] His cited work covers damage-control management of genitourinary injuries and TURNS multicenter outcomes of artificial urinary sphincter placement.[^4][^5]
+## Key Publications
 
-- **Urotrauma: AUA guideline** (2014). Panel member for the guideline, built on a systematic review of 372 studies, that sets statements for the evaluation and management of renal, ureteral, bladder, urethral and genital injuries.[^3] Cited on WARWIKI: [Trauma & Emergencies](/docs/special-populations/05a-trauma-emergencies).
-- **Damage control for urologic trauma** (2013). Lead author, with Michael Coburn, of a review of damage-control management of renal, ureteral, bladder, urethral and genital injuries in critically injured patients, which are often diagnosed intraoperatively with little or no preoperative imaging.[^4] Cited on WARWIKI: [Damage Control in Genitourinary Trauma](/docs/special-populations/05a-trauma-emergencies/damage-control-gu-trauma).
-- **Artificial urinary sphincter erosion** (2014). Coauthored the TURNS prospective study of 386 sphincters at 8 institutions: 31 (8.0%) were explanted, with higher rates after prior radiation, prior UroLume stent placement and 3.5 cm cuffs.[^5] Cited on WARWIKI: [Artificial Urinary Sphincter (Device)](/docs/foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter).
+Smith served on the American Urological Association Urotrauma Guideline panel and coauthored the 2014 guideline.<sup>[P1](#publication-3)</sup> His cited work covers damage-control management of genitourinary injuries and TURNS multicenter outcomes of artificial urinary sphincter placement.<sup>[P2](#publication-4)</sup><sup>[P3](#publication-5)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Urotrauma: AUA guideline** (2014). Panel member for the guideline, built on a systematic review of 372 studies, that sets statements for the evaluation and management of renal, ureteral, bladder, urethral and genital injuries.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Damage control for urologic trauma** (2013). Lead author, with Michael Coburn, of a review of damage-control management of renal, ureteral, bladder, urethral and genital injuries in critically injured patients, which are often diagnosed intraoperatively with little or no preoperative imaging.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Artificial urinary sphincter erosion** (2014). Coauthored the TURNS prospective study of 386 sphincters at 8 institutions: 31 (8.0%) were explanted, with higher rates after prior radiation, prior UroLume stent placement and 3.5 cm cuffs.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Thomas G Smith III, MD. UT MD Anderson Cancer Center faculty profile](https://faculty.mdanderson.org/profiles/thomas_smithiii.html). Accessed October 2026.
 
 [^2]: [Thomas G. Smith III, MD, FACS. Members, Trauma and Urologic Reconstructive Network of Surgeons](http://www.turnsresearch.org/members/index.php?s=thomas-g-smith-iii-md-facs). Roster: [TURNS members](http://www.turnsresearch.org/members/index.php). Accessed October 2026.
-
-[^3]: Morey AF, Brandes S, Dugi DD 3rd, Armstrong JH, Breyer BN, Broghammer JA, Erickson BA, Holzbeierlein J, Hudak SJ, Pruitt JH, Reston JT, Santucci RA, Smith TG 3rd, Wessells H. "Urotrauma: AUA guideline." *J Urol.* 2014;192(2):327–335. doi:[10.1016/j.juro.2014.05.004](https://doi.org/10.1016/j.juro.2014.05.004)
-
-[^4]: Smith TG 3rd, Coburn M. "Damage control maneuvers for urologic trauma." *Urol Clin North Am.* 2013;40(3):343–350. doi:[10.1016/j.ucl.2013.04.003](https://doi.org/10.1016/j.ucl.2013.04.003)
-
-[^5]: Brant WO, Erickson BA, Elliott SP, Powell C, Alsikafi N, McClung C, Myers JB, Voelzke BB, Smith TG 3rd, Broghammer JA. "Risk factors for erosion of artificial urinary sphincters: a multicenter prospective study." *Urology.* 2014;84(4):934–938. doi:[10.1016/j.urology.2014.05.043](https://doi.org/10.1016/j.urology.2014.05.043)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Leonard N. Zinman"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/leonard-zinman.json';
 import profile from '@site/src/data/surgeon-profiles/leonard-zinman.json';
 import citations from '@site/src/data/surgeon-citations/leonard-zinman.json';
 
-<SurgeonProfile id="leonard-zinman" profile={profile} citations={citations}>
+<SurgeonProfile id="leonard-zinman" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -25,13 +26,33 @@ import citations from '@site/src/data/surgeon-citations/leonard-zinman.json';
 
 </div>
 
-## Principal Contributions
+<a id="principal-contributions"></a>
+
+## Key Publications
 
 A 2020 conference abstract credited his group with gracilis muscle interposition for rectourethral fistula repair and with using gracilis muscle as a vascular bed for oral mucosa urethral grafts.[^3] The same abstract documented work on urethral squamous cell carcinoma, bladder reconstruction, and recalcitrant bladder neck contractures.[^3]
 
-- **Q-flap panurethral reconstruction** (2000). Co-developed the Q-flap, a penile skin flap for single-stage reconstruction of extensive anterior urethral strictures.[^4] Cited on WARWIKI: [Q-Flap (Morey / Tran / Zinman)](/docs/surgical-techniques/04a-urethral-reconstruction/q-flap).
-- **Intralesional mitomycin C for recurrent bladder neck contracture** (2011). Co-reported radial urethrotomy with intralesional mitomycin C for recurrent bladder neck contracture.[^5] Cited on WARWIKI: [Transurethral Incision of Bladder Neck Contracture (TUIBNC)](/docs/surgical-techniques/04ab-bladder-neck-reconstruction/transurethral-incision-bnc).
-- **Buccal graft urethroplasty with gracilis muscle flap** (2015). Helped describe gracilis muscle support for buccal mucosa graft urethroplasty in high-risk, long-segment strictures.[^6] Cited on WARWIKI: [Laminated Gracilis Flap Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/laminated-gracilis-flap).
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Q-flap panurethral reconstruction** (2000). Co-developed the Q-flap, a penile skin flap for single-stage reconstruction of extensive anterior urethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Intralesional mitomycin C for recurrent bladder neck contracture** (2011). Co-reported radial urethrotomy with intralesional mitomycin C for recurrent bladder neck contracture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Buccal graft urethroplasty with gracilis muscle flap** (2015). Helped describe gracilis muscle support for buccal mucosa graft urethroplasty in high-risk, long-segment strictures.
+
+</KeyPublication>
+
+</ol>
 
 ## The Lahey Center
 
@@ -46,11 +67,5 @@ He received the AUA Lifetime Achievement Award in 2015 and the GURS Lifetime Ach
 [^2]: [Reconstructive Urologic Surgery | Lahey Clinic](https://www.lahey.org/services/urology/reconstructive-surgery). Accessed October 2026.
 
 [^3]: [canjurol.com](https://canjurol.com/html/free-articles//Cdn_JU27-S4-03_Abstracts_August2020_S.pdf). Accessed October 2026.
-
-[^4]: Morey AF, Tran LK, Zinman LM. "Q‐flap reconstruction of panurethral strictures." *BJU International.* 2000;86(9):1039–1042. doi:[10.1046/j.1464-410x.2000.00974.x](https://doi.org/10.1046/j.1464-410x.2000.00974.x)
-
-[^5]: Vanni AJ, Zinman LN, Buckley JC. "Radial Urethrotomy and Intralesional Mitomycin C for the Management of Recurrent Bladder Neck Contractures." *Journal of Urology.* 2011;186(1):156–160. doi:[10.1016/j.juro.2011.03.019](https://doi.org/10.1016/j.juro.2011.03.019)
-
-[^6]: Palmer DA, Buckley JC, Zinman LN, et al. "Urethroplasty for High Risk, Long Segment Urethral Strictures with Ventral Buccal Mucosa Graft and Gracilis Muscle Flap." *Journal of Urology.* 2015;193(3):902–905. doi:[10.1016/j.juro.2014.09.093](https://doi.org/10.1016/j.juro.2014.09.093)
 
 </SurgeonProfile>

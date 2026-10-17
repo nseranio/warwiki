@@ -3,11 +3,12 @@ title: "Stuart Stanton"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/stuart-stanton.json';
 import profile from '@site/src/data/surgeon-profiles/stuart-stanton.json';
 import citations from '@site/src/data/surgeon-citations/stuart-stanton.json';
 
-<SurgeonProfile id="stuart-stanton" profile={profile} citations={citations}>
+<SurgeonProfile id="stuart-stanton" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,17 +21,28 @@ import citations from '@site/src/data/surgeon-citations/stuart-stanton.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Burch colposuspension series** (1976). Published a colposuspension series for female stress urinary incontinence.[^3]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Burch colposuspension series** (1976). Published a colposuspension series for female stress urinary incontinence.
+
+</KeyPublication>
+
+</ol>
+
+## Professional Work
+
 - **UK urogynecology subspecialty training**. Set up the first UK subspecialty training program in urogynecology, according to the cited source.[^4]
 - **Founding member of continence and urogynecology societies**. Was a founding member of the International Continence Society, International Urogynecological Association, and British Society of Urogynaecology.[^5]
 
 [^1]: [IUGA Mourns the Loss of Prof. Stuart Stanton](https://www.iuga.org/news/news/iuga-mourns-the-loss-of-stuart-stanton). Accessed October 2026.
 
 [^2]: [ICS News | In Memory of Stuart Stanton](https://www.ics.org/news/1471). Accessed October 2026.
-
-[^3]: Stanton SL, Williams JE, Ritchie D. "THE COLPOSUSPENSION OPERATION FOR URINARY INCONTINENCE." *BJOG.* 1976;83(11):890–895. doi:[10.1111/j.1471-0528.1976.tb00768.x](https://doi.org/10.1111/j.1471-0528.1976.tb00768.x)
 
 [^4]: [IUGA Mourns the Loss of Prof. Stuart Stanton](https://www.iuga.org/news/news/iuga-mourns-the-loss-of-stuart-stanton). Accessed October 2026.
 

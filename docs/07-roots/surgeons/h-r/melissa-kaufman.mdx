@@ -3,11 +3,12 @@ title: "Melissa R. Kaufman"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/melissa-kaufman.json';
 import profile from '@site/src/data/surgeon-profiles/melissa-kaufman.json';
 import citations from '@site/src/data/surgeon-citations/melissa-kaufman.json';
 
-<SurgeonProfile id="melissa-kaufman" profile={profile} citations={citations}>
+<SurgeonProfile id="melissa-kaufman" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,31 +22,36 @@ import citations from '@site/src/data/surgeon-citations/melissa-kaufman.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Kaufman's cited work addresses urinary incontinence treatments, including artificial urinary sphincter outcomes, autologous cell therapy, and sling surgery. Her cited guideline work also addresses genitourinary syndrome of menopause.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **AUA/SUFU/AUGS genitourinary syndrome of menopause guideline** (2025). Chaired the joint guideline on identifying, counseling, and treating patients with genitourinary syndrome of menopause.[^9] Cited on WARWIKI: [Vaginal Laser Therapy](/docs/surgical-techniques/04f-incontinence-procedures/procedures/vaginal-laser-therapy).
-- **Artificial Urinary Sphincter Clinical Outcomes trial** (2026). Led the prospective multicenter AUSCO study reporting continence, safety, and quality-of-life outcomes after AMS 800 implantation.[^10] Cited on WARWIKI: [Artificial Urinary Sphincter (Procedure)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter).
+Kaufman's cited work addresses urinary incontinence treatments, including artificial urinary sphincter outcomes, autologous cell therapy, and sling surgery. Her cited guideline work also addresses genitourinary syndrome of menopause.<sup>[P1](#publication-9)</sup><sup>[P3](#publication-5)</sup><sup>[P2](#publication-10)</sup><sup>[P2](#publication-10)</sup><sup>[P4](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**AUA/SUFU/AUGS genitourinary syndrome of menopause guideline** (2025). Chaired the joint guideline on identifying, counseling, and treating patients with genitourinary syndrome of menopause.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Artificial Urinary Sphincter Clinical Outcomes trial** (2026). Led the prospective multicenter AUSCO study reporting continence, safety, and quality-of-life outcomes after AMS 800 implantation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+</ol>
 
 [^1]: [Melissa R. Kaufman, MD, PhD, FACS. Vanderbilt Health Nashville, TN](https://www.vanderbilthealth.com/doctors/kaufman-melissa). Accessed October 2026.
 
 [^2]: [Melissa Kaufman MD, PhD, FACS. Department of Urology](https://www.vumc.org/urology/node/142). Accessed October 2026.
 
 [^3]: [Urology association honors Kaufman. Vanderbilt Health News](https://news.vumc.org/2017/03/23/urology-association-honors-kaufman/). Accessed October 2026.
-
-[^4]: Kaufman MR, Ackerman AL, Amin KA, et al. "The AUA/SUFU/AUGS Guideline on Genitourinary Syndrome of Menopause." J Urol. 2025;214(3):242–250. doi:[10.1097/ju.0000000000004589](https://doi.org/10.1097/ju.0000000000004589)
-
-[^5]: Kaufman MR, Goldman HB, Chermansky CJ, et al. Iltamiocel Autologous Cell Therapy for the Treatment of Female Stress Urinary Incontinence: A Double-Blind, Randomized, Stratified, Placebo-Controlled Trial. Neurourol Urodyn. 2024;43:2290–2299. doi:[10.1002/nau.25588](https://doi.org/10.1002/nau.25588)
-
-[^6]: Kaufman MR, Wood HM, Terlecki R, et al. The Artificial Urinary Sphincter Clinical Outcomes Trial: Primary Results. J Urol. 2026;215(2):194-202. Published online October 3, 2025. doi:[10.1097/ju.0000000000004796](https://doi.org/10.1097/ju.0000000000004796)
-
-[^7]: Kaufman MR, Wood HM, Terlecki R, et al. The Artificial Urinary Sphincter Clinical Outcomes (AUSCO) trial: primary results. J Urol. 2026;215(2):194-202. Published online October 3, 2025. doi:[10.1097/ju.0000000000004796](https://doi.org/10.1097/ju.0000000000004796)
-
-[^8]: Brown ET, Cohn JA, Kaufman MR, Reynolds WS, Dmochowski RR. Synthetic midurethral slings: urinary tract sequelae. In: Goldman HB, ed. Complications of Female Incontinence and Pelvic Reconstructive Surgery. 2nd ed. Springer (Humana Press); 2017:165-176.
-
-[^9]: Kaufman MR, Ackerman AL, Amin KA, et al. "The AUA/SUFU/AUGS Guideline on Genitourinary Syndrome of Menopause." *J Urol.* 2025;214(3):242–250. doi:[10.1097/ju.0000000000004589](https://doi.org/10.1097/ju.0000000000004589)
-
-[^10]: Kaufman MR, Wood HM, Terlecki R, et al. "The Artificial Urinary Sphincter Clinical Outcomes Trial: Primary Results." *J Urol.* 2026;215(2):194–202. doi:[10.1097/ju.0000000000004796](https://doi.org/10.1097/ju.0000000000004796)
 
 </SurgeonProfile>

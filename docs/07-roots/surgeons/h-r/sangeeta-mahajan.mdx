@@ -3,11 +3,12 @@ title: "Sangeeta T. Mahajan"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/sangeeta-mahajan.json';
 import profile from '@site/src/data/surgeon-profiles/sangeeta-mahajan.json';
 import citations from '@site/src/data/surgeon-citations/sangeeta-mahajan.json';
 
-<SurgeonProfile id="sangeeta-mahajan" profile={profile} citations={citations}>
+<SurgeonProfile id="sangeeta-mahajan" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,23 +24,34 @@ import citations from '@site/src/data/surgeon-citations/sangeeta-mahajan.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her published work covers patient goals and satisfaction after pelvic reconstructive surgery, bladder dysfunction in multiple sclerosis, and multicenter perioperative trials in pelvic reconstructive surgery run with her Cleveland fellows.[^4][^5][^6]
+## Key Publications
 
-- **Patient-centered goals after pelvic reconstructive surgery** (2006). Led a 1-year follow-up of 70 women in which lower goal achievement was associated with falling satisfaction, and urgency incontinence (56% after surgery, 44% de novo) was the most common reason for dissatisfaction.[^4]
-- **Tamsulosin to prevent urinary retention after prolapse surgery** (2021). Senior author of a multicenter double-blind trial of 119 women in which a 10-day perioperative course of tamsulosin 0.4 mg lowered postoperative urinary retention from 25.8% with placebo to 8.8%.[^6]
+Her published work covers patient goals and satisfaction after pelvic reconstructive surgery, bladder dysfunction in multiple sclerosis, and multicenter perioperative trials in pelvic reconstructive surgery run with her Cleveland fellows.<sup>[P1](#publication-4)</sup><sup>[P3](#publication-5)</sup><sup>[P2](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Patient-centered goals after pelvic reconstructive surgery** (2006). Led a 1-year follow-up of 70 women in which lower goal achievement was associated with falling satisfaction, and urgency incontinence (56% after surgery, 44% de novo) was the most common reason for dissatisfaction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Tamsulosin to prevent urinary retention after prolapse surgery** (2021). Senior author of a multicenter double-blind trial of 119 women in which a 10-day perioperative course of tamsulosin 0.4 mg lowered postoperative urinary retention from 25.8% with placebo to 8.8%.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [Sangeeta Mahajan, MD. University Hospitals](https://www.uhhospitals.org/doctors/Mahajan-Sangeeta-1568488807). Accessed October 2026.
 
 [^2]: [Sangeeta T. Mahajan, MD. Case Western Reserve University School of Medicine, Department of Reproductive Biology](https://case.edu/medicine/reproductive-biology/faculty-residents-fellows/academic-faculty/sangeeta-t-mahajan). Accessed October 2026.
 
 [^3]: [Female Pelvic Medicine and Reconstructive Surgery Fellowship Alumni. University Hospitals](https://www.uhhospitals.org/medical-education/urology-medical-education/urogynecology-reconstructive-pelvic-surgery-fellowship/fellows/alumni). Accessed October 2026.
-
-[^4]: Mahajan ST, Elkadry EA, Kenton KS, Shott S, Brubaker L. "Patient-centered surgical outcomes: the impact of goal achievement and urge incontinence on patient satisfaction one year after surgery." *Am J Obstet Gynecol.* 2006;194(3):722–728. doi:[10.1016/j.ajog.2005.08.043](https://doi.org/10.1016/j.ajog.2005.08.043)
-
-[^5]: Mahajan ST, Patel PB, Marrie RA. "Under treatment of overactive bladder symptoms in patients with multiple sclerosis: an ancillary analysis of the NARCOMS Patient Registry." *J Urol.* 2010;183(4):1432–1437. doi:[10.1016/j.juro.2009.12.029](https://doi.org/10.1016/j.juro.2009.12.029)
-
-[^6]: Chapman GC, Sheyn D, Slopnick EA, Roberts K, El-Nashar SA, Henderson JW, Mangel J, Hijaz AK, Pollard RR, Mahajan ST. "Tamsulosin vs placebo to prevent postoperative urinary retention following female pelvic reconstructive surgery: a multicenter randomized controlled trial." *Am J Obstet Gynecol.* 2021;225(3):274.e1–274.e11. doi:[10.1016/j.ajog.2021.04.236](https://doi.org/10.1016/j.ajog.2021.04.236)
 
 </SurgeonProfile>

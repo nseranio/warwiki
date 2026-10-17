@@ -3,11 +3,12 @@ title: "Eric Chung"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/eric-chung.json';
 import profile from '@site/src/data/surgeon-profiles/eric-chung.json';
 import citations from '@site/src/data/surgeon-citations/eric-chung.json';
 
-<SurgeonProfile id="eric-chung" profile={profile} citations={citations}>
+<SurgeonProfile id="eric-chung" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,29 +23,40 @@ import citations from '@site/src/data/surgeon-citations/eric-chung.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited papers address penile prosthesis devices and implantation, including malleable devices, residual curvature correction, and changes in device design. Other papers cover Peyronie's disease management and artificial urinary sphincter technology and surgical guidance.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **International penile prosthesis implant consensus** (2022). Chung led an international consensus on patient selection, operative principles and postoperative care for three-piece inflatable penile prostheses.[^8] Cited on WARWIKI: [Revision Scenarios in Penile Prosthesis Surgery](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants/revision-scenarios).
-- **Asia-Pacific penile reconstruction and prosthetics recommendations** (2023). He led society recommendations covering penile prostheses, Peyronie’s disease, trauma, phalloplasty and penile augmentation.[^9]
+His cited papers address penile prosthesis devices and implantation, including malleable devices, residual curvature correction, and changes in device design. Other papers cover Peyronie's disease management and artificial urinary sphincter technology and surgical guidance.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**International penile prosthesis implant consensus** (2022). Chung led an international consensus on patient selection, operative principles and postoperative care for three-piece inflatable penile prostheses.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Asia-Pacific penile reconstruction and prosthetics recommendations** (2023). He led society recommendations covering penile prostheses, Peyronie’s disease, trauma, phalloplasty and penile augmentation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Professor Eric Chung. UQ Experts](https://about.uq.edu.au/experts/6386). Accessed October 2026.
 
 [^2]: [Prof. Eric Chung](https://www.ericchung.au/). Accessed October 2026.
-
-[^3]: Chung E, Ziegelmann M, Lin HC, et al. Management of Peyronie's disease: recommendations from the Fifth International Consultation on Sexual Medicine (ICSM 2024). Sex Med Rev. 2026;14:qeaf068. doi:[10.1093/sxmrev/qeaf068](https://doi.org/10.1093/sxmrev/qeaf068)
-
-[^4]: Chung E, Wang J. State-of-Art Review of Current Malleable Penile Prosthesis Devices in the Commercial Market. Therapeutic Advances in Urology. 2023;15:17562872231179008. doi:[10.1177/17562872231179008](https://doi.org/10.1177/17562872231179008)
-
-[^5]: Chung E, Blecher G. Perspective: residual penile curvature correction during penile prosthesis implantation by plication in Peyronie's patients. Int J Impot Res. 2023;35(7):643–646. doi:[10.1038/s41443-023-00774-6](https://doi.org/10.1038/s41443-023-00774-6)
-
-[^6]: Chung E. Narrative Review: Evolution in Device Technology and Advances in Surgical Techniques on AMS 800 Device in the Last 50 Years. Translational Andrology and Urology. 2024;13(8):1657-1665. doi:[10.21037/tau-23-10](https://doi.org/10.21037/tau-23-10)
-
-[^7]: Chung E, Liao L, Kim JH, et al. The Asia-Pacific AMS800 Artificial Urinary Sphincter Consensus Statement. International Journal of Urology. 2023;30(2):128-138. doi:[10.1111/iju.15083](https://doi.org/10.1111/iju.15083)
-
-[^8]: Chung E, Bettocchi C, Egydio P, et al. "The International Penile Prosthesis Implant Consensus Forum: clinical recommendations and surgical principles on the inflatable 3-piece penile prosthesis implant." *Nat Rev Urol.* 2022;19(9):534–546. doi:[10.1038/s41585-022-00607-z](https://doi.org/10.1038/s41585-022-00607-z)
-
-[^9]: Chung E, Moon DG, Hui J, et al. "Clinical recommendations on penile reconstructive and prosthetic surgery: a consensus statement from the Asia-Pacific Society of Sexual Medicine." 2023;11(2). doi:[10.1093/sexmed/qfad003](https://doi.org/10.1093/sexmed/qfad003)
 
 </SurgeonProfile>

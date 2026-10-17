@@ -3,17 +3,18 @@ title: "Reynaldo G. Gomez"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/reynaldo-gomez.json';
 import profile from '@site/src/data/surgeon-profiles/reynaldo-gomez.json';
 import citations from '@site/src/data/surgeon-citations/reynaldo-gomez.json';
 
-<SurgeonProfile id="reynaldo-gomez" profile={profile} citations={citations}>
+<SurgeonProfile id="reynaldo-gomez" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
 <div className="sp-facts">
 
-- **Current position** Chief of urology, Hospital del Trabajador, Santiago, Chile; School of Medicine, Universidad Andrés Bello[^1][^10]
+- **Current position** Chief of urology, Hospital del Trabajador, Santiago, Chile; School of Medicine, Universidad Andrés Bello[^1]<sup>[P4](#publication-10)</sup>
 - **Program director** Hospital del Trabajador training institute, Société Internationale d'Urologie[^2]
 - **Medical school** Pontificia Universidad Católica de Chile (1979)[^3]
 - **Residency** Surgery specialty degree (1982) and urology specialty (1984), Pontificia Universidad Católica de Chile[^3]
@@ -23,13 +24,35 @@ import citations from '@site/src/data/surgeon-citations/reynaldo-gomez.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Gomez's cited work covers posterior urethroplasty after pelvic fracture urethral injury, including bulbar artery sparing and the timing of repair, and dorsal buccal graft reconstruction of the female urethra.[^7][^8][^9][^10]
+## Key Publications
 
-- **Bulbar artery sparing in pelvic fracture urethral injury repair** (2016). Described mobilizing the bulb from one side to preserve at least one bulbar artery during anastomotic repair; all 26 patients were voiding normally and stricture free at a mean follow-up of 20 months. His 2025 long-term series of 127 vessel-sparing non-transecting posterior repairs reported 95% success at a median of 43 months, with no cuff erosion in the 14 men who later received an artificial urinary sphincter.[^7][^8] Cited on WARWIKI: [Jordan Vessel-Sparing EPA](/docs/surgical-techniques/04a-urethral-reconstruction/jordan-vessel-sparing-epa).
-- **Timing of delayed posterior urethroplasty** (2018). Senior author of a 39-patient series in which repair at 6 weeks or sooner after pelvic fracture urethral injury had failure, incontinence and erectile dysfunction rates similar to repair at 12 weeks or later.[^9] Cited on WARWIKI: [Pelvic Fracture Urethral Injury (PFUI)](/docs/special-populations/05a-trauma-emergencies/pfui).
-- **Female urethral reconstruction with dorsal buccal mucosa graft** (2020). Led a review and technique report on female urethral stricture that recommends grafting the entire urethra and gives a collected dorsal graft success rate of 86% at a mean of 21 months.[^10] Cited on WARWIKI: [Female Dorsal Onlay Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/female-dorsal-onlay-urethroplasty).
+Gomez's cited work covers posterior urethroplasty after pelvic fracture urethral injury, including bulbar artery sparing and the timing of repair, and dorsal buccal graft reconstruction of the female urethra.<sup>[P1](#publication-7)</sup><sup>[P2](#publication-8)</sup><sup>[P3](#publication-9)</sup><sup>[P4](#publication-10)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Bulbar artery sparing in pelvic fracture urethral injury repair** (2016). Described mobilizing the bulb from one side to preserve at least one bulbar artery during anastomotic repair; all 26 patients were voiding normally and stricture free at a mean follow-up of 20 months. His 2025 long-term series of 127 vessel-sparing non-transecting posterior repairs reported 95% success at a median of 43 months, with no cuff erosion in the 14 men who later received an artificial urinary sphincter.<sup>[P2](#publication-8)</sup>
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Timing of delayed posterior urethroplasty** (2018). Senior author of a 39-patient series in which repair at 6 weeks or sooner after pelvic fracture urethral injury had failure, incontinence and erectile dysfunction rates similar to repair at 12 weeks or later.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations}>
+
+**Female urethral reconstruction with dorsal buccal mucosa graft** (2020). Led a review and technique report on female urethral stricture that recommends grafting the entire urethra and gives a collected dorsal graft success rate of 86% at a mean of 21 months.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: Gomez RG. "Editorial comment." *J Urol.* 2022;207(4):865. doi:[10.1097/JU.0000000000002353.02](https://doi.org/10.1097/JU.0000000000002353.02) (author affiliation: Chief of Urology, Hospital del Trabajador, Santiago, Chile)
 
@@ -42,13 +65,5 @@ Gomez's cited work covers posterior urethroplasty after pelvic fracture urethral
 [^5]: [SIU President, 2021–2022. *uMag*, Société Internationale d'Urologie, 2022](https://www.siu-urology.org/flipbooks/2022_uMag/3_2/inc/html/4.html). Accessed October 2026.
 
 [^6]: [GURS Fellowship Tree. Lee Zhao, NYU Langone](https://fellowshiptree.leezhaomd.org/). Accessed October 2026.
-
-[^7]: Gomez RG, Campos RA, Velarde LG. "Reconstruction of pelvic fracture urethral injuries with sparing of the bulbar arteries." *Urology.* 2016;88:207–212. doi:[10.1016/j.urology.2015.09.032](https://doi.org/10.1016/j.urology.2015.09.032)
-
-[^8]: Gómez RG, Velarde LG, Campos RA, Barrientos V. "Vessel-sparing non-transecting anastomotic reconstruction of the posterior urethra: single center experience with long-term follow-up." *Urology.* 2025;196:283–289. doi:[10.1016/j.urology.2024.10.059](https://doi.org/10.1016/j.urology.2024.10.059)
-
-[^9]: Scarberry K, Bonomo J, Gómez RG. "Delayed posterior urethroplasty following pelvic fracture urethral injury: do we have to wait 3 months?" *Urology.* 2018;116:193–197. doi:[10.1016/j.urology.2018.01.018](https://doi.org/10.1016/j.urology.2018.01.018)
-
-[^10]: Gomez RG, Segura FJ, Saavedra A, Campos RA. "Female urethral reconstruction: dorsal buccal mucosa graft onlay." *World J Urol.* 2020;38(12):3047–3054. doi:[10.1007/s00345-019-02958-6](https://doi.org/10.1007/s00345-019-02958-6)
 
 </SurgeonProfile>

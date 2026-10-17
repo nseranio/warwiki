@@ -3,11 +3,12 @@ title: "Paolo Capogrosso"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/paolo-capogrosso.json';
 import profile from '@site/src/data/surgeon-profiles/paolo-capogrosso.json';
 import citations from '@site/src/data/surgeon-citations/paolo-capogrosso.json';
 
-<SurgeonProfile id="paolo-capogrosso" profile={profile} citations={citations}>
+<SurgeonProfile id="paolo-capogrosso" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,13 +24,43 @@ import citations from '@site/src/data/surgeon-citations/paolo-capogrosso.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Capogrosso's confirmed papers cover penile prosthesis outcomes, complications, and infection risks. His guideline and review papers address erectile dysfunction, Peyronie's disease, priapism, and low-intensity shock wave therapy.[^6][^7][^8][^9][^10]
+## Key Publications
 
-- **Young men presenting with erectile dysfunction** (2013). Reported that 114 of 439 men seeking initial care for erectile dysfunction were aged 40 or younger.[^11]
-- **Erectile recovery after radical prostatectomy** (2019). Led a single-center analysis finding no improvement over time in adjusted erectile function recovery after radical prostatectomy.[^12]
-- **INSIST-ED penile implant outcomes registry** (2019). Led a multicenter prospective registry report assessing function and satisfaction one year after penile implant surgery.[^13] Cited on WARWIKI: [Penile Implants](/docs/surgical-techniques/04j-sexual-dysfunction/penile-implants).
+Capogrosso's confirmed papers cover penile prosthesis outcomes, complications, and infection risks. His guideline and review papers address erectile dysfunction, Peyronie's disease, priapism, and low-intensity shock wave therapy.<sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup><sup>[P8](#publication-10)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Young men presenting with erectile dysfunction** (2013). Reported that 114 of 439 men seeking initial care for erectile dysfunction were aged 40 or younger.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Erectile recovery after radical prostatectomy** (2019). Led a single-center analysis finding no improvement over time in adjusted erectile function recovery after radical prostatectomy.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**INSIST-ED penile implant outcomes registry** (2019). Led a multicenter prospective registry report assessing function and satisfaction one year after penile implant surgery.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [UNIFIND. CAPOGROSSO PAOLO](https://uninsubria.unifind.cineca.it/resource/person/185778?language=en-US). Accessed October 2026.
 
@@ -40,21 +71,5 @@ Capogrosso's confirmed papers cover penile prosthesis outcomes, complications, a
 [^4]: [WJMH :: Curriculum Vitae](https://wjmh.org/src/wjmh_cv/Paolo%20Capogrosso.html). Accessed October 2026.
 
 [^5]: [Dr. Capogrosso and Dr. Falcone talk about new sexual and reproductive EAU Guidelines. Uroweb](https://uroweb.org/education-events/dr-capogrosso-and-dr-falcone-talk-about-new-sexual-and-reproductive-eau-guidelines). Accessed October 2026.
-
-[^6]: Cocci A, Capogrosso P, Minhas S, et al. Penile Prosthesis Implantation: A Systematic Review of Intraoperative and Postoperative Complications. International Journal of Impotence Research. 2026;38:93–122 (online June 2025). doi:[10.1038/s41443-025-01108-4](https://doi.org/10.1038/s41443-025-01108-4)
-
-[^7]: Salonia A, Capogrosso P, Boeri L, et al. European Association of Urology guidelines on male sexual and reproductive health: 2025 update on male hypogonadism, erectile dysfunction, premature ejaculation, and Peyronie's disease. Eur Urol. 2025;88(1):76–102. doi:[10.1016/j.eururo.2025.04.010](https://doi.org/10.1016/j.eururo.2025.04.010)
-
-[^8]: Corona G, Capogrosso P, Lee WG, et al. "Penile Prosthesis Infection and Diabetes Mellitus: A Systematic Review and Meta-Analysis." J Sex Med. 2026;23(1):qdaf340. doi:[10.1093/jsxmed/qdaf340](https://doi.org/10.1093/jsxmed/qdaf340)
-
-[^9]: Schifano N, Capogrosso P, Baldini S, et al. Current evidence on the management of ischaemic priapism post-shunting: a narrative review. Int J Impot Res. 2025. doi:[10.1038/s41443-025-01078-7](https://doi.org/10.1038/s41443-025-01078-7)
-
-[^10]: Manfredi C, Russo GI, Capogrosso P, et al. "Injection therapy in the acute phase of Peyronie's disease: a systematic review of current evidence." J Sex Med. 2025;22(5):799–812. doi:[10.1093/jsxmed/qdaf044](https://doi.org/10.1093/jsxmed/qdaf044)
-
-[^11]: Capogrosso P, Colicchia M, Ventimiglia E, et al. "One Patient Out of Four with Newly Diagnosed Erectile Dysfunction is a Young Man—Worrisome Picture from the Everyday Clinical Practice." 2013;10(7):1833–1841. doi:[10.1111/jsm.12179](https://doi.org/10.1111/jsm.12179)
-
-[^12]: Capogrosso P, Vertosick EA, Benfante NE, et al. "Are We Improving Erectile Function Recovery After Radical Prostatectomy? Analysis of Patients Treated over the Last Decade." *European Urology.* 2019;75(2):221–228. doi:[10.1016/j.eururo.2018.08.039](https://doi.org/10.1016/j.eururo.2018.08.039)
-
-[^13]: Capogrosso P, Pescatori E, Caraceni E, et al. "Satisfaction rate at 1‐year follow‐up in patients treated with penile implants: data from the multicentre prospective registry &lt;scp>INSIST&lt;/scp> ‐ &lt;scp>ED&lt;/scp>." *BJU International.* 2018;123(2):360–366. doi:[10.1111/bju.14462](https://doi.org/10.1111/bju.14462)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Casey Kowalik"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/casey-kowalik.json';
 import profile from '@site/src/data/surgeon-profiles/casey-kowalik.json';
 import citations from '@site/src/data/surgeon-citations/casey-kowalik.json';
 
-<SurgeonProfile id="casey-kowalik" profile={profile} citations={citations}>
+<SurgeonProfile id="casey-kowalik" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,19 +22,30 @@ import citations from '@site/src/data/surgeon-citations/casey-kowalik.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Female urethral reconstruction graft-versus-flap series** (2014). Led a comparative series of vaginal flap and dorsal buccal graft urethroplasty for female urethral stricture.[^4] Cited on WARWIKI: [Anterior Vaginal Wall Mucosal Inlay (Önol)](/docs/surgical-techniques/04a-urethral-reconstruction/onol-vaginal-mucosal-inlay).
-- **Study of women's toileting behaviors and bladder symptoms** (2019). Led a community study relating convenience, delayed, and strained voiding behaviors to self-reported bladder problems.[^5]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Female urethral reconstruction graft-versus-flap series** (2014). Led a comparative series of vaginal flap and dorsal buccal graft urethroplasty for female urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Study of women's toileting behaviors and bladder symptoms** (2019). Led a community study relating convenience, delayed, and strained voiding behaviors to self-reported bladder problems.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [SAU-2025-Program-Book-Online.pdf](https://sauweb.org/wp-content/uploads/2025/07/SAU-2025-Program-Book-Online.pdf). Accessed October 2026.
 
 [^2]: [University of Kansas School of Medicine Program. 4801921053](https://freida.ama-assn.org/program/4801921053). Accessed October 2026.
 
 [^3]: [Dr. Casey G Kowalik, MD. Request Appointment](https://findadoctor.kansashealthsystem.com/provider/casey-g-kowalik/1221448). Accessed October 2026.
-
-[^4]: Kowalik C, Stoffel JT, Zinman L, et al. "Intermediate Outcomes After Female Urethral Reconstruction: Graft vs Flap." *Urology.* 2014;83(5):1181–1185. doi:[10.1016/j.urology.2013.12.052](https://doi.org/10.1016/j.urology.2013.12.052)
-
-[^5]: Kowalik CG, Daily A, Delpe S, et al. "Toileting Behaviors of Women—What is Healthy?." *Journal of Urology.* 2019;201(1):129–134. doi:[10.1016/j.juro.2018.07.044](https://doi.org/10.1016/j.juro.2018.07.044)
 
 </SurgeonProfile>

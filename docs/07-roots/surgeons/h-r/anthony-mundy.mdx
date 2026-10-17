@@ -3,11 +3,12 @@ title: "Anthony R. Mundy"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/anthony-mundy.json';
 import profile from '@site/src/data/surgeon-profiles/anthony-mundy.json';
 import citations from '@site/src/data/surgeon-citations/anthony-mundy.json';
 
-<SurgeonProfile id="anthony-mundy" profile={profile} citations={citations}>
+<SurgeonProfile id="anthony-mundy" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,28 +22,36 @@ import citations from '@site/src/data/surgeon-citations/anthony-mundy.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers urethral reconstruction, including anterior urethroplasty, nontransecting bulbar repair, graft techniques, and posterior urethral strictures. Other cited papers address rectourethral and urethropubic fistulas after prostate cancer treatment.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Patient-reported outcome measure for urethral stricture surgery** (2011). Senior-authored development of a patient-reported outcome measure for symptoms and quality of life after urethral stricture surgery.[^9] Cited on WARWIKI: [Male Urethral Stricture](/docs/clinical-conditions/03b-voiding-outlet/urethral-stricture).
+His cited work covers urethral reconstruction, including anterior urethroplasty, nontransecting bulbar repair, graft techniques, and posterior urethral strictures. Other cited papers address rectourethral and urethropubic fistulas after prostate cancer treatment.<sup>[P2](#publication-4)</sup><sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Patient-reported outcome measure for urethral stricture surgery** (2011). Senior-authored development of a patient-reported outcome measure for symptoms and quality of life after urethral stricture surgery.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Professor Anthony Mundy Phd (Hon) MS FRCP FRCS. Urology at HCA Healthcare UK](https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/professor-anthony-mundy). Accessed October 2026.
 
 [^2]: [Microsoft Word. Program 15th GURS Masterclass. V1.docx](https://www.baus.org.uk/_userfiles/pages/files/events/GURS.pdf). Accessed October 2026.
 
 [^3]: [Prof. Anthony Mundy](https://hamad.qa/EN/All-Events/3GURLSW/Speakers/Pages/Prof-Anthony-Mundy.aspx). Accessed October 2026.
-
-[^4]: Harris CR, McAninch JW, Mundy AR, et al. Rectourethral Fistulas Secondary to Prostate Cancer Treatment: Management and Outcomes from a Multi-Institutional Combined Experience. J Urol. 2017;197(1):191-194. doi:[10.1016/j.juro.2016.08.080](https://doi.org/10.1016/j.juro.2016.08.080)
-
-[^5]: Greenwell TJ, Venn SN, Mundy AR. Changing practice in anterior urethroplasty. BJU Int. 1999;83(6):631-5. doi:[10.1046/j.1464-410x.1999.00010.x](https://doi.org/10.1046/j.1464-410x.1999.00010.x)
-
-[^6]: Bugeja S, Andrich DE, Mundy AR. Fistulation Into the Pubic Symphysis After Treatment of Prostate Cancer: An Important and Surgically Correctable Complication. Journal of Urology. 2016;195(2):391–398. doi:[10.1016/j.juro.2015.08.074](https://doi.org/10.1016/j.juro.2015.08.074)
-
-[^7]: Andrich DE, Mundy AR. "Non-transecting anastomotic bulbar urethroplasty: a preliminary report." BJU Int. 2012;109(7):1090–1094. doi:[10.1111/j.1464-410x.2011.10508.x](https://doi.org/10.1111/j.1464-410x.2011.10508.x)
-
-[^8]: Mundy AR, Andrich DE. "Urorectal fistulae following the treatment of prostate cancer." BJU Int. 2011;107(8):1298–1303. doi:[10.1111/j.1464-410x.2010.09686.x](https://doi.org/10.1111/j.1464-410x.2010.09686.x)
-
-[^9]: Jackson MJ, Sciberras J, Mangera A, et al. "Defining a Patient-Reported Outcome Measure for Urethral Stricture Surgery." *European Urology.* 2011;60(1):60–68. doi:[10.1016/j.eururo.2011.03.003](https://doi.org/10.1016/j.eururo.2011.03.003)
 
 </SurgeonProfile>

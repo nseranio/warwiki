@@ -3,11 +3,12 @@ title: "O. Lenaine Westney"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/lenaine-westney.json';
 import profile from '@site/src/data/surgeon-profiles/lenaine-westney.json';
 import citations from '@site/src/data/surgeon-citations/lenaine-westney.json';
 
-<SurgeonProfile id="lenaine-westney" profile={profile} citations={citations}>
+<SurgeonProfile id="lenaine-westney" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,17 +22,28 @@ import citations from '@site/src/data/surgeon-citations/lenaine-westney.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Transcorporal artificial urinary sphincter outcomes** (2012). Senior-authored an outcomes series of transcorporal artificial urinary sphincter placement for men with compromised urethras.[^3]
-- **Single-incision artificial urinary sphincter placement** (2018). Reported artificial urinary sphincter implantation through one perineal incision, including subdartos pump placement.[^4] Cited on WARWIKI: [Artificial Urinary Sphincter (Procedure)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter).
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Transcorporal artificial urinary sphincter outcomes** (2012). Senior-authored an outcomes series of transcorporal artificial urinary sphincter placement for men with compromised urethras.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Single-incision artificial urinary sphincter placement** (2018). Reported artificial urinary sphincter implantation through one perineal incision, including subdartos pump placement.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Ouida L. Westney. UT MD Anderson](https://faculty.mdanderson.org/profiles/ouida_westney.html). Accessed October 2026.
 
 [^2]: [Fellowship Details Requirements. UT MD Anderson](https://www.mdanderson.org/education-training/clinical-training/graduate-medical-education/residencies-fellowships/sexual-medicine-fellowship/fellowship-details-requirements.html). Accessed October 2026.
-
-[^3]: Lee D, Zafirakis H, Shapiro A, et al. "Intermediate outcomes after transcorporal placement of an artificial urinary sphincter." *Int J of Urology.* 2012;19(9):861–866. doi:[10.1111/j.1442-2042.2012.03034.x](https://doi.org/10.1111/j.1442-2042.2012.03034.x)
-
-[^4]: Benson CR, Ayoub HI, Westney OL. "Single perineal incision placement of artificial urinary sphincter with cadaveric correlation of sub-dartos pump placement." *Int. braz j urol.* 2018;44(2):355–361. doi:[10.1590/s1677-5538.ibju.2017.0097](https://doi.org/10.1590/s1677-5538.ibju.2017.0097)
 
 </SurgeonProfile>

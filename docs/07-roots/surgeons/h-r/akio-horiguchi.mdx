@@ -3,11 +3,12 @@ title: "Akio Horiguchi"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/akio-horiguchi.json';
 import profile from '@site/src/data/surgeon-profiles/akio-horiguchi.json';
 import citations from '@site/src/data/surgeon-citations/akio-horiguchi.json';
 
-<SurgeonProfile id="akio-horiguchi" profile={profile} citations={citations}>
+<SurgeonProfile id="akio-horiguchi" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,29 +23,40 @@ import citations from '@site/src/data/surgeon-citations/akio-horiguchi.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Horiguchi's cited work covers urethroplasty for male and female urethral strictures using oral mucosal grafts, vaginal flaps, staged repair, and anastomosis. Other cited papers address pelvic fracture urethral injury and the use of magnetic resonance imaging to plan repair.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Delayed urethroplasty series for pelvic-fracture urethral injury** (2022). Reported surgical and patient-reported outcomes for 211 men undergoing delayed anastomotic urethroplasty after pelvic-fracture urethral injury.[^8] Cited on WARWIKI: [Pelvic Fracture Urethral Injury (PFUI)](/docs/special-populations/05a-trauma-emergencies/pfui).
-- **Japanese urethral-stricture guideline clinical questions** (2024). First-authored the clinical-question paper accompanying Japanese Urological Association guidance on urethral stricture diagnosis and treatment.[^9]
+Horiguchi's cited work covers urethroplasty for male and female urethral strictures using oral mucosal grafts, vaginal flaps, staged repair, and anastomosis. Other cited papers address pelvic fracture urethral injury and the use of magnetic resonance imaging to plan repair.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Delayed urethroplasty series for pelvic-fracture urethral injury** (2022). Reported surgical and patient-reported outcomes for 211 men undergoing delayed anastomotic urethroplasty after pelvic-fracture urethral injury.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Japanese urethral-stricture guideline clinical questions** (2024). First-authored the clinical-question paper accompanying Japanese Urological Association guidance on urethral stricture diagnosis and treatment.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Akio Horiguchi. UAA Congress 2025](https://registration.uaa2025.org/user/view/1010520:51543). Accessed October 2026.
 
 [^2]: [堀口明男プロフィール｜防衛医科大学校病院｜尿道狭窄症・尿路再建外科](https://plaza.umin.ac.jp/strictureurethra/profile/). Accessed October 2026.
-
-[^3]: Horiguchi A. "Substitution Urethroplasty Using Oral Mucosa Graft for Male Anterior Urethral Stricture Disease: Current Topics and Reviews." Int J Urol. 2017;24(7):493–503. doi:[10.1111/iju.13356](https://doi.org/10.1111/iju.13356)
-
-[^4]: Higuchi M, Horiguchi A, Ashiya M, et al. Vaginal flap urethroplasty and dorsal onlay buccal mucosal graft urethroplasty for female urethral stricture: a single-center experience. Int J Urol. 2026;33(5):e70477. doi:[10.1111/iju.70477](https://doi.org/10.1111/iju.70477)
-
-[^5]: Takekawa K, Horiguchi A, Shinchi M, et al. One-sided dorsal onlay urethroplasty with penile invagination (Kulkarni urethroplasty) for complex anterior urethral strictures: a single-center experience. Int J Urol. 2025;32(6):749-755. doi:[10.1111/iju.70048](https://doi.org/10.1111/iju.70048)
-
-[^6]: Horiguchi A. "Management of male pelvic fracture urethral injuries: review and current topics." Int J Urol. 2019;26(6):596–607. doi:[10.1111/iju.13947](https://doi.org/10.1111/iju.13947)
-
-[^7]: Horiguchi A, Asanuma H, Shinchi M, et al. "Efficacy of urethral reconstruction for urethral stricture associated with hypospadias surgery in adults." Int J Urol. 2022;29(12):1470–1475. doi:[10.1111/iju.15015](https://doi.org/10.1111/iju.15015)
-
-[^8]: Horiguchi A, Shinchi M, Ojima K, et al. "Surgical and Patient-Reported Outcomes of Delayed Anastomotic Urethroplasty for Male Pelvic Fracture Urethral Injury at a Japanese Referral Center." *JCM.* 2022;11(5):1225. doi:[10.3390/jcm11051225](https://doi.org/10.3390/jcm11051225)
-
-[^9]: Horiguchi A, Shinchi M, Hirano Y, et al. "Clinical questions in the Japanese Urological Association's 2024 clinical practice guidelines for urethral strictures." *Int J of Urology.* 2024;31(9):956–967. doi:[10.1111/iju.15512](https://doi.org/10.1111/iju.15512)
 
 </SurgeonProfile>

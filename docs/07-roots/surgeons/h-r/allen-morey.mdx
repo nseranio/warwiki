@@ -3,11 +3,12 @@ title: "Allen F. Morey"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/allen-morey.json';
 import profile from '@site/src/data/surgeon-profiles/allen-morey.json';
 import citations from '@site/src/data/surgeon-citations/allen-morey.json';
 
-<SurgeonProfile id="allen-morey" profile={profile} citations={citations}>
+<SurgeonProfile id="allen-morey" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,40 @@ import citations from '@site/src/data/surgeon-citations/allen-morey.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers urethral stricture management and reconstruction, including flap and graft urethroplasty, perineal urethrostomy, and the 2023 AUA guideline amendment. Other cited papers address genitourinary trauma and prosthetic treatment of male incontinence.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Buccal mucosal graft use in adult bulbar urethroplasty** (1996). With Jack McAninch, described indications and operative use of buccal mucosal grafts for adult bulbar urethral reconstruction.[^8]
-- **AUA Urotrauma Guideline** (2014). Chaired the AUA guideline panel addressing evaluation and management of renal, ureteral, bladder, urethral and genital injuries.[^9]
+His cited work covers urethral stricture management and reconstruction, including flap and graft urethroplasty, perineal urethrostomy, and the 2023 AUA guideline amendment. Other cited papers address genitourinary trauma and prosthetic treatment of male incontinence.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Buccal mucosal graft use in adult bulbar urethroplasty** (1996). With Jack McAninch, described indications and operative use of buccal mucosal grafts for adult bulbar urethral reconstruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**AUA Urotrauma Guideline** (2014). Chaired the AUA guideline panel addressing evaluation and management of renal, ureteral, bladder, urethral and genital injuries.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [GURS Lectureship. Society of Genitourinary Reconstructive Surgeons](https://societygurs.org/gurs-lectureship/). Accessed October 2026.
 
 [^2]: [Allen F. Morey, M.D.. McKinney TX](https://urologyclinics.com/providers/allen-f-morey-md-facs/). Accessed October 2026.
-
-[^3]: Wessells H, Morey A, Souter L, Rahimi L, Vanni A. "Urethral Stricture Disease Guideline Amendment (2023)." J Urol. 2023;210(1):64–71. doi:[10.1097/ju.0000000000003482](https://doi.org/10.1097/ju.0000000000003482)
-
-[^4]: Morey AF, Broghammer JA, Hollowell CMP, et al. Urotrauma Guideline 2020: AUA Guideline. J Urol. 2021;205(1):30–35. doi:[10.1097/ju.0000000000001408](https://doi.org/10.1097/ju.0000000000001408)
-
-[^5]: Joshi EG, VanDyke ME, Langford BT, Franzen BP, Morey AF. Algorithmic midline approach to perineal urethrostomy is associated with long-term success and high patient satisfaction. Urology. 2024;190:133-139. doi:[10.1016/j.urology.2024.03.016](https://doi.org/10.1016/j.urology.2024.03.016)
-
-[^6]: McAninch JW, Morey AF. Penile circular fasciocutaneous skin flap in 1-stage reconstruction of complex anterior urethral strictures. J Urol. 1998;159(4):1209–13. doi:[10.1016/s0022-5347(01)63558-4](https://doi.org/10.1016/s0022-5347(01)63558-4)
-
-[^7]: Dugi DD, Simhan J, Morey AF. "Urethroplasty for stricture disease: contemporary techniques and outcomes." Urology. 2016;89:12–8. doi:[10.1016/j.urology.2015.12.012](https://doi.org/10.1016/j.urology.2015.12.012)
-
-[^8]: Morey AF, McAninch JW. "When and how to use buccal mucosal grafts in adult bulbar urethroplasty." *Urology.* 1996;48(2):194–198. doi:[10.1016/s0090-4295(96)00154-9](https://doi.org/10.1016/s0090-4295(96)00154-9)
-
-[^9]: Morey AF, Brandes S, Dugi DD, et al. "Urotrauma: AUA Guideline." *Journal of Urology.* 2014;192(2):327–335. doi:[10.1016/j.juro.2014.05.004](https://doi.org/10.1016/j.juro.2014.05.004)
 
 </SurgeonProfile>

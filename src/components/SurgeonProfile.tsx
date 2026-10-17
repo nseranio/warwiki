@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { Surgeon } from '../data/surgeons';
+import {samePublication, type ProfilePublication} from '../utils/surgeon-publications';
 
 const PAGE_BASE = '/docs/roots/surgeons/';
 const CITES_SHOWN = 12;
@@ -70,14 +71,14 @@ function CitedOn({ pages }: { pages: SurgeonCitation['pages'] }) {
   );
 }
 
-function Citations({ name, citations }: { name: string; citations: SurgeonCitation[] }) {
+function Citations({ name, citations, additional = false }: { name: string; citations: SurgeonCitation[]; additional?: boolean }) {
   const [showAll, setShowAll] = useState(false);
   const list = showAll ? citations : citations.slice(0, CITES_SHOWN);
   return (
     <section className="sp-section">
-      <h2>Cited on WARWIKI</h2>
+      <h2>{additional ? 'Other Publications Cited on WARWIKI' : 'Cited on WARWIKI'}</h2>
       <p className="sp-cites-intro">
-        {citations.length} {citations.length === 1 ? 'publication' : 'publications'} with {name} as a listed author{' '}
+        {citations.length} {additional && 'additional '}{citations.length === 1 ? 'publication' : 'publications'} with {name} as a listed author{' '}
         {citations.length === 1 ? 'is' : 'are'} cited on WARWIKI, ordered by the number of pages that cite them.
         Papers whose author list is shortened to "et al." before this name are not included.
       </p>
@@ -106,15 +107,40 @@ function Citations({ name, citations }: { name: string; citations: SurgeonCitati
   );
 }
 
+/** A selected paper appears once, with its description and every citing page. */
+export function KeyPublication({publication, citations, children}: {
+  publication: ProfilePublication;
+  citations: SurgeonCitation[];
+  children?: React.ReactNode;
+}) {
+  const matches = citations.filter(citation => samePublication(publication, citation));
+  const pages = [...new Map([
+    ...(publication.pages ?? []),
+    ...matches.flatMap(citation => citation.pages),
+  ].map(page => [page.url, page])).values()];
+  return <li id={publication.id}>
+    <span className="sp-cite-text">{publication.cite}</span>
+    {publication.doi && <>{' '}<a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noopener noreferrer" className="sp-cite-doi">doi</a></>}
+    {!publication.doi && publication.pmid && <>{' '}<a href={`https://pubmed.ncbi.nlm.nih.gov/${publication.pmid}/`} target="_blank" rel="noopener noreferrer" className="sp-cite-doi">PubMed</a></>}
+    {!publication.doi && !publication.pmid && publication.url && <>{' '}<a href={publication.url} target="_blank" rel="noopener noreferrer" className="sp-cite-doi">Source</a></>}
+    {children && <div className="sp-pub-what">{children}</div>}
+    {pages.length > 0 && <CitedOn pages={pages} />}
+  </li>;
+}
+
 export default function SurgeonProfile({
   id,
   profile,
   citations = [],
+  keyPublications = [],
+  referencePublications = [],
   children,
 }: {
   id: string;
   profile?: ProfileData;
   citations?: SurgeonCitation[];
+  keyPublications?: ProfilePublication[];
+  referencePublications?: ProfilePublication[];
   children?: React.ReactNode;
 }) {
   const [imgError, setImgError] = useState(false);
@@ -126,6 +152,9 @@ export default function SurgeonProfile({
   const { surgeon, mentor, coMentor, school, trainees } = profile;
   const institution = surgeon.institution ?? profile.position;
   const hasLineage = Boolean(mentor || school || trainees.length);
+  const displayedPublications = [...keyPublications, ...referencePublications];
+  const otherCitations = citations.filter(citation => !displayedPublications.some(publication => samePublication(publication, citation)));
+  const otherKeyPubs = surgeon.keyPubs?.filter(cite => !displayedPublications.some(publication => samePublication(publication, {cite})));
 
   return (
     <div className="sp-wrapper">
@@ -232,16 +261,16 @@ export default function SurgeonProfile({
         {/* Biography MDX supplies its own headings. */}
         {children && <section className="sp-section sp-bio">{children}</section>}
 
-        {surgeon.keyPubs && surgeon.keyPubs.length > 0 && (
+        {otherKeyPubs && otherKeyPubs.length > 0 && (
           <section className="sp-section">
-            <h2>Key Publications</h2>
+            <h2>{keyPublications.length > 0 ? 'Additional Publications' : 'Key Publications'}</h2>
             <ol className="sp-pubs">
-              {surgeon.keyPubs.map((pub, i) => <li key={i}>{pub}</li>)}
+              {otherKeyPubs.map((pub, i) => <li key={i}>{pub}</li>)}
             </ol>
           </section>
         )}
 
-        {citations.length > 0 && <Citations name={surgeon.name} citations={citations} />}
+        {otherCitations.length > 0 && <Citations name={surgeon.name} citations={otherCitations} additional={keyPublications.length > 0} />}
 
         {surgeon.instruments && surgeon.instruments.length > 0 && (
           <section className="sp-section">

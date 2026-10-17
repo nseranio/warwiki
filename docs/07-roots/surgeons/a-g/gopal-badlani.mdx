@@ -3,11 +3,12 @@ title: "Gopal Badlani"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/gopal-badlani.json';
 import profile from '@site/src/data/surgeon-profiles/gopal-badlani.json';
 import citations from '@site/src/data/surgeon-citations/gopal-badlani.json';
 
-<SurgeonProfile id="gopal-badlani" profile={profile} citations={citations}>
+<SurgeonProfile id="gopal-badlani" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,12 +22,20 @@ import citations from '@site/src/data/surgeon-citations/gopal-badlani.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Five-year synthetic pubovaginal sling series** (2003). Senior-authored a five-year follow-up series of broad-based polypropylene pubovaginal slings for female stress urinary incontinence.[^2]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Five-year synthetic pubovaginal sling series** (2003). Senior-authored a five-year follow-up series of broad-based polypropylene pubovaginal slings for female stress urinary incontinence.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Gopal H. Badlani, MD. Wake Forest University School of Medicine](https://school.wakehealth.edu/faculty/b/gopal-h-badlani). Accessed October 2026.
-
-[^2]: SHAH DK, PAUL EM, AMUKELE S, et al. "Broad Based Tension-Free Synthetic Sling for Stress Urinary Incontinence: 5-Year Outcome." *Journal of Urology.* 2003;170(3):849–851. doi:[10.1097/01.ju.0000074712.09279.e3](https://doi.org/10.1097/01.ju.0000074712.09279.e3)
 
 </SurgeonProfile>

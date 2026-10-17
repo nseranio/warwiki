@@ -3,11 +3,12 @@ title: "Hann-Chorng Kuo"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/hann-chorng-kuo.json';
 import profile from '@site/src/data/surgeon-profiles/hann-chorng-kuo.json';
 import citations from '@site/src/data/surgeon-citations/hann-chorng-kuo.json';
 
-<SurgeonProfile id="hann-chorng-kuo" profile={profile} citations={citations}>
+<SurgeonProfile id="hann-chorng-kuo" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,29 +21,40 @@ import citations from '@site/src/data/surgeon-citations/hann-chorng-kuo.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Kuo's cited papers examine botulinum toxin delivery for overactive bladder, interstitial cystitis or bladder pain syndrome, and urethral sphincter dysfunction. Other cited work addresses urodynamic assessment and treatment of dysfunctional voiding.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Augmentation cystoplasty series for ketamine cystitis** (2014). Coauthored an early 14-patient series reporting reduced pain and increased bladder capacity after augmentation enterocystoplasty for refractory ketamine cystitis.[^8] Cited on WARWIKI: [Ketamine Cystitis](/docs/clinical-conditions/03h-pelvic-pain/ketamine-cystitis).
-- **Botulinum toxin trial for interstitial cystitis/bladder pain syndrome** (2016). Led a randomized trial in which bladder botulinum toxin injections plus hydrodistention reduced pain more than saline injections plus hydrodistention.[^9] Cited on WARWIKI: [Botulinum Toxin (OnabotulinumtoxinA &amp; Variants)](/docs/foundations/pharmacology/storage-oab/botulinum-toxin).
+Kuo's cited papers examine botulinum toxin delivery for overactive bladder, interstitial cystitis or bladder pain syndrome, and urethral sphincter dysfunction. Other cited work addresses urodynamic assessment and treatment of dysfunctional voiding.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Augmentation cystoplasty series for ketamine cystitis** (2014). Coauthored an early 14-patient series reporting reduced pain and increased bladder capacity after augmentation enterocystoplasty for refractory ketamine cystitis.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Botulinum toxin trial for interstitial cystitis/bladder pain syndrome** (2016). Led a randomized trial in which bladder botulinum toxin injections plus hydrodistention reduced pain more than saline injections plus hydrodistention.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [排尿障礙治療中心－郭漢崇](https://hlm.tzuchi.com.tw/mr/index.php/facility/research-lab/lab-hann-chorng-kuo). Accessed October 2026.
 
 [^2]: [Hann-Chorng Kuo. UAA Congress 2025](https://registration.uaa2025.org/user/view/956230:51543). Accessed October 2026.
-
-[^3]: Jiang YH, Liao CH, Kuo HC. "Current and potential urological applications of botulinum toxin A." Nat Rev Urol. 2015;12(9):519–533. doi:[10.1038/nrurol.2015.193](https://doi.org/10.1038/nrurol.2015.193)
-
-[^4]: Hsiao SM, Lin HH, Kuo HC. "Factors associated with therapeutic efficacy of intravesical onabotulinumtoxinA injection for overactive bladder syndrome." PLoS One. 2016;11(1):e0147137. doi:[10.1371/journal.pone.0147137](https://doi.org/10.1371/journal.pone.0147137)
-
-[^5]: Lee CL, Kuo HC. "Video urodynamic predictors of outcomes after urethral sphincter botulinum toxin A injection in spinal cord-injured patients with detrusor sphincter dyssynergia." Toxins. 2025;17(8):412. doi:[10.3390/toxins17080412](https://doi.org/10.3390/toxins17080412)
-
-[^6]: Hung FC, Kuo HC. "Liposome-encapsulated botulinum toxin A in treatment of functional bladder disorders." Toxins. 2022;14(12):838. doi:[10.3390/toxins14120838](https://doi.org/10.3390/toxins14120838)
-
-[^7]: Chuang YC, Kaufmann JH, Chancellor DD, Chancellor MB, Kuo HC. "Bladder instillation of liposome-encapsulated onabotulinumtoxinA improves overactive bladder symptoms: a prospective, multicenter, double-blind, randomized trial." J Urol. 2014;192(6):1743–1749. doi:[10.1016/j.juro.2014.07.008](https://doi.org/10.1016/j.juro.2014.07.008)
-
-[^8]: Chung SD, Wang CC, Kuo HC. "Augmentation enterocystoplasty is effective in relieving refractory ketamine‐related bladder pain." *Neurourology and Urodynamics.* 2014;33(8):1207–1211. doi:[10.1002/nau.22477](https://doi.org/10.1002/nau.22477)
-
-[^9]: Kuo H, Jiang Y, Tsai Y, et al. "Intravesical botulinum toxin‐A injections reduce bladder pain of interstitial cystitis/bladder pain syndrome refractory to conventional treatment – A prospective, multicenter, randomized, double‐blind, placebo‐controlled clinical trial." *Neurourology and Urodynamics.* 2015;35(5):609–614. doi:[10.1002/nau.22760](https://doi.org/10.1002/nau.22760)
 
 </SurgeonProfile>

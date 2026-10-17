@@ -3,11 +3,12 @@ title: "Cecile A. Ferrando"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/cecile-ferrando.json';
 import profile from '@site/src/data/surgeon-profiles/cecile-ferrando.json';
 import citations from '@site/src/data/surgeon-citations/cecile-ferrando.json';
 
-<SurgeonProfile id="cecile-ferrando" profile={profile} citations={citations}>
+<SurgeonProfile id="cecile-ferrando" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,40 @@ import citations from '@site/src/data/surgeon-citations/cecile-ferrando.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her confirmed work addresses gender-affirming pelvic and genital surgery, including hysterectomy, orchiectomy, vaginoplasty techniques and complications, pelvic floor therapy, and patient-reported outcomes. Other cited studies examine pelvic organ prolapse repair, including sacrocolpopexy, sacrospinous colpopexy, and uterosacral colpopexy.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Sacrocolpopexy mesh-configuration randomized trial** (2019). Co-led a randomized comparison of Y-shaped and flat mesh for laparoscopic or robotic sacrocolpopexy.[^8] Cited on WARWIKI: [Sacrocolpopexy](/docs/surgical-techniques/04g-prolapse-repair/sacrocolpopexy).
-- **FLOWER pelvic floor therapy trial** (2023). Led a randomized trial of routine postoperative pelvic floor physical therapy after vaginoplasty; it found no improvement in measured outcomes.[^9] Cited on WARWIKI: [Neovaginal Stenosis Management — Stepwise](/docs/surgical-techniques/04k-gender-affirming-surgery/neovaginal-stenosis-management).
+Her confirmed work addresses gender-affirming pelvic and genital surgery, including hysterectomy, orchiectomy, vaginoplasty techniques and complications, pelvic floor therapy, and patient-reported outcomes. Other cited studies examine pelvic organ prolapse repair, including sacrocolpopexy, sacrospinous colpopexy, and uterosacral colpopexy.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Sacrocolpopexy mesh-configuration randomized trial** (2019). Co-led a randomized comparison of Y-shaped and flat mesh for laparoscopic or robotic sacrocolpopexy.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**FLOWER pelvic floor therapy trial** (2023). Led a randomized trial of routine postoperative pelvic floor physical therapy after vaginoplasty; it found no improvement in measured outcomes.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Urogynecology & Reconstructive Pelvic Surgery](https://obgyn.ucsd.edu/education-training/fellowships/urogynecology/index.html). Accessed October 2026.
 
 [^2]: [ICS. Dr Cecile Ferrando](https://www.ics.org/contact/26495). Accessed October 2026.
-
-[^3]: Huber S, Ferrando C, Safer JD, et al. Development and validation of urological and appearance domains of the Post-Affirming Surgery Form and Function Individual Reporting Measure (AFFIRM) for transwomen following genital surgery. J Urol. 2021;206(6):1445–1453. doi:[10.1097/ju.0000000000002141](https://doi.org/10.1097/ju.0000000000002141)
-
-[^4]: Bretschneider CE, Sheyn D, Pollard R, Ferrando CA. Complication rates and outcomes after hysterectomy in transgender men. Obstet Gynecol. 2018;132(5):1265–1273. doi:[10.1097/aog.0000000000002936](https://doi.org/10.1097/aog.0000000000002936)
-
-[^5]: Rahman S, Ferrando CA. Gender-affirming bilateral orchiectomy for the urogynecologist. Int Urogynecol J. 2026;37(4):1091–1094. doi:[10.1007/s00192-025-06463-w](https://doi.org/10.1007/s00192-025-06463-w)
-
-[^6]: Ferrando CA. Vaginoplasty complications. Clin Plast Surg. 2018;45(3):361–368. doi:[10.1016/j.cps.2018.03.007](https://doi.org/10.1016/j.cps.2018.03.007)
-
-[^7]: Ferrando CA. Updates on feminizing genital affirmation surgery (vaginoplasty) techniques. Neurourol Urodyn. 2023;42(5):931–938. doi:[10.1002/nau.25088](https://doi.org/10.1002/nau.25088)
-
-[^8]: Ferrando CA, Paraiso MFR. "A Prospective Randomized Trial Comparing Restorelle Y Mesh and Flat Mesh for Laparoscopic and Robotic-Assisted Laparoscopic Sacrocolpopexy." *Female Pelvic Med Reconstr Surg.* 2019;25(2):83–87. doi:[10.1097/spv.0000000000000655](https://doi.org/10.1097/spv.0000000000000655)
-
-[^9]: Ferrando CA, Mishra K, Grimstad FW, et al. "A randomized trial comparing perioperative pelvic FLOor physical therapy to current standard of care in transgender Women undergoing vaginoplasty for gendER affirmation: the FLOWER Trial." *Int Urogynecol J.* 2023;34(12):2985–2993. doi:[10.1007/s00192-023-05623-0](https://doi.org/10.1007/s00192-023-05623-0)
 
 </SurgeonProfile>

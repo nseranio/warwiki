@@ -3,11 +3,12 @@ title: "Kenneth W. Angermeier"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/kenneth-angermeier.json';
 import profile from '@site/src/data/surgeon-profiles/kenneth-angermeier.json';
 import citations from '@site/src/data/surgeon-citations/kenneth-angermeier.json';
 
-<SurgeonProfile id="kenneth-angermeier" profile={profile} citations={citations}>
+<SurgeonProfile id="kenneth-angermeier" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,36 @@ import citations from '@site/src/data/surgeon-citations/kenneth-angermeier.json'
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers urethral stricture evaluation and reconstruction, including guideline and consultation papers, augmented anastomotic urethroplasty, ventral grafts, and rectourethral fistula repair. Other cited publications address penile curvature surgery and penile prostheses.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Augmented anastomotic urethroplasty outcomes** (2007). Co-reported a 69-patient series evaluating augmented anastomotic urethroplasty for recurrent urethral stricture.[^8] Cited on WARWIKI: [Augmented Anastomotic Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/augmented-anastomotic).
-- **Adult hypospadias presentation classification** (2011). Senior-authored a three-category classification of adults presenting for hypospadias-related urethral repair.[^9] Cited on WARWIKI: [Redo Hypospadias Repair in Adolescents and Adults](/docs/surgical-techniques/04a-urethral-reconstruction/redo-hypospadias-adults).
+His cited work covers urethral stricture evaluation and reconstruction, including guideline and consultation papers, augmented anastomotic urethroplasty, ventral grafts, and rectourethral fistula repair. Other cited publications address penile curvature surgery and penile prostheses.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-6)</sup><sup>[P1](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Augmented anastomotic urethroplasty outcomes** (2007). Co-reported a 69-patient series evaluating augmented anastomotic urethroplasty for recurrent urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Adult hypospadias presentation classification** (2011). Senior-authored a three-category classification of adults presenting for hypospadias-related urethral repair.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Dr. Kenneth Angermeier, MD. Reconstructive Urology](https://providers.clevelandclinic.org/provider/kenneth-angermeier/4271940). Accessed October 2026.
 
 [^2]: [US Canada. Society of Genitourinary Reconstructive Surgeons](https://societygurs.org/gurs-fellowships/us-canada/). Accessed October 2026.
-
-[^3]: Wessells H, Angermeier KW, Elliott S, et al. Urethral Stricture Disease: AUA Guideline (published 2016; amended 2023), statement 20.
-
-[^4]: Khouri RK, Accioly JPE, DeWitt-Foy ME, Wood HM, Angermeier KW. "Posterior urethral reconstruction at the time of rectourethral fistula repair: technique and outcomes." Urology. 2024;186:36–40. doi:[10.1016/j.urology.2024.02.026](https://doi.org/10.1016/j.urology.2024.02.026)
-
-[^5]: Khouri RK Jr, Accioly JPE, DeWitt-Foy ME, Wood HM, Angermeier KW. "Posterior urethral reconstruction at the time of rectourethral fistula repair: technique and outcomes." Urology. 2024;186:36–40. doi:[10.1016/j.urology.2024.02.026](https://doi.org/10.1016/j.urology.2024.02.026)
-
-[^6]: Angermeier KW, Rourke KF, Dubey D, Forsyth RJ, Gonzalez CM. "SIU/ICUD consultation on urethral strictures: evaluation and follow-up." Urology. 2014;83(3 Suppl):S8–17. doi:[10.1016/j.urology.2013.09.011](https://doi.org/10.1016/j.urology.2013.09.011)
-
-[^7]: Abouassaly R, Angermeier KW. Augmented anastomotic urethroplasty. J Urol. 2007;177(6):2211-5; discussion 2215-6. doi:[10.1016/j.juro.2007.01.140](https://doi.org/10.1016/j.juro.2007.01.140)
-
-[^8]: Abouassaly R, Angermeier KW. "Augmented Anastomotic Urethroplasty." *Journal of Urology.* 2007;177(6):2211–2216. doi:[10.1016/j.juro.2007.01.140](https://doi.org/10.1016/j.juro.2007.01.140)
-
-[^9]: Ching CB, Wood HM, Ross JH, et al. "The Cleveland Clinic experience with adult hypospadias patients undergoing repair: their presentation and a new classification system." *BJU International.* 2010;107(7):1142–1146. doi:[10.1111/j.1464-410x.2010.09693.x](https://doi.org/10.1111/j.1464-410x.2010.09693.x)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Jack W. McAninch"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jack-mcaninch.json';
 import profile from '@site/src/data/surgeon-profiles/jack-mcaninch.json';
 import citations from '@site/src/data/surgeon-citations/jack-mcaninch.json';
 
-<SurgeonProfile id="jack-mcaninch" profile={profile} citations={citations}>
+<SurgeonProfile id="jack-mcaninch" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,12 +23,27 @@ import citations from '@site/src/data/surgeon-citations/jack-mcaninch.json';
 
 </div>
 
-## Principal Contributions
+<a id="principal-contributions"></a>
+
+## Key Publications
 
 His UCSF team studied sonourethrography and magnetic resonance imaging for urethral injury and stricture evaluation.[^1] He created a genitourinary trauma database at San Francisco General Hospital in 1977.[^2] His textbook was titled Traumatic and Reconstructive Urology.[^1]
 
-- **Sonourethrography for urethral stricture evaluation** (1988). Co-developed ultrasound imaging of urethral strictures to assess their extent before reconstruction.[^3] Cited on WARWIKI: [Ultrasound in Reconstructive Urology](/docs/evaluation/imaging/ultrasound).
-- **Circular fasciocutaneous penile flap for urethral reconstruction** (1993). Described a circular penile skin flap for single-stage reconstruction of extensive urethral strictures.[^4] Cited on WARWIKI: [Orandi Flap (Longitudinal Ventral Penile Skin Flap)](/docs/surgical-techniques/04a-urethral-reconstruction/orandi-flap).
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Sonourethrography for urethral stricture evaluation** (1988). Co-developed ultrasound imaging of urethral strictures to assess their extent before reconstruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Circular fasciocutaneous penile flap for urethral reconstruction** (1993). Described a circular penile skin flap for single-stage reconstruction of extensive urethral strictures.
+
+</KeyPublication>
+
+</ol>
 
 ## The UCSF Fellowship
 
@@ -40,9 +56,5 @@ UCSF reported his retirement from the San Francisco General chief position in Ju
 [^1]: [Jack W. McAninch, MD, FACS | UCSF Department of Urology](https://urology.ucsf.edu/people/jack-w-mcaninch). Accessed October 2026.
 
 [^2]: [Celebrating Jack McAninch | UCSF Department of Urology](https://urology.ucsf.edu/news/all/201405/celebrating-jack-mcaninch). Accessed October 2026.
-
-[^3]: McAninch JW, Laing FC, Jeffrey RB. "Sonourethrography in the Evaluation of Urethral Strictures: A Preliminary Report." *Journal of Urology.* 1988;139(2):294–297. doi:[10.1016/s0022-5347(17)42391-3](https://doi.org/10.1016/s0022-5347(17)42391-3)
-
-[^4]: Mcaninch JW. "Reconstruction of Extensive Urethral Strictures: Circular Fasciocutaneous Penile Flap." *Journal of Urology.* 1993;149(3):488–491. doi:[10.1016/s0022-5347(17)36125-6](https://doi.org/10.1016/s0022-5347(17)36125-6)
 
 </SurgeonProfile>

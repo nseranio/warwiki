@@ -3,11 +3,12 @@ title: "Steven A. Kaplan"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/steven-kaplan.json';
 import profile from '@site/src/data/surgeon-profiles/steven-kaplan.json';
 import citations from '@site/src/data/surgeon-citations/steven-kaplan.json';
 
-<SurgeonProfile id="steven-kaplan" profile={profile} citations={citations}>
+<SurgeonProfile id="steven-kaplan" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,34 +22,46 @@ import citations from '@site/src/data/surgeon-citations/steven-kaplan.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work examines treatments for benign prostatic hyperplasia and lower urinary tract symptoms, including transurethral electrovaporization, drug-coated balloon therapy, and Aquablation.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **MTOPS prostate-volume analysis** (2006). Led an MTOPS analysis relating baseline prostate volume to outcomes with doxazosin and finasteride combination therapy.[^9]
-- **Tolterodine–tamsulosin trial for male LUTS and overactive bladder** (2006). Led a randomized trial testing combined antimuscarinic and alpha-blocker treatment in men with lower urinary tract and overactive-bladder symptoms.[^10] Cited on WARWIKI: [Benign Prostatic Hyperplasia](/docs/clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction).
-- **PINNACLE Optilume BPH trial** (2023). Led a sham-controlled trial of a drug-coated balloon catheter for lower urinary tract symptoms attributed to benign prostatic hyperplasia.[^11] Cited on WARWIKI: [Drug-Coated Balloon Therapy](/docs/surgical-techniques/drug-coated-balloon).
+His cited work examines treatments for benign prostatic hyperplasia and lower urinary tract symptoms, including transurethral electrovaporization, drug-coated balloon therapy, and Aquablation.<sup>[P3](#publication-11)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**MTOPS prostate-volume analysis** (2006). Led an MTOPS analysis relating baseline prostate volume to outcomes with doxazosin and finasteride combination therapy.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Tolterodine–tamsulosin trial for male LUTS and overactive bladder** (2006). Led a randomized trial testing combined antimuscarinic and alpha-blocker treatment in men with lower urinary tract and overactive-bladder symptoms.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**PINNACLE Optilume BPH trial** (2023). Led a sham-controlled trial of a drug-coated balloon catheter for lower urinary tract symptoms attributed to benign prostatic hyperplasia.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Steven A Kaplan. New York](https://profiles.mountsinai.org/steven-a-kaplan). Accessed October 2026.
 
 [^2]: [THE UROLOGY RESIDENCY PROGRAM](https://icahn.mssm.edu/files/ISMMS/Assets/Departments/Urology/UrologyResidencyProgramOverviewA.pdf). Accessed October 2026.
 
 [^3]: [Best Urologist NYC. Jerry G. Blaivas MD, world-renowned urological surgeon for incontinence, urinary fistulas](https://www.besturologistnyc.com/). Accessed October 2026.
-
-[^4]: Kaplan SA, Moss J, Freedman S, et al. "The PINNACLE study: a double-blind, randomized, sham-controlled study evaluating the Optilume BPH catheter system for the treatment of lower urinary tract symptoms secondary to benign prostatic hyperplasia." J Urol. 2023;210(3):500–9. doi:[10.1097/ju.0000000000003568](https://doi.org/10.1097/ju.0000000000003568)
-
-[^5]: Kaplan SA, Moss JL, Freedman SJ. Two-year long-term follow-up of treatment with the Optilume BPH catheter system in a randomized controlled trial for benign prostatic hyperplasia (The PINNACLE Study). Prostate Cancer Prostatic Dis. 2024;27(3):531-536. doi:[10.1038/s41391-024-00833-z](https://doi.org/10.1038/s41391-024-00833-z)
-
-[^6]: Te AE, Kaplan SA. "Transurethral electrovaporization of the prostate." Mayo Clin Proc. 1998;73(7):691–5. doi:[10.1016/s0025-6196(11)64896-9](https://doi.org/10.1016/s0025-6196(11)64896-9)
-
-[^7]: Weiner DM, Kaplan SA. "Electrosurgery: VaporTrode." Eur Urol. 1999;35(2):166–72. doi:[10.1159/000019838](https://doi.org/10.1159/000019838)
-
-[^8]: Kaplan SA, Laor E, Fatal M, Te AE. "Transurethral resection of the prostate versus transurethral electrovaporization of the prostate: a blinded, prospective comparative study with 1-year followup." J Urol. 1998;159(2):454–8. doi:[10.1016/s0022-5347(01)63947-8](https://doi.org/10.1016/s0022-5347(01)63947-8)
-
-[^9]: Kaplan SA, McConnell JD, Roehrborn CG, et al. "Combination Therapy With Doxazosin and Finasteride for Benign Prostatic Hyperplasia in Patients With Lower Urinary Tract Symptoms and a Baseline Total Prostate Volume of 25 Ml or Greater." *Journal of Urology.* 2006;175(1):217–220. doi:[10.1016/s0022-5347(05)00041-8](https://doi.org/10.1016/s0022-5347(05)00041-8)
-
-[^10]: Kaplan SA, Roehrborn CG, Rovner ES, et al. "Tolterodine and Tamsulosin for Treatment of Men With Lower Urinary Tract Symptoms and Overactive Bladder." *JAMA.* 2006;296(19):2319. doi:[10.1001/jama.296.19.2319](https://doi.org/10.1001/jama.296.19.2319)
-
-[^11]: Kaplan SA, Moss J, Freedman S, et al. "The PINNACLE Study: A Double-blind, Randomized, Sham-controlled Study Evaluating the Optilume BPH Catheter System for the Treatment of Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia." *J Urol.* 2023;210(3):500–509. doi:[10.1097/ju.0000000000003568](https://doi.org/10.1097/ju.0000000000003568)
 
 </SurgeonProfile>

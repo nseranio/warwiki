@@ -3,11 +3,12 @@ title: "Massimo Lazzeri"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/massimo-lazzeri.json';
 import profile from '@site/src/data/surgeon-profiles/massimo-lazzeri.json';
 import citations from '@site/src/data/surgeon-citations/massimo-lazzeri.json';
 
-<SurgeonProfile id="massimo-lazzeri" profile={profile} citations={citations}>
+<SurgeonProfile id="massimo-lazzeri" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,29 +21,40 @@ import citations from '@site/src/data/surgeon-citations/massimo-lazzeri.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Lazzeri's confirmed publications cover urethral reconstruction, including buccal mucosal graft urethroplasty, surgery for lichen sclerosus and failed hypospadias repair, and outcomes after revision or perineal urethrostomy.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Intravesical vanilloids for neurogenic incontinence** (2004). Reported ten years of clinical experience with intravesical capsaicin and resiniferatoxin for neurogenic incontinence.[^8]
-- **Intravesical nociceptin trial for neurogenic detrusor overactivity** (2006). Led a multicenter exploratory randomized trial of intravesical nociceptin/orphanin FQ for neurogenic detrusor overactivity incontinence.[^9]
+Lazzeri's confirmed publications cover urethral reconstruction, including buccal mucosal graft urethroplasty, surgery for lichen sclerosus and failed hypospadias repair, and outcomes after revision or perineal urethrostomy.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Intravesical vanilloids for neurogenic incontinence** (2004). Reported ten years of clinical experience with intravesical capsaicin and resiniferatoxin for neurogenic incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Intravesical nociceptin trial for neurogenic detrusor overactivity** (2006). Led a multicenter exploratory randomized trial of intravesical nociceptin/orphanin FQ for neurogenic detrusor overactivity incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Dr. Massimo Lazzeri. Humanitas.net](https://www.humanitas.net/doctors/lazzeri-massimo/). Accessed October 2026.
 
 [^2]: [Giornalista](https://www.europauomo.it/media/attachments/2024/06/18/cv_eng_massimo_lazzeri.pdf). Accessed October 2026.
-
-[^3]: Palminteri E, Lazzeri M, Guazzoni G, Turini D, Barbagli G. "New 2-Stage Buccal Mucosal Graft Urethroplasty." J Urol. 2002;167(1):130-2. doi:[10.1016/s0022-5347(05)65397-9](https://doi.org/10.1016/s0022-5347(05)65397-9)
-
-[^4]: Kulkarni S, Barbagli G, Kirpekar D, Mirri F, Lazzeri M. "Lichen sclerosus of the male genitalia and urethra: surgical options and results in a multicenter international experience with 215 patients." Eur Urol. 2009;55(4):945–954. doi:[10.1016/j.eururo.2008.07.046](https://doi.org/10.1016/j.eururo.2008.07.046)
-
-[^5]: Barbagli G, Morgia G, Lazzeri M. Retrospective outcome analysis of one-stage penile urethroplasty using a flap or graft in a homogeneous series of patients. BJU Int. 2008;102(7):853-60. doi:[10.1111/j.1464-410x.2008.07741.x](https://doi.org/10.1111/j.1464-410x.2008.07741.x)
-
-[^6]: Barbagli G, De Angelis M, Romano G, Lazzeri M. Clinical outcome and quality of life assessment in patients treated with perineal urethrostomy for anterior urethral stricture disease. J Urol. 2009;182(2):548-557. doi:[10.1016/j.juro.2009.04.012](https://doi.org/10.1016/j.juro.2009.04.012)
-
-[^7]: Bandini M, Basile G, Lazzeri M, et al. Optimizing decision-making after ventral onlay buccal mucosa graft urethroplasty failure. BJU Int. 2023;131(3):339-347. doi:[10.1111/bju.15895](https://doi.org/10.1111/bju.15895)
-
-[^8]: Lazzeri M, Spinelli M, Zanollo A, et al. "Intravesical Vanilloids and Neurogenic Incontinence: Ten Years Experience." *Urol Int.* 2004;72(2):145–149. doi:[10.1159/000075969](https://doi.org/10.1159/000075969)
-
-[^9]: Lazzeri M, Calò G, Spinelli M, et al. "Daily Intravesical Instillation of 1 mg Nociceptin/Orphanin FQ for the Control of Neurogenic Detrusor Overactivity: A Multicenter, Placebo Controlled, Randomized Exploratory Study." *Journal of Urology.* 2006;176(5):2098–2102. doi:[10.1016/j.juro.2006.07.025](https://doi.org/10.1016/j.juro.2006.07.025)
 
 </SurgeonProfile>

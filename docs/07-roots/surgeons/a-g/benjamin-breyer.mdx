@@ -3,11 +3,12 @@ title: "Benjamin N. Breyer"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/benjamin-breyer.json';
 import profile from '@site/src/data/surgeon-profiles/benjamin-breyer.json';
 import citations from '@site/src/data/surgeon-citations/benjamin-breyer.json';
 
-<SurgeonProfile id="benjamin-breyer" profile={profile} citations={citations}>
+<SurgeonProfile id="benjamin-breyer" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,40 @@ import citations from '@site/src/data/surgeon-citations/benjamin-breyer.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work addresses urethral stricture reconstruction and grafting for male genital repair. He also coauthored guidelines on incontinence after prostate treatment.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Male urethral stricture management review** (2014). Breyer was senior author of a clinical review comparing endoscopic treatment and urethroplasty for male urethral strictures.[^8] Cited on WARWIKI: [DVIU and Urethral Dilation](/docs/surgical-techniques/04a-urethral-reconstruction/dviu).
-- **Patient-centered measurement of urethral stricture outcomes** (2017). Breyer led qualitative research identifying symptoms and effects that patients considered important for a urethral stricture outcome measure.[^9]
+His cited work addresses urethral stricture reconstruction and grafting for male genital repair. He also coauthored guidelines on incontinence after prostate treatment.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Male urethral stricture management review** (2014). Breyer was senior author of a clinical review comparing endoscopic treatment and urethroplasty for male urethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Patient-centered measurement of urethral stricture outcomes** (2017). Breyer led qualitative research identifying symptoms and effects that patients considered important for a urethral stricture outcome measure.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Benjamin N. Breyer, MD, MAS, FACS. UCSF Department of Urology](https://urology.ucsf.edu/people/benjamin-n-breyer). Accessed October 2026.
 
 [^2]: [Benjamin N. Breyer, MD. UCSF Health](https://www.ucsfhealth.org/providers/benjamin-breyer). Accessed October 2026.
-
-[^3]: Alwaal A, McAninch JW, Harris CR, Breyer BN. Utilities of split-thickness skin grafting for male genital reconstruction. Urology. 2015;86(4):835–9. doi:[10.1016/j.urology.2015.07.005](https://doi.org/10.1016/j.urology.2015.07.005)
-
-[^4]: Breyer BN, Kim SK, Kirkby E, Marianes A, Vanni AJ, Westney OL. "Updates to Incontinence After Prostate Treatment: AUA/GURS/SUFU Guideline (2024)." J Urol. 2024;212(4):531-538. doi:[10.1097/ju.0000000000004088](https://doi.org/10.1097/ju.0000000000004088)
-
-[^5]: Granieri MA, Zhao LC, Breyer BN, et al. Multi-institutional outcomes of minimally invasive harvest of rectal mucosa graft for anterior urethral reconstruction. J Urol. 2019;201(6):1164-1170. doi:[10.1097/ju.0000000000000087](https://doi.org/10.1097/ju.0000000000000087)
-
-[^6]: Cinman NM, McAninch JW, Glass AS, Zaid UB, Breyer BN. "Acquired male urethral diverticula: presentation, diagnosis and management." The Journal of Urology. 2012;188(4):1204-1208. doi:[10.1016/j.juro.2012.06.036](https://doi.org/10.1016/j.juro.2012.06.036)
-
-[^7]: Erickson BA, Breyer BN, McAninch JW. Single-stage segmental urethral replacement using combined ventral onlay fasciocutaneous flap with dorsal onlay buccal grafting for long-segment strictures. BJU Int. 2012;109(9):1392-1396. doi:[10.1111/j.1464-410x.2011.10483.x](https://doi.org/10.1111/j.1464-410x.2011.10483.x)
-
-[^8]: Hampson LA, McAninch JW, Breyer BN. "Male urethral strictures and their management." *Nat Rev Urol.* 2013;11(1):43–50. doi:[10.1038/nrurol.2013.275](https://doi.org/10.1038/nrurol.2013.275)
-
-[^9]: Breyer BN, Edwards TC, Patrick DL, et al. "Comprehensive Qualitative Assessment of Urethral Stricture Disease: Toward the Development of a Patient Centered Outcome Measure." *Journal of Urology.* 2017;198(5):1113–1118. doi:[10.1016/j.juro.2017.05.077](https://doi.org/10.1016/j.juro.2017.05.077)
 
 </SurgeonProfile>

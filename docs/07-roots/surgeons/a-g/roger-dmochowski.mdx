@@ -3,11 +3,12 @@ title: "Roger R. Dmochowski"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/roger-dmochowski.json';
 import profile from '@site/src/data/surgeon-profiles/roger-dmochowski.json';
 import citations from '@site/src/data/surgeon-citations/roger-dmochowski.json';
 
-<SurgeonProfile id="roger-dmochowski" profile={profile} citations={citations}>
+<SurgeonProfile id="roger-dmochowski" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,12 +22,37 @@ import citations from '@site/src/data/surgeon-citations/roger-dmochowski.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work examines urethral bulking agents for female stress urinary incontinence, including polyacrylamide hydrogel, calcium hydroxylapatite, and patient factors affecting injection therapy. Other cited papers address overactive bladder treatment with onabotulinumtoxinA and sacral or tibial neuromodulation.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **AUA female stress urinary incontinence surgical guideline update** (2010). First-authored the AUA update on surgical management of female stress urinary incontinence.[^10]
-- **OnabotulinumtoxinA dose-ranging trial for overactive bladder** (2010). Led a randomized dose-ranging trial of intradetrusor onabotulinumtoxinA for idiopathic overactive bladder with urgency incontinence.[^11]
+His cited work examines urethral bulking agents for female stress urinary incontinence, including polyacrylamide hydrogel, calcium hydroxylapatite, and patient factors affecting injection therapy. Other cited papers address overactive bladder treatment with onabotulinumtoxinA and sacral or tibial neuromodulation.<sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**AUA female stress urinary incontinence surgical guideline update** (2010). First-authored the AUA update on surgical management of female stress urinary incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**OnabotulinumtoxinA dose-ranging trial for overactive bladder** (2010). Led a randomized dose-ranging trial of intradetrusor onabotulinumtoxinA for idiopathic overactive bladder with urgency incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Roger R. Dmochowski, MD, MMHC, FACS. Vanderbilt Health Nashville, TN](https://www.vanderbilthealth.com/doctors/dmochowski-roger). Accessed October 2026.
 
@@ -35,19 +61,5 @@ His cited work examines urethral bulking agents for female stress urinary incont
 [^3]: [Roger R. Dmochowski, MD, MA(CM), MMHC, FACS. Department of Urology](https://www.vumc.org/urology/node/137). Accessed October 2026.
 
 [^4]: [Education: Female Pelvic Medicine and Reconstructive Surgery Fellowship. Department of Urology](https://www.vumc.org/urology/node/235). Accessed October 2026.
-
-[^5]: Amundsen CL, Sutherland SE, Kielb SJ, Dmochowski RR. Sacral and Implantable Tibial Neuromodulation for the Management of Overactive Bladder: A Systematic Review and Meta-Analysis. Advances in Therapy. 2025;42(1):10-35. doi:[10.1007/s12325-024-03019-0](https://doi.org/10.1007/s12325-024-03019-0)
-
-[^6]: Sokol ER, Karram MM, Dmochowski R. Efficacy and Safety of Polyacrylamide Hydrogel for the Treatment of Female Stress Incontinence: A Randomized, Prospective, Multicenter North American Study. The Journal of Urology. 2014;192(3):843-849. doi:[10.1016/j.juro.2014.03.109](https://doi.org/10.1016/j.juro.2014.03.109)
-
-[^7]: Nitti VW, Dmochowski R, Herschorn S, et al. "OnabotulinumtoxinA for the treatment of patients with overactive bladder and urinary incontinence: results of a phase 3, randomized, placebo-controlled trial." J Urol. 2013;189(6):2186–2193. doi:[10.1016/j.juro.2012.12.022](https://doi.org/10.1016/j.juro.2012.12.022)
-
-[^8]: Sutherland SE, Heesakkers JPFA, Ferrante KL, Dmochowski RR. Impact of Revi Implantable Tibial Neuromodulation on Quality of Life in Patients With Urgency Urinary Incontinence. International Urogynecology Journal. 2026;37(8):2451-2461. doi:[10.1007/s00192-026-06538-2](https://doi.org/10.1007/s00192-026-06538-2)
-
-[^9]: Mayer RD, Dmochowski RR, Appell RA, et al. Multicenter Prospective Randomized 52-Week Trial of Calcium Hydroxylapatite Versus Bovine Dermal Collagen for Treatment of Stress Urinary Incontinence. Urology. 2007;69(5):876-880. doi:[10.1016/j.urology.2007.01.050](https://doi.org/10.1016/j.urology.2007.01.050)
-
-[^10]: Dmochowski RR, Blaivas JM, Gormley EA, et al. "Update of AUA Guideline on the Surgical Management of Female Stress Urinary Incontinence." *Journal of Urology.* 2010;183(5):1906–1914. doi:[10.1016/j.juro.2010.02.2369](https://doi.org/10.1016/j.juro.2010.02.2369)
-
-[^11]: Dmochowski R, Chapple C, Nitti VW, et al. "Efficacy and Safety of OnabotulinumtoxinA for Idiopathic Overactive Bladder: A Double-Blind, Placebo Controlled, Randomized, Dose Ranging Trial." *Journal of Urology.* 2010;184(6):2416–2422. doi:[10.1016/j.juro.2010.08.021](https://doi.org/10.1016/j.juro.2010.08.021)
 
 </SurgeonProfile>

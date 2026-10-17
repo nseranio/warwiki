@@ -3,11 +3,12 @@ title: "Peter Sand"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/peter-sand.json';
 import profile from '@site/src/data/surgeon-profiles/peter-sand.json';
 import citations from '@site/src/data/surgeon-citations/peter-sand.json';
 
-<SurgeonProfile id="peter-sand" profile={profile} citations={citations}>
+<SurgeonProfile id="peter-sand" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,19 +22,30 @@ import citations from '@site/src/data/surgeon-citations/peter-sand.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Placebo-controlled pelvic floor electrical stimulation trial** (1995). Led a randomized, sham-controlled trial of transvaginal electrical stimulation for women with stress urinary incontinence.[^4]
-- **Urodynamics and the Evaluation of Female Incontinence** (1995). Coauthored a practical guide to interpreting urodynamic studies in women with urinary incontinence.[^5]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Placebo-controlled pelvic floor electrical stimulation trial** (1995). Led a randomized, sham-controlled trial of transvaginal electrical stimulation for women with stress urinary incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Urodynamics and the Evaluation of Female Incontinence** (1995). Coauthored a practical guide to interpreting urodynamic studies in women with urinary incontinence.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Peter Sand. Profiles RNS](https://profiles.uchicago.edu/profiles/display/37221). Accessed October 2026.
 
 [^2]: [northshore.org (urogynecology initial visit questionnaire web)](https://www.northshore.org/globalassets/pelvic-health/urogynecology-initial_visit_questionnaire-web.pdf). Accessed October 2026.
 
 [^3]: [Leadership and Governance](https://www.iuga.org/about/leadership-and-governance). Accessed October 2026.
-
-[^4]: Sand PK, Richardson DA, Staskin DR, et al. "Pelvic floor electrical stimulation in the treatment of genuine stress incontinence: A multicenter, placebo-controlled trial." *American Journal of Obstetrics and Gynecology.* 1995;173(1):72–79. doi:[10.1016/0002-9378(95)90172-8](https://doi.org/10.1016/0002-9378(95)90172-8)
-
-[^5]: Sand PK, Ostergard DR. "Urodynamics and the Evaluation of Female Incontinence." 1995. doi:[10.1007/978-1-4471-2109-1](https://doi.org/10.1007/978-1-4471-2109-1)
 
 </SurgeonProfile>

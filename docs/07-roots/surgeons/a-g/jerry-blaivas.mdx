@@ -3,11 +3,12 @@ title: "Jerry G. Blaivas"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jerry-blaivas.json';
 import profile from '@site/src/data/surgeon-profiles/jerry-blaivas.json';
 import citations from '@site/src/data/surgeon-citations/jerry-blaivas.json';
 
-<SurgeonProfile id="jerry-blaivas" profile={profile} citations={citations}>
+<SurgeonProfile id="jerry-blaivas" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,34 +21,48 @@ import citations from '@site/src/data/surgeon-citations/jerry-blaivas.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Blaivas's cited work covers female urethral stricture and vaginal flap reconstruction, including surgical outcomes, and the diagnosis of urethral diverticula and periurethral masses.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Blaivas stress urinary incontinence classification** (1988). Proposed a classification of female stress urinary incontinence using bladder-neck descent and intrinsic sphincter integrity.[^9]
-- **Autologous pubovaginal sling series for complicated stress incontinence** (1991). Reported outcomes in 67 consecutive women treated with a pubovaginal fascial sling for complicated stress incontinence.[^10]
-- **Blaivas–Groutz female bladder outlet obstruction nomogram** (2000). Developed a pressure-flow nomogram to classify bladder outlet obstruction in women with lower urinary tract symptoms.[^11]
+Blaivas's cited work covers female urethral stricture and vaginal flap reconstruction, including surgical outcomes, and the diagnosis of urethral diverticula and periurethral masses.<sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup><sup>[P8](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Blaivas stress urinary incontinence classification** (1988). Proposed a classification of female stress urinary incontinence using bladder-neck descent and intrinsic sphincter integrity.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Autologous pubovaginal sling series for complicated stress incontinence** (1991). Reported outcomes in 67 consecutive women treated with a pubovaginal fascial sling for complicated stress incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Blaivas–Groutz female bladder outlet obstruction nomogram** (2000). Developed a pressure-flow nomogram to classify bladder outlet obstruction in women with lower urinary tract symptoms.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [Jerry G Blaivas. New York](https://profiles.mountsinai.org/jerry-g-blaivas). Accessed October 2026.
 
 [^2]: [THE UROLOGY RESIDENCY PROGRAM](https://icahn.mssm.edu/files/ISMMS/Assets/Departments/Urology/UrologyResidencyProgramOverviewA.pdf). Accessed October 2026.
 
 [^3]: [ICS. Prof Jerry G Blaivas](https://www.ics.org/contact/501). Accessed October 2026.
-
-[^4]: Blaivas JG, Santos JA, Tsui JF, et al. "Management of Urethral Stricture in Women." J Urol. 2012;188(5):1778–1782. doi:[10.1016/j.juro.2012.07.042](https://doi.org/10.1016/j.juro.2012.07.042)
-
-[^5]: Flisser AJ, Blaivas JG. "Outcome of Urethral Reconstructive Surgery in a Series of 74 Women." J Urol. 2003;169(6):2246–2249. doi:[10.1097/01.ju.0000061763.88247.16](https://doi.org/10.1097/01.ju.0000061763.88247.16)
-
-[^6]: Blaivas JG, Heritz DM. Vaginal flap reconstruction of the urethra and vesical neck in women: a report of 49 cases. J Urol. 1996;155(3):1014-1017. doi:[10.1016/s0022-5347(01)66372-9](https://doi.org/10.1016/s0022-5347(01)66372-9). PMID: 8583550.
-
-[^7]: Blaivas JG. Vaginal flap urethral reconstruction: an alternative to the bladder flap neourethra. J Urol. 1989;141(3):542-545. doi:[10.1016/s0022-5347(17)40887-1](https://doi.org/10.1016/s0022-5347(17)40887-1)
-
-[^8]: Chung DE, Purohit RS, Girshman J, Blaivas JG. Urethral diverticula in women: discrepancies between magnetic resonance imaging and surgical findings. J Urol. 2010;183:2265–2269. doi:[10.1016/j.juro.2010.02.016](https://doi.org/10.1016/j.juro.2010.02.016)
-
-[^9]: Blaivas JG, Olsson CA. "Stress Incontinence: Classification and Surgical Approach." *Journal of Urology.* 1988;139(4):727–731. doi:[10.1016/s0022-5347(17)42611-5](https://doi.org/10.1016/s0022-5347(17)42611-5)
-
-[^10]: Blaivas JG, Jacobs BZ. "Pubovaginal Fascial Sling for the Treatment of Complicated Stress Urinary Incontinence." *Journal of Urology.* 1991;145(6):1214–1218. doi:[10.1016/s0022-5347(17)38580-4](https://doi.org/10.1016/s0022-5347(17)38580-4)
-
-[^11]: Blaivas JG, Groutz A. "Bladder outlet obstruction nomogram for women with lower urinary tract symptomatology." *Neurourol. Urodyn.* 2000;19(5):553–564. doi:[10.1002/1520-6777(2000)19:5&lt;553::aid-nau2&gt;3.0.co;2-b](https://doi.org/10.1002/1520-6777(2000)19:5%3C553::aid-nau2%3E3.0.co;2-b)
 
 </SurgeonProfile>

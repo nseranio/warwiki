@@ -3,11 +3,12 @@ title: "Montserrat Espuña Pons"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/montserrat-espuna-pons.json';
 import profile from '@site/src/data/surgeon-profiles/montserrat-espuna-pons.json';
 import citations from '@site/src/data/surgeon-citations/montserrat-espuna-pons.json';
 
-<SurgeonProfile id="montserrat-espuna-pons" profile={profile} citations={citations}>
+<SurgeonProfile id="montserrat-espuna-pons" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,11 +21,29 @@ import citations from '@site/src/data/surgeon-citations/montserrat-espuna-pons.j
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Spanish validation of the ICIQ-UI Short Form** (2004). Led validation of the Spanish-language International Consultation on Incontinence Questionnaire Short Form for assessing urinary incontinence.[^4]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Spanish validation of the ICIQ-UI Short Form** (2004). Led validation of the Spanish-language International Consultation on Incontinence Questionnaire Short Form for assessing urinary incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Spanish validation of the PISQ-IR** (2017). Senior-authored a Spanish transcultural validation of the PISQ-IR sexual-function questionnaire for women with prolapse or urinary incontinence.
+
+</KeyPublication>
+
+</ol>
+
+## Professional Work
+
 - **Tratado de uroginecología** (2004). Coedited a Spanish-language treatise on urogynecology and urinary incontinence.[^5]
-- **Spanish validation of the PISQ-IR** (2017). Senior-authored a Spanish transcultural validation of the PISQ-IR sexual-function questionnaire for women with prolapse or urinary incontinence.[^6]
 
 [^1]: [Montserrat Espuña Pons. Clínic Barcelona](https://www.clinicbarcelona.org/profesionales/montserrat-espuna-pons). Accessed October 2026.
 
@@ -32,10 +51,6 @@ import citations from '@site/src/data/surgeon-citations/montserrat-espuna-pons.j
 
 [^3]: [50 Years of IUGA](https://www.iuga.org/about/50-years-of-iuga). Accessed October 2026.
 
-[^4]: Espuña Pons M, Rebollo Álvarez P, Puig Clota M. "Validación de la versión española del International Consultation on Incontinence Questionnaire-Short Form. Un cuestionario para evaluar la incontinencia urinaria." *Medicina Clínica.* 2004;122(8):288–292. doi:[10.1016/s0025-7753(04)74212-8](https://doi.org/10.1016/s0025-7753(04)74212-8)
-
 [^5]: [Espuña i Pons, Montserrat - Reial Academia de Medicina de Catalunya](https://ramc.cat/aw-team-member/espuna-i-pons-montserrat/). Accessed October 2026.
-
-[^6]: Mestre M, Lleberia J, Pubill J, et al. "Spanish version of the Pelvic Organ Prolapse/Urinary Incontinence Sexual Questionnaire IUGA-Revised (PISQ-IR): Transcultural validation." *Int Urogynecol J.* 2017;28(12):1865–1873. doi:[10.1007/s00192-017-3312-9](https://doi.org/10.1007/s00192-017-3312-9)
 
 </SurgeonProfile>

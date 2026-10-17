@@ -3,11 +3,12 @@ title: "Joseph J. Pariser"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/joseph-pariser.json';
 import profile from '@site/src/data/surgeon-profiles/joseph-pariser.json';
 import citations from '@site/src/data/surgeon-citations/joseph-pariser.json';
 
-<SurgeonProfile id="joseph-pariser" profile={profile} citations={citations}>
+<SurgeonProfile id="joseph-pariser" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,13 +23,33 @@ import citations from '@site/src/data/surgeon-citations/joseph-pariser.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Pariser's cited work covers adult acquired buried penis, revision of bladder augmentation, and complications of feminizing gender-affirming genital surgery.[^7][^8][^9]
+## Key Publications
 
-- **Classification of adult acquired buried penis repair** (2018). Led a series of 64 repairs graded in five categories of surgical complexity; 91% were successfully unburied, high-grade complications occurred only in the complex group, and 47% of patients had urethral stricture regardless of complexity.[^7] Cited on WARWIKI: [Buried Penis](/docs/clinical-conditions/03g-genital-scrotal/buried-penis), [Buried Penis Repair](/docs/surgical-techniques/04e-genital-reconstruction/buried-penis-repair).
-- **Augmentation cystoplasty revision without additional bowel** (2019). Led a report of seven patients with an hourglass deformity or a non-detubularized augment revised by detubularization or completion cystotomy; six reported symptom improvement and one later required an Indiana pouch.[^8] Cited on WARWIKI: [Principles of Bladder Augmentation](/docs/surgical-techniques/04b-bladder-reconstruction/augmentation-principles).
-- **Management of complications after vaginoplasty** (2021). Senior author of a review describing operative approaches to complications after penile inversion vaginoplasty.[^9] Cited on WARWIKI: [Feminizing Urethroplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/feminizing-urethroplasty), [Meatal Stenosis Revision](/docs/surgical-techniques/04k-gender-affirming-surgery/meatal-stenosis-revision).
+Pariser's cited work covers adult acquired buried penis, revision of bladder augmentation, and complications of feminizing gender-affirming genital surgery.<sup>[P1](#publication-7)</sup><sup>[P2](#publication-8)</sup><sup>[P3](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Classification of adult acquired buried penis repair** (2018). Led a series of 64 repairs graded in five categories of surgical complexity; 91% were successfully unburied, high-grade complications occurred only in the complex group, and 47% of patients had urethral stricture regardless of complexity.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Augmentation cystoplasty revision without additional bowel** (2019). Led a report of seven patients with an hourglass deformity or a non-detubularized augment revised by detubularization or completion cystotomy; six reported symptom improvement and one later required an Indiana pouch.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Management of complications after vaginoplasty** (2021). Senior author of a review describing operative approaches to complications after penile inversion vaginoplasty.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Joseph Pariser, MD. Department of Urology, University of Minnesota Medical School](https://med.umn.edu/bio/joseph-pariser). Accessed October 2026.
 
@@ -41,11 +62,5 @@ Pariser's cited work covers adult acquired buried penis, revision of bladder aug
 [^5]: [Joseph Pariser, MD. Members, Trauma and Urologic Reconstructive Network of Surgeons](http://www.turnsresearch.org/members/index.php?s=joseph-pariser-md). Accessed October 2026.
 
 [^6]: [Members. Trauma and Urologic Reconstructive Network of Surgeons](http://www.turnsresearch.org/members/index.php). Accessed October 2026.
-
-[^7]: Pariser JJ, Soto-Aviles OE, Miller B, Husainat M, Santucci RA. "A simplified adult acquired buried penis repair classification system with an analysis of perioperative complications and urethral stricture disease." *Urology.* 2018;120:248–252. doi:[10.1016/j.urology.2018.05.029](https://doi.org/10.1016/j.urology.2018.05.029)
-
-[^8]: Pariser JJ, Elliott SP. "Opportunities for augmentation cystoplasty revision without additional bowel harvest: 'hourglass' deformity or non-detubularized augment." *Can Urol Assoc J.* 2019;13(5):E140–E144. doi:[10.5489/cuaj.5548](https://doi.org/10.5489/cuaj.5548)
-
-[^9]: Mann RA, Kasabwala K, Kim N, Pariser JJ. "The management of complications of feminizing gender affirming genital surgery." *Urology.* 2021;152:67–73. doi:[10.1016/j.urology.2021.01.031](https://doi.org/10.1016/j.urology.2021.01.031)
 
 </SurgeonProfile>

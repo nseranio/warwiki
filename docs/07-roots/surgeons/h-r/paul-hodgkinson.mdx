@@ -3,11 +3,12 @@ title: "C. Paul Hodgkinson"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/paul-hodgkinson.json';
 import profile from '@site/src/data/surgeon-profiles/paul-hodgkinson.json';
 import citations from '@site/src/data/surgeon-citations/paul-hodgkinson.json';
 
-<SurgeonProfile id="paul-hodgkinson" profile={profile} citations={citations}>
+<SurgeonProfile id="paul-hodgkinson" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,16 +22,24 @@ import citations from '@site/src/data/surgeon-citations/paul-hodgkinson.json';
 
 At Henry Ford Hospital, Hodgkinson conducted urodynamic testing.[^1]
 
-## Contributions
+<a id="contributions"></a>
 
-- **Bead-chain cystourethrography** (1953). Described radiographic assessment of urethrovesical relationships in women with stress urinary incontinence.[^4]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Bead-chain cystourethrography** (1953). Described radiographic assessment of urethrovesical relationships in women with stress urinary incontinence.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [History. AUGS](https://www.augs.org/about-augs/history/). Accessed October 2026.
 
 [^2]: [Past Presidents. AUGS](https://www.augs.org/about-augs/past-presidents/). Accessed October 2026.
 
 [^3]: [digitize.gp.lib.mi.us](https://digitize.gp.lib.mi.us/history/newspapers/grossePointeNews/year_ranges/1990s/1999/pdf/1999-02-04.pdf). Accessed October 2026.
-
-[^4]: Hodgkinson CP, Doub HP. "Roentgen Study of Urethrovesical Relationships in Female Urinary Stress Incontinence." *Radiology.* 1953;61(3):335–345. doi:[10.1148/61.3.335](https://doi.org/10.1148/61.3.335)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Ryan P. Terlecki"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/ryan-terlecki.json';
 import profile from '@site/src/data/surgeon-profiles/ryan-terlecki.json';
 import citations from '@site/src/data/surgeon-citations/ryan-terlecki.json';
 
-<SurgeonProfile id="ryan-terlecki" profile={profile} citations={citations}>
+<SurgeonProfile id="ryan-terlecki" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -23,24 +24,38 @@ import citations from '@site/src/data/surgeon-citations/ryan-terlecki.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Terlecki's cited work covers stricture location and the choice between excision and grafting in bulbar urethroplasty, urethral rest before anterior urethroplasty, and revision strategies for the artificial urinary sphincter.[^4][^5][^6]
+## Key Publications
 
-- **Excision and primary anastomosis in the proximal bulb** (2010). Led a single-surgeon review of 112 bulbar urethroplasties: all 72 proximal bulbar strictures were treated by excision and primary anastomosis with 1 recurrence (1.4%), and among intermediate-length strictures recurrence was 3.0% after excision and primary anastomosis vs 38% after graft repair.[^4] Cited on WARWIKI: [Excision and Primary Anastomosis (EPA)](/docs/surgical-techniques/04a-urethral-reconstruction/excision-primary-anastomosis).
-- **Urethral rest before anterior urethroplasty** (2011). Of 128 anterior urethroplasties, 28 men first had a median 3 months of urethral rest after recent manipulation; 75% then underwent focal or complete excision, and recurrence (14%) was similar to the rest of the cohort (10%).[^5] Cited on WARWIKI: [Principles of Urethral Reconstruction](/docs/surgical-techniques/04a-urethral-reconstruction/urethral-reconstruction-principles).
-- **Revision of the artificial urinary sphincter** (2022). Lead author, with Steven Wilson, of a review of cuff downsizing or relocation, pressure-regulating balloon changes, urethral wrapping, tandem cuffs and transcorporal placement for recurrent incontinence after sphincter implantation.[^6] Cited on WARWIKI: [Artificial Urinary Sphincter (Procedure)](/docs/surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter), [Artificial Urinary Sphincter (Device)](/docs/foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter).
+Terlecki's cited work covers stricture location and the choice between excision and grafting in bulbar urethroplasty, urethral rest before anterior urethroplasty, and revision strategies for the artificial urinary sphincter.<sup>[P1](#publication-4)</sup><sup>[P2](#publication-5)</sup><sup>[P3](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Excision and primary anastomosis in the proximal bulb** (2010). Led a single-surgeon review of 112 bulbar urethroplasties: all 72 proximal bulbar strictures were treated by excision and primary anastomosis with 1 recurrence (1.4%), and among intermediate-length strictures recurrence was 3.0% after excision and primary anastomosis vs 38% after graft repair.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Urethral rest before anterior urethroplasty** (2011). Of 128 anterior urethroplasties, 28 men first had a median 3 months of urethral rest after recent manipulation; 75% then underwent focal or complete excision, and recurrence (14%) was similar to the rest of the cohort (10%).
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Revision of the artificial urinary sphincter** (2022). Lead author, with Steven Wilson, of a review of cuff downsizing or relocation, pressure-regulating balloon changes, urethral wrapping, tandem cuffs and transcorporal placement for recurrent incontinence after sphincter implantation.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Ryan Terlecki, MD. Atrium Health Wake Forest Baptist](https://www.wakehealth.edu/providers/t/ryan-terlecki). Accessed October 2026.
 
 [^2]: [Male Genitourinary Reconstructive Surgery Fellowship. Wake Forest University School of Medicine](https://school.wakehealth.edu/education-and-training/residencies-and-fellowships/genitourinary-reconstructive-surgery-fellowship). Accessed October 2026.
 
 [^3]: [GURS Fellowship Tree. Lee Zhao, NYU Langone](https://fellowshiptree.leezhaomd.org/). Accessed October 2026.
-
-[^4]: Terlecki RP, Steele MC, Valadez C, Morey AF. "Grafts are unnecessary for proximal bulbar reconstruction." *J Urol.* 2010;184(6):2395–2399. doi:[10.1016/j.juro.2010.08.034](https://doi.org/10.1016/j.juro.2010.08.034)
-
-[^5]: Terlecki RP, Steele MC, Valadez C, Morey AF. "Urethral rest: role and rationale in preparation for anterior urethroplasty." *Urology.* 2011;77(6):1477–1481. doi:[10.1016/j.urology.2011.01.042](https://doi.org/10.1016/j.urology.2011.01.042)
-
-[^6]: Terlecki RP, Wilson SK. "A new paradigm for surgical revision of the artificial urinary sphincter for recurrent stress urinary incontinence: Wilson's Workshop 11." *Int J Impot Res.* 2022;34(1):37–43. doi:[10.1038/s41443-020-0307-8](https://doi.org/10.1038/s41443-020-0307-8)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "G. Willy Davila"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/willy-davila.json';
 import profile from '@site/src/data/surgeon-profiles/willy-davila.json';
 import citations from '@site/src/data/surgeon-citations/willy-davila.json';
 
-<SurgeonProfile id="willy-davila" profile={profile} citations={citations}>
+<SurgeonProfile id="willy-davila" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,16 +22,24 @@ import citations from '@site/src/data/surgeon-citations/willy-davila.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **IUGA guidance on vaginal graft patient selection** (2012). First-authored the second IUGA Grafts Roundtable consensus on selecting patients for vaginal graft use in prolapse surgery.[^4]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**IUGA guidance on vaginal graft patient selection** (2012). First-authored the second IUGA Grafts Roundtable consensus on selecting patients for vaginal graft use in prolapse surgery.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [G. Willy Davila, MD. Holy Cross Health Fort Lauderdale, Florida (FL) Hospitals](https://www.holy-cross.com/about-us/board-profile-pages/g-willy-davila). Accessed October 2026.
 
 [^2]: [urogyne.net (willy davila cv updated)](https://www.urogyne.net/pdfs/willy-davila-cv-updated.pdf). Accessed October 2026.
 
 [^3]: [Leadership and Governance](https://www.iuga.org/about/leadership-and-governance). Accessed October 2026.
-
-[^4]: Davila GW, Baessler K, Cosson M, et al. "Selection of patients in whom vaginal graft use may be appropriate." *Int Urogynecol J.* 2012;23(S1):7–14. doi:[10.1007/s00192-012-1677-3](https://doi.org/10.1007/s00192-012-1677-3)
 
 </SurgeonProfile>

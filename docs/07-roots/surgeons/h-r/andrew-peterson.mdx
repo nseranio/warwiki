@@ -3,11 +3,12 @@ title: "Andrew C. Peterson"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/andrew-peterson.json';
 import profile from '@site/src/data/surgeon-profiles/andrew-peterson.json';
 import citations from '@site/src/data/surgeon-citations/andrew-peterson.json';
 
-<SurgeonProfile id="andrew-peterson" profile={profile} citations={citations}>
+<SurgeonProfile id="andrew-peterson" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,38 @@ import citations from '@site/src/data/surgeon-citations/andrew-peterson.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Peterson's cited work covers urethral stricture reconstruction and lichen sclerosus treatment, artificial urinary sphincter revision, and complications of prostate cancer treatment, including pubic symphysis osteomyelitis and the irradiated bladder.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Pubic-symphysis osteomyelitis management series** (2015). Senior-authored a case series describing pubic-symphysis osteomyelitis after prostate-cancer treatment and proposing a management algorithm.[^8] Cited on WARWIKI: [Urethropubic Fistula](/docs/clinical-conditions/03f-fistulas/in-males/urethropubic).
-- **Pubic-bone resection for urosymphyseal fistula** (2017). Senior-authored a surgical series assessing pain after pubic-bone resection for urinary fistula with associated osteomyelitis.[^9] Cited on WARWIKI: [Urethropubic Fistula](/docs/clinical-conditions/03f-fistulas/in-males/urethropubic).
+Peterson's cited work covers urethral stricture reconstruction and lichen sclerosus treatment, artificial urinary sphincter revision, and complications of prostate cancer treatment, including pubic symphysis osteomyelitis and the irradiated bladder.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P1](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Pubic-symphysis osteomyelitis management series** (2015). Senior-authored a case series describing pubic-symphysis osteomyelitis after prostate-cancer treatment and proposing a management algorithm.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Pubic-bone resection for urosymphyseal fistula** (2017). Senior-authored a surgical series assessing pain after pubic-bone resection for urinary fistula with associated osteomyelitis.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Andrew Charles Peterson. Duke Department of Urology](https://urology.duke.edu/profile/andrew-charles-peterson). Accessed October 2026.
 
 [^2]: [Andrew Charles Peterson. Scholars@Duke profile](https://scholars.duke.edu/person/drew.peterson). Accessed October 2026.
-
-[^3]: Potts BA, Belsante MJ, Peterson AC. "Intraurethral steroids are a safe and effective treatment for stricture disease in patients with biopsy-proven lichen sclerosus." J Urol. 2016;195(6):1790–1796. doi:[10.1016/j.juro.2015.12.067](https://doi.org/10.1016/j.juro.2015.12.067)
-
-[^4]: Moring N, Barrett S, Peterson AC, Inouye BM. "Pelvic extirpative surgery for the 'end-stage irradiated bladder'." Cancers. 2023;15(17):4238. doi:[10.3390/cancers15174238](https://doi.org/10.3390/cancers15174238)
-
-[^5]: Hayden JP, Boysen WR, Peterson AC. "Medical management of penile and urethral lichen sclerosus with topical clobetasol improves long-term voiding symptoms and quality of life." J Urol. 2020;204(6):1290–1295. doi:[10.1097/ju.0000000000001304](https://doi.org/10.1097/ju.0000000000001304)
-
-[^6]: Granieri MA, Webster GD, Peterson AC. "Critical analysis of patient-reported complaints and complications after urethroplasty for bulbar urethral stricture disease." Urology. 2015;85(6):1489–1493. doi:[10.1016/j.urology.2015.03.002](https://doi.org/10.1016/j.urology.2015.03.002)
-
-[^7]: Gupta S, Zura RD, Hendershot EF, Peterson AC. Pubic Symphysis Osteomyelitis in the Prostate Cancer Survivor: Clinical Presentation, Evaluation, and Management. Urology. 2015;85(3):684–690. doi:[10.1016/j.urology.2014.11.020](https://doi.org/10.1016/j.urology.2014.11.020)
-
-[^8]: Gupta S, Zura RD, Hendershot EF, et al. "Pubic Symphysis Osteomyelitis in the Prostate Cancer Survivor: Clinical Presentation, Evaluation, and Management." *Urology.* 2015;85(3):684–690. doi:[10.1016/j.urology.2014.11.020](https://doi.org/10.1016/j.urology.2014.11.020)
-
-[^9]: Lavien G, Chery G, Zaid UB, et al. "Pubic Bone Resection Provides Objective Pain Control in the Prostate Cancer Survivor With Pubic Bone Osteomyelitis With an Associated Urinary Tract to Pubic Symphysis Fistula." *Urology.* 2017;100:234–239. doi:[10.1016/j.urology.2016.08.035](https://doi.org/10.1016/j.urology.2016.08.035)
 
 </SurgeonProfile>

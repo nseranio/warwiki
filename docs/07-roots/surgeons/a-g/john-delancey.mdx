@@ -3,11 +3,12 @@ title: "John O. L. DeLancey"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/john-delancey.json';
 import profile from '@site/src/data/surgeon-profiles/john-delancey.json';
 import citations from '@site/src/data/surgeon-citations/john-delancey.json';
 
-<SurgeonProfile id="john-delancey" profile={profile} citations={citations}>
+<SurgeonProfile id="john-delancey" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,32 +21,46 @@ import citations from '@site/src/data/surgeon-citations/john-delancey.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work examines pelvic floor support, including apical and perineal structures, levator ani injury, and MRI models of prolapse. It also addresses urethral support and closure in stress urinary incontinence, including the hammock hypothesis.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Three levels of vaginal support** (1992). Described distinct apical, lateral and distal vaginal support attachments through cadaveric dissection.[^8] Cited on WARWIKI: [Apical Prolapse](/docs/clinical-conditions/03c-pelvic-support/apical-prolapse).
-- **Urethral support hammock hypothesis** (1994). Proposed that the anterior vaginal wall and endopelvic fascia provide a supportive layer against which abdominal pressure compresses the urethra.[^9]
-- **MRI demonstration of levator ani defects after vaginal delivery** (2003). Documented levator ani defects on MRI in women after vaginal delivery and their absence in nulliparous controls.[^10] Cited on WARWIKI: [The Perineum](/docs/foundations/anatomy-physiology/pelvis-support/perineum).
+His cited work examines pelvic floor support, including apical and perineal structures, levator ani injury, and MRI models of prolapse. It also addresses urethral support and closure in stress urinary incontinence, including the hammock hypothesis.<sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P6](#publication-5)</sup><sup>[P7](#publication-6)</sup><sup>[P8](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Three levels of vaginal support** (1992). Described distinct apical, lateral and distal vaginal support attachments through cadaveric dissection.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Urethral support hammock hypothesis** (1994). Proposed that the anterior vaginal wall and endopelvic fascia provide a supportive layer against which abdominal pressure compresses the urethra.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**MRI demonstration of levator ani defects after vaginal delivery** (2003). Documented levator ani defects on MRI in women after vaginal delivery and their absence in nulliparous controls.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [John O. DeLancey](https://medschool.umich.edu/profile/910/john-o-delancey). Accessed October 2026.
 
 [^2]: [John O De Lancey MD](https://www.uofmhealth.org/profile/1194818302/john-o-de-lancey). Accessed October 2026.
-
-[^3]: DeLancey JO, Pipitone F, Masteling M, et al. "Functional Anatomy of Urogenital Hiatus Closure: The Perineal Complex Triad Hypothesis." Int Urogynecol J. 2024;35(2):441–449. doi:[10.1007/s00192-023-05708-w](https://doi.org/10.1007/s00192-023-05708-w)
-
-[^4]: Ramanah R, Berger MB, Parratte BM, DeLancey JO. "Anatomy and Histology of Apical Support: A Literature Review Concerning Cardinal and Uterosacral Ligaments." Int Urogynecol J. 2012;23(11):1483–1494. doi:[10.1007/s00192-012-1819-7](https://doi.org/10.1007/s00192-012-1819-7)
-
-[^5]: DeLancey JOL, Mastrovito S, Masteling M, et al. "Hiatus and Pelvic Floor Failure Patterns in Pelvic Organ Prolapse: A 3D MRI Study of Structural Interactions Using a Level III Conceptual Model." Am J Obstet Gynecol. 2025;233(1):47.e1-47.e12. doi:[10.1016/j.ajog.2025.01.011](https://doi.org/10.1016/j.ajog.2025.01.011)
-
-[^6]: DeLancey JO, Mastrovito S, Masteling M, et al. A unified pelvic floor conceptual model for studying morphological changes with prolapse, age, and parity. Am J Obstet Gynecol. 2024;230(5):476-484.e2. doi:[10.1016/j.ajog.2023.11.1247](https://doi.org/10.1016/j.ajog.2023.11.1247)
-
-[^7]: Kieserman-Shmokler C, Swenson CW, Chen L, Desmond LM, Ashton-Miller JA, DeLancey JO. From molecular to macro: the key role of the apical ligaments in uterovaginal support. Am J Obstet Gynecol. 2020;222(5):427-436. doi:[10.1016/j.ajog.2019.10.006](https://doi.org/10.1016/j.ajog.2019.10.006)
-
-[^8]: DeLancey JOL. "Anatomie aspects of vaginal eversion after hysterectomy." *American Journal of Obstetrics and Gynecology.* 1992;166(6):1717–1728. doi:[10.1016/0002-9378(92)91562-o](https://doi.org/10.1016/0002-9378(92)91562-o)
-
-[^9]: DeLancey JOL. "Structural support of the urethra as it relates to stress urinary incontinence: The hammock hypothesis." *American Journal of Obstetrics and Gynecology.* 1994;170(6):1713–1723. doi:[10.1016/s0002-9378(94)70346-9](https://doi.org/10.1016/s0002-9378(94)70346-9)
-
-[^10]: DeLancey J. "The appearance of levator ani muscle abnormalities in magnetic resonance images after vaginal delivery." *Obstetrics &amp; Gynecology.* 2003;101(1):46–53. doi:[10.1016/s0029-7844(02)02465-1](https://doi.org/10.1016/s0029-7844(02)02465-1)
 
 </SurgeonProfile>

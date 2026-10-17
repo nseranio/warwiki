@@ -3,11 +3,12 @@ title: "Nirit Rosenblum"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/nirit-rosenblum.json';
 import profile from '@site/src/data/surgeon-profiles/nirit-rosenblum.json';
 import citations from '@site/src/data/surgeon-citations/nirit-rosenblum.json';
 
-<SurgeonProfile id="nirit-rosenblum" profile={profile} citations={citations}>
+<SurgeonProfile id="nirit-rosenblum" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,12 +22,33 @@ import citations from '@site/src/data/surgeon-citations/nirit-rosenblum.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her confirmed citations cover transvaginal and transvesical vesicovaginal fistula repair and minimally invasive female pelvic reconstructive surgery.[^4][^5][^6][^7]
+## Key Publications
+
+Her confirmed citations cover transvaginal and transvesical vesicovaginal fistula repair and minimally invasive female pelvic reconstructive surgery.<sup>[P2](#publication-4)</sup><sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Robotic uterine-sparing sacrohysteropexy series** (2013). Coauthored a 15-patient series describing robotic uterine-sparing sacrohysteropexy for pelvic organ prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
+
+## Professional Work
 
 - **Vaginal Surgery for the Urologist** (2012). Associate-edited a surgical atlas covering vaginal approaches to prolapse, incontinence, urethral reconstruction, and fistula repair.[^8]
-- **Robotic uterine-sparing sacrohysteropexy series** (2013). Coauthored a 15-patient series describing robotic uterine-sparing sacrohysteropexy for pelvic organ prolapse.[^9]
 
 [^1]: [Nirit Rosenblum, MD. NYU Langone Health](https://nyulangone.org/doctors/1144214693/nirit-rosenblum). Accessed October 2026.
 
@@ -34,16 +56,6 @@ Her confirmed citations cover transvaginal and transvesical vesicovaginal fistul
 
 [^3]: [Urogynecology & Reconstructive Pelvic Surgery Fellowship. NYU Langone Health](https://med.nyu.edu/departments-institutes/urology/education/urogynecology-reconstructive-pelvic-surgery-fellowship). Accessed October 2026.
 
-[^4]: Eilber KS, Kavaler E, Rodríguez LV, Rosenblum N, Raz S. "Ten-Year Experience With Transvaginal Vesicovaginal Fistula Repair Using Tissue Interposition." J Urol. 2003;169(3):1033–1036. doi:[10.1097/01.ju.0000049723.57485.e7](https://doi.org/10.1097/01.ju.0000049723.57485.e7)
-
-[^5]: Rosenblum N, Malacarne D. Robotic/Laparoscopic Female Pelvic Reconstructive Surgery. In: Goldman HB, ed. Complications of Female Incontinence and Pelvic Reconstructive Surgery. 2nd ed. Springer (Humana Press); 2017:103-116.
-
-[^6]: Enemchukwu EA, Rosenblum N. Transvesical Repair of Vesicovaginal Fistula. In: Smith JA Jr, Dmochowski RR, Thomas JC, Preminger GM, eds. Hinman's Atlas of Urologic Surgery. 5th ed. Elsevier; 2025:444-449.
-
-[^7]: Jones L, Rosenblum N. Transvaginal Repair of VVF. In: Cardozo L, Staskin D, eds. Textbook of Female Urology and Urogynecology. Vol 2: Surgical Perspectives. 5th ed. CRC Press; 2023:1146-1151.
-
 [^8]: [CiNii 図書 - Vaginal surgery for the urologist](https://ci.nii.ac.jp/ncid/BB11673977). Accessed October 2026.
-
-[^9]: Lee T, Rosenblum N, Nitti V, et al. "Uterine Sparing Robotic-Assisted Laparoscopic Sacrohysteropexy for Pelvic Organ Prolapse: Safety and Feasibility." *Journal of Endourology.* 2013;27(9):1131–1136. doi:[10.1089/end.2013.0171](https://doi.org/10.1089/end.2013.0171)
 
 </SurgeonProfile>

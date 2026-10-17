@@ -3,11 +3,12 @@ title: "Judith Goh"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/judith-goh.json';
 import profile from '@site/src/data/surgeon-profiles/judith-goh.json';
 import citations from '@site/src/data/surgeon-citations/judith-goh.json';
 
-<SurgeonProfile id="judith-goh" profile={profile} citations={citations}>
+<SurgeonProfile id="judith-goh" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -19,29 +20,38 @@ import citations from '@site/src/data/surgeon-citations/judith-goh.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Goh's cited work covers classification and repair outcomes for genital tract fistulas, postrepair urinary incontinence, and sacrospinous fixation devices and technique.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Genital tract fistula repair series** (1998). Reported outcomes from 130 genital tract fistula repairs in 116 women.[^8]
-- **Fistula classification outcome study** (2008). Tested whether fistula classification predicted failed closure and residual urinary incontinence in 987 women.[^9] Cited on WARWIKI: [Obstetric Fistula](/docs/clinical-conditions/03f-fistulas/in-females/obstetric).
+Goh's cited work covers classification and repair outcomes for genital tract fistulas, postrepair urinary incontinence, and sacrospinous fixation devices and technique.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P2](#publication-9)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Genital tract fistula repair series** (1998). Reported outcomes from 130 genital tract fistula repairs in 116 women.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Fistula classification outcome study** (2008). Tested whether fistula classification predicted failed closure and residual urinary incontinence in 987 women.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Prof Judith Goh AO. Queensland Pelvic Floor Service](https://qpfs.com.au/the-team/prof-judith-goh-ao/). Accessed October 2026.
 
 [^2]: [Prof Judith Goh AO: Urogynaecologist & VVF Surgeon O&G Magazine](https://www.ogmagazine.org.au/20/2-20/prof-judith-goh-ao-urogynaecologist-vvf-surgeon/). Accessed October 2026.
-
-[^3]: Mowat A, Wong V, Goh J, et al. "A descriptive study on the efficacy and complications of the Capio (Boston Scientific) suturing device for sacrospinous ligament fixation." Aust N Z J Obstet Gynaecol. 2018;58(1):119–124. doi:[10.1111/ajo.12720](https://doi.org/10.1111/ajo.12720)
-
-[^4]: Goh J, Browning A, Slinger G, Trautvetter L. "FIGO expert opinion: management of post-obstetric fistula repair incontinence for vesicovaginal fistula." Int J Gynaecol Obstet. 2026;172(1):210–214. doi:[10.1002/ijgo.70384](https://doi.org/10.1002/ijgo.70384)
-
-[^5]: Goh JT, Browning A, Berhan B, Chang A. "Predicting the risk of failure of closure of obstetric fistula and residual urinary incontinence using a classification system." Int Urogynecol J Pelvic Floor Dysfunct. 2008;19(12):1659–1662. doi:[10.1007/s00192-008-0693-9](https://doi.org/10.1007/s00192-008-0693-9)
-
-[^6]: Goh JT, Browning A. "Use of urethral plugs for urinary incontinence following fistula repair." Aust N Z J Obstet Gynaecol. 2005;45(3):237–238. doi:[10.1111/j.1479-828x.2005.00395.x](https://doi.org/10.1111/j.1479-828x.2005.00395.x)
-
-[^7]: Thayalan K, Krause H, Goh J. "A retrospective case series on transvaginal repair of rectovaginal fistula performed by a urogynaecology operative team in Australia." Aust N Z J Obstet Gynaecol. 2022;62(2):263–267. doi:[10.1111/ajo.13444](https://doi.org/10.1111/ajo.13444)
-
-[^8]: Goh JTW. "Genital Tract Fistula Repair on 116 Women." *Aust NZ J Obst Gynaeco.* 1998;38(2):158–161. doi:[10.1111/j.1479-828x.1998.tb02991.x](https://doi.org/10.1111/j.1479-828x.1998.tb02991.x)
-
-[^9]: Goh JTW, Browning A, Berhan B, et al. "Predicting the risk of failure of closure of obstetric fistula and residual urinary incontinence using a classification system." *Int Urogynecol J.* 2008;19(12):1659–1662. doi:[10.1007/s00192-008-0693-9](https://doi.org/10.1007/s00192-008-0693-9)
 
 </SurgeonProfile>

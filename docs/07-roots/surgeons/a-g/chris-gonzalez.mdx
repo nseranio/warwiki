@@ -3,11 +3,12 @@ title: "Chris Gonzalez"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/chris-gonzalez.json';
 import profile from '@site/src/data/surgeon-profiles/chris-gonzalez.json';
 import citations from '@site/src/data/surgeon-citations/chris-gonzalez.json';
 
-<SurgeonProfile id="chris-gonzalez" profile={profile} citations={citations}>
+<SurgeonProfile id="chris-gonzalez" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,26 +21,32 @@ import citations from '@site/src/data/surgeon-citations/chris-gonzalez.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Gonzalez's cited papers cover male urethral stricture evaluation and reconstruction, including distal strictures and repeat hypospadias repair, as well as patient-reported symptoms and sexual function after urethroplasty.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Prospective ejaculatory-function study after urethroplasty** (2010). Senior-authored a prospective assessment of ejaculatory function after anterior urethral reconstruction.[^8] Cited on WARWIKI: [Male Urethral Stricture](/docs/clinical-conditions/03b-voiding-outlet/urethral-stricture).
+Gonzalez's cited papers cover male urethral stricture evaluation and reconstruction, including distal strictures and repeat hypospadias repair, as well as patient-reported symptoms and sexual function after urethroplasty.<sup>[P2](#publication-3)</sup><sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P1](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Prospective ejaculatory-function study after urethroplasty** (2010). Senior-authored a prospective assessment of ejaculatory function after anterior urethral reconstruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Leadership team. Loyola Medicine](https://www.loyolamedicine.org/about-us/leadership). Accessed October 2026.
 
 [^2]: [Chris M. Gonzalez, MD, Named Chair of Loyola s Department of Urology. Loyola Medicine](https://www.loyolamedicine.org/press-releases/chris-m-gonzalez-md-named-chair-loyolas-department-urology). Accessed October 2026.
-
-[^3]: Meeks JJ, Barbagli G, Mehdiratta N, Granieri MA, Gonzalez CM. Distal urethroplasty for isolated fossa navicularis and meatal strictures. BJU Int. 2012;109(4):616-9. doi:[10.1111/j.1464-410x.2011.10248.x](https://doi.org/10.1111/j.1464-410x.2011.10248.x)
-
-[^4]: Morrison CD, Cina DP, Gonzalez CM, Hofer MD. Surgical approaches and long-term outcomes in adults with complex reoperative hypospadias repair. J Urol. 2018;199(5):1296-1301. doi:[10.1016/j.juro.2017.11.078](https://doi.org/10.1016/j.juro.2017.11.078)
-
-[^5]: Angermeier KW, Rourke KF, Dubey D, Forsyth RJ, Gonzalez CM. "SIU/ICUD consultation on urethral strictures: evaluation and follow-up." Urology. 2014;83(3 Suppl):S8–17. doi:[10.1016/j.urology.2013.09.011](https://doi.org/10.1016/j.urology.2013.09.011)
-
-[^6]: Nuss GR, Granieri MA, Zhao LC, Thum DJ, Gonzalez CM. "Presenting Symptoms of Anterior Urethral Stricture Disease: A Disease Specific, Patient Reported Questionnaire to Measure Outcomes." J Urol. 2012;187(2):559-562. doi:[10.1016/j.juro.2011.10.043](https://doi.org/10.1016/j.juro.2011.10.043)
-
-[^7]: Erickson BA, Granieri MA, Meeks JJ, McVary KT, Gonzalez CM. "Prospective Analysis of Ejaculatory Function After Anterior Urethral Reconstruction." J Urol. 2010;184(1):238-242. doi:[10.1016/j.juro.2010.03.038](https://doi.org/10.1016/j.juro.2010.03.038)
-
-[^8]: Erickson BA, Granieri MA, Meeks JJ, et al. "Prospective Analysis of Ejaculatory Function After Anterior Urethral Reconstruction." *Journal of Urology.* 2010;184(1):238–242. doi:[10.1016/j.juro.2010.03.038](https://doi.org/10.1016/j.juro.2010.03.038)
 
 </SurgeonProfile>

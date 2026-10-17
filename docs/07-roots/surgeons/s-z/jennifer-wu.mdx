@@ -3,11 +3,12 @@ title: "Jennifer M. Wu"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/jennifer-wu.json';
 import profile from '@site/src/data/surgeon-profiles/jennifer-wu.json';
 import citations from '@site/src/data/surgeon-citations/jennifer-wu.json';
 
-<SurgeonProfile id="jennifer-wu" profile={profile} citations={citations}>
+<SurgeonProfile id="jennifer-wu" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,36 @@ import citations from '@site/src/data/surgeon-citations/jennifer-wu.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited work includes population estimates of pelvic floor disorders and pelvic floor surgery, along with reviews and studies of stress urinary incontinence treatment and surgical outcomes.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Lifetime risk of incontinence or prolapse surgery** (2014). Wu led a population-based analysis estimating a 20% lifetime risk of surgery for stress incontinence or pelvic organ prolapse by age 80.[^8] Cited on WARWIKI: [Apical Prolapse](/docs/clinical-conditions/03c-pelvic-support/apical-prolapse).
-- **Prevalence of symptomatic pelvic floor disorders** (2014). Wu led a U.S. prevalence analysis of symptomatic urinary incontinence, fecal incontinence, and pelvic organ prolapse.[^9] Cited on WARWIKI: [POP Overview](/docs/clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse).
+Her cited work includes population estimates of pelvic floor disorders and pelvic floor surgery, along with reviews and studies of stress urinary incontinence treatment and surgical outcomes.<sup>[P3](#publication-3)</sup><sup>[P3](#publication-3)</sup><sup>[P1](#publication-8)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Lifetime risk of incontinence or prolapse surgery** (2014). Wu led a population-based analysis estimating a 20% lifetime risk of surgery for stress incontinence or pelvic organ prolapse by age 80.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Prevalence of symptomatic pelvic floor disorders** (2014). Wu led a U.S. prevalence analysis of symptomatic urinary incontinence, fecal incontinence, and pelvic organ prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Jennifer Wu, MD, MPH. UNC Department of Obstetrics & Gynecology](https://www.med.unc.edu/obgyn/people/jennifer-wu/). Accessed October 2026.
 
 [^2]: [2026 Women’s Health Research Symposium Program. Duke Department of Obstetrics and Gynecology](https://obgyn.duke.edu/education-training/bircwh-k12-program/womens-health-research-symposium/2026-womens-health-research). Accessed October 2026.
-
-[^3]: Wu JM. "Stress incontinence in women." N Engl J Med. 2021;384(25):2428–2436. doi:[10.1056/nejmcp1914037](https://doi.org/10.1056/nejmcp1914037)
-
-[^4]: Wu JM. Stress incontinence in women. N Engl J Med. 2021;384(25):2428–36. doi:[10.1056/nejmcp1914037](https://doi.org/10.1056/nejmcp1914037). PMID 34161707.
-
-[^5]: Wu JM, Matthews CA, Conover MM, et al. Lifetime risk of stress urinary incontinence or pelvic organ prolapse surgery. Obstet Gynecol. 2014;123(6):1201-1206. doi:[10.1097/aog.0000000000000286](https://doi.org/10.1097/aog.0000000000000286)
-
-[^6]: Wu JM, Hundley AF, Fulton RG, Myers ER. Forecasting the prevalence of pelvic floor disorders in U.S. women: 2010 to 2050. Obstet Gynecol. 2009;114(6):1278-1283. doi:[10.1097/aog.0b013e3181c2ce96](https://doi.org/10.1097/aog.0b013e3181c2ce96)
-
-[^7]: Wu JM, Kawasaki A, Hundley AF, et al. Predicting the number of women who will undergo incontinence and prolapse surgery, 2010 to 2050. Am J Obstet Gynecol. 2011;205(3):230.e1-5. doi:[10.1016/j.ajog.2011.03.046](https://doi.org/10.1016/j.ajog.2011.03.046)
-
-[^8]: Wu JM, Matthews CA, Conover MM, et al. "Lifetime Risk of Stress Urinary Incontinence or Pelvic Organ Prolapse Surgery." 2014;123(6):1201–1206. doi:[10.1097/aog.0000000000000286](https://doi.org/10.1097/aog.0000000000000286)
-
-[^9]: Wu JM, Vaughan CP, Goode PS, et al. "Prevalence and Trends of Symptomatic Pelvic Floor Disorders in U.S. Women." 2014;123(1):141–148. doi:[10.1097/aog.0000000000000057](https://doi.org/10.1097/aog.0000000000000057)
 
 </SurgeonProfile>

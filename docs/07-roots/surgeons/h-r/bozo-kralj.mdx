@@ -3,11 +3,12 @@ title: "Bozo Kralj"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/bozo-kralj.json';
 import profile from '@site/src/data/surgeon-profiles/bozo-kralj.json';
 import citations from '@site/src/data/surgeon-citations/bozo-kralj.json';
 
-<SurgeonProfile id="bozo-kralj" profile={profile} citations={citations}>
+<SurgeonProfile id="bozo-kralj" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,9 +22,19 @@ import citations from '@site/src/data/surgeon-citations/bozo-kralj.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Functional electrical stimulation for female stress urinary incontinence** (1999). Reported outcomes for 111 women treated with functional electrical stimulation for stress urinary incontinence.[^5]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Functional electrical stimulation for female stress urinary incontinence** (1999). Reported outcomes for 111 women treated with functional electrical stimulation for stress urinary incontinence.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [iuga.org (iuga book 2025)](https://www.iuga.org/files/iuga-book-2025.pdf). Accessed October 2026.
 
@@ -32,7 +43,5 @@ import citations from '@site/src/data/surgeon-citations/bozo-kralj.json';
 [^3]: [History & Past Presidents](https://www.iuga.org/component/content/article/history-past-presidents?Itemid=104&catid=10&highlight=WyIyMDA5LTIwMTAiXQ%3D%3D). Accessed October 2026.
 
 [^4]: [Lukanović A, Lukanović D. "Božo Kralj (1932–2020): in memoriam." *Int Urogynecol J.* 2021;32(3):753–756](https://link.springer.com/article/10.1007/s00192-020-04656-z). Accessed October 2026.
-
-[^5]: Kralj B. "Conservative treatment of female stress urinary incontinence with functional electrical stimulation." *European Journal of Obstetrics &amp; Gynecology and Reproductive Biology.* 1999;85(1):53–56. doi:[10.1016/s0301-2115(98)00282-6](https://doi.org/10.1016/s0301-2115(98)00282-6)
 
 </SurgeonProfile>

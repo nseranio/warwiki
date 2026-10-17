@@ -3,11 +3,12 @@ title: "Sanjay Kulkarni"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/sanjay-kulkarni.json';
 import profile from '@site/src/data/surgeon-profiles/sanjay-kulkarni.json';
 import citations from '@site/src/data/surgeon-citations/sanjay-kulkarni.json';
 
-<SurgeonProfile id="sanjay-kulkarni" profile={profile} citations={citations}>
+<SurgeonProfile id="sanjay-kulkarni" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,31 +23,40 @@ import citations from '@site/src/data/surgeon-citations/sanjay-kulkarni.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Kulkarni's cited work covers one-sided dorsal onlay graft urethroplasty, panurethral stricture repair, and a single-stage spiral preputial graft. Other confirmed papers address pelvic fracture urethral injury and complex posterior urethral reconstruction.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **One-sided dorsal onlay urethroplasty** (2009). Described one-sided dissection for dorsal oral-mucosal graft urethroplasty while preserving contralateral vascular and muscular support.[^9] Cited on WARWIKI: [Kulkarni One-Stage Panurethral Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage).
-- **Single-stage panurethral stricture repair** (2012). Reported a 117-patient series using one-sided dissection, penile invagination and dorsal oral-mucosal grafts for panurethral strictures.[^10] Cited on WARWIKI: [Kulkarni One-Stage Panurethral Urethroplasty](/docs/surgical-techniques/04a-urethral-reconstruction/kulkarni-one-stage).
+Kulkarni's cited work covers one-sided dorsal onlay graft urethroplasty, panurethral stricture repair, and a single-stage spiral preputial graft. Other confirmed papers address pelvic fracture urethral injury and complex posterior urethral reconstruction.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P2](#publication-10)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**One-sided dorsal onlay urethroplasty** (2009). Described one-sided dissection for dorsal oral-mucosal graft urethroplasty while preserving contralateral vascular and muscular support.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Single-stage panurethral stricture repair** (2012). Reported a 117-patient series using one-sided dissection, penile invagination and dorsal oral-mucosal grafts for panurethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Best Urologist in Pune Dr Sanjay Kulkarni. Urokul Hospital](https://urokul.com/dr-sanjay-kulkarni/). Accessed October 2026.
 
 [^2]: [Global Fellowships. Society of Genitourinary Reconstructive Surgeons](https://societygurs.org/gurs-fellowships/global/). Accessed October 2026.
 
 [^3]: [BAUS24%20FINAL%20Conference%20Programme.pdf](https://www.baus.org.uk/_userfiles/pages/files/annual%20scientific%20meetings/2024/BAUS24%20FINAL%20Conference%20Programme.pdf). Accessed October 2026.
-
-[^4]: Kulkarni SB, Joshi PM, Basile G, Bandini M. Novel single-stage preputial spiral graft for panurethral stricture: a step-by-step description of the technique. World J Urol. 2023;41(9):2459–63. doi:[10.1007/s00345-023-04514-9](https://doi.org/10.1007/s00345-023-04514-9)
-
-[^5]: Kulkarni SB, Ratanapornsompong W, Thakkar S, et al. Twenty-five Years of Panurethral Stricture Repair Using the Kulkarni Technique. Eur Urol Focus. 2026;12(3):329-332. doi:[10.1016/j.euf.2026.04.007](https://doi.org/10.1016/j.euf.2026.04.007)
-
-[^6]: Kulkarni S, Kulkarni J, Surana S, Joshi PM. Management of Panurethral Stricture. Urol Clin North Am. 2017;44(1):67–75. doi:[10.1016/j.ucl.2016.08.011](https://doi.org/10.1016/j.ucl.2016.08.011)
-
-[^7]: Kulkarni SB, Barbagli G, Joshi PM, et al. "Laparoscopic Omentoplasty to Support Anastomotic Urethroplasty in Complex and Redo Pelvic Fracture Urethral Defects." Urology. 2015;85(5):1200–1205. doi:[10.1016/j.urology.2014.12.055](https://doi.org/10.1016/j.urology.2014.12.055)
-
-[^8]: Kulkarni SB, Joshi PM, Venkatesan K. Management of Panurethral Stricture Disease in India. J Urol. 2012;188(3):824–30. doi:[10.1016/j.juro.2012.05.020](https://doi.org/10.1016/j.juro.2012.05.020)
-
-[^9]: Kulkarni S, Barbagli G, Sansalone S, et al. "One‐sided anterior urethroplasty: a new dorsal onlay graft technique." *BJU International.* 2009;104(8):1150–1155. doi:[10.1111/j.1464-410x.2009.08590.x](https://doi.org/10.1111/j.1464-410x.2009.08590.x)
-
-[^10]: Kulkarni SB, Joshi PM, Venkatesan K. "Management of Panurethral Stricture Disease in India." *Journal of Urology.* 2012;188(3):824–830. doi:[10.1016/j.juro.2012.05.020](https://doi.org/10.1016/j.juro.2012.05.020)
 
 </SurgeonProfile>

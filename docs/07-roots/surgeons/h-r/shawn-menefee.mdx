@@ -3,11 +3,12 @@ title: "Shawn Menefee"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/shawn-menefee.json';
 import profile from '@site/src/data/surgeon-profiles/shawn-menefee.json';
 import citations from '@site/src/data/surgeon-citations/shawn-menefee.json';
 
-<SurgeonProfile id="shawn-menefee" profile={profile} citations={citations}>
+<SurgeonProfile id="shawn-menefee" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,12 +23,35 @@ import citations from '@site/src/data/surgeon-citations/shawn-menefee.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work studies surgical approaches and reoperation after pelvic organ prolapse repair, including the ASPIRe trial and anterior vaginal wall repair. Other cited trials compare treatments for urinary incontinence, including sacral neuromodulation, onabotulinumtoxinA, and midurethral slings.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Anterior prolapse repair randomized trial** (2011). Led a randomized comparison of anterior colporrhaphy, porcine-dermis reinforcement and polypropylene-mesh repair.[^10] Cited on WARWIKI: [Paravaginal Repair](/docs/surgical-techniques/04g-prolapse-repair/paravaginal-repair).
-- **ASPIRe apical suspension trial** (2024). Led a multicenter randomized trial comparing sacrocolpopexy, transvaginal mesh and native-tissue repair for vaginal vault prolapse.[^11] Cited on WARWIKI: [Mesh & Graft-Augmented Prolapse Repair](/docs/surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs).
+His cited work studies surgical approaches and reoperation after pelvic organ prolapse repair, including the ASPIRe trial and anterior vaginal wall repair. Other cited trials compare treatments for urinary incontinence, including sacral neuromodulation, onabotulinumtoxinA, and midurethral slings.<sup>[P2](#publication-11)</sup><sup>[P3](#publication-6)</sup><sup>[P4](#publication-7)</sup><sup>[P5](#publication-8)</sup><sup>[P6](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Anterior prolapse repair randomized trial** (2011). Led a randomized comparison of anterior colporrhaphy, porcine-dermis reinforcement and polypropylene-mesh repair.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**ASPIRe apical suspension trial** (2024). Led a multicenter randomized trial comparing sacrocolpopexy, transvaginal mesh and native-tissue repair for vaginal vault prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Shawn A. Menefee, MD. Kaiser Permanente Department of Research & Evaluation](https://www.kp-scalresearch.org/investigator/shawn-a-menefee-md/). Accessed October 2026.
 
@@ -36,19 +60,5 @@ His cited work studies surgical approaches and reoperation after pelvic organ pr
 [^3]: [Urogynecology & Reconstructive Pelvic Surgery](https://obgyn.ucsd.edu/education-training/fellowships/urogynecology/index.html). Accessed October 2026.
 
 [^4]: [Past Presidents. AUGS](https://www.augs.org/about-augs/past-presidents/). Accessed October 2026.
-
-[^5]: Menefee SA, Richter HE, Myers D, et al. Apical suspension repair for vaginal vault prolapse: a randomized clinical trial. JAMA Surg. 2024;159:845–855. doi:[10.1001/jamasurg.2024.1206](https://doi.org/10.1001/jamasurg.2024.1206)
-
-[^6]: Amundsen CL, Richter HE, Menefee SA, et al. "OnabotulinumtoxinA vs sacral neuromodulation on refractory urgency urinary incontinence in women: a randomized clinical trial." JAMA. 2016;316(13):1366–1374. doi:[10.1001/jama.2016.14617](https://doi.org/10.1001/jama.2016.14617)
-
-[^7]: Harvie HS, Menefee SA, Richter HE, et al. "Midurethral Sling vs OnabotulinumtoxinA in Females With Urinary Incontinence: The MUSA Randomized Clinical Trial." JAMA. 2025;333(21):1887–1896. doi:[10.1001/jama.2025.4682](https://doi.org/10.1001/jama.2025.4682)
-
-[^8]: Erekson E, Menefee SA, Whitworth R, et al. Outcomes by frailty and mobility in older patients undergoing major urogynecologic surgery: a planned supplementary study of the ASPIRe trial. Am J Obstet Gynecol. 2026;234:689–729. doi:[10.1016/j.ajog.2025.11.002](https://doi.org/10.1016/j.ajog.2025.11.002)
-
-[^9]: Shah NM, Berger AA, Zhuang Z, Tan-Kim J, Menefee SA. "Long-Term Reoperation Risk After Apical Prolapse Repair in Female Pelvic Reconstructive Surgery." American Journal of Obstetrics and Gynecology. 2022;227(2):306.e1-306.e16. doi:[10.1016/j.ajog.2022.05.046](https://doi.org/10.1016/j.ajog.2022.05.046)
-
-[^10]: Menefee SA, Dyer KY, Lukacz ES, et al. "Colporrhaphy Compared With Mesh or Graft-Reinforced Vaginal Paravaginal Repair for Anterior Vaginal Wall Prolapse." 2011;118(6):1337–1344. doi:[10.1097/aog.0b013e318237edc4](https://doi.org/10.1097/aog.0b013e318237edc4)
-
-[^11]: Menefee SA, Richter HE, Myers D, et al. "Apical Suspension Repair for Vaginal Vault Prolapse." *JAMA Surg.* 2024;159(8):845. doi:[10.1001/jamasurg.2024.1206](https://doi.org/10.1001/jamasurg.2024.1206)
 
 </SurgeonProfile>

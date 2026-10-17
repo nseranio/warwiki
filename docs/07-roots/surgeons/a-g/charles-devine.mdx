@@ -3,11 +3,12 @@ title: "Charles J. Devine Jr."
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/charles-devine.json';
 import profile from '@site/src/data/surgeon-profiles/charles-devine.json';
 import citations from '@site/src/data/surgeon-citations/charles-devine.json';
 
-<SurgeonProfile id="charles-devine" profile={profile} citations={citations}>
+<SurgeonProfile id="charles-devine" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,12 +23,27 @@ import citations from '@site/src/data/surgeon-citations/charles-devine.json';
 
 </div>
 
-## Principal Contributions
+<a id="principal-contributions"></a>
+
+## Key Publications
 
 Their work also addressed Peyronie disease, penile and genital trauma, and phallic reconstruction.[^2] Devine and his brother Patrick developed patch graft urethroplasty techniques for urethral stricture.[^2]
 
-- **Full-thickness skin patch graft urethroplasty** (1963). Helped develop and disseminate full-thickness skin patch graft repair for urethral stricture.[^3]
-- **Devine–Horton dermal graft for Peyronie’s disease** (1974). Described dermal graft replacement of the tunical defect after excision of a Peyronie’s plaque.[^4]
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Full-thickness skin patch graft urethroplasty** (1963). Helped develop and disseminate full-thickness skin patch graft repair for urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Devine–Horton dermal graft for Peyronie’s disease** (1974). Described dermal graft replacement of the tunical defect after excision of a Peyronie’s plaque.
+
+</KeyPublication>
+
+</ol>
 
 ## The EVMS Fellowship
 
@@ -40,9 +56,5 @@ GURS established the annual Charles J. Devine Jr. Lectureship in 2005.[^1]
 [^1]: [GURS Lectureship | Society of Genitourinary Reconstructive Surgeons](https://societygurs.org/gurs-lectureship/). Accessed October 2026.
 
 [^2]: [SPU: Goodwin, Hodgson and Devine � A Tribute to Three Urologic Pioneers](https://spuonline.org/Dialogues/archive/23_8.cgi). Accessed October 2026.
-
-[^3]: Devine PC, Horton CE, Devine CJ, et al. "Use of Full Thickness Skin Grafts in Repair of Urethral Strictures." *Journal of Urology.* 1963;90(1):67–71. doi:[10.1016/s0022-5347(17)64362-3](https://doi.org/10.1016/s0022-5347(17)64362-3)
-
-[^4]: Devine CJ, Horton CE. "Surgical Treatment of Peyronie’s Disease with a Dermal Graft." *Journal of Urology.* 1974;111(1):44–49. doi:[10.1016/s0022-5347(17)59886-9](https://doi.org/10.1016/s0022-5347(17)59886-9)
 
 </SurgeonProfile>

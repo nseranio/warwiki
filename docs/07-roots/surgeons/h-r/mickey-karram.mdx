@@ -3,11 +3,12 @@ title: "Mickey Karram"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/mickey-karram.json';
 import profile from '@site/src/data/surgeon-profiles/mickey-karram.json';
 import citations from '@site/src/data/surgeon-citations/mickey-karram.json';
 
-<SurgeonProfile id="mickey-karram" profile={profile} citations={citations}>
+<SurgeonProfile id="mickey-karram" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,9 +22,25 @@ import citations from '@site/src/data/surgeon-citations/mickey-karram.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Karram's cited work covers pelvic organ prolapse and stress urinary incontinence surgery, including native tissue repairs, slings, urethral bulking, and mesh complications. His cited chapters and case reports also address urethral and vaginal reconstruction and fistula repair.[^5][^6][^7][^8][^9]
+## Key Publications
+
+Karram's cited work covers pelvic organ prolapse and stress urinary incontinence surgery, including native tissue repairs, slings, urethral bulking, and mesh complications. His cited chapters and case reports also address urethral and vaginal reconstruction and fistula repair.<sup>[P1](#publication-5)</sup><sup>[P2](#publication-6)</sup><sup>[P3](#publication-7)</sup><sup>[P4](#publication-8)</sup><sup>[P5](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [Expert Profile: Mickey Karram. Research Directory](https://researchdirectory.uc.edu/p/karrammm). Accessed October 2026.
 
@@ -32,15 +49,5 @@ Karram's cited work covers pelvic organ prolapse and stress urinary incontinence
 [^3]: [About Mickey Dr. Mickey Karram Urogynecologist and Pelvic Surgeon](https://www.mickeykarrammd.com/about-mickey/). Accessed October 2026.
 
 [^4]: [Past Presidents. AUGS](https://www.augs.org/about-augs/past-presidents/). Accessed October 2026.
-
-[^5]: Sokol ER, Karram MM, Dmochowski R. Efficacy and Safety of Polyacrylamide Hydrogel for the Treatment of Female Stress Incontinence: A Randomized, Prospective, Multicenter North American Study. The Journal of Urology. 2014;192(3):843-849. doi:[10.1016/j.juro.2014.03.109](https://doi.org/10.1016/j.juro.2014.03.109)
-
-[^6]: Gebhart JB, Karram MM. Iatrogenic Vaginal Constriction. In: Baggish MS, Karram MM, eds. Atlas of Pelvic Anatomy and Gynecologic Surgery. 5th ed. Elsevier; 2021:813–828.
-
-[^7]: Karram MM, Gebhart JB. Repair of Advertent and Inadvertent Cystotomy. In: Baggish MS, Karram MM, eds. Atlas of Pelvic Anatomy and Gynecologic Surgery. 5th ed. Elsevier; 2021:1071–1078.
-
-[^8]: Karram MM. Native Tissue Vaginal Repair of Cystocele, Rectocele, and Enterocele. In: Baggish MS, Karram MM, eds. Atlas of Pelvic Anatomy and Gynecologic Surgery. 5th ed. Elsevier; 2021:623-670.
-
-[^9]: Karram MM. Pubovaginal Slings for the Correction of Stress Incontinence. In: Baggish MS, Karram MM, eds. Atlas of Pelvic Anatomy and Gynecologic Surgery. 5th ed. Elsevier; 2021:763-778.
 
 </SurgeonProfile>

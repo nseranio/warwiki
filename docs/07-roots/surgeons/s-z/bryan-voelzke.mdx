@@ -3,11 +3,12 @@ title: "Bryan B. Voelzke"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/bryan-voelzke.json';
 import profile from '@site/src/data/surgeon-profiles/bryan-voelzke.json';
 import citations from '@site/src/data/surgeon-citations/bryan-voelzke.json';
 
-<SurgeonProfile id="bryan-voelzke" profile={profile} citations={citations}>
+<SurgeonProfile id="bryan-voelzke" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,26 +23,40 @@ import citations from '@site/src/data/surgeon-citations/bryan-voelzke.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Voelzke's cited work covers pelvic fracture urethral injury, radiation-associated urethral stenosis, rectourethral fistula and renal trauma, including multi-institutional TURNS cohorts.[^4][^5][^6][^7]
+## Key Publications
 
-- **Transperineal rectourethral fistula repair** (2013). Led a review of 23 rectal sphincter-preserving transperineal repairs: all 10 postoperative fistulas closed, against 8 of 13 energy-ablative fistulas, and the authors advised an interposition muscle flap after energy ablation.[^4] Cited on WARWIKI: [Transperineal Approach to RUF](/docs/surgical-techniques/04h-fistula-repair/male/transperineal-ruf-repair), [Rectourethral Fistula](/docs/clinical-conditions/03f-fistulas/in-males/rectourethral).
-- **Excision and primary anastomosis for radiation-associated bulbomembranous stenosis** (2021). Led a 10-center TURNS review of 137 men with 86.9% success at a mean 32.3 months; older age and longer stenosis were independently associated with recurrence, and 21.9% later received an artificial urinary sphincter.[^5] Cited on WARWIKI: [Posterior Urethral Stenosis](/docs/clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis), [Cancer Survivorship](/docs/special-populations/05d-cancer-survivorship).
-- **Early endoscopic realignment after pelvic fracture urethral injury** (2012). Senior author of a Level 1 trauma center series in which early realignment failed in 15 of 19 men, at a mean of 79 days after catheter removal.[^6] Cited on WARWIKI: [Primary Endoscopic Realignment (PER)](/docs/surgical-techniques/04a-urethral-reconstruction/primary-endoscopic-realignment).
+Voelzke's cited work covers pelvic fracture urethral injury, radiation-associated urethral stenosis, rectourethral fistula and renal trauma, including multi-institutional TURNS cohorts.<sup>[P1](#publication-4)</sup><sup>[P2](#publication-5)</sup><sup>[P3](#publication-6)</sup><sup>[P4](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Transperineal rectourethral fistula repair** (2013). Led a review of 23 rectal sphincter-preserving transperineal repairs: all 10 postoperative fistulas closed, against 8 of 13 energy-ablative fistulas, and the authors advised an interposition muscle flap after energy ablation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Excision and primary anastomosis for radiation-associated bulbomembranous stenosis** (2021). Led a 10-center TURNS review of 137 men with 86.9% success at a mean 32.3 months; older age and longer stenosis were independently associated with recurrence, and 21.9% later received an artificial urinary sphincter.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Early endoscopic realignment after pelvic fracture urethral injury** (2012). Senior author of a Level 1 trauma center series in which early realignment failed in 15 of 19 men, at a mean of 79 days after catheter removal.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+</ol>
 
 [^1]: [Bryan Voelzke, MD, FACS. Spokane Urology](https://www.spokaneurology.com/provider/bryan-voelzke-md-facs/). Accessed October 2026.
 
 [^2]: [Bryan B. Voelzke, MD, MS, FACS. Members, Trauma and Urologic Reconstructive Network of Surgeons](http://www.turnsresearch.org/members/index.php?s=bryan-b-voelzke-md-ms-facs). Accessed October 2026.
 
 [^3]: [Members. Trauma and Urologic Reconstructive Network of Surgeons](http://www.turnsresearch.org/members/index.php). Accessed October 2026.
-
-[^4]: Voelzke BB, McAninch JW, Breyer BN, Glass AS, Garcia-Aguilar J. "Transperineal management for postoperative and radiation rectourethral fistulas." *J Urol.* 2013;189(3):966–971. doi:[10.1016/j.juro.2012.08.238](https://doi.org/10.1016/j.juro.2012.08.238)
-
-[^5]: Voelzke BB, Leddy LS, Myers JB, et al. "Multi-institutional outcomes and associations after excision and primary anastomosis for radiotherapy-associated bulbomembranous urethral stenoses following prostate cancer treatment." *Urology.* 2021;152:117–122. doi:[10.1016/j.urology.2020.11.077](https://doi.org/10.1016/j.urology.2020.11.077)
-
-[^6]: Leddy LS, Vanni AJ, Wessells H, Voelzke BB. "Outcomes of endoscopic realignment of pelvic fracture associated urethral injuries at a level 1 trauma center." *J Urol.* 2012;188(1):174–178. doi:[10.1016/j.juro.2012.02.2567](https://doi.org/10.1016/j.juro.2012.02.2567)
-
-[^7]: Voelzke BB, McAninch JW. "Renal gunshot wounds: clinical management and outcome." *J Trauma.* 2009;66(3):593–600. doi:[10.1097/TA.0b013e318196d0dd](https://doi.org/10.1097/TA.0b013e318196d0dd)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Marco Falcone"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/marco-falcone.json';
 import profile from '@site/src/data/surgeon-profiles/marco-falcone.json';
 import citations from '@site/src/data/surgeon-citations/marco-falcone.json';
 
-<SurgeonProfile id="marco-falcone" profile={profile} citations={citations}>
+<SurgeonProfile id="marco-falcone" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,12 +22,37 @@ import citations from '@site/src/data/surgeon-citations/marco-falcone.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Falcone's cited work examines glansectomy and skin-graft reconstruction for penile cancer, along with surgical repair of adult acquired buried penis. Other papers cover radial forearm phalloplasty, penile prostheses including after gender-affirming surgery, and operations for Peyronie's disease.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Penile prosthesis outcomes after phalloplasty** (2018). Led a 247-patient series reporting outcomes of inflatable penile prosthesis placement after masculinizing phalloplasty.[^10] Cited on WARWIKI: [Erectile Prosthesis (Penile Implant) After Gender-Affirming Phalloplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/penile-implant-after-phalloplasty).
-- **Total phallic reconstruction in genetic males** (2021). Reported staged radial forearm flap phalloplasty, with urethral reconstruction and prosthesis placement when indicated, for severe penile insufficiency.[^11] Cited on WARWIKI: [Radial Forearm Free Flap Phalloplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/rfff-phalloplasty).
+Falcone's cited work examines glansectomy and skin-graft reconstruction for penile cancer, along with surgical repair of adult acquired buried penis. Other papers cover radial forearm phalloplasty, penile prostheses including after gender-affirming surgery, and operations for Peyronie's disease.<sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Penile prosthesis outcomes after phalloplasty** (2018). Led a 247-patient series reporting outcomes of inflatable penile prosthesis placement after masculinizing phalloplasty.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Total phallic reconstruction in genetic males** (2021). Reported staged radial forearm flap phalloplasty, with urethral reconstruction and prosthesis placement when indicated, for severe penile insufficiency.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [International Journal of Impotence Research](https://www.nature.com/ijir/editors). Accessed October 2026.
 
@@ -35,19 +61,5 @@ Falcone's cited work examines glansectomy and skin-graft reconstruction for peni
 [^3]: [Microsoft Word. mfalcone.docx](https://www.biruni.edu.tr/cv_en/mfalcone.pdf). Accessed October 2026.
 
 [^4]: [Single-stage dorsal-inlay augmented metoidioplasty: technique, complications, and patient-reported outcomes](https://www.nature.com/articles/s41443-026-01342-4). Accessed October 2026.
-
-[^5]: Gül M, Plamadeala N, Falcone M, et al. No difference between split-thickness and full-thickness skin grafts for surgical repair in adult acquired buried penis regarding surgical and functional outcomes: a comparative retrospective analysis. Int J Impot Res. 2026;38(3):259–65. First published online February 7, 2024. doi:[10.1038/s41443-024-00832-7](https://doi.org/10.1038/s41443-024-00832-7)
-
-[^6]: Falcone M, Preto M, Blecher G, et al. The outcomes of glansectomy and split thickness skin graft reconstruction for invasive penile cancer confined to glans. Urology. 2022;165:250–5. doi:[10.1016/j.urology.2022.01.010](https://doi.org/10.1016/j.urology.2022.01.010)
-
-[^7]: Levy M, Falcone M, Bohr J, et al. Penile Implants After Phalloplasty in Transgender Individuals: A Consensus-Based Surgical Clinical Protocol. The Journal of Sexual Medicine. 2026;23(2):qdaf365. doi:[10.1093/jsxmed/qdaf365](https://doi.org/10.1093/jsxmed/qdaf365)
-
-[^8]: Falcone M, Preto M, Timpano M, et al. "The outcomes of surgical management options for adult acquired buried penis." Int J Impot Res. 2023;35(8):712–719. doi:[10.1038/s41443-022-00642-9](https://doi.org/10.1038/s41443-022-00642-9)
-
-[^9]: Falcone M, Preto M, Peretti F, et al. The use of collagen fleece to correct residual curvature during inflatable penile prosthesis implantation (PICS technique) in patients with complex Peyronie disease: a multicenter study. J Sex Med. 2023;20(2):229–235. doi:[10.1093/jsxmed/qdac003](https://doi.org/10.1093/jsxmed/qdac003)
-
-[^10]: Falcone M, Garaffa G, Gillo A, et al. "Outcomes of inflatable penile prosthesis insertion in 247 patients completing female to male gender reassignment surgery." *BJU International.* 2017;121(1):139–144. doi:[10.1111/bju.14027](https://doi.org/10.1111/bju.14027)
-
-[^11]: Falcone M, Blecher G, Anfosso M, et al. "Total Phallic Reconstruction in the Genetic Male." *European Urology.* 2021;79(5):684–691. doi:[10.1016/j.eururo.2020.07.025](https://doi.org/10.1016/j.eururo.2020.07.025)
 
 </SurgeonProfile>

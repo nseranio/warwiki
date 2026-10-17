@@ -3,11 +3,12 @@ title: "Steven J. Hudak"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/steve-hudak.json';
 import profile from '@site/src/data/surgeon-profiles/steve-hudak.json';
 import citations from '@site/src/data/surgeon-citations/steve-hudak.json';
 
-<SurgeonProfile id="steve-hudak" profile={profile} citations={citations}>
+<SurgeonProfile id="steve-hudak" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -24,23 +25,34 @@ import citations from '@site/src/data/surgeon-citations/steve-hudak.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Hudak served on the American Urological Association Urotrauma Guideline panel (2011–2015) and coauthored the 2014 guideline; the AUA lists him on the panel for the 2017 and 2020 amendments.[^3][^4] He also coauthored the US military Joint Trauma System clinical practice guideline on urologic trauma management (2017, revised 2024).[^2]
+## Key Publications
 
-- **Penile plication without degloving for Peyronie's disease** (2013). Led a review of 154 men treated through a 2 cm longitudinal penile incision regardless of curvature severity; of 132 who answered the questionnaire, 96% reported improved curvature and 93% reported erections adequate for intercourse.[^5] Cited on WARWIKI: [Tunica Plication](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication), [Peyronie's Disease (Treatment Algorithm)](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies).
-- **Reconstruction of failed urethroplasty** (2014). Lead author, with Allen Morey, of the textbook chapter on redo urethral reconstruction.[^6] Cited on WARWIKI: [Male Urethral Stricture](/docs/clinical-conditions/03b-voiding-outlet/urethral-stricture), [Pelvic Fracture Urethral Injury (PFUI)](/docs/special-populations/05a-trauma-emergencies/pfui).
+Hudak served on the American Urological Association Urotrauma Guideline panel (2011–2015) and coauthored the 2014 guideline; the AUA lists him on the panel for the 2017 and 2020 amendments.[^3]<sup>[P3](#publication-4)</sup> He also coauthored the US military Joint Trauma System clinical practice guideline on urologic trauma management (2017, revised 2024).[^2]
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Penile plication without degloving for Peyronie's disease** (2013). Led a review of 154 men treated through a 2 cm longitudinal penile incision regardless of curvature severity; of 132 who answered the questionnaire, 96% reported improved curvature and 93% reported erections adequate for intercourse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Reconstruction of failed urethroplasty** (2014). Lead author, with Allen Morey, of the textbook chapter on redo urethral reconstruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [Steven Hudak, M.D. UT Southwestern Medical Center](https://utswmed.org/doctors/steven-hudak/). Accessed October 2026.
 
 [^2]: [Steven J. Hudak, curriculum vitae (January 2026). UT Southwestern Medical Center](https://profileplus.swmed.edu/facultydata/118405/files/Hudak,S.,%2012026%20-%20CV%201.2026.pdf). Accessed October 2026.
 
 [^3]: [Urotrauma Guideline. American Urological Association](https://www.auanet.org/guidelines-and-quality/guidelines/urotrauma-guideline). Accessed October 2026.
-
-[^4]: Morey AF, Brandes S, Dugi DD 3rd, Armstrong JH, Breyer BN, Broghammer JA, Erickson BA, Holzbeierlein J, Hudak SJ, Pruitt JH, Reston JT, Santucci RA, Smith TG 3rd, Wessells H. "Urotrauma: AUA guideline." *J Urol.* 2014;192(2):327–335. doi:[10.1016/j.juro.2014.05.004](https://doi.org/10.1016/j.juro.2014.05.004)
-
-[^5]: Hudak SJ, Morey AF, Adibi M, Bagrodia A. "Favorable patient reported outcomes after penile plication for wide array of Peyronie disease abnormalities." *J Urol.* 2013;189(3):1019–1024. doi:[10.1016/j.juro.2012.09.085](https://doi.org/10.1016/j.juro.2012.09.085)
-
-[^6]: Hudak SJ, Morey AF. Reconstruction of failed urethroplasty. In: Brandes SB, Morey AF, eds. *Advanced Male Urethral and Genital Reconstructive Surgery.* 2nd ed. Humana Press; 2014:373–386.
 
 </SurgeonProfile>

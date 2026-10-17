@@ -3,11 +3,12 @@ title: "John Occhino"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/john-occhino.json';
 import profile from '@site/src/data/surgeon-profiles/john-occhino.json';
 import citations from '@site/src/data/surgeon-citations/john-occhino.json';
 
-<SurgeonProfile id="john-occhino" profile={profile} citations={citations}>
+<SurgeonProfile id="john-occhino" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,24 +22,30 @@ import citations from '@site/src/data/surgeon-citations/john-occhino.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited papers describe surgical approaches to urogenital fistula repair, including robotic and endoscopic techniques. They also cover colpocleisis techniques and ureteral stent placement.[^4][^5][^6][^7][^8]
+## Key Publications
+
+His cited papers describe surgical approaches to urogenital fistula repair, including robotic and endoscopic techniques. They also cover colpocleisis techniques and ureteral stent placement.<sup>[P1](#publication-4)</sup><sup>[P2](#publication-5)</sup><sup>[P3](#publication-6)</sup><sup>[P4](#publication-7)</sup><sup>[P5](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+</ol>
 
 [^1]: [John A. Occhino, M.D., M.S.](https://www.mayo.edu/research/faculty/occhino-john-a-m-d-m-s/bio-20345612). Accessed October 2026.
 
 [^2]: [John A. Occhino, M.D., M.S.](https://www.mayoclinic.org/biographies/occhino-john-a-m-d-m-s/bio-20055145). Accessed October 2026.
 
 [^3]: [2015%20final%20program.pdf](https://www.sgsonline.org/prev-mc-assets/docs/Annual_Meeting_Archives/2015_AnnualMeeting/2015%20final%20program.pdf). Accessed October 2026.
-
-[^4]: Linder BJ, Occhino JA. "Cystoscopic ureteral stent placement: techniques and tips." Int Urogynecol J. 2019;30(1):163–5. doi:[10.1007/s00192-018-3762-8](https://doi.org/10.1007/s00192-018-3762-8)
-
-[^5]: Linder BJ, Frank I, Occhino JA. "Extravesical robotic ureteral reimplantation for ureterovaginal fistula." Int Urogynecol J. 2018;29(4):595–597. doi:[10.1007/s00192-017-3459-4](https://doi.org/10.1007/s00192-017-3459-4)
-
-[^6]: Baker MV, Kisby CK, Occhino JA. "Vesicouterine fistula: a robotic approach." Int Urogynecol J. 2022;33(6):1685–1687. doi:[10.1007/s00192-021-04940-6](https://doi.org/10.1007/s00192-021-04940-6)
-
-[^7]: Linder BJ, Gebhart JB, Occhino JA. Total colpocleisis: technical considerations. Int Urogynecol J. 2016;27(11):1767-1769. doi:[10.1007/s00192-016-3034-4](https://doi.org/10.1007/s00192-016-3034-4)
-
-[^8]: Raju R, Occhino JA, Linder BJ. LeFort partial colpocleisis: tips and technique. Int Urogynecol J. 2020;31(8):1697-1699. doi:[10.1007/s00192-019-04194-3](https://doi.org/10.1007/s00192-019-04194-3)
 
 </SurgeonProfile>

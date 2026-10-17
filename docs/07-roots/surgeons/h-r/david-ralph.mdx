@@ -3,11 +3,12 @@ title: "David J. Ralph"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/david-ralph.json';
 import profile from '@site/src/data/surgeon-profiles/david-ralph.json';
 import citations from '@site/src/data/surgeon-citations/david-ralph.json';
 
-<SurgeonProfile id="david-ralph" profile={profile} citations={citations}>
+<SurgeonProfile id="david-ralph" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -19,32 +20,44 @@ import citations from '@site/src/data/surgeon-citations/david-ralph.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work addresses phallic reconstruction, including radial forearm free flap phalloplasty and erectile device placement after phalloplasty. Other cited papers address surgical management of ischemic priapism, including decompression and penile prosthesis placement.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Immediate penile prosthesis implantation for refractory ischemic priapism** (2009). Led a 50-patient report of immediate prosthesis implantation after refractory ischemic priapism.[^8] Cited on WARWIKI: [Priapism Shunts & Decompression](/docs/surgical-techniques/04j-sexual-dysfunction/priapism-shunts-decompression).
-- **Peyronie’s disease management guidelines** (2010). First-authored an evidence-based consensus guideline covering medical and surgical management of Peyronie’s disease.[^9]
-- **Penile prostheses after phalloplasty** (2018). Senior-authored a 247-patient series reporting outcomes and revisions after inflatable prosthesis implantation in neophalluses.[^10] Cited on WARWIKI: [Erectile Prosthesis (Penile Implant) After Gender-Affirming Phalloplasty](/docs/surgical-techniques/04k-gender-affirming-surgery/penile-implant-after-phalloplasty).
+His cited work addresses phallic reconstruction, including radial forearm free flap phalloplasty and erectile device placement after phalloplasty. Other cited papers address surgical management of ischemic priapism, including decompression and penile prosthesis placement.<sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P1](#publication-8)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Immediate penile prosthesis implantation for refractory ischemic priapism** (2009). Led a 50-patient report of immediate prosthesis implantation after refractory ischemic priapism.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Peyronie’s disease management guidelines** (2010). First-authored an evidence-based consensus guideline covering medical and surgical management of Peyronie’s disease.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Penile prostheses after phalloplasty** (2018). Senior-authored a 247-patient series reporting outcomes and revisions after inflatable prosthesis implantation in neophalluses.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Professor David Ralph. King Edward VII s Hospital](https://www.kingedwardvii.co.uk/consultants/professor-david-ralph). Accessed October 2026.
 
 [^2]: [Mr David John Ralph. The British Association of Urological Surgeons Limited](https://www.baus.org.uk/patients/surgeons/668bcf69-8ad1-4dfc-af5a-ce71081a00f7/). Accessed October 2026.
-
-[^3]: Garaffa G, Christopher NA, Ralph DJ. "Total Phallic Reconstruction in Female-to-Male Transsexuals." Eur Urol. 2010;57(4):715–722. doi:[10.1016/j.eururo.2009.05.018](https://doi.org/10.1016/j.eururo.2009.05.018)
-
-[^4]: Pang KH, Christopher N, Ralph DJ, Lee WG. "Insertion of Erectile Device Following Phalloplasty in Individuals Assigned Male at Birth: A Systematic Review." J Sex Med. 2025. doi:[10.1093/jsxmed/qdaf019](https://doi.org/10.1093/jsxmed/qdaf019)
-
-[^5]: Ralph DJ, Garaffa G, Muneer A, et al. The Immediate Insertion of a Penile Prosthesis for Acute Ischaemic Priapism. European Urology. 2009;56(6):1033-1038. doi:[10.1016/j.eururo.2008.09.044](https://doi.org/10.1016/j.eururo.2008.09.044)
-
-[^6]: Basile G, Ralph D, Wardak S, Sangster P, Christopher N, Lee WG. Penoscrotal decompression should be considered for prolonged ischaemic priapism. J Sex Med. 2025;22(11):2072-2078. doi:[10.1093/jsxmed/qdaf229](https://doi.org/10.1093/jsxmed/qdaf229)
-
-[^7]: Blecher GA, Christopher N, Ralph DJ. Implant Surgery in Patient with a Neophallus. In: Miranda EP, Mulhall JP, eds. Penile Implant Surgery: Contemporary Challenges and Controversies. Springer; 2022:165–186.
-
-[^8]: Ralph DJ, Garaffa G, Muneer A, et al. "The Immediate Insertion of a Penile Prosthesis for Acute Ischaemic Priapism." *European Urology.* 2009;56(6):1033–1038. doi:[10.1016/j.eururo.2008.09.044](https://doi.org/10.1016/j.eururo.2008.09.044)
-
-[^9]: Ralph D, Gonzalez-Cadavid N, Mirone V, et al. "The Management of Peyronie’s Disease: Evidence-based 2010 Guidelines." 2010;7(7):2359–2374. doi:[10.1111/j.1743-6109.2010.01850.x](https://doi.org/10.1111/j.1743-6109.2010.01850.x)
-
-[^10]: Falcone M, Garaffa G, Gillo A, et al. "Outcomes of inflatable penile prosthesis insertion in 247 patients completing female to male gender reassignment surgery." *BJU International.* 2017;121(1):139–144. doi:[10.1111/bju.14027](https://doi.org/10.1111/bju.14027)
 
 </SurgeonProfile>

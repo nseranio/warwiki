@@ -3,11 +3,12 @@ title: "Frank Hinman Jr."
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/frank-hinman.json';
 import profile from '@site/src/data/surgeon-profiles/frank-hinman.json';
 import citations from '@site/src/data/surgeon-citations/frank-hinman.json';
 
-<SurgeonProfile id="frank-hinman" profile={profile} citations={citations}>
+<SurgeonProfile id="frank-hinman" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -27,20 +28,28 @@ import citations from '@site/src/data/surgeon-citations/frank-hinman.json';
 
 Frank Hinman Jr. served as chief of urology at San Francisco General Hospital.[^1] He earned an MD at Johns Hopkins Medical School and completed a surgical residency in Cincinnati.[^1] He completed urology residency at the University of California after World War II and joined his father's practice.[^1] He helped found the Society of Pediatric Urology and later served as president of the Society of University Urologists.[^1]
 
-## Contributions
+<a id="contributions"></a>
 
-His cited papers examine intestinal segment properties for bladder substitution and mechanisms of continence in conduits for continent urinary diversion.[^2][^3]
+## Key Publications
 
-- **Hinman syndrome** (1973). Described severe bladder and upper-tract effects of dysfunctional voiding in boys without neurologic or anatomic obstruction.[^5]
+His cited papers examine intestinal segment properties for bladder substitution and mechanisms of continence in conduits for continent urinary diversion.<sup>[P2](#publication-2)</sup><sup>[P3](#publication-3)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Hinman syndrome** (1973). Described severe bladder and upper-tract effects of dysfunctional voiding in boys without neurologic or anatomic obstruction.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [professorships.jhu.edu (frank hinman jr professorship in urology)](https://professorships.jhu.edu/professorship/frank-hinman-jr-professorship-in-urology/). Accessed October 2026.
 
-[^2]: Hinman F. Selection of Intestinal Segments for Bladder Substitution: Physical and Physiological Characteristics. The Journal of Urology. 1988;139(3):519-523. doi:[10.1016/s0022-5347(17)42509-2](https://doi.org/10.1016/s0022-5347(17)42509-2)
-
-[^3]: Hinman F. Functional classification of conduits for continent diversion. J Urol. 1990;144(1):27-30. doi:[10.1016/s0022-5347(17)39357-6](https://doi.org/10.1016/s0022-5347(17)39357-6)
-
 [^4]: [Frank Hinman Obituary (2011) - San Francisco, CA - San Francisco Chronicle](https://www.legacy.com/obituaries/name/frank-hinman-obituary?pid=151312514). Accessed October 2026.
-
-[^5]: Hinman F, Baumann FW. "Vesical and Ureteral Damage from Voiding Dysfunction in Boys without Neurologic or Obstructive Disease." *Journal of Urology.* 1973;109(4):727–732. doi:[10.1016/s0022-5347(17)60526-3](https://doi.org/10.1016/s0022-5347(17)60526-3)
 
 </SurgeonProfile>

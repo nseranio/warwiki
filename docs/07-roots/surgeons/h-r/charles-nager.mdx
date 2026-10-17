@@ -3,11 +3,12 @@ title: "Charles Nager"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/charles-nager.json';
 import profile from '@site/src/data/surgeon-profiles/charles-nager.json';
 import citations from '@site/src/data/surgeon-citations/charles-nager.json';
 
-<SurgeonProfile id="charles-nager" profile={profile} citations={citations}>
+<SurgeonProfile id="charles-nager" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,31 +22,42 @@ import citations from '@site/src/data/surgeon-citations/charles-nager.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Nager's cited work examines urodynamic testing and incontinence severity before stress incontinence surgery. It also compares sacrospinous hysteropexy with vaginal hysterectomy for uterovaginal prolapse, including five- and ten-year outcomes and factors associated with surgical failure.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **VALUE trial of preoperative urodynamic testing** (2012). Led a randomized trial finding office evaluation alone noninferior to added urodynamics before surgery for uncomplicated, demonstrable stress incontinence.[^9] Cited on WARWIKI: [Stress Urinary Incontinence (Female)](/docs/clinical-conditions/03a-storage-incontinence/sui-female).
-- **SUPeR randomized trial of mesh hysteropexy versus hysterectomy** (2019). Led a multicenter trial comparing vaginal mesh hysteropexy with hysterectomy and uterosacral suspension for uterovaginal prolapse.[^10]
+Nager's cited work examines urodynamic testing and incontinence severity before stress incontinence surgery. It also compares sacrospinous hysteropexy with vaginal hysterectomy for uterovaginal prolapse, including five- and ten-year outcomes and factors associated with surgical failure.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**VALUE trial of preoperative urodynamic testing** (2012). Led a randomized trial finding office evaluation alone noninferior to added urodynamics before surgery for uncomplicated, demonstrable stress incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**SUPeR randomized trial of mesh hysteropexy versus hysterectomy** (2019). Led a multicenter trial comparing vaginal mesh hysteropexy with hysterectomy and uterosacral suspension for uterovaginal prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Charles Nager. UCSD Profiles](https://profiles.ucsd.edu/charles.nager). Accessed October 2026.
 
 [^2]: [obgyn.ucsd.edu (fimbria quarterly vol 5 2020)](https://obgyn.ucsd.edu/_files/newsletters/fimbria-quarterly-vol-5-2020.pdf). Accessed October 2026.
 
 [^3]: [ICS. Dr Charles W Nager](https://www.ics.org/contact/3514). Accessed October 2026.
-
-[^4]: Nager CW, Brubaker L, Litman HJ, et al. "A Randomized Trial of Urodynamic Testing before Stress-Incontinence Surgery." N Engl J Med. 2012;366(21):1987–1997. doi:[10.1056/nejmoa1113595]](https://doi.org/10.1056/nejmoa1113595])
-
-[^5]: Nager CW, Visco AG, Richter HE, et al. Sacrospinous hysteropexy with mesh vs vaginal hysterectomy for treatment of uterovaginal prolapse: 10-year results of a randomized clinical trial. JAMA Surg. 2026;161(8):764-774. doi:[10.1001/jamasurg.2026.2263](https://doi.org/10.1001/jamasurg.2026.2263)
-
-[^6]: Nager CW, Kraus SR, Kenton K, et al. Urodynamics, the supine empty bladder stress test, and incontinence severity. Neurourol Urodyn. 2010;29(7):1306-1311. doi:[10.1002/nau.20836](https://doi.org/10.1002/nau.20836)
-
-[^7]: Nager CW, Visco AG, Richter HE, et al. Effect of sacrospinous hysteropexy with graft vs vaginal hysterectomy with uterosacral ligament suspension on treatment failure in women with uterovaginal prolapse: 5-year results of a randomized clinical trial. Am J Obstet Gynecol. 2021;225(2):153.e1-153.e31. doi:[10.1016/j.ajog.2021.03.012](https://doi.org/10.1016/j.ajog.2021.03.012)
-
-[^8]: Richter HE, Sridhar A, Nager CW, et al. Characteristics associated with composite surgical failure over 5 years of women in a randomized trial of sacrospinous hysteropexy with graft vs vaginal hysterectomy with uterosacral ligament suspension. Am J Obstet Gynecol. 2023;228(1):63.e1-63.e16. doi:[10.1016/j.ajog.2022.07.048](https://doi.org/10.1016/j.ajog.2022.07.048)
-
-[^9]: Nager CW, Brubaker L, Litman HJ, et al. "A Randomized Trial of Urodynamic Testing before Stress-Incontinence Surgery." *N Engl J Med.* 2012;366(21):1987–1997. doi:[10.1056/nejmoa1113595](https://doi.org/10.1056/nejmoa1113595)
-
-[^10]: Nager CW, Visco AG, Richter HE, et al. "Effect of Vaginal Mesh Hysteropexy vs Vaginal Hysterectomy With Uterosacral Ligament Suspension on Treatment Failure in Women With Uterovaginal Prolapse." *JAMA.* 2019;322(11):1054. doi:[10.1001/jama.2019.12812](https://doi.org/10.1001/jama.2019.12812)
 
 </SurgeonProfile>

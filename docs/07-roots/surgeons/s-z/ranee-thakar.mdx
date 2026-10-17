@@ -3,11 +3,12 @@ title: "Ranee Thakar"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/ranee-thakar.json';
 import profile from '@site/src/data/surgeon-profiles/ranee-thakar.json';
 import citations from '@site/src/data/surgeon-citations/ranee-thakar.json';
 
-<SurgeonProfile id="ranee-thakar" profile={profile} citations={citations}>
+<SurgeonProfile id="ranee-thakar" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -16,18 +17,26 @@ import citations from '@site/src/data/surgeon-citations/ranee-thakar.json';
 - **Current position** Consultant obstetrician and urogynecologist, Croydon University Hospital[^1]
 
 </div>
-## Contributions
+<a id="contributions"></a>
 
-Her cited work on obstetric perineal trauma covers isolated rectal buttonhole tears and re-suturing of dehisced perineal wounds.[^2][^3]
+## Key Publications
 
-- **OASI Care Bundle** (2021). Led implementation of a maternity care bundle intended to reduce obstetric anal sphincter injury; a multicenter evaluation found lower adjusted injury rates.[^4] Cited on WARWIKI: [Obstetric Perineal & Vaginal Lacerations](/docs/clinical-conditions/03c-pelvic-support/obstetric-perineal-injury).
+Her cited work on obstetric perineal trauma covers isolated rectal buttonhole tears and re-suturing of dehisced perineal wounds.<sup>[P2](#publication-2)</sup><sup>[P3](#publication-3)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**OASI Care Bundle** (2021). Led implementation of a maternity care bundle intended to reduce obstetric anal sphincter injury; a multicenter evaluation found lower adjusted injury rates.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+</ol>
 
 [^1]: [A to Z of services. Croydon Health Services NHS Trust](https://www.croydonhealthservices.nhs.uk/a-to-z-of-services/service/gynaecology-outpatient-clinic-110/). Accessed October 2026.
-
-[^2]: Roper JC, Thakar R, Sultan AH. Isolated rectal buttonhole tears in obstetrics: case series and review of the literature. Int Urogynecol J. 2021;32(7):1761–1769. doi:[10.1007/s00192-020-04502-2](https://doi.org/10.1007/s00192-020-04502-2)
-
-[^3]: Okeahialam NA, Thakar R, Kleprlikova H, Taithongchai A, Sultan AH. Early re-suturing of dehisced obstetric perineal wounds: a 13-year experience. Eur J Obstet Gynecol Reprod Biol. 2020;254:69–73. doi:[10.1016/j.ejogrb.2020.09.013](https://doi.org/10.1016/j.ejogrb.2020.09.013)
-
-[^4]: Gurol‐Urganci I, Bidwell P, Sevdalis N, et al. "Impact of a quality improvement project to reduce the rate of obstetric anal sphincter injury: a multicentre study with a stepped‐wedge design." *BJOG.* 2020;128(3):584–592. doi:[10.1111/1471-0528.16396](https://doi.org/10.1111/1471-0528.16396)
 
 </SurgeonProfile>

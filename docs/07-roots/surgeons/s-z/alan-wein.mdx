@@ -3,11 +3,12 @@ title: "Alan J. Wein"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/alan-wein.json';
 import profile from '@site/src/data/surgeon-profiles/alan-wein.json';
 import citations from '@site/src/data/surgeon-citations/alan-wein.json';
 
-<SurgeonProfile id="alan-wein" profile={profile} citations={citations}>
+<SurgeonProfile id="alan-wein" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,11 +22,34 @@ import citations from '@site/src/data/surgeon-citations/alan-wein.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Wein's cited papers cover lower urinary tract pharmacology and physiology, pressure-flow analysis, and surgical approaches to incontinence and urethral disease.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Functional classification of neurogenic voiding dysfunction** (1981). Wein proposed classifying voiding dysfunction by storage and emptying failure and by bladder or outlet function.[^9]
+Wein's cited papers cover lower urinary tract pharmacology and physiology, pressure-flow analysis, and surgical approaches to incontinence and urethral disease.<sup>[P2](#publication-4)</sup><sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Functional classification of neurogenic voiding dysfunction** (1981). Wein proposed classifying voiding dysfunction by storage and emptying failure and by bladder or outlet function.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
+
+## Professional Work
+
 - **Campbell-Walsh Urology editorship** (2015). Wein served as editor-in-chief of the eleventh edition of the general urology reference textbook.[^10]
 
 [^1]: [Alan J. Wein. Perelman School of Medicine at the Universit](https://www.med.upenn.edu/apps/faculty/index.php/g275/p20274). Accessed October 2026.
@@ -33,18 +57,6 @@ Wein's cited papers cover lower urinary tract pharmacology and physiology, press
 [^2]: [Dr. Alan J Wein, MD. Urology](https://doctors.umiamihealth.org/provider/alan-j-wein/2608786). Accessed October 2026.
 
 [^3]: [Alan J. Wein, MD Endowed Professorship II. Perelman School of Medicine at the Univer](https://www.med.upenn.edu/endowedprofessorships/alan-j-wein-md-endowed-professorship-ii.html). Accessed October 2026.
-
-[^4]: Wein AJ. "Pharmacologic options for the overactive bladder." Urology. 1998;51(2A Suppl):43–47. doi:[10.1016/s0090-4295(98)90009-7](https://doi.org/10.1016/s0090-4295(98)90009-7)
-
-[^5]: Ramchandani P, Banner MP, Berlin JW, Dannenbaum MS, Wein AJ. Vesicourethral anastomotic strictures after radical prostatectomy: efficacy of transurethral balloon dilation. Radiology. 1994;193(2):345–349. doi:[10.1148/radiology.193.2.7972741](https://doi.org/10.1148/radiology.193.2.7972741)
-
-[^6]: Benson GS, Sarshik SA, Raezer DM, Wein AJ. "Bladder muscle contractility: comparative effects and mechanisms of action of atropine, propantheline, flavoxate, and imipramine." Urology. 1977;9(1):31–35. doi:[10.1016/0090-4295(77)90279-5](https://doi.org/10.1016/0090-4295(77)90279-5)
-
-[^7]: Malloy TR, Wein AJ, Carpiniello VL. Surgical Results With Artificial Urinary Sphincter. Urology. 1982;19(6):602-605. doi:[10.1016/0090-4295(82)90008-5](https://doi.org/10.1016/0090-4295(82)90008-5)
-
-[^8]: Rosier PF, Kirschner-Hermanns R, Svihra J, Homma Y, Wein AJ. "ICS Teaching Module: Analysis of Voiding, Pressure Flow Analysis (Basic Module)." Neurourol Urodyn. 2016;35(1):36–38. doi:[10.1002/nau.22660]](https://doi.org/10.1002/nau.22660])
-
-[^9]: Wein AJ. "Classification of Neurogenic Voiding Dysfunction." *Journal of Urology.* 1981;125(5):605–609. doi:[10.1016/s0022-5347(17)55134-4](https://doi.org/10.1016/s0022-5347(17)55134-4)
 
 [^10]: [uk.elsevierhealth.com](https://www.uk.elsevierhealth.com/media/wysiwyg/PDF/Tableofcontentsandcontributors.PDF). Accessed October 2026.
 

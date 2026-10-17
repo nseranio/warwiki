@@ -3,11 +3,12 @@ title: "Brian J. Linder"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/brian-linder.json';
 import profile from '@site/src/data/surgeon-profiles/brian-linder.json';
 import citations from '@site/src/data/surgeon-citations/brian-linder.json';
 
-<SurgeonProfile id="brian-linder" profile={profile} citations={citations}>
+<SurgeonProfile id="brian-linder" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,29 +22,38 @@ import citations from '@site/src/data/surgeon-citations/brian-linder.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers surgical approaches to genitourinary fistulas and outcomes after artificial urinary sphincter placement and revision.[^3][^4][^5][^6][^7]
+## Key Publications
 
-- **Long-term artificial urinary sphincter outcomes in 1,082 men** (2015). Led a Mayo Clinic series quantifying secondary surgery after primary artificial urinary sphincter implantation.[^8] Cited on WARWIKI: [Artificial Urinary Sphincter (Device)](/docs/foundations/tools/biomaterials/prosthetics/artificial-urinary-sphincter).
-- **Prospective comparison of pessary use and prolapse surgery** (2022). Compared symptom improvement after pessary use and subsequent surgery in the same women with pelvic organ prolapse.[^9]
+His cited work covers surgical approaches to genitourinary fistulas and outcomes after artificial urinary sphincter placement and revision.<sup>[P3](#publication-3)</sup><sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P1](#publication-8)</sup><sup>[P6](#publication-7)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Long-term artificial urinary sphincter outcomes in 1,082 men** (2015). Led a Mayo Clinic series quantifying secondary surgery after primary artificial urinary sphincter implantation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Prospective comparison of pessary use and prolapse surgery** (2022). Compared symptom improvement after pessary use and subsequent surgery in the same women with pelvic organ prolapse.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+</ol>
 
 [^1]: [Brian J. Linder, M.D.](https://www.mayoclinic.org/biographies/linder-brian-j-m-d/bio-20432074). Accessed October 2026.
 
 [^2]: [Brian J. Linder, M.D., female pelvic medicine and reconstructive surgery specialist, joins Mayo Clinic Urology](https://www.mayoclinic.org/medical-professionals/urology/news/brian-j-linder-md-female-pelvic-medicine-and-reconstructive-surgery-specialist-joins-mayo-clinic-urology/mac-20451086). Accessed October 2026.
-
-[^3]: Linder BJ, Umbreit EC, Larson D, et al. "Effect of prior radiotherapy and ablative therapy on surgical outcomes for the treatment of rectourethral fistulas." J Urol. 2013;190(4):1287–1291. doi:[10.1016/j.juro.2013.03.077](https://doi.org/10.1016/j.juro.2013.03.077)
-
-[^4]: Rafetto AN, Wei N, Linder BJ. "Principles and techniques of vesicovaginal fistula repair." Int Urogynecol J. 2026. doi:[10.1007/s00192-026-06576-w](https://doi.org/10.1007/s00192-026-06576-w)
-
-[^5]: Wei N, Pfeuti C, Linder BJ. "Contemporary genitourinary fistula management: treatment, trends, and innovations." Curr Opin Obstet Gynecol. 2025. doi:[10.1097/gco.0000000000001065](https://doi.org/10.1097/gco.0000000000001065)
-
-[^6]: Linder BJ, Rivera ME, Ziegelmann MJ, Elliott DS. Long-Term Outcomes Following Artificial Urinary Sphincter Placement: An Analysis of 1082 Cases at Mayo Clinic. Urology. 2015;86(3):602-607. doi:[10.1016/j.urology.2015.05.029](https://doi.org/10.1016/j.urology.2015.05.029)
-
-[^7]: Viers BR, Linder BJ, Rivera ME, et al. The Impact of Diabetes Mellitus and Obesity on Artificial Urinary Sphincter Outcomes in Men. Urology. 2016;98:176-182. doi:[10.1016/j.urology.2016.06.038](https://doi.org/10.1016/j.urology.2016.06.038)
-
-[^8]: Linder BJ, Rivera ME, Ziegelmann MJ, et al. "Long-term Outcomes Following Artificial Urinary Sphincter Placement: An Analysis of 1082 Cases at Mayo Clinic." *Urology.* 2015;86(3):602–607. doi:[10.1016/j.urology.2015.05.029](https://doi.org/10.1016/j.urology.2015.05.029)
-
-[^9]: Linder BJ, Gebhart JB, Weaver AL, et al. "Comparison of outcomes between pessary use and surgery for symptomatic pelvic organ prolapse: A prospective self-controlled study." *Investig Clin Urol.* 2022;63(2):214. doi:[10.4111/icu.20210395](https://doi.org/10.4111/icu.20210395)
 
 </SurgeonProfile>

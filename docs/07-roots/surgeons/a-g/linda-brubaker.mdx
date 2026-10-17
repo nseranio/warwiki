@@ -3,11 +3,12 @@ title: "Linda Brubaker"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/linda-brubaker.json';
 import profile from '@site/src/data/surgeon-profiles/linda-brubaker.json';
 import citations from '@site/src/data/surgeon-citations/linda-brubaker.json';
 
-<SurgeonProfile id="linda-brubaker" profile={profile} citations={citations}>
+<SurgeonProfile id="linda-brubaker" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -22,12 +23,37 @@ import citations from '@site/src/data/surgeon-citations/linda-brubaker.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited work covers pelvic organ prolapse repair and stress urinary incontinence, including studies of sacrocolpopexy with Burch colposuspension, Burch versus fascial sling surgery, and the OPTIMAL apical repair trial. The citations also include a trial comparing a continence pessary with behavioral therapy.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **CARE trial** (2006). Led a randomized trial finding that Burch colposuspension during abdominal sacrocolpopexy reduced postoperative stress urinary incontinence.[^10] Cited on WARWIKI: [Burch Colposuspension](/docs/surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension).
-- **Bacteria in the adult female bladder** (2012). Senior-authored a study detecting bacterial DNA in bladder samples from women, challenging the assumption that the female bladder is sterile.[^11] Cited on WARWIKI: [Recurrent UTI in Women](/docs/special-populations/05e-womens-health/recurrent-uti).
+Her cited work covers pelvic organ prolapse repair and stress urinary incontinence, including studies of sacrocolpopexy with Burch colposuspension, Burch versus fascial sling surgery, and the OPTIMAL apical repair trial. The citations also include a trial comparing a continence pessary with behavioral therapy.<sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**CARE trial** (2006). Led a randomized trial finding that Burch colposuspension during abdominal sacrocolpopexy reduced postoperative stress urinary incontinence.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Bacteria in the adult female bladder** (2012). Senior-authored a study detecting bacterial DNA in bladder samples from women, challenging the assumption that the female bladder is sterile.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Division of Urogynecology and Reconstructive Pelvic Surgery](https://obgyn.ucsd.edu/divisions/urogynecology/index.html). Accessed October 2026.
 
@@ -36,19 +62,5 @@ Her cited work covers pelvic organ prolapse repair and stress urinary incontinen
 [^3]: [Linda Brubaker. UCSD Profiles](https://profiles.ucsd.edu/linda.brubaker). Accessed October 2026.
 
 [^4]: [ICS. Prof Linda Brubaker](https://www.ics.org/contact/810). Accessed October 2026.
-
-[^5]: Jelovsek JE, Barber MD, Brubaker L, et al. Effect of uterosacral ligament suspension vs sacrospinous ligament fixation with or without perioperative behavioral therapy on outcomes at 5 years in the OPTIMAL randomized clinical trial. JAMA. 2018;319:1554–1565. doi:[10.1001/jama.2018.2827](https://doi.org/10.1001/jama.2018.2827)
-
-[^6]: Barber MD, Brubaker L, Burgio KL, et al. "Comparison of 2 Transvaginal Surgical Approaches and Perioperative Behavioral Therapy for Apical Vaginal Prolapse: The OPTIMAL Randomized Trial." JAMA. 2014;311(10):1023-1034. doi:[10.1001/jama.2014.1719](https://doi.org/10.1001/jama.2014.1719)
-
-[^7]: Nygaard I, Brubaker L, Zyczynski HM, et al. Long-Term Outcomes Following Abdominal Sacrocolpopexy for Pelvic Organ Prolapse. JAMA. 2013;309(19):2016-2024. doi:[10.1001/jama.2013.4919](https://doi.org/10.1001/jama.2013.4919)
-
-[^8]: Brubaker L, Richter HE, Norton PA, et al. Five Year Continence Rates, Satisfaction and Adverse Events of Burch Urethropexy and Fascial Sling Surgery for Urinary Incontinence. J Urol. 2012;187:1324–1330. doi:[10.1016/j.juro.2011.11.087](https://doi.org/10.1016/j.juro.2011.11.087)
-
-[^9]: Albo ME, Richter HE, Brubaker L, et al. Burch Colposuspension versus Fascial Sling to Reduce Urinary Stress Incontinence. N Engl J Med. 2007;356:2143–2155. doi:[10.1056/nejmoa070416](https://doi.org/10.1056/nejmoa070416)
-
-[^10]: Brubaker L, Cundiff GW, Fine P, et al. "Abdominal Sacrocolpopexy with Burch Colposuspension to Reduce Urinary Stress Incontinence." *N Engl J Med.* 2006;354(15):1557–1566. doi:[10.1056/nejmoa054208](https://doi.org/10.1056/nejmoa054208)
-
-[^11]: Wolfe AJ, Toh E, Shibata N, et al. "Evidence of Uncultivated Bacteria in the Adult Female Bladder." *J Clin Microbiol.* 2012;50(4):1376–1383. doi:[10.1128/jcm.05852-11](https://doi.org/10.1128/jcm.05852-11)
 
 </SurgeonProfile>

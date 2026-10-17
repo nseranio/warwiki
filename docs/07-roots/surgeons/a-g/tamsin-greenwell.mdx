@@ -3,11 +3,12 @@ title: "Tamsin Greenwell"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/tamsin-greenwell.json';
 import profile from '@site/src/data/surgeon-profiles/tamsin-greenwell.json';
 import citations from '@site/src/data/surgeon-citations/tamsin-greenwell.json';
 
-<SurgeonProfile id="tamsin-greenwell" profile={profile} citations={citations}>
+<SurgeonProfile id="tamsin-greenwell" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,34 +21,46 @@ import citations from '@site/src/data/surgeon-citations/tamsin-greenwell.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Her cited work covers female lower urinary tract reconstruction, including urogenital fistula repair with Martius flap interposition, urethral diverticulum surgery, female urethroplasty, and augmentation cystoplasty.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Female urethral diverticulum review** (2015). Coauthored a clinical review of presentation, diagnosis and management of female urethral diverticula.[^9] Cited on WARWIKI: [Urethral Diverticulectomy](/docs/surgical-techniques/04a-urethral-reconstruction/urethral-diverticulum-repair).
-- **Female urethral stricture reconstruction series** (2017). Senior-authored a series reporting outcomes of graft and flap urethroplasty for female urethral stricture.[^10] Cited on WARWIKI: [Blandy Flap](/docs/foundations/surgical-principles/flaps/blandy).
-- **Vesicovaginal fistula repair comparison** (2020). Senior-authored a series comparing success and provider costs of vaginal and open abdominal vesicovaginal fistula repair.[^11]
+Her cited work covers female lower urinary tract reconstruction, including urogenital fistula repair with Martius flap interposition, urethral diverticulum surgery, female urethroplasty, and augmentation cystoplasty.<sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup><sup>[P1](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Female urethral diverticulum review** (2015). Coauthored a clinical review of presentation, diagnosis and management of female urethral diverticula.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Female urethral stricture reconstruction series** (2017). Senior-authored a series reporting outcomes of graft and flap urethroplasty for female urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Vesicovaginal fistula repair comparison** (2020). Senior-authored a series comparing success and provider costs of vaginal and open abdominal vesicovaginal fistula repair.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [ICS. Ms Tamsin Greenwell](https://www.ics.org/contact/18383). Accessed October 2026.
 
 [^2]: [International Faculty. emiratesoncology.me](https://emiratesoncology.me/international-faculty/). Accessed October 2026.
 
 [^3]: [May%202017%20Newsletter.pdf](https://www.baus.org.uk/_userfiles/pages/files/May%202017%20Newsletter.pdf). Accessed October 2026.
-
-[^4]: Kapriniotis K, Loufopoulos I, Gresty HCM, Greenwell TJ, Ockrim JL. "The Utility of Martius Fat Pad in the Repair of Urogenital Fistulae: Review of Current Evidence." BJU Int. 2024;134(3):365–374. doi:[10.1111/bju.16350](https://doi.org/10.1111/bju.16350)
-
-[^5]: Wilson A, Pillay S, Greenwell T. How and why to take a Martius labial interposition flap in female urology. Transl Androl Urol. 2017;6(Suppl 2):S81–S87. doi:[10.21037/tau.2017.04.38](https://doi.org/10.21037/tau.2017.04.38)
-
-[^6]: Biers SM, Venn SN, Greenwell TJ. "The past, present and future of augmentation cystoplasty." BJU Int. 2012;109(9):1280-1293. doi:[10.1111/j.1464-410x.2011.10650.x](https://doi.org/10.1111/j.1464-410x.2011.10650.x)
-
-[^7]: Hamid R, Greenwell TJ, Nethercliffe JM, et al. "Routine surveillance cystoscopy for patients with augmentation and substitution cystoplasty for benign urological conditions: is it necessary?" BJU Int. 2009;104(3):392–395. doi:[10.1111/j.1464-410x.2009.08401.x](https://doi.org/10.1111/j.1464-410x.2009.08401.x)
-
-[^8]: Greenwell TJ, Spilotros M. Urethral diverticula in women. Nat Rev Urol. 2015;12(12):671-680. doi:[10.1038/nrurol.2015.230](https://doi.org/10.1038/nrurol.2015.230)
-
-[^9]: Greenwell TJ, Spilotros M. "Urethral diverticula in women." *Nat Rev Urol.* 2015;12(12):671–680. doi:[10.1038/nrurol.2015.230](https://doi.org/10.1038/nrurol.2015.230)
-
-[^10]: Spilotros M, Malde S, Solomon E, et al. "Female urethral stricture: a contemporary series." *World J Urol.* 2016;35(6):991–995. doi:[10.1007/s00345-016-1947-7](https://doi.org/10.1007/s00345-016-1947-7)
-
-[^11]: Warner R, Beardmore-Gray A, Pakzad M, et al. "The cost effectiveness of vaginal versus abdominal repair of vesicovaginal fistulae." *Int Urogynecol J.* 2019;31(7):1363–1369. doi:[10.1007/s00192-019-04015-7](https://doi.org/10.1007/s00192-019-04015-7)
 
 </SurgeonProfile>

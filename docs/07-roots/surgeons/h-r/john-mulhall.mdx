@@ -3,11 +3,12 @@ title: "John P. Mulhall"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/john-mulhall.json';
 import profile from '@site/src/data/surgeon-profiles/john-mulhall.json';
 import citations from '@site/src/data/surgeon-citations/john-mulhall.json';
 
-<SurgeonProfile id="john-mulhall" profile={profile} citations={citations}>
+<SurgeonProfile id="john-mulhall" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,13 +22,43 @@ import citations from '@site/src/data/surgeon-citations/john-mulhall.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Mulhall's cited work covers Peyronie's disease, including natural history, deformity assessment, injections, grafting outcomes, and implant-associated curvature correction. Other citations examine erectile dysfunction assessment and treatment through penile Doppler ultrasound, cavernosometry, intracavernosal injection, prosthesis surgery, and erection-hardness measurement. Mulhall coauthored the AUA guideline on evaluation and management of testosterone deficiency.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Penile prosthesis surgery for Peyronie’s disease** (2004). Studied when residual curvature after penile prosthesis implantation requires an additional intraoperative corrective maneuver.[^10] Cited on WARWIKI: [Inflatable Penile Prosthesis with Adjunctive Straightening — Comprehensive Guide](/docs/surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening).
-- **Natural-history study of Peyronie’s disease** (2006). Prospectively assessed untreated, recent-onset Peyronie’s disease using objective measurements of penile deformity.[^11]
-- **Timing of penile rehabilitation after prostatectomy** (2010). Reported an association between earlier postoperative penile rehabilitation and better erectile-function recovery in an observational cohort.[^12] Cited on WARWIKI: [Erectile Dysfunction (Procedures)](/docs/surgical-techniques/04j-sexual-dysfunction/erectile-dysfunction).
+Mulhall's cited work covers Peyronie's disease, including natural history, deformity assessment, injections, grafting outcomes, and implant-associated curvature correction. Other citations examine erectile dysfunction assessment and treatment through penile Doppler ultrasound, cavernosometry, intracavernosal injection, prosthesis surgery, and erection-hardness measurement. Mulhall coauthored the AUA guideline on evaluation and management of testosterone deficiency.<sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup><sup>[P8](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Penile prosthesis surgery for Peyronie’s disease** (2004). Studied when residual curvature after penile prosthesis implantation requires an additional intraoperative corrective maneuver.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Natural-history study of Peyronie’s disease** (2006). Prospectively assessed untreated, recent-onset Peyronie’s disease using objective measurements of penile deformity.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**Timing of penile rehabilitation after prostatectomy** (2010). Reported an association between earlier postoperative penile rehabilitation and better erectile-function recovery in an observational cohort.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [John P. Mulhall, MD. MSK Urologic Surgeon](https://www.mskcc.org/cancer-care/doctors/john-mulhall). Accessed October 2026.
 
@@ -36,21 +67,5 @@ Mulhall's cited work covers Peyronie's disease, including natural history, defor
 [^3]: [SMSNA. 2024 SMSNA APP Essentials Webinar Series](https://www.smsna.org/appcourse2024). Accessed October 2026.
 
 [^4]: [SMSNA. Past Presidents](https://www.smsna.org/about/past-presidents). Accessed October 2026.
-
-[^5]: Mulhall JP, Trost LW, Brannigan RE, et al. "Evaluation and management of testosterone deficiency: AUA guideline." J Urol. 2018;200(2):423–432. doi:[10.1016/j.juro.2018.03.115](https://doi.org/10.1016/j.juro.2018.03.115)
-
-[^6]: Katlowitz Y, Taniguchi H, Torremade J, Salter CA, Mulhall JP. Extended corporal dilation decreases the need for intraoperative adjuvant maneuvers for residual curvature after inflatable penile implant placement in men with Peyronie's disease. J Sex Med. 2026;23(5):qdag083. doi:[10.1093/jsxmed/qdag083](https://doi.org/10.1093/jsxmed/qdag083)
-
-[^7]: Mulhall JP, Jenkins LC. Intralesional Collagenase Injection. In: Mulhall JP, Jenkins LC, eds. Atlas of Office Based Andrology Procedures. Springer; 2017:79–86.
-
-[^8]: Mulhall JP, Jenkins LC. Intralesional Verapamil. In: Mulhall JP, Jenkins LC, eds. Atlas of Office Based Andrology Procedures. Springer; 2017:87–95. doi:[10.1007/978-3-319-42178-0_12](https://doi.org/10.1007/978-3-319-42178-0_12)
-
-[^9]: Flores JM, West M, Mulhall JP. "Efficient Use of Penile Doppler Ultrasound for Investigating Men With Erectile Dysfunction." J Sex Med. 2024;21(8):734–739. doi:[10.1093/jsxmed/qdae070](https://doi.org/10.1093/jsxmed/qdae070)
-
-[^10]: Mulhall J, Ahmed A, Anderson M. "Penile Prosthetic Surgery for Peyronie's Disease: Defining the Need for Intraoperative Adjuvant Maneuvers." 2004;1(3):318–321. doi:[10.1111/j.1743-6109.04046.x](https://doi.org/10.1111/j.1743-6109.04046.x)
-
-[^11]: Mulhall JP, Schiff J, Guhring P. "An Analysis of the Natural History of Peyronie’s Disease." *Journal of Urology.* 2006;175(6):2115–2118. doi:[10.1016/s0022-5347(06)00270-9](https://doi.org/10.1016/s0022-5347(06)00270-9)
-
-[^12]: Mulhall JP, Parker M, Waters BW, et al. "The timing of penile rehabilitation after bilateral nerve‐sparing radical prostatectomy affects the recovery of erectile function." *BJU International.* 2009;105(1):37–41. doi:[10.1111/j.1464-410x.2009.08775.x](https://doi.org/10.1111/j.1464-410x.2009.08775.x)
 
 </SurgeonProfile>

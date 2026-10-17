@@ -3,11 +3,12 @@ title: "Robert Gutman"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/robert-gutman.json';
 import profile from '@site/src/data/surgeon-profiles/robert-gutman.json';
 import citations from '@site/src/data/surgeon-citations/robert-gutman.json';
 
-<SurgeonProfile id="robert-gutman" profile={profile} citations={citations}>
+<SurgeonProfile id="robert-gutman" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,17 +22,28 @@ import citations from '@site/src/data/surgeon-citations/robert-gutman.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-- **Three-year vaginal mesh versus native-tissue prolapse trial** (2013). First-authored three-year outcomes comparing vaginal mesh with native-tissue prolapse repair; enrollment stopped early after mesh exposures.[^3] Cited on WARWIKI: [Mesh & Graft-Augmented Prolapse Repair](/docs/surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs).
-- **Uterine-preserving hysteropexy comparison** (2017). Led a multicenter cohort comparing laparoscopic sacral hysteropexy with vaginal mesh hysteropexy for uterovaginal prolapse.[^4]
+## Key Publications
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Three-year vaginal mesh versus native-tissue prolapse trial** (2013). First-authored three-year outcomes comparing vaginal mesh with native-tissue prolapse repair; enrollment stopped early after mesh exposures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Uterine-preserving hysteropexy comparison** (2017). Led a multicenter cohort comparing laparoscopic sacral hysteropexy with vaginal mesh hysteropexy for uterovaginal prolapse.
+
+</KeyPublication>
+
+</ol>
 
 [^1]: [Robert Eric Gutman, MD| Obstetrics And Gynecology, Gynecology. MedStar Health](https://www.medstarhealth.org/doctors/robert-eric-gutman-md). Accessed October 2026.
 
 [^2]: [Urogynecology and Reconstructive Pelvic Surgery Fellowship Program. MedStar Health Medical Educatio](https://www.medstarhealth.org/education/fellowship-programs/female-pelvic-medicine-and-reconstructive-surgery/faculty). Accessed October 2026.
-
-[^3]: Gutman RE, Nosti PA, Sokol AI, et al. "Three-Year Outcomes of Vaginal Mesh for Prolapse." 2013;122(4):770–777. doi:[10.1097/aog.0b013e3182a49dac](https://doi.org/10.1097/aog.0b013e3182a49dac)
-
-[^4]: Gutman RE, Rardin CR, Sokol ER, et al. "Vaginal and laparoscopic mesh hysteropexy for uterovaginal prolapse: a parallel cohort study." *American Journal of Obstetrics and Gynecology.* 2017;216(1):38.e1–38.e11. doi:[10.1016/j.ajog.2016.08.035](https://doi.org/10.1016/j.ajog.2016.08.035)
 
 </SurgeonProfile>

@@ -3,11 +3,12 @@ title: "Ramon Virasoro"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/ramon-virasoro.json';
 import profile from '@site/src/data/surgeon-profiles/ramon-virasoro.json';
 import citations from '@site/src/data/surgeon-citations/ramon-virasoro.json';
 
-<SurgeonProfile id="ramon-virasoro" profile={profile} citations={citations}>
+<SurgeonProfile id="ramon-virasoro" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,34 +22,48 @@ import citations from '@site/src/data/surgeon-citations/ramon-virasoro.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Virasoro's cited work addresses urethral stricture disease through vessel-sparing bulbar urethroplasty, fossa navicularis flap reconstruction, and treatment of lichen sclerosus. Several other cited papers report outcomes of drug-coated balloon treatment for recurrent urethral strictures in the ROBUST I and III studies.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Vessel-sparing bulbar urethroplasty outcomes** (2015). Led a multicenter series assessing vessel-sparing excision and primary anastomosis for proximal bulbar urethral strictures.[^9] Cited on WARWIKI: [Jordan Vessel-Sparing Excision and Primary Anastomosis](/docs/surgical-techniques/04a-urethral-reconstruction/jordan-vessel-sparing-epa).
-- **ROBUST I drug-coated balloon study** (2020). First-authored the initial ROBUST I clinical report of paclitaxel-coated balloon dilation for recurrent anterior urethral stricture.[^10]
-- **ROBUST III randomized trial** (2022). Served as senior author on a randomized comparison of drug-coated balloon dilation and standard endoscopic treatment for recurrent anterior urethral stricture.[^11] Cited on WARWIKI: [Drug-Coated Balloon Therapy](/docs/surgical-techniques/drug-coated-balloon).
+Virasoro's cited work addresses urethral stricture disease through vessel-sparing bulbar urethroplasty, fossa navicularis flap reconstruction, and treatment of lichen sclerosus. Several other cited papers report outcomes of drug-coated balloon treatment for recurrent urethral strictures in the ROBUST I and III studies.<sup>[P4](#publication-4)</sup><sup>[P5](#publication-5)</sup><sup>[P6](#publication-6)</sup><sup>[P7](#publication-7)</sup><sup>[P8](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Vessel-sparing bulbar urethroplasty outcomes** (2015). Led a multicenter series assessing vessel-sparing excision and primary anastomosis for proximal bulbar urethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**ROBUST I drug-coated balloon study** (2020). First-authored the initial ROBUST I clinical report of paclitaxel-coated balloon dilation for recurrent anterior urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations}>
+
+**ROBUST III randomized trial** (2022). Served as senior author on a randomized comparison of drug-coated balloon dilation and standard endoscopic treatment for recurrent anterior urethral stricture.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[7]} citations={citations} />
+
+</ol>
 
 [^1]: [Ramon Virasoro, MD. University of Colorado](https://som.cuanschutz.edu/Profiles/Faculty/Profile/38789). Accessed October 2026.
 
 [^2]: [AUA 2022 Annual Meeting](https://www.eventscribe.net/2022/AUA2022/fsPopup.asp?Mode=presenterInfo&PresenterID=1226156). Accessed October 2026.
 
 [^3]: [vol_14_no_1_march.pdf](https://www.siu-urology.org/themes/web/assets/files/newsletter/pdf/vol_14_no_1_march.pdf). Accessed October 2026.
-
-[^4]: Stewart L, McCammon K, Metro M, Virasoro R. SIU/ICUD Consultation on Urethral Strictures: Anterior urethra-lichen sclerosus. Urology. 2014;83(3 Suppl):S27–S30. doi:[10.1016/j.urology.2013.09.013](https://doi.org/10.1016/j.urology.2013.09.013)
-
-[^5]: Srikanth P, DeLong J, Virasoro R, Elliott SP. "A drug-coated balloon treatment for urethral stricture disease: three-year results from the ROBUST III study." J Endourol. 2025.
-
-[^6]: Virasoro R, DeLong JM. Non-transecting bulbar urethroplasty is favored over transecting techniques. World J Urol. 2020;38(12):3013-3018. doi:[10.1007/s00345-019-02867-8](https://doi.org/10.1007/s00345-019-02867-8)
-
-[^7]: Jordan GH, Eltahawy EA, Virasoro R. The technique of vessel sparing excision and primary anastomosis for proximal bulbous urethral reconstruction. J Urol. 2007;177(5):1799-802. doi:[10.1016/j.juro.2007.01.036](https://doi.org/10.1016/j.juro.2007.01.036)
-
-[^8]: DeLong J, Virasoro R, Pichardo M, et al. "Long-term outcomes of recurrent bulbar urethral stricture treatment with the Optilume drug-coated balloon: five-year results from the ROBUST I study." J Urol. 2025;213(1):90–98. doi:[10.1097/ju.0000000000004229](https://doi.org/10.1097/ju.0000000000004229)
-
-[^9]: Virasoro R, Zuckerman JM, McCammon KA, et al. "International multi-institutional experience with the vessel-sparing technique to reconstruct the proximal bulbar urethra: mid-term results." *World J Urol.* 2015;33(12):2153–2157. doi:[10.1007/s00345-015-1512-9](https://doi.org/10.1007/s00345-015-1512-9)
-
-[^10]: Virasoro R, DeLong J, Mann R, et al. "A drug-coated balloon treatment for urethral stricture disease: Interim results from the ROBUST I study." *CUAJ.* 2020;14(6). doi:[10.5489/cuaj.6323](https://doi.org/10.5489/cuaj.6323)
-
-[^11]: Elliott SP, Coutinho K, Robertson KJ, et al. "One-Year Results for the ROBUST III Randomized Controlled Trial Evaluating the Optilume &lt;sup>®&lt;/sup> Drug-Coated Balloon for Anterior Urethral Strictures." *Journal of Urology.* 2022;207(4):866–875. doi:[10.1097/ju.0000000000002346](https://doi.org/10.1097/ju.0000000000002346)
 
 </SurgeonProfile>

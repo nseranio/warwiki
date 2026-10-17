@@ -3,11 +3,12 @@ title: "Margit Fisch"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/margit-fisch.json';
 import profile from '@site/src/data/surgeon-profiles/margit-fisch.json';
 import citations from '@site/src/data/surgeon-citations/margit-fisch.json';
 
-<SurgeonProfile id="margit-fisch" profile={profile} citations={citations}>
+<SurgeonProfile id="margit-fisch" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,12 +21,37 @@ import citations from '@site/src/data/surgeon-citations/margit-fisch.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Fisch's cited work covers continent urinary diversion, including Mainz pouch configurations, ileocecal valve reconstruction, colon-pouch diversion after pelvic irradiation, and long-term bone and potassium measurements.[^5][^6][^7][^8][^9]
+## Key Publications
 
-- **Mainz pouch II** (1993). First-authored the description of a low-pressure rectosigmoid urinary reservoir formed by detubularization and reconfiguration.[^10] Cited on WARWIKI: [Ureterosigmoidostomy and Rectosigmoid Diversion](/docs/surgical-techniques/04c-urinary-diversion/ureterosigmoidostomy).
-- **Mainz pouch III continent diversion series** (2007). Senior-authored a series evaluating all-colon continent cutaneous urinary diversion, including use after pelvic irradiation.[^11]
+Fisch's cited work covers continent urinary diversion, including Mainz pouch configurations, ileocecal valve reconstruction, colon-pouch diversion after pelvic irradiation, and long-term bone and potassium measurements.<sup>[P3](#publication-5)</sup><sup>[P4](#publication-6)</sup><sup>[P5](#publication-7)</sup><sup>[P6](#publication-8)</sup><sup>[P7](#publication-9)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Mainz pouch II** (1993). First-authored the description of a low-pressure rectosigmoid urinary reservoir formed by detubularization and reconfiguration.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Mainz pouch III continent diversion series** (2007). Senior-authored a series evaluating all-colon continent cutaneous urinary diversion, including use after pelvic irradiation.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [UKE. Prof. Dr. Margit Maria Fisch](https://www.uke.de/landingpage/professorinnen-am-uke/prof-dr-margit-maria-fisch/index.html). Accessed October 2026.
 
@@ -34,19 +60,5 @@ Fisch's cited work covers continent urinary diversion, including Mainz pouch con
 [^3]: [HP_DGU_2023_Navigation_Interplan_DGU_ohne_Anzeigen_230908.pdf](https://dgu-serviceforum.de/inhalt/uploads/2023/11/HP_DGU_2023_Navigation_Interplan_DGU_ohne_Anzeigen_230908.pdf). Accessed October 2026.
 
 [^4]: [DGU Hauptprogramm 2022](https://www.urologenportal.de/fileadmin/MDB/Images/Kongress2022/DGU2022.pdf). Accessed October 2026.
-
-[^5]: Fisch M, Thüroff JW. "Continent Cutaneous Diversion." BJU Int. 2008;102(9 Pt B):1314–9. doi:[10.1111/j.1464-410x.2008.07976.x](https://doi.org/10.1111/j.1464-410x.2008.07976.x)
-
-[^6]: D'Elia G, Pahernik S, Fisch M, Hohenfellner R, Thüroff JW. "Mainz Pouch II Technique: 10 Years' Experience." BJU Int. 2004;93(7):1037–42. doi:[10.1111/j.1464-410x.2003.04777.x](https://doi.org/10.1111/j.1464-410x.2003.04777.x)
-
-[^7]: Fisch M, Wammack R, Müller SC, Hohenfellner R. "The Mainz Pouch II." Eur Urol. 1994;25(1):7–15. doi:[10.1159/000475238](https://doi.org/10.1159/000475238)
-
-[^8]: Leissner J, Black P, Fisch M, Höckel M, Hohenfellner R. Colon pouch (Mainz pouch III) for continent urinary diversion after pelvic irradiation. Urology. 2000;56(5):798-802. doi:[10.1016/s0090-4295(00)00789-5](https://doi.org/10.1016/s0090-4295(00)00789-5)
-
-[^9]: Stein R, Fisch M, Andreas J, Bockisch A, Hohenfellner R, Thüroff JW. "Whole-body potassium and bone mineral density up to 30 years after urinary diversion." Br J Urol. 1998;82(6):798–803. doi:[10.1046/j.1464-410x.1998.00874.x](https://doi.org/10.1046/j.1464-410x.1998.00874.x)
-
-[^10]: Fisch M, Wammack R, Müller SC, et al. "The Mainz Pouch II (Sigma Rectum Pouch)." *Journal of Urology.* 1993;149(2):258–263. doi:[10.1016/s0022-5347(17)36050-0](https://doi.org/10.1016/s0022-5347(17)36050-0)
-
-[^11]: Stolzenburg J, Schwalenberg T, Liatsikos EN, et al. "Colon pouch (Mainz III) for continent urinary diversion." *BJU International.* 2007;99(6):1473–1477. doi:[10.1111/j.1464-410x.2007.06767.x](https://doi.org/10.1111/j.1464-410x.2007.06767.x)
 
 </SurgeonProfile>

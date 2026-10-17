@@ -3,11 +3,12 @@ title: "Giulio Garaffa"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/giulio-garaffa.json';
 import profile from '@site/src/data/surgeon-profiles/giulio-garaffa.json';
 import citations from '@site/src/data/surgeon-citations/giulio-garaffa.json';
 
-<SurgeonProfile id="giulio-garaffa" profile={profile} citations={citations}>
+<SurgeonProfile id="giulio-garaffa" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -21,27 +22,38 @@ import citations from '@site/src/data/surgeon-citations/giulio-garaffa.json';
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-His cited work covers penile and scrotal reconstruction, including radial forearm flap phalloplasty, urethral construction, and surgery for genital lymphedema. Other papers examine penile prosthesis placement after phalloplasty and ischemic priapism, and surgery for Peyronie's disease.[^2][^3][^4][^5][^6]
+## Key Publications
 
-- **Residual curvature after penile prosthesis implantation** (2011). Reported additional straightening procedures among patients with Peyronie’s disease who had residual curvature after prosthesis placement.[^7]
-- **ESSM position statement on Peyronie’s surgery** (2022). Contributed to European Society for Sexual Medicine recommendations on indications, procedure choice and counseling for Peyronie’s disease surgery.[^8]
+His cited work covers penile and scrotal reconstruction, including radial forearm flap phalloplasty, urethral construction, and surgery for genital lymphedema. Other papers examine penile prosthesis placement after phalloplasty and ischemic priapism, and surgery for Peyronie's disease.<sup>[P3](#publication-2)</sup><sup>[P4](#publication-3)</sup><sup>[P5](#publication-4)</sup><sup>[P6](#publication-5)</sup><sup>[P7](#publication-6)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Residual curvature after penile prosthesis implantation** (2011). Reported additional straightening procedures among patients with Peyronie’s disease who had residual curvature after prosthesis placement.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**ESSM position statement on Peyronie’s surgery** (2022). Contributed to European Society for Sexual Medicine recommendations on indications, procedure choice and counseling for Peyronie’s disease surgery.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [Mr. Giulio Garaffa. Harley Street Specialist Hospital](https://hssh.health/consultants/mr-giulio-garaffa/). Accessed October 2026.
-
-[^2]: Schifano N, Castiglione F, Cakir OO, Montorsi F, Garaffa G. Reconstructive surgery of the scrotum: a systematic review. Int J Impot Res. 2022;34(4):359–368. doi:[10.1038/s41443-021-00468-x](https://doi.org/10.1038/s41443-021-00468-x)
-
-[^3]: Garaffa G, Christopher NA, Ralph DJ. "Total Phallic Reconstruction in Female-to-Male Transsexuals." Eur Urol. 2010;57(4):715–722. doi:[10.1016/j.eururo.2009.05.018](https://doi.org/10.1016/j.eururo.2009.05.018)
-
-[^4]: Ralph DJ, Garaffa G, Muneer A, et al. The Immediate Insertion of a Penile Prosthesis for Acute Ischaemic Priapism. European Urology. 2009;56(6):1033-1038. doi:[10.1016/j.eururo.2008.09.044](https://doi.org/10.1016/j.eururo.2008.09.044)
-
-[^5]: Falcone M, Garaffa G, Gillo A, et al. Outcomes of Inflatable Penile Prosthesis Insertion in 247 Patients Completing Female to Male Gender Reassignment Surgery. BJU International. 2018;121(1):139-144. doi:[10.1111/bju.14027](https://doi.org/10.1111/bju.14027)
-
-[^6]: Garaffa G, Ralph DJ. Penile and Scrotal Reconstruction. In: Muneer A, Arya M, Jordan GH, eds. Atlas of Male Genitourethral Surgery: The Illustrated Guide. Wiley-Blackwell; 2014:151-167.
-
-[^7]: Garaffa G, Minervini A, Christopher NA, et al. "The management of residual curvature after penile prosthesis implantation in men with Peyronie’s disease." *BJU International.* 2011;108(7):1152–1156. doi:[10.1111/j.1464-410x.2010.10023.x](https://doi.org/10.1111/j.1464-410x.2010.10023.x)
-
-[^8]: Osmonov D, Ragheb A, Ward S, et al. "ESSM Position Statement on Surgical Treatment of Peyronie's Disease." 2021;10(1):100459–100459. doi:[10.1016/j.esxm.2021.100459](https://doi.org/10.1016/j.esxm.2021.100459)
 
 </SurgeonProfile>

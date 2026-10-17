@@ -3,11 +3,12 @@ title: "Dmitriy Nikolavsky"
 hide_title: true
 ---
 
-import SurgeonProfile from '@site/src/components/SurgeonProfile';
+import SurgeonProfile, {KeyPublication} from '@site/src/components/SurgeonProfile';
+import publicationData from '@site/src/data/surgeon-key-publications/dmitriy-nikolavsky.json';
 import profile from '@site/src/data/surgeon-profiles/dmitriy-nikolavsky.json';
 import citations from '@site/src/data/surgeon-citations/dmitriy-nikolavsky.json';
 
-<SurgeonProfile id="dmitriy-nikolavsky" profile={profile} citations={citations}>
+<SurgeonProfile id="dmitriy-nikolavsky" profile={profile} citations={citations} keyPublications={publicationData.keyPublications} referencePublications={publicationData.references}>
 
 ## Training and career
 
@@ -20,31 +21,42 @@ import citations from '@site/src/data/surgeon-citations/dmitriy-nikolavsky.json'
 
 </div>
 
-## Contributions
+<a id="contributions"></a>
 
-Nikolavsky's cited work includes transurethral ventral buccal mucosa graft inlay for distal urethral strictures, liquid buccal mucosa graft treatment, and gracilis-buccal flap reconstruction for devastated urethras. His cited papers also address urinary complications and neourethral strictures after gender-affirming genital surgery, as well as posterior urethral stenosis after prostate cancer treatment.[^4][^5][^6][^7][^8]
+## Key Publications
 
-- **Transurethral ventral buccal graft inlay for distal urethral stricture** (2016). Described transurethral placement of a ventral buccal mucosal graft for fossa navicularis and distal urethral strictures.[^9] Cited on WARWIKI: [Transmeatal OMG Ventral Inlay (Nikolavsky)](/docs/surgical-techniques/04a-urethral-reconstruction/transmeatal-omg-ventral-inlay).
-- **Staged repair of long neophallus urethral strictures** (2022). Senior-authored a report demonstrating staged repair of long, complex strictures of the neophallic urethra.[^10] Cited on WARWIKI: [Phallic Urethra: Prelaminated Buccal Mucosa Graft](/docs/surgical-techniques/04k-gender-affirming-surgery/phallic-urethra-prelaminated-bmg).
+Nikolavsky's cited work includes transurethral ventral buccal mucosa graft inlay for distal urethral strictures, liquid buccal mucosa graft treatment, and gracilis-buccal flap reconstruction for devastated urethras. His cited papers also address urinary complications and neourethral strictures after gender-affirming genital surgery, as well as posterior urethral stenosis after prostate cancer treatment.<sup>[P3](#publication-4)</sup><sup>[P4](#publication-5)</sup><sup>[P5](#publication-6)</sup><sup>[P6](#publication-7)</sup><sup>[P7](#publication-8)</sup>
+
+<ol className="sp-pubs">
+
+<KeyPublication publication={publicationData.keyPublications[0]} citations={citations}>
+
+**Transurethral ventral buccal graft inlay for distal urethral stricture** (2016). Described transurethral placement of a ventral buccal mucosal graft for fossa navicularis and distal urethral strictures.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[1]} citations={citations}>
+
+**Staged repair of long neophallus urethral strictures** (2022). Senior-authored a report demonstrating staged repair of long, complex strictures of the neophallic urethra.
+
+</KeyPublication>
+
+<KeyPublication publication={publicationData.keyPublications[2]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[3]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[4]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[5]} citations={citations} />
+
+<KeyPublication publication={publicationData.keyPublications[6]} citations={citations} />
+
+</ol>
 
 [^1]: [D&I Grand Rounds Highlights: Exploring Genital Gender. The University of Chicago](https://radiology.uchicago.edu/di-grand-rounds-highlights-exploring-genital-gender). Accessed October 2026.
 
 [^2]: [Program_Pre-37th-SIU-Semi-Live-Surgery-Workshop-on-Genitourethral-Reconstruction.pdf](https://www.admedic.pt/uploads/Program_Pre-37th-SIU-Semi-Live-Surgery-Workshop-on-Genitourethral-Reconstruction.pdf). Accessed October 2026.
 
 [^3]: [Fellowship in Functional & Reconstructive Urology](https://medschool.cuanschutz.edu/surgery/divisions-centers-affiliates/urology/education/overview). Accessed October 2026.
-
-[^4]: Sterling J, Daneshvar M, Nikolavsky D. "Transurethral Ventral Inlay Buccal Mucosa Graft Urethroplasty: Technique and Intermediate Outcomes." BJU Int. 2023;132(1):109–111. doi:[10.1111/bju.16007](https://doi.org/10.1111/bju.16007)
-
-[^5]: Kaldany A, Cedars B, Nikolavsky D. Substitution urethroplasty for posterior urethral stenosis. Transl Androl Urol. 2025;14(12):3962–3974. doi:[10.21037/tau-2025-566](https://doi.org/10.21037/tau-2025-566)
-
-[^6]: Blasdel G, Dy GW, Nikolavsky D, et al. "Urinary reconstruction in genital gender-affirming surgery: checking our surgical complication blind spots." Plast Reconstr Surg. 2024;153(4):792e–803e. doi:[10.1097/prs.0000000000010813](https://doi.org/10.1097/prs.0000000000010813)
-
-[^7]: Elyaguov J, Isakov R, Nikolavsky D. "Evaluation and management of urologic complications following transmasculine genital reconstructive surgery." Neurourol Urodyn. 2023;42(5):979–989. doi:[10.1002/nau.25100](https://doi.org/10.1002/nau.25100)
-
-[^8]: Avallone MA, Quach A, Warncke J, Nikolavsky D, Flynn BJ. "Robotic-Assisted Laparoscopic Subtrigonal Inlay of Buccal Mucosal Graft for Treatment of Refractory Bladder Neck Contracture." Urology. 2019;130:209. doi:[10.1016/j.urology.2019.02.048](https://doi.org/10.1016/j.urology.2019.02.048)
-
-[^9]: Nikolavsky D, Abouelleil M, Daneshvar M. "Transurethral ventral buccal mucosa graft inlay urethroplasty for reconstruction of fossa navicularis and distal urethral strictures: surgical technique and preliminary results." *Int Urol Nephrol.* 2016;48(11):1823–1829. doi:[10.1007/s11255-016-1381-1](https://doi.org/10.1007/s11255-016-1381-1)
-
-[^10]: Schardein J, Beamer M, Kittleman MA, et al. "Staged Urethroplasty for Reconstruction of Long Complex Pendulous Strictures of a Neophallic Urethra." *Urology.* 2022;164:e309–e311. doi:[10.1016/j.urology.2021.12.029](https://doi.org/10.1016/j.urology.2021.12.029)
 
 </SurgeonProfile>

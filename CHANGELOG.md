@@ -6,6 +6,16 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 17, 2026: surgeon publications without duplicate references; restored profile routes
+
+- Replaced Contributions/Principal Contributions with full Key Publications entries on 247 profiles (1,223 existing cited papers and books). Existing descriptions and citing-page links are preserved. Eleven sections containing career/leadership work without a selected bibliographic source retain that material under Professional Work.
+- Each selected citation lives once in `src/data/surgeon-key-publications/<id>.json`. Profile references link to the displayed paper; matching DOI/title entries are excluded from the additional WARWIKI citation list. Biography sources remain footnotes. Existing Turner-Warwick bibliography entries are retained and deduplicated. Homepage reference counts include the new citation records.
+- Three older article-source links (Corton, Erickson and Djordjevic) use the full citation already present in the site's citation index. This is a bibliography/display migration of existing sources, not a new clinical review.
+- Removed ten stale redirects that sent existing profiles back to the directory: Daniel Eun, Reynaldo Gomez, Joshua Broghammer, Thomas Smith III, Ryan Terlecki, Bryan Voelzke, Steve Hudak, Brian Inouye, Judith Hagedorn and Michael Metro. Prior Contributions heading anchors remain available.
+- Added regression checks for profile routing, single citation display, abbreviation-aware matching, biography-reference exclusion and preservation of citing-page links.
+
+- Validation: full lint, TypeScript, all 67 component tests, profile-route regression test, production build, rendered-link checks and size gate passed. All 271 rendered profiles have no repeated DOI citation links; all 735 existing descriptions on the migrated profiles remain present. Local browser checks confirmed the Daniel Eun profile, full citation entries, DOI links and citing-page links.
+
 ## October 17, 2026: guideline recommendation badges matched to WHITWIKI
 
 - Added the same expandable recommendation labels used by WHITWIKI. Source-specific strength, grade, statement and locator details remain available on activation.
