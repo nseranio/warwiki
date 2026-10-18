@@ -180,12 +180,6 @@ const config: Config = {
           label: 'About',
           position: 'right',
         },
-        {
-          href: 'https://github.com/nseranio/warwiki',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
-        },
       ],
     },
     footer: {
