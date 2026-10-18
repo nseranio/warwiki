@@ -1,44 +1,52 @@
-# Needed from you: decisions and sources (compiled September 26, 2026; updated October 6)
+# Needed from you: decisions and sources (compiled September 26, 2026; updated October 18)
 
-Everything here is what Claude cannot settle alone. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md); this file is the short version, ordered by value. Sources you supplied on September 26 are listed at the end so they are not requested again.
+Everything here is what Claude cannot settle alone. The first section is the current list: every item in it was searched for on October 17 in `~/Downloads` (including `WHITWIKI-Sources-2026-10-14/` and `Requested-Sources-2026-10-10/`), `~/Documents/Medicine`, `~/Documents/WHITWIKI/working-sources` and `reports/audit-v2/sources-local/`, and open-access copies were fetched where they exist. The dated sections below it are the record of earlier requests and receipts; where they disagree with the current list, the current list wins. The full source list (131 entries, with the pages each would settle) is [sources-needed.md](sources-needed.md).
 
-## Added October 14, 2026: guideline sentences still unverifiable after the local-copy check (29 sentences)
+## Still missing (checked against disk October 17, 2026)
 
-The October 11 review could not check 263 guideline sentences; on October 14, 230 were verified against the local AUA/EAU copies. These remain (status `legacy-source-needed`; they pass the gate but are not verified). Sending the document unlocks every sentence under it.
+Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each arrival is checked against every page that cites it.
 
-- **4** · AUA/SUFU. *Microhematuria guideline, amended 2025.* [Guideline](https://www.auanet.org/guidelines-and-quality/guidelines/microhematuria). [2025 amendment](https://doi.org/10.1097/JU.0000000000004490). (pages: 02-evaluation/imaging/ct-urogram)
-- **3** · Clark PE, Holzbeierlein J, Chang SS, et al. 2026 Updates to the Diagnosis and Treatment of Non-muscle Invasive Bladder Cancer: AUA/SUO Guideline. *J Urol.* Published online September 4, 2026. . Corres (pages: 01-foundations/tools/instruments/endoscopy/flexible-cystoscope, 01-foundations/tools/instruments/endoscopy/resectoscope)
-- **2** · AUA Young Urologists Committee. *Transitioning from Residency to Practice Manual.* 8th ed. Linthicum, MD: American Urological Association; 2025. (pages: 08-resources/hidden-curriculum/overview)
-- **2** · Kaufman MR, Ackerman AL, Amin KA, et al. "The AUA/SUFU/AUGS Guideline on Genitourinary Syndrome of Menopause." *J Urol.* 2025;214(3):242-250. (pages: 03-clinical-conditions/03a-storage-incontinence/urgency-incontinence-oab)
-- **2** · Ingelfinger JR. "Hematuria in adults." *N Engl J Med.* 2021;385(2):153–63. (pages: 01-foundations/tools/instruments/endoscopy/rigid-cystoscope)
-- **1** · National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Penile Cancer. Version 2.2026. June 5, 2026. (pages: 04-surgical-techniques/04e-genital-reconstruction/glans-resurfacing)
-- **1** · (source named in the sentence, no reference) (pages: 04-surgical-techniques/04e-genital-reconstruction/mazza-scrotal-flap-glanuloplasty)
-- **1** · European Association of Urology. EAU Guidelines on Penile Cancer. 2026. Disease management, primary tumour, section 6.1. [Guideline](https://uroweb.org/guidelines/penile-cancer/chapter/disease-managem (pages: 04-surgical-techniques/04e-genital-reconstruction/penile)
-- **1** · Coleman E, Radix AE, Bouman WP, et al. Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC v8). *Int J Transgend Health.* 2022;23(Suppl 1):S1–S259. (pages: 04-surgical-techniques/04k-gender-affirming-surgery/feminizing-surgery)
-- **1** · Bratzler DW, Dellinger EP, Olsen KM, et al. Clinical practice guidelines for antimicrobial prophylaxis in surgery. *Am J Health Syst Pharm.* 2013;70(3):195–283. . Lightner DJ, Wymer K, Sanchez J, Kavo (pages: 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/intraoperative-setup)
-- **1** · Lightner DJ, Wymer K, Sanchez J, Kavoussi L. Best Practice Statement on Urologic Procedures and Antimicrobial Prophylaxis. *J Urol.* 2020;203(2):351–356. (pages: 04-surgical-techniques/04j-sexual-dysfunction/penile-implants/preoperative-evaluation)
-- **1** · Nehra A, Alterowitz R, Culkin DJ, et al. Peyronie's disease: AUA guideline. *J Urol.* 2015;194(3):745–753. (pages: 04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/prosthesis-with-straightening)
-- **1** · AAGL Advancing Minimally Invasive Gynecology Worldwide. AAGL Practice Report: Practice guidelines for intraoperative cystoscopy in laparoscopic hysterectomy. *J Minim Invasive Gynecol.* 2012;19(4):407 (pages: 05-special-populations/05a-trauma-emergencies/intraoperative-consultation/procedures-causing-gu-injury/hysterectomy)
-- **1** · National Comprehensive Cancer Network. *Breast Cancer Screening and Diagnosis.* Version 1.2026. Updated 2026-03-05. [https://www.nccn.org](https://www.nccn.org) (pages: 05-special-populations/05e-womens-health/cancer-screening/breast)
-- **1** · Dueñas-Garcia OF, Chung DE, Geynisman-Tan J, et al. "Diabetes Mellitus and Recurrent Urinary Tract Infections." *Urogynecology (Phila).* 2026;32(5):477–485. (pages: 05-special-populations/05e-womens-health/recurrent-uti)
-- **1** · Brown MM, Adams CA, Halpert KD. "Cancer Screening in Older Adults." *Am Fam Physician.* 2025;112(6):629-637. [PMID 41533408](https://pubmed.ncbi.nlm.nih.gov/41533408/) (pages: 05-special-populations/05f-lifelong-care/geriatric-urology)
-- **1** · World Health Organization, FIGO, ICM. *Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage.* 2025. [WHO publication](https://www.who.int/publications/i/item/9 (pages: 01-foundations/surgical-principles/vascular-damage-control)
-- **1** · Barocas DA, Lotan Y, Matulewicz RS, et al. "Updates to Microhematuria: AUA/SUFU Guideline (2025)." *Journal of Urology.* 2025;213(5):547–557. (pages: 02-evaluation/laboratory-studies/urine-studies)
-- **1** · Burghaus S, Schäfer SD, Bär KJ, et al. "Diagnosis and Therapy of Endometriosis. Guideline of the DGGG, OEGGG and SGGG (S2k-Level, AWMF Registry No. 015/045, April 2025)." *Geburtshilfe Frauenheilkd.*  (pages: 03-clinical-conditions/03g-genital-scrotal/vaginal-cysts-masses)
-- **1** · Remmelink MJ, Rip Y, Nieuwenhuijzen JA, et al. "Advanced optical imaging techniques for bladder cancer detection and diagnosis: a systematic review." *BJU Int.* 2024;134(6):890–905. (pages: 01-foundations/tools/instruments/endoscopy/flexible-cystoscope)
-- **1** · Writing group of the International Urogynecological Association. "IUGA report on reporting urodynamics in women." *Int Urogynecol J.* 2022;33:801–807. (pages: 02-evaluation/ancillary-tests/urodynamics)
+**Guideline sentences:** none left. The five listed here on October 17 (AUA transition manual ×2, NCCN breast screening, IUGA 2022 urodynamics reporting, AAGL 2012) were verified October 18 against owner-supplied copies.
 
-## Received October 11, 2026 (night)
+**Other full texts**
+- SOGC Guideline No. 445 (chronic pelvic pain, 2024), No. 457 (OASIs Part I, 2024) and No. 465 (OASIs Part II, 2026). Only the recommendation pages of 445 and 465 are on disk, and Jefferson has no access.
+- AUGS–IUGA 2025 joint report update on complications terminology (the 2011 Haylen report and the 2020 surgical-terminology report are on disk).
+- ASCRS guidelines: Constipation (2024), Hemorrhoids (2024), Ostomy (2022), Rectal Prolapse, Crohn's disease. On disk: Fecal Incontinence 2023, left-sided diverticulitis 2020 and the ASCRS textbook diverticular chapter.
+- NICE NG239. NICE NG112 and NG123 are on disk; ADA Standards of Care 2026 was received and checked October 18.
+- Barry 1992 (priapism shunt); Frazier 2024 (AUS series); a Trimix efficacy series (any clinical series of papaverine–phentolamine–alprostadil response rates; settles "about 90%" on the erectile dysfunction page).
+- Lange M, et al. *Ann Plast Surg* 2022;88(5):538–543 (vaginal-flap neomeatus incontinence count).
+
+**Device documents and books**
+- ATOMS IFU (only the A.M.I. brochure is on disk); PROCEPT AquaBeam (Aquablation) IFU.
+- Current catalogs: Sklar, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun.
+- Books: Blandy's Urology 3rd ed; Gurtner and Neligan, *Plastic Surgery*; Mathes and Nahai, *Reconstructive Surgery*; Oxford Handbook of Urology 4th ed; Feliciano, *Trauma*.
+
+**Settings only you can change**
+- Vercel: enable deployment checks so production waits for CI (it currently deploys even when CI fails).
+- Optional: `~/.codex/config.toml` `model` still names the rejected `gpt-6.1-sol` (review scripts pin `gpt-6-sol`).
+
+**Decision**
+- Audit-style wording left in some internal `evidenceNote` fields (Backhaus, Mixter, vaginal anatomy): reword by hand?
+
+## Resolved October 17, 2026 (do not resend)
+
+Of the 29 guideline sentences listed October 14 (plus 5 high-risk claims waiting for a second source), 29 are now verified through the claim gate (two independent Codex checks each, against the local copies); 7 edits were made on the way (two wording corrections: the NBI recurrence sentence on the flexible cystoscope page and the AUGS diabetes sentence on recurrent UTI; five added citation markers). Run folders: `reports/audit-v2/sources-local/found-sources-2026-10-16*`. Most sources were already on disk and had not been attached to the October 14 run: AUA/SUO NMIBC 2026 and AUA/SUFU/AUGS GSM 2025 unabridged (`~/Downloads`, October 1), the AUA/SUFU microhematuria 2025 unabridged guideline and its J Urol article, NCCN Penile v2.2026 with EAU-ASCO Penile 2026, WPATH SOC 8, Bratzler 2013, AUA Table V and the Lightner BPS, the AUA Peyronie's guideline, the AUGS diabetes consensus, AUA/ASRM male infertility 2024 unabridged, NCCN Prostate Early Detection v2.2026 with Lin 2026, and the Garcia *Genital Gender Affirming Surgery* book (Smith chapter, in `~/Documents/Medicine`). Fetched open access: WHO/FIGO/ICM postpartum haemorrhage 2025, the DGGG/OEGGG/SGGG endometriosis guideline (PMC), Remmelink 2024 (CC BY-NC) and the Brown 2025 AFP abstract and recommendation table. Ingelfinger 2021 is no longer needed: its two sentences were verified against the microhematuria guideline. Text copies: `reports/audit-v2/sources-local/dl-2026-10-16/`.
+
+Also received after the October 11 "still missing" list below and filed: BAUS 2026, Yii and Niranjan 1996, Laor 1995, EVA (Vodegel 2026), ATOMS meta-analysis (Esquinas and Angulo 2019), Holm 2026, Furr 2019, VanDyke 2021, Wu 2021, Le Cleach 2012, Jordan 2007, Wee and Joseph 1989, Morey 2001 (October 11); AHA/ACC 2024, ASRA 2025, AUA/ASRM Part II, SMSNA 2026 correction, ASCRS fecal incontinence 2023, Intuitive SP instruments manual, Medtronic GIA IFUs (October 10); ACOG PB 195 and 224 and SAMBA 2024 (October 9). The October 10 restorations and the October 11 findings are still to be applied through the claim gate.
+
+## Record of earlier requests and receipts
+
+### Received October 11, 2026 (night)
 
 In `reports/audit-v2/sources-local/pdfs-2026-10-11/`: Vodegel 2026 (EVA), Esquinas and Angulo 2019, Holm 2026, Furr 2019, VanDyke 2021, Wu 2021, Le Cleach 2012, Jordan 2007, Morey 2001. Codex check queued; findings applied through the claim gate after the Claude reset. Later the same night (`pdfs-2026-10-11b/`): BAUS 2026, Yii 1996, Laor 1995, Angulo 2018, Eltahawy 2007, Wee and Joseph 1989 (scan; OCR text alongside). SOGC 445 and 465 received as jogc.com landing pages (recommendations with ratings, no body text) in `pdfs-2026-10-11c/`; Jefferson has no access to the full articles. Body-text claims stay narrowed unless the full PDFs turn up.
 
-## Checked against disk October 11, 2026 (supersedes the lists below)
+### Checked against disk October 11, 2026 (supersedes the lists below)
 
 Already on disk (do not request again): ACOG CO 694 and 823, PB 210-area ASCRS fecal incontinence 2023, AUA VUR, ASRA 2025 and the ASRA LAST advisory (Neal 2017), Biardeau 2016, MASTER (Abrams 2021 Eur Urol), Erickson 2020, Kulkarni 2009, Blandy 1968, Asopa, Morey (2018), Larson 2013, OPTIMAL (Barber 2014) and E-OPTIMAL, ASPIRe (Menefee 2024), Cotte 2022, Phé 2016, Peyronnet 2018, Tagliaferri 2020, Davis 2024, Goodman 2019, Diamond 2017, Coloplast Titan/Genesis/Virtue IFUs, AMS 800 IFUs, Revi technique guide, Altaviva, eCoin, ProACT physician IFU, Argus, Remeex, Rezum, UroLift, iTind IFUs, Intuitive Xi/X manuals and staplers, Medtronic GIA IFUs, Aesculap and Teleflex catalogs, labels (Vagifem, Premarin, Imvexxy, Estring, Botox, Nocdurna, Xiaflex, Gemtesa, Ialuril, Elmiron).
 
 Still missing: SOGC 465, 457, 445; BAUS 2026 penile augmentation consensus (confirm whether `baus.pdf` is it); AUGS-IUGA 2025 complications update; ASCRS Constipation 2024, Hemorrhoids 2024, Ostomy 2022, Rectal Prolapse, Crohn's, Diverticulitis guidelines; ADA Standards 2026; NICE NG112 and NG239; Yii and Niranjan 1996; Laor 1995; EVA trial; Frazier 2024; Trimix efficacy series; ATOMS (Esquinas, Angulo) and the ATOMS IFU (only the brochure is on disk); Holm 2026, Furr 2019, VanDyke 2021; Wu NEJM 2021; Le Cleach NEJM 2012; Barry 1992; Jordan 2007; Wee and Joseph 1989; Morey 2001; AquaBeam IFU; Sklar, Aspen, CooperSurgical, KLS Martin, STERIS, B. Braun catalogs; Gurtner/Neligan, Mathes/Nahai, Feliciano, Oxford Handbook of Urology 4th ed.
 
-## Still needed from you (updated October 6, 2026)
+### Still needed from you (updated October 6, 2026)
 
 Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each arrival is checked against every page that cites it.
 
@@ -69,7 +77,7 @@ Drop files in Downloads or `reports/audit-v2/sources-local/` (gitignored). Each 
 **Decisions**
 - Audit-style wording left in some internal `evidenceNote` fields (Backhaus, Mixter, vaginal anatomy): reword by hand?
 
-## Added October 9, 2026 (second full-page review; to restore narrowed wording)
+### Added October 9, 2026 (second full-page review; to restore narrowed wording)
 
 These paywalled documents could not be opened, so grade labels or clauses citing them were removed. With the full text, the original wording can be restored.
 
@@ -81,7 +89,7 @@ These paywalled documents could not be opened, so grade labels or clauses citing
 - ASCRS 2023 fecal incontinence guideline (Bordeianou, *Dis Colon Rectum* 2023;66:647–661): clinically recognized (4–10%) and occult (21–35%) obstetric sphincter injury figures, removed from the fecal incontinence page (now cites Sultan 1993 for the occult-defect rate).
 - BAUS 2026 penile augmentation consensus (J Clin Urol, doi:10.1177/20514158251391054): the five recommendations (the page had "recommends against surgical techniques" for men without abnormality, suspensory ligament division page, and "strongly recommends against non-absorbable penile fillers", non-autologous injectables page; both narrowed to the abstract's evidence findings).
 
-## Received October 10, 2026 (filed; restorations prepared, not yet applied)
+### Received October 10, 2026 (filed; restorations prepared, not yet applied)
 
 Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-10/` (ignored); exact passages and proposed wording in its `RESTORE-PREP.md`. Apply through the claim gate after the weekly usage reset.
 
@@ -95,7 +103,7 @@ Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-10/` (ignored); exact
 
 Still wanted from the list below: SOGC 445 and 465, BAUS 2026, Yii 1996, device IFUs and books.
 
-## Received October 9, 2026 (checked and incorporated)
+### Received October 9, 2026 (checked and incorporated)
 
 Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-09/` (ignored). Every page citing them was checked against the full text and narrowed wording restored where supported; see CHANGELOG (October 9). Also received: the SMSNA 2024 cosmetic penile enhancement statement (J Sex Med 2024;21:573–578) and the POP-Q II draft for member comments (not cited; not used).
 
@@ -128,7 +136,7 @@ Full texts in `reports/audit-v2/sources-local/pdfs-2026-10-09/` (ignored). Every
 - SAMBA 2024 updated consensus on perioperative glucose (Anesth Analg 2024): strength/evidence label for the 180–250 mg/dL target (diabetes page).
 - Lange M, et al. *Ann Plast Surg* 2022;88(5):538–543 (PMID 34813520): new self-reported incontinence after vaginal-flap neomeatus reconstruction (the page had 6/42; not in the abstract; a different series, Franchi 2019, reports 6/33). Sentence removed from the AFAB genital nullification page (residual sample 6).
 
-## Received October 6, 2026 (checking in progress)
+### Received October 6, 2026 (checking in progress)
 
 Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extracted text; originals stay in Downloads). Pages citing each are being checked in the quality program.
 
@@ -138,7 +146,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 - Drug labels: Vagifem, Imvexxy, Premarin vaginal cream, Estring, Botox, Xiaflex, Gemtesa (vibegron), Elmiron.
 - Second batch (evening): Erickson 2020 (LSE classification); Barber 2014 JAMA (OPTIMAL) and Jelovsek 2018 JAMA (E-OPTIMAL, 5 years); Menefee 2024 JAMA Surgery (ASPIRe); Larson 2013 *Obstet Gynecol* (Michigan four-wall, author manuscript); Goodman 2019 NEJM (PCPT long-term letter); Diamond 2017 Lancet (paediatric urology review); Davis 2024 NEJM Clinical Practice, "Sexual Dysfunction in Women" (pages 83–93 of a 93-page reading packet; the packet's other pages are lay material and are not a source); Intuitive da Vinci X/Xi Instruments and Accessories manual (553873-07 Rev D) and SP SureForm 45 addendum; SP System User Manual (553400-07 Rev C, 2025) and 17 more Intuitive manuals from the `myarchive` folders (Xi system manual 551400-17, X/Xi instruments 553873-08, da Vinci 5 instruments 555726-06, E-200 generator, SureForm, SynchroSeal, Vessel Sealer Extend, Force Bipolar, Harmonic Ace, Firefly, Integrated Table Motion and others), filed under `pdfs-2026-10-06/intuitive/`; Nocdurna original 2018 US label (FDA archive copy; the file itself warns it may not be the latest label).
 
-## A. Decisions (answer in one line each)
+### A. Decisions (answer in one line each)
 
 **Answered September 26 (applied and pushed):** 1 keep both; 2 softened to "not recommended, outcomes unknown"; 3 keep "may be considered"; 4 coudé page now leads with the EAU gentle-attempt-by-experienced-staff position, ACS beside it; 5 TRAVERSE PE rating changed to "Low to Moderate"; 6 transfeminine breast screening aligned to Endocrine Society rec 4.5 and WPATH 15.6; 7 reimplantation page now carries the 2026 EAU text only (2023 sentence and its reference removed); 8 RCOG and IUGA OASIS sections merged; 9 B12 caveat added to the B12 lab page, urethrectomy frozen-section lines consolidated; 10 no hierarchy (pages already follow the statements). Items 11 to 26 remain open. Campbell-Walsh-Wein 13th ed and Wieder's Pocket Guide are in the general urology folder (remove from the not-found list; not yet indexed).
 
@@ -210,7 +218,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 
 **Out of scope, no action:** surgeon profiles (removed from the queue); history-page claims are low priority.
 
-## B. Sources still needed, by value
+### B. Sources still needed, by value
 
 **Guidelines and consensus (highest value first)**
 1. (Dropped: no NLUTD 2024 amendment could be found.)
@@ -243,7 +251,7 @@ Filed as `reports/audit-v2/sources-local/pdfs-2026-10-06/` (41 PDFs with extract
 
 **Books not found in your library folders:** Campbell-Walsh-Wein 13th ed, Blandy's Urology 3rd ed, Gurtner/Neligan and Mathes-Nahai, Oxford Handbook of Urology 4th ed, Wieder Pocket Guide 6th ed, Feliciano's Trauma.
 
-## C. Supplied on September 26, 2026 (checked; do not resupply)
+### C. Supplied on September 26, 2026 (checked; do not resupply)
 
 EAU 2026: Sexual and Reproductive Health, Urological Trauma, Muscle-Invasive and Metastatic Bladder Cancer, Paediatric Urology, Urological Infections (May 2026 edition; identical to the March 2026 update already held). AUA: Peyronie's 2015, IC/BPS 2022, Neurogenic LUTD 2021 (no 2024 amendment in the file), Microhematuria 2020/2025 amendment, AUA/ASRM Infertility 2020/2024. ASCRS Fecal Incontinence 2023 and Anorectal Abscess, Fistula-in-Ano and Rectovaginal Fistula. RCOG GTG 29. ASRA 5th edition (2025). Endocrine Society 2017 and 2018. WPATH SOC 8. ASRM MAC2021. IUGA-ICS fistula consensus, AUGS-IUGA bladder pain report, IUGA urodynamics reporting, IUGA pelvic floor physical therapy consensus, mid-urethral sling position statements (IUGA, RANZCOG-UGSA, AUGS-SUFU). AMS 800 (four documents), AMS 700 and Tactra (seven), Optilume (three) IFUs. TRAVERSE (NEJM 2023), Frazier 2024 AUS review, MASTER protocol, MASTER 24-month abstract (article preview only; full text still wanted). Two NIDDK Path to Prevention documents and the IUGA practice survey (no page cites them; the survey is a blank questionnaire).
 
