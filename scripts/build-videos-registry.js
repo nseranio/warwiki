@@ -26,6 +26,11 @@ const path = require('node:path');
 const IN = path.resolve(__dirname, '..', 'src/data/videos.generated.json');
 const OUT = path.resolve(__dirname, '..', 'src/data/videos.ts');
 
+// WHITWIKI's oncology playlists share the @warwikihq channel. The fetch step
+// skips them; this guard also drops them from an older videos.generated.json.
+// "Radiation Therapy" holds prostate-cancer radiotherapy videos WHITWIKI also shows.
+const ONCOLOGY_PLAYLIST = /^\s*(ONCOLOGY|LYMPHADENECTOMY)\b|^Radiation Therapy$/i;
+
 const URPS_PATTERNS = [
   /^Female SUI/i,
   /^Female: Bladder Outlet/i,
@@ -166,6 +171,7 @@ function main() {
 
   const topicBreakdown = {};
   for (const pl of playlists) {
+    if (ONCOLOGY_PLAYLIST.test(pl.title)) continue;
     const subspecialty = classify(pl.title);
     const topic = classifyTopic(pl.title);
     for (const item of pl.items) {

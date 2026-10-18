@@ -66,6 +66,11 @@ const OUT_PATH = path.resolve(
 
 const BASE = 'https://www.googleapis.com/youtube/v3';
 
+// The channel also hosts WHITWIKI's oncology playlists, titled "ONCOLOGY: ..."
+// or "LYMPHADENECTOMY: ..." (owner, October 2026). They stay out of WARWIKI.
+// "Radiation Therapy" holds prostate-cancer radiotherapy videos WHITWIKI also shows.
+const ONCOLOGY_PLAYLIST = /^\s*(ONCOLOGY|LYMPHADENECTOMY)\b|^Radiation Therapy$/i;
+
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function api(endpoint, params, { attempts = 6 } = {}) {
@@ -190,8 +195,11 @@ async function main() {
   }
   console.log(`Channel: ${channelTitle} (${channelId})`);
 
-  const playlists = await listAllPlaylists(channelId);
-  console.log(`Found ${playlists.length} playlists; expanding…`);
+  const allPlaylists = await listAllPlaylists(channelId);
+  const playlists = allPlaylists.filter(p => !ONCOLOGY_PLAYLIST.test(p.title));
+  console.log(
+    `Found ${allPlaylists.length} playlists; skipping ${allPlaylists.length - playlists.length} oncology (WHITWIKI); expanding ${playlists.length}…`,
+  );
 
   // Expand each playlist serially to keep the quota math predictable and to
   // produce a stable progress log.
