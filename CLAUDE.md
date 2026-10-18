@@ -6,7 +6,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Current State (October 14, 2026, evening)
 
-- **October 18 (Claude + Codex):** October 11 owner-PDF findings applied and gated on 23 pages; DOI leftovers resolved (190 identifiers added, 60 held back, 81 uncertain; `reports/2026-10-18/doi-resolution.md`). Owner: SOGC 445 article body (TCA neuropathic-pain rating order printed "moderate, strong"; the trigger-point epinephrine warning) and the 465 algorithm; chapter access for the held-back identifiers. Detail in CHANGELOG.
+- **October 18 (Claude + Codex):** October 11 owner-PDF findings applied and gated on 23 pages; DOI leftovers resolved (190 identifiers added, 60 held back, 81 uncertain; `reports/2026-10-18/doi-resolution.md`). Thirteen more owner sources checked and gated the same day (`reports/audit-v2/sources-local/pdfs-2026-10-18/`); IUGA urodynamics and NCCN transgender sentences now verified, so three of the five guideline sentences remain (AUA transition manual ×2, AAGL 2012). Owner: SOGC 445 article body (TCA neuropathic-pain rating order; trigger-point epinephrine warning) and the 465 algorithm; chapter access for held-back identifiers. Detail in CHANGELOG.
 
 - **October 17 (Codex), surgeon profiles:** Key Publications now shows full citations once, with the existing descriptions and citing-page links. Its static bibliography is in `src/data/surgeon-key-publications/<id>.json`; profile MDX imports it and renders `KeyPublication`. Publication footnotes now point to those entries; the separate site-citation list excludes papers already printed in the profile. Career/leadership material remains separate from publications. Ten stale retired-profile redirects were removed, including Daniel Eun.
 
