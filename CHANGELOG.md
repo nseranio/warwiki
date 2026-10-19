@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 19, 2026 — Clinical Evidence published
+
+- Clinical Evidence section replaces Journal Club (`1c9dc196`): 65 trial appraisal pages, library, decision timelines and comparisons, ported from WHITWIKI. Claim gate: final rounds `ce-gate-2026-10-19-final` to `-final5` (53 + 17 + 1 corrections applied; 13 guideline/update claims second-checked by Claude against local AUA BPH 2026, AUA/SUFU SUI 2023, AUGS 2025 uterine preservation and Holm 2026); 3,955 claims pass. BMG harvest-site closure meta-analysis held back; InSite 5-year registry lead-migration/infection rows and an OrBIT registry AE row dropped (not in the cited reports).
+- Jefferson antimicrobial policies J1–J5 applied to SmartPhrases and 46 preference cards; finals in Seranio Practice, compendium rebuilt (1,482 pages).
+
 ## October 18, 2026 (evening): wording-sweep edits held back on October 14 published through the claim gate
 
 - **What:** the 281 reviewed STYLE §11/§12 edits from the October 14 sweep that touched gated claims (caveat and non-transfer tails cut from numeric or guideline sentences). The saved patches no longer applied, so the rows were re-applied by exact sentence match (`reports/2026-10-14/wording-sweep/deferred-2026-10-18/`: `collect.py`, `apply.log`). 279 published on 187 pages; one was already gone (gracilis caveat, removed with the October 17 badge conversion) and one was reverted because its source is not on disk (endoureterotomy, Van Cangh 1998). The six owner-question rows stay held.

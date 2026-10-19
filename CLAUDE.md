@@ -6,7 +6,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Current State (October 14, 2026, evening)
 
-- **Clinical Evidence section (October 18–19, IN PROGRESS, NOT COMMITTED):** WHITWIKI's Clinical Evidence system ported to WARWIKI at the owner's request, replacing Journal Club. Working tree (uncommitted; backup `reports/audit-v2/sources-local/backups/clinical-evidence-2026-10-19.tgz` + `-tracked-2026-10-19.patch`): data layer `src/data/clinical-evidence/` (66 trial files, 20 decisions, `SCHEMA.md`, `TEMPLATE.md`), 66 pages in `docs/06-clinical-evidence/studies/` (URL `/docs/clinical-evidence/...`), components (`EvidenceExplorer`, `TrialsLibrary`, `EvidenceTimeline`, `TrialComparison`, `TrialBottomLine`, `TrialQuickHit`, `InConversation`, `ReportHistory`, `EvidenceBits`; CSS `wk-ev-*`), `lint:trials`, build step, gate.py trial units (results, harms, delivery facts and takeaway are claims), Journal Club removed with `/docs/journal-club` redirect (old `#trial-<id>` anchors forward to the trial page). Authored by Codex (13) and Sonnet agents (53) from full texts where reachable; each `reports/2026-10-18/clinical-evidence/work/<id>/notes.md` lists sources and disagreements with existing pages. `lint:trials`, citations, links, typecheck and build pass. **Next:** claim gate on Codex after its October 24 reset (2,900+ claims; ~420 high-risk), then fix site-page discrepancies from the notes, publish. Owner: PDFs in `reports/2026-10-18/clinical-evidence/REQUESTS.md`.
+- **Clinical Evidence section (published October 19, `1c9dc196`):** WHITWIKI's Clinical Evidence system replaces Journal Club at `/docs/clinical-evidence` (`/docs/journal-club` redirects; old `#trial-<id>` anchors forward). Data `src/data/clinical-evidence/` (65 trials, 20 decisions, `SCHEMA.md`, `TEMPLATE.md`), pages `docs/06-clinical-evidence/studies/`, `lint:trials`, gate.py trial units (results, harms, delivery facts, takeaway). All 3,955 claims pass the gate. Held back: BMG harvest-site closure meta-analysis (`reports/2026-10-18/clinical-evidence/held/`; forest-plot values unconfirmed). **Next:** fix the existing pages the agents flagged (`reports/2026-10-18/clinical-evidence/work/*/notes.md`: PAE retreatment, VVF, recurrent UTI vs MERIT, urodynamics/UPSTREAM, ThuVARP, sacrospinous hysteropexy, Revi, Optilume 2.5%, POP line 322 CARE values); owner PDFs in `REQUESTS.md`.
 
 - **October 18 (Claude + Codex):** October 11 owner-PDF findings applied and gated on 23 pages; DOI leftovers resolved (190 identifiers added, 60 held back, 81 uncertain; `reports/2026-10-18/doi-resolution.md`). Thirteen more owner sources checked and gated the same day (`reports/audit-v2/sources-local/pdfs-2026-10-18/`); all five guideline sentences left from October 17 are now verified (IUGA urodynamics, NCCN transgender screening, AAGL 2012, and the AUA transition manual ×2 from the owner's 8th-edition copy). Owner: SOGC 445 article body (TCA neuropathic-pain rating order; trigger-point epinephrine warning) and the 465 algorithm; chapter access for held-back identifiers. Detail in CHANGELOG.
 
@@ -141,7 +141,7 @@ Docusaurus v3 medical reference wiki for functional urology, genitourinary recon
 | `docs/03-clinical-conditions/` | `/docs/clinical-conditions` |
 | `docs/04-surgical-techniques/` | `/docs/surgical-techniques` (Treatment Atlas) |
 | `docs/05-special-populations/` | `/docs/special-populations` |
-| `docs/08-resources/journal-club.mdx` | `/docs/journal-club` (Landmark Trials database; moved into Resources October 1, URL kept via `slug:`) |
+| `docs/06-clinical-evidence/` | `/docs/clinical-evidence` (trial library; replaced Journal Club October 19) |
 | `docs/07-roots/` | `/docs/roots` (History & Lineage) |
 | `docs/08-resources/` | `/docs/resources` |
 
@@ -157,7 +157,7 @@ Key files:
 | `src/components/GenericDatabase.tsx` | Searchable/filterable atlas databases |
 | `src/components/VideoCards.tsx` | Lazy YouTube (and direct-MP4) card grid |
 | `src/components/VideoLibrary.tsx`, `src/pages/video-library.tsx`, `src/data/videos.ts` | Video Library (generated, chunked registry) |
-| `src/components/LandmarkTrials.tsx`, `src/data/trials.ts` | Journal Club trials database |
+| `src/components/EvidenceExplorer.tsx`, `src/data/clinical-evidence/` | Clinical Evidence library and timelines (`src/data/trials.ts` kept for Anki carddiff) |
 | `src/components/PatientHandouts.tsx`, `src/data/handouts.ts` | Handout gallery (gated by `WARWIKI_INCLUDE_HANDOUTS`) |
 | `src/components/SurgeonsExplorer.tsx`, `src/data/surgeons.ts` | GURS/URPS lineage explorer |
 | `scripts/check-*.js` | Lint checks |
