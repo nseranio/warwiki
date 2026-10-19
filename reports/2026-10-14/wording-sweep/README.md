@@ -59,6 +59,10 @@ Deleting a caveat sentence together with its trailing `<sup>` strips the citatio
 
 About 1,070 wording fixes on roughly 330 pages are on main; 281 reviewed edits wait in the deferred patches for a claim-gate run. Nothing in this sweep changed `reports/audit-v2/claims-ledger.json`.
 
+## Held-back edits published (October 18, evening)
+
+The patches no longer applied after later commits, so every `defer-gate` row (plus the six citation-audit rows) was collected into `deferred-2026-10-18/` (`collect.py` → `candidates.tsv`, `decisions.tsv`) and re-applied by sentence match with `apply_fixes.py`. A cut caveat keeps its citation only when the preceding sentence has none or the source is not cited elsewhere; `dedupe_cites.py` removes repeated sources. `fixups.py` handles the nine references that would have been left uncited (evidence restored or source moved). Claim gate: runs `sources-local/wording-deferred-2026-10-18` (+ `-final`, `-final2`, `-final3`; book chapters as `local_sources`), 12 verifier-agreed corrections. Published: 279 of 281 rows on 187 pages (t01-19 already gone; endoureterotomy reverted, source not on disk). Owner-question rows below remain held.
+
 ## Owner questions
 
 1. Nine cosmetic-genital pages open with a society-positions box (ACOG 795, FIGO 2025, SMSNA 2024, EAU 2026, FDA 2018). Keep them at the top, or move them to Indications (the SUI-page rule)? Rows t47-20, t48-08, t49-03, t50-01, t51-05, t51-07, t51-09, t52-05.
