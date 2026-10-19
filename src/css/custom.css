@@ -3997,11 +3997,14 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
   .wk-ev-convo-rel {display: block; min-width: 0;}
 }
 /* Timelines page: cancer toggle buttons stay in reach while scrolling. */
-.wk-ev-tlb-filter {position: sticky; top: var(--ifm-navbar-height); z-index: 5; display: flex; gap: .45rem; overflow-x: auto; padding: .7rem 0; margin-bottom: 1rem; background: var(--ifm-background-color); border-bottom: 1px solid var(--warwiki-border); scrollbar-width: none;}
-.wk-ev-tlb-filter::-webkit-scrollbar {display: none;}
-.wk-ev-tlb-filter button {flex: 0 0 auto; font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
+.wk-ev-tlb-filter {position: sticky; top: var(--ifm-navbar-height); z-index: 5; padding: .7rem 0; margin-bottom: 1rem; background: var(--warwiki-bg); border-bottom: 1px solid var(--warwiki-border);}
+.wk-ev-tlb-families, .wk-ev-tlb-areas {display: flex; flex-wrap: wrap; gap: .45rem;}
+.wk-ev-tlb-areas {margin-top: .55rem;}
+.wk-ev-tlb-filter button {font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
+.wk-ev-tlb-areas button {font-size: .82rem; padding: .32rem .8rem;}
 .wk-ev-tlb-filter button[aria-pressed='true'] {background: var(--ifm-color-primary); border-color: var(--ifm-color-primary); color: #fff;}
-[data-theme='dark'] .wk-ev-tlb-filter button[aria-pressed='true'] {color: #0E1520;}
+.wk-ev-tlb-areas button[aria-pressed='true'] {background: var(--wk-accent-soft, rgba(24, 95, 165, .12)); border-color: var(--ifm-color-primary); color: var(--ifm-color-primary);}
+[data-theme='dark'] .wk-ev-tlb-families button[aria-pressed='true'] {color: #0E1520;}
 .wk-ev-tlb-group h2 {margin-top: 2rem;}
 .wk-ev-tlb-decision h3 {font-size: 1.05rem; margin: 1.6rem 0 .7rem; scroll-margin-top: calc(var(--ifm-navbar-height) + 4rem);}
 /* Clinical Trial Library: By trial / By decision switch above the shared cancer filter. */

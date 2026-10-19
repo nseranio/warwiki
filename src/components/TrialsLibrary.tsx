@@ -1,6 +1,7 @@
 import {useEffect, useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import {decisions, primaryReport, trials} from '../data/clinical-evidence';
+import {areaMatches} from '../data/clinical-evidence/families';
 import groups from '../data/clinical-evidence/timeline-groups.json';
 import {cap, effectText, reportYear, TrialName, VerdictChip} from './EvidenceBits';
 import styles from './TrialsLibrary.module.css';
@@ -13,7 +14,7 @@ export default function TrialsLibrary({area: shared, onShowTimeline}: {area?: st
   const [query, setQuery] = useState('');
   const [ownArea, setArea] = useState('all');
   const area = shared === undefined ? ownArea : shared;
-  const inArea = (value: string) => area === 'all' || value === area;
+  const inArea = (value: string) => areaMatches(area, value);
   // The decision menu lists only the chosen area's decisions; a decision from another area is cleared.
   const areaDecisions = decisions.filter(item => inArea(item.area));
   const [decision, setDecision] = useState('All decisions');

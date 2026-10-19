@@ -1,6 +1,7 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import groups from '../data/clinical-evidence/timeline-groups.json';
 import {trialById} from '../data/clinical-evidence';
+import {areaMatches, families, familyOf} from '../data/clinical-evidence/families';
 import EvidenceTimeline from './EvidenceTimeline';
 import TrialsLibrary from './TrialsLibrary';
 
@@ -11,14 +12,13 @@ const timelineGroups = groups as Group[];
 const views: {id: View; label: string}[] = [{id: 'decision', label: 'By decision'}, {id: 'trial', label: 'By trial'}];
 
 /** Clinical Evidence landing page, ported from WHITWIKI (October 18): By decision (timelines) and By trial (library),
- *  one area filter shared by both views. The view and area live in the URL (?view=trial&area=oab) so a filtered view
+ *  one area filter shared by both views: All or a family (Pelvic floor, Male, General), then that family's areas. The view and area live in the URL (?view=trial&area=oab) so a filtered view
  *  can be shared. Old Journal Club links (/docs/journal-club#trial-<id>, used by the Anki decks) redirect here and
  *  are sent on to the trial's page. */
 export default function EvidenceExplorer() {
   const [view, setView] = useState<View>('decision');
   const [area, setArea] = useState('all');
   const [jump, setJump] = useState<string | null>(null);
-  const row = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const hash = decodeURIComponent(window.location.hash.slice(1));
@@ -31,7 +31,7 @@ export default function EvidenceExplorer() {
     const params = new URLSearchParams(window.location.search);
     if (params.get('view') === 'trial') setView('trial');
     const value = params.get('area');
-    if (value && timelineGroups.some(group => group.id === value)) setArea(value);
+    if (value && (timelineGroups.some(group => group.id === value) || families.some(family => family.id === value))) setArea(value);
     if (hash) setJump(hash);
   }, []);
 
@@ -41,11 +41,6 @@ export default function EvidenceExplorer() {
     area === 'all' ? url.searchParams.delete('area') : url.searchParams.set('area', area);
     window.history.replaceState(null, '', url.toString());
   }, [view, area]);
-
-  useEffect(() => {
-    const button = row.current?.querySelector<HTMLButtonElement>('button[aria-pressed="true"]');
-    if (button && row.current) row.current.scrollLeft = button.offsetLeft - row.current.offsetLeft - 16;
-  }, [area]);
 
   // Scroll to a decision timeline once its view has rendered (from "See timeline" or a #decision link).
   useEffect(() => {
@@ -57,20 +52,29 @@ export default function EvidenceExplorer() {
 
   const showTimeline = (decision: string) => {
     const owner = timelineGroups.find(group => group.items.some(([id]) => id === decision));
-    if (owner && area !== 'all' && owner.id !== area) setArea(owner.id);
+    if (owner && !areaMatches(area, owner.id)) setArea(owner.id);
     setView('decision');
     setJump(decision);
   };
 
-  const shown = timelineGroups.filter(group => area === 'all' || group.id === area);
+  const shown = timelineGroups.filter(group => areaMatches(area, group.id));
+  const family = familyOf(area);
+  const label = (id: string) => timelineGroups.find(group => group.id === id)?.label ?? id;
   return <div className="wk-ev-tlb">
     <div className="wk-ev-evx-views" role="tablist" aria-label="View">
       {views.map(item => <button type="button" role="tab" key={item.id} aria-selected={view === item.id}
         onClick={() => setView(item.id)}>{item.label}</button>)}
     </div>
-    <div ref={row} className="wk-ev-tlb-filter" role="group" aria-label="Show area">
-      {[{id: 'all', label: 'All'}, ...timelineGroups].map(group => <button type="button" key={group.id}
-        aria-pressed={area === group.id} onClick={() => setArea(group.id)}>{group.label}</button>)}
+    <div className="wk-ev-tlb-filter" role="group" aria-label="Show area">
+      <div className="wk-ev-tlb-families">
+        {[{id: 'all', label: 'All'}, ...families].map(item => <button type="button" key={item.id}
+          aria-pressed={item.id === 'all' ? area === 'all' : family?.id === item.id}
+          onClick={() => setArea(item.id)}>{item.label}</button>)}
+      </div>
+      {family && <div className="wk-ev-tlb-areas">
+        <button type="button" aria-pressed={area === family.id} onClick={() => setArea(family.id)}>All {family.label.toLowerCase()}</button>
+        {family.areas.map(id => <button type="button" key={id} aria-pressed={area === id} onClick={() => setArea(id)}>{label(id)}</button>)}
+      </div>}
     </div>
     {view === 'trial'
       ? <TrialsLibrary area={area} onShowTimeline={showTimeline} />
