@@ -1,0 +1,300 @@
+{
+  "id": "sister",
+  "name": "SISTEr",
+  "aliases": [
+    "Stress Incontinence Surgical Treatment Efficacy Trial",
+    "E-SISTEr"
+  ],
+  "nct": "NCT00064662",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "sling-vs-colposuspension"
+    }
+  ],
+  "question": "Does an autologous rectus fascial pubovaginal sling improve continence over Burch colposuspension in women with stress-predominant urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label after surgery",
+    "type": "superiority",
+    "n": 655,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Autologous rectus fascial pubovaginal sling",
+        "role": "experimental",
+        "n": 326
+      },
+      {
+        "key": "ctl",
+        "label": "Burch colposuspension",
+        "role": "control",
+        "n": 329
+      }
+    ],
+    "population": "Women with pure or stress-predominant urinary incontinence, a positive stress test and urethral hypermobility; prior incontinence surgery was permitted.",
+    "description": "Nine-center randomized surgical superiority trial with 24-month time-to-event analysis",
+    "locator": "NEJM PDF pp2–5; journal pp2144–2147"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both prespecified success composites favored sling; urinary infections and emptying problems were more frequent.",
+  "takeaway": "In women with stress-predominant incontinence and urethral hypermobility, autologous rectus fascial pubovaginal sling improved 24-month overall and stress-specific success over Burch colposuspension (47% versus 38%; 66% versus 49%), with more urinary tract infections and voiding dysfunction.",
+  "reports": [
+    {
+      "id": "sister-2007",
+      "kind": "primary",
+      "label": "Two-year randomized report",
+      "published": "2007-05-21",
+      "cutoff": null,
+      "citation": "Albo ME, Richter HE, Brubaker L, et al. Burch colposuspension versus fascial sling to reduce urinary stress incontinence. *N Engl J Med.* 2007;356(21):2143-2155. doi:10.1056/NEJMoa070416",
+      "doi": "10.1056/NEJMoa070416",
+      "pmid": "17517855",
+      "followUp": "24 months; 520/655 women had an assessed outcome or a prior documented failure",
+      "followUpLocator": "NEJM PDF p5, Figure 2; journal p2147",
+      "results": [
+        {
+          "endpoint": "Overall continence success",
+          "role": "primary",
+          "measure": "24-month Kaplan–Meier overall composite success; absolute risk difference in percentage points (sling minus Burch)",
+          "values": {
+            "exp": "47%",
+            "ctl": "38%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 9,
+            "p": "0.01"
+          },
+          "met": true,
+          "note": "Time-to-event estimates, not numerators divided by randomized group sizes. Composite required no symptoms, pad gain <15 g, no diary leakage, negative stress test and no retreatment.",
+          "locator": "NEJM PDF pp5,10, Figure 3A; journal pp2147,2152"
+        },
+        {
+          "endpoint": "Stress-specific success",
+          "role": "primary",
+          "measure": "24-month Kaplan–Meier stress-specific composite success; absolute risk difference in percentage points (sling minus Burch)",
+          "values": {
+            "exp": "66%",
+            "ctl": "49%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 17,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Required no self-reported stress symptoms, negative stress test and no retreatment for stress incontinence.",
+          "locator": "NEJM PDF pp5,10, Figure 3B; journal pp2147,2152"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "206/326 (63%)",
+            "ctl": "156/329 (47%)"
+          },
+          "locator": "NEJM PDF pp5,9, Table 2; journal pp2147,2151",
+          "note": "415 versus 305 total events; the excess was primarily urinary infection."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "157/326 (48%)",
+            "ctl": "105/329 (32%)"
+          },
+          "locator": "NEJM PDF p5; journal p2147",
+          "note": "Cystitis could be culture-proven or treated on clinical suspicion; 305 versus 203 genitourinary adverse-event episodes were recorded."
+        },
+        {
+          "label": "Voiding dysfunction after six weeks",
+          "values": {
+            "exp": "14% of 326",
+            "ctl": "2% of 329"
+          },
+          "locator": "NEJM PDF p6; journal p2148",
+          "note": "Defined as catheter use after six weeks or a revision to improve emptying. Nineteen sling recipients had 20 revision procedures; no Burch recipient had one."
+        },
+        {
+          "label": "Treated postoperative urge incontinence",
+          "values": {
+            "exp": "87/326 (27%)",
+            "ctl": "65/329 (20%)"
+          },
+          "locator": "NEJM PDF p6; journal p2148",
+          "note": "Persistent treated urge incontinence: 79/326 (24%) versus 59/329 (18%); new treated cases: 11/326 (3%) versus 11/329 (3%)."
+        },
+        {
+          "label": "Serious adverse event (modified Dindo grade III–V)",
+          "values": {
+            "exp": "42/326 (13%)",
+            "ctl": "32/329 (10%)"
+          },
+          "locator": "NEJM PDF p8, Table 2; journal p2150",
+          "note": "P=0.20; no grade V events. Incident cystotomy: 2 sling versus 10 Burch; ureteral injuries: 0 versus 2."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assigned operations performed",
+          "values": {
+            "exp": "326/326",
+            "ctl": "328/329"
+          },
+          "locator": "NEJM PDF p5, Figure 2; journal p2147",
+          "note": "Randomization occurred in the operating room after induction of anesthesia."
+        },
+        {
+          "label": "Concomitant prolapse surgery",
+          "values": {
+            "exp": "55% of 326",
+            "ctl": "48% of 329"
+          },
+          "locator": "NEJM PDF p5; journal p2147",
+          "note": "Planned procedures were declared before randomization; abdominal and vaginal repairs and hysterectomy were allowed."
+        },
+        {
+          "label": "Mean operative time",
+          "values": {
+            "exp": "136 minutes",
+            "ctl": "138 minutes"
+          },
+          "locator": "NEJM PDF p5; journal p2147",
+          "note": "Includes concomitant surgery when performed."
+        },
+        {
+          "label": "Mean estimated blood loss",
+          "values": {
+            "exp": "229 mL",
+            "ctl": "238 mL"
+          },
+          "locator": "NEJM PDF p5; journal p2147",
+          "note": "Includes concomitant surgery when performed."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "sister-2008-urodynamics",
+      "kind": "secondary",
+      "label": "Preoperative urodynamic predictors",
+      "published": "2008-03-04",
+      "cutoff": null,
+      "citation": "Nager CW, FitzGerald M, Kraus SR, et al. Urodynamic measures do not predict stress continence outcomes after surgery for stress urinary incontinence in selected women. *J Urol.* 2008;179(4):1470-1474. doi:10.1016/j.juro.2007.11.077",
+      "doi": "10.1016/j.juro.2007.11.077",
+      "pmid": "18295276",
+      "followUp": "SISTEr 24-month outcomes",
+      "followUpLocator": "PubMed abstract; primary NEJM PDF pp4–5",
+      "results": [
+        {
+          "endpoint": "Preoperative urodynamic predictors of overall success",
+          "role": "exploratory",
+          "measure": "Odds ratio for overall success with versus without urodynamic stress incontinence, pooled across operations",
+          "effect": {
+            "type": "OR",
+            "value": 2.26,
+            "ci": [
+              0.99,
+              5.17
+            ]
+          },
+          "met": null,
+          "note": "The trend did not reach statistical significance; Valsalva leak point pressure and detrusor overactivity did not predict success.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "sister-2012-extension",
+      "kind": "updated",
+      "label": "E-SISTEr five-year observational follow-up",
+      "published": "2012-02-15",
+      "cutoff": null,
+      "citation": "Brubaker L, Richter HE, Norton PA, et al. 5-year continence rates, satisfaction and adverse events of Burch urethropexy and fascial sling surgery for urinary incontinence. *J Urol.* 2012;187(4):1324-1330. doi:10.1016/j.juro.2011.11.087",
+      "doi": "10.1016/j.juro.2011.11.087",
+      "pmid": "22341290",
+      "followUp": "Annual assessment through at least five postoperative years; 482/655 entered the extension",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Five-year cumulative continence",
+          "role": "descriptive",
+          "measure": "Five-year Kaplan–Meier continence under the extension composite",
+          "values": {
+            "exp": "30.8% (95% CI 24.7–36.9%)",
+            "ctl": "24.1% (95% CI 18.5–29.7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.002"
+          },
+          "met": null,
+          "note": "Extension composite required no diary leakage, no self-reported stress symptoms and no stress-incontinence surgical retreatment; incontinent trial participants enrolled more often.",
+          "locator": "PubMed abstract"
+        },
+        {
+          "endpoint": "Five-year satisfaction",
+          "role": "descriptive",
+          "measure": "Patient-reported satisfaction at five years",
+          "values": {
+            "exp": "83%",
+            "ctl": "73%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.04"
+          },
+          "met": null,
+          "note": "Respondent percentages, not cumulative continence estimates.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events during long-term extension",
+          "values": {
+            "exp": "22 participants; 9%",
+            "ctl": "23 participants; 10%"
+          },
+          "locator": "PubMed abstract",
+          "note": "Reported among the extension groups: sling n=243, Burch n=239; percentages are the article's rounded values."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrolled in E-SISTEr",
+          "value": "482/655 (73.6%)",
+          "locator": "PubMed abstract",
+          "note": "Participants with incontinence at two years enrolled more often (85.5% versus 52.2%)."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/E-SISTEr-Brubaker-5-Year-2012-Author-Manuscript.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/sister",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

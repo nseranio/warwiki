@@ -1,0 +1,383 @@
+{
+  "id": "bmg-closure-meta",
+  "name": "BMG Harvest Closure Meta-analysis",
+  "aliases": [
+    "Closure versus non-closure of the intraoral buccal mucosa graft site in urethroplasties",
+    "Güler 2022 meta-analysis"
+  ],
+  "nct": null,
+  "area": [
+    "stricture"
+  ],
+  "decisions": [
+    {
+      "id": "stricture-treatment",
+      "lane": "urethroplasty-technique"
+    }
+  ],
+  "question": "Does leaving the buccal mucosa graft harvest site open reduce oral morbidity compared with primary closure in patients having urethroplasty?",
+  "design": {
+    "phase": "meta-analysis",
+    "randomized": false,
+    "blinding": "Outcome assessment unblinded in all seven pooled trials",
+    "type": "cohort",
+    "n": 373,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Nonclosure of the buccal mucosa graft harvest site (healing by secondary intention)",
+        "role": "experimental",
+        "n": 191
+      },
+      {
+        "key": "ctl",
+        "label": "primary closure of the harvest site",
+        "role": "control",
+        "n": 182
+      }
+    ],
+    "population": "373 patients over 18 years with urethral stricture and unilateral intraoral graft harvest for urethroplasty, pooled from seven randomized or quasi-randomized trials; women and children were excluded.",
+    "description": "Systematic review and meta-analysis of seven comparative trials",
+    "locator": "PMC9930765 full text, Methods, Results, Table 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Early pain favored nonclosure; no overall pooled difference for pain, numbness, salivation, diet or mouth opening.",
+  "takeaway": "Meta-analysis of seven randomized studies (373 patients) of oral-mucosal graft harvest-site nonclosure versus primary closure: nonclosure lowered day 0–1 oral pain; pooled overall pain, numbness, salivation, diet and mouth-opening outcomes showed no statistically significant difference, and the 6-month mouth-opening advantage was driven by one trial.",
+  "reports": [
+    {
+      "id": "bmg-closure-meta-2022",
+      "kind": "primary",
+      "label": "Systematic review and meta-analysis",
+      "published": "2022-07-18",
+      "cutoff": null,
+      "citation": "Güler Y. Comparison of closure versus non-closure of the intraoral buccal mucosa graft site in urethroplasties. A systematic review and meta-analysis. *Arab J Urol.* 2023;21(1):18-30. doi:10.1080/2090598X.2022.2097613",
+      "doi": "10.1080/2090598X.2022.2097613",
+      "pmid": "36818369",
+      "followUp": "Pooled trial follow-up of 6 months for most outcomes; numbness to 12 months",
+      "followUpLocator": "PMC9930765 full text, Methods, Data extraction",
+      "results": [
+        {
+          "endpoint": "Oral pain",
+          "role": "primary",
+          "measure": "Pooled pain score across day 0–1, day 3–7 and 1–6 month time points; standardized mean difference, nonclosure minus closure (negative favors nonclosure)",
+          "values": {
+            "exp": "n=552 assessments",
+            "ctl": "n=525 assessments"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.2,
+            "ci": [
+              -0.41,
+              0.01
+            ],
+            "p": "0.06"
+          },
+          "met": false,
+          "note": "Seven trials; I² 64%. The report's text gives p=0.30 after sensitivity analysis and, in one passage, p=0.006 with a different interval; the forest plot is used. Pain scales differed between trials.",
+          "locator": "PMC9930765 full text, Figure 5; Results, Pain score"
+        },
+        {
+          "endpoint": "Difficult mouth opening",
+          "role": "primary",
+          "measure": "Pooled risk across day 1, day 5–7, 1–3 month and 6 month time points; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "205/426 (48%)",
+            "ctl": "230/415 (55%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.89,
+            "ci": [
+              0.76,
+              1.03
+            ],
+            "p": "0.11"
+          },
+          "met": false,
+          "note": "Five trials; events are counted at each time point, so a patient can contribute more than once. I² 57%.",
+          "locator": "PMC9930765 full text, Figure 3"
+        },
+        {
+          "endpoint": "Perioral numbness",
+          "role": "primary",
+          "measure": "Pooled risk at day 3–7 and 1–12 months; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "99/314 (32%)",
+            "ctl": "104/300 (35%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.88,
+            "ci": [
+              0.72,
+              1.08
+            ],
+            "p": "0.23"
+          },
+          "met": false,
+          "note": "Five trials; I² 0%. The report's text gives RR 0.91 (0.76–1.08), p=0.28; the forest plot is used.",
+          "locator": "PMC9930765 full text, Figure 4"
+        },
+        {
+          "endpoint": "Alteration of salivation",
+          "role": "primary",
+          "measure": "Pooled risk of salivation change at day 1, day 5–7, 6 months and unspecified times; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "75/237 (32%)",
+            "ctl": "68/232 (29%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.05,
+            "ci": [
+              0.82,
+              1.35
+            ],
+            "p": "0.69"
+          },
+          "met": false,
+          "note": "Four trials; I² 7%. The report's text gives 1.05 (0.61–2.10), p=0.87; the forest plot is used.",
+          "locator": "PMC9930765 full text, Figure 6"
+        },
+        {
+          "endpoint": "Tolerance of liquid and solid diet",
+          "role": "primary",
+          "measure": "Pooled proportion tolerating liquid or solid intake at day 1–7 and 1–6 months; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "321/532 (60%)",
+            "ctl": "330/500 (66%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.01,
+            "ci": [
+              0.95,
+              1.08
+            ],
+            "p": "0.74"
+          },
+          "met": false,
+          "note": "Six trials; events are patients tolerating the diet. I² 48%. The report's text gives 0.96 (0.90–1.02), p=0.21; the forest plot is used.",
+          "locator": "PMC9930765 full text, Figure 7"
+        },
+        {
+          "endpoint": "Oral pain, day 0–1",
+          "role": "key-secondary",
+          "measure": "Pain score on day 0–1; standardized mean difference, nonclosure minus closure (negative favors nonclosure)",
+          "values": {
+            "exp": "n=191",
+            "ctl": "n=182"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.67,
+            "ci": [
+              -1.08,
+              -0.26
+            ],
+            "p": "0.001"
+          },
+          "met": true,
+          "note": "Seven trials; I² 70%. Time-point subgroup without multiplicity adjustment.",
+          "locator": "PMC9930765 full text, Figure 5"
+        },
+        {
+          "endpoint": "Oral pain, day 0–1, sensitivity analysis",
+          "role": "secondary",
+          "measure": "Pain score on day 0–1 after removing Muruganandam 2009 and Gulani 2019 for heterogeneity; standardized mean difference, nonclosure minus closure (negative favors nonclosure)",
+          "effect": {
+            "type": "difference",
+            "value": -0.42,
+            "ci": [
+              -0.8,
+              -0.04
+            ],
+            "p": "0.03"
+          },
+          "note": "Five trials; I² 53%. Reported in the text only; the group sizes are not given.",
+          "locator": "PMC9930765 full text, Results, Pain score"
+        },
+        {
+          "endpoint": "Oral pain, day 3–7",
+          "role": "secondary",
+          "measure": "Pain score on day 3–7; standardized mean difference, nonclosure minus closure (negative favors nonclosure)",
+          "values": {
+            "exp": "n=191",
+            "ctl": "n=182"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.1,
+            "ci": [
+              -0.15,
+              0.34
+            ],
+            "p": "0.44"
+          },
+          "note": "Seven trials; I² 23%.",
+          "locator": "PMC9930765 full text, Figure 5"
+        },
+        {
+          "endpoint": "Oral pain, 1–6 months",
+          "role": "secondary",
+          "measure": "Pain score at 1–6 months; standardized mean difference, nonclosure minus closure (negative favors nonclosure)",
+          "values": {
+            "exp": "n=170",
+            "ctl": "n=161"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.05,
+            "ci": [
+              -0.26,
+              0.17
+            ],
+            "p": "0.66"
+          },
+          "note": "Six trials; I² 0%.",
+          "locator": "PMC9930765 full text, Figure 5"
+        },
+        {
+          "endpoint": "Difficult mouth opening, 6 months",
+          "role": "key-secondary",
+          "measure": "Risk of difficult mouth opening at 6 months; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "15/90 (17%)",
+            "ctl": "26/93 (28%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.59,
+            "ci": [
+              0.36,
+              0.97
+            ],
+            "p": "0.04"
+          },
+          "met": true,
+          "note": "Three trials, one not estimable; I² 0%. Soave 2018 contributed 14/41 versus 24/42; the other two trials had 1/25 versus 2/25 and 0/24 versus 0/26. Time-point subgroup without multiplicity adjustment.",
+          "locator": "PMC9930765 full text, Figure 3; Discussion"
+        },
+        {
+          "endpoint": "Difficult mouth opening, day 5–7",
+          "role": "secondary",
+          "measure": "Risk of difficult mouth opening at day 5–7; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "55/117 (47%)",
+            "ctl": "56/109 (51%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.87,
+            "ci": [
+              0.75,
+              1.0
+            ],
+            "p": "0.06"
+          },
+          "note": "Four trials; I² 0%.",
+          "locator": "PMC9930765 full text, Figure 3"
+        },
+        {
+          "endpoint": "Difficult mouth opening, day 1",
+          "role": "secondary",
+          "measure": "Risk of difficult mouth opening on day 1; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "110/141 (78%)",
+            "ctl": "123/136 (90%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.89,
+            "ci": [
+              0.71,
+              1.13
+            ],
+            "p": "0.35"
+          },
+          "note": "Five trials; I² 82%.",
+          "locator": "PMC9930765 full text, Figure 3"
+        },
+        {
+          "endpoint": "Difficult mouth opening, 1–3 months",
+          "role": "secondary",
+          "measure": "Risk of difficult mouth opening at 1–3 months; risk ratio, nonclosure versus closure",
+          "values": {
+            "exp": "25/78 (32%)",
+            "ctl": "25/77 (32%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.98,
+            "ci": [
+              0.66,
+              1.44
+            ],
+            "p": "0.92"
+          },
+          "note": "Three trials; I² 0%.",
+          "locator": "PMC9930765 full text, Figure 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Perioral numbness",
+          "values": {
+            "exp": "99/314 (32%)",
+            "ctl": "104/300 (35%)"
+          },
+          "locator": "PMC9930765 full text, Figure 4",
+          "note": "Events at day 3–7 and 1–12 months combined, so a patient can be counted more than once."
+        },
+        {
+          "label": "Alteration of salivation",
+          "values": {
+            "exp": "75/237 (32%)",
+            "ctl": "68/232 (29%)"
+          },
+          "locator": "PMC9930765 full text, Figure 6",
+          "note": "Events at day 1, day 5–7, 6 months and unspecified times, so a patient can be counted more than once."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Trials and patients included",
+          "value": "7 trials, 373 patients: 191 nonclosure and 182 closure",
+          "locator": "PMC9930765 full text, Results; Table 1",
+          "note": "1,150 records identified, 670 screened by title and abstract, 29 full texts assessed, 7 included. Soave 2018 contributed 135 patients (72 nonclosure, 63 closure)."
+        },
+        {
+          "label": "Graft site in the included trials",
+          "value": "Unilateral cheek in 3 trials; unilateral cheek with bilateral cheek or lower lip for some patients in 2; lingual mucosa in 1; not stated in 1",
+          "locator": "PMC9930765 full text, Results",
+          "note": "Graft shape was rectangular in 2 trials, ovoid in 2 and not stated in 3."
+        },
+        {
+          "label": "Closure technique in the closure arms",
+          "value": "Continuous suture in 3 trials per the text (4 trials cited), interrupted suture in 2, not stated in 1",
+          "locator": "PMC9930765 full text, Results",
+          "note": "The report's count and its citations for continuous closure disagree."
+        },
+        {
+          "label": "Pain scales",
+          "value": "5-point scale in 1 trial; 10- or 11-point scales in 3; 2 did not define the scale",
+          "locator": "PMC9930765 full text, Results",
+          "note": "Pain scores were pooled as standardized mean differences."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/bmg-closure-meta",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

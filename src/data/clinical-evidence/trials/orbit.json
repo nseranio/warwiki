@@ -1,0 +1,275 @@
+{
+  "id": "orbit",
+  "name": "OrBIT",
+  "aliases": [
+    "Overactive Bladder Innovative Therapy Trial"
+  ],
+  "nct": "NCT00448175",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "tibial-nerve"
+    }
+  ],
+  "question": "Does weekly percutaneous tibial nerve stimulation reduce overactive bladder symptoms as well as extended-release tolterodine?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 100,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Percutaneous tibial nerve stimulation (Urgent PC) weekly for 12 weeks",
+        "role": "experimental",
+        "n": 50
+      },
+      {
+        "key": "ctl",
+        "label": "extended-release tolterodine 4 mg daily for 12 weeks",
+        "role": "control",
+        "n": 50
+      }
+    ],
+    "population": "100 adults with overactive bladder and urinary frequency (94 women), mean age about 58 years, at United States centers.",
+    "description": "Multicenter, open-label noninferiority randomized trial",
+    "locator": "abstract; ClinicalTrials.gov NCT00448175 (enrollment, arm sizes, eligibility, baseline characteristics)"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "The 20% noninferiority margin was not met (P = 0.44); patient-rated improvement favored PTNS.",
+  "takeaway": "Among 100 adults with OAB randomized to weekly PTNS or extended-release tolterodine, mean daily voids fell by 2.4 and 2.5 at 12 weeks (41 and 43 diaries); PTNS did not meet its noninferiority margin (P = 0.44). Patient-rated cure or improvement was 35/44 versus 23/42.",
+  "reports": [
+    {
+      "id": "orbit-2009",
+      "kind": "primary",
+      "label": "12-week randomized report",
+      "published": "2009-07-18",
+      "cutoff": null,
+      "citation": "Peters KM, MacDiarmid SA, Wooldridge LS, et al. Randomized trial of percutaneous tibial nerve stimulation versus extended-release tolterodine: results from the overactive bladder innovative therapy trial. *J Urol.* 2009;182(3):1055-1061.",
+      "doi": "10.1016/j.juro.2009.05.045",
+      "pmid": "19616802",
+      "followUp": "12 weeks of treatment",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "24-hour voiding frequency",
+          "role": "primary",
+          "measure": "Mean (SD) change in voids per day from baseline to 12 weeks",
+          "values": {
+            "exp": "-2.4 (SD 4.0)",
+            "ctl": "-2.5 (SD 3.9)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.44"
+          },
+          "met": false,
+          "note": "Values and P from the AUA/SUFU 2024 guideline summary of the trial; the registry reports the same means with 41 and 43 completers. The abstract states that frequency improved similarly in both groups.",
+          "locator": "AUA/SUFU 2024 guideline p32; ClinicalTrials.gov NCT00448175 primary outcome"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean (SD) change in episodes per day from baseline to 12 weeks",
+          "values": {
+            "exp": "-1.0 (SD 2.2)",
+            "ctl": "-1.7 (SD 3.8)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Values from the AUA/SUFU 2024 guideline summary; P not reported there. The abstract reports similar improvement in both groups.",
+          "locator": "AUA/SUFU 2024 guideline p32"
+        },
+        {
+          "endpoint": "Subject global response assessment",
+          "role": "key-secondary",
+          "measure": "Share of subjects reporting cure or improvement at 12 weeks",
+          "values": {
+            "exp": "35/44 (79.5%)",
+            "ctl": "23/42 (54.8%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "met": null,
+          "note": "Subject GRA at 12 weeks among evaluated respondents.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Investigator global response assessment",
+          "role": "secondary",
+          "measure": "Investigator assessment of cure or improvement at 12 weeks",
+          "effect": {
+            "type": "none",
+            "p": "0.05"
+          },
+          "note": "The abstract describes investigator assessments as similar to the subject assessments but not statistically significant; percentages are not given.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "0/50",
+            "ctl": "0/50"
+          },
+          "locator": "abstract; ClinicalTrials.gov NCT00448175 adverse events",
+          "note": "The abstract also reports no device malfunctions."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment",
+          "values": {
+            "exp": "Weekly PTNS for 12 weeks (Urgent PC)",
+            "ctl": "Extended-release tolterodine initially 4 mg daily for 12 weeks; two participants reduced to 2 mg daily for intolerance"
+          },
+          "locator": "abstract; ClinicalTrials.gov NCT00448175 interventions"
+        },
+        {
+          "label": "Completed the 12-week phase",
+          "values": {
+            "exp": "44/50",
+            "ctl": "43/50"
+          },
+          "locator": "Peters 2009, Figure 1 and Results, p1057",
+          "note": "Six and seven participants did not complete treatment; 41 PTNS and 43 tolterodine completers returned voiding diaries."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/OrBIT-Peters-2009.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "orbit-2010",
+      "kind": "updated",
+      "label": "12-month PTNS extension",
+      "published": "2010-01-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed print date, January 2010 issue",
+      "cutoff": null,
+      "citation": "MacDiarmid SA, Peters KM, Shobeiri SA, et al. Long-term durability of percutaneous tibial nerve stimulation for the treatment of overactive bladder. *J Urol.* 2010;183(1):234-240.",
+      "doi": "10.1016/j.juro.2009.08.160",
+      "pmid": "19913821",
+      "followUp": "12 months from baseline in PTNS responders",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Subject global response assessment",
+          "role": "descriptive",
+          "measure": "Share of initial PTNS responders reporting sustained improvement from baseline at 6 and 12 months",
+          "values": {
+            "exp": "30/32 (94%) at 6 months; 24/25 (96%) at 12 months"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "In the uncontrolled extension, 33 of 35 initial responders continued PTNS; GRA was assessed in 32 at 6 months and 25 at 12 months.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "24-hour voiding frequency",
+          "role": "descriptive",
+          "measure": "Mean improvement from baseline at 12 months among 25 extension completers",
+          "values": {
+            "exp": "2.8 voids per day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence episodes",
+          "role": "descriptive",
+          "measure": "Mean improvement from baseline at 12 months among 25 extension completers",
+          "values": {
+            "exp": "1.6 episodes per day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Nocturia",
+          "role": "descriptive",
+          "measure": "Mean improvement from baseline at 12 months among 25 extension completers",
+          "values": {
+            "exp": "0.8 voids"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Voided volume",
+          "role": "descriptive",
+          "measure": "Mean improvement from baseline at 12 months among 25 extension completers",
+          "values": {
+            "exp": "39 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "note": "Reported in the abstract as 39 cc.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "None reported"
+          },
+          "locator": "abstract"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Responders continuing PTNS after 12 weeks",
+          "value": "33",
+          "locator": "abstract",
+          "note": "Of 44 PTNS treatment completers, 35 responded at 12 weeks, 33 continued PTNS and 25 completed 12 months."
+        },
+        {
+          "label": "Treatments received",
+          "value": "Mean 12.1 treatments over an average of 263 days; mean 21 days (median 17) between treatments",
+          "locator": "abstract"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/orbit-2010.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "sumit",
+      "note": "Same Urgent PC device and lead investigator; SUmiT compared PTNS with sham stimulation rather than tolterodine."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/orbit",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

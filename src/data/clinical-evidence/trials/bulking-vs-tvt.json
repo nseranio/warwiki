@@ -1,0 +1,683 @@
+{
+  "id": "bulking-vs-tvt",
+  "name": "TVT vs PAHG",
+  "aliases": [
+    "Helsinki TVT versus Bulkamid trial",
+    "TVT versus Bulkamid injections",
+    "Itkonen Freitas randomized trial"
+  ],
+  "nct": "NCT02538991",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "bulking-agents"
+    }
+  ],
+  "question": "Is polyacrylamide hydrogel injection noninferior to retropubic tension-free vaginal tape for patient satisfaction in women with primary stress urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 224,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Transurethral polyacrylamide hydrogel (Bulkamid) injection",
+        "n": 113,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "retropubic tension-free vaginal tape (TVT-Exact)",
+        "n": 111,
+        "role": "control"
+      }
+    ],
+    "population": "Women with primary stress urinary incontinence unresponsive to conservative treatment, a positive cough stress test without urge-type leakage and no previous incontinence procedure.",
+    "description": "Single-center, open-label noninferiority randomized trial",
+    "locator": "Abstract (primary report); Methods (PMC12721665, PMC10756861)"
+  },
+  "verdict": "negative",
+  "verdictNote": "Hydrogel missed the 20% satisfaction margin at 1, 3 and 5 years; complications were fewer after hydrogel.",
+  "takeaway": "Polyacrylamide hydrogel (Bulkamid) injection was compared with retropubic tension-free vaginal tape in women with primary stress incontinence; 1-year satisfaction of at least 80/100 was 59.8% versus 95.0%, missing the 20% noninferiority limit, while most perioperative complications and all six complication-related reoperations followed tape.",
+  "reports": [
+    {
+      "id": "bulking-vs-tvt-2020",
+      "kind": "primary",
+      "label": "1-year primary report",
+      "published": "2019-09-04",
+      "dateLocator": "PubMed entrez date (Crossref record created 2019-09-03); issue date February 2020",
+      "cutoff": null,
+      "citation": "Itkonen Freitas AM, Mentula M, Rahkola-Soisalo P, Tulokas S, Mikkola TS. Tension-free vaginal tape surgery versus polyacrylamide hydrogel injection for primary stress urinary incontinence: a randomized clinical trial. *J Urol.* 2020;203(2):372-378.",
+      "doi": "10.1097/JU.0000000000000517",
+      "pmid": "31479396",
+      "followUp": "1 year",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Satisfaction",
+          "role": "primary",
+          "measure": "1-year patient satisfaction of at least 80/100 on a visual analogue scale; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "64/107 (59.8%)",
+            "ctl": "96/101 (95.0%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 35.2,
+            "ci": [
+              24.4,
+              45.1
+            ],
+            "p": "<0.001"
+          },
+          "met": false,
+          "note": "Intention-to-treat among the 208 women who attended (101 TVT, 107 hydrogel); hydrogel did not meet the prespecified 20% noninferiority limit. Median satisfaction 99 (IQR 94 to 100) versus 85 (IQR 65 to 98).",
+          "locator": "Results, primary outcome paragraph; Figure 3"
+        },
+        {
+          "endpoint": "Cough stress test",
+          "role": "secondary",
+          "measure": "Negative cough stress test at 1 year; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "66.4%",
+            "ctl": "95.0%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 28.6,
+            "ci": [
+              18.4,
+              38.5
+            ]
+          },
+          "note": "Denominators not given in the abstract.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Perioperative complications (cases cited in the abstract)",
+          "values": {
+            "exp": "3 cases",
+            "ctl": "19 cases"
+          },
+          "locator": "abstract",
+          "note": "The abstract states that most perioperative complications, including 19 TVT versus 3 hydrogel cases (difference 16.0%, 95% CI 7.8-24.9), were associated with TVT; denominators are not given."
+        },
+        {
+          "label": "Reoperations due to complications",
+          "values": {
+            "exp": "0",
+            "ctl": "6"
+          },
+          "locator": "abstract",
+          "note": "All 6 reoperations were associated with TVT (difference 5.9%, 95% CI 1.2-12.4); denominators are not given."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Women entering the trial",
+          "values": {
+            "exp": "113",
+            "ctl": "111"
+          },
+          "locator": "abstract",
+          "note": "224 women entered between September 28, 2015 and March 1, 2017. Later reports count 223 randomized (TVT 110, hydrogel 113)."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/PAHG-TVT-primary-JUrol-2020.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "bulking-vs-tvt-2021-qol",
+      "kind": "pro",
+      "label": "1-year quality of life and sexual function",
+      "published": "2020-12-04",
+      "cutoff": null,
+      "citation": "Itkonen Freitas AM, Mikkola TS, Rahkola-Soisalo P, Tulokas S, Mentula M. Quality of life and sexual function after TVT surgery versus Bulkamid injection for primary stress urinary incontinence: 1 year results from a randomized clinical trial. *Int Urogynecol J.* 2021;32(3):595-601.",
+      "doi": "10.1007/s00192-020-04618-5",
+      "pmid": "33275162",
+      "followUp": "1 year; UDI-6 and IIQ-7 completed by 103 of 104 TVT and 108 of 108 hydrogel women",
+      "followUpLocator": "Results, paragraph 2 (PMC7902559)",
+      "results": [
+        {
+          "endpoint": "UDI-6 total score",
+          "role": "secondary",
+          "measure": "1-year mean UDI-6 total score (0-100, higher is worse distress; baseline 34.57 hydrogel, 31.48 TVT)",
+          "values": {
+            "exp": "18.96 ± 13.20",
+            "ctl": "7.89 ± 7.65"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Both groups improved from baseline; between-group p value as printed. Secondary analysis of a trial powered for satisfaction.",
+          "locator": "Table 2 (PMC7902559)"
+        },
+        {
+          "endpoint": "UDI-6 improvement of at least 75%",
+          "role": "secondary",
+          "measure": "Women reaching at least 75% improvement in UDI-6 at 1 year",
+          "values": {
+            "exp": "21/108 (19.4%)",
+            "ctl": "62/104 (59.6%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "The 75% threshold is borrowed from a minimally important difference used for the ICIQ-UI-SF; none is defined for the UDI-6.",
+          "locator": "Results, paragraph 2 (PMC7902559)"
+        },
+        {
+          "endpoint": "IIQ-7 improvement of at least 75%",
+          "role": "secondary",
+          "measure": "Women reaching at least 75% improvement in IIQ-7 at 1 year",
+          "values": {
+            "exp": "52/108 (48.1%)",
+            "ctl": "93/104 (89.4%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "",
+          "locator": "Results, paragraph 2 (PMC7902559)"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Treated as randomized and analyzed",
+          "values": {
+            "exp": "108",
+            "ctl": "104"
+          },
+          "locator": "Methods (PMC7902559)",
+          "note": "Six TVT and five hydrogel women withdrew consent after randomization, one woman accidentally received two randomization envelopes and four were lost to follow-up."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "bulking-vs-tvt-2022",
+      "kind": "updated",
+      "label": "3-year follow-up",
+      "published": "2022-08-09",
+      "cutoff": null,
+      "citation": "Itkonen Freitas AM, Isaksson C, Rahkola-Soisalo P, Tulokas S, Mentula M, Mikkola TS. Tension-free vaginal tape and polyacrylamide hydrogel injection for primary stress urinary incontinence: 3-year followup from a randomized clinical trial. *J Urol.* 2022;208(3):658-667.",
+      "doi": "10.1097/JU.0000000000002720",
+      "pmid": "35942796",
+      "followUp": "3 years; 188/223 (84.3%) attended (TVT 92, hydrogel 96)",
+      "followUpLocator": "Results, paragraph 1 (PMC12721665)",
+      "results": [
+        {
+          "endpoint": "Satisfaction",
+          "role": "primary",
+          "measure": "3-year satisfaction of at least 80/100; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "65/96 (67.7%)",
+            "ctl": "87/92 (94.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 26.9,
+            "ci": [
+              16.7,
+              36.8
+            ]
+          },
+          "met": false,
+          "note": "Intention-to-treat among attenders; hydrogel did not meet the prespecified 20% noninferiority limit.",
+          "locator": "Results, paragraph 3 (PMC12721665)"
+        },
+        {
+          "endpoint": "Median satisfaction score",
+          "role": "secondary",
+          "measure": "3-year median satisfaction score, 0-100 (interquartile range)",
+          "values": {
+            "exp": "90.0 (70-100)",
+            "ctl": "98.5 (90-100)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "Results, paragraph 3 (PMC12721665)"
+        },
+        {
+          "endpoint": "Would choose the treatment again",
+          "role": "secondary",
+          "measure": "Would come again for the treatment; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "78/96 (81.3%)",
+            "ctl": "88/92 (95.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 14.4,
+            "ci": [
+              5.9,
+              23.4
+            ]
+          },
+          "note": "",
+          "locator": "Results, paragraph 3 (PMC12721665)"
+        },
+        {
+          "endpoint": "Cough stress test",
+          "role": "secondary",
+          "measure": "Negative cough stress test at 3 years; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "75/96 (78.1%)",
+            "ctl": "88/92 (95.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 17.5,
+            "ci": [
+              8.6,
+              26.9
+            ]
+          },
+          "note": "Abstract and text give the interval 8.6-26.9; Table 2 prints 8.0-27.2.",
+          "locator": "Abstract; Table 2 (PMC12721665)"
+        },
+        {
+          "endpoint": "Cough stress and pad test",
+          "role": "secondary",
+          "measure": "Both cough stress test and pad test negative at 3 years (intention to treat); risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "47 (50.0%)",
+            "ctl": "76 (82.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 33.7,
+            "ci": [
+              20.3,
+              45.3
+            ]
+          },
+          "note": "Percentages as printed; 50.0% implies a hydrogel denominator of 94 rather than 96.",
+          "locator": "Table 2 (PMC12721665)"
+        },
+        {
+          "endpoint": "Subjective cure",
+          "role": "secondary",
+          "measure": "Symptoms cured on a 5-point Likert scale at 3 years; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "24/96 (25.0%)",
+            "ctl": "55/92 (59.8%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 34.8,
+            "ci": [
+              20.8,
+              46.9
+            ]
+          },
+          "note": "",
+          "locator": "Table 2 (PMC12721665)"
+        },
+        {
+          "endpoint": "Subjective cure or improvement",
+          "role": "secondary",
+          "measure": "Symptoms cured or improved at 3 years; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "85/96 (88.5%)",
+            "ctl": "92/92 (100%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 11.5,
+            "ci": [
+              5.1,
+              19.4
+            ]
+          },
+          "note": "",
+          "locator": "Table 2 (PMC12721665)"
+        },
+        {
+          "endpoint": "Cough stress and pad test, per protocol",
+          "role": "secondary",
+          "measure": "Both tests negative at 3 years, treatment-received analysis excluding crossover; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "22/66 (33.3%)",
+            "ctl": "74/89 (83.1%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 49.8,
+            "ci": [
+              34.7,
+              61.8
+            ]
+          },
+          "note": "Per-protocol analysis (secondary).",
+          "locator": "Results, paragraph 4 (PMC12721665)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any peri- or postoperative complication before crossover",
+          "values": {
+            "exp": "23/96 (24.0%)",
+            "ctl": "40/92 (43.5%)"
+          },
+          "locator": "Abstract; Results, paragraph 5 (PMC12721665)",
+          "note": "Difference 19.5 percentage points (95% CI 6.8-31.4) in the 3-year attenders."
+        },
+        {
+          "label": "Two or more complications",
+          "values": {
+            "exp": "2/96 (2.1%)",
+            "ctl": "10/92 (10.9%)"
+          },
+          "locator": "Results, paragraph 5 (PMC12721665)",
+          "note": "Difference 8.8 percentage points (95% CI 1.7-16.9)."
+        },
+        {
+          "label": "Perioperative complications",
+          "values": {
+            "exp": "2/108 (1.9%)",
+            "ctl": "18/104 (17.3%)"
+          },
+          "locator": "Results, paragraph 5; Table 3 (PMC12721665)",
+          "note": "Before crossover. TVT: bladder perforation 7/104 (6.7%), hematoma 6/104 (5.8%), acute retention 10/104 (9.6%); hydrogel: acute retention 2/108 (1.9%), no perforation or hematoma."
+        },
+        {
+          "label": "Vaginal tape extrusion before 3 months",
+          "values": {
+            "exp": "0/108",
+            "ctl": "3/104 (2.9%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": "Before crossover."
+        },
+        {
+          "label": "Vaginal tape erosion between 3 months and 3 years",
+          "values": {
+            "exp": "0/96",
+            "ctl": "3/92 (3.3%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": "Before crossover; reoperation due to erosion in 3/92 (3.3%). None of the women had the sling removed."
+        },
+        {
+          "label": "Reoperation for a complication",
+          "values": {
+            "exp": "2 women",
+            "ctl": "7 women"
+          },
+          "locator": "Results, paragraph 8; Table 3 (PMC12721665)",
+          "note": "TVT: hematoma 1, retention 3, erosion 3. Hydrogel: pain 1 (hydrogel removal under general anesthesia for persisting pain and dysuria, requested about 20 months after injection; the pain did not change), fibrotic resistance at the bladder neck 1 (aspiration under local anesthesia). Denominators not stated for this count."
+        },
+        {
+          "label": "Tape or implantation-site pain",
+          "values": {
+            "exp": "1/96 (1.0%)",
+            "ctl": "6/92 (6.5%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": "Between 3 months and 3 years, before crossover; median numerical rating 3 (interquartile range 2-4) among those reporting pain at 3 years."
+        },
+        {
+          "label": "De novo urgency requiring medication",
+          "values": {
+            "exp": "12/96 (12.5%)",
+            "ctl": "9/92 (9.8%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": "Between 3 months and 3 years, before crossover."
+        },
+        {
+          "label": "Urinary tract infection within 3 months",
+          "values": {
+            "exp": "9/108 (8.3%)",
+            "ctl": "7/104 (6.7%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": ""
+        },
+        {
+          "label": "Complications after crossover from hydrogel to TVT",
+          "values": {
+            "exp": "12/30"
+          },
+          "locator": "Results, paragraph 7 (PMC12721665)",
+          "note": "Among the 30 hydrogel women who crossed over to TVT: 2 reoperations (hematoma, tape loosening), 1 erosion, 1 tape-site pain, 3 dysuria, 2 retention and 3 de novo urgency."
+        },
+        {
+          "label": "Clavien-Dindo grade III",
+          "values": {
+            "exp": "2/96 (2.1%)",
+            "ctl": "6/92 (6.5%)"
+          },
+          "locator": "Table 3 (PMC12721665)",
+          "note": "Grade IV: 1/92 (1.1%) after TVT (ischemic heart symptoms possibly related to local anesthesia) and none after hydrogel."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized and treated as randomized",
+          "values": {
+            "exp": "113 and 108",
+            "ctl": "110 and 104"
+          },
+          "locator": "Results, paragraph 1 (PMC12721665)",
+          "note": "223 randomized, 212 treated as randomized."
+        },
+        {
+          "label": "Crossover by 3 years",
+          "values": {
+            "exp": "30/96 to TVT (16 before and 14 after the 1-year visit)",
+            "ctl": "3/92 to hydrogel"
+          },
+          "locator": "Results, paragraphs 1-2 (PMC12721665)",
+          "note": "No woman had a second TVT."
+        },
+        {
+          "label": "Hydrogel injections received by 3 years",
+          "value": "1 injection only 31/96 (32.3%); 2 injections 35/96 (36.5%); TVT after 1 injection 15/96 (15.6%); TVT after 2 injections 15/96 (15.6%)",
+          "locator": "Results, paragraph 2 (PMC12721665)",
+          "note": "A top-up injection at the 3-month visit was part of the protocol for persisting symptoms."
+        },
+        {
+          "label": "Operators",
+          "value": "Nine urogynecologists performed TVT; two performed hydrogel injections",
+          "locator": "Methods (PMC12721665)",
+          "note": ""
+        },
+        {
+          "label": "Setting and anesthesia",
+          "value": "Outpatient, local anesthesia for both: TVT-Exact with 70-100 mL of 0.25% prilocaine with epinephrine; Bulkamid with 10 mL periurethral lidocaine",
+          "locator": "Methods (PMC12721665)",
+          "note": ""
+        },
+        {
+          "label": "Hydrogel injection technique",
+          "value": "Endoscopic injection 1.5 cm from the vesicourethral junction at 10, 2, 5 and 7 o'clock",
+          "locator": "Methods (PMC12721665)",
+          "note": ""
+        },
+        {
+          "label": "Discharge criteria",
+          "value": "Successful micturition and post-void residual below 200 mL",
+          "locator": "Methods (PMC12721665)",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "bulking-vs-tvt-2023-qol",
+      "kind": "pro",
+      "label": "3-year quality of life and sexual function",
+      "published": "2023-09-06",
+      "cutoff": null,
+      "citation": "Itkonen Freitas AM, Isaksson C, Rahkola-Soisalo P, Mentula M, Mikkola TS. Quality of life and sexual function after tension-free vaginal tape and polyacrylamide hydrogel injection for primary stress urinary incontinence: 3-year follow-up from a randomized clinical trial. *Int Urogynecol J.* 2023;34(12):2977-2984.",
+      "doi": "10.1007/s00192-023-05626-x",
+      "pmid": "37672047",
+      "followUp": "3 years; questionnaires adequately completed by 94 TVT and 96 hydrogel women",
+      "followUpLocator": "Results, paragraph 1 (PMC10756861)",
+      "results": [
+        {
+          "endpoint": "UDI-6 total score",
+          "role": "secondary",
+          "measure": "3-year mean UDI-6 total score (0-100, higher is worse distress; baseline 34.57 hydrogel, 31.48 TVT); between-group mean difference (TVT minus hydrogel)",
+          "values": {
+            "exp": "18.75 ± 13.40",
+            "ctl": "10.74 ± 9.88"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -8.01,
+            "ci": [
+              -11.39,
+              -4.64
+            ],
+            "p": "<0.001"
+          },
+          "note": "Both groups improved from baseline.",
+          "locator": "Table 2 (PMC10756861)"
+        },
+        {
+          "endpoint": "IIQ-7 total score",
+          "role": "secondary",
+          "measure": "3-year mean IIQ-7 total score (0-100, higher is worse impact; baseline 54.50 hydrogel, 50.79 TVT); between-group mean difference (TVT minus hydrogel)",
+          "values": {
+            "exp": "16.91 ± 19.56",
+            "ctl": "4.46 ± 8.87"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -12.44,
+            "ci": [
+              -16.81,
+              -8.08
+            ],
+            "p": "<0.001"
+          },
+          "note": "Both groups improved from baseline.",
+          "locator": "Table 3 (PMC10756861)"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Women in the 3-year questionnaire analysis",
+          "values": {
+            "exp": "96",
+            "ctl": "94"
+          },
+          "locator": "Results, paragraph 1 (PMC10756861)",
+          "note": "Of 212 treated as randomized (TVT 104, hydrogel 108). By 3 years 30 hydrogel women (31.3%) had crossed over to TVT and 3 TVT women (3.2%) had received hydrogel; the analysis is intention to treat."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "bulking-vs-tvt-2025",
+      "kind": "updated",
+      "label": "5-year follow-up",
+      "published": "2025-04-22",
+      "cutoff": null,
+      "citation": "Itkonen Freitas AM, Isaksson C, Rahkola-Soisalo P, Mentula M, Mikkola TS. Tension-free vaginal tape versus polyacrylamide hydrogel injection for stress urinary incontinence: 5-year follow-up. *NEJM Evid.* 2025;4(5):EVIDoa2400216.",
+      "doi": "10.1056/EVIDoa2400216",
+      "pmid": "40261117",
+      "followUp": "5 years; 195/212 (92.0%) treated as randomized attended",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Satisfaction",
+          "role": "primary",
+          "measure": "5-year satisfaction of at least 80/100; risk difference (TVT minus hydrogel), percentage points",
+          "values": {
+            "exp": "74 (74.7%)",
+            "ctl": "89 (92.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 18.0,
+            "ci": [
+              7.7,
+              28.0
+            ]
+          },
+          "met": false,
+          "note": "Hydrogel did not meet the prespecified 20% noninferiority criterion. The abstract gives counts and percentages without denominators (195 attenders; 99 and 96 implied by the percentages).",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Median satisfaction score",
+          "role": "secondary",
+          "measure": "5-year median satisfaction score, 0-100 (interquartile range)",
+          "values": {
+            "exp": "90 (75-99)",
+            "ctl": "98 (86-100)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Peri- or postoperative complication before crossover",
+          "values": {
+            "exp": "22 (22.2%)",
+            "ctl": "42 (43.8%)"
+          },
+          "locator": "abstract",
+          "note": "Difference 21.5 percentage points (95% CI 8.4-33.8); the abstract states that complications were twice as common in the TVT group. Denominators implied by the percentages are 99 and 96."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized, treated as randomized, attended at 5 years",
+          "value": "223 randomized; 212 treated as randomized; 195 (92.0%) attended",
+          "locator": "abstract",
+          "note": "Per-arm attendance is implied by the percentages in the abstract (hydrogel 99, TVT 96)."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/PAHG-TVT-5yr-NEJMEvid-2025.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/bulking-vs-tvt",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

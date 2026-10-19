@@ -1,0 +1,457 @@
+{
+  "id": "apical-suspension",
+  "name": "ASPIRe",
+  "aliases": [
+    "Apical Suspension Repair for Vault Prolapse in a Three-Arm Randomized Trial",
+    "Apical Suspension Repair for Vaginal Vault Prolapse"
+  ],
+  "nct": "NCT02676973",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-apical-suspension",
+      "lane": "abdominal-vs-vaginal"
+    }
+  ],
+  "question": "Does sacrocolpopexy or transvaginal mesh lower composite treatment failure compared with transvaginal native-tissue suspension for vault prolapse after hysterectomy, and is vaginally placed mesh noninferior to sacrocolpopexy?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "participants masked until surgery was completed; masked personnel performed examinations and adverse event assessments from the 6-week visit",
+    "type": "superiority",
+    "n": 376,
+    "arms": [
+      {
+        "key": "scp",
+        "label": "Sacrocolpopexy with mesh",
+        "role": "experimental",
+        "n": 121
+      },
+      {
+        "key": "tvm",
+        "label": "transvaginal mesh (Uphold LITE)",
+        "role": "experimental",
+        "n": 116
+      },
+      {
+        "key": "ntr",
+        "label": "transvaginal native-tissue apical repair",
+        "role": "control",
+        "n": 123
+      }
+    ],
+    "population": "Women aged 21 or older with symptomatic vaginal vault prolapse beyond the hymen after total hysterectomy; 376 randomized, 360 treated (arm sizes are treated participants).",
+    "description": "Nine-center, three-arm, superiority and noninferiority randomized trial",
+    "locator": "PDF pp1-4, Figure 1; journal pp845-848"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Sacrocolpopexy beat native tissue; mesh was noninferior to sacrocolpopexy but missed adjusted superiority over native tissue.",
+  "takeaway": "Among 360 operated women with symptomatic vault prolapse after hysterectomy, sacrocolpopexy had lower modeled 36-month composite failure than transvaginal native-tissue repair (28% versus 43%); Uphold LITE transvaginal mesh (29%) was noninferior to sacrocolpopexy but not superior to native-tissue repair after multiplicity adjustment.",
+  "reports": [
+    {
+      "id": "apical-suspension-2024",
+      "kind": "primary",
+      "label": "36-month randomized report",
+      "published": "2024-05-22",
+      "cutoff": null,
+      "citation": "Menefee SA, Richter HE, Myers D, et al. Apical suspension repair for vaginal vault prolapse: a randomized clinical trial. *JAMA Surg.* 2024;159(8):845-855. doi:10.1001/jamasurg.2024.1206",
+      "doi": "10.1001/jamasurg.2024.1206",
+      "pmid": "38776067",
+      "followUp": "Analysis when the last participant reached 36 months (July 2022); 296/360 (82%) completed follow-up",
+      "followUpLocator": "PDF p3; journal p847",
+      "results": [
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "primary",
+          "measure": "Adjusted 36-month failure probability, sacrocolpopexy versus native-tissue repair (superiority, alpha 0.01, MITT-NTR population)",
+          "values": {
+            "scp": "28%",
+            "ntr": "43%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.57,
+            "ci": [
+              0.33,
+              0.98
+            ],
+            "ciLevel": "99%",
+            "p": "0.008"
+          },
+          "met": true,
+          "note": "Composite of retreatment for prolapse (pessary or surgery), any POP-Q measure beyond the hymen, or any bothersome bulge on the PFDI question. 95% CIs for the failure probabilities were 20%-37% and 35%-53%. Interval-censored proportional hazards model with piecewise exponential hazards, adjusted for site and age category.",
+          "locator": "PDF pp1,4,7, Table 2; journal pp845,848,851"
+        },
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "primary",
+          "measure": "Adjusted 36-month failure probability, transvaginal mesh versus sacrocolpopexy (noninferiority, margin HR 1.93, alpha 0.03, per-protocol population)",
+          "values": {
+            "scp": "26%",
+            "tvm": "27%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.05,
+            "p": "0.01"
+          },
+          "met": true,
+          "note": "Upper one-sided 97% confidence limit 1.65, below the 1.93 margin (the margin corresponded to a 15-point difference in 2-year failure risk, 35% versus 20%). In the modified intention-to-treat population the 36-month probabilities were 29% with transvaginal mesh and 27% with sacrocolpopexy.",
+          "locator": "PDF pp1,4,7, Table 2; journal pp845,848,851"
+        },
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "primary",
+          "measure": "Adjusted 36-month failure probability, transvaginal mesh versus native-tissue repair (superiority, alpha 0.01, MITT-NTR population)",
+          "values": {
+            "tvm": "29%",
+            "ntr": "43%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.6,
+            "ci": [
+              0.34,
+              1.03
+            ],
+            "ciLevel": "99%",
+            "p": "0.02"
+          },
+          "met": false,
+          "note": "Did not reach the adjusted alpha of 0.01. 95% CI for the mesh failure probability 21%-38%.",
+          "locator": "PDF pp1,4,7, Table 2; journal pp845,848,851"
+        },
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "key-secondary",
+          "measure": "Step-down superiority test, transvaginal mesh versus sacrocolpopexy (alpha 0.03, modified intention-to-treat)",
+          "values": {
+            "scp": "27%",
+            "tvm": "29%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.08,
+            "ci": [
+              0.65,
+              1.78
+            ],
+            "ciLevel": "97%",
+            "p": "0.76"
+          },
+          "met": false,
+          "note": "Planned after noninferiority was shown; mesh was not superior to sacrocolpopexy.",
+          "locator": "PDF p7, Table 2; journal p851"
+        },
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "secondary",
+          "measure": "Supportive per-protocol analysis, transvaginal mesh versus native-tissue repair",
+          "effect": {
+            "type": "HR",
+            "value": 0.57,
+            "ci": [
+              0.32,
+              1.0
+            ],
+            "ciLevel": "99%",
+            "p": "0.01"
+          },
+          "note": "Mesh met the superiority threshold in this supportive population only; the primary population did not.",
+          "locator": "PDF p4; journal p848"
+        },
+        {
+          "endpoint": "Composite treatment failure",
+          "role": "descriptive",
+          "measure": "Crude cumulative failure, modified intention-to-treat",
+          "values": {
+            "scp": "32% (38/119)",
+            "tvm": "32% (37/116)",
+            "ntr": "45% (55/123)"
+          },
+          "note": "Sacrocolpopexy denominator excludes the 2 participants switched intraoperatively to mesh (MITT-NTR population); it is 121 in the full modified intention-to-treat population.",
+          "locator": "PDF p7, Table 2; journal p851"
+        },
+        {
+          "endpoint": "Retreatment for prolapse",
+          "role": "secondary",
+          "measure": "Retreatment (pessary or surgery) through 36 months",
+          "values": {
+            "scp": "4% (5/120)",
+            "tvm": "3% (3/113)",
+            "ntr": "7% (8/118)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.33"
+          },
+          "note": "P across the three arms. Failure was usually anatomic only (52%-63%) or symptomatic only (27%-39%).",
+          "locator": "PDF p4; journal p848"
+        },
+        {
+          "endpoint": "Patient Global Impression of Improvement",
+          "role": "secondary",
+          "measure": "Much better or very much better at 3 years",
+          "values": {
+            "scp": "95% (88/93)",
+            "tvm": "94% (84/89)",
+            "ntr": "87% (79/91)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.12"
+          },
+          "note": "Overall P across arms.",
+          "locator": "PDF p7; journal p851"
+        },
+        {
+          "endpoint": "Leading edge of prolapse (POP-Q)",
+          "role": "secondary",
+          "measure": "Mean postoperative leading edge of prolapse through 36 months, cm",
+          "values": {
+            "scp": "-1.4 cm",
+            "tvm": "-0.9 cm",
+            "ntr": "-0.6 cm"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Sacrocolpopexy better supported than mesh (P=0.03) and native tissue (P<0.001). Total vaginal length was longer after sacrocolpopexy than native tissue (mean difference 1.1 cm, 95% CI 0.7-1.4) and mesh (1.3 cm, 95% CI 0.9-1.6).",
+          "locator": "PDF p4; journal p848"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Vaginal mesh exposure related to the apical procedure",
+          "values": {
+            "scp": "4/120 (3%)",
+            "tvm": "6/115 (5%)"
+          },
+          "locator": "PDF p7; journal p851",
+          "note": "Not applicable to native-tissue repair."
+        },
+        {
+          "label": "Suture exposure 12 weeks after surgery",
+          "values": {
+            "scp": "6/120 (5%)",
+            "tvm": "3/115 (3%)",
+            "ntr": "17/125 (14%)"
+          },
+          "locator": "PDF p7; journal p851",
+          "note": "P=0.02. One participant each in the native-tissue and mesh arms required reoperation for vaginal exposure (suture and mesh, respectively)."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "scp": "17/120 (14%)",
+            "tvm": "42/115 (37%)",
+            "ntr": "43/125 (34%)"
+          },
+          "locator": "PDF p7; journal p851",
+          "note": "Overall P<0.001."
+        },
+        {
+          "label": "Return to the operating room during the initial hospitalization",
+          "values": {
+            "tvm": "2/115 (2%)"
+          },
+          "locator": "PDF p7; journal p851",
+          "note": "Occurred only in the transvaginal mesh arm."
+        },
+        {
+          "label": "Visceral organ injury and intraoperative change in surgical management",
+          "locator": "PDF p7; journal p851",
+          "note": "Visceral organ injuries occurred in 3%-5% per arm without a difference among arms; intraoperative events that changed management occurred in 2%-4% per arm."
+        },
+        {
+          "label": "Modified Dindo grade III or higher events and serious adverse events",
+          "locator": "PDF p7; journal p851",
+          "note": "No difference among arms."
+        },
+        {
+          "label": "New or worsening dyspareunia",
+          "locator": "PDF p7; journal p851",
+          "note": "9%-11% per arm among sexually active participants, without a difference among arms."
+        },
+        {
+          "label": "Deaths during follow-up",
+          "values": {
+            "scp": "1",
+            "tvm": "5",
+            "ntr": "2"
+          },
+          "locator": "PDF pp4,7, Figure 1; journal pp848,851",
+          "note": "Eight deaths in total; one cardiorespiratory arrest on postoperative day 16 was judged possibly related to the intervention, the other seven occurred on postoperative days 321 to 1802 and were judged unrelated."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Native-tissue repair performed",
+          "values": {
+            "ntr": "Sacrospinous ligament fixation 110/134 (82%); uterosacral ligament suspension 24/134 (18%)"
+          },
+          "locator": "PDF p3; journal p847",
+          "note": "Both required 2 permanent and 2 delayed absorbable monofilament sutures attached to the vagina."
+        },
+        {
+          "label": "Sacrocolpopexy approach",
+          "values": {
+            "scp": "Robotic 69/113 (61%); laparoscopic 26/113 (23%); open 18/113 (16%)"
+          },
+          "locator": "PDF p3; journal p847"
+        },
+        {
+          "label": "Transvaginal mesh device",
+          "values": {
+            "tvm": "Uphold LITE support system (Boston Scientific)"
+          },
+          "locator": "PDF p2; journal p846"
+        },
+        {
+          "label": "Operative time and blood loss",
+          "value": "Median operative time was 90 minutes shorter in the vaginal arms than with sacrocolpopexy; blood loss was similar among arms.",
+          "locator": "PDF p4; journal p848"
+        },
+        {
+          "label": "Concomitant repairs",
+          "value": "More than three-quarters of vaginal operations included anterior colporrhaphy and two-thirds included posterior colporrhaphy or perineorrhaphy; full-length midurethral slings were permitted.",
+          "locator": "PDF pp2-3; journal pp846-847"
+        },
+        {
+          "label": "Intraoperative conversion to the other randomized approach",
+          "values": {
+            "scp": "7/129 (5%): 5 to native tissue, 2 to mesh, for intra-abdominal adhesions",
+            "tvm": "5/121 (4%) to native tissue: vaginal adhesions 1, cystotomy 4"
+          },
+          "locator": "PDF p3; journal p847",
+          "note": "Two further participants were switched preoperatively (1 from sacrocolpopexy and 1 from mesh to native tissue)."
+        },
+        {
+          "label": "Randomization after the FDA halt on transvaginal mesh kits",
+          "value": "In April 2019 the 5 participants still awaiting mesh surgery were re-randomized 1:1 to sacrocolpopexy or native tissue.",
+          "locator": "PDF p2; journal p846"
+        },
+        {
+          "label": "Examination completeness during the COVID-19 pandemic",
+          "value": "Physical examination was unavailable at 294/670 visits (44%) in 2020 and 181/622 visits (29%) in 2021; 301/360 participants (84%) completed a final-visit examination.",
+          "locator": "PDF p3; journal p847"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/jamasurgery_menefee_2024_oi_240026_1723061378.18838.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "apical-suspension-2025-body-image",
+      "kind": "secondary",
+      "label": "Body image and sexual function",
+      "published": "2025-02-06",
+      "cutoff": null,
+      "citation": "Andy UU, Nowak K, Menefee SA, et al. Body image and sexual function improve following prolapse repair. *Am J Obstet Gynecol.* 2025;233(3):182.e1-182.e12. doi:10.1016/j.ajog.2025.01.042",
+      "doi": "10.1016/j.ajog.2025.01.042",
+      "pmid": "39922444",
+      "followUp": "Baseline, 6, 12, 24 and 36 months",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Body image",
+          "role": "secondary",
+          "measure": "Change in Body Image in Pelvic Organ Prolapse (BIPOP) score from baseline, 335 women",
+          "effect": {
+            "type": "none"
+          },
+          "note": "123 native tissue, 107 sacrocolpopexy and 105 mesh. Improved by 6 months and stayed improved to 36 months in every arm, with no difference among arms in the change or in the proportion reaching the minimally important difference.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Sexual function and activity",
+          "role": "secondary",
+          "measure": "Sexual activity across visits and association of BIPOP change with PISQ-IR change",
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "99/335 (30%) were sexually active at every visit and 131/335 (39%) at none. Among sexually active women, BIPOP and PISQ-IR changes were correlated at each visit, and the association persisted after adjustment for baseline sexual function, site, age, surgical arm and baseline dyspareunia.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/ASPIRe-Andy-Body-Image-Sexual-Function-2025-Author-Manuscript.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "apical-suspension-2025-frailty",
+      "kind": "secondary",
+      "label": "Frailty and mobility in women aged 65 or older",
+      "published": "2025-11-08",
+      "cutoff": null,
+      "citation": "Erekson E, Menefee SA, Whitworth R, et al. Outcomes by frailty and mobility in older patients undergoing major urogynecologic surgery: a planned supplementary study of the apical suspension repair for vault prolapse in a three-arm randomized (ASPIRe) trial. *Am J Obstet Gynecol.* 2026;234(3):689-729. doi:10.1016/j.ajog.2025.11.002",
+      "doi": "10.1016/j.ajog.2025.11.002",
+      "pmid": "41213491",
+      "followUp": "Geriatric and treatment outcomes assessed every 6 months for 36 up to 60 months",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Time to composite treatment failure",
+          "role": "secondary",
+          "measure": "Prefrail or frail (Robinson Frailty Index 2 or higher) versus nonfrail, adjusted hazard ratio",
+          "effect": {
+            "type": "HR",
+            "value": 2.1,
+            "ci": [
+              1.2,
+              3.6
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Nested cohort of 146 women aged 65 or older (50 native tissue, 47 sacrocolpopexy, 48 mesh). Compromised mobility was also associated with shorter time to failure.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Need for added social support",
+          "role": "secondary",
+          "measure": "Prefrail or frail women living alone before surgery versus nonfrail women, changes in living arrangements for extra support immediately after surgery",
+          "effect": {
+            "type": "none",
+            "p": "0.04"
+          },
+          "note": "19% versus 6%. Other geriatric-specific outcomes did not differ between prefrail or frail and nonfrail women.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/ASPIRe-Erekson-Frailty-Mobility-Author-Manuscript.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "optimal",
+      "note": "ASPIRe's native-tissue arm allowed the two operations OPTIMAL compared: sacrospinous fixation (82% of the arm) or uterosacral suspension."
+    },
+    {
+      "type": "parallel",
+      "target": "super",
+      "note": "Also tested the Uphold mesh kit, with hysteropexy; ASPIRe cites its mesh-exposure rates for comparison."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/apical-suspension",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

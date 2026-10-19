@@ -1,0 +1,490 @@
+{
+  "id": "altar",
+  "name": "ALTAR",
+  "aliases": [
+    "Alternative to Prophylactic Antibiotics for the Treatment of Recurrent Urinary Tract Infections in Women",
+    "ISRCTN70219762"
+  ],
+  "nct": null,
+  "registry": "ISRCTN70219762; EudraCT 2015-003487-36",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "prophylaxis"
+    }
+  ],
+  "question": "Is methenamine hippurate noninferior to daily low-dose antibiotic prophylaxis for preventing symptomatic, antibiotic-treated urinary tract infection in women with recurrent infection?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 240,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Methenamine hippurate 1 g twice daily",
+        "role": "experimental",
+        "n": 120
+      },
+      {
+        "key": "ctl",
+        "label": "daily low-dose antibiotic prophylaxis (nitrofurantoin, trimethoprim or cefalexin)",
+        "role": "control",
+        "n": 120
+      }
+    ],
+    "population": "240 women with recurrent urinary tract infection (at least three episodes in 12 months or two in six months) who needed prophylaxis, recruited at eight UK secondary-care centers.",
+    "description": "Pragmatic, multicenter, open-label noninferiority randomized trial",
+    "locator": "BMJ full text, Abstract, Methods (Participants, Randomisation) and Results (Participants)"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Difference of 0.49 episodes per person-year was inside the margin of 1; UTI admissions occurred only with methenamine.",
+  "takeaway": "In women with recurrent urinary tract infection, methenamine hippurate was noninferior to daily low-dose nitrofurantoin, trimethoprim or cefalexin over 12 months (1.38 versus 0.89 antibiotic-treated episodes per person-year; difference 0.49, margin 1), in an open-label trial.",
+  "reports": [
+    {
+      "id": "altar-2022",
+      "kind": "primary",
+      "label": "12-month randomized report (BMJ)",
+      "published": "2022-03-09",
+      "cutoff": null,
+      "citation": "Harding C, Mossop H, Homer T, et al. \"Alternative to prophylactic antibiotics for the treatment of recurrent urinary tract infections in women: multicentre, open label, randomised, non-inferiority trial.\" *BMJ.* 2022;376:e068229. doi:10.1136/bmj-2021-0068229",
+      "doi": "10.1136/bmj-2021-0068229",
+      "pmid": "35264408",
+      "followUp": "12 months of treatment plus 6 months of post-treatment follow-up; final visit January 2020",
+      "followUpLocator": "BMJ full text, Methods (Study design)",
+      "results": [
+        {
+          "endpoint": "Symptomatic, antibiotic-treated UTI",
+          "role": "primary",
+          "measure": "Incidence during the 12-month treatment period, modified intention-to-treat (at least 6 months observed); episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "1.38 per person-year (141 episodes; n=103)",
+            "ctl": "0.89 per person-year (90 episodes; n=102)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.49,
+            "ci": [
+              0.15,
+              0.84
+            ],
+            "ciLevel": "90% CI"
+          },
+          "met": true,
+          "note": "Noninferiority margin of 1 episode per person-year (set by a patient group); met because the upper limit of the 90% CI was below 1. 95% CI for the difference 0.08 to 0.90; adjusted incidence rate ratio 1.52 (95% CI 1.16 to 1.98). Incidence 0.89 (95% CI 0.65 to 1.12) with antibiotics and 1.38 (1.05 to 1.72) with methenamine.",
+          "locator": "BMJ full text, Results (Primary outcome), Table 2; abstract"
+        },
+        {
+          "endpoint": "Symptomatic, antibiotic-treated UTI",
+          "role": "secondary",
+          "measure": "Prespecified sensitivity analysis, strict intention-to-treat (all randomized); episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "1.40 per person-year (n=120)",
+            "ctl": "0.88 per person-year (n=120)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.53,
+            "ci": [
+              0.2,
+              0.86
+            ],
+            "ciLevel": "90% CI"
+          },
+          "note": "Incidence rate ratio 1.58 (95% CI 1.24 to 2.03).",
+          "locator": "BMJ full text, Table 2"
+        },
+        {
+          "endpoint": "Symptomatic, antibiotic-treated UTI",
+          "role": "secondary",
+          "measure": "Prespecified sensitivity analysis, per protocol (at least 90% adherence with any trial preventive treatment); episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "1.29 per person-year (n=86)",
+            "ctl": "0.87 per person-year (n=84)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.42,
+            "ci": [
+              0.05,
+              0.79
+            ],
+            "ciLevel": "90% CI"
+          },
+          "note": "Incidence rate ratio 1.44 (95% CI 1.02 to 2.02). Switching between strategies counted as adherent.",
+          "locator": "BMJ full text, Table 2"
+        },
+        {
+          "endpoint": "Symptomatic, antibiotic-treated UTI",
+          "role": "exploratory",
+          "measure": "Post hoc strict per-protocol analysis (at least 90% adherence with the originally allocated treatment only); episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "1.13 per person-year (n=71)",
+            "ctl": "0.83 per person-year (n=82)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.3,
+            "ci": [
+              -0.08,
+              0.67
+            ],
+            "ciLevel": "90% CI"
+          },
+          "note": "Incidence rate ratio 1.35 (95% CI 1.06 to 1.71).",
+          "locator": "BMJ full text, Table 2"
+        },
+        {
+          "endpoint": "Symptomatic, antibiotic-treated UTI",
+          "role": "secondary",
+          "measure": "Incidence in the 6 months after treatment; episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "1.72 per person-year",
+            "ctl": "1.19 per person-year"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.53,
+            "ci": [
+              -0.03,
+              1.09
+            ],
+            "ciLevel": "95% CI"
+          },
+          "note": "Incidence 1.19 (95% CI 0.86 to 1.52) with antibiotics and 1.72 (1.27 to 2.18) with methenamine.",
+          "locator": "BMJ full text, Results (Secondary outcomes); abstract of the HTA report gives the same rates"
+        },
+        {
+          "endpoint": "Microbiologically confirmed UTI",
+          "role": "secondary",
+          "measure": "Incidence during the 12-month treatment period; episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "0.53 per person-year",
+            "ctl": "0.41 per person-year"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.11,
+            "ci": [
+              -0.12,
+              0.35
+            ]
+          },
+          "note": "Symptomatic antibiotic-treated episodes with a positive urine culture; incidence 0.41 (95% CI 0.27 to 0.56) with antibiotics and 0.53 (0.34 to 0.72) with methenamine. A urine sample accompanied 183/231 episodes (79%) and was positive in 96 (52%) of these. The confidence level of the difference is not stated in the text.",
+          "locator": "BMJ full text, Results (Secondary outcomes)"
+        },
+        {
+          "endpoint": "Microbiologically confirmed UTI",
+          "role": "secondary",
+          "measure": "Incidence in the 6 months after treatment; episodes per person-year; absolute difference, methenamine minus antibiotics",
+          "values": {
+            "exp": "0.86 per person-year",
+            "ctl": "0.48 per person-year"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.38,
+            "ci": [
+              0.04,
+              0.72
+            ]
+          },
+          "note": "Incidence 0.48 (95% CI 0.28 to 0.68) with antibiotics and 0.86 (0.59 to 1.14) with methenamine. A urine sample accompanied 93/141 post-treatment episodes (66%) and was positive in 65 (70%). The confidence level of the difference is not stated in the text.",
+          "locator": "BMJ full text, Results (Secondary outcomes)"
+        },
+        {
+          "endpoint": "Participants receiving therapeutic antibiotics for UTI",
+          "role": "secondary",
+          "measure": "Participants with at least one therapeutic antibiotic course for UTI during the 12-month treatment period",
+          "values": {
+            "exp": "67 (56%)",
+            "ctl": "51 (43%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The text gives counts and percentages without stating the denominator. In the 6 months after treatment, median days on therapeutic antibiotics among the 52 methenamine and 48 antibiotic recipients were 13.5 (IQR 6.5 to 23) with methenamine and 7.5 (4 to 15) with antibiotics. Antibiotics for other infections: 28/98 (29%) versus 15/97 (15%).",
+          "locator": "BMJ full text, Results (Secondary outcomes)"
+        },
+        {
+          "endpoint": "UTI-free participants",
+          "role": "secondary",
+          "measure": "Participants with no UTI episode during the 12-month treatment period",
+          "values": {
+            "exp": "43%",
+            "ctl": "54%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported in the Discussion without counts or a denominator.",
+          "locator": "BMJ full text, Discussion"
+        },
+        {
+          "endpoint": "Antibiotic resistance, perineal E. coli",
+          "role": "exploratory",
+          "measure": "Participants with E. coli (optional perineal swabs) resistant to at least one antibiotic at the 6- or 12-month visit",
+          "values": {
+            "exp": "39/70 (56%)",
+            "ctl": "46/64 (72%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.05"
+          },
+          "note": "Chi-square test; the report calls its antimicrobial resistance analyses exploratory, with no adjustment for multiple testing. Baseline proportions were similar between groups.",
+          "locator": "BMJ full text, Results (Antimicrobial resistance), Fig 2"
+        },
+        {
+          "endpoint": "Multidrug resistance, perineal E. coli",
+          "role": "exploratory",
+          "measure": "Participants with multidrug-resistant E. coli (optional perineal swabs) at month 18, six months after treatment",
+          "values": {
+            "exp": "9/45 (20%)",
+            "ctl": "2/39 (5%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.06"
+          },
+          "note": "Fisher exact test; multidrug resistance was resistance to at least one drug in at least three antimicrobial categories.",
+          "locator": "BMJ full text, Results (Antimicrobial resistance), Fig 2"
+        },
+        {
+          "endpoint": "Asymptomatic bacteriuria",
+          "role": "exploratory",
+          "measure": "Urine samples with a positive culture during the 12-month treatment period (post hoc analysis)",
+          "values": {
+            "exp": "44/326 (14%)",
+            "ctl": "22/323 (7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0048"
+          },
+          "note": "Samples, not participants. The overall 18-month rate of asymptomatic bacteriuria was similar between groups.",
+          "locator": "BMJ full text, Results (Secondary outcomes)"
+        },
+        {
+          "endpoint": "Treatment satisfaction, convenience domain",
+          "role": "secondary",
+          "measure": "Mean treatment satisfaction questionnaire for medication convenience score (SD)",
+          "values": {
+            "exp": "82.2 (18.4)",
+            "ctl": "91.4 (12.7)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.001"
+          },
+          "note": "The other satisfaction domains (effectiveness, side effects, global) did not differ by arm in the report's text.",
+          "locator": "BMJ full text, Results (Treatment satisfaction)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Participants reporting an adverse reaction",
+          "values": {
+            "exp": "35/127 (28%)",
+            "ctl": "34/142 (24%)"
+          },
+          "locator": "BMJ full text, Table 3; abstract",
+          "note": "Denominators are participants receiving each treatment (analysed by treatment received, 127 and 142), not randomized arms. Most reactions were mild."
+        },
+        {
+          "label": "Severe adverse event (worst grade per participant)",
+          "values": {
+            "exp": "6/127 (5%)",
+            "ctl": "8/142 (6%)"
+          },
+          "locator": "BMJ full text, Table 3",
+          "note": "By treatment received. Moderate worst-grade events: 29 (23%) versus 34 (24%)."
+        },
+        {
+          "label": "Serious adverse reactions",
+          "values": {
+            "exp": "0",
+            "ctl": "2"
+          },
+          "locator": "BMJ full text, Results (Adverse events) and Discussion",
+          "note": "Severe abdominal pain requiring admission and severe derangement of liver function tests, both in the antibiotic arm and classified as possibly or probably related to treatment."
+        },
+        {
+          "label": "Hospital admission for UTI (18 months)",
+          "values": {
+            "exp": "4 participants",
+            "ctl": "0 participants"
+          },
+          "locator": "BMJ full text, Results (Adverse events) and Discussion",
+          "note": "Four participants allocated to methenamine; the Discussion states that these participants were all in the methenamine arm. Low numbers."
+        },
+        {
+          "label": "Febrile UTI, temperature at least 38 degrees C (18 months)",
+          "values": {
+            "exp": "6 participants",
+            "ctl": "0 participants"
+          },
+          "locator": "BMJ full text, Results (Adverse events) and Discussion",
+          "note": "Six participants allocated to methenamine; the Discussion states that these participants were all in the methenamine arm."
+        },
+        {
+          "label": "Nausea",
+          "values": {
+            "exp": "5/127 (4%)",
+            "ctl": "12/142 (8%)"
+          },
+          "locator": "BMJ full text, Table 3",
+          "note": "By treatment received. Only events in at least 3% of participants in either group were tabulated."
+        },
+        {
+          "label": "Renal and liver function",
+          "locator": "BMJ full text, Results (Adverse events)",
+          "note": "Blood tests every three months showed little difference in the distribution of measurements between groups or over time."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Regimen",
+          "values": {
+            "exp": "1 g orally twice daily for 12 months",
+            "ctl": "Once daily for 12 months: nitrofurantoin 50 or 100 mg, trimethoprim 100 mg or cefalexin 250 mg"
+          },
+          "locator": "BMJ full text, Methods (Procedures)",
+          "note": "The antibiotic was chosen from previous urine cultures and allergy or intolerance history."
+        },
+        {
+          "label": "Antibiotic prescribed in the antibiotic arm",
+          "value": "Nitrofurantoin 66/120 (55%), trimethoprim 30/120 (25%), cefalexin 24/120 (20%).",
+          "locator": "BMJ full text, Results (Participants)"
+        },
+        {
+          "label": "Switching between strategies",
+          "values": {
+            "exp": "22/120 (18%) switched to antibiotic prophylaxis",
+            "ctl": "7/120 (6%) switched to methenamine"
+          },
+          "locator": "BMJ full text, Results (Participants)",
+          "note": "Crossover was allowed; the primary analysis kept participants in their allocated arm."
+        },
+        {
+          "label": "At least 90% adherence",
+          "values": {
+            "exp": "86 of 103 with any trial treatment; 71 with the allocated treatment only",
+            "ctl": "84 of 102 with any trial treatment; 82 with the allocated treatment only"
+          },
+          "locator": "BMJ full text, Table 2 (per-protocol populations)",
+          "note": "The 86/103 and 84/102 denominators are the modified intention-to-treat arms; the strict per-protocol counts have no stated denominator."
+        },
+        {
+          "label": "Follow-up and monitoring",
+          "value": "Visits every 3 months to month 18; central-laboratory urine culture at baseline, each visit and each UTI; renal and liver blood tests; optional perineal swabs at baseline and 6-monthly.",
+          "locator": "BMJ full text, Methods (Procedures)"
+        },
+        {
+          "label": "Verification of the primary outcome",
+          "value": "Allocation of the primary outcome was verified from health records; a random sample was reviewed by a blinded independent clinician, who agreed in all cases.",
+          "locator": "BMJ full text, Discussion"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "altar-2022-hta",
+      "kind": "secondary",
+      "label": "NIHR HTA monograph with economic evaluation",
+      "published": "2022-05-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give 2022-05 only",
+      "cutoff": null,
+      "citation": "Harding C, Chadwick T, Homer T, et al. \"Methenamine hippurate compared with antibiotic prophylaxis to prevent recurrent urinary tract infections in women: the ALTAR non-inferiority RCT.\" *Health Technol Assess.* 2022;26(23):1-172. doi:10.3310/QOIZ6538",
+      "doi": "10.3310/QOIZ6538",
+      "pmid": "35535708",
+      "followUp": "12 months of treatment plus 6 months of post-treatment observation",
+      "followUpLocator": "abstract (PubMed)",
+      "results": [
+        {
+          "endpoint": "Cost-effectiveness",
+          "role": "secondary",
+          "measure": "Incremental cost per quality-adjusted life-year gained, Markov cohort model over the expected lifetime",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract states that methenamine was on average less costly and more effective in quality-adjusted life-years than antibiotics, but that this finding was not consistent over the longer term, and that progressive data loss hampered the economic evaluation. Cost and QALY values are not given in the abstract.",
+          "locator": "abstract (PubMed)"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/ALTAR-Harding-HTA-2022.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "altar-2026-hodgkinson",
+      "kind": "biomarker",
+      "label": "Formaldehyde resistance and urine composition (PLOS Pathogens)",
+      "published": "2026-03-24",
+      "cutoff": null,
+      "citation": "Hodgkinson NC, Al-Rubaye T, Reed TCP, et al. \"Implications for methenamine hippurate use in recurrent urinary tract infection management: formaldehyde resistance and altered urinary composition.\" *PLoS Pathog.* 2026;22(3):e1014081. doi:10.1371/journal.ppat.1014081",
+      "doi": "10.1371/journal.ppat.1014081",
+      "pmid": "41875198",
+      "followUp": "Retrospective laboratory analysis of stored ALTAR urines (681 samples) and 191 sequenced E. coli isolates from the 18-month trial period",
+      "followUpLocator": "PLOS Pathogens full text, Results (opening paragraph)",
+      "results": [
+        {
+          "endpoint": "Formaldehyde-resistant E. coli",
+          "role": "descriptive",
+          "measure": "Sequenced ALTAR E. coli isolates growing in more than 1 mM formaldehyde (11 of 191, 5.8%, from 5 participants); isolates by arm",
+          "values": {
+            "exp": "10 isolates from 4 participants",
+            "ctl": "1 isolate from 1 participant (month-0 swab, before treatment)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Eight of the 11 isolates carried amino acid substitutions in the repressor FrmR and three carried plasmid-encoded frmA homologues. The per-arm isolate counts are tallied from the paper's Table 1; the paper states the 4-methenamine, 1-antibiotic split by participant. The authors describe in situ evolution in two methenamine participants over about 180 to 270 days and note that 4 of 98 methenamine participants carried resistant isolates.",
+          "locator": "PLOS Pathogens full text, Results (Fig 2, Table 1); abstract"
+        },
+        {
+          "endpoint": "Urine metabolite composition",
+          "role": "descriptive",
+          "measure": "HPLC components of 49 identified with higher peak area, methenamine (120 samples, 20 participants with detectable formaldehyde) versus antibiotic (55 samples, 10 participants)",
+          "values": {
+            "exp": "15 of 49 components higher",
+            "ctl": "3 of 49 components higher"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Components elevated with methenamine included formaldehyde, formate and glucose. Retrospective analysis of stored urines; the authors list this as a limitation.",
+          "locator": "PLOS Pathogens full text, Results (Urine composition), Fig 5; abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/altar",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

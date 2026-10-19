@@ -1,0 +1,833 @@
+{
+  "id": "pae-vs-turp",
+  "name": "St Gallen PAE trial",
+  "aliases": [
+    "Abt PAE versus TURP trial",
+    "PAE versus TURP (St Gallen Cantonal Hospital)",
+    "EKSG14/004"
+  ],
+  "nct": "NCT02054013",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "ablation-vs-turp"
+    }
+  ],
+  "question": "Is prostatic artery embolisation noninferior to TURP for relieving symptoms in men with medically refractory BPH-related lower urinary tract symptoms?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 103,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prostatic artery embolisation (PAE) with 250–400 µm microspheres",
+        "role": "experimental",
+        "n": 51
+      },
+      {
+        "key": "ctl",
+        "label": "monopolar transurethral resection of the prostate (TURP)",
+        "role": "control",
+        "n": 52
+      }
+    ],
+    "population": "Men aged 40 or older with medically refractory BPH-related LUTS (IPSS 8 or higher, Qmax below 12 mL/s or retention) and a 25 to 80 mL prostate who were candidates for TURP; 99 of 103 randomized were treated.",
+    "description": "Single-center, open-label noninferiority randomized trial",
+    "locator": "Methods, Participants and Randomisation; Results, Study patients (arm sizes of 51 and 52 derived: 48 and 51 analyzed plus 3 and 1 post-randomization exclusions)"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "Noninferiority not shown: 12-week IPSS difference of 1.54 points favored TURP, upper confidence limit 4.52 exceeded the 3-point margin.",
+  "takeaway": "Prostatic artery embolisation was compared with monopolar TURP in 103 randomized men with refractory BPH symptoms: 12-week IPSS fell 9.23 versus 10.77 points, but noninferiority within the 3-point margin was not shown (95% CI −1.45 to 4.52), and TURP improved flow and obstruction more.",
+  "reports": [
+    {
+      "id": "pae-vs-turp-2018",
+      "kind": "primary",
+      "label": "Primary report (12-week outcomes)",
+      "published": "2018-06-19",
+      "cutoff": null,
+      "citation": "Abt D, Hechelhammer L, Müllhaupt G, et al. \"Comparison of prostatic artery embolisation (PAE) versus transurethral resection of the prostate (TURP) for benign prostatic hyperplasia: randomised, open label, non-inferiority trial.\" *BMJ.* 2018;361:k2338. doi:10.1136/bmj.k2338",
+      "doi": "10.1136/bmj.k2338",
+      "pmid": "29921613",
+      "followUp": "12 weeks (primary endpoint); per-protocol analysis of 48 PAE and 51 TURP patients",
+      "followUpLocator": "Abstract; Results, Study patients",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean change in IPSS from baseline to 12 weeks, per protocol (PAE minus TURP; positive favors TURP)",
+          "values": {
+            "exp": "−9.23 points",
+            "ctl": "−10.77 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.54,
+            "ci": [
+              -1.45,
+              4.52
+            ],
+            "p": "0.17 (noninferiority); 0.31 (superiority)"
+          },
+          "met": false,
+          "note": "Prespecified noninferiority margin: a between-group difference below 3 points (one-sided t test, alpha 0.025). The baseline-adjusted analysis gave a difference of 2.87 points (95% CI 0.53 to 5.21; noninferiority P=0.46). 48 PAE and 51 TURP patients analyzed. The standard deviation of the IPSS change was 7.5 points, against 4.6 assumed in the sample size calculation (Discussion).",
+          "locator": "Abstract; Results, Primary endpoint"
+        },
+        {
+          "endpoint": "IPSS-related quality of life",
+          "role": "secondary",
+          "measure": "Mean change in IPSS quality-of-life score at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "−2.33 points",
+            "ctl": "−2.69 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.35,
+            "ci": [
+              -0.3,
+              1.0
+            ],
+            "p": "0.15"
+          },
+          "note": "",
+          "locator": "Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Maximum urinary flow rate",
+          "role": "secondary",
+          "measure": "Mean change in Qmax at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "+5.19 mL/s",
+            "ctl": "+15.34 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -10.15,
+            "ci": [
+              -14.67,
+              -5.63
+            ],
+            "p": "<0.001"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Mean change in postvoid residual volume at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "−86.36 mL",
+            "ctl": "−199.98 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 113.62,
+            "ci": [
+              39.25,
+              187.98
+            ],
+            "p": "0.003"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Prostate volume (MRI)",
+          "role": "secondary",
+          "measure": "Mean change in MRI prostate volume at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "−12.17 mL",
+            "ctl": "−30.27 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 18.11,
+            "ci": [
+              10.11,
+              26.1
+            ],
+            "p": "<0.001"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Detrusor pressure at maximum flow",
+          "role": "secondary",
+          "measure": "Mean change in detrusor pressure at Qmax at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "−17.17 cmH2O",
+            "ctl": "−41.07 cmH2O"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 23.91,
+            "ci": [
+              9.09,
+              38.72
+            ],
+            "p": "0.002"
+          },
+          "note": "",
+          "locator": "Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Shift to a less obstructive category",
+          "role": "secondary",
+          "measure": "Proportion shifting to a less obstructive ICS category on pressure-flow studies at 12 weeks",
+          "values": {
+            "exp": "56%",
+            "ctl": "93%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "note": "Denominators are not given in the text.",
+          "locator": "Abstract; Results, Secondary endpoints"
+        },
+        {
+          "endpoint": "Erectile function (IIEF-5)",
+          "role": "secondary",
+          "measure": "Mean change in IIEF-5 at 12 weeks (PAE minus TURP)",
+          "values": {
+            "exp": "−0.98 points",
+            "ctl": "−1.84 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.87,
+            "ci": [
+              -1.89,
+              3.63
+            ],
+            "p": "0.53"
+          },
+          "note": "",
+          "locator": "Results, Secondary endpoints"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-related adverse events, total events in first 12 weeks",
+          "values": {
+            "exp": "36 events",
+            "ctl": "70 events"
+          },
+          "locator": "Abstract; Results, Safety",
+          "note": "Events, not patients; postoperative pain and ejaculatory disorders were assessed separately and not counted. P=0.003."
+        },
+        {
+          "label": "At least one treatment-related adverse event",
+          "values": {
+            "exp": "62.5%",
+            "ctl": "70.6%"
+          },
+          "locator": "Results, Safety",
+          "note": "Relative risk after PAE 0.89 (95% CI 0.67 to 1.17; P=0.52). 48 PAE and 51 TURP patients."
+        },
+        {
+          "label": "Two or more treatment-related adverse events",
+          "values": {
+            "exp": "16.7%",
+            "ctl": "45.1%"
+          },
+          "locator": "Results, Safety",
+          "note": "Relative risk after PAE 0.37 (95% CI 0.18 to 0.75; P=0.005)."
+        },
+        {
+          "label": "Clavien grade 1 / 2 / 3 as a share of adverse events",
+          "values": {
+            "exp": "71.4% / 22.9% / 5.7%",
+            "ctl": "64.5% / 24.2% / 11.3%"
+          },
+          "locator": "Results, Safety",
+          "note": "Distribution across severity classes did not differ (P=0.44)."
+        },
+        {
+          "label": "Postoperative pain during hospital stay",
+          "values": {
+            "exp": "56.3%",
+            "ctl": "31.9%"
+          },
+          "locator": "Results, Safety",
+          "note": "Relative risk 1.76 (95% CI 1.08 to 2.87; P=0.03). Denominators are not given in the text."
+        },
+        {
+          "label": "Severe postoperative pain (VAS 6 or higher)",
+          "values": {
+            "exp": "18.8%",
+            "ctl": "4.3%"
+          },
+          "locator": "Results, Safety",
+          "note": "9 PAE patients; limited to the first 12 to 24 hours. Relative risk 4.41 (95% CI 1.00 to 19.33; P=0.06)."
+        },
+        {
+          "label": "Ejaculatory dysfunction among patients with assessable ejaculation",
+          "values": {
+            "exp": "56% (14/25)",
+            "ctl": "84% (21/25)"
+          },
+          "locator": "Results, Safety",
+          "note": "Relative risk 0.67 (95% CI 0.45 to 0.98); the report gives P=0.06."
+        },
+        {
+          "label": "Angiointervention-specific complications after PAE",
+          "values": {
+            "exp": "3 events in 48 patients",
+            "ctl": "Not applicable"
+          },
+          "locator": "Results, Safety",
+          "note": "One moderate puncture-site hematoma, one postembolization syndrome with fever lasting under 24 hours, and one limited bladder-wall ischemia that required transurethral removal of necrotic tissue. One patient reported de novo erectile dysfunction."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "PAE technique",
+          "value": "Right common femoral access; selective internal iliac arteriography with a 5 F catheter; prostatic arteries catheterized with 1.9 to 2.4 F microcatheters and embolized with 250 to 400 µm Embozene microspheres, bilaterally if possible; cone beam CT in challenging anatomy.",
+          "locator": "Methods, Interventions",
+          "note": "A single experienced interventional radiologist performed all embolizations. Success was defined as loss of the normal prostatic blush and complete stasis of flow in the prostatic arteries. A 16 F catheter was placed before the procedure and removed the morning after."
+        },
+        {
+          "label": "TURP technique",
+          "value": "Monopolar TURP with a 24 F resectoscope, 180 W cutting and 60 W coagulation, tungsten loop and mannitol-sorbitol irrigation; 20 F three-way catheter for at least 2 days.",
+          "locator": "Methods, Interventions",
+          "note": "Four experienced study physicians performed TURP."
+        },
+        {
+          "label": "Anesthesia",
+          "values": {
+            "exp": "Local anesthesia in 48 (100%)",
+            "ctl": "General 26 (51%); spinal 25 (49%)"
+          },
+          "locator": "Table 2",
+          "note": ""
+        },
+        {
+          "label": "Procedure time",
+          "values": {
+            "exp": "122.2 min (SD 25.8)",
+            "ctl": "69.5 min (SD 22.5)"
+          },
+          "locator": "Table 2",
+          "note": "P<0.001. TURP resection time 58.25 min (SD 24.33); resected tissue weight 25.20 g (SD 15.16)."
+        },
+        {
+          "label": "Bilateral embolization achieved",
+          "value": "36 of 48 (75.0%); unilateral in 12 (25.0%)",
+          "locator": "Table 2",
+          "note": ""
+        },
+        {
+          "label": "PAE fluoroscopy time, dose-area product and embolic volume",
+          "value": "Fluoroscopy 50.8 min (SD 17.5); dose-area product 176.5 Gy·cm² (SD 101.2); 1.0 mL (SD 0.4) of microspheres.",
+          "locator": "Table 2",
+          "note": "Unit printed as Gy/cm2 in the table."
+        },
+        {
+          "label": "Hemoglobin decrease at 24 hours",
+          "values": {
+            "exp": "4.3 g/L (SD 7.0)",
+            "ctl": "13.8 g/L (SD 11.0)"
+          },
+          "locator": "Table 2",
+          "note": "P=0.001."
+        },
+        {
+          "label": "Bladder catheter time",
+          "values": {
+            "exp": "1.3 days (SD 1.4)",
+            "ctl": "3.3 days (SD 1.4)"
+          },
+          "locator": "Table 2",
+          "note": "P=0.001."
+        },
+        {
+          "label": "Hospital stay",
+          "values": {
+            "exp": "2.2 days (SD 0.6)",
+            "ctl": "4.2 days (SD 1.7)"
+          },
+          "locator": "Table 2",
+          "note": "P=0.001."
+        },
+        {
+          "label": "Post-randomization exclusions",
+          "value": "Four of 103 randomized patients were not analyzed: 2 allocated to PAE and 1 to TURP refused surgery, and PAE was not possible in 1 patient because of vascular disease.",
+          "locator": "Results, Study patients",
+          "note": "That patient later had laser vaporization. All 48 PAE and 51 TURP patients treated per randomization attended the 12-week visit."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/pae-bmj2018-pmc.txt",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "pae-vs-turp-2019-prediction",
+      "kind": "post-hoc",
+      "label": "Outcome prediction after PAE (post hoc)",
+      "published": "2018-12-17",
+      "cutoff": null,
+      "citation": "Abt D, Müllhaupt G, Mordasini L, et al. \"Outcome prediction of prostatic artery embolization: post hoc analysis of a randomized, open-label, non-inferiority trial.\" *BJU Int.* 2019;124(1):134-144. doi:10.1111/bju.14632",
+      "doi": "10.1111/bju.14632",
+      "pmid": "30499637",
+      "followUp": "12 weeks, PAE arm only (48 patients)",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "exploratory",
+          "measure": "Spearman correlation of total prostate volume with relative IPSS change",
+          "values": {
+            "exp": "rs −0.35",
+            "ctl": "Not applicable"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Larger prostates, greater improvement.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "exploratory",
+          "measure": "Spearman correlation of central gland volume with relative IPSS change",
+          "values": {
+            "exp": "rs −0.34",
+            "ctl": "Not applicable"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Maximum urinary flow rate",
+          "role": "exploratory",
+          "measure": "Spearman correlation of total prostate volume with Qmax change",
+          "values": {
+            "exp": "rs 0.31",
+            "ctl": "Not applicable"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.05"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Maximum urinary flow rate",
+          "role": "exploratory",
+          "measure": "Spearman correlation of central gland volume with Qmax change",
+          "values": {
+            "exp": "rs 0.39",
+            "ctl": "Not applicable"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "exploratory",
+          "measure": "Optimal volume thresholds for predicting IPSS success on ROC analysis",
+          "values": {
+            "exp": "39 mL (total prostate); 38 mL (central gland)",
+            "ctl": "Not applicable"
+          },
+          "effect": {
+            "type": "none",
+            "p": null
+          },
+          "note": "Derived post hoc in the 48 PAE patients.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/pae-vs-turp-2019-prediction.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pae-vs-turp-2021",
+      "kind": "updated",
+      "label": "2-year follow-up",
+      "published": "2021-02-19",
+      "cutoff": null,
+      "citation": "Abt D, Müllhaupt G, Hechelhammer L, et al. \"Prostatic Artery Embolisation Versus Transurethral Resection of the Prostate for Benign Prostatic Hyperplasia: 2-yr Outcomes of a Randomised, Open-label, Single-centre Trial.\" *Eur Urol.* 2021;80(1):34-42. doi:10.1016/j.eururo.2021.02.008",
+      "doi": "10.1016/j.eururo.2021.02.008",
+      "pmid": "33612376",
+      "followUp": "24 months; 34 of 48 PAE and 47 of 51 TURP patients evaluable",
+      "followUpLocator": "Table 1",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction from baseline to 24 months (PAE minus TURP; positive favors TURP)",
+          "values": {
+            "exp": "−9.21 points",
+            "ctl": "−12.09 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.88,
+            "ci": [
+              0.04,
+              5.72
+            ],
+            "p": "0.047"
+          },
+          "note": "Protocol-defined secondary endpoint tested for superiority, with no correction for multiple testing; patients who had TURP after PAE were excluded from the 24-month analysis.",
+          "locator": "Abstract; Results, Patient-reported outcomes"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "exploratory",
+          "measure": "Mean IPSS reduction to 24 months with last observation carried forward (PAE minus TURP)",
+          "values": {
+            "exp": "−7.29 points",
+            "ctl": "−12.53 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.24,
+            "ci": [
+              2.23,
+              8.19
+            ],
+            "p": "0.001"
+          },
+          "note": "Reanalysis imputing the last available value for patients no longer evaluable at 24 months.",
+          "locator": "Discussion"
+        },
+        {
+          "endpoint": "IPSS-related quality of life",
+          "role": "secondary",
+          "measure": "Mean improvement in IPSS quality-of-life score at 24 months (TURP improvement minus PAE improvement)",
+          "values": {
+            "exp": "2.26 points",
+            "ctl": "3.26 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.99,
+            "ci": [
+              0.29,
+              1.69
+            ],
+            "p": "0.002"
+          },
+          "note": "Difference of 0.99 points in favor of TURP.",
+          "locator": "Results, Patient-reported outcomes"
+        },
+        {
+          "endpoint": "Maximum urinary flow rate",
+          "role": "secondary",
+          "measure": "Mean improvement in Qmax at 24 months (PAE minus TURP)",
+          "values": {
+            "exp": "+3.9 mL/s",
+            "ctl": "+10.23 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6.33,
+            "ci": [
+              -10.12,
+              -2.54
+            ],
+            "p": "<0.001"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Functional outcomes"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Mean reduction in postvoid residual at 24 months (TURP reduction minus PAE reduction)",
+          "values": {
+            "exp": "62.1 mL",
+            "ctl": "204.0 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 141.91,
+            "ci": [
+              43.31,
+              240.51
+            ],
+            "p": "0.005"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Functional outcomes"
+        },
+        {
+          "endpoint": "Prostate volume (MRI)",
+          "role": "secondary",
+          "measure": "Mean reduction in MRI prostate volume at 24 months (TURP reduction minus PAE reduction)",
+          "values": {
+            "exp": "10.66 mL",
+            "ctl": "30.20 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 19.54,
+            "ci": [
+              7.7,
+              31.38
+            ],
+            "p": "0.005"
+          },
+          "note": "",
+          "locator": "Abstract; Results, Functional outcomes"
+        },
+        {
+          "endpoint": "Detrusor pressure at maximum flow",
+          "role": "secondary",
+          "measure": "Mean reduction in detrusor pressure at Qmax at 24 months (TURP reduction minus PAE reduction)",
+          "values": {
+            "exp": "13.05 cmH2O",
+            "ctl": "37.12 cmH2O"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 24.07,
+            "ci": [
+              1.93,
+              46.2
+            ],
+            "p": "0.034"
+          },
+          "note": "42 of 81 evaluable patients declined urodynamics at 24 months.",
+          "locator": "Results, Functional outcomes"
+        },
+        {
+          "endpoint": "Shift to a less obstructive category",
+          "role": "secondary",
+          "measure": "Proportion shifting to a less obstructive ICS category from baseline to 24 months",
+          "values": {
+            "exp": "50% (10/20)",
+            "ctl": "82% (14/17)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.087"
+          },
+          "note": "Only patients who agreed to 24-month urodynamics.",
+          "locator": "Results, Functional outcomes"
+        },
+        {
+          "endpoint": "Erectile function (IIEF-5)",
+          "role": "secondary",
+          "measure": "Mean decrease in IIEF-5 at 24 months (TURP decrease minus PAE decrease; positive favors PAE)",
+          "values": {
+            "exp": "1.59 points",
+            "ctl": "2.44 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.85,
+            "ci": [
+              -1.99,
+              3.69
+            ],
+            "p": "0.551"
+          },
+          "note": "",
+          "locator": "Results, Patient-reported outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-related adverse events, total events through 24 months",
+          "values": {
+            "exp": "43 events",
+            "ctl": "78 events"
+          },
+          "locator": "Abstract; Results, Safety",
+          "note": "Events, not patients. P=0.005. First 3 months: 36 versus 70 events (P=0.003); months 3 to 24: 7 versus 8 events (P=1.00)."
+        },
+        {
+          "label": "Clavien grade 1 / 2 / 3 as a share of adverse events",
+          "values": {
+            "exp": "66% / 24% / 11%",
+            "ctl": "64% / 22% / 15%"
+          },
+          "locator": "Results, Safety",
+          "note": "Distribution across severity classes did not differ (P=0.79)."
+        },
+        {
+          "label": "Ejaculatory disorders among patients with assessable ejaculation",
+          "values": {
+            "exp": "56% (14/25)",
+            "ctl": "84% (21/25)"
+          },
+          "locator": "Results, Safety",
+          "note": "Complete anejaculation in 16% after PAE versus 52% after TURP."
+        },
+        {
+          "label": "TURP within 2 years because of unsatisfying outcome",
+          "values": {
+            "exp": "10 of 48 (21%)",
+            "ctl": "Not applicable"
+          },
+          "locator": "Abstract; Results, Dropouts and re-treatments",
+          "note": "TURP was the control procedure, so these patients were excluded from the 24-month analysis. Five of the 10 had unilateral embolization. There were no predefined criteria for further treatment."
+        },
+        {
+          "label": "Other surgical procedures",
+          "values": {
+            "exp": "1 patient (2%)",
+            "ctl": "5 of 51 (10%)"
+          },
+          "locator": "Results, Dropouts and re-treatments",
+          "note": "In addition to the 10 PAE patients who had TURP."
+        },
+        {
+          "label": "On pharmacotherapy for LUTS at 24 months",
+          "values": {
+            "exp": "0",
+            "ctl": "2 of 47 (4.3%)"
+          },
+          "locator": "Results, Dropouts and re-treatments",
+          "note": "Both TURP patients took antimuscarinics."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Patients evaluable at 24 months",
+          "values": {
+            "exp": "34 of 48",
+            "ctl": "47 of 51"
+          },
+          "locator": "Table 1",
+          "note": "The 14 PAE patients not evaluable at 24 months, including the 10 who had TURP, had poorer 3-month outcomes than those who remained."
+        },
+        {
+          "label": "Technical success of PAE",
+          "value": "75% (bilateral complete angiographic stasis)",
+          "locator": "Discussion",
+          "note": "The report describes this as a stringent definition; 5 of the 10 patients who later had TURP had unilateral embolization."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "pae-vs-turp-2024",
+      "kind": "updated",
+      "label": "5-year follow-up",
+      "published": "2024-03-25",
+      "cutoff": null,
+      "citation": "Müllhaupt G, Hechelhammer L, Graf N, et al. \"Prostatic Artery Embolisation Versus Transurethral Resection of the Prostate for Benign Prostatic Obstruction: 5-year Outcomes of a Randomised, Open-label, Noninferiority Trial.\" *Eur Urol Focus.* 2024;10(5):788-795. doi:10.1016/j.euf.2024.03.001",
+      "doi": "10.1016/j.euf.2024.03.001",
+      "pmid": "38531756",
+      "followUp": "60 months; 18 of 48 PAE and 38 of 51 TURP patients reached the 60-month visit",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction from baseline to 5 years (PAE minus TURP; positive favors TURP)",
+          "values": {
+            "exp": "−7.78 points",
+            "ctl": "−11.57 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.79,
+            "ci": [
+              -0.66,
+              8.24
+            ],
+            "p": "0.092"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Maximum urinary flow rate",
+          "role": "secondary",
+          "measure": "Mean improvement in Qmax at 5 years (PAE minus TURP)",
+          "values": {
+            "exp": "+3.59 mL/s",
+            "ctl": "+9.30 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -5.71,
+            "ci": [
+              -10.72,
+              -0.7
+            ],
+            "p": "0.027"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Mean reduction in postvoid residual at 5 years (TURP reduction minus PAE reduction)",
+          "values": {
+            "exp": "27.81 mL",
+            "ctl": "219.97 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 192.15,
+            "ci": [
+              83.79,
+              300.51
+            ],
+            "p": "0.001"
+          },
+          "note": "",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "TURP after PAE within 5 years",
+          "value": "42% of patients initially treated with PAE",
+          "locator": "EAU Guidelines on Non-neurogenic Male LUTS, March 2026, section 5.3.4.b (p52); the 5-year full text was not opened",
+          "note": "Figure as stated by the EAU guideline citing this report; the report's abstract does not give it."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/PAE-Abt-5yr-2024.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/pae-vs-turp",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

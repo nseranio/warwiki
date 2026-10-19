@@ -1,0 +1,484 @@
+{
+  "id": "combat",
+  "name": "CombAT",
+  "aliases": [
+    "Combination of Avodart and Tamsulosin",
+    "ARI40005"
+  ],
+  "nct": "NCT00090103",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "combination"
+    }
+  ],
+  "question": "Does dutasteride plus tamsulosin reduce symptoms and BPH progression more than either drug alone in men with enlarged prostates?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 4844,
+    "arms": [
+      {
+        "key": "combo",
+        "label": "Dutasteride 0.5 mg plus tamsulosin 0.4 mg daily",
+        "role": "experimental",
+        "n": 1610
+      },
+      {
+        "key": "dut",
+        "label": "dutasteride 0.5 mg daily alone",
+        "role": "control",
+        "n": 1623
+      },
+      {
+        "key": "tam",
+        "label": "tamsulosin 0.4 mg daily alone",
+        "role": "control",
+        "n": 1611
+      }
+    ],
+    "population": "4,844 men aged 50 or older with moderate-to-severe LUTS (IPSS 12 or higher), prostate volume 30 mL or more and PSA 1.5 to 10 ng/mL.",
+    "description": "Multicenter, double-blind, parallel-group randomized trial",
+    "locator": "Eur Urol 2010 abstract; ClinicalTrials.gov NCT00090103 participant flow and eligibility"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Combination beat tamsulosin but not dutasteride on AUR or surgery; symptoms improved most with combination.",
+  "takeaway": "Over 4 years, dutasteride plus tamsulosin lowered acute urinary retention or BPH surgery versus tamsulosin (4.2% versus 11.9%) but not significantly versus dutasteride alone (5.2%) in men with prostates of 30 mL or more, and improved symptoms more than either drug.",
+  "reports": [
+    {
+      "id": "combat-2008",
+      "kind": "secondary",
+      "label": "2-year symptom endpoint",
+      "published": "2008-02-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref print issue, J Urol 2008 February",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Siami P, Barkin J, et al. The effects of dutasteride, tamsulosin and combination therapy on lower urinary tract symptoms in men with benign prostatic hyperplasia and prostatic enlargement: 2-year results from the CombAT study. *J Urol.* 2008;179(2):616-621.",
+      "doi": "10.1016/j.juro.2007.09.084",
+      "pmid": "18082216",
+      "followUp": "24 months (preplanned 2-year analysis)",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "24-month change in IPSS, combination versus tamsulosin",
+          "locator": "ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in IPSS'; JALYN prescribing information (March 2026) section 14; J Urol abstract",
+          "note": "Adjusted mean change from baseline; the primary endpoint at 2 years. The dutasteride-alone mean was -4.9 points.",
+          "values": {
+            "combo": "-6.2 points",
+            "tam": "-4.3 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.8,
+            "ci": [
+              -2.23,
+              -1.4
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "24-month change in IPSS, combination versus dutasteride",
+          "locator": "ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in IPSS'; JALYN prescribing information (March 2026) section 14; J Urol abstract",
+          "note": "Adjusted mean change from baseline; the primary endpoint at 2 years.",
+          "values": {
+            "combo": "-6.2 points",
+            "dut": "-4.9 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.3,
+            "ci": [
+              -1.69,
+              -0.86
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "24-month change in peak urinary flow",
+          "locator": "ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in Urinary Flow Rate (Qmax)'; JALYN prescribing information (March 2026) section 14",
+          "note": "Mean differences: 0.5 mL/s versus dutasteride (95% CI 0.17 to 0.84; P = 0.003) and 1.5 mL/s versus tamsulosin (95% CI 1.19 to 1.86; P < 0.001).",
+          "values": {
+            "combo": "+2.4 mL/s",
+            "dut": "+1.9 mL/s",
+            "tam": "+0.9 mL/s"
+          }
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "secondary",
+          "measure": "24-month percent change in prostate volume",
+          "locator": "JALYN prescribing information (March 2026) section 14",
+          "note": "Combination versus dutasteride difference 1.1% (95% CI -0.6 to 2.8; not significant).",
+          "values": {
+            "combo": "-26.9%",
+            "dut": "-28.0%",
+            "tam": "0%"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Drug-related adverse events",
+          "locator": "J Urol abstract",
+          "note": "Drug-related adverse events were significantly more frequent with combination therapy than with either monotherapy, and most did not lead to stopping treatment. The abstract gives no counts."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/combat-2008.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "combat-2010",
+      "kind": "primary",
+      "label": "4-year clinical outcomes",
+      "published": "2010-01-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref print issue, Eur Urol 2010 January",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Siami P, Barkin J, et al. The effects of combination therapy with dutasteride and tamsulosin on clinical outcomes in men with symptomatic benign prostatic hyperplasia: 4-year results from the CombAT study. *Eur Urol.* 2010;57(1):123-131.",
+      "doi": "10.1016/j.eururo.2009.09.035",
+      "pmid": "19825505",
+      "followUp": "4 years of double-blind treatment",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "AUR or BPH-related surgery",
+          "role": "primary",
+          "measure": "4-year AUR or BPH-related surgery, combination versus tamsulosin",
+          "locator": "ClinicalTrials.gov NCT00090103 results, primary outcome 'Number of Participants With AUR or BPH-related Surgery' and its analyses; Eur Urol abstract",
+          "note": "Relative risk estimate from the time-to-event analysis; log-rank P < 0.001. Totals add the registry's participants with AUR and with BPH-related surgery (35 plus 32; 109 plus 82).",
+          "values": {
+            "combo": "67/1,610 (4.2%)",
+            "tam": "191/1,611 (11.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.34,
+            "ci": [
+              0.26,
+              0.45
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "AUR or BPH-related surgery",
+          "role": "primary",
+          "measure": "4-year AUR or BPH-related surgery, combination versus dutasteride",
+          "locator": "ClinicalTrials.gov NCT00090103 results, primary outcome 'Number of Participants With AUR or BPH-related Surgery' and its analyses; Eur Urol abstract",
+          "note": "Relative risk estimate from the time-to-event analysis; log-rank P = 0.18. Totals add the registry's participants with AUR and with BPH-related surgery (35 plus 32; 44 plus 40).",
+          "values": {
+            "combo": "67/1,610 (4.2%)",
+            "dut": "84/1,623 (5.2%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.8,
+            "ci": [
+              0.58,
+              1.11
+            ],
+            "p": "0.18"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "AUR and BPH-related surgery",
+          "role": "descriptive",
+          "measure": "4-year AUR and BPH-related surgery with the first occurrence of each event counted separately",
+          "locator": "Eur Urol 2010 Fig. 2 and Table 3",
+          "note": "Denominators 1,610, 1,623 and 1,611. Each event is the first occurrence of that event and may not have been the first component of the primary endpoint. The registry lists AUR in 35, 44 and 109 and BPH-related surgery in 32, 40 and 82 under the composite endpoint.",
+          "values": {
+            "combo": "AUR 36 (2.2%); surgery 38 (2.4%)",
+            "dut": "AUR 44 (2.7%); surgery 56 (3.5%)",
+            "tam": "AUR 109 (6.8%); surgery 126 (7.8%)"
+          }
+        },
+        {
+          "endpoint": "BPH clinical progression",
+          "role": "key-secondary",
+          "measure": "4-year first BPH clinical progression event",
+          "locator": "ClinicalTrials.gov NCT00090103 results, secondary outcome 'Number of Events of First BPH Clinical Progression'; Eur Urol abstract",
+          "note": "Totals add the registry's first-event counts for years 1 to 4. The abstract reports combination superior to both monotherapies. Progression was symptom deterioration (IPSS rise of 4 or more), AUR, incontinence, recurrent UTI or renal insufficiency.",
+          "values": {
+            "combo": "203/1,610 (12.6%)",
+            "dut": "289/1,623 (17.8%)",
+            "tam": "347/1,611 (21.5%)"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "key-secondary",
+          "measure": "48-month change in IPSS, combination versus tamsulosin",
+          "locator": "JALYN prescribing information (March 2026) section 14; ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in IPSS'; Eur Urol abstract",
+          "note": "Adjusted mean change from baseline. The dutasteride-alone mean was -5.3 points.",
+          "values": {
+            "combo": "-6.3 points",
+            "tam": "-3.8 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.5,
+            "ci": [
+              -2.96,
+              -2.07
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "key-secondary",
+          "measure": "48-month change in IPSS, combination versus dutasteride",
+          "locator": "JALYN prescribing information (March 2026) section 14; ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in IPSS'; Eur Urol abstract",
+          "note": "Adjusted mean change from baseline.",
+          "values": {
+            "combo": "-6.3 points",
+            "dut": "-5.3 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.96,
+            "ci": [
+              -1.4,
+              -0.52
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "48-month change in peak urinary flow",
+          "locator": "ClinicalTrials.gov NCT00090103 results, secondary outcome 'Adjusted Mean Change From Baseline in Urinary Flow Rate (Qmax)'; JALYN prescribing information (March 2026) section 14",
+          "note": "The additional improvement over dutasteride was no longer statistically significant at month 48.",
+          "values": {
+            "combo": "+2.4 mL/s",
+            "dut": "+2.0 mL/s",
+            "tam": "+0.7 mL/s"
+          }
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "secondary",
+          "measure": "48-month percent change in prostate volume",
+          "locator": "JALYN prescribing information (March 2026) section 14",
+          "values": {
+            "combo": "-27.3%",
+            "dut": "-28.0%",
+            "tam": "+4.6%"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Ejaculation disorders",
+          "values": {
+            "combo": "11%",
+            "dut": "2%",
+            "tam": "4%"
+          },
+          "locator": "JALYN prescribing information (March 2026) section 6.1",
+          "note": "Anorgasmia, retrograde ejaculation, decreased semen volume and related terms; significantly more frequent with combination. The label notes these sexual adverse reactions may persist after treatment is stopped."
+        },
+        {
+          "label": "Erectile dysfunction (any cause)",
+          "values": {
+            "combo": "167/1,610 (10.4%)",
+            "dut": "147/1,623 (9.1%)",
+            "tam": "109/1,611 (6.8%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00090103 results, adverse events (other events, 5% threshold)"
+        },
+        {
+          "label": "Composite cardiac failure",
+          "values": {
+            "combo": "12/1,610 (0.7%)",
+            "dut": "2/1,623 (0.1%)",
+            "tam": "9/1,611 (0.6%)"
+          },
+          "locator": "JALYN prescribing information (March 2026) section 6.1, Cardiac Failure",
+          "note": "The label states the clinical significance of the imbalance is unknown and that no causal relationship has been established. The primary report gives 14/1,610 (0.9%), 4/1,623 (0.2%) and 10/1,611 (0.6%) for the same composite term."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "combo": "303/1,610 (18.8%)",
+            "dut": "339/1,623 (20.9%)",
+            "tam": "348/1,611 (21.6%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00090103 results, adverse events (serious events)"
+        },
+        {
+          "label": "Withdrawal because of adverse reactions",
+          "values": {
+            "combo": "6%",
+            "dut": "4%",
+            "tam": "4%"
+          },
+          "locator": "JALYN prescribing information (March 2026) section 6.1",
+          "note": "Erectile dysfunction was the most common reason in every arm (1% to 1.5%)."
+        },
+        {
+          "label": "Discontinued for an adverse event (any cause)",
+          "values": {
+            "combo": "211/1,610 (13.1%)",
+            "dut": "185/1,623 (11.4%)",
+            "tam": "210/1,611 (13.0%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00090103 results, participant flow"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment",
+          "value": "Dutasteride 0.5 mg, tamsulosin 0.4 mg or both once daily with matching placebos for 4 years, after a 4-week single-blind placebo run-in.",
+          "locator": "ClinicalTrials.gov NCT00090103 results, participant flow; Eur Urol abstract"
+        },
+        {
+          "label": "Completed 4 years of treatment",
+          "values": {
+            "combo": "1,113/1,610 (69.1%)",
+            "dut": "1,093/1,623 (67.3%)",
+            "tam": "989/1,611 (61.4%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00090103 results, participant flow",
+          "note": ""
+        },
+        {
+          "label": "Baseline characteristics",
+          "value": "Mean age 66 years; mean IPSS about 16.4; mean prostate volume about 55 mL; mean Qmax about 10.7 mL/s; 88% white.",
+          "locator": "JALYN prescribing information (March 2026) section 14; ClinicalTrials.gov NCT00090103 results, baseline characteristics"
+        },
+        {
+          "label": "Prior drug exposure",
+          "value": "About 52% had previous exposure to a 5-alpha-reductase inhibitor or alpha-blocker.",
+          "locator": "JALYN prescribing information (March 2026) section 14"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/CombAT-Roehrborn-2010.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "combat-2011-subgroups",
+      "kind": "post-hoc",
+      "label": "Baseline subgroups, 4 years",
+      "published": "2011-02-18",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Barkin J, Siami P, et al. Clinical outcomes after combined therapy with dutasteride plus tamsulosin or either monotherapy in men with benign prostatic hyperplasia (BPH) by baseline characteristics: 4-year results from the randomized, double-blind Combination of Avodart and Tamsulosin (CombAT) trial. *BJU Int.* 2011;107(6):946-954.",
+      "doi": "10.1111/j.1464-410X.2011.10124.x",
+      "pmid": "21332630",
+      "followUp": "4 years",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "AUR or BPH-related surgery",
+          "role": "exploratory",
+          "measure": "Combination versus tamsulosin by baseline subgroup",
+          "locator": "abstract",
+          "note": "Post hoc. Combination reduced AUR or BPH-related surgery versus tamsulosin in subgroups with baseline prostate volume above 42 mL, in all PSA subgroups and in all other baseline subgroups (P 0.001 or less). The abstract gives no counts."
+        },
+        {
+          "endpoint": "BPH clinical progression",
+          "role": "exploratory",
+          "measure": "Combination versus tamsulosin and dutasteride by baseline subgroup",
+          "locator": "abstract",
+          "note": "Post hoc. Combination reduced the relative risk of clinical progression versus tamsulosin in all baseline subgroups and versus dutasteride in most; men with baseline prostate volume of 40 mL or more and PSA of 1.5 ng/mL or more had the larger reductions versus tamsulosin."
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "combat-2011-storage-voiding",
+      "kind": "secondary",
+      "label": "Storage and voiding subscores, 4 years",
+      "published": "2011-02-23",
+      "cutoff": null,
+      "citation": "Montorsi F, Roehrborn C, Garcia-Penit J, et al. The effects of dutasteride or tamsulosin alone and in combination on storage and voiding symptoms in men with lower urinary tract symptoms (LUTS) and benign prostatic hyperplasia (BPH): 4-year data from the Combination of Avodart and Tamsulosin (CombAT) study. *BJU Int.* 2011;107(9):1426-1431.",
+      "doi": "10.1111/j.1464-410X.2011.10129.x",
+      "pmid": "21348912",
+      "followUp": "4 years",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Storage subscore",
+          "role": "secondary",
+          "measure": "4-year adjusted mean difference in IPSS storage subscore, combination versus monotherapy",
+          "locator": "abstract",
+          "note": "P < 0.001 for both comparisons.",
+          "values": {
+            "combo": "-0.43 versus dutasteride; -0.96 versus tamsulosin"
+          }
+        },
+        {
+          "endpoint": "Voiding subscore",
+          "role": "secondary",
+          "measure": "4-year adjusted mean difference in IPSS voiding subscore, combination versus monotherapy",
+          "locator": "abstract",
+          "note": "P < 0.001 for both comparisons.",
+          "values": {
+            "combo": "-0.51 versus dutasteride; -1.60 versus tamsulosin"
+          }
+        },
+        {
+          "endpoint": "IPSS subscores by prostate volume",
+          "role": "exploratory",
+          "measure": "Combination versus dutasteride by baseline prostate volume",
+          "locator": "abstract",
+          "note": "Combination was better than dutasteride in men with baseline prostate volume of 30 to under 58 mL but not at 58 mL or more."
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "mtops",
+      "note": "Designed after MTOPS to test dutasteride plus tamsulosin in men with larger prostates and higher PSA, without a placebo arm."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/combat",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

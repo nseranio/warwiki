@@ -1,0 +1,623 @@
+{
+  "id": "aus-outcomes",
+  "name": "AUSCO",
+  "aliases": [
+    "Artificial Urinary Sphincter Clinical Outcomes Trial"
+  ],
+  "nct": "NCT04088331",
+  "area": [
+    "male-sui"
+  ],
+  "decisions": [
+    {
+      "id": "male-sui-surgery",
+      "lane": "aus-outcomes"
+    }
+  ],
+  "question": "Do men with primary stress urinary incontinence who receive the AMS 800 artificial urinary sphincter exceed a 65% rate of at least 50% pad-weight reduction at 12 months?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": false,
+    "blinding": "open-label",
+    "type": "single-arm",
+    "n": 115,
+    "arms": [
+      {
+        "key": "aus",
+        "label": "AMS 800 artificial urinary sphincter",
+        "role": "single",
+        "n": 115
+      }
+    ],
+    "population": "Men with moderate-to-severe primary stress incontinence from intrinsic sphincteric deficiency (24-hour pad weight at least 100 g) who received a first AMS 800 sphincter at 17 sites in the United States and Australia.",
+    "description": "Prospective multicenter single-arm study with a prespecified performance goal",
+    "locator": "J Urol PMC full text, Methods and Results; journal pp194-202"
+  },
+  "verdict": "descriptive",
+  "verdictNote": "Performance goal exceeded; single-arm, manufacturer-funded, high-volume surgeons, 12 months of follow-up.",
+  "takeaway": "In 115 men receiving the AMS 800 artificial urinary sphincter at 17 centers, 94% (91/97 with pad weights) had at least a 50% reduction in 24-hour pad weight at 12 months, exceeding the 65% performance goal; 60% used no pads and 7.8% had a revision.",
+  "reports": [
+    {
+      "id": "aus-outcomes-2025-emotional-health",
+      "kind": "pro",
+      "label": "Emotional health analysis",
+      "published": "2025-10-01",
+      "cutoff": null,
+      "citation": "Peterson AC, Wood HM, Myers J, et al. The Artificial Urinary Sphincter Improves Emotional Health in Men With Stress Urinary Incontinence: Results From the Prospective, Multi-institutional AUSCO Study. *Urology.* 2026;207:227-232.",
+      "doi": "10.1016/j.urology.2025.09.037",
+      "pmid": "41043618",
+      "followUp": "12 months after device activation; 100 participants completed quality-of-life assessments",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Depression item (I-QOL item 5)",
+          "role": "secondary",
+          "measure": "Participants reporting at least 'a little' depressed, baseline versus 12 months",
+          "values": {
+            "aus": "85% (85/100) at baseline; 39% (39/100) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Within-participant comparison without a control group.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Emotional health item (IIQ-7 item 6)",
+          "role": "secondary",
+          "measure": "Participants 'greatly' affected by incontinence, baseline versus 12 months",
+          "values": {
+            "aus": "16% (16/100) at baseline; 3% (3/100) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Anxiety/depression (EQ-5D-5L item 5)",
+          "role": "secondary",
+          "measure": "Participants at least 'slightly' anxious or depressed, baseline versus 12 months",
+          "values": {
+            "aus": "50% (50/100) at baseline; 30% (30/100) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/aus-outcomes-2025-emotional-health.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "aus-outcomes-2025",
+      "kind": "primary",
+      "label": "12-month primary results",
+      "published": "2025-10-03",
+      "cutoff": null,
+      "citation": "Kaufman MR, Wood HM, Terlecki R, et al. The Artificial Urinary Sphincter Clinical Outcomes Trial: Primary Results. *J Urol.* 2026;215(2):194-202.",
+      "doi": "10.1097/JU.0000000000004796",
+      "pmid": "41042705",
+      "followUp": "12 months after device activation; final 12-month visit completed May 2024; 101 of 115 completed the 12-month visit",
+      "followUpLocator": "Methods; Results",
+      "results": [
+        {
+          "endpoint": "Pad-weight success",
+          "role": "primary",
+          "measure": "At least 50% reduction in 24-hour pad weight at 12 months (available case; goal above 65%)",
+          "values": {
+            "aus": "94% (91/97)"
+          },
+          "effect": {
+            "type": "none",
+            "ci": [
+              87,
+              98
+            ],
+            "ciLevel": "95%, Clopper-Pearson",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "One-sided exact binomial test of 65% or less versus above 65%; the sample size of 96 assumed 80% success. Counting the 18 participants without a 12-month pad weight (14 early exit, 4 missed assessment) as failures gave 79% (91/115; 95% CI 71-86%).",
+          "locator": "Methods; Results; Table 2"
+        },
+        {
+          "endpoint": "Pad-weight reduction of at least 75%",
+          "role": "secondary",
+          "measure": "At least 75% reduction in 24-hour pad weight at 12 months",
+          "values": {
+            "aus": "86% (83/97)"
+          },
+          "effect": {
+            "type": "none",
+            "ci": [
+              77,
+              92
+            ]
+          },
+          "note": "",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "24-hour pad weight",
+          "role": "secondary",
+          "measure": "Mean (SD) 24-hour pad weight, baseline to 12 months, in 97 participants with both measurements",
+          "values": {
+            "aus": "653.2 g (520.1) to 73.7 g (141.3)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -579.4,
+            "ci": [
+              -682,
+              -476.8
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Mean difference in grams.",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "Pads per day",
+          "role": "secondary",
+          "measure": "Mean (SD) pads per day, baseline to 12 months, in 101 participants",
+          "values": {
+            "aus": "4.8 (2.1) to 0.9 (1.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.9,
+            "ci": [
+              -4.4,
+              -3.4
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Mean difference in pads per day.",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "Pad-free",
+          "role": "secondary",
+          "measure": "Zero pad use at 12 months",
+          "values": {
+            "aus": "60% (61/101)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "Results"
+        },
+        {
+          "endpoint": "Satisfaction",
+          "role": "secondary",
+          "measure": "Participants satisfied with the device at 12 months",
+          "values": {
+            "aus": "92% (88/96)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "Results"
+        },
+        {
+          "endpoint": "Incontinence events per day",
+          "role": "secondary",
+          "measure": "Mean (SD) incontinence events of any type per day by diary, baseline to 12 months, in 95 participants",
+          "values": {
+            "aus": "5.2 (3.5) to 2.1 (2.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.1,
+            "ci": [
+              -3.9,
+              -2.3
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Stress events fell from 1.7 to 0.4 per day and urgency events from 1.2 to 0.6 per day.",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "I-QOL total score",
+          "role": "secondary",
+          "measure": "Mean (SD) I-QOL total score, baseline to 12 months, in 100 participants (higher is better)",
+          "values": {
+            "aus": "44.7 (21.7) to 80.2 (19.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 35.5,
+            "ci": [
+              30.3,
+              40.7
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Mean difference in points.",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "IIQ-7 score",
+          "role": "secondary",
+          "measure": "Mean (SD) IIQ-7 score, baseline to 12 months, in 100 participants (lower is better)",
+          "values": {
+            "aus": "49.7 (26.9) to 17.8 (21.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -31.9,
+            "ci": [
+              -38,
+              -25.8
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Mean difference in points.",
+          "locator": "Table 2"
+        },
+        {
+          "endpoint": "Pad-weight success by BMI",
+          "role": "exploratory",
+          "measure": "At least 50% pad-weight reduction at 12 months, BMI of 35 or more versus below 30",
+          "values": {
+            "aus": "84% (16/19) versus 98% (47/48)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Exploratory subgroup comparison; the study was not powered for subgroup differences.",
+          "locator": "Table 4"
+        },
+        {
+          "endpoint": "Pad-weight success by prior radiotherapy",
+          "role": "exploratory",
+          "measure": "At least 50% pad-weight reduction at 12 months, prior radiotherapy versus none",
+          "values": {
+            "aus": "100% (19/19) versus 92% (72/78)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Exploratory subgroup comparison.",
+          "locator": "Table 4"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "aus": "33% (38/115), 61 events"
+          },
+          "locator": "Table 3",
+          "note": ""
+        },
+        {
+          "label": "Device- or procedure-related adverse event",
+          "values": {
+            "aus": "28% (32/115), 43 events"
+          },
+          "locator": "Table 3",
+          "note": "Relatedness adjudicated by an independent medical reviewer."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "aus": "15% (17/115), 26 events"
+          },
+          "locator": "Table 3",
+          "note": ""
+        },
+        {
+          "label": "Serious device- or procedure-related adverse event",
+          "values": {
+            "aus": "8.7% (10/115), 12 events"
+          },
+          "locator": "Table 3",
+          "note": ""
+        },
+        {
+          "label": "Any surgical revision",
+          "values": {
+            "aus": "7.8% (9/115)"
+          },
+          "locator": "Table 3",
+          "note": "Erosion 2 (1.7%), mechanical malfunction 3 (2.6%), lack of efficacy 1, other 4 (pump induration, reservoir herniation, balloon herniation, loose cuff); one revision had two reasons. None for infection."
+        },
+        {
+          "label": "Device deficiency",
+          "values": {
+            "aus": "13% (15/115), 17 deficiencies"
+          },
+          "locator": "Table 3",
+          "note": "Cuff 8 (7.0%), pump 5 (4.3%), pressure-regulating balloon 4 (3.5%; migration in 2)."
+        },
+        {
+          "label": "Postoperative wound infection",
+          "values": {
+            "aus": "3 participants"
+          },
+          "locator": "Results",
+          "note": "All resolved without erosion or explantation and were not classed as serious."
+        },
+        {
+          "label": "Deaths during the study period",
+          "values": {
+            "aus": "3 (sepsis, cerebrovascular accident, unknown cause)"
+          },
+          "locator": "Results",
+          "note": "One other serious sepsis case was judged unrelated to the device or procedure."
+        },
+        {
+          "label": "Serious adverse event by BMI",
+          "values": {
+            "aus": "29% (7/24) at BMI 35 or more versus 11% (6/55) below 30"
+          },
+          "locator": "Table 5",
+          "note": "Exploratory subgroup comparison."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sites and enrollment",
+          "value": "17 sites in the United States and Australia; enrollment began October 2019",
+          "locator": "Methods",
+          "note": "Participants with prior pelvic radiation were excluded until protocol version C (November 2021)."
+        },
+        {
+          "label": "Prior prostate treatment",
+          "value": "110 of 115 had radical prostatectomy (77 robotic-assisted); 25 (22%) had prostate radiotherapy",
+          "locator": "Results; Table 1",
+          "note": "Radiotherapy was external beam in 23 and brachytherapy in 2."
+        },
+        {
+          "label": "Median operative time",
+          "value": "1.3 hours (Q1-Q3 1.0-1.6)",
+          "locator": "Results",
+          "note": ""
+        },
+        {
+          "label": "Same-day discharge",
+          "value": "77%; 9 participants stayed 2 or more days",
+          "locator": "Results",
+          "note": ""
+        },
+        {
+          "label": "Cuff placement and size",
+          "value": "Bulbar urethra; 4.0, 4.5 and 5.0 cm cuffs in 30%, 47% and 15%; no 3.5 cm cuffs",
+          "locator": "Results",
+          "note": ""
+        },
+        {
+          "label": "Device configuration",
+          "value": "All but 2 devices antibiotic impregnated; all pressure-regulating balloons 61-70 cmH2O; 66% placed submuscularly",
+          "locator": "Results",
+          "note": ""
+        },
+        {
+          "label": "Activation and follow-up visits",
+          "value": "112 completed activation; 109, 100 and 101 completed the 3-, 6- and 12-month visits",
+          "locator": "Results",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "aus-outcomes-2025-toileting",
+      "kind": "secondary",
+      "label": "Toileting habits and satisfaction",
+      "published": "2025-11-27",
+      "cutoff": null,
+      "citation": "Wood HM, Peterson AC, Breyer BN, et al. How Artificial Urinary Sphincter Impacts Toileting Habits 1 Year After Implantation. *Eur Urol Focus.* 2026;12(2):248-255.",
+      "doi": "10.1016/j.euf.2025.11.001",
+      "pmid": "41314869",
+      "followUp": "12 months after device activation",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Postvoid dribbling",
+          "role": "secondary",
+          "measure": "Participants with persistent postvoid dribbling at 12 months",
+          "values": {
+            "aus": "68%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "Improved from baseline (p = 0.02) but persisted in most participants.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Toileting behavior",
+          "role": "secondary",
+          "measure": "Change in sitting versus standing and urinal versus stall use after implantation",
+          "values": {
+            "aus": "Minimal change; not associated with satisfaction"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Pad-weight reduction and ease of device use predicted satisfaction and quality-of-life improvement; limited self-care or mobility predicted more difficulty using the device.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/aus-outcomes-2025-toileting.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "aus-outcomes-2026-sexual",
+      "kind": "pro",
+      "label": "Sexual quality of life",
+      "published": "2026-05-25",
+      "cutoff": null,
+      "citation": "Jones L, Peterson AC, Wood HM, et al. Changes in sexual quality of life in patients with stress urinary incontinence treated with an artificial urinary sphincter; analysis of the artificial urinary sphincter clinical outcomes trial (AUSCO). *J Sex Med.* 2026;23(6):qdag144.",
+      "doi": "10.1093/jsxmed/qdag144",
+      "pmid": "42184104",
+      "followUp": "12 months after device activation; 98 of 115 answered the sexual item",
+      "followUpLocator": "publisher article page, Results",
+      "results": [
+        {
+          "endpoint": "Worry about sex (I-QOL item 22)",
+          "role": "secondary",
+          "measure": "Participants 'extremely' worried about sex because of urinary problems, men without erectile dysfunction, baseline versus 12 months",
+          "values": {
+            "aus": "43.3% (39/90) at baseline; 12.2% (11/90) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Erectile dysfunction identified from history review; improvement in the 8 men with erectile dysfunction and complete follow-up was also significant (p = 0.031).",
+          "locator": "publisher article page, Results"
+        },
+        {
+          "endpoint": "Worry about sex in men with erectile dysfunction",
+          "role": "secondary",
+          "measure": "Participants 'extremely' worried about sex, men with erectile dysfunction, baseline versus 12 months",
+          "values": {
+            "aus": "50% (4/8) at baseline; 25% (2/8) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.031"
+          },
+          "note": "",
+          "locator": "publisher article page, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/aus-outcomes-2026-sexual.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "aus-outcomes-2026-radiotherapy",
+      "kind": "secondary",
+      "label": "Prior radiotherapy subgroup",
+      "published": "2026-06-02",
+      "cutoff": null,
+      "citation": "Chandrasekhar V, Kaufman MR, Peterson AC, et al. One-Year Functional Satisfaction and Quality of Life Outcomes of Patients With a History of Radiotherapy With Artificial Urinary Sphincters. *Neurourol Urodyn.* 2026;45(7):1357-1365.",
+      "doi": "10.1002/nau.70321",
+      "pmid": "42226712",
+      "followUp": "12 months after device activation; 25 participants with prior radiotherapy versus 90 without",
+      "followUpLocator": "Results; Table 1",
+      "results": [
+        {
+          "endpoint": "Pad-weight success by prior radiotherapy",
+          "role": "secondary",
+          "measure": "At least 50% pad-weight reduction at 12 months, prior radiotherapy versus none",
+          "values": {
+            "aus": "100% (19/19) versus 92.3% (72/78)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.59"
+          },
+          "note": "Secondary analysis with 25 irradiated participants, not designed to show equivalence between subgroups.",
+          "locator": "Table 3"
+        },
+        {
+          "endpoint": "Pad-free by prior radiotherapy",
+          "role": "secondary",
+          "measure": "Zero pads per day at 12 months, prior radiotherapy versus none",
+          "values": {
+            "aus": "42.9% (9/21) versus 65.0% (52/80)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.08"
+          },
+          "note": "At 6 months the proportions were 78.9% (15/19) versus 51.3% (41/80) (p = 0.04).",
+          "locator": "Table 3"
+        },
+        {
+          "endpoint": "Quality of life by prior radiotherapy",
+          "role": "secondary",
+          "measure": "Change in I-QOL total score from baseline to 12 months, prior radiotherapy versus none",
+          "values": {
+            "aus": "33.8 versus 35.9 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.65"
+          },
+          "note": "Mean change adjusted for baseline score; IIQ-7 and EQ-5D-5L changes also did not differ.",
+          "locator": "Table 4"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event by prior radiotherapy",
+          "values": {
+            "aus": "36.0% (9/25) with prior radiotherapy versus 32.2% (29/90) without"
+          },
+          "locator": "Table 2",
+          "note": "p = 0.81."
+        },
+        {
+          "label": "Serious adverse event by prior radiotherapy",
+          "values": {
+            "aus": "16.0% (4/25) versus 14.4% (13/90)"
+          },
+          "locator": "Table 2",
+          "note": "p = 1.0."
+        },
+        {
+          "label": "Revision by prior radiotherapy",
+          "values": {
+            "aus": "8.0% (2/25) versus 7.8% (7/90)"
+          },
+          "locator": "Table 2",
+          "note": "p = 1.0."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "master",
+      "note": "MASTER randomized a male sling against the artificial urinary sphincter; AUSCO followed sphincter outcomes in a single arm."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/aus-outcomes",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "id": "master",
+  "name": "MASTER",
+  "aliases": [
+    "Male synthetic sling versus Artificial urinary Sphincter Trial: Evaluation by Randomised controlled trial"
+  ],
+  "nct": null,
+  "registry": "ISRCTN49212975",
+  "area": [
+    "male-sui"
+  ],
+  "decisions": [
+    {
+      "id": "male-sui-surgery",
+      "lane": "sling-vs-aus"
+    }
+  ],
+  "question": "Is a fixed transobturator male sling noninferior to an artificial urinary sphincter for continence after prostate surgery?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 380,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Fixed transobturator synthetic male sling",
+        "role": "experimental",
+        "n": 190
+      },
+      {
+        "key": "ctl",
+        "label": "artificial urinary sphincter",
+        "role": "control",
+        "n": 190
+      }
+    ],
+    "population": "Men at 27 UK centers with bothersome urodynamic stress urinary incontinence after prostate surgery, despite conservative treatment, who chose surgery and could receive either implant.",
+    "description": "Multicenter, open-label noninferiority randomized trial",
+    "locator": "Abrams 2021 PDF pp 813–815, Methods and Figure 1"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Strict leakage endpoint met the margin; symptom scores and satisfaction favored AUS.",
+  "takeaway": "In men undergoing surgery for stress incontinence after prostate surgery, a fixed transobturator synthetic sling met the 15-percentage-point noninferiority margin versus an artificial urinary sphincter for strict patient-reported continence at 12 months; symptom scores favored the sphincter.",
+  "reports": [
+    {
+      "id": "master-2021",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2021-02-04",
+      "cutoff": null,
+      "citation": "Abrams P, Constable LD, Cooper D, et al. Outcomes of a Noninferiority Randomised Controlled Trial of Surgery for Men with Urodynamic Stress Incontinence After Prostate Surgery (MASTER). *Eur Urol.* 2021;79(6):812-823. doi:10.1016/j.eururo.2021.01.024",
+      "doi": "10.1016/j.eururo.2021.01.024",
+      "pmid": "33551297",
+      "followUp": "Primary continence assessment at 12 months after randomization; adverse events through 12 months after surgery",
+      "followUpLocator": "PDF pp 813–814, Methods; p 817, Table 2",
+      "results": [
+        {
+          "endpoint": "Strict patient-reported continence",
+          "role": "primary",
+          "measure": "12-month continent proportion; adjusted risk difference in percentage points (sling minus AUS)",
+          "values": {
+            "exp": "20/154 (13.0%) continent; 134/154 (87.0%) incontinent",
+            "ctl": "25/158 (15.8%) continent; 133/158 (84.2%) incontinent"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.6,
+            "ci": [
+              -11.6,
+              4.6
+            ],
+            "p": "0.003 (noninferiority)"
+          },
+          "met": true,
+          "note": "Any leakage on either ICIQ-UI SF frequency or amount item counted as incontinence; prespecified continence risk-difference margin was -15 percentage points. The article abstract gives the difference with the opposite sign; Results/Table 2 use -3.6.",
+          "locator": "PDF pp 814–815, Methods/Results; p 817, Table 2"
+        },
+        {
+          "endpoint": "ICIQ-UI SF symptom score",
+          "role": "secondary",
+          "measure": "12-month score; adjusted mean difference in points (sling minus AUS)",
+          "values": {
+            "exp": "8.7 (baseline 16.1)",
+            "ctl": "7.5 (baseline 16.4)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.4,
+            "ci": [
+              0.2,
+              2.6
+            ],
+            "p": "0.02"
+          },
+          "note": "Lower score indicates fewer symptoms; the 2022 full report gives a slightly different adjusted estimate.",
+          "locator": "PDF p 817, Table 2; p 813, abstract"
+        },
+        {
+          "endpoint": "Satisfied with surgery",
+          "role": "secondary",
+          "measure": "12-month completely or fairly satisfied proportion; risk difference in percentage points (sling minus AUS)",
+          "values": {
+            "exp": "104/144 (72.2%)",
+            "ctl": "125/138 (90.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -18.4,
+            "ci": [
+              -27.2,
+              -9.6
+            ],
+            "p": "<0.001"
+          },
+          "note": "Denominators reconstructed from the reported counts and percentages; the full HTA Table 11 separates satisfaction categories.",
+          "locator": "PDF p 816, Satisfaction; HTA PDF p 59, Table 11"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Inpatient serious adverse events",
+          "values": {
+            "exp": "6 events in 6/180 operated men",
+            "ctl": "13 events in 11/173 operated men"
+          },
+          "locator": "PDF pp 817–819, Surgery and AEs; p 819, Table 3",
+          "note": "Three AUS events occurred in one man. Sling events included recatheterization (3), mesh erosion (1), urosepsis (1), and coffee-ground vomit (1); AUS events included recatheterization (3), infection (3), and device erosion (2)."
+        },
+        {
+          "label": "Catheter problems during admission",
+          "values": {
+            "exp": "45/180 (25.0%)",
+            "ctl": "13/173 (7.5%)"
+          },
+          "locator": "PDF p 817, Surgery and AEs; p 819, Table 3",
+          "note": "More common after sling; reported difference 17.5 percentage points (95% CI 10.0–24.9)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment received by randomized group",
+          "values": {
+            "exp": "178 sling, 2 AUS; 180/190 operated",
+            "ctl": "9 sling, 164 AUS; 173/190 operated"
+          },
+          "locator": "PDF p 815, Figure 1",
+          "note": "Intention-to-treat analyses retained randomized assignment. The 2022 full report includes two additional AUS-arm operations."
+        },
+        {
+          "label": "Readmissions for further or additional surgery within 12 months",
+          "values": {
+            "exp": "13/180 (7.2%)",
+            "ctl": "3/173 (1.7%)"
+          },
+          "locator": "PDF pp 817, 820, Readmissions and Table 4",
+          "note": "Twelve sling-arm men received AUS and one a second sling; three AUS-arm men had device revision. The AUS Table 4 separates further surgery (2) and additional surgery (1)."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-06/master-abrams-2021-eur-urol.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "master-2022",
+      "kind": "updated",
+      "label": "Full trial and economic report",
+      "published": "2022-08-01",
+      "dateApprox": true,
+      "dateLocator": "HTA PDF p 1 states Published August 2022; day 1 is an approximate timeline date",
+      "cutoff": null,
+      "citation": "Constable L, Abrams P, Cooper D, et al. Synthetic sling or artificial urinary sphincter for men with urodynamic stress incontinence after prostate surgery: the MASTER non-inferiority RCT. *Health Technol Assess.* 2022;26(36):1-152. doi:10.3310/TBFZ0277",
+      "doi": "10.3310/TBFZ0277",
+      "pmid": "35972773",
+      "followUp": "Clinical and economic outcomes through 24 months after randomization",
+      "followUpLocator": "HTA PDF pp 9, 53, 75, Abstract and Tables 7, 19",
+      "results": [
+        {
+          "endpoint": "ICIQ-UI SF symptom score",
+          "role": "descriptive",
+          "measure": "12-month score; adjusted mean difference in points (sling minus AUS)",
+          "values": {
+            "exp": "8.7 (baseline 16.1)",
+            "ctl": "7.5 (baseline 16.4)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.3,
+            "ci": [
+              0.11,
+              2.49
+            ],
+            "p": "0.032"
+          },
+          "note": "Full-report estimate of the secondary symptom comparison already reported in the primary article.",
+          "locator": "HTA PDF pp 9, 57, Abstract and Table 10"
+        },
+        {
+          "endpoint": "Strict patient-reported continence",
+          "role": "secondary",
+          "measure": "24-month continent proportion; adjusted risk difference in percentage points (sling minus AUS)",
+          "values": {
+            "exp": "21/140 (15.0%)",
+            "ctl": "22/148 (14.9%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "ci": [
+              -9.2,
+              8.0
+            ],
+            "p": "0.001 (noninferiority)"
+          },
+          "met": true,
+          "note": "Prespecified primary assessment was at 12 months; this later assessment used the same strict composite and -15-point margin.",
+          "locator": "HTA PDF p 53, Table 7"
+        },
+        {
+          "endpoint": "Less-strict patient-reported continence",
+          "role": "secondary",
+          "measure": "24-month continent proportion; adjusted risk difference in percentage points (sling minus AUS)",
+          "values": {
+            "exp": "44/140 (31.4%)",
+            "ctl": "51/148 (34.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.0,
+            "ci": [
+              -16.7,
+              8.8
+            ],
+            "p": "0.045 (noninferiority)"
+          },
+          "met": false,
+          "note": "Allows leakage once weekly or less and a small amount; confidence interval crosses the -15-point margin, and p exceeds the 0.025 one-sided threshold.",
+          "locator": "HTA PDF p 53, Table 7 and footnote"
+        },
+        {
+          "endpoint": "ICIQ-UI SF symptom score",
+          "role": "secondary",
+          "measure": "24-month score; adjusted mean difference in points (sling minus AUS)",
+          "values": {
+            "exp": "7.9 (131 respondents)",
+            "ctl": "7.1 (139 respondents)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.42,
+            "ci": [
+              0.18,
+              2.65
+            ],
+            "p": "0.024"
+          },
+          "note": "Lower score indicates fewer symptoms.",
+          "locator": "HTA PDF p 57, Table 10"
+        },
+        {
+          "endpoint": "NHS cost",
+          "role": "secondary",
+          "measure": "24-month mean cost; adjusted mean difference in pounds sterling (sling minus AUS)",
+          "values": {
+            "exp": "£5,513",
+            "ctl": "£8,010"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2497,
+            "ci": [
+              -3167,
+              -1875
+            ]
+          },
+          "note": "Economic base case; sling had 0.006 fewer estimated quality-adjusted life-years, with 95% CI -0.06 to 0.054.",
+          "locator": "HTA PDF pp 75–76, Table 19 and economic summary"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Inpatient serious adverse events in full report",
+          "values": {
+            "exp": "8 events in 8/180 operated men (4.4%)",
+            "ctl": "15 events in 13/175 operated men (7.4%)"
+          },
+          "locator": "HTA PDF pp 49–50, Table 6 and Adverse events",
+          "note": "The full report counts three sling mesh erosions versus one in the 2021 article; one AUS patient had three serious events. These are surgical-period events, not the 24-month patient-reported complications."
+        },
+        {
+          "label": "Postoperative catheter required",
+          "values": {
+            "exp": "28/180 (15.6%)",
+            "ctl": "8/175 (4.6%)"
+          },
+          "locator": "HTA PDF p 50, Table 6",
+          "note": "Catheterization longer than 24 hours occurred in 20/180 (11.1%) versus 6/175 (3.4%)."
+        },
+        {
+          "label": "Patient-reported surgical-site pain by 24 months",
+          "values": {
+            "exp": "56/190 (29.5%)",
+            "ctl": "44/190 (23.2%)"
+          },
+          "locator": "HTA PDF p 60, Table 12",
+          "note": "Cumulative questionnaire reports; the table also lists urinary tract infection in 23/190 (12.1%) versus 20/190 (10.5%)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Operative technique",
+          "value": "Nonadjustable polypropylene suburethral sling passed bilaterally through the obturator foramina; AUS urethral cuff, scrotal pump, and pressure-regulating balloon, left deactivated for 4–6 weeks before clinic activation.",
+          "locator": "HTA PDF p 32, Surgical procedures"
+        },
+        {
+          "label": "Surgery received and crossover",
+          "values": {
+            "exp": "180/190 operated: 178 sling, 2 AUS",
+            "ctl": "175/190 operated: 9 sling, 166 AUS"
+          },
+          "locator": "HTA PDF p 49, Table 5",
+          "note": "Two more AUS-arm operations are counted here than in the 2021 article."
+        },
+        {
+          "label": "Mean operating time",
+          "values": {
+            "exp": "101 minutes (175 observations)",
+            "ctl": "128 minutes (168 observations)"
+          },
+          "locator": "HTA PDF p 49, Table 5"
+        },
+        {
+          "label": "Further surgery through 24 months",
+          "values": {
+            "exp": "20/180 (11.1%)",
+            "ctl": "4/175 (2.3%)"
+          },
+          "locator": "HTA PDF pp 26, 48–49, Scientific summary and Table 5",
+          "note": "Eighteen sling-arm men received AUS and two a new sling; three AUS-arm men received a new AUS and one had removal without replacement."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "master-2026",
+      "kind": "updated",
+      "label": "24-month journal update",
+      "published": "2026-08-26",
+      "cutoff": null,
+      "citation": "Constable L, Drake MJ, Cooper D, et al. The 24-mo Outcomes from the Noninferiority Randomised Controlled Trial of Surgery for Men with Urodynamic Stress Incontinence After Prostate Surgery (MASTER). *Eur Urol Focus.* 2026;12(4):636-643. doi:10.1016/j.euf.2026.07.012",
+      "doi": "10.1016/j.euf.2026.07.012",
+      "pmid": "42648940",
+      "followUp": "24 months after randomization",
+      "followUpLocator": "PubMed abstract, Outcome measurements and Results",
+      "results": [
+        {
+          "endpoint": "Strict patient-reported continence",
+          "role": "secondary",
+          "measure": "24-month adjusted continence risk difference (sling minus AUS)",
+          "effect": {
+            "type": "difference",
+            "value": -0.006,
+            "ci": [
+              -0.092,
+              0.08
+            ],
+            "p": "0.001 (noninferiority)"
+          },
+          "note": "The abstract reports the adjusted difference but not arm-specific counts; the full 2022 HTA Table 7 supplies 21/140 versus 22/148.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "ICIQ-UI SF symptom score",
+          "role": "secondary",
+          "measure": "24-month score; adjusted mean difference in points (sling minus AUS)",
+          "values": {
+            "exp": "7.9 (baseline 16.1)",
+            "ctl": "7.1 (baseline 16.4)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.4,
+            "ci": [
+              0.2,
+              2.6
+            ],
+            "p": "0.024"
+          },
+          "note": "Rounded estimate in the abstract; the full HTA Table 10 reports 1.42 (95% CI 0.18–2.65).",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Further surgery by 24 months",
+          "values": {
+            "exp": "20/180 (11.1%)",
+            "ctl": "4/175 (2.3%)"
+          },
+          "locator": "PDF p 640, Table 2",
+          "note": "The 2022 full report gives exact proportions of 11.1% and 2.3% among operated men."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/MASTER-24mo-EUF-2026.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/master",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

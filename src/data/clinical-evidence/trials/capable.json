@@ -1,0 +1,464 @@
+{
+  "id": "capable",
+  "name": "CAPABLe",
+  "aliases": [
+    "Controlling Anal incontinence by Performing Anal exercises with Biofeedback or Loperamide",
+    "NICHD Pelvic Floor Disorders Network CAPABLe trial"
+  ],
+  "nct": "NCT02008565",
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "first-line"
+    }
+  ],
+  "question": "Do loperamide, anorectal manometry-assisted biofeedback or both reduce fecal incontinence severity in women more than oral placebo or an education pamphlet?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Placebo-masked for loperamide; outcome assessors masked to biofeedback assignment",
+    "type": "superiority",
+    "n": 300,
+    "arms": [
+      {
+        "key": "pe",
+        "label": "Oral placebo plus education pamphlet",
+        "role": "control",
+        "n": 42
+      },
+      {
+        "key": "pb",
+        "label": "placebo plus anorectal manometry-assisted biofeedback",
+        "role": "experimental",
+        "n": 84
+      },
+      {
+        "key": "le",
+        "label": "loperamide plus education pamphlet",
+        "role": "experimental",
+        "n": 88
+      },
+      {
+        "key": "lb",
+        "label": "loperamide plus anorectal manometry-assisted biofeedback",
+        "role": "experimental",
+        "n": 86
+      }
+    ],
+    "population": "300 women at eight US centers with at least monthly bothersome fecal incontinence, normal stool consistency (Bristol types 1 and 7 excluded) and negative colon cancer screening.",
+    "description": "Multicenter, placebo-controlled 2×2 factorial randomized superiority trial",
+    "locator": "PMC6708078 author manuscript, Methods, Results text, Figure 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "No primary comparison reached significance; constipation was more frequent with loperamide.",
+  "takeaway": "In 300 women with fecal incontinence, loperamide did not beat oral placebo and anorectal manometry-assisted biofeedback did not beat an education pamphlet for 24-week St Mark's score change; the combination was not significantly better than either component, and constipation was more frequent with loperamide.",
+  "reports": [
+    {
+      "id": "capable-2019",
+      "kind": "primary",
+      "label": "24-week randomized report",
+      "published": "2019-07-15",
+      "cutoff": null,
+      "citation": "Jelovsek JE, Markland AD, Whitehead WE, et al. Controlling faecal incontinence in women by performing anal exercises with biofeedback or loperamide: a randomised clinical trial. *Lancet Gastroenterol Hepatol.* 2019;4(9):698-710. doi:10.1016/S2468-1253(19)30193-1",
+      "doi": "10.1016/S2468-1253(19)30193-1",
+      "pmid": "31320277",
+      "followUp": "24 weeks; St Mark's score available for 266/296 eligible women",
+      "followUpLocator": "PMC6708078 author manuscript, Results text, Table 2",
+      "results": [
+        {
+          "endpoint": "St Mark's score: loperamide versus placebo",
+          "role": "primary",
+          "measure": "Model-estimated 24-week change in St Mark's (Vaizey) score, pooled loperamide groups (n=155) minus pooled placebo groups (n=111)",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "Change −6.2 (95% CI −7.4 to −5.0) with loperamide versus −4.7 (−6.2 to −3.1) with placebo; a negative difference favors loperamide. Prespecified two-sided alpha 0.025.",
+          "effect": {
+            "type": "difference",
+            "value": -1.5,
+            "ci": [
+              -3.4,
+              0.4
+            ],
+            "p": "0.12"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "St Mark's score: biofeedback versus education",
+          "role": "primary",
+          "measure": "Model-estimated 24-week change in St Mark's (Vaizey) score, pooled biofeedback groups (n=149) minus pooled education-only groups (n=117)",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "Change −5.8 (95% CI −7.0 to −4.6) with biofeedback versus −5.1 (−6.6 to −3.6) with education only; a negative difference favors biofeedback. Prespecified two-sided alpha 0.025.",
+          "effect": {
+            "type": "difference",
+            "value": -0.7,
+            "ci": [
+              -2.6,
+              1.2
+            ],
+            "p": "0.47"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "St Mark's score: combination versus placebo plus biofeedback",
+          "role": "primary",
+          "measure": "Model-estimated 24-week difference in St Mark's score change, loperamide plus biofeedback minus placebo plus biofeedback",
+          "locator": "PMC6708078 author manuscript, Results text (Appendix p12 cited)",
+          "note": "Prespecified comparison of the combination with each component; alpha 0.05.",
+          "effect": {
+            "type": "difference",
+            "value": -1.9,
+            "ci": [
+              -4.1,
+              0.3
+            ],
+            "p": "0.09"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "St Mark's score: combination versus loperamide plus education",
+          "role": "primary",
+          "measure": "Model-estimated 24-week difference in St Mark's score change, loperamide plus biofeedback minus loperamide plus education",
+          "locator": "PMC6708078 author manuscript, Results text (Appendix p12 cited)",
+          "note": "Prespecified comparison of the combination with each component; alpha 0.05.",
+          "effect": {
+            "type": "difference",
+            "value": -1.1,
+            "ci": [
+              -3.4,
+              1.1
+            ],
+            "p": "0.33"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Leaks per day: loperamide versus placebo",
+          "role": "secondary",
+          "measure": "Model-estimated 24-week change in total leaks per day, pooled loperamide (n=149) minus pooled placebo (n=107)",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "Change −1.2 (95% CI −1.5 to −0.8) with loperamide versus −1.0 (−1.5 to −0.5) with placebo. Secondary outcomes were exploratory and unadjusted for multiple comparisons.",
+          "effect": {
+            "type": "difference",
+            "value": -0.1,
+            "ci": [
+              -0.7,
+              0.4
+            ],
+            "p": "0.61"
+          }
+        },
+        {
+          "endpoint": "Leaks per day: biofeedback versus education",
+          "role": "secondary",
+          "measure": "Model-estimated 24-week change in total leaks per day, pooled biofeedback (n=143) minus pooled education only (n=113)",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "Change −1.0 (95% CI −1.3 to −0.6) with biofeedback versus −1.2 (−1.7 to −0.7) with education only.",
+          "effect": {
+            "type": "difference",
+            "value": 0.2,
+            "ci": [
+              -0.4,
+              0.8
+            ],
+            "p": "0.50"
+          }
+        },
+        {
+          "endpoint": "PGI-I improvement: loperamide versus placebo",
+          "role": "exploratory",
+          "measure": "Patient Global Impression of Improvement 'a little better' or better at 24 weeks, pooled loperamide versus pooled placebo",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "127/146 (87.0%) with loperamide versus 84/105 (80.0%) with placebo.",
+          "effect": {
+            "type": "none",
+            "p": "0.0991"
+          }
+        },
+        {
+          "endpoint": "PGI-I improvement: biofeedback versus education",
+          "role": "exploratory",
+          "measure": "Patient Global Impression of Improvement 'a little better' or better at 24 weeks, pooled biofeedback versus pooled education only",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "126/142 (88.7%) with biofeedback versus 85/109 (78.0%) with education only.",
+          "effect": {
+            "type": "none",
+            "p": "0.0463"
+          }
+        },
+        {
+          "endpoint": "50% reduction in leaks per day: loperamide versus placebo",
+          "role": "exploratory",
+          "measure": "At least 50% reduction in leaks per day at 24 weeks, pooled loperamide versus pooled placebo (post hoc)",
+          "locator": "PMC6708078 author manuscript, Table 2 footnote a",
+          "note": "101/139 (72.7%) with loperamide versus 73/102 (71.6%) with placebo. Post hoc, not part of the preplanned analysis.",
+          "effect": {
+            "type": "none",
+            "p": "0.8282"
+          }
+        },
+        {
+          "endpoint": "50% reduction in leaks per day: biofeedback versus education",
+          "role": "exploratory",
+          "measure": "At least 50% reduction in leaks per day at 24 weeks, pooled biofeedback versus pooled education only (post hoc)",
+          "locator": "PMC6708078 author manuscript, Table 2 footnote a",
+          "note": "113/135 (83.7%) with biofeedback versus 61/106 (57.5%) with education only. Post hoc, not part of the preplanned analysis.",
+          "effect": {
+            "type": "none",
+            "p": "0.0009"
+          }
+        },
+        {
+          "endpoint": "Per-protocol St Mark's score: combination versus placebo plus biofeedback",
+          "role": "exploratory",
+          "measure": "Per-protocol 24-week difference in St Mark's score change, loperamide plus biofeedback minus placebo plus biofeedback",
+          "locator": "PMC6708078 author manuscript, Results text (Appendix p22 cited)",
+          "note": "Per-protocol analysis; the report states the difference was smaller than the minimally important difference.",
+          "effect": {
+            "type": "difference",
+            "value": -3.8,
+            "ci": [
+              -6.9,
+              -0.7
+            ],
+            "p": "0.017"
+          }
+        },
+        {
+          "endpoint": "Per-protocol St Mark's score: combination versus loperamide plus education",
+          "role": "exploratory",
+          "measure": "Per-protocol 24-week difference in St Mark's score change, loperamide plus biofeedback minus loperamide plus education",
+          "locator": "PMC6708078 author manuscript, Results text (Appendix p22 cited)",
+          "note": "Per-protocol analysis; the report states the difference was smaller than the minimally important difference.",
+          "effect": {
+            "type": "difference",
+            "value": -3.5,
+            "ci": [
+              -6.4,
+              -0.6
+            ],
+            "p": "0.018"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "pe": "26/42 (62%)",
+            "pb": "62/84 (74%)",
+            "le": "62/88 (70%)",
+            "lb": "72/86 (84%)"
+          },
+          "locator": "PMC6708078 author manuscript, Table 3",
+          "note": "P=0.04 across the four groups; safety analyses include the four women found ineligible after randomization."
+        },
+        {
+          "label": "Constipation (any grade)",
+          "values": {
+            "pe": "5/42 (12%)",
+            "pb": "19/84 (23%)",
+            "le": "33/88 (38%)",
+            "lb": "44/86 (51%)"
+          },
+          "locator": "PMC6708078 author manuscript, Results text (Appendix p28 cited)",
+          "note": "P<0.001 across the four groups; the most common adverse event overall."
+        },
+        {
+          "label": "Grade 3 or higher adverse event",
+          "values": {
+            "pe": "4/42 (10%)",
+            "pb": "6/84 (7%)",
+            "le": "13/88 (15%)",
+            "lb": "8/86 (9%)"
+          },
+          "locator": "PMC6708078 author manuscript, Table 3",
+          "note": "P=0.43."
+        },
+        {
+          "label": "Grade 3 or higher constipation",
+          "values": {
+            "le": "2/88 (2%)",
+            "lb": "2/86 (2%)"
+          },
+          "locator": "PMC6708078 author manuscript, Results text",
+          "note": "The most common grade 3 or higher adverse event; the report gives counts for the two loperamide groups."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "pe": "3/42 (7%)",
+            "pb": "5/84 (6%)",
+            "le": "10/88 (11%)",
+            "lb": "6/86 (7%)"
+          },
+          "locator": "PMC6708078 author manuscript, Table 3",
+          "note": "P=0.62. One serious event was considered possibly related to treatment (small bowel obstruction, placebo plus biofeedback group); Table 3 lists one fatal event in the placebo plus biofeedback group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Women randomized",
+          "values": {
+            "pe": "42",
+            "pb": "84",
+            "le": "88",
+            "lb": "86"
+          },
+          "locator": "PMC6708078 author manuscript, Results text, Figure 1",
+          "note": "377 enrolled; 300 randomized 0.5:1:1:1 and stratified by site. Four were ineligible after randomization (1 placebo plus biofeedback, 1 loperamide plus biofeedback, 2 loperamide plus education), leaving 296 for efficacy analyses."
+        },
+        {
+          "label": "Outcome data at 24 weeks",
+          "value": "266/296 (90%)",
+          "locator": "PMC6708078 author manuscript, Results text, Table 2",
+          "note": "274 women had outcome data at 12 weeks; the analysis used observed outcomes at 12 and 24 weeks."
+        },
+        {
+          "label": "Baseline St Mark's score, mean (SD)",
+          "value": "14.2 (4.2) loperamide; 14.2 (3.9) placebo; 14.2 (4.1) biofeedback; 14.1 (4.0) education only",
+          "locator": "PMC6708078 author manuscript, Table 2",
+          "note": "Pooled marginal groups of the intention-to-treat population."
+        },
+        {
+          "label": "Baseline characteristics",
+          "value": "mean age 63.7 (SD 11.1) years; mean 1.6 (SD 1.8) leaks per day",
+          "locator": "PMC6708078 author manuscript, Results text",
+          "note": "Randomized women; 79% white, 16% Black."
+        },
+        {
+          "label": "Loperamide dosing",
+          "value": "2 mg (1 capsule) daily, escalated to at most 4 capsules daily or reduced to 1 capsule every other day",
+          "locator": "PMC6708078 author manuscript, Methods, Procedures",
+          "note": "Adjusted by telephone or visit using patient-rated symptom-control and tolerability scales; placebo followed the same algorithm."
+        },
+        {
+          "label": "Biofeedback schedule",
+          "value": "6 visits; study visits at baseline, 2, 4, 6, 9, 12 and 24 weeks",
+          "locator": "PMC6708078 author manuscript, Methods, Randomization and Procedures",
+          "note": "Diagnostic anorectal manometry, strength training and sensory (urge-resistance) training with mcompass software, plus an individualized home exercise program."
+        },
+        {
+          "label": "Limited adherence in the combination group at 24 weeks",
+          "values": {
+            "lb": "33/85 (39%)"
+          },
+          "locator": "PMC6708078 author manuscript, Discussion",
+          "note": "Reported as limited adherence at 24 weeks."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "capable-2019-constipation",
+      "kind": "secondary",
+      "label": "Constipation-symptom analysis",
+      "published": "2019-11-23",
+      "cutoff": null,
+      "citation": "Andy UU, Jelovsek JE, Carper B, et al. Impact of treatment for fecal incontinence on constipation symptoms. *Am J Obstet Gynecol.* 2020;222(6):590.e1-590.e8. doi:10.1016/j.ajog.2019.11.1256",
+      "doi": "10.1016/j.ajog.2019.11.1256",
+      "pmid": "31765640",
+      "followUp": "24 weeks; PAC-SYM data at 12 or 24 weeks for 247/296 women",
+      "followUpLocator": "PMC7242126 author manuscript, Results text",
+      "results": [
+        {
+          "endpoint": "PAC-SYM global score",
+          "role": "primary",
+          "measure": "Change in Patient Assessment of Constipation Symptoms global score from baseline to 24 weeks (0 to 4; negative is improvement)",
+          "values": {
+            "pe": "−0.3 (−0.5 to −0.1)",
+            "pb": "−0.3 (−0.4 to −0.2)",
+            "le": "−0.1 (−0.3 to 0.0)",
+            "lb": "−0.3 (−0.4 to −0.2)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Planned secondary analysis. Loperamide plus education versus placebo plus education P=0.17; placebo plus biofeedback versus placebo plus education P=0.82; combination versus loperamide plus education P=0.147; combination versus placebo plus biofeedback P=0.600. Changes were below the proposed minimal important difference of 0.6.",
+          "locator": "PMC7242126 author manuscript, Tables 2 and 3"
+        },
+        {
+          "endpoint": "PAC-SYM global score by FI response",
+          "role": "secondary",
+          "measure": "Change in PAC-SYM global score at 24 weeks, responders (at least 5-point St Mark's improvement; n=124) versus non-responders (n=119)",
+          "effect": {
+            "type": "difference",
+            "value": 0.2,
+            "ci": [
+              0.1,
+              0.4
+            ],
+            "p": "<0.01"
+          },
+          "note": "Responders −0.39 (95% CI −0.50 to −0.28) versus non-responders −0.15 (−0.26 to −0.03); baseline scores were similar.",
+          "locator": "PMC7242126 author manuscript, Table 5 and abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "capable-2020-response",
+      "kind": "secondary",
+      "label": "Treatment-response predictors",
+      "published": "2020-01-03",
+      "cutoff": null,
+      "citation": "Richter HE, Jelovsek JE, Iyer P, et al. Characteristics associated with clinically important treatment responses in women undergoing nonsurgical therapy for fecal incontinence. *Am J Gastroenterol.* 2020;115(1):115-127. doi:10.14309/ajg.0000000000000482",
+      "doi": "10.14309/ajg.0000000000000482",
+      "pmid": "31895722",
+      "followUp": "24 weeks; 266 women with St Mark's data and 256 with bowel diaries",
+      "followUpLocator": "PMC7197976 author manuscript, Results text",
+      "results": [
+        {
+          "endpoint": "Responders by St Mark's minimal important difference",
+          "role": "descriptive",
+          "measure": "Responders (at least 5-point St Mark's improvement) at 24 weeks",
+          "note": "137/266 (52%) responders. Higher baseline St Mark's score (adjusted OR 1.20, 95% CI 1.11 to 1.28) and overweight versus normal or underweight BMI (adjusted OR 2.15, 95% CI 1.07 to 4.34) were independently associated with response.",
+          "locator": "PMC7197976 author manuscript, Results text, Table 3a"
+        },
+        {
+          "endpoint": "Responders by 50% reduction in FI episodes",
+          "role": "descriptive",
+          "measure": "Responders (at least 50% reduction in bowel-diary FI episodes) at 24 weeks",
+          "note": "174/256 (68%) responders. Loperamide plus biofeedback versus placebo plus education: adjusted OR 4.04 (95% CI 1.36 to 11.98).",
+          "locator": "PMC7197976 author manuscript, Results text, Table 5a"
+        },
+        {
+          "endpoint": "Responders by both definitions",
+          "role": "descriptive",
+          "measure": "Responders meeting both the St Mark's minimal important difference and a 50% reduction in FI episodes",
+          "note": "108/262 (41%) responders.",
+          "locator": "PMC7197976 author manuscript, Results text"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/capable",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "id": "insite",
+  "name": "InSite",
+  "aliases": [
+    "InSite OAB Protocol 1634",
+    "Medtronic InSite post-approval study"
+  ],
+  "nct": "NCT00547378",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "sacral-neuromodulation"
+    }
+  ],
+  "question": "Does sacral neuromodulation with InterStim produce higher 6-month therapeutic success than standard medical therapy in adults with overactive bladder who have failed an anticholinergic?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 147,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Sacral neuromodulation (InterStim)",
+        "role": "experimental",
+        "n": 70
+      },
+      {
+        "key": "ctl",
+        "label": "standard medical therapy with antimuscarinic drugs",
+        "role": "control",
+        "n": 77
+      }
+    ],
+    "population": "Adults with bothersome overactive bladder (urge incontinence of at least 2 leaks per 72 hours and/or at least 8 voids per day) who had failed at least one anticholinergic and had at least one not yet tried; 93% were women and mean age was 58.",
+    "description": "Multicenter, open-label randomized superiority trial with nonrandomized implanted cohort",
+    "locator": "abstract; ClinicalTrials.gov NCT00547378 (design, arms, outcome definitions)"
+  },
+  "verdict": "positive",
+  "verdictNote": "SNM success exceeded medical therapy at 6 months; randomized comparison was open-label and lasted 6 months.",
+  "takeaway": "In adults with refractory overactive bladder, sacral neuromodulation (InterStim) achieved higher 6-month therapeutic success than standard medication (61% versus 42%, intention to treat), with greater quality-of-life gains; device-related adverse events occurred in 18 of 59 implanted participants (30.5%).",
+  "reports": [
+    {
+      "id": "insite-2015",
+      "kind": "primary",
+      "label": "6-month randomized report",
+      "published": "2014-01-10",
+      "cutoff": null,
+      "citation": "Siegel S, Noblett K, Mangel J, et al. Results of a prospective, randomized, multicenter study evaluating sacral neuromodulation with InterStim therapy compared to standard medical therapy at 6-months in subjects with mild symptoms of overactive bladder. *Neurourol Urodyn.* 2015;34(3):224-230.",
+      "doi": "10.1002/nau.22544",
+      "pmid": "24415559",
+      "followUp": "6 months",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "OAB therapeutic success",
+          "role": "primary",
+          "measure": "6-month OAB therapeutic success, intention to treat; risk difference in percentage points (SNM minus medical therapy)",
+          "values": {
+            "exp": "61%",
+            "ctl": "42%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 19,
+            "p": "0.02"
+          },
+          "met": true,
+          "note": "Success was at least 50% improvement in average leaks per day (urge incontinence) or in voids per day, or fewer than 8 voids per day (urgency-frequency). The prespecified hypothesis was a greater response rate with SNM; the difference is derived by subtraction.",
+          "locator": "abstract; ClinicalTrials.gov NCT00547378 primary outcome"
+        },
+        {
+          "endpoint": "OAB therapeutic success",
+          "role": "secondary",
+          "measure": "6-month OAB therapeutic success, as-treated analysis; risk difference in percentage points (SNM minus medical therapy)",
+          "values": {
+            "exp": "76%",
+            "ctl": "49%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 27,
+            "p": "0.002"
+          },
+          "note": "Difference derived by subtraction.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Urinary symptom interference",
+          "role": "secondary",
+          "measure": "Improved or greatly improved urinary symptom interference score at 6 months",
+          "values": {
+            "exp": "86%",
+            "ctl": "44%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports significantly greater quality-of-life improvement with SNM on all measures (all P<0.001); denominators are not given.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events related to the assigned treatment",
+          "values": {
+            "exp": "18/59 (30.5%; device-related, lead implanted)",
+            "ctl": "21/77 (27.3%; medication-related)"
+          },
+          "locator": "full text, p. 227",
+          "note": "The neuromodulation safety denominator is participants with a lead implant, not all 70 randomized to neuromodulation."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrollment and randomization",
+          "value": "Medication washout and baseline diary, then 1:1 randomization; 70 to SNM and 77 to medical therapy at 38 centers.",
+          "locator": "abstract; ClinicalTrials.gov NCT00547378 participant flow"
+        },
+        {
+          "label": "Test stimulation before implant",
+          "value": "Subjects in each group went through test stimulation and received a full system implant if it was successful.",
+          "locator": "ClinicalTrials.gov NCT00547378 results (outcome analysis description)"
+        },
+        {
+          "label": "Crossover after the randomized comparison",
+          "value": "After the month 6 visit, subjects in the medical therapy group could choose test stimulation and, if successful, a full system implant.",
+          "locator": "ClinicalTrials.gov NCT00547378 participant flow"
+        },
+        {
+          "label": "Completion of the 6-month visit",
+          "values": {
+            "exp": "59/70",
+            "ctl": "71/77"
+          },
+          "locator": "ClinicalTrials.gov NCT00547378 participant flow"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/InSite-Siegel-2015.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "insite-2017",
+      "kind": "secondary",
+      "label": "Adverse events and interventions to 12 months",
+      "published": "2016-08-04",
+      "cutoff": null,
+      "citation": "Noblett K, Benson K, Kreder K. Detailed analysis of adverse events and surgical interventions in a large prospective trial of sacral neuromodulation therapy for overactive bladder patients. *Neurourol Urodyn.* 2017;36(4):1136-1139.",
+      "doi": "10.1002/nau.23076",
+      "pmid": "27491027",
+      "followUp": "12 months after implant, 272 implanted subjects",
+      "followUpLocator": "abstract",
+      "results": [],
+      "harms": [
+        {
+          "label": "Device-related adverse events through 12 months",
+          "values": {
+            "exp": "82/272 (30%)"
+          },
+          "locator": "abstract",
+          "note": "Only one was serious; 56% of the events occurred between implant and 3 months, and a Clinical Events Committee adjudicated them."
+        },
+        {
+          "label": "Undesirable change in stimulation",
+          "values": {
+            "exp": "32/272 (12%)"
+          },
+          "locator": "abstract"
+        },
+        {
+          "label": "Implant site pain",
+          "values": {
+            "exp": "20/272 (7%)"
+          },
+          "locator": "abstract",
+          "note": "Of 26 pain events, 13 required surgical intervention and 2 ended in explant."
+        },
+        {
+          "label": "Implant site infection",
+          "values": {
+            "exp": "9/272 (3%)"
+          },
+          "locator": "abstract",
+          "note": "Ten subjects had 13 surgical site infection events (including one cellulitis); 5 resolved with antibiotics and 8 required explantation."
+        },
+        {
+          "label": "Surgical intervention through 12 months",
+          "values": {
+            "exp": "13%"
+          },
+          "locator": "abstract",
+          "note": "Reasons: pain at the surgical site (4%), lack or loss of efficacy (4%) and infection (3%); most interventions were revision or replacement."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/insite-2017.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "insite-2018",
+      "kind": "updated",
+      "label": "5-year follow-up of implanted subjects",
+      "published": "2017-07-11",
+      "cutoff": null,
+      "citation": "Siegel S, Noblett K, Mangel J, et al. Five-year followup results of a prospective, multicenter study of patients with overactive bladder treated with sacral neuromodulation. *J Urol.* 2018;199(1):229-236.",
+      "doi": "10.1016/j.juro.2017.07.010",
+      "pmid": "28709886",
+      "followUp": "5 years after implant; 340 completed test stimulation and 272 were implanted",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "OAB therapeutic success",
+          "role": "descriptive",
+          "measure": "5-year therapeutic success among 183 of 272 implanted subjects, modified completers analysis (95% CI 60–74%)",
+          "values": {
+            "exp": "67%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Success was at least 50% improvement in leaks or voids per day, or fewer than 8 voids per day. Single-arm analysis of implanted subjects.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "OAB therapeutic success",
+          "role": "descriptive",
+          "measure": "5-year therapeutic success among 150 of 272 implanted subjects, completers analysis (95% CI 76–88%)",
+          "values": {
+            "exp": "82%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Completers only.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Urge incontinence leaks per day",
+          "role": "descriptive",
+          "measure": "Five-year completers mean reduction; baseline mean 3.1 leaks per day in 202 subjects with urge incontinence at baseline",
+          "values": {
+            "exp": "2.0 ± 2.2 leaks per day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Voids per day",
+          "role": "descriptive",
+          "measure": "Five-year completers mean reduction; baseline mean 12.6 voids per day in 189 subjects with urgency-frequency at baseline",
+          "values": {
+            "exp": "5.4 ± 4.3 voids per day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Tined lead adverse events requiring surgery",
+          "role": "primary",
+          "measure": "Cumulative 5-year probability of tined lead related adverse events requiring surgery or revision, all implanted subjects; prespecified upper 95% confidence bound below 0.33",
+          "values": {
+            "exp": "22.4% (95% CI 16.6–27.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Read from the ClinicalTrials.gov results record, not from the published paper.",
+          "locator": "ClinicalTrials.gov NCT00547378 results, primary outcome 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Undesirable change in stimulation",
+          "values": {
+            "exp": "60/272 (22%)"
+          },
+          "locator": "abstract",
+          "note": "Device-related adverse event."
+        },
+        {
+          "label": "Implant site pain",
+          "values": {
+            "exp": "40/272 (15%)"
+          },
+          "locator": "abstract",
+          "note": "Device-related adverse event."
+        },
+        {
+          "label": "Therapeutic product ineffectiveness",
+          "values": {
+            "exp": "36/272 (13%)"
+          },
+          "locator": "abstract",
+          "note": "Device-related adverse event."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Implantation after test stimulation",
+          "value": "272 of 340 subjects who completed test stimulation received an implant; 91% were women and mean age was 57.",
+          "locator": "abstract"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/insite-2018.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/insite",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

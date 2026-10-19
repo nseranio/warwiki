@@ -1,0 +1,231 @@
+{
+  "id": "value",
+  "name": "VALUE",
+  "aliases": [
+    "Value of Urodynamic Evaluation",
+    "ValUE"
+  ],
+  "nct": "NCT00803959",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-evaluation-conservative",
+      "lane": "preoperative-testing"
+    }
+  ],
+  "question": "Does adding multichannel urodynamics to an office evaluation improve outcomes after surgery for uncomplicated, demonstrable stress-predominant urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Outcome assessors blinded; surgeons and participants unblinded",
+    "type": "noninferiority",
+    "n": 630,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Office evaluation plus urodynamic testing before planned continence surgery",
+        "n": 315,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "office evaluation alone before planned continence surgery",
+        "n": 315,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged 21 years or older with uncomplicated, demonstrable stress-predominant urinary incontinence seeking surgery; positive office stress test, postvoid residual below 150 mL, and no urinary infection.",
+    "description": "Multicenter randomized noninferiority trial",
+    "locator": "Nager 2012 author-manuscript PDF pp2-4"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Office evaluation met the 11-percentage-point noninferiority margin in the per-protocol analysis.",
+  "takeaway": "Before surgery for uncomplicated, demonstrable stress-predominant incontinence, office evaluation alone was noninferior to office evaluation plus multichannel urodynamics for 12-month patient-reported treatment success: 200/259 (77.2%) versus 203/264 (76.9%), with an 11-percentage-point prespecified margin.",
+  "reports": [
+    {
+      "id": "value-2012",
+      "kind": "primary",
+      "label": "Primary 12-month report",
+      "published": "2012-05-02",
+      "cutoff": null,
+      "citation": "Nager CW, Brubaker L, Litman HJ, et al. \"A Randomized Trial of Urodynamic Testing before Stress-Incontinence Surgery.\" *N Engl J Med.* 2012;366(21):1987-1997. doi:10.1056/NEJMoa1113595",
+      "doi": "10.1056/NEJMoa1113595",
+      "pmid": "22551104",
+      "followUp": "12 months after treatment",
+      "results": [
+        {
+          "endpoint": "Treatment success",
+          "role": "primary",
+          "measure": "12-month patient-reported composite success; risk difference in percentage points (urodynamics minus office only)",
+          "values": {
+            "exp": "203/264 (76.9%)",
+            "ctl": "200/259 (77.2%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.3,
+            "ci": [
+              -7.5,
+              6.9
+            ]
+          },
+          "met": true,
+          "note": "Per-protocol analysis included 523/630 randomized women. Success required at least 70% reduction in Urogenital Distress Inventory score and 'much better' or 'very much better' on Patient Global Impression of Improvement. The upper CI bound for urodynamics minus office only was below the prespecified 11-point margin.",
+          "locator": "Author-manuscript PDF pp3-5, Outcomes and Primary Outcome; Fig 2"
+        },
+        {
+          "endpoint": "Surgical treatment success",
+          "role": "secondary",
+          "measure": "12-month composite success plus negative standardized 300-mL stress test among surgically treated women with available stress-test data",
+          "values": {
+            "exp": "154/222 (69.4%)",
+            "ctl": "161/221 (72.9%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.42"
+          },
+          "note": "Planned surgical subgroup analysis; only 443 of 586 surgically treated women had follow-up stress-test data.",
+          "locator": "Author-manuscript PDF pp3,5, Planned Subgroup Analysis and Success of Surgical Treatment"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "21.3%",
+            "ctl": "19.4%"
+          },
+          "locator": "Author-manuscript PDF p5, Primary Outcome; Supplementary Appendix Table 7 cited there",
+          "note": "P=0.55; main article reports percentages without event counts. Events assessed after surgery, at discharge, and at 3 and 12 months; no significant difference in voiding dysfunction was reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assigned preoperative evaluation",
+          "value": "Office evaluation included provocative stress test, postvoid residual, urinalysis or culture, and urethral-mobility assessment. Added urodynamics comprised noninstrumented uroflowmetry, filling cystometry with Valsalva leak-point pressures, and pressure-flow study; urethral pressure profilometry or video was optional by site practice.",
+          "locator": "Author-manuscript PDF pp2-3, Study Design and Procedures"
+        },
+        {
+          "label": "Surgery received",
+          "values": {
+            "exp": "298/315 underwent surgery; 17/315 did not",
+            "ctl": "288/315 underwent surgery; 27/315 did not"
+          },
+          "locator": "Author-manuscript PDF p5, Success of Surgical Treatment",
+          "note": "Among the 17 without surgery after added urodynamics, 10 canceled, 4 changed to nonsurgical treatment and 3 had medical contraindications; P=0.12 for the between-arm comparison."
+        },
+        {
+          "label": "Operative mix",
+          "values": {
+            "exp": "64.7% retropubic and 29.0% transobturator midurethral sling",
+            "ctl": "64.6% retropubic and 28.1% transobturator midurethral sling"
+          },
+          "locator": "Author-manuscript PDF p6, Clinical Diagnosis and Treatment; Supplementary Appendix Table 8 cited there",
+          "note": "The balance included mini-slings, traditional slings, retropubic urethropexy and urethral-bulking injection; the main report gives percentages without procedure counts."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      },
+      "followUpLocator": "Author-manuscript PDF pp3-5, Outcomes and Primary Outcome"
+    },
+    {
+      "id": "value-2013-treatment-plan",
+      "kind": "secondary",
+      "label": "Diagnosis and treatment-plan analysis",
+      "published": "2012-10-08",
+      "cutoff": null,
+      "citation": "Sirls LT, Richter HE, Litman HJ, et al. \"The Effect of Urodynamic Testing on Clinical Diagnosis, Treatment Plan and Outcomes in Women Undergoing Stress Urinary Incontinence Surgery.\" *J Urol.* 2013;189(1):204-209. doi:10.1016/j.juro.2012.09.050",
+      "doi": "10.1016/j.juro.2012.09.050",
+      "pmid": "22982425",
+      "followUp": "Treatment plans after preoperative testing and outcomes at 12 months",
+      "results": [
+        {
+          "endpoint": "Clinical diagnosis changed after urodynamics",
+          "role": "descriptive",
+          "measure": "Within the urodynamic-testing arm, changed diagnosis after office assessment",
+          "values": {
+            "exp": "167/294 (56.8%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Overactive-bladder and suspected intrinsic-sphincter-deficiency diagnoses fell, while voiding-dysfunction diagnoses rose.",
+          "locator": "PMC full text, Results: Diagnoses and Table 1"
+        },
+        {
+          "endpoint": "Urodynamics-driven global treatment-plan change",
+          "role": "descriptive",
+          "measure": "Within the urodynamic-testing arm, any global plan change",
+          "values": {
+            "exp": "41/294 (14%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Changes could include procedure, planned sling tension or added nonsurgical therapy; observational comparison within one randomized arm.",
+          "locator": "PMC full text, Results: Treatment, paragraph after Table 2"
+        },
+        {
+          "endpoint": "Success after plan change",
+          "role": "exploratory",
+          "measure": "Association of urodynamics-driven plan change with 12-month treatment success; odds ratio",
+          "effect": {
+            "type": "OR",
+            "value": 0.96,
+            "ci": [
+              0.41,
+              2.25
+            ],
+            "p": "0.92"
+          },
+          "note": "Within-arm observational analysis; the interval includes substantial benefit and harm.",
+          "locator": "PMC full text, Abstract: Results and Results: Outcomes"
+        },
+        {
+          "endpoint": "Postoperative urgency-incontinence treatment after plan change",
+          "role": "exploratory",
+          "measure": "Association of urodynamics-driven plan change with postoperative urgency-incontinence treatment; odds ratio",
+          "effect": {
+            "type": "OR",
+            "value": 3.23,
+            "ci": [
+              1.46,
+              7.14
+            ],
+            "p": "0.004"
+          },
+          "note": "Within-arm observational association, not a randomized comparison; the endpoint counted treatment at 3 or 12 months.",
+          "locator": "PMC full text, Abstract: Results and Discussion"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Specific surgical-plan changes after urodynamics",
+          "value": "Surgery canceled in 4/294 (1.4%); procedure changed in 16/294 (5.4%), including 13/294 (4.4%) switches between retropubic and transobturator midurethral slings; a sling-tension modification was planned for 20/294 (6.8%) but performed in 7/20.",
+          "locator": "PMC full text, Results: Treatment and Table 2",
+          "note": "These are within-arm changes; they do not represent a randomized difference in the distribution of operations."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      },
+      "followUpLocator": "PMC full text, Methods and Results"
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/value",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

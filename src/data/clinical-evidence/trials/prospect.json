@@ -1,0 +1,877 @@
+{
+  "id": "prospect",
+  "name": "PROSPECT",
+  "aliases": [
+    "PROlapse Surgery: Pragmatic Evaluation and randomised Controlled Trials",
+    "ISRCTN60695184",
+    "NIHR HTA 07/60/18"
+  ],
+  "nct": null,
+  "registry": "ISRCTN60695184",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-grafts",
+      "lane": "vaginal-mesh"
+    }
+  ],
+  "question": "Does adding a synthetic mesh inlay or biological graft to a primary transvaginal anterior or posterior prolapse repair improve patient-reported prolapse symptoms over native-tissue repair?",
+  "design": {
+    "phase": "pragmatic effectiveness",
+    "randomized": true,
+    "blinding": "Participants, ward staff and outcome assessors masked where possible; surgeons not masked",
+    "type": "superiority",
+    "n": 1352,
+    "arms": [
+      {
+        "key": "mesh",
+        "label": "Standard repair with a polypropylene mesh inlay",
+        "role": "experimental",
+        "n": 435
+      },
+      {
+        "key": "graft",
+        "label": "standard repair with a biological graft inlay",
+        "role": "experimental",
+        "n": 368
+      },
+      {
+        "key": "ctl",
+        "label": "standard native-tissue repair alone",
+        "role": "control",
+        "n": 545
+      }
+    ],
+    "population": "Women at 35 UK hospitals undergoing primary transvaginal anterior or posterior compartment prolapse repair.",
+    "description": "Two pragmatic multicenter parallel-group randomized trials, surgeons unmasked",
+    "locator": "PDF pp1,3-4 and Figure (trial profile) footnotes; mesh and graft trials share the 545-woman standard-repair group (1,348 analyzed of 1,352 randomized)"
+  },
+  "verdict": "negative",
+  "verdictNote": "Neither augmentation improved POP-SS at 1 year; 12% of mesh recipients had a mesh complication by 2 years",
+  "takeaway": "Adding a polypropylene mesh inlay or a biological graft to primary transvaginal anterior or posterior prolapse repair did not improve 1-year Pelvic Organ Prolapse Symptom Scores versus native-tissue repair alone; 51 of 434 women who received synthetic mesh had a mesh complication within 2 years.",
+  "reports": [
+    {
+      "id": "prospect-2016",
+      "kind": "primary",
+      "label": "2-year randomized report",
+      "published": "2016-12-20",
+      "cutoff": null,
+      "citation": "Glazener CMA, Breeman S, Elders A, et al. Mesh, graft, or standard repair for women having primary transvaginal anterior or posterior compartment prolapse surgery: two parallel-group, multicentre, randomised, controlled trials (PROSPECT). *Lancet.* 2017;389(10067):381-392.",
+      "doi": "10.1016/S0140-6736(16)31596-3",
+      "pmid": "28010989",
+      "followUp": "1-year primary outcomes and clinic review; questionnaires to 2 years (79% to 82% of each arm returned the 24-month questionnaire)",
+      "followUpLocator": "PDF p4, Figure (trial profile)",
+      "results": [
+        {
+          "endpoint": "POP-SS",
+          "role": "primary",
+          "measure": "1-year Pelvic Organ Prolapse Symptom Score (0 to 28; lower is better), mesh trial; mean difference (mesh minus standard)",
+          "locator": "PDF p6, Table 2",
+          "note": "Prespecified minimally important difference 2 points; the 95% CI excludes it. Positive differences favor standard repair.",
+          "values": {
+            "ctl": "5.4 (SD 5.5; n=395)",
+            "mesh": "5.5 (SD 5.1; n=389)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.0,
+            "ci": [
+              -0.7,
+              0.71
+            ],
+            "p": "0.99"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "primary",
+          "measure": "1-year POP-SS, graft trial; mean difference (graft minus standard)",
+          "locator": "PDF p6, Table 2",
+          "note": "The standard-repair comparison group of the graft trial overlaps the mesh trial's (stratum A, 252 women).",
+          "values": {
+            "ctl": "5.5 (SD 5.6; n=342)",
+            "graft": "5.6 (SD 5.6; n=337)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.15,
+            "ci": [
+              -0.93,
+              0.63
+            ],
+            "p": "0.71"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Prolapse-related quality of life",
+          "role": "primary",
+          "measure": "1-year prolapse-related quality-of-life visual analogue score (0 to 10; lower is better), mesh trial; mean difference",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "ctl": "2.0 (SD 2.7; n=389)",
+            "mesh": "2.2 (SD 2.7; n=380)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.13,
+            "ci": [
+              -0.25,
+              0.51
+            ],
+            "p": "0.50"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Prolapse-related quality of life",
+          "role": "primary",
+          "measure": "1-year prolapse-related quality-of-life score, graft trial; mean difference",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "ctl": "2.2 (SD 2.8; n=335)",
+            "graft": "2.4 (SD 2.9; n=330)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.13,
+            "ci": [
+              -0.3,
+              0.56
+            ],
+            "p": "0.54"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "secondary",
+          "measure": "2-year POP-SS, mesh trial; mean difference (mesh minus standard)",
+          "locator": "PDF p6, Table 2",
+          "note": "The report lists primary outcomes as measured at 1 and 2 years; the 1-year POP-SS was the primary clinical outcome.",
+          "values": {
+            "ctl": "4.9 (SD 5.1; n=347)",
+            "mesh": "5.3 (SD 5.1; n=342)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.32,
+            "ci": [
+              -0.39,
+              1.03
+            ],
+            "p": "0.37"
+          }
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "secondary",
+          "measure": "2-year POP-SS, graft trial; mean difference (graft minus standard)",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "ctl": "4.9 (SD 5.1; n=298)",
+            "graft": "5.5 (SD 5.7; n=299)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.32,
+            "ci": [
+              -0.48,
+              1.12
+            ],
+            "p": "0.43"
+          }
+        },
+        {
+          "endpoint": "Objective prolapse",
+          "role": "key-secondary",
+          "measure": "1-year POP-Q leading edge beyond the hymen (stage 2b, 3 or 4), mesh trial; risk ratio (mesh versus standard)",
+          "locator": "PDF p7, Table 3",
+          "note": "Higher proportion with objective failure in the mesh arm was not statistically significant.",
+          "values": {
+            "ctl": "47/338 (14%)",
+            "mesh": "54/336 (16%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.12,
+            "ci": [
+              0.79,
+              1.6
+            ],
+            "p": "0.52"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Objective prolapse",
+          "role": "key-secondary",
+          "measure": "1-year POP-Q leading edge beyond the hymen (stage 2b, 3 or 4), graft trial; risk ratio (graft versus standard)",
+          "locator": "PDF p7, Table 3",
+          "note": "",
+          "values": {
+            "ctl": "47/303 (16%)",
+            "graft": "54/298 (18%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.14,
+            "ci": [
+              0.8,
+              1.62
+            ],
+            "p": "0.47"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Symptomatic prolapse",
+          "role": "secondary",
+          "measure": "1-year at least one prolapse symptom (POP-SS above 0), mesh trial; risk ratio",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "ctl": "328/395 (83%)",
+            "mesh": "329/389 (85%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.01,
+            "ci": [
+              0.95,
+              1.08
+            ],
+            "p": "0.64"
+          }
+        },
+        {
+          "endpoint": "Symptomatic prolapse",
+          "role": "secondary",
+          "measure": "1-year at least one prolapse symptom (POP-SS above 0), graft trial; risk ratio",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "ctl": "283/342 (83%)",
+            "graft": "276/337 (82%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.99,
+            "ci": [
+              0.93,
+              1.06
+            ],
+            "p": "0.85"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "New prolapse operation in the first year after surgery, mesh trial; risk ratio",
+          "locator": "PDF p8, Table 4",
+          "note": "",
+          "values": {
+            "ctl": "6/395 (2%)",
+            "mesh": "12/389 (3%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.99,
+            "ci": [
+              0.76,
+              5.24
+            ],
+            "p": "0.16"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "New prolapse operation in the first year, graft trial; risk ratio",
+          "locator": "PDF p8, Table 4",
+          "note": "",
+          "values": {
+            "ctl": "7/342 (2%)",
+            "graft": "10/337 (3%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.44,
+            "ci": [
+              0.56,
+              3.73
+            ],
+            "p": "0.45"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "New prolapse operation in the second year, mesh trial; risk ratio",
+          "locator": "PDF p8, Table 4",
+          "note": "Operations in the same or another compartment; 6% of women overall had a new prolapse operation within 2 years.",
+          "values": {
+            "ctl": "16/348 (5%)",
+            "mesh": "15/343 (4%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.94,
+            "ci": [
+              0.47,
+              1.88
+            ],
+            "p": "0.87"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "New prolapse operation in the second year, graft trial; risk ratio",
+          "locator": "PDF p8, Table 4",
+          "note": "",
+          "values": {
+            "ctl": "15/299 (5%)",
+            "graft": "15/300 (5%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.99,
+            "ci": [
+              0.49,
+              1.98
+            ],
+            "p": "0.98"
+          }
+        },
+        {
+          "endpoint": "Vaginal symptoms",
+          "role": "exploratory",
+          "measure": "1-year International Consultation on Incontinence vaginal symptoms score (higher is worse), graft trial; mean difference",
+          "locator": "PDF p6, Table 2",
+          "note": "Confidence intervals were not adjusted for multiple comparisons; the mesh-trial score did not differ (7.2 versus 7.5; P=0.38).",
+          "values": {
+            "ctl": "7.1 (SD 6.9; n=294)",
+            "graft": "9.0 (SD 9.1; n=294)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.31,
+            "ci": [
+              0.04,
+              2.59
+            ],
+            "p": "0.04"
+          }
+        },
+        {
+          "endpoint": "Something coming down",
+          "role": "exploratory",
+          "measure": "2-year any report of 'something coming down', graft trial; risk ratio",
+          "locator": "PDF p6, Table 2",
+          "note": "Unadjusted for multiple comparisons; the mesh-trial comparison at 2 years did not differ (106/347 [31%] versus 116/342 [34%]; P=0.59).",
+          "values": {
+            "ctl": "91/298 (31%)",
+            "graft": "120/299 (40%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.26,
+            "ci": [
+              1.01,
+              1.58
+            ],
+            "p": "0.04"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events in year 1, excluding mesh complications",
+          "values": {
+            "ctl": "31/430 (7%) mesh trial; 23/367 (6%) graft trial",
+            "mesh": "34/435 (8%)",
+            "graft": "36/368 (10%)"
+          },
+          "locator": "PDF p8, Table 4",
+          "note": "Risk ratio 1.08 (95% CI 0.68 to 1.72; P=0.73) for mesh and 1.57 (0.95 to 2.59; P=0.08) for graft. Serious events were infection, urinary retention, dyspareunia or other pain, and other events meeting the trial's definition."
+        },
+        {
+          "label": "Mesh complications, year 1",
+          "values": {
+            "ctl": "2/430 (<1%) mesh trial; 2/367 (<1%) graft trial",
+            "mesh": "32/435 (7%)",
+            "graft": "2/368 (<1%)"
+          },
+          "locator": "PDF p8, Table 4",
+          "note": "Mesh complications in the standard-repair and graft arms followed synthetic mesh that surgeons used for the repair or a concomitant procedure."
+        },
+        {
+          "label": "Mesh complications, year 2 (new in that year)",
+          "values": {
+            "ctl": "1/430 (<1%) mesh trial; 1/367 (<1%) graft trial",
+            "mesh": "25/435 (6%)",
+            "graft": "1/368 (<1%)"
+          },
+          "locator": "PDF p8, Table 4"
+        },
+        {
+          "label": "Surgical removal or oversewing of mesh, year 1",
+          "values": {
+            "ctl": "2/430 (<1%) mesh trial; 2/367 (<1%) graft trial",
+            "mesh": "23/435 (5%)",
+            "graft": "1/368 (<1%)"
+          },
+          "locator": "PDF pp8-9, Table 4",
+          "note": "In the mesh trial 25 women had partial mesh removal in the first year (2 in the standard arm); 18 (72%) were asymptomatic and 16 (64%) had exposures under 1 cm2. One woman had total mesh removal within 2 weeks for severe infection."
+        },
+        {
+          "label": "Surgical removal or oversewing of mesh, year 2 (new in that year)",
+          "values": {
+            "ctl": "0/430 mesh trial; 0/367 graft trial",
+            "mesh": "17/435 (4%)",
+            "graft": "0/368"
+          },
+          "locator": "PDF pp8-9, Table 4",
+          "note": "Of the 17 mesh-trial women, 13 (76%) were asymptomatic and 10 (59%) had exposures under 1 cm2."
+        },
+        {
+          "label": "Mesh complication within 2 years among women who received synthetic mesh by any route",
+          "values": {
+            "mesh": "51/434 (12%)"
+          },
+          "locator": "PDF p9",
+          "note": "Includes mesh given as a concomitant vault, uterine or continence procedure; 37 of the 51 had surgical removal. Restricted to mesh used only as the anterior or posterior repair: 41/284 (14%). Treatment was conservative in about a third."
+        },
+        {
+          "label": "Severe dyspareunia at 1 year",
+          "values": {
+            "ctl": "8/186 (4%) mesh trial; 9/149 (6%) graft trial",
+            "mesh": "9/173 (5%)",
+            "graft": "8/165 (5%)"
+          },
+          "locator": "PDF p6, Table 2",
+          "note": "Adjusted risk ratio 1.73 (95% CI 0.52 to 5.78) for mesh and 1.17 (0.43 to 3.23) for graft. Denominators as printed in the table."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Received the allocated repair, by arm",
+          "values": {
+            "ctl": "403/425 (95%) mesh trial; 342/359 (95%) graft trial",
+            "mesh": "341/425 (80%)",
+            "graft": "294/363 (81%)"
+          },
+          "locator": "PDF p4, Figure (trial profile); p7 text",
+          "note": "Denominators are women who had surgery. In the mesh arm 60 (14%) had standard repair; in the graft arm 57 (16%) had standard repair. Reasons for non-compliance were in the appendix."
+        },
+        {
+          "label": "Women randomized, analyzed and operated",
+          "value": "1,352 randomized (55% of 2,478 eligible); 1,348 analyzed; 23 had no surgery and contributed baseline data only",
+          "locator": "PDF p6; p4 Figure",
+          "note": "Mesh trial 865 (430 standard, 435 mesh); graft trial 735 (367 standard, 368 graft); 252 stratum A women with standard repair were in both trials."
+        },
+        {
+          "label": "Materials used",
+          "value": "Type 1 monofilament macroporous polypropylene inlays (19 to 44 g/m2; hybrid coated mesh allowed); porcine acellular collagen, porcine small intestinal submucosa or bovine dermis grafts",
+          "locator": "PDF p3",
+          "note": "Surgeons chose any available product and used their usual technique, with midline or fascial plication permitted; graft or mesh was placed below the fascial layer when possible and secured with peripheral sutures."
+        },
+        {
+          "label": "Operator",
+          "value": "Consultants or doctors with completed specialty training did 78% and 81% of procedures in the standard and mesh arms of the mesh trial and 69% and 75% in the standard and graft arms of the graft trial",
+          "locator": "PDF p6",
+          "note": "65 gynecologic surgeons in 35 centers."
+        },
+        {
+          "label": "Primary outcome data available at 1 year",
+          "value": "784/865 (91%) in the mesh trial; 679/735 (92%) in the graft trial",
+          "locator": "PDF pp6-7"
+        },
+        {
+          "label": "Examiners masked for 1-year POP-Q",
+          "value": "581/657 (88%) in the mesh trial; 539/573 (94%) in the graft trial",
+          "locator": "PDF p7"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/surgical-genealogy/urps-work/knownfor/cache/https___www_womens_health_org_nz_wp_content_uploads_2016_12_Prospect_study_2016_published_Lancet_pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "prospect-2021",
+      "kind": "secondary",
+      "label": "Complications, all 2,632 operated women",
+      "published": "2021-09-27",
+      "cutoff": null,
+      "citation": "Reid FM, Elders A, Breeman S, et al. How common are complications following polypropylene mesh, biological xenograft and native tissue surgery for pelvic organ prolapse? A secondary analysis from the PROSPECT trial. *BJOG.* 2021;128(13):2180-2189.",
+      "doi": "10.1111/1471-0528.16897",
+      "pmid": "34473896",
+      "followUp": "2 years after surgery; analysis by treatment received (1,712 native tissue, 482 mesh inlay, 360 xenograft, 78 mesh kit)",
+      "followUpLocator": "BJOG 2021 Results text (PMC9292877); Abstract",
+      "results": [
+        {
+          "endpoint": "Severe dyspareunia",
+          "role": "descriptive",
+          "measure": "De novo severe dyspareunia at 24 months by repair received",
+          "locator": "BJOG 2021 Abstract",
+          "note": "Mesh kit 4.8%. Descriptive analysis by treatment received; no inferential comparisons. Severe dyspareunia overall at 24 months: 4.8% native tissue, 3.4% mesh inlay, 4.2% xenograft, 13.0% mesh kit.",
+          "values": {
+            "ctl": "3.5%",
+            "mesh": "1.4%",
+            "graft": "3.5%"
+          }
+        },
+        {
+          "endpoint": "Vaginal tightness",
+          "role": "descriptive",
+          "measure": "De novo vaginal tightness at 24 months by repair received",
+          "locator": "BJOG 2021 Abstract",
+          "note": "Mesh kit 3.6%.",
+          "values": {
+            "ctl": "1.6%",
+            "mesh": "0.3%",
+            "graft": "1.2%"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Mesh exposure and removal among women who received mesh",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "Mesh exposure in 12.0% of women who received mesh, 64.2% of those exposures asymptomatic; surgical removal of mesh in 7.9% (95% CI 5.5 to 11.1%), extent of removal not recorded."
+        },
+        {
+          "label": "Bladder and bowel injury, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "Bladder injury 0.4% (1 in 263; 95% CI 0.2 to 0.7%); bowel injury 0.2% (1 in 526; 95% CI 0.1 to 0.4%)."
+        },
+        {
+          "label": "Prolonged catheterization over 10 days, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "3.9% (95% CI 3.2 to 4.7%), more common in the mesh kit group."
+        },
+        {
+          "label": "De novo urinary incontinence at 24 months, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "6.2% (95% CI 5.3 to 7.3%); 2.8% (95% CI 0.3 to 9.7%) after mesh kit."
+        },
+        {
+          "label": "Postoperative vaginal adhesions, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "1.7% (95% CI 1.2 to 2.2%); 3.3% (95% CI 1.7 to 5.8%) after xenograft."
+        },
+        {
+          "label": "Readmission for non-mesh complications over 2 years, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "4.3% (95% CI 3.5 to 5.1%); most common causes were vaginal adhesions, urinary retention, infection and constipation."
+        },
+        {
+          "label": "Infection, all procedures",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "2.4% (95% CI 1.9 to 3.1%); infection with abscess 0.1% (95% CI 0.01 to 0.3%)."
+        },
+        {
+          "label": "De novo extreme generic pain or discomfort at 24 months",
+          "locator": "BJOG 2021 Results text (PMC9292877); Abstract",
+          "note": "3.0% (95% CI 2.3 to 3.8%) overall; none after mesh kit. Extreme pain or discomfort at baseline in 8.4%, improved after surgery in all groups."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Population",
+          "value": "2,632 women who had a transvaginal anterior or posterior repair, randomized or in the comprehensive cohort, primary or repeat repair",
+          "locator": "BJOG 2021 Results text (PMC9292877)",
+          "note": "Within the randomized trials, xenograft was not used for recurrent prolapse and mesh kits were not used for primary repairs."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "prospect-2022",
+      "kind": "updated",
+      "label": "4- and 6-year follow-up",
+      "published": "2022-08-26",
+      "cutoff": null,
+      "citation": "Reid FM, Aucott L, Glazener CMA, et al. PROSPECT: 4- and 6-year follow-up of a randomised trial of surgery for vaginal prolapse. *Int Urogynecol J.* 2023;34(1):67-78.",
+      "doi": "10.1007/s00192-022-05308-0",
+      "pmid": "36018353",
+      "followUp": "4 and 6 years by postal questionnaire; 72% of randomized women retained at 4 years and 65% at 6 years",
+      "followUpLocator": "IUJ 2023 Results, Participants and treatment (PMC9834125)",
+      "results": [
+        {
+          "endpoint": "POP-SS",
+          "role": "primary",
+          "measure": "6-year POP-SS, mesh trial; mean difference (mesh minus native tissue)",
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "Questionnaire only; no examination at 4 or 6 years.",
+          "values": {
+            "ctl": "5.4 (SD 5.4; n=269)",
+            "mesh": "6.3 (SD 6.2; n=272)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.85,
+            "ci": [
+              -0.05,
+              1.75
+            ],
+            "p": "0.063"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "primary",
+          "measure": "6-year POP-SS, graft trial; mean difference (graft minus native tissue)",
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "",
+          "values": {
+            "ctl": "5.9 (SD 5.4; n=237)",
+            "graft": "6.2 (SD 5.8; n=248)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.27,
+            "ci": [
+              -0.64,
+              1.18
+            ],
+            "p": "0.565"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Functional cure",
+          "role": "key-secondary",
+          "measure": "6-year functional cure (no sense of something coming down, no prolapse surgery, no pessary), mesh trial; risk ratio",
+          "locator": "IUJ 2023 Table 2",
+          "note": "",
+          "values": {
+            "ctl": "144/268 (53.7%)",
+            "mesh": "150/274 (54.7%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.02,
+            "ci": [
+              0.88,
+              1.19
+            ],
+            "p": "0.797"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Functional cure",
+          "role": "key-secondary",
+          "measure": "6-year functional cure, graft trial; risk ratio",
+          "locator": "IUJ 2023 Table 2",
+          "note": "",
+          "values": {
+            "ctl": "120/233 (51.5%)",
+            "graft": "122/247 (49.4%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.99,
+            "ci": [
+              0.83,
+              1.18
+            ],
+            "p": "0.892"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "secondary",
+          "measure": "4-year POP-SS, mesh trial; mean difference (mesh minus native tissue)",
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "Below the prespecified minimally important difference of 2 points.",
+          "values": {
+            "ctl": "5.1 (SD 5.0; n=297)",
+            "mesh": "6.1 (SD 6.0; n=311)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.01,
+            "ci": [
+              0.2,
+              1.83
+            ],
+            "p": "0.015"
+          }
+        },
+        {
+          "endpoint": "POP-SS",
+          "role": "secondary",
+          "measure": "4-year POP-SS, graft trial; mean difference (graft minus native tissue)",
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "",
+          "values": {
+            "ctl": "5.3 (SD 5.2; n=266)",
+            "graft": "5.8 (SD 5.5; n=262)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.54,
+            "ci": [
+              -0.31,
+              1.39
+            ],
+            "p": "0.212"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "Cumulative new prolapse operation within 6 years, mesh trial; risk ratio",
+          "locator": "IUJ 2023 Table 2",
+          "note": "",
+          "values": {
+            "ctl": "32/266 (12.0%)",
+            "mesh": "28/271 (10.3%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.87,
+            "ci": [
+              0.54,
+              1.4
+            ],
+            "p": "0.572"
+          }
+        },
+        {
+          "endpoint": "New prolapse operation",
+          "role": "secondary",
+          "measure": "Cumulative new prolapse operation within 6 years, graft trial; risk ratio",
+          "locator": "IUJ 2023 Table 2",
+          "note": "",
+          "values": {
+            "ctl": "27/231 (11.7%)",
+            "graft": "29/245 (11.8%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.0,
+            "ci": [
+              0.61,
+              1.63
+            ],
+            "p": "0.995"
+          }
+        },
+        {
+          "endpoint": "Satisfaction",
+          "role": "secondary",
+          "measure": "6-year completely satisfied with surgery, mesh trial",
+          "locator": "IUJ 2023 Table 4",
+          "note": "Ordinal-regression effect printed as 1.67 (95% CI 1.31 to 2.13) without a stated direction; 8.6% were fairly dissatisfied and 8.6% very dissatisfied after mesh versus 3.1% and 5.8% after native tissue.",
+          "values": {
+            "ctl": "144/260 (55.4%)",
+            "mesh": "115/268 (42.9%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          }
+        },
+        {
+          "endpoint": "Satisfaction",
+          "role": "secondary",
+          "measure": "6-year completely satisfied with surgery, graft trial",
+          "locator": "IUJ 2023 Table 4",
+          "note": "",
+          "values": {
+            "ctl": "125/228 (54.8%)",
+            "graft": "108/234 (46.2%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.255"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Mesh removed within 6 years (cumulative)",
+          "values": {
+            "ctl": "4/255 (1.6%) mesh trial; 3/221 (1.4%) graft trial",
+            "mesh": "22/263 (8.4%)",
+            "graft": "2/231 (0.9%)"
+          },
+          "locator": "IUJ 2023 Table 2",
+          "note": "Risk ratio 5.24 (95% CI 1.84 to 14.96; P=0.002) for mesh versus native tissue. Mesh removal in the native-tissue and graft arms followed mesh placed at another operation."
+        },
+        {
+          "label": "Severe dyspareunia at 6 years",
+          "values": {
+            "ctl": "4/93 (4.3%) mesh trial; 3/76 (3.9%) graft trial",
+            "mesh": "6/105 (5.7%)",
+            "graft": "7/102 (6.9%)"
+          },
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "Risk ratio 1.88 (95% CI 0.69 to 5.10) for mesh and 0.91 (0.18 to 4.57) for graft; denominators as printed in the table."
+        },
+        {
+          "label": "Extreme pain or discomfort (EQ-5D-3L) at 6 years",
+          "values": {
+            "ctl": "17/270 (6.3%)",
+            "mesh": "11/275 (4.0%)"
+          },
+          "locator": "IUJ 2023 Table 3",
+          "note": "Mesh trial; risk ratio 0.60 (95% CI 0.25 to 1.45; P=0.255). The graft-trial row is not reproduced because the table prints no denominator for the graft arm."
+        },
+        {
+          "label": "Severe urinary incontinence at 6 years",
+          "values": {
+            "ctl": "18/264 (6.8%) mesh trial; 15/226 (6.6%) graft trial",
+            "mesh": "29/267 (10.9%)",
+            "graft": "22/238 (9.2%)"
+          },
+          "locator": "IUJ 2023 Table 1 (PMC9834125)",
+          "note": "Risk ratio 1.58 (95% CI 0.97 to 2.59; P=0.067) for mesh and 1.36 (0.73 to 2.52) for graft."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Examination-based anatomy at 4 and 6 years",
+          "value": "Not collected; examination planned for 12 years",
+          "locator": "IUJ 2023 Discussion, Strengths and weaknesses"
+        },
+        {
+          "label": "Randomized women retained for the primary outcome",
+          "value": "72% at 4 years; 65% at 6 years",
+          "locator": "IUJ 2023 Results, Participants and treatment",
+          "note": "23 did not consent to contact for long-term follow-up and 42 withdrew consent for further questionnaires."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/prospect",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

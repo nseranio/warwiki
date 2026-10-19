@@ -1,0 +1,742 @@
+{
+  "id": "vue",
+  "name": "VUE",
+  "aliases": [
+    "Vault or Uterine prolapse surgery Evaluation",
+    "VUE Uterine trial",
+    "VUE Vault trial",
+    "ISRCTN86784244"
+  ],
+  "nct": null,
+  "registry": "ISRCTN86784244",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-apical-suspension",
+      "lane": "uterine-preservation"
+    },
+    {
+      "id": "pop-apical-suspension",
+      "lane": "native-tissue-vault"
+    }
+  ],
+  "question": "Does uterine preservation differ from vaginal hysterectomy for uterine prolapse, and abdominal from vaginal vault suspension for vault prolapse, in symptoms, safety and cost?",
+  "design": {
+    "phase": "pragmatic effectiveness",
+    "randomized": true,
+    "blinding": "Outcome assessors blinded; surgeons not blinded; participants unblinded on request",
+    "type": "superiority",
+    "n": 774,
+    "arms": [
+      {
+        "key": "preserve",
+        "label": "Uterine preservation (uterine trial)",
+        "role": "experimental",
+        "n": 282
+      },
+      {
+        "key": "hyst",
+        "label": "vaginal hysterectomy",
+        "role": "control",
+        "n": 283
+      },
+      {
+        "key": "abdominal",
+        "label": "abdominal vault suspension (vault trial)",
+        "role": "experimental",
+        "n": 105
+      },
+      {
+        "key": "vaginal",
+        "label": "vaginal vault suspension",
+        "role": "control",
+        "n": 104
+      }
+    ],
+    "population": "Women at UK hospitals having surgery for uterine prolapse (565 randomized) or for vault prolapse after hysterectomy (209 randomized).",
+    "description": "Two parallel pragmatic multicenter randomized surgical trials (uterine and vault)",
+    "locator": "HTA report p. 27, Figure 2; p. 57, Figure 8; pp. 5-9"
+  },
+  "verdict": "negative",
+  "verdictNote": "No 12-month symptom difference in either trial; vault trial interval was wider (−2.08 to 0.86).",
+  "takeaway": "In two parallel UK trials, uterine preservation did not differ from vaginal hysterectomy (563 women analyzed) and abdominal did not differ from vaginal vault suspension (208) in 12-month Pelvic Organ Prolapse Symptom Score or serious adverse events; abdominal repair cost £570 more.",
+  "reports": [
+    {
+      "id": "vue-2020",
+      "kind": "primary",
+      "label": "12-month report (HTA monograph)",
+      "published": "2020-03-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give March 2020 only",
+      "cutoff": null,
+      "citation": "Hemming C, Constable L, Goulao B, et al. Surgical interventions for uterine prolapse and for vault prolapse: the two VUE RCTs. *Health Technol Assess.* 2020;24(13):1-220. doi:10.3310/hta24130",
+      "doi": "10.3310/hta24130",
+      "pmid": "32138809",
+      "followUp": "12 months after randomization (symptoms, quality of life) and 12 months after surgery (POP-Q examination)",
+      "followUpLocator": "HTA report pp. 5-6, Figure 1",
+      "results": [
+        {
+          "endpoint": "POP-SS, uterine trial",
+          "role": "primary",
+          "measure": "12-month Pelvic Organ Prolapse Symptom Score (0 to 28; lower is better), uterine trial; adjusted mean difference (uterine preservation minus vaginal hysterectomy)",
+          "locator": "HTA report p. 30, Table 9; p. 8",
+          "note": "The trial was sized to detect a 2-point difference (0.28 SD); the interval excludes it. Baseline scores were 13.7 and 13.5.",
+          "values": {
+            "preserve": "4.2 (SD 4.9; n=230)",
+            "hyst": "4.2 (SD 5.3; n=238)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.05,
+            "ci": [
+              -0.91,
+              0.81
+            ],
+            "p": "0.91"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Prolapse-related quality of life, uterine trial",
+          "role": "primary",
+          "measure": "12-month prolapse-related quality of life (0 to 10 visual analogue scale; lower is better), uterine trial; adjusted mean difference",
+          "locator": "HTA report p. 30, Table 9",
+          "note": "",
+          "values": {
+            "preserve": "1.7 (SD 2.5; n=237)",
+            "hyst": "1.5 (SD 2.5; n=239)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.12,
+            "ci": [
+              -0.26,
+              0.49
+            ],
+            "p": "0.54"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Cost-effectiveness, uterine trial",
+          "role": "primary",
+          "measure": "12-month incremental NHS cost, multiply imputed base case, 2015–16 pounds sterling (uterine preservation minus vaginal hysterectomy)",
+          "locator": "HTA report pp. 43-44, Table 18; p. 47; p. xxxii",
+          "note": "Adjusted QALY difference −0.004 (95% CI −0.026 to 0.019): uterine preservation was dominated by vaginal hysterectomy, with a 15% probability of cost-effectiveness at £30,000 per QALY. With hospital tariff costing for the operation the probability was 85%.",
+          "effect": {
+            "type": "difference",
+            "value": 235,
+            "ci": [
+              6,
+              464
+            ]
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Overall prolapse stage 2b or more, uterine trial",
+          "role": "secondary",
+          "measure": "POP-Q overall stage 2b or more 12 months after surgery, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 33, Table 11",
+          "note": "",
+          "values": {
+            "preserve": "74/233 (31.8%)",
+            "hyst": "78/229 (34.1%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.85,
+            "ci": [
+              0.55,
+              1.32
+            ],
+            "p": "0.48"
+          }
+        },
+        {
+          "endpoint": "Apical stage 2b or more, uterine trial",
+          "role": "secondary",
+          "measure": "POP-Q apical stage 2b or more 12 months after surgery, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 33, Table 11; p. 22, Table 4; p. 25",
+          "note": "Baseline apical stage 2b or more was 137/280 (48.9%) versus 164/283 (58.0%); 28.2% of women had apical stage 0 or 1.",
+          "values": {
+            "preserve": "13/230 (5.7%)",
+            "hyst": "12/226 (5.3%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.18,
+            "ci": [
+              0.48,
+              2.94
+            ],
+            "p": "0.72"
+          }
+        },
+        {
+          "endpoint": "Further prolapse surgery, uterine trial",
+          "role": "secondary",
+          "measure": "Further prolapse surgery within 12 months of surgery, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 36, Table 15",
+          "note": "Women readmitted for further surgery in the first 12 months: 18/244 (7.4%) versus 11/242 (4.5%).",
+          "values": {
+            "preserve": "15/244 (6.1%)",
+            "hyst": "8/242 (3.3%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.01,
+            "ci": [
+              0.81,
+              4.95
+            ],
+            "p": "0.130"
+          }
+        },
+        {
+          "endpoint": "Further apical surgery, uterine trial",
+          "role": "secondary",
+          "measure": "Further apical surgery within 12 months of surgery, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 36, Table 15",
+          "note": "",
+          "values": {
+            "preserve": "10/243 (4.1%)",
+            "hyst": "3/242 (1.2%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 3.43,
+            "ci": [
+              0.93,
+              12.64
+            ],
+            "p": "0.064"
+          }
+        },
+        {
+          "endpoint": "Further anterior repair, uterine trial",
+          "role": "secondary",
+          "measure": "Further anterior repair within 12 months of surgery, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 36, Table 15",
+          "note": "",
+          "values": {
+            "preserve": "8/243 (3.3%)",
+            "hyst": "1/242 (0.4%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 8.1,
+            "ci": [
+              1.0,
+              65.57
+            ],
+            "p": "0.050"
+          }
+        },
+        {
+          "endpoint": "Would recommend to a friend, uterine trial",
+          "role": "secondary",
+          "measure": "Would recommend the operation to a friend 12 months after randomization, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 35, Table 14",
+          "note": "Prolapse reported better than a year earlier: 208/229 (90.8%) versus 221/232 (95.3%; OR 0.49, 95% CI 0.22 to 1.05). Completely or fairly satisfied: 196/229 (85.6%) versus 211/233 (90.6%; OR 0.62, 95% CI 0.34 to 1.13).",
+          "values": {
+            "preserve": "196/222 (88.3%)",
+            "hyst": "211/222 (95.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.39,
+            "ci": [
+              0.18,
+              0.83
+            ],
+            "p": "0.01"
+          }
+        },
+        {
+          "endpoint": "Urinary urgency, uterine trial",
+          "role": "secondary",
+          "measure": "Urgency at 12 months after randomization, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 34, Table 13",
+          "note": "The text calls this urge incontinence; the table row is labeled urgency. Any incontinence: 87/237 (36.7%) versus 84/241 (34.9%); de novo incontinence 44/172 (25.6%) versus 44/168 (26.2%).",
+          "values": {
+            "preserve": "32/230 (13.9%)",
+            "hyst": "12/238 (5.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.71,
+            "ci": [
+              1.32,
+              5.55
+            ],
+            "p": "0.01"
+          }
+        },
+        {
+          "endpoint": "Severe fecal incontinence, uterine trial",
+          "role": "secondary",
+          "measure": "Severe fecal incontinence at 12 months after randomization, uterine trial; adjusted odds ratio",
+          "locator": "HTA report p. 34, Table 13; p. 35",
+          "note": "Small numbers; fecal incontinence of any frequency was 59/227 (26.0%) versus 61/235 (26.0%).",
+          "values": {
+            "preserve": "15/227 (6.6%)",
+            "hyst": "7/235 (3.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 4.64,
+            "ci": [
+              1.49,
+              14.42
+            ],
+            "p": "0.01"
+          }
+        },
+        {
+          "endpoint": "Sensitivity analyses of POP-SS, uterine trial",
+          "role": "secondary",
+          "measure": "12-month POP-SS, uterine trial; adjusted mean difference (uterine preservation minus vaginal hysterectomy)",
+          "locator": "HTA report p. 38",
+          "note": "Multiple imputation of missing primary outcomes gave −0.02 (95% CI −0.83 to 0.78); the per-protocol analysis of women who received the allocated operation gave 0.19 (95% CI −0.70 to 1.08; P=0.68).",
+          "effect": {
+            "type": "difference",
+            "value": -0.02,
+            "ci": [
+              -0.83,
+              0.78
+            ],
+            "p": "0.96"
+          }
+        },
+        {
+          "endpoint": "Sexual activity, uterine trial",
+          "role": "secondary",
+          "measure": "Women having intercourse 12 months after randomization, uterine trial",
+          "locator": "HTA report p. 33, Table 12",
+          "note": "Vaginal and sexual symptom scores and quality-of-life scores did not differ significantly; the ICI Sexual Matters score was 7.8 versus 8.7 (adjusted difference −2.47, 95% CI −6.78 to 1.85).",
+          "values": {
+            "preserve": "98/222 (44.1%)",
+            "hyst": "93/232 (40.1%)"
+          }
+        },
+        {
+          "endpoint": "POP-SS, vault trial",
+          "role": "primary",
+          "measure": "12-month Pelvic Organ Prolapse Symptom Score (0 to 28; lower is better), vault trial; adjusted mean difference (abdominal minus vaginal)",
+          "locator": "HTA report p. 60, Table 26; pp. 8-9",
+          "note": "Sample size was revised to a projected 280 women (80% power for 2.5 points); 209 were randomized and 208 analyzed after one post-randomization exclusion. Baseline scores were 15.1 and 14.8.",
+          "values": {
+            "abdominal": "5.6 (SD 5.4; n=88)",
+            "vaginal": "5.9 (SD 5.4; n=86)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.61,
+            "ci": [
+              -2.08,
+              0.86
+            ],
+            "p": "0.42"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Prolapse-related quality of life, vault trial",
+          "role": "primary",
+          "measure": "12-month prolapse-related quality of life (0 to 10 visual analogue scale; lower is better), vault trial; adjusted mean difference",
+          "locator": "HTA report p. 60, Table 26",
+          "note": "",
+          "values": {
+            "abdominal": "2.3 (SD 3.0; n=87)",
+            "vaginal": "2.6 (SD 2.8; n=87)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.25,
+            "ci": [
+              -1.1,
+              0.59
+            ],
+            "p": "0.56"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Cost-effectiveness, vault trial",
+          "role": "primary",
+          "measure": "12-month incremental NHS cost, multiply imputed base case, 2015–16 pounds sterling (abdominal minus vaginal)",
+          "locator": "HTA report p. 72, Table 35; p. 75; p. xxxii",
+          "note": "Adjusted QALY difference 0.004 (95% CI −0.031 to 0.041); abdominal repair had a 17% probability of cost-effectiveness at £30,000 per QALY.",
+          "effect": {
+            "type": "difference",
+            "value": 570,
+            "ci": [
+              459,
+              682
+            ]
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Overall prolapse stage 2b or more, vault trial",
+          "role": "secondary",
+          "measure": "POP-Q overall stage 2b or more 12 months after surgery, vault trial; adjusted odds ratio",
+          "locator": "HTA report p. 63, Table 28",
+          "note": "",
+          "values": {
+            "abdominal": "28/86 (32.6%)",
+            "vaginal": "38/81 (46.9%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.5,
+            "ci": [
+              0.25,
+              1.02
+            ],
+            "p": "0.06"
+          }
+        },
+        {
+          "endpoint": "Apical stage 2b or more, vault trial",
+          "role": "secondary",
+          "measure": "POP-Q vault (apical) stage 2b or more 12 months after surgery, vault trial; adjusted odds ratio",
+          "locator": "HTA report p. 63, Table 28; p. 51",
+          "note": "Baseline objective vault prolapse (stage 2b or more) was 39.4%.",
+          "values": {
+            "abdominal": "5/84 (6.0%)",
+            "vaginal": "7/78 (9.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.61,
+            "ci": [
+              0.18,
+              2.08
+            ],
+            "p": "0.43"
+          }
+        },
+        {
+          "endpoint": "Anterior stage 2b or more, vault trial",
+          "role": "secondary",
+          "measure": "POP-Q anterior stage 2b or more 12 months after surgery, vault trial; adjusted odds ratio",
+          "locator": "HTA report p. 63, Table 28; p. 68",
+          "note": "Vaginal repair more often included a concomitant anterior or posterior repair (76.0% versus 34.7%).",
+          "values": {
+            "abdominal": "21/86 (24.4%)",
+            "vaginal": "33/81 (40.7%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.38,
+            "ci": [
+              0.18,
+              0.79
+            ],
+            "p": "0.01"
+          }
+        },
+        {
+          "endpoint": "Further prolapse surgery, vault trial",
+          "role": "secondary",
+          "measure": "Further prolapse surgery within 12 months of surgery, vault trial; adjusted odds ratio",
+          "locator": "HTA report p. 66, Table 32",
+          "note": "",
+          "values": {
+            "abdominal": "5/102 (4.9%)",
+            "vaginal": "6/100 (6.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.79,
+            "ci": [
+              0.23,
+              2.68
+            ],
+            "p": "0.702"
+          }
+        },
+        {
+          "endpoint": "Further apical surgery, vault trial",
+          "role": "secondary",
+          "measure": "Further apical surgery within 12 months of surgery, vault trial; adjusted odds ratio",
+          "locator": "HTA report p. 66, Table 32",
+          "note": "",
+          "values": {
+            "abdominal": "1/102 (1.0%)",
+            "vaginal": "4/100 (4.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.23,
+            "ci": [
+              0.02,
+              2.11
+            ],
+            "p": "0.192"
+          }
+        },
+        {
+          "endpoint": "Sensitivity analyses of POP-SS, vault trial",
+          "role": "secondary",
+          "measure": "12-month POP-SS, vault trial; adjusted mean difference (abdominal minus vaginal)",
+          "locator": "HTA report pp. 66, 68",
+          "note": "Multiple imputation of missing primary outcomes gave −0.32 (95% CI −1.71 to 1.06); the per-protocol analysis gave −0.99 (95% CI −2.59 to 0.60; P=0.22).",
+          "effect": {
+            "type": "difference",
+            "value": -0.32,
+            "ci": [
+              -1.71,
+              1.06
+            ],
+            "p": "0.65"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious related adverse events, uterine trial",
+          "values": {
+            "preserve": "14 (5.4%)",
+            "hyst": "16 (5.9%)"
+          },
+          "locator": "HTA report p. 37, Table 16",
+          "note": "Within 12 months of surgery, among women who had surgery (N=262 and 269); effect 0.82 (95% CI 0.38 to 1.75; P=0.60). Hospitalization was the most common type (10 versus 9)."
+        },
+        {
+          "label": "Serious related adverse events, vault trial",
+          "values": {
+            "abdominal": "6 (5.9%)",
+            "vaginal": "6 (6.0%)"
+          },
+          "locator": "HTA report p. 67, Table 33",
+          "note": "Within 12 months of surgery (N=102 and 100); odds ratio 0.97 (95% CI 0.27 to 3.44; P=0.96)."
+        },
+        {
+          "label": "Mesh exposure requiring surgery, both trials",
+          "locator": "HTA report p. 93; p. 36; p. 65",
+          "note": "Two exposures among 235 mesh procedures (0.9%) in the first 12 months, both treated by surgical removal. One followed an apical procedure in the uterine trial (1 of 129 apical or concomitant mesh procedures) and one followed a concomitant tension-free vaginal tape in the vault trial (1 of 106)."
+        },
+        {
+          "label": "Excessive blood loss (over 500 mL), serious event, uterine trial",
+          "values": {
+            "preserve": "1 (0.4%)",
+            "hyst": "3 (1.1%)"
+          },
+          "locator": "HTA report p. 37, Table 16",
+          "note": "Blood transfusion occurred in 0 versus 1 (0.4%) women and blood vessel injury in 0 versus 1 (0.4%). Postoperative serious events included urinary retention or voiding difficulty needing conservative treatment in 5 (2.0%) versus 1 (0.4%)."
+        },
+        {
+          "label": "Non-serious related adverse events, uterine trial",
+          "values": {
+            "preserve": "6 (2.3%)",
+            "hyst": "2 (0.7%)"
+          },
+          "locator": "HTA report p. 38, Table 17",
+          "note": "Odds ratio 3.30 (95% CI 0.63 to 17.19; P=0.16)."
+        },
+        {
+          "label": "Bladder or bowel injury, serious intraoperative event, vault trial",
+          "values": {
+            "abdominal": "3 (2.9%)",
+            "vaginal": "1 (1.0%)"
+          },
+          "locator": "HTA report p. 67, Table 33",
+          "note": "Postoperative serious events also included catheterization for more than 10 days (0 versus 1), perineal scarring or tightness needing surgery (0 versus 1) and vaginal adhesions (0 versus 1)."
+        },
+        {
+          "label": "Non-serious related adverse events, vault trial",
+          "values": {
+            "abdominal": "1 (1.0%)",
+            "vaginal": "2 (2.0%)"
+          },
+          "locator": "HTA report p. 67, Table 34",
+          "note": "Odds ratio 0.49 (95% CI 0.04 to 5.44; P=0.56)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Women randomized and analyzed, uterine trial",
+          "value": "565 randomized (282 uterine preservation, 283 vaginal hysterectomy); 2 excluded after randomization for no significant uterine descent; 563 analyzed (280 and 283)",
+          "locator": "HTA report p. 27, Figure 2",
+          "note": "Of 1,544 women screened, 177 were ineligible and 774 declined."
+        },
+        {
+          "label": "Women randomized and analyzed, vault trial",
+          "value": "209 randomized (105 abdominal, 104 vaginal); 1 excluded for a previous subtotal hysterectomy; 208 analyzed (104 and 104)",
+          "locator": "HTA report p. 57, Figure 8",
+          "note": "Of 544 women screened, 115 were ineligible and 211 declined."
+        },
+        {
+          "label": "Baseline characteristics, uterine trial",
+          "values": {
+            "preserve": "Mean age 63.4 years; POP-SS 13.7; apical stage 2b or more 137/280 (48.9%)",
+            "hyst": "Mean age 63.9 years; POP-SS 13.5; apical stage 2b or more 164/283 (58.0%)"
+          },
+          "locator": "HTA report pp. 20-22, Tables 2-4",
+          "note": "The baseline apical imbalance was adjusted for in the analysis. Apical stage 0 or 1 was recorded in 28.2% of women overall."
+        },
+        {
+          "label": "Baseline characteristics, vault trial",
+          "values": {
+            "abdominal": "Mean age 65.1 years; POP-SS 15.1; previous vaginal hysterectomy 58 (55.8%)",
+            "vaginal": "Mean age 66.4 years; POP-SS 14.8; previous vaginal hysterectomy 56 (53.8%)"
+          },
+          "locator": "HTA report p. 50, Table 19; p. 60, Table 26",
+          "note": "All women had a previous hysterectomy; 39.4% had objective vault prolapse of stage 2b or more."
+        },
+        {
+          "label": "Reasons for declining randomization, uterine trial",
+          "value": "774 declined; 431 (55.7%) had a preference for a specific operation, most often vaginal hysterectomy (324, 41.9%)",
+          "locator": "HTA report p. 19",
+          "note": ""
+        },
+        {
+          "label": "Allocated apical operation received, uterine trial",
+          "values": {
+            "preserve": "215/280 (76.8%) uterine suspension",
+            "hyst": "254/283 (89.8%) vaginal hysterectomy"
+          },
+          "locator": "HTA report p. 29, Table 8",
+          "note": "Preservation arm: 29 (10.4%) had vaginal hysterectomy, 5 (1.8%) another apical operation and 31 (11.1%) no apical surgery. Hysterectomy arm: 5 (1.8%) had uterine suspension, 2 (0.7%) another apical operation and 22 (7.8%) no apical surgery."
+        },
+        {
+          "label": "Route of uterine suspension, preservation arm",
+          "value": "Vaginal 146 (52.1%), laparoscopic 66 (23.6%), open abdominal 3 (1.1%) of 280",
+          "locator": "HTA report p. 29, Table 8",
+          "note": "Surgeons chose the preservation technique they knew best."
+        },
+        {
+          "label": "Mesh in the apical procedure, uterine trial",
+          "values": {
+            "preserve": "Synthetic non-absorbable 81/249 (32.5%); biological 5 (2.0%)",
+            "hyst": "Synthetic non-absorbable 6/261 (2.3%); biological 2 (0.8%); mesh kit 1 (0.4%)"
+          },
+          "locator": "HTA report p. 129, Table 53",
+          "note": "Denominators are women who underwent an apical procedure (249 and 261); apical mesh status was missing for 6 and 10 women."
+        },
+        {
+          "label": "Operation time, uterine trial",
+          "values": {
+            "preserve": "mean 113.7 min (SD 50.3; n=253)",
+            "hyst": "mean 103.0 min (SD 33.1; n=259)"
+          },
+          "locator": "HTA report p. 130, Table 55",
+          "note": "Adjusted mean difference 9.79 minutes (95% CI 3.50 to 16.07)."
+        },
+        {
+          "label": "Blood loss, uterine trial",
+          "values": {
+            "preserve": "mean 125.0 mL (SD 110.7; n=246)",
+            "hyst": "mean 166.3 mL (SD 147.3; n=261)"
+          },
+          "locator": "HTA report p. 130, Table 55",
+          "note": "Adjusted mean difference −42.20 mL (95% CI −62.68 to −21.73). Length of stay was a mean 1.9 days in both arms."
+        },
+        {
+          "label": "Operating gynecologist grade, uterine trial",
+          "values": {
+            "preserve": "Consultant 225 (80.4%); trainee 24 (8.6%)",
+            "hyst": "Consultant 189 (66.8%); trainee 53 (18.7%)"
+          },
+          "locator": "HTA report p. 130, Table 54",
+          "note": "Percentages are of 280 and 283 women; grade was missing for 16 and 13."
+        },
+        {
+          "label": "Allocated apical operation received, vault trial",
+          "values": {
+            "abdominal": "85/104 (81.7%) abdominal suspension (61 laparoscopic, 24 open)",
+            "vaginal": "90/104 (86.5%) vaginal sacrospinous fixation"
+          },
+          "locator": "HTA report p. 59, Table 25",
+          "note": "Abdominal arm: 7 (6.7%) had vaginal suspension and 11 (10.6%) no apical surgery. Vaginal arm: 4 (3.8%) had abdominal suspension and 10 (9.6%) no apical surgery."
+        },
+        {
+          "label": "Mesh in the apical procedure, vault trial",
+          "values": {
+            "abdominal": "81/92 (88.0%): synthetic non-absorbable 71, biological 4, mesh kit 6",
+            "vaginal": "6/94 (6.4%): synthetic non-absorbable 4, biological 2"
+          },
+          "locator": "HTA report p. 157, Table 72; p. 59",
+          "note": "Denominators are women who underwent an apical procedure (92 and 94); apical mesh status was missing for 1 and 2 women."
+        },
+        {
+          "label": "Operation time, vault trial",
+          "values": {
+            "abdominal": "mean 145.5 min (SD 53.9; n=94)",
+            "vaginal": "mean 82.0 min (SD 34.1; n=94)"
+          },
+          "locator": "HTA report p. 158, Table 74",
+          "note": "Adjusted mean difference 60.48 minutes (95% CI 49.80 to 71.16)."
+        },
+        {
+          "label": "Blood loss and length of stay, vault trial",
+          "values": {
+            "abdominal": "blood loss mean 97.7 mL (SD 78.1; n=90); stay mean 2.1 days (SD 1.6; n=101)",
+            "vaginal": "blood loss mean 107.8 mL (SD 74.8; n=86); stay mean 1.8 days (SD 1.2; n=100)"
+          },
+          "locator": "HTA report p. 158, Table 74",
+          "note": "Blood loss difference −15.25 mL (95% CI −35.21 to 4.71); length-of-stay rate ratio 1.21 (95% CI 0.99 to 1.49)."
+        },
+        {
+          "label": "Concomitant surgery received, vault trial",
+          "values": {
+            "abdominal": "None 66 (63.5%); anterior 11, posterior 16, both 9",
+            "vaginal": "None 21 (20.2%); anterior 27, posterior 24, both 28"
+          },
+          "locator": "HTA report p. 59, Table 25",
+          "note": "Percentages are of 104 women per arm."
+        },
+        {
+          "label": "Follow-up completeness",
+          "value": "12-month questionnaire returned by 237/282 (84.0%) and 241/283 (85.2%) in the uterine trial and 89/104 (85.6%) and 88/104 (84.6%) in the vault trial",
+          "locator": "HTA report p. 29; p. 59",
+          "note": "The 12-month clinic examination was completed by 258/262 and 262/269 women who had surgery in the uterine trial and 96/104 and 99/104 in the vault trial."
+        },
+        {
+          "label": "Planned long-term follow-up",
+          "value": "At least 6 years after randomization, with up to 12 years hoped",
+          "locator": "HTA report p. 96; p. xxvii",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "prospect",
+      "note": "The same group's earlier trial; its methods, outcome measures and symptom-score standard deviation informed VUE's design and sample size."
+    },
+    {
+      "type": "confirms",
+      "target": "save-u",
+      "note": "Same uterine-preservation question; SAVE-U's sacrospinous hysteropexy was also noninferior to vaginal hysterectomy at 12 months."
+    },
+    {
+      "type": "confirms",
+      "target": "super",
+      "note": "Same question with a mesh hysteropexy; SUPeR also found no significant reduction in composite failure versus vaginal hysterectomy at 36 months."
+    },
+    {
+      "type": "conflicts",
+      "target": "apical-suspension",
+      "note": "Same vault question; ASPIRe's 36-month composite failure favored sacrocolpopexy, while VUE's 12-month symptom score did not differ."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/vue",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

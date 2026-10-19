@@ -1,0 +1,449 @@
+{
+  "id": "nitti-oab",
+  "name": "Nitti OAB Trial",
+  "aliases": [
+    "EMBARK",
+    "Allergan 191622-095",
+    "Study OAB-1"
+  ],
+  "nct": "NCT00910845",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "botulinum-idiopathic"
+    }
+  ],
+  "question": "Does intradetrusor onabotulinumtoxinA 100 U reduce urinary incontinence and improve patient-rated treatment benefit over placebo in overactive bladder inadequately managed with anticholinergics?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind, placebo-controlled",
+    "type": "superiority",
+    "n": 557,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intradetrusor onabotulinumtoxinA 100 U",
+        "role": "experimental",
+        "n": 280
+      },
+      {
+        "key": "ctl",
+        "label": "intradetrusor saline placebo",
+        "role": "control",
+        "n": 277
+      }
+    ],
+    "population": "Adults with idiopathic overactive bladder, at least 3 urgency incontinence episodes in 3 days and at least 8 micturitions a day, inadequately managed with anticholinergics.",
+    "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
+    "locator": "Abstract; ClinicalTrials.gov NCT00910845 participant flow and eligibility; FDA label (2013) p20, section 14.1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary endpoints improved at week 12; urinary tract infection and retention were more frequent.",
+  "takeaway": "In overactive bladder with urgency incontinence inadequately managed by anticholinergics, intradetrusor onabotulinumtoxinA 100 U reduced daily incontinence episodes more than placebo at week 12 (−2.65 versus −0.87) and produced more positive treatment benefit responses (60.8% versus 29.2%); retention within 12 weeks was 5.4%.",
+  "reports": [
+    {
+      "id": "nitti-oab-2013",
+      "kind": "primary",
+      "label": "Phase 3 randomized report",
+      "published": "2012-12-14",
+      "cutoff": null,
+      "citation": "Nitti VW, Dmochowski R, Herschorn S, et al. \"OnabotulinumtoxinA for the Treatment of Patients with Overactive Bladder and Urinary Incontinence: Results of a Phase 3, Randomized, Placebo Controlled Trial.\" *J Urol.* 2013;189(6):2186-2193. doi:10.1016/j.juro.2012.12.022",
+      "doi": "10.1016/j.juro.2012.12.022",
+      "pmid": "23246476",
+      "followUp": "Week 12 primary endpoints within a 24-week placebo-controlled cycle",
+      "followUpLocator": "Abstract; FDA label (2013) p20, section 14.1",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes per day",
+          "role": "primary",
+          "measure": "Mean change from baseline in daily urinary incontinence episodes at week 12 (coprimary); difference is the ANCOVA least-squares mean difference, onabotulinumtoxinA minus placebo",
+          "values": {
+            "exp": "−2.65",
+            "ctl": "−0.87"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.6,
+            "ci": [
+              -2.1,
+              -1.2
+            ],
+            "ciLevel": "95%",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Mean changes from baselines of 5.47 and 5.09 episodes per day (n = 280 and 277; SD of change 3.33 and 2.83). The difference and interval are from the FDA label's Study OAB-1 table (least-squares mean change −2.5 versus −0.9; n = 278 and 272; ANCOVA with last observation carried forward).",
+          "locator": "Abstract; ClinicalTrials.gov NCT00910845 outcome measures; FDA label (2013) p20, Table 16"
+        },
+        {
+          "endpoint": "Treatment benefit scale response",
+          "role": "primary",
+          "measure": "Proportion with a positive response on the treatment benefit scale at week 12 (coprimary)",
+          "values": {
+            "exp": "60.8%",
+            "ctl": "29.2%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Complete continence",
+          "role": "secondary",
+          "measure": "Proportion completely continent at week 12",
+          "values": {
+            "exp": "22.9%",
+            "ctl": "6.5%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Micturition episodes per day",
+          "role": "secondary",
+          "measure": "Mean change from baseline in daily micturition episodes at week 12; least-squares mean change and difference, onabotulinumtoxinA minus placebo",
+          "values": {
+            "exp": "−1.9",
+            "ctl": "−0.9"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.0,
+            "ci": [
+              -1.5,
+              -0.6
+            ],
+            "ciLevel": "95%",
+            "p": "<0.001"
+          },
+          "note": "Baselines 12.0 and 11.2 micturitions per day. Unadjusted mean changes were −2.15 and −0.91 (n = 280 and 277).",
+          "locator": "FDA label (2013) p20, Table 16; ClinicalTrials.gov NCT00910845 outcome measures"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "secondary",
+          "measure": "Mean change from baseline in volume voided per micturition (mL) at week 12; least-squares mean change and difference, onabotulinumtoxinA minus placebo",
+          "values": {
+            "exp": "+38 mL",
+            "ctl": "+8 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 30,
+            "ci": [
+              17,
+              43
+            ],
+            "ciLevel": "95%",
+            "p": "<0.001"
+          },
+          "note": "Baselines 156 and 161 mL. Unadjusted mean changes were +41.1 and +9.7 mL (n = 280 and 277).",
+          "locator": "FDA label (2013) p20, Table 16; ClinicalTrials.gov NCT00910845 outcome measures"
+        },
+        {
+          "endpoint": "Other overactive bladder symptoms",
+          "role": "secondary",
+          "measure": "All other overactive bladder symptoms, week 12 versus placebo",
+          "effect": {
+            "type": "none",
+            "p": "≤0.05"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Health-related quality of life",
+          "role": "secondary",
+          "measure": "Health-related quality of life across multiple measures, week 12",
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Median duration of response",
+          "role": "descriptive",
+          "measure": "Median duration of response by qualification for retreatment (pooled Study OAB-1 and OAB-2)",
+          "values": {
+            "exp": "19 to 24 weeks",
+            "ctl": "13 weeks"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Pooled across this trial and its companion trial, so not specific to this trial. The label gives a range across the two studies for 100 U and one figure for placebo.",
+          "locator": "FDA label (2013) p22, section 14.1"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "68/278 (24.5%)",
+            "ctl": "25/272 (9.2%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population)",
+          "note": "The abstract reports uncomplicated urinary tract infection as the most common adverse event."
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "16/278 (5.8%)",
+            "ctl": "1/272 (0.4%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population); abstract",
+          "note": "The abstract gives a urinary retention rate of 5.4% (15 of 278) within the first 12 weeks; the registry counts 16 of 278 treated patients at any time in cycle 1."
+        },
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "40/278 (14.4%)",
+            "ctl": "27/272 (9.9%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population)",
+          "note": ""
+        },
+        {
+          "label": "Bacteriuria",
+          "values": {
+            "exp": "23/278 (8.3%)",
+            "ctl": "10/272 (3.7%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population)",
+          "note": ""
+        },
+        {
+          "label": "Hematuria",
+          "values": {
+            "exp": "8/278 (2.9%)",
+            "ctl": "16/272 (5.9%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population)",
+          "note": "Listed in the registry because it reached 5% in the placebo group."
+        },
+        {
+          "label": "Serious adverse events (any cause)",
+          "values": {
+            "exp": "18/278 (6.5%)",
+            "ctl": "16/272 (5.9%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 adverse events (placebo-controlled cycle 1, safety population)",
+          "note": "Pneumonia and depression were the only serious event terms reported in two onabotulinumtoxinA patients; every other term was reported in one."
+        },
+        {
+          "label": "Urinary tract infection within 12 weeks (pooled Study OAB-1 and OAB-2)",
+          "values": {
+            "exp": "99/552 (18%)",
+            "ctl": "30/542 (6%)"
+          },
+          "locator": "FDA label (2013) p13, Table 10",
+          "note": "Pooled across this trial and its companion trial."
+        },
+        {
+          "label": "Clean intermittent catheterization for urinary retention (pooled Study OAB-1 and OAB-2)",
+          "values": {
+            "exp": "36/552 (6.5%)",
+            "ctl": "2/542 (0.4%)"
+          },
+          "locator": "FDA label (2013) p12, Table 6",
+          "note": "At any time during the treatment cycle. Median duration of catheterization was 63 days (range 1 to 214) after onabotulinumtoxinA and 11 days (range 3 to 18) after placebo."
+        },
+        {
+          "label": "Urinary retention by history of diabetes (pooled Study OAB-1 and OAB-2)",
+          "values": {
+            "exp": "10/81 (12.3%) with diabetes; 33/526 (6.3%) without",
+            "ctl": "0/69 with diabetes; 3/516 (0.6%) without"
+          },
+          "locator": "FDA label (2013) p12, Table 7",
+          "note": "Pooled across this trial and its companion trial."
+        },
+        {
+          "label": "Urinary tract infection by history of diabetes (pooled Study OAB-1 and OAB-2)",
+          "values": {
+            "exp": "25/81 (31%) with diabetes; 135/526 (26%) without",
+            "ctl": "8/69 (12%) with diabetes; 51/516 (10%) without"
+          },
+          "locator": "FDA label (2013) p14, Table 11",
+          "note": "Among onabotulinumtoxinA recipients, urinary tract infection occurred in 44% of those with a maximum post-injection post-void residual above 200 mL and 23% of those below 200 mL."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Registry eligibility",
+          "value": "Age 18 years or older; overactive bladder with incontinence for at least 6 months; randomized 1:1",
+          "locator": "ClinicalTrials.gov NCT00910845 eligibility; abstract",
+          "note": "Excluded: overactive bladder from a neurologic condition, stress-predominant incontinence, and any history or evidence of pelvic or urologic abnormality."
+        },
+        {
+          "label": "Women",
+          "values": {
+            "exp": "252/280 (90.0%)",
+            "ctl": "245/277 (88.4%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 baseline characteristics",
+          "note": "497/557 (89.2%) overall; 60 men."
+        },
+        {
+          "label": "Age 65 years or older",
+          "values": {
+            "exp": "121/280 (43.2%)",
+            "ctl": "117/277 (42.2%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 baseline characteristics",
+          "note": "Sum of the 65 to 74 and 75 or older age bands; 90 patients were 75 or older (46 and 44)."
+        },
+        {
+          "label": "Baseline daily urinary incontinence episodes (mean)",
+          "values": {
+            "exp": "5.47",
+            "ctl": "5.09"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 outcome measures",
+          "note": "Baseline daily micturitions were 11.98 and 11.20."
+        },
+        {
+          "label": "Study treatment",
+          "value": "20 intradetrusor injections of 5 U (onabotulinumtoxinA or placebo), about 1 cm apart; 100 U total",
+          "locator": "FDA label (2013) p20, section 14.1",
+          "note": "The label describes this pattern for both pivotal OAB studies."
+        },
+        {
+          "label": "Injection plane",
+          "value": "Trigone-sparing injection in the placebo-controlled trials in the AUA/SUFU evidence base",
+          "locator": "AUA/SUFU OAB guideline 2024, p33 (cites this trial among references 236 and 238 to 240)",
+          "note": "The statement covers the group of trials, not this trial alone."
+        },
+        {
+          "label": "Completed placebo-controlled cycle 1",
+          "values": {
+            "exp": "249/280 (88.9%)",
+            "ctl": "243/277 (87.7%)"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 participant flow",
+          "note": ""
+        },
+        {
+          "label": "Entered treatment cycle 2",
+          "values": {
+            "exp": "141",
+            "ctl": "212"
+          },
+          "locator": "ClinicalTrials.gov NCT00910845 participant flow",
+          "note": "A repeat injection of 100 U after at least 12 weeks, where applicable; placebo recipients received onabotulinumtoxinA 100 U in cycle 2."
+        },
+        {
+          "label": "Retreatment criteria",
+          "value": "At least 12 weeks since the prior injection, post-void residual below 200 mL and at least 2 incontinence episodes over 3 days",
+          "locator": "FDA label (2013) p22, section 14.1",
+          "note": "Median time to qualify for the second treatment was 169 days (about 24 weeks) in the two placebo-controlled studies (p5)."
+        },
+        {
+          "label": "Labeled injection technique (OAB dose)",
+          "value": "100 U in 10 mL nonpreserved saline through a flexible or rigid cystoscope, trigone avoided, bladder not overdistended, needle about 2 mm into the detrusor, 20 injections of 0.5 mL about 1 cm apart; patient observed at least 30 minutes and until a spontaneous void",
+          "locator": "FDA label (2013) p5, section 2.3",
+          "note": "Label instructions, not the trial protocol."
+        },
+        {
+          "label": "Labeled pre- and post-procedure measures",
+          "value": "No urinary tract infection at treatment; antibiotic prophylaxis (not aminoglycosides) 1 to 3 days before, on the day and 1 to 3 days after; antiplatelet therapy stopped at least 3 days before",
+          "locator": "FDA label (2013) p5, section 2.3",
+          "note": "Label instructions, not the trial protocol."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/Nitti-OAB-2013.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "nitti-oab-2016",
+      "kind": "updated",
+      "label": "3.5-year extension",
+      "published": "2016-03-30",
+      "cutoff": null,
+      "citation": "Nitti VW, Ginsberg D, Sievert KD, et al. \"Durable Efficacy and Safety of Long-Term OnabotulinumtoxinA Treatment in Patients with Overactive Bladder Syndrome: Final Results of a 3.5-Year Study.\" *J Urol.* 2016;196(3):791-800. doi:10.1016/j.juro.2016.03.146",
+      "doi": "10.1016/j.juro.2016.03.146",
+      "pmid": "27038769",
+      "followUp": "Up to 3.5 years: 3-year extension after the 24-week phase 3 trials, up to 6 as-needed treatments",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes per day",
+          "role": "descriptive",
+          "measure": "Mean change from baseline in daily incontinence episodes at week 12 after each treatment, overall population (range across up to 6 treatments)",
+          "values": {
+            "exp": "−3.1 to −3.8"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Open-label extension of patients who completed either phase 3 trial; no control group. Discrete subgroups receiving 1 to 6 treatments ranged from −2.9 to −4.5.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Duration of effect",
+          "role": "descriptive",
+          "measure": "Median duration of effect",
+          "values": {
+            "exp": "7.6 months"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "De novo intermittent catheterization",
+          "values": {
+            "exp": "4.0% after the first treatment; 0.6% to 1.7% after subsequent treatments"
+          },
+          "locator": "Abstract",
+          "note": "Urinary tract infection was the most common adverse event."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension regimen",
+          "value": "OnabotulinumtoxinA as needed; outcomes reported for 100 U treatments 1 to 6",
+          "locator": "Abstract",
+          "note": "Patients who completed either of the two 24-week phase 3 trials could enter a 3-year extension."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/Nitti-OAB-2016-extension.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "ginsberg-ndo",
+      "note": "Same drug and sponsor, placebo-controlled phase 3 design; Ginsberg studied neurogenic detrusor overactivity at higher doses, this trial idiopathic OAB at 100 U."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/nitti-oab",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

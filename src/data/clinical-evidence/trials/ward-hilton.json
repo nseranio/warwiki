@@ -1,0 +1,359 @@
+{
+  "id": "ward-hilton",
+  "name": "Ward–Hilton",
+  "aliases": [
+    "UK and Ireland TVT trial",
+    "TVT versus colposuspension"
+  ],
+  "nct": null,
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "sling-vs-colposuspension"
+    }
+  ],
+  "question": "For women undergoing first surgery for urodynamic stress incontinence, how does retropubic tension-free vaginal tape compare with colposuspension?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label; assessors also unblinded",
+    "type": "superiority",
+    "n": 344,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Retropubic tension-free vaginal tape (TVT)",
+        "n": 175,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "colposuspension using each centre's standard technique",
+        "n": 169,
+        "role": "control"
+      }
+    ],
+    "population": "Women with urodynamic stress incontinence who had completed childbearing and were selected for first continence surgery at 14 UK and Irish centres.",
+    "description": "Multicentre randomized comparative surgical trial; six-month primary report",
+    "locator": "BMJ 2002 Methods, Table 1 and participant-flow figure"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "Six-month cure difference was nonsignificant; recruitment was insufficient to establish equivalence.",
+  "takeaway": "Retropubic tension-free vaginal tape and colposuspension had 66% versus 57% six-month objective cure in first-surgery stress incontinence; the difference was not statistically significant. TVT shortened recovery but caused more bladder injuries, and the trial was too small to establish equivalence.",
+  "reports": [
+    {
+      "id": "ward-hilton-2002",
+      "kind": "primary",
+      "label": "Six-month randomized report",
+      "published": "2002-07-13",
+      "cutoff": null,
+      "citation": "Ward K, Hilton P; UK and Ireland TVT Trial Group. \"Prospective multicentre randomised trial of tension-free vaginal tape and colposuspension as primary treatment for stress incontinence.\" *BMJ.* 2002;325(7355):67. doi:10.1136/bmj.325.7355.67",
+      "doi": "10.1136/bmj.325.7355.67",
+      "pmid": "12114234",
+      "followUp": "Six months after surgery; missing outcomes counted as failures in the randomized denominator",
+      "followUpLocator": "BMJ 2002 Methods and Results, participant-flow figure",
+      "results": [
+        {
+          "endpoint": "Objective cure",
+          "role": "primary",
+          "measure": "Six-month negative one-hour pad test plus negative cystometric stress test; risk difference in percentage points (TVT minus colposuspension)",
+          "values": {
+            "exp": "115/175 (66%)",
+            "ctl": "97/169 (57%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 8.3,
+            "ci": [
+              -4.7,
+              21.3
+            ],
+            "p": "0.099"
+          },
+          "met": false,
+          "note": "Calculated raw risk difference is 8.3 percentage points; the article reports the confidence interval for the difference. A 10-point difference was prespecified as important, requiring 197 patients per arm for 80% power; the study was not powered to conclude equivalence.",
+          "locator": "BMJ 2002 Results, Primary outcome measure"
+        },
+        {
+          "endpoint": "Negative one-hour pad test",
+          "role": "secondary",
+          "measure": "Six-month negative one-hour pad test",
+          "values": {
+            "exp": "128/175 (73%)",
+            "ctl": "109/169 (64%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Randomized denominator; narrower endpoint than combined objective cure.",
+          "locator": "BMJ 2002 Results, Primary outcome measure"
+        },
+        {
+          "endpoint": "No leakage under any circumstance",
+          "role": "secondary",
+          "measure": "Six-month BFLUTS patient-reported complete continence",
+          "values": {
+            "exp": "63/175 (36%)",
+            "ctl": "48/169 (28%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Questionnaire items 4 and 6–9; randomized denominator.",
+          "locator": "BMJ 2002 Results, Secondary outcome measures"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Bladder injury, including perforation or visible trauma",
+          "values": {
+            "exp": "15/170 (9%)",
+            "ctl": "3/146 (2%)"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Among women who underwent their allocated operation; P=0.013."
+        },
+        {
+          "label": "Vaginal perforation",
+          "values": {
+            "exp": "5/170 (3%)",
+            "ctl": "0/146"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Among operated women."
+        },
+        {
+          "label": "Urinary tract infection within six weeks",
+          "values": {
+            "exp": "38/170 (22%)",
+            "ctl": "46/146 (32%)"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Among operated women; P=0.074."
+        },
+        {
+          "label": "Retropubic vascular injury requiring laparotomy and transfusion",
+          "values": {
+            "exp": "1/170",
+            "ctl": "0/146"
+          },
+          "locator": "BMJ 2002 Table 2 and footnote",
+          "note": "An anomalous obturator artery was injured during TVT."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Allocated operations performed",
+          "values": {
+            "exp": "170/175",
+            "ctl": "146/169"
+          },
+          "locator": "BMJ 2002 participant-flow figure",
+          "note": "Preoperative withdrawal was more frequent after assignment to colposuspension."
+        },
+        {
+          "label": "Operative technique and anesthesia",
+          "value": "TVT was placed by the Ulmsten technique under local anesthesia and sedation after surgeon training; colposuspension used each centre's standard technique with standardized suture number, suture material and postoperative catheterization, usually under general anesthesia.",
+          "locator": "BMJ 2002 Methods, Discussion and Table 2"
+        },
+        {
+          "label": "Median operating-theatre time",
+          "values": {
+            "exp": "40 minutes (IQR 30–48)",
+            "ctl": "50 minutes (IQR 35–60)"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Among operated women."
+        },
+        {
+          "label": "Median postoperative stay",
+          "values": {
+            "exp": "1 day (IQR 1–2)",
+            "ctl": "5 days (IQR 5–7)"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Among operated women."
+        },
+        {
+          "label": "Median return to normal activities",
+          "values": {
+            "exp": "3 weeks (IQR 2–4)",
+            "ctl": "6 weeks (IQR 4–8)"
+          },
+          "locator": "BMJ 2002 Table 2",
+          "note": "Patient-reported; participants knew their treatment assignment."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "ward-hilton-2004",
+      "kind": "updated",
+      "label": "Two-year update",
+      "published": "2004-02-01",
+      "cutoff": null,
+      "citation": "Ward KL, Hilton P; UK and Ireland TVT Trial Group. \"A prospective multicenter randomized trial of tension-free vaginal tape and colposuspension for primary urodynamic stress incontinence: two-year follow-up.\" *Am J Obstet Gynecol.* 2004;190(2):324-331. doi:10.1016/j.ajog.2003.07.029",
+      "doi": "10.1016/j.ajog.2003.07.029",
+      "pmid": "14981369",
+      "followUp": "Two years; missing outcomes counted as treatment failures in the reported intention-to-treat analysis",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Objective cure",
+          "role": "primary",
+          "measure": "Two-year objective cure, defined as a negative one-hour pad test (less than 1 g weight change); participants with missing data counted as failures",
+          "values": {
+            "exp": "63% of 175 randomized",
+            "ctl": "51% of 169 randomized"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.67,
+            "ci": [
+              1.09,
+              2.58
+            ]
+          },
+          "met": null,
+          "note": "Among women with data available at 24 months, a negative pad test was recorded in 111/137 (81%) after TVT and 86/108 (80%) after colposuspension (OR 1.09, 95% CI 0.59 to 2.06).",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/ward-hilton-2004.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "ward-hilton-2008",
+      "kind": "updated",
+      "label": "Five-year extension",
+      "published": "2007-10-26",
+      "cutoff": null,
+      "citation": "Ward KL, Hilton P; UK and Ireland TVT Trial Group. \"Tension-free vaginal tape versus colposuspension for primary urodynamic stress incontinence: 5-year follow up.\" *BJOG.* 2008;115(2):226-233. doi:10.1111/j.1471-0528.2007.01548.x",
+      "doi": "10.1111/j.1471-0528.2007.01548.x",
+      "pmid": "17970791",
+      "followUp": "Five years; 98/175 TVT and 79/169 colposuspension participants reviewed, with pad tests in 72 and 49",
+      "followUpLocator": "BJOG PDF p2 and Figure 1, p3",
+      "results": [
+        {
+          "endpoint": "Negative one-hour pad test",
+          "role": "primary",
+          "measure": "Five-year negative one-hour pad test, less than 1 g gain, among participants with available tests",
+          "values": {
+            "exp": "58/72 (81%)",
+            "ctl": "44/49 (90%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.47,
+            "ci": [
+              0.16,
+              1.4
+            ],
+            "p": "0.21"
+          },
+          "met": false,
+          "note": "Available-case odds ratio; the small tested subset limits inference.",
+          "locator": "BJOG PDF pp2–4, Tables 1–2"
+        },
+        {
+          "endpoint": "Negative one-hour pad test with last observation carried forward",
+          "role": "exploratory",
+          "measure": "Five-year sensitivity analysis using last observed pad test for missing data",
+          "values": {
+            "exp": "131/175 (75%)",
+            "ctl": "117/169 (69%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.32,
+            "ci": [
+              0.82,
+              2.12
+            ],
+            "p": "0.28"
+          },
+          "note": "Imputation may conceal deterioration between the last visit and five years.",
+          "locator": "BJOG PDF p4, Table 2"
+        },
+        {
+          "endpoint": "No leakage under any circumstance",
+          "role": "secondary",
+          "measure": "Five-year BFLUTS patient-reported complete continence among questionnaire respondents",
+          "values": {
+            "exp": "38/98 (39%)",
+            "ctl": "36/79 (46%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Different respondent denominator from the pad-test analysis.",
+          "locator": "BJOG PDF p2, Secondary outcome measures"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Surgery for prolapse by five years",
+          "values": {
+            "exp": "3/170 (1.8%)",
+            "ctl": "11/146 (7.5%)"
+          },
+          "locator": "BJOG PDF p7, Table 6",
+          "note": "Denominator is women who received allocated surgery; P=0.025."
+        },
+        {
+          "label": "Further surgery for stress incontinence by five years",
+          "values": {
+            "exp": "4/170",
+            "ctl": "5/146 (3.4%)"
+          },
+          "locator": "BJOG PDF p7, Table 6",
+          "note": "P=0.74. The table prints 2.3% for 4/170, although direct calculation rounds to 2.4%."
+        },
+        {
+          "label": "Tape-related complications by five years",
+          "values": {
+            "exp": "6/170",
+            "ctl": "not applicable"
+          },
+          "locator": "BJOG PDF p7, Table 6",
+          "note": "Three vaginal erosions, one obstruction requiring tape division, one suprapubic extrusion and one intravesical tape requiring cystotomy; three events were first detected at five years."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Five-year follow-up and pad-test availability",
+          "values": {
+            "exp": "98/175 reviewed; 72/175 pad tests",
+            "ctl": "79/169 reviewed; 49/169 pad tests"
+          },
+          "locator": "BJOG PDF pp2–3, Figure 1",
+          "note": "Only 11 of 14 original centres joined the extension."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/ward-hilton",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "id": "scandinavian-urethroplasty",
+  "name": "Scandinavian Urethroplasty Study",
+  "aliases": [
+    "SUPS",
+    "OUS-URO-SUPS"
+  ],
+  "nct": "NCT02321670",
+  "area": [
+    "stricture"
+  ],
+  "decisions": [
+    {
+      "id": "stricture-treatment",
+      "lane": "urethroplasty-technique"
+    }
+  ],
+  "question": "Does buccal mucosa graft urethroplasty cause fewer penile complications or less erectile dysfunction than transecting excision and primary anastomosis for short bulbar strictures?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label (patients and surgeons not blinded)",
+    "type": "superiority",
+    "n": 151,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Buccal mucosa graft urethroplasty",
+        "role": "experimental",
+        "n": 76
+      },
+      {
+        "key": "ctl",
+        "label": "transecting excision and primary anastomosis",
+        "role": "control",
+        "n": 75
+      }
+    ],
+    "population": "Patients aged 18 to 70 years with a bulbar urethral stricture of 2 cm or less and no previous open urethroplasty (median age 35 years, median stricture length 10 mm).",
+    "description": "Four-center, open-label randomized superiority trial",
+    "locator": "PDF pp2-3; journal pp376-377"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Penile complications favored graft; IIEF-5 did not differ; enrollment stopped at 151 of 300 planned.",
+  "takeaway": "In men with bulbar urethral strictures of 2 cm or less, buccal mucosa graft urethroplasty was followed by fewer patient-reported penile complications than transecting excision and primary anastomosis at 12 months (16% versus 33%); IIEF-5 scores and recurrence (12.9% overall) did not differ.",
+  "reports": [
+    {
+      "id": "scandinavian-urethroplasty-2022",
+      "kind": "primary",
+      "label": "Initial 12-month report",
+      "published": "2022-01-08",
+      "cutoff": "2021-02-09",
+      "citation": "Nilsen OJ, Holm HV, Ekerhult TO, et al. To Transect or Not Transect: Results from the Scandinavian Urethroplasty Study, A Multicentre Randomised Study of Bulbar Urethroplasty Comparing Excision and Primary Anastomosis Versus Buccal Mucosal Grafting. *Eur Urol.* 2022;81(4):375-382.",
+      "doi": "10.1016/j.eururo.2021.12.017",
+      "pmid": "35012771",
+      "followUp": "12 months; 144/151 completed the 12-month visit; final follow-up visit 9 February 2021",
+      "followUpLocator": "PDF pp3-4; journal pp377-378",
+      "results": [
+        {
+          "endpoint": "Penile complications",
+          "role": "primary",
+          "measure": "One or more penile complications on the penile complications questionnaire (PCQ questions 2 to 5: glans filling, glans sensation, penile length, penile direction) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "12 (16%)",
+            "ctl": "23 (33%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 17,
+            "ci": [
+              3,
+              30
+            ],
+            "p": "0.02"
+          },
+          "met": true,
+          "note": "Prespecified primary endpoint, patient-reported on a questionnaire designed for this study and not validated; the prespecified metric was an odds ratio, and the report gives risk differences with a chi-square test. P values were not corrected for multiple testing; enrollment was 151 of 300 planned.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Erectile function (IIEF-5)",
+          "role": "primary",
+          "measure": "Mean IIEF-5 score at 12 months; between-arm difference from analysis of covariance",
+          "values": {
+            "exp": "23.0",
+            "ctl": "21.8"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.2,
+            "ci": [
+              -0.4,
+              2.7
+            ],
+            "p": "0.14"
+          },
+          "met": false,
+          "note": "Table 5 gives the difference as 1.2 without stating its direction; the arm means are 23.0 (BMG) and 21.8 (tEPA). Median preoperative IIEF-5 was 25 in both arms.",
+          "locator": "PDF p5, Table 5; journal p379; baseline PDF p3, Table 3"
+        },
+        {
+          "endpoint": "Penile complications at 3 months",
+          "role": "secondary",
+          "measure": "One or more penile complications (PCQ questions 2 to 5) at 3 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "10 (14%)",
+            "ctl": "26 (38%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 24,
+            "ci": [
+              10,
+              38
+            ],
+            "p": "0.001"
+          },
+          "note": "Same questionnaire and analysis as the primary endpoint.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Reduced glans filling",
+          "role": "secondary",
+          "measure": "PCQ question 2 'yes' (less stiffness of the penis head during erection) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "5 (6.8%)",
+            "ctl": "13 (19%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 12,
+            "ci": [
+              1,
+              23
+            ],
+            "p": "0.03"
+          },
+          "note": "Component of the primary penile-complication endpoint.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Penile shortening",
+          "role": "secondary",
+          "measure": "PCQ question 4 'yes' (erect penis has become shorter) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "4 (5.4%)",
+            "ctl": "18 (26%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 20,
+            "ci": [
+              9,
+              32
+            ],
+            "p": "0.001"
+          },
+          "note": "Component of the primary penile-complication endpoint.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Loss of glans sensation",
+          "role": "secondary",
+          "measure": "PCQ question 3 'yes' (lost feeling in the head of the penis) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "9 (12%)",
+            "ctl": "9 (13%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.7,
+            "ci": [
+              -10.1,
+              11.5
+            ],
+            "p": "0.9"
+          },
+          "note": "Component of the primary penile-complication endpoint.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Changed erection direction",
+          "role": "secondary",
+          "measure": "PCQ question 5 'yes' (erect penis points in a different direction) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "3 (4.1%)",
+            "ctl": "4 (5.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.7,
+            "ci": [
+              -5.4,
+              8.7
+            ],
+            "p": "0.6"
+          },
+          "note": "Reported at 3 months in 0 of the BMG arm and 7 (10%) of the tEPA arm (p = 0.005).",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Worse ejaculation at 3 months",
+          "role": "secondary",
+          "measure": "PCQ question 1 'yes' (ejaculation has become worse) at 3 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "2 (2.8%)",
+            "ctl": "18 (26%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 24,
+            "ci": [
+              12,
+              35
+            ],
+            "p": "<0.001"
+          },
+          "note": "Question 1 was excluded from the one-or-more-complications analysis because the authors did not consider ejaculation a penile problem.",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Worse ejaculation at 12 months",
+          "role": "secondary",
+          "measure": "PCQ question 1 'yes' (ejaculation has become worse) at 12 months; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "6 (8.1%)",
+            "ctl": "5 (7.1%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1,
+            "ci": [
+              -10,
+              8
+            ],
+            "p": "0.8"
+          },
+          "note": "",
+          "locator": "PDF p4, Table 4; journal p378"
+        },
+        {
+          "endpoint": "Erectile function (IIEF-5) at 3 months",
+          "role": "secondary",
+          "measure": "Mean IIEF-5 score at 3 months; between-arm difference from analysis of covariance",
+          "values": {
+            "exp": "22.3",
+            "ctl": "21.1"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.2,
+            "ci": [
+              -0.01,
+              2.4
+            ],
+            "p": "0.051"
+          },
+          "note": "Table 5 gives the difference as 1.2 without stating its direction.",
+          "locator": "PDF p5, Table 5; journal p379"
+        },
+        {
+          "endpoint": "Stricture recurrence",
+          "role": "secondary",
+          "measure": "Recurrence, defined as need for additional surgery, within 12-month follow-up; risk difference (tEPA minus BMG), percentage points",
+          "values": {
+            "exp": "10 (13.2%)",
+            "ctl": "9 (12.0%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1,
+            "ci": [
+              -12,
+              10
+            ],
+            "p": "0.8"
+          },
+          "note": "Recurrence data were available for 147 patients; 19 (12.9%) had a recurrence overall. Lumen patency was not assessed by endoscopy or urethrography at follow-up, and the trial was not designed or powered to detect a recurrence difference.",
+          "locator": "PDF p4, section 3.3; journal p378"
+        },
+        {
+          "endpoint": "Maximum urinary flow",
+          "role": "secondary",
+          "measure": "Mean maximum flow at 12 months",
+          "values": {
+            "exp": "27 mL/s",
+            "ctl": "28 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.8"
+          },
+          "note": "Mean difference 1 mL/s (95% CI -4 to 6); the table does not state its direction. Median preoperative maximum flow was 9 mL/s (BMG) and 8 mL/s (tEPA).",
+          "locator": "PDF p5, Table 6; journal p379; PDF p3, Table 3"
+        },
+        {
+          "endpoint": "Residual urine volume",
+          "role": "secondary",
+          "measure": "Mean residual volume at 12 months",
+          "values": {
+            "exp": "81 mL",
+            "ctl": "64 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.2"
+          },
+          "note": "Mean difference 17 mL (95% CI -10 to 44); the table does not state its direction. Median preoperative residual volume was 90 mL (BMG) and 67 mL (tEPA).",
+          "locator": "PDF p5, Table 6; journal p379; PDF p3, Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative bleeding (scrotal or perineal hematoma)",
+          "values": {
+            "exp": "3/76 (3.9%)",
+            "ctl": "18/75 (24%)"
+          },
+          "locator": "PDF p5, Table 7; journal p379",
+          "note": "Risk difference (tEPA minus BMG) 20 percentage points (95% CI 9 to 31); p < 0.001. All were Clavien-Dindo grade I except three tEPA patients (one grade II, one IIIa, one IIIb)."
+        },
+        {
+          "label": "Wound infection after discharge or at catheter removal",
+          "values": {
+            "exp": "0/76",
+            "ctl": "3/75 (4.0%)"
+          },
+          "locator": "PDF pp4-5, section 3.4 and Table 7; journal pp378-379",
+          "note": "Grade II in two and grade IIIa in one of the three tEPA patients; none at 3 or 12 months in either arm."
+        },
+        {
+          "label": "Urinary tract infection at 12 months",
+          "values": {
+            "exp": "5/75 (6.7%)",
+            "ctl": "1/71 (1.4%)"
+          },
+          "locator": "PDF p5, Table 7; journal p379",
+          "note": "All grade I to II; no significant differences between arms. At catheter removal 6/76 (7.9%) after BMG versus 1/75 (1.3%) after tEPA; at 3 months 3/74 (4.1%) versus 2/71 (2.8%); postoperatively 2/76 (2.6%) versus 0/75."
+        },
+        {
+          "label": "Contrast leakage on urethrography at catheter removal",
+          "values": {
+            "exp": "not reported by arm",
+            "ctl": "not reported by arm"
+          },
+          "locator": "PDF pp4-5, section 3.4; journal pp378-379",
+          "note": "Eight of 136 patients examined, with no difference between groups. In all eight the catheter stayed another 2 weeks; it was then removed without repeat urethrography in six, and urethrography in the other two showed no leakage."
+        },
+        {
+          "label": "Perineal or lower-extremity pain, anesthesia or dysesthesia",
+          "values": {
+            "exp": "not reported by arm",
+            "ctl": "not reported by arm"
+          },
+          "locator": "PDF p4, section 3.4; journal p378",
+          "note": "Six patients early postoperatively, ten at 3 months and three at 12 months, all grade I to II."
+        },
+        {
+          "label": "Myocardial infarction",
+          "values": {
+            "exp": "not reported by arm",
+            "ctl": "not reported by arm"
+          },
+          "locator": "PDF p4, section 3.4; journal p378",
+          "note": "One patient, 6 days after surgery, required coronary stenting (grade IVa). No deep venous thrombosis or compartment syndrome."
+        },
+        {
+          "label": "Oral discomfort after graft harvest",
+          "values": {
+            "exp": "26 (34%) during the hospital stay; 4 (5.2%) at catheter removal; 3 (3.9%) at 3 and at 12 months",
+            "ctl": "not applicable"
+          },
+          "locator": "PDF p5, section 3.5; journal p379",
+          "note": "In-hospital discomfort was mild in 15 and moderate in 11; later reports were all mild."
+        },
+        {
+          "label": "Donor-site bleeding, Stensen duct occlusion or donor-site infection",
+          "values": {
+            "exp": "1 (1.3%) bleeding, grade I; no duct occlusion or infection",
+            "ctl": "not applicable"
+          },
+          "locator": "PDF p5, section 3.5; journal p379",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized and operated as assigned",
+          "values": {
+            "exp": "76 randomized; 77 operated",
+            "ctl": "75 randomized; 74 operated"
+          },
+          "locator": "PDF pp3-4, Results; journal pp377-378",
+          "note": "Three patients (2%) were not operated as assigned: two randomized to tEPA had BMG because of unexpectedly long strictures (one with an augmented end-to-end anastomosis) and one randomized to BMG had tEPA. Analysis was by intention to treat."
+        },
+        {
+          "label": "Graft position in BMG operations",
+          "value": "59 ventral and 18 dorsal of 77",
+          "locator": "PDF p4, Results; journal p378",
+          "note": "Position followed surgeon preference; a subgroup analysis showed no difference in penile complications between dorsal and ventral grafts."
+        },
+        {
+          "label": "tEPA technique",
+          "value": "Transection of the corpus spongiosum and excision of the stricture, with two-layer anastomosis.",
+          "locator": "PDF p2, section 2.2; journal p376",
+          "note": "The participating centers agreed the operative techniques before the study started."
+        },
+        {
+          "label": "BMG technique",
+          "value": "Corpus spongiosum incised along the length of the stricture, ventrally or dorsally, with a buccal mucosa graft placed on the urethral defect; no transection.",
+          "locator": "PDF p2, section 2.2; journal p376",
+          "note": ""
+        },
+        {
+          "label": "Postoperative care",
+          "value": "Indwelling Foley catheter for 2 to 3 weeks with antibiotic treatment and antithrombotic prophylaxis; postoperative treatment was the same for both groups at each center.",
+          "locator": "PDF p2, section 2.2; journal p376",
+          "note": "Antibiotics, antithrombotic prophylaxis and physical limitations were at each center's discretion."
+        },
+        {
+          "label": "Enrollment by center",
+          "value": "Oslo 95, Helsinki 32, Gothenburg 16, Örebro 8",
+          "locator": "PDF p3, Table 2; journal p377",
+          "note": "Enrolled between 1 September 2015 and 31 December 2019."
+        },
+        {
+          "label": "Planned versus achieved enrollment",
+          "value": "151 of 300 planned",
+          "locator": "PDF pp2,6, sections 2.3 and 4.1; journal pp376,380",
+          "note": "The target gave 80% power at an alpha of 0.05 for 30% versus 15% penile complications with 134 per group. Inclusion stopped after more than 4 years, without interim analysis, because reaching the target would have taken 8 to 10 years."
+        },
+        {
+          "label": "Follow-up completion",
+          "value": "144 completed 12-month follow-up; 4 lost to follow-up and 3 left the study because of early stricture recurrence.",
+          "locator": "PDF p4, Results; journal p378",
+          "note": "PCQ data were available for 139 patients at 3 months and 144 at 12 months; IIEF-5 for 150 preoperatively, 137 at 3 months and 142 at 12 months."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Zotero/storage/59XR6BDR/Nilsen et al. - 2022 - To Transect or Not Transect Results from the Scandinavian Urethroplasty Study, A Multicentre Random.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "scandinavian-urethroplasty-2026",
+      "kind": "secondary",
+      "label": "Clinical trial update (12-month data)",
+      "published": "2026-05-21",
+      "cutoff": null,
+      "citation": "Holm HV, Ohnesorge SS, Nilsen OJ. Long-term Outcomes of Transecting Versus Nontransecting Bulbar Urethroplasty: Results from the Scandinavian Urethroplasty Study. *Eur Urol Focus.* 2026;12(3):316-318.",
+      "doi": "10.1016/j.euf.2026.05.007",
+      "pmid": "42168014",
+      "followUp": "12 months, as in the primary report; long-term follow-up of at least 6 years after surgery planned",
+      "followUpLocator": "PDF pp1-3; journal pp316-318",
+      "results": [
+        {
+          "endpoint": "Penile complications",
+          "role": "descriptive",
+          "measure": "One or more penile complications (PCQ questions 2 to 5) at 12 months",
+          "values": {
+            "exp": "12 (16%)",
+            "ctl": "23 (33%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "Restates the 12-month result of the primary report.",
+          "locator": "PDF p2, Table 1; journal p317"
+        },
+        {
+          "endpoint": "Stricture recurrence",
+          "role": "descriptive",
+          "measure": "Recurrence, defined as need for retreatment; overall 12.9%",
+          "values": {
+            "exp": "13.0%",
+            "ctl": "12.2%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Percentages differ from the primary report's 13.2% and 12.0%; the update does not state denominators. It lists 74 tEPA and 77 BMG procedures performed. No difference in maximum flow or residual volume.",
+          "locator": "PDF p2, section 3.2; journal p317"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative bleeding",
+          "values": {
+            "exp": "3.9%",
+            "ctl": "24%"
+          },
+          "locator": "PDF p2, section 3.2; journal p317",
+          "note": "Same figures as the primary report."
+        },
+        {
+          "label": "Mild oral discomfort at 12 months",
+          "values": {
+            "exp": "3.9%",
+            "ctl": "not applicable"
+          },
+          "locator": "PDF p2, section 3.2; journal p317",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Planned long-term follow-up",
+          "value": "Participants to be invited for long-term follow-up with the same endpoints, with a minimum of 6 years of observation after surgery.",
+          "locator": "PDF p2, Discussion; journal p317",
+          "note": "Reported as planned, not yet completed."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/Revised-Sources-2026-10-11/10-Holm-Scandinavian-Urethroplasty-2026.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/scandinavian-urethroplasty",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

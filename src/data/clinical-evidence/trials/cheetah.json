@@ -1,0 +1,446 @@
+{
+  "id": "cheetah",
+  "name": "ChEETAh",
+  "aliases": [
+    "CHEETAh",
+    "NCT03980652"
+  ],
+  "nct": "NCT03980652",
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "wound-and-safety",
+      "lane": "surgical-site-infection"
+    }
+  ],
+  "question": "Does routine change of sterile gloves and instruments before abdominal wound closure reduce 30-day surgical site infection?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "unmasked surgical teams and outcome assessors; patients masked",
+    "type": "superiority",
+    "n": 13301,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Routine change of sterile gloves and instruments before wound closure",
+        "role": "experimental",
+        "n": 6144
+      },
+      {
+        "key": "ctl",
+        "label": "current hospital practice",
+        "role": "control",
+        "n": 7157
+      }
+    ],
+    "population": "Adults and children having emergency or elective clean-contaminated, contaminated or dirty abdominal surgery through an incision of at least 5 cm, excluding cesarean section, in 81 hospitals in seven low- and middle-income countries.",
+    "description": "Pragmatic multicenter cluster-randomized superiority trial, hospitals randomized",
+    "locator": "Lancet full text: Methods, Results, Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Adjusted RR 0.87 for 30-day SSI; the design targeted a 4-point absolute reduction.",
+  "takeaway": "ChEETAh randomized 81 hospitals in seven low- and middle-income countries to routine glove and instrument change before abdominal wound closure versus current practice; 30-day surgical site infection was 16.1% versus 18.9% (adjusted risk ratio 0.87, 95% CI 0.79–0.95).",
+  "reports": [
+    {
+      "id": "cheetah-2022",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2022-10-31",
+      "cutoff": null,
+      "citation": "NIHR Global Research Health Unit on Global Surgery. Routine sterile glove and instrument change at the time of abdominal wound closure to prevent surgical site infection (ChEETAh): a pragmatic, cluster-randomised trial in seven low-income and middle-income countries. *Lancet.* 2022;400(10365):1767-1776. doi:10.1016/S0140-6736(22)01884-0",
+      "doi": "10.1016/S0140-6736(22)01884-0",
+      "pmid": "36328045",
+      "followUp": "30 days after surgery; primary outcome analyzed in 12,557 of 13,301 patients",
+      "followUpLocator": "Lancet full text: Methods (Outcomes), Figure 1",
+      "results": [
+        {
+          "endpoint": "Surgical site infection",
+          "role": "primary",
+          "measure": "SSI within 30 days (superficial or deep incisional, CDC criteria); adjusted risk ratio",
+          "values": {
+            "exp": "931/5,789 (16.1%)",
+            "ctl": "1,280/6,768 (18.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.87,
+            "ci": [
+              0.79,
+              0.95
+            ],
+            "p": "0.0032"
+          },
+          "met": true,
+          "note": "Modified intention-to-treat population (patients lost to follow-up, refusing consent or dying before assessment excluded). The abstract prints 16.0% for the intervention group; the Results text and Figure 3 print 16.1%. Multilevel log-binomial model adjusted for hospital type, contamination, operative approach and timing of surgery. The sample size assumed a 16% control rate and a 4-point absolute (25% relative) reduction, the minimum clinically important difference chosen by an international surgeon group.",
+          "locator": "Lancet full text: abstract; Results; Figure 3"
+        },
+        {
+          "endpoint": "Surgical site infection",
+          "role": "secondary",
+          "measure": "Per-protocol sensitivity analysis; adjusted risk ratio",
+          "values": {
+            "exp": "919/5,693 (16.1%)",
+            "ctl": "1,280/6,768 (18.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.84,
+            "ci": [
+              0.76,
+              0.93
+            ],
+            "p": "0.0010"
+          },
+          "note": "",
+          "locator": "Lancet full text: Figure 3"
+        },
+        {
+          "endpoint": "Surgical site infection",
+          "role": "secondary",
+          "measure": "Best-case scenario as labeled in Figure 3 (patients with missing primary-outcome data recoded); adjusted risk ratio",
+          "values": {
+            "exp": "931/5,831 (16.0%)",
+            "ctl": "1,280/6,848 (18.7%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.81,
+            "ci": [
+              0.72,
+              0.92
+            ],
+            "p": "0.0009"
+          },
+          "note": "",
+          "locator": "Lancet full text: Figure 3"
+        },
+        {
+          "endpoint": "Surgical site infection",
+          "role": "secondary",
+          "measure": "Worst-case scenario as labeled in Figure 3 (patients with missing primary-outcome data recoded); adjusted risk ratio",
+          "values": {
+            "exp": "973/5,831 (16.7%)",
+            "ctl": "1,360/6,848 (19.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.86,
+            "ci": [
+              0.78,
+              0.95
+            ],
+            "p": "0.0059"
+          },
+          "note": "",
+          "locator": "Lancet full text: Figure 3"
+        },
+        {
+          "endpoint": "Surgical site infection",
+          "role": "secondary",
+          "measure": "Only hospitals that reached the 200-patient recruitment target; adjusted risk ratio",
+          "values": {
+            "exp": "684/4,127 (16.6%)",
+            "ctl": "1,050/5,313 (19.8%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.82,
+            "ci": [
+              0.74,
+              0.91
+            ],
+            "p": "0.0004"
+          },
+          "note": "",
+          "locator": "Lancet full text: Figure 3"
+        },
+        {
+          "endpoint": "Surgical site infection",
+          "role": "secondary",
+          "measure": "Adjusted for minimization factors only (country and hospital type); adjusted risk ratio",
+          "values": {
+            "exp": "931/5,789 (16.1%)",
+            "ctl": "1,280/6,768 (18.9%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.66,
+            "ci": [
+              0.6,
+              0.73
+            ],
+            "p": "<0.0001"
+          },
+          "note": "The primary model also adjusted for contamination, urgency and operative approach and gave 0.87.",
+          "locator": "Lancet full text: Figure 3; Statistical analysis"
+        },
+        {
+          "endpoint": "SSI at hospital discharge",
+          "role": "secondary",
+          "measure": "SSI at discharge; adjusted risk ratio",
+          "values": {
+            "exp": "484/5,976 (8.1%)",
+            "ctl": "706/7,002 (10.1%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.77,
+            "ci": [
+              0.52,
+              1.12
+            ],
+            "p": "0.17"
+          },
+          "note": "Modified Poisson model because the log-binomial model did not converge.",
+          "locator": "Lancet full text: Table 3"
+        },
+        {
+          "endpoint": "Return to normal activities",
+          "role": "secondary",
+          "measure": "Self-reported return to normal activities by 30 days; adjusted risk ratio",
+          "values": {
+            "exp": "3,651/5,717 (63.9%)",
+            "ctl": "4,413/6,623 (66.6%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.99,
+            "ci": [
+              0.83,
+              1.17
+            ],
+            "p": "0.89"
+          },
+          "note": "Modified Poisson model because the log-binomial model did not converge.",
+          "locator": "Lancet full text: Table 3"
+        },
+        {
+          "endpoint": "Length of hospital stay",
+          "role": "secondary",
+          "measure": "Median (IQR) days; geometric mean ratio",
+          "values": {
+            "exp": "6 (4–9)",
+            "ctl": "5 (3–8)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Geometric mean ratio 1.12 (95% CI 0.97–1.25; P = 0.083) on log-transformed stay, measured to the nearest whole day.",
+          "locator": "Lancet full text: Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "locator": "Lancet full text: abstract; Methods (Outcomes)",
+          "note": "The authors did not anticipate or collect specific data on serious adverse events."
+        },
+        {
+          "label": "Mortality within 30 days",
+          "values": {
+            "exp": "394/6,110 (6.4%)",
+            "ctl": "455/7,095 (6.4%)"
+          },
+          "locator": "Lancet full text: Table 3",
+          "note": "Adjusted risk ratio 0.88 (95% CI 0.70–1.10; P = 0.26). Deaths before outcome assessment excluded from the primary analysis: 313 and 309."
+        },
+        {
+          "label": "Unexpected readmission for a wound-related problem",
+          "values": {
+            "exp": "194/5,761 (3.4%)",
+            "ctl": "243/6,675 (3.6%)"
+          },
+          "locator": "Lancet full text: Table 3",
+          "note": "Adjusted risk ratio 1.02 (95% CI 0.75–1.39; P = 0.89)."
+        },
+        {
+          "label": "Unexpected reoperation for a wound-related problem",
+          "values": {
+            "exp": "89/5,760 (1.5%)",
+            "ctl": "157/6,674 (2.4%)"
+          },
+          "locator": "Lancet full text: Table 3",
+          "note": "Table 3 prints 2.3% for the current-practice group (157/6,674 is 2.35%). Adjusted risk ratio 0.73 (95% CI 0.48–1.10; P = 0.14)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Intervention",
+          "value": "Operating surgeons, assistants and scrub staff changed sterile gloves (outer gloves if double gloved) and used a separate sterile needle holder, forceps and scissors for abdominal wall closure, after the abdominal part of the operation and before handling the wound edges.",
+          "locator": "Lancet full text: Methods (Procedures)"
+        },
+        {
+          "label": "Planned and achieved sample",
+          "value": "Planned: 90% power to detect a fall in SSI from 16% to 12%, requiring 12,800 participants from at least 64 clusters. Achieved: 13,301 patients from 81 hospitals, recruited 24 June 2020 to 31 March 2022.",
+          "locator": "Lancet full text: abstract; Methods (Statistical analysis); Results"
+        },
+        {
+          "label": "Both components changed in intervention; at least one component changed in control",
+          "values": {
+            "exp": "6,044/6,144 (98.4%)",
+            "ctl": "58/7,157 (0.8%)"
+          },
+          "locator": "Lancet full text: abstract; Results",
+          "note": "The Results print 98.3% for the intervention group (6,044/6,144 is 98.37%). Among 5,789 intervention patients analyzed for the primary outcome, 100 did not receive the change; in the control group 45 had a glove change only, 3 an instrument change only and 10 both."
+        },
+        {
+          "label": "Hospitals randomized and analyzed",
+          "values": {
+            "exp": "39 randomized, 39 analyzed",
+            "ctl": "42 randomized, 41 analyzed"
+          },
+          "locator": "Lancet full text: Figure 1; Results",
+          "note": "One control hospital withdrew after randomization and enrolled no patients. 65/81 hospitals (80%) were referral centers, with 20 to 3,400 beds. Median 200 patients per hospital (IQR 91–220)."
+        },
+        {
+          "label": "Patients excluded from the primary analysis",
+          "values": {
+            "exp": "355/6,144",
+            "ctl": "389/7,157"
+          },
+          "locator": "Lancet full text: Figure 1",
+          "note": "Intervention group: 11 refused consent, 26 lost to follow-up, 313 died before outcome assessment, 5 missing. Control group: 24, 53, 309 and 3."
+        },
+        {
+          "label": "Age group",
+          "value": "Adults 11,825/13,301 (88.9%); children 1,476/13,301 (11.1%).",
+          "locator": "Lancet full text: abstract; Results; Table 1"
+        },
+        {
+          "label": "Emergency surgery",
+          "values": {
+            "exp": "3,050/6,144 (49.6%)",
+            "ctl": "4,126/7,157 (57.6%)"
+          },
+          "locator": "Lancet full text: Table 2",
+          "note": "Elective surgery 6,125/13,301 (46.0%) overall. The primary model adjusted for timing of surgery."
+        },
+        {
+          "label": "Contamination class",
+          "value": "Clean-contaminated 8,086/13,301 (60.8%); contaminated or dirty 5,215/13,301 (39.2%).",
+          "locator": "Lancet full text: abstract; Table 2"
+        },
+        {
+          "label": "Open approach",
+          "value": "13,011/13,301 (97.8%) open; 8,129/13,301 (61.1%) midline incisions.",
+          "locator": "Lancet full text: Results"
+        },
+        {
+          "label": "Urologic operations",
+          "values": {
+            "exp": "293/6,144 (4.8%)",
+            "ctl": "386/7,157 (5.4%)"
+          },
+          "locator": "Lancet full text: Table 1",
+          "note": "679 urologic operations in total. Gynecologic operations 1,204 (19.6%) versus 1,870 (26.1%); colon and rectum 840 (13.7%) versus 644 (9.0%)."
+        },
+        {
+          "label": "Prophylactic antibiotic within 60 minutes before incision",
+          "values": {
+            "exp": "6,040/6,144 (98.3%)",
+            "ctl": "7,044/7,157 (98.4%)"
+          },
+          "locator": "Lancet full text: Table 2"
+        },
+        {
+          "label": "Outcome assessment by telephone",
+          "values": {
+            "exp": "4,602/5,724 (80.4%)",
+            "ctl": "5,505/6,634 (83.0%)"
+          },
+          "locator": "Lancet full text: Table 1",
+          "note": "Denominators are patients with 30-day follow-up data; the remainder were seen in hospital, in the community or through clinical notes."
+        },
+        {
+          "label": "Glove supply",
+          "value": "Mölnlycke Healthcare provided sterile BioGel gloves to intervention-group hospitals as an unrestricted donation.",
+          "locator": "Lancet full text: Acknowledgments"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "cheetah-2024-economic",
+      "kind": "secondary",
+      "label": "Cost-effectiveness analysis",
+      "published": "2024-02-01",
+      "dateApprox": true,
+      "dateLocator": "February 2024 issue date; online date not shown on the article page (Crossref record created 2024-01-18)",
+      "cutoff": null,
+      "citation": "NIHR Global Health Research Unit on Global Surgery. Routine sterile glove and instrument change at the time of abdominal wound closure to prevent surgical site infection (ChEETAh): a model-based cost-effectiveness analysis of a pragmatic, cluster-randomised trial in seven low-income and middle-income countries. *Lancet Glob Health.* 2024;12(2):e235-e242. doi:10.1016/S2214-109X(23)00538-7",
+      "doi": "10.1016/S2214-109X(23)00538-7",
+      "pmid": "38245114",
+      "followUp": "30 days (decision-analytic model built on the trial's pooled outcomes)",
+      "followUpLocator": "Lancet Glob Health full text: Methods",
+      "results": [
+        {
+          "endpoint": "Cost per patient",
+          "role": "secondary",
+          "measure": "Average cost per surgery, base case (India unit costs, 2021 US$, provider perspective); mean difference, intervention minus current practice",
+          "values": {
+            "exp": "$259.92",
+            "ctl": "$261.10"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.18,
+            "ci": [
+              -4.08,
+              1.33
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "With Mexico unit costs the cost difference was $0.15 (95% CI −1.78 to 2.18) and with Ghana unit costs −$1.79 (95% CI −8.82 to −0.48); the authors report cost-effectiveness in all three.",
+          "locator": "Lancet Glob Health full text: Results; Table 2"
+        },
+        {
+          "endpoint": "Modeled SSI",
+          "role": "secondary",
+          "measure": "Model-estimated percentage of patients with SSI, base case; absolute risk reduction in percentage points",
+          "values": {
+            "exp": "17.6%",
+            "ctl": "19.7%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.1,
+            "ci": [
+              2.07,
+              2.84
+            ],
+            "ciLevel": "95%"
+          },
+          "note": "Model output rather than the trial's observed 16.1% versus 18.9%; the interval is printed as given.",
+          "locator": "Lancet Glob Health full text: abstract; Results; Table 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Model inputs",
+          "value": "Outcomes pooled from all seven ChEETAh countries; resource use and unit costs from the KIWI costing study within FALCON, India in the base case; glove costs collected retrospectively from KIWI hospitals.",
+          "locator": "Lancet Glob Health full text: Methods"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/cheetah",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

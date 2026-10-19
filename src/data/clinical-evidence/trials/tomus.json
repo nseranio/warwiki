@@ -1,0 +1,371 @@
+{
+  "id": "tomus",
+  "name": "TOMUS",
+  "aliases": [
+    "Trial of Mid-Urethral Slings",
+    "E-TOMUS"
+  ],
+  "nct": "NCT00325039",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "midurethral-sling-route"
+    }
+  ],
+  "question": "Are retropubic and transobturator midurethral slings equivalent for objective and subjective treatment success in women with stress-predominant urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Open-label after surgery; surgeons masked to preoperative urodynamic results",
+    "type": "noninferiority",
+    "n": 597,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Retropubic tension-free vaginal tape (TVT)",
+        "n": 298,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "transobturator TVT-O (inside-out) or Monarc (outside-in)",
+        "n": 299,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged at least 21 years with at least 3 months of stress-predominant incontinence and a positive stress test at bladder volume 300 mL or less; 597 randomized at 9 US sites.",
+    "description": "Multicenter randomized equivalence trial",
+    "locator": "Richter 2010, Methods and Results, Figure 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Objective 12-month equivalence met; subjective equivalence did not.",
+  "takeaway": "Retropubic TVT and transobturator TVT-O or Monarc had equivalent objective success at 12 months (80.8% versus 77.7%) under TOMUS's ±12-point margin; subjective success (62.2% versus 55.8%) did not meet equivalence. Complication patterns differed by route.",
+  "reports": [
+    {
+      "id": "tomus-2010",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2010-05-17",
+      "cutoff": null,
+      "citation": "Richter HE, Albo ME, Zyczynski HM, et al. \"Retropubic versus Transobturator Midurethral Slings for Stress Incontinence.\" *N Engl J Med.* 2010;362(22):2066-2076. doi:10.1056/NEJMoa0912658",
+      "doi": "10.1056/NEJMoa0912658",
+      "pmid": "20479459",
+      "followUp": "12 months; 565/597 assessed or counted as failures",
+      "followUpLocator": "Abstract; Results, Figure 1",
+      "results": [
+        {
+          "endpoint": "Objective treatment success",
+          "role": "primary",
+          "measure": "12-month objective composite; retropubic minus transobturator risk difference, percentage points",
+          "values": {
+            "exp": "80.8%",
+            "ctl": "77.7%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.0,
+            "ci": [
+              -3.6,
+              9.6
+            ]
+          },
+          "met": true,
+          "note": "Negative provocative stress test, negative 24-hour pad test, and no SUI retreatment; full 95% CI within ±12 points.",
+          "locator": "Abstract; Results, Figure 2"
+        },
+        {
+          "endpoint": "Subjective treatment success",
+          "role": "primary",
+          "measure": "12-month subjective composite; retropubic minus transobturator risk difference, percentage points",
+          "values": {
+            "exp": "62.2%",
+            "ctl": "55.8%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 6.4,
+            "ci": [
+              -1.6,
+              14.3
+            ]
+          },
+          "met": false,
+          "note": "No stress symptoms on MESA, no leakage in 3-day diary, and no SUI retreatment; upper CI exceeded +12 points.",
+          "locator": "Abstract; Results, Figure 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Intraoperative bladder perforation",
+          "values": {
+            "exp": "15/298 (5.0%)",
+            "ctl": "0/299 (0%)"
+          },
+          "locator": "Results, Table 2",
+          "note": "Trocar perforations were managed by replacement of the trocar."
+        },
+        {
+          "label": "Voiding dysfunction requiring surgery by 12 months",
+          "values": {
+            "exp": "8/298 (2.7%)",
+            "ctl": "0/299 (0%)"
+          },
+          "locator": "Abstract; Results, Table 2",
+          "note": ""
+        },
+        {
+          "label": "Neurologic symptoms assessed through 6 weeks",
+          "values": {
+            "exp": "12/298 (4.0%)",
+            "ctl": "28/299 (9.4%)"
+          },
+          "locator": "Abstract; Results, Table 2",
+          "note": "Leg weakness and groin numbness were among symptoms reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Operative routes and devices",
+          "value": "Retropubic Gynecare TVT versus inside-out Gynecare TVT-O or outside-in AMS Monarc; surgeons declared their transobturator method before enrollment; cystoscopy and key elements standardized; concomitant vaginal surgery permitted.",
+          "locator": "Methods, Study Procedures"
+        },
+        {
+          "label": "Assigned operations",
+          "values": {
+            "exp": "298 randomized; 291 per protocol",
+            "ctl": "299 randomized; 292 per protocol"
+          },
+          "locator": "Results, Figure 1"
+        },
+        {
+          "label": "Transobturator approach used",
+          "value": "Inside-out in 161 women and outside-in in 137; one assigned transobturator patient received a retropubic sling.",
+          "locator": "Results, Outcomes"
+        },
+        {
+          "label": "Median sling-portion operative time",
+          "values": {
+            "exp": "30 minutes",
+            "ctl": "25 minutes"
+          },
+          "locator": "Results, Outcomes"
+        },
+        {
+          "label": "Median estimated blood loss",
+          "values": {
+            "exp": "50 mL",
+            "ctl": "25 mL"
+          },
+          "locator": "Results, Outcomes"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "tomus-2011-harms",
+      "kind": "secondary",
+      "label": "Two-year adverse events",
+      "published": "2011-11-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed issue date; exact online date not confirmed",
+      "cutoff": null,
+      "citation": "Brubaker L, Norton PA, Albo ME, et al. \"Adverse Events over Two Years after Retropubic or Transobturator Midurethral Sling Surgery: Findings from the Trial of Midurethral Slings (TOMUS) Study.\" *Am J Obstet Gynecol.* 2011;205(5):498.e1-498.e6. doi:10.1016/j.ajog.2011.07.011",
+      "doi": "10.1016/j.ajog.2011.07.011",
+      "pmid": "21925636",
+      "followUp": "24 months",
+      "followUpLocator": "Methods; Results",
+      "results": [],
+      "harms": [
+        {
+          "label": "At least one serious adverse event through 24 months",
+          "values": {
+            "exp": "46/298 (15.4%)",
+            "ctl": "26/299 (8.7%)"
+          },
+          "locator": "Table 1",
+          "note": "Modified Dindo classification; an intraoperative perforation requiring trocar replacement counted as serious."
+        },
+        {
+          "label": "Voiding dysfunction requiring surgery, catheter use, or both through 24 months",
+          "values": {
+            "exp": "9/298 (3.0%)",
+            "ctl": "0/299 (0%)"
+          },
+          "locator": "Table 1",
+          "note": ""
+        },
+        {
+          "label": "Vaginal mesh exposure through 24 months",
+          "values": {
+            "exp": "13/298 (4.4%)",
+            "ctl": "8/299 (2.7%)"
+          },
+          "locator": "Table 1, serious and nonserious exposure rows combined",
+          "note": "Patients with exposure; excludes one erosion into an organ in each arm."
+        },
+        {
+          "label": "Neurologic adverse event through 24 months",
+          "values": {
+            "exp": "16/298 (5.4%)",
+            "ctl": "29/299 (9.7%)"
+          },
+          "locator": "Results, Neurologic Symptoms",
+          "note": "Four neurologic symptoms remained unresolved at 24 months across both arms."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "tomus-2012",
+      "kind": "updated",
+      "label": "24-month efficacy",
+      "published": "2012-10-22",
+      "cutoff": null,
+      "citation": "Albo ME, Litman HJ, Richter HE, et al. \"Treatment Success of Retropubic and Transobturator Mid Urethral Slings at 24 Months.\" *J Urol.* 2012;188(6):2281-2287. doi:10.1016/j.juro.2012.07.103",
+      "doi": "10.1016/j.juro.2012.07.103",
+      "pmid": "23083653",
+      "followUp": "24 months; 516/597 (86.4%) assessed or counted as failures",
+      "followUpLocator": "Abstract; Results",
+      "results": [
+        {
+          "endpoint": "Objective treatment success",
+          "role": "primary",
+          "measure": "24-month objective composite; retropubic minus transobturator risk difference, percentage points",
+          "values": {
+            "exp": "77.3%",
+            "ctl": "72.3%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.1,
+            "ci": [
+              -2.0,
+              12.1
+            ]
+          },
+          "met": false,
+          "note": "Upper 95% CI exceeded the prespecified +12-point equivalence boundary.",
+          "locator": "Abstract; Results, Figure 2"
+        },
+        {
+          "endpoint": "Subjective treatment success",
+          "role": "primary",
+          "measure": "24-month subjective composite; retropubic minus transobturator risk difference, percentage points",
+          "values": {
+            "exp": "55.7%",
+            "ctl": "48.3%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 7.4,
+            "ci": [
+              -0.7,
+              15.5
+            ]
+          },
+          "met": false,
+          "note": "Upper 95% CI exceeded the prespecified +12-point equivalence boundary.",
+          "locator": "Abstract; Results, Figure 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "tomus-2014-five-year",
+      "kind": "secondary",
+      "label": "Five-year observational follow-up",
+      "published": "2014-08-23",
+      "cutoff": null,
+      "citation": "Kenton K, Stoddard AM, Zyczynski H, et al. \"5-Year Longitudinal Followup after Retropubic and Transobturator Mid Urethral Slings.\" *J Urol.* 2015;193(1):203-210. doi:10.1016/j.juro.2014.08.089",
+      "doi": "10.1016/j.juro.2014.08.089",
+      "pmid": "25158274",
+      "followUp": "5 years; 404/597 (68%) enrolled in observational follow-up",
+      "followUpLocator": "Abstract; Methods",
+      "results": [
+        {
+          "endpoint": "Treatment success",
+          "role": "primary",
+          "measure": "Five-year cohort success without SUI symptoms or retreatment; retropubic minus transobturator risk difference, percentage points",
+          "values": {
+            "exp": "51.3%",
+            "ctl": "43.4%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 7.9,
+            "ci": [
+              -1.4,
+              17.2
+            ]
+          },
+          "met": false,
+          "note": "Different success definition from the original composites; CI crossed zero and exceeded the cohort's prespecified ±15-point equivalence margin.",
+          "locator": "Abstract; Results, Figures 2-3"
+        },
+        {
+          "endpoint": "Satisfaction",
+          "role": "secondary",
+          "measure": "Five-year patient satisfaction",
+          "values": {
+            "exp": "79%",
+            "ctl": "85%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.15"
+          },
+          "note": "",
+          "locator": "Abstract; Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "New mesh findings during extended follow-up",
+          "values": {
+            "exp": "3 women",
+            "ctl": "4 women"
+          },
+          "locator": "Abstract; Results",
+          "note": "Seven new mesh findings were reported across the two arms; terminology varies between erosion and exposure."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extended follow-up enrollment and analysis",
+          "value": "404/597 (68%) of the original randomized women enrolled; original trial completers without surgical retreatment were invited; time-to-failure analysis included 583 per-protocol operated women.",
+          "locator": "Abstract; Methods; Results, Figure 2"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tomus",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

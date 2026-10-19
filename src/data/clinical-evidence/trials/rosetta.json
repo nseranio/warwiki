@@ -1,0 +1,366 @@
+{
+  "id": "rosetta",
+  "name": "ROSETTA",
+  "aliases": [
+    "Refractory Overactive Bladder: Sacral NEuromodulation vs BoTulinum Toxin Assessment"
+  ],
+  "nct": "NCT01502956",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "botulinum-idiopathic"
+    },
+    {
+      "id": "oab-third-line",
+      "lane": "sacral-neuromodulation"
+    }
+  ],
+  "question": "Does 200 U intradetrusor onabotulinumtoxinA reduce urgency urinary incontinence more than staged sacral neuromodulation in women with refractory symptoms?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 386,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Cystoscopic intradetrusor onabotulinumtoxinA 200 U",
+        "role": "experimental",
+        "n": 192
+      },
+      {
+        "key": "ctl",
+        "label": "staged sacral neuromodulation (InterStim)",
+        "role": "control",
+        "n": 194
+      }
+    ],
+    "population": "386 randomized women at nine US centers with at least six urgency-incontinence episodes on a three-day diary despite supervised behavioral or physical therapy and at least two anticholinergics or inability to use them.",
+    "description": "Multicenter, open-label randomized superiority trial",
+    "locator": "JAMA PDF pp 2–5, Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "The six-month episode difference was 0.63 per day; infection and catheterization were more frequent with toxin.",
+  "takeaway": "In women with refractory urgency urinary incontinence, one 200 U onabotulinumtoxinA injection reduced daily episodes slightly more over six months than staged InterStim sacral neuromodulation (3.9 versus 3.3 fewer; mean difference 0.63), with more urinary tract infections and intermittent catheterization.",
+  "reports": [
+    {
+      "id": "rosetta-2016",
+      "kind": "primary",
+      "label": "Six-month randomized comparison",
+      "published": "2016-10-04",
+      "cutoff": null,
+      "citation": "Amundsen CL, Richter HE, Menefee SA, et al. \"OnabotulinumtoxinA vs Sacral Neuromodulation on Refractory Urgency Urinary Incontinence in Women: A Randomized Clinical Trial.\" *JAMA.* 2016;316(13):1366-1374. doi:10.1001/jama.2016.14617",
+      "doi": "10.1001/jama.2016.14617",
+      "pmid": "27701661",
+      "followUp": "Mean monthly diary change through six months",
+      "followUpLocator": "JAMA PDF p 3, Outcomes; journal p 1368",
+      "results": [
+        {
+          "endpoint": "Urgency incontinence episodes",
+          "role": "primary",
+          "measure": "Mean daily episode reduction averaged over six months; between-group difference in reduction, onabotulinumtoxinA minus SNM",
+          "values": {
+            "exp": "3.9 fewer/day (n=190)",
+            "ctl": "3.3 fewer/day (n=174)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.63,
+            "ci": [
+              0.13,
+              1.14
+            ],
+            "p": "0.01"
+          },
+          "met": true,
+          "note": "Prespecified two-sided alpha 0.05; mean difference was smaller than the two-episode difference used for sample-size planning.",
+          "locator": "JAMA PDF p 6, Table 2; journal p 1371"
+        },
+        {
+          "endpoint": "Complete resolution",
+          "role": "exploratory",
+          "measure": "Complete urgency-incontinence resolution with at least four monthly diaries through six months; risk difference reported as SNM minus toxin",
+          "values": {
+            "exp": "35/178 (20%)",
+            "ctl": "6/166 (4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -16,
+            "ci": [
+              -26,
+              -5
+            ],
+            "p": "<0.001"
+          },
+          "note": "Exploratory endpoint; percentage-point risk difference uses the report's SNM-minus-toxin orientation.",
+          "locator": "JAMA PDF p 6, Table 2; journal p 1371"
+        },
+        {
+          "endpoint": "Treatment satisfaction",
+          "role": "exploratory",
+          "measure": "Six-month Overactive Bladder Satisfaction of Treatment score; mean difference toxin minus SNM",
+          "values": {
+            "exp": "67.7",
+            "ctl": "59.8"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 7.8,
+            "ci": [
+              1.6,
+              14.1
+            ],
+            "p": "0.01"
+          },
+          "note": "Score range 0–100; higher is better. Secondary comparisons were exploratory without multiplicity adjustment.",
+          "locator": "JAMA PDF p 6, Table 2; journal p 1371"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treated urinary tract infection through six months",
+          "values": {
+            "exp": "66/191 (35%)",
+            "ctl": "20/178 (11%)"
+          },
+          "locator": "JAMA PDF p 7, Table 3; journal p 1372",
+          "note": "UTI included symptomatic or culture-positive treated infection; the report's SNM-minus-toxin risk difference was −23 percentage points (95% CI −33 to −13)."
+        },
+        {
+          "label": "Intermittent catheterization after toxin",
+          "values": {
+            "exp": "38/191 (20%) at any visit; 16/191 (8%) at one month; 4/191 (2%) at six months",
+            "ctl": "not applicable"
+          },
+          "locator": "JAMA PDF p 7, Table 3 and adverse-events text; journal p 1372",
+          "note": "Median catheterization duration for any reason was 37 days (range 2–203)."
+        },
+        {
+          "label": "SNM device revision or removal through six months",
+          "values": {
+            "exp": "not applicable",
+            "ctl": "6/178 (3%)"
+          },
+          "locator": "JAMA PDF p 7, Table 3; journal p 1372",
+          "note": "Revision or removal was reported as a combined endpoint."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Operator experience and standardized techniques",
+          "value": "Implanters had performed at least 10 InterStim procedures and injectors at least 10 toxin procedures; both reviewed standardized technique videos.",
+          "locator": "JAMA PDF p 2; journal p 1367"
+        },
+        {
+          "label": "SNM test and implantation",
+          "value": "First-stage lead placement under local and monitored anesthesia care, intraoperative sensory and motor testing, then a 7–14-day test; at least 50% diary reduction qualified for permanent generator implantation.",
+          "locator": "JAMA PDF p 2; journal p 1367"
+        },
+        {
+          "label": "Injection and postvoid residual protocol",
+          "value": "Clinic cystoscopic intradetrusor injection of 200 U; intermittent catheterization for residual greater than 300 mL, or greater than 200 mL with incomplete-voiding symptoms.",
+          "locator": "JAMA PDF p 2; journal p 1367"
+        },
+        {
+          "label": "Treatment received and initial response",
+          "value": "189/192 randomized to toxin received the full injection and 159/192 (83%) responded; 169/189 eligible assigned to SNM had stage-one placement, 142/169 (84%) responded, and 139 received the permanent generator.",
+          "locator": "JAMA PDF p 5, Figure 1 and Results; journal p 1370"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "rosetta-2018",
+      "kind": "updated",
+      "label": "Two-year clinical-responder follow-up",
+      "published": "2018-02-24",
+      "cutoff": null,
+      "citation": "Amundsen CL, Komesu YM, Chermansky C, et al. \"Two-Year Outcomes of Sacral Neuromodulation Versus OnabotulinumtoxinA for Refractory Urgency Urinary Incontinence: A Randomized Trial.\" *Eur Urol.* 2018;74(1):66-73. doi:10.1016/j.eururo.2018.02.011",
+      "doi": "10.1016/j.eururo.2018.02.011",
+      "pmid": "29482936",
+      "followUp": "Twenty-four months among initial clinical responders; outcome data for 260/298 (87%) responders",
+      "followUpLocator": "PMC6004242 abstract and Results, study population paragraph",
+      "results": [
+        {
+          "endpoint": "Urgency incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean daily episode reduction across 24 months in initial responders; mean difference in reduction, toxin minus SNM",
+          "values": {
+            "exp": "3.88 fewer/day",
+            "ctl": "3.50 fewer/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.38,
+            "ci": [
+              -0.14,
+              0.89
+            ],
+            "p": "0.15"
+          },
+          "note": "Planned extension, but the protocol classified all 24-month analyses as secondary. The abstract gives p=0.15; body text rounds it to p=0.2.",
+          "locator": "PMC6004242 abstract, Results text and Figure 2"
+        },
+        {
+          "endpoint": "Treatment satisfaction",
+          "role": "secondary",
+          "measure": "Mean Overactive Bladder Satisfaction score across 6–24 months; difference SNM minus toxin",
+          "values": {
+            "exp": "68.1",
+            "ctl": "58.9"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -9.1,
+            "ci": [
+              -14.4,
+              -3.9
+            ],
+            "p": "<0.001"
+          },
+          "note": "Clinical-responder population; higher score is better.",
+          "locator": "PMC6004242 Table 2A, Overall treatment satisfaction"
+        },
+        {
+          "endpoint": "Complete resolution at 24 months",
+          "role": "secondary",
+          "measure": "Estimated proportion with no urgency-incontinence episodes at month 24",
+          "values": {
+            "exp": "5%",
+            "ctl": "5%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Clinical-responder population; Figure 3 estimates, not raw numerator/denominator counts.",
+          "locator": "PMC6004242 Results text and Figure 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Recurrent UTI among women without baseline recurrent UTI",
+          "values": {
+            "exp": "40/167 (24%)",
+            "ctl": "16/154 (10.4%)"
+          },
+          "locator": "PMC6004242 Results, adverse events paragraph",
+          "note": "Recurrent UTI was at least two symptomatic treated infections in six months or three in one year; p<0.01."
+        },
+        {
+          "label": "Any intermittent catheterization over two years after toxin",
+          "values": {
+            "exp": "45/189 (24%)",
+            "ctl": "not applicable"
+          },
+          "locator": "PMC6004242 Results, treatment delivery paragraph",
+          "note": "Includes catheterization after any injection during follow-up."
+        },
+        {
+          "label": "SNM revisions and removals over two years",
+          "values": {
+            "exp": "not applicable",
+            "ctl": "revision 4/139 (3%); removal 12/139 (8.6%)"
+          },
+          "locator": "PMC6004242 Results, treatment delivery paragraph",
+          "note": "Removals: infection 4, decreased efficacy 4, preference 2, pain 2."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Repeat toxin injection",
+          "value": "115/159 (72%) initial toxin responders requested a second injection; median first-to-second interval 350 days. Of those 115, 101 received 200 U and 14 were dose-reduced to 100 U after prolonged catheterization.",
+          "locator": "PMC6004242 Results, treatment delivery paragraph"
+        },
+        {
+          "label": "SNM reprogramming",
+          "value": "81/139 (58%) implanted initial responders needed reprogramming during 24 months.",
+          "locator": "PMC6004242 Results, treatment delivery paragraph"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "rosetta-2020-cost",
+      "kind": "secondary",
+      "label": "Trial-based economic analysis",
+      "published": "2019-11-18",
+      "cutoff": null,
+      "citation": "Harvie HS, Amundsen CL, Neuwahl SJ, et al. \"Cost-Effectiveness of Sacral Neuromodulation versus OnabotulinumtoxinA for Refractory Urgency Urinary Incontinence: Results of the ROSETTA Randomized Trial.\" *J Urol.* 2020;203(5):969-977. doi:10.1097/JU.0000000000000656",
+      "doi": "10.1097/JU.0000000000000656",
+      "pmid": "31738113",
+      "followUp": "Two-year within-trial costs and QALYs; five-year modeled extension",
+      "followUpLocator": "PMC7204548 Methods, prospective cost-effectiveness analysis and five-year modeling paragraphs",
+      "results": [
+        {
+          "endpoint": "Two-year cost",
+          "role": "secondary",
+          "measure": "Mean per-person health-sector cost in 2018 US dollars; difference SNM minus toxin",
+          "values": {
+            "exp": "$7,460",
+            "ctl": "$35,680"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 28220,
+            "p": "<0.001"
+          },
+          "note": "Within-trial economic analysis; effect orientation is SNM minus toxin.",
+          "locator": "PMC7204548 Table 2, mean two-year cost subtotal"
+        },
+        {
+          "endpoint": "Two-year QALYs",
+          "role": "secondary",
+          "measure": "Adjusted quality-adjusted life-years; difference SNM minus toxin",
+          "values": {
+            "exp": "1.41",
+            "ctl": "1.39"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.02,
+            "ci": [
+              -0.09,
+              0.05
+            ],
+            "p": "0.60"
+          },
+          "note": "SNM n=134 and toxin n=150 contributed QALY responses.",
+          "locator": "PMC7204548 Table 2, QALY row and footnote"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "abc",
+      "note": "The earlier 100 U toxin-versus-anticholinergic trial informed ROSETTA's dose and refractory-population rationale."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/rosetta",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

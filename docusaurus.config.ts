@@ -5,6 +5,22 @@ import type * as Preset from '@docusaurus/preset-classic';
 const GOOGLE_FONTS_CSS =
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
 
+// The trial data (src/data/clinical-evidence) is imported by every trial page and the Clinical Evidence landing.
+// Docusaurus only shares modules used by half of all pages, so without this group each trial page would bundle its
+// own copy. One shared chunk keeps the build small (same plugin as WHITWIKI, October 18).
+function evidenceDataChunk() {
+  return {
+    name: 'evidence-data-chunk',
+    configureWebpack(_config: unknown, isServer: boolean) {
+      if (isServer) return {};
+      return {optimization: {splitChunks: {cacheGroups: {evidenceData: {
+        test: /[\\/]src[\\/]data[\\/]clinical-evidence[\\/]/, name: 'evidence-data', chunks: 'all' as const,
+        minChunks: 2, priority: 50, enforce: true, reuseExistingChunk: true,
+      }}}}};
+    },
+  };
+}
+
 const config: Config = {
   title: 'WARWIKI',
   tagline: 'Reconstruction, codified.',
@@ -85,7 +101,7 @@ const config: Config = {
     locales: ['en'],
   },
 
-  plugins: ['./plugins/warwiki-home-data.js'],
+  plugins: ['./plugins/warwiki-home-data.js', evidenceDataChunk],
 
   presets: [
     [
@@ -166,6 +182,7 @@ const config: Config = {
           position: 'left',
           label: 'Library',
           items: [
+            {to: '/docs/clinical-evidence', label: 'Clinical Evidence'},
             {to: '/video-library', label: 'Video Library'},
             {to: '/docs/resources', label: 'Resources'},
             {to: '/docs/roots', label: 'History'},
@@ -198,7 +215,7 @@ const config: Config = {
           items: [
             {label: 'Video Library', to: '/video-library'},
             {label: 'Resources', to: '/docs/resources'},
-            {label: 'Journal Club', to: '/docs/journal-club'},
+            {label: 'Clinical Evidence', to: '/docs/clinical-evidence'},
             {label: 'History', to: '/docs/roots'},
           ],
         },

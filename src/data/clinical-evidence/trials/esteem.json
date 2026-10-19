@@ -1,0 +1,289 @@
+{
+  "id": "esteem",
+  "name": "ESTEEM",
+  "aliases": [
+    "Effects of Surgical Treatment Enhanced with Exercise for Mixed Urinary Incontinence"
+  ],
+  "nct": "NCT01959347",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-evaluation-conservative",
+      "lane": "conservative-and-adjunct"
+    }
+  ],
+  "question": "Does adding perioperative behavioral and pelvic floor muscle therapy to midurethral sling surgery improve symptoms in women with mixed urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Surgeons and outcome assessors masked; participants and therapists unmasked",
+    "type": "superiority",
+    "n": 480,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Midurethral sling plus perioperative behavioral and pelvic floor muscle therapy",
+        "n": 242,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "midurethral sling alone",
+        "n": 238,
+        "role": "control"
+      }
+    ],
+    "population": "Women at least 21 years old with moderately or severely bothersome stress and urgency incontinence for at least 3 months and at least one episode of each type on a 3-day diary; anterior or apical prolapse at or beyond the hymen, planned anterior or apical repair, and prior sling were exclusions.",
+    "description": "Multicenter randomized superiority trial",
+    "locator": "JAMA full text, Methods: Study Design, Patients, Interventions; Results: Study Population and Figure 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Statistical superiority met; the 13.4-point symptom difference missed the 35-point clinical-importance threshold.",
+  "takeaway": "In women with mixed urinary incontinence, perioperative behavioral and pelvic floor muscle therapy plus midurethral sling improved 12-month UDI symptoms slightly more than sling alone (adjusted difference −13.4 points, P=.04), below the prespecified 35-point threshold for clinical importance.",
+  "reports": [
+    {
+      "id": "esteem-2019",
+      "kind": "primary",
+      "label": "Primary 12-month report",
+      "published": "2019-09-17",
+      "cutoff": null,
+      "citation": "Sung VW, Borello-France D, Newman DK, et al. \"Effect of Behavioral and Pelvic Floor Muscle Therapy Combined With Surgery vs Surgery Alone on Incontinence Symptoms Among Women With Mixed Urinary Incontinence: The ESTEEM Randomized Clinical Trial.\" *JAMA.* 2019;322(11):1066-1076. doi:10.1001/jama.2019.12467",
+      "doi": "10.1001/jama.2019.12467",
+      "pmid": "31529007",
+      "followUp": "12 months after sling surgery",
+      "followUpLocator": "JAMA full text, Abstract and Methods: Outcomes",
+      "results": [
+        {
+          "endpoint": "UDI total symptom score",
+          "role": "primary",
+          "measure": "Adjusted mean change from baseline at 12 months; effect is between-group mean difference in change, points",
+          "values": {
+            "exp": "−128.1 points",
+            "ctl": "−114.7 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -13.4,
+            "ci": [
+              -25.9,
+              -1.0
+            ],
+            "p": "0.04"
+          },
+          "met": true,
+          "note": "Met the prespecified two-sided alpha of 0.05 for superiority, but not the prespecified 35-point minimal clinically important difference.",
+          "locator": "JAMA full text, Table 2 and Methods: Statistical Analysis"
+        },
+        {
+          "endpoint": "UDI irritative symptom score",
+          "role": "secondary",
+          "measure": "Adjusted mean change from baseline at 12 months; effect is between-group mean difference in change, points",
+          "values": {
+            "exp": "−45.0 points",
+            "ctl": "−38.9 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6.1,
+            "ci": [
+              -12.1,
+              -0.2
+            ],
+            "p": "0.04"
+          },
+          "note": "Below the prespecified 15-point clinical-importance threshold; multiple secondary outcomes were not multiplicity-adjusted.",
+          "locator": "JAMA full text, Table 2 and Methods: Statistical Analysis"
+        },
+        {
+          "endpoint": "Urgency incontinence episodes",
+          "role": "exploratory",
+          "measure": "Adjusted mean change in daily episodes at 12 months; effect is between-group mean difference in change, episodes/day",
+          "values": {
+            "exp": "−1.1/day",
+            "ctl": "−0.4/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.7,
+            "ci": [
+              -1.2,
+              -0.1
+            ],
+            "p": "0.02"
+          },
+          "note": "Prespecified exploratory diary outcome.",
+          "locator": "JAMA full text, Table 3"
+        },
+        {
+          "endpoint": "Additional urinary treatment",
+          "role": "exploratory",
+          "measure": "Any additional treatment for lower urinary tract symptoms by 12 months",
+          "values": {
+            "exp": "20/235 (8.5%)",
+            "ctl": "36/229 (15.7%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.47,
+            "ci": [
+              0.26,
+              0.85
+            ],
+            "p": "0.01"
+          },
+          "note": "Adjusted odds ratio; denominators are eligible randomized participants.",
+          "locator": "JAMA full text, Table 3 and Results: Other Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events, related or unrelated",
+          "values": {
+            "exp": "8.7%",
+            "ctl": "11.8%"
+          },
+          "locator": "JAMA full text, Abstract and Results: Other Outcomes",
+          "note": "All 480 randomized women were included in adverse-event assessment; group counts were 242 and 238."
+        },
+        {
+          "label": "Vaginal mesh exposure",
+          "values": {
+            "exp": "4/242 (1.7%)",
+            "ctl": "1/238 (0.4%)"
+          },
+          "locator": "JAMA full text, Table 4",
+          "note": "Through 12 months."
+        },
+        {
+          "label": "Worsening urgency incontinence",
+          "values": {
+            "exp": "11/242 (4.5%)",
+            "ctl": "5/238 (2.1%)"
+          },
+          "locator": "JAMA full text, Table 4",
+          "note": "Through 12 months."
+        },
+        {
+          "label": "Sensation of difficulty emptying bladder",
+          "values": {
+            "exp": "32/242 (13.2%)",
+            "ctl": "31/238 (13.0%)"
+          },
+          "locator": "JAMA full text, Table 4",
+          "note": "New or worsening symptom through 12 months."
+        },
+        {
+          "label": "Reoperation",
+          "values": {
+            "exp": "3/242 (1.2%)",
+            "ctl": "4/238 (1.7%)"
+          },
+          "locator": "JAMA full text, Table 4 and footnote c",
+          "note": "Sling release, mesh excision, or cystotomy operations."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sling route",
+          "value": "Retropubic or transobturator midurethral sling was allowed in both groups.",
+          "locator": "JAMA full text, Methods: Interventions and Randomization"
+        },
+        {
+          "label": "Behavioral intervention",
+          "value": "One preoperative and five postoperative visits through 6 months with centrally trained interventionists; pelvic floor training, bladder training, voiding education, and stress/urgency control strategies.",
+          "locator": "JAMA full text, Methods: Interventions and Randomization"
+        },
+        {
+          "label": "Efficacy follow-up",
+          "value": "416/464 eligible women had postbaseline efficacy data (209 combined, 207 sling alone); 402 were assessed at 12 months (198/235 eligible combined, 204/229 eligible sling alone).",
+          "locator": "JAMA full text, Results: Study Population and Figure 1"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "esteem-2021-failure",
+      "kind": "secondary",
+      "label": "Corrected treatment-failure analysis",
+      "published": "2021-08-01",
+      "cutoff": null,
+      "citation": "Sung VW, Richter HE, Moalli P, et al. \"Characteristics Associated With Treatment Failure 1 Year After Midurethral Sling in Women With Mixed Urinary Incontinence.\" *Obstet Gynecol.* 2021;138(2):199-207. doi:10.1097/AOG.0000000000004444",
+      "doi": "10.1097/AOG.0000000000004444",
+      "pmid": "34237755",
+      "followUp": "12 months after sling surgery",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Overall treatment failure",
+          "role": "descriptive",
+          "measure": "Subjective failure, objective diary failure, or additional urinary treatment at 12 months",
+          "note": "112/379 (29.6%) met the composite; this was a planned pooled-cohort analysis, not an arm comparison. Subjective failure used a 26.1-point UDI minimal clinically important difference; objective diary failure meant less than 70% improvement in daily episodes.",
+          "locator": "PubMed abstract, Methods and Results"
+        },
+        {
+          "endpoint": "Additional urinary treatment",
+          "role": "descriptive",
+          "measure": "Any additional urinary treatment at 12 months",
+          "note": "56/379 needed additional treatment; only 2 were treated for persistent stress incontinence. The abstract gives 14.7% for 56/379; ordinary one-decimal rounding gives 14.8%, so the percentage is omitted here.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Prior overactive bladder medication and failure",
+          "role": "descriptive",
+          "measure": "Adjusted odds ratio for overall failure, prior OAB medication versus none",
+          "effect": {
+            "type": "OR",
+            "value": 1.96,
+            "ci": [
+              1.17,
+              3.31
+            ]
+          },
+          "note": "Association from corrected multivariable analysis, not a randomized contrast.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Detrusor overactivity and failure",
+          "role": "descriptive",
+          "measure": "Adjusted odds ratio for overall failure, detrusor overactivity on cystometrogram versus none",
+          "effect": {
+            "type": "OR",
+            "value": 2.82,
+            "ci": [
+              1.6,
+              4.97
+            ]
+          },
+          "note": "Association from corrected multivariable analysis, not a randomized contrast.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/esteem-2021-failure.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "optimal",
+      "note": "Both Pelvic Floor Disorders Network trials randomized perioperative behavioral therapy alongside pelvic surgery, in different patient populations."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/esteem",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

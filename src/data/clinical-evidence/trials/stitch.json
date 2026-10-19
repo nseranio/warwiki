@@ -1,0 +1,371 @@
+{
+  "id": "stitch",
+  "name": "STITCH",
+  "aliases": [
+    "Small Bites versus Large Bites",
+    "NTR2052"
+  ],
+  "nct": "NCT01132209",
+  "registry": "Nederlands Trial Register NTR2052",
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "wound-and-safety",
+      "lane": "fascial-closure"
+    }
+  ],
+  "question": "Does continuous small-bites fascial closure reduce incisional hernia after elective midline laparotomy compared with conventional large-bites closure?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind (patients and study investigators)",
+    "type": "superiority",
+    "n": 560,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Continuous small-bites fascial closure (5 mm bites and spacing, 2-0 polydioxanone on a 31 mm needle)",
+        "role": "experimental",
+        "n": 276
+      },
+      {
+        "key": "ctl",
+        "label": "continuous large-bites fascial closure (1 cm bites and spacing, looped size 1 polydioxanone on a 48 mm needle)",
+        "role": "control",
+        "n": 284
+      }
+    ],
+    "population": "560 adults scheduled for elective abdominal surgery through a midline laparotomy at surgical and gynecological departments of ten Dutch hospitals.",
+    "description": "Multicenter, double-blind randomized superiority trial",
+    "locator": "PDF pp1-4, Table 1, Figure"
+  },
+  "verdict": "positive",
+  "verdictNote": "Fewer hernias at 1 year with similar complications; bite size, suture gauge and needle size were changed together.",
+  "takeaway": "Continuous small-bites fascial closure (5 mm bites, 2-0 polydioxanone) was compared with large-bites closure (1 cm bites, looped size 1 polydioxanone) in elective midline laparotomy: incisional hernia at 1 year was 13% versus 21% (adjusted OR 0.52), with similar complications and 4 minutes longer closure.",
+  "reports": [
+    {
+      "id": "stitch-2015",
+      "kind": "primary",
+      "label": "1-year randomized comparison",
+      "published": "2015-07-16",
+      "cutoff": null,
+      "citation": "Deerenberg EB, Harlaar JJ, Steyerberg EW, et al. Small bites versus large bites for closure of abdominal midline incisions (STITCH): a double-blind, multicentre, randomised controlled trial. *Lancet.* 2015;386(10000):1254-1260.",
+      "doi": "10.1016/S0140-6736(15)60459-7",
+      "pmid": "26188742",
+      "followUp": "1-year visit, defined as a visit up to month 15 after surgery; follow-up ended Aug 30, 2013",
+      "followUpLocator": "PDF pp1,3",
+      "results": [
+        {
+          "endpoint": "Incisional hernia",
+          "role": "primary",
+          "measure": "Incisional hernia at the 1-year visit (clinical examination, ultrasonography or CT; EHS definition), 545 of 560 analyzed",
+          "values": {
+            "exp": "35/268 (13%)",
+            "ctl": "57/277 (21%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.52,
+            "ci": [
+              0.31,
+              0.87
+            ],
+            "p": "0.0131"
+          },
+          "met": true,
+          "note": "Covariate-adjusted odds ratio; unadjusted chi-squared p=0.0220. Sample size was set to detect 15% versus 7.5% with 80% power (259 per group); the protocol's Cox analysis was replaced by a binary endpoint at up to 15 months.",
+          "locator": "PDF p1 (Summary), p3 (Statistical analysis), p4 (Results)"
+        },
+        {
+          "endpoint": "Fascial closure time",
+          "role": "secondary",
+          "measure": "Mean time of fascial closure, minutes (SD)",
+          "values": {
+            "exp": "14 (SD 6) min",
+            "ctl": "10 (SD 4) min"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4,
+            "p": "<0.0001"
+          },
+          "note": "Mean difference derived from the two reported means; the Discussion states a mean additional closure time of 4 min.",
+          "locator": "PDF p5, Table 2; p5 Discussion"
+        },
+        {
+          "endpoint": "Length of hospital stay",
+          "role": "secondary",
+          "measure": "Mean length of hospital stay, days (SD)",
+          "values": {
+            "exp": "15 (SD 35) days",
+            "ctl": "14 (SD 24) days"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.585"
+          },
+          "note": "",
+          "locator": "PDF p5, Table 3"
+        },
+        {
+          "endpoint": "Pain and quality of life",
+          "role": "secondary",
+          "measure": "First-week visual analogue pain scores; SF-36 and EQ-5D at 12 months (452 of 483 patients completed the questionnaires)",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The report states that pain scores and SF-36 and EQ-5D results did not differ significantly between groups; the data are not shown. Patients who developed incisional hernia had lower SF-36 general health scores than those without (mean 60.16 versus 64.84; p=0.0326).",
+          "locator": "PDF p5"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Patients with postoperative complications",
+          "values": {
+            "exp": "125/276 (45%)",
+            "ctl": "129/284 (45%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=1.000."
+        },
+        {
+          "label": "Surgical site infection",
+          "values": {
+            "exp": "58/276 (21%)",
+            "ctl": "68/284 (24%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=0.419. Superficial incisional 23/276 (8%) versus 33/284 (12%); deep incisional 8/276 (3%) versus 12/284 (4%); organ or space 27/276 (10%) versus 23/284 (8%)."
+        },
+        {
+          "label": "Burst abdomen",
+          "values": {
+            "exp": "4/276 (1%)",
+            "ctl": "2/284 (1%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=0.444; defined as fascial dehiscence."
+        },
+        {
+          "label": "Cardiac event",
+          "values": {
+            "exp": "25/276 (9%)",
+            "ctl": "30/284 (11%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=0.573."
+        },
+        {
+          "label": "Ileus",
+          "values": {
+            "exp": "28/276 (10%)",
+            "ctl": "33/284 (12%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=0.590."
+        },
+        {
+          "label": "Pneumonia",
+          "values": {
+            "exp": "35/276 (13%)",
+            "ctl": "40/284 (14%)"
+          },
+          "locator": "PDF p5, Table 3",
+          "note": "p=0.710."
+        },
+        {
+          "label": "Relaparotomy within 1 year",
+          "values": {
+            "exp": "41/276 (15%)",
+            "ctl": "43/284 (15%)"
+          },
+          "locator": "PDF p4, Figure (trial profile)",
+          "note": "Counts taken from the trial profile; no between-group test is reported."
+        },
+        {
+          "label": "Death within 1 year",
+          "values": {
+            "exp": "26/276 (9%)",
+            "ctl": "38/284 (13%)"
+          },
+          "locator": "PDF p4, Figure (trial profile)",
+          "note": "Counts taken from the trial profile; no between-group test is reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Small-bites technique",
+          "value": "At least twice as many stitches as the incision length in cm, with USP 2-0 PDS Plus II on a 31 mm needle, tissue bites of 5 mm and intersuture spacing of 5 mm; each stitch took aponeurosis only, avoiding fat and muscle.",
+          "locator": "PDF p2, Procedures"
+        },
+        {
+          "label": "Large-bites technique",
+          "value": "Mass closure with tissue bites of at least 1 cm and intersuture spacing of 1 cm, using USP 1 double-loop PDS Plus II on a 48 mm needle.",
+          "locator": "PDF p2, Procedures"
+        },
+        {
+          "label": "Closure sequence",
+          "value": "In both groups suturing began at both ends of the incision toward the centre, with at least 2 cm of overlap between the cranial and caudal sutures, which were knotted separately; an additional knot from each was allowed. Both techniques aimed for a suture length to wound length ratio of 4:1 or higher.",
+          "locator": "PDF pp2-3, Procedures"
+        },
+        {
+          "label": "Timing of randomization",
+          "value": "About 15 min before closure, during surgery; stratified by centre and by surgeon versus resident with minimization.",
+          "locator": "PDF p2, Randomisation and masking"
+        },
+        {
+          "label": "Stitches placed",
+          "values": {
+            "exp": "45 (SD 12)",
+            "ctl": "25 (SD 10)"
+          },
+          "locator": "PDF p5, Table 2",
+          "note": "p<0.0001."
+        },
+        {
+          "label": "Ratio of suture length to wound length",
+          "values": {
+            "exp": "5.0 (SD 1.5)",
+            "ctl": "4.3 (SD 1.4)"
+          },
+          "locator": "PDF p5, Table 2",
+          "note": "p<0.0001. Total suture used 110 (SD 39) versus 95 (SD 34) cm; mean wound length 22 (SD 5) cm in both groups."
+        },
+        {
+          "label": "Allocated intervention not received",
+          "values": {
+            "exp": "2/276",
+            "ctl": "0/284"
+          },
+          "locator": "PDF p4, Figure (trial profile)",
+          "note": "Both small-bites patients who did not receive the allocated closure had fragile fascia."
+        },
+        {
+          "label": "Type of surgery",
+          "values": {
+            "exp": "Lower GI 140 (51%); upper GI 74 (27%); gynecological 41 (15%); vascular 21 (8%)",
+            "ctl": "Lower GI 133 (47%); upper GI 89 (31%); gynecological 41 (14%); vascular 21 (7%)"
+          },
+          "locator": "PDF p4, Table 1"
+        },
+        {
+          "label": "Methods of follow-up assessment (545 patients)",
+          "value": "Clinical and radiological examination in 338 (62%), radiological examination alone in 76 (14%) and physical examination alone in 131 (24%); radiological findings were decisive when observations conflicted.",
+          "locator": "PDF pp3-4"
+        },
+        {
+          "label": "Detection of hernia in 87 patients with hernia assessed by both methods",
+          "value": "Found by both in 43 (49%), by imaging alone in 41 (47%) and by physical examination alone in 3 (3%).",
+          "locator": "PDF p4"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/stitch-stitch.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "stitch-2026",
+      "kind": "updated",
+      "label": "13-year follow-up",
+      "published": "2026-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed issue date (June 2026); the online date was not confirmed",
+      "cutoff": null,
+      "citation": "van den Berg R, van Egmond S, Smits F, et al. Small bites vs large bites for closure of abdominal midline incisions: a randomized clinical trial. *JAMA Surg.* 2026;161(6):566-573.",
+      "doi": "10.1001/jamasurg.2026.0618",
+      "pmid": "41920572",
+      "followUp": "median time to censoring 8 years (IQR 2-13), 13 years after accrual ended",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Incisional hernia",
+          "role": "primary",
+          "measure": "Cumulative incidence of incisional hernia (clinical and radiologic) at 13 years, time-to-event analysis accounting for competing risks",
+          "values": {
+            "exp": "34%",
+            "ctl": "49%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.61,
+            "ci": [
+              0.43,
+              0.86
+            ]
+          },
+          "met": null,
+          "note": "275 patients in the small-bites group and 284 in the control group.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Hernia width above 20 mm",
+          "role": "secondary",
+          "measure": "Cumulative incidence of incisional hernia wider than 20 mm at 13 years",
+          "values": {
+            "exp": "17%",
+            "ctl": "34%"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.36,
+            "ci": [
+              0.21,
+              0.6
+            ]
+          },
+          "note": "",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Hernia width",
+          "role": "secondary",
+          "measure": "Mean hernia width at final follow-up",
+          "values": {
+            "exp": "25 mm",
+            "ctl": "43 mm"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Hernia repair",
+          "role": "secondary",
+          "measure": "Hernia repair rates",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports the repair rates as similar and gives no counts.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Imaging at final follow-up",
+          "value": "170 patients were alive without evidence of incisional hernia at final follow-up, and 122 of them (72%) had additional abdominal ultrasound; imaging done as part of patient care was available for 238 patients.",
+          "locator": "abstract"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/stitch-2026.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/stitch",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

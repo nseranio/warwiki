@@ -1,0 +1,398 @@
+{
+  "id": "atlas",
+  "name": "ATLAS",
+  "aliases": [
+    "Ambulatory Treatments for Leakage Associated with Stress Incontinence"
+  ],
+  "nct": "NCT00270998",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-evaluation-conservative",
+      "lane": "conservative-and-adjunct"
+    }
+  ],
+  "question": "For women seeking nonsurgical treatment of stress-predominant urinary incontinence, how do a continence pessary, behavioral therapy, and their combination compare?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Participants and interventionists unblinded; examination and telephone outcome assessors blinded",
+    "type": "superiority",
+    "n": 446,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Behavioral therapy: pelvic-floor muscle training and continence strategies",
+        "n": 146,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "physician- or nurse-fitted continence ring or dish pessary",
+        "n": 149,
+        "role": "control"
+      },
+      {
+        "key": "combo",
+        "label": "continence pessary plus behavioral therapy",
+        "n": 151,
+        "role": "experimental"
+      }
+    ],
+    "population": "Women aged at least 18 years with stress-only or stress-predominant mixed urinary incontinence seeking nonsurgical care.",
+    "description": "Nine-site, assessor-blinded, three-arm randomized superiority trial",
+    "locator": "Primary report, Methods and Table 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Behavioral therapy improved symptom bother, not global improvement; combination failed its superiority rule.",
+  "takeaway": "In women with stress-predominant incontinence, behavioral pelvic-floor therapy produced fewer bothersome stress symptoms than a fitted continence pessary at three months, but global improvement did not significantly differ. Adding a pessary to behavioral therapy did not meet the prespecified superiority rule.",
+  "reports": [
+    {
+      "id": "atlas-2009-fitting",
+      "kind": "secondary",
+      "label": "Continence pessary fitting analysis",
+      "published": "2009-06-16",
+      "cutoff": null,
+      "citation": "Nager CW, Richter HE, Nygaard I, et al. \"Incontinence pessaries: size, POPQ measures, and successful fitting.\" *Int Urogynecol J.* 2009;20(9):1023-1028. doi:10.1007/s00192-009-0866-1",
+      "doi": "10.1007/s00192-009-0866-1",
+      "pmid": "19533009",
+      "followUp": "Fitting visits within the ATLAS treatment period",
+      "followUpLocator": "Methods, fitting protocol; Results",
+      "results": [
+        {
+          "endpoint": "Successful continence pessary fitting",
+          "role": "descriptive",
+          "measure": "Final recorded fitting outcome in pessary-assigned arms",
+          "effect": {
+            "type": "none"
+          },
+          "note": "235/255 women (92%) with a recorded final fit outcome were fitted; the paper describes 266 assigned to the pessary-containing arms.",
+          "locator": "Results, fitting success paragraph"
+        },
+        {
+          "endpoint": "POP-Q measurements and pessary sizing",
+          "role": "descriptive",
+          "measure": "Association of POP-Q measurements with final pessary diameter",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Total vaginal length, point C, and point D did not predict final diameter; mean vaginal length was 9.6 cm with successful fit versus 8.8 cm with unsuccessful fit (P<0.01).",
+          "locator": "Results, Table 2 and Table 3"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Fitting protocol and device types",
+          "value": "A trained nurse, nurse practitioner, or physical therapist selected a continence ring or dish; fit required a finger between device and vaginal wall and retention on standing, coughing, and straining. Among successful fittings, 122 used a ring and 113 a dish.",
+          "locator": "Methods, fitting protocol; Results, fitting success paragraph"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "atlas-2010",
+      "kind": "primary",
+      "label": "Primary trial and 12-month outcomes",
+      "published": "2010-03-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed and journal specify March 2010; day not verified",
+      "cutoff": null,
+      "citation": "Richter HE, Burgio KL, Brubaker L, et al. \"Continence pessary compared with behavioral therapy or combined therapy for stress incontinence: a randomized controlled trial.\" *Obstet Gynecol.* 2010;115(3):609-617. doi:10.1097/AOG.0b013e3181d055d4",
+      "doi": "10.1097/AOG.0b013e3181d055d4",
+      "pmid": "20177294",
+      "followUp": "Primary outcomes at 3 months; repeated assessments at 6 and 12 months",
+      "followUpLocator": "Methods, Outcomes; Table 3",
+      "results": [
+        {
+          "endpoint": "Patient Global Impression of Improvement",
+          "role": "primary",
+          "measure": "3-month much or very much better; behavioral minus pessary risk difference in percentage points",
+          "values": {
+            "exp": "72/146 (49.3%)",
+            "ctl": "59/149 (39.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 9.7,
+            "p": "0.09"
+          },
+          "met": false,
+          "note": "Intention to treat; adjusted comparison; final PGI-I alpha 0.0492 after interim analysis.",
+          "locator": "Methods, Statistical Analysis; Table 3"
+        },
+        {
+          "endpoint": "No bothersome stress-incontinence symptoms",
+          "role": "primary",
+          "measure": "3-month PFDI UDI-stress success; behavioral minus pessary risk difference in percentage points",
+          "values": {
+            "exp": "71/146 (48.6%)",
+            "ctl": "49/149 (32.9%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15.7,
+            "p": "0.006"
+          },
+          "met": true,
+          "note": "No symptoms or symptoms rated not at all/somewhat bothersome on all stress items; intention to treat.",
+          "locator": "Methods, Outcomes; Table 3 and footnote 5"
+        },
+        {
+          "endpoint": "Combined therapy: global improvement",
+          "role": "primary",
+          "measure": "3-month PGI-I; combined therapy had to exceed both single treatments",
+          "values": {
+            "combo": "80/150 (53.3%)",
+            "exp": "72/146 (49.3%)",
+            "ctl": "59/149 (39.6%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Combined versus pessary P=0.02; combined versus behavioral P=0.49. One randomized combination participant was ineligible and excluded.",
+          "locator": "Methods, Statistical Analysis; Table 3 and footnote 2"
+        },
+        {
+          "endpoint": "Combined therapy: no bothersome stress symptoms",
+          "role": "primary",
+          "measure": "3-month PFDI UDI-stress success; combined therapy had to exceed both single treatments",
+          "values": {
+            "combo": "66/150 (44.0%)",
+            "exp": "71/146 (48.6%)",
+            "ctl": "49/149 (32.9%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Combined versus pessary P=0.05; combined versus behavioral P=0.42.",
+          "locator": "Methods, Statistical Analysis; Table 3 and footnotes 4-5"
+        },
+        {
+          "endpoint": "Treatment satisfaction",
+          "role": "secondary",
+          "measure": "3-month satisfied or somewhat satisfied; behavioral minus pessary risk difference in percentage points",
+          "values": {
+            "exp": "110/146 (75.3%)",
+            "ctl": "94/149 (63.1%)",
+            "combo": "118/150 (78.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 12.2,
+            "p": "0.03"
+          },
+          "note": "Behavioral-versus-pessary P=0.03 in Table 3 footnote 8 and Results; abstract prints P=0.02.",
+          "locator": "Table 3 and footnote 8; Results paragraph after Table 3"
+        },
+        {
+          "endpoint": "At least 75% fewer weekly incontinence episodes",
+          "role": "secondary",
+          "measure": "3-month 7-day diary response",
+          "values": {
+            "exp": "68/146 (46.6%)",
+            "ctl": "69/149 (46.3%)",
+            "combo": "80/150 (53.3%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No significant between-group differences; 68/146 is 46.6% by arithmetic, although Table 3 prints 46.7%.",
+          "locator": "Table 3; Results paragraph after Table 3"
+        },
+        {
+          "endpoint": "Patient Global Impression of Improvement at 12 months",
+          "role": "descriptive",
+          "measure": "12-month much or very much better; intention to treat",
+          "values": {
+            "exp": "48/146 (32.9%)",
+            "ctl": "47/149 (31.5%)",
+            "combo": "49/150 (32.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No statistically significant between-group difference at 12 months.",
+          "locator": "Table 3; Results, 12-month paragraph"
+        },
+        {
+          "endpoint": "No bothersome stress-incontinence symptoms at 12 months",
+          "role": "descriptive",
+          "measure": "12-month PFDI UDI-stress success; intention to treat",
+          "values": {
+            "exp": "59/146 (40.4%)",
+            "ctl": "52/149 (34.9%)",
+            "combo": "49/150 (32.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No statistically significant between-group difference at 12 months.",
+          "locator": "Table 3; Results, 12-month paragraph"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Vaginal discharge by 3 months",
+          "values": {
+            "exp": "6%",
+            "ctl": "16%",
+            "combo": "9%"
+          },
+          "locator": "Results, adverse-event paragraph after Table 3",
+          "note": "Percentages only in report; 7% overall reported yeast infection; no vaginal erosions reported."
+        },
+        {
+          "label": "Unexpected urologic adverse events",
+          "values": {
+            "exp": "2/146",
+            "ctl": "3/149",
+            "combo": "5/150"
+          },
+          "locator": "Results, adverse-event paragraph after Table 3",
+          "note": "Ten events overall: seven urinary tract infections, two possible infections, and one possible retention event."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Behavioral intervention",
+          "value": "Four standardized visits about two weeks apart over eight weeks, delivered by trained nurses, nurse practitioners, or physical therapists; individualized daily pelvic-floor exercises and continence strategies followed by home maintenance.",
+          "locator": "Methods, intervention paragraphs"
+        },
+        {
+          "label": "Continence pessary fitting",
+          "value": "Physician or nurse fitted a continence ring or dish; up to three fitting visits at one- to two-week intervals were allowed.",
+          "locator": "Methods, intervention paragraphs"
+        },
+        {
+          "label": "Withdrawal at 3 months",
+          "values": {
+            "exp": "22/146 (15.1%)",
+            "ctl": "39/149 (26.2%)",
+            "combo": "18/150 (12.0%)"
+          },
+          "locator": "Table 2; Results, disposition paragraph",
+          "note": "Twelve pessary-arm withdrawals were attributed to inadequate fit."
+        },
+        {
+          "label": "Continued treatment at one year",
+          "value": "45% still reported pessary use; 57% still reported pelvic-floor exercises.",
+          "locator": "Discussion, adherence paragraph",
+          "note": "The report gives percentages without adherence denominators."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "atlas-2012-pelvic-symptoms",
+      "kind": "secondary",
+      "label": "Pelvic symptom and quality-of-life analysis",
+      "published": "2012-03-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed gives March-April 2012 issue; online day not verified",
+      "cutoff": null,
+      "citation": "Kenton K, Barber M, Wang L, et al. \"Pelvic floor symptoms improve similarly after pessary and behavioral treatment for stress incontinence.\" *Female Pelvic Med Reconstr Surg.* 2012;18(2):118-121. doi:10.1097/SPV.0b013e31824a021d",
+      "doi": "10.1097/SPV.0b013e31824a021d",
+      "pmid": "22453323",
+      "followUp": "Three months after randomization",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Change in pelvic symptom distress and condition-specific quality of life",
+          "role": "descriptive",
+          "measure": "3-month change, pessary versus behavioral therapy",
+          "values": {
+            "exp": "improved",
+            "ctl": "improved"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "295 women were randomized to these two arms; no statistically significant between-group difference in the analyzed urinary, prolapse, or colorectal symptom and impact scores.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/atlas-2012-pelvic-symptoms.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "atlas-2012-predictors",
+      "kind": "secondary",
+      "label": "Predictors of success and satisfaction",
+      "published": "2012-07-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed gives July 2012 issue; online day not verified",
+      "cutoff": null,
+      "citation": "Schaffer J, Nager CW, Xiang F, et al. \"Predictors of success and satisfaction of nonsurgical therapy for stress urinary incontinence.\" *Obstet Gynecol.* 2012;120(1):91-97. doi:10.1097/AOG.0b013e31825a6de7",
+      "doi": "10.1097/AOG.0b013e31825a6de7",
+      "pmid": "22914396",
+      "followUp": "Baseline predictors of 3-month outcomes",
+      "followUpLocator": "Methods; Table 3",
+      "results": [
+        {
+          "endpoint": "Prior incontinence surgery and symptom success",
+          "role": "exploratory",
+          "measure": "Adjusted odds of 3-month UDI-stress success, no prior surgery versus prior surgery",
+          "effect": {
+            "type": "OR",
+            "value": 3.15,
+            "ci": [
+              1.04,
+              9.53
+            ],
+            "p": "0.04"
+          },
+          "note": "Adjusted association among 445 analyzed women across all three treatment arms; no significant treatment interaction.",
+          "locator": "Table 3; Results, multivariable models"
+        },
+        {
+          "endpoint": "Baseline incontinence frequency and satisfaction",
+          "role": "exploratory",
+          "measure": "Adjusted odds of 3-month satisfaction, fewer than 14 versus at least 14 episodes per week",
+          "effect": {
+            "type": "OR",
+            "value": 1.97,
+            "ci": [
+              1.21,
+              3.19
+            ],
+            "p": "0.01"
+          },
+          "note": "Adjusted association among 445 analyzed women across all three treatment arms; no significant treatment interaction.",
+          "locator": "Table 3; Results, multivariable models"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/atlas",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

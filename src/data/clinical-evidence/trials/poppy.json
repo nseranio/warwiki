@@ -1,0 +1,383 @@
+{
+  "id": "poppy",
+  "name": "POPPY",
+  "aliases": [
+    "Pelvic Organ Prolapse PhysiotherapY",
+    "ISRCTN35911035"
+  ],
+  "nct": "NCT00476892",
+  "registry": "ISRCTN35911035",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-adjuncts-pessary",
+      "lane": "pelvic-floor-training"
+    }
+  ],
+  "question": "Does individualized one-to-one pelvic floor muscle training reduce symptoms in women with newly diagnosed stage I to III prolapse compared with a lifestyle advice leaflet?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Outcome assessors, gynecologist examiners and statistician masked; participants and physiotherapists not",
+    "type": "superiority",
+    "n": 447,
+    "arms": [
+      {
+        "key": "pfmt",
+        "label": "Individualized pelvic floor muscle training (five one-to-one physiotherapy appointments over 16 weeks) plus lifestyle advice leaflet",
+        "role": "experimental",
+        "n": 225
+      },
+      {
+        "key": "leaflet",
+        "label": "lifestyle advice leaflet alone",
+        "role": "control",
+        "n": 222
+      }
+    ],
+    "population": "447 treatment-naive women with newly diagnosed, symptomatic stage I to III prolapse of any compartment, recruited at 25 gynecology outpatient centers in the UK, New Zealand and Australia.",
+    "description": "Multicenter, parallel-group, assessor-masked randomized superiority trial",
+    "locator": "PubMed abstract; accepted manuscript PDF pp4,6-9"
+  },
+  "verdict": "positive",
+  "verdictNote": "POP-Q stage improvement at 6 months was not significant; only 66% returned 12-month questionnaires.",
+  "takeaway": "In 447 women with symptomatic stage I to III prolapse, five one-to-one sessions of individualized pelvic floor muscle training over 16 weeks reduced prolapse symptoms more than a lifestyle advice leaflet alone at 12 months (adjusted POP-SS difference 1.52 points on a 28-point scale).",
+  "reports": [
+    {
+      "id": "poppy-2014",
+      "kind": "primary",
+      "label": "Initial report (12 months)",
+      "published": "2013-11-28",
+      "cutoff": null,
+      "citation": "Hagen S, Stark D, Glazener C, et al. \"Individualised Pelvic Floor Muscle Training in Women With Pelvic Organ Prolapse (POPPY): A Multicentre Randomised Controlled Trial.\" *Lancet.* 2014;383(9919):796-806. doi:10.1016/S0140-6736(13)61977-7",
+      "doi": "10.1016/S0140-6736(13)61977-7",
+      "pmid": "24290404",
+      "followUp": "12 months from trial entry (blinded POP-Q examination at 6 months)",
+      "followUpLocator": "PubMed abstract; accepted manuscript PDF p8",
+      "results": [
+        {
+          "endpoint": "Prolapse symptoms",
+          "role": "primary",
+          "measure": "Mean reduction in POP-SS from baseline at 12 months (0-28 scale); adjusted between-group difference in change",
+          "values": {
+            "pfmt": "3.77 (SD 5.62)",
+            "leaflet": "2.09 (SD 5.39)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.52,
+            "ci": [
+              0.46,
+              2.59
+            ],
+            "p": "0.0053"
+          },
+          "met": true,
+          "note": "Linear mixed-effects model adjusted for baseline POP-SS and minimization variables, intention to treat; 295 of 447 women returned 12-month questionnaires. Multiple imputation gave a 12-month difference of 1.66 (95% CI 0.74 to 2.58).",
+          "locator": "PubMed abstract; Accepted manuscript (Aberdeen AURA) PDF p30, Table 3; p13"
+        },
+        {
+          "endpoint": "Prolapse symptoms",
+          "role": "secondary",
+          "measure": "Mean reduction in POP-SS from baseline at 6 months; adjusted between-group difference in change",
+          "values": {
+            "pfmt": "3.16 (SD 4.78)",
+            "leaflet": "0.12 (SD 3.86)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.84,
+            "ci": [
+              2.05,
+              3.63
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Same linear mixed-effects model as the primary analysis.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p30, Table 3; p13"
+        },
+        {
+          "endpoint": "Further prolapse treatment",
+          "role": "key-secondary",
+          "measure": "Any further prolapse treatment reported by 12 months (surgery, pessary, physiotherapy referral, estrogen or other)",
+          "values": {
+            "pfmt": "24.1% (35/145)",
+            "leaflet": "49.6% (71/143)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 25.5,
+            "ci": [
+              14.5,
+              36.0
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Risk difference in percentage points, control minus PFMT; risk ratio 2.1 (95% CI 1.5 to 2.9) for control versus PFMT. Denominators are women who answered the question.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p34, Table 5; p14"
+        },
+        {
+          "endpoint": "POP-Q stage",
+          "role": "key-secondary",
+          "measure": "Less severe POP-Q stage at 6 months (ordinal odds ratio, blinded examination); improvement by one or more stages",
+          "values": {
+            "pfmt": "26.8% (45/168)",
+            "leaflet": "19.3% (33/171)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.47,
+            "ci": [
+              0.97,
+              2.27
+            ],
+            "p": "0.07"
+          },
+          "met": false,
+          "note": "Risk difference for stage improvement 7.5% (95% CI -1.4 to 16.4; P=0.10). POP-Q examinations were available for 168 of 225 and 171 of 222 women; the authors state the trial was not powered for this endpoint.",
+          "locator": "PubMed abstract; Accepted manuscript (Aberdeen AURA) PDF pp13,34, Table 5; p19"
+        },
+        {
+          "endpoint": "Perceived change in prolapse",
+          "role": "secondary",
+          "measure": "Prolapse reported as 'better' than at study start, 12 months",
+          "values": {
+            "pfmt": "57.2% (83/145)",
+            "leaflet": "44.7% (63/141)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 12.6,
+            "ci": [
+              1.1,
+              24.1
+            ],
+            "p": "0.0336"
+          },
+          "note": "Risk difference in percentage points; Mann-Whitney P=0.0125 across better, same and worse categories.",
+          "locator": "Accepted manuscript abstract PDF p4; Table 3 PDF p30"
+        },
+        {
+          "endpoint": "Perceived change in prolapse",
+          "role": "secondary",
+          "measure": "Prolapse reported as 'better' than at study start, 6 months",
+          "values": {
+            "pfmt": "52% (98/187)",
+            "leaflet": "17% (32/189)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Mann-Whitney test.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p13; Table 3 PDF p30"
+        },
+        {
+          "endpoint": "Prolapse surgery",
+          "role": "descriptive",
+          "measure": "Prolapse surgery reported by 12 months",
+          "values": {
+            "pfmt": "11.0% (16/145)",
+            "leaflet": "9.8% (14/143)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.84"
+          },
+          "note": "Surgery uptake was similar in the two groups.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p34, Table 5; p14"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events reported by participants",
+          "values": {
+            "pfmt": "9 events in the intervention group (8 adverse events, 1 unexpected serious adverse event)",
+            "leaflet": "None reported"
+          },
+          "locator": "PubMed abstract; Accepted manuscript (Aberdeen AURA) PDF p12",
+          "note": "Eight adverse events (6 vaginal symptoms, 1 back pain, 1 abdominal pain) and one unexpected serious adverse event (a skiing injury); none was judged related to the intervention or to trial participation."
+        },
+        {
+          "label": "Discontinued intervention because PFMT was thought to worsen symptoms",
+          "values": {
+            "pfmt": "2 of 225",
+            "leaflet": "Not applicable"
+          },
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p36, Figure 1",
+          "note": "30 women discontinued the intervention in total; the other reasons were lack of time (7), missed appointments or unable to contact (7), post-randomization ineligibility (5), referral for gynecology or surgery (5), travel difficulty (3) and declining the 12-month questionnaire (1)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Intervention schedule",
+          "value": "Five one-to-one appointments with a women's health physiotherapist over 16 weeks, at weeks 0, 2, 6, 11 and 16.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p7"
+        },
+        {
+          "label": "Intervention content",
+          "value": "Internal pelvic floor muscle assessment (PERFECT scheme) at the first appointment; individualized home program aiming for ten 10-second maximal holds and up to 50 fast contractions three times a day, recorded in a diary; pre-contraction against increased abdominal pressure ('the knack'). Electromyographic or pressure biofeedback and electrical stimulation were not permitted.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p7"
+        },
+        {
+          "label": "Control",
+          "value": "Lifestyle advice leaflet (weight loss, constipation, heavy lifting, coughing, high-impact exercise) with no pelvic floor exercise information, posted to control women and handed to intervention women at the first appointment; gynecologic review at 6 months for both groups.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p8"
+        },
+        {
+          "label": "Attendance",
+          "value": "80% (178/222) of the intervention group attended 4 or 5 of the 5 appointments; 70% (156/222) attended all five and 4.5% (10/222) attended none.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p12; Table 2 PDF p29"
+        },
+        {
+          "label": "Appointment time and uptake",
+          "value": "The first appointment took 80 minutes (60 minutes face to face plus 20 minutes of administration) and follow-up appointments 40 minutes; women attended a mean of 4.2 of 5 appointments.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p14"
+        },
+        {
+          "label": "Exercise performance at 12 months",
+          "values": {
+            "pfmt": "78% (115/147)",
+            "leaflet": "69% (95/138)"
+          },
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p12",
+          "note": "Performed pelvic floor exercises in the last 4 weeks; risk difference 9.4% (95% CI -0.8 to 19.6; P=0.07)."
+        },
+        {
+          "label": "Other prolapse treatment by 12 months",
+          "values": {
+            "pfmt": "Pessary 5.5% (8/145); physiotherapy referral 1.4% (2/145)",
+            "leaflet": "Pessary 11.2% (16/143); physiotherapy referral 26.6% (38/143)"
+          },
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p34, Table 5",
+          "note": "Pessary P=0.13; physiotherapy referral P<0.0001."
+        },
+        {
+          "label": "Net cost of the intervention",
+          "value": "GBP 131.61 per woman (physiotherapy cost GBP 170.24 less GBP 38.63 lower mean cost of subsequent treatment); GBP 86.59 per one-point POP-SS improvement.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF pp14-15",
+          "note": "Within-trial NHS cost analysis at 12 months, 2009 prices."
+        },
+        {
+          "label": "Recruitment and follow-up",
+          "value": "2,093 women assessed; 447 randomized (225 versus 222). Questionnaire return was 84% (377/447) at 6 months and 66% (295/447) at 12 months.",
+          "locator": "PubMed abstract; Accepted manuscript (Aberdeen AURA) PDF pp11,36, Figure 1"
+        },
+        {
+          "label": "Sample size",
+          "value": "Target 506 (253 per group) for 80% power to detect a 2.5-point POP-SS difference assuming a standard deviation of 8; 88% of the target was randomized.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF pp9,17"
+        },
+        {
+          "label": "Baseline prolapse",
+          "value": "Stage II in 75.6% (338/447), of whom 243 were at or below the hymen; combined anterior, posterior and upper-compartment prolapse in 45.4% (202/445); median symptom duration 12 months.",
+          "locator": "Accepted manuscript (Aberdeen AURA) PDF p12; Table 1 PDF p27"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "poppy-2023-linkage",
+      "kind": "secondary",
+      "label": "Record-linkage follow-up to 11 years",
+      "published": "2022-06-28",
+      "cutoff": null,
+      "citation": "Fenocchi L, Best C, Mason H, et al. \"Long-term effects and costs of pelvic floor muscle training for prolapse: trial follow-up record-linkage study.\" *Int Urogynecol J.* 2023;34(1):239-246. doi:10.1007/s00192-022-05272-9",
+      "doi": "10.1007/s00192-022-05272-9",
+      "pmid": "35763050",
+      "followUp": "Up to 10 years 9 months (September 2007 to May 2018), Scottish participants",
+      "followUpLocator": "Methods, analysis dataset (PMC9834099)",
+      "results": [
+        {
+          "endpoint": "Further hospital-based treatment",
+          "role": "key-secondary",
+          "measure": "Any related secondary-care treatment for a pelvic floor disorder during follow-up (adjusted odds ratio, mixed-effects logistic regression)",
+          "values": {
+            "pfmt": "43.6% (65/149)",
+            "leaflet": "52.8% (76/144)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.61,
+            "ci": [
+              0.37,
+              0.99
+            ],
+            "p": "0.047"
+          },
+          "met": true,
+          "note": "Primary outcome of the record-linkage report, not a prespecified endpoint of the original trial. Authors' absolute risk reduction 9% and number needed to treat 11. Adjusted for baseline POP-SS, prolapse stage, attitude to surgery and age group, with centre as a random effect.",
+          "locator": "PMC9834099 Abstract; Results, women receiving treatment during follow-up"
+        },
+        {
+          "endpoint": "Time to further treatment",
+          "role": "secondary",
+          "measure": "Time to first related secondary-care treatment (Cox regression, hazard ratio)",
+          "effect": {
+            "type": "HR",
+            "value": 0.65,
+            "ci": [
+              0.46,
+              0.94
+            ],
+            "p": "0.020"
+          },
+          "note": "264 women and 125 events; adjusted for baseline POP-SS, stage, age group and BMI.",
+          "locator": "PMC9834099 Results, analysis of time to first treatment; Table 5"
+        },
+        {
+          "endpoint": "Resource-use cost",
+          "role": "descriptive",
+          "measure": "Hospital outpatient and inpatient costs for procedures of interest, 2007 to 2018",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The authors found no clear difference in resource-use costs between groups at 11 years; 109 inpatient episodes of care occurred in 94 women (46 PFMT, 48 control).",
+          "locator": "PMC9834099 Abstract; Results, economic assessment; Table 6"
+        }
+      ],
+      "harms": [
+        {
+          "label": "All-cause mortality during follow-up",
+          "values": {
+            "pfmt": "5.4%",
+            "leaflet": "4.9%"
+          },
+          "locator": "PMC9834099 Results, participants",
+          "note": "15 of 293 participants (5%) died during follow-up."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Linked cohort",
+          "value": "Linked follow-up data were available for 293 of the 447 original participants (65.5%): 149 in the PFMT group and 144 in the control group.",
+          "locator": "PMC9834099 Results, participants; Abstract"
+        },
+        {
+          "label": "Outcome definition",
+          "value": "Any outpatient or inpatient record with an OPCS-4 procedure code of P18, P22-P24, P26, Q07-Q08, Q54, M51-M58, A70 or H57, or a prespecified ICD-10 diagnosis code. The codes include pessary insertion or removal (P26) and vaginal tape operations for incontinence; most coded inpatient procedures were colporrhaphy or vaginal wall repair (P22, P23, P24, Q54).",
+          "locator": "PMC9834099 Methods, analysis dataset; Table 1; Results, economic assessment"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/poppy",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

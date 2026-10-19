@@ -1,0 +1,699 @@
+{
+  "id": "robust",
+  "name": "ROBUST III",
+  "aliases": [
+    "ROBUST",
+    "ROBUST 3",
+    "Optilume urethral drug-coated balloon",
+    "Re-Establishing Flow Via Drug Coated Balloon For The Treatment Of Urethral Stricture Disease",
+    "ROBUST I (NCT03014726)"
+  ],
+  "nct": "NCT03499964",
+  "area": [
+    "stricture"
+  ],
+  "decisions": [
+    {
+      "id": "stricture-treatment",
+      "lane": "drug-coated-balloon"
+    }
+  ],
+  "question": "Does paclitaxel-coated balloon dilation improve stricture patency over standard endoscopic dilation or urethrotomy in men with recurrent short anterior urethral strictures?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "single-blind through 6 months",
+    "type": "superiority",
+    "n": 127,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Optilume paclitaxel-coated balloon dilation after predilation",
+        "role": "experimental",
+        "n": 79
+      },
+      {
+        "key": "ctl",
+        "label": "standard endoscopic management (uncoated balloon, urethral sounds or DVIU)",
+        "role": "control",
+        "n": 48
+      }
+    ],
+    "population": "127 men with recurrent anterior urethral strictures of 3 cm or less and at least 2 prior endoscopic treatments.",
+    "description": "Multicenter, single-blind, 2:1 randomized superiority trial",
+    "locator": "PMC12721643 Abstract; Study Design and Participants; Randomization and Blinding; Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Superior at 6 months; control arm unblinded after 6 months and followed only 1 year.",
+  "takeaway": "In men with recurrent anterior urethral strictures of 3 cm or less after at least two endoscopic treatments, Optilume paclitaxel-coated balloon dilation improved 6-month anatomical success over standard dilation or urethrotomy (74.6% versus 26.8%) and 1-year freedom from repeat intervention (83.2% versus 21.7%).",
+  "reports": [
+    {
+      "id": "robust-2022",
+      "kind": "primary",
+      "label": "1-year randomized report",
+      "published": "2021-12-02",
+      "cutoff": null,
+      "citation": "Elliott SP, Coutinho K, Robertson KJ, et al. \"One-Year Results for the ROBUST III Randomized Controlled Trial Evaluating the Optilume® Drug-Coated Balloon for Anterior Urethral Strictures.\" *J Urol.* 2022;207(4):866-875. doi:10.1097/JU.0000000000002346",
+      "doi": "10.1097/JU.0000000000002346",
+      "pmid": "34854748",
+      "followUp": "1 year (primary endpoint at 6 months; control arm followed to 1 year only)",
+      "followUpLocator": "PMC12721643 Interventions and Followup; Outcome Measures",
+      "results": [
+        {
+          "endpoint": "Anatomical success",
+          "role": "primary",
+          "measure": "6-month anatomical success (16 Fr flexible cystoscope or 14 Fr catheter passed atraumatically), complete-case counts; difference in percentage points (DCB minus control) from multiple imputation",
+          "values": {
+            "exp": "74.6% (50/67)",
+            "ctl": "26.8% (11/41)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 44.4,
+            "ci": [
+              27.6,
+              61.1
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Repeat intervention before 6 months counted as failure (2 DCB, 18 control); cystoscopy was missing in 12 DCB and 7 control patients. The Table 2 footnote describes the p value as 1-sided; Methods specify a 2-sided 0.05 test.",
+          "locator": "PMC12721643 Table 2; Efficacy Results"
+        },
+        {
+          "endpoint": "Anatomical success",
+          "role": "exploratory",
+          "measure": "6-month anatomical success if all 12 missing DCB patients failed and all 7 missing control patients succeeded",
+          "values": {
+            "exp": "63%",
+            "ctl": "38%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Worst-case sensitivity analysis described by the authors.",
+          "locator": "PMC12721643 Discussion, limitation 3"
+        },
+        {
+          "endpoint": "Anatomical success",
+          "role": "exploratory",
+          "measure": "6-month anatomical success, subset treated with a 30 Fr balloon (70 DCB, 11 control)",
+          "values": {
+            "exp": "75%",
+            "ctl": "22%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "note": "Subset analysis comparing the 11 control patients dilated with a 30 Fr uncoated balloon with the 70 DCB patients; the p value is as reported.",
+          "locator": "PMC12721643 Efficacy Results"
+        },
+        {
+          "endpoint": "Freedom from repeat intervention",
+          "role": "key-secondary",
+          "measure": "Kaplan–Meier freedom from repeat dilation, DVIU or urethroplasty at 1 year",
+          "values": {
+            "exp": "83.2%",
+            "ctl": "21.7%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Log-rank comparison. Later reports cite 23.6% for the control arm at 1 year.",
+          "locator": "PMC12721643 Efficacy Results; Figure 3"
+        },
+        {
+          "endpoint": "Peak flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at 1 year (mL/s); baseline 7.6 (n=78) DCB and 7.4 (n=47) control",
+          "values": {
+            "exp": "15.5 (n=65)",
+            "ctl": "7.6 (n=41)"
+          },
+          "note": "The abstract lists Qmax as a key secondary endpoint; the report gives group means without a between-group test. Control values rose to 30 days and fell from 3 months.",
+          "locator": "PMC12721643 Table 3"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Mean IPSS at 1 year; baseline 22.0 (n=79) DCB and 22.8 (n=47) control",
+          "values": {
+            "exp": "9.0 (n=67)",
+            "ctl": "19.9 (n=42)"
+          },
+          "note": "The abstract lists IPSS as a key secondary endpoint; the report gives group means without a between-group test.",
+          "locator": "PMC12721643 Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Primary safety composite through 3 months (urethral fistula, unresolved de novo stress incontinence or urethral rupture)",
+          "values": {
+            "exp": "0/79",
+            "ctl": "0/48"
+          },
+          "locator": "PMC12721643 Safety Results; Table 1 group sizes",
+          "note": "No participant had a primary safety event."
+        },
+        {
+          "label": "Post-procedure hematuria",
+          "values": {
+            "exp": "11.4%",
+            "ctl": "2.1%"
+          },
+          "locator": "PMC12721643 Safety Results",
+          "note": "Reported together with dysuria as 11.4% versus 2.1% for both event types; judged mild."
+        },
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "11.4%",
+            "ctl": "2.1%"
+          },
+          "locator": "PMC12721643 Safety Results",
+          "note": "Hematuria and dysuria resolved within 30 days in 10 of 11 men."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "10.1%",
+            "ctl": "16.7%"
+          },
+          "locator": "PMC12721643 Safety Results",
+          "note": "One serious urinary tract infection was judged possibly related to the device or procedure in each group."
+        },
+        {
+          "label": "Sexual function (IIEF)",
+          "locator": "PMC12721643 Safety Results; Table 3",
+          "note": "No change in IIEF in either group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "DCB-arm pretreatment",
+          "value": "Pretreated to at least 20 Fr: uncoated balloon 92.4%, DVIU 5.1%, both 2.5%.",
+          "locator": "PMC12721643 Interventions and Followup; Results after Table 1",
+          "note": "Direct dilation with the DCB was avoided to prevent a second paclitaxel dose if the first dilation was inadequate."
+        },
+        {
+          "label": "DCB size and length",
+          "value": "Most used diameter 30 Fr; length 30 mm 28.2%, 50 mm 60.8%.",
+          "locator": "PMC12721643 Results after Table 1",
+          "note": ""
+        },
+        {
+          "label": "DCB inflation and catheter",
+          "value": "Inflated to rated burst pressure for at least 5 minutes (mean 8 minutes 42 seconds from insertion to removal); 12–14 Fr Foley placed after removal.",
+          "locator": "PMC12721643 Interventions and Followup; Results after Table 1",
+          "note": ""
+        },
+        {
+          "label": "Control treatment",
+          "value": "Uncoated balloon 58.3% (24 Fr in 16, 28 Fr in 1, 30 Fr in 11), DVIU 25.0%, urethral sounds 16.7%.",
+          "locator": "PMC12721643 Results after Table 1",
+          "note": "No lumen-size goal was prespecified for the control arm."
+        },
+        {
+          "label": "Estimated post-treatment lumen",
+          "value": "Mean 24 Fr in both groups (urethrography estimate).",
+          "locator": "PMC12721643 Results after Table 1",
+          "note": ""
+        },
+        {
+          "label": "Repeat intervention before 6 months",
+          "values": {
+            "exp": "2",
+            "ctl": "18"
+          },
+          "locator": "PMC12721643 Table 2",
+          "note": "Includes control patients with confirmed recurrence who crossed over to the DCB."
+        },
+        {
+          "label": "Baseline stricture",
+          "value": "Bulbar 92.1%; mean length 1.7 cm; mean 3.6 prior treatments; 23/127 (18.1%) with 5 or more.",
+          "locator": "PMC12721643 Results; Table 1",
+          "note": "Penile stricture 8/79 DCB and 2/47 control; prior pelvic radiation 9/79 and 6/48."
+        },
+        {
+          "label": "Paclitaxel in semen (nonrandomized pharmacokinetic cohort)",
+          "value": "Detected in 9/15 (60%) at 30 days, 5/13 (39%) at 3 months and 1/12 (8.3%) at 6 months.",
+          "locator": "PMC12721643 Safety Results",
+          "note": "The authors recommend contraception through 6 months when the partner can conceive."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "robust-2023",
+      "kind": "updated",
+      "label": "2-year report (DCB arm)",
+      "published": "2023-12-18",
+      "cutoff": null,
+      "citation": "VanDyke ME, Morey AF, Coutinho K, et al. \"Optilume drug-coated balloon for anterior urethral stricture: 2-year results of the ROBUST III trial.\" *BJUI Compass.* 2024;5(3):366-373. doi:10.1002/bco2.312",
+      "doi": "10.1002/bco2.312",
+      "pmid": "38481667",
+      "followUp": "2 years in the DCB arm (control arm not followed beyond 1 year); IPSS available for 62/79 at 2 years",
+      "followUpLocator": "PMC10927926 Intervention and follow-up; Table 1",
+      "results": [
+        {
+          "endpoint": "Freedom from repeat intervention",
+          "role": "key-secondary",
+          "measure": "Kaplan–Meier freedom from repeat intervention, DCB arm at 2 years versus control arm at 1 year; difference in percentage points",
+          "values": {
+            "exp": "77.8%",
+            "ctl": "23.6%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 54.2,
+            "ci": [
+              38.7,
+              69.7
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Log-rank comparison across different follow-up times; no adjustment for multiplicity.",
+          "locator": "PMC10927926 Efficacy; Figure 2"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Mean IPSS at 2 years in the DCB arm (baseline 22.0); paired t test versus baseline",
+          "values": {
+            "exp": "10.1 (n=62)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Failure-carried-forward imputation after repeat intervention.",
+          "locator": "PMC10927926 Table 1"
+        },
+        {
+          "endpoint": "Peak flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at 2 years in the DCB arm (mL/s; baseline 7.6); paired t test versus baseline",
+          "values": {
+            "exp": "12.6 (n=58)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "note": "Qmax was 15.5 mL/s at 1 year.",
+          "locator": "PMC10927926 Table 1; Efficacy"
+        },
+        {
+          "endpoint": "IPSS responders",
+          "role": "descriptive",
+          "measure": "IPSS improvement of at least 30% without repeat intervention at 2 years",
+          "values": {
+            "exp": "61% (38/62)"
+          },
+          "note": "",
+          "locator": "PMC10927926 Efficacy"
+        },
+        {
+          "endpoint": "Freedom from repeat intervention, penile strictures",
+          "role": "exploratory",
+          "measure": "Kaplan–Meier freedom from reintervention at 2 years, penile strictures (n=8)",
+          "values": {
+            "exp": "46.9% (95% CI 10.3–83.4)"
+          },
+          "note": "Subgroup estimate.",
+          "locator": "PMC10927926 Table 3"
+        },
+        {
+          "endpoint": "Freedom from repeat intervention, bulbar strictures",
+          "role": "exploratory",
+          "measure": "Kaplan–Meier freedom from reintervention at 2 years, bulbar strictures (n=71)",
+          "values": {
+            "exp": "82.0% (95% CI 72.7–91.2)"
+          },
+          "note": "Subgroup estimate.",
+          "locator": "PMC10927926 Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-related hematuria",
+          "values": {
+            "exp": "13.9%"
+          },
+          "locator": "PMC10927926 Safety",
+          "note": "Onset within 30 days in 9/12 events; mild in 11/12; resolved within 30 days in 10/12."
+        },
+        {
+          "label": "Treatment-related dysuria",
+          "values": {
+            "exp": "6.3%"
+          },
+          "locator": "PMC10927926 Safety",
+          "note": "Mild."
+        },
+        {
+          "label": "Treatment-related urinary tract infection",
+          "values": {
+            "exp": "6.3%"
+          },
+          "locator": "PMC10927926 Safety",
+          "note": ""
+        },
+        {
+          "label": "Treatment-related serious adverse events",
+          "values": {
+            "exp": "1 aspiration pneumonia, 1 urinary tract infection",
+            "ctl": "1 aspiration pneumonia, 1 urinary tract infection"
+          },
+          "locator": "PMC10927926 Safety",
+          "note": "Same events as the 1-year report. No additional treatment-related adverse events after 12 months."
+        },
+        {
+          "label": "Erectile function (IIEF-EF, sexually active at baseline)",
+          "values": {
+            "exp": "20.8 at baseline (n=48); 24.2 at 2 years (n=21)"
+          },
+          "locator": "PMC10927926 Table 1",
+          "note": "Authors report sexual function preserved."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "DCB pretreatment",
+          "value": "Uncoated balloon 72, DVIU 3, both 4 (of 79).",
+          "locator": "PMC10927926 Results",
+          "note": ""
+        },
+        {
+          "label": "DCB diameters used",
+          "value": "30 Fr in 70, 24 Fr in 6, 36 Fr in 3.",
+          "locator": "PMC10927926 Results",
+          "note": ""
+        },
+        {
+          "label": "Discontinuations before 2 years",
+          "value": "30, including 15 treatment failures and 2 non-study-related deaths.",
+          "locator": "PMC10927926 Results; Figure 1",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "robust-i-2024",
+      "kind": "secondary",
+      "label": "ROBUST I 5-year (single-arm cohort)",
+      "published": "2024-08-30",
+      "cutoff": null,
+      "citation": "DeLong J, Virasoro R, Pichardo M, et al. \"Long-Term Outcomes of Recurrent Bulbar Urethral Stricture Treatment With the Optilume Drug-Coated Balloon: Five-Year Results From the ROBUST I Study.\" *J Urol.* 2025;213(1):90-98. doi:10.1097/JU.0000000000004229",
+      "doi": "10.1097/JU.0000000000004229",
+      "pmid": "39213367",
+      "followUp": "5 years; 31 of 53 completed all follow-up",
+      "followUpLocator": "J Urol p91 abstract; p94 Results",
+      "results": [
+        {
+          "endpoint": "Functional success",
+          "role": "descriptive",
+          "measure": "Functional success at 5 years (IPSS improvement of at least 50% without re-treatment)",
+          "values": {
+            "exp": "58% (25/43)"
+          },
+          "note": "Single-arm ROBUST I cohort (NCT03014726), not part of the ROBUST III randomization. Long-term primary efficacy endpoint.",
+          "locator": "J Urol p94 Table 2; Efficacy"
+        },
+        {
+          "endpoint": "Freedom from repeat intervention",
+          "role": "descriptive",
+          "measure": "Kaplan–Meier freedom from repeat intervention at 5 years",
+          "values": {
+            "exp": "71.7%"
+          },
+          "note": "Censoring for loss to follow-up, withdrawal and study completion.",
+          "locator": "J Urol p94 Efficacy; Figure 2 (p96)"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Mean IPSS at 5 years, as observed (baseline 25.2, n=53)",
+          "values": {
+            "exp": "7.2 (n=29)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Paired t test versus baseline; failure-carried-forward sensitivity analysis gave 9.9.",
+          "locator": "J Urol p95 Table 3"
+        },
+        {
+          "endpoint": "Peak flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at 5 years, as observed (mL/s; baseline 5.0)",
+          "values": {
+            "exp": "19.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "note": "Failure-carried-forward sensitivity analysis gave 15.7 mL/s.",
+          "locator": "J Urol p94 Efficacy"
+        },
+        {
+          "endpoint": "Functional success, 24 Fr balloon",
+          "role": "descriptive",
+          "measure": "Functional success at 5 years, 24 Fr balloon",
+          "values": {
+            "exp": "38% (8/21)"
+          },
+          "note": "Balloon size was not randomized; the study was not powered for this comparison.",
+          "locator": "J Urol p94 Efficacy"
+        },
+        {
+          "endpoint": "Functional success, 30 Fr balloon",
+          "role": "descriptive",
+          "measure": "Functional success at 5 years, 30 Fr balloon",
+          "values": {
+            "exp": "77% (17/22)"
+          },
+          "note": "The Discussion gives 25% and 76% for the two sizes.",
+          "locator": "J Urol p94 Efficacy"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious treatment-related adverse events through 5 years",
+          "values": {
+            "exp": "0/53"
+          },
+          "locator": "J Urol p94 Safety",
+          "note": ""
+        },
+        {
+          "label": "Device- or procedure-related adverse events",
+          "values": {
+            "exp": "15 events, all grade 1–2"
+          },
+          "locator": "J Urol p94 Safety; Table 5 (p96)",
+          "note": "Hematuria 4, dysuria 3, urinary retention 3, fever 2; 6 device-related and 9 procedure-related."
+        },
+        {
+          "label": "Erectile function (IIEF, sexually active in the month before assessment)",
+          "values": {
+            "exp": "25.9 at baseline (n=30); 26.8 at 5 years (n=23)"
+          },
+          "locator": "J Urol p97 Table 6",
+          "note": "Not significantly changed."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrollment",
+          "value": "53 men with a single bulbar stricture of 2.0 cm or less, 4 sites in Latin America; mean stricture length 0.9 cm; mean 1.7 prior endoscopic treatments.",
+          "locator": "J Urol p92 Materials and Methods; p94 Results; Table 1",
+          "note": "Excluded pelvic radiation, prior urethroplasty, radical prostatectomy, lichen sclerosus, penile prosthesis and artificial urinary sphincter."
+        },
+        {
+          "label": "DCB technique",
+          "value": "Predilation with an uncoated balloon and/or DVIU; 3 cm balloon, 24 Fr or 30 Fr; inflated to rated burst pressure for 5 minutes; 12 or 14 Fr Foley.",
+          "locator": "J Urol p92 Materials and Methods",
+          "note": ""
+        },
+        {
+          "label": "Balloon size used",
+          "value": "24 Fr in 25 men; 30 Fr in 28 men.",
+          "locator": "J Urol p94 Results",
+          "note": ""
+        },
+        {
+          "label": "Repeat DCB treatment",
+          "value": "5 men, all initially treated with the 24 Fr balloon.",
+          "locator": "J Urol p95 Results",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/delong-et-al-long-term-outcomes-of-recurrent-bulbar-urethral-stricture-treatment-with-the-optilume-drug-coated-balloon.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "robust-2025",
+      "kind": "updated",
+      "label": "3-year report (DCB arm)",
+      "published": "2025-06-02",
+      "cutoff": null,
+      "citation": "Srikanth P, DeLong J, Virasoro R, et al. \"A Drug-Coated Balloon Treatment for Urethral Stricture Disease: Three-Year Results from the ROBUST III Study.\" *J Endourol.* 2025;39(9):968-974. doi:10.1089/end.2024.0718",
+      "doi": "10.1089/end.2024.0718",
+      "pmid": "40300835",
+      "followUp": "3 years in the DCB arm (control arm not followed beyond 1 year); IPSS available for 56/79 at 3 years",
+      "followUpLocator": "Publisher PDF pp2–3 (Materials and Methods; Table 1)",
+      "results": [
+        {
+          "endpoint": "Freedom from repeat intervention",
+          "role": "key-secondary",
+          "measure": "Kaplan–Meier freedom from repeat intervention, DCB arm at 3 years versus control arm at 1 year",
+          "values": {
+            "exp": "71.9%",
+            "ctl": "23.6%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The report states the DCB estimate was significantly greater and gives a 50% difference; no p value or interval is reported.",
+          "locator": "Publisher PDF p3 Efficacy; Figure 2"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Mean IPSS at 3 years in the DCB arm (baseline 22.0)",
+          "values": {
+            "exp": "11.6 (n=56)"
+          },
+          "note": "Mean IPSS was 9.0 at 1 year and 10.1 at 2 years.",
+          "locator": "Publisher PDF p3 Table 1"
+        },
+        {
+          "endpoint": "Peak flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at 3 years in the DCB arm (mL/s; baseline 7.6)",
+          "values": {
+            "exp": "10.6 (n=53)"
+          },
+          "note": "Mean Qmax was 15.5 mL/s at 1 year and 12.6 at 2 years.",
+          "locator": "Publisher PDF p3 Table 1"
+        },
+        {
+          "endpoint": "IPSS responders",
+          "role": "descriptive",
+          "measure": "IPSS improvement of at least 30% without repeat intervention at 3 years",
+          "values": {
+            "exp": "48% (27/56)"
+          },
+          "note": "The proportion was 61.3% at 2 years.",
+          "locator": "Publisher PDF p3 Efficacy"
+        },
+        {
+          "endpoint": "Freedom from repeat intervention after crossover",
+          "role": "descriptive",
+          "measure": "Freedom from repeat intervention 1 year after crossover to the DCB (32 control patients with recurrence)",
+          "values": {
+            "exp": ">75%"
+          },
+          "note": "Crossover cohort; selection bias possible.",
+          "locator": "Publisher PDF pp5–6 Crossover; Figure 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postprocedural hematuria",
+          "values": {
+            "exp": "11.4%"
+          },
+          "locator": "Publisher PDF p3 Safety",
+          "note": ""
+        },
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "7.6%"
+          },
+          "locator": "Publisher PDF p3 Safety",
+          "note": ""
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "6.3%"
+          },
+          "locator": "Publisher PDF p3 Safety",
+          "note": ""
+        },
+        {
+          "label": "Treatment-attributed serious adverse events",
+          "values": {
+            "exp": "1 aspiration pneumonia, 1 urinary tract infection",
+            "ctl": "1 aspiration pneumonia, 1 urinary tract infection"
+          },
+          "locator": "Publisher PDF p3 Safety",
+          "note": "No late-onset treatment-related serious or other adverse events through the study."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment failures in the DCB arm by 3 years",
+          "value": "20, with 2 non-study-related deaths.",
+          "locator": "Publisher PDF p3 Results",
+          "note": "Treatment failures were discontinued from the study and imputed as failures in IPSS and Qmax."
+        },
+        {
+          "label": "Control patients crossing over",
+          "value": "32 of 48 had recurrence and received the DCB.",
+          "locator": "Publisher PDF p3 Efficacy",
+          "note": ""
+        },
+        {
+          "label": "Prior pelvic radiation",
+          "values": {
+            "exp": "9/79",
+            "ctl": "6/48"
+          },
+          "locator": "Publisher PDF p5 Clinically significant subgroups",
+          "note": "No significant difference in IPSS or Qmax between irradiated and nonirradiated patients in the DCB arm at 3 years."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "open",
+      "note": "The AUA panel read both randomized endoscopic-management trials together; OPEN used a symptom outcome and compared urethroplasty with urethrotomy."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/robust",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

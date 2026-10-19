@@ -1,0 +1,490 @@
+{
+  "id": "goliath",
+  "name": "GOLIATH",
+  "aliases": [
+    "GreenLight XPS versus TURP",
+    "PE1006"
+  ],
+  "nct": "NCT01218672",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "ablation-vs-turp"
+    }
+  ],
+  "question": "Is 180-W GreenLight XPS laser vaporization of the prostate noninferior to TURP for symptom relief, flow and complications in men with benign prostatic obstruction?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 281,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "180-W GreenLight XPS laser photoselective vaporization of the prostate",
+        "role": "experimental",
+        "n": 139
+      },
+      {
+        "key": "ctl",
+        "label": "monopolar or bipolar transurethral resection of the prostate (TURP)",
+        "role": "control",
+        "n": 142
+      }
+    ],
+    "population": "Men aged 40 to 80 years with benign prostatic obstruction (IPSS 12 or higher, Qmax below 15 mL/s, prostate 100 g or less on transrectal ultrasound); 281 were randomized and 269 treated.",
+    "description": "Multicenter, open-label noninferiority randomized trial",
+    "locator": "Abstracts of the 6-, 12- and 24-month reports (281 randomized, 269 treated, 29 centers, 9 countries); randomized arm sizes (139 and 142), age limits and eligibility from ClinicalTrials.gov NCT01218672 participant flow and eligibility fields"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Noninferior to TURP on IPSS, Qmax and complication-free rate at 6 months, sustained through 24 months",
+  "takeaway": "In 281 men with benign prostatic obstruction and prostates up to 100 g, 180-W GreenLight XPS laser vaporization was noninferior to TURP for 6-month IPSS, Qmax and complication-free proportion, with shorter catheterization and hospital stay.",
+  "reports": [
+    {
+      "id": "goliath-2014",
+      "kind": "primary",
+      "label": "6-month safety and efficacy",
+      "published": "2013-11-11",
+      "dateApprox": false,
+      "cutoff": null,
+      "citation": "Bachmann A, Tubaro A, Barber N, et al. \"180-W XPS GreenLight Laser Vaporisation Versus Transurethral Resection of the Prostate for the Treatment of Benign Prostatic Obstruction: 6-Month Safety and Efficacy Results of a European Multicentre Randomised Trial—The GOLIATH Study.\" *Eur Urol.* 2014;65(5):931-942. doi:10.1016/j.eururo.2013.10.040",
+      "doi": "10.1016/j.eururo.2013.10.040",
+      "pmid": "24331152",
+      "followUp": "6 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS at 6 months (lower is better; laser minus TURP)",
+          "values": {
+            "exp": "6.8",
+            "ctl": "5.6"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.2
+          },
+          "met": true,
+          "note": "Abstract: noninferiority of XPS to TURP for IPSS demonstrated (one-sided tests at the 2.5% level); the margin was 3 IPSS points. Means are from 134 laser and 131 TURP patients analyzed; difference by subtraction.",
+          "locator": "Abstract (noninferiority); means, SD (5.2 and 4.9) and denominators from ClinicalTrials.gov NCT01218672 posted results, primary outcome; margin from the 24-month report abstract"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "key-secondary",
+          "measure": "Mean maximum flow rate at 6 months, mL/s (laser minus TURP)",
+          "values": {
+            "exp": "23.3 mL/s",
+            "ctl": "24.2 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.9
+          },
+          "met": true,
+          "note": "Abstract: noninferiority demonstrated for Qmax (margin 5 mL/s). Means (SD 10.1 and 11.4) and difference as printed in Table 3.",
+          "locator": "Abstract (noninferiority); Table 3, Qmax at 6 months"
+        },
+        {
+          "endpoint": "Complication-free proportion",
+          "role": "key-secondary",
+          "measure": "Proportion free of device- or procedure-related complications through 180 days (laser minus TURP)",
+          "values": {
+            "exp": "87.3%",
+            "ctl": "83.2%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.1
+          },
+          "met": true,
+          "note": "Abstract: noninferiority demonstrated for the complication-free proportion (margin 5%). 117 of 134 laser and 109 of 131 TURP patients; difference in percentage points as printed in Table 3. Registry definition: perforation, prolonged or secondary hospitalization, or a surgical or invasive intervention, excluding catheterization for transient retention under 7 days.",
+          "locator": "Abstract (noninferiority); Table 3, complication free during 180 days; definition from ClinicalTrials.gov NCT01218672 posted results"
+        },
+        {
+          "endpoint": "Early reintervention",
+          "role": "secondary",
+          "measure": "Reintervention within 30 days",
+          "effect": {
+            "type": "none",
+            "p": "0.025"
+          },
+          "note": "Abstract: the early reintervention rate was three times higher after TURP; overall postoperative reintervention rates did not differ significantly between arms at 6 months.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Recovery",
+          "role": "secondary",
+          "measure": "Time until stable health status, length of catheterization and length of hospital stay",
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Abstract: all three were superior with XPS. Median values are under treatment delivery facts.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Patient flow",
+          "value": "291 enrolled; 10 ineligible patients withdrawn before randomization; 281 randomized (139 laser, 142 TURP); 269 treated (136 laser, 133 TURP)",
+          "locator": "Participant flow, ClinicalTrials.gov NCT01218672 posted results; 12-month report abstract (291, 281, 269)"
+        },
+        {
+          "label": "Laser system",
+          "value": "GreenLight XPS console (532 nm, up to 180 W) with the MoXy side-firing fiber",
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, intervention description"
+        },
+        {
+          "label": "TURP technique",
+          "value": "Monopolar or bipolar loop resection, any CE-marked system",
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, intervention description"
+        },
+        {
+          "label": "Monopolar and bipolar share of TURP",
+          "value": "58.6% monopolar and 41.4% bipolar",
+          "locator": "Table 4, TURP loop type"
+        },
+        {
+          "label": "Length of catheterization at 6 months, median",
+          "values": {
+            "exp": "22.0 hours",
+            "ctl": "46.7 hours"
+          },
+          "locator": "Table 5, length of catheterisation (median)",
+          "note": "Abstract: superior with XPS, p<0.001."
+        },
+        {
+          "label": "Time until stable health status at 6 months, median",
+          "values": {
+            "exp": "26.0 hours",
+            "ctl": "52.8 hours"
+          },
+          "locator": "Table 5, time to stable health status (median)",
+          "note": "Abstract: superior with XPS, p<0.001."
+        },
+        {
+          "label": "Length of hospital stay at 6 months, median",
+          "values": {
+            "exp": "49.3 hours",
+            "ctl": "78.2 hours"
+          },
+          "locator": "Table 5, length of hospital stay (median)",
+          "note": "Abstract: superior with XPS, p<0.001."
+        },
+        {
+          "label": "Length of stay, recovery room entry to discharge, mean",
+          "values": {
+            "exp": "65.5 hours",
+            "ctl": "96.9 hours"
+          },
+          "locator": "Table 5, length of hospital stay (mean and SD); recovery-room-entry definition from ClinicalTrials.gov NCT01218672 posted results",
+          "note": "SD 63.3 and 62.0; 134 laser and 130 TURP patients."
+        },
+        {
+          "label": "Baseline characteristics",
+          "values": {
+            "exp": "age 65.9 years, IPSS 21.2",
+            "ctl": "age 65.4 years, IPSS 21.7"
+          },
+          "locator": "Table 2, baseline characteristics of treated patients",
+          "note": "Age SD 6.8 and 6.6 years; IPSS SD 5.9 and 6.4; 136 laser and 133 TURP patients treated."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/GOLIATH-Bachmann-2014.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "goliath-2015",
+      "kind": "updated",
+      "label": "12-month results",
+      "published": "2014-09-16",
+      "cutoff": null,
+      "citation": "Bachmann A, Tubaro A, Barber N, et al. \"A European Multicenter Randomized Noninferiority Trial Comparing 180 W GreenLight XPS Laser Vaporization and Transurethral Resection of the Prostate for the Treatment of Benign Prostatic Obstruction: 12-Month Results of the GOLIATH Study.\" *J Urol.* 2015;193(2):570-578. doi:10.1016/j.juro.2014.09.001",
+      "doi": "10.1016/j.juro.2014.09.001",
+      "pmid": "25219699",
+      "followUp": "12 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS at 12 months (laser minus TURP)",
+          "values": {
+            "exp": "7.0",
+            "ctl": "5.7"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.3,
+            "ci": [
+              -0.1,
+              2.7
+            ]
+          },
+          "note": "Abstract: noninferiority of GreenLight XPS maintained at 12 months. IPSS data were available for 130 laser and 125 TURP patients.",
+          "locator": "Abstract (noninferiority maintained); Results text and Table 1, IPSS at 12 months"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean maximum flow rate at 12 months, mL/s",
+          "values": {
+            "exp": "23.0 mL/s",
+            "ctl": "24.7 mL/s"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Abstract: Qmax, postvoid residual, prostate volume and PSA did not differ significantly between arms at 12 months.",
+          "locator": "Abstract (no significant difference); Table 1, Qmax at 12 months"
+        },
+        {
+          "endpoint": "Complication-free proportion",
+          "role": "secondary",
+          "measure": "Complication-free rate at 1 year (laser versus TURP)",
+          "values": {
+            "exp": "84.6%",
+            "ctl": "80.5%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.415"
+          },
+          "note": "Abstract: complication-free and overall reintervention rates comparable between arms.",
+          "locator": "Abstract; p-value from Urology Times, Aug 21 2014"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Unresolved urinary incontinence at 12 months",
+          "values": {
+            "exp": "4 patients",
+            "ctl": "4 patients"
+          },
+          "locator": "Abstract",
+          "note": "Counts as reported; denominators not given in the abstract."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/goliath-2015.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "goliath-2016",
+      "kind": "updated",
+      "label": "24-month outcomes",
+      "published": "2015-08-15",
+      "cutoff": null,
+      "citation": "Thomas JA, Tubaro A, Barber N, et al. \"A Multicenter Randomized Noninferiority Trial Comparing GreenLight-XPS Laser Vaporization of the Prostate and Transurethral Resection of the Prostate for the Treatment of Benign Prostatic Obstruction: Two-yr Outcomes of the GOLIATH Study.\" *Eur Urol.* 2016;69(1):94-102. doi:10.1016/j.eururo.2015.07.054",
+      "doi": "10.1016/j.eururo.2015.07.054",
+      "pmid": "26283011",
+      "followUp": "24 months (mean follow-up 23.3 months in the registry safety report)",
+      "followUpLocator": "Abstract; ClinicalTrials.gov NCT01218672 posted results, adverse events time frame",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS at 24 months (laser minus TURP)",
+          "values": {
+            "exp": "6.9",
+            "ctl": "5.9"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.0,
+            "ci": [
+              -0.5,
+              2.5
+            ]
+          },
+          "met": true,
+          "note": "Noninferiority margin 3 IPSS points; the upper confidence limit of 2.5 is below the margin. Baseline IPSS 21.2 versus 21.7; 136 laser and 133 TURP patients.",
+          "locator": "Abstract (primary outcome, margin of 3, noninferiority sustained); values and interval as restated in AUA BPH guideline 2026 text, printed p35; means, SD (6.0 and 6.1) and baseline from ClinicalTrials.gov NCT01218672 posted results, health status outcome"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "key-secondary",
+          "measure": "Mean maximum flow rate at 24 months, mL/s (laser minus TURP)",
+          "values": {
+            "exp": "21.6 mL/s",
+            "ctl": "22.9 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.3,
+            "ci": [
+              -4.0,
+              1.4
+            ]
+          },
+          "met": true,
+          "note": "Abstract: noninferiority on Qmax sustained at 24 months.",
+          "locator": "Abstract (noninferiority sustained); values and interval as restated in AUA BPH guideline 2026 text, printed p35"
+        },
+        {
+          "endpoint": "Complication-free proportion",
+          "role": "key-secondary",
+          "measure": "Proportion complication free through 24 months (laser minus TURP)",
+          "values": {
+            "exp": "83.6%",
+            "ctl": "78.9%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.7
+          },
+          "met": true,
+          "note": "Abstract: noninferiority on freedom from complications sustained at 24 months. 136 laser and 133 TURP patients treated. Difference in percentage points by subtraction.",
+          "locator": "Abstract; difference by subtraction"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Retreatment for obstruction (TURP, PVP or other intervention) through 24 months",
+          "values": {
+            "exp": "14 retreatment surgeries (136 treated)",
+            "ctl": "10 retreatment surgeries (133 treated)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Retreatment surgeries by interval: months 0 to 6, 4 laser versus 7 TURP; months 7 to 12, 6 versus 2; months 13 to 24, 4 versus 1. Kaplan-Meier estimate of reoperation by 24 months: 9.0% laser versus 7.6% TURP (p = 0.7, log rank).",
+          "locator": "Table 5, surgical retreatments for obstruction; section 3.6 and Fig. 3 (Kaplan-Meier estimates)"
+        },
+        {
+          "endpoint": "OAB-q SF",
+          "role": "secondary",
+          "measure": "Mean OAB-q short form symptom bother score at 24 months (lower is better)",
+          "values": {
+            "exp": "15.3",
+            "ctl": "11.9"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Baseline 44.2 versus 42.9. Abstract: the OAB-q SF differences seen at 12 months were not statistically significant at 24 months.",
+          "locator": "Abstract; scores from ClinicalTrials.gov NCT01218672 posted results, health status outcome"
+        },
+        {
+          "endpoint": "IIEF-5",
+          "role": "secondary",
+          "measure": "Mean IIEF-5 score at 24 months",
+          "values": {
+            "exp": "12.9",
+            "ctl": "13.9"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Baseline 13.2 versus 13.7.",
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, tolerability outcome (IIEF-5 and ICIQ-UI SF)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events, any",
+          "values": {
+            "exp": "24/136 (17.6%)",
+            "ctl": "25/133 (18.8%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (serious)",
+          "note": "Participants affected; time frame from consent to study exit, mean follow-up 23.3 months."
+        },
+        {
+          "label": "Serious bleeding",
+          "values": {
+            "exp": "3/136 (2.2%)",
+            "ctl": "8/133 (6.0%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (serious)",
+          "note": "Participants affected."
+        },
+        {
+          "label": "Serious stricture",
+          "values": {
+            "exp": "8/136 (5.9%)",
+            "ctl": "7/133 (5.3%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (serious)",
+          "note": "Participants affected; nonserious stricture (meatal, urethral, bladder neck) was 1/136 versus 2/133."
+        },
+        {
+          "label": "Serious urinary incontinence",
+          "values": {
+            "exp": "6/136 (4.4%)",
+            "ctl": "2/133 (1.5%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (serious)",
+          "note": "Participants affected; nonserious urinary incontinence was 10/136 (7.4%) versus 4/133 (3.0%)."
+        },
+        {
+          "label": "Serious urinary retention",
+          "values": {
+            "exp": "5/136 (3.7%)",
+            "ctl": "6/133 (4.5%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (serious)",
+          "note": "Participants affected; nonserious urinary retention was 13/136 (9.6%) versus 9/133 (6.8%)."
+        },
+        {
+          "label": "Nonserious urinary tract infection",
+          "values": {
+            "exp": "25/136 (18.4%)",
+            "ctl": "12/133 (9.0%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (other)",
+          "note": "Participants affected; serious urinary tract infection was 3/136 versus 2/133."
+        },
+        {
+          "label": "Nonserious irritative symptoms, pain or discomfort",
+          "values": {
+            "exp": "30/136 (22.1%)",
+            "ctl": "30/133 (22.6%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (other)",
+          "note": "Participants affected; serious events 1/136 versus 0/133."
+        },
+        {
+          "label": "Nonserious bleeding",
+          "values": {
+            "exp": "13/136 (9.6%)",
+            "ctl": "13/133 (9.8%)"
+          },
+          "locator": "ClinicalTrials.gov NCT01218672 posted results, adverse events (other)",
+          "note": "Participants affected. The registry does not define the event categories further."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/GOLIATH-Thomas-2yr-2016.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "water",
+      "note": "Both are noninferiority randomized trials of a prostate ablation technique against TURP; WATER tested robotic waterjet resection in 30 to 80 mL prostates."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/goliath",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

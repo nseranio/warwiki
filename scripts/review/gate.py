@@ -42,7 +42,8 @@ LEDGER = os.path.join(ROOT, "reports/audit-v2/claims-ledger.json")
 LEDGER_V1 = os.path.join(ROOT, "reports/audit-v2/claims-ledger-v1.json")
 BASELINE = os.path.join(ROOT, "reports/audit-v2/claims-baseline.json")
 EXCEPTIONS = os.path.join(ROOT, "reports/audit-v2/claim-exceptions.json")
-SECTIONS = ["01", "02", "03", "04", "05", "07", "08"]
+SECTIONS = ["01", "02", "03", "04", "05", "06", "07", "08"]
+TRIALS_DIR = "src/data/clinical-evidence/trials"  # structured trial data (Clinical Evidence, October 18, 2026)
 ABS = re.compile(r"\b(always|never|contraindicat\w*|eliminat\w+|no risk|zero risk|all patients|every patient|the only|"
                  r"gold standard|safest|guarantee\w*|invariabl\w+|universal(?:ly)?|mandatory|impossible|proven|"
                  r"absolute(?:ly)?|definitive(?:ly)?|first-line|standard of care)\b", re.I)
@@ -141,11 +142,60 @@ def guideline_patterns(text):
 
 
 def high_risk(u):
-    return "dose" in u["kinds"] or "guideline" in u["kinds"] or ("absolute" in u["kinds"] and bool(CONTRA.search(u["text"])))
+    return u.get("trial_role") in ("primary", "key-secondary") or "dose" in u["kinds"] or "guideline" in u["kinds"] or ("absolute" in u["kinds"] and bool(CONTRA.search(u["text"])))
+
+
+def trial_sources(report):
+    """A report's private full text (report.source.file, never published) as a local source for the checker."""
+    f = (report.get("source") or {}).get("file")
+    return [{"n": 0, "local_text": f}] if f and os.path.isfile(f) else []
+
+
+def trial_units(path):
+    """Each structured Result, Harm and delivery Fact of a trial file, and its takeaway, is a claim bound to its report
+    (ported from WHITWIKI's gate, October 18, 2026)."""
+    data = json.load(open(os.path.join(ROOT, path)))
+    out = []
+    for ri, report in enumerate(data.get("reports", [])):
+        doi = (report.get("doi") or "").lower()
+        for field in ("results", "harms", "delivery"):
+            for i, item in enumerate(report.get(field, [])):
+                pointer = f"reports[{ri}].{field}[{i}]"
+                core = {k: item.get(k) for k in ("endpoint", "label", "role", "measure", "values", "value", "effect", "met", "note") if k in item}
+                text = json.dumps(core, ensure_ascii=False, sort_keys=True)
+                bound = json.dumps([SCHEMA, data["id"], report["id"], pointer, core, doi], ensure_ascii=False, sort_keys=True)
+                unit = {"line": pointer, "field_path": pointer, "text": text, "table_header": None,
+                        "kinds": ["number"], "section": report["id"], "trial_role": item.get("role"),
+                        "key": "v2:" + hashlib.sha1(bound.encode()).hexdigest()[:20], "cite": "report",
+                        "refs": [{"n": 0, "text": report.get("citation", ""), "doi": doi}],
+                        "report_doi": doi, "report_id": report["id"], "trial_id": data["id"],
+                        "locator": item.get("locator", ""), "local_sources": trial_sources(report)}
+                unit["high_risk"] = high_risk(unit)
+                out.append(unit)
+    if data.get("takeaway"):  # the Bottom line box and timeline text: high risk, bound to the primary report
+        reports = data.get("reports", [])
+        primary = next((r for r in reports if r.get("kind") == "primary"), (reports or [{}])[0])
+        doi = (primary.get("doi") or "").lower()
+        bound = json.dumps([SCHEMA, data["id"], primary.get("id"), "takeaway", data["takeaway"], doi], ensure_ascii=False, sort_keys=True)
+        unit = {"line": "takeaway", "field_path": "takeaway", "text": data["takeaway"], "table_header": None,
+                "kinds": ["number"], "section": primary.get("id", ""), "trial_role": "primary",
+                "key": "v2:" + hashlib.sha1(bound.encode()).hexdigest()[:20], "cite": "report",
+                "refs": [{"n": 0, "text": r.get("citation", ""), "doi": (r.get("doi") or "").lower()} for r in reports],
+                "report_doi": doi, "report_id": primary.get("id", ""), "trial_id": data["id"],
+                "locator": "takeaway: arms, primary result and any later-report result; check against design.arms, every report of this trial and the trial page",
+                "local_sources": [x for r in reports for x in trial_sources(r)], "high_risk": True}
+        out.append(unit)
+    return out
+
+
+def trial_paths():
+    return sorted(os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT, TRIALS_DIR, "*.json")))
 
 
 def units_of(path):
     """Every sentence or table row on the page that states a number or an absolute; with its cited refs."""
+    if path.endswith(".json"):
+        return trial_units(path)
     s = open(os.path.join(ROOT, path)).read()
     refs = C.refs_of(s)
     body = s.split("\n## References")[0]
@@ -215,7 +265,7 @@ def save_ledger(led):
 
 
 def targets(args):
-    return [os.path.relpath(os.path.abspath(a), ROOT) for a in args if a.endswith(".mdx")] or C.pages(SECTIONS)
+    return [os.path.relpath(os.path.abspath(a), ROOT) for a in args if a.endswith((".mdx", ".json"))] or C.pages(SECTIONS) + trial_paths()
 
 
 def independent_ok(e):
@@ -288,11 +338,11 @@ def write_batches(out, bypage):
     def flush():
         if not cur:
             return
-        uid = f"claims/g{len(units) + 1:04d}__" + cur[0]["page"][len("docs/"):-len(".mdx")].replace("/", "__")[:80]
+        uid = f"claims/g{len(units) + 1:04d}__" + re.sub(r"^(docs|src/data)/", "", cur[0]["page"]).rsplit(".", 1)[0].replace("/", "__")[:80]
         for j, u in enumerate(cur):
             u["id"] = f"{uid.split('/', 1)[1]}#{j + 1}"
         # the checker sees the claim, its kinds and its sources, never a prior verdict
-        claims = [{k: u[k] for k in ("id", "page", "line", "text", "table_header", "kinds", "cite", "refs", "key", "local_sources") if k in u} for u in cur]
+        claims = [{k: u[k] for k in ("id", "page", "line", "text", "table_header", "kinds", "cite", "refs", "key", "local_sources", "field_path", "trial_id", "report_id", "report_doi", "locator", "high_risk") if k in u} for u in cur]
         json.dump({"page": cur[0]["page"], "claims": claims}, open(os.path.join(out, "batches", uid.split("/", 1)[1] + ".json"), "w"), indent=1)
         units.append(uid)
         cur.clear()
@@ -512,7 +562,7 @@ def stats(as_json=False):
     led, exc = load(LEDGER, {}), load(EXCEPTIONS, {})
     from collections import Counter
     tot, kinds, high, fails = Counter(), Counter(), Counter(), Counter()
-    for p in C.pages(SECTIONS):
+    for p in C.pages(SECTIONS) + trial_paths():
         for u in units_of(p):
             e = led.get(u["key"])
             st = e["s"] if e else "unverified"
@@ -593,7 +643,7 @@ def main():
             key_pages = {p: set(ks) for p, ks in key_pages.items()}
         rate = float(a[a.index("--challenge") + 1]) if "--challenge" in a else 0.0
         rng = random.Random(int(a[a.index("--seed") + 1]) if "--seed" in a else 20261006)
-        files = [x for x in a[1:] if x.endswith(".mdx")]
+        files = [x for x in a[1:] if x.endswith((".mdx", ".json"))]
         if os.path.exists(os.path.join(out, "units.json")):
             sys.exit(f"{out} already holds a run; use a new --out (each run needs its own ID)")
         bypage, picked = {}, {"failing": 0, "legacy-high-risk": 0, "challenge": 0, "recheck": 0}

@@ -1,0 +1,549 @@
+{
+  "id": "open",
+  "name": "OPEN",
+  "aliases": [
+    "Open urethroplasty versus endoscopic urethrotomy: clarifying the management of men with recurrent urethral stricture",
+    "ISRCTN98009168"
+  ],
+  "nct": null,
+  "registry": "ISRCTN98009168",
+  "area": [
+    "stricture"
+  ],
+  "decisions": [
+    {
+      "id": "stricture-treatment",
+      "lane": "endoscopic-vs-urethroplasty"
+    }
+  ],
+  "question": "In men with recurrent bulbar urethral stricture, does open urethroplasty control voiding symptoms better than endoscopic urethrotomy over 24 months?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label; central trial staff masked to allocation",
+    "type": "superiority",
+    "n": 222,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Open urethroplasty",
+        "role": "experimental",
+        "n": 108
+      },
+      {
+        "key": "ctl",
+        "label": "endoscopic urethrotomy",
+        "role": "control",
+        "n": 112
+      }
+    ],
+    "population": "222 men with bulbar urethral stricture and at least one previous stricture operation randomized at 38 UK NHS hospitals; two ineligible men were excluded after randomization, leaving 108 and 112 by allocation.",
+    "description": "Multicenter, open-label, patient-randomized superiority trial",
+    "locator": "AM PDF pp5, 9, Table 1 (p18); arm counts from Table 2 (p19)"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Symptom scores did not differ; reintervention was lower after urethroplasty; 39 of 108 urethroplasty patients lacked primary data.",
+  "takeaway": "In 222 randomized UK men with recurrent bulbar urethral stricture, open urethroplasty and endoscopic urethrotomy did not differ in 24-month voiding symptom score (mean difference -0.36), but urethroplasty had fewer reinterventions (15 versus 29 men; hazard ratio 0.52, 95% CI 0.31 to 0.89).",
+  "reports": [
+    {
+      "id": "open-2020",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2020-07-04",
+      "cutoff": null,
+      "citation": "Goulao B, Carnell S, Shen J, et al. \"Surgical Treatment for Recurrent Bulbar Urethral Stricture: A Randomised Open-label Superiority Trial of Open Urethroplasty Versus Endoscopic Urethrotomy (the OPEN Trial).\" *Eur Urol.* 2020;78(4):572-580. doi:10.1016/j.eururo.2020.06.003",
+      "doi": "10.1016/j.eururo.2020.06.003",
+      "pmid": "32636099",
+      "followUp": "Symptom score profile over 24 months after randomization; time to reintervention to database closure (at least 24 and up to 48 months)",
+      "followUpLocator": "AM PDF pp7-8, 10",
+      "results": [
+        {
+          "endpoint": "Voiding symptom score",
+          "role": "primary",
+          "measure": "Area-under-the-curve profile of the 0-24 patient-reported voiding symptom score over 24 months (lower is better); adjusted mean difference, urethroplasty minus urethrotomy",
+          "values": {
+            "exp": "7.4 (SD 3.8), n=69",
+            "ctl": "7.8 (SD 4.2), n=90"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.36,
+            "ci": [
+              -1.74,
+              1.02
+            ],
+            "p": "0.6"
+          },
+          "met": false,
+          "note": "Primary analysis included 69 of 108 and 90 of 112 men. Multiple-imputation intention-to-treat difference -0.33 (95% CI -1.74 to 1.09; p=0.6); modified intention-to-treat -0.52 (95% CI -2.0 to 0.96; p=0.5). No treatment-effect heterogeneity by time since last procedure, age, stricture length or number of previous interventions.",
+          "locator": "AM PDF p9, Table 2 (p19)"
+        },
+        {
+          "endpoint": "Reintervention",
+          "role": "key-secondary",
+          "measure": "Time to first reintervention (hazard ratio, urethroplasty versus urethrotomy); men with at least one reintervention",
+          "values": {
+            "exp": "15 men (of 93 with data available; 108 allocated)",
+            "ctl": "29 men (of 104 with data available; 112 allocated)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.52,
+            "ci": [
+              0.31,
+              0.89
+            ],
+            "p": "0.017"
+          },
+          "met": true,
+          "note": "Described as the main clinical outcome and powered for a 30% relative reduction (104 men, 90% power). Self-dilatation was not counted as reintervention. Percentages in the monograph (Tables 15 and 17): 16.1% and 27.9% of men with data available. Median (IQR) interval from surgery to reintervention: 474 (399-577) days after urethroplasty versus 308 (211-448) days after urethrotomy.",
+          "locator": "AM PDF pp7, 10, Table 2 (p19)"
+        },
+        {
+          "endpoint": "Reintervention",
+          "role": "secondary",
+          "measure": "Multiple reintervention events per participant (Andersen-Gill hazard ratio)",
+          "effect": {
+            "type": "HR",
+            "value": 0.49,
+            "ci": [
+              0.3,
+              0.82
+            ],
+            "p": "0.006"
+          },
+          "note": "44 men had at least one reintervention and there were 52 reinterventions overall.",
+          "locator": "AM PDF p10"
+        },
+        {
+          "endpoint": "Reintervention",
+          "role": "secondary",
+          "measure": "Time to first reintervention, per-protocol analysis (men who received the allocated procedure)",
+          "effect": {
+            "type": "HR",
+            "value": 0.28,
+            "ci": [
+              0.15,
+              0.55
+            ],
+            "p": "<0.001"
+          },
+          "note": "Secondary analysis restricted to men who underwent the allocated procedure.",
+          "locator": "AM PDF p10, Figure 3 (p24)"
+        },
+        {
+          "endpoint": "Any recurrence",
+          "role": "secondary",
+          "measure": "Time to recurrence (hazard ratio, urethroplasty versus urethrotomy); men with recurrence",
+          "values": {
+            "exp": "19 men",
+            "ctl": "39 men"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.46,
+            "ci": [
+              0.29,
+              0.72
+            ],
+            "p": "0.001"
+          },
+          "note": "Recurrence was a reintervention performed or scheduled, or maximum flow rate or voiding score deteriorated to the pre-intervention value. Counts are among the men who had surgery (93 urethroplasty and 104 urethrotomy; 19 (20.4%) and 39 (37.5%) in the monograph, Table 17).",
+          "locator": "AM PDF pp7, 10, Table 2 (p19)"
+        },
+        {
+          "endpoint": "Maximum flow rate",
+          "role": "secondary",
+          "measure": "Improvement in Qmax of at least 10 mL/s from baseline at 12 or 24 months (odds ratio, urethroplasty versus urethrotomy)",
+          "values": {
+            "exp": "18/44 with data (data missing for 49 of 93)",
+            "ctl": "13/63 with data (data missing for 41 of 104)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.64,
+            "ci": [
+              1.14,
+              6.15
+            ],
+            "p": "0.024"
+          },
+          "note": "At 3 months the odds ratio was 2.1 (95% CI 1.05 to 4.12; p=0.035). The Results text gives 44 and 63 participants with flow-rate data for the 12-24 month comparison; Table 2 prints 18/93 (19%) and 13/104 (13%), whose denominators include 49 and 41 men with missing data (monograph Table 16).",
+          "locator": "AM PDF pp7, 10, Table 2 (p19)"
+        },
+        {
+          "endpoint": "Impact of urinary symptoms on daily activity",
+          "role": "secondary",
+          "measure": "Profile score over 24 months (0 none to 3 a lot); adjusted mean difference, urethroplasty minus urethrotomy",
+          "values": {
+            "exp": "1.1 (SD 0.8), n=69",
+            "ctl": "1.0 (SD 0.7), n=90"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.06,
+            "ci": [
+              -0.19,
+              0.3
+            ],
+            "p": "0.6"
+          },
+          "note": "",
+          "locator": "AM PDF p9, Table 2 (p19)"
+        },
+        {
+          "endpoint": "Satisfaction with sexual function",
+          "role": "secondary",
+          "measure": "Profile score over 24 months; adjusted mean difference, urethroplasty minus urethrotomy",
+          "values": {
+            "exp": "2.9 (SD 1.2), n=63",
+            "ctl": "2.5 (SD 1.2), n=87"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.35,
+            "ci": [
+              -0.06,
+              0.75
+            ],
+            "p": "0.090"
+          },
+          "note": "The Methods describe the scale as 1 (very dissatisfied) to 5 (very satisfied); the Table 1 footnote reverses the direction.",
+          "locator": "AM PDF pp6, 9-10, Table 1 (p18), Table 2 (p19)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event (by procedure received)",
+          "values": {
+            "exp": "50/82 (61.0%)",
+            "ctl": "30/115 (26.1%)"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": "Denominators are men who received urethroplasty (82) or urethrotomy (115). Counts are 82 minus 32 and 115 minus 85 men with no event; 88 events in 80 men overall."
+        },
+        {
+          "label": "Perioperative mouth pain",
+          "values": {
+            "exp": "12/82 (14.6%)",
+            "ctl": "2/115 (1.7%)"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": "Oral graft harvest site; two men in the urethroplasty group had two events."
+        },
+        {
+          "label": "Perioperative wound infection",
+          "values": {
+            "exp": "4/82 (4.9%)",
+            "ctl": "0/115"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Perioperative urinary infection",
+          "values": {
+            "exp": "3/82 (3.7%)",
+            "ctl": "0/115"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Erectile dysfunction during follow-up",
+          "values": {
+            "exp": "4/82 (4.9%)",
+            "ctl": "3/115 (2.6%)"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": "Standalone row; two further urethroplasty patients had erectile dysfunction recorded together with wound infection or wound pain."
+        },
+        {
+          "label": "Wound pain during follow-up",
+          "values": {
+            "exp": "5/82 (6.1%)",
+            "ctl": "1/115 (0.9%)"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Urinary tract infection during follow-up",
+          "values": {
+            "exp": "5/82 (6.1%)",
+            "ctl": "6/115 (5.2%)"
+          },
+          "locator": "AM PDF p20, Table 3",
+          "note": ""
+        },
+        {
+          "label": "At least one serious adverse event",
+          "values": {
+            "exp": "7/82 (8.5%)",
+            "ctl": "10/115 (8.7%)"
+          },
+          "locator": "AM PDF pp20-21, Table 4",
+          "note": "22 serious adverse events in 17 men overall; 2 related to the trial intervention and expected. The Discussion text quotes 10.9% versus 11.3%, which does not match Table 4."
+        },
+        {
+          "label": "Hospital readmission (serious adverse event)",
+          "values": {
+            "exp": "0/82",
+            "ctl": "2/115 (1.7%)"
+          },
+          "locator": "AM PDF p21, Table 4",
+          "note": "One man had three readmissions."
+        },
+        {
+          "label": "Death",
+          "values": {
+            "exp": "0/82",
+            "ctl": "1/115 (0.9%)"
+          },
+          "locator": "AM PDF p21, Table 4",
+          "note": "Deep vein thrombosis and pulmonary embolism, reported as unrelated to the trial intervention."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Allocated procedure performed",
+          "values": {
+            "exp": "71/108 urethroplasty (66%)",
+            "ctl": "93/112 urethrotomy (83%)"
+          },
+          "locator": "AM PDF pp25-26, Supplementary Table 2",
+          "note": ""
+        },
+        {
+          "label": "Other procedure performed (crossover)",
+          "values": {
+            "exp": "22/108 urethrotomy (20%)",
+            "ctl": "11/112 urethroplasty (9.8%)"
+          },
+          "locator": "AM PDF pp25-26, Supplementary Table 2",
+          "note": ""
+        },
+        {
+          "label": "No intervention performed",
+          "values": {
+            "exp": "15/108 (14%)",
+            "ctl": "8/112 (7.1%)"
+          },
+          "locator": "AM PDF pp25-26, Supplementary Table 2",
+          "note": ""
+        },
+        {
+          "label": "Urethroplasty type performed",
+          "values": {
+            "exp": "Dorsal graft 45, anastomotic without transection 9, anastomotic with transection 9, ventral graft 7, perineal urethrostomy 1 (of 71)",
+            "ctl": "Dorsal graft 4, anastomotic without transection 4, ventral graft 2, anastomotic with transection 1 (of 11)"
+          },
+          "locator": "AM PDF p25, Supplementary Table 2",
+          "note": ""
+        },
+        {
+          "label": "Endoscopic procedure performed",
+          "values": {
+            "exp": "Optical cold-knife urethrotomy 15, dilatation 7 (of 22)",
+            "ctl": "Optical cold-knife urethrotomy 90, hot-knife urethrotomy 1, dilatation 2 (of 93)"
+          },
+          "locator": "AM PDF p26, Supplementary Table 2",
+          "note": ""
+        },
+        {
+          "label": "Started intermittent self-dilatation",
+          "values": {
+            "exp": "9/108 (8.3%)",
+            "ctl": "29/112 (26%)"
+          },
+          "locator": "AM PDF p26, Supplementary Table 2",
+          "note": "All 9 in the urethroplasty group had crossed over to urethrotomy."
+        },
+        {
+          "label": "Included in the primary symptom analysis",
+          "values": {
+            "exp": "69/108",
+            "ctl": "90/112"
+          },
+          "locator": "AM PDF p9",
+          "note": "Of those excluded, 15 of 39 (urethroplasty) and 8 of 22 (urethrotomy) had no surgery at all."
+        },
+        {
+          "label": "Recruitment",
+          "value": "1,262 men identified; 222 randomized between 27 February 2013 and 23 December 2015 at 38 of 53 participating NHS providers",
+          "locator": "AM PDF pp5, 9",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "open-2020-hta",
+      "kind": "secondary",
+      "label": "NIHR HTA monograph",
+      "published": "2020-11-01",
+      "dateApprox": true,
+      "dateLocator": "PMC7750862 (Health Technol Assess 2020 Nov; month only)",
+      "cutoff": null,
+      "citation": "Pickard R, Goulao B, Carnell S, et al. \"Open urethroplasty versus endoscopic urethrotomy for recurrent urethral stricture in men: the OPEN RCT.\" *Health Technol Assess.* 2020;24(61):1-110. doi:10.3310/hta24610",
+      "doi": "10.3310/hta24610",
+      "pmid": "33228846",
+      "followUp": "24 months after randomization",
+      "followUpLocator": "PMC7750862, Abstract (Design)",
+      "results": [
+        {
+          "endpoint": "Voiding symptom score",
+          "role": "primary",
+          "measure": "Mean difference in area under the curve of repeated 0-24 voiding symptom scores",
+          "effect": {
+            "type": "difference",
+            "value": -0.36,
+            "ci": [
+              -1.78,
+              1.02
+            ],
+            "p": "0.6"
+          },
+          "met": null,
+          "note": "The monograph abstract prints -1.78 as the lower confidence limit; its results text and tables and the journal report print -1.74. Primary analysis included 69 (63%) of 109 and 90 (80%) of 113 men allocated.",
+          "locator": "PMC7750862, Abstract (Results, Limitations)"
+        },
+        {
+          "endpoint": "Voiding symptom score",
+          "role": "descriptive",
+          "measure": "Mean (SD) 0-24 voiding symptom score at baseline and 24 months after randomization",
+          "values": {
+            "exp": "13.4 (4.5) to 6 (5.5)",
+            "ctl": "13.2 (4.7) to 6.4 (5.3)"
+          },
+          "note": "",
+          "locator": "PMC7750862, Abstract (Results)"
+        },
+        {
+          "endpoint": "Reintervention",
+          "role": "key-secondary",
+          "measure": "Time to reintervention (hazard ratio, urethroplasty versus urethrotomy)",
+          "effect": {
+            "type": "HR",
+            "value": 0.52,
+            "ci": [
+              0.31,
+              0.89
+            ],
+            "p": "0.02"
+          },
+          "met": null,
+          "note": "",
+          "locator": "PMC7750862, Abstract (Results)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative complications requiring reintervention",
+          "values": {
+            "exp": "2",
+            "ctl": "5"
+          },
+          "locator": "PMC7750862, Abstract (Results)",
+          "note": "Counts as printed; the urethrotomy group count includes one death from pulmonary embolism."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/OPEN-Pickard-HTA-2020.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "open-2021-cost",
+      "kind": "secondary",
+      "label": "Cost-effectiveness analysis",
+      "published": "2021-05-03",
+      "cutoff": null,
+      "citation": "Shen J, Vale L, Goulao B, et al. \"Endoscopic urethrotomy versus open urethroplasty for men with bulbar urethral stricture: the OPEN randomised trial cost-effectiveness analysis.\" *BMC Urol.* 2021;21(1):76. doi:10.1186/s12894-021-00836-1",
+      "doi": "10.1186/s12894-021-00836-1",
+      "pmid": "33941140",
+      "followUp": "24 months within trial; 10-year Markov model",
+      "followUpLocator": "PMC8094457, Abstract (Methods)",
+      "results": [
+        {
+          "endpoint": "Cost",
+          "role": "secondary",
+          "measure": "Base-case mean total cost in pounds sterling (2017 prices) at 24 months; difference, urethroplasty minus urethrotomy",
+          "values": {
+            "exp": "4869",
+            "ctl": "2721"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2148,
+            "ci": [
+              689,
+              3606
+            ]
+          },
+          "note": "Base case, 46 men per group in the cost-utility analysis (Table 3).",
+          "locator": "PMC8094457, Table 3; Abstract (Results)"
+        },
+        {
+          "endpoint": "Quality-adjusted life years",
+          "role": "secondary",
+          "measure": "Base-case mean QALYs at 24 months after randomization (EQ-5D-5L); difference, urethroplasty minus urethrotomy",
+          "values": {
+            "exp": "1.74",
+            "ctl": "1.75"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.01,
+            "ci": [
+              -0.17,
+              0.14
+            ]
+          },
+          "note": "Urethrotomy was less costly and at least as effective, so urethroplasty was dominated in the base case.",
+          "locator": "PMC8094457, Table 3; Abstract (Results)"
+        },
+        {
+          "endpoint": "Cost-effectiveness",
+          "role": "secondary",
+          "measure": "10-year Markov model base case: total cost in pounds sterling and QALYs per patient",
+          "values": {
+            "exp": "8026; 7.61 QALYs",
+            "ctl": "6553; 7.60 QALYs"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Incremental cost-effectiveness ratio for urethroplasty 301,073 pounds per QALY; the probability that urethroplasty was cost-effective was 2% at a 50,000-pound threshold.",
+          "locator": "PMC8094457, Table 4"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "robust",
+      "note": "Both trials used endoscopic treatment as the comparator in recurrent strictures; ROBUST III tested a paclitaxel-coated balloon, OPEN tested urethroplasty."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/open",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

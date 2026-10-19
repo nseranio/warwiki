@@ -1,0 +1,547 @@
+{
+  "id": "courage",
+  "name": "COURAGE",
+  "aliases": [
+    "URO-901-3005",
+    "Study 3005"
+  ],
+  "nct": "NCT03902080",
+  "area": [
+    "oab",
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "add-on-in-men"
+    }
+  ],
+  "question": "Does adding vibegron to an α-blocker, with or without a 5α-reductase inhibitor, improve persistent overactive bladder symptoms in men treated for BPH?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1105,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Vibegron 75 mg once daily added to an α-blocker with or without a 5α-reductase inhibitor",
+        "role": "experimental",
+        "n": 551
+      },
+      {
+        "key": "ctl",
+        "label": "matched placebo added to an α-blocker with or without a 5α-reductase inhibitor",
+        "role": "control",
+        "n": 554
+      }
+    ],
+    "population": "1,105 men aged 45 years or older with at least 8 micturitions and 3 urgency episodes daily despite a stable α-blocker, with or without a 5α-reductase inhibitor, for BPH.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized superiority trial",
+    "locator": "PMC12721610 Methods and Results, Patients; arm sizes from ClinicalTrials.gov NCT03902080 participant flow"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary endpoints met and all secondary endpoints improved; retention occurred in under 1% of either arm.",
+  "takeaway": "In 1,105 men with persistent overactive bladder symptoms despite an α-blocker for BPH, adding vibegron 75 mg reduced daily micturitions and urgency episodes more than placebo at 12 weeks (differences −0.74 and −0.95 per day); urinary retention occurred in under 1% of either arm.",
+  "reports": [
+    {
+      "id": "courage-2024",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2024-05-06",
+      "cutoff": null,
+      "citation": "Staskin D, Owens-Grillo J, Thomas E, et al. Efficacy and safety of vibegron for persistent symptoms of overactive bladder in men being pharmacologically treated for benign prostatic hyperplasia: results from the phase 3 randomized controlled COURAGE trial. *J Urol.* 2024;212(2):256-266. doi:10.1097/JU.0000000000003999",
+      "doi": "10.1097/JU.0000000000003999",
+      "pmid": "38708869",
+      "followUp": "12 weeks for the coprimary endpoints; 24-week double-blind treatment period",
+      "followUpLocator": "PMC12721610 (full text), Methods, Study Design; Results, Coprimary Efficacy End Points",
+      "results": [
+        {
+          "endpoint": "Daily micturitions",
+          "role": "primary",
+          "measure": "Week 12 least-squares mean change from baseline in mean daily micturitions (per day); least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "−2.04",
+            "ctl": "−1.30"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.74,
+            "ci": [
+              -1.02,
+              -0.46
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Coprimary endpoint; full analysis set of 1,080 (vibegron 538, placebo 542); mixed model for repeated measures.",
+          "locator": "PMC12721610 (full text), Results, Coprimary Efficacy End Points; Figure 2A"
+        },
+        {
+          "endpoint": "Urgency episodes",
+          "role": "primary",
+          "measure": "Week 12 least-squares mean change from baseline in mean daily urgency episodes (per day); least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "−2.88",
+            "ctl": "−1.93"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.95,
+            "ci": [
+              -1.37,
+              -0.54
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Coprimary endpoint; full analysis set of 1,080.",
+          "locator": "PMC12721610 (full text), Results, Coprimary Efficacy End Points; Figure 2B"
+        },
+        {
+          "endpoint": "Nocturia episodes",
+          "role": "key-secondary",
+          "measure": "Week 12 least-squares mean change from baseline in nightly nocturia episodes; least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "−0.88",
+            "ctl": "−0.66"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.22,
+            "ci": [
+              -0.36,
+              -0.09
+            ],
+            "p": "0.002"
+          },
+          "met": true,
+          "note": "Secondary endpoints were tested sequentially after both coprimary endpoints; full analysis set of 1,080.",
+          "locator": "PMC12721610 (full text), Results, Secondary Efficacy End Points; Figure 3A"
+        },
+        {
+          "endpoint": "Urge incontinence episodes",
+          "role": "key-secondary",
+          "measure": "Week 12 least-squares mean change from baseline in daily urge urinary incontinence episodes; least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "−2.19",
+            "ctl": "−1.39"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.8,
+            "ci": [
+              -1.33,
+              -0.27
+            ],
+            "p": "0.003"
+          },
+          "met": true,
+          "note": "Full analysis set for incontinence: 297 men with at least 1 baseline incontinence episode per day (vibegron 146, placebo 151).",
+          "locator": "PMC12721610 (full text), Results, Secondary Efficacy End Points; Figure 3B"
+        },
+        {
+          "endpoint": "IPSS storage score",
+          "role": "key-secondary",
+          "measure": "Week 12 least-squares mean change from baseline in IPSS storage score; least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "−3.0",
+            "ctl": "−2.1"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.9,
+            "ci": [
+              -1.2,
+              -0.6
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Full analysis set of 1,080.",
+          "locator": "PMC12721610 (full text), Results, Secondary Efficacy End Points; Figure 4A"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "key-secondary",
+          "measure": "Week 12 least-squares mean change from baseline in volume voided per micturition (mL); least-squares mean difference, vibegron minus placebo",
+          "values": {
+            "exp": "+25.63 mL",
+            "ctl": "+10.56 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15.07,
+            "ci": [
+              9.13,
+              21.02
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Full analysis set of 1,080.",
+          "locator": "PMC12721610 (full text), Results, Secondary Efficacy End Points; Figure 4B"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "exp": "249/553 (45.0%)",
+            "ctl": "215/551 (39.0%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2; safety analysis set",
+          "note": "Safety set: 553 vibegron (including 2 placebo-assigned participants who took vibegron) and 551 placebo. Treatment-related events: 55 (9.9%) versus 52 (9.4%)."
+        },
+        {
+          "label": "Serious treatment-emergent adverse events",
+          "values": {
+            "exp": "24/553 (4.3%)",
+            "ctl": "16/551 (2.9%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2",
+          "note": "No serious event was judged treatment related by the investigator; no deaths."
+        },
+        {
+          "label": "Adverse events leading to discontinuation",
+          "values": {
+            "exp": "16/553 (2.9%)",
+            "ctl": "15/551 (2.7%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2",
+          "note": ""
+        },
+        {
+          "label": "Hypertension",
+          "values": {
+            "exp": "50/553 (9.0%)",
+            "ctl": "46/551 (8.3%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2",
+          "note": "Preexisting hypertension was present in 64.9% (vibegron) and 66.6% (placebo) of the full analysis set."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "14/553 (2.5%)",
+            "ctl": "12/551 (2.2%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2",
+          "note": ""
+        },
+        {
+          "label": "Urinary retention (adverse event of special interest)",
+          "values": {
+            "exp": "5/553 (0.9%)",
+            "ctl": "3/551 (0.5%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2; Results, Safety",
+          "note": "Retention required catheterization with postvoid residual of at least 300 mL, or at least 200 mL with symptoms. Retention or increased residual urine volume occurred in under 1% of either arm. Men with prior retention or Qmax under 5 mL/s were excluded."
+        },
+        {
+          "label": "Neoplasms",
+          "values": {
+            "exp": "6/553 (1.1%)",
+            "ctl": "1/551 (0.2%)"
+          },
+          "locator": "PMC12721610 (full text), Table 2 and footnote",
+          "note": "All diagnosed within 80 days of starting study drug; none judged treatment related. Basal cell carcinoma was the only type in more than 1 participant."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sites and conduct",
+          "value": "82 sites in North America and Europe; March 7, 2019 to June 15, 2023",
+          "locator": "PMC12721610 (full text), Results, Patients"
+        },
+        {
+          "label": "Trial periods",
+          "value": "Up to 5-week screening, 2-week single-blind placebo run-in, 24-week double-blind treatment; optional 28-week extension",
+          "locator": "PMC12721610 (full text), Methods, Study Design"
+        },
+        {
+          "label": "Randomized, dosed and completed",
+          "value": "1,105 randomized; 1,104 received at least 1 dose; 965 (87.3%) completed",
+          "locator": "PMC12721610 (full text), Results, Patients; Figure 1"
+        },
+        {
+          "label": "Concurrent 5α-reductase inhibitor with α-blocker",
+          "values": {
+            "exp": "126/538 (23.4%)",
+            "ctl": "123/542 (22.7%)"
+          },
+          "locator": "PMC12721610 (full text), Table 1; full analysis set",
+          "note": "All men took an α-blocker for at least 3 months before screening; a 5α-reductase inhibitor was optional (at least 6 months)."
+        },
+        {
+          "label": "Baseline daily micturitions, median",
+          "values": {
+            "exp": "11.3",
+            "ctl": "11.7"
+          },
+          "locator": "PMC12721610 (full text), Table 1",
+          "note": "Baseline median daily urgency episodes 9.0 (vibegron) versus 9.3 (placebo)."
+        },
+        {
+          "label": "Prior OAB drug use",
+          "values": {
+            "exp": "anticholinergic 77/538 (14.3%); β3 agonist 29/538 (5.4%)",
+            "ctl": "anticholinergic 81/542 (14.9%); β3 agonist 25/542 (4.6%)"
+          },
+          "locator": "PMC12721610 (full text), Table 1",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "courage-2025-responder",
+      "kind": "post-hoc",
+      "label": "Responder analysis",
+      "published": "2025-09-01",
+      "cutoff": null,
+      "citation": "Peters KM, Owens-Grillo J, Thomas E, et al. Clinically meaningful improvements with vibegron in men with overactive bladder and benign prostatic hyperplasia: a responder analysis of the phase 3 COURAGE trial. *Urology.* 2025;206:150-156. doi:10.1016/j.urology.2025.08.051",
+      "doi": "10.1016/j.urology.2025.08.051",
+      "pmid": "40902908",
+      "followUp": "Week 12 (week 24 results reported as generally sustained)",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Micturition responders",
+          "role": "exploratory",
+          "measure": "Week 12 proportion with 8 or fewer daily micturitions",
+          "values": {
+            "exp": "33.3%",
+            "ctl": "20.5%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": null,
+          "note": "Post hoc responder definition; abstract reports percentages and P values only.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Nocturia responders",
+          "role": "exploratory",
+          "measure": "Week 12 proportion with 1 or fewer nightly nocturia episodes",
+          "values": {
+            "exp": "34.6%",
+            "ctl": "26.8%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0036"
+          },
+          "met": null,
+          "note": "Post hoc responder definition; abstract reports percentages and P values only.",
+          "locator": "abstract"
+        },
+        {
+          "endpoint": "Urge incontinence responders",
+          "role": "exploratory",
+          "measure": "Week 12 proportion with 1 or fewer daily urge urinary incontinence episodes among men with incontinence at baseline (full analysis set for incontinence: vibegron 146, placebo 151)",
+          "values": {
+            "exp": "65.8%",
+            "ctl": "53.0%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0267"
+          },
+          "met": null,
+          "note": "Post hoc responder definition; abstract reports percentages and P values only.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/courage-2025-responder.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "courage-2025-bladder-function",
+      "kind": "secondary",
+      "label": "Bladder function and urodynamics",
+      "published": "2025-12-09",
+      "cutoff": null,
+      "citation": "Rovner ES, Owens-Grillo J, Thomas E, et al. Bladder function and safety of vibegron in men with overactive bladder receiving treatment for benign prostatic hyperplasia: outcomes from the phase 3 randomized controlled COURAGE trial. *Neurourol Urodyn.* 2026;45(2):299-304. doi:10.1002/nau.70199",
+      "doi": "10.1002/nau.70199",
+      "pmid": "41363221",
+      "followUp": "24 weeks (uroflowmetry, postvoid residual, IPSS); urodynamics at week 12 in a substudy",
+      "followUpLocator": "PMC12893031 (full text), Methods; Results",
+      "results": [
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Least-squares mean difference in change from baseline in postvoid residual volume at week 12 (mL), vibegron minus placebo",
+          "effect": {
+            "type": "difference",
+            "value": 3.04,
+            "ci": [
+              -1.28,
+              7.36
+            ]
+          },
+          "note": "Safety analysis set (553 vibegron, 551 placebo); baseline postvoid residual under 100 mL was required.",
+          "locator": "PMC12893031 (full text), Results, Bladder Function Safety Assessments; Figure 1A"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Least-squares mean difference in change from baseline in postvoid residual volume at week 24 (mL), vibegron minus placebo",
+          "effect": {
+            "type": "difference",
+            "value": 7.17,
+            "ci": [
+              3.12,
+              11.22
+            ]
+          },
+          "note": "Safety analysis set.",
+          "locator": "PMC12893031 (full text), Results, Bladder Function Safety Assessments; Figure 1A"
+        },
+        {
+          "endpoint": "Uroflow Qmax",
+          "role": "secondary",
+          "measure": "Least-squares mean difference in change from baseline in uroflowmetry Qmax at week 24 (mL/s), vibegron minus placebo",
+          "effect": {
+            "type": "difference",
+            "value": 0.05,
+            "ci": [
+              -0.95,
+              1.05
+            ]
+          },
+          "note": "Safety analysis set.",
+          "locator": "PMC12893031 (full text), Results, Bladder Function Safety Assessments; Figure 1B"
+        },
+        {
+          "endpoint": "IPSS total score",
+          "role": "secondary",
+          "measure": "Mean (SD) change from baseline in IPSS total score at week 24",
+          "values": {
+            "exp": "−7.3 (7.0)",
+            "ctl": "−5.7 (7.1)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Descriptive; no between-group test reported.",
+          "locator": "PMC12893031 (full text), Results, Bladder Function Safety Assessments"
+        },
+        {
+          "endpoint": "Substudy Qmax",
+          "role": "secondary",
+          "measure": "Least-squares mean difference in change from baseline in urodynamic Qmax at week 12 (mL/s), vibegron minus placebo",
+          "effect": {
+            "type": "difference",
+            "value": 2.75,
+            "ci": [
+              0.16,
+              5.34
+            ]
+          },
+          "note": "Urodynamics evaluable set of 43 (vibegron 21, placebo 22) from 95 men randomized to the substudy. Noninferiority margin −3 mL/s; the authors report noninferiority confirmed.",
+          "locator": "PMC12893031 (full text), Results, Study Participants and Urodynamic Assessments; Figure 2A"
+        },
+        {
+          "endpoint": "Substudy detrusor pressure at Qmax",
+          "role": "secondary",
+          "measure": "Least-squares mean difference in change from baseline in detrusor pressure at Qmax at week 12 (cmH2O), vibegron minus placebo",
+          "effect": {
+            "type": "difference",
+            "value": 2.86,
+            "ci": [
+              -13.52,
+              19.25
+            ]
+          },
+          "note": "Urodynamics evaluable set of 43. Noninferiority margin 15 cmH2O; the conventional interval crossed the margin and a post hoc bootstrap one-sided 95% interval (upper limit 14.61) did not.",
+          "locator": "PMC12893031 (full text), Results, Urodynamic Assessments; Figure 2B"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary retention adverse event",
+          "values": {
+            "exp": "5/553 (0.9%)",
+            "ctl": "4/551 (0.7%)"
+          },
+          "locator": "PMC12893031 (full text), Results, Bladder Function Safety Assessments; Table 2",
+          "note": "Of 9 retention cases, 8 had at least 1 baseline retention risk factor (Qmax under 12 mL/s, prostate volume at least 40 mL, or PSA at least 1.4 µg/L)."
+        },
+        {
+          "label": "Residual urine volume increase adverse event",
+          "values": {
+            "exp": "1/553 (0.2%)",
+            "ctl": "3/551 (0.5%)"
+          },
+          "locator": "PMC12893031 (full text), Table 2",
+          "note": "Clinically significant postvoid residual increase not meeting the retention definition."
+        },
+        {
+          "label": "Week 24 postvoid residual 100 to under 200 mL",
+          "values": {
+            "exp": "24/493 (4.9%)",
+            "ctl": "13/482 (2.7%)"
+          },
+          "locator": "PMC12893031 (full text), Table 1",
+          "note": "Week 24 residual of 200 to under 300 mL: 3/493 (0.6%) versus 0/482; none at 300 mL or more in either arm."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "14/553 (2.5%)",
+            "ctl": "12/551 (2.2%)"
+          },
+          "locator": "PMC12893031 (full text), Table 2",
+          "note": "Cystitis: 0 versus 1 (0.2%)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "At least 1 baseline risk factor for retention",
+          "values": {
+            "exp": "78.8%",
+            "ctl": "78.4%"
+          },
+          "locator": "PMC12893031 (full text), Results, Study Participants",
+          "note": "Denominators are the safety analysis set."
+        },
+        {
+          "label": "Urodynamics substudy",
+          "value": "95 randomized; 64 with evaluable baseline Qmax and detrusor pressure at Qmax; 48 completed postbaseline studies; 43 evaluable (vibegron 21, placebo 22)",
+          "locator": "PMC12893031 (full text), Results, Study Participants"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "extends",
+      "target": "empowur",
+      "note": "Tests the EMPOWUR vibegron dose as add-on therapy in men taking BPH medication; EAU notes EMPOWUR enrolled mostly women."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/courage",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

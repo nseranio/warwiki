@@ -1,0 +1,660 @@
+{
+  "id": "mtops",
+  "name": "MTOPS",
+  "aliases": [
+    "Medical Therapy of Prostatic Symptoms"
+  ],
+  "nct": "NCT00021814",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "combination"
+    }
+  ],
+  "question": "Do doxazosin, finasteride or both together delay clinical progression of BPH in men with lower urinary tract symptoms?",
+  "design": {
+    "phase": "not stated",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 3047,
+    "arms": [
+      {
+        "key": "pbo",
+        "label": "Placebo",
+        "role": "control",
+        "n": 737
+      },
+      {
+        "key": "dox",
+        "label": "doxazosin 4 to 8 mg daily",
+        "role": "experimental",
+        "n": 756
+      },
+      {
+        "key": "fin",
+        "label": "finasteride 5 mg daily",
+        "role": "experimental",
+        "n": 768
+      },
+      {
+        "key": "combo",
+        "label": "doxazosin plus finasteride",
+        "role": "experimental",
+        "n": 786
+      }
+    ],
+    "population": "3,047 men aged 50 years or older with lower urinary tract symptoms from BPH (AUA symptom score 8 to 30 or 35, maximal flow 4 to 15 mL per second) and no prior BPH treatment.",
+    "description": "Multicenter, double-blind, placebo-controlled four-arm randomized trial",
+    "locator": "NEJM PDF pp2-4, Table 1; journal pp2388-2390"
+  },
+  "verdict": "positive",
+  "verdictNote": "Combination beat either drug alone; doxazosin did not reduce retention or invasive therapy.",
+  "takeaway": "In 3,047 men with LUTS from BPH followed a mean of 4.5 years, doxazosin plus finasteride cut overall clinical progression risk by 66% versus placebo, more than doxazosin (39%) or finasteride (34%) alone; only finasteride and the combination significantly reduced acute retention and invasive therapy.",
+  "reports": [
+    {
+      "id": "mtops-2003",
+      "kind": "primary",
+      "label": "Primary report (mean 4.5 years)",
+      "published": "2003-12-18",
+      "cutoff": null,
+      "citation": "McConnell JD, Roehrborn CG, Bautista OM, et al. The long-term effect of doxazosin, finasteride, and combination therapy on the clinical progression of benign prostatic hyperplasia. *N Engl J Med.* 2003;349(25):2387-2398. doi:10.1056/NEJMoa030656",
+      "doi": "10.1056/NEJMoa030656",
+      "pmid": "14681504",
+      "followUp": "Mean 4.5 years in the full-scale study (6.0 years in the 116-man pilot); 75% of men had at least 4 years of data",
+      "followUpLocator": "NEJM PDF pp4-5; journal pp2390-2391",
+      "results": [
+        {
+          "endpoint": "Overall clinical progression",
+          "role": "primary",
+          "measure": "Overall clinical progression, events per 100 person-years over the study (any of: confirmed AUA symptom score rise of 4 or more points, acute urinary retention, incontinence, renal insufficiency, recurrent UTI or urosepsis)",
+          "values": {
+            "pbo": "4.5 (128 events, n=737)",
+            "dox": "2.7 (85 events, n=756)",
+            "fin": "2.9 (89 events, n=768)",
+            "combo": "1.5 (49 events, n=786)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for combination versus placebo"
+          },
+          "met": true,
+          "note": "Risk reduction versus placebo (95% CI): doxazosin 39% (20 to 53; P<0.001), finasteride 34% (14 to 50; P=0.002), combination 66% (54 to 76; P<0.001); each passed the P<0.0157 threshold set for active-versus-placebo comparisons. Intention to treat; invasive BPH therapy and prostate or bladder cancer were censored as competing events.",
+          "locator": "NEJM PDF pp3-5, Table 2; journal pp2389-2391"
+        },
+        {
+          "endpoint": "Overall clinical progression, pairwise active comparisons",
+          "role": "secondary",
+          "measure": "Combination therapy versus each single drug, overall clinical progression over the study",
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for combination versus doxazosin and for combination versus finasteride"
+          },
+          "note": "Doxazosin and finasteride did not differ significantly from each other. The protocol did not specify active-versus-active comparisons; they used a Bonferroni-adjusted threshold of P<0.0167. Number needed to treat to prevent one progression event over 4 years: 8.4 for combination, 13.7 for doxazosin, 15.0 for finasteride.",
+          "locator": "NEJM PDF pp3-5; journal pp2389-2391"
+        },
+        {
+          "endpoint": "Overall clinical progression, 4-year cumulative incidence",
+          "role": "secondary",
+          "measure": "Cumulative incidence of overall clinical progression at 4 years, among the 75% of men with at least 4 years of follow-up",
+          "values": {
+            "pbo": "17% (95% CI 14 to 20; 122 events)",
+            "dox": "10% (8 to 12; 73 events)",
+            "fin": "10% (8 to 13; 78 events)",
+            "combo": "5% (4 to 7; 42 events)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for combination versus placebo"
+          },
+          "note": "P values versus placebo: doxazosin <0.001, finasteride 0.002, combination <0.001.",
+          "locator": "NEJM PDF p4-5, Table 2; journal pp2390-2391"
+        },
+        {
+          "endpoint": "Symptom score rise of 4 or more points",
+          "role": "secondary",
+          "measure": "Confirmed AUA symptom score increase of 4 or more points, events per 100 person-years",
+          "values": {
+            "pbo": "3.6",
+            "dox": "1.9",
+            "fin": "2.5",
+            "combo": "1.3"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "This was 78% of all progression events. Risk reduction versus placebo (95% CI): doxazosin 45% (25 to 60; P<0.001), finasteride 30% (6 to 48; P=0.016), combination 64% (48 to 75; P<0.001). Differences between finasteride and doxazosin and between combination and doxazosin were not significant.",
+          "locator": "NEJM PDF pp4-6, Table 2; journal pp2390-2392"
+        },
+        {
+          "endpoint": "Acute urinary retention",
+          "role": "secondary",
+          "measure": "Acute urinary retention, events per 100 person-years over the study",
+          "values": {
+            "pbo": "0.6 (18 events)",
+            "dox": "0.4 (9 events by year 4)",
+            "fin": "0.2 (6 events)",
+            "combo": "0.1 (4 events)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.009 finasteride and <0.001 combination, each versus placebo"
+          },
+          "note": "Risk reduction versus placebo (95% CI): doxazosin 35% (-31 to 67; cumulative incidence P=0.23), finasteride 68% (21 to 87), combination 81% (44 to 93). Four-year cumulative incidence: 2% placebo, 1% doxazosin, below 1% finasteride and combination. Retention after an obvious precipitating cause such as anesthesia counted only if a voiding trial without a catheter failed. Doxazosin delayed but did not significantly reduce retention.",
+          "locator": "NEJM PDF pp5-7, Table 2 and Figure 2A; journal pp2391-2393"
+        },
+        {
+          "endpoint": "Invasive therapy for BPH",
+          "role": "secondary",
+          "measure": "Invasive therapy for BPH, events per 100 person-years over the study",
+          "values": {
+            "pbo": "1.3 (40 men)",
+            "dox": "1.3",
+            "fin": "0.5",
+            "combo": "0.4"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for finasteride and for combination, each versus placebo"
+          },
+          "note": "Risk reduction versus placebo (95% CI): doxazosin 3% (-48 to 37), finasteride 64% (34 to 80), combination 67% (40 to 82). Cumulative number of men with invasive therapy by year 4: 37, 26, 14 and 12 (cumulative incidence 5%, 3%, 2%, 1%). Number needed to treat to prevent one man from needing invasive therapy over 4 years: 25.9 for combination, 29.0 for finasteride, 60.1 for doxazosin. The protocol did not standardize indications for invasive therapy.",
+          "locator": "NEJM PDF pp5-7, Table 2 and Figure 2B; journal pp2391-2393"
+        },
+        {
+          "endpoint": "AUA symptom score",
+          "role": "key-secondary",
+          "measure": "Mean reduction in AUA symptom score at 4 years",
+          "values": {
+            "pbo": "4.9",
+            "dox": "6.6",
+            "fin": "5.6",
+            "combo": "7.4"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for doxazosin and combination, 0.001 for finasteride, each versus placebo over the study"
+          },
+          "met": true,
+          "note": "Combination was superior to finasteride (P<0.001) and doxazosin (P=0.006); doxazosin was superior to finasteride (P=0.001). Median change at year 4 (Table 3): -4.0 placebo (n=534), -6.0 doxazosin (n=582), -5.0 finasteride (n=565), -7.0 combination (n=598). Secondary outcome tested with nominal P<0.05.",
+          "locator": "NEJM PDF pp7-8, Table 3; journal pp2393-2394"
+        },
+        {
+          "endpoint": "Maximal urinary flow rate",
+          "role": "key-secondary",
+          "measure": "Median change in maximal urinary flow rate at 4 years, mL per second",
+          "values": {
+            "pbo": "+1.4 (n=519)",
+            "dox": "+2.5 (n=567)",
+            "fin": "+2.2 (n=551)",
+            "combo": "+3.7 (n=574)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each active group versus placebo over the study"
+          },
+          "met": true,
+          "note": "The text reports mean improvements at 4 years of 4.0 mL per second with doxazosin, 3.2 with finasteride and 5.1 with combination. Combination was superior to each single drug over the study (P<0.001 for each). Secondary outcome tested with nominal P<0.05.",
+          "locator": "NEJM PDF p8, Table 3; journal p2394"
+        },
+        {
+          "endpoint": "Serum PSA",
+          "role": "descriptive",
+          "measure": "Median change in serum PSA at 4 years, percent",
+          "values": {
+            "pbo": "+15% (n=618)",
+            "dox": "+13% (n=655)",
+            "fin": "-50% (n=631)",
+            "combo": "-50% (n=673)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "",
+          "locator": "NEJM PDF p8, Table 3; journal p2394"
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "descriptive",
+          "measure": "Median change in transrectal ultrasound prostate volume after a mean 4.5 years",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Placebo or doxazosin (1,148 men): median increase of 24%. Finasteride or combination in men with large baseline glands (427 men): median decrease of 19%.",
+          "locator": "NEJM PDF p8; journal p2394"
+        },
+        {
+          "endpoint": "Number needed to treat in high-risk subgroups",
+          "role": "secondary",
+          "measure": "Number needed to treat over 4 years for overall clinical progression in men with PSA above 4.0 ng/mL (20% of men) or baseline prostate volume above 40 mL (30% of men)",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Preplanned secondary analysis. For progression: 4.7 (PSA above 4.0) and 4.9 (volume above 40 mL) with combination, 7.2 in both subgroups with finasteride. For invasive therapy with combination: 23.1 and 15.9. Baseline PSA and prostate volume predicted progression in the placebo and doxazosin groups but not in the finasteride or combination groups.",
+          "locator": "NEJM PDF pp5-7, p10; journal pp2391-2393, 2396"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Erectile dysfunction",
+          "values": {
+            "pbo": "3.32",
+            "dox": "3.56",
+            "fin": "4.53",
+            "combo": "5.11"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years as of September 30, 2002 (person-years 3,489 placebo, 3,652 doxazosin, 3,600 finasteride, 3,832 combination). Finasteride and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Abnormal ejaculation",
+          "values": {
+            "pbo": "0.83",
+            "dox": "1.10",
+            "fin": "1.78",
+            "combo": "3.05"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Finasteride and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Decreased libido",
+          "values": {
+            "pbo": "1.40",
+            "dox": "1.56",
+            "fin": "2.36",
+            "combo": "2.51"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Finasteride and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Dizziness",
+          "values": {
+            "pbo": "2.29",
+            "dox": "4.41",
+            "fin": "2.33",
+            "combo": "5.35"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Doxazosin and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Postural hypotension",
+          "values": {
+            "pbo": "2.29",
+            "dox": "4.03",
+            "fin": "2.56",
+            "combo": "4.33"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Doxazosin and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Asthenia",
+          "values": {
+            "pbo": "2.06",
+            "dox": "4.08",
+            "fin": "1.56",
+            "combo": "4.20"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Doxazosin and combination were above placebo at P<0.05."
+        },
+        {
+          "label": "Peripheral edema",
+          "values": {
+            "pbo": "0.66",
+            "dox": "0.88",
+            "fin": "0.72",
+            "combo": "1.25"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Only combination was above placebo at P<0.05."
+        },
+        {
+          "label": "Dyspnea",
+          "values": {
+            "pbo": "0.57",
+            "dox": "0.93",
+            "fin": "0.56",
+            "combo": "1.20"
+          },
+          "locator": "NEJM PDF p9, Table 4; journal p2395",
+          "note": "Rate per 100 person-years. Only combination was above placebo at P<0.05."
+        },
+        {
+          "label": "Discontinuation of study drug",
+          "locator": "NEJM PDF p8; journal p2394",
+          "note": "Among men receiving active therapy, 27% had discontinued doxazosin and 24% finasteride by the end of the study; 18% of the combination group had discontinued both drugs. Most often the reason was adverse effects."
+        },
+        {
+          "label": "Breast cancer",
+          "locator": "NEJM PDF pp8,10; journal pp2394,2396",
+          "note": "Diagnosed in four men who received finasteride alone or with doxazosin; the authors attributed the excess over other finasteride trials to chance."
+        },
+        {
+          "label": "Renal insufficiency from BPH and recurrent urinary infection",
+          "locator": "NEJM PDF pp4-5, Table 2; journal pp2390-2391",
+          "note": "No man had renal insufficiency from BPH. Recurrent UTI or urosepsis occurred in five men, too few for comparison."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrollment and sites",
+          "value": "3,047 of 4,391 men screened were randomized at 17 clinical centers from 1993 to 1998: 116 in a pilot phase and 2,931 in the full-scale study.",
+          "locator": "NEJM PDF pp2-3; journal pp2388-2389"
+        },
+        {
+          "label": "Eligibility",
+          "value": "Men 50 years or older with an AUA symptom score of 8 to 35 (8 to 30 in the full-scale study), maximal flow 4 to 15 mL per second with voided volume of at least 125 mL; no prior medical or surgical BPH treatment, no supine blood pressure below 90/70 mm Hg, no PSA above 10 ng/mL.",
+          "locator": "NEJM PDF p2; journal p2388"
+        },
+        {
+          "label": "Dosing",
+          "value": "Finasteride 5 mg daily. Doxazosin started at 1 mg and doubled weekly to 8 mg daily; 4 mg if 8 mg was not tolerated, and men who tolerated neither counted as having stopped doxazosin. Tablets taken at bedtime.",
+          "locator": "NEJM PDF p2; journal p2388"
+        },
+        {
+          "label": "Baseline prostate and symptoms",
+          "value": "Mean transrectal ultrasound volume 36.3 mL (median 31.0); mean AUA symptom score 16.9; mean maximal flow 10.5 mL per second; mean postvoid residual 68.1 mL; median PSA 1.6 ng/mL; mean age 62.6 years.",
+          "locator": "NEJM PDF p4, Table 1; journal p2390"
+        },
+        {
+          "label": "Race or ethnic group",
+          "value": "White 82.3%, Black 8.9%, Hispanic 7.3%, other 1.5%.",
+          "locator": "NEJM PDF p4, Table 1; journal p2390"
+        },
+        {
+          "label": "Composition of progression events",
+          "value": "Of 351 events, about 78% were symptom-score increases of 4 or more points, 12% acute urinary retention and 9% incontinence.",
+          "locator": "NEJM PDF pp4-5; journal pp2390-2391"
+        },
+        {
+          "label": "Type of invasive therapy",
+          "value": "84% of invasive procedures were endoscopic (for example transurethral prostatectomy) or open surgery; the remainder were minimally invasive (for example transurethral microwave therapy).",
+          "locator": "NEJM PDF p7; journal p2393"
+        },
+        {
+          "label": "Loss to follow-up",
+          "values": {
+            "pbo": "2.5 per 100 person-years",
+            "dox": "2.2",
+            "fin": "3.3",
+            "combo": "2.4"
+          },
+          "locator": "NEJM PDF p3; journal p2389",
+          "note": "Below the 5% per year assumed in the sample-size calculation. Men who stopped randomized treatment were still followed for the primary and secondary outcomes."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/.claude/projects/-Users-joyboy-Documents-WARWIKI-warwiki/9d03f117-3fc6-4067-a0c4-5962e10dc9cb/tool-results/webfetch-1792414446085-5ldb1e.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "mtops-2006-volume",
+      "kind": "secondary",
+      "label": "Baseline prostate volume of 25 mL or more",
+      "published": "2006-01-13",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; print issue January 2006",
+      "cutoff": null,
+      "citation": "Kaplan SA, McConnell JD, Roehrborn CG, et al. Combination therapy with doxazosin and finasteride for benign prostatic hyperplasia in patients with lower urinary tract symptoms and a baseline total prostate volume of 25 ml or greater. *J Urol.* 2006;175(1):217-220. doi:10.1016/S0022-5347(05)00041-8",
+      "doi": "10.1016/S0022-5347(05)00041-8",
+      "pmid": "16406915",
+      "followUp": "Average treatment duration 4.5 years",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Combination therapy by baseline prostate volume",
+          "role": "secondary",
+          "measure": "Clinical progression, need for invasive therapy, symptom score and maximal flow by baseline total prostate volume (under 25 mL, 25 to under 40 mL, 40 mL or more)",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Under 25 mL, combination was no better than doxazosin alone on any of these outcomes. At 25 to under 40 mL and at 40 mL or more, combination was superior to doxazosin or finasteride alone. The abstract gives no event counts.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Population",
+          "value": "3,047 randomized men; results analyzed by baseline total prostate volume measured by transrectal ultrasound.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "mtops-2011-finasteride-volume",
+      "kind": "post-hoc",
+      "label": "Finasteride versus placebo by prostate volume",
+      "published": "2011-02-22",
+      "cutoff": null,
+      "citation": "Kaplan SA, Lee JY, Meehan AG, et al. Long-term treatment with finasteride improves clinical progression of benign prostatic hyperplasia in men with an enlarged versus a smaller prostate: data from the MTOPS trial. *J Urol.* 2011;185(4):1369-1373. doi:10.1016/j.juro.2010.11.060",
+      "doi": "10.1016/j.juro.2010.11.060",
+      "pmid": "21334655",
+      "followUp": "Average 4.5 years",
+      "followUpLocator": "PMC author manuscript PMC3677556, Methods",
+      "results": [
+        {
+          "endpoint": "No clinical progression, baseline volume 30 mL or more",
+          "role": "secondary",
+          "measure": "Cumulative percentage without clinical progression at study end, baseline prostate volume 30 mL or more (finasteride versus placebo)",
+          "values": {
+            "pbo": "77.8% (95% CI 72.5 to 82.1; n=288)",
+            "fin": "88.1% (83.9 to 91.3; n=295)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Post hoc analysis of the finasteride and placebo arms only; the 30 mL cutpoint was not prespecified.",
+          "locator": "PMC3677556 Table 3"
+        },
+        {
+          "endpoint": "No clinical progression, baseline volume under 30 mL",
+          "role": "secondary",
+          "measure": "Cumulative percentage without clinical progression at study end, baseline prostate volume under 30 mL (finasteride versus placebo)",
+          "values": {
+            "pbo": "89.1% (95% CI 84.8 to 92.3; n=276)",
+            "fin": "91.4% (87.5 to 94.2; n=280)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.367"
+          },
+          "note": "Table 3 gives P=0.367; the abstract and text give P=0.441.",
+          "locator": "PMC3677556 Table 3"
+        },
+        {
+          "endpoint": "AUA symptom score change by baseline volume",
+          "role": "secondary",
+          "measure": "Mean change in AUA symptom score from baseline to study end, baseline volume 30 mL or more (intention to treat)",
+          "values": {
+            "pbo": "-4.65 (n=288)",
+            "fin": "-5.69 (n=295)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.045"
+          },
+          "note": "Under 30 mL: -5.06 (n=276) versus -6.01 (n=281), P=0.054.",
+          "locator": "PMC3677556 Table 2"
+        },
+        {
+          "endpoint": "Maximal flow change by baseline volume",
+          "role": "secondary",
+          "measure": "Mean change in maximal urinary flow rate from baseline to study end, mL per second, baseline volume 30 mL or more (intention to treat)",
+          "values": {
+            "pbo": "+1.78 (n=282)",
+            "fin": "+3.31 (n=290)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.002"
+          },
+          "note": "Under 30 mL: +3.06 (n=273) versus +3.67 (n=277), P=0.268.",
+          "locator": "PMC3677556 Table 2"
+        },
+        {
+          "endpoint": "Prostate volume change by baseline volume",
+          "role": "secondary",
+          "measure": "Mean change in prostate volume from baseline to study end, mL, baseline volume 30 mL or more (intention to treat)",
+          "values": {
+            "pbo": "+9.38 (n=288)",
+            "fin": "-5.79 (n=295)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Under 30 mL: +7.19 (n=276) versus +0.28 (n=281), P<0.001.",
+          "locator": "PMC3677556 Table 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Analyzed population",
+          "value": "1,140 men in the finasteride and placebo arms with baseline and end-of-study prostate volume; 49% had a baseline volume under 30 mL (range 8.8 to 181.0 mL).",
+          "locator": "PMC3677556 Results, Table 1"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "mtops-2013-quality-of-life",
+      "kind": "pro",
+      "label": "Quality of life through 4 years",
+      "published": "2013-01-25",
+      "cutoff": null,
+      "citation": "Fwu CW, Eggers PW, Kaplan SA, et al. Long-term effects of doxazosin, finasteride and combination therapy on quality of life in men with benign prostatic hyperplasia. *J Urol.* 2013;190(1):187-193. doi:10.1016/j.juro.2013.01.061",
+      "doi": "10.1016/j.juro.2013.01.061",
+      "pmid": "23357210",
+      "followUp": "4 years",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Benign prostatic hyperplasia Impact Index and IPSS quality-of-life item",
+          "role": "secondary",
+          "measure": "Quality-of-life instruments over 4 years versus placebo",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Doxazosin and combination improved the BPH Impact Index at year 4; each drug group improved the IPSS quality-of-life score. Longitudinal BPH Impact Index and IPSS quality-of-life scores improved in all drug groups. No group differed from placebo on the SF-36 subscales or summary scores. The abstract gives no scores.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Analyzed population",
+          "value": "2,872 men with three baseline quality-of-life measures and at least one follow-up measure.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "mtops-2014-sexual-function",
+      "kind": "pro",
+      "label": "Sexual function through 4 years",
+      "published": "2013-12-14",
+      "dateLocator": "Epub; print issue June 2014",
+      "cutoff": null,
+      "citation": "Fwu CW, Eggers PW, Kirkali Z, et al. Change in sexual function in men with lower urinary tract symptoms/benign prostatic hyperplasia associated with long-term treatment with doxazosin, finasteride and combined therapy. *J Urol.* 2014;191(6):1828-1834. doi:10.1016/j.juro.2013.12.014",
+      "doi": "10.1016/j.juro.2013.12.014",
+      "pmid": "24342143",
+      "followUp": "4 years",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Brief Male Sexual Function Inventory",
+          "role": "secondary",
+          "measure": "Change in sexual function over 4 years versus placebo",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Sexual function declined over time in all groups. Finasteride and combination had slight but significant worsening of ejaculatory function versus placebo; combination also had significant worsening of erectile function and sexual problem assessment. Doxazosin alone did not differ from placebo in any domain. The abstract gives no scores.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Analyzed population",
+          "value": "2,783 men who completed the inventory at baseline and at least once during follow-up.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "mtops-2016-adverse-event-time-course",
+      "kind": "secondary",
+      "label": "Time course of adverse experiences",
+      "published": "2015-12-08",
+      "dateLocator": "Epub; print issue June 2016",
+      "cutoff": null,
+      "citation": "Kaplan SA, Lee JY, Meehan AG, et al. Time course of incident adverse experiences associated with doxazosin, finasteride and combination therapy in men with benign prostatic hyperplasia: the MTOPS trial. *J Urol.* 2016;195(6):1825-1829. doi:10.1016/j.juro.2015.11.065",
+      "doi": "10.1016/j.juro.2015.11.065",
+      "pmid": "26678956",
+      "followUp": "Mean 4.5 years",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "First reports of six adverse experiences",
+          "role": "secondary",
+          "measure": "Incidence of first reports of dizziness, orthostatic hypotension, weakness, impotence, decreased libido and abnormal ejaculation at year 1 versus later years",
+          "effect": {
+            "type": "none"
+          },
+          "note": "In every treatment group, incidence was significantly higher at year 1 than afterward. In the combination group, year-1 rates were 3.4-fold to 10.6-fold higher than later rates. At year 1, orthostatic hypotension and dizziness were higher with doxazosin and combination than placebo, and the three sexual adverse experiences were higher with finasteride and combination than placebo. The abstract gives no rates.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Population",
+          "value": "All 3,047 randomized men.",
+          "locator": "PubMed abstract"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/mtops",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

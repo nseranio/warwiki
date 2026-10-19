@@ -1,0 +1,398 @@
+{
+  "id": "barone-fistula-catheter",
+  "name": "Barone Fistula Catheter Trial",
+  "aliases": [
+    "7-day versus 14-day catheterization after fistula repair"
+  ],
+  "nct": "NCT01428830",
+  "area": [
+    "fistula"
+  ],
+  "decisions": [
+    {
+      "id": "fistula-repair",
+      "lane": "postoperative-drainage"
+    }
+  ],
+  "question": "Is removing the bladder catheter 7 days after repair of a simple female genital fistula noninferior to removal at 14 days for repair breakdown?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 524,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "7-day bladder catheterization",
+        "role": "experimental",
+        "n": 261
+      },
+      {
+        "key": "ctl",
+        "label": "14-day bladder catheterization",
+        "role": "control",
+        "n": 263
+      }
+    ],
+    "population": "Women at eight hospitals in eight African countries with a surgeon-judged simple genital fistula that was closed on dye test at the end of surgery and still closed 7 days after repair.",
+    "description": "Multicenter open-label noninferiority randomized trial across eight African hospitals",
+    "locator": "PDF pp1-5, Figure; journal pp56-60"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Upper confidence limit 4.5 points against a 10-point margin; open-label, simple fistulas closed at day 7 only.",
+  "takeaway": "In women with a simple fistula closed 7 days after repair, removing the bladder catheter at 7 days was noninferior to 14 days: breakdown from 8 days after catheter removal to 3 months occurred in 10/250 (4.0%) versus 8/251 (3.2%), within a 10-point margin.",
+  "reports": [
+    {
+      "id": "barone-fistula-catheter-2015",
+      "kind": "primary",
+      "label": "Randomized noninferiority report",
+      "published": "2015-04-22",
+      "cutoff": null,
+      "citation": "Barone MA, Widmer M, Arrowsmith S, et al. Breakdown of simple female genital fistula repair after 7 day versus 14 day postoperative bladder catheterisation: a randomised, controlled, open-label, non-inferiority trial. *Lancet.* 2015;386(9988):56-62. doi:10.1016/S0140-6736(14)62337-0",
+      "doi": "10.1016/S0140-6736(14)62337-0",
+      "pmid": "25911172",
+      "followUp": "3 months after surgery (primary window from 8 days after catheter removal)",
+      "followUpLocator": "PDF pp1,3; journal pp56,58",
+      "results": [
+        {
+          "endpoint": "Repair breakdown, primary window",
+          "role": "primary",
+          "measure": "Dye-test-defined repair breakdown from 8 days after catheter removal to 3 months after surgery, per-protocol; risk difference in percentage points (7-day minus 14-day); noninferiority margin 10 points",
+          "values": {
+            "exp": "10/250 (4.0%)",
+            "ctl": "8/251 (3.2%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.8,
+            "ci": [
+              -2.8,
+              4.5
+            ]
+          },
+          "met": true,
+          "note": "Relative risk 1.3 (95% CI 0.5 to 3.1). The upper confidence limit of 4.5 points was below the 10-point margin. Only one analysis was done, in the per-protocol population (one ineligible participant excluded).",
+          "locator": "PDF p5, Table 2; journal p60"
+        },
+        {
+          "endpoint": "Repair breakdown, catheter removal to 3 months",
+          "role": "secondary",
+          "measure": "Dye-test-defined breakdown from catheter removal to 3 months after surgery; risk difference in percentage points (7-day minus 14-day)",
+          "values": {
+            "exp": "23/261 (8.8%)",
+            "ctl": "20/262 (7.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.2,
+            "ci": [
+              -3.9,
+              6.3
+            ]
+          },
+          "note": "Relative risk 1.2 (95% CI 0.7 to 2.1). Includes breakdowns found at the dye test 7 days after catheter removal.",
+          "locator": "PDF p5, Table 2; journal p60"
+        },
+        {
+          "endpoint": "Repair breakdown, catheter removal to 7 days after removal",
+          "role": "exploratory",
+          "measure": "Dye-test-defined breakdown at the dye test 7 days after catheter removal; risk difference in percentage points (7-day minus 14-day)",
+          "values": {
+            "exp": "13/261 (5.0%)",
+            "ctl": "12/262 (4.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.4,
+            "ci": [
+              -3.6,
+              4.4
+            ]
+          },
+          "note": "Relative risk 1.1 (95% CI 0.5 to 2.3). Reported separately by the authors and not prespecified.",
+          "locator": "PDF pp3,5, Table 2; journal pp58,60"
+        },
+        {
+          "endpoint": "Residual incontinence at 3 months",
+          "role": "secondary",
+          "measure": "Residual incontinence after fistula closure at the 3-month visit; risk difference in percentage points (7-day minus 14-day)",
+          "values": {
+            "exp": "9/250 (3.6%)",
+            "ctl": "6/251 (2.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.2,
+            "ci": [
+              -2.2,
+              4.6
+            ]
+          },
+          "note": "Relative risk 1.5 (95% CI 0.5 to 4.2). Based on the surgeon's history and examination, without urodynamic studies. Diagnoses among the affected women: stress 11, overflow 2, urge 2.",
+          "locator": "PDF pp3,5,6, Table 2; journal pp58,60,61"
+        },
+        {
+          "endpoint": "Repair breakdown, worst-case sensitivity analysis",
+          "role": "exploratory",
+          "measure": "Primary outcome with missing observations imputed as a four-fold breakdown proportion in the 11 lost to follow-up in the 7-day group and a 99% reduction in the 11 lost in the 14-day group; risk difference in percentage points",
+          "values": {
+            "exp": "13%",
+            "ctl": "8%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.9,
+            "ci": [
+              -2.1,
+              5.2
+            ]
+          },
+          "note": "Percentages are rounded as reported. Nine scenarios were examined; this was the worst. The upper limit stayed below the 10-point margin.",
+          "locator": "PDF pp4,6; journal pp59,61"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary retention during hospital stay",
+          "values": {
+            "exp": "31/261 (11.9%)",
+            "ctl": "25/262 (9.5%)"
+          },
+          "locator": "PDF p5, Table 2; journal p60",
+          "note": "Risk difference 2.3 points (95% CI -3.3 to 8.0). After catheter removal there were 100 retention episodes (54 in the 7-day group, 46 in the 14-day group) in 56 participants; 48/54 (88.9%) and 42/46 (91.3%) of the episodes were treated successfully with intermittent catheterization."
+        },
+        {
+          "label": "Infection possibly related to treatment",
+          "values": {
+            "exp": "8/261 (3.1%)",
+            "ctl": "16/262 (6.1%)"
+          },
+          "locator": "PDF p5, Table 2; journal p60",
+          "note": "Risk difference -3.0 points (95% CI -7.0 to 0.9). Ten urinary tract infections (6 versus 4), four vaginal infections (all in the 14-day group), five surgical wound infections (2 versus 3) and five other infections (all in the 14-day group); all mild or moderate and treated with antibiotics."
+        },
+        {
+          "label": "Febrile episode (above 38 C) possibly related to treatment",
+          "values": {
+            "exp": "5/261 (1.9%)",
+            "ctl": "10/262 (3.8%)"
+          },
+          "locator": "PDF p5, Table 2; journal p60",
+          "note": "Risk difference -1.9 points (95% CI -5.1 to 1.3)."
+        },
+        {
+          "label": "Catheter blockage",
+          "values": {
+            "exp": "5/261 (1.9%)",
+            "ctl": "11/262 (4.2%)"
+          },
+          "locator": "PDF pp5-6, Table 2; journal pp60-61",
+          "note": "Risk difference -2.3 points (95% CI -5.6 to 0.8). Blockages were resolved in roughly equal numbers by flushing the catheter and drainage tube or by replacing the catheter."
+        },
+        {
+          "label": "Extended hospital stay for a possibly treatment-related medical reason",
+          "values": {
+            "exp": "5/261 (1.9%)",
+            "ctl": "1/262 (0.4%)"
+          },
+          "locator": "PDF p5, Table 2; journal p60",
+          "note": "Risk difference 1.5 points (95% CI -0.7 to 3.7); relative risk 5.0 (95% CI 0.6 to 42.7). Defined as a stay beyond 1 week after initial catheter removal."
+        },
+        {
+          "label": "Intraoperative complications (before randomization)",
+          "values": {
+            "exp": "1 hemorrhage; 1 other (data missing)",
+            "ctl": "5 hemorrhages; 1 right ureteric transection"
+          },
+          "locator": "PDF p5; journal p60",
+          "note": "Recorded at the index operation, before the 7-day and 14-day catheter assignment."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Timing of catheter removal",
+          "values": {
+            "exp": "Postoperative day 7, on the day of randomization",
+            "ctl": "Postoperative day 14, 7 days after randomization"
+          },
+          "locator": "PDF p3; journal p58",
+          "note": "Participants stayed at the facility for 7 days after catheter removal; the dye test was done 7 days after removal (postoperative day 14 versus day 21)."
+        },
+        {
+          "label": "Assessed for eligibility and randomized",
+          "value": "524/1007 (52.0%)",
+          "locator": "PDF pp3,5, Figure; journal pp58,60",
+          "note": "483 were ineligible, including 381 with a non-simple fistula at postsurgery screening, 23 with a positive dye test after surgery and 29 with a positive dye test at the randomization screen."
+        },
+        {
+          "label": "Lost to follow-up",
+          "values": {
+            "exp": "11/261 (4.2%)",
+            "ctl": "11/263 (4.2%)"
+          },
+          "locator": "PDF pp3,5, Figure; journal pp58,60",
+          "note": "250 and 251 participants were analysed; one randomized participant in the 14-day group was ineligible (positive postsurgery dye test) and excluded from all analyses."
+        },
+        {
+          "label": "Primary outcome detected before the 3-month visit",
+          "values": {
+            "exp": "4/250 (1.6%)",
+            "ctl": "3/251 (1.2%)"
+          },
+          "locator": "PDF p5; journal p60",
+          "note": "Women who returned after discharge with urine leakage and had a positive dye test."
+        },
+        {
+          "label": "Spinal anesthesia",
+          "values": {
+            "exp": "254/261 (97.3%)",
+            "ctl": "257/262 (98.1%)"
+          },
+          "locator": "PDF p5; journal p60"
+        },
+        {
+          "label": "Vaginal repair route",
+          "values": {
+            "exp": "244/261 (93.5%)",
+            "ctl": "245/262 (93.5%)"
+          },
+          "locator": "PDF p5; journal p60"
+        },
+        {
+          "label": "Empirical postoperative antibiotics before randomization",
+          "values": {
+            "exp": "136/261 (52.1%)",
+            "ctl": "145/263 (55.1%)"
+          },
+          "locator": "PDF p5; journal p60",
+          "note": "After randomization no participant received prophylactic antibiotics."
+        },
+        {
+          "label": "Counselled to do pelvic floor exercises before randomization",
+          "values": {
+            "exp": "82/261 (31.4%)",
+            "ctl": "83/263 (31.6%)"
+          },
+          "locator": "PDF p5; journal p60",
+          "note": "Bladder training was given to 25 (10%) in each group before randomization and to none afterward."
+        },
+        {
+          "label": "Postrandomization care",
+          "value": "Standardized: daily perineal and vaginal care, walking and free fluids encouraged, no prophylactic antibiotics or anthelmintics, no bladder training, catheter blockage monitored and treated",
+          "locator": "PDF p3; journal p58"
+        },
+        {
+          "label": "Management of urinary retention",
+          "value": "Postvoid residual measured by urethral catheter 1, 3 and 7 days after catheter removal; retention was a residual above 50% of the voided volume and was managed with intermittent catheterization at least 3 times daily until the residual was below 50% of the voided volume on two consecutive occasions",
+          "locator": "PDF p3; journal p58"
+        },
+        {
+          "label": "Definition of a simple fistula",
+          "value": "Judged by the operating surgeon at the end of surgery with no fixed definition; 17 surgeons classified fistula drawings with a kappa of 0.55",
+          "locator": "PDF p6; journal p61"
+        },
+        {
+          "label": "Women with multiple fistulas randomized before the exclusion criterion",
+          "values": {
+            "exp": "3",
+            "ctl": "9"
+          },
+          "locator": "PDF pp2,5,6-7; journal pp57,60,61-62",
+          "note": "Multiple fistula became an exclusion criterion on July 31, 2012; these 12 women (2% of participants) are listed by the authors as a limitation."
+        },
+        {
+          "label": "Planned sample size",
+          "value": "507 women (177 per arm before inflation for loss to follow-up and protocol violations)",
+          "locator": "PDF p4; journal p59",
+          "note": "Assumed 13% breakdown in the 14-day group, 10% margin, one-sided alpha 0.025, power 80%."
+        },
+        {
+          "label": "Fistula location, juxtaurethral",
+          "values": {
+            "exp": "69/261 (26.4%)",
+            "ctl": "58/262 (22.1%)"
+          },
+          "locator": "PDF p4, Table 1; journal p59",
+          "note": "More than one location or type was possible per participant."
+        },
+        {
+          "label": "Fistula location, juxtacervical",
+          "values": {
+            "exp": "67/261 (25.7%)",
+            "ctl": "84/262 (32.1%)"
+          },
+          "locator": "PDF p4, Table 1; journal p59"
+        },
+        {
+          "label": "Fistula location, midvaginal",
+          "values": {
+            "exp": "70/261 (26.8%)",
+            "ctl": "65/262 (24.8%)"
+          },
+          "locator": "PDF p4, Table 1; journal p59"
+        },
+        {
+          "label": "Largest fistula diameter, median (IQR)",
+          "values": {
+            "exp": "1 cm (0.8 to 2.0)",
+            "ctl": "1 cm (0.5 to 2.0)"
+          },
+          "locator": "PDF p4, Table 1; journal p59"
+        },
+        {
+          "label": "Moderate or severe scarring",
+          "values": {
+            "exp": "36/261 (13.8%)",
+            "ctl": "33/262 (12.6%)"
+          },
+          "locator": "PDF p4, Table 1; journal p59",
+          "note": "Moderate 35 and severe 1 in the 7-day group; moderate 29 and severe 4 in the 14-day group."
+        },
+        {
+          "label": "Age, mean (SD)",
+          "values": {
+            "exp": "31.9 years (11.5)",
+            "ctl": "30.6 years (11.7)"
+          },
+          "locator": "PDF p3, Table 1; journal p58"
+        },
+        {
+          "label": "Leakage started after delivery of a baby",
+          "values": {
+            "exp": "243/261 (93.1%)",
+            "ctl": "252/262 (96.2%)"
+          },
+          "locator": "PDF p4, Table 1; journal p59"
+        },
+        {
+          "label": "Previous repair attempts",
+          "values": {
+            "exp": "57/261 (21.8%)",
+            "ctl": "58/262 (22.1%)"
+          },
+          "locator": "PDF p3, Table 1; journal p58"
+        },
+        {
+          "label": "Female genital cutting",
+          "values": {
+            "exp": "133/261 (51.0%)",
+            "ctl": "136/263 (51.7%)"
+          },
+          "locator": "PDF p3, Table 1; journal p58"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/barone-lancet2015.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/barone-fistula-catheter",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

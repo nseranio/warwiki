@@ -1,0 +1,884 @@
+{
+  "id": "empowur",
+  "name": "EMPOWUR",
+  "aliases": [
+    "RVT-901-3003",
+    "Study 3003",
+    "RVT-901-3004 extension (NCT03583372)"
+  ],
+  "nct": "NCT03492281",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Does vibegron 75 mg once daily reduce daily micturitions and urge incontinence episodes over 12 weeks compared with placebo in adults with overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1518,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Vibegron 75 mg once daily",
+        "role": "experimental",
+        "n": 547
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "role": "control",
+        "n": 540
+      },
+      {
+        "key": "act",
+        "label": "tolterodine extended release 4 mg once daily",
+        "role": "control",
+        "n": 431
+      }
+    ],
+    "population": "Adults with overactive bladder for at least 3 months, 85.2% women, 42.9% aged 65 or older, including up to 25% without urge incontinence.",
+    "description": "International, double-blind, placebo- and active-controlled randomized trial",
+    "locator": "Arms and 5:5:4 ratio: Abstract; arm counts: Frankel 2021 Results, Patients, and ClinicalTrials.gov NCT03492281 participant flow (Fig. 1 of the paper is an image); population: Staskin 2020 Results, Study Participants, and Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both co-primary endpoints met versus placebo; vibegron was not formally compared with the tolterodine reference arm.",
+  "takeaway": "In adults with overactive bladder, vibegron 75 mg daily reduced daily micturitions (1.8 versus 1.3 fewer) and, with urge incontinence, its episodes (2.0 versus 1.4 fewer) more than placebo over 12 weeks; tolterodine extended release, the active reference, gave 1.6 and 1.8.",
+  "reports": [
+    {
+      "id": "empowur-2020",
+      "kind": "primary",
+      "label": "12-week randomized report",
+      "published": "2020-02-18",
+      "dateLocator": "PubMed electronic publication date",
+      "cutoff": null,
+      "citation": "Staskin D, Frankel J, Varano S, et al. International phase III, randomized, double-blind, placebo and active controlled study to evaluate the safety and efficacy of vibegron in patients with symptoms of overactive bladder: EMPOWUR. *J Urol.* 2020;204(2):316-324. doi:10.1097/JU.0000000000000807",
+      "doi": "10.1097/JU.0000000000000807",
+      "pmid": "32068484",
+      "followUp": "12 weeks of treatment; 1,518 randomized, 90.4% completed",
+      "followUpLocator": "Results, Study Participants (12-week treatment, 4-week follow-up safety evaluation)",
+      "results": [
+        {
+          "endpoint": "Micturitions",
+          "role": "primary",
+          "measure": "Co-primary: least-squares mean change from baseline to week 12 in average daily micturitions (all patients); difference is vibegron minus placebo (episodes per day); tested at two-sided alpha 0.05 in a predefined hierarchy",
+          "locator": "Results, Co-primary Efficacy End Points; Fig. 2A; Statistical Analyses",
+          "note": "Patients with week-12 data: 492 vibegron, 475 placebo, 378 tolterodine (full analysis set 526, 520 and 417). Tolterodine versus placebo, supportive with nominal P: difference −0.3 (95% CI −0.6 to 0.1; P=0.0988). Vibegron was not compared with tolterodine. Difference versus placebo was significant from week 2 (prespecified exploratory) and at all later time points. Sample size gave about 98% power for a 0.60 difference (SD 2.20).",
+          "values": {
+            "exp": "−1.8",
+            "ctl": "−1.3",
+            "act": "−1.6"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.5,
+            "ci": [
+              -0.8,
+              -0.2
+            ],
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Urge incontinence episodes",
+          "role": "primary",
+          "measure": "Co-primary: least-squares mean change from baseline to week 12 in average daily urge incontinence episodes in OAB wet patients; difference is vibegron minus placebo (episodes per day); tested after micturitions in the hierarchy",
+          "locator": "Results, Co-primary Efficacy End Points; Fig. 2B; Statistical Analyses",
+          "note": "Patients with week-12 data: 383 vibegron, 372 placebo, 286 tolterodine (full analysis set for incontinence 403, 405 and 319; mean baseline 3.5 episodes/day). Tolterodine versus placebo (supportive): difference −0.4 (95% CI −0.7 to −0.1; P=0.0123). Difference versus placebo was significant from week 2. Sample size gave about 98% power for a 0.51 difference (SD 1.68).",
+          "values": {
+            "exp": "−2.0",
+            "ctl": "−1.4",
+            "act": "−1.8"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "ci": [
+              -0.9,
+              -0.3
+            ],
+            "p": "<0.0001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Urgency episodes",
+          "role": "key-secondary",
+          "measure": "Least-squares mean change from baseline to week 12 in average daily urgency episodes; difference is vibegron minus placebo (episodes per day); first key secondary endpoint in the hierarchy",
+          "locator": "Results, Key Secondary Efficacy End Points; Fig. 3A",
+          "note": "Patients with week-12 data: 492 vibegron, 475 placebo, 378 tolterodine; mean baseline 8.1 urgency episodes/day. Tolterodine versus placebo (supportive): difference −0.4 (95% CI −0.9 to 0.0; P=0.0648). Significant versus placebo from week 2.",
+          "values": {
+            "exp": "−2.7",
+            "ctl": "−2.0",
+            "act": "−2.5"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.7,
+            "ci": [
+              -1.1,
+              -0.2
+            ],
+            "p": "0.0020"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "key-secondary",
+          "measure": "Least-squares mean change from baseline to week 12 in average volume voided per micturition; difference is vibegron minus placebo (mL)",
+          "locator": "Results, Key Secondary Efficacy End Points; Fig. 3B",
+          "note": "Patients with week-12 data: 490 vibegron, 478 placebo, 375 tolterodine; mean baseline 150.5 mL. Tolterodine versus placebo (supportive): difference 13.3 mL (95% CI 5.9 to 20.7; P<0.001). Significant versus placebo from week 2.",
+          "values": {
+            "exp": "+23.5 mL",
+            "ctl": "+2.2 mL",
+            "act": "+15.5 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 21.2,
+            "ci": [
+              14.3,
+              28.1
+            ],
+            "p": "<0.0001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Urge incontinence responders",
+          "role": "key-secondary",
+          "measure": "OAB wet patients with at least 75% reduction from baseline in average daily urge incontinence episodes at week 12",
+          "locator": "Results, Key Secondary Efficacy End Points; Fig. 3C",
+          "note": "Full analysis set for incontinence: 403 vibegron, 405 placebo, 319 tolterodine; Cochran-Mantel-Haenszel risk difference stratified by sex, multiple imputation for missing data. The paper prints unadjusted percentages; the ClinicalTrials.gov NCT03492281 results give sex-adjusted percentages 49.3%, 32.8% and 42.2% and a difference of 16.5 points (95% CI 9.7 to 23.4). Significant versus placebo from week 2.",
+          "values": {
+            "exp": "52.4%",
+            "ctl": "36.8%",
+            "act": "47.6%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Continence",
+          "role": "secondary",
+          "measure": "OAB wet patients with 100% reduction in daily urge incontinence episodes at week 12, sex-adjusted percentage; difference in percentage points",
+          "locator": "ClinicalTrials.gov NCT03492281 results, OAB-wet 100% UUI reduction at week 12 (not reported in the paper's text)",
+          "note": "Denominators 403, 405 and 319; unadjusted percentages 28.8%, 22.5% and 26.6%.",
+          "values": {
+            "exp": "25.3%",
+            "ctl": "19.0%",
+            "act": "20.9%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 6.3,
+            "ci": [
+              0.4,
+              12.1
+            ],
+            "p": "0.0360"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event",
+          "values": {
+            "exp": "211/545 (38.7%)",
+            "ctl": "180/540 (33.3%)",
+            "act": "166/430 (38.6%)"
+          },
+          "locator": "Table 2",
+          "note": "Safety analysis set: all patients who received at least one dose of double-blind medication."
+        },
+        {
+          "label": "Adverse event of clinical interest",
+          "values": {
+            "exp": "36/545 (6.6%)",
+            "ctl": "40/540 (7.4%)",
+            "act": "38/430 (8.8%)"
+          },
+          "locator": "Table 2",
+          "note": "Protocol-defined: major cardiac or cerebrovascular events, new or worsened hypertension, increased blood pressure, orthostatic hypotension, cystitis or urinary tract infection, and liver enzyme elevations leading to interruption or discontinuation."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "8/545 (1.5%)",
+            "ctl": "6/540 (1.1%)",
+            "act": "10/430 (2.3%)"
+          },
+          "locator": "Table 2; Results, Safety and Tolerability",
+          "note": "One death, in the tolterodine arm (stroke, urinary tract infection and sepsis; unrelated to study drug per investigator and sponsor). Two vibegron events (pneumonia and noncardiac chest pain) were judged possibly or probably related by the investigator but not the sponsor."
+        },
+        {
+          "label": "Discontinuation for adverse events",
+          "values": {
+            "exp": "9/545 (1.7%)",
+            "ctl": "6/540 (1.1%)",
+            "act": "14/430 (3.3%)"
+          },
+          "locator": "Table 2",
+          "note": "Causes in more than one patient: headache 6 (3 vibegron, 1 placebo, 2 tolterodine), dry mouth 4 (all tolterodine), hypertension 3 (1 vibegron, 2 placebo), diarrhea 2 (both tolterodine)."
+        },
+        {
+          "label": "Hypertension",
+          "values": {
+            "exp": "9/545 (1.7%)",
+            "ctl": "9/540 (1.7%)",
+            "act": "11/430 (2.6%)"
+          },
+          "locator": "Table 2",
+          "note": "Hypertension was a predefined adverse event of interest. No clinically relevant difference in posttreatment blood pressure between hypertensive and nonhypertensive patients at baseline."
+        },
+        {
+          "label": "Blood pressure increased",
+          "values": {
+            "exp": "4/545 (0.7%)",
+            "ctl": "5/540 (0.9%)",
+            "act": "8/430 (1.9%)"
+          },
+          "locator": "Table 2"
+        },
+        {
+          "label": "Tachycardia",
+          "values": {
+            "exp": "0",
+            "ctl": "0",
+            "act": "0.2%"
+          },
+          "locator": "Results, Safety and Tolerability"
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "27/545 (5.0%)",
+            "ctl": "33/540 (6.1%)",
+            "act": "25/430 (5.8%)"
+          },
+          "locator": "Table 2"
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "3/545 (0.6%)",
+            "ctl": "2/540 (0.4%)",
+            "act": "3/430 (0.7%)"
+          },
+          "locator": "Table 2"
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "9/545 (1.7%)",
+            "ctl": "5/540 (0.9%)",
+            "act": "28/430 (6.5%)"
+          },
+          "locator": "Table 2"
+        },
+        {
+          "label": "Headache",
+          "values": {
+            "exp": "22/545 (4.0%)",
+            "ctl": "13/540 (2.4%)",
+            "act": "11/430 (2.6%)"
+          },
+          "locator": "Table 2",
+          "note": "With nasopharyngitis (15, 9 and 11 patients; 2.8%, 1.7% and 2.6%), diarrhea (12, 6 and 9; 2.2%, 1.1% and 2.1%) and nausea (12, 6 and 5; 2.2%, 1.1% and 1.2%), the events above 2.0% on vibegron and more frequent than placebo."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomization and treatment",
+          "value": "5:5:4 to vibegron 75 mg, placebo or tolterodine extended release 4 mg, each taken orally once daily each morning for 12 weeks; stratified by sex and wet versus dry OAB; double-dummy (placebo group received both matching placebos)",
+          "locator": "Abstract; Methods, Study Design"
+        },
+        {
+          "label": "Study periods",
+          "value": "1- to 5-week screening, 28-day washout, 2-week single-blind placebo run-in, 12-week double-blind treatment, 4-week follow-up safety evaluation; 7-day voiding diaries at baseline and weeks 2, 4, 8 and 12, with a measured-volume diary on one of the 7 days",
+          "locator": "Methods, Study Design"
+        },
+        {
+          "label": "Run-in and screening",
+          "value": "3,149 screened; 1,518 randomized after a 2-week single-blind placebo run-in",
+          "locator": "ClinicalTrials.gov NCT03492281 results, participant flow"
+        },
+        {
+          "label": "Enrollment and sites",
+          "value": "1,518 randomized at 199 sites beginning March 26, 2018; last patient completed 12 weeks on January 7, 2019; 89.6% of the full analysis set enrolled in the United States (1,311/1,463)",
+          "locator": "Results, Study Participants; Table 1"
+        },
+        {
+          "label": "Completion",
+          "value": "1,373/1,518 (90.4%) completed: 502/547 vibegron, 486/540 placebo, 385/431 tolterodine",
+          "locator": "Results, Study Participants (90.4%); ClinicalTrials.gov NCT03492281 results, participant flow (arm counts)"
+        },
+        {
+          "label": "Analysis sets",
+          "value": "Full analysis set 1,463 (96.4%): 526 vibegron, 520 placebo, 417 tolterodine; full analysis set for incontinence (OAB wet) 1,127: 403, 405 and 319",
+          "locator": "Results, Study Participants; Table 1"
+        },
+        {
+          "label": "Sample size",
+          "value": "Planned about 500 vibegron, 500 placebo and 400 tolterodine; about 98% power at two-sided 0.05 for a 0.60 difference in micturitions (SD 2.20) and a 0.51 difference in urge incontinence episodes (SD 1.68)",
+          "locator": "Methods, Sample Size Calculation"
+        },
+        {
+          "label": "Baseline (full analysis set)",
+          "value": "Mean 11.5 micturitions, 8.1 urgency episodes and 150.5 mL per micturition per day; mean 3.5 urge incontinence episodes per day in the incontinence set; 85.2% women; 42.9% aged 65 or older; OAB wet 76.5% to 77.9% by arm",
+          "locator": "Results, Study Participants; Table 1"
+        },
+        {
+          "label": "Statistical handling",
+          "value": "Mixed model for repeated measures; responders by Cochran-Mantel-Haenszel risk difference stratified by sex and OAB category; multiple imputation for missing data; co-primary and key secondary endpoints in a predefined hierarchy; vibegron versus placebo was the formal comparison and all other comparisons were supportive with nominal P values and no multiplicity adjustment",
+          "locator": "Methods, Statistical Analyses"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/EMPOWUR-Staskin-2020.pdf",
+        "checked": "2026-10-19",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "empowur-2020-extension",
+      "kind": "updated",
+      "label": "52-week extension",
+      "published": "2020-12-28",
+      "dateLocator": "PubMed electronic publication date",
+      "cutoff": null,
+      "citation": "Staskin D, Frankel J, Varano S, et al. Once-daily vibegron 75 mg for overactive bladder: long-term safety and efficacy from a double-blind extension study of the international phase 3 trial (EMPOWUR). *J Urol.* 2021;205(5):1421-1429. doi:10.1097/JU.0000000000001574",
+      "doi": "10.1097/JU.0000000000001574",
+      "pmid": "33356445",
+      "followUp": "52 weeks in total (12-week study plus 40-week extension); 506 randomized, 430 (85%) completed",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Micturitions",
+          "role": "secondary",
+          "measure": "Least squares mean change from baseline to week 52 in daily micturitions, patients on the same drug for 52 weeks",
+          "locator": "Abstract; denominators from ClinicalTrials.gov NCT03583372 results, secondary outcome 1",
+          "note": "n=152 vibegron, 120 tolterodine. No placebo arm and no P value reported.",
+          "values": {
+            "exp": "−2.4",
+            "act": "−2.0"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Urge incontinence episodes",
+          "role": "secondary",
+          "measure": "Least squares mean change from baseline to week 52 in daily urge incontinence episodes, OAB wet patients",
+          "locator": "Abstract; denominators from ClinicalTrials.gov NCT03583372 results, secondary outcome 2",
+          "note": "n=125 vibegron, 91 tolterodine. The abstract reports a vibegron-versus-tolterodine P value below 0.05 from a post hoc analysis; no formal comparison was prespecified.",
+          "values": {
+            "exp": "−2.2",
+            "act": "−1.7"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          }
+        },
+        {
+          "endpoint": "Urgency episodes",
+          "role": "secondary",
+          "measure": "Least squares mean change from baseline to week 52 in daily urgency episodes",
+          "locator": "Abstract; denominators from ClinicalTrials.gov NCT03583372 results, secondary outcome 3",
+          "note": "n=152 vibegron, 120 tolterodine.",
+          "values": {
+            "exp": "−3.4",
+            "act": "−3.2"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Total incontinence episodes",
+          "role": "secondary",
+          "measure": "Least squares mean change from baseline to week 52 in daily total incontinence episodes, OAB wet patients",
+          "locator": "Abstract; denominators from ClinicalTrials.gov NCT03583372 results, secondary outcome 4",
+          "note": "n=125 vibegron, 91 tolterodine. The abstract reports a vibegron-versus-tolterodine P value below 0.05 from a post hoc analysis; no formal comparison was prespecified.",
+          "values": {
+            "exp": "−2.5",
+            "act": "−1.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          }
+        },
+        {
+          "endpoint": "Urge incontinence responders",
+          "role": "exploratory",
+          "measure": "OAB wet patients with at least 75% reduction in urge incontinence episodes at week 52, 52-week treatment groups only",
+          "locator": "Abstract",
+          "values": {
+            "exp": "61.0%",
+            "act": "54.4%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Continence",
+          "role": "exploratory",
+          "measure": "OAB wet patients with 100% reduction in urge incontinence episodes at week 52, 52-week treatment groups only",
+          "locator": "Abstract",
+          "values": {
+            "exp": "40.8%",
+            "act": "34.2%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "exp": "171/273 (62.6%)",
+            "act": "126/232 (54.3%)"
+          },
+          "locator": "ClinicalTrials.gov NCT03583372 results, primary outcome",
+          "note": "Safety extension set: 505 patients treated."
+        },
+        {
+          "label": "Serious treatment-emergent adverse events",
+          "values": {
+            "exp": "9/273 (3.3%)",
+            "act": "10/232 (4.3%)"
+          },
+          "locator": "ClinicalTrials.gov NCT03583372 results, primary outcome"
+        },
+        {
+          "label": "Discontinuation for adverse events",
+          "values": {
+            "exp": "4/273 (1.5%)",
+            "act": "8/232 (3.4%)"
+          },
+          "locator": "ClinicalTrials.gov NCT03583372 results, primary outcome",
+          "note": "12 patients (2.4%) in total per the abstract."
+        },
+        {
+          "label": "Hypertension",
+          "values": {
+            "exp": "8.8%",
+            "act": "8.6%"
+          },
+          "locator": "Abstract",
+          "note": "24/273 and 20/232 per the registry."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "6.6%",
+            "act": "7.3%"
+          },
+          "locator": "Abstract",
+          "note": "18/273 and 17/232 per the registry."
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "1.8%",
+            "act": "5.2%"
+          },
+          "locator": "Abstract",
+          "note": "5/273 and 12/232 per the registry."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension design",
+          "value": "Completers of vibegron or tolterodine continued double-blind; placebo completers were re-randomized 1:1 to vibegron or tolterodine; no placebo arm",
+          "locator": "Abstract"
+        },
+        {
+          "label": "Treated in extension",
+          "value": "505 of 506 randomized; 273 vibegron, 232 tolterodine",
+          "locator": "Abstract; ClinicalTrials.gov NCT03583372 results, participant flow"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/empowur-2021-extension.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "empowur-2021-age",
+      "kind": "post-hoc",
+      "label": "Age 65 and 75 and older subpopulations",
+      "published": "2021-01-20",
+      "dateLocator": "PubMed electronic publication date",
+      "cutoff": null,
+      "citation": "Varano S, Staskin D, Frankel J, et al. Efficacy and safety of once-daily vibegron for treatment of overactive bladder in patients aged ≥65 and ≥75 years: subpopulation analysis from the EMPOWUR randomized, international, phase III study. *Drugs Aging.* 2021;38(2):137-146. doi:10.1007/s40266-020-00829-z",
+      "doi": "10.1007/s40266-020-00829-z",
+      "pmid": "33469832",
+      "followUp": "12 weeks",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Micturitions, age 65 and older",
+          "role": "exploratory",
+          "measure": "Change in daily micturitions at week 12, vibegron versus placebo, patients aged 65 or older (FAS n=628)",
+          "locator": "Results, Efficacy endpoints; abstract",
+          "note": "FAS: 242 vibegron, 220 placebo, 166 tolterodine. Subgroup analysis; trial not powered within subgroups.",
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          }
+        },
+        {
+          "endpoint": "Micturitions, age 75 and older",
+          "role": "exploratory",
+          "measure": "Change in daily micturitions at week 12, vibegron versus placebo, patients aged 75 or older (FAS n=179)",
+          "locator": "Results, Efficacy endpoints; abstract",
+          "note": "FAS: 75 vibegron, 57 placebo, 47 tolterodine. Post hoc model without sex or region.",
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          }
+        },
+        {
+          "endpoint": "Urge incontinence episodes, age 65 and older",
+          "role": "exploratory",
+          "measure": "Change in daily urge incontinence episodes at week 12, vibegron versus placebo, patients aged 65 or older",
+          "locator": "Results, Efficacy endpoints; abstract",
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          }
+        },
+        {
+          "endpoint": "Urgency episodes, age 65 and older",
+          "role": "exploratory",
+          "measure": "Change in daily urgency episodes at week 12, vibegron versus placebo, patients aged 65 or older",
+          "locator": "Results, Efficacy endpoints; abstract",
+          "note": "Same P value (<0.01) in patients aged 75 or older.",
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          }
+        },
+        {
+          "endpoint": "Urge incontinence responders, age 65 and older",
+          "role": "exploratory",
+          "measure": "OAB wet patients aged 65 or older with at least 75% reduction in urge incontinence episodes at week 12",
+          "locator": "Results, Efficacy endpoints; Table 2",
+          "note": "Post hoc responder analysis; P value is vibegron versus placebo.",
+          "values": {
+            "exp": "50.0% (96/192)",
+            "ctl": "29.8% (50/168)",
+            "act": "43.0% (55/128)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any treatment-emergent adverse event, age 65 and older",
+          "values": {
+            "exp": "110/246 (44.7%)",
+            "ctl": "85/228 (37.3%)",
+            "act": "73/171 (42.7%)"
+          },
+          "locator": "Table 3"
+        },
+        {
+          "label": "Any treatment-emergent adverse event, age 75 and older",
+          "values": {
+            "exp": "37/75 (49.3%)",
+            "ctl": "24/60 (40.0%)",
+            "act": "24/48 (50.0%)"
+          },
+          "locator": "Table 3"
+        },
+        {
+          "label": "Hypertension, age 65 and older",
+          "values": {
+            "exp": "3/246 (1.2%)",
+            "ctl": "7/228 (3.1%)",
+            "act": "5/171 (2.9%)"
+          },
+          "locator": "Table 3"
+        },
+        {
+          "label": "Hypertension, age 75 and older",
+          "values": {
+            "exp": "1/75 (1.3%)",
+            "ctl": "2/60 (3.3%)",
+            "act": "1/48 (2.1%)"
+          },
+          "locator": "Table 3"
+        },
+        {
+          "label": "Dry mouth, age 65 and older",
+          "values": {
+            "exp": "8/246 (3.3%)",
+            "ctl": "2/228 (0.9%)",
+            "act": "12/171 (7.0%)"
+          },
+          "locator": "Table 3"
+        },
+        {
+          "label": "Urinary retention, age 75 and older",
+          "values": {
+            "exp": "2/75 (2.7%)",
+            "ctl": "0/60",
+            "act": "2/48 (4.2%)"
+          },
+          "locator": "Table 3"
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "empowur-2021-pro",
+      "kind": "pro",
+      "label": "Patient-reported outcomes",
+      "published": "2021-01-22",
+      "dateLocator": "PubMed electronic publication date",
+      "cutoff": null,
+      "citation": "Frankel J, Varano S, Staskin D, et al. Vibegron improves quality-of-life measures in patients with overactive bladder: patient-reported outcomes from the EMPOWUR study. *Int J Clin Pract.* 2021;75(5):e13937. doi:10.1111/ijcp.13937",
+      "doi": "10.1111/ijcp.13937",
+      "pmid": "33332699",
+      "followUp": "12 weeks",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "OAB-q coping score",
+          "role": "key-secondary",
+          "measure": "OAB-q coping score, least squares mean change from baseline to week 12 (higher is better); difference is vibegron minus placebo (points)",
+          "locator": "Results, OAB-q measures; Table 2",
+          "note": "Key secondary endpoint in a stepwise gatekeeping procedure at two-sided alpha 0.05. FAS n=1,463 (526 vibegron, 520 placebo).",
+          "values": {
+            "exp": "+16.5",
+            "ctl": "+12.9"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.6,
+            "ci": [
+              1.2,
+              6.0
+            ],
+            "p": "0.0039"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "OAB-q symptom bother score",
+          "role": "secondary",
+          "measure": "OAB-q symptom bother score, least squares mean difference vibegron minus placebo at week 12 (lower is better; points)",
+          "locator": "Table 2",
+          "note": "No multiplicity adjustment.",
+          "effect": {
+            "type": "difference",
+            "value": -6.9,
+            "ci": [
+              -9.2,
+              -4.6
+            ],
+            "p": "<0.0001"
+          }
+        },
+        {
+          "endpoint": "OAB-q health-related quality of life total",
+          "role": "secondary",
+          "measure": "OAB-q total score, least squares mean difference vibegron minus placebo at week 12 (higher is better; points)",
+          "locator": "Table 2",
+          "note": "No multiplicity adjustment.",
+          "effect": {
+            "type": "difference",
+            "value": 3.8,
+            "ci": [
+              1.7,
+              5.8
+            ],
+            "p": "<0.001"
+          }
+        },
+        {
+          "endpoint": "OAB-q symptom bother responders",
+          "role": "exploratory",
+          "measure": "Patients with at least a 10-point improvement in OAB-q symptom bother at week 12; effect is odds ratio vibegron versus placebo",
+          "locator": "Results, OAB-q measures",
+          "note": "Post hoc responder analysis.",
+          "values": {
+            "exp": "70.1%",
+            "ctl": "58.3%"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.89,
+            "ci": [
+              1.43,
+              2.5
+            ],
+            "p": "<0.0001"
+          }
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "empowur-2022-dry-wet",
+      "kind": "post-hoc",
+      "label": "OAB dry and wet subgroups",
+      "published": "2022-04-13",
+      "dateLocator": "PubMed electronic publication date",
+      "cutoff": null,
+      "citation": "Staskin D, Frankel J, Varano S, et al. Vibegron for the treatment of patients with dry and wet overactive bladder: a subgroup analysis from the EMPOWUR trial. *Int J Clin Pract.* 2022;2022:6475014. doi:10.1155/2022/6475014",
+      "doi": "10.1155/2022/6475014",
+      "pmid": "35685566",
+      "followUp": "12 weeks",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Urgency episodes, OAB dry",
+          "role": "exploratory",
+          "measure": "Least squares mean change from baseline to week 12 in daily urgency episodes, OAB dry (n=123 vibegron, 115 placebo); difference is vibegron minus placebo",
+          "locator": "Results, Mean daily urgency episodes; abstract",
+          "note": "Post hoc; significance judged by the 95% CI excluding zero. Trial not powered within subgroups.",
+          "values": {
+            "exp": "−2.6",
+            "ctl": "−1.6"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.0,
+            "ci": [
+              -2.0,
+              -0.1
+            ]
+          }
+        },
+        {
+          "endpoint": "Urgency episodes, OAB wet",
+          "role": "exploratory",
+          "measure": "Least squares mean change from baseline to week 12 in daily urgency episodes, OAB wet (n=403 vibegron, 405 placebo); difference is vibegron minus placebo",
+          "locator": "Results, Mean daily urgency episodes; abstract",
+          "note": "Post hoc.",
+          "values": {
+            "exp": "−3.0",
+            "ctl": "−2.4"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "ci": [
+              -1.0,
+              -0.1
+            ]
+          }
+        },
+        {
+          "endpoint": "Micturitions, OAB dry",
+          "role": "exploratory",
+          "measure": "Least squares mean change from baseline to week 12 in daily micturitions, OAB dry; difference is vibegron minus placebo",
+          "locator": "Results, Mean daily micturitions; abstract",
+          "note": "Post hoc.",
+          "values": {
+            "exp": "−1.8",
+            "ctl": "−1.0"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.8,
+            "ci": [
+              -1.5,
+              -0.1
+            ]
+          }
+        },
+        {
+          "endpoint": "Micturitions, OAB wet",
+          "role": "exploratory",
+          "measure": "Least squares mean change from baseline to week 12 in daily micturitions, OAB wet; difference is vibegron minus placebo",
+          "locator": "Results, Mean daily micturitions; abstract",
+          "note": "Post hoc.",
+          "values": {
+            "exp": "−2.1",
+            "ctl": "−1.7"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.5,
+            "ci": [
+              -0.8,
+              -0.1
+            ]
+          }
+        },
+        {
+          "endpoint": "Urgency responders, OAB dry",
+          "role": "exploratory",
+          "measure": "OAB dry patients with at least 50% reduction in daily urgency episodes at week 12",
+          "locator": "Results, Responder analysis for urgency episodes",
+          "note": "Nominal P value, vibegron versus placebo.",
+          "values": {
+            "exp": "36.9%",
+            "ctl": "23.1%",
+            "act": "29.0%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          }
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "courage",
+      "note": "Same vibegron 75 mg program; COURAGE enrolled men taking BPH drugs, whereas EMPOWUR capped men at 15%."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/empowur",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

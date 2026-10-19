@@ -1,0 +1,884 @@
+{
+  "id": "rezum",
+  "name": "Rezūm II",
+  "aliases": [
+    "Rezūm II pivotal study",
+    "Rezum II",
+    "2105-001"
+  ],
+  "nct": "NCT01912339",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does transurethral convective water vapor thermal therapy relieve BPH-related lower urinary tract symptoms more than a sham procedure?",
+  "design": {
+    "phase": "pivotal",
+    "randomized": true,
+    "blinding": "participant-blinded; sham control for 3 months",
+    "type": "superiority",
+    "n": 197,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Convective water vapor thermal therapy (Rezūm)",
+        "role": "experimental",
+        "n": 136
+      },
+      {
+        "key": "ctl",
+        "label": "sham rigid cystoscopy with simulated treatment sounds",
+        "role": "control",
+        "n": 61
+      }
+    ],
+    "population": "Men aged 50 or older with IPSS 13 or higher, peak flow rate 15 mL/s or less and prostate volume 30–80 cc, with or without a median lobe.",
+    "description": "Multicenter, sham-controlled, participant-blinded randomized trial",
+    "locator": "Abstract (J Urol 2016); final 5-year report journal pp717–719 and Figure 1; ClinicalTrials.gov NCT01912339 results"
+  },
+  "verdict": "positive",
+  "verdictNote": "Sham-controlled at 3 months only; durability data are uncontrolled treatment-arm follow-up to 5 years.",
+  "takeaway": "In 197 men with BPH symptoms and 30–80 cc prostates, convective water vapor thermal therapy (Rezūm) reduced IPSS by 11.2 points versus 4.3 with sham rigid cystoscopy at 3 months (p < 0.0001); controls then crossed over, and no de novo erectile dysfunction was reported.",
+  "reports": [
+    {
+      "id": "rezum-2016",
+      "kind": "primary",
+      "label": "Initial randomized report",
+      "published": "2015-11-29",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; accepted 2015-11-03; print issue May 2016",
+      "cutoff": null,
+      "citation": "McVary KT, Gange SN, Gittelman MC, et al. Minimally invasive prostate convective water vapor energy ablation: a multicenter, randomized, controlled study for the treatment of lower urinary tract symptoms secondary to benign prostatic hyperplasia. *J Urol.* 2016;195(5):1529-1538. doi:10.1016/j.juro.2015.10.181",
+      "doi": "10.1016/j.juro.2015.10.181",
+      "pmid": "26614889",
+      "followUp": "3-month randomized comparison; treatment arm followed to 12 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Change in IPSS from baseline at 3 months (mean ± SD; mean difference is treatment minus sham)",
+          "values": {
+            "exp": "−11.2 ± 7.6",
+            "ctl": "−4.3 ± 6.9"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6.9,
+            "ci": [
+              -9.06,
+              -4.74
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The prespecified hypothesis was that the IPSS reduction with treatment exceeds 125% of the reduction with sham (final 5-year report, journal p718). The mean difference and its interval are the Cochrane review's calculation in 195 men with efficacy data; the ClinicalTrials.gov record gives 95% CIs of −12.5 to −9.9 and −6.1 to −2.5 for the two group means in the intention-to-treat population (136 and 61).",
+          "locator": "Abstract; ClinicalTrials.gov NCT01912339 results, primary outcome 1; Kang 2020 Cochrane review, Analysis 1.1"
+        },
+        {
+          "endpoint": "Serious device-related complications",
+          "role": "primary",
+          "measure": "Composite at 3 months: new severe retention lasting more than 21 days, rectourethral fistula, or rectal or gastrointestinal perforation (treatment arm only)",
+          "values": {
+            "exp": "1/136"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Prespecified performance goal: 12% or less. The registry gives a 95% CI of 0–4.6%.",
+          "locator": "ClinicalTrials.gov NCT01912339 results, primary outcome 2; FDA 510(k) K150786 summary, section 1.10.3"
+        },
+        {
+          "endpoint": "IPSS response",
+          "role": "secondary",
+          "measure": "30% or greater IPSS reduction from baseline at 3 months",
+          "values": {
+            "exp": "106/136 (77.9%)",
+            "ctl": "21/61 (34.4%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Responder counts at 6 and 12 months in the treatment arm were 102/136 and 104/136 (registry).",
+          "locator": "ClinicalTrials.gov NCT01912339 results, secondary outcomes"
+        },
+        {
+          "endpoint": "IPSS time course",
+          "role": "secondary",
+          "measure": "Treatment-arm mean IPSS at 2 weeks (baseline 22)",
+          "values": {
+            "exp": "18.6"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0006"
+          },
+          "note": "The treatment-arm IPSS fell by 50% or more from baseline at 3, 6 and 12 months (p < 0.0001).",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Treatment-arm change in peak flow rate at 3 months",
+          "values": {
+            "exp": "+6.2 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Sustained through 12 months (p < 0.0001). The abstract gives no sham comparison for this endpoint.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Clavien–Dindo grade III–V adverse events",
+          "values": {
+            "exp": "7/136 (5.1%)",
+            "ctl": "0/61"
+          },
+          "locator": "Kang 2020 Cochrane review, Analysis 1.3",
+          "note": "Risk ratio 6.79 (95% CI 0.39–117.00), very low-certainty evidence."
+        },
+        {
+          "label": "Clavien–Dindo grade I–II adverse events",
+          "locator": "Kang 2020 Cochrane review, Analysis 1.7",
+          "note": "Risk ratio 1.89 (95% CI 1.15–3.11) for treatment versus sham, low-certainty evidence; examples were dysuria, hematuria, frequency, urgency, hematospermia and urinary infection. The primary report describes adverse events as mild to moderate and quickly resolved."
+        },
+        {
+          "label": "Catheterization before discharge",
+          "values": {
+            "exp": "122/135 (90.4%)",
+            "ctl": "12/61 (19.7%)"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 5",
+          "note": "Mean catheter duration 3.4 ± 3.2 days (N = 123; median 2.9, range 0.0–30.9) versus 0.9 ± 0.8 days (N = 12). Of the 122 treated men catheterized, 83 (68%) were catheterized at physician discretion. The Cochrane review gives a risk ratio of 35.58 (95% CI 15.37–82.36) for an indwelling catheter."
+        },
+        {
+          "label": "De novo erectile dysfunction",
+          "values": {
+            "exp": "none reported"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized and treated",
+          "values": {
+            "exp": "136 randomized, 135 treated",
+            "ctl": "61 randomized and underwent the control procedure"
+          },
+          "locator": "Abstract; final 5-year report journal p719, Figure 1"
+        },
+        {
+          "label": "Control procedure",
+          "value": "Rigid cystoscopy (19–21 Fr) with simulated active-treatment sounds",
+          "locator": "Final 5-year report journal p718, Procedure",
+          "note": "Participants were unblinded after the 3-month visit."
+        },
+        {
+          "label": "Anatomic coverage",
+          "value": "Vapor injected into the transition zone and, as needed, the median lobe",
+          "locator": "Abstract"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/Rezum-McVary-2016.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "rezum-2016-sexual",
+      "kind": "secondary",
+      "label": "Erectile and ejaculatory function",
+      "published": "2016-05-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; print issue June 2016",
+      "cutoff": null,
+      "citation": "McVary KT, Gange SN, Gittelman MC, et al. Erectile and ejaculatory function preserved with convective water vapor energy treatment of lower urinary tract symptoms secondary to benign prostatic hyperplasia: randomized controlled study. *J Sex Med.* 2016;13(6):924-933. doi:10.1016/j.jsxm.2016.03.372",
+      "doi": "10.1016/j.jsxm.2016.03.372",
+      "pmid": "27129767",
+      "followUp": "3-month blinded comparison; treatment arm followed to 12 months",
+      "followUpLocator": "Abstract, Main Outcome Measures",
+      "results": [
+        {
+          "endpoint": "Erectile and ejaculatory function",
+          "role": "secondary",
+          "measure": "IIEF erectile function and MSHQ-EjD function scores, treatment arm",
+          "values": {
+            "exp": "not different from control at 3 months or from baseline at 1 year"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Men who were not sexually active were censored from the sexual-function analysis.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Ejaculatory bother",
+          "role": "secondary",
+          "measure": "Improvement in the ejaculatory bother score over baseline",
+          "values": {
+            "exp": "31%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0011"
+          },
+          "note": "The abstract does not give the time point.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "Treated men reaching the minimal clinically important difference in erectile function score",
+          "values": {
+            "exp": "32% at 3 months; 27% at 1 year"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Included men with moderate to severe erectile dysfunction.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "IPSS and Qmax",
+          "role": "secondary",
+          "measure": "IPSS and peak flow rate versus control",
+          "values": {
+            "exp": "superior to control at 3 months and throughout 1 year"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment- or device-related de novo erectile dysfunction",
+          "values": {
+            "exp": "none"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Vapor temperature",
+          "value": "103 °C, injected into lateral and median lobes as required",
+          "locator": "Abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "rezum-2017",
+      "kind": "updated",
+      "label": "2-year report",
+      "published": "2016-12-21",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; accepted 2016-12-02; print issue June 2017",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Gange SN, Gittelman MC, et al. Convective thermal therapy: durable 2-year results of randomized controlled and prospective crossover studies for treatment of lower urinary tract symptoms due to benign prostatic hyperplasia. *J Urol.* 2017;197(6):1507-1516. doi:10.1016/j.juro.2016.12.045",
+      "doi": "10.1016/j.juro.2016.12.045",
+      "pmid": "27993667",
+      "followUp": "24 months in the randomized treatment arm; 1 year in the crossover group",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "IPSS reduction from baseline at 24 months, treatment arm",
+          "values": {
+            "exp": "51%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "IPSS responders",
+          "role": "secondary",
+          "measure": "Treated men with an IPSS decrease of 5 points or more and of 8 points or more at 24 months",
+          "values": {
+            "exp": "84% and 74%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Crossover group",
+          "role": "secondary",
+          "measure": "Symptoms, flow rate and quality of life after thermal therapy versus after the control procedure, crossover subjects",
+          "values": {
+            "exp": "improved"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.024 to <0.0001"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "De novo erectile dysfunction",
+          "values": {
+            "exp": "none reported"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/rezum-2017.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "rezum-2018",
+      "kind": "updated",
+      "label": "3-year report",
+      "published": "2017-11-11",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; accepted 2017-10-26; print issue January 2018",
+      "cutoff": null,
+      "citation": "McVary KT, Roehrborn CG. Three-year outcomes of the prospective, randomized controlled Rezūm system study: convective radiofrequency thermal therapy for treatment of lower urinary tract symptoms due to benign prostatic hyperplasia. *Urology.* 2018;111:1-9. doi:10.1016/j.urology.2017.10.023",
+      "doi": "10.1016/j.urology.2017.10.023",
+      "pmid": "29122620",
+      "followUp": "3 years, treatment arm followed annually after the 3-month comparison",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Symptom and flow outcomes",
+          "role": "secondary",
+          "measure": "Treatment-arm improvement at 3 years in IPSS, quality of life, Qmax and BPH Impact Index",
+          "values": {
+            "exp": "50%, 49%, 39% and 57%, respectively"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Men with a treated median lobe had similar responses.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Surgical retreatment over 3 years",
+          "values": {
+            "exp": "4.4%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Late device- or procedure-related adverse events",
+          "values": {
+            "exp": "none"
+          },
+          "locator": "Abstract"
+        },
+        {
+          "label": "De novo erectile dysfunction",
+          "values": {
+            "exp": "none reported"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/rezum-2018.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "rezum-2019",
+      "kind": "updated",
+      "label": "4-year report",
+      "published": "2019-01-25",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; accepted 2018-12-21; print issue April 2019",
+      "cutoff": null,
+      "citation": "McVary KT, Rogers T, Roehrborn CG. Rezūm water vapor thermal therapy for lower urinary tract symptoms associated with benign prostatic hyperplasia: 4-year results from randomized controlled study. *Urology.* 2019;126:171-179. doi:10.1016/j.urology.2018.12.041",
+      "doi": "10.1016/j.urology.2018.12.041",
+      "pmid": "30677455",
+      "followUp": "4 years in 188 treated men (135 treatment arm plus 53 crossover, followed 3 years)",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "Symptom and flow outcomes",
+          "role": "secondary",
+          "measure": "Improvement at 4 years: IPSS, quality of life, Qmax and BPH Impact Index",
+          "values": {
+            "exp": "47%, 43%, 50% and 52%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Crossover subjects had similarly sustained outcomes at 3 years.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Surgical retreatment over 4 years",
+          "values": {
+            "exp": "4.4%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "17%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "Procedure- or device-related, adjudicated; 4% moderate, none severe; 97% resolved."
+        },
+        {
+          "label": "Gross hematuria",
+          "values": {
+            "exp": "12%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "1% moderate, none severe; 100% resolved. Gross hematuria with clots occurred in 2% and gross hematuria with retention in 1%."
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "5%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "4% moderate and under 1% each mild and severe; 100% resolved."
+        },
+        {
+          "label": "Decrease in ejaculatory volume",
+          "values": {
+            "exp": "5%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "33% resolved."
+        },
+        {
+          "label": "Anejaculation",
+          "values": {
+            "exp": "3%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "None resolved."
+        },
+        {
+          "label": "Worsening erectile dysfunction",
+          "values": {
+            "exp": "2%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "None resolved; the manufacturer's table separately reports no de novo erectile dysfunction."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "5% suspected; 3% culture proven"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "Both resolved in 100%."
+        },
+        {
+          "label": "Urethral stricture",
+          "values": {
+            "exp": "2%"
+          },
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Table 3; data through February 9, 2019 for treatment and crossover subjects, not the journal abstract",
+          "note": "Moderate severity; 100% resolved. Bladder neck contracture and bladder stone formation each occurred in under 1% and were severe."
+        },
+        {
+          "label": "Serious procedure- or device-related adverse events",
+          "value": "6 events in 4 treatment or crossover subjects",
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Reported Adverse Events; data through February 9, 2019",
+          "note": "Prolonged retention from an untreated intravesical lobe, allergic reaction to a sedative, bladder neck contracture with bladder stones, and urosepsis after cystoscopy. Fifty-seven percent of treatment and crossover subjects had no related event, 80% of events occurred within 30 days and 89% had resolved."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sought other treatment within 4 years",
+          "value": "9/188 (5%)",
+          "locator": "Boston Scientific Rezūm directions for use (Canada, 2021), Subsequent Treatments"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/rezum-2019.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "rezum-2021",
+      "kind": "updated",
+      "label": "Final 5-year report",
+      "published": "2021-04-20",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; print issue September 2021",
+      "cutoff": null,
+      "citation": "McVary KT, Gittelman MC, Goldberg KA, et al. Final 5-year outcomes of the multicenter randomized sham-controlled trial of a water vapor thermal therapy for treatment of moderate to severe lower urinary tract symptoms secondary to benign prostatic hyperplasia. *J Urol.* 2021;206(3):715-724. doi:10.1097/JU.0000000000001778",
+      "doi": "10.1097/JU.0000000000001778",
+      "pmid": "33872051",
+      "followUp": "5 years: 77 of 135 treated men (57%) and 21 of 53 crossover men evaluated at 60 months",
+      "followUpLocator": "Journal pp718–719, Figure 1 and Results",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Treatment-arm mean IPSS change from baseline (22.0) at 5 years, per-protocol",
+          "values": {
+            "exp": "−11.1 ± 7.8"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported as a reduction of near 48%; IPSS was 10.6 at 3 months (change −11.3 ± 7.6).",
+          "locator": "Journal p720, Results"
+        },
+        {
+          "endpoint": "Quality of life",
+          "role": "secondary",
+          "measure": "Treatment-arm mean IPSS quality-of-life score at 5 years (baseline 4.4 ± 1.1)",
+          "values": {
+            "exp": "2.2 ± 1.4"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported as a 45% reduction; 2.3 ± 1.5 at 3 months.",
+          "locator": "Journal p720, Results"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Treatment-arm mean peak flow rate at 5 years (baseline 9.9 ± 2.2 mL/s)",
+          "values": {
+            "exp": "14.0 ± 5.4 mL/s"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The text reports 49% improvement; the abstract reports 44%. Flow was 15.5 ± 6.7 mL/s at 1 year.",
+          "locator": "Journal p720, Results; p715 abstract"
+        },
+        {
+          "endpoint": "BPH Impact Index",
+          "role": "secondary",
+          "measure": "Treatment-arm mean BPH Impact Index at 5 years",
+          "values": {
+            "exp": "2.2 ± 1.4"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The text reports a 45% decline at 5 years after a peak decrease of 51% at 6 months (2.1 ± 1.5); the abstract reports 48%.",
+          "locator": "Journal p720, Results; p715 abstract"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Cumulative surgical retreatment through 5 years, treatment arm",
+          "values": {
+            "exp": "6/135 (4.4%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Cumulative surgical retreatment was 2.2% at 12 months, 3.7% at 24 months and 4.4% from 36 months. Of the 6 men, 4 had obstructive median tissue left untreated; 83% of surgical retreatments occurred in the first 2 years and none after year 3. BPH medication was started by a further 11.1% through 5 years (0.8% at 12 months).",
+          "locator": "Journal pp720–721, Figure 3"
+        },
+        {
+          "endpoint": "Retreatment, crossover group",
+          "role": "secondary",
+          "measure": "Retreatment through 5 years in the 53 crossover men",
+          "values": {
+            "exp": "4 surgical, 10 BPH medication"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Three of the 4 surgical retreatments were for previously untreated obstructive median tissue.",
+          "locator": "Journal p721"
+        },
+        {
+          "endpoint": "Responder",
+          "role": "secondary",
+          "measure": "Treatment-arm men both free from retreatment and with a 30% or greater IPSS reduction at 5 years",
+          "values": {
+            "exp": "82/135 (61%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified responder endpoint.",
+          "locator": "Journal pp718, 720"
+        },
+        {
+          "endpoint": "Sexual function",
+          "role": "secondary",
+          "measure": "Change in IIEF erectile function and MSHQ-EjD function domains at 5 years, treatment arm",
+          "values": {
+            "exp": "−2.4 ± 9.2 and −2.0 ± 3.9"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The authors attribute the modest changes to aging of the cohort. No device- or procedure-related de novo erectile dysfunction occurred; the MSHQ-EjD bother score improved 16% at 60 months.",
+          "locator": "Journal p720"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "16.9%"
+          },
+          "locator": "Journal p718",
+          "note": "Device- or procedure-related, treatment arm; 18.9% in the crossover group. Mild to moderate, resolved spontaneously or with routine treatment."
+        },
+        {
+          "label": "Gross hematuria",
+          "values": {
+            "exp": "12.5%"
+          },
+          "locator": "Journal p718",
+          "note": "11.3% in the crossover group."
+        },
+        {
+          "label": "Acute urinary retention",
+          "values": {
+            "exp": "4.4%"
+          },
+          "locator": "Journal pp718–719",
+          "note": "5.7% in the crossover group."
+        },
+        {
+          "label": "Suspected urinary tract infection",
+          "values": {
+            "exp": "3.7%"
+          },
+          "locator": "Journal pp718–719",
+          "note": "7.5% in the crossover group."
+        },
+        {
+          "label": "Decrease in ejaculatory volume",
+          "values": {
+            "exp": "3.7%"
+          },
+          "locator": "Journal pp718–719",
+          "note": "7.5% in the crossover group."
+        },
+        {
+          "label": "Hematospermia",
+          "values": {
+            "exp": "7.4%"
+          },
+          "locator": "Journal p718",
+          "note": "3.8% in the crossover group. Urinary frequency 5.9% and 5.7%."
+        },
+        {
+          "label": "Related adverse events overall",
+          "value": "151 events in 53 treatment-arm men; 59 events in 23 crossover men",
+          "locator": "Journal p718",
+          "note": "No late related adverse events occurred in years 1 to 5, and no withdrawal was attributed to a device- or procedure-related event."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Men treated",
+          "value": "188 (135 treatment arm plus 53 crossover), in office or ambulatory surgery center",
+          "locator": "Journal p718"
+        },
+        {
+          "label": "Vapor injections per man",
+          "values": {
+            "exp": "4.5 ± 1.8"
+          },
+          "locator": "Journal p718",
+          "note": "5.1 ± 1.9 in the crossover group. The number varied with prostate size and whether the median lobe was treated."
+        },
+        {
+          "label": "Median lobe treated",
+          "value": "58/188 (30.9%)",
+          "locator": "Journal p718",
+          "note": "These men received 1.6 ± 0.7 additional injections to the median tissue."
+        },
+        {
+          "label": "Procedure time",
+          "values": {
+            "exp": "5.3 ± 3.5 minutes"
+          },
+          "locator": "Journal p718",
+          "note": "Initial insertion to complete removal; 4.4 ± 1.7 minutes in the crossover group."
+        },
+        {
+          "label": "Analgesia",
+          "value": "Oral pain medication 170/188 (90.4%); prostate block or epidural 39 (20.7%); intravenous sedation 19 (10.1%)",
+          "locator": "Journal p718"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/rezum-p5.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "rezum-2021-sexual",
+      "kind": "post-hoc",
+      "label": "5-year sexual function",
+      "published": "2021-10-30",
+      "cutoff": null,
+      "citation": "McVary KT, El-Arabi A, Roehrborn C. Preservation of sexual function 5 years after water vapor thermal therapy for benign prostatic hyperplasia. *Sex Med.* 2021;9(6):100454. doi:10.1016/j.esxm.2021.100454",
+      "doi": "10.1016/j.esxm.2021.100454",
+      "pmid": "34731779",
+      "followUp": "5 years; 125 sexually active treated men, 67 remaining at year 5",
+      "followUpLocator": "PMC8766265, Results",
+      "results": [
+        {
+          "endpoint": "Erectile function",
+          "role": "exploratory",
+          "measure": "IIEF erectile function change over 5 years, no baseline ED or EjD (n = 32 paired at 5 years)",
+          "values": {
+            "exp": "−2.4 ± 8.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.1414"
+          },
+          "locator": "PMC8766265, Table 2"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "exploratory",
+          "measure": "IIEF erectile function change over 5 years, baseline ED history (n = 28 paired at 5 years)",
+          "values": {
+            "exp": "−3.0 ± 10.1"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.1259"
+          },
+          "locator": "PMC8766265, Table 2"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "exploratory",
+          "measure": "IIEF erectile function change over 5 years, baseline EjD history (n = 17 paired at 5 years)",
+          "values": {
+            "exp": "−4.1 ± 9.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0127"
+          },
+          "locator": "PMC8766265, Table 2"
+        },
+        {
+          "endpoint": "Ejaculatory function",
+          "role": "exploratory",
+          "measure": "MSHQ-EjD function change over 5 years, no baseline ED or EjD (n = 31 paired at 5 years)",
+          "values": {
+            "exp": "−1.6 ± 3.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0083"
+          },
+          "note": "MSHQ-EjD bother scores did not change significantly at 5 years in any subgroup (P = 0.1107 to 0.7764).",
+          "locator": "PMC8766265, Table 2"
+        },
+        {
+          "endpoint": "Ejaculatory function",
+          "role": "exploratory",
+          "measure": "MSHQ-EjD function change over 5 years, baseline ED history (n = 28 paired at 5 years)",
+          "values": {
+            "exp": "−2.3 ± 4.7"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0158"
+          },
+          "locator": "PMC8766265, Table 2"
+        },
+        {
+          "endpoint": "Ejaculatory function",
+          "role": "exploratory",
+          "measure": "MSHQ-EjD function change over 5 years, baseline EjD history (n = 16 paired at 5 years)",
+          "values": {
+            "exp": "−1.6 ± 4.8"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.1970"
+          },
+          "locator": "PMC8766265, Table 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Analysis population",
+          "value": "125 sexually active treated or crossover men with no other BPH treatment during the 5 years",
+          "locator": "PMC8766265, Methods and Results",
+          "note": "Post hoc; ED and EjD were defined from baseline history, and ejaculatory dysfunction was not confirmed by a postejaculate urine sample."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "lift",
+      "note": "Sham-controlled pivotal trial of another office MIST in 30–80 cc prostates; the final Rezūm report cites L.I.F.T.'s 13.6% five-year surgical retreatment."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/rezum",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

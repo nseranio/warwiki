@@ -1,0 +1,529 @@
+{
+  "id": "pinnacle",
+  "name": "PINNACLE",
+  "aliases": [
+    "Optilume BPH pivotal trial"
+  ],
+  "nct": "NCT04131907",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does paclitaxel-coated balloon dilation of the prostatic urethra improve lower urinary tract symptoms from BPH more than a sham procedure?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind (participants and evaluating personnel) through 12 months",
+    "type": "superiority",
+    "n": 148,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Optilume BPH paclitaxel-coated balloon dilation",
+        "role": "experimental",
+        "n": 100
+      },
+      {
+        "key": "ctl",
+        "label": "sham cystoscopic procedure with an uninflated predilation catheter",
+        "role": "control",
+        "n": 48
+      }
+    ],
+    "population": "148 men aged 50 to 80 years with symptomatic BPH, IPSS of 13 or more, Qmax 5 to 12 mL/s, prostate volume 20 to 80 g and prostatic urethral length 32 to 55 mm.",
+    "description": "Multicenter, double-blind, sham-controlled randomized device trial",
+    "locator": "J Urol full text, Materials and Methods and Results (Demographics and Procedure)"
+  },
+  "verdict": "negative",
+  "verdictNote": "Primary endpoint missed with the 25% sham margin; secondary endpoints were not formally tested.",
+  "takeaway": "In men with BPH-related lower urinary tract symptoms, Optilume BPH paclitaxel-coated balloon dilation improved IPSS by 11.5 points at 12 months versus 8.0 points with a sham procedure at 3 months, but missed its primary endpoint, which added a 25% margin to the sham effect.",
+  "reports": [
+    {
+      "id": "pinnacle-2023",
+      "kind": "primary",
+      "label": "12-month randomized comparison",
+      "published": "2023-08-09",
+      "cutoff": null,
+      "citation": "Kaplan SA, Moss J, Freedman S, et al. \"The PINNACLE Study: A Double-blind, Randomized, Sham-controlled Study Evaluating the Optilume BPH Catheter System for the Treatment of Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia.\" *J Urol.* 2023;210(3):500-509. doi:10.1097/JU.0000000000003568",
+      "doi": "10.1097/JU.0000000000003568",
+      "pmid": "37555604",
+      "followUp": "12 months (Optilume BPH arm) versus 3 months (sham arm, the primary comparison time point)",
+      "followUpLocator": "J Urol full text, Statistical Methods and Efficacy",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "IPSS improvement from baseline, Optilume BPH at 12 months versus sham at 3 months, with a prespecified 25% super-superiority margin on the sham effect; difference = Optilume BPH minus sham with margin",
+          "values": {
+            "exp": "11.5 ± 7.8 points (n=100)",
+            "ctl": "8.0 ± 8.3 points (n=48)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.4,
+            "ci": [
+              -1.6,
+              4.5
+            ],
+            "p": "0.178"
+          },
+          "met": false,
+          "note": "The sham effect with the 25% margin was 10.0 points. The journal reports P = .18 for the margin-adjusted comparison; the difference, interval and exact P come from the FDA summary of safety and effectiveness, Table 12.",
+          "locator": "J Urol full text, Results (Efficacy); FDA SSED P220029 p 27 of 46, Table 12"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "IPSS improvement without the margin, Optilume BPH at 12 months minus sham at 3 months",
+          "values": {
+            "exp": "11.5 ± 7.8 points",
+            "ctl": "8.0 ± 8.3 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.4,
+            "ci": [
+              0.6,
+              6.2
+            ],
+            "p": "0.008"
+          },
+          "note": "Intention-to-treat with multiple imputation; alternative therapy counted as no improvement. Nominal P value.",
+          "locator": "J Urol full text, Results (Efficacy)"
+        },
+        {
+          "endpoint": "IPSS percent improvement",
+          "role": "key-secondary",
+          "measure": "Mean percent IPSS improvement from baseline to 12 months in the Optilume BPH arm against a prespecified performance goal of 30%",
+          "values": {
+            "exp": "49% (95% CI 42.7% to 55.4%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "The journal reports the goal as met (nominal P); the FDA summary states that secondary hypotheses were not formally tested because the primary endpoint was not met.",
+          "locator": "J Urol full text, Results (Efficacy); FDA SSED P220029 p 28 of 46"
+        },
+        {
+          "endpoint": "IPSS responder rate",
+          "role": "key-secondary",
+          "measure": "Participants with at least 30% IPSS improvement, Optilume BPH at 12 months versus sham at 3 months",
+          "values": {
+            "exp": "76.6% (72/94)",
+            "ctl": "52.1% (25/48)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "met": "not-tested",
+          "note": "The journal text prints the Optilume BPH numerator and denominator as 66/96 with 76.6%; 66/96 is the 3-month responder count (68.8%) in the FDA summary, whose Table 17 gives 72/94 at 12 months. Hypothesis not formally tested.",
+          "locator": "J Urol full text, Results (Efficacy); FDA SSED P220029 pp 28-29 of 46, Tables 16-17"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "key-secondary",
+          "measure": "Qmax change from baseline, Optilume BPH at 12 months versus sham at 3 months; difference = Optilume BPH minus sham",
+          "values": {
+            "exp": "+9.7 ± 10.1 mL/s (n=87)",
+            "ctl": "+5.5 ± 7.4 mL/s (n=43)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.2,
+            "ci": [
+              0.8,
+              7.6
+            ],
+            "p": "0.009"
+          },
+          "met": "not-tested",
+          "note": "Voids under 150 mL excluded. The FDA summary lists the estimate as sham minus Optilume BPH, -4.2 (95% CI -7.6 to -0.8); the sign is reversed here. Hypothesis not formally tested.",
+          "locator": "J Urol full text, Results (Efficacy); FDA SSED P220029 p 29 of 46, Table 18"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Paired IPSS change from baseline at 12 months, Optilume BPH arm",
+          "values": {
+            "exp": "-12.1 ± 7.5 points (paired n=89; 23.0 to 10.9)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Within-arm paired analysis of participants with a 12-month visit; no concurrent sham value at 12 months.",
+          "locator": "J Urol full text, Table 2"
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "Paired IPSS quality-of-life change from baseline at 12 months, Optilume BPH arm",
+          "values": {
+            "exp": "-2.4 ± 1.9 points (paired n=89; 4.6 to 2.2)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "J Urol full text, Table 2"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Paired Qmax change from baseline at 12 months, Optilume BPH arm",
+          "values": {
+            "exp": "+10.3 ± 10.2 mL/s (paired n=82; 8.7 to 19.0); +125.2%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Voids under 150 mL excluded.",
+          "locator": "J Urol full text, Table 2"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Paired postvoid residual change from baseline at 12 months, Optilume BPH arm",
+          "values": {
+            "exp": "-25.2 ± 81.3 mL (paired n=82; 83.2 to 58.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.006"
+          },
+          "locator": "J Urol full text, Table 2"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Sham-arm IPSS improvement from baseline at 12 months",
+          "values": {
+            "ctl": "4.8 points (21.5%)"
+          },
+          "note": "Compared with 8.0 points (33.3%) at 3 months in the same arm.",
+          "locator": "J Urol full text, Discussion"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "IIEF erectile function domain change from baseline at 12 months",
+          "values": {
+            "exp": "+0.9 ± 7.7 (n=87)",
+            "ctl": "+2.7 ± 7.1 (n=26)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The authors report no significant differences between arms.",
+          "locator": "J Urol full text, Table 3"
+        },
+        {
+          "endpoint": "Ejaculatory function",
+          "role": "secondary",
+          "measure": "MSHQ-EjD function score change from baseline at 12 months",
+          "values": {
+            "exp": "+0.9 ± 3.5 (n=87)",
+            "ctl": "+0.2 ± 1.9 (n=26)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The authors report no significant differences between arms; the MSHQ-EjD bother score changed -0.6 ± 1.7 (n=87) and -0.5 ± 2.1 (n=26).",
+          "locator": "J Urol full text, Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events judged related to the device",
+          "values": {
+            "exp": "5/98 (5.1%)",
+            "ctl": "0/48"
+          },
+          "note": "Four postprocedural hematuria events needing cystoscopic management or extended observation, which resolved without sequelae, and one urethral false passage needing extended catheterization. The FDA summary also lists one grade 3 bladder perforation adjudicated as procedure-related, giving 6/98 (6.1%) treatment-related serious events. No participant met the prespecified composite of major device-related complications.",
+          "locator": "J Urol full text, Results (Safety and Tolerability); FDA SSED P220029 pp 20-22 of 46, Tables 9-11"
+        },
+        {
+          "label": "Hematuria (any, regardless of relatedness)",
+          "values": {
+            "exp": "39/98 (40%)"
+          },
+          "note": "Usually mild to moderate and resolved within 1 month in the journal. In the FDA as-treated analysis, treatment-related hematuria occurred in 39/98 (39.8%) as 41 events, 37/41 mild or moderate, with median 34 days to resolution. Serious hematuria became less frequent after mild-to-moderate Foley traction and bladder flushing were adopted.",
+          "locator": "J Urol full text, Results (Safety) and Discussion; FDA SSED P220029 pp 22-24 of 46"
+        },
+        {
+          "label": "Urinary tract infection (any, regardless of relatedness)",
+          "values": {
+            "exp": "14/98 (14%)"
+          },
+          "note": "Treatment-related urinary tract infection in the FDA summary: 11/98 (11.2%) with Optilume BPH versus 2/48 (4.2%) with sham.",
+          "locator": "J Urol full text, Results (Safety); FDA SSED P220029 p 23 of 46, Table 12"
+        },
+        {
+          "label": "Dysuria",
+          "values": {
+            "exp": "9/98 (9.2%)"
+          },
+          "locator": "J Urol full text, Results (Safety)"
+        },
+        {
+          "label": "Urge or mixed incontinence",
+          "values": {
+            "exp": "8/98 (8.2%)"
+          },
+          "locator": "J Urol full text, Results (Safety)"
+        },
+        {
+          "label": "Mild stress incontinence",
+          "values": {
+            "exp": "7/98 (7.1%)"
+          },
+          "locator": "J Urol full text, Results (Safety)"
+        },
+        {
+          "label": "Bladder spasm",
+          "values": {
+            "exp": "6/98 (6.1%)"
+          },
+          "locator": "J Urol full text, Results (Safety)"
+        },
+        {
+          "label": "Ejaculatory dysfunction (adverse event)",
+          "values": {
+            "exp": "4/98 (4.1%)",
+            "ctl": "1/48 (2.1%)"
+          },
+          "note": "P > .9. No treatment-related de novo erectile dysfunction was reported.",
+          "locator": "J Urol full text, Results (Safety and Tolerability)"
+        },
+        {
+          "label": "Urethral stricture (treatment-related)",
+          "values": {
+            "exp": "4/98 (4.1%)",
+            "ctl": "1/48 (2.1%)"
+          },
+          "locator": "FDA SSED P220029 p 25 of 46, Table 12"
+        },
+        {
+          "label": "Urinary retention (treatment-related)",
+          "values": {
+            "exp": "3/98 (3.1%)",
+            "ctl": "0/48"
+          },
+          "locator": "FDA SSED P220029 p 25 of 46, Table 12"
+        },
+        {
+          "label": "Mean maximum plasma paclitaxel concentration (pharmacokinetic subset)",
+          "values": {
+            "exp": "0.4 ng/mL"
+          },
+          "note": "Median 1 hour after treatment; average plasma concentration was below the limit of quantitation by Foley removal.",
+          "locator": "J Urol full text, Results (Safety and Tolerability)"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Device and technique",
+          "value": "Rigid 20F cystoscopy; uncoated predilation balloon inflated for about 1 minute to initiate an anterior commissurotomy; 90F drug-coated balloon, 30 to 45 mm long by transrectal-ultrasound prostatic urethral length, inflated for at least 5 minutes; Foley catheter for 2 days.",
+          "locator": "J Urol full text, Materials and Methods (Optilume BPH Treatment Procedure)"
+        },
+        {
+          "label": "Anesthesia",
+          "values": {
+            "exp": "84.7%",
+            "ctl": "87.5%"
+          },
+          "note": "Deep sedation or general anesthesia (P = .9); moderate sedation and local prostate block were used at a similar rate in each arm.",
+          "locator": "J Urol full text, Results (Demographics and Procedure)"
+        },
+        {
+          "label": "Procedure time (scope in to scope out)",
+          "values": {
+            "exp": "26 minutes",
+            "ctl": "8 minutes"
+          },
+          "note": "P < .01.",
+          "locator": "J Urol full text, Results (Demographics and Procedure)"
+        },
+        {
+          "label": "Duration of catheterization",
+          "values": {
+            "exp": "3.0 days",
+            "ctl": "2.5 days"
+          },
+          "note": "P = .15.",
+          "locator": "J Urol full text, Results (Demographics and Procedure)"
+        },
+        {
+          "label": "Sham procedure",
+          "value": "Rigid cystoscopy with a sheathed 21F predilation catheter that was not inflated, held for about 5 minutes; Foley catheter for 2 days; scripted staff dialogue, a drape blocking the participant's view, and identical analgesia and catheterization protocols.",
+          "locator": "J Urol full text, Materials and Methods (Sham Treatment Procedure)"
+        },
+        {
+          "label": "Blinding at Foley removal",
+          "value": "All sham participants believed they had received Optilume BPH or were unsure; 62.5% at 3 months.",
+          "locator": "J Urol full text, Results (Demographics and Procedure)"
+        },
+        {
+          "label": "Crossover",
+          "value": "Sham participants could break the blind and cross to Optilume BPH after the 3-month visit; 20 of the 48 did so before their 12-month visit.",
+          "locator": "J Urol full text, Materials and Methods (Assessments and Follow-up); count from FDA SSED P220029 p 16 of 46"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "pinnacle-2024",
+      "kind": "updated",
+      "label": "2-year follow-up",
+      "published": "2024-04-29",
+      "cutoff": null,
+      "citation": "Kaplan SA, Moss JL, Freedman SJ. \"Two-year long-term follow-up of treatment with the Optilume BPH catheter system in a randomized controlled trial for benign prostatic hyperplasia (the PINNACLE Study).\" *Prostate Cancer Prostatic Dis.* 2024;27(3):531-536. doi:10.1038/s41391-024-00833-z",
+      "doi": "10.1038/s41391-024-00833-z",
+      "pmid": "38684918",
+      "followUp": "2 years, Optilume BPH arm only (2-year data for 77 of 100; IPSS in 74)",
+      "followUpLocator": "Prostate Cancer Prostatic Dis full text (PMC11319191), Methods and Results",
+      "results": [
+        {
+          "endpoint": "Symptomatic responders",
+          "role": "descriptive",
+          "measure": "At least 30% IPSS improvement without medical or surgical retreatment at 2 years; treatment failures counted in the denominator",
+          "values": {
+            "exp": "67.5% (56/83; 95% CI 56.3% to 77.4%)"
+          },
+          "note": "Among participants with observed 2-year IPSS, 57/74 (77%) had at least 30% improvement.",
+          "locator": "Full text, Results (Efficacy)"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Paired IPSS change from baseline at 2 years",
+          "values": {
+            "exp": "-12.1 ± 8.0 points (paired n=74; 23.0 to 11.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "The text reports a 50.8% improvement and unpaired means of 23.4 ± 5.5 (n=100) to 11.0 ± 7.0 (n=74).",
+          "locator": "Full text, Table 2 and Results (Efficacy)"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "descriptive",
+          "measure": "Paired Qmax change from baseline at 2 years",
+          "values": {
+            "exp": "+10.3 ± 15.9 mL/s (paired n=65; 8.7 to 19.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Voids under 150 mL excluded. The text reports a 116.8% improvement.",
+          "locator": "Full text, Table 2 and Results (Efficacy)"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "descriptive",
+          "measure": "Paired postvoid residual change from baseline at 2 years",
+          "values": {
+            "exp": "-18.1 ± 100.2 mL (paired n=65; 84.0 to 65.9)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.151"
+          },
+          "locator": "Full text, Table 2"
+        },
+        {
+          "endpoint": "BPH Impact Index",
+          "role": "descriptive",
+          "measure": "Paired BPH-II change from baseline at 2 years",
+          "values": {
+            "exp": "-4.7 ± 3.7 points (paired n=74; 7.0 to 2.3)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "Full text, Table 2"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "descriptive",
+          "measure": "IIEF erectile function domain score at 2 years",
+          "values": {
+            "exp": "15.6 ± 10.3 (n=97) at baseline; 20.4 ± 10.2 (n=73) at 2 years"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Table 3"
+        },
+        {
+          "endpoint": "Retreatment",
+          "role": "descriptive",
+          "measure": "Surgical reintervention and added pharmacotherapy among the 100 randomized to Optilume BPH",
+          "values": {
+            "exp": "Surgical 3/100 (3%); medication 6/100 (6%)"
+          },
+          "note": "Surgical reinterventions included prostatic artery embolization, TURP and laser ablation.",
+          "locator": "Full text, Discussion"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Hematuria (treatment-related)",
+          "values": {
+            "exp": "39/98 (39.8%)"
+          },
+          "note": "41 events in 39 participants, 37/41 mild or moderate, median 34 days to resolution, no transfusions; frequency fell after the traction and bladder-flushing protocol was adopted.",
+          "locator": "Full text, Results (Safety)"
+        },
+        {
+          "label": "Urinary tract infection (treatment-related)",
+          "values": {
+            "exp": "11/98 (11.2%)"
+          },
+          "locator": "Full text, Results (Safety)"
+        },
+        {
+          "label": "Device- or treatment-related serious adverse events beyond 12 months",
+          "value": "None reported",
+          "locator": "Full text, Results (Safety)"
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "robust",
+      "note": "Same paclitaxel-coated balloon platform, tested in recurrent anterior urethral stricture rather than in BPH."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/pinnacle",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

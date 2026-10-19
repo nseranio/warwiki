@@ -1,0 +1,753 @@
+{
+  "id": "restorex",
+  "name": "RestoreX",
+  "aliases": [
+    "RestoreX RCT",
+    "RestoreX randomized controlled trial",
+    "Mayo IRB 17-001283",
+    "Mayo IRB 17-006161"
+  ],
+  "nct": "NCT03389854",
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "ed-peyronies",
+      "lane": "peyronies"
+    }
+  ],
+  "question": "Is RestoreX penile traction therapy for 30 to 90 minutes daily safe, and does it improve penile length and curvature in men with Peyronie's disease?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "single-blind (investigator)",
+    "type": "superiority",
+    "n": 110,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "RestoreX penile traction therapy for 30 to 90 minutes daily",
+        "role": "experimental",
+        "n": 82
+      },
+      {
+        "key": "ctl",
+        "label": "no therapy",
+        "role": "control",
+        "n": 28
+      }
+    ],
+    "population": "110 men with Peyronie's disease (diagnosed within 10 years) and curvature of 30 degrees or more, enrolled without exclusion for complex curvature, hourglass deformity, prior Peyronie's treatment or surgery, or calcification.",
+    "description": "Single-center, single-blind (investigator) randomized controlled intent-to-treat trial; no therapy versus traction allocated 1:3",
+    "locator": "p599 abstract; p600 Methods; p602 Table 1; p601 Figure 3 (28 control; 27, 28 and 27 in the once-, twice- and three-times-daily traction groups)"
+  },
+  "verdict": "positive",
+  "verdictNote": "Safety, the primary outcome, was met; length and curvature were secondary outcomes.",
+  "takeaway": "In 110 men with Peyronie's disease, RestoreX penile traction for 30 to 90 minutes daily had only transient, mild adverse events over 3 months and, versus no therapy, increased penile length (1.5 versus 0 cm) and improved composite curvature (−11.7 versus +1.3 degrees).",
+  "reports": [
+    {
+      "id": "restorex-2019",
+      "kind": "primary",
+      "label": "Randomized phase (3 months)",
+      "published": "2019-08-08",
+      "cutoff": null,
+      "citation": "Ziegelmann M, Savage J, Toussi A, et al. Outcomes of a Novel Penile Traction Device in Men with Peyronie's Disease: A Randomized, Single-Blind, Controlled Trial. *J Urol.* 2019;202(3):599-610.",
+      "doi": "10.1097/JU.0000000000000245",
+      "pmid": "30916626",
+      "followUp": "3 months of randomized treatment",
+      "followUpLocator": "p600",
+      "results": [
+        {
+          "endpoint": "Safety",
+          "role": "primary",
+          "measure": "Adverse events through 3 months in men treated with traction",
+          "locator": "p603, Table 2; p606; p607 Discussion",
+          "note": "The paper states that the primary outcome of safety was met and gives no numeric threshold. All de novo events were mild and resolved within minutes of finishing the daily session; no patient withdrew or reduced treatment because of adverse events. Adverse events were tabulated for the traction group only (62 men at 3 months).",
+          "values": {
+            "exp": "No moderate or severe adverse events"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change at 3 months, pubic symphysis to penile tip",
+          "locator": "p603, Table 3 (62 traction and 27 control men)",
+          "note": "Mean percentage change 10.0% versus 0.4%. Prespecified detectable difference was 0.6 cm (SD 1.0) with 20 men per arm. Difference derived by subtraction.",
+          "values": {
+            "exp": "+1.5 cm (SD 1.1)",
+            "ctl": "0.0 cm (SD 0.7)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.5,
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change at 3 months, pubic symphysis to glanular corona",
+          "locator": "p603, Table 3 (62 traction and 27 control men)",
+          "note": "Mean percentage change 12.1% versus 2.2%. Difference derived by subtraction.",
+          "values": {
+            "exp": "+1.3 cm (SD 1.1)",
+            "ctl": "+0.3 cm (SD 0.8)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.0,
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Penile curvature",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change at 3 months, composite curvature",
+          "locator": "p603, Table 3 (62 traction and 27 control men)",
+          "note": "Composite is the sum of primary and secondary curvatures; negative values denote improvement; curvature measured on photographs after pharmacologic erection. Mean percentage change −18.3% versus +3.9%. Prespecified detectable difference was 10 degrees (SD 15) with 20 men per arm. Difference derived by subtraction.",
+          "values": {
+            "exp": "−11.7 degrees (SD 15.0)",
+            "ctl": "+1.3 degrees (SD 19.0)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -13.0,
+            "p": "<0.01"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Penile curvature",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change at 3 months, primary (larger) curvature",
+          "locator": "p603, Table 3 (62 traction and 27 control men)",
+          "note": "Negative values denote improvement. Mean percentage change −17.8% versus −2.9% (P < 0.01). Difference derived by subtraction.",
+          "values": {
+            "exp": "−8.5 degrees (SD 10.1)",
+            "ctl": "−1.1 degrees (SD 7.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -7.4,
+            "p": "<0.001"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Composite response",
+          "role": "secondary",
+          "measure": "Men with at least 20% curvature improvement plus at least 1-point PDQ bother improvement, or a change from no sexual activity to sexual activity",
+          "locator": "p603, Table 3; p606",
+          "note": "The table prints 61 (24.6) for traction and 25 (4) for control, read here as percentages of 61 and 25 evaluable men; the text states 25% of traction men responded. Definition follows the phase III collagenase trials.",
+          "values": {
+            "exp": "24.6%",
+            "ctl": "4%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          }
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change in IIEF erectile function domain at 3 months, men with baseline erectile dysfunction (domain score 25 or less)",
+          "locator": "p603, Table 3; p606; p607 Discussion",
+          "note": "Subgroup; its denominator is not reported. The improvement remained significant after controlling for change in curvature (P < 0.01). Difference derived by subtraction.",
+          "values": {
+            "exp": "+4.3 (SD 7.4)",
+            "ctl": "−0.7 (SD 6.1)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.0,
+            "p": "0.01"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "key-secondary",
+          "measure": "Mean (SD) change in IIEF erectile function domain at 3 months, all men",
+          "locator": "p603, Table 3 (59 traction and 26 control men)",
+          "note": "Difference derived by subtraction.",
+          "values": {
+            "exp": "+2.5 (SD 6.3)",
+            "ctl": "−1.3 (SD 6.7)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.8,
+            "p": "0.06"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "Mean (SD) change in IIEF intercourse satisfaction domain at 3 months",
+          "locator": "p603, Table 3 (59 traction and 26 control men)",
+          "note": "Orgasmic function changed by −0.2 versus −0.5 (P = 0.50) and the sexual-desire row by +0.3 versus −0.1 (P = 0.21). Difference derived by subtraction.",
+          "values": {
+            "exp": "+1.5 (SD 2.9)",
+            "ctl": "−0.4 (SD 4.6)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.9,
+            "p": "0.08"
+          }
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "Mean (SD) change in IIEF overall satisfaction domain at 3 months",
+          "locator": "p603, Table 3 (59 traction and 26 control men)",
+          "note": "Difference derived by subtraction.",
+          "values": {
+            "exp": "+0.6 (SD 1.8)",
+            "ctl": "−0.4 (SD 2.2)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.0,
+            "p": "0.03"
+          }
+        },
+        {
+          "endpoint": "Ability to penetrate",
+          "role": "secondary",
+          "measure": "Men unable to penetrate at baseline (Sexual Encounter Profile question 2) who could at 3 months",
+          "locator": "p603, Table 3; p606",
+          "note": "Denominators are the men answering no at baseline: 8 traction and 4 control.",
+          "values": {
+            "exp": "4/8 (50%)",
+            "ctl": "0/4 (0%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          }
+        },
+        {
+          "endpoint": "Peyronie's Disease Questionnaire",
+          "role": "secondary",
+          "measure": "Mean (SD) change in psychological and physical domain at 3 months",
+          "locator": "p603, Table 3 (59 traction and 23 control men)",
+          "note": "Negative values denote improvement. Difference derived by subtraction.",
+          "values": {
+            "exp": "−2.3 (SD 4.1)",
+            "ctl": "−0.6 (SD 3.3)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.7,
+            "p": "0.09"
+          }
+        },
+        {
+          "endpoint": "Peyronie's Disease Questionnaire",
+          "role": "secondary",
+          "measure": "Mean (SD) change in symptom bother domain at 3 months",
+          "locator": "p603, Table 3 (59 traction and 23 control men)",
+          "note": "Negative values denote improvement. Difference derived by subtraction.",
+          "values": {
+            "exp": "−2.4 (SD 3.4)",
+            "ctl": "−0.9 (SD 4.2)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.5,
+            "p": "0.07"
+          }
+        },
+        {
+          "endpoint": "Peyronie's Disease Questionnaire",
+          "role": "secondary",
+          "measure": "Mean (SD) change in penile pain domain at 3 months",
+          "locator": "p603, Table 3 (59 traction and 23 control men)",
+          "note": "Negative values denote improvement. Difference derived by subtraction.",
+          "values": {
+            "exp": "−1.4 (SD 3.2)",
+            "ctl": "−0.8 (SD 3.6)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "p": "0.26"
+          }
+        },
+        {
+          "endpoint": "Peyronie's Disease Questionnaire",
+          "role": "secondary",
+          "measure": "Men for whom vaginal intercourse was difficult or impossible at baseline (question 12) and no longer was at 3 months",
+          "locator": "p603, Table 3",
+          "note": "The table gives percentages without counts.",
+          "values": {
+            "exp": "47.6%",
+            "ctl": "18.2%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.09"
+          }
+        },
+        {
+          "endpoint": "Curvature responders",
+          "role": "descriptive",
+          "measure": "Traction-treated men with improved curvature at 3 months",
+          "locator": "p599 abstract; p604 Figure 4; p606",
+          "note": "Mean improvement 17.2 degrees (28.2%) among responders; 27% had an improvement of 20 degrees or more and 48% of 20% or more. The denominator is not stated in the text.",
+          "values": {
+            "exp": "77%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Length responders",
+          "role": "descriptive",
+          "measure": "Traction-treated men with increased length at 3 months",
+          "locator": "p599 abstract; p604 Figure 4; p606",
+          "note": "Mean gain 1.6 cm (10.9%) among responders; 29% gained 2 cm or more. The denominator is not stated in the text.",
+          "values": {
+            "exp": "94%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Dose groups",
+          "role": "exploratory",
+          "measure": "Length and curvature among men reclassified by actual use of once, twice or three times daily",
+          "locator": "p606; p608 Figure 7",
+          "note": "As-treated subset analysis; the trial was not powered for subgroup differences.",
+          "values": {
+            "exp": "No significant difference between groups"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "exploratory",
+          "measure": "Mean (SD not given) length gain by total traction minutes over 3 months",
+          "locator": "p606",
+          "note": "Post hoc, nonsignificant trend: at least 5,000 minutes (56 minutes daily), 6,000 minutes (67 minutes daily) and 7,000 minutes (78 minutes daily).",
+          "values": {
+            "exp": "1.6, 2.1 and 2.3 cm"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Device preference",
+          "role": "descriptive",
+          "measure": "Preference for RestoreX among men who had used another traction device",
+          "locator": "p599 abstract; p605 Table 4; p606",
+          "note": "15 respondents: 86.7% much better and 13.3% somewhat better. Other devices named were PeniMaster, Andropenis, Hydromax, Phallosan Forte, Size Genetics and X4 Labs.",
+          "values": {
+            "exp": "100%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "First-line preference",
+          "role": "descriptive",
+          "measure": "Men who would choose RestoreX as first treatment if starting Peyronie's therapy anew",
+          "locator": "p605 Table 4; p606 (Figure 6)",
+          "note": "54 respondents, who could select more than one option; collagenase 23.6%, oral pills 14.8%, vacuum device 5.6%.",
+          "values": {
+            "exp": "74.1%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Treatment satisfaction",
+          "role": "descriptive",
+          "measure": "Overall satisfaction with traction at 3 months",
+          "locator": "p605 Table 4 (63 men)",
+          "note": "Neutral 30.2%, somewhat dissatisfied 3.2%, very dissatisfied 0%.",
+          "values": {
+            "exp": "25.4% very satisfied, 41.3% somewhat satisfied"
+          },
+          "effect": {
+            "type": "none"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Moderate or severe adverse events",
+          "values": {
+            "exp": "0 (62 men assessed at 3 months)"
+          },
+          "locator": "p603 Table 2; p606",
+          "note": "No patient withdrew, stopped or reduced treatment because of adverse events or intolerance; most events resolved within seconds or minutes."
+        },
+        {
+          "label": "Penile erythema or discoloration",
+          "values": {
+            "exp": "45.2% at 3 months versus 8.6% at baseline"
+          },
+          "locator": "p603 Table 2 (62 men at 3 months, 81 at baseline)",
+          "note": "All de novo symptoms were mild."
+        },
+        {
+          "label": "New mild penile pain",
+          "values": {
+            "exp": "53.2%"
+          },
+          "locator": "p603 Table 2 (62 men at 3 months)",
+          "note": "No moderate or severe pain."
+        },
+        {
+          "label": "Loss or abnormal penile sensation",
+          "values": {
+            "exp": "25.8% at 3 months versus 29.6% at baseline"
+          },
+          "locator": "p603 Table 2 (62 men at 3 months, 81 at baseline)",
+          "note": "Present at baseline in a similar proportion."
+        },
+        {
+          "label": "New cold glans, swelling, new bump",
+          "values": {
+            "exp": "3.2%, 3.2% and 1.6%"
+          },
+          "locator": "p603 Table 2 (62 men at 3 months)",
+          "note": ""
+        },
+        {
+          "label": "Other events",
+          "values": {
+            "exp": "8.1%"
+          },
+          "locator": "p603 Table 2 (62 men at 3 months)",
+          "note": "New minor curvature resolved by the next treatment, mild skin erosion from tape that resolved in 2 days, delayed urine stream not thought related to traction, skin sensitivity to Coban tape, and testicular pain that resolved after device discontinuation."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Recruitment and enrollment",
+          "value": "800 mailed invitations to men diagnosed within 10 years; 110 enrolled from October 2017 through August 2018",
+          "locator": "p601 Figure 3; p603; p605"
+        },
+        {
+          "label": "Baseline characteristics",
+          "value": "Mean age 58.4 years, Peyronie's disease duration 49.7 months and curvature 59.3 degrees",
+          "locator": "p599 abstract"
+        },
+        {
+          "label": "Whole-cohort severity",
+          "value": "Multiplanar curvature 60.0%, indentation 40.0%, hourglass deformity 39.9%, prior Peyronie's therapy 67.9% (collagenase 33.6%, traction 20%, surgery 3.6%), 97% in the chronic phase",
+          "locator": "p605"
+        },
+        {
+          "label": "Mean composite curvature at baseline",
+          "values": {
+            "exp": "59.7 degrees",
+            "ctl": "58.3 degrees"
+          },
+          "locator": "p602 Table 1"
+        },
+        {
+          "label": "Any prior Peyronie's therapy",
+          "values": {
+            "exp": "65.9%",
+            "ctl": "74.1%"
+          },
+          "locator": "p602 Table 1"
+        },
+        {
+          "label": "Plaque calcification",
+          "values": {
+            "exp": "8.7%",
+            "ctl": "33.3%"
+          },
+          "locator": "p602 Table 1 (P = 0.10)"
+        },
+        {
+          "label": "Treatment regimen",
+          "value": "RestoreX for 30 minutes (15 minutes straight and 15 minutes with counter-bending) once, twice or three times daily for 3 months; men kept a daily diary of traction duration and counter-bending (0 to 120 degrees)",
+          "locator": "p600"
+        },
+        {
+          "label": "Actual use",
+          "value": "Mean 43 minutes per day (range 16 to 84)",
+          "locator": "p607 Discussion"
+        },
+        {
+          "label": "Compliance by dose group",
+          "value": "100% once daily, 82% twice daily and 47% three times daily",
+          "locator": "p606"
+        },
+        {
+          "label": "Randomized (3:1)",
+          "values": {
+            "exp": "82",
+            "ctl": "28"
+          },
+          "locator": "p602 Table 1; p601 Figure 3 (27, 28 and 27 men in the three traction groups)"
+        },
+        {
+          "label": "Analyzed for 3-month length and curvature",
+          "values": {
+            "exp": "62/82 (76%)",
+            "ctl": "27/28 (96%)"
+          },
+          "locator": "p603 Table 3; p601 Figure 3"
+        },
+        {
+          "label": "Withdrew before the 3-month assessment",
+          "values": {
+            "exp": "19/82 (23%)",
+            "ctl": "1/28 (4%)"
+          },
+          "locator": "p601 Figure 3 (6, 5 and 8 men in the once-, twice- and three-times-daily groups; reasons not given in the text)"
+        },
+        {
+          "label": "Analysis populations",
+          "value": "Intent to treat, with no men excluded for noncompliance; 3-month data were available for 90 men (63 traction, 27 control). Subset analyses reclassified dose by actual use (under 45 minutes per day as once, 45 to 75 as twice, over 75 as three times daily)",
+          "locator": "p604-p605; p601 Figure 3"
+        },
+        {
+          "label": "Randomization and power",
+          "value": "Tables created a priori by primary curvature direction and baseline curvature (30 to 60 versus more than 60 degrees). With 20 men per arm, alpha 0.05 and beta 0.8 as printed, a difference of 0.6 cm (SD 1.0) in length and 10 degrees (SD 15) in curvature was detectable; the trial was not powered for IIEF, PDQ or dose-group differences",
+          "locator": "p604"
+        },
+        {
+          "label": "Length and curvature measurement",
+          "value": "Length: mean of two independent providers blinded to group and prior results. Curvature: photographs by professional surgical photographers after intracavernous Trimix (alprostadil 10 mcg/ml, papaverine 30 mg/ml, phentolamine 1 mg/ml) to an erection of 8 or more out of 10, reviewed by one individual blinded to group and prior assessments",
+          "locator": "p602-p603"
+        },
+        {
+          "label": "Counter-bending analysis",
+          "value": "Greater curvature improvement with counter-bending to 60 to 120 degrees than to 30 degrees (P < 0.01); an early analysis of device design",
+          "locator": "p607; p608 Figure 8"
+        },
+        {
+          "label": "White indicator line analysis",
+          "value": "Men who saw the white line (which indicates more than 3 pounds of force when concealed) most of the time had no length gain (mean −0.17 cm) and less curvature improvement (−2.1 versus −13.9 degrees, P = 0.02) than men who kept it concealed; an early analysis of device design",
+          "locator": "p607"
+        },
+        {
+          "label": "Device technique",
+          "value": "Straight stretch to bury the white indicator line and counter-bending to about 90 degrees; non-compliance defined as failing either on most uses or traction on fewer than 90% of recommended days",
+          "locator": "Protocol (ClinicalTrials.gov document, April 9, 2018) PDF p9"
+        },
+        {
+          "label": "Funding and disclosure",
+          "value": "Internal Mayo Clinic funds and an anonymous patient gift; PathRight Medical donated the devices; the corresponding author reports a financial interest or other relationship with PathRight Medical",
+          "locator": "p599; p609"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/RestoreX-Ziegelmann-2019.pdf",
+        "checked": "2026-10-19",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "restorex-2020",
+      "kind": "updated",
+      "label": "Open-label and follow-up phases (6 and 9 months)",
+      "published": "2020-11-20",
+      "cutoff": null,
+      "citation": "Joseph J, Ziegelmann M, Alom M, et al. Outcomes of RestoreX Penile Traction Therapy in Men with Peyronie's Disease: Results from Open Label and Follow-Up Phases. *J Sex Med.* 2020;17(12):2462-2471.",
+      "doi": "10.1016/j.jsxm.2020.10.003",
+      "pmid": "33223425",
+      "followUp": "6-month open-label phase and 9-month follow-up",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "Stretched penile length",
+          "role": "secondary",
+          "measure": "Gain in men crossed from control to traction (intent to treat), months 3 to 6",
+          "locator": "abstract",
+          "note": "Controls began optional traction after the 3-month visit.",
+          "values": {
+            "exp": "+1.7 to +2.0 cm"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Penile curvature",
+          "role": "secondary",
+          "measure": "Improvement in men crossed from control to traction (intent to treat), months 3 to 6",
+          "locator": "abstract",
+          "note": "",
+          "values": {
+            "exp": "18% to 20%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "secondary",
+          "measure": "Additional gain from months 3 to 6 in men continuing traction from the randomized phase",
+          "locator": "abstract",
+          "note": "The abstract reports no further curvature improvement in this group.",
+          "values": {
+            "exp": "+0.6 to +0.8 cm"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "secondary",
+          "measure": "Gain in length to the glanular corona from baseline to 6 months with traction of at least 15 minutes per day during months 3 to 6 (as-treated; range across the original traction and original control groups)",
+          "locator": "abstract",
+          "note": "The authors describe this as the largest gain reported for any traction device.",
+          "values": {
+            "exp": "+2.0 to +2.3 cm"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Penile curvature",
+          "role": "secondary",
+          "measure": "Improvement in composite curvature from baseline to 6 months with traction of at least 15 minutes per day during months 3 to 6 (as-treated; range across the original traction and original control groups)",
+          "locator": "abstract",
+          "note": "",
+          "values": {
+            "exp": "18% to 21%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Length responders",
+          "role": "descriptive",
+          "measure": "Men in the original traction arm analyzed as treated (n=37) with length gain at 6 months",
+          "locator": "p2466",
+          "note": "Among responders, mean gain was 2.0 cm to corona and 2.2 cm to tip.",
+          "values": {
+            "exp": "95%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Curvature responders",
+          "role": "descriptive",
+          "measure": "Men in the original traction arm analyzed as treated (n=37) with curvature improvement at 6 months",
+          "locator": "p2466",
+          "note": "Among responders, mean improvement was 16.8 degrees (35.8%) in primary and 21.4 degrees (32.8%) in composite curvature.",
+          "values": {
+            "exp": "61%"
+          },
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Stretched penile length",
+          "role": "secondary",
+          "measure": "Change at 6 months to glanular corona, original control versus original traction group, as-treated (men using the device at least 15 minutes per day during months 3 to 6)",
+          "locator": "p2467 Table 2 (37 original traction and 14 original control men); difference derived by subtraction",
+          "note": "SD 1.1 cm (original traction) and 2.0 cm (original control). Controls used the device on an open-label basis from month 3, so this is not a controlled comparison.",
+          "values": {
+            "exp": "+2.0 cm",
+            "ctl": "+2.3 cm"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.3,
+            "p": "0.90"
+          }
+        },
+        {
+          "endpoint": "Penile curvature",
+          "role": "secondary",
+          "measure": "Change at 6 months, original control versus original traction group",
+          "locator": "ClinicalTrials.gov results, outcome measure 'Change in Penile Curvature' (14 original control and 37 original traction men); difference derived by subtraction",
+          "note": "Negative values denote improvement. Registry SD 18.1 degrees (original traction) and 18.6 degrees (original control). Controls used the device on an open-label basis from month 3, so this is not a controlled comparison.",
+          "values": {
+            "exp": "−14.9 degrees",
+            "ctl": "−12.5 degrees"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.4,
+            "p": "0.64"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events",
+          "values": {
+            "exp": "Temporary erythema and discomfort most common; no significant events"
+          },
+          "locator": "abstract",
+          "note": "Events resolved within minutes."
+        },
+        {
+          "label": "Serious adverse events, open-label period",
+          "values": {
+            "exp": "0/63"
+          },
+          "locator": "ClinicalTrials.gov results, adverse events module, open-label group",
+          "note": ""
+        },
+        {
+          "label": "Transient events at 6 months, open-label period",
+          "values": {
+            "exp": "Erythema or discoloration 35%, new mild penile pain 27%, loss or abnormal sensation 5%"
+          },
+          "locator": "ClinicalTrials.gov results, outcome measure 'Adverse Events at 6 Months' (63 men; percentages as reported)",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Participants reported",
+          "value": "64 men at 6 months and 63 at 9 months",
+          "locator": "abstract"
+        },
+        {
+          "label": "Mean duration of traction use",
+          "value": "31.1 minutes per day at 6 months",
+          "locator": "abstract"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/restorex-2020.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/restorex",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "id": "altman-mesh",
+  "name": "Altman (Nordic TVM)",
+  "aliases": [
+    "Nordic Transvaginal Mesh Group",
+    "Anterior PROLIFT trial"
+  ],
+  "nct": "NCT00566917",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-grafts",
+      "lane": "vaginal-mesh"
+    }
+  ],
+  "question": "Does trocar-guided anterior transvaginal polypropylene mesh repair improve one-year success over anterior colporrhaphy for symptomatic cystocele?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "patients blinded through one year; outcome assessors unblinded",
+    "type": "superiority",
+    "n": 389,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Gynecare Prolift anterior transvaginal polypropylene mesh repair",
+        "n": 200,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "traditional anterior colporrhaphy",
+        "n": 189,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged at least 18 years with symptomatic primary or recurrent POP-Q stage 2 or higher anterior vaginal wall prolapse who did not need concomitant surgery.",
+    "description": "Multicenter, patient-blinded superiority randomized trial",
+    "locator": "NEJM full text, Methods: Patients, Randomization, Study Design; Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Composite success improved at one year, with more operative and mesh-related harms.",
+  "takeaway": "Trocar-guided Gynecare Prolift anterior polypropylene mesh repair increased one-year composite anatomic and symptom success versus traditional anterior colporrhaphy (60.8% versus 34.5%); surgery was longer, bleeding and bladder perforation were more frequent, and mesh exposure required reoperation in 3.2%.",
+  "reports": [
+    {
+      "id": "altman-mesh-2010-urodynamics",
+      "kind": "secondary",
+      "label": "Urodynamic substudy",
+      "published": "2009-09-03",
+      "cutoff": null,
+      "citation": "Ek M, Tegerstedt G, Falconer C, et al. \"Urodynamic assessment of anterior vaginal wall surgery: a randomized comparison between colporraphy and transvaginal mesh.\" *Neurourol Urodyn.* 2010;29(4):527-531. doi:10.1002/nau.20811",
+      "doi": "10.1002/nau.20811",
+      "pmid": "19731311",
+      "followUp": "2 months after surgery; 50-patient randomized urodynamic substudy",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Maximum urethral closure pressure",
+          "role": "exploratory",
+          "measure": "Change from baseline at 2 months in 23 mesh and 27 colporrhaphy patients",
+          "values": {
+            "exp": "Significant decrease",
+            "ctl": "No significant change"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract gives no numerical pressure change.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "altman-mesh-2011",
+      "kind": "primary",
+      "label": "One-year primary report",
+      "published": "2011-05-12",
+      "cutoff": null,
+      "citation": "Altman D, Väyrynen T, Engh ME, et al. \"Anterior Colporrhaphy versus Transvaginal Mesh for Pelvic-Organ Prolapse.\" *N Engl J Med.* 2011;364(19):1826-1836. doi:10.1056/NEJMoa1009521",
+      "doi": "10.1056/NEJMoa1009521",
+      "pmid": "21561348",
+      "followUp": "12 months after surgery",
+      "followUpLocator": "NEJM full text, Methods: Study Design; Figure 1",
+      "results": [
+        {
+          "endpoint": "Composite success",
+          "role": "primary",
+          "measure": "One-year POP-Q anterior stage 0 or 1 plus no vaginal bulge; absolute risk difference in percentage points",
+          "values": {
+            "exp": "107/176 (60.8%)",
+            "ctl": "60/174 (34.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 26.3,
+            "ci": [
+              15.6,
+              37.0
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Among women with evaluable composite outcomes; 200 and 189 were randomized. Adjusted OR 3.6 (95% CI 2.2–5.9); a missing-data sensitivity analysis still favored mesh.",
+          "locator": "NEJM Table 2; Results: Outcome Measures"
+        },
+        {
+          "endpoint": "Anatomic success",
+          "role": "secondary",
+          "measure": "One-year anterior POP-Q stage 0 or 1; absolute risk difference in percentage points",
+          "values": {
+            "exp": "153/186 (82.3%)",
+            "ctl": "87/183 (47.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 34.8,
+            "ci": [
+              25.1,
+              44.3
+            ],
+            "p": "<0.001"
+          },
+          "locator": "NEJM Table 2; Results: Outcome Measures"
+        },
+        {
+          "endpoint": "No vaginal bulge symptom",
+          "role": "secondary",
+          "measure": "One-year absence of vaginal bulge; absolute risk difference in percentage points",
+          "values": {
+            "exp": "135/179 (75.4%)",
+            "ctl": "108/174 (62.1%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 13.3,
+            "ci": [
+              3.2,
+              23.5
+            ],
+            "p": "0.008"
+          },
+          "locator": "NEJM Table 2; Results: Outcome Measures"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Bladder perforation",
+          "values": {
+            "exp": "7/200 (3.5%)",
+            "ctl": "1/189 (0.5%)"
+          },
+          "locator": "NEJM Table 4; Results: Adverse Events",
+          "note": "P=0.07."
+        },
+        {
+          "label": "New stress urinary incontinence",
+          "values": {
+            "exp": "22/179 (12.3%)",
+            "ctl": "11/176 (6.2%)"
+          },
+          "locator": "NEJM Results: Outcome Measures; Table 2",
+          "note": "P=0.05; the abstract prints 6.3% for control, but 11/176 rounds to 6.2%."
+        },
+        {
+          "label": "Vaginal wound revision for mesh exposure",
+          "values": {
+            "exp": "6/186 (3.2%)"
+          },
+          "locator": "NEJM Results: Adverse Events; Table 4",
+          "note": "All six mesh-arm wound revisions corrected exposure; P=0.03."
+        },
+        {
+          "label": "Surgery for stress incontinence by 12 months",
+          "values": {
+            "exp": "5/186 (2.7%)"
+          },
+          "locator": "NEJM Results: Adverse Events",
+          "note": "P=0.06."
+        },
+        {
+          "label": "Severe pelvic pain at 2 months",
+          "values": {
+            "exp": "5 patients",
+            "ctl": "1 patient"
+          },
+          "locator": "NEJM Results: Adverse Events",
+          "note": "P=0.22; pain resolved by one year in all but one mesh patient."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Operative technique",
+          "value": "Standardized Gynecare Prolift Anterior Pelvic Floor Repair System mesh kit versus standardized traditional anterior colporrhaphy; no concomitant surgery permitted.",
+          "locator": "NEJM Methods: Patients, Surgical Procedures"
+        },
+        {
+          "label": "Surgeon experience",
+          "value": "58 surgeons at 53 hospitals; median 3 operations of each type per surgeon.",
+          "locator": "NEJM Results: Study Population"
+        },
+        {
+          "label": "Assigned treatment received",
+          "values": {
+            "exp": "191/200 (95.5%)",
+            "ctl": "182/189 (96.3%)"
+          },
+          "locator": "NEJM Figure 1; Results: Study Population",
+          "note": "Nonadherence to assignment was 4.5% versus 3.7%."
+        },
+        {
+          "label": "Mean operative time",
+          "values": {
+            "exp": "52.6 minutes",
+            "ctl": "33.5 minutes"
+          },
+          "locator": "NEJM Table 4; Results: Adverse Events",
+          "note": "P<0.001."
+        },
+        {
+          "label": "Mean intraoperative blood loss",
+          "values": {
+            "exp": "84.7 mL",
+            "ctl": "35.4 mL"
+          },
+          "locator": "NEJM Table 4; Results: Adverse Events",
+          "note": "P<0.001; five mesh patients lost more than 500 mL, including one exceeding 1000 mL."
+        },
+        {
+          "label": "Perioperative measures",
+          "value": "Procedures were standardized; participating surgeons were trained, and postmenopausal patients received topical estrogen before and after surgery.",
+          "locator": "NEJM Methods: Surgical Procedures; Discussion"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "altman-mesh-2013-correction",
+      "kind": "correction",
+      "label": "Sponsor-disclosure correction",
+      "published": "2013-01-24",
+      "cutoff": null,
+      "citation": "\"Correction: Anterior Colporrhaphy versus Transvaginal Mesh for Pelvic-Organ Prolapse.\" *N Engl J Med.* 2013;368(4):394. doi:10.1056/NEJMx130001",
+      "doi": "10.1056/NEJMx130001",
+      "pmid": null,
+      "followUp": "No additional patient follow-up",
+      "results": [],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/altman-mesh",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

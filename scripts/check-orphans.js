@@ -24,6 +24,8 @@ const DOCS_DIR = path.join(REPO_ROOT, 'docs');
 // src/data/*.ts data sources) rather than via static Markdown links. Orphan
 // check skips these — the component is the source of truth for reachability.
 const DYNAMIC_LINK_PREFIXES = [
+  // Trial pages — linked from the Clinical Evidence library through src/data/clinical-evidence/trials/*.json `page`
+  'docs/06-clinical-evidence/studies/',
   // Surgeon profiles — rendered by SurgeonDirectory/SurgeonTree from src/data/surgeons.ts
   'docs/07-roots/surgeons/',
   // Incontinence procedure pages — rendered by GenericDatabase from female/male/oab database pages

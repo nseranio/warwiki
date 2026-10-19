@@ -1,0 +1,591 @@
+{
+  "id": "lift",
+  "name": "L.I.F.T.",
+  "aliases": [
+    "Luminal Improvement Following Prostatic Tissue Approximation",
+    "UroLift pivotal study",
+    "NeoTract 1012CP"
+  ],
+  "nct": "NCT01294150",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does the prostatic urethral lift improve lower urinary tract symptoms from BPH more than sham cystoscopy in men with 30 to 80 cc prostates and no obstructive median lobe?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "patient and outcome assessor blinded through 3 months",
+    "type": "superiority",
+    "n": 206,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prostatic urethral lift (UroLift)",
+        "role": "experimental",
+        "n": 140
+      },
+      {
+        "key": "ctl",
+        "label": "sham rigid cystoscopy with simulated lift sounds",
+        "role": "control",
+        "n": 66
+      }
+    ],
+    "population": "Men aged 50 years or older with AUASI of 13 or higher, Qmax of 12 mL/s or less and prostate volume of 30 to 80 cc, without an obstructive median lobe.",
+    "description": "Multicenter, sham-controlled, blinded randomized device trial",
+    "locator": "Abstract; Can J Urol 2017 PDF pp3-4 (journal pp8804-8805); Can J Urol 2015 PDF pp2-3, Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Symptom score and flow improved versus sham at 3 months; the randomized comparison ended at 3 months.",
+  "takeaway": "The prostatic urethral lift (UroLift) reduced the AUA symptom index more than sham at 3 months (11.1 versus 5.9 points) in men 50 or older with BPH-related LUTS and 30 to 80 cc prostates without a median lobe; no de novo sustained sexual dysfunction occurred.",
+  "reports": [
+    {
+      "id": "lift-2013",
+      "kind": "primary",
+      "label": "Randomized sham-controlled report",
+      "published": "2013-06-11",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Gange SN, Shore ND, et al. The prostatic urethral lift for the treatment of lower urinary tract symptoms associated with prostate enlargement due to benign prostatic hyperplasia: the L.I.F.T. study. *J Urol.* 2013;190(6):2161-2167. doi:10.1016/j.juro.2013.05.116",
+      "doi": "10.1016/j.juro.2013.05.116",
+      "pmid": "23764081",
+      "followUp": "3-month blinded comparison; lift arm followed to 12 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "AUASI",
+          "role": "primary",
+          "measure": "3-month change in AUA symptom index (reduction from baseline), intention to treat",
+          "values": {
+            "exp": "−11.1 points",
+            "ctl": "−5.9 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -5.2,
+            "ci": [
+              -7.44,
+              -2.96
+            ],
+            "p": "0.003"
+          },
+          "met": true,
+          "note": "Mean change from baseline (SD 7.67 and 7.66). The abstract states that the primary endpoint was met; the difference in change and its interval are those quoted in the AUA 2026 BPH guideline.",
+          "locator": "Abstract; AUA 2026 BPH guideline PDF p39"
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "key-secondary",
+          "measure": "3-month change in IPSS quality-of-life item (reduction from baseline)",
+          "values": {
+            "exp": "−2.2 points",
+            "ctl": "−1.0 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.2,
+            "ci": [
+              -1.67,
+              -0.73
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Means 2.2 (SD 1.8) versus 1.0 (SD 1.5), as reported in the five-year paper's account of the randomized comparison; difference and interval as quoted in the AUA 2026 guideline.",
+          "locator": "Can J Urol 2017 PDF p4 (journal p8805); AUA 2026 BPH guideline PDF p39"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "key-secondary",
+          "measure": "3-month change in peak urinary flow rate",
+          "values": {
+            "exp": "+4.28 mL/s",
+            "ctl": "+1.98 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.3,
+            "p": "0.005"
+          },
+          "met": true,
+          "note": "Means 4.28 (SD 5.16) and 1.98 (SD 4.88); the difference is calculated from the two means. Central over-read of uroflow tracings with the 2-second rule.",
+          "locator": "Can J Urol 2017 PDF pp3-4 (journal pp8804-8805); AUA 2026 BPH guideline PDF p39"
+        },
+        {
+          "endpoint": "AUASI, lift arm",
+          "role": "descriptive",
+          "measure": "AUASI in the lift arm over 12 months (no sham comparison after 3 months)",
+          "values": {
+            "exp": "22.1 at baseline; 18.0 at 2 weeks; 11.0 at 3 months; 11.1 at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "P value for change from baseline in the lift arm.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Qmax, lift arm",
+          "role": "descriptive",
+          "measure": "Increase in Qmax in the lift arm",
+          "values": {
+            "exp": "+4.4 mL/s at 3 months; +4.0 mL/s at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "P value for change from baseline in the lift arm.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "De novo erectile or ejaculatory dysfunction",
+          "values": {
+            "exp": "None reported"
+          },
+          "locator": "Abstract",
+          "note": "Sustained de novo events were a secondary safety endpoint; mean sexual function measures did not differ between groups at 3 months (Can J Urol 2017 PDF p4)."
+        },
+        {
+          "label": "Subjects with a related adverse event, months 0-3",
+          "values": {
+            "exp": "113/140 (80.7%)"
+          },
+          "locator": "J Urol 2013 PDF p6, Table 4 (journal p2166)",
+          "note": "203 related events in the lift arm, adjudicated by an independent committee; sham arm 20/66 (30.3%) with 26 related events. Most frequent in the lift arm: dysuria 48 (34.3%), hematuria 36 (25.7%), pelvic pain or discomfort 25 (17.9%) and urgency 10 (7.1%), typically mild to moderate and resolved within 2 weeks."
+        },
+        {
+          "label": "Catheterization for failed voiding trial",
+          "values": {
+            "exp": "32/100 (32%)"
+          },
+          "locator": "J Urol 2013 PDF p4 (journal p2164)",
+          "note": "Forty lift men were catheterized routinely as standard of care; of the remaining 100, 32 (32%) required a catheter after the voiding trial. Mean duration of catheterization 0.9 days."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Anesthesia",
+          "value": "Local anesthesia",
+          "locator": "Abstract",
+          "note": "In North America all procedures but one (99.4%) used local anesthesia (Can J Urol 2017 PDF p3, journal p8804)."
+        },
+        {
+          "label": "Implants placed",
+          "value": "Mean 4.9 (range 2 to 11) in the 2013 report; four implants in 42% and six or fewer in 85% in the five-year report",
+          "locator": "J Urol 2013 PDF p4 (journal p2164); Can J Urol 2017 PDF pp3-4 (journal pp8804-8805)"
+        },
+        {
+          "label": "Return to preoperative activity",
+          "value": "8.6 days (SD 7.5)",
+          "locator": "Can J Urol 2017 PDF p4 (journal p8805)"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/LIFT-Roehrborn-2013.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "lift-2013-sexual",
+      "kind": "secondary",
+      "label": "Sexual function analysis",
+      "published": "2013-09-30",
+      "cutoff": null,
+      "citation": "McVary KT, Gange SN, Shore ND, et al. Treatment of LUTS secondary to BPH while preserving sexual function: randomized controlled study of prostatic urethral lift. *J Sex Med.* 2014;11(1):279-287. doi:10.1111/jsm.12333",
+      "doi": "10.1111/jsm.12333",
+      "pmid": "24119101",
+      "followUp": "3-month blinded comparison; lift arm to 12 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "SHIM and MSHQ-EjD versus sham",
+          "role": "secondary",
+          "measure": "3-month erectile (SHIM) and ejaculatory (MSHQ-EjD) scores, lift versus sham",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Scores did not differ from sham at 3 months; men with baseline SHIM below 5 were censored from the primary sexual function analysis.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "SHIM and MSHQ-EjD in the lift arm",
+          "role": "secondary",
+          "measure": "12-month scores versus baseline in the lift arm",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Modestly improved and statistically different from baseline at 1 year. Ejaculatory bother score improved most (40% over baseline).",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "SHIM in severe baseline erectile dysfunction",
+          "role": "exploratory",
+          "measure": "12-month SHIM versus baseline in men entering with severe erectile dysfunction",
+          "effect": {
+            "type": "none",
+            "p": "0.016"
+          },
+          "note": "Secondary stratified analysis by baseline erectile dysfunction severity.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "De novo sustained anejaculation or erectile dysfunction",
+          "values": {
+            "exp": "None"
+          },
+          "locator": "Abstract"
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "lift-2015",
+      "kind": "updated",
+      "label": "3-year report",
+      "published": "2015-06-01",
+      "dateApprox": true,
+      "dateLocator": "Journal issue month (June 2015); no online date in PubMed",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Rukstalis DB, Barkin J, et al. Three year results of the prostatic urethral L.I.F.T. study. *Can J Urol.* 2015;22(3):7772-7782. PMID 26068624",
+      "doi": null,
+      "pmid": "26068624",
+      "noDoi": "Canadian Journal of Urology articles carry no DOI; PMID 26068624 identifies the report.",
+      "followUp": "36 months; 129/140 lift subjects accounted for, 93 in the per-protocol effectiveness analysis",
+      "followUpLocator": "Can J Urol 2015 PDF p5 (journal p7776)",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "36-month change in IPSS, lift arm, per protocol (paired n=93)",
+          "values": {
+            "exp": "−8.83 points (−41.1%) from 21.56 to 12.73"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Censored for another LUTS procedure or BPH medication; p value from a generalized estimating equation against baseline.",
+          "locator": "Can J Urol 2015 PDF p6 (journal p7777), Table 3a"
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "36-month change in IPSS quality-of-life item, lift arm, per protocol (n=93)",
+          "values": {
+            "exp": "−2.25 points (−48.8%) from 4.47 to 2.23"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "Can J Urol 2015 PDF p6 (journal p7777), Table 3a"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "36-month change in Qmax, lift arm, per protocol (n=69)",
+          "values": {
+            "exp": "+3.47 mL/s (+53.1%) from 8.32 to 11.79 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "locator": "Can J Urol 2015 PDF p6 (journal p7777), Table 3a"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Cumulative surgical retreatment for LUTS by 3 years",
+          "values": {
+            "exp": "15/140 (10.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Six received additional lift implants and nine had TURP or laser vaporization.",
+          "locator": "Can J Urol 2015 PDF p8 (journal p7779)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Implant removal",
+          "values": {
+            "exp": "10/140 (7.1%)"
+          },
+          "locator": "Can J Urol 2015 PDF p8 (journal p7779)",
+          "note": "Eight implants had been deployed too proximally, protruded into the bladder and were encrusted; two were removed prophylactically. One man with encrustation developed urosepsis, which resolved."
+        },
+        {
+          "label": "Other genitourinary interventions",
+          "value": "Stricture dilation 1; removal of unrelated bladder stones 1; radical prostatectomy for unrelated prostate cancer 2; bladder neck resection during ureteroscopic lithotripsy 1",
+          "locator": "Can J Urol 2015 PDF p8 (journal p7779)"
+        },
+        {
+          "label": "De novo sustained erectile or ejaculatory dysfunction",
+          "value": "None reported",
+          "locator": "Can J Urol 2015 PDF p9 (journal p7780)"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Procedure time",
+          "values": {
+            "exp": "66.2 min (SD 24.1)",
+            "ctl": "46.9 min (SD 17.4)"
+          },
+          "locator": "Can J Urol 2015 PDF p5 (journal p7776), Table 2",
+          "note": "Per-protocol sets (lift 137, sham 64; one site's subjects excluded for protocol deviations)."
+        },
+        {
+          "label": "Implants placed",
+          "value": "Mean 5.2 (SD 1.6; range 2 to 11)",
+          "locator": "Can J Urol 2015 PDF p5 (journal p7776), Table 2",
+          "note": "Per-protocol lift set (n=137). Implant number did not correlate with prostate volume or length, or with symptom response."
+        },
+        {
+          "label": "Crossover",
+          "value": "53 of 66 sham subjects later elected to undergo the lift",
+          "locator": "Can J Urol 2015 PDF p4 (journal p7775)"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/lift-lift3y.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "lift-2017",
+      "kind": "updated",
+      "label": "5-year report",
+      "published": "2017-06-01",
+      "dateApprox": true,
+      "dateLocator": "Journal issue month (June 2017); PubMed entry 2017-06-26",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Barkin J, Gange SN, et al. Five year results of the prospective randomized controlled prostatic urethral L.I.F.T. study. *Can J Urol.* 2017;24(3):8802-8813. PMID 28646935",
+      "doi": null,
+      "pmid": "28646935",
+      "noDoi": "Canadian Journal of Urology articles carry no DOI; PMID 28646935 identifies the report.",
+      "followUp": "60 months; 104/140 lift subjects (74.3%) available at 5 years",
+      "followUpLocator": "Can J Urol 2017 PDF p6 (journal p8807)",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "60-month change in IPSS, lift arm, per protocol (paired n=72)",
+          "values": {
+            "exp": "−7.56 points (−35.9%) from 21.47 to 13.92"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Intention to treat with last observation carried forward (n=140): −7.85 points (−35.0%). The paper reports no difference between analyses.",
+          "locator": "Can J Urol 2017 PDF pp7,9 (journal pp8808,8810), Tables 2b and 3b"
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "60-month change in IPSS quality-of-life item, lift arm, per protocol (n=72)",
+          "values": {
+            "exp": "−2.32 points (−50.3%) from 4.51 to 2.19"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Intention to treat: −2.08 points (−44.4%).",
+          "locator": "Can J Urol 2017 PDF pp7,9 (journal pp8808,8810), Tables 2b and 3b"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "60-month change in Qmax, lift arm, per protocol (n=52)",
+          "values": {
+            "exp": "+3.48 mL/s (+44.3%) from 8.52 to 12.00 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Intention to treat: +3.21 mL/s (+49.9%).",
+          "locator": "Can J Urol 2017 PDF pp7,9 (journal pp8808,8810), Tables 2b and 3b"
+        },
+        {
+          "endpoint": "BPH Impact Index",
+          "role": "secondary",
+          "measure": "60-month change in BPH Impact Index, lift arm, per protocol (n=71)",
+          "values": {
+            "exp": "−3.48 points (−51.8%) from 6.42 to 2.94"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Intention to treat: −3.41 points (−46.8%).",
+          "locator": "Can J Urol 2017 PDF pp7,9 (journal pp8808,8810), Tables 2b and 3b"
+        },
+        {
+          "endpoint": "IPSS trajectory",
+          "role": "descriptive",
+          "measure": "Per-protocol change in IPSS from baseline by follow-up time, lift arm",
+          "values": {
+            "exp": "−11.14 (−49.7%) at 3 months, n=136; −10.61 (−47.4%) at 12 months, n=123; −9.13 (−41.4%) at 24 months, n=103; −8.83 (−41.1%) at 36 months, n=93; −8.81 (−40.6%) at 48 months, n=78; −7.56 (−35.9%) at 60 months, n=72"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Can J Urol 2017 PDF pp8-9 (journal pp8809-8810), Tables 3a and 3b"
+        },
+        {
+          "endpoint": "Qmax trajectory",
+          "role": "descriptive",
+          "measure": "Per-protocol change in Qmax from baseline by follow-up time, lift arm",
+          "values": {
+            "exp": "+4.29 mL/s (+64.4%) at 3 months, n=122; +4.03 (+58.5%) at 12 months, n=102; +4.21 (+58.6%) at 24 months, n=86; +3.47 (+53.1%) at 36 months, n=69; +4.27 (+63.4%) at 48 months, n=60; +3.48 (+44.3%) at 60 months, n=52"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Can J Urol 2017 PDF pp8-9 (journal pp8809-8810), Tables 3a and 3b"
+        },
+        {
+          "endpoint": "Satisfaction",
+          "role": "descriptive",
+          "measure": "Share of men reporting some satisfaction with urinary symptoms at 5 years (IPSS quality-of-life item of 3 or lower)",
+          "values": {
+            "exp": "82%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Of the 18% who were dissatisfied, 10 (77%) entered the study with IPSS of 20 or higher. The denominator is not stated in the source.",
+          "locator": "Can J Urol 2017 PDF p6 (journal p8807)"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Cumulative surgical retreatment for failure to cure by 5 years",
+          "values": {
+            "exp": "19/140 (13.6%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Six (4.3%) received additional lift implants; 13 (9.3%) had TURP or laser ablation, including the four who exited the study for TURP. Eighteen of the 19 had baseline IPSS of 20 or higher.",
+          "locator": "Can J Urol 2017 PDF p6 (journal p8807)"
+        },
+        {
+          "endpoint": "Erectile function",
+          "role": "secondary",
+          "measure": "60-month IIEF-5, lift arm, per protocol (n=49)",
+          "values": {
+            "exp": "16.45 versus 16.82 at baseline"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.6026"
+          },
+          "locator": "Can J Urol 2017 PDF p9 (journal p8810), Table 3b"
+        },
+        {
+          "endpoint": "Ejaculatory function",
+          "role": "secondary",
+          "measure": "60-month MSHQ-EjD function score, lift arm, per protocol (n=49)",
+          "values": {
+            "exp": "9.53 versus 9.22 at baseline"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0962"
+          },
+          "note": "Ejaculatory bother score remained modestly improved at 5 years (p=0.02).",
+          "locator": "Can J Urol 2017 PDF pp7,9 (journal pp8808,8810), Table 3b"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Subjects with a related adverse event, by period",
+          "values": {
+            "exp": "Months 0-3: 100/140; 4-12: 12/139; 13-24: 6/130; 25-36: 2/118; 37-48: 2/108; 49-60: 1/96"
+          },
+          "locator": "Can J Urol 2017 PDF p5, Table 1 (journal p8806)"
+        },
+        {
+          "label": "Implant removal",
+          "values": {
+            "exp": "13/140 (9.3%)"
+          },
+          "locator": "Can J Urol 2017 PDF pp6-7 (journal pp8807-8808)",
+          "note": "Ten men had encrusted implants removed that had been deployed too proximally and three had exposed, unencrusted implants removed prophylactically. On independent review of 1-year video cystoscopy, no properly deployed implant was encrusted and 2.1% of implants were deployed too proximally."
+        },
+        {
+          "label": "De novo sustained erectile or ejaculatory dysfunction",
+          "value": "None reported",
+          "locator": "Can J Urol 2017 PDF p7 (journal p8808)"
+        },
+        {
+          "label": "Use of BPH medication at 5 years",
+          "value": "15/140 (10.7%)",
+          "locator": "Can J Urol 2017 PDF p6 (journal p8807)",
+          "note": "No participant took an anticholinergic."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Retention at 5 years",
+          "value": "104/140 (74.3%) available; 18 (12.9%) lost to follow-up, 9 (6.4%) died of unrelated causes, 9 (6.4%) exited",
+          "locator": "Can J Urol 2017 PDF p6 (journal p8807)",
+          "note": "Among the 18 lost to follow-up, IPSS at last follow-up (mean 28.7 months) had fallen 10.4 points from baseline."
+        },
+        {
+          "label": "Delivery system",
+          "value": "2.9 mm telescope in a 20 F sheath; 19-gauge needle; implants usually at the 10 and 2 o'clock positions",
+          "locator": "Can J Urol 2017 PDF p3 (journal p8804)",
+          "note": "Delivery device angled laterally 20 to 30 degrees to compress the anterior third of the obstructing lobe."
+        },
+        {
+          "label": "Crossover",
+          "value": "53 of 66 sham subjects (80%) enrolled in a crossover study after unblinding",
+          "locator": "Can J Urol 2017 PDF p3 (journal p8804)"
+        },
+        {
+          "label": "Recommended implant position",
+          "value": "1.5 cm from the bladder neck",
+          "locator": "Can J Urol 2017 PDF p11 (journal p8812)",
+          "note": "The authors report this as standard training today; an implant exposed to the bladder should be removed endoscopically with graspers."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/lift-lift5y.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/lift",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

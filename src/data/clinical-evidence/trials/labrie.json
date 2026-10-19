@@ -1,0 +1,463 @@
+{
+  "id": "labrie",
+  "name": "PORTRET",
+  "aliases": [
+    "Labrie trial",
+    "Physiotherapy OR TVT Randomised Efficacy Trial",
+    "NTR1248"
+  ],
+  "nct": null,
+  "registry": "Netherlands Trial Register NTR1248",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-evaluation-conservative",
+      "lane": "conservative-and-adjunct"
+    }
+  ],
+  "question": "Does initial midurethral sling surgery improve 12-month subjective improvement over initial pelvic floor muscle physiotherapy in women with moderate-to-severe stress urinary incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label (treatment assignments not concealed)",
+    "type": "superiority",
+    "n": 460,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Initial midurethral sling surgery",
+        "role": "experimental",
+        "n": 230
+      },
+      {
+        "key": "ctl",
+        "label": "initial supervised pelvic floor muscle physiotherapy, with crossover to surgery allowed",
+        "role": "control",
+        "n": 230
+      }
+    ],
+    "population": "Women aged 35 to 80 years with moderate or severe stress urinary incontinence (stress predominant if mixed) at 4 university and 19 general hospitals in the Netherlands.",
+    "description": "Multicenter pragmatic open-label randomized superiority trial",
+    "locator": "Methods (Study design); Results (Study population); Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Surgery superior at 12 months; 49.0% of the physiotherapy group crossed over to surgery.",
+  "takeaway": "In women with moderate-to-severe stress urinary incontinence, initial midurethral sling surgery gave higher 12-month subjective improvement than initial pelvic floor physiotherapy (90.8% versus 64.4%) in a modified intention-to-treat analysis; 49.0% of the physiotherapy group crossed over to surgery.",
+  "reports": [
+    {
+      "id": "labrie-2013",
+      "kind": "primary",
+      "label": "12-month randomized report",
+      "published": "2013-09-19",
+      "cutoff": null,
+      "citation": "Labrie J, Berghmans BL, Fischer K, et al. Surgery versus physiotherapy for stress urinary incontinence. *N Engl J Med.* 2013;369(12):1124-1133.",
+      "doi": "10.1056/NEJMoa1210627",
+      "pmid": "24047061",
+      "followUp": "12 months; outcome data for 196/215 (91.2%) surgery and 174/202 (86.1%) physiotherapy women analyzed",
+      "followUpLocator": "Figure 1; Results (Study population)",
+      "results": [
+        {
+          "endpoint": "PGI-I improvement",
+          "role": "primary",
+          "measure": "12-month subjective improvement (PGI-I much or very much better); absolute difference in percentage points, surgery minus physiotherapy",
+          "values": {
+            "exp": "177/195 (90.8%)",
+            "ctl": "112/174 (64.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 26.4,
+            "ci": [
+              18.1,
+              34.5
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Modified intention-to-treat analysis with original data; with multiple imputation the difference was 26.5 points (95% CI 18.5 to 34.2; P<0.001).",
+          "locator": "NEJM full text, Table 2; Results (Intention-to-treat analysis)"
+        },
+        {
+          "endpoint": "Subjective cure",
+          "role": "key-secondary",
+          "measure": "12-month subjective cure (no leakage with physical activity, coughing or sneezing on the UDI item); absolute difference in percentage points",
+          "values": {
+            "exp": "167/196 (85.2%)",
+            "ctl": "93/174 (53.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 31.8,
+            "ci": [
+              22.6,
+              40.3
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "NEJM full text, Table 2; Results (Intention-to-treat analysis)"
+        },
+        {
+          "endpoint": "Objective cure",
+          "role": "key-secondary",
+          "measure": "12-month objective cure (negative cough stress test at bladder volume of at least 300 mL); absolute difference in percentage points",
+          "values": {
+            "exp": "140/183 (76.5%)",
+            "ctl": "94/160 (58.8%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 17.8,
+            "ci": [
+              7.9,
+              27.3
+            ],
+            "p": "0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "NEJM full text, Table 2; Results (Intention-to-treat analysis)"
+        },
+        {
+          "endpoint": "PGI-S no symptoms",
+          "role": "secondary",
+          "measure": "12-month PGI-S no symptoms; absolute difference in percentage points",
+          "values": {
+            "exp": "167/195 (85.6%)",
+            "ctl": "114/174 (65.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 20.1,
+            "ci": [
+              11.4,
+              28.6
+            ],
+            "p": "≤0.001"
+          },
+          "note": "",
+          "locator": "NEJM full text, Table 2"
+        },
+        {
+          "endpoint": "UDI incontinence domain",
+          "role": "secondary",
+          "measure": "Mean change in UDI urinary incontinence domain score at 12 months (0 to 100; lower is better)",
+          "values": {
+            "exp": "−37.3 (SD 20.9)",
+            "ctl": "−26.9 (SD 20.6)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Between-group effect size 0.50 (95% CI −1.6 to 2.6), described as moderate. UDI overactive bladder domain: −15.5 (SD 20.5) versus −10.6 (SD 19.5), P=0.02.",
+          "locator": "NEJM full text, Table 2; Results (Intention-to-treat analysis)"
+        },
+        {
+          "endpoint": "PGI-I improvement, per-protocol",
+          "role": "exploratory",
+          "measure": "12-month PGI-I improvement, post hoc per-protocol groups: initial surgery versus physiotherapy only; absolute difference in percentage points",
+          "values": {
+            "exp": "177/195 (90.8%)",
+            "ctl": "26/82 (31.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 59.1
+          },
+          "note": "Post hoc analysis. Women who crossed over to surgery after physiotherapy: 86/92 (93.5%); difference from physiotherapy only 61.8 points. P<0.001 for physiotherapy only versus either surgical group; P=0.68 for surgery after physiotherapy versus initial surgery. In physiotherapy-only women, subjective cure was 13/82 (15.9%) and objective cure 33/75 (44.0%).",
+          "locator": "Table 4; Results (Post hoc per-protocol analysis)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Bladder perforation",
+          "values": {
+            "exp": "6/215 (2.8%)",
+            "ctl": "0/202 (0.0%)"
+          },
+          "locator": "Table 3",
+          "note": "Listed as a serious adverse event; P=0.03. Treated intraoperatively without further clinical implications. All adverse events in the physiotherapy group occurred in women who crossed over to surgery."
+        },
+        {
+          "label": "Vaginal epithelial perforation",
+          "values": {
+            "exp": "8/215 (3.7%)",
+            "ctl": "2/202 (1.0%)"
+          },
+          "locator": "Table 3",
+          "note": "Listed as a serious adverse event; treated successfully during surgery."
+        },
+        {
+          "label": "Reoperation for tape exposure",
+          "values": {
+            "exp": "5/215 (2.3%)",
+            "ctl": "1/202 (0.5%)"
+          },
+          "locator": "Table 3; Results (Adverse events)",
+          "note": "Six reoperations for tape exposure in total. One further woman (0.5% of the surgery group) needed reoperation to loosen the sling for persistent voiding problems."
+        },
+        {
+          "label": "Hematoma",
+          "values": {
+            "exp": "16/215 (7.4%)",
+            "ctl": "4/202 (2.0%)"
+          },
+          "locator": "Table 3",
+          "note": "P=0.01."
+        },
+        {
+          "label": "Blood loss of 500 mL or more",
+          "values": {
+            "exp": "2/215 (0.9%)",
+            "ctl": "1/202 (0.5%)"
+          },
+          "locator": "Table 3; Results (Adverse events)",
+          "note": "Three women in total."
+        },
+        {
+          "label": "New urge urinary incontinence",
+          "values": {
+            "exp": "13/215 (6.0%)",
+            "ctl": "5/202 (2.5%)"
+          },
+          "locator": "Table 3",
+          "note": ""
+        },
+        {
+          "label": "Any adverse event",
+          "note": "65 adverse events in 41/417 women (9.8%); all were related to surgery.",
+          "locator": "Results (Adverse events); Table 3 footnote"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Recruitment and sites",
+          "value": "656 women invited, 460 consented and were randomized (230 per group) between March 2008 and May 2010 at 4 university and 19 general hospitals.",
+          "locator": "Results (Study population); Figure 1; Methods (Study design)"
+        },
+        {
+          "label": "Randomized and analyzed",
+          "value": "Surgery group: 230 randomized, 15 withdrew consent before treatment, 215 underwent sling surgery. Physiotherapy group: 230 randomized, 28 did not start treatment (27 withdrew consent, 1 did not meet inclusion criteria), 202 started physiotherapy.",
+          "locator": "Figure 1"
+        },
+        {
+          "label": "Surgeons and sling route",
+          "value": "49 gynecologists and urologists, each with at least 20 prior sling procedures; retropubic and transobturator routes were both allowed.",
+          "locator": "Methods (Study design)"
+        },
+        {
+          "label": "Physiotherapy regimen",
+          "value": "Supervised pelvic floor muscle training by certified pelvic physiotherapists (83 of 478 in the Netherlands), building to 8 to 12 maximal contractions three times daily; intended nine sessions in 9 to 18 weeks; biofeedback or functional electrostimulation allowed.",
+          "locator": "Methods (Study design)"
+        },
+        {
+          "label": "Physiotherapy sessions attended",
+          "values": {
+            "exp": "0.6 (SD 1.9), initial surgery group",
+            "ctl": "9.1 (SD 4.9), physiotherapy only"
+          },
+          "note": "Mean sessions among women who crossed over to surgery after physiotherapy: 7.4 (SD 4.4); P=0.06 versus physiotherapy only.",
+          "locator": "Table 4; Results (Post hoc per-protocol analysis)"
+        },
+        {
+          "label": "Crossover from physiotherapy to surgery",
+          "value": "99/202 (49.0%) after a mean of 31.7 (SD 12.7) weeks",
+          "note": "90/99 (90.9%) of these women reported no improvement on the last PGI-I before surgery. Crossover was similar with and without earlier specialized physiotherapy (18/38, 47.4% versus 81/164, 49.4%).",
+          "locator": "Results (Study population; Intention-to-treat analysis)"
+        },
+        {
+          "label": "Additional physiotherapy after surgery",
+          "value": "22 women (11.2% as reported)",
+          "note": "Training to relax the pelvic floor muscles for symptoms of pelvic floor hyperactivity such as obstructive micturition.",
+          "locator": "Results (Study population)"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "labrie-2025",
+      "kind": "updated",
+      "label": "12-year questionnaire follow-up",
+      "published": "2025-02-11",
+      "cutoff": null,
+      "citation": "van Oorschot HFC, Tijsseling D, Labrie J, van der Vaart CH. Twelve-year follow-up of a randomised controlled trial comparing the effectiveness of pelvic floor muscle training versus mid-urethral sling surgery for female moderate to severe urinary incontinence. *BJOG.* 2025;132(6):826-833.",
+      "doi": "10.1111/1471-0528.18092",
+      "pmid": "39931871",
+      "followUp": "Mean 11.9 years (range 10.5 to 14.8); 184/386 (47.7%) women responded to a postal questionnaire",
+      "followUpLocator": "Results (Study population)",
+      "results": [
+        {
+          "endpoint": "PGI-I improvement, responders",
+          "role": "primary",
+          "measure": "Long-term PGI-I improvement, intention-to-treat, responders only; absolute difference in percentage points as printed in Table 1",
+          "values": {
+            "exp": "87/100 (87.0%)",
+            "ctl": "66/83 (79.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -7.5,
+            "ci": [
+              -18.5,
+              3.6
+            ],
+            "p": "0.229"
+          },
+          "met": false,
+          "note": "No statistically significant difference. The report prints the difference and interval as −7.5 (−18.5 to 3.6); the surgery group's rate was higher (87.0% versus 79.5%).",
+          "locator": "Table 1; Results (Intention-to-treat analysis)"
+        },
+        {
+          "endpoint": "PGI-I improvement, all women",
+          "role": "primary",
+          "measure": "Long-term PGI-I improvement, intention-to-treat, all women with 12-month values carried forward for non-responders; absolute difference in percentage points",
+          "values": {
+            "exp": "163/188 (86.7%)",
+            "ctl": "108/164 (65.9%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 20.8,
+            "ci": [
+              12.1,
+              29.6
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Last observation carried forward for non-responders; the authors state this may underestimate crossover or overestimate outcomes.",
+          "locator": "Table 1; Results (Intention-to-treat analysis); Discussion (Strengths and limitations)"
+        },
+        {
+          "endpoint": "Subjective cure, all women",
+          "role": "key-secondary",
+          "measure": "Long-term subjective cure, all women; absolute difference in percentage points",
+          "values": {
+            "exp": "142/180 (78.9%)",
+            "ctl": "86/156 (55.1%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 23.8,
+            "ci": [
+              13.9,
+              33.7
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Responders only: 66/91 (72.5%) versus 51/75 (68.0%), difference 4.5 points (95% CI −9.7 to 18.7; P=0.320).",
+          "locator": "Table 1"
+        },
+        {
+          "endpoint": "PGI-S no symptoms, all women",
+          "role": "secondary",
+          "measure": "Long-term PGI-S no symptoms, all women; absolute difference in percentage points",
+          "values": {
+            "exp": "144/188 (76.6%)",
+            "ctl": "105/165 (63.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 13.0,
+            "ci": [
+              3.4,
+              22.5
+            ],
+            "p": "0.010"
+          },
+          "note": "",
+          "locator": "Table 1"
+        },
+        {
+          "endpoint": "PGI-I improvement, post hoc, responders",
+          "role": "exploratory",
+          "measure": "Long-term PGI-I improvement, post hoc: initial surgery versus physiotherapy only, responders only; absolute difference in percentage points",
+          "values": {
+            "exp": "87/100 (87.0%)",
+            "ctl": "4/11 (36.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 50.6,
+            "ci": [
+              28.2,
+              73.1
+            ]
+          },
+          "note": "Post hoc analysis. Surgery after physiotherapy: 62/72 (86.1%); difference from physiotherapy only 49.7 points (95% CI 25.8 to 73.7).",
+          "locator": "Table 2; Results (Post hoc analysis)"
+        },
+        {
+          "endpoint": "PGI-I improvement, post hoc, all women",
+          "role": "exploratory",
+          "measure": "Long-term PGI-I improvement, post hoc: initial surgery versus physiotherapy only, all women; absolute difference in percentage points",
+          "values": {
+            "exp": "163/188 (86.7%)",
+            "ctl": "14/57 (24.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 62.1,
+            "ci": [
+              49.7,
+              74.6
+            ]
+          },
+          "note": "Post hoc analysis. Surgery after physiotherapy: 94/107 (87.9%); difference from physiotherapy only 63.3 points (95% CI 50.2 to 76.3).",
+          "locator": "Table 2; Results (Post hoc analysis)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urogenital reoperation after sling surgery",
+          "values": {
+            "exp": "8/173 (4.6%) among responders who received a sling (both groups pooled)"
+          },
+          "locator": "Results (Re-operation)",
+          "note": "Five reoperations were for a surgical complication, two for recurrent incontinence and one for recurrence combined with a complication."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Crossover from physiotherapy to surgery, responders",
+          "value": "73/84 (86.9%)",
+          "note": "At least 61.3% of all women crossed over, assuming the 61 non-responders who had physiotherapy only at 12 months did not. 6/100 (6%) of responders in the initial surgery group had additional physiotherapy.",
+          "locator": "Results (Study population); Discussion (Interpretation)"
+        },
+        {
+          "label": "Responders and exclusions",
+          "value": "386 women included (200 initial surgery, 186 initial physiotherapy); 184 responded (100 originally randomized to surgery, 84 to physiotherapy).",
+          "note": "Of 417 women originally analyzed, 12 from centers with fewer than 4 inclusions were not approached; of 405 contacted, 7 had died and 12 declined.",
+          "locator": "Results (Study population); Figure 1"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "confirms",
+      "target": "esteem",
+      "note": "Physiotherapy before sling added nothing at 12 years; ESTEEM likewise found perioperative pelvic floor therapy gave no clinically significant symptom benefit over sling alone."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/labrie",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "id": "sims",
+  "name": "SIMS",
+  "aliases": [
+    "Single-Incision Mini-Slings versus Standard Midurethral Slings"
+  ],
+  "nct": null,
+  "registry": "ISRCTN93264234",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "midurethral-sling-route"
+    }
+  ],
+  "question": "In women undergoing primary sling surgery for stress-predominant urinary incontinence, are adjustable anchored single-incision mini-slings noninferior to standard midurethral slings for patient-reported improvement?",
+  "design": {
+    "phase": "pragmatic multicenter RCT",
+    "randomized": true,
+    "blinding": "open-label; patient-reported follow-up",
+    "type": "noninferiority",
+    "n": 600,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Adjustable anchored single-incision mini-sling (Ajust or Altis)",
+        "n": 298,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "standard retropubic or transobturator tension-free midurethral sling",
+        "n": 298,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged 18 years or older with predominant stress urinary incontinence after failed or declined conservative treatment; no previous SUI surgery, stage 2 or greater anterior/apical prolapse, or planned concomitant surgery.",
+    "description": "Multicenter noninferiority randomized trial",
+    "locator": "NEJM pp 1231-1233, Methods and Figure 1; HTA scientific summary p iv"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Patient-reported improvement met the 10-point margin; dyspareunia and additional surgery were more frequent with mini-slings.",
+  "takeaway": "Adjustable anchored Ajust or Altis single-incision mini-slings were noninferior to standard retropubic or transobturator midurethral slings for patient-reported improvement at 15 months (79.1% versus 75.6%; adjusted risk difference 4.6 percentage points, 95% CI −2.7 to 11.8).",
+  "reports": [
+    {
+      "id": "sims-2022-nejm",
+      "kind": "primary",
+      "label": "Primary clinical report through 36 months",
+      "published": "2022-03-30",
+      "cutoff": null,
+      "citation": "Abdel-Fattah M, Cooper D, Davidson T, et al. Single-Incision Mini-Slings for Stress Urinary Incontinence in Women. *N Engl J Med.* 2022;386(13):1230-1243.",
+      "doi": "10.1056/NEJMoa2111815",
+      "pmid": "35353961",
+      "followUp": "Primary endpoint at 15 months after randomization (approximately 1 year after surgery); follow-up through 36 months after randomization.",
+      "followUpLocator": "NEJM p 1230, abstract; p 1232, Data Collection",
+      "results": [
+        {
+          "endpoint": "Patient-reported success on PGI-I",
+          "role": "primary",
+          "measure": "Much or very much improved at 15 months; adjusted risk difference in percentage points",
+          "values": {
+            "exp": "212/268 (79.1%)",
+            "ctl": "189/250 (75.6%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.6,
+            "ci": [
+              -2.7,
+              11.8
+            ],
+            "p": "<0.001 for noninferiority"
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin −10 percentage points; estimate adjusted for trial covariates.",
+          "locator": "NEJM p 1230, abstract; p 1236, Table 3"
+        },
+        {
+          "endpoint": "Patient-reported success on PGI-I",
+          "role": "secondary",
+          "measure": "Much or very much improved at 36 months; adjusted risk difference in percentage points",
+          "values": {
+            "exp": "177/246 (72.0%)",
+            "ctl": "157/235 (66.8%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.7,
+            "ci": [
+              -1.3,
+              12.8
+            ]
+          },
+          "met": true,
+          "note": "Noninferiority at the prespecified 10-percentage-point margin persisted at 36 months.",
+          "locator": "NEJM p 1236, Table 3; p 1238, Discussion"
+        },
+        {
+          "endpoint": "Objective success on 24-hour pad test",
+          "role": "secondary",
+          "measure": "Pad weight gain <8 g at 15 months; adjusted risk difference in percentage points",
+          "values": {
+            "exp": "102/119 (85.7%)",
+            "ctl": "83/110 (75.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 5.2,
+            "ci": [
+              -5.9,
+              16.2
+            ]
+          },
+          "note": "Pad-test completion was limited; the HTA reports approximately 36% completion overall.",
+          "locator": "NEJM p 1236, Table 3; HTA scientific summary p vi"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dyspareunia at 36 months among women assigned direct questions",
+          "values": {
+            "exp": "17/145 (11.7%)",
+            "ctl": "7/145 (4.8%)"
+          },
+          "locator": "NEJM p 1237, Table 4",
+          "note": "Direct-question subgroup was randomly selected; baseline dyspareunia was 25/145 (17.2%) versus 21/145 (14.5%) (Table 1)."
+        },
+        {
+          "label": "Tape or mesh exposure through 36 months",
+          "values": {
+            "exp": "9/276 (3.3%)",
+            "ctl": "5/261 (1.9%)"
+          },
+          "locator": "NEJM p 1237, Table 4; HTA scientific summary p v",
+          "note": "Risk difference 1.3 percentage points (95% CI −1.7 to 4.4); uncommon harms were not powered for comparison."
+        },
+        {
+          "label": "Groin or thigh pain at 36 months",
+          "values": {
+            "exp": "39/276 (14.1%)",
+            "ctl": "39/261 (14.9%)"
+          },
+          "locator": "NEJM p 1237, Table 4; HTA scientific summary p v",
+          "note": "Risk difference −0.8 percentage points (95% CI −4.1 to 2.5)."
+        },
+        {
+          "label": "Further surgery for stress urinary incontinence through 36 months",
+          "values": {
+            "exp": "7/276 (2.5%)",
+            "ctl": "3/261 (1.1%)"
+          },
+          "locator": "NEJM p 1237, Safety; HTA scientific summary p vi",
+          "note": "Subset of all additional surgical treatments."
+        },
+        {
+          "label": "Any additional surgical treatment through 36 months",
+          "values": {
+            "exp": "24/276 (8.7%)",
+            "ctl": "12/261 (4.6%)"
+          },
+          "locator": "NEJM p 1237, Table 4",
+          "note": "Risk difference 4.1 percentage points (95% CI −1.1 to 9.4); categories can overlap."
+        },
+        {
+          "label": "Intraoperative bladder injury",
+          "values": {
+            "exp": "0/276 (0%)",
+            "ctl": "9/261 (3.4%)"
+          },
+          "locator": "NEJM p 1237, Table 4",
+          "note": "Standard sling arm included retropubic and transobturator routes."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Received any surgery",
+          "values": {
+            "exp": "276/298 (92.6%)",
+            "ctl": "261/298 (87.6%)"
+          },
+          "locator": "NEJM p 1233, Figure 1; HTA p 29, Table 6"
+        },
+        {
+          "label": "Received allocated surgery",
+          "values": {
+            "exp": "257/298 (86.2%)",
+            "ctl": "257/298 (86.2%)"
+          },
+          "locator": "NEJM p 1233, Figure 1"
+        },
+        {
+          "label": "Device or route among women operated",
+          "values": {
+            "exp": "Ajust 62/276 (22.5%); Altis 195/276 (70.7%)",
+            "ctl": "Retropubic 119/261 (45.6%); transobturator 138/261 (52.9%)"
+          },
+          "locator": "NEJM p 1234, Table 1; HTA p 29, Table 6",
+          "note": "Remaining procedures include crossovers and other slings."
+        },
+        {
+          "label": "Local anesthesia with or without sedation",
+          "values": {
+            "exp": "201/276 (72.8%)",
+            "ctl": "16/261 (6.1%)"
+          },
+          "locator": "NEJM p 1235, Table 2; HTA p 29, Table 6"
+        },
+        {
+          "label": "Procedure time, mean minutes",
+          "values": {
+            "exp": "39.2 min (n=273)",
+            "ctl": "41.3 min (n=258)"
+          },
+          "locator": "NEJM p 1235, Table 2",
+          "note": "Adjusted mean difference −2.2 min (95% CI −5.9 to 1.6)."
+        },
+        {
+          "label": "Sling adjusted with cough stress test",
+          "values": {
+            "exp": "180/276 (65.2%)",
+            "ctl": "15/261 (5.7%)"
+          },
+          "locator": "HTA p 29, Table 6",
+          "note": "Surgeon and anesthesia practices differed between arms."
+        },
+        {
+          "label": "Intraoperative cystoscopy",
+          "value": "Performed in both trial arms",
+          "locator": "NEJM p 1232, Interventions"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "sims-2022-hta",
+      "kind": "secondary",
+      "label": "NIHR full trial and health economics report",
+      "published": "2022-12-01",
+      "cutoff": null,
+      "citation": "Abdel-Fattah M, Cooper D, Davidson T, et al. Single-incision mini-slings versus standard synthetic mid-urethral slings for surgical treatment of stress urinary incontinence in women: The SIMS RCT. *Health Technol Assess.* 2022;26(47):1-190.",
+      "doi": "10.3310/BTSA6148",
+      "pmid": "36520097",
+      "followUp": "Clinical and economic data through 36 months after randomization.",
+      "followUpLocator": "HTA scientific summary pp v-vii",
+      "results": [
+        {
+          "endpoint": "NHS cost",
+          "role": "secondary",
+          "measure": "Mean per-patient cost through 36 months; adjusted mean difference in GBP",
+          "values": {
+            "exp": "£1696",
+            "ctl": "£1702"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6,
+            "ci": [
+              -228,
+              208
+            ]
+          },
+          "note": "Base-case economic analysis from NHS perspective.",
+          "locator": "HTA scientific summary p vii"
+        },
+        {
+          "endpoint": "Quality-adjusted life-years",
+          "role": "secondary",
+          "measure": "Mean QALYs through 36 months; adjusted mean difference",
+          "values": {
+            "exp": "2.347",
+            "ctl": "2.342"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.005,
+            "ci": [
+              -0.068,
+              0.073
+            ]
+          },
+          "note": "Base-case economic analysis.",
+          "locator": "HTA scientific summary p vii"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/sims",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

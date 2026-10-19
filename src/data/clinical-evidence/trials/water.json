@@ -1,0 +1,771 @@
+{
+  "id": "water",
+  "name": "WATER",
+  "aliases": [
+    "Waterjet Ablation Therapy for Endoscopic Resection of prostate tissue"
+  ],
+  "nct": "NCT02505919",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "ablation-vs-turp"
+    }
+  ],
+  "question": "Is robotic waterjet resection (Aquablation) noninferior to TURP for relieving BPH symptoms in men with 30 to 80 mL prostates?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "noninferiority",
+    "n": 184,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Aquablation (AquaBeam robotic waterjet resection)",
+        "role": "experimental",
+        "n": 117
+      },
+      {
+        "key": "ctl",
+        "label": "transurethral resection of the prostate (TURP)",
+        "role": "control",
+        "n": 67
+      }
+    ],
+    "population": "Men aged 45 to 80 years with moderate-to-severe BPH-related LUTS (IPSS 12 or higher, Qmax below 15 mL/s) and a 30 to 80 mL prostate on transrectal ultrasound; 181 were treated.",
+    "description": "Multicenter, double-blind noninferiority randomized trial",
+    "locator": "5-year report (Can J Urol 2022) pp10961-10963, Figure 1; arm sizes of 117 and 67 from 3-year report (Can J Urol 2020) Table 1"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Symptom relief noninferior at 6 months; primary safety endpoint favored Aquablation (26% versus 42%).",
+  "takeaway": "Aquablation, an image-guided robotic waterjet resection, was compared with TURP in men with 30 to 80 mL prostates: it was noninferior for 6-month IPSS reduction and had fewer persistent grade 1 or grade 2 or higher complications at 3 months (26% versus 42%).",
+  "reports": [
+    {
+      "id": "water-2018",
+      "kind": "primary",
+      "label": "Primary report (6-month efficacy, 3-month safety)",
+      "published": "2018-01-31",
+      "cutoff": null,
+      "citation": "Gilling P, Barber N, Bidair M, et al. \"WATER: A Double-Blind, Randomized, Controlled Trial of Aquablation® vs Transurethral Resection of the Prostate in Benign Prostatic Hyperplasia.\" *J Urol.* 2018;199(5):1252-1261. doi:10.1016/j.juro.2017.12.065",
+      "doi": "10.1016/j.juro.2017.12.065",
+      "pmid": "29360529",
+      "followUp": "6 months for the IPSS endpoint; 3 months for the primary safety endpoint",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS reduction from baseline at 6 months (Aquablation minus TURP)",
+          "values": {
+            "exp": "16.9 points",
+            "ctl": "15.1 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.8,
+            "ci": [
+              -0.4,
+              4.0
+            ],
+            "p": "<0.0001 (noninferiority)"
+          },
+          "met": true,
+          "note": "Noninferiority margin 4.7 IPSS points; superiority not reached (p=0.1347). The difference is 1.8 points in favor of Aquablation.",
+          "locator": "Abstract (noninferiority p<0.0001); means, mean difference 1.8, margin and superiority p=0.1347 in the primary report (J Urol 2018) Methods and Results; the 5-year report (Can J Urol 2022) restates the means and difference and gives superiority p=.1346; CI from FDA De Novo summary DEN170024 p12"
+        },
+        {
+          "endpoint": "Primary safety endpoint",
+          "role": "primary",
+          "measure": "Clavien-Dindo persistent grade 1 or grade 2 or higher procedure-related complications at 3 months",
+          "values": {
+            "exp": "26%",
+            "ctl": "42%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -16,
+            "p": "0.0149 (superiority)"
+          },
+          "met": true,
+          "note": "Noninferiority met (margin 10 percentage points), then superiority tested and met (p=0.0149). Difference is Aquablation minus TURP in percentage points.",
+          "locator": "Abstract; difference by subtraction (the Plante 2019 abstract gives the same 26% versus 42%); noninferiority margin of 10 percentage points from the 5-year report (Can J Urol 2022) p10962 and the FDA De Novo summary DEN170024"
+        },
+        {
+          "endpoint": "Anejaculation",
+          "role": "descriptive",
+          "measure": "Anejaculation among sexually active men",
+          "values": {
+            "exp": "10%",
+            "ctl": "36%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0003"
+          },
+          "note": "Sexually active men without anejaculation at baseline.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Persistent grade 1 events at 3 months",
+          "values": {
+            "exp": "7%",
+            "ctl": "25%"
+          },
+          "locator": "5-year report (Can J Urol 2022) p10964; restates the 3-month primary safety data",
+          "note": "Procedure-related anejaculation was 7% versus 25% (p=0.0004)."
+        },
+        {
+          "label": "Grade 2 or higher events at 3 months",
+          "values": {
+            "exp": "20%",
+            "ctl": "23%"
+          },
+          "locator": "5-year report (Can J Urol 2022) p10964; restates the 3-month primary safety data",
+          "note": "p=0.3038."
+        },
+        {
+          "label": "Blood transfusion",
+          "values": {
+            "exp": "1/116",
+            "ctl": "0/65"
+          },
+          "locator": "5-year report (Can J Urol 2022) p10964 and Figure 1",
+          "note": "Denominators are the treated groups in the CONSORT diagram. No late bleeding event required transfusion in either arm."
+        },
+        {
+          "label": "De novo erectile dysfunction or incontinence requiring a pad",
+          "values": {
+            "exp": "0",
+            "ctl": "0"
+          },
+          "locator": "5-year report (Can J Urol 2022) p10964",
+          "note": "Zero events in either arm."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Total operative time",
+          "values": {
+            "exp": "33 min",
+            "ctl": "36 min"
+          },
+          "locator": "Abstract",
+          "note": "p=0.2752."
+        },
+        {
+          "label": "Resection time",
+          "values": {
+            "exp": "4 min",
+            "ctl": "27 min"
+          },
+          "locator": "Abstract",
+          "note": "p<0.0001."
+        },
+        {
+          "label": "Hospital length of stay",
+          "values": {
+            "exp": "1.4 days",
+            "ctl": "1.4 days"
+          },
+          "locator": "5-year report (Can J Urol 2022) p10964",
+          "note": "Urinary catheter removed a median of 1 day after surgery in both groups."
+        },
+        {
+          "label": "Hemostasis after Aquablation",
+          "value": "Focal non-resective electrocautery or low-pressure Foley balloon inflation in the prostatic fossa; continuous bladder irrigation in all patients.",
+          "locator": "5-year report (Can J Urol 2022) p10961",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/WATER-Gilling-2018.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "water-2018-subgroup",
+      "kind": "secondary",
+      "label": "Subgroup analysis (prostate size, middle lobe, severity)",
+      "published": "2018-07-26",
+      "cutoff": null,
+      "citation": "Plante M, Gilling P, Barber N, et al. \"Symptom relief and anejaculation after aquablation or transurethral resection of the prostate: subgroup analysis from a blinded randomized trial.\" *BJU Int.* 2019;123(4):651-660. doi:10.1111/bju.14426",
+      "doi": "10.1111/bju.14426",
+      "pmid": "29862630",
+      "followUp": "6 months for IPSS; 3 months for the primary safety endpoint",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "IPSS reduction at 6 months, men with prostates 50 to 80 g (difference, Aquablation minus TURP)",
+          "effect": {
+            "type": "difference",
+            "value": 4,
+            "p": "0.001"
+          },
+          "note": "Four points greater after Aquablation than after TURP, versus 1.8 points overall (p=0.135). Prespecified and post hoc exploratory subgroup analyses.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Primary safety endpoint",
+          "role": "secondary",
+          "measure": "Persistent grade 1 or grade 2 or higher complications, men with prostates 50 to 80 g",
+          "values": {
+            "exp": "20%",
+            "ctl": "46%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -26,
+            "p": "0.008"
+          },
+          "note": "26-point difference; overall result 26% versus 42% (p=0.015).",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Anejaculation",
+          "role": "secondary",
+          "measure": "Anejaculation among sexually active men with prostates 50 to 80 g",
+          "values": {
+            "exp": "2%",
+            "ctl": "41%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Overall result 10% versus 36%.",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "exploratory",
+          "measure": "IPSS change by baseline anatomy",
+          "note": "Exploratory analysis showed larger IPSS changes after Aquablation in men with enlarged middle lobes, severe middle lobe obstruction, a low baseline maximum flow rate and a postvoid residual above 100 mL.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/water-2018-subgroup.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "water-2018-1y",
+      "kind": "updated",
+      "label": "One-year follow-up",
+      "published": "2018-12-12",
+      "cutoff": null,
+      "citation": "Gilling PJ, Barber N, Bidair M, et al. \"Randomized Controlled Trial of Aquablation versus Transurethral Resection of the Prostate in Benign Prostatic Hyperplasia: One-year Outcomes.\" *Urology.* 2019;125:169-173. doi:10.1016/j.urology.2018.12.002",
+      "doi": "10.1016/j.urology.2018.12.002",
+      "pmid": "30552937",
+      "followUp": "12 months",
+      "followUpLocator": "Abstract",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction at 12 months",
+          "values": {
+            "exp": "15.1 points",
+            "ctl": "15.1 points"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean improvement in maximum urinary flow rate at 12 months",
+          "values": {
+            "exp": "10.3 cc/s",
+            "ctl": "10.6 cc/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.8632"
+          },
+          "note": "",
+          "locator": "Abstract"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Surgical retreatment for BPH within 1 year",
+          "values": {
+            "exp": "2.6%",
+            "ctl": "1.5%"
+          },
+          "note": "Not significant.",
+          "locator": "Abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Late procedure-related adverse events",
+          "value": "No procedure-related adverse events after month 6.",
+          "locator": "Abstract",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19-followups/water-2018-1y.pdf",
+        "checked": "2026-10-18",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "water-2019-2y",
+      "kind": "updated",
+      "label": "Two-year follow-up",
+      "published": "2019-04-26",
+      "cutoff": null,
+      "citation": "Gilling P, Barber N, Bidair M, et al. \"Two-Year Outcomes After Aquablation Compared to TURP: Efficacy and Ejaculatory Improvements Sustained.\" *Adv Ther.* 2019;36(6):1326-1336. doi:10.1007/s12325-019-00952-3",
+      "doi": "10.1007/s12325-019-00952-3",
+      "pmid": "31028614",
+      "followUp": "24 months; visit completed in 169 of 181 treated patients (93%)",
+      "followUpLocator": "Europe PMC full text PMC6824383, Results, first paragraph",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction at 2 years",
+          "values": {
+            "exp": "14.7 points",
+            "ctl": "14.9 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.8304"
+          },
+          "note": "95% CI for the difference -2.1 to 2.6 points as reported. At least 5 points of improvement in 89% (Aquablation) and 95% (TURP).",
+          "locator": "Abstract and Results (PMC6824383)"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean improvement in maximum urinary flow rate at 2 years",
+          "values": {
+            "exp": "11.2 cc/s",
+            "ctl": "8.6 cc/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.1880"
+          },
+          "note": "95% CI for the difference -1.3 to 6.4 as reported.",
+          "locator": "Abstract and Results (PMC6824383)"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Cumulative surgical retreatment for BPH over 2 years",
+          "values": {
+            "exp": "4.3%",
+            "ctl": "1.5%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.4219"
+          },
+          "note": "Between years 1 and 2, 2 Aquablation patients (1.7%) and none in the TURP group were retreated surgically (p=1).",
+          "locator": "Abstract and Results (PMC6824383)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary retention, months 12 to 24",
+          "values": {
+            "exp": "1 (0.9%)",
+            "ctl": "1 (1.5%)"
+          },
+          "locator": "Results, Table 2 (PMC6824383)",
+          "note": "Rates of individual events between years 1 and 2 were low and similar across groups; adverse events after month 12 were not adjudicated by the clinical events committee."
+        },
+        {
+          "label": "Stricture or adhesions, months 12 to 24",
+          "values": {
+            "exp": "0",
+            "ctl": "1 (1.5%)"
+          },
+          "locator": "Results, Table 2 (PMC6824383)",
+          "note": "No erectile dysfunction events in either arm."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Blinding at 2 years",
+          "values": {
+            "exp": "35% guessed Aquablation",
+            "ctl": "11% guessed Aquablation"
+          },
+          "locator": "Results (PMC6824383)",
+          "note": "p=0.0021; partly due to earlier protocol versions that blinded patients only through the primary endpoint."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "water-2020-3y",
+      "kind": "updated",
+      "label": "Three-year follow-up",
+      "published": "2020-02-18",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; issue dated February 2020",
+      "cutoff": null,
+      "citation": "Gilling P, Barber N, Bidair M, et al. \"Three-year outcomes after Aquablation therapy compared to TURP: results from a blinded randomized trial.\" *Can J Urol.* 2020;27(1):10072-10079.",
+      "doi": null,
+      "pmid": "32065861",
+      "noDoi": "The Canadian Journal of Urology does not assign DOIs to these articles; PMID 32065861.",
+      "followUp": "36 months; 97 of 116 Aquablation (84%) and 55 of 65 TURP (85%) patients had 3-year follow-up",
+      "followUpLocator": "Can J Urol 2020 p10073, Results",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction at 3 years",
+          "values": {
+            "exp": "14.4 points",
+            "ctl": "13.9 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.6848"
+          },
+          "note": "Reported difference 0.6 points (95% CI -3.3 to 2.2). In men with prostates of 50 cc or more, the reduction averaged 3.5 points larger after Aquablation across the 3 years (p=0.0125, repeated measures).",
+          "locator": "Abstract; pp10073,10075"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean improvement in maximum urinary flow rate at 3 years",
+          "values": {
+            "exp": "11.6 cc/s",
+            "ctl": "8.2 cc/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0848"
+          },
+          "note": "Reported difference 3.3 cc/s (95% CI -0.5 to 7.1).",
+          "locator": "Abstract; p10075"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Cumulative surgical retreatment for BPH through 3 years",
+          "values": {
+            "exp": "5/116 (4.3%)",
+            "ctl": "1/65 (1.5%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.4219"
+          },
+          "note": "No surgical retreatment beyond 20 months in either arm.",
+          "locator": "p10078"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Anejaculation",
+          "values": {
+            "exp": "11%",
+            "ctl": "29%"
+          },
+          "locator": "p10076",
+          "note": "Postoperative anejaculation, p=0.0039."
+        },
+        {
+          "label": "Urethral stricture through 3 years",
+          "values": {
+            "exp": "1 (0.9%)",
+            "ctl": "4 (6.2%)"
+          },
+          "locator": "pp10076,10078",
+          "note": "p=0.0567."
+        },
+        {
+          "label": "Meatal or submeatal stenosis",
+          "values": {
+            "exp": "3 (2.5%)",
+            "ctl": "0"
+          },
+          "locator": "pp10076,10078",
+          "note": "p=0.5539."
+        },
+        {
+          "label": "Serious adverse events between years 2 and 3",
+          "values": {
+            "exp": "4 (3.4%)",
+            "ctl": "1 (1.5%)"
+          },
+          "locator": "Table 3, p10078",
+          "note": "Cardiac arrest, two myocardial infarctions and a small bowel obstruction after Aquablation, none related to the procedure; aspiration pneumonia with respiratory failure after TURP, unrelated to the procedure."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Medical therapy failure at 3 years",
+          "values": {
+            "exp": "9%",
+            "ctl": "14%"
+          },
+          "locator": "p10076",
+          "note": "Alpha blocker or 5-alpha reductase inhibitor started after surgery."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "water-2022-5y",
+      "kind": "updated",
+      "label": "Five-year follow-up",
+      "published": "2022-02-13",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; issue dated February 2022",
+      "cutoff": null,
+      "citation": "Gilling PJ, Barber N, Bidair M, et al. \"Five-year outcomes for Aquablation therapy compared to TURP: results from a double-blind, randomized trial in men with LUTS due to BPH.\" *Can J Urol.* 2022;29(1):10960-10968.",
+      "doi": null,
+      "pmid": "35150215",
+      "noDoi": "The Canadian Journal of Urology does not assign DOIs to these articles; PMID 35150215.",
+      "followUp": "60 months; 58 of 116 Aquablation (50%) and 32 of 65 TURP (49%) patients",
+      "followUpLocator": "Can J Urol 2022 p10963, Figure 1 (month 60)",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction at 5 years",
+          "values": {
+            "exp": "15.1 points",
+            "ctl": "13.2 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.2764"
+          },
+          "note": "Median IPSS at 5 years 5.5 (Aquablation) and 6 (TURP).",
+          "locator": "Abstract; p10965"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "IPSS reduction across all follow-up visits, men with prostates of 50 mL or more",
+          "effect": {
+            "type": "difference",
+            "value": 3.5,
+            "p": "0.0123"
+          },
+          "note": "Reduction was 3.5 points greater after Aquablation (repeated measures analysis); no difference in the age or baseline IPSS subgroups.",
+          "locator": "Abstract; p10965"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean improvement in maximum urinary flow rate at 5 years",
+          "values": {
+            "exp": "8.7 mL/s (125%)",
+            "ctl": "6.3 mL/s (89%)"
+          },
+          "note": "",
+          "locator": "p10966"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Mean reduction in postvoid residual at 5 years",
+          "values": {
+            "exp": "62 mL",
+            "ctl": "82 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.3960"
+          },
+          "note": "",
+          "locator": "p10966"
+        },
+        {
+          "endpoint": "Additional BPH therapy",
+          "role": "secondary",
+          "measure": "Additional BPH medication or surgery for recurrent LUTS through 5 years",
+          "values": {
+            "exp": "7/116 (6.0%)",
+            "ctl": "8/65 (12.3%)"
+          },
+          "note": "The report describes this as 51% less in the Aquablation arm. By the table, 6 Aquablation patients (2 TURP and 1 laser procedure in year 1, 2 TURP in year 2, 1 TURP in year 5) and 1 TURP patient had a surgical procedure.",
+          "locator": "Table 2, p10966; p10967"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Persistent grade 1 events at 3 months",
+          "values": {
+            "exp": "7%",
+            "ctl": "25%"
+          },
+          "locator": "p10964",
+          "note": "Procedure-related anejaculation, p=0.0004. Urinary complications from 3 to 5 years did not differ between groups."
+        },
+        {
+          "label": "Grade 2 or higher events at 3 months",
+          "values": {
+            "exp": "20%",
+            "ctl": "23%"
+          },
+          "locator": "p10964",
+          "note": "p=0.3038."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "MSHQ-EjD change over 5 years",
+          "value": "Averaged 2.7 points lower (worse) after TURP across all visits (p=0.0015); close to 0 after Aquablation.",
+          "locator": "p10965",
+          "note": ""
+        },
+        {
+          "label": "Erectile function (IIEF-5)",
+          "value": "No statistically significant change in either group through 5 years.",
+          "locator": "p10965",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "water-2023-5y-subgroup",
+      "kind": "secondary",
+      "label": "Five-year outcomes in 50 to 80 mL prostates",
+      "published": "2023-10-15",
+      "dateApprox": true,
+      "dateLocator": "PubMed entry date; issue dated October 2023",
+      "cutoff": null,
+      "citation": "Oumedjbeur K, Corsi NJ, Bouhadana D, et al. \"Aquablation versus TURP: 5-year outcomes of the WATER randomized clinical trial for prostate volumes 50-80 mL.\" *Can J Urol.* 2023;30(5):11650-11658.",
+      "doi": null,
+      "pmid": "37838991",
+      "noDoi": "The Canadian Journal of Urology does not assign DOIs to these articles; PMID 37838991.",
+      "followUp": "Up to 5 years; 62 Aquablation and 34 TURP patients with 50 to 80 mL prostates",
+      "followUpLocator": "Can J Urol 2023 p11654, Results",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean IPSS reduction across 5 years of follow-up, 50 to 80 mL subgroup",
+          "values": {
+            "exp": "14.1 points",
+            "ctl": "10.8 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "Repeated measures analysis across visits; the Aquablation arm had slightly larger baseline prostates (66.4 versus 61.7 mL).",
+          "locator": "Abstract; p11654"
+        },
+        {
+          "endpoint": "Additional BPH therapy",
+          "role": "secondary",
+          "measure": "Additional BPH medication or surgery through 5 years, 50 to 80 mL subgroup",
+          "values": {
+            "exp": "3.2%",
+            "ctl": "17.6%"
+          },
+          "note": "Risk difference -14.4% (95% CI -2.29 to -30.4, as printed). Surgical reintervention 1.6% versus 3.1%; return to BPH medication 1.6% versus 15.6%.",
+          "locator": "p11654"
+        },
+        {
+          "endpoint": "Ejaculatory dysfunction",
+          "role": "secondary",
+          "measure": "Persistent grade 1 ejaculatory dysfunction, 50 to 80 mL subgroup",
+          "values": {
+            "exp": "1/62 (1.6%)",
+            "ctl": "8/34 (23.5%)"
+          },
+          "note": "Risk difference -21.9% (95% CI -32.5 to -10.7).",
+          "locator": "Table 2b, p11656"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Persistent grade 1 or grade 2 or higher events",
+          "values": {
+            "exp": "21.0%",
+            "ctl": "44.1%"
+          },
+          "locator": "p11654",
+          "note": "Risk difference -23.1% (95% CI -28.9 to -15.5). The abstract places this endpoint at 3 months and the Results text at 6 months."
+        },
+        {
+          "label": "Grade 3a events",
+          "values": {
+            "exp": "2/62 (3.2%)",
+            "ctl": "2/34 (5.9%)"
+          },
+          "locator": "Table 2a, p11656",
+          "note": "Bleeding 1 versus 1; stricture or adhesions 1 versus 1."
+        },
+        {
+          "label": "Grade 3b events",
+          "values": {
+            "exp": "1/62 (1.6%)",
+            "ctl": "2/34 (5.9%)"
+          },
+          "locator": "Table 2a, p11656",
+          "note": "Urinary retention 1 after Aquablation; bleeding 1 and stricture or adhesions 1 after TURP. No grade 4 events."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Procedure time",
+          "values": {
+            "exp": "42.0 min",
+            "ctl": "37.8 min"
+          },
+          "locator": "Table 1a, p11653",
+          "note": "p=0.26."
+        },
+        {
+          "label": "Hemostasis after Aquablation",
+          "value": "Electrocautery in 24 patients and low-pressure Foley balloon inflation in 38.",
+          "locator": "p11651",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/water",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

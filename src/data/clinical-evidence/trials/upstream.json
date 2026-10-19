@@ -1,0 +1,1342 @@
+{
+  "id": "upstream",
+  "name": "UPSTREAM",
+  "aliases": [
+    "Urodynamics for Prostate Surgery Trial: Randomised Evaluation of Assessment Methods",
+    "ISRCTN56164274",
+    "NIHR HTA 12/140/01"
+  ],
+  "nct": null,
+  "registry": "ISRCTN56164274",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-evaluation",
+      "lane": "urodynamics"
+    }
+  ],
+  "question": "Does adding invasive urodynamics to routine noninvasive tests before treatment decisions for bothersome male LUTS leave symptoms no worse and reduce surgery?",
+  "design": {
+    "phase": "pragmatic",
+    "randomized": true,
+    "blinding": "open-label; men and hospital staff unblinded; co-applicants blinded to arm throughout recruitment and analysis, junior statistician unblinded for monitoring-committee reporting",
+    "type": "noninferiority",
+    "n": 820,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Routine noninvasive tests plus invasive urodynamics",
+        "role": "experimental",
+        "n": 427
+      },
+      {
+        "key": "ctl",
+        "label": "routine noninvasive tests alone",
+        "role": "control",
+        "n": 393
+      }
+    ],
+    "population": "820 men (median age 68) at 26 English NHS hospitals who had received conservative or medical therapy and sought further treatment, possibly including surgery, for bothersome LUTS; catheter dependence, relevant neurologic disease, prostate or bladder cancer treatment, prior prostate surgery and unfitness for surgery were excluded.",
+    "description": "Pragmatic multicenter open-label noninferiority randomized trial",
+    "locator": "Eur Urol accepted manuscript PDF pp4, 6-9 and Tables PDF p2 (Table 1); CONSORT PDF p2; HTA 2020 PDF pp37, 39, 42, 50"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "IPSS noninferior at 18 months, but urodynamics did not reduce the surgery rate.",
+  "takeaway": "Adding invasive urodynamics to routine noninvasive tests in men with bothersome LUTS considering prostate surgery gave an 18-month IPSS noninferior to routine tests alone (adjusted difference −0.33, 95% CI −1.47 to 0.80; margin 1 point) and did not reduce surgery (38% versus 36%).",
+  "reports": [
+    {
+      "id": "upstream-2020",
+      "kind": "primary",
+      "label": "18-month primary report",
+      "published": "2020-06-30",
+      "cutoff": null,
+      "citation": "Drake MJ, Lewis AL, Young GJ, et al. \"Diagnostic Assessment of Lower Urinary Tract Symptoms in Men Considering Prostate Surgery: A Noninferiority Randomised Controlled Trial of Urodynamics in 26 Hospitals.\" *Eur Urol.* 2020;78(5):701-710. doi:10.1016/j.eururo.2020.06.004",
+      "doi": "10.1016/j.eururo.2020.06.004",
+      "pmid": "32616406",
+      "followUp": "18 months after randomisation",
+      "followUpLocator": "Accepted manuscript PDF pp3, 7 (abstract; Outcomes)",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS at 18 months (0–35); adjusted difference, urodynamics minus routine care",
+          "locator": "Accepted manuscript PDF pp8-9; Tables PDF p2, Table 2",
+          "note": "Noninferiority margin 1 point, declared if the upper limit of the two-sided 95% CI was below 1 point; intention-to-treat linear regression adjusted for centre and baseline IPSS. 340 versus 329 men had an 18-month IPSS and 328 versus 313 entered the adjusted analysis (12 and 16 lacked a baseline IPSS). The IPSS fell from 18.5 (n = 403) to 12.6 with urodynamics and from 19.4 (n = 371) to 13.1 with routine care.",
+          "values": {
+            "exp": "12.6 (SD 7.9; n = 340)",
+            "ctl": "13.1 (SD 7.9; n = 329)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.33,
+            "ci": [
+              -1.47,
+              0.8
+            ],
+            "ciLevel": "95%"
+          },
+          "met": true
+        },
+        {
+          "endpoint": "IPSS, per-protocol",
+          "role": "secondary",
+          "measure": "Mean IPSS at 18 months, per-protocol; adjusted difference",
+          "locator": "Accepted manuscript PDF p9; Tables PDF p2, Table 2",
+          "note": "Men who did not receive their allocated pathway were excluded; the upper limit of 1.05 is slightly above the 1-point margin.",
+          "values": {
+            "exp": "12.6 (SD 7.8; n = 306)",
+            "ctl": "12.8 (SD 7.5; n = 305)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.1,
+            "ci": [
+              -1.25,
+              1.05
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS, complier average causal effect",
+          "role": "secondary",
+          "measure": "Complier average causal effect on 18-month IPSS (instrumental-variable regression using allocation); adjusted difference",
+          "locator": "Accepted manuscript PDF p9; Tables PDF p2, Table 2",
+          "note": "330 versus 339 men in the as-treated groups; the authors describe the result as generally similar to the intention-to-treat analysis.",
+          "effect": {
+            "type": "difference",
+            "value": -0.39,
+            "ci": [
+              -1.7,
+              0.92
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "IPSS quality-of-life item at 18 months (0–6); adjusted difference, urodynamics minus routine care",
+          "locator": "Accepted manuscript PDF p10; Tables PDF p3, Table 4",
+          "note": "Baseline 4.1 versus 4.2; the interval excludes the 0.5-point minimal clinically important difference.",
+          "values": {
+            "exp": "2.7 (SD 1.69; n = 343)",
+            "ctl": "2.7 (SD 1.64; n = 332)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.07,
+            "ci": [
+              -0.32,
+              0.18
+            ],
+            "ciLevel": "95%",
+            "p": "0.6"
+          }
+        },
+        {
+          "endpoint": "Prespecified subgroup interactions",
+          "role": "secondary",
+          "measure": "Tests of interaction between arm and prespecified subgroups (including age and urinary function) on 18-month IPSS",
+          "locator": "Accepted manuscript PDF p9",
+          "note": "No evident interactions; the authors call the tests underpowered.",
+          "effect": {
+            "type": "none"
+          }
+        },
+        {
+          "endpoint": "Surgery",
+          "role": "key-secondary",
+          "measure": "Urological surgery within 18 months",
+          "locator": "Accepted manuscript PDF p10; Tables PDF p3, Table 3",
+          "note": "The key secondary hypothesis was that urodynamics would reduce surgery, and the reduction was not shown; adjusted for centre, denominators are men with surgery outcome known.",
+          "values": {
+            "exp": "153/408 (38%)",
+            "ctl": "138/384 (36%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.05,
+            "ci": [
+              0.77,
+              1.43
+            ],
+            "ciLevel": "95%",
+            "p": "0.7"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Surgery recommended",
+          "role": "secondary",
+          "measure": "Surgery recommended by the surgeon after assessment",
+          "locator": "Accepted manuscript PDF p10; Tables PDF p3, Table 3",
+          "note": "Adjusted for centre. A post hoc internal validation of the recommendations against flow and urodynamic data gave 65% recommended in both as-treated arms (supplement).",
+          "values": {
+            "exp": "196/397 (49%)",
+            "ctl": "182/378 (48%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.02,
+            "ci": [
+              0.76,
+              1.38
+            ],
+            "ciLevel": "95%",
+            "p": "0.9"
+          }
+        },
+        {
+          "endpoint": "Time to surgery",
+          "role": "descriptive",
+          "measure": "Median time from randomisation to surgery",
+          "locator": "Accepted manuscript PDF p10",
+          "note": "Interquartile range 141-327 days with urodynamics and 106-284 days with routine care. In both arms at least 75% of men had TURP, the rest laser surgery, bladder neck incision, UroLift or another procedure.",
+          "values": {
+            "exp": "216 days",
+            "ctl": "177 days"
+          }
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean maximum flow rate at 18 months (mL/s); adjusted difference",
+          "locator": "Accepted manuscript PDF p10; Tables PDF p3, Table 3",
+          "note": "18 men lacked baseline data; adjusted for baseline Qmax and centre.",
+          "values": {
+            "exp": "15.3 (SD 8.3; n = 268)",
+            "ctl": "15.7 (SD 9.1; n = 270)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.14,
+            "ci": [
+              -1.33,
+              1.62
+            ],
+            "ciLevel": "95%",
+            "p": "0.8"
+          }
+        },
+        {
+          "endpoint": "Qmax after surgery",
+          "role": "secondary",
+          "measure": "Mean maximum flow rate about 4 months after surgery (mL/s) in men who had surgery; adjusted difference",
+          "locator": "Tables PDF p3, Table 3",
+          "note": "One man excluded for missing baseline data.",
+          "values": {
+            "exp": "17.2 (SD 9.3; n = 59)",
+            "ctl": "18.2 (SD 9.8; n = 59)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.17,
+            "ci": [
+              -4.24,
+              3.89
+            ],
+            "ciLevel": "95%",
+            "p": "0.9"
+          }
+        },
+        {
+          "endpoint": "ICIQ-MLUTS voiding score",
+          "role": "secondary",
+          "measure": "ICIQ-MLUTS voiding scale at 18 months; adjusted difference",
+          "locator": "Tables PDF p3, Table 4",
+          "note": "",
+          "values": {
+            "exp": "6.4 (SD 4.40; n = 296)",
+            "ctl": "6.2 (SD 4.23; n = 278)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.09,
+            "ci": [
+              -0.59,
+              0.77
+            ],
+            "ciLevel": "95%",
+            "p": "0.8"
+          }
+        },
+        {
+          "endpoint": "ICIQ-MLUTS incontinence score",
+          "role": "secondary",
+          "measure": "ICIQ-MLUTS incontinence scale at 18 months; adjusted difference",
+          "locator": "Tables PDF p3, Table 4",
+          "note": "",
+          "values": {
+            "exp": "3.9 (SD 3.07; n = 295)",
+            "ctl": "4.0 (SD 2.81; n = 282)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.27,
+            "ci": [
+              -0.67,
+              0.13
+            ],
+            "ciLevel": "95%",
+            "p": "0.19"
+          }
+        },
+        {
+          "endpoint": "Nocturia",
+          "role": "secondary",
+          "measure": "Nocturia more than once per night at 18 months (ICIQ-MLUTS)",
+          "locator": "Accepted manuscript PDF p10; Tables PDF p3, Table 4",
+          "note": "The authors say it may be a chance finding given the number of secondary comparisons.",
+          "values": {
+            "exp": "176/299 (59%)",
+            "ctl": "189/282 (67%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.66,
+            "ci": [
+              0.44,
+              0.99
+            ],
+            "ciLevel": "95%",
+            "p": "0.042"
+          }
+        },
+        {
+          "endpoint": "Ejaculation",
+          "role": "secondary",
+          "measure": "Reduced or absent ejaculation at 18 months (ICIQ-MLUTSsex)",
+          "locator": "Tables PDF p3, Table 4",
+          "note": "The authors report sexual symptoms as similar between arms and at baseline levels.",
+          "values": {
+            "exp": "244/286 (85%)",
+            "ctl": "219/264 (83%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.37,
+            "ci": [
+              0.82,
+              2.28
+            ],
+            "ciLevel": "95%",
+            "p": "0.2"
+          }
+        },
+        {
+          "endpoint": "Surgery by arm interaction",
+          "role": "exploratory",
+          "measure": "Post hoc interaction between arm and surgery on change in IPSS",
+          "locator": "Accepted manuscript PDF p10 (Figure 2, Supplementary Table 4)",
+          "note": "The authors report surgery as potentially more beneficial in the routine care arm and offer delayed surgery in the urodynamics arm as one explanation. The HTA report gives p = 0.006 for the interaction between surgery and arm.",
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events (all events)",
+          "values": {
+            "exp": "234 events",
+            "ctl": "194 events"
+          },
+          "locator": "Accepted manuscript PDF pp3, 11",
+          "note": "428 events in total. No evidence that one arm was superior for adverse events per participant; related serious events were similar at event level. The slight excess in the urodynamics arm came largely from events attributed to urodynamics, for example urinary tract infection."
+        },
+        {
+          "label": "Deaths within 18 months",
+          "value": "11 deaths, 9 in the urodynamics arm",
+          "locator": "Accepted manuscript PDF pp3, 11",
+          "note": "An independent reviewer judged none related to diagnostic testing or treatment."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized",
+          "values": {
+            "exp": "427",
+            "ctl": "393"
+          },
+          "locator": "Accepted manuscript PDF pp3, 9; CONSORT PDF p2",
+          "note": "820 men randomized 1:1 between 1 October 2014 and 31 December 2016 from 8,671 assessed; 5,910 were not eligible, 662 declined and 1,279 were not included for an unidentified reason."
+        },
+        {
+          "label": "Urodynamics received",
+          "values": {
+            "exp": "353/427 (83%)",
+            "ctl": "28/393 (7%)"
+          },
+          "locator": "Accepted manuscript PDF p9; CONSORT PDF p2",
+          "note": "Men allocated to urodynamics who did not have it: 14 declined, 14 had resolved symptoms, 10 cancelled or did not attend, 10 had an unsuccessful attempt, 3 had surgery arranged first, 17 reason missing, 6 withdrew. Routine care men who did not receive routine care only: 22 by clinician decision to use urodynamics, 2 at patient request, 2 from staff error in conducting urodynamics, 2 reason missing, 5 withdrew."
+        },
+        {
+          "label": "Withdrawals",
+          "values": {
+            "exp": "39/427 (9%)",
+            "ctl": "28/393 (7%)"
+          },
+          "locator": "Accepted manuscript PDF p9",
+          "note": "67 withdrawals, most often for poor health. The adjusted 18-month IPSS analysis included 641 men (78%): 328 (77%) with urodynamics and 313 (80%) with routine care."
+        },
+        {
+          "label": "Routine care crossovers to urodynamics",
+          "value": "Mean 18-month IPSS 17.3 (n = 24) in routine care men who had urodynamics versus 12.8 (n = 305) in routine care compliers; baseline 22.6 versus 19.2.",
+          "locator": "Accepted manuscript PDF p9",
+          "note": "The authors treat this as a small sample and note the difference was present at baseline."
+        },
+        {
+          "label": "Urodynamic quality control",
+          "value": "A quality-control review found errors of standardisation, testing, interpretation and equipment maintenance, most with low risk to decisions; erroneous diagnosis of bladder outlet obstruction in 5.5% of tests.",
+          "locator": "Accepted manuscript PDF p12",
+          "note": "Reported separately by Aiello et al., Neurourol Urodyn 2020."
+        },
+        {
+          "label": "Surgery rates below plan",
+          "value": "Overall surgery rates were lower than anticipated; the design used rates from audit of local practice and surgical trials.",
+          "locator": "Accepted manuscript PDF pp12-13",
+          "note": "The authors attribute the lower rates to trends toward fewer surgical recommendations and acceptances during the trial and see no signal of a difference in surgery rates to suggest an underpowered study."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/UPSTREAM-Drake-2020-Accepted-Manuscript.pdf",
+        "checked": "2026-10-19",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "upstream-2020-hta",
+      "kind": "secondary",
+      "label": "Full HTA report",
+      "published": "2020-09-01",
+      "cutoff": null,
+      "citation": "Lewis AL, Young GJ, Selman LE, et al. \"Urodynamics tests for the diagnosis and management of bladder outlet obstruction in men: the UPSTREAM non-inferiority RCT.\" *Health Technol Assess.* 2020;24(42):1-122. doi:10.3310/hta24420",
+      "doi": "10.3310/hta24420",
+      "pmid": "32902375",
+      "followUp": "18 months after randomisation (IPSS at 6, 12 and 18 months)",
+      "followUpLocator": "PDF pp40, 44",
+      "results": [
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "IPSS quality-of-life score at 18 months (0–6); adjusted difference, urodynamics minus routine care",
+          "locator": "PDF p58, Table 9",
+          "note": "340 versus 329 men had an 18-month IPSS; 343 versus 332 had the quality-of-life item.",
+          "values": {
+            "exp": "2.72",
+            "ctl": "2.74"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.07,
+            "ci": [
+              -0.32,
+              0.18
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS, per-protocol",
+          "role": "secondary",
+          "measure": "Mean IPSS at 18 months, per-protocol; adjusted difference",
+          "locator": "PDF pp69–70, Table 25",
+          "note": "306 versus 305 men; the upper limit is above the 1-point margin, which the report attributes to the smaller sample.",
+          "values": {
+            "exp": "12.56",
+            "ctl": "12.78"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.1,
+            "ci": [
+              -1.25,
+              1.05
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS, time since surgery",
+          "role": "secondary",
+          "measure": "Mean IPSS at 18 months adjusted for days from surgery to questionnaire; adjusted difference",
+          "locator": "PDF pp68, 70, Table 25",
+          "note": "336 versus 323 men; the interval crosses the 1-point margin and the report calls the result inconclusive for noninferiority, noting that the 1000-day value imputed for men without surgery was arbitrary.",
+          "effect": {
+            "type": "difference",
+            "value": 0.19,
+            "ci": [
+              -0.84,
+              1.21
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS, multiple imputation",
+          "role": "secondary",
+          "measure": "Mean IPSS at 18 months after multiple imputation; adjusted difference",
+          "locator": "PDF pp70–71, Table 25",
+          "note": "427 versus 393 men; the upper limit is just inside the margin.",
+          "values": {
+            "exp": "12.80",
+            "ctl": "13.19"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.11,
+            "ci": [
+              -1.22,
+              0.99
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "Surgeon recommendation",
+          "role": "secondary",
+          "measure": "Surgery recommended at the decision-making appointment",
+          "locator": "PDF p60, Table 10",
+          "note": "Adjusted for centre.",
+          "values": {
+            "exp": "196/397 (49%)",
+            "ctl": "182/378 (48%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.02,
+            "ci": [
+              0.76,
+              1.38
+            ],
+            "ciLevel": "95%",
+            "p": "0.872"
+          }
+        },
+        {
+          "endpoint": "Listed for surgery",
+          "role": "secondary",
+          "measure": "Listed for surgery after the decision-making appointment",
+          "locator": "PDF p60, Table 10",
+          "note": "",
+          "values": {
+            "exp": "156/376 (41%)",
+            "ctl": "147/358 (41%)"
+          }
+        },
+        {
+          "endpoint": "Surgery by recommendation",
+          "role": "descriptive",
+          "measure": "Surgery within 18 months in men for whom surgery was or was not recommended",
+          "locator": "PDF p61, Table 11",
+          "note": "",
+          "values": {
+            "exp": "143/190 (75%) recommended; 10/195 (5%) not recommended",
+            "ctl": "132/180 (73%) recommended; 6/195 (3%) not recommended"
+          }
+        },
+        {
+          "endpoint": "Time to surgery",
+          "role": "descriptive",
+          "measure": "Median time from randomisation to surgery",
+          "locator": "PDF p60",
+          "note": "291 men had surgery for LUTS in the trial.",
+          "values": {
+            "exp": "216 days",
+            "ctl": "177 days"
+          }
+        },
+        {
+          "endpoint": "IPSS in men with surgery",
+          "role": "exploratory",
+          "measure": "Mean IPSS at baseline and 18 months among men who had LUTS surgery",
+          "locator": "PDF p62, Table 12",
+          "note": "Effect shown is the interaction between surgery and trial arm on 18-month IPSS (Table 13); it fell to 1.14 (95% CI −0.94 to 3.22; p = 0.283) when analysed as treated, which the report suggests may be a chance finding.",
+          "values": {
+            "exp": "19.64 to 9.39 (n = 137)",
+            "ctl": "22.00 to 8.79 (n = 116)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.93,
+            "ci": [
+              0.86,
+              5.01
+            ],
+            "ciLevel": "95%",
+            "p": "0.006"
+          }
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean maximum flow rate at 18 months (mL/s); adjusted difference",
+          "locator": "PDF p67, Table 21",
+          "note": "268 versus 270 men; baseline 11.85 versus 12.39 mL/s.",
+          "values": {
+            "exp": "15.26",
+            "ctl": "15.68"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.14,
+            "ci": [
+              -1.33,
+              1.62
+            ],
+            "ciLevel": "95%",
+            "p": "0.850"
+          }
+        },
+        {
+          "endpoint": "Nocturia",
+          "role": "secondary",
+          "measure": "Nocturia more than once per night at 18 months (ICIQ-MLUTS)",
+          "locator": "PDF p66, Table 18",
+          "note": "One of many secondary comparisons; the report says it may be a chance finding.",
+          "values": {
+            "exp": "176/299 (59%)",
+            "ctl": "189/282 (67%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.66,
+            "ci": [
+              0.44,
+              0.99
+            ],
+            "ciLevel": "95%",
+            "p": "0.042"
+          }
+        },
+        {
+          "endpoint": "Ejaculation",
+          "role": "secondary",
+          "measure": "Reduced or absent ejaculation at 18 months (ICIQ-MLUTSsex)",
+          "locator": "PDF p66, Table 20",
+          "note": "Adjusted for baseline score.",
+          "values": {
+            "exp": "244/286 (85%)",
+            "ctl": "219/264 (83%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.37,
+            "ci": [
+              0.82,
+              2.28
+            ],
+            "ciLevel": "95%",
+            "p": "0.229"
+          }
+        },
+        {
+          "endpoint": "Secondary-care cost",
+          "role": "secondary",
+          "measure": "Adjusted incremental NHS secondary-care cost over 18 months, urodynamics minus routine care (GBP)",
+          "locator": "PDF p28",
+          "note": "",
+          "effect": {
+            "type": "difference",
+            "value": 216,
+            "ci": [
+              -40,
+              471
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "QALY",
+          "role": "secondary",
+          "measure": "Adjusted incremental QALYs over 18 months, urodynamics minus routine care",
+          "locator": "PDF p28",
+          "note": "",
+          "effect": {
+            "type": "difference",
+            "value": 0.006,
+            "ci": [
+              -0.023,
+              0.035
+            ],
+            "ciLevel": "95%"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events",
+          "values": {
+            "exp": "234 events",
+            "ctl": "194 events"
+          },
+          "locator": "PDF p63, p71",
+          "note": "32% of men in the urodynamics arm and 30% in the routine care arm had at least one event; 43–44% of events were related to testing or treatment in both arms."
+        },
+        {
+          "label": "Serious adverse events due to urodynamics",
+          "values": {
+            "exp": "3 events",
+            "ctl": "1 event"
+          },
+          "locator": "PDF p64, Table 15; intention to treat",
+          "note": "Expected non-serious events due to urodynamics numbered 10 versus 1 and unexpected non-serious events 3 versus 0."
+        },
+        {
+          "label": "Serious adverse events due to surgery",
+          "values": {
+            "exp": "21 events",
+            "ctl": "23 events"
+          },
+          "locator": "PDF p64, Table 15; intention to treat"
+        },
+        {
+          "label": "Clavien–Dindo grade IIIa and IIIb surgery-related events",
+          "values": {
+            "exp": "1 and 2 events",
+            "ctl": "1 and 7 events"
+          },
+          "locator": "PDF p64, Table 15; intention to treat",
+          "note": "Events graded III without a subdivision numbered 4 versus 5; no grade IV or V events."
+        },
+        {
+          "label": "Acute urinary retention episodes",
+          "values": {
+            "exp": "13 episodes",
+            "ctl": "29 episodes"
+          },
+          "locator": "PDF p64, Table 15; intention to treat",
+          "note": "Counted as adverse events; the report says there appeared to be more in the routine care arm and carried out no formal test."
+        },
+        {
+          "label": "Deaths within 18 months",
+          "values": {
+            "exp": "9/427 (2.1%)",
+            "ctl": "2/393 (0.5%)"
+          },
+          "locator": "PDF p55, Table 6; p56, Table 8",
+          "note": "p = 0.047; the report found none related to trial procedures."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Received the allocated pathway",
+          "values": {
+            "exp": "353/421 (84%)",
+            "ctl": "360/388 (93%)"
+          },
+          "locator": "PDF p55, Table 6",
+          "note": "p < 0.001. In the urodynamics arm 68 men did not have the test (14 declined, 14 reported resolved symptoms, 10 cancelled or did not attend, 3 had surgery arranged first, 10 had an unsuccessful attempt); 28 routine care men had urodynamics, 22 by clinician decision (PDF p50)."
+        },
+        {
+          "label": "Operations in men with an 18-month IPSS who had LUTS surgery",
+          "values": {
+            "exp": "TURP 102, laser 19, bladder neck incision 5, UroLift 10 (of 137)",
+            "ctl": "TURP 99, laser 5, bladder neck incision 4, UroLift 7 (of 116)"
+          },
+          "locator": "PDF p62, Table 12",
+          "note": "The trial did not specify operations."
+        },
+        {
+          "label": "Urodynamic quality control",
+          "value": "At least 10% of traces from each centre were reviewed against ICS standards; most practice was broadly compliant, with some non-compliant incidents.",
+          "locator": "PDF pp126, 151 (Appendix 7)"
+        },
+        {
+          "label": "Satisfaction with urodynamics",
+          "value": "Median overall satisfaction 10/10; 294/303 (97%) would take the test again; 77/302 (26%) found it worse than expected.",
+          "locator": "PDF p67, Table 22",
+          "note": "Among 353 men in the urodynamics arm who had the test."
+        },
+        {
+          "label": "Planned sample size and observed surgery rate",
+          "value": "310 men per arm (SD 5, one-sided alpha 5%, 80% power), inflated to 388 per arm; surgery was planned around 73% versus 60%, observed 36–38%.",
+          "locator": "PDF pp42, 58, 60",
+          "note": "Observed 18-month IPSS SD was 7.89."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/upstream-hta-2020.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "upstream-2022",
+      "kind": "post-hoc",
+      "label": "Exploratory predictors of surgery and outcome",
+      "published": "2021-12-16",
+      "cutoff": null,
+      "citation": "Young GJ, Metcalfe C, Lane JA, et al. \"Prostate Surgery for Men with Lower Urinary Tract Symptoms: Do We Need Urodynamics to Find the Right Candidates? Exploratory Findings from the UPSTREAM Trial.\" *Eur Urol Focus.* 2022;8(5):1331-1339. doi:10.1016/j.euf.2021.11.010",
+      "doi": "10.1016/j.euf.2021.11.010",
+      "pmid": "34922898",
+      "followUp": "18 months after randomisation",
+      "followUpLocator": "PMC full text, Methods 2.2",
+      "results": [
+        {
+          "endpoint": "Surgery recommendation",
+          "role": "exploratory",
+          "measure": "Surgery recommended after a BOOI of 40 or more versus below 40 (men who had urodynamics)",
+          "locator": "PMC full text, Results 3.1",
+          "note": "Analysis by pathway received, not allocation.",
+          "values": {
+            "exp": "106/150 (71%) with BOOI ≥40",
+            "ctl": "4/34 (12%) unobstructed"
+          }
+        },
+        {
+          "endpoint": "Prediction of surgery recommendation",
+          "role": "exploratory",
+          "measure": "Area under the ROC curve of the best routine-care model, and of the urodynamics model without and with BOOI",
+          "locator": "PMC full text, Results 3.1, Table 1",
+          "note": "The routine-care model used Qmax, age, ICIQ voiding subscale and IPSS quality of life; BCI added nothing.",
+          "values": {
+            "exp": "0.69, rising to 0.78 with BOOI added",
+            "ctl": "0.78"
+          }
+        },
+        {
+          "endpoint": "Change in IPSS",
+          "role": "exploratory",
+          "measure": "Mean change in IPSS at 18 months",
+          "locator": "PMC full text, Results 3.2",
+          "note": "Pathway received; men with baseline IPSS of 7 or less were excluded from these analyses.",
+          "values": {
+            "exp": "−11.60 with surgery",
+            "ctl": "−2.59 without surgery"
+          }
+        },
+        {
+          "endpoint": "Thresholds associated with successful surgery",
+          "role": "exploratory",
+          "measure": "Baseline values associated with an IPSS fall of 3 or more points after surgery",
+          "locator": "PMC full text, Results 3.2",
+          "note": "IPSS above 16, age below 74 years, Qmax below 9.8 mL/s, ICIQ voiding subscale above 8, and, in men who had urodynamics, BOOI above 47.6 or BCI above 123.0."
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Subgroup in which urodynamic indices predicted outcome better",
+          "value": "Qmax above 15 mL/s (n = 16); the relationship between BOOI or BCI and IPSS change was weaker when detrusor overactivity was present.",
+          "locator": "PMC full text, Results 3.2",
+          "note": "The authors describe the analyses as exploratory signposts based on small groups."
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "upstream-2025",
+      "kind": "updated",
+      "label": "5-year follow-up",
+      "published": "2025-03-12",
+      "cutoff": null,
+      "citation": "Clout M, Lewis AL, Cochrane M, et al. \"Five-year Follow-up of the Urodynamics for Prostate Surgery Trial; Randomised Evaluation of Assessment Methods-A Noninferiority Randomised Controlled Trial of Urodynamics.\" *Eur Urol Focus.* 2025;11(4):618-624. doi:10.1016/j.euf.2025.02.004",
+      "doi": "10.1016/j.euf.2025.02.004",
+      "pmid": "40082152",
+      "followUp": "5 years after randomisation (questionnaires October 2019 to December 2021)",
+      "followUpLocator": "PDF p2 (abstract), p4 (Methods 2.1)",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "IPSS at 5 years; adjusted difference, urodynamics minus routine care",
+          "locator": "PDF p5, Table 1; PDF pp4-5, Section 3.2",
+          "note": "The 1-point margin from 18 months was retained. The upper limit of 1.93 exceeds it, and the authors state that noninferiority could not be confirmed because of the wide interval; the point estimate favored urodynamics at 18 months (-0.33) and routine care at 5 years. 208 versus 202 men had a 5-year IPSS; 4 and 3 lacked a baseline IPSS. Adjusted for centre and baseline IPSS.",
+          "values": {
+            "exp": "13.68 (SD 8.09; n = 208)",
+            "ctl": "13.62 (SD 8.10; n = 202)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.41,
+            "ci": [
+              -1.1,
+              1.93
+            ],
+            "ciLevel": "95%"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "Surgery",
+          "role": "key-secondary",
+          "measure": "Surgery for LUTS within 5 years from NHS England routine data; adjusted odds ratio",
+          "locator": "PDF p6, Table 3",
+          "note": "The hypothesised reduction in surgery did not emerge. Logistic regression adjusted for centre; 415 versus 386 men had routine data.",
+          "values": {
+            "exp": "180/415 (43%)",
+            "ctl": "167/386 (43%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.96,
+            "ci": [
+              0.71,
+              1.28
+            ],
+            "ciLevel": "95%",
+            "p": "0.763"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "IPSS quality of life",
+          "role": "secondary",
+          "measure": "IPSS quality-of-life score at 5 years (0-6); adjusted difference",
+          "locator": "PDF p5, Table 1",
+          "note": "211 versus 204 men; 2 and 1 lacked a baseline quality-of-life score.",
+          "values": {
+            "exp": "2.67 (SD 1.55)",
+            "ctl": "2.69 (SD 1.52)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.01,
+            "ci": [
+              -0.31,
+              0.28
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "Time to surgery",
+          "role": "descriptive",
+          "measure": "Median time from randomisation to first LUTS procedure in routine data",
+          "locator": "PDF pp5-6, Section 3.5.1",
+          "note": "242 days overall (interquartile range 131-435; range 8 to 1,812). Intervention 260 days (149-417) and routine care 232 days (112-437).",
+          "values": {
+            "exp": "260 days",
+            "ctl": "232 days"
+          }
+        },
+        {
+          "endpoint": "ICIQ-MLUTS voiding score",
+          "role": "secondary",
+          "measure": "ICIQ-MLUTS voiding scale at 5 years (0-20); adjusted difference",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "exp": "7.06 (SD 4.36; n = 197)",
+            "ctl": "6.99 (SD 4.33; n = 176)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.17,
+            "ci": [
+              -0.68,
+              1.02
+            ],
+            "ciLevel": "95%",
+            "p": "0.696"
+          }
+        },
+        {
+          "endpoint": "ICIQ-MLUTS incontinence score",
+          "role": "secondary",
+          "measure": "ICIQ-MLUTS incontinence scale at 5 years (0-24); adjusted difference",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "exp": "4.44 (SD 3.57; n = 195)",
+            "ctl": "4.24 (SD 3.01; n = 173)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.24,
+            "ci": [
+              -0.39,
+              0.87
+            ],
+            "ciLevel": "95%",
+            "p": "0.452"
+          }
+        },
+        {
+          "endpoint": "Nocturia",
+          "role": "secondary",
+          "measure": "Nocturia more than once per night at 5 years (ICIQ-MLUTS)",
+          "locator": "PDF p6, Table 2; PDF p7, Section 4",
+          "note": "The 18-month difference in favor of urodynamics (59% versus 67%) did not persist as a significant difference; the authors note nocturia has a complex pathophysiology.",
+          "values": {
+            "exp": "114/197 (58%)",
+            "ctl": "114/172 (66%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.68,
+            "ci": [
+              0.43,
+              1.09
+            ],
+            "ciLevel": "95%",
+            "p": "0.106"
+          }
+        },
+        {
+          "endpoint": "Ejaculation",
+          "role": "secondary",
+          "measure": "Reduced or absent ejaculation at 5 years (ICIQ-MLUTSsex)",
+          "locator": "PDF p6, Table 2",
+          "note": "",
+          "values": {
+            "exp": "174/193 (90%)",
+            "ctl": "155/170 (91%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.05,
+            "ci": [
+              0.49,
+              2.25
+            ],
+            "ciLevel": "95%",
+            "p": "0.892"
+          }
+        },
+        {
+          "endpoint": "Painful ejaculation",
+          "role": "exploratory",
+          "measure": "Painful ejaculation at 5 years (ICIQ-MLUTSsex)",
+          "locator": "PDF p6, Table 2; PDF p7, Section 4",
+          "note": "The only sexual item that differed; the authors find no clear mechanistic explanation. Logistic regression not adjusted for centre.",
+          "values": {
+            "exp": "23/177 (13%)",
+            "ctl": "34/154 (22%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.49,
+            "ci": [
+              0.25,
+              0.95
+            ],
+            "ciLevel": "95%",
+            "p": "0.034"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Deaths by 5 years (ONS records)",
+          "values": {
+            "exp": "28 deaths",
+            "ctl": "26 deaths"
+          },
+          "locator": "PDF p6, Section 3.5.2; PDF p7, Section 4",
+          "note": "Median time to death 35 months with urodynamics and 40 months with routine care; the authors describe no difference between groups."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Completed 5-year questionnaires",
+          "values": {
+            "exp": "211/427 (49.4%)",
+            "ctl": "204/393 (51.9%)"
+          },
+          "locator": "PDF p2 (abstract); PDF p4, Section 3.1",
+          "note": "Of 570 men contactable, 415 returned at least a partly completed questionnaire (72.8%) and 329 completed all time points (170 and 159). Questionnaires were sent October 2019 to December 2021, with a £20 voucher for return and up to three contact attempts. Non-completers had more comorbidities (71% versus 64%); completion was affected by the COVID-19 pandemic."
+        },
+        {
+          "label": "Routine NHS data obtained",
+          "value": "801/820 (97.7%)",
+          "locator": "PDF p2 (abstract); PDF p5, Section 3.4",
+          "note": "Details of 802 men (98%) were sent to NHS England, which failed to trace one; the linked data were received in 2023 and filtered by treatment specialty with a code list derived by two clinicians."
+        },
+        {
+          "label": "Men with a LUTS procedure in routine data",
+          "value": "347 men, 180 with urodynamics and 167 with routine care; the most common code was M653 (185 procedures).",
+          "locator": "PDF pp5-6, Section 3.5.1; PDF p6, Section 4",
+          "note": "The 347 include the 291 reported at 18 months. The authors report 43% at 5 years against 37% at 18 months."
+        },
+        {
+          "label": "Surgery rates below plan",
+          "value": "The protocol assumed surgery in 73% of routine care and 60% of urodynamics men; observed rates stayed lower at 5 years.",
+          "locator": "PDF p7, Section 4",
+          "note": "The authors read this as a shift away from surgery for male LUTS."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/UPSTREAM-Clout-5-Year-2025-EUF.pdf",
+        "checked": "2026-10-19",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "upstream-2025-hta",
+      "kind": "secondary",
+      "label": "5-year HTA report and costs",
+      "published": "2025-07-01",
+      "dateApprox": true,
+      "dateLocator": "HTA 2025 title page: published July 2025, Vol. 29, Issue 26; exact day not given",
+      "cutoff": null,
+      "citation": "Clout M, Lewis AL, Cochrane M, et al. \"Urodynamics tests for the diagnosis and management of male bladder outlet obstruction: long-term follow-up of the UPSTREAM non-inferiority RCT.\" *Health Technol Assess.* 2025;29(26). doi:10.3310/slpt4675",
+      "doi": "10.3310/slpt4675",
+      "pmid": "40619891",
+      "followUp": "5 years after randomisation (data from 4 to 6 years accepted)",
+      "followUpLocator": "HTA 2025 p10, Table 1 footnote a",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "IPSS at 5 years; adjusted difference, urodynamics minus routine care",
+          "locator": "HTA 2025 pp18-19, Table 6; scientific summary pxiii",
+          "note": "The 1-point margin was retained; noninferiority could not be confirmed given the wide interval, which the report attributes to the smaller sample, and it calls the study underpowered to confirm noninferiority. 208 versus 202 men; 4 and 3 lacked a baseline IPSS.",
+          "values": {
+            "exp": "13.68 (SD 8.09; n = 208)",
+            "ctl": "13.62 (SD 8.10; n = 202)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.41,
+            "ci": [
+              -1.1,
+              1.93
+            ],
+            "ciLevel": "95%"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "IPSS at 18 months in 5-year responders",
+          "role": "secondary",
+          "measure": "18-month IPSS in the men who also had a 5-year IPSS; adjusted difference",
+          "locator": "HTA 2025 p19, Table 6",
+          "note": "202 versus 196 men; the report says this resembles the Phase I result, so the shift in point estimate between 18 months and 5 years is not an artifact of who responded.",
+          "values": {
+            "exp": "11.72 (SD 7.43)",
+            "ctl": "12.63 (SD 7.41)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.84,
+            "ci": [
+              -2.26,
+              0.57
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "IPSS, per-protocol",
+          "role": "secondary",
+          "measure": "5-year IPSS, per-protocol by urodynamics status recorded in Phase I; adjusted difference",
+          "locator": "HTA 2025 p23, Table 13",
+          "note": "189 versus 190 men. Every 5-year sensitivity analysis in Table 13 has an upper limit above 1 point (per-protocol by routine-data status 0.63, 95% CI -1.27 to 2.53; multiple imputation 0.75, 95% CI -0.58 to 2.08; adjustment for time since surgery 0.54, 95% CI -0.92 to 2.00).",
+          "values": {
+            "exp": "13.55 (SD 8.16)",
+            "ctl": "13.69 (SD 7.93)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.36,
+            "ci": [
+              -1.19,
+              1.91
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "Surgery",
+          "role": "key-secondary",
+          "measure": "Surgery for LUTS within 5 years from routine data; adjusted odds ratio",
+          "locator": "HTA 2025 p22, Table 10",
+          "note": "Logistic regression adjusted for centre; 415 versus 386 men with routine data.",
+          "values": {
+            "exp": "180/415 (43%)",
+            "ctl": "167/386 (43%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.96,
+            "ci": [
+              0.71,
+              1.28
+            ],
+            "ciLevel": "95%",
+            "p": "0.763"
+          },
+          "met": false
+        },
+        {
+          "endpoint": "First LUTS surgery by period",
+          "role": "descriptive",
+          "measure": "Men having first LUTS surgery in each 6-month period after randomisation",
+          "locator": "HTA 2025 p21, Table 9",
+          "note": "Percentages are of the 180 and 167 men with surgery. Later 6-month periods from 18 to 60 months: 11, 4, 5, 7, 2, 3, 2 men with urodynamics and 9, 8, 2, 4, 5, 3, 1 with routine care.",
+          "values": {
+            "exp": "55 (31%) at 0-6 months, 67 (37%) at 6-12, 24 (13%) at 12-18",
+            "ctl": "69 (41%) at 0-6 months, 49 (29%) at 6-12, 17 (10%) at 12-18"
+          }
+        },
+        {
+          "endpoint": "IPSS by surgical status",
+          "role": "exploratory",
+          "measure": "Mean IPSS at baseline and 5 years in men who had LUTS surgery (routine data)",
+          "locator": "HTA 2025 p22, Table 11",
+          "note": "Men without surgery: 17.01 to 15.33 (n = 105) with urodynamics and 17.09 to 15.65 (n = 106) with routine care. Not a prespecified analysis.",
+          "values": {
+            "exp": "19.01 to 11.75 (n = 99)",
+            "ctl": "21.40 to 11.22 (n = 93)"
+          }
+        },
+        {
+          "endpoint": "Surgery by arm interaction",
+          "role": "exploratory",
+          "measure": "Interaction between surgery and arm on 5-year IPSS; adjusted difference in surgery effect, urodynamics minus routine care",
+          "locator": "HTA 2025 p22, Table 12; p21",
+          "note": "Surgery lowered the IPSS in both arms (-3.25 with urodynamics, 95% CI -5.35 to -1.14; -6.30 with routine care, 95% CI -8.57 to -4.03). The report calls the analysis hypothesis-generating.",
+          "effect": {
+            "type": "difference",
+            "value": 2.26,
+            "ci": [
+              -0.58,
+              5.09
+            ],
+            "ciLevel": "95%",
+            "p": "0.118"
+          }
+        },
+        {
+          "endpoint": "Flow-rate subgroup",
+          "role": "exploratory",
+          "measure": "Interaction between arm and maximum flow rate (12 mL/s or less versus above 12 mL/s) on 5-year IPSS",
+          "locator": "HTA 2025 p24, Table 14; p23",
+          "note": "Mean 5-year IPSS with urodynamics versus routine care was 14.23 versus 12.47 at 12 mL/s or less (129 versus 126 men) and 13.03 versus 15.50 above 12 mL/s (72 versus 72). One of five prespecified subgroup variables (age, flow rate, voided volume, nocturia, storage LUTS); age showed a weak interaction (p = 0.068), voided volume, nocturia and storage LUTS showed none, and no subgroup interaction appeared for surgery rate (Table 15).",
+          "effect": {
+            "type": "difference",
+            "value": -4.72,
+            "ci": [
+              -7.86,
+              -1.58
+            ],
+            "ciLevel": "95%",
+            "p": "0.002"
+          }
+        },
+        {
+          "endpoint": "Cost over 5 years",
+          "role": "secondary",
+          "measure": "Incremental mean cost, urodynamics minus routine care (GBP)",
+          "locator": "HTA 2025 p33, Table 22; p32, Table 21; p35",
+          "note": "Adjusted mean cost 4,464.41 versus 4,287.78 GBP. Increments by year: +135.86 (year 1), +167.77 (year 2), +9.21, +1.55 and -137.76 (year 5). Unit cost of a urodynamic test was 268 GBP (2020-21 NHS reference costs). Discounted at 3.5%; NHS secondary care perspective.",
+          "effect": {
+            "type": "difference",
+            "value": 176.63,
+            "ci": [
+              -464.06,
+              817.32
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "QALY over 5 years",
+          "role": "secondary",
+          "measure": "Incremental mean QALYs, urodynamics minus routine care",
+          "locator": "HTA 2025 p33, Table 22",
+          "note": "Adjusted mean QALYs 3.490 versus 3.529; EQ-5D-5L mapped to the UK three-level value set, zero imputed after death.",
+          "effect": {
+            "type": "difference",
+            "value": -0.039,
+            "ci": [
+              -0.152,
+              0.073
+            ],
+            "ciLevel": "95%"
+          }
+        },
+        {
+          "endpoint": "Incremental net monetary benefit",
+          "role": "secondary",
+          "measure": "Incremental net monetary benefit at 20,000 GBP per QALY, urodynamics minus routine care (GBP)",
+          "locator": "HTA 2025 p33, Table 22",
+          "note": "The probability that urodynamics was cost-effective at 20,000 GBP per QALY was 21%. With a 1.5% discount rate the net monetary benefit was -983.33 (95% CI -3,446.02 to 1,479.35); with outpatient costs cut by 62% it was -1,127.15 (95% CI -3,414.44 to 1,160.14).",
+          "effect": {
+            "type": "difference",
+            "value": -962.62,
+            "ci": [
+              -3323.54,
+              1398.3
+            ],
+            "ciLevel": "95%"
+          }
+        }
+      ],
+      "harms": [
+        {
+          "label": "Deaths by 5 years (ONS records)",
+          "values": {
+            "exp": "28 deaths",
+            "ctl": "26 deaths"
+          },
+          "locator": "HTA 2025 p26, Table 18",
+          "note": "Among 415 and 386 men with routine data. Phase I deaths 11 versus 3 and Phase II deaths 17 versus 23; median time to death 35 months (interquartile range 15-50) versus 40 months (30-52). The Phase I count from ONS records differs from the 9 versus 2 reported by the trial."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Men with a LUTS procedure in routine data",
+          "values": {
+            "exp": "180/415 (43%)",
+            "ctl": "167/386 (43%)"
+          },
+          "locator": "HTA 2025 p22, Table 10; p21",
+          "note": "347 of 801 men in total (43.3%). Routine data contained 454 procedures (412 admitted-care, 42 outpatient): 185 of M653 endoscopic resection of prostate NEC, 96 electrotome resection, 33 laser resection, 27 (M683) and 16 (M708) listed as endoscopic insertion of a prosthesis to compress a prostatic lobe, 26 endoscopic bladder outlet incisions and 41 introductions of a therapeutic substance into the bladder (M494, a storage-LUTS treatment counted as LUTS surgery)."
+        },
+        {
+          "label": "Questionnaires returned (Phase II)",
+          "values": {
+            "exp": "211/427 (49.4%)",
+            "ctl": "204/393 (51.9%)"
+          },
+          "locator": "HTA 2025 pp14-15, Figure 3 and Table 3",
+          "note": "570 men were contactable and 550 were sent a questionnaire; the report states 416 were received, with 205 shown for routine care in Figure 3, and notes one blank questionnaire. The abstract's 205/363 (56.5%) uses the 363 men in the routine care 18-month cohort as denominator rather than the 393 randomized."
+        },
+        {
+          "label": "Urodynamics in routine data over 5 years",
+          "values": {
+            "exp": "251/415 (60%)",
+            "ctl": "72/386 (19%)"
+          },
+          "locator": "HTA 2025 pp17-18, Table 5",
+          "note": "25 further urodynamic tests appeared between 18 months and 5 years, 23 of them in routine care. Routine data identified only 265 of the 376 Phase I urodynamics cases (70%), so the report suspects poor coding of urodynamics."
+        },
+        {
+          "label": "Routine data against Phase I case report forms",
+          "value": "776/790 (98%) of Phase I findings matched: 282/291 surgical cases and 494/499 non-surgical cases.",
+          "locator": "HTA 2025 pp20-21, Table 8",
+          "note": "66 additional surgery cases appeared in routine data compared with Phase I, most after 18 months."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19/UPSTREAM-5-Year-HTA-2025.pdf",
+        "checked": "2026-10-19",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "value",
+      "note": "Same question in women before stress-incontinence surgery; office evaluation alone was noninferior to adding urodynamics."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/upstream",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "id": "merit",
+  "name": "MERIT",
+  "aliases": [
+    "D-MannosE to prevent Recurrent urinary tract InfecTions",
+    "ISRCTN13283516"
+  ],
+  "nct": null,
+  "registry": "ISRCTN13283516",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "prophylaxis"
+    }
+  ],
+  "question": "Does daily D-mannose taken for 6 months reduce the proportion of women with recurrent urinary tract infection who have a further medically attended infection?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 598,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "D-mannose powder 2 g daily",
+        "role": "experimental",
+        "n": 303
+      },
+      {
+        "key": "ctl",
+        "label": "fructose placebo powder",
+        "role": "control",
+        "n": 295
+      }
+    ],
+    "population": "598 women aged 18 or older (mean age 58) with at least 2 UTIs in the preceding 6 months or 3 in 12 months, recruited from 99 primary care centers in England and Wales.",
+    "description": "Multicenter, double-blind, placebo-controlled superiority randomized trial",
+    "locator": "PDF p1 (abstract), p2 (Participants, Randomization and Masking), p5 Table 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "Not significant; the 95% CI for relative risk (0.80 to 1.05) excluded the 50% reduction the patient panel required.",
+  "takeaway": "In a double-blind trial of 598 women with recurrent UTI in UK primary care, daily D-mannose 2 g for 6 months did not reduce medically attended, clinically suspected UTI versus placebo (51.0% versus 55.7%; risk difference −5 points, 95% CI −13 to 3).",
+  "reports": [
+    {
+      "id": "merit-2024",
+      "kind": "primary",
+      "label": "Primary report (JAMA Intern Med)",
+      "published": "2024-04-08",
+      "cutoff": null,
+      "citation": "Hayward G, Mort S, Hay AD, et al. \"d-Mannose for Prevention of Recurrent Urinary Tract Infection Among Women: A Randomized Clinical Trial.\" *JAMA Intern Med.* 2024;184(6):619-628. doi:10.1001/jamainternmed.2024.0264",
+      "doi": "10.1001/jamainternmed.2024.0264",
+      "pmid": "38587819",
+      "followUp": "6 months per participant; recruitment March 28, 2019 to January 31, 2020",
+      "followUpLocator": "PDF p1 (abstract)",
+      "results": [
+        {
+          "endpoint": "Medically attended, clinically suspected UTI",
+          "role": "primary",
+          "measure": "Proportion with at least 1 further episode of clinically suspected UTI for which ambulatory care was contacted within 6 months; unadjusted risk difference, D-mannose minus placebo, in percentage points",
+          "values": {
+            "exp": "150/294 (51.0%)",
+            "ctl": "161/289 (55.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -5,
+            "ci": [
+              -13,
+              3
+            ],
+            "p": "0.26"
+          },
+          "met": false,
+          "note": "Adjusted relative risk 0.92 (95% CI 0.80 to 1.05; P=0.22) from a log-Poisson mixed-effects model with practice as a random effect. Primary outcome data were available for 294/303 and 289/295 randomized women; the trial was powered to detect a 50% relative reduction. Per-protocol, imputation and preplanned subgroup analyses gave similar estimates.",
+          "locator": "PDF p1 (abstract), p3 (Statistical Analysis), p4 (Primary Outcome), p7 Table 2"
+        },
+        {
+          "endpoint": "Number of clinically suspected UTIs",
+          "role": "key-secondary",
+          "measure": "Number of clinically suspected UTIs over 6 months; adjusted incidence rate ratio, D-mannose versus placebo",
+          "values": {
+            "exp": "mean 0.9 (SD 1.19)",
+            "ctl": "mean 1.0 (SD 1.28)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.88,
+            "ci": [
+              0.72,
+              1.08
+            ],
+            "p": "0.21"
+          },
+          "met": false,
+          "note": "Incidence rate ratio from a log-Poisson mixed-effects model; 9 and 6 women had missing data. The sample size was set to be adequate for this outcome.",
+          "locator": "PDF p3 (Statistical Analysis), p8 Table 3"
+        },
+        {
+          "endpoint": "Time to next consultation with clinically suspected UTI",
+          "role": "secondary",
+          "measure": "Adjusted hazard ratio, D-mannose versus placebo (mixed-effects Cox model); incidence per 1000 days at risk",
+          "values": {
+            "exp": "4.11 per 1000 days at risk",
+            "ctl": "4.80 per 1000 days at risk"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.86,
+            "ci": [
+              0.69,
+              1.08
+            ],
+            "p": "0.20"
+          },
+          "note": "Time at risk 36 263 versus 33 337 days; 2 participants with a consultation on the day of randomization were excluded.",
+          "locator": "PDF p8 Table 3, p9 Figure 2"
+        },
+        {
+          "endpoint": "Days of moderately bad or worse UTI symptoms",
+          "role": "secondary",
+          "measure": "Symptom-diary days over 6 months; adjusted median difference, D-mannose minus placebo (quantile regression)",
+          "values": {
+            "exp": "median 0.0 (IQR 0.0 to 2.0); mean 1.7",
+            "ctl": "median 0.0 (IQR 0.0 to 2.0); mean 3.2"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.0,
+            "ci": [
+              -0.36,
+              0.36
+            ],
+            "p": ">0.99"
+          },
+          "note": "Diary data were missing for 63 and 66 women. Weekly symptom burden score: adjusted median difference 0.00 (95% CI -0.37 to 0.37; P>0.99).",
+          "locator": "PDF p4 (Secondary Outcomes), p8 Table 3"
+        },
+        {
+          "endpoint": "Microbiologically proven UTIs",
+          "role": "secondary",
+          "measure": "Number of microbiologically proven UTIs over 6 months; adjusted incidence rate ratio, D-mannose versus placebo",
+          "values": {
+            "exp": "mean 0.4 (SD 0.87)",
+            "ctl": "mean 0.4 (SD 0.78)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.97,
+            "ci": [
+              0.63,
+              1.48
+            ],
+            "p": "0.88"
+          },
+          "note": "Microbiological data were missing for 54 and 51 women; urine samples were those sent by clinicians for routine care.",
+          "locator": "PDF p8 Table 3"
+        },
+        {
+          "endpoint": "Antibiotic courses prescribed for UTI",
+          "role": "secondary",
+          "measure": "Number of prescribed antibiotic courses for UTI over 6 months; adjusted incidence rate ratio, D-mannose versus placebo",
+          "values": {
+            "exp": "mean 0.9 (SD 1.32)",
+            "ctl": "mean 1.1 (SD 1.53)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.88,
+            "ci": [
+              0.69,
+              1.12
+            ],
+            "p": "0.29"
+          },
+          "note": "Defined daily dose, adjusted mean difference -0.10 (95% CI -0.23 to 0.02; P=0.11).",
+          "locator": "PDF p4 (Secondary Outcomes), p8 Table 3"
+        },
+        {
+          "endpoint": "Days of prescribed antibiotics for UTI",
+          "role": "secondary",
+          "measure": "Days of antibiotics prescribed for UTI over 6 months; adjusted median difference, D-mannose minus placebo (quantile regression)",
+          "values": {
+            "exp": "median 0.0 (IQR 0.0 to 7.0); mean 5.7 (SD 12.49)",
+            "ctl": "median 3.0 (IQR 0.0 to 7.0); mean 6.3 (SD 10.28)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.0,
+            "ci": [
+              -4.4,
+              -1.6
+            ],
+            "p": "<0.001"
+          },
+          "note": "The report attributes the difference to a small number of women with very high antibiotic consumption (maximum 161 days in the D-mannose group, 66 days in the placebo group).",
+          "locator": "PDF p4 (Secondary Outcomes), p8 Table 3"
+        },
+        {
+          "endpoint": "Days of prescribed antibiotics for UTI",
+          "role": "exploratory",
+          "measure": "Post hoc analysis excluding 12 women more than 3 SDs from the mean; mean days (SD); adjusted median difference, D-mannose minus placebo",
+          "values": {
+            "exp": "4.7 (SD 7.1)",
+            "ctl": "5.1 (SD 7.5)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.0,
+            "ci": [
+              -1.4,
+              1.4
+            ],
+            "p": ">0.99"
+          },
+          "note": "Post hoc sensitivity analysis (eTable 7 of the report's supplement, which was not read).",
+          "locator": "PDF p4 (Secondary Outcomes)"
+        },
+        {
+          "endpoint": "Resistant uropathogens",
+          "role": "secondary",
+          "measure": "Women with resistant uropathogens cultured during an episode of infection; relative risk, D-mannose versus placebo",
+          "values": {
+            "exp": "41/294 (13.9%)",
+            "ctl": "45/289 (15.6%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.9,
+            "ci": [
+              0.6,
+              1.33
+            ],
+            "p": "0.59"
+          },
+          "note": "",
+          "locator": "PDF p4 (Secondary Outcomes)"
+        },
+        {
+          "endpoint": "UTI-related hospital admissions",
+          "role": "secondary",
+          "measure": "Women admitted to hospital for UTI during 6 months; relative risk, D-mannose versus placebo",
+          "values": {
+            "exp": "6/294 (2.0%)",
+            "ctl": "4/289 (1.4%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.47,
+            "ci": [
+              0.47,
+              4.61
+            ],
+            "p": "0.51"
+          },
+          "note": "",
+          "locator": "PDF p4 (Secondary Outcomes)"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events (events, excluding hospitalizations for elective procedures)",
+          "values": {
+            "exp": "20",
+            "ctl": "8"
+          },
+          "locator": "PDF p4 (Secondary Outcomes)",
+          "note": "28 events in total, among 303 and 295 randomized women; counts are events, not participants. None was judged related to the intervention."
+        },
+        {
+          "label": "Adverse effects given as the reason for discontinuing the study product",
+          "values": {
+            "exp": "10/303",
+            "ctl": "5/295"
+          },
+          "locator": "PDF p7 Figure 1",
+          "note": "Listed under discontinued medication in the flow diagram. An adverse event that prevented compliance with trial procedures was recorded in a further 1 and 2 women."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Regimen",
+          "values": {
+            "exp": "About 2 g of D-mannose powder as one daily scoop for 6 months",
+            "ctl": "A similar daily scoop of fructose powder"
+          },
+          "locator": "PDF p2 (Procedures), p1 (abstract)",
+          "note": "White powders of similar sweet taste in identical bottles. Packs were sent every 2 months and both products were continued during symptoms and while taking antibiotics. Both products were purchased from Tiofarma."
+        },
+        {
+          "label": "Women who initiated the study product",
+          "values": {
+            "exp": "294/303 (97.0%)",
+            "ctl": "283/295 (95.9%)"
+          },
+          "locator": "PDF p7 Figure 1",
+          "note": "Percentages calculated from the flow diagram counts."
+        },
+        {
+          "label": "Reported adherence",
+          "value": "More than two-thirds of women reported taking the study product at least 3 days a week for 15 weeks.",
+          "locator": "PDF p9 (Strengths and Limitations)",
+          "note": "Adherence was similar in the 2 arms; the report states that the per-protocol analyses restricted to women reporting good adherence gave similar effects."
+        },
+        {
+          "label": "Women who believed at 6 months that they had received D-mannose",
+          "values": {
+            "exp": "75/224 (33.5%)",
+            "ctl": "64/215 (29.8%)"
+          },
+          "locator": "PDF p4 (Secondary Outcomes)",
+          "note": "Odds ratio 1.19 (95% CI 0.79 to 1.78; P=0.40)."
+        },
+        {
+          "label": "Recruitment",
+          "value": "7591 women invited, 830 responded, 232 excluded or not randomized (139 eligible but not randomized), 598 randomized.",
+          "locator": "PDF p1 (abstract), p7 Figure 1",
+          "note": "Recruited from 99 primary care centers between March 28, 2019 and January 31, 2020."
+        },
+        {
+          "label": "Withdrawals",
+          "values": {
+            "exp": "69 (text) or 64 (Figure 1)",
+            "ctl": "65 (text) or 64 (Figure 1)"
+          },
+          "locator": "PDF p4 (Population), p7 Figure 1",
+          "note": "The Results text and the flow diagram give different counts of withdrawn, discontinued or lost women."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-10-19/merit-wisc.pdf",
+        "checked": "2026-10-18",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/merit",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}
