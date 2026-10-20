@@ -637,6 +637,16 @@ h1, h2, h3, h4, h5, h6 {
   .DocSearch-Button {
     margin: 0;
   }
+  /* Keep the light/dark toggle in the navbar beside search on phones and
+     tablets; Docusaurus otherwise moves it into the slide-out menu. */
+  .navbar__items--right [class*='colorModeToggle'] {
+    display: block;
+  }
+  /* Docusaurus pins the search button to the right edge with absolute
+     positioning here; keep it in the row so it sits after the toggle. */
+  .navbar__items--right [class*='navbarSearchContainer'] {
+    position: static;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════
