@@ -35,38 +35,6 @@ type HomeData = {
   videos: number;
 };
 
-// Fill the DocSearch modal with a suggested query. The chip is also a plain
-// link to the search page, used when the modal input cannot be found.
-function searchFor(query: string) {
-  openSearch();
-  const started = Date.now();
-  const fill = () => {
-    const input = document.querySelector<HTMLInputElement>('.DocSearch-Input');
-    if (input) {
-      // Give DocSearch a moment to attach its handlers; a query typed into
-      // the input as it mounts is shown but never searched.
-      window.setTimeout(() => {
-        const setValue = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')?.set;
-        setValue?.call(input, query);
-        input.dispatchEvent(new Event('input', {bubbles: true}));
-        input.focus();
-      }, 200);
-    } else if (Date.now() - started < 2000) {
-      window.setTimeout(fill, 50);
-    } else {
-      window.location.assign(`/search?q=${encodeURIComponent(query)}`);
-    }
-  };
-  window.setTimeout(fill, 50);
-}
-
-const SUGGESTED_SEARCHES = [
-  'Urethral stricture',
-  'Sacrocolpopexy',
-  'Sacral neuromodulation',
-  'Urodynamics',
-];
-
 // Format in UTC so the server-rendered date (built in UTC) matches the browser's
 // and React hydration does not fail for readers in other timezones.
 function formatDate(ms: number): string {
@@ -108,26 +76,8 @@ function HomepageHeader() {
             <path d="m21 21-4.3-4.3" />
           </svg>
           <span className={styles.heroSearchPlaceholder}>Where should we start?</span>
-          <span className={styles.heroSearchKeys}>
-            <kbd>⌘</kbd>
-            <kbd>K</kbd>
-          </span>
+          <span className={styles.heroSearchButton} aria-hidden="true">Search</span>
         </button>
-        <div className={styles.trySearches}>
-          <span className={styles.tryLabel}>Try:</span>
-          {SUGGESTED_SEARCHES.map((query) => (
-            <a
-              key={query}
-              href={`/search?q=${encodeURIComponent(query)}`}
-              className={styles.tryChip}
-              onClick={(event) => {
-                event.preventDefault();
-                searchFor(query);
-              }}>
-              {query}
-            </a>
-          ))}
-        </div>
         <p className={styles.heroStats}>
           <span className={styles.heroStatsNumber}>{stats.articlesRounded.toLocaleString()}+</span>{' '}
           <span className={styles.heroStatsLabel}>articles</span>
