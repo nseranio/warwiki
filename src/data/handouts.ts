@@ -1269,6 +1269,28 @@ export const PATIENT_HANDOUTS: PatientHandout[] = [
       'A long-term skin condition of the genital area in people of any sex: symptoms, steroid ointment, surgery when scarring narrows the urethra or foreskin, and lifelong checks.',
   },
   {
+    slug: 'low-sexual-desire',
+    title: 'Low Sexual Desire',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    sourcePages: ['docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx', 'docs/01-foundations/pharmacology/sexual-medicine-andrology/flibanserin.mdx', 'docs/01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx', 'docs/01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx', 'docs/04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx'],
+    reviewedAgainst: '2026-10-20',
+    description:
+      'Low desire that bothers you, in people of any sex: common contributors, what the visit checks, therapy, and the medicine options with their cautions.',
+  },
+  {
+    slug: 'clitoral-adhesions',
+    title: 'Clitoral Adhesions and Clitoral Phimosis',
+    category: 'Conditions & Symptoms',
+    subcategory: 'Sexual Health & Other',
+    pages: 2,
+    sourcePages: ['docs/03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx', 'docs/03-clinical-conditions/03g-genital-scrotal/clitoral-disorders.mdx', 'docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx'],
+    reviewedAgainst: '2026-10-20',
+    description:
+      'When the clitoral hood sticks to or scars over the clitoris: causes including lichen sclerosus, symptoms, the exam, and release in the office or operating room.',
+  },
+  {
     slug: 'neurogenic-bladder-options',
     title: 'Bladder Care With a Nerve Condition',
     category: 'Conditions & Symptoms',
