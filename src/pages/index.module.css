@@ -53,7 +53,7 @@
    ═══════════════════════════════════════════════════════════ */
 
 /* The hero already ends in 5rem of padding; pull the trailer up so the
-   gap below the hero stats matches the gap above Browse the library. */
+   gap below the hero stats matches the gap above Browse the reference. */
 .homeSection.trailerSection {
   padding-top: 0;
   margin-top: -1.5rem;
@@ -448,9 +448,9 @@
 .homeHeading {
   margin: 0;
   font-family: var(--warwiki-font-heading);
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .homeHeadingSmall {
@@ -616,10 +616,15 @@
   .recentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Heading sizes match WHITWIKI's .whit-home-heading on phones. */
+@media screen and (max-width: 650px) {
+  .homeHeading { font-size: 1.6rem; }
+  .homeHeadingSmall { font-size: 1.45rem; }
+}
+
 @media screen and (max-width: 600px) {
   .homeSection { padding: 2.5rem 1rem 0; }
   .homeSectionHeader { flex-direction: column; gap: 0.25rem; }
-  .homeHeading { font-size: 1.7rem; }
   .sectionGrid,
   .recentGrid { grid-template-columns: 1fr; }
   .trailerVideo { width: 100%; }

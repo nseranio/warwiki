@@ -168,7 +168,7 @@ function HomepageSections() {
   return (
     <section className={styles.homeSection} aria-labelledby="browse-heading">
       <div className={styles.homeSectionHeader}>
-        <Heading as="h2" id="browse-heading" className={styles.homeHeading}>Browse the library</Heading>
+        <Heading as="h2" id="browse-heading" className={styles.homeHeading}>Browse the reference</Heading>
       </div>
       <div className={styles.sectionGrid}>
         {SECTION_CARDS.map((card) => (
