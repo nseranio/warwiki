@@ -24,12 +24,14 @@ test('atlas database search and filter survive a reload via the URL', async ({pa
 test('video library filters load from and write to the URL', async ({page}) => {
   await page.goto('/video-library');
   await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
-  const topicSelect = page.getByRole('combobox', {name: 'Filter by topic'});
-  const topic = await topicSelect.locator('option').nth(1).getAttribute('value');
-  await topicSelect.selectOption(topic!);
-  await expect(page).toHaveURL(new RegExp(`[?&]topic=${encodeURIComponent(topic!).replace(/%20/g, '(?:\\+|%20)')}`));
+  const topics = page.getByRole('group', {name: 'Topic'});
+  const button = topics.getByRole('button').nth(1);
+  const topic = (await button.textContent())!;
+  await button.click();
+  await expect(button).toHaveAttribute('aria-pressed', 'true');
+  await expect(page).toHaveURL(new RegExp(`[?&]topic=${encodeURIComponent(topic).replace(/%20/g, '(?:\\+|%20)')}`));
 
-  await page.goto(`/video-library?topic=${encodeURIComponent(topic!)}`);
+  await page.goto(`/video-library?topic=${encodeURIComponent(topic)}`);
   await expect(page.locator('html')).toHaveAttribute('data-has-hydrated', 'true');
-  await expect(topicSelect).toHaveValue(topic!);
+  await expect(topics.getByRole('button', {name: topic, exact: true})).toHaveAttribute('aria-pressed', 'true');
 });

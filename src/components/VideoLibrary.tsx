@@ -1,26 +1,40 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { VIDEOS, type VideoEntry } from '@site/src/data/videos';
 
+/**
+ * Searchable video library, laid out like WHITWIKI's: a search box with the
+ * result count, one-tap topic buttons, playlist and sort selects, then the
+ * videos grouped by playlist. Filters are mirrored in the URL
+ * (?q=&topic=&playlist=&sort=) so a view can be shared and survives Back.
+ */
+
 const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
 
-type SortMode = 'playlist' | 'recent' | 'longest' | 'shortest' | 'alpha';
+type SortMode = 'playlist' | 'recent' | 'popular' | 'longest' | 'shortest' | 'alpha';
 const PAGE_SIZE = 24;
 
 const SORT_OPTIONS: Array<{ id: SortMode; label: string }> = [
-  { id: 'playlist', label: 'Playlist order' },
-  { id: 'recent', label: 'Recently uploaded' },
-  { id: 'longest', label: 'Longest first' },
-  { id: 'shortest', label: 'Shortest first' },
-  { id: 'alpha', label: 'Alphabetical' },
+  { id: 'playlist', label: 'By playlist' },
+  { id: 'recent', label: 'Newest' },
+  { id: 'popular', label: 'Most viewed' },
+  { id: 'longest', label: 'Longest' },
+  { id: 'shortest', label: 'Shortest' },
+  { id: 'alpha', label: 'A–Z' },
 ];
+
+// Topic buttons run from the largest topic to the smallest, with "Other" last.
+const TOPICS: string[] = (() => {
+  const counts = new Map<string, number>();
+  for (const v of VIDEOS) if (v.topic) counts.set(v.topic, (counts.get(v.topic) ?? 0) + 1);
+  return Array.from(counts.entries())
+    .sort((a, b) => Number(a[0] === 'Other') - Number(b[0] === 'Other') || b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([name]) => name);
+})();
 
 function durationToSeconds(d: string | undefined): number {
   if (!d) return 0;
-  const parts = d.split(':').map(Number);
-  if (parts.length === 2) return parts[0] * 60 + parts[1];
-  if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
-  return 0;
+  return d.split(':').map(Number).reduce((total, part) => total * 60 + part, 0);
 }
 
 function PlayIcon() {
@@ -70,20 +84,21 @@ function VideoCard({ v }: { v: VideoEntry }) {
       </div>
       <div className="vc-body vl-body">
         <div className="vc-title">{v.title}</div>
+        {v.topic && <span className="vl-chip">{v.topic}</span>}
         <div className="vl-meta">
-          <span className="vl-meta-channel">{v.channel}</span>
-          <span className="vl-meta-dot">·</span>
-          <span className="vl-meta-playlist">{v.playlist}</span>
+          {v.channel && (
+            <>
+              <span className="vl-meta-channel">{v.channel}</span>
+              <span aria-hidden="true"> · </span>
+            </>
+          )}
+          <span>{v.playlist}</span>
+          {v.year ? <span> · {v.year}</span> : null}
         </div>
-        {(v.topic || v.articleSlug) && (
-          <div className="vl-chip-row">
-            {v.topic && <span className="vl-chip vl-chip--topic">{v.topic}</span>}
-            {v.articleSlug && (
-              <a className="vl-chip vl-chip--link" href={v.articleSlug}>
-                Open article →
-              </a>
-            )}
-          </div>
+        {v.articleSlug && (
+          <a className="vl-meta" href={v.articleSlug}>
+            Read the article
+          </a>
         )}
       </div>
     </div>
@@ -92,27 +107,22 @@ function VideoCard({ v }: { v: VideoEntry }) {
 
 export default function VideoLibrary() {
   const [search, setSearch] = useState('');
-  const [channel, setChannel] = useState('All');
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
   const [sort, setSort] = useState<SortMode>('playlist');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  // Filters are mirrored into the query string (?q=&channel=&topic=&playlist=&sort=)
-  // so a filtered view can be shared and survives opening an article and
-  // pressing Back. Defaults render on the server; the URL is read after
-  // hydration, and only then is it written back (`fromUrl` gates the writer).
+  // Defaults render on the server; the URL is read after hydration, and only
+  // then is it written back (`fromUrl` gates the writer).
   const [fromUrl, setFromUrl] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
-    const ch = params.get('channel');
     const tp = params.get('topic');
     const pl = params.get('playlist');
     const so = params.get('sort');
     if (q) setSearch(q);
-    if (ch && VIDEOS.some(v => v.channel === ch)) setChannel(ch);
-    if (tp && VIDEOS.some(v => v.topic === tp)) setTopic(tp);
+    if (tp && TOPICS.includes(tp)) setTopic(tp);
     if (pl && VIDEOS.some(v => v.playlist === pl)) setPlaylist(pl);
     if (so && SORT_OPTIONS.some(o => o.id === so)) setSort(so as SortMode);
     setFromUrl(true);
@@ -123,7 +133,6 @@ export default function VideoLibrary() {
     const url = new URL(window.location.href);
     const values: Record<string, string> = {
       q: search.trim(),
-      channel: channel === 'All' ? '' : channel,
       topic: topic === 'All' ? '' : topic,
       playlist: playlist === 'All' ? '' : playlist,
       sort: sort === 'playlist' ? '' : sort,
@@ -133,22 +142,13 @@ export default function VideoLibrary() {
       else url.searchParams.delete(k);
     }
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url.href);
-  }, [fromUrl, search, channel, topic, playlist, sort]);
+  }, [fromUrl, search, topic, playlist, sort]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search, channel, topic, playlist, sort]);
+  }, [search, topic, playlist, sort]);
 
-  const channels = useMemo(
-    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.channel))).sort()],
-    [],
-  );
-  const topics = useMemo(
-    () => ['All', ...Array.from(new Set(VIDEOS.map(v => v.topic).filter(Boolean))).sort()],
-    [],
-  );
-  // Playlist options narrow to the active topic so the dropdown only ever
-  // shows playlists that actually have results under the current view.
+  // Playlist options narrow to the active topic.
   const playlists = useMemo(() => {
     const scoped = VIDEOS.filter(v => topic === 'All' || v.topic === topic);
     return ['All', ...Array.from(new Set(scoped.map(v => v.playlist))).sort()];
@@ -159,120 +159,72 @@ export default function VideoLibrary() {
   }, [playlists, playlist]);
 
   const filtered = useMemo(() => {
-    const q = search.toLowerCase().trim();
+    const terms = search.toLowerCase().split(/\s+/).filter(Boolean);
     const result = VIDEOS.filter(v => {
-      if (channel !== 'All' && v.channel !== channel) return false;
       if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
-      if (q) {
-        const haystack = [
-          v.title,
-          v.channel,
-          v.playlist,
-          v.topic,
-          ...(v.tags ?? []),
-        ]
-          .join(' ')
-          .toLowerCase();
-        if (!haystack.includes(q)) return false;
+      if (terms.length) {
+        const haystack = [v.title, v.channel, v.playlist, v.topic, ...(v.tags ?? [])].join(' ').toLowerCase();
+        if (!terms.every(term => haystack.includes(term))) return false;
       }
       return true;
     });
 
-    // Sort. 'playlist' keeps the registry's natural order (already sorted by
-    // topic → playlist → title in the generator).
+    // 'playlist' keeps the registry's natural order (topic, then playlist, then title).
     if (sort === 'playlist') return result;
 
     const sorted = result.slice();
-    if (sort === 'recent') {
-      sorted.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
-    } else if (sort === 'longest') {
-      sorted.sort((a, b) => durationToSeconds(b.duration) - durationToSeconds(a.duration));
-    } else if (sort === 'shortest') {
-      sorted.sort((a, b) => {
-        const da = durationToSeconds(a.duration);
-        const db = durationToSeconds(b.duration);
-        // Treat 0-duration (unknown) as "very long" so it sinks to the bottom
-        // under shortest-first rather than dominating the head.
-        return (da || Infinity) - (db || Infinity);
-      });
-    } else if (sort === 'alpha') {
-      sorted.sort((a, b) => a.title.localeCompare(b.title));
-    }
+    if (sort === 'recent') sorted.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+    else if (sort === 'popular') sorted.sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
+    else if (sort === 'longest') sorted.sort((a, b) => durationToSeconds(b.duration) - durationToSeconds(a.duration));
+    // Unknown durations sink to the bottom under shortest-first.
+    else if (sort === 'shortest')
+      sorted.sort((a, b) => (durationToSeconds(a.duration) || Infinity) - (durationToSeconds(b.duration) || Infinity));
+    else if (sort === 'alpha') sorted.sort((a, b) => a.title.localeCompare(b.title));
     return sorted;
-  }, [search, channel, topic, playlist, sort]);
+  }, [search, topic, playlist, sort]);
 
-  // Bucket the filtered+sorted result by topic. Groups are emitted in the
-  // order they first appear in `filtered`, so the active sort mode determines
-  // group order too (e.g., under "Recently uploaded" the topic that has the
-  // newest video appears first).
-  const grouped = useMemo(() => {
-    const map = new Map<string, VideoEntry[]>();
-    for (const v of filtered.slice(0, visibleCount)) {
-      const key = v.topic || 'Other';
-      const arr = map.get(key);
-      if (arr) arr.push(v);
-      else map.set(key, [v]);
-    }
-    return Array.from(map.entries());
-  }, [filtered, visibleCount]);
+  // Playlist order shows one section per playlist; the other sorts show a single list.
+  const groups = useMemo(() => {
+    const shown = filtered.slice(0, visibleCount);
+    if (sort !== 'playlist') return [['', shown] as [string, VideoEntry[]]];
+    const byPlaylist = new Map<string, VideoEntry[]>();
+    for (const v of shown) byPlaylist.set(v.playlist, [...(byPlaylist.get(v.playlist) ?? []), v]);
+    return Array.from(byPlaylist.entries());
+  }, [filtered, visibleCount, sort]);
+  const countIn = (name: string) => filtered.filter(v => v.playlist === name).length;
 
   return (
     <div className="vl-wrapper">
       <div className="vl-controls">
-        <input
-          type="search"
-          placeholder="Search videos by title, tag, or playlist…"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          className="td-search vl-search"
-          aria-label="Search videos"
-        />
+        <div className="vl-search-row">
+          <input
+            type="search"
+            placeholder="Search videos"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            aria-label="Search videos"
+          />
+          <span className="vl-count" aria-live="polite">
+            {filtered.length} of {VIDEOS.length}
+          </span>
+        </div>
+        <div className="vl-topics" role="group" aria-label="Topic">
+          {['All', ...TOPICS].map(name => (
+            <button type="button" key={name} aria-pressed={topic === name} onClick={() => setTopic(name)}>
+              {name}
+            </button>
+          ))}
+        </div>
         <div className="vl-selects">
-          {channels.length > 2 && (
-            <select
-              value={channel}
-              onChange={e => setChannel(e.target.value)}
-              className="td-select"
-              aria-label="Filter by channel"
-            >
-              {channels.map(c => (
-                <option key={c} value={c}>
-                  {c === 'All' ? 'All channels' : c}
-                </option>
-              ))}
-            </select>
-          )}
-          <select
-            value={topic}
-            onChange={e => setTopic(e.target.value)}
-            className="td-select"
-            aria-label="Filter by topic"
-          >
-            {topics.map(t => (
-              <option key={t} value={t}>
-                {t === 'All' ? 'All topics' : t}
-              </option>
-            ))}
-          </select>
-          <select
-            value={playlist}
-            onChange={e => setPlaylist(e.target.value)}
-            className="td-select"
-            aria-label="Filter by playlist"
-          >
+          <select value={playlist} onChange={e => setPlaylist(e.target.value)} aria-label="Filter by playlist">
             {playlists.map(p => (
               <option key={p} value={p}>
                 {p === 'All' ? 'All playlists' : p}
               </option>
             ))}
           </select>
-          <select
-            value={sort}
-            onChange={e => setSort(e.target.value as SortMode)}
-            className="td-select"
-            aria-label="Sort videos"
-          >
+          <select value={sort} onChange={e => setSort(e.target.value as SortMode)} aria-label="Sort videos">
             {SORT_OPTIONS.map(o => (
               <option key={o.id} value={o.id}>
                 {o.label}
@@ -280,25 +232,23 @@ export default function VideoLibrary() {
             ))}
           </select>
         </div>
-        <div className="td-count vl-count" role="status">
-          Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} matching videos
-          {' · '}{VIDEOS.length} in the library
-        </div>
       </div>
 
       {filtered.length === 0 ? (
-        <div className="td-empty">No videos match your filters.</div>
+        <p className="vl-empty">No videos match that search.</p>
       ) : (
-        <div className="vl-grouped" id="video-results">
-          {grouped.map(([topicName, items]) => (
-            <section key={topicName} className="vl-group">
-              <h2 className="vl-group-heading">
-                {topicName}
-                <span className="vl-group-count">{filtered.filter(v => (v.topic || 'Other') === topicName).length}</span>
-              </h2>
-              <div className="vc-grid vl-grid">
+        <div id="video-results">
+          {groups.map(([name, items]) => (
+            <section key={name || 'all'} className="vl-group">
+              {name && (
+                <h2 className="vl-group-heading">
+                  {name}
+                  <span className="vl-group-count">{countIn(name)}</span>
+                </h2>
+              )}
+              <div className="vc-grid">
                 {items.map((v, i) => (
-                  <VideoCard key={`${v.id}-${i}`} v={v} />
+                  <VideoCard key={`${v.playlist}-${v.id}-${i}`} v={v} />
                 ))}
               </div>
             </section>
@@ -308,7 +258,7 @@ export default function VideoLibrary() {
       {visibleCount < filtered.length && (
         <button
           type="button"
-          className="button button--secondary margin-top--md"
+          className="button button--secondary vl-more"
           aria-controls="video-results"
           onClick={() => setVisibleCount(count => count + PAGE_SIZE)}
         >
