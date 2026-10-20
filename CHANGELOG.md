@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 20, 2026 — History of Urinary Diversion page
+
+- New page `docs/07-roots/history/urinary-diversion.mdx` (`/docs/roots/history/urinary-diversion`) from the owner's OpenEvidence answer, used as leads only. Covers ureterosigmoidostomy (Simon 1852, Ferris and Odel, Kälble and Pettersson cancer data), the ileal conduit (Zaayer, Bricker 1950 and 1980, Madersbacher), ureterointestinal anastomoses (Leadbetter-Clarke, Wallace, Le Duc-Camey, Abol-Enein), continent cutaneous reservoirs (Gilchrist, Kock, Skinner, Indiana, Mainz, Mitrofanoff), orthotopic neobladders (Tizzoni-Poggi, Lemoine, Camey, Hautmann, Studer, women), Mainz II, robotic intracorporeal diversion (Beecken 2003, IRCC, iROC, Pellegrino trends) and tissue engineering (Atala, Chua), plus a landmarks table. 31 references, each resolved on PubMed; narrative history cites Campbell-Walsh-Wein 13th ed. chapters 133 and 134 (text extracted to `reports/audit-v2/sources-local/books-2026-10-19/`, gitignored).
+- Answer leads dropped or corrected: Blandy chapter and Lobo 2017 figures not used (no access, figures not openly licensed); Simon's patient died of sepsis at 12 months (Campbell), not of stone obstruction; Ferris and Odel figure taken from Campbell (112 of 141), not "62% of 124"; Tizzoni and Poggi (not Foggi); Camey's clinical report dated 1979; neo-urinary conduit explant figures, AUA guideline statement and QoL meta-analyses left out.
+- Claim gate: 20 claims, 3 Codex-agreed denominator edits applied by hand (Pettersson 24 evaluable, Studer's 18 direct-anastomosis men, iROC 305 analyzed); final-text and second high-risk checks pass. Linked from the History and History & Lineage landings and Urinary Diversion Principles.
+
 ## October 20, 2026 — Surgeon profile biographies
 
 - Narrative biographies added to 10 senior surgeon profiles (Axel Ingelman-Sundberg, Charles Devine, Donald Skinner, Frank Hinman Jr., Jack McAninch, Jack Robertson, Leonard Zinman, Linda Cardozo, Stuart Stanton, J. Thomas Benson), modeled on Turner-Warwick's: what each surgeon took on and how the work spread, not a training list. Every sentence cites a published obituary or society tribute (DOIs resolved). Codex searched 65 candidates and drafted; an independent Codex verifier returned all 10 for fixes; Claude edited. Old CV-style biographies (Ingelman-Sundberg, Hinman, Robertson) replaced; the Lahey Center/EVMS/UCSF fellowship sections merged into the new biographies (`18bc3698`).
