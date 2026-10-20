@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 20, 2026 — Surgeon profile biographies
+
+- Narrative biographies added to 10 senior surgeon profiles (Axel Ingelman-Sundberg, Charles Devine, Donald Skinner, Frank Hinman Jr., Jack McAninch, Jack Robertson, Leonard Zinman, Linda Cardozo, Stuart Stanton, J. Thomas Benson), modeled on Turner-Warwick's: what each surgeon took on and how the work spread, not a training list. Every sentence cites a published obituary or society tribute (DOIs resolved). Codex searched 65 candidates and drafted; an independent Codex verifier returned all 10 for fixes; Claude edited. Old CV-style biographies (Ingelman-Sundberg, Hinman, Robertson) replaced; the Lahey Center/EVMS/UCSF fellowship sections merged into the new biographies (`18bc3698`).
+- **Saved for a later round (owner):** about 20 surgeons with a narrative source already found; list and reasons in `reports/2026-10-20/surgeon-biographies.md`, sources in `surgeon-biographies-work/shortlist.md`. 34 others had only CV facts.
+
 ## October 19, 2026 (night) — Flashcards v1.2, patient materials and downstream decks rechecked; homepage and About
 
 - **WARWIKI Anki v1.2:** 462 cards whose linked sections changed since v1.1 (October 10) were triaged by Codex authors and checked by independent Codex verifiers against WARWIKI and primary sources. Result: 37 corrected (e.g. CombAT cardiac-failure counts, SUPER 24% vs 36%, PINNACLE sham crossover after month 3, AUS mechanical-failure scope, OAB 5-ARI onset 3–6 months), 11 relinked, and all 201 Journal Club links moved to `/docs/clinical-evidence/studies/<id>`. 22 new cards (clitoris and clitoral disorders; 13 trials new to the site) were verified, none retired. Full 841 (577 Core), GURS 458, URPS 646. Live citation check (252 sources), link, import and v1.1-upgrade checks passed. Flashcards page counts updated. Method and scripts: `reports/anki-deck/refresh-2026-10-19/` (`carddiff.py`, `run.sh`, `apply_refresh.py`, `BUILD-REPORT.md`). **Owner:** upload v1.2 over the three AnkiWeb listings.

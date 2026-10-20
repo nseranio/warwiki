@@ -26,6 +26,8 @@ Narrative `## Biography` sections were added to 10 senior or historically import
 
 ## Narrative source found, not written in this pass (candidates for a second round)
 
+Saved by the owner (October 20) for a later round when token budget allows. Rerun with `surgeon-biographies-work/brief-author.md` and `brief-verify.md`, restricted to these names.
+
 - **Sanjay Kulkarni:** Narrative interview found; deferred behind deceased profiles in this ten-draft pass.
 - **Peter Dwyer:** Narrative interview found; deferred behind deceased profiles.
 - **Donald Ostergard:** IUGA history/interview found; not selected within the ten-draft limit.
