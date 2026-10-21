@@ -6,6 +6,8 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Current State (October 14, 2026, evening)
 
+- **Facts-only sweep (October 21, both sites):** STYLE.md §12 "Facts only" (owner: "read like Wikipedia, just facts"); about 7,590 commentary cuts on WARWIKI and 1,300 on WHITWIKI, Codex reviewer + verifier, Claude read every risky cut; 1,250 lost citation markers restored; claim gate passes. Advisory `npm run lint:facts`. Method, tools and the citation-loss lesson in CHANGELOG. whitwiki.org is blocked on the Jefferson network as a new domain (use whitwiki.vercel.app there until it ages out or IT allowlists it).
+
 - **History of Urinary Diversion (October 20):** new History page from an OpenEvidence answer, every reference re-verified; claim gate passes. Detail in CHANGELOG.
 
 - **Surgeon biographies (October 20, `18bc3698`):** narrative `## Biography` sections on 10 senior profiles (Ingelman-Sundberg, Devine, Skinner, Hinman, McAninch, Robertson, Zinman, Cardozo, Stanton, Benson), each sentence sourced to an obituary or tribute; Codex author + independent Codex verifier, Claude edit. **Saved for later (owner, October 20; when token budget allows):** the second round, about 20 surgeons with a narrative source already found (Kulkarni, Dwyer, Ostergard, Drutz, Wein, Hautmann, Mulcahy, Lue, Marchant, Kralj, Nilsson, Petri, Contreras Ortiz, Riss, Shingleton and others), listed with reasons under "Narrative source found" in `reports/2026-10-20/surgeon-biographies.md`; sources in `reports/2026-10-20/surgeon-biographies-work/shortlist.md`. Same workflow (brief files in that folder). Didusch Museum pages bar AI use (McGuire's footnote 1 needs another source).

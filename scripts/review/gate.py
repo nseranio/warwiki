@@ -616,6 +616,56 @@ def migrate(today=None):
     print(json.dumps({"v1": len(v1), "v2": len(led), "by_status": summary, "high_risk": high}, indent=1))
 
 
+
+def carry_trim(rev, pages, dry=False):
+    """Carry a passing verdict to a claim that a cut only shortened: the current sentence is an exact prefix of a
+    claim in REV on the same page, with the same cited sources, table header and section, and that claim passed.
+    Rewordings, additions and changed citations are left for the gate. Legacy statuses stay legacy."""
+    import subprocess, shutil
+    led, exc = load(LEDGER, {}), load(EXCEPTIONS, {})
+    today = datetime.date.today().isoformat()
+    tmpdir = os.path.join(ROOT, ".carry-trim-tmp")
+    carried = 0
+    try:
+        for page in pages:
+            old_text = subprocess.run(["git", "-C", ROOT, "show", f"{rev}:{page}"], capture_output=True, text=True).stdout
+            if not old_text:
+                continue
+            tmp = os.path.join(tmpdir, page)
+            os.makedirs(os.path.dirname(tmp), exist_ok=True)
+            open(tmp, "w").write(old_text)
+            olds = []
+            for o in units_of(os.path.relpath(tmp, ROOT)):
+                k = key2(page, o["text"], [r["text"] for r in o["refs"]], o["table_header"], o["section"])
+                e = led.get(k)
+                if e and e.get("s") in SUPPORTED | PASS_LEGACY:
+                    olds.append((norm(cells(o["text"])), sorted(ref_identity(r["text"]) for r in o["refs"]),
+                                 norm(cells(o["table_header"] or "")), o["section"], k, o["cite"]))
+            for u in units_of(page):
+                ok, _ = verdict(u, led.get(u["key"]), exc, today)
+                if ok:
+                    continue
+                cur = norm(cells(u["text"])).rstrip(". ")
+                ids = sorted(ref_identity(r["text"]) for r in u["refs"])
+                hdr = norm(cells(u["table_header"] or ""))
+                # same sources, or a restored own marker citing part of what the old sentence inherited from its paragraph
+                hit = next((k for ot, oi, oh, os_, k, oc in olds if len(cur) >= 25 and ot.startswith(cur) and ot.rstrip(". ") != cur
+                            and (oi == ids or (oc == "paragraph" and ids and set(ids) <= set(oi)))
+                            and oh == hdr and os_ == u["section"]), None)
+                if not hit:
+                    continue
+                carried += 1
+                print(f"{page}:{u['line']}: carried from trimmed claim: {cur[:100]}")
+                if not dry:
+                    prev = led.get(u["key"]) or {}
+                    led[u["key"]] = {**led[hit], "checks": led[hit].get("checks", []) + prev.get("checks", []),
+                                     "rekeyed_from": hit, "rekeyed": today, "rekey_note": f"trimmed claim (prefix of {rev} wording, same sources)"}
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
+    print(f"carry-trim: {carried} claim(s) {'would be ' if dry else ''}carried")
+    if carried and not dry:
+        save_ledger(led)
+
 def main():
     a = sys.argv[1:]
     cmd = a[0] if a else "check"
@@ -675,6 +725,10 @@ def main():
         print(f"{sum(picked.values())} claims {picked} on {len(bypage)} pages -> {out} ({len(units)} batches)")
         print(f"next: nohup python3 scripts/review/orchestrate.py --work {os.path.relpath(out, ROOT)} --claims "
               "--reviewers 1 --verifiers 1 --effort high --tier default &")
+    elif cmd == "carry-trim":
+        if len(a) < 3:
+            sys.exit("Usage: gate.py carry-trim GIT_REV PAGE [PAGE ...] [--dry]")
+        carry_trim(a[1], [x for x in a[2:] if x != "--dry"], dry="--dry" in a)
     elif cmd == "record":
         record(os.path.join(ROOT, a[1]))
     elif cmd == "attach-page-verdicts":
