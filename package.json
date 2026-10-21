@@ -32,6 +32,7 @@
     "lint:freshness": "node scripts/check-freshness.js",
     "lint:handouts": "node scripts/check-handout-sources.js",
     "lint:claims": "python3 scripts/review/gate.py check",
+    "lint:facts": "python3 scripts/voice/facts_extract.py --lint",
     "lint:ref-dupes": "python3 scripts/review/dedupe_refs.py --check",
     "lint:external-links": "node scripts/check-external-links.js",
     "lint": "npm run lint:scope && npm run lint:citations && npm run lint:orphans && npm run lint:links && npm run lint:figures && npm run lint:cards && npm run lint:density && npm run lint:evidence && npm run lint:trials && npm run lint:content-preservation && npm run lint:handouts && npm run lint:claims && npm run lint:ref-dupes",

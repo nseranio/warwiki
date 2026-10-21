@@ -176,6 +176,23 @@ Keep:
 
 Fixing an overclaim means correcting the sentence's own scope (name the population or design), never adding a separate caveat sentence.
 
+### Facts only (October 21, 2026)
+
+The owner's rule, tightened: "I want it to read more like Wikipedia, just facts." A sentence earns its place by stating a fact: a result, a number, a definition, a mechanism, a guideline position, a contraindication or a safety point. Delete sentences and clauses that comment on a fact instead of stating one. These patterns are almost always commentary:
+
+- **"X alone does not …" / "X alone is insufficient."** "A job title alone does not establish dose"; "sex alone does not describe the stage or treatment needs of an individual patient"; "histologic appearance alone is insufficient".
+- **"Does not establish / replace / describe / measure / explain / assign …" used as interpretation.** "MRI does not replace histologic staging by resection"; "These population rates do not measure the risk faced by a symptomatic person"; "A negative visual examination does not explain a persistently positive high-grade cytology".
+- **"This is X, not Y" and "…, rather than Y" framing.** "It is a prompt for history taking, rather than a risk calculator"; "These are tendencies across tumors, not a required sequence for each patient"; "this is not a population-wide prevalence".
+- **"Matters."** "Geography matters when exposure history suggests a regional cause"; "These changes matter when reading older series".
+- **"Most useful when …"** "A molecular report is most useful when it identifies a treatment-linked alteration".
+- **Trailing ", although …" qualifiers.** "…reported geographic variation, although a single occupational cohort cannot serve as a national incidence map"; "The contrast supports an access contribution, although it does not assign every disparity to one mechanism".
+- **Notes about the source, the edition or the page.** "These are model-based annual estimates, rather than counts of diagnoses in that year"; "The cited NCCN page remains the local grouping source"; "Comparisons on this page name the edition to avoid mixing systems".
+- **Signposting adverbs.** "Notably", "Importantly", "It is important to", "worth noting".
+
+The word "not" is not banned: it states facts in "patients and physicians were not blinded", "rates did not differ", "the trial did not assess sexual function", "has not been compared with", "not FDA-approved for penile use" and "AUA does not recommend". Keep those. The test for any sentence: would an encyclopedia print it, and does deleting it remove a result, a number, a guideline position or a decision-changing safety point? If no and no, cut it.
+
+`npm run lint:facts` lists these patterns on pages changed in the working tree (advisory; it never fails). The site-wide sweep uses `scripts/voice/facts_extract.py` with `scripts/review/orchestrate.py --claims --brief facts --verify-brief facts-verify`.
+
 ## 13. Guideline recommendation detail (October 17, 2026)
 
 Use WHITWIKI’s `<Rec>` badges for existing guideline strength and evidence-grade parentheticals. Keep the original wording, parentheses, citations, and source-specific grading system inside the tag. The badge expands to the full detail on activation. Clinical advice and eligibility qualifiers remain visible in the sentence.
