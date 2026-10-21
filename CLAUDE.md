@@ -6,7 +6,7 @@ Read this at the start of a session. It is the working handbook: current state, 
 
 ## Current State (October 14, 2026, evening)
 
-- **Facts-only sweep (October 21, both sites):** STYLE.md §12 "Facts only" (owner: "read like Wikipedia, just facts"); about 7,590 commentary cuts on WARWIKI and 1,300 on WHITWIKI, Codex reviewer + verifier, Claude read every risky cut; 1,250 lost citation markers restored; claim gate passes. Advisory `npm run lint:facts`. Method, tools and the citation-loss lesson in CHANGELOG. whitwiki.org is blocked on the Jefferson network as a new domain (use whitwiki.vercel.app there until it ages out or IT allowlists it).
+- **Facts-only sweep (October 21, both sites):** STYLE.md §12 "Facts only" (owner: "read like Wikipedia, just facts"); about 7,590 commentary cuts on WARWIKI and 1,300 on WHITWIKI, Codex reviewer + verifier, Claude read every risky cut; 1,250 lost citation markers restored; claim gate passes. Three WARWIKI pages held back (`reports/audit-v2/sources-local/facts-2026-10-21-held/README.md`; need the AUA ED guideline or second checks). Advisory `npm run lint:facts`. Method, tools and the citation-loss lesson in CHANGELOG. whitwiki.org is blocked on the Jefferson network as a new domain (use whitwiki.vercel.app there until it ages out or IT allowlists it).
 
 - **History of Urinary Diversion (October 20):** new History page from an OpenEvidence answer, every reference re-verified; claim gate passes. Detail in CHANGELOG.
 

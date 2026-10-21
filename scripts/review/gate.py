@@ -619,8 +619,10 @@ def migrate(today=None):
 
 def carry_trim(rev, pages, dry=False):
     """Carry a passing verdict to a claim that a cut only shortened: the current sentence is an exact prefix of a
-    claim in REV on the same page, with the same cited sources, table header and section, and that claim passed.
-    Rewordings, additions and changed citations are left for the gate. Legacy statuses stay legacy."""
+    claim in REV on the same page, with the same cited sources (or, for a restored own marker, a subset of the
+    paragraph-level sources it inherited), table header and section, and that claim passed. Also carries an
+    unchanged sentence whose paragraph-level citations shrank because a cut sentence took its marker.
+    Rewordings, additions and new citations are left for the gate. Legacy statuses stay legacy."""
     import subprocess, shutil
     led, exc = load(LEDGER, {}), load(EXCEPTIONS, {})
     today = datetime.date.today().isoformat()
@@ -649,8 +651,10 @@ def carry_trim(rev, pages, dry=False):
                 ids = sorted(ref_identity(r["text"]) for r in u["refs"])
                 hdr = norm(cells(u["table_header"] or ""))
                 # same sources, or a restored own marker citing part of what the old sentence inherited from its paragraph
-                hit = next((k for ot, oi, oh, os_, k, oc in olds if len(cur) >= 25 and ot.startswith(cur) and ot.rstrip(". ") != cur
-                            and (oi == ids or (oc == "paragraph" and ids and set(ids) <= set(oi)))
+                # also: identical wording whose paragraph-level citations narrowed because a cut neighbor took its marker
+                hit = next((k for ot, oi, oh, os_, k, oc in olds if len(cur) >= 25 and ot.startswith(cur)
+                            and (ot.rstrip(". ") != cur and (oi == ids or (oc == "paragraph" and ids and set(ids) <= set(oi)))
+                                 or ot.rstrip(". ") == cur and oc == "paragraph" and ids and set(ids) < set(oi))
                             and oh == hdr and os_ == u["section"]), None)
                 if not hit:
                     continue
