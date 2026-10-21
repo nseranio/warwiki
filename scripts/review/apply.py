@@ -4,7 +4,8 @@
   python3 scripts/review/apply.py list [--section PREFIX]      -> WORK/review-sheet.md (pending agreed edits, high first)
   python3 scripts/review/apply.py apply [--section PREFIX] [--skip ID ...]
       Applies agreed or modified edits (verifier verdict agree/modify) whose `old` text occurs exactly once in the
-      current page. Pages with uncommitted changes not made by this tool are skipped. Applied and skipped edits are
+      current page. Pages with uncommitted changes not made by this tool are skipped unless APPLY_ALLOW_DIRTY=1
+      (use only when no other job is editing those files). Applied and skipped edits are
       recorded in WORK/applied.json, so each finding is applied once.
 """
 import json, os, re, sys, glob, hashlib, subprocess
@@ -93,7 +94,7 @@ def main():
         if v["id"] in skip:
             led[v["id"]] = {"status": "vetoed", "page": v["page"]}; continue
         p = os.path.join(ROOT, v["page"])
-        if v["page"] in dirty and v["page"] not in mine:
+        if v["page"] in dirty and v["page"] not in mine and not os.environ.get("APPLY_ALLOW_DIRTY"):
             skipped.append((v, "page has uncommitted changes from another session")); continue
         s = orig = open(p).read()
         old, new = v["edit"]["old"], v["edit"]["new"]
