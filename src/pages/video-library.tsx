@@ -15,7 +15,7 @@ export default function VideoLibraryPage() {
           <a href="https://www.youtube.com/@warwikihq/playlists" target="_blank" rel="noopener noreferrer">
             WARWIKI YouTube channel
           </a>{' '}
-          playlists. Tap a topic to narrow the list, filter by playlist, or search any title; videos play in place.
+          playlists. Tap a topic to narrow the list, filter by playlist, or search a title or a surgeon's name; videos play in place.
         </p>
 
         <VideoLibrary />

@@ -2967,6 +2967,19 @@ a.book-card:visited {
 .vl-body { display: flex; flex-direction: column; gap: 0.35rem; padding: 0.8rem 0.9rem; }
 .vl-meta { font-size: 0.76rem; color: var(--warwiki-text-muted); line-height: 1.4; }
 .vl-meta-channel { font-weight: 600; }
+.vl-people { font-size: 0.78rem; line-height: 1.4; }
+.vl-people-label { color: var(--warwiki-text-muted); }
+.vl-person {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ifm-color-primary);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.vl-person:hover { text-decoration: underline; }
 .vl-chip {
   display: inline-block;
   align-self: flex-start;

@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 24, 2026 — Video Library surgeon search (both sites)
+
+- **Owner request:** type a surgeon's name and find their videos. Both libraries now match surgeon and presenter names in the search box (case- and accent-insensitive), suggest names as you type (a `datalist` of every named person), show "Surgeon / Presenter / Authors" on each card (tapping a name searches that person, middle initials dropped), and link to the site's surgeon profile when one exists (84 WARWIKI, 10 WHITWIKI). WARWIKI cards show the original uploading channel instead of "WARWIKI".
+- **Method:** YouTube API snippets (title, channel, description, tags) for all 1,897 videos; eight Codex batches listed the people each video names, using only that video's text or a channel named after one person; `merge.py` rejected any name whose surname is not in the video's text, merged variants of one person and applied hand-checked aliases (misspellings such as Hakki/Hakky, initials, surname-only forms resolved within the same channel). 1,430 videos name at least one person (1,139 names). Kit and rerun steps: `reports/2026-10-24/video-surgeons/README.md`.
+
+---
+
 ## October 21, 2026 — Facts-only sweep (both sites)
 
 - **Owner rule (STYLE.md §12, "Facts only"):** "I want it to read more like Wikipedia, just facts." Sentences and clauses that comment on a fact instead of stating one are cut: "X alone does not …", "does not establish/replace/describe …" used as interpretation, "This is X, not Y" and "…, rather than Y" framing, "matters", "most useful when", trailing ", although …" hedges, notes about the source, edition or page, signposting adverbs. "Not" itself is not banned (blinding, null results, guideline "does not recommend" and label limits stay). Advisory `npm run lint:facts` lists the patterns on changed pages (both repos).

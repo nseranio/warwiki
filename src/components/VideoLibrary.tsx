@@ -1,11 +1,14 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { VIDEOS, type VideoEntry } from '@site/src/data/videos';
+import videoPeople from '@site/src/data/video-surgeons.json';
 
 /**
  * Searchable video library, laid out like WHITWIKI's: a search box with the
  * result count, one-tap topic buttons, playlist and sort selects, then the
  * videos grouped by playlist. Filters are mirrored in the URL
  * (?q=&topic=&playlist=&sort=) so a view can be shared and survives Back.
+ * Search also matches the surgeons and presenters named in each video's
+ * title, description or uploading channel (src/data/video-surgeons.json).
  */
 
 const IFRAME_ALLOW =
@@ -32,6 +35,48 @@ const TOPICS: string[] = (() => {
     .map(([name]) => name);
 })();
 
+type PersonRole = 'surgeon' | 'presenter' | 'author';
+type Person = { name: string; role: PersonRole; profile?: string };
+const PEOPLE = videoPeople.videos as Record<string, { channel?: string; people: Person[] }>;
+const PROFILE_BASE = '/docs/roots/surgeons/';
+const ROLE_LABEL: Record<PersonRole, [string, string]> = {
+  surgeon: ['Surgeon', 'Surgeons'],
+  presenter: ['Presenter', 'Presenters'],
+  author: ['Author', 'Authors'],
+};
+
+// Case- and accent-insensitive, so "sanchez" finds "Sánchez".
+function fold(text: string): string {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+const HAYSTACK = new Map(
+  VIDEOS.map(v => {
+    const extra = PEOPLE[v.id];
+    const names = extra?.people.map(p => p.name) ?? [];
+    return [v.id, fold([v.title, v.channel, extra?.channel, v.playlist, v.topic, ...(v.tags ?? []), ...names].join(' '))];
+  }),
+);
+
+// Search-box suggestions: every named person once, those with the most videos first.
+const PERSON_NAMES: string[] = (() => {
+  const counts = new Map<string, number>();
+  for (const v of VIDEOS) for (const p of PEOPLE[v.id]?.people ?? []) counts.set(p.name, (counts.get(p.name) ?? 0) + 1);
+  return Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([name]) => name);
+})();
+
+// The card shows the operating surgeons, else the presenters, else the authors.
+function shownPeople(id: string): [string, Person[]] | null {
+  const people = PEOPLE[id]?.people ?? [];
+  for (const role of ['surgeon', 'presenter', 'author'] as PersonRole[]) {
+    const matching = people.filter(p => p.role === role);
+    if (matching.length) return [ROLE_LABEL[role][matching.length > 1 ? 1 : 0], matching];
+  }
+  return null;
+}
+
 function durationToSeconds(d: string | undefined): number {
   if (!d) return 0;
   return d.split(':').map(Number).reduce((total, part) => total * 60 + part, 0);
@@ -51,8 +96,10 @@ function PlayIcon() {
   );
 }
 
-function VideoCard({ v }: { v: VideoEntry }) {
+function VideoCard({ v, onPerson }: { v: VideoEntry; onPerson: (name: string) => void }) {
   const [playing, setPlaying] = useState(false);
+  const people = shownPeople(v.id);
+  const channel = PEOPLE[v.id]?.channel || v.channel;
   return (
     <div className="vc-card vl-card">
       <div className="vc-media">
@@ -85,10 +132,35 @@ function VideoCard({ v }: { v: VideoEntry }) {
       <div className="vc-body vl-body">
         <div className="vc-title">{v.title}</div>
         {v.topic && <span className="vl-chip">{v.topic}</span>}
+        {people && (
+          <div className="vl-people">
+            <span className="vl-people-label">{people[0]}</span>{' '}
+            {people[1].slice(0, 3).map((p, i) => (
+              <React.Fragment key={p.name}>
+                {i > 0 && ', '}
+                <button
+                  type="button"
+                  className="vl-person"
+                  onClick={() => onPerson(p.name)}
+                  title={`Show all videos with ${p.name}`}
+                >
+                  {p.name}
+                </button>
+                {p.profile && (
+                  <>
+                    {' '}
+                    (<a href={PROFILE_BASE + p.profile}>profile</a>)
+                  </>
+                )}
+              </React.Fragment>
+            ))}
+            {people[1].length > 3 && <span> and {people[1].length - 3} more</span>}
+          </div>
+        )}
         <div className="vl-meta">
-          {v.channel && (
+          {channel && (
             <>
-              <span className="vl-meta-channel">{v.channel}</span>
+              <span className="vl-meta-channel">{channel}</span>
               <span aria-hidden="true"> · </span>
             </>
           )}
@@ -159,12 +231,12 @@ export default function VideoLibrary() {
   }, [playlists, playlist]);
 
   const filtered = useMemo(() => {
-    const terms = search.toLowerCase().split(/\s+/).filter(Boolean);
+    const terms = fold(search).split(/\s+/).filter(Boolean);
     const result = VIDEOS.filter(v => {
       if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
       if (terms.length) {
-        const haystack = [v.title, v.channel, v.playlist, v.topic, ...(v.tags ?? [])].join(' ').toLowerCase();
+        const haystack = HAYSTACK.get(v.id) ?? '';
         if (!terms.every(term => haystack.includes(term))) return false;
       }
       return true;
@@ -194,17 +266,31 @@ export default function VideoLibrary() {
   }, [filtered, visibleCount, sort]);
   const countIn = (name: string) => filtered.filter(v => v.playlist === name).length;
 
+  // A name on a card shows every video with that person (middle initials dropped).
+  const showPerson = (name: string) => {
+    setSearch(name.split(' ').filter(part => !/^\p{L}\.?$/u.test(part)).join(' '));
+    setTopic('All');
+    setPlaylist('All');
+    document.querySelector('.vl-controls')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div className="vl-wrapper">
       <div className="vl-controls">
         <div className="vl-search-row">
           <input
             type="search"
-            placeholder="Search videos"
+            placeholder="Search videos or surgeons"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            aria-label="Search videos"
+            aria-label="Search videos or surgeons"
+            list="vl-person-names"
           />
+          <datalist id="vl-person-names">
+            {PERSON_NAMES.map(name => (
+              <option key={name} value={name} />
+            ))}
+          </datalist>
           <span className="vl-count" aria-live="polite">
             {filtered.length} of {VIDEOS.length}
           </span>
@@ -248,7 +334,7 @@ export default function VideoLibrary() {
               )}
               <div className="vc-grid">
                 {items.map((v, i) => (
-                  <VideoCard key={`${v.playlist}-${v.id}-${i}`} v={v} />
+                  <VideoCard key={`${v.playlist}-${v.id}-${i}`} v={v} onPerson={showPerson} />
                 ))}
               </div>
             </section>
