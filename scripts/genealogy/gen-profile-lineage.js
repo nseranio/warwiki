@@ -25,6 +25,14 @@ const { LINEAGE_BY_ID, childrenOf } = jiti(path.join(ROOT, 'src/data/lineage.ts'
 const SURGEON_FIELDS = ['name', 'photo', 'country', 'countryFlag', 'institution', 'title', 'born', 'died',
   'website', 'youtube', 'twitter', 'instagram', 'bioUrl', 'keyPubs', 'instruments'];
 
+// Library videos naming each profiled surgeon (src/data/video-surgeons.json), for the profile's Videos link.
+const VIDEO_COUNTS = new Map();
+for (const video of Object.values(require(path.join(ROOT, 'src/data/video-surgeons.json')).videos)) {
+  for (const profile of new Set(video.people.map(p => p.profile).filter(Boolean))) {
+    VIDEO_COUNTS.set(profile, (VIDEO_COUNTS.get(profile) ?? 0) + 1);
+  }
+}
+
 const person = n => (n ? { name: n.name, ...(n.path ? { path: n.path } : {}) } : null);
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -49,6 +57,7 @@ for (const s of SURGEONS.filter(x => x.path)) {
       ...(t.year ? { year: t.year } : {}),
       ...(t.surgeon?.countryFlag ? { flag: t.surgeon.countryFlag } : {}),
     })),
+    ...(VIDEO_COUNTS.has(s.path) ? { videos: VIDEO_COUNTS.get(s.path) } : {}),
   };
   const file = path.join(OUT_DIR, `${s.id}.json`);
   const text = JSON.stringify(data, null, 1) + '\n';

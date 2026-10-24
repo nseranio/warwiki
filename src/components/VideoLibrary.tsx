@@ -8,7 +8,8 @@ import videoPeople from '@site/src/data/video-surgeons.json';
  * videos grouped by playlist. Filters are mirrored in the URL
  * (?q=&topic=&playlist=&sort=) so a view can be shared and survives Back.
  * Search also matches the surgeons and presenters named in each video's
- * title, description or uploading channel (src/data/video-surgeons.json).
+ * title, description or uploading channel (src/data/video-surgeons.json);
+ * ?surgeon=<profile id> lists the videos linked to one surgeon profile.
  */
 
 const IFRAME_ALLOW =
@@ -58,6 +59,17 @@ const HAYSTACK = new Map(
   }),
 );
 
+const profileId = (p: Person) => p.profile?.split('/').pop();
+
+// Profiled surgeons who appear in the library, by profile id, with the fullest form of their name.
+const PROFILES = new Map<string, { name: string; path: string }>();
+for (const entry of Object.values(PEOPLE)) {
+  for (const p of entry.people) {
+    const id = profileId(p);
+    if (id && p.profile && (PROFILES.get(id)?.name.length ?? 0) < p.name.length) PROFILES.set(id, { name: p.name, path: p.profile });
+  }
+}
+
 // Search-box suggestions: every named person once, those with the most videos first.
 const PERSON_NAMES: string[] = (() => {
   const counts = new Map<string, number>();
@@ -96,7 +108,7 @@ function PlayIcon() {
   );
 }
 
-function VideoCard({ v, onPerson }: { v: VideoEntry; onPerson: (name: string) => void }) {
+function VideoCard({ v, onPerson }: { v: VideoEntry; onPerson: (person: Person) => void }) {
   const [playing, setPlaying] = useState(false);
   const people = shownPeople(v.id);
   const channel = PEOPLE[v.id]?.channel || v.channel;
@@ -141,7 +153,7 @@ function VideoCard({ v, onPerson }: { v: VideoEntry; onPerson: (name: string) =>
                 <button
                   type="button"
                   className="vl-person"
-                  onClick={() => onPerson(p.name)}
+                  onClick={() => onPerson(p)}
                   title={`Show all videos with ${p.name}`}
                 >
                   {p.name}
@@ -182,6 +194,7 @@ export default function VideoLibrary() {
   const [topic, setTopic] = useState('All');
   const [playlist, setPlaylist] = useState('All');
   const [sort, setSort] = useState<SortMode>('playlist');
+  const [surgeon, setSurgeon] = useState('');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   // Defaults render on the server; the URL is read after hydration, and only
   // then is it written back (`fromUrl` gates the writer).
@@ -193,7 +206,9 @@ export default function VideoLibrary() {
     const tp = params.get('topic');
     const pl = params.get('playlist');
     const so = params.get('sort');
+    const su = params.get('surgeon');
     if (q) setSearch(q);
+    if (su && PROFILES.has(su)) setSurgeon(su);
     if (tp && TOPICS.includes(tp)) setTopic(tp);
     if (pl && VIDEOS.some(v => v.playlist === pl)) setPlaylist(pl);
     if (so && SORT_OPTIONS.some(o => o.id === so)) setSort(so as SortMode);
@@ -208,17 +223,18 @@ export default function VideoLibrary() {
       topic: topic === 'All' ? '' : topic,
       playlist: playlist === 'All' ? '' : playlist,
       sort: sort === 'playlist' ? '' : sort,
+      surgeon,
     };
     for (const [k, v] of Object.entries(values)) {
       if (v) url.searchParams.set(k, v);
       else url.searchParams.delete(k);
     }
     if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url.href);
-  }, [fromUrl, search, topic, playlist, sort]);
+  }, [fromUrl, search, topic, playlist, sort, surgeon]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search, topic, playlist, sort]);
+  }, [search, topic, playlist, sort, surgeon]);
 
   // Playlist options narrow to the active topic.
   const playlists = useMemo(() => {
@@ -235,6 +251,7 @@ export default function VideoLibrary() {
     const result = VIDEOS.filter(v => {
       if (topic !== 'All' && v.topic !== topic) return false;
       if (playlist !== 'All' && v.playlist !== playlist) return false;
+      if (surgeon && !PEOPLE[v.id]?.people.some(p => profileId(p) === surgeon)) return false;
       if (terms.length) {
         const haystack = HAYSTACK.get(v.id) ?? '';
         if (!terms.every(term => haystack.includes(term))) return false;
@@ -254,7 +271,7 @@ export default function VideoLibrary() {
       sorted.sort((a, b) => (durationToSeconds(a.duration) || Infinity) - (durationToSeconds(b.duration) || Infinity));
     else if (sort === 'alpha') sorted.sort((a, b) => a.title.localeCompare(b.title));
     return sorted;
-  }, [search, topic, playlist, sort]);
+  }, [search, topic, playlist, sort, surgeon]);
 
   // Playlist order shows one section per playlist; the other sorts show a single list.
   const groups = useMemo(() => {
@@ -266,9 +283,12 @@ export default function VideoLibrary() {
   }, [filtered, visibleCount, sort]);
   const countIn = (name: string) => filtered.filter(v => v.playlist === name).length;
 
-  // A name on a card shows every video with that person (middle initials dropped).
-  const showPerson = (name: string) => {
-    setSearch(name.split(' ').filter(part => !/^\p{L}\.?$/u.test(part)).join(' '));
+  // A name on a card shows every video with that person: by profile when there is one,
+  // otherwise by searching the name (middle initials dropped).
+  const showPerson = (person: Person) => {
+    const id = profileId(person);
+    setSurgeon(id ?? '');
+    setSearch(id ? '' : person.name.split(' ').filter(part => !/^\p{L}\.?$/u.test(part)).join(' '));
     setTopic('All');
     setPlaylist('All');
     document.querySelector('.vl-controls')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -295,6 +315,14 @@ export default function VideoLibrary() {
             {filtered.length} of {VIDEOS.length}
           </span>
         </div>
+        {surgeon && PROFILES.has(surgeon) && (
+          <div className="vl-surgeon-filter">
+            Videos with <a href={PROFILE_BASE + PROFILES.get(surgeon)!.path}>{PROFILES.get(surgeon)!.name}</a>
+            <button type="button" onClick={() => setSurgeon('')} aria-label="Show all surgeons">
+              ✕
+            </button>
+          </div>
+        )}
         <div className="vl-topics" role="group" aria-label="Topic">
           {['All', ...TOPICS].map(name => (
             <button type="button" key={name} aria-pressed={topic === name} onClick={() => setTopic(name)}>

@@ -2980,6 +2980,28 @@ a.book-card:visited {
   cursor: pointer;
 }
 .vl-person:hover { text-decoration: underline; }
+.vl-surgeon-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+  padding: 0.2rem 0.3rem 0.2rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+  font-size: 0.85rem;
+}
+.vl-surgeon-filter a { font-weight: 600; }
+.vl-surgeon-filter button {
+  padding: 0.1rem 0.45rem;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--warwiki-text-muted);
+  font: inherit;
+  cursor: pointer;
+}
+.vl-surgeon-filter button:hover { background: color-mix(in srgb, var(--ifm-color-primary) 15%, transparent); }
 .vl-chip {
   display: inline-block;
   align-self: flex-start;

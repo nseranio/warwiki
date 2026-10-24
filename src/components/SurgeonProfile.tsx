@@ -26,6 +26,8 @@ export interface ProfileData {
   coMentor: ProfilePerson | null;
   school: string | null;
   trainees: (ProfilePerson & { id: string; year?: number; flag?: string })[];
+  /** Video Library videos that name this surgeon. */
+  videos?: number;
 }
 
 interface ProfilePerson {
@@ -202,6 +204,11 @@ export default function SurgeonProfile({
           </div>
           {/* Social / external links */}
           <div className="sp-links">
+            {profile.videos ? (
+              <a href={`/video-library?surgeon=${id}`} className="sp-link sp-link--web">
+                ▶ Videos ({profile.videos})
+              </a>
+            ) : null}
             {surgeon.website && (
               <a href={surgeon.website} target="_blank" rel="noopener noreferrer" className="sp-link sp-link--web">
                 🌐 Website
