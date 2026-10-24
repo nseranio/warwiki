@@ -6,6 +6,27 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 24, 2026 — Knot Security page
+
+- **New page:** [Knot Security](docs/01-foundations/surgical-skills/knot-security.mdx) under Surgical Skills, linked from the Surgical Principles index. Facts only from 39 primary bench, animal and review papers. It covers:
+  - knot terms and the competing notations;
+  - throws at which no knot slipped, by suture and size (Vicryl, PDS, Monocryl, chromic, polypropylene, nylon, ePTFE, polyethylene-core braid);
+  - interrupted knots versus the start and end of a running line (Rosin 1989 and Gillen 2017 tables);
+  - surgeon's knot versus square knot;
+  - sliding knots and post switching (van Leeuwen 2012, Trimbos 1986, Ivy 2004, Romeo 2023);
+  - tying force and pulling direction (Neuhofer 2014, Guo 2024);
+  - knot bulk and extrusion.
+- **Source and scope:** drawn from the owner's knot-throws research corpus (`~/Documents/Research/knot-throws`, off-repo; full texts hand-checked against page images for the main tables). The pooled model and the paper's thesis stay off the site until the paper is published.
+- **Claim gate:** Codex reviewer and verifier with the full texts attached as local sources, plus three final-text rechecks. They corrected:
+  - the FiberWire size (USP 2);
+  - the dry-bench scope of the Romeo 2018 rates;
+  - the Romeo 2018 per-knot figures (abstract says 100% for H2H2; results give 97.5% for symmetric H2H2; its below-1 N figure conflicts between abstract and discussion and was dropped);
+  - a knot-weight sentence narrowed to its table.
+
+  Runs are in `reports/audit-v2/sources-local/knot-2026-10-24*`. The Sutures page knot section was left for a later edit, because another session was editing that file.
+
+---
+
 ## October 24, 2026 — Video Library surgeon search (both sites)
 
 - **Owner request:** type a surgeon's name and find their videos. Both libraries now match surgeon and presenter names in the search box (case- and accent-insensitive), suggest names as you type (a `datalist` of every named person), show "Surgeon / Presenter / Authors" on each card (tapping a name searches that person, middle initials dropped), and link to the site's surgeon profile when one exists (84 WARWIKI, 10 WHITWIKI). WARWIKI cards show the original uploading channel instead of "WARWIKI". Profile pages show "Videos (N)" (83 WARWIKI, 10 WHITWIKI), opening `/video-library?surgeon=<profile id>`, which lists exactly the videos linked to that profile with a removable "Videos with …" chip; tapping a profiled name on a card uses the same filter.
