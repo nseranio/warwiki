@@ -23,7 +23,12 @@ For commit-level detail run `git log --oneline`.
   - the Romeo 2018 per-knot figures (abstract says 100% for H2H2; results give 97.5% for symmetric H2H2; its below-1 N figure conflicts between abstract and discussion and was dropped);
   - a knot-weight sentence narrowed to its table.
 
-  Runs are in `reports/audit-v2/sources-local/knot-2026-10-24*`. The Sutures page knot section was left for a later edit, because another session was editing that file.
+  Runs are in `reports/audit-v2/sources-local/knot-2026-10-24*`.
+- **Sutures page follow-ups (owner, same day):**
+  - The knot section now links to Knot Security; the unsourced monofilament-friction sentence is gone.
+  - "Typical Sizes by Urologic Task" and "Practical Selection by GU Reconstructive Procedure" are merged into one table, "Sizes in GU Reconstruction". It gives sizes by layer only, and only rows that a cited series supports.
+  - Dropped as unsourced: spongiosum, vesicourethral anastomosis, augmentation, AUS/IPP, sling/mesh and subcuticular rows.
+  - The owner judged the procedure table controversial and redundant, since the materials are almost always Vicryl, PDS or Monocryl.
 
 ---
 
