@@ -6,6 +6,15 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 25, 2026 — Anatomy & Physiology group landings
+
+- Anatomy & Physiology's four groups now open their own landing pages, in the same list style as the other section landings, instead of jumping to their first organ (owner: "I want to be able to select the urinary system organs"):
+  - Urinary Tract
+  - Genitalia & Reproductive
+  - Pelvic Floor, Spaces & Neurovascular
+  - Donor & Harvest Sites
+- The Anatomy & Physiology page, the Foundations landing cards and the sidebar link to these new pages.
+
 ## October 24, 2026 — Knot Security page
 
 - **New page:** [Knot Security](docs/01-foundations/surgical-skills/knot-security.mdx) under Surgical Skills, linked from the Surgical Principles index. Facts only from 39 primary bench, animal and review papers. It covers:
