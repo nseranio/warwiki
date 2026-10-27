@@ -1,0 +1,64 @@
+# Task: check every cited number on a WARWIKI page against its source (propose; do not edit the site)
+
+Repo (read only): /Users/joyboy/Documents/WARWIKI/warwiki. Read STYLE.md section 4 (evidence wording) and reports/2026-10-04/residual-error-sample.md ("What the errors are") first. Your working directory is a scratch folder; the ONLY files you may create are the OUTPUT files named below.
+
+INPUT is a JSON batch of claims from one page or a few neighbouring pages (each claim carries its `page` when the batch spans pages; otherwise use the batch's `page`). Each claim is a sentence or table row (with its table header) that states a number and cites references; the cited reference-list lines are attached. The page has been reviewed twice, yet a random sample still found about 1.6 serious errors per page, almost all of one kind: **the right paper, but the number is attached to the wrong subgroup, endpoint, denominator, time point or operation.** Your job is to check each claim mechanically for exactly that.
+
+For EVERY claim:
+1. Open the cited source (PubMed abstract via https://pubmed.ncbi.nlm.nih.gov/?term=..., PMC or open full text when the number is not in the abstract, the guideline chapter, or the label). Find the number.
+2. Check, one by one:
+   - **Value:** does the source report this number (allow rounding)? Is any n/N arithmetically consistent with the percentage?
+   - **Population/subgroup:** is the number for the population the sentence names (whole cohort vs subgroup; men vs women; primary vs salvage; this operation vs a mixed or pooled cohort of several operations)?
+   - **Endpoint:** is it the endpoint the sentence names (composite vs specific; "cured" vs "cured or improved"; patency vs success; stretched vs flaccid; objective vs subjective; any complication vs a specific complication; primary vs secondary endpoint)?
+   - **Time point/follow-up:** does it match (three-month result called long-term; median vs mean; follow-up of responders only)?
+   - **Denominator:** is a selected or partial denominator hidden (survey responders, those reaching stage 2, completers)?
+   - **Attribution:** is the number from the cited reference (not another paper), and do two numbers merged into one range come from comparable endpoints?
+   - **Study design wording:** is an association stated as causation, a single study as consensus, or zero events as "no risk"?
+   - If the page links (in this sentence) to another WARWIKI page stating the same number, note a contradiction only if you checked it.
+3. Classify: `ok`, `error` (any check fails in a way that could mislead a reader), or `unverifiable` (the number is not in any text you could open; say what you opened).
+
+Severity for errors: **high** if a reader would take away a wrong number, wrong population, wrong endpoint or wrong safety point; **medium** if a needed qualifier (denominator, time point, design) is missing but the number itself is right.
+
+For each error give a minimal exact edit: `old` must be an exact substring of the current page file (one sentence or table row; read the page to confirm), and `new` corrects only the error, keeps every citation marker, and keeps useful content. Prefer stating the correct population, endpoint, denominator and time point over deleting the number. Never invent a number; use the source's own.
+
+OUTPUT (write both even if every claim is ok):
+- `OUTPUT_DIR/<slug>.jsonl`: one line per ERROR only: {"page": "<repo path>", "claim_id": "...", "category": "accuracy", "severity": "high|medium", "finding": "<what is wrong, one or two sentences>", "evidence": "<PMID/DOI/URL and the source's exact number, population, endpoint and time point>", "edit": {"old": "...", "new": "..."} or null, "confidence": "high|medium"}
+- `OUTPUT_DIR/<slug>.status.jsonl`: one line per claim: {"claim_id": "...", "status": "ok|error|unverifiable", "source_opened": "<PMID/DOI/URL or 'none'>"}
+
+Rules: never invent a reference; every PMID/DOI you cite must be one you opened. Do not propose currency, completeness or voice changes; this task is numbers only. MDX: write `&lt;`/`&gt;` for less-than/greater-than in prose and tables; keep the page's citation style (`<sup>[[N]](#refN)</sup>`, footnotes `[^N]` on gender-affirming pages). If a correct number needs a source not on the page, cite it as `<sup>[[R1]](#refR1)</sup>` and add "new_refs": [{"key": "R1", "line": "Last FM, et al. \"Title.\" *Journal.* Year;Vol(Issue):Pages. doi:[10.x/y](https://doi.org/10.x/y)"}]; never edit the reference list. Keep each `old` under about 1,200 characters. Finish by printing counts of ok, error and unverifiable.
+
+## Claim kinds, citation level and quotes (gate runs; these rules extend the ones above)
+
+Each claim also has `kinds` (`number`, `absolute` or both) and `cite`: `own` (the sentence or row carries its citation), `paragraph` (only the surrounding paragraph or table cites; those references are attached), or `none` (nothing nearby cites a source).
+
+- **Numbers with `cite: paragraph`:** check the number against the attached references exactly as above. If it is supported and the paragraph cites more than one reference, add the supporting marker to the sentence or row itself in your edit (so a reader knows which paper it comes from); if the paragraph cites only that one reference, no edit is needed.
+- **Numbers with `cite: none`:** find the source. First look in the page's own reference list; otherwise search PubMed for the original study, guideline or label. If you find and open a source that reports the number for the stated population, endpoint and time point, propose an edit adding the citation (existing reference number, or `new_refs`). If no source supports it, mark it `error` (severity high) and propose an edit that removes the unsupported number or restates only what a source you opened supports. Never leave an unsourced number.
+- **Absolute statements** (always, never, contraindicated, eliminates, no risk, all patients, the only, gold standard, safest, guarantees, mandatory, impossible, proven, definitive, first-line, standard of care): check that a source you opened states it with the same strength and scope (a label contraindication, a guideline recommendation with its strength, a trial result). If the source is weaker or narrower, mark `error` and soften to the source's wording and scope. If the sentence is operative teaching or technique style (an instruction such as "never close under tension" that states no number, risk estimate, contraindication or guideline position), mark it `style`; style statements need no source. Labels, contraindications, "first-line", "gold standard", "eliminates" and "no risk" are never style.
+- **Status values** in the `.status.jsonl` file: `ok`, `style`, `error`, `unverifiable`. For every `ok` and `error` line also give `"quote"`: the exact sentence (up to 300 characters) from the source that supports or contradicts the claim, so the check can be re-audited without repeating the search.
+
+## Doses and guideline statements (kinds `dose` and `guideline`)
+
+- **Doses** (`dose`): check the drug or device quantity against the current label (DailyMed, FDA, EMA SmPC or manufacturer IFU), the guideline the page cites, or the cited study. Check drug, dose, unit, route, frequency, duration, population (adult or pediatric, renal or hepatic adjustment) and maximum. A dose that differs from the label is acceptable only when the sentence says it is a study regimen, off-label use or specific protocol and cites that source. A wrong or unsourced dose is always severity high; correct it from the source and cite it. Device quantities (fill volumes, balloon or catheter sizes, energy settings) follow the same rule against the IFU.
+- **Guideline statements** (`guideline`): open the guideline (or label or clearance) itself. Check that the named body actually makes the statement; that it is the current version (say if a newer one exists and what it says); that the strength label is the body's own (AUA Strong/Moderate/Conditional/Expert Opinion/Clinical Principle with evidence grade; EAU strong/weak); that the scope (population, indication, procedure) matches; and that a regulatory statement (FDA approval or clearance, indication, contraindication, boxed warning) matches the label. Paraphrase is fine; a changed strength, scope or body is an error. Do not recheck numbers in the sentence that are unrelated to the guideline statement.
+
+## Source access and binding (claim gate schema 2, October 2026)
+
+On every status line also give `"access"`: `full-text`, `abstract`, `guideline-section`, `label-ifu`, `metadata-only`, `conflicting-source` or `not-accessed`. An abstract supports only what it states; if the number or qualifier is not in the text you opened, the status is `unverifiable`, not `ok`. `ok` and `error` lines must name `source_opened`. Every claim in the batch needs exactly one status line with its exact `claim_id`; an incomplete status file is rejected and the batch is rerun. `style` is never valid for doses, guideline or regulatory statements or contraindications.
+When the claim's content is supported and the only problem is citation placement (a paragraph-level citation that should sit on the sentence or row, or a cell that cannot carry a marker), write the finding with `"category": "attribution"` and `"supported": true`, give status `ok` with the supporting quote, and propose the marker edit. Reserve `error` status and `"category": "accuracy"` for content that the source does not support as written.
+
+## Local full texts (`local_sources`)
+
+Some claims carry `local_sources`: [{"n": <reference number>, "local_text": "<absolute path>"}]. That file is the extracted text of the full document the site owner supplied (article, guideline, label, IFU or manual; a folder holds several manuals). Read it first and judge the claim against it; record `access` as `full-text`, `guideline-section` or `label-ifu` and give the section, table or page in `quote`. A reference line can name an earlier edition than the supplied file: say so in the finding when the two differ on the claim.
+
+TRUST THE READER (STYLE.md section 12, October 8, 2026): when a claim is broader than its source, fix the sentence's own scope (name the population, design, size or endpoint inside it). Never add a separate caveat sentence such as "Do not transfer this to …", "This does not establish …", "This is not a trial of …", "This is an X resource, not Y", "not a universal rule", and never write process notes ("in the inspected abstract", "not independently assessed", "confidence interval not reported", "checked <date>") into page text. A proposed edit that adds such a sentence is a voice error; a verifier rejects it.
+
+AUA SITE: do not open auanet.org pages (guidelines, Core Curriculum or university.auanet.org); the AUA prohibits use of its site content in AI tools. Check AUA guideline statements against the published guideline article (J Urol, Urol Pract or Neurourol Urodyn via PubMed, PMC or the publisher), or a local copy supplied in local_sources.
+
+## Trial data claims (`page` ends in `.json`; Clinical Evidence trial files)
+
+A claim whose `page` is `src/data/clinical-evidence/trials/<id>.json` is a structured datum, not prose. Open that file at `field_path`, match `trial_id`, `report_id` and `report_doi` to the source, and use `locator` (PDF page, table or figure) to find it; a `local_sources` file, when given, is the owner's full text of that report: read it first. Every Result, Harm and delivery Fact is a claim even without a number: check the measure, the values for each arm (keys match `design.arms` in the same file), the effect estimate and interval, `met` (did the endpoint meet its prespecified threshold), the population and the time point. A `takeaway` claim is the trial's bottom line: check that the arms match `design.arms` and the source, that its primary result matches the primary report's primary endpoint and the trial `verdict`, and that every number appears in one of the trial's reports. Do not treat a later report as support for a different report's values. For an error, `edit.old` must be an exact fragment of the JSON file and `edit.new` must keep the JSON valid; never change another report.
+
+
+INPUT: /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes-final/batches/g0001__03-clinical-conditions__03c-pelvic-support__pelvic-organ-prolapse.json
+slug: g0001__03-clinical-conditions__03c-pelvic-support__pelvic-organ-prolapse
+OUTPUT_DIR: /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes-final/jobs/r0001

@@ -6,6 +6,26 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 27, 2026 — Clinical Evidence follow-up: flagged pages
+
+- Checked every page disagreement that the Clinical Evidence trial agents recorded in `reports/2026-10-18/clinical-evidence/work/*/notes.md` against the trial records in `src/data/clinical-evidence/` and the full texts on disk. Most had already been fixed by the October 19–21 sweeps (VVF catheter wording, UPSTREAM thresholds and five-year statement, ThuVARP, Revi/OASIS denominators, PINNACLE 3/100, MERIT enrollment and adverse events, MASTER, SIMS, ROSETTA, ARTISAN, PROSPECT, Scandinavian EPA, STITCH, SUmiT, OPTIMAL on the POP page, AUSCO titles).
+- Corrected on 14 pages:
+  - PAE: 12-week primary result (noninferiority not shown) added before the 2-year IPSS superiority, which is labeled a secondary endpoint without multiplicity correction.
+  - Sacrospinous hysteropexy: SUPeR 3-year primary analysis (aHR 0.61, 95% CI 0.37–1.02, p = 0.06; mesh exposure 7/88) added with the JAMA 2019 report (corrected 2021) as a new reference.
+  - Pelvic organ prolapse: CARE primary report's corrected rates (47.9% vs 22.9%) added beside the Visco 2008 figures, which match the uncorrected values.
+  - Recurrent UTI: ALTAR resistance timing (6- or 12-month visits) and the month-18 multidrug-resistance result.
+  - D-mannose (two pages): "largest, most rigorous" replaced with the trial's design; "(MERIT)" removed from the reference titles.
+  - Fecal incontinence: CAPABLe arms named with placebo groups, 296 analyzed, constipation rates.
+  - Beta-3 agonists: EMPOWUR extension design (tolterodine comparator, re-randomized placebo completers).
+  - Botulinum toxin: Nitti 2013 secondary outcomes stated as the abstract reports them.
+  - Optilume BPH: PINNACLE median-lobe exclusion stated as in the SSED (intravesical protrusion above 1 cm).
+  - Rezūm: five-year denominator (77 of 135 treated).
+  - Bladder outlet obstruction: UPSTREAM population wording.
+  - Michigan four-wall: OPTIMAL sling wording.
+  - 5-ARIs: full CombAT and MTOPS citations.
+- Claim gate: Codex reviewer and verifier, then a final-text recheck (`reports/2026-10-26/ce-page-fixes/`, `-final/`).
+- Left as unverifiable without full texts (listed in CLAUDE.md): L.I.F.T. procedure time and catheter counts; WATER catheter-time and exclusion details; USC-STAR secondary numbers; RestoreX (Joseph 2020) denominators; the sildenafil-program and InhibiZone FDA-claim sentences on the History page; the IUGA/ICS Delphi catheter statement.
+
 ## October 25, 2026 — Anatomy & Physiology group landings
 
 - Anatomy & Physiology's four groups now open their own landing pages, in the same list style as the other section landings, instead of jumping to their first organ (owner: "I want to be able to select the urinary system organs"):

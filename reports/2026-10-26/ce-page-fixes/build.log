@@ -1,0 +1,49 @@
+
+> warwiki@0.0.0 prebuild
+> node scripts/check-source-image-formats.js && node scripts/gen-stats.js && node scripts/build-clinical-evidence.mjs && node scripts/gen-surgeon-citations.js && node scripts/genealogy/gen-profile-lineage.js
+
+Image format guard: 4712 source files checked; no blocked ICNS/JXL/HEIF/AVIF inputs.
+✓ Stats generated: 1435 articles, 29140 references → src/data/stats.json
+Built clinical-evidence aggregate: 65 trials.
+Surgeon citations: 3204 publications across 239 of 271 profiles.
+Surgeon profiles: lineage data for 271 profiles.
+
+> warwiki@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[SUCCESS] Generated static files in "build".
+[INFO] Use `npm run serve` command to test your build locally.
+
+> warwiki@0.0.0 postbuild
+> node scripts/optimize-build-assets.js && npm run check:rendered-links && npm run audit:size
+
+Unreferenced static image copies removed: 325 files (29.40 MB).
+Translated handout assets omitted from deployment: 1600 files.
+Handouts published: 97 PDFs (4.94 MB), 97 previews (4.77 MB).
+
+> warwiki@0.0.0 check:rendered-links
+> node scripts/check-rendered-links.js
+
+Rendered link check: 1451 HTML pages, 164356 local links/assets, 6162 data-link literals.
+All local destinations, section anchors and admonition markup passed.
+
+> warwiki@0.0.0 audit:size
+> node scripts/check-build-size.js --max-mb=200
+
+Build: 3493 files, 187.57 MB
+.html: 1451 files, 89.77 MB
+.js: 1469 files, 59.29 MB
+.jpg: 312 files, 24.19 MB
+.pdf: 97 files, 4.94 MB
+.webp: 97 files, 4.77 MB
+.png: 18 files, 3.70 MB
+.svg: 41 files, 0.44 MB
+.xml: 2 files, 0.23 MB
+.css: 1 files, 0.23 MB
+(none): 2 files, 0.01 MB
+.ico: 1 files, 0.00 MB
+.webmanifest: 1 files, 0.00 MB
+.txt: 1 files, 0.00 MB
+Video library: 24 initial cards, 87513 HTML bytes, 18569 gzip bytes
+Local build output bytes, not Vercel billed storage. Retention, metering and older deployments are separate.

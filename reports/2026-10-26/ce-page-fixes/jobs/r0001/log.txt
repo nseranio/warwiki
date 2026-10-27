@@ -1,0 +1,1634 @@
+Reading additional input from stdin...
+OpenAI Codex v0.157.1
+--------
+workdir: /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+model: gpt-6-sol
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a17b88-a850-7e10-ae6c-a06831f5b275
+--------
+user
+# Task: check every cited number on a WARWIKI page against its source (propose; do not edit the site)
+
+Repo (read only): /Users/joyboy/Documents/WARWIKI/warwiki. Read STYLE.md section 4 (evidence wording) and reports/2026-10-04/residual-error-sample.md ("What the errors are") first. Your working directory is a scratch folder; the ONLY files you may create are the OUTPUT files named below.
+
+INPUT is a JSON batch of claims from one page or a few neighbouring pages (each claim carries its `page` when the batch spans pages; otherwise use the batch's `page`). Each claim is a sentence or table row (with its table header) that states a number and cites references; the cited reference-list lines are attached. The page has been reviewed twice, yet a random sample still found about 1.6 serious errors per page, almost all of one kind: **the right paper, but the number is attached to the wrong subgroup, endpoint, denominator, time point or operation.** Your job is to check each claim mechanically for exactly that.
+
+For EVERY claim:
+1. Open the cited source (PubMed abstract via https://pubmed.ncbi.nlm.nih.gov/?term=..., PMC or open full text when the number is not in the abstract, the guideline chapter, or the label). Find the number.
+2. Check, one by one:
+   - **Value:** does the source report this number (allow rounding)? Is any n/N arithmetically consistent with the percentage?
+   - **Population/subgroup:** is the number for the population the sentence names (whole cohort vs subgroup; men vs women; primary vs salvage; this operation vs a mixed or pooled cohort of several operations)?
+   - **Endpoint:** is it the endpoint the sentence names (composite vs specific; "cured" vs "cured or improved"; patency vs success; stretched vs flaccid; objective vs subjective; any complication vs a specific complication; primary vs secondary endpoint)?
+   - **Time point/follow-up:** does it match (three-month result called long-term; median vs mean; follow-up of responders only)?
+   - **Denominator:** is a selected or partial denominator hidden (survey responders, those reaching stage 2, completers)?
+   - **Attribution:** is the number from the cited reference (not another paper), and do two numbers merged into one range come from comparable endpoints?
+   - **Study design wording:** is an association stated as causation, a single study as consensus, or zero events as "no risk"?
+   - If the page links (in this sentence) to another WARWIKI page stating the same number, note a contradiction only if you checked it.
+3. Classify: `ok`, `error` (any check fails in a way that could mislead a reader), or `unverifiable` (the number is not in any text you could open; say what you opened).
+
+Severity for errors: **high** if a reader would take away a wrong number, wrong population, wrong endpoint or wrong safety point; **medium** if a needed qualifier (denominator, time point, design) is missing but the number itself is right.
+
+For each error give a minimal exact edit: `old` must be an exact substring of the current page file (one sentence or table row; read the page to confirm), and `new` corrects only the error, keeps every citation marker, and keeps useful content. Prefer stating the correct population, endpoint, denominator and time point over deleting the number. Never invent a number; use the source's own.
+
+OUTPUT (write both even if every claim is ok):
+- `OUTPUT_DIR/<slug>.jsonl`: one line per ERROR only: {"page": "<repo path>", "claim_id": "...", "category": "accuracy", "severity": "high|medium", "finding": "<what is wrong, one or two sentences>", "evidence": "<PMID/DOI/URL and the source's exact number, population, endpoint and time point>", "edit": {"old": "...", "new": "..."} or null, "confidence": "high|medium"}
+- `OUTPUT_DIR/<slug>.status.jsonl`: one line per claim: {"claim_id": "...", "status": "ok|error|unverifiable", "source_opened": "<PMID/DOI/URL or 'none'>"}
+
+Rules: never invent a reference; every PMID/DOI you cite must be one you opened. Do not propose currency, completeness or voice changes; this task is numbers only. MDX: write `&lt;`/`&gt;` for less-than/greater-than in prose and tables; keep the page's citation style (`<sup>[[N]](#refN)</sup>`, footnotes `[^N]` on gender-affirming pages). If a correct number needs a source not on the page, cite it as `<sup>[[R1]](#refR1)</sup>` and add "new_refs": [{"key": "R1", "line": "Last FM, et al. \"Title.\" *Journal.* Year;Vol(Issue):Pages. doi:[10.x/y](https://doi.org/10.x/y)"}]; never edit the reference list. Keep each `old` under about 1,200 characters. Finish by printing counts of ok, error and unverifiable.
+
+## Claim kinds, citation level and quotes (gate runs; these rules extend the ones above)
+
+Each claim also has `kinds` (`number`, `absolute` or both) and `cite`: `own` (the sentence or row carries its citation), `paragraph` (only the surrounding paragraph or table cites; those references are attached), or `none` (nothing nearby cites a source).
+
+- **Numbers with `cite: paragraph`:** check the number against the attached references exactly as above. If it is supported and the paragraph cites more than one reference, add the supporting marker to the sentence or row itself in your edit (so a reader knows which paper it comes from); if the paragraph cites only that one reference, no edit is needed.
+- **Numbers with `cite: none`:** find the source. First look in the page's own reference list; otherwise search PubMed for the original study, guideline or label. If you find and open a source that reports the number for the stated population, endpoint and time point, propose an edit adding the citation (existing reference number, or `new_refs`). If no source supports it, mark it `error` (severity high) and propose an edit that removes the unsupported number or restates only what a source you opened supports. Never leave an unsourced number.
+- **Absolute statements** (always, never, contraindicated, eliminates, no risk, all patients, the only, gold standard, safest, guarantees, mandatory, impossible, proven, definitive, first-line, standard of care): check that a source you opened states it with the same strength and scope (a label contraindication, a guideline recommendation with its strength, a trial result). If the source is weaker or narrower, mark `error` and soften to the source's wording and scope. If the sentence is operative teaching or technique style (an instruction such as "never close under tension" that states no number, risk estimate, contraindication or guideline position), mark it `style`; style statements need no source. Labels, contraindications, "first-line", "gold standard", "eliminates" and "no risk" are never style.
+- **Status values** in the `.status.jsonl` file: `ok`, `style`, `error`, `unverifiable`. For every `ok` and `error` line also give `"quote"`: the exact sentence (up to 300 characters) from the source that supports or contradicts the claim, so the check can be re-audited without repeating the search.
+
+## Doses and guideline statements (kinds `dose` and `guideline`)
+
+- **Doses** (`dose`): check the drug or device quantity against the current label (DailyMed, FDA, EMA SmPC or manufacturer IFU), the guideline the page cites, or the cited study. Check drug, dose, unit, route, frequency, duration, population (adult or pediatric, renal or hepatic adjustment) and maximum. A dose that differs from the label is acceptable only when the sentence says it is a study regimen, off-label use or specific protocol and cites that source. A wrong or unsourced dose is always severity high; correct it from the source and cite it. Device quantities (fill volumes, balloon or catheter sizes, energy settings) follow the same rule against the IFU.
+- **Guideline statements** (`guideline`): open the guideline (or label or clearance) itself. Check that the named body actually makes the statement; that it is the current version (say if a newer one exists and what it says); that the strength label is the body's own (AUA Strong/Moderate/Conditional/Expert Opinion/Clinical Principle with evidence grade; EAU strong/weak); that the scope (population, indication, procedure) matches; and that a regulatory statement (FDA approval or clearance, indication, contraindication, boxed warning) matches the label. Paraphrase is fine; a changed strength, scope or body is an error. Do not recheck numbers in the sentence that are unrelated to the guideline statement.
+
+## Source access and binding (claim gate schema 2, October 2026)
+
+On every status line also give `"access"`: `full-text`, `abstract`, `guideline-section`, `label-ifu`, `metadata-only`, `conflicting-source` or `not-accessed`. An abstract supports only what it states; if the number or qualifier is not in the text you opened, the status is `unverifiable`, not `ok`. `ok` and `error` lines must name `source_opened`. Every claim in the batch needs exactly one status line with its exact `claim_id`; an incomplete status file is rejected and the batch is rerun. `style` is never valid for doses, guideline or regulatory statements or contraindications.
+When the claim's content is supported and the only problem is citation placement (a paragraph-level citation that should sit on the sentence or row, or a cell that cannot carry a marker), write the finding with `"category": "attribution"` and `"supported": true`, give status `ok` with the supporting quote, and propose the marker edit. Reserve `error` status and `"category": "accuracy"` for content that the source does not support as written.
+
+## Local full texts (`local_sources`)
+
+Some claims carry `local_sources`: [{"n": <reference number>, "local_text": "<absolute path>"}]. That file is the extracted text of the full document the site owner supplied (article, guideline, label, IFU or manual; a folder holds several manuals). Read it first and judge the claim against it; record `access` as `full-text`, `guideline-section` or `label-ifu` and give the section, table or page in `quote`. A reference line can name an earlier edition than the supplied file: say so in the finding when the two differ on the claim.
+
+TRUST THE READER (STYLE.md section 12, October 8, 2026): when a claim is broader than its source, fix the sentence's own scope (name the population, design, size or endpoint inside it). Never add a separate caveat sentence such as "Do not transfer this to …", "This does not establish …", "This is not a trial of …", "This is an X resource, not Y", "not a universal rule", and never write process notes ("in the inspected abstract", "not independently assessed", "confidence interval not reported", "checked <date>") into page text. A proposed edit that adds such a sentence is a voice error; a verifier rejects it.
+
+AUA SITE: do not open auanet.org pages (guidelines, Core Curriculum or university.auanet.org); the AUA prohibits use of its site content in AI tools. Check AUA guideline statements against the published guideline article (J Urol, Urol Pract or Neurourol Urodyn via PubMed, PMC or the publisher), or a local copy supplied in local_sources.
+
+## Trial data claims (`page` ends in `.json`; Clinical Evidence trial files)
+
+A claim whose `page` is `src/data/clinical-evidence/trials/<id>.json` is a structured datum, not prose. Open that file at `field_path`, match `trial_id`, `report_id` and `report_doi` to the source, and use `locator` (PDF page, table or figure) to find it; a `local_sources` file, when given, is the owner's full text of that report: read it first. Every Result, Harm and delivery Fact is a claim even without a number: check the measure, the values for each arm (keys match `design.arms` in the same file), the effect estimate and interval, `met` (did the endpoint meet its prespecified threshold), the population and the time point. A `takeaway` claim is the trial's bottom line: check that the arms match `design.arms` and the source, that its primary result matches the primary report's primary endpoint and the trial `verdict`, and that every number appears in one of the trial's reports. Do not treat a later report as support for a different report's values. For an error, `edit.old` must be an exact fragment of the JSON file and `edit.new` must keep the JSON valid; never change another report.
+
+
+INPUT: /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/batches/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.json
+slug: g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti
+OUTPUT_DIR: /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+
+warning: clamping SessionEnd hook timeout to 3s in /Users/joyboy/.codex/plugins/cache/openai-codex/codex/1.0.6/hooks/hooks.json
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll read the evidence wording rules and sampled error pattern, then check every batch claim against its cited source and the current page text. I’ll write only the two requested output files in the scratch folder.
+exec
+/bin/zsh -lc 'cat /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/batches/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.json' in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+{
+ "page": "docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx",
+ "claims": [
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#1",
+   "page": "docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx",
+   "line": 65,
+   "text": "Small trials suggested benefit, but the MERIT RCT (Hayward 2024, *JAMA Intern Med*) randomized 598 women in primary care with rUTI and was negative: among 583 with primary-outcome data, 150/294 (51.0%) assigned D-mannose versus 161/289 (55.7%) assigned placebo contacted ambulatory care for a clinically suspected UTI over 6 months.<sup>[[12]](#ref12)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 12,
+     "text": "Hayward G, Mort S, Hay AD, et al. \"D-mannose for prevention of recurrent urinary tract infection among women: a randomized clinical trial.\" *JAMA Intern Med.* 2024;184(6):619\u2013628. doi:[10.1001/jamainternmed.2024.0264](https://doi.org/10.1001/jamainternmed.2024.0264)"
+    }
+   ],
+   "key": "v2:413f412603e3a8e1b3d2",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#2",
+   "page": "docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx",
+   "line": 322,
+   "text": "With reduction at 300 mL, detection varied by method, from 6% with a pessary to 30% with a speculum.",
+   "table_header": null,
+   "kinds": [
+    "number",
+    "dose"
+   ],
+   "cite": "paragraph",
+   "refs": [
+    {
+     "n": 39,
+     "text": "Visco AG, Brubaker L, Nygaard I, Richter HE, Cundiff G, Fine P, et al. \"The Role of Preoperative Urodynamic Testing in Stress-Continent Women Undergoing Sacrocolpopexy: The Colpopexy and Urinary Reduction Efforts (CARE) Randomized Surgical Trial.\" *Int Urogynecol J Pelvic Floor Dysfunct.* 2008;19(5):607-614. doi:[10.1007/s00192-007-0498-2](https://doi.org/10.1007/s00192-007-0498-2)"
+    },
+    {
+     "n": 49,
+     "text": "Brubaker L, Cundiff GW, Fine P, et al. \"Abdominal Sacrocolpopexy with Burch Colposuspension to Reduce Urinary Stress Incontinence.\" *N Engl J Med.* 2006;354(15):1557\u20131566 (corrected June 9, 2016; *N Engl J Med.* 2016;374(23):2297). doi:[10.1056/NEJMoa054208](https://doi.org/10.1056/NEJMoa054208)"
+    }
+   ],
+   "key": "v2:be0de33b597321ac5362",
+   "high_risk": true
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#3",
+   "page": "docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx",
+   "line": 322,
+   "text": "After the 2016 correction of a stress-test coding error, the primary CARE report gives postoperative stress incontinence in women without leakage on reduction testing as 47.9% without a Burch versus 22.9% with one (p &lt; 0.001); the uncorrected primary report gave 38.2% and 20.8%.<sup>[[49]](#ref49)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 49,
+     "text": "Brubaker L, Cundiff GW, Fine P, et al. \"Abdominal Sacrocolpopexy with Burch Colposuspension to Reduce Urinary Stress Incontinence.\" *N Engl J Med.* 2006;354(15):1557\u20131566 (corrected June 9, 2016; *N Engl J Med.* 2016;374(23):2297). doi:[10.1056/NEJMoa054208](https://doi.org/10.1056/NEJMoa054208)"
+    }
+   ],
+   "key": "v2:ed23e70885acfd4a15a7",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#4",
+   "page": "docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx",
+   "line": 154,
+   "text": "Constipation occurred in 33/88 (38%) and 44/86 (51%) of the loperamide groups versus 5/42 (12%) and 19/84 (23%) of the placebo groups.<sup>[[32]](#ref32)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 32,
+     "text": "Jelovsek JE, Markland AD, Whitehead WE, et al. \"Controlling Faecal Incontinence in Women by Performing Anal Exercises With Biofeedback or Loperamide: A Randomised Clinical Trial.\" *Lancet Gastroenterol Hepatol.* 2019;4(9):698-710. doi:[10.1016/S2468-1253(19)30193-1](https://doi.org/10.1016/S2468-1253(19)30193-1)"
+    }
+   ],
+   "key": "v2:ce194c7b7a846379d9a7",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#5",
+   "page": "docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx",
+   "line": 107,
+   "text": "- **Buttock pain and vaginal axis.** In an OPTIMAL secondary analysis, new or worsening buttock pain at 4\u20136 weeks occurred in 10.5% after SSLF versus 4.6% after uterosacral suspension; the trial enrolled women having a concurrent retropubic midurethral sling, and Michigan four-wall fixation was not isolated.<sup>[[13]](#ref13)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 13,
+     "text": "Barber MD, Brubaker L, Nygaard I, et al. \"Pain and activity after vaginal reconstructive surgery for pelvic organ prolapse and stress urinary incontinence.\" *Am J Obstet Gynecol.* 2019;221(3):233.e1-233.e16. doi:[10.1016/j.ajog.2019.06.004](https://doi.org/10.1016/j.ajog.2019.06.004)"
+    }
+   ],
+   "key": "v2:d3b96fd474e60a36e263",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#6",
+   "page": "docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx",
+   "line": 70,
+   "text": "The primary 3-year analysis did not show a significant difference: model-estimated 36-month failure was 24% after mesh hysteropexy versus 36% after hysterectomy (adjusted hazard ratio 0.61, 95% CI 0.37\u20131.02; p = 0.06), and mesh exposure occurred in 7/88 (8%) women.<sup>[[27]](#ref27)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 27,
+     "text": "Nager CW, Visco AG, Richter HE, et al. \"Effect of Vaginal Mesh Hysteropexy vs Vaginal Hysterectomy With Uterosacral Ligament Suspension on Treatment Failure in Women With Uterovaginal Prolapse: A Randomized Clinical Trial.\" *JAMA.* 2019;322(11):1054\u20131065 (corrected February 2021). doi:[10.1001/jama.2019.12812](https://doi.org/10.1001/jama.2019.12812)"
+    }
+   ],
+   "key": "v2:dd77a247ac945de552a8",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#7",
+   "page": "docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx",
+   "line": 70,
+   "text": "The five-year report tabulated cumulative first-failure proportions of 29/79 (37%) versus 42/78 (54%) at the five-year visit.",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "paragraph",
+   "refs": [
+    {
+     "n": 11,
+     "text": "Nager CW, Visco AG, Richter HE, et al. Effect of sacrospinous hysteropexy with graft vs vaginal hysterectomy with uterosacral ligament suspension on treatment failure in women with uterovaginal prolapse: 5-year results of a randomized clinical trial. *Am J Obstet Gynecol.* 2021;225(2):153.e1-153.e31. doi:[10.1016/j.ajog.2021.03.012](https://doi.org/10.1016/j.ajog.2021.03.012)."
+    },
+    {
+     "n": 27,
+     "text": "Nager CW, Visco AG, Richter HE, et al. \"Effect of Vaginal Mesh Hysteropexy vs Vaginal Hysterectomy With Uterosacral Ligament Suspension on Treatment Failure in Women With Uterovaginal Prolapse: A Randomized Clinical Trial.\" *JAMA.* 2019;322(11):1054\u20131065 (corrected February 2021). doi:[10.1001/jama.2019.12812](https://doi.org/10.1001/jama.2019.12812)"
+    }
+   ],
+   "key": "v2:048934c536056613fdab",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#8",
+   "page": "docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx",
+   "line": 70,
+   "text": "The interval-censored five-year analysis, a secondary objective of the trial, favored mesh hysteropexy (adjusted hazard ratio 0.58, 95% CI 0.36\u20130.94), but proportional hazards were not met.",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "paragraph",
+   "refs": [
+    {
+     "n": 11,
+     "text": "Nager CW, Visco AG, Richter HE, et al. Effect of sacrospinous hysteropexy with graft vs vaginal hysterectomy with uterosacral ligament suspension on treatment failure in women with uterovaginal prolapse: 5-year results of a randomized clinical trial. *Am J Obstet Gynecol.* 2021;225(2):153.e1-153.e31. doi:[10.1016/j.ajog.2021.03.012](https://doi.org/10.1016/j.ajog.2021.03.012)."
+    },
+    {
+     "n": 27,
+     "text": "Nager CW, Visco AG, Richter HE, et al. \"Effect of Vaginal Mesh Hysteropexy vs Vaginal Hysterectomy With Uterosacral Ligament Suspension on Treatment Failure in Women With Uterovaginal Prolapse: A Randomized Clinical Trial.\" *JAMA.* 2019;322(11):1054\u20131065 (corrected February 2021). doi:[10.1001/jama.2019.12812](https://doi.org/10.1001/jama.2019.12812)"
+    }
+   ],
+   "key": "v2:e7328f0e90fa669e064b",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#9",
+   "page": "docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx",
+   "line": 126,
+   "text": "| Optilume BPH | \u221211.5 (ITT, 100 randomized)<sup>[[5]](#ref5)</sup> | +10.3 mL/s (82 paired at 12 mo)<sup>[[5]](#ref5)</sup> | 20\u201380 g | Local / sedation | Intravesical protrusion above 1 cm excluded in PINNACLE; smaller protrusion included<sup>[[8]](#ref8)</sup> |",
+   "table_header": "| Procedure | IPSS \u0394 (mixed time points) | Qmax \u0394 (mixed time points; see text) | Volume range | Anesthesia | Median lobe |",
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 5,
+     "text": "Kaplan SA, Moss J, Freedman S, et al. The PINNACLE study: a double-blind, randomized, sham-controlled study evaluating the Optilume BPH catheter system for the treatment of lower urinary tract symptoms secondary to benign prostatic hyperplasia. *J Urol.* 2023;210(3):500-509. doi:[10.1097/JU.0000000000003568](https://doi.org/10.1097/JU.0000000000003568)"
+    },
+    {
+     "n": 8,
+     "text": "Kaplan SA, Moss JL, Freedman SJ. Two-year long-term follow-up of treatment with the Optilume BPH catheter system in a randomized controlled trial for benign prostatic hyperplasia (the PINNACLE study). *Prostate Cancer Prostatic Dis.* 2024;27(3):531-536. doi:[10.1038/s41391-024-00833-z](https://doi.org/10.1038/s41391-024-00833-z)"
+    }
+   ],
+   "key": "v2:f3e78782bbc2db27c5c5",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#10",
+   "page": "docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx",
+   "line": 166,
+   "text": "- PINNACLE excluded intravesical prostatic protrusion above 1 cm; smaller protrusion was included.<sup>[[8]](#ref8)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 8,
+     "text": "Kaplan SA, Moss JL, Freedman SJ. Two-year long-term follow-up of treatment with the Optilume BPH catheter system in a randomized controlled trial for benign prostatic hyperplasia (the PINNACLE study). *Prostate Cancer Prostatic Dis.* 2024;27(3):531-536. doi:[10.1038/s41391-024-00833-z](https://doi.org/10.1038/s41391-024-00833-z)"
+    }
+   ],
+   "key": "v2:ea5981a152303b821397",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#11",
+   "page": "docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx",
+   "line": 158,
+   "text": "In the Abt single-center, open-label RCT (n = 103), IPSS fell 9.23 points after PAE and 10.77 after TURP at 12 weeks, and noninferiority within the 3-point margin was not shown (95% CI \u22121.45 to 4.52).<sup>[[31]](#ref31)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 31,
+     "text": "Abt D, Hechelhammer L, M\u00fcllhaupt G, et al. \"Comparison of prostatic artery embolisation (PAE) versus transurethral resection of the prostate (TURP) for benign prostatic hyperplasia: randomised, open label, non-inferiority trial.\" *BMJ.* 2018;361:k2338. doi:[10.1136/bmj.k2338](https://doi.org/10.1136/bmj.k2338)."
+    }
+   ],
+   "key": "v2:3f8c5bdc6f1d1a4e224a",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#12",
+   "page": "docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx",
+   "line": 73,
+   "text": "Five-year symptom estimates include 77 of the 135 men treated in the original Rez\u016bm arm (136 randomized); six of the 135 treated men (4.4%) underwent surgical retreatment, and 11.1% initiated BPH medication through five years.<sup>[[1]](#ref1)</sup>",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "own",
+   "refs": [
+    {
+     "n": 1,
+     "text": "McVary KT, Gittelman MC, Goldberg KA, et al. Final 5-year outcomes of the multicenter randomized sham-controlled trial of a water vapor thermal therapy for treatment of moderate to severe lower urinary tract symptoms secondary to benign prostatic hyperplasia. *J Urol.* 2021;206(3):715\u2013724. doi:[10.1097/JU.0000000000001778](https://doi.org/10.1097/JU.0000000000001778)"
+    }
+   ],
+   "key": "v2:dc76557058d80c932d42",
+   "high_risk": false
+  },
+  {
+   "id": "g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti#13",
+   "page": "docs/05-special-populations/05e-womens-health/recurrent-uti.mdx",
+   "line": 136,
+   "text": "At the 6- or 12-month visits, resistance to at least one antibiotic in *E. coli* from perineal swabs was found in 46/64 antibiotic participants versus 39/70 methenamine participants (72% vs. 56%; p = 0.05); at 18 months, six months after treatment ended, multidrug resistance was found in 9/45 methenamine versus 2/39 antibiotic participants (20% vs. 5%; p = 0.06).",
+   "table_header": null,
+   "kinds": [
+    "number"
+   ],
+   "cite": "paragraph",
+   "refs": [
+    {
+     "n": 24,
+     "text": "Harding C, Mossop H, Homer T, et al. \"Alternative to prophylactic antibiotics for the treatment of recurrent urinary tract infections in women: multicentre, open-label, randomised, non-inferiority trial.\" *BMJ.* 2022;376:e068229. doi:[10.1136/bmj-2021-0068229](https://doi.org/10.1136/bmj-2021-0068229)"
+    },
+    {
+     "n": 25,
+     "text": "Harding C, Chadwick T, Homer T, et al. \"Methenamine hippurate compared with antibiotic prophylaxis to prevent recurrent urinary tract infections in women: the ALTAR non-inferiority RCT.\" *Health Technol Assess.* 2022;26(23):1\u2013172. doi:[10.3310/QOIZ6538](https://doi.org/10.3310/QOIZ6538)"
+    }
+   ],
+   "key": "v2:a0bce53ab5358abddb98",
+   "high_risk": false
+  }
+ ]
+}
+exec
+/bin/zsh -lc 'cat /Users/joyboy/Documents/WARWIKI/warwiki/CLAUDE.md' in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+# WARWIKI - Claude Session Reference
+
+Read this at the start of a session. It is the working handbook: current state, standing instructions and durable conventions. Session history lives in [CHANGELOG.md](CHANGELOG.md) (newest first) and `git log`. The full pre-compaction handbook (1,325 lines, every handoff through September 30, 2026) is archived at [reports/archive/CLAUDE-2026-10-01-before-compaction.md](reports/archive/CLAUDE-2026-10-01-before-compaction.md). Keep this file small: add a dated one-paragraph status at the top, move detail to the CHANGELOG, and prune superseded status lines.
+
+---
+
+## Current State (October 14, 2026, evening)
+
+- **Video Library surgeon search (October 24, both sites):** typing a surgeon's or presenter's name finds their videos (suggestions as you type; tap a name on a card to see all of that person's videos; profile links where a page exists; WARWIKI cards now show the original uploading channel). Profile pages with library videos show a "Videos (N)" button that opens `/video-library?surgeon=<profile id>` (exact profile filter; count written into `src/data/surgeon-profiles/<id>.json` by `gen-profile-lineage.js`). Names come from each video's YouTube title, description, tags or a one-person channel (Codex extraction, every name checked against the video's text, hand-checked aliases): 1,430 of 1,897 videos. Data `src/data/video-surgeons.json` in each repo; rerun kit `reports/2026-10-24/video-surgeons/` (videos added by a later sync have no names until it is rerun).
+
+- **Facts-only sweep (October 21, both sites):** STYLE.md §12 "Facts only" (owner: "read like Wikipedia, just facts"); about 7,590 commentary cuts on WARWIKI and 1,300 on WHITWIKI, Codex reviewer + verifier, Claude read every risky cut; 1,250 lost citation markers restored; claim gate passes. Three WARWIKI pages held back (`reports/audit-v2/sources-local/facts-2026-10-21-held/README.md`; need the AUA ED guideline or second checks). Advisory `npm run lint:facts`. Method, tools and the citation-loss lesson in CHANGELOG. whitwiki.org is blocked on the Jefferson network as a new domain (use whitwiki.vercel.app there until it ages out or IT allowlists it).
+
+- **History of Urinary Diversion (October 20):** new History page from an OpenEvidence answer, every reference re-verified; claim gate passes. Detail in CHANGELOG.
+
+- **Surgeon biographies (October 20, `18bc3698`):** narrative `## Biography` sections on 10 senior profiles (Ingelman-Sundberg, Devine, Skinner, Hinman, McAninch, Robertson, Zinman, Cardozo, Stanton, Benson), each sentence sourced to an obituary or tribute; Codex author + independent Codex verifier, Claude edit. **Saved for later (owner, October 20; when token budget allows):** the second round, about 20 surgeons with a narrative source already found (Kulkarni, Dwyer, Ostergard, Drutz, Wein, Hautmann, Mulcahy, Lue, Marchant, Kralj, Nilsson, Petri, Contreras Ortiz, Riss, Shingleton and others), listed with reasons under "Narrative source found" in `reports/2026-10-20/surgeon-biographies.md`; sources in `reports/2026-10-20/surgeon-biographies-work/shortlist.md`. Same workflow (brief files in that folder). Didusch Museum pages bar AI use (McGuire's footnote 1 needs another source).
+
+- **October 20:** new handouts Low Sexual Desire and Clitoral Adhesions/Phimosis published (gallery 97; practice copies in Seranio Practice). Owner answered the recheck questions (cloudy urine not a warning; fistula catheter 1–3 weeks). `build_practice_handouts.py` is frozen at 95: add new practice-edition handouts by running a scratch copy and copying only the new files.
+- **October 19 (night), downstream refresh:** flashcards v1.2 built (841 cards; Journal Club links now point to Clinical Evidence trial pages; owner uploaded v1.2 to the AnkiWeb listings October 20). Boards deck, 95 handouts and 48 practice sheets were rechecked against the October 9–19 site; 3 handouts changed and 8 sheet footers were fixed. Rerun scripts: `reports/anki-deck/refresh-2026-10-19/` and `~/Documents/Seranio-Clinic-Resources/30-drafts/recheck-1019/` (do not rerun `build_practice_handouts.py`; edit `handouts-practice/` directly). Owner questions: cloudy-urine warning line, fistula catheter timing (report there). Homepage Try chips removed (both sites); About pages aligned. Surgeon narrative biographies are running in their own session.
+
+- **Clinical Evidence section (published October 19, `1c9dc196`):** WHITWIKI's Clinical Evidence system replaces Journal Club at `/docs/clinical-evidence` (`/docs/journal-club` redirects; old `#trial-<id>` anchors forward). Data `src/data/clinical-evidence/` (65 trials, 20 decisions, `SCHEMA.md`, `TEMPLATE.md`), pages `docs/06-clinical-evidence/studies/`, `lint:trials`, gate.py trial units (results, harms, delivery facts, takeaway). All 3,955 claims pass the gate. Held back: BMG harvest-site closure meta-analysis (`reports/2026-10-18/clinical-evidence/held/`; forest-plot values unconfirmed). **Next:** fix the existing pages the agents flagged (`reports/2026-10-18/clinical-evidence/work/*/notes.md`: PAE retreatment, VVF, recurrent UTI vs MERIT, urodynamics/UPSTREAM, ThuVARP, sacrospinous hysteropexy, Revi, Optilume 2.5%, POP line 322 CARE values); owner PDFs in `REQUESTS.md`.
+
+- **October 18 (Claude + Codex):** October 11 owner-PDF findings applied and gated on 23 pages; DOI leftovers resolved (190 identifiers added, 60 held back, 81 uncertain; `reports/2026-10-18/doi-resolution.md`). Thirteen more owner sources checked and gated the same day (`reports/audit-v2/sources-local/pdfs-2026-10-18/`); all five guideline sentences left from October 17 are now verified (IUGA urodynamics, NCCN transgender screening, AAGL 2012, and the AUA transition manual ×2 from the owner's 8th-edition copy). Owner: SOGC 445 article body (TCA neuropathic-pain rating order; trigger-point epinephrine warning) and the 465 algorithm; chapter access for held-back identifiers. Detail in CHANGELOG.
+
+- **October 17 (Codex), surgeon profiles:** Key Publications now shows full citations once, with the existing descriptions and citing-page links. Its static bibliography is in `src/data/surgeon-key-publications/<id>.json`; profile MDX imports it and renders `KeyPublication`. Publication footnotes now point to those entries; the separate site-citation list excludes papers already printed in the profile. Career/leadership material remains separate from publications. Ten stale retired-profile redirects were removed, including Daniel Eun.
+
+- **Surgeon portraits (October 17, Codex):** added 19 verified portraits, including Dan Eun, from named official institutions, practices, societies and professional publications; all were visually inspected and loaded successfully as external hotlinks. Source records: `src/data/surgeon-photo-sources.json`. 252 of 271 profiles now have photos; the other 19 retain initials where no usable portrait was verified. Profile text and the existing Key Publications deduplication are unchanged.
+
+- **October 17 (Codex):** adopted WHITWIKI-style expandable guideline recommendation badges; existing wording and source grades are preserved. Formatting-only conversion leaves claim bindings unchanged.
+
+- **NEXT SESSION (set October 14, evening):** (1) Done October 18: the October 11 owner-PDF findings. (2) Done October 18 (evening): the wording sweep's 281 held-back claim-gate edits (279 published; CHANGELOG); its six owner questions remain in `reports/2026-10-14/wording-sweep/README.md` (Owner questions). (3) Owner sends page-by-page notes; WHITWIKI brief pending. Guideline sentences: 29 of the October 14 list verified October 17 from sources already on disk (CHANGELOG); the last 5 (AUA transition manual, NCCN breast screening, IUGA 2022, AAGL 2012) verified October 18; the top of `needed-from-user.md` is the single current list. Five legacy claims with one supporting check were returned to `legacy-source-needed` pending a second source (ledger `note` field). Keep Claude weekly usage at or below 98%; Codex does bulk work. **Owner open:** clinic facts for the practice sheets (office and after-hours phones, instillation cocktail, PTNS device, semen lab, Glean, SNM rep) expected after his first day (October 15); which of 14 practice sheets he does not use; robotic-only transfusion figure; boards deck re-share on AnkiWeb if not done; `scripts/delete-old-tts-audio.mjs`; op-report redesign.
+- **October 14 (evening, done):** claim-gate wave published (`c8dc859b`: 341 reviewed edits on 202 pages plus 48 corrections from four recheck rounds) and the 263 uncheckable sentences rechecked against local guideline copies (`c74ae56f`: 230 verified, 56 corrections, 29 left). Gate, lint, build pass. Practice-sheet pain line now "around the clock".
+- **October 14 (done):** owner feedback applied (SUI page, pain sections, opioid line), podcasts on 50 pages (`PodcastCards`), Dan Eun profile, Patient Materials folder, October 11 gate sheet applied (wave running). Detail in CHANGELOG.
+- **October 11 (Codex-led; Claude at its 98% cap until Oct 14 1 pm ET):** DOI discovery added 91 DOIs and 133 PMIDs to plain-text references, every link author/year-checked against Crossref/PubMed (295 ambiguous and 150 binding-conflict cases left; ledger `reports/2026-10-11/doi-discovery.tsv`). Claim gate widened (`scripts/review/gate.py`): 1,505 guideline sentences newly gated as `legacy-unverified`; their Codex review (`reports/audit-v2/sources-local/gate-widening-2026-10-11`, 2 reviewers + 1 verifier) was launched October 11. Review finished Oct 11 (its `gate.py record` output is saved as `claims-ledger.recorded-2026-10-11.json` in that folder, not committed: about 199 high-risk claims need their second independent check before it can pass lint): 1,134 supported, 263 source-needed, 101 flagged with 341 proposed edits (52 high) in `review-sheet.md` there. **Next (after the Oct 14 Claude reset):** Claude reads the sheet and vetoes, `cycle.sh`, final-text recheck, publish; add the 263 to needed-from-user. Also apply `reports/audit-v2/sources-local/pdfs-2026-10-11/findings.md` (nine owner-supplied full texts; 22 non-supported items, Codex verifier: 18 accept, 18 amend, 1 reject) through the claim gate, plus the same for `pdfs-2026-10-11b/` (six papers incl. BAUS 2026) and `pdfs-2026-10-11c/` (SOGC 445/465 recommendation pages). Practice sheets: owner's October 11 notes applied in `~/Documents/Seranio-Clinic-Resources/30-drafts/` (report `OWNER-NOTES-1011-REPORT.md`, SNM split into PNE/stage 1/stage 2); approved and synced to Seranio Practice with the SmartPhrases (aligned to the sheets; owner rule: phrases always match sheets/handouts), 24-hour shower after Dermabond with owner exceptions (`30-drafts/SHOWER-DECISIONS-1011-REPORT.md`); compendium rebuilt (1,456 pages). Owner defaults in memory "Owner post-op defaults".
+- **October 12, ~0:15 (Claude weekly usage hit 100%; stopped):** done and rendered, NOT yet copied to Seranio Practice: 4 new/changed practice sheets (after-optilume, after-malleable-penile-implant, female-pelvic-pain-home-program; Aquablation folded into after-prostate-surgery; reports `30-drafts/NEW-SHEETS-1011-REPORT.md`) and the branded practice edition of all 95 handouts (`30-drafts/handouts-practice/`, PDFs in its `pdf/`, report `HANDOUTS-PRACTICE-1011-REPORT.md`; all 2 pages, no clipping). **Next:** build one "Patient Materials" folder in Seranio Practice ("About –" handouts, "After –" recovery sheets, "Form –" diaries/questionnaires; move old Practice Sheets/ and Handouts/ copies to an `_archive/` subfolder, not delete), update sync-to-seranio.sh, INDEX.md and `_compendium-source/build_compendium.py` (it parses INDEX sections and folder paths), rebuild the compendium. Owner open: robotic-only transfusion figure (handouts report), which listed sheets he does not use.
+- **Flashcards v1.1 done (October 10, afternoon):** WARWIKI GURS & URPS Review deck refreshed against the October 2–10 site (44 corrected, 190 relinked, 19 new, none retired; Codex author, Claude verifiers; live citation, import and upgrade-from-v1.0 checks pass). Release files and `UPDATE-NOTE-v1.1.md` in `reports/anki-deck/WARWIKI-Anki-Claude-review/release/`; method and rerun scripts (`carddiff.py`, `apply_refresh.py`, briefs) in `reports/anki-deck/refresh-2026-10-10/`; v1.0 archived in `history/release-v1.0/`. **Owner:** upload v1.1 over the three AnkiWeb listings (Flashcards page already shows the v1.1 counts). **ABU oral-boards deck refreshed October 11** (Codex only, Claude at cap): its 113 WARWIKI-sourced notes rechecked by a Codex author pass plus a separate Codex verifier (27 edits, none retired, 5 author errors caught; GUIDs unchanged, 1,185 notes / 1,926 cards); report `~/Documents/uro-oral-boards-anki/notes/refresh-2026-10-11/REFRESH-REPORT.md`; packages copied to Seranio Practice/Flashcards. Owner: re-import and re-share the boards deck on AnkiWeb. No flashcard work is pending. No cosmetic genital enhancement cards (owner). Usage caps: Claude weekly 98%, Codex floor 5% (October 10).
+- **Done October 9-10:** decision review (SmartPhrases/cards 53 items; practice sheets and handouts), October 10 source restorations (`654af934`) and sweep (`98aec0c8`), sacrocolpopexy revision section, male CP/CPPS evidence, DCB censoring note (`6fae82b2`), VVF video, Landon Trost citation, 80 handouts republished (`5f43a3f7`) and 15 new (`f1d107ff`; gallery 95), 54 practice sheets with all owner decisions applied. Open: Jefferson facts for the practice sheets (phone numbers, instillation cocktail, PTNS device, semen-analysis lab, Glean visit length); sources still wanted (SOGC 445/465, BAUS 2026, Yii, Barry 1992, device IFUs, books). Handout `render-en.sh <slug> gate` hangs; check page count and footer text instead.
+- **Downstream refresh done (October 9 night):** SmartPhrases and cards (about 50 phrases, 25 cards), all 25 practice sheets (8 changed plus consistency fixes) and all 96 handout drafts (about 34 changed) rechecked against current WARWIKI; author defaults unchanged. Fournier's gangrene IDSA reference and duration sentence fixed (`358f4d52`).
+- **Voice rules (October 8):** STYLE.md §11 (openings: definition plus key facts; no relevance lists or scope lines) and §12 (trust the reader: no non-transfer warnings, rebuttals of unstated overclaims or audit-process notes; fix an overclaim by scoping the sentence). Applied site-wide October 8 (2,600 cuts, CHANGELOG). Rerun for new candidates: `python3 scripts/voice/trust_extract.py --out <dir>` then `orchestrate.py --work <dir> --claims --brief trust --verify-brief trust-verify`; apply with `apply.py`, but do not use `cycle.sh` (it would record style statuses in the claim ledger); run `gate.py pending` on touched pages for the final-text check. Clinical Conditions sidebar is ordered by prevalence; landing links must open the first sidebar page of their group.
+- **Quality program (October 6):** executing Codex's [error-reduction plan](reports/2026-10-06/error-reduction-plan.md); checkpoint and next commands in [reports/quality/README.md](reports/quality/README.md). Milestone 1 done: claim gate schema 2 ([gate-migration.md](reports/quality/gate-migration.md)). Passing now depends on the verdict, not ledger membership; bindings cover cited-source identity, table header and section heading; rejected fixes, fuzzy matches and `style`/`voice` no longer count as support; applied edits are `corrected-unconfirmed` and **fail until a final-text recheck**; high-risk claims (dose, guideline, contraindication) need two independent runs; no bulk baseline (owner exceptions with expiry only). All 24,498 current claims carry `legacy-*` statuses (pass, but not counted as verified); schema 1 ledger frozen in `claims-ledger-v1.json`. Orchestrator validates every output file and defaults to 1 reviewer and 1 verifier. Next: detector calibration, legacy high-risk rechecks, 60-page probability sample.
+- **Quality program progress (October 6–7):** legacy high-risk queue done (1,858 dose/guideline/contraindication claims rechecked) plus 469 claims against 52 owner-supplied PDFs (`reports/audit-v2/sources-local/pdfs-2026-10-06/`); about 230 corrections published, each confirmed by a separate final-text check. Workflow per wave: `gate.py pending --legacy <files> --out <new dir>` → `orchestrate.py --claims --reviewers 2 --verifiers 1` → `apply.py list` → Claude reads sheet (veto in `applied.json` with `veto:` status) → `cycle.sh` → `gate.py pending <touched> --out <dir>-final` → repeat until the gate passes → lint, build, commit. Carry the first run's `touched.json` into each final run. Open items: `reports/quality/open-findings.md`; results and next steps: `reports/quality/README.md`.
+- **Second full-page review and final validation (October 8–9):** remaining 455 pages done (chunks 5–8; `6ca83465`, `aab1ba01`). Codex nearly exhausted: Claude agents review, recheck and verify (`reports/audit-v2/sources-local/quality/ingest_claude.py`, `claude_verify_prompts.py`, `resync_claude.py`); give each agent a private scratch subfolder. **Sample 6 done** ([results](reports/quality/residual-sample-6-results.md)): Claude reviewers rate almost everything "low", so verifiers must check every substantive finding (addendum `residual-sample-6/verify-addendum.md`) and Claude classifies by the rule's definition: 0.50 serious errors/page (0.29–0.71), 19/60 pages; repairs published. Open items: `reports/quality/open-findings.md` (October 9 rows). Owner cap on Claude weekly usage: 80%. **Guideline sweep done (October 9):** 1,905 AUA/EAU/SUFU/AUGS statements checked, 69 errors fixed ([report](reports/quality/guideline-sweep-2026-10-09.md)); tool `reports/audit-v2/sources-local/quality/guideline_sweep.py` (plan/build; groups claims by cited guideline). Owner has AUA and NCCN permission for the local guideline copies. **Paywalled full texts (October 9, `a386bd1a`):** 31 owner-supplied documents in `reports/audit-v2/sources-local/pdfs-2026-10-09/` checked against every citing page; narrowed wording restored; still wanted listed in `needed-from-user.md` (BAUS 2026, ASCRS 2023, SOGC 445/OASIS, AHA/ACC 2024, ASRA 2025, AUA/ASRM Part II, SMSNA 2026 correction, Yii, device IFUs).
+- **October 2 summary:** History pages re-audited (sources, voice, links); Library dropdown now Video Library · Resources · History (Journal Club lives in Resources). Surgical Genealogy: 236 profiles under written criteria (see Surgeon Profiles note below), training cards, photos, countries, deaths from verified obituaries, verified signature work listed under Contributions (no "Known for" heading: user judged it too strong a claim). 85 signature citations added to 59 clinical pages (`reports/2026-10-02/signature-work-gaps.md`). New pages from user-supplied OpenEvidence answers (used as leads, every claim and reference re-verified): Mainz Pouch III, MLD Phalloplasty, Ketamine Cystitis, PGAD/GPD, Damage Control in GU Trauma. 25 open-access figures added from newly cited papers.
+- **Next (user's queue):** the October 2–3 OpenEvidence batch is complete (glans augmentation page, postpartum perineal clinic section, GAS outcome-registries section, MLD and ketamine merges, historical needle suspensions page). Paywalled sources are on hold until the user has work access (list: "To gather through work access" at the top of `reports/audit-v2/needed-from-user.md`; received and checked October 3: Alahwany 2019, ACOG PB 198, and PB 214, 213, 155, 218 and CO 795 read on Scribd in the browser, gated pages skipped); they will arrive into `reports/audit-v2/sources-local/pdfs-2026-10-03/`; when they arrive, restore the figures dropped as unverifiable (glans HA: Alahwany done October 3 from the full text; MLD donor-site and second-stage counts; ACOG/SOGC rows of the perineal clinic table). Prompts, answers (`oe-NN-*.md`) and the page brief: `reports/surgical-genealogy/urps-work/newpages/` (off-git).
+- **Journal videos (October 3):** 100 open-access operative videos (Urology Video Journal 88, IBJU 5, FVVO 7) embedded on 82 pages after independent Claude/Codex matching; every MP4 HEAD- and codec-checked (H.264). `VideoCards` gained Vimeo and article-link support.
+- **Article listener (October 3):** one narrator, Marin on `gpt-4o-mini-tts` with a fixed "clinical lecturer" brief in `api/tts.ts` (user's choice by ear over Cedar and tts-1 Shimmer); no voice or quality picker. Old tts-1 audio is still in Vercel Blob (`tts/audio/`) and can be deleted.
+- **Site improvements (October 2–3):** batches 1–3 done: homepage hydration fix; synonym cleanup (uploaded to Algolia October 3); AGENTS.md/RESUME-HERE.md reduced to pointers; Playwright suite in CI and **blocking** (about 13 minutes; includes a two-timezone hydration check and shareable-filter-URL tests); handout `sourcePages` + `npm run lint:handouts` (27 handouts flagged for recheck after October 2 page changes); quarterly full external-link check; shareable URL state for atlas databases and the Video Library; non-blocking Google Fonts with a metric-matched Inter fallback (CLS fix); audit ledger closes claims only by explicit verdict (`reports/audit-v2/verdicts.json`, 112 former keyword closures back as candidates). Speed baseline in `reports/2026-10-03/lighthouse/`; re-measure the live site after deploy and fill in its "After" table. Remaining speed work if wanted: mobile LCP (render delay, unused JS) and accessibility items (contrast, color-only links, tap targets).
+
+- **Accuracy cleanup finished (October 5, night):** dose check (38/38) and guideline-statement check (89/89) complete: 518 and 443 verified edits. Third residual sample: 0.83 serious accuracy errors per page (95% CI 0.31–1.36), down from 1.57 and 1.37. Cross-page consistency: 18 verified fixes (`reports/audit-v2/sources-local/consistency-2026-10-05/`, brief and runner reusable). Claim-gate baseline rebuilt (2,843 → 13), and those 13 then checked: no baseline claims remain. Results: last section of `reports/2026-10-04/residual-error-sample.md`. `~/.codex/config.toml` still names the rejected `gpt-6.1-sol` (orchestrator pins `gpt-6-sol`). **Reliability pass (late night):** about 1,780 more verified edits covering retraction and correction checks (`scripts/refs/retractions.py`), wrong-citation sweep (`scripts/consistency/citation_targets.py`), open second-review findings, hub (`index.mdx`) pages (now under the claim gate), and a Codex ultra review of the 150 highest-risk pages (1,455 edits). A Claude cross-check of 20 of those pages afterward found 0 high-severity errors. **Next, only on the user's go-ahead:** handouts, SmartPhrases, WARWIKI Anki decks.
+- **Batch publishing helpers (October 6):** a Codex review run lives in `reports/audit-v2/sources-local/<run>/`. Steps:
+  1. `scripts/review/wait_run.sh <n> <minutes> <run>` waits for n more pages.
+  2. `scripts/review/prep_sheet.sh <run>` runs `apply.py list`, writes a readable sheet to `$SHEET_DIR/<run>.txt` and resolves new DOIs on Crossref (a FAIL is often a 429; recheck at doi.org).
+  3. Claude reads the sheet; veto via `applied.json`.
+  4. `REVIEW_WORK=<dir> scripts/review/cycle.sh` must end LINT=0 BUILD=0.
+  5. `scripts/review/publish_batch.sh <run> "<message>"` runs the gate, lint-log and build-log checks, stages only touched files plus the ledger, commits and pushes.
+
+  `scripts/review/risk_order.py` ranks pages by error risk.
+
+  Claude-reviewer runs work by writing findings plus a `state.json` with pages set to `reviewed`, then launching `orchestrate.py` on that directory to verify. Nothing is in flight (October 6); the next measurement, if wanted, is a fourth random residual sample.
+- **Disputed claims and voice (October 5):** the 230 undecided claims were settled (baseline now 4); 1,336 audit-voice sentences rewritten as direct statements (`scripts/review/voice-brief.md`; run with `orchestrate.py --claims --brief voice --verify-brief voice-verify`). New writing should state what the evidence shows and its limits, not rebut unstated claims ("should not be read as", "is not a universal rule").
+- **Claim gate (October 5; schema 2 since October 6):** `npm run lint:claims` (in lint and CI) fails on any new or edited number, dose, guideline or absolute statement without a supporting verdict in `reports/audit-v2/claims-ledger.json`. Before committing new or rewritten content run `python3 scripts/review/gate.py pending <files> --out <new dir>`, then `scripts/review/orchestrate.py --work <dir> --claims --reviewers 1 --verifiers 1`, then `gate.py record <dir>`, then `REVIEW_WORK=<dir> python3 scripts/review/apply.py list` (apply only touches edits on that review sheet), review, `cycle.sh`, then a final-text recheck of the touched files (a second `pending` run). Baseline empty in effect since October 5 (`claims-baseline.json`); open lists in `reports/2026-10-04/sources-needed.md` and `claims-needing-decision.md`. Vercel deploys even if CI fails unless the user enables deployment checks.
+- **Number check and residual samples (October 4, evening):** every cited statistic (11,788) checked against its source; 2,745 fixes on 710 pages. Residual serious errors 1.57 → 1.37 per page (numeric errors about 1.3 → 0.6). Rerun: `python3 scripts/review/claims.py extract --sections ...`, then `orchestrate.py --work <dir> --claims`, then `REVIEW_WORK=<dir> apply.py list` and `cycle.sh`. Results: `reports/2026-10-04/residual-error-sample.md`.
+- **Full-site second review (October 4):** all 1,036 content pages reviewed by Codex reviewers plus adversarial Codex verifiers, Claude-checked and published in 19 batches (5,086 edits on 962 pages). Results and method: `reports/2026-10-04/full-site-second-review.md`; 136 open leads in `second-review-open-findings.md`. Rerun with `scripts/review/orchestrate.py --effort high --tier default`, then `apply.py list`, review the sheet, `cycle.sh`.
+- **Site consistency (October 3):** references, people facts, shared-source numbers and voice checked site-wide with scripts plus Codex triage (`reports/2026-10-03/site-consistency.md`); few real errors, all fixed. History and profile cross-links on 81 pages (`reports/2026-10-03/history-crosslinks.md`). Open: profile voice outliers, DOI discovery for about 1,450 plain-text references.
+
+## Earlier state (October 1, 2026)
+
+- **Content:** about 1,205 MDX pages. Textbook mining (25 books plus Campbell-Walsh-Wein 13th ed) is fully incorporated (method and ledgers: [reports/textbook-mining/consolidation/](reports/textbook-mining/consolidation/)). The audit queue (AUDIT.md, tiers 1 to 4) is complete; **the user does not want further auditing for now** (October 1). Open audit claims and sources still wanted are recorded in [reports/audit-v2/needed-from-user.md](reports/audit-v2/needed-from-user.md) and `reports/audit-v2/ledger.md`; use them only when the user supplies a source or asks.
+- **Clinical templates:** per-page "Clinical toolkit" cards were scrapped September 30 (too busy), and a searchable Resources template corpus built October 1 was reverted the same day at the user's request (`966a126d`). Do not rebuild a public template toolkit unless the user asks. History: [reports/clinical-toolkit/](reports/clinical-toolkit/).
+- **Patient handouts:** the 80 English sheets were rechecked against the post-mining pages and **published October 1** ("Reviewed October 2026" footer). English publishes by default (`WARWIKI_INCLUDE_HANDOUTS=false` pauses it). Translations (10 languages) carry June text and stay out of the build and the gallery until retranslated from the final English (`WARWIKI_INCLUDE_HANDOUT_TRANSLATIONS=true` restores them; they total about 380 MB against the 200 MB build cap). Masters live off-repo (`~/Desktop/WARWIKI-handouts/`; pre-recheck backup in `_backups/`).
+- **Evidence cadence:** quarterly (March, June, September, December), aligned with the user's OpenEvidence surveys. The review step relies on the local Codex CLI, which works again (October 2): its default model is now `gpt-6-sol` (changed October 3 at the user's request; `gpt-6.1-sol` is rejected for the ChatGPT login). Run `codex exec` with stdin closed (`< /dev/null`) from background shells.
+- **External links:** the monthly workflow (`.github/workflows/external-links.yml`) samples 200 URLs and uploads a report artifact; it no longer opens issues. The 92 old automated "External link rot" issues were triaged and closed October 1 (most were a fixed parenthesis-parsing bug, timeouts or 405s).
+- **Surgical Genealogy (October 1, night):** GURS (Lee Zhao's tree) and URPS (WARWIKI's own research, 1,110 people) trees are live; 146 profiles (GURS top-105 cited plus founders; URPS citation score ≥ 10 plus founders). URPS working data and Codex batches live off-git in `reports/surgical-genealogy/urps-work/` (`merge.py` → `urps-tree.json` → `node scripts/genealogy/build-urps-lineage.js`). Profile MDX must import `@site/src/data/surgeon-profiles/<id>.json` as `profile` (generated in prebuild) so pages do not bundle the whole lineage. **Profile criteria (October 2):** in-scope surgeon plus any of: WARWIKI citations (GURS top 105, URPS score ≥ 10), school founder, president of GURS/SUFU/AUGS/IUGA or ICS chair/general secretary, a core-society lifetime award (AUGS, IUGA, SUFU, GURS, ICS), ≥ 5 fellows trained (lowered from 10 on October 8), or TURNS membership (turnsresearch.org/members; added October 8); supporting lists (SGS, SIU, SMSNA, AUA Guiteras/HHY) only for in-scope reconstructive surgeons; every profile needs a verifiable bio. Countries are the career base (sourced), never inferred from names. Profiles open with a "Training and career" card (`<div className="sp-facts">` + bold-labeled bullets); photos are hotlinked URLs in `surgeons.ts`; the genealogy shows profiled surgeons plus connecting mentors (`PROFILES_ONLY` in `lineage.ts`); schools are `DYNASTIES` in `surgeons.ts`, and a school inside another is linked from the parent tab, not repeated.
+- **Latest (October 1, late):** user-suggested Urology Video Journal papers added to Single-Port Robotics, Bladder Diverticulectomy and O'Conor VVF Repair (PATIO), each with its video (`6e784c70`).
+- **Paused:** Epic templates ([EPIC-ROADMAP.md](EPIC-ROADMAP.md)); do not start them unless asked. Restoring the OpenAI article voice waits on the user.
+- **Still wanted from the user:** ACOG documents (largest block of open claims), Revi surgical technique guide pp 6-8 (MRI), and the other items in `needed-from-user.md`.
+- **Off-repo personal work (never commit):** SmartPhrase library, ABU case log / practice-log kit, social graphics (`~/Desktop/WARWIKI-social/`), textbook-mining findings, handout masters and fonts.
+
+## Standing Instructions
+
+- **Publishing:** commit completed work and push to `main` (Vercel deploys from `main`), unless the user says otherwise. In cloud sessions the harness may assign a `claude/...` branch; the user has said to push straight to `main` (October 1).
+- **Final product copies (October 10):** after any change to a practice product (handouts, SmartPhrases, preference cards, practice sheets, Anki decks, purchase list, bio), copy its new final version into `~/Documents/Jefferson Einstein/Seranio Practice /` (trailing space), replacing the old copy, update that folder's `INDEX.md` and rebuild its combined PDF (`python3 _compendium-source/build_compendium.py` there).
+- **Preserve useful content** (September 20 policy): manufacturer IFUs, anatomy texts, technical papers, operative videos and established teaching are valid sources for the claims they support. Correct specific errors; never blank substantive pages or replace them with audit notices. See [content-preservation-policy.md](reports/2026-09-20/content-preservation-policy.md).
+- **Provenance:** keep `evidenceUpdated` / `evidenceNote` (internal) distinct from clinician `lastReviewed` / `reviewer`. Never manufacture clinical sign-off from a Git timestamp or automated edit.
+- **Voice:** [STYLE.md](STYLE.md) governs typography, word choice, sentence structure and evidence wording for all new content.
+- **Design (September 27):** headings are Inter; no "At a glance" blocks; section accents via `--wk-accent*` tokens and `html[data-section]`; homepage Try chips are desktop-only; **do not create new surgical schematics** (the user judged them unreliable; 20 remain after 29 were deleted September 27 and 3 replaced by published open-access figures October 1).
+- **No standalone pediatric pages** (September 30). Pediatric-primary topics appear only as adult-facing context on lifelong-care pages.
+- **Scope of patient data:** personal operative notes, case logs and any patient-specific data never enter this public repository.
+
+## Lessons That Keep Recurring
+
+- **DOIs typed from memory are often wrong.** Resolve every new DOI (local `scripts/audit/pubmed.py` / `doicheck.py` pattern) before committing. Textbook chapter citations drift: check editors, edition, chapter and year against the book's front matter (`reports/textbook-mining/consolidation/BOOKS.md`).
+- **Cloud sessions:** the egress proxy blocks PubMed/eutils, doi.org, Crossref, Europe PMC and OpenAlex; WebSearch still works. Verify references through search results that show the DOI or PMID, and flag them for a local DOI check.
+- **Nested helper agents trip the account usage limit.** One agent per batch, no helpers; on interruption, the files on disk are the checkpoint (reconcile and rerun only what is missing).
+- **Always run `npm run build` after editing MDX that contains raw HTML/JSX.** `npm run lint` does not catch unclosed `<sup>` or bad JSX; only the build does. Also: `{#custom-id}` heading anchors break MDX; use `<a id="..."></a>` above the heading.
+- **`npm run build` rewrites `src/data/stats.json`** (timestamp). Run `git checkout -- src/data/stats.json` before committing unless counts changed meaningfully.
+- **Parallel subagents must not build concurrently** (they race `build/`); the orchestrator builds once afterward.
+- **Check the existing reference list for duplicates** before appending refs from a source dump; reconcile and renumber.
+- **Verify source-dump papers even when a DOI is given** (same author and year is not the same study).
+
+---
+
+## Non-Negotiables
+
+Before writing or modifying an article:
+
+1. **Scope:** primary topics must fit reconstructive urology, functional urology or urogynecology. Out of scope as primary topics: endourology for stones and primary urologic oncology. Reconstructive consequences (radiation injury, post-prostatectomy stricture, diversion complications, urethrectomy as a determinant of diversion) are in scope.
+2. **Voice:** write for reconstructive surgeons and urogynecologists, not patients or general-medicine readers. Keep operative relevance, anatomy, decision points, complications and outcomes, with specific rates and evidence quality.
+3. **Citations:** real published references only. Inline `<sup>[[N]](#refN)</sup>` with `<a id="refN"></a>N. ...` anchors after a `---` separator under `## References`; contiguous numbering; DOI links when available. GAS pages use footnotes (`[^N]`). Optionally add a stable parallel anchor `<a id="ref-author-year-journal"></a>` for new refs.
+4. **Cross-link instead of duplicating.** One authoritative home per concept; condition pages link to management, technique pages own operative detail.
+5. **Hidden pages** (`sidebar_class_name: sidebar-hidden-item` or a hidden `_category_.json`) must be reachable by an explicit database row or inline prose link from a visible hub, so orphan lint passes and readers can find them.
+
+Before committing:
+
+1. `npm run lint` (scope, citations, orphans, internal links, figure captions).
+2. `npm run status` if stubs were added or filled.
+3. `npm run typecheck` and `npm run build` if articles, links, routes, MDX or React changed.
+4. `git diff --check`.
+
+## Commands
+
+| Task | Command |
+|---|---|
+| Dev server | `npm start` |
+| Production build | `npm run build` |
+| TypeScript | `npm run typecheck` |
+| Full lint | `npm run lint` |
+| Individual lints | `npm run lint:scope` / `lint:citations` / `lint:orphans` / `lint:links` / `lint:figures` |
+| Reference-density advisory | `npm run lint:density` |
+| Freshness advisory | `npm run lint:freshness` |
+| External links | `npm run lint:external-links` or `node scripts/check-external-links.js --sample 200` (needs open network) |
+| Stub tracker | `npm run status` |
+| Unit tests | `npx vitest run` |
+| Video registry sync | `npm run videos:sync` (needs `YT_API_KEY` in `.env`) |
+| Video candidates for a page | `node scripts/suggest-page-videos.js <page.mdx>` (needs `src/data/videos.generated.json` from a sync) |
+| Voice pass 1 | `scripts/voice/pass1.py` (see `scripts/voice/`) |
+| Audit tooling | `scripts/audit/audit.py`, `scripts/audit/pubmed.py`, `scripts/audit/ledger.py` |
+| Site consistency (quarterly, needs network for the first) | `npm run refs:registry` (DOIs vs Crossref), `npm run consistency:people` (names, lifespans, attribution years across pages), `npm run consistency:same-source` (numbers attributed to one paper on several pages), `npm run scorecard` (voice, structure, Pass 1 coverage). Outputs are triage lists for Codex, then verify before editing; method in `reports/2026-10-03/site-consistency.md` |
+
+CI (`.github/workflows/ci.yml`) runs lint, typecheck, Vitest and build on every push and PR. Vercel runs `npm run build` including `postbuild`; preserve those hooks. Output is about 150 MB (October 1); the cap is 200 MB.
+
+---
+
+## Project Shape
+
+Docusaurus v3 medical reference wiki for functional urology, genitourinary reconstruction and urogynecology. Audience: residents, fellows, reconstructive surgeons and urogynecologists.
+
+| Directory | URL |
+|---|---|
+| `docs/01-foundations/` | `/docs/foundations` |
+| `docs/02-evaluation/` | `/docs/evaluation` |
+| `docs/03-clinical-conditions/` | `/docs/clinical-conditions` |
+| `docs/04-surgical-techniques/` | `/docs/surgical-techniques` (Treatment Atlas) |
+| `docs/05-special-populations/` | `/docs/special-populations` |
+| `docs/06-clinical-evidence/` | `/docs/clinical-evidence` (trial library; replaced Journal Club October 19) |
+| `docs/07-roots/` | `/docs/roots` (History & Lineage) |
+| `docs/08-resources/` | `/docs/resources` |
+
+URL rules: numeric prefixes are stripped from top-level dirs only (`03-clinical-conditions` → `clinical-conditions`); alphanumeric subsection prefixes stay (`04a-urethral-reconstruction`); a same-name file/dir collapses (`oral-cavity/oral-cavity.mdx` → `.../oral-cavity`); explicit `slug:` frontmatter wins (moved pages keep their old URL through `slug:`). Vercel uses `cleanUrls: true`, `trailingSlash: false`.
+
+Key files:
+
+| File | Purpose |
+|---|---|
+| `docusaurus.config.ts` | Site config, navbar, Algolia, metadata |
+| `sidebars.ts` | Sidebar wiring |
+| `src/css/custom.css` | Custom styling and reusable classes (dark-mode variants required) |
+| `src/components/GenericDatabase.tsx` | Searchable/filterable atlas databases |
+| `src/components/VideoCards.tsx` | Lazy YouTube (and direct-MP4) card grid |
+| `src/components/VideoLibrary.tsx`, `src/pages/video-library.tsx`, `src/data/videos.ts` | Video Library (generated, chunked registry) |
+| `src/components/EvidenceExplorer.tsx`, `src/data/clinical-evidence/` | Clinical Evidence library and timelines (`src/data/trials.ts` kept for Anki carddiff) |
+| `src/components/PatientHandouts.tsx`, `src/data/handouts.ts` | Handout gallery (gated by `WARWIKI_INCLUDE_HANDOUTS`) |
+| `src/components/SurgeonsExplorer.tsx`, `src/data/surgeons.ts` | GURS/URPS lineage explorer |
+| `scripts/check-*.js` | Lint checks |
+| `docs/_STATUS.md` | Stub tracker (generated) |
+| `algolia-synonyms.json` | Search synonyms (upload in the Algolia dashboard) |
+
+Navbar: Foundations · Evaluation · Clinical Conditions · Treatment Atlas · Special Populations · Library dropdown (Video Library, Journal Club, Resources) on the left; Search, About and GitHub on the right. Homepage title links to `/docs/foundations`; tagline "Reconstruction, codified."; search pill "Where should we start?". Brand blue `#185FA5`.
+
+---
+
+## Article Pattern
+
+```mdx
+---
+title: Short Sidebar Title
+sidebar_position: N
+---
+
+# Full Article Title
+
+Opening paragraph with reconstructive relevance and an early citation.<sup>[[1]](#ref1)</sup>
+
+---
+
+## Epidemiology
+## Etiology / Pathophysiology
+## Clinical Presentation / Diagnosis
+## Classification / Staging
+## Management
+## Complications
+## Outcomes / Follow-Up
+## See Also
+## Videos            (optional; immediately before References)
+## References
+
+<a id="ref1"></a>1. Last FM, et al. "Article Title." *Journal.* Year;Volume(Issue):Pages. doi:[10.xxxx/...](https://doi.org/10.xxxx/...)
+```
+
+MDX gotchas: escape prose angle brackets (`&lt;35`); escape `&` in JSX attributes (`&amp;`); no `$$` LaTeX; raw HTML must be valid JSX; landing pages use `hide_title: true` (which also suppresses the TTS listener).
+
+Source-dump cleanup (chatbot-assisted drafts): strip trailing "Would you like..." prompts, `undefined` figure captions and placeholder figures without embed rights, external lay-source links, and stray refs from other pages; rebuild mashed tables; repair truncated values (`p [N]`, "BMI [N]"); convert bracket citations; confirm every reference supports its claim.
+
+## Atlas, Database And Page Conventions
+
+- **Landing page is the database.** Treatment Atlas sections lead with a short "General Principles" block and a `GenericDatabase`; named technique pages hang off database rows. Row names are bare procedure names (optional acronym), no indications or evidence claims. Database `slug:` entries count as inbound links for orphan lint.
+- **Restorative databases only.** Destructive or complication-management procedures (urethrectomy, urethrolysis) live in the atlas section but stay out of the treatment databases.
+- **Consolidate near-identical variants** (80%+ shared content) onto one page with anchor routing from index rows (robotic needle drivers, vessel sealers, cavernotomes); add Vercel redirects for retired slugs. Genuinely distinct peers stay separate.
+- **Split condition from technique** when a condition has a substantial dedicated operation (urethral stricture ↔ urethroplasty family; RPF ↔ ureterolysis).
+- **Spanning topics:** one full page plus short cross-linked notes elsewhere, never duplicated (drain-and-retain; female AUS).
+- **Hub → dedicated page:** lead the hub subsection with `> See the dedicated [X] page ...` and keep the hub copy a short orientation.
+- **Duplicate titles** across sections get a parenthetical suffix only when they actually collide (e.g. "Artificial Urinary Sphincter (Device)" vs "(Procedure)"); URLs unchanged.
+- **Index pages:** every section has `index.mdx` with `hide_title: true`. Top-level landings use `section-stack` (`section-stack-title section-stack-link` + `section-stack-desc`); deeper indexes may use `toc-list` / `toc-chips`.
+- **Cosmetic energy devices:** distinguish surgical cutting-tool use from nonsurgical "rejuvenation" marketing and FDA warnings. Male cosmetic database dropped its notes column (every row has a page); the female database keeps notes until every row does.
+- **Instruments:** house template is design → RU/urogyn uses → comparison table → technique pearls → safety → history → cross-links → references; index "use" column ≈ 10-15 words.
+
+## Media
+
+- **Videos:** up to 4 genuinely on-topic videos per page (user, October 3), `## Videos` immediately before `## References`, via `VideoCards` (`{ id, title, subtitle }` for YouTube; `sourceUrl` + `sourceType: 'mp4' | 'vimeo'` and optional `articleUrl` (DOI) for journal videos). Only embeddable videos: skip link-card-only sources unless a video is exceptional (user, October 3). Open-access journal sources: Urology Video Journal (`ars.els-cdn.com` MP4s), Int Braz J Urol 2025+ (SciELO MP4s), Facts Views Vis ObGyn (YouTube/Vimeo); IUJ (Springer consent-gated) and LWW journals do not embed ([reports/2026-10-03/video-journal-candidates.md](reports/2026-10-03/video-journal-candidates.md)). Workflow: `npm run videos:sync` → `node scripts/suggest-page-videos.js` → curate by hand (the matcher is loose; a wrong video is worse than none) → clean titles via YouTube oEmbed. The Video Library is the @warwikihq channel mirror only; outside videos go on pages as external link cards. Domain-restricted Vimeo (oEmbed `domain_status_code: 403`, e.g. SUFU/ISSM) → external `web-card--video` link, not an iframe. Elsevier video-journal supplements (e.g. Urology Video Journal) embed as direct MP4s from `https://ars.els-cdn.com/content/image/1-s2.0-<PII>-mmc1.mp4` via `VideoCards` `sourceUrl` (ScienceDirect itself blocks automated fetches; ask the user for the PDF).
+- **Open-access figures from cited papers (October 1):** CC BY and CC BY-NC figures may be reused with credit, in `static/img/figures/<page>-<author>-<year>-<fig>.jpg`, caption ending "From Author X, et al. Journal. Year;Vol:Pages, Fig. N (CC BY 4.0)." View the figure first; skip any with its own credit line (reprinted, adapted, courtesy, in-image ©), an identifiable patient, or genital photographs of children. Save at most 1400 px, JPEG quality ~74 (postbuild drops the unused static copies Docusaurus makes of Markdown images; the hashed copy in build/assets/images is the one served). Candidate list: [reports/open-access-figures/](reports/open-access-figures/).
+- **Figures:** `![alt](/img/...)`, then a **blank line**, then an italic caption (enforced by `npm run lint:figures`). Public-domain/CC anatomy plates live in `static/img/anatomy/` (verify plate content; filenames mislead). Existing schematics are diagrams-as-code in `scripts/diagrams/*.js` → `static/img/diagrams/*.svg` (edit = rerun the generator), but do not create new ones. Never schematize radiograph/CT/MRI appearances. Keep explanatory prose in the caption, not inside a downscaled figure.
+- **Handouts pipeline (off-repo masters):** HTML → headless Chrome PDF + JPEG/WebP preview → `static/handouts/<slug>[.<lang>].pdf` and `static/img/handouts/`; add the entry or language code in `src/data/handouts.ts` (`node scripts/add-lang.js <code> <slugs>`). Run the overflow gate (`pageOvf` and `colsOvf` must be 0) before rendering. CJK/Devanagari/Arabic need embedded web fonts and `--virtual-time-budget`; Arabic needs `dir="rtl"`. Full detail in the archived handbook and CHANGELOG (June 10-16, September 29).
+
+## Surgeon Profiles
+
+Profiles live at `docs/07-roots/surgeons/{a-g|h-r|s-z}/{name}.mdx` (hidden category, reached through `docs/07-roots/surgical-lineage.mdx` / `SurgeonsExplorer`). Link with `s.path`, not `s.id`. Surgeon profiles are out of the audit queue by user decision. Only featured surgeons have pages (top 105 by WARWIKI citations plus school founders, October 1); others keep lineage data in `src/data/surgeons.ts` with no `path`. Each profile MDX imports `src/data/surgeon-citations/<id>.json` (generated in prebuild). The GURS lineage merges `src/data/gurs-lineage.generated.json` (Lee Zhao's tree, used with permission; rebuild with `scripts/genealogy/build-lineage.js`) via `src/data/lineage.ts`.
+
+exec
+/bin/zsh -lc "rg -n 'What the errors are|"'^#|''^##'"' /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-04/residual-error-sample.md" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+exec
+/bin/zsh -lc 'rg -n "infection-prophylaxis|suppressive|residual-error|Clinical Evidence" /Users/joyboy/.codex/memories/MEMORY.md' in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+1:# Residual-error sample after the second review (October 4, 2026)
+5:## Method
+12:## Result
+25:## What the errors are
+45:## Interpretation
+49:## Follow-up: claim-level number check and second sample (October 4, evening)
+82:## Claim-level pass and pre-publication gate (October 4–5)
+117:## Third sample, dose and guideline checks (October 5; paused for Codex credits)
+141:## Results after resuming (October 5, night)
+174:## Reliability pass after the cleanup (October 5, late night)
+
+ succeeded in 0ms:
+892:- WARWIKI, error reduction, Claude handoff, scripts/review/gate.py, source-needed, fuzzy matching, residual-error-sample, probability sample, reports/2026-10-06, 0e62a011
+899:- When the user asked to get the error rate “as close to 0 as possible” -> frame success as zero known P0/P1 defects in completed scope plus a fresh residual-error estimate, never unsupported clinical or site-wide perfection. [Task 2]
+
+exec
+/bin/zsh -lc "rg -n '"'^##? ?4|''^##? ?12|evidence wording|TRUST THE READER'"' /Users/joyboy/Documents/WARWIKI/warwiki/STYLE.md" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+11:- **Section 4** governs evidence wording in all new writing and in the audit.
+46:## 4. Evidence wording (new writing and the audit)
+160:## 12. Trust the reader (October 8, 2026)
+
+exec
+/bin/zsh -lc "sed -n '46,83p;160,186p' STYLE.md" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+## 4. Evidence wording (new writing and the audit)
+
+- Use "causes" or "reduces" only when a causal conclusion is justified.
+- Use "is associated with" for observational findings.
+- Use "randomized trials showed" for randomized evidence.
+- Use "retrospective series report" for retrospective evidence.
+- Use "guidelines recommend" only for an explicit recommendation, with the guideline's own strength label (AUA Strong/Moderate/Conditional/Expert Opinion/Clinical Principle; EAU strong/weak).
+- Use "has been described" for technical reports and small series.
+- Use "evidence is insufficient to determine" when that is the case.
+
+Do not convert:
+
+- association into causation
+- absence of evidence into evidence of no effect
+- statistical significance into clinical importance
+- one study into consensus
+- expert practice into a guideline recommendation
+- a surrogate outcome into a patient-centered one
+- technical feasibility into efficacy
+
+Report n/N, comparator, follow-up and the definition of success when the source gives them. Keep these outcomes distinct: anatomical success, functional success, patient-reported improvement, retreatment, revision, explantation, recurrence and freedom from reoperation. "Rare" needs a frequency; "durable" needs a follow-up duration.
+
+Label manufacturer information, a named surgeon's technique and institutional practice as such.
+
+## 5. Invariants for any voice pass (hard constraints)
+
+A voice pass changes how facts are said, never which facts are said.
+
+1. Frontmatter, `import` lines, JSX components, image lines and captions, video blocks and the References section stay byte-identical.
+2. Heading text stays identical, because headings generate URL anchors that other pages link to. Suggest better headings in the report.
+3. Tables keep the same rows, the same cells per row, the same first-column labels, and every number, name and citation marker in each cell. Only Pass 1 rules apply inside cells.
+4. Every number, unit, dose, rate, denominator, date and trial name stays. Every citation marker stays attached to the same claim, and every link target stays.
+5. Hedging and recommendation strength stay as written. Report suspected overstatement for the audit rather than fixing it silently.
+6. Nothing useful is deleted, including operative steps, pearls, specifications, warnings, history and sections (content-preservation policy). A sentence may go only when the same fact appears elsewhere in the same section, and each removal is listed.
+7. The output is valid MDX: `&lt;` and `&gt;` in prose, intact `<sup>` markup, no `{#id}` anchors.
+8. `python3 scripts/voice/check_voice_diff.py <original> <revised>` prints PASS. Explain every WARN in the report.
+
+Pass 1 is run with `scripts/voice/pass1.py` (extract, edit by ID, apply). It reverts any unit that loses a citation marker, link or number.
+## 12. Trust the reader (October 8, 2026)
+
+The owner's rule: state the finding and its population once, then stop. Readers are surgeons; they can see that a lower-limb cohort is not a Fournier cohort. Spelling it out "reads like AI, saying the quiet part loud."
+
+Cut:
+
+- **Non-transfer warnings.** "Do not transfer its 87% versus 29% result to perineal ulcers", "this result is not a trial of closed incisions, graft bolsters, or Fournier reconstruction", "Trauma studies do not establish faster closure after Fournier debridement".
+- **Rebuttals of an overclaim nobody made.** "X does not establish/prove Y", "is not a universal rule", "should not be read as", "This is a major-burn resource, not routine GU wound care", "not only burns exceeding 90%".
+- **Restated design limits.** If the sentence already says "retrospective", "single-center", "case report" or names the population, do not add a sentence explaining what that means.
+- **Process notes.** Anything describing how the site checked a source: "in the inspected abstract", "not independently assessed", "Checked 2026-09-11", "the full notice text was not reviewed", "confidence interval not reported". These belong in the audit ledger, not on the page.
+
+Keep:
+
+- The population, design, size, follow-up and endpoint, written into the sentence that reports the result ("In a lower-limb cohort (80% diabetic), …").
+- Real safety points, contraindications, label limits and guideline statements, including a guideline "does not recommend".
+- A genuine conflict between sources, stated once.
+
+Fixing an overclaim means correcting the sentence's own scope (name the population or design), never adding a separate caveat sentence.
+
+### Facts only (October 21, 2026)
+
+The owner's rule, tightened: "I want it to read more like Wikipedia, just facts." A sentence earns its place by stating a fact: a result, a number, a definition, a mechanism, a guideline position, a contraindication or a safety point. Delete sentences and clauses that comment on a fact instead of stating one. These patterns are almost always commentary:
+
+- **"X alone does not …" / "X alone is insufficient."** "A job title alone does not establish dose"; "sex alone does not describe the stage or treatment needs of an individual patient"; "histologic appearance alone is insufficient".
+- **"Does not establish / replace / describe / measure / explain / assign …" used as interpretation.** "MRI does not replace histologic staging by resection"; "These population rates do not measure the risk faced by a symptomatic person"; "A negative visual examination does not explain a persistently positive high-grade cytology".
+- **"This is X, not Y" and "…, rather than Y" framing.** "It is a prompt for history taking, rather than a risk calculator"; "These are tendencies across tumors, not a required sequence for each patient"; "this is not a population-wide prevalence".
+- **"Matters."** "Geography matters when exposure history suggests a regional cause"; "These changes matter when reading older series".
+
+exec
+/bin/zsh -lc "sed -n '25,45p' reports/2026-10-04/residual-error-sample.md" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+## What the errors are
+
+Almost all are the same class the first pass found: a correct paper with the wrong subgroup, endpoint, denominator or time point.
+
+- **Wrong endpoint:**
+  - stretched length reported as flaccid length (Li 2006);
+  - a composite "scope passage or Qmax > 15" reported as patency;
+  - an eight-week secondary endpoint reported as the primary.
+- **Mixed cohort attributed to one operation:**
+  - Panfilov's 88 patients, of whom 31 had ligament release;
+  - a 14.6% pooled augmentation complication rate shown as a ligament-division rate;
+  - a 9.7% instability rate from a combined-procedure arm.
+- **Selected denominator hidden:** Goddard's 98% came from 70/233 patients reached by phone.
+- **Two endpoints merged into one range:** Nie 2009's fistula 1.5% and obstruction 4.7%. The pilot found this on the technique page, but the copy on the condition page was never fixed.
+- **Fewer, but more consequential:**
+  - a wrong gracilis pedicle description;
+  - an over-absolute Johanson stage-1 instruction;
+  - the Optilume penile indication labelled off-label;
+  - a midodrine label instruction softened.
+
+## Interpretation
+
+exec
+/bin/zsh -lc "sed -n '60,72p' docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx; sed -n '317,325p' docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx; sed -n '150,156p' docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+
+The AUA/CUA/SUFU 2025 guideline recommends offering cranberry for prophylaxis to women with recurrent UTIs <Rec>(Moderate Recommendation, Grade B)</Rec>.<sup>[[21]](#ref21)</sup> Declared PAC content helps product selection; WikiGuidelines cites cranberry products containing 36 mg PAC.<sup>[[6]](#ref6)</sup> WikiGuidelines also discusses selected populations.<sup>[[6]](#ref6)</sup> In women with rUTI, the 2023 Cochrane review found fewer symptomatic, culture-verified UTIs across eight trials (n = 1,555; RR 0.74; 95% CI 0.55–0.99).<sup>[[34]](#ref34)</sup> An earlier two-trial meta-analysis (n = 250) found RR 0.53 (95% CI 0.33–0.83).<sup>[[7]](#ref7)</sup> Evidence is insufficient in older adults, patients with bladder-emptying problems, and pregnancy.<sup>[[6]](#ref6)</sup>
+
+### D-mannose — negative in a placebo-controlled RCT
+
+D-mannose binds type-1 fimbriae and theoretically blocks *E. coli* adherence to the urothelium. Small trials suggested benefit, but the MERIT RCT (Hayward 2024, *JAMA Intern Med*) randomized 598 women in primary care with rUTI and was negative: among 583 with primary-outcome data, 150/294 (51.0%) assigned D-mannose versus 161/289 (55.7%) assigned placebo contacted ambulatory care for a clinically suspected UTI over 6 months.<sup>[[12]](#ref12)</sup> The authors explicitly concluded D-mannose should not be recommended to prevent future UTIs in this population.
+
+### Increased water intake
+
+One RCT showed benefit from an additional 1.5 L of water daily in healthy premenopausal women who initially drank less than 1.5 L/day.<sup>[[6]](#ref6)</sup> Offer increased intake to low-volume drinkers when appropriate; do not prescribe the same extra volume to every patient or override fluid restrictions.
+
+### Probiotics
+
+
+**2026 Cochrane update:** 22 RCTs involving 3,095 women support discussing a concomitant midurethral sling for symptomatic or occult SUI; it probably reduces postoperative SUI, while adverse-effect estimates remain uncertain. A staged continence procedure is also reasonable.<sup>[[9]](#ref9)</sup> Evidence in women with neither overt nor occult SUI is less certain.<sup>[[9]](#ref9)</sup>
+
+Before prolapse surgery, assess baseline continence and discuss de novo SUI. A prolapse-reduction stress test may help counselling; routine invasive urodynamics is not required solely because prolapse is present.<sup>[[4]](#ref4)[[12]](#ref12)</sup> See [Stress Urinary Incontinence (Female)](/docs/clinical-conditions/03a-storage-incontinence/sui-female), [Mixed Urinary Incontinence](/docs/clinical-conditions/03a-storage-incontinence/mixed-incontinence), and the [Female SUI treatment database](/docs/surgical-techniques/04f-incontinence-procedures/female-sui/female-stress-incontinence-database) for procedure selection.
+
+In the CARE trial, 12 of 313 stress-continent women leaked on urodynamics before sacrocolpopexy without prolapse reduction. With reduction at 300 mL, detection varied by method, from 6% with a pessary to 30% with a speculum. Women who leaked with reduction more often reported stress incontinence 3 months after surgery, both without a Burch colposuspension (58% vs 38%, p = 0.04) and with one (32% vs 21%, p = 0.19).<sup>[[39]](#ref39)</sup> After the 2016 correction of a stress-test coding error, the primary CARE report gives postoperative stress incontinence in women without leakage on reduction testing as 47.9% without a Burch versus 22.9% with one (p &lt; 0.001); the uncorrected primary report gave 38.2% and 20.8%.<sup>[[49]](#ref49)</sup>
+
+**Decision Framework:**
+
+| **Skin care / pads** | Any ongoing leakage | Barrier creams, breathable pads, prompt cleansing; treat dermatitis early |
+| **Anal plugs / inserts and vaginal inserts** | Selected patients wanting a device | ASCRS 2023 does not routinely recommend anal or vaginal inserts <Rec>(conditional recommendation, very low-quality evidence)</Rec>; ACOG 2019 says tolerability and availability limit use and that more long-term data are needed before recommending newer devices<sup>[[3]](#ref3)[[4]](#ref4)</sup>. Named devices: the Eclipse vaginal bowel-control system (an intravaginal pump that inflates a balloon to occlude the distal rectum and deflates for defecation; FDA-cleared 2015, now marketed by Laborie) was successfully fit in 61/110 women (55.5%). Among the 61 who entered treatment, 48/61 (78.7%) had ≥50% fewer episodes at 1 month; 38/44 (86.4%) of those assessed after the optional 3-month extension met that endpoint<sup>[[28]](#ref28)</sup>; the RENEW anal insert (a single-use silicone plug) achieved ≥50% reduction in incontinence frequency in 62% of intention-to-treat subjects, with a 32% mean improvement in severity score at 12 weeks in an uncontrolled study<sup>[[29]](#ref29)</sup>; a 2026 randomized trial of a different single-use anal insert found no significant difference from usual care in its prespecified St Mark's score response at 8 weeks (9/35 versus 7/37), although post hoc episode counts favored the insert and 20/35 users reported device-related events<sup>[[48]](#ref48)</sup> |
+| **Transanal (rectal) irrigation** | Incomplete evacuation with seepage, neurogenic bowel, low anterior resection syndrome | Emptying the rectum on a schedule prevents later leakage; a 2025 systematic review of 16 studies (1,567 adults) with constipation and/or FI, excluding studies limited to neurogenic bowel or low anterior resection syndrome, found mostly observational symptom improvement and 3–57% discontinuation across studies<sup>[[19]](#ref19)</sup> |
+
+A large 2×2 factorial trial (the CAPABLe trial) randomized 300 women with normal stool consistency to oral placebo plus an education pamphlet (42), placebo plus anorectal manometry-assisted biofeedback (84), loperamide plus education (88), or loperamide plus biofeedback (86); 296 were eligible for the efficacy analyses. It found no significant difference in change in St Mark's incontinence score at 24 weeks between loperamide and placebo, biofeedback and education alone, or the combined intervention versus either component alone. Constipation occurred in 33/88 (38%) and 44/86 (51%) of the loperamide groups versus 5/42 (12%) and 19/84 (23%) of the placebo groups.<sup>[[32]](#ref32)</sup>
+
+### Pelvic-floor physical therapy and biofeedback
+
+exec
+/bin/zsh -lc "sed -n '103,110p' docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx; sed -n '66,73p' docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx; sed -n '123,128p;162,168p' docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx; sed -n '155,160p' docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx; sed -n '70,75p' docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx; sed -n '132,138p' docs/05-special-populations/05e-womens-health/recurrent-uti.mdx" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+- **Retrospective design and responder bias.** The 62% response rate and a difference between responders and non-responders in prior hysterectomy limit generalization.<sup>[[2]](#ref2)</sup>
+- **Single-center experience.** The published data come primarily from the University of Michigan.<sup>[[1]](#ref1)[[2]](#ref2)</sup>
+- **Incomplete or anatomically mixed follow-up.** Larson et al. had postoperative anatomic data for 162/242 responders, mostly from a prior clinic visit; only 70 returned for an approximately eight-year study examination.<sup>[[2]](#ref2)</sup>
+- **Reoperation context.** In a 2026 Danish nationwide cohort of 1,374 women, SSLF had the highest overall reoperation rate (30.7%; aHR 2.14, 95% CI 1.26–3.62) and sacrocolpopexy the lowest apical reoperation rate (1.3%). The cohort did not isolate Michigan four-wall fixation; the prior [SSLF review](/docs/surgical-techniques/04g-prolapse-repair/sacrospinous-ligament-fixation) discusses broader options.<sup>[[5]](#ref5)</sup>
+- **Buttock pain and vaginal axis.** In an OPTIMAL secondary analysis, new or worsening buttock pain at 4–6 weeks occurred in 10.5% after SSLF versus 4.6% after uterosacral suspension; the trial enrolled women having a concurrent retropubic midurethral sling, and Michigan four-wall fixation was not isolated.<sup>[[13]](#ref13)</sup> Axis change after sacrospinous suspension is a technical consideration.<sup>[[4]](#ref4)[[6]](#ref6)</sup>
+
+---
+
+The SAM trial compared native-tissue sacrospinous hysteropexy with Manchester repair in women with POP-Q point D at or proximal to −1 cm (D ≤ −1 cm). At two years, composite success (no prolapse beyond the hymen in any compartment, no bothersome bulge and no retreatment) was 172/197 (87.3%) after Manchester repair versus 151/196 (77.0%) after sacrospinous hysteropexy; the prespecified noninferiority criterion for sacrospinous hysteropexy was not met.<sup>[[3]](#ref3)</sup>
+
+### Keep mesh evidence separate
+
+SUPeR tested polypropylene Uphold LITE mesh sacrospinous hysteropexy against vaginal hysterectomy with bilateral USLS in postmenopausal women with prolapse beyond the hymen. The primary 3-year analysis did not show a significant difference: model-estimated 36-month failure was 24% after mesh hysteropexy versus 36% after hysterectomy (adjusted hazard ratio 0.61, 95% CI 0.37–1.02; p = 0.06), and mesh exposure occurred in 7/88 (8%) women.<sup>[[27]](#ref27)</sup> The five-year report tabulated cumulative first-failure proportions of 29/79 (37%) versus 42/78 (54%) at the five-year visit. The interval-censored five-year analysis, a secondary objective of the trial, favored mesh hysteropexy (adjusted hazard ratio 0.58, 95% CI 0.36–0.94), but proportional hazards were not met. The specific mesh product is no longer marketed in the United States for transvaginal POP repair.<sup>[[11]](#ref11)</sup>
+
+In the 2026 ten-year SUPeR extension, composite failures accumulated in 35/88 women (40%) assigned to mesh hysteropexy and 46/87 (53%) assigned to hysterectomy plus USLS; only 112/175 analyzed participants entered the years 6–10 extension. The adjusted time-to-failure hazard ratio was 0.64 (95% CI 0.41–1.00; p = 0.05), and the expected additional mesh-durability gain during years 6–10 was not observed. No between-group difference in patient-reported outcomes or clinically important complications was demonstrated.<sup>[[21]](#ref21)</sup>
+
+
+| Procedure | IPSS Δ (mixed time points) | Qmax Δ (mixed time points; see text) | Volume range | Anesthesia | Median lobe |
+|---|---|---|---|---|---|
+| Optilume BPH | −11.5 (ITT, 100 randomized)<sup>[[5]](#ref5)</sup> | +10.3 mL/s (82 paired at 12 mo)<sup>[[5]](#ref5)</sup> | 20–80 g | Local / sedation | Intravesical protrusion above 1 cm excluded in PINNACLE; smaller protrusion included<sup>[[8]](#ref8)</sup> |
+| Rezūm | −11.3 | +5.6 | 30–80 g | Local / sedation | Treatable |
+| UroLift (PUL) | −11.0 at 1 mo<sup>[[9]](#ref9)</sup> | +4.3 at 1 mo<sup>[[9]](#ref9)</sup> | 30–80 cc in the L.I.F.T. trial<sup>[[15]](#ref15)</sup>; the US IFU (Rev B, 2020) excludes &gt;100 cc<sup>[[26]](#ref26)</sup> | Local / sedation | Obstructing median lobe excluded in the L.I.F.T. trial<sup>[[15]](#ref15)</sup>; the US IFU (Rev B, 2020) includes median-lobe hyperplasia<sup>[[26]](#ref26)</sup> |
+
+Limitations:
+
+- Randomized data end at 1 year against sham. Uncontrolled follow-up reaches 4 years.
+- PINNACLE excluded intravesical prostatic protrusion above 1 cm; smaller protrusion was included.<sup>[[8]](#ref8)</sup>
+- Prostate volume is limited to 20–80 g.
+- The AUA 2023 Guideline Amendment, whose evidence search ended in October 2022 before the pivotal trial was published, did not address the device. The 2026 guideline added a Conditional Recommendation (Grade C).<sup>[[19]](#ref19)[[21]](#ref21)</sup>
+
+References: AUA 2023 sham + TURP RCT data<sup>[[4]](#ref4)</sup>; Cochrane 2022<sup>[[2]](#ref2)</sup>; Abt 2-yr RCT<sup>[[17]](#ref17)</sup>.
+
+In the Abt single-center, open-label RCT (n = 103), IPSS fell 9.23 points after PAE and 10.77 after TURP at 12 weeks, and noninferiority within the 3-point margin was not shown (95% CI −1.45 to 4.52).<sup>[[31]](#ref31)</sup> At 2 years, TURP was superior for IPSS (difference 2.88, p = 0.047; a protocol-defined secondary endpoint without correction for multiple testing) and Qmax (difference −6.33 mL/s). PAE had fewer adverse events, although the distribution across severity classes was similar.<sup>[[17]](#ref17)</sup>
+
+---
+
+| Surgical retreatment rate | — | 4.4% |
+
+Sources for the table: final 5-yr trial<sup>[[1]](#ref1)</sup>; 3-yr<sup>[[13]](#ref13)</sup>; 2-yr durability<sup>[[9]](#ref9)</sup>. The 3-month figures come from the 2016 trial, in which IPSS fell by 11.2 points with Rezūm versus 4.3 with the sham procedure.<sup>[[4]](#ref4)</sup> Sham-controlled comparison ended at 3 months, after which control-arm crossover occurred. Five-year symptom estimates include 77 of the 135 men treated in the original Rezūm arm (136 randomized); six of the 135 treated men (4.4%) underwent surgical retreatment, and 11.1% initiated BPH medication through five years.<sup>[[1]](#ref1)</sup>
+
+A Canadian prospective registry (n = 229, including 83 with prostates ≥ 80 mL) reported IPSS improvement of 59% and Qmax improvement of 74% at 12 months.<sup>[[6]](#ref6)</sup> In a single-center analysis, IPSS improved significantly in all prostate-volume tertiles, and medium and large glands reached a 25% IPSS decrease sooner than small glands.<sup>[[12]](#ref12)</sup>
+### B. Methenamine hippurate
+
+AUA 2025 permits methenamine hippurate prophylaxis for women with rUTI <Rec>(Conditional Recommendation, Grade C)</Rec>. It is a urinary antiseptic that can reduce reliance on daily antibiotics. **Do not routinely add vitamin C:** urinary acidifiers have not been shown to lower urinary pH significantly or to enhance methenamine in RCTs, so AUA advises against combining them. For the regimen, contraindications, and pH/label distinction, use the [methenamine prescribing hub](/docs/foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention#methenamine-hippurate).<sup>[[3]](#ref3)[[24]](#ref24)[[27]](#ref27)</sup>
+
+- **ALTAR trial** (Harding et al., 2022; 240 randomized, 205 in the modified intention-to-treat primary analysis). Multicenter RCT demonstrated methenamine hippurate non-inferior to daily low-dose antibiotics for prevention of symptomatic, antibiotic-treated UTIs during 12 months (1.38 vs. 0.89 episodes / person-year; absolute difference 0.49, within the predefined non-inferiority margin of 1 UTI / person-year).<sup>[[25]](#ref25)</sup> At the 6- or 12-month visits, resistance to at least one antibiotic in *E. coli* from perineal swabs was found in 46/64 antibiotic participants versus 39/70 methenamine participants (72% vs. 56%; p = 0.05); at 18 months, six months after treatment ended, multidrug resistance was found in 9/45 methenamine versus 2/39 antibiotic participants (20% vs. 5%; p = 0.06). Both analyses were exploratory.<sup>[[24]](#ref24)</sup>
+- **ImpresU trial** (Heltveit-Olsen et al., 2025; 289 women recruited, 281 analyzed; age ≥70 years). The modified intention-to-treat analysis estimated 25% fewer antibiotic treatments for UTI during 6 months with methenamine than placebo (IRR 0.75; 95% CI 0.57–1.0; p = 0.049); the complete-case analysis of 271 women gave IRR 0.77 (95% CI 0.58–1.0; p = 0.078). After discontinuation, the methenamine group had a higher incidence of antibiotic-treated episodes during the six-month follow-up (IRR 1.7; 95% CI 1.3–2.3).<sup>[[26]](#ref26)</sup>
+- **Emerging concern.** Hodgkinson et al. (2026) identified growth above the study-defined formaldehyde threshold in 11/191 ALTAR-derived *E. coli* isolates (5.8%), with *frmR* variants or plasmid mechanisms. The genomic and laboratory findings support possible resistance evolution.<sup>[[27]](#ref27)</sup>
+
+web search: 
+web search: Hayward Mort D-mannose 2024 150 294 161 289 PubMed ...
+codex
+The batch has 13 claims spread across nine pages. I’ve confirmed the quoted text against the current files; the first three source checks support the MERIT figures, the CARE detection range, and the corrected CARE percentages. I’m checking the remaining trials and any paragraph-level citation placement now.
+web search: 
+web search: site:pubmed.ncbi.nlm.nih.gov "Controlling Faecal Incontinence" "constipation" "33" ...
+web search: 
+web search: "Constipation" "33/88" "44/86" loperamide ...
+web search: 
+web search: https://pubmed.ncbi.nlm.nih.gov/?term=10.1001%2Fjama.2019.12812
+web search: 
+web search: Nager 2019 JAMA mesh hysteropexy 24 36 hazard 0.61 exposure 7 88 PubMed ...
+web search: 
+web search: "Controlling Faecal Incontinence" full text PMC Jelovsek 2019 ...
+web search: 
+web search: 
+web search: 
+web search: Kaplan PINNACLE 2023 11.5 10.3 82 100 20 80 intravesical protrusion 1 cm ...
+web search: 
+web search: "PINNACLE" "11.5" "10.3" "82" Optilume ...
+web search: 
+web search: "46/64" "39/70" methenamine ...
+web search: 
+web search: "The PINNACLE Study" "11.5" "10.3" ...
+web search: 
+web search: site:jamanetwork.com "2019.12812" "24%" "36%" "7" ...
+web search: 
+web search: site:jamanetwork.com/journals/jama/fullarticle/2749873 "7" "88" "exposure" ...
+web search: 
+web search: '7 of 88'
+web search: 
+web search: "sacrospinous hysteropexy with graft" "29/79" ...
+web search: 
+web search: "Effect of sacrospinous hysteropexy with graft" "29/79" pdf ...
+web search: 
+web search: "SUPeR" "secondary objective" "5 years" Nager ...
+web search: 
+web search: "Cumulative failures" "29/79" "42/78" hysteropexy ...
+web search: 
+web search: "PMC8328912" "29/79" ...
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import requests
+u='https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8328912/fullTextXML'
+try:
+ r=requests.get(u,timeout=10)
+ print(r.status_code,len(r.content),r.text[:80])
+except Exception as e: print(type(e).__name__,str(e)[:200])
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'requests'
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import urllib.request
+u='https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8328912/fullTextXML'
+try:
+ r=urllib.request.urlopen(u,timeout=10)
+ b=r.read()
+ print(r.status,len(b),b[:80])
+except Exception as e: print(type(e).__name__,str(e)[:200])
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 5ms:
+web search: 
+web search: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8328912/fullTextXML
+web search: 
+web search: "Effect of sacrospinous hysteropexy with graft" "29/79" "42/78" AJOG ...
+web search: 
+web search: https://europepmc.org/articles/PMC8328912
+web search: 
+web search: 
+web search: 
+web search: "Controlling faecal incontinence in women" "PMC" Jelovsek ...
+web search: 
+web search: "PMC8328912" "Failure, No./total" "60" ...
+web search: 
+web search: site:pmc.ncbi.nlm.nih.gov/articles/PMC8328912 "secondary objective" ...
+web search: 
+web search: '77'
+web search: 
+web search: '136'
+web search: 
+web search: "Rezum" "136" "135" randomized treated McVary
+web search: 
+web search: https://www.bmj.com/content/376/bmj-2021-0068229
+web search: 
+web search: site:pmc.ncbi.nlm.nih.gov/articles/PMC11319191 "intravesical prostatic protrusion" ...
+web search: 
+web search: 'intravesical prostatic protrusion'
+web search: 
+web search: "PMC12721621" pdf ...
+web search: 
+web search: "Controlling faecal incontinence in women" "Constipation was the most common adverse event" pdf ...
+web search: 
+web search: "SUPeR" "secondary objective" trial failure ...
+web search: 
+web search: "PMC8328912" "secondary objective" "three" ...
+web search: 
+web search: '47.9 percent'
+web search: 
+web search: "47.9" "22.9" "without" "Burch" 2016 ...
+web search: 
+web search: https://www.nejm.org/doi/full/10.1056/NEJMx160015
+exec
+/bin/zsh -lc "sed -n '112,135p' docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+---
+
+## Sexual function preservation
+
+EVEREST-I, PINNACLE (1 and 2 years) and SUMMIT reported preserved group-level sexual-function questionnaire results.<sup>[[4]](#ref4)[[5]](#ref5)[[6]](#ref6)[[8]](#ref8)</sup> In PINNACLE, ejaculatory dysfunction was reported as an adverse event in 4/98 treated men and 1/48 sham participants; no treatment-related de novo erectile dysfunction was reported.<sup>[[5]](#ref5)</sup> Narrative reviews place it with UroLift and iTIND among the MISTs with the best sexual-function profiles, in contrast to TURP (retrograde ejaculation 60–75%, ED approximately 14%) and Aquablation (retrograde ejaculation 7–10%).<sup>[[3]](#ref3)[[9]](#ref9)</sup>
+
+---
+
+## Comparison with other MISTs
+
+No head-to-head RCTs directly compare Optilume BPH with other MISTs; comparisons are indirect via narrative reviews and network meta-analyses.<sup>[[3]](#ref3)[[9]](#ref9)[[10]](#ref10)[[11]](#ref11)</sup>
+
+| Procedure | IPSS Δ (mixed time points) | Qmax Δ (mixed time points; see text) | Volume range | Anesthesia | Median lobe |
+|---|---|---|---|---|---|
+| Optilume BPH | −11.5 (ITT, 100 randomized)<sup>[[5]](#ref5)</sup> | +10.3 mL/s (82 paired at 12 mo)<sup>[[5]](#ref5)</sup> | 20–80 g | Local / sedation | Significant median-lobe component (e.g., intravesical protrusion &gt; 1 cm) excluded in PINNACLE; smaller protrusion included<sup>[[8]](#ref8)[[25]](#ref25)</sup> |
+| Rezūm | −11.3 | +5.6 | 30–80 g | Local / sedation | Treatable |
+| UroLift (PUL) | −11.0 at 1 mo<sup>[[9]](#ref9)</sup> | +4.3 at 1 mo<sup>[[9]](#ref9)</sup> | 30–80 cc in the L.I.F.T. trial<sup>[[15]](#ref15)</sup>; the US IFU (Rev B, 2020) excludes &gt;100 cc<sup>[[26]](#ref26)</sup> | Local / sedation | Obstructing median lobe excluded in the L.I.F.T. trial<sup>[[15]](#ref15)</sup>; the US IFU (Rev B, 2020) includes median-lobe hyperplasia<sup>[[26]](#ref26)</sup> |
+| iTIND | −10.5 | +3.9 | up to ~ 75 g | Local / sedation | — |
+| Aquablation | −15.1 | +10.3 | 30–150 g | General / regional | Treatable |
+| PAE | −11.6 to −14.5 | +6.1 | Any size | Local / sedation | Treatable |
+| TURP | −15.1 | +10.6 | up to ~ 80 g | General / regional | Treatable |
+
+In PINNACLE, Qmax improved by +10.3 mL/s at 1 year.<sup>[[5]](#ref5)</sup> The JAMA review reports +5.6 mL/s for Rezūm at 12 months, +4.3 mL/s for UroLift and +6.1 mL/s for PAE at 1 month, and +10.6 mL/s for TURP and +10.3 mL/s for Aquablation at 12 months<sup>[[9]](#ref9)</sup>; EVEREST-I reported +5.6 mL/s at 4 years<sup>[[22]](#ref22)</sup>. These cross-trial comparisons use different populations and, for UroLift and PAE, different time points.<sup>[[5]](#ref5)[[9]](#ref9)[[10]](#ref10)[[22]](#ref22)</sup> The Cornu network meta-analysis, which did not include Optilume BPH or Aquablation, found that TURP gave the largest flow-rate improvement, while symptom scores and quality of life with PAE, PUL and WVTT were similar to TURP.<sup>[[10]](#ref10)</sup>
+
+
+exec
+/bin/zsh -lc "sed -n '160,168p' docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx; git status --short" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+- It is delivered as an outpatient procedure with no implant and no tissue resection.
+- Its mechanism (paclitaxel-coated balloon dilation) is neither ablative, resective nor implant-based.
+
+Limitations:
+
+- Randomized data end at 1 year against sham. Uncontrolled follow-up reaches 4 years.
+- PINNACLE excluded a significant median-lobe component (e.g., intravesical prostatic protrusion above 1 cm); smaller protrusion was included.<sup>[[8]](#ref8)[[25]](#ref25)</sup>
+- Prostate volume is limited to 20–80 g.
+- The AUA 2023 Guideline Amendment, whose evidence search ended in October 2022 before the pivotal trial was published, did not address the device. The 2026 guideline added a Conditional Recommendation (Grade C).<sup>[[19]](#ref19)[[21]](#ref21)</sup>
+ M .claude/launch.json
+ M docs/01-foundations/pharmacology/infection-prophylaxis/non-antibiotic-uti-prevention.mdx
+ M docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx
+ M docs/01-foundations/pharmacology/neuromodulation-adjuncts/botulinum-toxin.mdx
+ M docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx
+ M docs/01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx
+ M docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx
+ M docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx
+ M docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx
+ M docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx
+ M docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx
+ M docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx
+ M docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx
+ M docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx
+ M docs/05-special-populations/05e-womens-health/recurrent-uti.mdx
+ M src/data/stats.json
+ M src/data/surgeon-citations/abdul-sultan.json
+ M src/data/surgeon-citations/akio-horiguchi.json
+ M src/data/surgeon-citations/alex-vanni.json
+ M src/data/surgeon-citations/alfred-bent.json
+ M src/data/surgeon-citations/allen-morey.json
+ M src/data/surgeon-citations/andrew-fantl.json
+ M src/data/surgeon-citations/andrew-peterson.json
+ M src/data/surgeon-citations/ann-gormley.json
+ M src/data/surgeon-citations/anna-rosamilia.json
+ M src/data/surgeon-citations/anne-cameron.json
+ M src/data/surgeon-citations/anthony-atala.json
+ M src/data/surgeon-citations/anthony-mundy.json
+ M src/data/surgeon-citations/anthony-visco.json
+ M src/data/surgeon-citations/arthur-burnett.json
+ M src/data/surgeon-citations/asif-muneer.json
+ M src/data/surgeon-citations/benjamin-breyer.json
+ M src/data/surgeon-citations/benjamin-brucker.json
+ M src/data/surgeon-citations/bilal-chughtai.json
+ M src/data/surgeon-citations/bob-shull.json
+ M src/data/surgeon-citations/bradley-erickson.json
+ M src/data/surgeon-citations/brian-flynn.json
+ M src/data/surgeon-citations/brian-linder.json
+ M src/data/surgeon-citations/bryan-voelzke.json
+ M src/data/surgeon-citations/catherine-bradley.json
+ M src/data/surgeon-citations/cecile-ferrando.json
+ M src/data/surgeon-citations/charles-nager.json
+ M src/data/surgeon-citations/cheryl-iglesia.json
+ M src/data/surgeon-citations/chris-maher.json
+ M src/data/surgeon-citations/chris-mcclung.json
+ M src/data/surgeon-citations/christian-winters.json
+ M src/data/surgeon-citations/christopher-chapple.json
+ M src/data/surgeon-citations/cindy-amundsen.json
+ M src/data/surgeon-citations/craig-comiter.json
+ M src/data/surgeon-citations/dae-yul-yang.json
+ M src/data/surgeon-citations/daniel-dugi.json
+ M src/data/surgeon-citations/daniela-andrich.json
+ M src/data/surgeon-citations/danielle-antosh.json
+ M src/data/surgeon-citations/david-ginsberg.json
+ M src/data/surgeon-citations/david-rahn.json
+ M src/data/surgeon-citations/david-ralph.json
+ M src/data/surgeon-citations/david-richardson.json
+ M src/data/surgeon-citations/deborah-erickson.json
+ M src/data/surgeon-citations/deborah-myers.json
+ M src/data/surgeon-citations/dee-fenner.json
+ M src/data/surgeon-citations/dmitriy-nikolavsky.json
+ M src/data/surgeon-citations/donald-skinner.json
+ M src/data/surgeon-citations/edward-mcguire.json
+ M src/data/surgeon-citations/elizabeth-mueller.json
+ M src/data/surgeon-citations/emmanuel-chartier-kastler.json
+ M src/data/surgeon-citations/enzo-palminteri.json
+ M src/data/surgeon-citations/eric-chung.json
+ M src/data/surgeon-citations/eric-rovner.json
+ M src/data/surgeon-citations/francisco-martins.json
+ M src/data/surgeon-citations/gamal-ghoniem.json
+ M src/data/surgeon-citations/geoffrey-cundiff.json
+ M src/data/surgeon-citations/geolani-dy.json
+ M src/data/surgeon-citations/gerald-brock.json
+ M src/data/surgeon-citations/gerald-jordan.json
+ M src/data/surgeon-citations/giulio-garaffa.json
+ M src/data/surgeon-citations/gopal-badlani.json
+ M src/data/surgeon-citations/guido-barbagli.json
+ M src/data/surgeon-citations/hadley-wood.json
+ M src/data/surgeon-citations/halina-zyczynski.json
+ M src/data/surgeon-citations/hann-chorng-kuo.json
+ M src/data/surgeon-citations/henry-lai.json
+ M src/data/surgeon-citations/holly-richter.json
+ M src/data/surgeon-citations/howard-goldman.json
+ M src/data/surgeon-citations/hunter-wessells.json
+ M src/data/surgeon-citations/ingrid-nygaard.json
+ M src/data/surgeon-citations/irwin-goldstein.json
+ M src/data/surgeon-citations/jack-mcaninch.json
+ M src/data/surgeon-citations/jacques-corcos.json
+ M src/data/surgeon-citations/jay-simhan.json
+ M src/data/surgeon-citations/jennifer-wu.json
+ M src/data/surgeon-citations/jeremy-myers.json
+ M src/data/surgeon-citations/jerry-blaivas.json
+ M src/data/surgeon-citations/jill-buckley.json
+ M src/data/surgeon-citations/joachim-thuroff.json
+ M src/data/surgeon-citations/joel-gelman.json
+ M src/data/surgeon-citations/john-delancey.json
+ M src/data/surgeon-citations/john-gebhart.json
+ M src/data/surgeon-citations/john-heesakkers.json
+ M src/data/surgeon-citations/john-mulcahy.json
+ M src/data/surgeon-citations/john-mulhall.json
+ M src/data/surgeon-citations/john-stein.json
+ M src/data/surgeon-citations/john-stoffel.json
+ M src/data/surgeon-citations/jonathan-warner.json
+ M src/data/surgeon-citations/joshua-cohn.json
+ M src/data/surgeon-citations/judith-hagedorn.json
+ M src/data/surgeon-citations/kathleen-kobashi.json
+ M src/data/surgeon-citations/kaven-baessler.json
+ M src/data/surgeon-citations/kavita-mishra.json
+ M src/data/surgeon-citations/keith-rourke.json
+ M src/data/surgeon-citations/kenneth-angermeier.json
+ M src/data/surgeon-citations/kenneth-peters.json
+ M src/data/surgeon-citations/kimberly-kenton.json
+ M src/data/surgeon-citations/kurt-mccammon.json
+ M src/data/surgeon-citations/landon-trost.json
+ M src/data/surgeon-citations/larissa-rodriguez.json
+ M src/data/surgeon-citations/laurence-levine.json
+ M src/data/surgeon-citations/lee-zhao.json
+ M src/data/surgeon-citations/lenaine-westney.json
+ M src/data/surgeon-citations/leonard-zinman.json
+ M src/data/surgeon-citations/lewis-wall.json
+ M src/data/surgeon-citations/linda-brubaker.json
+ M src/data/surgeon-citations/linda-cardozo.json
+ M src/data/surgeon-citations/marco-falcone.json
+ M src/data/surgeon-citations/marcus-drake.json
+ M src/data/surgeon-citations/margaret-mueller.json
+ M src/data/surgeon-citations/margit-fisch.json
+ M src/data/surgeon-citations/marjan-waterloos.json
+ M src/data/surgeon-citations/mark-walters.json
+ M src/data/surgeon-citations/marlene-corton.json
+ M src/data/surgeon-citations/matthew-barber.json
+ M src/data/surgeon-citations/matthew-ziegelmann.json
+ M src/data/surgeon-citations/melissa-kaufman.json
+ M src/data/surgeon-citations/michael-baggish.json
+ M src/data/surgeon-citations/michael-metro.json
+ M src/data/surgeon-citations/mickey-karram.json
+ M src/data/surgeon-citations/miroslav-djordjevic.json
+ M src/data/surgeon-citations/mohamed-ghoneim.json
+ M src/data/surgeon-citations/nabeel-shakir.json
+ M src/data/surgeon-citations/nazema-siddiqui.json
+ M src/data/surgeon-citations/nicolaas-lumen.json
+ M src/data/surgeon-citations/niels-johnsen.json
+ M src/data/surgeon-citations/nirit-rosenblum.json
+ M src/data/surgeon-citations/pamela-fairchild.json
+ M src/data/surgeon-citations/pamela-moalli.json
+ M src/data/surgeon-citations/pankaj-joshi.json
+ M src/data/surgeon-citations/paolo-capogrosso.json
+ M src/data/surgeon-citations/paul-abrams.json
+ M src/data/surgeon-citations/paul-chung.json
+ M src/data/surgeon-citations/peggy-norton.json
+ M src/data/surgeon-citations/peter-dwyer.json
+ M src/data/surgeon-citations/peter-jeppson.json
+ M src/data/surgeon-citations/peter-sand.json
+ M src/data/surgeon-citations/philippe-zimmern.json
+ M src/data/surgeon-citations/quentin-clemens.json
+ M src/data/surgeon-citations/rachel-bluebond-langner.json
+ M src/data/surgeon-citations/rachel-pauls.json
+ M src/data/surgeon-citations/ramon-virasoro.json
+ M src/data/surgeon-citations/ramy-goueli.json
+ M src/data/surgeon-citations/ranee-thakar.json
+ M src/data/surgeon-citations/rebecca-rogers.json
+ M src/data/surgeon-citations/richard-hautmann.json
+ M src/data/surgeon-citations/richard-santucci.json
+ M src/data/surgeon-citations/roger-dmochowski.json
+ M src/data/surgeon-citations/roger-goldberg.json
+ M src/data/surgeon-citations/rudolf-hohenfellner.json
+ M src/data/surgeon-citations/rufus-cartwright.json
+ M src/data/surgeon-citations/ryan-terlecki.json
+ M src/data/surgeon-citations/sandip-vasavada.json
+ M src/data/surgeon-citations/sanjay-kulkarni.json
+ M src/data/surgeon-citations/sean-elliott.json
+ M src/data/surgeon-citations/sender-herschorn.json
+ M src/data/surgeon-citations/shawn-menefee.json
+ M src/data/surgeon-citations/sherif-mourad.json
+ M src/data/surgeon-citations/shlomo-raz.json
+ M src/data/surgeon-citations/steve-brandes.json
+ M src/data/surgeon-citations/steve-hudak.json
+ M src/data/surgeon-citations/steven-kaplan.json
+ M src/data/surgeon-citations/steven-wilson.json
+ M src/data/surgeon-citations/stuart-reynolds.json
+ M src/data/surgeon-citations/tamsin-greenwell.json
+ M src/data/surgeon-citations/thomas-benson.json
+ M src/data/surgeon-citations/timothy-boone.json
+ M src/data/surgeon-citations/tobias-kohler.json
+ M src/data/surgeon-citations/tom-lue.json
+ M src/data/surgeon-citations/victor-nitti.json
+ M src/data/surgeon-citations/victoria-handa.json
+ M src/data/surgeon-citations/vivian-sung.json
+ M src/data/surgeon-citations/wesley-verla.json
+ M src/data/surgeon-citations/ying-long-sa.json
+ M src/data/surgeon-citations/yue-min-xu.json
+?? reports/2026-09-25-planning/
+?? reports/2026-10-03/lighthouse/article-desktop.json
+?? reports/2026-10-03/lighthouse/article-mobile.json
+?? reports/2026-10-03/lighthouse/atlas-desktop.json
+?? reports/2026-10-03/lighthouse/atlas-mobile.json
+?? reports/2026-10-03/lighthouse/home-desktop.json
+?? reports/2026-10-03/lighthouse/home-mobile.json
+?? reports/2026-10-03/lighthouse/video-desktop.json
+?? reports/2026-10-03/lighthouse/video-mobile.json
+?? reports/2026-10-11/doi-log.txt
+?? reports/2026-10-11/gate-log.txt
+?? reports/2026-10-14/dan-eun/log.txt
+?? reports/2026-10-14/podcasts/backtable-all-urls.txt
+?? reports/2026-10-14/podcasts/backtable-all.tsv
+?? reports/2026-10-14/podcasts/build_candidates.py
+?? reports/2026-10-14/podcasts/build_catalog.py
+?? reports/2026-10-14/podcasts/build_library_additions.py
+?? reports/2026-10-14/podcasts/candidates.tsv
+?? reports/2026-10-14/podcasts/catalog.tsv
+?? reports/2026-10-14/podcasts/collect_backtable.py
+?? reports/2026-10-14/podcasts/final.md
+?? reports/2026-10-14/podcasts/library-additions.tsv
+?? reports/2026-10-14/podcasts/log.txt
+?? reports/2026-10-14/podcasts/retry_backtable.py
+?? reports/2026-10-14/podcasts/url-checks.tsv
+?? reports/2026-10-18/clinical-evidence/work/abc/abc.json
+?? reports/2026-10-18/clinical-evidence/work/abc/abc.mdx
+?? reports/2026-10-18/clinical-evidence/work/abc/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/abc/log.txt
+?? reports/2026-10-18/clinical-evidence/work/abc/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/altar/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/altar/altar.json
+?? reports/2026-10-18/clinical-evidence/work/altar/altar.mdx
+?? reports/2026-10-18/clinical-evidence/work/altman-mesh/altman-mesh.json
+?? reports/2026-10-18/clinical-evidence/work/altman-mesh/altman-mesh.mdx
+?? reports/2026-10-18/clinical-evidence/work/altman-mesh/final.md
+?? reports/2026-10-18/clinical-evidence/work/altman-mesh/log.txt
+?? reports/2026-10-18/clinical-evidence/work/altman-mesh/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/apical-suspension/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/apical-suspension/apical-suspension.json
+?? reports/2026-10-18/clinical-evidence/work/apical-suspension/apical-suspension.mdx
+?? reports/2026-10-18/clinical-evidence/work/apical-suspension/log.txt
+?? reports/2026-10-18/clinical-evidence/work/apical-suspension/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/artisan-snm/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/artisan-snm/artisan-snm.json
+?? reports/2026-10-18/clinical-evidence/work/artisan-snm/artisan-snm.mdx
+?? reports/2026-10-18/clinical-evidence/work/artisan-snm/log.txt
+?? reports/2026-10-18/clinical-evidence/work/artisan-snm/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/atlas/atlas.json
+?? reports/2026-10-18/clinical-evidence/work/atlas/atlas.mdx
+?? reports/2026-10-18/clinical-evidence/work/atlas/final.md
+?? reports/2026-10-18/clinical-evidence/work/atlas/log.txt
+?? reports/2026-10-18/clinical-evidence/work/atlas/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/aus-outcomes/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/aus-outcomes/aus-outcomes.json
+?? reports/2026-10-18/clinical-evidence/work/aus-outcomes/aus-outcomes.mdx
+?? reports/2026-10-18/clinical-evidence/work/barone-fistula-catheter/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/barone-fistula-catheter/barone-fistula-catheter.json
+?? reports/2026-10-18/clinical-evidence/work/barone-fistula-catheter/barone-fistula-catheter.mdx
+?? reports/2026-10-18/clinical-evidence/work/bmg-closure-meta/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/bmg-closure-meta/bmg-closure-meta.json
+?? reports/2026-10-18/clinical-evidence/work/bmg-closure-meta/bmg-closure-meta.mdx
+?? reports/2026-10-18/clinical-evidence/work/bulking-vs-tvt/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/bulking-vs-tvt/bulking-vs-tvt.json
+?? reports/2026-10-18/clinical-evidence/work/bulking-vs-tvt/bulking-vs-tvt.mdx
+?? reports/2026-10-18/clinical-evidence/work/burgio-behavioral/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/burgio-behavioral/burgio-behavioral.json
+?? reports/2026-10-18/clinical-evidence/work/burgio-behavioral/burgio-behavioral.mdx
+?? reports/2026-10-18/clinical-evidence/work/capable/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/capable/capable.json
+?? reports/2026-10-18/clinical-evidence/work/capable/capable.mdx
+?? reports/2026-10-18/clinical-evidence/work/care/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/care/care.json
+?? reports/2026-10-18/clinical-evidence/work/care/care.mdx
+?? reports/2026-10-18/clinical-evidence/work/care/log.txt
+?? reports/2026-10-18/clinical-evidence/work/care/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/cheetah/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/cheetah/cheetah.json
+?? reports/2026-10-18/clinical-evidence/work/cheetah/cheetah.mdx
+?? reports/2026-10-18/clinical-evidence/work/combat/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/combat/combat.json
+?? reports/2026-10-18/clinical-evidence/work/combat/combat.mdx
+?? reports/2026-10-18/clinical-evidence/work/courage/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/courage/courage.json
+?? reports/2026-10-18/clinical-evidence/work/courage/courage.mdx
+?? reports/2026-10-18/clinical-evidence/work/courage/log.txt
+?? reports/2026-10-18/clinical-evidence/work/courage/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/darouiche/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/darouiche/darouiche.json
+?? reports/2026-10-18/clinical-evidence/work/darouiche/darouiche.mdx
+?? reports/2026-10-18/clinical-evidence/work/empowur/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/empowur/empowur.json
+?? reports/2026-10-18/clinical-evidence/work/empowur/empowur.mdx
+?? reports/2026-10-18/clinical-evidence/work/empowur/log.txt
+?? reports/2026-10-18/clinical-evidence/work/empowur/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/esteem/esteem.json
+?? reports/2026-10-18/clinical-evidence/work/esteem/esteem.mdx
+?? reports/2026-10-18/clinical-evidence/work/esteem/final.md
+?? reports/2026-10-18/clinical-evidence/work/esteem/log.txt
+?? reports/2026-10-18/clinical-evidence/work/esteem/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/ginsberg-ndo/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/ginsberg-ndo/ginsberg-ndo.json
+?? reports/2026-10-18/clinical-evidence/work/ginsberg-ndo/ginsberg-ndo.mdx
+?? reports/2026-10-18/clinical-evidence/work/ginsberg-ndo/log.txt
+?? reports/2026-10-18/clinical-evidence/work/ginsberg-ndo/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/goliath/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/goliath/goliath.json
+?? reports/2026-10-18/clinical-evidence/work/goliath/goliath.mdx
+?? reports/2026-10-18/clinical-evidence/work/impress/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/impress/impress.json
+?? reports/2026-10-18/clinical-evidence/work/impress/impress.mdx
+?? reports/2026-10-18/clinical-evidence/work/improve/final.md
+?? reports/2026-10-18/clinical-evidence/work/improve/improve.json
+?? reports/2026-10-18/clinical-evidence/work/improve/improve.mdx
+?? reports/2026-10-18/clinical-evidence/work/improve/log.txt
+?? reports/2026-10-18/clinical-evidence/work/improve/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/inhibizone/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/inhibizone/inhibizone.json
+?? reports/2026-10-18/clinical-evidence/work/inhibizone/inhibizone.mdx
+?? reports/2026-10-18/clinical-evidence/work/insite/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/insite/insite.json
+?? reports/2026-10-18/clinical-evidence/work/insite/insite.mdx
+?? reports/2026-10-18/clinical-evidence/work/insite/log.txt
+?? reports/2026-10-18/clinical-evidence/work/insite/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/labrie/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/labrie/labrie.json
+?? reports/2026-10-18/clinical-evidence/work/labrie/labrie.mdx
+?? reports/2026-10-18/clinical-evidence/work/lift/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/lift/lift.json
+?? reports/2026-10-18/clinical-evidence/work/lift/lift.mdx
+?? reports/2026-10-18/clinical-evidence/work/master/final.md
+?? reports/2026-10-18/clinical-evidence/work/master/log.txt
+?? reports/2026-10-18/clinical-evidence/work/master/master.json
+?? reports/2026-10-18/clinical-evidence/work/master/master.mdx
+?? reports/2026-10-18/clinical-evidence/work/master/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/merit/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/merit/merit.json
+?? reports/2026-10-18/clinical-evidence/work/merit/merit.mdx
+?? reports/2026-10-18/clinical-evidence/work/mtops/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/mtops/mtops.json
+?? reports/2026-10-18/clinical-evidence/work/mtops/mtops.mdx
+?? reports/2026-10-18/clinical-evidence/work/nitti-oab/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/nitti-oab/log.txt
+?? reports/2026-10-18/clinical-evidence/work/nitti-oab/nitti-oab.json
+?? reports/2026-10-18/clinical-evidence/work/nitti-oab/nitti-oab.mdx
+?? reports/2026-10-18/clinical-evidence/work/nitti-oab/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/oasis-revi/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/oasis-revi/log.txt
+?? reports/2026-10-18/clinical-evidence/work/oasis-revi/oasis-revi.json
+?? reports/2026-10-18/clinical-evidence/work/oasis-revi/oasis-revi.mdx
+?? reports/2026-10-18/clinical-evidence/work/oasis-revi/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/open/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/open/open.json
+?? reports/2026-10-18/clinical-evidence/work/open/open.mdx
+?? reports/2026-10-18/clinical-evidence/work/optimal/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/optimal/log.txt
+?? reports/2026-10-18/clinical-evidence/work/optimal/optimal.json
+?? reports/2026-10-18/clinical-evidence/work/optimal/optimal.mdx
+?? reports/2026-10-18/clinical-evidence/work/optimal/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/opus/final.md
+?? reports/2026-10-18/clinical-evidence/work/opus/log.txt
+?? reports/2026-10-18/clinical-evidence/work/opus/opus.json
+?? reports/2026-10-18/clinical-evidence/work/opus/opus.mdx
+?? reports/2026-10-18/clinical-evidence/work/opus/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/orbit/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/orbit/log.txt
+?? reports/2026-10-18/clinical-evidence/work/orbit/orbit.json
+?? reports/2026-10-18/clinical-evidence/work/orbit/orbit.mdx
+?? reports/2026-10-18/clinical-evidence/work/orbit/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/pae-vs-turp/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/pae-vs-turp/pae-vs-turp.json
+?? reports/2026-10-18/clinical-evidence/work/pae-vs-turp/pae-vs-turp.mdx
+?? reports/2026-10-18/clinical-evidence/work/pessri/final.md
+?? reports/2026-10-18/clinical-evidence/work/pessri/log.txt
+?? reports/2026-10-18/clinical-evidence/work/pessri/pessri.json
+?? reports/2026-10-18/clinical-evidence/work/pessri/pessri.mdx
+?? reports/2026-10-18/clinical-evidence/work/pessri/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/pinnacle/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/pinnacle/pinnacle.json
+?? reports/2026-10-18/clinical-evidence/work/pinnacle/pinnacle.mdx
+?? reports/2026-10-18/clinical-evidence/work/poppy/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/poppy/poppy.json
+?? reports/2026-10-18/clinical-evidence/work/poppy/poppy.mdx
+?? reports/2026-10-18/clinical-evidence/work/prospect/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/prospect/log.txt
+?? reports/2026-10-18/clinical-evidence/work/prospect/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/prospect/prospect.json
+?? reports/2026-10-18/clinical-evidence/work/prospect/prospect.mdx
+?? reports/2026-10-18/clinical-evidence/work/reactt/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/reactt/reactt.json
+?? reports/2026-10-18/clinical-evidence/work/reactt/reactt.mdx
+?? reports/2026-10-18/clinical-evidence/work/restorex/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/restorex/restorex.json
+?? reports/2026-10-18/clinical-evidence/work/restorex/restorex.mdx
+?? reports/2026-10-18/clinical-evidence/work/rezum/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/rezum/rezum.json
+?? reports/2026-10-18/clinical-evidence/work/rezum/rezum.mdx
+?? reports/2026-10-18/clinical-evidence/work/robust/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/robust/robust.json
+?? reports/2026-10-18/clinical-evidence/work/robust/robust.mdx
+?? reports/2026-10-18/clinical-evidence/work/rosetta/final.md
+?? reports/2026-10-18/clinical-evidence/work/rosetta/log.txt
+?? reports/2026-10-18/clinical-evidence/work/rosetta/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/rosetta/rosetta.json
+?? reports/2026-10-18/clinical-evidence/work/rosetta/rosetta.mdx
+?? reports/2026-10-18/clinical-evidence/work/run.log
+?? reports/2026-10-18/clinical-evidence/work/runner.out
+?? reports/2026-10-18/clinical-evidence/work/sam/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sam/log.txt
+?? reports/2026-10-18/clinical-evidence/work/sam/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sam/sam.json
+?? reports/2026-10-18/clinical-evidence/work/sam/sam.mdx
+?? reports/2026-10-18/clinical-evidence/work/save-u/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/save-u/log.txt
+?? reports/2026-10-18/clinical-evidence/work/save-u/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/save-u/save-u.json
+?? reports/2026-10-18/clinical-evidence/work/save-u/save-u.mdx
+?? reports/2026-10-18/clinical-evidence/work/scandinavian-urethroplasty/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/scandinavian-urethroplasty/scandinavian-urethroplasty.json
+?? reports/2026-10-18/clinical-evidence/work/scandinavian-urethroplasty/scandinavian-urethroplasty.mdx
+?? reports/2026-10-18/clinical-evidence/work/sildenafil-pivotal/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sildenafil-pivotal/sildenafil-pivotal.json
+?? reports/2026-10-18/clinical-evidence/work/sildenafil-pivotal/sildenafil-pivotal.mdx
+?? reports/2026-10-18/clinical-evidence/work/sims/final.md
+?? reports/2026-10-18/clinical-evidence/work/sims/log.txt
+?? reports/2026-10-18/clinical-evidence/work/sims/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sims/sims.json
+?? reports/2026-10-18/clinical-evidence/work/sims/sims.mdx
+?? reports/2026-10-18/clinical-evidence/work/sister/final.md
+?? reports/2026-10-18/clinical-evidence/work/sister/log.txt
+?? reports/2026-10-18/clinical-evidence/work/sister/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sister/sister.json
+?? reports/2026-10-18/clinical-evidence/work/sister/sister.mdx
+?? reports/2026-10-18/clinical-evidence/work/steenkamp-dilation/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/steenkamp-dilation/steenkamp-dilation.json
+?? reports/2026-10-18/clinical-evidence/work/steenkamp-dilation/steenkamp-dilation.mdx
+?? reports/2026-10-18/clinical-evidence/work/stitch/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/stitch/stitch.json
+?? reports/2026-10-18/clinical-evidence/work/stitch/stitch.mdx
+?? reports/2026-10-18/clinical-evidence/work/sumit/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sumit/log.txt
+?? reports/2026-10-18/clinical-evidence/work/sumit/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/sumit/sumit.json
+?? reports/2026-10-18/clinical-evidence/work/sumit/sumit.mdx
+?? reports/2026-10-18/clinical-evidence/work/super/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/super/log.txt
+?? reports/2026-10-18/clinical-evidence/work/super/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/super/super.json
+?? reports/2026-10-18/clinical-evidence/work/super/super.mdx
+?? reports/2026-10-18/clinical-evidence/work/tomus/final.md
+?? reports/2026-10-18/clinical-evidence/work/tomus/log.txt
+?? reports/2026-10-18/clinical-evidence/work/tomus/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/tomus/tomus.json
+?? reports/2026-10-18/clinical-evidence/work/tomus/tomus.mdx
+?? reports/2026-10-18/clinical-evidence/work/topsy/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/topsy/topsy.json
+?? reports/2026-10-18/clinical-evidence/work/topsy/topsy.mdx
+?? reports/2026-10-18/clinical-evidence/work/unblocs/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/unblocs/unblocs.json
+?? reports/2026-10-18/clinical-evidence/work/unblocs/unblocs.mdx
+?? reports/2026-10-18/clinical-evidence/work/upstream/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/upstream/upstream.json
+?? reports/2026-10-18/clinical-evidence/work/upstream/upstream.mdx
+?? reports/2026-10-18/clinical-evidence/work/usc-star/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/usc-star/usc-star.json
+?? reports/2026-10-18/clinical-evidence/work/usc-star/usc-star.mdx
+?? reports/2026-10-18/clinical-evidence/work/value/final.md
+?? reports/2026-10-18/clinical-evidence/work/value/log.txt
+?? reports/2026-10-18/clinical-evidence/work/value/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/value/value.json
+?? reports/2026-10-18/clinical-evidence/work/value/value.mdx
+?? reports/2026-10-18/clinical-evidence/work/vue/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/vue/vue.json
+?? reports/2026-10-18/clinical-evidence/work/vue/vue.mdx
+?? reports/2026-10-18/clinical-evidence/work/ward-hilton/final.md
+?? reports/2026-10-18/clinical-evidence/work/ward-hilton/log.txt
+?? reports/2026-10-18/clinical-evidence/work/ward-hilton/prompt.md
+?? reports/2026-10-18/clinical-evidence/work/ward-hilton/ward-hilton.json
+?? reports/2026-10-18/clinical-evidence/work/ward-hilton/ward-hilton.mdx
+?? reports/2026-10-18/clinical-evidence/work/water/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/water/water.json
+?? reports/2026-10-18/clinical-evidence/work/water/water.mdx
+?? reports/2026-10-18/clinical-evidence/work/who-checklist/agent-prompt.md
+?? reports/2026-10-18/clinical-evidence/work/who-checklist/who-checklist.json
+?? reports/2026-10-18/clinical-evidence/work/who-checklist/who-checklist.mdx
+?? reports/2026-10-18/sources-wanted-both-sites.md
+?? reports/2026-10-19/diversion-history-gate-final/
+?? reports/2026-10-19/diversion-history-gate-final2/
+?? reports/2026-10-19/diversion-history-gate/
+?? reports/2026-10-20/surgeon-biographies-work/final-author.md
+?? reports/2026-10-20/surgeon-biographies-work/final-verify.md
+?? reports/2026-10-20/surgeon-biographies-work/log-author.txt
+?? reports/2026-10-20/surgeon-biographies-work/log-verify.txt
+?? reports/2026-10-26/
+?? reports/anki-deck/
+?? reports/audit-v2/guidelines-2026-10-01/logs/
+
+codex
+The source checks are complete enough to separate supported figures from wording issues. The repo is being edited concurrently, so I’m matching proposed edits against the latest page text before writing them. One Optilume row has already changed since the batch was made.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json,pathlib
+repo=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki')
+batch=json.load(open('reports/2026-10-26/ce-page-fixes/batches/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.json'))
+for i,c in enumerate(batch['claims'],1):
+ s=(repo/c['page']).read_text()
+ print(i, 'MATCH' if c['text'] in s else 'STALE', c['page'])
+ if c['text'] not in s:
+  ls=s.splitlines(); print(' CURRENT:',ls[c['line']-1][:500] if c['line']<=len(ls) else '<line absent>')
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki
+ succeeded in 0ms:
+1 MATCH docs/01-foundations/pharmacology/infection-prophylaxis/uti-suppressive-prophylactic.mdx
+2 MATCH docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx
+3 MATCH docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx
+4 MATCH docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx
+5 MATCH docs/04-surgical-techniques/04g-prolapse-repair/anterior/michigan-four-wall.mdx
+6 MATCH docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx
+7 MATCH docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx
+8 MATCH docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx
+9 STALE docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx
+ CURRENT: | Optilume BPH | −11.5 (ITT, 100 randomized)<sup>[[5]](#ref5)</sup> | +10.3 mL/s (82 paired at 12 mo)<sup>[[5]](#ref5)</sup> | 20–80 g | Local / sedation | Significant median-lobe component (e.g., intravesical protrusion &gt; 1 cm) excluded in PINNACLE; smaller protrusion included<sup>[[8]](#ref8)[[25]](#ref25)</sup> |
+10 STALE docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx
+ CURRENT: - PINNACLE excluded a significant median-lobe component (e.g., intravesical prostatic protrusion above 1 cm); smaller protrusion was included.<sup>[[8]](#ref8)[[25]](#ref25)</sup>
+11 MATCH docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx
+12 MATCH docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx
+13 MATCH docs/05-special-populations/05e-womens-health/recurrent-uti.mdx
+
+web search: 
+web search: "The Design of a Randomized Trial" "SUPeR" "5 years" objective ...
+web search: 
+web search: 'secondary objective'
+codex
+I found three wording issues: the Optilume table omits the IPSS time point, the PAE sentence gives the randomized count without the smaller endpoint count, and the ALTAR resistance sentence does not say its denominators come from optional swabs yielding *E. coli*. Three other supported claims need their source marker moved onto the sentence.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json,pathlib
+repo=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki')
+out=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001')
+slug='g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti'
+batch=json.loads((repo/'reports/2026-10-26/ce-page-fixes/batches'/f'{slug}.json').read_text())
+claims=batch['claims']; C={i:c for i,c in enumerate(claims,1)}
+sources={
+1:('https://pubmed.ncbi.nlm.nih.gov/38587819/','abstract','The proportion contacting ambulatory care with a clinically suspected UTI was 150 of 294 (51.0%) in the d-mannose group and 161 of 289 (55.7%) in the placebo group (risk difference, -5%; 95% CI, -13% to 3%; P = .26).'),
+2:('https://pubmed.ncbi.nlm.nih.gov/18185903/','abstract','Preoperative detection of USI with prolapse reduction at 300ml was pessary, 6% (5 of 88); manual, 16% (19 of 122); forceps, 21% (21 of 98); swab, 20% (32 of 158); and speculum, 30% (35 of 118).'),
+3:('https://www.nejm.org/doi/full/10.1056/NEJMx160015','full-text','The final sentence of the sixth paragraph (page 1562) should have ended, “from 47.9 percent to 22.9 percent (P<0.001) (data not shown),” rather than “from 38.2 percent to 20.8 percent (P=0.007) . . . .”'),
+4:('https://dukespace.lib.duke.edu/bitstreams/6987926f-27f1-4cd0-820a-241cc543b917/download','full-text','Constipation was the most common adverse event and was reported more in the groups assigned to loperamide (33 [38%] of 88 loperamide plus education and 44 [51%] of 86 for loperamide plus biofeedback)'),
+5:('https://pmc.ncbi.nlm.nih.gov/articles/PMC7250460/','full-text','Uterosacral ligament suspension resulted in less new or worsening buttock pain than sacrospinous suspension at 4–6 weeks postoperatively (4.6% vs. 10.5%, p=0.043) but no difference in groin or thigh pain.'),
+6:('https://jamanetwork.com/journals/jama/fullarticle/2749873','full-text','At 36 months, the model-estimated failure was 24% (95% CI, 14%-33%) for the hysteropexy group and 36% (95% CI, 24%-47%) for the hysterectomy group (Figure 2).'),
+7:('https://pmc.ncbi.nlm.nih.gov/articles/PMC8328912/','full-text','Failure, No./total (%)c  | 29/79 (37)  | 42/78 (54)  | −18 (−33 to −3)'),
+8:('https://pmc.ncbi.nlm.nih.gov/articles/PMC8328912/','full-text','The primary outcome showed fewer failures for hysteropexy compared to hysterectomy through 5 years (adjusted hazard ratio, 0.58 [95% CI: 0.36–0.94], p=0.03).'),
+9:('https://doi.org/10.1097/JU.0000000000003568; https://www.nature.com/articles/s41391-024-00833-z.pdf','full-text','In the ITT analysis, the average improvement in IPSS from baseline to 12 months in the Optilume BPH arm (11.5±7.8) was significantly greater than that seen in the sham arm at 3 months (8.0±8.3), with an estimated difference of 3.4 between the groups (95% CI 0.6 to 6.2, P = .008).'),
+10:('https://www.nature.com/articles/s41391-024-00833-z.pdf','full-text','Additionally, individuals with artificial urinary sphincters or urethral/prostatic stents, prior minimally invasive prostate interventions, a significant median lobe component (intravesical prostatic protrusion >1 cm), or a history of pelvic radiation were also excluded.'),
+11:('https://www.bmj.com/content/361/bmj.k2338','full-text','103 patients aged ≥40 years with refractory lower urinary tract symptoms secondary to benign prostatic hyperplasia were randomised between 11 February 2014 and 24 May 2017; 48 and 51 patients reached the primary endpoint 12 weeks after PAE and TURP, respectively.'),
+12:('https://www.watchman.com/content/dam/bostonscientific/uro-bph/URO-1013102-AA%20McVary%20Rezum%20Final%205%20Year%20Paper-FINAL.pdf','full-text','As noted in Figure-1, after 5 years, data from 77 subjects from the treatment-arm were analyzed.'),
+13:('https://researchonline.lshtm.ac.uk/id/eprint/4671603/1/Harding-etal-2021-Alternative-to-prophylactic-antibiotics-for-the-treatment.pdf','full-text','Availability of optional six monthly perineal swabs over the 18 month trial period is presented in supplementary table S8.')
+}
+statuses=[]
+for i,c in C.items():
+ source,access,quote=sources[i]
+ statuses.append({'claim_id':c['id'],'status':'error' if i in (9,11,13) else 'ok','source_opened':source,'access':access,'quote':quote[:300]})
+findings=[]
+def add(i,category,severity,finding,evidence,old,new,supported=None,confidence='high'):
+ assert old in (repo/C[i]['page']).read_text(),f'not exact current page substring: {i}'
+ assert len(old)<1200
+ assert old"'!=new
+ item={'"'page':C[i]['page'],'claim_id':C[i]['id'],'category':category,'severity':severity,'finding':finding,'evidence':evidence,'edit':{'old':old,'new':new},'confidence':confidence}
+ if supported is not None:item['supported']=supported
+ findings.append(item)
+add(2,'attribution','medium','The detection range is supported by Visco et al., but this sentence has no source marker while the paragraph cites two different CARE reports.','PMID 18185903: at 300 mL, pessary 5/88 (6%) and speculum 35/118 (30%) detected urodynamic stress incontinence.',C[2]['text'],C[2]['text']+'<sup>[[39]](#ref39)</sup>',True)
+add(7,'attribution','medium','The five-year cumulative first-failure counts are supported by the five-year report, but the paragraph also cites the three-year report and this sentence has no marker.','DOI 10.1016/j.ajog.2021.03.012, Table 2: at the 5-year visit, hysteropexy 29/79 (37%) and hysterectomy/USLS 42/78 (54%) cumulative first failures.',C[7]['text'],C[7]['text']+'<sup>[[11]](#ref11)</sup>',True)
+add(8,'attribution','medium','The five-year adjusted hazard ratio is supported by the five-year report, but its source marker appears only at the end of a paragraph that also cites the three-year report.','DOI 10.1016/j.ajog.2021.03.012: interval-censored failure through 5 years, adjusted HR 0.58 (95% CI 0.36–0.94); proportional hazards assumption not met (p < 0.001).',C[8]['text'],C[8]['text']+'<sup>[[11]](#ref11)</sup>',True)
+old9=next(line for line in (repo/C[9]['page']).read_text().splitlines() if line.startswith('| Optilume BPH |'))
+new9=old9.replace('−11.5 (ITT, 100 randomized)','−11.5 at 12 mo (ITT, 100 randomized)',1)
+add(9,'accuracy','medium','The −11.5-point ITT IPSS change was measured at 12 months; the row gives a time point for Qmax but omits one for IPSS under a mixed-time-point header.','DOI 10.1097/JU.0000000000003568: ITT IPSS improvement 11.5 ± 7.8 points at 12 months among 100 assigned Optilume. DOI 10.1038/s41391-024-00833-z, Table 2: paired Qmax change +10.3 ± 10.2 mL/s in 82 men at 12 months.',old9,new9)
+old11=C[11]['text'];new11=old11.replace('(n = 103)','(103 randomized; 48 PAE and 51 TURP participants reached the 12-week primary endpoint)',1)
+add(11,'accuracy','medium','The sentence gives the 103 randomized participants but omits that only 48 PAE and 51 TURP participants contributed to the 12-week primary endpoint estimates.','DOI 10.1136/bmj.k2338: 103 randomized; 48 PAE and 51 TURP reached the 12-week primary endpoint; mean IPSS changes −9.23 versus −10.77, difference 1.54 (95% CI −1.45 to 4.52), noninferiority margin 3.',old11,new11)
+old13=C[13]['text'];new13=old13.replace('At the 6- or 12-month visits, resistance','Among participants with *E. coli* isolated from optional perineal swabs, at the 6- or 12-month visits resistance',1).replace('at 18 months, six months after treatment ended, multidrug resistance','at 18 months, six months after treatment ended, multidrug resistance among those with *E. coli* isolated from optional perineal swabs',1)+'<sup>[[24]](#ref24)</sup>'
+add(13,'accuracy','medium','Both resistance denominators are selected: the perineal swabs were optional, and percentages count only participants whose swab yielded E. coli. The sentence should name that denominator for the 6/12-month and 18-month results.','DOI 10.1136/bmj-2021-068229, p. 6 and Fig. 2: optional perineal swabs yielding E. coli; resistance to at least one antibiotic at 6 or 12 months was 46/64 (72%) antibiotic versus 39/70 (56%) methenamine; multidrug resistance at month 18 was 9/45 (20%) methenamine versus 2/39 (5%) antibiotic.',old13,new13)
+assert len(statuses)==len(claims)==13
+assert [x['claim_id'] for x in statuses]==[c['id'] for c in claims]
+assert all(len(x['quote'])<=300 for x in statuses)
+(out/f'{slug}.jsonl').write_text(''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in findings))
+(out/f'{slug}.status.jsonl').write_text(''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in statuses))
+print('findings',len(findings),'status_counts',{k:sum(s['status']==k for s in statuses) for k in ('ok','error','unverifiable')})
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+findings 6 status_counts {'ok': 10, 'error': 3, 'unverifiable': 0}
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json,pathlib,collections
+out=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001')
+repo=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki')
+slug='g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti'
+p=out/f'{slug}.jsonl'
+rows=[json.loads(s) for s in p.read_text().splitlines()]
+for r in rows:
+ if r['claim_id'].endswith('#11'):
+  r['edit']['new']=r['edit']['old'].replace('(n = 103)','(103 randomized; 48 PAE and 51 TURP participants with primary-outcome data)',1)
+ if r['claim_id'].endswith('#13'):
+  r['edit']['new']='Among participants whose optional perineal swabs yielded *E. coli*, resistance to at least one antibiotic at the 6- or 12-month visit was found in 46/64 antibiotic versus 39/70 methenamine participants (72% vs. 56%; p = 0.05); at 18 months, six months after treatment ended, multidrug resistance was found in 9/45 methenamine versus 2/39 antibiotic participants (20% vs. 5%; p = 0.06).<sup>[[24]](#ref24)</sup>'
+ assert r['edit']['old'] in (repo/r['page']).read_text(),r['claim_id']
+ assert len(r['edit']['old'])<1200
+ oldmarkers=[]
+ import re
+ oldmarkers=re.findall(r'<sup>\\[\\[\\d+\\]\\]\\(#ref\\d+\\)</sup>',r['edit']['old'])
+ assert all(r['edit']['new'].count(m)>=r['edit']['old'].count(m) for m in set(oldmarkers)),r['claim_id']
+ assert '< 1' not in r['edit']['new'] and '> 1' not in r['edit']['new']
+p.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\\n' for r in rows))
+sp=out/f'{slug}.status.jsonl';st=[json.loads(s) for s in sp.read_text().splitlines()]
+assert len(st)==13 and len(set(x['claim_id'] for x in st))==13
+print('status',dict(collections.Counter(x['status'] for x in st)))
+print('findings',dict(collections.Counter(x['category'] for x in rows)))
+print('outputs',p.stat().st_size,sp.stat().st_size)
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+status {'ok': 10, 'error': 3}
+findings {'attribution': 3, 'accuracy': 3}
+outputs 7016 5671
+
+web search: 
+web search: "The PINNACLE Study" "+10.3" "82" "Table" ...
+web search: 
+web search: '10.3'
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import json,pathlib
+out=pathlib.Path('/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001')
+slug='g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti'
+p=out/f'{slug}.jsonl';a=[json.loads(x) for x in p.read_text().splitlines()]
+for x in a:
+ if x['claim_id'].endswith('#9'):
+  x['evidence']='DOI 10.1097/JU.0000000000003568, Efficacy and Table 2: among 100 assigned Optilume, ITT IPSS improvement 11.5 ± 7.8 points at 12 months; paired Qmax change +10.3 ± 10.2 mL/s in 82 men at 12 months; eligibility prostate volume 20–80 g.'
+p.write_text(''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in a))
+sp=out/f'{slug}.status.jsonl';s=[json.loads(x) for x in sp.read_text().splitlines()]
+for x in s:
+ if x['claim_id'].endswith('#9'):
+  x['source_opened']='https://wellprept-prod-storage.s3.amazonaws.com/files/345_jUnkl41O_.pdf'
+sp.write_text(''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in s))
+print('ok')
+PY" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+ok
+
+exec
+/bin/zsh -lc "nl -ba /Users/joyboy/.codex/memories/MEMORY.md | sed -n '890,901p'" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+   890	### keywords
+   891	
+   892	- WARWIKI, error reduction, Claude handoff, scripts/review/gate.py, source-needed, fuzzy matching, residual-error-sample, probability sample, reports/2026-10-06, 0e62a011
+   893	
+   894	## User preferences
+   895	
+   896	- When requesting a repository assessment, the user said “Don’t change anything just read only” -> keep the work observational unless implementation is separately authorized; do not alter an already-dirty working tree. [Task 1]
+   897	- When the user asked “Basically how can we make it even better?” -> prioritize concrete, high-leverage product and engineering improvements rather than reopening completed audits or listing generic feature ideas. [Task 1]
+   898	- When the user wanted “something I can share with Claude” -> provide a self-contained, copyable brief with current-state constraints, verification standards, explicit limits, and read-only boundaries. [Task 1]
+   899	- When the user asked to get the error rate “as close to 0 as possible” -> frame success as zero known P0/P1 defects in completed scope plus a fresh residual-error estimate, never unsupported clinical or site-wide perfection. [Task 2]
+   900	
+   901	## Reusable knowledge
+
+exec
+/bin/zsh -lc "nl -ba /Users/joyboy/.codex/memories/MEMORY.md | sed -n '877,890p'" in /Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001
+ succeeded in 0ms:
+   877	
+   878	- rollout_summaries/2026-10-03T02-25-38-MufW-warwiki_read_only_improvement_review_claude_handoff.md (cwd=/Users/joyboy/Documents/WARWIKI/warwiki, rollout_path=/Users/joyboy/.codex/sessions/2026/10/02/rollout-2026-10-02T22-25-38-01a0ff94-d17a-7281-ba80-9b5f6517cbf4.jsonl, updated_at=2026-10-06T22:10:32+00:00, thread_id=01a0ff94-d17a-7281-ba80-9b5f6517cbf4, success; read-only product review, live sampling, and copyable Claude brief)
+   879	
+   880	### keywords
+   881	
+   882	- WARWIKI, read-only, Claude handoff, Docusaurus, React hydration, Minified React error #418, toLocaleDateString, Playwright, CI, audit ledger, Algolia synonyms, handouts, Core Web Vitals
+   883	
+   884	## Task 2: Error-reduction plan and executable Claude prompt
+   885	
+   886	### rollout_summary_files
+   887	
+   888	- rollout_summaries/2026-10-06T17-53-38-qMSs-warwiki_error_reduction_plan_claude_prompt.md (cwd=/Users/joyboy/Documents/WARWIKI/warwiki, rollout_path=/Users/joyboy/.codex/sessions/2026/10/06/rollout-2026-10-06T13-53-38-01a11259-83d3-7c50-947e-602873c1db50.jsonl, updated_at=2026-10-06T18:03:38+00:00, thread_id=01a11259-83d3-7c50-947e-602873c1db50, success; plan and Claude prompt validated, committed, and pushed)
+   889	
+   890	### keywords
+
+codex
+Checked all 13 claims against their sources. **10 ok, 3 error, 0 unverifiable.** The findings file also contains 3 citation-placement proposals for supported claims. No site files were edited.
+
+- [Findings and exact proposed edits](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.jsonl)
+- [Per-claim status and source quotes](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.status.jsonl)
+
+
+hook: Stop
+hook: Stop Completed
+tokens used
+245,429
+Checked all 13 claims against their sources. **10 ok, 3 error, 0 unverifiable.** The findings file also contains 3 citation-placement proposals for supported claims. No site files were edited.
+
+- [Findings and exact proposed edits](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.jsonl)
+- [Per-claim status and source quotes](/Users/joyboy/Documents/WARWIKI/warwiki/reports/2026-10-26/ce-page-fixes/jobs/r0001/g0001__01-foundations__pharmacology__infection-prophylaxis__uti-suppressive-prophylacti.status.jsonl)
+
+

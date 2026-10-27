@@ -1,0 +1,229 @@
+
+> warwiki@0.0.0 lint
+> npm run lint:scope && npm run lint:citations && npm run lint:orphans && npm run lint:links && npm run lint:figures && npm run lint:cards && npm run lint:density && npm run lint:evidence && npm run lint:trials && npm run lint:content-preservation && npm run lint:handouts && npm run lint:claims && npm run lint:ref-dupes
+
+
+> warwiki@0.0.0 lint:scope
+> node scripts/check-scope.js
+
+✓ Scope check: 1447 files, no out-of-scope titles found.
+
+> warwiki@0.0.0 lint:citations
+> node scripts/check-citations.js
+
+✓ Citation check: 1447 files, no issues.
+
+> warwiki@0.0.0 lint:orphans
+> node scripts/check-orphans.js
+
+✓ Orphan check: 599 hidden-category pages, all linked.
+
+> warwiki@0.0.0 lint:links
+> node scripts/check-internal-links.js
+
+✓ Internal link check: 1447 files, no broken /docs/ links.
+
+> warwiki@0.0.0 lint:figures
+> node scripts/check-figure-captions.js
+
+✓ Figure-caption check: 340 /img/ embeds, all separated from their captions by a blank line.
+
+> warwiki@0.0.0 lint:cards
+> node scripts/check-card-descriptions.js
+
+✓ Card descriptions: 311 cards, all within 25 words.
+
+> warwiki@0.0.0 lint:density
+> node scripts/check-reference-density.js
+
+ℹ Reference-density advisory: 69 substantial articles need a structure/evidence review (not a clinical quality score).
+  docs/05-special-populations/05a-trauma-emergencies/pfui.mdx (8627 source words; 0 structured refs; 71 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/flap/quartey-flap.mdx (4763 source words; 0 structured refs; 41 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/flap/pedicled-prepucial-tube.mdx (4315 source words; 0 structured refs; 37 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/flap/orandi-flap.mdx (3874 source words; 0 structured refs; 31 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/excision-primary-anastomosis.mdx (3466 source words; 0 structured refs; 26 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx (3413 source words; 0 structured refs; 26 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04d-upper-tract-reconstruction/minimally-invasive/endoureterotomy.mdx (3345 source words; 0 structured refs; 43 unlinked entries; unlinked bibliography)
+  docs/01-foundations/pharmacology/sexual-medicine-andrology/intraurethral-alprostadil.mdx (3254 source words; 0 structured refs; 20 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/drug-coated-balloon.mdx (3114 source words; 0 structured refs; 32 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/liquid-minced-buccal.mdx (3058 source words; 0 structured refs; 29 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/graft/enterourethroplasty.mdx (2867 source words; 0 structured refs; 30 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/augmented-anastomotic.mdx (2701 source words; 0 structured refs; 19 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/muscle-sparing-urethroplasty.mdx (2567 source words; 0 structured refs; 23 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/transmeatal-omg-ventral-inlay.mdx (2544 source words; 0 structured refs; 15 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/posterior/core-through-urethrotomy.mdx (2469 source words; 0 structured refs; 17 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/non-transecting-bulbar.mdx (2381 source words; 0 structured refs; 26 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/flap/turner-warwick-flap.mdx (2224 source words; 0 structured refs; 21 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/jordan-vessel-sparing-epa.mdx (1950 source words; 0 structured refs; 28 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/ntaau.mdx (1597 source words; 0 structured refs; 16 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/joshi-step-msanta.mdx (1385 source words; 0 structured refs; 12 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/manta.mdx (1338 source words; 0 structured refs; 11 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/anastomotic/anta.mdx (1334 source words; 0 structured refs; 12 unlinked entries; unlinked bibliography)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/graft/dorsal-onlay-omg.mdx (2347 source words; 2 structured refs; 30 unlinked entries; few structured references)
+  docs/01-foundations/tools/instruments/clamps/babcock.mdx (881 source words; 2 structured refs; 0 unlinked entries; few structured references)
+  docs/04-surgical-techniques/04a-urethral-reconstruction/graft/sliding-t-dorsal-inlay.mdx (1548 source words; 3 structured refs; 13 unlinked entries; few structured references)
+
+> warwiki@0.0.0 lint:evidence
+> node scripts/check-evidence.js
+
+Evidence registry: 14 studies across 7 canonical pathways; fields, references and page bindings valid.
+
+> warwiki@0.0.0 lint:trials
+> node scripts/check-clinical-evidence.mjs
+
+Clinical evidence validation passed: 65 trial families, 20 decisions, 0 events.
+
+> warwiki@0.0.0 lint:content-preservation
+> node scripts/check-content-preservation.js
+
+✓ Content preservation: 1446 MDX files, no blanket-removal notices.
+
+> warwiki@0.0.0 lint:handouts
+> node scripts/check-handout-sources.js
+
+ℹ Handout source advisory: 97 handouts, 97 mapped.
+  132 source-page mapping(s) changed after review (93 handout(s)).
+  stress-urinary-incontinence-female: docs/03-clinical-conditions/03a-storage-incontinence/sui-female.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  stress-urinary-incontinence-male: docs/03-clinical-conditions/03a-storage-incontinence/sui-male.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  interstitial-cystitis-bps: docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-tract-infections: docs/02-evaluation/laboratory-studies/urine-studies.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-tract-infections: docs/01-foundations/pharmacology/infection-prophylaxis/uti-treatment-antibiotics.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-tract-infections: docs/05-special-populations/05e-womens-health/recurrent-uti.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  asymptomatic-bacteriuria: docs/02-evaluation/laboratory-studies/urine-studies.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  asymptomatic-microscopic-hematuria: docs/02-evaluation/laboratory-studies/urine-studies.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  asymptomatic-microscopic-hematuria: docs/02-evaluation/imaging/ct-urogram.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  nocturia: docs/03-clinical-conditions/03a-storage-incontinence/nocturia.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  benign-prostatic-hyperplasia: docs/03-clinical-conditions/03b-voiding-outlet/bladder-outlet-obstruction.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-organ-prolapse: docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  musculoskeletal-pelvic-pain: docs/03-clinical-conditions/03h-pelvic-pain/myofascial-pelvic-pain.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  accidental-bowel-leakage: docs/03-clinical-conditions/03i-defecatory-disorders/fecal-incontinence.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  female-sexual-dysfunction: docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethral-diverticulum: docs/03-clinical-conditions/03b-voiding-outlet/urethral-diverticula.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethral-diverticulum: docs/04-surgical-techniques/04a-urethral-reconstruction/female/urethral-diverticulum-repair.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  fistulas-genitourinary-rectovaginal: docs/03-clinical-conditions/03f-fistulas/in-females/vesicovaginal.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  fistulas-genitourinary-rectovaginal: docs/03-clinical-conditions/03f-fistulas/in-females/rectovaginal.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  erectile-dysfunction: docs/03-clinical-conditions/03g-genital-scrotal/erectile-dysfunction.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  peyronies-disease: docs/03-clinical-conditions/03g-genital-scrotal/peyronies-disease.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  acquired-buried-penis: docs/03-clinical-conditions/03g-genital-scrotal/buried-penis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  acquired-buried-penis: docs/04-surgical-techniques/04e-genital-reconstruction/buried-penis-repair.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  rectourethral-fistula: docs/03-clinical-conditions/03f-fistulas/in-males/rectourethral.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pubosymphyseal-fistula: docs/03-clinical-conditions/03f-fistulas/in-males/urethropubic.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  retrograde-urethrogram: docs/02-evaluation/imaging/rug-vcug.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  voiding-cystourethrogram: docs/02-evaluation/imaging/rug-vcug.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  cystoscopy: docs/02-evaluation/ancillary-tests/endoscopy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  cystogram: docs/02-evaluation/imaging/cystography.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urodynamics: docs/02-evaluation/ancillary-tests/urodynamics.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ambulatory-urodynamics: docs/02-evaluation/ancillary-tests/urodynamics.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ambulatory-urodynamics: docs/01-foundations/tools/biomaterials/adjunct-specialty/glean-urodynamics.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ureteral-evaluation-under-anesthesia: docs/03-clinical-conditions/03e-upper-tract/ureteral-stricture.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ureteral-evaluation-under-anesthesia: docs/02-evaluation/ancillary-tests/endoscopy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ureteral-evaluation-under-anesthesia: docs/02-evaluation/imaging/cystography.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  suprapubic-catheter-placement: docs/01-foundations/tools/biomaterials/urinary-catheters/suprapubic-catheter.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  buccal-mucosa-graft: docs/01-foundations/surgical-principles/grafts/buccal-mucosa.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  artificial-urinary-sphincter: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/artificial-urinary-sphincter.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  inflatable-penile-prosthesis: docs/01-foundations/tools/biomaterials/prosthetics/inflatable-penile-prosthesis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  inflatable-penile-prosthesis: docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/surgical-approaches.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  inflatable-penile-prosthesis: docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/index.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  malleable-penile-implant: docs/01-foundations/tools/biomaterials/prosthetics/malleable-penile-prosthesis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  malleable-penile-implant: docs/04-surgical-techniques/04j-sexual-dysfunction/penile-implants/surgical-approaches.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  male-urethral-sling: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/male-urethral-slings.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethroplasty: docs/04-surgical-techniques/04a-urethral-reconstruction/male-urethroplasty.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  penile-plication: docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/tunica-plication.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  plaque-incision-grafting: docs/04-surgical-techniques/04j-sexual-dysfunction/peyronies-disease/plaque-incision-grafting.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  perineal-urethrostomy: docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/blandy-perineal-urethrostomy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  perineal-urethrostomy: docs/04-surgical-techniques/04a-urethral-reconstruction/meatal-perineal/midline-perineal-urethrostomy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pyeloplasty: docs/04-surgical-techniques/04d-upper-tract-reconstruction/anastomosis-repair/pyeloplasty.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  optilume-urethral-stricture: docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/drug-coated-balloon.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ureteral-reconstruction: docs/04-surgical-techniques/04d-upper-tract-reconstruction/upper-tract-reconstruction-principles.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-diversion-overview: docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-diversion-overview: docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ileal-conduit: docs/04-surgical-techniques/04c-urinary-diversion/ileal-conduit.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  orthotopic-neobladder: docs/04-surgical-techniques/04c-urinary-diversion/modified-studer-pouch.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  orthotopic-neobladder: docs/04-surgical-techniques/04c-urinary-diversion/urinary-diversion-principles.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  continent-cutaneous-diversion: docs/04-surgical-techniques/04c-urinary-diversion/indiana-pouch.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-floor-exercises-bladder-training: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-floor-exercises-bladder-training: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/behavioral-therapy-incontinence.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-estrogen-therapy: docs/01-foundations/pharmacology/hormonal-therapies/vaginal-topical-estrogen.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-pessaries: docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/prolapse-pessaries.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-pessaries: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/continence-pessary.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-lubricants-moisturizers: docs/01-foundations/pharmacology/hormonal-therapies/vaginal-moisturizers.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  intermittent-self-catheterization: docs/01-foundations/tools/biomaterials/urinary-catheters/intermittent-catheter.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  intracavernosal-injections: docs/04-surgical-techniques/04j-sexual-dysfunction/intracavernosal-injections.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vacuum-erection-device: docs/04-surgical-techniques/04j-sexual-dysfunction/ved.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  penile-traction-therapy: docs/04-surgical-techniques/04j-sexual-dysfunction/penile-traction-therapy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  anticholinergics: docs/01-foundations/pharmacology/storage-oab/anticholinergics.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  beta-3-agonists: docs/01-foundations/pharmacology/storage-oab/beta3-agonists.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  5-alpha-reductase-inhibitors: docs/01-foundations/pharmacology/voiding-outlet/5-alpha-reductase-inhibitors.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pde5-inhibitors: docs/01-foundations/pharmacology/sexual-medicine-andrology/pde5-inhibitors.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  testosterone-replacement-therapy: docs/01-foundations/pharmacology/sexual-medicine-andrology/testosterone-replacement.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-botox: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/intradetrusor-botox.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethral-bulking: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/urethral-bulking-agents.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  percutaneous-tibial-nerve-stimulation: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/percutaneous-tibial-nerve-stimulation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  sacral-neuromodulation: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  implantable-tibial-nerve-stimulation: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/implantable-tibial-nerve-stimulation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  turp: docs/04-surgical-techniques/04m-bph-male-luts/turp.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  holep: docs/04-surgical-techniques/04m-bph-male-luts/prostate-enucleation-holep.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  aquablation: docs/04-surgical-techniques/04m-bph-male-luts/aquablation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  simple-prostatectomy: docs/04-surgical-techniques/04m-bph-male-luts/simple-prostatectomy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  mid-urethral-sling: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/retropubic-midurethral-sling.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  mid-urethral-sling: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/female-slings-suspensions.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  proact-adjustable-balloons: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/proact-balloons.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  act-adjustable-balloons: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/adjustable-continence-devices.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  act-adjustable-balloons: docs/01-foundations/tools/biomaterials/prosthetics/proact-balloons.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  colpocleisis: docs/04-surgical-techniques/04g-prolapse-repair/obliterative-pessary/colpocleisis-total.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  sacrocolpopexy: docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrocolpopexy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-hysterectomy-prolapse: docs/04-surgical-techniques/04g-prolapse-repair/apical/vaginal-hysterectomy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-prolapse-repair-graft: docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-prolapse-repair-graft: docs/04-surgical-techniques/04g-prolapse-repair/mesh-graft-augmented-repairs.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-suspension: docs/04-surgical-techniques/04g-prolapse-repair/apical/uterosacral-ligament-suspension.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  vaginal-suspension: docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-ligament-fixation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  perineal-tears-3rd-4th-degree: docs/03-clinical-conditions/03c-pelvic-support/obstetric-perineal-injury.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  perineal-tears-3rd-4th-degree: docs/04-surgical-techniques/04h-fistula-repair/female/anal-sphincteroplasty.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  cosmetic-gynecology: docs/04-surgical-techniques/04l-cosmetic-genital-surgery/female-cosmetic.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  surgical-considerations-before-pop-repair: docs/04-surgical-techniques/04g-prolapse-repair/prolapse-repair-principles.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-augmentation-and-channels: docs/04-surgical-techniques/04b-bladder-reconstruction/bladder-augmentation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-augmentation-and-channels: docs/04-surgical-techniques/04b-bladder-reconstruction/catheterizable-channels.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-neck-contracture: docs/03-clinical-conditions/03b-voiding-outlet/bladder-neck-stenosis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-neck-contracture: docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  bladder-neck-contracture: docs/03-clinical-conditions/03b-voiding-outlet/vesicourethral-anastomotic-stenosis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  female-urethral-stricture: docs/03-clinical-conditions/03b-voiding-outlet/female-urethral-stricture.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  female-urethral-stricture: docs/04-surgical-techniques/04a-urethral-reconstruction/female-urethroplasty.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  greenlight-laser: docs/04-surgical-techniques/04m-bph-male-luts/greenlight-pvp.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  lichen-sclerosus: docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  lichen-sclerosus: docs/01-foundations/pharmacology/dermatologic-topical-urethral/high-potency-topical-corticosteroids.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  low-sexual-desire: docs/05-special-populations/05e-womens-health/sexual-dysfunction.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  low-sexual-desire: docs/01-foundations/pharmacology/sexual-medicine-andrology/bremelanotide.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  low-sexual-desire: docs/01-foundations/pharmacology/sexual-medicine-andrology/female-testosterone-hsdd.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  low-sexual-desire: docs/04-surgical-techniques/04j-sexual-dysfunction/psychosexual-therapy.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  clitoral-adhesions: docs/03-clinical-conditions/03g-genital-scrotal/clitoral-phimosis.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  clitoral-adhesions: docs/03-clinical-conditions/03g-genital-scrotal/clitoral-disorders.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  clitoral-adhesions: docs/03-clinical-conditions/03g-genital-scrotal/lichen-sclerosus.mdx changed 2026-10-21 (reviewed 2026-10-20)
+  neurogenic-bladder-options: docs/03-clinical-conditions/03d-nlutd/neurogenic-bladder.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  neurogenic-bladder-options: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/sacral-neuromodulation.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-floor-pt-visit: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/pelvic-floor-pt.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-floor-pt-visit: docs/03-clinical-conditions/03h-pelvic-pain/ic-pbs.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  pelvic-fracture-urethral-injury: docs/05-special-populations/05a-trauma-emergencies/pfui.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  problems-after-mesh-or-sling: docs/04-surgical-techniques/04g-prolapse-repair/mesh-complications.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  rezum: docs/04-surgical-techniques/04m-bph-male-luts/rezum-water-vapor-therapy.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  staged-urethroplasty: docs/04-surgical-techniques/04a-urethral-reconstruction/staged-complex/bracka-two-stage.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  staged-urethroplasty: docs/04-surgical-techniques/04a-urethral-reconstruction/staged-complex/johanson-two-stage.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  sui-surgery-without-mesh: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/burch-colposuspension.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  sui-surgery-without-mesh: docs/04-surgical-techniques/04f-incontinence-procedures/procedures/autologous-pubovaginal-sling.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  ureteral-stent: docs/01-foundations/tools/biomaterials/ureteral-stents/double-j-stent.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethral-stricture-choices: docs/03-clinical-conditions/03b-voiding-outlet/urethral-stricture.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urethral-stricture-choices: docs/04-surgical-techniques/04a-urethral-reconstruction/minimally-invasive/dviu.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-problems-after-radiation: docs/01-foundations/surgical-principles/radiation-tissue-effects.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-problems-after-radiation: docs/05-special-populations/05d-cancer-survivorship/radiation-hemorrhagic-cystitis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+  urinary-problems-after-radiation: docs/03-clinical-conditions/03b-voiding-outlet/posterior-urethral-stenosis.mdx changed 2026-10-21 (reviewed 2026-10-19)
+
+> warwiki@0.0.0 lint:claims
+> python3 scripts/review/gate.py check
+
+
+Claim gate: 6 claim(s) fail. Run `python3 scripts/review/gate.py pending <files>`, the Codex check (orchestrate.py --claims --reviewers 1 --verifiers 1) and `gate.py record <work>`.
+docs/03-clinical-conditions/03c-pelvic-support/pelvic-organ-prolapse.mdx:322: applied correction not yet re-checked in its final text [number+dose]: with reduction at 300 ml, detection varied by method, from 6% with a pessary to 30% with a speculum
+docs/04-surgical-techniques/04g-prolapse-repair/apical/sacrospinous-hysteropexy.mdx:70: applied correction not yet re-checked in its final text [number]: the five-year report tabulated cumulative first-failure proportions of 29/79 (37%) versus 42/78 (54%) at the five-year visit
+docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx:126: applied correction not yet re-checked in its final text [number]: optilume bph | −11.5 at 12 mo (itt, 100 randomized) | +10.3 ml/s (82 paired at 12 mo) | 20–80 g | local / sedation | significant median-lobe
+docs/04-surgical-techniques/04m-bph-male-luts/optilume-bph.mdx:166: new or changed claim; not verified [number]: pinnacle excluded a significant median-lobe component (e.g., intravesical prostatic protrusion above 1 cm); smaller protrusion was included
+docs/04-surgical-techniques/04m-bph-male-luts/prostate-artery-embolization.mdx:158: applied correction not yet re-checked in its final text [number]: in the abt single-center, open-label rct (103 randomized; 48 pae and 51 turp participants with primary-outcome data), ipss fell 9.23 points 
+docs/05-special-populations/05e-womens-health/recurrent-uti.mdx:136: applied correction not yet re-checked in its final text [number]: among participants whose optional perineal swabs yielded e. coli, resistance to at least one antibiotic at the 6- or 12-month visit was foun
