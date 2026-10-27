@@ -6,6 +6,12 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## October 27, 2026 — Surgeon biographies, round 2
+
+- Narrative `## Biography` sections on 15 more senior profiles: Kulkarni, Dwyer, Ostergard, Drutz, Kralj, Nilsson, Marchant, Petri, Contreras Ortiz (replaces its short biography), Riss, Shingleton, Hautmann, Wein, Mulcahy and Lue. Every sentence is footnoted to a published obituary, tribute, society history or first-person career account.
+- Method as in round 1: Codex author (brief `reports/2026-10-26/surgeon-biographies-r2/brief-author.md`, sources from the round-1 shortlist), independent Codex verifier (all 15 returned FIX: inferred motives, career-wide appraisals and repeated paragraphs cut), then a Claude read of every corrected section with spot checks against the sources (Kralj obituary, Mulcahy's account). Claude edits: an uncited Hautmann sentence footnoted, a meta sentence cut from Kulkarni, Lue's papaverine sentence stated directly, Mulcahy's objection sentence matched to his account (legal concern), and Dwyer's editorship year dropped because the IUGA book (2011) and the profile card's ICS source (2010) disagree.
+- Source conflicts left on the cards for the owner: Kralj IUGA presidency 1989–1990 on the IUGA past-presidents page versus 1988–1990 in the obituary; Dwyer IJU editorship start 2010 (ICS) versus 2011 (IUGA). Surgeon profiles are outside the claim gate; lint and build pass.
+
 ## October 27, 2026 — Clinical Evidence follow-up: flagged pages
 
 - Checked every page disagreement that the Clinical Evidence trial agents recorded in `reports/2026-10-18/clinical-evidence/work/*/notes.md` against the trial records in `src/data/clinical-evidence/` and the full texts on disk. Most had already been fixed by the October 19–21 sweeps (VVF catheter wording, UPSTREAM thresholds and five-year statement, ThuVARP, Revi/OASIS denominators, PINNACLE 3/100, MERIT enrollment and adverse events, MASTER, SIMS, ROSETTA, ARTISAN, PROSPECT, Scandinavian EPA, STITCH, SUmiT, OPTIMAL on the POP page, AUSCO titles).
