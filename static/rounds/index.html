@@ -278,6 +278,12 @@ h1.logo svg{width:22px;height:22px;margin:0 2px 0 1px}
 .score{font-family:var(--sans)}
 .sheet{border-radius:12px 12px 0 0}
 .box{border-radius:4px}
+.exitBtn{border:0;background:none;padding:4px 0;font:600 13px var(--sans);color:var(--accent);letter-spacing:.02em}
+.qbar{gap:12px}.qbar .lab{flex:1;text-align:center}
+h1.logo{cursor:pointer}
+.nRow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nIn{width:92px;font:500 14px var(--sans);padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink)}
+.nIn:focus{outline:none;border-color:var(--accent);box-shadow:var(--glow)}
 .brand{flex-direction:column;align-items:flex-start;gap:3px}
 .homeLink{font:600 11px var(--sans);letter-spacing:.08em;color:var(--ink2);text-decoration:none}
 .homeLink:hover{color:var(--accent)}
@@ -297,7 +303,7 @@ h1.logo svg{width:22px;height:22px;margin:0 2px 0 1px}
   <div class="top">
     <div class="brand">
       <a class="homeLink" id="homeLink" hidden></a>
-      <h1 class="logo" aria-label="Rounds">R<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--logoTrack)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 7.9 28.8" fill="none" stroke="var(--logo)" stroke-width="6"/><path d="M7.9 28.8 A15 15 0 0 1 5.7 24.6" fill="none" stroke="var(--pearl)" stroke-width="6"/></svg>UNDS</h1>
+      <h1 class="logo" aria-label="Rounds" id="logoHome" role="link" tabindex="0" title="Home">R<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="var(--logoTrack)" stroke-width="6"/><path d="M20 5 A15 15 0 1 1 7.9 28.8" fill="none" stroke="var(--logo)" stroke-width="6"/><path d="M7.9 28.8 A15 15 0 0 1 5.7 24.6" fill="none" stroke="var(--pearl)" stroke-width="6"/></svg>UNDS</h1>
     </div>
     <div class="hdrR">
       <button class="themeBtn" id="theme" aria-label="Theme"></button>
@@ -378,7 +384,11 @@ const HOST=location.hostname;
 const ONSITE=!window.claude&&/warwiki|whitwiki|localhost|127\.0\.0\.1/.test(HOST);
 const HOME=HOST.includes("whitwiki")?{name:"WHITWIKI",url:"/",other:"WARWIKI",otherUrl:"https://warwiki.org/rounds"}:{name:"WARWIKI",url:"/",other:"WHITWIKI",otherUrl:"https://whitwiki.org/rounds"};
 const QURLS=!location.pathname.startsWith("/rounds")?["questions.json"]:/(^|\.)warwiki\.org$/.test(HOST)||/^warwiki[a-z0-9-]*\.vercel\.app$/.test(HOST)?["https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"]:["/rounds/questions.json","https://whitwiki.org/rounds/questions.json","https://whitwiki.vercel.app/rounds/questions.json"];
-async function fetchQuestions(){let last;for(const u of QURLS){try{const r=await fetch(u,{cache:"no-cache"});if(r.ok)return await r.json();last=new Error("status "+r.status)}catch(e){last=e}}throw last}
+async function fetchQuestions(){
+  const ctrls=QURLS.map(()=>new AbortController());const timers=ctrls.map(c=>setTimeout(()=>c.abort(),12000));
+  try{return await Promise.any(QURLS.map((u,i)=>fetch(u,{cache:"no-cache",signal:ctrls[i].signal}).then(r=>{if(!r.ok)throw new Error("status "+r.status);return r.json()}).then(d=>{ctrls.forEach((c,j)=>{if(j!==i)c.abort()});return d})))}
+  finally{timers.forEach(clearTimeout)}
+}
 const SYNC_API=/(^|\.)warwiki\.org$/.test(HOST)?"/api/rounds-sync":"https://warwiki.org/api/rounds-sync";
 const CODE_RE=/^[A-HJ-NP-Z2-9]{12}$/;
 const fmtCode=c=>c?c.replace(/(.{4})(.{4})(.{4})/,"$1-$2-$3"):"";
@@ -516,7 +526,7 @@ function home(){
     <div><div class="lab" style="margin-bottom:6px">Yield</div>${segs("yield",Object.entries(YIELDS).map(([k,l])=>[k,l,S.qs.filter(q=>inField(q)&&(k==="all"||q.yield==="core"||(k==="cu"&&(q.yield==="useful"||!q.yield)))).length]))}<div class="note" style="margin-top:6px">Everything includes deep cuts such as small-series numbers and subgroups. Must + good to know leaves those out. Must know keeps guideline statements, landmark trial results and standard decisions.</div></div>
     <div><div class="lab" style="margin-bottom:6px">Type</div>${multi("kinds",[["__all","All types"],...Object.entries(KINDS).map(([k,l])=>[k,l,kindCnt(k)])])}</div>
     <div><div class="lab" style="margin-bottom:6px">Questions</div>${segs("pool",pools)}</div>
-    <div><div class="lab" style="margin-bottom:6px">How many</div>${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}</div>
+    <div><div class="lab" style="margin-bottom:6px">How many</div><div class="nRow">${segs("n",[[5,"5"],[10,"10"],[20,"20"],["all","All"]])}<input id="nIn" class="nIn" type="number" inputmode="numeric" min="1" max="${avail||1}" placeholder="Custom" aria-label="Custom number of questions" value="${typeof S.set.n==="number"&&![5,10,20].includes(S.set.n)?S.set.n:""}"></div></div>
     <div><div class="lab" style="margin-bottom:6px">Mode</div>${segs("mode",[["tutor","Tutor"],["timed","Timed"]])}</div>
     <div><div class="lab" style="margin-bottom:6px">Recall first</div>${segs("recall",[[false,"Off"],[true,"On"]])}<div class="note" style="margin-top:6px">Each question first shows without its choices. Type your answer (or just think it), then tap Show choices and pick. Your recalled answer appears beside the explanation so you can compare. Harder, and better for quoting trial numbers from memory.</div></div>
     <div class="go"><button class="btn wide" id="start" ${n?"":"disabled"}>Start ${n||""} question${n===1?"":"s"}</button>${n?"":`<span class="note">No questions match. Pick another set.</span>`}</div>
@@ -577,7 +587,7 @@ function quiz(){
   else action=last?`<button class="btn wide" id="finish">${b.finished?"Back to summary":"Finish block"}</button>`:`<button class="btn wide" id="next">Next question</button>`;
   const fresh=S.shownIdx!==b.ids[idx];S.shownIdx=b.ids[idx];
   return `
-  <div class="qbar"><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
+  <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
   <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span>${q.yield==="core"?'<span class="chip core">Must know</span>':q.yield==="detail"?'<span class="chip">Deep cut</span>':""}</div>
@@ -696,9 +706,11 @@ function render(){
 }
 const THEMES=["system","light","dark"];
 document.addEventListener("click",e=>{
+  if(e.target.closest("#logoHome")){if(S.view==="quiz"&&S.block&&!S.block.finished){const b=S.block;if(b.ids.some(id=>b.done[id]!=null)){finish();return}S.block=null}S.view="home";S.sheet=false;render();window.scrollTo(0,0);return}
   const pk=e.target.closest("[data-peek]");if(pk&&pk.classList.contains("hidden-card")){S.peek=S.peek||{};S.peek[pk.dataset.peek]=true;render();return}
   if(e.target.id==="sheetBg"){S.sheet=false;render();return}
   const t=e.target.closest("button");if(!t)return;
+  if(t.id==="exitBlock"){const b=S.block;if(!b){S.view="home";render();return}if(b.finished){S.view="summary";render();window.scrollTo(0,0);return}const any=b.ids.some(id=>b.done[id]!=null);if(any)finish();else{S.block=null;S.view="home";render();window.scrollTo(0,0)}return}
   if(t.id==="toggleStats"){S.showStats=!S.showStats;render();return}
   if(t.id==="openSync"){S.sheet="sync";render();return}
   if(t.id==="syncOn"){syncCode=newCode();LS.put("rounds-sync",syncCode);syncInfo.state="syncing";syncPush(true);render();return}
@@ -732,7 +744,11 @@ document.addEventListener("click",e=>{
   if(t.dataset.rev!=null){b.i=+t.dataset.rev;S.view="quiz";render();window.scrollTo(0,0);return}
   if(t.id==="again"){S.block=null;S.view="home";render();return}
 });
+document.addEventListener("change",e=>{
+  if(e.target&&e.target.id==="nIn"){const v=parseInt(e.target.value,10);if(v>0){S.set.n=v;LS.put("rounds-set",S.set)}render()}
+});
 document.addEventListener("keydown",e=>{
+  if(e.target&&e.target.id==="nIn"&&e.key==="Enter"){e.target.blur();return}
   if(e.key==="Escape"&&S.sheet){S.sheet=false;render();return}
   if(S.view!=="quiz"||!S.block)return;
   if(e.target&&e.target.tagName==="TEXTAREA"){if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){const b=$("#showCh");if(b)b.click()}return}
