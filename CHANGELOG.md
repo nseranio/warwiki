@@ -6,6 +6,14 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 12, 2026 — Coherence pilot: Bladder Diverticula
+
+- Owner's request: pages carry the right facts but read as back-to-back study results; make them read like an encyclopedia article without losing evidence. Cause: successive passes (textbook mining, number check, reviews, claim gate) each appended a self-contained "In a [design] of [n], [result]" sentence and none integrated them (the cancer section stated the Taiwanese cohort and its HR 2.63 twice in one paragraph).
+- Pilot rewrite of `bladder-diverticula.mdx` (awaiting owner feedback before any STYLE rule or sweep): each paragraph leads with its point, each study is stated once, paragraphs split by question (risk, mechanism, incidental cancer), Hutch moved to Etiology, outlet-first paragraph split into its exception and its indications, endoscopic evidence moved out of a list item into its own paragraph.
+- Checks: independent Codex before/after comparison (lost facts, changed meaning, moved citations; 21 items, all resolved, including restoring the 76%-of-104 presumed-benign fact and removing over-general lead sentences); claim gate with Codex reviewer + verifier on the final text (caught a 79-of-104 subgroup error the rewrite introduced; corrected and rechecked; 6 claims pass).
+
+---
+
 ## November 11, 2026 — Clinical Evidence: OAB combination trials and the missing-trial list
 
 - New trial pages BESIDE, SYNERGY and SYNERGY II on a new lane of the OAB drug decision ("Antimuscarinic plus β3 agonist"); 68 trials in the library. Codex author per trial (kit `reports/2026-11-11/clinical-evidence-additions/`: `brief.md`, `run_codex.py`, `assignments.json`, `leads.json`), Claude read, then the claim gate with independent Claude and Codex checks: 111 claims pass. Two unsupported statements removed (SYNERGY II's "broader" population on BESIDE; the AUA/SUFU guideline citing SYNERGY II, when its discussion names BESIDE and SYNERGY). None of the three papers is on disk; each was read from an open-access copy.
