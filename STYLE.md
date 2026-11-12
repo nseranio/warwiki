@@ -196,3 +196,17 @@ The word "not" is not banned: it states facts in "patients and physicians were n
 ## 13. Guideline recommendation detail (October 17, 2026)
 
 Use WHITWIKI’s `<Rec>` badges for existing guideline strength and evidence-grade parentheticals. Keep the original wording, parentheses, citations, and source-specific grading system inside the tag. The badge expands to the full detail on activation. Clinical advice and eligibility qualifiers remain visible in the sentence.
+
+## 14. Point first (November 12, 2026)
+
+The owner's rule after the Bladder Diverticula pilot: a section should read like an encyclopedia article, one coherent account built from the evidence, not a run of study results. Successive passes each appended a self-contained "In a [design] of [n] patients, [result]" sentence and none integrated them, so paragraphs stacked results, repeated the same cohort and never said what the results add up to.
+
+- **Lead with the point.** A paragraph opens with what its evidence shows, stated as a fact and no broader than the evidence: one series stays "in one series", hospitalized patients stay hospitalized patients. Joining the point to its first study with a colon keeps the scope and the numbers in one sentence: "Bladder diverticula are associated with bladder cancer: in a Taiwanese population-based cohort, 2,134 … had an adjusted hazard ratio of 2.63 …". A point sentence states a fact and carries its citations; it is not the commentary that section 12 cuts.
+- **One study, one statement.** Each study appears once in a section, with its design, size and headline result plus only the secondary numbers it adds. Merge duplicates; never restate a number to summarize it.
+- **Group by question, not by paper.** Within a section, put what is true and how often before why, and why before what it changes. Start a new paragraph when the question changes; most paragraphs run two to five sentences.
+- **Evidence out of list items.** A list item names an option or finding; the studies about it go in a paragraph after the list.
+- **Lose nothing, add nothing.** Every number, population, qualifier, condition and citation stays (section 5). Hedges keep their strength ("has been proposed as a mechanism", "appears to be driving"); a rule keeps its exceptions; subgroup denominators stay exact. No new causal connectives (section 3) and no closing summary sentence.
+
+Before (one paragraph): the 2,134-patient cohort and its hazard ratio stated twice, the 764-patient series as "102/764" and again as "13.3%", mechanism wedged between them, then incidental cancers. After: three paragraphs (risk, mechanism, cancer found at surgery), each study once, each paragraph opening with its point.
+
+The sweep uses `scripts/voice/coherence_extract.py` (candidate sections) with `scripts/review/orchestrate.py --claims --brief coherence --verify-brief coherence-verify`, then `scripts/voice/coherence_check.py` (no number or citation marker lost) and the claim gate on the final text.

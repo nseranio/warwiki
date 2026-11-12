@@ -19,7 +19,8 @@ VERIFY_BRIEF = ARGV[ARGV.index("--verify-brief") + 1] if "--verify-brief" in ARG
 BRIEFS = (("full", "reviewer-brief.md"), ("light", "reviewer-brief-light.md"), ("verify", "verifier-brief.md"), ("claims", "claim-checker-brief.md"), ("decide", "claim-decision-brief.md"),
           ("voice", "voice-brief.md"), ("voice-verify", "voice-verifier-brief.md"), ("residual", "residual-brief.md"),
           ("trust", "trust-brief.md"), ("trust-verify", "trust-verifier-brief.md"),
-          ("facts", "facts-brief.md"), ("facts-verify", "facts-verifier-brief.md"))
+          ("facts", "facts-brief.md"), ("facts-verify", "facts-verifier-brief.md"),
+          ("coherence", "coherence-brief.md"), ("coherence-verify", "coherence-verifier-brief.md"))
 PAGE_BRIEF = ARGV[ARGV.index("--page-brief") + 1] if "--page-brief" in ARGV else None  # page mode: brief key for every page (e.g. residual)
 
 
