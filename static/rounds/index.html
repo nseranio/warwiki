@@ -418,14 +418,21 @@ document.addEventListener("visibilitychange",()=>{if(document.visibilityState===
 if(ONSITE){const h=document.getElementById("homeLink");if(h){h.hidden=false;h.href=HOME.url;h.textContent="‹ "+HOME.name}}
 
 /* ---------- data ---------- */
+const QCACHE={db:null,
+  open(){return new Promise(res=>{try{const r=indexedDB.open("rounds",1);r.onupgradeneeded=()=>r.result.createObjectStore("kv");r.onsuccess=()=>{this.db=r.result;res(this.db)};r.onerror=()=>res(null)}catch(e){res(null)}})},
+  async get(){const db=this.db||await this.open();if(!db)return null;return new Promise(res=>{try{const t=db.transaction("kv").objectStore("kv").get("questions");t.onsuccess=()=>res(t.result||null);t.onerror=()=>res(null)}catch(e){res(null)}})},
+  async put(v){const db=this.db||await this.open();if(!db)return;try{db.transaction("kv","readwrite").objectStore("kv").put(v,"questions")}catch(e){}}};
+function useData(d){S.qs=d.questions;S.meta=d;S.byId={};S.qs.forEach(q=>S.byId[q.id]=q)}
 async function load(){
+  const cached=ONSITE?await QCACHE.get():null;
+  if(cached&&cached.questions){useData(cached);S.prog=LS.get("rounds-prog",{});render()}
   try{
     const d=await fetchQuestions();
-    S.qs=d.questions; S.meta=d;
-    S.qs.forEach(q=>S.byId[q.id]=q);
-  }catch(e){$("#view").innerHTML='<div class="panel empty">The question file did not load. Reload the page.</div>';return}
-  S.prog=LS.get("rounds-prog",{});
-  render();
+    const changed=!cached||cached.stamp!==d.stamp||cached.questions.length!==d.questions.length;
+    if(changed){if(!(S.block&&S.view==="quiz")){useData(d);render()}else{S.pendingData=d}}
+    if(ONSITE&&changed)QCACHE.put(d);
+  }catch(e){if(!cached){$("#view").innerHTML='<div class="panel empty">The questions did not load. Check your connection and reload the page.</div>';return}}
+  if(!cached){S.prog=LS.get("rounds-prog",{});render()}
   connect();
 }
 async function connect(){
