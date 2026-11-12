@@ -143,9 +143,6 @@ def publish(name, msg):
     if t:
         if gate_fails(t):
             sys.exit("claim gate fails on touched pages: not publishing")
-        for s in LINTS:
-            if sh(["npm", "run", "-s", s], quiet=True).returncode:
-                print(sh(["npm", "run", "-s", s], quiet=True).stdout[-2000:]); sys.exit(f"{s} fails: not publishing")
         # build in a clean worktree (HEAD plus this batch's pages) so other sessions' uncommitted files do not count
         wt = os.path.join(ROOT, RUNS, "coherence-build-worktree")
         if not os.path.isdir(wt):
@@ -156,6 +153,10 @@ def publish(name, msg):
         ap = subprocess.run(["git", "apply", "--whitespace=nowarn"], cwd=wt, input=patch, text=True, capture_output=True)
         if ap.returncode:
             print(ap.stderr); sys.exit("patch does not apply to HEAD: not publishing")
+        for s in LINTS:  # in the clean worktree: other sessions' uncommitted pages do not count
+            r = subprocess.run(["npm", "run", "-s", s], cwd=wt, capture_output=True, text=True)
+            if r.returncode:
+                print((r.stdout + r.stderr)[-2000:]); sys.exit(f"{s} fails: not publishing")
         b = subprocess.run(["npm", "run", "build"], cwd=wt, capture_output=True, text=True)
         if b.returncode:
             print((b.stdout + b.stderr)[-3000:]); sys.exit("build fails: not publishing")
