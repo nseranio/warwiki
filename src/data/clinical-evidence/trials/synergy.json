@@ -1,0 +1,315 @@
+{
+  "id": "synergy",
+  "name": "SYNERGY",
+  "aliases": [],
+  "nct": "NCT01972841",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "combination"
+    }
+  ],
+  "question": "Does solifenacin plus mirabegron improve urinary incontinence and frequency more than either drug alone in adults with wet overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 3527,
+    "arms": [
+      {
+        "key": "s5m50",
+        "label": "Solifenacin 5 mg plus mirabegron 50 mg",
+        "role": "experimental"
+      },
+      {
+        "key": "s5m25",
+        "label": "solifenacin 5 mg plus mirabegron 25 mg",
+        "role": "experimental"
+      },
+      {
+        "key": "s5",
+        "label": "solifenacin 5 mg",
+        "role": "control"
+      },
+      {
+        "key": "m50",
+        "label": "mirabegron 50 mg",
+        "role": "control"
+      },
+      {
+        "key": "m25",
+        "label": "mirabegron 25 mg",
+        "role": "control"
+      },
+      {
+        "key": "pbo",
+        "label": "placebo",
+        "role": "control"
+      }
+    ],
+    "population": "Adults with wet overactive bladder for at least 3 months, at least 8 daily micturitions, at least 1 daily urgency episode, and at least 3 incontinence episodes in a 7-day diary after placebo run-in.",
+    "description": "Multinational, double-blind, six-arm superiority randomized trial",
+    "locator": "Herschorn 2017, Patients and methods; Results, patient disposition; Table 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "The first co-primary comparison missed, stopping the multiplicity-controlled testing sequence.",
+  "takeaway": "Over 12 weeks, solifenacin 5 mg plus mirabegron 50 mg reduced daily incontinence more than solifenacin 5 mg alone but did not meet prespecified superiority over mirabegron 50 mg; subsequent frequency testing was blocked. A lower-dose combination and placebo were also studied.",
+  "reports": [
+    {
+      "id": "synergy-2017",
+      "kind": "primary",
+      "label": "Primary 12-week report",
+      "published": "2017-04-18",
+      "cutoff": null,
+      "citation": "Herschorn S, Chapple CR, Abrams P, et al. \"Efficacy and safety of combinations of mirabegron and solifenacin compared with monotherapy and placebo in patients with overactive bladder (SYNERGY study).\" *BJU Int.* 2017;120(4):562-575. doi:10.1111/bju.13882",
+      "doi": "10.1111/bju.13882",
+      "pmid": "28418102",
+      "followUp": "12 weeks of double-blind treatment; 2-week placebo run-out",
+      "followUpLocator": "Patients and methods, Study design",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean difference in change from baseline to week 12: solifenacin 5 mg plus mirabegron 50 mg versus solifenacin 5 mg",
+          "effect": {
+            "type": "difference",
+            "value": -0.2,
+            "ci": [
+              -0.44,
+              0.04
+            ],
+            "p": "0.033"
+          },
+          "met": true,
+          "note": "Rank ANCOVA P value and parametric confidence interval use different methods; the confidence interval crosses zero.",
+          "locator": "Efficacy, paragraph 1; Figure 2A; Statistical analysis"
+        },
+        {
+          "endpoint": "Urinary incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean difference in change from baseline to week 12: solifenacin 5 mg plus mirabegron 50 mg versus mirabegron 50 mg",
+          "effect": {
+            "type": "difference",
+            "value": -0.23,
+            "ci": [
+              -0.47,
+              0.01
+            ],
+            "p": "0.052"
+          },
+          "met": false,
+          "note": "First co-primary testing step required superiority to both monotherapies; primary objective was not met.",
+          "locator": "Efficacy, paragraph 1; Figure 2A; Statistical analysis"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Placebo-adjusted mean difference in change from baseline to week 12",
+          "values": {
+            "s5m50": "-0.95/day",
+            "s5m25": "-0.85/day",
+            "s5": "-0.56/day",
+            "m50": "-0.39/day",
+            "m25": "-0.36/day"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Combination-versus-monotherapy frequency comparisons had nominal P values only after the incontinence testing sequence stopped.",
+          "locator": "Efficacy, paragraphs 1 and 3; Figure 2B"
+        },
+        {
+          "endpoint": "Zero urinary incontinence episodes at end of treatment",
+          "role": "secondary",
+          "measure": "Responders in the last 3 diary days",
+          "values": {
+            "s5m50": "426/816 (52.2%)",
+            "s5m25": "417/823 (50.7%)",
+            "s5": "177/413 (42.9%)",
+            "m50": "188/406 (46.3%)",
+            "m25": "166/409 (40.6%)",
+            "pbo": "155/412 (37.6%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Exploratory pairwise responder comparisons were outside the stopped confirmatory sequence.",
+          "locator": "Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "values": {
+            "s5m50": "314/848 (37.0%)",
+            "s5m25": "345/853 (40.4%)",
+            "s5": "149/423 (35.2%)",
+            "m50": "147/422 (34.8%)",
+            "m25": "135/423 (31.9%)",
+            "pbo": "145/429 (33.8%)"
+          },
+          "locator": "Table 4, safety analysis set"
+        },
+        {
+          "label": "Urinary retention, sponsor-defined terms",
+          "values": {
+            "s5m50": "10/848 (1.2%)",
+            "s5m25": "8/853 (0.9%)",
+            "s5": "3/423 (0.7%)",
+            "m50": "0/422",
+            "m25": "0/423",
+            "pbo": "0/429"
+          },
+          "locator": "Table 4, safety analysis set; footnote on preferred and lower-level terms",
+          "note": "Four retention events required catheterization: two in each combination group."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "s5m50": "44/848 (5.2%)",
+            "s5m25": "60/853 (7.0%)",
+            "s5": "21/423 (5.0%)",
+            "m50": "16/422 (3.8%)",
+            "m25": "18/423 (4.3%)",
+            "pbo": "21/429 (4.9%)"
+          },
+          "locator": "Table 4, safety analysis set"
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "s5m50": "61/848 (7.2%)",
+            "s5m25": "74/853 (8.7%)",
+            "s5": "25/423 (5.9%)",
+            "m50": "14/422 (3.3%)",
+            "m25": "17/423 (4.0%)",
+            "pbo": "8/429 (1.9%)"
+          },
+          "locator": "Table 4, safety analysis set"
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "s5m50": "31/848 (3.7%)",
+            "s5m25": "38/853 (4.5%)",
+            "s5": "6/423 (1.4%)",
+            "m50": "11/422 (2.6%)",
+            "m25": "6/423 (1.4%)",
+            "pbo": "6/429 (1.4%)"
+          },
+          "locator": "Table 4, safety analysis set"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "value": "Four-week single-blind placebo run-in, 12 weeks of once-daily double-blind therapy, then 2-week placebo run-out.",
+          "locator": "Patients and methods, Study design"
+        },
+        {
+          "label": "Trial disposition",
+          "value": "3,527 randomized; 3,494 received double-blind treatment; 3,398 in the safety set and 3,308 in the full analysis set; 96 treated patients from one site excluded from both analysis sets for protocol noncompliance.",
+          "locator": "Results, patient disposition; Figure 1"
+        },
+        {
+          "label": "Enrollment setting",
+          "value": "435 sites in 42 countries.",
+          "locator": "Results, Patient demographics and baseline characteristics"
+        },
+        {
+          "label": "Baseline symptom and treatment history",
+          "value": "In the 3,398-person safety set, 2,223 (65.4%) had urgency incontinence only and 1,577 (46.4%) had used prior OAB medication.",
+          "locator": "Table 1"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-11-11",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "synergy-2018-pro",
+      "kind": "pro",
+      "label": "Patient-reported outcomes",
+      "published": "2017-07-13",
+      "cutoff": null,
+      "citation": "Robinson D, Kelleher C, Staskin D, et al. \"Patient-reported outcomes from SYNERGY, a randomized, double-blind, multicenter study evaluating combinations of mirabegron and solifenacin compared with monotherapy and placebo in OAB patients.\" *Neurourol Urodyn.* 2018;37(1):394-406. doi:10.1002/nau.23315",
+      "doi": "10.1002/nau.23315",
+      "pmid": "28704584",
+      "followUp": "12-week end-of-treatment assessment",
+      "followUpLocator": "abstract",
+      "results": [
+        {
+          "endpoint": "OAB-q symptom bother and health-related quality of life",
+          "role": "secondary",
+          "measure": "End-of-treatment patient-reported change",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Both combination groups improved symptom bother versus monotherapies (nominal P<0.001) and HRQOL total scores (P≤0.002); abstract gives no absolute score changes.",
+          "locator": "abstract"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-11-11",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "synergy-2018-cv",
+      "kind": "secondary",
+      "label": "Cardiovascular safety",
+      "published": "2018-04-12",
+      "cutoff": null,
+      "citation": "White WB, Chapple C, Gratzke C, et al. \"Cardiovascular Safety of the β3-Adrenoceptor Agonist Mirabegron and the Antimuscarinic Agent Solifenacin in the SYNERGY Trial.\" *J Clin Pharmacol.* 2018;58(8):1084-1091. doi:10.1002/jcph.1107",
+      "doi": "10.1002/jcph.1107",
+      "pmid": "29645285",
+      "followUp": "12-week end-of-treatment assessment",
+      "followUpLocator": "abstract",
+      "results": [],
+      "harms": [
+        {
+          "label": "Adjudicated major cardiovascular events",
+          "values": {
+            "s5m25": "1/853 (0.1%) nonfatal myocardial infarction",
+            "s5m50": "2/848 (0.2%) nonfatal strokes",
+            "s5": "0/423",
+            "m50": "0/422",
+            "m25": "0/423",
+            "pbo": "0/429"
+          },
+          "locator": "abstract",
+          "note": "Mean heart rate increased by approximately 1 beat/min in mirabegron groups; no clinically meaningful between-group QTcF differences were reported."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-11-11",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "beside",
+      "note": "Same solifenacin-plus-mirabegron program; BESIDE enrolled patients still incontinent after four weeks of solifenacin 5 mg."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/synergy",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

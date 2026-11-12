@@ -1,0 +1,389 @@
+{
+  "id": "synergy-ii",
+  "name": "SYNERGY II",
+  "aliases": [
+    "178-CL-102"
+  ],
+  "nct": "NCT02045862",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "combination"
+    }
+  ],
+  "question": "Over 12 months in adults with wet overactive bladder, how do mirabegron plus solifenacin compare with either drug alone for safety and symptom control?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1829,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Mirabegron 50 mg plus solifenacin 5 mg",
+        "n": 1218,
+        "role": "experimental"
+      },
+      {
+        "key": "mira",
+        "label": "mirabegron 50 mg",
+        "n": 306,
+        "role": "control"
+      },
+      {
+        "key": "soli",
+        "label": "solifenacin 5 mg",
+        "n": 305,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with at least three months of wet overactive bladder symptoms, including urgency, frequency, and incontinence.",
+    "description": "Multicenter, double-blind, three-arm randomized trial",
+    "locator": "Gratzke PDF pp502–504, Fig. 2; EU trial register, Period 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Symptom comparisons were nominal; the primary safety objective had no formal between-group test.",
+  "takeaway": "Over 12 months, mirabegron 50 mg plus solifenacin 5 mg improved daily incontinence and micturition counts more than either monotherapy in wet overactive bladder; treatment-emergent adverse events occurred in 49% versus 41% with mirabegron and 44% with solifenacin.",
+  "reports": [
+    {
+      "id": "synergy-ii-2018",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2018-06-01",
+      "cutoff": null,
+      "citation": "Gratzke C, van Maanen R, Chapple C, et al. \"Long-term Safety and Efficacy of Mirabegron and Solifenacin in Combination Compared with Monotherapy in Patients with Overactive Bladder: A Randomised, Multicentre Phase 3 Study (SYNERGY II).\" *Eur Urol.* 2018;74(4):501-509. doi:10.1016/j.eururo.2018.05.005",
+      "doi": "10.1016/j.eururo.2018.05.005",
+      "pmid": "29866467",
+      "followUp": "12 months of double-blind treatment",
+      "followUpLocator": "Gratzke 2018, Materials and methods, Study design",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes/24 h",
+          "role": "primary",
+          "measure": "End-of-treatment adjusted mean change, combination versus mirabegron",
+          "values": {
+            "exp": "−2.0/day (EOT 1.0/day; n=1184)",
+            "mira": "−1.6/day (EOT 1.5/day; n=301)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.5,
+            "ci": [
+              -0.7,
+              -0.2
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Nominal exploratory P value from stratified rank ANCOVA; adjusted mean difference and CI from standard ANCOVA, without multiplicity correction.",
+          "locator": "PDF p507, Table 3; p503, Statistical analyses"
+        },
+        {
+          "endpoint": "Incontinence episodes/24 h",
+          "role": "primary",
+          "measure": "End-of-treatment adjusted mean change, combination versus solifenacin",
+          "values": {
+            "exp": "−2.0/day (EOT 1.0/day; n=1184)",
+            "soli": "−1.9/day (EOT 1.2/day; n=297)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.1,
+            "ci": [
+              -0.4,
+              0.1
+            ],
+            "p": "0.002"
+          },
+          "met": true,
+          "note": "Nominal stratified-rank P value differs from the standard-ANCOVA CI, which crosses zero; no multiplicity correction.",
+          "locator": "PDF p507, Table 3; p503, Statistical analyses"
+        },
+        {
+          "endpoint": "Micturitions/24 h",
+          "role": "primary",
+          "measure": "End-of-treatment adjusted mean change, combination versus mirabegron",
+          "values": {
+            "exp": "−2.6/day (EOT 8.0/day; n=1184)",
+            "mira": "−2.1/day (EOT 8.4/day; n=301)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.5,
+            "ci": [
+              -0.8,
+              -0.2
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Nominal ANCOVA comparison without multiplicity correction.",
+          "locator": "PDF p507, Table 3; p503, Statistical analyses"
+        },
+        {
+          "endpoint": "Micturitions/24 h",
+          "role": "primary",
+          "measure": "End-of-treatment adjusted mean change, combination versus solifenacin",
+          "values": {
+            "exp": "−2.6/day (EOT 8.0/day; n=1184)",
+            "soli": "−2.2/day (EOT 8.5/day; n=297)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.4,
+            "ci": [
+              -0.7,
+              -0.1
+            ],
+            "p": "0.004"
+          },
+          "met": true,
+          "note": "Nominal ANCOVA comparison without multiplicity correction.",
+          "locator": "PDF p507, Table 3; p503, Statistical analyses"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "exp": "596/1206 (49%)",
+            "mira": "126/305 (41%)",
+            "soli": "134/303 (44%)"
+          },
+          "locator": "PDF p506, Table 2",
+          "note": "Safety analysis set; whole percentages as published."
+        },
+        {
+          "label": "Serious treatment-emergent adverse event",
+          "values": {
+            "exp": "51/1206 (4.2%)",
+            "mira": "8/305 (2.6%)",
+            "soli": "8/303 (2.6%)"
+          },
+          "locator": "PDF p503, Safety; p506, Table 2",
+          "note": "One serious event, atrial fibrillation in the mirabegron arm, was considered possibly drug-related."
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "74/1206 (6.1%)",
+            "mira": "12/305 (3.9%)",
+            "soli": "18/303 (5.9%)"
+          },
+          "locator": "PDF p506, Table 2",
+          "note": "Treatment-emergent events."
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "exp": "40/1206 (3.3%)",
+            "mira": "3/305 (1.0%)",
+            "soli": "7/303 (2.3%)"
+          },
+          "locator": "PDF p506, Table 2",
+          "note": "Treatment-emergent events."
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "9/1206 (0.7%)",
+            "mira": "1/305 (0.3%)",
+            "soli": "1/303 (0.3%)"
+          },
+          "locator": "PDF p506, Table 2, sponsor-defined preferred-term list",
+          "note": "One combination-arm patient required catheterization, detailed in Mueller 2019."
+        },
+        {
+          "label": "Urinary tract infection, grouped terms",
+          "values": {
+            "exp": "101/1206 (8.4%)",
+            "mira": "19/305 (6.2%)",
+            "soli": "18/303 (5.9%)"
+          },
+          "locator": "PDF p506, Table 2, sponsor-defined preferred-term list",
+          "note": "Includes grouped UTI preferred terms."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "value": "Two-week single-blind placebo washout, two indistinguishable oral tablets daily for 12 months, then two-week treatment-free follow-up.",
+          "locator": "PDF pp502–503, Fig. 1"
+        },
+        {
+          "label": "Allocation and diary",
+          "value": "Combination, mirabegron, and solifenacin were randomized 4:1:1; efficacy came from a seven-day electronic micturition diary.",
+          "locator": "PDF pp502–503, Study design and efficacy assessments"
+        },
+        {
+          "label": "Analysis populations",
+          "value": "1829 randomized; 1814 in the safety set and 1794 in the full analysis set.",
+          "locator": "PDF p503 and p504, Fig. 2"
+        },
+        {
+          "label": "End-of-treatment missing-data handling",
+          "value": "Last observation carried forward for early withdrawal without efficacy data at 12 months.",
+          "locator": "PDF p507, Table 3 footnote"
+        },
+        {
+          "label": "Previous trial exposure",
+          "value": "Of 1794 in the full analysis set, 1622 (90%) came from SYNERGY, 136 (7.6%) from BESIDE, and 36 (2.0%) were new.",
+          "locator": "PDF p503, Study population"
+        }
+      ],
+      "source": {
+        "file": null,
+        "checked": "2026-11-11",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "synergy-ii-2019-older-adults",
+      "kind": "secondary",
+      "label": "Prespecified older-adult analysis",
+      "published": "2019-01-15",
+      "cutoff": null,
+      "citation": "Mueller ER, van Maanen R, Chapple C, et al. \"Long-term treatment of older patients with overactive bladder using a combination of mirabegron and solifenacin: a prespecified analysis from the randomized, phase III SYNERGY II study.\" *Neurourol Urodyn.* 2019;38(2):779-792. doi:10.1002/nau.23919",
+      "doi": "10.1002/nau.23919",
+      "pmid": "30644570",
+      "followUp": "12 months; prespecified age strata younger than 65, 65 or older, younger than 75, and 75 or older",
+      "followUpLocator": "Mueller 2019, Methods, Statistical analyses",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes/24 h, age 65 or older",
+          "role": "descriptive",
+          "measure": "Adjusted mean change at end of treatment, combination versus mirabegron",
+          "values": {
+            "exp": "−2.24/day (n=405)",
+            "mira": "−1.52/day (n=101)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.72,
+            "ci": [
+              -1.13,
+              -0.31
+            ]
+          },
+          "note": "Prespecified age subgroup; no between-treatment P values were calculated.",
+          "locator": "PDF p789, Fig. 1B"
+        },
+        {
+          "endpoint": "Incontinence episodes/24 h, age 65 or older",
+          "role": "descriptive",
+          "measure": "Adjusted mean change at end of treatment, combination versus solifenacin",
+          "values": {
+            "exp": "−2.24/day (n=405)",
+            "soli": "−1.73/day (n=102)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.51,
+            "ci": [
+              -0.92,
+              -0.1
+            ]
+          },
+          "note": "Prespecified age subgroup; no between-treatment P values were calculated.",
+          "locator": "PDF p789, Fig. 1B"
+        },
+        {
+          "endpoint": "Incontinence episodes/24 h, age 75 or older",
+          "role": "descriptive",
+          "measure": "Adjusted mean change at end of treatment, combination versus mirabegron",
+          "values": {
+            "exp": "−2.37/day (n=102)",
+            "mira": "−1.48/day (n=28)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.89,
+            "ci": [
+              -1.68,
+              -0.09
+            ]
+          },
+          "note": "Small prespecified age subgroup; no between-treatment P values were calculated.",
+          "locator": "PDF p789, Fig. 1D"
+        },
+        {
+          "endpoint": "Incontinence episodes/24 h, age 75 or older",
+          "role": "descriptive",
+          "measure": "Adjusted mean change at end of treatment, combination versus solifenacin",
+          "values": {
+            "exp": "−2.37/day (n=102)",
+            "soli": "−1.88/day (n=34)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.49,
+            "ci": [
+              -1.23,
+              0.24
+            ]
+          },
+          "note": "Small prespecified age subgroup; no between-treatment P values were calculated.",
+          "locator": "PDF p789, Fig. 1D"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any treatment-emergent adverse event, age 65 or older",
+          "values": {
+            "exp": "237/414 (57.2%)",
+            "mira": "43/104 (41.3%)",
+            "soli": "54/104 (51.9%)"
+          },
+          "locator": "PDF p784, Table 2",
+          "note": "Safety analysis set."
+        },
+        {
+          "label": "Any treatment-emergent adverse event, age 75 or older",
+          "values": {
+            "exp": "57/106 (53.8%)",
+            "mira": "15/29 (51.7%)",
+            "soli": "13/35 (37.1%)"
+          },
+          "locator": "PDF p784, Table 2",
+          "note": "Safety analysis set; small subgroup."
+        },
+        {
+          "label": "Catheterization for urinary retention",
+          "values": {
+            "exp": "1 man, catheterized after 279 treatment days; retention resolved after 8 days"
+          },
+          "locator": "PDF p785, Table 2 footnote",
+          "note": "Study treatment stopped after 284 treatment days."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": null,
+        "checked": "2026-11-11",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "synergy",
+      "note": "The 12-month trial tested the same combination after the 12-week SYNERGY study; most participants came from SYNERGY."
+    },
+    {
+      "type": "builds-on",
+      "target": "beside",
+      "note": "A smaller group entered after BESIDE; SYNERGY II extended combination exposure to 12 months with both monotherapies as controls."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/synergy-ii",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

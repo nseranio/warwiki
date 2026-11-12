@@ -6,6 +6,11 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 11, 2026 — Clinical Evidence: OAB combination trials and the missing-trial list
+
+- New trial pages BESIDE, SYNERGY and SYNERGY II on a new lane of the OAB drug decision ("Antimuscarinic plus β3 agonist"); 68 trials in the library. Codex author per trial (kit `reports/2026-11-11/clinical-evidence-additions/`: `brief.md`, `run_codex.py`, `assignments.json`, `leads.json`), Claude read, then the claim gate with independent Claude and Codex checks: 111 claims pass. Two unsupported statements removed (SYNERGY II's "broader" population on BESIDE; the AUA/SUFU guideline citing SYNERGY II, when its discussion names BESIDE and SYNERGY). None of the three papers is on disk; each was read from an open-access copy.
+- Why these were missing: the library was ported from the hand-picked Journal Club list and never checked against the guidelines' evidence base. `reports/2026-11-11/trial-gaps/warwiki-missing-trials.md` (and `.json`) lists 183 missing trials (64 must-know, 119 should-know), 9 later reports for existing trials and 10 proposed decision points, built from the local guideline reference lists, FDA registration trials and the trials WARWIKI pages already cite; every primary report resolved on PubMed. Candidate extraction script `extract.py` there. The same list for WHITWIKI is in its repo (`reports/2026-11-11/trial-gaps/`).
+
 ## October 27, 2026 — Surgeon biographies, round 2
 
 - Narrative `## Biography` sections on 15 more senior profiles: Kulkarni, Dwyer, Ostergard, Drutz, Kralj, Nilsson, Marchant, Petri, Contreras Ortiz (replaces its short biography), Riss, Shingleton, Hautmann, Wein, Mulcahy and Lue. Every sentence is footnoted to a published obituary, tribute, society history or first-person career account.
