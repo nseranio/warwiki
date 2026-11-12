@@ -72,7 +72,7 @@ export default function NavbarLogo() {
         <div className={styles.divider} />
         <a href="/rounds" className={styles.choice} onClick={() => setOpen(false)}>
           <span className={styles.row}><strong className={styles.rounds}>ROUNDS</strong></span>
-          <span className={styles.specialty}>Question bank for both references</span>
+          <span className={styles.specialty}>Question Bank</span>
         </a>
       </nav>}
     </div>
