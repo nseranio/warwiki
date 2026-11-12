@@ -184,6 +184,7 @@ const config: Config = {
           items: [
             {to: '/docs/clinical-evidence', label: 'Clinical Evidence'},
             {to: '/video-library', label: 'Video Library'},
+            {to: 'pathname:///rounds', label: 'Question Bank'},
             {to: '/docs/resources', label: 'Resources'},
             {to: '/docs/roots', label: 'History'},
           ],
