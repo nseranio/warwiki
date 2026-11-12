@@ -237,6 +237,7 @@ h1.logo svg{width:22px;height:22px;margin:0 2px 0 1px}
 .chip{border-radius:3px;font-family:var(--sans);letter-spacing:.06em}
 .chip.t{background:var(--soft);color:var(--ink)}
 .chip.core{background:var(--accentSoft);color:var(--ink)}
+.chip.bf{background:transparent;border:1px solid var(--pearl);color:var(--pearl)}
 .qbody{display:grid;grid-template-columns:30px minmax(0,1fr);gap:4px}
 .qn{font:600 18px/1.55 var(--serif);color:var(--accent)}
 .stem{font:400 17.5px/1.62 var(--serif);text-wrap:pretty}
@@ -483,6 +484,7 @@ const POOLS={
   incorrect:{label:"Incorrect",f:q=>S.prog[q.id]&&S.prog[q.id].last==="w"},
   due:{label:"Due",f:q=>{const p=S.prog[q.id];return p&&p.n&&p.due<=Date.now()}},
   flagged:{label:"Flagged",f:q=>S.prog[q.id]&&S.prog[q.id].flag},
+  boardfav:{label:"Board favorites",f:q=>q.boardFav},
   all:{label:"All",f:()=>true}
 };
 function poolList(key){return S.qs.filter(q=>inTopic(q)&&POOLS[key].f(q))}
@@ -597,7 +599,7 @@ function quiz(){
   <div class="qbar"><button class="exitBtn" id="exitBlock">‹ ${b.finished?"Summary":"Exit"}</button><div class="lab">Question ${idx+1} of ${b.ids.length}</div><div class="clock" id="clock">${b.finished?"Review":clock()}</div></div>
   <div class="ticks" aria-hidden="true">${ticks}</div>
   <div class="${fresh?"case":""}" style="display:flex;flex-direction:column;gap:16px">
-  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span>${q.yield==="core"?'<span class="chip core">Must know</span>':q.yield==="detail"?'<span class="chip">Deep cut</span>':""}</div>
+  <div class="meta"><span class="chip ${q.field==="oncology"?"onc":""}">${esc(topicLabel(q.topic))}</span><span class="chip ${q.kind==="trial"?"t":""}">${esc(q.trial||KINDS[q.kind]||q.kind)}</span>${q.yield==="core"?'<span class="chip core">Must know</span>':q.yield==="detail"?'<span class="chip">Deep cut</span>':""}${q.boardFav?'<span class="chip bf">Board favorite</span>':""}</div>
   <div class="qbody"><div class="qn">${idx+1}.</div><div><div class="stem">${esc(q.stem)}</div><div class="ask">${esc(q.question)}</div></div></div>
   ${choices}
   ${ans}
