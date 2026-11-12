@@ -3939,8 +3939,8 @@ html[data-section='populations'] .wk-landing:not(.wk-landing--root) .markdown > 
   .wk-ev-tl-item::before {left: calc(2.8rem + .6rem + .5rem - 1px);}
   .wk-ev-convo-rel {display: block; min-width: 0;}
 }
-/* Timelines page: cancer toggle buttons stay in reach while scrolling. */
-.wk-ev-tlb-filter {position: sticky; top: var(--ifm-navbar-height); z-index: 5; padding: .7rem 0; margin-bottom: 1rem; background: var(--warwiki-bg); border-bottom: 1px solid var(--warwiki-border);}
+/* Timelines page: area and decision filters sit above the list and scroll with the page (owner, Nov 12: no floating bar). */
+.wk-ev-tlb-filter {padding: .7rem 0; margin-bottom: 1rem; border-bottom: 1px solid var(--warwiki-border);}
 .wk-ev-tlb-families, .wk-ev-tlb-areas {display: flex; flex-wrap: wrap; gap: .45rem;}
 .wk-ev-tlb-areas {margin-top: .55rem;}
 .wk-ev-tlb-filter button {font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .95rem; border-radius: 999px; border: 1px solid var(--warwiki-border); background: transparent; color: var(--warwiki-text-muted); cursor: pointer;}
