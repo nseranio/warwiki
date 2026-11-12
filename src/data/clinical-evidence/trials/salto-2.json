@@ -1,0 +1,253 @@
+{
+  "id": "salto-2",
+  "name": "SALTO-2",
+  "aliases": [
+    "Laparoscopic sacrocolpopexy versus sacrospinous fixation",
+    "NTR3977"
+  ],
+  "nct": null,
+  "registry": "Dutch Trial Register NTR3977",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-apical-suspension",
+      "lane": "abdominal-vs-vaginal"
+    }
+  ],
+  "question": "Does laparoscopic sacrocolpopexy improve disease-specific quality of life compared with vaginal sacrospinous fixation for symptomatic post-hysterectomy vault prolapse?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Patients and surgeons unblinded",
+    "type": "superiority",
+    "n": 64,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Laparoscopic sacrocolpopexy",
+        "n": 33,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "vaginal sacrospinous fixation",
+        "n": 31,
+        "role": "control"
+      }
+    ],
+    "population": "Women with symptomatic post-hysterectomy vaginal vault prolapse seeking surgery at nine Dutch hospitals; 64 entered the randomized trial and 115 entered a separate treatment-preference cohort.",
+    "description": "Multicenter randomized trial with prospective preference cohort",
+    "locator": "Methods §2.1; Results §3; Figure 1"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "The 12-month primary comparison was nonsignificant; randomization stopped at 64 of 106 planned participants.",
+  "takeaway": "Laparoscopic sacrocolpopexy versus vaginal sacrospinous fixation showed no statistically significant difference in 12-month disease-specific prolapse quality-of-life scores in the 64-woman randomized SALTO-2 trial; the 115-woman preference cohort also showed no significant difference.",
+  "reports": [
+    {
+      "id": "salto-2-2023",
+      "kind": "primary",
+      "label": "12-month randomized and cohort report",
+      "published": "2023-05-02",
+      "cutoff": null,
+      "citation": "van Oudheusden AMJ, van IJsselmuiden MN, Menge LF, et al. Laparoscopic sacrocolpopexy versus vaginal sacrospinous fixation for vaginal vault prolapse: a randomised controlled trial and prospective cohort (SALTO-2 trial). *BJOG.* 2023;130(12):1542-1551. doi:10.1111/1471-0528.17525",
+      "doi": "10.1111/1471-0528.17525",
+      "pmid": "37132094",
+      "followUp": "12 months after surgery",
+      "followUpLocator": "Methods §2.3; Tables 2-3",
+      "results": [
+        {
+          "endpoint": "UDI genital-prolapse domain, randomized trial",
+          "role": "primary",
+          "measure": "Mean 12-month UDI genital-prolapse score (0-100; lower is better), randomized trial",
+          "values": {
+            "exp": "8.5 (SEM 5.2; n=29)",
+            "ctl": "10.9 (SEM 4.5; n=30)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.887"
+          },
+          "met": false,
+          "note": "The trial specified a 10-point between-group difference as clinically relevant and planned to randomize 106 women; the randomized comparison was adjusted for baseline posterior-compartment stage.",
+          "locator": "Methods §2.5-2.6; Results §3.1; Table 2"
+        },
+        {
+          "endpoint": "UDI genital-prolapse domain, preference cohort",
+          "role": "secondary",
+          "measure": "Mean 12-month UDI genital-prolapse score (0-100; lower is better), separate prospective cohort",
+          "values": {
+            "exp": "7.0 (SEM 3.3; n=34)",
+            "ctl": "9.1 (SEM 3.3; n=49)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.704"
+          },
+          "note": "Cohort enrollment was by treatment preference, not randomization.",
+          "locator": "Results §3.2; Table 2"
+        },
+        {
+          "endpoint": "UDI genital-prolapse domain, pooled analysis",
+          "role": "secondary",
+          "measure": "Fixed-effect mean difference in 12-month UDI score, combining randomized and preference cohorts",
+          "effect": {
+            "type": "difference",
+            "value": 1.57,
+            "ci": [
+              -6.18,
+              9.32
+            ],
+            "p": "0.692"
+          },
+          "note": "The combined estimate includes nonrandomized preference-cohort participants.",
+          "locator": "Results §3.3; Figure 2"
+        },
+        {
+          "endpoint": "Apical composite success, randomized trial",
+          "role": "secondary",
+          "measure": "12-month apical composite success: no apical prolapse beyond hymen, bothersome bulge, repeat surgery or pessary",
+          "values": {
+            "exp": "25/28 (89.3%)",
+            "ctl": "25/29 (86.2%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.81,
+            "ci": [
+              0.15,
+              4.5
+            ],
+            "p": "0.810"
+          },
+          "note": "Adjusted odds ratio as reported in Table 3.",
+          "locator": "Methods §2.2; Table 3"
+        },
+        {
+          "endpoint": "Apical composite success, preference cohort",
+          "role": "secondary",
+          "measure": "12-month apical composite success in the separate prospective cohort",
+          "values": {
+            "exp": "28/31 (90.3%)",
+            "ctl": "36/41 (87.8%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.91,
+            "ci": [
+              0.18,
+              4.63
+            ],
+            "p": "0.905"
+          },
+          "note": "Adjusted odds ratio as reported in Table 3.",
+          "locator": "Table 3"
+        },
+        {
+          "endpoint": "Anterior anatomical failure, randomized trial",
+          "role": "secondary",
+          "measure": "POP-Q stage 2 or higher in the anterior compartment at 12 months",
+          "values": {
+            "exp": "9/31 (29.0%)",
+            "ctl": "17/30 (56.7%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.91,
+            "ci": [
+              0.97,
+              8.68
+            ],
+            "p": "0.056"
+          },
+          "note": "Adjusted odds ratio as reported in Table 3.",
+          "locator": "Table 3; Discussion §4.1"
+        },
+        {
+          "endpoint": "Any reintervention, randomized trial",
+          "role": "secondary",
+          "measure": "Any prolapse or non-prolapse reintervention by 12 months",
+          "values": {
+            "exp": "8/31 (25.8%)",
+            "ctl": "7/30 (23.3%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.05,
+            "ci": [
+              0.31,
+              3.56
+            ],
+            "p": "0.934"
+          },
+          "note": "The vaginal-fixation arm had three repeat laparoscopic sacrocolpopexies for apical recurrence; none occurred in the laparoscopic arm.",
+          "locator": "Results §3.1; Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Selected intraoperative complications, randomized trial",
+          "values": {
+            "exp": "1 bladder injury",
+            "ctl": "2 hemorrhages over 1000 mL"
+          },
+          "locator": "Results §3.1, perioperative paragraph; supplementary Table S3 cited but unavailable",
+          "note": "The bladder injury was recognized and repaired intraoperatively; one hemorrhage required clips and the other was managed conservatively."
+        },
+        {
+          "label": "De novo dyspareunia at 12 months, randomized trial",
+          "values": {
+            "exp": "2 (11.8%)",
+            "ctl": "1 (7.1%)"
+          },
+          "locator": "Results §3.1, sexual-function paragraph; supplementary Table S1 cited but unavailable",
+          "note": "Percentages are among respondents with evaluable sexual-function data; denominators are not stated in the main text."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Technique and surgeon experience",
+          "value": "Surgeons had performed at least 25 cases of each procedure. Laparoscopic repair used four ports, a Y-shaped polypropylene mesh fixed to anterior and posterior vaginal walls, sacral attachment and peritoneal closure. Vaginal repair used two nonabsorbable sutures in the right sacrospinous ligament 2 cm medial to the ischial spine.",
+          "locator": "Methods §2.1 and §2.4"
+        },
+        {
+          "label": "Operative time, randomized trial",
+          "values": {
+            "exp": "130.5 min (SEM 5.2)",
+            "ctl": "66.1 min (SEM 4.0)"
+          },
+          "locator": "Results §3.1, perioperative paragraph; supplementary Table S2 cited but unavailable",
+          "note": "P <0.001."
+        },
+        {
+          "label": "Concomitant surgery, randomized trial",
+          "values": {
+            "exp": "3/33 (9.1%)",
+            "ctl": "25/31 (80.6%)"
+          },
+          "locator": "Results §3.1, perioperative paragraph; supplementary Table S2 cited but unavailable",
+          "note": "Vaginal-group concomitant procedures were mainly anterior and posterior colporrhaphies."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_1471_0528_17525.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "confirms",
+      "target": "vue",
+      "note": "Both randomized vault-prolapse comparisons found similar patient-reported symptoms at 12 months after abdominal versus vaginal suspension."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/salto-2",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

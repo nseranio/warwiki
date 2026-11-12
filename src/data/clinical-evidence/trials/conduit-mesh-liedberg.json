@@ -1,0 +1,223 @@
+{
+  "id": "conduit-mesh-liedberg",
+  "name": "Liedberg prophylactic conduit mesh",
+  "aliases": [
+    "Liedberg 2020"
+  ],
+  "nct": null,
+  "registry": "ISRCTN95093825",
+  "area": [
+    "diversion"
+  ],
+  "decisions": [
+    {
+      "id": "urinary-diversion-surgery",
+      "lane": "conduit-and-stoma"
+    }
+  ],
+  "question": "Does prophylactic sublay mesh reduce clinical parastomal hernia after open cystectomy with ileal conduit?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 242,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prophylactic sublay Vypro mesh at ileal conduit construction",
+        "n": 118,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "conventional ileal conduit construction without mesh",
+        "n": 124,
+        "role": "control"
+      }
+    ],
+    "population": "Adults scheduled for open radical cystectomy for bladder cancer with ileal conduit and no previous stoma at two Swedish university hospitals and one county hospital.",
+    "description": "Three-center, open-label, closed-envelope randomized superiority trial",
+    "locator": "PDF pp758–759, Methods and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "Time-to-event analysis met significance; the 24-month binary comparison did not.",
+  "takeaway": "In open cystectomy with ileal conduit, prophylactic sublay Vypro mesh reduced the hazard of clinical parastomal hernia versus conventional stoma construction without mesh (HR 0.45, 95% CI 0.24–0.86); median operating time was longer.",
+  "reports": [
+    {
+      "id": "conduit-mesh-liedberg-2020",
+      "kind": "primary",
+      "label": "Randomized trial",
+      "published": "2020-08-13",
+      "cutoff": null,
+      "citation": "Liedberg F, Kollberg P, Allerbo M, et al. \"Preventing Parastomal Hernia After Ileal Conduit by the Use of a Prophylactic Mesh: A Randomised Study.\" *Eur Urol.* 2020;78(5):757-763. doi:10.1016/j.eururo.2020.07.033",
+      "doi": "10.1016/j.eururo.2020.07.033",
+      "pmid": "32800407",
+      "followUp": "Median 3 years in each arm among patients without parastomal hernia (IQR 2–5 years mesh; 2–4 years control)",
+      "followUpLocator": "PDF p759, Results",
+      "results": [
+        {
+          "endpoint": "Clinical parastomal hernia",
+          "role": "primary",
+          "measure": "Time to clinical parastomal hernia; 24-month event counts shown",
+          "values": {
+            "exp": "10/92",
+            "ctl": "20/89"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.45,
+            "ci": [
+              0.24,
+              0.86
+            ],
+            "p": "0.02"
+          },
+          "met": true,
+          "note": "The analysis was changed from the initially planned binary 24-month comparison to time-to-event analysis during the trial.",
+          "locator": "PDF pp758–761, Statistics, Table 2 and Figure 2"
+        },
+        {
+          "endpoint": "Clinical parastomal hernia",
+          "role": "descriptive",
+          "measure": "Binary comparison of 24-month clinical hernia counts",
+          "values": {
+            "exp": "10/92",
+            "ctl": "20/89"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.06"
+          },
+          "note": "The article reports 11% versus 23%; 20/89 calculates to 22.5% before rounding.",
+          "locator": "PDF p757, Abstract; p760, Table 2"
+        },
+        {
+          "endpoint": "Clinical parastomal hernia",
+          "role": "secondary",
+          "measure": "Adjusted time-to-event analysis",
+          "values": {
+            "exp": "10/92 at 24 months",
+            "ctl": "20/89 at 24 months"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.49,
+            "ci": [
+              0.26,
+              0.95
+            ],
+            "p": "0.04"
+          },
+          "note": "Adjusted for operating hospital, body mass index and preoperative chemotherapy.",
+          "locator": "PDF p759, Results; Supplementary Table 1 cited there"
+        },
+        {
+          "endpoint": "Radiological parastomal hernia",
+          "role": "secondary",
+          "measure": "Radiological hernia within 24 months",
+          "values": {
+            "exp": "17/92",
+            "ctl": "22/89"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Difference reported as not significant.",
+          "locator": "PDF p759, Results"
+        },
+        {
+          "endpoint": "Parastomal bulging without hernia",
+          "role": "secondary",
+          "measure": "Clinical bulging within 24 months",
+          "values": {
+            "exp": "22/92",
+            "ctl": "13/89"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Difference reported as not significant.",
+          "locator": "PDF p759, Results"
+        },
+        {
+          "endpoint": "Surgery for parastomal hernia",
+          "role": "descriptive",
+          "measure": "Patients operated for parastomal hernia during follow-up",
+          "values": {
+            "exp": "2",
+            "ctl": "5"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No formal comparison reported.",
+          "locator": "PDF p759, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Highest Clavien-Dindo grade 3–5 complication within 90 days",
+          "values": {
+            "exp": "32/118 (27%)",
+            "ctl": "30/123 (24%)"
+          },
+          "locator": "PDF p760, Table 1",
+          "note": "One randomized control patient did not receive an ileal conduit and was excluded from the evaluable cohort."
+        },
+        {
+          "label": "Highest Clavien-Dindo grade 1–2 complication within 90 days",
+          "values": {
+            "exp": "21/118 (18%)",
+            "ctl": "19/123 (15%)"
+          },
+          "locator": "PDF p760, Table 1",
+          "note": ""
+        },
+        {
+          "label": "Conduit ischemia and mesh complications",
+          "values": {
+            "exp": "One partial conduit ischemia; no other potential mesh-related complication within 90 days",
+            "ctl": "One complete conduit ischemia requiring reoperation within 90 days"
+          },
+          "locator": "PDF p759, Results",
+          "note": "At later hernia repair, one control patient received a sublay mesh that eroded into the conduit and required revision (PDF p762, Discussion)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Stoma site and mesh placement",
+          "value": "Stoma marked in the right rectus by a stoma nurse or operating urologist; 10 × 10 cm Vypro lightweight mesh (Ethicon) placed in a sublay position.",
+          "locator": "PDF p758, Surgical details; p757, Abstract",
+          "note": "The full operative insertion method was placed in supplementary material, which was not available in the retrieved article."
+        },
+        {
+          "label": "Median operating time",
+          "values": {
+            "exp": "415 min (IQR 340–480)",
+            "ctl": "365 min (IQR 305–450)"
+          },
+          "locator": "PDF pp759–760, Results and Table 1",
+          "note": "Median difference 50 min; p=0.007."
+        },
+        {
+          "label": "Conduit construction",
+          "value": "Anterior fixation of the conduit to the rectus sheath was used in both study arms.",
+          "locator": "PDF p761, Discussion"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2020_07_033.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/conduit-mesh-liedberg",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "stamm-1980",
+  "name": "Stamm 1980",
+  "aliases": [
+    "Stamm placebo-controlled prophylaxis trial"
+  ],
+  "nct": null,
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "prophylaxis"
+    }
+  ],
+  "question": "Does daily low-dose antimicrobial prophylaxis prevent recurrent urinary tract infection in women compared with placebo?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 60,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Daily trimethoprim-sulfamethoxazole",
+        "role": "experimental"
+      },
+      {
+        "key": "tmp",
+        "label": "daily trimethoprim",
+        "role": "experimental"
+      },
+      {
+        "key": "nitro",
+        "label": "daily nitrofurantoin macrocrystals",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "daily placebo",
+        "role": "control"
+      }
+    ],
+    "population": "60 women with recurrent urinary tract infections.",
+    "description": "Four-arm, double-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, title and Results; PubMed publication type: Randomized Controlled Trial"
+  },
+  "verdict": "positive",
+  "verdictNote": "All three antibiotics lowered infection incidence during the six-month treatment period.",
+  "takeaway": "Daily trimethoprim-sulfamethoxazole, trimethoprim, or nitrofurantoin macrocrystals each reduced recurrent urinary tract infections versus placebo during six months of prophylaxis; the protective effect ended after treatment stopped.",
+  "reports": [
+    {
+      "id": "stamm-1980-1980",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "1980-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print gives June 1980; day 1 is imputed",
+      "cutoff": null,
+      "citation": "Stamm WE, Counts GW, Wagner KF, et al. \"Antimicrobial prophylaxis of recurrent urinary tract infections: a double-blind, placebo-controlled trial.\" *Ann Intern Med.* 1980;92(6):770-775. doi:10.7326/0003-4819-92-6-770",
+      "doi": "10.7326/0003-4819-92-6-770",
+      "pmid": "6992677",
+      "followUp": "Six months of prophylaxis; post-treatment follow-up duration not stated in the abstract.",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Urinary tract infection incidence",
+          "role": "primary",
+          "measure": "Infections per patient-year during six months of trimethoprim-sulfamethoxazole prophylaxis",
+          "values": {
+            "exp": "0.15 infections/patient-year",
+            "ctl": "2.8 infections/patient-year"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Placebo versus this drug regimen; arm sizes and infection counts are not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urinary tract infection incidence",
+          "role": "primary",
+          "measure": "Infections per patient-year during six months of trimethoprim prophylaxis",
+          "values": {
+            "tmp": "0.0 infections/patient-year",
+            "ctl": "2.8 infections/patient-year"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Placebo versus this drug regimen; arm sizes and infection counts are not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urinary tract infection incidence",
+          "role": "primary",
+          "measure": "Infections per patient-year during six months of nitrofurantoin prophylaxis",
+          "values": {
+            "nitro": "0.14 infections/patient-year",
+            "ctl": "2.8 infections/patient-year"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Placebo versus this drug regimen; arm sizes and infection counts are not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Infection after stopping prophylaxis",
+          "role": "secondary",
+          "measure": "Recurrence in women with at least three infections in the year before prophylaxis",
+          "effect": {
+            "type": "none",
+            "p": "<0.005"
+          },
+          "note": "Infections were more likely after prophylaxis in women with at least three preprophylaxis infections per year; no group counts reported.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Post-prophylaxis non-E. coli infections and resistance",
+          "locator": "PubMed abstract, Results and Conclusions",
+          "note": "Non-E. coli infections occurred more often after prophylaxis (P < 0.05); emergence of trimethoprim-resistant E. coli was described as rare, without counts."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Once-daily prophylactic regimens",
+          "value": "Trimethoprim-sulfamethoxazole 40 mg/200 mg, trimethoprim 100 mg, nitrofurantoin macrocrystals 100 mg, or placebo for six months.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_0003_4819_92_6_770.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/stamm-1980",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

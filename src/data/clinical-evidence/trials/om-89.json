@@ -1,0 +1,134 @@
+{
+  "id": "om-89",
+  "name": "OM-89",
+  "aliases": [
+    "Uro-Vaxom",
+    "Bauer 2005"
+  ],
+  "nct": null,
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "immunoprophylaxis"
+    }
+  ],
+  "question": "Does oral OM-89 reduce recurrent urinary tract infections in women compared with placebo over 12 months?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 454,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Oral Escherichia coli extract (OM-89)",
+        "n": 232,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "matching placebo",
+        "n": 222,
+        "role": "control"
+      }
+    ],
+    "population": "454 adult women with recurrent uncomplicated UTI and acute UTI with at least 10³ bacteria/mL at enrollment were randomized; 453 received treatment.",
+    "description": "Multinational, double-blind randomized placebo-controlled trial",
+    "locator": "Publisher indexed article, Methods and Results; PubMed abstract, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Fewer post-baseline UTIs and fewer women with recurrence over 12 months.",
+  "takeaway": "In women with recurrent UTI, oral Escherichia coli extract OM-89 reduced the mean post-baseline UTI rate over 12 months versus matching placebo (0.84 versus 1.28; p &lt; 0.003).",
+  "reports": [
+    {
+      "id": "om-89-2005",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2005-01-21",
+      "cutoff": null,
+      "citation": "Bauer HW, Alloussi S, Egger G, Blümlein HM, Cozma G, Schulman CC. \"A long-term, multicenter, double-blind study of an Escherichia coli extract (OM-89) in female patients with recurrent urinary tract infections.\" *Eur Urol.* 2005;47(4):542-548. doi:10.1016/j.eururo.2004.12.009",
+      "doi": "10.1016/j.eururo.2004.12.009",
+      "pmid": "15774256",
+      "followUp": "12 months after enrollment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Post-baseline UTI rate",
+          "role": "primary",
+          "measure": "Difference in mean post-baseline UTI rate over 12 months",
+          "values": {
+            "exp": "0.84 (231 treated)",
+            "ctl": "1.28 (222 treated)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.44,
+            "p": "<0.003"
+          },
+          "met": true,
+          "note": "Mean difference calculated from the reported group means; the report describes a 34% reduction.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Women with at least one post-baseline UTI",
+          "role": "primary",
+          "measure": "Proportion with post-baseline UTI over 12 months; risk difference in percentage points",
+          "values": {
+            "exp": "93/231 (40.3%)",
+            "ctl": "122/222 (55.0%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -14.7,
+            "p": "0.001"
+          },
+          "met": true,
+          "note": "Risk difference calculated from the reported rounded percentages.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Total post-baseline UTI episodes",
+          "role": "descriptive",
+          "measure": "Observed post-baseline UTI episodes among treated women over 12 months",
+          "values": {
+            "exp": "185 episodes in 231 women",
+            "ctl": "276 episodes in 222 women"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract does not give a separate test for the prespecified distribution-of-UTIs criterion.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Oral treatment schedule",
+          "values": {
+            "exp": "One OM-89 capsule daily for 90 days, then the first 10 days of months 7, 8, and 9",
+            "ctl": "One matching placebo capsule on the same schedule"
+          },
+          "note": "No study capsule was given during months 4 through 6.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_12_009.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/om-89",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

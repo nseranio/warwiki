@@ -1,0 +1,369 @@
+{
+  "id": "razor",
+  "name": "RAZOR",
+  "aliases": [
+    "Randomized Open versus Robotic Cystectomy"
+  ],
+  "nct": "NCT01157676",
+  "area": [
+    "diversion"
+  ],
+  "decisions": [
+    {
+      "id": "urinary-diversion-surgery",
+      "lane": "approach"
+    }
+  ],
+  "question": "Is robot-assisted radical cystectomy with extracorporeal urinary diversion noninferior to open radical cystectomy for two-year progression-free survival in patients with bladder cancer?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "open-label; pathologists masked",
+    "type": "noninferiority",
+    "n": 350,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Robot-assisted radical cystectomy with extracorporeal urinary diversion",
+        "n": 176,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "open radical cystectomy with extracorporeal urinary diversion",
+        "n": 174,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with biopsy-proven clinical T1–T4, N0–N1, M0 bladder cancer or refractory carcinoma in situ eligible for radical cystectomy.",
+    "description": "Multicenter, open-label phase 3 noninferiority randomized trial",
+    "locator": "Lancet PDF pp2525,2527–2528, Methods and Figure 1"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Two-year progression-free survival met the prespecified 15-percentage-point noninferiority margin.",
+  "takeaway": "RAZOR compared robot-assisted with open radical cystectomy, both with extracorporeal urinary diversion. In the per-protocol population, robotic surgery met the prespecified noninferiority criterion for two-year progression-free survival (72.3% versus 71.6%; difference 0.7 percentage points, 95% CI −9.6 to 10.9).",
+  "reports": [
+    {
+      "id": "razor-2018",
+      "kind": "primary",
+      "label": "Primary two-year report",
+      "published": "2018-06-23",
+      "cutoff": null,
+      "citation": "Parekh DJ, Reis IM, Castle EP, et al. \"Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RAZOR): an open-label, randomised, phase 3, non-inferiority trial.\" *Lancet.* 2018;391(10139):2525-2536.",
+      "doi": "10.1016/S0140-6736(18)30996-6",
+      "pmid": "29976469",
+      "followUp": "Minimum two-year follow-up completed January 31, 2017",
+      "followUpLocator": "Lancet PDF p2527, Methods",
+      "results": [
+        {
+          "endpoint": "Progression-free survival",
+          "role": "primary",
+          "measure": "Two-year Kaplan–Meier progression-free survival; risk difference in percentage points (robotic minus open)",
+          "values": {
+            "exp": "72.3% (150 per protocol)",
+            "ctl": "71.6% (152 per protocol)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.7,
+            "ci": [
+              -9.6,
+              10.9
+            ],
+            "p": "0.001 (one-sided noninferiority)"
+          },
+          "met": true,
+          "note": "Prespecified lower confidence bound had to exceed −15 percentage points; 41/150 versus 42/152 progressed within two years.",
+          "locator": "Lancet PDF p2529, Table 2"
+        },
+        {
+          "endpoint": "Progression-free survival",
+          "role": "secondary",
+          "measure": "Two-year modified intention-to-treat sensitivity analysis; risk difference in percentage points",
+          "values": {
+            "exp": "72.3% (159 operated)",
+            "ctl": "71.8% (153 operated)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.5,
+            "ci": [
+              -9.7,
+              10.6
+            ],
+            "p": "0.001 (one-sided noninferiority)"
+          },
+          "note": "Modified intention-to-treat population comprised patients randomized and operated.",
+          "locator": "Lancet PDF p2529, Table 2"
+        },
+        {
+          "endpoint": "Positive surgical margin",
+          "role": "secondary",
+          "measure": "Patients with positive surgical margin",
+          "values": {
+            "exp": "9/150 (6%)",
+            "ctl": "7/152 (5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.4,
+            "ci": [
+              -3.7,
+              6.5
+            ],
+            "p": "0.59"
+          },
+          "note": "Risk difference in percentage points; no prespecified noninferiority test for this endpoint.",
+          "locator": "Lancet PDF p2532, Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any 90-day Clavien–Dindo grade I–V complication",
+          "values": {
+            "exp": "101/150 (67%)",
+            "ctl": "105/152 (69%)"
+          },
+          "locator": "Lancet PDF p2531, Table 3",
+          "note": "Per-protocol population; difference −1.8 percentage points (95% CI −12.3 to 8.8)."
+        },
+        {
+          "label": "Major 90-day Clavien–Dindo grade III–V complication",
+          "values": {
+            "exp": "33/150 (22%)",
+            "ctl": "34/152 (22%)"
+          },
+          "locator": "Lancet PDF p2531, Table 3",
+          "note": "Per-protocol population."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "53/150 (35%)",
+            "ctl": "39/152 (26%)"
+          },
+          "locator": "Lancet PDF p2533, Table 5",
+          "note": "Grade I–V adverse events."
+        },
+        {
+          "label": "Postoperative ileus",
+          "values": {
+            "exp": "33/150 (22%)",
+            "ctl": "31/152 (20%)"
+          },
+          "locator": "Lancet PDF p2533, Table 5",
+          "note": "Grade I–V adverse events."
+        },
+        {
+          "label": "Ureteral stricture",
+          "values": {
+            "exp": "13/150 (9%)",
+            "ctl": "10/152 (7%)"
+          },
+          "locator": "Lancet PDF p2533, Table 5",
+          "note": "Grade I–V adverse events."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sites and surgeon experience",
+          "value": "15 US centers; each surgeon had performed at least 10 radical cystectomies in the preceding year and was fellowship trained or had a focused bladder-cancer practice.",
+          "locator": "Lancet PDF p2527, Methods"
+        },
+        {
+          "label": "Diversion and surgical template",
+          "value": "All urinary diversions were extracorporeal; diversion type followed patient and surgeon preference; lymphadenectomy extent and chemotherapy followed institutional preference.",
+          "locator": "Lancet PDF pp2527,2535, Methods and Discussion"
+        },
+        {
+          "label": "Diversion types in per-protocol population",
+          "values": {
+            "exp": "ileal conduit 113/150 (75%); neobladder 36/150 (24%); continent cutaneous reservoir 1/150 (1%)",
+            "ctl": "ileal conduit 122/152 (80%); neobladder 30/152 (20%)"
+          },
+          "locator": "Lancet PDF p2528, Table 1"
+        },
+        {
+          "label": "Procedures received",
+          "values": {
+            "exp": "150/176 assigned patients in per-protocol analysis; 17/176 had no surgery; 9/176 had a different procedure",
+            "ctl": "152/174 assigned patients in per-protocol analysis; 21/174 had no surgery; 1/174 had robotic surgery"
+          },
+          "locator": "Lancet PDF pp2525,2528, Summary and Figure 1",
+          "note": "Five robotic-assigned patients converted to open surgery; Figure 1 lists reasons including locally advanced disease, visualization, Trendelenburg intolerance, and a colonic mass."
+        },
+        {
+          "label": "Estimated blood loss",
+          "values": {
+            "exp": "median 300 mL (IQR 200–500); 148 with data",
+            "ctl": "median 700 mL (IQR 500–1000); 149 with data"
+          },
+          "locator": "Lancet PDF p2531, Table 3"
+        },
+        {
+          "label": "Perioperative transfusion",
+          "values": {
+            "exp": "35/143 (24%)",
+            "ctl": "65/143 (45%)"
+          },
+          "locator": "Lancet PDF p2531, Table 3",
+          "note": "Difference −21.0 percentage points (95% CI −31.8 to −10.2)."
+        },
+        {
+          "label": "Operative time and hospital stay",
+          "values": {
+            "exp": "median 428 min (IQR 322–509); median stay 6 days (IQR 5–10)",
+            "ctl": "median 361 min (IQR 281–450); median stay 7 days (IQR 6–10)"
+          },
+          "locator": "Lancet PDF p2531, Table 3"
+        },
+        {
+          "label": "Lymph node dissection",
+          "values": {
+            "exp": "extended 76/149 (51%); mean 23.3 nodes (SD 12.5)",
+            "ctl": "extended 84/152 (55%); mean 25.7 nodes (SD 14.5)"
+          },
+          "locator": "Lancet PDF p2532, Table 3"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/WHITWIKI-Jefferson-2026-10-14/RAZOR-2018-main.pdf",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "razor-2019-three-year",
+      "kind": "updated",
+      "label": "Three-year oncologic follow-up",
+      "published": "2019-09-24",
+      "cutoff": null,
+      "citation": "Venkatramani V, Reis IM, Castle EP, et al. \"Predictors of Recurrence, and Progression-Free and Overall Survival following Open versus Robotic Radical Cystectomy: Analysis from the RAZOR Trial with a 3-Year Followup.\" *J Urol.* 2020;203(3):522-529.",
+      "doi": "10.1097/JU.0000000000000565",
+      "pmid": "31549935",
+      "followUp": "36-month estimates in the 302-patient per-protocol population",
+      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "results": [
+        {
+          "endpoint": "Progression-free survival",
+          "role": "secondary",
+          "measure": "36-month Kaplan–Meier estimate",
+          "values": {
+            "exp": "68.4% (150 per protocol)",
+            "ctl": "65.4% (152 per protocol)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.600"
+          },
+          "note": "Extended follow-up comparison; not a new noninferiority test.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Overall survival",
+          "role": "secondary",
+          "measure": "36-month Kaplan–Meier estimate",
+          "values": {
+            "exp": "73.9% (150 per protocol)",
+            "ctl": "68.5% (152 per protocol)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.334"
+          },
+          "note": "Extended follow-up comparison.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000565.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "razor-2020-qol",
+      "kind": "pro",
+      "label": "Health-related quality of life",
+      "published": "2020-04-09",
+      "cutoff": null,
+      "citation": "Becerra MF, Venkatramani V, Reis IM, et al. \"Health Related Quality of Life of Patients with Bladder Cancer in the RAZOR Trial: A Multi-Institutional Randomized Trial Comparing Robot versus Open Radical Cystectomy.\" *J Urol.* 2020;204(3):450-459.",
+      "doi": "10.1097/JU.0000000000001029",
+      "pmid": "32271690",
+      "followUp": "Questionnaires at baseline, three months, and six months",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "FACT–Vanderbilt Cystectomy Index",
+          "role": "secondary",
+          "measure": "Between-approach comparison at baseline, three months, and six months",
+          "values": {
+            "exp": "no statistically significant between-approach difference",
+            "ctl": "no statistically significant between-approach difference"
+          },
+          "effect": {
+            "type": "none",
+            "p": ">0.05"
+          },
+          "note": "Analyzed subsets of the 302-patient per-protocol cohort; abstract does not provide score denominators or means.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001029.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "razor-2025-complications",
+      "kind": "secondary",
+      "label": "Complications and readmissions",
+      "published": "2025-03-13",
+      "cutoff": null,
+      "citation": "Venkatramani V, Reis IM, Gonzalgo ML, et al. \"Comparison of Complication and Readmission Rates Between Robot-Assisted and Open Radical Cystectomy: Results From the Randomized RAZOR Clinical Trial.\" *J Urol.* 2025;213(6):684-692.",
+      "doi": "10.1097/JU.0000000000004497",
+      "pmid": "40080805",
+      "followUp": "Complications to 90 days; readmissions at 90 days and one year",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [],
+      "harms": [
+        {
+          "label": "90-day readmission",
+          "values": {
+            "exp": "24.1% (150 per protocol)",
+            "ctl": "23.1% (152 per protocol)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Percentages reported without event numerators in the abstract."
+        },
+        {
+          "label": "One-year readmission",
+          "values": {
+            "exp": "29.5% (150 per protocol)",
+            "ctl": "28.5% (152 per protocol)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Percentages reported without event numerators in the abstract; P=0.80."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000004497.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/razor",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

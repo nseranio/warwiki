@@ -1,0 +1,153 @@
+{
+  "id": "bridge",
+  "name": "BRIDGE",
+  "aliases": [
+    "Bridging Anticoagulation in Patients who Require Temporary Interruption of Warfarin Therapy for an Elective Invasive Procedure or Surgery"
+  ],
+  "nct": "NCT00786474",
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "thrombosis-and-bleeding",
+      "lane": "anticoagulant-interruption"
+    }
+  ],
+  "question": "Does omitting perioperative low-molecular-weight heparin bridging preserve thromboembolic protection and reduce bleeding during warfarin interruption for atrial fibrillation?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind, placebo-controlled",
+    "type": "noninferiority",
+    "n": 1884,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "No bridging (matching placebo)",
+        "n": 950,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "dalteparin bridging",
+        "n": 934,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with atrial fibrillation or flutter receiving warfarin who required interruption for an elective operation or invasive procedure and had at least one CHADS2 stroke-risk factor.",
+    "description": "Multicenter, double-blind, placebo-controlled noninferiority randomized trial",
+    "locator": "Full text, Methods—Study Design, Patients and Procedures; Results—Patients, Figure 2"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "No bridging met thromboembolic noninferiority and reduced major bleeding.",
+  "takeaway": "During warfarin interruption for atrial fibrillation, placebo without bridging was noninferior to dalteparin bridging for 30-day arterial thromboembolism and caused less major bleeding in BRIDGE.",
+  "reports": [
+    {
+      "id": "bridge-2015",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2015-06-22",
+      "cutoff": null,
+      "citation": "Douketis JD, Spyropoulos AC, Kaatz S, et al. \"Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation.\" *N Engl J Med.* 2015;373(9):823-833. doi:10.1056/NEJMoa1501035",
+      "doi": "10.1056/NEJMoa1501035",
+      "pmid": "26095867",
+      "followUp": "30 days after the procedure; final contact at 30–37 days",
+      "followUpLocator": "Full text, Methods",
+      "results": [
+        {
+          "endpoint": "Arterial thromboembolism",
+          "role": "primary",
+          "measure": "30-day stroke, transient ischemic attack or systemic embolism; risk difference in percentage points (no bridging minus bridging)",
+          "values": {
+            "exp": "4/918 (0.4%)",
+            "ctl": "3/895 (0.3%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.1,
+            "ci": [
+              -0.6,
+              0.8
+            ],
+            "p": "0.01 for noninferiority"
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin: 1.0 percentage point; upper 95% CI boundary was 0.8 percentage point.",
+          "locator": "Full text, Statistical Analysis; Results—Study Outcomes; Table 3"
+        },
+        {
+          "endpoint": "Major bleeding",
+          "role": "primary",
+          "measure": "30-day major bleeding; relative risk for no bridging versus bridging",
+          "values": {
+            "exp": "12/918 (1.3%)",
+            "ctl": "29/895 (3.2%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.41,
+            "ci": [
+              0.2,
+              0.78
+            ],
+            "p": "0.005 for superiority"
+          },
+          "met": true,
+          "note": "No fatal major bleeding events occurred.",
+          "locator": "Full text, Results—Study Outcomes; Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Minor bleeding",
+          "values": {
+            "exp": "110/918 (12.0%)",
+            "ctl": "187/895 (20.9%)"
+          },
+          "locator": "Full text, Results—Study Outcomes; Table 3",
+          "note": "P<0.001 for superiority; myocardial infarction, deep-vein thrombosis, pulmonary embolism and death did not differ significantly between groups."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Eligibility and baseline risk",
+          "value": "At 108 US and Canadian sites, adults had at least 3 months of warfarin with target INR 2.0–3.0 and at least one CHADS2 stroke-risk factor; mean CHADS2 was 2.3 and few participants had scores of 5 or 6. Exclusions included mechanical heart valve, stroke or transient ischemic attack within 12 weeks, major bleeding within 6 weeks, creatinine clearance <30 mL/min, and planned cardiac, intracranial or intraspinal surgery.",
+          "locator": "Full text, Methods—Patients; Results—Patients, Table 1; Discussion—limitations"
+        },
+        {
+          "label": "Anticoagulation schedule",
+          "value": "Warfarin stopped 5 days before and restarted the evening of or day after the procedure; dalteparin 100 IU/kg subcutaneously twice daily or matching placebo started 3 days before, last preprocedure dose about 24 hours before, then resumed 12–24 hours after low-bleeding-risk or 48–72 hours after high-bleeding-risk procedures until INR was at least 2.",
+          "locator": "Full text, Methods—Procedures; Figure 1"
+        },
+        {
+          "label": "Outcome-data availability",
+          "value": "1,813/1,884 randomized patients supplied outcome data; 71 discontinued participation without outcome data.",
+          "locator": "Full text, Results—Study Outcomes; Figure 2"
+        },
+        {
+          "label": "Procedures performed",
+          "value": "1,722/1,884 randomized patients underwent the anticipated procedure: gastrointestinal 44.0%, cardiothoracic 17.2%, orthopedic 9.2%; 89.4% of procedures were classified as minor by the prespecified scheme.",
+          "locator": "Full text, Results—Patients; Figure 2; Table S2 cited in article"
+        },
+        {
+          "label": "Study drug adherence",
+          "value": "All protocol-specified study drug doses were received by 86.5% before and 96.5% after the procedure.",
+          "locator": "Full text, Results—Perioperative Anticoagulant Management; Table 2"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa1501035.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/bridge",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

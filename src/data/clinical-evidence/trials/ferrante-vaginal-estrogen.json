@@ -1,0 +1,134 @@
+{
+  "id": "ferrante-vaginal-estrogen",
+  "name": "Ferrante vaginal estrogen",
+  "aliases": [
+    "VESPR",
+    "Ferrante 2021"
+  ],
+  "nct": "NCT01958073",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "vaginal-estrogen"
+    }
+  ],
+  "question": "Do vaginal estrogen ring or cream reduce six-month urinary tract infection recurrence versus placebo cream in postmenopausal women?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "single-blind",
+    "type": "superiority",
+    "n": 35,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Vaginal estrogen ring or cream (pooled)",
+        "n": 18,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo cream",
+        "n": 17,
+        "role": "control"
+      }
+    ],
+    "population": "Postmenopausal women with documented recurrent urinary tract infection.",
+    "description": "Multicenter, single-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Objectives, Methods, and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "The active arms were pooled after slow recruitment; nine women withdrew before month six.",
+  "takeaway": "In postmenopausal women with recurrent UTI, pooled vaginal estrogen ring or cream produced fewer six-month UTI endpoint failures than placebo cream (11/18 versus 16/17; P = 0.041), counting withdrawals as failures.",
+  "reports": [
+    {
+      "id": "ferrante-vaginal-estrogen-2021",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2019-06-19",
+      "dateLocator": "Publisher article record, online-ahead-of-print note; print issue February 2021",
+      "cutoff": null,
+      "citation": "Ferrante KL, Wasenda EJ, Jung CE, et al. \"Vaginal Estrogen for the Prevention of Recurrent Urinary Tract Infection in Postmenopausal Women: A Randomized Clinical Trial.\" *Female Pelvic Med Reconstr Surg.* 2021;27(2):112-117. doi:10.1097/SPV.0000000000000749",
+      "doi": "10.1097/SPV.0000000000000749",
+      "pmid": "31232721",
+      "followUp": "six-month randomized comparison, then optional six-month open-label estrogen",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Urinary tract infection by six months",
+          "role": "primary",
+          "measure": "Intention-to-treat proportion with UTI endpoint failure; dropouts counted as failures",
+          "values": {
+            "exp": "11/18 (61.1%)",
+            "ctl": "16/17 (94.1%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.041"
+          },
+          "met": null,
+          "note": "The abstract reports a P value but does not state the prespecified significance threshold.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urinary tract infection by six months among completers",
+          "role": "secondary",
+          "measure": "Per-protocol proportion with UTI",
+          "values": {
+            "exp": "8/15 (53.3%)",
+            "ctl": "10/11 (90.9%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.036"
+          },
+          "note": "Completer analysis after nine pre-six-month withdrawals.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Randomization and analysis",
+          "value": "Initial 1:1:1 allocation to estrogen ring, estrogen cream, or placebo cream; active arms combined for comparison with placebo after slow recruitment.",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Withdrawal before six months",
+          "values": {
+            "exp": "3/18 (16.7%; one ring, two cream)",
+            "ctl": "6/17 (35.3%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Percentages calculated from the pooled analysis denominators."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_spv_0000000000000749.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "confirms",
+      "target": "raz-stamm-estriol",
+      "note": "Both placebo-controlled trials found fewer recurrences with vaginal estrogen; Ferrante combined ring and cream arms."
+    },
+    {
+      "type": "confirms",
+      "target": "eriksen-estring",
+      "note": "Both found fewer recurrences with vaginal estrogen; Eriksen tested a ring against no estrogen treatment."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/ferrante-vaginal-estrogen",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "tolterodine-boo-safety",
+  "name": "Tolterodine BOO Safety",
+  "aliases": [
+    "Abrams 2006"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "add-on-in-men"
+    }
+  ],
+  "question": "Does tolterodine alter pressure-flow measurements or urinary retention over 12 weeks in men with overactive bladder and urodynamic bladder outlet obstruction?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "not stated in abstract",
+    "type": "superiority",
+    "n": 221,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Tolterodine 2 mg twice daily",
+        "n": 149,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 72,
+        "role": "control"
+      }
+    ],
+    "population": "Men older than 40 years with overactive bladder, urodynamically confirmed detrusor overactivity, and bladder outlet obstruction.",
+    "description": "Randomized, placebo-controlled urodynamic safety trial",
+    "locator": "PubMed abstract, Materials and Methods"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "Primary urodynamic comparisons lack a reported prespecified safety margin; retention events were sparse.",
+  "takeaway": "In men with urodynamic bladder outlet obstruction and detrusor overactivity, tolterodine versus placebo produced comparable flow and voiding-pressure measurements over 12 weeks. Postvoid residual rose more with tolterodine; the only reported urinary retention event was on placebo.",
+  "reports": [
+    {
+      "id": "tolterodine-boo-safety-2006",
+      "kind": "primary",
+      "label": "Primary urodynamic safety report",
+      "published": "2006-03-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give March 2006; day imputed for timeline",
+      "cutoff": null,
+      "citation": "Abrams P, Kaplan S, De Koning Gans HJ, et al. \"Safety and tolerability of tolterodine for the treatment of overactive bladder in men with bladder outlet obstruction.\" *J Urol.* 2006;175(3 Pt 1):999-1004. doi:10.1016/S0022-5347(05)00483-0",
+      "doi": "10.1016/S0022-5347(05)00483-0",
+      "pmid": "16469601",
+      "followUp": "12 weeks of treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Qmax",
+          "role": "primary",
+          "measure": "Median between-group difference in maximum urinary flow rate, mL/s",
+          "effect": {
+            "type": "difference",
+            "value": -0.7,
+            "ci": [
+              -1.6,
+              0.4
+            ],
+            "ciLevel": "95%"
+          },
+          "met": null,
+          "note": "The abstract reports no prespecified safety or noninferiority margin.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "pdetQmax",
+          "role": "primary",
+          "measure": "Median between-group difference in detrusor pressure at maximum flow, cm H2O",
+          "effect": {
+            "type": "difference",
+            "value": -7
+          },
+          "met": null,
+          "note": "The abstract prints a 95% CI of -3 to 11, which does not contain its reported -7 estimate; interval omitted pending full text.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "BOOI",
+          "role": "secondary",
+          "measure": "Change in bladder outlet obstruction index",
+          "values": {
+            "exp": "-9",
+            "ctl": "0"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -9,
+            "p": "<0.02"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Volume to first detrusor contraction",
+          "role": "secondary",
+          "measure": "Between-group difference in volume to first detrusor contraction, mL",
+          "effect": {
+            "type": "difference",
+            "value": 59,
+            "ci": [
+              19,
+              100
+            ],
+            "ciLevel": "95%"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Maximum cystometric capacity",
+          "role": "secondary",
+          "measure": "Between-group difference in maximum cystometric capacity, mL",
+          "effect": {
+            "type": "difference",
+            "value": 67,
+            "ci": [
+              35,
+              103
+            ],
+            "ciLevel": "95%"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Change in postvoid residual volume, mL",
+          "values": {
+            "exp": "+25 mL",
+            "ctl": "0 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 25,
+            "p": "<0.004"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Reported urinary retention",
+          "values": {
+            "exp": "0/149",
+            "ctl": "1/72"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports one retention event on placebo and none on tolterodine; it does not define catheterization or adjudication."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study drug",
+          "values": {
+            "exp": "Tolterodine 2 mg twice daily for 12 weeks",
+            "ctl": "Placebo for 12 weeks"
+          },
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_00483_0.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tolterodine-boo-safety",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "id": "pregabalin-cpps",
+  "name": "CPCRN Pregabalin",
+  "aliases": [
+    "Pontari 2010",
+    "Chronic Prostatitis Collaborative Research Network-2 pregabalin trial"
+  ],
+  "nct": "NCT00371033",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "chronic-pelvic-pain",
+      "lane": "male-cpps"
+    }
+  ],
+  "question": "Does pregabalin increase six-week NIH-CPSI responder rates compared with placebo in men with chronic prostatitis/chronic pelvic pain syndrome?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 324,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Pregabalin",
+        "n": 218,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 106,
+        "role": "control"
+      }
+    ],
+    "population": "324 men aged at least 18 years with pelvic pain during at least 3 of the preceding 6 months, NIH-CPSI score at least 15 at screening and randomization, and calculated creatinine clearance at least 60 mL/min/1.73 m² were enrolled at 10 North American tertiary centers.",
+    "description": "Multicenter, double-blind randomized superiority trial",
+    "locator": "Full text, Methods, Participants and Study Design; Table 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "The prespecified six-point NIH-CPSI responder comparison missed significance (P=.07).",
+  "takeaway": "In men with chronic prostatitis/chronic pelvic pain syndrome, six weeks of pregabalin versus placebo did not significantly increase the prespecified six-point NIH-CPSI responder rate (47.2% versus 35.8%; P=.07); several secondary symptom measures favored pregabalin.",
+  "reports": [
+    {
+      "id": "pregabalin-cpps-2010",
+      "kind": "primary",
+      "label": "Primary six-week report",
+      "published": "2010-09-27",
+      "cutoff": null,
+      "citation": "Pontari MA, Krieger JN, Litwin MS, et al. \"Pregabalin for the Treatment of Men With Chronic Prostatitis/Chronic Pelvic Pain Syndrome: A Randomized Controlled Trial.\" *Arch Intern Med.* 2010;170(17):1586-1593. doi:10.1001/archinternmed.2010.319",
+      "doi": "10.1001/archinternmed.2010.319",
+      "pmid": "20876412",
+      "followUp": "Six weeks of randomized treatment",
+      "followUpLocator": "Full text, Methods, Study Design and Outcomes",
+      "results": [
+        {
+          "endpoint": "NIH-CPSI response",
+          "role": "primary",
+          "measure": "At least six-point NIH-CPSI total-score decrease at week 6; site-adjusted risk difference in percentage points",
+          "values": {
+            "exp": "103/218 (47.2%)",
+            "ctl": "38/106 (35.8%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 10.9,
+            "ci": [
+              -0.0,
+              21.8
+            ],
+            "p": "0.07"
+          },
+          "met": false,
+          "note": "Missing or withdrawn men counted as nonresponders; exact site-adjusted Mantel-Haenszel test with two-sided P<.05 threshold. The table prints the lower confidence bound as −0.0.",
+          "locator": "Full text, Table 4, Primary outcome; Methods, Outcomes and Data Management"
+        },
+        {
+          "endpoint": "Global Response Assessment response",
+          "role": "secondary",
+          "measure": "Moderately or markedly improved at week 6; site-adjusted risk difference in percentage points",
+          "values": {
+            "exp": "68/218 (31.2%)",
+            "ctl": "20/106 (18.9%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 12.0,
+            "ci": [
+              2.6,
+              21.5
+            ],
+            "p": "0.02"
+          },
+          "note": "Missing or withdrawn men counted as nonresponders.",
+          "locator": "Full text, Table 4, Secondary outcomes; Methods, Outcomes"
+        },
+        {
+          "endpoint": "NIH-CPSI total score",
+          "role": "secondary",
+          "measure": "Mean change from baseline to week 6; between-arm mean difference in points",
+          "values": {
+            "exp": "6.6-point decrease",
+            "ctl": "4.2-point decrease"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.4,
+            "ci": [
+              -4.1,
+              -0.6
+            ],
+            "p": "0.01"
+          },
+          "note": "Continuous-score analysis used participants with complete follow-up data.",
+          "locator": "Full text, Table 4, NIH-CPSI total; Results, Secondary Outcomes"
+        },
+        {
+          "endpoint": "NIH-CPSI pain domain",
+          "role": "secondary",
+          "measure": "Mean change from baseline to week 6; between-arm mean difference in points",
+          "values": {
+            "exp": "3.3-point decrease",
+            "ctl": "2.2-point decrease"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.0,
+            "ci": [
+              -2.0,
+              -0.04
+            ],
+            "p": "0.04"
+          },
+          "note": "Continuous-score analysis used participants with complete follow-up data.",
+          "locator": "Full text, Table 4, Pain domain; Results, Secondary Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Neurologic adverse events",
+          "values": {
+            "exp": "38.5%",
+            "ctl": "22.6%"
+          },
+          "locator": "Full text, Table 3, Neurologic symptoms; Results, Safety",
+          "note": "P=.01; adverse-event categories were tabulated by randomized arm."
+        },
+        {
+          "label": "Pain adverse events",
+          "values": {
+            "exp": "17.4%",
+            "ctl": "33.3%"
+          },
+          "locator": "Full text, Table 3, Pain; Results, Safety",
+          "note": "P=.003; headache was the most frequent pain event."
+        },
+        {
+          "label": "Any adverse event and serious events",
+          "value": "191/324 (59.0%) reported at least one adverse event; no serious adverse events",
+          "locator": "Full text, Results, Safety",
+          "note": "Overall adverse-event distribution did not differ between arms (P=.40)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose escalation",
+          "value": "Pregabalin 150 mg/day (50 mg orally three times daily) for two weeks, then 300 mg/day (100 mg three times daily) for two weeks, then 600 mg/day (200 mg three times daily) for two weeks; a participant could remain at a tolerated dose.",
+          "locator": "Full text, Methods, Study Design"
+        },
+        {
+          "label": "Completion and highest-dose exposure",
+          "value": "313/324 (96.6%) completed six-week follow-up; 154/218 (70.6%) in the pregabalin arm and 82/106 (77.4%) in the placebo arm took the highest dose for at least one week.",
+          "locator": "Full text, Results, Participant Follow-up and Adherence; Table 2"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_archinternmed_2010_319.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "cpcrn-cipro-tamsulosin",
+      "note": "The earlier CPCRN trial supplied the assumed placebo response for the pregabalin trial's sample-size calculation."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/pregabalin-cpps",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

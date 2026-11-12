@@ -1,0 +1,281 @@
+{
+  "id": "opal",
+  "name": "OPAL",
+  "aliases": [
+    "Optimising Pelvic floor Exercises to Achieve Long-term benefits"
+  ],
+  "nct": null,
+  "registry": "ISRCTN57746448",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-evaluation-conservative",
+      "lane": "conservative-and-adjunct"
+    }
+  ],
+  "question": "Does adding clinic and home electromyographic biofeedback to supervised pelvic floor muscle training improve urinary incontinence outcomes in women with stress or mixed incontinence?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Participants, therapists and researchers unblinded; six-month pelvic floor assessors blinded",
+    "type": "superiority",
+    "n": 600,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Pelvic floor muscle training with clinic and home EMG biofeedback",
+        "n": 300,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "pelvic floor muscle training alone",
+        "n": 300,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged at least 18 years newly presenting with stress or mixed urinary incontinence, able to contract their pelvic floor muscles, and without prolapse beyond stage II.",
+    "description": "Multicenter, parallel-group randomized superiority trial",
+    "locator": "BMJ full text, Methods: Study design and participants, Randomisation and masking; Results, Fig 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "The 24-month adjusted ICIQ-UI SF difference was −0.09 points (P=0.84).",
+  "takeaway": "In OPAL, adding clinic and home electromyographic biofeedback to supervised pelvic floor muscle training did not improve 24-month urinary incontinence severity versus the same training without biofeedback in women with stress or mixed incontinence.",
+  "reports": [
+    {
+      "id": "opal-2020-bmj",
+      "kind": "primary",
+      "label": "Primary clinical report",
+      "published": "2020-10-14",
+      "cutoff": null,
+      "citation": "Hagen S, Elders A, Stratton S, et al. \"Effectiveness of pelvic floor muscle training with and without electromyographic biofeedback for urinary incontinence in women: multicentre randomised controlled trial.\" *BMJ.* 2020;371:m3719. doi:10.1136/bmj.m3719",
+      "doi": "10.1136/bmj.m3719",
+      "pmid": "33055247",
+      "followUp": "24-month primary assessment",
+      "followUpLocator": "BMJ full text, Methods: Outcomes; Results, Table 3",
+      "results": [
+        {
+          "endpoint": "ICIQ-UI SF severity",
+          "role": "primary",
+          "measure": "24-month adjusted mean difference in ICIQ-UI SF points (EMG biofeedback minus PFMT alone; lower is better)",
+          "values": {
+            "exp": "8.2 (SD 5.1; n=225)",
+            "ctl": "8.5 (SD 4.9; n=235)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.09,
+            "ci": [
+              -0.92,
+              0.75
+            ],
+            "p": "0.84"
+          },
+          "met": false,
+          "note": "Superiority tested at two-sided 5% significance; 3 points used as the meaningful difference for sample-size planning.",
+          "locator": "BMJ full text, Methods: Statistical analysis; Results, Table 3"
+        },
+        {
+          "endpoint": "Self-reported cure",
+          "role": "secondary",
+          "measure": "24-month ICIQ-UI SF frequency or quantity response of never or none",
+          "values": {
+            "exp": "18/229 (7.9%)",
+            "ctl": "20/238 (8.4%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.9,
+            "ci": [
+              0.46,
+              1.78
+            ]
+          },
+          "note": "",
+          "locator": "BMJ full text, Methods: Outcomes; Results, Table 4"
+        },
+        {
+          "endpoint": "Self-reported improvement",
+          "role": "secondary",
+          "measure": "24-month ICIQ-UI SF reduction of at least 3 points",
+          "values": {
+            "exp": "135/225 (60.0%)",
+            "ctl": "147/235 (62.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.89,
+            "ci": [
+              0.61,
+              1.32
+            ],
+            "p": "0.57"
+          },
+          "note": "",
+          "locator": "BMJ full text, Methods: Outcomes; Results, Table 4"
+        },
+        {
+          "endpoint": "PFMT self-efficacy",
+          "role": "secondary",
+          "measure": "24-month adjusted mean difference in self-efficacy points",
+          "values": {
+            "exp": "63.1 (SD 11.6)",
+            "ctl": "60.9 (SD 12.0)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.36,
+            "ci": [
+              0.04,
+              4.68
+            ],
+            "p": "0.05"
+          },
+          "note": "This secondary measure favored biofeedback; clinical significance was uncertain.",
+          "locator": "BMJ full text, Results: PFMT self-efficacy"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Participants reporting an adverse event",
+          "values": {
+            "exp": "34",
+            "ctl": "14"
+          },
+          "locator": "BMJ full text, Results: adverse events and analysis population",
+          "note": "Events were recorded in 48 participants; the report does not provide a separate adverse-event safety denominator."
+        },
+        {
+          "label": "Participants with an intervention-related or possibly related adverse event",
+          "values": {
+            "exp": "21",
+            "ctl": "2"
+          },
+          "locator": "BMJ full text, Results: adverse events",
+          "note": "Only one event was judged definitely related: nickel allergy in the biofeedback group, leading to intervention discontinuation."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "6",
+            "ctl": "2"
+          },
+          "locator": "BMJ full text, Results: adverse events",
+          "note": "All serious adverse events were judged unrelated to the interventions."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Recruitment sites",
+          "value": "23 community and secondary care centers in England and Scotland",
+          "locator": "BMJ full text, Methods: Study design and participants"
+        },
+        {
+          "label": "Treatment protocol",
+          "value": "Six therapist appointments over 16 weeks in both groups; individualized home PFMT aimed at three sets daily; biofeedback added during appointments and at home in the experimental arm.",
+          "locator": "BMJ full text, Methods: Procedures"
+        },
+        {
+          "label": "Attendance at four or more appointments",
+          "values": {
+            "exp": "198/295 (67.1%)",
+            "ctl": "192/298 (64.4%)"
+          },
+          "locator": "BMJ full text, Results, Table 2"
+        },
+        {
+          "label": "Mean total appointment duration",
+          "values": {
+            "exp": "176 minutes (SD 84)",
+            "ctl": "152 minutes (SD 78)"
+          },
+          "locator": "BMJ full text, Results, Table 2"
+        },
+        {
+          "label": "Primary-outcome completeness",
+          "values": {
+            "exp": "225/300",
+            "ctl": "235/300"
+          },
+          "locator": "BMJ full text, Results, Table 3; randomized denominators in Fig 1"
+        },
+        {
+          "label": "Surgery uptake during months 12 to 24",
+          "values": {
+            "exp": "8/154 (5.2%)",
+            "ctl": "12/162 (7.4%)"
+          },
+          "locator": "BMJ full text, Results, Table 7",
+          "note": "Reported for each follow-up interval; not cumulative surgery incidence."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1136_bmj_m3719.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "opal-2020-hta",
+      "kind": "secondary",
+      "label": "Health technology assessment",
+      "published": "2020-12-01",
+      "cutoff": null,
+      "citation": "Hagen S, Bugge C, Dean SG, et al. \"Basic versus biofeedback-mediated intensive pelvic floor muscle training for women with urinary incontinence: the OPAL RCT.\" *Health Technol Assess.* 2020;24(70):1-144. doi:10.3310/hta24700",
+      "doi": "10.3310/hta24700",
+      "pmid": "33289476",
+      "followUp": "24-month clinical and economic assessment",
+      "followUpLocator": "PubMed abstract, Main outcome measures and Results",
+      "results": [
+        {
+          "endpoint": "ICIQ-UI SF severity",
+          "role": "primary",
+          "measure": "24-month adjusted mean difference in ICIQ-UI SF points (EMG biofeedback minus PFMT alone)",
+          "values": {
+            "exp": "8.2 (SD 5.1; n=225)",
+            "ctl": "8.5 (SD 4.9; n=235)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.09,
+            "ci": [
+              -0.92,
+              0.75
+            ],
+            "p": "0.84"
+          },
+          "met": false,
+          "note": "The HTA reports the same trial and primary endpoint as the BMJ article.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Process evaluation",
+          "value": "The biofeedback group received an intensified intervention; both groups received core PFMT components, and adherence was similar.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "label": "Cost-effectiveness probability",
+          "value": "48% at a £20,000 willingness-to-pay threshold per quality-adjusted life-year",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta24700.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/opal",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "step-saw-palmetto",
+  "name": "STEP",
+  "aliases": [
+    "Saw palmetto for Treatment of Enlarged Prostates"
+  ],
+  "nct": "NCT00037154",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "phytotherapy"
+    }
+  ],
+  "question": "Does saw palmetto extract improve urinary symptoms or peak urinary flow more than placebo in men with moderate-to-severe BPH symptoms?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 225,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Saw palmetto extract 160 mg twice daily",
+        "n": 112,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 113,
+        "role": "control"
+      }
+    ],
+    "population": "225 men older than 49 years with moderate-to-severe BPH symptoms, AUASI at least 8, and peak urinary flow below 15 mL/s.",
+    "description": "Single-center, double-blind, placebo-controlled randomized superiority trial",
+    "locator": "Bent 2006, journal pp 557-560, Methods and Figure 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "Neither prespecified primary measure differed significantly from placebo at one year.",
+  "takeaway": "Saw palmetto extract 160 mg twice daily did not improve AUASI symptom scores or peak urinary flow more than placebo after one year in men with moderate-to-severe BPH symptoms.",
+  "reports": [
+    {
+      "id": "step-saw-palmetto-2006",
+      "kind": "primary",
+      "label": "One-year efficacy report",
+      "published": "2006-02-09",
+      "cutoff": null,
+      "citation": "Bent S, Kane C, Shinohara K, et al. \"Saw Palmetto for Benign Prostatic Hyperplasia.\" *N Engl J Med.* 2006;354(6):557-566. doi:10.1056/NEJMoa053085",
+      "doi": "10.1056/NEJMoa053085",
+      "pmid": "16467543",
+      "followUp": "12 months after randomization",
+      "followUpLocator": "Bent 2006, journal p 558, Intervention",
+      "results": [
+        {
+          "endpoint": "AUASI score",
+          "role": "primary",
+          "measure": "Mean difference in 12-month AUASI score change, saw palmetto minus placebo",
+          "values": {
+            "exp": "-0.68 points",
+            "ctl": "-0.72 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.04,
+            "ci": [
+              -0.93,
+              1.01
+            ]
+          },
+          "met": false,
+          "note": "Two-sided superiority alpha was 0.04; lower AUASI scores indicate fewer symptoms.",
+          "locator": "Bent 2006, journal p 562, Table 2; p 559, Statistical Analysis"
+        },
+        {
+          "endpoint": "Peak urinary flow rate",
+          "role": "primary",
+          "measure": "Mean difference in 12-month peak-flow change, saw palmetto minus placebo (mL/s)",
+          "values": {
+            "exp": "+0.42 mL/s",
+            "ctl": "-0.01 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.43,
+            "ci": [
+              -0.52,
+              1.38
+            ]
+          },
+          "met": false,
+          "note": "Two-sided superiority alpha was 0.04.",
+          "locator": "Bent 2006, journal p 562, Table 2; p 559, Statistical Analysis"
+        },
+        {
+          "endpoint": "Postvoid residual volume",
+          "role": "secondary",
+          "measure": "Mean difference in 12-month postvoid-residual change, saw palmetto minus placebo (mL)",
+          "values": {
+            "exp": "+14.10 mL",
+            "ctl": "+18.62 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.51,
+            "ci": [
+              -24.44,
+              15.42
+            ]
+          },
+          "note": "Secondary outcome; interval crosses zero.",
+          "locator": "Bent 2006, journal p 562, Table 2"
+        },
+        {
+          "endpoint": "Prostate volume",
+          "role": "secondary",
+          "measure": "Mean difference in 12-month prostate-volume change, saw palmetto minus placebo (mL)",
+          "values": {
+            "exp": "+3.76 mL",
+            "ctl": "+4.98 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.22,
+            "ci": [
+              -3.9,
+              1.47
+            ]
+          },
+          "note": "Secondary outcome; interval crosses zero.",
+          "locator": "Bent 2006, journal p 562, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Participants with at least one serious adverse event",
+          "values": {
+            "exp": "6/112 (5.4%)",
+            "ctl": "11/113 (9.7%)"
+          },
+          "locator": "Bent 2006, journal p 563, Table 3",
+          "note": "There were 8 versus 18 serious events; the participant-level comparison was not significant (P=0.31)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study extract and placebo",
+          "value": "One-batch Indena carbon-dioxide extract in soft gelatin capsules, 160 mg twice daily; matched placebo contained polyethylene glycol-400.",
+          "locator": "Bent 2006, journal p 558, Intervention"
+        },
+        {
+          "label": "Completion and adherence",
+          "value": "216/225 (96.0%) completed follow-up; 92% of study medication was consumed by capsule count.",
+          "locator": "Bent 2006, journal p 560, Figure 1; p 561, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa053085.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "step-saw-palmetto-2008-safety",
+      "kind": "secondary",
+      "label": "Detailed safety analysis",
+      "published": "2008-02-20",
+      "cutoff": null,
+      "citation": "Avins AL, Bent S, Staccone S, et al. \"A Detailed Safety Assessment of a Saw Palmetto Extract.\" *Complement Ther Med.* 2008;16(3):147-154. doi:10.1016/j.ctim.2007.10.005",
+      "doi": "10.1016/j.ctim.2007.10.005",
+      "pmid": "18534327",
+      "followUp": "12 months after randomization",
+      "followUpLocator": "Avins 2008, Methods, Study Design and Participants",
+      "results": [],
+      "harms": [
+        {
+          "label": "Participants with at least one nonserious symptomatic adverse event",
+          "values": {
+            "exp": "39/112 (34.8%)",
+            "ctl": "34/113 (30.1%)"
+          },
+          "locator": "Avins 2008, Results, Non-Serious Adverse Events; Bent 2006, Table 4",
+          "note": "Participant-level comparison P=0.48."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ctim_2007_10_005.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/step-saw-palmetto",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "id": "noctupus",
+  "name": "Desmopressin Nocturia Studies",
+  "aliases": [],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "nocturia",
+      "lane": "desmopressin"
+    }
+  ],
+  "question": "Does dose-titrated oral desmopressin reduce nocturnal voiding compared with placebo in adults with nocturia and excess nocturnal urine production?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 151,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Oral desmopressin",
+        "n": 86,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 65,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged at least 18 years with at least two nightly voids, nocturnal urine production exceeding functional bladder capacity, and a response during desmopressin dose titration.",
+    "description": "Multinational, double-blind, placebo-controlled phase III randomized trial",
+    "locator": "Mattiasson 2002, PDF pp856-858, Figure 1 and Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Efficacy applies to men who responded during open-label dose titration.",
+  "takeaway": "Among desmopressin-responsive men with nocturia, three weeks of oral desmopressin produced a greater than 50% reduction in nightly voids in 28/83 (34%) versus 2/63 (3%) given placebo; hyponatremia occurred during preceding dose titration.",
+  "reports": [
+    {
+      "id": "noctupus-2002",
+      "kind": "primary",
+      "label": "Men's randomized trial",
+      "published": "2002-05-12",
+      "cutoff": null,
+      "citation": "Mattiasson A, Abrams P, Van Kerrebroeck P, et al. Efficacy of desmopressin in the treatment of nocturia: a double-blind placebo-controlled study in men. *BJU Int.* 2002;89(9):855-862.",
+      "doi": "10.1046/j.1464-410x.2002.02791.x",
+      "pmid": "12010228",
+      "followUp": "3-week double-blind treatment after dose titration and a 1-week washout",
+      "followUpLocator": "PDF pp856-857, Figure 1",
+      "results": [
+        {
+          "endpoint": ">50% reduction in mean nightly voids",
+          "role": "primary",
+          "measure": "Responder proportion after 3 weeks, intention-to-treat efficacy population",
+          "values": {
+            "exp": "28/83 (34%)",
+            "ctl": "2/63 (3%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 20,
+            "ci": [
+              4.0,
+              105.2
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "151 randomized; 5 lacked efficacy data, leaving 146 in the intention-to-treat efficacy analysis.",
+          "locator": "PDF pp857-858, Table 1 and Results"
+        },
+        {
+          "endpoint": "Nightly voids",
+          "role": "secondary",
+          "measure": "Between-group mean difference in change in nightly voids after 3 weeks",
+          "values": {
+            "exp": "3.0 to 1.7",
+            "ctl": "3.2 to 2.7"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.8,
+            "ci": [
+              -1.1,
+              -0.58
+            ],
+            "p": "<0.001"
+          },
+          "note": "Means are baseline to end of double-blind treatment; difference is in change, not final means.",
+          "locator": "PDF p859, Table 2"
+        },
+        {
+          "endpoint": "First sleep period",
+          "role": "secondary",
+          "measure": "Between-group mean difference in change in hours until first nocturnal void after 3 weeks",
+          "values": {
+            "exp": "2.66 to 4.5 h",
+            "ctl": "2.5 to 2.9 h"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.38,
+            "ci": [
+              0.95,
+              1.8
+            ],
+            "p": "<0.001"
+          },
+          "note": "Means are baseline to end of double-blind treatment.",
+          "locator": "PDF p859, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event during double-blind treatment",
+          "values": {
+            "exp": "15/86 (17%)",
+            "ctl": "16/65 (25%)"
+          },
+          "locator": "PDF pp859-860, Safety and Table 3",
+          "note": "Safety denominators are all randomized patients who took treatment."
+        },
+        {
+          "label": "Serum sodium below 130 mmol/L during open-label titration",
+          "values": {
+            "exp": "10/224 (4%)",
+            "ctl": "not applicable"
+          },
+          "locator": "PDF p859, Safety; p860, Table 3",
+          "note": "All cases occurred before randomization; six were reported as hyponatremia and three led to withdrawal."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose titration and randomization",
+          "value": "224 entered oral desmopressin titration at 0.1, 0.2, or 0.4 mg at bedtime; 151 responders entered double-blind randomization after a 1-week washout.",
+          "locator": "PDF pp856-858, Figure 1 and patient disposition"
+        },
+        {
+          "label": "Fluid instructions",
+          "value": "From 1 hour before bedtime until 8 hours after dosing, patients drank only to satisfy thirst and avoided diuretic drinks.",
+          "locator": "PDF p856, Patients and methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1046_j_1464_410x_2002_02791_x.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "noctupus-2003-women",
+      "kind": "secondary",
+      "label": "Parallel women's randomized trial",
+      "published": "2003-10-01",
+      "cutoff": null,
+      "citation": "Lose G, Lalos O, Freeman RM, et al. Efficacy of desmopressin (Minirin) in the treatment of nocturia: a double-blind placebo-controlled study in women. *Am J Obstet Gynecol.* 2003;189(4):1106-1113.",
+      "doi": "10.1067/s0002-9378(03)00593-3",
+      "pmid": "14586363",
+      "followUp": "3-week double-blind treatment after 3-week titration and 1-week washout",
+      "followUpLocator": "PubMed abstract, Study Design",
+      "results": [
+        {
+          "endpoint": "At least 50% reduction in nightly voids",
+          "role": "descriptive",
+          "measure": "Responder proportion after 3 weeks in a separate randomized cohort of women",
+          "values": {
+            "exp": "33/72 (46%)",
+            "ctl": "5/72 (7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "The abstract does not state the prespecified endpoint hierarchy or alpha.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Hyponatremia during open-label dose titration",
+          "values": {
+            "exp": "6%",
+            "ctl": "not applicable"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not give the titration denominator or randomized-arm hyponatremia rates."
+        },
+        {
+          "label": "Deaths during the women’s study (n = 2)",
+          "values": {
+            "exp": "not reported by arm",
+            "ctl": "not reported by arm"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Neither death could be directly associated with study drug; allocation and timing were not stated."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose titration and randomization",
+          "value": "Women received 0.1, 0.2, or 0.4 mg oral desmopressin during titration; 144 responders were randomized equally to desmopressin or placebo.",
+          "locator": "PubMed abstract, Study Design and Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1067_s0002_9378_03_00593_3.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "noctupus-2004-extension",
+      "kind": "secondary",
+      "label": "Open-label long-term extension",
+      "published": "2004-09-01",
+      "cutoff": null,
+      "citation": "Lose G, Mattiasson A, Walter S, et al. Clinical experiences with desmopressin for long-term treatment of nocturia. *J Urol.* 2004;172(3):1021-1025.",
+      "doi": "10.1097/01.ju.0000136203.76320.f6",
+      "pmid": "15311028",
+      "followUp": "10 or 12 months of treatment, then 1 month off treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Nightly voids during long-term treatment",
+          "role": "descriptive",
+          "measure": "Reported mean range during treatment versus pretreatment baseline",
+          "values": {
+            "exp": "Men: 1.3-1.6 versus 3.1; women: 1.2-1.3 versus 2.9",
+            "ctl": "no randomized control"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Open-label extension enrolled prior desmopressin responders from both sex-specific studies.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "First sleep period at 12 months",
+          "role": "descriptive",
+          "measure": "Mean minutes from baseline to 12 months",
+          "values": {
+            "exp": "Men: 157 to 288 min; women: 142 to 310 min",
+            "ctl": "no randomized control"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The first sleep period shortened after treatment stopped.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Withdrawal due to adverse events",
+          "values": {
+            "exp": "Men: 14%; women: 10%",
+            "ctl": "no randomized control"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Percentages are reported without withdrawal counts in the abstract."
+        },
+        {
+          "label": "Serious drug-related adverse events",
+          "values": {
+            "exp": "4 men; 1 woman",
+            "ctl": "no randomized control"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The woman had hyponatremia among four reported serious events; two patients had clinically significant hyponatremia."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension enrollment and completion",
+          "value": "132 men and 117 women enrolled; 95/132 men and 87/117 women completed 10 or 12 months of oral desmopressin 0.1, 0.2, or 0.4 mg at bedtime.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000136203_76320_f6.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/noctupus",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

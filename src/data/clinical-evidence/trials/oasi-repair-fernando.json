@@ -1,0 +1,148 @@
+{
+  "id": "oasi-repair-fernando",
+  "name": "Fernando 2006",
+  "aliases": [],
+  "nct": null,
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "obstetric-sphincter"
+    }
+  ],
+  "question": "Does immediate overlapping external anal sphincter repair reduce fecal incontinence at 12 months compared with end-to-end repair after obstetric sphincter injury?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "not reported",
+    "type": "superiority",
+    "n": 64,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Immediate primary overlapping external anal sphincter repair",
+        "n": 32,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "immediate primary end-to-end external anal sphincter repair",
+        "n": 32,
+        "role": "control"
+      }
+    ],
+    "population": "64 women with acute obstetric grade 3b or 3c anal sphincter injury or fourth-degree perineal tear.",
+    "description": "Randomized trial of two primary external sphincter repairs",
+    "locator": "PubMed abstract, Objective, Methods and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "The primary fecal incontinence endpoint favored overlap at 12 months; follow-up was incomplete.",
+  "takeaway": "Immediate overlapping external anal sphincter repair reduced reported fecal incontinence at 12 months compared with end-to-end repair after obstetric sphincter injury (0% versus 6/25 [24%]; P = .009).",
+  "reports": [
+    {
+      "id": "oasi-repair-fernando-2006",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2006-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give June 2006 only; first day of month used for the required ISO date",
+      "cutoff": null,
+      "citation": "Fernando RJ, Sultan AH, Kettle C, et al. \"Repair techniques for obstetric anal sphincter injuries: a randomized controlled trial.\" *Obstet Gynecol.* 2006;107(6):1261-1268. doi:10.1097/01.AOG.0000218693.24144.bd",
+      "doi": "10.1097/01.AOG.0000218693.24144.bd",
+      "pmid": "16738150",
+      "followUp": "Serial questionnaires through 12 months after repair",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Fecal incontinence",
+          "role": "primary",
+          "measure": "Women reporting fecal incontinence at 12 months",
+          "values": {
+            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "ctl": "6/25 (24%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.07,
+            "ci": [
+              0.0,
+              1.21
+            ],
+            "p": "0.009"
+          },
+          "met": true,
+          "note": "The abstract calls this difference significant; its reported RR interval includes 1 despite P = .009. Prespecified alpha is not stated.",
+          "locator": "PubMed abstract, Results and Conclusion"
+        },
+        {
+          "endpoint": "Fecal urgency",
+          "role": "secondary",
+          "measure": "Women reporting fecal urgency at 12 months",
+          "values": {
+            "exp": "1/27 (3.7%)",
+            "ctl": "8/25 (32%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.12,
+            "ci": [
+              0.02,
+              0.86
+            ],
+            "p": "0.02"
+          },
+          "note": "The 12-month urgency analysis included 52/64 randomized women.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Deterioration of defecatory symptoms",
+          "role": "secondary",
+          "measure": "Women reporting deterioration during 12 months",
+          "values": {
+            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "ctl": "4/25 (16%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Perineal pain at 12 months",
+          "values": {
+            "exp": "0% (overlap denominator not stated for this endpoint in abstract)",
+            "ctl": "5/25 (20%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "P = .04; reported RR 0.08 (95% CI 0.00-1.45)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Repair timing and approach",
+          "value": "Immediate primary repair of the external anal sphincter by overlap or end-to-end approximation",
+          "locator": "PubMed abstract, Objective and Methods",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_aog_0000218693_24144_bd.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/oasi-repair-fernando",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

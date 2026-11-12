@@ -1,0 +1,127 @@
+{
+  "id": "pps-dose-nickel",
+  "name": "Nickel PPS dose trial",
+  "aliases": [
+    "Nickel 2015",
+    "ELMIRON dose and placebo trial"
+  ],
+  "nct": "NCT00086684",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "ic-bps-treatment",
+      "lane": "oral-therapy"
+    }
+  ],
+  "question": "Does pentosan polysulfate sodium at 100 mg once or three times daily improve IC/BPS symptoms more than placebo?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 368,
+    "arms": [
+      {
+        "key": "low",
+        "label": "Pentosan polysulfate sodium 100 mg once daily",
+        "n": 128,
+        "role": "experimental"
+      },
+      {
+        "key": "standard",
+        "label": "pentosan polysulfate sodium 100 mg three times daily",
+        "n": 122,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 118,
+        "role": "control"
+      }
+    ],
+    "population": "368 adults with IC/BPS symptoms, ICSI total score at least 8, and a positive score on each of its four items, without cystoscopic eligibility criteria.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00086684, Study Design (phase)"
+  },
+  "verdict": "negative",
+  "verdictNote": "Neither active dose improved the primary symptom responder endpoint over placebo.",
+  "takeaway": "In adults with IC/BPS symptoms, pentosan polysulfate sodium 100 mg once or three times daily did not show superior 24-week ICSI responder rates versus placebo; the trial stopped early after an interim futility analysis.",
+  "reports": [
+    {
+      "id": "pps-dose-nickel-2015",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2014-09-20",
+      "cutoff": null,
+      "citation": "Nickel JC, Herschorn S, Whitmore KE, et al. \"Pentosan polysulfate sodium for treatment of interstitial cystitis/bladder pain syndrome: insights from a randomized, double-blind, placebo controlled study.\" *J Urol.* 2015;193(3):857-862. doi:10.1016/j.juro.2014.09.036",
+      "doi": "10.1016/j.juro.2014.09.036",
+      "pmid": "25245489",
+      "followUp": "24-week treatment period",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "ICSI responder",
+          "role": "primary",
+          "measure": "At least 30% reduction from baseline ICSI total score at study end",
+          "values": {
+            "low": "51/128 (39.8%)",
+            "standard": "52/122 (42.6%)",
+            "ctl": "48/118 (40.7%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "No statistically significant difference between either PPS group and placebo or between the PPS groups; effect estimates and P values are not in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Discontinuation because of an adverse event",
+          "value": "10.2%–13.3% across the three groups",
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract gives a range, without group-specific rates or event counts."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Oral treatment schedule",
+          "value": "Pentosan polysulfate sodium 100 mg once daily or 100 mg three times daily, or matching placebo, for 24 weeks",
+          "locator": "PubMed abstract, Materials and Methods"
+        },
+        {
+          "label": "ICSI assessment schedule",
+          "value": "Baseline and weeks 4, 8, 12, 18, and 24",
+          "locator": "PubMed abstract, Materials and Methods"
+        },
+        {
+          "label": "Interim analysis and closure",
+          "value": "Unblinded interim analysis at 6 years, with 54% of the target 645 patients enrolled, led to early termination",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2014_09_036.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "conflicts",
+      "target": "pps-pivotal",
+      "note": "Earlier placebo-controlled PPS studies reported symptom improvement; this later dose trial found no ICSI responder advantage."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/pps-dose-nickel",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

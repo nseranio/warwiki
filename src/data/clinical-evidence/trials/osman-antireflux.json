@@ -1,0 +1,135 @@
+{
+  "id": "osman-antireflux",
+  "name": "Osman Antireflux Trial",
+  "aliases": [
+    "Osman 2009"
+  ],
+  "nct": null,
+  "area": [
+    "diversion"
+  ],
+  "decisions": [
+    {
+      "id": "orthotopic-diversion",
+      "lane": "afferent-limb"
+    }
+  ],
+  "question": "Does a serous-lined extramural ureteral tunnel prevent reflux more effectively than a T-limb in orthotopic ileal substitution?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "not reported",
+    "type": "superiority",
+    "n": 60,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Serous-lined extramural ureteral tunnel",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "T-limb ileal antireflux procedure",
+        "role": "control"
+      }
+    ],
+    "population": "Sixty patients with invasive bladder cancer undergoing orthotopic ileal bladder substitution.",
+    "description": "Prospective randomized comparison of two antireflux techniques",
+    "locator": "PubMed abstract, Patients and Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Less reflux with the tunnel; cortical scarring occurred in three versus four renal units.",
+  "takeaway": "In a randomized comparison of a serous-lined extramural ureteral tunnel versus a T-limb ileal antireflux procedure, ascending studies found reflux in 0/49 versus 13/45 evaluated renal units (29%; P < 0.01); ureteroileal stricture occurred in one unit per arm.",
+  "reports": [
+    {
+      "id": "osman-antireflux-2009",
+      "kind": "primary",
+      "label": "Randomized comparison",
+      "published": "2009-04-17",
+      "cutoff": null,
+      "citation": "Osman Y, Abol-Enein H, El-Mekresh M, et al. \"Comparison between a serous-lined extramural tunnel and T-limb ileal procedure as an antireflux technique in orthotopic ileal substitutes: a prospective randomized trial.\" *BJU Int.* 2009;104(10):1518-1521.",
+      "doi": "10.1111/j.1464-410X.2009.08574.x",
+      "pmid": "19388994",
+      "followUp": "Mean 6.3 (SD 0.5) and 7.4 (SD 1.9) in evaluated groups, respectively; time unit not given in abstract",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Reflux on ascending study",
+          "role": "primary",
+          "measure": "Refluxing renal units among evaluated units",
+          "values": {
+            "exp": "0/49 (0%)",
+            "ctl": "13/45 (29%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "met": null,
+          "note": "The abstract does not identify a prespecified primary endpoint or significance threshold.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Progressive renal cortical scarring",
+          "role": "secondary",
+          "measure": "Renal units with progressive scarring, with or without >25% GFR reduction",
+          "values": {
+            "exp": "3/49",
+            "ctl": "4/45"
+          },
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "GFR deterioration in refluxing T-limb units",
+          "role": "descriptive",
+          "measure": ">25% GFR reduction among refluxing T-limb renal units",
+          "values": {
+            "ctl": "3/13"
+          },
+          "note": "One of the 13 refluxing T-limb units had progressive cortical scarring; overlap with GFR deterioration is not stated.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Ureteroileal stricture",
+          "values": {
+            "exp": "1/49",
+            "ctl": "1/45"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "One evaluated renal unit in each group; P = 0.5."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Evaluable follow-up",
+          "values": {
+            "exp": "27 patients (49 renal units)",
+            "ctl": "23 patients (45 renal units)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "50/60 randomized patients contributed follow-up imaging; 10/60 did not. Arm-specific randomized counts are unavailable in the abstract."
+        },
+        {
+          "label": "Upper-tract assessment",
+          "value": "Baseline intravenous urography, isotope GFR assessment and 99mTc-DMSA cortical imaging; repeat imaging and ascending studies in evaluable patients.",
+          "locator": "PubMed abstract, Patients and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08574_x.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/osman-antireflux",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

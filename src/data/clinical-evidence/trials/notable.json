@@ -1,0 +1,251 @@
+{
+  "id": "notable",
+  "name": "NOTABLe",
+  "aliases": [
+    "NeurOmodulaTion for Accidental Bowel Leakage"
+  ],
+  "nct": "NCT03278613",
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "neuromodulation"
+    }
+  ],
+  "question": "Does percutaneous tibial nerve stimulation reduce fecal incontinence severity more than sham stimulation in women after first-line treatment?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "participants masked; treating interventionists unmasked",
+    "type": "superiority",
+    "n": 166,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Percutaneous tibial nerve stimulation",
+        "n": 111,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham stimulation",
+        "n": 55,
+        "role": "control"
+      }
+    ],
+    "population": "166 women with moderate-to-severe fecal incontinence despite supervised pelvic muscle training and constipating medication were randomized at nine US Pelvic Floor Disorders Network sites.",
+    "description": "Multicenter, single-masked superiority randomized trial",
+    "locator": "Zyczynski 2022, Methods: Study Design and Oversight, Participants; Results: Study Population"
+  },
+  "verdict": "negative",
+  "verdictNote": "The primary St. Mark's severity-score comparison did not meet superiority.",
+  "takeaway": "In women with fecal incontinence after first-line treatment, 12 weekly sessions of percutaneous tibial nerve stimulation did not improve St. Mark's severity scores significantly more than sham stimulation (adjusted difference −1.3 points, 95% CI −2.8 to 0.2).",
+  "reports": [
+    {
+      "id": "notable-2022",
+      "kind": "primary",
+      "label": "Primary 12-week report",
+      "published": "2022-04-01",
+      "cutoff": "2020-03-09",
+      "citation": "Zyczynski HM, Richter HE, Sung VW, et al. \"Percutaneous Tibial Nerve Stimulation vs Sham Stimulation for Fecal Incontinence in Women: NeurOmodulaTion for Accidental Bowel Leakage Randomized Clinical Trial.\" *Am J Gastroenterol.* 2022;117(4):654-667. doi:10.14309/ajg.0000000000001605",
+      "doi": "10.14309/ajg.0000000000001605",
+      "pmid": "35354778",
+      "followUp": "After 12 weekly treatment sessions",
+      "followUpLocator": "Methods: Outcome Measures; Table 2",
+      "results": [
+        {
+          "endpoint": "St. Mark's fecal incontinence severity score",
+          "role": "primary",
+          "measure": "Adjusted mean change from baseline after 12 sessions; adjusted mean difference in change, PTNS minus sham, points",
+          "values": {
+            "exp": "−5.3 points",
+            "ctl": "−3.9 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.3,
+            "ci": [
+              -2.8,
+              0.2
+            ],
+            "p": "0.09"
+          },
+          "met": false,
+          "note": "The seven-item score ranges from 0–24; higher scores indicate worse symptoms. The within-group minimal important difference is 3–5 points. The model used a two-sided 0.05 superiority threshold.",
+          "locator": "Results: Primary Outcome; Table 2; Methods: Outcome Measures, Statistical Analysis"
+        },
+        {
+          "endpoint": "Fecal incontinence episodes per week",
+          "role": "secondary",
+          "measure": "Adjusted mean change from baseline after 12 sessions; adjusted mean difference in change, PTNS minus sham, episodes per week",
+          "values": {
+            "exp": "−2.1 episodes/week",
+            "ctl": "−1.9 episodes/week"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.26,
+            "ci": [
+              -1.85,
+              1.33
+            ],
+            "p": "0.75"
+          },
+          "note": "Diary-based secondary outcome; no multiplicity adjustment for secondary outcomes.",
+          "locator": "Results: Secondary Outcomes; Table 2; Methods: Statistical Analysis"
+        },
+        {
+          "endpoint": "At least 50% fewer weekly fecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Diary-complete responders after 12 sessions; unadjusted odds ratio",
+          "values": {
+            "exp": "51/97 (52.6%)",
+            "ctl": "19/48 (39.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.7,
+            "ci": [
+              0.81,
+              3.56
+            ],
+            "p": "0.16"
+          },
+          "note": "Secondary endpoint among participants with complete bowel diaries.",
+          "locator": "Table 3: Additional Secondary Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "4/111 (4%)",
+            "ctl": "2/55 (4%)"
+          },
+          "locator": "Results: Adverse events",
+          "note": "None of the six serious adverse events was treatment related."
+        },
+        {
+          "label": "Paresthesia",
+          "values": {
+            "exp": "11/111 (10%)",
+            "ctl": "2/55 (4%)"
+          },
+          "locator": "Results: Adverse events",
+          "note": "Percentages are rounded as reported by the authors."
+        },
+        {
+          "label": "Needle-site bleeding and pain",
+          "values": {
+            "exp": "8% bleeding; 2% pain",
+            "ctl": "none reported"
+          },
+          "locator": "Results: Adverse events",
+          "note": "Both events were reported only in the active PTNS arm."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Eligibility",
+          "value": "Symptoms for at least three months and St. Mark's score at least 12 after run-in; exclusions included predominant uncontrolled diarrhea or severe constipation, unrepaired rectovaginal fistula or fourth-degree obstetric laceration, rectal prolapse, and prior colon resection.",
+          "locator": "Methods: Participants, Intervention"
+        },
+        {
+          "label": "Run-in and randomization",
+          "value": "Four-week education and bowel-diary run-in; 199 entered, 170 were eligible, and 166 were randomized 2:1 at nine US sites.",
+          "locator": "Methods: Study Design and Oversight, Intervention; Results: Study Population"
+        },
+        {
+          "label": "Active and sham procedure",
+          "value": "Twelve weekly 30-minute sessions on one lower extremity: needle-electrode PTNS with current titrated to toe twitch or sensation versus a retractable placebo needle plus fifth-metatarsal surface electrodes connected to TENS.",
+          "locator": "Methods: Intervention"
+        },
+        {
+          "label": "Treatment adherence",
+          "values": {
+            "exp": "99/111 (89.2%)",
+            "ctl": "51/55 (92.7%)"
+          },
+          "locator": "Results: Secondary Outcomes",
+          "note": "Adherence meant completing at least 10 of 12 sessions within 14 weeks."
+        },
+        {
+          "label": "Maintenance phase",
+          "value": "A nine-month responder maintenance phase was planned; the protocol specified discontinuation if Part 1 failed to show superiority.",
+          "locator": "Methods: Intervention"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_14309_ajg_0000000000001605.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "notable-2023-secondary",
+      "kind": "secondary",
+      "label": "Differential-response analysis",
+      "published": "2023-01-27",
+      "cutoff": null,
+      "citation": "Luchristt D, Carper B, Balgobin S, et al. \"Characteristics associated with subjective and objective measures of treatment success in women undergoing percutaneous tibial nerve stimulation vs sham for accidental bowel leakage.\" *Int Urogynecol J.* 2023;34(8):1715-1723. doi:10.1007/s00192-022-05431-y",
+      "doi": "10.1007/s00192-022-05431-y",
+      "pmid": "36705728",
+      "followUp": "Outcomes after the randomized 12-week treatment course",
+      "followUpLocator": "Materials and methods; Results",
+      "results": [
+        {
+          "endpoint": "Differential PTNS response by baseline characteristics",
+          "role": "exploratory",
+          "measure": "Treatment-by-characteristic interactions across St. Mark's score, patient impression, and diary response definitions",
+          "values": {
+            "exp": "No consistent subgroup predictor",
+            "ctl": "Sham comparison"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Isolated interactions varied across success definitions; models lacked multiplicity adjustment and subgroup power.",
+          "locator": "Results: interaction models; Discussion; Conclusion"
+        },
+        {
+          "endpoint": "Concordance across success definitions",
+          "role": "descriptive",
+          "measure": "Participants meeting all three success criteria among those with complete outcome data",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Pooled PTNS and sham: 41/142 (29%). Criteria were St. Mark's response, patient global impression, and at least 50% fewer weekly episodes.",
+          "locator": "Results: success definitions and overlap"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Analyzed participants",
+          "value": "160/166 randomized women had data for at least one success definition; 142/166 had complete data for all definitions.",
+          "locator": "Results, first paragraph"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s00192_022_05431_y.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "confirms",
+      "target": "confident",
+      "note": "Both sham-controlled PTNS trials missed their prespecified primary fecal-incontinence efficacy endpoints."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/notable",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

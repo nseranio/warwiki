@@ -1,0 +1,159 @@
+{
+  "id": "durasphere-pivotal",
+  "name": "Durasphere pivotal trial",
+  "aliases": [
+    "Carbon-coated beads versus collagen"
+  ],
+  "nct": null,
+  "registry": "FDA IDE G950085",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "bulking-agents"
+    }
+  ],
+  "question": "Does transurethral Durasphere provide comparable stress-incontinence improvement to bovine collagen in women with intrinsic sphincter deficiency?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Patients and outcome evaluators blinded; injectors unblinded",
+    "type": "noninferiority",
+    "n": 355,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Durasphere carbon-coated zirconium-oxide beads",
+        "n": 178,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "bovine collagen (Contigen)",
+        "n": 177,
+        "role": "control"
+      }
+    ],
+    "population": "Women with stress urinary incontinence due to intrinsic sphincter deficiency and abdominal leak-point pressure below 90 cm H2O.",
+    "description": "Multicenter, patient- and evaluator-blinded randomized equivalence trial",
+    "locator": "PubMed abstract, Methods; FDA SSED pp7,9"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Authors reported equivalence; the FDA tables present difference tests without equivalence intervals.",
+  "takeaway": "Durasphere carbon-coated zirconium-oxide beads and bovine collagen yielded similar 12-month continence-grade and pad-weight improvement in women with intrinsic sphincter deficiency. Durasphere required less injected material but caused more early urgency and retention.",
+  "reports": [
+    {
+      "id": "durasphere-pivotal-2001",
+      "kind": "primary",
+      "label": "Initial randomized report",
+      "published": "2001-07-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation: July 2001; day approximated as first of month",
+      "cutoff": null,
+      "citation": "Lightner D, Calvosa C, Andersen R, et al. \"A new injectable bulking agent for treatment of stress urinary incontinence: results of a multicenter, randomized, controlled, double-blind study of Durasphere.\" *Urology.* 2001;58(1):12-15. doi:10.1016/s0090-4295(01)01148-7",
+      "doi": "10.1016/s0090-4295(01)01148-7",
+      "pmid": "11445471",
+      "followUp": "12 months after initial injection for the primary endpoints; one year after last treatment for a smaller reported subset",
+      "followUpLocator": "PubMed abstract, Results; FDA SSED pp7,12-13",
+      "results": [
+        {
+          "endpoint": "Stamey continence-grade improvement",
+          "role": "primary",
+          "measure": "At least one-grade improvement at 12 months after initial injection",
+          "values": {
+            "exp": "76/115 (66.1%)",
+            "ctl": "79/120 (65.8%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "1.000 (test for difference)"
+          },
+          "met": true,
+          "note": "Author-reported equivalence; FDA review describes a 15-percentage-point margin but gives a test for difference, not an equivalence interval.",
+          "locator": "FDA SSED pp7,12, Table 3; PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Pad-weight reduction",
+          "role": "primary",
+          "measure": "Mean reduction in standardized pad weight from baseline to 12 months after initial injection",
+          "values": {
+            "exp": "27.9 g (n=113)",
+            "ctl": "26.4 g (n=117)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.835 (test for difference)"
+          },
+          "met": true,
+          "note": "Author-reported equivalence; the FDA table reports a difference test without an equivalence interval.",
+          "locator": "FDA SSED p13, Table 4; PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Stamey continence-grade improvement",
+          "role": "secondary",
+          "measure": "At least one-grade improvement one year after last treatment",
+          "values": {
+            "exp": "49/61 (80.3%)",
+            "ctl": "47/68 (69.1%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.162 (test for difference)"
+          },
+          "note": "Treatment-anchored subset; distinct from the initial-injection primary endpoint.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary urgency lasting more than 24 hours, any attribution",
+          "values": {
+            "exp": "44/178 (24.7%)",
+            "ctl": "11.9% (n=177)"
+          },
+          "locator": "FDA SSED p15, Table 6 and text below table",
+          "note": "Short-term risk was higher with Durasphere (P=0.002)."
+        },
+        {
+          "label": "Acute retention lasting more than 24 hours and at most seven days, any attribution",
+          "values": {
+            "exp": "30/178 (16.9%)",
+            "ctl": "3.4% (n=177)"
+          },
+          "locator": "FDA SSED p15, Table 6 and text below table",
+          "note": "Short-term risk was higher with Durasphere (P<0.001)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Initial injected volume",
+          "values": {
+            "exp": "4.83 mL",
+            "ctl": "6.23 mL"
+          },
+          "locator": "PubMed abstract, Results; FDA SSED p14",
+          "note": "P<0.001 for the between-agent volume difference."
+        },
+        {
+          "label": "Injection technique",
+          "value": "Durasphere was injected transurethrally under endoscopic vision into the bladder-neck submucosa; up to four retreatments were allowed.",
+          "locator": "FDA SSED p9, Treatment Procedures"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_01_01148_7.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/durasphere-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

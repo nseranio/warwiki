@@ -1,0 +1,139 @@
+{
+  "id": "botox-ic-kuo",
+  "name": "Kuo 2016 IC/BPS",
+  "aliases": [],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "ic-bps-treatment",
+      "lane": "intravesical-therapy"
+    }
+  ],
+  "question": "Does suburothelial onabotulinumtoxinA added to hydrodistension reduce pain more than saline injection and hydrodistension in refractory IC/BPS?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 60,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Suburothelial onabotulinumtoxinA 100 U plus hydrodistension",
+        "n": 40,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "suburothelial saline injection plus hydrodistension",
+        "n": 20,
+        "role": "control"
+      }
+    ],
+    "population": "Sixty patients with IC/BPS refractory to conventional treatment, including eight men and 52 women, had a mean age of 50.8 ± 13.9 years.",
+    "description": "Multicenter, 2:1, double-blind placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Materials and Methods and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "Pain reduction favored onabotulinumtoxinA at week 8; follow-up was short.",
+  "takeaway": "In refractory IC/BPS, suburothelial onabotulinumtoxinA 100 U plus hydrodistension reduced pain more at week 8 than saline injection plus hydrodistension (mean VAS change −2.6 versus −0.9; P = 0.021).",
+  "reports": [
+    {
+      "id": "botox-ic-kuo-2016",
+      "kind": "primary",
+      "label": "Primary randomized report",
+      "published": "2015-04-24",
+      "cutoff": null,
+      "citation": "Kuo HC, Jiang YH, Tsai YC, et al. \"Intravesical botulinum toxin-A injections reduce bladder pain of interstitial cystitis/bladder pain syndrome refractory to conventional treatment - A prospective, multicenter, randomized, double-blind, placebo-controlled clinical trial.\" *Neurourol Urodyn.* 2016;35(5):609-614. doi:10.1002/nau.22760",
+      "doi": "10.1002/nau.22760",
+      "pmid": "25914337",
+      "followUp": "Primary pain endpoint at 8 weeks",
+      "results": [
+        {
+          "endpoint": "Pain VAS change",
+          "role": "primary",
+          "measure": "Mean change from baseline to week 8; mean difference is onabotulinumtoxinA minus saline",
+          "values": {
+            "exp": "−2.6 ± 2.8",
+            "ctl": "−0.9 ± 2.2"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.7,
+            "p": "0.021"
+          },
+          "met": true,
+          "note": "Mean difference calculated from the two reported means; the abstract calls the between-group reduction significant.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Overall success",
+          "role": "secondary",
+          "measure": "Overall success; definition and assessment time not supplied in abstract",
+          "values": {
+            "exp": "26/40",
+            "ctl": "3/20"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.028"
+          },
+          "note": "26/40 is 65%, although the abstract prints 63%; 3/20 is 15%.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Cystometric bladder capacity",
+          "role": "secondary",
+          "measure": "Between-group change at week 8",
+          "values": {
+            "exp": "increased; magnitude not reported",
+            "ctl": "magnitude not reported"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports a significant between-group difference without values.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events",
+          "values": {
+            "exp": "event counts not reported",
+            "ctl": "event counts not reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports no between-group difference without event types or rates."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Endoscopic treatment",
+          "values": {
+            "exp": "suburothelial onabotulinumtoxinA 100 U plus hydrodistension",
+            "ctl": "equivalent amount of normal saline plus hydrodistension"
+          },
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_22760.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      },
+      "dateLocator": "Wiley publisher record, First published",
+      "followUpLocator": "PubMed abstract, Materials and Methods"
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/botox-ic-kuo",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

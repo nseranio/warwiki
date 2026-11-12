@@ -1,0 +1,218 @@
+{
+  "id": "gapp2",
+  "name": "GaPP2",
+  "aliases": [
+    "Gabapentin for chronic pelvic pain in women"
+  ],
+  "nct": null,
+  "registry": "ISRCTN77451762",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "chronic-pelvic-pain",
+      "lane": "female-cpp"
+    }
+  ],
+  "question": "Does gabapentin improve worst or average pain compared with placebo in women with chronic pelvic pain and no obvious pelvic pathology?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind; participants, clinicians and research staff masked",
+    "type": "superiority",
+    "n": 306,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Gabapentin",
+        "n": 153,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "matching placebo",
+        "n": 153,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged 18–50 years with pelvic pain for at least 3 months and no obvious pelvic pathology on laparoscopy within the preceding 36 months.",
+    "description": "Multicenter, double-blind randomized superiority trial",
+    "locator": "PMC7527829 Methods, Study design and participants; Results, trial profile"
+  },
+  "verdict": "negative",
+  "verdictNote": "Neither coprimary pain outcome met the prespecified significance threshold.",
+  "takeaway": "In women with chronic pelvic pain and no obvious pathology on laparoscopy, gabapentin did not significantly improve worst or average pain versus matching placebo at weeks 13–16; serious adverse events were more frequent with gabapentin.",
+  "reports": [
+    {
+      "id": "gapp2-2020",
+      "kind": "primary",
+      "label": "16-week randomized comparison",
+      "published": "2020-09-26",
+      "cutoff": null,
+      "citation": "Horne AW, Vincent K, Hewitt CA, et al. \"Gabapentin for chronic pelvic pain in women (GaPP2): a multicentre, randomised, double-blind, placebo-controlled trial.\" *Lancet.* 2020;396(10255):909-917. doi:10.1016/S0140-6736(20)31693-7",
+      "doi": "10.1016/S0140-6736(20)31693-7",
+      "pmid": "32979978",
+      "followUp": "Coprimary pain assessment at weeks 13–16; treatment through week 16.",
+      "followUpLocator": "PMC7527829 Methods, Procedures and Outcomes",
+      "results": [
+        {
+          "endpoint": "Worst pain NRS",
+          "role": "primary",
+          "measure": "Adjusted mean difference in change from baseline to weeks 13–16 on a 0–10 numerical rating scale",
+          "values": {
+            "exp": "−1.4 (SD 2.3; n=124)",
+            "ctl": "−1.2 (SD 2.1; n=122)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.2,
+            "ci": [
+              -0.81,
+              0.42
+            ],
+            "p": "0.47"
+          },
+          "met": false,
+          "note": "97.5% CI; two-sided alpha 0.025 for each coprimary endpoint; planned minimum important difference 1 point. End-of-study scores were 7.1 and 7.4. Difference adjusted for baseline score and minimisation variables.",
+          "locator": "PMC7527829 Results, Table 2, Worst NRS pain score; Statistical analysis"
+        },
+        {
+          "endpoint": "Average pain NRS",
+          "role": "primary",
+          "measure": "Adjusted mean difference in change from baseline to weeks 13–16 on a 0–10 numerical rating scale",
+          "values": {
+            "exp": "−1.1 (SD 2.0; n=123)",
+            "ctl": "−0.9 (SD 1.8; n=121)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.18,
+            "ci": [
+              -0.71,
+              0.35
+            ],
+            "p": "0.45"
+          },
+          "met": false,
+          "note": "97.5% CI; two-sided alpha 0.025 for each coprimary endpoint; planned minimum important difference 1 point. End-of-study scores were 4.3 and 4.5. Difference adjusted for baseline score and minimisation variables.",
+          "locator": "PMC7527829 Results, Table 2, Average NRS pain score; Statistical analysis"
+        },
+        {
+          "endpoint": "At least 30% reduction in worst pain",
+          "role": "secondary",
+          "measure": "Women with at least 30% improvement from baseline at week 16",
+          "values": {
+            "exp": "30/124 (24%)",
+            "ctl": "21/122 (17%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.38,
+            "ci": [
+              0.72,
+              2.64
+            ]
+          },
+          "note": "99% CI; secondary outcomes were not assigned formal P values.",
+          "locator": "PMC7527829 Results, Table 3, Reduction in NRS score from baseline"
+        },
+        {
+          "endpoint": "Marked patient global improvement",
+          "role": "secondary",
+          "measure": "Very marked or marked improvement at weeks 16–17",
+          "values": {
+            "exp": "34/112 (30%)",
+            "ctl": "22/108 (20%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.48,
+            "ci": [
+              0.8,
+              2.73
+            ]
+          },
+          "note": "99% CI; patient-reported secondary outcome.",
+          "locator": "PMC7527829 Results, Table 3, Patient global impression of change"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "exp": "10/153 (7%)",
+            "ctl": "3/153 (2%)"
+          },
+          "locator": "PMC7527829 Results, Table 4, Adverse events",
+          "note": "P=0.04; one death from pneumonia complications in the gabapentin group was judged unrelated to study participation."
+        },
+        {
+          "label": "Dizziness",
+          "values": {
+            "exp": "66/122 (54%)",
+            "ctl": "32/114 (28%)"
+          },
+          "locator": "PMC7527829 Results, Table 4, Side-effects",
+          "note": "Risk ratio 1.91 (99% CI 1.22–2.99); P=0.0002."
+        },
+        {
+          "label": "Drowsiness",
+          "values": {
+            "exp": "64/124 (52%)",
+            "ctl": "34/116 (29%)"
+          },
+          "locator": "PMC7527829 Results, Table 4, Side-effects",
+          "note": "Risk ratio 1.71 (99% CI 1.09–2.68); P=0.002."
+        },
+        {
+          "label": "Visual disturbances",
+          "values": {
+            "exp": "25/113 (22%)",
+            "ctl": "12/110 (11%)"
+          },
+          "locator": "PMC7527829 Results, Table 4, Side-effects",
+          "note": "Risk ratio 2.25 (99% CI 0.99–5.10); P=0.01 as reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study sites",
+          "value": "39 UK hospital centers.",
+          "locator": "PMC7527829 Methods, Study design and participants"
+        },
+        {
+          "label": "Treatment regimen",
+          "value": "Oral gabapentin or matching placebo daily for 16 weeks; 300 mg starting dose, increased by 300 mg every 3 days during a 4-week titration to pain relief or tolerance, to a maximum of 2700 mg/day.",
+          "locator": "PMC7527829 Methods, Procedures"
+        },
+        {
+          "label": "Available coprimary outcome data",
+          "values": {
+            "exp": "Worst pain 124/153; average pain 123/153",
+            "ctl": "Worst pain 122/153; average pain 121/153"
+          },
+          "locator": "PMC7527829 Results, Table 2",
+          "note": "Combined follow-up: worst pain 246/306 (80%); average pain 244/306 (80%)."
+        },
+        {
+          "label": "Self-reported adherence",
+          "value": "Adherence meant taking more than half of assigned doses; the reports were not validated with pill counts.",
+          "locator": "PMC7527829 Results, Adherence paragraph; Methods, Outcomes"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_20_31693_7.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/gapp2",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

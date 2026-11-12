@@ -1,0 +1,129 @@
+{
+  "id": "eriksen-estring",
+  "name": "Eriksen Estring",
+  "aliases": [
+    "Estring trial",
+    "Eriksen 1999"
+  ],
+  "nct": null,
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "vaginal-estrogen"
+    }
+  ],
+  "question": "Does an estradiol-releasing vaginal ring delay recurrent urinary tract infection in postmenopausal women?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 108,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Estradiol-releasing vaginal ring (Estring)",
+        "n": 53,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "no estrogen treatment",
+        "n": 55,
+        "role": "control"
+      }
+    ],
+    "population": "Postmenopausal women with recurrent symptomatic, bacteriologically confirmed urinary tract infections.",
+    "description": "Multicenter, open-label randomized superiority trial",
+    "locator": "PubMed abstract, Study design and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "Time to first recurrence favored the ring; the comparator received no estrogen.",
+  "takeaway": "In postmenopausal women with recurrent urinary tract infection, the estradiol-releasing vaginal ring Estring prolonged time to first recurrence versus no estrogen treatment; estimated infection-free survival at 36 weeks was approximately 45% versus 20% (log-rank P = 0.008).",
+  "reports": [
+    {
+      "id": "eriksen-estring-1999",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "1999-05-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation, May 1999",
+      "cutoff": null,
+      "citation": "Eriksen B. \"A randomized, open, parallel-group study on the preventive effect of an estradiol-releasing vaginal ring (Estring) on recurrent urinary tract infections in postmenopausal women.\" *Am J Obstet Gynecol.* 1999;180(5):1072-1079. doi:10.1016/S0002-9378(99)70597-1",
+      "doi": "10.1016/S0002-9378(99)70597-1",
+      "pmid": "10329858",
+      "followUp": "36 weeks of ring treatment; controls followed for 36 weeks or until first recurrence",
+      "followUpLocator": "PubMed abstract, Study design",
+      "results": [
+        {
+          "endpoint": "Time to first recurrent UTI",
+          "role": "primary",
+          "measure": "Kaplan–Meier estimate of remaining free of UTI at 36 weeks",
+          "values": {
+            "exp": "approximately 45%",
+            "ctl": "approximately 20%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.008"
+          },
+          "met": true,
+          "note": "Log-rank comparison of time to first recurrence; estimates are not crude event proportions.",
+          "locator": "PubMed abstract, Study design and Results"
+        },
+        {
+          "endpoint": "Vaginal pH and mucosal maturation",
+          "role": "secondary",
+          "measure": "Vaginal pH decrease and vaginal and urethral cell maturation",
+          "values": {
+            "exp": "Lower vaginal pH; more mature vaginal and, to a lesser extent, urethral mucosal cells"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract gives no arm-specific values or effect estimates.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Unexpected adverse events",
+          "values": {
+            "exp": "Not quantified by arm",
+            "ctl": "Not quantified by arm"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The report abstract states that no unexpected adverse events were found."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Ring regimen",
+          "value": "Estring contained 2 mg estradiol; each ring was carried vaginally for 12 weeks during a 36-week treatment period.",
+          "locator": "PubMed abstract, Study design"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0002_9378_99_70597_1.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "confirms",
+      "target": "raz-stamm-estriol",
+      "note": "Both found fewer recurrences with vaginal estrogen; Eriksen tested an estradiol ring against no estrogen treatment."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/eriksen-estring",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

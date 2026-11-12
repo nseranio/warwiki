@@ -1,0 +1,292 @@
+{
+  "id": "t4dm",
+  "name": "T4DM",
+  "aliases": [
+    "Testosterone for the Prevention of Type 2 Diabetes"
+  ],
+  "nct": null,
+  "registry": "ACTRN12612000287831",
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "testosterone-therapy",
+      "lane": "efficacy"
+    }
+  ],
+  "question": "Does testosterone undecanoate added to a lifestyle programme prevent or revert diabetes-range glucose values in men at high metabolic risk?",
+  "design": {
+    "phase": "3b",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1007,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intramuscular testosterone undecanoate plus lifestyle programme",
+        "n": 504,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo injection plus lifestyle programme",
+        "n": 503,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged 50–74 years with waist circumference ≥95 cm, testosterone ≤14.0 nmol/L without pathological hypogonadism, and two-hour OGTT glucose 7.8–11.0 mmol/L or newly diagnosed diabetes with glucose ≤15.0 mmol/L.",
+    "description": "Six-center, double-blind, placebo-controlled phase 3b randomized trial",
+    "locator": "PubMed abstract, Methods and Findings"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both prespecified 2-year glucose outcomes favored testosterone; hematocrit triggers were frequent.",
+  "takeaway": "In T4DM, intramuscular testosterone undecanoate plus a lifestyle programme reduced diabetes-range 2-hour glucose at 2 years and improved mean 2-hour glucose versus placebo plus the same programme; hematocrit above 54% triggered safety review more often with testosterone.",
+  "reports": [
+    {
+      "id": "t4dm-2021",
+      "kind": "primary",
+      "label": "Two-year primary report",
+      "published": "2020-12-16",
+      "dateLocator": "University of Adelaide release dated 2020-12-16 states publication online that day",
+      "cutoff": null,
+      "citation": "Wittert G, Bracken K, Robledo KP, et al. \"Testosterone treatment to prevent or revert type 2 diabetes in men enrolled in a lifestyle programme (T4DM): a randomised, double-blind, placebo-controlled, 2-year, phase 3b trial.\" *Lancet Diabetes Endocrinol.* 2021;9(1):32-45. doi:10.1016/S2213-8587(20)30367-3",
+      "doi": "10.1016/S2213-8587(20)30367-3",
+      "pmid": "33338415",
+      "followUp": "2 years",
+      "followUpLocator": "PubMed abstract, Methods and Findings",
+      "results": [
+        {
+          "endpoint": "Diabetes-range 2-hour OGTT glucose",
+          "role": "primary",
+          "measure": "2-hour glucose ≥11.1 mmol/L at 2 years, among those with available OGTT data",
+          "values": {
+            "exp": "55/443 (12%)",
+            "ctl": "87/413 (21%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.59,
+            "ci": [
+              0.43,
+              0.8
+            ],
+            "p": "0.0007"
+          },
+          "met": true,
+          "note": "Intention-to-treat analysis; endpoint data available for 856 of 1,007 randomized men.",
+          "locator": "PubMed abstract, Findings"
+        },
+        {
+          "endpoint": "2-hour OGTT glucose change",
+          "role": "primary",
+          "measure": "Mean change from baseline at 2 years; between-arm mean difference in mmol/L",
+          "values": {
+            "exp": "−1.70 mmol/L (SD 2.47)",
+            "ctl": "−0.95 mmol/L (SD 2.78)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.75,
+            "ci": [
+              -1.1,
+              -0.4
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Negative difference favors testosterone.",
+          "locator": "PubMed abstract, Findings"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Hematocrit safety trigger above 54%",
+          "values": {
+            "exp": "106/491 (22%)",
+            "ctl": "6/484 (1%)"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Masked safety monitoring."
+        },
+        {
+          "label": "PSA increase safety trigger ≥0.75 μg/mL",
+          "values": {
+            "exp": "109/480 (23%)",
+            "ctl": "87/468 (19%)"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Masked safety monitoring."
+        },
+        {
+          "label": "Prespecified serious adverse events",
+          "values": {
+            "exp": "55/504 (10.9%)",
+            "ctl": "37/503 (7.4%)"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Two deaths occurred in each randomized group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection schedule",
+          "value": "Testosterone undecanoate 1,000 mg intramuscularly or placebo at baseline, 6 weeks, then every 3 months for 2 years; both groups enrolled in a lifestyle programme.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s2213_8587_20_30367_3.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "t4dm-2023-followup",
+      "kind": "secondary",
+      "label": "Postrandomization survey",
+      "published": "2023-08-25",
+      "cutoff": null,
+      "citation": "Handelsman DJ, Grossmann M, Yeap BB, et al. \"Long-term Outcomes of Testosterone Treatment in Men: A T4DM Postrandomization Observational Follow-up Study.\" *J Clin Endocrinol Metab.* 2024;109(1):e25-e31. doi:10.1210/clinem/dgad485",
+      "doi": "10.1210/clinem/dgad485",
+      "pmid": "37623257",
+      "followUp": "Median 5.1 years since last injection; 599/1,007 completed surveys",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Self-reported new diabetes after trial treatment",
+          "role": "descriptive",
+          "measure": "Between-group comparison in postrandomization survey",
+          "effect": {
+            "type": "none"
+          },
+          "note": "No between-group difference reported; survey response was 316/504 versus 283/503, and diabetes outcome counts were absent from the abstract.",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "New sleep apnea diagnosis during randomized treatment, self-reported at survey",
+          "values": {
+            "exp": "3.0%",
+            "ctl": "0.4%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "P=0.03; the abstract gives no event counts."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad485.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "t4dm-2025-sexual-function",
+      "kind": "secondary",
+      "label": "Sexual-function analysis",
+      "published": "2025-02-10",
+      "cutoff": null,
+      "citation": "Wittert GA, Robledo KP, Handelsman DJ, et al. \"Testosterone Treatment and Sexual Function in Men: Secondary Analysis of the T4DM (Testosterone for Diabetes) Trial.\" *J Clin Endocrinol Metab.* 2025;110(7):e2157-e2170. doi:10.1210/clinem/dgaf060",
+      "doi": "10.1210/clinem/dgaf060",
+      "pmid": "39928571",
+      "followUp": "2 years; 932/1,007 contributed at least one IIEF-15 domain measure",
+      "followUpLocator": "PDF pp e2158–e2160, Methods and Results",
+      "results": [
+        {
+          "endpoint": "IIEF-15 erectile function",
+          "role": "secondary",
+          "measure": "Adjusted 2-year domain means and adjusted mean difference, points on 30-point scale",
+          "values": {
+            "exp": "17.9 points",
+            "ctl": "15.3 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.5,
+            "ci": [
+              1.7,
+              3.4
+            ],
+            "p": "<0.001"
+          },
+          "note": "The adjusted between-group effect and adjusted means differ slightly after rounding; no multiplicity adjustment was prespecified.",
+          "locator": "PDF pp e2161–e2162, Tables 2–3"
+        },
+        {
+          "endpoint": "IIEF-15 sexual desire",
+          "role": "secondary",
+          "measure": "Adjusted 2-year domain means and adjusted mean difference, points on 10-point scale",
+          "values": {
+            "exp": "6.9 points",
+            "ctl": "6.2 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.68,
+            "ci": [
+              0.49,
+              0.86
+            ],
+            "p": "<0.001"
+          },
+          "note": "A 2-point increase defined clinically significant improvement in the exploratory categorical analysis; no multiplicity adjustment was prespecified.",
+          "locator": "PDF pp e2159, e2161–e2162, Tables 2–3"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Sexual-function assessment",
+          "value": "IIEF-15 at baseline and weeks 30, 54, 78, and 104; 932/1,007 had at least one domain measured and 688/932 had complete data.",
+          "locator": "PDF pp e2159–e2160, Results and corrected Table 1",
+          "note": "The published correction changed the analysis denominator from 931 to 932."
+        },
+        {
+          "label": "Lifestyle programme and injection delivery",
+          "value": "Both groups had access to the WW interactive website, diet and activity guidance, self-monitoring tools, and weekly group meetings; clinic staff gave deep intramuscular injections.",
+          "locator": "PDF p e2158, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgaf060.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "t4dm-2025-sexual-function-correction",
+      "kind": "correction",
+      "label": "Sexual-analysis count correction",
+      "published": "2025-04-11",
+      "cutoff": null,
+      "citation": "Wittert GA, Robledo KP, Handelsman DJ, et al. \"Correction to: Testosterone Treatment and Sexual Function in Men: Secondary Analysis of the T4DM (Testosterone for Diabetes) Trial.\" *J Clin Endocrinol Metab.* 2025;110(7):e2433. doi:10.1210/clinem/dgaf205",
+      "doi": "10.1210/clinem/dgaf205",
+      "pmid": "40215179",
+      "followUp": "Correction of the sexual-function analysis population",
+      "results": [],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Corrected analysis population",
+          "value": "932 participants with at least one IIEF-15 domain measure, including 688 with complete data; the original publication stated 931 in the Results and Table 1 title.",
+          "locator": "Correction, body text"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgaf205.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/t4dm",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

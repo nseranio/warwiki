@@ -1,0 +1,304 @@
+{
+  "id": "neptune",
+  "name": "NEPTUNE",
+  "aliases": [
+    "Solifenacin plus tamsulosin OCAS fixed-dose combination",
+    "905-CL-055"
+  ],
+  "nct": "NCT01018511",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "add-on-in-men"
+    }
+  ],
+  "question": "Does fixed-dose solifenacin plus tamsulosin OCAS improve storage and voiding symptoms more than tamsulosin OCAS or placebo in men with lower urinary tract symptoms?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "noninferiority",
+    "n": 1334,
+    "arms": [
+      {
+        "key": "exp6",
+        "label": "Solifenacin 6 mg plus tamsulosin OCAS 0.4 mg daily",
+        "n": 339,
+        "role": "experimental"
+      },
+      {
+        "key": "exp9",
+        "label": "solifenacin 9 mg plus tamsulosin OCAS 0.4 mg daily",
+        "n": 327,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "tamsulosin OCAS 0.4 mg daily",
+        "n": 327,
+        "role": "control"
+      },
+      {
+        "key": "placebo",
+        "label": "placebo daily",
+        "n": 341,
+        "role": "control"
+      }
+    ],
+    "population": "1,334 men with moderate-to-severe storage and voiding lower urinary tract symptoms, total IPSS at least 13, maximum flow 4–12 mL/s, at least two severe urgency episodes and eight micturitions daily, prostate volume under 75 mL, and postvoid residual at most 150 mL.",
+    "description": "Multicenter, double-blind phase 3 randomized trial",
+    "locator": "van Kerrebroeck 2013, PubMed abstract, Methods; Drake 2015, PDF p2, Methods; ClinicalTrials.gov NCT01018511, Participant Flow, Started"
+  },
+  "verdict": "positive",
+  "verdictNote": "The 6 mg combination met all success criteria; the 9 mg combination did not.",
+  "takeaway": "Over 12 weeks, fixed-dose solifenacin 6 mg plus tamsulosin OCAS met prespecified IPSS and urgency-frequency criteria versus placebo and tamsulosin OCAS alone; the 9 mg solifenacin combination did not meet all criteria versus tamsulosin.",
+  "reports": [
+    {
+      "id": "neptune-2013",
+      "kind": "primary",
+      "label": "Primary 12-week randomized report",
+      "published": "2013-08-03",
+      "cutoff": null,
+      "citation": "van Kerrebroeck P, Chapple C, Drogendijk T, et al. \"Combination Therapy with Solifenacin and Tamsulosin Oral Controlled Absorption System in a Single Tablet for Lower Urinary Tract Symptoms in Men: Efficacy and Safety Results from the Randomised Controlled NEPTUNE Trial.\" *Eur Urol.* 2013;64(6):1003-1012. doi:10.1016/j.eururo.2013.07.034",
+      "doi": "10.1016/j.eururo.2013.07.034",
+      "pmid": "23932438",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Total IPSS, 6 mg combination",
+          "role": "primary",
+          "measure": "Mean change in total IPSS at 12 weeks; 6 mg combination versus tamsulosin and placebo",
+          "values": {
+            "exp6": "−7.0 points",
+            "ctl": "−6.2 points",
+            "placebo": "−5.4 points"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Prespecified success required superiority to placebo and noninferiority to tamsulosin for total IPSS; the abstract reports the 6 mg combination met all criteria but gives no margin or interval.",
+          "locator": "PubMed abstract, Outcome Measurements and Results"
+        },
+        {
+          "endpoint": "Total Urgency and Frequency Score, 6 mg combination",
+          "role": "primary",
+          "measure": "Mean change in TUFS at 12 weeks; 6 mg combination versus tamsulosin and placebo",
+          "values": {
+            "exp6": "−8.1 points",
+            "ctl": "−6.7 points",
+            "placebo": "−4.4 points"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Prespecified success required superiority to tamsulosin for TUFS; the abstract reports all 6 mg combination criteria met without an effect interval.",
+          "locator": "PubMed abstract, Outcome Measurements and Results"
+        },
+        {
+          "endpoint": "Joint primary success criteria, 9 mg combination",
+          "role": "primary",
+          "measure": "Mean change in total IPSS and TUFS at 12 weeks",
+          "values": {
+            "exp9": "IPSS −6.5; TUFS −7.6 points",
+            "ctl": "IPSS −6.2; TUFS −6.7 points",
+            "placebo": "IPSS −5.4; TUFS −4.4 points"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "The abstract says the 9 mg combination met criteria versus placebo but not versus tamsulosin; it does not specify the failed contrast or margin.",
+          "locator": "PubMed abstract, Outcome Measurements and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Randomized regimen",
+          "value": "Once-daily placebo, tamsulosin OCAS 0.4 mg, or a single fixed-dose tablet combining tamsulosin OCAS 0.4 mg with solifenacin 6 or 9 mg for 12 weeks.",
+          "locator": "PubMed abstract, Intervention"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_07_034.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "neptune-2015",
+      "kind": "updated",
+      "label": "NEPTUNE II open-label extension",
+      "published": "2014-07-25",
+      "cutoff": null,
+      "citation": "Drake MJ, Chapple C, Sokol R, et al. \"Long-term Safety and Efficacy of Single-tablet Combinations of Solifenacin and Tamsulosin Oral Controlled Absorption System in Men with Storage and Voiding Lower Urinary Tract Symptoms: Results from the NEPTUNE Study and NEPTUNE II Open-label Extension.\" *Eur Urol.* 2015;67(2):262-270. doi:10.1016/j.eururo.2014.07.013",
+      "doi": "10.1016/j.eururo.2014.07.013",
+      "pmid": "25070148",
+      "followUp": "40-week open-label extension after 12-week NEPTUNE; up to 52 weeks of fixed-dose combination exposure",
+      "followUpLocator": "PDF pp2–3, Methods and Figure 1",
+      "results": [
+        {
+          "endpoint": "Total IPSS in extension participants",
+          "role": "descriptive",
+          "measure": "Mean change from original NEPTUNE baseline to end of treatment, up to 52 weeks",
+          "value": "−9.0 points (n=1004)",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Pooled flexible-dose extension; no concurrent randomized comparator.",
+          "locator": "PDF p5, Table 4"
+        },
+        {
+          "endpoint": "TUFS in extension participants",
+          "role": "descriptive",
+          "measure": "Mean change from original NEPTUNE baseline to end of treatment, up to 52 weeks",
+          "value": "−10.1 points (n=1005)",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Pooled flexible-dose extension; no concurrent randomized comparator.",
+          "locator": "PDF p5, Table 4"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "value": "499/1066 (46.8%)",
+          "locator": "PDF p4, Table 3",
+          "note": "Events during fixed-dose combination exposure in NEPTUNE or NEPTUNE II among extension participants."
+        },
+        {
+          "label": "Dry mouth and constipation",
+          "value": "dry mouth 132/1066 (12.4%); constipation 55/1066 (5.2%)",
+          "locator": "PDF p4, Table 3",
+          "note": "Extension safety population; treatment-emergent events during fixed-dose combination exposure."
+        },
+        {
+          "label": "Adverse-event discontinuation",
+          "value": "42/1066 (3.9%)",
+          "locator": "PDF p4, Table 3",
+          "note": "Discontinuation owing to adverse events in the extension safety population."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension dosing",
+          "value": "All extension participants started four weeks of solifenacin 6 mg plus tamsulosin OCAS 0.4 mg daily, then could choose 6 or 9 mg solifenacin and switch at later 12-week visits.",
+          "locator": "PDF pp2–3, Methods and Figure 1"
+        },
+        {
+          "label": "Extension completion",
+          "value": "1,066/1,199 NEPTUNE completers received an extension dose; 960/1,066 (90.1%) completed NEPTUNE II.",
+          "locator": "PDF p3, Results section 3.1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_07_013.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "neptune-2016-pro",
+      "kind": "pro",
+      "label": "Responder and quality-of-life analysis",
+      "published": "2015-06-13",
+      "cutoff": null,
+      "citation": "Drake MJ, Sokol R, Coyne K, et al. \"Responder and Health-related Quality of Life Analyses in Men with Lower Urinary Tract Symptoms Treated with a Fixed-dose Combination of Solifenacin and Tamsulosin Oral-controlled Absorption System: Results from the NEPTUNE Study.\" *BJU Int.* 2016;117(1):165-172. doi:10.1111/bju.13162",
+      "doi": "10.1111/bju.13162",
+      "pmid": "25907003",
+      "followUp": "12-week randomized treatment, secondary responder and quality-of-life analysis",
+      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "results": [
+        {
+          "endpoint": "Responder analyses",
+          "role": "descriptive",
+          "measure": "Number of responder analyses favoring the 6 mg combination at 12 weeks",
+          "values": {
+            "exp6": "8/8 versus placebo; 6/8 versus tamsulosin",
+            "ctl": "reference",
+            "placebo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Counts are analyses, not patients; the abstract does not give patient-level response denominators.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_13162.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "neptune-2017-retention",
+      "kind": "secondary",
+      "label": "Urinary-retention subanalysis",
+      "published": "2017-02-06",
+      "cutoff": null,
+      "citation": "Drake MJ, Oelke M, Snijder R, et al. \"Incidence of Urinary Retention during Treatment with Single Tablet Combinations of Solifenacin+tamsulosin OCAS for up to 1 Year in Adult Men with Both Storage and Voiding LUTS: A Subanalysis of the NEPTUNE/NEPTUNE II Randomized Controlled Studies.\" *PLoS One.* 2017;12(2):e0170726. doi:10.1371/journal.pone.0170726",
+      "doi": "10.1371/journal.pone.0170726",
+      "pmid": "28166296",
+      "followUp": "Up to 52 weeks of fixed-dose combination exposure across NEPTUNE and NEPTUNE II",
+      "followUpLocator": "PDF pp2–4, Methods and Results",
+      "results": [],
+      "harms": [
+        {
+          "label": "Urinary retention during randomized treatment",
+          "values": {
+            "exp6": "3/337 (0.9%)",
+            "exp9": "4/324 (1.2%)",
+            "ctl": "1/326 (0.3%)"
+          },
+          "locator": "PDF p5, Table 1; p4, Results",
+          "note": "Safety denominators; tamsulosin case was acute urinary retention. No placebo-arm randomized-treatment count is reported in Table 1."
+        },
+        {
+          "label": "Catheter-requiring acute urinary retention during randomized treatment",
+          "values": {
+            "exp6": "1/337 (0.3%)",
+            "exp9": "3/324 (0.9%)",
+            "ctl": "1/326 (0.3%)"
+          },
+          "locator": "PDF p5, Table 1; p4, Results",
+          "note": "AUR was the subset of urinary retention requiring catheterization."
+        },
+        {
+          "label": "Urinary retention during combined follow-up",
+          "value": "13/1208 (1.1%)",
+          "locator": "PDF pp4–5, Results and Table 1",
+          "note": "Any fixed-dose combination exposure in either study; no concurrent control across this follow-up."
+        },
+        {
+          "label": "Catheter-requiring retention during combined follow-up",
+          "value": "8/1208 (0.7%)",
+          "locator": "PDF pp4–5, Results and Table 1",
+          "note": "Acute urinary retention over up to 52 weeks of fixed-dose combination exposure."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1371_journal_pone_0170726.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/neptune",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

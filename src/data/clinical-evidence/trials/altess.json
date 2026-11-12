@@ -1,0 +1,155 @@
+{
+  "id": "altess",
+  "name": "ALTESS",
+  "aliases": [
+    "Alfuzosin Long-Term Efficacy and Safety Study"
+  ],
+  "nct": "NCT00029822",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "alpha-blockers"
+    }
+  ],
+  "question": "Does long-term alfuzosin prevent acute urinary retention or other progression events in men with LUTS/BPH?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1522,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Alfuzosin 10 mg once daily",
+        "n": 759,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 763,
+        "role": "control"
+      }
+    ],
+    "population": "1,522 men with LUTS/BPH at risk of progression events and no previous acute urinary retention.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized superiority trial",
+    "locator": "PubMed abstract, Patients and Methods; ClinicalTrials.gov NCT00029822, Design and Eligibility"
+  },
+  "verdict": "negative",
+  "verdictNote": "Primary urinary-retention endpoint missed; post hoc symptom-based progression favored alfuzosin.",
+  "takeaway": "In ALTESS, alfuzosin 10 mg once daily versus placebo did not reduce first acute urinary retention over two years, the prespecified primary endpoint; a post hoc composite of retention, BPH surgery or symptom worsening favored alfuzosin.",
+  "reports": [
+    {
+      "id": "altess-2006",
+      "kind": "primary",
+      "label": "Two-year primary report",
+      "published": "2006-03-09",
+      "cutoff": null,
+      "citation": "Roehrborn CG; ALTESS Study Group. Alfuzosin 10 mg once daily prevents overall clinical progression of benign prostatic hyperplasia but not acute urinary retention: results of a 2-year placebo-controlled study. *BJU Int.* 2006;97(4):734-741. doi:10.1111/j.1464-410X.2006.06110.x",
+      "doi": "10.1111/j.1464-410X.2006.06110.x",
+      "pmid": "16536764",
+      "followUp": "Two years of treatment",
+      "followUpLocator": "PubMed abstract, Objectives and Results",
+      "results": [
+        {
+          "endpoint": "First acute urinary retention",
+          "role": "primary",
+          "measure": "First acute urinary retention through two years",
+          "values": {
+            "exp": "2.1%",
+            "ctl": "1.8%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.82"
+          },
+          "met": false,
+          "note": "The abstract gives percentages without event counts or a confidence interval.",
+          "locator": "PubMed abstract, Patients and Methods and Results"
+        },
+        {
+          "endpoint": "BPH-related surgery",
+          "role": "secondary",
+          "measure": "BPH-related surgery through two years",
+          "values": {
+            "exp": "5.1%",
+            "ctl": "6.5%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.18"
+          },
+          "note": "Reported relative risk reduction 22% (95% CI -18% to 48%).",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Symptom deterioration",
+          "role": "exploratory",
+          "measure": "Post hoc IPSS deterioration of at least 4 points through two years",
+          "values": {
+            "exp": "11.7%",
+            "ctl": "16.8%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0013"
+          },
+          "note": "Post hoc analysis; reported relative risk reduction 30% (95% CI 10% to 46%).",
+          "locator": "PubMed abstract, Patients and Methods and Results"
+        },
+        {
+          "endpoint": "Overall clinical progression",
+          "role": "exploratory",
+          "measure": "Post hoc composite of acute urinary retention, BPH surgery or IPSS deterioration of at least 4 points through two years",
+          "values": {
+            "exp": "16.3%",
+            "ctl": "22.1%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Post hoc analysis; reported relative risk reduction 26% (95% CI 9% to 40%).",
+          "locator": "PubMed abstract, Patients and Methods and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Overall adverse events",
+          "values": {
+            "exp": "not quantified",
+            "ctl": "not quantified"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract describes incidence as comparable between groups."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study treatment",
+          "values": {
+            "exp": "alfuzosin 10 mg once daily for two years",
+            "ctl": "placebo for two years"
+          },
+          "locator": "PubMed abstract, Objectives and Patients and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2006_06110_x.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/altess",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

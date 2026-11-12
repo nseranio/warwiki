@@ -1,0 +1,221 @@
+{
+  "id": "prospere",
+  "name": "PROSPERE",
+  "aliases": [
+    "Prosthetic Pelvic Organ Prolapse Repair",
+    "Prosthetic Pelvic Floor Repair"
+  ],
+  "nct": "NCT01637441",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-grafts",
+      "lane": "vaginal-mesh"
+    }
+  ],
+  "question": "Does laparoscopic mesh sacropexy reduce complications compared with transvaginal mesh repair for primary cystocele?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "outcome assessor blinded",
+    "type": "superiority",
+    "n": 262,
+    "arms": [
+      {
+        "key": "ls",
+        "label": "Laparoscopic mesh sacropexy",
+        "n": 130,
+        "role": "experimental"
+      },
+      {
+        "key": "tvm",
+        "label": "transvaginal mesh repair",
+        "n": 132,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged 45–75 years with POP-Q stage 2 or higher cystocele and no previous prolapse surgery.",
+    "description": "Multicenter, assessor-blinded superiority randomized trial",
+    "locator": "PubMed abstract, Design, Setting, and Participants; ClinicalTrials.gov NCT01637441, Design"
+  },
+  "verdict": "negative",
+  "verdictNote": "The one-year grade II or higher complication difference missed statistical significance.",
+  "takeaway": "Laparoscopic mesh sacropexy versus transvaginal mesh repair for primary cystocele produced 17% versus 26% grade II or higher complications at one year; the difference did not reach statistical significance. Grade III or higher complications were less frequent with sacropexy.",
+  "reports": [
+    {
+      "id": "prospere-2018",
+      "kind": "primary",
+      "label": "One-year safety report",
+      "published": "2018-02-19",
+      "cutoff": null,
+      "citation": "Lucot JP, Cosson M, Bader G, et al. Safety of Vaginal Mesh Surgery Versus Laparoscopic Mesh Sacropexy for Cystocele Repair: Results of the Prosthetic Pelvic Floor Repair Randomized Controlled Trial. *Eur Urol.* 2018;74(2):167-176. doi:10.1016/j.eururo.2018.01.044",
+      "doi": "10.1016/j.eururo.2018.01.044",
+      "pmid": "29472143",
+      "followUp": "1 year",
+      "followUpLocator": "PubMed abstract, Outcome Measurements and Statistical Analysis",
+      "results": [
+        {
+          "endpoint": "Grade II or higher surgical complications",
+          "role": "primary",
+          "measure": "One-year complication risk difference, transvaginal mesh minus laparoscopic sacropexy",
+          "values": {
+            "ls": "17%",
+            "tvm": "26%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 8.6,
+            "ci": [
+              -1.5,
+              18
+            ],
+            "p": "0.088"
+          },
+          "met": false,
+          "note": "Modified Clavien-Dindo grade II or higher; abstract reports percentages without event counts.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Grade III or higher surgical complications at one year",
+          "values": {
+            "ls": "0.8%",
+            "tvm": "9.4%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Difference, transvaginal mesh minus laparoscopic sacropexy, 8.6 percentage points (95% CI 3.4–15); P=0.001; event counts unavailable in abstract."
+        },
+        {
+          "label": "Total reoperation at one year",
+          "values": {
+            "ls": "4.7%",
+            "tvm": "10.9%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Difference, transvaginal mesh minus laparoscopic sacropexy, 6.3 percentage points (95% CI −0.4 to 13.3); P=0.060; event counts unavailable in abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Intervention population",
+          "values": {
+            "ls": "129",
+            "tvm": "128"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Five of 262 randomized women withdrew before intervention."
+        },
+        {
+          "label": "Conversion from laparoscopic sacropexy to transvaginal mesh",
+          "value": "6.3%",
+          "locator": "PubMed abstract, Results",
+          "note": "Numerator unavailable in abstract."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2018_01_044.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "prospere-2022",
+      "kind": "secondary",
+      "label": "Four-year follow-up",
+      "published": "2021-08-05",
+      "cutoff": null,
+      "citation": "Lucot JP, Cosson M, Verdun S, et al. Long-term outcomes of primary cystocele repair by transvaginal mesh surgery versus laparoscopic mesh sacropexy: extended follow up of the PROSPERE multicentre randomised trial. *BJOG.* 2022;129(1):127-137. doi:10.1111/1471-0528.16847",
+      "doi": "10.1111/1471-0528.16847",
+      "pmid": "34264001",
+      "followUp": "4 years; 220 of 262 randomized women followed",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Pelvic Floor Distress Inventory-20",
+          "role": "primary",
+          "measure": "Four-year PFDI-20 mean difference, laparoscopic sacropexy minus transvaginal mesh, points",
+          "effect": {
+            "type": "difference",
+            "value": -7.2,
+            "ci": [
+              -14,
+              -0.05
+            ],
+            "p": "0.029"
+          },
+          "met": true,
+          "note": "Both groups improved; between-group difference was below the minimal clinically important difference. Group means unavailable in abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Composite success",
+          "role": "secondary",
+          "measure": "Four-year composite success",
+          "values": {
+            "ls": "70% (95% CI 61–81%)",
+            "tvm": "71% (95% CI 62–81%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.92,
+            "ci": [
+              0.55,
+              1.54
+            ],
+            "p": "0.75"
+          },
+          "note": "Definition and event counts unavailable in abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "POP-Q point C",
+          "role": "secondary",
+          "measure": "Four-year point C position, millimeters",
+          "values": {
+            "ls": "−57 mm",
+            "tvm": "−48 mm"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0093"
+          },
+          "note": "Other POP-Q measurements did not differ according to the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Grade III or higher complications at four years",
+          "values": {
+            "ls": "2% (95% CI 0–4.7%)",
+            "tvm": "8.7% (95% CI 3.4–13.7%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Reported hazard ratio 4.6 (95% CI 1.007–21.0), P=0.049; event counts unavailable in abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Four-year follow-up participation",
+          "value": "220 of 262 randomized women",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_1471_0528_16847.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/prospere",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "id": "botox-oab-dose-ranging",
+  "name": "OnabotulinumtoxinA OAB dose-ranging trial",
+  "aliases": [
+    "Dmochowski 2010",
+    "Allergan 191622-077"
+  ],
+  "nct": "NCT00168454",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "botulinum-idiopathic"
+    }
+  ],
+  "question": "Which intradetrusor onabotulinumtoxinA dose balances urgency-incontinence improvement and voiding risk in idiopathic overactive bladder inadequately managed with anticholinergics?",
+  "design": {
+    "phase": "2",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 313,
+    "arms": [
+      {
+        "key": "d50",
+        "label": "OnabotulinumtoxinA 50 U",
+        "n": 57,
+        "role": "experimental"
+      },
+      {
+        "key": "d100",
+        "label": "onabotulinumtoxinA 100 U",
+        "n": 54,
+        "role": "experimental"
+      },
+      {
+        "key": "d150",
+        "label": "onabotulinumtoxinA 150 U",
+        "n": 49,
+        "role": "experimental"
+      },
+      {
+        "key": "d200",
+        "label": "onabotulinumtoxinA 200 U",
+        "n": 53,
+        "role": "experimental"
+      },
+      {
+        "key": "d300",
+        "label": "onabotulinumtoxinA 300 U",
+        "n": 56,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 44,
+        "role": "control"
+      }
+    ],
+    "population": "Patients with idiopathic overactive bladder and urinary urgency incontinence inadequately managed with anticholinergics, with at least eight urgency-incontinence episodes weekly and eight micturitions daily at baseline.",
+    "description": "Multicenter, double-blind, placebo-controlled dose-ranging randomized trial",
+    "locator": "Dmochowski PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00168454, Participant Flow, Started (arm counts)"
+  },
+  "verdict": "positive",
+  "verdictNote": "Benefit began at 100 U; higher doses increased residual-volume and catheterization concerns.",
+  "takeaway": "Intradetrusor onabotulinumtoxinA 50–300 U was compared with placebo for idiopathic overactive bladder with urgency incontinence. The week-12 report found sustained efficacy at doses of 100 U or greater, with dose-dependent postvoid residual and catheterization effects; its authors favored 100 U as a possible benefit–risk balance.",
+  "reports": [
+    {
+      "id": "botox-oab-dose-ranging-2010",
+      "kind": "primary",
+      "label": "Primary dose-ranging report",
+      "published": "2010-10-16",
+      "dateLocator": "PubMed PMID 20952013, electronic publication date",
+      "cutoff": null,
+      "citation": "Dmochowski R, Chapple C, Nitti VW, et al. \"Efficacy and Safety of OnabotulinumtoxinA for Idiopathic Overactive Bladder: A Double-Blind, Placebo Controlled, Randomized, Dose Ranging Trial.\" *J Urol.* 2010;184(6):2416-2422. doi:10.1016/j.juro.2010.08.021",
+      "doi": "10.1016/j.juro.2010.08.021",
+      "pmid": "20952013",
+      "followUp": "Week 12 primary endpoint",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Weekly urgency urinary incontinence episodes",
+          "role": "primary",
+          "measure": "7-day bladder-diary change from baseline at week 12",
+          "values": {
+            "d100": "Efficacy reported",
+            "d150": "Efficacy reported",
+            "d200": "Efficacy reported",
+            "d300": "Efficacy reported"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": null,
+          "note": "Abstract reports durable efficacy at doses of 100 U or greater without arm estimates or a prespecified testing threshold; doses above 150 U added minimal symptom benefit.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary tract infection",
+          "locator": "PubMed abstract, Results",
+          "note": "Significantly more frequent with onabotulinumtoxinA than placebo; rates not provided."
+        },
+        {
+          "label": "Urinary retention",
+          "locator": "PubMed abstract, Results",
+          "note": "Significantly more frequent with onabotulinumtoxinA than placebo; rates not provided."
+        },
+        {
+          "label": "Postvoid residual and intermittent catheterization",
+          "locator": "PubMed abstract, Results",
+          "note": "Both increased with dose; rates and catheterization thresholds not provided."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment administration",
+          "value": "Intradetrusor onabotulinumtoxinA 50, 100, 150, 200, or 300 U, or placebo; injection-site number and pattern not stated in abstract.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2010_08_021.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "botox-oab-dose-ranging-2011-urodynamics",
+      "kind": "secondary",
+      "label": "Urodynamic analysis",
+      "published": "2011-02-23",
+      "dateLocator": "PubMed PMID 21351127, electronic publication date",
+      "cutoff": null,
+      "citation": "Rovner E, Kennelly M, Schulte-Baukloh H, et al. \"Urodynamic Results and Clinical Outcomes with Intradetrusor Injections of OnabotulinumtoxinA in a Randomized, Placebo-Controlled Dose-Finding Study in Idiopathic Overactive Bladder.\" *Neurourol Urodyn.* 2011;30(4):556-562. doi:10.1002/nau.21021",
+      "doi": "10.1002/nau.21021",
+      "pmid": "21351127",
+      "followUp": "Urodynamic assessments at weeks 12 and 36",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Maximum cystometric capacity and volume at first involuntary detrusor contraction",
+          "role": "secondary",
+          "measure": "Change from baseline at week 12",
+          "values": {
+            "d100": "Superior to placebo",
+            "d150": "Superior to placebo",
+            "d200": "Superior to placebo",
+            "d300": "Superior to placebo"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Improvements generally decreased by week 36; no difference in clinical outcomes by baseline detrusor overactivity status was reported.",
+          "locator": "PubMed abstract, Results and Conclusions"
+        },
+        {
+          "endpoint": "No urgency urinary incontinence on diary",
+          "role": "secondary",
+          "measure": "Incontinence-free at week 12",
+          "values": {
+            "d50": "29.8%",
+            "d300": "57.1%",
+            "ctl": "15.9%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Active-dose range endpoints only are stated in the abstract; arm denominators come from ClinicalTrials.gov NCT00168454 Participant Flow.",
+          "locator": "PubMed abstract, Results; ClinicalTrials.gov NCT00168454, Participant Flow, Started"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postvoid residual above 200 mL",
+          "locator": "PubMed abstract, Results",
+          "note": "More common with doses above 150 U; arm rates not provided."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_21021.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "botox-oab-dose-ranging-2012-qol",
+      "kind": "pro",
+      "label": "Quality-of-life analysis",
+      "published": "2012-03-14",
+      "dateLocator": "PubMed PMID 22464310, electronic publication date",
+      "cutoff": null,
+      "citation": "Fowler CJ, Auerbach S, Ginsberg D, et al. \"OnabotulinumtoxinA Improves Health-Related Quality of Life in Patients with Urinary Incontinence Due to Idiopathic Overactive Bladder: A 36-Week, Double-Blind, Placebo-Controlled, Randomized, Dose-Ranging Trial.\" *Eur Urol.* 2012;62(1):148-157. doi:10.1016/j.eururo.2012.03.005",
+      "doi": "10.1016/j.eururo.2012.03.005",
+      "pmid": "22464310",
+      "followUp": "36 weeks",
+      "followUpLocator": "PubMed abstract, Design, Setting, and Participants",
+      "results": [
+        {
+          "endpoint": "Incontinence Quality-of-Life Instrument score",
+          "role": "secondary",
+          "measure": "Change from baseline at weeks 2 through 24",
+          "values": {
+            "d100": "Greater improvement than placebo",
+            "d150": "Greater improvement than placebo",
+            "d200": "Greater improvement than placebo",
+            "d300": "Greater improvement than placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "note": "Total and subscale scores; abstract does not give point estimates. Some quality-of-life measures were exploratory and unvalidated.",
+          "locator": "PubMed abstract, Results and Limitations"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_03_005.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/botox-oab-dose-ranging",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

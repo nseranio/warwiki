@@ -11,7 +11,7 @@
     "build": "docusaurus build",
     "postbuild": "node scripts/optimize-build-assets.js && npm run check:rendered-links && npm run audit:size",
     "audit:content": "node scripts/audit-content.js",
-    "audit:size": "node scripts/check-build-size.js --max-mb=200",
+    "audit:size": "node scripts/check-build-size.js --max-mb=250",
     "literature:scan": "node scripts/literature-watch.js",
     "test:maintenance": "node --test scripts/tests/*.test.js",
     "swizzle": "docusaurus swizzle",

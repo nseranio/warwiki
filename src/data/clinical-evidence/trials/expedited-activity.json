@@ -1,0 +1,174 @@
+{
+  "id": "expedited-activity",
+  "name": "O'Shea 2023",
+  "aliases": [
+    "EVeRLAST"
+  ],
+  "nct": "NCT04329715",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-adjuncts-pessary",
+      "lane": "perioperative-adjunct"
+    }
+  ],
+  "question": "After apical prolapse reconstruction, are unrestricted postoperative activity instructions noninferior to standard restrictions for anatomic support and prolapse symptoms?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Surgeons and outcome assessors masked; participants unmasked",
+    "type": "noninferiority",
+    "n": 123,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Expedited postoperative activity instructions",
+        "n": 62,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "standard postoperative activity restrictions",
+        "n": 61,
+        "role": "control"
+      }
+    ],
+    "population": "Physically active, English-speaking women with bothersome stage II–IV pelvic organ prolapse scheduled for vaginal or robotic laparoscopic apical reconstruction at a single academic center.",
+    "description": "Single-center, assessor-masked noninferiority randomized trial",
+    "locator": "Methods; Figure 1"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Both coprimary noninferiority margins were met at three months among 107 analyzed participants.",
+  "takeaway": "After vaginal or robotic laparoscopic apical prolapse surgery, expedited activity without lifting or work restrictions was noninferior to standard six-week lifting restrictions for anatomic support and prolapse symptoms at three months.",
+  "reports": [
+    {
+      "id": "expedited-activity-2023",
+      "kind": "primary",
+      "label": "Three-month primary report",
+      "published": "2023-05-31",
+      "cutoff": null,
+      "citation": "O'Shea M, Siddiqui NY, Truong T, Erkanli A, Barber MD. \"Standard Restrictions vs Expedited Activity After Pelvic Organ Prolapse Surgery: A Randomized Clinical Trial.\" *JAMA Surg.* 2023;158(8):797-805. doi:10.1001/jamasurg.2023.1649",
+      "doi": "10.1001/jamasurg.2023.1649",
+      "pmid": "37256578",
+      "followUp": "Three-month POP-Q examination and symptom assessment",
+      "followUpLocator": "Methods, postoperative follow-up; Results, three-month outcomes",
+      "results": [
+        {
+          "endpoint": "Maximum anatomic POP support loss (SLmax)",
+          "role": "primary",
+          "measure": "Three-month mean SLmax (cm); baseline-adjusted mean difference, expedited minus standard",
+          "values": {
+            "exp": "−1.7 cm (SD 1.4; n=53)",
+            "ctl": "−1.5 cm (SD 1.4; n=54)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.18,
+            "ci": [
+              -0.68,
+              0.33
+            ]
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin: +1.0 cm; upper 95% CI below margin. Baseline-SLmax-adjusted model from Results text.",
+          "locator": "Results, paragraph after Table 2; Figure 2"
+        },
+        {
+          "endpoint": "Pelvic Organ Prolapse Distress Inventory (POPDI) score",
+          "role": "primary",
+          "measure": "Three-month mean POPDI score (points); baseline-adjusted mean difference, expedited minus standard",
+          "values": {
+            "exp": "23.7 points (SD 41.8; n=53)",
+            "ctl": "25.7 points (SD 39.3; n=54)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -5.79,
+            "ci": [
+              -20.41,
+              8.84
+            ]
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin: +34.3 points; upper 95% CI below margin. Baseline-POPDI-adjusted model from Results text.",
+          "locator": "Results, paragraph after Figure 2; Figure 2"
+        },
+        {
+          "endpoint": "Return to work",
+          "role": "exploratory",
+          "measure": "Median days to return to work in employed participants",
+          "values": {
+            "exp": "28 days (IQR 11–45)",
+            "ctl": "34 days (IQR 7–44)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.58"
+          },
+          "note": "Small employed subset; denominators not given in the main article.",
+          "locator": "Results, paragraph before Discussion"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative complications",
+          "values": {
+            "exp": "No major complications reported",
+            "ctl": "No major complications reported"
+          },
+          "locator": "Results, final paragraph; Conclusion",
+          "note": "The main article reports no between-group difference; event-specific counts are in Supplement 2 eTable 6."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Postoperative instructions",
+          "values": {
+            "exp": "No lifting or work restrictions; resume as able",
+            "ctl": "No lifting over 10 lb for 6 weeks; sedentary work after 2 weeks and manual labor after 6 weeks"
+          },
+          "locator": "Methods, randomization and instructions",
+          "note": "Both groups avoided sexual activity until the six-week postoperative visit."
+        },
+        {
+          "label": "Robotic laparoscopic mesh sacrocolpopexy",
+          "values": {
+            "exp": "24/53 (45.3%)",
+            "ctl": "24/54 (44.4%)"
+          },
+          "locator": "Table 2; sacrocolpopexy footnote",
+          "note": "Synthetic polypropylene mesh; 57 analyzed participants underwent vaginal apical repair."
+        },
+        {
+          "label": "Concomitant midurethral sling",
+          "values": {
+            "exp": "22/53 (41.5%)",
+            "ctl": "21/54 (38.9%)"
+          },
+          "locator": "Table 2",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamasurg_2023_1649.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "recoup",
+      "note": "Earlier liberal-versus-restricted activity trial informed the rationale; O'Shea tested prespecified noninferiority of prolapse outcomes."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/expedited-activity",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

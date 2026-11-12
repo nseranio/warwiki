@@ -1,0 +1,301 @@
+{
+  "id": "napruti-cranberry",
+  "name": "NAPRUTI Cranberry",
+  "aliases": [
+    "NAPRUTI Study I",
+    "Beerepoot 2011",
+    "ISRCTN50717094"
+  ],
+  "nct": null,
+  "registry": "ISRCTN50717094",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "nonantibiotic"
+    }
+  ],
+  "question": "Is cranberry extract prophylaxis noninferior to trimethoprim–sulfamethoxazole for preventing symptomatic recurrent urinary tract infections in premenopausal women?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind, double-dummy",
+    "type": "noninferiority",
+    "n": 221,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Cranberry extract capsules 500 mg twice daily",
+        "role": "experimental",
+        "n": 111
+      },
+      {
+        "key": "ctl",
+        "label": "trimethoprim–sulfamethoxazole 480 mg nightly",
+        "role": "control",
+        "n": 110
+      }
+    ],
+    "population": "221 community-dwelling premenopausal women aged at least 18 years with at least three self-reported symptomatic urinary tract infections in the preceding year.",
+    "description": "Multicenter, double-blind, double-dummy noninferiority randomized trial",
+    "locator": "JAMA full text, Methods (Patients, Intervention); Results (Participant flow); Table 1"
+  },
+  "verdict": "negative",
+  "verdictNote": "Cranberry failed the prespecified noninferiority margin; TMP-SMX increased E. coli resistance.",
+  "takeaway": "In premenopausal women with recurrent UTI, cranberry extract capsules produced more symptomatic recurrences than daily trimethoprim–sulfamethoxazole over 12 months (4.0 versus 1.8 per woman); the 2.2-episode mean difference failed the prespecified 1.3-episode noninferiority margin. TMP-SMX increased E. coli resistance.",
+  "reports": [
+    {
+      "id": "napruti-cranberry-2011",
+      "kind": "primary",
+      "label": "12-month randomized report",
+      "published": "2011-07-25",
+      "cutoff": null,
+      "citation": "Beerepoot MAJ, ter Riet G, Nys S, et al. \"Cranberries vs Antibiotics to Prevent Urinary Tract Infections: A Randomized Double-blind Noninferiority Trial in Premenopausal Women.\" *Arch Intern Med.* 2011;171(14):1270-1278. doi:10.1001/archinternmed.2011.306",
+      "doi": "10.1001/archinternmed.2011.306",
+      "pmid": "21788542",
+      "followUp": "12 months of prophylaxis plus 3 months after discontinuation",
+      "followUpLocator": "JAMA full text, Methods (Assessments, Outcome measures); Table 2",
+      "results": [
+        {
+          "endpoint": "Symptomatic UTI clinical recurrences",
+          "role": "primary",
+          "measure": "Mean symptomatic episodes per woman during 12 months; mean difference, cranberry minus TMP-SMX",
+          "values": {
+            "exp": "4.0 (95% CI 2.3–5.6; analysis n=104)",
+            "ctl": "1.8 (95% CI 0.8–2.7; analysis n=95)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.2,
+            "ci": [
+              0.3,
+              4.2
+            ],
+            "p": "0.02"
+          },
+          "met": false,
+          "note": "Noninferiority required the upper 95% confidence limit of the cranberry-minus-TMP-SMX difference to be below 1.3 episodes. Means were adjusted for selective dropout by inverse probability of censoring weighting; catheter users were excluded.",
+          "locator": "JAMA full text, Methods (Statistical analysis); Results (Primary outcomes); Table 2 and Figure 2A"
+        },
+        {
+          "endpoint": "At least one symptomatic UTI",
+          "role": "descriptive",
+          "measure": "12-month Kaplan–Meier estimated proportion with a clinical recurrence",
+          "values": {
+            "exp": "78.2% (analysis n=104)",
+            "ctl": "71.1% (analysis n=95)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified primary clinical outcome; no separate noninferiority threshold was specified. Percentages are Kaplan–Meier estimates, not crude numerators divided by analysis n.",
+          "locator": "JAMA full text, Results (Primary outcomes); Table 2 and footnote c"
+        },
+        {
+          "endpoint": "Time to first symptomatic UTI",
+          "role": "descriptive",
+          "measure": "Median months to first clinical recurrence",
+          "values": {
+            "exp": "4 months (95% CI 3–6)",
+            "ctl": "8 months (95% CI 6–10)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "note": "Prespecified primary clinical outcome; P value from log-rank test; no separate noninferiority threshold was specified.",
+          "locator": "JAMA full text, Results (Primary outcomes); Table 2 and Figure 2B"
+        },
+        {
+          "endpoint": "TMP-SMX resistance in fecal E. coli",
+          "role": "descriptive",
+          "measure": "Resistant isolates after 1 month of prophylaxis",
+          "values": {
+            "exp": "23.7% of fecal E. coli isolates",
+            "ctl": "86.3% of fecal E. coli isolates"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified primary resistance outcome; the text reports isolate percentages without isolate numerators or denominators for this timepoint.",
+          "locator": "JAMA full text, Abstract (Results); Results (Primary outcomes); Figure 3"
+        },
+        {
+          "endpoint": "TMP-SMX resistance in asymptomatic-bacteriuria E. coli",
+          "role": "descriptive",
+          "measure": "Resistant urinary isolates after 1 month of prophylaxis",
+          "values": {
+            "exp": "28.1% of E. coli isolates",
+            "ctl": "90.5% of E. coli isolates"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified primary resistance outcome; the text reports isolate percentages without isolate numerators or denominators for this timepoint.",
+          "locator": "JAMA full text, Abstract (Results); Results (Primary outcomes); Figure 3"
+        },
+        {
+          "endpoint": "Post-treatment TMP-SMX resistance",
+          "role": "descriptive",
+          "measure": "Indigenous E. coli resistance 3 months after discontinuation of prophylaxis",
+          "values": {
+            "exp": "no increase during cranberry prophylaxis",
+            "ctl": "returned to baseline 3 months after TMP-SMX discontinuation"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The article does not provide a pooled percentage for this post-treatment comparison.",
+          "locator": "JAMA full text, Abstract (Results); Results (Primary outcomes); Figure 3"
+        },
+        {
+          "endpoint": "Microbiologically confirmed symptomatic UTI",
+          "role": "secondary",
+          "measure": "Mean episodes per woman during 12 months",
+          "values": {
+            "exp": "1.2 (95% CI 0.8–1.5; analysis n=104)",
+            "ctl": "0.8 (95% CI 0.4–1.1; analysis n=95)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.15"
+          },
+          "note": "Means adjusted for selective dropout; symptomatic episodes required bacteriuria as well as clinical symptoms.",
+          "locator": "JAMA full text, Methods (Outcome measures); Table 2 and footnote b"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event during prophylaxis",
+          "values": {
+            "exp": "53/109 (48.6%)",
+            "ctl": "51/98 (52.0%)"
+          },
+          "locator": "JAMA full text, Table 4",
+          "note": "Safety population was 109 cranberry and 98 TMP-SMX recipients."
+        },
+        {
+          "label": "Adverse event leading to withdrawal",
+          "values": {
+            "exp": "6/109 (5.5%)",
+            "ctl": "5/98 (5.1%)"
+          },
+          "locator": "JAMA full text, Table 4",
+          "note": "Masked safety board judged treatment relation likely for 5/109 (4.6%) and 5/98 (5.1%), respectively."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "exp": "8/109 (7.3%)",
+            "ctl": "12/98 (12.2%)"
+          },
+          "locator": "JAMA full text, Table 4; Results (Adverse events)",
+          "note": "One TMP-SMX recipient had treatment-related Stevens–Johnson syndrome and withdrew; none in the cranberry arm had a treatment-related serious adverse event."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Prophylaxis regimen",
+          "values": {
+            "exp": "Cran-Max cranberry extract 500 mg twice daily plus nightly placebo tablet for 12 months",
+            "ctl": "TMP-SMX 480 mg nightly plus placebo capsule twice daily for 12 months"
+          },
+          "locator": "JAMA full text, Methods (Intervention)"
+        },
+        {
+          "label": "Cranberry type A proanthocyanidin content",
+          "value": "9.1 mg/g extract, measured by high-performance liquid chromatography; two 500 mg capsules supplied approximately 9.1 mg/day.",
+          "locator": "JAMA full text, Methods (Intervention); Comment"
+        },
+        {
+          "label": "Urinary antibiotic activity during TMP-SMX prophylaxis",
+          "value": "632/722 urine samples (87.5%) showed antibacterial activity; cranberry adherence was not directly measured.",
+          "locator": "JAMA full text, Results (Compliance with TMP-SMX); Comment"
+        },
+        {
+          "label": "Antibiotic prescriptions for symptomatic UTI",
+          "values": {
+            "exp": "median 1 (IQR 0–2) during prophylaxis",
+            "ctl": "median 0.5 (IQR 0–2) during prophylaxis"
+          },
+          "locator": "JAMA full text, Results (Antibiotic consumption and other infections)"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_archinternmed_2011_306.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "napruti-cranberry-2014-economic",
+      "kind": "secondary",
+      "label": "12-month economic evaluation",
+      "published": "2014-04-04",
+      "cutoff": null,
+      "citation": "Bosmans JE, Beerepoot MAJ, Prins JM, et al. \"Cost-Effectiveness of Cranberries vs Antibiotics to Prevent Urinary Tract Infections in Premenopausal Women: A Randomized Clinical Trial.\" *PLoS One.* 2014;9(4):e91939. doi:10.1371/journal.pone.0091939",
+      "doi": "10.1371/journal.pone.0091939",
+      "pmid": "24705418",
+      "followUp": "12-month economic analysis of the same randomized cohort",
+      "followUpLocator": "PLOS One PDF pp1–2, Abstract and Materials and Methods (Design, Outcome measures)",
+      "results": [
+        {
+          "endpoint": "Total cost per woman",
+          "role": "secondary",
+          "measure": "Mean total cost in 2009 euros; mean difference, cranberry minus TMP-SMX",
+          "values": {
+            "exp": "€627 (SE €96; analysis n=109)",
+            "ctl": "€378 (SE €42; analysis n=98)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 249,
+            "ci": [
+              70,
+              516
+            ]
+          },
+          "note": "Costs were multiply imputed; the analysis omitted downstream costs of antibiotic resistance.",
+          "locator": "PLOS One PDF p6, Table 3; pp4–5, Costs and Discussion"
+        },
+        {
+          "endpoint": "Symptomatic UTI clinical recurrences",
+          "role": "descriptive",
+          "measure": "Multiply imputed mean episodes over 12 months; mean difference, cranberry minus TMP-SMX",
+          "values": {
+            "exp": "4.3 (SE 0.84; analysis n=109)",
+            "ctl": "2.7 (SE 0.50; analysis n=98)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.6
+          },
+          "note": "Different imputation method and analysis cohort from the 2011 primary report; this is a reanalysis, not a new follow-up cohort.",
+          "locator": "PLOS One PDF p6, Table 3; p4, Clinical outcomes; p5, Discussion"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1371_journal_pone_0091939.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "napruti-lactobacilli",
+      "note": "The linked NAPRUTI trial compared oral lactobacilli with TMP-SMX in postmenopausal women."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/napruti-cranberry",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

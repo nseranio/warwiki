@@ -1,0 +1,235 @@
+{
+  "id": "water-iii",
+  "name": "WATER III",
+  "aliases": [
+    "Aquablation versus laser enucleation"
+  ],
+  "nct": "NCT04801381",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "large-glands"
+    }
+  ],
+  "question": "In men with symptomatic 80–180 mL prostates, is Aquablation noninferior to transurethral laser enucleation for three-month symptom improvement and procedural safety?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "nonblinded",
+    "type": "noninferiority",
+    "n": 202,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Aquablation",
+        "n": 98,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "transurethral laser enucleation",
+        "n": 88,
+        "role": "control"
+      }
+    ],
+    "population": "202 men with moderate to severe lower urinary tract symptoms and prostate volumes of 80–180 mL were enrolled; 186 underwent surgery.",
+    "description": "International, multicenter, partially randomized, nonblinded noninferiority trial",
+    "locator": "PubMed abstract, Methods and Key Findings; ClinicalTrials.gov NCT04801381, Study Design"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Three-month IPSS noninferiority shown; the abstract omits the safety decision threshold.",
+  "takeaway": "Partially randomized WATER III compared Aquablation with transurethral laser enucleation for 80–180 mL prostates. Three-month IPSS improvement met Bayesian noninferiority, while retrograde ejaculation and persistent stress incontinence were reported less often after Aquablation.",
+  "reports": [
+    {
+      "id": "water-iii-2026",
+      "kind": "primary",
+      "label": "Three-month primary report",
+      "published": "2026-02-04",
+      "cutoff": null,
+      "citation": "Ritter M, Stein J, Barber N, et al. \"WATER III: A Prospective, Partially Randomized Trial of Aquablation Therapy Versus Transurethral Laser Enucleation of the Prostate for Treatment of Lower Urinary Tract Symptoms.\" *Eur Urol Focus.* 2026;12(2):266-274. doi:10.1016/j.euf.2026.01.006",
+      "doi": "10.1016/j.euf.2026.01.006",
+      "pmid": "41638951",
+      "followUp": "3 months for the coprimary efficacy and safety endpoints",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "IPSS change",
+          "role": "primary",
+          "measure": "Mean IPSS change from baseline to 3 months; Bayesian estimated difference in change (Aquablation minus laser enucleation), points",
+          "values": {
+            "exp": "−12.9 ± 6.9 points",
+            "ctl": "−13.1 ± 7.5 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.93,
+            "ci": [
+              -1.48,
+              3.53
+            ]
+          },
+          "met": true,
+          "note": "95% credible interval; posterior probability of noninferiority >0.999. Arm-specific analyzed denominators are absent from the abstract.",
+          "locator": "PubMed abstract, Key Findings and Limitations"
+        },
+        {
+          "endpoint": "Procedural safety composite",
+          "role": "primary",
+          "measure": "Clavien–Dindo grade ≥2 or grade 1 complications persisting at 3 months; Bayesian risk difference, percentage points",
+          "values": {
+            "exp": "40.8%",
+            "ctl": "56.8%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -9.4,
+            "ci": [
+              -31.8,
+              12.9
+            ]
+          },
+          "met": null,
+          "note": "95% credible interval; posterior probability of noninferiority 0.952. The abstract does not give the prespecified decision threshold or event denominators. Estimated difference is model-based, not subtraction of the displayed rates.",
+          "locator": "PubMed abstract, Methods and Key Findings and Limitations"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Retrograde ejaculation at 3 months",
+          "values": {
+            "exp": "14.8%",
+            "ctl": "77.1%"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "P <0.001; event counts and denominators are absent from the abstract."
+        },
+        {
+          "label": "Persistent stress urinary incontinence at 3 months",
+          "values": {
+            "exp": "0%",
+            "ctl": "9.3%"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "P <0.05; event counts and denominators are absent from the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Surgery and analysis cohorts",
+          "values": {
+            "exp": "98 treated",
+            "ctl": "88 treated"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "186 of 202 enrolled men underwent surgery; 170 had 3-month data, including 66 randomized and 104 nonrandomized men. Arm-specific analysis counts are not stated."
+        },
+        {
+          "label": "Operative approaches",
+          "value": "AquaBeam waterjet ablation with bladder-neck electroresection for residual tissue and hemostasis versus center-standard holmium or thulium laser enucleation.",
+          "locator": "ClinicalTrials.gov NCT04801381, Arms and Interventions; https://clinicaltrials.gov/study/NCT04801381",
+          "note": "Registry protocol description; operative details are not in the PubMed abstract."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_01_006.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "water-iii-2026-six-month",
+      "kind": "abstract",
+      "label": "Six-month meeting abstract",
+      "published": "2026-04-08",
+      "cutoff": null,
+      "citation": "Stein J, Gloger S, Barber N, et al. \"Sechs-Monats-Ergebnisse der WATER-III-Studie: Aquablation versus transurethrale Laserenukleation bei LUTS und Prostatavolumen zwischen 80 und 180 ml.\" In: 71. Kongress der Nordrhein-Westfälischen Gesellschaft für Urologie. 2026;DocV 4.2. doi:10.3205/26nrwgu24",
+      "doi": "10.3205/26nrwgu24",
+      "pmid": null,
+      "followUp": "6 months",
+      "followUpLocator": "Publisher meeting abstract, Ergebnisse",
+      "results": [
+        {
+          "endpoint": "IPSS change",
+          "role": "descriptive",
+          "measure": "Mean IPSS reduction from baseline to 6 months, points",
+          "values": {
+            "exp": "15.1 ± 6.6 points",
+            "ctl": "14.8 ± 6.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.768"
+          },
+          "note": "Follow-up available for 84/98 Aquablation and 80/88 laser-enucleation patients; no randomized-only estimate reported.",
+          "locator": "Publisher meeting abstract, Ergebnisse"
+        },
+        {
+          "endpoint": "Qmax change",
+          "role": "descriptive",
+          "measure": "Mean Qmax increase from baseline to 6 months, mL/s",
+          "values": {
+            "exp": "11 ± 10.3 mL/s",
+            "ctl": "17.9 ± 13 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.009"
+          },
+          "note": "The meeting abstract does not give a between-arm effect estimate or randomized-only analysis.",
+          "locator": "Publisher meeting abstract, Ergebnisse"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Persistent de novo incontinence at 6 months",
+          "values": {
+            "exp": "1 mixed incontinence (1.4%)",
+            "ctl": "1 urgency (1.9%), 1 mixed (1.9%), 3 stress (5.6%)"
+          },
+          "locator": "Publisher meeting abstract, Ergebnisse",
+          "note": "Defined as new pad use in men continent at baseline; subtype-specific percentage denominators are not reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Six-month follow-up",
+          "values": {
+            "exp": "84/98 treated",
+            "ctl": "80/88 treated"
+          },
+          "locator": "Publisher meeting abstract, Ergebnisse"
+        },
+        {
+          "label": "Surgical retreatment through 6 months",
+          "values": {
+            "exp": "3 cases",
+            "ctl": "0 cases"
+          },
+          "locator": "Publisher meeting abstract, Methode and Ergebnisse",
+          "note": "Defined as additional tissue resection for BPH; treated cohorts were 98 and 88, respectively."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3205_26nrwgu24.fulltext.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "extends",
+      "target": "water-ii",
+      "note": "Tests Aquablation against laser enucleation in large glands after WATER II's single-arm Aquablation study."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/water-iii",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

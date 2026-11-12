@@ -1,0 +1,167 @@
+{
+  "id": "coaptite-pivotal",
+  "name": "Coaptite pivotal",
+  "aliases": [
+    "Calcium hydroxylapatite versus collagen"
+  ],
+  "nct": null,
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "bulking-agents"
+    }
+  ],
+  "question": "Is urethral calcium hydroxylapatite noninferior to bovine dermal collagen for stress urinary incontinence caused by intrinsic sphincter deficiency in women without urethral hypermobility?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "single-blind",
+    "type": "noninferiority",
+    "n": 296,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Calcium hydroxylapatite (Coaptite) injection",
+        "n": 158,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "bovine dermal collagen (Contigen) injection",
+        "n": 138,
+        "role": "control"
+      }
+    ],
+    "population": "Women with stress urinary incontinence due to intrinsic sphincter deficiency and no associated urethral hypermobility.",
+    "description": "Multicenter, single-blind noninferiority randomized trial",
+    "locator": "PubMed abstract, Objectives and Methods; FDA SSED p6"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "FDA review found noninferiority; the journal abstract reports a nonsignificant superiority comparison.",
+  "takeaway": "Calcium hydroxylapatite (Coaptite) met the prespecified noninferiority criterion versus bovine dermal collagen (Contigen) for 12-month Stamey-grade improvement in women with intrinsic sphincter deficiency; the published complete-case comparison was 63.4% versus 57.0% (P = 0.34).",
+  "reports": [
+    {
+      "id": "coaptite-pivotal-2007",
+      "kind": "primary",
+      "label": "Pivotal comparative trial",
+      "published": "2007-05-01",
+      "cutoff": null,
+      "citation": "Mayer RD, Dmochowski RR, Appell RA, et al. \"Multicenter Prospective Randomized 52-Week Trial of Calcium Hydroxylapatite Versus Bovine Dermal Collagen for Treatment of Stress Urinary Incontinence.\" *Urology.* 2007;69(5):876-880. doi:10.1016/j.urology.2007.01.050",
+      "doi": "10.1016/j.urology.2007.01.050",
+      "pmid": "17482925",
+      "followUp": "12 months after initial injection; complete-case efficacy data for 231/296 treated women",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Stamey-grade improvement",
+          "role": "primary",
+          "measure": "At least one Stamey-grade improvement at 12 months, complete cases",
+          "values": {
+            "exp": "83/131 (63.4%)",
+            "ctl": "57/100 (57.0%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.34"
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin was based on 15% of the control response proportion; FDA judged noninferiority met. Published P value tests between-group difference, not noninferiority.",
+          "locator": "PubMed abstract, Results; FDA SSED pp9,12,17, Table 7"
+        },
+        {
+          "endpoint": "Stamey-grade improvement",
+          "role": "descriptive",
+          "measure": "At least one Stamey-grade improvement at 12 months, treated population with last observation carried forward",
+          "values": {
+            "exp": "91/158 (57.6%)",
+            "ctl": "70/138 (50.7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.2445"
+          },
+          "note": "FDA regulatory analysis; differs from the journal abstract's complete-case denominators.",
+          "locator": "FDA SSED p12, Table 6"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-related urinary retention",
+          "values": {
+            "exp": "41%",
+            "ctl": "33%"
+          },
+          "locator": "FDA SSED p16, Safety Results",
+          "note": "Percentages reported without patient counts; treated safety populations were 158 and 138."
+        },
+        {
+          "label": "Unanticipated treatment-related serious tissue dissection or erosion",
+          "values": {
+            "exp": "2/158",
+            "ctl": "not stated"
+          },
+          "locator": "FDA SSED p17, Conclusions",
+          "note": "FDA review described tissue bridges and erosion in two Coaptite recipients; attribution to device versus technique was uncertain."
+        },
+        {
+          "label": "Systemic adverse events",
+          "values": {
+            "exp": "none observed",
+            "ctl": "none observed"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection protocol",
+          "value": "Cystoscopic urethral injection under anesthesia; up to five treatment sessions, with repeat sessions allowed in the first six months.",
+          "locator": "PubMed abstract, Methods; FDA SSED p9, Treatment"
+        },
+        {
+          "label": "Initial injection route",
+          "values": {
+            "exp": "145/158 (91.8%) transurethral",
+            "ctl": "123/138 (89.1%) transurethral"
+          },
+          "locator": "FDA SSED p13, Table 9",
+          "note": "Periurethral injection was permitted at investigator discretion."
+        },
+        {
+          "label": "Single-session treatment during study",
+          "values": {
+            "exp": "60/158 (38.0%)",
+            "ctl": "36/138 (26.1%)"
+          },
+          "locator": "PubMed abstract, Results; denominators confirmed in FDA SSED p6",
+          "note": "P = 0.034. Counts refer to all treated women, unlike the FDA SSED complete-case treatment table."
+        },
+        {
+          "label": "Mean total injected volume over study",
+          "values": {
+            "exp": "4.0 mL",
+            "ctl": "6.6 mL"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "P < 0.0001; FDA SSED complete-case table reports 6.8 mL for collagen."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2007_01_050.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/coaptite-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

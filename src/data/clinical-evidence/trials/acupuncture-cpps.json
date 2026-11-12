@@ -1,0 +1,145 @@
+{
+  "id": "acupuncture-cpps",
+  "name": "Sun acupuncture for CP/CPPS",
+  "aliases": [
+    "Sun 2021"
+  ],
+  "nct": "NCT03213938",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "chronic-pelvic-pain",
+      "lane": "male-cpps"
+    }
+  ],
+  "question": "Does acupuncture improve symptoms more than sham acupuncture in men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "sham-controlled",
+    "type": "superiority",
+    "n": 440,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Acupuncture",
+        "n": 220,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham acupuncture",
+        "n": 220,
+        "role": "control"
+      }
+    ],
+    "population": "440 men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome at ten tertiary hospitals in China.",
+    "description": "Multicenter, randomized, sham-controlled superiority trial",
+    "locator": "PubMed abstract, Design, Setting, Participants, Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "Responder differences were significant at both prespecified time points.",
+  "takeaway": "In men with moderate to severe chronic prostatitis/chronic pelvic pain syndrome, 20 acupuncture sessions over 8 weeks produced more NIH-CPSI responders than sham acupuncture at both week 8 and week 32.",
+  "reports": [
+    {
+      "id": "acupuncture-cpps-2021",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2021-08-17",
+      "cutoff": null,
+      "citation": "Sun Y, Liu Y, Liu B, et al. \"Efficacy of Acupuncture for Chronic Prostatitis/Chronic Pelvic Pain Syndrome: A Randomized Trial.\" *Ann Intern Med.* 2021;174(10):1357-1366. doi:10.7326/M21-1814",
+      "doi": "10.7326/M21-1814",
+      "pmid": "34399062",
+      "followUp": "8-week treatment; assessment at weeks 8 and 32 (24 weeks after treatment)",
+      "followUpLocator": "PubMed abstract, Intervention, Measurements",
+      "results": [
+        {
+          "endpoint": "NIH-CPSI responders",
+          "role": "primary",
+          "measure": "Week-8 proportion with at least a 6-point NIH-CPSI reduction; adjusted risk difference in percentage points",
+          "values": {
+            "exp": "60.6%",
+            "ctl": "36.8%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 21.6,
+            "ci": [
+              12.8,
+              30.4
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Sustained efficacy required statistical significance at both weeks 8 and 32; response percentages and effect are reported estimates.",
+          "locator": "PubMed abstract, Measurements and Results"
+        },
+        {
+          "endpoint": "NIH-CPSI responders",
+          "role": "primary",
+          "measure": "Week-32 proportion with at least a 6-point NIH-CPSI reduction; adjusted risk difference in percentage points",
+          "values": {
+            "exp": "61.5%",
+            "ctl": "38.3%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 21.1,
+            "ci": [
+              12.2,
+              30.1
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Week 32 was 24 weeks after treatment ended; response percentages and effect are reported estimates.",
+          "locator": "PubMed abstract, Measurements and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Reported adverse events",
+          "values": {
+            "exp": "20/220 (9.1%)",
+            "ctl": "14/220 (6.4%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports events, without event types or severity distribution."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "0 reported",
+            "ctl": "0 reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "No serious adverse events were reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "values": {
+            "exp": "20 acupuncture sessions over 8 weeks",
+            "ctl": "20 sham-acupuncture sessions over 8 weeks"
+          },
+          "locator": "PubMed abstract, Intervention"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_7326_m21_1814.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/acupuncture-cpps",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

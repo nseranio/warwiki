@@ -1,0 +1,202 @@
+{
+  "id": "botox-ms-100u",
+  "name": "Low-dose onabotulinumtoxinA in noncatheterizing MS",
+  "aliases": [
+    "Tullman 2018",
+    "NDO-3",
+    "191622-117"
+  ],
+  "nct": "NCT01600716",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "botulinum-neurogenic"
+    }
+  ],
+  "question": "Does intradetrusor onabotulinumtoxinA 100 U reduce urinary incontinence versus placebo in noncatheterizing adults with multiple sclerosis and neurogenic detrusor overactivity?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 144,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intradetrusor onabotulinumtoxinA 100 U",
+        "n": 66,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo intradetrusor injections",
+        "n": 78,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with stable multiple sclerosis, neurogenic detrusor overactivity and urinary incontinence despite anticholinergic treatment who were not catheterizing at baseline.",
+    "description": "Multicenter, double-blind, placebo-controlled superiority randomized trial",
+    "locator": "Full text, Methods: Study design and Patients; Results: Patients"
+  },
+  "verdict": "positive",
+  "verdictNote": "Week 6 incontinence reduction met the primary superiority hypothesis.",
+  "takeaway": "In noncatheterizing adults with multiple sclerosis and neurogenic detrusor overactivity, intradetrusor onabotulinumtoxinA 100 U reduced daily urinary incontinence episodes more than placebo at week 6; urinary infection and initiation of intermittent catheterization were more frequent.",
+  "reports": [
+    {
+      "id": "botox-ms-100u-2018",
+      "kind": "primary",
+      "label": "Primary randomized report",
+      "published": "2018-07-20",
+      "dateLocator": "PubMed record, Epub date",
+      "cutoff": null,
+      "citation": "Tullman M, Chartier-Kastler E, Kohan A, et al. \"Low-dose onabotulinumtoxinA improves urinary symptoms in noncatheterizing patients with MS.\" *Neurology.* 2018;91(7):e657-e665. doi:10.1212/WNL.0000000000005991",
+      "doi": "10.1212/WNL.0000000000005991",
+      "pmid": "30030330",
+      "followUp": "12-week placebo-controlled period; follow-up to 52 weeks, with optional open-label retreatment",
+      "followUpLocator": "Full text, Methods: Study design",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes per day",
+          "role": "primary",
+          "measure": "Week 6 mean change from baseline; between-arm mean difference in episodes/day",
+          "values": {
+            "exp": "−3.3 episodes/day",
+            "ctl": "−1.1 episodes/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.2,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Difference calculated from the rounded arm changes in the abstract.",
+          "locator": "Full text, Abstract: Results; Figure 1A"
+        },
+        {
+          "endpoint": "Complete urinary incontinence reduction",
+          "role": "secondary",
+          "measure": "Week 6 proportion with 100% reduction",
+          "values": {
+            "exp": "53.0%",
+            "ctl": "10.3%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Percentages correspond to 35/66 and 8/78, respectively.",
+          "locator": "Full text, Abstract: Results; Figure 1B"
+        },
+        {
+          "endpoint": "Incontinence Quality of Life total score",
+          "role": "secondary",
+          "measure": "Week 6 mean change from baseline in I-QOL points",
+          "values": {
+            "exp": "+40.4 points",
+            "ctl": "+9.9 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "The reported minimally important difference was +11 points.",
+          "locator": "Full text, Abstract: Results; Figure 2A"
+        },
+        {
+          "endpoint": "Time to retreatment request",
+          "role": "secondary",
+          "measure": "Median weeks from first treatment to retreatment request",
+          "values": {
+            "exp": "51.7 weeks",
+            "ctl": "12.6 weeks"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Retreatment, when given, was open-label onabotulinumtoxinA.",
+          "locator": "Full text, Results: Efficacy"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Protocol-defined urinary tract infection, first 12 weeks",
+          "values": {
+            "exp": "17/66 (25.8%)",
+            "ctl": "5/78 (6.4%)"
+          },
+          "locator": "Full text, Results: Safety; Table 3",
+          "note": "Culture plus leukocyturia defined UTI regardless of symptoms."
+        },
+        {
+          "label": "Symptomatic urinary tract infection, first 12 weeks",
+          "values": {
+            "exp": "9/66 (13.6%)",
+            "ctl": "1/78 (1.3%)"
+          },
+          "locator": "Full text, Results: Safety",
+          "note": ""
+        },
+        {
+          "label": "Hospitalization for urinary tract infection, treatment cycle 1",
+          "values": {
+            "exp": "3/66"
+          },
+          "locator": "Full text, Results: Safety",
+          "note": "Two of the three hospitalizations occurred in the first 12 weeks; a placebo count was not reported."
+        },
+        {
+          "label": "Initiation of clean intermittent catheterization for retention, treatment cycle 1",
+          "values": {
+            "exp": "10/66 (15.2%)",
+            "ctl": "2/78 (2.6%)"
+          },
+          "locator": "Full text, Results: Safety; Abstract: Results",
+          "note": "At any time during treatment cycle 1; median catheterization duration was 64.0 versus 2.0 days."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection technique",
+          "value": "Cystoscopic delivery as 30 one-mL detrusor injections, evenly distributed while avoiding the trigone; local anesthesia was usual.",
+          "locator": "Full text, Methods: Study design"
+        },
+        {
+          "label": "Open-label second treatment",
+          "values": {
+            "exp": "30/66 (45.5%)",
+            "ctl": "67/78 (85.9%)"
+          },
+          "locator": "Full text, Methods: Study design; Results: Efficacy",
+          "note": "After at least 12 weeks, patient request, at least 2 episodes over 3 days, and postvoid residual <200 mL."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1212_wnl_0000000000005991.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "cruz-ndo",
+      "note": "The earlier 200 U/300 U neurogenic trial informed the lower-dose question and sample-size calculation."
+    },
+    {
+      "type": "builds-on",
+      "target": "ginsberg-ndo",
+      "note": "The earlier 200 U/300 U neurogenic trial informed the lower-dose question and sample-size calculation."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/botox-ms-100u",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "id": "vapeur",
+  "name": "VAPEUR-RCT",
+  "aliases": [
+    "VAPEUR",
+    "Rezūm versus combination pharmacotherapy"
+  ],
+  "nct": "NCT04838769",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "In sexually active men with symptomatic benign prostatic obstruction, does Rezūm water vapor thermal therapy improve urinary symptoms and preserve sexual function better than an alpha-blocker plus a 5-alpha-reductase inhibitor?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 151,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Rezūm water vapor thermal therapy",
+        "n": 75,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "combination alpha-blocker and 5-alpha-reductase inhibitor therapy",
+        "n": 76,
+        "role": "control"
+      }
+    ],
+    "population": "151 sexually active men with symptomatic benign prostatic obstruction were randomized.",
+    "description": "Multicenter, pragmatic, open-label superiority randomized trial",
+    "locator": "PubMed abstract, Background and objective; Methods; ClinicalTrials.gov NCT04838769, Study Design"
+  },
+  "verdict": "mixed",
+  "verdictNote": "IPSS superiority met; sexual-function superiority was not demonstrated after multiple imputation.",
+  "takeaway": "In sexually active men with benign prostatic obstruction, Rezūm water vapor therapy improved 1-year IPSS more than an alpha-blocker plus a 5-alpha-reductase inhibitor; superiority for sexual-function preservation was not demonstrated after multiple imputation.",
+  "reports": [
+    {
+      "id": "vapeur-2026",
+      "kind": "primary",
+      "label": "1-year report",
+      "published": "2026-08-18",
+      "cutoff": null,
+      "citation": "Vincendeau S, Xylinas E, Fourmarier M, et al. \"Water Vapor Thermal Therapy with Rezūm Versus Combination Pharmacotherapy for Male Lower Urinary Tract Symptoms due to Benign Prostatic Obstruction: 1-Yr Results From a Prospective, Multicenter, Pragmatic Randomized Controlled Trial (VAPEUR-RCT).\" *Eur Urol Focus.* 2026 Aug 18:S2405-4569(26)00175-6. doi:10.1016/j.euf.2026.08.001",
+      "doi": "10.1016/j.euf.2026.08.001",
+      "pmid": "42608232",
+      "followUp": "1 year",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "IPSS change",
+          "role": "primary",
+          "measure": "Mean baseline-to-1-year IPSS improvement; difference in change scores, Rezūm minus combination therapy",
+          "values": {
+            "exp": "10.8 ± 6.8 points",
+            "ctl": "6.2 ± 7.7 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.6,
+            "ci": [
+              -7.6,
+              -1.6
+            ],
+            "ciLevel": "97.5%",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The negative mean difference is for IPSS change scores; the arm values are improvements expressed as positive magnitudes.",
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "MSHQ change",
+          "role": "primary",
+          "measure": "Mean baseline-to-1-year Male Sexual Health Questionnaire score change",
+          "values": {
+            "exp": "+1.1 ± 16.9 points",
+            "ctl": "−5.2 ± 16.4 points"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "Superiority in preservation of sexual function was not demonstrated with multiple imputation.",
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "Quality of life",
+          "role": "secondary",
+          "measure": "Mean 1-year quality-of-life score change",
+          "values": {
+            "exp": "−2.7 ± 1.8 points",
+            "ctl": "−1.8 ± 2.0 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Lower scores represent improvement; the abstract does not name the scale.",
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "Surgical retreatment",
+          "role": "secondary",
+          "measure": "Surgical retreatment by 1 year",
+          "values": {
+            "exp": "1.3%",
+            "ctl": "9.2%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "Pharmacological retreatment",
+          "role": "secondary",
+          "measure": "Pharmacological retreatment by 1 year",
+          "values": {
+            "exp": "12%",
+            "ctl": "1.3%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "Combined retreatment",
+          "role": "secondary",
+          "measure": "Combined surgical or pharmacological retreatment through 1 year",
+          "effect": {
+            "type": "HR",
+            "value": 0.52,
+            "ci": [
+              0.25,
+              1.1
+            ],
+            "p": "0.08"
+          },
+          "locator": "PubMed abstract, Key findings and limitations"
+        },
+        {
+          "endpoint": "IPSS worsening",
+          "role": "secondary",
+          "measure": "IPSS worsening of at least 4 points by 1 year",
+          "values": {
+            "exp": "2.7%",
+            "ctl": "13%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Methods; Key findings and limitations"
+        },
+        {
+          "endpoint": "Late catheterization",
+          "role": "secondary",
+          "measure": "Catheterization beyond 90 days after procedure",
+          "values": {
+            "exp": "0%",
+            "ctl": "1.3%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Methods; Key findings and limitations"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-related adverse events",
+          "values": {
+            "exp": "40%",
+            "ctl": "28%"
+          },
+          "locator": "PubMed abstract, Key findings and limitations",
+          "note": "The abstract describes events after water vapor therapy as largely procedure-related."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "12%",
+            "ctl": "1.3%"
+          },
+          "locator": "PubMed abstract, Key findings and limitations",
+          "note": "The abstract does not give event types or severity grading."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assigned interventions",
+          "values": {
+            "exp": "Rezūm water vapor thermal therapy",
+            "ctl": "alpha-blocker plus 5-alpha-reductase inhibitor"
+          },
+          "locator": "PubMed abstract, Background and objective; Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euf_2026_08_001.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/vapeur",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

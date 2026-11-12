@@ -1,0 +1,235 @@
+{
+  "id": "poise-3",
+  "name": "POISE-3",
+  "aliases": [
+    "PeriOperative ISchemic Evaluation-3"
+  ],
+  "nct": "NCT03505723",
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "thrombosis-and-bleeding",
+      "lane": "tranexamic-acid"
+    }
+  ],
+  "question": "Does perioperative intravenous tranexamic acid reduce major bleeding without exceeding a prespecified cardiovascular safety margin after noncardiac surgery?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 9535,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intravenous tranexamic acid",
+        "role": "experimental",
+        "n": 4757
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "role": "control",
+        "n": 4778
+      }
+    ],
+    "population": "9,535 patients undergoing noncardiac surgery with bleeding and cardiovascular risk factors.",
+    "description": "Multicenter randomized bleeding-superiority and cardiovascular-noninferiority trial",
+    "locator": "PubMed abstract, Methods and Results; Tikkinen 2026 PubMed abstract, Methods"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Bleeding superiority was met; cardiovascular noninferiority was not established.",
+  "takeaway": "In noncardiac surgery, intravenous tranexamic acid reduced the 30-day composite of life-threatening, major, or critical-organ bleeding versus placebo; the prespecified noninferiority margin for the cardiovascular composite was not met.",
+  "reports": [
+    {
+      "id": "poise-3-2022",
+      "kind": "primary",
+      "label": "Primary tranexamic-acid report",
+      "published": "2022-04-02",
+      "cutoff": null,
+      "citation": "Devereaux PJ, Marcucci M, Painter TW, et al. \"Tranexamic Acid in Patients Undergoing Noncardiac Surgery.\" *N Engl J Med.* 2022;386(21):1986-1997. doi:10.1056/NEJMoa2201171",
+      "doi": "10.1056/NEJMoa2201171",
+      "pmid": "35363452",
+      "followUp": "30 days",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Composite bleeding outcome",
+          "role": "primary",
+          "measure": "Life-threatening, major, or critical-organ bleeding by 30 days",
+          "values": {
+            "exp": "433/4757 (9.1%)",
+            "ctl": "561/4778 (11.7%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.76,
+            "ci": [
+              0.67,
+              0.87
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Absolute risk difference −2.6 percentage points (95% CI −3.8 to −1.4); two-sided superiority test.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Composite cardiovascular outcome",
+          "role": "primary",
+          "measure": "Myocardial injury, nonhemorrhagic stroke, peripheral arterial thrombosis, or symptomatic proximal VTE by 30 days",
+          "values": {
+            "exp": "649/4581 (14.2%)",
+            "ctl": "639/4601 (13.9%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.02,
+            "ci": [
+              0.92,
+              1.14
+            ],
+            "p": "0.04"
+          },
+          "met": false,
+          "note": "Noninferiority required a one-sided 97.5% CI upper bound below 1.125 and one-sided P <0.025; observed upper bound 1.14. P is one-sided for noninferiority. Absolute risk difference 0.3 percentage points (95% CI −1.1 to 1.7).",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Tranexamic-acid dosing",
+          "value": "1 g intravenous bolus at the start and 1 g at the end of surgery; placebo at the same times.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa2201171.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "poise-3-2026-urologic",
+      "kind": "secondary",
+      "label": "Prespecified urologic subgroup",
+      "published": "2026-04-21",
+      "cutoff": null,
+      "citation": "Tikkinen KAO, Marcucci M, Halme ALE, et al. \"Safety and Efficacy of Tranexamic Acid in Urologic Surgery: Results from the International, Randomized, Placebo-Controlled POISE-3 Trial.\" *Eur Urol.* 2026;90(2):140-149. doi:10.1016/j.eururo.2026.03.019",
+      "doi": "10.1016/j.eururo.2026.03.019",
+      "pmid": "42020258",
+      "followUp": "30 days",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Composite bleeding outcome in urologic surgery",
+          "role": "secondary",
+          "measure": "Life-threatening, major, or critical-organ bleeding by 30 days",
+          "values": {
+            "exp": "45/556 (8.1%)",
+            "ctl": "62/568 (10.9%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.73,
+            "ci": [
+              0.5,
+              1.07
+            ]
+          },
+          "note": "Prespecified subgroup analysis; confidence interval includes 1.",
+          "locator": "PubMed abstract, Key Findings and Limitations"
+        },
+        {
+          "endpoint": "Major bleeding in urologic surgery",
+          "role": "secondary",
+          "measure": "Major bleeding by 30 days",
+          "values": {
+            "exp": "34/556 (6.1%)",
+            "ctl": "54/568 (9.5%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.63,
+            "ci": [
+              0.41,
+              0.97
+            ]
+          },
+          "note": "Component outcome in the prespecified urologic subgroup.",
+          "locator": "PubMed abstract, Key Findings and Limitations"
+        },
+        {
+          "endpoint": "Composite cardiovascular outcome in urologic surgery",
+          "role": "secondary",
+          "measure": "Myocardial injury, nonhemorrhagic stroke, peripheral arterial thrombosis, or symptomatic proximal VTE by 30 days",
+          "values": {
+            "exp": "67/556 (12.1%)",
+            "ctl": "62/568 (10.9%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.12,
+            "ci": [
+              0.79,
+              1.58
+            ]
+          },
+          "note": "Prespecified subgroup analysis; no subgroup-specific noninferiority conclusion reported.",
+          "locator": "PubMed abstract, Key Findings and Limitations"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Myocardial injury after noncardiac surgery in urologic subgroup",
+          "values": {
+            "exp": "62/556",
+            "ctl": "58/568"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "Event counts reported in the urologic analysis."
+        },
+        {
+          "label": "Nonhemorrhagic stroke in urologic subgroup",
+          "values": {
+            "exp": "2/556",
+            "ctl": "2/568"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "Event counts reported in the urologic analysis."
+        },
+        {
+          "label": "Symptomatic proximal VTE in urologic subgroup",
+          "values": {
+            "exp": "3/556",
+            "ctl": "3/568"
+          },
+          "locator": "PubMed abstract, Key Findings and Limitations",
+          "note": "Event counts reported in the urologic analysis."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Urologic surgical approach",
+          "value": "Among 1,124 urologic participants: 489 laparoscopic/robotic, 360 open, 244 transurethral, and 31 percutaneous procedures.",
+          "locator": "PubMed abstract, Key Findings and Limitations"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2026_03_019.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/poise-3",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

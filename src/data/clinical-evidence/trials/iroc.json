@@ -1,0 +1,330 @@
+{
+  "id": "iroc",
+  "name": "iROC",
+  "aliases": [
+    "Intracorporeal Robot-Assisted Radical Cystectomy vs Open Radical Cystectomy",
+    "ISRCTN13680280"
+  ],
+  "nct": "NCT03049410",
+  "area": [
+    "diversion"
+  ],
+  "decisions": [
+    {
+      "id": "urinary-diversion-surgery",
+      "lane": "approach"
+    }
+  ],
+  "question": "Does robot-assisted radical cystectomy with intracorporeal urinary diversion increase days alive and out of hospital during the first 90 days compared with open radical cystectomy?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "unblinded",
+    "type": "superiority",
+    "n": 338,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Robot-assisted radical cystectomy with intracorporeal urinary diversion",
+        "n": 169,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "open radical cystectomy",
+        "n": 169,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with nonmetastatic bladder cancer suitable for either surgical approach at nine UK cancer centers.",
+    "description": "Multicenter, unblinded, phase 3 randomized superiority trial",
+    "locator": "JAMA PDF pp2093–2095, Methods and Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "The 2.2-day adjusted gain met significance; its clinical importance remains uncertain.",
+  "takeaway": "Robot-assisted radical cystectomy with intracorporeal diversion increased 90-day days alive and out of hospital versus open cystectomy (median 82 vs 80; adjusted difference 2.2 days, 95% CI 0.50–3.85); the clinical importance of this difference remains uncertain.",
+  "reports": [
+    {
+      "id": "iroc-2022",
+      "kind": "primary",
+      "label": "90-day recovery and morbidity",
+      "published": "2022-05-15",
+      "cutoff": null,
+      "citation": "Catto JWF, Khetrapal P, Ricciardi F, et al. \"Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cystectomy on 90-Day Morbidity and Mortality Among Patients With Bladder Cancer: A Randomized Clinical Trial.\" *JAMA.* 2022;327(21):2092-2103. doi:10.1001/jama.2022.7393",
+      "doi": "10.1001/jama.2022.7393",
+      "pmid": "35569079",
+      "followUp": "90-day primary endpoint; median 18.4 months for recurrence and survival",
+      "followUpLocator": "JAMA PDF pp2097,2100, Primary Outcome and Oncological and Survival Outcomes",
+      "results": [
+        {
+          "endpoint": "Days alive and out of hospital",
+          "role": "primary",
+          "measure": "Median days during the first 90 days; effect is adjusted difference in log back-transformed days, robotic minus open",
+          "values": {
+            "exp": "82 days (IQR 76–84; n=156)",
+            "ctl": "80 days (IQR 72–83; n=149)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.2,
+            "ci": [
+              0.5,
+              3.85
+            ],
+            "p": "0.01"
+          },
+          "met": true,
+          "note": "Analyzed in 305 of 317 operated patients; mixed model adjusted for center and diversion type. The prespecified superiority test used two-sided P<0.05.",
+          "locator": "JAMA PDF p2097, Primary Outcome; Figure 2"
+        },
+        {
+          "endpoint": "Cancer recurrence",
+          "role": "exploratory",
+          "measure": "Recurrence at median 18.4-month follow-up",
+          "values": {
+            "exp": "29/161 (18.0%)",
+            "ctl": "25/156 (16.0%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.9,
+            "ci": [
+              0.53,
+              1.54
+            ],
+            "p": "0.70"
+          },
+          "note": "Secondary outcomes were interpreted as exploratory because of multiple comparisons.",
+          "locator": "JAMA PDF p2100, Oncological and Survival Outcomes"
+        },
+        {
+          "endpoint": "Overall mortality",
+          "role": "exploratory",
+          "measure": "All-cause mortality at median 18.4-month follow-up",
+          "values": {
+            "exp": "23/161 (14.3%)",
+            "ctl": "23/156 (14.7%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.06,
+            "ci": [
+              0.6,
+              1.9
+            ],
+            "p": "0.80"
+          },
+          "note": "Secondary outcomes were interpreted as exploratory because of multiple comparisons.",
+          "locator": "JAMA PDF p2100, Oncological and Survival Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any complication within 12 weeks",
+          "values": {
+            "exp": "102/161 (63.4%)",
+            "ctl": "106/156 (67.9%)"
+          },
+          "locator": "JAMA PDF p2098, Adverse Events",
+          "note": "Operated patients; secondary outcome."
+        },
+        {
+          "label": "Thromboembolic complication within 12 weeks",
+          "values": {
+            "exp": "3/161 (1.9%)",
+            "ctl": "13/156 (8.3%)"
+          },
+          "locator": "JAMA PDF p2098, Table 2",
+          "note": "Risk difference −6.47 percentage points (95% CI −11.43 to −1.38); exploratory secondary comparison."
+        },
+        {
+          "label": "Wound complication within 12 weeks",
+          "values": {
+            "exp": "9/161 (5.6%)",
+            "ctl": "27/156 (17.3%)"
+          },
+          "locator": "JAMA PDF p2098, Table 2",
+          "note": "Risk difference −11.72 percentage points (95% CI −18.59 to −4.58); table and body give 17.3% for open surgery, while abstract says 16.0%."
+        },
+        {
+          "label": "Ureteroileal stricture within 12 weeks",
+          "values": {
+            "exp": "2.5%",
+            "ctl": "0.6%"
+          },
+          "locator": "JAMA PDF p2098, Table 2 footnote b",
+          "note": "Reported within the genitourinary complication category; numerator not specified in the article."
+        },
+        {
+          "label": "Postoperative blood transfusion",
+          "values": {
+            "exp": "11/158 (7.0%)",
+            "ctl": "18/149 (12.1%)"
+          },
+          "locator": "JAMA PDF p2098, Adverse Events",
+          "note": "Reported after surgery."
+        },
+        {
+          "label": "Death within 90 days",
+          "values": {
+            "exp": "2/161 (1.2%)",
+            "ctl": "4/156 (2.6%)"
+          },
+          "locator": "JAMA PDF p2097, Primary Outcome",
+          "note": "Two deaths in the robotic group and four in the open group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Cystectomy performed",
+          "values": {
+            "exp": "161/169",
+            "ctl": "156/169"
+          },
+          "locator": "JAMA PDF p2095, Figure 1",
+          "note": "Includes crossover; 157 and 149 patients underwent the assigned robotic and open approach, respectively."
+        },
+        {
+          "label": "Ileal conduit reconstruction",
+          "values": {
+            "exp": "142/161 (88.2%)",
+            "ctl": "140/156 (89.7%)"
+          },
+          "locator": "JAMA PDF p2096, Table 1",
+          "note": "The remaining patients had continent diversion/neobladder."
+        },
+        {
+          "label": "Median operative duration",
+          "values": {
+            "exp": "4.92 hours (IQR 4.03–5.70)",
+            "ctl": "4.50 hours (IQR 3.50–5.47)"
+          },
+          "locator": "JAMA PDF p2100, Procedure Characteristics",
+          "note": "First incision to wound closure."
+        },
+        {
+          "label": "Median intraoperative blood loss",
+          "values": {
+            "exp": "200 mL (IQR 125–375)",
+            "ctl": "550 mL (IQR 400–859)"
+          },
+          "locator": "JAMA PDF p2100, Procedure Characteristics",
+          "note": ""
+        },
+        {
+          "label": "Median hospital stay",
+          "values": {
+            "exp": "7 days (IQR 6–10)",
+            "ctl": "8 days (IQR 6–14)"
+          },
+          "locator": "JAMA PDF p2097, Primary Outcome",
+          "note": ""
+        },
+        {
+          "label": "Standardized surgery and recovery",
+          "value": "Accredited surgeons; robotic operators had completed at least 30 cystectomies; both arms used enhanced recovery and at least external iliac, obturator, and internal iliac lymphadenectomy.",
+          "locator": "JAMA PDF pp2093–2094, Intervention"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/WHITWIKI-Sources-2026-10-14/owner-supplied/batch5-jefferson/M019-iroc-2022.pdf",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "iroc-2023-economics",
+      "kind": "secondary",
+      "label": "90-day economic evaluation",
+      "published": "2023-06-30",
+      "cutoff": null,
+      "citation": "Dixon S, Hill H, Flight L, et al. \"Cost-Effectiveness of Robot-Assisted Radical Cystectomy vs Open Radical Cystectomy for Patients With Bladder Cancer.\" *JAMA Netw Open.* 2023;6(6):e2317255. doi:10.1001/jamanetworkopen.2023.17255",
+      "doi": "10.1001/jamanetworkopen.2023.17255",
+      "pmid": "37389878",
+      "followUp": "90-day cost and quality-adjusted life-year horizon; sensitivity projections to 1 year",
+      "followUpLocator": "JAMA Netw Open full text, Methods, Cost-Effectiveness Analysis; Table 2",
+      "results": [
+        {
+          "endpoint": "Incremental NHS cost",
+          "role": "secondary",
+          "measure": "Mean cost difference per patient over 90 days, robotic minus open",
+          "values": {
+            "exp": "£1,124 more per patient",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1124,
+            "ci": [
+              -576,
+              2824
+            ],
+            "p": "0.20"
+          },
+          "note": "UK National Health Service perspective; equipment, theatre, ward, and complication costs included.",
+          "locator": "JAMA Netw Open full text, Table 2, Primary analysis"
+        },
+        {
+          "endpoint": "Quality-adjusted life-years",
+          "role": "secondary",
+          "measure": "Mean QALY difference over 90 days, robotic minus open",
+          "values": {
+            "exp": "0.01124 more QALYs",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.01124,
+            "ci": [
+              0.00391,
+              0.01857
+            ],
+            "p": "0.003"
+          },
+          "note": "Economic model imputed day-5 health utility from activity data.",
+          "locator": "JAMA Netw Open full text, Table 2, Primary analysis; Methods, Outcomes"
+        },
+        {
+          "endpoint": "Incremental cost-effectiveness ratio",
+          "role": "descriptive",
+          "measure": "Cost per QALY gained over 90 days",
+          "values": {
+            "exp": "£100,008/QALY gained",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "At a £20,000/QALY threshold, the modeled probability of cost-effectiveness was 16.3%.",
+          "locator": "JAMA Netw Open full text, Table 2, Primary analysis"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Economic analysis cohort",
+          "value": "305 patients with available primary outcome data from the randomized trial",
+          "locator": "JAMA Netw Open full text, Abstract, Results; Methods, Statistical Analysis"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamanetworkopen_2023_17255.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "razor",
+      "note": "RAZOR tested robotic cystectomy with extracorporeal diversion; iROC tested a complete intracorporeal approach with recovery as the primary endpoint."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/iroc",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "id": "cai-asb",
+  "name": "Cai ASB",
+  "aliases": [
+    "Cai 2012"
+  ],
+  "nct": null,
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "asymptomatic-bacteriuria"
+    }
+  ],
+  "question": "Does treating asymptomatic bacteriuria prevent symptomatic recurrence in young women with recurrent urinary tract infection?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 699,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "No antibiotic treatment for asymptomatic bacteriuria",
+        "n": 330,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "antibiotic treatment guided by urine-culture susceptibility",
+        "n": 369,
+        "role": "control"
+      }
+    ],
+    "population": "Sexually active women aged 18–40 years with recurrent symptomatic urinary tract infection and asymptomatic bacteriuria confirmed by the same uropathogen at at least 10^5 CFU/mL on two consecutive urine cultures.",
+    "description": "Single-center, open-label randomized superiority trial",
+    "locator": "2012 PDF pp772–773, Methods and Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "No treatment yielded fewer symptomatic recurrences; the reported relative risk does not reconcile with the group risks.",
+  "takeaway": "In young women with recurrent urinary tract infection, withholding antibiotics for asymptomatic bacteriuria led to fewer symptomatic recurrences at 12 months than susceptibility-guided antibiotic treatment (41/312 [13.1%] versus 169/361 [46.8%] among analyzed women).",
+  "reports": [
+    {
+      "id": "cai-asb-2012",
+      "kind": "primary",
+      "label": "12-month randomized report",
+      "published": "2012-06-07",
+      "cutoff": null,
+      "citation": "Cai T, Mazzoli S, Mondaini N, et al. \"The Role of Asymptomatic Bacteriuria in Young Women With Recurrent Urinary Tract Infections: To Treat or Not to Treat?\" *Clin Infect Dis.* 2012;55(6):771-777. doi:10.1093/cid/cis534",
+      "doi": "10.1093/cid/cis534",
+      "pmid": "22677710",
+      "followUp": "12 months; 673/699 randomized women analyzed",
+      "followUpLocator": "2012 PDF p773, Figure 1; p775, Table 2",
+      "results": [
+        {
+          "endpoint": "Symptomatic UTI recurrence",
+          "role": "primary",
+          "measure": "Symptomatic UTI recorded at the 12-month follow-up visit, divided by each group's initially analyzed size",
+          "values": {
+            "exp": "41/312 (13.1%)",
+            "ctl": "169/361 (46.8%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 3.17,
+            "ci": [
+              2.55,
+              3.9
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Reported RR compares treated with untreated; it does not equal the crude ratio of the published analyzed-group risks.",
+          "locator": "2012 PDF p771, abstract Results; p775, Follow-up Results and Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Pyelonephritis during 12-month follow-up",
+          "values": {
+            "exp": "1/312",
+            "ctl": "2/361"
+          },
+          "locator": "2012 PDF p775, Follow-up Results",
+          "note": "The article reports no significant between-group difference."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Bacteriuria and symptomatic UTI management",
+          "value": "No antibiotic was given for asymptomatic bacteriuria in group A; group B received antibiotic therapy selected by antibiogram. Symptomatic UTIs in either group were cultured and treated by susceptibility.",
+          "locator": "2012 PDF p772, Study Schedule"
+        },
+        {
+          "label": "Antibiotics used for asymptomatic bacteriuria",
+          "value": "In the treated group, fosfomycin trometamol 31.4%, nitrofurantoin 26.8%, co-trimoxazole 19.8%, ciprofloxacin 13.1%, and levofloxacin 8.9% were used.",
+          "locator": "2012 PDF p774, Baseline Results",
+          "note": "The paper reports percentages without drug-specific counts."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_cis534.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "cai-asb-2015",
+      "kind": "secondary",
+      "label": "Long-term observational follow-up",
+      "published": "2015-08-12",
+      "cutoff": null,
+      "citation": "Cai T, Nesi G, Mazzoli S, et al. \"Asymptomatic Bacteriuria Treatment Is Associated With a Higher Prevalence of Antibiotic Resistant Strains in Women With Urinary Tract Infections.\" *Clin Infect Dis.* 2015;61(11):1655-1661. doi:10.1093/cid/civ696",
+      "doi": "10.1093/cid/civ696",
+      "pmid": "26270684",
+      "followUp": "Mean 38.8 months; 550/673 women from the initial analyzed cohort completed follow-up",
+      "followUpLocator": "2015 PDF pp1655–1657, abstract and Results; p1658, Figure 2",
+      "results": [
+        {
+          "endpoint": "Symptomatic UTI recurrence",
+          "role": "secondary",
+          "measure": "Recurrence over mean 38.8-month follow-up",
+          "values": {
+            "exp": "97/257 (37.7%)",
+            "ctl": "204/293 (69.6%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Complete-case observational follow-up of the original randomized groups.",
+          "locator": "2015 PDF p1657, Clinical Findings; p1659, Table 2"
+        },
+        {
+          "endpoint": "Amoxicillin–clavulanate-resistant E. coli",
+          "role": "secondary",
+          "measure": "Resistant isolates among E. coli from symptomatic UTIs",
+          "values": {
+            "exp": "1/26",
+            "ctl": "23/93"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "note": "Isolate-level comparison among women with symptomatic recurrence.",
+          "locator": "2015 PDF p1659, Table 2"
+        },
+        {
+          "endpoint": "Trimethoprim–sulfamethoxazole-resistant E. coli",
+          "role": "secondary",
+          "measure": "Resistant isolates among E. coli from symptomatic UTIs",
+          "values": {
+            "exp": "3/26",
+            "ctl": "32/93"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Isolate-level comparison among women with symptomatic recurrence.",
+          "locator": "2015 PDF p1659, Table 2"
+        },
+        {
+          "endpoint": "Ciprofloxacin-resistant E. coli",
+          "role": "secondary",
+          "measure": "Resistant isolates among E. coli from symptomatic UTIs",
+          "values": {
+            "exp": "5/26",
+            "ctl": "41/93"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "note": "Isolate-level comparison among women with symptomatic recurrence.",
+          "locator": "2015 PDF p1659, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Pyelonephritis during long-term follow-up",
+          "values": {
+            "exp": "2/257 (0.8%)",
+            "ctl": "6/293 (2.0%)"
+          },
+          "locator": "2015 PDF p1659, Table 2",
+          "note": "Between-group P = 0.37."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Follow-up surveillance",
+          "value": "Visits were scheduled every 6 months; urine culture and susceptibility testing were performed for symptomatic episodes, and all such episodes received susceptibility-guided antibiotics.",
+          "locator": "2015 PDF p1656, Study Schedule and Data Collection"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_civ696.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/cai-asb",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "noctiva-pivotal",
+  "name": "SER120 DB3/DB4",
+  "aliases": [
+    "NOCTIVA pivotal trials",
+    "SER120",
+    "DB3",
+    "DB4"
+  ],
+  "nct": null,
+  "registry": "NCT01357356 (DB3); NCT01900704 (DB4)",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "nocturia",
+      "lane": "desmopressin"
+    }
+  ],
+  "question": "Does low-dose desmopressin nasal spray reduce nocturnal voids compared with placebo in adults with nocturia?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1333,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Desmopressin nasal spray 1.66 mcg",
+        "n": 439,
+        "role": "experimental"
+      },
+      {
+        "key": "low",
+        "label": "desmopressin nasal spray 0.83 mcg",
+        "n": 448,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo nasal spray",
+        "n": 446,
+        "role": "control"
+      }
+    ],
+    "population": "1,333 adults aged at least 50 years with at least 2.16 nocturnal voids per night during screening were included in the pooled intent-to-treat analysis.",
+    "description": "Pooled analysis of two multicenter, double-blind randomized trials",
+    "locator": "PubMed abstract, Methods; FDA medical review, Table 15"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both pooled coprimary endpoints favored each dose; 0.83 mcg missed endpoints in individual trials.",
+  "takeaway": "In pooled DB3/DB4 data, desmopressin nasal spray 0.83 and 1.66 mcg reduced nocturnal voids and increased 50% responder rates versus placebo over 12 weeks.",
+  "reports": [
+    {
+      "id": "noctiva-pivotal-2018",
+      "kind": "primary",
+      "label": "Pooled DB3/DB4 analysis",
+      "published": "2018-04-12",
+      "dateLocator": "PubMed record, Epub date",
+      "cutoff": null,
+      "citation": "Kaminetsky J, Fein S, Dmochowski R, et al. \"Efficacy and Safety of SER120 Nasal Spray in Patients with Nocturia: Pooled Analysis of 2 Randomized, Double-Blind, Placebo Controlled, Phase 3 Trials.\" *J Urol.* 2018;200(3):604-611. doi:10.1016/j.juro.2018.04.050",
+      "doi": "10.1016/j.juro.2018.04.050",
+      "pmid": "29654805",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Nocturnal voids, 1.66 mcg",
+          "role": "primary",
+          "measure": "Mean change in nocturnal voids per night over 12 weeks",
+          "values": {
+            "exp": "−1.5",
+            "ctl": "−1.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Pooled analysis; reported means, without an adjusted between-group effect estimate in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Nocturnal voids, 0.83 mcg",
+          "role": "primary",
+          "measure": "Mean change in nocturnal voids per night over 12 weeks",
+          "values": {
+            "low": "−1.4",
+            "ctl": "−1.2"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Pooled analysis; reported means, without an adjusted between-group effect estimate in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "At least 50% reduction in nocturnal voids, 1.66 mcg",
+          "role": "primary",
+          "measure": "12-week responder rate",
+          "values": {
+            "exp": "48.7%",
+            "ctl": "30.3%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Pooled analysis; responder counts were not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "At least 50% reduction in nocturnal voids, 0.83 mcg",
+          "role": "primary",
+          "measure": "12-week responder rate",
+          "values": {
+            "low": "37.9%",
+            "ctl": "30.3%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0227"
+          },
+          "met": true,
+          "note": "Pooled analysis; responder counts were not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Impact of Nighttime Urination score",
+          "role": "secondary",
+          "measure": "DB4 questionnaire improvement with 1.66 mcg versus placebo",
+          "values": {},
+          "effect": {
+            "type": "none",
+            "p": "0.0255"
+          },
+          "note": "Magnitude was not stated in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Hyponatremia",
+          "values": {
+            "exp": "1.1%",
+            "low": "0%",
+            "ctl": "0.2%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Defined as serum sodium ≤125 mmol/L regardless of symptoms or <130 mmol/L with symptoms; event counts were not stated in the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized treatment",
+          "value": "Intranasal SER120 1.66 mcg, 0.83 mcg, or placebo for 12 weeks.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2018_04_050.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/noctiva-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

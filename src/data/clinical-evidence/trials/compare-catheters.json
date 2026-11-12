@@ -1,0 +1,266 @@
+{
+  "id": "compare-catheters",
+  "name": "COMPARE",
+  "aliases": [
+    "Single-use versus reusable intermittent catheters"
+  ],
+  "nct": null,
+  "registry": "Netherlands Trial Register NL8296",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "catheter-users"
+    }
+  ],
+  "question": "Are reusable intermittent catheters noninferior to single-use catheters for symptomatic UTI incidence in people with urinary retention?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Participants and research staff unblinded; outcome assessors masked",
+    "type": "noninferiority",
+    "n": 386,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Reusable uncoated intermittent catheters",
+        "role": "experimental",
+        "n": 193
+      },
+      {
+        "key": "ctl",
+        "label": "single-use intermittent catheters",
+        "role": "control",
+        "n": 193
+      }
+    ],
+    "population": "Patients aged 16 years or older with neurogenic or nonneurogenic urinary retention who had performed urethral clean intermittent catheterization at least twice daily for at least two weeks.",
+    "description": "Multicenter, assessor-masked noninferiority randomized trial",
+    "locator": "Full text, Methods: Study Design, Participants, Intervention and Randomization; Table 1"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Noninferiority met in the modified intention-to-treat analysis despite substantial reusable-arm discontinuation.",
+  "takeaway": "In COMPARE's modified intention-to-treat analysis (191 single-use and 134 reusable participants of 386 randomized), sodium hypochlorite-disinfected reusable uncoated intermittent catheters were noninferior to single-use catheters for symptomatic UTI over one year (0.050 versus 0.054 per patient-month; difference −0.004, 95% CI −0.025 to 0.019).",
+  "reports": [
+    {
+      "id": "compare-catheters-2026",
+      "kind": "primary",
+      "label": "One-year primary report",
+      "published": "2026-06-01",
+      "cutoff": null,
+      "citation": "van Veen FEE, Christiaans CHH, Berendsen SA, et al. Single-Use vs Reusable Catheters for Intermittent Catheterization in Patients With Urinary Retention: The COMPARE Randomized Clinical Trial. *JAMA Netw Open.* 2026;9(6):e2620871. doi:10.1001/jamanetworkopen.2026.20871",
+      "doi": "10.1001/jamanetworkopen.2026.20871",
+      "pmid": "42377956",
+      "followUp": "One year; modified intention-to-treat mean 11.4 months reusable and 12.0 months single-use",
+      "followUpLocator": "Full text, Methods",
+      "results": [
+        {
+          "endpoint": "Symptomatic UTI incidence",
+          "role": "primary",
+          "measure": "UTIs per patient-month in modified intention-to-treat analysis; absolute incidence-rate difference (reusable minus single-use); noninferiority margin +0.07 UTIs per patient-month",
+          "values": {
+            "exp": "0.050 (95% CI 0.035 to 0.067)",
+            "ctl": "0.054 (95% CI 0.040 to 0.069)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.004,
+            "ci": [
+              -0.025,
+              0.019
+            ]
+          },
+          "met": true,
+          "note": "Noninferiority required the upper bound of the two-sided 95% CI to be below +0.07.",
+          "locator": "Full text, Methods: Statistical Analysis; Results: Primary Outcome; Table 2"
+        },
+        {
+          "endpoint": "At least one symptomatic UTI",
+          "role": "secondary",
+          "measure": "Patients with at least one UTI during modified intention-to-treat follow-up",
+          "values": {
+            "exp": "40/134 (29.9%)",
+            "ctl": "59/191 (30.9%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The source calls the modified intention-to-treat population n=326, although these arm denominators sum to 325.",
+          "locator": "Full text, Results: Primary Outcome"
+        },
+        {
+          "endpoint": "Symptomatic UTI incidence, intention-to-treat sensitivity analysis",
+          "role": "descriptive",
+          "measure": "UTIs per patient-month; absolute incidence-rate difference (reusable minus single-use)",
+          "values": {
+            "exp": "0.052 (n=185)",
+            "ctl": "0.054 (n=192)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.002,
+            "ci": [
+              -0.028,
+              0.026
+            ]
+          },
+          "note": "Prespecified sensitivity analysis of patients who initiated assigned treatment; upper confidence bound remains below the +0.07 margin.",
+          "locator": "Full text, Methods: Statistical Analysis; Results: Primary Outcome; Table 2"
+        },
+        {
+          "endpoint": "Symptomatic UTI incidence, per-protocol sensitivity analysis",
+          "role": "descriptive",
+          "measure": "UTIs per patient-month; absolute incidence-rate difference (reusable minus single-use)",
+          "values": {
+            "exp": "0.04 (n=113)",
+            "ctl": "0.05 (n=177)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.01,
+            "ci": [
+              -0.032,
+              0.011
+            ]
+          },
+          "note": "Prespecified sensitivity analysis of one-year completers without major deviations; upper confidence bound remains below the +0.07 margin.",
+          "locator": "Full text, Methods: Statistical Analysis; Results: Primary Outcome; Table 2"
+        },
+        {
+          "endpoint": "Complier-average causal effect estimate of UTI incidence",
+          "role": "exploratory",
+          "measure": "Estimated absolute difference in UTIs per patient-month accounting for reusable-catheter nonadherence",
+          "values": {
+            "exp": "Reusable adherence modeled",
+            "ctl": "Single-use assignment"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.016,
+            "ci": [
+              -0.126,
+              0.158
+            ],
+            "p": "0.83"
+          },
+          "note": "The confidence interval includes the +0.07 noninferiority margin.",
+          "locator": "Full text, Results: Primary Outcome; eTable 2 described in text"
+        },
+        {
+          "endpoint": "Catheter-related quality of life",
+          "role": "secondary",
+          "measure": "Intermittent Self-Catheterization Questionnaire score at week 52; mean difference (reusable minus single-use)",
+          "values": {
+            "exp": "Higher",
+            "ctl": "Lower"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.6,
+            "ci": [
+              0.3,
+              7.0
+            ],
+            "p": "0.03"
+          },
+          "note": "Arm-specific scores were not given in the article text.",
+          "locator": "Full text, Results: Secondary Outcomes"
+        },
+        {
+          "endpoint": "Catheterization satisfaction",
+          "role": "secondary",
+          "measure": "Intermittent Catheterization Satisfaction Questionnaire score at week 52; mean difference (reusable minus single-use)",
+          "values": {
+            "exp": "Lower",
+            "ctl": "Higher"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.12,
+            "ci": [
+              -0.22,
+              -0.01
+            ],
+            "p": "0.03"
+          },
+          "note": "Arm-specific scores were not given in the article text.",
+          "locator": "Full text, Results: Secondary Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Low-grade urethral irritation",
+          "values": {
+            "exp": "37/185 (20.0%)",
+            "ctl": "9/192 (4.7%)"
+          },
+          "locator": "Full text, Results: Adverse Events; Table 3 (intention-to-treat population)",
+          "note": "Reported as a grade 1–2 adverse event; P=0.04."
+        },
+        {
+          "label": "UTI-related hospitalization",
+          "values": {
+            "exp": "3/185 (1.6%)",
+            "ctl": "3/192 (1.6%)"
+          },
+          "locator": "Full text, Results: Secondary Outcomes; Table 3 (intention-to-treat population)",
+          "note": "The paper classified UTI-related hospitalizations as study-related serious adverse events."
+        },
+        {
+          "label": "Macroscopic hematuria",
+          "values": {
+            "exp": "23/185",
+            "ctl": "24/192"
+          },
+          "locator": "Full text, Results: Secondary Outcomes; Table 3 (intention-to-treat population)",
+          "note": "The source prints 12.0% for both arms; counts are retained because 24/192 is 12.5%."
+        },
+        {
+          "label": "Urethral stricture",
+          "values": {
+            "exp": "1/185",
+            "ctl": "1/192"
+          },
+          "locator": "Full text, Results: Secondary Outcomes; Table 3 (intention-to-treat population)",
+          "note": "One reported in each arm."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Reusable catheter protocol",
+          "value": "Uncoated Cliny catheters for males and PureCath catheters for females; rinse with tap water before and after use, store in 2% sodium hypochlorite solution renewed daily, replace every two weeks, and permit single-use catheters for at most 20% of weekly catheterizations.",
+          "locator": "Full text, Methods: Intervention and Randomization"
+        },
+        {
+          "label": "Lead-in and analysis population",
+          "value": "Six-week lead-in; 326/386 entered the reported modified intention-to-treat population (191 single-use and 134 reusable reported in the primary outcome table, summing to 325).",
+          "locator": "Full text, Methods: Study Design and Statistical Analysis; Results: Study Population; Table 2"
+        },
+        {
+          "label": "Reusable-arm discontinuation",
+          "value": "72/185 (39%) discontinued; 39/185 (21.1%) reported ease-of-use challenges and 13/185 (7.0%) urethral irritation as discontinuation reasons.",
+          "locator": "Full text, Results: Study Population; Figure 1"
+        },
+        {
+          "label": "Reusable catheter adherence and continuation",
+          "value": "Mean reusable use was 88.6% of catheterizations in the intention-to-treat population; 113/193 randomized reusable-arm patients completed one year, and 105/113 (92.9%) completers preferred to continue reuse.",
+          "locator": "Full text, Results: Study Population and Adherence to Protocol; Figure 1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamanetworkopen_2026_20871.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/compare-catheters",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

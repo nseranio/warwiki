@@ -1,0 +1,195 @@
+{
+  "id": "enoxacan-ii",
+  "name": "ENOXACAN II",
+  "aliases": [
+    "Extended enoxaparin after cancer surgery"
+  ],
+  "nct": null,
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "thrombosis-and-bleeding",
+      "lane": "vte-prophylaxis"
+    }
+  ],
+  "question": "After open abdominal or pelvic cancer surgery, does extending enoxaparin prophylaxis from about one to four weeks reduce venous thromboembolism?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 501,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Enoxaparin for approximately four weeks",
+        "n": 253,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "enoxaparin for approximately one week, then placebo",
+        "n": 248,
+        "role": "control"
+      }
+    ],
+    "population": "Adults undergoing elective, planned curative open surgery for gastrointestinal, genitourinary, or female reproductive cancer who completed an initial postoperative course of enoxaparin without major bleeding or objectively confirmed VTE.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "NEJM pp975–977, Methods; p977, Study Populations"
+  },
+  "verdict": "positive",
+  "verdictNote": "Primary VTE endpoint met; most events were found by screening venography.",
+  "takeaway": "After open abdominal or pelvic cancer surgery, extending enoxaparin 40 mg daily from about one to four weeks reduced day 25–31 venographic or confirmed symptomatic VTE versus switching to placebo after one week (4.8% versus 12.0%; P=0.02).",
+  "reports": [
+    {
+      "id": "enoxacan-ii-2002",
+      "kind": "primary",
+      "label": "Primary report and three-month follow-up",
+      "published": "2002-03-28",
+      "cutoff": null,
+      "citation": "Bergqvist D, Agnelli G, Cohen AT, et al. \"Duration of Prophylaxis against Venous Thromboembolism with Enoxaparin after Surgery for Cancer.\" *N Engl J Med.* 2002;346(13):975-980. doi:10.1056/NEJMoa012385",
+      "doi": "10.1056/NEJMoa012385",
+      "pmid": "11919306",
+      "followUp": "Primary venography on postoperative days 25–31; clinical follow-up to three months.",
+      "followUpLocator": "NEJM p975, Abstract; p976, Assessment of Outcome",
+      "results": [
+        {
+          "endpoint": "Venous thromboembolism",
+          "role": "primary",
+          "measure": "Venographic DVT or objectively confirmed symptomatic VTE by postoperative days 25–31; relative risk, extended versus short-course enoxaparin",
+          "values": {
+            "exp": "8/165 (4.8%)",
+            "ctl": "20/167 (12.0%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.4,
+            "ci": [
+              0.18,
+              0.9
+            ],
+            "p": "0.02"
+          },
+          "met": true,
+          "note": "RR and CI transformed from the reported 60% relative risk reduction (95% CI 10–82%); two-sided superiority test at 0.05. Efficacy required evaluable venography or confirmed VTE.",
+          "locator": "NEJM p977, Efficacy; p978, Table 3 and Statistical Analysis"
+        },
+        {
+          "endpoint": "Venous thromboembolism at three months",
+          "role": "descriptive",
+          "measure": "Cumulative venographic or objectively confirmed VTE through three months; relative risk, extended versus short-course enoxaparin",
+          "values": {
+            "exp": "9/165 (5.5%)",
+            "ctl": "23/167 (13.8%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.4,
+            "ci": [
+              0.19,
+              0.83
+            ],
+            "p": "0.01"
+          },
+          "note": "RR and CI transformed from the reported 60% relative risk reduction (95% CI 17–81%); the placebo group includes one upper-extremity DVT.",
+          "locator": "NEJM p978, Table 3"
+        },
+        {
+          "endpoint": "Symptomatic pulmonary embolism during double-blind treatment",
+          "role": "descriptive",
+          "measure": "Objectively confirmed pulmonary embolism before scheduled venography",
+          "values": {
+            "exp": "0/165",
+            "ctl": "1/167"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The remaining 27 of 28 primary-endpoint VTE events were detected on scheduled venography.",
+          "locator": "NEJM p977, Efficacy; p978, Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Major hemorrhage during double-blind treatment",
+          "values": {
+            "exp": "1/253 (0.4%)",
+            "ctl": "0/248 (0%)"
+          },
+          "locator": "NEJM p978, Table 4; safety population",
+          "note": "P >0.99. Major hemorrhage included death, hemoglobin decrease of at least 2 g/dL, at least 2-unit transfusion, critical-site bleeding, serious clinical event, or intervention to control bleeding."
+        },
+        {
+          "label": "Any hemorrhage during double-blind treatment",
+          "values": {
+            "exp": "13/253 (5.1%)",
+            "ctl": "9/248 (3.6%)"
+          },
+          "locator": "NEJM p978, Table 4; safety population",
+          "note": "P=0.51; includes 12/253 (4.7%) versus 9/248 (3.6%) minor hemorrhages."
+        },
+        {
+          "label": "Major hemorrhage cumulative through three months",
+          "values": {
+            "exp": "3/253 (1.2%)",
+            "ctl": "1/248 (0.4%)"
+          },
+          "locator": "NEJM p978, Table 4; safety population",
+          "note": "P=0.62; post-treatment follow-up contributed 2 versus 1 major hemorrhages."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study drug regimen",
+          "values": {
+            "exp": "Enoxaparin 40 mg SC daily for 6–10 days, then enoxaparin 40 mg SC daily for 19–21 days",
+            "ctl": "Enoxaparin 40 mg SC daily for 6–10 days, then matching placebo for 19–21 days"
+          },
+          "locator": "NEJM pp975–976, Abstract and Study Design",
+          "note": "First enoxaparin dose was 10–14 hours before surgery; total planned course was 25–31 days in the extended arm."
+        },
+        {
+          "label": "Randomized and efficacy populations",
+          "values": {
+            "exp": "253 randomized and treated; 165 evaluable for efficacy; 88 without evaluable venography",
+            "ctl": "248 randomized and treated; 167 evaluable for efficacy; 81 without evaluable venography"
+          },
+          "locator": "NEJM p977, Study Populations",
+          "note": "Safety population 501; efficacy population 332; 169/501 had missing or uninterpretable venography."
+        },
+        {
+          "label": "Surgery types among efficacy-evaluable patients",
+          "values": {
+            "exp": "141/165 (85.5%) gastrointestinal; 11/165 (6.7%) genitourinary; 17/165 (10.3%) female reproductive",
+            "ctl": "137/167 (82.0%) gastrointestinal; 17/167 (10.2%) genitourinary; 11/167 (6.6%) female reproductive"
+          },
+          "locator": "NEJM p977, Table 2",
+          "note": "The genitourinary subgroup contained 28 patients across arms. Some patients had surgery at more than one site, so categories overlap."
+        },
+        {
+          "label": "Intraoperative reclassification as palliative surgery",
+          "values": {
+            "exp": "16/165 (9.7%)",
+            "ctl": "6/167 (3.6%)"
+          },
+          "locator": "NEJM p977, Study Populations and Table 2",
+          "note": "P=0.02; operations were planned as curative before enrollment."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa012385.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/enoxacan-ii",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

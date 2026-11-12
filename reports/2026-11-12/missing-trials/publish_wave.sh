@@ -53,7 +53,7 @@ tail -3 build.log; rm build.log
 git checkout -q -- src/data/stats.json 2>/dev/null || true
 git add ${FILES[@]} reports/audit-v2/claims-ledger.json src/data/clinical-evidence/trials.generated.json
 git add -u src/data/surgeon-citations src/data/surgeon-profiles src/data/clinical-evidence 2>/dev/null || true
-git status --short | grep -v '^??' | grep -v '^[AM] ' | head -10
+git status --short | grep -v '^??' | grep -v '^[AM] ' | head -10 || true
 git diff --cached --stat | tail -1
 git commit -q -F $MSG
 git log -1 --oneline

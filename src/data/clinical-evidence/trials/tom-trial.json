@@ -1,0 +1,206 @@
+{
+  "id": "tom-trial",
+  "name": "TOM",
+  "aliases": [
+    "Testosterone in Older Men with Mobility Limitations"
+  ],
+  "nct": "NCT00240981",
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "testosterone-therapy",
+      "lane": "cardiovascular-safety"
+    }
+  ],
+  "question": "In older men with low testosterone and mobility limitation, how do testosterone gel and placebo compare for strength and cardiovascular adverse events?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 209,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Daily 1% testosterone gel",
+        "n": 106,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo gel",
+        "n": 103,
+        "role": "control"
+      }
+    ],
+    "population": "Community-dwelling men aged at least 65 years with mobility difficulty, Short Physical Performance Battery scores of 4–9, and total testosterone 100–350 ng/dL or free testosterone below 50 pg/mL.",
+    "description": "Three-site, double-blind placebo-controlled randomized trial",
+    "locator": "Primary full text, Methods: Study Design, Study Participants; Results: Enrollment; Table 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Leg-press strength improved, but excess cardiovascular-related events prompted early termination.",
+  "takeaway": "In mobility-limited older men with low testosterone, daily 1% testosterone gel improved leg-press strength versus placebo gel, but cardiovascular-related adverse events occurred in 23/106 versus 5/103 men and the trial stopped early.",
+  "reports": [
+    {
+      "id": "tom-trial-2010",
+      "kind": "primary",
+      "label": "Initial safety and efficacy report",
+      "published": "2010-06-30",
+      "cutoff": null,
+      "citation": "Basaria S, Coviello AD, Travison TG, et al. \"Adverse Events Associated with Testosterone Administration.\" *N Engl J Med.* 2010;363(2):109-122. doi:10.1056/NEJMoa1000485",
+      "doi": "10.1056/NEJMoa1000485",
+      "pmid": "20592293",
+      "followUp": "Planned 24-week treatment and 3-month observation; stopped before target enrollment",
+      "followUpLocator": "Full text, Methods: Procedures; Results: Enrollment; Discussion",
+      "results": [
+        {
+          "endpoint": "Leg-press strength",
+          "role": "primary",
+          "measure": "Change in maximal voluntary leg-press force; unadjusted mean difference in change, newtons",
+          "values": {
+            "exp": "+156.9 N (n=49)",
+            "ctl": "+27.1 N (n=54)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 129.8,
+            "ci": [
+              43.9,
+              215.6
+            ],
+            "p": "0.003"
+          },
+          "met": true,
+          "note": "Prespecified efficacy endpoint; efficacy assessments were available for a subset after early termination.",
+          "locator": "Full text, Methods: Procedures and Statistical Analysis; Table 5, leg-press strength"
+        },
+        {
+          "endpoint": "Cardiovascular-related adverse events",
+          "role": "descriptive",
+          "measure": "Men with at least one cardiovascular-related event; unadjusted odds ratio",
+          "values": {
+            "exp": "23/106 (21.7%)",
+            "ctl": "5/103 (4.9%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 5.4,
+            "ci": [
+              2.0,
+              14.9
+            ]
+          },
+          "note": "Broad safety-board category assembled after review; cardiovascular events were not a prespecified endpoint.",
+          "locator": "Full text, Methods: Safety Monitoring; Results: Adverse Events; Table 3; Table 4, unadjusted odds ratio"
+        },
+        {
+          "endpoint": "Chest-press strength",
+          "role": "secondary",
+          "measure": "Change in chest-press force; unadjusted mean difference in change, newtons",
+          "values": {
+            "exp": "+34.7 N (n=38)",
+            "ctl": "+0.28 N (n=44)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 34.5,
+            "ci": [
+              13.2,
+              55.8
+            ],
+            "p": "0.002"
+          },
+          "note": "Efficacy assessment subset after early termination.",
+          "locator": "Full text, Table 5, chest-press strength"
+        }
+      ],
+      "harms": [
+        {
+          "label": "MedDRA cardiac disorders",
+          "values": {
+            "exp": "10/106",
+            "ctl": "1/103"
+          },
+          "locator": "Full text, Results: Adverse Events; Table 3",
+          "note": "Men with at least one cardiac event under the original MedDRA classification."
+        },
+        {
+          "label": "Atherosclerosis-related events",
+          "values": {
+            "exp": "7/106",
+            "ctl": "1/103"
+          },
+          "locator": "Full text, Methods: Safety Monitoring; Results: Adverse Events; Table 3",
+          "note": "Safety-board category included myocardial infarction, sudden death, revascularization, and stroke."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Gel regimen and titration",
+          "value": "Testim 1% gel, 10 g (100 mg testosterone) daily for 6 months; after 2 weeks, titrate to 5 g daily if the average of two testosterone measurements exceeded 1000 ng/dL or to 15 g daily if the average was below 500 ng/dL.",
+          "locator": "Full text, Methods: Procedures"
+        },
+        {
+          "label": "Enrollment and efficacy analysis",
+          "value": "209/252 planned men randomized; 129 completed 6 months; 176 had at least one postrandomization efficacy assessment; the safety board recommended stopping enrollment and treatment on 2009-12-31.",
+          "locator": "Full text, Results: Enrollment of Subjects and Discontinuation of the Study"
+        },
+        {
+          "label": "Delivered doses and adherence",
+          "value": "At titration, 29 received 5 g, 61 received 10 g, and 16 received 15 g daily; tube-count adherence exceeded 90% in both groups.",
+          "locator": "Full text, Results: Testosterone Dose and Adherence"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa1000485.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "tom-trial-2011",
+      "kind": "secondary",
+      "label": "Patient-important physical function",
+      "published": "2011-06-22",
+      "cutoff": null,
+      "citation": "Travison TG, Basaria S, Storer TW, et al. \"Clinical Meaningfulness of the Changes in Muscle Performance and Physical Function Associated With Testosterone Administration in Older Men With Mobility Limitation.\" *J Gerontol A Biol Sci Med Sci.* 2011;66(10):1090-1099. doi:10.1093/gerona/glr100",
+      "doi": "10.1093/gerona/glr100",
+      "pmid": "21697501",
+      "followUp": "6-month treatment; 165 men with follow-up efficacy measures",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Patient-important stair-climbing power improvement",
+          "role": "secondary",
+          "measure": "Proportion exceeding minimally important difference in stair-climbing power",
+          "values": {
+            "exp": "28%",
+            "ctl": "10%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "note": "Secondary analysis; arm-specific denominators are absent from the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_gerona_glr100.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tom-trial",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

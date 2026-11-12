@@ -1,0 +1,252 @@
+{
+  "id": "mv140",
+  "name": "MV140",
+  "aliases": [
+    "Uromune",
+    "MV140-SLG-003"
+  ],
+  "nct": "NCT02543827",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "immunoprophylaxis"
+    }
+  ],
+  "question": "Does sublingual MV140 for three or six months reduce culture-confirmed recurrent urinary tract infections compared with placebo in women?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 240,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Three months of sublingual MV140 followed by three months of placebo",
+        "n": 80,
+        "role": "experimental"
+      },
+      {
+        "key": "exp6",
+        "label": "six months of sublingual MV140",
+        "n": 80,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "six months of sublingual placebo",
+        "n": 80,
+        "role": "control"
+      }
+    ],
+    "population": "Women aged 18–75 years in Spain and the United Kingdom with at least five uncomplicated cystitis episodes in the preceding year.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "Primary PDF pp2–3, Figure 1; phase 3 in secondary report, PubMed abstract, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both MV140 schedules reduced the prespecified nine-month UTI count versus placebo.",
+  "takeaway": "Three or six months of sublingual MV140, compared with placebo, reduced the median number of culture-confirmed UTIs during the nine-month efficacy period from 3.0 to 0.0 in women with recurrent uncomplicated cystitis (P<0.001 for each comparison).",
+  "reports": [
+    {
+      "id": "mv140-2022",
+      "kind": "primary",
+      "label": "Primary efficacy and safety",
+      "published": "2022-01-21",
+      "cutoff": null,
+      "citation": "Lorenzo-Gómez MF, Foley S, Nickel JC, et al. \"Sublingual MV140 for Prevention of Recurrent Urinary Tract Infections.\" *NEJM Evid.* 2022;1(4):EVIDoa2100018. doi:10.1056/EVIDoa2100018",
+      "doi": "10.1056/EVIDoa2100018",
+      "pmid": "38319200",
+      "followUp": "12 months from randomization; prespecified efficacy period months 4–12",
+      "followUpLocator": "Full text, Methods",
+      "results": [
+        {
+          "endpoint": "Culture-confirmed UTI episodes",
+          "role": "primary",
+          "measure": "Median episodes (interquartile range) during the nine-month efficacy period",
+          "values": {
+            "exp": "0.0 (0.0–1.0)",
+            "exp6": "0.0 (0.0–1.0)",
+            "ctl": "3.0 (0.5–6.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each MV140 arm versus placebo"
+          },
+          "met": true,
+          "note": "Protocol-defined primary analysis: 70, 69, and 76 women in the three-month, six-month, and placebo arms; UTI required symptoms and culture ≥10³ CFU/mL; no formal active-duration comparison was planned.",
+          "locator": "Primary PDF pp5,8, Table 2 and Figure 2A"
+        },
+        {
+          "endpoint": "UTI-free participants",
+          "role": "secondary",
+          "measure": "Culture-confirmed UTI-free during the nine-month efficacy period",
+          "values": {
+            "exp": "39/70 (56%)",
+            "exp6": "40/69 (58%)",
+            "ctl": "19/76 (25%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prespecified secondary endpoint; a formal success threshold was not stated for this comparison.",
+          "locator": "Primary PDF pp5,8, Table 2 and Figure 2C"
+        },
+        {
+          "endpoint": "Time to first UTI",
+          "role": "secondary",
+          "measure": "Median days after month 3",
+          "values": {
+            "exp": "275 days",
+            "exp6": "275 days",
+            "ctl": "48 days"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The article's narrative reports the placebo interquartile upper bound as 189 days; Table 2 prints 89 days.",
+          "locator": "Primary PDF p5, Efficacy; p8, Table 2"
+        },
+        {
+          "endpoint": "Culture-confirmed UTI episodes",
+          "role": "secondary",
+          "measure": "Median episodes (interquartile range) during the whole 12-month study",
+          "values": {
+            "exp": "1.0 (0.0–2.0)",
+            "exp6": "1.0 (0.0–2.0)",
+            "ctl": "5.0 (1.0–7.0)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Descriptive whole-study comparison in the protocol-defined primary analysis population.",
+          "locator": "Primary PDF p8, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events",
+          "values": {
+            "exp": "76 events",
+            "exp6": "48 events",
+            "ctl": "81 events"
+          },
+          "locator": "Primary PDF pp1,7,9, Table 3",
+          "note": "205 events in 101 participants; Table 3 reports participants with any event as 34, 28, and 39, respectively. Its placebo safety denominator conflicts with the narrative."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "6 events",
+            "exp6": "1 event",
+            "ctl": "0 events"
+          },
+          "locator": "Primary PDF pp7,9, Table 3",
+          "note": "Seven serious events occurred in five participants; investigators judged none related to MV140, and no deaths occurred."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Sublingual schedule",
+          "value": "MV140 contained heat-inactivated whole cells of E. coli, K. pneumoniae, E. faecalis, and P. vulgaris; two sprays under the tongue daily; the three-month MV140 arm then switched to placebo for three months, and all arms were followed to month 12 with visits every three months; episode antibiotics were permitted.",
+          "locator": "Primary PDF pp2–3, Figure 1A"
+        },
+        {
+          "label": "Treatment and analysis populations",
+          "value": "240 randomized (80 per arm); 229 initiated treatment; 215 completed week 12 and entered the protocol-defined primary analysis; 193 completed the 12-month study.",
+          "locator": "Primary PDF pp3,5, Figure 1B and Trial Participants"
+        },
+        {
+          "label": "Treatment adherence",
+          "value": "87% completed the six-month treatment period; adherence did not differ between groups.",
+          "locator": "Primary PDF p5, Trial Participants"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_evidoa2100018.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "mv140-2024-burden",
+      "kind": "secondary",
+      "label": "Personal burden analysis",
+      "published": "2024-03-29",
+      "cutoff": null,
+      "citation": "Nickel JC, Foley S, Yang B, et al. \"Reducing Recurrent Urinary Tract Infections in Women with MV140 Impacts Personal Burden of Disease: Secondary Analyses of a Randomized Placebo-controlled Efficacy Study.\" *Eur Urol Open Sci.* 2024;63:96-103. doi:10.1016/j.euros.2024.03.010",
+      "doi": "10.1016/j.euros.2024.03.010",
+      "pmid": "38585593",
+      "followUp": "12 months from randomization",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Antibiotic use",
+          "role": "secondary",
+          "measure": "Mean days on antibiotics (standard deviation) during months 0–12",
+          "values": {
+            "exp": "12.4 (17.7)",
+            "ctl": "28.7 (25.2)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0001"
+          },
+          "note": "Three-month MV140 (n=74) versus placebo (n=76) in this secondary analysis.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Overall UTI symptom burden",
+          "role": "secondary",
+          "measure": "Mean total symptom score during UTIs over months 0–12 (standard deviation)",
+          "values": {
+            "exp": "102.2 (222.9)",
+            "ctl": "194.2 (178.8)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0002"
+          },
+          "note": "Three-month MV140 (n=74) versus placebo (n=76).",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Health-related quality of life",
+          "role": "secondary",
+          "measure": "Between-arm difference in total SF-36 change from baseline over months 0–12",
+          "values": {
+            "exp": "improved versus placebo",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15.7,
+            "ci": [
+              8.8,
+              22.64
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Three-month MV140 versus placebo; secondary analysis of quality-of-life domains.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_euros_2024_03_010.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/mv140",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "partem",
+  "name": "PARTEM",
+  "aliases": [
+    "Prostatic artery embolisation versus medical treatment"
+  ],
+  "nct": "NCT02869971",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does prostatic artery embolisation improve symptoms more than dutasteride–tamsulosin in men with bothersome BPH symptoms despite alpha-blocker monotherapy?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 90,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prostatic artery embolisation",
+        "n": 45,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "dutasteride–tamsulosin combination therapy",
+        "n": 45,
+        "role": "control"
+      }
+    ],
+    "population": "90 men aged 50–85 years with bothersome LUTS despite more than one month of alpha-blocker treatment, IPSS above 11, quality-of-life score above 3, and prostate volume at least 50 mL.",
+    "description": "Multicentre, open-label, phase 3 superiority randomized trial",
+    "locator": "Full text, Methods: Study design, Participants, Randomisation and masking; Results, Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "The primary nine-month IPSS difference exceeded the prespecified four-point target.",
+  "takeaway": "Prostatic artery embolisation improved nine-month IPSS more than dutasteride–tamsulosin combination therapy in men with bothersome BPH symptoms despite alpha-blocker monotherapy (mean change −10.0 versus −5.7 points; adjusted difference −4.4, 95% CI −6.9 to −1.9).",
+  "reports": [
+    {
+      "id": "partem-2023",
+      "kind": "primary",
+      "label": "Nine-month primary and 24-month follow-up report",
+      "published": "2023-06-26",
+      "cutoff": null,
+      "citation": "Sapoval M, Thiounn N, Descazeaud A, et al. \"Prostatic artery embolisation versus medical treatment in patients with benign prostatic hyperplasia (PARTEM): a randomised, multicentre, open-label, phase 3, superiority trial.\" *Lancet Reg Health Eur.* 2023;31:100672. doi:10.1016/j.lanepe.2023.100672",
+      "doi": "10.1016/j.lanepe.2023.100672",
+      "pmid": "37415648",
+      "followUp": "Nine-month randomized primary comparison; treatment by patient and urologist choice thereafter, with assessment at 24 months",
+      "followUpLocator": "Full text, Methods: Procedures; Results, 24-month follow-up paragraph",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Nine-month mean IPSS change in points; baseline-adjusted mean difference, embolisation minus combination therapy",
+          "values": {
+            "exp": "−10.0 points (44 evaluable)",
+            "ctl": "−5.7 points (43 evaluable)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.4,
+            "ci": [
+              -6.9,
+              -1.9
+            ],
+            "p": "0.0008"
+          },
+          "met": true,
+          "note": "Modified intention-to-treat analysis; sample size targeted a clinically significant four-point difference at two-sided alpha 0.05.",
+          "locator": "Full text, Results, Table 2; Methods, Statistical analysis"
+        },
+        {
+          "endpoint": "IPSS quality-of-life score",
+          "role": "secondary",
+          "measure": "Nine-month mean QoL score change in points; baseline-adjusted mean difference, embolisation minus combination therapy",
+          "values": {
+            "exp": "−2.8 points (44 evaluable)",
+            "ctl": "−1.1 points (43 evaluable)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.7,
+            "ci": [
+              -2.4,
+              -1.1
+            ]
+          },
+          "note": "Secondary outcome; multiplicity was not adjusted.",
+          "locator": "Full text, Results, Table 2 and QoL paragraph"
+        },
+        {
+          "endpoint": "IIEF-15",
+          "role": "secondary",
+          "measure": "Nine-month mean IIEF-15 change in points; baseline-adjusted mean difference, embolisation minus combination therapy",
+          "values": {
+            "exp": "+8.2 points (38 evaluable)",
+            "ctl": "−2.8 points (34 evaluable)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 11.0,
+            "ci": [
+              3.3,
+              18.7
+            ]
+          },
+          "note": "Secondary outcome; multiplicity was not adjusted.",
+          "locator": "Full text, Results, Table 2 and IIEF-15 paragraph"
+        },
+        {
+          "endpoint": "Maximum urinary flow",
+          "role": "secondary",
+          "measure": "Nine-month mean Qmax change in mL/s; baseline-adjusted mean difference, embolisation minus combination therapy",
+          "values": {
+            "exp": "+2.4 mL/s (36 evaluable)",
+            "ctl": "+2.1 mL/s (34 evaluable)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.3,
+            "ci": [
+              -1.7,
+              2.3
+            ]
+          },
+          "note": "Secondary outcome; multiplicity was not adjusted.",
+          "locator": "Full text, Results, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "At least one adverse event by nine months",
+          "values": {
+            "exp": "31/45 patients (68.9%)",
+            "ctl": "21/45 patients (46.7%)"
+          },
+          "locator": "Full text, Results, paragraph before Table 3; Table 1 randomized denominators",
+          "note": "All-cause adverse events in randomized groups; event count differs from affected-patient count."
+        },
+        {
+          "label": "Post-embolisation syndrome",
+          "values": {
+            "exp": "17 events",
+            "ctl": "0 events"
+          },
+          "locator": "Full text, Results, Table 3",
+          "note": "Table 3 counts events rather than patients."
+        },
+        {
+          "label": "Arterial dissection or perforation",
+          "values": {
+            "exp": "3 events",
+            "ctl": "0 events"
+          },
+          "locator": "Full text, Results, Table 3",
+          "note": "Table 3 counts events rather than patients."
+        },
+        {
+          "label": "Treatment-related adverse event requiring hospitalization or prolonging hospitalization",
+          "values": {
+            "exp": "0 reported",
+            "ctl": "0 reported"
+          },
+          "locator": "Full text, Results, paragraph before Table 3",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Embolisation protocol",
+          "value": "Femoral access under local anaesthesia; superselective bilateral prostatic-artery catheterisation, then proximal embolisation to stasis and distal embolisation with 300–500 μm Embosphere microspheres; first case at each site proctored.",
+          "locator": "Full text, Methods: Procedures"
+        },
+        {
+          "label": "Medication protocol",
+          "values": {
+            "exp": "tamsulosin 0.4 mg daily through 15 days after embolisation",
+            "ctl": "dutasteride 0.5 mg/tamsulosin 0.4 mg daily for at least nine months"
+          },
+          "locator": "Full text, Methods: Procedures"
+        },
+        {
+          "label": "Unilateral rather than bilateral embolisation",
+          "value": "4/45 randomized to embolisation (8.9%); two had a second attempt",
+          "locator": "Full text, Results, paragraph after Table 1",
+          "note": "Selective catheterisation of the second prostatic artery was not possible."
+        },
+        {
+          "label": "Procedure duration",
+          "value": "Mean 134 minutes (range 36–260)",
+          "locator": "Full text, Results, economic evaluation paragraph"
+        },
+        {
+          "label": "Combination-therapy nonadherence at nine months",
+          "value": "10/43 evaluable patients (23.3%)",
+          "locator": "Full text, Results, medication paragraph",
+          "note": "Defined by pill count or Girerd questionnaire."
+        },
+        {
+          "label": "Invasive BPH treatment between months nine and 24 among follow-up completers",
+          "values": {
+            "exp": "5/42 (11.9%), all prostatic surgery",
+            "ctl": "18/38 (47.4%): 14 embolisation, 4 prostatic surgery"
+          },
+          "locator": "Full text, Results, 24-month follow-up paragraph",
+          "note": "Post-nine-month treatment was chosen by patients and referring urologists; this is descriptive, not a randomized rescue-treatment comparison."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_lanepe_2023_100672.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "combat",
+      "note": "PARTEM used dutasteride–tamsulosin as its control and cited CombAT's symptom response with that regimen."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/partem",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

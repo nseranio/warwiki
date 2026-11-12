@@ -6,6 +6,13 @@ For commit-level detail run `git log --oneline`.
 
 ---
 
+## November 12, 2026 — Clinical Evidence: 183 missing trials
+
+- Must-know wave (`57f3026d`): 64 trials and 9 later reports of library trials (ABC, ROSETTA ×2, Ginsberg NDO, InSite, OPUS, PINNACLE, sildenafil diabetes trial, UNBLOCS). Should-know wave: 119 trials. Library: 68 → 251 trials; 10 new decision points (nocturia, IC/BPS, radiation cystitis, chronic pelvic pain, postoperative bladder management, GSM, male SUI conservative care, testosterone, cystectomy/diversion, perioperative thrombosis and bleeding) and 43 lanes.
+- Method: Codex author per trial from pre-fetched PubMed/PMC texts (most older trials abstract-only), claim gate with Claude review of every proposed correction (about 280 applied), Codex fix passes on 13 trials, two independent checks for every high-risk claim; about 4,160 claims pass. Notable corrections: iTind FDA De Novo analyses moved to their own report; transdermal oxybutynin states the FDA statistical review's nonsignificant protocol analysis; STAR verdict noninferior from its full text; tamsulosin 0.8-mg arm's one-week 0.4-mg lead-in; AUA/SUFU OAB statement 25 keeps the unabridged "percutaneous tibial nerve stimulation".
+- Build-size cap raised from 200 to 250 MB (owner decision): the 119 should-know pages took the build to 211 MB; trial pages carry the full docs sidebar (about 57 KB each).
+- Held to abstract level: POTABA and Palmieri ESWT (full texts only on third-party sites). Removed: AUA CP/CPPS 2025 recommendations (no copy). Download list for Codex: `reports/2026-11-12/missing-trials/DOWNLOAD-LIST.md`.
+
 ## November 12, 2026 — Coherence pilot: Bladder Diverticula
 
 - Owner's request: pages carry the right facts but read as back-to-back study results; make them read like an encyclopedia article without losing evidence. Cause: successive passes (textbook mining, number check, reviews, claim gate) each appended a self-contained "In a [design] of [n], [result]" sentence and none integrated them (the cancer section stated the Taiwanese cohort and its HR 2.63 twice in one paragraph).

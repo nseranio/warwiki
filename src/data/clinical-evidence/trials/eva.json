@@ -1,0 +1,225 @@
+{
+  "id": "eva",
+  "name": "EVA",
+  "aliases": [
+    "Efficacy of VAginal oestrogen cream compared with placebo"
+  ],
+  "nct": null,
+  "registry": "NL-OMON55535",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-adjuncts-pessary",
+      "lane": "perioperative-adjunct"
+    }
+  ],
+  "question": "Does perioperative vaginal oestriol cream improve patient-reported prolapse symptoms after primary native-tissue repair compared with placebo?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "participants and investigators masked",
+    "type": "superiority",
+    "n": 311,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Perioperative vaginal oestriol cream",
+        "n": 153,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "identical placebo cream",
+        "n": 158,
+        "role": "control"
+      }
+    ],
+    "population": "Postmenopausal women with POP-Q stage 2 or greater scheduled for primary native-tissue prolapse repair including anterior or posterior colporrhaphy.",
+    "description": "Twenty-two-center, double-blind randomized superiority trial",
+    "locator": "Owner PDF pp2–4, Methods and Results/Study Population, Figure 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "PGI-I improved; the observed difference was below the prespecified clinical relevance target.",
+  "takeaway": "Perioperative vaginal oestriol cream improved 12-month patient-reported prolapse symptoms versus placebo after primary native-tissue repair (97/106 [91.5%] versus 83/104 [79.8%]; OR 2.73, 95% CI 1.18–6.28); composite surgical success did not differ significantly.",
+  "reports": [
+    {
+      "id": "eva-2026",
+      "kind": "primary",
+      "label": "Twelve-month randomized report",
+      "published": "2026-08-28",
+      "cutoff": null,
+      "citation": "Vodegel EV, van Rest K, Speksnijder L, et al. \"Vaginal Oestrogen Therapy for Postmenopausal Women Undergoing Prolapse Surgery: A Multicentre Double-Blind Randomised Placebo-Controlled Clinical Trial.\" *BJOG.* Published online August 28, 2026. doi:10.1111/1471-0528.70311",
+      "doi": "10.1111/1471-0528.70311",
+      "pmid": "42663275",
+      "followUp": "12 months after surgery; 236/293 completed follow-up (57 dropouts) and 210 supplied the primary PGI-I response",
+      "followUpLocator": "Owner PDF p3, Results/Study Population; p5, Table 1",
+      "results": [
+        {
+          "endpoint": "Patient-reported prolapse symptom improvement",
+          "role": "primary",
+          "measure": "Much or very much improved on PGI-I at 12 months",
+          "values": {
+            "exp": "97/106 (91.5%)",
+            "ctl": "83/104 (79.8%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.73,
+            "ci": [
+              1.18,
+              6.28
+            ],
+            "p": "0.02"
+          },
+          "met": true,
+          "note": "Two-sided superiority alpha 0.05; the observed risk difference was 11.7 percentage points, below the >15-point difference used in the clinical relevance and sample-size plan, which allowed 10% loss to follow-up.",
+          "locator": "Owner PDF p3, Sample Size and Statistical Analysis; p5, Table 1 and note"
+        },
+        {
+          "endpoint": "Composite surgical success",
+          "role": "secondary",
+          "measure": "No prolapse beyond hymen, bulge symptoms, reoperation, or additional pessary therapy at 12 months",
+          "values": {
+            "exp": "74/102 (72.5%)",
+            "ctl": "74/96 (77.1%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.46"
+          },
+          "note": "Composite definition combines anatomical, symptom and retreatment criteria.",
+          "locator": "Owner PDF pp2–3, Secondary Outcomes; p5, Table 1 and note"
+        },
+        {
+          "endpoint": "Cystocele stage 2 or greater",
+          "role": "secondary",
+          "measure": "POP-Q cystocele stage 2 or greater at 12 months",
+          "values": {
+            "exp": "46/108 (42.6%)",
+            "ctl": "47/103 (45.6%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.66"
+          },
+          "note": "",
+          "locator": "Owner PDF p5, Table 1"
+        },
+        {
+          "endpoint": "Pelvic floor symptom distress",
+          "role": "secondary",
+          "measure": "Median PFDI-20 score at 12 months; lower indicates less distress",
+          "values": {
+            "exp": "16.7 (IQR 0.0–37.5; n=106)",
+            "ctl": "25.0 (IQR 12.5–46.6; n=104)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "note": "The paper reports a median difference of 8.3 points, not an arm-adjusted mean difference.",
+          "locator": "Owner PDF pp4–5, Results and Table 1"
+        },
+        {
+          "endpoint": "No discomfort or pain",
+          "role": "secondary",
+          "measure": "EQ-5D-5L discomfort/pain domain: no discomfort at 12 months",
+          "values": {
+            "exp": "81/105 (77.1%)",
+            "ctl": "63/104 (60.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.2,
+            "ci": [
+              1.2,
+              4.0
+            ],
+            "p": "0.04"
+          },
+          "note": "",
+          "locator": "Owner PDF pp4–5, Results and Table 1"
+        },
+        {
+          "endpoint": "Low vaginal pH",
+          "role": "secondary",
+          "measure": "Vaginal pH 6 or lower at 12 months",
+          "values": {
+            "exp": "81/93 (87.1%)",
+            "ctl": "63/87 (72.4%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "",
+          "locator": "Owner PDF p5, Table 1"
+        },
+        {
+          "endpoint": "Additional treatment for recurrent prolapse",
+          "role": "secondary",
+          "measure": "Additional treatment before 12 months",
+          "values": {
+            "exp": "2/110 (1.8%)",
+            "ctl": "4/107 (3.7%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.39"
+          },
+          "note": "",
+          "locator": "Owner PDF p5, Table 1"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Perioperative complications and adverse events",
+          "note": "No statistically significant between-group differences.",
+          "locator": "Owner PDF p4, Results/Outcomes"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Cream regimen",
+          "value": "Oestriol 1 mg/g or matching placebo, 0.5 g intravaginally daily for 2 weeks then twice weekly, starting 4–6 weeks before surgery through 12 months after surgery with a planned 2-week postoperative pause.",
+          "locator": "Owner PDF p2, Methods/Intervention"
+        },
+        {
+          "label": "Surgery and treatment initiation",
+          "value": "293/311 randomized participants underwent surgery and started the assigned intervention.",
+          "locator": "Owner PDF p3, Results/Study Population"
+        },
+        {
+          "label": "Operative approach",
+          "value": "All included repairs required anterior or posterior colporrhaphy; 48% also had apical suspension by sacrospinous fixation or Manchester-Fothergill operation.",
+          "locator": "Owner PDF p2, Methods/Participants; p7, Discussion/Interpretation"
+        },
+        {
+          "label": "Per-protocol analysis",
+          "value": "185 participants met the adherence definition; the per-protocol findings were consistent with the main analysis.",
+          "locator": "Owner PDF pp4–5, Results/Per-Protocol Analysis"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Downloads/BJOG - 2026 - Vodegel - Vaginal Oestrogen Therapy for Postmenopausal Women Undergoing Prolapse Surgery  A Multicentre.pdf",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "conflicts",
+      "target": "improve",
+      "note": "Both tested perioperative vaginal estrogen against placebo; EVA improved PGI-I after colporrhaphy, whereas IMPROVE found no PGI-I difference after apical repair."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/eva",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

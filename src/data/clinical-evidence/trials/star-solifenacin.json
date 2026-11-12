@@ -1,0 +1,176 @@
+{
+  "id": "star-solifenacin",
+  "name": "STAR",
+  "aliases": [
+    "Solifenacin versus tolterodine ER (STAR)"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "In adults with overactive bladder, how does flexible-dose solifenacin compare with fixed-dose tolterodine ER for symptom improvement and tolerability?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind, double-dummy",
+    "type": "noninferiority",
+    "n": 1200,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Solifenacin 5 mg daily, with optional increase to 10 mg",
+        "n": 593,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "tolterodine ER 4 mg daily",
+        "n": 607,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with overactive bladder syndrome treated at European study sites.",
+    "description": "Multicenter, double-blind, double-dummy randomized noninferiority trial",
+    "locator": "2005 PubMed abstract, Methods; 2007 report, publisher Methods; PMCPA Code of Practice Review 2006, pp35-36 (randomized counts and primary-test design)"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "Primary frequency endpoint met noninferiority; secondary urgency, incontinence, and pad use favored solifenacin.",
+  "takeaway": "In STAR, the per-protocol set (525 solifenacin, 524 tolterodine ER) met noninferiority for micturitions per 24 hours at 12 weeks (P = 0.004); full-analysis mean reductions were 2.45 versus 2.24, and urgency, incontinence, and pad use also favored solifenacin.",
+  "reports": [
+    {
+      "id": "star-solifenacin-2005",
+      "kind": "primary",
+      "label": "Initial report",
+      "published": "2005-09-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed and Crossref, September 2005 print issue; exact online publication date unverified",
+      "cutoff": null,
+      "citation": "Chapple CR, Martinez-Garcia R, Selvaggi L, et al. \"A Comparison of the Efficacy and Tolerability of Solifenacin Succinate and Extended Release Tolterodine at Treating Overactive Bladder Syndrome: Results of the STAR Trial.\" *Eur Urol.* 2005;48(3):464-470. doi:10.1016/j.eururo.2005.05.015",
+      "doi": "10.1016/j.eururo.2005.05.015",
+      "pmid": "15990220",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to endpoint over 12 weeks in the full analysis set; noninferiority tested in the per-protocol population",
+          "values": {
+            "exp": "-2.45",
+            "ctl": "-2.24"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.21
+          },
+          "met": true,
+          "note": "The -0.21 difference is calculated from rounded full-analysis-set means (578 solifenacin, 599 tolterodine). The separate per-protocol noninferiority test included 525 solifenacin and 524 tolterodine recipients (95% CI -0.48 to 0.10; P = 0.004).",
+          "locator": "Primary report PDF pp 466-467, Statistical methods and Results"
+        },
+        {
+          "endpoint": "Urgency and incontinence symptoms",
+          "role": "secondary",
+          "measure": "Between-group changes through 12 weeks",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports larger reductions in urgency, overall and urgency incontinence, and pad use with solifenacin, and more patients achieving continence; no arm values are given.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse-event discontinuation",
+          "values": {
+            "exp": "low",
+            "ctl": "low"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract describes discontinuations as comparable and low, without group counts. Most adverse events were mild to moderate."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose adjustment",
+          "values": {
+            "exp": "5 mg daily; optional increase to 10 mg after 4 weeks",
+            "ctl": "4 mg ER daily throughout"
+          },
+          "locator": "PubMed abstract, Methods",
+          "note": "Patients in both blinded groups could request an increase, but only solifenacin could actually be increased under approved labeling."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2005_05_015.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "star-solifenacin-2007-subanalysis",
+      "kind": "secondary",
+      "label": "Starting-dose subanalysis",
+      "published": "2007-06-06",
+      "cutoff": null,
+      "citation": "Chapple CR, Fianu-Jonsson A, Indig M, et al. \"Treatment Outcomes in the STAR Study: A Subanalysis of Solifenacin 5 mg and Tolterodine ER 4 mg.\" *Eur Urol.* 2007;52(4):1195-1203. doi:10.1016/j.eururo.2007.05.027",
+      "doi": "10.1016/j.eururo.2007.05.027",
+      "pmid": "17574730",
+      "followUp": "4-week randomized starting-dose comparison; 12-week analysis among patients who remained on starting dose",
+      "followUpLocator": "PubMed abstract, Objective and Results",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean difference in change from baseline in episodes per 24 hours at 4 weeks",
+          "values": {
+            "exp": "-1.30",
+            "ctl": "-0.90"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.4,
+            "p": "0.0181"
+          },
+          "note": "The difference is solifenacin minus tolterodine, calculated from reported means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Pad use",
+          "role": "secondary",
+          "measure": "Mean difference in change from baseline in pads per 24 hours at 4 weeks",
+          "values": {
+            "exp": "-1.21",
+            "ctl": "-0.80"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.41,
+            "p": "0.0089"
+          },
+          "note": "The difference is solifenacin minus tolterodine, calculated from reported means.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_05_027.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/star-solifenacin",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

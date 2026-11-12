@@ -1,0 +1,200 @@
+{
+  "id": "hakvoort-catheter",
+  "name": "Hakvoort Catheter Duration Trial",
+  "aliases": [
+    "Hakvoort 2004"
+  ],
+  "nct": null,
+  "area": [
+    "perioperative"
+  ],
+  "decisions": [
+    {
+      "id": "postoperative-voiding",
+      "lane": "voiding-trial"
+    }
+  ],
+  "question": "After anterior colporrhaphy, how does catheter removal the next morning compare with removal on postoperative day 5?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 100,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Catheter removal the morning after surgery",
+        "n": 50,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "catheter removal on postoperative day 5",
+        "n": 50,
+        "role": "control"
+      }
+    ],
+    "population": "Women at a Dutch teaching hospital scheduled for anterior colporrhaphy alone or with posterior colporrhaphy and/or vaginal hysterectomy.",
+    "description": "Single-center randomized trial with an equivalence sample-size premise",
+    "locator": "Repository PDF chapter 2, journal pp 828–829, Methods and Figure 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Earlier removal increased recatheterization but reduced positive cultures, catheter days, and hospital stay.",
+  "takeaway": "After anterior colporrhaphy, next-morning catheter removal versus postoperative day 5 increased recatheterization (19/48 versus 4/46) but reduced positive urine cultures (2/48 versus 18/46), mean catheter duration, and hospital stay.",
+  "reports": [
+    {
+      "id": "hakvoort-catheter-2004",
+      "kind": "primary",
+      "label": "Randomized report",
+      "published": "2004-07-16",
+      "cutoff": null,
+      "citation": "Hakvoort RA, Elberink R, Vollebregt A, et al. How long should urinary bladder catheterisation be continued after vaginal prolapse surgery? A randomised controlled trial comparing short term versus long term catheterisation after vaginal prolapse surgery. *BJOG.* 2004;111(8):828-830. doi:10.1111/j.1471-0528.2004.00181.x",
+      "doi": "10.1111/j.1471-0528.2004.00181.x",
+      "pmid": "15270931",
+      "followUp": "Postoperative catheter removal, repeat voiding check after 3 additional catheter days, and index hospital stay",
+      "followUpLocator": "Repository PDF chapter 2, journal pp 828–830, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Recatheterization for postvoid residual at least 200 mL",
+          "role": "primary",
+          "measure": "Patients requiring repeat transurethral catheterization after first removal",
+          "values": {
+            "exp": "19/48 (40%)",
+            "ctl": "4/46 (9%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.15,
+            "ci": [
+              0.045,
+              0.47
+            ]
+          },
+          "met": false,
+          "note": "Odds ratio is prolonged versus next-morning removal, as reported. Sample-size planning allowed recatheterization as high as 50% in the early-removal arm; no formal equivalence result was reported.",
+          "locator": "Repository PDF chapter 2, journal p 829, Table 2 and Results"
+        },
+        {
+          "endpoint": "Positive urine culture",
+          "role": "primary",
+          "measure": "Culture above 10^5 CFU/mL before first catheter removal",
+          "values": {
+            "exp": "2/48 (4%)",
+            "ctl": "18/46 (39.1%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 15,
+            "ci": [
+              3.2,
+              68.6
+            ]
+          },
+          "met": true,
+          "note": "Odds ratio is prolonged versus next-morning removal, as reported. Table 2 prints 18/46 as 40%; direct calculation is 39.1%. Culture positivity, rather than symptomatic UTI, was the measured outcome.",
+          "locator": "Repository PDF chapter 2, journal pp 828–829, Methods and Table 2"
+        },
+        {
+          "endpoint": "Catheter duration",
+          "role": "primary",
+          "measure": "Mean catheterization days per patient",
+          "values": {
+            "exp": "2.3 days",
+            "ctl": "5.3 days"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.0,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Mean difference in days, next-morning minus day-5 removal, calculated from reported means.",
+          "locator": "Repository PDF chapter 2, journal p 829, Table 2"
+        },
+        {
+          "endpoint": "Hospital stay",
+          "role": "primary",
+          "measure": "Mean hospital stay in days",
+          "values": {
+            "exp": "5.7 days",
+            "ctl": "7.0 days"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.3,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Mean difference in days, next-morning minus day-5 removal, calculated from reported means.",
+          "locator": "Repository PDF chapter 2, journal p 829, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative bacteriuria by urine culture",
+          "values": {
+            "exp": "2/48 (4%)",
+            "ctl": "18/46 (39.1%)"
+          },
+          "locator": "Repository PDF chapter 2, journal p 829, Table 2",
+          "note": "The paper calls positive cultures urinary tract infections; symptoms and antibiotic treatment were not reported. Its printed 40% for 18/46 differs from the calculated 39.1%."
+        },
+        {
+          "label": "Persistent high residual after the second catheter",
+          "values": {
+            "exp": "2 patients",
+            "ctl": "0 patients"
+          },
+          "locator": "Repository PDF chapter 2, journal pp 829–830, Results",
+          "note": "Residual volume remained above 200 mL in two early-removal patients after three more catheter days; all analyzed prolonged-catheter patients were below 200 mL."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Postoperative catheter protocol",
+          "values": {
+            "exp": "14 Ch transurethral Foley removed the morning after surgery",
+            "ctl": "14 Ch transurethral Foley removed on postoperative day 5"
+          },
+          "locator": "Repository PDF chapter 2, journal pp 828–829, Methods"
+        },
+        {
+          "label": "Voiding assessment and recatheterization",
+          "value": "Bladder ultrasound within 8 hours of first catheter removal; postvoid residual at least 200 mL triggered a new transurethral catheter for 3 days, followed by repeat assessment.",
+          "locator": "Repository PDF chapter 2, journal pp 828–829, Methods"
+        },
+        {
+          "label": "Analyzed participants",
+          "values": {
+            "exp": "48/50",
+            "ctl": "46/50"
+          },
+          "locator": "Repository PDF chapter 2, journal p 829, Figure 1 and Results",
+          "note": "Four excluded in the prolonged arm (two posterior-only repairs, two preoperative infection indicators); two excluded in the early arm (preoperative infection indicators)."
+        },
+        {
+          "label": "Anterior and posterior colporrhaphy with or without vaginal hysterectomy",
+          "values": {
+            "exp": "40/48 recorded",
+            "ctl": "40/46 recorded"
+          },
+          "locator": "Repository PDF chapter 2, journal p 829, Table 1",
+          "note": "The early arm had 22 anterior/posterior repairs and 18 with vaginal hysterectomy; the control arm had 23 and 17, respectively. Table 1 records an anterior-only repair in 7 early and 6 control patients, leaving one early patient unclassified."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1471_0528_2004_00181_x.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/hakvoort-catheter",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

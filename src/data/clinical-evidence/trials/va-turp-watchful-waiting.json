@@ -1,0 +1,172 @@
+{
+  "id": "va-turp-watchful-waiting",
+  "name": "VA TURP versus watchful waiting",
+  "aliases": [
+    "Wasson 1995",
+    "VA Cooperative Study of TURP"
+  ],
+  "nct": null,
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "surgery-vs-watchful-waiting"
+    }
+  ],
+  "question": "Does immediate transurethral resection reduce treatment failure compared with watchful waiting in men with moderate BPH symptoms?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 556,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Immediate transurethral resection of the prostate",
+        "n": 280,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "watchful waiting",
+        "n": 276,
+        "role": "control"
+      }
+    ],
+    "population": "556 men older than 54 years with moderate symptoms of benign prostatic hyperplasia.",
+    "description": "Multicenter, open-label randomized superiority trial",
+    "locator": "PubMed abstract, Background and Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Watchful-waiting crossover to surgery reached 65/276 (24%) by three years.",
+  "takeaway": "In men with moderate BPH symptoms, immediate transurethral resection reduced three-year composite treatment failure versus watchful waiting (23/280 versus 47/276; RR 0.48, 95% CI 0.30–0.77).",
+  "reports": [
+    {
+      "id": "va-turp-watchful-waiting-1995",
+      "kind": "primary",
+      "label": "Three-year primary report",
+      "published": "1995-01-12",
+      "cutoff": null,
+      "citation": "Wasson JH, Reda DJ, Bruskewitz RC, et al. \"A Comparison of Transurethral Surgery with Watchful Waiting for Moderate Symptoms of Benign Prostatic Hyperplasia.\" *N Engl J Med.* 1995;332(2):75-79. doi:10.1056/NEJM199501123320202",
+      "doi": "10.1056/NEJM199501123320202",
+      "pmid": "7527493",
+      "followUp": "Mean 2.8 years; planned follow-up three years",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Treatment failure",
+          "role": "primary",
+          "measure": "Three-year composite treatment failure",
+          "values": {
+            "exp": "23/280 (8.2%)",
+            "ctl": "47/276 (17.0%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.48,
+            "ci": [
+              0.3,
+              0.77
+            ]
+          },
+          "met": null,
+          "note": "Intention-to-treat; composite included death, retention, postvoid residual above 350 mL, bladder calculus, persistent new incontinence, high symptom score, or doubled creatinine.",
+          "locator": "PubMed abstract, Methods and Results"
+        },
+        {
+          "endpoint": "Symptoms and urinary bother",
+          "role": "secondary",
+          "measure": "Symptom, urinary-difficulty, and daily-activity interference scores",
+          "values": {
+            "exp": "greater improvement",
+            "ctl": "less improvement"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for all comparisons"
+          },
+          "note": "The greatest benefit was reported among men most bothered by urinary symptoms at baseline.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Impotence and urinary incontinence",
+          "note": "Surgery was not associated with impotence or urinary incontinence in the reported comparison; absolute rates were not in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Early TURP receipt",
+          "value": "249/280 (89%) assigned to surgery underwent TURP within two weeks of randomization.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "label": "Watchful-waiting crossover",
+          "value": "65/276 (24%) assigned to watchful waiting underwent surgery within three years.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199501123320202.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "va-turp-watchful-waiting-1998",
+      "kind": "updated",
+      "label": "Five-year follow-up",
+      "published": "1998-07-01",
+      "cutoff": null,
+      "citation": "Flanigan RC, Reda DJ, Wasson JH, et al. \"5-Year Outcome of Surgical Resection and Watchful Waiting for Men with Moderately Symptomatic Benign Prostatic Hyperplasia: A Department of Veterans Affairs Cooperative Study.\" *J Urol.* 1998;160(1):12-17. doi:10.1016/S0022-5347(01)63011-8",
+      "doi": "10.1016/S0022-5347(01)63011-8",
+      "pmid": "9628595",
+      "followUp": "Up to five years; 966 TURP and 990 watchful-waiting patient-years",
+      "followUpLocator": "Europe PMC abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Treatment failure",
+          "role": "primary",
+          "measure": "Five-year treatment-failure risk; risk difference in percentage points",
+          "values": {
+            "exp": "10%",
+            "ctl": "21%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -11,
+            "p": "0.0004"
+          },
+          "met": null,
+          "note": "Risk difference in percentage points, calculated from the rounded percentages in the abstract; outcome denominators were not reported there.",
+          "locator": "Europe PMC abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Watchful-waiting crossover at five years",
+          "value": "36% of men assigned to watchful waiting crossed over to surgery.",
+          "locator": "Europe PMC abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_63011_8.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/va-turp-watchful-waiting",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

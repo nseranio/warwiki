@@ -1,0 +1,225 @@
+{
+  "id": "silodosin-pivotal",
+  "name": "Silodosin US pivotal trials",
+  "aliases": [
+    "Marks 2009",
+    "NCT00224120",
+    "SI04009",
+    "SI04010"
+  ],
+  "nct": "NCT00224107",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "alpha-blockers"
+    }
+  ],
+  "question": "Does silodosin improve lower urinary tract symptoms more than placebo in men with symptomatic BPH?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 923,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Silodosin 8 mg daily",
+        "n": 466,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 457,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged 50 years or older with IPSS at least 13 and peak urinary flow of 4–15 mL/s.",
+    "description": "Pooled, multicenter, double-blind phase 3 randomized trials",
+    "locator": "PubMed abstract, Materials and Methods and Results; ClinicalTrials.gov NCT00224107 and NCT00224120"
+  },
+  "verdict": "positive",
+  "verdictNote": "Symptom improvement favored silodosin; ejaculation-related adverse events were substantially more frequent.",
+  "takeaway": "Across two randomized US phase 3 trials, silodosin 8 mg daily improved IPSS more than placebo within 3–4 days, with a significant difference persisting through 12 weeks; reported retrograde ejaculation was more frequent with silodosin.",
+  "reports": [
+    {
+      "id": "silodosin-pivotal-2009",
+      "kind": "primary",
+      "label": "Pooled 12-week report",
+      "published": "2009-04-16",
+      "cutoff": null,
+      "citation": "Marks LS, Gittelman MC, Hill LA, Volinn W, Hoel G. \"Rapid efficacy of the highly selective alpha1A-adrenoceptor antagonist silodosin in men with signs and symptoms of benign prostatic hyperplasia: pooled results of 2 phase 3 studies.\" *J Urol.* 2009;181(6):2634-2640. doi:10.1016/j.juro.2009.02.034",
+      "doi": "10.1016/j.juro.2009.02.034",
+      "pmid": "19371887",
+      "followUp": "12 weeks of blinded treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "IPSS total score",
+          "role": "primary",
+          "measure": "Change from baseline to last observation; between-group superiority sustained through week 12",
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The abstract reports the week-12 significance but not the last-observation group means.",
+          "locator": "PubMed abstract, Materials and Methods and Results"
+        },
+        {
+          "endpoint": "IPSS total score",
+          "role": "secondary",
+          "measure": "Mean change from baseline after 3–4 days; mean difference −1.9 points",
+          "values": {
+            "exp": "−4.2 ± 5.3 points",
+            "ctl": "−2.3 ± 4.4 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.9,
+            "p": "<0.0001"
+          },
+          "note": "Early assessment at 0.5 week, range 3–4 days; SDs accompany group means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "secondary",
+          "measure": "Mean change from baseline 2–6 hours after first dose; mean difference 1.3 mL/s",
+          "values": {
+            "exp": "+2.8 ± 3.4 mL/s",
+            "ctl": "+1.5 ± 3.8 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.3,
+            "p": "<0.0001"
+          },
+          "note": "Between-group difference remained significant through week 12 (P <0.001).",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent retrograde ejaculation",
+          "values": {
+            "exp": "28.1%",
+            "ctl": "0.9%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Mostly mild; event counts are not given in the abstract."
+        },
+        {
+          "label": "Discontinuation for retrograde ejaculation",
+          "values": {
+            "exp": "2.8%",
+            "ctl": "not reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": ""
+        },
+        {
+          "label": "Treatment-emergent orthostatic hypotension",
+          "values": {
+            "exp": "2.6%",
+            "ctl": "1.5%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Blinded dosing",
+          "value": "Silodosin 8 mg or placebo once daily with breakfast for 12 weeks.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_02_034.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "silodosin-pivotal-2009-extension",
+      "kind": "updated",
+      "label": "40-week open-label extension",
+      "published": "2009-10-07",
+      "cutoff": null,
+      "citation": "Marks LS, Gittelman MC, Hill LA, Volinn W, Hoel G. \"Silodosin in the treatment of the signs and symptoms of benign prostatic hyperplasia: a 9-month, open-label extension study.\" *Urology.* 2009;74(6):1318-1322. doi:10.1016/j.urology.2009.06.072",
+      "doi": "10.1016/j.urology.2009.06.072",
+      "pmid": "19815265",
+      "followUp": "40 weeks after the 12-week blinded trials",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "IPSS total score",
+          "role": "descriptive",
+          "measure": "Observed-case mean change during extension to week 40, grouped by prior randomized treatment",
+          "values": {
+            "exp": "−1.6 ± 6.0 points (continued silodosin)",
+            "ctl": "−4.5 ± 6.7 points (prior placebo)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Both extension groups received silodosin; these are within-group changes from the extension baseline, not a randomized comparison.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events during extension",
+          "values": {
+            "exp": "431/661 (65.2%)",
+            "ctl": "not applicable"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "All extension participants received silodosin."
+        },
+        {
+          "label": "Retrograde ejaculation during extension",
+          "values": {
+            "exp": "20.9%",
+            "ctl": "not applicable"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "All extension participants received silodosin."
+        },
+        {
+          "label": "Orthostatic hypotension during extension",
+          "values": {
+            "exp": "2.6%",
+            "ctl": "not applicable"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "All extension participants received silodosin."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension completion",
+          "value": "435/661 (65.8%) completed 40 weeks of open-label silodosin 8 mg daily with breakfast.",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2009_06_072.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/silodosin-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "subsonic",
+  "name": "SUBSoNIC",
+  "aliases": [
+    "Subsensory sacral neuromodulation crossover trial"
+  ],
+  "nct": null,
+  "registry": "ISRCTN98760715",
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "neuromodulation"
+    }
+  ],
+  "question": "Does subsensory sacral neuromodulation reduce weekly fecal incontinence episodes compared with sham stimulation after permanent implantation?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 39,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Subsensory sacral neuromodulation",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham stimulation through the implanted device",
+        "role": "control"
+      }
+    ],
+    "population": "Adults aged 18–80 years with refractory fecal incontinence who responded to test stimulation and received a permanent sacral neuromodulator.",
+    "description": "Multicenter, double-blind randomized crossover superiority trial",
+    "locator": "Full text, Methods: Trial design, Eligibility criteria, and Allocation and blinding"
+  },
+  "verdict": "inconclusive",
+  "verdictNote": "The primary comparison missed significance with complete diaries from only 16 participants.",
+  "takeaway": "In 39 implanted adults with refractory fecal incontinence, subsensory sacral neuromodulation versus sham stimulation did not significantly reduce weekly incontinence episodes in the 16 with complete crossover diaries (mean difference −0.795 episodes; 95% CI −1.5 to 0.0; P = 0.06).",
+  "reports": [
+    {
+      "id": "subsonic-2025",
+      "kind": "primary",
+      "label": "Crossover trial and 58-week cohort follow-up",
+      "published": "2025-11-11",
+      "cutoff": null,
+      "citation": "Vollebregt PF, Goh YL, Bagul A, et al. \"Clinical efficacy of subsensory sacral neuromodulation in adults with faecal incontinence: The SUBSoNIC crossover randomised controlled trial and cohort follow-up study.\" *Colorectal Dis.* 2025;27(11):e70308. doi:10.1111/codi.70308",
+      "doi": "10.1111/codi.70308",
+      "pmid": "41220094",
+      "followUp": "Two 16-week blinded crossover periods; open-label cohort follow-up to 58 weeks",
+      "followUpLocator": "Full text, Methods: Trial design",
+      "results": [
+        {
+          "endpoint": "Weekly fecal incontinence episodes",
+          "role": "primary",
+          "measure": "Mean episodes per week in final four weeks of each crossover period; mean difference, subsensory SNM minus sham",
+          "values": {
+            "exp": "2.3 (SD 2.8; n=16)",
+            "ctl": "3.0 (SD 3.7; n=16)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.795,
+            "ci": [
+              -1.5,
+              0.0
+            ],
+            "p": "0.06"
+          },
+          "met": false,
+          "note": "The abstract gives −0.795; Table 2 rounds the mean difference to −0.7. Paired analysis included 16 participants with complete data in both periods.",
+          "locator": "PubMed abstract, Results; full text, Table 2 and Results: Primary outcome"
+        },
+        {
+          "endpoint": "Weekly fecal incontinence episodes",
+          "role": "exploratory",
+          "measure": "Sensitivity-analysis mean difference, subsensory SNM minus sham, imputing blank diary items as zero when another item was completed that day",
+          "values": {
+            "exp": "Not separately reported",
+            "ctl": "Not separately reported"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.9,
+            "ci": [
+              -1.8,
+              0.0
+            ],
+            "p": "0.04"
+          },
+          "note": "Missing-day imputation changed the inference; this was a sensitivity analysis, not the primary analysis.",
+          "locator": "Full text, Results: Primary outcome; Figure 2; supplementary Table S9 cited in text"
+        },
+        {
+          "endpoint": "Fecal urgency episodes",
+          "role": "secondary",
+          "measure": "Mean episodes per week during crossover; mean difference, subsensory SNM minus sham",
+          "values": {
+            "exp": "3.2 (SD 2.5; n=16)",
+            "ctl": "2.7 (SD 2.6; n=16)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.5,
+            "ci": [
+              -0.4,
+              1.4
+            ],
+            "p": "0.23"
+          },
+          "note": "Urgency without incontinence; no significant between-treatment difference.",
+          "locator": "Full text, Table 2"
+        },
+        {
+          "endpoint": "Weekly fecal incontinence episodes",
+          "role": "descriptive",
+          "measure": "Mean episodes per week in open-label cohort at baseline and 58 weeks",
+          "values": {
+            "exp": "3.2 (SD 3.3) at 58 weeks; n=19",
+            "ctl": "6.2 (SD 5.9) at baseline; same 19 participants"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Within-cohort comparison; patients chose subsensory or suprasensory stimulation during open-label follow-up.",
+          "locator": "Full text, Table 3 and Results: Cohort follow-up"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events during crossover and cohort follow-up",
+          "values": {
+            "exp": "10 events overall",
+            "ctl": "Not reported by stimulation condition"
+          },
+          "locator": "Full text, Results: Adverse events (crossover and cohort follow-up)",
+          "note": "The article reports event count, not the number of affected patients; types are in supplementary Table S12, unavailable in the extracted local text."
+        },
+        {
+          "label": "Serious adverse device events",
+          "values": {
+            "exp": "1 event overall",
+            "ctl": "Not reported by stimulation condition"
+          },
+          "locator": "Full text, Results: Adverse events (crossover and cohort follow-up)",
+          "note": "The reported serious adverse device event did not require overnight hospitalization; treatment period was not specified."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Randomized sequences and outcome completion",
+          "value": "17 randomized to active then sham and 22 to sham then active; 9 and 7, respectively, completed both primary-outcome diaries; 19/39 completed 58-week follow-up.",
+          "locator": "Full text, Results: Participants; Figure 1"
+        },
+        {
+          "label": "Implantation and lead-placement criteria",
+          "value": "Test stimulation preceded randomization; responders received an InterStim II pulse generator with fluoroscopy-guided S3 or S4 lead placement and low-voltage motor responses at at least three of four electrodes.",
+          "locator": "Full text, Methods: SNM surgery"
+        },
+        {
+          "label": "Programming and sham",
+          "value": "Active stimulation used 14 Hz and 210 μs, with amplitude below the habituated sensory threshold; sham amplitude was 0 or 0.05 V. Reprogramming was scheduled six weeks after each period began.",
+          "locator": "Full text, Methods: Active stimulation and SHAM stimulation"
+        },
+        {
+          "label": "Study discontinuation",
+          "value": "Enrollment stopped July 24, 2022, after 39/90 planned randomizations because COVID-19 disruptions impeded recruitment, visits, and surgery.",
+          "locator": "Full text, Methods: Sample size; Results: Participants"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_codi_70308.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/subsonic",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

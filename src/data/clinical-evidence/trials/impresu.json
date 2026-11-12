@@ -1,0 +1,241 @@
+{
+  "id": "impresu",
+  "name": "ImpresU",
+  "aliases": [
+    "ImpresUWP3",
+    "Methenamine hippurate in older women"
+  ],
+  "nct": "NCT04077580",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "prophylaxis"
+    }
+  ],
+  "question": "Does methenamine hippurate reduce antibiotic-treated recurrent urinary tract infections versus placebo in women aged at least 70 years?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "triple-blind",
+    "type": "superiority",
+    "n": 289,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Methenamine hippurate 1 g twice daily",
+        "n": 144,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "matching placebo twice daily",
+        "n": 145,
+        "role": "control"
+      }
+    ],
+    "population": "289 women aged at least 70 years with at least two UTI antibiotic courses in six months or three in twelve months were randomized through general practices in Norway, Sweden, Poland and the Netherlands.",
+    "description": "Multinational, triple-blind, placebo-controlled phase 4 randomized trial",
+    "locator": "Primary article, journal pp1874–1875, Methods and Results (Participants), Fig. 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "The primary mITT analysis met significance; the complete-case sensitivity analysis did not.",
+  "takeaway": "In women aged at least 70 years with recurrent UTI, six months of methenamine hippurate reduced antibiotic-treated UTI incidence versus placebo (adjusted IRR 0.75, 95% CI 0.57–1.0; P = 0.049); incidence was higher in the former methenamine arm after treatment ended.",
+  "reports": [
+    {
+      "id": "impresu-2025",
+      "kind": "primary",
+      "label": "Six-month placebo-controlled efficacy report",
+      "published": "2025-07-14",
+      "cutoff": null,
+      "citation": "Heltveit-Olsen SR, Arnljots ES, Sundvall PD, et al. \"Methenamine hippurate as prophylaxis for recurrent urinary tract infections in older women—a triple-blind, randomised, placebo-controlled, phase IV trial (ImpresU).\" *Clin Microbiol Infect.* 2025;31(11):1873-1879. doi:10.1016/j.cmi.2025.07.006",
+      "doi": "10.1016/j.cmi.2025.07.006",
+      "pmid": "40669691",
+      "followUp": "Six months of treatment and six months after treatment cessation",
+      "followUpLocator": "Primary article, journal pp1873–1874, Abstract and Methods (Study design)",
+      "results": [
+        {
+          "endpoint": "Antibiotic-treated symptomatic UTI",
+          "role": "primary",
+          "measure": "Number of antibiotic courses for UTI during six months of treatment; adjusted incidence rate ratio (IRR), methenamine versus placebo; mITT with imputation",
+          "values": {
+            "exp": "87 episodes among 140 analyzed women",
+            "ctl": "111 episodes among 141 analyzed women"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.75,
+            "ci": [
+              0.57,
+              1.0
+            ],
+            "p": "0.049"
+          },
+          "met": true,
+          "note": "Episodes required at least 14 symptom-free days between them. Negative binomial regression adjusted for age, local estrogen treatment, diabetes, previous urinary tract stone, baseline urease-producing bacteria and urine pH. The CI upper bound is rounded to 1.0 in the report.",
+          "locator": "Primary article, journal p1875, Results (Primary outcome); p1877, Table 2"
+        },
+        {
+          "endpoint": "Antibiotic-treated symptomatic UTI",
+          "role": "secondary",
+          "measure": "Per-protocol sensitivity analysis during six months of treatment; adjusted incidence rate ratio (IRR)",
+          "effect": {
+            "type": "RR",
+            "value": 0.68,
+            "ci": [
+              0.49,
+              0.97
+            ],
+            "p": "0.031"
+          },
+          "note": "217 participants in the per-protocol analysis; arm-specific counts are not given in Table 2.",
+          "locator": "Primary article, journal p1877, Table 2"
+        },
+        {
+          "endpoint": "Antibiotic-treated symptomatic UTI",
+          "role": "secondary",
+          "measure": "Complete-case sensitivity analysis during six months of treatment; adjusted incidence rate ratio (IRR)",
+          "effect": {
+            "type": "RR",
+            "value": 0.77,
+            "ci": [
+              0.58,
+              1.0
+            ],
+            "p": "0.078"
+          },
+          "note": "271 participants in the complete-case analysis; arm-specific counts are not given in Table 2.",
+          "locator": "Primary article, journal p1877, Table 2"
+        },
+        {
+          "endpoint": "Antibiotic-treated symptomatic UTI after stopping study drug",
+          "role": "secondary",
+          "measure": "Number of antibiotic courses for UTI during the subsequent six drug-free months; adjusted incidence rate ratio (IRR), former methenamine versus former placebo; mITT with imputation",
+          "values": {
+            "exp": "133 episodes among 140 analyzed women",
+            "ctl": "82 episodes among 141 analyzed women"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.7,
+            "ci": [
+              1.3,
+              2.3
+            ],
+            "p": "<0.001"
+          },
+          "note": "Between-arm comparison during the off-treatment period, not a within-person change from the treatment period.",
+          "locator": "Primary article, journal p1875, Results (Secondary outcomes); p1877, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "7 events",
+            "ctl": "7 events"
+          },
+          "locator": "Primary article, journal p1876, Results (Safety)",
+          "note": "Fourteen serious adverse events were equally distributed across arms; all were deemed unrelated or unlikely to be related to study treatment. These are event counts, not participant counts."
+        },
+        {
+          "label": "Serious adverse events related or possibly related to UTI",
+          "values": {
+            "exp": "3 events",
+            "ctl": "3 events"
+          },
+          "locator": "Primary article, journal p1876, Results (Safety)",
+          "note": "Six of the fourteen serious adverse events were related or possibly related to a UTI."
+        },
+        {
+          "label": "Bladder irritation",
+          "locator": "Primary article, journal p1876, Results (Safety)",
+          "note": "The only side effect reported as more frequent with methenamine; the main article gives no arm counts."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study regimen",
+          "values": {
+            "exp": "Methenamine hippurate 1 g twice daily for six months",
+            "ctl": "Matching placebo one tablet twice daily for six months"
+          },
+          "locator": "Primary article, journal p1874, Methods (Study design)"
+        },
+        {
+          "label": "Study-drug adherence",
+          "values": {
+            "exp": "26/144 took less than 80% of study medication",
+            "ctl": "28/145 took less than 80% of study medication"
+          },
+          "locator": "Primary article, journal p1875, Results (Participants)",
+          "note": "The article prints 26 (9.0%) and 28 (9.7%) using all 289 randomized women as denominator; arm-specific denominators are 144 and 145."
+        },
+        {
+          "label": "Additional prophylaxis",
+          "values": {
+            "exp": "7/144 women started prophylactic UTI antibiotics",
+            "ctl": "13/145 women started prophylactic UTI antibiotics"
+          },
+          "locator": "Primary article, journal p1875, Results (Participants)",
+          "note": "Twenty women started prophylactic antibiotics during the study, ten during treatment and ten during drug-free follow-up."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_cmi_2025_07_006.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "impresu-2026-microbiology",
+      "kind": "secondary",
+      "label": "Microbiology and antibiotic-resistance analysis",
+      "published": "2026-07-04",
+      "cutoff": null,
+      "citation": "Heltveit-Olsen SR, Grude N, Arnljots ES, et al. \"Microbiological findings, antibiotic resistance rates and prescription practices for older women with recurrent urinary tract infections: a descriptive study alongside a multinational randomized controlled trial (ImpresU).\" *JAC Antimicrob Resist.* 2026;8(4):dlag121. doi:10.1093/jacamr/dlag121",
+      "doi": "10.1093/jacamr/dlag121",
+      "pmid": "42405348",
+      "followUp": "Baseline cultures and symptomatic UTI episodes across the twelve-month randomized study",
+      "followUpLocator": "Full text, Patients and methods (Study design; Procedures), Results (Study population; Acute UTIs)",
+      "results": [
+        {
+          "endpoint": "Antibiotic resistance in E. coli from symptomatic UTI cultures",
+          "role": "descriptive",
+          "measure": "Comparison of resistance proportions in cultured E. coli isolates, adjusted for baseline resistance",
+          "values": {
+            "exp": "57 E. coli isolates from acute UTI cultures",
+            "ctl": "50 E. coli isolates from acute UTI cultures"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No significant adjusted between-arm differences for tested antibiotics; only 178/399 (45%) symptomatic UTI episodes were cultured, and susceptibility testing varied by drug.",
+          "locator": "Microbiology report, Results (Acute UTIs, Antibiotic resistance patterns), Table 5"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_jacamr_dlag121.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "altar",
+      "note": "ALTAR found methenamine noninferior to daily antibiotics; ImpresU cited that result and tested methenamine against placebo in older women."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/impresu",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

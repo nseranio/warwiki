@@ -1,0 +1,163 @@
+{
+  "id": "lactin-v",
+  "name": "Lactin-V",
+  "aliases": [
+    "Stapleton 2011",
+    "Lactobacillus crispatus CTV-05"
+  ],
+  "nct": "NCT00305227",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "nonantibiotic"
+    }
+  ],
+  "question": "Does intravaginal Lactin-V after treatment of acute cystitis prevent recurrent urinary tract infection in premenopausal women?",
+  "design": {
+    "phase": "2",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 100,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intravaginal Lactobacillus crispatus CTV-05 (Lactin-V)",
+        "n": 50,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "intravaginal placebo",
+        "n": 50,
+        "role": "control"
+      }
+    ],
+    "population": "Premenopausal women aged 18–40 years with treated acute uncomplicated cystitis and at least one prior treated symptomatic UTI in the preceding 12 months.",
+    "description": "Single-center, double-blind, placebo-controlled phase 2 randomized trial",
+    "locator": "Methods, Participants, Randomization and Study Design; Results, Enrollment and Demographics"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Vaginal colonization increased; the recurrent-UTI confidence interval crossed the null.",
+  "takeaway": "Intravaginal Lactobacillus crispatus CTV-05 (Lactin-V) after cystitis treatment yielded fewer recurrent UTIs than placebo over 10 weeks, but the confidence interval included no reduction; high-level vaginal L. crispatus colonization was more frequent with Lactin-V.",
+  "reports": [
+    {
+      "id": "lactin-v-2011",
+      "kind": "primary",
+      "label": "Phase 2 primary report",
+      "published": "2011-04-14",
+      "cutoff": null,
+      "citation": "Stapleton AE, Au-Yeung M, Hooton TM, et al. \"Randomized, Placebo-Controlled Phase 2 Trial of a Lactobacillus crispatus Probiotic Given Intravaginally for Prevention of Recurrent Urinary Tract Infection.\" *Clin Infect Dis.* 2011;52(10):1212-1217. doi:10.1093/cid/cir183",
+      "doi": "10.1093/cid/cir183",
+      "pmid": "21498386",
+      "followUp": "Scheduled visits at 1 and 10 weeks after starting suppositories",
+      "followUpLocator": "Methods, Study Design",
+      "results": [
+        {
+          "endpoint": "Symptomatic UTI recurrence",
+          "role": "primary",
+          "measure": "At least one symptomatic, pyuria-positive, culture-confirmed UTI by 10 weeks",
+          "values": {
+            "exp": "7/48 (15%)",
+            "ctl": "13/48 (27%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.5,
+            "ci": [
+              0.2,
+              1.2
+            ]
+          },
+          "met": false,
+          "note": "Two randomized participants per arm were not in the recurrence analysis. The published report gives no prespecified alpha; the confidence interval includes 1. UTI required symptoms, pyuria (at least 8 WBC/high-power field), and positive urine culture.",
+          "locator": "Results, Clinical Outcomes; Table 2; Methods, Participants"
+        },
+        {
+          "endpoint": "High-level vaginal L. crispatus colonization",
+          "role": "primary",
+          "measure": "At 10-week visit, at least 10^6 16S rRNA gene copies per vaginal swab",
+          "values": {
+            "exp": "39/42 (93%)",
+            "ctl": "30/44 (68%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.004"
+          },
+          "met": true,
+          "note": "The report identifies colonization as part of its primary objective and calls the comparison significant; it does not specify a formal alpha threshold.",
+          "locator": "Methods, Sample Size, Objectives; Results, Clinical Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any reported adverse effect",
+          "values": {
+            "exp": "56% (n=50)",
+            "ctl": "50% (n=50)"
+          },
+          "locator": "Results, Safety and Tolerability; Results, Enrollment and Demographics",
+          "note": "Most common reported effects were vaginal discharge, itching, or moderate abdominal discomfort; per-symptom arm counts were not given."
+        },
+        {
+          "label": "Treatment discontinuation for adverse effects",
+          "values": {
+            "exp": "0/50",
+            "ctl": "1/50"
+          },
+          "locator": "Results, Safety and Tolerability; Results, Enrollment and Demographics",
+          "note": "The single discontinuation was in the placebo arm."
+        },
+        {
+          "label": "Bacterial vaginosis or candidal vaginitis",
+          "values": {
+            "exp": "0–5%",
+            "ctl": "0–5%"
+          },
+          "locator": "Results, Safety and Tolerability",
+          "note": "The paper reports the 0–5% range for these conditions across both arms, without condition-specific arm counts."
+        },
+        {
+          "label": "Pyelonephritis",
+          "values": {
+            "exp": "0/50",
+            "ctl": "0/50"
+          },
+          "locator": "Results, Safety and Tolerability; Results, Enrollment and Demographics",
+          "note": "No episodes were reported in either group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Suppository regimen",
+          "value": "After standard treatment for acute cystitis, self-administered gelatin vaginal capsule without applicator (Lactin-V 10^8 CFU/mL or placebo), daily for 5 days, then weekly for 10 weeks.",
+          "locator": "Methods, Study Design"
+        },
+        {
+          "label": "Recurrence outcome evaluability",
+          "values": {
+            "exp": "48/50",
+            "ctl": "48/50"
+          },
+          "locator": "Results, Enrollment and Demographics; Table 2"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_cid_cir183.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/lactin-v",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "id": "amitriptyline-van-ophoven",
+  "name": "van Ophoven amitriptyline trial",
+  "aliases": [
+    "van Ophoven 2004"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "ic-bps-treatment",
+      "lane": "oral-therapy"
+    }
+  ],
+  "question": "Does oral amitriptyline improve interstitial cystitis symptoms more than placebo after four months?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 50,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Amitriptyline",
+        "n": 25,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 25,
+        "role": "control"
+      }
+    ],
+    "population": "Fifty patients (44 women and 6 men) meeting National Institute of Diabetes, Digestive and Kidney Diseases symptom criteria for interstitial cystitis.",
+    "description": "Double-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Materials and Methods and Results; 25 per arm inferred from 24 evaluable plus one withdrawal per arm"
+  },
+  "verdict": "positive",
+  "verdictNote": "The primary symptom score favored amitriptyline; anticholinergic effects were common.",
+  "takeaway": "In a four-month randomized trial for interstitial cystitis, amitriptyline improved the O'Leary-Sant symptom/problem score more than placebo (mean change −8.4 versus −3.5; p = 0.005), with anticholinergic effects in 92% versus 21% of evaluable patients.",
+  "reports": [
+    {
+      "id": "amitriptyline-van-ophoven-2004",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2004-08-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print: August 2004; PubMed citation: 2004 Aug",
+      "cutoff": null,
+      "citation": "van Ophoven A, Pokupic S, Heinecke A, Hertle L. \"A prospective, randomized, placebo controlled, double-blind study of amitriptyline for the treatment of interstitial cystitis.\" *J Urol.* 2004;172(2):533-536. doi:10.1097/01.ju.0000132388.54703.4d",
+      "doi": "10.1097/01.ju.0000132388.54703.4d",
+      "pmid": "15247722",
+      "followUp": "Four months of treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "O'Leary-Sant IC symptom and problem index score",
+          "role": "primary",
+          "measure": "Mean change from baseline to four months; between-arm mean difference in change",
+          "values": {
+            "exp": "26.9 to 18.5 (change −8.4; n=24 evaluable)",
+            "ctl": "27.6 to 24.1 (change −3.5; n=24 evaluable)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -4.9,
+            "p": "0.005"
+          },
+          "met": true,
+          "note": "Mean changes and between-arm difference are arithmetic derivations from reported baseline and final means; the abstract calls this statistically significant.",
+          "locator": "PubMed abstract, Materials and Methods and Results"
+        },
+        {
+          "endpoint": "Pain and urgency intensity",
+          "role": "secondary",
+          "measure": "Visual analog scale changes at four months",
+          "values": {
+            "exp": "Improved",
+            "ctl": "Less improvement"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "The abstract does not give arm-specific scale values.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urinary frequency",
+          "role": "secondary",
+          "measure": "48-hour voiding log change at four months",
+          "values": {
+            "exp": "Greater improvement",
+            "ctl": "Less improvement"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.063"
+          },
+          "note": "Between-arm difference was not statistically significant; the abstract does not give arm-specific values.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Functional bladder capacity",
+          "role": "secondary",
+          "measure": "48-hour voiding log change at four months",
+          "values": {
+            "exp": "Greater improvement",
+            "ctl": "Less improvement"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.083"
+          },
+          "note": "Between-arm difference was not statistically significant; the abstract does not give arm-specific values.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Anticholinergic side effects",
+          "values": {
+            "exp": "22/24 (92%)",
+            "ctl": "5/24 (21%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports all but two amitriptyline patients and five placebo patients among 24 evaluable per arm."
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "79% (19/24 implied)",
+            "ctl": "not reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The source gives 79% but not a numerator; 19/24 rounds to 79%."
+        },
+        {
+          "label": "Withdrawal because of side effects",
+          "values": {
+            "exp": "1/25 (4%)",
+            "ctl": "1/25 (4%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports one withdrawal per arm; randomized arm denominators are inferred."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose escalation and duration",
+          "value": "Self-titrated amitriptyline or placebo in 25 mg increments at one-week intervals, up to 100 mg, for four months.",
+          "locator": "PubMed abstract, Materials and Methods"
+        },
+        {
+          "label": "Available for endpoint evaluation",
+          "values": {
+            "exp": "24/25 (96%)",
+            "ctl": "24/25 (96%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports 24 evaluable per arm after one withdrawal per arm; randomized arm denominators are inferred."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000132388_54703_4d.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "conflicts",
+      "target": "icrn-amitriptyline",
+      "note": "The later treatment-naïve trial with behavioral care found no significant intention-to-treat global-response benefit."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/amitriptyline-van-ophoven",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

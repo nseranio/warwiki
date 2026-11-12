@@ -206,7 +206,7 @@ def trial_page_sources(path):
 _AUA = r"(?:AUA|American Urological Association)"
 _EAU = r"(?:EAU|European Association of Urology)"
 GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (AUA and NCCN permission; never auanet.org)
-    ((_AUA, r"Part II: Medical Management|Goueli"), "aua-bph-2026-goueli.txt"),
+    ((_AUA, r"Part II: Medical Management"), "aua-bph-2026-goueli.txt"),
     ((_AUA, r"Lower Urinary Tract Symptoms|Benign Prostatic Hyperplasia|\bBPH\b"), "aua-bph-2026-unabridged.txt"),
     ((_AUA, r"Overactive Bladder"), "aua-oab-2024-unabridged.txt"),
     ((_AUA, r"Interstitial Cystitis|Bladder Pain"), "aua-ic-bps-2022-unabridged.txt"),
@@ -223,6 +223,7 @@ GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (
     ((_EAU, r"Neuro-?[Uu]rology"), "eau-neuro-urology-2026.txt"),
     ((_EAU, r"Urological Infections"), "eau-urological-infections-2026.txt"),
     ((_EAU, r"Urethral Strictures"), "eau-urethral-strictures-2026.txt"),
+    ((r"AUGS|Urogynecology|Mueller MG", r"Postoperative Activity Instructions"), "augs-2026-09/postoperative-activity-instructions-following-urogynecologic.txt"),
     ((r"NICE|NG123", r"\bNG123\b|[Uu]rinary incontinence and pelvic organ prolapse"), "nice-ng123-ui-pop-women.txt"),
 ]
 
