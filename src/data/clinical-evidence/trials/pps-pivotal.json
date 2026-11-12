@@ -1,0 +1,260 @@
+{
+  "id": "pps-pivotal",
+  "name": "PPS pivotal trials",
+  "aliases": [
+    "Elmiron",
+    "Mulholland 1990",
+    "Parsons 1993"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "ic-bps-treatment",
+      "lane": "oral-therapy"
+    }
+  ],
+  "question": "Does oral pentosan polysulfate sodium improve interstitial cystitis symptoms more than placebo?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 110,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Oral pentosan polysulfate sodium",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "role": "control"
+      }
+    ],
+    "population": "110 patients with interstitial cystitis enrolled in the multicenter primary study.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "Mulholland 1990 PubMed abstract, opening and Results; AUA IC/BPS 2022, PPS evidence discussion"
+  },
+  "verdict": "positive",
+  "verdictNote": "Patient-reported global improvement favored PPS after three months.",
+  "takeaway": "In the three-month Mulholland trial, oral pentosan polysulfate sodium produced patient-reported global improvement greater than 25% in 28% versus 13% with placebo (P = 0.03).",
+  "reports": [
+    {
+      "id": "pps-pivotal-1990",
+      "kind": "primary",
+      "label": "Mulholland placebo-controlled trial",
+      "published": "1990-06-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation: 1990 Jun",
+      "cutoff": null,
+      "citation": "Mulholland SG, Hanno P, Parsons CL, et al. \"Pentosan polysulfate sodium for therapy of interstitial cystitis. A double-blind placebo-controlled clinical study.\" *Urology.* 1990;35(6):552-558. doi:10.1016/0090-4295(90)80116-5",
+      "doi": "10.1016/0090-4295(90)80116-5",
+      "pmid": "1693797",
+      "followUp": "3 months of treatment",
+      "followUpLocator": "PubMed abstract, opening",
+      "results": [
+        {
+          "endpoint": "Patient-reported global improvement",
+          "role": "primary",
+          "measure": "Greater than 25% overall improvement at 3 months; risk difference in percentage points",
+          "values": {
+            "exp": "28%",
+            "ctl": "13%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15,
+            "p": "0.03"
+          },
+          "met": true,
+          "note": "Risk difference calculated from the reported rounded percentages; arm denominators unavailable in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Investigator-rated global improvement",
+          "role": "secondary",
+          "measure": "Overall improvement at 3 months; risk difference in percentage points",
+          "values": {
+            "exp": "26%",
+            "ctl": "11%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 15,
+            "p": "0.04"
+          },
+          "note": "Risk difference calculated from the reported rounded percentages; arm denominators unavailable in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Pain improvement",
+          "role": "secondary",
+          "measure": "Between-group symptom comparison at 3 months",
+          "values": {
+            "exp": "favored PPS",
+            "ctl": "placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.07"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Pressure-to-urinate improvement",
+          "role": "secondary",
+          "measure": "Between-group symptom comparison at 3 months",
+          "values": {
+            "exp": "favored PPS",
+            "ctl": "placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.08"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse reactions",
+          "values": {
+            "exp": "6%",
+            "ctl": "13%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "All reported adverse reactions were minor; arm denominators unavailable in the abstract."
+        },
+        {
+          "label": "Treatment discontinued for adverse reaction",
+          "values": {
+            "exp": "1 patient",
+            "ctl": "2 patients"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Arm denominators unavailable in the abstract."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_0090_4295_90_80116_5.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pps-pivotal-1993",
+      "kind": "secondary",
+      "label": "Independent Parsons placebo-controlled trial",
+      "published": "1993-09-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation: 1993 Sep",
+      "cutoff": null,
+      "citation": "Parsons CL, Benson G, Childs SJ, et al. \"A quantitatively controlled method to study prospectively interstitial cystitis and demonstrate the efficacy of pentosanpolysulfate.\" *J Urol.* 1993;150(3):845-848. doi:10.1016/s0022-5347(17)35629-x",
+      "doi": "10.1016/s0022-5347(17)35629-x",
+      "pmid": "7688432",
+      "followUp": "not stated in abstract",
+      "followUpLocator": "PubMed abstract",
+      "results": [
+        {
+          "endpoint": "Patient-reported global improvement",
+          "role": "primary",
+          "measure": "Significant overall symptom improvement; risk difference in percentage points",
+          "values": {
+            "exp": "32%",
+            "ctl": "16%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 16,
+            "p": "0.01"
+          },
+          "met": true,
+          "note": "Independent randomized cohort; response cutoff and arm denominators unavailable in the abstract. Risk difference calculated from rounded percentages.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Pain on analogue scale",
+          "role": "secondary",
+          "measure": "Between-group decrease in pain",
+          "values": {
+            "exp": "greater decrease",
+            "ctl": "placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.04"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urgency on analogue scale",
+          "role": "secondary",
+          "measure": "Between-group decrease in urgency",
+          "values": {
+            "exp": "greater decrease",
+            "ctl": "placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Voided volume",
+          "role": "secondary",
+          "measure": "Patients with mean increase greater than 20 mL",
+          "values": {
+            "exp": "more patients",
+            "ctl": "placebo"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Minor adverse effects",
+          "values": {
+            "exp": "7 reported",
+            "ctl": "10 reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract gives counts of adverse effects without arm denominators."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Patient global symptom scale",
+          "value": "Worse or 0%, 25%, 50%, 75%, or 100% improved",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Oral PPS regimen",
+          "value": "100 mg three times daily versus placebo at 7 centers (148 patients)",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_17_35629_x.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/pps-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": "va-coop-bph",
+  "name": "VA Cooperative BPH",
+  "aliases": [
+    "Veterans Affairs Cooperative Study 359",
+    "Veterans Affairs Cooperative Studies Benign Prostatic Hyperplasia Study Group"
+  ],
+  "nct": null,
+  "registry": "VA Cooperative Study 359",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "combination"
+    }
+  ],
+  "question": "Do terazosin, finasteride, or their combination improve symptoms and peak urinary flow more than placebo in men with symptomatic BPH?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1229,
+    "arms": [
+      {
+        "key": "pbo",
+        "label": "Placebo",
+        "role": "control"
+      },
+      {
+        "key": "ter",
+        "label": "terazosin 10 mg daily",
+        "role": "experimental"
+      },
+      {
+        "key": "fin",
+        "label": "finasteride 5 mg daily",
+        "role": "experimental"
+      },
+      {
+        "key": "combo",
+        "label": "terazosin plus finasteride",
+        "role": "experimental"
+      }
+    ],
+    "population": "1,229 men with symptomatic benign prostatic hyperplasia.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Methods; PubMed publication types and MeSH"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Terazosin improved both endpoints; finasteride and its addition to terazosin did not.",
+  "takeaway": "Over one year, terazosin 10 mg daily improved symptom scores and peak urinary flow versus placebo in men with BPH; finasteride 5 mg daily did not, and adding it to terazosin gave no additional benefit.",
+  "reports": [
+    {
+      "id": "va-coop-bph-1996",
+      "kind": "primary",
+      "label": "Primary symptom and flow report",
+      "published": "1996-08-22",
+      "cutoff": null,
+      "citation": "Lepor H, Williford WO, Barry MJ, et al. \"The Efficacy of Terazosin, Finasteride, or Both in Benign Prostatic Hyperplasia.\" *N Engl J Med.* 1996;335(8):533-540. doi:10.1056/NEJM199608223350801",
+      "doi": "10.1056/NEJM199608223350801",
+      "pmid": "8684407",
+      "followUp": "1 year",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "AUA symptom score",
+          "role": "primary",
+          "measure": "Mean decrease from baseline at 1 year, points",
+          "values": {
+            "pbo": "2.6 points",
+            "ter": "6.1 points",
+            "fin": "3.2 points",
+            "combo": "6.2 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for terazosin and combination versus finasteride and placebo"
+          },
+          "met": null,
+          "note": "Finasteride did not differ from placebo; combination was no more effective than terazosin alone.",
+          "locator": "PubMed abstract, Results and Conclusions"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "primary",
+          "measure": "Mean increase from baseline at 1 year, mL/s",
+          "values": {
+            "pbo": "1.4 mL/s",
+            "ter": "2.7 mL/s",
+            "fin": "1.6 mL/s",
+            "combo": "3.2 mL/s"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for terazosin and combination versus finasteride and placebo"
+          },
+          "met": null,
+          "note": "Finasteride did not differ from placebo; combination was no more effective than terazosin alone.",
+          "locator": "PubMed abstract, Results and Conclusions"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Discontinuation because of adverse effects",
+          "locator": "PubMed abstract, Results",
+          "note": "1.6% with placebo versus 4.8%-7.8% across the three active groups; the abstract gives no arm-specific rates or denominators."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assigned daily doses",
+          "values": {
+            "ter": "terazosin 10 mg",
+            "fin": "finasteride 5 mg",
+            "combo": "both drugs at the assigned doses"
+          },
+          "locator": "PubMed abstract, Methods",
+          "note": ""
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199608223350801.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "va-coop-bph-1998-bother",
+      "kind": "secondary",
+      "label": "Symptom bother and quality of life",
+      "published": "1998-10-01",
+      "cutoff": null,
+      "citation": "Lepor H, Williford WO, Barry MJ, et al. \"The impact of medical therapy on bother due to symptoms, quality of life and global outcome, and factors predicting response.\" *J Urol.* 1998;160(4):1358-1367. doi:10.1016/S0022-5347(01)62536-9",
+      "doi": "10.1016/S0022-5347(01)62536-9",
+      "pmid": "9751354",
+      "followUp": "1 year",
+      "followUpLocator": "Publisher abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Patient-rated improvement",
+          "role": "secondary",
+          "measure": "Marked or moderate global improvement at 1 year",
+          "values": {
+            "pbo": "39%",
+            "ter": "61%",
+            "fin": "44%",
+            "combo": "65%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract does not give arm-specific denominators; symptom problem and BPH impact scores did not differ between finasteride and placebo or between terazosin and combination.",
+          "locator": "Publisher abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62536_9.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "va-coop-bph-1999-psa",
+      "kind": "secondary",
+      "label": "PSA response analysis",
+      "published": "1999-06-01",
+      "cutoff": null,
+      "citation": "Brawer MK, Lin DW, Williford WO, et al. \"Effect of finasteride and/or terazosin on serum PSA: results of VA Cooperative Study #359.\" *Prostate.* 1999;39(4):234-239. doi:10.1002/(SICI)1097-0045(19990601)39:4<234::AID-PROS3>3.0.CO;2-4",
+      "doi": "10.1002/(SICI)1097-0045(19990601)39:4<234::AID-PROS3>3.0.CO;2-4",
+      "pmid": "10344212",
+      "followUp": "52 weeks",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "PSA response",
+          "role": "secondary",
+          "measure": "Direction of PSA change at 52 weeks",
+          "values": {
+            "pbo": "significant increase",
+            "ter": "significant increase",
+            "fin": "significant decrease",
+            "combo": "significant decrease"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Terazosin did not differ from placebo. Only 35% of men receiving finasteride or combination had the expected 40%-60% PSA decrease; the abstract does not give a pooled denominator.",
+          "locator": "PubMed abstract, Results and Conclusions"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_sici_1097_0045_19990601_39_4_234_aid_pros3_3_0_co_2_4.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/va-coop-bph",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

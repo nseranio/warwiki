@@ -1,0 +1,282 @@
+{
+  "id": "times",
+  "name": "TIMES",
+  "aliases": [
+    "Tolterodine and Tamsulosin in Men With LUTS Including OAB"
+  ],
+  "nct": "NCT00147654",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "add-on-in-men"
+    }
+  ],
+  "question": "Does tolterodine extended release plus tamsulosin improve perceived benefit and storage symptoms in men with LUTS and OAB compared with either drug alone or placebo?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 879,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Tolterodine ER plus tamsulosin",
+        "n": 225,
+        "role": "experimental"
+      },
+      {
+        "key": "tol",
+        "label": "tolterodine ER",
+        "n": 217,
+        "role": "experimental"
+      },
+      {
+        "key": "tam",
+        "label": "tamsulosin",
+        "n": 215,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 222,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged at least 40 years with moderate-to-severe LUTS, bothersome bladder symptoms, and diary-documented frequency and urgency, with or without urgency urinary incontinence.",
+    "description": "Multicenter, double-blind, four-arm superiority randomized trial",
+    "locator": "JAMA article, Methods: Patients and Study Design; Results: Patient Disposition"
+  },
+  "verdict": "positive",
+  "verdictNote": "Combination beat placebo on perceived benefit; the trial lasted 12 weeks.",
+  "takeaway": "In men with LUTS and OAB, tolterodine ER plus tamsulosin improved week-12 patient-perceived benefit versus placebo; neither tolterodine ER nor tamsulosin alone significantly improved that primary outcome versus placebo after correction of a reported P value.",
+  "reports": [
+    {
+      "id": "times-2006",
+      "kind": "primary",
+      "label": "Primary 12-week report",
+      "published": "2006-11-15",
+      "cutoff": null,
+      "citation": "Kaplan SA, Roehrborn CG, Rovner ES, et al. \"Tolterodine and tamsulosin for treatment of men with lower urinary tract symptoms and overactive bladder: a randomized controlled trial.\" *JAMA.* 2006;296(19):2319-2328. doi:10.1001/jama.296.19.2319",
+      "doi": "10.1001/jama.296.19.2319",
+      "pmid": "17105794",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "JAMA article, Methods: Study Design",
+      "results": [
+        {
+          "endpoint": "Patient-perceived treatment benefit",
+          "role": "primary",
+          "measure": "Week-12 benefit; risk difference for combination versus placebo, percentage points",
+          "values": {
+            "exp": "172/215 (80.0%)",
+            "tol": "136/209 (65.1%)",
+            "tam": "146/207 (70.5%)",
+            "ctl": "132/214 (61.7%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 18.3,
+            "ci": [
+              9,
+              28
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Protocol-specified analysis with last observation carried forward; 95% CI for risk difference is reported as rounded whole percentage points in Table 2. Corrected tamsulosin-placebo P=0.064; tolterodine-placebo P=0.48.",
+          "locator": "JAMA article, Table 2 and Efficacy End Points; 2007 correction, p1864"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence",
+          "role": "secondary",
+          "measure": "Adjusted mean change in episodes per 24 hours at week 12",
+          "values": {
+            "exp": "−0.88",
+            "ctl": "−0.31"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.005"
+          },
+          "note": "Analyzed only among men with urgency urinary incontinence at baseline.",
+          "locator": "JAMA article, abstract Results and Figure 2B"
+        },
+        {
+          "endpoint": "Urgency without incontinence",
+          "role": "secondary",
+          "measure": "Adjusted mean change in episodes per 24 hours at week 12",
+          "values": {
+            "exp": "−3.33",
+            "ctl": "−2.54"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.03"
+          },
+          "locator": "JAMA article, abstract Results and Figure 2A"
+        },
+        {
+          "endpoint": "Micturition frequency",
+          "role": "secondary",
+          "measure": "Adjusted mean change in micturitions per 24 hours at week 12",
+          "values": {
+            "exp": "−2.54",
+            "ctl": "−1.41"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "JAMA article, abstract Results and Figure 2C"
+        },
+        {
+          "endpoint": "Nocturnal micturition frequency",
+          "role": "secondary",
+          "measure": "Adjusted mean change in micturitions per night at week 12",
+          "values": {
+            "exp": "−0.59",
+            "ctl": "−0.39"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "locator": "JAMA article, abstract Results and Figure 2D"
+        },
+        {
+          "endpoint": "Total IPSS",
+          "role": "secondary",
+          "measure": "Adjusted mean change in total IPSS at week 12",
+          "values": {
+            "exp": "−8.02",
+            "ctl": "−6.19"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.003"
+          },
+          "locator": "JAMA article, abstract Results and Figure 3A"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "47/225 (20.9%)",
+            "tol": "16/216 (7.4%)",
+            "tam": "15/215 (7.0%)",
+            "ctl": "5/220 (2.3%)"
+          },
+          "locator": "JAMA article, Table 3; safety population",
+          "note": "Five combination recipients discontinued treatment because of dry mouth."
+        },
+        {
+          "label": "Acute urinary retention requiring catheterization",
+          "values": {
+            "exp": "1/225 (0.4%)",
+            "tol": "1/216 (0.5%)",
+            "tam": "0/215 (0%)",
+            "ctl": "0/220 (0%)"
+          },
+          "locator": "JAMA article, Table 4; safety population",
+          "note": "The combination recipient required catheterization after 4 days; the tolterodine recipient after 11 days."
+        },
+        {
+          "label": "Change in postvoid residual volume",
+          "values": {
+            "exp": "+6.42 mL",
+            "tol": "+5.27 mL",
+            "tam": "+0.11 mL",
+            "ctl": "−3.61 mL"
+          },
+          "locator": "JAMA article, Safety and Tolerability",
+          "note": "Between-group changes were not statistically significant."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Daily drug regimen",
+          "value": "Tolterodine ER 4 mg, tamsulosin 0.4 mg, both, or matched placebo once daily for 12 weeks, about 30 minutes after dinner.",
+          "locator": "JAMA article, Methods: Study Design"
+        },
+        {
+          "label": "Medication adherence",
+          "value": "More than 95% of the intention-to-treat population in each group ingested at least 80% of assigned medication.",
+          "locator": "JAMA article, Results: baseline and adherence paragraph"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_296_19_2319.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "times-2007-correction",
+      "kind": "correction",
+      "label": "Tamsulosin P-value correction",
+      "published": "2007-10-24",
+      "cutoff": null,
+      "citation": "\"Incorrect Data in: Tolterodine and Tamsulosin for Treatment of Men With Lower Urinary Tract Symptoms and Overactive Bladder: A Randomized Controlled Trial.\" *JAMA.* 2007;298(16):1864. doi:10.1001/jama.298.16.1864",
+      "doi": "10.1001/jama.298.16.1864",
+      "pmid": null,
+      "followUp": "Correction to the primary report; no new follow-up",
+      "results": [],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_298_16_1864.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "times-2008-psa",
+      "kind": "post-hoc",
+      "label": "PSA subgroup analysis",
+      "published": "2008-09-25",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Kaplan SA, Kraus SR, et al. \"Effects of serum PSA on efficacy of tolterodine extended release with or without tamsulosin in men with LUTS, including OAB.\" *Urology.* 2008;72(5):1061-1067. doi:10.1016/j.urology.2008.06.067",
+      "doi": "10.1016/j.urology.2008.06.067",
+      "pmid": "18817961",
+      "followUp": "Post hoc analysis of the original 12-week trial",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Response by baseline PSA",
+          "role": "exploratory",
+          "measure": "Post hoc changes in frequency, urgency sum, and IPSS storage by PSA stratum",
+          "values": {
+            "exp": "Improvement versus placebo in both PSA strata",
+            "tol": "Improvement versus placebo only with PSA below 1.3 ng/mL",
+            "tam": "No significant storage response in the lower-PSA stratum",
+            "ctl": "placebo reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Abstract reports statistical significance by stratum without effect sizes; baseline PSA was split at its median.",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2008_06_067.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/times",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

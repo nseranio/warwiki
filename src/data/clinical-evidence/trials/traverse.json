@@ -1,0 +1,386 @@
+{
+  "id": "traverse",
+  "name": "TRAVERSE",
+  "aliases": [
+    "Testosterone Replacement Therapy for Assessment of Long-Term Vascular Events and Efficacy Response in Hypogonadal Men"
+  ],
+  "nct": "NCT03518034",
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "testosterone-therapy",
+      "lane": "cardiovascular-safety"
+    }
+  ],
+  "question": "Is transdermal testosterone cardiovascularly noninferior to placebo in symptomatic hypogonadal men with established or elevated cardiovascular risk?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "noninferiority",
+    "n": 5246,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Daily 1.62% transdermal testosterone gel",
+        "role": "experimental",
+        "n": 2601
+      },
+      {
+        "key": "ctl",
+        "label": "placebo gel",
+        "role": "control",
+        "n": 2603
+      }
+    ],
+    "population": "Men aged 45–80 years with hypogonadal symptoms, two fasting testosterone concentrations below 300 ng/dL, and established cardiovascular disease or elevated cardiovascular risk were enrolled at 316 US sites.",
+    "description": "Phase 4, multicenter, double-blind noninferiority randomized trial",
+    "locator": "NEJM pp108–111, Methods and Patients; 5,246 randomization IDs, 5,204 unique participants in full analysis"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "MACE noninferiority met; pulmonary embolism, atrial fibrillation, and acute kidney injury occurred more often with testosterone.",
+  "takeaway": "Daily 1.62% testosterone gel was noninferior to placebo gel for cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke over mean 33.0-month follow-up in symptomatic hypogonadal men with established or elevated cardiovascular risk (HR 0.96, 95% CI 0.78–1.17).",
+  "reports": [
+    {
+      "id": "traverse-2023",
+      "kind": "primary",
+      "label": "Cardiovascular safety",
+      "published": "2023-06-16",
+      "cutoff": null,
+      "citation": "Lincoff AM, Bhasin S, Flevaris P, et al. \"Cardiovascular Safety of Testosterone-Replacement Therapy.\" *N Engl J Med.* 2023;389(2):107-117. doi:10.1056/NEJMoa2215025",
+      "doi": "10.1056/NEJMoa2215025",
+      "pmid": "37326322",
+      "followUp": "Mean treatment 21.7 months; mean follow-up 33.0 months",
+      "followUpLocator": "NEJM p107, abstract Results; p111, Patients",
+      "results": [
+        {
+          "endpoint": "MACE",
+          "role": "primary",
+          "measure": "First cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke",
+          "values": {
+            "exp": "182/2,596 (7.0%)",
+            "ctl": "190/2,602 (7.3%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.96,
+            "ci": [
+              0.78,
+              1.17
+            ],
+            "p": "<0.001 for noninferiority"
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin: upper 95% CI for HR <1.5; safety population received at least one dose.",
+          "locator": "NEJM p114, Table 2; p107, abstract Results"
+        },
+        {
+          "endpoint": "MACE plus coronary revascularization",
+          "role": "secondary",
+          "measure": "First composite cardiovascular event or coronary revascularization",
+          "values": {
+            "exp": "269/2,596 (10.4%)",
+            "ctl": "264/2,602 (10.1%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.02,
+            "ci": [
+              0.86,
+              1.21
+            ]
+          },
+          "note": "Secondary analyses were not adjusted for multiplicity.",
+          "locator": "NEJM p114, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Pulmonary embolism",
+          "values": {
+            "exp": "24/2,596 (0.9%)",
+            "ctl": "12/2,602 (0.5%)"
+          },
+          "locator": "NEJM p114, Table 2",
+          "note": "Adjudicated component of venous thromboembolism; no component HR prespecified."
+        },
+        {
+          "label": "Atrial fibrillation",
+          "values": {
+            "exp": "91/2,596 (3.5%)",
+            "ctl": "63/2,602 (2.4%)"
+          },
+          "locator": "NEJM p115, Table 3",
+          "note": "Investigator-reported; P=0.02, without multiplicity correction."
+        },
+        {
+          "label": "Acute kidney injury",
+          "values": {
+            "exp": "60/2,596 (2.3%)",
+            "ctl": "40/2,602 (1.5%)"
+          },
+          "locator": "NEJM p115, Table 3",
+          "note": "Investigator-reported; P=0.04, without multiplicity correction."
+        },
+        {
+          "label": "Urinary retention (investigator-reported)",
+          "values": {
+            "exp": "50/2,596 (1.9%)",
+            "ctl": "34/2,602 (1.3%)"
+          },
+          "locator": "NEJM p115, Table 3",
+          "note": "P=0.08; different ascertainment from adjudicated acute urinary retention in the prostate substudy."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Gel regimen and titration",
+          "value": "Daily 1.62% testosterone gel or matching placebo; central algorithm targeted testosterone 350–750 ng/dL, adjusted for hematocrit above 54%.",
+          "locator": "NEJM p109, Trial Intervention"
+        },
+        {
+          "label": "Study-drug discontinuation",
+          "values": {
+            "exp": "61.4%",
+            "ctl": "61.7%"
+          },
+          "locator": "NEJM p111, Patients",
+          "note": "Mean exposure 21.7 months across groups."
+        },
+        {
+          "label": "Analysis populations",
+          "value": "5,246 randomization IDs; 5,204 unique full-analysis participants (2,601 testosterone, 2,603 placebo); 5,198 treated safety participants (2,596 and 2,602).",
+          "locator": "NEJM p111, Patients"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/dl-2026-09-26/NEJMoa2215025.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "traverse-2023-sexual-function",
+      "kind": "pro",
+      "label": "Sexual Function Study",
+      "published": "2023-08-17",
+      "cutoff": null,
+      "citation": "Pencina KM, Travison TG, Cunningham GR, et al. \"Effect of Testosterone Replacement Therapy on Sexual Function and Hypogonadal Symptoms in Men with Hypogonadism.\" *J Clin Endocrinol Metab.* 2024;109(2):569-580. doi:10.1210/clinem/dgad484",
+      "doi": "10.1210/clinem/dgad484",
+      "pmid": "37589949",
+      "followUp": "Effect maintained at 24 months",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Sexual activity",
+          "role": "primary",
+          "measure": "Between-group mean difference in change in sexual activity, acts per day at 6 months",
+          "effect": {
+            "type": "difference",
+            "value": 0.49,
+            "ci": [
+              0.19,
+              0.79
+            ],
+            "p": "0.011 omnibus"
+          },
+          "met": true,
+          "note": "Nested Sexual Function Study: 1,161 men with low libido (587 testosterone, 574 placebo).",
+          "locator": "PubMed abstract, Methods and Results"
+        },
+        {
+          "endpoint": "Sexual activity",
+          "role": "descriptive",
+          "measure": "Between-group mean difference in change in sexual activity, acts per day at 12 months",
+          "effect": {
+            "type": "difference",
+            "value": 0.47,
+            "ci": [
+              0.11,
+              0.83
+            ]
+          },
+          "note": "Treatment effect was maintained at 24 months; arm-specific means unavailable in abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Sexual desire, symptoms, and erectile function",
+          "role": "secondary",
+          "measure": "Reported secondary sexual-function outcomes",
+          "note": "Testosterone improved desire and hypogonadal symptoms, but not erectile function; numerical effects unavailable in abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_clinem_dgad484.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "traverse-2023-prostate-safety",
+      "kind": "secondary",
+      "label": "Prostate safety substudy",
+      "published": "2023-12-27",
+      "cutoff": null,
+      "citation": "Bhasin S, Travison TG, Pencina KM, et al. \"Prostate Safety Events During Testosterone Replacement Therapy in Men With Hypogonadism: A Randomized Clinical Trial.\" *JAMA Netw Open.* 2023;6(12):e2348692. doi:10.1001/jamanetworkopen.2023.48692",
+      "doi": "10.1001/jamanetworkopen.2023.48692",
+      "pmid": "38150256",
+      "followUp": "14,304 person-years; mean follow-up 33.0 months",
+      "followUpLocator": "PMC full text, Results, baseline characteristics",
+      "results": [
+        {
+          "endpoint": "High-grade prostate cancer",
+          "role": "primary",
+          "measure": "Adjudicated Gleason 4+3 or higher prostate cancer",
+          "values": {
+            "exp": "5/2,596 (0.19%)",
+            "ctl": "3/2,602 (0.12%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.62,
+            "ci": [
+              0.39,
+              6.77
+            ],
+            "p": "0.51"
+          },
+          "met": false,
+          "note": "Two-sided significance threshold P<0.05; no statistically significant difference.",
+          "locator": "PMC full text, Results, High-Grade and All Prostate Cancers; Figure 2"
+        },
+        {
+          "endpoint": "Any prostate cancer",
+          "role": "secondary",
+          "measure": "Adjudicated prostate cancer",
+          "values": {
+            "exp": "12/2,596 (0.46%)",
+            "ctl": "11/2,602 (0.42%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.07,
+            "ci": [
+              0.47,
+              2.42
+            ],
+            "p": "0.87"
+          },
+          "note": "",
+          "locator": "PMC full text, Results, High-Grade and All Prostate Cancers; Figure 2"
+        },
+        {
+          "endpoint": "Acute urinary retention",
+          "role": "secondary",
+          "measure": "Adjudicated acute urinary retention",
+          "values": {
+            "exp": "20/2,596 (0.77%)",
+            "ctl": "16/2,602 (0.61%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.25,
+            "ci": [
+              0.65,
+              2.41
+            ],
+            "p": "0.50"
+          },
+          "note": "Emergency visit or catheter placement for inability to void; distinct from investigator-reported retention in the primary report.",
+          "locator": "PMC full text, Methods, Adjudication; Results, Other Secondary Prostate Safety End Points"
+        },
+        {
+          "endpoint": "Invasive prostate surgery for BPH",
+          "role": "secondary",
+          "measure": "Adjudicated invasive prostate procedure",
+          "values": {
+            "exp": "23/2,596 (0.89%)",
+            "ctl": "12/2,602 (0.46%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.91,
+            "ci": [
+              0.95,
+              3.84
+            ],
+            "p": "0.07"
+          },
+          "note": "",
+          "locator": "PMC full text, Results, Other Secondary Prostate Safety End Points; Figure 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Prostate substudy eligibility",
+          "value": "Excluded prior prostate cancer, PSA above 3.0 ng/mL (above 1.5 ng/mL with 5-alpha reductase inhibitor), IPSS above 19, and prostate nodule or induration.",
+          "locator": "PMC full text, Methods, Participants"
+        },
+        {
+          "label": "Prostate monitoring",
+          "value": "PSA at baseline, 3 months, 12 months, and annually; IPSS at baseline, 3 months, 12 months, 36 months, and study end; digital examination at baseline, 12 months, 36 months, and study end.",
+          "locator": "PMC full text, Methods, Assessment of Prostate Safety Events"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamanetworkopen_2023_48692.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "traverse-2024-fractures",
+      "kind": "secondary",
+      "label": "Clinical fractures substudy",
+      "published": "2024-01-17",
+      "cutoff": null,
+      "citation": "Snyder PJ, Bauer DC, Ellenberg SS, et al. \"Testosterone Treatment and Fractures in Men with Hypogonadism.\" *N Engl J Med.* 2024;390(3):203-211. doi:10.1056/NEJMoa2308836",
+      "doi": "10.1056/NEJMoa2308836",
+      "pmid": "38231621",
+      "followUp": "Median 3.19 years",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Clinical fracture",
+          "role": "primary",
+          "measure": "First adjudicated clinical spine or non-spine fracture, excluding sternum, fingers, toes, facial bones, and skull",
+          "values": {
+            "exp": "91/2,601 (3.50%)",
+            "ctl": "64/2,603 (2.46%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.43,
+            "ci": [
+              1.04,
+              1.97
+            ]
+          },
+          "met": false,
+          "note": "Fracture-reduction hypothesis was not met; fractures were more frequent with testosterone.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa2308836.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/traverse",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

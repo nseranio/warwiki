@@ -1,0 +1,180 @@
+{
+  "id": "raz-stamm-estriol",
+  "name": "Raz–Stamm estriol",
+  "aliases": [
+    "Raz 1993"
+  ],
+  "nct": null,
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "vaginal-estrogen"
+    }
+  ],
+  "question": "Does intravaginal estriol cream reduce recurrent urinary tract infection compared with placebo in postmenopausal women?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 93,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intravaginal estriol cream",
+        "n": 50,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo cream",
+        "n": 43,
+        "role": "control"
+      }
+    ],
+    "population": "Postmenopausal women referred to a single infectious disease clinic after at least three culture-confirmed symptomatic urinary tract infections in the preceding year.",
+    "description": "Single-center, double-blind, placebo-controlled randomized trial",
+    "locator": "Full text, Methods, Patient Population and Recruitment; Results, Comparison of the Study Groups"
+  },
+  "verdict": "positive",
+  "verdictNote": "The annualized infection rate was lower with estriol; follow-up lasted eight months.",
+  "takeaway": "In postmenopausal women with recurrent symptomatic urinary tract infections, intravaginal estriol cream reduced the annualized median incidence of bacteriuria episodes (symptomatic and asymptomatic) versus placebo cream: 0.5 versus 5.9 episodes per patient-year during eight months of follow-up.",
+  "reports": [
+    {
+      "id": "raz-stamm-estriol-1993",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "1993-09-09",
+      "cutoff": null,
+      "citation": "Raz R, Stamm WE. \"A Controlled Trial of Intravaginal Estriol in Postmenopausal Women with Recurrent Urinary Tract Infections.\" *N Engl J Med.* 1993;329(11):753-756. doi:10.1056/NEJM199309093291102",
+      "doi": "10.1056/NEJM199309093291102",
+      "pmid": "8350884",
+      "followUp": "eight-month treatment and observation",
+      "followUpLocator": "Full text, Methods, Patient Population and Recruitment; Follow-up Schedule and Outcome Measurements",
+      "results": [
+        {
+          "endpoint": "Bacteriuria episode incidence (symptomatic and asymptomatic)",
+          "role": "descriptive",
+          "measure": "Annualized median urinary tract infections per patient-year",
+          "values": {
+            "exp": "0.5",
+            "ctl": "5.9"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Wilcoxon comparison; the publication does not specify a formal primary endpoint or alpha threshold.",
+          "locator": "Full text, Results, Rates of Infection in the Study Groups; Table 2"
+        },
+        {
+          "endpoint": "Freedom from urinary tract infection",
+          "role": "secondary",
+          "measure": "Four-month Kaplan–Meier probability of remaining infection-free",
+          "values": {
+            "exp": "95% (95% CI 88–100%)",
+            "ctl": "30% (95% CI 16–46%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "P value is for the full Kaplan–Meier curve comparison, not the four-month point estimate.",
+          "locator": "Full text, Results, Rates of Infection in the Study Groups; Figure 1"
+        },
+        {
+          "endpoint": "Vaginal lactobacillus colonization",
+          "role": "secondary",
+          "measure": "Positive vaginal culture after one month, among women cultured at one and eight months",
+          "values": {
+            "exp": "22/36 (61%)",
+            "ctl": "0/24 (0%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Neither group had lactobacilli detected before treatment.",
+          "locator": "Full text, Results, Alterations in Vaginal pH and Flora; Table 3"
+        },
+        {
+          "endpoint": "Vaginal Enterobacteriaceae colonization",
+          "role": "secondary",
+          "measure": "Positive vaginal culture after one month, among women cultured at one and eight months",
+          "values": {
+            "exp": "11/36 (31%)",
+            "ctl": "15/24 (63%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.005"
+          },
+          "note": "Baseline colonization was 24/36 (67%) and 16/24 (67%), respectively.",
+          "locator": "Full text, Results, Alterations in Vaginal pH and Flora; Table 3"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Local irritation, burning, or itching causing discontinuation",
+          "values": {
+            "exp": "10/50 (20%)",
+            "ctl": "4/43 (9%)"
+          },
+          "locator": "Full text, Results, Adverse Reactions; Table 1",
+          "note": "Percentages use randomized denominators; the abstract reports 28% and 17%, respectively, using completer denominators."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment regimen",
+          "value": "0.5 mg intravaginal estriol nightly for two weeks, then twice weekly for eight months; matched placebo schedule.",
+          "locator": "Full text, Methods, Patient Population and Recruitment"
+        },
+        {
+          "label": "Infection ascertainment and treatment",
+          "value": "Symptoms plus pyuria and midstream urine culture ≥10^5 CFU/mL; symptomatic episodes treated with a three-day course of trimethoprim–sulfamethoxazole or ciprofloxacin.",
+          "locator": "Full text, Methods, Follow-up Schedule and Outcome Measurements"
+        },
+        {
+          "label": "Completed eight months",
+          "values": {
+            "exp": "36/50 (72%)",
+            "ctl": "24/43 (56%)"
+          },
+          "locator": "Full text, Results, Comparison of the Study Groups; Table 1"
+        },
+        {
+          "label": "Observed person-time",
+          "values": {
+            "exp": "310 person-months",
+            "ctl": "225 person-months"
+          },
+          "locator": "Full text, Results, Rates of Infection in the Study Groups; Table 2"
+        },
+        {
+          "label": "Withdrawal to systemic antimicrobial prophylaxis for recurrence",
+          "values": {
+            "exp": "0/50 (0%)",
+            "ctl": "10/43 (23%)"
+          },
+          "locator": "Full text, Results, Comparison of the Study Groups; Table 1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199309093291102.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/raz-stamm-estriol",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

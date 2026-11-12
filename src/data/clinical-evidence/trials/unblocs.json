@@ -447,6 +447,135 @@
         "checked": "2026-10-18",
         "level": "abstract"
       }
+    },
+    {
+      "id": "unblocs-2020-hta",
+      "kind": "secondary",
+      "label": "HTA monograph: clinical, economic and qualitative analyses",
+      "published": "2020-09-01",
+      "cutoff": null,
+      "citation": "Worthington J, Lane JA, Taylor H, et al. \"Thulium laser transurethral vaporesection versus transurethral resection of the prostate for benign prostatic obstruction: the UNBLOCS RCT.\" *Health Technol Assess.* 2020;24(41):1-96. doi:10.3310/hta24410",
+      "doi": "10.3310/hta24410",
+      "pmid": "32901611",
+      "followUp": "12 months after surgery for trial outcomes; qualitative interviews at 3-6 months",
+      "followUpLocator": "Abstract; Chapter 2 (Methods), p. 9; Chapter 5 (Qualitative study), p. 53",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS at 12 months (ThuVARP minus TURP, adjusted for centre and baseline diagnosis)",
+          "values": {
+            "exp": "6.43",
+            "ctl": "6.26"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.28,
+            "ci": [
+              -0.92,
+              1.49
+            ]
+          },
+          "met": true,
+          "note": "Equivalence margin 2.5 points; multiple-imputation primary analysis reproduces the Lancet primary report.",
+          "locator": "Chapter 3, Table 12, p. 25; Primary analysis results, pp. 23-25"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "primary",
+          "measure": "Mean Qmax at 12 months (mL/s; ThuVARP minus TURP, adjusted for centre and baseline diagnosis)",
+          "values": {
+            "exp": "20.16 mL/s",
+            "ctl": "23.24 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.12,
+            "ci": [
+              -5.79,
+              -0.45
+            ]
+          },
+          "met": false,
+          "note": "Equivalence margin 4 mL/s; superiority testing favored TURP. Multiple-imputation primary analysis reproduces the Lancet primary report.",
+          "locator": "Chapter 3, Table 12, p. 25; Primary analysis results, pp. 23-25"
+        },
+        {
+          "endpoint": "Total NHS cost",
+          "role": "secondary",
+          "measure": "Adjusted mean 12-month NHS costs per patient, including community care (ThuVARP minus TURP)",
+          "values": {
+            "exp": "£4309.45",
+            "ctl": "£4305.23"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.22,
+            "ci": [
+              -366.6,
+              375.04
+            ]
+          },
+          "note": "Multiple-imputation analysis, n=203 ThuVARP and 204 TURP; broader NHS perspective than the secondary-care costs in the BJU report abstract.",
+          "locator": "Chapter 4, Table 33, p. 46"
+        },
+        {
+          "endpoint": "Quality-adjusted life-years",
+          "role": "secondary",
+          "measure": "Adjusted mean QALYs over 12 months (ThuVARP minus TURP)",
+          "values": {
+            "exp": "0.83",
+            "ctl": "0.84"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.01,
+            "ci": [
+              -0.04,
+              0.01
+            ]
+          },
+          "note": "Multiple-imputation analysis, n=203 ThuVARP and 204 TURP; interval includes zero.",
+          "locator": "Chapter 4, Table 33, p. 46"
+        },
+        {
+          "endpoint": "Patient experience (qualitative)",
+          "role": "descriptive",
+          "measure": "Semi-structured interviews 3-6 months after surgery",
+          "values": {
+            "exp": "19 interviewed",
+            "ctl": "18 interviewed"
+          },
+          "note": "Interviews found similar patient experiences and recovery after both procedures. Thirty-seven of 44 invited men participated; 19 presented with retention and 18 with LUTS.",
+          "locator": "Chapter 5, Recruitment and sampling, p. 53; Results and Table 36, pp. 54-55; Summary of findings, p. 75"
+        }
+      ],
+      "harms": [
+        {
+          "label": "At least one serious adverse event during follow-up",
+          "values": {
+            "exp": "41/205 (20%)",
+            "ctl": "45/205 (22%)"
+          },
+          "locator": "Chapter 3, Table 27, p. 38; Serious adverse events, p. 37",
+          "note": "Counts combine one and at least two serious adverse events per patient; adjusted ordinal OR 0.93 (95% CI 0.57 to 1.49), p=0.747."
+        },
+        {
+          "label": "Death during follow-up",
+          "values": {
+            "exp": "1/205",
+            "ctl": "1/205"
+          },
+          "locator": "Chapter 3, Serious adverse events, p. 37",
+          "note": "Both deaths were assessed as unrelated to treatment."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta24410.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
     }
   ],
   "relations": [

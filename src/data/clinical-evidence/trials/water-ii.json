@@ -1,0 +1,241 @@
+{
+  "id": "water-ii",
+  "name": "WATER II",
+  "aliases": [
+    "Aquablation in 80–150 mL prostates"
+  ],
+  "nct": "NCT03123250",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "large-glands"
+    }
+  ],
+  "question": "In men with symptomatic BPH and 80–150 mL prostates, does Aquablation meet prespecified three-month safety and symptom improvement goals?",
+  "design": {
+    "phase": "prospective device study",
+    "randomized": false,
+    "blinding": "open-label",
+    "type": "single-arm",
+    "n": 101,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Aquablation",
+        "n": 101,
+        "role": "single"
+      }
+    ],
+    "population": "101 men with LUTS attributed to BPH and 80–150 mL prostates were enrolled at 16 centers in Canada and the United States.",
+    "description": "Multicenter, prospective, single-arm device study",
+    "locator": "Desai, PubMed abstract, Methods; Bhojani, full text, Trial Design and Participants"
+  },
+  "verdict": "descriptive",
+  "verdictNote": "Both three-month performance goals were met in a single-arm cohort.",
+  "takeaway": "In a single-arm study of 101 men with 80–150 mL prostates, Aquablation met prespecified three-month goals for safety (45.5% versus a 65% ceiling) and IPSS improvement (23.2 at baseline to 6.7).",
+  "reports": [
+    {
+      "id": "water-ii-2019",
+      "kind": "primary",
+      "label": "Six-month primary report",
+      "published": "2019-03-29",
+      "cutoff": null,
+      "citation": "Desai M, Bidair M, Zorn KC, et al. \"Aquablation for benign prostatic hyperplasia in large prostates (80–150 mL): 6-month results from the WATER II trial.\" *BJU Int.* 2019;124(2):321-328. doi:10.1111/bju.14703",
+      "doi": "10.1111/bju.14703",
+      "pmid": "30734990",
+      "followUp": "Primary safety and efficacy assessments at 3 months; additional outcomes through 6 months",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "Procedure-related safety events",
+          "role": "primary",
+          "measure": "Clavien–Dindo grade 2 or higher, or grade 1 causing persistent disability, through 3 months; prespecified ceiling 65%",
+          "values": {
+            "exp": "45.5%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Tested against an external performance goal, not a concurrent TURP arm.",
+          "locator": "PubMed abstract, Results; goal also described in Bhojani full text, Trial Design and Participants"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Mean IPSS at baseline and 3 months; prespecified goal was a reduction statistically greater than 11 points",
+          "values": {
+            "exp": "23.2 ± 6.3 at baseline; 6.7 ± 5.1 at 3 months"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -16.5,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The 16.5-point difference is subtraction of reported means; the 11-point goal is described in the five-year report.",
+          "locator": "PubMed abstract, Results; goal in Bhojani full text, Trial Design and Participants"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean maximum flow at baseline and 6 months, mL/s",
+          "values": {
+            "exp": "8.7 at baseline; 18.8 at 6 months"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 10.1,
+            "p": "<0.001"
+          },
+          "note": "Difference calculated from reported means.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Clavien–Dindo events through 6 months",
+          "values": {
+            "exp": "grade 2: 22%; grade 3: 14%; grade 4: 5%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not give grade-specific numerators."
+        },
+        {
+          "label": "Bleeding requiring intervention and/or transfusion",
+          "values": {
+            "exp": "8 patients before discharge; 6 after discharge"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not specify the after-discharge window or separate transfusion from other intervention."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Hospital stay",
+          "value": "Mean 1.6 days (same day to 6 days)",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_14703.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "water-ii-2023",
+      "kind": "updated",
+      "label": "Final five-year follow-up",
+      "published": "2023-04-28",
+      "cutoff": null,
+      "citation": "Bhojani N, Bidair M, Kramolowsky E, et al. \"Aquablation Therapy in Large Prostates (80-150 mL) for Lower Urinary Tract Symptoms Due to Benign Prostatic Hyperplasia: Final WATER II 5-Year Clinical Trial Results.\" *J Urol.* 2023;210(1):143-153. doi:10.1097/JU.0000000000003483",
+      "doi": "10.1097/JU.0000000000003483",
+      "pmid": "37115632",
+      "followUp": "Five years; 60 of 101 completed the 60-month visit",
+      "followUpLocator": "Full text, Results, paragraph 1; Table 1 lists 62 available at 60 months",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Mean IPSS among participants with five-year measurements",
+          "values": {
+            "exp": "22.6 ± 6.4 at baseline; 6.8 ± 4.6 at 5 years"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -15.9,
+            "p": "<0.001"
+          },
+          "note": "Reported mean paired change; rounded group means differ by 15.8 points.",
+          "locator": "Full text, Results, paragraph beginning 'For the patients who completed the 5-year visit'; Figure 2"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "descriptive",
+          "measure": "Mean maximum flow among participants with five-year measurements, mL/s",
+          "values": {
+            "exp": "8.6 ± 3.4 at baseline; 17.1 ± 9.8 at 5 years"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 9.2,
+            "p": "<0.001"
+          },
+          "note": "Reported mean paired change; rounded group means differ by 8.5 mL/s.",
+          "locator": "Full text, Results, paragraph beginning 'For the patients who completed the 5-year visit'; Figure 2"
+        },
+        {
+          "endpoint": "Freedom from secondary BPH procedure",
+          "role": "descriptive",
+          "measure": "Kaplan–Meier estimate at 5 years",
+          "values": {
+            "exp": "96.3%; 3/101 underwent surgical retreatment"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Kaplan–Meier estimate and crude count have different denominators.",
+          "locator": "Full text, Results, paragraph beginning 'During the 5-year follow-up'"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Procedure-related sexual dysfunction at 6 months",
+          "values": {
+            "exp": "erectile dysfunction 0%; ejaculatory dysfunction 15%"
+          },
+          "locator": "Full text, Results, paragraph 1",
+          "note": "Reported rates; denominator for the ejaculatory-function analysis is not stated in that paragraph."
+        },
+        {
+          "label": "Late bleeding and outlet complications",
+          "values": {
+            "exp": "no transfusion or fulguration after day 30 through month 60; no urethral stricture or meatal stenosis during follow-up"
+          },
+          "locator": "Full text, Results, paragraph preceding Table 2",
+          "note": "No bladder-neck contracture was reported among those seen at the five-year visit."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Image-guided waterjet technique",
+          "value": "24F transurethral handpiece; real-time transrectal ultrasound contouring; automated waterjet, usually two or more passes for large glands",
+          "locator": "Full text, Trial Design and Participants, Aquablation procedure paragraph"
+        },
+        {
+          "label": "Hemostasis",
+          "value": "Foley balloon tamponade: bladder neck 98/101, fossa 3/101; 40–80 mL balloon, traction and continuous irrigation; no electrocautery",
+          "locator": "Full text, Trial Design and Participants, post-Aquablation paragraph"
+        },
+        {
+          "label": "Procedure time and passes",
+          "value": "Mean operative time 55 minutes; waterjet treatment 8 minutes; mean 1.8 passes",
+          "locator": "Full text, Results, paragraph 1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000003483.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "water",
+      "note": "Same Aquablation program; WATER randomized 30–80 mL glands against TURP, whereas WATER II enrolled 80–150 mL glands without a comparator."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/water-ii",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

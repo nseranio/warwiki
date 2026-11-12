@@ -1,0 +1,153 @@
+{
+  "id": "alfaur",
+  "name": "ALFAUR",
+  "aliases": [
+    "Alfuzosin in Acute Urinary Retention"
+  ],
+  "nct": null,
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "acute-retention"
+    }
+  ],
+  "question": "Does alfuzosin before catheter removal improve trial without catheter success after a first BPH-related acute urinary retention episode?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 360,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Alfuzosin 10 mg once daily",
+        "n": 236,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 121,
+        "role": "control"
+      }
+    ],
+    "population": "360 men with a first episode of spontaneous acute urinary retention attributed to benign prostatic hyperplasia underwent emergency catheterization.",
+    "description": "Double-blind, placebo-controlled randomized trial with second-phase rerandomization",
+    "locator": "McNeill 2004, PubMed abstract, Materials and methods; McNeill 2005, PubMed abstract, Methods and Results"
+  },
+  "verdict": "positive",
+  "verdictNote": "The initial voiding-trial endpoint improved; six-month surgery incidence did not differ significantly.",
+  "takeaway": "After emergency catheterization for first BPH-related acute urinary retention, three days of alfuzosin 10 mg once daily improved successful trial without catheter versus placebo (146/236 [61.9%] versus 58/121 [47.9%]); a second randomized phase found no significant six-month surgery difference.",
+  "reports": [
+    {
+      "id": "alfaur-2004",
+      "kind": "primary",
+      "label": "Initial voiding-trial report",
+      "published": "2004-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give June 2004 without a day",
+      "cutoff": null,
+      "citation": "McNeill SA, Hargreave TB; Members of the Alfaur Study Group. \"Alfuzosin once daily facilitates return to voiding in patients in acute urinary retention.\" *J Urol.* 2004;171(6 Pt 1):2316-2320. doi:10.1097/01.ju.0000127743.80759.7a",
+      "doi": "10.1097/01.ju.0000127743.80759.7a",
+      "pmid": "15126812",
+      "followUp": "Three days of blinded treatment; voiding assessed within 24 hours after catheter removal.",
+      "followUpLocator": "PubMed abstract, Materials and methods",
+      "results": [
+        {
+          "endpoint": "Successful trial without catheter",
+          "role": "primary",
+          "measure": "Successful voiding within 24 hours after catheter removal; risk difference in percentage points",
+          "values": {
+            "exp": "146/236 (61.9%)",
+            "ctl": "58/121 (47.9%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 14.0,
+            "p": "0.012"
+          },
+          "met": true,
+          "note": "Risk difference calculated from reported rounded percentages; endpoint denominators total 357, leaving three of 360 randomized participants unaccounted for in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Initial treatment and voiding trial",
+          "value": "Emergency catheterization, then alfuzosin 10 mg once daily or placebo in a 2:1 allocation for three days; voiding assessed within 24 hours of catheter removal.",
+          "locator": "PubMed abstract, Materials and methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000127743_80759_7a.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "alfaur-2005",
+      "kind": "secondary",
+      "label": "Six-month surgery phase",
+      "published": "2005-01-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give January 2005 without a day",
+      "cutoff": null,
+      "citation": "McNeill SA, Hargreave TB, Roehrborn CG; Alfaur Study Group. \"Alfuzosin 10 mg once daily in the management of acute urinary retention: results of a double-blind placebo-controlled study.\" *Urology.* 2005;65(1):83-89. doi:10.1016/j.urology.2004.07.042",
+      "doi": "10.1016/j.urology.2004.07.042",
+      "pmid": "15667868",
+      "followUp": "Six months after blinded rerandomization of successful voiding-trial participants.",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "BPH surgery after successful trial without catheter",
+          "role": "primary",
+          "measure": "Six-month BPH surgery; risk difference in percentage points",
+          "values": {
+            "exp": "14/82 (17.1%)",
+            "ctl": "20/83 (24.1%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -7.0
+          },
+          "met": false,
+          "note": "Separate second-phase randomization of 165 successful voiding-trial participants; difference calculated from rounded percentages. The abstract reports a six-month Kaplan–Meier surgery-free survival difference of 8.3 percentage points (P = 0.20).",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Second-phase treatment",
+          "value": "Participants with successful trial without catheter were blindly rerandomized to alfuzosin 10 mg once daily or placebo for six months; BPH surgery was assessed at one, three, and six months.",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Emergency surgery after retention relapse",
+          "values": {
+            "exp": "11/14 (78.6%) of those requiring BPH surgery",
+            "ctl": "16/20 (80.0%) of those requiring BPH surgery"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2004_07_042.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/alfaur",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "id": "chapple-oab-botox",
+  "name": "Chapple OAB Botox Trial",
+  "aliases": [
+    "Allergan 191622-520"
+  ],
+  "nct": "NCT00910520",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "botulinum-idiopathic"
+    }
+  ],
+  "question": "Does intradetrusor onabotulinumtoxinA 100 U improve urinary incontinence and patient-rated benefit versus placebo in idiopathic overactive bladder inadequately managed by anticholinergics?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind, placebo-controlled",
+    "type": "superiority",
+    "n": 548,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Intradetrusor onabotulinumtoxinA 100 U",
+        "role": "experimental",
+        "n": 277
+      },
+      {
+        "key": "ctl",
+        "label": "intradetrusor placebo",
+        "role": "control",
+        "n": 271
+      }
+    ],
+    "population": "Adults with idiopathic overactive bladder, at least 3 urgency urinary incontinence episodes over 3 days and at least 8 daily micturitions, inadequately managed by anticholinergics.",
+    "description": "Multicenter, double-blind phase 3 superiority randomized trial",
+    "locator": "PubMed abstract, Design, setting, and participants; Intervention"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary endpoints improved at week 12; catheterization was more frequent after treatment.",
+  "takeaway": "In adults with idiopathic overactive bladder and urinary incontinence inadequately managed by anticholinergics, intradetrusor onabotulinumtoxinA 100 U versus placebo reduced daily incontinence episodes more at week 12 (−2.95 versus −1.03) and increased positive treatment-benefit responses (62.8% versus 26.8%).",
+  "reports": [
+    {
+      "id": "chapple-oab-botox-2013",
+      "kind": "primary",
+      "label": "Phase 3 randomized report",
+      "published": "2013-04-10",
+      "cutoff": null,
+      "citation": "Chapple C, Sievert KD, MacDiarmid S, et al. \"OnabotulinumtoxinA 100 U Significantly Improves All Idiopathic Overactive Bladder Symptoms and Quality of Life in Patients with Overactive Bladder and Urinary Incontinence: A Randomised, Double-Blind, Placebo-Controlled Trial.\" *Eur Urol.* 2013;64(2):249-256. doi:10.1016/j.eururo.2013.04.001",
+      "doi": "10.1016/j.eururo.2013.04.001",
+      "pmid": "23608668",
+      "followUp": "Week 12 coprimary assessment",
+      "followUpLocator": "PubMed abstract, Outcome measurements and statistical analysis",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes per day",
+          "role": "primary",
+          "measure": "Mean change from baseline in daily urinary incontinence episodes at week 12 (coprimary)",
+          "values": {
+            "exp": "−2.95",
+            "ctl": "−1.03"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract reports arm mean changes and P value, without an adjusted between-arm estimate or interval.",
+          "locator": "PubMed abstract, Results and limitations"
+        },
+        {
+          "endpoint": "Treatment benefit scale response",
+          "role": "primary",
+          "measure": "Positive patient-rated treatment benefit scale response at week 12 (coprimary)",
+          "values": {
+            "exp": "62.8%",
+            "ctl": "26.8%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract does not give responder numerators or the analyzed denominator for this endpoint.",
+          "locator": "PubMed abstract, Results and limitations"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Initiation of clean intermittent catheterization",
+          "values": {
+            "exp": "6.9%",
+            "ctl": "0.7%"
+          },
+          "locator": "PubMed abstract, Results and limitations",
+          "note": "The abstract does not give event counts or analyzed safety denominators."
+        },
+        {
+          "label": "Mean postvoid residual at week 2",
+          "values": {
+            "exp": "46.9 mL",
+            "ctl": "10.1 mL"
+          },
+          "locator": "PubMed abstract, Results and limitations",
+          "note": "P < 0.001."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study injection",
+          "value": "100 U onabotulinumtoxinA or placebo in 20 intradetrusor injections of 0.5 mL each",
+          "locator": "PubMed abstract, Intervention",
+          "note": "The pooled report specifies that the pivotal injections spared the trigone."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_04_001.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "chapple-oab-botox-2014",
+      "kind": "secondary",
+      "label": "Prespecified pooled prior-treatment analysis",
+      "published": "2014-04-22",
+      "cutoff": null,
+      "citation": "Sievert KD, Chapple C, Herschorn S, et al. \"OnabotulinumtoxinA 100U Provides Significant Improvements in Overactive Bladder Symptoms in Patients with Urinary Incontinence Regardless of the Number of Anticholinergic Therapies Used or Reason for Inadequate Management of Overactive Bladder.\" *Int J Clin Pract.* 2014;68(10):1246-1256. doi:10.1111/ijcp.12443",
+      "doi": "10.1111/ijcp.12443",
+      "pmid": "24754838",
+      "followUp": "Week 12 after initial injection; pooled NCT00910520 and NCT00910845",
+      "followUpLocator": "Full text pp1246-1249, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Urinary incontinence episodes by prior anticholinergic count",
+          "role": "descriptive",
+          "measure": "Mean change from baseline in daily urinary incontinence episodes at week 12, pooled subgroups with 1, 2, or at least 3 prior anticholinergics",
+          "values": {
+            "exp": "−2.82; −2.58; −2.92",
+            "ctl": "−1.52; −0.58; −0.73"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each subgroup"
+          },
+          "note": "Pooled analysis of both pivotal trials: 557 randomized to onabotulinumtoxinA and 548 to placebo, total 1,105; values are ordered by 1, 2, and at least 3 prior anticholinergics.",
+          "locator": "Full text p1249, Figure 1A and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary tract infection in pooled safety population",
+          "values": {
+            "exp": "141/552 (25.5%)",
+            "ctl": "52/542 (9.6%)"
+          },
+          "locator": "Full text p1252, Table 2",
+          "note": "Pooled initial-treatment safety population from both phase 3 trials; culture-based UTI definition includes asymptomatic cases."
+        },
+        {
+          "label": "Urinary retention in pooled safety population",
+          "values": {
+            "exp": "32/552 (5.8%)",
+            "ctl": "2/542 (0.4%)"
+          },
+          "locator": "Full text p1252, Table 2",
+          "note": "Pooled initial-treatment safety population; retention was defined as postvoid residual at least 200 mL requiring catheterization."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Pooled study technique and retreatment",
+          "value": "Intradetrusor injection spared the trigone; retreatment could begin at week 12 when clinically needed.",
+          "locator": "Full text pp1247-1248, Methods and Results",
+          "note": "Applies to both pivotal studies in the pooled report."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_ijcp_12443.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "chapple-oab-botox-2016",
+      "kind": "updated",
+      "label": "3.5-year pooled extension",
+      "published": "2016-03-30",
+      "cutoff": null,
+      "citation": "Nitti VW, Ginsberg D, Sievert KD, et al. \"Durable Efficacy and Safety of Long-Term OnabotulinumtoxinA Treatment in Patients with Overactive Bladder Syndrome: Final Results of a 3.5-Year Study.\" *J Urol.* 2016;196(3):791-800. doi:10.1016/j.juro.2016.03.146",
+      "doi": "10.1016/j.juro.2016.03.146",
+      "pmid": "27038769",
+      "followUp": "Up to 3.5 years after either pivotal trial; as-needed repeat treatment",
+      "followUpLocator": "Full text pp791-794, Methods and Patient Disposition",
+      "results": [
+        {
+          "endpoint": "Duration of treatment effect",
+          "role": "descriptive",
+          "measure": "Median of patient-level median durations of effect among 438 patients who received only onabotulinumtoxinA 100 U and had complete retreatment cycles",
+          "values": {
+            "exp": "7.6 months"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Open-label extension enrolling completers from both pivotal trials; 839 entered, 829 received at least one onabotulinumtoxinA treatment; 430/839 (51.3%) completed 3.5 years.",
+          "locator": "Full text pp793-795, Patient Disposition and Results; Figure 5"
+        }
+      ],
+      "harms": [
+        {
+          "label": "De novo clean intermittent catheterization after first 100 U treatment in long-term cohort",
+          "values": {
+            "exp": "33/828 (4.0%)"
+          },
+          "locator": "Full text p798, Table 3; p796, Safety",
+          "note": "Pooled long-term cohort; first 100 U treatment could occur during the pivotal trial. Denominator is patients assessed for de novo catheterization."
+        },
+        {
+          "label": "Urinary tract infection after first 100 U treatment in long-term cohort",
+          "values": {
+            "exp": "141/829 (17.0%)"
+          },
+          "locator": "Full text p798, Table 3",
+          "note": "Within 12 weeks of first 100 U treatment; this could occur during the pivotal trial."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension follow-up and treatment exposure",
+          "value": "839 entered the extension; 829 received at least one onabotulinumtoxinA treatment; 430/839 (51.3%) completed 3.5 years; analyses reported up to 6 treatments of 100 U.",
+          "locator": "Full text pp792-794, Methods and Patient Disposition",
+          "note": "Patients who had received 150 U in some cycles contributed data only from their 100 U cycles."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/pdfs-2026-10-19b/Nitti-OAB-2016-extension.pdf",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "nitti-oab",
+      "note": "The companion phase 3 trial used the same 100 U placebo comparison; both cohorts entered pooled analyses and extension follow-up."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/chapple-oab-botox",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

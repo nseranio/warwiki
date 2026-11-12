@@ -1,0 +1,305 @@
+{
+  "id": "tolterodine-er",
+  "name": "Tolterodine ER pivotal trial",
+  "aliases": [
+    "Van Kerrebroeck 2001",
+    "98-TOCR-007"
+  ],
+  "nct": null,
+  "registry": "Sponsor protocol 98-TOCR-007",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "In adults with overactive bladder and urge incontinence, how does once-daily tolterodine extended release compare with twice-daily immediate release and placebo?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1529,
+    "arms": [
+      {
+        "key": "er",
+        "label": "Tolterodine ER 4 mg once daily",
+        "n": 507,
+        "role": "experimental"
+      },
+      {
+        "key": "ir",
+        "label": "tolterodine IR 2 mg twice daily",
+        "n": 514,
+        "role": "control"
+      },
+      {
+        "key": "pbo",
+        "label": "placebo",
+        "n": 508,
+        "role": "control"
+      }
+    ],
+    "population": "1,529 adults (81% women) with overactive-bladder symptoms for at least six months, at least eight micturitions per 24 hours, and five urge-incontinence episodes per week.",
+    "description": "167-center, double-blind, three-arm superiority randomized trial",
+    "locator": "Van Kerrebroeck 2001, PubMed abstract, Methods; Kelleher 2002, PDF p S609 (symptom duration and centers); FDA medical review of protocol 98-TOCR-007, p 13 (phase)"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both formulations beat placebo; ER had less dry mouth than IR.",
+  "takeaway": "In a 12-week randomized trial, tolterodine ER 4 mg daily and tolterodine IR 2 mg twice daily each reduced urge-incontinence episodes versus placebo; ER produced a larger reported reduction and less dry mouth than IR.",
+  "reports": [
+    {
+      "id": "tolterodine-er-2001",
+      "kind": "primary",
+      "label": "Randomized 12-week report",
+      "published": "2001-03-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed 11248608, March 2001 issue; Crossref published date-parts [2001,3]",
+      "cutoff": null,
+      "citation": "Van Kerrebroeck P, Kreder K, Jonas U, et al. \"Tolterodine once-daily: superior efficacy and tolerability in the treatment of the overactive bladder.\" *Urology.* 2001;57(3):414-421. doi:10.1016/s0090-4295(00)01113-4",
+      "doi": "10.1016/s0090-4295(00)01113-4",
+      "pmid": "11248608",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Urge-incontinence episodes per week",
+          "role": "primary",
+          "measure": "Change in mean weekly episodes at 12 weeks",
+          "values": {
+            "er": "greater reduction than placebo",
+            "ir": "greater reduction than placebo",
+            "pbo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "ER versus placebo P = 0.0001; IR versus placebo P = 0.0005. ER versus IR was reported as 18% more effective (P < 0.05). Absolute mean changes and confidence intervals are absent from the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urge-incontinence episodes per week",
+          "role": "descriptive",
+          "measure": "Median percentage reduction from baseline at 12 weeks",
+          "values": {
+            "er": "71%",
+            "ir": "60%",
+            "pbo": "33%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The reported significance tests concern mean changes, not these medians.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Other micturition-diary measures",
+          "role": "secondary",
+          "measure": "Frequency, pad use, and volume voided per micturition at 12 weeks",
+          "values": {
+            "er": "improved versus placebo",
+            "ir": "improved versus placebo",
+            "pbo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Mean frequency decreased (P < 0.0079) and pad use decreased (P < 0.0145) for both formulations; mean voided volume increased (P = 0.0001). Absolute changes are absent from the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth, any severity",
+          "values": {
+            "er": "23%",
+            "ir": "30%",
+            "pbo": "8%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "ER dry-mouth rate was reported as 23% lower than IR (P < 0.02); event numerators and safety denominators are not given in the abstract."
+        },
+        {
+          "label": "Severe dry mouth",
+          "values": {
+            "er": "1.8%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Comparator rates and event numerators are not given in the abstract."
+        },
+        {
+          "label": "Treatment withdrawal",
+          "values": {
+            "er": "comparable rate",
+            "ir": "comparable rate",
+            "pbo": "comparable rate"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract gives no withdrawal counts or percentages."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Diary run-in",
+          "value": "One- to two-week washout/run-in to confirm micturition-diary eligibility.",
+          "locator": "Kelleher 2002, PDF p S609, Methods"
+        },
+        {
+          "label": "Randomized treatment",
+          "values": {
+            "er": "oral ER capsule 4 mg once daily for 12 weeks",
+            "ir": "oral IR tablet 2 mg twice daily for 12 weeks",
+            "pbo": "placebo for 12 weeks"
+          },
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_00_01113_4.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "tolterodine-er-2002-extension",
+      "kind": "updated",
+      "label": "12-month open-label extension",
+      "published": "2002-06-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed 12074774, June 2002 issue; Crossref published date-parts [2002,6]",
+      "cutoff": null,
+      "citation": "Kreder K, Mayne C, Jonas U. \"Long-term safety, tolerability and efficacy of extended-release tolterodine in the treatment of overactive bladder.\" *Eur Urol.* 2002;41(6):588-595. doi:10.1016/s0302-2838(02)00177-x",
+      "doi": "10.1016/s0302-2838(02)00177-x",
+      "pmid": "12074774",
+      "followUp": "12 months of open-label ER treatment after the randomized phase",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Urge-incontinence episodes per week",
+          "role": "descriptive",
+          "measure": "Median percentage change from baseline among 759 extension completers at 12 months",
+          "values": {
+            "er": "−83%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "All extension participants received ER, regardless of prior randomized assignment.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "descriptive",
+          "measure": "Median percentage change from baseline among 759 extension completers at 12 months",
+          "values": {
+            "er": "−21%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth during extension",
+          "values": {
+            "er": "12.9%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract gives the rate without an event count or safety denominator."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension entry and completion",
+          "value": "Of 1,377 randomized-phase completers, 1,077 (78% as reported) entered 12 months of open-label ER; 71% of extension entrants completed it.",
+          "locator": "PubMed abstract, Methods and Results",
+          "note": "The abstract rounds 1,077/1,377 to 78%."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0302_2838_02_00177_x.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "tolterodine-er-2002-qol",
+      "kind": "pro",
+      "label": "12-week quality-of-life analysis",
+      "published": "2002-12-01",
+      "cutoff": null,
+      "citation": "Kelleher CJ, Reese PR, Pleil AM, et al. \"Health-related quality of life of patients receiving extended-release tolterodine for overactive bladder.\" *Am J Manag Care.* 2002;8(19 Suppl):S608-S615. PMID:12516955",
+      "doi": null,
+      "pmid": "12516955",
+      "followUp": "12 weeks of randomized treatment; ER and placebo arms only",
+      "followUpLocator": "PDF p S609, Methods",
+      "results": [
+        {
+          "endpoint": "King's Health Questionnaire: incontinence impact",
+          "role": "secondary",
+          "measure": "Mean score change at 12 weeks; adjusted between-group mean difference",
+          "values": {
+            "er": "−15.68 (487 translations available)",
+            "pbo": "−8.86 (488 translations available)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6.75,
+            "p": "0.001"
+          },
+          "note": "Prespecified primary HRQoL domain in this secondary report; lower score is better. Effect is adjusted ER minus placebo, not the subtraction of displayed unadjusted changes.",
+          "locator": "PDF p S611, Table 1 and Methods p S610"
+        },
+        {
+          "endpoint": "King's Health Questionnaire: role limitations",
+          "role": "secondary",
+          "measure": "Mean score change at 12 weeks; adjusted between-group mean difference",
+          "values": {
+            "er": "−17.93 (487 translations available)",
+            "pbo": "−10.26 (488 translations available)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -7.36,
+            "p": "0.001"
+          },
+          "note": "Prespecified primary HRQoL domain in this secondary report; lower score is better. Effect is adjusted ER minus placebo.",
+          "locator": "PDF p S611, Table 1 and Methods p S610"
+        },
+        {
+          "endpoint": "SF-36 physical and mental summary scores",
+          "role": "secondary",
+          "measure": "Between-group change at 12 weeks",
+          "values": {
+            "er": "no detected difference versus placebo",
+            "pbo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PDF p S613, Table 2 and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_12516955.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tolterodine-er",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

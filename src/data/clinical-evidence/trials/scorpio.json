@@ -1,0 +1,227 @@
+{
+  "id": "scorpio",
+  "name": "SCORPIO",
+  "aliases": [
+    "Study 178-CL-046",
+    "Mirabegron European–Australian phase 3 trial"
+  ],
+  "nct": "NCT00689104",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Do mirabegron 50 mg and 100 mg improve incontinence and urinary frequency over placebo in adults with overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1987,
+    "arms": [
+      {
+        "key": "m50",
+        "label": "Mirabegron 50 mg",
+        "n": 497,
+        "role": "experimental"
+      },
+      {
+        "key": "m100",
+        "label": "mirabegron 100 mg",
+        "n": 498,
+        "role": "experimental"
+      },
+      {
+        "key": "pbo",
+        "label": "placebo",
+        "n": 497,
+        "role": "control"
+      },
+      {
+        "key": "tol",
+        "label": "tolterodine ER 4 mg",
+        "n": 495,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with overactive bladder for at least 3 months, at least 8 daily micturitions, and at least 3 urgency episodes in a 3-day baseline diary.",
+    "description": "Multicenter, double-blind, placebo-controlled superiority randomized trial",
+    "locator": "Khullar 2013 PubMed abstract, Design; Khullar 2013 post-hoc full text, Methods and Results, Table 1; ClinicalTrials.gov NCT00689104, Participant Flow"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both mirabegron doses met both co-primary placebo comparisons at 12 weeks.",
+  "takeaway": "In SCORPIO, mirabegron 50 mg and 100 mg each reduced daily incontinence episodes and micturitions more than placebo over 12 weeks; tolterodine ER 4 mg was an active control without a prespecified head-to-head mirabegron comparison.",
+  "reports": [
+    {
+      "id": "scorpio-2012",
+      "kind": "primary",
+      "label": "Primary 12-week report",
+      "published": "2012-11-06",
+      "cutoff": null,
+      "citation": "Khullar V, Amarenco G, Angulo JC, et al. \"Efficacy and tolerability of mirabegron, a β(3)-adrenoceptor agonist, in patients with overactive bladder: results from a randomised European-Australian phase 3 trial.\" *Eur Urol.* 2013;63(2):283-295. doi:10.1016/j.eururo.2012.10.016",
+      "doi": "10.1016/j.eururo.2012.10.016",
+      "pmid": "23182126",
+      "followUp": "12 weeks of double-blind treatment after a 2-week placebo run-in",
+      "followUpLocator": "PubMed abstract, Intervention and Results",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 50 mg versus placebo",
+          "values": {
+            "m50": "−1.57/day",
+            "pbo": "−1.17/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.4,
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 100 mg versus placebo",
+          "values": {
+            "m100": "−1.46/day",
+            "pbo": "−1.17/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.29,
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 50 mg versus placebo",
+          "values": {
+            "m50": "−1.93/day",
+            "pbo": "−1.34/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.59,
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 100 mg versus placebo",
+          "values": {
+            "m100": "−1.77/day",
+            "pbo": "−1.34/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.43,
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "note": "The primary abstract reports similar overall incidence across the four treatment groups.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study treatment",
+          "value": "Once-daily oral placebo, mirabegron 50 mg, mirabegron 100 mg, or tolterodine ER 4 mg for 12 weeks after a 2-week single-blind placebo run-in; 1,978 randomized participants received study drug.",
+          "locator": "PubMed abstract, Intervention and Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_016.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "scorpio-2013-post-hoc",
+      "kind": "post-hoc",
+      "label": "Prior antimuscarinic analysis",
+      "published": "2013-09-18",
+      "cutoff": null,
+      "citation": "Khullar V, Cambronero J, Angulo JC, et al. \"Efficacy of mirabegron in patients with and without prior antimuscarinic therapy for overactive bladder: a post hoc analysis of a randomized European-Australian Phase 3 trial.\" *BMC Urol.* 2013;13(1):45. doi:10.1186/1471-2490-13-45",
+      "doi": "10.1186/1471-2490-13-45",
+      "pmid": "24047126",
+      "followUp": "Post-hoc subgroup analysis of the 12-week trial",
+      "followUpLocator": "Full text, Methods, Primary study design and Efficacy assessments",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes per 24 hours after prior antimuscarinic inefficacy",
+          "role": "exploratory",
+          "measure": "Adjusted mean difference in change to final visit, mirabegron 50 mg versus placebo",
+          "values": {
+            "m50": "−1.63/day",
+            "pbo": "−0.87/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.76,
+            "ci": [
+              -1.32,
+              -0.19
+            ]
+          },
+          "note": "Post-hoc subgroup; no multiplicity-adjusted P value; subgroup analysis not powered for treatment differences.",
+          "locator": "Full text, Results, Table 2 and Figure 2"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours after prior antimuscarinic inefficacy",
+          "role": "exploratory",
+          "measure": "Adjusted mean difference in change to final visit, mirabegron 50 mg versus placebo",
+          "values": {
+            "m50": "−1.62/day",
+            "pbo": "−1.03/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.59,
+            "ci": [
+              -1.15,
+              -0.04
+            ]
+          },
+          "note": "Post-hoc subgroup; no multiplicity-adjusted P value; subgroup analysis not powered for treatment differences.",
+          "locator": "Full text, Results, Table 2 and Figure 3"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1186_1471_2490_13_45.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/scorpio",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

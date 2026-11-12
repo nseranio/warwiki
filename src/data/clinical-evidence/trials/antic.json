@@ -1,0 +1,200 @@
+{
+  "id": "antic",
+  "name": "AnTIC",
+  "aliases": [
+    "Continuous low-dose antibiotic prophylaxis in clean intermittent catheter users",
+    "ISRCTN67145101",
+    "EudraCT 2013-002556-32"
+  ],
+  "nct": null,
+  "registry": "ISRCTN67145101; EudraCT 2013-002556-32",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "prophylaxis"
+    }
+  ],
+  "question": "Does once-daily low-dose antibiotic prophylaxis reduce symptomatic urinary tract infections in adults using clean intermittent self-catheterisation with recurrent infections?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label; central outcome assessors and laboratory staff masked",
+    "type": "superiority",
+    "n": 404,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Once-daily nitrofurantoin, trimethoprim, or cefalexin prophylaxis",
+        "n": 203,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "no continuous antibiotic prophylaxis",
+        "n": 201,
+        "role": "control"
+      }
+    ],
+    "population": "Community-dwelling adult clean intermittent self-catheterisation users with at least two symptomatic catheter-related UTIs or one UTI requiring admission in the preceding year.",
+    "description": "Multicenter, open-label superiority randomized trial",
+    "locator": "Full text, Methods: Study design and participants; Randomisation and masking; Results, Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Symptomatic treated UTI incidence fell; resistant urinary isolates increased.",
+  "takeaway": "In adults using clean intermittent self-catheterisation with recurrent UTI, once-daily low-dose nitrofurantoin, trimethoprim, or cefalexin reduced symptomatic antibiotic-treated UTI incidence versus no prophylaxis over 12 months (1.3 vs 2.6 per person-year; IRR 0.52); urinary bacterial resistance increased.",
+  "reports": [
+    {
+      "id": "antic-2018",
+      "kind": "primary",
+      "label": "Primary 12-month report",
+      "published": "2018-06-28",
+      "cutoff": null,
+      "citation": "Fisher H, Oluboyede Y, Chadwick T, et al. \"Continuous low-dose antibiotic prophylaxis for adults with repeated urinary tract infections (AnTIC): a randomised, open-label trial.\" *Lancet Infect Dis.* 2018;18(9):957-968. doi:10.1016/S1473-3099(18)30279-2",
+      "doi": "10.1016/S1473-3099(18)30279-2",
+      "pmid": "30037647",
+      "followUp": "12 months for efficacy and harms; optional microbiology samples at 18 months",
+      "followUpLocator": "Full text, Methods: Procedures; Outcomes",
+      "results": [
+        {
+          "endpoint": "Symptomatic antibiotic-treated UTI incidence",
+          "role": "primary",
+          "measure": "Episodes per person-year through 12 months; modified intention-to-treat (181/203 versus 180/201)",
+          "values": {
+            "exp": "1.3 (95% CI 1.1–1.6)",
+            "ctl": "2.6 (95% CI 2.3–2.9)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.52,
+            "ci": [
+              0.44,
+              0.61
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Incidence rate ratio; prespecified clinically important reduction was 20% and superiority used a 5% significance level.",
+          "locator": "Full text, Statistical analysis; Results, Table 2"
+        },
+        {
+          "endpoint": "Microbiologically confirmed symptomatic UTI incidence",
+          "role": "secondary",
+          "measure": "Episodes per person-year through 12 months",
+          "values": {
+            "exp": "0.74 (95% CI 0.58–0.94)",
+            "ctl": "1.5 (95% CI 1.3–1.8)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.49,
+            "ci": [
+              0.39,
+              0.6
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Incidence rate ratio.",
+          "locator": "Full text, Results, Table 2"
+        },
+        {
+          "endpoint": "Febrile UTI incidence",
+          "role": "secondary",
+          "measure": "Episodes per person-year through 12 months",
+          "values": {
+            "exp": "0.11 (15 participants)",
+            "ctl": "0.16 (22 participants)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.71,
+            "ci": [
+              0.4,
+              1.26
+            ],
+            "p": "0.24"
+          },
+          "note": "Incidence rate ratio; febrile UTI difference was not statistically significant.",
+          "locator": "Full text, Results, Table 2 and paragraph following Figure 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Nitrofurantoin-resistant surveillance urinary isolates at 9–12 months",
+          "values": {
+            "exp": "12/51 (24%)",
+            "ctl": "6/64 (9%)"
+          },
+          "locator": "Full text, Results, paragraph following Table 2; Figure 2B",
+          "note": "Participants with at least one isolate; p=0.038."
+        },
+        {
+          "label": "Trimethoprim-resistant surveillance urinary isolates at 9–12 months",
+          "values": {
+            "exp": "34/51 (67%)",
+            "ctl": "21/64 (33%)"
+          },
+          "locator": "Full text, Results, paragraph following Table 2; Figure 2B",
+          "note": "Participants with at least one isolate; p=0.0003."
+        },
+        {
+          "label": "Co-trimoxazole-resistant surveillance urinary isolates at 9–12 months",
+          "values": {
+            "exp": "26/49 (53%)",
+            "ctl": "15/62 (24%)"
+          },
+          "locator": "Full text, Results, paragraph following Table 2; Figure 2B",
+          "note": "Participants with at least one isolate; p=0.002."
+        },
+        {
+          "label": "Non-serious adverse events attributed to prophylaxis",
+          "values": {
+            "exp": "19/203 participants (9%); 22 events",
+            "ctl": "4/201 participants (2%); 5 events"
+          },
+          "locator": "Full text, Results, paragraph preceding Table 4; Table 4",
+          "note": "Control-group events occurred after some participants started prophylaxis; predominant events in the assigned prophylaxis group were gastrointestinal disturbance, rash, and candidal infection."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Prescribed prophylaxis",
+          "value": "Nitrofurantoin 50 mg, trimethoprim 100 mg, or cefalexin 250 mg once daily for 12 months; clinician selected a suitable agent and could substitute for intolerance.",
+          "locator": "Full text, Methods: Randomisation and masking; Procedures"
+        },
+        {
+          "label": "Primary-analysis inclusion",
+          "values": {
+            "exp": "181/203 (89%)",
+            "ctl": "180/201 (90%)"
+          },
+          "locator": "Full text, Results, Figure 1 and opening paragraph",
+          "note": "At least 6 months of follow-up required; 22 and 21 randomized participants, respectively, were excluded."
+        },
+        {
+          "label": "Strategy crossover during observation",
+          "values": {
+            "exp": "34/203 (17%) stopped prophylaxis",
+            "ctl": "26/201 (13%) started prophylaxis"
+          },
+          "locator": "Full text, Results, opening paragraph",
+          "note": "Participants remained in their originally allocated group for primary analysis when otherwise eligible."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s1473_3099_18_30279_2.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/antic",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

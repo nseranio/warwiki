@@ -1,0 +1,243 @@
+{
+  "id": "plus",
+  "name": "PLUS",
+  "aliases": [
+    "Mirabegron add-on to tamsulosin in men",
+    "178-MA-1008"
+  ],
+  "nct": "NCT02757768",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "add-on-in-men"
+    }
+  ],
+  "question": "In men with persistent overactive bladder symptoms while taking tamsulosin for LUTS attributed to BPH, does mirabegron add-on reduce daily micturitions more than placebo add-on?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 715,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "tamsulosin plus mirabegron",
+        "n": 356,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "tamsulosin plus placebo",
+        "n": 359,
+        "role": "control"
+      }
+    ],
+    "population": "Men with persistent overactive bladder symptoms while receiving tamsulosin for lower urinary tract symptoms attributed to benign prostatic hyperplasia.",
+    "description": "Multicenter, double-blind, placebo-controlled phase 4 randomized trial",
+    "locator": "ClinicalTrials.gov NCT02757768, Participant Flow, Started; PubMed abstract, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "The adjusted benefit was 0.39 fewer micturitions per day.",
+  "takeaway": "In PLUS, mirabegron added to tamsulosin reduced daily micturitions more than placebo added to tamsulosin after 12 weeks (adjusted difference −0.39 per day, 95% CI −0.76 to −0.02).",
+  "reports": [
+    {
+      "id": "plus-2020",
+      "kind": "primary",
+      "label": "Primary efficacy report",
+      "published": "2020-01-02",
+      "cutoff": null,
+      "citation": "Kaplan SA, Herschorn S, McVary KT, et al. Efficacy and Safety of Mirabegron versus Placebo Add-On Therapy in Men with Overactive Bladder Symptoms Receiving Tamsulosin for Underlying Benign Prostatic Hyperplasia: A Randomized, Phase 4 Study (PLUS). *J Urol.* 2020;203(6):1163-1171.",
+      "doi": "10.1097/JU.0000000000000738",
+      "pmid": "31895002",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Micturitions",
+          "role": "primary",
+          "measure": "Adjusted mean change in micturitions per day from baseline to end of treatment",
+          "values": {
+            "exp": "−2.00/day",
+            "ctl": "−1.62/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.39,
+            "ci": [
+              -0.76,
+              -0.02
+            ],
+            "ciLevel": "95%"
+          },
+          "met": true,
+          "note": "Full analysis set: 676 men; adjusted between-arm mean difference.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urgency episodes",
+          "role": "secondary",
+          "measure": "Change in urgency episodes per day",
+          "values": {
+            "exp": "greater reduction",
+            "ctl": "lesser reduction"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Mean volume voided per micturition",
+          "role": "secondary",
+          "measure": "Change in mean volume voided per micturition",
+          "values": {
+            "exp": "greater improvement",
+            "ctl": "lesser improvement"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Total urgency and frequency score",
+          "role": "secondary",
+          "measure": "Change in total urgency and frequency score",
+          "values": {
+            "exp": "greater improvement",
+            "ctl": "lesser improvement"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Reported as statistically superior for mirabegron; numerical estimates absent from abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "International Prostate Symptom Score",
+          "role": "secondary",
+          "measure": "Change in total IPSS",
+          "values": {
+            "exp": "no statistically significant between-arm difference",
+            "ctl": "no statistically significant between-arm difference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Numerical estimates absent from abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "higher than control",
+            "ctl": "lower than mirabegron"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Arm counts absent from primary abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Tamsulosin run-in and randomized treatment",
+          "value": "Tamsulosin 0.4 mg for 4 weeks before randomization; 12 weeks of add-on treatment.",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Mirabegron dosing",
+          "values": {
+            "exp": "25 mg initially, titrated to 50 mg after 4 weeks",
+            "ctl": "matched placebo titration after 4 weeks"
+          },
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000738.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "plus-2020-safety",
+      "kind": "secondary",
+      "label": "Safety analysis",
+      "published": "2020-10-10",
+      "cutoff": null,
+      "citation": "Herschorn S, McVary KT, Cambronero Santos J, et al. Mirabegron Vs Placebo Add-on Therapy in Men With Overactive Bladder Symptoms Receiving Tamsulosin for Underlying Benign Prostatic Hyperplasia: A Safety Analysis From the Randomized, Phase 4 PLUS Study. *Urology.* 2021;147:235-242.",
+      "doi": "10.1016/j.urology.2020.09.040",
+      "pmid": "33045287",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [],
+      "harms": [
+        {
+          "label": "Overall treatment-emergent adverse events",
+          "values": {
+            "exp": "lower frequency than control",
+            "ctl": "higher frequency than mirabegron"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Arm counts absent from abstract."
+        },
+        {
+          "label": "Drug-related treatment-emergent adverse events",
+          "values": {
+            "exp": "higher frequency than control",
+            "ctl": "lower frequency than mirabegron"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Arm counts absent from abstract."
+        },
+        {
+          "label": "Drug-related serious treatment-emergent adverse events",
+          "values": {
+            "exp": "2/352 (0.6%)",
+            "ctl": "1/354 (0.3%)"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Mirabegron arm: acute myocardial infarction with cerebral infarction and angina pectoris; placebo arm: lacunar stroke."
+        },
+        {
+          "label": "Catheterization for urinary retention",
+          "values": {
+            "exp": "2/352 (0.6%)",
+            "ctl": "not stated in abstract"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Neither catheterized patient discontinued treatment."
+        },
+        {
+          "label": "Postvoid residual and maximum urinary flow changes",
+          "values": {
+            "exp": "not clinically meaningful",
+            "ctl": "not clinically meaningful"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Investigators' clinical interpretation; numerical estimates absent from abstract."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2020_09_040.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/plus",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

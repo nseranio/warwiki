@@ -1,0 +1,286 @@
+{
+  "id": "ttrials",
+  "name": "TTrials",
+  "aliases": [
+    "Testosterone Trials"
+  ],
+  "nct": "NCT00799617",
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "testosterone-therapy",
+      "lane": "efficacy"
+    }
+  ],
+  "question": "In older men with low testosterone and symptoms, does one year of testosterone gel improve sexual activity, walking ability, and vitality versus placebo?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 790,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Titrated testosterone 1% gel",
+        "n": 395,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo gel",
+        "n": 395,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged 65 years or older with mean serum testosterone below 275 ng/dL and symptoms qualifying them for at least one of three main trials.",
+    "description": "Multicenter, double-blind randomized placebo-controlled trial program",
+    "locator": "Primary report, Methods: Study Design, Participants, Study Treatment; Results: Participants; AUA guideline, PSA Response to Testosterone Therapy, for allocation"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Sexual activity improved; walking and vitality primary outcomes were not significant in their qualifying cohorts.",
+  "takeaway": "In symptomatic older men with low testosterone, one year of titrated testosterone gel versus placebo improved sexual activity, desire, and erectile function; the prespecified walking and vitality primary outcomes did not improve significantly in their respective trials.",
+  "reports": [
+    {
+      "id": "ttrials-2016",
+      "kind": "primary",
+      "label": "Main trials report",
+      "published": "2016-02-18",
+      "cutoff": null,
+      "citation": "Snyder PJ, Bhasin S, Cunningham GR, et al. \"Effects of Testosterone Treatment in Older Men.\" *N Engl J Med.* 2016;374(7):611-624. doi:10.1056/NEJMoa1506119",
+      "doi": "10.1056/NEJMoa1506119",
+      "pmid": "26886521",
+      "followUp": "12 months of treatment; adverse events collected through 12 additional months",
+      "followUpLocator": "Full text, Methods: Study Design and Oversight",
+      "results": [
+        {
+          "endpoint": "Sexual activity (PDQ-Q4)",
+          "role": "primary",
+          "measure": "Month-12 mean change in PDQ-Q4 score; adjusted mean difference in change averaged across months 3–12",
+          "values": {
+            "exp": "+0.2 points (n=230)",
+            "ctl": "−0.1 points (n=229)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.58,
+            "ci": [
+              0.38,
+              0.78
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Sexual Function Trial cohort; the modeled effect averages all postbaseline visits, not just month 12.",
+          "locator": "Full text, Table 1 and Figure 1A"
+        },
+        {
+          "endpoint": "Six-minute walk improvement of at least 50 m",
+          "role": "primary",
+          "measure": "Month-12 proportion; adjusted odds ratio averaged across months 3–12",
+          "values": {
+            "exp": "35/172 (20.3%)",
+            "ctl": "20/165 (12.1%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.42,
+            "ci": [
+              0.83,
+              2.45
+            ],
+            "p": "0.20"
+          },
+          "met": false,
+          "note": "Physical Function Trial cohort; odds ratio is the longitudinal model effect.",
+          "locator": "Full text, Table 2 and Figure 1B"
+        },
+        {
+          "endpoint": "FACIT-Fatigue improvement of at least 4 points",
+          "role": "primary",
+          "measure": "Month-12 proportion; adjusted odds ratio averaged across months 3–12",
+          "values": {
+            "exp": "147/203 (72.4%)",
+            "ctl": "120/191 (62.8%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.23,
+            "ci": [
+              0.83,
+              1.84
+            ],
+            "p": "0.30"
+          },
+          "met": false,
+          "note": "Vitality Trial cohort; odds ratio is the longitudinal model effect.",
+          "locator": "Full text, Table 3 and Figure 1C"
+        },
+        {
+          "endpoint": "Sexual desire (DISF-M-II)",
+          "role": "secondary",
+          "measure": "Month-12 mean change; adjusted mean difference in change averaged across months 3–12",
+          "values": {
+            "exp": "+2.6 points (n=234)",
+            "ctl": "0.0 points (n=236)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.93,
+            "ci": [
+              2.13,
+              3.74
+            ],
+            "p": "<0.001"
+          },
+          "note": "Sexual Function Trial cohort.",
+          "locator": "Full text, Table 1"
+        },
+        {
+          "endpoint": "Erectile function (IIEF-EF)",
+          "role": "secondary",
+          "measure": "Month-12 mean change; adjusted mean difference in change averaged across months 3–12",
+          "values": {
+            "exp": "+3.1 points (n=234)",
+            "ctl": "+1.0 points (n=236)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.64,
+            "ci": [
+              1.68,
+              3.61
+            ],
+            "p": "<0.001"
+          },
+          "note": "Sexual Function Trial cohort.",
+          "locator": "Full text, Table 1"
+        },
+        {
+          "endpoint": "Six-minute walk improvement of at least 50 m in all participants",
+          "role": "secondary",
+          "measure": "Month-12 proportion; adjusted odds ratio averaged across months 3–12",
+          "values": {
+            "exp": "71/346 (20.5%)",
+            "ctl": "41/326 (12.6%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.76,
+            "ci": [
+              1.21,
+              2.57
+            ],
+            "p": "0.003"
+          },
+          "note": "All-trials analysis, distinct from the Physical Function Trial primary analysis.",
+          "locator": "Full text, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "PSA rise of at least 1.0 ng/mL during treatment",
+          "values": {
+            "exp": "23/394 (5.8%)",
+            "ctl": "8/394 (2.0%)"
+          },
+          "locator": "Full text, Table 4",
+          "note": "Safety population; referral followed confirmed PSA rise or a prostate nodule."
+        },
+        {
+          "label": "Hemoglobin at least 17.5 g/dL during treatment",
+          "values": {
+            "exp": "7/394 (1.8%)",
+            "ctl": "0/394 (0%)"
+          },
+          "locator": "Full text, Table 4",
+          "note": "Safety population."
+        },
+        {
+          "label": "Adjudicated major cardiovascular event during treatment",
+          "values": {
+            "exp": "7/394 (1.8%)",
+            "ctl": "7/394 (1.8%)"
+          },
+          "locator": "Full text, Table 4",
+          "note": "Myocardial infarction, stroke, or cardiovascular death; the trial was too small for reliable risk estimation."
+        },
+        {
+          "label": "IPSS above 19 during treatment",
+          "values": {
+            "exp": "27/394 (6.9%)",
+            "ctl": "26/394 (6.6%)"
+          },
+          "locator": "Full text, Table 4",
+          "note": "Safety population; men with baseline IPSS above 19 were excluded."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Gel dosing and monitoring",
+          "value": "AndroGel 1% started at 5 g daily; dose adjusted after central testosterone assays at months 1, 2, 3, 6, and 9 to target the young-adult normal range.",
+          "locator": "Full text, Methods: Study Treatment"
+        },
+        {
+          "label": "Treatment completion",
+          "value": "705/790 (89.2%) completed 12 months of treatment.",
+          "locator": "Full text, Results: Participants and Study Treatment"
+        },
+        {
+          "label": "Prostate monitoring",
+          "value": "PSA and digital rectal examination at months 3 and 12; PSA again at month 18; confirmed PSA rise of at least 1.0 ng/mL or nodule prompted urology referral.",
+          "locator": "Full text, Methods: Assessments"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejmoa1506119.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "ttrials-2016-sexual-function",
+      "kind": "secondary",
+      "label": "Sexual-function analysis",
+      "published": "2016-06-29",
+      "cutoff": null,
+      "citation": "Cunningham GR, Stephens-Shields AJ, Rosen RC, et al. \"Testosterone Treatment and Sexual Function in Older Men With Low Testosterone Levels.\" *J Clin Endocrinol Metab.* 2016;101(8):3096-3104. doi:10.1210/jc.2016-1645",
+      "doi": "10.1210/jc.2016-1645",
+      "pmid": "27355400",
+      "followUp": "12 months of treatment; sexual-function questionnaires every 3 months",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Measures of sexual activity improved versus placebo",
+          "role": "secondary",
+          "measure": "Count of sexual-activity measures with significant improvement",
+          "values": {
+            "exp": "10 of 12 measures favored testosterone",
+            "ctl": "placebo comparator"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Secondary analysis of the same Sexual Function Trial cohort; abstract reports no effect estimates for individual measures.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1210_jc_2016_1645.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/ttrials",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

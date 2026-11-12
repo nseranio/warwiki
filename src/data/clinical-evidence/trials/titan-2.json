@@ -1,0 +1,220 @@
+{
+  "id": "titan-2",
+  "name": "TITAN 2",
+  "aliases": [
+    "Evaluation of Implantable Tibial Neuromodulation (TITAN 2)",
+    "Medtronic Altaviva pivotal study"
+  ],
+  "nct": "NCT05226286",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "tibial-nerve"
+    }
+  ],
+  "question": "Does the Medtronic implantable tibial neuromodulation system achieve a six-month urgency urinary incontinence responder rate above a 40% performance goal?",
+  "design": {
+    "phase": "pivotal device study",
+    "randomized": false,
+    "blinding": "open-label",
+    "type": "single-arm",
+    "n": 126,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Medtronic leadless rechargeable tibial neurostimulator",
+        "n": 126,
+        "role": "single"
+      }
+    ],
+    "population": "126 implanted adults with urgency urinary incontinence after failure or intolerance of at least two overactive bladder medications at US sites.",
+    "description": "Prospective, multicenter, open-label, single-arm pivotal device study",
+    "locator": "Methods, Study Design; Results, Subject Enrollment and Demographics"
+  },
+  "verdict": "descriptive",
+  "verdictNote": "Six-month responder rate exceeded the 40% performance goal in a single-arm study.",
+  "takeaway": "In the single-arm TITAN 2 study of the Medtronic leadless rechargeable tibial neurostimulator, 59% of participants with six-month diary data had at least 50% fewer urgency incontinence episodes, exceeding the prespecified 40% goal; the all-implanted analysis reported 61% at 12 months.",
+  "reports": [
+    {
+      "id": "titan-2-2026",
+      "kind": "primary",
+      "label": "Six- and 12-month pivotal report",
+      "published": "2026-01-26",
+      "cutoff": null,
+      "citation": "Lee U, Xavier K, Carey J, et al. \"Implantable Tibial Neuromodulation Therapy Improves Symptoms of Urge Urinary Incontinence From the TITAN 2 Pivotal Study.\" *J Urol.* 2026;215(6):702-712. doi:10.1097/JU.0000000000004958",
+      "doi": "10.1097/JU.0000000000004958",
+      "pmid": "41587348",
+      "followUp": "Primary outcome at 6 months; safety and observed or imputed efficacy through 12 months",
+      "followUpLocator": "Methods, Study Design and Statistical Analysis; Results, UUI and Safety",
+      "results": [
+        {
+          "endpoint": "UUI responder rate",
+          "role": "primary",
+          "measure": "At least 50% fewer daily UUI episodes on a 3-day diary at 6 months among complete cases; prespecified performance goal 40%",
+          "values": {
+            "exp": "59% (95% CI 49%-67%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "One-sided alpha 0.025. Missing data did not exceed the prespecified 5% threshold for imputation at 6 months.",
+          "locator": "Methods, Statistical Analysis; Results, UUI; Figure 3"
+        },
+        {
+          "endpoint": "UUI responder rate",
+          "role": "secondary",
+          "measure": "At least 50% fewer daily UUI episodes at 12 months; all implanted with imputation",
+          "values": {
+            "exp": "61%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Missing data exceeded 5% at 12 months, triggering the prespecified imputation approach.",
+          "locator": "Methods, Statistical Analysis; Results, UUI; Figure 3"
+        },
+        {
+          "endpoint": "Complete dryness",
+          "role": "secondary",
+          "measure": "No UUI episodes on the follow-up diary at 6 and 12 months",
+          "values": {
+            "exp": "19% at 6 months; 22% at 12 months"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The article reports 95% CIs of 12%-27% and 15%-31%, respectively.",
+          "locator": "Results, UUI; Supplementary Figure 1 cited therein"
+        },
+        {
+          "endpoint": "Urinary frequency",
+          "role": "secondary",
+          "measure": "Mean daily voids among subjects with baseline frequency of at least 10 voids/day, baseline to 6 months",
+          "values": {
+            "exp": "12.9 to 10.4 voids/day; mean reduction 2.5 voids/day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "The 12-month mean reduction was 3.1 voids/day.",
+          "locator": "Results, UF; Figure 5"
+        },
+        {
+          "endpoint": "Urgency Perception Scale",
+          "role": "secondary",
+          "measure": "Mean increase from baseline at 6 months",
+          "values": {
+            "exp": "0.4 points (95% CI 0.3-0.6)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "",
+          "locator": "Results, UU"
+        },
+        {
+          "endpoint": "OAB-q health-related quality of life",
+          "role": "secondary",
+          "measure": "Mean improvement from baseline at 6 and 12 months",
+          "values": {
+            "exp": "27.1 points (95% CI 22.6-31.7) at 6 months; 25.5 points (95% CI 20.7-30.3) at 12 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Six-month P value applies to the prespecified change from baseline.",
+          "locator": "Results, OAB Quality of Life"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse device effects through 12 months",
+          "values": {
+            "exp": "25/126 (19.8%); 30 events"
+          },
+          "locator": "Results, Safety; Table 3",
+          "note": "Related to device, procedure, therapy or study aids; 10 participants had grade 1 and 17 had grade 2 events, with overlap between grades."
+        },
+        {
+          "label": "Procedure-related implant-site infection",
+          "values": {
+            "exp": "7%; 1 explant"
+          },
+          "locator": "Results, Safety; Table 3 and Figure 2",
+          "note": "Article text reports 7%; Table 3 lists implant infection in 5, incision cellulitis in 3, and wound infection in 1. These categories may overlap. Other infections resolved with antibiotics."
+        },
+        {
+          "label": "Serious adverse device effect",
+          "values": {
+            "exp": "1/126 (0.8%)"
+          },
+          "locator": "Results, Safety; Table 3",
+          "note": "Resolved Clostridium difficile colitis possibly related to perioperative antibiotics. FDA additionally classified the wound infection requiring explant as serious (P240011B, p33)."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrollment and follow-up",
+          "value": "188 enrolled at 26 sites; 126 implanted; 125 completed 6 months; 118 completed 12 months",
+          "locator": "Results, Subject Enrollment and Demographics; Figure 2"
+        },
+        {
+          "label": "Preimplant testing",
+          "value": "No evaluation stimulation period or prior percutaneous tibial neuromodulation required",
+          "locator": "Methods, Study Design"
+        },
+        {
+          "label": "Implant location and landmarks",
+          "value": "Local anesthetic; subcutaneous pocket superficial to deep fascia over the tibial nerve. Mark 4 cm proximal to the medial malleolar midpoint and three-quarters of the way from tibia to Achilles; incision and insertion point 5 cm proximal to that mark. Suture loop permits repositioning; shallow fascial fixation optional.",
+          "locator": "Methods, Study Design; Figure 1"
+        },
+        {
+          "label": "Intraoperative response",
+          "value": "126/126 demonstrated a motor or sensory response during implantation",
+          "locator": "Results, Subject Enrollment and Demographics"
+        },
+        {
+          "label": "Implant setting",
+          "value": "36/126 hospital operating room; 44/126 ambulatory surgical center; 46/126 outpatient clinic procedure room",
+          "locator": "Results, Subject Enrollment and Demographics"
+        },
+        {
+          "label": "Stimulation schedule",
+          "value": "30 minutes every other day, 20 Hz, 200 microseconds pulse width, comfortable amplitude; therapy start within 24 hours",
+          "locator": "Methods, Study Design"
+        },
+        {
+          "label": "Study-device charging",
+          "value": "Weekly charging recommended for the investigational device; article states commercial device typically needs annual or biannual charging",
+          "locator": "Methods, Study Design"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000004958.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "builds-on",
+      "target": "ecoin-pivotal",
+      "note": "TITAN 2 adopted the 40% responder performance goal used in the eCoin pivotal study."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/titan-2",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

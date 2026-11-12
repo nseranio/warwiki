@@ -1,0 +1,245 @@
+{
+  "id": "future",
+  "name": "FUTURE",
+  "aliases": [
+    "Female Urgency, Trial of Urodynamics as Routine Evaluation"
+  ],
+  "nct": null,
+  "registry": "ISRCTN63268739",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "urodynamics"
+    }
+  ],
+  "question": "Does adding invasive urodynamics to comprehensive clinical assessment improve patient-reported success before invasive treatment for refractory overactive bladder symptoms in women?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 1103,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Urodynamics plus comprehensive clinical assessment",
+        "n": 553,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "comprehensive clinical assessment alone",
+        "n": 550,
+        "role": "control"
+      }
+    ],
+    "population": "Women with refractory overactive bladder or urgency-predominant mixed urinary incontinence after conservative and pharmacological treatment, considering invasive treatment.",
+    "description": "Multicenter, open-label superiority randomized trial",
+    "locator": "Lancet 2025 pp1058–1059, Methods and trial profile"
+  },
+  "verdict": "negative",
+  "verdictNote": "Added urodynamics did not improve final patient-reported success.",
+  "takeaway": "In women considering invasive treatment for refractory overactive bladder symptoms, urodynamics plus comprehensive clinical assessment did not improve final patient-reported success versus comprehensive clinical assessment alone (23.6% versus 22.7%; adjusted OR 1.12, 95% CI 0.73–1.74).",
+  "reports": [
+    {
+      "id": "future-2025",
+      "kind": "primary",
+      "label": "Primary clinical report",
+      "published": "2025-03-22",
+      "cutoff": null,
+      "citation": "Abdel-Fattah M, Chapple C, Cooper D, et al. \"Invasive urodynamic investigations in the management of women with refractory overactive bladder symptoms (FUTURE) in the UK: a multicentre, superiority, parallel, open-label, randomised controlled trial.\" *Lancet.* 2025;405(10484):1057-1068. doi:10.1016/S0140-6736(24)01886-5",
+      "doi": "10.1016/S0140-6736(24)01886-5",
+      "pmid": "40132616",
+      "followUp": "Final PGI-I assessment at 15 months, or 24 months for participants whose treatment was delayed during COVID-19",
+      "followUpLocator": "Lancet 2025 pp1058,1061, Procedures and Table 2 footnote",
+      "results": [
+        {
+          "endpoint": "PGI-I success",
+          "role": "primary",
+          "measure": "Final participant-reported very much or much improved",
+          "values": {
+            "exp": "117/496 (23.6%)",
+            "ctl": "114/503 (22.7%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.12,
+            "ci": [
+              0.73,
+              1.74
+            ],
+            "p": "0.60"
+          },
+          "met": false,
+          "note": "Adjusted odds ratio; powered for a minimum 10-percentage-point superiority advantage. Analysis excluded four participants after randomization.",
+          "locator": "Lancet 2025 p1058, Statistical analysis; p1059, trial profile; p1061, Table 2"
+        },
+        {
+          "endpoint": "PGI-I success",
+          "role": "secondary",
+          "measure": "3-month participant-reported very much or much improved",
+          "values": {
+            "exp": "34/417 (8.2%)",
+            "ctl": "77/433 (17.8%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.28,
+            "ci": [
+              0.16,
+              0.51
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Earlier treatment in the assessment-only arm contributed to the early difference.",
+          "locator": "Lancet 2025 p1061, Table 2; p1063, Discussion"
+        },
+        {
+          "endpoint": "PGI-I success after botulinum toxin A",
+          "role": "exploratory",
+          "measure": "Very much or much improved 2 months after injection among treated respondents",
+          "values": {
+            "exp": "88/138 (63.8%)",
+            "ctl": "99/165 (60.0%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.17,
+            "ci": [
+              0.73,
+              1.89
+            ],
+            "p": "0.52"
+          },
+          "note": "Post-treatment subgroup, not the randomized primary comparison.",
+          "locator": "Lancet 2025 p1061, Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "At least one adverse event",
+          "values": {
+            "exp": "113/550",
+            "ctl": "122/549 (22.2%)"
+          },
+          "locator": "Lancet 2025 p1062, Results",
+          "note": "The article prints 20.6% for 113/550, which recalculates to 20.5% to one decimal; the count is retained without a percentage."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "39/550 (7.1%)",
+            "ctl": "41/549 (7.5%)"
+          },
+          "locator": "Lancet 2025 p1063, Table 4",
+          "note": "Events during the treatment pathway, not isolated post-urodynamics infections."
+        },
+        {
+          "label": "Clean intermittent self-catheterisation required",
+          "values": {
+            "exp": "26/550 (4.7%)",
+            "ctl": "32/549 (5.8%)"
+          },
+          "locator": "Lancet 2025 p1063, Table 4",
+          "note": "Most patients received intradetrusor botulinum toxin A; attribution to the diagnostic test is not reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assessment and urodynamics",
+          "value": "Both arms: history, examination, 3-day bladder diary and post-void residual scan, with optional noninvasive uroflow; experimental arm: cystometry and uroflow, with optional pressure-flow study.",
+          "locator": "Lancet 2025 p1058, Procedures"
+        },
+        {
+          "label": "Any treatment after assessment",
+          "values": {
+            "exp": "467/550 (84.9%)",
+            "ctl": "479/549 (87.2%)"
+          },
+          "locator": "Lancet 2025 p1062, Results",
+          "note": "Treatment selection followed the urodynamic or clinical diagnosis, respectively."
+        },
+        {
+          "label": "Botulinum toxin A among treated participants",
+          "values": {
+            "exp": "277/467 (59.3%)",
+            "ctl": "343/479 (71.6%)"
+          },
+          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "note": "The source gives percentages among participants receiving any treatment."
+        },
+        {
+          "label": "Stress incontinence surgery among treated participants",
+          "values": {
+            "exp": "16/467 (3.4%)",
+            "ctl": "5/479 (1.0%)"
+          },
+          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "note": "Treatment mix was a consequence of diagnostic strategy."
+        },
+        {
+          "label": "Sacral neuromodulation among treated participants",
+          "values": {
+            "exp": "11/467 (2.4%)",
+            "ctl": "8/479 (1.7%)"
+          },
+          "locator": "Lancet 2025 pp1062,1064, Results and Discussion",
+          "note": "Small treated subgroup."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_24_01886_5.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "future-2025-hta",
+      "kind": "secondary",
+      "label": "Detailed economic evaluation",
+      "published": "2025-07-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed publication month: July 2025; Europe PMC firstPublicationDate 2025-07-01",
+      "cutoff": null,
+      "citation": "Abdel-Fattah M, Chapple C, Breeman S, et al. \"Invasive urodynamic investigations in the management of women with refractory overactive bladder symptoms: FUTURE, a superiority RCT and economic evaluation.\" *Health Technol Assess.* 2025;29(27):1-139. doi:10.3310/UKYW4923",
+      "doi": "10.3310/UKYW4923",
+      "pmid": "40620147",
+      "followUp": "Within-trial follow-up to 15 or 24 months; lifetime cost-effectiveness model",
+      "followUpLocator": "PubMed abstract, Design and Conclusion; Lancet 2025 p1062, economic analysis",
+      "results": [
+        {
+          "endpoint": "Incremental NHS cost",
+          "role": "secondary",
+          "measure": "Mean cost difference per participant, urodynamics plus assessment minus assessment alone",
+          "values": {
+            "exp": "£463 higher",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 463
+          },
+          "note": "Incremental QALYs 0.011; ICER £42,643 per QALY gained; 34% probability of cost-effectiveness at £20,000/QALY willingness to pay. Costs, QALYs, ICER, and cost-effectiveness probability are from the within-trial analysis.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_ukyw4923.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/future",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

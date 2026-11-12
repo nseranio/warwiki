@@ -1,0 +1,299 @@
+{
+  "id": "itind-pivotal",
+  "name": "iTind pivotal (MT-03)",
+  "aliases": [
+    "MT-03",
+    "temporarily implanted nitinol device pivotal trial"
+  ],
+  "nct": "NCT02506465",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does temporary iTind implantation improve lower urinary tract symptoms compared with a sham procedure in men with BPH?",
+  "design": {
+    "phase": "pivotal device trial",
+    "randomized": true,
+    "blinding": "single-blind through 3 months",
+    "type": "superiority",
+    "n": 185,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "iTind temporary nitinol device",
+        "n": 128,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham Foley insertion and removal",
+        "n": 57,
+        "role": "control"
+      }
+    ],
+    "population": "Men aged at least 50 years with symptomatic BPH, IPSS at least 10, peak flow at most 12 mL/s, prostate volume 25–75 mL, postvoid residual at most 250 mL, and no obstructing median lobe.",
+    "description": "Multicenter, single-blind, sham-controlled randomized device trial",
+    "locator": "Chughtai 2021 PDF pp2–3 (journal pp271–272), Methods; FDA De Novo Summary p10"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Published responder endpoint met; FDA's prespecified sham-controlled mean-change co-primary did not.",
+  "takeaway": "Temporary iTind improved the published three-month IPSS responder outcome versus sham, but the FDA's prespecified three-month mean IPSS comparison missed significance; its 12-month within-group co-primary endpoint improved.",
+  "reports": [
+    {
+      "id": "itind-pivotal-2020-fda",
+      "kind": "secondary",
+      "label": "FDA De Novo decision summary",
+      "published": "2020-02-25",
+      "cutoff": null,
+      "citation": "U.S. Food and Drug Administration. iTind System: De Novo Decision Summary, DEN190020. 2020.",
+      "doi": null,
+      "pmid": null,
+      "noDoi": "FDA regulatory document",
+      "followUp": "Blinded comparison at 3 months; iTind-only analysis at 12 months",
+      "followUpLocator": "FDA De Novo Summary pp10–11",
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/DEN190020.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      },
+      "results": [
+        {
+          "endpoint": "IPSS mean change versus sham",
+          "role": "primary",
+          "measure": "3-month IPSS mean reduction; adjusted mean difference in points in FDA prespecified mixed model",
+          "values": {
+            "exp": "10.6 points (84 assessed)",
+            "ctl": "8.3 points (40 assessed)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.5,
+            "ci": [
+              -0.5,
+              5.6
+            ],
+            "p": "0.104"
+          },
+          "met": false,
+          "note": "FDA co-primary; adjusted difference does not equal subtraction of rounded arm changes. Publication separately reports 9.0 versus 6.6 points, P=0.063.",
+          "locator": "FDA De Novo Summary p10, Table 3"
+        },
+        {
+          "endpoint": "IPSS mean change from baseline",
+          "role": "primary",
+          "measure": "12-month within-iTind mean IPSS change in FDA prespecified mixed model",
+          "values": {
+            "exp": "−8.7 points (81 assessed)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -8.7,
+            "ci": [
+              -10.6,
+              -6.9
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "FDA co-primary; no sham comparison remained at 12 months.",
+          "locator": "FDA De Novo Summary p11, Table 4"
+        }
+      ],
+      "harms": [],
+      "delivery": []
+    },
+    {
+      "id": "itind-pivotal-2021",
+      "kind": "primary",
+      "label": "Pivotal randomized report",
+      "published": "2020-12-26",
+      "cutoff": null,
+      "citation": "Chughtai B, Elterman D, Shore N, et al. \"The iTind Temporarily Implanted Nitinol Device for the Treatment of Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia: A Multicenter, Randomized, Controlled Trial.\" *Urology.* 2021;153:270-276. doi:10.1016/j.urology.2020.12.022",
+      "doi": "10.1016/j.urology.2020.12.022",
+      "pmid": "33373708",
+      "followUp": "Blinded comparison at 3 months; iTind-only follow-up to 12 months after unblinding",
+      "followUpLocator": "Chughtai 2021 PDF p2 (journal p271), Methods; FDA De Novo Summary p11",
+      "results": [
+        {
+          "endpoint": "IPSS response",
+          "role": "primary",
+          "measure": "At least 3-point IPSS reduction at 3 months; risk difference in percentage points",
+          "values": {
+            "exp": "78.6%",
+            "ctl": "60.0%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 18.6,
+            "p": "0.029"
+          },
+          "met": true,
+          "note": "The publication calls this its primary endpoint; responder numerators and denominators are not explicitly reported.",
+          "locator": "Chughtai 2021 PDF p3 (journal p272), Efficacy; FDA De Novo Summary p10, Table 3"
+        },
+        {
+          "endpoint": "IPSS mean change from baseline",
+          "role": "secondary",
+          "measure": "12-month per-protocol, paired within-iTind mean IPSS change",
+          "values": {
+            "exp": "−9.25 points (78 paired)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -9.25,
+            "ci": [
+              -11.0,
+              -7.4
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Distinct per-protocol analysis from the FDA's intent-to-treat mixed model.",
+          "locator": "Chughtai 2021 PDF p5 (journal p274), Table 2"
+        },
+        {
+          "endpoint": "Peak urinary flow rate",
+          "role": "secondary",
+          "measure": "12-month per-protocol, paired within-iTind mean Qmax change",
+          "values": {
+            "exp": "+3.52 mL/s (55 paired)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 3.52,
+            "ci": [
+              2.0,
+              5.0
+            ],
+            "p": "<0.0001"
+          },
+          "note": "No sham comparison at 12 months.",
+          "locator": "Chughtai 2021 PDF p5 (journal p274), Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event within 30 days",
+          "values": {
+            "exp": "45/118 (38.1%)",
+            "ctl": "10/57 (17.5%)"
+          },
+          "locator": "Chughtai 2021 PDF p3 (journal p272), Safety; FDA De Novo Summary p12, Table 6",
+          "note": "Most events were mild and transient; 68% of iTind events occurred while the device was in place."
+        },
+        {
+          "label": "Dysuria and hematuria",
+          "values": {
+            "exp": "dysuria 27/118 (22.9%); hematuria 16/118 (13.6%)",
+            "ctl": "dysuria 5/57 (8.8%); hematuria 0/57 (0%)"
+          },
+          "locator": "FDA De Novo Summary p12, Table 6; Chughtai 2021 PDF p3 (journal p272), Safety",
+          "note": "Events within 30 days."
+        },
+        {
+          "label": "Urinary retention and related serious adverse events",
+          "values": {
+            "exp": "retention 7/118 (5.9%); 5 related serious events in 3/118",
+            "ctl": "retention 0/57"
+          },
+          "locator": "Chughtai 2021 PDF pp3–4 (journal pp272–273), Safety and Procedure; FDA De Novo Summary p12, Table 6",
+          "note": "Related serious events: retention twice, urinary tract infection twice, and sepsis once."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment received",
+          "values": {
+            "exp": "118/128 randomized underwent implantation",
+            "ctl": "57/57 underwent sham"
+          },
+          "locator": "Chughtai 2021 PDF p3 (journal p272), Procedure; FDA De Novo Summary p10",
+          "note": "Nine assigned to iTind were randomized in error after screen failure; one was excluded for urethral stricture at implantation."
+        },
+        {
+          "label": "Device and sham procedures",
+          "value": "Three nitinol struts at 12, 5, and 7 o'clock plus an anchoring leaflet at 6 o'clock; rigid-cystoscopic placement for 5–7 days; rigid-cystoscope or 22F open-ended catheter retrieval; sham 18F Foley insertion and removal at both visits.",
+          "locator": "Chughtai 2021 PDF p2 (journal p271), iTind and Sham Procedures"
+        },
+        {
+          "label": "Anesthesia and catheterization",
+          "value": "Implantation and removal used IV sedation, local anesthesia, or general anesthesia at physician discretion; routine postoperative catheterization was not used.",
+          "locator": "Chughtai 2021 PDF p4 (journal p273), Procedure",
+          "note": "Published implantation anesthesia counts total 117 for 118 treated, and 77 is labeled 66.1%; 77/118 is 65.3%."
+        },
+        {
+          "label": "Additional BPH treatment through 12 months",
+          "value": "Six iTind-assigned men had alternative BPH surgery and six started medication; the publication gives 4.7% for each using 128 randomized men.",
+          "locator": "Chughtai 2021 PDF p3 (journal p272), Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2020_12_022.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    },
+    {
+      "id": "itind-pivotal-2023-sexual-function",
+      "kind": "secondary",
+      "label": "Sexual function analysis",
+      "published": "2022-09-07",
+      "cutoff": null,
+      "citation": "Elterman D, Alshak MN, Martinez Diaz S, et al. \"An Evaluation of Sexual Function in the Treatment of Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia in Men Treated with the Temporarily Implanted Nitinol Device.\" *J Endourol.* 2023;37(1):74-79. doi:10.1089/end.2022.0226",
+      "doi": "10.1089/end.2022.0226",
+      "pmid": "36070450",
+      "followUp": "Blinded sexual-function comparison at 3 months; active-arm assessment at 12 months",
+      "followUpLocator": "Elterman 2023 full text, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Sexual function scores",
+          "role": "exploratory",
+          "measure": "3-month total SHIM and IIEF between-group scores",
+          "values": {
+            "exp": "SHIM 13.13; IIEF 41.47",
+            "ctl": "SHIM 13.00; IIEF 39.31"
+          },
+          "effect": {
+            "type": "none",
+            "p": "SHIM 0.502; IIEF 0.645"
+          },
+          "note": "No significant between-group difference; analysis included only visit attendees who had not started BPH medication.",
+          "locator": "Elterman 2023 full text, Results, Sexual health inventory for men and International Index of Erectile Function"
+        },
+        {
+          "endpoint": "IIEF in men without baseline erectile dysfunction",
+          "role": "exploratory",
+          "measure": "12-month within-iTind mean total IIEF change in baseline SHIM >21 subgroup",
+          "values": {
+            "exp": "+6.07 points (SD 21.17)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 6.07,
+            "p": "0.034"
+          },
+          "note": "Subgroup analysis after sham unblinding; ejaculatory function was assessed with IIEF question 9.",
+          "locator": "Elterman 2023 full text, Results, International Index of Erectile Function and Ejaculatory dysfunction, Figures 1–2"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1089_end_2022_0226.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/itind-pivotal",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

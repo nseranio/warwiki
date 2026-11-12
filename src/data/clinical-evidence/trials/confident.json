@@ -1,0 +1,212 @@
+{
+  "id": "confident",
+  "name": "CONFIDeNT",
+  "aliases": [
+    "CONtrol of Faecal Incontinence using Distal NeuromodulaTion"
+  ],
+  "nct": null,
+  "registry": "ISRCTN88559475",
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "neuromodulation"
+    }
+  ],
+  "question": "Does percutaneous tibial nerve stimulation improve faecal incontinence response compared with sham stimulation after conservative treatment has failed?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "patients and outcome assessors masked; treating investigators unmasked",
+    "type": "superiority",
+    "n": 227,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Percutaneous tibial nerve stimulation",
+        "n": 115,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham electrical stimulation",
+        "n": 112,
+        "role": "control"
+      }
+    ],
+    "population": "227 adults with substantial faecal incontinence despite conservative treatment were randomized in 17 UK specialist hospital units.",
+    "description": "Multicenter, double-blind, pragmatic superiority randomized trial",
+    "locator": "Lancet PubMed abstract, Methods and Findings; Horrocks 2017 PubMed abstract, Background"
+  },
+  "verdict": "negative",
+  "verdictNote": "The prespecified diary-defined responder comparison did not differ significantly.",
+  "takeaway": "After 12 weekly treatments for faecal incontinence, percutaneous tibial nerve stimulation did not significantly increase diary-defined responders versus sham electrical stimulation (39/103 [38%] versus 32/102 [31%]; adjusted OR 1.28, 95% CI 0.72–2.28).",
+  "reports": [
+    {
+      "id": "confident-2015",
+      "kind": "primary",
+      "label": "Primary Lancet report",
+      "published": "2015-08-18",
+      "cutoff": null,
+      "citation": "Knowles CH, Horrocks EJ, Bremner SA, et al. \"Percutaneous tibial nerve stimulation versus sham electrical stimulation for the treatment of faecal incontinence in adults (CONFIDeNT): a double-blind, multicentre, pragmatic, parallel-group, randomised controlled trial.\" *Lancet.* 2015;386(10004):1640-1648. doi:10.1016/S0140-6736(15)60314-2",
+      "doi": "10.1016/S0140-6736(15)60314-2",
+      "pmid": "26293315",
+      "followUp": "Response assessed after 12 weekly treatments during the 14-week masked trial",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "≥50% reduction in weekly faecal incontinence episodes",
+          "role": "primary",
+          "measure": "Diary-complete responders after 12 sessions; adjusted odds ratio from intention-to-treat analysis with multiple imputation",
+          "values": {
+            "exp": "39/103 (38%)",
+            "ctl": "32/102 (31%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.28,
+            "ci": [
+              0.72,
+              2.28
+            ],
+            "p": "0.396"
+          },
+          "met": false,
+          "note": "The displayed proportions use complete bowel diaries; missing data were multiply imputed for the adjusted analysis.",
+          "locator": "PubMed abstract, Methods and Findings"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Mild treatment-related adverse events",
+          "values": {
+            "exp": "7 events",
+            "ctl": "7 events"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Needle-site pain accounted for four PTNS events and three sham events."
+        },
+        {
+          "label": "Serious treatment-related adverse events",
+          "values": {
+            "exp": "none reported",
+            "ctl": "none reported"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "One patient per group withdrew after an adverse event unrelated to treatment."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Trial withdrawals",
+          "values": {
+            "exp": "7/115",
+            "ctl": "5/112"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Most withdrawals were attributed to inability to attend weekly treatment."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_15_60314_2.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "confident-2015-hta",
+      "kind": "secondary",
+      "label": "NIHR trial report",
+      "published": "2015-09-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-online date gives September 2015 without a day",
+      "cutoff": null,
+      "citation": "Horrocks EJ, Bremner SA, Stevens N, et al. \"Double-blind randomised controlled trial of percutaneous tibial nerve stimulation versus sham electrical stimulation in the treatment of faecal incontinence: CONtrol of Faecal Incontinence using Distal NeuromodulaTion (the CONFIDeNT trial).\" *Health Technol Assess.* 2015;19(77):1-164. doi:10.3310/hta19770",
+      "doi": "10.3310/hta19770",
+      "pmid": "26422980",
+      "followUp": "Outcomes assessed two weeks after the 12-treatment course",
+      "followUpLocator": "PubMed abstract, Main outcome measures",
+      "results": [
+        {
+          "endpoint": "Weekly faecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Adjusted mean difference in change, PTNS minus sham, episodes per week",
+          "effect": {
+            "type": "difference",
+            "value": -2.3,
+            "ci": [
+              -4.2,
+              -0.3
+            ],
+            "p": "0.02"
+          },
+          "note": "The decrease was in urge episodes (P=0.02); passive episodes did not differ significantly (P=0.23). No significant differences were found in St Mark's score or quality-of-life measures.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "PTNS and sham protocol",
+          "value": "Urgent PC fine-needle stimulation near the right tibial nerve for 30 minutes weekly for 12 treatments; sham needle inserted subcutaneously at the same site with transcutaneous stimulation at the distal foot.",
+          "locator": "PubMed abstract, Interventions"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_3310_hta19770.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "confident-2017-post-hoc",
+      "kind": "post-hoc",
+      "label": "Obstructive-defecation analysis",
+      "published": "2017-06-21",
+      "cutoff": null,
+      "citation": "Horrocks EJ, Chadi SA, Stevens NJ, et al. \"Factors Associated With Efficacy of Percutaneous Tibial Nerve Stimulation for Fecal Incontinence, Based on Post-Hoc Analysis of Data From a Randomized Trial.\" *Clin Gastroenterol Hepatol.* 2017;15(12):1915-1921.e2. doi:10.1016/j.cgh.2017.06.032",
+      "doi": "10.1016/j.cgh.2017.06.032",
+      "pmid": "28647458",
+      "followUp": "Responder status after 12 weeks of treatment in 205 participants with trial data",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "≥50% reduction in weekly faecal incontinence episodes without obstructive-defecation symptoms",
+          "role": "exploratory",
+          "measure": "Post-hoc subgroup response after excluding obstructive-defecation symptoms; adjusted odds ratio",
+          "values": {
+            "exp": "48.9%",
+            "ctl": "18.2%"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 4.71,
+            "ci": [
+              1.71,
+              12.93
+            ],
+            "p": "0.003"
+          },
+          "note": "Reanalysis included 112 participants; the unadjusted subgroup comparison had P=0.002.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_cgh_2017_06_032.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/confident",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

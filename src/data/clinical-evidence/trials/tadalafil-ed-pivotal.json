@@ -1,0 +1,238 @@
+{
+  "id": "tadalafil-ed-pivotal",
+  "name": "Tadalafil ED integrated trials",
+  "aliases": [
+    "Brock 2002 integrated analysis"
+  ],
+  "nct": null,
+  "area": [
+    "sexual-medicine"
+  ],
+  "decisions": [
+    {
+      "id": "ed-peyronies",
+      "lane": "erectile-dysfunction"
+    }
+  ],
+  "question": "Does as-needed tadalafil improve erectile function compared with placebo in men with erectile dysfunction?",
+  "design": {
+    "phase": "meta-analysis",
+    "randomized": false,
+    "blinding": "double-blind constituent trials",
+    "type": "cohort",
+    "n": 1112,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Tadalafil 2.5–20 mg as needed",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "role": "control"
+      }
+    ],
+    "population": "1,112 men aged 22–82 years with mild to severe erectile dysfunction of varied etiologies across five trials.",
+    "description": "Integrated analysis of five double-blind randomized placebo-controlled trials",
+    "locator": "PubMed abstract, Materials and Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "All three prespecified efficacy measures favored tadalafil over placebo.",
+  "takeaway": "Across five placebo-controlled trials, as-needed tadalafil improved erectile-function scores and sexual-encounter outcomes versus placebo in men with erectile dysfunction; at 20 mg, 81% reported improved erections versus 35% with placebo.",
+  "reports": [
+    {
+      "id": "tadalafil-ed-pivotal-2002",
+      "kind": "primary",
+      "label": "Five-trial integrated analysis",
+      "published": "2002-10-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give October 2002, without a day",
+      "cutoff": null,
+      "citation": "Brock GB, McMahon CG, Chen KK, et al. \"Efficacy and Safety of Tadalafil for the Treatment of Erectile Dysfunction: Results of Integrated Analyses.\" *J Urol.* 2002;168(4 Pt 1):1332-1336. doi:10.1016/S0022-5347(05)64442-4",
+      "doi": "10.1016/S0022-5347(05)64442-4",
+      "pmid": "12352386",
+      "followUp": "12-week randomized treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "IIEF erectile-function domain",
+          "role": "primary",
+          "measure": "Mean change from baseline, 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "+7.9 points",
+            "ctl": "not reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract gives the tadalafil change but not the placebo change.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 2",
+          "role": "primary",
+          "measure": "Proportion of yes responses",
+          "values": {
+            "exp": "not reported",
+            "ctl": "not reported"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract identifies this coprimary endpoint and says all efficacy outcomes improved significantly; it gives no endpoint-specific values.",
+          "locator": "PubMed abstract, Materials and Methods; Results"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 3",
+          "role": "primary",
+          "measure": "Successful intercourse attempts, 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "75% of attempts",
+            "ctl": "not reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract first calls question 3 coprimary, then calls this attempt-level outcome secondary; its denominator is not supplied.",
+          "locator": "PubMed abstract, Materials and Methods; Results"
+        },
+        {
+          "endpoint": "Global Assessment Question: improved erections",
+          "role": "secondary",
+          "measure": "Men reporting improved erections at endpoint, 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "81%",
+            "ctl": "35%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Arm-specific respondent denominators are not supplied in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Most frequent adverse events",
+          "values": {
+            "exp": "headache and dyspepsia",
+            "ctl": "not reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Event counts and comparative rates are not supplied."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "value": "Fixed as-needed tadalafil doses of 2.5, 5, 10, or 20 mg, up to once daily, without food or alcohol restrictions; placebo control.",
+          "locator": "PubMed abstract, Materials and Methods; corrected dosage wording"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64442_4.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tadalafil-ed-pivotal-2004",
+      "kind": "updated",
+      "label": "Eleven-trial integrated update",
+      "published": "2004-05-27",
+      "dateLocator": "Crossref and Wiley first-published date",
+      "cutoff": null,
+      "citation": "Carson CC, Rajfer J, Eardley I, et al. \"The Efficacy and Safety of Tadalafil: An Update.\" *BJU Int.* 2004;93(9):1276-1281. doi:10.1111/j.1464-410X.2004.04819.x",
+      "doi": "10.1111/j.1464-410X.2004.04819.x",
+      "pmid": "15180622",
+      "followUp": "12-week randomized treatment in eleven pooled trials",
+      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "results": [
+        {
+          "endpoint": "IIEF erectile-function domain",
+          "role": "primary",
+          "measure": "Mean change from baseline, 10-mg and 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "10 mg: +6.5 points; 20 mg: +8.6 points",
+            "ctl": "not reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract does not give the placebo change.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 3",
+          "role": "primary",
+          "measure": "Mean success rate for intercourse attempts, 10-mg and 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "10 mg: 58%; 20 mg: 68%",
+            "ctl": "31%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "The abstract gives percentages without attempt denominators.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Global Assessment Question: improved erections",
+          "role": "secondary",
+          "measure": "Men reporting improved erections at endpoint, 10-mg and 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "10 mg: 71%; 20 mg: 84%",
+            "ctl": "33%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Arm-specific respondent denominators are not supplied in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Most frequent adverse events",
+          "values": {
+            "exp": "headache, dyspepsia, back pain, and myalgia",
+            "ctl": "not reported"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Event counts and comparative rates are not supplied."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Updated pooled treatment population",
+          "value": "2,102 men in eleven 12-week randomized trials; tadalafil 10 or 20 mg as needed versus placebo, without food restrictions.",
+          "locator": "PubMed abstract, Patients and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2004_04819_x.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tadalafil-ed-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

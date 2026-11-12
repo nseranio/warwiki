@@ -1,0 +1,236 @@
+{
+  "id": "macroplastique-pivotal",
+  "name": "Macroplastique pivotal trial",
+  "aliases": [
+    "Polydimethylsiloxane versus collagen",
+    "Macroplastique versus Contigen"
+  ],
+  "nct": null,
+  "registry": "FDA IDE G990150",
+  "area": [
+    "female-sui"
+  ],
+  "decisions": [
+    {
+      "id": "sui-primary-surgery",
+      "lane": "bulking-agents"
+    }
+  ],
+  "question": "Does transurethral Macroplastique achieve at least noninferior continence improvement compared with Contigen in women with stress incontinence due primarily to intrinsic sphincter deficiency?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "single-blind",
+    "type": "noninferiority",
+    "n": 260,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Transurethral Macroplastique injection",
+        "n": 130,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "transurethral Contigen injection",
+        "n": 130,
+        "role": "control"
+      }
+    ],
+    "population": "Adult women with stress urinary incontinence primarily due to intrinsic sphincter deficiency after unsuccessful conservative treatment.",
+    "description": "Multicenter, single-blind noninferiority randomized trial",
+    "locator": "FDA SSED P040050B PDF pp6–7,10"
+  },
+  "verdict": "noninferior",
+  "verdictNote": "The prespecified Stamey-grade noninferiority margin was met; dryness favored Macroplastique.",
+  "takeaway": "In women with stress incontinence primarily due to intrinsic sphincter deficiency, transurethral Macroplastique produced more one-grade Stamey improvement and more dryness at 12 months than transurethral Contigen; the prespecified noninferiority criterion was met.",
+  "reports": [
+    {
+      "id": "macroplastique-pivotal-2009",
+      "kind": "primary",
+      "label": "Pivotal comparison",
+      "published": "2008-11-14",
+      "cutoff": null,
+      "citation": "Ghoniem G, Corcos J, Comiter C, et al. \"Cross-Linked Polydimethylsiloxane Injection for Female Stress Urinary Incontinence: Results of a Multicenter, Randomized, Controlled, Single-Blind Study.\" *J Urol.* 2009;181(1):204-210. doi:10.1016/j.juro.2008.09.032",
+      "doi": "10.1016/j.juro.2008.09.032",
+      "pmid": "19013613",
+      "followUp": "12 months after last injection",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Stamey-grade improvement",
+          "role": "primary",
+          "measure": "At least one Stamey-grade improvement at 12 months after last injection; treated-per-protocol risk difference",
+          "values": {
+            "exp": "75/122 (61.5%)",
+            "ctl": "60/125 (48.0%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 13.5
+          },
+          "met": true,
+          "note": "Treated-per-protocol analysis in the paper; FDA SSED reports a prespecified 15-percentage-point noninferiority margin met in its all-randomized analysis.",
+          "locator": "PubMed abstract, Results; FDA SSED P040050B PDF pp14–15, Table 6"
+        },
+        {
+          "endpoint": "Dryness",
+          "role": "key-secondary",
+          "measure": "Stamey grade 0 at 12 months after last injection; treated-per-protocol risk difference",
+          "values": {
+            "exp": "45/122 (36.9%)",
+            "ctl": "31/125 (24.8%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 12.1,
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "The paper reports a statistically greater dry/cure proportion; FDA SSED calls dryness a key secondary outcome.",
+          "locator": "PubMed abstract, Results and Conclusions; FDA SSED P040050B PDF p15, Table 6"
+        },
+        {
+          "endpoint": "Pad-weight reduction",
+          "role": "secondary",
+          "measure": "Mean reduction in one-hour pad weight from baseline at 12 months; mean difference",
+          "values": {
+            "exp": "25.4 mL",
+            "ctl": "22.8 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.6,
+            "p": "0.64"
+          },
+          "met": false,
+          "note": "Units and values follow the journal abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Incontinence quality of life",
+          "role": "secondary",
+          "measure": "Mean improvement in I-QOL score at 12 months; mean difference",
+          "values": {
+            "exp": "28.7 points",
+            "ctl": "26.4 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.3,
+            "p": "0.49"
+          },
+          "met": false,
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postprocedure catheterization",
+          "values": {
+            "exp": "53/122 (43.4%)",
+            "ctl": "30/125 (24.0%)"
+          },
+          "locator": "FDA SSED P040050B PDF p17, Table 7",
+          "note": "Usually immediate intermittent catheterization in clinic."
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "exp": "26/122 (21.3%)",
+            "ctl": "18/125 (14.4%)"
+          },
+          "locator": "FDA SSED P040050B PDF p17, Table 7",
+          "note": "Treatment-related events."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "31/122 (25.4%)",
+            "ctl": "31/125 (24.8%)"
+          },
+          "locator": "FDA SSED P040050B PDF p17, Table 7",
+          "note": "Treatment-related events."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection technique",
+          "value": "Cystoscopic transurethral submucosal injection, typically at three urethral sites, until coaptation; Macroplastique placed 1.5–2 cm distal to the bladder neck.",
+          "locator": "FDA SSED P040050B PDF pp1–2,13"
+        },
+        {
+          "label": "Repeat injection",
+          "values": {
+            "exp": "64/122 (52.5%)",
+            "ctl": "74/126 (58.7%)"
+          },
+          "locator": "FDA SSED P040050B PDF p13, Table 5; PubMed abstract, Methods",
+          "note": "A repeat treatment was permitted after the 3-month visit; FDA treatment table includes one control-assigned patient implanted with Macroplastique."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_09_032.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "macroplastique-pivotal-2010",
+      "kind": "updated",
+      "label": "Selected-responder two-year extension",
+      "published": "2010-02-20",
+      "cutoff": null,
+      "citation": "Ghoniem G, Corcos J, Comiter C, et al. \"Durability of Urethral Bulking Agent Injection for Female Stress Urinary Incontinence: 2-Year Multicenter Study Results.\" *J Urol.* 2010;183(4):1444-1449. doi:10.1016/j.juro.2009.12.038",
+      "doi": "10.1016/j.juro.2009.12.038",
+      "pmid": "20171691",
+      "followUp": "24 months after last injection, among 12-month Macroplastique responders",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Sustained Stamey improvement",
+          "role": "descriptive",
+          "measure": "At least one-grade improvement maintained at 24 months among 12-month responders",
+          "values": {
+            "exp": "56/67 (84%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": null,
+          "note": "Selected Macroplastique responders only; no randomized control follow-up.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Dryness",
+          "role": "descriptive",
+          "measure": "Stamey grade 0 at 24 months among 12-month responders",
+          "values": {
+            "exp": "45/67 (67%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": null,
+          "note": "Selected Macroplastique responders only.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_12_038.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/macroplastique-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

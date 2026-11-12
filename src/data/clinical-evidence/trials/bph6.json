@@ -1,0 +1,239 @@
+{
+  "id": "bph6",
+  "name": "BPH6",
+  "aliases": [
+    "Prostatic urethral lift versus TURP"
+  ],
+  "nct": "NCT01533038",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "ablation-vs-turp"
+    }
+  ],
+  "question": "How does prostatic urethral lift compare with transurethral resection of the prostate for symptom relief, recovery, sexual function, continence, and safety?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "noninferiority",
+    "n": 80,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prostatic urethral lift",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "transurethral resection of the prostate",
+        "role": "control"
+      }
+    ],
+    "population": "Men with BPH-related lower urinary tract symptoms who were candidates for TURP, aged at least 50 years, with IPSS above 12, Qmax at most 15 mL/s, and prostate volume at most 60 cc.",
+    "description": "Ten-center, open-label randomized noninferiority trial",
+    "locator": "Sønksen 2015, PubMed abstract, Methods; Gratzke 2017, full text, Study Protocol and Procedure"
+  },
+  "verdict": "positive",
+  "verdictNote": "The novel BPH6 composite favored PUL; later symptom and flow gains favored TURP.",
+  "takeaway": "Prostatic urethral lift was noninferior and superior to TURP on the 12-month BPH6 composite responder endpoint; both relieved symptoms, while lift favored ejaculation preservation and recovery.",
+  "reports": [
+    {
+      "id": "bph6-2015",
+      "kind": "primary",
+      "label": "12-month primary report",
+      "published": "2015-04-30",
+      "cutoff": null,
+      "citation": "Sønksen J, Barber NJ, Speakman MJ, et al. \"Prospective, Randomized, Multinational Study of Prostatic Urethral Lift Versus Transurethral Resection of the Prostate: 12-month Results from the BPH6 Study.\" *Eur Urol.* 2015;68(4):643-652. doi:10.1016/j.eururo.2015.04.024",
+      "doi": "10.1016/j.eururo.2015.04.024",
+      "pmid": "25937539",
+      "followUp": "12 months",
+      "followUpLocator": "PubMed abstract, title and Results",
+      "results": [
+        {
+          "endpoint": "BPH6 composite responder endpoint",
+          "role": "primary",
+          "measure": "12-month composite of symptom relief, recovery, erectile and ejaculatory preservation, continence preservation, and safety",
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports both noninferiority and superiority of PUL; it gives no arm-specific responder rates or confidence limit.",
+          "locator": "PubMed abstract, Outcome Measurements and Results"
+        },
+        {
+          "endpoint": "Ejaculatory function preservation and quality of recovery",
+          "role": "secondary",
+          "measure": "Between-arm comparisons during 12-month follow-up",
+          "effect": {
+            "type": "none",
+            "p": "<0.01"
+          },
+          "note": "Both favored PUL; the abstract does not give arm-specific rates.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2015_04_024.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "bph6-2017",
+      "kind": "updated",
+      "label": "2-year follow-up",
+      "published": "2016-12-21",
+      "cutoff": null,
+      "citation": "Gratzke C, Barber N, Speakman MJ, et al. \"Prostatic urethral lift vs transurethral resection of the prostate: 2-year results of the BPH6 prospective, multicentre, randomized study.\" *BJU Int.* 2017;119(5):767-775. doi:10.1111/bju.13714",
+      "doi": "10.1111/bju.13714",
+      "pmid": "27862831",
+      "followUp": "24 months",
+      "followUpLocator": "Full text, Study Protocol and Procedure; Table 1",
+      "results": [
+        {
+          "endpoint": "Quality of recovery",
+          "role": "secondary",
+          "measure": "Patients with a quality-of-recovery visual analogue score of at least 70/100 by 1 month",
+          "values": {
+            "exp": "82%",
+            "ctl": "53%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.008"
+          },
+          "note": "The article does not give the denominators for these percentages.",
+          "locator": "Full text, Results, paragraph before Table 1"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "secondary",
+          "measure": "Mean paired change from baseline at 24 months; a larger reduction favors TURP",
+          "values": {
+            "exp": "−9.2 points (n=37)",
+            "ctl": "−15.3 points (n=32)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.004"
+          },
+          "note": "Nominal between-arm P value; not significant after the paper's Hochberg multiple-testing correction.",
+          "locator": "Full text, Table 1, IPSS, 24 months"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Mean paired change in maximum flow from baseline at 24 months; a larger increase favors TURP",
+          "values": {
+            "exp": "+5.0 mL/s (n=27)",
+            "ctl": "+15.8 mL/s (n=27)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.002"
+          },
+          "note": "Nominal between-arm P value; not significant after the paper's Hochberg multiple-testing correction.",
+          "locator": "Full text, Table 1, Qmax, 24 months"
+        },
+        {
+          "endpoint": "MSHQ-EjD function",
+          "role": "secondary",
+          "measure": "Mean paired change in ejaculatory function score at 24 months; a higher score favors PUL",
+          "values": {
+            "exp": "+0.3 points (n=29)",
+            "ctl": "−4.0 points (n=27)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Between-arm comparison; ejaculatory bother did not differ significantly.",
+          "locator": "Full text, Table 1, MSHQ-EjD function and bother, 24 months"
+        },
+        {
+          "endpoint": "SF-6D clinically important improvement",
+          "role": "secondary",
+          "measure": "Patients with at least the study's minimal clinically important difference at 24 months",
+          "values": {
+            "exp": "16/34 (47%)",
+            "ctl": "12/32 (37.5%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.43"
+          },
+          "note": "The threshold was borrowed from a urinary incontinence population; the between-arm difference was not statistically significant.",
+          "locator": "Full text, Patients and Methods, SF-6D MCID paragraph; Table 2, 24 months"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Early continence score worsening",
+          "values": {
+            "exp": "no significant change from baseline",
+            "ctl": "significant worsening at 2 weeks and 3 months"
+          },
+          "locator": "Full text, Results, continence paragraph after Figure 1; Figure 2",
+          "note": "Measured with the Incontinence Severity Index; the difference was transient."
+        },
+        {
+          "label": "Secondary treatment for recurrent LUTS by 24 months",
+          "values": {
+            "exp": "6/44 (13.6%)",
+            "ctl": "2/35 (5.7%)"
+          },
+          "locator": "Full text, Results, paragraph after Table 1",
+          "note": "Included repeat PUL, intradetrusor botulinum toxin, laser treatment, or TURP; this is broader than reoperation alone."
+        },
+        {
+          "label": "Implant removal after proximal placement",
+          "values": {
+            "exp": "1 patient",
+            "ctl": "not applicable"
+          },
+          "locator": "Full text, Results, paragraph after Table 1",
+          "note": "Part of the implant was exposed to the bladder and caused intermittent haematuria."
+        },
+        {
+          "label": "Epididymitis with extended hospital stay",
+          "values": {
+            "exp": "not reported",
+            "ctl": "1 patient"
+          },
+          "locator": "Full text, Results, paragraph after Table 1",
+          "note": "The TURP patient subsequently discontinued study participation."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "PUL technique",
+          "value": "Transurethral permanent UroLift implants compressed prostatic tissue to enlarge the urethral lumen without resection or thermal injury.",
+          "locator": "Full text, Introduction and Study Protocol and Procedure"
+        },
+        {
+          "label": "Operator experience and TURP technique",
+          "value": "Investigators had performed 0–20 PUL procedures before study start; each had extensive TURP experience and used their usual TURP practice.",
+          "locator": "Full text, Study Protocol and Procedure"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_bju_13714.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/bph6",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

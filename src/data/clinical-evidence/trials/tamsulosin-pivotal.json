@@ -1,0 +1,284 @@
+{
+  "id": "tamsulosin-pivotal",
+  "name": "Tamsulosin US pivotal studies",
+  "aliases": [
+    "Lepor 1998",
+    "United States 93-01",
+    "Narayan 1998"
+  ],
+  "nct": null,
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "alpha-blockers"
+    }
+  ],
+  "question": "Does once-daily tamsulosin improve symptoms and peak urinary flow compared with placebo in men with symptomatic BPH?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 756,
+    "arms": [
+      {
+        "key": "t04",
+        "label": "Tamsulosin 0.4 mg daily",
+        "role": "experimental"
+      },
+      {
+        "key": "t08",
+        "label": "tamsulosin 0.8 mg daily",
+        "role": "experimental"
+      },
+      {
+        "key": "pbo",
+        "label": "placebo",
+        "role": "control"
+      }
+    ],
+    "population": "756 men with symptomatic benign prostatic hyperplasia were randomized in the primary US study.",
+    "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
+    "locator": "Lepor 1998, PubMed abstract, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both doses improved symptom score and peak flow; adverse events were higher at 0.8 mg.",
+  "takeaway": "In the primary US phase 3 trial, tamsulosin 0.4 mg daily or 0.4 mg for 1 week then 0.8 mg daily improved AUA symptom score and peak urinary flow versus placebo over 13 weeks; the higher-dose arm had more adverse events.",
+  "reports": [
+    {
+      "id": "tamsulosin-pivotal-1998",
+      "kind": "primary",
+      "label": "Primary 13-week trial",
+      "published": "1998-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give June 1998 only",
+      "cutoff": null,
+      "citation": "Lepor H. \"Phase III multicenter placebo-controlled study of tamsulosin in benign prostatic hyperplasia.\" *Urology.* 1998;51(6):892-900. doi:10.1016/s0090-4295(98)00126-5",
+      "doi": "10.1016/s0090-4295(98)00126-5",
+      "pmid": "9609623",
+      "followUp": "13 weeks of double-blind treatment",
+      "followUpLocator": "PubMed abstract, Results",
+      "results": [
+        {
+          "endpoint": "AUA symptom score",
+          "role": "primary",
+          "measure": "Change in total AUA symptom score at trial end",
+          "values": {
+            "t04": "Improved versus placebo",
+            "t08": "Improved versus placebo",
+            "pbo": "Comparator"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports statistically significant improvement for both doses but gives no arm estimates or prespecified alpha.",
+          "locator": "PubMed abstract, Methods and Results"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "primary",
+          "measure": "Change in Qmax at trial end",
+          "values": {
+            "t04": "Improved versus placebo",
+            "t08": "Improved versus placebo",
+            "pbo": "Comparator"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports statistically significant improvement for both doses but gives no arm estimates or prespecified alpha.",
+          "locator": "PubMed abstract, Methods and Results"
+        },
+        {
+          "endpoint": "Early peak-flow response",
+          "role": "secondary",
+          "measure": "Qmax response after first dose",
+          "values": {
+            "t04": "Onset within 4 to 8 hours"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Adverse events",
+          "values": {
+            "t04": "Comparable to placebo",
+            "t08": "Somewhat higher than placebo",
+            "pbo": "Comparator"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "label": "Positive orthostatic tests",
+          "values": {
+            "t04": "Comparable to placebo",
+            "t08": "Comparable to placebo",
+            "pbo": "Comparator"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Daily oral doses",
+          "value": "Tamsulosin 0.4 mg or 0.8 mg once daily versus placebo.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00126_5.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tamsulosin-pivotal-1998-extension",
+      "kind": "updated",
+      "label": "Double-blind extension",
+      "published": "1998-06-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give June 1998 only",
+      "cutoff": null,
+      "citation": "Lepor H. \"Long-term evaluation of tamsulosin in benign prostatic hyperplasia: placebo-controlled, double-blind extension of phase III trial.\" *Urology.* 1998;51(6):901-906. doi:10.1016/s0090-4295(98)00127-7",
+      "doi": "10.1016/s0090-4295(98)00127-7",
+      "pmid": "9609624",
+      "followUp": "40-week extension after 13 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "AUA symptom score",
+          "role": "descriptive",
+          "measure": "Symptom-score response during double-blind extension",
+          "values": {
+            "t04": "Initial improvement maintained",
+            "t08": "Initial improvement maintained"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports within-group improvement in all groups; it does not provide between-group estimates.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "descriptive",
+          "measure": "Qmax response during double-blind extension",
+          "values": {
+            "t04": "Significant improvement from baseline",
+            "t08": "Significant improvement from baseline",
+            "pbo": "No significant improvement from baseline"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Clinically significant orthostatic hypotension",
+          "values": {
+            "t04": "Not observed",
+            "t08": "Not observed"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension entry",
+          "value": "418/618 primary-trial completers (68%) continued the same blinded drug and dose.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00127_7.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tamsulosin-pivotal-1998-second-study",
+      "kind": "secondary",
+      "label": "Independent US 93-01 trial",
+      "published": "1998-11-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref and PubMed give November 1998 only",
+      "cutoff": null,
+      "citation": "Narayan P, Tewari A. \"A second phase III multicenter placebo controlled study of 2 dosages of modified release tamsulosin in patients with symptoms of benign prostatic hyperplasia.\" *J Urol.* 1998;160(5):1701-1706. doi:10.1016/S0022-5347(01)62386-3",
+      "doi": "10.1016/S0022-5347(01)62386-3",
+      "pmid": "9783935",
+      "followUp": "13 weeks of double-blind treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "AUA symptom score",
+          "role": "descriptive",
+          "measure": "Change in total AUA symptom score from baseline to endpoint",
+          "values": {
+            "t04": "25% reduction",
+            "t08": "25% reduction",
+            "pbo": "Magnitude not reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01 for each tamsulosin group versus placebo"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Early symptom and flow response",
+          "role": "descriptive",
+          "measure": "Onset of AUA symptom score and Qmax improvement",
+          "values": {
+            "t04": "Within 1 week",
+            "t08": "Within 1 week"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Positive orthostatic tests at visit 4",
+          "values": {
+            "t08": "More frequent than placebo",
+            "pbo": "Comparator"
+          },
+          "note": "P=0.012; the abstract gives no counts.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Study treatment",
+          "value": "735 men randomized after a 4-week single-blind placebo evaluation period; 13 weeks of double-blind tamsulosin 0.4 mg daily, 0.4 mg daily for 1 week then 0.8 mg daily, or placebo.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_9783935.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tamsulosin-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

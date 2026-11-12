@@ -188,6 +188,54 @@ def trial_units(path):
     return out
 
 
+def trial_page_sources(path):
+    """A trial page's prose cites the same reports as its trial file: map each report DOI to its private source file
+    (report.source.file) so page claims get that text as a local source too (November 12, 2026)."""
+    m = re.match(r"docs/06-clinical-evidence/studies/([\w-]+)\.mdx$", path)
+    f = os.path.join(ROOT, TRIALS_DIR, m.group(1) + ".json") if m else ""
+    if not (m and os.path.isfile(f)):
+        return {}
+    out = {}
+    for r in json.load(open(f)).get("reports", []):
+        doi, src = (r.get("doi") or "").lower(), (r.get("source") or {}).get("file")
+        if doi and src and os.path.isfile(src):
+            out[doi] = src
+    return out
+
+
+_AUA = r"(?:AUA|American Urological Association)"
+_EAU = r"(?:EAU|European Association of Urology)"
+GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (AUA and NCCN permission; never auanet.org)
+    ((_AUA, r"Part II: Medical Management|Goueli"), "aua-bph-2026-goueli.txt"),
+    ((_AUA, r"Lower Urinary Tract Symptoms|Benign Prostatic Hyperplasia|\bBPH\b"), "aua-bph-2026-unabridged.txt"),
+    ((_AUA, r"Overactive Bladder"), "aua-oab-2024-unabridged.txt"),
+    ((_AUA, r"Interstitial Cystitis|Bladder Pain"), "aua-ic-bps-2022-unabridged.txt"),
+    ((_AUA, r"Neurogenic Lower Urinary"), "aua-sufu-nlutd-2021-unabridged.txt"),
+    ((_AUA, r"Stress Urinary Incontinence"), "aua-sui-2023-unabridged.txt"),
+    ((_AUA, r"Incontinence [Aa]fter Prostate"), "aua-ipt-2024-unabridged.txt"),
+    ((_AUA, r"Recurrent Uncomplicated Urinary Tract"), "aua-rutI-2025-unabridged.txt"),
+    ((r"AUA|SUFU|AUGS", r"Genitourinary Syndrome of Menopause"), "aua-sufu-augs-gsm-2025.txt"),
+    ((_AUA, r"Testosterone"), "aua-testosterone-deficiency.txt"),
+    ((_AUA, r"Urethral Stricture"), "aua-urethral-stricture-2023-unabridged.txt"),
+    ((_AUA, r"[Mm]uscle-[Ii]nvasive [Bb]ladder [Cc]ancer"), "aua-mibc-2024-unabridged.txt"),
+    ((_EAU, r"Non-?[Nn]eurogenic Female"), "eau-non-neurogenic-female-luts-2026.txt"),
+    ((_EAU, r"Male (?:LUTS|Lower Urinary)"), "eau-male-luts-2026.txt"),
+    ((_EAU, r"Neuro-?[Uu]rology"), "eau-neuro-urology-2026.txt"),
+    ((_EAU, r"Urological Infections"), "eau-urological-infections-2026.txt"),
+    ((_EAU, r"Urethral Strictures"), "eau-urethral-strictures-2026.txt"),
+    ((r"NICE|NG123", r"\bNG123\b|[Uu]rinary incontinence and pelvic organ prolapse"), "nice-ng123-ui-pop-women.txt"),
+]
+
+
+def guideline_local(ref_text):
+    """Local copy of the guideline a trial-page reference line names, or None."""
+    for (body, topic), name in GUIDE_LOCAL:  # both the issuing body and the topic, in either order
+        f = os.path.join(ROOT, "reports/audit-v2/sources-local", name)
+        if re.search(body, ref_text) and re.search(topic, ref_text) and os.path.isfile(f):
+            return f
+    return None
+
+
 def trial_paths():
     return sorted(os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(ROOT, TRIALS_DIR, "*.json")))
 
@@ -198,6 +246,7 @@ def units_of(path):
         return trial_units(path)
     s = open(os.path.join(ROOT, path)).read()
     refs = C.refs_of(s)
+    tsrc = trial_page_sources(path)
     body = s.split("\n## References")[0]
     out, header, in_fm, in_code, tcites, section = [], None, False, False, set(), ""
     lines = body.split("\n")
@@ -249,6 +298,11 @@ def units_of(path):
             unit = {"line": i, "text": u.strip(), "table_header": ctx, "kinds": kinds, "section": section,
                     "key": key2(path, u, [r["text"] for r in rl], ctx, section), "key1": key1(path, u),
                     "cite": "paragraph" if inherited else ("own" if nums else "none"), "refs": rl}
+            ls = [{"n": r["n"], "local_text": f} for r in rl for d, f in tsrc.items() if d in r["text"].lower()]
+            if tsrc is not None and path.startswith("docs/06-clinical-evidence/studies/"):
+                ls += [{"n": r["n"], "local_text": g} for r in rl for g in [guideline_local(r["text"])] if g]
+            if ls:
+                unit["local_sources"] = ls
             unit["high_risk"] = high_risk(unit)
             out.append(unit)
     return out

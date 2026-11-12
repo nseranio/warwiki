@@ -1,0 +1,212 @@
+{
+  "id": "hooton-water",
+  "name": "Hooton water intake",
+  "aliases": [
+    "Hooton 2018"
+  ],
+  "nct": "NCT02444975",
+  "area": [
+    "infection"
+  ],
+  "decisions": [
+    {
+      "id": "recurrent-uti-prophylaxis",
+      "lane": "nonantibiotic"
+    }
+  ],
+  "question": "Does adding daily water reduce culture-confirmed recurrent cystitis in premenopausal women who drink low volumes of fluid?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 140,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Additional 1.5 L of water daily",
+        "n": 70,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "usual fluid intake without added water",
+        "n": 70,
+        "role": "control"
+      }
+    ],
+    "population": "Healthy premenopausal women with at least three clinician-attended cystitis episodes in the preceding year (at least one culture-confirmed), daily fluid intake below 1.5 L, and 24-hour urine volume below 1.2 L; an osmolality threshold of at least 500 mOsm/kg was added by amendment.",
+    "description": "Single-center, open-label randomized superiority trial",
+    "locator": "JAMA full text, Methods: Participants, Randomization, Study Procedures; Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Culture-confirmed cystitis episodes were fewer with additional water at 12 months.",
+  "takeaway": "Adding 1.5 L of water daily to usual intake, versus continuing usual intake alone, reduced mean culture-confirmed cystitis episodes over 12 months from 3.2 to 1.7 per woman in premenopausal low-volume drinkers with recurrent cystitis.",
+  "reports": [
+    {
+      "id": "hooton-water-2018",
+      "kind": "primary",
+      "label": "Primary 12-month report",
+      "published": "2018-10-01",
+      "cutoff": null,
+      "citation": "Hooton TM, Vecchio M, Iroz A, et al. \"Effect of Increased Daily Water Intake in Premenopausal Women With Recurrent Urinary Tract Infections: A Randomized Clinical Trial.\" *JAMA Intern Med.* 2018;178(11):1509-1515. doi:10.1001/jamainternmed.2018.4204",
+      "doi": "10.1001/jamainternmed.2018.4204",
+      "pmid": "30285042",
+      "followUp": "12-month intervention and follow-up",
+      "followUpLocator": "JAMA full text, Abstract: Design, Setting, and Participants; Methods: Randomization",
+      "results": [
+        {
+          "endpoint": "Recurrent cystitis episodes",
+          "role": "primary",
+          "measure": "Mean culture-confirmed episodes per woman over 12 months; difference is control minus water",
+          "values": {
+            "exp": "1.7 mean episodes/woman; 111 total episodes",
+            "ctl": "3.2 mean episodes/woman; 216 total episodes"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.5,
+            "ci": [
+              1.2,
+              1.8
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "At least one symptom and at least 10³ CFU/mL uropathogens in midstream culture; two-sided significance threshold 0.05; intention-to-treat Poisson analysis.",
+          "locator": "JAMA full text, Results: Primary; Methods: Primary Outcome; Figure 2"
+        },
+        {
+          "endpoint": "Antimicrobial regimens for cystitis",
+          "role": "secondary",
+          "measure": "Mean regimens per woman over 12 months; difference is control minus water",
+          "values": {
+            "exp": "1.9",
+            "ctl": "3.6"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.7,
+            "ci": [
+              1.3,
+              2.1
+            ],
+            "p": "<0.001"
+          },
+          "note": "Secondary-outcome P value was nominal.",
+          "locator": "JAMA full text, Results: Secondary; Methods: Secondary Outcomes"
+        },
+        {
+          "endpoint": "Interval between cystitis episodes",
+          "role": "secondary",
+          "measure": "Mean days; difference is water minus control",
+          "values": {
+            "exp": "142.8 days",
+            "ctl": "84.4 days"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 58.4,
+            "ci": [
+              39.4,
+              77.4
+            ],
+            "p": "<0.001"
+          },
+          "note": "Secondary-outcome P value was nominal.",
+          "locator": "JAMA full text, Results: Secondary"
+        },
+        {
+          "endpoint": "Time to first cystitis episode",
+          "role": "exploratory",
+          "measure": "Median days to first episode; post-hoc age-adjusted HR",
+          "values": {
+            "exp": "148.0 days",
+            "ctl": "93.5 days"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.51,
+            "ci": [
+              0.36,
+              0.74
+            ],
+            "p": "<0.001"
+          },
+          "note": "Post-hoc analysis; P value nominal.",
+          "locator": "JAMA full text, Results: Secondary; Methods: Secondary Outcomes"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Headache",
+          "values": {
+            "exp": "12/70 women",
+            "ctl": "12/70 women"
+          },
+          "locator": "JAMA full text, Results: Adverse Events",
+          "note": "Most commonly reported adverse event; the article gives counts by group."
+        },
+        {
+          "label": "Gastrointestinal symptoms",
+          "values": {
+            "exp": "8/70 women",
+            "ctl": "8/70 women"
+          },
+          "locator": "JAMA full text, Results: Adverse Events",
+          "note": "The article gives counts by group."
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "exp": "0/70",
+            "ctl": "0/70"
+          },
+          "locator": "JAMA full text, Results: Adverse Events",
+          "note": "No serious adverse events occurred in either group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Water regimen",
+          "value": "Three 500-mL bottles daily in addition to usual intake; bottles delivered to homes every 2 weeks.",
+          "locator": "JAMA full text, Methods: Randomization and Study Procedures"
+        },
+        {
+          "label": "Adherence and symptom assessment",
+          "value": "Monthly calls and fluid diaries; 24-hour urine collections at baseline, 6 months, and 12 months.",
+          "locator": "JAMA full text, Methods: Study Procedures"
+        },
+        {
+          "label": "Observed water intake",
+          "values": {
+            "exp": "+1.15 L/day at month 12",
+            "ctl": "no change"
+          },
+          "locator": "JAMA full text, Results: Self-reported Adherence to Intervention",
+          "note": "Self-reported mean change from baseline in daily water intake."
+        },
+        {
+          "label": "Completed 12-month follow-up",
+          "values": {
+            "exp": "64/70 (91%)",
+            "ctl": "66/70 (94%)"
+          },
+          "locator": "JAMA full text, Results: Study Participants; Figure 1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2018_4204.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/hooton-water",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

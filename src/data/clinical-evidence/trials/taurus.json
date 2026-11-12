@@ -1,0 +1,166 @@
+{
+  "id": "taurus",
+  "name": "TAURUS",
+  "aliases": [
+    "Study 178-CL-049",
+    "Mirabegron 12-month safety study"
+  ],
+  "nct": "NCT00688688",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "What are the 12-month safety and symptom outcomes of mirabegron compared with tolterodine ER in adults with overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 2452,
+    "arms": [
+      {
+        "key": "m50",
+        "label": "Mirabegron 50 mg once daily",
+        "n": 815,
+        "role": "experimental"
+      },
+      {
+        "key": "m100",
+        "label": "mirabegron 100 mg once daily",
+        "n": 824,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "tolterodine ER 4 mg once daily",
+        "n": 813,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with overactive bladder symptoms for at least 3 months, at least eight daily micturitions, and at least three urgency episodes in a 3-day diary.",
+    "description": "Multicenter, double-blind, active-controlled randomized safety trial",
+    "locator": "PubMed abstract, Design and Interventions; ClinicalTrials.gov NCT00688688, Participant Flow"
+  },
+  "verdict": "descriptive",
+  "verdictNote": "The abstract reports adverse-event rates without a formal comparative safety threshold.",
+  "takeaway": "Over 12 months, mirabegron 50 mg and 100 mg had treatment-emergent adverse-event rates of 59.7% and 61.3%, versus 62.6% with tolterodine ER 4 mg; dry mouth was less frequent with mirabegron.",
+  "reports": [
+    {
+      "id": "taurus-2013",
+      "kind": "primary",
+      "label": "12-month safety and efficacy",
+      "published": "2012-11-06",
+      "cutoff": null,
+      "citation": "Chapple CR, Kaplan SA, Mitcheson D, et al. \"Randomized Double-blind, Active-controlled Phase 3 Study to Assess 12-Month Safety and Efficacy of Mirabegron, a β3-Adrenoceptor Agonist, in Overactive Bladder.\" *Eur Urol.* 2013;63(2):296-305. doi:10.1016/j.eururo.2012.10.048",
+      "doi": "10.1016/j.eururo.2012.10.048",
+      "pmid": "23195283",
+      "followUp": "12 months of assigned treatment",
+      "followUpLocator": "PubMed abstract, Interventions",
+      "results": [
+        {
+          "endpoint": "Treatment-emergent adverse events",
+          "role": "primary",
+          "measure": "Patients with at least one treatment-emergent adverse event over 12 months",
+          "values": {
+            "m50": "59.7% of 812 treated",
+            "m100": "61.3% of 820 treated",
+            "ctl": "62.6% of 812 treated"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": null,
+          "note": "Incidence and severity were the primary safety variable; no prespecified comparative threshold is reported in the abstract.",
+          "locator": "PubMed abstract, Outcome Measurements and Results"
+        },
+        {
+          "endpoint": "Morning systolic blood pressure",
+          "role": "descriptive",
+          "measure": "Adjusted mean change from baseline to final visit, mm Hg",
+          "values": {
+            "m50": "+0.2 mm Hg",
+            "m100": "+0.4 mm Hg",
+            "ctl": "−0.5 mm Hg"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Final-visit adjusted changes; between-arm estimates are not reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Overactive bladder symptoms",
+          "role": "secondary",
+          "measure": "Change in key symptoms from first measured visit at 4 weeks through 12 months",
+          "values": {
+            "m50": "improved",
+            "m100": "improved",
+            "ctl": "improved"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract does not give numeric symptom changes or between-arm estimates.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serious treatment-emergent adverse events",
+          "values": {
+            "m50": "5.2% of 812 treated",
+            "m100": "6.2% of 820 treated",
+            "ctl": "5.4% of 812 treated"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": ""
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "m50": "2.8% of 812 treated",
+            "m100": "2.3% of 820 treated",
+            "ctl": "8.6% of 812 treated"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": ""
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Run-in and assigned treatment",
+          "value": "Two-week single-blind placebo run-in, then once-daily double-blind assigned drug for 12 months.",
+          "locator": "PubMed abstract, Interventions"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_048.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "extends",
+      "target": "scorpio",
+      "note": "Some entrants previously completed SCORPIO; TAURUS assessed safety during a new 12-month treatment course."
+    },
+    {
+      "type": "extends",
+      "target": "aries",
+      "note": "Some entrants previously completed ARIES; TAURUS assessed safety during a new 12-month treatment course."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/taurus",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

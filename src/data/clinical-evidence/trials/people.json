@@ -1,0 +1,276 @@
+{
+  "id": "people",
+  "name": "PEOPLE",
+  "aliases": [
+    "Pessary or Surgery for Pelvic Organ Prolapse"
+  ],
+  "nct": null,
+  "registry": "Netherlands Trial Register NTR4883",
+  "area": [
+    "prolapse"
+  ],
+  "decisions": [
+    {
+      "id": "pop-adjuncts-pessary",
+      "lane": "pessary"
+    }
+  ],
+  "question": "Is initial pessary treatment noninferior to prolapse surgery for patient-reported improvement at 24 months?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Open-label; participants and treating gynecologists were not masked",
+    "type": "noninferiority",
+    "n": 440,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Initial pessary treatment",
+        "n": 218,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "initial prolapse surgery",
+        "n": 222,
+        "role": "control"
+      }
+    ],
+    "population": "Women referred to 21 Dutch hospitals with symptomatic POP-Q stage 2 or greater prolapse, moderate to severe symptoms, a successful 30-minute pessary fitting trial, and no prior prolapse or incontinence surgery or pessary use.",
+    "description": "Multicenter, open-label noninferiority randomized trial",
+    "locator": "JAMA full text, Methods: Participants, Randomization and Interventions; Results: Trial Population"
+  },
+  "verdict": "negative",
+  "verdictNote": "Neither as-randomized nor per-protocol analysis met the 10-point noninferiority margin.",
+  "takeaway": "In symptomatic pelvic organ prolapse, initial pessary treatment did not meet the prespecified noninferiority criterion versus surgery for patient-reported improvement at 24 months; 54.1% of those assigned pessary crossed over to surgery.",
+  "reports": [
+    {
+      "id": "people-2022",
+      "kind": "primary",
+      "label": "24-month randomized report",
+      "published": "2022-12-20",
+      "cutoff": "2022-06-30",
+      "citation": "van der Vaart LR, Vollebregt A, Milani AL, et al. \"Effect of Pessary vs Surgery on Patient-Reported Improvement in Patients With Symptomatic Pelvic Organ Prolapse: A Randomized Clinical Trial.\" *JAMA.* 2022;328(23):2312-2323.",
+      "doi": "10.1001/jama.2022.22385",
+      "pmid": "36538310",
+      "followUp": "24 months; primary outcome available for 173/218 pessary and 162/221 eligible surgery participants",
+      "followUpLocator": "JAMA full text, abstract and Results: Trial Population; Figure 1",
+      "results": [
+        {
+          "endpoint": "Patient-reported improvement",
+          "role": "primary",
+          "measure": "PGI-I much or very much better at 24 months; risk difference in percentage points, pessary minus surgery, as-randomized respondents",
+          "values": {
+            "exp": "132/173 (76.3%)",
+            "ctl": "132/162 (81.5%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -6.1,
+            "p": "0.16"
+          },
+          "met": false,
+          "note": "One-sided 95% CI lower bound −12.7 percentage points crossed the prespecified −10-point margin; P is for noninferiority.",
+          "locator": "JAMA full text, Results: Primary Outcomes; Table 2"
+        },
+        {
+          "endpoint": "Patient-reported improvement, per protocol",
+          "role": "secondary",
+          "measure": "PGI-I much or very much better at 24 months; risk difference in percentage points, pessary minus surgery, per-protocol respondents",
+          "values": {
+            "exp": "52/74 (70.3%)",
+            "ctl": "125/150 (83.3%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -13.1,
+            "p": "0.69"
+          },
+          "met": false,
+          "note": "One-sided 95% CI lower bound −23.0 percentage points; P is for noninferiority.",
+          "locator": "JAMA full text, Results: Primary Outcomes; Table 2"
+        },
+        {
+          "endpoint": "Patient-reported symptom severity improvement",
+          "role": "secondary",
+          "measure": "PGI-S improvement at 24 months; risk difference in percentage points, pessary minus surgery, as-randomized respondents",
+          "values": {
+            "exp": "121/162 (74.7%)",
+            "ctl": "134/157 (85.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -10.7,
+            "ci": [
+              -19.3,
+              -2.0
+            ],
+            "p": "0.02"
+          },
+          "note": "Exploratory secondary comparison; no multiplicity adjustment.",
+          "locator": "JAMA full text, Results: Secondary Outcomes; Table 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Pessary discomfort",
+          "values": {
+            "exp": "93/218 (42.7%)"
+          },
+          "locator": "JAMA full text, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Pessary expulsion",
+          "values": {
+            "exp": "45/218 (20.6%)"
+          },
+          "locator": "JAMA full text, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Vaginal blood loss during pessary therapy",
+          "values": {
+            "exp": "25/218 (11.5%)"
+          },
+          "locator": "JAMA full text, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "5/218 (2.3%)",
+            "ctl": "20/221 (9.0%)"
+          },
+          "locator": "JAMA full text, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Bladder retention after surgery",
+          "values": {
+            "ctl": "11/221 (5.0%)"
+          },
+          "locator": "JAMA full text, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Rectal lesion during surgery",
+          "values": {
+            "ctl": "1/221 (0.5%)"
+          },
+          "locator": "JAMA full text, Table 3 and Results: Adverse Events and Crossover",
+          "note": "Recognized and repaired during the procedure."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treating clinician experience",
+          "value": "Each participating gynecologist had previously fitted at least 100 pessaries and performed at least 100 vaginal prolapse operations.",
+          "locator": "JAMA full text, Methods: Interventions"
+        },
+        {
+          "label": "Pessary treatment and follow-up",
+          "value": "Supportive or occlusive pessaries; refitting offered after expulsion; cleaning or clinician visit at least every 4 months.",
+          "locator": "JAMA full text, Methods: Interventions"
+        },
+        {
+          "label": "Surgical technique",
+          "value": "Gynecologist-selected vaginal compartment repair, hysterectomy or uterine preservation for uterine descent; abdominal sacrocolpopexy permitted; no concomitant stress-incontinence surgery.",
+          "locator": "JAMA full text, Methods: Interventions; Results: Trial Population"
+        },
+        {
+          "label": "Initial treatment received",
+          "values": {
+            "exp": "218/218 started pessary",
+            "ctl": "199/221 (90.0%) underwent surgery"
+          },
+          "locator": "JAMA full text, Results: Trial Population; Figure 1"
+        },
+        {
+          "label": "Crossover and additional treatment",
+          "values": {
+            "exp": "118/218 (54.1%) switched to surgery",
+            "ctl": "12/221 (5.4%) received additional treatment; 8/221 (3.6%) had repeat surgery"
+          },
+          "locator": "JAMA full text, Results: Adverse Events and Crossover; Table 3"
+        },
+        {
+          "label": "Pessary discontinuation",
+          "value": "123/204 women with 24-month treatment-status data discontinued pessary use.",
+          "locator": "JAMA full text, Table 3"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jama_2022_22385.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "people-2024-economics",
+      "kind": "secondary",
+      "label": "24-month economic evaluation",
+      "published": "2024-05-01",
+      "cutoff": "2022-06-30",
+      "citation": "Ben ÂJ, van der Vaart LR, Bosmans JE, et al. \"Cost-effectiveness of pessary therapy versus surgery for symptomatic pelvic organ prolapse: an economic evaluation alongside a randomised non-inferiority controlled trial.\" *BMJ Open.* 2024;14(5):e075016.",
+      "doi": "10.1136/bmjopen-2023-075016",
+      "pmid": "38692718",
+      "followUp": "24-month economic evaluation of 439 eligible randomized women, with missing follow-up values imputed",
+      "followUpLocator": "BMJ Open full text, Results: Participants; Table 3",
+      "results": [
+        {
+          "endpoint": "Healthcare costs",
+          "role": "secondary",
+          "measure": "Mean 24-month healthcare costs in euros; unadjusted mean difference, pessary minus surgery",
+          "values": {
+            "exp": "€3,932 (n=218)",
+            "ctl": "€5,782 (n=221)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1850,
+            "ci": [
+              -2228,
+              -1476
+            ]
+          },
+          "note": "Adjusted difference −€1,807 (95% CI −€2,172 to −€1,446) in the imputed analysis.",
+          "locator": "BMJ Open full text, Results: Costs; Tables 2 and 3"
+        },
+        {
+          "endpoint": "Quality-adjusted life-years",
+          "role": "secondary",
+          "measure": "Mean QALYs over 24 months; unadjusted mean difference, pessary minus surgery",
+          "values": {
+            "exp": "1.80 (n=218)",
+            "ctl": "1.82 (n=221)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.02,
+            "ci": [
+              -0.06,
+              0.02
+            ]
+          },
+          "note": "Adjusted difference −0.03 QALY (95% CI −0.07 to 0.002) in the imputed analysis.",
+          "locator": "BMJ Open full text, Results: Effectiveness; Tables 2 and 3"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1136_bmjopen_2023_075016.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/people",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "id": "nasha-dx",
+  "name": "NASHA Dx",
+  "aliases": [
+    "Solesta",
+    "Graf 2011"
+  ],
+  "nct": "NCT00605826",
+  "area": [
+    "bowel"
+  ],
+  "decisions": [
+    {
+      "id": "fecal-incontinence",
+      "lane": "bulking-and-devices"
+    }
+  ],
+  "question": "Does transanal submucosal NASHA Dx injection improve fecal incontinence more than sham injection?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 206,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Transanal submucosal NASHA Dx injection",
+        "role": "experimental",
+        "n": 136
+      },
+      {
+        "key": "ctl",
+        "label": "sham injection",
+        "role": "control",
+        "n": 70
+      }
+    ],
+    "population": "Adults aged 18–75 years with fecal incontinence for at least 12 months, CCFIS at least 10, at least four episodes over 2 weeks, and failed supervised conservative treatment.",
+    "description": "Multicenter, double-blind, sham-controlled superiority randomized trial",
+    "locator": "Graf 2011 PubMed abstract, Methods; Mellgren 2014 full text, Materials and Methods—Patients"
+  },
+  "verdict": "positive",
+  "verdictNote": "Six-month responder rate favored NASHA Dx; most treated patients received a second injection.",
+  "takeaway": "Transanal submucosal dextranomer in stabilized hyaluronic acid (NASHA Dx) produced more six-month fecal-incontinence responders than sham injection: 71/136 (52%) versus 22/70 (31%); odds ratio 2.36 (95% CI 1.24–4.47).",
+  "reports": [
+    {
+      "id": "nasha-dx-2011",
+      "kind": "primary",
+      "label": "Six-month sham-controlled report",
+      "published": "2011-03-19",
+      "cutoff": null,
+      "citation": "Graf W, Mellgren A, Matzel KE, et al. \"Efficacy of dextranomer in stabilised hyaluronic acid for treatment of faecal incontinence: a randomised, sham-controlled trial.\" *Lancet.* 2011;377(9770):997-1003. doi:10.1016/S0140-6736(10)62297-0",
+      "doi": "10.1016/S0140-6736(10)62297-0",
+      "pmid": "21420555",
+      "followUp": "Six-month masked assessment with a 2-week bowel diary",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "At least 50% reduction in fecal-incontinence episodes",
+          "role": "primary",
+          "measure": "Six-month responder proportion",
+          "values": {
+            "exp": "71/136 (52%)",
+            "ctl": "22/70 (31%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 2.36,
+            "ci": [
+              1.24,
+              4.47
+            ],
+            "p": "0.0089"
+          },
+          "met": true,
+          "note": "FDA SSED pp15, 26–27 states that all three prespecified primary efficacy criteria were met; its model estimates differ from the Lancet's reported proportions and P value.",
+          "locator": "PubMed abstract, Findings; FDA SSED pp15, 26–27 for prespecified success criteria"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_10_62297_0.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "nasha-dx-2014",
+      "kind": "updated",
+      "label": "Three-year active-arm follow-up",
+      "published": "2014-05-19",
+      "cutoff": null,
+      "citation": "Mellgren A, Matzel KE, Pollack J, et al. \"Long-term efficacy of NASHA Dx injection therapy for treatment of fecal incontinence.\" *Neurogastroenterol Motil.* 2014;26(8):1087-1094. doi:10.1111/nmo.12360",
+      "doi": "10.1111/nmo.12360",
+      "pmid": "24837493",
+      "followUp": "36 months in the 136 originally assigned to NASHA Dx; no continued sham comparison",
+      "followUpLocator": "Full text, Materials and Methods—Patients; Results, Figure 1",
+      "results": [
+        {
+          "endpoint": "At least 50% reduction in fecal-incontinence episodes",
+          "role": "descriptive",
+          "measure": "36-month responder proportion, last observation carried forward",
+          "values": {
+            "exp": "52% (n=136; last observation carried forward)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "At 36 months, 112/136 had an assessment; complete-case response was 59% (n=112) and missing-as-failure response was 44.9% (n=136).",
+          "locator": "Full text, Results, Figures 1–3; Discussion"
+        },
+        {
+          "endpoint": "Cleveland Clinic Florida Fecal Incontinence Score",
+          "role": "descriptive",
+          "measure": "Mean score, baseline to 36 months",
+          "values": {
+            "exp": "14 at baseline; 11 at 36 months"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Within-arm change among patients originally assigned to NASHA Dx.",
+          "locator": "Full text, Results, Figure 4"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Early treatment-related anorectal events",
+          "values": {
+            "exp": "Proctalgia 19/136 (14.0%); injection-site bleeding 7/136 (5.1%); rectal abscess 1/136 (0.7%); prostatic abscess 1/136 (0.7%)"
+          },
+          "locator": "Full text, Results, Table 4 and adverse-events paragraph",
+          "note": "First 6 months; rectal abscess required surgery and prostatic abscess resolved with antibiotics."
+        },
+        {
+          "label": "Treatment-related events after six months",
+          "values": {
+            "exp": "Proctalgia 3/133 (2.3%); injection-site nodule 3/133 (2.3%)"
+          },
+          "locator": "Full text, Results, Table 4 and adverse-events paragraph",
+          "note": "Through 36 months; no additional treatment-related serious adverse events were reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Injection technique",
+          "value": "Outpatient anoscopic injection without anesthesia: 1 mL NASHA Dx in each of four submucosal quadrants, about 5 mm above the dentate line; needle retained 10 seconds after injection.",
+          "locator": "Full text, Materials and Methods—Procedures"
+        },
+        {
+          "label": "Repeat treatment and retention",
+          "value": "At one month, patients with CCFIS at least 10 and no persistent adverse effects were offered retreatment; 112/136 (82%) received a second injection and 112/136 (82%) completed the 36-month assessment.",
+          "locator": "Full text, Materials and Methods—Procedures; Results, Figure 1"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_nmo_12360.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/nasha-dx",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

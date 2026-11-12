@@ -1,0 +1,271 @@
+{
+  "id": "fesoterodine-pivotal",
+  "name": "Fesoterodine pivotal trials",
+  "aliases": [
+    "SP583",
+    "SP584"
+  ],
+  "nct": null,
+  "registry": "Sponsor studies SP583 and SP584",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Do fixed doses of fesoterodine improve overactive bladder symptoms compared with placebo?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1135,
+    "arms": [
+      {
+        "key": "feso4",
+        "label": "Fesoterodine 4 mg once daily",
+        "role": "experimental"
+      },
+      {
+        "key": "feso8",
+        "label": "fesoterodine 8 mg once daily",
+        "role": "experimental"
+      },
+      {
+        "key": "placebo",
+        "label": "placebo",
+        "role": "control"
+      },
+      {
+        "key": "tolterodine",
+        "label": "tolterodine ER 4 mg once daily",
+        "role": "control"
+      }
+    ],
+    "population": "Adults with increased micturition frequency and urgency, with or without urgency urinary incontinence.",
+    "description": "Multicenter, double-blind, placebo- and active-controlled randomized trial",
+    "locator": "Chapple PubMed abstract, Methods; FDA medical review, p 2, Study SP583"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both fixed fesoterodine doses improved the primary and coprimary outcomes versus placebo.",
+  "takeaway": "In the Chapple pivotal trial, fesoterodine 4 mg and 8 mg once daily improved micturition frequency, urgency urinary incontinence, and treatment response over placebo at 12 weeks; tolterodine ER was an active control.",
+  "reports": [
+    {
+      "id": "fesoterodine-pivotal-2007",
+      "kind": "primary",
+      "label": "International pivotal trial (SP583)",
+      "published": "2007-07-17",
+      "cutoff": null,
+      "citation": "Chapple C, Van Kerrebroeck P, Tubaro A, et al. \"Clinical efficacy, safety, and tolerability of once-daily fesoterodine in subjects with overactive bladder.\" *Eur Urol.* 2007;52(4):1204-1212. doi:10.1016/j.eururo.2007.07.009",
+      "doi": "10.1016/j.eururo.2007.07.009",
+      "pmid": "17651893",
+      "followUp": "12 weeks of fixed-dose treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to week 12",
+          "values": {
+            "feso4": "−1.7",
+            "feso8": "−1.9",
+            "placebo": "−1.0"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "P<0.001 for each fesoterodine dose versus placebo; FDA-reproduced sponsor results, last observation carried forward.",
+          "locator": "FDA medical review, p 3, Table 1, Study SP583"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to week 12 among participants incontinent at baseline",
+          "values": {
+            "feso4": "−2.1 (n=199)",
+            "feso8": "−2.3 (n=223)",
+            "placebo": "−1.2 (n=211)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "P=0.001 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
+          "locator": "FDA medical review, p 3, Table 2, Study SP583"
+        },
+        {
+          "endpoint": "Treatment response",
+          "role": "primary",
+          "measure": "Patient-rated benefit at week 12",
+          "values": {
+            "feso4": "significantly greater than placebo",
+            "feso8": "significantly greater than placebo",
+            "placebo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract gives no response proportions or dose-specific P values.",
+          "locator": "Chapple PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Fixed-dose treatment",
+          "value": "Fesoterodine 4 mg or 8 mg, tolterodine ER 4 mg, or placebo once daily for 12 weeks.",
+          "locator": "Chapple PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_07_009.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "fesoterodine-pivotal-2007-us",
+      "kind": "secondary",
+      "label": "Separate US pivotal trial (SP584)",
+      "published": "2007-10-15",
+      "cutoff": null,
+      "citation": "Nitti VW, Dmochowski R, Sand PK, et al. \"Efficacy, safety and tolerability of fesoterodine for overactive bladder syndrome.\" *J Urol.* 2007;178(6):2488-2494. doi:10.1016/j.juro.2007.08.033",
+      "doi": "10.1016/j.juro.2007.08.033",
+      "pmid": "17937959",
+      "followUp": "12 weeks of fixed-dose treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to week 12",
+          "values": {
+            "feso4": "−1.9",
+            "feso8": "−1.9",
+            "placebo": "−1.0"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "P=0.032 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
+          "locator": "FDA medical review, p 3, Table 1, Study SP584"
+        },
+        {
+          "endpoint": "Urgency urinary incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to week 12 among participants incontinent at baseline",
+          "values": {
+            "feso4": "−1.8 (n=228)",
+            "feso8": "−2.4 (n=218)",
+            "placebo": "−1.0 (n=205)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "P=0.002 for 4 mg and P<0.001 for 8 mg versus placebo; FDA-reproduced sponsor results.",
+          "locator": "FDA medical review, p 3, Table 2, Study SP584"
+        },
+        {
+          "endpoint": "Treatment response",
+          "role": "primary",
+          "measure": "Patient-rated response at week 12",
+          "values": {
+            "feso4": "significantly greater than placebo",
+            "feso8": "significantly greater than placebo",
+            "placebo": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract gives no response proportions or dose-specific P values.",
+          "locator": "Nitti PubMed abstract, Materials and Methods and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth, constipation, and urinary tract infection",
+          "values": {
+            "feso4": "more frequent with fesoterodine overall",
+            "feso8": "more frequent with fesoterodine overall",
+            "placebo": "reference"
+          },
+          "locator": "Nitti PubMed abstract, Results",
+          "note": "The abstract does not provide event rates or separate the two fesoterodine doses."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "US trial treatment",
+          "value": "Fesoterodine 4 mg (283 randomized), fesoterodine 8 mg (279), or placebo (274) once daily for 12 weeks; 836 total randomized.",
+          "locator": "Nitti PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_08_033.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "fesoterodine-pivotal-2011-extension",
+      "kind": "secondary",
+      "label": "Pooled open-label extensions",
+      "published": "2011-03-01",
+      "cutoff": null,
+      "citation": "Scarpero H, Sand PK, Kelleher CJ, et al. \"Long-term safety, tolerability, and efficacy of fesoterodine treatment in men and women with overactive bladder symptoms.\" *Curr Med Res Opin.* 2011;27(5):921-930. doi:10.1185/03007995.2011.559581",
+      "doi": "10.1185/03007995.2011.559581",
+      "pmid": "21355814",
+      "followUp": "Open-label treatment assessed through 24 months; maximum allowed 24-36 months",
+      "followUpLocator": "PubMed abstract, Research Design and Methods and Main Outcome Measures",
+      "results": [
+        {
+          "endpoint": "Overactive bladder diary outcomes",
+          "role": "descriptive",
+          "measure": "Change from double-blind baseline through open-label month 24",
+          "effect": {
+            "type": "none"
+          },
+          "note": "In pooled flexible-dose extension participants followed through month 24, improvements were sustained or further improved. Open-label extensions pooled participants from SP583 and SP584; all began at 8 mg, with dose reduction and re-escalation permitted.",
+          "locator": "Scarpero PubMed abstract, Research Design and Methods and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth in pooled flexible-dose extension",
+          "values": {
+            "feso8": "24% of men; 32% of women"
+          },
+          "locator": "Scarpero PubMed abstract, Results",
+          "note": "All participants began at 8 mg; annual dose reduction to 4 mg and re-escalation were permitted. Rates are by sex, not randomized dose."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Continuation through 24 months",
+          "value": "83/185 men (45%) and 356/705 women (50%) continued open-label fesoterodine for at least 24 months.",
+          "locator": "Scarpero PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1185_03007995_2011_559581.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/fesoterodine-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

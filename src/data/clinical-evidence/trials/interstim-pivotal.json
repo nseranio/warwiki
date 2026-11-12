@@ -1,0 +1,407 @@
+{
+  "id": "interstim-pivotal",
+  "name": "InterStim pivotal trials",
+  "aliases": [
+    "Sacral Nerve Stimulation Study Group",
+    "MDT-103"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-third-line",
+      "lane": "sacral-neuromodulation"
+    }
+  ],
+  "question": "Does sacral nerve stimulation improve refractory urinary urge incontinence compared with delayed implantation and continued standard therapy?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 76,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Immediate InterStim sacral nerve stimulation",
+        "role": "experimental",
+        "n": 34
+      },
+      {
+        "key": "ctl",
+        "label": "delayed implantation with standard medical therapy",
+        "role": "control",
+        "n": 42
+      }
+    ],
+    "population": "76 test-stimulation responders with refractory urinary urge incontinence were randomized after baseline evaluation.",
+    "description": "Prospective, multicenter, open-label superiority randomized trial",
+    "locator": "Schmidt 1999, PubMed abstract, Materials and Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "All three primary diary measures favored immediate implantation at six months.",
+  "takeaway": "Immediate InterStim sacral nerve stimulation versus delayed implantation with standard medical therapy significantly reduced daily urge-incontinence episodes, episode severity, and pad or diaper use at six months in test-stimulation responders (all P < 0.0001).",
+  "reports": [
+    {
+      "id": "interstim-pivotal-1999",
+      "kind": "primary",
+      "label": "Urge-incontinence randomized report",
+      "published": "1999-08-01",
+      "dateLocator": "Journal article page, August 1, 1999",
+      "cutoff": null,
+      "citation": "Schmidt RA, Jonas U, Oleson KA, et al. \"Sacral nerve stimulation for treatment of refractory urinary urge incontinence.\" *J Urol.* 1999;162(2):352-357. doi:10.1016/S0022-5347(05)68558-8",
+      "doi": "10.1016/S0022-5347(05)68558-8",
+      "pmid": "10411037",
+      "followUp": "6 months randomized; efficacy appeared sustained for 18 months",
+      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "results": [
+        {
+          "endpoint": "Urge-incontinence episodes",
+          "role": "primary",
+          "measure": "Daily episode frequency at 6 months",
+          "values": {
+            "exp": "Significantly lower",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The abstract does not give arm-specific diary means or a prespecified alpha.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Episode severity",
+          "role": "primary",
+          "measure": "Severity at 6 months",
+          "values": {
+            "exp": "Significantly lower",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The abstract does not give arm-specific severity scores.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Absorbent pads or diapers",
+          "role": "primary",
+          "measure": "Pads or diapers replaced daily at 6 months",
+          "values": {
+            "exp": "Significantly fewer",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The abstract does not give arm-specific diary means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Complete dryness",
+          "role": "descriptive",
+          "measure": "Dry at 6 months among immediately implanted patients",
+          "values": {
+            "exp": "16/34 (47%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "A further 10/34 (29%) had greater than 50% fewer episodes.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Pulse-generator site pain",
+          "values": {
+            "exp": "15.9%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not state the denominator for implant-related complications."
+        },
+        {
+          "label": "Implant-site pain",
+          "values": {
+            "exp": "19.1%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not state the denominator."
+        },
+        {
+          "label": "Lead migration",
+          "values": {
+            "exp": "7.0%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not state the denominator."
+        },
+        {
+          "label": "Surgical revision for complication",
+          "values": {
+            "exp": "32.5% of implanted patients"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "No permanent injury or nerve damage was reported; the abstract does not state the revision denominator."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Delayed implantation",
+          "value": "The 42 controls received standard medical therapy for 6 months and were then offered implantation.",
+          "locator": "PubMed abstract, Materials and Methods"
+        },
+        {
+          "label": "Stimulation deactivation",
+          "value": "At 6 months, deactivation returned incontinence to baseline levels in the implanted group.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_10411037.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "interstim-pivotal-2000-urgency-frequency",
+      "kind": "secondary",
+      "label": "Urgency-frequency randomized report",
+      "published": "2000-06-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed and Crossref, June 2000 issue; day imputed",
+      "cutoff": null,
+      "citation": "Hassouna MM, Siegel SW, Lycklama à Nÿeholt AAB, et al. \"Sacral neuromodulation in the treatment of urgency-frequency symptoms: a multicenter study on efficacy and safety.\" *J Urol.* 2000;163(6):1849-1854. doi:10.1016/S0022-5347(05)67558-1",
+      "doi": "10.1016/S0022-5347(05)67558-1",
+      "pmid": "10799197",
+      "followUp": "6 months randomized; implanted patients followed to 24 months",
+      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "results": [
+        {
+          "endpoint": "Daily voids",
+          "role": "primary",
+          "measure": "Voids per day, baseline to 6 months in immediate-implant group",
+          "values": {
+            "exp": "16.9 ± 9.7 to 9.3 ± 5.1",
+            "ctl": "No significant change reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Between-group P value; the abstract does not give control means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Volume per void",
+          "role": "primary",
+          "measure": "mL per void, baseline to 6 months in immediate-implant group",
+          "values": {
+            "exp": "118 ± 74 to 226 ± 124 mL",
+            "ctl": "No significant change reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Between-group P value; the abstract does not give control means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urgency severity",
+          "role": "primary",
+          "measure": "Urgency rank, baseline to 6 months in immediate-implant group",
+          "values": {
+            "exp": "2.2 ± 0.6 to 1.6 ± 0.9",
+            "ctl": "No significant change reported"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Between-group P value; the abstract does not define the rank scale.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Test and implant",
+          "value": "All 51 patients had satisfactory percutaneous S3 and/or S4 test stimulation; 25 received immediate implantation and 26 delayed implantation at 6 months.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_10799197.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "interstim-pivotal-2001-retention",
+      "kind": "secondary",
+      "label": "Retention randomized report",
+      "published": "2001-01-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed and Crossref, January 2001 issue; day imputed",
+      "cutoff": null,
+      "citation": "Jonas U, Fowler CJ, Chancellor MB, et al. \"Efficacy of sacral nerve stimulation for urinary retention: results 18 months after implantation.\" *J Urol.* 2001;165(1):15-19. doi:10.1097/00005392-200101000-00004",
+      "doi": "10.1097/00005392-200101000-00004",
+      "pmid": "11125353",
+      "followUp": "6 months randomized; effectiveness sustained through 18 months after implantation",
+      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "results": [
+        {
+          "endpoint": "Catheter volume per catheterization",
+          "role": "primary",
+          "measure": "Volume per catheterization at 6 months",
+          "values": {
+            "exp": "Significantly lower",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "The abstract does not give arm-specific volumes.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Retention treatment success",
+          "role": "descriptive",
+          "measure": "Successful voiding outcome at 6 months",
+          "values": {
+            "exp": "83% (37 assigned)",
+            "ctl": "9% (31 assigned)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Implant success combines elimination of catheterization or at least 50% reduction in catheter volume per catheterization; exact 6-month analysis denominators are not stated.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Elimination of catheterization",
+          "role": "descriptive",
+          "measure": "No catheterization at 6 months among implanted patients",
+          "values": {
+            "exp": "69% (37 assigned)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "An additional 14% had at least 50% lower catheter volume per catheterization; exact 6-month analysis denominator is not stated.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Screening and allocation",
+          "value": "177 enrolled; greater than 50% symptom improvement during 3–7 days of percutaneous test stimulation qualified 68 patients for randomization (37 immediate, 31 delayed implantation).",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_00005392_200101000_00004.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "interstim-pivotal-2007",
+      "kind": "secondary",
+      "label": "Five-year implanted cohort",
+      "published": "2007-09-17",
+      "dateLocator": "PubMed, electronic publication date September 17, 2007",
+      "cutoff": null,
+      "citation": "van Kerrebroeck PE, van Voskuilen AC, Heesakkers JP, et al. \"Results of sacral neuromodulation therapy for urinary voiding dysfunction: outcomes of a prospective, worldwide clinical study.\" *J Urol.* 2007;178(5):2029-2034. doi:10.1016/j.juro.2007.07.032",
+      "doi": "10.1016/j.juro.2007.07.032",
+      "pmid": "17869298",
+      "followUp": "5 years after implantation; uncontrolled implanted cohort",
+      "followUpLocator": "PubMed abstract, Purpose, Materials and Methods and Results",
+      "results": [
+        {
+          "endpoint": "Urge-incontinence success",
+          "role": "descriptive",
+          "measure": "At least 50% diary improvement at 5 years",
+          "values": {
+            "exp": "68%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "96 originally implanted with urge incontinence; exact 5-year analysis denominator not stated. No concurrent control; mean leaks/day fell from 9.6 ± 6.0 to 3.9 ± 4.0.",
+          "locator": "PubMed abstract, Materials and Methods and Results"
+        },
+        {
+          "endpoint": "Urgency-frequency success",
+          "role": "descriptive",
+          "measure": "At least 50% diary improvement at 5 years",
+          "values": {
+            "exp": "56%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "25 originally implanted with urgency-frequency; exact 5-year analysis denominator not stated. No concurrent control; mean voids/day fell from 19.3 ± 7.0 to 14.8 ± 7.6.",
+          "locator": "PubMed abstract, Materials and Methods and Results"
+        },
+        {
+          "endpoint": "Retention success",
+          "role": "descriptive",
+          "measure": "At least 50% diary improvement at 5 years",
+          "values": {
+            "exp": "71%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "31 originally implanted with retention; exact 5-year analysis denominator not stated. No concurrent control; mean catheterizations/day fell from 5.3 ± 2.8 to 1.9 ± 2.8.",
+          "locator": "PubMed abstract, Materials and Methods and Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Device- or therapy-related adverse events",
+          "values": {
+            "exp": "279 events in 102/152 implanted patients"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "No life-threatening or irreversible adverse events were reported."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Five-year cohort implantation",
+          "value": "17 centers enrolled 163 patients; 11 declined implantation after testing and 152 received InterStim (96 urge incontinence, 25 urgency-frequency, 31 retention).",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_07_032.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/interstim-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "id": "aria-dutasteride",
+  "name": "ARIA dutasteride trials",
+  "aliases": [
+    "ARIA3001",
+    "ARIA3002",
+    "ARIA3003",
+    "ARIB3003"
+  ],
+  "nct": null,
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "5-alpha-reductase"
+    }
+  ],
+  "question": "Does dutasteride improve symptoms and reduce acute urinary retention and BPH surgery compared with placebo in men with symptomatic enlarged prostates?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind after a single-blind placebo lead-in",
+    "type": "superiority",
+    "n": 4325,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Dutasteride 0.5 mg daily",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo daily",
+        "role": "control"
+      }
+    ],
+    "population": "Men with clinical BPH, AUA Symptom Index at least 12, Qmax at most 15 mL/s, prostate volume at least 30 cm3, and PSA 1.5–10 ng/mL.",
+    "description": "Pooled, double-blind randomized placebo-controlled trials",
+    "locator": "PubMed abstract, Methods; Debruyne 2004 PubMed abstract, Objectives"
+  },
+  "verdict": "positive",
+  "verdictNote": "The abstract omits prespecified endpoints and arm-specific event rates.",
+  "takeaway": "Across three randomized ARIA trials, dutasteride improved symptom score and peak flow and reduced acute urinary retention and BPH surgery compared with placebo over 24 months in men with symptomatic enlarged prostates.",
+  "reports": [
+    {
+      "id": "aria-dutasteride-2002",
+      "kind": "primary",
+      "label": "Pooled two-year report",
+      "published": "2002-09-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation: September 2002; Crossref published-print: September 2002",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Boyle P, Nickel JC, et al. \"Efficacy and safety of a dual inhibitor of 5-alpha-reductase types 1 and 2 (dutasteride) in men with benign prostatic hyperplasia.\" *Urology.* 2002;60(3):434-441. doi:10.1016/s0090-4295(02)01905-2",
+      "doi": "10.1016/s0090-4295(02)01905-2",
+      "pmid": "12350480",
+      "followUp": "24 months",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "AUA Symptom Index",
+          "role": "primary",
+          "measure": "Change from baseline at 24 months",
+          "values": {
+            "exp": "−4.5 points (21.4%)",
+            "ctl": "not stated"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": null,
+          "note": "The abstract does not identify the prespecified primary endpoint or its threshold.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "secondary",
+          "measure": "Qmax change from baseline at 24 months",
+          "values": {
+            "exp": "+2.2 mL/s",
+            "ctl": "not stated"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Acute urinary retention",
+          "role": "secondary",
+          "measure": "Relative risk reduction versus placebo over 24 months",
+          "values": {
+            "exp": "57% lower risk",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "BPH-related surgery",
+          "role": "secondary",
+          "measure": "Relative risk reduction versus placebo over 24 months",
+          "values": {
+            "exp": "48% lower risk",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Total prostate volume",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 24 months",
+          "values": {
+            "exp": "−25.7%",
+            "ctl": "not stated"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Trial completion",
+          "value": "2,951/4,325 completed the 24-month trials (68.2%).",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Treatment schedule",
+          "value": "One-month single-blind placebo lead-in, then dutasteride 0.5 mg daily or placebo for 24 months.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_01905_2.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "aria-dutasteride-2004",
+      "kind": "updated",
+      "label": "Four-year pooled extension",
+      "published": "2004-10-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation: October 2004; Crossref published-print: October 2004",
+      "cutoff": null,
+      "citation": "Debruyne F, Barkin J, van Erps P, et al. \"Efficacy and safety of long-term treatment with the dual 5 alpha-reductase inhibitor dutasteride in men with symptomatic benign prostatic hyperplasia.\" *Eur Urol.* 2004;46(4):488-495. doi:10.1016/j.eururo.2004.05.008",
+      "doi": "10.1016/j.eururo.2004.05.008",
+      "pmid": "15363566",
+      "followUp": "48 months, including a 24-month open-label extension",
+      "followUpLocator": "PubMed abstract, Objectives and Methods",
+      "results": [
+        {
+          "endpoint": "Symptoms, flow and prostate volume",
+          "role": "descriptive",
+          "measure": "Change from month 24 to month 48",
+          "values": {
+            "exp": "continued dutasteride: further improvement",
+            "ctl": "placebo switched to dutasteride: further improvement"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "At month 48 the continued-dutasteride group had significantly greater symptom and flow improvement and volume reduction; all patients received dutasteride in the extension.",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Open-label extension",
+          "value": "Patients from all three pivotal trials were eligible; both original groups received dutasteride 0.5 mg daily during the 24-month extension.",
+          "locator": "PubMed abstract, Objectives and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_05_008.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/aria-dutasteride",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

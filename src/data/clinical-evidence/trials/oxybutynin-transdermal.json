@@ -1,0 +1,176 @@
+{
+  "id": "oxybutynin-transdermal",
+  "name": "Transdermal oxybutynin dose-ranging trial",
+  "aliases": [
+    "Oxytrol",
+    "OXY-TDS",
+    "Dmochowski 2002"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Does transdermal oxybutynin reduce urge or mixed urinary incontinence compared with placebo in adults with overactive bladder?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind for 12 weeks; open-label extension",
+    "type": "superiority",
+    "n": 520,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Oxybutynin transdermal system 3.9 mg/day",
+        "role": "experimental"
+      },
+      {
+        "key": "dose26",
+        "label": "oxybutynin transdermal system 2.6 mg/day",
+        "role": "experimental"
+      },
+      {
+        "key": "dose13",
+        "label": "oxybutynin transdermal system 1.3 mg/day",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo patch",
+        "role": "control"
+      }
+    ],
+    "population": "Adults with overactive bladder and urge or mixed urinary incontinence after symptom stabilization or treatment withdrawal.",
+    "description": "Randomized, double-blind, placebo-controlled dose-ranging trial",
+    "locator": "PubMed abstract, Purpose and Materials and Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Rank analysis favored 3.9 mg/day; protocol-specified parametric ANCOVA did not.",
+  "takeaway": "In 520 randomized adults (515 analyzed) with urge or mixed incontinence, transdermal oxybutynin 3.9 mg/day reduced median weekly leakage more than placebo at 12 weeks (P=0.0165), but the prespecified parametric analysis was nonsignificant (P=0.2831); neither lower dose significantly reduced weekly leakage.",
+  "reports": [
+    {
+      "id": "oxybutynin-transdermal-2002",
+      "kind": "primary",
+      "label": "Dose-ranging randomized report",
+      "published": "2002-08-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed citation and Crossref publication month: August 2002; day approximated",
+      "cutoff": null,
+      "citation": "Dmochowski RR, Davila GW, Zinner NR, et al. \"Efficacy and safety of transdermal oxybutynin in patients with urge and mixed urinary incontinence.\" *J Urol.* 2002;168(2):580-586. doi:10.1016/S0022-5347(05)64684-8",
+      "doi": "10.1016/S0022-5347(05)64684-8",
+      "pmid": "12131314",
+      "followUp": "12 weeks blinded, followed by 12 weeks open-label dose titration",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes",
+          "role": "primary",
+          "measure": "Median change in weekly incontinence episodes at 12 weeks",
+          "values": {
+            "exp": "-19.0 episodes/week",
+            "ctl": "-14.5 episodes/week"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0165"
+          },
+          "met": true,
+          "note": "The rank analysis was significant (P=0.0165); protocol-specified parametric ANCOVA was not (P=0.2831). A corrected FDA reanalysis was significant (P=0.0265).",
+          "locator": "PubMed abstract, Results; FDA statistical review, pp. 7-11 (https://www.accessdata.fda.gov/drugsatfda_docs/nda/2003/21-351_Oxytrol_statr.PDF)"
+        },
+        {
+          "endpoint": "Urinary frequency",
+          "role": "secondary",
+          "measure": "Mean change in daily voiding frequency at 12 weeks",
+          "values": {
+            "exp": "-2.3 voids/day",
+            "ctl": "-1.7 voids/day"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0457"
+          },
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Average voided volume",
+          "role": "secondary",
+          "measure": "Median change in average voided volume at 12 weeks, 3.9 mg/day versus placebo",
+          "values": {
+            "exp": "+24 mL",
+            "ctl": "+6 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0063"
+          },
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Average voided volume",
+          "role": "secondary",
+          "measure": "Median change in average voided volume at 12 weeks, 2.6 mg/day versus placebo",
+          "values": {
+            "dose26": "+19 mL",
+            "ctl": "+6 mL"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0157"
+          },
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Incontinence-specific quality of life",
+          "role": "secondary",
+          "measure": "Incontinence Impact Questionnaire total score at 12 weeks",
+          "effect": {
+            "type": "none",
+            "p": "0.0327"
+          },
+          "note": "Improved with 3.9 mg/day versus placebo; abstract gives no scores.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Application-site pruritus",
+          "locator": "PubMed abstract, Results",
+          "note": "10.8%-16.8% across active doses versus 6.1% with placebo."
+        },
+        {
+          "label": "Dry mouth",
+          "locator": "PubMed abstract, Results",
+          "note": "7.0% with oxybutynin TDS versus 8.3% with placebo; difference not significant."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Patch application and extension",
+          "value": "Patches delivering 1.3, 2.6, or 3.9 mg/day were applied twice weekly during 12 blinded weeks, followed by 12 weeks of open-label dose titration.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_12131314.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/oxybutynin-transdermal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

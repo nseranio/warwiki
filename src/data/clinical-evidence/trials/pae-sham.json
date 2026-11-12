@@ -1,0 +1,226 @@
+{
+  "id": "pae-sham",
+  "name": "Pisco PAE versus sham",
+  "aliases": [
+    "Pisco 2020"
+  ],
+  "nct": "NCT02074644",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-procedures",
+      "lane": "minimally-invasive"
+    }
+  ],
+  "question": "Does prostatic artery embolisation improve symptoms more than a sham catheter procedure in men with severe LUTS/BPH despite alpha-blocker treatment?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "single-blind (patients)",
+    "type": "superiority",
+    "n": 80,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Prostatic artery embolisation with 300–500 μm Bead Block particles",
+        "n": 40,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "sham prostatic artery catheterisation without embolisation",
+        "n": 40,
+        "role": "control"
+      }
+    ],
+    "population": "80 men older than 45 years with severe LUTS/BPH despite at least six months of alpha-blocker treatment, IPSS at least 20, QoL at least 3, Qmax below 12 mL/s, prostate volume at least 40 cm³, and catheterisation of a prostatic artery feasible before randomisation.",
+    "description": "Single-centre, patient-blinded, sham-controlled superiority randomized trial",
+    "locator": "Journal pp355–358, Methods §§2.1–2.3, Results, Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary outcomes favored embolisation at six months; sham participants then crossed over.",
+  "takeaway": "Prostatic artery embolisation with 300–500 μm particles improved six-month IPSS and quality-of-life scores more than sham catheterisation without embolisation in men with severe LUTS/BPH despite alpha-blockers; both prespecified coprimary superiority tests were met.",
+  "reports": [
+    {
+      "id": "pae-sham-2020",
+      "kind": "primary",
+      "label": "Six-month blinded and 12-month crossover report",
+      "published": "2019-12-10",
+      "cutoff": null,
+      "citation": "Pisco JM, Bilhim T, Costa NV, et al. \"Randomised Clinical Trial of Prostatic Artery Embolisation Versus a Sham Procedure for Benign Prostatic Hyperplasia.\" *Eur Urol.* 2020;77(3):354-362. doi:10.1016/j.eururo.2019.11.010",
+      "doi": "10.1016/j.eururo.2019.11.010",
+      "pmid": "31831295",
+      "followUp": "Six-month blinded comparison; open crossover and observation to 12 months",
+      "followUpLocator": "Journal pp355–356, Methods §§2.1–2.4; p359, Results",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Six-month mean IPSS change in points; adjusted mean difference, PAE minus sham",
+          "values": {
+            "exp": "−17.1 points",
+            "ctl": "−5.03 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -13.2,
+            "ci": [
+              -16.2,
+              -10.2
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Intention-to-treat ANCOVA adjusted for baseline IPSS; first test in serial gatekeeper at two-sided alpha 0.05.",
+          "locator": "Journal p359, Results; p360, Table 2; p356, Statistical analysis"
+        },
+        {
+          "endpoint": "IPSS quality-of-life score",
+          "role": "primary",
+          "measure": "Six-month mean QoL score; mean difference, PAE minus sham",
+          "values": {
+            "exp": "1.35 points",
+            "ctl": "3.48 points"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.13,
+            "ci": [
+              -2.68,
+              -1.57
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Coprimary t test passed after the IPSS gate; paper expresses the difference as sham minus PAE, +2.13 (95% CI 1.57–2.68).",
+          "locator": "Journal p359, Results; p356, Statistical analysis"
+        },
+        {
+          "endpoint": "Qmax",
+          "role": "secondary",
+          "measure": "Six-month mean change in maximum flow, mL/s; adjusted mean difference, PAE minus sham",
+          "values": {
+            "exp": "+6.82 mL/s",
+            "ctl": "+2.80 mL/s"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.22,
+            "ci": [
+              0.86,
+              7.58
+            ],
+            "p": "0.005"
+          },
+          "note": "Confidence interval and P value adjusted for multiple secondary comparisons.",
+          "locator": "Journal p360, Table 2 and footnote a"
+        },
+        {
+          "endpoint": "Postvoid residual",
+          "role": "secondary",
+          "measure": "Six-month mean PVR change, mL; adjusted mean difference, PAE minus sham",
+          "values": {
+            "exp": "−59.9 mL",
+            "ctl": "+8.63 mL"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -60.6,
+            "ci": [
+              -116.7,
+              -4.6
+            ],
+            "p": "0.03"
+          },
+          "note": "Confidence interval and P value adjusted for multiple secondary comparisons.",
+          "locator": "Journal p360, Table 2 and footnote a"
+        },
+        {
+          "endpoint": "IPSS after sham-to-PAE crossover",
+          "role": "descriptive",
+          "measure": "Mean IPSS improvement during six-month open crossover period",
+          "values": {
+            "ctl": "13.6 ± 9.19 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.0001"
+          },
+          "note": "Within-group change in former sham arm after PAE; no concurrent sham comparison.",
+          "locator": "Journal p354, Abstract, Results; p359, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Any adverse event during blinded period",
+          "values": {
+            "exp": "14/40 (35.0%)",
+            "ctl": "13/40 (32.5%)"
+          },
+          "locator": "Journal p359, Results; p360, Table 3",
+          "note": "Sixteen events after randomized PAE and 17 after sham."
+        },
+        {
+          "label": "Haematuria during blinded period",
+          "values": {
+            "exp": "3/40 (7.5%)",
+            "ctl": "2/40 (5.0%)"
+          },
+          "locator": "Journal p360, Table 3",
+          "note": ""
+        },
+        {
+          "label": "Clavien–Dindo IIIa event after crossover PAE",
+          "values": {
+            "ctl": "1/38 (2.6%) former sham participants after crossover PAE"
+          },
+          "locator": "Journal pp359–360, Results and Table 3",
+          "note": "Expelled prostatic fragments caused haematuria and acute retention, treated with TURP; not an event in the randomized blinded PAE arm."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Bilateral embolisation in randomized PAE arm",
+          "value": "37/40 (92.5%); unilateral in 3/40 (7.5%)",
+          "locator": "Journal p358, Results"
+        },
+        {
+          "label": "Sham crossover after blinded period",
+          "value": "38/38 completers (100%) underwent PAE after month 6",
+          "locator": "Journal pp356,359, Methods §2.3 and Results"
+        },
+        {
+          "label": "Median procedure time",
+          "values": {
+            "exp": "75 min (IQR 60–90)",
+            "ctl": "30 min (IQR 30–45)"
+          },
+          "locator": "Journal p358, Table 1"
+        },
+        {
+          "label": "Tamsulosin at six months among evaluable patients",
+          "values": {
+            "exp": "2/39 (5.13%)",
+            "ctl": "34/37 (91.9%)"
+          },
+          "locator": "Journal p359, Results",
+          "note": "Treatment could be stopped after symptom improvement by study physician; denominators inferred from the reported counts and percentages."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2019_11_010.fulltext.txt",
+        "checked": "2026-11-12",
+        "level": "full-text"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/pae-sham",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

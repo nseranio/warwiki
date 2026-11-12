@@ -1,0 +1,155 @@
+{
+  "id": "aries",
+  "name": "ARIES",
+  "aliases": [
+    "Study 178-CL-047",
+    "Mirabegron North American phase 3 trial"
+  ],
+  "nct": "NCT00662909",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Does once-daily mirabegron reduce incontinence episodes and micturition frequency versus placebo in adults with overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1329,
+    "arms": [
+      {
+        "key": "mira50",
+        "label": "Mirabegron 50 mg once daily",
+        "role": "experimental",
+        "n": 442
+      },
+      {
+        "key": "mira100",
+        "label": "mirabegron 100 mg once daily",
+        "role": "experimental",
+        "n": 433
+      },
+      {
+        "key": "placebo",
+        "label": "placebo once daily",
+        "role": "control",
+        "n": 454
+      }
+    ],
+    "population": "Adults in the United States and Canada with overactive bladder symptoms for at least three months.",
+    "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
+    "locator": "PubMed abstract, Materials and Methods; publisher article, Patient Disposition and Demographics; FDA clinical review p93, Figure 3"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both doses met both co-primary symptom endpoints versus placebo at 12 weeks.",
+  "takeaway": "In ARIES, mirabegron 50 mg and 100 mg once daily each reduced incontinence episodes and micturitions more than placebo over 12 weeks in adults with overactive bladder.",
+  "reports": [
+    {
+      "id": "aries-2013",
+      "kind": "primary",
+      "label": "Primary 12-week report",
+      "published": "2012-10-16",
+      "dateLocator": "PubMed record, Epub 2012 Oct 16",
+      "cutoff": null,
+      "citation": "Nitti VW, Auerbach S, Martin N, et al. \"Results of a randomized phase III trial of mirabegron in patients with overactive bladder.\" *J Urol.* 2013;189(4):1388-1395. doi:10.1016/j.juro.2012.10.017",
+      "doi": "10.1016/j.juro.2012.10.017",
+      "pmid": "23079373",
+      "followUp": "12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to final visit (95% CI)",
+          "values": {
+            "mira50": "−1.47 (−1.69 to −1.25)",
+            "mira100": "−1.63 (−1.86 to −1.40)",
+            "placebo": "−1.13 (−1.35 to −0.91)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Both mirabegron doses differed significantly from placebo; intervals are for within-arm mean changes.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Mean change from baseline to final visit (95% CI)",
+          "values": {
+            "mira50": "−1.66 (−1.92 to −1.40)",
+            "mira100": "−1.75 (−2.01 to −1.48)",
+            "placebo": "−1.05 (−1.31 to −0.79)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "met": true,
+          "note": "Both mirabegron doses differed significantly from placebo; intervals are for within-arm mean changes.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth",
+          "values": {
+            "mira50": "0.5%",
+            "mira100": "2.1%",
+            "placebo": "1.5%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports percentages without event counts or denominators."
+        },
+        {
+          "label": "Frequently reported treatment-emergent adverse events",
+          "locator": "PubMed abstract, Results",
+          "note": "Hypertension, urinary tract infection, headache, and nasopharyngitis had similar incidence across mirabegron and placebo groups; no rates are given in the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "value": "Two-week placebo run-in, then mirabegron 50 mg, mirabegron 100 mg, or placebo once daily for 12 weeks.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_10_017.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "scorpio",
+      "note": "Companion phase 3 mirabegron trial in Europe, Australia, and South Africa with a tolterodine reference arm."
+    },
+    {
+      "type": "parallel",
+      "target": "capricorn",
+      "note": "Companion phase 3 placebo-controlled mirabegron trial that also tested the 25 mg dose."
+    },
+    {
+      "type": "extends",
+      "target": "taurus",
+      "note": "One-year active-controlled safety trial enrolled completers from ARIES and SCORPIO."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/aries",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

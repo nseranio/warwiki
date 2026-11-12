@@ -1,0 +1,166 @@
+{
+  "id": "solifenacin-pivotal",
+  "name": "Solifenacin pivotal trial (Cardozo 2004)",
+  "aliases": [
+    "Cardozo 2004"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Does once-daily solifenacin 5 mg or 10 mg reduce micturitions in patients with overactive bladder compared with placebo?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 911,
+    "arms": [
+      {
+        "key": "s5",
+        "label": "Solifenacin 5 mg once daily",
+        "role": "experimental"
+      },
+      {
+        "key": "s10",
+        "label": "solifenacin 10 mg once daily",
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "role": "control"
+      }
+    ],
+    "population": "Patients with symptoms of overactive bladder enrolled at multinational centers.",
+    "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
+    "locator": "PubMed abstract, Purpose and Materials and Methods; publisher indexed article text, Results (911 randomized)"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both doses met the primary micturition endpoint; dry mouth increased with dose.",
+  "takeaway": "In a 12-week placebo-controlled trial, solifenacin 5 mg and 10 mg once daily reduced mean micturitions per 24 hours more than placebo in patients with overactive bladder; dry mouth was more frequent with solifenacin, especially 10 mg.",
+  "reports": [
+    {
+      "id": "solifenacin-pivotal-2004",
+      "kind": "primary",
+      "label": "Primary report",
+      "published": "2004-11-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print: November 2004 (day not supplied); PubMed citation: November 2004",
+      "cutoff": null,
+      "citation": "Cardozo L, Lisec M, Millard R, et al. \"Randomized, double-blind placebo controlled trial of the once daily antimuscarinic agent solifenacin succinate in patients with overactive bladder.\" *J Urol.* 2004;172(5 Pt 1):1919-1924. doi:10.1097/01.ju.0000140729.07840.16",
+      "doi": "10.1097/01.ju.0000140729.07840.16",
+      "pmid": "15540755",
+      "followUp": "12-week treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Micturitions",
+          "role": "primary",
+          "measure": "Mean change in micturitions per 24 hours from baseline to 12 weeks",
+          "values": {
+            "s5": "−2.37",
+            "s10": "−2.81",
+            "ctl": "−1.59"
+          },
+          "effect": {
+            "type": "none",
+            "p": "5 mg versus placebo: 0.0018; 10 mg versus placebo: 0.0001"
+          },
+          "met": true,
+          "note": "Both dose comparisons were statistically significant; the abstract gives no between-dose test.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urgency episodes",
+          "role": "secondary",
+          "measure": "Mean change in urgency episodes per 24 hours from baseline to 12 weeks",
+          "values": {
+            "s5": "−2.84 (−51%)",
+            "s10": "−2.90 (−52%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "5 mg versus placebo: 0.003; 10 mg versus placebo: 0.002"
+          },
+          "note": "Placebo change not reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Nocturia episodes",
+          "role": "secondary",
+          "measure": "Mean change in nocturia episodes per 24 hours from baseline to 12 weeks",
+          "values": {
+            "s10": "−0.71 (−38.5%)",
+            "ctl": "−0.52 (−16.4%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "10 mg versus placebo: 0.036"
+          },
+          "note": "5 mg nocturia comparison not reported in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Incontinence episodes",
+          "role": "secondary",
+          "measure": "Change in incontinence episodes per 24 hours at 12 weeks",
+          "effect": {
+            "type": "none",
+            "p": "5 mg versus placebo: 0.002; 10 mg versus placebo: 0.016"
+          },
+          "note": "Both comparisons were statistically significant; change values are not given in the abstract.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Urge-incontinence episodes",
+          "role": "secondary",
+          "measure": "Change in urge-incontinence episodes per 24 hours at 12 weeks",
+          "effect": {
+            "type": "none",
+            "p": "5 mg versus placebo: 0.014; 10 mg versus placebo: 0.042"
+          },
+          "note": "Both comparisons were statistically significant; change values are not given in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Dry mouth",
+          "values": {
+            "s5": "7.7%",
+            "s10": "23%",
+            "ctl": "2.3%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Mostly mild; arm-specific event counts are not given in the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment schedule",
+          "value": "Oral solifenacin 5 mg or 10 mg, or placebo, once daily for 12 weeks.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000140729_07840_16.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/solifenacin-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

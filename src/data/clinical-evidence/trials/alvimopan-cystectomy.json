@@ -1,0 +1,213 @@
+{
+  "id": "alvimopan-cystectomy",
+  "name": "Alvimopan after radical cystectomy",
+  "aliases": [
+    "Lee 2014"
+  ],
+  "nct": "NCT00708201",
+  "area": [
+    "diversion"
+  ],
+  "decisions": [
+    {
+      "id": "urinary-diversion-surgery",
+      "lane": "recovery"
+    }
+  ],
+  "question": "Does perioperative alvimopan accelerate gastrointestinal recovery compared with placebo after radical cystectomy?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 280,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Oral alvimopan",
+        "n": 143,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 137,
+        "role": "control"
+      }
+    ],
+    "population": "Patients undergoing radical cystectomy who were scheduled to receive postoperative intravenous opioid patient-controlled analgesia.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "Lee 2014, PubMed abstract, Design, setting, and participants and Results; Kauf 2014, PubMed abstract, Purpose"
+  },
+  "verdict": "positive",
+  "verdictNote": "GI-2 recovery was faster with alvimopan.",
+  "takeaway": "Oral alvimopan versus placebo accelerated GI-2 recovery after radical cystectomy (5.5 versus 6.8 days; HR 1.8, p < 0.0001) and shortened mean hospital stay in the randomized trial.",
+  "reports": [
+    {
+      "id": "alvimopan-cystectomy-2013-economics",
+      "kind": "secondary",
+      "label": "Economic analysis",
+      "published": "2013-12-14",
+      "cutoff": null,
+      "citation": "Kauf TL, Svatek RS, Amiel G, et al. \"Alvimopan, a peripherally acting μ-opioid receptor antagonist, is associated with reduced costs after radical cystectomy: economic analysis of a phase 4 randomized, controlled trial.\" *J Urol.* 2014;191(6):1721-1727. doi:10.1016/j.juro.2013.12.015",
+      "doi": "10.1016/j.juro.2013.12.015",
+      "pmid": "24342144",
+      "followUp": "Index hospital stay and postoperative ileus-related readmissions",
+      "results": [
+        {
+          "endpoint": "Postoperative ileus-related costs",
+          "role": "secondary",
+          "measure": "Mean cost difference per patient, alvimopan minus placebo, using 2012 Medicare reimbursement and wholesale drug costs",
+          "values": {
+            "exp": "$2,340 lower",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2340,
+            "p": "0.04"
+          },
+          "note": "Cost-consequence analysis; not a clinical endpoint. Bootstrap comparison.",
+          "locator": "PubMed abstract, Materials and methods and Results"
+        },
+        {
+          "endpoint": "Total combined costs",
+          "role": "secondary",
+          "measure": "Mean cost difference per patient, alvimopan minus placebo, using 2012 Medicare reimbursement and wholesale drug costs",
+          "values": {
+            "exp": "$2,640 lower",
+            "ctl": "reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2640,
+            "p": "0.068"
+          },
+          "note": "The bootstrap comparison did not meet conventional statistical significance.",
+          "locator": "PubMed abstract, Materials and methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_12_015.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "alvimopan-cystectomy-2014",
+      "kind": "primary",
+      "label": "Primary clinical report",
+      "published": "2014-02-26",
+      "cutoff": null,
+      "citation": "Lee CT, Chang SS, Kamat AM, et al. \"Alvimopan accelerates gastrointestinal recovery after radical cystectomy: a multicenter randomized placebo-controlled trial.\" *Eur Urol.* 2014;66(2):265-272. doi:10.1016/j.eururo.2014.02.036",
+      "doi": "10.1016/j.eururo.2014.02.036",
+      "pmid": "24630419",
+      "followUp": "Index postoperative hospital stay",
+      "results": [
+        {
+          "endpoint": "GI-2 recovery",
+          "role": "primary",
+          "measure": "Time to both first solid-food tolerance and first bowel movement, days",
+          "values": {
+            "exp": "5.5 days",
+            "ctl": "6.8 days"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 1.8,
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Modified intention-to-treat population: 277 of 280 randomized; arm-specific analysis denominators were not in the abstract.",
+          "locator": "PubMed abstract, Outcome measurements and statistical analysis and Results"
+        },
+        {
+          "endpoint": "Hospital length of stay",
+          "role": "secondary",
+          "measure": "Mean postoperative hospital length of stay, days; mean difference in days",
+          "values": {
+            "exp": "7.4 days",
+            "ctl": "10.1 days"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.7,
+            "p": "0.0051"
+          },
+          "note": "Mean difference in days, alvimopan minus placebo, calculated from reported group means.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Postoperative ileus-related morbidity",
+          "role": "secondary",
+          "measure": "Patients with postoperative ileus-related morbidity; risk difference in percentage points",
+          "values": {
+            "exp": "8.4%",
+            "ctl": "29.1%"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -20.7,
+            "p": "<0.001"
+          },
+          "note": "Risk difference in percentage points, alvimopan minus placebo, calculated from reported percentages; event counts were not in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Postoperative ileus adverse events",
+          "values": {
+            "exp": "7%",
+            "ctl": "26%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Event counts and safety arm denominators were not reported in the abstract."
+        },
+        {
+          "label": "Serious postoperative ileus adverse events",
+          "values": {
+            "exp": "5%",
+            "ctl": "20%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Event counts and safety arm denominators were not reported in the abstract."
+        },
+        {
+          "label": "Cardiovascular adverse events",
+          "values": {
+            "exp": "8.4%",
+            "ctl": "15.3%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Independently adjudicated; p = 0.09. Event counts and safety arm denominators were not reported in the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Assigned oral dose",
+          "values": {
+            "exp": "12 mg",
+            "ctl": "matching placebo"
+          },
+          "locator": "PubMed abstract, Intervention",
+          "note": "Maximum 15 inpatient doses."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_02_036.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/alvimopan-cystectomy",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "rich-art",
+  "name": "RICH-ART",
+  "aliases": [
+    "Radiation Induced Cystitis treated with Hyperbaric oxygen—A Randomised controlled Trial",
+    "EudraCT 2012-001381-15"
+  ],
+  "nct": "NCT01659723",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "radiation-cystitis",
+      "lane": "hyperbaric-oxygen"
+    }
+  ],
+  "question": "Does hyperbaric oxygen therapy improve patient-reported urinary symptoms compared with standard care in chronic radiation-induced cystitis?",
+  "design": {
+    "phase": "2–3",
+    "randomized": true,
+    "blinding": "open-label",
+    "type": "superiority",
+    "n": 87,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Hyperbaric oxygen therapy",
+        "n": 42,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "standard care",
+        "n": 45,
+        "role": "control"
+      }
+    ],
+    "population": "Adults aged 18–80 years referred to Nordic hyperbaric clinics with symptomatic late radiation cystitis, pelvic radiotherapy at least six months earlier, and EPIC urinary total score below 80.",
+    "description": "Five-center, open-label, phase 2–3 randomized superiority trial",
+    "locator": "2019 PubMed abstract, Methods and Findings"
+  },
+  "verdict": "positive",
+  "verdictNote": "The patient-reported urinary score improved more with hyperbaric oxygen at 6–8 months.",
+  "takeaway": "In chronic radiation cystitis, hyperbaric oxygen therapy improved EPIC urinary total score more than standard care at 6–8 months: mean change 17.8 versus 7.7 points, a 10.1-point difference (95% CI 2.2–18.1).",
+  "reports": [
+    {
+      "id": "rich-art-2019",
+      "kind": "primary",
+      "label": "Initial randomized comparison",
+      "published": "2019-09-16",
+      "cutoff": null,
+      "citation": "Oscarsson N, Müller B, Rosén A, et al. \"Radiation-induced cystitis treated with hyperbaric oxygen therapy (RICH-ART): a randomised, controlled, phase 2-3 trial.\" *Lancet Oncol.* 2019;20(11):1602-1614. doi:10.1016/S1470-2045(19)30494-2",
+      "doi": "10.1016/S1470-2045(19)30494-2",
+      "pmid": "31537473",
+      "followUp": "Visit 4 at 6–8 months; median 234 days after randomization with hyperbaric oxygen and 217 days with standard care",
+      "followUpLocator": "PubMed abstract, Methods and Findings",
+      "results": [
+        {
+          "endpoint": "EPIC urinary total score",
+          "role": "primary",
+          "measure": "Mean change from baseline to visit 4 at 6–8 months; between-group mean difference in points",
+          "values": {
+            "exp": "+17.8 points (SD 18.4; n=41)",
+            "ctl": "+7.7 points (SD 15.5; n=38)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 10.1,
+            "ci": [
+              2.2,
+              18.1
+            ],
+            "p": "0.013"
+          },
+          "met": true,
+          "note": "Modified intention-to-treat analysis excluded eight immediate post-randomization consent withdrawals (one experimental, seven control).",
+          "locator": "PubMed abstract, Findings"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Transient grade 1–2 sight- or hearing-related adverse events during hyperbaric oxygen therapy",
+          "values": {
+            "exp": "17/41 (41%)",
+            "ctl": "Not reported"
+          },
+          "locator": "PubMed abstract, Findings",
+          "note": "Reported among treated patients in the initial analysis."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Enrollment exclusions relevant to surgical selection",
+          "value": "Bleeding requiring more than 500 mL of blood transfusion in the previous four weeks, permanent urinary catheter, bladder capacity below 100 mL, bladder fistula, previous hyperbaric oxygen for late radiation injury, or a hyperbaric oxygen contraindication.",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Hyperbaric oxygen regimen",
+          "value": "30–40 daily sessions of 100% oxygen at 240–250 kPa for 80–90 minutes.",
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Randomization and analysis",
+          "value": "87 randomized (42 hyperbaric oxygen, 45 standard care); 79 analyzed after eight immediate consent withdrawals (41 and 38, respectively).",
+          "locator": "PubMed abstract, Findings"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s1470_2045_19_30494_2.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "rich-art-2025",
+      "kind": "updated",
+      "label": "Five-year treated-cohort follow-up",
+      "published": "2025-04-19",
+      "cutoff": null,
+      "citation": "Oscarsson N, Rosén A, Müller B, et al. \"Radiation-induced cystitis treated with hyperbaric oxygen therapy (RICH-ART): long-term follow-up of a randomised controlled, phase 2-3 trial.\" *EClinicalMedicine.* 2025;83:103214. doi:10.1016/j.eclinm.2025.103214",
+      "doi": "10.1016/j.eclinm.2025.103214",
+      "pmid": "40291346",
+      "followUp": "Five years after hyperbaric oxygen; 39/70 had an observed five-year EPIC urinary score",
+      "followUpLocator": "Full text, Results and Table 2",
+      "results": [
+        {
+          "endpoint": "EPIC urinary total score after hyperbaric oxygen",
+          "role": "descriptive",
+          "measure": "Modeled within-person mean change from pre-treatment to six months in the pooled treated cohort, points",
+          "values": {
+            "exp": "+18.0 points (95% CI 14.2–21.8; pooled treated cohort, n=70)",
+            "ctl": "No untreated long-term control"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 18.0,
+            "ci": [
+              14.2,
+              21.8
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Pooled cohort after control participants were offered hyperbaric oxygen; within-person estimate.",
+          "locator": "Full text, Results and Table 2"
+        },
+        {
+          "endpoint": "EPIC urinary total score after hyperbaric oxygen",
+          "role": "secondary",
+          "measure": "Modeled within-person mean change from pre-treatment to five years in the pooled treated cohort, points",
+          "values": {
+            "exp": "+19.1 points (95% CI 13.3–24.9; pooled treated cohort, n=70; 39 observed at year 5)",
+            "ctl": "No untreated five-year control"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 19.1,
+            "ci": [
+              13.3,
+              24.9
+            ],
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Prespecified secondary outcome; after the randomized phase, control patients were offered hyperbaric oxygen. Mixed model for repeated measures.",
+          "locator": "Full text, Outcomes, Results and Tables 2–3"
+        },
+        {
+          "endpoint": "Early urinary symptom response after hyperbaric oxygen",
+          "role": "descriptive",
+          "measure": "At least 9-point EPIC urinary total score improvement at six months in pooled treated cohort",
+          "values": {
+            "exp": "48/70 (68.6%)",
+            "ctl": "No untreated long-term control"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Responder status was defined using the six-month post-treatment score.",
+          "locator": "Full text, Procedures and Results, Table 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Hyperbaric oxygen schedule",
+          "value": "Five days per week over 6–8 weeks; control participants were offered the same treatment after the initial assessment.",
+          "locator": "Full text, Procedures"
+        },
+        {
+          "label": "Control crossover and long-term cohort",
+          "value": "After the initial randomized comparison, controls were offered hyperbaric oxygen; 70 treated patients contributed long-term follow-up, and 39/70 (55.7%) had an observed year-five EPIC urinary score (31/70 missing).",
+          "locator": "Full text, Study design, Results and Table 2"
+        },
+        {
+          "label": "Follow-up closure",
+          "value": "Follow-up ended six months early in May 2022 because of administrative constraints, primarily lack of funding.",
+          "locator": "Full text, Methods and Results"
+        },
+        {
+          "label": "Additional hyperbaric oxygen for recurrent symptoms",
+          "value": "9/70 received 20–30 additional sessions at least one year after initial treatment.",
+          "locator": "Full text, Results and Discussion"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eclinm_2025_103214.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/rich-art",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

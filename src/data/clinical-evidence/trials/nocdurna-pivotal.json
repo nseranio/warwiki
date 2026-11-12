@@ -1,0 +1,245 @@
+{
+  "id": "nocdurna-pivotal",
+  "name": "NOCDURNA pivotal program",
+  "aliases": [
+    "CS41 (men)",
+    "CS40 (women)",
+    "NCT01223937 (women)"
+  ],
+  "nct": "NCT01262456",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "nocturia",
+      "lane": "desmopressin"
+    }
+  ],
+  "question": "Does low-dose desmopressin orally disintegrating tablet reduce nocturnal voids and increase 33% responders versus placebo in men and women with nocturia?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 663,
+    "arms": [
+      {
+        "key": "m50",
+        "label": "Desmopressin ODT 50 μg in men",
+        "n": 123,
+        "role": "experimental"
+      },
+      {
+        "key": "m75",
+        "label": "desmopressin ODT 75 μg in men",
+        "n": 129,
+        "role": "experimental"
+      },
+      {
+        "key": "mctl",
+        "label": "placebo in men",
+        "n": 143,
+        "role": "control"
+      },
+      {
+        "key": "w25",
+        "label": "desmopressin ODT 25 μg in women",
+        "n": 137,
+        "role": "experimental"
+      },
+      {
+        "key": "wctl",
+        "label": "placebo in women",
+        "n": 131,
+        "role": "control"
+      }
+    ],
+    "population": "Separate trials randomized 395 men and 268 women with at least two nocturnal voids nightly.",
+    "description": "Two multicenter, double-blind, placebo-controlled randomized trials",
+    "locator": "ClinicalTrials.gov NCT01262456 and NCT01223937, Study Design and Participant Flow; PubMed abstracts, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary endpoints favored each tested dose in men and the 25-μg dose in women.",
+  "takeaway": "In separate three-month trials, desmopressin ODT 50 or 75 μg in men and 25 μg in women reduced nocturnal voids and increased 33% responders versus placebo; the men's primary report found the 50-μg dose effective with fewer marked sodium decreases than 75 μg.",
+  "reports": [
+    {
+      "id": "nocdurna-pivotal-2013-men",
+      "kind": "primary",
+      "label": "Men's phase 3 trial (CS41)",
+      "published": "2013-02-20",
+      "cutoff": null,
+      "citation": "Weiss JP, Herschorn S, Albei CD, et al. \"Efficacy and Safety of Low Dose Desmopressin Orally Disintegrating Tablet in Men with Nocturia: Results of a Multicenter, Randomized, Double-Blind, Placebo Controlled, Parallel Group Study.\" *J Urol.* 2013;190(3):965-972. doi:10.1016/j.juro.2012.12.112",
+      "doi": "10.1016/j.juro.2012.12.112",
+      "pmid": "23454402",
+      "followUp": "Three-month double-blind treatment; full analysis set 385 men",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Nocturnal voids, men 50 μg",
+          "role": "primary",
+          "measure": "Placebo-adjusted mean difference in change in nocturnal voids during three months",
+          "effect": {
+            "type": "difference",
+            "value": -0.37,
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "50 μg versus placebo; full analysis set 385 men across all arms.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "33% responders, men 50 μg",
+          "role": "primary",
+          "measure": "Odds of at least 33% fewer nocturnal voids during three months",
+          "effect": {
+            "type": "OR",
+            "value": 1.98,
+            "p": "0.0009"
+          },
+          "met": true,
+          "note": "50 μg versus placebo.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Nocturnal voids, men 75 μg",
+          "role": "primary",
+          "measure": "Placebo-adjusted mean difference in change in nocturnal voids during three months",
+          "effect": {
+            "type": "difference",
+            "value": -0.41,
+            "p": "0.0003"
+          },
+          "met": true,
+          "note": "75 μg versus placebo.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "33% responders, men 75 μg",
+          "role": "primary",
+          "measure": "Odds of at least 33% fewer nocturnal voids during three months",
+          "effect": {
+            "type": "OR",
+            "value": 2.04,
+            "p": "0.0004"
+          },
+          "met": true,
+          "note": "75 μg versus placebo.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Time to first nocturnal void, men",
+          "role": "secondary",
+          "measure": "Approximate placebo-adjusted mean difference in time to first void at three months",
+          "effect": {
+            "type": "difference",
+            "value": 40
+          },
+          "note": "Approximately 40 minutes longer for both doses; P=0.006 for 50 μg and P=0.003 for 75 μg.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Serum sodium below 130 mmol/L",
+          "values": {
+            "m50": "2 men",
+            "m75": "9 men"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The two men at 50 μg were aged 74 and 79 years; the abstract does not give arm-level safety denominators."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Men's trial dosing",
+          "value": "Desmopressin ODT 50 μg or 75 μg versus placebo for three months.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_12_112.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "nocdurna-pivotal-2013-women",
+      "kind": "secondary",
+      "label": "Parallel women's phase 3 trial (CS40)",
+      "published": "2013-02-20",
+      "cutoff": null,
+      "citation": "Sand PK, Dmochowski RR, Reddy J, et al. \"Efficacy and Safety of Low Dose Desmopressin Orally Disintegrating Tablet in Women with Nocturia: Results of a Multicenter, Randomized, Double-Blind, Placebo Controlled, Parallel Group Study.\" *J Urol.* 2013;190(3):958-964. doi:10.1016/j.juro.2013.02.037",
+      "doi": "10.1016/j.juro.2013.02.037",
+      "pmid": "23454404",
+      "followUp": "Three-month double-blind treatment; full analysis set 261 women",
+      "followUpLocator": "PubMed abstract, Methods and Results",
+      "results": [
+        {
+          "endpoint": "Nocturnal voids, women 25 μg",
+          "role": "primary",
+          "measure": "Placebo-adjusted mean difference in change in nocturnal voids during three months",
+          "effect": {
+            "type": "difference",
+            "value": -0.22,
+            "p": "0.028"
+          },
+          "met": true,
+          "note": "25 μg versus placebo; full analysis set 261 women.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "33% responders, women 25 μg",
+          "role": "primary",
+          "measure": "Odds of at least 33% fewer nocturnal voids during three months",
+          "effect": {
+            "type": "OR",
+            "value": 1.85,
+            "p": "0.006"
+          },
+          "met": true,
+          "note": "25 μg versus placebo.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Time to first nocturnal void, women",
+          "role": "secondary",
+          "measure": "Placebo-adjusted mean difference in time to first void at three months, minutes",
+          "effect": {
+            "type": "difference",
+            "value": 49,
+            "p": "0.003"
+          },
+          "note": "25 μg versus placebo.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Three transient serum sodium decreases below 130 mmol/L",
+          "locator": "PubMed abstract, Results",
+          "note": "Arm assignment was not reported; sodium remained above 125 mmol/L throughout the trial."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Women's trial dosing",
+          "value": "Desmopressin ODT 25 μg once daily versus placebo for three months.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_02_037.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/nocdurna-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

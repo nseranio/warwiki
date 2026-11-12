@@ -1,0 +1,305 @@
+{
+  "id": "tadalafil-bph-pivotal",
+  "name": "Tadalafil BPH dose-finding trial",
+  "aliases": [
+    "LVHG",
+    "H6D-MC-LVHG"
+  ],
+  "nct": "NCT00384930",
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "pde5"
+    }
+  ],
+  "question": "Does once-daily tadalafil improve lower urinary tract symptoms associated with benign prostatic hyperplasia compared with placebo?",
+  "design": {
+    "phase": "2/3",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 1058,
+    "arms": [
+      {
+        "key": "t2_5",
+        "label": "Tadalafil 2.5 mg daily",
+        "n": 209,
+        "role": "experimental"
+      },
+      {
+        "key": "t5",
+        "label": "tadalafil 5 mg daily",
+        "n": 212,
+        "role": "experimental"
+      },
+      {
+        "key": "t10",
+        "label": "tadalafil 10 mg daily",
+        "n": 216,
+        "role": "experimental"
+      },
+      {
+        "key": "t20",
+        "label": "tadalafil 20 mg daily",
+        "n": 209,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 212,
+        "role": "control"
+      }
+    ],
+    "population": "1,058 men with lower urinary tract symptoms associated with clinical benign prostatic hyperplasia.",
+    "description": "Multinational, double-blind randomized dose-finding trial",
+    "locator": "Roehrborn 2008 PubMed abstract, Methods; NCT00384930 Study Design and Participant Flow"
+  },
+  "verdict": "positive",
+  "verdictNote": "All doses improved IPSS; 5 mg had the authors' preferred risk-benefit profile.",
+  "takeaway": "After 12 weeks, once-daily tadalafil 2.5, 5, 10, or 20 mg improved International Prostate Symptom Scores versus placebo in men with BPH-associated lower urinary tract symptoms; the authors favored 5 mg for its risk-benefit profile.",
+  "reports": [
+    {
+      "id": "tadalafil-bph-pivotal-2008",
+      "kind": "primary",
+      "label": "Dose-finding trial",
+      "published": "2008-08-22",
+      "cutoff": null,
+      "citation": "Roehrborn CG, McVary KT, Elion-Mboussa A, et al. \"Tadalafil Administered Once Daily for Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia: A Dose Finding Study.\" *J Urol.* 2008;180(4):1228-1234. doi:10.1016/j.juro.2008.06.079",
+      "doi": "10.1016/j.juro.2008.06.079",
+      "pmid": "18722631",
+      "followUp": "12-week treatment",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Least-squares mean IPSS change at endpoint, 2.5 mg versus placebo",
+          "values": {
+            "t2_5": "−3.9 points",
+            "ctl": "−2.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.015"
+          },
+          "met": true,
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Least-squares mean IPSS change at endpoint, 5 mg versus placebo",
+          "values": {
+            "t5": "−4.9 points",
+            "ctl": "−2.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Least-squares mean IPSS change at endpoint, 10 mg versus placebo",
+          "values": {
+            "t10": "−5.2 points",
+            "ctl": "−2.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "IPSS",
+          "role": "primary",
+          "measure": "Least-squares mean IPSS change at endpoint, 20 mg versus placebo",
+          "values": {
+            "t20": "−5.2 points",
+            "ctl": "−2.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "secondary",
+          "measure": "Between-group peak-flow comparison",
+          "effect": {
+            "type": "none"
+          },
+          "note": "No tadalafil dose significantly improved peak flow versus placebo.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "locator": "PubMed abstract, Results",
+          "note": "Reported as infrequent across tadalafil groups; dose-specific event rates were not given in the abstract."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Run-in and treatment",
+          "value": "Four-week placebo run-in, then once-daily assigned treatment for 12 weeks.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2008_06_079.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tadalafil-bph-pivotal-2009-ed",
+      "kind": "post-hoc",
+      "label": "Erectile-function subgroup",
+      "published": "2009-04-22",
+      "cutoff": null,
+      "citation": "Porst H, McVary KT, Montorsi F, et al. \"Effects of Once-Daily Tadalafil on Erectile Function in Men with Erectile Dysfunction and Signs and Symptoms of Benign Prostatic Hyperplasia.\" *Eur Urol.* 2009;56(4):727-735. doi:10.1016/j.eururo.2009.04.033",
+      "doi": "10.1016/j.eururo.2009.04.033",
+      "pmid": "19409693",
+      "followUp": "12-week endpoint",
+      "followUpLocator": "PubMed abstract, Interventions and Results",
+      "results": [
+        {
+          "endpoint": "IIEF-EF",
+          "role": "exploratory",
+          "measure": "Least-squares mean erectile-function domain change, 5 mg versus placebo",
+          "values": {
+            "t5": "+6.8 points (n=117)",
+            "ctl": "+2.0 points (n=115)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Post hoc analysis among 581 sexually active men with erectile dysfunction and BPH-associated LUTS.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2009_04_033.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tadalafil-bph-pivotal-2009-flow",
+      "kind": "post-hoc",
+      "label": "Uroflowmetry analysis",
+      "published": "2009-09-03",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Kaminetsky JC, Auerbach SM, et al. \"Changes in Peak Urinary Flow and Voiding Efficiency in Men with Signs and Symptoms of Benign Prostatic Hyperplasia during Once Daily Tadalafil Treatment.\" *BJU Int.* 2010;105(4):502-507. doi:10.1111/j.1464-410X.2009.08822.x",
+      "doi": "10.1111/j.1464-410X.2009.08822.x",
+      "pmid": "19732051",
+      "followUp": "12-week treatment",
+      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "results": [
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "exploratory",
+          "measure": "Percentage increase in peak urinary flow, 5 mg versus placebo",
+          "values": {
+            "t5": "+16%",
+            "ctl": "+12%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Post hoc between-group comparison did not reach statistical significance; postvoid residual did not change significantly.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2009_08822_x.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "tadalafil-bph-pivotal-2011-extension",
+      "kind": "updated",
+      "label": "One-year open-label extension",
+      "published": "2011-01-18",
+      "cutoff": null,
+      "citation": "Donatucci CF, Brock GB, Goldfischer ER, et al. \"Tadalafil Administered Once Daily for Lower Urinary Tract Symptoms Secondary to Benign Prostatic Hyperplasia: A 1-Year, Open-Label Extension Study.\" *BJU Int.* 2011;107(7):1110-1116. doi:10.1111/j.1464-410X.2010.09687.x",
+      "doi": "10.1111/j.1464-410X.2010.09687.x",
+      "pmid": "21244606",
+      "followUp": "One-year open-label extension after 12-week randomized treatment",
+      "followUpLocator": "Publisher abstract, Patients and Methods",
+      "results": [
+        {
+          "endpoint": "IPSS",
+          "role": "descriptive",
+          "measure": "Total IPSS change during one-year extension",
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports that the symptom-score improvement was maintained, without a numerical change estimate.",
+          "locator": "Publisher abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "values": {
+            "t5": "57.6% of 427 extension participants"
+          },
+          "locator": "Publisher abstract, Results",
+          "note": "All extension participants received tadalafil 5 mg; no concurrent placebo group."
+        },
+        {
+          "label": "Adverse-event discontinuation",
+          "values": {
+            "t5": "22/427 (5.2%)"
+          },
+          "locator": "Publisher abstract, Results",
+          "note": "All extension participants received tadalafil 5 mg; no concurrent placebo group."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Extension participation and completion",
+          "value": "427 prior trial completers enrolled; 299/427 completed the one-year extension.",
+          "locator": "Publisher abstract, Patients and Methods and Results"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1111_j_1464_410x_2010_09687_x.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/tadalafil-bph-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

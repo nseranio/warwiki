@@ -1,0 +1,168 @@
+{
+  "id": "capricorn",
+  "name": "CAPRICORN",
+  "aliases": [
+    "178-CL-074"
+  ],
+  "nct": "NCT00912964",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Do once-daily mirabegron 25 mg and 50 mg reduce incontinence and micturition frequency versus placebo in adults with overactive bladder?",
+  "design": {
+    "phase": "3",
+    "randomized": true,
+    "blinding": "double-blind after a single-blind placebo run-in",
+    "type": "superiority",
+    "n": 1306,
+    "arms": [
+      {
+        "key": "exp25",
+        "label": "Mirabegron 25 mg once daily",
+        "n": 433,
+        "role": "experimental"
+      },
+      {
+        "key": "exp50",
+        "label": "mirabegron 50 mg once daily",
+        "n": 440,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo once daily",
+        "n": 433,
+        "role": "control"
+      }
+    ],
+    "population": "Adults with overactive bladder symptoms, at least eight micturitions and three urgency episodes per 24 hours after a two-week placebo run-in.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized superiority trial",
+    "locator": "PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00912964, Participant Flow and Study Design"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both doses met both coprimary diary endpoints; follow-up ended at 12 weeks.",
+  "takeaway": "In adults with overactive bladder, 12 weeks of mirabegron 25 mg or 50 mg once daily improved micturitions per 24 hours, and incontinence episodes among participants incontinent at baseline, versus placebo; the primary report found no increase in treatment-emergent adverse events with 50 mg.",
+  "reports": [
+    {
+      "id": "capricorn-2013",
+      "kind": "primary",
+      "label": "12-week randomized results",
+      "published": "2013-06-13",
+      "cutoff": null,
+      "citation": "Herschorn S, Barkin J, Castro-Diaz D, et al. \"A Phase III, Randomized, Double-blind, Parallel-group, Placebo-controlled, Multicentre Study to Assess the Efficacy and Safety of the β3 Adrenoceptor Agonist, Mirabegron, in Patients With Symptoms of Overactive Bladder.\" *Urology.* 2013;82(2):313-320. doi:10.1016/j.urology.2013.02.077",
+      "doi": "10.1016/j.urology.2013.02.077",
+      "pmid": "23769122",
+      "followUp": "Final visit after 12 weeks of randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Incontinence episodes per 24 hours",
+          "role": "primary",
+          "measure": "Change from baseline to final visit in mean incontinence episodes per 24 hours among participants with incontinence at baseline",
+          "values": {
+            "exp25": "Significantly greater improvement than placebo",
+            "exp50": "Significantly greater improvement than placebo",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports significance for each dose but gives no arm means, effect estimates, confidence intervals or P values.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours",
+          "role": "primary",
+          "measure": "Change from baseline to final visit in mean micturitions per 24 hours",
+          "values": {
+            "exp25": "Significantly greater improvement than placebo",
+            "exp50": "Significantly greater improvement than placebo",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports significance for each dose but gives no arm means, effect estimates, confidence intervals or P values.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "secondary",
+          "measure": "Change from baseline to final visit in mean volume voided per micturition",
+          "values": {
+            "exp50": "Significantly greater improvement than placebo",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract reports a significant result for 50 mg; it does not give a comparative estimate for 25 mg.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Patient-reported outcomes",
+          "role": "secondary",
+          "measure": "OAB-questionnaire, Patient Perception of Bladder Condition, and treatment-satisfaction visual analog scale at final visit",
+          "values": {
+            "exp50": "Significant improvement versus placebo on all reported scales",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The abstract does not give scale scores or comparative estimates.",
+          "locator": "PubMed abstract, Materials and Methods; Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Treatment-emergent adverse events",
+          "values": {
+            "exp50": "No increase versus placebo reported",
+            "ctl": "Reference"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract reports no incidence or event-specific counts and does not give a separate 25 mg comparison."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Drug regimen and observation",
+          "value": "Mirabegron 25 mg, mirabegron 50 mg, or matching placebo once daily for 12 weeks after a two-week single-blind placebo run-in.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2013_02_077.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "parallel",
+      "target": "scorpio",
+      "note": "Same phase III mirabegron registration program; SCORPIO tested 50 and 100 mg in Europe and Australia."
+    },
+    {
+      "type": "parallel",
+      "target": "aries",
+      "note": "Same phase III mirabegron registration program; ARIES tested 50 and 100 mg in the United States and Canada."
+    }
+  ],
+  "page": "/docs/clinical-evidence/studies/capricorn",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

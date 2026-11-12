@@ -1,0 +1,209 @@
+{
+  "id": "burgio-2020-men",
+  "name": "Burgio 2020",
+  "aliases": [],
+  "nct": "NCT01175382",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "behavioral-vs-drug"
+    }
+  ],
+  "question": "In men with overactive bladder symptoms, does combined behavioral training and tolterodine–tamsulosin reduce voiding frequency more than either treatment alone?",
+  "design": {
+    "phase": "not applicable",
+    "randomized": true,
+    "blinding": "Participants and interventionists unblinded; outcome scoring blinded",
+    "type": "superiority",
+    "n": 204,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Combined behavioral training and tolterodine–tamsulosin",
+        "n": 65,
+        "role": "experimental"
+      },
+      {
+        "key": "act",
+        "label": "behavioral training alone",
+        "n": 71,
+        "role": "control"
+      },
+      {
+        "key": "ctl",
+        "label": "tolterodine–tamsulosin alone",
+        "n": 68,
+        "role": "control"
+      }
+    ],
+    "population": "Community-dwelling men aged at least 40 years with urgency and at least nine voids per 24 hours, recruited at three outpatient clinics.",
+    "description": "Three-site, two-stage, three-arm randomized superiority trial",
+    "locator": "PMC Methods, Design, Participants and Screening, Randomization; Figure 1"
+  },
+  "verdict": "mixed",
+  "verdictNote": "Combined treatment beat drugs alone, but not behavioral training alone, at six weeks.",
+  "takeaway": "In men with overactive bladder symptoms, six weeks of behavioral training plus tolterodine–tamsulosin reduced daily voiding frequency more than tolterodine–tamsulosin alone, but not more than behavioral training alone; after all groups received combined therapy, 12-week differences were not significant.",
+  "reports": [
+    {
+      "id": "burgio-2020-men-2020",
+      "kind": "primary",
+      "label": "Initial and stepped-treatment report",
+      "published": "2020-01-13",
+      "cutoff": null,
+      "citation": "Burgio KL, Kraus SR, Johnson TM 2nd, et al. \"Effectiveness of Combined Behavioral and Drug Therapy for Overactive Bladder Symptoms in Men: A Randomized Clinical Trial.\" *JAMA Intern Med.* 2020;180(3):411-419. doi:10.1001/jamainternmed.2019.6398",
+      "doi": "10.1001/jamainternmed.2019.6398",
+      "pmid": "31930360",
+      "followUp": "Six-week randomized comparison; 12-week assessment after both monotherapy groups stepped up to combination treatment",
+      "followUpLocator": "PMC Methods, Design; Table 2",
+      "results": [
+        {
+          "endpoint": "Voiding frequency",
+          "role": "primary",
+          "measure": "Mean voids per 24 hours after six weeks; unadjusted mean difference, combined minus tolterodine–tamsulosin",
+          "values": {
+            "exp": "8.2 (SD 2.3)",
+            "act": "8.8 (SD 2.1)",
+            "ctl": "10.3 (SD 2.7)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.1,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Difference is subtraction of reported means; P is the prespecified comparison adjusted for baseline frequency and age. Primary two-sided threshold P < .025 after Bonferroni correction. Behavioral training versus drugs alone: P < .001.",
+          "locator": "PMC Results, Stage 1; Table 2; Methods, Statistical Analyses"
+        },
+        {
+          "endpoint": "Voiding frequency",
+          "role": "primary",
+          "measure": "Mean voids per 24 hours after six weeks; unadjusted mean difference, combined minus behavioral training",
+          "values": {
+            "exp": "8.2 (SD 2.3)",
+            "act": "8.8 (SD 2.1)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.6,
+            "p": "0.19"
+          },
+          "met": false,
+          "note": "Difference is subtraction of reported means; P is the prespecified comparison adjusted for baseline frequency and age. Primary two-sided threshold P < .025.",
+          "locator": "PMC Results, Stage 1; Table 2; Methods, Statistical Analyses"
+        },
+        {
+          "endpoint": "Nocturia",
+          "role": "secondary",
+          "measure": "Mean episodes per night after six weeks",
+          "values": {
+            "exp": "1.3 (SD 1.0)",
+            "act": "1.3 (SD 0.8)",
+            "ctl": "1.8 (SD 1.2)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "P is the overall between-group test adjusted for baseline and age.",
+          "locator": "PMC Table 2; Results, Stage 1"
+        },
+        {
+          "endpoint": "OAB Questionnaire symptom-bother score",
+          "role": "secondary",
+          "measure": "Mean score after six weeks; lower is less bother",
+          "values": {
+            "exp": "23.8 (SD 22.1)",
+            "act": "43.0 (SD 28.2)",
+            "ctl": "39.5 (SD 30.0)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "P is the overall between-group test adjusted for baseline and age.",
+          "locator": "PMC Table 2; Results, Stage 1"
+        },
+        {
+          "endpoint": "Voiding frequency",
+          "role": "secondary",
+          "measure": "Mean voids per 24 hours at 12 weeks, after all arms received combination treatment",
+          "values": {
+            "exp": "8.0 (SD 2.2)",
+            "act": "8.0 (SD 2.2)",
+            "ctl": "8.6 (SD 2.3)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.33"
+          },
+          "note": "P is the overall between-group test adjusted for baseline and age.",
+          "locator": "PMC Table 2; Results, Stage 2"
+        }
+      ],
+      "harms": [
+        {
+          "label": "No adverse effects or none bothersome at six weeks",
+          "values": {
+            "exp": "21/61 (34%)",
+            "act": "55/64 (86%)",
+            "ctl": "21/65 (32%)"
+          },
+          "locator": "PMC Table 3; Results, Stage 1",
+          "note": "Patient-rated adverse-effect bother; overall P < .001. Denominators are respondents to this item, not randomized arm sizes."
+        },
+        {
+          "label": "Extremely bothersome adverse effects at six weeks",
+          "values": {
+            "exp": "1/61 (2%)",
+            "act": "0/64 (0%)",
+            "ctl": "6/65 (9%)"
+          },
+          "locator": "PMC Table 3",
+          "note": "Patient-rated adverse-effect bother; Table 3 reports percentages rounded to whole numbers."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Outcome assessment",
+          "value": "Seven-day bladder diaries at baseline and after each six-week treatment stage.",
+          "locator": "PMC Methods, Participants and Screening; Measurement"
+        },
+        {
+          "label": "Behavioral treatment",
+          "value": "Three clinic visits over six weeks; palpation-guided pelvic floor muscle training, urge suppression, delayed voiding, and daily diaries; home practice of 45 contractions daily in three sets of 15.",
+          "locator": "PMC Methods, Interventions, Stage 1: Behavioral Therapy Alone"
+        },
+        {
+          "label": "Drug regimen",
+          "value": "Sustained-release tolterodine 4 mg daily plus tamsulosin 0.4 mg nightly; tolterodine could be reduced to 2 mg daily for tolerability.",
+          "locator": "PMC Methods, Interventions, Stage 1: Drug Therapy Alone"
+        },
+        {
+          "label": "Stage 1 completion",
+          "values": {
+            "exp": "59/65",
+            "act": "63/71",
+            "ctl": "61/68"
+          },
+          "locator": "PMC Results, Overview of Participant Flow; Figure 1",
+          "note": "183/204 completed treatment and the stage 1 assessment; 21 discontinued treatment."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2019_6398.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/burgio-2020-men",
+  "status": {
+    "sourceRead": "full-text",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

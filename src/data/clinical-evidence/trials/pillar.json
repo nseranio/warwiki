@@ -1,0 +1,244 @@
+{
+  "id": "pillar",
+  "name": "PILLAR",
+  "aliases": [
+    "Mirabegron in patients aged 65 years or older"
+  ],
+  "nct": "NCT02216214",
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "older-adults"
+    }
+  ],
+  "question": "Does flexibly dosed mirabegron improve urgency incontinence and urinary frequency versus placebo in older adults with overactive bladder wet?",
+  "design": {
+    "phase": "4",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 888,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Mirabegron 25–50 mg daily",
+        "n": 445,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "matched placebo",
+        "n": 443,
+        "role": "control"
+      }
+    ],
+    "population": "Community-dwelling adults aged at least 65 years with overactive bladder for at least 3 months, at least one incontinence and three urgency episodes over 3 days, and at least eight micturitions per 24 hours.",
+    "description": "Multicenter, phase 4, double-blind randomized superiority trial",
+    "locator": "Wagg 2020, PubMed abstract, Methods; Griebling 2020, Results and Table 1"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both coprimary 12-week diary endpoints improved versus placebo.",
+  "takeaway": "In adults aged at least 65 years with overactive bladder wet, flexibly dosed mirabegron improved 12-week daily micturitions and incontinence episodes versus placebo; the primary report described both coprimary differences as statistically significant.",
+  "reports": [
+    {
+      "id": "pillar-2020",
+      "kind": "primary",
+      "label": "Primary efficacy report",
+      "published": "2019-11-13",
+      "cutoff": null,
+      "citation": "Wagg A, Staskin D, Engel E, et al. \"Efficacy, safety, and tolerability of mirabegron in patients aged ≥65yr with overactive bladder wet: a phase IV, double-blind, randomised, placebo-controlled study (PILLAR).\" *Eur Urol.* 2020;77(2):211-220. doi:10.1016/j.eururo.2019.10.002",
+      "doi": "10.1016/j.eururo.2019.10.002",
+      "pmid": "31733990",
+      "followUp": "12-week randomized treatment",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Daily micturitions",
+          "role": "primary",
+          "measure": "Change in mean micturitions per 24 hours from baseline to end of treatment",
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports statistical significance but no arm-specific changes or effect estimate.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Daily incontinence episodes",
+          "role": "primary",
+          "measure": "Change in mean incontinence episodes per 24 hours from baseline to end of treatment",
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "The abstract reports statistical significance but no arm-specific changes or effect estimate.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Voided volume and urgency",
+          "role": "secondary",
+          "measure": "Mean voided volume per micturition and daily urgency and urgency-incontinence episodes",
+          "effect": {
+            "type": "none"
+          },
+          "note": "Each secondary measure was reported statistically significant in the abstract.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Placebo run-in",
+          "value": "Two-week placebo run-in before randomization.",
+          "locator": "PubMed abstract, Intervention"
+        },
+        {
+          "label": "Dosing schedule",
+          "value": "Mirabegron 25 mg daily or matched placebo for 12 weeks; optional dose increase to 50 mg after week 4 or 8.",
+          "locator": "PubMed abstract, Intervention"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2019_10_002.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "pillar-2020-cognition",
+      "kind": "secondary",
+      "label": "Prespecified cognitive analysis",
+      "published": "2020-03-18",
+      "cutoff": null,
+      "citation": "Griebling TL, Campbell NL, Mangel J, et al. \"Effect of mirabegron on cognitive function in elderly patients with overactive bladder: MoCA results from a phase 4 randomized, placebo-controlled study (PILLAR).\" *BMC Geriatr.* 2020;20:109. doi:10.1186/s12877-020-1474-7",
+      "doi": "10.1186/s12877-020-1474-7",
+      "pmid": "32183741",
+      "followUp": "MoCA at baseline and week 12",
+      "followUpLocator": "Full text, Methods",
+      "results": [
+        {
+          "endpoint": "MoCA total score",
+          "role": "secondary",
+          "measure": "Adjusted mean change in MoCA score from baseline to week 12",
+          "values": {
+            "exp": "−0.2 points (SE 0.1)",
+            "ctl": "−0.1 points (SE 0.1)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.471"
+          },
+          "note": "Prespecified safety analysis; the trial was not powered for a MoCA difference.",
+          "locator": "Full text, Table 3 and Methods"
+        },
+        {
+          "endpoint": "MoCA decline of at least 4 points",
+          "role": "exploratory",
+          "measure": "Patients with at least a 4-point MoCA decline by week 12",
+          "values": {
+            "exp": "24/425 (5.6%)",
+            "ctl": "24/411 (5.8%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Post hoc minimum-detectable-change analysis; denominators have week-12 MoCA data.",
+          "locator": "Full text, Results, MoCA score paragraph and Figure 2"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1186_s12877_020_1474_7.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "pillar-2020-safety",
+      "kind": "secondary",
+      "label": "Detailed safety analysis",
+      "published": "2020-07-28",
+      "cutoff": null,
+      "citation": "Herschorn S, Staskin D, Schermer CR, et al. \"Safety and Tolerability Results from the PILLAR Study: A Phase IV, Double-Blind, Randomized, Placebo-Controlled Study of Mirabegron in Patients ≥65 years with Overactive Bladder-Wet.\" *Drugs Aging.* 2020;37(9):665-676. doi:10.1007/s40266-020-00783-w",
+      "doi": "10.1007/s40266-020-00783-w",
+      "pmid": "32725584",
+      "followUp": "12-week treatment; adverse events collected through week 16",
+      "followUpLocator": "Full text, Methods",
+      "results": [],
+      "harms": [
+        {
+          "label": "At least one treatment-emergent adverse event",
+          "values": {
+            "exp": "209/445 (47.0%)",
+            "ctl": "174/442 (39.4%)"
+          },
+          "locator": "Full text, Table 2; treated safety set",
+          "note": "Mirabegron total is the sum of 100/226 at 25 mg and 109/219 after escalation."
+        },
+        {
+          "label": "Serious treatment-emergent adverse event",
+          "values": {
+            "exp": "15/445 (3.4%)",
+            "ctl": "12/442 (2.7%)"
+          },
+          "locator": "Full text, Table 2; treated safety set",
+          "note": "Mirabegron total is the sum of 7/226 and 8/219; no mirabegron-related serious event was identified."
+        },
+        {
+          "label": "Urinary tract infection adverse event",
+          "values": {
+            "exp": "25/445 (5.6%)",
+            "ctl": "31/442 (7.0%)"
+          },
+          "locator": "Full text, Table 2; treated safety set",
+          "note": "Mirabegron total is the sum of 16/226 and 9/219."
+        },
+        {
+          "label": "Urinary retention adverse event",
+          "values": {
+            "exp": "2/445",
+            "ctl": "2/442"
+          },
+          "locator": "Full text, Treatment-Emergent Adverse Events of Special Interest",
+          "note": "No case required catheterization."
+        },
+        {
+          "label": "Increased blood pressure adverse event",
+          "values": {
+            "exp": "5/445",
+            "ctl": "2/442"
+          },
+          "locator": "Full text, Treatment-Emergent Adverse Events of Special Interest",
+          "note": "Safety comparisons were descriptive, without inferential testing."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Dose escalation",
+          "values": {
+            "exp": "219/445 (49.2%)",
+            "ctl": "Matched placebo escalation permitted"
+          },
+          "locator": "Full text, Results, Participants",
+          "note": "Dose increase to 50 mg occurred at week 4 or 8."
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1007_s40266_020_00783_w.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/pillar",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

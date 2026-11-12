@@ -1,0 +1,307 @@
+{
+  "id": "pless",
+  "name": "PLESS",
+  "aliases": [
+    "Proscar Long-Term Efficacy and Safety Study"
+  ],
+  "nct": null,
+  "area": [
+    "bph"
+  ],
+  "decisions": [
+    {
+      "id": "bph-medical",
+      "lane": "5-alpha-reductase"
+    }
+  ],
+  "question": "Does finasteride reduce symptoms, acute urinary retention, and BPH surgery compared with placebo in men with symptomatic prostatic enlargement?",
+  "design": {
+    "phase": "not stated in abstract",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 3040,
+    "arms": [
+      {
+        "key": "exp",
+        "label": "Finasteride 5 mg daily",
+        "n": 1524,
+        "role": "experimental"
+      },
+      {
+        "key": "ctl",
+        "label": "placebo",
+        "n": 1516,
+        "role": "control"
+      }
+    ],
+    "population": "3,040 men with moderate-to-severe urinary symptoms and enlarged prostate glands.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "McConnell 1998 PubMed abstract, Methods; Wessells 2003 publisher abstract, Methods (arm denominators)"
+  },
+  "verdict": "positive",
+  "verdictNote": "Event benefits were assessed in 3,016 evaluable men; symptom change was reported among completers.",
+  "takeaway": "Four years of finasteride 5 mg daily versus placebo reduced BPH surgery (69/1,513 versus 152/1,503) and acute urinary retention (42/1,513 versus 99/1,503) in men with symptomatic prostatic enlargement; symptom scores also improved among completers.",
+  "reports": [
+    {
+      "id": "pless-1998",
+      "kind": "primary",
+      "label": "Four-year randomized report",
+      "published": "1998-02-26",
+      "cutoff": null,
+      "citation": "McConnell JD, Bruskewitz R, Walsh P, et al. \"The Effect of Finasteride on the Risk of Acute Urinary Retention and the Need for Surgical Treatment among Men with Benign Prostatic Hyperplasia.\" *N Engl J Med.* 1998;338(9):557-563. doi:10.1056/NEJM199802263380901",
+      "doi": "10.1056/NEJM199802263380901",
+      "pmid": "9475762",
+      "followUp": "4 years",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Urinary symptom score",
+          "role": "primary",
+          "measure": "Mean symptom-score decrease among study completers; 1–34 symptom-score scale",
+          "values": {
+            "exp": "3.3 points",
+            "ctl": "1.3 points"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": null,
+          "note": "The abstract does not state the prespecified primary threshold.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "BPH surgery",
+          "role": "secondary",
+          "measure": "Surgery over 4 years",
+          "values": {
+            "exp": "69/1,513 (5%)",
+            "ctl": "152/1,503 (10%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.45,
+            "ci": [
+              0.35,
+              0.59
+            ]
+          },
+          "note": "Risk ratio and CI are the inverse of the reported 55% risk reduction (95% CI 41–65%).",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Acute urinary retention",
+          "role": "secondary",
+          "measure": "Retention over 4 years",
+          "values": {
+            "exp": "42/1,513 (3%)",
+            "ctl": "99/1,503 (7%)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.43,
+            "ci": [
+              0.31,
+              0.6
+            ]
+          },
+          "note": "Risk ratio and CI are the inverse of the reported 57% risk reduction (95% CI 40–69%).",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Assigned treatment",
+          "values": {
+            "exp": "Finasteride 5 mg orally daily for 4 years",
+            "ctl": "placebo daily for 4 years"
+          },
+          "locator": "PubMed abstract, Methods"
+        },
+        {
+          "label": "Outcome ascertainment",
+          "value": "Symptoms, flow, and clinical events assessed every 4 months in 3,016 evaluable men; complete event data in 2,760.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1056_nejm199802263380901.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pless-1999-psa",
+      "kind": "secondary",
+      "label": "Baseline PSA and prostate-volume analysis",
+      "published": "1999-03-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print: March 1999, day unstated",
+      "cutoff": null,
+      "citation": "Roehrborn CG, McConnell JD, Lieber M, et al. \"Serum Prostate-Specific Antigen Concentration Is a Powerful Predictor of Acute Urinary Retention and Need for Surgery in Men with Clinical Benign Prostatic Hyperplasia.\" *Urology.* 1999;53(3):473-480. doi:10.1016/S0090-4295(98)00654-2",
+      "doi": "10.1016/S0090-4295(98)00654-2",
+      "pmid": "10096369",
+      "followUp": "4 years (PLESS subgroup analysis)",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Spontaneous retention prediction in placebo recipients",
+          "role": "descriptive",
+          "measure": "Area under the receiver operating characteristic curve",
+          "values": {
+            "ctl": "0.70 for baseline PSA; 0.81 for baseline prostate volume"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Prostate volume was measured in a 312-man baseline subset.",
+          "locator": "PubMed abstract, Methods and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00654_2.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pless-2000-retention",
+      "kind": "secondary",
+      "label": "Retention phenotype and subsequent surgery",
+      "published": "2000-05-01",
+      "dateApprox": true,
+      "dateLocator": "PubMed journal issue: May 2000, day unstated",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Bruskewitz R, Nickel GC, et al. \"Urinary Retention in Patients with BPH Treated with Finasteride or Placebo over 4 Years: Characterization of Patients and Ultimate Outcomes.\" *Eur Urol.* 2000;37(5):528-536. doi:10.1159/000020189",
+      "doi": "10.1159/000020189",
+      "pmid": "10765090",
+      "followUp": "4 years (PLESS event analysis)",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Surgery after spontaneous acute urinary retention",
+          "role": "descriptive",
+          "measure": "Subsequent BPH surgery among men with spontaneous retention",
+          "values": {
+            "exp": "8/20 (40%)",
+            "ctl": "39/52 (75%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Post-retention subgroup; descriptive conditional comparison.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Event adjudication",
+          "value": "A treatment-blinded endpoint committee classified retention and surgery events.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1159_000020189.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pless-2003-safety",
+      "kind": "secondary",
+      "label": "Sexual adverse events",
+      "published": "2003-03-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print: March 2003, day unstated",
+      "cutoff": null,
+      "citation": "Wessells H, Roy J, Bannow J, et al. \"Incidence and Severity of Sexual Adverse Experiences in Finasteride and Placebo-Treated Men with Benign Prostatic Hyperplasia.\" *Urology.* 2003;61(3):579-584. doi:10.1016/S0090-4295(02)02401-9",
+      "doi": "10.1016/S0090-4295(02)02401-9",
+      "pmid": "12639651",
+      "followUp": "4 years (PLESS safety analysis)",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [],
+      "harms": [
+        {
+          "label": "Investigator-attributed sexual adverse events, year 1",
+          "values": {
+            "exp": "15%",
+            "ctl": "7%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "Spontaneously reported; the abstract does not give event numerators."
+        },
+        {
+          "label": "Discontinuation because of sexual adverse events",
+          "values": {
+            "exp": "4%",
+            "ctl": "2%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not give event numerators."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_02401_9.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    },
+    {
+      "id": "pless-2004-extension",
+      "kind": "updated",
+      "label": "Six-year open-label extension",
+      "published": "2004-03-01",
+      "dateApprox": true,
+      "dateLocator": "Crossref published-print: March 2004, day unstated",
+      "cutoff": null,
+      "citation": "Roehrborn CG, Bruskewitz R, Nickel JC, et al. \"Sustained Decrease in Incidence of Acute Urinary Retention and Surgery with Finasteride for 6 Years in Men with Benign Prostatic Hyperplasia.\" *J Urol.* 2004;171(3):1194-1198. doi:10.1097/01.JU.0000112918.74410.94",
+      "doi": "10.1097/01.JU.0000112918.74410.94",
+      "pmid": "14767299",
+      "followUp": "6 years; 2-year open-label finasteride extension",
+      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "results": [
+        {
+          "endpoint": "Acute urinary retention or BPH surgery",
+          "role": "descriptive",
+          "measure": "Incidence during open-label extension",
+          "values": {
+            "exp": "Lower incidence sustained with continuous finasteride",
+            "ctl": "Similar incidence after switching from placebo to finasteride"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "No extension event rates are given in the abstract; randomized comparison ended at year 4.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [
+        {
+          "label": "Open-label extension entry",
+          "value": "908 original finasteride and 785 original placebo participants entered 2 years of open-label finasteride; complete 6-year outcome data were available for 2,463/3,016 originally evaluable participants.",
+          "locator": "PubMed abstract, Materials and Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000112918_74410_94.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/pless",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}

@@ -348,6 +348,152 @@
         "checked": "2026-10-18",
         "level": "full-text"
       }
+    },
+    {
+      "id": "rosetta-2023-uti",
+      "kind": "secondary",
+      "label": "Early postinjection UTI and toxin response",
+      "published": "2023-04-22",
+      "cutoff": null,
+      "citation": "Guirguis Hanna M, Bradley M, Zyczynski H, et al. \"The impact of postinjection urinary tract infection on efficacy of intravesical onabotulinumtoxinA-A secondary analysis.\" *Neurourol Urodyn.* 2023;42(6):1238-1244. doi:10.1002/nau.25191",
+      "doi": "10.1002/nau.25191",
+      "pmid": "37086398",
+      "followUp": "One and six months after initial 200 U toxin injection",
+      "followUpLocator": "PMC11033699, Methods and Results sections",
+      "results": [
+        {
+          "endpoint": "Daily urgency-incontinence episodes at one month by early UTI",
+          "role": "primary",
+          "measure": "Mean change from baseline at one month; difference no UTI minus UTI within the toxin arm",
+          "values": {
+            "exp": "No UTI: −4.29/day (cohort n=177); UTI: −3.74/day (cohort n=10)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.55,
+            "ci": [
+              -2.39,
+              1.28
+            ],
+            "p": "0.55"
+          },
+          "met": false,
+          "note": "UTI defined as symptomatic culture-positive infection within 14 days; observational comparison within the toxin arm. Cohort sizes are not endpoint-specific diary denominators.",
+          "locator": "PMC11033699 abstract and Results section 3, primary outcome paragraph"
+        },
+        {
+          "endpoint": "Daily urgency-incontinence episodes at six months by early UTI",
+          "role": "primary",
+          "measure": "Mean change from baseline at six months; difference no UTI minus UTI within the toxin arm",
+          "values": {
+            "exp": "No UTI: −3.63/day (cohort n=177); UTI: −2.15/day (cohort n=10)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.48,
+            "ci": [
+              -3.44,
+              0.48
+            ],
+            "p": "0.14"
+          },
+          "met": false,
+          "note": "Results prose and abstract report P=0.14; extracted Table 2 displays P=0.96 for this row. Cohort sizes are not endpoint-specific diary denominators.",
+          "locator": "PMC11033699 abstract and Results section 3, primary outcome paragraph; Table 2"
+        },
+        {
+          "endpoint": "Pads per day at six months by early UTI",
+          "role": "secondary",
+          "measure": "Mean pads per day at six months; difference no UTI minus UTI",
+          "values": {
+            "exp": "No UTI: 1.72 (cohort n=177); UTI: 3.30 (cohort n=10)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.57,
+            "ci": [
+              -3.06,
+              -0.08
+            ],
+            "p": "0.04"
+          },
+          "note": "Observational comparison within the toxin arm; cohort sizes are not endpoint-specific denominators.",
+          "locator": "PMC11033699 Results section 3 and Table 2, Pads/day row"
+        },
+        {
+          "endpoint": "Incontinence Impact Questionnaire change at six months by early UTI",
+          "role": "secondary",
+          "measure": "Mean change from baseline at six months; difference no UTI minus UTI",
+          "values": {
+            "exp": "No UTI: −29.19 (cohort n=177); UTI: −6.12 (cohort n=10)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -23.07,
+            "ci": [
+              -44.02,
+              -2.12
+            ],
+            "p": "0.03"
+          },
+          "note": "Lower scores indicate less impact; observational comparison within the toxin arm. Cohort sizes are not endpoint-specific denominators.",
+          "locator": "PMC11033699 Results section 3 and Table 2, Incontinence Impact SF row"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Symptomatic culture-positive UTI within 14 days after initial toxin injection",
+          "values": {
+            "exp": "10/187 (5.3%)",
+            "ctl": "not analyzed"
+          },
+          "locator": "PMC11033699 abstract and Results section 3, opening paragraph",
+          "note": "Per-protocol 200 U toxin cohort with adverse-event data; no sacral neuromodulation comparison."
+        }
+      ],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1002_nau_25191.txt",
+        "level": "full-text",
+        "checked": "2026-11-12"
+      }
+    },
+    {
+      "id": "rosetta-2024-nocturia",
+      "kind": "secondary",
+      "label": "Nocturia across ABC and ROSETTA therapies",
+      "published": "2024-03-07",
+      "cutoff": null,
+      "citation": "Getaneh FW, Kolm P, Awulachew H, et al. \"Comparing Impact of Overactive Bladder Therapies on Nocturia.\" *Urogynecology (Phila).* 2024;30(3):264-271. doi:10.1097/SPV.0000000000001465",
+      "doi": "10.1097/SPV.0000000000001465",
+      "pmid": "38484241",
+      "followUp": "Six months among participants with at least two nocturnal voids on a three-day diary",
+      "followUpLocator": "PubMed abstract, Study Design and Results",
+      "results": [
+        {
+          "endpoint": "Nocturnal voids at six months",
+          "role": "primary",
+          "measure": "Percent decrease from baseline in mean voids per night in ROSETTA cohorts; four-cohort treatment-by-time comparison",
+          "values": {
+            "exp": "200 U toxin: 32% decrease (n=63)",
+            "ctl": "sacral neuromodulation: 33% decrease (n=54)"
+          },
+          "effect": {
+            "type": "none",
+            "p": ">0.05"
+          },
+          "met": false,
+          "note": "P>0.05 describes the four-cohort comparison including ABC anticholinergic and 100 U toxin cohorts, not a separate ROSETTA pairwise test. Across all four cohorts, mean voids/night fell 41%, from 2.7 to 1.6 (n=197; P<0.001).",
+          "locator": "PubMed abstract PMID 38484241, Study Design and Results"
+        }
+      ],
+      "harms": [],
+      "delivery": [],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_spv_0000000000001465.txt",
+        "level": "abstract",
+        "checked": "2026-11-12"
+      }
     }
   ],
   "relations": [

@@ -1,0 +1,161 @@
+{
+  "id": "darifenacin-pivotal",
+  "name": "Darifenacin pivotal trial",
+  "aliases": [
+    "Haab 2004"
+  ],
+  "nct": null,
+  "area": [
+    "oab"
+  ],
+  "decisions": [
+    {
+      "id": "oab-pharmacotherapy",
+      "lane": "monotherapy"
+    }
+  ],
+  "question": "Does once-daily darifenacin reduce overactive bladder symptoms more than placebo?",
+  "design": {
+    "phase": "not reported",
+    "randomized": true,
+    "blinding": "double-blind",
+    "type": "superiority",
+    "n": 561,
+    "arms": [
+      {
+        "key": "exp75",
+        "label": "Darifenacin 7.5 mg once daily",
+        "role": "experimental",
+        "n": 229
+      },
+      {
+        "key": "exp15",
+        "label": "darifenacin 15 mg once daily",
+        "role": "experimental",
+        "n": 115
+      },
+      {
+        "key": "low",
+        "label": "darifenacin 3.75 mg once daily",
+        "role": "experimental",
+        "n": 53
+      },
+      {
+        "key": "ctl",
+        "label": "placebo once daily",
+        "role": "control",
+        "n": 164
+      }
+    ],
+    "population": "561 patients aged 19–88 years (85% female) with overactive bladder symptoms for more than 6 months, including some previously exposed to antimuscarinics.",
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
+    "locator": "PubMed abstract, Methods"
+  },
+  "verdict": "positive",
+  "verdictNote": "Both formally tested doses improved weekly incontinence; the 3.75 mg arm was not formally tested.",
+  "takeaway": "In a 12-week randomized trial, once-daily darifenacin 7.5 mg and 15 mg reduced weekly incontinence episodes from baseline more than placebo; the 3.75 mg arm was not formally tested.",
+  "reports": [
+    {
+      "id": "darifenacin-pivotal-2004",
+      "kind": "primary",
+      "label": "12-week primary report",
+      "published": "2004-04-01",
+      "cutoff": null,
+      "citation": "Haab F, Stewart L, Dwyer P. Darifenacin, an M3 selective receptor antagonist, is an effective and well-tolerated once-daily treatment for overactive bladder. *Eur Urol.* 2004;45(4):420-429. doi:10.1016/j.eururo.2004.01.008",
+      "doi": "10.1016/j.eururo.2004.01.008",
+      "pmid": "15041104",
+      "followUp": "12 weeks",
+      "followUpLocator": "PubMed abstract, Methods",
+      "results": [
+        {
+          "endpoint": "Weekly incontinence episodes",
+          "role": "primary",
+          "measure": "Reduction from baseline at week 12, darifenacin 7.5 mg versus placebo",
+          "values": {
+            "exp75": "67.7%",
+            "ctl": "55.9%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.010"
+          },
+          "met": true,
+          "note": "The abstract reports a significant between-group comparison but does not give the prespecified alpha or absolute episode counts.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Weekly incontinence episodes",
+          "role": "primary",
+          "measure": "Reduction from baseline at week 12, darifenacin 15 mg versus placebo",
+          "values": {
+            "exp15": "72.8%",
+            "ctl": "55.9%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.017"
+          },
+          "met": true,
+          "note": "The 3.75 mg group was a null-dose arm without formal sample sizing or statistical analysis.",
+          "locator": "PubMed abstract, Results"
+        },
+        {
+          "endpoint": "Other diary symptoms",
+          "role": "secondary",
+          "measure": "Micturition frequency, bladder capacity, urgency frequency and severity, and clothing or pad changes at week 12",
+          "values": {
+            "exp75": "Significant improvement versus placebo",
+            "exp15": "Significant improvement versus placebo",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Both tested doses improved these measures; nocturnal awakenings due to OAB did not decline significantly.",
+          "locator": "PubMed abstract, Results"
+        }
+      ],
+      "harms": [
+        {
+          "label": "Constipation-related discontinuation",
+          "values": {
+            "exp75": "0.9% across darifenacin groups",
+            "exp15": "0.9% across darifenacin groups",
+            "ctl": "0.6%"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "The abstract does not provide dose-specific discontinuation rates or event denominators."
+        },
+        {
+          "label": "Dry mouth and other reported safety findings",
+          "values": {
+            "exp75": "Dry mouth and constipation generally mild to moderate; no withdrawal for dry mouth",
+            "exp15": "Dry mouth and constipation generally mild to moderate; no withdrawal for dry mouth",
+            "ctl": "CNS and cardiac profiles described as comparable to darifenacin"
+          },
+          "locator": "PubMed abstract, Results",
+          "note": "No blurred vision was reported. The abstract gives no dose-specific adverse-event counts."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Treatment and diary schedule",
+          "value": "Controlled-release darifenacin or matching placebo was taken once daily for 12 weeks after washout and a 2-week placebo run-in; electronic diaries preceded visits at weeks 2, 6 and 12.",
+          "locator": "PubMed abstract, Methods"
+        }
+      ],
+      "source": {
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_01_008.txt",
+        "checked": "2026-11-12",
+        "level": "abstract"
+      }
+    }
+  ],
+  "relations": [],
+  "page": "/docs/clinical-evidence/studies/darifenacin-pivotal",
+  "status": {
+    "sourceRead": "abstract",
+    "claimsChecked": null,
+    "clinicalReview": null
+  }
+}
