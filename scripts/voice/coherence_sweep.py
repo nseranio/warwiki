@@ -146,8 +146,17 @@ def publish(name, msg):
         for s in LINTS:
             if sh(["npm", "run", "-s", s], quiet=True).returncode:
                 print(sh(["npm", "run", "-s", s], quiet=True).stdout[-2000:]); sys.exit(f"{s} fails: not publishing")
-        b = sh(["npm", "run", "build"], quiet=True)
-        sh(["git", "checkout", "--", "src/data/stats.json"], quiet=True)
+        # build in a clean worktree (HEAD plus this batch's pages) so other sessions' uncommitted files do not count
+        wt = os.path.join(ROOT, RUNS, "coherence-build-worktree")
+        if not os.path.isdir(wt):
+            sh(["git", "worktree", "add", "--detach", wt, "HEAD"], check=True)
+            os.symlink(os.path.join(ROOT, "node_modules"), os.path.join(wt, "node_modules"))
+        sh(f"cd '{wt}' && git checkout -q --detach -f {sh(['git', 'rev-parse', 'HEAD'], quiet=True).stdout.strip()} && git clean -fdq -e node_modules", check=True)
+        patch = sh(["git", "diff", "--binary", "--", *t], quiet=True).stdout
+        ap = subprocess.run(["git", "apply", "--whitespace=nowarn"], cwd=wt, input=patch, text=True, capture_output=True)
+        if ap.returncode:
+            print(ap.stderr); sys.exit("patch does not apply to HEAD: not publishing")
+        b = subprocess.run(["npm", "run", "build"], cwd=wt, capture_output=True, text=True)
         if b.returncode:
             print((b.stdout + b.stderr)[-3000:]); sys.exit("build fails: not publishing")
         sh(["git", "diff", "--check", "--", *t], check=True)
@@ -161,6 +170,9 @@ def publish(name, msg):
         blob = sh(["git", "hash-object", "-w", tmp], quiet=True).stdout.strip()
         sh(["git", "update-index", "--cacheinfo", f"100644,{blob},{LEDGER}"], check=True)
         sh(["git", "add", "--", *t], check=True)
+        if msg == "auto":
+            msg = (f"Coherence sweep {name} (STYLE.md section 14): point-first rewrites on {len(t)} pages "
+                   f"(Codex author + verifier, mechanical number/citation check; claim gate passes on final text)")
         sh(["git", "commit", "-q", "-m", msg + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], check=True)
         sh(["git", "push", "-q", "origin", "main"])
         print(f"published {len(t)} pages, {len(mine)} ledger entries")
