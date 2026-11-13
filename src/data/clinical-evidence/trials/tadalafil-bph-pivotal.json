@@ -178,31 +178,97 @@
       "citation": "Porst H, McVary KT, Montorsi F, et al. \"Effects of Once-Daily Tadalafil on Erectile Function in Men with Erectile Dysfunction and Signs and Symptoms of Benign Prostatic Hyperplasia.\" *Eur Urol.* 2009;56(4):727-735. doi:10.1016/j.eururo.2009.04.033",
       "doi": "10.1016/j.eururo.2009.04.033",
       "pmid": "19409693",
-      "followUp": "12-week endpoint",
-      "followUpLocator": "PubMed abstract, Interventions and Results",
+      "followUp": "12-week treatment; endpoint was the last nonmissing postbaseline value",
+      "followUpLocator": "Full text, Patients and methods, p 728",
       "results": [
         {
           "endpoint": "IIEF-EF",
           "role": "exploratory",
-          "measure": "Least-squares mean erectile-function domain change, 5 mg versus placebo",
+          "measure": "Least-squares mean IIEF-EF change from baseline to last postbaseline value, all doses versus placebo (efficacy set)",
           "values": {
+            "t2_5": "+5.4 points (n=113)",
             "t5": "+6.8 points (n=117)",
-            "ctl": "+2.0 points (n=115)"
+            "t10": "+7.9 points (n=120)",
+            "t20": "+8.2 points (n=115)",
+            "ctl": "+2.0 points (n=114)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Post hoc analysis among 581 sexually active men with erectile dysfunction and BPH-associated LUTS.",
-          "locator": "PubMed abstract, Results"
+          "note": "All four dose comparisons had P <0.001. Post hoc efficacy analysis of 579/581 sexually active men with erectile dysfunction and BPH-associated LUTS; no confidence intervals reported.",
+          "locator": "Full text, Results, IIEF-EF domain score changes, p 730; Table 2, p 731"
+        },
+        {
+          "endpoint": "Normal erectile function",
+          "role": "descriptive",
+          "measure": "IIEF-EF score at least 26 at endpoint among men with baseline score below 26",
+          "values": {
+            "t2_5": "24/113 (21.2%)",
+            "t5": "40/117 (34.2%)",
+            "t10": "51/120 (42.5%)",
+            "t20": "46/115 (40.0%)",
+            "ctl": "16/114 (14.0%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Post hoc subgroup; no between-arm test or confidence interval reported for normalization.",
+          "locator": "Full text, Results, Normalization of erectile function, p 732"
+        },
+        {
+          "endpoint": "IPSS in BPH/ED subgroup",
+          "role": "exploratory",
+          "measure": "Least-squares mean IPSS change from baseline to last postbaseline value",
+          "values": {
+            "t2_5": "−3.6 points (n=108)",
+            "t5": "−4.2 points (n=114)",
+            "t10": "−4.7 points (n=114)",
+            "t20": "−4.7 points (n=110)",
+            "ctl": "−2.1 points (n=113)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.043 (2.5 mg); 0.004 (5 mg); <0.001 (10 and 20 mg)"
+          },
+          "note": "Post hoc subset; all dose comparisons significant at the paper's two-sided 0.05 level. Qmax did not differ significantly; the PVR difference at 2.5 mg (P=0.045) was not clinically relevant. No confidence intervals reported.",
+          "locator": "Full text, Table 3 and Results, IPSS and peak urinary flow rate changes, p 732"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Treatment-emergent and serious adverse events; adverse-event discontinuation",
+          "values": {
+            "t2_5": "TEAE 33/113 (29.2%); SAE 3/113 (2.7%); AE discontinuation 3/113 (2.7%)",
+            "t5": "TEAE 30/117 (25.6%); SAE 1/117 (0.9%); AE discontinuation 6/117 (5.1%)",
+            "t10": "TEAE 42/120 (35.0%); SAE 2/120 (1.7%); AE discontinuation 6/120 (5.0%)",
+            "t20": "TEAE 43/116 (37.1%); SAE 5/116 (4.3%); AE discontinuation 6/116 (5.2%)",
+            "ctl": "TEAE 24/115 (20.9%); SAE 1/115 (0.9%); AE discontinuation 2/115 (1.7%)"
+          },
+          "note": "Safety set of 581; headache, back pain, dyspepsia and myalgia were the common treatment-emergent events. No deaths occurred.",
+          "locator": "Full text, Table 4 and Safety, p 733"
+        },
+        {
+          "label": "Common adverse events at 5 mg and urinary events",
+          "values": {
+            "t5": "Headache 4/117 (3.4%); back pain 1/117 (0.9%); dyspepsia 5/117 (4.3%); myalgia 1/117 (0.9%)",
+            "ctl": "Headache 4/115 (3.5%); back pain 1/115 (0.9%); dyspepsia 0/115; myalgia 0/115; urinary tract infection 1/115"
+          },
+          "note": "No urinary-retention episodes were reported across tadalafil arms; one placebo-treated man had a urinary tract infection. Urinary events had no full arm-by-arm table.",
+          "locator": "Full text, Table 4 and Safety, p 733"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Post hoc cohort and treatment schedule",
+          "value": "581 sexually active men with ED and BPH-LUTS entered the post hoc cohort; 579 contributed IIEF-EF efficacy data. Prior BPH/ED therapies required a four-week washout; all men had a four-week placebo run-in, then received placebo or tadalafil 2.5, 5, 10 or 20 mg once daily for 12 weeks. No minimum intercourse-attempt frequency was required.",
+          "locator": "Full text, Patients and methods, pp 728–729; Results, p 730"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2009_04_033.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2009_04_033.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

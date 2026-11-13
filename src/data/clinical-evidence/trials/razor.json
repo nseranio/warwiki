@@ -341,12 +341,12 @@
       "doi": "10.1097/JU.0000000000001029",
       "pmid": "32271690",
       "followUp": "Questionnaires at baseline, three months, and six months",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 451",
       "results": [
         {
           "endpoint": "FACT–Vanderbilt Cystectomy Index",
-          "role": "secondary",
-          "measure": "Between-approach comparison at baseline, three months, and six months",
+          "role": "primary",
+          "measure": "Mixed-model between-approach comparison of subscale and composite mean scores at baseline, three months, and six months",
           "values": {
             "exp": "no statistically significant between-approach difference",
             "ctl": "no statistically significant between-approach difference"
@@ -355,16 +355,83 @@
             "type": "none",
             "p": ">0.05"
           },
-          "note": "Analyzed subsets of the 302-patient per-protocol cohort; abstract does not provide score denominators or means.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Surgical approach was this report's primary objective; no prespecified success threshold. FACT-VCI analysis included 231/302 (76.5%) patients with baseline and at least one postoperative questionnaire; arm-specific estimated means are not tabulated in the main text.",
+          "locator": "Full text, Materials and Methods and Results, pp 451–452; Figure 1, p 453"
+        },
+        {
+          "endpoint": "FACT–VCI total score, adjusted surgical-approach coefficient",
+          "role": "descriptive",
+          "measure": "Three-month multivariable linear regression; robotic minus open, score points; 206/302 had a three-month FACT-VCI questionnaire",
+          "values": {
+            "exp": "arm-specific adjusted mean not reported",
+            "ctl": "arm-specific adjusted mean not reported"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.28,
+            "ci": [
+              -4.87,
+              5.43
+            ],
+            "p": "0.915"
+          },
+          "note": "At six months, 198/302 had a FACT-VCI questionnaire; the adjusted robotic-minus-open coefficient was 1.27 points (95% CI −4.33 to 6.87; P=0.654). This regression is separate from the longitudinal mixed-model comparison.",
+          "locator": "Full text, Table 2 and Results, pp 452, 455"
+        },
+        {
+          "endpoint": "SF-8 physical and mental component scores",
+          "role": "primary",
+          "measure": "Mixed-model between-approach comparison at baseline, three months, and six months",
+          "values": {
+            "exp": "no statistically significant between-approach difference",
+            "ctl": "no statistically significant between-approach difference"
+          },
+          "effect": {
+            "type": "none",
+            "p": ">0.05"
+          },
+          "met": "not-tested",
+          "note": "SF-8 analysis included 216/302 (71.5%) patients with baseline and at least one postoperative questionnaire. Within the open arm, six-month physical score was 50.4 versus 45.4 at baseline and mental score was 51 versus 46.8 (both P<0.05); these are within-arm changes, not between-arm effects.",
+          "locator": "Full text, Results, pp 452, 455; Figure 3, p 456"
+        },
+        {
+          "endpoint": "FACT bladder-cystectomy subscale by diversion type",
+          "role": "exploratory",
+          "measure": "Three-month mixed-model comparison; continent minus noncontinent diversion, score points",
+          "effect": {
+            "type": "difference",
+            "value": -5.5,
+            "p": "<0.01"
+          },
+          "note": "Overall, 67/302 received continent and 235/302 noncontinent diversion; time-specific group denominators were not reported. The separate multivariable regression gave a continent coefficient of −5.50 (95% CI −11.47 to 0.48; P=0.071) at three months and 2.37 (95% CI −4.12 to 8.86; P=0.471) at six months.",
+          "locator": "Full text, Table 1 and Results, p 452; Table 2 and Results, p 455"
+        },
+        {
+          "endpoint": "SF-8 physical component score by diversion type",
+          "role": "exploratory",
+          "measure": "Six-month mixed-model comparison of continent versus noncontinent diversion, score points",
+          "effect": {
+            "type": "difference",
+            "value": 5.6,
+            "p": "0.019"
+          },
+          "note": "Estimated means were 51.8 with continent and 46.2 with noncontinent diversion; group-specific six-month questionnaire denominators were not reported. Continent-group score increased from 47.2 at baseline to 51.8 at six months (adjusted P=0.043).",
+          "locator": "Full text, Results, pp 455–456; Figure 3, p 456"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Quality-of-life questionnaire completion",
+          "value": "Of 302 per-protocol patients, baseline plus at least one postoperative questionnaire was available for FACT-VCI in 231/302 (76.5%) and SF-8 in 216/302 (71.5%); at three months, FACT-VCI 206/302 (68%) and SF-8 179/302 (59.3%); at six months, FACT-VCI 198/302 (65.6%) and SF-8 178/302 (58.9%).",
+          "locator": "Full text, Results, p 452"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001029.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000001029.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

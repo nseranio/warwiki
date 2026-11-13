@@ -140,33 +140,38 @@
       "doi": "10.1016/s0022-5347(01)62527-8",
       "pmid": "9751346",
       "followUp": "Three months of home treatment after a positive in-clinic test",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 1326",
       "results": [
         {
           "endpoint": "In-clinic intercourse-sufficient erection after prostatectomy",
           "role": "descriptive",
           "measure": "Response among men with radical prostatectomy as an erectile dysfunction cause",
           "values": {
-            "exp": "70.3% of 384 men"
+            "exp": "270/384 (70.3%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Retrospective subgroup; a numerator was not stated in the abstract.",
-          "locator": "PubMed abstract, Results (PMID 9751346)"
+          "met": "not-tested",
+          "note": "Retrospective subgroup; 726/1127 (64.4%) men with other organic etiologies responded in clinic (P = 0.035).",
+          "locator": "Full text, Results, Clinic phase, p 1326"
         },
         {
           "endpoint": "Successful intercourse at home after prostatectomy",
           "role": "descriptive",
-          "measure": "At least one successful intercourse with active medication during home treatment",
+          "measure": "At least one successful intercourse during three months among 263 post-prostatectomy participants reporting home treatment",
           "values": {
-            "exp": "57.1% of active-drug home-treatment patients"
+            "exp": "72/126 (57.1%)",
+            "ctl": "9/137 (6.6%)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 50.6,
+            "p": "<0.001"
           },
-          "note": "Denominator was not stated in the abstract; authors multiplied clinic and home response rates to estimate 40.1% overall success.",
-          "locator": "PubMed abstract, Results (PMID 9751346)"
+          "met": "not-tested",
+          "note": "Retrospective subgroup; analysis includes 263 home-treatment reporters, not the 243 three-month completers. The 50.6-percentage-point risk difference is calculated from reported patient counts; no confidence interval reported. Among other etiologies, 227/335 (67.8%) active and 84/363 (23.1%) placebo patients reported intercourse.",
+          "locator": "Full text, Results, Home treatment phase, p 1326; Figure 1, p 1327"
         },
         {
           "endpoint": "Estimated overall success after prostatectomy",
@@ -178,16 +183,57 @@
           "effect": {
             "type": "none"
           },
+          "met": "not-tested",
           "note": "Authors' calculated estimate, not a separately observed randomized outcome.",
-          "locator": "PubMed abstract, Results (PMID 9751346)"
+          "locator": "Full text, Results, Home treatment phase, p 1326"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Penile pain during home treatment",
+          "values": {
+            "exp": "49/126 (38.9%) patients; 132/1373 (9.6%) administrations",
+            "ctl": "1.5% of 137 patients"
+          },
+          "locator": "Full text, Results, Adverse effects, p 1326; Table 4, p 1327",
+          "note": "Patient comparison P <0.001; placebo numerator not printed."
+        },
+        {
+          "label": "Urethral pain or burning during home treatment",
+          "values": {
+            "exp": "23/126 (18.3%)",
+            "ctl": "4.4% of 137 patients"
+          },
+          "locator": "Full text, Results, Adverse effects, p 1326; Table 4, p 1327",
+          "note": "Active versus placebo P <0.001. Among other organic etiologies, 35/337 (10.4%) on active drug reported urethral pain or burning (P = 0.027 versus post-prostatectomy)."
+        },
+        {
+          "label": "Hypotension during clinic titration",
+          "value": "3/384 (0.8%) post-prostatectomy patients versus 47/1127 (4.2%) with other organic etiologies (P <0.001)",
+          "locator": "Full text, Results, Adverse effects, p 1326; Table 4, p 1327",
+          "note": "Measured before randomization; comparison is by erectile-dysfunction etiology, not home-treatment assignment."
+        },
+        {
+          "label": "Other adverse effects during home treatment",
+          "values": {
+            "exp": "Dizziness 2.4% of 126; no syncope, urinary tract infection, fibrosis, or priapism",
+            "ctl": "Dizziness 0% and urinary tract infection 0.7% of 137; no syncope, fibrosis, or priapism"
+          },
+          "locator": "Full text, Results, Adverse effects, p 1326; Table 4, p 1327",
+          "note": "Table 4 reports patient percentages; numerators for dizziness and placebo urinary tract infection are not printed."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Post-prostatectomy dosing and home treatment",
+          "value": "Clinic titration used 125 and 250 micrograms on separate visits, then 500 or 1000 micrograms if needed, delivered with an applicator inserted 3 cm into the distal urethra; 66.3% of post-prostatectomy clinic responders selected 500 or 1000 micrograms. Of 270 randomized post-prostatectomy responders, 243 (90%) completed three months; 126 active and 137 placebo patients reported home treatment. Monthly visits reviewed treatment diaries.",
+          "locator": "Full text, Materials and Methods and Results, Clinic and Home treatment phases, p 1326; Table 2, p 1327"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62527_8.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62527_8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

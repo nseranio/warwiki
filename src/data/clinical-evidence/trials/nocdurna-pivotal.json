@@ -55,13 +55,13 @@
         "role": "control"
       }
     ],
-    "population": "Separate trials randomized 395 men and 268 women with at least two nocturnal voids nightly.",
-    "description": "Two multicenter, double-blind, placebo-controlled randomized trials",
-    "locator": "ClinicalTrials.gov NCT01262456 and NCT01223937, Study Design and Participant Flow; PubMed abstracts, Methods"
+    "population": "Separate trials randomized 395 men and 268 women with at least two nocturnal voids nightly; 84%–89% of men and 88%–89% of women in the full analysis sets had nocturnal polyuria at baseline.",
+    "description": "Two multicenter, double-blind, placebo-controlled randomized trials; the men’s study used hierarchical two-sided 5% testing at 75 μg before 50 μg.",
+    "locator": "Men full text, Figure 1, Table 1 and Statistical Analysis, pp 966–968; women full text, Figure 1 and Table 1, pp 960–961"
   },
   "verdict": "positive",
-  "verdictNote": "Both coprimary endpoints favored each tested dose in men and the 25-μg dose in women.",
-  "takeaway": "In separate three-month trials, desmopressin ODT 50 or 75 μg in men and 25 μg in women reduced nocturnal voids and increased 33% responders versus placebo; the men's primary report found the 50-μg dose effective with fewer marked sodium decreases than 75 μg.",
+  "verdictNote": "Both coprimary endpoints met the prespecified superiority test at each tested dose.",
+  "takeaway": "In three-month trials of adults with nocturia, desmopressin ODT 50 or 75 μg in men and 25 μg in women reduced voids and increased 33% response odds versus placebo; sodium below 130 mmol/L occurred in 2, 9, and 3 treated patients, respectively.",
   "reports": [
     {
       "id": "nocdurna-pivotal-2013-men",
@@ -73,7 +73,7 @@
       "doi": "10.1016/j.juro.2012.12.112",
       "pmid": "23454402",
       "followUp": "Three-month double-blind treatment; full analysis set 385 men",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods and Figure 1, pp 966–969",
       "results": [
         {
           "endpoint": "Nocturnal voids, men 50 μg",
@@ -82,11 +82,19 @@
           "effect": {
             "type": "difference",
             "value": -0.37,
-            "p": "<0.0001"
+            "p": "<0.0001",
+            "ci": [
+              -0.57,
+              -0.17
+            ]
           },
           "met": true,
-          "note": "50 μg versus placebo; full analysis set 385 men across all arms.",
-          "locator": "PubMed abstract, Results"
+          "note": "Longitudinal full analysis set; Table 2 prints P=0.0003, while the abstract and Results prose print P<0.0001.",
+          "locator": "Full text, Table 2 and Results, pp 968–969",
+          "values": {
+            "m50": "−1.25 adjusted mean change (n=119)",
+            "mctl": "−0.88 adjusted mean change (n=142)"
+          }
         },
         {
           "endpoint": "33% responders, men 50 μg",
@@ -95,11 +103,19 @@
           "effect": {
             "type": "OR",
             "value": 1.98,
-            "p": "0.0009"
+            "p": "0.0009",
+            "ci": [
+              1.32,
+              2.96
+            ]
           },
           "met": true,
-          "note": "50 μg versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Longitudinal adjusted probabilities, not observed responder counts; full analysis set.",
+          "locator": "Full text, Table 2 and Results, pp 968–969",
+          "values": {
+            "m50": "0.67 adjusted responder probability (n=119)",
+            "mctl": "0.50 adjusted responder probability (n=142)"
+          }
         },
         {
           "endpoint": "Nocturnal voids, men 75 μg",
@@ -108,11 +124,19 @@
           "effect": {
             "type": "difference",
             "value": -0.41,
-            "p": "0.0003"
+            "p": "0.0003",
+            "ci": [
+              -0.61,
+              -0.22
+            ]
           },
           "met": true,
-          "note": "75 μg versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Longitudinal full analysis set; Table 2 prints P<0.0001, while the abstract and Results prose print P=0.0003.",
+          "locator": "Full text, Table 2 and Results, pp 968–969",
+          "values": {
+            "m75": "−1.29 adjusted mean change (n=124)",
+            "mctl": "−0.88 adjusted mean change (n=142)"
+          }
         },
         {
           "endpoint": "33% responders, men 75 μg",
@@ -121,46 +145,121 @@
           "effect": {
             "type": "OR",
             "value": 2.04,
-            "p": "0.0004"
+            "p": "0.0004",
+            "ci": [
+              0.38,
+              3.03
+            ]
           },
           "met": true,
-          "note": "75 μg versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Table 2 prints 95% CI 0.38–3.03, internally inconsistent with OR 2.04 and P=0.0004; reported as printed, uncorrected.",
+          "locator": "Full text, Table 2 and Results, pp 968–969",
+          "values": {
+            "m75": "0.67 adjusted responder probability (n=124)",
+            "mctl": "0.50 adjusted responder probability (n=142)"
+          }
         },
         {
-          "endpoint": "Time to first nocturnal void, men",
+          "endpoint": "Time to first nocturnal void, men 50 μg",
           "role": "secondary",
-          "measure": "Approximate placebo-adjusted mean difference in time to first void at three months",
+          "measure": "Placebo-adjusted mean difference in change in time to first void at month 3, minutes",
           "effect": {
             "type": "difference",
-            "value": 40
+            "value": 39.0,
+            "ci": [
+              11.0,
+              66.9
+            ],
+            "p": "0.006"
           },
-          "note": "Approximately 40 minutes longer for both doses; P=0.006 for 50 μg and P=0.003 for 75 μg.",
-          "locator": "PubMed abstract, Results"
+          "note": "Month-3 secondary endpoint; last observation carried forward for missing values.",
+          "locator": "Full text, Table 3, p 969",
+          "met": true,
+          "values": {
+            "m50": "111.8-minute mean increase (n=119)",
+            "mctl": "72.9-minute mean increase (n=142)"
+          }
+        },
+        {
+          "endpoint": "Time to first nocturnal void, men 75 μg",
+          "role": "secondary",
+          "measure": "Placebo-adjusted mean difference in change in time to first void at month 3, minutes",
+          "values": {
+            "m75": "115.6-minute mean increase (n=122)",
+            "mctl": "72.9-minute mean increase (n=142)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 42.8,
+            "ci": [
+              15.0,
+              70.5
+            ],
+            "p": "0.003"
+          },
+          "met": true,
+          "note": "Month-3 secondary endpoint; last observation carried forward for missing values.",
+          "locator": "Full text, Table 3, p 969"
         }
       ],
       "harms": [
         {
           "label": "Serum sodium below 130 mmol/L",
           "values": {
-            "m50": "2 men",
-            "m75": "9 men"
+            "m50": "2/119 (1.7%)",
+            "m75": "9/122 (7.4%)",
+            "mctl": "0/143 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The two men at 50 μg were aged 74 and 79 years; the abstract does not give arm-level safety denominators."
+          "locator": "Full text, Table 5, p 970",
+          "note": "Safety analysis set; the two men at 50 μg were aged 74 and 79 years; 9/11 affected men were at least 65 years old; all recovered to at least 130 mmol/L."
+        },
+        {
+          "label": "Serum sodium 125 mmol/L or less",
+          "values": {
+            "m50": "2/119 (1.7%)",
+            "m75": "4/122 (3.3%)",
+            "mctl": "0/143 (0%)"
+          },
+          "locator": "Full text, Table 5, p 970",
+          "note": "Safety analysis set; these events are included in the below-130 mmol/L counts."
+        },
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "m50": "46/119 (38.7%)",
+            "m75": "49/122 (40.2%)",
+            "mctl": "58/143 (40.6%)"
+          },
+          "locator": "Full text, Table 5, p 970",
+          "note": "Safety analysis set; no Clavien-Dindo grades reported."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "m50": "4/119 (3.4%)",
+            "m75": "5/122 (4.1%)",
+            "mctl": "1/143 (0.7%)"
+          },
+          "locator": "Full text, Table 5, p 970",
+          "note": "Two, four, and zero of these events, respectively, were hyponatremia."
         }
       ],
       "delivery": [
         {
           "label": "Men's trial dosing",
-          "value": "Desmopressin ODT 50 μg or 75 μg versus placebo for three months.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Desmopressin ODT 50 μg or 75 μg versus placebo once nightly for three months, taken one hour before bedtime; patients were instructed to empty the bladder before bed and drink only to satisfy thirst.",
+          "locator": "Full text, Study Design and Procedures, p 966"
+        },
+        {
+          "label": "Men’s trial adherence and completion",
+          "value": "98% of the 385-man full analysis set took more than 80% of planned doses; 327/395 randomized men (83%) completed the three-month double-blind treatment.",
+          "locator": "Full text, Figure 1 and Results, pp 966, 969"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_12_112.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2012_12_112.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -173,7 +272,7 @@
       "doi": "10.1016/j.juro.2013.02.037",
       "pmid": "23454404",
       "followUp": "Three-month double-blind treatment; full analysis set 261 women",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Methods and Figure 1, pp 959–960",
       "results": [
         {
           "endpoint": "Nocturnal voids, women 25 μg",
@@ -182,11 +281,19 @@
           "effect": {
             "type": "difference",
             "value": -0.22,
-            "p": "0.028"
+            "p": "0.028",
+            "ci": [
+              -0.42,
+              -0.02
+            ]
           },
           "met": true,
-          "note": "25 μg versus placebo; full analysis set 261 women.",
-          "locator": "PubMed abstract, Results"
+          "note": "Longitudinal full analysis set, observed values across week 1 and months 1–3.",
+          "locator": "Full text, Table 2, p 961",
+          "values": {
+            "w25": "−1.46 adjusted mean change (n=133)",
+            "wctl": "−1.24 adjusted mean change (n=128)"
+          }
         },
         {
           "endpoint": "33% responders, women 25 μg",
@@ -195,11 +302,19 @@
           "effect": {
             "type": "OR",
             "value": 1.85,
-            "p": "0.006"
+            "p": "0.006",
+            "ci": [
+              1.19,
+              2.86
+            ]
           },
           "met": true,
-          "note": "25 μg versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Longitudinal adjusted probabilities, not observed responder counts; full analysis set.",
+          "locator": "Full text, Table 2, p 961",
+          "values": {
+            "w25": "0.76 adjusted responder probability (n=133)",
+            "wctl": "0.64 adjusted responder probability (n=128)"
+          }
         },
         {
           "endpoint": "Time to first nocturnal void, women",
@@ -210,35 +325,72 @@
             "value": 49,
             "p": "0.003"
           },
-          "note": "25 μg versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Month-3 secondary endpoint; the numerical comparison is stated in Results; supplementary table 2 is absent from the supplied text.",
+          "locator": "Full text, Discussion, p 963",
+          "met": true
         }
       ],
       "harms": [
         {
-          "label": "Three transient serum sodium decreases below 130 mmol/L",
-          "locator": "PubMed abstract, Results",
-          "note": "Arm assignment was not reported; sodium remained above 125 mmol/L throughout the trial."
+          "label": "Serum sodium below 130 mmol/L",
+          "values": {
+            "w25": "3/135 (2.2%)",
+            "wctl": "0/126 (0%)"
+          },
+          "locator": "Full text, Table 4 and Results, p 962",
+          "note": "Safety analysis set; all three were 126–129 mmol/L and recovered above 130 mmol/L within 2–4 days; two began below 135 mmol/L."
+        },
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "w25": "60/135 (44.4%)",
+            "wctl": "57/126 (45.2%)"
+          },
+          "locator": "Full text, Table 4, p 962",
+          "note": "Safety analysis set; no Clavien-Dindo grades reported."
+        },
+        {
+          "label": "Adverse event leading to discontinuation",
+          "values": {
+            "w25": "4/135 (3.0%)",
+            "wctl": "1/126 (0.8%)"
+          },
+          "locator": "Full text, Table 4, p 962",
+          "note": "Safety analysis set."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "w25": "0/135 (0%)",
+            "wctl": "2/126 (1.6%)"
+          },
+          "locator": "Full text, Table 4, p 962",
+          "note": "Placebo events were cellulitis and pulmonary embolism."
         }
       ],
       "delivery": [
         {
           "label": "Women's trial dosing",
-          "value": "Desmopressin ODT 25 μg once daily versus placebo for three months.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Desmopressin ODT 25 μg versus placebo once nightly for three months, taken one hour before bedtime; patients were instructed to empty the bladder before bed and drink only to satisfy thirst.",
+          "locator": "Full text, Study Design and Procedures, p 959"
+        },
+        {
+          "label": "Women’s trial adherence and completion",
+          "value": "96% of 268 randomized women took more than 80% of planned doses; 89% completed the three-month study.",
+          "locator": "Full text, Results, p 960"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_02_037.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_02_037.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/nocdurna-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -16,7 +16,7 @@
   ],
   "question": "Does adding daily water reduce culture-confirmed recurrent cystitis in premenopausal women who drink low volumes of fluid?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated",
     "randomized": true,
     "blinding": "open-label",
     "type": "superiority",
@@ -60,8 +60,8 @@
           "role": "primary",
           "measure": "Mean culture-confirmed episodes per woman over 12 months; difference is control minus water",
           "values": {
-            "exp": "1.7 mean episodes/woman; 111 total episodes",
-            "ctl": "3.2 mean episodes/woman; 216 total episodes"
+            "exp": "1.7 mean episodes/woman (95% CI 1.5-1.8; n=70 ITT); 111 total episodes",
+            "ctl": "3.2 mean episodes/woman (95% CI 3.0-3.4; n=70 ITT); 216 total episodes"
           },
           "effect": {
             "type": "difference",
@@ -74,15 +74,15 @@
           },
           "met": true,
           "note": "At least one symptom and at least 10³ CFU/mL uropathogens in midstream culture; two-sided significance threshold 0.05; intention-to-treat Poisson analysis.",
-          "locator": "JAMA full text, Results: Primary; Methods: Primary Outcome; Figure 2"
+          "locator": "Full text, Outcomes: Primary, p 1512; Figure 1"
         },
         {
           "endpoint": "Antimicrobial regimens for cystitis",
           "role": "secondary",
           "measure": "Mean regimens per woman over 12 months; difference is control minus water",
           "values": {
-            "exp": "1.9",
-            "ctl": "3.6"
+            "exp": "1.9 regimens/woman (95% CI 1.7-2.2; n=70 ITT)",
+            "ctl": "3.6 regimens/woman (95% CI 3.3-4.0; n=70 ITT)"
           },
           "effect": {
             "type": "difference",
@@ -93,16 +93,17 @@
             ],
             "p": "<0.001"
           },
-          "note": "Secondary-outcome P value was nominal.",
-          "locator": "JAMA full text, Results: Secondary; Methods: Secondary Outcomes"
+          "met": "not-tested",
+          "note": "Age-adjusted Poisson analysis; secondary-outcome P value was nominal.",
+          "locator": "Full text, Outcomes: Secondary, p 1513; Statistical Analyses, p 1511"
         },
         {
           "endpoint": "Interval between cystitis episodes",
           "role": "secondary",
           "measure": "Mean days; difference is water minus control",
           "values": {
-            "exp": "142.8 days",
-            "ctl": "84.4 days"
+            "exp": "142.8 days (95% CI 127.4-160.1; n=70 ITT)",
+            "ctl": "84.4 days (95% CI 75.4-94.5; n=70 ITT)"
           },
           "effect": {
             "type": "difference",
@@ -113,16 +114,17 @@
             ],
             "p": "<0.001"
           },
-          "note": "Secondary-outcome P value was nominal.",
-          "locator": "JAMA full text, Results: Secondary"
+          "met": "not-tested",
+          "note": "Age-adjusted gamma-model analysis; secondary-outcome P value was nominal.",
+          "locator": "Full text, Outcomes: Secondary, p 1513; Statistical Analyses, p 1511"
         },
         {
           "endpoint": "Time to first cystitis episode",
           "role": "exploratory",
           "measure": "Median days to first episode; post-hoc age-adjusted HR",
           "values": {
-            "exp": "148.0 days",
-            "ctl": "93.5 days"
+            "exp": "148.0 days (range 8.0-369.0; n=70 ITT)",
+            "ctl": "93.5 days (range 7.0-291.0; n=70 ITT)"
           },
           "effect": {
             "type": "HR",
@@ -133,8 +135,57 @@
             ],
             "p": "<0.001"
           },
-          "note": "Post-hoc analysis; P value nominal.",
-          "locator": "JAMA full text, Results: Secondary; Methods: Secondary Outcomes"
+          "met": "not-tested",
+          "note": "Post-hoc age-adjusted Cox analysis; P value nominal.",
+          "locator": "Full text, Outcomes: Secondary, p 1513; Statistical Analyses, p 1511"
+        },
+        {
+          "endpoint": "24-hour urine volume",
+          "role": "secondary",
+          "measure": "Mean L/day at baseline and 12 months; P compares change from baseline in 12-month completers",
+          "values": {
+            "exp": "0.9 L/day (n=70) to 2.2 L/day (n=64)",
+            "ctl": "0.9 L/day (n=70) to 1.0 L/day (n=66)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Age-adjusted repeated-measures analysis; nominal P value; no between-arm effect estimate or CI reported.",
+          "locator": "Full text, Table 2, p 1513; Statistical Analyses, p 1511"
+        },
+        {
+          "endpoint": "Daily voids",
+          "role": "secondary",
+          "measure": "Mean voids/day at baseline and 12 months; P compares change from baseline in 12-month completers",
+          "values": {
+            "exp": "6.0/day (n=70) to 8.2/day (n=64)",
+            "ctl": "6.2/day (n=70) to 5.9/day (n=66)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Voids analysis was post hoc; nominal P value; no between-arm effect estimate or CI reported.",
+          "locator": "Full text, Table 2, p 1513; Statistical Analyses, p 1511"
+        },
+        {
+          "endpoint": "24-hour urine osmolality",
+          "role": "secondary",
+          "measure": "Mean mOsm/kg at baseline and 12 months; P compares change from baseline in 12-month completers",
+          "values": {
+            "exp": "720.6 mOsm/kg (n=70) to 329.2 mOsm/kg (n=64)",
+            "ctl": "728.1 mOsm/kg (n=70) to 712.6 mOsm/kg (n=66)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Age-adjusted repeated-measures analysis; nominal P value; no between-arm effect estimate or CI reported.",
+          "locator": "Full text, Table 2, p 1513; Statistical Analyses, p 1511"
         }
       ],
       "harms": [
@@ -144,7 +195,7 @@
             "exp": "12/70 women",
             "ctl": "12/70 women"
           },
-          "locator": "JAMA full text, Results: Adverse Events",
+          "locator": "Full text, Adverse Events, p 1513",
           "note": "Most commonly reported adverse event; the article gives counts by group."
         },
         {
@@ -153,7 +204,7 @@
             "exp": "8/70 women",
             "ctl": "8/70 women"
           },
-          "locator": "JAMA full text, Results: Adverse Events",
+          "locator": "Full text, Adverse Events, p 1513",
           "note": "The article gives counts by group."
         },
         {
@@ -162,7 +213,7 @@
             "exp": "0/70",
             "ctl": "0/70"
           },
-          "locator": "JAMA full text, Results: Adverse Events",
+          "locator": "Full text, Adverse Events, p 1513",
           "note": "No serious adverse events occurred in either group."
         }
       ],
@@ -170,20 +221,20 @@
         {
           "label": "Water regimen",
           "value": "Three 500-mL bottles daily in addition to usual intake; bottles delivered to homes every 2 weeks.",
-          "locator": "JAMA full text, Methods: Randomization and Study Procedures"
+          "locator": "Full text, Randomization and Study Procedures, pp 1510-1511"
         },
         {
           "label": "Adherence and symptom assessment",
-          "value": "Monthly calls and fluid diaries; 24-hour urine collections at baseline, 6 months, and 12 months.",
-          "locator": "JAMA full text, Methods: Study Procedures"
+          "value": "Monthly calls and 3-day fluid diaries; 24-hour urine collections at baseline, 6 months, and 12 months.",
+          "locator": "Full text, Study Procedures, pp 1510-1511"
         },
         {
-          "label": "Observed water intake",
+          "label": "Self-reported water intake",
           "values": {
-            "exp": "+1.15 L/day at month 12",
+            "exp": "+1.15 L/day at month 12 (range 0.48-1.63)",
             "ctl": "no change"
           },
-          "locator": "JAMA full text, Results: Self-reported Adherence to Intervention",
+          "locator": "Full text, Self-reported Adherence to Intervention, p 1512",
           "note": "Self-reported mean change from baseline in daily water intake."
         },
         {
@@ -192,13 +243,23 @@
             "exp": "64/70 (91%)",
             "ctl": "66/70 (94%)"
           },
-          "locator": "JAMA full text, Results: Study Participants; Figure 1"
+          "locator": "Full text, Study Participants, p 1511; Figure 1",
+          "note": "Randomized denominators; 12-month completers numbered 64 and 66."
+        },
+        {
+          "label": "Per-protocol population",
+          "values": {
+            "exp": "54/70 women (77%)",
+            "ctl": "59/70 women (84%)"
+          },
+          "locator": "Full text, Study Participants, p 1511; Figure 1",
+          "note": "Completed 12 months without a major protocol deviation; primary and secondary analyses used all 70 randomized women per arm."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2018_4204.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1001_jamainternmed_2018_4204.fulltext.txt",
         "level": "full-text",
-        "checked": "2026-11-12"
+        "checked": "2026-11-13"
       }
     }
   ],

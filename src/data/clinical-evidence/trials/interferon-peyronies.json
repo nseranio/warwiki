@@ -17,7 +17,7 @@
   "question": "Does intralesional interferon α-2b improve penile deformity and symptoms more than saline injections in men with Peyronie's disease?",
   "design": {
     "phase": "not reported",
-    "randomized": true,
+    "randomized": false,
     "blinding": "single-blind",
     "type": "superiority",
     "n": 117,
@@ -35,13 +35,13 @@
         "n": 62
       }
     ],
-    "population": "Men with Peyronie's disease enrolled across multiple centers (mean age 55.1 years), with symptoms longer than 12 months, curvature at least 30°, and no calcified plaque according to the AUA guideline's account of eligibility.",
-    "description": "Multicenter, single-blind, placebo-controlled randomized trial",
-    "locator": "Hellstrom 2006 PubMed abstract, Materials and Methods; AUA 2015 guideline p13"
+    "population": "Men with Peyronie's disease of at least 12 months' duration, a single plaque, erect curvature of at least 30°, and no calcified plaque, enrolled at eight centers (mean age 55.1 years).",
+    "description": "Multicenter, single-blind, placebo-controlled parallel study; allocation method not reported",
+    "locator": "Full text, Materials and Methods, p 395"
   },
-  "verdict": "positive",
-  "verdictNote": "Curvature, plaque and pain outcomes favored interferon; erectile-function scores did not.",
-  "takeaway": "Intralesional interferon α-2b improved penile curvature, plaque size and density, and pain more than saline placebo after a 12-week injection course; mean erectile-function score change did not differ significantly.",
+  "verdict": "descriptive",
+  "verdictNote": "No prespecified primary endpoint; curvature, plaque measures, and pain favored interferon.",
+  "takeaway": "Among 103 completers in a single-blind placebo-controlled study, six interferon α-2b injections improved curvature, plaque size and density, and pain more than saline; the between-group erectile-function difference was not significant.",
   "reports": [
     {
       "id": "interferon-peyronies-2005-hemodynamics",
@@ -111,106 +111,179 @@
       "citation": "Hellstrom WJ, Kendirci M, Matern R, et al. \"Single-blind, multicenter, placebo controlled, parallel study to assess the safety and efficacy of intralesional interferon alpha-2B for minimally invasive treatment for Peyronie's disease.\" *J Urol.* 2006;176(1):394-398. doi:10.1016/S0022-5347(06)00517-9",
       "doi": "10.1016/S0022-5347(06)00517-9",
       "pmid": "16753449",
-      "followUp": "Assessment after the 12-week injection course",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUp": "At least 4 weeks after six injections administered every other week over 12 weeks",
+      "followUpLocator": "Full text, Materials and Methods, p 395",
       "results": [
         {
           "endpoint": "Penile curvature",
           "role": "descriptive",
-          "measure": "Between-group improvement after treatment",
+          "measure": "Mean erect curvature before and at least 4 weeks after treatment in completers",
           "values": {
-            "exp": "Greater improvement",
-            "ctl": "Less improvement"
+            "exp": "49.9° to 36.4° (n=50; 13.5° reduction)",
+            "ctl": "50.9° to 46.4° (n=53; 4.5° reduction)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 9.0,
+            "p": "<0.01"
           },
-          "note": "The abstract reports the between-group difference as significant and does not name a primary endpoint.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "9.0° greater mean reduction is derived from rounded arm means; no confidence interval or prespecified primary threshold reported.",
+          "locator": "Full text, Table 2, p 396; Results, p 395"
         },
         {
-          "endpoint": "Plaque size and density",
-          "role": "secondary",
-          "measure": "Between-group improvement after treatment",
+          "endpoint": "Plaque size",
+          "role": "descriptive",
+          "measure": "Mean plaque area before and at least 4 weeks after treatment in completers",
           "values": {
-            "exp": "Greater improvement",
-            "ctl": "Less improvement"
+            "exp": "4.8 to 2.2 cm² (n=50; 2.6 cm² reduction)",
+            "ctl": "4.5 to 3.6 cm² (n=53; 0.9 cm² reduction)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 1.7,
+            "p": "<0.001"
           },
-          "note": "Both plaque measures favored interferon significantly in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "1.7 cm² greater mean reduction is derived from rounded arm means; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 396; Results, p 395"
+        },
+        {
+          "endpoint": "Plaque density",
+          "role": "descriptive",
+          "measure": "Mean patient-rated plaque density (0–3) before and at least 4 weeks after treatment in completers",
+          "values": {
+            "exp": "2.29 to 1.52 (n=50; 0.77-point reduction)",
+            "ctl": "2.07 to 1.84 (n=53; 0.23-point reduction)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.54,
+            "p": "<0.05"
+          },
+          "met": "not-tested",
+          "note": "0.54-point greater mean reduction is derived from rounded arm means; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 396; Results, p 396"
         },
         {
           "endpoint": "Penile pain",
-          "role": "secondary",
-          "measure": "Pain resolution after treatment",
+          "role": "descriptive",
+          "measure": "Resolution of pain on erection among completers with pain at baseline",
           "values": {
-            "exp": "Greater resolution",
-            "ctl": "Less resolution"
+            "exp": "21/31 (67.7%)",
+            "ctl": "9/32 (28.1%)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 39.6
           },
-          "note": "The abstract reports a significant between-group difference.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "39.6 percentage-point difference uses published rounded rates; no between-group P value or confidence interval reported.",
+          "locator": "Full text, Results, p 395; Table 2, p 396"
         },
         {
           "endpoint": "Erectile function",
-          "role": "secondary",
-          "measure": "Change in mean International Index of Erectile Function score",
+          "role": "descriptive",
+          "measure": "Mean modified IIEF erectile-function score (maximum 30) before and at least 4 weeks after treatment in completers",
           "values": {
-            "exp": "Increased",
-            "ctl": "Increased"
+            "exp": "18.32 to 20.80 (n=50)",
+            "ctl": "17.98 to 19.05 (n=53)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": ">0.05"
           },
-          "note": "The between-group difference was not statistically significant.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Within-arm increase was significant for interferon (p<0.05), but the between-group difference was not; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 396; Results, p 396"
+        },
+        {
+          "endpoint": "Peak systolic velocity",
+          "role": "descriptive",
+          "measure": "Mean penile duplex peak systolic velocity before and after treatment at one center",
+          "values": {
+            "exp": "32.85 to 37.92 cm/s (n=19)",
+            "ctl": "31.36 to 30.48 cm/s (n=20)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "met": "not-tested",
+          "note": "Reported P value for improvement in the interferon arm; placebo change was not significant. No confidence interval reported.",
+          "locator": "Full text, Table 3 and Results, p 396"
+        },
+        {
+          "endpoint": "Nonvascular hemodynamic classification",
+          "role": "descriptive",
+          "measure": "No diagnosed vascular pathology before and after treatment in the one-center duplex subset",
+          "values": {
+            "exp": "6/19 to 11/19",
+            "ctl": "5/20 to 5/20"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "met": "not-tested",
+          "note": "Reported P value for the interferon-arm change; published percentages do not exactly match recalculation from the counts.",
+          "locator": "Full text, Table 3 and Results, p 396"
         }
       ],
       "harms": [
         {
-          "label": "Adverse effects, predominantly flu-like symptoms",
+          "label": "Sinusitis, flu-like symptoms, and minor penile swelling with ecchymosis",
           "values": {
-            "exp": "Frequent; mild to moderate and short-lived",
-            "ctl": "Not quantified in abstract"
+            "exp": "Reported frequently; event counts not provided",
+            "ctl": "Event counts not provided"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Event counts and denominators were not given in the abstract."
+          "locator": "Full text, Results, p 396; Discussion, p 397",
+          "note": "Flu-like symptoms included fever, chills, and arthralgia; all described symptoms responded to over-the-counter NSAIDs taken before injection and lasted no longer than 36 hours. No Clavien-Dindo grades reported."
+        },
+        {
+          "label": "Withdrawal due to injection complications",
+          "values": {
+            "exp": "0/55 enrolled",
+            "ctl": "0/62 enrolled"
+          },
+          "locator": "Full text, Discussion, p 397",
+          "note": "None of the 14 withdrawals was attributed to injection complications."
         }
       ],
       "delivery": [
         {
           "label": "Intralesional injection course",
           "values": {
-            "exp": "5 million units of interferon α-2b every other week for 12 weeks",
-            "ctl": "10 mL saline every other week for 12 weeks"
+            "exp": "5 million units interferon α-2b in 10 mL saline every other week for six injections over 12 weeks",
+            "ctl": "10 mL saline every other week for six injections over 12 weeks"
           },
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Materials and Methods, p 395"
         },
         {
           "label": "Completed study",
           "values": {
-            "exp": "50 of 55 enrolled",
-            "ctl": "53 of 62 enrolled"
+            "exp": "50/55 enrolled",
+            "ctl": "53/62 enrolled"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 395"
+        },
+        {
+          "label": "Injection and outcome assessment technique",
+          "value": "Plaque injected with a 10 mL syringe and 25-gauge needle using the multiple-puncture technique; erect curvature measured by protractor, plaque area by handheld calipers, and plaque density by patient questionnaire (0–3); outcomes assessed at least 4 weeks after injection six.",
+          "locator": "Full text, Materials and Methods, p 395"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_06_00517_9.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_06_00517_9.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/interferon-peyronies",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

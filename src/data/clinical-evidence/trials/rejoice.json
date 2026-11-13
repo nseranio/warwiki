@@ -67,44 +67,80 @@
       "doi": "10.1016/j.jsxm.2016.09.002",
       "pmid": "27692842",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, Study Design, p 1931",
       "results": [
         {
           "endpoint": "FSFI total score",
           "role": "secondary",
-          "measure": "Change from baseline to week 12 in total Female Sexual Function Index score",
+          "measure": "Least-squares mean change from baseline to week 12 in total Female Sexual Function Index score; observed baseline and week-12 means and denominators",
           "values": {
-            "e4": "Improved from baseline; not superior to placebo",
-            "e10": "Superior to placebo (P < 0.05)",
-            "e25": "Superior to placebo (P = 0.0019)"
+            "e4": "LS mean change +7.91; observed 14.8 (n=173) to 22.6 (n=153); not significantly different from placebo",
+            "e10": "LS mean change +9.43; observed 15.8 (n=170) to 24.8 (n=154); versus placebo P < 0.05",
+            "e25": "LS mean change +10.28; observed 14.2 (n=172) to 24.8 (n=156); versus placebo P = 0.0019",
+            "pbo": "LS mean change +7.46; observed 14.4 (n=174) to 22.0 (n=159)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not report total-score values or analysis denominators.",
-          "locator": "PubMed abstract, Results"
+          "note": "FSFI was a secondary endpoint analyzed by ANCOVA with baseline as covariate in the modified intention-to-treat population; the paper reports no between-arm confidence intervals.",
+          "locator": "Full text, Statistical Analyses, p 1932; Table 2, p 1933; Figure 1 and Discussion, p 1934"
         },
         {
-          "endpoint": "FSFI domains",
+          "endpoint": "FSFI pain and lubrication domains",
           "role": "secondary",
-          "measure": "Week-12 change from baseline versus placebo",
+          "measure": "Observed baseline to week-12 domain mean scores, with assessment denominators; between-arm change comparisons by ANCOVA",
           "values": {
-            "e10": "Pain and lubrication improved (P ≤ 0.015 each)",
-            "e25": "Pain and lubrication improved (P ≤ 0.015 each); arousal P = 0.0085; satisfaction P = 0.0073"
+            "e4": "Pain 1.6 (n=173) to 3.8 (n=154); lubrication 2.1 (n=173) to 3.9 (n=153)",
+            "e10": "Pain 1.8 (n=170) to 4.3 (n=154); lubrication 2.2 (n=170) to 4.4 (n=154); each versus placebo P ≤ 0.015",
+            "e25": "Pain 1.7 (n=172) to 4.2 (n=156); lubrication 2.0 (n=172) to 4.3 (n=156); each versus placebo P ≤ 0.015",
+            "pbo": "Pain 1.7 (n=175) to 3.6 (n=159); lubrication 2.0 (n=175) to 3.6 (n=159)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Desire and orgasm did not differ from placebo for any dose.",
-          "locator": "PubMed abstract, Results"
+          "note": "Only the 10 and 25 µg doses differed from placebo for pain and lubrication; no between-arm confidence intervals were reported.",
+          "locator": "Full text, Results, Sexual Function, p 1932; Table 2, p 1933; Figure 2, p 1935"
+        },
+        {
+          "endpoint": "FSFI arousal and satisfaction domains",
+          "role": "secondary",
+          "measure": "Observed baseline to week-12 domain mean scores, with assessment denominators; between-arm change comparisons by ANCOVA",
+          "values": {
+            "e4": "Arousal 2.8 (n=173) to 3.6 (n=154); satisfaction 2.9 (n=173) to 4.2 (n=154)",
+            "e10": "Arousal 2.9 (n=170) to 4.1 (n=154); satisfaction 3.2 (n=170) to 4.4 (n=154)",
+            "e25": "Arousal 2.7 (n=172) to 4.1 (n=157), P = 0.0085 versus placebo; satisfaction 2.9 (n=172) to 4.6 (n=157), P = 0.0073 versus placebo",
+            "pbo": "Arousal 2.7 (n=175) to 3.6 (n=159); satisfaction 2.9 (n=174) to 4.1 (n=159)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Only 25 µg differed from placebo for arousal and satisfaction. Desire and orgasm did not differ from placebo at any dose; no between-arm confidence intervals were reported.",
+          "locator": "Full text, Results, Sexual Function, p 1932; Table 2, p 1933; Figure 2, p 1935"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Study discontinuation owing to adverse events",
+          "note": "1.8% of women overall; event count and arm-specific counts not reported in this secondary analysis.",
+          "locator": "Full text, Discussion, p 1934"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "FSFI assessment population",
+          "value": "FSFI was administered to 692/764 participants, excluding the pharmacokinetic substudy: 173, 172, 172, and 175 by 4 µg, 10 µg, 25 µg, and placebo arm; week-12 total-score data were available for 153, 154, 156, and 159, respectively (622 total).",
+          "locator": "Full text, Main Outcome Measures and Participant Disposition, p 1932; Table 2, p 1933"
+        },
+        {
+          "label": "Placebo formulation and concomitant lubricants",
+          "value": "Active and placebo capsules shared Miglyol 812 fractionated coconut-oil excipient; vaginal lubricants and moisturizers were prohibited during treatment.",
+          "locator": "Full text, Study Design, p 1931; Methods, p 1932; Discussion, p 1934"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_jsxm_2016_09_002.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_jsxm_2016_09_002.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

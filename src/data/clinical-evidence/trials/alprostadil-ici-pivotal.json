@@ -41,7 +41,7 @@
   },
   "verdict": "descriptive",
   "verdictNote": "Placebo comparison showed a dose response; home-use outcomes came from a separate cohort.",
-  "takeaway": "In three prospective studies, intracavernosal alprostadil 2.5–20 µg produced greater erectile responses than placebo in the dose-response study; in a six-month study, 577 of 683 enrolled men began home self-injection and reported being able to have sexual activity after 94% of injections.",
+  "takeaway": "In three prospective studies, intracavernosal alprostadil 2.5–20 µg produced greater erectile responses than placebo in the dose-response study; in a six-month study of 683 men, participants reported being able to have sexual activity after 94% of injections.",
   "reports": [
     {
       "id": "alprostadil-ici-pivotal-1996",
@@ -161,49 +161,95 @@
       "citation": "Willke RJ, Glick HA, McCarron TJ, et al. \"Quality of Life Effects of Alprostadil Therapy for Erectile Dysfunction.\" *J Urol.* 1997;157(6):2124-2128. doi:10.1016/S0022-5347(01)64692-5",
       "doi": "10.1016/S0022-5347(01)64692-5",
       "pmid": "9146597",
-      "followUp": "Quality of life visits at 3, 6, 12, and 18 months in the open-label self-injection phase",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUp": "CMSH-SFQ and Duke Health Profile at 3, 6, 12, and 18 months; Brief Symptom Inventory at 6, 12, and 18 months",
+      "followUpLocator": "Full text, Methods, Quality of life outcomes, p 2125",
       "results": [
         {
           "endpoint": "Sexual functioning quality of life",
-          "role": "descriptive",
-          "measure": "Change from baseline across 10 sexual-functioning questionnaire items at post-initiation visits",
+          "role": "primary",
+          "measure": "Weighted paired change from baseline to 6 months (or next nearest visit) in four CMSH-SFQ domains, scored 0–100 (higher is better)",
           "values": {
-            "exp": "Improvement in 10 items"
+            "exp": "Frequency: baseline 17.7, change +2.3 (P=0.0004); erection: 44.3, +33.9 (P=0.0001); orgasm: 63.4, +12.3 (P=0.0001); satisfaction: 47.5, +25.3 (P=0.0001); paired n=397–513 across domains"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "579 men entered the open-label self-injection phase; paired tests, without a concurrent control group.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": true,
+          "note": "Ten questionnaire items improved at all post-initiation visits; joint test of four domain changes P<0.001. Inverse-probability weighting addressed nonresponse; no concurrent control or multiplicity adjustment.",
+          "locator": "Full text, Methods, Quality of life outcomes and Analysis, p 2125; Table 2 and Results, p 2126"
         },
         {
-          "endpoint": "Mental health quality of life",
-          "role": "descriptive",
-          "measure": "Change from baseline in Brief Symptom Inventory and Duke Health Profile measures",
+          "endpoint": "Psychological symptoms",
+          "role": "primary",
+          "measure": "Weighted paired change from baseline to 6 months (or next nearest visit) in Brief Symptom Inventory scores, scaled 0–4 (lower is better)",
           "values": {
-            "exp": "Interpersonal sensitivity, anxiety, depression, and global symptom scores improved; overall mental health improved from baseline to 6 months"
+            "exp": "Interpersonal sensitivity: baseline 0.248, change −0.053 (P=0.0005); anxiety: 0.234, −0.046 (P=0.0007); depression: 0.245, −0.052 (P=0.0004); global severity: 0.246, −0.034 (P=0.0002); paired n=449–457 across domains"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.006"
           },
-          "note": "Brief Symptom Inventory P<0.001; Duke Health Profile overall mental health P<0.01.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "P=0.006 is the joint test of nine multiple-question domains; inverse-probability weighted, uncontrolled paired analysis.",
+          "locator": "Full text, Methods, Quality of life outcomes and Analysis, p 2125; Table 2 and Results, p 2126"
+        },
+        {
+          "endpoint": "General quality of life",
+          "role": "primary",
+          "measure": "Weighted paired change from baseline to 6 months (or next nearest visit) in Duke Health Profile scores (0–100; direction varies by domain)",
+          "values": {
+            "exp": "Mental health: baseline 79.8, change +2.09 (P=0.002); self-esteem: 79.3, +2.00 (P=0.001); pain: 29.2, +3.48 (worse; P=0.018); perceived health: 85.3, −2.42 (P=0.053); paired n=484–495 across domains"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "P<0.001 is the joint test of five disjoint domains. Pain worsened despite improvement in mental health; no multiplicity adjustment.",
+          "locator": "Full text, Methods, Quality of life outcomes and Analysis, p 2125; Table 2 and Results, p 2126"
+        },
+        {
+          "endpoint": "Quality of life through 18 months",
+          "role": "secondary",
+          "measure": "Changes from baseline at 3, 6, 12 and 18 months among respondents with paired scores at each visit",
+          "values": {
+            "exp": "Most sexual-function and Duke Health Profile changes persisted through 18 months; erection score fell 2.5 points from month 12 to 18 (P=0.02)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.02"
+          },
+          "note": "Longitudinal results are available-case, unweighted comparisons; the statistically significant 12-to-18-month decline concerns the erection domain.",
+          "locator": "Full text, Methods, Quality of life outcomes and Analysis, p 2125; Figure and Results, Duration of effect, pp 2126–2127"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Pain cited in treatment discontinuation",
+          "values": {
+            "exp": "Among 115 dropout-questionnaire respondents, pain during erection was a major reason for 19.3%; injection pain was a major reason for 17.3%"
+          },
+          "locator": "Full text, Table 3 and Results, Reasons for discontinuing therapy, p 2127",
+          "note": "Reasons among questionnaire respondents, not incidence of treatment-emergent adverse events."
+        }
+      ],
       "delivery": [
         {
-          "label": "Home self-injection and discontinuation",
-          "value": "579 men entered the open-label, flexible-dose self-injection phase; nonfirm erections and injection-site pain were the most frequently cited reasons for discontinuation.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "label": "Home self-injection and completion",
+          "value": "Of 683 enrolled men at 33 US sites, 579 entered open-label, flexible-dose self-injection after office dose titration, with recommended use 1–3 times weekly; 471 completed the initial 6 months, 416 entered the 1-year extension, and 321 completed it.",
+          "locator": "Full text, Methods, Clinical trial, pp 2124–2125"
+        },
+        {
+          "label": "Discontinuation questionnaire",
+          "value": "Across the initial and extension phases, 203 men discontinued and 115 returned questionnaires. Failure to achieve a firm erection contributed at least as a minor factor for 52.3% of respondents and was the major reason for 26.6%.",
+          "locator": "Full text, Results, Reasons for discontinuing therapy and Table 3, pp 2126–2127"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_64692_5.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_64692_5.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

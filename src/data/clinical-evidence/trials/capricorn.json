@@ -41,13 +41,13 @@
         "role": "control"
       }
     ],
-    "population": "Adults with overactive bladder symptoms, at least eight micturitions and three urgency episodes per 24 hours after a two-week placebo run-in.",
+    "population": "Adults with overactive bladder symptoms for at least three months, at least eight micturitions and three grade 3 or 4 urgency episodes per 24 hours after a two-week placebo run-in; predominant stress incontinence was excluded.",
     "description": "Multicenter, double-blind, placebo-controlled randomized superiority trial",
-    "locator": "PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00912964, Participant Flow and Study Design"
+    "locator": "Full text, Methods, p 314; Results, p 315"
   },
   "verdict": "positive",
-  "verdictNote": "Both doses met both coprimary diary endpoints; follow-up ended at 12 weeks.",
-  "takeaway": "In adults with overactive bladder, 12 weeks of mirabegron 25 mg or 50 mg once daily improved micturitions per 24 hours, and incontinence episodes among participants incontinent at baseline, versus placebo; the primary report found no increase in treatment-emergent adverse events with 50 mg.",
+  "verdictNote": "Both coprimary endpoints met for both doses at 12 weeks; 25 mg missed the first key secondary endpoint.",
+  "takeaway": "In adults with overactive bladder, mirabegron 25 mg and 50 mg once daily improved 12-week incontinence episodes and micturition frequency versus placebo. The 50 mg dose also improved voided volume; 25 mg did not meet that key secondary endpoint.",
   "reports": [
     {
       "id": "capricorn-2013",
@@ -58,92 +58,204 @@
       "citation": "Herschorn S, Barkin J, Castro-Diaz D, et al. \"A Phase III, Randomized, Double-blind, Parallel-group, Placebo-controlled, Multicentre Study to Assess the Efficacy and Safety of the β3 Adrenoceptor Agonist, Mirabegron, in Patients With Symptoms of Overactive Bladder.\" *Urology.* 2013;82(2):313-320. doi:10.1016/j.urology.2013.02.077",
       "doi": "10.1016/j.urology.2013.02.077",
       "pmid": "23769122",
-      "followUp": "Final visit after 12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "12 weeks of randomized treatment; safety follow-up two weeks later",
+      "followUpLocator": "Full text, Methods, Assessments, p 314",
       "results": [
         {
           "endpoint": "Incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Change from baseline to final visit in mean incontinence episodes per 24 hours among participants with incontinence at baseline",
+          "measure": "Adjusted change from baseline to final visit in mean episodes per 24 hours, FAS-I",
           "values": {
-            "exp25": "Significantly greater improvement than placebo",
-            "exp50": "Significantly greater improvement than placebo",
-            "ctl": "Reference"
+            "exp25": "-1.36 (n=254)",
+            "exp50": "-1.38 (n=257)",
+            "ctl": "-0.96 (n=262)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.42,
+            "ci": [
+              -0.76,
+              -0.08
+            ],
+            "p": "0.001"
           },
           "met": true,
-          "note": "The abstract reports significance for each dose but gives no arm means, effect estimates, confidence intervals or P values.",
-          "locator": "PubMed abstract, Results"
+          "note": "Effect is 50 mg minus placebo. For 25 mg, difference -0.40 (95% CI -0.74 to -0.06; P=0.005). Both dose comparisons met the prespecified multiplicity-adjusted threshold.",
+          "locator": "Full text, Table 2, p 316; Results, p 315"
         },
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Change from baseline to final visit in mean micturitions per 24 hours",
+          "measure": "Adjusted change from baseline to final visit in mean micturitions per 24 hours, FAS",
           "values": {
-            "exp25": "Significantly greater improvement than placebo",
-            "exp50": "Significantly greater improvement than placebo",
-            "ctl": "Reference"
+            "exp25": "-1.65 (n=410)",
+            "exp50": "-1.60 (n=426)",
+            "ctl": "-1.18 (FAS)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.42,
+            "ci": [
+              -0.76,
+              -0.08
+            ],
+            "p": "0.015"
           },
           "met": true,
-          "note": "The abstract reports significance for each dose but gives no arm means, effect estimates, confidence intervals or P values.",
-          "locator": "PubMed abstract, Results"
+          "note": "Effect is 50 mg minus placebo. For 25 mg, difference -0.47 (95% CI -0.82 to -0.13; P=0.007). Both dose comparisons met the prespecified multiplicity-adjusted threshold.",
+          "locator": "Full text, Table 2, p 316; Results, p 315"
         },
         {
-          "endpoint": "Volume voided per micturition",
-          "role": "secondary",
-          "measure": "Change from baseline to final visit in mean volume voided per micturition",
+          "endpoint": "Volume voided per micturition, 25 mg",
+          "role": "key-secondary",
+          "measure": "Adjusted change from baseline to final visit in mean volume voided per micturition, mL, FAS",
           "values": {
-            "exp50": "Significantly greater improvement than placebo",
+            "exp25": "+12.8 mL (n=410)",
             "ctl": "Reference"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 4.6,
+            "ci": [
+              -1.6,
+              10.8
+            ],
+            "p": "0.15"
           },
-          "note": "The abstract reports a significant result for 50 mg; it does not give a comparative estimate for 25 mg.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "25 mg minus placebo; this comparison missed the prespecified threshold, stopping the gate for subsequent 25 mg key secondary endpoints.",
+          "locator": "Full text, Table 2, p 316; Results, p 315"
         },
         {
-          "endpoint": "Patient-reported outcomes",
-          "role": "secondary",
-          "measure": "OAB-questionnaire, Patient Perception of Bladder Condition, and treatment-satisfaction visual analog scale at final visit",
+          "endpoint": "Volume voided per micturition, 50 mg",
+          "role": "key-secondary",
+          "measure": "Adjusted change from baseline to final visit in mean volume voided per micturition, mL, FAS",
           "values": {
-            "exp50": "Significant improvement versus placebo on all reported scales",
+            "exp50": "+20.7 mL (n=426)",
             "ctl": "Reference"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 12.4,
+            "ci": [
+              6.3,
+              18.6
+            ],
+            "p": "<0.001"
           },
-          "note": "The abstract does not give scale scores or comparative estimates.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "met": true,
+          "note": "50 mg minus placebo; met the prespecified key secondary threshold. The 25 mg comparison is recorded separately.",
+          "locator": "Full text, Table 2, p 316; Results, p 315"
+        },
+        {
+          "endpoint": "Incontinence episodes per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted change from baseline to week 4 in mean episodes per 24 hours, FAS-I",
+          "values": {
+            "exp50": "-1.13 (n=257)",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.51,
+            "ci": [
+              -0.85,
+              -0.17
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Effect is 50 mg minus placebo and met the gatekeeping threshold. For 25 mg, nominal difference -0.34 (95% CI -0.68 to -0.01; P=0.039); its gate had stopped at voided volume.",
+          "locator": "Full text, Table 2, p 316; Results, p 315"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted change from baseline to week 4 in mean micturitions per 24 hours, FAS",
+          "values": {
+            "exp50": "-1.14 (n=426)",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.37,
+            "ci": [
+              -0.71,
+              -0.03
+            ],
+            "p": "0.035"
+          },
+          "met": false,
+          "note": "Effect is 50 mg minus placebo; P=0.035 did not meet the 0.025 gatekeeping threshold. The 25 mg nominal difference was -0.18 (95% CI -0.53 to +0.16; P=0.30), after its gate had stopped.",
+          "locator": "Full text, Table 2, p 316; Methods, Statistical Analysis, p 314"
+        },
+        {
+          "endpoint": "Treatment satisfaction (TS-VAS)",
+          "role": "secondary",
+          "measure": "Adjusted change from baseline to final visit in treatment-satisfaction visual analog scale, FAS",
+          "values": {
+            "exp25": "+1.54 (n=410)",
+            "exp50": "+1.88 (n=426)",
+            "ctl": "Reference"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 0.83,
+            "ci": [
+              0.41,
+              1.25
+            ],
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Effect is 50 mg minus placebo. For 25 mg, TS-VAS difference +0.49 (95% CI +0.07 to +0.91; P=0.024). OAB-q symptom bother differed for 50 mg by -2.8 (95% CI -5.3 to -0.3; P=0.028) and for 25 mg by -1.8 (95% CI -4.3 to +0.7; P=0.15). These patient-reported tests were additional secondary analyses outside the gatekeeping hierarchy. Neither OAB-q HRQL total score nor PPBC differed significantly from placebo.",
+          "locator": "Full text, Table 2, p 317; Results, p 315"
         }
       ],
       "harms": [
         {
           "label": "Treatment-emergent adverse events",
           "values": {
-            "exp50": "No increase versus placebo reported",
-            "ctl": "Reference"
+            "exp25": "210/432 (48.6%)",
+            "exp50": "208/440 (47.3%)",
+            "ctl": "217/433 (50.1%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports no incidence or event-specific counts and does not give a separate 25 mg comparison."
+          "locator": "Full text, Table 3, p 318; Safety Assessments, p 315",
+          "note": "Safety analysis set. Severe treatment-emergent events: 8/432 (1.9%), 8/440 (1.8%), and 16/433 (3.7%), respectively. Hypertension preferred-term events: 49/432 (11.3%), 47/440 (10.7%), and 37/433 (8.5%)."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp25": "18/432 (4.2%)",
+            "exp50": "21/440 (4.8%)",
+            "ctl": "10/433 (2.3%)"
+          },
+          "locator": "Full text, Table 3, p 318",
+          "note": "Treatment-emergent urinary tract infection, safety analysis set."
+        },
+        {
+          "label": "Urinary retention and elevated post-void residual",
+          "values": {
+            "exp25": "0/432 retention; 0 PVR >=300 mL",
+            "exp50": "0/440 retention; 1 PVR >=300 mL",
+            "ctl": "1/433 retention; 2 PVR >=300 mL"
+          },
+          "locator": "Full text, Safety Assessments, p 317",
+          "note": "Retention was an adverse event. PVR values refer to the final visit; the paper does not give a final-visit denominator."
         }
       ],
       "delivery": [
         {
-          "label": "Drug regimen and observation",
-          "value": "Mirabegron 25 mg, mirabegron 50 mg, or matching placebo once daily for 12 weeks after a two-week single-blind placebo run-in.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "label": "Drug regimen and completion",
+          "value": "Mirabegron 25 mg, mirabegron 50 mg, or matching placebo once daily for 12 weeks after a two-week single-blind placebo run-in; 46/433 (10.6%), 54/440 (12.3%), and 66/433 (15.2%), respectively, discontinued treatment.",
+          "locator": "Full text, Methods, p 314; Safety Assessments and Figure 1, p 317-318",
+          "note": "Safety follow-up was two weeks after the final treatment visit."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2013_02_077.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2013_02_077.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
@@ -161,7 +273,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/capricorn",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

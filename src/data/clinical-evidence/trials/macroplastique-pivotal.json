@@ -186,25 +186,25 @@
       "doi": "10.1016/j.juro.2009.12.038",
       "pmid": "20171691",
       "followUp": "24 months after last injection, among 12-month Macroplastique responders",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 1445; Results, p 1446",
       "results": [
         {
           "endpoint": "Sustained Stamey improvement",
-          "role": "descriptive",
-          "measure": "At least one-grade improvement maintained at 24 months among 12-month responders",
+          "role": "primary",
+          "measure": "At least one-grade Stamey improvement maintained at 24 months among 67 followed 12-month responders (75 eligible)",
           "values": {
             "exp": "56/67 (84%)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "Selected Macroplastique responders only; no randomized control follow-up.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Primary followed analysis; no prespecified success threshold or hypothesis test. Eight of 75 responders withdrew.",
+          "locator": "Full text, Materials and Methods, p 1445; Figure 3 and Results, p 1446"
         },
         {
           "endpoint": "Dryness",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Stamey grade 0 at 24 months among 12-month responders",
           "values": {
             "exp": "45/67 (67%)"
@@ -212,17 +212,75 @@
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "Selected Macroplastique responders only.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Of 38 women dry at 12 months, 33 remained dry; 12 of 29 improved but not dry became dry by 24 months. No prespecified threshold.",
+          "locator": "Full text, Figure 3 and Results, p 1446"
+        },
+        {
+          "endpoint": "Sustained Stamey improvement sensitivity analyses",
+          "role": "exploratory",
+          "measure": "At least one-grade improvement at 24 months among all 75 selected 12-month responders",
+          "values": {
+            "exp": "56/75 (74.7%) with withdrawals as failures; 64/75 (85.3%) with last observation carried forward"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Sensitivity analyses of attrition; neither is the primary followed analysis.",
+          "locator": "Full text, Discussion, p 1447"
+        },
+        {
+          "endpoint": "One-hour pad-weight improvement",
+          "role": "secondary",
+          "measure": "At least 50% reduction in one-hour pad weight from baseline at 24 months in followed responders",
+          "values": {
+            "exp": "53/67 (79.1%); mean 24 g at baseline and 4 g at both 12 and 24 months"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "No prespecified threshold; 54/67 (80.6%) had at least 50% reduction at 12 months.",
+          "locator": "Full text, Results, p 1447; Figure 4B"
+        },
+        {
+          "endpoint": "Incontinence quality of life",
+          "role": "secondary",
+          "measure": "Mean change in total I-QOL score from baseline at 24 months among 63 with paired data",
+          "values": {
+            "exp": "+28.2 ± 24.0 points (n=63)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Met the stated 0.05 significance threshold in a two-sided paired t test; no multiple-comparison adjustment.",
+          "locator": "Full text, Materials and Methods, p 1446; Results, p 1447"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Genitourinary adverse events, months 12–24",
+          "values": {
+            "exp": "Among 67 followed responders, 4 women had 6 urinary tract infection events during months 12–24; no treatment- or device-related adverse events were reported"
+          },
+          "locator": "Full text, Table 2 and Results, p 1447",
+          "note": "Table 2 prints 3.3% for 4 affected women, corresponding mathematically to 122 initially treated; 67 responders were followed."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Retreatment, injection volume, and anesthesia in followed responders",
+          "value": "33/67 (49.3%) received repeat treatment at 3 months; mean first and second treatment volumes were 4.5 and 4.3 mL, mean total volume 6.6 mL per patient; local anesthesia was used for 73% of treatments.",
+          "locator": "Full text, Materials and Methods, p 1446"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_12_038.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_12_038.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

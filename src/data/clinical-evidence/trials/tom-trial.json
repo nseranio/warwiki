@@ -168,13 +168,13 @@
       "citation": "Travison TG, Basaria S, Storer TW, et al. \"Clinical Meaningfulness of the Changes in Muscle Performance and Physical Function Associated With Testosterone Administration in Older Men With Mobility Limitation.\" *J Gerontol A Biol Sci Med Sci.* 2011;66(10):1090-1099. doi:10.1093/gerona/glr100",
       "doi": "10.1093/gerona/glr100",
       "pmid": "21697501",
-      "followUp": "6-month treatment; 165 men with follow-up efficacy measures",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUp": "Planned 6-month treatment; 165 men with at least one postrandomization efficacy measure (82 testosterone, 83 placebo); 138 completed 6 months (69 per arm)",
+      "followUpLocator": "Full text, Results: Flow of Participants, p 1093; Table 1, p 1094",
       "results": [
         {
-          "endpoint": "Patient-important stair-climbing power improvement",
+          "endpoint": "Minimally important improvement in loaded stair-climbing power",
           "role": "secondary",
-          "measure": "Proportion exceeding minimally important difference in stair-climbing power",
+          "measure": "Proportion reaching or exceeding the participant-anchored minimally important difference for loaded 12-step stair-climbing power",
           "values": {
             "exp": "28%",
             "ctl": "10%"
@@ -183,16 +183,72 @@
             "type": "none",
             "p": "0.03"
           },
-          "note": "Secondary analysis; arm-specific denominators are absent from the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Secondary functional endpoint analyzed by an anchor-based minimally important difference; endpoint-specific arm denominators and a confidence interval are not reported. Reported number needed to treat: 5.5.",
+          "locator": "Full text, Methods: Physical function and Minimally Important Difference, p 1092; Results: Efficacy Outcomes, p 1094; Figure 2, p 1095"
+        },
+        {
+          "endpoint": "Minimally important improvement in leg-press strength",
+          "role": "exploratory",
+          "measure": "Proportion reaching or exceeding the participant-anchored minimally important difference for the prespecified primary leg-press strength outcome",
+          "values": {
+            "exp": "43%",
+            "ctl": "18%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Anchor-based responder analysis of the primary strength outcome; endpoint-specific arm denominators and a confidence interval are not reported. Reported number needed to treat: 4.0.",
+          "locator": "Full text, Methods: Minimally Important Difference, p 1092; Results: Efficacy Outcomes, p 1094; Figure 2, p 1095; Discussion, p 1097"
+        },
+        {
+          "endpoint": "Posttreatment total lean mass",
+          "role": "secondary",
+          "measure": "Total lean mass at posttreatment, kg; between-arm difference in change from baseline, kg",
+          "values": {
+            "exp": "56.1 ± 6.9 kg (n=77)",
+            "ctl": "56.2 ± 6.3 kg (n=80)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.5,
+            "ci": [
+              0.4,
+              2.2
+            ],
+            "p": "<0.0001"
+          },
+          "note": "Baseline means were 55.1 kg (n=82) and 56.5 kg (n=81), respectively.",
+          "locator": "Full text, Table 2, p 1096, ITT sample, total lean mass, posttreatment"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Cardiovascular-related adverse events in the efficacy-analysis sample",
+          "values": {
+            "exp": "17/82",
+            "ctl": "5/83"
+          },
+          "note": "Twenty-two of the 28 participants with cardiovascular-related events were included in the 165-man efficacy sample; no significant outcome differences by event status were observed, with limited power.",
+          "locator": "Full text, Results: Relation of Cardiovascular Adverse Events to Treatment Responsiveness, pp 1094–1096; Table 1, p 1094"
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Efficacy-analysis and completion samples",
+          "value": "Of 209 randomized men, 165 had at least one postrandomization efficacy measure (82 testosterone, 83 placebo); 138 completed the six-month intervention (69 per arm). Some efficacy measures were collected at intervention discontinuation before six months.",
+          "locator": "Full text, Methods: Outcomes and Statistical Analyses, p 1092; Results: Flow of Participants, p 1093; Table 1, p 1094"
+        },
+        {
+          "label": "Modified physical-function testing",
+          "value": "Men at high cardiovascular risk or with limited exercise tolerance underwent a lower-stress modified testing battery; other men underwent exercise-tolerance testing before loaded strength and function assessments.",
+          "locator": "Full text, Methods: Outcomes, p 1092; Figure 1 legend, p 1093"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_gerona_glr100.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1093_gerona_glr100.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

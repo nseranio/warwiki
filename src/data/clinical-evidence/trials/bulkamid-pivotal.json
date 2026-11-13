@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with stress urinary incontinence or stress-predominant mixed urinary incontinence at North American study centers.",
-    "description": "Multicenter, single-blind noninferiority randomized trial",
-    "locator": "Sokol 2014, PubMed abstract, Materials and Methods and Results"
+    "population": "Women aged at least 18 years with stress urinary incontinence due to intrinsic sphincter deficiency or stress-predominant mixed incontinence; urethral hypermobility, prior bulking and stage 3–4 prolapse excluded.",
+    "description": "33-center, single-blind noninferiority randomized trial",
+    "locator": "Full text, Elmelund 2019, Study Population, p 126; Sokol 2014, Results, p 845"
   },
   "verdict": "noninferior",
-  "verdictNote": "Noninferiority was reported for the composite leakage and episode response at one year.",
-  "takeaway": "In women with stress or stress-predominant mixed incontinence, Bulkamid polyacrylamide hydrogel injection was noninferior to Contigen collagen gel injection for at least 50% reduction in both leakage and incontinence episodes at one year (53.2% versus 55.4% in the journal report).",
+  "verdictNote": "Per-protocol and intention-to-treat composite responses met the 15-point noninferiority margin.",
+  "takeaway": "In women with stress or stress-predominant mixed incontinence, Bulkamid hydrogel was noninferior to Contigen collagen for at least 50% reduction in pad-test leakage and daily incontinence episodes at 12 months: 75/141 (53.2%) versus 36/65 (55.4%) per protocol.",
   "reports": [
     {
       "id": "bulkamid-pivotal-2014",
@@ -53,64 +53,131 @@
       "doi": "10.1016/j.juro.2014.03.109",
       "pmid": "24704117",
       "followUp": "12 months after the last injection",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUpLocator": "Full text, Methods, Followup and Results, pp 844–847",
       "results": [
         {
           "endpoint": "Composite leakage and episode response",
           "role": "primary",
-          "measure": "At least 50% reduction in both leakage and incontinence episodes at 12 months",
+          "measure": "At least 50% reduction in both 24-hour pad-test leakage and daily incontinence episodes at 12 months; per-protocol population",
           "values": {
-            "exp": "53.2%",
-            "ctl": "55.4%"
+            "exp": "75/141 (53.2%)",
+            "ctl": "36/65 (55.4%)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -2.2,
+            "unit": "percentage points",
+            "p": "0.0430 (one-sided noninferiority); 0.6156 (superiority)"
           },
           "met": true,
-          "note": "The abstract reports noninferiority but gives no margin, confidence interval, or analysis denominators.",
-          "locator": "PubMed abstract, Results and Conclusions"
+          "note": "Prespecified noninferiority margin 15 percentage points; no confidence interval reported.",
+          "locator": "Full text, Statistics, p 845; Table 2, p 847"
+        },
+        {
+          "endpoint": "Composite leakage and episode response, intention-to-treat",
+          "role": "primary",
+          "measure": "At least 50% reduction in both 24-hour pad-test leakage and daily incontinence episodes at 12 months; intention-to-treat population",
+          "values": {
+            "exp": "105/229 (45.9%)",
+            "ctl": "48/116 (41.4%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 4.5,
+            "unit": "percentage points",
+            "p": "0.0003 (one-sided noninferiority); 0.2137 (superiority)"
+          },
+          "met": true,
+          "note": "Prespecified noninferiority margin 15 percentage points; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 847"
         },
         {
           "endpoint": "Zero stress incontinence episodes",
           "role": "secondary",
           "measure": "Patient-reported zero stress episodes at 12 months",
           "values": {
-            "exp": "47.2%",
-            "ctl": "50.0%"
+            "exp": "91/193 (47.2%)",
+            "ctl": "50/99 (50.5%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "Paper prints 50/99 as 50%; recalculated value is 50.5%.",
+          "locator": "Full text, Results, p 845",
+          "met": "not-tested"
         },
         {
           "endpoint": "Self-rated cure or improvement",
           "role": "secondary",
           "measure": "Patient-reported cured or improved at 12 months",
           "values": {
-            "exp": "77.1%",
-            "ctl": "70.0%"
+            "exp": "145/188 (77.1%)",
+            "ctl": "70/100 (70.0%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.2019"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 846; Table 2, p 847",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Dry by 24-hour pad test",
+          "role": "secondary",
+          "measure": "24-hour pad-test leakage at most 4 g at 12 months",
+          "values": {
+            "exp": "44/183 (24.0%)",
+            "ctl": "22/90 (24.4%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "1.0000"
+          },
+          "met": "not-tested",
+          "note": "Secondary endpoint; no prespecified success threshold.",
+          "locator": "Full text, Methods, p 845; Table 2, p 847"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Procedure- or device-related serious adverse event",
+          "values": {
+            "exp": "1/229 (0.4%)",
+            "ctl": "0/116 (0.0%)"
+          },
+          "note": "Across both arms, 24 serious adverse events occurred in 22 women; only transient hematuria in the hydrogel arm was probably procedure-related.",
+          "locator": "Full text, Adverse Events, p 847; Table 4, p 848"
+        },
+        {
+          "label": "Common procedure- or device-related adverse events",
+          "values": {
+            "exp": "Any 58/229 (25.3%); acute retention 13/229 (5.7%); urinary tract infection 8/229 (3.5%); implant-site pain 28/229 (12.2%)",
+            "ctl": "Any 32/116 (27.6%); acute retention 11/116 (9.5%); urinary tract infection 7/116 (6.0%); implant-site pain 9/116 (7.8%)"
+          },
+          "locator": "Full text, Adverse Events, p 847; Table 3, p 848"
+        }
+      ],
       "delivery": [
         {
           "label": "Injection schedule",
-          "value": "Up to three urethral submucosal injections at one-month intervals",
-          "locator": "PubMed abstract, Purpose and Materials and Methods"
+          "value": "Up to three urethral submucosal injections at approximately one-month intervals; 1–2 mL hydrogel per session at three sites, at most 0.6 mL per site, under endoscopic guidance and local anesthesia.",
+          "locator": "Full text, Treatment, p 844"
+        },
+        {
+          "label": "Repeat injection and total dose",
+          "values": {
+            "exp": "Second injection 177/229 (77.3%); third 82/229 (35.8%); mean total volume 3.3 mL (SD 1.6; n=229)",
+            "ctl": "Second injection 77/116 (66.4%); third 30/116 (25.9%); mean total volume 8.6 mL (SD 7.0; n=115)"
+          },
+          "note": "Between-arm total-volume P <0.0001.",
+          "locator": "Full text, Results, p 845; Table 2, p 847"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2014_03_109.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2014_03_109.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -123,32 +190,67 @@
       "doi": "10.1097/JU.0000000000000176",
       "pmid": "30810462",
       "followUp": "One year after injection",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Exploratory Outcome Measures, pp 126–127",
       "results": [
         {
           "endpoint": "Pooled post hoc cure and improvement",
           "role": "exploratory",
-          "measure": "One-year outcome among both agents combined",
+          "measure": "12-month SUI cure, improvement, or no effect in 291 post-hoc participants pooled across both agents",
           "effect": {
             "type": "none"
           },
-          "note": "Among 291 analyzed women (191 Bulkamid, 100 Contigen), 74 (25%) were cured, 164 (56%) improved, and 53 (18%) had no effect. Age at least 60 years and fewer than 2.5 daily stress episodes were associated with cure; 90% had an effect and 38% were cured in that subgroup versus 13% cured among younger women with at least 2.5 episodes.",
-          "locator": "PubMed abstract, Results"
+          "note": "Cured: 74/291 (25.4%); improved: 164/291 (56.4%); no effect: 53/291 (18.2%). Cure required no diary SUI episodes and no ICIQ-UI-SF stress symptoms. One woman randomized to collagen received hydrogel. Among women at least 60 years old with fewer than 2.5 daily SUI episodes, 90% had a treatment effect and 38% were cured, versus 13% cured among younger women with at least 2.5 episodes.",
+          "locator": "Full text, Exploratory Outcome Measures, p 126; Results and Table 1, p 127",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Age at least 60 years and SUI cure",
+          "role": "exploratory",
+          "measure": "Adjusted odds of cure versus no effect at 12 months among 124 model participants",
+          "effect": {
+            "type": "OR",
+            "value": 3.0,
+            "ci": [
+              1.35,
+              6.66
+            ],
+            "p": "0.007"
+          },
+          "met": "not-tested",
+          "note": "Reference: younger than 60 years; adjusted for daily SUI episodes, previous SUI surgery and leak point pressure.",
+          "locator": "Full text, Table 2, p 128"
+        },
+        {
+          "endpoint": "Fewer than 2.5 daily stress episodes and SUI cure",
+          "role": "exploratory",
+          "measure": "Adjusted odds of cure versus no effect at 12 months among 124 model participants",
+          "effect": {
+            "type": "OR",
+            "value": 2.39,
+            "ci": [
+              1.08,
+              5.26
+            ],
+            "p": "0.031"
+          },
+          "met": "not-tested",
+          "note": "Reference: at least 2.5 episodes daily; adjusted for age, previous SUI surgery and leak point pressure.",
+          "locator": "Full text, Table 2, p 128"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000176.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_ju_0000000000000176.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/bulkamid-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

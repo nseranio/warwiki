@@ -255,16 +255,16 @@
       "citation": "Horrocks EJ, Chadi SA, Stevens NJ, et al. \"Factors Associated With Efficacy of Percutaneous Tibial Nerve Stimulation for Fecal Incontinence, Based on Post-Hoc Analysis of Data From a Randomized Trial.\" *Clin Gastroenterol Hepatol.* 2017;15(12):1915-1921.e2. doi:10.1016/j.cgh.2017.06.032",
       "doi": "10.1016/j.cgh.2017.06.032",
       "pmid": "28647458",
-      "followUp": "Responder status after 12 weeks of treatment in 205 participants with trial data",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUp": "Responder status after 12 weeks of treatment in 205 participants with complete outcome data",
+      "followUpLocator": "Full text, Post Hoc Study Design, p 1916",
       "results": [
         {
           "endpoint": "≥50% reduction in weekly faecal incontinence episodes without obstructive-defecation symptoms",
-          "role": "exploratory",
-          "measure": "Post-hoc subgroup response after excluding obstructive-defecation symptoms; adjusted odds ratio",
+          "role": "primary",
+          "measure": "Post-hoc responder comparison in 93 participants without obstructed-defecation symptoms; multivariable odds ratio adjusted for baseline covariates",
           "values": {
-            "exp": "48.9%",
-            "ctl": "18.2%"
+            "exp": "24/49 (49%)",
+            "ctl": "8/44 (18%)"
           },
           "effect": {
             "type": "OR",
@@ -275,16 +275,74 @@
             ],
             "p": "0.003"
           },
-          "note": "Reanalysis included 112 participants; the unadjusted subgroup comparison had P=0.002.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "The paper calls diary-defined response its primary outcome; this subgroup analysis was post hoc and not a prespecified confirmatory test. The paper reports 48.9% and 18.2%; Table 2 gives 24/49 and 8/44, which round to 49% and 18%. The 112 participants had obstructed-defecation symptoms and were excluded. Unadjusted P=0.002.",
+          "locator": "Full text, Table 2, p 1918; Results and Table 5, p 1919"
+        },
+        {
+          "endpoint": "Obstructed-defecation symptoms as predictor of PTNS response",
+          "role": "exploratory",
+          "measure": "At least one baseline symptom versus none; multivariable odds ratio for diary-defined response within PTNS arm",
+          "values": {
+            "exp": "15/54 with symptoms (28%) versus 24/49 without (49%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 0.38,
+            "ci": [
+              0.16,
+              0.91
+            ],
+            "p": "0.029"
+          },
+          "met": "not-tested",
+          "note": "Symptoms were difficulty evacuating, excessive straining, regular digitation, or incomplete emptying. Post-hoc predictor analysis.",
+          "locator": "Full text, Methods, p 1917; Tables 2–3, pp 1918–1919"
+        },
+        {
+          "endpoint": "Obstructed-defecation symptoms as predictor of sham response",
+          "role": "exploratory",
+          "measure": "At least one baseline symptom versus none; multivariable odds ratio for diary-defined response within sham arm",
+          "values": {
+            "ctl": "24/58 with symptoms (41%) versus 8/44 without (18%)"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 3.45,
+            "ci": [
+              1.31,
+              9.11
+            ],
+            "p": "0.012"
+          },
+          "met": "not-tested",
+          "note": "Post-hoc predictor analysis; the abstract prints upper CI 9.21, while Table 4 prints 9.11.",
+          "locator": "Full text, Table 2, p 1918; Results and Table 4, p 1919"
+        },
+        {
+          "endpoint": "Sensation of blockage as predictor of PTNS response",
+          "role": "exploratory",
+          "measure": "Baseline symptom present versus absent; multivariable odds ratio for diary-defined response within PTNS arm",
+          "effect": {
+            "type": "OR",
+            "value": 0.15,
+            "ci": [
+              0.03,
+              0.75
+            ],
+            "p": "0.02"
+          },
+          "met": "not-tested",
+          "note": "Only this individual obstructed-defecation symptom predicted PTNS response in the component analysis.",
+          "locator": "Full text, Results, p 1918; Supplementary Table 3, p 1921.e2"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_cgh_2017_06_032.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_cgh_2017_06_032.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

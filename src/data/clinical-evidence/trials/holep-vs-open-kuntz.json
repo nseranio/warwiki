@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstracts",
+    "blinding": "not reported",
     "type": "superiority",
     "n": 120,
     "arms": [
@@ -35,12 +35,12 @@
         "role": "control"
       }
     ],
-    "population": "120 urodynamically obstructed men with prostate size greater than 100 g on transrectal ultrasonography.",
+    "population": "120 men with symptomatic, urodynamically confirmed obstruction and prostate volume at least 100 mL on transrectal ultrasonography.",
     "description": "Prospective randomized surgical comparison",
-    "locator": "Primary PubMed abstract, Materials and Methods; 18-month PubMed abstract, Patients and Methods"
+    "locator": "Full text, Materials and methods, p 161; primary PubMed abstract, Materials and Methods"
   },
   "verdict": "mixed",
-  "verdictNote": "Voiding improvements were similar; HoLEP reduced perioperative morbidity, but no prespecified primary threshold was reported.",
+  "verdictNote": "Voiding improvements were similar; HoLEP reduced perioperative morbidity; five-year outcomes used completers.",
   "takeaway": "In obstructed men with prostates larger than 100 g, holmium laser enucleation and transvesical open prostatectomy produced similar six-month voiding improvements; enucleation had less blood loss, shorter catheterization and hospitalization, and fewer transfusions, but longer operating time.",
   "reports": [
     {
@@ -219,78 +219,106 @@
       "published": "2007-08-28",
       "dateLocator": "PubMed citation, Epub 2007 August 28",
       "cutoff": null,
-      "citation": "Kuntz RM, Lehrich K, Ahyai SA. \"Holmium laser enucleation of the prostate versus open prostatectomy for prostates greater than 100 grams: 5-year follow-up results of a randomised clinical trial.\" *Eur Urol.* 2008;53(1):160-166. doi:10.1016/j.eururo.2007.08.036",
+      "citation": "Kuntz RM, Lehrich K, Ahyai SA. \"Holmium laser enucleation of the prostate versus open prostatectomy for prostates greater than 100 grams: 5-year follow-up results of a randomised clinical trial.\" *Eur Urol.* 2008;53(1):160-168. doi:10.1016/j.eururo.2007.08.036",
       "doi": "10.1016/j.eururo.2007.08.036",
       "pmid": "17869409",
-      "followUp": "Five-year assessment in 74/120 randomized patients; 46/120 lost to follow-up or excluded",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUp": "Five-year assessment in 74/120 randomized patients (42/60 HoLEP, 32/60 open); 46/120 lost to follow-up or excluded",
+      "followUpLocator": "Full text, Results, Dropout, p 162; Tables 2 and 4",
       "results": [
         {
           "endpoint": "AUA symptom score",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean score at five years",
           "values": {
-            "exp": "3.0 (42 assessed)",
-            "ctl": "3.0 (32 assessed)"
+            "exp": "3.0 ± 3.2 (42/60 assessed)",
+            "ctl": "3.0 ± 1.7 (32/60 assessed)"
           },
           "effect": {
             "type": "none",
             "p": "0.98"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Five-year completers; between-group Mann–Whitney comparison. No effect estimate or confidence interval reported.",
+          "locator": "Full text, Table 2, p 163; Statistical analysis, p 162"
         },
         {
           "endpoint": "Peak flow",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean Qmax at five years",
           "values": {
-            "exp": "24.4 mL/s (42 assessed)",
-            "ctl": "24.4 mL/s (32 assessed)"
+            "exp": "24.3 ± 10.1 mL/s (42/60 assessed)",
+            "ctl": "24.4 ± 7.4 mL/s (32/60 assessed)"
           },
           "effect": {
             "type": "none",
             "p": "0.97"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Five-year completers; between-group Mann–Whitney comparison. No effect estimate or confidence interval reported.",
+          "locator": "Full text, Table 2, p 163; Statistical analysis, p 162"
         },
         {
           "endpoint": "Postvoid residual",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean residual volume at five years",
           "values": {
-            "exp": "11 mL (42 assessed)",
-            "ctl": "5 mL (32 assessed)"
+            "exp": "10.6 ± 24.4 mL (42/60 assessed)",
+            "ctl": "5.3 ± 11.2 mL (32/60 assessed)"
           },
           "effect": {
             "type": "none",
             "p": "0.25"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Five-year completers; between-group Mann–Whitney comparison. No effect estimate or confidence interval reported.",
+          "locator": "Full text, Table 2, p 163; Statistical analysis, p 162"
         }
       ],
       "harms": [
         {
-          "label": "Reoperation through five years",
+          "label": "Late reoperation more than four weeks after surgery through five years",
           "values": {
-            "exp": "5%",
-            "ctl": "6.7%"
+            "exp": "3/60 (5.0%)",
+            "ctl": "4/60 (6.7%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Abstract gives percentages but no event counts or rate denominator; P = 1.0."
+          "locator": "Full text, Table 3 and Results, Complications, pp 162–163; Discussion, p 165",
+          "note": "Late reoperations after 4 weeks; original randomized arm denominators; P = 1.0."
+        },
+        {
+          "label": "Late urethral stricture requiring visual urethrotomy",
+          "values": {
+            "exp": "2/60 (3.3%)",
+            "ctl": "1/60 (1.7%)"
+          },
+          "locator": "Full text, Table 3, p 163; Discussion, p 165"
+        },
+        {
+          "label": "Late bladder-neck contracture requiring laser incision",
+          "values": {
+            "exp": "1/60 (1.7%)",
+            "ctl": "3/60 (5.0%)"
+          },
+          "locator": "Full text, Table 3, p 163; Discussion, p 165"
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "HoLEP enucleation and tissue retrieval",
+          "value": "2.0 J, 40–50 Hz, 80–100 W Ho:YAG laser; retrograde dissection from apex to bladder; mushroom electrocautery loop fragmentation in 50/60 and mechanical morcellation in 10/60",
+          "locator": "Full text, Materials and methods, Surgical procedures, pp 161–162"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_08_036.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_08_036.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/holep-vs-open-kuntz",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

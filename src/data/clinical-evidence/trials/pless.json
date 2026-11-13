@@ -144,28 +144,98 @@
       "doi": "10.1016/S0090-4295(98)00654-2",
       "pmid": "10096369",
       "followUp": "4 years (PLESS subgroup analysis)",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 474",
       "results": [
         {
-          "endpoint": "Spontaneous retention prediction in placebo recipients",
+          "endpoint": "Spontaneous retention prediction by baseline PSA",
           "role": "descriptive",
           "measure": "Area under the receiver operating characteristic curve",
           "values": {
-            "ctl": "0.70 for baseline PSA; 0.81 for baseline prostate volume"
+            "exp": "0.53 for baseline PSA",
+            "ctl": "0.70 for baseline PSA"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.012 (between treatment groups)"
+          },
+          "note": "Baseline PSA was available for 1,512 finasteride and 1,498 placebo recipients; descriptive ROC analysis.",
+          "locator": "Full text, Table I and Table II, pp 475, 478"
+        },
+        {
+          "endpoint": "Spontaneous retention prediction by prostate volume",
+          "role": "descriptive",
+          "measure": "Area under the receiver operating characteristic curve; MRI subset",
+          "values": {
+            "exp": "0.67 (n=157 with baseline MRI)",
+            "ctl": "0.81 (n=155 with baseline MRI)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.665 (between treatment groups)"
+          },
+          "locator": "Full text, Table I and Table II, pp 475, 478"
+        },
+        {
+          "endpoint": "Acute urinary retention or BPH surgery by low baseline PSA",
+          "role": "descriptive",
+          "measure": "Four-year cumulative incidence in PSA tertile 0.2–1.3 ng/mL; tertile sizes 472 finasteride and 511 placebo",
+          "values": {
+            "exp": "4.4%",
+            "ctl": "7.8%"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.57,
+            "ci": [
+              0.35,
+              0.95
+            ],
+            "p": "0.030"
+          },
+          "note": "Cumulative incidence estimates; event numerators are not reported.",
+          "locator": "Full text, Table I and Results, pp 475–476, Figures 1B and 2A"
+        },
+        {
+          "endpoint": "Acute urinary retention or BPH surgery by high baseline PSA",
+          "role": "descriptive",
+          "measure": "Four-year cumulative incidence in PSA tertile 3.3–12.0 ng/mL; tertile sizes 504 finasteride and 473 placebo",
+          "values": {
+            "exp": "8.3%",
+            "ctl": "19.9%"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 0.4,
+            "ci": [
+              0.29,
+              0.56
+            ],
+            "p": "<0.001"
+          },
+          "note": "Cumulative incidence estimates; event numerators are not reported.",
+          "locator": "Full text, Table I and Results, pp 475–476, Figures 1B and 2C"
+        },
+        {
+          "endpoint": "Acute urinary retention or BPH surgery by prostate-volume tertile",
+          "role": "descriptive",
+          "measure": "Four-year cumulative incidence across lowest to highest volume tertiles in MRI subset (n=312)",
+          "values": {
+            "exp": "5.1%–5.6% across tertiles",
+            "ctl": "8.9% (lowest) to 22.0% (highest)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Prostate volume was measured in a 312-man baseline subset.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Reported finasteride risk reduction ranged from 50% to 74%; no interval or event numerators reported.",
+          "locator": "Full text, Results, p 475, Figure 1A"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00654_2.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00654_2.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -224,7 +294,7 @@
       "doi": "10.1016/S0090-4295(02)02401-9",
       "pmid": "12639651",
       "followUp": "4 years (PLESS safety analysis)",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 580",
       "results": [],
       "harms": [
         {
@@ -233,24 +303,65 @@
             "exp": "15%",
             "ctl": "7%"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Spontaneously reported; the abstract does not give event numerators."
+          "locator": "Full text, Results, pp 580–581, Figure 1",
+          "note": "Spontaneously reported; P <0.001; event numerators are not reported."
         },
         {
           "label": "Discontinuation because of sexual adverse events",
           "values": {
-            "exp": "4%",
-            "ctl": "2%"
+            "exp": "57/1,524 (4%)",
+            "ctl": "32/1,516 (2%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not give event numerators."
+          "locator": "Full text, Results, p 581"
+        },
+        {
+          "label": "Investigator-attributed sexual adverse events over 4 years",
+          "values": {
+            "exp": "22%",
+            "ctl": "14%"
+          },
+          "note": "At least one event; P <0.001; event numerators are not reported.",
+          "locator": "Full text, Results, p 580"
+        },
+        {
+          "label": "New investigator-attributed sexual adverse events during years 2–4",
+          "values": {
+            "exp": "7%",
+            "ctl": "7%"
+          },
+          "note": "Restricted to men followed at least 1 year without a first-year sexual adverse event; subgroup denominators are not reported.",
+          "locator": "Full text, Statistical Analysis, p 580; Results, p 581, Figure 2"
+        },
+        {
+          "label": "Severe investigator-attributed sexual adverse events over 4 years",
+          "values": {
+            "exp": "3.6%",
+            "ctl": "2.4%"
+          },
+          "note": "Most events were mild or moderate; severe-event numerators are not reported.",
+          "locator": "Full text, Results, p 581; Table II, p 582"
+        },
+        {
+          "label": "Resolution of sexual adverse events",
+          "values": {
+            "exp": "12% during continued therapy; 50% after discontinuation",
+            "ctl": "19% during continued therapy; 41% after discontinuation"
+          },
+          "note": "Post-discontinuation figures include men who stopped for any reason with an event present at stopping; assessed 6 months after stopping; subgroup denominators are not reported.",
+          "locator": "Full text, Methods, p 580; Results, p 581"
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Sexual safety ascertainment",
+          "value": "Sexual dysfunction history at screening was reported by 695/1,524 (46%) finasteride and 700/1,516 (46%) placebo recipients; treatment-emergent sexual events were spontaneously self-reported at 4-month visits.",
+          "locator": "Full text, Methods and Table I, p 580; Table II, p 582"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_02401_9.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_02_02401_9.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

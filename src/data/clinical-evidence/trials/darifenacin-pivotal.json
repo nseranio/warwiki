@@ -47,114 +47,207 @@
         "n": 164
       }
     ],
-    "population": "561 patients aged 19–88 years (85% female) with overactive bladder symptoms for more than 6 months, including some previously exposed to antimuscarinics.",
+    "population": "561 patients aged 19–88 years (85% female) with overactive bladder symptoms for more than 6 months, including 5–50 urge-incontinence episodes per week, at least 8 voids per day, and urgency at least once per day; some had used antimuscarinics and previous nonresponse was allowed.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Methods"
+    "locator": "Full text, Methods, pp 421–422; Table 1, p 423"
   },
   "verdict": "positive",
-  "verdictNote": "Both formally tested doses improved weekly incontinence; the 3.75 mg arm was not formally tested.",
-  "takeaway": "In a 12-week randomized trial, once-daily darifenacin 7.5 mg and 15 mg reduced weekly incontinence episodes from baseline more than placebo; the 3.75 mg arm was not formally tested.",
+  "verdictNote": "Both prespecified dose comparisons met the primary endpoint; 3.75 mg was not formally tested.",
+  "takeaway": "In a 12-week randomized trial of 561 patients with overactive bladder, once-daily darifenacin 7.5 mg and 15 mg reduced median weekly incontinence episodes more than placebo (treatment differences −1.5 and −2.1 episodes/week); 3.75 mg was not formally tested.",
   "reports": [
     {
       "id": "darifenacin-pivotal-2004",
       "kind": "primary",
       "label": "12-week primary report",
-      "published": "2004-04-01",
+      "published": "2004-02-06",
       "cutoff": null,
       "citation": "Haab F, Stewart L, Dwyer P. Darifenacin, an M3 selective receptor antagonist, is an effective and well-tolerated once-daily treatment for overactive bladder. *Eur Urol.* 2004;45(4):420-429. doi:10.1016/j.eururo.2004.01.008",
       "doi": "10.1016/j.eururo.2004.01.008",
       "pmid": "15041104",
       "followUp": "12 weeks",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 422",
       "results": [
         {
           "endpoint": "Weekly incontinence episodes",
           "role": "primary",
-          "measure": "Reduction from baseline at week 12, darifenacin 7.5 mg versus placebo",
+          "measure": "Full-analysis-set median change in incontinence episodes/week from baseline to week 12, darifenacin 7.5 mg versus placebo",
           "values": {
-            "exp75": "67.7%",
-            "ctl": "55.9%"
+            "exp75": "−9.0 episodes/week (−67.7%); week-12 median 5.0; randomized n=229",
+            "ctl": "−7.6 episodes/week (−55.9%); week-12 median 8.0; randomized n=164"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -1.5,
+            "ci": [
+              -3.0,
+              -0.4
+            ],
             "p": "0.010"
           },
           "met": true,
-          "note": "The abstract reports a significant between-group comparison but does not give the prespecified alpha or absolute episode counts.",
-          "locator": "PubMed abstract, Results"
+          "note": "Median treatment difference in episodes/week versus placebo; the full analysis set required randomization, at least one dose, and baseline plus post-baseline efficacy data. Endpoint-specific analysis denominators were not reported. The 15 mg comparison preceded 7.5 mg testing at two-sided alpha 0.05.",
+          "locator": "Full text, Methods, pp 422–423; Table 2, p 424"
         },
         {
           "endpoint": "Weekly incontinence episodes",
           "role": "primary",
-          "measure": "Reduction from baseline at week 12, darifenacin 15 mg versus placebo",
+          "measure": "Full-analysis-set median change in incontinence episodes/week from baseline to week 12, darifenacin 15 mg versus placebo",
           "values": {
-            "exp15": "72.8%",
-            "ctl": "55.9%"
+            "exp15": "−10.4 episodes/week (−72.8%); week-12 median 4.7; randomized n=115",
+            "ctl": "−7.6 episodes/week (−55.9%); week-12 median 8.0; randomized n=164"
           },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -2.1,
+            "ci": [
+              -3.5,
+              -0.3
+            ],
             "p": "0.017"
           },
           "met": true,
-          "note": "The 3.75 mg group was a null-dose arm without formal sample sizing or statistical analysis.",
-          "locator": "PubMed abstract, Results"
+          "note": "Median treatment difference in episodes/week versus placebo; 15 mg was tested first at two-sided alpha 0.05. The 3.75 mg null-dose arm had no formal sample sizing or statistical test.",
+          "locator": "Full text, Methods, pp 422–423; Table 2, p 424"
         },
         {
-          "endpoint": "Other diary symptoms",
+          "endpoint": "Micturition frequency",
           "role": "secondary",
-          "measure": "Micturition frequency, bladder capacity, urgency frequency and severity, and clothing or pad changes at week 12",
+          "measure": "Full-analysis-set median change in micturitions/day from baseline to week 12",
           "values": {
-            "exp75": "Significant improvement versus placebo",
-            "exp15": "Significant improvement versus placebo",
-            "ctl": "Reference"
+            "exp75": "−1.6/day (−16.3%); randomized n=229",
+            "exp15": "−1.7/day (−15.3%); randomized n=115",
+            "ctl": "−0.8/day (−8.0%); randomized n=164"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Both tested doses improved these measures; nocturnal awakenings due to OAB did not decline significantly.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Median treatment difference versus placebo: 7.5 mg −0.8/day (95% CI −1.2 to −0.4), P<0.001; 15 mg −0.9/day (95% CI −1.4 to −0.4), P<0.001.",
+          "locator": "Full text, Table 3, p 425"
+        },
+        {
+          "endpoint": "Urgency frequency and severity",
+          "role": "secondary",
+          "measure": "Full-analysis-set median change in urgency episodes/day and 0–100 mm urgency severity scale from baseline to week 12",
+          "values": {
+            "exp75": "frequency −2.0/day (−28.8%); severity −9.1 mm (−14.2%); randomized n=229",
+            "exp15": "frequency −2.0/day (−28.7%); severity −7.9 mm (−17.1%); randomized n=115",
+            "ctl": "frequency −0.9/day (−12.8%); severity −4.6 mm (−7.8%); randomized n=164"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Frequency median treatment differences versus placebo: 7.5 mg −0.9/day (95% CI −1.5 to −0.4), P=0.001; 15 mg −0.9/day (95% CI −1.5 to −0.3), P=0.005. Severity median differences: 7.5 mg −4.7 mm (95% CI −8.0 to −1.9), P=0.001; 15 mg −5.2 mm (95% CI −8.6 to −1.9), P=0.002.",
+          "locator": "Full text, Methods, p 422; Table 3, p 425"
+        },
+        {
+          "endpoint": "Mean volume voided per micturition",
+          "role": "secondary",
+          "measure": "Full-analysis-set median change in volume voided per micturition from baseline to week 12",
+          "values": {
+            "exp75": "+14.9 mL (+9.3%); randomized n=229",
+            "exp15": "+30.9 mL (+19.5%); randomized n=115",
+            "ctl": "+7.6 mL (+5.4%); randomized n=164"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Median treatment difference versus placebo: 7.5 mg +9.1 mL (95% CI +0.4 to +17.8), P=0.040; 15 mg +20.7 mL (95% CI +9.6 to +32.6), P<0.001.",
+          "locator": "Full text, Table 3, p 425"
+        },
+        {
+          "endpoint": "Incontinence requiring pad or clothing change",
+          "role": "secondary",
+          "measure": "Full-analysis-set median change in episodes/week from baseline to week 12",
+          "values": {
+            "exp75": "−4.0/week (−79.6%); randomized n=229",
+            "exp15": "−4.7/week (−78.1%); randomized n=115",
+            "ctl": "−2.0/week (−53.9%); randomized n=164"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": true,
+          "note": "Median treatment difference versus placebo: 7.5 mg −1.3/week (95% CI −2.0 to −0.5), P<0.001; 15 mg −1.3/week (95% CI −2.3 to −0.3), P=0.002.",
+          "locator": "Full text, Table 3, p 425"
+        },
+        {
+          "endpoint": "Nocturnal awakenings due to OAB",
+          "role": "secondary",
+          "measure": "Full-analysis-set median change in nocturnal awakenings/week from baseline to week 12, darifenacin 15 mg versus placebo",
+          "values": {
+            "exp15": "−1.4/week (−13.4%); randomized n=115",
+            "ctl": "−1.0/week (−13.7%); randomized n=164"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.3,
+            "ci": [
+              -1.4,
+              0.7
+            ],
+            "p": "0.533"
+          },
+          "met": false,
+          "note": "The prespecified 15 mg comparison was nonsignificant; 7.5 mg was therefore not formally tested under the dose-testing sequence.",
+          "locator": "Full text, Statistical analysis, p 422; Table 3, p 425"
         }
       ],
       "harms": [
         {
-          "label": "Constipation-related discontinuation",
+          "label": "Constipation-related and other treatment-related discontinuation",
           "values": {
-            "exp75": "0.9% across darifenacin groups",
-            "exp15": "0.9% across darifenacin groups",
-            "ctl": "0.6%"
+            "low": "0/53 treatment-related discontinuations",
+            "exp75": "2/229 (0.9%) constipation; 3/229 (1.3%) all treatment-related",
+            "exp15": "1/115 (0.9%) constipation; 3/115 (2.6%) all treatment-related",
+            "ctl": "1/164 (0.6%) constipation; 2/164 (1.2%) all treatment-related"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not provide dose-specific discontinuation rates or event denominators."
+          "locator": "Full text, Table 4 and footnotes, p 426",
+          "note": "No patient withdrew because of dry mouth. Treatment-related discontinuations also included rash (7.5 mg), urticaria with tongue edema and flatulence with insomnia (15 mg), and voiding difficulty (placebo)."
         },
         {
-          "label": "Dry mouth and other reported safety findings",
+          "label": "Treatment-related dry mouth and constipation",
           "values": {
-            "exp75": "Dry mouth and constipation generally mild to moderate; no withdrawal for dry mouth",
-            "exp15": "Dry mouth and constipation generally mild to moderate; no withdrawal for dry mouth",
-            "ctl": "CNS and cardiac profiles described as comparable to darifenacin"
+            "low": "Dry mouth 7/53 (13.2%); constipation 2/53 (3.8%)",
+            "exp75": "Dry mouth 43/229 (18.8%); constipation 33/229 (14.4%)",
+            "exp15": "Dry mouth 36/115 (31.3%); constipation 16/115 (13.9%)",
+            "ctl": "Dry mouth 14/164 (8.5%); constipation 11/164 (6.7%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "No blurred vision was reported. The abstract gives no dose-specific adverse-event counts."
+          "locator": "Full text, Adverse events, pp 424–426; Table 4, p 426",
+          "note": "Table 4 gives investigator-attributed treatment-related events; 84% of patients reporting adverse events had only mild or moderate events. No blurred vision was reported; CNS and cardiac safety profiles were described as comparable to placebo."
+        },
+        {
+          "label": "Serious adverse events, all causality",
+          "values": {
+            "low": "1/53 (1.9%)",
+            "exp75": "6/229 (2.6%)",
+            "exp15": "0/115 (0%)",
+            "ctl": "1/164 (0.6%)"
+          },
+          "locator": "Full text, Serious AEs, p 425",
+          "note": "Eight serious AEs overall; a second-degree atrioventricular block in the 7.5 mg arm was deemed unlikely caused by study drug after review of prior history."
         }
       ],
       "delivery": [
         {
           "label": "Treatment and diary schedule",
-          "value": "Controlled-release darifenacin or matching placebo was taken once daily for 12 weeks after washout and a 2-week placebo run-in; electronic diaries preceded visits at weeks 2, 6 and 12.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Controlled-release darifenacin 3.75, 7.5 or 15 mg or matching placebo was taken orally once daily for 12 weeks after medication washout and a 2-week placebo run-in; electronic diaries preceded visits at weeks 2, 6 and 12. Of 561 randomized and treated, 526 completed treatment: 49/53, 219/229, 106/115 and 152/164 in the 3.75 mg, 7.5 mg, 15 mg and placebo arms. Compliance exceeded 86% in all but two patients; 462/561 (82.4%) had 100% compliance by tablet count.",
+          "locator": "Full text, Methods and Results, pp 421–423"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_01_008.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2004_01_008.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/darifenacin-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

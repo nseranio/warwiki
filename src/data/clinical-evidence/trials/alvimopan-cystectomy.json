@@ -52,47 +52,116 @@
       "citation": "Kauf TL, Svatek RS, Amiel G, et al. \"Alvimopan, a peripherally acting μ-opioid receptor antagonist, is associated with reduced costs after radical cystectomy: economic analysis of a phase 4 randomized, controlled trial.\" *J Urol.* 2014;191(6):1721-1727. doi:10.1016/j.juro.2013.12.015",
       "doi": "10.1016/j.juro.2013.12.015",
       "pmid": "24342144",
-      "followUp": "Index hospital stay and postoperative ileus-related readmissions",
+      "followUp": "Protocol hospitalization and follow-up (mean 30 ± 7 days after discharge; mean total study time 43 days)",
+      "followUpLocator": "Full text, Methods, p 1722",
       "results": [
         {
           "endpoint": "Postoperative ileus-related costs",
-          "role": "secondary",
-          "measure": "Mean cost difference per patient, alvimopan minus placebo, using 2012 Medicare reimbursement and wholesale drug costs",
+          "role": "descriptive",
+          "measure": "Mean postoperative ileus-related cost per patient during protocol hospitalization plus follow-up, 2012 USD; alvimopan minus placebo difference",
           "values": {
-            "exp": "$2,340 lower",
-            "ctl": "reference"
+            "exp": "$15,684 (n=143 MITT)",
+            "ctl": "$18,023 (n=134 MITT)"
           },
           "effect": {
             "type": "difference",
             "value": -2340,
-            "p": "0.04"
+            "ci": [
+              -4613,
+              -342
+            ],
+            "p": "0.040"
           },
-          "note": "Cost-consequence analysis; not a clinical endpoint. Bootstrap comparison.",
-          "locator": "PubMed abstract, Materials and methods and Results"
+          "met": "not-tested",
+          "note": "Preplanned hospital-perspective cost-consequence analysis; difference calculated before rounding, with 95% CI and P value from 10,000-iteration bootstrap. No prespecified economic endpoint threshold is reported.",
+          "locator": "Full text, Methods, pp 1722-1723; Tables 4-5, pp 1724-1725"
         },
         {
           "endpoint": "Total combined costs",
-          "role": "secondary",
-          "measure": "Mean cost difference per patient, alvimopan minus placebo, using 2012 Medicare reimbursement and wholesale drug costs",
+          "role": "descriptive",
+          "measure": "Mean total combined cost per patient during protocol hospitalization plus follow-up, 2012 USD; alvimopan minus placebo difference",
           "values": {
-            "exp": "$2,640 lower",
-            "ctl": "reference"
+            "exp": "$18,087 (n=143 MITT)",
+            "ctl": "$20,726 (n=134 MITT)"
           },
           "effect": {
             "type": "difference",
             "value": -2640,
+            "ci": [
+              -5506,
+              7
+            ],
             "p": "0.068"
           },
-          "note": "The bootstrap comparison did not meet conventional statistical significance.",
-          "locator": "PubMed abstract, Materials and methods and Results"
+          "met": "not-tested",
+          "note": "Includes postoperative ileus-related and other costs; difference calculated before rounding. Bootstrap P value exceeded 0.05; no prespecified economic endpoint threshold is reported.",
+          "locator": "Full text, Methods, pp 1722-1723; Tables 4-5, pp 1724-1725"
+        },
+        {
+          "endpoint": "Total combined costs during protocol hospitalization",
+          "role": "descriptive",
+          "measure": "Mean total combined cost per patient during index hospitalization, 2012 USD; alvimopan minus placebo difference",
+          "values": {
+            "exp": "$15,855 (n=143 MITT)",
+            "ctl": "$18,187 (n=134 MITT)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2333,
+            "ci": [
+              -4624,
+              -301
+            ],
+            "p": "0.042"
+          },
+          "met": "not-tested",
+          "note": "Preplanned hospital-perspective cost-consequence analysis; 10,000-iteration bootstrap interval and P value. Difference calculated before rounding; no prespecified economic endpoint threshold is reported.",
+          "locator": "Full text, Methods, pp 1722-1723; Table 5, p 1725"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Total hospital days in economic analysis",
+          "values": {
+            "exp": "Mean 8.44 days (SD 3.05; n=143 MITT)",
+            "ctl": "Mean 11.07 days (SD 8.23; n=134 MITT)"
+          },
+          "locator": "Full text, Methods, p 1722; Table 3, p 1724",
+          "note": "From surgery through discharge-order day, counting surgery as day 1; one day longer than postoperative length of stay in the clinical report. P = 0.005."
+        },
+        {
+          "label": "Study medication received",
+          "values": {
+            "exp": "Mean 11.38 doses (SD 3.51; n=143 MITT)",
+            "ctl": "Mean 10.98 doses (SD 4.00; n=134 MITT)"
+          },
+          "locator": "Full text, Methods, p 1722; Table 3, p 1724",
+          "note": "Oral 12 mg alvimopan or placebo 30 minutes to 5 hours before surgery, then twice daily from postoperative day 1 until discharge or at most 7 inpatient days."
+        },
+        {
+          "label": "Nasogastric tube procedures",
+          "values": {
+            "exp": "10/143 (7.0%) during protocol hospitalization; 11/143 (7.7%) through follow-up",
+            "ctl": "33/134 (24.6%) during protocol hospitalization and through follow-up"
+          },
+          "locator": "Full text, Table 3, p 1724",
+          "note": "Patients with at least one postoperative nasogastric tube procedure; excludes tubes placed during surgery. P < 0.001 for both periods."
+        },
+        {
+          "label": "Total parenteral nutrition use",
+          "values": {
+            "exp": "10% (MITT n=143; count not reported)",
+            "ctl": "25% (MITT n=134; count not reported)"
+          },
+          "locator": "Full text, Results, p 1723",
+          "note": "P = 0.001; percentages reported without event counts."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_12_015.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2013_12_015.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {

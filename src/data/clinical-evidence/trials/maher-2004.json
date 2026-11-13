@@ -14,9 +14,9 @@
   ],
   "question": "How do abdominal sacral colpopexy and vaginal sacrospinous colpopexy compare for vaginal vault prolapse?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported",
+    "blinding": "not reported; surgical procedures differed",
     "type": "superiority",
     "n": 95,
     "arms": [
@@ -33,13 +33,13 @@
         "role": "control"
       }
     ],
-    "population": "Ninety-five women with vaginal vault prolapse were randomized.",
-    "description": "Prospective randomized surgical comparison",
-    "locator": "PubMed abstract, Study Design"
+    "population": "Ninety-five women with symptomatic posthysterectomy vault prolapse reaching or passing the introitus were randomized; prior sacral colpopexy and markedly foreshortened vagina were excluded.",
+    "description": "Prospective randomized surgical comparison; sample size assumed 58% versus 29% success, 80% power, and two-sided alpha 0.05",
+    "locator": "Full text, Material and methods, p 21; Results, p 22"
   },
   "verdict": "inconclusive",
-  "verdictNote": "Success rates did not differ significantly; a prespecified comparative threshold was unavailable.",
-  "takeaway": "Among women with vaginal vault prolapse, abdominal sacral colpopexy and vaginal sacrospinous colpopexy did not differ significantly in reported subjective or objective success at approximately two years; the abdominal route had longer operating time, slower return to daily activities, and greater cost.",
+  "verdictNote": "No equivalence margin was prespecified; success comparisons were nonsignificant, while anterior/vault recurrence differed.",
+  "takeaway": "Among women with posthysterectomy vault prolapse, abdominal sacral colpopexy and vaginal sacrospinous colpopexy had nonsignificantly different subjective (43/46 vs 39/43) and objective (35/46 vs 29/42) success at mean 24 and 22 months; anterior/vault prolapse was less frequent after abdominal repair (6/46 vs 19/42).",
   "reports": [
     {
       "id": "maher-2004-2004",
@@ -50,40 +50,71 @@
       "citation": "Maher CF, Qatawneh AM, Dwyer PL, et al. \"Abdominal sacral colpopexy or vaginal sacrospinous colpopexy for vaginal vault prolapse: a prospective randomized study.\" *Am J Obstet Gynecol.* 2004;190(1):20-26. doi:10.1016/j.ajog.2003.08.031",
       "doi": "10.1016/j.ajog.2003.08.031",
       "pmid": "14749629",
-      "followUp": "Approximately 2 years after surgery (range 6-60 months)",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "Mean 24 months (range 6-60) abdominal; 22 months (range 6-58) vaginal",
+      "followUpLocator": "Full text, Results, p 23",
       "results": [
         {
           "endpoint": "Subjective success",
           "role": "primary",
-          "measure": "Subjective success at postoperative assessment",
+          "measure": "No prolapse symptoms at postoperative assessment (46 abdominal and 43 vaginal women assessed)",
           "values": {
-            "exp": "94%",
-            "ctl": "91%"
+            "exp": "43/46 (94%)",
+            "ctl": "39/43 (91%)"
           },
           "effect": {
             "type": "none",
             "p": "0.19"
           },
-          "met": null,
-          "note": "The abstract does not give assessed denominators or a prespecified comparative threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Between-group difference did not meet the prespecified 5% significance threshold; no equivalence margin was specified. Six women (1 abdominal, 5 vaginal) lacked at least 6 months of follow-up; the printed 94% for 43/46 is an imprecise rounding of 93.5%.",
+          "locator": "Full text, Material and methods, pp 21-22; Results, pp 22-23"
         },
         {
           "endpoint": "Objective success",
           "role": "primary",
-          "measure": "Objective success at postoperative assessment",
+          "measure": "No prolapse of grade 2 or higher at any vaginal site on Valsalva (46 abdominal and 42 vaginal women assessed)",
           "values": {
-            "exp": "76%",
-            "ctl": "69%"
+            "exp": "35/46 (76%)",
+            "ctl": "29/42 (69%)"
           },
           "effect": {
             "type": "none",
-            "p": "0.48"
+            "p": "0.46"
           },
-          "met": null,
-          "note": "The abstract does not define objective success, give assessed denominators, or specify a comparative threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Results text gives P=.46; the article abstract gives P=.48. No equivalence margin was specified.",
+          "locator": "Full text, Material and methods, pp 21-22; Results, p 23"
+        },
+        {
+          "endpoint": "Patient-determined success",
+          "role": "primary",
+          "measure": "Patient-determined satisfaction at postoperative assessment, as reported",
+          "values": {
+            "exp": "39/46 (85%)",
+            "ctl": "35/43 (81%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.78"
+          },
+          "met": false,
+          "note": "The text calls this mean patient satisfaction but reports counts and percentages; the VAS threshold for success is unspecified. No equivalence margin was specified.",
+          "locator": "Full text, Abstract, p 20; Material and methods, p 21; Results, p 23"
+        },
+        {
+          "endpoint": "Cumulative anterior wall and vault prolapse",
+          "role": "secondary",
+          "measure": "Postoperative anterior wall or vault prolapse among women with complete site-specific examination",
+          "values": {
+            "exp": "6/46 (13%)",
+            "ctl": "19/42 (45%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01"
+          },
+          "note": "Postoperative site-specific prolapse of grade 2 or higher; no between-group confidence interval reported.",
+          "locator": "Full text, Results, p 24"
         },
         {
           "endpoint": "Quality of life",
@@ -97,29 +128,61 @@
             "type": "none",
             "p": "<0.05"
           },
-          "note": "The abstract reports significant improvement after both operations without a between-group estimate.",
-          "locator": "PubMed abstract, Results"
+          "note": "Urinary distress and incontinence impact scores improved in both groups; adjusted between-group differences in SF-36 domains were nonsignificant.",
+          "locator": "Full text, Table VII and Results, p 24"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "De novo stress urinary incontinence and voiding dysfunction",
+          "values": {
+            "exp": "SUI 2/22 (9%); new voiding dysfunction 1 woman",
+            "ctl": "SUI 8/24 (33%); new voiding dysfunction 1 woman"
+          },
+          "note": "Between-group P=.09 for de novo SUI; no denominator stated for new voiding dysfunction.",
+          "locator": "Full text, Results, p 23"
+        },
+        {
+          "label": "Complications and subsequent surgery",
+          "values": {
+            "exp": "1 transfusion, 1 cystotomy, 1 mesh rejection, 1 infected-mesh removal, 1 wound infection, 2 incisional hernia repairs; 6 women had subsequent surgery (47 randomized)",
+            "ctl": "1 transfusion, 1 cystotomy, 1 rectovaginal hematoma, 1 vaginal pain; 7 women had subsequent surgery (48 randomized), including 2 Fenton repairs"
+          },
+          "note": "Subsequent procedures included continence and prolapse operations; Clavien-Dindo grades and mesh-exposure counts were not reported.",
+          "locator": "Full text, Results, pp 24-25"
+        }
+      ],
       "delivery": [
         {
           "label": "Operating time, return to daily activities, and cost",
-          "value": "The abdominal route had longer operating time, slower return to daily activities, and greater cost than the vaginal route (P<0.01 for the reported comparison).",
-          "locator": "PubMed abstract, Results"
+          "values": {
+            "exp": "Mean operating time 106 ± 37 min (n=47); return to daily activities 34.0 ± 12.1 days (n=46); mean cost A$6450",
+            "ctl": "Mean operating time 76 ± 42 min (n=48); return to daily activities 25.7 ± 9.7 days (n=46); mean cost A$4575"
+          },
+          "note": "P<.01 for operating time, return to daily activities, and cost; article table gives an internally inconsistent abdominal operating-time range, so only means are retained.",
+          "locator": "Full text, Table VI, p 24; Results, p 25"
+        },
+        {
+          "label": "Suspension technique and concomitant repairs",
+          "values": {
+            "exp": "Prolene mesh from vault to sacral promontory, extended to bladder trigone and 7-8 cm posteriorly; Burch colposuspension 14/47, paravaginal repair 19/47, posterior colporrhaphy 11/47, Moschcowitz 20/47",
+            "ctl": "Unilateral sacrospinous colpopexy; Burch colposuspension 15/48, anterior colporrhaphy 21/48, posterior colporrhaphy 44/48, enterocele repair 28/48"
+          },
+          "note": "All women received preoperative vaginal estrogen and perioperative antibiotic and antithrombotic therapy; procedures were supervised by consultant urogynecologists.",
+          "locator": "Full text, Material and methods, p 21; Table IV, p 23"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2003_08_031.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2003_08_031.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/maher-2004",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

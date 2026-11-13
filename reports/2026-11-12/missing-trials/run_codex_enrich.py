@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Codex enrich pass: bring trials up to newly supplied full texts or guidelines (November 12, 2026; one trial per job).
-Usage: run_codex_enrich.py SOURCES.json [--parallel N]
+Usage: run_codex_enrich.py SOURCES.json [--parallel N] [--name WORKDIR]
 SOURCES.json maps trial id -> list of "report <report id>: <file>" or "guideline: <file>" lines.
 Writes work-fix/enrich/<id>/{<id>.json,<id>.mdx,prompt.md,log.txt,final.md,notes.md}; install with install_fix.py enrich."""
 import json, os, signal, subprocess, sys, time, pathlib, shutil
 HERE = pathlib.Path(__file__).resolve().parent; ROOT = HERE.parents[2]
 src = json.load(open(sys.argv[1]))
 par = int(sys.argv[sys.argv.index("--parallel") + 1]) if "--parallel" in sys.argv else 4
-work = HERE / "work-fix" / "enrich"; work.mkdir(parents=True, exist_ok=True)
+name = sys.argv[sys.argv.index("--name") + 1] if "--name" in sys.argv else "enrich"
+work = HERE / "work-fix" / name; work.mkdir(parents=True, exist_ok=True)
 brief = (HERE / "brief-enrich.md").read_text()
 def log(m):
     line = f"{time.strftime('%H:%M:%S')} {m}"; print(line, flush=True); open(work / "run.log", "a").write(line + "\n")

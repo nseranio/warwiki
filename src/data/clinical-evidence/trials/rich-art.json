@@ -38,11 +38,11 @@
     ],
     "population": "Adults aged 18–80 years referred to Nordic hyperbaric clinics with symptomatic late radiation cystitis, pelvic radiotherapy at least six months earlier, and EPIC urinary total score below 80.",
     "description": "Five-center, open-label, phase 2–3 randomized superiority trial",
-    "locator": "2019 PubMed abstract, Methods and Findings"
+    "locator": "Full text, Methods, pp 1603–1605; Results, p 1607"
   },
   "verdict": "positive",
   "verdictNote": "The patient-reported urinary score improved more with hyperbaric oxygen at 6–8 months.",
-  "takeaway": "In chronic radiation cystitis, hyperbaric oxygen therapy improved EPIC urinary total score more than standard care at 6–8 months: mean change 17.8 versus 7.7 points, a 10.1-point difference (95% CI 2.2–18.1).",
+  "takeaway": "In the reported intention-to-treat analysis of chronic radiation cystitis, hyperbaric oxygen improved EPIC urinary total score more than standard care at 6–8 months: mean change 17.8 (n=40) versus 7.7 points (n=35), a 10.1-point difference (95% CI 2.2–18.1; p=0.013).",
   "reports": [
     {
       "id": "rich-art-2019",
@@ -54,15 +54,15 @@
       "doi": "10.1016/S1470-2045(19)30494-2",
       "pmid": "31537473",
       "followUp": "Visit 4 at 6–8 months; median 234 days after randomization with hyperbaric oxygen and 217 days with standard care",
-      "followUpLocator": "PubMed abstract, Methods and Findings",
+      "followUpLocator": "Full text, Results, p 1607",
       "results": [
         {
           "endpoint": "EPIC urinary total score",
           "role": "primary",
           "measure": "Mean change from baseline to visit 4 at 6–8 months; between-group mean difference in points",
           "values": {
-            "exp": "+17.8 points (SD 18.4; n=41)",
-            "ctl": "+7.7 points (SD 15.5; n=38)"
+            "exp": "+17.8 points (SD 18.4; n=40 with visit-4 data)",
+            "ctl": "+7.7 points (SD 15.5; n=35 with visit-4 data)"
           },
           "effect": {
             "type": "difference",
@@ -74,42 +74,93 @@
             "p": "0.013"
           },
           "met": true,
-          "note": "Modified intention-to-treat analysis excluded eight immediate post-randomization consent withdrawals (one experimental, seven control).",
-          "locator": "PubMed abstract, Findings"
+          "note": "The paper calls 41 and 38 patients the intention-to-treat population after excluding eight immediate consent withdrawals (one experimental, seven control); one and three, respectively, had missing visit-4 scores. No missing data were imputed.",
+          "locator": "Full text, Statistical analysis, p 1606; Results and Table 2, pp 1607–1609"
+        },
+        {
+          "endpoint": "EPIC urinary total score responder status",
+          "role": "descriptive",
+          "measure": "Improvement of more than 9 points from baseline to visit 4; threshold defined post hoc",
+          "values": {
+            "exp": "29/40 (73%)",
+            "ctl": "12/35 (34%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The 9-point minimal clinically important difference was calculated post hoc as half the baseline SD.",
+          "locator": "Full text, Results and Figure 3, pp 1607–1609"
+        },
+        {
+          "endpoint": "Cystoscopic late radiation morbidity grade",
+          "role": "exploratory",
+          "measure": "Patients with improved Late Radiation Morbidity Grading Scheme bladder grade at visit 4",
+          "values": {
+            "exp": "25/39 (64%)",
+            "ctl": "6/34 (18%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0012"
+          },
+          "note": "The statistical analysis plan changed LRMGS grade from a protocol secondary outcome to exploratory.",
+          "locator": "Full text, Outcomes, p 1606; Results and Figure 4, p 1609"
         }
       ],
       "harms": [
         {
-          "label": "Transient grade 1–2 sight- or hearing-related adverse events during hyperbaric oxygen therapy",
+          "label": "Treatment-period adverse events",
           "values": {
-            "exp": "17/41 (41%)",
-            "ctl": "Not reported"
+            "exp": "17/41 (41%) with any event; 17/41 (41%) with grade 1–2 event",
+            "ctl": "1/38 (3%) with a grade 5 serious event (death from sepsis and cardiac failure, unrelated to the study)"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Reported among treated patients in the initial analysis."
+          "locator": "Full text, Results and Table 3, pp 1609–1610",
+          "note": "Only serious adverse events were recorded in the standard-care group. Table 3 reports zero grade 3–4 treatment-group events, while the Results prose describes one grade 3 infection and one grade 3 haematuria event with no clear treatment relation."
+        },
+        {
+          "label": "Ear and eye adverse events during hyperbaric oxygen",
+          "values": {
+            "exp": "Ear pain 6/41 (15%); barotrauma 4/41 (10%); transient myopia 5/41 (12%); tympanic membrane paracentesis 1/41 (2%)",
+            "ctl": "Only serious events recorded"
+          },
+          "locator": "Full text, Results and Table 3, pp 1609–1610"
+        },
+        {
+          "label": "Infection and haematuria events during hyperbaric oxygen",
+          "values": {
+            "exp": "Seven infection events (six grade 1, one grade 3) and three haematuria events (two grade 1, one grade 3) among 41 treated patients; patient counts for these event types not stated",
+            "ctl": "Only serious events recorded"
+          },
+          "note": "The authors found no clear relation to hyperbaric oxygen for these events; the grade 3 events in the prose are not shown in Table 3.",
+          "locator": "Full text, Results, p 1610; Table 3, p 1610"
         }
       ],
       "delivery": [
         {
           "label": "Enrollment exclusions relevant to surgical selection",
-          "value": "Bleeding requiring more than 500 mL of blood transfusion in the previous four weeks, permanent urinary catheter, bladder capacity below 100 mL, bladder fistula, previous hyperbaric oxygen for late radiation injury, or a hyperbaric oxygen contraindication.",
-          "locator": "PubMed abstract, Methods"
+          "value": "Bleeding requiring more than 500 mL of blood transfusion in the previous four weeks, incontinence requiring a permanent urinary catheter, bladder capacity below 100 mL, bladder fistula, previous hyperbaric oxygen for late radiation injury, or a hyperbaric oxygen contraindication.",
+          "locator": "Full text, Study design and participants, pp 1603–1604"
         },
         {
           "label": "Hyperbaric oxygen regimen",
-          "value": "30–40 daily sessions of 100% oxygen at 240–250 kPa for 80–90 minutes.",
-          "locator": "PubMed abstract, Methods"
+          "value": "30–40 sessions of 100% oxygen at 240–250 kPa for 80–90 minutes, five times per week; treatment started within four weeks of baseline and was completed within 60–80 days of the first session. Multiplace or monoplace chambers were used, with local variation in five-minute air breaks.",
+          "locator": "Full text, Procedures, pp 1603–1604; Discussion, p 1612"
         },
         {
           "label": "Randomization and analysis",
-          "value": "87 randomized (42 hyperbaric oxygen, 45 standard care); 79 analyzed after eight immediate consent withdrawals (41 and 38, respectively).",
-          "locator": "PubMed abstract, Findings"
+          "value": "87 randomized (42 hyperbaric oxygen, 45 standard care); 79 in the paper's intention-to-treat analysis after eight immediate consent withdrawals (41 and 38, respectively); visit-4 EPIC scores available for 40 and 35; per-protocol population 40 and 34.",
+          "locator": "Full text, Figure 2, p 1605; Results, p 1607; Table 2, pp 1608–1609"
+        },
+        {
+          "label": "Treatment adherence",
+          "value": "All treated patients followed the predefined hyperbaric oxygen protocols without dose adjustment; 1/41 discontinued treatment because of visual disturbance.",
+          "locator": "Full text, Figure 2, p 1605; Results, pp 1609–1610"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s1470_2045_19_30494_2.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s1470_2045_19_30494_2.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -213,7 +264,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/rich-art",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

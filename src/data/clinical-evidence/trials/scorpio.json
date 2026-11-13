@@ -49,8 +49,8 @@
       }
     ],
     "population": "Adults with overactive bladder for at least 3 months, at least 8 daily micturitions, and at least 3 urgency episodes in a 3-day baseline diary.",
-    "description": "Multicenter, double-blind, placebo-controlled superiority randomized trial",
-    "locator": "Khullar 2013 PubMed abstract, Design; Khullar 2013 post-hoc full text, Methods and Results, Table 1; ClinicalTrials.gov NCT00689104, Participant Flow"
+    "description": "Multicenter, double-blind, placebo-controlled superiority randomized trial at 189 sites across 27 countries in Europe and Australia",
+    "locator": "Khullar 2013 PubMed abstract, Design; Khullar 2013 post-hoc full text, Methods and Results, Table 1; ClinicalTrials.gov NCT00689104, Participant Flow; Khullar 2013 full text, Methods §2.1, p 284"
   },
   "verdict": "positive",
   "verdictNote": "Both mirabegron doses met both co-primary placebo comparisons at 12 weeks.",
@@ -66,95 +66,187 @@
       "doi": "10.1016/j.eururo.2012.10.016",
       "pmid": "23182126",
       "followUp": "12 weeks of double-blind treatment after a 2-week placebo run-in",
-      "followUpLocator": "PubMed abstract, Intervention and Results",
+      "followUpLocator": "Full text, Fig. 1 and Methods §2.1, p 284",
       "results": [
         {
           "endpoint": "Incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 50 mg versus placebo",
+          "measure": "Adjusted mean change from baseline to final visit (last observation carried forward); reported difference, mirabegron 50 mg versus placebo",
           "values": {
-            "m50": "−1.57/day",
-            "pbo": "−1.17/day"
+            "pbo": "−1.17/day (n=291)",
+            "m50": "−1.57/day (n=293)",
+            "m100": "−1.46/day (n=281)",
+            "tol": "−1.27/day (n=300)"
           },
           "effect": {
             "type": "difference",
-            "value": -0.4,
-            "p": "<0.05"
+            "value": -0.41,
+            "ci": [
+              -0.72,
+              -0.09
+            ],
+            "p": "0.003"
           },
           "met": true,
-          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Incontinence FAS-I; P value from stratified rank ANCOVA, while the reported difference and CI derive from the ANCOVA model; multiplicity-adjusted significance.",
+          "locator": "Full text, Table 3, p 288; Methods §2.4, p 285"
         },
         {
           "endpoint": "Incontinence episodes per 24 hours",
           "role": "primary",
-          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 100 mg versus placebo",
+          "measure": "Adjusted mean change from baseline to final visit (last observation carried forward); reported difference, mirabegron 100 mg versus placebo",
           "values": {
-            "m100": "−1.46/day",
-            "pbo": "−1.17/day"
+            "pbo": "−1.17/day (n=291)",
+            "m50": "−1.57/day (n=293)",
+            "m100": "−1.46/day (n=281)",
+            "tol": "−1.27/day (n=300)"
           },
           "effect": {
             "type": "difference",
             "value": -0.29,
-            "p": "<0.05"
+            "ci": [
+              -0.61,
+              0.03
+            ],
+            "p": "0.010"
           },
           "met": true,
-          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Incontinence FAS-I; P value from stratified rank ANCOVA, while the reported difference and CI derive from the ANCOVA model; multiplicity-adjusted significance.",
+          "locator": "Full text, Table 3, p 288; Methods §2.4, p 285"
         },
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 50 mg versus placebo",
+          "measure": "Adjusted mean change from baseline to final visit (last observation carried forward); reported difference, mirabegron 50 mg versus placebo",
           "values": {
-            "m50": "−1.93/day",
-            "pbo": "−1.34/day"
+            "pbo": "−1.34/day (n=480)",
+            "m50": "−1.93/day (n=473)",
+            "m100": "−1.77/day (n=478)",
+            "tol": "−1.59/day (n=475)"
           },
           "effect": {
             "type": "difference",
-            "value": -0.59,
-            "p": "<0.05"
+            "value": -0.6,
+            "ci": [
+              -0.9,
+              -0.29
+            ],
+            "p": "<0.001"
           },
           "met": true,
-          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Micturition FAS; P value and CI from ANCOVA; multiplicity-adjusted significance.",
+          "locator": "Full text, Table 3, p 288; Methods §2.4, p 285"
         },
         {
           "endpoint": "Micturitions per 24 hours",
           "role": "primary",
-          "measure": "Adjusted mean change at final visit; mean difference in change, mirabegron 100 mg versus placebo",
+          "measure": "Adjusted mean change from baseline to final visit (last observation carried forward); reported difference, mirabegron 100 mg versus placebo",
           "values": {
-            "m100": "−1.77/day",
-            "pbo": "−1.34/day"
+            "pbo": "−1.34/day (n=480)",
+            "m50": "−1.93/day (n=473)",
+            "m100": "−1.77/day (n=478)",
+            "tol": "−1.59/day (n=475)"
           },
           "effect": {
             "type": "difference",
-            "value": -0.43,
-            "p": "<0.05"
+            "value": -0.44,
+            "ci": [
+              -0.74,
+              -0.13
+            ],
+            "p": "0.005"
           },
           "met": true,
-          "note": "Difference calculated from the two adjusted mean changes reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Micturition FAS; P value and CI from ANCOVA; multiplicity-adjusted significance.",
+          "locator": "Full text, Table 3, p 288; Methods §2.4, p 285"
+        },
+        {
+          "endpoint": "Volume voided per micturition at final visit",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change in mL from baseline to final visit; reported differences versus placebo",
+          "values": {
+            "pbo": "12.3 mL (n=480)",
+            "m50": "24.2 mL (n=472); versus placebo +11.9 mL (95% CI 6.3–17.4; P <0.001)",
+            "m100": "25.6 mL (n=478); versus placebo +13.2 mL (95% CI 7.7–18.7; P <0.001)",
+            "tol": "25.0 mL (n=475)"
+          },
+          "met": true,
+          "note": "Both mirabegron-placebo comparisons passed the prespecified gatekeeping procedure.",
+          "locator": "Full text, Table 4, p 290; Appendix A.3, p 294"
+        },
+        {
+          "endpoint": "Incontinence episodes per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change from baseline at week 4; reported differences versus placebo",
+          "values": {
+            "pbo": "−0.65/day (n=291)",
+            "m50": "−1.04/day (n=293); versus placebo −0.39/day (95% CI −0.71 to −0.06; P=0.002)",
+            "m100": "−1.03/day (n=281); versus placebo −0.38/day (95% CI −0.71 to −0.05; P=0.002)",
+            "tol": "−1.00/day (n=299)"
+          },
+          "met": true,
+          "note": "Both mirabegron-placebo comparisons passed the prespecified gatekeeping procedure; P values are from stratified rank ANCOVA.",
+          "locator": "Full text, Table 4, p 290; Appendix A.3, p 294"
+        },
+        {
+          "endpoint": "Micturitions per 24 hours at week 4",
+          "role": "key-secondary",
+          "measure": "Adjusted mean change from baseline at week 4; reported differences versus placebo",
+          "values": {
+            "pbo": "−0.77/day (n=479)",
+            "m50": "−1.16/day (n=471); versus placebo −0.40/day (95% CI −0.66 to −0.13; P=0.004)",
+            "m100": "−1.29/day (n=477); versus placebo −0.52/day (95% CI −0.79 to −0.26; P <0.001)",
+            "tol": "−1.10/day (n=474)"
+          },
+          "met": true,
+          "note": "Both mirabegron-placebo comparisons passed the prespecified gatekeeping procedure.",
+          "locator": "Full text, Table 4, p 290; Appendix A.3, p 294"
         }
       ],
       "harms": [
         {
           "label": "Treatment-emergent adverse events",
-          "note": "The primary abstract reports similar overall incidence across the four treatment groups.",
-          "locator": "PubMed abstract, Results"
+          "note": "Urinary tract infection: 7/494 (1.4%), 7/493 (1.4%), 9/496 (1.8%), and 10/495 (2.0%), respectively. PVR >300 mL at final visit: 1/493 with mirabegron 50 mg, 2/496 with mirabegron 100 mg, and 1/495 with tolterodine. Discontinued study drug due to a TEAE: 2.6%, 4.9%, 3.2%, and 4.4% of the respective safety sets.",
+          "locator": "Full text, Table 6, p 291; Results §3.3, pp 287–288",
+          "values": {
+            "pbo": "214/494 (43.3%)",
+            "m50": "211/493 (42.8%)",
+            "m100": "199/496 (40.1%)",
+            "tol": "231/495 (46.7%)"
+          }
+        },
+        {
+          "label": "Dry mouth",
+          "values": {
+            "pbo": "13/494 (2.6%)",
+            "m50": "14/493 (2.8%)",
+            "m100": "14/496 (2.8%)",
+            "tol": "50/495 (10.1%)"
+          },
+          "locator": "Full text, Table 6, p 291"
+        },
+        {
+          "label": "Hypertension TEAE",
+          "values": {
+            "pbo": "38/494 (7.7%)",
+            "m50": "29/493 (5.9%)",
+            "m100": "27/496 (5.4%)",
+            "tol": "40/495 (8.1%)"
+          },
+          "locator": "Full text, Table 6, p 291"
         }
       ],
       "delivery": [
         {
           "label": "Study treatment",
-          "value": "Once-daily oral placebo, mirabegron 50 mg, mirabegron 100 mg, or tolterodine ER 4 mg for 12 weeks after a 2-week single-blind placebo run-in; 1,978 randomized participants received study drug.",
-          "locator": "PubMed abstract, Intervention and Results"
+          "value": "Once-daily oral placebo (n=494), mirabegron 50 mg (n=493), mirabegron 100 mg (n=496), or tolterodine ER 4 mg (n=495) for 12 weeks after a 2-week single-blind placebo run-in; 1,978 of 1,987 randomized participants received study drug. Adverse events and concomitant medication were assessed 30 days after treatment.",
+          "locator": "Full text, Fig. 1 and Methods §2.1, p 284; Results §3.1, p 286"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_016.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_016.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -220,7 +312,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/scorpio",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

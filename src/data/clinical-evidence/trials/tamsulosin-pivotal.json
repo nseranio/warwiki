@@ -152,58 +152,117 @@
       "doi": "10.1016/s0090-4295(98)00127-7",
       "pmid": "9609624",
       "followUp": "40-week extension after 13 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study Design, p 902",
       "results": [
         {
           "endpoint": "AUA symptom score",
-          "role": "descriptive",
-          "measure": "Symptom-score response during double-blind extension",
+          "role": "primary",
+          "measure": "Change in total AUA symptom score from original randomized baseline to 53-week endpoint",
           "values": {
-            "t04": "Initial improvement maintained",
-            "t08": "Initial improvement maintained"
+            "t04": "Improved from baseline (P <0.001); initial response maintained",
+            "t08": "Improved from baseline (P <0.001); initial response maintained",
+            "pbo": "Improved from baseline (P <0.001)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports within-group improvement in all groups; it does not provide between-group estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Efficacy population n=400; no formal between-group P value or confidence interval is reported.",
+          "locator": "Full text, Efficacy and Figure 1A, pp 902-903"
         },
         {
           "endpoint": "Peak urinary flow",
-          "role": "descriptive",
-          "measure": "Qmax response during double-blind extension",
+          "role": "primary",
+          "measure": "Change in Qmax (mL/s) from original randomized baseline to 53-week endpoint",
           "values": {
-            "t04": "Significant improvement from baseline",
-            "t08": "Significant improvement from baseline",
-            "pbo": "No significant improvement from baseline"
+            "t04": "+1.69 (P <0.001 versus baseline)",
+            "t08": "+2.10 (P <0.001 versus baseline)",
+            "pbo": "+0.43 (not significant versus baseline)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "No formal between-group P value or confidence interval is reported.",
+          "locator": "Full text, Efficacy and Figure 2B, pp 902-904"
+        },
+        {
+          "endpoint": "AUA symptom-score response",
+          "role": "secondary",
+          "measure": "At least 25% reduction from original baseline at 53-week endpoint; efficacy evaluable denominators",
+          "values": {
+            "t04": "111/137 (81%)",
+            "t08": "103/132 (78%)",
+            "pbo": "72/123 (59%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Efficacy, p 902"
+        },
+        {
+          "endpoint": "Qmax response",
+          "role": "secondary",
+          "measure": "At least 30% increase from original baseline at 53-week endpoint; efficacy population",
+          "values": {
+            "t04": "40%",
+            "t08": "39%",
+            "pbo": "22%"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Responder counts were not reported.",
+          "locator": "Full text, Efficacy, p 902"
         }
       ],
       "harms": [
         {
           "label": "Clinically significant orthostatic hypotension",
           "values": {
-            "t04": "Not observed",
-            "t08": "Not observed"
+            "t04": "No new episodes in the extension; one prior episode in the 13-week trial",
+            "t08": "No new episodes in the extension; one prior episode in the 13-week trial",
+            "pbo": "No new episodes in the extension"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Safety, pp 905-906"
+        },
+        {
+          "label": "Abnormal ejaculation over 53 weeks",
+          "values": {
+            "t04": "10% (safety population n=139)",
+            "t08": "26% (safety population n=139)",
+            "pbo": "0% (safety population n=128)"
+          },
+          "note": "The paper gives percentages without event counts; one 0.8-mg patient withdrew for this event.",
+          "locator": "Full text, Safety and Table I, pp 904-905"
+        },
+        {
+          "label": "Discontinuation for adverse events during extension",
+          "values": {
+            "t04": "5% (safety population n=139)",
+            "t08": "16% (safety population n=139)",
+            "pbo": "6% (safety population n=128)"
+          },
+          "note": "The paper gives percentages without event counts.",
+          "locator": "Full text, Patient Demographics, p 902"
         }
       ],
       "delivery": [
         {
           "label": "Extension entry",
-          "value": "418/618 primary-trial completers (68%) continued the same blinded drug and dose.",
-          "locator": "PubMed abstract, Methods"
+          "value": "418/618 primary-trial completers (68%) continued the same blinded drug and dose: 142/254 assigned 0.4 mg, 144/248 assigned 0.8 mg, and 132/254 assigned placebo.",
+          "locator": "Full text, Patient Demographics, p 902"
+        },
+        {
+          "label": "Extension analysis sets and completion",
+          "value": "Of 418 entrants, 406 received extension drug and supplied safety data; 400 qualified for efficacy analysis. Among 406 in the safety population, 83 did not complete: 19/139 assigned 0.4 mg, 38/139 assigned 0.8 mg, and 26/128 assigned placebo.",
+          "locator": "Full text, Patient Demographics, p 902"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00127_7.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_98_00127_7.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -218,22 +277,73 @@
       "doi": "10.1016/S0022-5347(01)62386-3",
       "pmid": "9783935",
       "followUp": "13 weeks of double-blind treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Patients and Methods, pp 1701-1702",
       "results": [
         {
           "endpoint": "AUA symptom score",
-          "role": "descriptive",
+          "role": "primary",
           "measure": "Change in total AUA symptom score from baseline to endpoint",
           "values": {
-            "t04": "25% reduction",
-            "t08": "25% reduction",
-            "pbo": "Magnitude not reported"
+            "t04": "-5.09 ± 0.41 (mean ± SE; 244 evaluable)",
+            "t08": "-5.76 ± 0.41 (mean ± SE; 238 evaluable)",
+            "pbo": "Comparator (235 evaluable; exact mean not stated in text)"
           },
           "effect": {
             "type": "none",
             "p": "0.01 for each tamsulosin group versus placebo"
           },
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "The abstract reports about 25% mean reduction in each active group. No confidence interval is given; dose-to-dose difference was not significant.",
+          "locator": "Full text, Primary efficacy analysis and Figure 3, pp 1703-1704"
+        },
+        {
+          "endpoint": "AUA symptom-score response",
+          "role": "primary",
+          "measure": "At least 25% reduction in total AUA symptom score from baseline to endpoint",
+          "values": {
+            "t04": "133/244 (55%)",
+            "t08": "134/238 (56%)",
+            "pbo": "95/235 (40%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.01 for each tamsulosin group versus placebo"
+          },
+          "met": true,
+          "locator": "Full text, Primary efficacy analysis, p 1703"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "primary",
+          "measure": "Mean change in Qmax (mL/s) from baseline to endpoint",
+          "values": {
+            "t04": "+1.52 ± 0.23 (mean ± SE; 244 evaluable)",
+            "t08": "+1.79 ± 0.22 (mean ± SE; 237 evaluable)",
+            "pbo": "+0.93 ± 0.21 (mean ± SE; 235 evaluable)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.064 for 0.4 mg; 0.007 for 0.8 mg versus placebo"
+          },
+          "met": true,
+          "note": "At 13 weeks, mean Qmax improved significantly versus placebo with 0.8 mg (P = 0.007), but not with 0.4 mg (P = 0.064).",
+          "locator": "Full text, Primary efficacy analysis, p 1703"
+        },
+        {
+          "endpoint": "Qmax response",
+          "role": "primary",
+          "measure": "At least 30% increase in Qmax from baseline to endpoint",
+          "values": {
+            "t04": "82/244 (34%)",
+            "t08": "78/237 (33%)",
+            "pbo": "56/235 (24%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05 for each tamsulosin group versus placebo"
+          },
+          "met": true,
+          "locator": "Full text, Primary efficacy analysis, p 1703"
         },
         {
           "endpoint": "Early symptom and flow response",
@@ -246,31 +356,50 @@
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Primary efficacy analysis, p 1703"
         }
       ],
       "harms": [
         {
           "label": "Positive orthostatic tests at visit 4",
           "values": {
-            "t08": "More frequent than placebo",
-            "pbo": "Comparator"
+            "t04": "9 (4%; 248 randomized)",
+            "t08": "12 (5%; 244 randomized; still taking 0.4 mg)",
+            "pbo": "2 (1%; 239 randomized)"
           },
-          "note": "P=0.012; the abstract gives no counts.",
-          "locator": "PubMed abstract, Results"
+          "note": "P=0.012 for assigned 0.8 mg versus placebo; visit-specific tested denominators were not reported.",
+          "locator": "Full text, Safety, p 1704"
+        },
+        {
+          "label": "Treatment-emergent adverse events and abnormal ejaculation",
+          "values": {
+            "t04": "Any event 194/248 (78%); abnormal ejaculation 27/248 (11%); dizziness 50/248 (20%)",
+            "t08": "Any event 188/244 (77%); abnormal ejaculation 45/244 (18%); dizziness 56/244 (23%)",
+            "pbo": "Any event 181/239 (76%); abnormal ejaculation 1/239 (<1%); dizziness 37/239 (15%)"
+          },
+          "locator": "Full text, Table 2, p 1705"
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "t04": "5/248 (2%)",
+            "t08": "8/244 (3%)",
+            "pbo": "6/239 (3%)"
+          },
+          "locator": "Full text, Safety, p 1703"
         }
       ],
       "delivery": [
         {
           "label": "Study treatment",
-          "value": "735 men randomized after a 4-week single-blind placebo evaluation period; 13 weeks of double-blind tamsulosin 0.4 mg daily, 0.4 mg daily for 1 week then 0.8 mg daily, or placebo.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "735 men randomized after a 4-week single-blind placebo evaluation period; 731 were included in the reported arm analysis (248 assigned 0.4 mg daily, 244 assigned 0.4 mg daily for 1 week then 0.8 mg daily, and 239 assigned placebo) over 13 weeks. Medication was taken about 30 minutes after breakfast.",
+          "locator": "Full text, Patients and Methods, pp 1701-1702"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_9783935.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62386_3.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

@@ -42,13 +42,13 @@
         "role": "control"
       }
     ],
-    "population": "Adults with overactive bladder symptoms for at least 3 months, at least eight daily micturitions, and at least three urgency episodes in a 3-day diary.",
+    "population": "Adults with overactive bladder symptoms for at least 3 months, at least eight daily micturitions, and at least three urgency episodes in a 3-day diary; 81.3% of treated patients had participated in previous phase 3 studies.",
     "description": "Multicenter, double-blind, active-controlled randomized safety trial",
-    "locator": "PubMed abstract, Design and Interventions; ClinicalTrials.gov NCT00688688, Participant Flow"
+    "locator": "Full text, Fig. 2 and Methods, pp 297–298"
   },
   "verdict": "descriptive",
-  "verdictNote": "The abstract reports adverse-event rates without a formal comparative safety threshold.",
-  "takeaway": "Over 12 months, mirabegron 50 mg and 100 mg had treatment-emergent adverse-event rates of 59.7% and 61.3%, versus 62.6% with tolterodine ER 4 mg; dry mouth was less frequent with mirabegron.",
+  "verdictNote": "Safety was assessed descriptively, without a reported comparative hypothesis test.",
+  "takeaway": "Over 12 months, mirabegron 50 mg and 100 mg had treatment-emergent adverse events in 485/812 (59.7%) and 503/820 (61.3%) treated patients, versus 508/812 (62.6%) with tolterodine ER 4 mg. No comparative safety hypothesis test was reported.",
   "reports": [
     {
       "id": "taurus-2013",
@@ -60,53 +60,70 @@
       "doi": "10.1016/j.eururo.2012.10.048",
       "pmid": "23195283",
       "followUp": "12 months of assigned treatment",
-      "followUpLocator": "PubMed abstract, Interventions",
+      "followUpLocator": "Full text, Methods, p 297",
       "results": [
         {
           "endpoint": "Treatment-emergent adverse events",
           "role": "primary",
           "measure": "Patients with at least one treatment-emergent adverse event over 12 months",
           "values": {
-            "m50": "59.7% of 812 treated",
-            "m100": "61.3% of 820 treated",
-            "ctl": "62.6% of 812 treated"
+            "m50": "485/812 (59.7%)",
+            "m100": "503/820 (61.3%)",
+            "ctl": "508/812 (62.6%)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "Incidence and severity were the primary safety variable; no prespecified comparative threshold is reported in the abstract.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "met": "not-tested",
+          "note": "Primary safety variable in the safety analysis set (all randomized patients who took at least one dose); no formal sample-size calculation or comparative safety hypothesis test was reported.",
+          "locator": "Full text, Methods, pp 297–298; Table 2, p 299"
         },
         {
           "endpoint": "Morning systolic blood pressure",
           "role": "descriptive",
           "measure": "Adjusted mean change from baseline to final visit, mm Hg",
           "values": {
-            "m50": "+0.2 mm Hg",
-            "m100": "+0.4 mm Hg",
-            "ctl": "−0.5 mm Hg"
+            "m50": "+0.2 mm Hg (95% CI −0.4 to +0.9)",
+            "m100": "+0.4 mm Hg (95% CI −0.2 to +1.1)",
+            "ctl": "−0.5 mm Hg (95% CI −1.1 to +0.2)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Final-visit adjusted changes; between-arm estimates are not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Safety analysis set (812, 820, 812); adjusted mean changes with arm-specific 95% CIs; final visit used last observation carried forward. No between-arm estimate or P value was reported.",
+          "locator": "Full text, Appendix 5, p 304; Statistical analysis, p 298"
         },
         {
-          "endpoint": "Overactive bladder symptoms",
+          "endpoint": "Daily micturitions",
           "role": "secondary",
-          "measure": "Change in key symptoms from first measured visit at 4 weeks through 12 months",
+          "measure": "Adjusted mean change in micturitions per 24 hours from baseline to final visit",
           "values": {
-            "m50": "improved",
-            "m100": "improved",
-            "ctl": "improved"
+            "m50": "−1.27 (FAS n=789)",
+            "m100": "−1.41 (FAS n=802)",
+            "ctl": "−1.39 (FAS n=791)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give numeric symptom changes or between-arm estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Secondary efficacy measure; numerical improvement began at month 1 and persisted through month 12. Final-visit analysis used last observation carried forward; no formal between-arm efficacy comparison was performed.",
+          "locator": "Full text, Efficacy assessments, pp 300–301; Statistical analysis, p 298"
+        },
+        {
+          "endpoint": "Daily incontinence episodes",
+          "role": "secondary",
+          "measure": "Adjusted mean change in incontinence episodes per 24 hours from baseline to final visit",
+          "values": {
+            "m50": "−1.01 (FAS-I n=479)",
+            "m100": "−1.24 (FAS-I n=483)",
+            "ctl": "−1.26 (FAS-I n=488)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "FAS-I comprised FAS patients with at least one baseline incontinence episode; no formal between-arm efficacy comparison was performed.",
+          "locator": "Full text, Statistical analysis, p 298; Table 1, p 298; Efficacy assessments, p 300"
         }
       ],
       "harms": [
@@ -117,31 +134,71 @@
             "m100": "6.2% of 820 treated",
             "ctl": "5.4% of 812 treated"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Safety assessments, p 299",
           "note": ""
         },
         {
           "label": "Dry mouth",
           "values": {
-            "m50": "2.8% of 812 treated",
-            "m100": "2.3% of 820 treated",
-            "ctl": "8.6% of 812 treated"
+            "m50": "23/812 (2.8%)",
+            "m100": "19/820 (2.3%)",
+            "ctl": "70/812 (8.6%)"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 2, p 299",
           "note": ""
+        },
+        {
+          "label": "Hypertension",
+          "values": {
+            "m50": "75/812 (9.2%)",
+            "m100": "80/820 (9.8%)",
+            "ctl": "78/812 (9.6%)"
+          },
+          "locator": "Full text, Table 2, p 299",
+          "note": "Treatment-emergent adverse event (MedDRA preferred term) in the safety analysis set."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "m50": "48/812 (5.9%)",
+            "m100": "45/820 (5.5%)",
+            "ctl": "52/812 (6.4%)"
+          },
+          "locator": "Full text, Table 2, p 299",
+          "note": "Treatment-emergent adverse event in the safety analysis set."
+        },
+        {
+          "label": "Urinary retention",
+          "values": {
+            "m50": "1/812 (0.1%)",
+            "m100": "1/820 (0.1%)",
+            "ctl": "3/812 (0.4%)"
+          },
+          "locator": "Full text, Safety assessments and Table 2, p 299",
+          "note": "Acute urinary retention occurred in 0, 1, and 1 patients, respectively; the latter two required catheterization. No serious urinary-retention adverse event was reported."
+        },
+        {
+          "label": "Discontinuation due to adverse events",
+          "values": {
+            "m50": "52/815 randomized (6.4%)",
+            "m100": "49/824 randomized (5.9%)",
+            "ctl": "49/813 randomized (6.0%)"
+          },
+          "locator": "Full text, Fig. 2, p 300",
+          "note": "Disposition denominators are randomized patients; safety analysis denominators differ."
         }
       ],
       "delivery": [
         {
           "label": "Run-in and assigned treatment",
-          "value": "Two-week single-blind placebo run-in, then once-daily double-blind assigned drug for 12 months.",
-          "locator": "PubMed abstract, Interventions"
+          "value": "Two-week single-blind placebo run-in, then once-daily double-blind mirabegron 50 mg, mirabegron 100 mg, or tolterodine ER 4 mg for 12 months. Compliance was assessed by pill count at each visit; 80–120% of prescribed doses defined compliance.",
+          "locator": "Full text, Patients and study design, p 297"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_048.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_10_048.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
@@ -159,7 +216,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/taurus",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

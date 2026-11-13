@@ -42,9 +42,9 @@
         "role": "control"
       }
     ],
-    "population": "275 patients with multiple sclerosis (154) or spinal cord injury (121), neurogenic detrusor overactivity, and at least 14 urinary incontinence episodes per week.",
+    "population": "275 adults aged 18-80 with multiple sclerosis (154) or spinal cord injury (121), neurogenic detrusor overactivity, at least 14 urinary incontinence episodes per week, and inadequate response or intolerance to anticholinergics.",
     "description": "Multicenter, double-blind, placebo-controlled phase 3 randomized trial",
-    "locator": "PubMed abstract, Design and Intervention; Kennelly 2017 PDF p369 for phase"
+    "locator": "Full text, Study participants, p 743; Table 1, p 745"
   },
   "verdict": "positive",
   "verdictNote": "Both doses improved the week-6 primary endpoint; 300 U offered no clinically relevant efficacy gain.",
@@ -59,8 +59,8 @@
       "citation": "Cruz F, Herschorn S, Aliotta P, et al. \"Efficacy and Safety of OnabotulinumtoxinA in Patients with Urinary Incontinence Due to Neurogenic Detrusor Overactivity: A Randomised, Double-Blind, Placebo-Controlled Trial.\" *Eur Urol.* 2011;60(4):742-750. doi:10.1016/j.eururo.2011.07.002",
       "doi": "10.1016/j.eururo.2011.07.002",
       "pmid": "21798658",
-      "followUp": "Week 6 primary assessment; retreatment-request follow-up reported",
-      "followUpLocator": "PubMed abstract, Measurements and Results",
+      "followUp": "Week 6 primary assessment; first treatment cycle followed for up to 52 weeks",
+      "followUpLocator": "Full text, Study design, p 743",
       "results": [
         {
           "endpoint": "Urinary incontinence episodes",
@@ -76,8 +76,25 @@
             "p": "<0.01"
           },
           "met": true,
-          "note": "Each active dose versus placebo; no between-dose superiority test reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Intent-to-treat (all 275 randomized); last observation carried forward for weekly incontinence change. ANCOVA compared each dose with placebo at two-sided alpha 0.025.",
+          "locator": "Full text, Statistical analysis, p 743; Table 2 and footnotes, p 746"
+        },
+        {
+          "endpoint": "Complete continence",
+          "role": "descriptive",
+          "measure": "No urinary incontinence episodes during week 6",
+          "values": {
+            "u200": "35/92 (38.0%)",
+            "u300": "36/91 (39.6%)",
+            "ctl": "7/92 (7.6%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": "not-tested",
+          "note": "Intent-to-treat responder analysis; counts inferred from rounded percentages and randomized arm sizes.",
+          "locator": "Full text, Primary efficacy end point, p 745; Figure 2B, pp 745-746"
         },
         {
           "endpoint": "Maximum cystometric capacity",
@@ -87,8 +104,14 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Improvement greater with each active dose than placebo; numerical values not in abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Week-6 change from baseline in the intent-to-treat population; urodynamics performed at week 6.",
+          "locator": "Full text, Table 2, p 746",
+          "values": {
+            "u200": "+157.0 mL",
+            "u300": "+157.2 mL",
+            "ctl": "+6.5 mL"
+          },
+          "met": true
         },
         {
           "endpoint": "Maximum detrusor pressure at first involuntary contraction",
@@ -98,8 +121,14 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Improvement greater with each active dose than placebo; numerical values not in abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Week-6 change among patients with an involuntary detrusor contraction; arm-specific measured denominators were not printed.",
+          "locator": "Full text, Table 2 and footnote d, p 746",
+          "values": {
+            "u200": "-28.5 cm H2O",
+            "u300": "-26.9 cm H2O",
+            "ctl": "+6.4 cm H2O"
+          },
+          "met": true
         },
         {
           "endpoint": "Incontinence Quality of Life score",
@@ -109,8 +138,9 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Improvement greater with each active dose than placebo; numerical values not in abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "I-QOL improved more with both doses than placebo at week 6; numerical values appear only in Figure 3A.",
+          "locator": "Full text, Results and Figure 3A, pp 745-746",
+          "met": true
         },
         {
           "endpoint": "Time to retreatment request",
@@ -125,43 +155,60 @@
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Active doses versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Kaplan-Meier time to patient request for retreatment; request permitted from week 12 when weekly incontinence reduction was below 30%.",
+          "locator": "Full text, Study design, p 743; Results and Figure 4, pp 745-746",
+          "met": true
         }
       ],
       "harms": [
         {
           "label": "Clean intermittent catheterization initiated after treatment among patients not using it at baseline",
           "values": {
-            "u200": "30%",
-            "u300": "42%",
-            "ctl": "12%"
+            "u200": "13/44 (29.5%)",
+            "u300": "19/45 (42.2%)",
+            "ctl": "5/41 (12.2%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not provide the noncatheterizing subgroup denominators."
+          "locator": "Full text, Table 6, p 748",
+          "note": "Safety population among baseline nonusers of CIC; counts calculated from Table 6 percentages and group denominators, across treatment cycle 1."
         },
         {
-          "label": "Most frequent adverse events",
-          "note": "Urinary tract infection and urinary retention; retention was dose-related in patients not using catheterization at baseline.",
-          "locator": "PubMed abstract, Results"
+          "label": "Urinary tract infection and urinary retention during the first 12 weeks",
+          "note": "Safety population (treated patients). UTI included positive urine cultures without symptoms; retention was investigator-defined.",
+          "locator": "Full text, Safety evaluations, p 743; Table 5, p 748",
+          "values": {
+            "u200": "UTI 25/91 (27.5%); retention 18/91 (19.8%)",
+            "u300": "UTI 34/89 (38.2%); retention 28/89 (31.5%)",
+            "ctl": "UTI 20/90 (22.2%); retention 3/90 (3.3%)"
+          }
+        },
+        {
+          "label": "Serious adverse events and autonomic dysreflexia during treatment cycle 1",
+          "value": "37/270 treated patients had at least one serious adverse event; one treatment-related event was muscular weakness in the 300-U group. Two SCI patients experienced autonomic dysreflexia, one in each active-dose group.",
+          "locator": "Full text, Safety and tolerability, p 746",
+          "note": "No Clavien-Dindo grading or reoperation counts were reported."
         }
       ],
       "delivery": [
         {
           "label": "Injection pattern",
-          "value": "Thirty intradetrusor injections of onabotulinumtoxinA 200 U, 300 U, or placebo, avoiding the trigone.",
-          "locator": "PubMed abstract, Intervention"
+          "value": "OnabotulinumtoxinA 200 U, 300 U, or placebo was delivered cystoscopically in 30 intradetrusor 1-mL injections approximately 1 cm apart and 2 mm deep, sparing the trigone; injections were performed without anesthesia, after bladder local anesthesia, or under general anesthesia as needed.",
+          "locator": "Full text, Study design, p 743"
         },
         {
           "label": "Early response",
-          "value": "An active-treatment benefit was observed at the first posttreatment study visit, week 2.",
-          "locator": "PubMed abstract, Results"
+          "value": "An active-treatment benefit was observed at the first posttreatment visit, week 2; repeat treatment could be requested from week 12 if weekly incontinence episodes had fallen by less than 30% from baseline.",
+          "locator": "Full text, Study design, p 743; Primary efficacy end point, p 745"
+        },
+        {
+          "label": "First-cycle completion and retreatment",
+          "value": "230/275 randomized patients (83.6%) completed placebo-controlled cycle 1; 5/275 (1.8%) discontinued because of adverse events. Of 137 retreated patients, 74 received the same active dose again.",
+          "locator": "Full text, Results, p 744; Figure 1, p 744"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2011_07_002.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2011_07_002.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -351,7 +398,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/cruz-ndo",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }
