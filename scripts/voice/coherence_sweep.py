@@ -114,7 +114,7 @@ def gate_fails(pages):
 
 def gate(name):
     t = load(os.path.join(wd(name), "touched.json"), [])
-    for k in range(1, 4):
+    for k in range(1, int(os.environ.get("GATE_ROUNDS", "3")) + 1):
         fails = gate_fails(t)
         print(f"gate round {k}: {len(fails)} of {len(t)} pages have failing claims", flush=True)
         if not fails:
