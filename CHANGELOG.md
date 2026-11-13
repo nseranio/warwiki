@@ -13,6 +13,15 @@ For commit-level detail run `git log --oneline`.
 - Build-size cap raised from 200 to 250 MB (owner decision): the 119 should-know pages took the build to 211 MB; trial pages carry the full docs sidebar (about 57 KB each).
 - Held to abstract level: POTABA and Palmieri ESWT (full texts only on third-party sites). Removed: AUA CP/CPPS 2025 recommendations (no copy). Download list for Codex: `reports/2026-11-12/missing-trials/DOWNLOAD-LIST.md`.
 
+## November 12–13, 2026 — Coherence sweep, both sites (STYLE.md §14 "Point first")
+
+- Rule: each paragraph opens with what its evidence shows (no broader than the evidence), each study once, paragraphs grouped by question, evidence moved out of list items; every number, qualifier, condition and citation kept; no new causal connectives.
+- WARWIKI: 624 pages with flagged sections (3+ stacked results, repeated statistics, or long result paragraphs) swept; 405 rewritten and published in 15 commits; 15 pages held back unchanged because a rewritten claim still failed the gate after three rounds (list in CLAUDE.md). WHITWIKI: 70 swept, 39 rewritten, Distal Ureterectomy held back.
+- Method: Codex author and an independent Codex verifier per page (modify or reject when a fact is lost, a hedge strengthened, a condition dropped, a subgroup misattributed, a citation moved onto an unsupported claim, or the text reads worse); `coherence_check.py` rejects any edit that loses or adds a number or citation marker; Claude read every pilot rewrite and samples of each batch; claim gate on the final text (high-risk claims twice). Two pilots tuned the brief: the first author pass inverted study sentences into result-first passives and left a bare list label; the second (13 of 41 sections rewritten) read clearly better.
+- Tools: `scripts/voice/coherence_extract.py`, `coherence_check.py`, `coherence_sweep.py` (select, rewrite, gate, publish; stages only the batch's pages and its own ledger entries; lints and builds in a clean worktree), `coherence_loop.sh`; briefs `scripts/review/coherence-brief.md`, `coherence-verifier-brief.md`.
+
+---
+
 ## November 12, 2026 — Coherence pilot: Bladder Diverticula
 
 - Owner's request: pages carry the right facts but read as back-to-back study results; make them read like an encyclopedia article without losing evidence. Cause: successive passes (textbook mining, number check, reviews, claim gate) each appended a self-contained "In a [design] of [n], [result]" sentence and none integrated them (the cancer section stated the Taiwanese cohort and its HR 2.63 twice in one paragraph).
