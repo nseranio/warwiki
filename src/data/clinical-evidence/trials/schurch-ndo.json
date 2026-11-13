@@ -26,26 +26,29 @@
       {
         "key": "b200",
         "label": "OnabotulinumtoxinA 200 U",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 19
       },
       {
         "key": "b300",
         "label": "onabotulinumtoxinA 300 U",
-        "role": "experimental"
+        "role": "experimental",
+        "n": 19
       },
       {
         "key": "ctl",
         "label": "placebo injection",
-        "role": "control"
+        "role": "control",
+        "n": 21
       }
     ],
     "population": "Fifty-nine patients with urinary incontinence from neurogenic detrusor overactivity (53 with spinal cord injury and six with multiple sclerosis) required clean intermittent self-catheterization.",
-    "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "Schurch 2005 PubMed abstract, Materials and Methods; Schurch 2007 PubMed abstract, Methods"
+    "description": "Multicenter, double-blind, placebo-controlled randomized trial; intent-to-treat diary analysis with mean imputation for missing primary values, two-sided α=0.05 and no multiplicity adjustment.",
+    "locator": "Full text, Schurch 2005, Results, p 197; Full text, Schurch 2007, Methods, p 851"
   },
   "verdict": "positive",
-  "verdictNote": "Within-arm improvement reported; between-arm effect and prespecified threshold unavailable in the abstracts.",
-  "takeaway": "In 59 catheterizing patients with neurogenic detrusor overactivity, single intradetrusor onabotulinumtoxinA 200 U or 300 U reduced incontinence episodes from baseline through 24 weeks; placebo did not show a significant within-arm decrease.",
+  "verdictNote": "Between-group diary differences occurred at selected visits; no multiplicity adjustment.",
+  "takeaway": "In 59 catheterizing patients with neurogenic detrusor overactivity, single intradetrusor onabotulinumtoxinA 200 U or 300 U reduced daily incontinence episodes versus placebo at selected visits through 24 weeks; the 200-U comparison was significant at week 24.",
   "reports": [
     {
       "id": "schurch-ndo-2004-ics",
@@ -94,57 +97,109 @@
       "doi": "10.1097/01.ju.0000162035.73977.1c",
       "pmid": "15947626",
       "followUp": "24 weeks after a single injection",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Methods, p 197",
       "results": [
         {
           "endpoint": "Daily urinary incontinence episodes",
           "role": "primary",
-          "measure": "Within-arm change from baseline in daily incontinence episode frequency over 24 weeks",
+          "measure": "Mean daily incontinence episodes: baseline and change at week 24; between-group ANOVA versus placebo at each visit",
           "values": {
-            "b200": "Significant decrease (P ≤ 0.05)",
-            "b300": "Significant decrease (P ≤ 0.05)",
-            "ctl": "No significant decrease"
+            "b200": "n=19; baseline 1.9/day; week-24 change −1.1/day",
+            "b300": "n=19; baseline 2.8/day; week-24 change −0.9/day",
+            "ctl": "n=21; baseline 3.0/day; week-24 change −0.1/day"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "200 U vs placebo: 0.019 at week 24; 300 U vs placebo: 0.015 at week 2 and 0.047 at week 6"
           },
-          "met": null,
-          "note": "Abstract gives within-arm tests but no numerical change, between-arm estimate, or prespecified significance rule.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Between-group significance occurred only at the listed visits; no confidence intervals or multiplicity adjustment were reported.",
+          "locator": "Full text, Results and Table 1, pp 197–198"
         },
         {
-          "endpoint": "Bladder function and quality of life",
+          "endpoint": "Incontinence Quality of Life total score",
           "role": "secondary",
-          "measure": "Urodynamic assessments and Incontinence Quality of Life questionnaire",
+          "measure": "Mean change from baseline and between-group comparison through week 24",
           "values": {
-            "b200": "Significant improvement",
-            "b300": "Significant improvement"
+            "b200": "Improved from baseline at all visits (P ≤ 0.002); exceeded placebo at all visits",
+            "b300": "Improved from baseline at all visits (P ≤ 0.002); exceeded placebo at all visits",
+            "ctl": "Comparator"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Benefits were observed from week 2 through week 24; abstract provides no estimates.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "The paper reports no numerical between-group estimate or confidence interval.",
+          "locator": "Full text, Results, I-QOL and Fig 2, p 199"
+        },
+        {
+          "endpoint": "Incontinence-free one-week period",
+          "role": "secondary",
+          "measure": "At least one posttreatment diary week with no incontinence episodes",
+          "values": {
+            "b200": "14/19",
+            "b300": "10/19",
+            "ctl": "5/21"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Placebo count is 29 total minus 24 active-treatment patients.",
+          "locator": "Full text, Results, p 198"
+        },
+        {
+          "endpoint": "Maximum detrusor pressure during bladder contraction",
+          "role": "secondary",
+          "measure": "Mean change from baseline at week 24, cm H₂O",
+          "values": {
+            "b200": "−38.7 cm H₂O (n=19 randomized)",
+            "b300": "−35.5 cm H₂O (n=19 randomized)",
+            "ctl": "−1.4 cm H₂O (n=21 randomized)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Both active arms differed from placebo at week 24 (P < 0.05); no interval was reported.",
+          "locator": "Full text, Table 2 and Results, pp 198–199"
         }
       ],
       "harms": [
         {
-          "label": "Safety assessment",
-          "locator": "PubMed abstract, Results",
-          "note": "No safety concerns were raised during the 24-week study; event types and arm-specific counts were not reported in the abstract."
+          "label": "Urinary tract infection",
+          "locator": "Full text, Safety results and Table 4, pp 198–199",
+          "note": "Among-group P=0.455; no adverse event was considered treatment-related.",
+          "values": {
+            "b200": "6/19 (31.6%)",
+            "b300": "4/19 (21.1%)",
+            "ctl": "3/21 (14.3%)"
+          }
+        },
+        {
+          "label": "Injection pain, hematuria and serious adverse events",
+          "values": {
+            "b200": "Injection pain 0/19; hematuria 1/19; serious confusion 1/19",
+            "b300": "Injection pain 2/19; hematuria 1/19; serious events 0/19",
+            "ctl": "Injection pain 1/21; hematuria 0/21; serious skin ulcer 1/21"
+          },
+          "note": "Serious events were judged unrelated to treatment. No autonomic dysreflexia or systemic effects were seen. Clavien-Dindo grades were not reported.",
+          "locator": "Full text, Safety results and Table 4, pp 198–199"
         }
       ],
       "delivery": [
         {
           "label": "Injection and bladder management",
-          "value": "One intradetrusor injection of 200 U or 300 U onabotulinumtoxinA, or placebo; all patients required clean intermittent self-catheterization.",
-          "locator": "PubMed abstract, Purpose and Materials and Methods"
+          "value": "Single 200-U or 300-U Botox dose, or saline placebo, in 30 mL total volume; thirty cystoscopic 1-mL intramuscular detrusor injections avoided the base and trigone. All patients performed regular clean intermittent self-catheterization.",
+          "locator": "Full text, Methods, Treatment, p 197"
+        },
+        {
+          "label": "Periprocedural care and treatment completion",
+          "value": "Prophylactic antibiotics were administered. General anesthesia was used in 39.0%, local in 35.6%, spinal in 3.4%, and none in 22%. One 200-U-assigned patient withdrew before drug administration because of urethral stricture; another withdrew after week 6 for lack of efficacy.",
+          "locator": "Full text, Methods and Results, p 197"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000162035_73977_1c.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000162035_73977_1c.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     },
     {
@@ -157,52 +212,66 @@
       "doi": "10.1016/j.eururo.2007.04.026",
       "pmid": "17467889",
       "followUp": "I-QOL assessed at weeks 2, 6, 12, 18, and 24",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 851",
       "results": [
         {
           "endpoint": "Incontinence Quality of Life total score",
           "role": "secondary",
-          "measure": "Median total I-QOL score versus placebo at scheduled visits",
+          "measure": "Median total I-QOL score among 56/59 patients with screening I-QOL; baseline and selected posttreatment scores on 0–100 scale",
           "values": {
-            "b200": "Significantly higher than placebo at all assessed visits (P < 0.05)",
-            "b300": "Significantly higher than placebo at all assessed visits (P < 0.05)",
-            "ctl": "Reference"
+            "b200": "Baseline 48.9; week 24 86.4; higher than placebo at every visit (P < 0.05)",
+            "b300": "Baseline 44.3; week 6 77.3; week 24 67.0; higher than placebo at every visit (P < 0.05)",
+            "ctl": "Baseline 42.6; posttreatment scores ranged 44.3–56.3"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Abstract provides significance but no total-score values or effect estimate.",
-          "locator": "PubMed abstract, Results"
+          "note": "Intent-to-treat patients with screening I-QOL data were analyzed (56/59); arm-specific analyzed denominators and confidence intervals were not reported.",
+          "locator": "Full text, Methods and Results, Fig 1, pp 851–852"
         },
         {
           "endpoint": "I-QOL psychosocial and social embarrassment subscales",
           "role": "secondary",
-          "measure": "Median subscale scores versus placebo at week 24",
+          "measure": "Median Psychosocial Impact and Social Embarrassment scores versus placebo at assessed visits",
           "values": {
-            "b200": "No significant difference at week 24",
-            "b300": "Significantly higher than placebo at week 24 (P < 0.05)",
-            "ctl": "Reference"
+            "b200": "Psychosocial Impact improved versus placebo at weeks 2, 6, 12 and 18; Social Embarrassment at weeks 6, 12, 18 and 24 (P < 0.05)",
+            "b300": "Psychosocial Impact improved versus placebo at weeks 2, 6, 12 and 18; Social Embarrassment at weeks 6, 12 and 18 (P < 0.05)",
+            "ctl": "Comparator"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The 200-U group differed from placebo for these subscales at weeks 2, 6, 12, and 18.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Abstract Results and Results sections 3.4–3.5, pp 851, 854–855"
+        },
+        {
+          "endpoint": "Minimal important difference in total I-QOL",
+          "role": "secondary",
+          "measure": "At least 10.4-point improvement from screening",
+          "values": {
+            "b200": "Higher proportion than placebo at selected visits",
+            "b300": "Higher proportion than placebo at selected visits",
+            "ctl": "Comparator"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "One or both active groups differed from placebo at all assessed visits except week 18; arm-specific numerator/denominator pairs were not printed.",
+          "locator": "Full text, Methods and Results, Fig 1B, pp 851–853"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_04_026.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_04_026.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/schurch-ndo",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

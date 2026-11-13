@@ -111,7 +111,7 @@
       "results": [
         {
           "endpoint": "Composite clinical success",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "No prolapse beyond the hymen, no prolapse symptoms, and no retreatment at 1 year",
           "values": {
             "std": "25/28 (89%)",
@@ -119,29 +119,33 @@
             "ultra": "20/24 (83%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": ">0.05"
           },
-          "note": "Overall 66/75 (88%); Table 3 prints 77% beside 20/24 in the ultralateral arm, an arithmetic inconsistency. No significant arm comparison was reported.",
-          "locator": "AJOG PDF p 69.e5, Table 3; p 69.e4, Results"
+          "met": "not-tested",
+          "note": "Overall 66/75 (88%); Table 3 prints 77% beside 20/24 in the ultralateral arm, but 20/24 is 83%. All arm comparisons P > .05; no effect estimate or confidence interval reported.",
+          "locator": "Full text, Table 3 and Results, pp 69.e4–69.e5"
         },
         {
           "endpoint": "No prolapse beyond hymen",
-          "role": "descriptive",
-          "measure": "POP-Q at or proximal to hymen at 1 year",
+          "role": "primary",
+          "measure": "POP-Q Ba, Bp, and most dependent vaginal point at or proximal to hymen at 1 year; only women with baseline prolapse beyond hymen included, analyzed by assigned arm",
           "values": {
             "std": "25/28 (89%)",
             "mesh": "22/23 (96%)",
             "ultra": "20/24 (83%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": ">0.05"
           },
-          "note": "Overall 67/75 (89%); no significant arm comparison reported.",
-          "locator": "AJOG PDF p 69.e5, Table 3"
+          "met": "not-tested",
+          "note": "Overall 67/75 (89%); assigned-arm (intention-to-treat) analysis among eligible women with available or backward-imputed follow-up. All arm comparisons P > .05. No prespecified success-rate threshold, effect estimate, or confidence interval reported.",
+          "locator": "Full text, Methods, p 69.e2; Table 3, p 69.e5"
         },
         {
           "endpoint": "No prolapse symptoms",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Prolapse visual-analog symptom score at or below 20 mm at 1 year",
           "values": {
             "std": "32/32 (100%)",
@@ -149,10 +153,35 @@
             "ultra": "27/29 (93%)"
           },
           "effect": {
+            "type": "none",
+            "p": ">0.05"
+          },
+          "met": "not-tested",
+          "note": "Overall 80/84 (95%); all arm comparisons P > .05. No effect estimate or confidence interval reported.",
+          "locator": "Full text, Methods, p 69.e2; Table 3, p 69.e5"
+        },
+        {
+          "endpoint": "Composite clinical success at 30 months",
+          "role": "descriptive",
+          "measure": "Kaplan–Meier estimate of no prolapse beyond hymen, no prolapse symptoms, and no retreatment with loss to follow-up censored",
+          "value": "81.5% overall at 30 months",
+          "effect": {
             "type": "none"
           },
-          "note": "Overall 80/84 (95%); no significant arm comparison reported.",
-          "locator": "AJOG PDF p 69.e5, Table 3"
+          "met": "not-tested",
+          "note": "Anatomic success 82.3%, symptom success 93.9%, and no retreatment 97.1% at 30 months; no arm difference reported. No confidence intervals given.",
+          "locator": "Full text, Results and Figure 2, p 69.e5"
+        },
+        {
+          "endpoint": "Composite success missing-data bounds",
+          "role": "descriptive",
+          "measure": "Sensitivity analysis counting all participants lost to follow-up as success or failure",
+          "value": "96/107 (90%) if all lost participants succeeded; 66/107 (62%) if all failed",
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "locator": "Full text, Discussion, p 69.e8"
         }
       ],
       "harms": [
@@ -163,7 +192,7 @@
             "mesh": "1/38 (3%)",
             "ultra": "0/37 (0%)"
           },
-          "locator": "AJOG PDF p 69.e4, Results; p 69.e5, Table 3",
+          "locator": "Full text, Results, p 69.e4; Table 3, p 69.e5",
           "note": "One of 113 women (1%) underwent vaginal vault suspension and enterocele repair at 29 months."
         }
       ],
@@ -171,11 +200,16 @@
         {
           "label": "Concurrent prolapse operations",
           "value": "Among 110 with anterior repair, 57/110 (51.8%) had vaginal hysterectomy, 100/110 (90.9%) posterior colporrhaphy, and 50/110 (45.5%) vaginal vault suspension.",
-          "locator": "AJOG PDF p 69.e4, Results and Table 2"
+          "locator": "Full text, Results, p 69.e4; Table 2, p 69.e5"
+        },
+        {
+          "label": "Follow-up and allocated treatment",
+          "value": "Four of 114 randomized women did not undergo surgery, three received a different assigned repair, and 97 returned for at least one follow-up visit (median 26 months, range 0–172 months). One-year data were imputed by last observation carried backward when later follow-up was available.",
+          "locator": "Full text, Methods, pp 69.e2–69.e3; Results, pp 69.e3–69.e4"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2011_03_027.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2011_03_027.fulltext.txt",
         "level": "full-text",
         "checked": "2026-11-12"
       }

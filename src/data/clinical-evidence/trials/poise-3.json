@@ -94,7 +94,7 @@
             "p": "0.04"
           },
           "met": false,
-          "note": "Per-protocol analysis of patients receiving both doses; noninferiority required a one-sided 97.5% CI upper bound below 1.125 and one-sided P &lt;0.025; observed upper bound 1.14. P is one-sided for noninferiority. Absolute risk difference 0.3 percentage points (95% CI −1.1 to 1.7). Intention-to-treat sensitivity HR 1.03 (95% CI 0.92 to 1.14); nonhemorrhagic stroke 24/4757 versus 16/4778 and symptomatic proximal VTE 32/4757 versus 28/4778.",
+          "note": "Per-protocol analysis of patients receiving both doses; noninferiority required a one-sided 97.5% CI upper bound below 1.125 and one-sided P <0.025; observed upper bound 1.14. P is one-sided for noninferiority. Absolute risk difference 0.3 percentage points (95% CI −1.1 to 1.7). Intention-to-treat sensitivity HR 1.03 (95% CI 0.92 to 1.14); nonhemorrhagic stroke 24/4757 versus 16/4778 and symptomatic proximal VTE 32/4757 versus 28/4778.",
           "locator": "Full text, Statistical Analysis, p 1988; Primary Outcomes, p 1989; Table 2, p 1991"
         },
         {
@@ -190,11 +190,11 @@
       "doi": "10.1016/j.eururo.2026.03.019",
       "pmid": "42020258",
       "followUp": "30 days",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Patients and methods, Outcomes, p 142",
       "results": [
         {
           "endpoint": "Composite bleeding outcome in urologic surgery",
-          "role": "secondary",
+          "role": "primary",
           "measure": "Life-threatening, major, or critical-organ bleeding by 30 days",
           "values": {
             "exp": "45/556 (8.1%)",
@@ -206,14 +206,16 @@
             "ci": [
               0.5,
               1.07
-            ]
+            ],
+            "p": "0.11"
           },
-          "note": "Prespecified subgroup analysis; confidence interval includes 1.",
-          "locator": "PubMed abstract, Key Findings and Limitations"
+          "met": false,
+          "note": "Prespecified urologic analysis, intention to treat; two-sided P = 0.11.",
+          "locator": "Full text, Statistical analysis, p 143; Table 2, p 146"
         },
         {
           "endpoint": "Major bleeding in urologic surgery",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Major bleeding by 30 days",
           "values": {
             "exp": "34/556 (6.1%)",
@@ -225,14 +227,16 @@
             "ci": [
               0.41,
               0.97
-            ]
+            ],
+            "p": "0.03"
           },
-          "note": "Component outcome in the prespecified urologic subgroup.",
-          "locator": "PubMed abstract, Key Findings and Limitations"
+          "met": true,
+          "note": "Prespecified tertiary component of the primary efficacy composite; intention to treat, two-sided unadjusted P = 0.03.",
+          "locator": "Full text, Outcomes, p 142; Table 2, p 146"
         },
         {
-          "endpoint": "Composite cardiovascular outcome in urologic surgery",
-          "role": "secondary",
+          "endpoint": "Composite thrombosis outcome in urologic surgery",
+          "role": "primary",
           "measure": "Myocardial injury, nonhemorrhagic stroke, peripheral arterial thrombosis, or symptomatic proximal VTE by 30 days",
           "values": {
             "exp": "67/556 (12.1%)",
@@ -244,10 +248,52 @@
             "ci": [
               0.79,
               1.58
+            ],
+            "p": "0.5"
+          },
+          "met": false,
+          "note": "Prespecified primary safety outcome in the intention-to-treat urologic analysis; two-sided P = 0.5. No subgroup-specific noninferiority criterion was stated.",
+          "locator": "Full text, Outcomes, p 142; Table 2, p 146"
+        },
+        {
+          "endpoint": "Any blood-cell transfusion in urologic surgery",
+          "role": "secondary",
+          "measure": "Patients receiving any blood-cell transfusion by 30 days",
+          "values": {
+            "exp": "48/556 (8.6%)",
+            "ctl": "64/568 (11.3%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.75,
+            "ci": [
+              0.52,
+              1.1
             ]
           },
-          "note": "Prespecified subgroup analysis; no subgroup-specific noninferiority conclusion reported.",
-          "locator": "PubMed abstract, Key Findings and Limitations"
+          "met": false,
+          "note": "Prespecified secondary outcome; transfusion decisions followed local usual care.",
+          "locator": "Full text, Outcomes, p 142; Table 3, p 146"
+        },
+        {
+          "endpoint": "ISTH major bleeding in urologic surgery",
+          "role": "descriptive",
+          "measure": "International Society on Thrombosis and Haemostasis major bleeding by 30 days",
+          "values": {
+            "exp": "29/556 (5.2%)",
+            "ctl": "56/568 (9.9%)"
+          },
+          "effect": {
+            "type": "HR",
+            "value": 0.52,
+            "ci": [
+              0.33,
+              0.81
+            ]
+          },
+          "met": true,
+          "note": "Prespecified tertiary outcome; unadjusted estimate.",
+          "locator": "Full text, Outcomes, p 142; Table 3, p 146"
         }
       ],
       "harms": [
@@ -257,8 +303,8 @@
             "exp": "62/556",
             "ctl": "58/568"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "Event counts reported in the urologic analysis."
+          "locator": "Full text, Table 2, p 146",
+          "note": "HR 1.11 (95% CI 0.78–1.59); intention-to-treat urologic analysis."
         },
         {
           "label": "Nonhemorrhagic stroke in urologic subgroup",
@@ -266,8 +312,8 @@
             "exp": "2/556",
             "ctl": "2/568"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "Event counts reported in the urologic analysis."
+          "locator": "Full text, Table 2, p 146",
+          "note": "HR 1.01 (95% CI 0.14–7.15); intention-to-treat urologic analysis."
         },
         {
           "label": "Symptomatic proximal VTE in urologic subgroup",
@@ -275,21 +321,48 @@
             "exp": "3/556",
             "ctl": "3/568"
           },
-          "locator": "PubMed abstract, Key Findings and Limitations",
-          "note": "Event counts reported in the urologic analysis."
+          "locator": "Full text, Table 2, p 146",
+          "note": "HR 1.03 (95% CI 0.21–5.11); intention-to-treat urologic analysis."
+        },
+        {
+          "label": "Myocardial infarction in urologic subgroup",
+          "values": {
+            "exp": "10/556 (1.8%)",
+            "ctl": "4/568 (0.7%)"
+          },
+          "note": "HR 2.56 (95% CI 0.80–8.17); tertiary outcome.",
+          "locator": "Full text, Table 3, p 146"
+        },
+        {
+          "label": "Seizure in urologic subgroup",
+          "values": {
+            "exp": "0/556",
+            "ctl": "0/568"
+          },
+          "note": "No seizures in either arm by 30 days.",
+          "locator": "Full text, Table 3, p 146"
+        },
+        {
+          "label": "All-cause death in urologic subgroup",
+          "values": {
+            "exp": "3/556 (0.5%)",
+            "ctl": "2/568 (0.4%)"
+          },
+          "note": "HR 1.52 (95% CI 0.25–9.10); tertiary outcome.",
+          "locator": "Full text, Table 3, p 146"
         }
       ],
       "delivery": [
         {
           "label": "Urologic surgical approach",
           "value": "Among 1,124 urologic participants: 489 laparoscopic/robotic, 360 open, 244 transurethral, and 31 percutaneous procedures.",
-          "locator": "PubMed abstract, Key Findings and Limitations"
+          "locator": "Full text, Results, Patients, p 143; Table 1, p 144"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2026_03_019.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2026_03_019.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],

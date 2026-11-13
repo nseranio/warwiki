@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Women with overactive bladder, 21–60 urge urinary incontinence episodes weekly, and at least 10 voids per 24 hours.",
+    "population": "Women aged 18 years or older with overactive bladder, 21–60 urge urinary incontinence episodes weekly, and at least 10 voids per 24 hours; postvoid residual urine over 150 mL was excluded.",
     "description": "71-center, double-blind, active-control randomized trial",
-    "locator": "PubMed abstract, Patients and Methods; Results"
+    "locator": "Full text, Patients and Methods, Participants, p 688; Results, p 689"
   },
-  "verdict": "mixed",
-  "verdictNote": "Primary urge incontinence reductions were similar; frequency and complete continence favored oxybutynin.",
-  "takeaway": "In women with overactive bladder, oxybutynin ER and tolterodine ER produced similar reductions in weekly urge incontinence over 12 weeks; oxybutynin reduced voiding frequency more and yielded more women without incontinence, with more dry mouth.",
+  "verdict": "negative",
+  "verdictNote": "Primary comparison was nonsignificant; secondary frequency and complete continence favored oxybutynin.",
+  "takeaway": "In 790 women with overactive bladder, oxybutynin ER 10 mg and tolterodine ER 4 mg had similar final weekly urge incontinence episodes over 12 weeks; oxybutynin reduced voiding frequency more and yielded more complete continence, with more dry mouth.",
   "reports": [
     {
       "id": "opera-2003",
@@ -55,86 +55,131 @@
       "doi": "10.4065/78.6.687",
       "pmid": "12934777",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Patients and Methods",
+      "followUpLocator": "Full text, Patients and Methods, Intervention, p 688",
       "results": [
         {
           "endpoint": "Weekly urge urinary incontinence episodes",
           "role": "primary",
-          "measure": "Change in weekly urge urinary incontinence episodes through 12 weeks",
+          "measure": "Final weekly urge urinary incontinence episodes, last observation carried forward, intention-to-treat efficacy set (382/393)",
           "values": {
-            "exp": "improved; absolute change not stated",
-            "ctl": "improved; absolute change not stated"
+            "exp": "37.1 at baseline to 10.8 final (n=382)",
+            "ctl": "36.7 at baseline to 11.2 final (n=393)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "The abstract calls the improvements similar but gives no effect estimate, confidence interval, or prespecified testing threshold.",
-          "locator": "PubMed abstract, Patients and Methods; Results"
+          "met": false,
+          "note": "Planned primary ANCOVA comparison; no statistically significant between-group difference. No effect estimate, confidence interval, or exact final-analysis P value reported.",
+          "locator": "Full text, Statistical Analyses, p 689; Results, Efficacy, p 690; Tables 3–5, pp 692–693"
         },
         {
           "endpoint": "Micturition frequency",
           "role": "secondary",
-          "measure": "Reduction in voids per 24 hours through 12 weeks",
+          "measure": "Mean reduction in weekly micturitions at final observation, intention-to-treat efficacy set (382/393)",
           "values": {
-            "exp": "greater reduction; numeric change not stated",
-            "ctl": "smaller reduction; numeric change not stated"
+            "exp": "28.4 fewer weekly micturitions; final 66.4 (n=382)",
+            "ctl": "25.2 fewer weekly micturitions; final 71.1 (n=393)"
           },
           "effect": {
             "type": "none",
             "p": "0.003"
           },
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "Planned additional efficacy analysis; the paper reports P=0.003 and a significant difference. No multiplicity adjustment is described.",
+          "locator": "Full text, Statistical Analyses, p 689; Results, Efficacy, p 690; Table 5, p 693",
+          "met": true
         },
         {
           "endpoint": "No urinary incontinence episodes",
           "role": "secondary",
-          "measure": "Efficacy-assessed women reporting no urinary incontinence episodes in their last 7-day voiding diary",
+          "measure": "No total urinary incontinence episodes in the last 7-day voiding diary, final efficacy assessment (382/393 efficacy set)",
           "values": {
-            "exp": "23.0%",
-            "ctl": "16.8%"
+            "exp": "23.0% (of 382)",
+            "ctl": "16.8% (of 393)"
           },
           "effect": {
             "type": "difference",
             "value": 6.2,
             "p": "0.03"
           },
-          "note": "Absolute risk difference in percentage points, calculated from the reported rounded percentages; the abstract does not state event numerators.",
-          "locator": "PubMed abstract, Results"
+          "note": "Absolute difference in percentage points from rounded percentages; event numerators and confidence interval not reported. The paper reports P=0.03 and a significant difference.",
+          "locator": "Full text, Statistical Analyses, p 689; Results, Efficacy, p 690; Figure 5, p 691; Table 4, p 692",
+          "met": true
+        },
+        {
+          "endpoint": "No urge urinary incontinence episodes",
+          "role": "secondary",
+          "measure": "No urge incontinence episodes at final efficacy assessment (382/393 efficacy set)",
+          "values": {
+            "exp": "26.7% (of 382)",
+            "ctl": "20.9% (of 393)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.06"
+          },
+          "met": false,
+          "note": "Planned additional efficacy comparison; event numerators not reported. The paper reports P=0.06 and does not describe this difference as significant.",
+          "locator": "Full text, Statistical Analyses, p 689; Results, Efficacy, p 690; Table 3, p 692"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
           "values": {
-            "exp": "more common",
-            "ctl": "less common"
+            "exp": "116/391 (29.7%)",
+            "ctl": "89/399 (22.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Usually mild; P=0.02. A later OPERA analysis reports rates and a different P value."
+          "locator": "Full text, Table 6, p 694; Results, Tolerability and Safety, p 691",
+          "note": "P=0.02; mild 87/391 (22.3%) versus 69/399 (17.3%); moderate-to-severe 29/391 (7.4%) versus 20/399 (5.0%)."
         },
         {
-          "label": "Discontinuation due to adverse events",
+          "label": "Withdrawal for adverse events or intercurrent illness",
           "values": {
-            "exp": "similar",
-            "ctl": "similar"
+            "exp": "20/391 (5.1%)",
+            "ctl": "19/399 (4.8%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Rates are not stated in the primary abstract."
+          "locator": "Full text, Figure 1, p 690; Results, Tolerability and Safety, p 691",
+          "note": "Overall adverse-event discontinuations reported in Results; Figure 1 combines adverse events and intercurrent illness in these counts."
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "20/391 (5.1%)",
+            "ctl": "13/399 (3.3%)"
+          },
+          "locator": "Full text, Table 6, p 694",
+          "note": "The report states no statistically significant difference for this event."
+        },
+        {
+          "label": "Urinary retention or impaired urination",
+          "values": {
+            "exp": "less than 5%; count not reported",
+            "ctl": "less than 5%; count not reported"
+          },
+          "locator": "Full text, Results, Tolerability and Safety, p 691; Discussion, p 692",
+          "note": "Reported as similar between groups; exact event counts are not given."
         }
       ],
       "delivery": [
         {
           "label": "Treatment and diary schedule",
-          "value": "Oxybutynin ER 10 mg or tolterodine ER 4 mg daily for 12 weeks; 24-hour urinary diaries at baseline and weeks 2, 4, 8, and 12.",
-          "locator": "PubMed abstract, Patients and Methods"
+          "value": "Oxybutynin ER 10 mg or tolterodine ER 4 mg as one overencapsulated capsule at about 8 AM daily for 12 weeks; seven 24-hour diaries at baseline and weeks 2, 4, 8, and 12.",
+          "locator": "Full text, Patients and Methods, Intervention and Efficacy Assessments, pp 688–689"
+        },
+        {
+          "label": "Completed 12 weeks of treatment",
+          "values": {
+            "exp": "339/391 (86.7%)",
+            "ctl": "357/399 (89.5%)"
+          },
+          "locator": "Full text, Results, Participation and Dropouts, p 689; Figure 1, p 690",
+          "note": "Randomized-arm denominators; efficacy set for last-observation analyses was 382/393."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_4065_78_6_687.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_4065_78_6_687.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -149,24 +194,33 @@
       "doi": "10.1016/j.ajog.2005.03.036",
       "pmid": "15970828",
       "followUp": "12 weeks of treatment",
-      "followUpLocator": "PubMed abstract, Study Design",
+      "followUpLocator": "Full text, Design and methods, pp 1850–1851",
       "results": [],
       "harms": [
         {
           "label": "Reported central nervous system adverse events",
           "values": {
-            "exp": "9%",
-            "ctl": "8%"
+            "exp": "35/391 (9.0%)",
+            "ctl": "33/399 (8.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "No significant between-group difference; events were mild or moderate. No serious treatment-related adverse events were reported in either group."
+          "locator": "Full text, Table I, p 1850; Results, Incidence of CNS adverse events, p 1851",
+          "note": "Fisher exact P=0.8001; events during treatment or within 3 days after the last dose, whether judged treatment-related or not; all mild or moderate, with no serious treatment-related adverse events."
+        },
+        {
+          "label": "Discontinuation attributed to a CNS adverse event",
+          "values": {
+            "exp": "6/391 (1.5%)",
+            "ctl": "2/399 (0.5%)"
+          },
+          "locator": "Full text, Results, CNS adverse events cited as reason for discontinuing study, p 1852",
+          "note": "All events resolved without sequelae; difference not statistically significant."
         }
       ],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2005_03_036.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2005_03_036.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -223,7 +277,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/opera",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

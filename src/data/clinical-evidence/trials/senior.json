@@ -36,13 +36,13 @@
         "role": "control"
       }
     ],
-    "population": "Twenty-six volunteers aged at least 75 years with mild cognitive impairment were randomized.",
+    "population": "Twenty-six volunteers aged at least 75 years with mild cognitive impairment were randomized; Mini-Mental State Examination scores of 23 or lower and current OAB medication were exclusion criteria, and OAB symptoms were not required.",
     "description": "Multicenter, double-blind, three-period crossover randomized trial",
-    "locator": "PubMed abstract, Objective and Design/Intervention; ClinicalTrials.gov NCT01126424, Study Design"
+    "locator": "Full text, Patients and methods, pp 75–76"
   },
   "verdict": "inconclusive",
-  "verdictNote": "No primary composite change was detected; oxybutynin impaired attention in secondary testing.",
-  "takeaway": "In a placebo-controlled crossover study of older volunteers with mild cognitive impairment, neither solifenacin nor oxybutynin significantly changed five composite cognitive scores from baseline; secondary testing found worse attention with oxybutynin versus placebo at 1–2 hours postdose.",
+  "verdictNote": "Primary peak-time comparisons were nonsignificant; pooled post hoc testing found worse attention with oxybutynin.",
+  "takeaway": "Among 23 analyzed older volunteers with mild cognitive impairment, neither drug differed from placebo on five prespecified cognitive composites at its peak-time assessment. Oxybutynin worsened attention at 1 hour and in post hoc pooled 1–2-hour testing; dry mouth occurred in 13/25 oxybutynin-treated participants.",
   "reports": [
     {
       "id": "senior-2013",
@@ -54,55 +54,111 @@
       "doi": "10.1016/j.eururo.2013.01.002",
       "pmid": "23332882",
       "followUp": "Three 21-day treatment periods separated by 21-day washouts",
-      "followUpLocator": "PubMed abstract, Intervention",
+      "followUpLocator": "Full text, Study design, p 75",
       "results": [
         {
           "endpoint": "Cognitive function",
           "role": "primary",
-          "measure": "Five composite cognitive outcomes at 6 hours after solifenacin and 2 hours after oxybutynin",
+          "measure": "Five composite cognitive outcomes: solifenacin at 6 hours and oxybutynin at 2 hours versus time-matched placebo, safety analysis subset 1 (n=23)",
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "Neither active drug had a significant change from baseline in power or continuity of attention, quality of working or episodic memory, or speed of memory.",
-          "locator": "PubMed abstract, Outcome Measurements and Results"
+          "met": false,
+          "note": "No prespecified peak-time comparison was significant at two-sided 0.05. For power of attention, adjusted difference versus placebo was −20.99 ms (95% CI −68.58 to 26.61; p=0.3771) for solifenacin and 17.51 ms (−28.85 to 63.87; p=0.4487) for oxybutynin. For continuity of attention, differences were −0.51 (−2.29 to 1.28; p=0.5684) and −0.79 (−2.12 to 0.54; p=0.2348), respectively.",
+          "locator": "Full text, Outcomes and Statistical methods, pp 77–78; Table 3"
         },
         {
-          "endpoint": "Attention",
+          "endpoint": "Continuity of attention at 1 hour",
           "role": "secondary",
-          "measure": "Power and continuity of attention at 1–2 hours postdose",
+          "measure": "Change from time-matched baseline with oxybutynin versus placebo at 1 hour, safety analysis subset 1 (n=23)",
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -2.35,
+            "ci": [
+              -4.06,
+              -0.64
+            ],
+            "p": "0.0084"
           },
-          "note": "Oxybutynin was associated with significant decreases in both measures versus placebo.",
-          "locator": "PubMed abstract, Results"
+          "note": "Oxybutynin reduced continuity of attention versus placebo; its 1-hour power-of-attention contrast was 49.04 ms (95% CI −1.94 to 100.03; p=0.0589).",
+          "locator": "Full text, Results, p 78; Table 4"
+        },
+        {
+          "endpoint": "Attention at pooled peak-adjacent time points",
+          "role": "exploratory",
+          "measure": "Post hoc pooled 1+2-hour oxybutynin versus placebo comparison, safety analysis subset 1 (n=23)",
+          "effect": {
+            "type": "difference",
+            "value": 26.01,
+            "ci": [
+              1.65,
+              50.36
+            ],
+            "p": "0.0365"
+          },
+          "note": "Power of attention worsened by 26.01 ms (95% CI 1.65 to 50.36; p=0.0365), and continuity of attention fell by 1.66 (95% CI −2.70 to −0.62; p=0.0019).",
+          "locator": "Full text, Post hoc analyses, p 79; Table 5"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth",
-          "locator": "PubMed abstract, Results",
-          "note": "Mild or moderate dry mouth was the most frequently reported adverse event."
+          "values": {
+            "sol": "4/23 (17.4%)",
+            "oxy": "13/25 (52.0%)",
+            "plc": "2/22 (9.1%)"
+          },
+          "locator": "Full text, Adverse events, p 79; Table 6",
+          "note": "Dry mouth was the most common adverse event on active treatment; events were mild or moderate."
+        },
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "sol": "14/23 (60.9%)",
+            "oxy": "21/25 (84.0%)",
+            "plc": "11/22 (50.0%)"
+          },
+          "locator": "Full text, Adverse events, p 79; Table 6"
+        },
+        {
+          "label": "Infections and infestations",
+          "values": {
+            "sol": "2/23 (8.7%)",
+            "oxy": "5/25 (20.0%)",
+            "plc": "3/22 (13.6%)"
+          },
+          "locator": "Full text, Table 6",
+          "note": "MedDRA category; urinary infection was not separately reported."
+        },
+        {
+          "label": "Serious events and adverse-event discontinuation",
+          "locator": "Full text, Adverse events, pp 79–80",
+          "note": "Two serious events (neither treatment-related); 2/26 subjects discontinued for adverse events: dyspepsia in one and dry mouth with oral candidiasis in another. The paper does not assign these discontinuations to treatment arms."
         }
       ],
       "delivery": [
         {
           "label": "Treatment schedule",
           "value": "Solifenacin 5 mg once daily, oxybutynin 5 mg twice daily, and placebo each for 21 days, with 21-day washouts between periods.",
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Study design, pp 75–76"
+        },
+        {
+          "label": "Treatment completion and analysis set",
+          "value": "20/26 completed all three periods; 23/26 completed cognitive testing in at least two periods and entered the prespecified SAF1 efficacy analysis.",
+          "locator": "Full text, Statistical methods, p 77; Study participants, p 78"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_01_002.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2013_01_002.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/senior",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

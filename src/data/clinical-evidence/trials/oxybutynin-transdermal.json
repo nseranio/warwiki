@@ -27,31 +27,35 @@
       {
         "key": "exp",
         "label": "Oxybutynin transdermal system 3.9 mg/day",
+        "n": 125,
         "role": "experimental"
       },
       {
         "key": "dose26",
         "label": "oxybutynin transdermal system 2.6 mg/day",
+        "n": 133,
         "role": "experimental"
       },
       {
         "key": "dose13",
         "label": "oxybutynin transdermal system 1.3 mg/day",
+        "n": 130,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo patch",
+        "n": 132,
         "role": "control"
       }
     ],
-    "population": "Adults with overactive bladder and urge or mixed urinary incontinence after symptom stabilization or treatment withdrawal.",
+    "population": "Adults at least 18 years old with overactive bladder and at least 10 urge incontinence episodes and 56 voids in a baseline 7-day diary, with pure urge or urge-predominant mixed incontinence, after symptom stabilization or treatment withdrawal.",
     "description": "Randomized, double-blind, placebo-controlled dose-ranging trial",
-    "locator": "PubMed abstract, Purpose and Materials and Methods"
+    "locator": "Full text, Materials and Methods, Study population and Table 1, pp 581-582"
   },
   "verdict": "positive",
-  "verdictNote": "Rank analysis favored 3.9 mg/day; protocol-specified parametric ANCOVA did not.",
-  "takeaway": "In 520 randomized adults (515 analyzed) with urge or mixed incontinence, transdermal oxybutynin 3.9 mg/day reduced median weekly leakage more than placebo at 12 weeks (P=0.0165), but the prespecified parametric analysis was nonsignificant (P=0.2831); neither lower dose significantly reduced weekly leakage.",
+  "verdictNote": "Dunnett-adjusted rank ANCOVA for the 3.9-mg/day dose was significant (P=0.0165).",
+  "takeaway": "Among 520 randomized adults with urge or urge-predominant mixed incontinence (512 modified intention-to-treat), transdermal oxybutynin 3.9 mg/day improved median weekly leakage versus placebo at 12 weeks (−19.0 versus −14.5; Dunnett-adjusted rank ANCOVA P=0.0165).",
   "reports": [
     {
       "id": "oxybutynin-transdermal-2002",
@@ -65,111 +69,168 @@
       "doi": "10.1016/S0022-5347(05)64684-8",
       "pmid": "12131314",
       "followUp": "12 weeks blinded, followed by 12 weeks open-label dose titration",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 581",
       "results": [
         {
           "endpoint": "Incontinence episodes",
           "role": "primary",
           "measure": "Median change in weekly incontinence episodes at 12 weeks",
           "values": {
-            "exp": "-19.0 episodes/week",
-            "ctl": "-14.5 episodes/week"
+            "exp": "-19.0 episodes/week (n=123)",
+            "dose26": "-14.0 episodes/week (n=131)",
+            "dose13": "-15.0 episodes/week (n=128)",
+            "ctl": "-14.5 episodes/week (n=130)"
           },
           "effect": {
             "type": "none",
             "p": "0.0165"
           },
           "met": true,
-          "note": "The rank analysis was significant (P=0.0165); protocol-specified parametric ANCOVA was not (P=0.2831). A corrected FDA reanalysis was significant (P=0.0265).",
-          "locator": "PubMed abstract, Results; FDA statistical review, pp. 7-11 (https://www.accessdata.fda.gov/drugsatfda_docs/nda/2003/21-351_Oxytrol_statr.PDF)"
+          "note": "The 3.9-mg/day contrast was significant by Dunnett-adjusted rank ANCOVA (P=0.0165); the 0.016 Bonferroni per-dose value was used for sample-size estimation. The FDA statistical review reported parametric ANCOVA P=0.2831 and post-audit site-exclusion reanalysis P=0.0265. Modified intention-to-treat analysis used last observation carried forward.",
+          "locator": "Full text, Statistical methodology, p 582; Results and Table 2, pp 582-583"
         },
         {
           "endpoint": "Urinary frequency",
           "role": "secondary",
           "measure": "Mean change in daily voiding frequency at 12 weeks",
           "values": {
-            "exp": "-2.3 voids/day",
-            "ctl": "-1.7 voids/day"
+            "exp": "-2.3 voids/day (modified intention-to-treat n=123)",
+            "ctl": "-1.7 voids/day (modified intention-to-treat n=130)"
           },
           "effect": {
             "type": "none",
             "p": "0.0457"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 582; Figure 3, p 583"
         },
         {
           "endpoint": "Average voided volume",
           "role": "secondary",
           "measure": "Median change in average voided volume at 12 weeks, 3.9 mg/day versus placebo",
           "values": {
-            "exp": "+24 mL",
-            "ctl": "+6 mL"
+            "exp": "+24 mL (modified intention-to-treat n=123)",
+            "ctl": "+6 mL (modified intention-to-treat n=130)"
           },
           "effect": {
             "type": "none",
             "p": "0.0063"
           },
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "The reported difference was significant only at baseline-volume values in the first and second quartiles, including the median; it was not significant above the baseline median of 167 mL.",
+          "locator": "Full text, Results, p 582; Figure 4, p 583"
         },
         {
           "endpoint": "Average voided volume",
           "role": "secondary",
           "measure": "Median change in average voided volume at 12 weeks, 2.6 mg/day versus placebo",
           "values": {
-            "dose26": "+19 mL",
-            "ctl": "+6 mL"
+            "dose26": "+19 mL (modified intention-to-treat n=131)",
+            "ctl": "+6 mL (modified intention-to-treat n=130)"
           },
           "effect": {
             "type": "none",
             "p": "0.0157"
           },
-          "note": "",
-          "locator": "PubMed abstract, Results"
+          "note": "The reported difference was significant only at baseline-volume values in the first and second quartiles, including the median; it was not significant above the baseline median of 167 mL.",
+          "locator": "Full text, Results, p 582; Figure 4, p 583"
         },
         {
           "endpoint": "Incontinence-specific quality of life",
           "role": "secondary",
           "measure": "Incontinence Impact Questionnaire total score at 12 weeks",
+          "values": {
+            "exp": "39% improvement in mean total score (modified intention-to-treat n=123)",
+            "ctl": "28% improvement in mean total score (modified intention-to-treat n=130)"
+          },
           "effect": {
             "type": "none",
             "p": "0.0327"
           },
-          "note": "Improved with 3.9 mg/day versus placebo; abstract gives no scores.",
-          "locator": "PubMed abstract, Results"
+          "note": "Mean IIQ total score improved by 39% with 3.9 mg/day versus 28% with placebo.",
+          "locator": "Full text, Results, p 582; Figure 5, p 584"
+        },
+        {
+          "endpoint": "Complete continence",
+          "role": "descriptive",
+          "measure": "No incontinence episodes in the diary at 12-week endpoint",
+          "values": {
+            "exp": "16/123",
+            "dose26": "7/131",
+            "dose13": "12/128",
+            "ctl": "10/130"
+          },
+          "note": "Descriptive counts; no between-group comparison reported.",
+          "locator": "Full text, Outcome measures, p 581; Results and Table 2, pp 582-583"
         }
       ],
       "harms": [
         {
           "label": "Application-site pruritus",
-          "locator": "PubMed abstract, Results",
-          "note": "10.8%-16.8% across active doses versus 6.1% with placebo."
+          "values": {
+            "exp": "16.8% (safety n=125)",
+            "dose26": "13.5% (safety n=133)",
+            "dose13": "10.8% (safety n=130)",
+            "ctl": "6.1% (safety n=132)"
+          },
+          "locator": "Full text, Safety, p 584; Table 1, p 582",
+          "note": "Treatment-related application-site pruritus during double-blind treatment."
         },
         {
           "label": "Dry mouth",
-          "locator": "PubMed abstract, Results",
-          "note": "7.0% with oxybutynin TDS versus 8.3% with placebo; difference not significant."
+          "values": {
+            "exp": "12/125 (9.6%)",
+            "dose26": "9/133 (6.8%)",
+            "dose13": "6/130 (4.6%)",
+            "ctl": "11/132 (8.3%)"
+          },
+          "locator": "Full text, Table 3 and Safety, p 584",
+          "note": "Combined active-dose incidence 27/388 (7.0%) versus 11/132 (8.3%) with placebo; P=0.98."
+        },
+        {
+          "label": "Application-site erythema",
+          "values": {
+            "exp": "5.6% (safety n=125)",
+            "dose26": "4.5% (safety n=133)",
+            "dose13": "3.1% (safety n=130)",
+            "ctl": "2.3% (safety n=132)"
+          },
+          "locator": "Full text, Safety, p 584; Table 1, p 582",
+          "note": "Treatment-related erythema during double-blind treatment."
+        },
+        {
+          "label": "Treatment discontinuation for adverse events",
+          "locator": "Full text, Safety, p 584",
+          "note": "53/520 (10.2%) discontinued during double-blind treatment because of adverse events; 25 withdrew for application-site reactions. In the open-label period, Safety reports 30/411 (7.3%) adverse-event discontinuations and 15 application-site-reaction withdrawals; the Results withdrawal summary instead reports 33 open-label adverse-event withdrawals."
         }
       ],
       "delivery": [
         {
           "label": "Patch application and extension",
-          "value": "Patches delivering 1.3, 2.6, or 3.9 mg/day were applied twice weekly during 12 blinded weeks, followed by 12 weeks of open-label dose titration.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "Two systems combining active and matching placebo 13-cm² and 26-cm² patches were applied to the abdomen twice weekly to deliver 1.3, 2.6, or 3.9 mg/day during 12 blinded weeks. In the 12-week open-label extension, all began at 1.3 mg/day, with titration to 2.6 or 3.9 mg/day after weeks 2 and 4 according to symptoms and adverse effects.",
+          "locator": "Full text, Study drug treatment and procedures, p 581"
+        },
+        {
+          "label": "Treatment completion and final extension dose",
+          "value": "447/520 (86.0%) completed double-blind treatment; 411 entered and 358/411 (87.1%) completed the open-label extension. Final extension doses were 3.9 mg/day for 211/411 (51.3%), 2.6 mg/day for 139/411 (33.8%), and 1.3 mg/day for 61/411 (14.8%).",
+          "locator": "Full text, Results, p 582"
+        },
+        {
+          "label": "Patch adherence and dosing compliance",
+          "value": "Dosing compliance was approximately 90% throughout the study; more than 90% patch adherence was observed at more than 90% of application-site evaluations.",
+          "locator": "Full text, Results, p 582; application-site evaluation, p 584"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_12131314.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64684_8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/oxybutynin-transdermal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

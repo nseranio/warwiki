@@ -19,38 +19,42 @@
   "design": {
     "phase": "pilot",
     "randomized": true,
-    "blinding": "not specified in the primary abstract",
+    "blinding": "double masked drug treatment",
     "type": "superiority",
     "n": 121,
     "arms": [
       {
         "key": "both",
         "label": "Oral pentosan polysulfate sodium plus hydroxyzine",
+        "n": 30,
         "role": "experimental"
       },
       {
         "key": "pps",
         "label": "oral pentosan polysulfate sodium alone",
+        "n": 29,
         "role": "experimental"
       },
       {
         "key": "hyd",
         "label": "oral hydroxyzine alone",
+        "n": 31,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "oral placebo",
+        "n": 31,
         "role": "control"
       }
     ],
-    "population": "121 randomized participants met NIH–NIDDK interstitial cystitis criteria and reported at least moderate pain and frequency for at least six months.",
+    "population": "121 randomized adults had cystoscopy- and hydrodistention-confirmed NIH–NIDDK interstitial cystitis, at least 11 voids daily, and pain/discomfort of at least 4/9 for at least 24 weeks.",
     "description": "Multicenter, randomized, 2×2 factorial pilot trial",
-    "locator": "PubMed abstract, Purpose; Materials and Methods; Results"
+    "locator": "Full text, Materials and Methods, pp 810–811; Table 2, p 811"
   },
   "verdict": "inconclusive",
-  "verdictNote": "Neither pooled drug comparison reached statistical significance; recruitment and follow-up limited precision.",
-  "takeaway": "In a factorial pilot, oral pentosan polysulfate sodium and hydroxyzine were compared with their corresponding no-agent groups. Global response was 34% versus 18% for PPS (P = 0.064) and 31% versus 20% for hydroxyzine (P = 0.26).",
+  "verdictNote": "Neither 24-week factorial comparison reached the prespecified two-sided 0.05 significance level.",
+  "takeaway": "In the 24-week double-masked factorial pilot (n=121), global response occurred in 20/59 (34%) with PPS versus 11/62 (18%) without PPS (P=0.064), and 19/61 (31%) with hydroxyzine versus 12/60 (20%) without hydroxyzine (P=0.26); neither main effect met the 0.05 threshold.",
   "reports": [
     {
       "id": "icctg-pps-hydroxyzine-2003",
@@ -63,74 +67,109 @@
       "citation": "Sant GR, Propert KJ, Hanno PM, et al. \"A Pilot Clinical Trial of Oral Pentosan Polysulfate and Oral Hydroxyzine in Patients With Interstitial Cystitis.\" *J Urol.* 2003;170(3):810-815. doi:10.1097/01.ju.0000083020.06212.3d",
       "doi": "10.1097/01.ju.0000083020.06212.3d",
       "pmid": "12913705",
-      "followUp": "Complete follow-up data in 79% of randomized participants; assessment interval not given in the primary abstract",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUp": "24 weeks; 96/121 (79%) completed follow-up",
+      "followUpLocator": "Full text, End points and Results, p 811; Table 3, p 812",
       "results": [
         {
           "endpoint": "Patient-reported global response assessment",
           "role": "primary",
-          "measure": "Pooled PPS-assigned groups versus groups without PPS",
+          "measure": "24-week global response, intent-to-treat pooled PPS versus no PPS",
           "effect": {
             "type": "none",
             "p": "0.064"
           },
-          "met": null,
-          "note": "Response: 34% with PPS versus 18% without PPS. The abstract gives neither arm-specific counts nor a prespecified efficacy threshold.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "met": false,
+          "note": "20/59 (34%) with PPS versus 11/62 (18%) without PPS; withdrawals before 24 weeks counted as nonresponders.",
+          "locator": "Full text, End points and Results, p 811; Table 3, p 812"
         },
         {
           "endpoint": "Patient-reported global response assessment",
           "role": "primary",
-          "measure": "Pooled hydroxyzine-assigned groups versus groups without hydroxyzine",
+          "measure": "24-week global response, intent-to-treat pooled hydroxyzine versus no hydroxyzine",
           "effect": {
             "type": "none",
             "p": "0.26"
           },
-          "met": null,
-          "note": "Response: 31% with hydroxyzine versus 20% without hydroxyzine. The abstract gives neither arm-specific counts nor a prespecified efficacy threshold.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "met": false,
+          "note": "19/61 (31%) with hydroxyzine versus 12/60 (20%) without hydroxyzine; withdrawals before 24 weeks counted as nonresponders.",
+          "locator": "Full text, End points and Results, p 811; Table 3, p 812"
         },
         {
           "endpoint": "Symptom indexes, pain, urgency, and frequency",
           "role": "secondary",
-          "measure": "Between-treatment comparisons",
+          "measure": "24-week changes among participants with complete secondary data",
           "effect": {
             "type": "none"
           },
-          "note": "No treatment differences were reported for any secondary endpoint; the abstract provides no estimates.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "note": "No statistically significant differences in pain, urgency, frequency, IC symptom/problem indexes, or Wisconsin IC score; 96/121 had complete secondary data, so these analyses were not intent-to-treat.",
+          "locator": "Full text, Results, pp 811–812; Tables 3–4, p 812"
+        },
+        {
+          "endpoint": "Patient-reported global response by individual randomized arm",
+          "role": "descriptive",
+          "measure": "24-week response in each arm, with early withdrawals counted as nonresponders",
+          "values": {
+            "both": "12/30 (40%)",
+            "pps": "8/29 (28%)",
+            "hyd": "7/31 (23%)",
+            "ctl": "4/31 (13%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Results, p 811; Table 4, p 812"
         }
       ],
       "harms": [
         {
           "label": "Adverse events",
-          "note": "Mostly minor; the abstract gives no event counts or arm-specific rates.",
-          "locator": "PubMed abstract, Results"
+          "note": "At least one event: hydroxyzine 50/61 (82%) versus no hydroxyzine 51/60 (85%); PPS 50/59 (85%) versus no PPS 51/62 (82%). Worst Common Toxicity Criteria grade 3: 9/61 versus 13/60 and 12/59 versus 10/62, respectively.",
+          "locator": "Full text, Results and Table 5, pp 812–813"
+        },
+        {
+          "label": "Serious adverse events",
+          "value": "Nine events; none considered related to study treatments.",
+          "locator": "Full text, Results, p 812"
+        },
+        {
+          "label": "Withdrawal due to adverse events",
+          "value": "10/121 (8%) randomized participants; 10/25 (40%) of withdrawals.",
+          "locator": "Full text, Results, pp 811–812"
         }
       ],
       "delivery": [
         {
           "label": "Recruitment",
           "value": "121 participants randomized over 18 months, 89% of a target of 136 planned for 10 months of recruitment.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "locator": "Full text, Statistics and Results, p 811"
         },
         {
           "label": "Complete follow-up",
-          "value": "79% provided complete follow-up data.",
-          "locator": "PubMed abstract, Results"
+          "value": "96/121 (79%) provided complete 24-week follow-up data.",
+          "locator": "Full text, Results, p 811; Table 3, p 812"
+        },
+        {
+          "label": "Drug dosing",
+          "value": "PPS 100 mg orally three times daily; hydroxyzine 10, then 25, then 50 mg orally at bedtime over three weeks, followed by the highest tolerated dose for 21 weeks.",
+          "locator": "Full text, Interventions, pp 811–812; Table 1, p 811"
+        },
+        {
+          "label": "Hydroxyzine target dose attained",
+          "value": "66% of hydroxyzine recipients reached 50 mg daily (71% hydroxyzine alone; 60% combination); 90% on equivalent placebo tolerated 50 mg (P=0.0019).",
+          "locator": "Full text, Table 1, p 811; Results, p 812"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000083020_06212_3d.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000083020_06212_3d.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/icctg-pps-hydroxyzine",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

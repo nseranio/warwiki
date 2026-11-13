@@ -121,48 +121,110 @@
       "citation": "Chapple CR, Fianu-Jonsson A, Indig M, et al. \"Treatment Outcomes in the STAR Study: A Subanalysis of Solifenacin 5 mg and Tolterodine ER 4 mg.\" *Eur Urol.* 2007;52(4):1195-1203. doi:10.1016/j.eururo.2007.05.027",
       "doi": "10.1016/j.eururo.2007.05.027",
       "pmid": "17574730",
-      "followUp": "4-week randomized starting-dose comparison; 12-week analysis among patients who remained on starting dose",
-      "followUpLocator": "PubMed abstract, Objective and Results",
+      "followUp": "4-week randomized starting-dose comparison; endpoint (12 weeks or last clinic visit) in patients who chose not to increase dose",
+      "followUpLocator": "Full text, Methods 2.1 and Results 3.2, pp 1196–1198",
       "results": [
+        {
+          "endpoint": "Micturitions per 24 hours at 4 weeks",
+          "role": "secondary",
+          "measure": "Mean reduction from baseline before the dose-increase option; randomized starting-dose full analysis set (578 solifenacin, 599 tolterodine ER)",
+          "values": {
+            "exp": "1.71 fewer/day",
+            "ctl": "1.47 fewer/day"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.24
+          },
+          "met": false,
+          "note": "Solifenacin minus tolterodine change is calculated from rounded arm means; Table 1 reports the superiority comparison as not significant (ns), without an exact P value or confidence interval.",
+          "locator": "Full text, Results 3.1 and Table 1, pp 1197–1198"
+        },
         {
           "endpoint": "Incontinence episodes",
           "role": "secondary",
-          "measure": "Mean difference in change from baseline in episodes per 24 hours at 4 weeks",
+          "measure": "Mean reduction from baseline in episodes per 24 hours at 4 weeks before the dose-increase option; randomized starting-dose full analysis set (578 solifenacin, 599 tolterodine ER)",
           "values": {
-            "exp": "-1.30",
-            "ctl": "-0.90"
+            "exp": "1.30 fewer/day",
+            "ctl": "0.90 fewer/day"
           },
           "effect": {
             "type": "difference",
             "value": -0.4,
             "p": "0.0181"
           },
-          "note": "The difference is solifenacin minus tolterodine, calculated from reported means.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Solifenacin-minus-tolterodine change is calculated from rounded arm means; P value is from the reported ANCOVA superiority comparison. No confidence interval is reported.",
+          "locator": "Full text, Methods 2.1.2, Results 3.1 and Table 1, pp 1197–1198"
         },
         {
           "endpoint": "Pad use",
           "role": "secondary",
-          "measure": "Mean difference in change from baseline in pads per 24 hours at 4 weeks",
+          "measure": "Mean reduction from baseline in pads per 24 hours at 4 weeks before the dose-increase option; randomized starting-dose full analysis set (578 solifenacin, 599 tolterodine ER)",
           "values": {
-            "exp": "-1.21",
-            "ctl": "-0.80"
+            "exp": "1.21 fewer/day",
+            "ctl": "0.80 fewer/day"
           },
           "effect": {
             "type": "difference",
             "value": -0.41,
             "p": "0.0089"
           },
-          "note": "The difference is solifenacin minus tolterodine, calculated from reported means.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Solifenacin-minus-tolterodine change is calculated from rounded arm means; P value is from the reported ANCOVA superiority comparison. No confidence interval is reported.",
+          "locator": "Full text, Methods 2.1.2, Results 3.1 and Table 1, pp 1197–1198"
+        },
+        {
+          "endpoint": "Incontinence episodes in no-dose-increase subgroups",
+          "role": "exploratory",
+          "measure": "Mean reduction from baseline in episodes per 24 hours at endpoint (12 weeks or last clinic visit) in patient-selected full-analysis-set subgroups (290 solifenacin, 283 tolterodine ER)",
+          "values": {
+            "exp": "1.56 fewer/day",
+            "ctl": "1.23 fewer/day"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "The no-dose-increase subgroups arose by patient choice after week 4; endpoint comparisons were descriptive, without formal superiority testing.",
+          "locator": "Full text, Methods 2.1.1–2.1.2, Table 2, Table 3 and Fig. 2, pp 1197–1200"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Adverse-event withdrawal by 4 weeks",
+          "values": {
+            "exp": "18/593 (3.0%)",
+            "ctl": "17/607 (2.8%)"
+          },
+          "locator": "Full text, Results 3.3.1 and Table 4, p 1200",
+          "note": "Randomized starting-dose safety population before the dose-increase option."
+        },
+        {
+          "label": "Antimuscarinic adverse events by 4 weeks",
+          "values": {
+            "exp": "dry mouth 108/593 (18.2%); constipation 18/593 (3.0%); blurred vision 1/593 (0.2%)",
+            "ctl": "dry mouth 91/607 (15.0%); constipation 7/607 (1.2%); blurred vision 9/607 (1.5%)"
+          },
+          "locator": "Full text, Results 3.3.1 and Table 4, p 1200",
+          "note": "Randomized starting-dose safety population. Table 4 counts and denominators are used where adjacent prose gives differing percentages."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "No-dose-increase subgroup at endpoint",
+          "values": {
+            "exp": "290/578 in the full analysis set",
+            "ctl": "283/599 in the full analysis set"
+          },
+          "locator": "Full text, Methods 2.1.1 and Table 2, pp 1197–1199",
+          "note": "Patients chose not to request dose escalation after week 4; the endpoint subgroup comparison was exploratory and descriptive."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_05_027.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2007_05_027.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

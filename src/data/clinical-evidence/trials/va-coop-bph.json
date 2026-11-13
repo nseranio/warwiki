@@ -137,31 +137,111 @@
       "doi": "10.1016/S0022-5347(01)62536-9",
       "pmid": "9751354",
       "followUp": "1 year",
-      "followUpLocator": "Publisher abstract, Materials and Methods",
+      "followUpLocator": "Full text, Methods, Patient followup, p 1359",
       "results": [
         {
-          "endpoint": "Patient-rated improvement",
+          "endpoint": "Patient-rated marked or moderate improvement",
           "role": "secondary",
-          "measure": "Marked or moderate global improvement at 1 year",
+          "measure": "Marked or moderate global improvement at 52 weeks; final-visit respondents",
           "values": {
-            "pbo": "39%",
-            "ter": "61%",
-            "fin": "44%",
-            "combo": "65%"
+            "pbo": "103/264 (39%)",
+            "ter": "167/273 (61%)",
+            "fin": "114/257 (44%)",
+            "combo": "180/278 (65%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not give arm-specific denominators; symptom problem and BPH impact scores did not differ between finasteride and placebo or between terazosin and combination.",
-          "locator": "Publisher abstract, Results"
+          "note": "The paper tests any improvement versus none or worse, not the marked-or-moderate dichotomy; percentages here are descriptive.",
+          "locator": "Full text, Table 3, p 1361"
+        },
+        {
+          "endpoint": "Patient-rated any improvement",
+          "role": "secondary",
+          "measure": "Any global improvement versus none or worse at 52 weeks; final-visit respondents",
+          "values": {
+            "pbo": "190/264 (72.0%)",
+            "ter": "219/273 (80.2%)",
+            "fin": "178/257 (69.3%)",
+            "combo": "232/278 (83.5%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "terazosin vs placebo 0.025; combination vs placebo 0.001; finasteride vs placebo 0.497; combination vs terazosin 0.235"
+          },
+          "note": "Chi-square tests compare any improvement with no improvement or worse.",
+          "locator": "Full text, Results, p 1360; Table 3, p 1361"
+        },
+        {
+          "endpoint": "Symptom problem score",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 52 weeks, points; final-visit observations",
+          "values": {
+            "pbo": "-1.4 (n=265)",
+            "ter": "-3.9 (n=276)",
+            "fin": "-1.7 (n=259)",
+            "combo": "-4.2 (n=279)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "repeated measures through 52 weeks: terazosin vs placebo <0.0001; combination vs placebo <0.0001; finasteride vs placebo 0.7504; combination vs terazosin 1.0000"
+          },
+          "note": "Analyses included all randomized men with any follow-up data in assigned arms; final-visit denominators vary by endpoint. No confidence interval reported for these arm changes.",
+          "locator": "Full text, Methods, Statistical analysis, p 1359; Tables 1-2, pp 1360-1361"
+        },
+        {
+          "endpoint": "BPH impact score",
+          "role": "secondary",
+          "measure": "Mean change from baseline at 52 weeks, points; final-visit observations",
+          "values": {
+            "pbo": "-0.5 (n=265)",
+            "ter": "-1.2 (n=276)",
+            "fin": "-0.5 (n=259)",
+            "combo": "-1.7 (n=279)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "repeated measures through 52 weeks: terazosin vs placebo <0.0001; combination vs placebo <0.0001; finasteride vs placebo 0.7318; combination vs terazosin 1.0000"
+          },
+          "note": "No confidence interval reported for these arm changes.",
+          "locator": "Full text, Tables 1-2, pp 1360-1361"
+        },
+        {
+          "endpoint": "Peak flow in men with baseline prostate volume >50 cm3",
+          "role": "exploratory",
+          "measure": "Mean change from baseline at 52 weeks, mL/s; subgroup with baseline and 52-week measurements",
+          "values": {
+            "pbo": "0.6 (n=56)",
+            "ter": "3.6 (n=52)",
+            "fin": "2.7 (n=43)",
+            "combo": "3.7 (n=52)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 2.1,
+            "ci": [
+              0.72,
+              3.48
+            ],
+            "p": "0.0027 for finasteride vs placebo"
+          },
+          "note": "Finasteride versus placebo showed no significant difference in AUA symptom, symptom problem, or BPH impact scores in this subgroup; 17% of study participants had baseline prostate volume >50 cm3.",
+          "locator": "Full text, Tables 6-7, p 1363; Results, p 1361; Discussion, p 1364"
         }
       ],
       "harms": [],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Terazosin titration and dose reduction",
+          "value": "Terazosin or matching placebo at bedtime: 1 mg days 1-3, 2 mg days 4-7, 5 mg days 8-14, then 10 mg from day 15; terazosin could be reduced to 5 mg for an attributed adverse effect. Finasteride or matching placebo was 5 mg nightly.",
+          "locator": "Full text, Methods, Treatment, pp 1359-1360",
+          "note": "All arms received matching placebos; protocol allowed blinded dose reduction."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62536_9.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_01_62536_9.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

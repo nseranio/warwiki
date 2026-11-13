@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstract",
+    "blinding": "Patients blinded immediately after surgery; postoperative assessments by a blinded nurse; surgeons not blinded",
     "type": "superiority",
     "n": 106,
     "arms": [
@@ -41,13 +41,13 @@
         "role": "experimental"
       }
     ],
-    "population": "106 women with stage II or greater posterior vaginal wall prolapse.",
+    "population": "106 women at least 21 years old with stage II or greater posterior vaginal wall prolapse; concomitant prolapse or incontinence surgery was permitted.",
     "description": "Randomized, three-arm surgical trial",
-    "locator": "PubMed abstract, Study Design"
+    "locator": "Full text, Material and methods, pp 1763-1764"
   },
   "verdict": "negative",
-  "verdictNote": "Graft augmentation had the highest one-year anatomic failure rate.",
-  "takeaway": "In women with posterior vaginal wall prolapse, porcine small-intestinal-submucosa graft augmentation of site-specific repair had more one-year anatomic failures than native-tissue site-specific repair or posterior colporrhaphy; patient-reported improvements did not differ among groups.",
+  "verdictNote": "Fortagen graft augmentation had the lowest one-year anatomic cure rate.",
+  "takeaway": "In 106 women randomized to posterior colporrhaphy, site-specific repair, or Fortagen graft-augmented site-specific repair, one-year anatomic cure was 24/28, 21/27, and 14/26, respectively (P = .02); patient-reported outcomes did not differ among groups.",
   "reports": [
     {
       "id": "paraiso-rectocele-2006",
@@ -58,94 +58,178 @@
       "citation": "Paraiso MFR, Barber MD, Muir TW, Walters MD. \"Rectocele repair: a randomized trial of three surgical techniques including graft augmentation.\" *Am J Obstet Gynecol.* 2006;195(6):1762-1771. doi:10.1016/j.ajog.2006.07.026",
       "doi": "10.1016/j.ajog.2006.07.026",
       "pmid": "17132479",
-      "followUp": "One-year anatomic assessment; mean follow-up 17.5 ± 7 months among 98 returning participants",
-      "followUpLocator": "PubMed abstract, Study Design and Results",
+      "followUp": "One-year anatomic assessment; 98/105 operated participants returned (mean follow-up 17.5 ± 7 months)",
+      "followUpLocator": "Full text, Abstract, p 1762; Results, p 1764",
       "results": [
         {
-          "endpoint": "Anatomic failure",
+          "endpoint": "Anatomic cure",
           "role": "primary",
-          "measure": "POP-Q point Bp ≥−2 at one year",
+          "measure": "POP-Q point Bp ≤ −2 at 12 months",
           "values": {
-            "pc": "4/28 (14%)",
-            "ss": "6/27 (22%)",
-            "graft": "12/26 (46%)"
+            "pc": "24/28 (86%)",
+            "ss": "21/27 (78%)",
+            "graft": "14/26 (54%)"
           },
           "effect": {
             "type": "none",
             "p": "0.02"
           },
           "met": true,
-          "note": "Overall three-group comparison; graft augmentation had significantly more failures.",
-          "locator": "PubMed abstract, Study Design and Results"
+          "note": "Pearson chi-square three-group comparison among 81 assessed at one year; analyzed by randomized assignment.",
+          "locator": "Full text, Material and methods, p 1764; Results, p 1765"
         },
         {
           "endpoint": "Pelvic-floor symptom and impact scores",
           "role": "secondary",
-          "measure": "PFDI-20 and PFIQ-7 prolapse, colorectal, and summary scales",
+          "measure": "One-year PFDI-20 and PFIQ-7 total scores, mean ± SD",
+          "values": {
+            "pc": "PFDI-20 39 ± 30, PFIQ-7 10 ± 18 (n = 28)",
+            "ss": "PFDI-20 46 ± 53, PFIQ-7 22 ± 38 (n = 29)",
+            "graft": "PFDI-20 34 ± 37, PFIQ-7 10 ± 23 (n = 24)"
+          },
           "effect": {
             "type": "none",
-            "p": "<0.001 within groups"
+            "p": "<0.001 within each group; 0.28 PFDI-20 and 0.65 PFIQ-7 between groups"
           },
-          "note": "Improved after surgery in all groups without between-group differences.",
-          "locator": "PubMed abstract, Results"
+          "note": "Prolapse, colorectal, urinary, and summary scales improved within all groups without between-group differences.",
+          "locator": "Full text, Results, p 1765; Table V, p 1769"
         },
         {
           "endpoint": "Functional failure",
           "role": "secondary",
-          "measure": "Functional failure at follow-up",
-          "effect": {
-            "type": "none"
+          "measure": "Worsening POPDI-6 and/or CRADI-8 score at one year",
+          "values": {
+            "pc": "5/31 (16%)",
+            "ss": "4/29 (14%)",
+            "graft": "6/28 (21%)"
           },
-          "note": "15% overall; no significant difference among groups. Group denominators were not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "effect": {
+            "type": "none",
+            "p": "0.61"
+          },
+          "note": "15/88 (17%) among participants with one-year functional assessments; no significant between-group difference.",
+          "locator": "Full text, Table I, p 1765; Results, p 1765"
         },
         {
           "endpoint": "Sexual function",
           "role": "secondary",
-          "measure": "PISQ-12 after surgery",
+          "measure": "One-year PISQ-12 score, mean ± SD",
+          "values": {
+            "pc": "36 ± 5",
+            "ss": "36 ± 7",
+            "graft": "37 ± 5"
+          },
           "effect": {
             "type": "none",
-            "p": "<0.001 within groups"
+            "p": "<0.001 within each group; 0.24 between groups"
           },
           "note": "Improved in all groups without between-group differences.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 1766; Table VI, p 1769"
+        },
+        {
+          "endpoint": "Posterior prolapse to or beyond the hymen",
+          "role": "secondary",
+          "measure": "POP-Q point Bp ≥ 0 at one year",
+          "values": {
+            "pc": "2/28 (7%)",
+            "ss": "2/27 (7%)",
+            "graft": "5/25 (20%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.27"
+          },
+          "note": "The three-group difference was not statistically significant.",
+          "locator": "Full text, Table I and Results, p 1765"
+        },
+        {
+          "endpoint": "Perineorrhaphy and bothersome splinting",
+          "role": "exploratory",
+          "measure": "Bothersome splinting at one year, adjusted for treatment group and baseline symptoms",
+          "effect": {
+            "type": "OR",
+            "value": 0.08,
+            "ci": [
+              0.004,
+              0.71
+            ],
+            "p": "0.038"
+          },
+          "note": "82/105 operated participants underwent perineorrhaphy; this was an association across randomized groups, not a randomized comparison of perineorrhaphy.",
+          "locator": "Full text, Results, p 1764"
         }
       ],
       "harms": [
         {
           "label": "Dyspareunia",
-          "locator": "PubMed abstract, Results",
-          "note": "No significant change at one year and no significant difference among groups; rates were not reported in the abstract."
+          "values": {
+            "pc": "4/20 usually or always at one year",
+            "ss": "3/22 usually or always at one year",
+            "graft": "1/19 usually or always at one year"
+          },
+          "locator": "Full text, Results, p 1766; Table VI, p 1769",
+          "note": "No significant within-group change or between-group difference in dyspareunia distribution (between-group P = .45)."
+        },
+        {
+          "label": "Postoperative infection",
+          "values": {
+            "pc": "UTI 4/37; infection requiring antibiotics 4/37",
+            "ss": "UTI 7/37; infection requiring antibiotics 0/37",
+            "graft": "UTI 6/31; infection requiring antibiotics 3/31"
+          },
+          "locator": "Full text, Table IV, p 1768",
+          "note": "Within six weeks of surgery; UTI P = .54 and infection requiring antibiotics P = .13. Categories may overlap."
+        },
+        {
+          "label": "Reoperation",
+          "values": {
+            "pc": "Prolapse reoperation 1/33; early return to operating room 0/37",
+            "ss": "Prolapse reoperation 2/37; early return to operating room 0/37",
+            "graft": "Prolapse reoperation 3/29; early return to operating room 1/31"
+          },
+          "locator": "Full text, Results, p 1765; Table IV, p 1768",
+          "note": "Prolapse reoperations involved any segment during the study (P = .47); one graft-arm patient returned to surgery on the operative day for bleeding."
+        },
+        {
+          "label": "Graft exposure",
+          "value": "No graft exposures or graft complications were reported among 31 operated women assigned to the graft arm; one received SurgiSIS instead of Fortagen.",
+          "locator": "Full text, Results, pp 1764-1765"
         }
       ],
       "delivery": [
         {
-          "label": "Operation received",
-          "value": "105/106 randomized participants underwent surgery.",
-          "locator": "PubMed abstract, Results"
+          "label": "Operation received and operative time",
+          "value": "105/106 randomized participants underwent surgery; three protocol violations were analyzed by original assignment.",
+          "values": {
+            "pc": "150 ± 68 minutes (n = 37)",
+            "ss": "151 ± 69 minutes (n = 37)",
+            "graft": "169 ± 62 minutes (n = 31)"
+          },
+          "locator": "Full text, Results, p 1764; Table IV, p 1768",
+          "note": "Mean ± SD operating time; between-group P = .61. All but four operated participants had concomitant procedures."
         },
         {
           "label": "Assessment schedule",
-          "value": "Physical examination and three validated pelvic-floor instruments at baseline, six months, one year, and two years.",
-          "locator": "PubMed abstract, Study Design"
+          "value": "Postoperative visits at six weeks, six months, one year, and two years; blinded nurse performed POP-Q and questionnaire assessments at six months, one year, and two years.",
+          "locator": "Full text, Material and methods, p 1764"
         },
         {
-          "label": "Graft technique and material",
-          "value": "Site-specific rectocele repair augmented with Fortagen porcine small-intestinal-submucosa graft (Organogenesis).",
-          "locator": "PubMed abstract, Study Design"
+          "label": "Repair techniques and graft material",
+          "value": "Posterior colporrhaphy plicated rectovaginal fibromuscularis without levator plication; site-specific repair reapproximated discrete defects. The graft arm added a 4 × 8 cm Fortagen porcine small-intestinal-submucosa graft (Organogenesis), perforated in three to four rows of 3-mm incisions and fixed superiorly to posterior vaginal fibromuscularis and epithelium, laterally to levator ani fascia, and inferiorly to perineal body.",
+          "locator": "Full text, Material and methods, pp 1763-1764"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2006_07_026.txt",
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2006_07_026.fulltext.txt",
         "checked": "2026-11-12",
-        "level": "abstract"
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/paraiso-rectocele",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "120 men with symptomatic, urodynamically confirmed obstruction and prostate volume at least 100 mL on transrectal ultrasonography.",
+    "population": "120 men with symptomatic, urodynamically confirmed obstruction, AUA symptom score at least 8, peak flow at most 12 mL/s, postvoid residual greater than 50 mL, and prostate volume at least 100 mL on transrectal ultrasonography.",
     "description": "Prospective randomized surgical comparison",
-    "locator": "Full text, Materials and methods, p 161; primary PubMed abstract, Materials and Methods"
+    "locator": "Full text, Materials and Methods, Patients, pp 1465–1466; Table 1, p 1466"
   },
-  "verdict": "mixed",
-  "verdictNote": "Voiding improvements were similar; HoLEP reduced perioperative morbidity; five-year outcomes used completers.",
-  "takeaway": "In obstructed men with prostates larger than 100 g, holmium laser enucleation and transvesical open prostatectomy produced similar six-month voiding improvements; enucleation had less blood loss, shorter catheterization and hospitalization, and fewer transfusions, but longer operating time.",
+  "verdict": "descriptive",
+  "verdictNote": "No primary endpoint or equivalence margin was specified; six-month outcomes included 104 completers.",
+  "takeaway": "In 120 men with obstructed prostates at least 100 mL, HoLEP and transvesical open prostatectomy improved six-month voiding measures without significant between-arm differences among 104 completers. HoLEP required longer surgery but reduced hemoglobin loss, catheter time, hospital stay and transfusions.",
   "reports": [
     {
       "id": "holep-vs-open-kuntz-2002",
@@ -54,49 +54,111 @@
       "citation": "Kuntz RM, Lehrich K. \"Transurethral holmium laser enucleation versus transvesical open enucleation for prostate adenoma greater than 100 gm.: a randomized prospective trial of 120 patients.\" *J Urol.* 2002;168(4 Pt 1):1465-1469. doi:10.1016/S0022-5347(05)64475-8",
       "doi": "10.1016/S0022-5347(05)64475-8",
       "pmid": "12352419",
-      "followUp": "Assessments at 1, 3 and 6 months",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUp": "Assessments at 1, 3 and 6 months; 104/120 completed six months (54/60 HoLEP, 50/60 open) after 7 losses to follow-up and exclusion of 9 incidental prostate cancers",
+      "followUpLocator": "Full text, Materials and Methods, p 1466; Results, Patient population, p 1466; Table 3, p 1467",
       "results": [
         {
-          "endpoint": "AUA symptom score, peak flow and postvoid residual",
+          "endpoint": "AUA symptom score",
           "role": "descriptive",
-          "measure": "Voiding outcomes through six months",
+          "measure": "Mean score at six months among 104 completers",
           "values": {
-            "exp": "similar and significant improvement",
-            "ctl": "similar and significant improvement"
+            "exp": "2.4 ± 1.9 (54/60 assessed; baseline 22.1 ± 3.3)",
+            "ctl": "2.8 ± 3.9 (50/60 assessed; baseline 21.0 ± 3.6)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.61"
           },
-          "note": "The abstract does not identify a prespecified primary endpoint or between-arm threshold.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": "not-tested",
+          "note": "Between-arm Mann–Whitney comparison; within-arm improvement P<0.0001. No primary endpoint, effect estimate, confidence interval or equivalence margin specified.",
+          "locator": "Full text, Table 3, p 1467; Materials and Methods, p 1466"
+        },
+        {
+          "endpoint": "Peak urinary flow rate",
+          "role": "descriptive",
+          "measure": "Mean Qmax at six months among 104 completers",
+          "values": {
+            "exp": "29.9 ± 8.8 mL/s (54/60 assessed; baseline 3.8 ± 3.6)",
+            "ctl": "27.0 mL/s (50/60 assessed; baseline 3.6 ± 3.8)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.11"
+          },
+          "met": "not-tested",
+          "note": "Between-arm Mann–Whitney comparison; within-arm improvement P<0.0001. The printed open-arm six-month SD appears inconsistent with its range; mean alone recorded.",
+          "locator": "Full text, Table 3, p 1467; Materials and Methods, p 1466"
+        },
+        {
+          "endpoint": "Postvoid residual volume",
+          "role": "descriptive",
+          "measure": "Mean residual volume at six months among 104 completers",
+          "values": {
+            "exp": "4.4 ± 11 mL (54/60 assessed; baseline 280 ± 273)",
+            "ctl": "2.1 ± 6.0 mL (50/60 assessed; baseline 292 ± 191)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.40"
+          },
+          "met": "not-tested",
+          "note": "Between-arm Mann–Whitney comparison; within-arm improvement P<0.0001.",
+          "locator": "Full text, Table 3, p 1467; Materials and Methods, p 1466"
         }
       ],
       "harms": [
         {
           "label": "Blood transfusion",
           "values": {
-            "exp": "0 patients",
-            "ctl": "8 patients"
+            "exp": "0/60 (0%)",
+            "ctl": "8/60 (13.3%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Arm denominators of 60 each are stated in the later report."
+          "locator": "Full text, Table 4, p 1468",
+          "note": "P=0.003; all transfusions were clinically indicated for hemodynamic compromise or hemoglobin below 7 g/dL."
+        },
+        {
+          "label": "Reoperation through six months",
+          "values": {
+            "exp": "6/60 (10.0%)",
+            "ctl": "5/60 (8.3%)"
+          },
+          "locator": "Full text, Table 4, p 1468",
+          "note": "P=0.75; arterial bleeding 3/60 in each arm, secondary apical resection 2/60 versus 0/60, bladder-neck contracture 0/60 versus 2/60, urethral stricture 1/60 versus 0/60."
+        },
+        {
+          "label": "Re-catheterization through six months",
+          "values": {
+            "exp": "3/60 (5.0%)",
+            "ctl": "3/60 (5.0%)"
+          },
+          "locator": "Full text, Table 4, p 1468",
+          "note": "P=1.0."
+        },
+        {
+          "label": "Persistent mild stress incontinence at three months",
+          "values": {
+            "exp": "2 HoLEP patients (one pad daily)",
+            "ctl": "0 open prostatectomy patients"
+          },
+          "locator": "Full text, Results, Continence, p 1467",
+          "note": "Eleven initially continent patients had postoperative moderate-to-severe incontinence (5 HoLEP, 6 open); all but two HoLEP patients resolved by three months."
         }
       ],
       "delivery": [
         {
           "label": "Operative and recovery comparisons",
           "values": {
-            "exp": "longer operation, less blood loss, shorter catheterization and hospital stay",
-            "ctl": "shorter operation, more blood loss, longer catheterization and hospital stay"
+            "exp": "Mean operation 135.9 ± 31.2 min; hemoglobin loss 1.9 ± 1.3 g/dL; catheter 30.8 ± 17.3 h; hospital stay 69.6 ± 36.4 h",
+            "ctl": "Mean operation 90.6 ± 19.5 min; hemoglobin loss 2.8 ± 1.6 g/dL; catheter 194.4 ± 20.1 h; hospital stay 251.0 ± 45.5 h"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 1467; Materials and Methods, Holmium laser enucleation, p 1466",
+          "note": "Each comparison P<0.0001. HoLEP used 80 or 100 W (2.0 J at 40 or 50 Hz), retrograde enucleation from apex to bladder; lobes retrieved by loop fragmentation (50/60) or mechanical morcellation (10/60)."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64475_8.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64475_8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

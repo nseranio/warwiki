@@ -38,11 +38,11 @@
     ],
     "population": "227 adults with substantial faecal incontinence despite conservative treatment were randomized in 17 UK specialist hospital units.",
     "description": "Multicenter, double-blind, pragmatic superiority randomized trial",
-    "locator": "Lancet PubMed abstract, Methods and Findings; Horrocks 2017 PubMed abstract, Background"
+    "locator": "Full text, Methods, pp 1641–1643; Results, p 1644"
   },
   "verdict": "negative",
   "verdictNote": "The prespecified diary-defined responder comparison did not differ significantly.",
-  "takeaway": "After 12 weekly treatments for faecal incontinence, percutaneous tibial nerve stimulation did not significantly increase diary-defined responders versus sham electrical stimulation (39/103 [38%] versus 32/102 [31%]; adjusted OR 1.28, 95% CI 0.72–2.28).",
+  "takeaway": "After 12 weekly treatments for faecal incontinence, percutaneous tibial nerve stimulation did not significantly increase diary-defined responders versus sham electrical stimulation. Among diary completers, response was 39/103 (38%) versus 32/102 (31%); imputed intention-to-treat adjusted OR 1.28 (95% CI 0.72–2.28; P=0.396).",
   "reports": [
     {
       "id": "confident-2015",
@@ -54,7 +54,7 @@
       "doi": "10.1016/S0140-6736(15)60314-2",
       "pmid": "26293315",
       "followUp": "Response assessed after 12 weekly treatments during the 14-week masked trial",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, pp 1642–1643",
       "results": [
         {
           "endpoint": "≥50% reduction in weekly faecal incontinence episodes",
@@ -74,45 +74,101 @@
             "p": "0.396"
           },
           "met": false,
-          "note": "The displayed proportions use complete bowel diaries; missing data were multiply imputed for the adjusted analysis.",
-          "locator": "PubMed abstract, Methods and Findings"
+          "note": "The displayed proportions use complete bowel diaries; missing data were multiply imputed for the adjusted intention-to-treat analysis (115 PTNS, 112 sham). Per-protocol sensitivity analysis included 197 patients (OR 1.27, 95% CI 0.67–2.34; P=0.45).",
+          "locator": "Full text, Results, p 1644; Table 3, p 1647; per-protocol analysis, p 1646"
+        },
+        {
+          "endpoint": "Weekly faecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Adjusted difference in change, PTNS minus sham, episodes per week at 14 weeks",
+          "values": {
+            "exp": "6.4 mean episodes/week after treatment (n=105)",
+            "ctl": "9.1 mean episodes/week after treatment (n=104)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.262,
+            "ci": [
+              -4.185,
+              -0.339
+            ],
+            "p": "0.021"
+          },
+          "met": true,
+          "note": "Arm means use available diaries; adjusted comparison uses imputed intention-to-treat data. Observed-case denominators are reported in the companion HTA full text.",
+          "locator": "Full text, Table 2, p 1645; Figure 3 and Results, p 1646; HTA full text, Table 6, p 24"
+        },
+        {
+          "endpoint": "Weekly urge faecal incontinence episodes",
+          "role": "secondary",
+          "measure": "Adjusted difference in change, PTNS minus sham, episodes per week at 14 weeks",
+          "values": {
+            "exp": "3.0 mean episodes/week after treatment (n=106)",
+            "ctl": "4.4 mean episodes/week after treatment (n=105)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -1.456,
+            "ci": [
+              -2.693,
+              -0.219
+            ],
+            "p": "0.021"
+          },
+          "met": true,
+          "note": "Arm means use available diaries; adjusted comparison uses imputed intention-to-treat data. Observed-case denominators are reported in the companion HTA full text.",
+          "locator": "Full text, Table 2, p 1645; Figure 3 and Results, p 1646; HTA full text, Table 6, p 24"
         }
       ],
       "harms": [
         {
           "label": "Mild treatment-related adverse events",
           "values": {
-            "exp": "7 events",
-            "ctl": "7 events"
+            "exp": "7 mild events/115 participants",
+            "ctl": "7 mild events/112 participants"
           },
-          "locator": "PubMed abstract, Findings",
-          "note": "Needle-site pain accounted for four PTNS events and three sham events."
+          "locator": "Full text, Table 4, p 1647",
+          "note": "Event counts, not participant incidence. PTNS versus sham: needle-site pain 4 versus 3, bruising 2 versus 1, altered needle-site sensation 1 versus 0, needle-site bleeding 0 versus 2, altered toe sensation 0 versus 1. All were classed as mild."
         },
         {
           "label": "Serious treatment-related adverse events",
           "values": {
-            "exp": "none reported",
-            "ctl": "none reported"
+            "exp": "0 treatment-related events/115 participants",
+            "ctl": "0 treatment-related events/112 participants"
           },
-          "locator": "PubMed abstract, Findings",
+          "locator": "Full text, Results, p 1646",
           "note": "One patient per group withdrew after an adverse event unrelated to treatment."
         }
       ],
       "delivery": [
         {
-          "label": "Treatment or trial withdrawals",
+          "label": "Treatment discontinuations",
           "values": {
             "exp": "7/115",
             "ctl": "5/112"
           },
-          "locator": "Full text, Figure 3, p 17; Results, p 18",
-          "note": "Twelve patients withdrew from treatment or the trial (seven PTNS, five sham). The companion NIHR HTA report (doi:10.3310/hta19770) identifies five citing weekly treatment commitments, seven withdrawing from the trial and five from treatment only."
+          "locator": "Full text, Figure 2, p 1643; HTA full text, Figure 3, p 17; Results, p 18",
+          "note": "Seven PTNS and five sham participants discontinued treatment; five discontinued treatment only and remained in study follow-up. Five of the 12 cited weekly treatment commitments."
+        },
+        {
+          "label": "PTNS and sham delivery",
+          "value": "Urgent PC PTNS needle 5 cm above and 2 cm behind the medial malleolus, advanced 2 cm, with calcaneal reference electrode; current increased until great-toe or sole sensation or toe/foot plantar flexion. Sham needle inserted 2 mm with TENS to the lateral forefoot (10 Hz, 200 microseconds). Both groups received 30-minute weekly sessions for 12 weeks; PTNS practitioners completed three mentored 12-session courses before certification.",
+          "locator": "Full text, Procedures, p 1642; Figure 1, p 1642; Methods, p 1643"
+        },
+        {
+          "label": "Treatment completion and per-protocol adherence",
+          "values": {
+            "exp": "108/115 completed treatment",
+            "ctl": "107/112 completed treatment"
+          },
+          "note": "197/227 met the per-protocol requirement of at least 10 sessions, 5–10 days apart, within 13 weeks.",
+          "locator": "Full text, Figure 2 and Methods, p 1643; Results, p 1646"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_15_60314_2.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0140_6736_15_60314_2.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -349,7 +405,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/confident",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

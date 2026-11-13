@@ -18,7 +18,7 @@
   "design": {
     "phase": "not stated",
     "randomized": true,
-    "blinding": "not reported",
+    "blinding": "open-label",
     "type": "superiority",
     "n": 64,
     "arms": [
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "Sixty-four patients with interstitial cystitis meeting National Institute of Diabetes and Digestive and Kidney Diseases criteria (53 women and 11 men).",
+    "population": "Sixty-four patients with interstitial cystitis meeting National Institute of Diabetes and Digestive and Kidney Diseases criteria (53 women and 11 men); 15 had Hunner's ulcers (5 cyclosporine, 10 PPS).",
     "description": "Prospective randomized active-comparator trial",
-    "locator": "PubMed abstract, Materials and Methods"
+    "locator": "Full text, Materials and Methods, pp 2235–2236; Results, p 2236"
   },
   "verdict": "positive",
-  "verdictNote": "Greater six-month frequency reduction and global response with cyclosporine; adverse events were more frequent.",
-  "takeaway": "Oral cyclosporine A reduced daily micturition frequency more than pentosan polysulfate sodium after six months in a randomized interstitial cystitis comparison; global response was 75% versus 19%, with more adverse events on cyclosporine.",
+  "verdictNote": "Halved daily frequency in 11/32 versus 0/32; adverse events occurred in 30/32 versus 18/32.",
+  "takeaway": "In 64 patients with interstitial cystitis, six months of cyclosporine A halved daily micturition frequency in 11/32 patients versus 0/32 with pentosan polysulfate sodium (P below 0.001). Global response was 24/32 versus 6/32; adverse events occurred in 30/32 versus 18/32.",
   "reports": [
     {
       "id": "cyclosporine-ic-2005",
@@ -53,11 +53,28 @@
       "doi": "10.1097/01.ju.0000181808.45786.84",
       "pmid": "16280777",
       "followUp": "Six months of randomized treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 2235",
       "results": [
         {
-          "endpoint": "Daily micturition frequency",
+          "endpoint": "At least 50% reduction in daily micturition frequency",
           "role": "primary",
+          "measure": "Patients whose 24-hour micturition frequency was halved at six months; randomized-arm denominators",
+          "values": {
+            "exp": "11/32 (34%)",
+            "ctl": "0/32 (0%)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 34.375,
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Absolute percentage-point difference calculated from counts. The paper gives no confidence interval or explicit ITT label; its prespecified two-sided significance threshold was P <0.05.",
+          "locator": "Full text, Materials and Methods and Results, p 2236"
+        },
+        {
+          "endpoint": "Daily micturition frequency",
+          "role": "descriptive",
           "measure": "Mean change in micturitions per 24 hours at six months; difference in mean changes",
           "values": {
             "exp": "−6.7 ± 4.7 per 24 hours",
@@ -65,38 +82,79 @@
           },
           "effect": {
             "type": "difference",
-            "value": -4.7
+            "value": -4.7,
+            "p": "<0.001"
           },
-          "met": true,
-          "note": "Difference is calculated from the abstract's arm-specific mean changes; the abstract calls the comparison significant without giving its exact P value.",
-          "locator": "PubMed abstract, Results"
+          "note": "Difference in mean changes calculated from arm values; Table 2 gives no analysis-set denominator or confidence interval. Twenty-nine patients per arm completed six months.",
+          "locator": "Full text, Table 2, p 2236"
         },
         {
           "endpoint": "Global response",
           "role": "secondary",
           "measure": "Subjective global response assessment at six months; percentage-point difference",
           "values": {
-            "exp": "75%",
-            "ctl": "19%"
+            "exp": "24/32 (75%)",
+            "ctl": "6/32 (19%, rounded)"
           },
           "effect": {
             "type": "difference",
-            "value": 56,
+            "value": 56.25,
             "p": "<0.001"
           },
-          "note": "Percentage-point difference is calculated from reported percentages; respondent counts and denominators were not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "GRA categories 4–6 counted as response; absolute percentage-point difference calculated from counts.",
+          "locator": "Full text, Materials and Methods, p 2236; Table 3, p 2237"
+        },
+        {
+          "endpoint": "Nocturia episodes",
+          "role": "secondary",
+          "measure": "Mean change in nightly episodes after six months",
+          "values": {
+            "exp": "−2.2 ± 1.6",
+            "ctl": "−0.2 ± 2.1"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -2.0,
+            "p": "<0.001"
+          },
+          "note": "Difference calculated from arm-specific mean changes; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 2236"
+        },
+        {
+          "endpoint": "Pain visual analogue scale",
+          "role": "secondary",
+          "measure": "Mean change on 0–10 cm VAS after six months",
+          "values": {
+            "exp": "−4.7 ± 3.5 cm",
+            "ctl": "−1.6 ± 3.3 cm"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -3.1,
+            "p": "<0.001"
+          },
+          "note": "Difference calculated from arm-specific mean changes; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 2236"
         }
       ],
       "harms": [
         {
           "label": "Adverse events",
           "values": {
-            "exp": "More adverse events than PPS",
-            "ctl": "Fewer adverse events than cyclosporine A"
+            "exp": "30/32 (94%); mild 23/32, moderate 4/32, significant 3/32",
+            "ctl": "18/32 (56%); mild 14/32, moderate 3/32, significant 1/32; gross hematuria 1/32"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives no event counts, grades, or categories."
+          "locator": "Full text, Results, p 2236; Table 5, p 2237",
+          "note": "Table 5 reports each participant's worst adverse-event severity (grades 0–3), not Clavien-Dindo grades."
+        },
+        {
+          "label": "Blood pressure and renal toxicity",
+          "values": {
+            "exp": "2/32 had clinically significant diastolic blood-pressure increases; 1/32 had creatinine rise despite dose reduction",
+            "ctl": "Not reported for PPS"
+          },
+          "locator": "Full text, Results, p 2237",
+          "note": "Cyclosporine dose was halved for the two blood-pressure events; the creatinine rise normalized after drug discontinuation."
         }
       ],
       "delivery": [
@@ -106,7 +164,7 @@
             "exp": "29/32",
             "ctl": "29/32"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Results, p 2236"
         },
         {
           "label": "Oral treatment regimen",
@@ -114,13 +172,23 @@
             "exp": "Cyclosporine A 1.5 mg/kg twice daily for six months",
             "ctl": "Pentosan polysulfate sodium 100 mg three times daily for six months"
           },
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Materials and Methods, pp 2235–2236",
+          "note": "Blood pressure and serum creatinine were checked monthly in the cyclosporine arm."
+        },
+        {
+          "label": "Cyclosporine dose reduction or discontinuation for intolerance",
+          "values": {
+            "exp": "4/32 required a 50% dose reduction; 3/32 discontinued within one month",
+            "ctl": "3/32 discontinued treatment"
+          },
+          "locator": "Full text, Results, pp 2236–2237; Discussion, p 2238",
+          "note": "Seven of 32 cyclosporine recipients did not tolerate the starting dose."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000181808_45786_84.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000181808_45786_84.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -159,7 +227,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/cyclosporine-ic",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

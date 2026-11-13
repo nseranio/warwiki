@@ -38,13 +38,13 @@
         "role": "control"
       }
     ],
-    "population": "Men aged 50 years or older with IPSS at least 13 and peak urinary flow of 4–15 mL/s.",
+    "population": "Men aged 50 years or older with IPSS at least 13, peak urinary flow of 4–15 mL/s, and postvoid residual less than 250 mL; a 4-week placebo run-in excluded those with at least a 30% IPSS decrease or a flow increase of at least 3 mL/s.",
     "description": "Pooled, multicenter, double-blind phase 3 randomized trials",
-    "locator": "PubMed abstract, Materials and Methods and Results; ClinicalTrials.gov NCT00224107 and NCT00224120"
+    "locator": "Full text, Patients and Study Design and Figure 1, pp 2635–2636"
   },
   "verdict": "positive",
-  "verdictNote": "Symptom improvement favored silodosin; ejaculation-related adverse events were substantially more frequent.",
-  "takeaway": "Across two randomized US phase 3 trials, silodosin 8 mg daily improved IPSS more than placebo within 3–4 days, with a significant difference persisting through 12 weeks; reported retrograde ejaculation was more frequent with silodosin.",
+  "verdictNote": "Week-12 IPSS improved more with silodosin; retrograde ejaculation was more frequent.",
+  "takeaway": "Across two randomized US phase 3 trials, silodosin 8 mg daily improved week-12 IPSS more than placebo (−6.4 vs −3.5 points; adjusted difference −2.8, 95% CI −3.6 to −2.0); retrograde ejaculation occurred in 131/466 versus 4/457 men.",
   "reports": [
     {
       "id": "silodosin-pivotal-2009",
@@ -56,23 +56,32 @@
       "doi": "10.1016/j.juro.2009.02.034",
       "pmid": "19371887",
       "followUp": "12 weeks of blinded treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Patients and Study Design, p 2635",
       "results": [
         {
           "endpoint": "IPSS total score",
           "role": "primary",
-          "measure": "Change from baseline to last observation; between-group superiority sustained through week 12",
+          "measure": "Mean change from baseline to week 12, LOCF; efficacy population 466/466 and 457/457",
+          "values": {
+            "exp": "−6.4 ± 6.63 points (466/466)",
+            "ctl": "−3.5 ± 5.84 points (457/457)"
+          },
           "effect": {
-            "type": "none",
+            "type": "difference",
+            "value": -2.8,
+            "ci": [
+              -3.6,
+              -2.0
+            ],
             "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract reports the week-12 significance but not the last-observation group means.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "Adjusted between-group difference; week-12 missing values imputed by last observation carried forward.",
+          "locator": "Full text, Statistical Analysis, p 2635 and Table 2, p 2637"
         },
         {
           "endpoint": "IPSS total score",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean change from baseline after 3–4 days; mean difference −1.9 points",
           "values": {
             "exp": "−4.2 ± 5.3 points",
@@ -81,14 +90,19 @@
           "effect": {
             "type": "difference",
             "value": -1.9,
+            "ci": [
+              -2.5,
+              -1.3
+            ],
             "p": "<0.0001"
           },
+          "met": "not-tested",
           "note": "Early assessment at 0.5 week, range 3–4 days; SDs accompany group means.",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 2637"
         },
         {
           "endpoint": "Peak urinary flow",
-          "role": "secondary",
+          "role": "descriptive",
           "measure": "Mean change from baseline 2–6 hours after first dose; mean difference 1.3 mL/s",
           "values": {
             "exp": "+2.8 ± 3.4 mL/s",
@@ -97,38 +111,91 @@
           "effect": {
             "type": "difference",
             "value": 1.3,
+            "ci": [
+              0.9,
+              1.8
+            ],
             "p": "<0.0001"
           },
+          "met": "not-tested",
           "note": "Between-group difference remained significant through week 12 (P <0.001).",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 2637"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "secondary",
+          "measure": "Mean change from baseline to week 12, LOCF; efficacy population 466/466 and 457/457",
+          "values": {
+            "exp": "+2.6 ± 4.43 mL/s (466/466)",
+            "ctl": "+1.5 ± 4.36 mL/s (457/457)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 1.0,
+            "ci": [
+              0.4,
+              1.5
+            ],
+            "p": "0.0007"
+          },
+          "met": true,
+          "note": "Adjusted between-group difference.",
+          "locator": "Full text, Statistical Analysis, p 2635 and Table 2, p 2637"
         }
       ],
       "harms": [
         {
           "label": "Treatment-emergent retrograde ejaculation",
           "values": {
-            "exp": "28.1%",
-            "ctl": "0.9%"
+            "exp": "131/466 (28.1%)",
+            "ctl": "4/457 (0.9%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Mostly mild; event counts are not given in the abstract."
+          "locator": "Full text, Table 4, p 2639",
+          "note": "79% of events in the silodosin group were mild."
         },
         {
           "label": "Discontinuation for retrograde ejaculation",
           "values": {
-            "exp": "2.8%",
+            "exp": "2.8% of 466",
             "ctl": "not reported"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Safety and Tolerability, p 2637",
           "note": ""
         },
         {
           "label": "Treatment-emergent orthostatic hypotension",
           "values": {
-            "exp": "2.6%",
-            "ctl": "1.5%"
+            "exp": "12/466 (2.6%)",
+            "ctl": "7/457 (1.5%)"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 4, p 2639",
+          "note": ""
+        },
+        {
+          "label": "Any treatment-emergent adverse event",
+          "values": {
+            "exp": "257/466 (55.2%)",
+            "ctl": "168/457 (36.8%)"
+          },
+          "locator": "Full text, Safety and Tolerability, p 2637",
+          "note": ""
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "exp": "6/466 (1.3%)",
+            "ctl": "7/457 (1.5%)"
+          },
+          "locator": "Full text, Safety and Tolerability, p 2637",
+          "note": "One suspected syncope event in a silodosin recipient taking prohibited prazosin was considered possibly drug-related."
+        },
+        {
+          "label": "Discontinuation for adverse events",
+          "values": {
+            "exp": "30/466 (6.4%)",
+            "ctl": "10/457 (2.2%)"
+          },
+          "locator": "Full text, Figure 1, p 2636",
           "note": ""
         }
       ],
@@ -136,13 +203,13 @@
         {
           "label": "Blinded dosing",
           "value": "Silodosin 8 mg or placebo once daily with breakfast for 12 weeks.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Patients and Study Design, p 2635"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_02_034.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2009_02_034.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -151,15 +218,15 @@
       "label": "40-week open-label extension",
       "published": "2009-10-07",
       "cutoff": null,
-      "citation": "Marks LS, Gittelman MC, Hill LA, Volinn W, Hoel G. \"Silodosin in the treatment of the signs and symptoms of benign prostatic hyperplasia: a 9-month, open-label extension study.\" *Urology.* 2009;74(6):1318-1322. doi:10.1016/j.urology.2009.06.072",
+      "citation": "Marks LS, Gittelman MC, Hill LA, Volinn W, Hoel G. \"Silodosin in the treatment of the signs and symptoms of benign prostatic hyperplasia: a 9-month, open-label extension study.\" *Urology.* 2009;74(6):1318-1324. doi:10.1016/j.urology.2009.06.072",
       "doi": "10.1016/j.urology.2009.06.072",
       "pmid": "19815265",
       "followUp": "40 weeks after the 12-week blinded trials",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Patients and Study Design, p 1319",
       "results": [
         {
           "endpoint": "IPSS total score",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Observed-case mean change during extension to week 40, grouped by prior randomized treatment",
           "values": {
             "exp": "−1.6 ± 6.0 points (continued silodosin)",
@@ -168,57 +235,90 @@
           "effect": {
             "type": "none"
           },
-          "note": "Both extension groups received silodosin; these are within-group changes from the extension baseline, not a randomized comparison.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Within-group observed-case changes, P <0.0001 (prior placebo, n=347 enrolled) and P <0.01 (continued silodosin, n=314 enrolled); observed-case denominators not reported. No randomized comparison in extension.",
+          "locator": "Full text, Table 3 and Changes in International Prostate Symptom Score and QOL, p 1321"
         }
       ],
       "harms": [
         {
           "label": "Treatment-emergent adverse events during extension",
           "values": {
-            "exp": "431/661 (65.2%)",
+            "exp": "431/661 (65.2%; de novo 71.5% of 347, continuing 58.3% of 314)",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Safety and Tolerability, p 1320",
           "note": "All extension participants received silodosin."
         },
         {
           "label": "Retrograde ejaculation during extension",
           "values": {
-            "exp": "20.9%",
+            "exp": "138/661 (20.9%; de novo 108/347 [31.1%], continuing 30/314 [9.6%])",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 2, p 1321",
           "note": "All extension participants received silodosin."
         },
         {
           "label": "Orthostatic hypotension during extension",
           "values": {
-            "exp": "2.6%",
+            "exp": "17/661 (2.6%; de novo 10/347 [2.9%], continuing 7/314 [2.2%])",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Table 2, p 1321",
           "note": "All extension participants received silodosin."
+        },
+        {
+          "label": "Serious adverse events during extension",
+          "values": {
+            "exp": "29/661 (4.4%)",
+            "ctl": "not applicable"
+          },
+          "locator": "Full text, Safety and Tolerability, p 1320",
+          "note": "None was considered drug-related by investigators; two patients died."
+        },
+        {
+          "label": "Discontinuation for adverse events during extension",
+          "values": {
+            "exp": "93/661 (14.1%)",
+            "ctl": "not applicable"
+          },
+          "locator": "Full text, Figure 1 and Patient Disposition and Demographics, p 1320",
+          "note": "Retrograde ejaculation led to study discontinuation in 7.5% of de novo and 1.9% of continuing participants."
+        },
+        {
+          "label": "Dizziness during extension",
+          "values": {
+            "exp": "19/661 (2.9%)",
+            "ctl": "not applicable"
+          },
+          "locator": "Full text, Table 2, p 1321",
+          "note": ""
         }
       ],
       "delivery": [
         {
           "label": "Extension completion",
           "value": "435/661 (65.8%) completed 40 weeks of open-label silodosin 8 mg daily with breakfast.",
-          "locator": "PubMed abstract, Methods and Results"
+          "locator": "Full text, Patients and Study Design, p 1319 and Patient Disposition and Demographics, p 1320"
+        },
+        {
+          "label": "Extension adherence",
+          "value": "77/661 (11.6%) did not comply with the dosing regimen; 71/77 took less than 80% of doses.",
+          "locator": "Full text, Patient Disposition and Demographics, p 1320"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2009_06_072.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2009_06_072.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/silodosin-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

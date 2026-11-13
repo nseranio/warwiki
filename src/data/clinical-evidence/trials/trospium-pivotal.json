@@ -26,21 +26,23 @@
       {
         "key": "exp",
         "label": "Trospium chloride 20 mg twice daily",
+        "n": 262,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo",
+        "n": 261,
         "role": "control"
       }
     ],
-    "population": "523 patients with overactive bladder and urge incontinence entered the primary study at 51 sites.",
+    "population": "523 patients with overactive bladder and urge incontinence were randomized at 51 sites; 512 (256 per arm) entered the intention-to-treat efficacy analysis.",
     "description": "Multicenter, double-blind, placebo-controlled phase III randomized trial",
-    "locator": "Zinner 2004, PubMed abstract, Materials and Methods and Results"
+    "locator": "Full text, Results and Tables 1–2, pp 2312–2313"
   },
   "verdict": "positive",
-  "verdictNote": "Both coprimary symptom counts improved versus placebo over 12 weeks.",
-  "takeaway": "In the Zinner phase III trial, trospium chloride 20 mg twice daily reduced daily toilet voids and urge incontinence episodes more than placebo over 12 weeks.",
+  "verdictNote": "Both coprimary diary endpoints improved in the intention-to-treat analysis at week 12.",
+  "takeaway": "In Zinner's 12-week phase III trial, trospium chloride 20 mg twice daily reduced daily toilet voids by 2.37 versus 1.29 with placebo and urge incontinence episodes by 59.0% versus 44.2% (both P ≤0.0001; intention-to-treat, last observation carried forward).",
   "reports": [
     {
       "id": "trospium-pivotal-2004",
@@ -53,64 +55,147 @@
       "citation": "Zinner N, Gittelman M, Harris R, et al. \"Trospium Chloride Improves Overactive Bladder Symptoms: A Multicenter Phase III Trial.\" *J Urol.* 2004;171(6 Pt 1):2311-2315. doi:10.1097/01.ju.0000127742.73136.0c",
       "doi": "10.1097/01.ju.0000127742.73136.0c",
       "pmid": "15126811",
-      "followUp": "12 weeks; effects reported by week 1 and sustained through week 12",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUp": "12 weeks; coprimary effects by week 1, nocturnal effect by week 4, IIQ improvement at week 12",
+      "followUpLocator": "Full text, Study design and Table 2, pp 2312–2313",
       "results": [
         {
           "endpoint": "Daily toilet voids",
           "role": "primary",
-          "measure": "Change in average toilet voids per 24 hours over 12 weeks",
+          "measure": "Week-12 change in average toilet voids per 24 hours; intention-to-treat, last observation carried forward (256 per arm)",
+          "values": {
+            "exp": "−2.37 from 12.7 (n=256)",
+            "ctl": "−1.29 from 12.9 (n=256)"
+          },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -1.08,
+            "p": "≤0.0001"
           },
           "met": true,
-          "note": "The abstract reports a significant decrease versus placebo without arm-specific changes, an effect estimate, or a P value.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "Difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table 2, p 2313"
         },
         {
           "endpoint": "Daily urge incontinence episodes",
           "role": "primary",
-          "measure": "Change in urge incontinent episodes per 24 hours over 12 weeks",
+          "measure": "Week-12 percent change in urge incontinence episodes per 24 hours; intention-to-treat, last observation carried forward (256 per arm)",
+          "values": {
+            "exp": "−59.0% from 3.9/day (n=256)",
+            "ctl": "−44.2% from 4.3/day (n=256)"
+          },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -14.8,
+            "p": "≤0.0001"
           },
           "met": true,
-          "note": "The abstract reports a significant decrease versus placebo without arm-specific changes, an effect estimate, or a P value.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "Effect is the percentage-point difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table 2, p 2313"
         },
         {
           "endpoint": "Nocturnal frequency",
           "role": "secondary",
-          "measure": "Change in nocturnal urinations by week 4",
-          "effect": {
-            "type": "none"
+          "measure": "Week-12 change in nocturnal voids per 24 hours; intention-to-treat, last observation carried forward (256 per arm)",
+          "values": {
+            "exp": "−0.47 from 2.1 (n=256)",
+            "ctl": "−0.29 from 2.0 (n=256)"
           },
-          "note": "The abstract reports a significant decrease by week 4 without a magnitude.",
-          "locator": "PubMed abstract, Results"
+          "effect": {
+            "type": "difference",
+            "value": -0.18,
+            "p": "≤0.05"
+          },
+          "met": true,
+          "note": "Between-group difference first reached significance at week 4 (−0.43 vs −0.17, P ≤0.001); week-12 difference calculated from rounded arm changes; no confidence interval reported.",
+          "locator": "Full text, Table 2, pp 2313–2314"
         },
         {
           "endpoint": "Incontinence Impact Questionnaire",
           "role": "secondary",
-          "measure": "Quality-of-life score at week 12",
+          "measure": "Week-12 change in total Incontinence Impact Questionnaire score; intention-to-treat, last observation carried forward",
+          "values": {
+            "exp": "−54.0 (n=235)",
+            "ctl": "−36.0 (n=236)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -18.0,
+            "p": "≤0.05"
+          },
+          "met": true,
+          "note": "Least-squares mean changes; improvement significant in women (−59.1, n=183 vs −35.7, n=169), not men; difference calculated from rounded arm changes, no confidence interval reported.",
+          "locator": "Full text, Table 3 and Results, p 2313"
+        },
+        {
+          "endpoint": "Volume per void",
+          "role": "secondary",
+          "measure": "Week-12 change in mean voided volume per void; intention-to-treat, last observation carried forward (256 per arm)",
+          "values": {
+            "exp": "+32.1 mL from 155.1 (n=256)",
+            "ctl": "+7.7 mL from 156.6 (n=256)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 24.4,
+            "p": "≤0.0001"
+          },
+          "met": true,
+          "note": "Difference calculated from rounded arm changes; no confidence interval reported.",
+          "locator": "Full text, Table 2, p 2313"
+        },
+        {
+          "endpoint": "Complete dryness",
+          "role": "descriptive",
+          "measure": "Completely dry at week 12",
+          "values": {
+            "exp": "21% (response denominator and count not reported)",
+            "ctl": "11% (response denominator and count not reported)"
+          },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract reports improvement at week 12 without a score or between-group estimate.",
-          "locator": "PubMed abstract, Results"
+          "note": "Reported percentages; response denominators and a P value are not supplied.",
+          "locator": "Full text, Results, p 2312"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Dry mouth",
+          "values": {
+            "exp": "57/262 (21.8%)",
+            "ctl": "17/261 (6.5%)"
+          },
+          "locator": "Full text, Table 5, p 2314"
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "exp": "25/262 (9.5%)",
+            "ctl": "10/261 (3.8%)"
+          },
+          "locator": "Full text, Table 5, p 2314"
+        },
+        {
+          "label": "Adverse events leading to discontinuation",
+          "values": {
+            "exp": "8.8% of 262 randomized",
+            "ctl": "5.7% of 261 randomized"
+          },
+          "note": "Event counts not reported; overall discontinuation was 16.4% in each arm.",
+          "locator": "Full text, Results, p 2313"
+        }
+      ],
       "delivery": [
         {
           "label": "Oral treatment",
           "value": "Trospium chloride 20 mg twice daily or placebo for 12 weeks, randomized 1:1.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Study design, p 2312"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000127742_73136_0c.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000127742_73136_0c.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -125,55 +210,131 @@
       "doi": "10.1016/j.urology.2005.08.017",
       "pmid": "16461077",
       "followUp": "658 patients randomized at 52 sites; 12-week treatment, with effects reported at weeks 1, 4, and 12",
-      "followUpLocator": "PubMed abstract, Methods and Results",
+      "followUpLocator": "Full text, Study design and Table II, pp 276–278",
       "results": [
         {
           "endpoint": "Daily toilet voids",
           "role": "primary",
-          "measure": "Change in average toilet voids per 24 hours over 12 weeks",
+          "measure": "Week-12 change in average toilet voids per 24 hours; intention-to-treat, last observation carried forward",
+          "values": {
+            "exp": "−2.67 from 12.94 (n=323)",
+            "ctl": "−1.76 from 13.17 (n=325)"
+          },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.91,
+            "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract reports a significant decrease versus placebo at weeks 1, 4, and 12 without arm-specific changes or a P value.",
-          "locator": "PubMed abstract, Methods and Results"
+          "note": "Difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table II, p 278"
         },
         {
           "endpoint": "Urge urinary incontinence episodes",
           "role": "secondary",
-          "measure": "Change in daily urge urinary incontinence episodes",
-          "effect": {
-            "type": "none"
+          "measure": "Week-12 change in daily urge urinary incontinence episodes; intention-to-treat, last observation carried forward",
+          "values": {
+            "exp": "−1.86 from 2.86 (n=323)",
+            "ctl": "−1.29 from 2.86 (n=325)"
           },
-          "note": "The abstract reports a significant decrease versus placebo at weeks 1, 4, and 12 without a magnitude.",
-          "locator": "PubMed abstract, Methods and Results"
+          "effect": {
+            "type": "difference",
+            "value": -0.57,
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table II, p 278"
+        },
+        {
+          "endpoint": "Nocturnal toilet voids",
+          "role": "secondary",
+          "measure": "Week-12 change in nocturnal toilet voids per 24 hours; intention-to-treat, last observation carried forward",
+          "values": {
+            "exp": "−0.57 from 2.00 (n=322)",
+            "ctl": "−0.29 from 2.00 (n=319)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": -0.28,
+            "p": "0.0026"
+          },
+          "met": true,
+          "note": "Difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table II, p 278"
+        },
+        {
+          "endpoint": "Volume per toilet void",
+          "role": "secondary",
+          "measure": "Week-12 change in volume voided per toilet void; intention-to-treat, last observation carried forward",
+          "values": {
+            "exp": "+35.59 mL from 154.80 (n=319)",
+            "ctl": "+9.44 mL from 154.64 (n=320)"
+          },
+          "effect": {
+            "type": "difference",
+            "value": 26.15,
+            "p": "<0.0001"
+          },
+          "met": true,
+          "note": "Difference calculated from rounded arm changes; confidence interval not reported.",
+          "locator": "Full text, Table II, p 278"
         }
       ],
       "harms": [
         {
-          "label": "Dry mouth and constipation",
-          "locator": "PubMed abstract, Results",
-          "note": "Reported adverse events; the abstract gives no arm-specific incidence or severity."
+          "label": "Dry mouth",
+          "values": {
+            "exp": "65/329 (19.8%)",
+            "ctl": "17/329 (5.2%)"
+          },
+          "locator": "Full text, Table III, p 279"
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "exp": "36/329 (10.9%)",
+            "ctl": "19/329 (5.8%)"
+          },
+          "locator": "Full text, Table III, p 279"
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "exp": "16/329 (4.9%)",
+            "ctl": "8/329 (2.4%)"
+          },
+          "note": "Urinary retention was described as comparable between groups; counts were not reported.",
+          "locator": "Full text, Table III and Safety, pp 278–279"
+        },
+        {
+          "label": "Adverse events leading to discontinuation",
+          "values": {
+            "exp": "7.3% of 329 randomized",
+            "ctl": "4.6% of 329 randomized"
+          },
+          "note": "Event counts not reported.",
+          "locator": "Full text, Safety, p 278"
         }
       ],
       "delivery": [
         {
           "label": "Oral treatment",
           "value": "Trospium chloride 20 mg twice daily or placebo for 12 weeks, randomized 1:1.",
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Study design, p 276"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2005_08_017.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_urology_2005_08_017.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/trospium-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

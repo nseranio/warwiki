@@ -36,12 +36,12 @@
       }
     ],
     "population": "Fifty patients (44 women and 6 men) meeting National Institute of Diabetes, Digestive and Kidney Diseases symptom criteria for interstitial cystitis.",
-    "description": "Double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Materials and Methods and Results; 25 per arm inferred from 24 evaluable plus one withdrawal per arm"
+    "description": "Single-center, double-blind, placebo-controlled randomized trial; all participants had received prior conservative treatment and none had taken amitriptyline",
+    "locator": "Full text, Patients and Methods and Table 1, pp 533–534"
   },
   "verdict": "positive",
   "verdictNote": "The primary symptom score favored amitriptyline; anticholinergic effects were common.",
-  "takeaway": "In a four-month randomized trial for interstitial cystitis, amitriptyline improved the O'Leary-Sant symptom/problem score more than placebo (mean change −8.4 versus −3.5; p = 0.005), with anticholinergic effects in 92% versus 21% of evaluable patients.",
+  "takeaway": "In 48 evaluable patients with interstitial cystitis, four months of amitriptyline improved the O'Leary-Sant symptom/problem score more than placebo (mean change −8.4 versus −3.5; p = 0.005); anticholinergic effects occurred in 22/24 versus 5/24.",
   "reports": [
     {
       "id": "amitriptyline-van-ophoven-2004",
@@ -55,15 +55,15 @@
       "doi": "10.1097/01.ju.0000132388.54703.4d",
       "pmid": "15247722",
       "followUp": "Four months of treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Patients and Methods, p 534",
       "results": [
         {
           "endpoint": "O'Leary-Sant IC symptom and problem index score",
           "role": "primary",
           "measure": "Mean change from baseline to four months; between-arm mean difference in change",
           "values": {
-            "exp": "26.9 to 18.5 (change −8.4; n=24 evaluable)",
-            "ctl": "27.6 to 24.1 (change −3.5; n=24 evaluable)"
+            "exp": "26.9 to 18.5; mean change −8.4 ± 7.2 (24 evaluable)",
+            "ctl": "27.6 to 24.1; mean change −3.5 ± 5.4 (24 evaluable)"
           },
           "effect": {
             "type": "difference",
@@ -71,53 +71,72 @@
             "p": "0.005"
           },
           "met": true,
-          "note": "Mean changes and between-arm difference are arithmetic derivations from reported baseline and final means; the abstract calls this statistically significant.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "note": "The −4.9-point between-arm difference is arithmetic; the reported P value is from a Mann-Whitney U test. No confidence interval is reported.",
+          "locator": "Full text, Table 2 and Results, p 534"
         },
         {
           "endpoint": "Pain and urgency intensity",
           "role": "secondary",
           "measure": "Visual analog scale changes at four months",
           "values": {
-            "exp": "Improved",
-            "ctl": "Less improvement"
+            "exp": "Pain −22.8 ± 26.1 mm; urgency −43.8 ± 23.5 mm (n=24)",
+            "ctl": "Pain +1.0 ± 14.8 mm; urgency −0.1 ± 3.2 mm (n=24)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "The abstract does not give arm-specific scale values.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Both between-arm comparisons had P <0.001; values are mean change ± SD.",
+          "locator": "Full text, Table 2, p 534"
         },
         {
           "endpoint": "Urinary frequency",
           "role": "secondary",
           "measure": "48-hour voiding log change at four months",
           "values": {
-            "exp": "Greater improvement",
-            "ctl": "Less improvement"
+            "exp": "−4.0 ± 5.1 voids/24 h (n=24)",
+            "ctl": "−0.6 ± 5.8 voids/24 h (n=24)"
           },
           "effect": {
             "type": "none",
             "p": "0.063"
           },
-          "note": "Between-arm difference was not statistically significant; the abstract does not give arm-specific values.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Mean change ± SD; between-arm comparison was not statistically significant.",
+          "locator": "Full text, Table 2, p 534"
         },
         {
           "endpoint": "Functional bladder capacity",
           "role": "secondary",
           "measure": "48-hour voiding log change at four months",
           "values": {
-            "exp": "Greater improvement",
-            "ctl": "Less improvement"
+            "exp": "+19.0 ± 54.62 mL (n=24)",
+            "ctl": "−7.7 ± 47.5 mL (n=24)"
           },
           "effect": {
             "type": "none",
             "p": "0.083"
           },
-          "note": "Between-arm difference was not statistically significant; the abstract does not give arm-specific values.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Mean change ± SD; between-arm comparison was not statistically significant.",
+          "locator": "Full text, Table 2, p 534"
+        },
+        {
+          "endpoint": "Good or excellent treatment satisfaction",
+          "role": "exploratory",
+          "measure": "Patient Global Assessment after four months among completers",
+          "values": {
+            "exp": "15/24 (62.5%)",
+            "ctl": "1/24 (4.2%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "Good and excellent categories combined; the paper reports 63% and 4% after rounding.",
+          "locator": "Full text, Results and Table 3, p 534"
         }
       ],
       "harms": [
@@ -127,17 +146,17 @@
             "exp": "22/24 (92%)",
             "ctl": "5/24 (21%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports all but two amitriptyline patients and five placebo patients among 24 evaluable per arm."
+          "locator": "Full text, Results, p 534",
+          "note": "Reported among 24 evaluable patients per arm."
         },
         {
           "label": "Dry mouth",
           "values": {
-            "exp": "79% (19/24 implied)",
-            "ctl": "not reported"
+            "exp": "19/24 (79%)",
+            "ctl": "2/24 (8%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The source gives 79% but not a numerator; 19/24 rounds to 79%."
+          "locator": "Full text, Table 4, p 535",
+          "note": "Grade 1 mouth dryness; no grade 2 mouth dryness was reported."
         },
         {
           "label": "Withdrawal because of side effects",
@@ -145,15 +164,37 @@
             "exp": "1/25 (4%)",
             "ctl": "1/25 (4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports one withdrawal per arm; randomized arm denominators are inferred."
+          "locator": "Full text, Table 1 and Results, p 534",
+          "note": "One withdrawal per randomized arm."
+        },
+        {
+          "label": "Weight gain",
+          "values": {
+            "exp": "15/24 (62.5%; 10 grade 1, 5 grade 2)",
+            "ctl": "2/24 (8.3%; both grade 1)"
+          },
+          "locator": "Full text, Table 4, p 535"
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "exp": "11/24 (45.8%; 8 grade 1, 3 grade 2)",
+            "ctl": "2/24 (8.3%; both grade 1)"
+          },
+          "locator": "Full text, Table 4, p 535"
+        },
+        {
+          "label": "Grade 3 or higher adverse effects",
+          "value": "None reported in either arm; denominator for this statement not specified.",
+          "locator": "Full text, Results, p 534",
+          "note": "Adverse effects were graded by Common Toxicity Criteria, not Clavien-Dindo."
         }
       ],
       "delivery": [
         {
           "label": "Dose escalation and duration",
-          "value": "Self-titrated amitriptyline or placebo in 25 mg increments at one-week intervals, up to 100 mg, for four months.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "Amitriptyline 25 mg at bedtime, escalating weekly to 50, 75 and at most 100 mg if not symptom-free; maintain the lowest dose giving satisfactory relief, for four months. Placebo followed the same protocol.",
+          "locator": "Full text, Patients and Methods, p 534"
         },
         {
           "label": "Available for endpoint evaluation",
@@ -161,14 +202,21 @@
             "exp": "24/25 (96%)",
             "ctl": "24/25 (96%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract reports 24 evaluable per arm after one withdrawal per arm; randomized arm denominators are inferred."
+          "locator": "Full text, Table 1 and Results, p 534",
+          "note": "Table 1 reports 25 randomized per arm; one patient per arm withdrew for adverse effects."
+        },
+        {
+          "label": "Amitriptyline dose at four months",
+          "values": {
+            "exp": "25 mg: 7/24 (29.2%); 50 mg: 9/24 (37.5%); 75 mg: 5/24 (20.8%); 100 mg: 3/24 (12.5%)"
+          },
+          "locator": "Full text, Results, p 534"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000132388_54703_4d.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000132388_54703_4d.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
@@ -181,7 +229,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/amitriptyline-van-ophoven",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

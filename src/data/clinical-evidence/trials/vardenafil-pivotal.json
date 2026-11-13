@@ -238,32 +238,88 @@
       "doi": "10.1016/S0090-4295(03)00115-8",
       "pmid": "12657355",
       "followUp": "26 weeks",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Methods, p 9; Results, pp 10-11",
       "results": [
         {
-          "endpoint": "IIEF-EF, penetration, and erection maintenance at 26 weeks",
-          "role": "secondary",
-          "measure": "Persistence of benefit at the end of assigned treatment",
+          "endpoint": "IIEF erectile-function domain through 26 weeks",
+          "role": "primary",
+          "measure": "Least-squares mean score at last observation carried forward through week 26, 1-30 scale; intention-to-treat population",
           "values": {
-            "exp5": "superior to placebo",
-            "exp10": "superior to placebo",
-            "exp20": "superior to placebo",
-            "ctl": "placebo reference"
+            "exp5": "17.79",
+            "exp10": "21.2",
+            "exp20": "21.83",
+            "ctl": "14.84"
           },
           "effect": {
             "type": "none",
-            "p": "<0.001 for all doses at endpoint"
+            "p": "<=0.0005 for each dose versus placebo at LOCF"
           },
-          "note": "The abstract gives no arm-specific week-26 values; 10 and 20 mg were superior at all assessed times (P<0.01).",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Prespecified Bonferroni threshold P<0.0167. At the separate week-26 visit, the 5-mg comparison was reported as nominal P<0.0385; the paper did not establish that this visit comparison met the adjusted threshold.",
+          "locator": "Full text, Methods and Results, p 10; Figure 2, p 11"
+        },
+        {
+          "endpoint": "Successful penetration through 26 weeks (SEP 2)",
+          "role": "primary",
+          "measure": "Mean per-patient success rate over treatment through week 26; intention-to-treat population",
+          "values": {
+            "exp5": "66%",
+            "exp10": "76%",
+            "exp20": "81%",
+            "ctl": "52%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each dose versus placebo at overall endpoint"
+          },
+          "met": true,
+          "note": "Baseline per-patient rates were 43%, 45%, 41%, and 46%, respectively. The 5-mg group was significant at weeks 4 and 8, while 10 and 20 mg were significant at all assessed visits; rates average individual patients, not pooled attempts.",
+          "locator": "Full text, Methods, p 10; Results, pp 10-11; Figure 3, p 11"
+        },
+        {
+          "endpoint": "Erection maintained through successful intercourse through 26 weeks (SEP 3)",
+          "role": "primary",
+          "measure": "Mean per-patient success rate over treatment through week 26; intention-to-treat population",
+          "values": {
+            "exp5": "52%",
+            "exp10": "65%",
+            "exp20": "67%",
+            "ctl": "33%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001 for each dose versus placebo at overall endpoint"
+          },
+          "met": true,
+          "note": "Baseline per-patient rates were 14%, 15%, 15%, and 15%, respectively. The 5-mg group improved significantly at weeks 4, 8, 18, and 26; 10 and 20 mg did so at all assessed visits. The Figure 4 visit comparison reports P=0.0138 versus placebo.",
+          "locator": "Full text, Methods, p 10; Results, p 11; Figure 4, p 12"
         }
       ],
-      "harms": [],
-      "delivery": [],
+      "harms": [
+        {
+          "label": "Discontinuation for adverse events",
+          "values": {
+            "exp20": "15/197 (8%)"
+          },
+          "locator": "Full text, Results, Patient Demographics, p 10",
+          "note": "Reported as the most common discontinuation reason in the 20-mg group; denominator is the randomized arm. Headache, flushing, and dyspepsia were more frequent early and generally declined over time."
+        }
+      ],
+      "delivery": [
+        {
+          "label": "Discontinuation for insufficient therapeutic effect",
+          "values": {
+            "exp5": "26/205 (13%)",
+            "ctl": "20% of 197 randomized"
+          },
+          "locator": "Full text, Results, Patient Demographics, p 10",
+          "note": "The paper gives a count for the 5-mg group and a percentage only for placebo."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_03_00115_8.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_03_00115_8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

@@ -14,7 +14,7 @@
   ],
   "question": "How do holmium laser enucleation and open prostatectomy compare for obstructive symptoms in men with prostates over 70 g?",
   "design": {
-    "phase": "not stated in abstract",
+    "phase": "not stated",
     "randomized": true,
     "blinding": "not reported",
     "type": "superiority",
@@ -33,13 +33,13 @@
         "n": 39
       }
     ],
-    "population": "Eighty consecutive men with benign prostatic hyperplasia-related obstructed voiding symptoms and prostates over 70 g were randomized.",
-    "description": "Prospective randomized surgical comparison",
-    "locator": "PubMed abstract, Objective and Methods"
+    "population": "Eighty consecutive men with BPH-related obstructed voiding symptoms, prostate volume >70 g, failed pharmacologic therapy, residual urine <150 mL, peak flow <15 mL/s, and Schäfer grade >2 were randomized; none had a baseline catheter.",
+    "description": "Prospective randomized surgical comparison; two-sided P<0.05 significance threshold, without a designated primary endpoint",
+    "locator": "Full text, Patients and methods, p 564"
   },
-  "verdict": "mixed",
-  "verdictNote": "Open surgery was faster; HoLEP shortened catheterization and hospitalization, with comparable functional findings at 24 months.",
-  "takeaway": "In 80 men with prostates over 70 g, HoLEP versus open prostatectomy had comparable urodynamic and uroflowmetry findings at 24 months. Open surgery took less operating-room time; HoLEP shortened catheterization and hospitalization and reduced blood loss and transfusions.",
+  "verdict": "descriptive",
+  "verdictNote": "No primary endpoint was designated; HoLEP reduced blood loss and stay but increased operating time.",
+  "takeaway": "In 80 men with prostates >70 g, HoLEP and transvesical open prostatectomy had similar symptom and flow measures at 24 months among 65 men eligible for follow-up; HoLEP shortened catheterization and hospital stay and reduced hemoglobin loss, while open surgery was faster.",
   "reports": [
     {
       "id": "holep-vs-open-naspro-2006",
@@ -51,21 +51,54 @@
       "doi": "10.1016/j.eururo.2006.04.003",
       "pmid": "16713070",
       "followUp": "1, 3, 12, and 24 months",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Patients and methods, p 564",
       "results": [
         {
-          "endpoint": "Urodynamic and uroflowmetry findings",
+          "endpoint": "Urodynamic obstruction at 12 months",
           "role": "descriptive",
-          "measure": "Change from baseline through 24 months",
+          "measure": "Pdet at maximum flow (cm H2O) and Schäfer grade, baseline to 12 months",
           "values": {
-            "exp": "Improved from baseline; comparable with open prostatectomy",
-            "ctl": "Improved from baseline; comparable with HoLEP"
+            "exp": "Pdet 80.6 to 30.6; Schäfer grade 3.8 to 0.7",
+            "ctl": "Pdet 83.1 to 34.8; Schäfer grade 3.1 to 0.8"
           },
           "effect": {
             "type": "none"
           },
-          "note": "The abstract does not identify a prespecified primary endpoint or give arm-specific functional estimates.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Between-arm P=0.66 for Pdet and P=0.18 for Schäfer grade at 12 months; no designated primary endpoint or confidence interval.",
+          "locator": "Full text, Table 4, p 565"
+        },
+        {
+          "endpoint": "Peak urinary flow",
+          "role": "descriptive",
+          "measure": "Qmax, baseline to 24 months, mL/s",
+          "values": {
+            "exp": "7.83 ± 3.42 to 19.19 ± 6.3",
+            "ctl": "8.32 ± 2.37 to 20.11 ± 8.8"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.91"
+          },
+          "met": false,
+          "note": "24-month between-arm P; 35 HoLEP and 30 OP patients were eligible for 24-month follow-up, but metric-specific denominators were not given.",
+          "locator": "Full text, Table 3 and Results, p 565"
+        },
+        {
+          "endpoint": "Symptom score",
+          "role": "descriptive",
+          "measure": "IPSS, baseline to 24 months",
+          "values": {
+            "exp": "20.11 ± 5.84 to 7.9 ± 6.2",
+            "ctl": "21.60 ± 3.24 to 8.1 ± 7.1"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.44"
+          },
+          "met": false,
+          "note": "24-month between-arm P; metric-specific denominators and confidence intervals were not reported.",
+          "locator": "Full text, Table 3, pp 565–566"
         },
         {
           "endpoint": "Catheter removal",
@@ -77,10 +110,10 @@
           },
           "effect": {
             "type": "none",
-            "p": "<0.001"
+            "p": "<0.0001"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 565"
         },
         {
           "endpoint": "Hospital stay",
@@ -88,34 +121,43 @@
           "measure": "Mean hospital stay",
           "values": {
             "exp": "2.7 ± 1.1 days",
-            "ctl": "5.4 ± 1.05 days"
+            "ctl": "5.43 ± 1.05 days"
           },
           "effect": {
             "type": "none",
-            "p": "<0.001"
+            "p": "<0.0001"
           },
           "note": "",
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Table 2, p 565"
         }
       ],
       "harms": [
         {
-          "label": "Blood loss and transfusion",
+          "label": "Hemoglobin drop and transfusion",
           "values": {
-            "exp": "Less blood loss and fewer transfusions",
-            "ctl": "More blood loss and transfusions"
+            "exp": "Hemoglobin drop 2.12 ± 1.48 g/dL; autologous transfusion 2/41 (4.9%); homologous transfusion 0/41",
+            "ctl": "Hemoglobin drop 3.15 ± 1.33 g/dL; autologous transfusion 5/39 (12.8%); homologous transfusion 2/39 (5.1%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P <0.001; the abstract gives no event counts, denominators, or blood-loss estimates."
+          "locator": "Full text, Table 2 and Results, p 565",
+          "note": "Hemoglobin drop P=0.0073; reported autologous P<0.001 and homologous P<0.007. Table prints 2/41 as 4%."
         },
         {
-          "label": "Late complications",
+          "label": "Stricture and reintervention at 12 and 24 months",
           "values": {
-            "exp": "Comparable with open prostatectomy",
-            "ctl": "Comparable with HoLEP"
+            "exp": "12-month bladder-neck/urethral stricture 2, overall reintervention 2; 24-month stricture 1",
+            "ctl": "12-month bladder-neck/urethral stricture 2, overall reintervention 2; 24-month stricture 1"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not specify complication types or counts."
+          "locator": "Full text, Table 5 and Results, pp 566–567",
+          "note": "Complication-specific denominators not specified; 35 and 30 were eligible for 24-month follow-up. Three patients underwent urethrotomy and three bladder-neck incision."
+        },
+        {
+          "label": "Early dysuria, retention, and operative injury",
+          "values": {
+            "exp": "Dysuria 28/41 (68.3%); acute retention 5/41 (12.2%); bladder mucosal injury 3/41 (7.3%); stress incontinence 1/41 (2.4%); bleeding reintervention 1/41 (2.4%)",
+            "ctl": "Dysuria 16/39 (41.0%); acute retention 2/39 (5.1%); bladder mucosal injury 0/39; stress incontinence 1/39 (2.6%); bleeding reintervention 0/39"
+          },
+          "locator": "Full text, Table 5 and Results, pp 565–566",
+          "note": "Dysuria P<0.001; retention P=0.11. All retention episodes required temporary recatheterization. Table prints 28/41 as 68.2% and 5/41 as 12.1%."
         }
       ],
       "delivery": [
@@ -125,26 +167,44 @@
             "exp": "72.09 ± 21.22 minutes",
             "ctl": "58.31 ± 11.95 minutes"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P <0.0001; no enucleation, morcellation, or open operative technique details are provided in the abstract."
+          "locator": "Full text, Table 2, p 565",
+          "note": "P<0.0001."
         },
         {
           "label": "Assessment schedule",
-          "value": "IPSS, IIEF, and complete urodynamic assessment at baseline; reassessment at 1, 3, 12, and 24 months.",
-          "locator": "PubMed abstract, Methods"
+          "value": "IPSS, quality-of-life score, IIEF-5, uroflowmetry, and pressure-flow study at baseline; questionnaires and diagnostic follow-up at 1, 3, 12, and 24 months, but repeat complete urodynamics at 12 months only.",
+          "locator": "Full text, Patients and methods, p 564"
+        },
+        {
+          "label": "Operative technique and experience",
+          "values": {
+            "exp": "Prostatic lobes enucleated and morcellated tissue retrieved from bladder; HoLEP learning curve >200 cases before trial",
+            "ctl": "Standard transvesical open prostatectomy"
+          },
+          "locator": "Full text, Patients and methods, p 564; Discussion, p 567",
+          "note": "Two senior staff urologists performed all procedures in both arms."
+        },
+        {
+          "label": "Resected specimen weight",
+          "values": {
+            "exp": "59.33 ± 34.77 g",
+            "ctl": "87.90 ± 41.11 g"
+          },
+          "locator": "Full text, Table 2, p 565",
+          "note": "P=0.0046."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2006_04_003.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2006_04_003.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/holep-vs-open-naspro",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

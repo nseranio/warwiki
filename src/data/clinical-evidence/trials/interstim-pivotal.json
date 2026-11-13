@@ -21,28 +21,28 @@
     "randomized": true,
     "blinding": "open-label",
     "type": "superiority",
-    "n": 76,
+    "n": 98,
     "arms": [
       {
         "key": "exp",
-        "label": "Immediate InterStim sacral nerve stimulation",
+        "label": "Immediate InterStim sacral nerve stimulation (six-month diary set)",
         "role": "experimental",
         "n": 34
       },
       {
         "key": "ctl",
-        "label": "delayed implantation with standard medical therapy",
+        "label": "Delayed implantation with standard medical therapy (six-month diary set)",
         "role": "control",
         "n": 42
       }
     ],
-    "population": "76 test-stimulation responders with refractory urinary urge incontinence were randomized after baseline evaluation.",
-    "description": "Prospective, multicenter, open-label superiority randomized trial",
-    "locator": "Schmidt 1999, PubMed abstract, Materials and Methods"
+    "population": "155 enrolled with refractory urinary urge incontinence; 98 positive test-stimulation responders randomized, with 6-month diaries from 34 immediate-implant and 42 delayed-implant patients.",
+    "description": "Prospective, multicenter, open-label superiority randomized trial; arm counts shown are the interim six-month diary analysis set.",
+    "locator": "Full text, Results and Table 2, p 354"
   },
   "verdict": "positive",
-  "verdictNote": "All three primary diary measures favored immediate implantation at six months.",
-  "takeaway": "Immediate InterStim sacral nerve stimulation versus delayed implantation with standard medical therapy significantly reduced daily urge-incontinence episodes, episode severity, and pad or diaper use at six months in test-stimulation responders (all P < 0.0001).",
+  "verdictNote": "All three primary diary measures met the interim significance threshold in the 76-patient analysis.",
+  "takeaway": "Among test-stimulation responders, immediate InterStim versus delayed implantation reduced urge-incontinence episodes, severity and pad use at six months in 76 patients with diaries (all between-group P < 0.0001); 98 were randomized.",
   "reports": [
     {
       "id": "interstim-pivotal-1999",
@@ -54,56 +54,56 @@
       "citation": "Schmidt RA, Jonas U, Oleson KA, et al. \"Sacral nerve stimulation for treatment of refractory urinary urge incontinence.\" *J Urol.* 1999;162(2):352-357. doi:10.1016/S0022-5347(05)68558-8",
       "doi": "10.1016/S0022-5347(05)68558-8",
       "pmid": "10411037",
-      "followUp": "6 months randomized; efficacy appeared sustained for 18 months",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUp": "6 months randomized comparison in 76 patients with diaries; implanted cohort followed up to 18 months in reported table",
+      "followUpLocator": "Full text, Results and Tables 2-3, pp 354-355",
       "results": [
         {
           "endpoint": "Urge-incontinence episodes",
           "role": "primary",
-          "measure": "Daily episode frequency at 6 months",
+          "measure": "Baseline to 6 months in the interim diary analysis",
           "values": {
-            "exp": "Significantly lower",
-            "ctl": "Reference"
+            "exp": "9.7 ± 6.3 to 2.6 ± 5.1 episodes/day (n=34)",
+            "ctl": "9.3 ± 4.8 to 11.3 ± 5.9 episodes/day (n=42)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract does not give arm-specific diary means or a prespecified alpha.",
-          "locator": "PubMed abstract, Results"
+          "note": "Between-group ordered logistic regression P < 0.0001; interim adjusted threshold 0.0005 in Methods.",
+          "locator": "Full text, Table 2 and Figure 2, p 354"
         },
         {
           "endpoint": "Episode severity",
           "role": "primary",
-          "measure": "Severity at 6 months",
+          "measure": "Baseline to 6 months in the interim diary analysis",
           "values": {
-            "exp": "Significantly lower",
-            "ctl": "Reference"
+            "exp": "2.0 ± 0.7 to 0.8 ± 0.9 (n=34)",
+            "ctl": "1.8 ± 0.6 to 2.0 ± 0.6 (n=42)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract does not give arm-specific severity scores.",
-          "locator": "PubMed abstract, Results"
+          "note": "Severity uses a logarithmic rank: 1 mild, 2 moderate, 3 heavy; between-group P < 0.0001.",
+          "locator": "Full text, Table 2 and Figure 3, p 354"
         },
         {
           "endpoint": "Absorbent pads or diapers",
           "role": "primary",
-          "measure": "Pads or diapers replaced daily at 6 months",
+          "measure": "Baseline to 6 months in the interim diary analysis",
           "values": {
-            "exp": "Significantly fewer",
-            "ctl": "Reference"
+            "exp": "6.2 ± 5.0 to 1.1 ± 2.0 pads/day (n=34)",
+            "ctl": "5.0 ± 3.7 to 6.3 ± 3.6 pads/day (n=42)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract does not give arm-specific diary means.",
-          "locator": "PubMed abstract, Results"
+          "note": "Between-group P < 0.0001.",
+          "locator": "Full text, Table 2 and Figure 4, pp 354-355"
         },
         {
           "endpoint": "Complete dryness",
@@ -115,60 +115,96 @@
           "effect": {
             "type": "none"
           },
-          "note": "A further 10/34 (29%) had greater than 50% fewer episodes.",
-          "locator": "PubMed abstract, Results"
+          "note": "A further 10/34 (29%) had more than 50% fewer episodes; these 34 are the six-month immediate-arm diary set.",
+          "locator": "Full text, Results and Figure 2, p 354",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Eighteen-month implanted urge-incontinence clinical benefit",
+          "role": "descriptive",
+          "measure": "Dry or at least 50% fewer any leaking episodes at 18 months after implant",
+          "values": {
+            "exp": "76% of 21 implanted patients with 18-month diaries"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Uncontrolled implanted follow-up; the paper prints a percentage but no success numerator.",
+          "locator": "Full text, Table 3, p 355"
         }
       ],
       "harms": [
         {
           "label": "Pulse-generator site pain",
           "values": {
-            "exp": "15.9%"
+            "exp": "15.9% of pooled 157 implants"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not state the denominator for implant-related complications."
+          "locator": "Full text, Safety, pp 354-355",
+          "note": "Pooled safety set of 157 implants across urge incontinence, urgency-frequency and retention; 12-month probability was not reported for this item."
         },
         {
           "label": "Implant-site pain",
           "values": {
-            "exp": "19.1%"
+            "exp": "19.1% of pooled 157 implants"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not state the denominator."
+          "locator": "Full text, Safety, pp 354-355",
+          "note": "Pooled safety set of 157 implants across three indications; site pain is separate from generator-site pain."
         },
         {
           "label": "Lead migration",
           "values": {
-            "exp": "7.0%"
+            "exp": "7.0% of pooled 157 implants"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not state the denominator."
+          "locator": "Full text, Safety, pp 354-355",
+          "note": "Pooled safety set of 157 implants across three indications."
         },
         {
           "label": "Surgical revision for complication",
           "values": {
-            "exp": "32.5% of implanted patients"
+            "exp": "51/157 implanted patients (32.5%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "No permanent injury or nerve damage was reported; the abstract does not state the revision denominator."
+          "locator": "Full text, Safety and Table 4, p 355",
+          "note": "51/157 implanted patients; 72 revision events and 76 surgeries. Table 4 includes 6 permanent explants, 4 temporary explants with reimplantation, 14 device-exchange patients, 16 lead/extension-reposition patients and 23 generator-reposition patients."
+        },
+        {
+          "label": "Explantation for complication",
+          "values": {
+            "exp": "6/157 permanent explants (3.8%); 4/157 temporary explants with reimplantation (2.5%)"
+          },
+          "locator": "Full text, Table 4, p 355",
+          "note": "Reasons for permanent explant: implant-site pain (3), infection (2), bowel-function change (1); temporary explant: infection (2), implant-site pain (1), material allergy (1). Categories are not mutually exclusive."
+        },
+        {
+          "label": "Infection requiring explantation",
+          "values": {
+            "exp": "4 infection-attributed explant events: 2 permanent and 2 temporary (pooled safety set n=157)"
+          },
+          "locator": "Full text, Safety and Table 4, p 355",
+          "note": "The text combines infection or skin irritation as 5.7%, but Table 4 attributes four explant events specifically to infection; no infection-only denominator is printed."
         }
       ],
       "delivery": [
         {
           "label": "Delayed implantation",
-          "value": "The 42 controls received standard medical therapy for 6 months and were then offered implantation.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "After 3–7 days of test stimulation and greater than 50% symptom improvement, 98/155 enrolled patients were randomized; 42 patients in the six-month delay-group diary analysis received standard medical therapy and were then offered implantation.",
+          "locator": "Full text, Materials and Methods, p 353; Results, p 354"
         },
         {
           "label": "Stimulation deactivation",
-          "value": "At 6 months, deactivation returned incontinence to baseline levels in the implanted group.",
-          "locator": "PubMed abstract, Results"
+          "value": "Among 52 implanted patients completing a six-month on/off test, turning stimulation off for at least 3 days increased mean episodes/day from 2.9 to 9.5, severity rank from 0.8 to 1.9 and pad use/day from 1.2 to 5.8 (all P < 0.0001).",
+          "locator": "Full text, Materials and Methods, p 353; Results, p 354"
+        },
+        {
+          "label": "Permanent implant technique",
+          "value": "A multiprogrammable neurostimulator was placed in a subcutaneous pocket, typically in the lower abdominal quadrant; the lead was positioned along the target sacral nerve and anchored.",
+          "locator": "Full text, Materials and Methods, p 353"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_10411037.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_68558_8.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -183,69 +219,99 @@
       "doi": "10.1016/S0022-5347(05)67558-1",
       "pmid": "10799197",
       "followUp": "6 months randomized; implanted patients followed to 24 months",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUpLocator": "Full text, Materials and Methods, p 1849; Tables 4-5, p 1853",
       "results": [
         {
           "endpoint": "Daily voids",
           "role": "primary",
           "measure": "Voids per day, baseline to 6 months in immediate-implant group",
           "values": {
-            "exp": "16.9 ± 9.7 to 9.3 ± 5.1",
-            "ctl": "No significant change reported"
+            "exp": "16.9 ± 9.7 to 9.3 ± 5.1 voids/day (n=25)",
+            "ctl": "15.2 ± 6.6 to 15.7 ± 7.6 voids/day (n=26)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Between-group P value; the abstract does not give control means.",
-          "locator": "PubMed abstract, Results"
+          "note": "Prespecified interim alpha for primary diaries was 0.01; between-group ordered logistic regression P < 0.0001.",
+          "locator": "Full text, Results and Figure 1, pp 1850-1851"
         },
         {
           "endpoint": "Volume per void",
           "role": "primary",
           "measure": "mL per void, baseline to 6 months in immediate-implant group",
           "values": {
-            "exp": "118 ± 74 to 226 ± 124 mL",
-            "ctl": "No significant change reported"
+            "exp": "118 ± 74 to 226 ± 124 mL (n=25)",
+            "ctl": "124 ± 66 to 123 ± 75 mL (n=26)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Between-group P value; the abstract does not give control means.",
-          "locator": "PubMed abstract, Results"
+          "note": "Prespecified interim alpha was 0.01; between-group ordered logistic regression P < 0.0001; Table 2 also prints P=0.001 for the mean comparison.",
+          "locator": "Full text, Table 2 and Figure 2, pp 1851-1852"
         },
         {
           "endpoint": "Urgency severity",
           "role": "primary",
           "measure": "Urgency rank, baseline to 6 months in immediate-implant group",
           "values": {
-            "exp": "2.2 ± 0.6 to 1.6 ± 0.9",
-            "ctl": "No significant change reported"
+            "exp": "2.2 ± 0.6 to 1.6 ± 0.9 (n=25)",
+            "ctl": "2.4 ± 0.5 to 2.3 ± 0.5 (n=25)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "Between-group P value; the abstract does not define the rank scale.",
-          "locator": "PubMed abstract, Results"
+          "note": "Urgency rank: 0 none, 1 mild, 2 moderate, 3 severe; prespecified interim alpha was 0.01. Table 2 prints P=0.01 for the mean comparison; the text reports P < 0.0001 for the primary diary comparison.",
+          "locator": "Full text, Table 2, p 1851"
+        },
+        {
+          "endpoint": "Clinical success for urgency before void",
+          "role": "secondary",
+          "measure": "Higher voided volume with same or reduced urgency at 6 months",
+          "values": {
+            "exp": "22/25 (88%)",
+            "ctl": "8/25 (32%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.0001"
+          },
+          "met": "not-tested",
+          "note": "Clinical-success definition differs from the primary mean urgency rank comparison.",
+          "locator": "Full text, Results, p 1851"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Pooled implant adverse events and revision",
+          "values": {
+            "exp": "219 implanted across three indications; 12-month event probabilities: generator-site pain 15.3%, new pain 9.0%, suspected lead migration 8.4%, infection 6.1%, electric shock 5.5%, lead-site pain 5.4%; revision in 33.3%"
+          },
+          "locator": "Full text, Implant safety, p 1851",
+          "note": "These are pooled rates, not the 25-person urgency-frequency immediate arm; numerator counts and a rate denominator for each event are not printed."
+        }
+      ],
       "delivery": [
         {
           "label": "Test and implant",
-          "value": "All 51 patients had satisfactory percutaneous S3 and/or S4 test stimulation; 25 received immediate implantation and 26 delayed implantation at 6 months.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "All 51 randomized patients had at least 50% improvement in primary diary parameters during a 3–7-day percutaneous S3 and/or S4 test; 25 received immediate implantation and 26 standard therapy with delayed implantation after 6 months.",
+          "locator": "Full text, Materials and Methods, p 1850"
+        },
+        {
+          "label": "Implant components and on/off test",
+          "value": "The implant comprised a subcutaneous neurostimulator, a lead adjacent to the target sacral nerve and an extension. At 6 months, 22/25 immediate-arm patients underwent deactivation; 1 had an explant and 2 declined the test.",
+          "locator": "Full text, Materials and Methods, p 1850; Results, p 1851"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/pmid_10799197.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_67558_1.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -260,64 +326,99 @@
       "doi": "10.1097/00005392-200101000-00004",
       "pmid": "11125353",
       "followUp": "6 months randomized; effectiveness sustained through 18 months after implantation",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUpLocator": "Full text, Study Design and Methods, p 16; Results, p 17",
       "results": [
         {
           "endpoint": "Catheter volume per catheterization",
           "role": "primary",
-          "measure": "Volume per catheterization at 6 months",
+          "measure": "Catheterized residual volume per catheterization, baseline to 6 months, diary completers",
           "values": {
-            "exp": "Significantly lower",
-            "ctl": "Reference"
+            "exp": "339 ± 176 to 49 ± 106 mL (n=29)",
+            "ctl": "350 ± 152 to 319 ± 195 mL (n=22)"
           },
           "effect": {
             "type": "none",
             "p": "<0.0001"
           },
           "met": true,
-          "note": "The abstract does not give arm-specific volumes.",
-          "locator": "PubMed abstract, Results"
+          "note": "Two-sample t test of mean changes, prespecified significance P=0.05; 29/37 immediate and 22/31 control patients supplied six-month diaries.",
+          "locator": "Full text, Results, p 16; Table 2, p 18"
         },
         {
           "endpoint": "Retention treatment success",
           "role": "descriptive",
           "measure": "Successful voiding outcome at 6 months",
           "values": {
-            "exp": "83% (37 assigned)",
-            "ctl": "9% (31 assigned)"
+            "exp": "24/29 (83%, inferred from published percentage)",
+            "ctl": "2/22 (9%, inferred from published percentage)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "Implant success combines elimination of catheterization or at least 50% reduction in catheter volume per catheterization; exact 6-month analysis denominators are not stated.",
-          "locator": "PubMed abstract, Results"
+          "note": "Success means no catheterization or at least 50% less catheterized volume per catheterization. Numerators are reconstructed from the rounded percentages and the 29/22 diary analysis sets; the paper prints percentages, not these counts.",
+          "locator": "Full text, Abstract, p 15; Results, p 16; Table 2, p 18",
+          "met": "not-tested"
         },
         {
           "endpoint": "Elimination of catheterization",
           "role": "descriptive",
           "measure": "No catheterization at 6 months among implanted patients",
           "values": {
-            "exp": "69% (37 assigned)"
+            "exp": "20/29 (69%, inferred from published percentage)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "An additional 14% had at least 50% lower catheter volume per catheterization; exact 6-month analysis denominator is not stated.",
-          "locator": "PubMed abstract, Results"
+          "note": "A further 4/29 (14%, inferred) reduced catheterized volume per catheterization at least 50%; these counts derive from rounded percentages and the 29-patient diary set.",
+          "locator": "Full text, Abstract, p 15; Results, p 16; Table 2, p 18",
+          "met": "not-tested"
+        },
+        {
+          "endpoint": "Eighteen-month implanted retention success",
+          "role": "secondary",
+          "measure": "No catheterization or at least 50% lower catheterized volume per catheterization at 18 months",
+          "values": {
+            "exp": "17/24 (71%); 14/24 (58%) no catheterization and 3/24 (13%) at least 50% lower volume"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "21 supplied an 18-month diary; three earlier withdrawals (two for lack of efficacy, one for adverse event) were counted as failures. No concurrent control remained.",
+          "locator": "Full text, Results and Discussion, p 17"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Pooled implant adverse events",
+          "values": {
+            "exp": "219 implants across three indications; 12-month probabilities: generator-site pain 15.3%, new pain 9%, suspected lead migration 8.4%, infection 6.1%, electric shock 5.5%, lead-site pain 5.4%"
+          },
+          "locator": "Full text, Implant safety and benefit, p 17",
+          "note": "Pooled across indications; the paper does not report retention-arm event numerators or denominators for these rates."
+        }
+      ],
       "delivery": [
         {
           "label": "Screening and allocation",
-          "value": "177 enrolled; greater than 50% symptom improvement during 3–7 days of percutaneous test stimulation qualified 68 patients for randomization (37 immediate, 31 delayed implantation).",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "177 retention patients underwent 3–7-day percutaneous test stimulation; 68/177 (38.4%) met the greater than 50% improvement criterion and were randomized (37 immediate implant, 31 delayed implant).",
+          "locator": "Full text, Study Design and Methods and Results, p 16"
+        },
+        {
+          "label": "Six-month diary availability",
+          "value": "At six months, 29/37 immediate-implant and 22/31 control patients supplied diaries; among the other 17, 6 had not yet reached six months, 3 were lost to follow-up and 8 did not submit a diary.",
+          "locator": "Full text, Results, p 16"
+        },
+        {
+          "label": "Reprogramming",
+          "value": "Among 48 implanted patients with six-month device data, mean reprogrammings were 3.9 (range 1–14).",
+          "locator": "Full text, Results, p 17"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_00005392_200101000_00004.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_00005392_200101000_00004.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -456,7 +557,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/interstim-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

@@ -44,12 +44,12 @@
       }
     ],
     "population": "1,529 adults (81% women) with overactive-bladder symptoms for at least six months, at least eight micturitions per 24 hours, and five urge-incontinence episodes per week.",
-    "description": "167-center, double-blind, three-arm superiority randomized trial",
-    "locator": "Van Kerrebroeck 2001, PubMed abstract, Methods; Kelleher 2002, PDF p S609 (symptom duration and centers); FDA medical review of protocol 98-TOCR-007, p 13 (phase)"
+    "description": "167-center, double-blind, three-arm superiority randomized trial; electrocardiography assessed in 154 participants aged at least 65 years",
+    "locator": "Full text, Methods, pp 415–416, and Table I; FDA medical review of protocol 98-TOCR-007, p 13 (phase)"
   },
   "verdict": "positive",
-  "verdictNote": "Both formulations beat placebo; ER had less dry mouth than IR.",
-  "takeaway": "In a 12-week randomized trial, tolterodine ER 4 mg daily and tolterodine IR 2 mg twice daily each reduced urge-incontinence episodes versus placebo; ER produced a larger reported reduction and less dry mouth than IR.",
+  "verdictNote": "Both formulations beat placebo on weekly incontinence; ER had less dry mouth than IR.",
+  "takeaway": "In 1,529 adults randomized for 12 weeks, tolterodine ER 4 mg daily and IR 2 mg twice daily reduced weekly incontinence versus placebo (mean changes −11.8, −10.6, −6.9); ER had 18% greater median percentage reduction than IR and less dry mouth (118/505 versus 156/512).",
   "reports": [
     {
       "id": "tolterodine-er-2001",
@@ -63,23 +63,28 @@
       "doi": "10.1016/s0090-4295(00)01113-4",
       "pmid": "11248608",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study design, p 415",
       "results": [
         {
           "endpoint": "Urge-incontinence episodes per week",
           "role": "primary",
           "measure": "Change in mean weekly episodes at 12 weeks",
           "values": {
-            "er": "greater reduction than placebo",
-            "ir": "greater reduction than placebo",
-            "pbo": "reference"
+            "er": "−11.8 ± 17.8 episodes/week (ITT n=507)",
+            "ir": "−10.6 ± 16.9 episodes/week (ITT n=514)",
+            "pbo": "−6.9 ± 15.4 episodes/week (ITT n=507 with diary data; 508 randomized)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "ci": [
+              -7.2,
+              -2.5
+            ],
+            "p": "0.0001"
           },
           "met": true,
-          "note": "ER versus placebo P = 0.0001; IR versus placebo P = 0.0005. ER versus IR was reported as 18% more effective (P < 0.05). Absolute mean changes and confidence intervals are absent from the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Mean changes ± SD; ITT with last observation carried forward. Effect is ER versus placebo 97.5% Bonferroni-adjusted CI; adjusted point estimate not printed. IR versus placebo 97.5% CI −6.0 to −1.3, P = 0.0005. The ER-versus-IR 18% relative improvement (P < 0.05) derives from the separate median percentage-change analysis.",
+          "locator": "Full text, Statistical analysis, p 416, and Table II, p 417"
         },
         {
           "endpoint": "Urge-incontinence episodes per week",
@@ -93,60 +98,133 @@
           "effect": {
             "type": "none"
           },
-          "note": "The reported significance tests concern mean changes, not these medians.",
-          "locator": "PubMed abstract, Results"
+          "note": "The ER-versus-IR median percentage-change comparison was 18% relative improvement (P < 0.05); the placebo significance tests concern mean changes.",
+          "locator": "Full text, Results, p 416, and Fig. 1, p 417"
         },
         {
-          "endpoint": "Other micturition-diary measures",
-          "role": "secondary",
-          "measure": "Frequency, pad use, and volume voided per micturition at 12 weeks",
+          "endpoint": "Voluntary micturitions per 24 hours",
+          "role": "descriptive",
+          "measure": "Mean change ± SD at 12 weeks",
           "values": {
-            "er": "improved versus placebo",
-            "ir": "improved versus placebo",
-            "pbo": "reference"
+            "er": "−1.8 ± 3.4 (ITT n=507)",
+            "ir": "−1.7 ± 3.3 (ITT n=514)",
+            "pbo": "−1.2 ± 2.9 (ITT n=507 with diary data)"
           },
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "ci": [
+              -1.0,
+              -0.2
+            ],
+            "p": "0.0047"
           },
-          "note": "Mean frequency decreased (P < 0.0079) and pad use decreased (P < 0.0145) for both formulations; mean voided volume increased (P = 0.0001). Absolute changes are absent from the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Effect is ER versus placebo 95% CI; IR versus placebo CI −0.9 to −0.1, P = 0.0079. Other diary variables were analyzed descriptively.",
+          "locator": "Full text, Statistical analysis, p 416, and Table II, p 417"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "descriptive",
+          "measure": "Mean change ± SD in mL at 12 weeks",
+          "values": {
+            "er": "+34 ± 51 (ITT n=507)",
+            "ir": "+29 ± 47 (ITT n=514)",
+            "pbo": "+14 ± 41 (ITT n=506 with volume data)"
+          },
+          "effect": {
+            "type": "difference",
+            "ci": [
+              14,
+              26
+            ],
+            "p": "0.0001"
+          },
+          "note": "Effect is ER versus placebo 95% CI; IR versus placebo CI 10 to 21, P = 0.0001.",
+          "locator": "Full text, Table II, p 417"
+        },
+        {
+          "endpoint": "Pads used per 24 hours",
+          "role": "descriptive",
+          "measure": "Mean change ± SD at 12 weeks",
+          "values": {
+            "er": "−0.5 ± 1.4 (ITT n=507)",
+            "ir": "−0.5 ± 1.8 (ITT n=514)",
+            "pbo": "−0.2 ± 1.4 (ITT n=507 with diary data)"
+          },
+          "effect": {
+            "type": "difference",
+            "ci": [
+              -0.4,
+              0
+            ],
+            "p": "0.0145"
+          },
+          "note": "Effect is ER versus placebo 95% CI; IR versus placebo CI −0.5 to −0.1, P = 0.0035.",
+          "locator": "Full text, Table II, p 417"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth, any severity",
           "values": {
-            "er": "23%",
-            "ir": "30%",
-            "pbo": "8%"
+            "er": "118/505 (23%)",
+            "ir": "156/512 (30%)",
+            "pbo": "39/507 (8%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "ER dry-mouth rate was reported as 23% lower than IR (P < 0.02); event numerators and safety denominators are not given in the abstract."
+          "locator": "Full text, Table III, p 418, and Results, p 417",
+          "note": "ER dry-mouth frequency was reported as 23% lower relative to IR (P < 0.02); denominators are treated safety populations."
         },
         {
           "label": "Severe dry mouth",
           "values": {
-            "er": "1.8%"
+            "er": "1.8% (treated ER safety n=505; count not printed)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Comparator rates and event numerators are not given in the abstract."
+          "locator": "Full text, Results, p 417, and Fig. 3, p 418",
+          "note": "The text reports the percentage but no severe-event numerator or comparator percentages."
         },
         {
           "label": "Treatment withdrawal",
           "values": {
-            "er": "comparable rate",
-            "ir": "comparable rate",
-            "pbo": "comparable rate"
+            "er": "27/507 (5%) withdrew for adverse events",
+            "ir": "28/514 (5%) withdrew for adverse events",
+            "pbo": "33/508 (6%) withdrew for adverse events"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives no withdrawal counts or percentages."
+          "locator": "Full text, Results, p 417",
+          "note": "Counts are adverse-event withdrawals among randomized participants; overall premature withdrawals were 187/1,529 (12%)."
+        },
+        {
+          "label": "Constipation",
+          "values": {
+            "er": "30/505 (6%)",
+            "ir": "35/512 (7%)",
+            "pbo": "22/507 (4%)"
+          },
+          "locator": "Full text, Table III, p 418"
+        },
+        {
+          "label": "Urinary tract infection",
+          "values": {
+            "er": "16/505 (3%)",
+            "ir": "13/512 (3%)",
+            "pbo": "20/507 (4%)"
+          },
+          "locator": "Full text, Table III, p 418"
+        },
+        {
+          "label": "Serious adverse events",
+          "values": {
+            "er": "7/505 (1.4%)",
+            "ir": "12/512 (2.3%)",
+            "pbo": "18/507 (3.6%)"
+          },
+          "locator": "Full text, Results, p 417",
+          "note": "Serious events led to early withdrawal in 1, 5, and 8 participants, respectively; none was considered treatment related."
         }
       ],
       "delivery": [
         {
           "label": "Diary run-in",
-          "value": "One- to two-week washout/run-in to confirm micturition-diary eligibility.",
-          "locator": "Kelleher 2002, PDF p S609, Methods"
+          "value": "One- to two-week washout/run-in with seven consecutive diary days to confirm eligibility.",
+          "locator": "Full text, Study design, p 415"
         },
         {
           "label": "Randomized treatment",
@@ -155,13 +233,14 @@
             "ir": "oral IR tablet 2 mg twice daily for 12 weeks",
             "pbo": "placebo for 12 weeks"
           },
-          "locator": "PubMed abstract, Methods"
+          "locator": "Full text, Study design and Results, pp 415–416",
+          "note": "Double-dummy masking; no dose adjustment; approximately 95% had acceptable pill-count compliance."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_00_01113_4.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0090_4295_00_01113_4.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -176,56 +255,102 @@
       "doi": "10.1016/s0302-2838(02)00177-x",
       "pmid": "12074774",
       "followUp": "12 months of open-label ER treatment after the randomized phase",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Methods, p 589",
       "results": [
         {
           "endpoint": "Urge-incontinence episodes per week",
-          "role": "descriptive",
-          "measure": "Median percentage change from baseline among 759 extension completers at 12 months",
+          "role": "secondary",
+          "measure": "Median percentage reduction from original randomized baseline among 759 extension completers at 12 months",
           "values": {
-            "er": "−83%"
+            "er": "83.1% reduction (759 completers; diary-evaluable count not reported)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "All extension participants received ER, regardless of prior randomized assignment.",
-          "locator": "PubMed abstract, Results"
+          "note": "All entrants received ER regardless of prior randomized assignment; this is a completer analysis without imputation, not a randomized comparison.",
+          "locator": "Full text, Methods, pp 589–590, and Table 3, p 592"
         },
         {
           "endpoint": "Micturitions per 24 hours",
-          "role": "descriptive",
-          "measure": "Median percentage change from baseline among 759 extension completers at 12 months",
+          "role": "secondary",
+          "measure": "Median percentage reduction from original randomized baseline among 759 extension completers at 12 months",
           "values": {
-            "er": "−21%"
+            "er": "21.3% reduction (759 completers; diary-evaluable count not reported)"
           },
           "effect": {
             "type": "none"
           },
-          "locator": "PubMed abstract, Results"
+          "locator": "Full text, Methods, p 590, and Table 3, p 592"
+        },
+        {
+          "endpoint": "Volume voided per micturition",
+          "role": "secondary",
+          "measure": "Median percentage increase from original randomized baseline among 759 extension completers at 12 months",
+          "values": {
+            "er": "25.4% increase (759 completers; diary-evaluable count not reported)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Table 3, p 592"
+        },
+        {
+          "endpoint": "Patient perception of bladder condition and urgency",
+          "role": "secondary",
+          "measure": "Percentage reporting improvement after 12 months among extension completers",
+          "values": {
+            "er": "75% bladder condition; 51% urgency (759 completers; response-specific denominators not printed)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "locator": "Full text, Results, p 592"
         }
       ],
       "harms": [
         {
           "label": "Dry mouth during extension",
           "values": {
-            "er": "12.9%"
+            "er": "139/1,075 (12.9%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives the rate without an event count or safety denominator."
+          "locator": "Full text, Table 2, p 592"
+        },
+        {
+          "label": "Urinary tract infection during extension",
+          "values": {
+            "er": "44/1,075 (4.1%)"
+          },
+          "locator": "Full text, Table 2, p 592"
+        },
+        {
+          "label": "Acute urinary retention during extension",
+          "values": {
+            "er": "2/1,075 (0.19%)"
+          },
+          "locator": "Full text, Discussion, p 594",
+          "note": "Both retention cases were serious adverse events considered related to treatment."
+        },
+        {
+          "label": "Serious adverse events during extension",
+          "values": {
+            "er": "79/1,075 (7.3%)"
+          },
+          "locator": "Full text, Results, p 591",
+          "note": "Twelve withdrew after a serious event; four events in three patients were considered related to tolterodine."
         }
       ],
       "delivery": [
         {
           "label": "Extension entry and completion",
-          "value": "Of 1,377 randomized-phase completers, 1,077 (78% as reported) entered 12 months of open-label ER; 71% of extension entrants completed it.",
-          "locator": "PubMed abstract, Methods and Results",
-          "note": "The abstract rounds 1,077/1,377 to 78%."
+          "value": "1,077 entered open-label ER 4 mg daily (368 prior ER, 370 prior IR, 339 prior placebo); 1,075 received treatment, and 759/1,075 (70.6%) completed 12 months.",
+          "locator": "Full text, Methods, p 589, and Results, pp 590–592",
+          "note": "Prior-phase completers conflict within the report: 1,377 in the abstract (giving 78% entry) versus 1,337 in Results (giving 80.6%); no reconciled denominator is available. Among 1,075 treated, 107 discontinued for adverse events and 108 for lack of efficacy. More than 85% of 759 completers took at least 75% of medication by pill count; exact adherent numerator is unreported. No dose reduction was allowed."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0302_2838_02_00177_x.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0302_2838_02_00177_x.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -298,7 +423,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/tolterodine-er",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

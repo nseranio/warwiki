@@ -21,12 +21,12 @@
     "randomized": true,
     "blinding": "double-blind",
     "type": "superiority",
-    "n": 368,
+    "n": 369,
     "arms": [
       {
         "key": "low",
         "label": "Pentosan polysulfate sodium 100 mg once daily",
-        "n": 128,
+        "n": 129,
         "role": "experimental"
       },
       {
@@ -42,13 +42,13 @@
         "role": "control"
       }
     ],
-    "population": "368 adults with IC/BPS symptoms, ICSI total score at least 8, and a positive score on each of its four items, without cystoscopic eligibility criteria.",
+    "population": "369 adults randomized (368 treated in the ITT set) with IC/BPS symptoms for at least 6 months, ICSI total score at least 8 and a positive score on each item, at least 10 daily voids including nocturia, without cystoscopic eligibility criteria.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00086684, Study Design (phase)"
+    "locator": "Full text, Patients and Study Design, p 858; Results and Figure 1, p 859"
   },
   "verdict": "negative",
   "verdictNote": "Neither active dose improved the primary symptom responder endpoint over placebo.",
-  "takeaway": "In adults with IC/BPS symptoms, pentosan polysulfate sodium 100 mg once or three times daily did not show superior 24-week ICSI responder rates versus placebo; the trial stopped early after an interim futility analysis.",
+  "takeaway": "In adults with IC/BPS symptoms, pentosan polysulfate sodium 100 mg once or three times daily did not show superior study-end ICSI responder rates versus placebo in a treated ITT analysis with last observation carried forward; the trial stopped early for futility.",
   "reports": [
     {
       "id": "pps-dose-nickel-2015",
@@ -60,12 +60,12 @@
       "doi": "10.1016/j.juro.2014.09.036",
       "pmid": "25245489",
       "followUp": "24-week treatment period",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Study Design and Efficacy Assessments, p 858",
       "results": [
         {
           "endpoint": "ICSI responder",
           "role": "primary",
-          "measure": "At least 30% reduction from baseline ICSI total score at study end",
+          "measure": "At least 30% reduction from baseline ICSI total score at final evaluation through week 24 (ITT, last observation carried forward for withdrawals)",
           "values": {
             "low": "51/128 (39.8%)",
             "standard": "52/122 (42.6%)",
@@ -75,39 +75,94 @@
             "type": "none"
           },
           "met": false,
-          "note": "No statistically significant difference between either PPS group and placebo or between the PPS groups; effect estimates and P values are not in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "The first sequential hypothesis, PPS 100 mg three times daily versus placebo, crossed the prespecified interim futility boundary (P ≥ 0.08); the paper gives no exact pairwise P values, effect estimates or confidence intervals.",
+          "locator": "Full text, Data Analysis, p 859; Efficacy and Table, p 860"
+        },
+        {
+          "endpoint": "Patient global improvement",
+          "role": "secondary",
+          "measure": "GRA, moderately or markedly improved at study end (ITT)",
+          "values": {
+            "low": "43/128 (33.6%)",
+            "standard": "44/122 (36.1%)",
+            "ctl": "37/118 (31.4%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": false,
+          "note": "No statistically significant between-group difference for any secondary endpoint; pairwise effect estimates, confidence intervals and P values were not reported for this measure.",
+          "locator": "Full text, Efficacy End Points and Analyses, p 859; Table and Efficacy, p 860"
         }
       ],
       "harms": [
         {
           "label": "Discontinuation because of an adverse event",
-          "value": "10.2%–13.3% across the three groups",
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives a range, without group-specific rates or event counts."
+          "values": {
+            "low": "17/128 (13.3%)",
+            "standard": "14/122 (11.5%)",
+            "ctl": "12/118 (10.2%)"
+          },
+          "locator": "Full text, Safety, p 861",
+          "note": "Adverse events leading to withdrawal; events were mostly gastrointestinal."
+        },
+        {
+          "label": "Serious adverse event",
+          "values": {
+            "low": "4/128 (3.1%)",
+            "standard": "0/122 (0%)",
+            "ctl": "4/118 (3.4%)"
+          },
+          "locator": "Full text, Safety, p 861",
+          "note": "Urinary retention occurred in one placebo patient; urinary tract infection was reported among the serious events in the once-daily PPS group."
+        },
+        {
+          "label": "Treatment-emergent urinary tract infection",
+          "values": {
+            "low": "10/128 (7.8%)",
+            "standard": "8/122 (6.6%)",
+            "ctl": "4/118 (3.4%)"
+          },
+          "locator": "Full text, Table, p 860",
+          "note": "Reported among treatment-emergent adverse events."
         }
       ],
       "delivery": [
         {
           "label": "Oral treatment schedule",
           "value": "Pentosan polysulfate sodium 100 mg once daily or 100 mg three times daily, or matching placebo, for 24 weeks",
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Study Design, p 858"
         },
         {
           "label": "ICSI assessment schedule",
           "value": "Baseline and weeks 4, 8, 12, 18, and 24",
-          "locator": "PubMed abstract, Materials and Methods"
+          "locator": "Full text, Efficacy Assessments, p 858"
         },
         {
           "label": "Interim analysis and closure",
-          "value": "Unblinded interim analysis at 6 years, with 54% of the target 645 patients enrolled, led to early termination",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "Unblinded interim analysis after 6 years, with 369/645 (57.2%) of the target randomized, crossed the prespecified futility boundary (P ≥ 0.08 for three-times-daily PPS versus placebo) and led to early termination",
+          "locator": "Full text, Data Analysis and Results, p 859"
+        },
+        {
+          "label": "Study completion",
+          "values": {
+            "low": "74/128 (57.8%)",
+            "standard": "69/122 (56.6%)",
+            "ctl": "63/118 (53.4%)"
+          },
+          "locator": "Full text, Figure 1, p 859; Patients, p 860",
+          "note": "206/368 ITT participants completed; 162/368 (44.0%) withdrew."
+        },
+        {
+          "label": "Analysis and missing data",
+          "value": "ITT efficacy and safety set included 368 randomized patients who received at least one dose; the one patient assigned once-daily PPS who took no study drug was excluded; last observed ICSI data were carried forward for withdrawals before week 24",
+          "locator": "Full text, Data Analysis and Efficacy End Points and Analyses, p 859; Figure 1, p 859"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2014_09_036.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2014_09_036.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
@@ -120,7 +175,7 @@
   ],
   "page": "/docs/clinical-evidence/studies/pps-dose-nickel",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

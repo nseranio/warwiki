@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "683 North American women aged 22–84 years with predominant stress urinary incontinence, at least seven episodes weekly, a positive cough stress test and stress pad test, and bladder capacity at least 400 mL.",
+    "population": "683 North American women aged 22–84 years with predominant stress urinary incontinence, at least seven stress episodes weekly, a positive cough stress test and stress pad test, and tolerance of retrograde bladder filling to 400 mL.",
     "description": "Phase 3, double-blind randomized placebo-controlled trial",
-    "locator": "PubMed abstract, Purpose; Materials and Methods"
+    "locator": "Full text, Materials and Methods, p 1260"
   },
   "verdict": "positive",
-  "verdictNote": "Both stated primary outcomes favored duloxetine; adverse-event withdrawal was higher.",
-  "takeaway": "Duloxetine 40 mg twice daily versus placebo reduced incontinence episode frequency (50% versus 27%) and improved incontinence-related quality of life over 12 weeks in North American women with stress urinary incontinence; adverse-event withdrawal was 24% versus 4%.",
+  "verdictNote": "Both prespecified primary outcomes favored duloxetine; adverse-event withdrawal was higher.",
+  "takeaway": "In 683 women with predominant stress incontinence, duloxetine 40 mg twice daily versus placebo reduced median weekly incontinence episodes by 50.0% versus 27.5% among women with a post-randomization diary and improved I-QOL scores over 12 weeks; adverse-event withdrawal was 24.1% versus 4.1%.",
   "reports": [
     {
       "id": "duloxetine-sui-2003",
@@ -55,30 +55,30 @@
       "doi": "10.1097/01.ju.0000080708.87092.cc",
       "pmid": "14501737",
       "followUp": "12 weeks of randomized treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Materials and Methods, p 1260",
       "results": [
         {
           "endpoint": "Incontinence episode frequency",
           "role": "primary",
-          "measure": "Percent decrease in weekly incontinence episode frequency after 12 weeks",
+          "measure": "Median percent decrease in weekly incontinence episode frequency, ITT with at least one post-randomization diary, 12 weeks",
           "values": {
-            "exp": "50%",
-            "ctl": "27%"
+            "exp": "50.0%",
+            "ctl": "27.5%"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract does not provide an effect interval or endpoint-specific analysis denominator.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "note": "ITT included women with at least one post-randomization diary (83% of 344 duloxetine; 95% of 339 placebo); exact analysis counts and confidence interval were not reported. Last observation carried forward for early discontinuation.",
+          "locator": "Full text, Table 1; Materials and Methods, p 1260"
         },
         {
           "endpoint": "Incontinence-related quality of life",
           "role": "primary",
-          "measure": "Improvement in Incontinence Quality of Life questionnaire score after 12 weeks",
+          "measure": "Mean improvement in I-QOL total score, ITT with at least one post-randomization questionnaire, 12 weeks",
           "values": {
-            "exp": "11.0 points",
+            "exp": "11.1 points",
             "ctl": "6.8 points"
           },
           "effect": {
@@ -86,78 +86,141 @@
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract does not provide an effect interval or endpoint-specific analysis denominator.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "note": "ITT included women with at least one post-randomization I-QOL questionnaire (97% of 344 duloxetine; 98% of 339 placebo); exact analysis counts and confidence interval were not reported. Last observation carried forward for early discontinuation.",
+          "locator": "Full text, Table 2; Results and Materials and Methods, p 1260"
         },
         {
           "endpoint": "At least 50% reduction in incontinence episodes",
-          "role": "secondary",
-          "measure": "Proportion with 50%–100% reduction in weekly incontinence episode frequency",
+          "role": "descriptive",
+          "measure": "Proportion with 50%–100% reduction in weekly incontinence episode frequency, ITT diary analysis",
           "values": {
-            "exp": "51%",
-            "ctl": "34%"
+            "exp": "51.4%",
+            "ctl": "33.5%"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Responder counts and analysis denominators are not reported in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Exact responder counts and diary-analysis denominators were not reported.",
+          "locator": "Full text, Results, p 1260"
         },
         {
           "endpoint": "Voiding interval",
-          "role": "secondary",
-          "measure": "Increase in voiding interval after 12 weeks",
+          "role": "descriptive",
+          "measure": "Mean increase in voiding interval, ITT analysis, 12 weeks",
           "values": {
-            "exp": "20 minutes",
-            "ctl": "2 minutes"
+            "exp": "20.0 minutes",
+            "ctl": "1.7 minutes"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "The abstract does not provide an effect interval or endpoint-specific analysis denominator.",
-          "locator": "PubMed abstract, Results"
+          "note": "Exact analysis denominators and confidence interval were not reported.",
+          "locator": "Full text, Results, p 1261"
+        },
+        {
+          "endpoint": "Absolute weekly incontinence episode reduction",
+          "role": "descriptive",
+          "measure": "Median absolute decrease in weekly incontinence episodes, ITT diary analysis",
+          "values": {
+            "exp": "7 per week",
+            "ctl": "3 per week"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Exact diary-analysis denominators and confidence interval were not reported.",
+          "locator": "Full text, Results, p 1260"
+        },
+        {
+          "endpoint": "No incontinence episodes at last diary",
+          "role": "descriptive",
+          "measure": "Proportion with no incontinence episodes at the last diary, ITT diary analysis",
+          "values": {
+            "exp": "10.5%",
+            "ctl": "5.9%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.05"
+          },
+          "note": "Exact event counts and diary-analysis denominators were not reported.",
+          "locator": "Full text, Results, p 1260"
+        },
+        {
+          "endpoint": "Patient global impression of improvement",
+          "role": "descriptive",
+          "measure": "Proportion rating condition improved on PGI-I during randomized treatment",
+          "values": {
+            "exp": "62.0%",
+            "ctl": "39.6%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Exact event counts and analysis denominators were not reported.",
+          "locator": "Full text, Results, p 1261"
         }
       ],
       "harms": [
         {
           "label": "Discontinuation because of adverse events",
           "values": {
-            "exp": "24%",
-            "ctl": "4%"
+            "exp": "24.1% of 344 randomized women",
+            "ctl": "4.1% of 339 randomized women"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "P<0.001; event counts and safety denominators are not reported in the abstract."
+          "locator": "Full text, Results, p 1261; Table 1",
+          "note": "P<0.001; 89% of adverse-event discontinuations occurred within the first four weeks. Exact event counts were not reported."
         },
         {
           "label": "Nausea-associated discontinuation and completion",
           "values": {
-            "exp": "6.4% discontinued because of nausea; 58/78 (74%) with treatment-emergent nausea completed",
-            "ctl": "not reported"
+            "exp": "22.7% of 344 randomized women (78 women) had nausea; 6.4% discontinued because of nausea; 58/78 (74%) with nausea completed",
+            "ctl": "2.1% of 339 randomized women had nausea; none discontinued because of nausea"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract describes nausea as the most common adverse effect."
+          "locator": "Full text, Table 3; Results, p 1261",
+          "note": "Treatment-emergent nausea was the most common adverse event; P<0.001 for incidence and nausea-associated discontinuation."
+        },
+        {
+          "label": "Other treatment-emergent adverse events",
+          "values": {
+            "exp": "74% had any event; fatigue 14.8%, insomnia 14.2%, dry mouth 12.2% of 344 randomized women",
+            "ctl": "50% had any event; fatigue 3.8%, insomnia 2.4%, dry mouth 0.9% of 339 randomized women"
+          },
+          "locator": "Full text, Results, p 1261; Table 3",
+          "note": "Any-event comparison P<0.001; each listed event P<0.001."
         }
       ],
       "delivery": [
         {
           "label": "Study regimen",
-          "value": "A two-week placebo lead-in preceded randomization to duloxetine 40 mg twice daily or placebo for 12 weeks.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "A two-week no-drug lead-in and two-week blinded placebo lead-in preceded randomization to duloxetine 40 mg twice daily or matching placebo for 12 weeks, with visits every four weeks.",
+          "locator": "Full text, Materials and Methods, p 1260"
+        },
+        {
+          "label": "Treatment completion and adherence",
+          "values": {
+            "exp": "69% of 344 randomized women completed 12 weeks; mean 80% of doses ingested",
+            "ctl": "87% of 339 randomized women completed 12 weeks; mean 93% of doses ingested"
+          },
+          "locator": "Full text, Results, p 1260",
+          "note": "P<0.001 for both completion and dose ingestion; lower duloxetine adherence was driven by early discontinuation."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000080708_87092_cc.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1097_01_ju_0000080708_87092_cc.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/duloxetine-sui",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

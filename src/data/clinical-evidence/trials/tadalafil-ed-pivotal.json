@@ -25,21 +25,23 @@
       {
         "key": "exp",
         "label": "Tadalafil 2.5–20 mg as needed",
+        "n": 804,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo",
+        "n": 308,
         "role": "control"
       }
     ],
-    "population": "1,112 men aged 22–82 years with mild to severe erectile dysfunction of varied etiologies across five trials.",
+    "population": "1,112 men aged 22–82 years with mild to severe erectile dysfunction of varied etiologies across five trials; eligibility required at least four intercourse attempts during a four-week treatment-free run-in, and men who failed to achieve an erection after radical prostatectomy or pelvic surgery were excluded.",
     "description": "Integrated analysis of five double-blind randomized placebo-controlled trials",
-    "locator": "PubMed abstract, Materials and Methods"
+    "locator": "Full text, Methods, pp 1333–1334; Tables 1–2"
   },
   "verdict": "positive",
-  "verdictNote": "All three prespecified efficacy measures favored tadalafil over placebo.",
-  "takeaway": "Across five placebo-controlled trials, as-needed tadalafil improved erectile-function scores and sexual-encounter outcomes versus placebo in men with erectile dysfunction; at 20 mg, 81% reported improved erections versus 35% with placebo.",
+  "verdictNote": "All three co-primary outcomes favored tadalafil at 20 mg versus placebo.",
+  "takeaway": "Across five placebo-controlled trials, as-needed tadalafil 20 mg improved IIEF erectile-function scores and both SEP co-primary outcomes versus placebo over 12 weeks; the GAQ found improved erections in 81% of 165 men versus 35% of 261 controls in four trials.",
   "reports": [
     {
       "id": "tadalafil-ed-pivotal-2002",
@@ -53,93 +55,147 @@
       "doi": "10.1016/S0022-5347(05)64442-4",
       "pmid": "12352386",
       "followUp": "12-week randomized treatment",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUpLocator": "Full text, Methods, p 1333",
       "results": [
         {
           "endpoint": "IIEF erectile-function domain",
           "role": "primary",
-          "measure": "Mean change from baseline, 20-mg tadalafil versus placebo",
+          "measure": "Mean change from baseline to 12-week endpoint, 20-mg tadalafil versus placebo (intent-to-treat efficacy set)",
           "values": {
-            "exp": "+7.9 points",
-            "ctl": "not reported"
+            "exp": "+7.9 points (endpoint 23.9)",
+            "ctl": "+0.6 points (endpoint 15.1)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract gives the tadalafil change but not the placebo change.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted pairwise P value; confidence interval and endpoint-specific analysis denominators not reported.",
+          "locator": "Full text, Table 3; Results, p 1334"
         },
         {
           "endpoint": "Sexual Encounter Profile question 2",
           "role": "primary",
-          "measure": "Proportion of yes responses",
+          "measure": "Mean change from baseline to 12-week endpoint in proportion of yes responses to penetration attempts, 20-mg tadalafil versus placebo (intent-to-treat efficacy set)",
           "values": {
-            "exp": "not reported",
-            "ctl": "not reported"
+            "exp": "80% at endpoint; +27 percentage points",
+            "ctl": "48% at endpoint; +2 percentage points"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract identifies this coprimary endpoint and says all efficacy outcomes improved significantly; it gives no endpoint-specific values.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "note": "Adjusted pairwise P value; confidence interval and endpoint-specific attempt denominators not reported.",
+          "locator": "Full text, Methods, p 1333; Table 3"
         },
         {
           "endpoint": "Sexual Encounter Profile question 3",
           "role": "primary",
-          "measure": "Successful intercourse attempts, 20-mg tadalafil versus placebo",
+          "measure": "Mean change from baseline to 12-week endpoint in proportion of yes responses to successful intercourse attempts, 20-mg tadalafil versus placebo (intent-to-treat efficacy set)",
           "values": {
-            "exp": "75% of attempts",
-            "ctl": "not reported"
+            "exp": "70% at endpoint; +39 percentage points",
+            "ctl": "31% at endpoint; +6 percentage points"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
           "met": true,
-          "note": "The abstract first calls question 3 coprimary, then calls this attempt-level outcome secondary; its denominator is not supplied.",
-          "locator": "PubMed abstract, Materials and Methods; Results"
+          "note": "Primary outcome is mean patient-level SEP-Q3 change; the 75% versus 32% absolute proportion of all attempts is secondary. Confidence interval and endpoint-specific attempt denominators not reported.",
+          "locator": "Full text, Methods, pp 1333–1334; Table 3; Results, p 1334"
         },
         {
           "endpoint": "Global Assessment Question: improved erections",
           "role": "secondary",
-          "measure": "Men reporting improved erections at endpoint, 20-mg tadalafil versus placebo",
+          "measure": "Men reporting improved erections at endpoint in four 12-week studies, 20-mg tadalafil versus placebo",
           "values": {
-            "exp": "81%",
-            "ctl": "35%"
+            "exp": "81% (n=165)",
+            "ctl": "35% (n=261)"
           },
           "effect": {
             "type": "none",
             "p": "<0.001"
           },
-          "note": "Arm-specific respondent denominators are not supplied in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Four-study GAQ analysis; response numerators and confidence interval not reported.",
+          "locator": "Full text, Table 3 and footnote; Results, p 1335"
+        },
+        {
+          "endpoint": "Sexual Encounter Profile question 3, all attempts",
+          "role": "secondary",
+          "measure": "Absolute proportion of all intercourse attempts successfully completed during treatment, 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "75% of attempts",
+            "ctl": "32% of attempts"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Attempt-level secondary outcome; attempt denominators, confidence interval and endpoint-specific P value not reported.",
+          "locator": "Full text, Results, p 1334; Figure 1"
+        },
+        {
+          "endpoint": "Normal erectile function at endpoint",
+          "role": "secondary",
+          "measure": "Proportion with IIEF erectile-function domain score at least 26 at 12-week endpoint, 20-mg tadalafil versus placebo",
+          "values": {
+            "exp": "59%",
+            "ctl": "11%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "note": "Endpoint-specific denominators and confidence interval not reported.",
+          "locator": "Full text, Results, p 1335; Figure 2"
         }
       ],
       "harms": [
         {
           "label": "Most frequent adverse events",
           "values": {
-            "exp": "headache and dyspepsia",
-            "ctl": "not reported"
+            "exp": "20 mg (n=258): headache 55/258 (21%), dyspepsia 45/258 (17%)",
+            "ctl": "placebo (n=308): headache 19/308 (6%), dyspepsia 7/308 (2%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Event counts and comparative rates are not supplied."
+          "locator": "Full text, Table 4, p 1336",
+          "note": "Treatment-emergent events; mostly mild or moderate and transient."
+        },
+        {
+          "label": "More than one treatment-emergent adverse event",
+          "values": {
+            "exp": "20 mg: 188/258 (73%)",
+            "ctl": "placebo: 159/308 (52%)"
+          },
+          "locator": "Full text, Table 4, p 1336",
+          "note": "The table labels this row as subjects with greater than one treatment-emergent adverse event."
+        },
+        {
+          "label": "Discontinuation due to adverse events",
+          "values": {
+            "exp": "20 mg: 8/258 (3.1%); all tadalafil doses: 17/804 (2.1%)",
+            "ctl": "4/308 (1.3%)"
+          },
+          "locator": "Full text, Table 4, p 1336",
+          "note": "Safety population includes all randomized men."
         }
       ],
       "delivery": [
         {
           "label": "Treatment schedule",
-          "value": "Fixed as-needed tadalafil doses of 2.5, 5, 10, or 20 mg, up to once daily, without food or alcohol restrictions; placebo control.",
-          "locator": "PubMed abstract, Materials and Methods; corrected dosage wording"
+          "value": "Fixed as-needed tadalafil doses of 2.5, 5, 10, or 20 mg, up to once daily, without food, alcohol, or sexual-activity timing restrictions; placebo control. At 20 mg, 73%–80% of intercourse attempts at selected intervals from 30 minutes to 36 hours after dosing were successful.",
+          "locator": "Full text, Methods, p 1333; Results, p 1335; Erratum, J Urol. 2005;173:664"
+        },
+        {
+          "label": "Treatment completion",
+          "value": "995/1,112 (89%) completed treatment; efficacy required a baseline and at least one post-baseline measurement, and safety included all randomized men.",
+          "locator": "Full text, Methods and Results, p 1333",
+          "note": "One constituent study extended to 24 weeks, but the integrated efficacy analysis used 12-week data."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64442_4.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_s0022_5347_05_64442_4.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -231,7 +287,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/tadalafil-ed-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

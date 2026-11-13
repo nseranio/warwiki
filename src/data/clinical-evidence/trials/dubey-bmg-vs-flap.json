@@ -18,7 +18,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstract",
+    "blinding": "not reported",
     "type": "superiority",
     "n": 55,
     "arms": [
@@ -35,13 +35,13 @@
         "n": 28
       }
     ],
-    "population": "Fifty-five patients with complex anterior urethral strictures requiring substitution urethroplasty were assigned to dorsal onlay repair.",
+    "population": "Fifty-five patients with inflammatory or idiopathic anterior urethral strictures requiring substitution urethroplasty were assigned by alternation to dorsal onlay repair. Mean stricture lengths were 5.6 cm (range 4–15) with buccal mucosa and 6.0 cm (4–12) with flap repair.",
     "description": "Prospective randomized comparison of dorsal onlay substitutions",
-    "locator": "PubMed abstract, Purpose; Materials and Methods"
+    "locator": "Full text, Materials and Methods, p 2466; Tables 1 and 4"
   },
   "verdict": "inconclusive",
-  "verdictNote": "The abstract reports similar success without identifying a prespecified primary endpoint or its threshold.",
-  "takeaway": "In 55 patients with complex anterior urethral stricture, dorsal onlay buccal mucosa graft and penile skin flap urethroplasty had no reported significant success difference; flap repair took longer and caused more penile morbidity.",
+  "verdictNote": "No primary endpoint or statistical threshold was prespecified; reported success rates conflict with recurrence counts.",
+  "takeaway": "In 55 alternation-assigned patients with inflammatory or idiopathic anterior strictures, buccal graft and penile flap repairs had 3/27 and 4/28 recurrences at median 22.6 and 24.2 months. Flap repair took longer, with more penile morbidity and less patient recommendation.",
   "reports": [
     {
       "id": "dubey-bmg-vs-flap-2007",
@@ -52,37 +52,56 @@
       "citation": "Dubey D, Vijjan V, Kapoor R, et al. Dorsal onlay buccal mucosa versus penile skin flap urethroplasty for anterior urethral strictures: results from a randomized prospective trial. *J Urol.* 2007;178(6):2466-2469. doi:10.1016/j.juro.2007.08.010",
       "doi": "10.1016/j.juro.2007.08.010",
       "pmid": "17937943",
-      "followUp": "Intermediate follow-up; median duration not stated in abstract",
+      "followUp": "Median 22.6 months (buccal mucosa) and 24.2 months (penile flap); all patients followed at least 12 months",
+      "followUpLocator": "Full text, Results, p 2467; Table 4",
       "results": [
         {
           "endpoint": "Study-reported urethroplasty success",
           "role": "descriptive",
-          "measure": "Reported success rate; definition and analysis denominators unavailable in abstract",
+          "measure": "No subsequent urethral procedure (internal urethrotomy, dilation or urethroplasty); all 55 patients followed at least 12 months",
           "values": {
-            "bmg": "89.9% reported",
-            "flap": "85.6% reported"
+            "bmg": "89.9% reported; 24/27 (88.9%) by recurrence count",
+            "flap": "85.8% reported; 24/28 (85.7%) by recurrence count"
           },
           "effect": {
             "type": "none",
-            "p": ">0.05"
+            "p": ">0.5"
           },
-          "note": "The reported percentages do not reconcile with the randomized arm sizes (27 and 28); no prespecified primary endpoint or success definition is given.",
-          "locator": "PubMed abstract, Results; Conclusions"
+          "met": "not-tested",
+          "note": "Table 4 reports 89.9% and 85.8%, while its 3/27 and 4/28 recurrence counts imply 88.9% and 85.7%. The abstract instead prints 85.6% for the flap arm. No primary endpoint or threshold is designated.",
+          "locator": "Full text, Materials and Methods, p 2467; Results, p 2467; Table 4"
+        },
+        {
+          "endpoint": "Stricture recurrence requiring internal urethrotomy",
+          "role": "descriptive",
+          "measure": "Patients with recurrence after dorsal onlay urethroplasty",
+          "values": {
+            "bmg": "3/27 (11.1%)",
+            "flap": "4/28 (14.3%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "not significant"
+          },
+          "met": "not-tested",
+          "note": "All seven underwent internal urethrotomy; one buccal-mucosa patient subsequently needed penile flap urethroplasty.",
+          "locator": "Full text, Results, p 2467; Table 4"
         },
         {
           "endpoint": "Patient recommendation",
           "role": "descriptive",
-          "measure": "Would recommend the procedure to another patient",
+          "measure": "Would recommend the procedure to another patient at six months",
           "values": {
-            "bmg": "89% reported",
-            "flap": "65% reported"
+            "bmg": "24/27 (88.9%; reported as 89%)",
+            "flap": "18/28 (64.3%)"
           },
           "effect": {
             "type": "none",
             "p": "0.001"
           },
-          "note": "The abstract gives percentages without respondent counts or an assessment timepoint.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Counts derive from 3/27 and 10/28 who would not recommend treatment; Table 4 prints 89% and 64.3%. The abstract prints 65% for the flap arm.",
+          "locator": "Full text, Materials and Methods, p 2467; Results, p 2467; Table 4"
         }
       ],
       "harms": [
@@ -90,75 +109,111 @@
           "label": "Troublesome postvoid dribbling",
           "values": {
             "bmg": "4/27 (14.8%)",
-            "flap": "9 patients; 34.1% reported"
+            "flap": "9/28 (32.1%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The flap percentage printed in the abstract does not reconcile with 9/28 randomized patients (32.1%); the analysis denominator is not supplied. The abstract reports p = 0.001."
+          "locator": "Full text, Results, p 2467; Table 3",
+          "note": "Defined by the need for manual urethral compression after voiding; p = 0.001. The abstract prints 34.1%, whereas the full-text prose prints 32.14%."
         },
         {
           "label": "Superficial penile skin necrosis",
           "values": {
-            "bmg": "not reported",
-            "flap": "6/28"
+            "bmg": "0/27",
+            "flap": "6/28 (21.4%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Whether the extensive skin-loss case overlaps with these six is not stated."
+          "locator": "Full text, Results, p 2467; Table 3",
+          "note": "Superficial necrosis healed within six weeks. The text does not state whether the extensive skin-loss case overlaps with these six."
         },
         {
           "label": "Extensive penile skin loss requiring grafting",
           "values": {
-            "bmg": "not reported",
-            "flap": "1/28"
+            "bmg": "0/27",
+            "flap": "1/28 (3.6%)"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Results, p 2467; Table 3",
           "note": "Overlap with superficial necrosis cases is not stated."
         },
         {
           "label": "Penile torsion",
           "values": {
-            "bmg": "not reported",
-            "flap": "2/28"
+            "bmg": "0/27",
+            "flap": "2/28 (7.1%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Severity is not reported in the abstract."
+          "locator": "Full text, Results, p 2467; Table 3",
+          "note": "Slight torsion did not interfere with intercourse."
         },
         {
-          "label": "Minor morbidity after buccal mucosa repair",
+          "label": "Minor oral morbidity after buccal mucosa repair",
           "values": {
-            "bmg": "25.6% reported",
-            "flap": "not reported"
+            "bmg": "6/27 patients reported in prose; Table 3 lists 7 oral complications",
+            "flap": "0/28"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract gives no event count or definition; it says symptoms settled within four weeks."
+          "locator": "Full text, Results, p 2467; Table 3",
+          "note": "The prose prints 25.7% for six patients, but 6/27 is 22.2%; the abstract prints 25.6%. Prose lists four with numbness, two with salivation changes and one mucus cyst; Table 3 lists three with increased salivation. Symptoms settled by four weeks."
+        },
+        {
+          "label": "Penile hypoesthesia",
+          "values": {
+            "bmg": "0/27",
+            "flap": "3/28 (10.7%)"
+          },
+          "locator": "Full text, Results, p 2467; Table 3",
+          "note": "The three cases did not interfere with erection or intercourse."
+        },
+        {
+          "label": "Hematoma and minor wound infection",
+          "values": {
+            "bmg": "hematoma 2/27 (7.4%); wound infection 1/27 (3.7%)",
+            "flap": "hematoma 2/28 (7.1%); wound infection 0/28"
+          },
+          "locator": "Full text, Table 3",
+          "note": "Hematoma and minor wound infection were described as similar between groups."
+        },
+        {
+          "label": "Three-week cystogram extravasation requiring prolonged catheterization",
+          "values": {
+            "bmg": "1/27 (3.7%)",
+            "flap": "2/28 (7.1%)"
+          },
+          "locator": "Full text, Results, p 2467",
+          "note": "Each patient required one additional week of catheterization."
         }
       ],
       "delivery": [
         {
           "label": "Dorsal onlay substitution",
-          "value": "Buccal mucosa graft or penile skin flap placed as a dorsal onlay for complex anterior urethral stricture.",
-          "locator": "PubMed abstract, Purpose; Materials and Methods"
+          "value": "Urethra mobilized from the corpora, rotated 180 degrees and opened dorsally; buccal mucosa graft or penile skin flap applied as a dorsal onlay. Buccal repair used two teams; flap repair used one. Voiding cystogram at three weeks, followed by uroflowmetry and calibration or cystoscopy at one month, every three months in year one and every six months thereafter.",
+          "locator": "Full text, Materials and Methods, p 2467"
         },
         {
           "label": "Mean operative time",
           "values": {
-            "bmg": "162 minutes",
-            "flap": "224 minutes"
+            "bmg": "162 minutes (range 120–210)",
+            "flap": "224 minutes (range 180–410)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "p = 0.001; no variance or confidence interval is reported in the abstract."
+          "locator": "Full text, Table 4",
+          "note": "p = 0.001; the buccal repair used a two-team approach."
+        },
+        {
+          "label": "Graft harvest and flap design",
+          "values": {
+            "bmg": "single cheek 10/27; both cheeks 11/27; both cheeks plus lower lip 6/27",
+            "flap": "longitudinal flap 5/28; circumpenile flap 23/28"
+          },
+          "locator": "Full text, Materials and Methods, p 2467; Table 2",
+          "note": "Tissue source and flap design varied by stricture length and site."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_08_010.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2007_08_010.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/dubey-bmg-vs-flap",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

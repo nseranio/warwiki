@@ -37,7 +37,7 @@
     ],
     "population": "Community-dwelling adults aged at least 65 years with overactive bladder for at least 3 months, at least one incontinence and three urgency episodes over 3 days, and at least eight micturitions per 24 hours.",
     "description": "Multicenter, phase 4, double-blind randomized superiority trial",
-    "locator": "Wagg 2020, PubMed abstract, Methods; Griebling 2020, Results and Table 1"
+    "locator": "Full text, Methods, pp 212–213; Full text, Table 1, p 215; Griebling 2020, Results and Table 1"
   },
   "verdict": "positive",
   "verdictNote": "Both coprimary 12-week diary endpoints improved versus placebo.",
@@ -53,58 +53,143 @@
       "doi": "10.1016/j.eururo.2019.10.002",
       "pmid": "31733990",
       "followUp": "12-week randomized treatment",
-      "followUpLocator": "PubMed abstract, Methods",
+      "followUpLocator": "Full text, Study overview and Assessments, p 212",
       "results": [
         {
           "endpoint": "Daily micturitions",
           "role": "primary",
           "measure": "Change in mean micturitions per 24 hours from baseline to end of treatment",
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.7,
+            "ci": [
+              -1.0,
+              -0.3
+            ]
           },
           "met": true,
-          "note": "The abstract reports statistical significance but no arm-specific changes or effect estimate.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted mean difference, mirabegron minus placebo; endpoint data: 437/430 at baseline and 435/427 at end of treatment (mirabegron/placebo). Second in prespecified testing sequence.",
+          "locator": "Full text, Analyses, p 213; Results, p 214; Figure 3 caption, p 216"
         },
         {
           "endpoint": "Daily incontinence episodes",
           "role": "primary",
           "measure": "Change in mean incontinence episodes per 24 hours from baseline to end of treatment",
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": -0.6,
+            "ci": [
+              -0.8,
+              -0.3
+            ]
           },
           "met": true,
-          "note": "The abstract reports statistical significance but no arm-specific changes or effect estimate.",
-          "locator": "PubMed abstract, Results"
+          "note": "Adjusted mean difference, mirabegron minus placebo; endpoint data: 437/430 at baseline and 435/427 at end of treatment (mirabegron/placebo). First in prespecified testing sequence.",
+          "locator": "Full text, Analyses, p 213; Results, p 214; Figure 3 caption, p 216"
         },
         {
-          "endpoint": "Voided volume and urgency",
+          "endpoint": "Mean voided volume per micturition",
           "role": "secondary",
-          "measure": "Mean voided volume per micturition and daily urgency and urgency-incontinence episodes",
+          "measure": "Change in mean volume voided per micturition from baseline to week 12, mL",
           "effect": {
-            "type": "none"
+            "type": "difference",
+            "value": 13.7,
+            "ci": [
+              5.0,
+              22.4
+            ]
           },
-          "note": "Each secondary measure was reported statistically significant in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Adjusted mean difference, mirabegron minus placebo; third in prespecified testing sequence; FAS-I 437 mirabegron and 431 placebo at baseline.",
+          "locator": "Full text, Analyses, p 213; Results, p 214"
+        },
+        {
+          "endpoint": "Daily urgency episodes",
+          "role": "secondary",
+          "measure": "Change in mean PPIUS grade 3–4 urgency episodes per 24 hours from baseline to week 12",
+          "effect": {
+            "type": "difference",
+            "value": -0.94,
+            "ci": [
+              -1.37,
+              -0.51
+            ]
+          },
+          "note": "Adjusted mean difference, mirabegron minus placebo; FAS-I 437 mirabegron and 431 placebo at baseline.",
+          "locator": "Full text, Assessments, p 212; Results, p 214"
+        },
+        {
+          "endpoint": "Daily urgency-incontinence episodes",
+          "role": "secondary",
+          "measure": "Change in mean urgency-incontinence episodes per 24 hours from baseline to week 12",
+          "effect": {
+            "type": "difference",
+            "value": -0.56,
+            "ci": [
+              -0.83,
+              -0.29
+            ]
+          },
+          "note": "Adjusted mean difference, mirabegron minus placebo; FAS-I 437 mirabegron and 431 placebo at baseline.",
+          "locator": "Full text, Results, p 214"
+        },
+        {
+          "endpoint": "At least 50% reduction in daily incontinence episodes",
+          "role": "exploratory",
+          "measure": "Patients achieving at least 50% reduction in incontinence episodes per 24 hours at week 12",
+          "values": {
+            "exp": "72%",
+            "ctl": "60%"
+          },
+          "effect": {
+            "type": "OR",
+            "value": 1.78,
+            "ci": [
+              1.32,
+              2.38
+            ],
+            "p": "<0.05"
+          },
+          "note": "FAS-I responder analysis; the article text gives rounded percentages without responder counts.",
+          "locator": "Full text, Analyses, p 213; Results, p 215"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Investigator-assessed drug-related treatment-emergent adverse event",
+          "values": {
+            "exp": "84/445 (18.9%)",
+            "ctl": "57/442 (12.9%)"
+          },
+          "locator": "Full text, Table 2, p 218",
+          "note": "Possible or probable relationship, or missing relationship assessment; treated safety set."
+        },
+        {
+          "label": "Treatment-emergent adverse event leading to discontinuation",
+          "values": {
+            "exp": "14/445 (3.1%)",
+            "ctl": "14/442 (3.2%)"
+          },
+          "locator": "Full text, Table 2, p 218",
+          "note": "Treated safety set."
+        }
+      ],
       "delivery": [
         {
           "label": "Placebo run-in",
           "value": "Two-week placebo run-in before randomization.",
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Study overview, p 212"
         },
         {
           "label": "Dosing schedule",
           "value": "Mirabegron 25 mg daily or matched placebo for 12 weeks; optional dose increase to 50 mg after week 4 or 8.",
-          "locator": "PubMed abstract, Intervention"
+          "locator": "Full text, Study overview, p 212"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2019_10_002.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2019_10_002.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -237,7 +322,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/pillar",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

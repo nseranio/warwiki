@@ -14,7 +14,7 @@
       "lane": "tibial-nerve"
     }
   ],
-  "question": "Does percutaneous tibial nerve stimulation improve urge incontinence after antimuscarinic failure compared with sham treatment?",
+  "question": "Does percutaneous tibial nerve stimulation improve urge incontinence in women unresponsive to behavioral and rehabilitation therapy or antimuscarinics compared with sham treatment?",
   "design": {
     "phase": "not applicable",
     "randomized": true,
@@ -35,13 +35,13 @@
         "role": "control"
       }
     ],
-    "population": "35 women with detrusor overactivity incontinence unresponsive to antimuscarinic therapy.",
+    "population": "35 women with urodynamically confirmed detrusor overactivity incontinence unresponsive to behavioral and rehabilitation therapy or antimuscarinics.",
     "description": "Double-blind, sham-controlled randomized trial",
-    "locator": "PubMed abstract, Purpose and Materials and Methods"
+    "locator": "Full text, Methods, pp 2002-2003; Appendix, p 2006"
   },
   "verdict": "positive",
-  "verdictNote": "Responder analysis excluded three randomized patients; the prespecified significance threshold was unavailable.",
-  "takeaway": "Among women with detrusor overactivity incontinence after antimuscarinic failure who completed treatment, percutaneous tibial nerve stimulation produced more patients with greater than 50% fewer urge-incontinence episodes than sham needle treatment (12/17 versus 0/15; P &lt; 0.001).",
+  "verdictNote": "The primary responder endpoint met the prespecified two-sided 0.05 threshold in 32 completers.",
+  "takeaway": "Among women with urodynamically confirmed detrusor overactivity incontinence after conservative treatment, percutaneous tibial nerve stimulation yielded a 50% or greater reduction in urge-incontinence episodes in 12/17 completers versus 0/15 with sham (P < 0.001).",
   "reports": [
     {
       "id": "ptns-sham-finazzi-2010",
@@ -53,12 +53,12 @@
       "doi": "10.1016/j.juro.2010.06.113",
       "pmid": "20850833",
       "followUp": "End of 12 treatment sessions",
-      "followUpLocator": "PubMed abstract, Materials and Methods and Results",
+      "followUpLocator": "Full text, Methods and Results, pp 2002-2003",
       "results": [
         {
           "endpoint": "Urge-incontinence response",
           "role": "primary",
-          "measure": "More than 50% reduction in urge-incontinence episodes after treatment, among completers",
+          "measure": "50% or greater reduction in urge-incontinence episodes after 12 sessions, among completers",
           "values": {
             "exp": "12/17 (71%)",
             "ctl": "0/15 (0%)"
@@ -67,21 +67,94 @@
             "type": "none",
             "p": "<0.001"
           },
-          "met": null,
-          "note": "The abstract defines response and reports P < 0.001 but does not identify a prespecified alpha threshold or explicitly label the endpoint primary.",
-          "locator": "PubMed abstract, Materials and Methods and Results"
+          "met": true,
+          "note": "Prespecified primary outcome; chi-square 16.9 (df 1), P < 0.001 against two-sided alpha 0.05; 17/18 PTNS and 15/17 sham participants analyzed. No between-arm effect estimate or confidence interval reported.",
+          "locator": "Full text, Methods, pp 2002-2003; Results, p 2003"
+        },
+        {
+          "endpoint": "Incontinence episodes",
+          "role": "secondary",
+          "measure": "Mean episodes per 3-day diary before and after 12 sessions, among completers",
+          "values": {
+            "exp": "4.1 to 1.8 (n = 17; P < 0.001)",
+            "ctl": "4.2 to 3.8 (n = 15; P = 0.394)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "P value in effect is the treatment-by-time interaction; no between-arm effect estimate or confidence interval reported.",
+          "locator": "Full text, Results, p 2003; Table 2, p 2004"
+        },
+        {
+          "endpoint": "Daily micturitions",
+          "role": "secondary",
+          "measure": "Mean micturitions per day before and after 12 sessions, among completers",
+          "values": {
+            "exp": "13.6 to 9.5 (n = 17; P < 0.001)",
+            "ctl": "14.7 to 13.9 (n = 15; P = 0.960)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "<0.001"
+          },
+          "met": true,
+          "note": "P value in effect is the treatment-by-time interaction; no between-arm effect estimate or confidence interval reported.",
+          "locator": "Full text, Results, p 2003; Table 2, p 2004"
+        },
+        {
+          "endpoint": "Mean voided volume",
+          "role": "secondary",
+          "measure": "Mean mL per void before and after 12 sessions, among completers",
+          "values": {
+            "exp": "150.5 to 186.5 mL (n = 17; P < 0.001)",
+            "ctl": "146.0 to 150.4 mL (n = 15; P = 0.879)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.001"
+          },
+          "met": true,
+          "note": "P value in effect is the treatment-by-time interaction; no between-arm effect estimate or confidence interval reported.",
+          "locator": "Full text, Results, pp 2003-2004; Table 2, p 2004"
+        },
+        {
+          "endpoint": "Incontinence quality of life",
+          "role": "secondary",
+          "measure": "Mean I-QoL score before and after 12 sessions, among completers",
+          "values": {
+            "exp": "69.6 to 81.3 (n = 17; P = 0.025)",
+            "ctl": "69.5 to 70.6 (n = 15; P = 0.619)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.027"
+          },
+          "met": true,
+          "note": "P value in effect is the treatment-by-time interaction; no between-arm effect estimate or confidence interval reported.",
+          "locator": "Full text, Results, p 2003; Table 2, p 2004"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Serious side effects and stimulation-site pain",
+          "values": {
+            "exp": "No serious side effects; occasional transient stimulation-site pain (count not reported)",
+            "ctl": "No serious side effects; occasional transient stimulation-site pain (count not reported)"
+          },
+          "locator": "Full text, Results, p 2004"
+        }
+      ],
       "delivery": [
         {
-          "label": "Treatment schedule and sham procedure",
+          "label": "Treatment schedule, stimulation and sham procedure",
           "values": {
-            "exp": "12 PTNS sessions",
-            "ctl": "34-gauge needle in medial gastrocnemius"
+            "exp": "12 PTNS sessions; 34-gauge needle about 5 cm above medial malleolus, medial calcaneal surface electrode; Urgent PC, 9 V, 20 Hz, 0-10 mA titrated to toe movement and tolerance",
+            "ctl": "12 sham sessions; 34-gauge needle in medial gastrocnemius; current on for about 30 seconds, then off"
           },
-          "note": "Sessions lasted 30 minutes, three times weekly in both groups.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "note": "Sessions lasted 30 minutes, three times weekly in both groups; allocation guesses after three sessions agreed with assignment approximately 60% of the time (19/32, calculated from Table 2; kappa 0.18, P = 0.305).",
+          "locator": "Full text, Methods, pp 2002-2003; Results, p 2003; Table 2, p 2004"
         },
         {
           "label": "Noncompletion unrelated to technique",
@@ -89,21 +162,21 @@
             "exp": "1/18",
             "ctl": "2/17"
           },
-          "locator": "PubMed abstract, Results",
+          "locator": "Full text, Results, p 2003; Figure 1",
           "note": "The responder analysis included 17 PTNS and 15 sham completers."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2010_06_113.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2010_06_113.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/ptns-sham-finazzi",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

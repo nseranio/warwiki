@@ -18,42 +18,42 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "Not stated in the abstract",
+    "blinding": "Patients and therapists unblinded; repeat anorectal physiologist blinded",
     "type": "superiority",
     "n": 171,
     "arms": [
       {
         "key": "advice",
         "label": "Standard care with advice",
-        "n": null,
+        "n": 37,
         "role": "control"
       },
       {
         "key": "exercise",
         "label": "advice plus sphincter exercise instruction",
-        "n": null,
+        "n": 43,
         "role": "experimental"
       },
       {
         "key": "pressure",
         "label": "hospital computer-assisted sphincter pressure biofeedback",
-        "n": null,
+        "n": 49,
         "role": "experimental"
       },
       {
         "key": "home",
         "label": "hospital biofeedback plus home electromyogram biofeedback",
-        "n": null,
+        "n": 42,
         "role": "experimental"
       }
     ],
-    "population": "171 patients with fecal incontinence.",
+    "population": "171 adults referred for fecal incontinence of any frequency or severity at a specialist colorectal hospital.",
     "description": "Four-arm randomized superiority trial",
-    "locator": "PubMed abstract, Methods"
+    "locator": "Full text, Methods, pp 1321-1322; Table 2, p 1323"
   },
   "verdict": "negative",
-  "verdictNote": "Exercises and biofeedback showed no advantage over advice; all groups improved.",
-  "takeaway": "Among 171 patients with fecal incontinence, hospital pressure biofeedback, hospital plus home electromyogram biofeedback, sphincter exercise instruction, and standard advice were compared. Patient-rated improvement was 53% with hospital biofeedback versus 54% with advice; no added benefit was found for exercise or biofeedback.",
+  "verdictNote": "Neither primary rating favored biofeedback; the home-device arm rated less improvement.",
+  "takeaway": "In 171 patients with fecal incontinence, advice, added sphincter exercises, hospital pressure biofeedback, and hospital plus home electromyogram biofeedback were compared. Global ratings of worse, same, improved, or cured did not differ (P=0.54); the home-device arm rated less change despite a four-group difference (P=0.048).",
   "reports": [
     {
       "id": "st-marks-biofeedback-2003",
@@ -65,42 +65,71 @@
       "doi": "10.1016/j.gastro.2003.09.039",
       "pmid": "14598248",
       "followUp": "At treatment completion; improvements largely maintained 1 year after treatment",
-      "followUpLocator": "PubMed abstract, Results",
+      "followUpLocator": "Full text, Results at 1-Year Follow-up, p 1326",
       "results": [
         {
-          "endpoint": "Patient-rated improvement",
+          "endpoint": "Patient-rated global outcome (worse, same, improved, or cured)",
           "role": "primary",
-          "measure": "Proportion reporting improvement after treatment",
+          "measure": "Global rating of worse, same, improved, or cured after treatment; noncompleters counted as unchanged (ITT)",
           "values": {
-            "advice": "54%",
-            "pressure": "53%"
+            "advice": "54% (37 randomized)",
+            "pressure": "53% (49 randomized)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.54"
           },
-          "met": null,
-          "note": "The abstract highlights this comparison but does not identify a prespecified primary endpoint, denominator, or statistical threshold.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Four-group Fisher exact test P=0.54; percentages for advice and hospital pressure feedback are reported in the paper's abstract.",
+          "locator": "Full text, Outcome Measures, p 1321; Patient Assessment of Outcome, p 1324; abstract, p 1320"
+        },
+        {
+          "endpoint": "Patient-rated change in bowel control",
+          "role": "primary",
+          "measure": "Median change on -5 to +5 scale after treatment; noncompleters counted as zero (ITT)",
+          "values": {
+            "advice": "+3 (37 randomized)",
+            "exercise": "+2 (43 randomized)",
+            "pressure": "+3 (49 randomized)",
+            "home": "+0.5 (42 randomized)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.048"
+          },
+          "met": false,
+          "note": "Kruskal-Wallis four-group difference was driven by poorer outcome in the home-device arm, opposite the expected superiority direction.",
+          "locator": "Full text, Outcome Measures, p 1321; Patient Assessment of Outcome and Figure 3, p 1324"
         },
         {
           "endpoint": "Weekly incontinence episodes",
-          "role": "descriptive",
-          "measure": "Pooled median episodes per week before and after treatment",
+          "role": "secondary",
+          "measure": "Pooled median episodes per week before and after treatment among available paired diaries",
           "effect": {
             "type": "none"
           },
-          "note": "In the pooled analysis of available diaries, median accidents decreased from 2 to 0 per week (P &lt; 0.001); 39% of post-treatment diaries were missing, and group-specific before-and-after changes were not given.",
-          "locator": "PubMed abstract, Results"
+          "note": "Median accidents decreased from 2 to 0 per week (P < 0.001); 39% of post-treatment diaries were missing. Post-treatment medians were 1, 0, 0, and 0 for advice, exercise, hospital, and home-device groups; between-group P=0.51.",
+          "locator": "Full text, Comparison of All Trial Patients Before and After Treatment, p 1325; Table 3, p 1325"
         },
         {
           "endpoint": "Continence score",
-          "role": "descriptive",
+          "role": "secondary",
           "measure": "Pooled median continence score before and after treatment; worst score 20",
           "effect": {
             "type": "none"
           },
-          "note": "In the pooled before-and-after analysis, the median score decreased from 15 to 13 (P &lt; 0.001); Table 3 also reports post-treatment scores by group.",
-          "locator": "PubMed abstract, Results"
+          "note": "In the pooled paired analysis, the median score decreased from 15 to 13 (P ≤ 0.001); post-treatment medians were 13, 11, 13, and 14 for advice, exercise, hospital, and home-device groups; between-group P=0.54. The paper's abstract instead gives 11 to 8.",
+          "locator": "Full text, Comparison of All Trial Patients Before and After Treatment and Table 3, p 1325; abstract, p 1320"
+        },
+        {
+          "endpoint": "Patient-rated improvement at 1 year",
+          "role": "secondary",
+          "measure": "Proportion of 1-year questionnaire respondents reporting improved bowel control",
+          "effect": {
+            "type": "none"
+          },
+          "note": "74% of respondents reported improvement; 106/160 eligible patients replied (66%), including 95 with paired immediate and 1-year responses. No between-group difference was detected.",
+          "locator": "Full text, Results at 1-Year Follow-up, p 1326"
         }
       ],
       "harms": [],
@@ -109,22 +138,38 @@
           "label": "Biofeedback modalities",
           "values": {
             "pressure": "Hospital-based computer-assisted sphincter pressure biofeedback",
-            "home": "Hospital biofeedback plus a home electromyogram biofeedback device"
+            "home": "Hospital biofeedback plus a 20-minute daily home electromyogram biofeedback device"
           },
-          "locator": "PubMed abstract, Methods"
+          "note": "All groups received nurse-led assessment, education, lifestyle and bowel advice, emotional support, and an urge-resistance program; hospital feedback displayed external sphincter contraction pressure, while the home unit used an intra-anal electromyogram electrode and illuminated muscle-activity lights.",
+          "locator": "Full text, Table 1 and Groups 1-4, pp 1321-1322"
+        },
+        {
+          "label": "Sphincter exercise dose",
+          "value": "At least 50 maximal sustained and 50 fast-twitch contractions daily in groups 2-4",
+          "locator": "Full text, Group 2 and Table 1, p 1321"
+        },
+        {
+          "label": "Treatment sessions and completion",
+          "value": "Up to nine 40-60-minute sessions over 3-6 months; median five sessions (range 1-9); 140/171 (82%) completed protocol and outcome questionnaires",
+          "locator": "Full text, Group 1, p 1321; Patients Completing Study Protocol, p 1323; Table 3, p 1325"
+        },
+        {
+          "label": "Surgery for persistent fecal incontinence",
+          "value": "Nine patients had surgery before the 1-year questionnaire follow-up",
+          "locator": "Full text, Results at 1-Year Follow-up, p 1326"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_gastro_2003_09_039.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_gastro_2003_09_039.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/st-marks-biofeedback",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

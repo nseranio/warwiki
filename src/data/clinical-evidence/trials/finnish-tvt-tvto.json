@@ -19,7 +19,7 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not reported in abstracts",
+    "blinding": "Masking not reported; five-year assessment by an independent physician or research nurse",
     "type": "superiority",
     "n": 273,
     "arms": [
@@ -34,9 +34,9 @@
         "role": "control"
       }
     ],
-    "population": "Women undergoing primary surgery for stress urinary incontinence at seven Finnish hospitals.",
+    "population": "Women undergoing primary surgery for stress urinary incontinence at seven Finnish hospitals; prior incontinence surgery, postvoid residual >100 mL, prolapse beyond second degree, and body mass index >35 kg/m² were among the exclusions.",
     "description": "Multicenter randomized comparative trial",
-    "locator": "Laurikainen 2007, PubMed abstract, Objective, Methods, Results"
+    "locator": "Laurikainen 2007, PubMed abstract, Objective, Methods, Results; Full text, Methods and Table 1, p 1110"
   },
   "verdict": "mixed",
   "verdictNote": "Early cure did not differ significantly; complications and opioid use favored TVT.",
@@ -136,66 +136,115 @@
       "id": "finnish-tvt-tvto-2014",
       "kind": "updated",
       "label": "Five-year follow-up",
-      "published": "2014-01-31",
+      "published": "2014-01-30",
       "cutoff": null,
       "citation": "Laurikainen E, Valpas A, Aukee P, et al. \"Five-year Results of a Randomized Trial Comparing Retropubic and Transobturator Midurethral Slings for Stress Incontinence.\" *Eur Urol.* 2014;65(6):1109-1114. doi:10.1016/j.eururo.2014.01.031",
       "doi": "10.1016/j.eururo.2014.01.031",
       "pmid": "24508070",
-      "followUp": "5 years; 95% assessed according to protocol",
-      "followUpLocator": "PubMed abstract, Results and Limitations",
+      "followUp": "5 years; 254/268 (94.8%) operated women assessed according to protocol",
+      "followUpLocator": "Full text, Results and Fig. 1, p 1111",
       "results": [
         {
           "endpoint": "Objective cure",
           "role": "primary",
-          "measure": "Five-year objective cure: negative stress test, negative 24-hour pad test, and no SUI retreatment",
+          "measure": "Five-year objective success among women assessed: negative cough stress test, negative 24-hour pad test (<8 g), and no SUI retreatment",
           "values": {
-            "exp": "84.7%",
-            "ctl": "86.2%"
+            "exp": "111/131 (84.7%)",
+            "ctl": "106/123 (86.2%)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "No statistically significant between-group difference; the abstract does not give outcome denominators or a prespecified comparison margin.",
-          "locator": "PubMed abstract, Outcome Measurements and Statistical Analysis; Results and Limitations"
+          "met": false,
+          "note": "The significance threshold was p<0.05; neither five-year primary outcome differed significantly between arms. Exact P value, effect estimate, and confidence interval were not reported.",
+          "locator": "Full text, Methods, Outcomes and Results, pp 1110-1112"
         },
         {
           "endpoint": "Treatment satisfaction",
-          "role": "secondary",
-          "measure": "Five-year subjective treatment satisfaction",
+          "role": "primary",
+          "measure": "Five-year expectations completely or partly met, among all operated women",
           "values": {
-            "exp": "94.2%",
-            "ctl": "91.7%"
+            "exp": "128/136 (94.1%)",
+            "ctl": "121/132 (91.7%)"
           },
           "effect": {
             "type": "none"
           },
-          "note": "No statistically significant between-group difference; outcome denominators are not given in the abstract.",
-          "locator": "PubMed abstract, Results and Limitations"
+          "note": "Complete satisfaction: 115/136 (84.6%) TVT and 113/132 (85.6%) TVT-O. Source prints 94.2% for TVT complete-or-partial satisfaction, but Table 3 counts sum to 128/136 (94.1%). Between-arm difference was not significant; exact P value, effect estimate, and confidence interval were not reported.",
+          "locator": "Full text, Methods, Outcomes, Results and Table 3, pp 1110-1112",
+          "met": false
+        },
+        {
+          "endpoint": "Objective success with missing follow-up counted as failure",
+          "role": "descriptive",
+          "measure": "Five-year objective success among all operated women, missing follow-up counted as failure",
+          "values": {
+            "exp": "111/136 (81.6%)",
+            "ctl": "106/132 (80.3%)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "met": "not-tested",
+          "note": "Secondary missing-as-failure analysis; no exact between-arm P value or confidence interval reported.",
+          "locator": "Full text, Results, p 1112"
         }
       ],
       "harms": [
         {
-          "label": "Five-year complications",
+          "label": "Tape problems requiring a procedure through five years",
           "values": {
-            "exp": "Low; rate not reported",
-            "ctl": "Low; rate not reported"
+            "exp": "0/136",
+            "ctl": "2/132 (one extrusion, one retention)"
           },
-          "locator": "PubMed abstract, Results and Limitations; Conclusions",
-          "note": "No between-group difference reported; no late-onset adverse effects of tape material were seen."
+          "locator": "Full text, Results, p 1112",
+          "note": "One TVT-O tape extrusion required partial excision and later TVT for recurrent incontinence; one retention case required two midline tape incisions. No tissue reaction, erosion, or tape protrusion was seen among 254 women at the five-year examination. The investigators described overall complication rates as low and similar between groups, with no late-onset tape-material adverse effects reported."
+        },
+        {
+          "label": "De novo urgency incontinence at five years",
+          "values": {
+            "exp": "4/131 (3.1%)",
+            "ctl": "3/123 (2.4%)"
+          },
+          "locator": "Full text, Results, p 1112",
+          "note": "Seven of 254 assessed women; none met urgency-incontinence criteria at two months."
+        },
+        {
+          "label": "Postvoid residual >100 mL at five years",
+          "values": {
+            "exp": "6/131 (4.6%)",
+            "ctl": "7/123 (5.7%)"
+          },
+          "locator": "Full text, Results, p 1112",
+          "note": "Assessed women at five-year visit."
+        },
+        {
+          "label": "Antibiotic-treated urinary tract infection in preceding two years",
+          "value": "54/254 (21.3%) assessed women",
+          "locator": "Full text, Results, p 1112",
+          "note": "The paper gives 20.6% for TVT and 22.1% for TVT-O but no arm-specific numerators."
         }
       ],
       "delivery": [
         {
           "label": "Protocol assessment at five years",
-          "value": "95% of included women could be assessed according to protocol",
-          "locator": "PubMed abstract, Results and Limitations"
+          "value": "254/268 (94.8%) operated women assessed according to protocol at five years; 131/136 TVT and 123/132 TVT-O",
+          "locator": "Full text, Results and Fig. 1, p 1111"
+        },
+        {
+          "label": "Sling technique and concomitant surgery",
+          "values": {
+            "exp": "Retropubic TVT, Gynecare/Ethicon",
+            "ctl": "Inside-out TVT-O, Gynecare/Ethicon"
+          },
+          "locator": "Full text, Methods, Study procedures, p 1110",
+          "note": "Both were type 1 macroporous monofilament polypropylene, inserted from the vaginal incision under local analgesia with light sedation; cough testing with 300 mL bladder fill guided tape adjustment; cystoscopy in all cases; no concomitant surgery. One woman allocated to TVT-O received TVT because of technical problems."
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_01_031.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2014_01_031.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],

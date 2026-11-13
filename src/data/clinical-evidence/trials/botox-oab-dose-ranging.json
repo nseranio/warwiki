@@ -60,13 +60,13 @@
         "role": "control"
       }
     ],
-    "population": "Patients with idiopathic overactive bladder and urinary urgency incontinence inadequately managed with anticholinergics, with at least eight urgency-incontinence episodes weekly and eight micturitions daily at baseline.",
+    "population": "Adults aged 18–85 years with idiopathic overactive bladder and urinary urgency incontinence for at least six months, inadequately managed with anticholinergics, with at least eight urgency-incontinence episodes weekly and eight micturitions daily at baseline; detrusor overactivity was not required.",
     "description": "Multicenter, double-blind, placebo-controlled dose-ranging randomized trial",
-    "locator": "Dmochowski PubMed abstract, Materials and Methods; ClinicalTrials.gov NCT00168454, Participant Flow, Started (arm counts)"
+    "locator": "Full text, Dmochowski 2010, Subjects and Figure 1, pp 2417–2418; Fowler 2012, Results and Table 1, pp 150–152"
   },
-  "verdict": "positive",
-  "verdictNote": "Benefit began at 100 U; higher doses increased residual-volume and catheterization concerns.",
-  "takeaway": "Intradetrusor onabotulinumtoxinA 50–300 U was compared with placebo for idiopathic overactive bladder with urgency incontinence. The week-12 report found sustained efficacy at doses of 100 U or greater, with dose-dependent postvoid residual and catheterization effects; its authors favored 100 U as a possible benefit–risk balance.",
+  "verdict": "inconclusive",
+  "verdictNote": "Week-12 pairwise P values were unreported; cumulative dose response favored doses of at least 100 U.",
+  "takeaway": "In 313 patients with idiopathic overactive bladder and urgency incontinence, intradetrusor onabotulinumtoxinA 50–300 U was compared with placebo. Week-12 mean reductions varied across doses without a clear dose response; cumulative analyses favored at least 100 U, while catheterization increased with dose.",
   "reports": [
     {
       "id": "botox-oab-dose-ranging-2010",
@@ -78,55 +78,109 @@
       "citation": "Dmochowski R, Chapple C, Nitti VW, et al. \"Efficacy and Safety of OnabotulinumtoxinA for Idiopathic Overactive Bladder: A Double-Blind, Placebo Controlled, Randomized, Dose Ranging Trial.\" *J Urol.* 2010;184(6):2416-2422. doi:10.1016/j.juro.2010.08.021",
       "doi": "10.1016/j.juro.2010.08.021",
       "pmid": "20952013",
-      "followUp": "Week 12 primary endpoint",
-      "followUpLocator": "PubMed abstract, Materials and Methods",
+      "followUp": "Week 12 primary endpoint; follow-up through week 36",
+      "followUpLocator": "Full text, Assessments and Patient Disposition, pp 2417–2418",
       "results": [
         {
           "endpoint": "Weekly urgency urinary incontinence episodes",
           "role": "primary",
           "measure": "7-day bladder-diary change from baseline at week 12",
           "values": {
-            "d100": "Efficacy reported",
-            "d150": "Efficacy reported",
-            "d200": "Efficacy reported",
-            "d300": "Efficacy reported"
+            "ctl": "−17.4 episodes/week (44 randomized)",
+            "d50": "−20.7 episodes/week (57 randomized)",
+            "d100": "−18.4 episodes/week (54 randomized)",
+            "d150": "−23.0 episodes/week (49 randomized)",
+            "d200": "−19.6 episodes/week (53 randomized)",
+            "d300": "−19.4 episodes/week (56 randomized)"
           },
           "effect": {
             "type": "none"
           },
-          "met": null,
-          "note": "Abstract reports durable efficacy at doses of 100 U or greater without arm estimates or a prespecified testing threshold; doses above 150 U added minimal symptom benefit.",
-          "locator": "PubMed abstract, Results"
+          "met": "not-tested",
+          "note": "Intent-to-treat ANCOVA used P ≤0.05 without multiplicity adjustment; week-12 pairwise P values and confidence intervals were not reported. A separate cumulative rank analysis showed dose response, with little added benefit above 150 U.",
+          "locator": "Full text, Statistical Analysis and Efficacy/Patient Bladder Diary Data, pp 2417–2419"
+        },
+        {
+          "endpoint": "Incontinence-free on 7-day diary",
+          "role": "secondary",
+          "measure": "100% reduction in urgency-incontinence episodes at week 12; randomized arm denominators",
+          "values": {
+            "ctl": "15.9% (7/44)",
+            "d50": "29.8% (17/57)",
+            "d100": "37.0% (20/54)",
+            "d150": "40.8% (20/49)",
+            "d200": "50.9% (27/53)",
+            "d300": "57.1% (32/56)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "Percentages are reported in the primary text; counts use randomized-arm denominators and are implied by the rounded percentages.",
+          "locator": "Full text, Efficacy/Patient Bladder Diary Data, p 2419; Figure 1, p 2418"
         }
       ],
       "harms": [
         {
           "label": "Urinary tract infection",
-          "locator": "PubMed abstract, Results",
-          "note": "Significantly more frequent with onabotulinumtoxinA than placebo; rates not provided."
+          "values": {
+            "ctl": "7/43 (16.3%)",
+            "d50": "19/56 (33.9%)",
+            "d100": "20/55 (36.4%)",
+            "d150": "22/50 (44.0%)",
+            "d200": "25/52 (48.1%)",
+            "d300": "19/55 (34.5%)"
+          },
+          "locator": "Full text, Table 1 and Safety, pp 2419–2420",
+          "note": "Safety population; UTI was not required to be culture confirmed; UTI was one of two adverse events reported as more frequent with active treatment than placebo at P <0.05."
         },
         {
           "label": "Urinary retention",
-          "locator": "PubMed abstract, Results",
-          "note": "Significantly more frequent with onabotulinumtoxinA than placebo; rates not provided."
+          "values": {
+            "ctl": "1/43 (2.3%)",
+            "d50": "5/56 (8.9%)",
+            "d100": "10/55 (18.2%)",
+            "d150": "14/50 (28.0%)",
+            "d200": "12/52 (23.1%)",
+            "d300": "14/55 (25.5%)"
+          },
+          "locator": "Full text, Table 1 and Safety, pp 2419–2420",
+          "note": "Safety population; PVR ≥200 mL was added as an adverse-event definition of retention during the study; all affected patients could void spontaneously."
         },
         {
-          "label": "Postvoid residual and intermittent catheterization",
-          "locator": "PubMed abstract, Results",
-          "note": "Both increased with dose; rates and catheterization thresholds not provided."
+          "label": "Postvoid residual and PVR-related catheterization",
+          "values": {
+            "ctl": "PVR ≥200 mL: 0/43 (0.0%); catheterization: 0/43 (0.0%)",
+            "d50": "PVR ≥200 mL: 7/56 (12.5%); catheterization: 3/56 (5.4%)",
+            "d100": "PVR ≥200 mL: 8/55 (14.5%); catheterization: 6/55 (10.9%)",
+            "d150": "PVR ≥200 mL: 10/50 (20.0%); catheterization: 10/50 (20.0%)",
+            "d200": "PVR ≥200 mL: 15/52 (28.8%); catheterization: 11/52 (21.2%)",
+            "d300": "PVR ≥200 mL: 15/55 (27.3%); catheterization: 9/55 (16.4%)"
+          },
+          "locator": "Full text, Tables 1–2 and Safety, pp 2419–2420",
+          "note": "Safety population; catheterization was PVR related, either intermittent or indwelling. Among patients with posttreatment PVR ≥200 mL, 33/55 (60.0%) were catheterized."
+        },
+        {
+          "label": "Serious adverse events",
+          "value": "34/311 treated patients (10.9%) reported 45 serious adverse events; two were study-drug related: urinary retention at 100 U and gastroparesis flare at 50 U.",
+          "locator": "Full text, Safety, p 2419; Table 1, p 2420"
         }
       ],
       "delivery": [
         {
           "label": "Treatment administration",
-          "value": "Intradetrusor onabotulinumtoxinA 50, 100, 150, 200, or 300 U, or placebo; injection-site number and pattern not stated in abstract.",
-          "locator": "PubMed abstract, Materials and Methods"
+          "value": "Single cystoscopic treatment of 50, 100, 150, 200, or 300 U onabotulinumtoxinA or placebo in 20 detrusor injections of 0.5 mL each, evenly distributed while avoiding the trigone and dome; intravesical 1%–2% lidocaine or equivalent, with optional sedation.",
+          "locator": "Full text, Treatments, p 2417"
+        },
+        {
+          "label": "Study completion",
+          "value": "272/313 (86.9%) completed 36 weeks; 41/313 (13.1%) discontinued; none discontinued because of treatment-related adverse events.",
+          "locator": "Full text, Patient Disposition, p 2418; Discussion, p 2420"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2010_08_021.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_juro_2010_08_021.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     },
     {
@@ -192,46 +246,83 @@
       "id": "botox-oab-dose-ranging-2012-qol",
       "kind": "pro",
       "label": "Quality-of-life analysis",
-      "published": "2012-03-14",
-      "dateLocator": "PubMed PMID 22464310, electronic publication date",
+      "published": "2012-03-13",
+      "dateLocator": "Full text, article information, p 148",
       "cutoff": null,
       "citation": "Fowler CJ, Auerbach S, Ginsberg D, et al. \"OnabotulinumtoxinA Improves Health-Related Quality of Life in Patients with Urinary Incontinence Due to Idiopathic Overactive Bladder: A 36-Week, Double-Blind, Placebo-Controlled, Randomized, Dose-Ranging Trial.\" *Eur Urol.* 2012;62(1):148-157. doi:10.1016/j.eururo.2012.03.005",
       "doi": "10.1016/j.eururo.2012.03.005",
       "pmid": "22464310",
       "followUp": "36 weeks",
-      "followUpLocator": "PubMed abstract, Design, Setting, and Participants",
+      "followUpLocator": "Full text, Patients and Methods, pp 149–150",
       "results": [
         {
           "endpoint": "Incontinence Quality-of-Life Instrument score",
-          "role": "secondary",
-          "measure": "Change from baseline at weeks 2 through 24",
+          "role": "exploratory",
+          "measure": "Mean I-QOL total-score change from baseline at week 12; intent-to-treat analysis",
           "values": {
-            "d100": "Greater improvement than placebo",
-            "d150": "Greater improvement than placebo",
-            "d200": "Greater improvement than placebo",
-            "d300": "Greater improvement than placebo"
+            "ctl": "+17.9 points (44 randomized)",
+            "d50": "+29.8 points (57 randomized)",
+            "d100": "+32.9 points (54 randomized)",
+            "d150": "+35.2 points (49 randomized)",
+            "d200": "+37.1 points (53 randomized)",
+            "d300": "+39.7 points (56 randomized)"
           },
           "effect": {
-            "type": "none",
-            "p": "<0.05"
+            "type": "none"
           },
-          "note": "Total and subscale scores; abstract does not give point estimates. Some quality-of-life measures were exploratory and unvalidated.",
-          "locator": "PubMed abstract, Results and Limitations"
+          "note": "Exploratory endpoint; total-score improvements versus placebo were significant for all doses ≥100 U from weeks 2 through 36; subscale improvements were significant through week 24. P values were unadjusted for multiplicity; confidence intervals were not reported.",
+          "locator": "Full text, Assessments and Statistical analysis, pp 149–150; Results and Figures 3–4, pp 150–153"
+        },
+        {
+          "endpoint": "King's Health Questionnaire symptom component",
+          "role": "exploratory",
+          "measure": "Mean change from baseline at week 12; intent-to-treat analysis",
+          "values": {
+            "ctl": "44 randomized",
+            "d50": "No significant difference vs placebo; 57 randomized",
+            "d100": "Significantly greater reduction than placebo; 54 randomized",
+            "d150": "Significantly greater reduction than placebo; 49 randomized",
+            "d200": "Significantly greater reduction than placebo; 53 randomized",
+            "d300": "Significantly greater reduction than placebo; 56 randomized"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "The paper reports between-group mean-improvement differences ranging from −2.7 to −10.8 points, but not arm-specific numeric estimates in text; all doses ≥100 U differed from placebo at week 12.",
+          "locator": "Full text, Results, King's Health Questionnaire symptom component and Figure 5, pp 152–154"
+        },
+        {
+          "endpoint": "SF-36 role-physical domain",
+          "role": "exploratory",
+          "measure": "Mean change from baseline at week 36; intent-to-treat analysis",
+          "values": {
+            "ctl": "+2.4 points (44 randomized)",
+            "d50": "+0.1 points (57 randomized)",
+            "d100": "+6.2 points (54 randomized)",
+            "d150": "+7.2 points (49 randomized)",
+            "d200": "+10.6 points (53 randomized)",
+            "d300": "+9.1 points (56 randomized)"
+          },
+          "effect": {
+            "type": "none"
+          },
+          "note": "At 300 U, physical functioning, role-physical, bodily pain and vitality differed from placebo; at 200 U, role-physical differed. Pairwise P values are in Table 2; no confidence intervals reported.",
+          "locator": "Full text, Table 2 and Results, SF-36, pp 152–154"
         }
       ],
       "harms": [],
       "delivery": [],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_03_005.txt",
-        "level": "abstract",
-        "checked": "2026-11-12"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_eururo_2012_03_005.fulltext.txt",
+        "level": "full-text",
+        "checked": "2026-11-13"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/botox-oab-dose-ranging",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

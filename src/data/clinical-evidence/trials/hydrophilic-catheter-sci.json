@@ -18,28 +18,30 @@
   "design": {
     "phase": "not applicable",
     "randomized": true,
-    "blinding": "not stated in abstract",
+    "blinding": "open-label; participants and clinical staff could not be blinded",
     "type": "superiority",
     "n": 224,
     "arms": [
       {
         "key": "exp",
         "label": "Single-use hydrophilic-coated SpeediCath",
+        "n": 108,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "single-use uncoated polyvinyl chloride Conveen catheter",
+        "n": 116,
         "role": "control"
       }
     ],
-    "population": "224 intermittent-catheter users with traumatic spinal cord injury less than three months old were recruited at 15 North American spinal cord injury centers.",
-    "description": "Prospective, multicenter, parallel-group randomized trial",
-    "locator": "PubMed abstract, Design, Setting, Participants and Methods"
+    "population": "224 adults with traumatic spinal cord injury less than three months old, neurogenic bladder dysfunction, and intermittent catheterization at least three times daily were randomized at 15 North American spinal cord injury centers.",
+    "description": "Prospective, multicenter, open-label, parallel-group randomized trial",
+    "locator": "Full text, Methods, Study Population and Study Design, p 409; Results, Baseline Characteristics and Participant Flow, p 411"
   },
-  "verdict": "positive",
-  "verdictNote": "First treated symptomatic UTI was delayed; institutional-period UTI incidence was lower.",
-  "takeaway": "In acute traumatic spinal cord injury, single-use hydrophilic-coated SpeediCath delayed the first antibiotic-treated symptomatic urinary tract infection compared with an uncoated Conveen catheter; daily first-infection risk was 33% lower and institutional-period antibiotic-treated symptomatic UTI incidence was 21% lower.",
+  "verdict": "mixed",
+  "verdictNote": "First treated UTI was delayed; full-period UTI incidence did not differ, despite lower institutional incidence.",
+  "takeaway": "In 224 adults with acute traumatic spinal cord injury, hydrophilic-coated SpeediCath delayed first antibiotic-treated symptomatic UTI versus uncoated Conveen in an adjusted analysis of 188 participants (HR 0.666, 95% CI 0.453–0.978); institutional UTI incidence was lower, full-period incidence was not.",
   "reports": [
     {
       "id": "hydrophilic-catheter-sci-2011",
@@ -51,40 +53,104 @@
       "doi": "10.1016/j.pmrj.2011.01.001",
       "pmid": "21570027",
       "followUp": "During hospitalization or rehabilitation and up to three months after discharge; maximum six months.",
-      "followUpLocator": "PubMed abstract, Setting",
+      "followUpLocator": "Full text, Methods, Study Design, p 409",
       "results": [
         {
           "endpoint": "Time to first antibiotic-treated symptomatic UTI",
           "role": "primary",
-          "measure": "Daily risk of first antibiotic-treated symptomatic UTI; relative reduction",
+          "measure": "Time from first catheterization to first antibiotic-treated symptomatic UTI, clinical definition; Cox analysis of participants with complete covariates",
           "values": {
-            "exp": "33% lower daily risk",
+            "exp": "33% lower daily risk than control",
             "ctl": "reference"
           },
           "effect": {
-            "type": "none"
+            "type": "HR",
+            "value": 0.666,
+            "ci": [
+              0.453,
+              0.978
+            ],
+            "p": ".038"
           },
           "met": true,
-          "note": "The abstract reports a significant delay but no absolute event counts, hazard ratio, confidence interval or exact P value.",
-          "locator": "PubMed abstract, Main Outcome Measurements and Results"
+          "note": "Clinical UTI meant antibiotic treatment prescribed. Of 219 exposed participants, 31 were excluded from the covariate-adjusted analysis because of missing covariates or UTI before first assigned-catheter use; the paper does not give an exact delay duration.",
+          "locator": "Full text, Methods, Study Procedure, p 410; Results, Time to Onset of the First Symptomatic UTI, p 412; Figure 3 caption, p 413"
         },
         {
           "endpoint": "Antibiotic-treated symptomatic UTI incidence during institutional care",
           "role": "secondary",
-          "measure": "Institutional-period symptomatic UTI incidence; relative reduction",
+          "measure": "Clinical-definition UTI episodes per observed patient-month during institutional care",
           "values": {
-            "exp": "21% lower incidence",
+            "exp": "0.539/month (60 UTIs/111.3 patient-months)",
+            "ctl": "0.682/month (97 UTIs/142.2 patient-months)"
+          },
+          "effect": {
+            "type": "RR",
+            "value": 1.4,
+            "p": ".038"
+          },
+          "met": true,
+          "note": "The paper reports 21% lower clinical-definition incidence and RR 1.40 in the uncoated versus coated direction. For strict-definition UTI, rates were 0.189/month (21/111.3) coated and 0.295/month (42/142.2) uncoated; reported RR 1.67 in the uncoated versus coated direction; P = .022.",
+          "locator": "Full text, Results, UTI Incidence, p 412; Table 2, p 413"
+        },
+        {
+          "endpoint": "Time to first strict-definition symptomatic UTI",
+          "role": "secondary",
+          "measure": "Time from first catheterization to first antibiotic-treated UTI also meeting bacteriuria ≥10² CFU/mL, symptom, and leukocyte-esterase criteria",
+          "values": {
+            "exp": "lower estimated hazard than control",
             "ctl": "reference"
           },
           "effect": {
-            "type": "none",
-            "p": "<0.05"
+            "type": "HR",
+            "value": 0.64,
+            "ci": [
+              0.395,
+              1.032
+            ],
+            "p": ".067"
           },
-          "note": "The abstract gives a relative reduction without group-specific counts or rates.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Strict-definition first-UTI comparison was not statistically significant at the two-sided .05 threshold.",
+          "locator": "Full text, Methods, Study Procedure, p 410; Results, Time to Onset of the First Symptomatic UTI, p 412"
+        },
+        {
+          "endpoint": "Symptomatic UTI incidence over full study period",
+          "role": "primary",
+          "measure": "Clinical- and strict-definition UTI episodes per observed patient-month across institutional and community periods",
+          "values": {
+            "exp": "clinical 0.479/month (99/206.7 patient-months); strict 0.198/month (41/206.7)",
+            "ctl": "clinical 0.478/month (167/349.2 patient-months); strict 0.218/month (76/349.2)"
+          },
+          "effect": {
+            "type": "none",
+            "p": ".426 (clinical); .248 (strict)"
+          },
+          "met": false,
+          "note": "No difference in symptomatic UTI incidence was detected over the combined institutional and community follow-up.",
+          "locator": "Full text, Results, UTI Incidence, p 412; Table 2, p 413"
         }
       ],
-      "harms": [],
+      "harms": [
+        {
+          "label": "Urethral bleeding adverse-event reports",
+          "values": {
+            "exp": "14 reports; 7 led to premature discontinuation",
+            "ctl": "6 reports; 2 led to premature discontinuation"
+          },
+          "note": "P < .05; 10 of 14 coated-arm bleeding reports occurred in the first eight days. Event reports are not unique-patient counts.",
+          "locator": "Full text, Results, Safety Outcomes, p 414"
+        },
+        {
+          "label": "Microhematuria on daily dipstick in institutional weeks 3–4",
+          "values": {
+            "exp": "23% of tests positive",
+            "ctl": "34% of tests positive"
+          },
+          "note": "Mean 10.0 measurements per participant; P < .0001. Percentages use tests, not participants, as denominators; total test counts are not reported.",
+          "locator": "Full text, Results, Microhematuria, p 413"
+        }
+      ],
       "delivery": [
         {
           "label": "Catheter assignment",
@@ -92,21 +158,27 @@
             "exp": "single-use hydrophilic-coated SpeediCath",
             "ctl": "uncoated polyvinyl chloride Conveen"
           },
-          "locator": "PubMed abstract, Methods",
-          "note": "Randomization occurred within ten days of starting intermittent catheterization."
+          "locator": "Full text, Methods, Study Design and Study Materials, pp 409–410",
+          "note": "Randomization occurred within ten days of starting intermittent catheterization. Both catheters were sterile and discarded after one use; SpeediCath was ready to use in sterile water-based solution, whereas Conveen required gel from a single-use sachet."
+        },
+        {
+          "label": "Study completion and premature discontinuation",
+          "value": "114 of 224 randomized participants completed; five stopped before first assigned-catheter use and 105 discontinued prematurely after starting",
+          "note": "The paper reports premature discontinuation in 57% of coated users versus 39% of uncoated users; change in bladder management was the main reason (34 coated, 29 uncoated).",
+          "locator": "Full text, Results, Baseline Characteristics and Participant Flow, p 411; Discussion, p 415"
         }
       ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_pmrj_2011_01_001.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_pmrj_2011_01_001.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     }
   ],
   "relations": [],
   "page": "/docs/clinical-evidence/studies/hydrophilic-catheter-sci",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }

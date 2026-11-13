@@ -157,64 +157,116 @@
       "citation": "Sokol AI, Iglesia CB, Kudish BI, et al. \"One-year objective and functional outcomes of a randomized clinical trial of vaginal mesh for prolapse.\" *Am J Obstet Gynecol.* 2012;206(1):86.e1-9. doi:10.1016/j.ajog.2011.08.003",
       "doi": "10.1016/j.ajog.2011.08.003",
       "pmid": "21974992",
-      "followUp": "12 months after surgery",
-      "followUpLocator": "PubMed abstract, Study Design and Results",
+      "followUp": "12 months after surgery; 60/65 (92.3%) had a POP-Q evaluation at 12 months (5 mesh patients censored)",
+      "followUpLocator": "Full text, Results, p 86.e3",
       "results": [
         {
           "endpoint": "Anatomic success",
           "role": "primary",
-          "measure": "POP-Q stage 1 or lower at 12 months",
+          "measure": "Overall POP-Q stage 1 or lower at 12 months, without repeat prolapse surgery or pessary treatment",
           "values": {
-            "exp": "not quantified in abstract",
-            "ctl": "not quantified in abstract"
+            "exp": "12/32 (37.5%)",
+            "ctl": "10/33 (30.3%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.45"
           },
           "met": false,
-          "note": "The abstract reports similar recurrence rates and no improvement in one-year cure with mesh.",
-          "locator": "PubMed abstract, Study Design, Results and Conclusion"
+          "note": "Complementary overall recurrence was 20/32 (62.5%) versus 23/33 (69.7%), P=.45. Table 2 reports randomized-arm denominators; five mesh patients were censored from the 12-month evaluation, including three reoperated for prolapse.",
+          "locator": "Full text, Table 2 and Results, pp 86.e3–86.e5"
         },
         {
           "endpoint": "Subjective bulge cure",
           "role": "secondary",
           "measure": "Patient-reported bulge cure at 12 months",
           "values": {
-            "exp": "96.2%",
-            "ctl": "90.9%"
+            "exp": "25/26 (96.2%)",
+            "ctl": "30/33 (90.9%)"
           },
           "effect": {
-            "type": "none"
+            "type": "none",
+            "p": "0.62"
           },
-          "note": "Outcome denominators are not given in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "note": "Patients reoperated for prolapse were excluded from this subjective analysis.",
+          "locator": "Full text, Patient satisfaction and QOL, p 86.e4; Table 2"
+        },
+        {
+          "endpoint": "Anterior-compartment recurrence",
+          "role": "secondary",
+          "measure": "Anterior wall POP-Q stage 2 or higher at approximately 12 months",
+          "values": {
+            "exp": "15/32 (46.9%)",
+            "ctl": "20/33 (60.6%)"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.40"
+          },
+          "met": false,
+          "note": "The paper designates compartment-specific cure as secondary; the tabulated anterior recurrence proportions did not differ significantly.",
+          "locator": "Full text, Objective recurrence, pp 86.e3–86.e4"
         }
       ],
       "harms": [
         {
           "label": "Mesh exposure",
           "values": {
-            "exp": "15.6%",
+            "exp": "5/32 (15.6%)",
             "ctl": "not applicable"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The one-year abstract does not give an exposure numerator."
+          "locator": "Full text, Complications, p 86.e6",
+          "note": "Three exposures required operating-room mesh excision; two persisted asymptomatically at one year."
         },
         {
-          "label": "Reoperation",
+          "label": "Reoperation for prolapse or mesh exposure",
           "values": {
-            "exp": "higher",
-            "ctl": "lower"
+            "exp": "5/32 (15.6%)",
+            "ctl": "0/33 (0%)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "The abstract does not quantify reoperations."
+          "locator": "Full text, Table 2 and Complications, pp 86.e5–86.e6",
+          "note": "P=.017; three prolapse and three exposure reoperations involved five patients because one underwent both. One patient also underwent sling revision for persistent voiding dysfunction."
+        },
+        {
+          "label": "Reoperation for recurrent prolapse",
+          "values": {
+            "exp": "3/32 (9.4%)",
+            "ctl": "0/33 (0%)"
+          },
+          "locator": "Full text, Table 2 and Objective recurrence, pp 86.e4–86.e5",
+          "note": "P=.11; two sacral colpopexies and one iliococcygeal suspension."
+        },
+        {
+          "label": "Apical Gore-Tex suture exposure",
+          "values": {
+            "exp": "not applicable",
+            "ctl": "5/33 (15%)"
+          },
+          "locator": "Full text, Complications, p 86.e6",
+          "note": "Two control patients required office suture removal."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Mesh and apical suspension technique",
+          "value": "Six fellowship-trained surgeons used anterior or total Prolift mesh; the no-mesh arm used uterosacral or sacrospinous suspension. Each surgeon had performed more than 30 vaginal colpopexies and at least 10 Prolift procedures before enrollment.",
+          "locator": "Full text, Materials and Methods, Surgery, p 86.e2"
+        },
+        {
+          "label": "Operative time",
+          "values": {
+            "exp": "3.0 ± 0.8 h",
+            "ctl": "3.1 ± 1.0 h"
+          },
+          "note": "P=.53; concomitant posterior repair was more common without mesh (82% versus 56%, P=.026).",
+          "locator": "Full text, Results, p 86.e3"
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2011_08_003.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_j_ajog_2011_08_003.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {

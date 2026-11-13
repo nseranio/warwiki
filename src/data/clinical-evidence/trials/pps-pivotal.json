@@ -27,21 +27,23 @@
       {
         "key": "exp",
         "label": "Oral pentosan polysulfate sodium",
+        "n": 54,
         "role": "experimental"
       },
       {
         "key": "ctl",
         "label": "placebo",
+        "n": 56,
         "role": "control"
       }
     ],
-    "population": "110 patients with interstitial cystitis enrolled in the multicenter primary study.",
+    "population": "110 patients with at least one year of interstitial cystitis, at least 10 voids/day and 2/night, cystoscopic findings, and prior unsuccessful conventional treatment enrolled at five centers.",
     "description": "Multicenter, double-blind, placebo-controlled randomized trial",
-    "locator": "Mulholland 1990 PubMed abstract, opening and Results; AUA IC/BPS 2022, PPS evidence discussion"
+    "locator": "Full text, Material and Methods, p 553; Results, p 555"
   },
   "verdict": "positive",
-  "verdictNote": "Patient-reported global improvement favored PPS after three months.",
-  "takeaway": "In the three-month Mulholland trial, oral pentosan polysulfate sodium produced patient-reported global improvement greater than 25% in 28% versus 13% with placebo (P = 0.03).",
+  "verdictNote": "Patient-rated global improvement met the study's P ≤ 0.05 threshold at three months.",
+  "takeaway": "In the three-month Mulholland trial (54 assigned pentosan polysulfate sodium; 56 placebo), patient-reported global improvement greater than 25% occurred in 28% versus 13% (15-percentage-point difference from rounded rates; P = 0.04).",
   "reports": [
     {
       "id": "pps-pivotal-1990",
@@ -55,7 +57,7 @@
       "doi": "10.1016/0090-4295(90)80116-5",
       "pmid": "1693797",
       "followUp": "3 months of treatment",
-      "followUpLocator": "PubMed abstract, opening",
+      "followUpLocator": "Full text, Material and Methods, pp 553–554",
       "results": [
         {
           "endpoint": "Patient-reported global improvement",
@@ -68,11 +70,11 @@
           "effect": {
             "type": "difference",
             "value": 15,
-            "p": "0.03"
+            "p": "0.04"
           },
           "met": true,
-          "note": "Risk difference calculated from the reported rounded percentages; arm denominators unavailable in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "note": "Risk difference calculated from rounded percentages. The report gives 54 and 56 assigned but no endpoint-specific denominators or confidence interval. Results text on p 555 gives 18% for placebo, conflicting with Table II, abstract, and discussion (13%).",
+          "locator": "Full text, Table II, p 556; Comment, p 557"
         },
         {
           "endpoint": "Investigator-rated global improvement",
@@ -85,65 +87,121 @@
           "effect": {
             "type": "difference",
             "value": 15,
-            "p": "0.04"
+            "p": "0.03"
           },
-          "note": "Risk difference calculated from the reported rounded percentages; arm denominators unavailable in the abstract.",
-          "locator": "PubMed abstract, Results"
+          "met": true,
+          "note": "Risk difference calculated from rounded percentages. The report gives 54 and 56 assigned but no endpoint-specific denominators or confidence interval.",
+          "locator": "Full text, Table II, p 556; Comment, p 557"
         },
         {
           "endpoint": "Pain improvement",
           "role": "secondary",
-          "measure": "Between-group symptom comparison at 3 months",
+          "measure": "Patient-reported pain improvement on follow-up questionnaire at 3 months",
           "values": {
-            "exp": "favored PPS",
-            "ctl": "placebo"
-          },
-          "effect": {
-            "type": "none",
-            "p": "0.07"
-          },
-          "locator": "PubMed abstract, Results"
-        },
-        {
-          "endpoint": "Pressure-to-urinate improvement",
-          "role": "secondary",
-          "measure": "Between-group symptom comparison at 3 months",
-          "values": {
-            "exp": "favored PPS",
-            "ctl": "placebo"
+            "exp": "27%",
+            "ctl": "14%"
           },
           "effect": {
             "type": "none",
             "p": "0.08"
           },
-          "locator": "PubMed abstract, Results"
+          "met": false,
+          "locator": "Full text, Table II, p 556"
+        },
+        {
+          "endpoint": "Pressure-to-urinate improvement",
+          "role": "secondary",
+          "measure": "Patient-reported improvement in pressure to urinate at 3 months",
+          "values": {
+            "exp": "22%",
+            "ctl": "11%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.08"
+          },
+          "met": false,
+          "locator": "Full text, Table II, p 556"
+        },
+        {
+          "endpoint": "Pain-scale response",
+          "role": "secondary",
+          "measure": "At least 1-point pain-scale reduction at 3 months",
+          "values": {
+            "exp": "46%",
+            "ctl": "29%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "0.07"
+          },
+          "met": false,
+          "locator": "Full text, Statistical Treatment of Data, p 554; Table II, p 556"
+        },
+        {
+          "endpoint": "Urgency-scale response",
+          "role": "secondary",
+          "measure": "At least 1-point urgency-scale reduction at 3 months",
+          "values": {
+            "exp": "39%",
+            "ctl": "46%"
+          },
+          "effect": {
+            "type": "none",
+            "p": "not significant"
+          },
+          "met": false,
+          "locator": "Full text, Statistical Treatment of Data, p 554; Table II, p 556"
         }
       ],
       "harms": [
         {
           "label": "Adverse reactions",
           "values": {
-            "exp": "6%",
-            "ctl": "13%"
+            "exp": "3/54 (6%; six reactions)",
+            "ctl": "7/56 (13%; eight reactions)"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "All reported adverse reactions were minor; arm denominators unavailable in the abstract."
+          "locator": "Full text, Table III and Results, p 556",
+          "note": "The authors reported no serious adverse reactions; Table III separately lists severe mood swings and suicidal ideation in one PPS recipient each."
         },
         {
           "label": "Treatment discontinued for adverse reaction",
           "values": {
-            "exp": "1 patient",
-            "ctl": "2 patients"
+            "exp": "1/54",
+            "ctl": "2/56"
           },
-          "locator": "PubMed abstract, Results",
-          "note": "Arm denominators unavailable in the abstract."
+          "locator": "Full text, Results, p 556"
+        },
+        {
+          "label": "Reported mood reactions",
+          "values": {
+            "exp": "1/54 severe mood swings; 1/54 suicidal ideation",
+            "ctl": "0/56 for each"
+          },
+          "locator": "Full text, Table III, p 556",
+          "note": "The table does not state whether the two reactions occurred in the same patient."
         }
       ],
-      "delivery": [],
+      "delivery": [
+        {
+          "label": "Oral PPS regimen",
+          "value": "100 mg three times daily (300 mg/day), one hour before meals or two hours after meals; matching placebo",
+          "locator": "Full text, Material and Methods, p 553"
+        },
+        {
+          "label": "Three-month completion",
+          "values": {
+            "exp": "51/54 completed (3 did not complete)",
+            "ctl": "47/56 completed (9 did not complete)"
+          },
+          "locator": "Full text, Results, pp 555–556",
+          "note": "Completion counts calculated by subtracting reported noncompleters from assigned patients; endpoint analysis denominators were not specified. Among completers, 44% were continuing PPS at 1.5 years after study start."
+        }
+      ],
       "source": {
-        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_0090_4295_90_80116_5.txt",
-        "checked": "2026-11-12",
-        "level": "abstract"
+        "file": "/Users/joyboy/Documents/WARWIKI/warwiki/reports/audit-v2/sources-local/trials-2026-11-12/10_1016_0090_4295_90_80116_5.fulltext.txt",
+        "checked": "2026-11-13",
+        "level": "full-text"
       }
     },
     {
@@ -253,7 +311,7 @@
   "relations": [],
   "page": "/docs/clinical-evidence/studies/pps-pivotal",
   "status": {
-    "sourceRead": "abstract",
+    "sourceRead": "full-text",
     "claimsChecked": null,
     "clinicalReview": null
   }
