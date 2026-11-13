@@ -38,6 +38,19 @@ const config: Config = {
 
   future: {
     v4: true,
+    // Rspack + SWC: lower build memory than webpack/Babel. Vercel's build container ran out of memory at 251 trial
+    // pages (November 12, 2026); local peak 2.9 GB with webpack, 2.5 GB with this. SSG worker threads stay off (they
+    // raise peak memory).
+    faster: {
+      rspackBundler: true,
+      rspackPersistentCache: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+      ssgWorkerThreads: false,
+    },
   },
 
   url: 'https://warwiki.org',
