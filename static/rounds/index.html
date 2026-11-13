@@ -586,7 +586,7 @@ function quiz(){
       <div class="block"><div class="lab">Explanation</div><p>${esc(q.explanation)}</p></div>
       ${q.pearl?`<div class="block pearl"><div class="lab">Pearl</div><p>${esc(q.pearl)}</p></div>`:""}
       ${q.card?`<div class="block card"><div class="lab">Trial card · memorize</div><p>${esc(q.card)}</p></div>`:""}
-      ${q.source&&q.source.quote?`<div class="block"><div class="lab">From the page</div><p class="quote">“${esc(q.source.quote)}”</p></div>`:""}
+      ${q.source&&q.source.quote?`<div class="block"><div class="lab">${q.source.url?"From the page":"From the guideline"}</div><p class="quote">“${esc(q.source.quote)}”</p></div>`:""}
       <div class="src"><span>${esc(q.source&&q.source.title||"")}${q.source&&q.source.section?" · "+esc(q.source.section):""}</span>${q.source&&q.source.url?`<a href="${esc(q.source.url)}" target="_blank" rel="noopener">Open page ↗</a>`:""}</div>
     </div>`:"";
   const last=idx===b.ids.length-1;
