@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Replay coherence rewrites on pages the sweep reverted (claims still failing after the gate rounds).
 
-    python3 scripts/voice/coherence_replay.py --root REPO NEW_NAME
+    python3 scripts/voice/coherence_replay.py --root REPO NEW_NAME [--pages a.mdx,b.mdx] [--keep-all]
 
 For every page in <runs>/coherence-*-b*/reverted.json: reapply the batch's agreed rewrite edits, except any edit
 containing a claim the last gate round marked unverifiable or source-needed (that section keeps its original,
@@ -12,6 +12,10 @@ import glob, hashlib, json, os, re, sys
 
 A = sys.argv[1:]
 ROOT = os.path.abspath(A[A.index("--root") + 1]); del A[A.index("--root"):A.index("--root") + 2]
+KEEP_ALL = "--keep-all" in A  # reapply every rewrite edit (the failing claims now have a local source to check)
+if KEEP_ALL: A.remove("--keep-all")
+ONLY = set(A[A.index("--pages") + 1].split(",")) if "--pages" in A else None
+if ONLY: del A[A.index("--pages"):A.index("--pages") + 2]
 NAME = A[0]
 RUNS = os.path.join(ROOT, "reviews/runs" if "whitwiki" in ROOT.lower() else "reports/audit-v2/sources-local")
 
@@ -58,9 +62,11 @@ touched, report = [], []
 for rv in sorted(glob.glob(os.path.join(RUNS, "coherence-*-b*/reverted.json"))):
     batch = os.path.dirname(rv)
     for page in json.load(open(rv)):
+        if ONLY and page not in ONLY:
+            continue
         p = os.path.join(ROOT, page)
         s = open(p).read()
-        bad = failing(batch, page)
+        bad = [] if KEEP_ALL else failing(batch, page)
         used = skipped = 0
         for v in verdicts(batch, page):
             o, n = v["edit"]["old"], v["edit"]["new"]

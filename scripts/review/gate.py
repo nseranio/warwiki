@@ -205,7 +205,7 @@ def trial_page_sources(path):
 
 _AUA = r"(?:AUA|American Urological Association)"
 _EAU = r"(?:EAU|European Association of Urology)"
-GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (AUA and NCCN permission; never auanet.org)
+GUIDE_LOCAL = [  # guideline references (any page) -> the owner's local copies (AUA and NCCN permission; never auanet.org)
     ((_AUA, r"Part II: Medical Management"), "aua-bph-2026-goueli.txt"),
     ((_AUA, r"Lower Urinary Tract Symptoms|Benign Prostatic Hyperplasia|\bBPH\b"), "aua-bph-2026-unabridged.txt"),
     ((_AUA, r"Overactive Bladder"), "aua-oab-2024-unabridged.txt"),
@@ -216,6 +216,7 @@ GUIDE_LOCAL = [  # trial-page guideline references -> the owner's local copies (
     ((_AUA, r"Recurrent Uncomplicated Urinary Tract"), "aua-rutI-2025-unabridged.txt"),
     ((r"AUA|SUFU|AUGS", r"Genitourinary Syndrome of Menopause"), "aua-sufu-augs-gsm-2025.txt"),
     ((_AUA, r"Testosterone"), "aua-testosterone-deficiency.txt"),
+    ((_AUA, r"Erectile [Dd]ysfunction"), "aua-ed-2018-website.txt"),
     ((_AUA, r"Urethral Stricture"), "aua-urethral-stricture-2023-unabridged.txt"),
     ((_AUA, r"Chronic Prostatitis|Chronic Pelvic Pain"), "aua-cpps-2025-unabridged.txt"),
     ((_AUA, r"[Mm]uscle-[Ii]nvasive [Bb]ladder [Cc]ancer"), "aua-mibc-2024-unabridged.txt"),
@@ -301,8 +302,8 @@ def units_of(path):
                     "key": key2(path, u, [r["text"] for r in rl], ctx, section), "key1": key1(path, u),
                     "cite": "paragraph" if inherited else ("own" if nums else "none"), "refs": rl}
             ls = [{"n": r["n"], "local_text": f} for r in rl for d, f in tsrc.items() if d in r["text"].lower()]
-            if tsrc is not None and path.startswith("docs/06-clinical-evidence/studies/"):
-                ls += [{"n": r["n"], "local_text": g} for r in rl for g in [guideline_local(r["text"])] if g]
+            # the owner's local guideline copies, on every page that cites them (all pages since November 13, 2026)
+            ls += [{"n": r["n"], "local_text": g} for r in rl for g in [guideline_local(r["text"])] if g]
             if ls:
                 unit["local_sources"] = ls
             unit["high_risk"] = high_risk(unit)
